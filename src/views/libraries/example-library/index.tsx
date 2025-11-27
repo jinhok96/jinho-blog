@@ -7,8 +7,8 @@ export const metadata: LibraryMetadata = {
   description: 'React 라이브러리 예제',
   category: ['hooks'],
   tech: ['react', 'typescript'],
-  createdAt: '2025-01-15T00:00:00.000Z',
-  updatedAt: '2025-01-15T00:00:00.000Z',
+  createdAt: '2025-01-15',
+  updatedAt: '2025-01-15',
 };
 
 const code = `import { Example } from 'example';

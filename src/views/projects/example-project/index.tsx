@@ -5,8 +5,8 @@ export const metadata: ProjectMetadata = {
   description: '프로젝트 예제입니다',
   category: ['personal'],
   tech: ['nextjs', 'react', 'typescript', 'tailwindcss'],
-  createdAt: '2025-01-15T00:00:00.000Z',
-  updatedAt: '2025-01-15T00:00:00.000Z',
+  createdAt: '2025-01-15',
+  updatedAt: '2025-01-15',
 };
 
 export default function ExampleProject() {

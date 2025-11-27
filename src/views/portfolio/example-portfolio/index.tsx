@@ -4,8 +4,8 @@ export const metadata: PortfolioMetadata = {
   title: '예제 포트폴리오',
   description: '포트폴리오 예제입니다',
   category: ['web', 'ui-ux'],
-  createdAt: '2025-01-15T00:00:00.000Z',
-  updatedAt: '2025-01-15T00:00:00.000Z',
+  createdAt: '2025-01-15',
+  updatedAt: '2025-01-15',
 };
 
 export default function ExamplePortfolio() {

@@ -47,8 +47,8 @@ export interface BaseMetadata {
   title: string;
   description: string;
   category: string[]; // 각 섹션에서 타입 오버라이드
-  createdAt: string; // ISO 8601 date string
-  updatedAt: string; // ISO 8601 date string
+  createdAt: string; // YYYY-MM-DD 형식
+  updatedAt: string; // YYYY-MM-DD 형식
 }
 
 export interface BlogMetadata extends BaseMetadata {

@@ -4,8 +4,8 @@ export const metadata: BlogMetadata = {
   title: '세번째 블로그 포스트',
   description: '블로그를 시작합니다',
   category: ['react', 'nextjs'],
-  createdAt: '2025-01-17T00:00:00.000Z',
-  updatedAt: '2025-01-17T00:00:00.000Z',
+  createdAt: '2025-01-17',
+  updatedAt: '2025-01-17',
 };
 
 export default function ThirdPost() {

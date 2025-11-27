@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import Link from 'next/link';
 import { notFound } from 'next/navigation';
 
 import { generatePageMetadata } from '@/core/utils';
@@ -45,34 +44,19 @@ export default async function LibraryPage({ params }: Props) {
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{library.title}</h1>
       <p className="mb-4 text-gray-600">{library.description}</p>
-      <div className="mb-8 flex gap-4">
-        {library.npm && (
-          <Link
-            href={library.npm}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`
-              rounded-sm bg-red-100 px-4 py-2 text-red-700
-              hover:bg-red-200
-            `}
-          >
-            NPM Package
-          </Link>
-        )}
-        {library.github && (
-          <Link
-            href={library.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`
-              rounded-sm bg-gray-100 px-4 py-2 text-gray-700
-              hover:bg-gray-200
-            `}
-          >
-            GitHub Repository
-          </Link>
-        )}
-      </div>
+      {library.tech.length > 0 && (
+        <div className="mb-8 flex flex-wrap gap-2">
+          <span className="text-sm text-gray-500">Tech Stack:</span>
+          {library.tech.map(t => (
+            <span
+              key={t}
+              className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
+            >
+              {t}
+            </span>
+          ))}
+        </div>
+      )}
       <div className="max-w-none">
         <LibraryComponent />
       </div>

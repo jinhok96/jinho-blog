@@ -1,22 +1,16 @@
 import type { Project } from './types';
+import type { ProjectCategory } from '@/core/types/metadata';
 
-// Project 파일들을 직접 import
-import ExampleProject, { metadata as exampleProjectMeta } from '@/views/projects/example-project';
-
-const projects: Project[] = [
-  {
-    slug: 'example-project',
-    title: exampleProjectMeta?.title || 'example-project',
-    description: exampleProjectMeta?.description || '',
-    tech: exampleProjectMeta?.tech || [],
-    Component: ExampleProject,
-  },
-];
+import { getProjectListByCategory, projectsRegistry } from './registry.generated';
 
 export async function getProjects(): Promise<Project[]> {
-  return projects;
+  return projectsRegistry;
 }
 
 export async function getProject(slug: string): Promise<Project | null> {
-  return projects.find(p => p.slug === slug) || null;
+  return projectsRegistry.find(p => p.slug === slug) || null;
+}
+
+export async function getProjectsByCategory(category: ProjectCategory): Promise<Project[]> {
+  return getProjectListByCategory(category);
 }

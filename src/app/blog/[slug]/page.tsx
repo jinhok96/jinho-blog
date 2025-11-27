@@ -45,14 +45,14 @@ export default async function BlogPostPage({ params }: Props) {
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
       <div className="mb-8 flex items-center gap-4">
         {post.date && <time className="text-gray-600">{new Date(post.date).toLocaleDateString('ko-KR')}</time>}
-        {post.tags.length > 0 && (
+        {post.category.length > 0 && (
           <div className="flex flex-wrap gap-2">
-            {post.tags.map(tag => (
+            {post.category.map(cat => (
               <span
-                key={tag}
+                key={cat}
                 className="rounded-sm bg-gray-100 px-3 py-1 text-sm text-gray-700"
               >
-                {tag}
+                {cat}
               </span>
             ))}
           </div>

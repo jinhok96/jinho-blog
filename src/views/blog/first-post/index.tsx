@@ -1,8 +1,12 @@
-export const metadata = {
+import type { BlogMetadata } from '@/core/types/metadata';
+
+export const metadata: BlogMetadata = {
   title: '첫 번째 블로그 포스트',
   description: '블로그를 시작합니다',
-  date: '2025-01-01',
-  tags: ['react', 'nextjs', 'blog'],
+  category: ['react', 'nextjs'],
+  date: '2025-01-15',
+  createdAt: '2025-01-15T00:00:00.000Z',
+  updatedAt: '2025-01-15T00:00:00.000Z',
 };
 
 export default function FirstPost() {

@@ -32,11 +32,11 @@ export default async function BlogListPage() {
               <div className="flex-1">
                 <h2 className="mb-2 text-2xl font-bold">{post.title}</h2>
                 <p className="mb-4 text-gray-600">{post.description}</p>
-                {post.tags.length > 0 && (
+                {post.category.length > 0 && (
                   <div className="flex flex-wrap gap-2">
-                    {post.tags.map(tag => (
-                      <span key={tag} className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700">
-                        {tag}
+                    {post.category.map(cat => (
+                      <span key={cat} className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700">
+                        {cat}
                       </span>
                     ))}
                   </div>

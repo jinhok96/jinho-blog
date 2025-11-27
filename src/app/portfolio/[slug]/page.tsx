@@ -44,14 +44,14 @@ export default async function PortfolioDetailPage({ params }: Props) {
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{portfolio.title}</h1>
       <p className="mb-8 text-gray-600">{portfolio.description}</p>
-      {portfolio.tags.length > 0 && (
+      {portfolio.category.length > 0 && (
         <div className="mb-8 flex flex-wrap gap-2">
-          {portfolio.tags.map(tag => (
+          {portfolio.category.map(cat => (
             <span
-              key={tag}
+              key={cat}
               className="rounded-sm bg-gray-100 px-3 py-1 text-sm text-gray-700"
             >
-              {tag}
+              {cat}
             </span>
           ))}
         </div>

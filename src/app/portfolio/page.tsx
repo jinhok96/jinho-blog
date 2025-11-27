@@ -34,11 +34,11 @@ export default async function PortfolioListPage() {
           >
             <h2 className="mb-2 text-xl font-bold">{portfolio.title}</h2>
             <p className="text-gray-600">{portfolio.description}</p>
-            {portfolio.tags.length > 0 && (
+            {portfolio.category.length > 0 && (
               <div className="mt-4 flex flex-wrap gap-2">
-                {portfolio.tags.map(tag => (
-                  <span key={tag} className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700">
-                    {tag}
+                {portfolio.category.map(cat => (
+                  <span key={cat} className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700">
+                    {cat}
                   </span>
                 ))}
               </div>

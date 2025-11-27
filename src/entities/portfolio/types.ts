@@ -1,9 +1,7 @@
+import type { PortfolioMetadata } from '@/core/types/metadata';
 import type { FC } from 'react';
 
-export type Portfolio = {
+export type Portfolio = PortfolioMetadata & {
   slug: string;
-  title: string;
-  description: string;
-  tags: string[];
   Component: FC;
 };

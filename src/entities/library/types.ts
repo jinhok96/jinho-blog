@@ -1,10 +1,7 @@
+import type { LibraryMetadata } from '@/core/types/metadata';
 import type { FC } from 'react';
 
-export type Library = {
+export type Library = LibraryMetadata & {
   slug: string;
-  title: string;
-  description: string;
-  npm: string;
-  github: string;
   Component: FC;
 };

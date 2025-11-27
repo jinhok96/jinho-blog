@@ -1,7 +1,12 @@
-export const metadata = {
+import type { ProjectMetadata } from '@/core/types/metadata';
+
+export const metadata: ProjectMetadata = {
   title: '예제 프로젝트',
   description: '프로젝트 예제입니다',
-  tech: ['Next.js', 'React', 'TypeScript', 'Tailwind CSS'],
+  category: ['personal'],
+  tech: ['nextjs', 'react', 'typescript', 'tailwindcss'],
+  createdAt: '2025-01-15T00:00:00.000Z',
+  updatedAt: '2025-01-15T00:00:00.000Z',
 };
 
 export default function ExampleProject() {

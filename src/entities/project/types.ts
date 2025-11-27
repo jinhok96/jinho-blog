@@ -1,9 +1,7 @@
+import type { ProjectMetadata } from '@/core/types/metadata';
 import type { FC } from 'react';
 
-export type Project = {
+export type Project = ProjectMetadata & {
   slug: string;
-  title: string;
-  description: string;
-  tech: string[];
   Component: FC;
 };

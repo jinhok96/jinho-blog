@@ -1,7 +1,11 @@
-export const metadata = {
+import type { PortfolioMetadata } from '@/core/types/metadata';
+
+export const metadata: PortfolioMetadata = {
   title: '예제 포트폴리오',
   description: '포트폴리오 예제입니다',
-  tags: ['design', 'development'],
+  category: ['web', 'ui-ux'],
+  createdAt: '2025-01-15T00:00:00.000Z',
+  updatedAt: '2025-01-15T00:00:00.000Z',
 };
 
 export default function ExamplePortfolio() {

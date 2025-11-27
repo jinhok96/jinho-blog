@@ -1,10 +1,14 @@
+import type { LibraryMetadata } from '@/core/types/metadata';
+
 import { Markdown } from '@/core/ui';
 
-export const metadata = {
+export const metadata: LibraryMetadata = {
   title: 'Example Library',
   description: 'React 라이브러리 예제',
-  npm: 'https://www.npmjs.com/package/example',
-  github: 'https://github.com/example/example',
+  category: ['hooks'],
+  tech: ['react', 'typescript'],
+  createdAt: '2025-01-15T00:00:00.000Z',
+  updatedAt: '2025-01-15T00:00:00.000Z',
 };
 
 const code = `import { Example } from 'example';

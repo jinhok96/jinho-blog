@@ -1,22 +1,16 @@
 import type { Portfolio } from './types';
+import type { PortfolioCategory } from '@/core/types/metadata';
 
-// Portfolio 파일들을 직접 import
-import ExamplePortfolio, { metadata as examplePortfolioMeta } from '@/views/portfolio/example-portfolio';
-
-const portfolioList: Portfolio[] = [
-  {
-    slug: 'example-portfolio',
-    title: examplePortfolioMeta?.title || 'example-portfolio',
-    description: examplePortfolioMeta?.description || '',
-    tags: examplePortfolioMeta?.tags || [],
-    Component: ExamplePortfolio,
-  },
-];
+import { getPortfolioListByCategory, portfolioRegistry } from './registry.generated';
 
 export async function getPortfolios(): Promise<Portfolio[]> {
-  return portfolioList;
+  return portfolioRegistry;
 }
 
 export async function getPortfolio(slug: string): Promise<Portfolio | null> {
-  return portfolioList.find(p => p.slug === slug) || null;
+  return portfolioRegistry.find(p => p.slug === slug) || null;
+}
+
+export async function getPortfoliosByCategory(category: PortfolioCategory): Promise<Portfolio[]> {
+  return getPortfolioListByCategory(category);
 }

@@ -1,10 +1,7 @@
+import type { BlogMetadata } from '@/core/types/metadata';
 import type { FC } from 'react';
 
-export type BlogPost = {
+export type Blog = BlogMetadata & {
   slug: string;
-  title: string;
-  description: string;
-  date: string;
-  tags: string[];
   Component: FC;
 };

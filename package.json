@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
+    "predev": "tsx scripts/generate-content-registry.ts",
     "dev": "next dev --turbopack",
-    "build": "next build",
+    "prebuild": "tsx scripts/generate-content-registry.ts",
+    "build": "eslint src --ext .ts,.tsx --fix --no-cache && npx tsc --noEmit && next build",
     "start": "next start",
     "lint": "eslint src --ext .ts,.tsx --fix --no-cache && npx tsc --noEmit"
   },
@@ -37,6 +39,7 @@
     "postcss-import": "^16.1.1",
     "prettier": "^3.6.2",
     "tailwindcss": "^4.1.17",
+    "tsx": "^4.20.6",
     "typescript": "^5"
   }
 }

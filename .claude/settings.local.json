@@ -1,0 +1,29 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where code)",
+      "Bash(npx tsc:*)",
+      "Bash(python:*)",
+      "Bash(npx eslint --fix \"src/components/icon/FlagIcon.tsx\")",
+      "Bash(npm install:*)",
+      "Bash(tree:*)",
+      "Bash(nul)",
+      "Bash(npm run build:*)",
+      "Bash(git checkout:*)",
+      "Bash(git pull:*)",
+      "Bash(git add:*)",
+      "Bash(git commit:*)",
+      "Bash(git push)",
+      "Bash(git push:*)",
+      "Bash(npx eslint:*)",
+      "Bash(find:*)",
+      "Bash(git mv:*)",
+      "Bash(npm run lint:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)"
+    ],
+    "deny": [],
+    "ask": []
+  }
+}

@@ -10,7 +10,7 @@
 /* 커스텀 기본 스타일 */
 @layer base {
   * {
-    @apply scrollbar whitespace-pre-line break-keep;
+    @apply scrollbar break-keep;
   }
 
   button,

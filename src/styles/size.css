@@ -4,13 +4,6 @@
   --width-layout: 80rem;
   --padding-layout-x: 2.5rem;
   --padding-layout-y: 7.5rem;
-
-  --width-kiosk-place-info: 23rem;
-  --width-kiosk-place-detail: 26rem;
-  --height-kiosk-place-info-min: 21rem;
-
-  --height-1080: 67.5rem;
-  --height-1440: 90rem;
 }
 
 @media (max-width: 80rem) {
@@ -39,13 +32,6 @@
 
   --padding-layout-x: var(--padding-layout-x);
   --padding-layout-y: var(--padding-layout-y);
-
-  --width-kiosk-place-info: var(--width-kiosk-place-info);
-  --width-kiosk-place-detail: var(--width-kiosk-place-detail);
-  --height-kiosk-place-info-min: var(--height-kiosk-place-info-min);
-
-  --height-1080: var(--height-1080);
-  --height-1440: var(--height-1440);
 }
 
 @utility pt-header {

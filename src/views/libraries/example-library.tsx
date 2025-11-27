@@ -18,9 +18,7 @@ export default function ExampleLibrary() {
       <p>이것은 예제 라이브러리입니다.</p>
 
       <h2>설치</h2>
-      <pre>
-        <code>npm install example</code>
-      </pre>
+      <code>npm install example</code>
 
       <h2>사용법</h2>
       <pre className="bg-gray-1 p-5">

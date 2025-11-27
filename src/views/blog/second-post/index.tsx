@@ -1,7 +1,7 @@
 import type { BlogMetadata } from '@/core/types/metadata';
 
 export const metadata: BlogMetadata = {
-  title: '첫번째 블로그 포스트',
+  title: '두번째 블로그 포스트',
   description: '블로그를 시작합니다',
   category: ['react', 'nextjs'],
   date: '2025-01-15',
@@ -9,7 +9,7 @@ export const metadata: BlogMetadata = {
   updatedAt: '2025-01-15T00:00:00.000Z',
 };
 
-export default function FirstPost() {
+export default function SecondPost() {
   return (
     <div>
       <h2>블로그를 시작하며</h2>

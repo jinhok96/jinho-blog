@@ -53,7 +53,6 @@ export interface BaseMetadata {
 
 export interface BlogMetadata extends BaseMetadata {
   category: BlogCategory[];
-  date: string; // 발행일 (블로그 특화)
 }
 
 export interface PortfolioMetadata extends BaseMetadata {

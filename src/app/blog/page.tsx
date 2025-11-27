@@ -42,8 +42,8 @@ export default async function BlogListPage() {
                   </div>
                 )}
               </div>
-              {post.date && (
-                <time className="ml-4 text-sm text-gray-500">{new Date(post.date).toLocaleDateString('ko-KR')}</time>
+              {post.createdAt && (
+                <time className="ml-4 text-sm text-gray-500">{new Date(post.createdAt).toLocaleDateString('ko-KR')}</time>
               )}
             </div>
           </Link>

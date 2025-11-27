@@ -44,7 +44,7 @@ export default async function BlogPostPage({ params }: Props) {
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
       <div className="mb-8 flex items-center gap-4">
-        {post.date && <time className="text-gray-600">{new Date(post.date).toLocaleDateString('ko-KR')}</time>}
+        {post.createdAt && <time className="text-gray-600">{new Date(post.createdAt).toLocaleDateString('ko-KR')}</time>}
         {post.category.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {post.category.map(cat => (

@@ -5,7 +5,7 @@ import { blogRegistry, getBlogListByCategory } from './registry.generated';
 
 export async function getBlogPosts(): Promise<Blog[]> {
   // 날짜순 정렬 (최신순)
-  return blogRegistry.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return blogRegistry.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }
 
 export async function getBlogPost(slug: string): Promise<Blog | null> {
@@ -13,5 +13,5 @@ export async function getBlogPost(slug: string): Promise<Blog | null> {
 }
 
 export async function getBlogPostsByCategory(category: BlogCategory): Promise<Blog[]> {
-  return getBlogListByCategory(category).sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
+  return getBlogListByCategory(category).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 }

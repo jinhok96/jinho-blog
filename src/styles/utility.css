@@ -1,0 +1,112 @@
+/* Layout */
+@utility flex-row-center {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+@utility flex-row-start {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+
+@utility flex-row-end {
+  display: flex;
+  flex-direction: row;
+  align-items: flex-end;
+}
+
+@utility flex-col-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+@utility flex-col-start {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+@utility flex-col-end {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+@utility grid-rows-auto {
+  @apply grid-rows-[auto_auto];
+}
+
+@utility grid-cols-auto {
+  @apply grid-cols-[auto_auto];
+}
+
+/* overflow */
+@utility overflow-anchor-auto {
+  overflow-anchor: auto;
+}
+
+@utility overflow-anchor-none {
+  overflow-anchor: none;
+}
+
+/* scrollbar */
+@utility scrollbar {
+  &::-webkit-scrollbar {
+    @apply block size-2;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply bg-foreground-3 hover:bg-foreground-4 active:bg-foreground-5 rounded-full border-0 border-transparent bg-clip-content;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply m-0 bg-transparent;
+  }
+}
+
+@utility scrollbar-minimal {
+  @apply scrollbar;
+
+  &::-webkit-scrollbar {
+    @apply block size-1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    @apply rounded-none border-0;
+  }
+
+  &::-webkit-scrollbar-track {
+    @apply m-0;
+  }
+}
+
+@utility scrollbar-hidden {
+  &::-webkit-scrollbar {
+    @apply hidden;
+  }
+}
+
+/* skeleton */
+@utility skeleton {
+  @apply !bg-foreground-3 rounded-lg !text-transparent;
+}
+
+/* z-index */
+@utility z-drawer {
+  z-index: 100;
+}
+
+@utility z-header {
+  z-index: 200;
+}
+
+@utility z-modal {
+  z-index: 500;
+}
+
+@utility z-toast {
+  z-index: 1000;
+}

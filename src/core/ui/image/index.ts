@@ -1,0 +1,1 @@
+export { StrictImage } from './StrictImage';

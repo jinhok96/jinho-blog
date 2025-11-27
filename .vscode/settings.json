@@ -1,0 +1,46 @@
+{
+  // Tailwind CSS 설정
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "tailwindCSS.experimental.configFile": "./src/styles/globals.css", // tailwindcss 인텔리센스에 파일 등록
+  "typescript.preferences.preferTypeOnlyAutoImports": true, // 자동 type import
+  "tailwindCSS.experimental.classRegex": [
+    "tw`([^`]*)",
+    "tw\\(([^)]*)\\)",
+    "tw\\.[^`]+`([^`]*)",
+    // const mainStyle = "..."
+    ["\\b\\w*Style\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    // const mainClassName = "..."
+    ["\\b\\w*ClassName\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    // const classNames = "..."
+    ["\\b\\w*ClassNames\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    // classnames('bg-red-500', 'uppercase');
+    ["classnames\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"],
+    // const props = { classNames: { container: "w-full h-full" } } }
+    ["classNames:\\s*{([\\s\\S]*?)}", "\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?"],
+    // const inputClassNames = "scroll-m-0 border-collapse";
+    "(?:const|let|var)\\s+[\\w$_][_\\w\\d]*\\s*=\\s*['\\\"](.*?)['\\\"]",
+    /*
+      const styles = "bg-red-500 text-white";
+      let Classes = "p-4 rounded";
+      var classnames = "flex justify-center";
+      const buttonStyles = "bg-blue-500 hover:bg-blue-700";
+      let formClasses = "space-y-4";
+      var inputClassnames = "border-2 border-gray-300";
+      styles += 'rounded';
+    */
+    [
+      "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lassnames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"
+    ],
+    // clasNames 추가 지원
+    ["classNames\\(([^)]*)\\)", "'([^']*)'"],
+    ["classNames\\(([^)]*)\\)", "\"([^\"]*)\""],
+    ["classNames\\(([^)]*)\\)", "\\{([^\\}]*)\\}"],
+    ["classNames\\(([^)]*)\\)", "([a-zA-Z0-9_-]+)"],
+    // clsx
+    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
+    // cn (유틸 함수)
+    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+  ]
+}

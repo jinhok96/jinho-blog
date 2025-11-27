@@ -1,0 +1,20 @@
+@custom-variant tablet {
+  /* 80rem */
+  @media (max-width: 80rem) {
+    @slot;
+  }
+}
+
+@custom-variant miniTablet {
+  /* 64rem */
+  @media (max-width: 64rem) {
+    @slot;
+  }
+}
+
+@custom-variant mobile {
+  /* 48rem */
+  @media (max-width: 48rem) {
+    @slot;
+  }
+}

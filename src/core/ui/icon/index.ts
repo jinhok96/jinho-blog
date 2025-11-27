@@ -1,0 +1,1 @@
+export { FlagIcon } from './FlagIcon';

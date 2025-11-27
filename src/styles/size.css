@@ -1,0 +1,129 @@
+:root {
+  --height-header: 5rem;
+
+  --width-layout: 80rem;
+  --padding-layout-x: 2.5rem;
+  --padding-layout-y: 7.5rem;
+
+  --width-kiosk-place-info: 23rem;
+  --width-kiosk-place-detail: 26rem;
+  --height-kiosk-place-info-min: 21rem;
+
+  --height-1080: 67.5rem;
+  --height-1440: 90rem;
+}
+
+@media (max-width: 80rem) {
+  :root {
+    --height-header: 4.5rem;
+
+    --padding-layout-x: 2rem;
+    --padding-layout-y: 6.75rem;
+  }
+}
+
+@media (max-width: 48rem) {
+  :root {
+    --height-header: 4rem;
+
+    --padding-layout-x: 1.5rem;
+    --padding-layout-y: 6rem;
+  }
+}
+
+@theme inline {
+  --height-header: var(--height-header);
+
+  --width-layout: var(--width-layout);
+  --max-width-layout: var(--width-layout);
+
+  --padding-layout-x: var(--padding-layout-x);
+  --padding-layout-y: var(--padding-layout-y);
+
+  --width-kiosk-place-info: var(--width-kiosk-place-info);
+  --width-kiosk-place-detail: var(--width-kiosk-place-detail);
+  --height-kiosk-place-info-min: var(--height-kiosk-place-info-min);
+
+  --height-1080: var(--height-1080);
+  --height-1440: var(--height-1440);
+}
+
+@utility pt-header {
+  padding-top: var(--height-header);
+}
+
+@utility pb-header {
+  padding-bottom: var(--height-header);
+}
+
+@utility py-header {
+  @apply pt-header pb-header;
+}
+
+@utility mt-header {
+  margin-top: var(--height-header);
+}
+
+@utility mb-header {
+  margin-bottom: var(--height-header);
+}
+
+@utility my-header {
+  @apply mt-header mb-header;
+}
+
+@utility pl-layout {
+  padding-left: var(--padding-layout-x);
+}
+
+@utility pr-layout {
+  padding-right: var(--padding-layout-x);
+}
+
+@utility pt-layout {
+  padding-top: var(--padding-layout-y);
+}
+
+@utility pb-layout {
+  padding-bottom: var(--padding-layout-y);
+}
+
+@utility px-layout {
+  @apply pl-layout pr-layout;
+}
+
+@utility py-layout {
+  @apply pt-layout pb-layout;
+}
+
+@utility ml-layout {
+  margin-left: var(--padding-layout-x);
+}
+
+@utility mr-layout {
+  margin-right: var(--padding-layout-x);
+}
+
+@utility p-layout {
+  @apply px-layout py-layout;
+}
+
+@utility mt-layout {
+  margin-top: var(--padding-layout-y);
+}
+
+@utility mb-layout {
+  margin-bottom: var(--padding-layout-y);
+}
+
+@utility mx-layout {
+  @apply ml-layout mr-layout;
+}
+
+@utility my-layout {
+  @apply mt-layout mb-layout;
+}
+
+@utility m-layout {
+  @apply mx-layout my-layout;
+}

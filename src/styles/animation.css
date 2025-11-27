@@ -1,0 +1,246 @@
+/* Transition */
+@utility animated-100 {
+  transition: all 100ms ease-in-out;
+}
+
+@utility animated-150 {
+  transition: all 150ms ease-in-out;
+}
+
+@utility animated-200 {
+  transition: all 200ms ease-in-out;
+}
+
+@utility animated-250 {
+  transition: all 250ms ease-in-out;
+}
+
+@utility animated-300 {
+  transition: all 300ms ease-in-out;
+}
+
+@utility animated-350 {
+  transition: all 350ms ease-in-out;
+}
+
+@utility animated-400 {
+  transition: all 400ms ease-in-out;
+}
+
+@utility animated-450 {
+  transition: all 450ms ease-in-out;
+}
+
+@utility animated-500 {
+  transition: all 500ms ease-in-out;
+}
+
+@utility animated-550 {
+  transition: all 550ms ease-in-out;
+}
+
+@utility animated-600 {
+  transition: all 600ms ease-in-out;
+}
+
+@utility animated-650 {
+  transition: all 650ms ease-in-out;
+}
+
+@utility animated-700 {
+  transition: all 700ms ease-in-out;
+}
+
+@utility animated-750 {
+  transition: all 750ms ease-in-out;
+}
+
+@utility animated-800 {
+  transition: all 800ms ease-in-out;
+}
+
+@utility animated-850 {
+  transition: all 850ms ease-in-out;
+}
+
+@utility animated-900 {
+  transition: all 900ms ease-in-out;
+}
+
+@utility animated-950 {
+  transition: all 950ms ease-in-out;
+}
+
+@utility animated-1000 {
+  transition: all 1000ms ease-in-out;
+}
+
+/* Transition - Other */
+@utility animated-skeleton {
+  @apply animate-pulse duration-[1500ms];
+}
+
+/* Delay */
+@utility delay-0 {
+  transition-delay: 0ms !important;
+}
+
+@utility delay-50 {
+  transition-delay: 50ms !important;
+}
+
+@utility delay-100 {
+  transition-delay: 100ms !important;
+}
+
+@utility delay-150 {
+  transition-delay: 150ms !important;
+}
+
+@utility delay-200 {
+  transition-delay: 200ms !important;
+}
+
+@utility delay-250 {
+  transition-delay: 250ms !important;
+}
+
+@utility delay-300 {
+  transition-delay: 300ms !important;
+}
+
+@utility delay-350 {
+  transition-delay: 350ms !important;
+}
+
+@utility delay-400 {
+  transition-delay: 400ms !important;
+}
+
+@utility delay-450 {
+  transition-delay: 450ms !important;
+}
+
+@utility delay-500 {
+  transition-delay: 500ms !important;
+}
+
+@utility delay-550 {
+  transition-delay: 550ms !important;
+}
+
+@utility delay-600 {
+  transition-delay: 600ms !important;
+}
+
+@utility delay-650 {
+  transition-delay: 650ms !important;
+}
+
+@utility delay-700 {
+  transition-delay: 700ms !important;
+}
+
+@utility delay-750 {
+  transition-delay: 750ms !important;
+}
+
+@utility delay-800 {
+  transition-delay: 800ms !important;
+}
+
+@utility delay-850 {
+  transition-delay: 850ms !important;
+}
+
+@utility delay-900 {
+  transition-delay: 900ms !important;
+}
+
+@utility delay-950 {
+  transition-delay: 950ms !important;
+}
+
+@utility delay-1000 {
+  transition-delay: 1000ms !important;
+}
+
+@utility delay-1050 {
+  transition-delay: 1050ms !important;
+}
+
+@utility delay-1100 {
+  transition-delay: 1100ms !important;
+}
+
+@utility delay-1150 {
+  transition-delay: 1150ms !important;
+}
+
+@utility delay-1200 {
+  transition-delay: 1200ms !important;
+}
+
+@utility delay-1250 {
+  transition-delay: 1250ms !important;
+}
+
+@utility delay-1300 {
+  transition-delay: 1300ms !important;
+}
+
+@utility delay-1350 {
+  transition-delay: 1350ms !important;
+}
+
+@utility delay-1400 {
+  transition-delay: 1400ms !important;
+}
+
+@utility delay-1450 {
+  transition-delay: 1450ms !important;
+}
+
+@utility delay-1500 {
+  transition-delay: 1500ms !important;
+}
+
+@utility delay-1550 {
+  transition-delay: 1550ms !important;
+}
+
+@utility delay-1600 {
+  transition-delay: 1600ms !important;
+}
+
+@utility delay-1650 {
+  transition-delay: 1650ms !important;
+}
+
+@utility delay-1700 {
+  transition-delay: 1700ms !important;
+}
+
+@utility delay-1750 {
+  transition-delay: 1750ms !important;
+}
+
+@utility delay-1800 {
+  transition-delay: 1800ms !important;
+}
+
+@utility delay-1850 {
+  transition-delay: 1850ms !important;
+}
+
+@utility delay-1900 {
+  transition-delay: 1900ms !important;
+}
+
+@utility delay-1950 {
+  transition-delay: 1950ms !important;
+}
+
+@utility delay-2000 {
+  transition-delay: 2000ms !important;
+}

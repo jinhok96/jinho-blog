@@ -1,0 +1,25 @@
+@import 'tailwindcss';
+@import './normalize.css';
+@import './color.css';
+@import './font.css';
+@import './responsive.css';
+@import './size.css';
+@import './animation.css';
+@import './utility.css';
+
+/* 커스텀 기본 스타일 */
+@layer base {
+  * {
+    @apply scrollbar whitespace-pre-line break-keep;
+  }
+
+  button,
+  a {
+    @apply cursor-pointer;
+  }
+
+  button:disabled,
+  a:disabled {
+    @apply cursor-not-allowed opacity-60;
+  }
+}

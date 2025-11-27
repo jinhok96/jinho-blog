@@ -1,0 +1,209 @@
+/* 기본 색상 */
+@custom-variant light (&:where(.light, .light *):not(.system, .system *));
+
+:root,
+:root:where(.light):not(.system),
+*:where(.light):not(.system) {
+  --black: #171719;
+  --white: #ffffff;
+
+  --color-gray-1: #f6f6f6;
+  --color-gray-2: #e7e7e8;
+  --color-gray-3: #dcdcdd;
+  --color-gray-4: #c5c5c5;
+  --color-gray-5: #aeaeaf;
+  --color-gray-6: #969697;
+  --color-gray-7: #808081;
+  --color-gray-8: #686869;
+  --color-gray-9: #515153;
+  --color-gray-10: #3a3a3b;
+
+  --background: var(--white);
+  --foreground: var(--black);
+
+  --background-1: color-mix(in srgb, var(--background) 4%, transparent);
+  --background-2: color-mix(in srgb, var(--background) 10%, transparent);
+  --background-3: color-mix(in srgb, var(--background) 15%, transparent);
+  --background-4: color-mix(in srgb, var(--background) 25%, transparent);
+  --background-5: color-mix(in srgb, var(--background) 35%, transparent);
+  --background-6: color-mix(in srgb, var(--background) 45%, transparent);
+  --background-7: color-mix(in srgb, var(--background) 55%, transparent);
+  --background-8: color-mix(in srgb, var(--background) 65%, transparent);
+  --background-9: color-mix(in srgb, var(--background) 75%, transparent);
+  --background-10: color-mix(in srgb, var(--background) 85%, transparent);
+
+  --foreground-1: color-mix(in srgb, var(--foreground) 4%, transparent);
+  --foreground-2: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --foreground-3: color-mix(in srgb, var(--foreground) 15%, transparent);
+  --foreground-4: color-mix(in srgb, var(--foreground) 25%, transparent);
+  --foreground-5: color-mix(in srgb, var(--foreground) 35%, transparent);
+  --foreground-6: color-mix(in srgb, var(--foreground) 45%, transparent);
+  --foreground-7: color-mix(in srgb, var(--foreground) 55%, transparent);
+  --foreground-8: color-mix(in srgb, var(--foreground) 65%, transparent);
+  --foreground-9: color-mix(in srgb, var(--foreground) 75%, transparent);
+  --foreground-10: color-mix(in srgb, var(--foreground) 85%, transparent);
+
+  --gray-1: #f6f6f6;
+  --gray-2: #e7e7e8;
+  --gray-3: #dcdcdd;
+  --gray-4: #c5c5c5;
+  --gray-5: #aeaeaf;
+  --gray-6: #969697;
+  --gray-7: #808081;
+  --gray-8: #686869;
+  --gray-9: #515153;
+  --gray-10: #3a3a3b;
+
+  --blue-1: var(--color-blue-50);
+  --blue-2: var(--color-blue-100);
+  --blue-3: var(--color-blue-300);
+  --blue-4: var(--color-blue-400);
+  --blue-5: var(--color-blue-500);
+  --blue-6: var(--color-blue-600);
+  --blue-7: var(--color-blue-700);
+  --blue-8: var(--color-blue-800);
+  --blue-9: var(--color-blue-900);
+
+  --red-1: var(--color-red-50);
+  --red-2: var(--color-red-100);
+  --red-3: var(--color-red-300);
+  --red-4: var(--color-red-400);
+  --red-5: var(--color-red-500);
+  --red-6: var(--color-red-600);
+  --red-7: var(--color-red-700);
+  --red-8: var(--color-red-800);
+  --red-9: var(--color-red-900);
+}
+
+/* 다크모드 색상 */
+@custom-variant dark (&:where(.dark, .dark *):not(.system, .system *));
+
+:root:where(.dark):not(.system),
+*:where(.dark):not(.system) {
+  --background: var(--black);
+  --foreground: var(--white);
+
+  --background-1: color-mix(in srgb, var(--background) 4%, transparent);
+  --background-2: color-mix(in srgb, var(--background) 10%, transparent);
+  --background-3: color-mix(in srgb, var(--background) 15%, transparent);
+  --background-4: color-mix(in srgb, var(--background) 25%, transparent);
+  --background-5: color-mix(in srgb, var(--background) 35%, transparent);
+  --background-6: color-mix(in srgb, var(--background) 45%, transparent);
+  --background-7: color-mix(in srgb, var(--background) 55%, transparent);
+  --background-8: color-mix(in srgb, var(--background) 65%, transparent);
+  --background-9: color-mix(in srgb, var(--background) 75%, transparent);
+  --background-10: color-mix(in srgb, var(--background) 85%, transparent);
+
+  --foreground-1: color-mix(in srgb, var(--foreground) 4%, transparent);
+  --foreground-2: color-mix(in srgb, var(--foreground) 10%, transparent);
+  --foreground-3: color-mix(in srgb, var(--foreground) 15%, transparent);
+  --foreground-4: color-mix(in srgb, var(--foreground) 25%, transparent);
+  --foreground-5: color-mix(in srgb, var(--foreground) 35%, transparent);
+  --foreground-6: color-mix(in srgb, var(--foreground) 45%, transparent);
+  --foreground-7: color-mix(in srgb, var(--foreground) 55%, transparent);
+  --foreground-8: color-mix(in srgb, var(--foreground) 65%, transparent);
+  --foreground-9: color-mix(in srgb, var(--foreground) 75%, transparent);
+  --foreground-10: color-mix(in srgb, var(--foreground) 85%, transparent);
+
+  --gray-1: #202022;
+  --gray-2: #2f2f30;
+  --gray-3: #3a3a3b;
+  --gray-4: #515153;
+  --gray-5: #686869;
+  --gray-6: #808081;
+  --gray-7: #969697;
+  --gray-8: #aeaeaf;
+  --gray-9: #c5c5c5;
+  --gray-10: #dcdcdd;
+
+  --blue-1: var(--color-blue-950);
+  --blue-2: var(--color-blue-900);
+  --blue-3: var(--color-blue-800);
+  --blue-4: var(--color-blue-700);
+  --blue-5: var(--color-blue-600);
+  --blue-6: var(--color-blue-500);
+  --blue-7: var(--color-blue-400);
+  --blue-8: var(--color-blue-300);
+  --blue-9: var(--color-blue-200);
+
+  --red-1: var(--color-red-950);
+  --red-2: var(--color-red-900);
+  --red-3: var(--color-red-800);
+  --red-4: var(--color-red-700);
+  --red-5: var(--color-red-600);
+  --red-6: var(--color-red-500);
+  --red-7: var(--color-red-400);
+  --red-8: var(--color-red-300);
+  --red-9: var(--color-red-200);
+}
+
+/* 색상 정의 */
+@theme inline {
+  --color-black: var(--black);
+  --color-white: var(--white);
+
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+
+  --color-background-1: var(--background-1);
+  --color-background-2: var(--background-2);
+  --color-background-3: var(--background-3);
+  --color-background-4: var(--background-4);
+  --color-background-5: var(--background-5);
+  --color-background-6: var(--background-6);
+  --color-background-7: var(--background-7);
+  --color-background-8: var(--background-8);
+  --color-background-9: var(--background-9);
+  --color-background-10: var(--background-10);
+
+  --color-foreground-1: var(--foreground-1);
+  --color-foreground-2: var(--foreground-2);
+  --color-foreground-3: var(--foreground-3);
+  --color-foreground-4: var(--foreground-4);
+  --color-foreground-5: var(--foreground-5);
+  --color-foreground-6: var(--foreground-6);
+  --color-foreground-7: var(--foreground-7);
+  --color-foreground-8: var(--foreground-8);
+  --color-foreground-9: var(--foreground-9);
+  --color-foreground-10: var(--foreground-10);
+
+  --color-gray-1: var(--gray-1);
+  --color-gray-2: var(--gray-2);
+  --color-gray-3: var(--gray-3);
+  --color-gray-4: var(--gray-4);
+  --color-gray-5: var(--gray-5);
+  --color-gray-6: var(--gray-6);
+  --color-gray-7: var(--gray-7);
+  --color-gray-8: var(--gray-8);
+  --color-gray-9: var(--gray-9);
+  --color-gray-10: var(--gray-10);
+
+  --color-blue-1: var(--blue-1);
+  --color-blue-2: var(--blue-2);
+  --color-blue-3: var(--blue-3);
+  --color-blue-4: var(--blue-4);
+  --color-blue-5: var(--blue-5);
+  --color-blue-6: var(--blue-6);
+  --color-blue-7: var(--blue-7);
+  --color-blue-8: var(--blue-8);
+  --color-blue-9: var(--blue-9);
+
+  --color-red-1: var(--red-1);
+  --color-red-2: var(--red-2);
+  --color-red-3: var(--red-3);
+  --color-red-4: var(--red-4);
+  --color-red-5: var(--red-5);
+  --color-red-6: var(--red-6);
+  --color-red-7: var(--red-7);
+  --color-red-8: var(--red-8);
+  --color-red-9: var(--red-9);
+}
+
+/* 전역 색상 적용 */
+:root {
+  @apply bg-background text-foreground;
+}
+
+@utility bg-background-blur {
+  @apply bg-background/90 backdrop-blur-sm;
+}

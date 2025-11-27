@@ -1,0 +1,64 @@
+import type { Metadata } from 'next';
+
+import { notFound } from 'next/navigation';
+
+import { generatePageMetadata } from '@/core/utils';
+
+import { getPortfolio, getPortfolios } from '@/entities/portfolio';
+
+type Props = {
+  params: Promise<{ slug: string }>;
+};
+
+// SSG: 빌드 시 모든 경로 생성
+export async function generateStaticParams() {
+  const portfolios = await getPortfolios();
+  return portfolios.map(portfolio => ({ slug: portfolio.slug }));
+}
+
+// SEO: 동적 메타데이터
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { slug } = await params;
+  const portfolio = await getPortfolio(slug);
+
+  if (!portfolio) return {};
+
+  return generatePageMetadata({
+    routerName: 'portfolio',
+    title: portfolio.title,
+    description: portfolio.description,
+  });
+}
+
+export default async function PortfolioDetailPage({ params }: Props) {
+  const { slug } = await params;
+  const portfolio = await getPortfolio(slug);
+
+  if (!portfolio) {
+    notFound();
+  }
+
+  const PortfolioComponent = portfolio.Component;
+
+  return (
+    <article className="container mx-auto max-w-4xl px-4 py-12">
+      <h1 className="mb-4 text-4xl font-bold">{portfolio.title}</h1>
+      <p className="mb-8 text-gray-600">{portfolio.description}</p>
+      {portfolio.tags.length > 0 && (
+        <div className="mb-8 flex flex-wrap gap-2">
+          {portfolio.tags.map(tag => (
+            <span
+              key={tag}
+              className="rounded-sm bg-gray-100 px-3 py-1 text-sm text-gray-700"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+      )}
+      <div className="max-w-none">
+        <PortfolioComponent />
+      </div>
+    </article>
+  );
+}

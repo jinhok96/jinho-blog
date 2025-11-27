@@ -15,7 +15,7 @@
   }
 }
 
-@media (max-width: 48rem) {
+@media (max-width: 40rem) {
   :root {
     --height-header: 4rem;
 

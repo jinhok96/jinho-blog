@@ -1,7 +1,7 @@
-import type { Library } from './types';
-import type { LibraryCategory } from '@/core/types/metadata';
+import type { LibraryCategory } from '@/core/types';
+import type { Library } from '@/entities/library/types';
 
-import { getLibraryListByCategory, librariesRegistry } from './registry.generated';
+import { getLibraryListByCategory, librariesRegistry } from '@/entities/library/registry.generated';
 
 export async function getLibraries(): Promise<Library[]> {
   return librariesRegistry;

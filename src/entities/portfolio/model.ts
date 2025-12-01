@@ -1,7 +1,7 @@
-import type { Portfolio } from './types';
-import type { PortfolioCategory } from '@/core/types/metadata';
+import type { PortfolioCategory } from '@/core/types';
+import type { Portfolio } from '@/entities/portfolio/types';
 
-import { getPortfolioListByCategory, portfolioRegistry } from './registry.generated';
+import { getPortfolioListByCategory, portfolioRegistry } from '@/entities/portfolio/registry.generated';
 
 export async function getPortfolios(): Promise<Portfolio[]> {
   return portfolioRegistry;

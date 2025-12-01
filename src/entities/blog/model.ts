@@ -1,7 +1,7 @@
-import type { Blog } from './types';
 import type { BlogCategory } from '@/core/types';
+import type { Blog } from '@/entities/blog/types';
 
-import { blogRegistry, getBlogListByCategory } from './registry.generated';
+import { blogRegistry, getBlogListByCategory } from '@/entities/blog/registry.generated';
 
 export async function getBlogPosts(): Promise<Blog[]> {
   // 날짜순 정렬 (최신순)

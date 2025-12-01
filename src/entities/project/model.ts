@@ -1,7 +1,7 @@
-import type { Project } from './types';
-import type { ProjectCategory } from '@/core/types/metadata';
+import type { ProjectCategory } from '@/core/types';
+import type { Project } from '@/entities/project/types';
 
-import { getProjectListByCategory, projectsRegistry } from './registry.generated';
+import { getProjectListByCategory, projectsRegistry } from '@/entities/project/registry.generated';
 
 export async function getProjects(): Promise<Project[]> {
   return projectsRegistry;

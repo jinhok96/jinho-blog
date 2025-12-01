@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
-import { MDXComponent } from '@/core/ui';
+import { MDXComponent } from '@/core/mdx';
 import { formatDateToString, generatePageMetadata } from '@/core/utils';
 
 import { getBlogPost, getBlogPosts } from '@/entities/blog';

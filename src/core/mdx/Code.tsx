@@ -7,7 +7,7 @@ import localFont from 'next/font/local';
 import { cn } from '@/core/utils';
 
 const monaco = localFont({
-  src: '../../../../public/fonts/monaco-webfont.woff2',
+  src: '../../../public/fonts/monaco-webfont.woff2',
   display: 'swap',
 });
 

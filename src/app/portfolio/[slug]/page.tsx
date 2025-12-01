@@ -35,22 +35,22 @@ export default async function PortfolioDetailPage({ params }: Props) {
   const { slug } = await params;
   const portfolio = await getPortfolio(slug);
 
-  if (!portfolio) {
-    notFound();
-  }
+  if (!portfolio) notFound();
+
+  const { title, description, category, filePath } = portfolio;
 
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
-      <h1 className="mb-4 text-4xl font-bold">{portfolio.title}</h1>
-      <p className="mb-8 text-gray-600">{portfolio.description}</p>
+      <h1 className="mb-4 text-4xl font-bold">{title}</h1>
+      <p className="mb-8 text-gray-600">{description}</p>
       <span
-        key={portfolio.category}
+        key={category}
         className="rounded-sm bg-gray-100 px-3 py-1 text-sm text-gray-700"
       >
-        {portfolio.category}
+        {category}
       </span>
 
-      <MDXComponent filePath={portfolio.filePath} />
+      <MDXComponent filePath={filePath} />
     </article>
   );
 }

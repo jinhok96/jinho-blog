@@ -35,29 +35,29 @@ export default async function LibraryPage({ params }: Props) {
   const { slug } = await params;
   const library = await getLibrary(slug);
 
-  if (!library) {
-    notFound();
-  }
+  if (!library) notFound();
+
+  const { title, description, tech, filePath } = library;
 
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
-      <h1 className="mb-4 text-4xl font-bold">{library.title}</h1>
+      <h1 className="mb-4 text-4xl font-bold">{title}</h1>
 
-      <p className="mb-4 text-gray-600">{library.description}</p>
+      <p className="mb-4 text-gray-600">{description}</p>
 
       <div className="mb-8 flex flex-wrap gap-2">
         <span className="text-sm text-gray-500">Tech Stack:</span>
-        {library.tech.map(t => (
+        {tech.map(item => (
           <span
-            key={t}
+            key={item}
             className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
           >
-            {t}
+            {item}
           </span>
         ))}
       </div>
 
-      <MDXComponent filePath={library.filePath} />
+      <MDXComponent filePath={filePath} />
     </article>
   );
 }

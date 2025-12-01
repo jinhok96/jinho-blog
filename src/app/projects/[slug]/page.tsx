@@ -35,28 +35,26 @@ export default async function ProjectPage({ params }: Props) {
   const { slug } = await params;
   const project = await getProject(slug);
 
-  if (!project) {
-    notFound();
-  }
+  if (!project) notFound();
+
+  const { title, description, tech, filePath } = project;
 
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
-      <h1 className="mb-4 text-4xl font-bold">{project.title}</h1>
-      <p className="mb-8 text-gray-600">{project.description}</p>
-      {project.tech.length > 0 && (
-        <div className="mb-8 flex flex-wrap gap-2">
-          {project.tech.map(tech => (
-            <span
-              key={tech}
-              className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
-            >
-              {tech}
-            </span>
-          ))}
-        </div>
-      )}
+      <h1 className="mb-4 text-4xl font-bold">{title}</h1>
+      <p className="mb-8 text-gray-600">{description}</p>
+      <div className="mb-8 flex flex-wrap gap-2">
+        {tech.map(tech => (
+          <span
+            key={tech}
+            className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
+          >
+            {tech}
+          </span>
+        ))}
+      </div>
 
-      <MDXComponent filePath={project.filePath} />
+      <MDXComponent filePath={filePath} />
     </article>
   );
 }

@@ -1,10 +1,14 @@
 import type { Metadata } from 'next';
+import type { Options as RehypeAutolinkHeadingsOptions } from 'rehype-autolink-headings';
 
 import { MDXRemote } from 'next-mdx-remote-client/rsc';
 import { notFound } from 'next/navigation';
 
 import * as fs from 'fs';
 import matter from 'gray-matter';
+import rehypeAutolinkHeadings from 'rehype-autolink-headings';
+import rehypeSlug from 'rehype-slug';
+import remarkGfm from 'remark-gfm';
 
 import { getMDXComponents } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -63,17 +67,16 @@ export default async function BlogPostPage({ params }: Props) {
           </div>
         )}
       </div>
-      <div className="max-w-none">
+      <div>
         {post.filePath && (
           <MDXRemote
             source={matter(fs.readFileSync(post.filePath, 'utf-8')).content}
             options={{
               mdxOptions: {
-                remarkPlugins: [(await import('remark-gfm')).default],
+                remarkPlugins: [remarkGfm],
                 rehypePlugins: [
-                  (await import('rehype-slug')).default,
-                  (await import('rehype-autolink-headings')).default,
-                  (await import('rehype-prism-plus')).default,
+                  rehypeSlug,
+                  [rehypeAutolinkHeadings, { behavior: 'append' } satisfies RehypeAutolinkHeadingsOptions],
                 ],
               },
             }}

@@ -1,10 +1,14 @@
 import type {
   AnchorHTMLAttributes,
+  ComponentProps,
   HTMLAttributes,
   TableHTMLAttributes,
   TdHTMLAttributes,
   ThHTMLAttributes,
 } from 'react';
+
+import Callout from '@/core/ui/mdx/Callout';
+import Code from '@/core/ui/mdx/Code';
 
 export function getMDXComponents() {
   return {
@@ -52,8 +56,18 @@ export function getMDXComponents() {
     ),
 
     p: (props: HTMLAttributes<HTMLParagraphElement>) => (
-      <p
-        className="mb-4 font-body-16"
+      <div
+        className="group mb-4 font-body-16"
+        {...props}
+      />
+    ),
+
+    a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
+      <a
+        className={`
+          mx-1 text-gray-7 underline underline-offset-2 animated-100
+          hover:text-gray-9
+        `}
         {...props}
       />
     ),
@@ -75,12 +89,7 @@ export function getMDXComponents() {
       />
     ),
 
-    li: (props: HTMLAttributes<HTMLLIElement>) => (
-      <li
-        className=""
-        {...props}
-      />
-    ),
+    li: (props: HTMLAttributes<HTMLLIElement>) => <li {...props} />,
 
     blockquote: (props: HTMLAttributes<HTMLQuoteElement>) => (
       <blockquote
@@ -96,26 +105,16 @@ export function getMDXComponents() {
       />
     ),
 
-    a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
-      <a
-        className={`
-          mx-1 text-gray-7 underline underline-offset-2 animated-100
-          hover:text-gray-9
-        `}
-        {...props}
-      />
-    ),
-
-    code: (props: HTMLAttributes<HTMLElement>) => (
-      <code
-        className="mx-1 rounded-md bg-gray-2 px-1.5 py-1 tracking-normal"
+    code: (props: ComponentProps<typeof Code>) => (
+      <Code
+        className="group-has-[pre]:mx-1! group-has-[pre]:bg-gray-1! group-has-[pre]:px-2! group-has-[pre]:py-1!"
         {...props}
       />
     ),
 
     pre: (props: HTMLAttributes<HTMLPreElement>) => (
-      <pre
-        className="mb-4 overflow-x-auto rounded-xl bg-gray-1 p-4"
+      <Callout
+        className={`mb-4 overflow-x-auto rounded-xl bg-gray-1 p-4`}
         {...props}
       />
     ),
@@ -131,7 +130,7 @@ export function getMDXComponents() {
 
     thead: (props: HTMLAttributes<HTMLTableSectionElement>) => (
       <thead
-        className="bg-gray-2"
+        className="bg-gray-1"
         {...props}
       />
     ),

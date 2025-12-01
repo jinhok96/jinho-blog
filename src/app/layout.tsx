@@ -8,7 +8,6 @@ import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 
 import '@/styles/globals.css';
-import 'prismjs/themes/prism-tomorrow.css';
 
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',
@@ -26,7 +25,10 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
   return (
-    <html lang="ko" suppressHydrationWarning>
+    <html
+      lang="ko"
+      suppressHydrationWarning
+    >
       <head>
         {/* FOUC 방지: 페이지 로드 시 테마 즉시 적용 */}
         <script dangerouslySetInnerHTML={{ __html: INIT_THEME_SCRIPT }} />

@@ -21,7 +21,7 @@ export default function Code({ children, language = 'typescript', className, Pre
       language={language}
       PreTag={PreTag}
       codeTagProps={{ className: monaco.className }}
-      style={{ ...style }}
+      style={style}
     >
       {children}
     </Prism>

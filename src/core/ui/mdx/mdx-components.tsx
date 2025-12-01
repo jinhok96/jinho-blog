@@ -11,84 +11,87 @@ export function getMDXComponents() {
     // 기본 HTML 요소 커스터마이징
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className="mb-4 text-4xl font-bold"
+        className="mb-4 font-title-40"
         {...props}
       />
     ),
 
     h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className="mt-8 mb-3 text-3xl font-semibold"
+        className="mt-10 mb-5 font-subtitle-32"
         {...props}
       />
     ),
 
     h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className="mt-6 mb-2 text-2xl font-semibold"
+        className="mt-8 mb-4 font-subtitle-28"
         {...props}
       />
     ),
 
     h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className="mt-4 mb-2 text-xl font-semibold"
+        className="mt-6 mb-3 font-subtitle-24"
         {...props}
       />
     ),
 
     h5: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className="mt-4 mb-2 text-lg font-semibold"
+        className="my-3 font-subtitle-20"
         {...props}
       />
     ),
 
     h6: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className="mt-4 mb-2 text-base font-semibold"
+        className="my-3 font-subtitle-16"
         {...props}
       />
     ),
 
     p: (props: HTMLAttributes<HTMLParagraphElement>) => (
       <p
-        className="mb-4 leading-7"
+        className="mb-4 font-body-16"
         {...props}
       />
     ),
 
     ul: (props: HTMLAttributes<HTMLUListElement>) => (
       <ul
-        className="mb-4 ml-6 list-disc space-y-2"
+        className={`
+          mb-4 ml-7 list-disc space-y-2
+          in-[li]:mt-2 in-[li]:ml-5
+        `}
         {...props}
       />
     ),
 
     ol: (props: HTMLAttributes<HTMLOListElement>) => (
       <ol
-        className="mb-4 ml-6 list-decimal space-y-2"
+        className="mb-4 ml-7 list-decimal space-y-2"
         {...props}
       />
     ),
 
     li: (props: HTMLAttributes<HTMLLIElement>) => (
       <li
-        className="leading-7"
+        className=""
         {...props}
       />
     ),
 
     blockquote: (props: HTMLAttributes<HTMLQuoteElement>) => (
       <blockquote
-        className="mb-4 border-l-4 border-gray-300 pl-4 italic"
+        className="mb-4 ml-0.5 border-l-4 border-gray-4 pl-3 font-caption-16 italic"
         {...props}
       />
     ),
 
     hr: (props: HTMLAttributes<HTMLHRElement>) => (
       <hr
-        className="my-8 border-gray-300"
+        className="my-8 border-gray-3"
         {...props}
       />
     ),
@@ -96,8 +99,8 @@ export function getMDXComponents() {
     a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
       <a
         className={`
-          text-blue-600 underline
-          hover:text-blue-800
+          mx-1 text-gray-7 underline underline-offset-2 animated-100
+          hover:text-gray-9
         `}
         {...props}
       />
@@ -105,22 +108,22 @@ export function getMDXComponents() {
 
     code: (props: HTMLAttributes<HTMLElement>) => (
       <code
-        className="rounded-sm bg-gray-100 px-1.5 py-0.5 font-mono text-sm"
+        className="mx-1 rounded-md bg-gray-2 px-1.5 py-1 tracking-normal"
         {...props}
       />
     ),
 
     pre: (props: HTMLAttributes<HTMLPreElement>) => (
       <pre
-        className="mb-4 overflow-x-auto rounded-lg bg-gray-900 p-4"
+        className="mb-4 overflow-x-auto rounded-xl bg-gray-1 p-4"
         {...props}
       />
     ),
 
     table: (props: TableHTMLAttributes<HTMLTableElement>) => (
-      <div className="mb-4 overflow-x-auto">
+      <div className="mb-4 border-collapse overflow-auto rounded-xl border border-gray-3">
         <table
-          className="min-w-full border-collapse border border-gray-300"
+          className="size-full"
           {...props}
         />
       </div>
@@ -128,7 +131,7 @@ export function getMDXComponents() {
 
     thead: (props: HTMLAttributes<HTMLTableSectionElement>) => (
       <thead
-        className="bg-gray-100"
+        className="bg-gray-2"
         {...props}
       />
     ),
@@ -137,21 +140,30 @@ export function getMDXComponents() {
 
     tr: (props: HTMLAttributes<HTMLTableRowElement>) => (
       <tr
-        className="border-b border-gray-300"
+        className={`
+          border-b border-gray-3
+          last:border-0
+        `}
         {...props}
       />
     ),
 
     th: (props: ThHTMLAttributes<HTMLTableCellElement>) => (
       <th
-        className={`border border-gray-300 px-4 py-2 text-left font-semibold`}
+        className={`
+          border-r border-gray-3 px-4 py-3 text-left font-semibold
+          last:border-0
+        `}
         {...props}
       />
     ),
 
     td: (props: TdHTMLAttributes<HTMLTableCellElement>) => (
       <td
-        className="border border-gray-300 px-4 py-2"
+        className={`
+          border-r border-gray-3 px-4 py-3
+          last:border-0
+        `}
         {...props}
       />
     ),

@@ -12,7 +12,6 @@ import Code from '@/core/ui/mdx/Code';
 
 export function getMDXComponents() {
   return {
-    // 기본 HTML 요소 커스터마이징
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
         className="mb-4 font-title-40"

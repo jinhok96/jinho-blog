@@ -1,12 +1,8 @@
 import type { Metadata } from 'next';
 
-import { MDXRemote } from 'next-mdx-remote-client/rsc';
 import { notFound } from 'next/navigation';
 
-import * as fs from 'fs';
-import matter from 'gray-matter';
-
-import { getMDXComponents } from '@/core/ui';
+import { MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getLibraries, getLibrary } from '@/entities/library';
@@ -61,24 +57,7 @@ export default async function LibraryPage({ params }: Props) {
         ))}
       </div>
 
-      <div className="max-w-none">
-        {library.filePath && (
-          <MDXRemote
-            source={matter(fs.readFileSync(library.filePath, 'utf-8')).content}
-            options={{
-              mdxOptions: {
-                remarkPlugins: [(await import('remark-gfm')).default],
-                rehypePlugins: [
-                  (await import('rehype-slug')).default,
-                  (await import('rehype-autolink-headings')).default,
-                  (await import('rehype-prism-plus')).default,
-                ],
-              },
-            }}
-            components={getMDXComponents()}
-          />
-        )}
-      </div>
+      <MDXComponent filePath={library.filePath} />
     </article>
   );
 }

@@ -1,16 +1,8 @@
 import type { Metadata } from 'next';
-import type { Options as RehypeAutolinkHeadingsOptions } from 'rehype-autolink-headings';
 
-import { MDXRemote } from 'next-mdx-remote-client/rsc';
 import { notFound } from 'next/navigation';
 
-import * as fs from 'fs';
-import matter from 'gray-matter';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import remarkGfm from 'remark-gfm';
-
-import { getMDXComponents } from '@/core/ui';
+import { MDXComponent } from '@/core/ui';
 import { formatDateToString, generatePageMetadata } from '@/core/utils';
 
 import { getBlogPost, getBlogPosts } from '@/entities/blog';
@@ -49,31 +41,20 @@ export default async function BlogPostPage({ params }: Props) {
 
   return (
     <article className="container mx-auto max-w-4xl p-layout">
-      <h1 className="mb-4 font-title-40">{title}</h1>
-      <p className="font-subtitle-16 text-gray-6">{description}</p>
+      <div className="mb-5">
+        <p className="mb-2 font-caption-20 text-gray-6">{category}</p>
+        <h1 className="mb-4 font-title-40">{title}</h1>
+        <p className="font-subtitle-16 text-gray-6">{description}</p>
+      </div>
 
       <div className="mb-8 flex-col-start w-full gap-4">
         <div className="flex-row-center w-full gap-3">
           <time className="font-caption-14 text-gray-6">작성일: {formatDateToString(createdAt)}</time>
           <time className="font-caption-14 text-gray-6">수정일: {formatDateToString(updatedAt)}</time>
         </div>
-
-        <span className="rounded-md bg-foreground px-2 py-1 font-caption-14 text-background">{category}</span>
       </div>
 
-      <MDXRemote
-        source={matter(fs.readFileSync(filePath, 'utf-8')).content}
-        options={{
-          mdxOptions: {
-            remarkPlugins: [remarkGfm],
-            rehypePlugins: [
-              rehypeSlug,
-              [rehypeAutolinkHeadings, { behavior: 'append' } satisfies RehypeAutolinkHeadingsOptions],
-            ],
-          },
-        }}
-        components={getMDXComponents()}
-      />
+      <MDXComponent filePath={filePath} />
     </article>
   );
 }

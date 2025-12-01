@@ -1,1 +1,1 @@
-export { getMDXComponents } from './mdx-components';
+export { MDXComponent } from './MDXComponent';

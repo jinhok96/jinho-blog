@@ -32,7 +32,8 @@
       "Bash(npm uninstall:*)",
       "Bash(del \"src\\mdx.d.ts\")",
       "Bash(del \"d:\\jinho\\jinho-blog\\src\\views\\blog\\first-post\\index.tsx\" \"d:\\jinho\\jinho-blog\\src\\views\\blog\\second-post\\index.tsx\" \"d:\\jinho\\jinho-blog\\src\\views\\blog\\third-post\\index.tsx\" \"d:\\jinho\\jinho-blog\\src\\views\\projects\\example-project\\index.tsx\" \"d:\\jinho\\jinho-blog\\src\\views\\portfolio\\example-portfolio\\index.tsx\" \"d:\\jinho\\jinho-blog\\src\\views\\libraries\\example-library\\index.tsx\")",
-      "Bash(code:*)"
+      "Bash(code:*)",
+      "Bash(ls:*)"
     ],
     "deny": [],
     "ask": []

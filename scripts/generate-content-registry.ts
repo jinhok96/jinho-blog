@@ -1,15 +1,20 @@
 import * as fs from 'fs';
 import * as path from 'path';
 
+import matter from 'gray-matter';
+
 type ContentSection = 'blog' | 'portfolio' | 'projects' | 'libraries';
 
 interface ContentEntry {
   slug: string;
-  importPath: string;
+  importPath?: string; // TSX 파일의 경우
+  filePath?: string; // MDX 파일의 경우
+  fileType: 'tsx' | 'mdx';
+  metadata?: Record<string, unknown>; // MDX 파일의 frontmatter
 }
 
 /**
- * 콘텐츠 디렉토리를 스캔하여 모든 .tsx 파일 찾기
+ * 콘텐츠 디렉토리를 스캔하여 모든 .tsx 및 .mdx 파일 찾기
  */
 function discoverContent(section: ContentSection): ContentEntry[] {
   const viewsDir = path.join(process.cwd(), 'src', 'views', section);
@@ -32,20 +37,52 @@ function discoverContent(section: ContentSection): ContentEntry[] {
       if (item.isDirectory()) {
         // 폴더 내부 스캔
         scan(fullPath, itemRelativePath);
-      } else if (item.name === 'index.tsx') {
-        // {slug}/index.tsx 패턴 (기본 방식)
-        const slug = relativePath || item.name.replace('.tsx', '');
-        entries.push({
-          slug,
-          importPath: `@/views/${section}/${slug}`,
-        });
-      } else if (item.name.endsWith('.tsx') && !relativePath) {
-        // 루트 레벨의 단일 .tsx 파일 (지원)
-        const slug = item.name.replace('.tsx', '');
-        entries.push({
-          slug,
-          importPath: `@/views/${section}/${slug}`,
-        });
+      } else if (item.name === 'index.tsx' || item.name === 'index.mdx') {
+        // {slug}/index.tsx 또는 {slug}/index.mdx 패턴
+        const slug = relativePath || item.name.replace(/\.(tsx|mdx)$/, '');
+        const fileType = item.name.endsWith('.mdx') ? 'mdx' : 'tsx';
+
+        if (fileType === 'mdx') {
+          // MDX 파일: 파일 경로와 메타데이터 저장
+          const fileContent = fs.readFileSync(fullPath, 'utf-8');
+          const { data } = matter(fileContent);
+          entries.push({
+            slug,
+            filePath: fullPath,
+            fileType,
+            metadata: data,
+          });
+        } else {
+          // TSX 파일: import 경로 저장
+          entries.push({
+            slug,
+            importPath: `@/views/${section}/${slug}`,
+            fileType,
+          });
+        }
+      } else if ((item.name.endsWith('.tsx') || item.name.endsWith('.mdx')) && !relativePath) {
+        // 루트 레벨의 단일 파일
+        const slug = item.name.replace(/\.(tsx|mdx)$/, '');
+        const fileType = item.name.endsWith('.mdx') ? 'mdx' : 'tsx';
+
+        if (fileType === 'mdx') {
+          // MDX 파일: 파일 경로와 메타데이터 저장
+          const fileContent = fs.readFileSync(fullPath, 'utf-8');
+          const { data } = matter(fileContent);
+          entries.push({
+            slug,
+            filePath: fullPath,
+            fileType,
+            metadata: data,
+          });
+        } else {
+          // TSX 파일: import 경로 저장
+          entries.push({
+            slug,
+            importPath: `@/views/${section}/${slug}`,
+            fileType,
+          });
+        }
       }
     }
   }
@@ -110,8 +147,9 @@ function generateRegistry(section: ContentSection) {
   const categoryType = getCategoryType(section);
   const typeName = pascalSection;
 
-  // Import 문 생성
-  const imports = entries
+  // TSX 파일만 Import 문 생성
+  const tsxEntries = entries.filter(e => e.fileType === 'tsx');
+  const imports = tsxEntries
     .map(
       (entry, idx) =>
         `import Content${idx}, { metadata as meta${idx} } from '${entry.importPath}';`
@@ -119,14 +157,31 @@ function generateRegistry(section: ContentSection) {
     .join('\n');
 
   // 배열 항목 생성
+  let tsxIndex = 0;
   const arrayItems = entries
-    .map(
-      (entry, idx) => `  {
+    .map(entry => {
+      if (entry.fileType === 'tsx') {
+        const idx = tsxIndex++;
+        return `  {
     slug: '${entry.slug}',
     ...meta${idx},
     Component: Content${idx},
-  }`
-    )
+  }`;
+      } else {
+        // MDX 파일
+        const metadataStr = JSON.stringify(entry.metadata, null, 4)
+          .split('\n')
+          .map((line, i) => (i === 0 ? line : `    ${line}`))
+          .join('\n');
+        // Windows 경로의 백슬래시를 슬래시로 변경
+        const normalizedPath = entry.filePath?.replace(/\\/g, '/') || '';
+        return `  {
+    slug: '${entry.slug}',
+    ...${metadataStr},
+    filePath: '${normalizedPath}',
+  }`;
+      }
+    })
     .join(',\n');
 
   // 카테고리 필터 함수명
@@ -166,8 +221,12 @@ export function ${filterFunctionName}(category: ${categoryType}): ${typeName}[] 
 
   // 파일 쓰기
   fs.writeFileSync(outputPath, code, 'utf-8');
+
+  const tsxCount = entries.filter(e => e.fileType === 'tsx').length;
+  const mdxCount = entries.filter(e => e.fileType === 'mdx').length;
+
   console.log(
-    `✅ Generated ${section} registry: ${entries.length} ${entries.length === 1 ? 'entry' : 'entries'}`
+    `✅ Generated ${section} registry: ${entries.length} ${entries.length === 1 ? 'entry' : 'entries'} (${tsxCount} TSX, ${mdxCount} MDX)`
   );
 }
 

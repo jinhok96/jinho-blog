@@ -1,5 +1,5 @@
 import type { Blog } from './types';
-import type { BlogCategory } from '@/core/types/metadata';
+import type { BlogCategory } from '@/core/types';
 
 import { blogRegistry, getBlogListByCategory } from './registry.generated';
 
@@ -13,5 +13,7 @@ export async function getBlogPost(slug: string): Promise<Blog | null> {
 }
 
 export async function getBlogPostsByCategory(category: BlogCategory): Promise<Blog[]> {
-  return getBlogListByCategory(category).sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+  return getBlogListByCategory(category).sort(
+    (a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime(),
+  );
 }

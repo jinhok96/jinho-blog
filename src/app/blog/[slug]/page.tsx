@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
 
+import { MDXRemote } from 'next-mdx-remote-client/rsc';
 import { notFound } from 'next/navigation';
+
+import * as fs from 'fs';
+import matter from 'gray-matter';
 
 import { generatePageMetadata } from '@/core/utils';
 
 import { getBlogPost, getBlogPosts } from '@/entities/blog';
+
+import { getMDXComponents } from '@/mdx-components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,8 +44,6 @@ export default async function BlogPostPage({ params }: Props) {
     notFound();
   }
 
-  const BlogPostComponent = post.Component;
-
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
@@ -59,7 +63,28 @@ export default async function BlogPostPage({ params }: Props) {
         )}
       </div>
       <div className="max-w-none">
-        <BlogPostComponent />
+        {post.filePath ? (
+          // MDX 파일인 경우
+          <MDXRemote
+            source={matter(fs.readFileSync(post.filePath, 'utf-8')).content}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [
+                  (await import('remark-gfm')).default,
+                ],
+                rehypePlugins: [
+                  (await import('rehype-slug')).default,
+                  (await import('rehype-autolink-headings')).default,
+                  (await import('rehype-prism-plus')).default,
+                ],
+              },
+            }}
+            components={getMDXComponents()}
+          />
+        ) : post.Component ? (
+          // TSX 파일인 경우
+          <post.Component />
+        ) : null}
       </div>
     </article>
   );

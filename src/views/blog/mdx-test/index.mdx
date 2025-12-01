@@ -1,0 +1,80 @@
+---
+title: 'MDX 테스트 포스트'
+description: 'MDX 기능을 테스트하는 포스트입니다'
+category:
+  - react
+  - nextjs
+createdAt: '2025-01-15'
+updatedAt: '2025-01-15'
+---
+
+## MDX 테스트
+
+안녕하세요! 이것은 MDX 테스트 포스트입니다.
+
+### 코드 하이라이팅 테스트
+
+```typescript
+import type { NextConfig } from 'next';
+
+const nextConfig: NextConfig = {
+  pageExtensions: ['js', 'jsx', 'ts', 'tsx', 'md', 'mdx'],
+};
+
+export default nextConfig;
+```
+
+### 리스트 테스트
+
+#### 순서 없는 리스트
+
+- 첫 번째 항목
+- 두 번째 항목
+- 세 번째 항목
+  - 중첩된 항목 1
+  - 중첩된 항목 2
+
+#### 순서 있는 리스트
+
+1. 첫 번째 단계
+2. 두 번째 단계
+3. 세 번째 단계
+
+### 테이블 테스트
+
+| 기능  | 설명                     | 상태    |
+| ----- | ------------------------ | ------- |
+| MDX   | Markdown + JSX           | ✅ 완료 |
+| Prism | 코드 하이라이팅          | ✅ 완료 |
+| GFM   | GitHub Flavored Markdown | ✅ 완료 |
+
+### 인라인 코드
+
+여기서 `const example = "inline code";` 와 같이 인라인 코드를 사용할 수 있습니다.
+
+### 인용구
+
+> 이것은 인용구입니다.
+> 여러 줄로 작성할 수 있습니다.
+
+### 링크
+
+[Next.js 공식 문서](https://nextjs.org/)를 참고하세요.
+
+### 구분선
+
+---
+
+### JavaScript 코드 예제
+
+```javascript
+function greet(name) {
+  console.log(`Hello, ${name}!`);
+}
+
+greet('MDX');
+```
+
+## 마치며
+
+MDX가 정상적으로 작동합니다!

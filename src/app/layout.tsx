@@ -8,6 +8,7 @@ import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 
 import '@/styles/globals.css';
+import 'prismjs/themes/prism-tomorrow.css';
 
 const pretendard = localFont({
   src: '../../public/fonts/PretendardVariable.woff2',

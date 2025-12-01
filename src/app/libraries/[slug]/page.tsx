@@ -46,20 +46,21 @@ export default async function LibraryPage({ params }: Props) {
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{library.title}</h1>
+
       <p className="mb-4 text-gray-600">{library.description}</p>
-      {library.tech.length > 0 && (
-        <div className="mb-8 flex flex-wrap gap-2">
-          <span className="text-sm text-gray-500">Tech Stack:</span>
-          {library.tech.map(t => (
-            <span
-              key={t}
-              className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
-            >
-              {t}
-            </span>
-          ))}
-        </div>
-      )}
+
+      <div className="mb-8 flex flex-wrap gap-2">
+        <span className="text-sm text-gray-500">Tech Stack:</span>
+        {library.tech.map(t => (
+          <span
+            key={t}
+            className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
+          >
+            {t}
+          </span>
+        ))}
+      </div>
+
       <div className="max-w-none">
         {library.filePath && (
           <MDXRemote

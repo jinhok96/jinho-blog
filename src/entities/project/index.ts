@@ -1,2 +1,1 @@
-export * from './model';
-export * from './types';
+export { getProject, getProjects, getProjectsByCategory } from './model';

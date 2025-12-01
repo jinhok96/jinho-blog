@@ -1,7 +1,3 @@
-import type { LibraryMetadata } from '@/core/types/metadata';
+import type { LibraryMetadata, MdxInfo } from '@/core/types';
 
-export type Library = LibraryMetadata & {
-  slug: string;
-  content?: string; // MDX 콘텐츠
-  filePath?: string; // MDX 파일 경로
-};
+export type Library = LibraryMetadata & MdxInfo;

@@ -107,7 +107,7 @@ export function getMDXComponents() {
 
     code: (props: ComponentProps<typeof Code>) => (
       <Code
-        className="group-has-[pre]:mx-1! group-has-[pre]:bg-gray-1! group-has-[pre]:px-2! group-has-[pre]:py-1!"
+        className="group-has-[pre]:mx-1! group-has-[pre]:bg-gray-1! group-has-[pre]:px-1.5! group-has-[pre]:py-0.5!"
         {...props}
       />
     ),

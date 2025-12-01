@@ -1,7 +1,3 @@
-import type { BlogMetadata } from '@/core/types/metadata';
+import type { BlogMetadata, MdxInfo } from '@/core/types';
 
-export type Blog = BlogMetadata & {
-  slug: string;
-  content?: string; // MDX 콘텐츠
-  filePath?: string; // MDX 파일 경로
-};
+export type Blog = BlogMetadata & MdxInfo;

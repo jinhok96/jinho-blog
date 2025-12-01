@@ -1,7 +1,3 @@
-import type { ProjectMetadata } from '@/core/types/metadata';
+import type { MdxInfo, ProjectMetadata } from '@/core/types';
 
-export type Project = ProjectMetadata & {
-  slug: string;
-  content?: string; // MDX 콘텐츠
-  filePath?: string; // MDX 파일 경로
-};
+export type Project = ProjectMetadata & MdxInfo;

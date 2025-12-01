@@ -35,14 +35,6 @@
   align-items: flex-end;
 }
 
-@utility grid-rows-auto {
-  @apply grid-rows-[auto_auto];
-}
-
-@utility grid-cols-auto {
-  @apply grid-cols-[auto_auto];
-}
-
 /* overflow */
 @utility overflow-anchor-auto {
   overflow-anchor: auto;
@@ -89,9 +81,69 @@
   }
 }
 
+@utility scrollbar-margin-0.5 {
+  &::-webkit-scrollbar-track {
+    @apply m-0.5;
+  }
+}
+
+@utility scrollbar-margin-1 {
+  &::-webkit-scrollbar-track {
+    @apply m-1;
+  }
+}
+
+@utility scrollbar-margin-1.5 {
+  &::-webkit-scrollbar-track {
+    @apply m-1.5;
+  }
+}
+
+@utility scrollbar-margin-2 {
+  &::-webkit-scrollbar-track {
+    @apply m-2;
+  }
+}
+
+@utility scrollbar-margin-2.5 {
+  &::-webkit-scrollbar-track {
+    @apply m-2.5;
+  }
+}
+
+@utility scrollbar-margin-3 {
+  &::-webkit-scrollbar-track {
+    @apply m-3;
+  }
+}
+
+@utility scrollbar-margin-3.5 {
+  &::-webkit-scrollbar-track {
+    @apply m-3.5;
+  }
+}
+
+@utility scrollbar-margin-4 {
+  &::-webkit-scrollbar-track {
+    @apply m-4;
+  }
+}
+
+@utility scrollbar-margin-4.5 {
+  &::-webkit-scrollbar-track {
+    @apply m-4.5;
+  }
+}
+
+@utility scrollbar-margin-5 {
+  &::-webkit-scrollbar-track {
+    @apply m-5;
+  }
+}
+
 /* skeleton */
 @utility skeleton {
-  @apply !bg-foreground-3 rounded-lg !text-transparent;
+  @apply bg-foreground-3! rounded-lg text-transparent!;
 }
 
 /* z-index */

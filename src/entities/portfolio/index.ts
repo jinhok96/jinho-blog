@@ -1,2 +1,1 @@
-export * from './model';
-export * from './types';
+export { getPortfolio, getPortfolios, getPortfoliosByCategory } from './model';

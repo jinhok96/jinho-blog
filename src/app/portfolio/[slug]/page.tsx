@@ -47,18 +47,12 @@ export default async function PortfolioDetailPage({ params }: Props) {
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{portfolio.title}</h1>
       <p className="mb-8 text-gray-600">{portfolio.description}</p>
-      {portfolio.category.length > 0 && (
-        <div className="mb-8 flex flex-wrap gap-2">
-          {portfolio.category.map(cat => (
-            <span
-              key={cat}
-              className="rounded-sm bg-gray-100 px-3 py-1 text-sm text-gray-700"
-            >
-              {cat}
-            </span>
-          ))}
-        </div>
-      )}
+      <span
+        key={portfolio.category}
+        className="rounded-sm bg-gray-100 px-3 py-1 text-sm text-gray-700"
+      >
+        {portfolio.category}
+      </span>
       <div className="max-w-none">
         {portfolio.filePath && (
           <MDXRemote

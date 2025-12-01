@@ -31,19 +31,17 @@ export default async function BlogListPage() {
             <div className="flex items-start justify-between">
               <div className="flex-1">
                 <h2 className="mb-2 text-2xl font-bold">{post.title}</h2>
-                <p className="mb-4 text-gray-600">{post.description}</p>
-                {post.category.length > 0 && (
-                  <div className="flex flex-wrap gap-2">
-                    {post.category.map(cat => (
-                      <span key={cat} className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700">
-                        {cat}
-                      </span>
-                    ))}
-                  </div>
-                )}
+                <span
+                  key={post.category}
+                  className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700"
+                >
+                  {post.category}
+                </span>
               </div>
               {post.createdAt && (
-                <time className="ml-4 text-sm text-gray-500">{new Date(post.createdAt).toLocaleDateString('ko-KR')}</time>
+                <time className="ml-4 text-sm text-gray-500">
+                  {new Date(post.createdAt).toLocaleDateString('ko-KR')}
+                </time>
               )}
             </div>
           </Link>

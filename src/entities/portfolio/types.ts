@@ -1,3 +1,3 @@
-import type { PortfolioMetadata } from '@/core/types';
+import type { MdxInfo, PortfolioMetadata } from '@/core/types';
 
-export type Portfolio = PortfolioMetadata;
+export type Portfolio = PortfolioMetadata & MdxInfo;

@@ -13,31 +13,31 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: SITE_URL,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 1,
     },
     {
       url: `${SITE_URL}/portfolio`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'weekly',
+      changeFrequency: 'daily',
       priority: 0.9,
     },
     {
       url: `${SITE_URL}/projects`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.7,
     },
     {
       url: `${SITE_URL}/libraries`,
       lastModified: new Date(),
-      changeFrequency: 'monthly',
+      changeFrequency: 'daily',
       priority: 0.7,
     },
   ];
@@ -47,7 +47,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({
     url: `${SITE_URL}/blog/${post.slug}`,
     lastModified: new Date(post.updatedAt),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'daily' as const,
     priority: 0.8,
   }));
 
@@ -56,7 +56,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const portfolioPages: MetadataRoute.Sitemap = portfolios.map(item => ({
     url: `${SITE_URL}/portfolio/${item.slug}`,
     lastModified: new Date(item.updatedAt),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'daily' as const,
     priority: 0.7,
   }));
 
@@ -65,7 +65,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const projectPages: MetadataRoute.Sitemap = projects.map(project => ({
     url: `${SITE_URL}/projects/${project.slug}`,
     lastModified: new Date(project.updatedAt),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'daily' as const,
     priority: 0.6,
   }));
 
@@ -74,16 +74,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const libraryPages: MetadataRoute.Sitemap = libraries.map(lib => ({
     url: `${SITE_URL}/libraries/${lib.slug}`,
     lastModified: new Date(lib.updatedAt),
-    changeFrequency: 'monthly' as const,
+    changeFrequency: 'daily' as const,
     priority: 0.6,
   }));
 
   // 모든 페이지 결합
-  return [
-    ...staticPages,
-    ...blogPages,
-    ...portfolioPages,
-    ...projectPages,
-    ...libraryPages,
-  ];
+  return [...staticPages, ...blogPages, ...portfolioPages, ...projectPages, ...libraryPages];
 }

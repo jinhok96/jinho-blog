@@ -6,11 +6,10 @@ import { notFound } from 'next/navigation';
 import * as fs from 'fs';
 import matter from 'gray-matter';
 
+import { getMDXComponents } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getBlogPost, getBlogPosts } from '@/entities/blog';
-
-import { getMDXComponents } from '@/mdx-components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -48,7 +47,9 @@ export default async function BlogPostPage({ params }: Props) {
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{post.title}</h1>
       <div className="mb-8 flex items-center gap-4">
-        {post.createdAt && <time className="text-gray-600">{new Date(post.createdAt).toLocaleDateString('ko-KR')}</time>}
+        {post.createdAt && (
+          <time className="text-gray-600">{new Date(post.createdAt).toLocaleDateString('ko-KR')}</time>
+        )}
         {post.category.length > 0 && (
           <div className="flex flex-wrap gap-2">
             {post.category.map(cat => (
@@ -68,9 +69,7 @@ export default async function BlogPostPage({ params }: Props) {
             source={matter(fs.readFileSync(post.filePath, 'utf-8')).content}
             options={{
               mdxOptions: {
-                remarkPlugins: [
-                  (await import('remark-gfm')).default,
-                ],
+                remarkPlugins: [(await import('remark-gfm')).default],
                 rehypePlugins: [
                   (await import('rehype-slug')).default,
                   (await import('rehype-autolink-headings')).default,

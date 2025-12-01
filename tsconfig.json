@@ -23,6 +23,9 @@
       "public/*": ["./public/*"]
     }
   },
+  "mdx": {
+    "checkMdx": true
+  },
   "include": ["svgr.d.ts", "next-env.d.ts", ".next/types/**/*.ts", "**/*.ts", "**/*.tsx"],
   "exclude": ["node_modules"]
 }

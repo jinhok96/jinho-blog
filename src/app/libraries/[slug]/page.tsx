@@ -6,11 +6,10 @@ import { notFound } from 'next/navigation';
 import * as fs from 'fs';
 import matter from 'gray-matter';
 
+import { getMDXComponents } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getLibraries, getLibrary } from '@/entities/library';
-
-import { getMDXComponents } from '@/mdx-components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -67,9 +66,7 @@ export default async function LibraryPage({ params }: Props) {
             source={matter(fs.readFileSync(library.filePath, 'utf-8')).content}
             options={{
               mdxOptions: {
-                remarkPlugins: [
-                  (await import('remark-gfm')).default,
-                ],
+                remarkPlugins: [(await import('remark-gfm')).default],
                 rehypePlugins: [
                   (await import('rehype-slug')).default,
                   (await import('rehype-autolink-headings')).default,

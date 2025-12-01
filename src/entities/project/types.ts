@@ -1,7 +1,7 @@
 import type { ProjectMetadata } from '@/core/types/metadata';
-import type { FC } from 'react';
 
 export type Project = ProjectMetadata & {
   slug: string;
-  Component: FC;
+  content?: string; // MDX 콘텐츠
+  filePath?: string; // MDX 파일 경로
 };

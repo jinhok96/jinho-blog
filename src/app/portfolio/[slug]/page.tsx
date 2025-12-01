@@ -1,10 +1,16 @@
 import type { Metadata } from 'next';
 
+import { MDXRemote } from 'next-mdx-remote-client/rsc';
 import { notFound } from 'next/navigation';
+
+import * as fs from 'fs';
+import matter from 'gray-matter';
 
 import { generatePageMetadata } from '@/core/utils';
 
 import { getPortfolio, getPortfolios } from '@/entities/portfolio';
+
+import { getMDXComponents } from '@/mdx-components';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -38,8 +44,6 @@ export default async function PortfolioDetailPage({ params }: Props) {
     notFound();
   }
 
-  const PortfolioComponent = portfolio.Component;
-
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
       <h1 className="mb-4 text-4xl font-bold">{portfolio.title}</h1>
@@ -57,7 +61,24 @@ export default async function PortfolioDetailPage({ params }: Props) {
         </div>
       )}
       <div className="max-w-none">
-        <PortfolioComponent />
+        {portfolio.filePath && (
+          <MDXRemote
+            source={matter(fs.readFileSync(portfolio.filePath, 'utf-8')).content}
+            options={{
+              mdxOptions: {
+                remarkPlugins: [
+                  (await import('remark-gfm')).default,
+                ],
+                rehypePlugins: [
+                  (await import('rehype-slug')).default,
+                  (await import('rehype-autolink-headings')).default,
+                  (await import('rehype-prism-plus')).default,
+                ],
+              },
+            }}
+            components={getMDXComponents()}
+          />
+        )}
       </div>
     </article>
   );

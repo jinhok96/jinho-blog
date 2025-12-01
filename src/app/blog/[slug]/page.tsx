@@ -63,8 +63,7 @@ export default async function BlogPostPage({ params }: Props) {
         )}
       </div>
       <div className="max-w-none">
-        {post.filePath ? (
-          // MDX 파일인 경우
+        {post.filePath && (
           <MDXRemote
             source={matter(fs.readFileSync(post.filePath, 'utf-8')).content}
             options={{
@@ -81,10 +80,7 @@ export default async function BlogPostPage({ params }: Props) {
             }}
             components={getMDXComponents()}
           />
-        ) : post.Component ? (
-          // TSX 파일인 경우
-          <post.Component />
-        ) : null}
+        )}
       </div>
     </article>
   );

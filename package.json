@@ -6,9 +6,9 @@
     "predev": "tsx scripts/generate-content-registry.ts",
     "dev": "next dev --turbopack",
     "prebuild": "tsx scripts/generate-content-registry.ts",
-    "build": "eslint src --ext .ts,.tsx --fix --no-cache && npx tsc --noEmit && next build",
+    "build": "prettier --write --end-of-line lf src && eslint src --ext .ts,.tsx,.js,.jsx --fix --no-cache && npx tsc --noEmit && next build",
     "start": "next start",
-    "lint": "eslint src --ext .ts,.tsx --fix --no-cache && npx tsc --noEmit"
+    "lint": "prettier --write --end-of-line lf src && eslint src --ext .ts,.tsx,.js,.jsx --fix && npx tsc --noEmit"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",

@@ -3,10 +3,9 @@ import { cva } from 'class-variance-authority';
 export const buttonVariants = cva('animated-100', {
   variants: {
     size: {
-      sm: 'px-4 py-2.5 rounded-xl font-button-14 mobile:font-button-12',
-      md: 'px-5 py-3.5 rounded-xl font-button-16 mobile:font-button-14',
-      lg: 'px-6 py-4 rounded-2xl font-button-20 mobile:font-button-16',
-      xl: 'px-8 py-5 rounded-2xl font-button-24 mobile:font-button-20',
+      sm: 'px-4 py-2.5 rounded-xl font-button-12 tablet:font-button-14',
+      md: 'px-5 py-3.5 rounded-xl font-button-14 tablet:font-button-16',
+      lg: 'px-6 py-4 rounded-2xl font-button-16 tablet:font-button-20',
     },
     color: {
       background: 'text-foreground',

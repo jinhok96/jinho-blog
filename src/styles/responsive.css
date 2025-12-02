@@ -1,20 +1,23 @@
 @custom-variant tablet {
-  /* 1280 */
-  @media (max-width: 80rem) {
+  @media (width >= 40rem /* 640px */) {
     @slot;
   }
 }
 
-@custom-variant miniTablet {
-  /* 1024 */
-  @media (max-width: 64rem) {
+@custom-variant tablet2 {
+  @media (width >= 48rem /* 768px */) {
     @slot;
   }
 }
 
-@custom-variant mobile {
-  /* 640 */
-  @media (max-width: 40rem) {
+@custom-variant desktop {
+  @media (width >= 64rem /* 1024px */) {
+    @slot;
+  }
+}
+
+@custom-variant desktop2 {
+  @media (width >= 96rem /* 1536px */) {
     @slot;
   }
 }

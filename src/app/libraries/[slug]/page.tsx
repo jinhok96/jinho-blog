@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { MDXComponent } from '@/core/mdx';
 import { TechBadge } from '@/core/ui';
-import { generatePageMetadata } from '@/core/utils';
+import { formatDateToString, generatePageMetadata } from '@/core/utils';
 
 import { getLibraries, getLibrary } from '@/entities/library';
 
@@ -38,21 +38,29 @@ export default async function LibraryPage({ params }: Props) {
 
   if (!library) notFound();
 
-  const { title, description, tech, filePath } = library;
+  const { title, category, createdAt, updatedAt, tech, filePath } = library;
 
   return (
     <article className="container mx-auto max-w-4xl px-4 py-12">
-      <h1 className="mb-4 text-4xl font-bold">{title}</h1>
+      <div className="mb-14 flex-col-start gap-4">
+        <div>
+          <p className="mb-1 font-subtitle-20 text-gray-4">{category}</p>
+          <h1 className="font-title-40">{title}</h1>
+        </div>
 
-      <p className="mb-4 text-gray-600">{description}</p>
+        <div className="flex-row-center flex-wrap gap-2">
+          <time className="font-caption-14 text-gray-4">작성일: {formatDateToString(createdAt)}</time>
+          <time className="font-caption-14 text-gray-4">수정일: {formatDateToString(updatedAt)}</time>
+        </div>
 
-      <div className="mb-8 flex-row-center flex-wrap gap-2">
-        {tech.map(item => (
-          <TechBadge
-            key={item}
-            tech={item}
-          />
-        ))}
+        <div className="flex-row-center flex-wrap gap-2">
+          {tech.map(item => (
+            <TechBadge
+              key={item}
+              tech={item}
+            />
+          ))}
+        </div>
       </div>
 
       <MDXComponent filePath={filePath} />

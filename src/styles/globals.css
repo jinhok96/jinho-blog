@@ -13,6 +13,10 @@
     @apply scrollbar break-keep;
   }
 
+  :root {
+    @apply bg-background text-foreground;
+  }
+
   button,
   a {
     @apply cursor-pointer;

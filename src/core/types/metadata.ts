@@ -1,11 +1,4 @@
-// 카테고리 타입 정의 (각 섹션별)
-export type BlogCategory = 'frontend' | 'algorithm' | 'cs' | 'uiux' | 'review';
-
-export type PortfolioCategory = 'tripmoney' | 'personal';
-
-export type ProjectCategory = 'web' | 'mobile' | 'uiux';
-
-export type LibraryCategory = 'react' | 'nextjs' | 'swr' | 'motion' | 'zustand';
+import type { BlogCategory, LibraryCategory, ProjectCategory } from '@/core/types/category';
 
 // 기술 스택 타입 (Project, Library에서 공통 사용)
 export type TechStack =
@@ -33,10 +26,6 @@ export interface BlogMetadata extends BaseMetadata {
   category: BlogCategory;
 }
 
-export interface PortfolioMetadata extends BaseMetadata {
-  category: PortfolioCategory;
-}
-
 export interface ProjectMetadata extends BaseMetadata {
   category: ProjectCategory;
   tech: TechStack[];
@@ -48,7 +37,7 @@ export interface LibraryMetadata extends BaseMetadata {
 }
 
 // Union type for all metadata
-export type ContentMetadata = BlogMetadata | PortfolioMetadata | ProjectMetadata | LibraryMetadata;
+export type ContentMetadata = BlogMetadata | ProjectMetadata | LibraryMetadata;
 
 export type MdxInfo = {
   slug: string; // 슬러그

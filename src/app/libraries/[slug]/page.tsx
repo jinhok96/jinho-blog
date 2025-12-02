@@ -41,7 +41,7 @@ export default async function LibraryPage({ params }: Props) {
   const { title, category, createdAt, updatedAt, tech, filePath } = library;
 
   return (
-    <article className="container mx-auto max-w-4xl px-4 py-12">
+    <article className="size-full">
       <div className="mb-14 flex-col-start gap-4">
         <div>
           <p className="mb-1 font-subtitle-20 text-gray-4">{category}</p>

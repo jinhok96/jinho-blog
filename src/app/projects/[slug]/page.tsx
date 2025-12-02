@@ -41,7 +41,7 @@ export default async function ProjectPage({ params }: Props) {
   const { title, description, tech, filePath } = project;
 
   return (
-    <article className="container mx-auto max-w-4xl px-4 py-12">
+    <article className="size-full">
       <h1 className="mb-4 text-4xl font-bold">{title}</h1>
       <p className="mb-8 text-gray-600">{description}</p>
       <div className="mb-8 flex flex-wrap gap-2">

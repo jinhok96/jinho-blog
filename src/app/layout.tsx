@@ -34,9 +34,10 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         <script dangerouslySetInnerHTML={{ __html: INIT_THEME_SCRIPT }} />
       </head>
 
-      <body className={cn('relative size-full min-h-screen antialiased', pretendard.className)}>
+      <body className={cn('relative flex-col-center size-full min-h-screen antialiased', pretendard.className)}>
         <ThemeStoreProvider theme="system">
-          <main>{children}</main>
+          <main className="flex-col-center size-full flex-1 py-layout">{children}</main>
+
           <div id={PORTAL.headerDrawer} />
         </ThemeStoreProvider>
       </body>

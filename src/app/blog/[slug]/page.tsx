@@ -40,7 +40,7 @@ export default async function BlogPostPage({ params }: Props) {
   const { title, description, category, createdAt, updatedAt, filePath } = post;
 
   return (
-    <article className="container mx-auto max-w-4xl p-layout">
+    <article className="size-full">
       <div className="mb-5">
         <p className="mb-2 font-caption-20 text-gray-6">{category}</p>
         <h1 className="mb-4 font-title-40">{title}</h1>

@@ -16,7 +16,7 @@ export default async function LibrariesListPage() {
   const libraries = await getLibraries();
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="size-full">
       <h1 className="mb-8 text-4xl font-bold">Libraries</h1>
       <div
         className={`

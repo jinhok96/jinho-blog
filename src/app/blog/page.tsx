@@ -16,7 +16,7 @@ export default async function BlogListPage() {
   const posts = await getBlogPosts();
 
   return (
-    <div className="container mx-auto px-4 py-12">
+    <div className="size-full">
       <h1 className="mb-8 text-4xl font-bold">Blog</h1>
       <div className="space-y-6">
         {posts.map(post => (

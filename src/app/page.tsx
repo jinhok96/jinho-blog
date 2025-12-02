@@ -9,7 +9,7 @@ export const metadata: Metadata = generatePageMetadata({ routerName: 'home' });
 
 export default function HomePage() {
   return (
-    <main className="flex min-h-screen items-center justify-center">
+    <main className="size-full">
       <div className="text-center">
         <h1 className="text-5xl font-bold">Jinho&apos;s Blog</h1>
         <p>소개, 이력서 다운, 핵심 역량, 기술 스택, 경력 사항, 프로젝트 상세, 블로그, 교육, 연락처</p>

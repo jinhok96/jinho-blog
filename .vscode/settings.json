@@ -3,44 +3,41 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "tailwindCSS.experimental.configFile": "./src/styles/globals.css", // tailwindcss 인텔리센스에 파일 등록
-  "typescript.preferences.preferTypeOnlyAutoImports": true, // 자동 type import
+  "tailwindCSS.experimental.configFile": "./src/styles/globals.css",
+  "typescript.preferences.preferTypeOnlyAutoImports": true,
   "tailwindCSS.experimental.classRegex": [
+    // Styled Components / Template Literals
     "tw`([^`]*)",
     "tw\\(([^)]*)\\)",
     "tw\\.[^`]+`([^`]*)",
-    // const mainStyle = "..."
-    ["\\b\\w*Style\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
-    // const mainClassName = "..."
-    ["\\b\\w*ClassName\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
-    // const classNames = "..."
-    ["\\b\\w*ClassNames\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"],
-    // classnames('bg-red-500', 'uppercase');
-    ["classnames\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"],
-    // const props = { classNames: { container: "w-full h-full" } } }
-    ["classNames:\\s*{([\\s\\S]*?)}", "\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?"],
-    // const inputClassNames = "scroll-m-0 border-collapse";
+
+    // 변수 할당
+    // 모든 변수: const xxx = "..."
     "(?:const|let|var)\\s+[\\w$_][_\\w\\d]*\\s*=\\s*['\\\"](.*?)['\\\"]",
-    /*
-      const styles = "bg-red-500 text-white";
-      let Classes = "p-4 rounded";
-      var classnames = "flex justify-center";
-      const buttonStyles = "bg-blue-500 hover:bg-blue-700";
-      let formClasses = "space-y-4";
-      var inputClassnames = "border-2 border-gray-300";
-      styles += 'rounded';
-    */
+
+    // Style/Class 관련 변수 (camelCase, PascalCase, UPPER_CASE, snake_case)
+    // 예: buttonStyles, BUTTON_CLASS_NAMES, container_classes
     [
-      "(?:\\b(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles|[Cc]lasses|[Cc]lassnames)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"
+      "(?:(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles?|[Cc]lasses|[Cc]lassnames?|STYLES?|CLASSES|CLASSNAMES?|CLASS_NAMES?|styles?|classes|classnames?|class_names?)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"
     ],
-    // clasNames 추가 지원
-    ["classNames\\(([^)]*)\\)", "'([^']*)'"],
-    ["classNames\\(([^)]*)\\)", "\"([^\"]*)\""],
-    ["classNames\\(([^)]*)\\)", "\\{([^\\}]*)\\}"],
-    ["classNames\\(([^)]*)\\)", "([a-zA-Z0-9_-]+)"],
-    // clsx
-    ["clsx\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"],
-    // cn (유틸 함수)
-    ["cn\\(([^)]*)\\)", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+
+    // JSX Props / HTML Attributes
+    // 다양한 네이밍: style, className, CLASSNAME, CLASS_NAME, class_name 등
+    [
+      "\\b\\w*(?:[Ss]tyles?|[Cc]lass(?:[Nn]ames?)?|[Cc]lasses?|STYLE|STYLES|CLASS|CLASSES|CLASSNAME|CLASSNAMES|CLASS_NAME|CLASS_NAMES|style|styles|class|classes|class_name|class_names)\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"
+    ],
+
+    // 객체 속성
+    // 중첩 객체: { classNames: { container: "...", item: "..." } }
+    [
+      "(?:[Cc]lass[Nn]ames|classNames|CLASSNAMES|CLASS_NAMES|class_names):\\s*{([\\s\\S]*?)}",
+      "\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?"
+    ],
+
+    // 단순 속성: { className: "...", variants: "..." }
+    ["(?:[Cc]lass[Nn]ames?|CLASSNAMES?|CLASS_NAMES?|class_names?|[Vv]ariants?|VARIANTS?):\\s*[\"'`]([^\"'`]*)[\"'`]"],
+
+    // 유틸리티 함수 (classnames, clsx, cn, cva)
+    ["(?:class[Nn]ames|clsx|cn|cva)\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"]
   ]
 }

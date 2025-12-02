@@ -8,7 +8,17 @@ import { cn } from '@/core/utils';
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & ButtonProps & PropsWithChildren<{ className?: string }>;
 
-export function LinkAButton({ className, size, color, variant, children, disableHover, rounded, disabled, ...props }: Props) {
+export function LinkAButton({
+  className,
+  size,
+  color,
+  variant,
+  children,
+  disableHover,
+  rounded,
+  disabled,
+  ...props
+}: Props) {
   return (
     <a
       className={cn(

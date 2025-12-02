@@ -14,7 +14,17 @@ type Props = AnchorHTMLAttributes<HTMLAnchorElement> &
   ButtonProps &
   PropsWithChildren<{ className?: string }>;
 
-export function LinkButton({ className, size, color, variant, children, disableHover, rounded, disabled, ...props }: Props) {
+export function LinkButton({
+  className,
+  size,
+  color,
+  variant,
+  children,
+  disableHover,
+  rounded,
+  disabled,
+  ...props
+}: Props) {
   return (
     <Link
       className={cn(

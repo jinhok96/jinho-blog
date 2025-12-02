@@ -8,7 +8,17 @@ import { cn } from '@/core/utils';
 
 type Props = DetailedHTMLProps<ButtonHTMLAttributes<HTMLButtonElement>, HTMLButtonElement> & ButtonProps;
 
-export function Button({ className, size, children, color, variant, disableHover, rounded, disabled, ...props }: Props) {
+export function Button({
+  className,
+  size,
+  children,
+  color,
+  variant,
+  disableHover,
+  rounded,
+  disabled,
+  ...props
+}: Props) {
   return (
     <button
       className={cn(

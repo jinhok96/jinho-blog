@@ -1,15 +1,15 @@
 import type { TechBadgeProps } from '@/core/ui/badge/types';
 
-const reactClassName = 'bg-cyan-100 text-cyan-700 dark:bg-cyan-950 dark:text-cyan-300';
-const nextjsClassName = 'bg-gray-900 text-gray-100 dark:bg-gray-100 dark:text-gray-900';
-const typescriptClassName = 'bg-blue-100 text-blue-700 dark:bg-blue-950 dark:text-blue-300';
-const javascriptClassName = 'bg-yellow-100 text-yellow-800 dark:bg-yellow-950 dark:text-yellow-300';
-const tailwindcssClassName = 'bg-sky-100 text-sky-700 dark:bg-sky-950 dark:text-sky-300';
-const cssClassName = 'bg-blue-100 text-blue-600 dark:bg-blue-950 dark:text-blue-400';
-const htmlClassName = 'bg-orange-100 text-orange-700 dark:bg-orange-950 dark:text-orange-300';
-const zustandClassName = 'bg-amber-100 text-amber-800 dark:bg-amber-950 dark:text-amber-300';
-const swrClassName = 'bg-gray-100 text-gray-800 dark:bg-gray-800 dark:text-gray-200';
-const motionClassName = 'bg-pink-100 text-pink-700 dark:bg-pink-950 dark:text-pink-300';
+const reactClassName = 'bg-cyan-2 text-cyan-8';
+const nextjsClassName = 'bg-gray-8 text-gray-2';
+const typescriptClassName = 'bg-blue-2 text-blue-8';
+const javascriptClassName = 'bg-yellow-2 text-yellow-8';
+const tailwindcssClassName = 'bg-sky-2 text-sky-8';
+const cssClassName = 'bg-indigo-2 text-indigo-8';
+const htmlClassName = 'bg-orange-2 text-orange-8';
+const zustandClassName = 'bg-amber-2 text-amber-8';
+const swrClassName = 'bg-gray-2 text-gray-8';
+const motionClassName = 'bg-pink-2 text-pink-8';
 
 export const TECH_CLASSNAME_MAP: Record<TechBadgeProps['tech'], string> = {
   react: reactClassName,

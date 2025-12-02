@@ -3,20 +3,22 @@
 import type { ButtonProps } from '@/core/ui/button/types';
 import type { AnchorHTMLAttributes, PropsWithChildren } from 'react';
 
-import { buttonVariants } from '@/core/ui/button/const';
+import { buttonVariants } from '@/core/ui/button/variants';
 import { cn } from '@/core/utils';
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & ButtonProps & PropsWithChildren<{ className?: string }>;
 
-export function LinkAButton({ className, size, color, children, disableHover, rounded, ...props }: Props) {
+export function LinkAButton({ className, size, color, variant, children, disableHover, rounded, disabled, ...props }: Props) {
   return (
     <a
       className={cn(
         buttonVariants({
-          size,
+          variant,
           color,
-          colorHover: disableHover ? null : color,
+          size,
           rounded,
+          disableHover,
+          disabled,
         }),
         className,
       )}

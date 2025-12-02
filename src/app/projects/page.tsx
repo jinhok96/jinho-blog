@@ -18,11 +18,13 @@ export default async function ProjectsListPage() {
   return (
     <div className="container mx-auto px-4 py-12">
       <h1 className="mb-8 text-4xl font-bold">Projects</h1>
-      <div className={`
-        grid grid-cols-1 gap-6
-        md:grid-cols-2
-        lg:grid-cols-3
-      `}>
+      <div
+        className={`
+          grid grid-cols-1 gap-6
+          md:grid-cols-2
+          lg:grid-cols-3
+        `}
+      >
         {projects.map(project => (
           <Link
             key={project.slug}
@@ -37,7 +39,10 @@ export default async function ProjectsListPage() {
             {project.tech.length > 0 && (
               <div className="flex flex-wrap gap-2">
                 {project.tech.map(tech => (
-                  <span key={tech} className="rounded-sm bg-blue-100 px-2 py-1 text-sm text-blue-700">
+                  <span
+                    key={tech}
+                    className="rounded-sm bg-blue-100 px-2 py-1 text-sm text-blue-700"
+                  >
                     {tech}
                   </span>
                 ))}

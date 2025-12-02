@@ -9,11 +9,7 @@ type GeneratePageMetadataParams = {
   description?: string;
 };
 
-export function generatePageMetadata({
-  routerName,
-  title,
-  description,
-}: GeneratePageMetadataParams): Metadata {
+export function generatePageMetadata({ routerName, title, description }: GeneratePageMetadataParams): Metadata {
   const pageTitle = title || SITE_NAME;
   const pageDescription = description || SITE_DESCRIPTION;
   const url = `${SITE_URL}${ROUTER[routerName]}`;

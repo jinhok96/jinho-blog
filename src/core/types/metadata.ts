@@ -21,7 +21,7 @@ export type TechStack =
   | 'motion';
 
 // 모든 메타데이터에 공통 필드
-export interface BaseMetadata {
+interface BaseMetadata {
   title: string; // 제목
   description: string; // 요약 설명
   category: string; // 각 섹션에서 타입 오버라이드

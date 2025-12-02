@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { MDXComponent } from '@/core/mdx';
+import { TechBadge } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getProject, getProjects } from '@/entities/project';
@@ -44,13 +45,11 @@ export default async function ProjectPage({ params }: Props) {
       <h1 className="mb-4 text-4xl font-bold">{title}</h1>
       <p className="mb-8 text-gray-600">{description}</p>
       <div className="mb-8 flex flex-wrap gap-2">
-        {tech.map(tech => (
-          <span
-            key={tech}
-            className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
-          >
-            {tech}
-          </span>
+        {tech.map(item => (
+          <TechBadge
+            key={item}
+            tech={item}
+          />
         ))}
       </div>
 

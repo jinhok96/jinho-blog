@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { MDXComponent } from '@/core/mdx';
+import { TechBadge } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getLibraries, getLibrary } from '@/entities/library';
@@ -45,15 +46,12 @@ export default async function LibraryPage({ params }: Props) {
 
       <p className="mb-4 text-gray-600">{description}</p>
 
-      <div className="mb-8 flex flex-wrap gap-2">
-        <span className="text-sm text-gray-500">Tech Stack:</span>
+      <div className="mb-8 flex-row-center flex-wrap gap-2">
         {tech.map(item => (
-          <span
+          <TechBadge
             key={item}
-            className="rounded-sm bg-blue-100 px-3 py-1 text-sm text-blue-700"
-          >
-            {item}
-          </span>
+            tech={item}
+          />
         ))}
       </div>
 

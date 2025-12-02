@@ -16,15 +16,9 @@ export type TechStack =
   | 'tailwindcss'
   | 'css'
   | 'html'
-  | 'nodejs'
-  | 'express'
   | 'zustand'
-  | 'redux'
-  | 'graphql'
-  | 'rest-api'
-  | 'mongodb'
-  | 'postgresql'
-  | 'mysql';
+  | 'swr'
+  | 'motion';
 
 // 모든 메타데이터에 공통 필드
 export interface BaseMetadata {

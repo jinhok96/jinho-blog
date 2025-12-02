@@ -34,9 +34,9 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         <script dangerouslySetInnerHTML={{ __html: INIT_THEME_SCRIPT }} />
       </head>
 
-      <body className={cn('relative min-h-screen w-full antialiased', pretendard.className)}>
+      <body className={cn('relative size-full min-h-screen antialiased', pretendard.className)}>
         <ThemeStoreProvider theme="system">
-          {children}
+          <main>{children}</main>
           <div id={PORTAL.headerDrawer} />
         </ThemeStoreProvider>
       </body>

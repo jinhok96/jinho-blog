@@ -8,7 +8,7 @@ import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
 import remarkGfm from 'remark-gfm';
 
-import { getMDXComponents } from '@/core/mdx/getMDXComponents';
+import { createMDXComponents } from '@/core/mdx/createMDXComponents';
 
 type Props = {
   filePath: string;
@@ -27,7 +27,7 @@ export function MDXComponent({ filePath }: Props) {
           ],
         },
       }}
-      components={getMDXComponents()}
+      components={createMDXComponents()}
     />
   );
 }

@@ -11,7 +11,7 @@ const zustandClassName = 'bg-amber-2 text-amber-8';
 const swrClassName = 'bg-gray-2 text-gray-8';
 const motionClassName = 'bg-pink-2 text-pink-8';
 
-export const TECH_CLASSNAME_MAP: Record<TechBadgeProps['tech'], string> = {
+export const TECH_BADGE_CLASSNAME_MAP: Record<TechBadgeProps['tech'], string> = {
   react: reactClassName,
   nextjs: nextjsClassName,
   typescript: typescriptClassName,
@@ -22,17 +22,4 @@ export const TECH_CLASSNAME_MAP: Record<TechBadgeProps['tech'], string> = {
   zustand: zustandClassName,
   swr: swrClassName,
   motion: motionClassName,
-};
-
-export const TECH_NAME_MAP: Record<TechBadgeProps['tech'], string> = {
-  react: 'React',
-  nextjs: 'Next.js',
-  typescript: 'TypeScript',
-  javascript: 'JavaScript',
-  tailwindcss: 'TailwindCSS',
-  css: 'CSS',
-  html: 'HTML',
-  zustand: 'Zustand',
-  swr: 'SWR',
-  motion: 'Framer Motion',
 };

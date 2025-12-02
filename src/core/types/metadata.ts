@@ -1,11 +1,11 @@
 // 카테고리 타입 정의 (각 섹션별)
-export type BlogCategory = 'react' | 'nextjs' | 'typescript' | 'architecture' | 'tutorial';
+export type BlogCategory = 'frontend' | 'algorithm' | 'cs' | 'uiux' | 'review';
 
-export type PortfolioCategory = 'web' | 'mobile' | 'design' | 'ui-ux' | 'react';
+export type PortfolioCategory = 'tripmoney' | 'personal';
 
-export type ProjectCategory = 'open-source' | 'personal' | 'client' | 'react';
+export type ProjectCategory = 'web' | 'mobile' | 'uiux';
 
-export type LibraryCategory = 'ui' | 'hooks' | 'utils' | 'state-management' | 'react';
+export type LibraryCategory = 'react' | 'nextjs' | 'swr' | 'motion' | 'zustand';
 
 // 기술 스택 타입 (Project, Library에서 공통 사용)
 export type TechStack =

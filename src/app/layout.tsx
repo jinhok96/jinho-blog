@@ -7,6 +7,8 @@ import { PORTAL, SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 
+import { Header } from '@/modules/header';
+
 import '@/styles/globals.css';
 
 const pretendard = localFont({
@@ -36,6 +38,8 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
 
       <body className={cn('relative flex-col-center size-full min-h-screen antialiased', pretendard.className)}>
         <ThemeStoreProvider theme="system">
+          <Header />
+
           <main className="flex-col-center size-full flex-1 py-layout">{children}</main>
 
           <div id={PORTAL.headerDrawer} />

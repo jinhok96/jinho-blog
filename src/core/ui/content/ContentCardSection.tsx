@@ -1,20 +1,34 @@
 import type { TechStack } from '@/core/types';
+import type { PropsWithChildren } from 'react';
 
 import { TechBadge } from '@/core/ui/badge';
 import { LinkButton } from '@/core/ui/button';
 import { Show } from '@/core/ui/wrapper';
 import { formatDateToString } from '@/core/utils';
 
-type Props = {
+export function ContentCardSection({ children }: PropsWithChildren) {
+  return (
+    <div
+      className={`
+        flex-col-center size-full grid-cols-2 gap-4
+        tablet:grid
+        desktop:grid-cols-3
+      `}
+    >
+      {children}
+    </div>
+  );
+}
+
+type CardProps = PropsWithChildren<{
   href: string;
   category: string;
   title: string;
   description: string;
   createdAt: string;
-  tech?: TechStack[];
-};
+}>;
 
-export function ContentCard({ href, category, title, description, createdAt, tech }: Props) {
+function Card({ href, category, title, description, createdAt, children }: CardProps) {
   return (
     <LinkButton
       href={href}
@@ -37,20 +51,31 @@ export function ContentCard({ href, category, title, description, createdAt, tec
         {/* 설명 */}
         <p className="py-0.5 font-body-14 text-gray-5">{description}</p>
 
-        {/* 테크스택 */}
-        <Show when={tech}>
-          {list => (
-            <div className="flex-row-center flex-wrap gap-2 py-3">
-              {list.map(item => (
-                <TechBadge
-                  key={item}
-                  tech={item}
-                />
-              ))}
-            </div>
-          )}
-        </Show>
+        {/* 추가 요소 */}
+        {children}
       </article>
     </LinkButton>
   );
 }
+
+type TechBadgeListProps = { tech: TechStack[] };
+
+function TechBadgeList({ tech }: TechBadgeListProps) {
+  return (
+    <Show when={tech}>
+      {list => (
+        <div className="flex-row-center flex-wrap gap-2 py-3">
+          {list.map(item => (
+            <TechBadge
+              key={item}
+              tech={item}
+            />
+          ))}
+        </div>
+      )}
+    </Show>
+  );
+}
+
+ContentCardSection.Card = Card;
+ContentCardSection.TechBadgeList = TechBadgeList;

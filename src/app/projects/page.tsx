@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import { ROUTER } from '@/core/config';
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
-import { ContentCard } from '@/core/ui';
+import { ContentCardSection } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getProjects } from '@/entities/project';
@@ -19,22 +19,19 @@ export default async function ProjectsListPage() {
   return (
     <div className="size-full">
       <h1 className="mb-8 text-4xl font-bold">프로젝트</h1>
-      <div
-        className={`
-          grid grid-cols-1 gap-6
-          md:grid-cols-2
-          lg:grid-cols-3
-        `}
-      >
-        {projects.map(({ category, slug, ...post }) => (
-          <ContentCard
+
+      <ContentCardSection>
+        {projects.map(({ category, slug, tech, ...items }) => (
+          <ContentCardSection.Card
             key={slug}
-            href={`${ROUTER.projects}/${slug}`}
+            href={`${ROUTER.libraries}/${slug}`}
             category={PROJECT_CATEGORY_MAP[category]}
-            {...post}
-          />
+            {...items}
+          >
+            <ContentCardSection.TechBadgeList tech={tech} />
+          </ContentCardSection.Card>
         ))}
-      </div>
+      </ContentCardSection>
     </div>
   );
 }

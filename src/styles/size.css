@@ -1,27 +1,9 @@
 :root {
-  --height-header: 5rem;
+  --height-header: 4rem;
 
   --width-layout: 80rem;
-  --padding-layout-x: 2.5rem;
-  --padding-layout-y: 7.5rem;
-}
-
-@media (max-width: 80rem) {
-  :root {
-    --height-header: 4.5rem;
-
-    --padding-layout-x: 2rem;
-    --padding-layout-y: 6.75rem;
-  }
-}
-
-@media (max-width: 40rem) {
-  :root {
-    --height-header: 4rem;
-
-    --padding-layout-x: 1.5rem;
-    --padding-layout-y: 6rem;
-  }
+  --padding-layout-x: 1.5rem;
+  --padding-layout-y: 7rem;
 }
 
 @theme inline {

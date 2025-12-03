@@ -130,7 +130,7 @@ export function createMDXComponents() {
 
     thead: (props: HTMLAttributes<HTMLTableSectionElement>) => (
       <thead
-        className="bg-gray-1"
+        className="border-b border-gray-2 bg-gray-1"
         {...props}
       />
     ),

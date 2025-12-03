@@ -14,9 +14,9 @@ export const buttonVariants = cva('animated-100', {
     },
 
     size: {
-      sm: 'px-4 py-2.5 rounded-xl font-button-12 tablet:font-button-14',
-      md: 'px-5 py-3.5 rounded-xl font-button-14 tablet:font-button-16',
-      lg: 'px-6 py-4 rounded-2xl font-button-16 tablet:font-button-20',
+      sm: 'px-2.5 py-2 rounded-xl font-button-14',
+      md: 'px-3.5 py-2.5 rounded-xl font-button-16',
+      lg: 'px-4.5 py-3 rounded-2xl font-button-20',
     },
 
     rounded: {
@@ -114,4 +114,10 @@ export const buttonVariants = cva('animated-100', {
       className: 'hover:bg-blue-1',
     },
   ],
+
+  defaultVariants: {
+    variant: 'solid',
+    disabled: false,
+    disableHover: false,
+  },
 });

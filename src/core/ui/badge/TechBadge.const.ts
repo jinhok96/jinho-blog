@@ -1,7 +1,7 @@
 import type { TechBadgeProps } from '@/core/ui/badge/types';
 
 const reactClassName = 'bg-cyan-2 text-cyan-8';
-const nextjsClassName = 'bg-gray-8 text-gray-2';
+const nextjsClassName = 'bg-gray-8 text-gray-1';
 const typescriptClassName = 'bg-blue-2 text-blue-8';
 const javascriptClassName = 'bg-yellow-2 text-yellow-8';
 const tailwindcssClassName = 'bg-sky-2 text-sky-8';

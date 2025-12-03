@@ -28,28 +28,28 @@ export function createMDXComponents() {
 
     h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className="mt-8 mb-4 font-subtitle-28"
+        className="mt-8 mb-4 font-subtitle-26"
         {...props}
       />
     ),
 
     h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className="mt-6 mb-3 font-subtitle-24"
+        className="mt-6 mb-3 font-subtitle-20"
         {...props}
       />
     ),
 
     h5: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className="my-3 font-subtitle-20"
+        className="my-3 font-subtitle-16"
         {...props}
       />
     ),
 
     h6: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className="my-3 font-subtitle-16"
+        className="my-3 font-subtitle-14"
         {...props}
       />
     ),
@@ -65,7 +65,7 @@ export function createMDXComponents() {
       <a
         className={`
           mx-1 underline underline-offset-2 animated-100
-          hover:text-blue-6
+          hover:text-blue-7
         `}
         target="_blank"
         {...props}
@@ -150,7 +150,7 @@ export function createMDXComponents() {
     th: (props: ThHTMLAttributes<HTMLTableCellElement>) => (
       <th
         className={`
-          border-r border-gray-2 px-4 py-3 text-left font-semibold
+          border-r border-gray-2 px-3 py-2 text-left font-semibold
           last:border-0
         `}
         {...props}
@@ -160,7 +160,7 @@ export function createMDXComponents() {
     td: (props: TdHTMLAttributes<HTMLTableCellElement>) => (
       <td
         className={`
-          border-r border-gray-2 px-4 py-3
+          border-r border-gray-2 px-3 py-2
           last:border-0
         `}
         {...props}

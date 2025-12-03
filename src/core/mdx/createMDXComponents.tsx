@@ -100,7 +100,7 @@ export function createMDXComponents() {
 
     hr: (props: HTMLAttributes<HTMLHRElement>) => (
       <hr
-        className="my-8 border-gray-3"
+        className="my-8 border-gray-2"
         {...props}
       />
     ),
@@ -120,7 +120,7 @@ export function createMDXComponents() {
     ),
 
     table: (props: TableHTMLAttributes<HTMLTableElement>) => (
-      <div className="mb-4 border-collapse overflow-auto rounded-xl border border-gray-3">
+      <div className="mb-4 border-collapse overflow-auto rounded-xl border border-gray-2">
         <table
           className="size-full"
           {...props}
@@ -140,7 +140,7 @@ export function createMDXComponents() {
     tr: (props: HTMLAttributes<HTMLTableRowElement>) => (
       <tr
         className={`
-          border-b border-gray-3
+          border-b border-gray-2
           last:border-0
         `}
         {...props}
@@ -150,7 +150,7 @@ export function createMDXComponents() {
     th: (props: ThHTMLAttributes<HTMLTableCellElement>) => (
       <th
         className={`
-          border-r border-gray-3 px-4 py-3 text-left font-semibold
+          border-r border-gray-2 px-4 py-3 text-left font-semibold
           last:border-0
         `}
         {...props}
@@ -160,7 +160,7 @@ export function createMDXComponents() {
     td: (props: TdHTMLAttributes<HTMLTableCellElement>) => (
       <td
         className={`
-          border-r border-gray-3 px-4 py-3
+          border-r border-gray-2 px-4 py-3
           last:border-0
         `}
         {...props}

@@ -18,7 +18,7 @@ export default async function BlogListPage() {
 
   return (
     <div className="flex-col-start size-full gap-6">
-      <h1 className="font-title-40">Blog</h1>
+      <h1 className="font-title-40">블로그</h1>
 
       <div className="flex-row-center w-full justify-between">
         <div>카테고리(전체, ... / 좌우 스크롤, 스크롤 양 옆 페이드아웃)</div>

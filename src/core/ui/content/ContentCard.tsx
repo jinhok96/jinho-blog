@@ -18,7 +18,11 @@ export function ContentCard({ href, category, title, description, createdAt, tec
   return (
     <LinkButton
       href={href}
-      className="size-full rounded-2xl bg-gray-1 p-5"
+      className={`
+        size-full rounded-2xl bg-gray-1 p-5
+        hover:scale-103 hover:bg-blue-1
+        light:hover:drop-shadow-md
+      `}
     >
       <article className="flex-col-start w-full gap-2">
         {/* 카테고리, 작성일 */}

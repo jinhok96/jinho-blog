@@ -20,7 +20,7 @@ export function ContentCard({ href, category, title, description, createdAt, tec
       href={href}
       className="size-full rounded-2xl bg-gray-1 p-5"
     >
-      <div className="flex-col-start w-full gap-2">
+      <article className="flex-col-start w-full gap-2">
         {/* 카테고리, 작성일 */}
         <div className="flex-row-center w-full justify-between text-gray-5">
           <p className="font-caption-14">{category}</p>
@@ -28,10 +28,10 @@ export function ContentCard({ href, category, title, description, createdAt, tec
         </div>
 
         {/* 제목 */}
-        <h2 className="font-subtitle-24">{title}</h2>
+        <h2 className="font-subtitle-20">{title}</h2>
 
         {/* 설명 */}
-        <p className="font-body-14">{description}</p>
+        <p className="py-0.5 font-body-14 text-gray-5">{description}</p>
 
         {/* 테크스택 */}
         <Show when={tech}>
@@ -46,7 +46,7 @@ export function ContentCard({ href, category, title, description, createdAt, tec
             </div>
           )}
         </Show>
-      </div>
+      </article>
     </LinkButton>
   );
 }

@@ -1,23 +1,22 @@
 import type { TechStack } from '@/core/types';
-import type { PropsWithChildren } from 'react';
 
 import { TechBadge } from '@/core/ui/badge';
 import { Show } from '@/core/ui/wrapper';
 import { formatDateToString } from '@/core/utils';
 
-type Props = PropsWithChildren<{
+type Props = {
   category: string;
   title: string;
   createdAt: string;
   updatedAt: string;
   tech?: TechStack[];
-}>;
+};
 
 export function ContentHeader({ category, title, createdAt, updatedAt, tech }: Props) {
   return (
     <div className="mb-10 flex-col-start gap-3">
       <div>
-        <p className="mb-2 font-caption-20 text-gray-5">{category}</p>
+        <p className="mb-2 font-caption-16 text-gray-5">{category}</p>
         <h1 className="font-title-40">{title}</h1>
       </div>
 

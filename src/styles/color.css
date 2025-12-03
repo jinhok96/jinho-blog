@@ -4,8 +4,8 @@
 :root,
 :root:where(.light):not(.system),
 *:where(.light):not(.system) {
-  --foreground: var(--color-zinc-950);
-  --background: #ffffff;
+  --foreground: var(--color-zinc-900);
+  --background: var(--color-white);
 
   --background-1: color-mix(in srgb, var(--background) 4%, transparent);
   --background-2: color-mix(in srgb, var(--background) 10%, transparent);
@@ -35,7 +35,6 @@
   --gray-6: var(--color-zinc-600);
   --gray-7: var(--color-zinc-700);
   --gray-8: var(--color-zinc-800);
-  --gray-9: var(--color-zinc-900);
 
   --red-1: var(--color-red-50);
   --red-2: var(--color-red-100);
@@ -230,8 +229,8 @@
 
 :root:where(.dark):not(.system),
 *:where(.dark):not(.system) {
-  --foreground: var(--color-zinc-50);
-  --background: var(--color-zinc-950);
+  --foreground: var(--color-white);
+  --background: var(--color-zinc-900);
 
   --background-1: color-mix(in srgb, var(--background) 4%, transparent);
   --background-2: color-mix(in srgb, var(--background) 10%, transparent);
@@ -253,15 +252,14 @@
   --foreground-8: color-mix(in srgb, var(--foreground) 75%, transparent);
   --foreground-9: color-mix(in srgb, var(--foreground) 85%, transparent);
 
-  --gray-1: var(--color-zinc-900);
-  --gray-2: var(--color-zinc-800);
-  --gray-3: var(--color-zinc-700);
-  --gray-4: var(--color-zinc-600);
-  --gray-5: var(--color-zinc-500);
-  --gray-6: var(--color-zinc-400);
-  --gray-7: var(--color-zinc-300);
-  --gray-8: var(--color-zinc-200);
-  --gray-9: var(--color-zinc-100);
+  --gray-1: var(--color-zinc-800);
+  --gray-2: var(--color-zinc-700);
+  --gray-3: var(--color-zinc-600);
+  --gray-4: var(--color-zinc-500);
+  --gray-5: var(--color-zinc-400);
+  --gray-6: var(--color-zinc-300);
+  --gray-7: var(--color-zinc-200);
+  --gray-8: var(--color-zinc-100);
 
   --red-1: var(--color-red-950);
   --red-2: var(--color-red-900);
@@ -484,7 +482,6 @@
   --color-gray-6: var(--gray-6);
   --color-gray-7: var(--gray-7);
   --color-gray-8: var(--gray-8);
-  --color-gray-9: var(--gray-9);
 
   --color-red-1: var(--red-1);
   --color-red-2: var(--red-2);

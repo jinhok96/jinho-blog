@@ -64,9 +64,10 @@ export function createMDXComponents() {
     a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
       <a
         className={`
-          mx-1 text-gray-7 underline underline-offset-2 animated-100
-          hover:text-gray-9
+          mx-1 underline underline-offset-2 animated-100
+          hover:text-blue-6
         `}
+        target="_blank"
         {...props}
       />
     ),

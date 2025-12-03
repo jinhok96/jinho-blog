@@ -2,8 +2,10 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
+import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { MDXComponent } from '@/core/mdx';
-import { formatDateToString, generatePageMetadata } from '@/core/utils';
+import { ContentHeader } from '@/core/ui';
+import { generatePageMetadata } from '@/core/utils';
 
 import { getBlogPost, getBlogPosts } from '@/entities/blog';
 
@@ -37,22 +39,16 @@ export default async function BlogPostPage({ params }: Props) {
 
   if (!post) notFound();
 
-  const { title, description, category, createdAt, updatedAt, filePath } = post;
+  const { title, category, createdAt, updatedAt, filePath } = post;
 
   return (
     <article className="size-full">
-      <div className="mb-5">
-        <p className="mb-2 font-caption-20 text-gray-6">{category}</p>
-        <h1 className="mb-4 font-title-40">{title}</h1>
-        <p className="font-subtitle-16 text-gray-6">{description}</p>
-      </div>
-
-      <div className="mb-8 flex-col-start w-full gap-4">
-        <div className="flex-row-center w-full gap-3">
-          <time className="font-caption-14 text-gray-6">작성일: {formatDateToString(createdAt)}</time>
-          <time className="font-caption-14 text-gray-6">수정일: {formatDateToString(updatedAt)}</time>
-        </div>
-      </div>
+      <ContentHeader
+        category={BLOG_CATEGORY_MAP[category]}
+        title={title}
+        createdAt={createdAt}
+        updatedAt={updatedAt}
+      />
 
       <MDXComponent filePath={filePath} />
     </article>

@@ -2,8 +2,9 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
+import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { MDXComponent } from '@/core/mdx';
-import { TechBadge } from '@/core/ui';
+import { ContentHeader } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getProject, getProjects } from '@/entities/project';
@@ -38,20 +39,17 @@ export default async function ProjectPage({ params }: Props) {
 
   if (!project) notFound();
 
-  const { title, description, tech, filePath } = project;
+  const { title, category, createdAt, updatedAt, tech, filePath } = project;
 
   return (
     <article className="size-full">
-      <h1 className="mb-4 text-4xl font-bold">{title}</h1>
-      <p className="mb-8 text-gray-600">{description}</p>
-      <div className="mb-8 flex flex-wrap gap-2">
-        {tech.map(item => (
-          <TechBadge
-            key={item}
-            tech={item}
-          />
-        ))}
-      </div>
+      <ContentHeader
+        category={PROJECT_CATEGORY_MAP[category]}
+        title={title}
+        createdAt={createdAt}
+        updatedAt={updatedAt}
+        tech={tech}
+      />
 
       <MDXComponent filePath={filePath} />
     </article>

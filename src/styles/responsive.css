@@ -1,10 +1,10 @@
-@custom-variant tablet {
+@custom-variant fold {
   @media (width >= 40rem /* 640px */) {
     @slot;
   }
 }
 
-@custom-variant tablet2 {
+@custom-variant tablet {
   @media (width >= 48rem /* 768px */) {
     @slot;
   }
@@ -16,7 +16,7 @@
   }
 }
 
-@custom-variant desktop2 {
+@custom-variant wide {
   @media (width >= 96rem /* 1536px */) {
     @slot;
   }

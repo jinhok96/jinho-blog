@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
-import Link from 'next/link';
-
+import { ROUTER } from '@/core/config';
+import { BLOG_CATEGORY_MAP } from '@/core/map';
+import { ContentCard } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getBlogPosts } from '@/entities/blog';
@@ -18,33 +19,14 @@ export default async function BlogListPage() {
   return (
     <div className="size-full">
       <h1 className="mb-8 text-4xl font-bold">Blog</h1>
-      <div className="space-y-6">
-        {posts.map(post => (
-          <Link
-            key={post.slug}
-            href={`/blog/${post.slug}`}
-            className={`
-              block rounded-lg border p-6 transition-shadow
-              hover:shadow-lg
-            `}
-          >
-            <div className="flex items-start justify-between">
-              <div className="flex-1">
-                <h2 className="mb-2 text-2xl font-bold">{post.title}</h2>
-                <span
-                  key={post.category}
-                  className="rounded-sm bg-gray-100 px-2 py-1 text-sm text-gray-700"
-                >
-                  {post.category}
-                </span>
-              </div>
-              {post.createdAt && (
-                <time className="ml-4 text-sm text-gray-500">
-                  {new Date(post.createdAt).toLocaleDateString('ko-KR')}
-                </time>
-              )}
-            </div>
-          </Link>
+      <div className="flex-col-center w-full gap-3">
+        {posts.map(({ category, slug, ...post }) => (
+          <ContentCard
+            key={slug}
+            href={`${ROUTER.blog}/${slug}`}
+            category={BLOG_CATEGORY_MAP[category]}
+            {...post}
+          />
         ))}
       </div>
     </div>

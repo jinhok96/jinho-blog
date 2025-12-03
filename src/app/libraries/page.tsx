@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
-import Link from 'next/link';
-
+import { ROUTER } from '@/core/config';
+import { LIBRARY_CATEGORY_MAP } from '@/core/map';
+import { ContentCard } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getLibraries } from '@/entities/library';
@@ -24,18 +25,13 @@ export default async function LibrariesListPage() {
           md:grid-cols-2
         `}
       >
-        {libraries.map(library => (
-          <Link
-            key={library.slug}
-            href={`/libraries/${library.slug}`}
-            className={`
-              block rounded-lg border p-6 transition-shadow
-              hover:shadow-lg
-            `}
-          >
-            <h2 className="mb-2 text-xl font-bold">{library.title}</h2>
-            <p className="mb-4 text-gray-600">{library.description}</p>
-          </Link>
+        {libraries.map(({ category, slug, ...post }) => (
+          <ContentCard
+            key={slug}
+            href={`${ROUTER.libraries}/${slug}`}
+            category={LIBRARY_CATEGORY_MAP[category]}
+            {...post}
+          />
         ))}
       </div>
     </div>

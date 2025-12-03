@@ -1,7 +1,8 @@
 import type { Metadata } from 'next';
 
-import Link from 'next/link';
-
+import { ROUTER } from '@/core/config';
+import { PROJECT_CATEGORY_MAP } from '@/core/map';
+import { ContentCard } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getProjects } from '@/entities/project';
@@ -25,30 +26,13 @@ export default async function ProjectsListPage() {
           lg:grid-cols-3
         `}
       >
-        {projects.map(project => (
-          <Link
-            key={project.slug}
-            href={`/projects/${project.slug}`}
-            className={`
-              block rounded-lg border p-6 transition-shadow
-              hover:shadow-lg
-            `}
-          >
-            <h2 className="mb-2 text-xl font-bold">{project.title}</h2>
-            <p className="mb-4 text-gray-600">{project.description}</p>
-            {project.tech.length > 0 && (
-              <div className="flex flex-wrap gap-2">
-                {project.tech.map(tech => (
-                  <span
-                    key={tech}
-                    className="rounded-sm bg-blue-100 px-2 py-1 text-sm text-blue-700"
-                  >
-                    {tech}
-                  </span>
-                ))}
-              </div>
-            )}
-          </Link>
+        {projects.map(({ category, slug, ...post }) => (
+          <ContentCard
+            key={slug}
+            href={`${ROUTER.projects}/${slug}`}
+            category={PROJECT_CATEGORY_MAP[category]}
+            {...post}
+          />
         ))}
       </div>
     </div>

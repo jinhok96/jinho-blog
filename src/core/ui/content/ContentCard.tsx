@@ -18,11 +18,9 @@ export function ContentCard({ href, category, title, description, createdAt, tec
   return (
     <LinkButton
       href={href}
-      className="w-full p-5"
-      color="background"
-      variant="outline"
+      className="size-full rounded-2xl bg-gray-1 p-5"
     >
-      <div className="flex-col-start w-full gap-1">
+      <div className="flex-col-start w-full gap-2">
         {/* 카테고리, 작성일 */}
         <div className="flex-row-center w-full justify-between text-gray-5">
           <p className="font-caption-14">{category}</p>

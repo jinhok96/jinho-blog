@@ -10,5 +10,5 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
   html: 'HTML',
   zustand: 'Zustand',
   swr: 'SWR',
-  motion: 'Framer Motion',
+  motion: 'Motion',
 };

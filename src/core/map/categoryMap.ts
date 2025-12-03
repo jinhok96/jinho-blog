@@ -17,6 +17,6 @@ export const LIBRARY_CATEGORY_MAP: Record<LibraryCategory, string> = {
   react: 'React',
   nextjs: 'Next.js',
   swr: 'SWR',
-  motion: 'Framer Motion',
+  motion: 'Motion',
   zustand: 'Zustand',
 };

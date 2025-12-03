@@ -78,7 +78,7 @@ export const buttonVariants = cva('animated-100', {
     {
       variant: 'outline',
       color: 'background',
-      className: 'border text-foreground border-foreground-3',
+      className: 'border text-foreground border-foreground-2',
     },
     {
       variant: 'outline',
@@ -97,29 +97,21 @@ export const buttonVariants = cva('animated-100', {
       color: 'background',
       disableHover: false,
       disabled: false,
-      className: 'hover:bg-foreground-2',
+      className: 'hover:bg-foreground-1',
     },
     {
       variant: 'outline',
       color: 'foreground',
       disableHover: false,
       disabled: false,
-      className: 'hover:bg-foreground-2',
+      className: 'hover:bg-foreground-1',
     },
     {
       variant: 'outline',
       color: 'blue',
       disableHover: false,
       disabled: false,
-      className: 'hover:bg-blue-2',
+      className: 'hover:bg-blue-1',
     },
   ],
-
-  defaultVariants: {
-    size: 'md',
-    variant: 'solid',
-    color: 'background',
-    disableHover: false,
-    disabled: false,
-  },
 });

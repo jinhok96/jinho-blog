@@ -29,352 +29,315 @@
   letter-spacing: -0.03em;
 }
 
+@utility leading-title {
+  line-height: 125%;
+}
+
+@utility leading-subtitle {
+  line-height: 140%;
+}
+
+@utility leading-body {
+  line-height: 180%;
+}
+
+@utility leading-caption {
+  line-height: 140%;
+}
+
+@utility leading-button {
+  line-height: 125%;
+}
+
 /* Typography */
 /* Title 클래스 */
 @utility font-title-96 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 6rem;
-  line-height: 140%;
 }
 @utility font-title-88 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 5.5rem;
-  line-height: 140%;
 }
 @utility font-title-80 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 5rem;
-  line-height: 140%;
 }
 
 @utility font-title-72 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 4.5rem;
-  line-height: 140%;
 }
 
 @utility font-title-64 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 4rem;
-  line-height: 140%;
 }
 
 @utility font-title-56 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 3.5rem;
-  line-height: 140%;
 }
 
 @utility font-title-52 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 3.25rem;
-  line-height: 140%;
 }
 
 @utility font-title-48 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 3rem;
-  line-height: 140%;
 }
 
 @utility font-title-44 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 2.75rem;
-  line-height: 140%;
 }
 
 @utility font-title-40 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 2.5rem;
-  line-height: 140%;
 }
 
 @utility font-title-36 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 2.25rem;
-  line-height: 140%;
 }
 
 @utility font-title-32 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 2rem;
-  line-height: 140%;
 }
 
 @utility font-title-28 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 1.75rem;
-  line-height: 140%;
 }
 
 @utility font-title-24 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 1.5rem;
-  line-height: 140%;
 }
 
 @utility font-title-22 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 1.375rem;
-  line-height: 140%;
 }
 
 @utility font-title-20 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 1.25rem;
-  line-height: 140%;
 }
 
 @utility font-title-18 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 1.125rem;
-  line-height: 140%;
 }
 
 @utility font-title-16 {
-  @apply font-bold;
+  @apply font-bold leading-title;
   font-size: 1rem;
-  line-height: 140%;
 }
 
 /* Subtitle 클래스 */
 
 @utility font-subtitle-48 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 3rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-44 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 2.75rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-40 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 2.5rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-36 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 2.25rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-32 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 2rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-28 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 1.75rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-24 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 1.5rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-22 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 1.375rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-20 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 1.25rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-18 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 1.125rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-16 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 1rem;
-  line-height: 140%;
 }
 
 @utility font-subtitle-14 {
-  @apply font-semibold;
+  @apply font-semibold leading-subtitle;
   font-size: 0.875rem;
-  line-height: 140%;
 }
 
 /* Body 클래스 */
 
 @utility font-body-36 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 2.25rem;
-  line-height: 180%;
 }
 
 @utility font-body-32 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 2rem;
-  line-height: 180%;
 }
 
 @utility font-body-28 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 1.75rem;
-  line-height: 180%;
 }
 
 @utility font-body-24 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 1.5rem;
-  line-height: 180%;
 }
 
 @utility font-body-22 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 1.375rem;
-  line-height: 180%;
 }
 
 @utility font-body-20 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 1.25rem;
-  line-height: 180%;
 }
 
 @utility font-body-18 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 1.125rem;
-  line-height: 180%;
 }
 
 @utility font-body-16 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 1rem;
-  line-height: 180%;
 }
 
 @utility font-body-14 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 0.875rem;
-  line-height: 180%;
 }
 
 @utility font-body-12 {
-  @apply font-normal;
+  @apply font-normal leading-body;
   font-size: 0.75rem;
-  line-height: 180%;
 }
 
 /* Caption 클래스 */
 @utility font-caption-32 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 2rem;
-  line-height: 140%;
 }
 
 @utility font-caption-28 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 1.75rem;
-  line-height: 140%;
 }
 
 @utility font-caption-24 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 1.5rem;
-  line-height: 140%;
 }
 
 @utility font-caption-22 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 1.375rem;
-  line-height: 140%;
 }
 
 @utility font-caption-20 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 1.25rem;
-  line-height: 140%;
 }
 
 @utility font-caption-18 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 1.125rem;
-  line-height: 140%;
 }
 
 @utility font-caption-16 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 1rem;
-  line-height: 140%;
 }
 
 @utility font-caption-14 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 0.875rem;
-  line-height: 140%;
 }
 
 @utility font-caption-12 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 0.75rem;
-  line-height: 140%;
 }
 
 @utility font-caption-10 {
-  @apply font-medium;
+  @apply font-medium leading-caption;
   font-size: 0.625rem;
-  line-height: 140%;
 }
 
 /* Button 클래스 */
 @utility font-button-32 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 2rem;
-  line-height: 120%;
 }
 
 @utility font-button-28 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 1.75rem;
-  line-height: 120%;
 }
 
 @utility font-button-24 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 1.5rem;
-  line-height: 120%;
 }
 
 @utility font-button-20 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 1.25rem;
-  line-height: 120%;
 }
 
 @utility font-button-16 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 1rem;
-  line-height: 120%;
 }
 
 @utility font-button-14 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 0.875rem;
-  line-height: 120%;
 }
 
 @utility font-button-12 {
-  @apply font-medium;
+  @apply font-medium leading-button;
   font-size: 0.75rem;
-  line-height: 120%;
 }
 
 /* Default CSS */

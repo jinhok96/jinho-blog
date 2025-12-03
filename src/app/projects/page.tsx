@@ -18,7 +18,7 @@ export default async function ProjectsListPage() {
 
   return (
     <div className="size-full">
-      <h1 className="mb-8 text-4xl font-bold">Projects</h1>
+      <h1 className="mb-8 text-4xl font-bold">프로젝트</h1>
       <div
         className={`
           grid grid-cols-1 gap-6

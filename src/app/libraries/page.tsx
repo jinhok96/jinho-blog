@@ -18,7 +18,7 @@ export default async function LibrariesListPage() {
 
   return (
     <div className="size-full">
-      <h1 className="mb-8 text-4xl font-bold">Libraries</h1>
+      <h1 className="mb-8 text-4xl font-bold">라이브러리</h1>
       <div
         className={`
           grid grid-cols-1 gap-6

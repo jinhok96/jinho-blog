@@ -17,7 +17,7 @@ export default function HomePage() {
         <br />
         <span className="text-blue-7">강진호</span>입니다.
       </h1>
-      <p>소개, 이력서 다운, 핵심 역량, 기술 스택, 경력 사항, 프로젝트 상세, 블로그, 교육, 연락처</p>
+      <p>소개, 이력서 다운, 핵심 역량, 기술 스택, 경력 사항, 주요 프로젝트, 블로그, 교육, 연락처</p>
       <div>
         <Link href={ROUTER.projects}>Projects</Link>
       </div>

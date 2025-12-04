@@ -94,13 +94,13 @@ function Trigger({ children, onClick, ...props }: DropdownTriggerProps) {
 }
 
 const DROPDOWN_POSITION_CLASSNAME_MAP: Record<DropdownPosition, string> = {
-  'bottom-left': 'top-full left-0 mt-2',
-  'bottom-right': 'top-full right-0 mt-2',
-  'top-left': 'bottom-full left-0 mb-2',
-  'top-right': 'bottom-full right-0 mb-2',
+  bottomLeft: 'top-full left-0 mt-2',
+  bottomRight: 'top-full right-0 mt-2',
+  topLeft: 'bottom-full left-0 mb-2',
+  topRight: 'bottom-full right-0 mb-2',
 };
 
-function Content({ children, className, contentClassName, position = 'bottom-left' }: DropdownContentProps) {
+function Content({ children, className, contentClassName, position = 'bottomLeft' }: DropdownContentProps) {
   const { isOpen } = useDropdownContext();
   const contentRef = useRef<HTMLDivElement>(null);
   const [currentPosition, setCurrentPosition] = useState<DropdownPosition>(position);
@@ -116,12 +116,12 @@ function Content({ children, className, contentClassName, position = 'bottom-lef
     const spaceAbove = contentRect.top;
     const spaceRight = viewportWidth - contentRect.right;
 
-    let newPosition: DropdownPosition = 'bottom-left';
+    let newPosition: DropdownPosition = 'bottomLeft';
 
     if (spaceBelow < 0 && spaceAbove > spaceBelow) {
-      newPosition = spaceRight < 0 ? 'top-right' : 'top-left';
+      newPosition = spaceRight < 0 ? 'topRight' : 'topLeft';
     } else {
-      newPosition = spaceRight < 0 ? 'bottom-right' : 'bottom-left';
+      newPosition = spaceRight < 0 ? 'bottomRight' : 'bottomLeft';
     }
 
     setCurrentPosition(newPosition);

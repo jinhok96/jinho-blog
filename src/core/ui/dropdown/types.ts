@@ -1,7 +1,7 @@
 import type { Button } from '@/core/ui';
 import type { ComponentProps, PropsWithChildren } from 'react';
 
-export type DropdownPosition = 'bottom-left' | 'bottom-right' | 'top-left' | 'top-right';
+export type DropdownPosition = 'bottomLeft' | 'bottomRight' | 'topLeft' | 'topRight';
 
 export type DropdownProps = PropsWithChildren<{
   isOpen?: boolean;

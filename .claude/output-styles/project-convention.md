@@ -55,7 +55,7 @@ src/
 
 ### 1. Import 순서 (ESLint 규칙)
 
-`npm run lint` 또는 `npm run eslint`을 실행하여 자동 정렬합니다.
+`npm run lint`를 실행하여 자동 정렬합니다.
 
 Import 그룹 순서:
 

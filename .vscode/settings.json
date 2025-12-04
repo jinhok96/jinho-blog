@@ -11,33 +11,32 @@
     "tw\\(([^)]*)\\)",
     "tw\\.[^`]+`([^`]*)",
 
-    // 변수 할당
-    // 모든 변수: const xxx = "..."
-    "(?:const|let|var)\\s+[\\w$_][_\\w\\d]*\\s*=\\s*['\\\"](.*?)['\\\"]",
+    // 일반 변수 할당
+    "(?:const|let|var)\\s+[\\w$_][_\\w\\d]*\\s*=\\s*['\"]([^'\"]*)['\"]",
 
-    // Style/Class 관련 변수 (camelCase, PascalCase, UPPER_CASE, snake_case)
-    // 예: buttonStyles, BUTTON_CLASS_NAMES, container_classes
+    // Style/Class 관련 변수 (문자열 값)
+    // 예: buttonStyles, className, CLASS_NAME_MAP, classname_list
     [
-      "(?:(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles?|[Cc]lasses|[Cc]lassnames?|STYLES?|CLASSES|CLASSNAMES?|CLASS_NAMES?|styles?|classes|classnames?|class_names?)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"
+      "(?:(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles?|[Cc]lass(?:es)?|[Cc]lass_?[Nn]ames?|[Vv]ariants?|STYLES?|CLASS(?:ES)|CLASS_?NAMES?|VARIANTS?)[\\w\\d]*\\s*(?:=|\\+=)\\s*['\"]([^'\"]*)['\"]"
     ],
 
     // JSX Props / HTML Attributes
-    // 다양한 네이밍: style, className, CLASSNAME, CLASS_NAME, class_name 등
     [
-      "\\b\\w*(?:[Ss]tyles?|[Cc]lass(?:[Nn]ames?)?|[Cc]lasses?|STYLE|STYLES|CLASS|CLASSES|CLASSNAME|CLASSNAMES|CLASS_NAME|CLASS_NAMES|style|styles|class|classes|class_name|class_names)\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"
+      "\\b\\w*(?:[Ss]tyles?|[Cc]lass(?:es)?|[Cc]lass_?[Nn]ames?|[Vv]ariants?|STYLES?|CLASS(?:ES)|CLASS_?NAMES?|VARIANTS?)\\b\\s*=\\s*[\"'`]([^\"'`]*)[\"'`]"
     ],
 
-    // 객체 속성
-    // 중첩 객체: { classNames: { container: "...", item: "..." } }
+    // 객체 할당: const CLASSNAME_MAP = { ... }
     [
-      "(?:[Cc]lass[Nn]ames|classNames|CLASSNAMES|CLASS_NAMES|class_names):\\s*{([\\s\\S]*?)}",
+      "(?:(?:const|let|var)\\s+)?[\\w$_]*(?:[Ss]tyles?|[Cc]lass(?:es)?|[Cc]lass_?[Nn]ames?|[Vv]ariants?|STYLES?|CLASS(?:ES)|CLASS_?NAMES?|VARIANTS?)[\\w\\d]*(?:\\s*:\\s*[^=]+)?\\s*=\\s*\\{([\\s\\S]*?)\\}",
       "\\s?[\\w].*:\\s*?[\"'`]([^\"'`]*).*?,?\\s?"
     ],
 
-    // 단순 속성: { className: "...", variants: "..." }
-    ["(?:[Cc]lass[Nn]ames?|CLASSNAMES?|CLASS_NAMES?|class_names?|[Vv]ariants?|VARIANTS?):\\s*[\"'`]([^\"'`]*)[\"'`]"],
+    // 객체 속성: { className: "...", variants: "..." }
+    [
+      "(?:[Ss]tyles?|[Cc]lass(?:es)?|[Cc]lass_?[Nn]ames?|[Vv]ariants?|STYLES?|CLASS(?:ES)|CLASS_?NAMES?|VARIANTS?):\\s*[\"'`]([^\"'`]*)[\"'`]"
+    ],
 
     // 유틸리티 함수 (classnames, clsx, cn, cva)
-    ["(?:class[Nn]ames|clsx|cn|cva)\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"]
+    ["(?:classnames|clsx|cn|cva)\\(([^)]*)\\)", "[\"'`]([^\"'`]*)[\"'`]"]
   ]
 }

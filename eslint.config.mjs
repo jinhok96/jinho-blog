@@ -2,6 +2,9 @@ import { FlatCompat } from '@eslint/eslintrc';
 import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
+import { defineConfig, globalIgnores } from 'eslint/config';
+import nextVitals from 'eslint-config-next/core-web-vitals';
+import nextTypescript from 'eslint-config-next/typescript';
 
 const __filename = fileURLToPath(import.meta.url);
 const __dirname = dirname(__filename);
@@ -12,8 +15,18 @@ const compat = new FlatCompat({
 
 const simpleImportSort = (await import('eslint-plugin-simple-import-sort')).default;
 
-const eslintConfig = [
-  ...compat.extends('next/core-web-vitals', 'next/typescript', 'prettier'),
+const eslintConfig = defineConfig([
+  ...nextVitals,
+  ...nextTypescript,
+  ...compat.extends('prettier'),
+  // Override default ignores of eslint-config-next.
+  globalIgnores([
+    // Default ignores of eslint-config-next:
+    '.next/**',
+    'out/**',
+    'build/**',
+    'next-env.d.ts',
+  ]),
   {
     plugins: {
       'simple-import-sort': simpleImportSort,
@@ -86,6 +99,6 @@ const eslintConfig = [
   {
     ignores: ['node_modules/**', '.next/**', 'out/**', 'build/**', 'next-env.d.ts'],
   },
-];
+]);
 
 export default eslintConfig;

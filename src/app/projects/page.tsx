@@ -1,10 +1,9 @@
 import type { Metadata } from 'next';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
-import { ContentCardSection } from '@/core/ui';
+import { AsyncBoundary } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
-import { getProjects } from '@/entities/project';
+import { ProjectsContentSection } from '@/views/projects';
 
 export const metadata: Metadata = generatePageMetadata({
   routerName: 'projects',
@@ -12,9 +11,11 @@ export const metadata: Metadata = generatePageMetadata({
   description: '프로젝트 목록',
 });
 
-export default async function ProjectsListPage() {
-  const projects = await getProjects();
+type Props = {
+  searchParams: Promise<Record<string, string | string[] | undefined>>;
+};
 
+export default async function ProjectsListPage({ searchParams }: Props) {
   return (
     <div className="flex-col-start size-full gap-6">
       <h1 className="font-title-36">프로젝트</h1>
@@ -24,18 +25,9 @@ export default async function ProjectsListPage() {
         <div>필터</div>
       </div>
 
-      <ContentCardSection>
-        {projects.map(({ category, slug, path, tech, ...items }) => (
-          <ContentCardSection.Card
-            key={slug}
-            href={path}
-            category={PROJECT_CATEGORY_MAP[category]}
-            {...items}
-          >
-            <ContentCardSection.TechBadgeList tech={tech} />
-          </ContentCardSection.Card>
-        ))}
-      </ContentCardSection>
+      <AsyncBoundary>
+        <ProjectsContentSection searchParams={searchParams} />
+      </AsyncBoundary>
     </div>
   );
 }

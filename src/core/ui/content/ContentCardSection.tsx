@@ -77,5 +77,10 @@ function TechBadgeList({ tech }: TechBadgeListProps) {
   );
 }
 
+function Placeholder() {
+  return <div className="size-full pt-24 text-center font-caption-14 text-gray-4">작성글이 없습니다.</div>;
+}
+
 ContentCardSection.Card = Card;
 ContentCardSection.TechBadgeList = TechBadgeList;
+ContentCardSection.Placeholder = Placeholder;

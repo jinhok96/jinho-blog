@@ -1,10 +1,10 @@
+import type { SearchParams } from '@/core/types';
 import type { Metadata } from 'next';
 
-import { BLOG_CATEGORY_MAP } from '@/core/map';
-import { ContentCardSection } from '@/core/ui';
+import { AsyncBoundary } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
-import { getBlogPosts } from '@/entities/blog';
+import { BlogContentSection } from '@/views/blog';
 
 export const metadata: Metadata = generatePageMetadata({
   routerName: 'blog',
@@ -12,9 +12,11 @@ export const metadata: Metadata = generatePageMetadata({
   description: '블로그 목록',
 });
 
-export default async function BlogListPage() {
-  const posts = await getBlogPosts();
+type Props = {
+  searchParams: Promise<SearchParams>;
+};
 
+export default async function BlogListPage({ searchParams }: Props) {
   return (
     <div className="flex-col-start size-full gap-6">
       <h1 className="font-title-36">블로그</h1>
@@ -24,16 +26,9 @@ export default async function BlogListPage() {
         <div>필터</div>
       </div>
 
-      <ContentCardSection>
-        {posts.map(({ category, slug, path, ...post }) => (
-          <ContentCardSection.Card
-            key={slug}
-            href={path}
-            category={BLOG_CATEGORY_MAP[category]}
-            {...post}
-          />
-        ))}
-      </ContentCardSection>
+      <AsyncBoundary>
+        <BlogContentSection searchParams={searchParams} />
+      </AsyncBoundary>
     </div>
   );
 }

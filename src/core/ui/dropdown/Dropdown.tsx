@@ -2,7 +2,7 @@
 
 import type { DropdownContextValue } from '@/core/ui/dropdown/dropdownContext';
 import type {
-  DropdownContentProps,
+  DropdownContentProps as DropdownContainerProps,
   DropdownItemProps,
   DropdownPosition,
   DropdownProps,
@@ -100,15 +100,15 @@ const DROPDOWN_POSITION_CLASSNAME_MAP: Record<DropdownPosition, string> = {
   topRight: 'bottom-full right-0 mb-2',
 };
 
-function Content({ children, className, contentClassName, position = 'bottomLeft' }: DropdownContentProps) {
+function Container({ children, className, contentClassName, position = 'bottomLeft' }: DropdownContainerProps) {
   const { isOpen } = useDropdownContext();
-  const contentRef = useRef<HTMLDivElement>(null);
+  const containerRef = useRef<HTMLDivElement>(null);
   const [currentPosition, setCurrentPosition] = useState<DropdownPosition>(position);
 
   useLayoutEffect(() => {
-    if (!isOpen || !contentRef.current) return;
+    if (!isOpen || !containerRef.current) return;
 
-    const contentRect = contentRef.current.getBoundingClientRect();
+    const contentRect = containerRef.current.getBoundingClientRect();
     const viewportWidth = window.innerWidth;
     const viewportHeight = window.innerHeight;
 
@@ -124,12 +124,13 @@ function Content({ children, className, contentClassName, position = 'bottomLeft
       newPosition = spaceRight < 0 ? 'bottomRight' : 'bottomLeft';
     }
 
+    // eslint-disable-next-line react-hooks/set-state-in-effect
     setCurrentPosition(newPosition);
   }, [isOpen]);
 
   return (
     <div
-      ref={contentRef}
+      ref={containerRef}
       className={cn(
         'absolute flex-col-start overflow-hidden animated-150',
         DROPDOWN_POSITION_CLASSNAME_MAP[currentPosition],
@@ -162,5 +163,5 @@ function Item({ children, onClick, className, ...props }: DropdownItemProps) {
 }
 
 Dropdown.Trigger = Trigger;
-Dropdown.Content = Content;
+Dropdown.Container = Container;
 Dropdown.Item = Item;

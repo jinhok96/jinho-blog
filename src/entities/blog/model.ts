@@ -1,6 +1,7 @@
 import type { GetBlogPostsOptions } from '@/core/types';
-import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
 import type { Blog } from '@/entities/blog/types';
+
+import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
 
 import { blogRegistry } from '@/entities/blog/registry.generated';
 

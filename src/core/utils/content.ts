@@ -1,13 +1,10 @@
-import type { BaseMetadata } from '@/core/types/metadata';
 import type { ContentSortOption } from '@/core/types';
+import type { BaseMetadata } from '@/core/types/metadata';
 
 /**
  * 콘텐츠 정렬 (공통 함수)
  */
-export function sortContent<T extends BaseMetadata>(
-  items: T[],
-  sortOption: ContentSortOption = 'latest',
-): T[] {
+export function sortContent<T extends BaseMetadata>(items: T[], sortOption: ContentSortOption = 'latest'): T[] {
   const sorted = [...items]; // 원본 배열 변경 방지
 
   switch (sortOption) {
@@ -23,10 +20,7 @@ export function sortContent<T extends BaseMetadata>(
 /**
  * 카테고리 필터링 (공통 함수)
  */
-export function filterByCategory<T extends { category: string }>(
-  items: T[],
-  category?: string | string[],
-): T[] {
+export function filterByCategory<T extends { category: string }>(items: T[], category?: string | string[]): T[] {
   if (!category) return items;
 
   const categories = Array.isArray(category) ? category : [category];
@@ -36,16 +30,12 @@ export function filterByCategory<T extends { category: string }>(
 /**
  * 텍스트 검색 (제목/설명) (공통 함수)
  */
-export function searchContent<T extends { title: string; description: string }>(
-  items: T[],
-  search?: string,
-): T[] {
+export function searchContent<T extends { title: string; description: string }>(items: T[], search?: string): T[] {
   if (!search) return items;
 
   const searchLower = search.toLowerCase();
   return items.filter(
-    item =>
-      item.title.toLowerCase().includes(searchLower) || item.description.toLowerCase().includes(searchLower),
+    item => item.title.toLowerCase().includes(searchLower) || item.description.toLowerCase().includes(searchLower),
   );
 }
 

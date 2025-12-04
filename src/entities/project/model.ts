@@ -1,6 +1,7 @@
 import type { GetProjectsOptions } from '@/core/types';
-import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
 import type { Project } from '@/entities/project/types';
+
+import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
 
 import { projectsRegistry } from '@/entities/project/registry.generated';
 

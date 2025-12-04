@@ -3,13 +3,16 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "predev": "tsx scripts/generate-content-registry.ts",
+    "lf": "prettier --write -l --end-of-line lf src scripts",
+    "eslint": "eslint src scripts --ext .ts,.tsx,.js,.jsx",
+    "tsc": "npx tsc --noEmit",
+    "gcr": "tsx scripts/generate-content-registry.ts",
+    "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run tsc\"",
+    "predev": "concurrently \"npm run lint\" \"npm run gcr\"",
     "dev": "next dev",
-    "prebuild": "tsx scripts/generate-content-registry.ts",
-    "build": "prettier --write --end-of-line lf src && eslint src --ext .ts,.tsx,.js,.jsx --fix --no-cache && npx tsc --noEmit && next build",
-    "start": "next start",
-    "lint": "prettier --write --end-of-line lf src && eslint src --ext .ts,.tsx,.js,.jsx --fix && npx tsc --noEmit",
-    "lf": "prettier --write --end-of-line lf src"
+    "prebuild": "concurrently \"npm run lint\" \"npm run gcr\"",
+    "build": "next build",
+    "start": "next start"
   },
   "dependencies": {
     "class-variance-authority": "^0.7.1",
@@ -37,6 +40,7 @@
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "@types/react-syntax-highlighter": "^15.5.13",
+    "concurrently": "^9.2.1",
     "eslint": "^9",
     "eslint-config-next": "^16.0.7",
     "eslint-config-prettier": "^10.1.8",

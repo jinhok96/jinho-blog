@@ -9,7 +9,7 @@ import { getProjects } from '@/entities/project';
 
 export const metadata: Metadata = generatePageMetadata({
   routerName: 'projects',
-  title: 'Projects',
+  title: '프로젝트',
   description: '프로젝트 목록',
 });
 
@@ -17,8 +17,13 @@ export default async function ProjectsListPage() {
   const projects = await getProjects();
 
   return (
-    <div className="size-full">
-      <h1 className="mb-8 text-4xl font-bold">프로젝트</h1>
+    <div className="flex-col-start size-full gap-6">
+      <h1 className="font-title-36">프로젝트</h1>
+
+      <div className="flex-row-center w-full justify-between">
+        <div>카테고리, 화면을 모달로 띄우기 (Parallel Route)</div>
+        <div>필터</div>
+      </div>
 
       <ContentCardSection>
         {projects.map(({ category, slug, tech, ...items }) => (

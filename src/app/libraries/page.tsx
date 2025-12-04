@@ -9,7 +9,7 @@ import { getLibraries } from '@/entities/library';
 
 export const metadata: Metadata = generatePageMetadata({
   routerName: 'libraries',
-  title: 'Libraries',
+  title: '라이브러리',
   description: '라이브러리 목록',
 });
 
@@ -17,8 +17,10 @@ export default async function LibrariesListPage() {
   const libraries = await getLibraries();
 
   return (
-    <div className="size-full">
-      <h1 className="mb-8 text-4xl font-bold">라이브러리</h1>
+    <div className="flex-col-start size-full gap-6">
+      <h1 className="font-title-36">라이브러리</h1>
+
+      <p>사이드바 목록, 모바일에서 드로어</p>
 
       <ContentCardSection>
         {libraries.map(({ category, slug, tech, ...items }) => (

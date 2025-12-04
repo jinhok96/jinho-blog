@@ -9,7 +9,7 @@ import { getBlogPosts } from '@/entities/blog';
 
 export const metadata: Metadata = generatePageMetadata({
   routerName: 'blog',
-  title: 'Blog',
+  title: '블로그',
   description: '블로그 목록',
 });
 
@@ -21,7 +21,7 @@ export default async function BlogListPage() {
       <h1 className="font-title-36">블로그</h1>
 
       <div className="flex-row-center w-full justify-between">
-        <div>카테고리, 테크스택</div>
+        <div>카테고리</div>
         <div>필터</div>
       </div>
 

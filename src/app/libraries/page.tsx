@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import { ROUTER } from '@/core/config';
 import { LIBRARY_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -23,10 +22,10 @@ export default async function LibrariesListPage() {
       <p>사이드바 목록, 모바일에서 드로어</p>
 
       <ContentCardSection>
-        {libraries.map(({ category, slug, tech, ...items }) => (
+        {libraries.map(({ category, slug, path, tech, ...items }) => (
           <ContentCardSection.Card
             key={slug}
-            href={`${ROUTER.libraries}/${slug}`}
+            href={path}
             category={LIBRARY_CATEGORY_MAP[category]}
             {...items}
           >

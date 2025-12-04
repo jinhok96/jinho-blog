@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import { ROUTER } from '@/core/config';
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -26,10 +25,10 @@ export default async function ProjectsListPage() {
       </div>
 
       <ContentCardSection>
-        {projects.map(({ category, slug, tech, ...items }) => (
+        {projects.map(({ category, slug, path, tech, ...items }) => (
           <ContentCardSection.Card
             key={slug}
-            href={`${ROUTER.libraries}/${slug}`}
+            href={path}
             category={PROJECT_CATEGORY_MAP[category]}
             {...items}
           >

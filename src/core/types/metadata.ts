@@ -42,4 +42,5 @@ export type ContentMetadata = BlogMetadata | ProjectMetadata | LibraryMetadata;
 export type MdxInfo = {
   slug: string; // 슬러그
   filePath: string; // MDX 파일 경로
+  path: string; // 자동 생성된 경로 (예: /blog/slug)
 };

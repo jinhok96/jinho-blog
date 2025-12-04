@@ -1,4 +1,4 @@
-import type { RouterName } from '@/core/config';
+import { ROUTER, type RouterName } from '@/core/config';
 
 import * as fs from 'fs';
 import matter from 'gray-matter';
@@ -127,6 +127,7 @@ function generateRegistry(section: ContentSection) {
     slug: '${entry.slug}',
     ...${metadataStr},
     filePath: '${normalizedPath}',
+    path: '${ROUTER[section]}/${entry.slug}',
   }`;
     })
     .join(',\n');

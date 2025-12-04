@@ -1,6 +1,5 @@
 import type { Metadata } from 'next';
 
-import { ROUTER } from '@/core/config';
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -26,10 +25,10 @@ export default async function BlogListPage() {
       </div>
 
       <ContentCardSection>
-        {posts.map(({ category, slug, ...post }) => (
+        {posts.map(({ category, slug, path, ...post }) => (
           <ContentCardSection.Card
             key={slug}
-            href={`${ROUTER.blog}/${slug}`}
+            href={path}
             category={BLOG_CATEGORY_MAP[category]}
             {...post}
           />

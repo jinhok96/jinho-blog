@@ -1,6 +1,6 @@
 'use client';
 
-import type { DropdownContextValue } from '@/core/ui/dropdown/DropdownContext';
+import type { DropdownContextValue } from '@/core/ui/dropdown/dropdownContext_temp';
 import type {
   DropdownContentProps,
   DropdownItemProps,
@@ -13,11 +13,11 @@ import { type MouseEventHandler, useCallback, useContext, useLayoutEffect, useMe
 
 import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
-import { DropdownContext } from '@/core/ui/dropdown/DropdownContext';
+import { dropdownContext } from '@/core/ui/dropdown/dropdownContext_temp';
 import { cn } from '@/core/utils';
 
 function useDropdownContext(): DropdownContextValue {
-  const context = useContext(DropdownContext);
+  const context = useContext(dropdownContext);
   if (context === undefined) {
     throw new Error('Dropdown components must be used within Dropdown');
   }
@@ -64,14 +64,14 @@ export function Dropdown({ children, isOpen: controlledIsOpen, onOpenChange, cla
   );
 
   return (
-    <DropdownContext.Provider value={contextValue}>
+    <dropdownContext.Provider value={contextValue}>
       <div
         ref={wrapperRef}
         className={cn('relative', className)}
       >
         {children}
       </div>
-    </DropdownContext.Provider>
+    </dropdownContext.Provider>
   );
 }
 

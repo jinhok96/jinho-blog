@@ -6,4 +6,4 @@ export type DropdownContextValue = {
   handleClose: () => void;
 };
 
-export const DropdownContext = createContext<DropdownContextValue | undefined>(undefined);
+export const dropdownContext = createContext<DropdownContextValue | undefined>(undefined);

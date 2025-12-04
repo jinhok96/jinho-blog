@@ -9,18 +9,9 @@ import type {
   DropdownTriggerProps,
 } from '@/core/ui/dropdown/types';
 
-import {
-  type MouseEventHandler,
-  useCallback,
-  useContext,
-  useEffect,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { type MouseEventHandler, useCallback, useContext, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-import { useOutsideClickEffect } from '@/core/hooks';
+import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
 import { DropdownContext } from '@/core/ui/dropdown/DropdownContext';
 import { cn } from '@/core/utils';
@@ -33,7 +24,7 @@ function useDropdownContext(): DropdownContextValue {
   return context;
 }
 
-function Dropdown({ children, isOpen: controlledIsOpen, onOpenChange, className }: DropdownProps) {
+export function Dropdown({ children, isOpen: controlledIsOpen, onOpenChange, className }: DropdownProps) {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
@@ -59,19 +50,9 @@ function Dropdown({ children, isOpen: controlledIsOpen, onOpenChange, className 
     handleClose();
   }, [wrapperRef]);
 
-  useEffect(() => {
-    const handleEscape = (event: KeyboardEvent) => {
-      if (event.key === 'Escape' && isOpen) {
-        handleClose();
-      }
-    };
-
-    document.addEventListener('keydown', handleEscape);
-
-    return () => {
-      document.removeEventListener('keydown', handleEscape);
-    };
-  }, [isOpen, handleClose]);
+  useKeyDownEffect(['Escape'], () => {
+    if (isOpen) handleClose();
+  });
 
   const contextValue = useMemo<DropdownContextValue>(
     () => ({
@@ -180,8 +161,6 @@ function Item({ children, onClick, className, ...props }: DropdownItemProps) {
   );
 }
 
-Dropdown.Item = Item;
 Dropdown.Trigger = Trigger;
 Dropdown.Content = Content;
-
-export { Dropdown };
+Dropdown.Item = Item;

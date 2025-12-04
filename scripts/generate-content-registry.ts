@@ -14,52 +14,37 @@ interface ContentEntry {
 }
 
 /**
- * 콘텐츠 디렉토리를 스캔하여 모든 .mdx 파일 찾기
+ * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
+ * 경로: src/mdx/{section}/{slug}.mdx
  */
 function discoverContent(section: ContentSection): ContentEntry[] {
-  const viewsDir = path.join(process.cwd(), 'src', 'views', section);
+  const mdxDir = path.join(process.cwd(), 'src', 'mdx', section);
   const entries: ContentEntry[] = [];
 
-  if (!fs.existsSync(viewsDir)) {
-    console.warn(`⚠️  Warning: Views directory not found: ${viewsDir}`);
+  if (!fs.existsSync(mdxDir)) {
+    console.warn(`⚠️  Warning: MDX directory not found: ${mdxDir}`);
     return entries;
   }
 
-  function scan(dir: string, relativePath: string = '') {
-    const items = fs.readdirSync(dir, { withFileTypes: true });
+  // {slug}.mdx 파일 스캔 (플랫 구조)
+  const items = fs.readdirSync(mdxDir, { withFileTypes: true });
 
-    for (const item of items) {
-      const fullPath = path.join(dir, item.name);
-      const itemRelativePath = relativePath ? path.join(relativePath, item.name) : item.name;
+  for (const item of items) {
+    if (item.isFile() && item.name.endsWith('.mdx')) {
+      const fullPath = path.join(mdxDir, item.name);
+      const slug = item.name.replace(/\.mdx$/, '');
 
-      if (item.isDirectory()) {
-        // 폴더 내부 스캔
-        scan(fullPath, itemRelativePath);
-      } else if (item.name === 'index.mdx') {
-        // {slug}/index.mdx 패턴
-        const slug = relativePath || item.name.replace(/\.mdx$/, '');
-        const fileContent = fs.readFileSync(fullPath, 'utf-8');
-        const { data } = matter(fileContent);
-        entries.push({
-          slug,
-          filePath: fullPath,
-          metadata: data,
-        });
-      } else if (item.name.endsWith('.mdx') && !relativePath) {
-        // 루트 레벨의 단일 파일
-        const slug = item.name.replace(/\.mdx$/, '');
-        const fileContent = fs.readFileSync(fullPath, 'utf-8');
-        const { data } = matter(fileContent);
-        entries.push({
-          slug,
-          filePath: fullPath,
-          metadata: data,
-        });
-      }
+      const fileContent = fs.readFileSync(fullPath, 'utf-8');
+      const { data } = matter(fileContent);
+
+      entries.push({
+        slug,
+        filePath: fullPath,
+        metadata: data,
+      });
     }
   }
 
-  scan(viewsDir);
   return entries;
 }
 

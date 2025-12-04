@@ -1,6 +1,6 @@
 'use client';
 
-import type { DropdownContextValue } from '@/core/ui/dropdown/dropdownContext_temp';
+import type { DropdownContextValue } from '@/core/ui/dropdown/dropdownContext';
 import type {
   DropdownContentProps,
   DropdownItemProps,
@@ -13,7 +13,7 @@ import { type MouseEventHandler, useCallback, useContext, useLayoutEffect, useMe
 
 import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
-import { dropdownContext } from '@/core/ui/dropdown/dropdownContext_temp';
+import { dropdownContext } from '@/core/ui/dropdown/dropdownContext';
 import { cn } from '@/core/utils';
 
 function useDropdownContext(): DropdownContextValue {

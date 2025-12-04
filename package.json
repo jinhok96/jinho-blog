@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "predev": "tsx scripts/generate-content-registry.ts",
-    "dev": "next dev --turbopack",
+    "dev": "next dev",
     "prebuild": "tsx scripts/generate-content-registry.ts",
     "build": "prettier --write --end-of-line lf src && eslint src --ext .ts,.tsx,.js,.jsx --fix --no-cache && npx tsc --noEmit && next build",
     "start": "next start",

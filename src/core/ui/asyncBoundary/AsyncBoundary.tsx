@@ -12,7 +12,7 @@ type Props = Omit<ErrorBoundaryProps, 'fallback'> & {
 };
 
 export const AsyncBoundary = forwardRef<AsyncBoundaryRef, Props>(function AsyncBoundary(
-  { children, errorFallback, loadingFallback, onError, onReset, resetKeys },
+  { children, errorFallback = null, loadingFallback, onError, onReset, resetKeys },
   ref,
 ) {
   return (

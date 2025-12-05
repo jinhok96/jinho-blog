@@ -3,7 +3,7 @@ import type { Theme, ThemeStoreState } from '@/core/store/theme/types';
 import { create } from 'zustand';
 import { persist } from 'zustand/middleware';
 
-import { createSelectors } from '@/core/store/utils/createSelectors';
+import { createSelectors } from '@/core/store/utils';
 
 // Types
 type ThemeStoreActions = {

@@ -4,6 +4,9 @@ import type { Metadata } from 'next';
 import { AsyncBoundary } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
+import { SelectCategory } from '@/features/selectCategory';
+import { SelectSort } from '@/features/selectSort';
+
 import { BlogContentSection } from '@/views/blog';
 
 export const metadata: Metadata = generatePageMetadata({
@@ -21,9 +24,9 @@ export default async function BlogListPage({ searchParams }: Props) {
     <div className="flex-col-start size-full gap-6">
       <h1 className="font-title-36">블로그</h1>
 
-      <div className="flex-row-center w-full justify-between">
-        <div>카테고리</div>
-        <div>필터</div>
+      <div className="z-10 flex-row-center w-full justify-between">
+        <SelectCategory />
+        <SelectSort />
       </div>
 
       <AsyncBoundary>

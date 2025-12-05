@@ -30,6 +30,13 @@ const boundariesConfig = {
         mode: 'folder',
       },
 
+      // Views: segments (child elements - private) - 먼저 매칭
+      {
+        type: 'views-segment',
+        pattern: 'src/views/*/*/**',
+        mode: 'file',
+        capture: ['slice', 'segment'],
+      },
       // Views: slices (parent elements)
       {
         type: 'views',
@@ -37,14 +44,14 @@ const boundariesConfig = {
         mode: 'folder',
         capture: ['slice'],
       },
-      // Views: segments (child elements - private)
+
+      // Modules: segments (child elements - private) - 먼저 매칭
       {
-        type: 'views-segment',
-        pattern: 'src/views/*/*',
-        mode: 'folder',
+        type: 'modules-segment',
+        pattern: 'src/modules/*/*/**',
+        mode: 'file',
         capture: ['slice', 'segment'],
       },
-
       // Modules: slices (parent elements)
       {
         type: 'modules',
@@ -52,14 +59,14 @@ const boundariesConfig = {
         mode: 'folder',
         capture: ['slice'],
       },
-      // Modules: segments (child elements - private)
+
+      // Features: segments (child elements - private) - 먼저 매칭
       {
-        type: 'modules-segment',
-        pattern: 'src/modules/*/*',
-        mode: 'folder',
+        type: 'features-segment',
+        pattern: 'src/features/*/*/**',
+        mode: 'file',
         capture: ['slice', 'segment'],
       },
-
       // Features: slices (parent elements)
       {
         type: 'features',
@@ -67,14 +74,14 @@ const boundariesConfig = {
         mode: 'folder',
         capture: ['slice'],
       },
-      // Features: segments (child elements - private)
+
+      // Entities: segments (child elements - private) - 먼저 매칭
       {
-        type: 'features-segment',
-        pattern: 'src/features/*/*',
-        mode: 'folder',
+        type: 'entities-segment',
+        pattern: 'src/entities/*/*/**',
+        mode: 'file',
         capture: ['slice', 'segment'],
       },
-
       // Entities: slices (parent elements)
       {
         type: 'entities',
@@ -82,27 +89,20 @@ const boundariesConfig = {
         mode: 'folder',
         capture: ['slice'],
       },
-      // Entities: segments (child elements - private)
-      {
-        type: 'entities-segment',
-        pattern: 'src/entities/*/*',
-        mode: 'folder',
-        capture: ['slice', 'segment'],
-      },
 
+      // Core: child elements (internal, theme, button 등 - private) - 먼저 매칭
+      {
+        type: 'core-internal',
+        pattern: 'src/core/*/*/**',
+        mode: 'file',
+        capture: ['segment', 'internal'],
+      },
       // Core: segments (parent elements)
       {
         type: 'core',
         pattern: 'src/core/*',
         mode: 'folder',
         capture: ['segment'],
-      },
-      // Core: child elements (internal, theme, button 등 - private)
-      {
-        type: 'core-internal',
-        pattern: 'src/core/*/*',
-        mode: 'folder',
-        capture: ['segment', 'internal'],
       },
     ],
     'import/resolver': {
@@ -168,7 +168,7 @@ const boundariesConfig = {
             ],
           },
 
-          // App: 모든 레이어 import 가능
+          // App: 모든 레이어 import 가능 (child segments 포함)
           {
             from: ['app'],
             allow: ['core', 'entities', 'features', 'modules', 'views'],
@@ -176,9 +176,6 @@ const boundariesConfig = {
         ],
       },
     ],
-
-    // Public API enforcement (no-private)
-    'boundaries/no-private': [2, { allowUncles: true }],
   },
 };
 

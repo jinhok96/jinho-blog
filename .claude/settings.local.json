@@ -35,7 +35,9 @@
       "Bash(code:*)",
       "Bash(ls:*)",
       "Bash(npx next:*)",
-      "Bash(npm run gcr:*)"
+      "Bash(npm run gcr:*)",
+      "Bash(npm run eslint:*)",
+      "Bash(node --check:*)"
     ],
     "deny": [],
     "ask": []

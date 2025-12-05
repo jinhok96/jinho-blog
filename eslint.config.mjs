@@ -23,40 +23,86 @@ const boundariesConfig = {
   },
   settings: {
     'boundaries/elements': [
+      // App layer
       {
         type: 'app',
         pattern: 'src/app/**',
         mode: 'folder',
       },
+
+      // Views: slices (parent elements)
       {
         type: 'views',
-        pattern: 'src/views/*/**',
+        pattern: 'src/views/*',
         mode: 'folder',
         capture: ['slice'],
       },
+      // Views: segments (child elements - private)
+      {
+        type: 'views-segment',
+        pattern: 'src/views/*/*',
+        mode: 'folder',
+        capture: ['slice', 'segment'],
+      },
+
+      // Modules: slices (parent elements)
       {
         type: 'modules',
-        pattern: 'src/modules/*/**',
+        pattern: 'src/modules/*',
         mode: 'folder',
         capture: ['slice'],
       },
+      // Modules: segments (child elements - private)
+      {
+        type: 'modules-segment',
+        pattern: 'src/modules/*/*',
+        mode: 'folder',
+        capture: ['slice', 'segment'],
+      },
+
+      // Features: slices (parent elements)
       {
         type: 'features',
-        pattern: 'src/features/*/**',
+        pattern: 'src/features/*',
         mode: 'folder',
         capture: ['slice'],
       },
+      // Features: segments (child elements - private)
+      {
+        type: 'features-segment',
+        pattern: 'src/features/*/*',
+        mode: 'folder',
+        capture: ['slice', 'segment'],
+      },
+
+      // Entities: slices (parent elements)
       {
         type: 'entities',
-        pattern: 'src/entities/*/**',
+        pattern: 'src/entities/*',
         mode: 'folder',
         capture: ['slice'],
       },
+      // Entities: segments (child elements - private)
+      {
+        type: 'entities-segment',
+        pattern: 'src/entities/*/*',
+        mode: 'folder',
+        capture: ['slice', 'segment'],
+      },
+
+      // Core: segments (parent elements)
       {
         type: 'core',
-        pattern: 'src/core/*/**',
+        pattern: 'src/core/*',
         mode: 'folder',
         capture: ['segment'],
+      },
+      // Core: child elements (internal, theme, button 등 - private)
+      {
+        type: 'core-internal',
+        pattern: 'src/core/*/*',
+        mode: 'folder',
+        capture: ['segment', 'internal'],
       },
     ],
     'import/resolver': {
@@ -67,64 +113,59 @@ const boundariesConfig = {
     },
   },
   rules: {
+    // Layer hierarchy and slice isolation
     'boundaries/element-types': [
-      'error',
+      2,
       {
         default: 'disallow',
+        message: '${file.type} 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
         rules: [
-          // Core: 같은 레이어 내에서만 import 가능 (다른 세그먼트 간 import 허용)
+          // Core: 같은 레이어 내에서만 import 가능
           {
-            from: ['core'],
-            allow: ['core'],
-          },
-          {
-            from: ['core'],
-            disallow: ['entities', 'features', 'modules', 'views', 'app'],
-            message: 'core 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
+            from: ['core', 'core-internal'],
+            allow: ['core', 'core-internal'],
           },
 
           // Entities: core와 같은 슬라이스 내에서만 import 가능
           {
-            from: ['entities'],
-            allow: ['core', ['entities', { slice: '${slice}' }]],
-          },
-          {
-            from: ['entities'],
-            disallow: ['features', 'modules', 'views', 'app'],
-            message: 'entities 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
+            from: ['entities', 'entities-segment'],
+            allow: ['core', ['entities', { slice: '${slice}' }], ['entities-segment', { slice: '${slice}' }]],
           },
 
           // Features: core, entities, 같은 슬라이스 내에서만 import 가능
           {
-            from: ['features'],
-            allow: ['core', 'entities', ['features', { slice: '${slice}' }]],
-          },
-          {
-            from: ['features'],
-            disallow: ['modules', 'views', 'app'],
-            message: 'features 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
+            from: ['features', 'features-segment'],
+            allow: [
+              'core',
+              'entities',
+              ['features', { slice: '${slice}' }],
+              ['features-segment', { slice: '${slice}' }],
+            ],
           },
 
           // Modules: core, entities, features, 같은 슬라이스 내에서만 import 가능
           {
-            from: ['modules'],
-            allow: ['core', 'entities', 'features', ['modules', { slice: '${slice}' }]],
-          },
-          {
-            from: ['modules'],
-            disallow: ['views', 'app'],
-            message: 'modules 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
+            from: ['modules', 'modules-segment'],
+            allow: [
+              'core',
+              'entities',
+              'features',
+              ['modules', { slice: '${slice}' }],
+              ['modules-segment', { slice: '${slice}' }],
+            ],
           },
 
           // Views: app 제외한 모든 레이어, 같은 슬라이스 내에서만 import 가능
           {
-            from: ['views'],
-            allow: ['core', 'entities', 'features', 'modules', ['views', { slice: '${slice}' }]],
-          },
-          {
-            from: ['views'],
-            disallow: ['app'],
-            message: 'views 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
+            from: ['views', 'views-segment'],
+            allow: [
+              'core',
+              'entities',
+              'features',
+              'modules',
+              ['views', { slice: '${slice}' }],
+              ['views-segment', { slice: '${slice}' }],
+            ],
           },
 
           // App: 모든 레이어 import 가능
@@ -135,6 +176,9 @@ const boundariesConfig = {
         ],
       },
     ],
+
+    // Public API enforcement (no-private)
+    'boundaries/no-private': [2, { allowUncles: true }],
   },
 };
 

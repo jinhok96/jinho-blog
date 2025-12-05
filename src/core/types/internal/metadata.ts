@@ -1,4 +1,4 @@
-import type { BlogCategory, LibraryCategory, ProjectCategory } from '@/core/types/category';
+import type { BlogCategory, LibraryCategory, ProjectCategory } from '@/core/types/internal/category';
 
 // 기술 스택 타입 (Project, Library에서 공통 사용)
 export type TechStack =

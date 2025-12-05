@@ -1,5 +1,4 @@
-import type { ContentSortOption } from '@/core/types';
-import type { BaseMetadata } from '@/core/types/metadata';
+import type { BaseMetadata, ContentSortOption } from '@/core/types';
 
 /**
  * 콘텐츠 정렬 (공통 함수)

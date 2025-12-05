@@ -18,7 +18,7 @@ import {
 
 import { motion, type Transition } from 'motion/react';
 
-import { useIsMounted } from '@/core/hooks';
+import { useIsMounted } from '@/core/hooks/internal';
 import { Button, Show } from '@/core/ui';
 import { cn } from '@/core/utils';
 

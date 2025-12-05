@@ -1,4 +1,4 @@
-import type { TechStack } from '@/core/types';
+import type { TechStack } from '@/core/types/internal';
 
 export const TECH_STACK_MAP: Record<TechStack, string> = {
   react: 'React',

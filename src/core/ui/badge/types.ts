@@ -1,4 +1,4 @@
-import type { TechStack } from '@/core/types';
+import type { TechStack } from '@/core/types/internal';
 import type { PropsWithChildren } from 'react';
 
 export type BadgeProps = PropsWithChildren<{

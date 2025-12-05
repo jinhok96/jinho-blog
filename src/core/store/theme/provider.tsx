@@ -4,7 +4,7 @@ import type { ThemeStoreState } from '@/core/store/theme/types';
 
 import { type PropsWithChildren, useEffect } from 'react';
 
-import { useMountEffect } from '@/core/hooks';
+import { useMountEffect } from '@/core/hooks/internal';
 import { useThemeStore } from '@/core/store/theme/store';
 
 type Props = PropsWithChildren<Pick<ThemeStoreState, 'theme'>>;

@@ -1,6 +1,6 @@
-import type { LibraryCategory, SearchParams } from '@/core/types';
+import type { LibraryCategory, SearchParams } from '@/core/types/internal';
 
-import { LIBRARY_CATEGORY_MAP } from '@/core/map';
+import { LIBRARY_CATEGORY_MAP } from '@/core/map/internal';
 import { ContentCardSection, Show } from '@/core/ui';
 import { parseContentSearchParams } from '@/core/utils';
 

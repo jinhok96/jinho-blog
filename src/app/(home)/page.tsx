@@ -2,7 +2,7 @@ import type { Metadata } from 'next';
 
 import Link from 'next/link';
 
-import { ROUTER } from '@/core/config';
+import { ROUTER } from '@/core/config/internal';
 import { generatePageMetadata } from '@/core/utils';
 
 export const metadata: Metadata = generatePageMetadata({ routerName: 'home' });

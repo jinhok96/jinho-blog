@@ -1,6 +1,6 @@
-import type { ProjectCategory, SearchParams } from '@/core/types';
+import type { ProjectCategory, SearchParams } from '@/core/types/internal';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
+import { PROJECT_CATEGORY_MAP } from '@/core/map/internal';
 import { ContentCardSection, Show } from '@/core/ui';
 import { parseContentSearchParams } from '@/core/utils';
 

@@ -2,7 +2,7 @@ import * as fs from 'fs';
 import matter from 'gray-matter';
 import * as path from 'path';
 
-import { ROUTER, type RouterName } from '@/core/config';
+import { ROUTER, type RouterName } from '@/core/config/internal';
 
 type ContentSection = Extract<RouterName, 'blog' | 'projects' | 'libraries'>;
 const CONTENT_SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];

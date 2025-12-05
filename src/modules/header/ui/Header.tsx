@@ -1,4 +1,4 @@
-import { ROUTER } from '@/core/config';
+import { ROUTER } from '@/core/config/internal';
 
 import { HeaderNavButton } from '@/modules/header/ui/HeaderNavButton';
 

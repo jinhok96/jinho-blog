@@ -1,6 +1,6 @@
 import type { MetadataRoute } from 'next';
 
-import { SITE_URL } from '@/core/config';
+import { SITE_URL } from '@/core/config/internal';
 
 import { getBlogPosts } from '@/entities/blog';
 import { getLibraries } from '@/entities/library';

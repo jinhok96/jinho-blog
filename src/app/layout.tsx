@@ -3,7 +3,7 @@ import type { PropsWithChildren } from 'react';
 
 import localFont from 'next/font/local';
 
-import { PORTAL, SITE_URL } from '@/core/config';
+import { PORTAL, SITE_URL } from '@/core/config/internal';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 

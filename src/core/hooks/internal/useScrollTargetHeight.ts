@@ -1,6 +1,6 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 
-import { useMountEffect } from '@/core/hooks/useMountEffect';
+import { useMountEffect } from '@/core/hooks/internal/useMountEffect';
 
 /**
  * 스크롤 높이가 특정 조건을 만족하는지 추적하는 훅

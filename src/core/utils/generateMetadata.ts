@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
-import { ROUTER, type RouterName } from '@/core/config';
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config/site';
+import { ROUTER, type RouterName } from '@/core/config/internal';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config/internal/site';
 
 type GeneratePageMetadataParams = {
   routerName: RouterName;

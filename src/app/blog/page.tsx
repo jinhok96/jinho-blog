@@ -1,6 +1,7 @@
-import type { SearchParams } from '@/core/types';
+import type { BlogCategory, SearchParams } from '@/core/types';
 import type { Metadata } from 'next';
 
+import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { AsyncBoundary } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
@@ -15,6 +16,14 @@ export const metadata: Metadata = generatePageMetadata({
   description: '블로그 목록',
 });
 
+const CATEGORY_OPTIONS: Array<{ key: BlogCategory; value: string }> = [
+  { key: 'frontend', value: BLOG_CATEGORY_MAP.frontend },
+  { key: 'algorithm', value: BLOG_CATEGORY_MAP.algorithm },
+  { key: 'cs', value: BLOG_CATEGORY_MAP.cs },
+  { key: 'uiux', value: BLOG_CATEGORY_MAP.uiux },
+  { key: 'review', value: BLOG_CATEGORY_MAP.review },
+];
+
 type Props = {
   searchParams: Promise<SearchParams>;
 };
@@ -25,7 +34,9 @@ export default async function BlogListPage({ searchParams }: Props) {
       <h1 className="font-title-36">블로그</h1>
 
       <div className="z-10 flex-row-center w-full justify-between">
-        <SelectCategory />
+        <AsyncBoundary>
+          <SelectCategory options={CATEGORY_OPTIONS} />
+        </AsyncBoundary>
         <SelectSort />
       </div>
 

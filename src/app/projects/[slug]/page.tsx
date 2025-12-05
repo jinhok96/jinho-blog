@@ -4,7 +4,7 @@ import { notFound } from 'next/navigation';
 
 import { readFileSync } from 'fs';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map/internal';
+import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 

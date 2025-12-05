@@ -1,4 +1,4 @@
-import type { SearchParams } from '@/core/types/internal';
+import type { SearchParams } from '@/core/types';
 import type { Metadata } from 'next';
 
 import { AsyncBoundary } from '@/core/ui';

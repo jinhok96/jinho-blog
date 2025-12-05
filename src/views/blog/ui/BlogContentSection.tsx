@@ -1,6 +1,6 @@
-import type { BlogCategory, SearchParams } from '@/core/types/internal';
+import type { BlogCategory, SearchParams } from '@/core/types';
 
-import { BLOG_CATEGORY_MAP } from '@/core/map/internal';
+import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';
 import { parseContentSearchParams } from '@/core/utils';
 

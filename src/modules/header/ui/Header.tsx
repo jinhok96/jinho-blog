@@ -4,7 +4,7 @@ import { HeaderNavButton } from '@/modules/header/ui/HeaderNavButton';
 
 export function Header() {
   return (
-    <header className="fixed top-0 left-0 h-header w-full bg-background-5 backdrop-blur-md">
+    <header className="fixed top-0 left-0 z-header h-header w-full bg-background-5 backdrop-blur-md">
       <div className="container mx-auto flex-row-center size-full justify-between px-layout">
         <HeaderNavButton href={ROUTER.home}>홈</HeaderNavButton>
 

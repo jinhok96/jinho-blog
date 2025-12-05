@@ -120,10 +120,14 @@ const boundariesConfig = {
         default: 'disallow',
         message: '${file.type} 레이어는 ${dependency.type} 레이어를 가져올 수 없습니다.',
         rules: [
-          // Core: 같은 레이어 내에서만 import 가능
+          // Core: 같은 레이어 내에서만 import 가능, internal은 같은 세그먼트만
           {
-            from: ['core', 'core-internal'],
-            allow: ['core', 'core-internal'],
+            from: ['core'],
+            allow: ['core', ['core-internal', { segment: '${segment}' }]],
+          },
+          {
+            from: ['core-internal'],
+            allow: ['core', ['core-internal', { segment: '${segment}' }]],
           },
 
           // Entities: core와 같은 슬라이스 내에서만 import 가능

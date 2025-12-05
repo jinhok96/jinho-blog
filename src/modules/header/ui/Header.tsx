@@ -1,6 +1,6 @@
 import { ROUTER } from '@/core/config';
 
-import { HeaderNavButton } from '@/modules/header/HeaderNavButton';
+import { HeaderNavButton } from '@/modules/header/ui/HeaderNavButton';
 
 export function Header() {
   return (

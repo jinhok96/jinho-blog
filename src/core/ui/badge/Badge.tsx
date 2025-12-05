@@ -1,6 +1,6 @@
 import type { BadgeProps } from '@/core/ui/badge/types';
 
-import { cn } from '@/core/utils';
+import { cn } from '@/core/utils/internal';
 
 export function Badge({ children, className, ...props }: BadgeProps) {
   return (

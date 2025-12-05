@@ -1,6 +1,6 @@
 import type { DetailedHTMLProps, InputHTMLAttributes } from 'react';
 
-import { cn } from '@/core/utils';
+import { cn } from '@/core/utils/internal';
 
 type Props = DetailedHTMLProps<InputHTMLAttributes<HTMLInputElement>, HTMLInputElement> & {
   error?: boolean; // 에러 상태인지 여부

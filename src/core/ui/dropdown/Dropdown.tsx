@@ -14,7 +14,7 @@ import { type MouseEventHandler, useCallback, useContext, useLayoutEffect, useMe
 import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks/internal';
 import { Button } from '@/core/ui';
 import { dropdownContext } from '@/core/ui/dropdown/dropdownContext';
-import { cn } from '@/core/utils';
+import { cn } from '@/core/utils/internal';
 
 function useDropdownContext(): DropdownContextValue {
   const context = useContext(dropdownContext);

@@ -2,7 +2,7 @@ import type { TechStack } from '@/core/types/internal';
 
 import { TechBadge } from '@/core/ui/badge';
 import { Show } from '@/core/ui/wrapper';
-import { formatDateToString } from '@/core/utils';
+import { formatDateToString } from '@/core/utils/internal';
 
 type Props = {
   category: string;

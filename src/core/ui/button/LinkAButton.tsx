@@ -4,7 +4,7 @@ import type { ButtonProps } from '@/core/ui/button/types';
 import type { AnchorHTMLAttributes, PropsWithChildren } from 'react';
 
 import { buttonVariants } from '@/core/ui/button/variants';
-import { cn } from '@/core/utils';
+import { cn } from '@/core/utils/internal';
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> & ButtonProps & PropsWithChildren<{ className?: string }>;
 

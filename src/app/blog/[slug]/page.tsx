@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
+import { readFileSync } from 'fs';
+
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -40,6 +42,8 @@ export default async function BlogPostPage({ params }: Props) {
 
   const { title, category, createdAt, updatedAt, filePath } = post;
 
+  const fileContent = readFileSync(filePath, 'utf-8');
+
   return (
     <article className="size-full">
       <ContentHeader
@@ -49,7 +53,7 @@ export default async function BlogPostPage({ params }: Props) {
         updatedAt={updatedAt}
       />
 
-      <MDXComponent filePath={filePath} />
+      <MDXComponent fileContent={fileContent} />
     </article>
   );
 }

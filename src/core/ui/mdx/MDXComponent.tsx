@@ -2,7 +2,6 @@ import type { Options as RehypeAutolinkHeadingsOptions } from 'rehype-autolink-h
 
 import { MDXRemote } from 'next-mdx-remote-client/rsc';
 
-import * as fs from 'fs';
 import matter from 'gray-matter';
 import rehypeAutolinkHeadings from 'rehype-autolink-headings';
 import rehypeSlug from 'rehype-slug';
@@ -11,13 +10,13 @@ import remarkGfm from 'remark-gfm';
 import { createMDXComponents } from '@/core/ui/mdx/createMDXComponents';
 
 type Props = {
-  filePath: string;
+  fileContent: string;
 };
 
-export function MDXComponent({ filePath }: Props) {
+export function MDXComponent({ fileContent }: Props) {
   return (
     <MDXRemote
-      source={matter(fs.readFileSync(filePath, 'utf-8')).content}
+      source={matter(fileContent).content}
       options={{
         mdxOptions: {
           remarkPlugins: [remarkGfm],

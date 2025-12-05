@@ -3,7 +3,7 @@ import type { ComponentProps } from 'react';
 import { Prism } from 'react-syntax-highlighter';
 import { atomDark as style } from 'react-syntax-highlighter/dist/esm/styles/prism';
 
-import Callout from '@/core/mdx/Callout';
+import Callout from '@/core/ui/mdx/Callout';
 
 type Props = ComponentProps<typeof Prism>;
 

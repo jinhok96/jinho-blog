@@ -7,8 +7,8 @@ import type {
   ThHTMLAttributes,
 } from 'react';
 
-import Callout from '@/core/mdx/Callout';
-import Code from '@/core/mdx/Code';
+import Callout from '@/core/ui/mdx/Callout';
+import Code from '@/core/ui/mdx/Code';
 
 export function createMDXComponents() {
   return {

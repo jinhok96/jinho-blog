@@ -3,8 +3,7 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { LIBRARY_CATEGORY_MAP } from '@/core/map';
-import { MDXComponent } from '@/core/mdx';
-import { ContentHeader } from '@/core/ui';
+import { ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getLibraries, getLibrary } from '@/entities/library';

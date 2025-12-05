@@ -3,6 +3,7 @@
 import { type ComponentProps, useEffect, useState } from 'react';
 import { usePathname } from 'next/navigation';
 
+import { ROUTER } from '@/core/config';
 import { LinkButton } from '@/core/ui';
 import { cn } from '@/core/utils';
 
@@ -10,18 +11,20 @@ type Props = Omit<ComponentProps<typeof LinkButton>, 'color' | 'size' | 'classNa
 
 export function HeaderNavButton({ href, children, ...props }: Props) {
   const pathname = usePathname();
-  const [isActive, setIsActive] = useState(false);
+  const isActive = href === ROUTER.home ? pathname === ROUTER.home : pathname.startsWith(href);
+
+  const [isActiveState, setIsActiveState] = useState(isActive);
 
   useEffect(() => {
-    setIsActive(pathname.startsWith(href));
-  }, [pathname, href]);
+    setIsActiveState(isActive);
+  }, [isActive]);
 
   return (
     <LinkButton
       href={href}
       color="background"
       size="md"
-      className={cn(isActive && 'underline underline-offset-2')}
+      className={cn(isActiveState && 'underline underline-offset-2')}
       {...props}
     >
       {children}

@@ -4,6 +4,7 @@ export { useIsMounted } from './useIsMounted';
 export { useKeyDownEffect } from './useKeyDownEffect';
 export { useMountEffect } from './useMountEffect';
 export { useOutsideClickEffect } from './useOutsideClickEffect';
+export { useQueryParams } from './useQueryParams';
 export { useScrollTargetHeight } from './useScrollTargetHeight';
 export { useThrowError } from './useThrowError';
 export { useUnmountEffect } from './useUnmountEffect';

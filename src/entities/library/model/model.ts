@@ -1,5 +1,5 @@
 import type { GetLibrariesOptions } from '@/core/types';
-import type { Library } from '@/entities/library/types';
+import type { Library } from '@/entities/library/types/types';
 
 import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
 

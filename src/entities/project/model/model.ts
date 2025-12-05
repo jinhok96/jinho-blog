@@ -1,5 +1,5 @@
 import type { GetProjectsOptions } from '@/core/types';
-import type { Project } from '@/entities/project/types';
+import type { Project } from '@/entities/project/types/types';
 
 import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
 

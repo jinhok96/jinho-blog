@@ -4,7 +4,7 @@ import { Prism } from 'react-syntax-highlighter';
 import { oneDark as darkStyle, oneLight as lightStyle } from 'react-syntax-highlighter/dist/esm/styles/prism';
 import localFont from 'next/font/local';
 
-import { cn } from '@/core/utils/internal';
+import { cn } from '@/core/utils';
 
 const monaco = localFont({
   src: '../../../../public/fonts/monaco-webfont.woff2',

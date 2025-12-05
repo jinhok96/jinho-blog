@@ -4,7 +4,7 @@ import type { ComponentProps, ReactEventHandler } from 'react';
 
 import Image from 'next/image';
 
-import { useThrowError } from '@/core/hooks/internal';
+import { useThrowError } from '@/core/hooks';
 
 export function StrictImage({ src, alt, onError, ...props }: ComponentProps<typeof Image>) {
   const throwError = useThrowError();

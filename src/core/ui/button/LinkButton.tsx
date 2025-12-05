@@ -7,7 +7,7 @@ import type { AnchorHTMLAttributes, PropsWithChildren } from 'react';
 import Link from 'next/link';
 
 import { buttonVariants } from '@/core/ui/button/variants';
-import { cn } from '@/core/utils/internal';
+import { cn } from '@/core/utils';
 
 type Props = AnchorHTMLAttributes<HTMLAnchorElement> &
   LinkProps &

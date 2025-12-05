@@ -1,4 +1,4 @@
-import type { ContentSortOption } from '@/core/types/internal';
+import type { ContentSortOption } from '@/core/types';
 
 /**
  * Comma-separated 문자열을 배열로 파싱

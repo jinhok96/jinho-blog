@@ -11,10 +11,10 @@ import type {
 
 import { type MouseEventHandler, useCallback, useContext, useLayoutEffect, useMemo, useRef, useState } from 'react';
 
-import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks/internal';
+import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
 import { dropdownContext } from '@/core/ui/dropdown/dropdownContext';
-import { cn } from '@/core/utils/internal';
+import { cn } from '@/core/utils';
 
 function useDropdownContext(): DropdownContextValue {
   const context = useContext(dropdownContext);

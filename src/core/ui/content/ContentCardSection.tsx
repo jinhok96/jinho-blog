@@ -1,10 +1,10 @@
-import type { TechStack } from '@/core/types/internal';
+import type { TechStack } from '@/core/types';
 import type { PropsWithChildren } from 'react';
 
 import { TechBadge } from '@/core/ui/badge';
 import { LinkButton } from '@/core/ui/button';
 import { Show } from '@/core/ui/wrapper';
-import { formatDateToString } from '@/core/utils/internal';
+import { formatDateToString } from '@/core/utils';
 
 export function ContentCardSection({ children }: PropsWithChildren) {
   return (

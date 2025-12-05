@@ -1,11 +1,11 @@
 'use client';
 
-import type { PORTAL } from '@/core/config/internal';
+import type { PORTAL } from '@/core/config';
 
 import { type PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
 
-import { useIsMounted } from '@/core/hooks/internal';
+import { useIsMounted } from '@/core/hooks';
 
 type Props = PropsWithChildren<{ portalId: keyof typeof PORTAL }>;
 

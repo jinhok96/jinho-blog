@@ -18,9 +18,9 @@ import {
 
 import { motion, type Transition } from 'motion/react';
 
-import { useIsMounted } from '@/core/hooks/internal';
+import { useIsMounted } from '@/core/hooks';
 import { Button, Show } from '@/core/ui';
-import { cn } from '@/core/utils/internal';
+import { cn } from '@/core/utils';
 
 const DEFAULT_INDICATOR_CLASSNAME = 'bg-blue-1 pointer-events-none inset-0 absolute h-full';
 const SPRING: Transition = { type: 'spring', damping: 30, stiffness: 300 };

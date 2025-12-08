@@ -7,6 +7,8 @@ import { useRouter } from 'next/navigation';
 import { useKeyDownEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
 
+import CloseIcon from 'public/icons/close.svg';
+
 type Props = PropsWithChildren;
 
 export function RouteModal({ children }: Props) {
@@ -42,18 +44,17 @@ export function RouteModal({ children }: Props) {
           <div className="py-8">{children}</div>
         </div>
 
-        <div className="absolute top-4 right-4">
-          {/* 닫기 버튼 */}
-          <Button
-            onClick={handleClose}
-            className={`
-              rounded-full p-2
-              hover:bg-gray-2
-            `}
-          >
-            ✕
-          </Button>
-        </div>
+        {/* 닫기 버튼 */}
+        <Button
+          onClick={handleClose}
+          className={`
+            absolute top-5 right-5 size-11 p-3 text-foreground-5
+            hover:text-foreground-8
+          `}
+          rounded
+        >
+          <CloseIcon strokeWidth={1.5} />
+        </Button>
       </div>
     </div>
   );

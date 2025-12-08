@@ -12,7 +12,6 @@ type Props = PropsWithChildren;
 export function RouteModal({ children }: Props) {
   const router = useRouter();
   const handleClose = () => {
-    console.log('닫기');
     router.back();
   };
 

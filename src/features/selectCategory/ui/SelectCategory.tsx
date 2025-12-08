@@ -4,10 +4,22 @@ import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useQueryParams } from '@/core/hooks';
-import { Dropdown } from '@/core/ui';
-import { cn } from '@/core/utils';
+import { Select } from '@/core/ui';
 
-type Props<T extends string> = { options: Array<{ key: T; value: string }> };
+type Option<T extends string> = {
+  key: T;
+  label: string;
+};
+
+type AllOptionKey = 'all';
+type OptionsWithAll<T extends string> = Option<T | AllOptionKey>[];
+
+const ALL: Option<AllOptionKey> = {
+  key: 'all',
+  label: '전체',
+};
+
+type Props<T extends string> = { options: Option<T>[] };
 
 export function SelectCategory<T extends string>({ options }: Props<T>) {
   const router = useRouter();
@@ -18,8 +30,8 @@ export function SelectCategory<T extends string>({ options }: Props<T>) {
 
   const [currentIndex, setCurrentIndex] = useState(initIndex === -1 ? 0 : initIndex);
 
-  const optionsWithAll = [{ key: 'all', value: '전체' }, ...options];
-  const label = currentIndex === 0 ? '카테고리' : optionsWithAll[currentIndex].value;
+  const optionsWithAll: OptionsWithAll<T> = [ALL, ...options];
+  const label = currentIndex === 0 ? '카테고리' : optionsWithAll[currentIndex].label;
 
   const handleOptionClick = (index: number) => {
     setCurrentIndex(index);
@@ -34,31 +46,24 @@ export function SelectCategory<T extends string>({ options }: Props<T>) {
   };
 
   return (
-    <Dropdown>
-      <Dropdown.Trigger
+    <Select>
+      <Select.Trigger
         size="md"
         color="background"
       >
         {label}
-      </Dropdown.Trigger>
-      <Dropdown.Container
-        className={`
-          rounded-xl border border-foreground-2 bg-background-5 py-2 shadow-lg shadow-black/15 backdrop-blur-lg
-          dark:border-foreground-3 dark:bg-foreground-2
-        `}
-      >
+      </Select.Trigger>
+      <Select.Container>
         {optionsWithAll.map((option, index) => (
-          <Dropdown.Item
+          <Select.Option
             key={option.key}
-            className={cn('rounded-none text-left', currentIndex === index && 'text-blue-7')}
-            size="md"
-            color="background"
             onClick={() => handleOptionClick(index)}
+            isSelected={index === currentIndex}
           >
-            {option.value}
-          </Dropdown.Item>
+            {option.label}
+          </Select.Option>
         ))}
-      </Dropdown.Container>
-    </Dropdown>
+      </Select.Container>
+    </Select>
   );
 }

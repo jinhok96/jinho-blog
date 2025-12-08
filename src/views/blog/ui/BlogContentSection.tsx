@@ -17,11 +17,11 @@ export async function BlogContentSection({ searchParams }: Props) {
   const posts = await getBlogPosts(options);
 
   return (
-    <ContentCardSection>
-      <Show
-        when={posts.length}
-        fallback={ContentCardSection.Placeholder}
-      >
+    <Show
+      when={posts.length}
+      fallback={ContentCardSection.Placeholder}
+    >
+      <ContentCardSection>
         {posts.map(({ category, slug, path, ...post }) => (
           <ContentCardSection.Card
             key={slug}
@@ -30,7 +30,7 @@ export async function BlogContentSection({ searchParams }: Props) {
             {...post}
           />
         ))}
-      </Show>
-    </ContentCardSection>
+      </ContentCardSection>
+    </Show>
   );
 }

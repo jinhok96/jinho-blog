@@ -16,12 +16,12 @@ export const metadata: Metadata = generatePageMetadata({
   description: '블로그 목록',
 });
 
-const CATEGORY_OPTIONS: Array<{ key: BlogCategory; value: string }> = [
-  { key: 'frontend', value: BLOG_CATEGORY_MAP.frontend },
-  { key: 'algorithm', value: BLOG_CATEGORY_MAP.algorithm },
-  { key: 'cs', value: BLOG_CATEGORY_MAP.cs },
-  { key: 'uiux', value: BLOG_CATEGORY_MAP.uiux },
-  { key: 'review', value: BLOG_CATEGORY_MAP.review },
+const CATEGORY_OPTIONS: Array<{ key: BlogCategory; label: string }> = [
+  { key: 'frontend', label: BLOG_CATEGORY_MAP.frontend },
+  { key: 'algorithm', label: BLOG_CATEGORY_MAP.algorithm },
+  { key: 'cs', label: BLOG_CATEGORY_MAP.cs },
+  { key: 'uiux', label: BLOG_CATEGORY_MAP.uiux },
+  { key: 'review', label: BLOG_CATEGORY_MAP.review },
 ];
 
 type Props = {

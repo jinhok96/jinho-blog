@@ -39,6 +39,7 @@ export function SelectSort({ position }: Props) {
       <Select.Trigger
         size="md"
         color="background"
+        rounded
       >
         {SORT_OPTIONS[currentIndex].label}
       </Select.Trigger>

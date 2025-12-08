@@ -78,7 +78,7 @@ export const buttonVariants = cva('animated-100', {
     {
       variant: 'outline',
       color: 'background',
-      className: 'border text-foreground border-foreground-2',
+      className: 'border text-foreground border-foreground-3',
     },
     {
       variant: 'outline',
@@ -97,14 +97,14 @@ export const buttonVariants = cva('animated-100', {
       color: 'background',
       disableHover: false,
       disabled: false,
-      className: 'hover:bg-foreground-1',
+      className: 'hover:bg-foreground-2',
     },
     {
       variant: 'outline',
       color: 'foreground',
       disableHover: false,
       disabled: false,
-      className: 'hover:bg-foreground-1',
+      className: 'hover:bg-foreground-2',
     },
     {
       variant: 'outline',

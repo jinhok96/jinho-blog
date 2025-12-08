@@ -15,11 +15,12 @@ const ALL: SelectOption<AllOptionKey> = {
 };
 
 type Props<T extends string> = {
+  className?: string;
   options: SelectOption<T>[];
   position?: ComponentProps<typeof Select.Container>['position'];
 };
 
-export function SelectCategory<T extends string>({ options, position }: Props<T>) {
+export function SelectCategory<T extends string>({ className, options, position }: Props<T>) {
   const router = useRouter();
   const params = useQueryParams();
 
@@ -44,7 +45,7 @@ export function SelectCategory<T extends string>({ options, position }: Props<T>
   };
 
   return (
-    <Select>
+    <Select className={className}>
       <Select.Trigger
         size="md"
         color="background"

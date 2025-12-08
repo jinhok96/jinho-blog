@@ -15,10 +15,11 @@ const SORT_OPTIONS: SelectOption<ContentSortOption>[] = [
 ];
 
 type Props = {
+  className?: string;
   position?: ComponentProps<typeof Select.Container>['position'];
 };
 
-export function SelectSort({ position }: Props) {
+export function SelectSort({ className, position }: Props) {
   const router = useRouter();
   const params = useQueryParams();
 
@@ -35,7 +36,7 @@ export function SelectSort({ position }: Props) {
   };
 
   return (
-    <Select>
+    <Select className={className}>
       <Select.Trigger
         size="md"
         color="background"

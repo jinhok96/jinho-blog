@@ -8,7 +8,7 @@
     "tsc": "npx tsc --noEmit",
     "gcr": "tsx scripts/generate-content-registry.ts",
     "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run tsc\"",
-    "predev": "concurrently \"npm run lint\" \"npm run gcr\"",
+    "predev": "concurrently \"npm run gcr\"",
     "dev": "next dev",
     "prebuild": "concurrently \"npm run lint\" \"npm run gcr\"",
     "build": "next build",

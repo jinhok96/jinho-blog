@@ -42,8 +42,6 @@ export default async function ProjectsListPage({ searchParams }: Props) {
         </AsyncBoundary>
       </div>
 
-      <div>화면을 모달로 띄우기 (Parallel Route)</div>
-
       <AsyncBoundary>
         <ProjectsContentSection searchParams={searchParams} />
       </AsyncBoundary>

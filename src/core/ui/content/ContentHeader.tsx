@@ -15,7 +15,7 @@ type Props = {
 
 export function ContentHeader({ category, title, createdAt, updatedAt, tech, modalView }: Props) {
   return (
-    <div className="mb-10 flex-col-start gap-3">
+    <div className="mb-4 flex-col-start gap-3 border-b border-gray-2 pb-6">
       <p className="font-caption-16 text-gray-5">{category}</p>
 
       <h1 className={cn('font-title-40', modalView && 'font-title-36')}>{title}</h1>
@@ -27,7 +27,7 @@ export function ContentHeader({ category, title, createdAt, updatedAt, tech, mod
 
       <Show when={tech}>
         {list => (
-          <div className="flex-row-center flex-wrap gap-2 py-3">
+          <div className="flex-row-center flex-wrap gap-2 py-2">
             {list.map(item => (
               <TechBadge
                 key={item}

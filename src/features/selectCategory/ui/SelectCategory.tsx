@@ -48,6 +48,8 @@ export function SelectCategory<T extends string>({ options, position }: Props<T>
       <Select.Trigger
         size="md"
         color="background"
+        rounded
+        variant="outline"
       >
         {label}
       </Select.Trigger>

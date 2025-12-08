@@ -1,8 +1,0 @@
-{
-  "outputStyle": "production-advisor",
-  "instructions": [
-    {
-      "path": "output-styles/project-convention.md"
-    }
-  ]
-}

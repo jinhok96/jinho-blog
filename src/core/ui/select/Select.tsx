@@ -24,7 +24,7 @@ function Container({ className, ...props }: ContainerProps) {
     <Dropdown.Container
       className={cn(
         `
-          overflow-y-auto rounded-xl border border-foreground-2 bg-background-5 py-2 shadow-lg shadow-black/15
+          overflow-y-auto rounded-xl border border-foreground-2 bg-background-4 py-2 shadow-lg shadow-black/15
           backdrop-blur-lg
           dark:border-foreground-3 dark:bg-foreground-2
         `,

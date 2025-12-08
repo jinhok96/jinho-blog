@@ -17,21 +17,21 @@ export function createMDXComponents(modalView?: boolean) {
   return {
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn('pb-4 font-title-40', modalView && 'font-title-36')}
+        className={cn('pb-4 font-title-40', modalView && 'font-title-32')}
         {...props}
       />
     ),
 
     h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className={cn('pt-7 pb-4 font-subtitle-32', modalView && 'font-subtitle-28')}
+        className={cn('pt-7 pb-4 font-subtitle-32', modalView && 'font-subtitle-26')}
         {...props}
       />
     ),
 
     h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className={cn('pt-6 pb-3.5 font-subtitle-26', modalView && 'font-subtitle-24')}
+        className={cn('pt-6 pb-3.5 font-subtitle-26', modalView && 'font-subtitle-22')}
         {...props}
       />
     ),

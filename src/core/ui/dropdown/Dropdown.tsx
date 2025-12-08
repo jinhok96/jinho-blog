@@ -106,27 +106,10 @@ function Container({ children, className, contentClassName, position = 'bottomLe
   const [currentPosition, setCurrentPosition] = useState<DropdownPosition>(position);
 
   useLayoutEffect(() => {
-    if (!isOpen || !containerRef.current) return;
-
-    const contentRect = containerRef.current.getBoundingClientRect();
-    const viewportWidth = window.innerWidth;
-    const viewportHeight = window.innerHeight;
-
-    const spaceBelow = viewportHeight - contentRect.bottom;
-    const spaceAbove = contentRect.top;
-    const spaceRight = viewportWidth - contentRect.right;
-
-    let newPosition: DropdownPosition = 'bottomLeft';
-
-    if (spaceBelow < 0 && spaceAbove > spaceBelow) {
-      newPosition = spaceRight < 0 ? 'topRight' : 'topLeft';
-    } else {
-      newPosition = spaceRight < 0 ? 'bottomRight' : 'bottomLeft';
-    }
-
+    if (currentPosition === position) return;
     // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCurrentPosition(newPosition);
-  }, [isOpen]);
+    setCurrentPosition(position);
+  }, [position]);
 
   return (
     <div
@@ -138,7 +121,12 @@ function Container({ children, className, contentClassName, position = 'bottomLe
         className,
       )}
     >
-      <div className={cn('size-full overflow-auto', contentClassName)}>{children}</div>
+      <div
+        className={cn('size-full overflow-auto', contentClassName)}
+        role="menu"
+      >
+        {children}
+      </div>
     </div>
   );
 }
@@ -155,6 +143,7 @@ function Item({ children, onClick, className, ...props }: DropdownItemProps) {
     <Button
       className={cn('w-full', className)}
       onClick={handleClick}
+      role="option"
       {...props}
     >
       {children}

@@ -1,18 +1,58 @@
 'use client';
 
-import { Dropdown } from '@/core/ui';
+import type { ContentSortOption } from '@/core/types';
 
-type Props = { prop?: string };
+import { type ComponentProps, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
-export function SelectSort({}: Props) {
+import { useQueryParams } from '@/core/hooks';
+import { Select, type SelectOption } from '@/core/ui';
+
+const SORT_OPTIONS: SelectOption<ContentSortOption>[] = [
+  { key: 'latest', label: '최신순' },
+  { key: 'updated', label: '업데이트순' },
+  { key: 'oldest', label: '오래된순' },
+];
+
+type Props = {
+  position?: ComponentProps<typeof Select.Container>['position'];
+};
+
+export function SelectSort({ position }: Props) {
+  const router = useRouter();
+  const params = useQueryParams();
+
+  const sort = params.get('sort');
+  const initIndex = SORT_OPTIONS.findIndex(option => option.key === sort);
+
+  const [currentIndex, setCurrentIndex] = useState(initIndex === -1 ? 0 : initIndex);
+
+  const handleOptionClick = (index: number) => {
+    setCurrentIndex(index);
+
+    const next = params.set('sort', SORT_OPTIONS[index].key);
+    router.replace(next);
+  };
+
   return (
-    <Dropdown>
-      <Dropdown.Trigger>Sort</Dropdown.Trigger>
-      <Dropdown.Container>
-        <Dropdown.Item>옵션1</Dropdown.Item>
-        <Dropdown.Item>옵션2</Dropdown.Item>
-        <Dropdown.Item>옵션3</Dropdown.Item>
-      </Dropdown.Container>
-    </Dropdown>
+    <Select>
+      <Select.Trigger
+        size="md"
+        color="background"
+      >
+        {SORT_OPTIONS[currentIndex].label}
+      </Select.Trigger>
+      <Select.Container position={position}>
+        {SORT_OPTIONS.map((option, index) => (
+          <Select.Option
+            key={option.key}
+            onClick={() => handleOptionClick(index)}
+            isSelected={index === currentIndex}
+          >
+            {option.label}
+          </Select.Option>
+        ))}
+      </Select.Container>
+    </Select>
   );
 }

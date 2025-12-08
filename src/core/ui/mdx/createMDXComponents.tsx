@@ -14,49 +14,49 @@ export function createMDXComponents() {
   return {
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className="mb-4 font-title-40"
+        className="pb-4 font-title-40"
         {...props}
       />
     ),
 
     h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className="mt-10 mb-5 font-subtitle-32"
+        className="mt-10 pb-5 font-subtitle-32"
         {...props}
       />
     ),
 
     h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className="mt-8 mb-4 font-subtitle-26"
+        className="mt-8 pb-4 font-subtitle-26"
         {...props}
       />
     ),
 
     h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className="mt-6 mb-3 font-subtitle-20"
+        className="mt-6 pb-3 font-subtitle-20"
         {...props}
       />
     ),
 
     h5: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className="my-3 font-subtitle-16"
+        className="py-3 font-subtitle-16"
         {...props}
       />
     ),
 
     h6: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className="my-3 font-subtitle-14"
+        className="py-3 font-subtitle-14"
         {...props}
       />
     ),
 
     p: (props: HTMLAttributes<HTMLParagraphElement>) => (
       <div
-        className="group mb-4 font-body-16"
+        className="group pb-4 font-body-16"
         {...props}
       />
     ),
@@ -75,7 +75,7 @@ export function createMDXComponents() {
     ul: (props: HTMLAttributes<HTMLUListElement>) => (
       <ul
         className={`
-          mb-4 ml-7 list-disc space-y-2
+          ml-7 list-disc space-y-2 pb-4
           in-[li]:mt-2 in-[li]:ml-5
         `}
         {...props}
@@ -84,7 +84,7 @@ export function createMDXComponents() {
 
     ol: (props: HTMLAttributes<HTMLOListElement>) => (
       <ol
-        className="mb-4 ml-7 list-decimal space-y-2"
+        className="ml-7 list-decimal space-y-2 pb-4"
         {...props}
       />
     ),
@@ -93,14 +93,14 @@ export function createMDXComponents() {
 
     blockquote: (props: HTMLAttributes<HTMLQuoteElement>) => (
       <blockquote
-        className="mb-4 ml-0.5 border-l-4 border-gray-4 pl-3 font-caption-16 italic"
+        className="ml-0.5 border-l-4 border-gray-4 pb-4 pl-3 font-caption-16 italic"
         {...props}
       />
     ),
 
     hr: (props: HTMLAttributes<HTMLHRElement>) => (
       <hr
-        className="my-8 border-gray-2"
+        className="border-gray-2 py-8"
         {...props}
       />
     ),
@@ -114,13 +114,13 @@ export function createMDXComponents() {
 
     pre: (props: HTMLAttributes<HTMLPreElement>) => (
       <Callout
-        className={`mb-4 overflow-x-auto rounded-xl bg-gray-1 p-4`}
+        className={`overflow-x-auto rounded-xl bg-gray-1 p-4 pb-4`}
         {...props}
       />
     ),
 
     table: (props: TableHTMLAttributes<HTMLTableElement>) => (
-      <div className="mb-4 border-collapse overflow-auto rounded-xl border border-gray-2">
+      <div className="border-collapse overflow-auto rounded-xl border border-gray-2 pb-4">
         <table
           className="size-full"
           {...props}

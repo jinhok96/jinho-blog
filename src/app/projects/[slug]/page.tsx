@@ -4,11 +4,11 @@ import { notFound } from 'next/navigation';
 
 import { readFileSync } from 'fs';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
-import { ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getProject, getProjects } from '@/entities/project';
+
+import { ProjectDetail } from '@/views/projects';
 
 type Props = {
   params: Promise<{ slug: string }>;
@@ -40,21 +40,12 @@ export default async function ProjectPage({ params }: Props) {
 
   if (!project) notFound();
 
-  const { title, category, createdAt, updatedAt, tech, filePath } = project;
-
-  const fileContent = readFileSync(filePath, 'utf-8');
+  const fileContent = readFileSync(project.filePath, 'utf-8');
 
   return (
-    <article className="size-full">
-      <ContentHeader
-        category={PROJECT_CATEGORY_MAP[category]}
-        title={title}
-        createdAt={createdAt}
-        updatedAt={updatedAt}
-        tech={tech}
-      />
-
-      <MDXComponent fileContent={fileContent} />
-    </article>
+    <ProjectDetail
+      project={project}
+      fileContent={fileContent}
+    />
   );
 }

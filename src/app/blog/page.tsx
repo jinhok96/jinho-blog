@@ -35,9 +35,12 @@ export default async function BlogListPage({ searchParams }: Props) {
 
       <div className="z-10 flex-row-center w-full justify-between">
         <AsyncBoundary>
-          <SelectCategory options={CATEGORY_OPTIONS} />
+          <SelectCategory
+            options={CATEGORY_OPTIONS}
+            position="bottomLeft"
+          />
+          <SelectSort position="bottomRight" />
         </AsyncBoundary>
-        <SelectSort />
       </div>
 
       <AsyncBoundary>

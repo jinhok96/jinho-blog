@@ -141,6 +141,18 @@
   }
 }
 
+@utility scrollbar-margin-5.5 {
+  &::-webkit-scrollbar-track {
+    @apply m-5.5;
+  }
+}
+
+@utility scrollbar-margin-6 {
+  &::-webkit-scrollbar-track {
+    @apply m-6;
+  }
+}
+
 /* skeleton */
 @utility skeleton {
   @apply bg-foreground-3! rounded-lg text-transparent!;

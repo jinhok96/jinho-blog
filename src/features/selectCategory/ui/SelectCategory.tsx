@@ -1,27 +1,25 @@
 'use client';
 
-import { useState } from 'react';
+import { type ComponentProps, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useQueryParams } from '@/core/hooks';
-import { Select } from '@/core/ui';
-
-type Option<T extends string> = {
-  key: T;
-  label: string;
-};
+import { Select, type SelectOption } from '@/core/ui';
 
 type AllOptionKey = 'all';
-type OptionsWithAll<T extends string> = Option<T | AllOptionKey>[];
+type OptionsWithAll<T extends string> = SelectOption<T | AllOptionKey>[];
 
-const ALL: Option<AllOptionKey> = {
+const ALL: SelectOption<AllOptionKey> = {
   key: 'all',
   label: '전체',
 };
 
-type Props<T extends string> = { options: Option<T>[] };
+type Props<T extends string> = {
+  options: SelectOption<T>[];
+  position?: ComponentProps<typeof Select.Container>['position'];
+};
 
-export function SelectCategory<T extends string>({ options }: Props<T>) {
+export function SelectCategory<T extends string>({ options, position }: Props<T>) {
   const router = useRouter();
   const params = useQueryParams();
 
@@ -53,7 +51,7 @@ export function SelectCategory<T extends string>({ options }: Props<T>) {
       >
         {label}
       </Select.Trigger>
-      <Select.Container>
+      <Select.Container position={position}>
         {optionsWithAll.map((option, index) => (
           <Select.Option
             key={option.key}

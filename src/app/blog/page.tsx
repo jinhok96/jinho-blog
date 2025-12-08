@@ -2,7 +2,7 @@ import type { BlogCategory, SearchParams } from '@/core/types';
 import type { Metadata } from 'next';
 
 import { BLOG_CATEGORY_MAP } from '@/core/map';
-import { AsyncBoundary } from '@/core/ui';
+import { AsyncBoundary, type SelectOption } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { SelectCategory } from '@/features/selectCategory';
@@ -16,7 +16,7 @@ export const metadata: Metadata = generatePageMetadata({
   description: '블로그 목록',
 });
 
-const CATEGORY_OPTIONS: Array<{ key: BlogCategory; label: string }> = [
+const CATEGORY_OPTIONS: SelectOption<BlogCategory>[] = [
   { key: 'frontend', label: BLOG_CATEGORY_MAP.frontend },
   { key: 'algorithm', label: BLOG_CATEGORY_MAP.algorithm },
   { key: 'cs', label: BLOG_CATEGORY_MAP.cs },

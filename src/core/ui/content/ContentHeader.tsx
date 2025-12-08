@@ -2,7 +2,7 @@ import type { TechStack } from '@/core/types';
 
 import { TechBadge } from '@/core/ui/badge';
 import { Show } from '@/core/ui/wrapper';
-import { formatDateToString } from '@/core/utils';
+import { cn, formatDateToString } from '@/core/utils';
 
 type Props = {
   category: string;
@@ -10,15 +10,15 @@ type Props = {
   createdAt: string;
   updatedAt: string;
   tech?: TechStack[];
+  modalView?: boolean;
 };
 
-export function ContentHeader({ category, title, createdAt, updatedAt, tech }: Props) {
+export function ContentHeader({ category, title, createdAt, updatedAt, tech, modalView }: Props) {
   return (
     <div className="mb-10 flex-col-start gap-3">
-      <div>
-        <p className="mb-2 font-caption-16 text-gray-5">{category}</p>
-        <h1 className="font-title-40">{title}</h1>
-      </div>
+      <p className="font-caption-16 text-gray-5">{category}</p>
+
+      <h1 className={cn('font-title-40', modalView && 'font-title-36')}>{title}</h1>
 
       <div className="flex-row-center w-full gap-3 font-body-14 text-gray-5">
         <time>작성일: {formatDateToString(createdAt)}</time>

@@ -11,12 +11,16 @@ import { createMDXComponents } from '@/core/ui/mdx/createMDXComponents';
 
 type Props = {
   fileContent: string;
+  modalView?: boolean;
 };
 
-export function MDXComponent({ fileContent }: Props) {
+export function MDXComponent({ fileContent, modalView }: Props) {
+  const { content } = matter(fileContent);
+  const components = createMDXComponents(modalView);
+
   return (
     <MDXRemote
-      source={matter(fileContent).content}
+      source={content}
       options={{
         mdxOptions: {
           remarkPlugins: [remarkGfm],
@@ -26,7 +30,7 @@ export function MDXComponent({ fileContent }: Props) {
           ],
         },
       }}
-      components={createMDXComponents()}
+      components={components}
     />
   );
 }

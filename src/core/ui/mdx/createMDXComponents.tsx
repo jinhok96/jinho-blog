@@ -9,33 +9,34 @@ import type {
 
 import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
+import { cn } from '@/core/utils';
 
-export function createMDXComponents() {
+export function createMDXComponents(modalView?: boolean) {
   return {
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className="pb-4 font-title-40"
+        className={cn('pb-4 font-title-40', modalView && 'font-title-36')}
         {...props}
       />
     ),
 
     h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className="mt-10 pb-5 font-subtitle-32"
+        className={cn('mt-10 pb-5 font-subtitle-32', modalView && 'font-subtitle-28')}
         {...props}
       />
     ),
 
     h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className="mt-8 pb-4 font-subtitle-26"
+        className={cn('mt-8 pb-4 font-subtitle-26', modalView && 'font-subtitle-24')}
         {...props}
       />
     ),
 
     h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className="mt-6 pb-3 font-subtitle-20"
+        className={cn('mt-6 pb-3 font-subtitle-20', modalView && 'font-subtitle-18')}
         {...props}
       />
     ),

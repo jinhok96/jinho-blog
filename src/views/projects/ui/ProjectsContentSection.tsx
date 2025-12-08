@@ -17,11 +17,11 @@ export async function ProjectsContentSection({ searchParams }: Props) {
   const projects = await getProjects(options);
 
   return (
-    <ContentCardSection>
-      <Show
-        when={projects.length}
-        fallback={ContentCardSection.Placeholder}
-      >
+    <Show
+      when={projects.length}
+      fallback={ContentCardSection.Placeholder}
+    >
+      <ContentCardSection>
         {projects.map(({ category, slug, path, tech, ...items }) => (
           <ContentCardSection.Card
             key={slug}
@@ -32,7 +32,7 @@ export async function ProjectsContentSection({ searchParams }: Props) {
             <ContentCardSection.TechBadgeList tech={tech} />
           </ContentCardSection.Card>
         ))}
-      </Show>
-    </ContentCardSection>
+      </ContentCardSection>
+    </Show>
   );
 }

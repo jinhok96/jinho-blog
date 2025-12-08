@@ -17,11 +17,11 @@ export async function LibrariesContentSection({ searchParams }: Props) {
   const libraries = await getLibraries(options);
 
   return (
-    <ContentCardSection>
-      <Show
-        when={libraries.length}
-        fallback={ContentCardSection.Placeholder}
-      >
+    <Show
+      when={libraries.length}
+      fallback={ContentCardSection.Placeholder}
+    >
+      <ContentCardSection>
         {libraries.map(({ category, slug, path, tech, ...items }) => (
           <ContentCardSection.Card
             key={slug}
@@ -32,7 +32,7 @@ export async function LibrariesContentSection({ searchParams }: Props) {
             <ContentCardSection.TechBadgeList tech={tech} />
           </ContentCardSection.Card>
         ))}
-      </Show>
-    </ContentCardSection>
+      </ContentCardSection>
+    </Show>
   );
 }

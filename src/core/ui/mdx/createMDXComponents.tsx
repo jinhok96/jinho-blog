@@ -11,6 +11,8 @@ import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
 import { cn } from '@/core/utils';
 
+import LinkIcon from 'public/icons/link.svg';
+
 export function createMDXComponents(modalView?: boolean) {
   return {
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
@@ -65,15 +67,29 @@ export function createMDXComponents(modalView?: boolean) {
       />
     ),
 
-    a: (props: AnchorHTMLAttributes<HTMLAnchorElement>) => (
+    a: ({ children, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) => (
       <a
         className={`
           mx-1 underline underline-offset-2 animated-100
+          first:ml-0
           hover:text-blue-7
         `}
         target="_blank"
         {...props}
-      />
+      >
+        <span className="peer">{children}</span>
+        <span
+          className={`
+            h-full pl-1 text-gray-5 animated-100
+            peer-hover:text-blue-7
+            hover:text-blue-7
+          `}
+        >
+          <div className="flex-row-center inline-block size-4 h-full pb-0.5 align-middle">
+            <LinkIcon strokeWidth={1.5} />
+          </div>
+        </span>
+      </a>
     ),
 
     ul: (props: HTMLAttributes<HTMLUListElement>) => (
@@ -118,7 +134,7 @@ export function createMDXComponents(modalView?: boolean) {
 
     pre: (props: HTMLAttributes<HTMLPreElement>) => (
       <Callout
-        className="mb-4 overflow-x-auto rounded-xl bg-gray-1 p-4 pb-4"
+        className="mb-4 overflow-x-auto rounded-xl bg-gray-1"
         {...props}
       />
     ),

@@ -26,7 +26,10 @@ export function MDXComponent({ fileContent, modalView }: Props) {
           remarkPlugins: [remarkGfm],
           rehypePlugins: [
             rehypeSlug,
-            [rehypeAutolinkHeadings, { behavior: 'append' } satisfies RehypeAutolinkHeadingsOptions],
+            [
+              rehypeAutolinkHeadings,
+              { behavior: 'append', properties: { className: 'hidden' } } satisfies RehypeAutolinkHeadingsOptions,
+            ],
           ],
         },
       }}

@@ -7,4 +7,5 @@ export { useOutsideClickEffect } from './useOutsideClickEffect';
 export { useQueryParams } from './useQueryParams';
 export { useScrollTargetHeight } from './useScrollTargetHeight';
 export { useThrowError } from './useThrowError';
+export { useTimeoutEffect } from './useTimeoutEffect';
 export { useUnmountEffect } from './useUnmountEffect';

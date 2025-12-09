@@ -11,43 +11,37 @@ const monaco = localFont({
   display: 'swap',
 });
 
-type Props = ComponentProps<typeof Prism>;
+type CodePrismProps = ComponentProps<typeof Prism>;
 
-export default function Code({ children, language = 'typescript', className, PreTag, ...props }: Props) {
+function CodePrism({ children, language = 'typescript', className, PreTag, ...props }: CodePrismProps) {
+  return (
+    <Prism
+      {...props}
+      className={cn(`m-0! inline-flex bg-transparent! p-0! text-[0.875rem] tracking-normal! whitespace-pre`, className)}
+      language={language}
+      PreTag={PreTag}
+      codeTagProps={{ className: monaco.className }}
+    >
+      {children}
+    </Prism>
+  );
+}
+
+type Props = ComponentProps<typeof CodePrism>;
+
+export default function Code({ className, ...props }: Props) {
   return (
     <>
-      <Prism
+      <CodePrism
         {...props}
-        className={cn(
-          `
-            m-0! inline-flex bg-transparent! p-0! text-[0.875rem] tracking-normal! whitespace-pre
-            light:hidden
-          `,
-          className,
-        )}
-        language={language}
-        PreTag={PreTag}
-        codeTagProps={{ className: monaco.className }}
+        className={cn('light:hidden', className)}
         style={darkStyle}
-      >
-        {children}
-      </Prism>
-      <Prism
+      />
+      <CodePrism
         {...props}
-        className={cn(
-          `
-            m-0! inline-flex bg-transparent! p-0! text-[0.875rem] tracking-normal! whitespace-pre
-            dark:hidden
-          `,
-          className,
-        )}
-        language={language}
-        PreTag={PreTag}
-        codeTagProps={{ className: monaco.className }}
+        className={cn('dark:hidden', className)}
         style={lightStyle}
-      >
-        {children}
-      </Prism>
+      />
     </>
   );
 }

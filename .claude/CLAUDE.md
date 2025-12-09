@@ -61,4 +61,4 @@
 
 # 컨벤션
 
-- @~/.claude/convention.md
+- @.claude/convention.md

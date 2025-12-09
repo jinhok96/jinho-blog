@@ -72,7 +72,153 @@ Import 그룹 순서:
 6. Relative imports (`./`, `../`)
 7. Style imports (`.css`)
 
-### 2. TypeScript 규칙
+### 2. FSD 아키텍처 Import 규칙
+
+#### Slice vs Segment 패턴
+
+FSD(Feature Sliced Design) 아키텍처에서 각 레이어의 폴더는 두 가지 수준으로 나뉩니다:
+
+- **Slice**: 레이어의 최상위 폴더 (예: `src/entities/blog`, `src/features/selectCategory`)
+  - Public API로 취급됨
+  - 반드시 `index.ts`를 통해 노출할 내용을 명시
+  - 다른 레이어에서 import 가능
+
+- **Segment**: Slice 내부의 폴더들 (예: `model`, `ui`, `types`)
+  - Private 구현으로 취급됨
+  - **절대 직접 import 금지** (같은 slice 내에서는 가능하지만 Public API 권장)
+  - 항상 Slice의 Public API(`index.ts`)를 통해 접근 권장
+
+#### 레이어 계층 및 Import 규칙
+
+**레이어 계층 (하단이 하위):**
+
+```
+App (모든 것 import 가능)
+  ↓
+Views (뷰/페이지)
+  ↓
+Modules (페이지 단위 모듈)
+  ↓
+Features (기능 컴포넌트)
+  ↓
+Entities (타입/모델)
+  ↓
+Core (공통 코드)
+```
+
+**각 레이어의 import 규칙:**
+
+| 레이어 | 할 수 있는 것 | 할 수 없는 것 |
+|--------|-------------|------------|
+| **App** | 모든 레이어의 모든 slice | 제한 없음 |
+| **Views** | Core, Entities, Features, Modules, 같은 slice 내 segment | 다른 Views slice, App |
+| **Modules** | Core, Entities, Features, 같은 slice 내 segment | Views, App |
+| **Features** | Core, Entities, 같은 slice 내 segment | Modules, Views, App |
+| **Entities** | Core, 같은 slice 내 segment | Features, Modules, Views, App |
+| **Core** | 다른 Core segment, 같은 segment의 internal | 다른 모든 레이어 |
+| **Core-internal** | Core, 같은 segment의 internal만 | 다른 segment의 internal |
+
+**핵심 규칙:**
+- ✅ 하위 레이어만 import 가능 (상위 레이어 import 금지)
+- ✅ 같은 slice 내 segment끼리는 import 가능 (단, Public API 권장)
+- ❌ 같은 레이어의 다른 slice는 import 불가
+
+#### Public API 패턴
+
+각 Slice는 반드시 `index.ts`를 통해 Public API를 명시적으로 노출해야 합니다:
+
+**✅ Entities (타입/모델) 예시:**
+```typescript
+// src/entities/blog/index.ts
+export * from './model';
+export * from './types';
+
+// src/entities/blog/model/index.ts
+export { getBlogPost, getBlogPosts } from './model';
+
+// src/entities/blog/types/index.ts
+export type { Blog } from './types';
+```
+
+**✅ Features/Modules (UI 컴포넌트) 예시:**
+```typescript
+// src/features/selectCategory/index.ts
+export * from './ui';
+
+// src/features/selectCategory/ui/index.ts
+export { SelectCategory } from './SelectCategory';
+```
+
+#### 경로 규칙
+
+**절대 경로 사용 원칙:**
+- **index.ts 제외** 모든 파일에서 절대 경로 `@/*` 사용
+- 상대 경로 사용 금지 (index.ts만 예외)
+
+**✅ Good - index.ts에서만 상대 경로 허용:**
+```typescript
+// src/views/blog/index.ts
+export { BlogContentSection } from './ui';  // ✅ index.ts는 상대경로 가능
+export { BlogHeader } from './header';      // ✅
+```
+
+**❌ Bad - 일반 파일에서 상대 경로:**
+```typescript
+// src/views/blog/ui/BlogContentSection.tsx
+import { BlogHeader } from '../header/BlogHeader';  // ❌ 절대경로 사용 필수
+```
+
+#### Import 규칙 (Good vs Bad)
+
+**✅ Good - Public API 사용 (가장 권장):**
+```typescript
+import { getBlogPosts } from '@/entities/blog';
+import { SelectCategory } from '@/features/selectCategory';
+import { BlogHeader } from '@/views/blog';
+```
+
+**✅ Good - 같은 Slice 내 다른 Segment import:**
+```typescript
+// src/views/blog/ui/BlogContentSection.tsx
+import { BlogHeader } from '@/views/blog/header/BlogHeader';  // ✅ 가능
+import { blogUtils } from '@/views/blog/utils/blogUtils';     // ✅ 가능
+
+// 하지만 Public API를 통하는 것이 더 권장됨:
+import { BlogHeader, blogUtils } from '@/views/blog';  // ✅✅ 더 좋음
+```
+
+**❌ Bad - 같은 레이어의 다른 Slice import:**
+```typescript
+// Views에서 다른 Views slice 접근
+import { ProjectDetail } from '@/views/projects';  // ❌ 같은 레이어 다른 slice
+
+// Entities에서 다른 Entities slice 접근
+import { ProjectType } from '@/entities/project';  // ❌ blog slice에서
+```
+
+**❌ Bad - 하위 레이어에서 상위 레이어 접근:**
+```typescript
+// Entities에서 Features 접근
+import { SelectCategory } from '@/features/selectCategory';  // ❌
+
+// Features에서 Modules 접근
+import { Header } from '@/modules/header';  // ❌
+```
+
+#### ESLint 경고 안내
+
+`npm run lint` 실행 시 규칙 위반 시:
+```
+${레이어} 레이어는 ${레이어} 레이어를 가져올 수 없습니다.
+```
+
+이 메시지가 나오면:
+1. 레이어 계층 확인 (상위 레이어를 import하고 있는지)
+2. 같은 레이어의 다른 slice를 import하고 있는지 확인
+3. Segment 직접 import 대신 Slice의 Public API 사용
+4. `index.ts`에 필요한 export 추가
+
+### 3. TypeScript 규칙
 
 **타입 임포트는 항상 `import type` 사용:**
 
@@ -324,7 +470,11 @@ declare module '*.svg' {
 
 - [ ] Import 순서가 ESLint 규칙을 따르는가?
 - [ ] Type import는 `import type`을 사용했는가?
-- [ ] 경로는 `@/*` 절대 경로를 사용했는가?
+- [ ] 경로는 `@/*` 절대 경로를 사용했는가? (index.ts 제외)
+- [ ] FSD 레이어 계층을 준수하는가? (하위 레이어만 import)
+- [ ] 같은 레이어의 다른 slice를 import하지 않는가?
+- [ ] Segment 직접 import보다 Slice의 Public API를 우선 사용하는가?
+- [ ] 필요한 export가 `index.ts`에 추가되었는가?
 - [ ] Prettier 규칙(싱글 쿼트, 120자, 2칸 들여쓰기, LF)을 준수했는가?
 - [ ] 컴포넌트는 named export인가?
 - [ ] Props 타입이 명확히 정의되었는가?

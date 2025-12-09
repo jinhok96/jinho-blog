@@ -15,7 +15,7 @@ type Props = {
 
 export function ContentHeader({ category, title, createdAt, updatedAt, tech, modalView }: Props) {
   return (
-    <div className="flex-col-start gap-3 border-b border-gray-2 pb-6">
+    <div className="flex-col-start w-full gap-3 border-b border-gray-2 pb-6">
       <p className="font-caption-16 text-gray-5">{category}</p>
 
       <h1 className={cn('font-title-40', modalView && 'font-title-32')}>{title}</h1>

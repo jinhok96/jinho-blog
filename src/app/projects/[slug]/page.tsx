@@ -4,6 +4,8 @@ import { notFound } from 'next/navigation';
 
 import { readFileSync } from 'fs';
 
+import { ROUTER } from '@/core/config';
+import { ContentDetailWrapper } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getProject, getProjects } from '@/entities/project';
@@ -43,9 +45,11 @@ export default async function ProjectPage({ params }: Props) {
   const fileContent = readFileSync(project.filePath, 'utf-8');
 
   return (
-    <ProjectDetail
-      project={project}
-      fileContent={fileContent}
-    />
+    <ContentDetailWrapper rootHref={ROUTER.projects}>
+      <ProjectDetail
+        project={project}
+        fileContent={fileContent}
+      />
+    </ContentDetailWrapper>
   );
 }

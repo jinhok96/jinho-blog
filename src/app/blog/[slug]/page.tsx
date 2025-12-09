@@ -4,8 +4,9 @@ import { notFound } from 'next/navigation';
 
 import { readFileSync } from 'fs';
 
+import { ROUTER } from '@/core/config';
 import { BLOG_CATEGORY_MAP } from '@/core/map';
-import { ContentHeader, MDXComponent } from '@/core/ui';
+import { ContentDetailWrapper, ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { getBlogPost, getBlogPosts } from '@/entities/blog';
@@ -45,7 +46,7 @@ export default async function BlogPostPage({ params }: Props) {
   const fileContent = readFileSync(filePath, 'utf-8');
 
   return (
-    <div className="size-full">
+    <ContentDetailWrapper rootHref={ROUTER.blog}>
       <ContentHeader
         category={BLOG_CATEGORY_MAP[category]}
         title={title}
@@ -54,6 +55,6 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       <MDXComponent fileContent={fileContent} />
-    </div>
+    </ContentDetailWrapper>
   );
 }

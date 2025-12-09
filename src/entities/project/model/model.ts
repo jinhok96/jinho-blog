@@ -1,12 +1,12 @@
-import type { GetProjectsOptions } from '@/core/types';
+import type { GetProjectsOptions, PaginatedResult } from '@/core/types';
 import type { Project } from '@/entities/project/types/types';
 
-import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
+import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '@/core/utils';
 
 import { projectsRegistry } from '@/entities/project/registry.generated';
 
-export async function getProjects(options?: GetProjectsOptions): Promise<Project[]> {
-  const { category, sort = 'latest', limit, offset = 0, search } = options || {};
+export async function getProjects(options?: GetProjectsOptions): Promise<PaginatedResult<Project>> {
+  const { category, sort = 'latest', page = 1, count = 12, search } = options || {};
 
   let projects = projectsRegistry;
 
@@ -19,10 +19,8 @@ export async function getProjects(options?: GetProjectsOptions): Promise<Project
   // 3. 정렬
   projects = sortContent(projects, sort);
 
-  // 4. 페이지네이션
-  projects = paginateContent(projects, limit, offset);
-
-  return projects;
+  // 4. 페이지네이션 with metadata
+  return paginateContentWithMeta(projects, page, count);
 }
 
 export async function getProject(slug: string): Promise<Project | null> {

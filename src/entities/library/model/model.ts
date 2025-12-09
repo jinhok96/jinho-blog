@@ -1,12 +1,12 @@
-import type { GetLibrariesOptions } from '@/core/types';
+import type { GetLibrariesOptions, PaginatedResult } from '@/core/types';
 import type { Library } from '@/entities/library/types/types';
 
-import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
+import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '@/core/utils';
 
 import { librariesRegistry } from '@/entities/library/registry.generated';
 
-export async function getLibraries(options?: GetLibrariesOptions): Promise<Library[]> {
-  const { category, sort = 'latest', limit, offset = 0, search } = options || {};
+export async function getLibraries(options?: GetLibrariesOptions): Promise<PaginatedResult<Library>> {
+  const { category, sort = 'latest', page = 1, count = 12, search } = options || {};
 
   let libraries = librariesRegistry;
 
@@ -19,10 +19,8 @@ export async function getLibraries(options?: GetLibrariesOptions): Promise<Libra
   // 3. 정렬
   libraries = sortContent(libraries, sort);
 
-  // 4. 페이지네이션
-  libraries = paginateContent(libraries, limit, offset);
-
-  return libraries;
+  // 4. 페이지네이션 with metadata
+  return paginateContentWithMeta(libraries, page, count);
 }
 
 export async function getLibrary(slug: string): Promise<Library | null> {

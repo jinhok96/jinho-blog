@@ -16,7 +16,7 @@ type Props = {
 
 // SSG: 빌드 시 모든 경로 생성
 export async function generateStaticParams() {
-  const libraries = await getLibraries();
+  const { items: libraries } = await getLibraries();
   return libraries.map(library => ({ slug: library.slug }));
 }
 

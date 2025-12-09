@@ -17,7 +17,7 @@ type Props = {
 
 // SSG: 빌드 시 모든 경로 생성
 export async function generateStaticParams() {
-  const posts = await getBlogPosts();
+  const { items: posts } = await getBlogPosts();
   return posts.map(post => ({ slug: post.slug }));
 }
 

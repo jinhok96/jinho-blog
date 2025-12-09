@@ -1,12 +1,12 @@
-import type { GetBlogPostsOptions } from '@/core/types';
+import type { GetBlogPostsOptions, PaginatedResult } from '@/core/types';
 import type { Blog } from '@/entities/blog/types/types';
 
-import { filterByCategory, paginateContent, searchContent, sortContent } from '@/core/utils';
+import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '@/core/utils';
 
 import { blogRegistry } from '@/entities/blog/registry.generated';
 
-export async function getBlogPosts(options?: GetBlogPostsOptions): Promise<Blog[]> {
-  const { category, sort = 'latest', limit, offset = 0, search } = options || {};
+export async function getBlogPosts(options?: GetBlogPostsOptions): Promise<PaginatedResult<Blog>> {
+  const { category, sort = 'latest', page = 1, count = 12, search } = options || {};
 
   let posts = blogRegistry;
 
@@ -19,10 +19,8 @@ export async function getBlogPosts(options?: GetBlogPostsOptions): Promise<Blog[
   // 3. 정렬
   posts = sortContent(posts, sort);
 
-  // 4. 페이지네이션
-  posts = paginateContent(posts, limit, offset);
-
-  return posts;
+  // 4. 페이지네이션 with metadata
+  return paginateContentWithMeta(posts, page, count);
 }
 
 export async function getBlogPost(slug: string): Promise<Blog | null> {

@@ -14,7 +14,7 @@ type Props = {
 
 // SSG: 빌드 시 모든 모달 경로 생성
 export async function generateStaticParams() {
-  const projects = await getProjects();
+  const { items: projects } = await getProjects();
   return projects.map(project => ({ slug: project.slug }));
 }
 

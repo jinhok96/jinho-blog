@@ -1,5 +1,12 @@
 export type { BlogCategory, LibraryCategory, ProjectCategory } from './category';
-export type { ContentSortOption, GetBlogPostsOptions, GetLibrariesOptions, GetProjectsOptions } from './content';
+export type {
+  ContentSortOption,
+  GetBlogPostsOptions,
+  GetLibrariesOptions,
+  GetProjectsOptions,
+  PaginatedResult,
+  PaginationInfo,
+} from './content';
 export type {
   BaseMetadata,
   BlogMetadata,

@@ -59,15 +59,19 @@ export function parseContentSearchParams<TCategory extends string>(
 ): {
   category?: TCategory[];
   sort?: ContentSortOption;
+  page?: number;
+  count?: number;
+  search?: string;
   limit?: number;
   offset?: number;
-  search?: string;
 } {
   return {
     category: parseCommaSeparatedString<TCategory>(searchParams.category),
     sort: parseSort(searchParams.sort),
+    page: parseNumeric(searchParams.page),
+    count: parseNumeric(searchParams.count),
+    search: parseSearchString(searchParams.search),
     limit: parseNumeric(searchParams.limit),
     offset: parseNumeric(searchParams.offset),
-    search: parseSearchString(searchParams.search),
   };
 }

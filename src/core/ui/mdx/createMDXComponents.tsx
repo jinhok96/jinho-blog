@@ -17,52 +17,49 @@ export function createMDXComponents(modalView?: boolean) {
   return {
     h1: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn('pb-4 font-title-40', modalView && 'font-title-32')}
+        className={cn('pb-3 font-title-40', modalView && 'font-title-32')}
         {...props}
       />
     ),
 
     h2: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className={cn('pt-7 pb-4 font-subtitle-32', modalView && 'font-subtitle-26')}
+        className={cn('pt-7 pb-3 font-subtitle-32', modalView && 'font-subtitle-26')}
         {...props}
       />
     ),
 
     h3: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className={cn('pt-6 pb-3.5 font-subtitle-26', modalView && 'font-subtitle-22')}
+        className={cn('pt-6 pb-3 font-subtitle-26', modalView && 'font-subtitle-22')}
         {...props}
       />
     ),
 
     h4: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className={cn('pt-5 pb-3 font-subtitle-20', modalView && 'font-subtitle-18')}
+        className={cn('pt-5 pb-2 font-subtitle-20', modalView && 'font-subtitle-18')}
         {...props}
       />
     ),
 
     h5: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className="py-3 font-subtitle-16"
+        className="pt-3 pb-2 font-subtitle-16"
         {...props}
       />
     ),
 
     h6: (props: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className="py-3 font-subtitle-14"
+        className="pt-3 pb-2 font-subtitle-14"
         {...props}
       />
     ),
 
     p: (props: HTMLAttributes<HTMLParagraphElement>) => (
       <div
-        className={`
-          group pb-2 font-body-16
-          in-[blockquote]:pb-0
-        `}
+        className="group font-body-16"
         {...props}
       />
     ),
@@ -95,7 +92,7 @@ export function createMDXComponents(modalView?: boolean) {
     ul: (props: HTMLAttributes<HTMLUListElement>) => (
       <ul
         className={`
-          ml-7 list-disc space-y-2 pb-4
+          ml-7 list-disc space-y-1
           in-[li]:ml-5 in-[li]:pt-2
         `}
         {...props}
@@ -104,7 +101,7 @@ export function createMDXComponents(modalView?: boolean) {
 
     ol: (props: HTMLAttributes<HTMLOListElement>) => (
       <ol
-        className="ml-7 list-decimal space-y-2 pb-4"
+        className="ml-7 list-decimal space-y-2"
         {...props}
       />
     ),
@@ -113,34 +110,34 @@ export function createMDXComponents(modalView?: boolean) {
 
     blockquote: (props: HTMLAttributes<HTMLQuoteElement>) => (
       <blockquote
-        className="mb-4 ml-0.5 border-l-4 border-gray-4 pl-3 font-caption-16 italic"
+        className="ml-0.5 border-l-4 border-gray-4 pl-3 font-caption-16 italic"
         {...props}
       />
     ),
 
     hr: (props: HTMLAttributes<HTMLHRElement>) => (
       <hr
-        className="my-6 border-gray-2"
+        className="mt-4 w-full border-gray-2"
         {...props}
       />
     ),
 
-    code: (props: ComponentProps<typeof Code>) => (
-      <Code
-        className="group-has-[pre]:mx-1! group-has-[pre]:bg-gray-1! group-has-[pre]:px-1.5! group-has-[pre]:py-0.5!"
-        {...props}
-      />
-    ),
+    code: ({ className, ...props }: ComponentProps<typeof Code>) => {
+      const language = className?.replace('language-', '');
 
-    pre: (props: HTMLAttributes<HTMLPreElement>) => (
-      <Callout
-        className="mb-4 overflow-x-auto rounded-xl bg-gray-1"
-        {...props}
-      />
-    ),
+      return (
+        <Code
+          className="group-has-[pre]:mx-1! group-has-[pre]:bg-gray-1! group-has-[pre]:px-1.5! group-has-[pre]:py-0.5!"
+          language={language}
+          {...props}
+        />
+      );
+    },
+
+    pre: (props: HTMLAttributes<HTMLPreElement>) => <Callout {...props} />,
 
     table: (props: TableHTMLAttributes<HTMLTableElement>) => (
-      <div className="mb-4 border-collapse overflow-auto rounded-xl border border-gray-2">
+      <div className="border-collapse overflow-auto rounded-xl border border-gray-2">
         <table
           className="size-full"
           {...props}
@@ -186,5 +183,7 @@ export function createMDXComponents(modalView?: boolean) {
         {...props}
       />
     ),
+
+    Callout: (props: HTMLAttributes<HTMLDivElement>) => <Callout {...props} />,
   };
 }

@@ -13,35 +13,45 @@ const monaco = localFont({
 
 type CodePrismProps = ComponentProps<typeof Prism>;
 
-function CodePrism({ children, language = 'typescript', className, PreTag, ...props }: CodePrismProps) {
+function CodePrism({ children, className, PreTag, language = 'typescript', ...props }: CodePrismProps) {
   return (
     <Prism
-      {...props}
       className={cn(`m-0! inline-flex bg-transparent! p-0! text-[0.875rem] tracking-normal! whitespace-pre`, className)}
-      language={language}
       PreTag={PreTag}
       codeTagProps={{ className: monaco.className }}
+      language={language}
+      {...props}
     >
       {children}
     </Prism>
   );
 }
 
-type Props = ComponentProps<typeof CodePrism>;
+type Props = ComponentProps<typeof CodePrism> & {
+  className?: string;
+};
 
-export default function Code({ className, ...props }: Props) {
+export default function Code({ className, language, children, ...props }: Props) {
+  if (language === 'text') return <div>{children}</div>;
+
   return (
     <>
       <CodePrism
         {...props}
         className={cn('light:hidden', className)}
+        language={language}
         style={darkStyle}
-      />
+      >
+        {children}
+      </CodePrism>
       <CodePrism
         {...props}
         className={cn('dark:hidden', className)}
+        language={language}
         style={lightStyle}
-      />
+      >
+        {children}
+      </CodePrism>
     </>
   );
 }

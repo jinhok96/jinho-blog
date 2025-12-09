@@ -19,21 +19,23 @@ export function MDXComponent({ fileContent, modalView }: Props) {
   const components = createMDXComponents(modalView);
 
   return (
-    <MDXRemote
-      source={content}
-      options={{
-        mdxOptions: {
-          remarkPlugins: [remarkGfm],
-          rehypePlugins: [
-            rehypeSlug,
-            [
-              rehypeAutolinkHeadings,
-              { behavior: 'append', properties: { className: 'hidden' } } satisfies RehypeAutolinkHeadingsOptions,
+    <article className="flex-col-start size-full gap-2">
+      <MDXRemote
+        source={content}
+        components={components}
+        options={{
+          mdxOptions: {
+            remarkPlugins: [remarkGfm],
+            rehypePlugins: [
+              rehypeSlug,
+              [
+                rehypeAutolinkHeadings,
+                { behavior: 'append', properties: { className: 'hidden' } } satisfies RehypeAutolinkHeadingsOptions,
+              ],
             ],
-          ],
-        },
-      }}
-      components={components}
-    />
+          },
+        }}
+      />
+    </article>
   );
 }

@@ -14,7 +14,7 @@ export function Input({ className, error, highlight, ...props }: Props) {
       className={cn(
         `
           rounded-lg border border-foreground-3 animated-100
-          placeholder:text-foreground-6
+          placeholder:text-gray-5
         `,
         !error && 'focus:border-blue-7',
         !error && highlight && 'border-blue-7',

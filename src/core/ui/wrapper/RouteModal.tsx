@@ -49,7 +49,7 @@ export function RouteModal({ children }: Props) {
           onClick={handleClose}
           className={`
             absolute top-5 right-5 size-11 p-3 text-foreground-5
-            hover:text-foreground-8
+            hover:text-foreground-7
           `}
           rounded
         >

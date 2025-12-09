@@ -45,7 +45,7 @@ export default async function LibraryPage({ params }: Props) {
   const fileContent = readFileSync(filePath, 'utf-8');
 
   return (
-    <article className="size-full">
+    <div className="size-full">
       <ContentHeader
         category={LIBRARY_CATEGORY_MAP[category]}
         title={title}
@@ -55,6 +55,6 @@ export default async function LibraryPage({ params }: Props) {
       />
 
       <MDXComponent fileContent={fileContent} />
-    </article>
+    </div>
   );
 }

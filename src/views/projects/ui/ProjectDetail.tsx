@@ -13,7 +13,7 @@ export function ProjectDetail({ project, fileContent, modalView }: Props) {
   const { title, category, createdAt, updatedAt, tech } = project;
 
   return (
-    <article className="size-full">
+    <div className="size-full">
       <ContentHeader
         category={PROJECT_CATEGORY_MAP[category]}
         title={title}
@@ -27,6 +27,6 @@ export function ProjectDetail({ project, fileContent, modalView }: Props) {
         fileContent={fileContent}
         modalView={modalView}
       />
-    </article>
+    </div>
   );
 }

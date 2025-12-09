@@ -45,7 +45,7 @@ export default async function BlogPostPage({ params }: Props) {
   const fileContent = readFileSync(filePath, 'utf-8');
 
   return (
-    <article className="size-full">
+    <div className="size-full">
       <ContentHeader
         category={BLOG_CATEGORY_MAP[category]}
         title={title}
@@ -54,6 +54,6 @@ export default async function BlogPostPage({ params }: Props) {
       />
 
       <MDXComponent fileContent={fileContent} />
-    </article>
+    </div>
   );
 }

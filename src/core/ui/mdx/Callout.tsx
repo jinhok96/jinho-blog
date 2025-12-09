@@ -1,10 +1,11 @@
 'use client';
 
-import { type PropsWithChildren, type RefObject, useRef } from 'react';
+import { type PropsWithChildren, type RefObject, useEffect, useRef, useState } from 'react';
 
 import { Button, Show } from '@/core/ui';
 import { cn } from '@/core/utils';
 
+import CheckAnimatedIcon from 'public/icons/check-animated.svg';
 import CopyIcon from 'public/icons/copy.svg';
 
 type CopyButtonProps = {
@@ -12,25 +13,42 @@ type CopyButtonProps = {
 };
 
 function CopyButton({ textRef }: CopyButtonProps) {
+  const [isCopied, setIsCopied] = useState(false);
+
   const handleCopy = async () => {
-    const text = textRef.current?.textContent;
-    if (!text) return;
+    const text = textRef.current?.textContent || '';
     await navigator.clipboard.writeText(text);
+    setIsCopied(true);
   };
+
+  useEffect(() => {
+    const timer = setTimeout(() => setIsCopied(false), 5000);
+    return () => clearTimeout(timer);
+  }, [isCopied]);
 
   return (
     <Button
-      className={`
-        absolute top-3 right-3 size-10 p-1.5 text-foreground-5
-        not-group-hover/callout:not-hover-none:invisible not-group-hover/callout:not-hover-none:opacity-0
-        hover:text-foreground-7
-        tablet:top-4 tablet:right-4
-      `}
+      className={cn(
+        `
+          absolute top-3 right-3 size-10 p-2 text-foreground-5
+          hover:text-foreground-7
+          tablet:top-4 tablet:right-4
+        `,
+        !isCopied &&
+          'not-group-hover/callout:not-hover-none:invisible not-group-hover/callout:not-hover-none:opacity-0',
+      )}
       color="background"
       size="md"
       onClick={handleCopy}
     >
-      <CopyIcon />
+      <Show
+        when={isCopied}
+        fallback={<CopyIcon />}
+      >
+        <div className="text-blue-7">
+          <CheckAnimatedIcon strokeWidth={1.5} />
+        </div>
+      </Show>
     </Button>
   );
 }

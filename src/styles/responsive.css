@@ -1,3 +1,4 @@
+/* Layout */
 @custom-variant fold {
   @media (width >= 40rem /* 640px */) {
     @slot;
@@ -18,6 +19,13 @@
 
 @custom-variant wide {
   @media (width >= 96rem /* 1536px */) {
+    @slot;
+  }
+}
+
+/* Feature */
+@custom-variant hover-none {
+  @media (hover: none) {
     @slot;
   }
 }

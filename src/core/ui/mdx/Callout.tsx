@@ -9,6 +9,8 @@ import { cn } from '@/core/utils';
 import CheckAnimatedIcon from 'public/icons/check-animated.svg';
 import CopyIcon from 'public/icons/copy.svg';
 
+const RESET_TIMEOUT = 5000;
+
 type CopyButtonProps = {
   textRef: RefObject<HTMLDivElement | null>;
 };
@@ -26,7 +28,7 @@ function CopyButton({ textRef }: CopyButtonProps) {
     setIsCopied(false);
   };
 
-  useTimeoutEffect(handleReset, 5000, [isCopied]);
+  useTimeoutEffect(handleReset, RESET_TIMEOUT, [isCopied]);
 
   return (
     <Button

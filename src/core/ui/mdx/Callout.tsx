@@ -1,7 +1,8 @@
 'use client';
 
-import { type PropsWithChildren, type RefObject, useEffect, useRef, useState } from 'react';
+import { type PropsWithChildren, type RefObject, useRef, useState } from 'react';
 
+import { useTimeoutEffect } from '@/core/hooks';
 import { Button, Show } from '@/core/ui';
 import { cn } from '@/core/utils';
 
@@ -21,22 +22,19 @@ function CopyButton({ textRef }: CopyButtonProps) {
     setIsCopied(true);
   };
 
-  useEffect(() => {
-    const timer = setTimeout(() => setIsCopied(false), 5000);
-    return () => clearTimeout(timer);
-  }, [isCopied]);
+  const handleReset = () => {
+    setIsCopied(false);
+  };
+
+  useTimeoutEffect(handleReset, 5000, [isCopied]);
 
   return (
     <Button
-      className={cn(
-        `
-          absolute top-3 right-3 size-10 p-2 text-foreground-5
-          hover:text-foreground-7
-          tablet:top-4 tablet:right-4
-        `,
-        !isCopied &&
-          'not-group-hover/callout:not-hover-none:invisible not-group-hover/callout:not-hover-none:opacity-0',
-      )}
+      className={`
+        absolute top-2.5 right-2.5 size-10 p-2 text-foreground-5
+        hover:text-foreground-7
+        tablet:top-3 tablet:right-3
+      `}
       color="background"
       size="md"
       onClick={handleCopy}

@@ -7,7 +7,7 @@
   }
   .check-path {
     stroke-dasharray: 100;
-    stroke-dashoffset: 100;
+    stroke-dashoffset: 99;
     animation: draw 0.25s ease-in-out forwards;
   }
 </style>

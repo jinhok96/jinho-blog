@@ -1,0 +1,15 @@
+<svg width="100%" height="100%" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<style>
+  @keyframes draw {
+    to {
+      stroke-dashoffset: 0;
+    }
+  }
+  .check-path {
+    stroke-dasharray: 100;
+    stroke-dashoffset: 100;
+    animation: draw 0.25s ease-in-out forwards;
+  }
+</style>
+<path class="check-path" d="M2 9.46154L4.52 12.7015C4.60503 12.812 4.71399 12.9018 4.83869 12.9642C4.96339 13.0265 5.1006 13.0598 5.24 13.0615C5.37716 13.0632 5.51295 13.0341 5.6375 12.9767C5.76205 12.9192 5.87222 12.8346 5.96 12.7292L14 3" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" pathLength="100"/>
+</svg>

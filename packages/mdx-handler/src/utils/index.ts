@@ -1,1 +1,1 @@
-export { sortContent, filterByCategory, searchContent, paginateContentWithMeta } from './internal/content';
+export { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from './internal/content';

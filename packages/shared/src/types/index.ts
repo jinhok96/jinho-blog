@@ -1,5 +1,4 @@
 export type { BlogCategory, LibraryCategory, ProjectCategory } from './internal/category';
-
 export type {
   ContentSortOption,
   GetBlogPostsOptions,
@@ -8,7 +7,6 @@ export type {
   PaginatedResult,
   PaginationInfo,
 } from './internal/content';
-
 export type {
   BaseMetadata,
   BlogMetadata,
@@ -18,7 +16,5 @@ export type {
   ProjectMetadata,
   TechStack,
 } from './internal/metadata';
-
 export type { Params, ParamsWithSearchParams } from './internal/params';
-
 export type { SearchParams } from './internal/searchParams';

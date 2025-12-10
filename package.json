@@ -10,7 +10,10 @@
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
+    "start": "npm run start -w @jinho-blog/web",
     "lint": "turbo lint",
+    "lf": "turbo lf",
+    "eslint": "turbo eslint",
     "type-check": "turbo type-check"
   },
   "devDependencies": {

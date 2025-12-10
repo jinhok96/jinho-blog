@@ -13,6 +13,12 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "lf": {
+      "dependsOn": ["^lf"]
+    },
+    "eslint": {
+      "dependsOn": ["^eslint"]
+    },
     "type-check": {
       "dependsOn": ["^type-check"]
     }

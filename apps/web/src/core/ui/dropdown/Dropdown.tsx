@@ -24,20 +24,20 @@ function useDropdownContext(): DropdownContextValue {
   return context;
 }
 
-export function Dropdown({ children, isOpen: controlledIsOpen, onOpenChange, className }: DropdownProps) {
+export function Dropdown({ children, isOpen, onOpenChange, className }: DropdownProps) {
   const [internalIsOpen, setInternalIsOpen] = useState(false);
   const wrapperRef = useRef<HTMLDivElement>(null);
 
-  const isControlled = controlledIsOpen !== undefined;
-  const isOpen = isControlled ? controlledIsOpen : internalIsOpen;
+  const isControlled = isOpen !== undefined;
+  const isDropdownOpen = isControlled ? isOpen : internalIsOpen;
 
   const handleToggle = useCallback(() => {
-    const newIsOpen = !isOpen;
+    const newIsOpen = !isDropdownOpen;
     if (!isControlled) {
       setInternalIsOpen(newIsOpen);
     }
     onOpenChange?.(newIsOpen);
-  }, [isOpen, isControlled, onOpenChange]);
+  }, [isDropdownOpen, isControlled, onOpenChange]);
 
   const handleClose = useCallback(() => {
     if (!isControlled) {
@@ -51,16 +51,16 @@ export function Dropdown({ children, isOpen: controlledIsOpen, onOpenChange, cla
   }, [wrapperRef]);
 
   useKeyDownEffect(['Escape'], () => {
-    if (isOpen) handleClose();
+    if (isDropdownOpen) handleClose();
   });
 
   const contextValue = useMemo<DropdownContextValue>(
     () => ({
-      isOpen,
+      isOpen: isDropdownOpen,
       handleToggle,
       handleClose,
     }),
-    [isOpen, handleToggle, handleClose],
+    [isDropdownOpen, handleToggle, handleClose],
   );
 
   return (

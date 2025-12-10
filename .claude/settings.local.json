@@ -37,7 +37,9 @@
       "Bash(npx next:*)",
       "Bash(npm run gcr:*)",
       "Bash(npm run eslint:*)",
-      "Bash(node --check:*)"
+      "Bash(node --check:*)",
+      "Bash(pnpm --version:*)",
+      "Bash(npm:*)"
     ],
     "deny": [],
     "ask": []

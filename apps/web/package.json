@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev",
+    "dev": "set PORT=3401 && next dev",
     "build": "next build",
-    "start": "next start",
+    "start": "set PORT=3401 && next start",
     "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx,.js,.jsx",

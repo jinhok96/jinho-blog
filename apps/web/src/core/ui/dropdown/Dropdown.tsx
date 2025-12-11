@@ -8,82 +8,72 @@ import type {
   DropdownTriggerProps,
 } from '@/core/ui/dropdown/types';
 
-import { type MouseEventHandler, useCallback, useContext, useLayoutEffect, useMemo, useRef, useState } from 'react';
-import { createContext } from 'react';
+import { type MouseEventHandler, useLayoutEffect, useRef } from 'react';
 
 import { useKeyDownEffect, useOutsideClickEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
-import { cn } from '@/core/utils';
+import { cn, createSharedState } from '@/core/utils';
 
-type DropdownContextValue = {
+type SharedState = {
   isOpen: boolean;
+};
+
+type SharedActions = {
   handleToggle: () => void;
+  handleOpen: () => void;
   handleClose: () => void;
 };
 
-const DropdownContext = createContext<DropdownContextValue | undefined>(undefined);
-
-function useDropdownContext(): DropdownContextValue {
-  const context = useContext(DropdownContext);
-  if (context === undefined) {
-    throw new Error('Dropdown components must be used within Dropdown');
-  }
-  return context;
-}
+const { Provider, useShared, useSharedState, useSharedActions } = createSharedState<SharedState, SharedActions>(
+  { isOpen: false },
+  set => ({
+    handleToggle: () => set(({ isOpen }) => ({ isOpen: !isOpen })),
+    handleOpen: () => set({ isOpen: true }),
+    handleClose: () => set({ isOpen: false }),
+  }),
+);
 
 export function Dropdown({ children, isOpen, onOpenChange, className }: DropdownProps) {
-  const [internalIsOpen, setInternalIsOpen] = useState(false);
-  const wrapperRef = useRef<HTMLDivElement>(null);
+  const ref = useRef<HTMLDivElement>(null);
+  const { isOpen: isInternalOpen, handleOpen, handleClose } = useShared();
 
-  const isControlled = isOpen !== undefined;
-  const isDropdownOpen = isControlled ? isOpen : internalIsOpen;
+  // 외부 isOpen 변경 시 내부 상태 동기화
+  useLayoutEffect(() => {
+    if (isOpen === undefined) return;
 
-  const handleToggle = useCallback(() => {
-    const newIsOpen = !isDropdownOpen;
-    if (!isControlled) {
-      setInternalIsOpen(newIsOpen);
-    }
-    onOpenChange?.(newIsOpen);
-  }, [isDropdownOpen, isControlled, onOpenChange]);
+    if (isOpen) handleOpen();
+    else handleClose();
+  }, [isOpen]);
 
-  const handleClose = useCallback(() => {
-    if (!isControlled) {
-      setInternalIsOpen(false);
-    }
-    onOpenChange?.(false);
-  }, [isControlled, onOpenChange]);
+  // 내부 상태 변경 시 외부에 알림
+  useLayoutEffect(() => {
+    onOpenChange?.(isInternalOpen);
+  }, [isInternalOpen]);
 
   useOutsideClickEffect(() => {
+    if (!isInternalOpen) return;
     handleClose();
-  }, [wrapperRef]);
+  }, [ref]);
 
   useKeyDownEffect(['Escape'], () => {
-    if (isDropdownOpen) handleClose();
+    if (!isInternalOpen) return;
+    handleClose();
   });
 
-  const contextValue = useMemo<DropdownContextValue>(
-    () => ({
-      isOpen: isDropdownOpen,
-      handleToggle,
-      handleClose,
-    }),
-    [isDropdownOpen, handleToggle, handleClose],
-  );
-
   return (
-    <DropdownContext.Provider value={contextValue}>
+    <Provider>
       <div
-        ref={wrapperRef}
+        ref={ref}
         className={cn('relative', className)}
       >
         {children}
       </div>
-    </DropdownContext.Provider>
+    </Provider>
   );
 }
 
 function Trigger({ children, onClick, ...props }: DropdownTriggerProps) {
-  const { handleToggle } = useDropdownContext();
+  const { handleToggle } = useSharedActions();
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = e => {
     onClick?.(e);
@@ -108,22 +98,15 @@ const DROPDOWN_POSITION_CLASSNAME_MAP: Record<DropdownPosition, string> = {
 };
 
 function Container({ children, className, contentClassName, position = 'bottomLeft' }: DropdownContainerProps) {
-  const { isOpen } = useDropdownContext();
+  const { isOpen } = useSharedState();
   const containerRef = useRef<HTMLDivElement>(null);
-  const [currentPosition, setCurrentPosition] = useState<DropdownPosition>(position);
-
-  useLayoutEffect(() => {
-    if (currentPosition === position) return;
-    // eslint-disable-next-line react-hooks/set-state-in-effect
-    setCurrentPosition(position);
-  }, [position]);
 
   return (
     <div
       ref={containerRef}
       className={cn(
         'absolute flex-col-start overflow-hidden animated-150',
-        DROPDOWN_POSITION_CLASSNAME_MAP[currentPosition],
+        DROPDOWN_POSITION_CLASSNAME_MAP[position],
         isOpen ? 'visible opacity-100' : 'invisible opacity-0',
         className,
       )}
@@ -139,7 +122,7 @@ function Container({ children, className, contentClassName, position = 'bottomLe
 }
 
 function Item({ children, onClick, className, ...props }: DropdownItemProps) {
-  const { handleClose } = useDropdownContext();
+  const { handleClose } = useSharedActions();
 
   const handleClick: MouseEventHandler<HTMLButtonElement> = e => {
     onClick?.(e);

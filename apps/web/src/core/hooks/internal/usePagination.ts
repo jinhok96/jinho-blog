@@ -1,6 +1,6 @@
 'use client';
 
-import type { PaginationInfo } from '@/core/types';
+import type { PaginationInfo } from '@jinho-blog/shared';
 
 import { useCallback } from 'react';
 import { useRouter } from 'next/navigation';

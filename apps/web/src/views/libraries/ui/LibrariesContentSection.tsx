@@ -1,5 +1,5 @@
-import type { LibraryCategory, PaginatedResult, SearchParams } from '@/core/types';
 import type { Library } from '@jinho-blog/mdx-handler';
+import type { LibraryCategory, PaginatedResult, SearchParams } from '@jinho-blog/shared';
 
 import { LIBRARY_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';

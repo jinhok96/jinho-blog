@@ -1,4 +1,4 @@
-import type { TechStack } from '@/core/types';
+import type { TechStack } from '@jinho-blog/shared';
 import type { PropsWithChildren } from 'react';
 
 import { TechBadge } from '@/core/ui/badge';

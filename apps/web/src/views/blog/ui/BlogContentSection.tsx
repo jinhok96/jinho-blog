@@ -1,5 +1,5 @@
-import type { BlogCategory, PaginatedResult, SearchParams } from '@/core/types';
 import type { Blog } from '@jinho-blog/mdx-handler';
+import type { BlogCategory, PaginatedResult, SearchParams } from '@jinho-blog/shared';
 
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';

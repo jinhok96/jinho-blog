@@ -1,7 +1,6 @@
 import type { BlogMetadata, GetBlogPostsOptions, MdxInfo, PaginatedResult } from '@jinho-blog/shared';
 
-import { ROUTER } from '@jinho-blog/shared';
-
+import { ROUTER } from '../../config';
 import { getRegistry, parseMdxFile, type RegistryEntry } from '../../core';
 import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '../../utils';
 

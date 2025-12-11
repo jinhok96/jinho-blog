@@ -1,4 +1,4 @@
-import type { ROUTER } from '@jinho-blog/shared';
+import type { ROUTER } from '../../config';
 
 import { parseMdxFile } from './parser';
 import { type ContentSection, scanMdxDirectory } from './scanner';

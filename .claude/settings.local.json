@@ -39,7 +39,8 @@
       "Bash(npm run eslint:*)",
       "Bash(node --check:*)",
       "Bash(pnpm --version:*)",
-      "Bash(npm:*)"
+      "Bash(npm:*)",
+      "Bash(node -e:*)"
     ],
     "deny": [],
     "ask": []

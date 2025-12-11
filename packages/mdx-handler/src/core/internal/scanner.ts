@@ -13,7 +13,8 @@ export interface ScannedFile {
  * 경로: content/mdx/{section}/{slug}.mdx
  */
 export function scanMdxDirectory(section: ContentSection): ScannedFile[] {
-  const mdxDir = path.join(process.cwd(), 'content', 'mdx', section);
+  // 모노레포 루트의 content 디렉토리 찾기
+  const mdxDir = path.join(process.cwd(), '..', '..', 'content', 'mdx', section);
   const files: ScannedFile[] = [];
 
   if (!fs.existsSync(mdxDir)) {

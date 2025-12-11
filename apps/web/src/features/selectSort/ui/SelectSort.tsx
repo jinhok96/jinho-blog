@@ -1,6 +1,6 @@
 'use client';
 
-import type { ContentSortOption } from '@/core/types';
+import type { ContentSortOption } from '@jinho-blog/shared';
 
 import { type ComponentProps, useState } from 'react';
 import { useRouter } from 'next/navigation';

@@ -1,4 +1,4 @@
-import type { ProjectCategory } from '@/core/types';
+import type { ProjectCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { PROJECT_CATEGORY_MAP } from '@/core/map';

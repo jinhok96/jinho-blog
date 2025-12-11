@@ -1,6 +1,6 @@
 'use client';
 
-import type { PaginationInfo } from '@/core/types';
+import type { PaginationInfo } from '@jinho-blog/shared';
 
 import { usePagination } from '@/core/hooks';
 import { cn } from '@/core/utils';

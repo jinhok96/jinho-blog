@@ -1,7 +1,6 @@
 import type { GetLibrariesOptions, LibraryMetadata, MdxInfo, PaginatedResult } from '@jinho-blog/shared';
 
-import { ROUTER } from '@jinho-blog/shared';
-
+import { ROUTER } from '../../config';
 import { parseMdxFile } from '../../core/internal/parser';
 import { getRegistry, type RegistryEntry } from '../../core/internal/registry';
 import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '../../utils/internal/content';

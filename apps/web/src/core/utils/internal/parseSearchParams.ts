@@ -1,4 +1,4 @@
-import type { ContentSortOption } from '@/core/types';
+import type { ContentSortOption } from '@jinho-blog/shared';
 
 /**
  * Comma-separated 문자열을 배열로 파싱

@@ -12,7 +12,7 @@ export function sortContent<T extends BaseMetadata>(items: T[], sortOption: Cont
     case 'oldest':
       return sorted.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
     case 'updated':
-      return sorted.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.createdAt).getTime());
+      return sorted.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
   }
 }
 

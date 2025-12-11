@@ -1,5 +1,5 @@
-import type { PaginatedResult, ProjectCategory, SearchParams } from '@/core/types';
 import type { Project } from '@jinho-blog/mdx-handler';
+import type { PaginatedResult, ProjectCategory, SearchParams } from '@jinho-blog/shared';
 
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';

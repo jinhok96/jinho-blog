@@ -1,3 +1,5 @@
+'use client';
+
 import { createContext, type Dispatch, type JSX, type PropsWithChildren, useContext, useMemo, useState } from 'react';
 
 type AnyFunction = (...args: never[]) => unknown;

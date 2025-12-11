@@ -1,4 +1,4 @@
-import type { BlogCategory, SearchParams } from '@/core/types';
+import type { BlogCategory, SearchParams } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { BLOG_CATEGORY_MAP } from '@/core/map';

@@ -1,4 +1,4 @@
-import type { BaseMetadata, ContentSortOption, PaginatedResult, PaginationInfo } from '@/core/types';
+import type { BaseMetadata, ContentSortOption, PaginatedResult, PaginationInfo } from '@jinho-blog/shared';
 
 /**
  * 콘텐츠 정렬 (공통 함수)

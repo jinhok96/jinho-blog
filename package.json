@@ -14,7 +14,8 @@
     "lint": "turbo lint",
     "lf": "turbo lf",
     "eslint": "turbo eslint",
-    "type-check": "turbo type-check"
+    "type-check": "turbo type-check",
+    "kill-port": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :3401 ^| findstr LISTENING') do taskkill /F /PID %a"
   },
   "devDependencies": {
     "turbo": "^2.3.3",

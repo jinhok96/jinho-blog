@@ -4,12 +4,9 @@ import {
   Children,
   cloneElement,
   type ComponentProps,
-  createContext,
   type HTMLAttributes,
   isValidElement,
   type PropsWithChildren,
-  useCallback,
-  useContext,
   useLayoutEffect,
   useMemo,
   useRef,
@@ -20,19 +17,34 @@ import { motion, type Transition } from 'motion/react';
 
 import { useIsMounted } from '@/core/hooks';
 import { Button, Show } from '@/core/ui';
-import { cn } from '@/core/utils';
+import { cn, createSharedState } from '@/core/utils';
 
 const DEFAULT_INDICATOR_CLASSNAME = 'bg-blue-1 pointer-events-none inset-0 absolute h-full';
 const SPRING: Transition = { type: 'spring', damping: 30, stiffness: 300 };
 
-type SlideTabContextValue = {
+type SharedState = {
   selectedTabIndex: number;
-  handleTabClick: (index: number) => void;
-  registerRef: (index: number, ref: HTMLDivElement | null) => void;
   indicatorClassName?: string;
+  tabRefs: (HTMLDivElement | null)[];
 };
 
-const SlideTabContext = createContext<SlideTabContextValue | undefined>(undefined);
+type SharedActions = {
+  setSelectedTabIndex: (index: number) => void;
+  registerRef: (index: number, ref: HTMLDivElement | null) => void;
+};
+
+const { Provider, useSharedState, useSharedActions } = createSharedState<SharedState, SharedActions>(
+  { selectedTabIndex: 0, indicatorClassName: undefined, tabRefs: [] },
+  set => ({
+    setSelectedTabIndex: (index: number) => set({ selectedTabIndex: index }),
+    registerRef: (index: number, ref: HTMLDivElement | null) =>
+      set(state => {
+        const newTabRefs = [...state.tabRefs];
+        newTabRefs[index] = ref;
+        return { tabRefs: newTabRefs };
+      }),
+  }),
+);
 
 type Props = PropsWithChildren<{
   selectedIndex?: number;
@@ -43,35 +55,41 @@ type Props = PropsWithChildren<{
   indicatorClassName?: string;
 }>;
 
-function SlideTab({
+function SlideTabContent({
   children,
   selectedIndex: controlledIndex,
   defaultSelectedIndex = 0,
   onTabChange,
   className,
   itemContainerClassName,
-  indicatorClassName,
+  indicatorClassName: indicatorClassNameProp,
 }: Props) {
-  const [internalIndex, setInternalIndex] = useState(defaultSelectedIndex);
   const [indicatorStyle, setIndicatorStyle] = useState({ width: 0, left: 0, height: 0, top: 0 });
   const scrollRef = useRef<HTMLDivElement>(null);
-  const tabRefs = useRef<(HTMLDivElement | null)[]>([]);
   const hasInitialized = useRef(false);
 
+  const { selectedTabIndex, tabRefs } = useSharedState();
+  const { setSelectedTabIndex } = useSharedActions();
+
   const isControlled = controlledIndex !== undefined;
-  const selectedTabIndex = isControlled ? controlledIndex : internalIndex;
 
-  const handleTabClick = useCallback(
-    (index: number) => {
-      if (!isControlled) setInternalIndex(index);
-      onTabChange?.(index);
-    },
-    [isControlled, onTabChange],
-  );
+  // defaultSelectedIndex 설정 (uncontrolled 모드)
+  useLayoutEffect(() => {
+    if (!isControlled) {
+      setSelectedTabIndex(defaultSelectedIndex);
+    }
+  }, [isControlled, defaultSelectedIndex, setSelectedTabIndex]);
 
-  const registerRef = useCallback((index: number, ref: HTMLDivElement | null) => {
-    tabRefs.current[index] = ref;
-  }, []);
+  // 외부 selectedIndex 변경 시 내부 상태 동기화 (controlled 모드)
+  useLayoutEffect(() => {
+    if (controlledIndex === undefined) return;
+    setSelectedTabIndex(controlledIndex);
+  }, [controlledIndex, setSelectedTabIndex]);
+
+  // 공유 상태 변경 시 외부에 알림
+  useLayoutEffect(() => {
+    onTabChange?.(selectedTabIndex);
+  }, [selectedTabIndex, onTabChange]);
 
   const getScrollOffsetLeft = (index: number, offsetLeft: number, offsetWidth: number) => {
     if (index === 0) return 0;
@@ -79,7 +97,7 @@ function SlideTab({
   };
 
   const updateIndicatorPosition = () => {
-    const selectedTab = tabRefs.current[selectedTabIndex];
+    const selectedTab = tabRefs[selectedTabIndex];
     if (!selectedTab) return;
 
     const container = scrollRef.current;
@@ -106,18 +124,8 @@ function SlideTab({
     [children],
   );
 
-  const contextValue: SlideTabContextValue = useMemo(
-    () => ({
-      selectedTabIndex,
-      handleTabClick,
-      registerRef,
-      indicatorClassName,
-    }),
-    [selectedTabIndex, handleTabClick, registerRef, indicatorClassName],
-  );
-
   useLayoutEffect(() => {
-    const selectedTab = tabRefs.current[selectedTabIndex];
+    const selectedTab = tabRefs[selectedTabIndex];
 
     // 선택한 탭으로 스크롤
     if (selectedTab && scrollRef.current) {
@@ -144,7 +152,7 @@ function SlideTab({
   }, [selectedTabIndex]);
 
   return (
-    <SlideTabContext.Provider value={contextValue}>
+    <Provider>
       <div
         className={cn('relative scrollbar-minimal flex-row-center overflow-x-auto scroll-smooth', className)}
         ref={scrollRef}
@@ -153,7 +161,7 @@ function SlideTab({
           {/* 슬라이드 인디케이터 */}
           <Show when={indicatorStyle.width > 0}>
             <motion.div
-              className={cn(DEFAULT_INDICATOR_CLASSNAME, indicatorClassName)}
+              className={cn(DEFAULT_INDICATOR_CLASSNAME, indicatorClassNameProp)}
               initial={indicatorStyle}
               animate={indicatorStyle}
               transition={SPRING}
@@ -163,7 +171,7 @@ function SlideTab({
           {childrenWithIndex}
         </div>
       </div>
-    </SlideTabContext.Provider>
+    </Provider>
   );
 }
 
@@ -173,12 +181,11 @@ type ItemProps = ComponentProps<typeof Button> & {
 };
 
 function Item({ children, index = 0, containerClassName, className, ...props }: ItemProps) {
-  const context = useContext(SlideTabContext);
   const isMounted = useIsMounted();
 
-  if (!context) throw new Error('SlideTab.Item은 반드시 SlideTab 내부에서 사용되어야 합니다.');
+  const { selectedTabIndex, indicatorClassName } = useSharedState();
+  const { setSelectedTabIndex, registerRef } = useSharedActions();
 
-  const { selectedTabIndex, handleTabClick, registerRef, indicatorClassName } = context;
   const isSelected = selectedTabIndex === index;
 
   return (
@@ -194,12 +201,20 @@ function Item({ children, index = 0, containerClassName, className, ...props }: 
       {/* 탭 버튼 */}
       <Button
         className={cn('flex-row-center justify-center', className)}
-        onClick={() => handleTabClick(index)}
+        onClick={() => setSelectedTabIndex(index)}
         {...props}
       >
         {children}
       </Button>
     </div>
+  );
+}
+
+function SlideTab(props: Props) {
+  return (
+    <Provider>
+      <SlideTabContent {...props} />
+    </Provider>
   );
 }
 

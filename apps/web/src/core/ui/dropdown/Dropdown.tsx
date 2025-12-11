@@ -24,7 +24,7 @@ type SharedActions = {
   handleClose: () => void;
 };
 
-const { Provider, useShared, useSharedState, useSharedActions } = createSharedState<SharedState, SharedActions>(
+const { Provider, useSharedState, useSharedActions } = createSharedState<SharedState, SharedActions>(
   { isOpen: false },
   set => ({
     handleToggle: () => set(({ isOpen }) => ({ isOpen: !isOpen })),
@@ -33,9 +33,10 @@ const { Provider, useShared, useSharedState, useSharedActions } = createSharedSt
   }),
 );
 
-export function Dropdown({ children, isOpen, onOpenChange, className }: DropdownProps) {
+function DropdownContent({ children, isOpen, onOpenChange, className }: DropdownProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { isOpen: isOpenState, handleOpen, handleClose } = useShared();
+  const { isOpen: isOpenState } = useSharedState();
+  const { handleOpen, handleClose } = useSharedActions();
 
   // 외부 isOpen 변경 시 내부 상태 동기화
   useLayoutEffect(() => {
@@ -43,12 +44,12 @@ export function Dropdown({ children, isOpen, onOpenChange, className }: Dropdown
 
     if (isOpen) handleOpen();
     else handleClose();
-  }, [isOpen]);
+  }, [isOpen, handleOpen, handleClose]);
 
   // 내부 상태 변경 시 외부에 알림
   useLayoutEffect(() => {
     onOpenChange?.(isOpenState);
-  }, [isOpenState]);
+  }, [isOpenState, onOpenChange]);
 
   useOutsideClickEffect(() => {
     if (!isOpenState) return;
@@ -61,13 +62,19 @@ export function Dropdown({ children, isOpen, onOpenChange, className }: Dropdown
   });
 
   return (
+    <div
+      ref={ref}
+      className={cn('relative', className)}
+    >
+      {children}
+    </div>
+  );
+}
+
+export function Dropdown(props: DropdownProps) {
+  return (
     <Provider>
-      <div
-        ref={ref}
-        className={cn('relative', className)}
-      >
-        {children}
-      </div>
+      <DropdownContent {...props} />
     </Provider>
   );
 }

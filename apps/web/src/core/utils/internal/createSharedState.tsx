@@ -1,24 +1,26 @@
-import {
-  createContext,
-  type Dispatch,
-  type PropsWithChildren,
-  type SetStateAction,
-  useContext,
-  useMemo,
-  useState,
-} from 'react';
+import { createContext, type Dispatch, type JSX, type PropsWithChildren, useContext, useMemo, useState } from 'react';
 
-export function createSharedState<
-  TState extends Record<string, unknown>,
-  TActions extends Record<string, (...args: unknown[]) => unknown>,
->(initState: TState, createActions: (set: Dispatch<SetStateAction<TState>>) => TActions) {
+type AnyFunction = (...args: never[]) => unknown;
+
+type Set<T extends Record<string, unknown>> = Partial<T> | ((prev: T) => Partial<T>);
+
+type CreateSharedState<TState extends Record<string, unknown>, TActions extends Record<string, AnyFunction>> = {
+  Provider: ({ children }: PropsWithChildren) => JSX.Element;
+  useSharedState: () => TState;
+  useSharedActions: () => TActions;
+};
+
+export function createSharedState<TState extends Record<string, unknown>, TActions extends Record<string, AnyFunction>>(
+  initState: TState,
+  createActions: (set: Dispatch<Set<TState>>) => TActions,
+): CreateSharedState<TState, TActions> {
   const StateContext = createContext<TState | undefined>(undefined);
   const ActionsContext = createContext<TActions | undefined>(undefined);
 
-  function Provider({ children }: PropsWithChildren) {
+  const Provider: CreateSharedState<TState, TActions>['Provider'] = ({ children }: PropsWithChildren) => {
     const [state, setState] = useState(initState);
 
-    const set: Dispatch<SetStateAction<TState>> = action =>
+    const set: Dispatch<Set<TState>> = action =>
       setState(prev => {
         const newState = typeof action === 'function' ? action(prev) : action;
         return { ...prev, ...newState };
@@ -33,28 +35,23 @@ export function createSharedState<
         <ActionsContext.Provider value={actions}>{children}</ActionsContext.Provider>
       </StateContext.Provider>
     );
-  }
+  };
 
-  function useSharedState() {
+  const useSharedState: CreateSharedState<TState, TActions>['useSharedState'] = () => {
     const context = useContext(StateContext);
     if (!context) {
       throw new Error('Provider 안에서 사용되어야 합니다.');
     }
     return context;
-  }
+  };
 
-  function useSharedActions() {
+  const useSharedActions: CreateSharedState<TState, TActions>['useSharedActions'] = () => {
     const context = useContext(ActionsContext);
     if (!context) {
       throw new Error('Provider 안에서 사용되어야 합니다.');
     }
     return context;
-  }
+  };
 
-  // state와 actions를 한번에 가져오는 편의 훅
-  function useShared(): TState & TActions {
-    return { ...useSharedState(), ...useSharedActions() };
-  }
-
-  return { Provider, useSharedState, useSharedActions, useShared };
+  return { Provider, useSharedState, useSharedActions };
 }

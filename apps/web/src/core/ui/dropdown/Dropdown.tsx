@@ -35,7 +35,7 @@ const { Provider, useShared, useSharedState, useSharedActions } = createSharedSt
 
 export function Dropdown({ children, isOpen, onOpenChange, className }: DropdownProps) {
   const ref = useRef<HTMLDivElement>(null);
-  const { isOpen: isInternalOpen, handleOpen, handleClose } = useShared();
+  const { isOpen: isOpenState, handleOpen, handleClose } = useShared();
 
   // 외부 isOpen 변경 시 내부 상태 동기화
   useLayoutEffect(() => {
@@ -47,16 +47,16 @@ export function Dropdown({ children, isOpen, onOpenChange, className }: Dropdown
 
   // 내부 상태 변경 시 외부에 알림
   useLayoutEffect(() => {
-    onOpenChange?.(isInternalOpen);
-  }, [isInternalOpen]);
+    onOpenChange?.(isOpenState);
+  }, [isOpenState]);
 
   useOutsideClickEffect(() => {
-    if (!isInternalOpen) return;
+    if (!isOpenState) return;
     handleClose();
   }, [ref]);
 
   useKeyDownEffect(['Escape'], () => {
-    if (!isInternalOpen) return;
+    if (!isOpenState) return;
     handleClose();
   });
 

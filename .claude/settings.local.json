@@ -40,7 +40,8 @@
       "Bash(node --check:*)",
       "Bash(pnpm --version:*)",
       "Bash(npm:*)",
-      "Bash(node -e:*)"
+      "Bash(node -e:*)",
+      "mcp__chrome-devtools__*"
     ],
     "deny": [],
     "ask": []

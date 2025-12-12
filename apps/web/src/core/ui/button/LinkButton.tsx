@@ -1,5 +1,3 @@
-'use client';
-
 import type { ButtonProps } from '@/core/ui/button/types';
 import type { LinkProps } from 'next/link';
 import type { AnchorHTMLAttributes, PropsWithChildren } from 'react';

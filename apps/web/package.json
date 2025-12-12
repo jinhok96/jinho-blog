@@ -12,13 +12,13 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@jinho-blog/shared": "*",
     "@jinho-blog/mdx-handler": "*",
+    "@jinho-blog/shared": "*",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "isomorphic-dompurify": "^2.33.0",
     "motion": "^12.23.24",
-    "next": "^16.0.7",
+    "next": "^16.0.10",
     "next-mdx-remote-client": "^2.1.7",
     "postcss": "^8.5.6",
     "react": "^19.2.1",

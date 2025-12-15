@@ -2,6 +2,12 @@
  * Utility function to convert RouteObject to URL string
  */
 /**
+ * Check if a value is a RouteObject
+ */
+export function isRouteObject(value) {
+    return (typeof value === 'object' && value !== null && 'pathname' in value && typeof value.pathname === 'string');
+}
+/**
  * Convert RouteObject to URL string
  *
  * @example

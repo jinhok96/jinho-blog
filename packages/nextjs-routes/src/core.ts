@@ -221,10 +221,10 @@ declare module 'next/link' {
 function generateNavigationModuleOverride(): string {
   return `
 declare module "next/navigation" {
-  export * from "next/dist/client/components/navigation";
+  export * from 'next/dist/client/components/navigation';
 
-  import type { StaticPathname, DynamicPathname, PathParams, SearchParams, HashParam, RouteObject } from "@jinho-blog/nextjs-routes";
-  import type { AppRouterInstance as NextAppRouterInstance } from "next/dist/shared/lib/app-router-context.shared-runtime";
+  import type { DynamicPathname, PathParams, RouteObject } from '@jinho-blog/nextjs-routes';
+  import type { AppRouterInstance as NextAppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
 
   // Get original types
   type RedirectType = "replace" | "push";

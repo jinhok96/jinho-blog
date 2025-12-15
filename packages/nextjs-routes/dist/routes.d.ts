@@ -8,6 +8,10 @@ export type RouteObject<S extends Record<string, string> = Record<string, string
     hash?: H;
 };
 /**
+ * Check if a value is a RouteObject
+ */
+export declare function isRouteObject(value: unknown): value is RouteObject;
+/**
  * Convert RouteObject to URL string
  *
  * @example

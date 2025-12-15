@@ -241,7 +241,7 @@ const baseConfig = defineConfig([
             // External packages
             ['^@?\\w'],
             // Internal packages
-            ['^@jinho-blog/shared', '^@jinho-blog/mdx-handler'],
+            ['^@jinho-blog/'],
             // Absolute imports (like @/components)
             ['^@/core'],
             ['^@/entities'],

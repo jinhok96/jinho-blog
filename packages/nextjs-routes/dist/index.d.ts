@@ -16,3 +16,4 @@ export declare function generateRoutes(dir?: string): void;
 export declare function withRoutes(nextConfig?: NextConfig): NextConfig;
 export { generateNextJSRoutes } from "./core.js";
 export type { Route, GenerateRoutesOptions } from "./core.js";
+export { routes } from "./routes.js";

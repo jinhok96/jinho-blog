@@ -38,3 +38,6 @@ export function withRoutes(nextConfig: NextConfig = {}): NextConfig {
 // Re-export core functionality for programmatic usage
 export { generateNextJSRoutes } from "./core.js";
 export type { Route, GenerateRoutesOptions } from "./core.js";
+
+// Export routes utility function
+export { routes } from "./routes.js";

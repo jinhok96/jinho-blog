@@ -32,3 +32,5 @@ export function withRoutes(nextConfig = {}) {
 }
 // Re-export core functionality for programmatic usage
 export { generateNextJSRoutes } from "./core.js";
+// Export routes utility function
+export { routes } from "./routes.js";

@@ -11,6 +11,15 @@ export type RouteObject<S extends Record<string, string> = Record<string, string
 }; // Placeholder - actual type will come from core.ts
 
 /**
+ * Check if a value is a RouteObject
+ */
+export function isRouteObject(value: unknown): value is RouteObject {
+  return (
+    typeof value === 'object' && value !== null && 'pathname' in value && typeof (value as any).pathname === 'string'
+  );
+}
+
+/**
  * Convert RouteObject to URL string
  *
  * @example

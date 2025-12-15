@@ -102,6 +102,7 @@ export type RouteObject<S extends Record<string, string> = Record<string, string
 
 declare module '@jinho-blog/nextjs-routes' {
   export type { DynamicPathname, HashParam, Pathname, PathParams, RouteObject, SearchParams, StaticPathname };
+  export function isRouteObject(value: unknown): value is RouteObject;
   export function routes<S extends Record<string, string> = Record<string, string>, H extends string = string>(
     route: RouteObject<S, H>,
   ): string;

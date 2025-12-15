@@ -9,7 +9,8 @@
     "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx,.js,.jsx",
-    "type-check": "tsc --noEmit"
+    "type-check": "tsc --noEmit",
+    "generate-routes": "nextjs-routes"
   },
   "dependencies": {
     "@jinho-blog/mdx-handler": "*",
@@ -33,6 +34,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
+    "@jinho-blog/nextjs-routes": "*",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",

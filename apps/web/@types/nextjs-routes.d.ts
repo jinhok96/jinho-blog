@@ -4,28 +4,12 @@
 /**
  * Static route pathnames (no dynamic parameters)
  */
-export type StaticPathname =
-  | '/'
-  | '/api/blog'
-  | '/api/libraries'
-  | '/api/projects'
-  | '/blog'
-  | '/libraries'
-  | '/projects';
+export type StaticPathname = '/' | '/api/blog' | '/api/libraries' | '/api/projects' | '/blog' | '/libraries' | '/projects';
 
 /**
  * Dynamic route pathnames (with parameters like [slug])
  */
-export type DynamicPathname =
-  | '/api/blog/[slug]'
-  | '/api/blog/[slug]/content'
-  | '/api/libraries/[slug]'
-  | '/api/libraries/[slug]/content'
-  | '/api/projects/[slug]'
-  | '/api/projects/[slug]/content'
-  | '/blog/[slug]'
-  | '/libraries/[slug]'
-  | '/projects/[slug]';
+export type DynamicPathname = '/api/blog/[slug]' | '/api/blog/[slug]/content' | '/api/libraries/[slug]' | '/api/libraries/[slug]/content' | '/api/projects/[slug]' | '/api/projects/[slug]/content' | '/blog/[slug]' | '/libraries/[slug]' | '/projects/[slug]';
 
 /**
  * All route pathnames
@@ -40,25 +24,17 @@ export type Pathname = StaticPathname | DynamicPathname;
  * PathParams<'/blog/[slug]'> = { slug: string }
  * PathParams<'/blog/[slug]/[id]'> = { slug: string; id: string }
  */
-export type PathParams<P extends DynamicPathname> = P extends '/api/blog/[slug]'
-  ? { slug: string }
-  : P extends '/api/blog/[slug]/content'
-    ? { slug: string }
-    : P extends '/api/libraries/[slug]'
-      ? { slug: string }
-      : P extends '/api/libraries/[slug]/content'
-        ? { slug: string }
-        : P extends '/api/projects/[slug]'
-          ? { slug: string }
-          : P extends '/api/projects/[slug]/content'
-            ? { slug: string }
-            : P extends '/blog/[slug]'
-              ? { slug: string }
-              : P extends '/libraries/[slug]'
-                ? { slug: string }
-                : P extends '/projects/[slug]'
-                  ? { slug: string }
-                  : never;
+export type PathParams<P extends DynamicPathname> =
+  P extends '/api/blog/[slug]' ? { slug: string } :
+  P extends '/api/blog/[slug]/content' ? { slug: string } :
+  P extends '/api/libraries/[slug]' ? { slug: string } :
+  P extends '/api/libraries/[slug]/content' ? { slug: string } :
+  P extends '/api/projects/[slug]' ? { slug: string } :
+  P extends '/api/projects/[slug]/content' ? { slug: string } :
+  P extends '/blog/[slug]' ? { slug: string } :
+  P extends '/libraries/[slug]' ? { slug: string } :
+  P extends '/projects/[slug]' ? { slug: string } :
+  never;
 
 /**
  * Search/query parameters (customizable via generic)
@@ -87,7 +63,10 @@ export type HashParam<T = string> = T;
  * // Dynamic route
  * { pathname: '/blog/[slug]', params: { slug: 'hello' }, search: { page: '1' } }
  */
-export type RouteObject<S extends Record<string, string> = Record<string, string>, H extends string = string> =
+export type RouteObject<
+  S extends Record<string, string> = Record<string, string>,
+  H extends string = string
+> =
   | {
       pathname: StaticPathname;
       search?: SearchParams<S>;
@@ -100,6 +79,7 @@ export type RouteObject<S extends Record<string, string> = Record<string, string
       hash?: HashParam<H>;
     };
 
+
 declare module '@jinho-blog/nextjs-routes' {
   export type { DynamicPathname, HashParam, Pathname, PathParams, RouteObject, SearchParams, StaticPathname };
   export function isRouteObject(value: unknown): value is RouteObject;
@@ -108,69 +88,14 @@ declare module '@jinho-blog/nextjs-routes' {
   ): string;
 }
 
-declare module 'next/link' {
-  import type { RouteObject } from '@jinho-blog/nextjs-routes';
-  import type { LinkProps as NextLinkProps } from 'next/dist/client/link';
-  import type { ReactElement } from 'react';
-
-  // Extend LinkProps to support RouteObject
-  interface LinkProps<S = Record<string, string>, H = string> extends Omit<NextLinkProps, 'href'> {
-    href: string | NextLinkProps['href'] | RouteObject<S, H>;
-  }
-
-  const Link: <S = Record<string, string>, H = string>(props: LinkProps<S, H>) => ReactElement;
-
-  export default Link;
-}
-
 declare module 'next/navigation' {
-  export * from 'next/dist/client/components/navigation';
+  export * from 'next/navigation';
 
-  import type { DynamicPathname, PathParams, RouteObject } from '@jinho-blog/nextjs-routes';
-  import type { AppRouterInstance as NextAppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
-
-  // Get original types
-  type RedirectType = 'replace' | 'push';
-  type NavigateOptions = { scroll?: boolean };
-  type PrefetchOptions = { kind?: 'auto' | 'full' | 'temporary' };
-
-  // redirect overloads
-  export function redirect(path: string, type?: RedirectType): never;
-  export function redirect<S = Record<string, string>, H = string>(
-    route: RouteObject<S, H>,
-    type?: RedirectType,
-  ): never;
-
-  // permanentRedirect overloads
-  export function permanentRedirect(path: string, type?: RedirectType): never;
-  export function permanentRedirect<S = Record<string, string>, H = string>(
-    route: RouteObject<S, H>,
-    type?: RedirectType,
-  ): never;
+  import type { DynamicPathname, PathParams } from '@jinho-blog/nextjs-routes';
 
   // useParams overloads
   export function useParams(): { [key: string]: string | string[] };
   export function useParams<P extends DynamicPathname>(): PathParams<P>;
-
-  // usePathname overloads
-  export function usePathname(): string;
-  export function usePathname<S = Record<string, string>, H = string>(options: {
-    isRouteObject: true;
-  }): RouteObject<S, H>;
-
-  // useRouter override
-  type TypeSafeAppRouterInstance = Omit<NextAppRouterInstance, 'push' | 'replace' | 'prefetch'> & {
-    push(href: string, options?: NavigateOptions): void;
-    push<S = Record<string, string>, H = string>(route: RouteObject<S, H>, options?: NavigateOptions): void;
-
-    replace(href: string, options?: NavigateOptions): void;
-    replace<S = Record<string, string>, H = string>(route: RouteObject<S, H>, options?: NavigateOptions): void;
-
-    prefetch(href: string, options?: PrefetchOptions): void;
-    prefetch<S = Record<string, string>, H = string>(route: RouteObject<S, H>, options?: PrefetchOptions): void;
-  };
-
-  export function useRouter(): TypeSafeAppRouterInstance;
 
   // useSearchParams overloads
   interface TypedURLSearchParams<S extends Record<string, string>> {

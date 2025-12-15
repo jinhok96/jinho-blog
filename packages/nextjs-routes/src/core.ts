@@ -194,89 +194,18 @@ declare module '@jinho-blog/nextjs-routes' {
 }
 
 /**
- * Generate next/link module override
- */
-function generateLinkModuleOverride(): string {
-  return `
-declare module 'next/link' {
-  import type { RouteObject } from '@jinho-blog/nextjs-routes';
-  import type { LinkProps as NextLinkProps } from 'next/dist/client/link';
-  import type { ReactElement } from 'react';
-
-  // Extend LinkProps to support RouteObject
-  interface LinkProps<S = Record<string, string>, H = string> extends Omit<NextLinkProps, 'href'> {
-    href: string | NextLinkProps['href'] | RouteObject<S, H>;
-  }
-
-  const Link: <S = Record<string, string>, H = string>(props: LinkProps<S, H>) => ReactElement;
-
-  export default Link;
-}
-`;
-}
-
-/**
  * Generate next/navigation module override
  */
 function generateNavigationModuleOverride(): string {
   return `
-declare module "next/navigation" {
-  export * from 'next/dist/client/components/navigation';
+declare module 'next/navigation' {
+  export * from 'next/navigation';
 
-  import type { DynamicPathname, PathParams, RouteObject } from '@jinho-blog/nextjs-routes';
-  import type { AppRouterInstance as NextAppRouterInstance } from 'next/dist/shared/lib/app-router-context.shared-runtime';
-
-  // Get original types
-  type RedirectType = "replace" | "push";
-  type NavigateOptions = { scroll?: boolean };
-  type PrefetchOptions = { kind?: "auto" | "full" | "temporary" };
-
-  // redirect overloads
-  export function redirect(path: string, type?: RedirectType): never;
-  export function redirect<S = Record<string, string>, H = string>(
-    route: RouteObject<S, H>,
-    type?: RedirectType
-  ): never;
-
-  // permanentRedirect overloads
-  export function permanentRedirect(path: string, type?: RedirectType): never;
-  export function permanentRedirect<S = Record<string, string>, H = string>(
-    route: RouteObject<S, H>,
-    type?: RedirectType
-  ): never;
+  import type { DynamicPathname, PathParams } from '@jinho-blog/nextjs-routes';
 
   // useParams overloads
   export function useParams(): { [key: string]: string | string[] };
   export function useParams<P extends DynamicPathname>(): PathParams<P>;
-
-  // usePathname overloads
-  export function usePathname(): string;
-  export function usePathname<S = Record<string, string>, H = string>(options: {
-    isRouteObject: true;
-  }): RouteObject<S, H>;
-
-  // useRouter override
-  type TypeSafeAppRouterInstance = Omit<NextAppRouterInstance, 'push' | 'replace' | 'prefetch'> & {
-    push(href: string, options?: NavigateOptions): void;
-    push<S = Record<string, string>, H = string>(
-      route: RouteObject<S, H>,
-      options?: NavigateOptions
-    ): void;
-
-    replace(href: string, options?: NavigateOptions): void;
-    replace<S = Record<string, string>, H = string>(
-      route: RouteObject<S, H>,
-      options?: NavigateOptions
-    ): void;
-
-    prefetch(href: string, options?: PrefetchOptions): void;
-    prefetch<S = Record<string, string>, H = string>(
-      route: RouteObject<S, H>,
-      options?: PrefetchOptions
-    ): void;
-  };
-
-  export function useRouter(): TypeSafeAppRouterInstance;
 
   // useSearchParams overloads
   interface TypedURLSearchParams<S extends Record<string, string>> {
@@ -298,45 +227,6 @@ declare module "next/navigation" {
 }
 
 /**
- * Generate next/router module override (Pages Router)
- */
-function generateRouterModuleOverride(): string {
-  return `
-declare module "next/router" {
-  export * from "next/dist/client/router";
-
-  import type { RouteObject } from "@jinho-blog/nextjs-routes";
-  import type { NextRouter as NextRouterType } from "next/dist/client/router";
-
-  type TransitionOptions = {
-    shallow?: boolean;
-    locale?: string | false;
-    scroll?: boolean;
-  };
-
-  // NextRouter extension
-  type TypeSafeNextRouter = Omit<NextRouterType, 'push' | 'replace'> & {
-    push(url: string, as?: string, options?: TransitionOptions): Promise<boolean>;
-    push<S = Record<string, string>, H = string>(
-      route: RouteObject<S, H>,
-      as?: string,
-      options?: TransitionOptions
-    ): Promise<boolean>;
-
-    replace(url: string, as?: string, options?: TransitionOptions): Promise<boolean>;
-    replace<S = Record<string, string>, H = string>(
-      route: RouteObject<S, H>,
-      as?: string,
-      options?: TransitionOptions
-    ): Promise<boolean>;
-  };
-
-  export function useRouter(): TypeSafeNextRouter;
-}
-`;
-}
-
-/**
  * Generate module overrides based on router types used
  */
 function generateModuleOverrides(hasAppRouter: boolean, hasPagesRouter: boolean): string {
@@ -345,17 +235,9 @@ function generateModuleOverrides(hasAppRouter: boolean, hasPagesRouter: boolean)
   // nextjs-routes module override (always include)
   output += generateNextJSRoutesModuleOverride();
 
-  // Link component override (always include)
-  output += generateLinkModuleOverride();
-
   // App Router module override
   if (hasAppRouter) {
     output += generateNavigationModuleOverride();
-  }
-
-  // Pages Router module override
-  if (hasPagesRouter) {
-    output += generateRouterModuleOverride();
   }
 
   return output;

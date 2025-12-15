@@ -110,14 +110,14 @@ declare module '@jinho-blog/nextjs-routes' {
 declare module 'next/link' {
   import type { RouteObject } from '@jinho-blog/nextjs-routes';
   import type { LinkProps as NextLinkProps } from 'next/dist/client/link';
-  import type React from 'react';
+  import type { ReactElement } from 'react';
 
   // Extend LinkProps to support RouteObject
   interface LinkProps<S = Record<string, string>, H = string> extends Omit<NextLinkProps, 'href'> {
     href: string | NextLinkProps['href'] | RouteObject<S, H>;
   }
 
-  const Link: <S = Record<string, string>, H = string>(props: LinkProps<S, H>) => React.ReactElement;
+  const Link: <S = Record<string, string>, H = string>(props: LinkProps<S, H>) => ReactElement;
 
   export default Link;
 }

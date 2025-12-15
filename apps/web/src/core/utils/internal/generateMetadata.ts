@@ -1,17 +1,19 @@
 import type { Metadata } from 'next';
 
-import { ROUTER, type RouterName, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
+import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
 
 type GeneratePageMetadataParams = {
-  routerName: RouterName;
+  path: string;
   title?: string;
   description?: string;
 };
 
-export function generatePageMetadata({ routerName, title, description }: GeneratePageMetadataParams): Metadata {
+export function generatePageMetadata({ path, title, description }: GeneratePageMetadataParams): Metadata {
   const pageTitle = title || SITE_NAME;
   const pageDescription = description || SITE_DESCRIPTION;
-  const url = `${SITE_URL}${ROUTER[routerName]}`;
+
+  const query = path.startsWith('/') ? path : `/${path}`;
+  const url = `${SITE_URL}${query}`;
 
   return {
     title: pageTitle,

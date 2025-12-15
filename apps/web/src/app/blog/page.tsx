@@ -1,6 +1,8 @@
 import type { BlogCategory, SearchParams } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { AsyncBoundary, type SelectOption } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -11,7 +13,7 @@ import { SelectSort } from '@/features/selectSort';
 import { BlogContentSection } from '@/views/blog';
 
 export const metadata: Metadata = generatePageMetadata({
-  routerName: 'blog',
+  path: routes({ pathname: '/blog' }),
   title: '블로그',
   description: '블로그 목록',
 });

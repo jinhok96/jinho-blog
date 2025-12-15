@@ -1,12 +1,14 @@
 import type { Metadata } from 'next';
 
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { AsyncBoundary } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { LibrariesContentSection } from '@/views/libraries';
 
 export const metadata: Metadata = generatePageMetadata({
-  routerName: 'libraries',
+  path: routes({ pathname: '/libraries' }),
   title: '라이브러리',
   description: '라이브러리 목록',
 });

@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
-import { ROUTER } from '@/core/config';
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { ContentDetailWrapper } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
@@ -42,7 +43,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!project) return {};
 
   return generatePageMetadata({
-    routerName: 'projects',
+    path: routes({ pathname: '/projects/[slug]', params: { slug } }),
     title: project.title,
     description: project.description,
   });
@@ -59,7 +60,7 @@ export default async function ProjectPage({ params }: Props) {
   if (!fileContent) notFound();
 
   return (
-    <ContentDetailWrapper rootHref={ROUTER.projects}>
+    <ContentDetailWrapper rootHref={routes({ pathname: '/projects' })}>
       <ProjectDetail
         project={project}
         fileContent={fileContent}

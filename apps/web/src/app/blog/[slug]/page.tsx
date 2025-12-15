@@ -3,7 +3,8 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
-import { ROUTER } from '@/core/config';
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentDetailWrapper, ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -41,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!post) return {};
 
   return generatePageMetadata({
-    routerName: 'blog',
+    path: routes({ pathname: '/blog/[slug]', params: { slug } }),
     title: post.title,
     description: post.description,
   });
@@ -60,7 +61,7 @@ export default async function BlogPostPage({ params }: Props) {
   if (!fileContent) notFound();
 
   return (
-    <ContentDetailWrapper rootHref={ROUTER.blog}>
+    <ContentDetailWrapper rootHref={routes({ pathname: '/blog' })}>
       <ContentHeader
         category={BLOG_CATEGORY_MAP[category]}
         title={title}

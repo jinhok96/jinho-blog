@@ -3,6 +3,8 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { LIBRARY_CATEGORY_MAP } from '@/core/map';
 import { ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -40,7 +42,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   if (!library) return {};
 
   return generatePageMetadata({
-    routerName: 'libraries',
+    path: routes({ pathname: '/libraries/[slug]', params: { slug } }),
     title: library.title,
     description: library.description,
   });

@@ -1,0 +1,29 @@
+{
+  "name": "@jinho-blog/nextjs-routes",
+  "version": "1.0.0",
+  "description": "Type safe routing for Next.js - generates route type declarations",
+  "private": true,
+  "type": "module",
+  "bin": {
+    "nextjs-routes": "./dist/cli.js"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/index.cjs",
+      "default": "./dist/index.js"
+    }
+  },
+  "scripts": {
+    "build": "tsc",
+    "clean": "rm -rf dist",
+    "dev": "tsc --watch"
+  },
+  "peerDependencies": {
+    "next": "*"
+  },
+  "devDependencies": {
+    "@types/node": "^20",
+    "typescript": "^5"
+  },
+  "sideEffects": false
+}

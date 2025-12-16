@@ -3,7 +3,6 @@
   "files.associations": {
     "*.css": "tailwindcss"
   },
-  "tailwindCSS.experimental.configFile": "./src/styles/globals.css",
   "typescript.preferences.preferTypeOnlyAutoImports": true,
   "tailwindCSS.experimental.classRegex": [
     // Styled Components / Template Literals

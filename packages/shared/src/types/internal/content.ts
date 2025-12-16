@@ -28,9 +28,6 @@ type GetContentOptions<TCategory extends string> = {
   page?: number; // 페이지 번호 (1-based)
   count?: number; // 페이지당 아이템 수
   search?: string; // 제목/설명 검색어
-  // 하위 호환성 (deprecated)
-  limit?: number; // 결과 개수 제한
-  offset?: number; // 페이지네이션 오프셋
 };
 
 // 각 엔티티별 타입 별칭

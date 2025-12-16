@@ -16,7 +16,7 @@ function parseString<T extends string>(value: string | string[] | undefined): T 
 }
 
 /**
- * 숫자형 파라미터 파싱 (limit, offset)
+ * 숫자형 파라미터 파싱
  */
 function parseNumeric(value: string | string[] | undefined): number | undefined {
   const str = getSingleValue(value);
@@ -54,8 +54,6 @@ export function parseContentSearchParams<TCategory extends string, TSort extends
   page?: number;
   count?: number;
   search?: string | string[];
-  limit?: number;
-  offset?: number;
 } {
   return {
     category: parseString<TCategory>(searchParams.category),
@@ -63,7 +61,5 @@ export function parseContentSearchParams<TCategory extends string, TSort extends
     page: parseNumeric(searchParams.page),
     count: parseNumeric(searchParams.count),
     search: parseCommaString(searchParams.search),
-    limit: parseNumeric(searchParams.limit),
-    offset: parseNumeric(searchParams.offset),
   };
 }

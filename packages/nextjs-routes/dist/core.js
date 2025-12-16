@@ -263,7 +263,7 @@ ${pathParamsType}
  * Search/query parameters (customizable via generic)
  *
  * @example
- * SearchParams<{ page: string; limit: string }>
+ * SearchParams<{ page: string; count: string }>
  */
 export type SearchParams<T = Record<string, string | string[] | undefined>> = T;
 

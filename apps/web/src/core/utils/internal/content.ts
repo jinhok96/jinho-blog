@@ -87,12 +87,3 @@ export function paginateContentWithMeta<T>(items: T[], page?: number, itemsPerPa
     pagination,
   };
 }
-
-/**
- * 페이지네이션 (공통 함수)
- * @deprecated Use paginateContentWithMeta instead
- */
-export function paginateContent<T>(items: T[], limit?: number, offset: number = 0): T[] {
-  if (limit === undefined) return items;
-  return items.slice(offset, offset + limit);
-}

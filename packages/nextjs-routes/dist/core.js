@@ -147,10 +147,16 @@ function generateNextJSRoutesModuleOverride() {
     return `
 declare module '@jinho-blog/nextjs-routes' {
   export type { DynamicPathname, HashParam, Pathname, PathParams, RouteObject, SearchParams, StaticPathname };
-  export function isRouteObject(value: unknown): value is RouteObject;
-  export function routes<S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>, H extends string = string>(
-    route: RouteObject<S, H>,
-  ): string;
+
+  export function isRouteObject<
+    S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>,
+    H extends string = string,
+  >(value: unknown): value is RouteObject<S, H>;
+
+  export function routes<
+    S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>,
+    H extends string = string,
+  >(route: RouteObject<S, H>): string;
 }
 `;
 }

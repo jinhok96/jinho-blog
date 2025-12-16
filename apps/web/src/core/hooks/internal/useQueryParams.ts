@@ -1,53 +1,90 @@
-import { useSearchParams } from 'next/navigation';
+import { useEffect, useMemo, useRef } from 'react';
+import { usePathname, useSearchParams } from 'next/navigation';
+
+type QueryParamsAPI<T extends Record<string, string | string[] | undefined>> = {
+  set: (key: string & keyof T, value: string | string[]) => QueryParamsAPI<T>;
+  remove: (keys: (string & keyof T) | (string & keyof T)[]) => QueryParamsAPI<T>;
+  get: (key: string & keyof T) => string | null;
+  getAll: (key: string & keyof T) => string[];
+  toString: () => string;
+  toHref: (pathname?: string) => string;
+};
 
 export function useQueryParams<T extends Record<string, string | string[] | undefined>>() {
+  const currentPathname = usePathname();
   const searchParams = useSearchParams<T>();
+  const paramsRef = useRef<URLSearchParams>(new URLSearchParams(searchParams.toString()));
 
-  /**
-   * 쿼리 파라미터를 설정하여 새로운 URL을 반환합니다.
-   * 기존에 해당 키가 있든 없든 요청한 값으로 설정합니다.
-   */
-  const set = (key: string & keyof T, value: string | string[]): string => {
-    const newSearchParams = new URLSearchParams(searchParams.toString());
+  // searchParams가 변경되면 ref도 동기화
+  useEffect(() => {
+    paramsRef.current = new URLSearchParams(searchParams.toString());
+  }, [searchParams]);
 
-    if (Array.isArray(value)) {
-      newSearchParams.delete(key);
-      value.forEach(v => newSearchParams.append(key, v));
-    } else {
-      newSearchParams.set(key, value);
-    }
+  const api = useMemo<QueryParamsAPI<T>>(
+    () => ({
+      /**
+       * 쿼리 파라미터를 설정합니다.
+       * 기존에 해당 키가 있든 없든 요청한 값으로 설정합니다.
+       * 체이닝을 위해 자기 자신을 반환합니다.
+       */
+      set(key: string & keyof T, value: string | string[]) {
+        if (Array.isArray(value)) {
+          paramsRef.current.delete(key);
+          value.forEach(v => paramsRef.current.append(key, v));
+        } else {
+          paramsRef.current.set(key, value);
+        }
+        return this;
+      },
 
-    const queryString = newSearchParams.toString();
-    return queryString;
-  };
+      /**
+       * 지정된 쿼리 파라미터를 제거합니다.
+       * 체이닝을 위해 자기 자신을 반환합니다.
+       */
+      remove(keys: (string & keyof T) | (string & keyof T)[]) {
+        const keysArray = Array.isArray(keys) ? keys : [keys];
+        keysArray.forEach(key => {
+          paramsRef.current.delete(key);
+        });
+        return this;
+      },
 
-  /**
-   * 현재 URL에서 지정된 쿼리 파라미터를 제거하여 새로운 URL을 반환합니다.
-   */
-  const remove = (keys: (string & keyof T) | (string & keyof T)[]): string => {
-    const newSearchParams = new URLSearchParams(searchParams.toString());
-    const keysArray = Array.isArray(keys) ? keys : [keys];
+      /**
+       * 현재 쿼리 파라미터의 값을 가져옵니다.
+       */
+      get(key: string & keyof T) {
+        return paramsRef.current.get(key);
+      },
 
-    keysArray.forEach(key => {
-      newSearchParams.delete(key);
-    });
+      /**
+       * 현재 쿼리 파라미터의 모든 값을 배열로 가져옵니다.
+       */
+      getAll(key: string & keyof T) {
+        return paramsRef.current.getAll(key);
+      },
 
-    const queryString = newSearchParams.toString();
-    return queryString;
-  };
+      /**
+       * 현재 쿼리 파라미터를 알파벳 순으로 정렬하여 문자열로 반환합니다.
+       */
+      toString() {
+        const params = new URLSearchParams(paramsRef.current);
+        params.sort();
+        return params.toString();
+      },
 
-  /**
-   * 현재 쿼리 파라미터의 값을 가져옵니다.
-   */
-  const get = (key: string & keyof T) => {
-    return searchParams.get(key);
-  };
-  /**
-   * 현재 쿼리 파라미터의 모든 값을 배열로 가져옵니다.
-   */
-  const getAll = (key: string & keyof T) => {
-    return searchParams.getAll(key);
-  };
+      /**
+       * 현재 쿼리 파라미터를 포함한 href 문자열을 반환합니다.
+       * pathname이 주어지면 해당 경로를 기준으로, 없으면 현재 경로를 기준으로 합니다.
+       * 쿼리 파라미터는 알파벳 순으로 정렬됩니다.
+       */
+      toHref(pathname: string = currentPathname) {
+        const queryString = this.toString();
+        if (!queryString) return pathname;
+        return `${pathname}?${queryString}`;
+      },
+    }),
+    [currentPathname],
+  );
 
-  return { set, remove, get, getAll };
+  return api;
 }

@@ -3,7 +3,7 @@
 import type { PaginationInfo } from '@jinho-blog/shared';
 import type { PropsWithChildren } from 'react';
 
-import { LinkButton, Show } from '@/core/ui';
+import { LinkButton } from '@/core/ui';
 import { cn } from '@/core/utils';
 
 import { usePagination } from '@/features/pagination/lib';
@@ -39,11 +39,10 @@ function PaginationLinkButton({ href, disabled, current, children }: PaginationL
 type Props = {
   className?: string;
   pagination: PaginationInfo;
-  showFirstLast?: boolean;
   maxPageButtons?: number;
 };
 
-export function Pagination({ className, pagination, showFirstLast = false, maxPageButtons = 5 }: Props) {
+export function Pagination({ className, pagination, maxPageButtons = 5 }: Props) {
   const {
     currentPage,
     getPageHref,
@@ -65,18 +64,16 @@ export function Pagination({ className, pagination, showFirstLast = false, maxPa
   const pageNumbers = getPageNumbers(maxPageButtons);
 
   return (
-    <div className={cn('flex-row-center w-full justify-center', className)}>
+    <div className={cn('flex-row-center w-full justify-center pt-12', className)}>
       {/* 처음 */}
-      <Show when={showFirstLast}>
-        <PaginationLinkButton
-          href={firstHref}
-          disabled={!hasPrev}
-        >
-          <div className="size-3.5">
-            <FirstPageIcon strokeWidth={1.5} />
-          </div>
-        </PaginationLinkButton>
-      </Show>
+      <PaginationLinkButton
+        href={firstHref}
+        disabled={!hasPrev}
+      >
+        <div className="size-3.5">
+          <FirstPageIcon strokeWidth={1.5} />
+        </div>
+      </PaginationLinkButton>
 
       {/* 이전 */}
       <PaginationLinkButton
@@ -110,16 +107,14 @@ export function Pagination({ className, pagination, showFirstLast = false, maxPa
       </PaginationLinkButton>
 
       {/* 마지막 */}
-      <Show when={showFirstLast}>
-        <PaginationLinkButton
-          href={lastHref}
-          disabled={!hasNext}
-        >
-          <div className="size-3.5">
-            <LastPageIcon strokeWidth={1.5} />
-          </div>
-        </PaginationLinkButton>
-      </Show>
+      <PaginationLinkButton
+        href={lastHref}
+        disabled={!hasNext}
+      >
+        <div className="size-3.5">
+          <LastPageIcon strokeWidth={1.5} />
+        </div>
+      </PaginationLinkButton>
     </div>
   );
 }

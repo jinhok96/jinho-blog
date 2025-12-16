@@ -4,23 +4,19 @@ import type { PaginatedResult } from '@jinho-blog/shared';
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';
 
-import { Pagination } from '@/features/pagination';
-
 type Props = {
-  data: PaginatedResult<Blog>;
+  posts: PaginatedResult<Blog>['items'];
 };
 
-export async function BlogContentSection({ data }: Props) {
-  const { items, pagination } = data;
-
+export async function BlogContentSection({ posts }: Props) {
   return (
-    <div className="flex-col-start w-full gap-6">
+    <div className="w-full">
       <Show
-        when={items.length}
+        when={posts.length}
         fallback={ContentCardSection.Placeholder}
       >
         <ContentCardSection>
-          {items.map(({ category, slug, path, ...post }) => (
+          {posts.map(({ category, slug, path, ...post }) => (
             <ContentCardSection.Card
               key={slug}
               href={path}
@@ -30,12 +26,6 @@ export async function BlogContentSection({ data }: Props) {
           ))}
         </ContentCardSection>
       </Show>
-
-      <Pagination
-        pagination={pagination}
-        showFirstLast
-        maxPageButtons={5}
-      />
     </div>
   );
 }

@@ -9,6 +9,7 @@ import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { type SelectOption } from '@/core/ui';
 import { generatePageMetadata, parseContentSearchParams } from '@/core/utils';
 
+import { Pagination } from '@/features/pagination';
 import { SelectCategory } from '@/features/selectCategory';
 import { SelectSort } from '@/features/selectSort';
 
@@ -62,7 +63,7 @@ export default async function BlogListPage({ searchParams }: Props) {
   const params = await searchParams;
   const parsed = parseContentSearchParams<BlogCategory>(params);
 
-  const data = await fetchBlogPosts({
+  const { items, pagination } = await fetchBlogPosts({
     category: Array.isArray(parsed.category) ? parsed.category[0] : parsed.category,
     sort: parsed.sort,
     page: parsed.page,
@@ -71,7 +72,7 @@ export default async function BlogListPage({ searchParams }: Props) {
   });
 
   return (
-    <div className="flex-col-start size-full gap-6">
+    <div className="flex-col-start size-full flex-1 gap-6">
       <h1 className="font-title-36">블로그</h1>
 
       <div className="z-10 flex-row-center w-full justify-between">
@@ -82,7 +83,9 @@ export default async function BlogListPage({ searchParams }: Props) {
         <SelectSort position="bottomRight" />
       </div>
 
-      <BlogContentSection data={data} />
+      <BlogContentSection posts={items} />
+
+      <Pagination pagination={pagination} />
     </div>
   );
 }

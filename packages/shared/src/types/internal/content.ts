@@ -23,7 +23,7 @@ export type PaginatedResult<T> = {
 
 // 제네릭 조회 옵션 인터페이스
 type GetContentOptions<TCategory extends string> = {
-  category?: TCategory | TCategory[]; // 단일 또는 복수 카테고리
+  category?: TCategory; // 카테고리
   sort?: ContentSortOption;
   page?: number; // 페이지 번호 (1-based)
   count?: number; // 페이지당 아이템 수

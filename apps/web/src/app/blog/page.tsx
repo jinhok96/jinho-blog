@@ -1,6 +1,4 @@
-import type { Blog } from '@jinho-blog/mdx-handler';
 import type { BlogCategory, ContentSortOption, SearchParams } from '@jinho-blog/shared';
-import type { PaginatedResult } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
@@ -9,37 +7,15 @@ import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { type SelectOption } from '@/core/ui';
 import { generatePageMetadata, parseContentSearchParams } from '@/core/utils';
 
+import { createBlogService, type GetBlogPosts } from '@/entities/blog';
+
 import { Pagination } from '@/features/pagination';
 import { SelectCategory } from '@/features/selectCategory';
 import { SelectSort } from '@/features/selectSort';
 
 import { BlogContentSection } from '@/views/blog';
 
-async function fetchBlogPosts(options: {
-  category?: BlogCategory;
-  sort?: ContentSortOption;
-  page?: number;
-  count?: number;
-  search?: string;
-}): Promise<PaginatedResult<Blog>> {
-  const params = new URLSearchParams();
-  if (options.category) params.set('category', options.category);
-  if (options.sort) params.set('sort', options.sort);
-  if (options.page) params.set('page', String(options.page));
-  if (options.count) params.set('count', String(options.count));
-  if (options.search) params.set('search', options.search);
-
-  const baseUrl = process.env.NEXT_PUBLIC_BASE_URL || 'http://localhost:3000';
-  const res = await fetch(`${baseUrl}/api/blog?${params}`, {
-    next: { revalidate: 3600 },
-  });
-
-  if (!res.ok) {
-    throw new Error('Failed to fetch blog posts');
-  }
-
-  return res.json();
-}
+const blogService = createBlogService();
 
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/blog' }),
@@ -61,15 +37,17 @@ type Props = {
 
 export default async function BlogListPage({ searchParams }: Props) {
   const params = await searchParams;
-  const parsed = parseContentSearchParams<BlogCategory>(params);
+  const { category, sort, page, count, search } = parseContentSearchParams<BlogCategory, ContentSortOption>(params);
 
-  const { items, pagination } = await fetchBlogPosts({
-    category: Array.isArray(parsed.category) ? parsed.category[0] : parsed.category,
-    sort: parsed.sort,
-    page: parsed.page,
-    count: parsed.count,
-    search: parsed.search,
-  });
+  const getBlogPostsParams: GetBlogPosts['Params'] = {};
+
+  if (category) getBlogPostsParams.category = Array.isArray(category) ? category[0] : category;
+  if (sort) getBlogPostsParams.sort = sort;
+  if (typeof page === 'number') getBlogPostsParams.page = page.toString();
+  if (typeof count === 'number') getBlogPostsParams.count = count.toString();
+  if (search) getBlogPostsParams.search = Array.isArray(search) ? search.join(',') : search;
+
+  const { items, pagination } = await blogService.getBlogPosts(getBlogPostsParams);
 
   return (
     <div className="flex-col-start size-full flex-1 gap-6">

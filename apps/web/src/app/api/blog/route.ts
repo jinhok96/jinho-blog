@@ -1,4 +1,4 @@
-import type { BlogCategory } from '@jinho-blog/shared';
+import type { BlogCategory, ContentSortOption, GetBlogPostsOptions } from '@jinho-blog/shared';
 import type { NextRequest } from 'next/server';
 
 import { NextResponse } from 'next/server';
@@ -9,11 +9,11 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
 
-    const options = {
+    const options: GetBlogPostsOptions = {
       category: searchParams.get('category') as BlogCategory | undefined,
-      sort: searchParams.get('sort') as 'latest' | 'oldest' | 'updated' | undefined,
-      page: Number(searchParams.get('page')) || 1,
-      count: Number(searchParams.get('count')) || 12,
+      sort: searchParams.get('sort') as ContentSortOption | undefined,
+      page: Number(searchParams.get('page')) || undefined,
+      count: Number(searchParams.get('count')) || undefined,
       search: searchParams.get('search') || undefined,
     };
 

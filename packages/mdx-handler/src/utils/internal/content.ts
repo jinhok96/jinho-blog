@@ -1,9 +1,10 @@
 import type { BaseMetadata, ContentSortOption, PaginatedResult, PaginationInfo } from '@jinho-blog/shared';
+import { DEFAULT_COUNT, DEFAULT_PAGE, DEFAULT_SORT } from '../../config';
 
 /**
  * 콘텐츠 정렬 (공통 함수)
  */
-export function sortContent<T extends BaseMetadata>(items: T[], sortOption: ContentSortOption = 'latest'): T[] {
+export function sortContent<T extends BaseMetadata>(items: T[], sortOption: ContentSortOption = DEFAULT_SORT): T[] {
   const sorted = [...items]; // 원본 배열 변경 방지
 
   switch (sortOption) {
@@ -19,7 +20,7 @@ export function sortContent<T extends BaseMetadata>(items: T[], sortOption: Cont
 /**
  * 카테고리 필터링 (공통 함수)
  */
-export function filterByCategory<T extends { category: string }>(items: T[], category?: string | string[]): T[] {
+export function filterByCategory<T extends { category: string }>(items: T[], category?: string): T[] {
   if (!category) return items;
 
   const categories = Array.isArray(category) ? category : [category];
@@ -27,15 +28,51 @@ export function filterByCategory<T extends { category: string }>(items: T[], cat
 }
 
 /**
- * 텍스트 검색 (제목/설명) (공통 함수)
+ * 텍스트 검색 (공통 함수)
+ *
+ * search를 콤마(,)로 파싱하여 모든 검색어가 포함된 항목만 반환 (AND 조건)
+ *
+ * @param items 검색할 항목 배열
+ * @param searchKeys 검색에 포함할 키 목록
+ * @param search 검색어 (콤마로 구분된 여러 검색어 가능)
+ *
+ * @example
+ * // 모든 속성에서 검색
+ * searchContent(items, "example,react")
+ *
+ * @example
+ * // title과 tech만 검색 (날짜, 카테고리 제외)
+ * searchContent(items, "example,react", ["title", "tech"])
  */
-export function searchContent<T extends { title: string; description: string }>(items: T[], search?: string): T[] {
+export function searchContent<T extends Record<string, unknown>, K extends keyof T>(
+  items: T[],
+  searchKeys: K[],
+  search?: string,
+): T[] {
   if (!search) return items;
 
-  const searchLower = search.toLowerCase();
-  return items.filter(
-    item => item.title.toLowerCase().includes(searchLower) || item.description.toLowerCase().includes(searchLower),
-  );
+  // 콤마로 파싱하여 배열로 변환
+  const searchTerms = search
+    .split(',')
+    .map(term => term.trim().toLowerCase())
+    .filter(term => term.length > 0);
+
+  if (searchTerms.length === 0) return items;
+
+  // 모든 검색어가 지정된 키의 값에 포함되어야 함 (AND 조건)
+  return items.filter(item => {
+    return searchTerms.every(term => {
+      return searchKeys.some(key => {
+        const value = item[key];
+        if (typeof value === 'string') {
+          return value.toLowerCase().includes(term);
+        } else if (Array.isArray(value)) {
+          return value.some(v => v.toString().toLowerCase().includes(term));
+        }
+        return false;
+      });
+    });
+  });
 }
 
 /**
@@ -60,27 +97,14 @@ export function calculatePagination(totalItems: number, page: number = 1, itemsP
 /**
  * 페이지네이션된 콘텐츠 추출
  */
-export function paginateContentWithMeta<T>(items: T[], page?: number, itemsPerPage?: number): PaginatedResult<T> {
-  // itemsPerPage가 없으면 전체 데이터 반환
-  if (itemsPerPage === undefined) {
-    return {
-      items,
-      pagination: {
-        currentPage: 1,
-        totalPages: 1,
-        totalItems: items.length,
-        itemsPerPage: items.length,
-        hasNext: false,
-        hasPrev: false,
-        nextPage: null,
-        prevPage: null,
-      },
-    };
-  }
-
-  const pagination = calculatePagination(items.length, page ?? 1, itemsPerPage);
-  const startIndex = (pagination.currentPage - 1) * itemsPerPage;
-  const endIndex = startIndex + itemsPerPage;
+export function paginateContentWithMeta<T>(
+  items: T[],
+  page: number = DEFAULT_PAGE,
+  count: number = DEFAULT_COUNT,
+): PaginatedResult<T> {
+  const pagination = calculatePagination(items.length, page ?? 1, count);
+  const startIndex = (pagination.currentPage - 1) * count;
+  const endIndex = startIndex + count;
 
   return {
     items: items.slice(startIndex, endIndex),

@@ -1,6 +1,6 @@
 import type { GetProjectsOptions, MdxInfo, PaginatedResult, ProjectMetadata } from '@jinho-blog/shared';
 
-import { ROUTER } from '../../config';
+import { MDX_ROUTES } from '../../config';
 import { parseMdxFile } from '../../core/internal/parser';
 import { getRegistry, type RegistryEntry } from '../../core/internal/registry';
 import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '../../utils/internal/content';
@@ -11,12 +11,12 @@ export type Project = ProjectMetadata & MdxInfo & RegistryEntry;
  * 프로젝트 목록 조회
  */
 export async function getProjects(options?: GetProjectsOptions): Promise<PaginatedResult<Project>> {
-  const { category, sort = 'latest', page = 1, count = 12, search } = options || {};
+  const { category, sort, page, count, search } = options || {};
 
-  let projects = getRegistry<Project>('projects', ROUTER);
+  let projects = getRegistry<Project>('projects', MDX_ROUTES);
 
   projects = filterByCategory(projects, category);
-  projects = searchContent(projects, search);
+  projects = searchContent<Project, keyof ProjectMetadata>(projects, ['title', 'description', 'tech'], search);
   projects = sortContent(projects, sort);
 
   return paginateContentWithMeta(projects, page, count);
@@ -26,7 +26,7 @@ export async function getProjects(options?: GetProjectsOptions): Promise<Paginat
  * 단일 프로젝트 조회
  */
 export async function getProject(slug: string): Promise<Project | null> {
-  const registry = getRegistry<Project>('projects', ROUTER);
+  const registry = getRegistry<Project>('projects', MDX_ROUTES);
   return registry.find(project => project.slug === slug) || null;
 }
 

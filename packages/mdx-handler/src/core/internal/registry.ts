@@ -1,4 +1,4 @@
-import type { ROUTER } from '../../config';
+import type { MDX_ROUTES } from '../../config';
 
 import { parseMdxFile } from './parser';
 import { type ContentSection, scanMdxDirectory } from './scanner';
@@ -18,7 +18,7 @@ const registryCache = new Map<ContentSection, RegistryEntry[]>();
  */
 export function generateRegistry<T extends RegistryEntry = RegistryEntry>(
   section: ContentSection,
-  router: typeof ROUTER,
+  router: typeof MDX_ROUTES,
 ): T[] {
   const files = scanMdxDirectory(section);
   const entries: T[] = [];
@@ -42,7 +42,7 @@ export function generateRegistry<T extends RegistryEntry = RegistryEntry>(
  */
 export function getRegistry<T extends RegistryEntry = RegistryEntry>(
   section: ContentSection,
-  router: typeof ROUTER,
+  router: typeof MDX_ROUTES,
 ): T[] {
   if (!registryCache.has(section)) {
     const registry = generateRegistry<T>(section, router);

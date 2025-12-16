@@ -1,6 +1,6 @@
 import type { GetLibrariesOptions, LibraryMetadata, MdxInfo, PaginatedResult } from '@jinho-blog/shared';
 
-import { ROUTER } from '../../config';
+import { MDX_ROUTES } from '../../config';
 import { parseMdxFile } from '../../core/internal/parser';
 import { getRegistry, type RegistryEntry } from '../../core/internal/registry';
 import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '../../utils/internal/content';
@@ -11,22 +11,22 @@ export type Library = LibraryMetadata & MdxInfo & RegistryEntry;
  * 라이브러리 목록 조회
  */
 export async function getLibraries(options?: GetLibrariesOptions): Promise<PaginatedResult<Library>> {
-  const { category, sort = 'latest', page = 1, count = 12, search } = options || {};
+  const { category, sort, page, count, search } = options || {};
 
-  let libraries = getRegistry<Library>('libraries', ROUTER);
+  let data = getRegistry<Library>('libraries', MDX_ROUTES);
 
-  libraries = filterByCategory(libraries, category);
-  libraries = searchContent(libraries, search);
-  libraries = sortContent(libraries, sort);
+  data = filterByCategory(data, category);
+  data = searchContent<Library, keyof LibraryMetadata>(data, ['title', 'description', 'tech'], search);
+  data = sortContent(data, sort);
 
-  return paginateContentWithMeta(libraries, page, count);
+  return paginateContentWithMeta(data, page, count);
 }
 
 /**
  * 단일 라이브러리 조회
  */
 export async function getLibrary(slug: string): Promise<Library | null> {
-  const registry = getRegistry<Library>('libraries', ROUTER);
+  const registry = getRegistry<Library>('libraries', MDX_ROUTES);
   return registry.find(library => library.slug === slug) || null;
 }
 

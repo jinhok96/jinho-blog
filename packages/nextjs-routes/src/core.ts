@@ -202,6 +202,7 @@ declare module 'next/navigation' {
   export * from 'next/navigation';
 
   import type { DynamicPathname, PathParams } from '@jinho-blog/nextjs-routes';
+  import type { ReadonlyURLSearchParams } from 'next/navigation';
 
   // useParams overloads
   export function useParams(): { [key: string]: string | string[] };

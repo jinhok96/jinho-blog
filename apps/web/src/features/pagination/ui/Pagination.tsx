@@ -1,11 +1,40 @@
 'use client';
 
 import type { PaginationInfo } from '@jinho-blog/shared';
+import type { PropsWithChildren } from 'react';
 
 import { LinkButton, Show } from '@/core/ui';
 import { cn } from '@/core/utils';
 
 import { usePagination } from '@/features/pagination/lib';
+
+import ChevronLeftIcon from 'public/icons/chevron_left.svg';
+import ChevronRightIcon from 'public/icons/chevron_right.svg';
+import FirstPageIcon from 'public/icons/first_page.svg';
+import LastPageIcon from 'public/icons/last_page.svg';
+
+type PaginationLinkButtonProps = PropsWithChildren<{
+  href: string | null;
+  disabled?: boolean;
+  current?: boolean;
+}>;
+
+function PaginationLinkButton({ href, disabled, current, children }: PaginationLinkButtonProps) {
+  return (
+    <LinkButton
+      href={href || '#'}
+      disabled={!href || disabled}
+      size="md"
+      color="background"
+      className={cn(
+        'flex-row-center aspect-square size-10 shrink-0 justify-center p-0 leading-none',
+        current && 'text-blue-7 font-semibold hover:bg-transparent cursor-default',
+      )}
+    >
+      {children}
+    </LinkButton>
+  );
+}
 
 type Props = {
   className?: string;
@@ -33,63 +62,63 @@ export function Pagination({ className, pagination, showFirstLast = false, maxPa
   const nextHref = getNextPageHref();
   const firstHref = getFirstPageHref();
   const lastHref = getLastPageHref();
-
   const pageNumbers = getPageNumbers(maxPageButtons);
-  const showStartEllipsis = pageNumbers[0] > 1;
-  const showEndEllipsis = pageNumbers[pageNumbers.length - 1] < pagination.totalPages;
 
   return (
-    <div className={cn('flex-row-center gap-2', className)}>
+    <div className={cn('flex-row-center w-full justify-center', className)}>
+      {/* 처음 */}
       <Show when={showFirstLast}>
-        <LinkButton
-          href={firstHref || ''}
+        <PaginationLinkButton
+          href={firstHref}
           disabled={!hasPrev}
         >
-          처음
-        </LinkButton>
+          <div className="size-3.5">
+            <FirstPageIcon strokeWidth={1.5} />
+          </div>
+        </PaginationLinkButton>
       </Show>
 
-      <LinkButton
+      {/* 이전 */}
+      <PaginationLinkButton
         href={prevHref || ''}
         disabled={!hasPrev}
       >
-        이전
-      </LinkButton>
+        <div className="size-3.5">
+          <ChevronLeftIcon strokeWidth={1.5} />
+        </div>
+      </PaginationLinkButton>
 
-      <Show when={showStartEllipsis}>
-        <LinkButton href={getPageHref(1) || ''}>1</LinkButton>
-        <span className="px-1 text-gray-400">...</span>
-      </Show>
-
+      {/* 페이지 */}
       {pageNumbers.map(page => (
-        <LinkButton
+        <PaginationLinkButton
           key={page}
-          href={getPageHref(page) || ''}
-          disabled={page === currentPage}
+          href={getPageHref(page)}
+          current={page === currentPage}
         >
           {page}
-        </LinkButton>
+        </PaginationLinkButton>
       ))}
 
-      <Show when={showEndEllipsis}>
-        <span className="px-1 text-gray-400">...</span>
-        <LinkButton href={getPageHref(pagination.totalPages) || ''}>{pagination.totalPages}</LinkButton>
-      </Show>
-
-      <LinkButton
-        href={nextHref || ''}
+      {/* 다음 */}
+      <PaginationLinkButton
+        href={nextHref}
         disabled={!hasNext}
       >
-        다음
-      </LinkButton>
+        <div className="size-3.5">
+          <ChevronRightIcon strokeWidth={1.5} />
+        </div>
+      </PaginationLinkButton>
 
+      {/* 마지막 */}
       <Show when={showFirstLast}>
-        <LinkButton
-          href={lastHref || ''}
+        <PaginationLinkButton
+          href={lastHref}
           disabled={!hasNext}
         >
-          마지막
-        </LinkButton>
+          <div className="size-3.5">
+            <LastPageIcon strokeWidth={1.5} />
+          </div>
+        </PaginationLinkButton>
       </Show>
     </div>
   );

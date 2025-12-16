@@ -1,9 +1,15 @@
 import type { GetLibrariesOptions, LibraryMetadata, MdxInfo, PaginatedResult } from '@jinho-blog/shared';
 
-import { MDX_ROUTES } from '../../config';
-import { parseMdxFile } from '../../core/internal/parser';
-import { getRegistry, type RegistryEntry } from '../../core/internal/registry';
-import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '../../utils/internal/content';
+import { MDX_ROUTES } from '../../core/config';
+import {
+  getRegistry,
+  type RegistryEntry,
+  filterByCategory,
+  paginateContentWithMeta,
+  searchContent,
+  sortContent,
+  parseMdxFile,
+} from '../../core/utils';
 
 export type Library = LibraryMetadata & MdxInfo & RegistryEntry;
 

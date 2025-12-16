@@ -1,5 +1,5 @@
 import type { Library } from '@jinho-blog/mdx-handler';
-import type { LibraryCategory, PaginatedResult, SearchParams } from '@jinho-blog/shared';
+import type { ContentSortOption, LibraryCategory, PaginatedResult, SearchParams } from '@jinho-blog/shared';
 
 import { LIBRARY_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';
@@ -36,14 +36,14 @@ async function fetchLibraries(options: {
 
 export async function LibrariesContentSection({ searchParams }: Props) {
   const params = await searchParams;
-  const parsed = parseContentSearchParams<LibraryCategory>(params);
+  const { category, sort, page, count, search } = parseContentSearchParams<LibraryCategory, ContentSortOption>(params);
 
   const { items: libraries, pagination } = await fetchLibraries({
-    category: Array.isArray(parsed.category) ? parsed.category[0] : parsed.category,
-    sort: parsed.sort,
-    page: parsed.page,
-    count: parsed.count,
-    search: parsed.search,
+    category: Array.isArray(category) ? category[0] : category,
+    sort,
+    page,
+    count,
+    search: Array.isArray(search) ? search.join(',') : search,
   });
 
   return (
@@ -66,11 +66,7 @@ export async function LibrariesContentSection({ searchParams }: Props) {
         </ContentCardSection>
       </Show>
 
-      <Pagination
-        pagination={pagination}
-        showFirstLast
-        maxPageButtons={5}
-      />
+      <Pagination pagination={pagination} />
     </div>
   );
 }

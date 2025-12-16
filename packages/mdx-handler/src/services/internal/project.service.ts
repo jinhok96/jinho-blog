@@ -1,9 +1,15 @@
 import type { GetProjectsOptions, MdxInfo, PaginatedResult, ProjectMetadata } from '@jinho-blog/shared';
 
-import { MDX_ROUTES } from '../../config';
-import { parseMdxFile } from '../../core/internal/parser';
-import { getRegistry, type RegistryEntry } from '../../core/internal/registry';
-import { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from '../../utils/internal/content';
+import { MDX_ROUTES } from '../../core/config';
+import {
+  getRegistry,
+  type RegistryEntry,
+  parseMdxFile,
+  filterByCategory,
+  paginateContentWithMeta,
+  searchContent,
+  sortContent,
+} from '../../core/utils';
 
 export type Project = ProjectMetadata & MdxInfo & RegistryEntry;
 

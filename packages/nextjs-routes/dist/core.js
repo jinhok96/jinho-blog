@@ -124,7 +124,7 @@ function generateRouteObjectType() {
  * { pathname: '/blog/[slug]', params: { slug: 'hello' }, search: { page: '1' } }
  */
 export type RouteObject<
-  S extends Record<string, string> = Record<string, string>,
+  S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>,
   H extends string = string
 > =
   | {
@@ -148,7 +148,7 @@ function generateNextJSRoutesModuleOverride() {
 declare module '@jinho-blog/nextjs-routes' {
   export type { DynamicPathname, HashParam, Pathname, PathParams, RouteObject, SearchParams, StaticPathname };
   export function isRouteObject(value: unknown): value is RouteObject;
-  export function routes<S extends Record<string, string> = Record<string, string>, H extends string = string>(
+  export function routes<S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>, H extends string = string>(
     route: RouteObject<S, H>,
   ): string;
 }
@@ -169,7 +169,7 @@ declare module 'next/navigation' {
   export function useParams<P extends DynamicPathname>(): PathParams<P>;
 
   // useSearchParams overloads
-  interface TypedURLSearchParams<S extends Record<string, string>> {
+  interface TypedURLSearchParams<S extends Record<string, string | string[] | undefined>> {
     get<K extends keyof S>(name: K): S[K] | null;
     getAll<K extends keyof S>(name: K): S[K][];
     has<K extends keyof S>(name: K): boolean;
@@ -182,7 +182,7 @@ declare module 'next/navigation' {
   }
 
   export function useSearchParams(): ReadonlyURLSearchParams;
-  export function useSearchParams<S extends Record<string, string>>(): TypedURLSearchParams<S>;
+  export function useSearchParams<S extends Record<string, string | string[] | undefined>>(): TypedURLSearchParams<S>;
 }
 `;
 }
@@ -258,7 +258,7 @@ ${pathParamsType}
  * @example
  * SearchParams<{ page: string; limit: string }>
  */
-export type SearchParams<T = Record<string, string>> = T;
+export type SearchParams<T = Record<string, string | string[] | undefined>> = T;
 
 /**
  * Hash parameter (customizable via generic)

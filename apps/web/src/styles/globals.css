@@ -17,6 +17,10 @@
     @apply bg-background text-foreground;
   }
 
+  a {
+    @apply inline-block;
+  }
+
   button,
   a {
     @apply cursor-pointer;

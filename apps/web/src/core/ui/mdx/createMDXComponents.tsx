@@ -1,12 +1,6 @@
-import type {
-  AnchorHTMLAttributes,
-  ComponentProps,
-  HTMLAttributes,
-  TableHTMLAttributes,
-  TdHTMLAttributes,
-  ThHTMLAttributes,
-} from 'react';
+import type { ComponentProps, HTMLAttributes, TableHTMLAttributes, TdHTMLAttributes, ThHTMLAttributes } from 'react';
 
+import { LinkButton } from '@/core/ui/button';
 import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
 import { cn } from '@/core/utils';
@@ -64,17 +58,18 @@ export function createMDXComponents(modalView?: boolean) {
       />
     ),
 
-    a: ({ children, className, ...props }: AnchorHTMLAttributes<HTMLAnchorElement>) => (
-      <a
+    a: ({ children, className, href, ...props }: ComponentProps<typeof LinkButton>) => (
+      <LinkButton
         className={cn(
           `
-            mx-1 underline underline-offset-2 animated-100
+            mr-1.5 underline underline-offset-2 animated-100
             first:ml-0
             hover:text-blue-7
           `,
           className,
         )}
         target="_blank"
+        href={href || '#'}
         {...props}
       >
         <span className="peer">{children}</span>
@@ -89,7 +84,7 @@ export function createMDXComponents(modalView?: boolean) {
             <LinkIcon strokeWidth={1.5} />
           </div>
         </span>
-      </a>
+      </LinkButton>
     ),
 
     ul: ({ className, ...props }: HTMLAttributes<HTMLUListElement>) => (

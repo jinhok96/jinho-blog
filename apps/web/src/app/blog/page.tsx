@@ -39,7 +39,7 @@ export default async function BlogListPage({ searchParams }: Props) {
   const params = await searchParams;
   const { category, sort, page, count, search } = parseContentSearchParams<BlogCategory, ContentSortOption>(params);
 
-  const getBlogPostsParams: GetBlogPosts['Params'] = {};
+  const getBlogPostsParams: GetBlogPosts['search'] = {};
 
   if (category) getBlogPostsParams.category = Array.isArray(category) ? category[0] : category;
   if (sort) getBlogPostsParams.sort = sort;

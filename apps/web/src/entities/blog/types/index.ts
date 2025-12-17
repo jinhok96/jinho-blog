@@ -1,1 +1,1 @@
-export type { GetBlogPosts } from './types';
+export type { GetBlogContent, GetBlogPost, GetBlogPosts } from './types';

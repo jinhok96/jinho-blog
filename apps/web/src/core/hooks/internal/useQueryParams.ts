@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef } from 'react';
+import { useMemo } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 type QueryParamsAPI<T extends Record<string, string | string[] | undefined>> = {
@@ -13,12 +13,12 @@ type QueryParamsAPI<T extends Record<string, string | string[] | undefined>> = {
 export function useQueryParams<T extends Record<string, string | string[] | undefined>>() {
   const currentPathname = usePathname();
   const searchParams = useSearchParams<T>();
-  const paramsRef = useRef<URLSearchParams>(new URLSearchParams(searchParams.toString()));
 
-  // searchParams가 변경되면 ref도 동기화
-  useEffect(() => {
-    paramsRef.current = new URLSearchParams(searchParams.toString());
-  }, [searchParams]);
+  const writeableSearchParams = useMemo(() => new URLSearchParams(searchParams.toString()), [searchParams]);
+
+  console.log('currentPathname', currentPathname);
+  console.log('searchParams', searchParams.get('sort'));
+  console.log('writeableSearchParams', writeableSearchParams.get('sort'));
 
   const api = useMemo<QueryParamsAPI<T>>(
     () => ({
@@ -29,10 +29,10 @@ export function useQueryParams<T extends Record<string, string | string[] | unde
        */
       set(key: string & keyof T, value: string | string[]) {
         if (Array.isArray(value)) {
-          paramsRef.current.delete(key);
-          value.forEach(v => paramsRef.current.append(key, v));
+          writeableSearchParams.delete(key);
+          value.forEach(v => writeableSearchParams.append(key, v));
         } else {
-          paramsRef.current.set(key, value);
+          writeableSearchParams.set(key, value);
         }
         return this;
       },
@@ -44,7 +44,7 @@ export function useQueryParams<T extends Record<string, string | string[] | unde
       remove(keys: (string & keyof T) | (string & keyof T)[]) {
         const keysArray = Array.isArray(keys) ? keys : [keys];
         keysArray.forEach(key => {
-          paramsRef.current.delete(key);
+          writeableSearchParams.delete(key);
         });
         return this;
       },
@@ -53,21 +53,21 @@ export function useQueryParams<T extends Record<string, string | string[] | unde
        * 현재 쿼리 파라미터의 값을 가져옵니다.
        */
       get(key: string & keyof T) {
-        return paramsRef.current.get(key);
+        return writeableSearchParams.get(key);
       },
 
       /**
        * 현재 쿼리 파라미터의 모든 값을 배열로 가져옵니다.
        */
       getAll(key: string & keyof T) {
-        return paramsRef.current.getAll(key);
+        return writeableSearchParams.getAll(key);
       },
 
       /**
        * 현재 쿼리 파라미터를 알파벳 순으로 정렬하여 문자열로 반환합니다.
        */
       toString() {
-        const params = new URLSearchParams(paramsRef.current);
+        const params = new URLSearchParams(writeableSearchParams);
         params.sort();
         return params.toString();
       },
@@ -83,7 +83,7 @@ export function useQueryParams<T extends Record<string, string | string[] | unde
         return `${pathname}?${queryString}`;
       },
     }),
-    [currentPathname],
+    [currentPathname, writeableSearchParams],
   );
 
   return api;

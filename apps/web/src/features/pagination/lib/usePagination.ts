@@ -26,7 +26,7 @@ export function usePagination({
   nextPage,
   prevPage,
 }: PaginationInfo): UsePaginationReturn {
-  const params = useQueryParams();
+  const params = useQueryParams<{ page: string }>();
 
   const getPageHref = useCallback(
     (page: number) => {

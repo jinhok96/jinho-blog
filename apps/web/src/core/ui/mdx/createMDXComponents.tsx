@@ -62,8 +62,7 @@ export function createMDXComponents(modalView?: boolean) {
       <LinkButton
         className={cn(
           `
-            mr-1.5 underline underline-offset-2 animated-100
-            first:ml-0
+            group/a mr-1.5! p-0! underline underline-offset-2 animated-100
             hover:text-blue-7
           `,
           className,
@@ -72,12 +71,11 @@ export function createMDXComponents(modalView?: boolean) {
         href={href || '#'}
         {...props}
       >
-        <span className="peer">{children}</span>
+        <span>{children}</span>
         <span
           className={`
             h-full pl-1 text-gray-5 animated-100
-            peer-hover:text-blue-7
-            hover:text-blue-7
+            group-hover/a:text-inherit
           `}
         >
           <div className="flex-row-center inline-block size-4 h-full pb-0.5 align-middle">

@@ -3,6 +3,7 @@
 import type { ButtonProps } from '@/core/ui/button/types';
 import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
 
+import { PressableButton } from '@/core/ui/button/PressableButton';
 import { buttonVariants } from '@/core/ui/button/variants';
 import { cn } from '@/core/utils';
 
@@ -19,23 +20,31 @@ export function Button({
   disabled,
   ...props
 }: Props) {
+  const variants = buttonVariants({
+    variant,
+    color,
+    size,
+    rounded,
+    disableHover,
+    disabled,
+  });
+
   return (
-    <button
-      className={cn(
-        buttonVariants({
-          variant,
-          color,
-          size,
-          rounded,
-          disableHover,
-          disabled,
-        }),
-        className,
-      )}
-      disabled={disabled}
-      {...props}
-    >
-      {children}
-    </button>
+    <>
+      <button
+        className={cn(variants, className, 'hover-none:hidden')}
+        disabled={disabled}
+        {...props}
+      >
+        {children}
+      </button>
+      <PressableButton
+        className={cn(variants, className, 'not-hover-none:hidden')}
+        disabled={disabled}
+        {...props}
+      >
+        {children}
+      </PressableButton>
+    </>
   );
 }

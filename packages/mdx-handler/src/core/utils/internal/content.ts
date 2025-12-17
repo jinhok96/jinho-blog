@@ -2,19 +2,36 @@ import type { BaseMetadata, ContentSortOption, PaginatedResult, PaginationInfo }
 
 import { DEFAULT_COUNT, DEFAULT_PAGE, DEFAULT_SORT } from '../../config';
 
+type CompareFn<T extends BaseMetadata> = (a: T, b: T) => number;
+
 /**
  * 콘텐츠 정렬 (공통 함수)
+ * 기본값: 최신순 (latest)
  */
 export function sortContent<T extends BaseMetadata>(items: T[], sortOption: ContentSortOption = DEFAULT_SORT): T[] {
   const sorted = [...items]; // 원본 배열 변경 방지
 
+  const sortLatest: CompareFn<T> = (a, b) => {
+    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
+  };
+
+  const sortOldest: CompareFn<T> = (a, b) => {
+    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+  };
+
+  const sortUpdated: CompareFn<T> = (a, b) => {
+    return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
+  };
+
   switch (sortOption) {
     case 'latest':
-      return sorted.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
+      return sorted.sort(sortLatest);
     case 'oldest':
-      return sorted.sort((a, b) => new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime());
+      return sorted.sort(sortOldest);
     case 'updated':
-      return sorted.sort((a, b) => new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime());
+      return sorted.sort(sortUpdated);
+    default:
+      return sorted.sort(sortLatest);
   }
 }
 
@@ -103,12 +120,15 @@ export function paginateContentWithMeta<T>(
   page: number = DEFAULT_PAGE,
   count: number = DEFAULT_COUNT,
 ): PaginatedResult<T> {
-  const pagination = calculatePagination(items.length, page ?? 1, count);
+  // 방어 코드: items가 오류로 undefined인 경우 빈 배열로 처리
+  const safeItems = items || [];
+
+  const pagination = calculatePagination(safeItems.length, page ?? 1, count);
   const startIndex = (pagination.currentPage - 1) * count;
   const endIndex = startIndex + count;
 
   return {
-    items: items.slice(startIndex, endIndex),
+    items: safeItems.slice(startIndex, endIndex),
     pagination,
   };
 }

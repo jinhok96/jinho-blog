@@ -42,7 +42,7 @@ export function RouteModal({ children }: Props) {
             dark:bg-gray-1
             tablet:inset-auto tablet:rounded-4xl tablet:border
           `,
-          !isShow && 'opacity-0 translate-x-10 tablet:translate-y-10 tablet:scale-95',
+          !isShow && 'opacity-0 translate-x-6 tablet:translate-x-0 tablet:translate-y-8 tablet:scale-95',
         )}
       >
         <div

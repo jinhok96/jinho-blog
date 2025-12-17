@@ -29,7 +29,7 @@ export const buttonVariants = cva('animated-100', {
     },
 
     disabled: {
-      true: 'opacity-60 cursor-not-allowed',
+      true: 'opacity-40 cursor-not-allowed',
     },
   },
 

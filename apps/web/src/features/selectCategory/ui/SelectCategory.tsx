@@ -22,7 +22,7 @@ type Props<T extends string> = {
 
 export function SelectCategory<T extends string>({ className, options, position }: Props<T>) {
   const router = useRouter();
-  const params = useQueryParams<{ category: T | AllOptionKey }>();
+  const params = useQueryParams<{ category: T | AllOptionKey; page: string }>();
 
   const category = params.get('category');
   const initIndex = options.findIndex(option => option.key === category);
@@ -35,12 +35,14 @@ export function SelectCategory<T extends string>({ className, options, position 
   const handleOptionClick = (index: number) => {
     setCurrentIndex(index);
 
+    const paramsWithoutPage = params.remove('page');
+
     if (index === 0) {
-      const nextHref = params.remove('category').toHref();
+      const nextHref = paramsWithoutPage.remove('category').toHref();
       return router.replace(nextHref);
     }
 
-    const nextHref = params.set('category', optionsWithAll[index].key).toHref();
+    const nextHref = paramsWithoutPage.set('category', optionsWithAll[index].key).toHref();
     router.replace(nextHref);
   };
 

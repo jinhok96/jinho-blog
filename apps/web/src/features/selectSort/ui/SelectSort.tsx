@@ -21,7 +21,7 @@ type Props = {
 
 export function SelectSort({ className, position }: Props) {
   const router = useRouter();
-  const params = useQueryParams<{ sort: ContentSortOption }>();
+  const params = useQueryParams<{ sort: ContentSortOption; page: string }>();
 
   const sort = params.get('sort');
   const initIndex = SORT_OPTIONS.findIndex(option => option.key === sort);
@@ -31,7 +31,7 @@ export function SelectSort({ className, position }: Props) {
   const handleOptionClick = (index: number) => {
     setCurrentIndex(index);
 
-    const nextHref = params.set('sort', SORT_OPTIONS[index].key).toHref();
+    const nextHref = params.remove('page').set('sort', SORT_OPTIONS[index].key).toHref();
     router.replace(nextHref);
   };
 

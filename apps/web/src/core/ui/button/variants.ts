@@ -1,6 +1,6 @@
 import { cva } from 'class-variance-authority';
 
-export const buttonVariants = cva('animated-100', {
+export const buttonVariants = cva('block animated-100', {
   variants: {
     variant: {
       solid: '',

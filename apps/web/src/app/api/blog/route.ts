@@ -1,20 +1,26 @@
-import type { BlogCategory, ContentSortOption, GetBlogPostsOptions } from '@jinho-blog/shared';
 import type { NextRequest } from 'next/server';
 
 import { NextResponse } from 'next/server';
 
 import { getBlogPosts } from '@jinho-blog/mdx-handler';
+import { type GetBlogPostsOptions, isBlogCategory, isContentSortOption } from '@jinho-blog/shared';
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
 
+    const category = searchParams.get('category');
+    const sort = searchParams.get('sort');
+    const page = searchParams.get('page');
+    const count = searchParams.get('count');
+    const search = searchParams.get('search');
+
     const options: GetBlogPostsOptions = {
-      category: searchParams.get('category') as BlogCategory | undefined,
-      sort: searchParams.get('sort') as ContentSortOption | undefined,
-      page: Number(searchParams.get('page')) || undefined,
-      count: Number(searchParams.get('count')) || undefined,
-      search: searchParams.get('search') || undefined,
+      category: isBlogCategory(category) ? category : undefined,
+      sort: isContentSortOption(sort) ? sort : undefined,
+      page: Number(page) || undefined,
+      count: Number(count) || undefined,
+      search: search || undefined,
     };
 
     const result = await getBlogPosts(options);

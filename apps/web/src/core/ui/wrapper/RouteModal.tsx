@@ -1,11 +1,11 @@
 'use client';
 
-import type { PropsWithChildren } from 'react';
-
+import { type PropsWithChildren, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { useKeyDownEffect } from '@/core/hooks';
+import { useKeyDownEffect, useMountEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
+import { cn } from '@/core/utils';
 
 import CloseIcon from 'public/icons/close.svg';
 
@@ -13,27 +13,37 @@ type Props = PropsWithChildren;
 
 export function RouteModal({ children }: Props) {
   const router = useRouter();
+  const [isShow, setIsShow] = useState(false);
+
   const handleClose = () => {
-    router.back();
+    setIsShow(false);
+    setTimeout(() => router.back(), 150);
   };
 
   useKeyDownEffect(['Escape'], handleClose);
+
+  useMountEffect(() => {
+    setIsShow(true);
+  });
 
   return (
     <div className="fixed inset-0 z-modal flex-col-center justify-center pb-header">
       {/* 오버레이 */}
       <div
-        className="fixed inset-0 backdrop-blur-xs"
+        className={cn('fixed inset-0 backdrop-blur-xs animated-150', !isShow && 'opacity-0')}
         onClick={handleClose}
       />
 
       {/* 모달 콘텐츠 */}
       <div
-        className={`
-          fixed inset-0 overflow-hidden border-foreground-2 bg-background drop-shadow-2xl
-          dark:bg-gray-1
-          tablet:inset-auto tablet:rounded-4xl tablet:border
-        `}
+        className={cn(
+          `
+            fixed inset-0 overflow-hidden border-foreground-2 bg-background drop-shadow-2xl animated-150
+            dark:bg-gray-1
+            tablet:inset-auto tablet:rounded-4xl tablet:border
+          `,
+          !isShow && 'opacity-0 translate-x-10 tablet:translate-y-10 tablet:scale-95',
+        )}
       >
         <div
           className={`
@@ -41,7 +51,7 @@ export function RouteModal({ children }: Props) {
             tablet:scrollbar-margin-6 tablet:max-h-180 tablet:w-lg
           `}
         >
-          <div className="py-8">{children}</div>
+          <div className="pt-8 pb-16">{children}</div>
         </div>
 
         {/* 닫기 버튼 */}

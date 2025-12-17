@@ -1,7 +1,7 @@
-import { useEffect } from 'react';
+import { useLayoutEffect } from 'react';
 
 export function useMountEffect(callback: () => void): void {
-  useEffect(() => {
+  useLayoutEffect(() => {
     callback();
   }, []);
 }

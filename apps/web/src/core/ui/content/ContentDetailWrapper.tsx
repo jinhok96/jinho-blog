@@ -34,10 +34,6 @@ type Props = PropsWithChildren<{
 export function ContentDetailWrapper({ children, rootHref }: Props) {
   return (
     <div className="flex-col-start size-full gap-3">
-      <div className="flex-row-center w-full justify-end">
-        <ArchiveBoxLinkButton href={rootHref} />
-      </div>
-
       {children}
 
       <div className="flex-row-center w-full justify-end">

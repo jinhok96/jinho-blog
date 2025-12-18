@@ -1,1 +1,1 @@
-export { isBlogCategory, isLibraryCategory, isProjectCategory, isContentSortOption } from './internal/typeGuards';
+export { isBlogCategory, isContentSortOption,isLibraryCategory, isProjectCategory } from './internal/typeGuards';

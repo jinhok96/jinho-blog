@@ -1,9 +1,8 @@
-import type { ContentSortOption, LibraryCategory, SearchParams } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
-import { generatePageMetadata, parseContentSearchParams } from '@/core/utils';
+import { generatePageMetadata, parseSearchParams } from '@/core/utils';
 
 import { createLibrariesService, type GetLibraries } from '@/entities/libraries';
 
@@ -20,20 +19,20 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 type Props = {
-  searchParams: Promise<SearchParams>;
+  searchParams: Promise<SearchParams<Record<keyof GetLibraries['search'], string | string[] | undefined>>>;
 };
 
 export default async function LibrariesListPage({ searchParams }: Props) {
-  const params = await searchParams;
-  const { category, sort, page, count, search } = parseContentSearchParams<LibraryCategory, ContentSortOption>(params);
+  const { category, sort, tech, page, count, search } = await searchParams;
 
-  const getLibrariesParams: GetLibraries['Params'] = {};
-
-  if (category) getLibrariesParams.category = Array.isArray(category) ? category[0] : category;
-  if (sort) getLibrariesParams.sort = sort;
-  if (typeof page === 'number') getLibrariesParams.page = page.toString();
-  if (typeof count === 'number') getLibrariesParams.count = count.toString();
-  if (search) getLibrariesParams.search = Array.isArray(search) ? search.join(',') : search;
+  const getLibrariesParams: GetLibraries['search'] = {
+    category: parseSearchParams.category(category),
+    sort: parseSearchParams.sort(sort),
+    tech: parseSearchParams.tech(tech),
+    page: parseSearchParams.page(page)?.toString(),
+    count: parseSearchParams.count(count)?.toString(),
+    search: parseSearchParams.search(search)?.join(','),
+  };
 
   const { items, pagination } = await librariesService.getLibraries(getLibrariesParams);
 

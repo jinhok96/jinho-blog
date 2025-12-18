@@ -1,4 +1,4 @@
-import type { GetProjects } from '@/entities/projects/types';
+import type { GetProject, GetProjectContent, GetProjects } from '@/entities/projects/types';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
@@ -7,13 +7,27 @@ import { http, type HttpClient } from '@/core/http';
 const defaultHttpClient = http();
 
 type ProjectsService = (httpClient?: typeof defaultHttpClient) => {
-  getProjects: (params: GetProjects['Params']) => Promise<GetProjects['Response']>;
+  getProjects: (params: GetProjects['search']) => Promise<GetProjects['response']>;
+  getProject: (params: GetProject['params']) => Promise<GetProject['response']>;
+  getProjectContent: (params: GetProjectContent['params']) => Promise<GetProjectContent['response']>;
 };
 
 export const createProjectsService: ProjectsService = (httpClient: HttpClient = defaultHttpClient) => ({
   getProjects: async params => {
-    const response = await httpClient.get<GetProjects['Response']>(
-      routes({ pathname: '/api/projects', search: params })
+    const response = await httpClient.get<GetProjects['response']>(
+      routes({ pathname: '/api/projects', search: params }),
+    );
+    return response;
+  },
+
+  getProject: async params => {
+    const response = await httpClient.get<GetProject['response']>(routes({ pathname: '/api/projects/[slug]', params }));
+    return response;
+  },
+
+  getProjectContent: async params => {
+    const response = await httpClient.get<GetProjectContent['response']>(
+      routes({ pathname: '/api/projects/[slug]/content', params }),
     );
     return response;
   },

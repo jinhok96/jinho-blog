@@ -1,4 +1,4 @@
-import type { ContentSortOption, GetProjectsOptions, ProjectCategory } from '@jinho-blog/shared';
+import type { GetProjectsOptions } from '@jinho-blog/shared';
 import type { NextRequest } from 'next/server';
 
 import { NextResponse } from 'next/server';
@@ -9,8 +9,8 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
 
-    const category = searchParams.get('category') as ProjectCategory | null;
-    const sort = searchParams.get('sort') as ContentSortOption | null;
+    const category = searchParams.get('category');
+    const sort = searchParams.get('sort');
     const page = searchParams.get('page');
     const count = searchParams.get('count');
     const search = searchParams.get('search');

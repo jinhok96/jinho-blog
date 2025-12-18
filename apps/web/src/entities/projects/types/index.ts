@@ -1,1 +1,1 @@
-export type { GetProjects } from './types';
+export type { GetProject, GetProjectContent, GetProjects } from './types';

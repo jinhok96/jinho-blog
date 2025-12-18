@@ -2,11 +2,11 @@ import type { BlogMetadata, GetBlogPostsOptions, MdxInfo, PaginatedResult } from
 
 import { MDX_ROUTES } from '../../core/config';
 import {
+  filterByCategory,
   getRegistry,
+  paginateContentWithMeta,
   parseMdxFile,
   type RegistryEntry,
-  filterByCategory,
-  paginateContentWithMeta,
   searchContent,
   sortContent,
 } from '../../core/utils';
@@ -21,13 +21,8 @@ export async function getBlogPosts(options?: GetBlogPostsOptions): Promise<Pagin
 
   let data = getRegistry<Blog>('blog', MDX_ROUTES);
 
-  // 1. 카테고리 필터링
   data = filterByCategory(data, category);
-
-  // 2. 텍스트 검색
   data = searchContent<Blog, keyof BlogMetadata>(data, ['title', 'description'], search);
-
-  // 3. 정렬
   data = sortContent(data, sort);
 
   // 4. 페이지네이션

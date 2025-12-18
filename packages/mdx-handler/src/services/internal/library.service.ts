@@ -2,13 +2,14 @@ import type { GetLibrariesOptions, LibraryMetadata, MdxInfo, PaginatedResult } f
 
 import { MDX_ROUTES } from '../../core/config';
 import {
-  getRegistry,
-  type RegistryEntry,
   filterByCategory,
+  filterByTechStack,
+  getRegistry,
   paginateContentWithMeta,
+  parseMdxFile,
+  type RegistryEntry,
   searchContent,
   sortContent,
-  parseMdxFile,
 } from '../../core/utils';
 
 export type Library = LibraryMetadata & MdxInfo & RegistryEntry;
@@ -17,11 +18,12 @@ export type Library = LibraryMetadata & MdxInfo & RegistryEntry;
  * 라이브러리 목록 조회
  */
 export async function getLibraries(options?: GetLibrariesOptions): Promise<PaginatedResult<Library>> {
-  const { category, sort, page, count, search } = options || {};
+  const { category, sort, tech, page, count, search } = options || {};
 
   let data = getRegistry<Library>('libraries', MDX_ROUTES);
 
   data = filterByCategory(data, category);
+  data = filterByTechStack(data, tech);
   data = searchContent<Library, keyof LibraryMetadata>(data, ['title', 'description', 'tech'], search);
   data = sortContent(data, sort);
 

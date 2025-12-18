@@ -1,11 +1,11 @@
-import type { BlogCategory, ContentSortOption, SearchParams } from '@jinho-blog/shared';
+import type { BlogCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { type SelectOption } from '@/core/ui';
-import { generatePageMetadata, parseContentSearchParams } from '@/core/utils';
+import { generatePageMetadata, parseSearchParams } from '@/core/utils';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';
 
@@ -32,20 +32,19 @@ const CATEGORY_OPTIONS: SelectOption<BlogCategory>[] = [
 ];
 
 type Props = {
-  searchParams: Promise<SearchParams>;
+  searchParams: Promise<SearchParams<Record<keyof GetBlogPosts['search'], string | string[] | undefined>>>;
 };
 
 export default async function BlogListPage({ searchParams }: Props) {
-  const params = await searchParams;
-  const { category, sort, page, count, search } = parseContentSearchParams<BlogCategory, ContentSortOption>(params);
+  const { category, sort, page, count, search } = await searchParams;
 
-  const getBlogPostsParams: GetBlogPosts['search'] = {};
-
-  if (category) getBlogPostsParams.category = Array.isArray(category) ? category[0] : category;
-  if (sort) getBlogPostsParams.sort = sort;
-  if (typeof page === 'number') getBlogPostsParams.page = page.toString();
-  if (typeof count === 'number') getBlogPostsParams.count = count.toString();
-  if (search) getBlogPostsParams.search = Array.isArray(search) ? search.join(',') : search;
+  const getBlogPostsParams: GetBlogPosts['search'] = {
+    category: parseSearchParams.category(category),
+    sort: parseSearchParams.sort(sort),
+    page: parseSearchParams.page(page)?.toString(),
+    count: parseSearchParams.count(count)?.toString(),
+    search: parseSearchParams.search(search)?.join(','),
+  };
 
   const { items, pagination } = await blogService.getBlogPosts(getBlogPostsParams);
 

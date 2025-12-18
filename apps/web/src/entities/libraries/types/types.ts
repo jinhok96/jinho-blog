@@ -1,13 +1,28 @@
 import type { Library } from '@jinho-blog/mdx-handler';
-import type { ContentSortOption, LibraryCategory, PaginatedResult } from '@jinho-blog/shared';
+import type { ContentSortOption, LibraryCategory, PaginatedResult, TechStack } from '@jinho-blog/shared';
 
 export type GetLibraries = {
-  Params: {
+  search: {
     category?: LibraryCategory;
     sort?: ContentSortOption;
+    tech?: TechStack;
     page?: string;
     count?: string;
     search?: string;
   };
-  Response: PaginatedResult<Library>;
+  response: PaginatedResult<Library>;
+};
+
+export type GetLibrary = {
+  params: {
+    slug: string;
+  };
+  response: Library | null;
+};
+
+export type GetLibraryContent = {
+  params: {
+    slug: string;
+  };
+  response: string | null;
 };

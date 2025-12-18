@@ -1,5 +1,11 @@
 // Content utilities
-export { filterByCategory, paginateContentWithMeta, searchContent, sortContent } from './internal/content';
+export {
+  filterByCategory,
+  filterByTechStack,
+  paginateContentWithMeta,
+  searchContent,
+  sortContent,
+} from './internal/content';
 
 // Parser
 export { type ParsedMdx, parseMdxFile } from './internal/parser';

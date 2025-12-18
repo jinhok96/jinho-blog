@@ -2,11 +2,12 @@ import type { GetProjectsOptions, MdxInfo, PaginatedResult, ProjectMetadata } fr
 
 import { MDX_ROUTES } from '../../core/config';
 import {
-  getRegistry,
-  type RegistryEntry,
-  parseMdxFile,
   filterByCategory,
+  filterByTechStack,
+  getRegistry,
   paginateContentWithMeta,
+  parseMdxFile,
+  type RegistryEntry,
   searchContent,
   sortContent,
 } from '../../core/utils';
@@ -17,15 +18,16 @@ export type Project = ProjectMetadata & MdxInfo & RegistryEntry;
  * 프로젝트 목록 조회
  */
 export async function getProjects(options?: GetProjectsOptions): Promise<PaginatedResult<Project>> {
-  const { category, sort, page, count, search } = options || {};
+  const { category, sort, page, tech, count, search } = options || {};
 
-  let projects = getRegistry<Project>('projects', MDX_ROUTES);
+  let data = getRegistry<Project>('projects', MDX_ROUTES);
 
-  projects = filterByCategory(projects, category);
-  projects = searchContent<Project, keyof ProjectMetadata>(projects, ['title', 'description', 'tech'], search);
-  projects = sortContent(projects, sort);
+  data = filterByCategory(data, category);
+  data = filterByTechStack(data, tech);
+  data = searchContent<Project, keyof ProjectMetadata>(data, ['title', 'description', 'tech'], search);
+  data = sortContent(data, sort);
 
-  return paginateContentWithMeta(projects, page, count);
+  return paginateContentWithMeta(data, page, count);
 }
 
 /**

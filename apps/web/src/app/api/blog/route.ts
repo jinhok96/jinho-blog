@@ -3,14 +3,14 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import { getBlogPosts } from '@jinho-blog/mdx-handler';
-import { type BlogCategory, type ContentSortOption, type GetBlogPostsOptions } from '@jinho-blog/shared';
+import { type GetBlogPostsOptions } from '@jinho-blog/shared';
 
 export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
 
-    const category = searchParams.get('category') as BlogCategory | null;
-    const sort = searchParams.get('sort') as ContentSortOption | null;
+    const category = searchParams.get('category');
+    const sort = searchParams.get('sort');
     const page = searchParams.get('page');
     const count = searchParams.get('count');
     const search = searchParams.get('search');

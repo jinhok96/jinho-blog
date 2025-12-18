@@ -1,11 +1,11 @@
-import type { ContentSortOption, ProjectCategory, SearchParams } from '@jinho-blog/shared';
+import type { ProjectCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { SafeHTML, type SelectOption } from '@/core/ui';
-import { generatePageMetadata, nbsp, parseContentSearchParams } from '@/core/utils';
+import { generatePageMetadata, nbsp, parseSearchParams } from '@/core/utils';
 
 import { createProjectsService, type GetProjects } from '@/entities/projects';
 
@@ -29,20 +29,20 @@ const CATEGORY_OPTIONS: SelectOption<ProjectCategory>[] = [
 ];
 
 type Props = {
-  searchParams: Promise<SearchParams>;
+  searchParams: Promise<SearchParams<Record<keyof GetProjects['search'], string | string[] | undefined>>>;
 };
 
 export default async function ProjectsListPage({ searchParams }: Props) {
-  const params = await searchParams;
-  const { category, sort, page, count, search } = parseContentSearchParams<ProjectCategory, ContentSortOption>(params);
+  const { category, sort, tech, page, count, search } = await searchParams;
 
-  const getProjectsParams: GetProjects['Params'] = {};
-
-  if (category) getProjectsParams.category = Array.isArray(category) ? category[0] : category;
-  if (sort) getProjectsParams.sort = sort;
-  if (typeof page === 'number') getProjectsParams.page = page.toString();
-  if (typeof count === 'number') getProjectsParams.count = count.toString();
-  if (search) getProjectsParams.search = Array.isArray(search) ? search.join(',') : search;
+  const getProjectsParams: GetProjects['search'] = {
+    category: parseSearchParams.category(category),
+    sort: parseSearchParams.sort(sort),
+    tech: parseSearchParams.tech(tech),
+    page: parseSearchParams.page(page)?.toString(),
+    count: parseSearchParams.count(count)?.toString(),
+    search: parseSearchParams.search(search)?.join(','),
+  };
 
   const { items, pagination } = await projectsService.getProjects(getProjectsParams);
 

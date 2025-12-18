@@ -23,8 +23,6 @@ export async function GET(request: NextRequest) {
     if (count) options.count = Number(count);
     if (search) options.search = search;
 
-    console.log('options', options);
-
     const result = await getBlogPosts(options);
 
     return NextResponse.json(result);

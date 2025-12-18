@@ -5,14 +5,12 @@ import { notFound } from 'next/navigation';
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
 import { BLOG_CATEGORY_MAP } from '@/core/map';
-import { ContentDetailWrapper, ContentHeader, MDXComponent, Show } from '@/core/ui';
+import { AsyncBoundary, ContentDetailWrapper, ContentHeader, MDXComponent } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';
 
-import { Pagination } from '@/features/pagination';
-
-import { BlogContentSection } from '@/views/blog';
+import { OtherBlogContentSection } from '@/views/blog';
 
 const blogService = createBlogService();
 
@@ -36,19 +34,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 export default async function BlogPostPage({ params, searchParams }: Props) {
-  const { slug } = await params;
-  const post = await blogService.getBlogPost({ slug });
+  const [{ slug }, { page }] = await Promise.all([params, searchParams]);
+
+  const [post, fileContent] = await Promise.all([
+    blogService.getBlogPost({ slug }),
+    blogService.getBlogContent({ slug }),
+  ]);
 
   if (!post) notFound();
-
-  const { title, category, createdAt, updatedAt } = post;
-
-  const fileContent = await blogService.getBlogContent({ slug });
-
   if (!fileContent) notFound();
 
-  const { page } = await searchParams;
-  const { items, pagination } = await blogService.getBlogPosts({ category, page: page?.toString(), count: '6' });
+  const { title, category, createdAt, updatedAt } = post;
 
   return (
     <>
@@ -62,20 +58,12 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
 
         <MDXComponent fileContent={fileContent} />
 
-        <Show when={items.length}>
-          <section className="w-full pt-20">
-            <p className="pb-7 font-subtitle-22">
-              <span className="font-bold text-blue-7">{BLOG_CATEGORY_MAP[category]}</span> 카테고리 다른 글
-            </p>
-
-            <BlogContentSection posts={items} />
-
-            <Pagination
-              pagination={pagination}
-              scroll={false}
-            />
-          </section>
-        </Show>
+        <AsyncBoundary>
+          <OtherBlogContentSection
+            category={category}
+            page={page}
+          />
+        </AsyncBoundary>
       </ContentDetailWrapper>
     </>
   );

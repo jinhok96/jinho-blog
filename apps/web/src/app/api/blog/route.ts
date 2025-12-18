@@ -15,13 +15,15 @@ export async function GET(request: NextRequest) {
     const count = searchParams.get('count');
     const search = searchParams.get('search');
 
-    const options: GetBlogPostsOptions = {
-      category,
-      sort,
-      page: page ? Number(page) : null,
-      count: count ? Number(count) : null,
-      search,
-    };
+    const options: GetBlogPostsOptions = {};
+
+    if (category) options.category = category;
+    if (sort) options.sort = sort;
+    if (page) options.page = Number(page);
+    if (count) options.count = Number(count);
+    if (search) options.search = search;
+
+    console.log('options', options);
 
     const result = await getBlogPosts(options);
 

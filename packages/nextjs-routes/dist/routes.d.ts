@@ -13,6 +13,7 @@ export type RouteObject<S extends Record<string, string | string[] | undefined> 
 export declare function isRouteObject<S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>, H extends string = string>(value: unknown): value is RouteObject<S, H>;
 /**
  * Convert RouteObject to URL string
+ * null, undefined 필터링
  *
  * @example
  * routes({

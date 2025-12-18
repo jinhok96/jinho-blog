@@ -9,6 +9,7 @@ export function isRouteObject(value) {
 }
 /**
  * Convert RouteObject to URL string
+ * null, undefined 필터링
  *
  * @example
  * routes({
@@ -28,8 +29,12 @@ export function routes(route) {
     }
     // Add search params
     if (route.search && Object.keys(route.search).length > 0) {
-        const searchParams = new URLSearchParams(route.search);
-        url += `?${searchParams.toString()}`;
+        // Filter out undefined and null values
+        const filteredSearch = Object.fromEntries(Object.entries(route.search).filter(([_, value]) => value != null && value != undefined));
+        const searchParams = new URLSearchParams(filteredSearch);
+        const query = searchParams.toString();
+        if (query)
+            url += `?${searchParams.toString()}`;
     }
     // Add hash
     if (route.hash) {

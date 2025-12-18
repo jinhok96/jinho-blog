@@ -1,7 +1,7 @@
 'use client';
 
 import type { PaginationInfo } from '@jinho-blog/shared';
-import type { PropsWithChildren } from 'react';
+import type { ComponentProps } from 'react';
 
 import { LinkButton } from '@/core/ui';
 import { cn } from '@/core/utils';
@@ -13,13 +13,12 @@ import ChevronRightIcon from 'public/icons/chevron_right.svg';
 import FirstPageIcon from 'public/icons/first_page.svg';
 import LastPageIcon from 'public/icons/last_page.svg';
 
-type PaginationLinkButtonProps = PropsWithChildren<{
+type PaginationLinkButtonProps = Omit<ComponentProps<typeof LinkButton>, 'size' | 'color' | 'className' | 'href'> & {
   href: string | null;
-  disabled?: boolean;
   current?: boolean;
-}>;
+};
 
-function PaginationLinkButton({ href, disabled, current, children }: PaginationLinkButtonProps) {
+function PaginationLinkButton({ href, disabled, current, children, ...props }: PaginationLinkButtonProps) {
   return (
     <LinkButton
       href={href || '#'}
@@ -30,6 +29,7 @@ function PaginationLinkButton({ href, disabled, current, children }: PaginationL
         'flex-row-center aspect-square size-10 shrink-0 justify-center p-0 leading-none',
         current && 'text-blue-7 font-semibold hover:bg-transparent cursor-default',
       )}
+      {...props}
     >
       {children}
     </LinkButton>
@@ -40,9 +40,10 @@ type Props = {
   className?: string;
   pagination: PaginationInfo;
   maxPageButtons?: number;
+  scroll?: boolean;
 };
 
-export function Pagination({ className, pagination, maxPageButtons = 5 }: Props) {
+export function Pagination({ className, pagination, maxPageButtons = 5, scroll }: Props) {
   const {
     currentPage,
     getPageHref,
@@ -69,6 +70,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5 }: Props)
       <PaginationLinkButton
         href={firstHref}
         disabled={!hasPrev}
+        scroll={scroll}
       >
         <div className="size-3.5">
           <FirstPageIcon strokeWidth={1.5} />
@@ -79,6 +81,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5 }: Props)
       <PaginationLinkButton
         href={prevHref || ''}
         disabled={!hasPrev}
+        scroll={scroll}
       >
         <div className="size-3.5">
           <ChevronLeftIcon strokeWidth={1.5} />
@@ -91,6 +94,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5 }: Props)
           key={page}
           href={getPageHref(page)}
           current={page === currentPage}
+          scroll={scroll}
         >
           {page}
         </PaginationLinkButton>
@@ -100,6 +104,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5 }: Props)
       <PaginationLinkButton
         href={nextHref}
         disabled={!hasNext}
+        scroll={scroll}
       >
         <div className="size-3.5">
           <ChevronRightIcon strokeWidth={1.5} />
@@ -110,6 +115,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5 }: Props)
       <PaginationLinkButton
         href={lastHref}
         disabled={!hasNext}
+        scroll={scroll}
       >
         <div className="size-3.5">
           <LastPageIcon strokeWidth={1.5} />

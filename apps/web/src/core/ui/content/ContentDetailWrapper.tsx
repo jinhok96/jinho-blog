@@ -36,7 +36,7 @@ export function ContentDetailWrapper({ children, rootHref }: Props) {
     <div className="flex-col-start size-full gap-3">
       {children}
 
-      <div className="flex-row-center w-full justify-end">
+      <div className="mt-5 flex-row-center w-full justify-end">
         <ArchiveBoxLinkButton href={rootHref} />
       </div>
     </div>

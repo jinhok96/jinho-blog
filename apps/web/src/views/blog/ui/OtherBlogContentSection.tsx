@@ -28,7 +28,7 @@ export async function OtherBlogContentSection({ category, page }: Props) {
   return (
     <section className="w-full pt-20">
       <p className="pb-7 font-subtitle-22">
-        <span className="font-bold text-blue-7">{BLOG_CATEGORY_MAP[category]}</span> 카테고리 다른 글
+        <span className="font-bold text-blue-7">&apos;{BLOG_CATEGORY_MAP[category]}&apos;</span> 카테고리 다른 글
       </p>
 
       <BlogContentSection posts={items} />

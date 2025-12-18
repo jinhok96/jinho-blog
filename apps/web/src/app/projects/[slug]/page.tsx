@@ -2,19 +2,20 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
-import { ContentDetailWrapper } from '@/core/ui';
+import { AsyncBoundary, ContentDetailWrapper } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
-import { createProjectsService } from '@/entities/projects';
+import { createProjectsService, type GetProjects } from '@/entities/projects';
 
-import { ProjectDetail } from '@/views/projects';
+import { OtherProjectsContentSection, ProjectDetail } from '@/views/projects';
 
 const projectsService = createProjectsService();
 
 type Props = {
   params: Promise<{ slug: string }>;
+  searchParams: Promise<SearchParams<Record<keyof GetProjects['search'], string | string[] | undefined>>>;
 };
 
 // SEO: 동적 메타데이터
@@ -31,15 +32,18 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default async function ProjectPage({ params }: Props) {
-  const { slug } = await params;
-  const project = await projectsService.getProject({ slug });
+export default async function ProjectPage({ params, searchParams }: Props) {
+  const [{ slug }, { page }] = await Promise.all([params, searchParams]);
+
+  const [project, fileContent] = await Promise.all([
+    projectsService.getProject({ slug }),
+    projectsService.getProjectContent({ slug }),
+  ]);
 
   if (!project) notFound();
-
-  const fileContent = await projectsService.getProjectContent({ slug });
-
   if (!fileContent) notFound();
+
+  const { category } = project;
 
   return (
     <ContentDetailWrapper rootHref={routes({ pathname: '/projects' })}>
@@ -47,6 +51,13 @@ export default async function ProjectPage({ params }: Props) {
         project={project}
         fileContent={fileContent}
       />
+
+      <AsyncBoundary>
+        <OtherProjectsContentSection
+          category={category}
+          page={page}
+        />
+      </AsyncBoundary>
     </ContentDetailWrapper>
   );
 }

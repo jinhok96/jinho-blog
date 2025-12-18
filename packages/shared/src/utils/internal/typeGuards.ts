@@ -1,12 +1,12 @@
-import type { BlogCategory, ContentSortOption, LibraryCategory, ProjectCategory } from '../../types';
+import type { BlogCategory, LibraryCategory, ProjectCategory, SortOption } from '../../types';
 
-const SORT_LIST: ContentSortOption[] = ['latest', 'updated', 'oldest'];
+const SORT_LIST: SortOption[] = ['createdAt,desc', 'updatedAt,desc', 'createdAt,asc'];
 
 const BLOG_CATEGORY_LIST: BlogCategory[] = ['frontend', 'algorithm', 'cs', 'uiux', 'review'];
 const PROJECT_CATEGORY_LIST: ProjectCategory[] = ['tripmoney', 'personal'];
 const LIBRARY_CATEGORY_LIST: LibraryCategory[] = ['react', 'nextjs', 'swr', 'motion', 'zustand'];
 
-export function isContentSortOption(value: string | null | undefined): value is ContentSortOption {
+export function isSortOption(value: string | null | undefined): value is SortOption {
   return typeof value === 'string' && (SORT_LIST as string[]).includes(value);
 }
 

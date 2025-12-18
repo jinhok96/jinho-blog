@@ -1,11 +1,12 @@
 export type { BlogCategory, LibraryCategory, ProjectCategory } from './internal/category';
 export type {
-  ContentSortOption,
   GetBlogPostsOptions,
   GetLibrariesOptions,
+  GetLibraryGroupsByCategoryOptions,
   GetProjectsOptions,
   PaginatedResult,
   PaginationInfo,
+  SortOption,
 } from './internal/content';
 export type {
   BaseMetadata,

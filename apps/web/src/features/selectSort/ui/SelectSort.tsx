@@ -1,6 +1,6 @@
 'use client';
 
-import type { ContentSortOption } from '@jinho-blog/shared';
+import type { SortOption } from '@jinho-blog/shared';
 
 import { type ComponentProps, useState } from 'react';
 import { useRouter } from 'next/navigation';
@@ -8,10 +8,10 @@ import { useRouter } from 'next/navigation';
 import { useQueryParams } from '@/core/hooks';
 import { Select, type SelectOption } from '@/core/ui';
 
-const SORT_OPTIONS: SelectOption<ContentSortOption>[] = [
-  { key: 'latest', label: '최신순' },
-  { key: 'updated', label: '업데이트순' },
-  { key: 'oldest', label: '오래된순' },
+const SORT_OPTIONS: SelectOption<SortOption>[] = [
+  { key: 'createdAt,desc', label: '최신순' },
+  { key: 'updatedAt,desc', label: '업데이트순' },
+  { key: 'createdAt,asc', label: '오래된순' },
 ];
 
 type Props = {
@@ -21,7 +21,7 @@ type Props = {
 
 export function SelectSort({ className, position }: Props) {
   const router = useRouter();
-  const params = useQueryParams<{ sort: ContentSortOption; page: string }>();
+  const params = useQueryParams<{ sort: SortOption; page: string }>();
 
   const sort = params.get('sort');
   const initIndex = SORT_OPTIONS.findIndex(option => option.key === sort);

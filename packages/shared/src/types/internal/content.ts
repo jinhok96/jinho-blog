@@ -1,5 +1,11 @@
 // 공통 정렬 옵션
-export type ContentSortOption = 'latest' | 'oldest' | 'updated';
+export type SortOption =
+  | 'createdAt,asc'
+  | 'createdAt,desc'
+  | 'updatedAt,asc'
+  | 'updatedAt,desc'
+  | 'alphabetic,asc'
+  | 'alphabetic,desc';
 
 // 페이지네이션 정보
 export type PaginationInfo = {
@@ -38,3 +44,5 @@ export type GetBlogPostsOptions = GetContentOptions;
 export type GetProjectsOptions = GetContentOptions & TechStackOption;
 
 export type GetLibrariesOptions = GetContentOptions & TechStackOption;
+
+export type GetLibraryGroupsByCategoryOptions = Pick<GetContentOptions, 'count'>;

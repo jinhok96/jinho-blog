@@ -1,10 +1,10 @@
 import type { Project } from '@jinho-blog/mdx-handler';
-import type { ContentSortOption, PaginatedResult, ProjectCategory, TechStack } from '@jinho-blog/shared';
+import type { PaginatedResult, ProjectCategory, SortOption, TechStack } from '@jinho-blog/shared';
 
 export type GetProjects = {
   search: {
     category?: ProjectCategory;
-    sort?: ContentSortOption;
+    sort?: SortOption;
     tech?: TechStack;
     page?: string;
     count?: string;

@@ -1,1 +1,1 @@
-export type { GetLibraries, GetLibrary, GetLibraryContent } from './types';
+export type { GetLibraries, GetLibrary, GetLibraryContent, GetLibraryGroupsByCategory } from './types';

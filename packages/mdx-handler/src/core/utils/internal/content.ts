@@ -1,7 +1,8 @@
-import type { BaseMetadata, PaginatedResult, PaginationInfo } from '@jinho-blog/shared';
+import type { BaseMetadata, PaginatedResult, PaginationInfo, SortOption } from '@jinho-blog/shared';
 
 import { DEFAULT_COUNT, DEFAULT_PAGE, DEFAULT_SORT } from '../../config';
 
+type SortOrder = 'asc' | 'desc';
 type CompareFn<T extends BaseMetadata> = (a: T, b: T) => number;
 
 function splitComma(str: string | null | undefined): string[] {
@@ -14,32 +15,40 @@ function splitComma(str: string | null | undefined): string[] {
 
 /**
  * 콘텐츠 정렬 (공통 함수)
- * 기본값: 최신순 (latest)
+ * 기본값: 최신순 (createdAt,desc)
  */
 export function sortContent<T extends BaseMetadata>(items: T[], sort: string | null | undefined): T[] {
+  const createdAt: (order: SortOrder) => CompareFn<T> = order => (a, b) => {
+    const result = new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
+    return order === 'asc' ? result : -result;
+  };
+
+  const updatedAt: (order: SortOrder) => CompareFn<T> = order => (a, b) => {
+    const result = new Date(a.updatedAt).getTime() - new Date(b.updatedAt).getTime();
+    return order === 'asc' ? result : -result;
+  };
+
+  const alphabetic: (order: SortOrder) => CompareFn<T> = order => (a, b) => {
+    const result = a.title.localeCompare(b.title);
+    return order === 'asc' ? result : -result;
+  };
+
+  const safeSortOption = (sort || DEFAULT_SORT) as SortOption;
   const newItems = [...items]; // 원본 배열 변경 방지
 
-  const sortLatest: CompareFn<T> = (a, b) => {
-    return new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime();
-  };
-
-  const sortOldest: CompareFn<T> = (a, b) => {
-    return new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
-  };
-
-  const sortUpdated: CompareFn<T> = (a, b) => {
-    return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
-  };
-
-  const safeSortOption = sort || DEFAULT_SORT;
-
   switch (safeSortOption) {
-    case 'latest':
-      return newItems.sort(sortLatest);
-    case 'oldest':
-      return newItems.sort(sortOldest);
-    case 'updated':
-      return newItems.sort(sortUpdated);
+    case 'createdAt,asc':
+      return newItems.sort(createdAt('asc'));
+    case 'createdAt,desc':
+      return newItems.sort(createdAt('desc'));
+    case 'updatedAt,asc':
+      return newItems.sort(updatedAt('asc'));
+    case 'updatedAt,desc':
+      return newItems.sort(updatedAt('desc'));
+    case 'alphabetic,asc':
+      return newItems.sort(alphabetic('asc'));
+    case 'alphabetic,desc':
+      return newItems.sort(alphabetic('desc'));
     default:
       return [];
   }

@@ -1,4 +1,9 @@
-import type { GetLibraries, GetLibrary, GetLibraryContent } from '@/entities/libraries/types';
+import type {
+  GetLibraries,
+  GetLibrary,
+  GetLibraryContent,
+  GetLibraryGroupsByCategory,
+} from '@/entities/libraries/types';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
@@ -8,6 +13,9 @@ const defaultHttpClient = http();
 
 type LibrariesService = (httpClient?: typeof defaultHttpClient) => {
   getLibraries: (search?: GetLibraries['search']) => Promise<GetLibraries['response']>;
+  getLibraryGroupsByCategory: (
+    search?: GetLibraryGroupsByCategory['search'],
+  ) => Promise<GetLibraryGroupsByCategory['response']>;
   getLibrary: (params: GetLibrary['params']) => Promise<GetLibrary['response']>;
   getLibraryContent: (params: GetLibraryContent['params']) => Promise<GetLibraryContent['response']>;
 };
@@ -15,6 +23,13 @@ type LibrariesService = (httpClient?: typeof defaultHttpClient) => {
 export const createLibrariesService: LibrariesService = (httpClient: HttpClient = defaultHttpClient) => ({
   getLibraries: async search => {
     const response = await httpClient.get<GetLibraries['response']>(routes({ pathname: '/api/libraries', search }));
+    return response;
+  },
+
+  getLibraryGroupsByCategory: async search => {
+    const response = await httpClient.get<GetLibraryGroupsByCategory['response']>(
+      routes({ pathname: '/api/libraries/category', search }),
+    );
     return response;
   },
 

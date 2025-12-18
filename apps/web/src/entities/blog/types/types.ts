@@ -1,10 +1,10 @@
 import type { Blog } from '@jinho-blog/mdx-handler';
-import type { BlogCategory, ContentSortOption, PaginatedResult } from '@jinho-blog/shared';
+import type { BlogCategory, PaginatedResult, SortOption } from '@jinho-blog/shared';
 
 export type GetBlogPosts = {
   search: {
     category?: BlogCategory;
-    sort?: ContentSortOption;
+    sort?: SortOption;
     page?: string;
     count?: string;
     search?: string;

@@ -4,11 +4,14 @@ import type { Metadata } from 'next';
 import { routes } from '@jinho-blog/nextjs-routes';
 
 import { LIBRARY_CATEGORY_MAP } from '@/core/map';
+import { LinkButton } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { createLibrariesService } from '@/entities/libraries';
 
 import { LibrariesContentSection } from '@/views/libraries';
+
+import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
 const librariesService = createLibrariesService();
 
@@ -22,20 +25,9 @@ export const metadata: Metadata = generatePageMetadata({
 });
 
 export default async function LibrariesListPage() {
-  const { items } = await librariesService.getLibraries();
-
-  // 카테고리별 그룹화
-  const librariesByCategory = items.reduce(
-    (result, item) => {
-      if (!LIBRARY_CATEGORIES.includes(item.category)) return result;
-
-      if (!result[item.category]) result[item.category] = [];
-      if (result[item.category].length < LIMIT) result[item.category].push(item);
-
-      return result;
-    },
-    {} as Record<LibraryCategory, typeof items>,
-  );
+  const groups = await librariesService.getLibraryGroupsByCategory({
+    count: LIMIT.toString(),
+  });
 
   return (
     <div className="flex-col-start size-full gap-6">
@@ -49,9 +41,28 @@ export default async function LibrariesListPage() {
             key={category}
             className="w-full"
           >
-            <p className="mb-5 font-subtitle-24">{LIBRARY_CATEGORY_MAP[category]}</p>
+            <div className="mb-5 flex-row-center justify-between">
+              <span className="font-subtitle-24">{LIBRARY_CATEGORY_MAP[category]}</span>
+              <LinkButton
+                href={routes({
+                  pathname: '/libraries/[slug]',
+                  params: { slug: groups[category][0].slug },
+                })}
+                size="md"
+                color="background"
+                className={`
+                  flex-row-center gap-1.5 leading-none text-gray-5
+                  hover:text-gray-8
+                `}
+              >
+                더보기
+                <div className="size-4">
+                  <ChevronRightIcon />
+                </div>
+              </LinkButton>
+            </div>
 
-            <LibrariesContentSection libraries={librariesByCategory[category]} />
+            <LibrariesContentSection libraries={groups[category].slice(0, LIMIT)} />
           </section>
         ))}
       </div>

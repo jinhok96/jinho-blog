@@ -1,4 +1,11 @@
-import type { GetLibrariesOptions, LibraryMetadata, MdxInfo, PaginatedResult } from '@jinho-blog/shared';
+import type {
+  GetLibrariesOptions,
+  GetLibraryGroupsByCategoryOptions,
+  LibraryMetadata,
+  MdxInfo,
+  PaginatedResult,
+  SortOption,
+} from '@jinho-blog/shared';
 
 import { MDX_ROUTES } from '../../core/config';
 import {
@@ -28,6 +35,35 @@ export async function getLibraries(options?: GetLibrariesOptions): Promise<Pagin
   data = sortContent(data, sort);
 
   return paginateContentWithMeta(data, page, count);
+}
+
+/**
+ * 카테고리별 그룹화된 라이브러리 목록 조회
+ */
+export async function getLibraryGroupsByCategory(options?: GetLibraryGroupsByCategoryOptions) {
+  const { count } = options || {};
+
+  const data = getRegistry<Library>('libraries', MDX_ROUTES);
+
+  const groups = data.reduce(
+    (acc, item) => {
+      if (!acc[item.category]) acc[item.category] = [];
+      if (count && acc[item.category].length >= count) return acc;
+
+      acc[item.category].push(item);
+      return acc;
+    },
+    {} as Record<string, typeof data>,
+  );
+
+  const sort: SortOption = 'alphabetic,asc';
+
+  // 각 카테고리의 배열을 알파벳순으로 정렬
+  Object.keys(groups).forEach(category => {
+    sortContent(groups[category], sort);
+  });
+
+  return groups;
 }
 
 /**

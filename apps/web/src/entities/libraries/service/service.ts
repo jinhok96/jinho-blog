@@ -7,7 +7,7 @@ import { http, type HttpClient } from '@/core/http';
 const defaultHttpClient = http();
 
 type LibrariesService = (httpClient?: typeof defaultHttpClient) => {
-  getLibraries: (search: GetLibraries['search']) => Promise<GetLibraries['response']>;
+  getLibraries: (search?: GetLibraries['search']) => Promise<GetLibraries['response']>;
   getLibrary: (params: GetLibrary['params']) => Promise<GetLibrary['response']>;
   getLibraryContent: (params: GetLibraryContent['params']) => Promise<GetLibraryContent['response']>;
 };

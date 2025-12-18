@@ -7,16 +7,14 @@ import { http, type HttpClient } from '@/core/http';
 const defaultHttpClient = http();
 
 type ProjectsService = (httpClient?: typeof defaultHttpClient) => {
-  getProjects: (params: GetProjects['search']) => Promise<GetProjects['response']>;
+  getProjects: (search?: GetProjects['search']) => Promise<GetProjects['response']>;
   getProject: (params: GetProject['params']) => Promise<GetProject['response']>;
   getProjectContent: (params: GetProjectContent['params']) => Promise<GetProjectContent['response']>;
 };
 
 export const createProjectsService: ProjectsService = (httpClient: HttpClient = defaultHttpClient) => ({
-  getProjects: async params => {
-    const response = await httpClient.get<GetProjects['response']>(
-      routes({ pathname: '/api/projects', search: params }),
-    );
+  getProjects: async search => {
+    const response = await httpClient.get<GetProjects['response']>(routes({ pathname: '/api/projects', search }));
     return response;
   },
 

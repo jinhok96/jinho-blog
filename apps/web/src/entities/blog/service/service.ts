@@ -7,7 +7,7 @@ import { http, type HttpClient } from '@/core/http';
 const defaultHttpClient = http();
 
 type BlogService = (httpClient?: typeof defaultHttpClient) => {
-  getBlogPosts: (search: GetBlogPosts['search']) => Promise<GetBlogPosts['response']>;
+  getBlogPosts: (search?: GetBlogPosts['search']) => Promise<GetBlogPosts['response']>;
   getBlogPost: (params: GetBlogPost['params']) => Promise<GetBlogPost['response']>;
   getBlogContent(params: GetBlogContent['params']): Promise<GetBlogContent['response']>;
 };

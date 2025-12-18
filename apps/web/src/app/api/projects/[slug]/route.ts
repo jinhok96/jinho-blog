@@ -4,7 +4,11 @@ import { NextResponse } from 'next/server';
 
 import { getProject } from '@jinho-blog/mdx-handler';
 
-export async function GET(request: NextRequest, { params }: { params: Promise<{ slug: string }> }) {
+type Params = {
+  slug: string;
+};
+
+export async function GET(request: NextRequest, { params }: { params: Promise<Params> }) {
   try {
     const { slug } = await params;
     const project = await getProject(slug);

@@ -9,12 +9,18 @@ export async function GET(request: NextRequest) {
   try {
     const { searchParams } = request.nextUrl;
 
+    const category = searchParams.get('category') as ProjectCategory | null;
+    const sort = searchParams.get('sort') as ContentSortOption | null;
+    const page = searchParams.get('page');
+    const count = searchParams.get('count');
+    const search = searchParams.get('search');
+
     const options: GetProjectsOptions = {
-      category: searchParams.get('category') as ProjectCategory | undefined,
-      sort: searchParams.get('sort') as ContentSortOption | undefined,
-      page: Number(searchParams.get('page')) || undefined,
-      count: Number(searchParams.get('count')) || undefined,
-      search: searchParams.get('search') || undefined,
+      category,
+      sort,
+      page: page ? Number(page) : null,
+      count: count ? Number(count) : null,
+      search,
     };
 
     const result = await getProjects(options);

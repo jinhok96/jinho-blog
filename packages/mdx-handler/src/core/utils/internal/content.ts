@@ -8,7 +8,7 @@ type CompareFn<T extends BaseMetadata> = (a: T, b: T) => number;
  * 콘텐츠 정렬 (공통 함수)
  * 기본값: 최신순 (latest)
  */
-export function sortContent<T extends BaseMetadata>(items: T[], sortOption: ContentSortOption = DEFAULT_SORT): T[] {
+export function sortContent<T extends BaseMetadata>(items: T[], sortOption: ContentSortOption | null | undefined): T[] {
   const sorted = [...items]; // 원본 배열 변경 방지
 
   const sortLatest: CompareFn<T> = (a, b) => {
@@ -23,7 +23,9 @@ export function sortContent<T extends BaseMetadata>(items: T[], sortOption: Cont
     return new Date(b.updatedAt).getTime() - new Date(a.updatedAt).getTime();
   };
 
-  switch (sortOption) {
+  const safeSortOption = sortOption || DEFAULT_SORT;
+
+  switch (safeSortOption) {
     case 'latest':
       return sorted.sort(sortLatest);
     case 'oldest':
@@ -38,7 +40,7 @@ export function sortContent<T extends BaseMetadata>(items: T[], sortOption: Cont
 /**
  * 카테고리 필터링 (공통 함수)
  */
-export function filterByCategory<T extends { category: string }>(items: T[], category?: string): T[] {
+export function filterByCategory<T extends { category: string }>(items: T[], category: string | null | undefined): T[] {
   if (!category) return items;
 
   const categories = Array.isArray(category) ? category : [category];
@@ -65,7 +67,7 @@ export function filterByCategory<T extends { category: string }>(items: T[], cat
 export function searchContent<T extends Record<string, unknown>, K extends keyof T>(
   items: T[],
   searchKeys: K[],
-  search?: string,
+  search: string | null | undefined,
 ): T[] {
   if (!search) return items;
 
@@ -96,7 +98,7 @@ export function searchContent<T extends Record<string, unknown>, K extends keyof
 /**
  * 페이지네이션 정보 계산
  */
-export function calculatePagination(totalItems: number, page: number = 1, itemsPerPage: number = 12): PaginationInfo {
+export function calculatePagination(totalItems: number, page: number, itemsPerPage: number): PaginationInfo {
   const totalPages = Math.ceil(totalItems / itemsPerPage);
   const currentPage = Math.max(1, Math.min(page, totalPages || 1));
 
@@ -117,15 +119,17 @@ export function calculatePagination(totalItems: number, page: number = 1, itemsP
  */
 export function paginateContentWithMeta<T>(
   items: T[],
-  page: number = DEFAULT_PAGE,
-  count: number = DEFAULT_COUNT,
+  page: number | null | undefined,
+  count: number | null | undefined,
 ): PaginatedResult<T> {
   // 방어 코드: items가 오류로 undefined인 경우 빈 배열로 처리
   const safeItems = items || [];
+  const safePage = page || DEFAULT_PAGE;
+  const safeCount = count || DEFAULT_COUNT;
 
-  const pagination = calculatePagination(safeItems.length, page ?? 1, count);
-  const startIndex = (pagination.currentPage - 1) * count;
-  const endIndex = startIndex + count;
+  const pagination = calculatePagination(safeItems.length, safePage, safeCount);
+  const startIndex = (pagination.currentPage - 1) * safeCount;
+  const endIndex = startIndex + safeCount;
 
   return {
     items: safeItems.slice(startIndex, endIndex),

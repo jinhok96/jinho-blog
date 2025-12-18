@@ -23,11 +23,11 @@ export type PaginatedResult<T> = {
 
 // 제네릭 조회 옵션 인터페이스
 type GetContentOptions<TCategory extends string, TSort extends string> = {
-  category?: TCategory; // 카테고리
-  sort?: TSort; // 정렬
-  page?: number; // 페이지 번호 (1-based)
-  count?: number; // 페이지당 아이템 수
-  search?: string; // 제목/설명 검색어
+  category?: TCategory | null; // 카테고리
+  sort?: TSort | null; // 정렬
+  page?: number | null; // 페이지 번호 (1-based)
+  count?: number | null; // 페이지당 아이템 수
+  search?: string | null; // 제목/설명 검색어
 };
 
 // 각 엔티티별 타입 별칭

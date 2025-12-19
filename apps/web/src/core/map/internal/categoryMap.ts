@@ -20,3 +20,5 @@ export const LIBRARY_CATEGORY_MAP: Record<LibraryCategory, string> = {
   motion: 'Motion',
   zustand: 'Zustand',
 };
+
+export const LIBRARY_CATEGORY_MAP_KEYS: LibraryCategory[] = ['react', 'nextjs', 'swr', 'motion', 'zustand'];

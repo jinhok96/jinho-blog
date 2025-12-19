@@ -1,9 +1,8 @@
-import type { LibraryCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
-import { LIBRARY_CATEGORY_MAP } from '@/core/map';
+import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@/core/map';
 import { LinkButton } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
@@ -16,7 +15,6 @@ import ChevronRightIcon from 'public/icons/chevron_right.svg';
 const librariesService = createLibrariesService();
 
 const LIMIT = 6;
-const LIBRARY_CATEGORIES: LibraryCategory[] = ['react', 'nextjs', 'swr', 'motion', 'zustand'];
 
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/libraries' }),
@@ -30,13 +28,13 @@ export default async function LibrariesListPage() {
   });
 
   return (
-    <div className="flex-col-start size-full gap-6">
+    <div className="container flex-col-start size-full gap-6 p-layout">
       <h1 className="font-title-36">라이브러리</h1>
 
       <p>라이브러리 페이지 설명입니다. 이 페이지의 목적을 설명합니다. 지속적으로 추가할 예정입니다.</p>
 
       <div className="flex-col-start gap-14 pt-8">
-        {LIBRARY_CATEGORIES.map(category => (
+        {LIBRARY_CATEGORY_MAP_KEYS.map(category => (
           <section
             key={category}
             className="w-full"

@@ -41,7 +41,7 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         <ThemeStoreProvider theme="system">
           <Header />
 
-          <main className="flex-col-center size-full flex-1 py-layout">{children}</main>
+          <main className="flex-col-center size-full flex-1">{children}</main>
 
           <div id={PORTAL.headerDrawer} />
         </ThemeStoreProvider>

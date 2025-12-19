@@ -1,34 +1,70 @@
+'use client';
+
+import type { ComponentProps } from 'react';
+
 import { routes } from '@jinho-blog/nextjs-routes';
+
+import { Button, Show } from '@/core/ui';
+import { cn } from '@/core/utils';
 
 import { HeaderNavButton } from '@/modules/header/ui/HeaderNavButton';
 
-export function Header() {
+import MenuIcon from 'public/icons/hamburger_menu.svg';
+
+type Props = {
+  leftMenuButton?: boolean;
+  leftMenuButtonClassName?: string;
+  onLeftMenuButtonClick?: ComponentProps<typeof Button>['onClick'];
+};
+
+export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButtonClick }: Props) {
   return (
-    <header className="fixed top-0 left-0 z-header h-header w-full">
+    <>
+      {/* 배경 */}
       <div
         className={`
-          absolute top-0 left-0 -z-10 size-full bg-background-3 mask-b-from-85% mask-b-to-100% mask-alpha
-          backdrop-blur-md
+          fixed top-0 left-0 z-header-background h-header w-full bg-background-3 mask-b-from-85% mask-b-to-100%
+          mask-alpha backdrop-blur-md
         `}
       />
+      {/* 헤더 */}
+      <header className="fixed top-0 left-0 z-header h-header w-full">
+        <div className="mx-auto flex-row-center size-full justify-between px-layout">
+          <div className="flex-row-center gap-1">
+            <Show when={leftMenuButton}>
+              <Button
+                className={cn(
+                  `
+                    aspect-square size-11 p-2.5 text-gray-5
+                    hover:text-gray-8
+                  `,
+                  leftMenuButtonClassName,
+                )}
+                color="background"
+                size="md"
+                onClick={onLeftMenuButtonClick}
+              >
+                <MenuIcon />
+              </Button>
+            </Show>
+            <HeaderNavButton href={routes({ pathname: '/' })}>홈</HeaderNavButton>
+          </div>
 
-      <div className="container mx-auto flex-row-center size-full justify-between px-layout">
-        <HeaderNavButton href={routes({ pathname: '/' })}>홈</HeaderNavButton>
-
-        <nav>
-          <ul className="flex-row-center gap-1">
-            <li>
-              <HeaderNavButton href={routes({ pathname: '/projects' })}>프로젝트</HeaderNavButton>
-            </li>
-            <li>
-              <HeaderNavButton href={routes({ pathname: '/blog' })}>블로그</HeaderNavButton>
-            </li>
-            <li>
-              <HeaderNavButton href={routes({ pathname: '/libraries' })}>라이브러리</HeaderNavButton>
-            </li>
-          </ul>
-        </nav>
-      </div>
-    </header>
+          <nav>
+            <ul className="flex-row-center gap-1">
+              <li>
+                <HeaderNavButton href={routes({ pathname: '/projects' })}>프로젝트</HeaderNavButton>
+              </li>
+              <li>
+                <HeaderNavButton href={routes({ pathname: '/blog' })}>블로그</HeaderNavButton>
+              </li>
+              <li>
+                <HeaderNavButton href={routes({ pathname: '/libraries' })}>라이브러리</HeaderNavButton>
+              </li>
+            </ul>
+          </nav>
+        </div>
+      </header>
+    </>
   );
 }

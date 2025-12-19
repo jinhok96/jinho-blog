@@ -8,5 +8,6 @@ export * from './input';
 export * from './mdx';
 export * from './safeHTML';
 export * from './select';
+export * from './sidebar';
 export * from './tab';
 export * from './wrapper';

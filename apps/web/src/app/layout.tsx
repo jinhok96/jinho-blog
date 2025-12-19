@@ -7,8 +7,6 @@ import { PORTAL, SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 
-import { Header } from '@/modules/header';
-
 import '@/styles/globals.css';
 
 const pretendard = localFont({
@@ -25,7 +23,9 @@ export const metadata: Metadata = {
   },
 };
 
-export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
+type Props = Readonly<PropsWithChildren>;
+
+export default function RootLayout({ children }: Props) {
   return (
     <html
       lang="ko"
@@ -37,13 +37,13 @@ export default function RootLayout({ children }: Readonly<PropsWithChildren>) {
         <script dangerouslySetInnerHTML={{ __html: INIT_THEME_SCRIPT }} />
       </head>
 
-      <body className={cn('relative flex-col-center size-full min-h-screen antialiased', pretendard.className)}>
+      <body className={cn('flex-row-start size-full min-h-screen flex-1 antialiased', pretendard.className)}>
         <ThemeStoreProvider theme="system">
-          <Header />
+          <div id={PORTAL.leftSidebar} />
 
-          <main className="flex-col-center size-full flex-1">{children}</main>
+          <main className="relative flex-col-center size-full flex-1">{children}</main>
 
-          <div id={PORTAL.headerDrawer} />
+          <div id={PORTAL.rightSidebar} />
         </ThemeStoreProvider>
       </body>
     </html>

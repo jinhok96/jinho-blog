@@ -4,11 +4,11 @@ type Props = PropsWithChildren<{
   modal?: ReactNode;
 }>;
 
-export default function ProjectsLayout({ children, modal }: Props) {
+export default function ProjectsLayouts({ children, modal }: Props) {
   return (
-    <div className="container flex-col-center size-full flex-1 p-layout">
+    <>
       {children}
       {modal}
-    </div>
+    </>
   );
 }

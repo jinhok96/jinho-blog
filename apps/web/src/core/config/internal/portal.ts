@@ -1,3 +1,4 @@
 export const PORTAL = {
-  headerDrawer: 'headerDrawer',
+  leftSidebar: 'leftSidebar',
+  rightSidebar: 'rightSidebar',
 };

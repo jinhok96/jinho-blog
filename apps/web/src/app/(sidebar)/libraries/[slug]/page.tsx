@@ -7,9 +7,13 @@ import { routes } from '@jinho-blog/nextjs-routes';
 
 import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@/core/map';
 import { ContentHeader, LinkButton, MDXComponent, Show } from '@/core/ui';
-import { generatePageMetadata } from '@/core/utils';
+import { cn, generatePageMetadata } from '@/core/utils';
 
 import { createLibrariesService } from '@/entities/libraries';
+
+import { HeaderWithSidebar } from '@/modules/header';
+
+const SIDEBAR_WIDTH_CLASSNAME = 'w-64';
 
 const librariesService = createLibrariesService();
 
@@ -43,32 +47,59 @@ export default async function LibraryPage({ params }: Props) {
   if (!library) notFound();
   if (!fileContent) notFound();
 
-  const flatGroups: Library[] = LIBRARY_CATEGORY_MAP_KEYS.map(category =>
-    groups[category].flatMap(item => item),
-  ).flatMap(item => item);
+  const flatGroups: Library[][] = LIBRARY_CATEGORY_MAP_KEYS.map(category => groups[category].flatMap(item => item));
 
-  const currentItemIndex = flatGroups.findIndex(item => item.slug === slug);
+  const flatList: Library[] = flatGroups.flatMap(item => item);
 
-  const prevItem: Library | null = currentItemIndex > 0 ? flatGroups[currentItemIndex - 1] : null;
-  const nextItem: Library | null = currentItemIndex < flatGroups.length - 1 ? flatGroups[currentItemIndex + 1] : null;
+  const currentItemIndex = flatList.findIndex(item => item.slug === slug);
+
+  const prevItem: Library | null = currentItemIndex > 0 ? flatList[currentItemIndex - 1] : null;
+  const nextItem: Library | null = currentItemIndex < flatList.length - 1 ? flatList[currentItemIndex + 1] : null;
 
   const { title, category, createdAt, updatedAt, tech } = library;
 
   return (
-    <div className="flex-row-start size-full flex-1">
-      <aside
-        className={`
-          flex-col-start min-h-screen pt-header
-          not-desktop:hidden
-        `}
-      >
-        <div className={`flex-col-start h-full flex-1 overflow-auto border-4 border-red-6 p-layout-x`}>
-          <p className="h-50 bg-amber-5">사이드바</p>
-        </div>
-      </aside>
+    <>
+      {/* 사이드바 */}
+      <HeaderWithSidebar className={cn('border-r border-gray-2', SIDEBAR_WIDTH_CLASSNAME)}>
+        <div className="flex-col-start w-full">
+          {flatGroups.map(group => (
+            <div
+              key={group[0].category}
+              className={`
+                w-full border-b border-gray-1 py-6
+                first:pt-0
+                last:border-0
+              `}
+            >
+              <p className="mb-5 font-caption-14 text-gray-5">{LIBRARY_CATEGORY_MAP[group[0].category]}</p>
 
+              <ul className="flex-col-start gap-4 font-caption-16">
+                {group.map(item => (
+                  <li key={item.slug}>
+                    <LinkButton
+                      href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}
+                      className={cn(
+                        `
+                          text-gray-5
+                          hover:text-gray-8
+                        `,
+                        item.slug === slug && 'text-blue-7 font-semibold',
+                      )}
+                    >
+                      {item.title}
+                    </LinkButton>
+                  </li>
+                ))}
+              </ul>
+            </div>
+          ))}
+        </div>
+      </HeaderWithSidebar>
+
+      {/* 본문 */}
       <div className="flex-col-center size-full flex-1">
-        <div className="container flex-col-start size-full max-h-screen flex-1 overflow-auto p-layout">
+        <div className="container flex-col-start size-full flex-1 p-layout">
           <ContentHeader
             category={LIBRARY_CATEGORY_MAP[category]}
             title={title}
@@ -104,6 +135,6 @@ export default async function LibraryPage({ params }: Props) {
           </div>
         </div>
       </div>
-    </div>
+    </>
   );
 }

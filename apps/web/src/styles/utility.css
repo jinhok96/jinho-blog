@@ -159,12 +159,25 @@
 }
 
 /* z-index */
-@utility z-drawer {
+
+@utility z-drawer-under-header-background {
   z-index: 100;
+}
+
+@utility z-header-background {
+  z-index: 100;
+}
+
+@utility z-drawer-under-header {
+  z-index: 150;
 }
 
 @utility z-header {
   z-index: 200;
+}
+
+@utility z-drawer-over-header {
+  z-index: 250;
 }
 
 @utility z-modal {

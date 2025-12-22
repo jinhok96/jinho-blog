@@ -9,8 +9,8 @@ import localFont from 'next/font/local';
 import { useThemeStore } from '@/core/store';
 import { cn } from '@/core/utils';
 
-const monaco = localFont({
-  src: '../../../../public/fonts/monaco-webfont.woff2',
+const jbd2 = localFont({
+  src: '../../../../public/fonts/JBD2-Regular.woff2',
   display: 'swap',
 });
 
@@ -21,7 +21,7 @@ function CodePrism({ children, className, PreTag, language = 'typescript', ...pr
     <Prism
       className={cn(`m-0! inline-flex bg-transparent! p-0! text-[0.875rem] tracking-normal! whitespace-pre`, className)}
       PreTag={PreTag}
-      codeTagProps={{ className: monaco.className }}
+      codeTagProps={{ className: jbd2.className }}
       language={language}
       {...props}
     >

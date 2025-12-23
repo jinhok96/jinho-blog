@@ -30,7 +30,7 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
       {/* 헤더 */}
       <header className="fixed top-0 left-0 z-header h-header w-full">
         <div className="mx-auto flex-row-center size-full justify-between px-layout">
-          <div className="flex-row-center gap-1">
+          <div className="flex-row-center">
             <Show when={leftMenuButton}>
               <Button
                 className={cn(

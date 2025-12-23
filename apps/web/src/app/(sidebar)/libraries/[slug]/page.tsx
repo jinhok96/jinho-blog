@@ -110,14 +110,25 @@ export default async function LibraryPage({ params }: Props) {
 
           <MDXComponent fileContent={fileContent} />
 
-          <div className="flex-row-center w-full justify-between">
+          {/* 이전, 다음 버튼 */}
+          <div className="flex-row-center w-full justify-between gap-5 pt-20">
             <Show
               when={prevItem}
               fallback={<div />}
             >
               {item => (
-                <LinkButton href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}>
-                  이전
+                <LinkButton
+                  className={`
+                    flex-col-start w-1/2 gap-2 p-4
+                    tablet:w-1/3
+                  `}
+                  color="background"
+                  size="md"
+                  variant="outline"
+                  href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}
+                >
+                  <p className="font-caption-14 text-gray-5">이전</p>
+                  <p>{prevItem?.title}</p>
                 </LinkButton>
               )}
             </Show>
@@ -127,8 +138,18 @@ export default async function LibraryPage({ params }: Props) {
               fallback={<div />}
             >
               {item => (
-                <LinkButton href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}>
-                  다음
+                <LinkButton
+                  className={`
+                    flex-col-end w-1/2 gap-2 p-4
+                    tablet:w-1/3
+                  `}
+                  color="background"
+                  size="md"
+                  variant="outline"
+                  href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}
+                >
+                  <p className="font-caption-14 text-gray-5">다음</p>
+                  <p>{nextItem?.title}</p>
                 </LinkButton>
               )}
             </Show>

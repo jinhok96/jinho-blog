@@ -102,6 +102,7 @@ export default async function LibraryPage({ params }: Props) {
       {/* 본문 */}
       <div className="flex-col-center size-full flex-1">
         <div className="container flex-col-start size-full flex-1 p-layout">
+          {/* 헤더 */}
           <ContentHeader
             category={LIBRARY_CATEGORY_MAP[category]}
             title={title}
@@ -110,10 +111,11 @@ export default async function LibraryPage({ params }: Props) {
             tech={tech}
           />
 
+          {/* MDX */}
           <MDXComponent fileContent={fileContent} />
 
           {/* 이전, 다음 버튼 */}
-          <div className="flex-row-center w-full justify-between gap-5 pt-20">
+          <section className="flex-row-center w-full justify-between gap-4 pt-14">
             <Show
               when={prevItem}
               fallback={<div />}
@@ -155,7 +157,7 @@ export default async function LibraryPage({ params }: Props) {
                 </LinkButton>
               )}
             </Show>
-          </div>
+          </section>
         </div>
       </div>
     </>

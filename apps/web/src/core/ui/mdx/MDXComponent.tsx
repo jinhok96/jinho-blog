@@ -1,41 +1,20 @@
-import type { Options as RehypeAutolinkHeadingsOptions } from 'rehype-autolink-headings';
-
-import { MDXRemote } from 'next-mdx-remote-client/rsc';
-
-import matter from 'gray-matter';
-import rehypeAutolinkHeadings from 'rehype-autolink-headings';
-import rehypeSlug from 'rehype-slug';
-import remarkGfm from 'remark-gfm';
-
-import { createMDXComponents } from '@/core/ui/mdx/createMDXComponents';
+import { Toc } from '@/core/ui/mdx/Toc';
+import { getMDXContent } from '@/core/utils';
 
 type Props = {
   fileContent: string;
   modalView?: boolean;
 };
 
-export function MDXComponent({ fileContent, modalView }: Props) {
-  const { content } = matter(fileContent);
-  const components = createMDXComponents(modalView);
+export async function MDXComponent({ fileContent, modalView }: Props) {
+  const { content, toc } = await getMDXContent(fileContent, { modalView });
 
   return (
-    <article className="flex-col-start size-full gap-2">
-      <MDXRemote
-        source={content}
-        components={components}
-        options={{
-          mdxOptions: {
-            remarkPlugins: [remarkGfm],
-            rehypePlugins: [
-              rehypeSlug,
-              [
-                rehypeAutolinkHeadings,
-                { behavior: 'append', properties: { className: 'hidden' } } satisfies RehypeAutolinkHeadingsOptions,
-              ],
-            ],
-          },
-        }}
-      />
-    </article>
+    <section className="flex-row-start size-full">
+      <article className="flex-col-start size-full gap-2">{content}</article>
+      <div className="sticky top-(--height-header) shrink-0 overflow-y-visible">
+        <Toc toc={toc} />
+      </div>
+    </section>
   );
 }

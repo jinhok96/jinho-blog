@@ -4,13 +4,12 @@ import { notFound } from 'next/navigation';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
-import { BLOG_CATEGORY_MAP } from '@/core/map';
-import { AsyncBoundary, ContentDetailWrapper, ContentHeader, MDXComponent } from '@/core/ui';
+import { AsyncBoundary, ContentDetailWrapper } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';
 
-import { OtherBlogContentSection } from '@/views/blog';
+import { BlogPostContentSection, OtherBlogContentSection } from '@/views/blogPost';
 
 const blogService = createBlogService();
 
@@ -44,19 +43,15 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
   if (!post) notFound();
   if (!fileContent) notFound();
 
-  const { title, category, createdAt, updatedAt } = post;
+  const { category } = post;
 
   return (
     <>
       <ContentDetailWrapper rootHref={routes({ pathname: '/blog' })}>
-        <ContentHeader
-          category={BLOG_CATEGORY_MAP[category]}
-          title={title}
-          createdAt={createdAt}
-          updatedAt={updatedAt}
+        <BlogPostContentSection
+          post={post}
+          fileContent={fileContent}
         />
-
-        <MDXComponent fileContent={fileContent} />
 
         <AsyncBoundary>
           <OtherBlogContentSection

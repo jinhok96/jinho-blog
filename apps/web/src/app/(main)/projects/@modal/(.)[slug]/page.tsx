@@ -22,8 +22,6 @@ export default async function InterceptedProjectPage({ params }: Props) {
 
   if (!fileContent) notFound();
 
-  console.log('모달');
-
   return (
     <RouteModal>
       <ProjectDetail

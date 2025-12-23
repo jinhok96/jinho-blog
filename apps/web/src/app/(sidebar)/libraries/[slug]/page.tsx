@@ -6,12 +6,13 @@ import { notFound } from 'next/navigation';
 import { routes } from '@jinho-blog/nextjs-routes';
 
 import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@/core/map';
-import { ContentHeader, LinkButton, MDXComponent, Show } from '@/core/ui';
+import { ContentHeader, LinkButton, MDXComponent } from '@/core/ui';
 import { cn, generatePageMetadata } from '@/core/utils';
 
 import { createLibrariesService } from '@/entities/libraries';
 
 import { HeaderWithSidebar } from '@/modules/header';
+import { LibraryBottomLinkSection } from '@/views/library';
 
 const SIDEBAR_WIDTH_CLASSNAME = 'w-64';
 
@@ -53,8 +54,8 @@ export default async function LibraryPage({ params }: Props) {
 
   const currentItemIndex = flatList.findIndex(item => item.slug === slug);
 
-  const prevItem: Library | null = currentItemIndex > 0 ? flatList[currentItemIndex - 1] : null;
-  const nextItem: Library | null = currentItemIndex < flatList.length - 1 ? flatList[currentItemIndex + 1] : null;
+  const prevLibrary: Library | null = currentItemIndex > 0 ? flatList[currentItemIndex - 1] : null;
+  const nextLibrary: Library | null = currentItemIndex < flatList.length - 1 ? flatList[currentItemIndex + 1] : null;
 
   const { title, category, createdAt, updatedAt, tech } = library;
 
@@ -114,50 +115,13 @@ export default async function LibraryPage({ params }: Props) {
           {/* MDX */}
           <MDXComponent fileContent={fileContent} />
 
-          {/* 이전, 다음 버튼 */}
-          <section className="flex-row-center w-full justify-between gap-4 pt-14">
-            <Show
-              when={prevItem}
-              fallback={<div />}
-            >
-              {item => (
-                <LinkButton
-                  className={`
-                    flex-col-start w-1/2 gap-2 p-4
-                    tablet:w-1/3
-                  `}
-                  color="background"
-                  size="md"
-                  variant="outline"
-                  href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}
-                >
-                  <p className="font-caption-14 text-gray-5">이전</p>
-                  <p>{prevItem?.title}</p>
-                </LinkButton>
-              )}
-            </Show>
-
-            <Show
-              when={nextItem}
-              fallback={<div />}
-            >
-              {item => (
-                <LinkButton
-                  className={`
-                    flex-col-end w-1/2 gap-2 p-4
-                    tablet:w-1/3
-                  `}
-                  color="background"
-                  size="md"
-                  variant="outline"
-                  href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}
-                >
-                  <p className="font-caption-14 text-gray-5">다음</p>
-                  <p>{nextItem?.title}</p>
-                </LinkButton>
-              )}
-            </Show>
-          </section>
+          {/* 이전, 다음 버튼 섹션 */}
+          <div className="w-full pt-14">
+            <LibraryBottomLinkSection
+              prevLibrary={prevLibrary}
+              nextLibrary={nextLibrary}
+            />
+          </div>
         </div>
       </div>
     </>

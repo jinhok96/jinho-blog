@@ -8,7 +8,7 @@ const tailwindcssClassName = 'bg-teal-2 text-teal-8';
 const cssClassName = 'bg-indigo-2 text-indigo-8';
 const htmlClassName = 'bg-orange-2 text-orange-8';
 const zustandClassName = 'bg-amber-2 text-amber-8';
-const swrClassName = 'bg-gray-2 text-gray-8';
+const swrClassName = 'bg-gray-2 text-gray-6';
 const motionClassName = 'bg-pink-2 text-pink-8';
 
 export const TECH_BADGE_CLASSNAME_MAP: Record<TechBadgeProps['tech'], string> = {

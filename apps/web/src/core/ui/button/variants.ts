@@ -29,7 +29,8 @@ export const buttonVariants = cva('animated-100', {
     },
 
     disabled: {
-      true: 'opacity-40 cursor-not-allowed',
+      true: 'opacity-40 cursor-not-allowed pointer-events-none',
+      false: 'pointer-events-auto cursor-pointer',
     },
   },
 

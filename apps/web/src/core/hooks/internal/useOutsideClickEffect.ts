@@ -13,10 +13,10 @@ export function useOutsideClickEffect<T extends HTMLElement>(
       callback();
     };
 
-    document.addEventListener('mousedown', listener);
+    document.addEventListener('click', listener);
 
     return () => {
-      document.removeEventListener('mousedown', listener);
+      document.removeEventListener('click', listener);
     };
   }, [...refDeps, callback]);
 }

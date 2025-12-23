@@ -72,8 +72,10 @@ export default async function LibraryPage({ params }: Props) {
                 last:border-0
               `}
             >
-              <p className="mb-5 font-caption-14 text-gray-5">{LIBRARY_CATEGORY_MAP[group[0].category]}</p>
+              {/* 카테고리 */}
+              <p className="mb-4 font-caption-14 text-gray-5">{LIBRARY_CATEGORY_MAP[group[0].category]}</p>
 
+              {/* 리스트 */}
               <ul className="flex-col-start gap-4 font-caption-16">
                 {group.map(item => (
                   <li key={item.slug}>

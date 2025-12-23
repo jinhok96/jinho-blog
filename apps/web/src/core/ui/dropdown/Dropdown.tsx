@@ -114,7 +114,14 @@ function Container({ children, className, contentClassName, position = 'bottomLe
       className={cn(
         'absolute flex-col-start overflow-hidden animated-150',
         DROPDOWN_POSITION_CLASSNAME_MAP[position],
-        isOpen ? 'visible opacity-100' : 'invisible opacity-0',
+        isOpen && 'visible opacity-100',
+        !isOpen && 'invisible opacity-0 scale-75',
+        !isOpen && {
+          'origin-top-left': position === 'bottomLeft',
+          'origin-top-right': position === 'bottomRight',
+          'origin-bottom-left': position === 'topLeft',
+          'origin-bottom-right': position === 'topRight',
+        },
         className,
       )}
     >

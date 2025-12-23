@@ -84,7 +84,7 @@ export default async function LibraryPage({ params }: Props) {
                           text-gray-5
                           hover:text-gray-8
                         `,
-                        item.slug === slug && 'text-blue-7 font-semibold',
+                        item.slug === slug && 'text-blue-7 hover:text-blue-7 font-semibold',
                       )}
                     >
                       {item.title}

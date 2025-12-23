@@ -67,16 +67,16 @@ export default async function LibraryPage({ params }: Props) {
             <div
               key={group[0].category}
               className={`
-                w-full border-b border-gray-1 py-6
+                w-full border-b border-gray-2 py-6
                 first:pt-0
                 last:border-0
               `}
             >
               {/* 카테고리 */}
-              <p className="mb-3 font-caption-14 text-gray-5">{LIBRARY_CATEGORY_MAP[group[0].category]}</p>
+              <p className="mb-2 font-caption-14 text-gray-5">{LIBRARY_CATEGORY_MAP[group[0].category]}</p>
 
               {/* 리스트 */}
-              <ul className="flex-col-start gap-2 font-caption-16">
+              <ul className="flex-col-start gap-1 font-caption-16">
                 {group.map(item => (
                   <li key={item.slug}>
                     <LinkButton

@@ -19,11 +19,11 @@
     "clsx": "^2.1.1",
     "isomorphic-dompurify": "^2.33.0",
     "motion": "^12.23.24",
-    "next": "^16.0.10",
+    "next": "16.1.1",
     "next-mdx-remote-client": "^2.1.7",
     "postcss": "^8.5.6",
-    "react": "^19.2.1",
-    "react-dom": "^19.2.1",
+    "react": "19.2.3",
+    "react-dom": "19.2.3",
     "react-error-boundary": "^6.0.0",
     "react-syntax-highlighter": "^16.1.0",
     "rehype-autolink-headings": "^7.1.0",
@@ -38,12 +38,12 @@
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
-    "@types/react": "^19",
-    "@types/react-dom": "^19",
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3",
     "@types/react-syntax-highlighter": "^15.5.13",
     "concurrently": "^9.2.1",
     "eslint": "^9",
-    "eslint-config-next": "^16.0.7",
+    "eslint-config-next": "16.1.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-boundaries": "^5.3.0",
@@ -53,5 +53,9 @@
     "tailwindcss": "^4.1.17",
     "tsx": "^4.20.6",
     "typescript": "^5"
+  },
+  "overrides": {
+    "@types/react": "19.2.7",
+    "@types/react-dom": "19.2.3"
   }
 }

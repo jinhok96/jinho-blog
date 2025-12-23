@@ -1,6 +1,6 @@
 'use client';
 
-import type { ComponentProps } from 'react';
+import type { ComponentProps, Ref } from 'react';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
@@ -15,20 +15,22 @@ type Props = {
   leftMenuButton?: boolean;
   leftMenuButtonClassName?: string;
   onLeftMenuButtonClick?: ComponentProps<typeof Button>['onClick'];
+  leftMenuButtonRef?: Ref<HTMLButtonElement>;
 };
 
-export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButtonClick }: Props) {
+export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButtonClick, leftMenuButtonRef }: Props) {
   return (
     <>
       {/* 배경 */}
       <div
         className={`
-          fixed top-0 left-0 z-header-background h-header w-full bg-background-3 mask-b-from-85% mask-b-to-100%
-          mask-alpha backdrop-blur-md
+          pointer-events-auto fixed top-0 left-0 z-header-background h-header w-full bg-background-3 mask-b-from-85%
+          mask-b-to-100% mask-alpha backdrop-blur-md
         `}
       />
+
       {/* 헤더 */}
-      <header className="fixed top-0 left-0 z-header h-header w-full">
+      <header className="pointer-events-none fixed top-0 left-0 z-header h-header w-full">
         <div className="mx-auto flex-row-center size-full justify-between px-layout">
           <div className="flex-row-center">
             <Show when={leftMenuButton}>
@@ -43,6 +45,7 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
                 color="background"
                 size="md"
                 onClick={onLeftMenuButtonClick}
+                ref={leftMenuButtonRef}
               >
                 <MenuIcon />
               </Button>

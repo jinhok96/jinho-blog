@@ -12,7 +12,12 @@ export async function MDXComponent({ fileContent, modalView }: Props) {
   return (
     <section className="flex-row-start size-full">
       <article className="flex-col-start size-full gap-2">{content}</article>
-      <div className="sticky top-(--height-header) shrink-0 overflow-y-visible">
+      <div
+        className={`
+          sticky top-(--height-header) shrink-0 overflow-y-visible
+          not-tablet:hidden
+        `}
+      >
         <Toc toc={toc} />
       </div>
     </section>

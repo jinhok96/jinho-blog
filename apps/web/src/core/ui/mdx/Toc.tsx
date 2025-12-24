@@ -2,7 +2,7 @@
 
 import type { TocItem } from 'remark-flexible-toc';
 
-import { useEffect, useState } from 'react';
+import { useEffect as useLayoutEffect, useState } from 'react';
 
 import { LinkButton } from '@/core/ui/button';
 import { cn } from '@/core/utils';
@@ -21,10 +21,11 @@ type TocProps = {
 };
 
 export function Toc({ toc }: TocProps) {
-  const [activeId, setActiveId] = useState<string>('');
+  const [activeId, setActiveId] = useState('');
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     if (!toc?.length) return;
+    if (!window?.innerHeight) return;
 
     const observer = new IntersectionObserver(
       entries => {
@@ -35,23 +36,21 @@ export function Toc({ toc }: TocProps) {
         });
       },
       {
-        rootMargin: '0px 0px -90% 0px',
+        rootMargin: `-64px 0px -${window.innerHeight - 80}px 0px`,
         threshold: 0,
       },
     );
 
-    const headingElements = toc
-      .map(item => document.querySelector(item.href))
-      .filter((el): el is Element => el !== null);
+    const headingElements = toc.map(item => document.querySelector(item.href)).filter(item => item !== null);
 
-    headingElements.forEach(el => observer.observe(el));
+    headingElements.forEach(item => observer.observe(item));
 
     return () => observer.disconnect();
   }, [toc]);
 
   return (
-    <div className="max-w-52 pt-7 pl-10 font-caption-14 text-gray-5">
-      <p className="mb-4 text-foreground">목차</p>
+    <div className="max-w-52 pt-7 pl-layout font-caption-14 text-gray-5">
+      <p className="mb-3 text-foreground">목차</p>
 
       <ul className="flex-col-start gap-1">
         {toc?.map(item => (
@@ -64,7 +63,7 @@ export function Toc({ toc }: TocProps) {
                   hover:text-gray-8
                 `,
                 depthClassNameMap[item.depth],
-                activeId === item.href && 'text-blue-7',
+                activeId === item.href && 'text-blue-7 hover:text-blue-7',
               )}
             >
               {item.value}

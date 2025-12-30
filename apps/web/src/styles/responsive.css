@@ -24,8 +24,14 @@
 }
 
 /* Feature */
-@custom-variant hover-none {
-  @media (hover: none) {
+@custom-variant touch {
+  @media (pointer: coarse) {
+    @slot;
+  }
+}
+
+@custom-variant mouse {
+  @media (pointer: fine) {
     @slot;
   }
 }

@@ -32,14 +32,14 @@ export function Button({
   return (
     <>
       <button
-        className={cn(variants, className, 'hover-none:hidden')}
+        className={cn(variants, className, 'touch:hidden')}
         disabled={disabled}
         {...props}
       >
         {children}
       </button>
       <PressableButton
-        className={cn(variants, className, 'not-hover-none:hidden')}
+        className={cn(variants, className, 'not-touch:hidden')}
         disabled={disabled}
         {...props}
       >

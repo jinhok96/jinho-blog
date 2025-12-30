@@ -32,13 +32,13 @@ export function LinkButton({
   return (
     <>
       <Link
-        className={cn(variants, className, 'hover-none:hidden')}
+        className={cn(variants, className, 'touch:hidden')}
         {...props}
       >
         {children}
       </Link>
       <PressableLink
-        className={cn(variants, className, 'not-hover-none:hidden')}
+        className={cn(variants, className, 'not-touch:hidden')}
         {...props}
       >
         {children}

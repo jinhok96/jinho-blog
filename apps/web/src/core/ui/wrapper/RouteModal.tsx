@@ -1,9 +1,9 @@
 'use client';
 
-import { type PropsWithChildren, useEffect, useState } from 'react';
+import { type PropsWithChildren, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
-import { useKeyDownEffect, useMountEffect } from '@/core/hooks';
+import { useBodyScrollLock, useKeyDownEffect, useMountEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';
 import { cn } from '@/core/utils';
 
@@ -32,15 +32,7 @@ export function RouteModal({ children }: Props) {
   });
 
   // 모달이 열릴 때 배경 스크롤 잠금
-  useEffect(() => {
-    if (isShow) {
-      document.body.style.overflow = 'hidden';
-    }
-
-    return () => {
-      document.body.style.overflow = '';
-    };
-  }, [isShow]);
+  useBodyScrollLock(isShow);
 
   return (
     <div className="fixed inset-0 z-modal flex-col-center justify-center pb-header">

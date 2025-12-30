@@ -1,1 +1,1 @@
-export { ApiError, createErrorResponse, isApiError, logError } from './error';
+export { ApiError, createErrorResponse, isApiError, logError } from './apiError';

@@ -23,7 +23,12 @@ export function RouteModal({ children }: Props) {
   useKeyDownEffect(['Escape'], handleClose);
 
   useMountEffect(() => {
-    setIsShow(true);
+    // 브라우저가 초기 상태를 렌더링한 후 애니메이션 시작
+    requestAnimationFrame(() => {
+      requestAnimationFrame(() => {
+        setIsShow(true);
+      });
+    });
   });
 
   return (

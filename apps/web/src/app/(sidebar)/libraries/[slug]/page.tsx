@@ -18,6 +18,8 @@ const SIDEBAR_WIDTH_CLASSNAME = 'w-64';
 
 const librariesService = createLibrariesService();
 
+export const dynamic = 'force-dynamic';
+
 type Props = {
   params: Promise<{ slug: string }>;
 };

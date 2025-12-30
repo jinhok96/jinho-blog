@@ -16,13 +16,15 @@ export async function ProjectsContentSection({ projects }: Props) {
         fallback={ContentCardSection.Placeholder}
       >
         <ContentCardSection>
-          {projects.map(({ category, slug, path, tech, ...items }) => (
+          {projects.map(({ category, slug, path, tech, title, description, createdAt }) => (
             <ContentCardSection.Card
               key={slug}
               href={path}
               scroll={false}
               category={PROJECT_CATEGORY_MAP[category]}
-              {...items}
+              title={title}
+              description={description}
+              createdAt={createdAt}
             >
               <ContentCardSection.TechBadgeList tech={tech} />
             </ContentCardSection.Card>

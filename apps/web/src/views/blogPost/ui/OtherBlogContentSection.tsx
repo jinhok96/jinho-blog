@@ -32,12 +32,14 @@ export async function OtherBlogContentSection({ category, page }: Props) {
 
       <Show when={items.length}>
         <ContentCardSection>
-          {items.map(({ category, slug, path, ...post }) => (
+          {items.map(({ category, slug, path, title, description, createdAt }) => (
             <ContentCardSection.Card
               key={slug}
               href={path}
               category={BLOG_CATEGORY_MAP[category]}
-              {...post}
+              title={title}
+              description={description}
+              createdAt={createdAt}
             />
           ))}
         </ContentCardSection>

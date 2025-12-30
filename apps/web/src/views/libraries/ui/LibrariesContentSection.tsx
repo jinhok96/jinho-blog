@@ -16,12 +16,14 @@ export async function LibrariesContentSection({ libraries }: Props) {
         fallback={ContentCardSection.Placeholder}
       >
         <ContentCardSection>
-          {libraries.map(({ category, slug, path, tech, ...items }) => (
+          {libraries.map(({ category, slug, path, tech, title, description, createdAt }) => (
             <ContentCardSection.Card
               key={slug}
               href={path}
               category={LIBRARY_CATEGORY_MAP[category]}
-              {...items}
+              title={title}
+              description={description}
+              createdAt={createdAt}
             >
               <ContentCardSection.TechBadgeList tech={tech} />
             </ContentCardSection.Card>

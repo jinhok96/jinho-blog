@@ -2,8 +2,6 @@
 
 import type { PaginationInfo } from '@jinho-blog/shared';
 
-import { useCallback } from 'react';
-
 import { useQueryParams } from '@/core/hooks';
 
 type UsePaginationReturn = {
@@ -28,44 +26,38 @@ export function usePagination({
 }: PaginationInfo): UsePaginationReturn {
   const params = useQueryParams<{ page: string }>();
 
-  const getPageHref = useCallback(
-    (page: number) => {
-      if (page < 1 || page > totalPages) return null;
-      const nextHref = params.set('page', page.toString()).toHref();
-      return nextHref;
-    },
-    [totalPages, params],
-  );
+  const getPageHref = (page: number) => {
+    if (page < 1 || page > totalPages) return null;
+    const nextHref = params.set('page', page.toString()).toHref();
+    return nextHref;
+  };
 
-  const getNextPageHref = useCallback(() => {
+  const getNextPageHref = () => {
     if (!nextPage) return null;
     return getPageHref(nextPage);
-  }, [nextPage, getPageHref]);
+  };
 
-  const getPrevPageHref = useCallback(() => {
+  const getPrevPageHref = () => {
     if (!prevPage) return null;
     return getPageHref(prevPage);
-  }, [prevPage, getPageHref]);
+  };
 
-  const getFirstPageHref = useCallback(() => getPageHref(1), [getPageHref]);
+  const getFirstPageHref = () => getPageHref(1);
 
-  const getLastPageHref = useCallback(() => getPageHref(totalPages), [totalPages, getPageHref]);
+  const getLastPageHref = () => getPageHref(totalPages);
 
-  const getPageNumbers = useCallback(
-    (maxPageButtons: number = 5) => {
-      const half = Math.floor(maxPageButtons / 2);
+  const getPageNumbers = (maxPageButtons: number = 5) => {
+    const half = Math.floor(maxPageButtons / 2);
 
-      let start = Math.max(1, currentPage - half);
-      const end = Math.min(totalPages, start + maxPageButtons - 1);
+    let start = Math.max(1, currentPage - half);
+    const end = Math.min(totalPages, start + maxPageButtons - 1);
 
-      if (end - start + 1 < maxPageButtons) {
-        start = Math.max(1, end - maxPageButtons + 1);
-      }
+    if (end - start + 1 < maxPageButtons) {
+      start = Math.max(1, end - maxPageButtons + 1);
+    }
 
-      return Array.from({ length: end - start + 1 }, (_, i) => start + i);
-    },
-    [totalPages, currentPage],
-  );
+    return Array.from({ length: end - start + 1 }, (_, i) => start + i);
+  };
 
   return {
     currentPage,

@@ -31,7 +31,7 @@ export function useScrollTargetHeight(
 
       setIsTargetHeight(currentResult);
     });
-  }, [targetRef.current]);
+  }, []);
 
   useMountEffect(() => {
     targetRef.current = target;

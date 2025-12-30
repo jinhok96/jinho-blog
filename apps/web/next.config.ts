@@ -7,8 +7,6 @@ const nextConfig: NextConfig = {
     globalNotFound: true,
   },
 
-  serverExternalPackages: ['jsdom', 'parse5'],
-
   // turbopack 설정
   turbopack: {
     rules: {

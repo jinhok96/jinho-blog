@@ -19,8 +19,8 @@ function LibraryLinkButton({ slug, title, type }: LibraryLinkButtonProps) {
     <LinkButton
       className={cn(
         `
-          w-full gap-2 p-4
-          desktop:w-1/3
+          w-1/2 gap-2 p-4
+          desktop:p-5
         `,
         {
           'flex-col-start': type === 'prev',

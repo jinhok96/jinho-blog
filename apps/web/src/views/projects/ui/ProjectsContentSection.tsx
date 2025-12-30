@@ -20,6 +20,7 @@ export async function ProjectsContentSection({ projects }: Props) {
             <ContentCardSection.Card
               key={slug}
               href={path}
+              scroll={false}
               category={PROJECT_CATEGORY_MAP[category]}
               {...items}
             >

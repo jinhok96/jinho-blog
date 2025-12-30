@@ -31,7 +31,13 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
 
       {/* 헤더 */}
       <header className="pointer-events-none fixed top-0 left-0 z-header h-header w-full">
-        <div className="mx-auto flex-row-center size-full justify-between px-layout">
+        <div
+          className={`
+            touch:px-[calc(var(--padding-layout-x)-0.75rem)]
+            mx-auto flex-row-center size-full justify-between px-layout
+          `}
+        >
+          {/* 메뉴, 홈 */}
           <div className="flex-row-center">
             <Show when={leftMenuButton}>
               <Button
@@ -53,6 +59,7 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
             <HeaderNavButton href={routes({ pathname: '/' })}>홈</HeaderNavButton>
           </div>
 
+          {/* 네비게이션 */}
           <nav>
             <ul className="flex-row-center gap-1">
               <li>

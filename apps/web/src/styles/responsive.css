@@ -35,3 +35,12 @@
     @slot;
   }
 }
+
+/* Override hover to work only with pointer: fine (mouse) */
+@variant hover {
+  @media (pointer: fine) {
+    &:hover {
+      @slot;
+    }
+  }
+}

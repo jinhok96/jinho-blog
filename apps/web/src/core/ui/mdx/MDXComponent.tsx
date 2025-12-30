@@ -1,4 +1,5 @@
 import { Toc } from '@/core/ui/mdx/Toc';
+import { Show } from '@/core/ui/wrapper';
 import { getMDXContent } from '@/core/utils';
 
 type Props = {
@@ -18,7 +19,9 @@ export async function MDXComponent({ fileContent, modalView }: Props) {
           not-tablet:hidden
         `}
       >
-        <Toc toc={toc} />
+        <Show when={!modalView}>
+          <Toc toc={toc} />
+        </Show>
       </div>
     </section>
   );

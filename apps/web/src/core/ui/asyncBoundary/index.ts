@@ -5,3 +5,4 @@ export {
   type ErrorBoundaryRef,
   type ErrorFallbackProps,
 } from './ErrorBoundary';
+export { ErrorFallback } from './ErrorFallback';

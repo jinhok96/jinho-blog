@@ -6,7 +6,7 @@ import { NextResponse } from 'next/server';
 import { getProjects } from '@jinho-blog/mdx-handler';
 import { ERROR_CODES } from '@jinho-blog/shared';
 
-import { ApiError, createErrorResponse, logError } from '@/lib/api/error';
+import { ApiError, createErrorResponse, logError } from '@/app/api/_lib';
 
 export async function GET(request: NextRequest) {
   try {

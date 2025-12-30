@@ -5,7 +5,7 @@ import { NextResponse } from 'next/server';
 import { getLibrary } from '@jinho-blog/mdx-handler';
 import { ERROR_CODES } from '@jinho-blog/shared';
 
-import { ApiError, createErrorResponse, logError } from '@/lib/api/error';
+import { ApiError, createErrorResponse, logError } from '@/app/api/_lib';
 
 type Params = {
   slug: string;

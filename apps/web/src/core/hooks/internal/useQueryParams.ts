@@ -1,4 +1,3 @@
-import { useMemo } from 'react';
 import { usePathname, useSearchParams } from 'next/navigation';
 
 type QueryParamsAPI<T extends Record<string, string | string[] | undefined>> = {
@@ -14,7 +13,7 @@ export function useQueryParams<T extends Record<string, string | string[] | unde
   const currentPathname = usePathname();
   const searchParams = useSearchParams<T>();
 
-  const writeableSearchParams = useMemo(() => new URLSearchParams(searchParams.toString()), [searchParams]);
+  const writeableSearchParams = new URLSearchParams(searchParams.toString());
 
   const api: QueryParamsAPI<T> = {
     /**

@@ -1,10 +1,10 @@
 import type { TechStack } from '@jinho-blog/shared';
-import type { PropsWithChildren } from 'react';
+import type { ComponentProps, PropsWithChildren } from 'react';
 
 import { TechBadge } from '@/core/ui/badge';
 import { LinkButton } from '@/core/ui/button';
 import { Show } from '@/core/ui/wrapper';
-import { formatDateToString } from '@/core/utils';
+import { cn, formatDateToString } from '@/core/utils';
 
 export function ContentCardSection({ children }: PropsWithChildren) {
   return (
@@ -20,23 +20,26 @@ export function ContentCardSection({ children }: PropsWithChildren) {
   );
 }
 
-type CardProps = PropsWithChildren<{
-  href: string;
+type CardProps = ComponentProps<typeof LinkButton> & {
   category: string;
   title: string;
   description: string;
   createdAt: string;
-}>;
+};
 
-function Card({ href, category, title, description, createdAt, children }: CardProps) {
+function Card({ href, className, category, title, description, createdAt, children, ...props }: CardProps) {
   return (
     <LinkButton
       href={href}
-      className={`
-        size-full rounded-2xl bg-gray-1 p-5
-        hover:scale-103 hover:bg-blue-1
-        light:hover:drop-shadow-md
-      `}
+      className={cn(
+        `
+          size-full rounded-2xl bg-gray-1 p-5
+          hover:scale-103 hover:bg-blue-1
+          light:hover:drop-shadow-md
+        `,
+        className,
+      )}
+      {...props}
     >
       <article className="flex-col-start w-full gap-2">
         {/* 카테고리, 작성일 */}

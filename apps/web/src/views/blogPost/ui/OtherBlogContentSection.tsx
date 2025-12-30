@@ -1,12 +1,11 @@
 import type { BlogCategory } from '@jinho-blog/shared';
 
 import { BLOG_CATEGORY_MAP } from '@/core/map';
+import { ContentCardSection, Show } from '@/core/ui';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';
 
 import { Pagination } from '@/features/pagination';
-
-import { BlogContentSection } from '@/views/blog/ui/BlogContentSection';
 
 const COUNT: number = 6;
 
@@ -31,7 +30,18 @@ export async function OtherBlogContentSection({ category, page }: Props) {
         <span className="font-bold text-blue-7">&apos;{BLOG_CATEGORY_MAP[category]}&apos;</span> 카테고리 다른 글
       </p>
 
-      <BlogContentSection posts={items} />
+      <Show when={items.length}>
+        <ContentCardSection>
+          {items.map(({ category, slug, path, ...post }) => (
+            <ContentCardSection.Card
+              key={slug}
+              href={path}
+              category={BLOG_CATEGORY_MAP[category]}
+              {...post}
+            />
+          ))}
+        </ContentCardSection>
+      </Show>
 
       <Pagination
         pagination={pagination}

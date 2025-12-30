@@ -3,6 +3,9 @@ import type { GetLibraryGroupsByCategoryOptions } from '@jinho-blog/shared';
 import { type NextRequest, NextResponse } from 'next/server';
 
 import { getLibraryGroupsByCategory } from '@jinho-blog/mdx-handler';
+import { ERROR_CODES } from '@jinho-blog/shared';
+
+import { ApiError, createErrorResponse, logError } from '@/lib/api/error';
 
 export async function GET(request: NextRequest) {
   try {
@@ -18,7 +21,13 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(result);
   } catch (error) {
-    console.error('Error fetching libraries:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    logError(error, { endpoint: '/api/libraries/category' });
+
+    if (error instanceof ApiError) {
+      return createErrorResponse(error.code, error.details);
+    }
+
+    // 예상치 못한 에러
+    return createErrorResponse(ERROR_CODES.INTERNAL_SERVER_ERROR);
   }
 }

@@ -6,6 +6,9 @@ import type {
   HttpResponse,
   HttpResponseDefault,
 } from '@/core/http/internal/types';
+import type { ErrorResponse } from '@jinho-blog/shared';
+
+import { ERROR_CODES } from '@jinho-blog/shared';
 
 import {
   HTTP_DEFAULT_BASE_URL,
@@ -13,6 +16,7 @@ import {
   HTTP_DEFAULT_REVALIDATE_TIME,
   HTTP_DEFAULT_TIMEOUT,
 } from '@/core/http/internal/config';
+import { HttpError } from '@/core/http/internal/types';
 
 /**
  * 타임아웃이 적용된 fetch
@@ -76,10 +80,30 @@ export const http: Http = (baseUrl: string = HTTP_DEFAULT_BASE_URL, defaultOptio
     return url;
   };
 
-  const resolveResponse = <T extends HttpResponseDefault>(
+  const resolveResponse = async <T extends HttpResponseDefault>(
     response: Response,
     responseType?: HttpOptions['responseType'],
   ): Promise<HttpResponse<T>> => {
+    // 에러 응답 처리
+    if (!response.ok) {
+      const contentType = response.headers.get('content-type');
+
+      if (contentType?.includes('application/json')) {
+        try {
+          const errorData = (await response.json()) as ErrorResponse;
+          throw HttpError.fromResponse(errorData, response.status);
+        } catch (error) {
+          // JSON 파싱 실패 시 기본 에러
+          if (error instanceof HttpError) throw error;
+          throw new HttpError(ERROR_CODES.INTERNAL_SERVER_ERROR, response.status);
+        }
+      }
+
+      // JSON이 아닌 경우 기본 에러
+      throw new HttpError(ERROR_CODES.INTERNAL_SERVER_ERROR, response.status);
+    }
+
+    // 정상 응답 처리
     switch (responseType) {
       case 'arrayBuffer':
         return response.arrayBuffer() as Promise<T>;

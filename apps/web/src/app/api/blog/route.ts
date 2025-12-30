@@ -3,7 +3,9 @@ import type { NextRequest } from 'next/server';
 import { NextResponse } from 'next/server';
 
 import { getBlogPosts } from '@jinho-blog/mdx-handler';
-import { type GetBlogPostsOptions } from '@jinho-blog/shared';
+import { ERROR_CODES, type GetBlogPostsOptions } from '@jinho-blog/shared';
+
+import { ApiError, createErrorResponse, logError } from '@/lib/api/error';
 
 export async function GET(request: NextRequest) {
   try {
@@ -27,7 +29,13 @@ export async function GET(request: NextRequest) {
 
     return NextResponse.json(result);
   } catch (error) {
-    console.error('Error fetching blog posts:', error);
-    return NextResponse.json({ error: 'Internal Server Error' }, { status: 500 });
+    logError(error, { endpoint: '/api/blog' });
+
+    if (error instanceof ApiError) {
+      return createErrorResponse(error.code, error.details);
+    }
+
+    // 예상치 못한 에러
+    return createErrorResponse(ERROR_CODES.INTERNAL_SERVER_ERROR);
   }
 }

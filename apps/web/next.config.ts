@@ -1,9 +1,11 @@
 import type { NextConfig } from 'next';
+
 import { withRoutes } from '@jinho-blog/nextjs-routes';
 
 const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
+    serverComponentsExternalPackages: ['jsdom', 'parse5'],
   },
 
   // turbopack 설정

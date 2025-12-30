@@ -4,12 +4,12 @@ import type { ComponentProps } from 'react';
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentHeader, MDXComponent } from '@/core/ui';
 
-type Props = Pick<ComponentProps<typeof MDXComponent>, 'modalView'> & {
+type Props = Pick<ComponentProps<typeof MDXComponent>, 'isModalView'> & {
   project: Project;
   fileContent: string;
 };
 
-export function ProjectDetail({ project, fileContent, modalView }: Props) {
+export function ProjectDetail({ project, fileContent, isModalView }: Props) {
   const { title, category, createdAt, updatedAt, tech } = project;
 
   return (
@@ -20,12 +20,12 @@ export function ProjectDetail({ project, fileContent, modalView }: Props) {
         createdAt={createdAt}
         updatedAt={updatedAt}
         tech={tech}
-        modalView={modalView}
+        isModalView={isModalView}
       />
 
       <MDXComponent
         fileContent={fileContent}
-        modalView={modalView}
+        isModalView={isModalView}
       />
     </>
   );

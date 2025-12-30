@@ -14,7 +14,7 @@ type Scope = {
 };
 
 type Options = {
-  modalView?: boolean;
+  isModalView?: boolean;
 };
 
 type GetMDXContent = {
@@ -22,9 +22,9 @@ type GetMDXContent = {
   toc: TocItem[] | undefined;
 };
 
-export async function getMDXContent(fileContent: string, { modalView }: Options): Promise<GetMDXContent> {
+export async function getMDXContent(fileContent: string, { isModalView }: Options): Promise<GetMDXContent> {
   const { content: source } = matter(fileContent);
-  const components = createMDXComponents(modalView);
+  const components = createMDXComponents(isModalView);
 
   const { content, scope } = await evaluate<Record<string, unknown>, Scope>({
     source,

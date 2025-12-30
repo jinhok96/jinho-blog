@@ -27,7 +27,7 @@ export default async function InterceptedProjectPage({ params }: Props) {
       <ProjectDetail
         project={project}
         fileContent={fileContent}
-        modalView
+        isModalView
       />
     </RouteModal>
   );

@@ -7,11 +7,11 @@ import { cn } from '@/core/utils';
 
 import LinkIcon from 'public/icons/link.svg';
 
-export function createMDXComponents(modalView?: boolean) {
+export function createMDXComponents(isModalView?: boolean) {
   return {
     h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn('scroll-mt-(--height-header) pb-3 font-title-40', modalView && 'font-title-32', className)}
+        className={cn('scroll-mt-(--height-header) pb-3 font-title-40', isModalView && 'font-title-32', className)}
         {...props}
       />
     ),
@@ -20,7 +20,7 @@ export function createMDXComponents(modalView?: boolean) {
       <h2
         className={cn(
           'scroll-mt-(--height-header) pt-7 pb-3 font-subtitle-32',
-          modalView && 'font-subtitle-26',
+          isModalView && 'font-subtitle-26',
           className,
         )}
         {...props}
@@ -31,7 +31,7 @@ export function createMDXComponents(modalView?: boolean) {
       <h3
         className={cn(
           'scroll-mt-(--height-header) pt-6 pb-3 font-subtitle-26',
-          modalView && 'font-subtitle-22',
+          isModalView && 'font-subtitle-22',
           className,
         )}
         {...props}
@@ -42,7 +42,7 @@ export function createMDXComponents(modalView?: boolean) {
       <h4
         className={cn(
           'scroll-mt-(--height-header) pt-5 pb-2 font-subtitle-20',
-          modalView && 'font-subtitle-18',
+          isModalView && 'font-subtitle-18',
           className,
         )}
         {...props}

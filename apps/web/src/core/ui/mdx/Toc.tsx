@@ -2,7 +2,7 @@
 
 import type { TocItem } from 'remark-flexible-toc';
 
-import { useEffect as useLayoutEffect, useState } from 'react';
+import { type PropsWithChildren, useEffect as useLayoutEffect, useState } from 'react';
 
 import { LinkButton } from '@/core/ui/button';
 import { cn } from '@/core/utils';
@@ -15,6 +15,38 @@ const depthClassNameMap: Record<TocItem['depth'], string> = {
   5: 'pl-6',
   6: 'pl-8',
 };
+
+type TocLinkButtonProps = PropsWithChildren<{
+  href: string;
+  activeId?: string;
+  depth?: TocItem['depth'];
+}>;
+
+function TocLinkButton({ children, href, activeId, depth }: TocLinkButtonProps) {
+  const handleScrollToTop = () => {
+    if (typeof window === 'undefined') return;
+    if (href !== '#') return;
+
+    window.scrollTo(0, 0);
+  };
+
+  return (
+    <LinkButton
+      href={href}
+      className={cn(
+        `
+          py-1 transition-colors
+          hover:text-gray-8
+        `,
+        depth && depthClassNameMap[depth],
+        activeId === href && 'text-blue-7 hover:text-blue-7',
+      )}
+      onClick={handleScrollToTop}
+    >
+      {children}
+    </LinkButton>
+  );
+}
 
 type TocProps = {
   toc?: TocItem[];
@@ -55,21 +87,30 @@ export function Toc({ toc }: TocProps) {
       <ul className="flex-col-start gap-1">
         {toc?.map(item => (
           <li key={item.href}>
-            <LinkButton
+            <TocLinkButton
+              activeId={activeId}
               href={item.href}
-              className={cn(
-                `
-                  py-1 transition-colors
-                  hover:text-gray-8
-                `,
-                depthClassNameMap[item.depth],
-                activeId === item.href && 'text-blue-7 hover:text-blue-7',
-              )}
+              depth={item.depth}
             >
               {item.value}
-            </LinkButton>
+            </TocLinkButton>
           </li>
         ))}
+
+        <hr className="mt-2 mb-3 w-full border-gray-2" />
+
+        <li>
+          <TocLinkButton
+            activeId=""
+            href="#"
+          >
+            이 문서 편집하기
+          </TocLinkButton>
+        </li>
+
+        <li>
+          <TocLinkButton href="#">맨 위로</TocLinkButton>
+        </li>
       </ul>
     </div>
   );

@@ -41,7 +41,8 @@
       "Bash(pnpm --version:*)",
       "Bash(npm:*)",
       "Bash(node -e:*)",
-      "mcp__chrome-devtools__*"
+      "mcp__chrome-devtools__*",
+      "Bash(git show-branch:*)"
     ],
     "deny": [],
     "ask": []

@@ -8,6 +8,9 @@ import { usePathname } from 'next/navigation';
 import { LinkButton } from '@/core/ui/button';
 import { cn } from '@/core/utils';
 
+import ArrowUpIcon from 'public/icons/arrow_circle_up.svg';
+import LinkIcon from 'public/icons/link.svg';
+
 const depthClassNameMap: Record<TocItem['depth'], string> = {
   1: 'pl-0',
   2: 'pl-0',
@@ -105,16 +108,27 @@ export function Toc({ toc }: TocProps) {
 
         <li>
           <TocLinkButton
-            activeId=""
+            className="flex-row-center gap-2"
             href={`https://github.com/jinhok96/jinho-blog/edit/mdx/content/mdx${pathname}.mdx`}
             target="_blank"
           >
-            이 문서 편집하기
+            <span>이 문서 편집하기</span>
+            <div className="size-3.5">
+              <LinkIcon strokeWidth={1.5} />
+            </div>
           </TocLinkButton>
         </li>
 
         <li>
-          <TocLinkButton href="#">맨 위로</TocLinkButton>
+          <TocLinkButton
+            className="flex-row-center gap-2"
+            href="#"
+          >
+            <span>맨 위로</span>
+            <div className="size-4">
+              <ArrowUpIcon strokeWidth={1.5} />
+            </div>
+          </TocLinkButton>
         </li>
       </ul>
     </div>

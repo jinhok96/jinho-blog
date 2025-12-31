@@ -30,6 +30,8 @@ export default function RootLayout({ children }: Props) {
     <html
       lang="ko"
       suppressHydrationWarning
+      data-scroll-behavior="smooth"
+      className="scroll-smooth"
     >
       <head>
         {/* FOUC 방지: 페이지 로드 시 테마 즉시 적용 */}

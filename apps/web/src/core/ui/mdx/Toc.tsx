@@ -2,10 +2,14 @@
 
 import type { TocItem } from 'remark-flexible-toc';
 
-import { type PropsWithChildren, useEffect as useLayoutEffect, useState } from 'react';
+import { type ComponentProps, type MouseEventHandler, useEffect as useLayoutEffect, useState } from 'react';
+import { usePathname } from 'next/navigation';
 
 import { LinkButton } from '@/core/ui/button';
 import { cn } from '@/core/utils';
+
+import ArrowUpIcon from 'public/icons/arrow_circle_up.svg';
+import LinkIcon from 'public/icons/link.svg';
 
 const depthClassNameMap: Record<TocItem['depth'], string> = {
   1: 'pl-0',
@@ -16,18 +20,18 @@ const depthClassNameMap: Record<TocItem['depth'], string> = {
   6: 'pl-8',
 };
 
-type TocLinkButtonProps = PropsWithChildren<{
-  href: string;
+type TocLinkButtonProps = ComponentProps<typeof LinkButton> & {
   activeId?: string;
   depth?: TocItem['depth'];
-}>;
+};
 
-function TocLinkButton({ children, href, activeId, depth }: TocLinkButtonProps) {
-  const handleScrollToTop = () => {
+function TocLinkButton({ children, href, activeId, depth, className, onClick, ...props }: TocLinkButtonProps) {
+  const handleScrollToTop: MouseEventHandler<HTMLAnchorElement> = e => {
     if (typeof window === 'undefined') return;
     if (href !== '#') return;
 
     window.scrollTo(0, 0);
+    onClick?.(e);
   };
 
   return (
@@ -40,8 +44,10 @@ function TocLinkButton({ children, href, activeId, depth }: TocLinkButtonProps) 
         `,
         depth && depthClassNameMap[depth],
         activeId === href && 'text-blue-7 hover:text-blue-7',
+        className,
       )}
       onClick={handleScrollToTop}
+      {...props}
     >
       {children}
     </LinkButton>
@@ -54,6 +60,7 @@ type TocProps = {
 
 export function Toc({ toc }: TocProps) {
   const [activeId, setActiveId] = useState('');
+  const pathname = usePathname();
 
   useLayoutEffect(() => {
     if (!toc?.length) return;
@@ -101,15 +108,27 @@ export function Toc({ toc }: TocProps) {
 
         <li>
           <TocLinkButton
-            activeId=""
-            href="#"
+            className="flex-row-center gap-2"
+            href={`https://github.com/jinhok96/jinho-blog/edit/mdx/content/mdx${pathname}.mdx`}
+            target="_blank"
           >
-            이 문서 편집하기
+            <span>이 문서 편집하기</span>
+            <div className="size-3.5">
+              <LinkIcon strokeWidth={1.5} />
+            </div>
           </TocLinkButton>
         </li>
 
         <li>
-          <TocLinkButton href="#">맨 위로</TocLinkButton>
+          <TocLinkButton
+            className="flex-row-center gap-2"
+            href="#"
+          >
+            <span>맨 위로</span>
+            <div className="size-4">
+              <ArrowUpIcon strokeWidth={1.5} />
+            </div>
+          </TocLinkButton>
         </li>
       </ul>
     </div>

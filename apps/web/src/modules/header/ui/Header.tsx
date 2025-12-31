@@ -33,8 +33,8 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
       <header className="pointer-events-none fixed top-0 left-0 z-header h-header w-full">
         <div
           className={`
-            touch:px-[calc(var(--padding-layout-x)-0.75rem)]
             mx-auto flex-row-center size-full justify-between px-layout
+            touch:px-[calc(var(--padding-layout-x)-0.75rem)]
           `}
         >
           {/* 메뉴, 홈 */}

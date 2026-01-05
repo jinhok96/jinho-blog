@@ -152,26 +152,24 @@ function SlideTabContent({
   }, [selectedTabIndex]);
 
   return (
-    <Provider>
-      <div
-        className={cn('relative scrollbar-minimal flex-row-center overflow-x-auto scroll-smooth', className)}
-        ref={scrollRef}
-      >
-        <div className={cn('flex-row-center shrink-0', itemContainerClassName)}>
-          {/* 슬라이드 인디케이터 */}
-          <Show when={indicatorStyle.width > 0}>
-            <motion.div
-              className={cn(DEFAULT_INDICATOR_CLASSNAME, indicatorClassNameProp)}
-              initial={indicatorStyle}
-              animate={indicatorStyle}
-              transition={SPRING}
-            />
-          </Show>
+    <div
+      className={cn('relative scrollbar-minimal flex-row-center overflow-x-auto scroll-smooth', className)}
+      ref={scrollRef}
+    >
+      <div className={cn('flex-row-center shrink-0', itemContainerClassName)}>
+        {/* 슬라이드 인디케이터 */}
+        <Show when={indicatorStyle.width > 0}>
+          <motion.div
+            className={cn(DEFAULT_INDICATOR_CLASSNAME, indicatorClassNameProp)}
+            initial={indicatorStyle}
+            animate={indicatorStyle}
+            transition={SPRING}
+          />
+        </Show>
 
-          {childrenWithIndex}
-        </div>
+        {childrenWithIndex}
       </div>
-    </Provider>
+    </div>
   );
 }
 

@@ -33,26 +33,27 @@ function Card({ href, className, category, title, description, createdAt, childr
       href={href}
       className={cn(
         `
-          size-full rounded-2xl bg-gray-1 p-5
-          hover:scale-103 hover:bg-blue-1
-          light:hover:drop-shadow-md
+          size-full rounded-2xl bg-background p-5 text-foreground
+          hover:scale-103 hover:bg-blue-6
+          dark:hover:bg-blue-5
+          light:hover:text-background
         `,
         className,
       )}
       {...props}
     >
-      <article className="flex-col-start w-full gap-2">
+      <article className="flex-col-start w-full gap-0.5">
         {/* 카테고리, 작성일 */}
-        <div className="flex-row-center w-full justify-between text-gray-5">
+        <div className="flex-row-center w-full justify-between opacity-70">
           <p className="font-caption-14">{category}</p>
           <time className="font-body-14">{formatDateToString(createdAt)}</time>
         </div>
 
         {/* 제목 */}
-        <h2 className="font-subtitle-20">{title}</h2>
+        <h2 className="mb-1 font-subtitle-20">{title}</h2>
 
         {/* 설명 */}
-        <p className="py-0.5 font-body-14 text-gray-5">{description}</p>
+        <p className="py-1 font-body-14 opacity-70">{description}</p>
 
         {/* 추가 요소 */}
         {children}

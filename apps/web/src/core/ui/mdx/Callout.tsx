@@ -60,7 +60,7 @@ export default function Callout({ children, className, copyable, ...props }: Pro
 
   return (
     <div
-      className={cn('group/callout relative my-0.5 size-full overflow-auto rounded-2xl bg-gray-1 pb-2', className)}
+      className={cn('group/callout relative my-0.5 size-full overflow-auto rounded-2xl bg-background pb-2', className)}
       {...props}
     >
       <div

@@ -31,7 +31,7 @@ export default async function LibrariesListPage() {
   });
 
   return (
-    <>
+    <div className="flex-col-center size-full">
       <Header />
 
       <div className="container flex-col-start size-full gap-6 p-layout">
@@ -71,6 +71,6 @@ export default async function LibrariesListPage() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

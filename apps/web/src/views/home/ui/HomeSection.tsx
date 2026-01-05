@@ -9,7 +9,7 @@ type HomeSectionProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLEleme
 export function HomeSection({ children, className, innerClassName, ...props }: HomeSectionProps) {
   return (
     <section
-      className={cn('w-full px-layout', className)}
+      className={cn('w-full scroll-m-[calc(var(--height-header)+6rem)] px-layout', className)}
       {...props}
     >
       <div className={cn('container mx-auto my-layout flex-col-center size-full gap-8', innerClassName)}>

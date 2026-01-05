@@ -1,0 +1,1 @@
+export { HomeHeroSection } from './HomeHeroSection';

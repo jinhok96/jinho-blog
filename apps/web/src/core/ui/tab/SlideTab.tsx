@@ -118,7 +118,7 @@ function SlideTabContent({
   // 공유 상태 변경 시 외부에 알림
   useLayoutEffect(() => {
     onTabChange?.(selectedTabIndex);
-  }, [selectedTabIndex, onTabChange]);
+  }, [selectedTabIndex]);
 
   // 탭 인디케이터 업데이트
   useLayoutEffect(() => {

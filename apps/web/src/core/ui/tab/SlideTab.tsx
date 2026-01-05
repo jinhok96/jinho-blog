@@ -181,15 +181,20 @@ type ItemProps = ComponentProps<typeof Button> & {
 function Item({ children, index = 0, containerClassName, className, ...props }: ItemProps) {
   const isMounted = useIsMounted();
 
+  const ref = useRef<HTMLDivElement>(null);
   const { selectedTabIndex, indicatorClassName } = useSharedState();
   const { setSelectedTabIndex, registerRef } = useSharedActions();
 
   const isSelected = selectedTabIndex === index;
 
+  useLayoutEffect(() => {
+    registerRef(index, ref.current);
+  }, [index, ref, registerRef]);
+
   return (
     <div
       className={cn('relative shrink-0', containerClassName)}
-      ref={el => registerRef(index, el)}
+      ref={ref}
     >
       {/* 마운트 전 표시하는 정적 인디케이터 */}
       <Show when={!isMounted && isSelected}>

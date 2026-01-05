@@ -14,7 +14,7 @@
   }
 
   :root {
-    @apply bg-background text-foreground;
+    @apply bg-gray-1 text-foreground;
   }
 
   a {

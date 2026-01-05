@@ -7,7 +7,7 @@ type AnyFunction = (...args: never[]) => unknown;
 type Set<T extends Record<string, unknown>> = Partial<T> | ((prev: T) => Partial<T>);
 
 type CreateSharedState<TState extends Record<string, unknown>, TActions extends Record<string, AnyFunction>> = {
-  Provider: ({ children }: PropsWithChildren) => JSX.Element;
+  Provider: ({ children, initState }: PropsWithChildren<{ initState?: Partial<TState> }>) => JSX.Element;
   useSharedState: () => TState;
   useSharedActions: () => TActions;
 };
@@ -19,8 +19,8 @@ export function createSharedState<TState extends Record<string, unknown>, TActio
   const StateContext = createContext<TState | undefined>(undefined);
   const ActionsContext = createContext<TActions | undefined>(undefined);
 
-  const Provider: CreateSharedState<TState, TActions>['Provider'] = ({ children }: PropsWithChildren) => {
-    const [state, setState] = useState(initState);
+  const Provider: CreateSharedState<TState, TActions>['Provider'] = ({ children, initState: providedInitState }) => {
+    const [state, setState] = useState({ ...initState, ...providedInitState });
 
     const set: Dispatch<Set<TState>> = action =>
       setState(prev => {

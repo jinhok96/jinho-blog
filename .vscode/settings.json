@@ -4,6 +4,13 @@
     "*.css": "tailwindcss"
   },
   "typescript.preferences.preferTypeOnlyAutoImports": true,
+
+  // 파일 감시 제외 (EPERM 오류 방지)
+  "files.watcherExclude": {
+    "**/.next/**": true,
+    "**/.turbo/**": true,
+    "**/node_modules/**": true
+  },
   "tailwindCSS.experimental.classRegex": [
     // Styled Components / Template Literals
     "tw`([^`]*)",

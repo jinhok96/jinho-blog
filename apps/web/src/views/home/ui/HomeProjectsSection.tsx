@@ -20,7 +20,7 @@ export function HomeProjectsSection({ id, label, projects }: Props) {
     <HomeSection id={id}>
       <HomeSection.Header label={label}>주요 프로젝트의 세부 사항을 확인해보세요</HomeSection.Header>
 
-      <div className="flex-col-center w-full gap-6">
+      <div className="w-full">
         <Show
           when={projects.length}
           fallback={ContentCardSection.Placeholder}
@@ -48,11 +48,10 @@ export function HomeProjectsSection({ id, label, projects }: Props) {
         href={routes({ pathname: '/projects' })}
         size="md"
         color="background"
-        variant="outline"
       >
         <span>프로젝트 더보기</span>
-        <div className="size-4">
-          <ChevronRightIcon />
+        <div className="mb-px size-3">
+          <ChevronRightIcon strokeWidth={1.5} />
         </div>
       </LinkButton>
     </HomeSection>

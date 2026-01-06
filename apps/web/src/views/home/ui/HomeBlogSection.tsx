@@ -45,11 +45,10 @@ export function HomeBlogSection({ id, label, posts }: Props) {
         href={routes({ pathname: '/blog' })}
         size="md"
         color="background"
-        variant="outline"
       >
         <span>블로그 더보기</span>
-        <div className="size-4">
-          <ChevronRightIcon />
+        <div className="mb-px size-3">
+          <ChevronRightIcon strokeWidth={1.5} />
         </div>
       </LinkButton>
     </HomeSection>

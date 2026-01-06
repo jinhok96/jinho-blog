@@ -1,4 +1,4 @@
-import type { DetailedHTMLProps, HTMLAttributes } from 'react';
+import type { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 
 import { cn } from '@/core/utils';
 
@@ -18,3 +18,18 @@ export function HomeSection({ children, className, innerClassName, ...props }: H
     </section>
   );
 }
+
+type HeaderProps = PropsWithChildren<{
+  label: string;
+}>;
+
+function Header({ label, children }: HeaderProps) {
+  return (
+    <div className="flex-col-center w-full gap-2 text-center">
+      <p className="w-full font-subtitle-16 text-blue-7">{label}</p>
+      <p className="font-title-28">{children}</p>
+    </div>
+  );
+}
+
+HomeSection.Header = Header;

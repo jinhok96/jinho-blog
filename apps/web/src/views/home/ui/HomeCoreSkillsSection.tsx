@@ -53,7 +53,9 @@ export function HomeCoreSkillsSection({ id, label }: Props) {
 
         <Article>
           <Article.Label>높은 UI/UX 이해도</Article.Label>
-          <Article.Description>시각디자인을 전공, 어플리케이션 리디자인 및 웹 페이지 디자인 경험</Article.Description>
+          <Article.Description>
+            시각디자인 전공, 필요한 아이콘 제작, 어플리케이션 리디자인 및 웹 페이지 디자인 경험
+          </Article.Description>
         </Article>
 
         <Article>

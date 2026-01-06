@@ -1,14 +1,7 @@
-import type { PropsWithChildren, ReactNode } from 'react';
+import type { PropsWithChildren } from 'react';
 
-type Props = PropsWithChildren<{
-  modal?: ReactNode;
-}>;
+type Props = PropsWithChildren;
 
-export default function ProjectsLayouts({ children, modal }: Props) {
-  return (
-    <div className="flex-col-center size-full flex-1">
-      {children}
-      {modal}
-    </div>
-  );
+export default function ProjectsLayouts({ children }: Props) {
+  return <div className="flex-col-center size-full flex-1">{children}</div>;
 }

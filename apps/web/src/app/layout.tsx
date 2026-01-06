@@ -1,5 +1,5 @@
 import type { Metadata } from 'next';
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 
 import localFont from 'next/font/local';
 
@@ -23,9 +23,13 @@ export const metadata: Metadata = {
   },
 };
 
-type Props = Readonly<PropsWithChildren>;
+type Props = Readonly<
+  PropsWithChildren<{
+    modal?: ReactNode;
+  }>
+>;
 
-export default function RootLayout({ children }: Props) {
+export default function RootLayout({ children, modal }: Props) {
   return (
     <html
       lang="ko"
@@ -42,7 +46,10 @@ export default function RootLayout({ children }: Props) {
         <ThemeStoreProvider theme="system">
           <div id={PORTAL.leftSidebar} />
 
-          <main className="relative flex-col-center size-full flex-1">{children}</main>
+          <main className="relative flex-col-center size-full flex-1">
+            {children}
+            {modal}
+          </main>
 
           <div id={PORTAL.rightSidebar} />
         </ThemeStoreProvider>

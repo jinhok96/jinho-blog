@@ -28,6 +28,11 @@ export function useBodyScrollLock(isLocked: boolean): void {
   useLayoutEffect(() => {
     if (!isLocked) return;
 
+    // 페이지에 스크롤이 있는지 확인
+    const hasScroll = document.documentElement.scrollHeight > document.documentElement.clientHeight;
+
+    if (!hasScroll) return;
+
     const prevScrollY = preventScroll();
     return () => allowScroll(prevScrollY);
   }, [isLocked]);

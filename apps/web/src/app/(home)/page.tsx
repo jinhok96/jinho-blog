@@ -2,17 +2,13 @@ import type { Metadata } from 'next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
-import { LinkButton } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
 import { createBlogService } from '@/entities/blog';
 import { createProjectsService } from '@/entities/projects';
 
-import { BlogContentSection } from '@/views/blog';
-import { HomeHeroSection, HomeProjectsSection, HomeSlideTab } from '@/views/home';
+import { HomeBlogSection, HomeHeroSection, HomeProjectsSection, HomeSlideTab } from '@/views/home';
 import { HomeSection } from '@/views/home/ui/HomeSection';
-
-import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
 export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname: '/' }) });
 
@@ -29,14 +25,27 @@ const SECTION_ID_MAP = {
   CONTACT: 'contact-section',
 } as const;
 
-const SECTION_TAB_LIST: { id: (typeof SECTION_ID_MAP)[keyof typeof SECTION_ID_MAP]; label: string }[] = [
-  { id: SECTION_ID_MAP.CORE_SKILLS, label: '핵심 역량' },
-  { id: SECTION_ID_MAP.TECH_STACK, label: '기술 스택' },
-  { id: SECTION_ID_MAP.CAREER, label: '경력 사항' },
-  { id: SECTION_ID_MAP.PROJECTS, label: '프로젝트' },
-  { id: SECTION_ID_MAP.BLOG, label: '블로그' },
-  { id: SECTION_ID_MAP.EDUCATION, label: '교육' },
-  { id: SECTION_ID_MAP.CONTACT, label: '연락처' },
+const SECTION_LABEL_MAP = {
+  CORE_SKILLS: '핵심 역량',
+  TECH_STACK: '기술 스택',
+  CAREER: '경력 사항',
+  PROJECTS: '프로젝트',
+  BLOG: '블로그',
+  EDUCATION: '교육',
+  CONTACT: '연락처',
+} as const;
+
+const SECTION_TAB_LIST: {
+  id: (typeof SECTION_ID_MAP)[keyof typeof SECTION_ID_MAP];
+  label: (typeof SECTION_LABEL_MAP)[keyof typeof SECTION_LABEL_MAP];
+}[] = [
+  { id: 'skills-section', label: '핵심 역량' },
+  { id: 'stack-section', label: '기술 스택' },
+  { id: 'career-section', label: '경력 사항' },
+  { id: 'projects-section', label: '프로젝트' },
+  { id: 'blog-section', label: '블로그' },
+  { id: 'education-section', label: '교육' },
+  { id: 'contact-section', label: '연락처' },
 ];
 
 export default async function HomePage() {
@@ -61,29 +70,15 @@ export default async function HomePage() {
 
         <HomeProjectsSection
           id={SECTION_ID_MAP.PROJECTS}
+          label={SECTION_LABEL_MAP.PROJECTS}
           projects={projects}
         />
 
-        <HomeSection id={SECTION_ID_MAP.BLOG}>
-          <div className="w-full text-center">
-            <p className="mb-2 w-full font-subtitle-16 text-blue-7">블로그</p>
-          </div>
-
-          <BlogContentSection posts={blogPosts} />
-
-          <LinkButton
-            className="flex-row-center w-fit gap-2"
-            href={routes({ pathname: '/blog' })}
-            size="md"
-            color="background"
-            variant="outline"
-          >
-            <span>블로그 더보기</span>
-            <div className="size-4">
-              <ChevronRightIcon />
-            </div>
-          </LinkButton>
-        </HomeSection>
+        <HomeBlogSection
+          id={SECTION_ID_MAP.BLOG}
+          label={SECTION_LABEL_MAP.BLOG}
+          posts={blogPosts}
+        />
 
         <HomeSection id={SECTION_ID_MAP.EDUCATION}>교육</HomeSection>
 

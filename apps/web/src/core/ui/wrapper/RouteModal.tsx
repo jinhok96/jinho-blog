@@ -9,6 +9,8 @@ import { cn } from '@/core/utils';
 
 import CloseIcon from 'public/icons/close.svg';
 
+const ANIMATION_DELAY = 150;
+
 type Props = PropsWithChildren;
 
 export function RouteModal({ children }: Props) {
@@ -17,7 +19,7 @@ export function RouteModal({ children }: Props) {
 
   const handleClose = () => {
     setIsShow(false);
-    setTimeout(() => router.back(), 150);
+    setTimeout(() => router.back(), ANIMATION_DELAY);
   };
 
   useKeyDownEffect(['Escape'], handleClose);

@@ -9,9 +9,8 @@ import { createBlogService } from '@/entities/blog';
 import { createProjectsService } from '@/entities/projects';
 
 import { BlogContentSection } from '@/views/blog';
-import { HomeHeroSection, HomeSlideTab } from '@/views/home';
+import { HomeHeroSection, HomeProjectsSection, HomeSlideTab } from '@/views/home';
 import { HomeSection } from '@/views/home/ui/HomeSection';
-import { ProjectsContentSection } from '@/views/projects';
 
 import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
@@ -60,27 +59,10 @@ export default async function HomePage() {
 
         <HomeSection id={SECTION_ID_MAP.CAREER}>경력 사항</HomeSection>
 
-        <HomeSection id={SECTION_ID_MAP.PROJECTS}>
-          <div className="w-full text-center">
-            <p className="mb-2 w-full font-subtitle-16 text-blue-7">프로젝트</p>
-            <p className="font-title-28">주요 프로젝트의 세부 사항을 확인해보세요</p>
-          </div>
-
-          <ProjectsContentSection projects={projects} />
-
-          <LinkButton
-            className="flex-row-center w-fit gap-2"
-            href={routes({ pathname: '/projects' })}
-            size="md"
-            color="background"
-            variant="outline"
-          >
-            <span>프로젝트 더보기</span>
-            <div className="size-4">
-              <ChevronRightIcon />
-            </div>
-          </LinkButton>
-        </HomeSection>
+        <HomeProjectsSection
+          id={SECTION_ID_MAP.PROJECTS}
+          projects={projects}
+        />
 
         <HomeSection id={SECTION_ID_MAP.BLOG}>
           <div className="w-full text-center">

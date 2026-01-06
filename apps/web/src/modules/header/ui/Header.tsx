@@ -24,7 +24,7 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
       {/* 배경 */}
       <div
         className={`
-          pointer-events-auto fixed top-0 left-0 z-header-background h-header w-screen mask-b-from-85% mask-b-to-100%
+          pointer-events-auto fixed top-0 left-0 z-header-background h-header w-full mask-b-from-85% mask-b-to-100%
           mask-alpha backdrop-blur-md
         `}
       />

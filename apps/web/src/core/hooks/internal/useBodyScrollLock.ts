@@ -5,10 +5,12 @@ import { useLayoutEffect } from 'react';
  */
 const lock = (): number => {
   const scrollY = window.scrollY;
+  const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
 
   document.body.style.position = 'fixed';
   document.body.style.top = `-${scrollY}px`; // 현재 스크롤 위치
-  document.body.style.overflowY = 'scroll';
+  document.body.style.overflowY = 'hidden';
+  document.body.style.paddingRight = `${scrollbarWidth}px`;
 
   return scrollY;
 };
@@ -20,6 +22,7 @@ const unlock = (scrollY: number) => {
   document.body.style.position = '';
   document.body.style.top = '';
   document.body.style.overflowY = '';
+  document.body.style.paddingRight = '';
 
   window.scrollTo({ top: scrollY, behavior: 'instant' });
 };

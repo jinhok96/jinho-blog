@@ -11,16 +11,14 @@ import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
 type Props = {
   id: string;
+  label: string;
   projects: Project[];
 };
 
-export function HomeProjectsSection({ id, projects }: Props) {
+export function HomeProjectsSection({ id, label, projects }: Props) {
   return (
     <HomeSection id={id}>
-      <div className="w-full text-center">
-        <p className="mb-2 w-full font-subtitle-16 text-blue-7">프로젝트</p>
-        <p className="font-title-28">주요 프로젝트의 세부 사항을 확인해보세요</p>
-      </div>
+      <HomeSection.Header label={label}>주요 프로젝트의 세부 사항을 확인해보세요</HomeSection.Header>
 
       <div className="flex-col-center w-full gap-6">
         <Show

@@ -8,7 +8,7 @@ type Props = {
 export function HomeTechStackSection({ id, label }: Props) {
   return (
     <HomeSection id={id}>
-      <HomeSection.Header label={label}>다양한 기술 및 도구를 사용할 수 있어요</HomeSection.Header>
+      <HomeSection.Header label={label}>여러 기술 및 도구를 사용할 수 있어요</HomeSection.Header>
 
       <div>
         프론트엔드: Javascript, Typescript, React, Vue, Next.js, React Native

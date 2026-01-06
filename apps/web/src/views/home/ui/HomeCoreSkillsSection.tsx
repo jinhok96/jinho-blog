@@ -37,7 +37,7 @@ type Props = {
 export function HomeCoreSkillsSection({ id, label }: Props) {
   return (
     <HomeSection id={id}>
-      <HomeSection.Header label={label}>다양한 경험을 기반으로 빠르게 성장합니다</HomeSection.Header>
+      <HomeSection.Header label={label}>다양한 경험과 시도로 빠르게 성장합니다</HomeSection.Header>
 
       <div
         className={`

@@ -44,7 +44,7 @@ export function HomeProjectsSection({ id, label, projects }: Props) {
       </div>
 
       <LinkButton
-        className="flex-row-center w-fit gap-2"
+        className="flex-row-center w-fit gap-2 text-foreground-6"
         href={routes({ pathname: '/projects' })}
         size="md"
         color="background"

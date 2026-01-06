@@ -41,7 +41,7 @@ export function HomeBlogSection({ id, label, posts }: Props) {
       </div>
 
       <LinkButton
-        className="flex-row-center w-fit gap-2"
+        className="flex-row-center w-fit gap-2 text-foreground-6"
         href={routes({ pathname: '/blog' })}
         size="md"
         color="background"

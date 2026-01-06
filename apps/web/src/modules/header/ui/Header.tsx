@@ -24,13 +24,13 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
       {/* 배경 */}
       <div
         className={`
-          pointer-events-auto fixed top-0 left-0 z-header-background h-header w-full mask-b-from-85% mask-b-to-100%
+          pointer-events-auto fixed top-0 left-0 z-header-background h-header w-screen mask-b-from-85% mask-b-to-100%
           mask-alpha backdrop-blur-md
         `}
       />
 
       {/* 헤더 */}
-      <header className="pointer-events-none fixed top-0 left-0 z-header h-header w-full">
+      <header className="pointer-events-none fixed top-0 left-0 z-header h-header w-screen">
         <div
           className={`
             mx-auto flex-row-center size-full justify-between px-layout

@@ -85,8 +85,8 @@ export function HomeSlideTab({ tabs }: Props) {
             size="sm"
             className={cn(
               'text-foreground-7',
-              selectedIndex === index && 'text-black',
-              selectedIndex !== index && 'hover:text-foreground-9',
+              selectedIndex === index && 'text-foreground dark:text-background',
+              selectedIndex !== index && 'hover:text-foreground',
             )}
             rounded
             disableHover

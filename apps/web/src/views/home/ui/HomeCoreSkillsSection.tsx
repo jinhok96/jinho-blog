@@ -37,7 +37,7 @@ type Props = {
 export function HomeCoreSkillsSection({ id, label }: Props) {
   return (
     <HomeSection id={id}>
-      <HomeSection.Header label={label}>핵심 역량입니다</HomeSection.Header>
+      <HomeSection.Header label={label}>다양한 경험을 기반으로 빠르게 성장합니다</HomeSection.Header>
 
       <div
         className={`
@@ -47,8 +47,10 @@ export function HomeCoreSkillsSection({ id, label }: Props) {
         `}
       >
         <Article>
-          <Article.Label>빠른 학습과 발전</Article.Label>
-          <Article.Description>상황에 따라 필요한 기술을 찾고 빠르게 습득 후 숙련도 향상</Article.Description>
+          <Article.Label>오래된 기술부터 새로운 기술까지</Article.Label>
+          <Article.Description>
+            2019년 출시한 Vue 2부터 최근 업데이트한 React 19, Next.js 16에 이르기까지 다양한 시기의 기술을 다뤄본 경험
+          </Article.Description>
         </Article>
 
         <Article>
@@ -61,7 +63,7 @@ export function HomeCoreSkillsSection({ id, label }: Props) {
         <Article>
           <Article.Label>효율적인 AI 활용</Article.Label>
           <Article.Description>
-            AI 에이전트를 활용해 빠른 프로젝트 구현부터 MCP를 연결해 최적화 및 문서화한 경험
+            AI 에이전트를 활용해 빠른 프로토타입 구현부터 MCP를 연결해 최적화 및 문서화한 경험
           </Article.Description>
         </Article>
       </div>

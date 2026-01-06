@@ -7,8 +7,17 @@ import { generatePageMetadata } from '@/core/utils';
 import { createBlogService } from '@/entities/blog';
 import { createProjectsService } from '@/entities/projects';
 
-import { HomeBlogSection, HomeHeroSection, HomeProjectsSection, HomeSlideTab } from '@/views/home';
-import { HomeSection } from '@/views/home/ui/HomeSection';
+import {
+  HomeBlogSection,
+  HomeCareerSection,
+  HomeContactSection,
+  HomeCoreSkillsSection,
+  HomeEducationSection,
+  HomeHeroSection,
+  HomeProjectsSection,
+  HomeSlideTab,
+  HomeTechStackSection,
+} from '@/views/home';
 
 export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname: '/' }) });
 
@@ -62,11 +71,20 @@ export default async function HomePage() {
       <div className="relative size-full py-layout">
         <HomeSlideTab tabs={SECTION_TAB_LIST} />
 
-        <HomeSection id={SECTION_ID_MAP.CORE_SKILLS}>핵심 역량</HomeSection>
+        <HomeCoreSkillsSection
+          id={SECTION_ID_MAP.CORE_SKILLS}
+          label={SECTION_LABEL_MAP.CORE_SKILLS}
+        />
 
-        <HomeSection id={SECTION_ID_MAP.TECH_STACK}>기술 스택</HomeSection>
+        <HomeTechStackSection
+          id={SECTION_ID_MAP.TECH_STACK}
+          label={SECTION_LABEL_MAP.TECH_STACK}
+        />
 
-        <HomeSection id={SECTION_ID_MAP.CAREER}>경력 사항</HomeSection>
+        <HomeCareerSection
+          id={SECTION_ID_MAP.CAREER}
+          label={SECTION_LABEL_MAP.CAREER}
+        />
 
         <HomeProjectsSection
           id={SECTION_ID_MAP.PROJECTS}
@@ -80,9 +98,15 @@ export default async function HomePage() {
           posts={blogPosts}
         />
 
-        <HomeSection id={SECTION_ID_MAP.EDUCATION}>교육</HomeSection>
+        <HomeEducationSection
+          id={SECTION_ID_MAP.EDUCATION}
+          label={SECTION_LABEL_MAP.EDUCATION}
+        />
 
-        <HomeSection id={SECTION_ID_MAP.CONTACT}>연락처</HomeSection>
+        <HomeContactSection
+          id={SECTION_ID_MAP.CONTACT}
+          label={SECTION_LABEL_MAP.CONTACT}
+        />
       </div>
     </div>
   );

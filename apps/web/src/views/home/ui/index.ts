@@ -1,4 +1,9 @@
 export { HomeBlogSection } from './HomeBlogSection';
+export { HomeCareerSection } from './HomeCareerSection';
+export { HomeContactSection } from './HomeContactSection';
+export { HomeCoreSkillsSection } from './HomeCoreSkillsSection';
+export { HomeEducationSection } from './HomeEducationSection';
 export { HomeHeroSection } from './HomeHeroSection';
 export { HomeProjectsSection } from './HomeProjectsSection';
 export { HomeSlideTab } from './HomeSlideTab';
+export { HomeTechStackSection } from './HomeTechStackSection';

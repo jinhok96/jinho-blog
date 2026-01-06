@@ -6,9 +6,9 @@ type Props = PropsWithChildren<{
 
 export default function ProjectsLayouts({ children, modal }: Props) {
   return (
-    <>
+    <div className="flex-col-center size-full flex-1">
       {children}
       {modal}
-    </>
+    </div>
   );
 }

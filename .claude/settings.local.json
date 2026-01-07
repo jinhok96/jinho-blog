@@ -42,7 +42,8 @@
       "Bash(npm:*)",
       "Bash(node -e:*)",
       "mcp__chrome-devtools__*",
-      "Bash(git show-branch:*)"
+      "Bash(git show-branch:*)",
+      "Bash(postcss \")"
     ],
     "deny": [],
     "ask": []

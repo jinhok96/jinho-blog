@@ -25,9 +25,9 @@ export function SelectCategory<T extends string>({ className, options, position 
   const params = useQueryParams<{ category: T | AllOptionKey; page: string }>();
 
   const category = params.get('category');
-  const initIndex = options.findIndex(option => option.key === category);
+  const initIndex = options.findIndex(option => option.key === category) + 1;
 
-  const [currentIndex, setCurrentIndex] = useState(initIndex === -1 ? 0 : initIndex);
+  const [currentIndex, setCurrentIndex] = useState(initIndex);
 
   const optionsWithAll: OptionsWithAll<T> = [ALL, ...options];
   const label = currentIndex === 0 ? '카테고리' : optionsWithAll[currentIndex].label;

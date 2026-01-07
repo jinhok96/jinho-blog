@@ -26,9 +26,9 @@ export default async function HomePage() {
 
       <HomeTechStackSection />
 
-      <HomeCareerSection />
-
       <HomeProjectsSection />
+
+      <HomeCareerSection />
 
       <HomeBlogSection />
 

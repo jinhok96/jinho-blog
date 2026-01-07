@@ -37,7 +37,7 @@ const { id, label } = HOME_SECTION_ID_LABEL_MAP.TECH_STACK;
 export function HomeTechStackSection() {
   return (
     <HomeSection id={id}>
-      <HomeSection.Header label={label}>여러 기술 및 도구를 사용할 수 있어요</HomeSection.Header>
+      <HomeSection.Header label={label}>아래 기술과 도구를 사용할 수 있어요</HomeSection.Header>
 
       <div
         className={`

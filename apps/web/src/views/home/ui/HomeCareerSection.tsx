@@ -6,9 +6,9 @@ const { id, label } = HOME_SECTION_ID_LABEL_MAP.CAREER;
 export function HomeCareerSection() {
   return (
     <HomeSection id={id}>
-      <HomeSection.Header label={label}>경력 사항입니다</HomeSection.Header>
+      <HomeSection.Header label={label}>디자인부터 개발까지 폭넓은 업무를 경험했습니다</HomeSection.Header>
 
-      <div className="flex-col-center w-fit max-w-2xl gap-8">
+      <div className="flex-col-center w-fit max-w-3xl gap-8">
         {CAREER_LIST.map(({ name, date, info, job, works }) => (
           <div
             key={name}

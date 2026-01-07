@@ -10,11 +10,11 @@ import { cn } from '@/core/utils';
 
 const VISIBLE_TIMEOUT = 3000;
 
-type Props = {
+type ItemSection = {
   tech: TechStack;
 };
 
-export function TechStackItem({ tech }: Props) {
+function Item({ tech }: ItemSection) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const timeout = useTimeoutRef();
@@ -36,7 +36,7 @@ export function TechStackItem({ tech }: Props) {
         onClick={handleImageClick}
         ref={ref}
       >
-        Icon
+        {/* Icon */}
       </div>
 
       {/* 라벨 */}
@@ -55,5 +55,32 @@ export function TechStackItem({ tech }: Props) {
         {TECH_STACK_MAP[tech]}
       </div>
     </li>
+  );
+}
+
+type StacksProps = {
+  label: string;
+  techs: TechStack[];
+};
+
+export function Stacks({ label, techs }: StacksProps) {
+  return (
+    <div className="size-full">
+      <p className="mb-4 w-full text-left font-caption-14 text-foreground-6">{label}</p>
+
+      <ol
+        className={`
+          grid grid-cols-3 gap-2
+          tablet:gap-2.5
+        `}
+      >
+        {techs.map(tech => (
+          <Item
+            key={tech}
+            tech={tech}
+          />
+        ))}
+      </ol>
+    </div>
   );
 }

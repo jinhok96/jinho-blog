@@ -49,3 +49,33 @@ export const CAREER_LIST: Career[] = [
     ],
   },
 ];
+
+type Education = {
+  name: string;
+  date: { start: string; end: string };
+  info: string;
+  works?: string[];
+};
+
+export const EDUCATION_LIST: Education[] = [
+  {
+    name: '세종대학교',
+    date: {
+      start: '2017.03',
+      end: '2024.02',
+    },
+    info: '디자인이노베이션 전공, 소프트웨어 복수전공',
+    works: [
+      '시각디자인을 전공하여 타이포그래피, 그래픽디자인, UI/UX 디자인, 모션그래픽 학습',
+      'C, Python, 자료구조, 알고리즘 등 기초 CS 지식 학습',
+    ],
+  },
+  {
+    name: '화성고등학교',
+    date: {
+      start: '2012.03',
+      end: '2015.02',
+    },
+    info: '이과',
+  },
+];

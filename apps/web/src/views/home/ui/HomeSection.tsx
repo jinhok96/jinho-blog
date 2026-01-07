@@ -12,7 +12,7 @@ export function HomeSection({ children, className, innerClassName, ...props }: H
       className={cn('w-full scroll-m-[calc(var(--height-header)+6rem)] px-layout', className)}
       {...props}
     >
-      <div className={cn('container mx-auto my-layout flex-col-center size-full gap-10', innerClassName)}>
+      <div className={cn('container mx-auto flex-col-center size-full gap-10 py-layout', innerClassName)}>
         {children}
       </div>
     </section>

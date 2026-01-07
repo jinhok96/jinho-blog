@@ -42,7 +42,7 @@ export function HomeCoreSkillsSection({ id, label }: Props) {
       <div
         className={`
           grid size-full max-w-sm grid-cols-1 gap-10
-          fold:max-w-5xl fold:grid-cols-2 fold:gap-x-6
+          tablet:max-w-5xl tablet:grid-cols-2 tablet:gap-x-6
           desktop:grid-cols-3
         `}
       >

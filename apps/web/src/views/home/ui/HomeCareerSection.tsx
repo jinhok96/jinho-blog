@@ -56,7 +56,11 @@ export function HomeCareerSection() {
               </div>
 
               {/* 업무 */}
-              <ul className="flex-col-start gap-1.5 rounded-xl bg-foreground-1 p-4 font-body-14 leading-snug">
+              <ul
+                className={`
+                  flex-col-start gap-2 rounded-xl bg-foreground-1 p-4 font-body-14 leading-snug text-foreground-8
+                `}
+              >
                 {works.map(workText => (
                   <li
                     key={workText}

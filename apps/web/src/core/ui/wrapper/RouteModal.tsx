@@ -37,10 +37,15 @@ export function RouteModal({ children }: Props) {
   useBodyScrollLock(isShow);
 
   return (
-    <div className="fixed inset-0 z-modal flex-col-center justify-center pb-header">
+    <div
+      className={`
+        fixed inset-0 z-modal flex-col-center h-screen w-screen justify-center overflow-hidden
+        tablet:pt-header tablet:px-layout tablet:pb-layout
+      `}
+    >
       {/* 오버레이 */}
       <div
-        className={cn('fixed inset-0 backdrop-blur-xs animated-150', !isShow && 'opacity-0')}
+        className={cn('absolute inset-0 backdrop-blur-xs animated-150', !isShow && 'opacity-0')}
         onClick={handleClose}
       />
 
@@ -48,9 +53,9 @@ export function RouteModal({ children }: Props) {
       <div
         className={cn(
           `
-            fixed inset-0 overflow-hidden border-foreground-2 bg-background drop-shadow-2xl animated-150
+            size-full overflow-hidden border-foreground-2 bg-background drop-shadow-2xl animated-150
             dark:bg-gray-1
-            tablet:inset-auto tablet:rounded-4xl tablet:border
+            tablet:size-fit tablet:max-h-180 tablet:w-lg tablet:rounded-4xl tablet:border
           `,
           !isShow && 'opacity-0 translate-x-6 tablet:translate-x-0 tablet:translate-y-20 tablet:scale-85',
         )}
@@ -58,7 +63,7 @@ export function RouteModal({ children }: Props) {
         <div
           className={`
             relative size-full overflow-y-auto px-8
-            tablet:scrollbar-margin-6 tablet:max-h-180 tablet:w-lg
+            tablet:scrollbar-margin-6
           `}
         >
           <div className="pt-8 pb-16">{children}</div>

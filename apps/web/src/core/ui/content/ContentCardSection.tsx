@@ -73,6 +73,7 @@ function TechBadgeList({ tech }: TechBadgeListProps) {
             <TechBadge
               key={item}
               tech={item}
+              className="size-8"
             />
           ))}
         </div>

@@ -1,5 +1,35 @@
+import type { TechStack } from '@jinho-blog/shared';
+
+import { TechBadge } from '@/core/ui';
+
 import { HomeSection } from '@/views/home/ui/HomeSection';
-import { Stacks } from '@/views/home/ui/techStackSection/Stacks';
+
+type TechStacksProps = {
+  label: string;
+  stacks: TechStack[];
+};
+
+function TechStacks({ label, stacks }: TechStacksProps) {
+  return (
+    <div className="size-full">
+      <p className="mb-4 w-full text-left font-caption-14 text-foreground-6">{label}</p>
+
+      <ol
+        className={`
+          grid grid-cols-3 gap-2
+          tablet:gap-2.5
+        `}
+      >
+        {stacks.map(item => (
+          <TechBadge
+            key={item}
+            tech={item}
+          />
+        ))}
+      </ol>
+    </div>
+  );
+}
 
 type Props = {
   id: string;
@@ -17,29 +47,29 @@ export function HomeTechStackSection({ id, label }: Props) {
           tablet:max-w-2xl tablet:grid-cols-3 tablet:gap-8
         `}
       >
-        <Stacks
+        <TechStacks
           label="프론트엔드"
-          techs={['html', 'javascript', 'typescript', 'react', 'vue', 'nextjs', 'react-native']}
+          stacks={['html', 'javascript', 'typescript', 'react', 'vue', 'nextjs', 'react-native']}
         />
-        <Stacks
+        <TechStacks
           label="스타일"
-          techs={['css', 'sass', 'styled-component', 'tailwindcss']}
+          stacks={['css', 'sass', 'styled-component', 'tailwindcss']}
         />
-        <Stacks
+        <TechStacks
           label="라이브러리"
-          techs={['tanstack-query', 'swr', 'zustand', 'react-hook-form', 'jest', 'motion']}
+          stacks={['tanstack-query', 'swr', 'zustand', 'react-hook-form', 'jest', 'motion']}
         />
-        <Stacks
+        <TechStacks
           label="번들러, 배포"
-          techs={['webpack', 'babel', 'electron', 'turbopack', 'vercel']}
+          stacks={['webpack', 'babel', 'electron', 'turbopack', 'vercel']}
         />
-        <Stacks
+        <TechStacks
           label="디자인"
-          techs={['figma', 'illustrator', 'photoshop', 'in-design', 'after-effects']}
+          stacks={['figma', 'illustrator', 'photoshop', 'in-design', 'after-effects']}
         />
-        <Stacks
+        <TechStacks
           label="협업"
-          techs={['git', 'github', 'slack', 'trello', 'jira', 'notion']}
+          stacks={['git', 'github', 'slack', 'trello', 'jira', 'notion']}
         />
       </div>
     </HomeSection>

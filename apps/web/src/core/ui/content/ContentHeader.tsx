@@ -32,6 +32,7 @@ export function ContentHeader({ category, title, createdAt, updatedAt, tech, isM
               <TechBadge
                 key={item}
                 tech={item}
+                className="size-8"
               />
             ))}
           </div>

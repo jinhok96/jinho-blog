@@ -1,5 +1,6 @@
 import type { PropsWithChildren } from 'react';
 
+import { HOME_SECTION_ID_LABEL_MAP } from '@/views/home/model';
 import { HomeSection } from '@/views/home/ui/HomeSection';
 
 type ArticleProps = PropsWithChildren<{
@@ -29,12 +30,9 @@ function Description({ children }: PropsWithChildren) {
 Article.Label = Label;
 Article.Description = Description;
 
-type Props = {
-  id: string;
-  label: string;
-};
+export function HomeCoreSkillsSection() {
+  const { id, label } = HOME_SECTION_ID_LABEL_MAP.CORE_SKILLS;
 
-export function HomeCoreSkillsSection({ id, label }: Props) {
   return (
     <HomeSection id={id}>
       <HomeSection.Header label={label}>다양한 경험과 시도로 빠르게 성장합니다</HomeSection.Header>

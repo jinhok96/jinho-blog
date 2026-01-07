@@ -2,6 +2,7 @@ import type { TechStack } from '@jinho-blog/shared';
 
 import { TechBadge } from '@/core/ui';
 
+import { HOME_SECTION_ID_LABEL_MAP } from '@/views/home/model';
 import { HomeSection } from '@/views/home/ui/HomeSection';
 
 type TechStacksProps = {
@@ -31,12 +32,9 @@ function TechStacks({ label, stacks }: TechStacksProps) {
   );
 }
 
-type Props = {
-  id: string;
-  label: string;
-};
+export function HomeTechStackSection() {
+  const { id, label } = HOME_SECTION_ID_LABEL_MAP.TECH_STACK;
 
-export function HomeTechStackSection({ id, label }: Props) {
   return (
     <HomeSection id={id}>
       <HomeSection.Header label={label}>여러 기술 및 도구를 사용할 수 있어요</HomeSection.Header>

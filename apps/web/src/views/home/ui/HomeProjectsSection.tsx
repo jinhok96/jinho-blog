@@ -5,19 +5,16 @@ import { ContentCardSection, LinkButton, Show } from '@/core/ui';
 
 import { createProjectsService } from '@/entities/projects';
 
+import { HOME_SECTION_ID_LABEL_MAP } from '@/views/home/model';
 import { HomeSection } from '@/views/home/ui/HomeSection';
 
 import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
 const projectsService = createProjectsService();
 
-type Props = {
-  id: string;
-  label: string;
-};
-
-export async function HomeProjectsSection({ id, label }: Props) {
+export async function HomeProjectsSection() {
   const { items } = await projectsService.getProjects({ count: String(6) });
+  const { id, label } = HOME_SECTION_ID_LABEL_MAP.PROJECTS;
 
   return (
     <HomeSection id={id}>

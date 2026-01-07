@@ -5,11 +5,11 @@ import { useLayoutEffect, useRef, useState } from 'react';
 import { SlideTab } from '@/core/ui';
 import { cn } from '@/core/utils';
 
-type Props = {
-  tabs: { id: string; label: string }[];
-};
+import { HOME_SECTION_TAB_LIST } from '@/views/home/model';
 
-export function HomeSlideTab({ tabs }: Props) {
+const tabs = HOME_SECTION_TAB_LIST;
+
+export function HomeSlideTab() {
   const [selectedIndex, setSelectedIndex] = useState(0);
   const visibleSectionsRef = useRef<Set<string>>(new Set());
   const isScrollingByClick = useRef(false);

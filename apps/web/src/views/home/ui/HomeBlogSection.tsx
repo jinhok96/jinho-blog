@@ -5,19 +5,16 @@ import { ContentCardSection, LinkButton, Show } from '@/core/ui';
 
 import { createBlogService } from '@/entities/blog';
 
+import { HOME_SECTION_ID_LABEL_MAP } from '@/views/home/model';
 import { HomeSection } from '@/views/home/ui/HomeSection';
 
 import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
 const blogService = createBlogService();
 
-type Props = {
-  id: string;
-  label: string;
-};
-
-export async function HomeBlogSection({ id, label }: Props) {
+export async function HomeBlogSection() {
   const { items } = await blogService.getBlogPosts({ count: String(6) });
+  const { id, label } = HOME_SECTION_ID_LABEL_MAP.BLOG;
 
   return (
     <HomeSection id={id}>

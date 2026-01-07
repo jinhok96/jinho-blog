@@ -12,9 +12,10 @@ import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
 const projectsService = createProjectsService();
 
+const { id, label } = HOME_SECTION_ID_LABEL_MAP.PROJECTS;
+
 export async function HomeProjectsSection() {
   const { items } = await projectsService.getProjects({ count: String(6) });
-  const { id, label } = HOME_SECTION_ID_LABEL_MAP.PROJECTS;
 
   return (
     <HomeSection id={id}>

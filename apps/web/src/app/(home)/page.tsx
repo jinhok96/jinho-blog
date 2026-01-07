@@ -4,25 +4,18 @@ import { routes } from '@jinho-blog/nextjs-routes';
 
 import { generatePageMetadata } from '@/core/utils';
 
-import { createBlogService } from '@/entities/blog';
-import { createProjectsService } from '@/entities/projects';
-
 import {
   HomeBlogSection,
   HomeCareerSection,
   HomeContactSection,
   HomeCoreSkillsSection,
   HomeEducationSection,
-  HomeHeroSection,
   HomeProjectsSection,
   HomeSlideTab,
   HomeTechStackSection,
 } from '@/views/home';
 
 export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname: '/' }) });
-
-const projectsService = createProjectsService();
-const blogService = createBlogService();
 
 const SECTION_ID_MAP = {
   CORE_SKILLS: 'skills-section',
@@ -58,56 +51,44 @@ const SECTION_TAB_LIST: {
 ];
 
 export default async function HomePage() {
-  const [{ items: projects }, { items: blogPosts }] = await Promise.all([
-    projectsService.getProjects({ count: String(6) }),
-    blogService.getBlogPosts({ count: String(6) }),
-  ]);
-
   return (
-    <div className="size-full pb-layout">
-      {/* 히어로 */}
-      <HomeHeroSection />
+    <div className="relative size-full py-layout">
+      <HomeSlideTab tabs={SECTION_TAB_LIST} />
 
-      <div className="relative size-full py-layout">
-        <HomeSlideTab tabs={SECTION_TAB_LIST} />
+      <HomeCoreSkillsSection
+        id={SECTION_ID_MAP.CORE_SKILLS}
+        label={SECTION_LABEL_MAP.CORE_SKILLS}
+      />
 
-        <HomeCoreSkillsSection
-          id={SECTION_ID_MAP.CORE_SKILLS}
-          label={SECTION_LABEL_MAP.CORE_SKILLS}
-        />
+      <HomeTechStackSection
+        id={SECTION_ID_MAP.TECH_STACK}
+        label={SECTION_LABEL_MAP.TECH_STACK}
+      />
 
-        <HomeTechStackSection
-          id={SECTION_ID_MAP.TECH_STACK}
-          label={SECTION_LABEL_MAP.TECH_STACK}
-        />
+      <HomeCareerSection
+        id={SECTION_ID_MAP.CAREER}
+        label={SECTION_LABEL_MAP.CAREER}
+      />
 
-        <HomeCareerSection
-          id={SECTION_ID_MAP.CAREER}
-          label={SECTION_LABEL_MAP.CAREER}
-        />
+      <HomeProjectsSection
+        id={SECTION_ID_MAP.PROJECTS}
+        label={SECTION_LABEL_MAP.PROJECTS}
+      />
 
-        <HomeProjectsSection
-          id={SECTION_ID_MAP.PROJECTS}
-          label={SECTION_LABEL_MAP.PROJECTS}
-          projects={projects}
-        />
+      <HomeBlogSection
+        id={SECTION_ID_MAP.BLOG}
+        label={SECTION_LABEL_MAP.BLOG}
+      />
 
-        <HomeBlogSection
-          id={SECTION_ID_MAP.BLOG}
-          label={SECTION_LABEL_MAP.BLOG}
-          posts={blogPosts}
-        />
+      <HomeEducationSection
+        id={SECTION_ID_MAP.EDUCATION}
+        label={SECTION_LABEL_MAP.EDUCATION}
+      />
 
-        <HomeEducationSection
-          id={SECTION_ID_MAP.EDUCATION}
-          label={SECTION_LABEL_MAP.EDUCATION}
-        />
-
-        <HomeContactSection
-          id={SECTION_ID_MAP.CONTACT}
-          label={SECTION_LABEL_MAP.CONTACT}
-        />
-      </div>
+      <HomeContactSection
+        id={SECTION_ID_MAP.CONTACT}
+        label={SECTION_LABEL_MAP.CONTACT}
+      />
     </div>
   );
 }

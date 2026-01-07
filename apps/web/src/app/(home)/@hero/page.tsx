@@ -1,11 +1,11 @@
 import { LinkButton } from '@/core/ui';
 
-import { HomeSection } from '@/views/home/ui/HomeSection';
+import { HomeSection } from '@/views/home';
 
 import DoubleChevronDownIcon from 'public/icons/double_chevron_down.svg';
 import DownloadIcon from 'public/icons/download.svg';
 
-export function HomeHeroSection() {
+export default function HomeHeroSection() {
   return (
     <HomeSection
       className="flex-col-center size-full min-h-screen bg-background"

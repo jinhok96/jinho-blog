@@ -3,7 +3,6 @@ export { HomeCareerSection } from './HomeCareerSection';
 export { HomeContactSection } from './HomeContactSection';
 export { HomeCoreSkillsSection } from './HomeCoreSkillsSection';
 export { HomeEducationSection } from './HomeEducationSection';
-export { HomeHeroSection } from './HomeHeroSection';
 export { HomeProjectsSection } from './HomeProjectsSection';
 export { HomeSection } from './HomeSection';
 export { HomeSlideTab } from './HomeSlideTab';

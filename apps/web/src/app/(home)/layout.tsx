@@ -1,14 +1,20 @@
-import type { PropsWithChildren } from 'react';
+import type { PropsWithChildren, ReactNode } from 'react';
 
 import { Header } from '@/modules/header';
 
-type Props = PropsWithChildren;
+type Props = PropsWithChildren<{
+  hero?: ReactNode;
+}>;
 
-export default function HomeLayout({ children }: Props) {
+export default function HomeLayout({ children, hero }: Props) {
   return (
     <div className="flex-col-center size-full flex-1">
       <Header />
-      {children}
+
+      <div className="size-full pb-layout">
+        {hero}
+        {children}
+      </div>
     </div>
   );
 }

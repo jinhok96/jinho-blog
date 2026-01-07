@@ -22,3 +22,30 @@ export const HOME_SECTION_TAB_LIST: Readonly<
   HOME_SECTION_ID_LABEL_MAP.EDUCATION,
   HOME_SECTION_ID_LABEL_MAP.CONTACT,
 ]);
+
+type Career = {
+  name: string;
+  date: { start: string; end: string };
+  info: string;
+  job: string;
+  works: string[];
+};
+
+export const CAREER_LIST: Career[] = [
+  {
+    name: '트립머니 주식회사',
+    date: {
+      start: '2025.07',
+      end: '현재',
+    },
+    info: '핀테크 스타트업',
+    job: '프론트엔드 & UI/UX 디자이너',
+    works: [
+      '키오스크 앱 UI/UX 디자인 및 프론트엔드 개발',
+      '홈페이지 UI/UX 디자인 및 프론트엔드 개발',
+      '어드민 UI/UX 리디자인 및 프론트엔드 개발',
+      '백엔드 API 구현 및 유지보수',
+      '레거시 코드 개선 (중복 코드 모듈화, 번들 및 캐시 최적화, 에러 처리 및 로깅 등)',
+    ],
+  },
+];

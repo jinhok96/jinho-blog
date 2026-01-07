@@ -1,5 +1,6 @@
 import type { DetailedHTMLProps, HTMLAttributes, PropsWithChildren } from 'react';
 
+import { Show } from '@/core/ui';
 import { cn } from '@/core/utils';
 
 type HomeSectionProps = DetailedHTMLProps<HTMLAttributes<HTMLElement>, HTMLElement> & {
@@ -25,7 +26,10 @@ function Header({ label, children }: HeaderProps) {
   return (
     <div className="flex-col-center w-full gap-2 text-center">
       <p className="w-full font-subtitle-16 text-blue-7">{label}</p>
-      <p className="font-subtitle-24">{children}</p>
+
+      <Show when={children}>
+        <p className="font-subtitle-24">{children}</p>
+      </Show>
     </div>
   );
 }

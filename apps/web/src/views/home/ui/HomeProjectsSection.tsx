@@ -1,32 +1,35 @@
-import type { Project } from '@jinho-blog/mdx-handler';
-
 import { routes } from '@jinho-blog/nextjs-routes';
 
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, LinkButton, Show } from '@/core/ui';
 
+import { createProjectsService } from '@/entities/projects';
+
 import { HomeSection } from '@/views/home/ui/HomeSection';
 
 import ChevronRightIcon from 'public/icons/chevron_right.svg';
 
+const projectsService = createProjectsService();
+
 type Props = {
   id: string;
   label: string;
-  projects: Project[];
 };
 
-export function HomeProjectsSection({ id, label, projects }: Props) {
+export async function HomeProjectsSection({ id, label }: Props) {
+  const { items } = await projectsService.getProjects({ count: String(6) });
+
   return (
     <HomeSection id={id}>
       <HomeSection.Header label={label}>주요 프로젝트의 세부 사항을 확인해보세요</HomeSection.Header>
 
       <div className="w-full">
         <Show
-          when={projects.length}
+          when={items.length}
           fallback={ContentCardSection.Placeholder}
         >
           <ContentCardSection>
-            {projects.map(({ category, slug, path, tech, title, description, createdAt }) => (
+            {items.map(({ category, slug, path, tech, title, description, createdAt }) => (
               <ContentCardSection.Card
                 key={slug}
                 href={path}

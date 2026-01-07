@@ -11,7 +11,7 @@ export default function HomeLayout({ children, hero }: Props) {
     <div className="flex-col-center size-full flex-1">
       <Header />
 
-      <div className="size-full pb-layout">
+      <div className="size-full">
         {hero}
         {children}
       </div>

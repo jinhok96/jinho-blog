@@ -1,3 +1,5 @@
+import { LINKS } from '@/core/constants';
+
 type HomeSectionIdLabelMapKey = 'CORE_SKILLS' | 'TECH_STACK' | 'CAREER' | 'PROJECTS' | 'BLOG' | 'EDUCATION' | 'CONTACT';
 
 export const HOME_SECTION_ID_LABEL_MAP: Readonly<Record<HomeSectionIdLabelMapKey, { id: string; label: string }>> =
@@ -98,6 +100,6 @@ export const CONTACT_LIST: Contact[] = [
   {
     label: 'Github',
     value: '@jinhok96',
-    href: 'https://github.com/jinhok96',
+    href: LINKS.GITHUB,
   },
 ];

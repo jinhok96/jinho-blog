@@ -8,7 +8,7 @@ type TimelinesProps = PropsWithChildren<{
 
 export function Timelines({ list }: TimelinesProps) {
   return (
-    <div className="grid w-fit max-w-3xl gap-8">
+    <div className="grid w-fit max-w-3xl gap-10">
       {list.map(({ name, date, info, job, works }) => (
         <div
           key={name}

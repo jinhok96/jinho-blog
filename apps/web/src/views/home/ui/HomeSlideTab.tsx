@@ -71,11 +71,14 @@ export function HomeSlideTab() {
   }, [tabs]);
 
   return (
-    <div className="sticky top-(--height-header) right-0 left-0 z-10 mx-auto w-fit px-layout">
+    <div className="pointer-events-none sticky top-(--height-header) right-0 left-0 z-10 w-full px-layout">
       <SlideTab
         selectedIndex={selectedIndex}
         onTabChange={handleTabChange}
-        className="scrollbar-hidden w-fit rounded-full bg-foreground-2 p-2 backdrop-blur-md"
+        className={`
+          pointer-events-auto mx-auto scrollbar-hidden w-fit max-w-full rounded-full bg-foreground-2 p-2
+          backdrop-blur-md
+        `}
         indicatorClassName="rounded-full bg-white"
       >
         {tabs.map(({ id, label }, index) => (

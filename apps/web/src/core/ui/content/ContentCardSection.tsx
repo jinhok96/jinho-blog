@@ -25,9 +25,10 @@ type CardProps = ComponentProps<typeof LinkButton> & {
   title: string;
   description: string;
   createdAt: string;
+  period?: string;
 };
 
-function Card({ href, className, category, title, description, createdAt, children, ...props }: CardProps) {
+function Card({ href, className, category, title, description, createdAt, children, period, ...props }: CardProps) {
   return (
     <LinkButton
       href={href}

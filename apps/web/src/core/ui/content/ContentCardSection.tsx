@@ -68,12 +68,12 @@ function TechBadgeList({ tech }: TechBadgeListProps) {
   return (
     <Show when={tech}>
       {list => (
-        <div className="flex-row-center flex-wrap gap-2 py-3">
+        <div className="flex-row-center flex-wrap gap-1.5 py-3">
           {list.map(item => (
             <TechStackBadge
               key={item}
               tech={item}
-              className="size-8"
+              className="size-7"
             />
           ))}
         </div>

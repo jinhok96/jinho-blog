@@ -12,12 +12,12 @@ type TechStacksProps = {
 
 function TechStacks({ label, stacks }: TechStacksProps) {
   return (
-    <div className="size-full">
-      <p className="mb-4 w-full text-left font-caption-14 text-foreground-6">{label}</p>
+    <div className="size-fit">
+      <p className="mb-4 font-caption-14 text-foreground-6">{label}</p>
 
       <ol
         className={`
-          grid grid-cols-3 gap-2
+          grid w-fit grid-cols-3 gap-2
           tablet:gap-2.5
         `}
       >
@@ -25,6 +25,10 @@ function TechStacks({ label, stacks }: TechStacksProps) {
           <TechStackBadge
             key={item}
             tech={item}
+            className={`
+              size-10
+              tablet:size-11
+            `}
           />
         ))}
       </ol>
@@ -41,8 +45,8 @@ export function HomeTechStackSection() {
 
       <div
         className={`
-          grid size-full max-w-sm grid-cols-2 gap-x-6 gap-y-7
-          tablet:max-w-2xl tablet:grid-cols-3 tablet:gap-8
+          grid size-fit grid-cols-2 gap-7
+          tablet:grid-cols-3 tablet:gap-8
         `}
       >
         <TechStacks

@@ -37,13 +37,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${SITE_URL}/projects`,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 0.7,
+      priority: 0.5,
     },
     {
       url: `${SITE_URL}/libraries`,
       lastModified: new Date(),
       changeFrequency: 'daily',
-      priority: 0.7,
+      priority: 0.8,
     },
   ];
 
@@ -54,7 +54,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${SITE_URL}${post.path}`,
     lastModified: new Date(post.updatedAt),
     changeFrequency: 'daily' as const,
-    priority: 0.8,
+    priority: 0.9,
   }));
 
   // 동적 프로젝트
@@ -62,7 +62,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${SITE_URL}${project.path}`,
     lastModified: new Date(project.updatedAt),
     changeFrequency: 'daily' as const,
-    priority: 0.6,
+    priority: 0.5,
   }));
 
   // 동적 라이브러리
@@ -70,7 +70,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     url: `${SITE_URL}${lib.path}`,
     lastModified: new Date(lib.updatedAt),
     changeFrequency: 'daily' as const,
-    priority: 0.6,
+    priority: 0.8,
   }));
 
   // 모든 페이지 결합

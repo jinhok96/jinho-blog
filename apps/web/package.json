@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "set PORT=3401 && next dev",
+    "dev": "rm -rf .next/dev && set PORT=3401 && next dev",
     "build": "next build",
     "start": "set PORT=3401 && next start",
     "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",

@@ -72,7 +72,12 @@ export function Timelines({ list }: TimelinesProps) {
                       key={workText}
                       className="flex-row-start gap-2"
                     >
-                      <div className="mt-1.75 size-1 rounded-full bg-foreground-4" />
+                      {/* 닷 */}
+                      <div className="flex-col-start h-[calc(0.875rem*1.375)] justify-center">
+                        <div className="size-1 shrink-0 rounded-full bg-foreground-4" />
+                      </div>
+
+                      {/* 텍스트 */}
                       <span>{workText}</span>
                     </li>
                   ))}

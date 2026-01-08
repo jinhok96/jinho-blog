@@ -1,6 +1,6 @@
 import type { TechStack } from '@jinho-blog/shared';
 
-import { TechBadge } from '@/core/ui';
+import { TechStackBadge } from '@/core/ui';
 
 import { HOME_SECTION_ID_LABEL_MAP } from '@/views/home/model';
 import { HomeSection } from '@/views/home/ui/HomeSection';
@@ -22,7 +22,7 @@ function TechStacks({ label, stacks }: TechStacksProps) {
         `}
       >
         {stacks.map(item => (
-          <TechBadge
+          <TechStackBadge
             key={item}
             tech={item}
           />

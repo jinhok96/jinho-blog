@@ -15,7 +15,7 @@ type Props = {
   tech: TechStack;
 };
 
-export function TechBadge({ className, tech }: Props) {
+export function TechStackBadge({ className, tech }: Props) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
   const timeout = useTimeoutRef();

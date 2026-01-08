@@ -1,6 +1,6 @@
 import type { TechStack } from '@jinho-blog/shared';
 
-import { TechBadge } from '@/core/ui/badge';
+import { TechStackBadge } from '@/core/ui/badge';
 import { Show } from '@/core/ui/wrapper';
 import { cn, formatDateToString } from '@/core/utils';
 
@@ -29,7 +29,7 @@ export function ContentHeader({ category, title, createdAt, updatedAt, tech, isM
         {list => (
           <div className="flex-row-center flex-wrap gap-2 py-2">
             {list.map(item => (
-              <TechBadge
+              <TechStackBadge
                 key={item}
                 tech={item}
                 className="size-8"

@@ -1,7 +1,7 @@
 import type { TechStack } from '@jinho-blog/shared';
 import type { ComponentProps, PropsWithChildren } from 'react';
 
-import { TechBadge } from '@/core/ui/badge';
+import { TechStackBadge } from '@/core/ui/badge';
 import { LinkButton } from '@/core/ui/button';
 import { Show } from '@/core/ui/wrapper';
 import { cn, formatDateToString } from '@/core/utils';
@@ -70,7 +70,7 @@ function TechBadgeList({ tech }: TechBadgeListProps) {
       {list => (
         <div className="flex-row-center flex-wrap gap-2 py-3">
           {list.map(item => (
-            <TechBadge
+            <TechStackBadge
               key={item}
               tech={item}
               className="size-8"

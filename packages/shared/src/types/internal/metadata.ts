@@ -13,7 +13,7 @@ export type TechStack =
   // 스타일
   | 'css'
   | 'sass'
-  | 'styled-component'
+  | 'styled-components'
   | 'tailwindcss'
   // 라이브러리
   | 'tanstack-query'

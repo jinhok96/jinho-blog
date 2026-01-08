@@ -51,7 +51,7 @@ export function HomeTechStackSection() {
         />
         <TechStacks
           label="스타일"
-          stacks={['css', 'sass', 'styled-component', 'tailwindcss']}
+          stacks={['css', 'sass', 'styled-components', 'tailwindcss']}
         />
         <TechStacks
           label="라이브러리"

@@ -13,7 +13,7 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
   // 스타일
   css: 'CSS',
   sass: 'Sass',
-  'styled-component': 'Styled Component',
+  'styled-components': 'Styled Components',
   tailwindcss: 'TailwindCSS',
 
   // 라이브러리

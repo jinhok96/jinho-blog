@@ -37,7 +37,7 @@ export function Timelines({ list }: TimelinesProps) {
             <div className="flex-col-start gap-2">
               <p className="font-subtitle-20">{name}</p>
 
-              <div className="flex-col-start gap-1">
+              <div className="flex-col-start gap-0.5">
                 {/* 기간 (모바일) */}
                 <p
                   className={`
@@ -64,7 +64,7 @@ export function Timelines({ list }: TimelinesProps) {
               {works => (
                 <ul
                   className={`
-                    flex-col-start gap-2 rounded-xl bg-foreground-1 p-4 font-body-14 leading-snug text-foreground-8
+                    flex-col-start gap-1.5 rounded-xl bg-foreground-1 p-4 font-body-14 leading-snug text-foreground-8
                   `}
                 >
                   {works.map(workText => (

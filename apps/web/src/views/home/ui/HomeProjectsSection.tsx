@@ -27,7 +27,7 @@ export async function HomeProjectsSection() {
           fallback={ContentCardSection.Placeholder}
         >
           <ContentCardSection>
-            {items.map(({ category, slug, path, tech, title, description, createdAt }) => (
+            {items.map(({ category, slug, path, tech, title, description, createdAt, period }) => (
               <ContentCardSection.Card
                 key={slug}
                 href={path}
@@ -36,6 +36,7 @@ export async function HomeProjectsSection() {
                 title={title}
                 description={description}
                 createdAt={createdAt}
+                period={period}
               >
                 <ContentCardSection.TechBadgeList tech={tech} />
               </ContentCardSection.Card>

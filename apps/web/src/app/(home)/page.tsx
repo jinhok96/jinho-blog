@@ -19,20 +19,22 @@ export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname
 
 export default async function HomePage() {
   return (
-    <div className="relative size-full pt-layout">
-      <HomeSlideTab />
+    <div className="size-full">
+      <div className="relative size-full py-layout">
+        <HomeSlideTab />
 
-      <HomeCoreSkillsSection />
+        <HomeCoreSkillsSection />
 
-      <HomeTechStackSection />
+        <HomeTechStackSection />
 
-      <HomeProjectsSection />
+        <HomeProjectsSection />
 
-      <HomeCareerSection />
+        <HomeCareerSection />
 
-      <HomeBlogSection />
+        <HomeBlogSection />
 
-      <HomeEducationSection />
+        <HomeEducationSection />
+      </div>
 
       <div className="dark size-full bg-black text-foreground">
         <HomeContactSection />

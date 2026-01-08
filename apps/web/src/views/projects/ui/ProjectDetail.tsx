@@ -10,7 +10,7 @@ type Props = Pick<ComponentProps<typeof MDXComponent>, 'isModalView'> & {
 };
 
 export function ProjectDetail({ project, fileContent, isModalView }: Props) {
-  const { title, category, createdAt, updatedAt, tech } = project;
+  const { title, category, description, createdAt, updatedAt, tech, period, members, links } = project;
 
   return (
     <>
@@ -19,7 +19,11 @@ export function ProjectDetail({ project, fileContent, isModalView }: Props) {
         title={title}
         createdAt={createdAt}
         updatedAt={updatedAt}
+        description={description}
         tech={tech}
+        period={period}
+        members={members}
+        links={links}
         isModalView={isModalView}
       />
 

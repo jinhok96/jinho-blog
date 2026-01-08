@@ -58,6 +58,9 @@ export interface BlogMetadata extends BaseMetadata {
 export interface ProjectMetadata extends BaseMetadata {
   category: ProjectCategory;
   tech: TechStack[];
+  period: string;
+  members: string;
+  links?: string[];
 }
 
 export interface LibraryMetadata extends BaseMetadata {

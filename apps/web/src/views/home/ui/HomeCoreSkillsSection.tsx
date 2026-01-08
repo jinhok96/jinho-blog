@@ -39,7 +39,7 @@ export function HomeCoreSkillsSection() {
 
       <div
         className={`
-          grid size-full max-w-sm grid-cols-1 gap-10
+          grid size-full max-w-sm grid-cols-1 gap-12
           tablet:max-w-5xl tablet:grid-cols-2 tablet:gap-x-6
           desktop:grid-cols-3
         `}

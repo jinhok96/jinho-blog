@@ -79,3 +79,25 @@ export const EDUCATION_LIST: Education[] = [
     info: '이과',
   },
 ];
+
+type Contact = {
+  label: string;
+  value: string;
+  href?: string;
+};
+
+export const CONTACT_LIST: Contact[] = [
+  {
+    label: '전화번호',
+    value: '010-8975-9268',
+  },
+  {
+    label: '이메일',
+    value: 'jinhok96a@gmail.com',
+  },
+  {
+    label: 'Github',
+    value: '@jinhok96',
+    href: 'https://github.com/jinhok96',
+  },
+];

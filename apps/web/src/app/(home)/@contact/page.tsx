@@ -1,11 +1,10 @@
 import { LinkButton, Show } from '@/core/ui';
 
-import { CONTACT_LIST, HOME_SECTION_ID_LABEL_MAP } from '@/views/home/model';
-import { HomeSection } from '@/views/home/ui/HomeSection';
+import { CONTACT_LIST, HOME_SECTION_ID_LABEL_MAP, HomeSection } from '@/views/home';
 
 const { id, label } = HOME_SECTION_ID_LABEL_MAP.CONTACT;
 
-export function HomeContactSection() {
+export default function HomeContactSection() {
   return (
     <HomeSection id={id}>
       <HomeSection.Header label={label}>

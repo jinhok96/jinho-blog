@@ -7,7 +7,6 @@ import { generatePageMetadata } from '@/core/utils';
 import {
   HomeBlogSection,
   HomeCareerSection,
-  HomeContactSection,
   HomeCoreSkillsSection,
   HomeEducationSection,
   HomeProjectsSection,
@@ -34,10 +33,6 @@ export default async function HomePage() {
         <HomeBlogSection />
 
         <HomeEducationSection />
-      </div>
-
-      <div className="dark size-full bg-black text-foreground">
-        <HomeContactSection />
       </div>
     </div>
   );

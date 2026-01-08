@@ -1,6 +1,5 @@
 export { HomeBlogSection } from './HomeBlogSection';
 export { HomeCareerSection } from './HomeCareerSection';
-export { HomeContactSection } from './HomeContactSection';
 export { HomeCoreSkillsSection } from './HomeCoreSkillsSection';
 export { HomeEducationSection } from './HomeEducationSection';
 export { HomeProjectsSection } from './HomeProjectsSection';

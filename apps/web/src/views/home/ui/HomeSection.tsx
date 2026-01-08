@@ -28,7 +28,7 @@ function Header({ label, children }: HeaderProps) {
       <p className="w-full font-subtitle-16 text-blue-7">{label}</p>
 
       <Show when={children}>
-        <p className="font-subtitle-24">{children}</p>
+        <div className="font-subtitle-24">{children}</div>
       </Show>
     </div>
   );

@@ -4,30 +4,12 @@
 /**
  * Static route pathnames (no dynamic parameters)
  */
-export type StaticPathname =
-  | '/'
-  | '/api/blog'
-  | '/api/libraries'
-  | '/api/libraries/category'
-  | '/api/projects'
-  | '/blog'
-  | '/libraries'
-  | '/projects'
-  | '/rss.xml';
+export type StaticPathname = '/' | '/api/blog' | '/api/libraries' | '/api/libraries/category' | '/api/projects' | '/blog' | '/libraries' | '/projects' | '/rss.xml';
 
 /**
  * Dynamic route pathnames (with parameters like [slug])
  */
-export type DynamicPathname =
-  | '/api/blog/[slug]'
-  | '/api/blog/[slug]/content'
-  | '/api/libraries/[slug]'
-  | '/api/libraries/[slug]/content'
-  | '/api/projects/[slug]'
-  | '/api/projects/[slug]/content'
-  | '/blog/[slug]'
-  | '/libraries/[slug]'
-  | '/projects/[slug]';
+export type DynamicPathname = '/api/blog/[slug]' | '/api/blog/[slug]/content' | '/api/libraries/[slug]' | '/api/libraries/[slug]/content' | '/api/projects/[slug]' | '/api/projects/[slug]/content' | '/blog/[slug]' | '/libraries/[slug]' | '/projects/[slug]';
 
 /**
  * All route pathnames
@@ -42,25 +24,17 @@ export type Pathname = StaticPathname | DynamicPathname;
  * PathParams<'/blog/[slug]'> = { slug: string }
  * PathParams<'/blog/[slug]/[id]'> = { slug: string; id: string }
  */
-export type PathParams<P extends DynamicPathname> = P extends '/api/blog/[slug]'
-  ? { slug: string }
-  : P extends '/api/blog/[slug]/content'
-    ? { slug: string }
-    : P extends '/api/libraries/[slug]'
-      ? { slug: string }
-      : P extends '/api/libraries/[slug]/content'
-        ? { slug: string }
-        : P extends '/api/projects/[slug]'
-          ? { slug: string }
-          : P extends '/api/projects/[slug]/content'
-            ? { slug: string }
-            : P extends '/blog/[slug]'
-              ? { slug: string }
-              : P extends '/libraries/[slug]'
-                ? { slug: string }
-                : P extends '/projects/[slug]'
-                  ? { slug: string }
-                  : never;
+export type PathParams<P extends DynamicPathname> =
+  P extends '/api/blog/[slug]' ? { slug: string } :
+  P extends '/api/blog/[slug]/content' ? { slug: string } :
+  P extends '/api/libraries/[slug]' ? { slug: string } :
+  P extends '/api/libraries/[slug]/content' ? { slug: string } :
+  P extends '/api/projects/[slug]' ? { slug: string } :
+  P extends '/api/projects/[slug]/content' ? { slug: string } :
+  P extends '/blog/[slug]' ? { slug: string } :
+  P extends '/libraries/[slug]' ? { slug: string } :
+  P extends '/projects/[slug]' ? { slug: string } :
+  never;
 
 /**
  * Search/query parameters (customizable via generic)
@@ -91,7 +65,7 @@ export type HashParam<T = string> = T;
  */
 export type RouteObject<
   S extends Record<string, string | string[] | undefined> = Record<string, string | string[] | undefined>,
-  H extends string = string,
+  H extends string = string
 > =
   | {
       pathname: StaticPathname;
@@ -104,6 +78,7 @@ export type RouteObject<
       search?: SearchParams<S>;
       hash?: HashParam<H>;
     };
+
 
 declare module '@jinho-blog/nextjs-routes' {
   export type { DynamicPathname, HashParam, Pathname, PathParams, RouteObject, SearchParams, StaticPathname };

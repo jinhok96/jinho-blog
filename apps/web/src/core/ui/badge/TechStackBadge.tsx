@@ -39,9 +39,10 @@ export function TechStackBadge({ className, tech }: Props) {
       {/* 아이콘 */}
       <div
         className={`
-          peer aspect-square w-full overflow-hidden rounded-md bg-white p-1 shadow-md
+          peer aspect-square w-full overflow-hidden rounded-md bg-background p-1 shadow-md
           @min-[2.5rem]:rounded-lg @min-[2.5rem]:p-1.5
           @min-[3rem]:p-2
+          dark:bg-foreground-2
         `}
         onClick={handleImageClick}
         ref={ref}

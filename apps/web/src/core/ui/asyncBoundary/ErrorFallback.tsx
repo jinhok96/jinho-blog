@@ -1,11 +1,17 @@
 'use client';
 
 import type { ErrorFallbackProps } from './ErrorBoundary';
+import type { HttpError } from '@/core/http';
 
 import { getErrorMessage } from '@/core/error/messages';
 import { isHttpError } from '@/core/http';
 import { Button } from '@/core/ui/button';
 import { Show } from '@/core/ui/wrapper';
+
+const stringifyHttpError = (error: HttpError) => {
+  const loggingObj = { ...error, details: JSON.stringify(error.details, null, 2) };
+  return JSON.stringify(loggingObj, null, 2);
+};
 
 /**
  * 에러 코드 기반 에러 UI 컴포넌트
@@ -44,11 +50,7 @@ export function ErrorFallback({ error, reset }: ErrorFallbackProps) {
             에러 상세 정보
           </summary>
           <pre className="mt-3 overflow-auto rounded-xl bg-gray-1 p-4 font-body-12">
-            {isHttpError(error)
-              ? JSON.stringify(error, null, 2)
-              : error instanceof Error
-                ? error.message
-                : String(error)}
+            {isHttpError(error) ? stringifyHttpError(error) : error instanceof Error ? error.message : String(error)}
           </pre>
         </details>
       </Show>

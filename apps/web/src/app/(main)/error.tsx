@@ -8,7 +8,6 @@ type ErrorProps = {
 };
 
 export default function Error({ error, reset }: ErrorProps) {
-  console.error('error', error);
   return (
     <ErrorFallback
       error={error}

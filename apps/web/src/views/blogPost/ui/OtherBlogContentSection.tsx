@@ -38,9 +38,10 @@ export async function OtherBlogContentSection({ category, page }: Props) {
               href={path}
               category={BLOG_CATEGORY_MAP[category]}
               title={title}
-              description={description}
               createdAt={createdAt}
-            />
+            >
+              <ContentCardSection.BlogInfo description={description} />
+            </ContentCardSection.Card>
           ))}
         </ContentCardSection>
       </Show>

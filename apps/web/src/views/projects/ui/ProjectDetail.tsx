@@ -10,22 +10,24 @@ type Props = Pick<ComponentProps<typeof MDXComponent>, 'isModalView'> & {
 };
 
 export function ProjectDetail({ project, fileContent, isModalView }: Props) {
-  const { title, category, description, createdAt, updatedAt, tech, period, members, links } = project;
+  const { title, category, description, tech, period, members, links } = project;
 
   return (
     <>
       <ContentHeader
         category={PROJECT_CATEGORY_MAP[category]}
         title={title}
-        createdAt={createdAt}
-        updatedAt={updatedAt}
-        description={description}
-        tech={tech}
-        period={period}
-        members={members}
-        links={links}
         isModalView={isModalView}
-      />
+      >
+        <ContentHeader.ProjectInfo
+          period={period}
+          members={members}
+          description={description}
+          links={links}
+        />
+
+        <ContentHeader.TechStacks stacks={tech} />
+      </ContentHeader>
 
       <MDXComponent
         fileContent={fileContent}

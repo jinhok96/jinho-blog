@@ -34,12 +34,14 @@ export async function HomeProjectsSection() {
                 scroll={false}
                 category={PROJECT_CATEGORY_MAP[category]}
                 title={title}
-                description={description}
                 createdAt={createdAt}
-                period={period}
-                members={members}
               >
-                <ContentCardSection.TechBadgeList tech={tech} />
+                <ContentCardSection.ProjectInfo
+                  period={period}
+                  members={members}
+                  description={description}
+                />
+                <ContentCardSection.TechStacks stacks={tech} />
               </ContentCardSection.Card>
             ))}
           </ContentCardSection>

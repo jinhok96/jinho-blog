@@ -109,10 +109,13 @@ export default async function LibraryPage({ params }: Props) {
           <ContentHeader
             category={LIBRARY_CATEGORY_MAP[category]}
             title={title}
-            createdAt={createdAt}
-            updatedAt={updatedAt}
-            tech={tech}
-          />
+          >
+            <ContentHeader.Date
+              createdAt={createdAt}
+              updatedAt={updatedAt}
+            />
+            <ContentHeader.TechStacks stacks={tech} />
+          </ContentHeader>
 
           {/* MDX */}
           <MDXComponent fileContent={fileContent} />

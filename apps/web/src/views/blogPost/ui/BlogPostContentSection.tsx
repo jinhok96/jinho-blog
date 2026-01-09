@@ -16,9 +16,12 @@ export async function BlogPostContentSection({ post, fileContent }: Props) {
       <ContentHeader
         category={BLOG_CATEGORY_MAP[category]}
         title={title}
-        createdAt={createdAt}
-        updatedAt={updatedAt}
-      />
+      >
+        <ContentHeader.Date
+          createdAt={createdAt}
+          updatedAt={updatedAt}
+        />
+      </ContentHeader>
 
       <MDXComponent fileContent={fileContent} />
     </>

@@ -8,8 +8,11 @@ import { isHttpError } from '@/core/http';
 import { Button } from '@/core/ui/button';
 import { Show } from '@/core/ui/wrapper';
 
-const stringifyHttpError = (error: HttpError) => {
-  const loggingObj = { ...error, details: JSON.stringify(error.details, null, 2) };
+const stringifyHttpError = ({ details, ...error }: HttpError) => {
+  const stringDetails = Object.entries(details || {})
+    .map(([key, value]) => `${key}: ${value}`)
+    .join('\n');
+  const loggingObj = { ...error, details: stringDetails };
   return JSON.stringify(loggingObj, null, 2);
 };
 

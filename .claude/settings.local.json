@@ -35,7 +35,8 @@
       "mcp__chrome-devtools__*",
       "Bash(git show-branch:*)",
       "Bash(postcss \")",
-      "Bash(npm run type-check:*)"
+      "Bash(npm run type-check:*)",
+      "Bash(grep:*)"
     ],
     "deny": [],
     "ask": []

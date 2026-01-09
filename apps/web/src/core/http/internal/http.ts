@@ -84,6 +84,11 @@ export const http: Http = (baseUrl: string = HTTP_DEFAULT_BASE_URL, defaultOptio
     response: Response,
     responseType?: HttpOptions['responseType'],
   ): Promise<HttpResponse<T>> => {
+    const details: Record<string, unknown> = {};
+    response.headers.forEach((value, key) => {
+      details[key] = value;
+    });
+
     // 에러 응답 처리
     if (!response.ok) {
       const contentType = response.headers.get('content-type');
@@ -91,16 +96,16 @@ export const http: Http = (baseUrl: string = HTTP_DEFAULT_BASE_URL, defaultOptio
       if (contentType?.includes('application/json')) {
         try {
           const errorData = (await response.json()) as ErrorResponse;
-          throw HttpError.fromResponse(errorData, response.status);
+          throw HttpError.fromResponse(errorData, response.status, details);
         } catch (error) {
           // JSON 파싱 실패 시 기본 에러
           if (error instanceof HttpError) throw error;
-          throw new HttpError(ERROR_CODES.INTERNAL_SERVER_ERROR, response.status);
+          throw new HttpError(ERROR_CODES.INTERNAL_SERVER_ERROR, response.status, details);
         }
       }
 
       // JSON이 아닌 경우 기본 에러
-      throw new HttpError(ERROR_CODES.INTERNAL_SERVER_ERROR, response.status);
+      throw new HttpError(ERROR_CODES.INTERNAL_SERVER_ERROR, response.status, details);
     }
 
     // 정상 응답 처리

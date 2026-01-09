@@ -52,10 +52,11 @@ export class HttpError extends Error {
   ) {
     super(`HTTP Error: ${code}`);
     this.name = 'HttpError';
+    this.timestamp = new Date().toISOString();
   }
 
-  static fromResponse(errorResponse: ErrorResponse, status: number): HttpError {
-    return new HttpError(errorResponse.error.code, status, errorResponse.error.details, errorResponse.error.timestamp);
+  static fromResponse(errorResponse: ErrorResponse, status: number, details?: Record<string, unknown>): HttpError {
+    return new HttpError(errorResponse.error.code, status, details, errorResponse.error.timestamp);
   }
 }
 

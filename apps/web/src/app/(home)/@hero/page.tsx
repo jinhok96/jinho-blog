@@ -8,7 +8,7 @@ import DownloadIcon from 'public/icons/download.svg';
 export default function HomeHeroSection() {
   return (
     <HomeSection
-      className="flex-col-center size-full h-screen max-h-360 bg-background"
+      className="flex-col-center size-full h-screen max-h-360 min-h-fit bg-background"
       innerClassName={`
         my-12! flex-1 gap-14
         tablet:gap-20

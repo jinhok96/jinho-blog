@@ -1,8 +1,6 @@
-'use client';
-
 import type { HTMLAttributes } from 'react';
 
-import DOMPurify, { type Config } from 'isomorphic-dompurify';
+import sanitizeHtml from 'sanitize-html';
 
 type SafeHTMLProps = Omit<HTMLAttributes<HTMLDivElement>, 'dangerouslySetInnerHTML'> & {
   html?: string;
@@ -13,12 +11,15 @@ type SafeHTMLProps = Omit<HTMLAttributes<HTMLDivElement>, 'dangerouslySetInnerHT
 export function SafeHTML({ html, allowedTags = [], allowedAttributes = [], ...props }: SafeHTMLProps) {
   if (!html) return null;
 
-  const sanitizeConfig: Config = {
-    ALLOWED_TAGS: ['span', 'br', 'p', 'a', ...allowedTags],
-    ALLOWED_ATTR: ['class', 'href', 'target', ...allowedAttributes],
+  const sanitizeConfig: sanitizeHtml.IOptions = {
+    allowedTags: ['span', 'br', 'p', 'a', ...allowedTags],
+    allowedAttributes: {
+      '*': ['class', ...allowedAttributes],
+      a: ['href', 'target', ...allowedAttributes],
+    },
   };
 
-  const sanitized = DOMPurify.sanitize(html, sanitizeConfig);
+  const sanitized = sanitizeHtml(html, sanitizeConfig);
 
   return (
     <div

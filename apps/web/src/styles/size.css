@@ -14,6 +14,8 @@
 
   --padding-layout-x: var(--padding-layout-x);
   --padding-layout-y: var(--padding-layout-y);
+  --margin-layout-x: var(--padding-layout-x);
+  --margin-layout-y: var(--padding-layout-y);
 }
 
 @utility pt-header {

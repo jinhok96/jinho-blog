@@ -10,11 +10,11 @@
 /* 커스텀 기본 스타일 */
 @layer base {
   * {
-    @apply scrollbar break-keep;
+    @apply scrollbar touch:scrollbar-minimal break-keep;
   }
 
   :root {
-    @apply bg-background text-foreground;
+    @apply bg-gray-1 text-foreground;
   }
 
   a {

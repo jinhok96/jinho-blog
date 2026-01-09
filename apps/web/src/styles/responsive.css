@@ -1,12 +1,6 @@
 /* Layout */
-@custom-variant fold {
-  @media (width >= 40rem /* 640px */) {
-    @slot;
-  }
-}
-
 @custom-variant tablet {
-  @media (width >= 48rem /* 768px */) {
+  @media (width >= 40rem /* 640px */) {
     @slot;
   }
 }

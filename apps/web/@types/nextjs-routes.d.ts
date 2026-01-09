@@ -4,7 +4,7 @@
 /**
  * Static route pathnames (no dynamic parameters)
  */
-export type StaticPathname = '/' | '/api/blog' | '/api/libraries' | '/api/libraries/category' | '/api/projects' | '/blog' | '/libraries' | '/projects';
+export type StaticPathname = '/' | '/api/blog' | '/api/libraries' | '/api/libraries/category' | '/api/projects' | '/blog' | '/libraries' | '/projects' | '/rss.xml';
 
 /**
  * Dynamic route pathnames (with parameters like [slug])

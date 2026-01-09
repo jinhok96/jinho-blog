@@ -2,16 +2,45 @@ import type { BlogCategory, LibraryCategory, ProjectCategory } from './category'
 
 // 기술 스택 타입 (Project, Library에서 공통 사용)
 export type TechStack =
-  | 'react'
-  | 'nextjs'
-  | 'typescript'
-  | 'javascript'
-  | 'tailwindcss'
-  | 'css'
+  // 프론트엔드
   | 'html'
-  | 'zustand'
+  | 'javascript'
+  | 'typescript'
+  | 'react'
+  | 'vue'
+  | 'nextjs'
+  | 'react-native'
+  // 스타일
+  | 'css'
+  | 'sass'
+  | 'styled-components'
+  | 'tailwindcss'
+  // 라이브러리
+  | 'tanstack-query'
   | 'swr'
-  | 'motion';
+  | 'zustand'
+  | 'react-hook-form'
+  | 'jest'
+  | 'motion'
+  // 번들러, 배포
+  | 'webpack'
+  | 'babel'
+  | 'electron'
+  | 'turbopack'
+  | 'vercel'
+  // 디자인
+  | 'figma'
+  | 'illustrator'
+  | 'photoshop'
+  | 'in-design'
+  | 'after-effects'
+  // 협업
+  | 'git'
+  | 'github'
+  | 'slack'
+  | 'trello'
+  | 'jira'
+  | 'notion';
 
 // 모든 메타데이터에 공통 필드
 export interface BaseMetadata {
@@ -29,6 +58,9 @@ export interface BlogMetadata extends BaseMetadata {
 export interface ProjectMetadata extends BaseMetadata {
   category: ProjectCategory;
   tech: TechStack[];
+  period: string;
+  members: string;
+  links?: string[];
 }
 
 export interface LibraryMetadata extends BaseMetadata {

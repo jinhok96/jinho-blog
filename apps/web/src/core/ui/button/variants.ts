@@ -10,6 +10,7 @@ export const buttonVariants = cva('animated-100', {
     color: {
       background: '',
       foreground: '',
+      gray: '',
       blue: '',
     },
 
@@ -48,6 +49,11 @@ export const buttonVariants = cva('animated-100', {
     },
     {
       variant: 'solid',
+      color: 'gray',
+      className: 'text-foreground-6',
+    },
+    {
+      variant: 'solid',
       color: 'blue',
       className: 'text-background dark:text-foreground bg-blue-6 border border-blue-6',
     },
@@ -66,6 +72,14 @@ export const buttonVariants = cva('animated-100', {
       disableHover: false,
       disabled: false,
       className: 'hover:bg-foreground-9 hover:border-foreground-9',
+    },
+
+    {
+      variant: 'solid',
+      color: 'gray',
+      disableHover: false,
+      disabled: false,
+      className: 'hover:bg-foreground-2',
     },
     {
       variant: 'solid',
@@ -88,6 +102,11 @@ export const buttonVariants = cva('animated-100', {
     },
     {
       variant: 'outline',
+      color: 'gray',
+      className: 'border text-foreground-6 border-foreground-3',
+    },
+    {
+      variant: 'outline',
       color: 'blue',
       className: 'border text-blue-7 dark:text-blue-7 border-blue-7',
     },
@@ -103,6 +122,13 @@ export const buttonVariants = cva('animated-100', {
     {
       variant: 'outline',
       color: 'foreground',
+      disableHover: false,
+      disabled: false,
+      className: 'hover:bg-foreground-2',
+    },
+    {
+      variant: 'outline',
+      color: 'gray',
       disableHover: false,
       disabled: false,
       className: 'hover:bg-foreground-2',

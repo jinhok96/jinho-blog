@@ -31,7 +31,7 @@ export default async function LibrariesListPage() {
   });
 
   return (
-    <>
+    <div className="flex-col-center size-full">
       <Header />
 
       <div className="container flex-col-start size-full gap-6 p-layout">
@@ -39,7 +39,7 @@ export default async function LibrariesListPage() {
 
         <p>라이브러리 페이지 설명입니다. 이 페이지의 목적을 설명합니다. 지속적으로 추가할 예정입니다.</p>
 
-        <div className="flex-col-start gap-14 pt-8">
+        <div className="flex-col-start w-full gap-14 pt-8">
           {LIBRARY_CATEGORY_MAP_KEYS.map(category => (
             <section
               key={category}
@@ -71,6 +71,6 @@ export default async function LibrariesListPage() {
           ))}
         </div>
       </div>
-    </>
+    </div>
   );
 }

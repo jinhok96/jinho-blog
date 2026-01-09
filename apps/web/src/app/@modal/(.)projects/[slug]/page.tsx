@@ -14,12 +14,13 @@ type Props = {
 
 export default async function InterceptedProjectPage({ params }: Props) {
   const { slug } = await params;
-  const project = await projectsService.getProject({ slug });
+
+  const [project, fileContent] = await Promise.all([
+    projectsService.getProject({ slug }),
+    projectsService.getProjectContent({ slug }),
+  ]);
 
   if (!project) notFound();
-
-  const fileContent = await projectsService.getProjectContent({ slug });
-
   if (!fileContent) notFound();
 
   return (

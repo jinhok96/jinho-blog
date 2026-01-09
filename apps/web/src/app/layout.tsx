@@ -46,7 +46,7 @@ export default function RootLayout({ children, modal }: Props) {
         <ThemeStoreProvider theme="system">
           <div id={PORTAL.leftSidebar} />
 
-          <main className="relative flex-col-center size-full flex-1">
+          <main className="relative flex-col-center h-fit w-full flex-1">
             {children}
             {modal}
           </main>

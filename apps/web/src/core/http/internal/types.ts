@@ -47,7 +47,7 @@ export class HttpError extends Error {
   constructor(
     public code: ErrorCode,
     public status: number,
-    public details?: Record<string, unknown>,
+    public details?: Record<string, unknown> | string,
     public timestamp?: string,
   ) {
     super(`HTTP Error: ${code}`);
@@ -55,7 +55,11 @@ export class HttpError extends Error {
     this.timestamp = new Date().toISOString();
   }
 
-  static fromResponse(errorResponse: ErrorResponse, status: number, details?: Record<string, unknown>): HttpError {
+  static fromResponse(
+    errorResponse: ErrorResponse,
+    status: number,
+    details?: Record<string, unknown> | string,
+  ): HttpError {
     return new HttpError(errorResponse.error.code, status, details, errorResponse.error.timestamp);
   }
 }

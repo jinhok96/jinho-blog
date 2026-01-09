@@ -6,13 +6,11 @@ import type { HttpError } from '@/core/http';
 import { getErrorMessage } from '@/core/error/messages';
 import { isHttpError } from '@/core/http';
 import { Button } from '@/core/ui/button';
+import { Show } from '@/core/ui/wrapper';
 
 const stringifyHttpError = ({ details, ...error }: HttpError) => {
-  const stringDetails = Object.entries(details || {})
-    .map(([key, value]) => `${key}: ${value}`)
-    .join('\n');
-  const loggingObj = { ...error, details: stringDetails };
-  return JSON.stringify(loggingObj, null, 2);
+  const stringifiedDetails = typeof details === 'object' ? JSON.stringify(details, null, 2) : details;
+  return JSON.stringify({ ...error, details: stringifiedDetails }, null, 2);
 };
 
 /**
@@ -41,21 +39,21 @@ export function ErrorFallback({ error, reset }: ErrorFallbackProps) {
         {action}
       </Button>
 
-      {/* <Show when={process.env.NODE_ENV === 'development'}> */}
-      <details className="mt-4 w-full max-w-2xl">
-        <summary
-          className={`
-            cursor-pointer font-caption-14 text-gray-5 animated-100
-            hover:text-gray-8
-          `}
-        >
-          에러 상세 정보
-        </summary>
-        <pre className="mt-3 overflow-auto rounded-xl bg-gray-1 p-4 font-body-12">
-          {isHttpError(error) ? stringifyHttpError(error) : error instanceof Error ? error.message : String(error)}
-        </pre>
-      </details>
-      {/* </Show> */}
+      <Show when={process.env.NODE_ENV === 'development'}>
+        <details className="mt-4 w-full max-w-2xl">
+          <summary
+            className={`
+              cursor-pointer font-caption-14 text-gray-5 animated-100
+              hover:text-gray-8
+            `}
+          >
+            에러 상세 정보
+          </summary>
+          <pre className="mt-3 overflow-auto rounded-xl bg-gray-1 p-4 font-body-12">
+            {isHttpError(error) ? stringifyHttpError(error) : error instanceof Error ? error.message : String(error)}
+          </pre>
+        </details>
+      </Show>
     </div>
   );
 }

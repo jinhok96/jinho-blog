@@ -5,12 +5,17 @@ import Link from 'next/link';
 
 import { PressableLink } from '@/core/ui/button/PressableLink';
 import { buttonVariants } from '@/core/ui/button/variants';
-import { cn } from '@/core/utils';
+import { cn, stringifyURL } from '@/core/utils';
 
-type Props = ComponentProps<typeof Link> & ButtonProps;
+type Props = ComponentProps<typeof Link> &
+  ButtonProps & {
+    hard?: boolean;
+  };
 
 export function LinkButton({
   className,
+  href,
+  hard,
   size,
   color,
   variant,
@@ -29,16 +34,42 @@ export function LinkButton({
     disabled,
   });
 
+  if (hard) {
+    const hrefString = stringifyURL(href);
+
+    return (
+      <>
+        <a
+          className={cn(variants, className, 'touch:hidden')}
+          href={hrefString}
+          {...props}
+        >
+          {children}
+        </a>
+        <PressableLink
+          className={cn(variants, className, 'not-touch:hidden')}
+          href={hrefString}
+          hard
+          {...props}
+        >
+          {children}
+        </PressableLink>
+      </>
+    );
+  }
+
   return (
     <>
       <Link
         className={cn(variants, className, 'touch:hidden')}
+        href={href}
         {...props}
       >
         {children}
       </Link>
       <PressableLink
         className={cn(variants, className, 'not-touch:hidden')}
+        href={href}
         {...props}
       >
         {children}

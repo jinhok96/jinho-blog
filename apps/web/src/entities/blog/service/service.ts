@@ -1,33 +1,26 @@
 import type { GetBlogContent, GetBlogPost, GetBlogPosts } from '@/entities/blog/types';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { getBlogContent, getBlogPost, getBlogPosts } from '@jinho-blog/mdx-handler';
 
-import { http, type HttpClient } from '@/core/http';
-import { getBlogPosts } from '@jinho-blog/mdx-handler';
-
-const defaultHttpClient = http();
-
-type BlogService = (httpClient?: typeof defaultHttpClient) => {
+type BlogService = () => {
   getBlogPosts: (search?: GetBlogPosts['search']) => Promise<GetBlogPosts['response']>;
   getBlogPost: (params: GetBlogPost['params']) => Promise<GetBlogPost['response']>;
   getBlogContent(params: GetBlogContent['params']): Promise<GetBlogContent['response']>;
 };
 
-export const createBlogService: BlogService = (httpClient: HttpClient = defaultHttpClient) => ({
+export const createBlogService: BlogService = () => ({
   getBlogPosts: async search => {
     const response = await getBlogPosts(search);
     return response;
   },
 
   getBlogPost: async params => {
-    const response = await httpClient.get<GetBlogPost['response']>(routes({ pathname: '/api/blog/[slug]', params }));
+    const response = await getBlogPost(params.slug);
     return response;
   },
 
   getBlogContent: async params => {
-    const response = await httpClient.get<GetBlogContent['response']>(
-      routes({ pathname: '/api/blog/[slug]/content', params }),
-    );
+    const response = await getBlogContent(params.slug);
     return response;
   },
 });

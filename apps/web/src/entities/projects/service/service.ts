@@ -1,33 +1,27 @@
 import type { GetProject, GetProjectContent, GetProjects } from '@/entities/projects/types';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { getProject, getProjectContent, getProjects } from '@jinho-blog/mdx-handler';
 
-import { http, type HttpClient } from '@/core/http';
-import { getProjects } from '@jinho-blog/mdx-handler';
-
-const defaultHttpClient = http();
-
-type ProjectsService = (httpClient?: typeof defaultHttpClient) => {
+type ProjectsService = () => {
   getProjects: (search?: GetProjects['search']) => Promise<GetProjects['response']>;
   getProject: (params: GetProject['params']) => Promise<GetProject['response']>;
   getProjectContent: (params: GetProjectContent['params']) => Promise<GetProjectContent['response']>;
 };
 
-export const createProjectsService: ProjectsService = (httpClient: HttpClient = defaultHttpClient) => ({
+export const createProjectsService: ProjectsService = () => ({
   getProjects: async search => {
     const response = await getProjects(search);
     return response;
   },
 
   getProject: async params => {
-    const response = await httpClient.get<GetProject['response']>(routes({ pathname: '/api/projects/[slug]', params }));
+    console.log('params', params);
+    const response = await getProject(params.slug);
     return response;
   },
 
   getProjectContent: async params => {
-    const response = await httpClient.get<GetProjectContent['response']>(
-      routes({ pathname: '/api/projects/[slug]/content', params }),
-    );
+    const response = await getProjectContent(params.slug);
     return response;
   },
 });

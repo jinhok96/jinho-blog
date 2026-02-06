@@ -16,12 +16,12 @@ export type GetBlogPost = {
   params: {
     slug: string;
   };
-  response: Blog;
+  response: Blog | null;
 };
 
 export type GetBlogContent = {
   params: {
     slug: string;
   };
-  response: string;
+  response: string | null;
 };

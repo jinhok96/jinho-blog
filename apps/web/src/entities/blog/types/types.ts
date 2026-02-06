@@ -5,8 +5,8 @@ export type GetBlogPosts = {
   search: {
     category?: BlogCategory;
     sort?: SortOption;
-    page?: string;
-    count?: string;
+    page?: string | number;
+    count?: string | number;
     search?: string;
   };
   response: PaginatedResult<Blog>;

@@ -3,6 +3,7 @@ import type { GetProject, GetProjectContent, GetProjects } from '@/entities/proj
 import { routes } from '@jinho-blog/nextjs-routes';
 
 import { http, type HttpClient } from '@/core/http';
+import { getProjects } from '@jinho-blog/mdx-handler';
 
 const defaultHttpClient = http();
 
@@ -14,7 +15,7 @@ type ProjectsService = (httpClient?: typeof defaultHttpClient) => {
 
 export const createProjectsService: ProjectsService = (httpClient: HttpClient = defaultHttpClient) => ({
   getProjects: async search => {
-    const response = await httpClient.get<GetProjects['response']>(routes({ pathname: '/api/projects', search }));
+    const response = await getProjects(search);
     return response;
   },
 

@@ -3,6 +3,7 @@ import type { GetBlogContent, GetBlogPost, GetBlogPosts } from '@/entities/blog/
 import { routes } from '@jinho-blog/nextjs-routes';
 
 import { http, type HttpClient } from '@/core/http';
+import { getBlogPosts } from '@jinho-blog/mdx-handler';
 
 const defaultHttpClient = http();
 
@@ -14,7 +15,7 @@ type BlogService = (httpClient?: typeof defaultHttpClient) => {
 
 export const createBlogService: BlogService = (httpClient: HttpClient = defaultHttpClient) => ({
   getBlogPosts: async search => {
-    const response = await httpClient.get<GetBlogPosts['response']>(routes({ pathname: '/api/blog', search }));
+    const response = await getBlogPosts(search);
     return response;
   },
 

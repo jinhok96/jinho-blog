@@ -8,10 +8,10 @@ export {
 } from './internal/content';
 
 // Parser
-export { type ParsedMdx, parseMdxFile } from './internal/parser';
+export { parseMdxFile, type ParsedMdx } from './internal/parser';
 
 // Registry
-export { clearRegistryCache, generateRegistry, getRegistry, type RegistryEntry } from './internal/registry';
+export { getRegistry, type RegistryEntry } from './internal/registry';
 
 // Scanner
-export { type ContentSection, scanMdxDirectory, type ScannedFile } from './internal/scanner';
+export { scanMdxDirectory, type ContentSection, type ScannedFile } from './internal/scanner';

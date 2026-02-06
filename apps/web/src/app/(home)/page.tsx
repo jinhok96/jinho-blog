@@ -14,7 +14,7 @@ import {
   HomeTechStackSection,
 } from '@/views/home';
 
-export const dynamic = 'force-dynamic';
+export const revalidate = 600;
 
 export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname: '/' }) });
 

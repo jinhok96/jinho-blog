@@ -15,7 +15,6 @@ export const createProjectsService: ProjectsService = () => ({
   },
 
   getProject: async params => {
-    console.log('params', params);
     const response = await getProject(params.slug);
     return response;
   },

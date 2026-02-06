@@ -15,7 +15,7 @@ const projectsService = createProjectsService();
 const { id, label } = HOME_SECTION_ID_LABEL_MAP.PROJECTS;
 
 export async function HomeProjectsSection() {
-  const { items } = await projectsService.getProjects({ count: String(6) });
+  const { items } = await projectsService.getProjects({ count: 6 });
 
   return (
     <HomeSection id={id}>

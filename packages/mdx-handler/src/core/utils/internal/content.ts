@@ -133,13 +133,13 @@ export function calculatePagination(totalItems: number, page: number, itemsPerPa
  */
 export function paginateContentWithMeta<T>(
   items: T[],
-  page: number | null | undefined,
-  count: number | null | undefined,
+  page: string | number | null | undefined,
+  count: string | number | null | undefined,
 ): PaginatedResult<T> {
   // 방어 코드: items가 오류로 undefined인 경우 빈 배열로 처리
   const safeItems = items || [];
-  const safePage = page || DEFAULT_PAGE;
-  const safeCount = count || DEFAULT_COUNT;
+  const safePage = Number(page || DEFAULT_PAGE);
+  const safeCount = Number(count || DEFAULT_COUNT);
 
   const pagination = calculatePagination(safeItems.length, safePage, safeCount);
   const startIndex = (pagination.currentPage - 1) * safeCount;

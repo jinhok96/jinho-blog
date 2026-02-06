@@ -41,7 +41,7 @@ export async function getLibraries(options?: GetLibrariesOptions): Promise<Pagin
  * 카테고리별 그룹화된 라이브러리 목록 조회
  */
 export async function getLibraryGroupsByCategory(options?: GetLibraryGroupsByCategoryOptions) {
-  const { count } = options || {};
+  const count = options?.count ? Number(options.count) : null;
 
   const data = getRegistry<Library>('libraries', MDX_ROUTES);
 

@@ -13,10 +13,12 @@ export async function MDXComponent({ fileContent, isModalView }: Props) {
   return (
     <section className="flex-row-start size-full">
       <article className="flex-col-start size-full gap-2">{content}</article>
+
+      {/* 목차 사이드바 */}
       <div
         className={`
           sticky top-(--height-header) shrink-0 overflow-y-visible
-          not-tablet:hidden
+          not-desktop:hidden
         `}
       >
         <Show when={!isModalView}>

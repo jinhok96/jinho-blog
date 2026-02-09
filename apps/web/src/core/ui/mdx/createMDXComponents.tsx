@@ -1,5 +1,7 @@
 import type { ComponentProps, HTMLAttributes, TableHTMLAttributes, TdHTMLAttributes, ThHTMLAttributes } from 'react';
 
+import Image from 'next/image';
+
 import { LinkButton } from '@/core/ui/button';
 import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
@@ -128,7 +130,7 @@ export function createMDXComponents(isModalView?: boolean) {
 
     hr: ({ className, ...props }: HTMLAttributes<HTMLHRElement>) => (
       <hr
-        className={cn('mt-4 w-full border-gray-2', className)}
+        className={cn('mt-4 w-full border-gray-3', className)}
         {...props}
       />
     ),
@@ -157,7 +159,7 @@ export function createMDXComponents(isModalView?: boolean) {
     ),
 
     table: ({ className, ...props }: TableHTMLAttributes<HTMLTableElement>) => (
-      <div className={cn('border-collapse overflow-auto rounded-xl border border-gray-2', className)}>
+      <div className={cn('border-collapse overflow-auto rounded-xl border border-gray-3', className)}>
         <table
           className="size-full"
           {...props}
@@ -167,7 +169,7 @@ export function createMDXComponents(isModalView?: boolean) {
 
     thead: ({ className, ...props }: HTMLAttributes<HTMLTableSectionElement>) => (
       <thead
-        className={cn('border-b border-gray-2 bg-gray-1', className)}
+        className={cn('border-b border-gray-3 bg-gray-1', className)}
         {...props}
       />
     ),
@@ -178,7 +180,7 @@ export function createMDXComponents(isModalView?: boolean) {
       <tr
         className={cn(
           `
-            border-b border-gray-2
+            border-b border-gray-3
             last:border-0
           `,
           className,
@@ -191,7 +193,7 @@ export function createMDXComponents(isModalView?: boolean) {
       <th
         className={cn(
           `
-            border-r border-gray-2 px-3 py-2 text-left font-semibold
+            border-r border-gray-3 px-3 py-2 text-left font-semibold
             last:border-0
           `,
           className,
@@ -204,7 +206,7 @@ export function createMDXComponents(isModalView?: boolean) {
       <td
         className={cn(
           `
-            border-r border-gray-2 px-3 py-2
+            border-r border-gray-3 px-3 py-2
             last:border-0
           `,
           className,
@@ -214,5 +216,16 @@ export function createMDXComponents(isModalView?: boolean) {
     ),
 
     Callout: (props: HTMLAttributes<HTMLDivElement>) => <Callout {...props} />,
+
+    img: ({ src, alt, ...props }: HTMLAttributes<HTMLImageElement> & { src: string; alt: string }) => (
+      <Image
+        {...props}
+        className="overflow-hidden rounded-2xl"
+        src={src}
+        alt={alt}
+        width="800"
+        height="800"
+      />
+    ),
   };
 }

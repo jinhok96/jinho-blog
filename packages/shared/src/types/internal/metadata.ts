@@ -50,6 +50,7 @@ export interface BaseMetadata {
   category: string; // 각 섹션에서 타입 오버라이드
   createdAt: string; // YYYY-MM-DD 형식
   updatedAt: string; // YYYY-MM-DD 형식
+  thumbnail?: string; // 썸네일 이미지 경로 (선택적)
 }
 
 export interface BlogMetadata extends BaseMetadata {

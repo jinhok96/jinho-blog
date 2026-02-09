@@ -42,6 +42,63 @@ function transformImagePaths(content: string, section: string | null): string {
 }
 
 /**
+ * MDX 콘텐츠에서 첫 번째 이미지 경로 추출
+ *
+ * 우선순위:
+ * 1. frontmatter에 thumbnail이 명시되어 있으면 사용
+ * 2. 없으면 콘텐츠에서 첫 번째 이미지 자동 추출
+ *
+ * @param frontmatter - gray-matter로 파싱된 frontmatter 데이터
+ * @param content - MDX 콘텐츠 원문
+ * @param section - MDX 섹션 (blog/projects/libraries)
+ * @returns 썸네일 이미지 경로 또는 undefined
+ */
+function extractFirstImage(
+  frontmatter: Record<string, unknown>,
+  content: string,
+  section: string | null,
+): string | undefined {
+  // 1. frontmatter에 thumbnail이 명시되어 있으면 우선 사용
+  if (frontmatter.thumbnail && typeof frontmatter.thumbnail === 'string') {
+    const thumbnail = frontmatter.thumbnail;
+
+    // 외부 URL이면 그대로 반환
+    if (thumbnail.startsWith('http://') || thumbnail.startsWith('https://')) {
+      return thumbnail;
+    }
+
+    // 상대 경로 ./로 시작하면 절대 경로로 변환
+    if (thumbnail.startsWith('./') && section) {
+      const staticPath = '/_next/static/media/mdx';
+      return thumbnail.replace('./', `${staticPath}/${section}/`);
+    }
+
+    // 그 외 경로는 그대로 반환
+    return thumbnail;
+  }
+
+  // 2. 콘텐츠에서 첫 번째 이미지 추출
+  const imageRegex = /!\[([^\]]*)\]\(\.\/([^)]+)\)/;
+  const match = content.match(imageRegex);
+
+  if (match && section) {
+    const imagePath = match[2];
+    const staticPath = '/_next/static/media/mdx';
+    return `${staticPath}/${section}/${imagePath}`;
+  }
+
+  // 외부 URL 이미지도 추출
+  const externalImageRegex = /!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/;
+  const externalMatch = content.match(externalImageRegex);
+
+  if (externalMatch) {
+    return externalMatch[2];
+  }
+
+  return undefined;
+}
+
+/**
  * git 히스토리에서 파일의 생성/수정 날짜 추출
  */
 function getGitDates(filePath: string): { createdAt?: string; updatedAt?: string } {
@@ -84,11 +141,15 @@ export function parseMdxFile(filePath: string): ParsedMdx {
   // git에서 날짜 추출
   const gitDates = getGitDates(filePath);
 
+  // 썸네일 추출 (frontmatter 우선, 없으면 첫 번째 이미지)
+  const thumbnail = extractFirstImage(data, content, section);
+
   // frontmatter에 명시된 날짜가 없으면 git 날짜 사용
   const metadata = {
     ...data,
     createdAt: data.createdAt || gitDates.createdAt,
     updatedAt: data.updatedAt || gitDates.updatedAt,
+    thumbnail,
   };
 
   return {

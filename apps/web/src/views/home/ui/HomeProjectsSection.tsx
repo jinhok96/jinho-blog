@@ -33,10 +33,10 @@ export async function HomeProjectsSection() {
                 href={path}
                 scroll={false}
                 category={PROJECT_CATEGORY_MAP[category]}
-                title={title}
                 createdAt={createdAt}
               >
                 <ContentCardSection.ProjectInfo
+                  title={title}
                   period={period}
                   members={members}
                   description={description}

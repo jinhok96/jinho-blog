@@ -27,15 +27,19 @@ export async function HomeBlogSection() {
           fallback={ContentCardSection.Placeholder}
         >
           <ContentCardSection>
-            {items.map(({ category, slug, path, title, description, createdAt }) => (
+            {items.map(({ category, slug, path, title, description, createdAt, thumbnail }) => (
               <ContentCardSection.Card
                 key={slug}
                 href={path}
                 category={BLOG_CATEGORY_MAP[category]}
-                title={title}
                 createdAt={createdAt}
+                thumbnail={thumbnail}
+                showThumbnail
               >
-                <ContentCardSection.BlogInfo description={description} />
+                <ContentCardSection.BlogInfo
+                  title={title}
+                  description={description}
+                />
               </ContentCardSection.Card>
             ))}
           </ContentCardSection>

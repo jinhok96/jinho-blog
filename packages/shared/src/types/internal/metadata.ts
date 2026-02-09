@@ -28,6 +28,7 @@ export type TechStack =
   | 'electron'
   | 'turbopack'
   | 'vercel'
+  | 'vite'
   // 디자인
   | 'figma'
   | 'illustrator'

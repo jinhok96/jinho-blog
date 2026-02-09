@@ -63,7 +63,7 @@ export function HomeTechStackSection() {
         />
         <TechStacks
           label="번들러, 배포"
-          stacks={['webpack', 'babel', 'electron', 'turbopack', 'vercel']}
+          stacks={['webpack', 'babel', 'electron', 'turbopack', 'vite', 'vercel']}
         />
         <TechStacks
           label="디자인"

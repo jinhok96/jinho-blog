@@ -30,6 +30,7 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
   electron: 'Electron',
   turbopack: 'Turbopack',
   vercel: 'Vercel',
+  vite: 'Vite',
 
   // 디자인
   figma: 'Figma',
@@ -77,6 +78,7 @@ export const TECH_STACK_IMAGE_MAP: Record<TechStack, string> = {
   electron: 'electron.png',
   turbopack: 'turbopack.png',
   vercel: 'vercel.png',
+  vite: 'vite.png',
 
   // 디자인
   figma: 'figma.png',

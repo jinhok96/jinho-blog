@@ -1,0 +1,125 @@
+/**
+ * MDX 이미지를 Next.js .next 디렉토리로 복사
+ *
+ * 소스: content/mdx/{section}/
+ * 목적지:
+ * - 개발: apps/web/.next/dev/static/media/mdx/{section}/
+ * - 프로덕션: apps/web/.next/static/media/mdx/{section}/
+ *
+ * 실행: npm run copy-images:dev 또는 copy-images:build
+ */
+
+const fs = require('fs');
+const path = require('path');
+
+const SECTIONS = ['blog', 'projects', 'libraries'];
+const IMAGE_EXTENSIONS = ['.webp', '.png', '.jpg', '.jpeg', '.gif', '.svg'];
+
+/**
+ * 파일이 이미지인지 확인
+ */
+function isImageFile(filename) {
+  const ext = path.extname(filename).toLowerCase();
+  return IMAGE_EXTENSIONS.includes(ext);
+}
+
+/**
+ * 디렉토리 재귀 생성
+ */
+function ensureDirSync(dir) {
+  if (!fs.existsSync(dir)) {
+    fs.mkdirSync(dir, { recursive: true });
+  }
+}
+
+/**
+ * 디렉토리를 재귀적으로 스캔하여 이미지 파일 목록 반환
+ *
+ * @param {string} dir - 스캔할 디렉토리
+ * @param {string} baseDir - 상대 경로 기준
+ * @returns {Array<{sourcePath: string, relativePath: string}>}
+ */
+function scanImagesRecursive(dir, baseDir = '') {
+  const images = [];
+
+  if (!fs.existsSync(dir)) return images;
+
+  const entries = fs.readdirSync(dir, { withFileTypes: true });
+
+  for (const entry of entries) {
+    const fullPath = path.join(dir, entry.name);
+    const relativePath = path.join(baseDir, entry.name);
+
+    if (entry.isDirectory()) {
+      // 재귀적으로 하위 디렉토리 스캔
+      images.push(...scanImagesRecursive(fullPath, relativePath));
+    } else if (entry.isFile() && isImageFile(entry.name)) {
+      images.push({
+        sourcePath: fullPath,
+        relativePath: relativePath,
+      });
+    }
+  }
+
+  return images;
+}
+
+/**
+ * MDX 이미지 복사 메인 함수
+ */
+function copyMdxImages() {
+  const isDev = process.env.NODE_ENV !== 'production';
+  const baseStaticPath = isDev
+    ? path.join('apps', 'web', '.next', 'dev', 'static', 'media', 'mdx')
+    : path.join('apps', 'web', '.next', 'static', 'media', 'mdx');
+
+  let totalCopied = 0;
+
+  console.log(`\n📸 MDX 이미지 복사 시작 (${isDev ? '개발' : '프로덕션'} 모드)\n`);
+
+  for (const section of SECTIONS) {
+    const sectionDir = path.join(process.cwd(), 'content', 'mdx', section);
+
+    if (!fs.existsSync(sectionDir)) {
+      console.warn(`⚠️  섹션 디렉토리를 찾을 수 없습니다: ${section}`);
+      continue;
+    }
+
+    // 섹션 내 모든 이미지 스캔 (재귀)
+    const images = scanImagesRecursive(sectionDir);
+
+    if (images.length === 0) {
+      console.log(`ℹ️  ${section} 섹션에 이미지가 없습니다`);
+      continue;
+    }
+
+    // 이미지 복사
+    for (const img of images) {
+      try {
+        const destPath = path.join(
+          process.cwd(),
+          baseStaticPath,
+          section,
+          img.relativePath
+        );
+
+        // 디렉토리 생성
+        ensureDirSync(path.dirname(destPath));
+
+        // 파일 복사
+        fs.copyFileSync(img.sourcePath, destPath);
+        totalCopied++;
+      } catch (error) {
+        console.error(`❌ 복사 실패: ${img.relativePath}`, error.message);
+      }
+    }
+
+    console.log(`✅ ${section}: ${images.length}개 이미지 복사 완료`);
+  }
+
+  console.log(`\n📸 총 ${totalCopied}개 이미지 복사 완료`);
+  console.log(`📁 대상 경로: ${baseStaticPath}\n`);
+}
+
+// 실행
+copyMdxImages();

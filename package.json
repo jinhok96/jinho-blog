@@ -8,8 +8,10 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "turbo dev",
-    "build": "turbo build",
+    "dev": "npm run copy-images:dev && turbo dev",
+    "build": "npm run copy-images:build && turbo build",
+    "copy-images:dev": "cross-env NODE_ENV=development node scripts/copy-mdx-images.js",
+    "copy-images:build": "cross-env NODE_ENV=production node scripts/copy-mdx-images.js",
     "start": "npm run start -w @jinho-blog/web",
     "lint": "turbo lint",
     "lf": "turbo lf",
@@ -19,6 +21,7 @@
   },
   "devDependencies": {
     "baseline-browser-mapping": "^2.9.19",
+    "cross-env": "^7.0.3",
     "prettier": "^3.6.2",
     "turbo": "^2.7.3",
     "typescript": "^5"

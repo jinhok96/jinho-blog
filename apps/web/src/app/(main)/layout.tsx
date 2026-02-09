@@ -6,7 +6,7 @@ type Props = PropsWithChildren;
 
 export default function MainLayout({ children }: Props) {
   return (
-    <div className="container flex-col-center size-full flex-1 p-layout">
+    <div className="flex-col-center size-full container-1024 flex-1 p-layout">
       <Header />
       {children}
     </div>

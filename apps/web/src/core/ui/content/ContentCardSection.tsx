@@ -37,7 +37,7 @@ function Card({ href, className, category, createdAt, thumbnail, showThumbnail, 
       href={href}
       className={cn(
         `
-          group size-full overflow-hidden rounded-2xl
+          group size-full overflow-hidden rounded-2xl drop-shadow-lg drop-shadow-black/5
           hover:scale-103
         `,
         className,

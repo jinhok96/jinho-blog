@@ -86,9 +86,12 @@ async function getGitDatesFromAPI(filePath: string): Promise<GitDates> {
     // 파일 경로를 repository root 기준 상대 경로로 변환
     const relativePath = path.relative(MONOREPO_ROOT, filePath).replace(/\\/g, '/');
 
+    // Vercel 배포 브랜치 또는 기본 브랜치 사용
+    const branch = process.env.VERCEL_GIT_COMMIT_REF || 'main';
+
     // GitHub API로 커밋 히스토리 조회 (oldest first)
     const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=${relativePath}&per_page=100`,
+      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=${relativePath}&sha=${branch}&per_page=100`,
       {
         headers: {
           Authorization: `token ${token}`,
@@ -98,13 +101,14 @@ async function getGitDatesFromAPI(filePath: string): Promise<GitDates> {
     );
 
     if (!response.ok) {
-      console.warn(`⚠️  GitHub API failed for ${relativePath}: ${response.status}`);
+      console.warn(`⚠️  GitHub API failed for ${relativePath}: ${response.status} ${response.statusText}`);
       return {};
     }
 
     const commits = (await response.json()) as Array<{ commit: { author: { date: string } } }>;
 
     if (!commits || commits.length === 0) {
+      console.warn(`⚠️  No commits found for ${relativePath} on branch ${branch}`);
       return {};
     }
 

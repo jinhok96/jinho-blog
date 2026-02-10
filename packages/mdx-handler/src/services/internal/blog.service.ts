@@ -5,7 +5,6 @@ import {
   filterByCategory,
   getRegistry,
   paginateContentWithMeta,
-  parseMdxFile,
   type RegistryEntry,
   searchContent,
   sortContent,
@@ -42,8 +41,7 @@ export async function getBlogPost(slug: string): Promise<Blog | null> {
  */
 export async function getBlogContent(slug: string): Promise<string | null> {
   const post = await getBlogPost(slug);
-  if (!post) return null;
+  if (!post || !post.content) return null;
 
-  const { content } = parseMdxFile(post.filePath);
-  return content;
+  return post.content as string;
 }

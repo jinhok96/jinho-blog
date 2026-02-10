@@ -93,6 +93,16 @@ function getGitDates(filePath: string): GitDates {
 }
 
 /**
+ * MDX 콘텐츠의 이미지 경로를 Next.js static 경로로 변환
+ */
+function transformImagePaths(content: string, section: ContentSection | null): string {
+  if (!section) return content;
+
+  const staticPath = '/_next/static/media/mdx';
+  return content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
+}
+
+/**
  * MDX 콘텐츠에서 첫 번째 이미지 경로 추출
  */
 function extractFirstImage(
@@ -169,7 +179,7 @@ function scanMdxDirectory(section: ContentSection): ScannedFile[] {
 }
 
 /**
- * MDX 파일 파싱 및 메타데이터 추출
+ * MDX 파일 파싱 및 메타데이터 + 콘텐츠 추출
  */
 function parseMdxFile(filePath: string, section: ContentSection): Record<string, unknown> {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
@@ -181,12 +191,16 @@ function parseMdxFile(filePath: string, section: ContentSection): Record<string,
   // 썸네일 추출
   const thumbnail = extractFirstImage(data, content, section);
 
-  // 메타데이터 생성
+  // 이미지 경로 변환
+  const transformedContent = transformImagePaths(content, section);
+
+  // 메타데이터 + 콘텐츠 생성
   const metadata = {
     ...data,
     createdAt: data.createdAt || gitDates.createdAt,
     updatedAt: data.updatedAt || gitDates.updatedAt,
     thumbnail,
+    content: transformedContent, // 변환된 MDX 콘텐츠 포함
   };
 
   return metadata;

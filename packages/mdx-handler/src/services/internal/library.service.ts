@@ -13,7 +13,6 @@ import {
   filterByTechStack,
   getRegistry,
   paginateContentWithMeta,
-  parseMdxFile,
   type RegistryEntry,
   searchContent,
   sortContent,
@@ -79,8 +78,7 @@ export async function getLibrary(slug: string): Promise<Library | null> {
  */
 export async function getLibraryContent(slug: string): Promise<string | null> {
   const library = await getLibrary(slug);
-  if (!library) return null;
+  if (!library || !library.content) return null;
 
-  const { content } = parseMdxFile(library.filePath);
-  return content;
+  return library.content as string;
 }

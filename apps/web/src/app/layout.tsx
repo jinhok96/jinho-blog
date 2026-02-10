@@ -3,6 +3,8 @@ import type { PropsWithChildren, ReactNode } from 'react';
 
 import localFont from 'next/font/local';
 
+import { Analytics } from '@vercel/analytics/next';
+
 import { PORTAL, SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
@@ -53,6 +55,9 @@ export default function RootLayout({ children, modal }: Props) {
 
           <div id={PORTAL.rightSidebar} />
         </ThemeStoreProvider>
+
+        {/* Vercel Web Analytics */}
+        <Analytics />
       </body>
     </html>
   );

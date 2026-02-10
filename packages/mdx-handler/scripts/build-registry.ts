@@ -78,7 +78,7 @@ async function getGitDatesFromAPI(filePath: string): Promise<GitDates> {
   const token = process.env.GITHUB_TOKEN;
 
   if (!token) {
-    console.warn('⚠️  GITHUB_TOKEN not found, falling back to local git');
+    console.error('⚠️  GITHUB_TOKEN not found, falling back to local git');
     return {};
   }
 
@@ -264,10 +264,11 @@ async function parseMdxFile(filePath: string, section: ContentSection): Promise<
   const transformedContent = transformImagePaths(content, section);
 
   // 메타데이터 + 콘텐츠 생성
+  const now = new Date().toISOString();
   const metadata = {
     ...data,
-    createdAt: data.createdAt || gitDates.createdAt,
-    updatedAt: data.updatedAt || gitDates.updatedAt,
+    createdAt: data.createdAt || gitDates.createdAt || now,
+    updatedAt: data.updatedAt || gitDates.updatedAt || now,
     thumbnail,
     content: transformedContent, // 변환된 MDX 콘텐츠 포함
   };
@@ -339,7 +340,7 @@ async function buildAllRegistries(): Promise<void> {
 }
 
 // 스크립트 실행
-buildAllRegistries().catch((error) => {
+buildAllRegistries().catch(error => {
   console.error('❌ Registry build failed:', error);
   process.exit(1);
 });

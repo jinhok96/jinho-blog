@@ -8,7 +8,7 @@ export {
 } from './internal/content';
 
 // Parser
-export { parseMdxFile, type ParsedMdx } from './internal/parser';
+export { type ParsedMdx,parseMdxFile } from './internal/parser';
 
 // Registry
 export { getRegistry, type RegistryEntry } from './internal/registry';

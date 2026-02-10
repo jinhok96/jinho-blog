@@ -1,8 +1,9 @@
+import type { ContentSection } from '../../../types';
+
 import fs from 'fs';
 import path from 'path';
 
-import { PATHS, type MDX_ROUTES } from '../../config';
-import type { ContentSection } from '../../../types';
+import { type MDX_ROUTES,PATHS } from '../../config';
 
 export interface RegistryEntry {
   slug: string;

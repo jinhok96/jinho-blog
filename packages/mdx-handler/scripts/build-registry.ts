@@ -68,22 +68,6 @@ function findMonorepoRoot(): string {
 const MONOREPO_ROOT = findMonorepoRoot();
 
 /**
- * Vercel shallow clone 해결: full git history 가져오기
- */
-function ensureFullGitHistory(): void {
-  try {
-    // Vercel은 기본적으로 shallow clone을 사용하므로 full history 가져오기
-    execSync('git fetch --unshallow', {
-      stdio: 'ignore',
-      cwd: MONOREPO_ROOT,
-    });
-    console.log('✅ Full git history fetched (was shallow clone)\n');
-  } catch {
-    // 이미 full clone이거나 git이 없는 경우 - 무시
-  }
-}
-
-/**
  * Git 히스토리에서 파일의 생성/수정 날짜 추출
  */
 function getGitDates(filePath: string): GitDates {
@@ -250,9 +234,6 @@ function buildRegistry(section: ContentSection): RegistryEntry[] {
  */
 function buildAllRegistries(): void {
   console.log('🚀 Starting registry build...\n');
-
-  // Vercel shallow clone 해결
-  ensureFullGitHistory();
 
   const registry: Record<ContentSection, RegistryEntry[]> = {
     blog: [],

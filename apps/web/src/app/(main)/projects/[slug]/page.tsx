@@ -30,6 +30,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: project.title,
     description: project.description,
     type: 'article',
+    thumbnail: project.thumbnail,
   });
 }
 

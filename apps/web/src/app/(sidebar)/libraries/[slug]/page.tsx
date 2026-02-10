@@ -34,6 +34,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     title: library.title,
     description: library.description,
     type: 'article',
+    thumbnail: library.thumbnail,
   });
 }
 

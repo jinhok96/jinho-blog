@@ -1,7 +1,7 @@
 import fs from 'fs';
 import path from 'path';
 
-import type { MDX_ROUTES } from '../../config';
+import { PATHS, type MDX_ROUTES } from '../../config';
 import type { ContentSection } from '../../../types';
 
 export interface RegistryEntry {
@@ -22,7 +22,7 @@ export function getRegistry<T extends RegistryEntry = RegistryEntry>(
 ): T[] {
   try {
     // 빌드된 registry.json 경로
-    const registryPath = path.join(process.cwd(), 'public', 'data', 'registry.json');
+    const registryPath = path.join(process.cwd(), 'public', '_static', 'registry.json');
 
     if (!fs.existsSync(registryPath)) {
       throw new Error(

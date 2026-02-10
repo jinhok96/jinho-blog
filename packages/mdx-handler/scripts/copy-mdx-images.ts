@@ -1,17 +1,16 @@
 /**
- * MDX 이미지를 Next.js .next 디렉토리로 복사
+ * MDX 이미지를 Next.js public 디렉토리로 복사
  *
  * 소스: content/mdx/{section}/
- * 목적지:
- * - 개발: apps/web/.next/dev/static/media/mdx/{section}/
- * - 프로덕션: apps/web/.next/static/media/mdx/{section}/
+ * 목적지: apps/web/public/_static/mdx/{section}/
  *
- * 실행: npm run copy-images:dev 또는 copy-images:build
+ * 실행: npm run copy-images
  */
 
 import fs from 'fs';
 import path from 'path';
 
+import { PATHS } from '../src/core/config';
 import type { ContentSection } from '../src/types';
 
 interface ImageFile {
@@ -96,14 +95,11 @@ function scanImagesRecursive(dir: string, baseDir: string = ''): ImageFile[] {
  * MDX 이미지 복사 메인 함수
  */
 function copyMdxImages(): void {
-  const isDev = process.env.NODE_ENV !== 'production';
-  const baseStaticPath = isDev
-    ? path.join('apps', 'web', '.next', 'dev', 'static', 'media', 'mdx')
-    : path.join('apps', 'web', '.next', 'static', 'media', 'mdx');
+  const baseStaticPath = PATHS.PUBLIC_STATIC_MDX_DIR;
 
   let totalCopied = 0;
 
-  console.log(`\n📸 MDX 이미지 복사 시작 (${isDev ? '개발' : '프로덕션'} 모드)\n`);
+  console.log(`\n📸 MDX 이미지 복사 시작\n`);
 
   for (const section of SECTIONS) {
     const sectionDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);

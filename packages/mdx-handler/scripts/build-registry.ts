@@ -8,6 +8,7 @@ import fs from 'fs';
 import matter from 'gray-matter';
 import path from 'path';
 
+import { PATHS } from '../src/core/config';
 import type { ContentSection } from '../src/types';
 
 interface ScannedFile {
@@ -98,8 +99,7 @@ function getGitDates(filePath: string): GitDates {
 function transformImagePaths(content: string, section: ContentSection | null): string {
   if (!section) return content;
 
-  const staticPath = '/_next/static/media/mdx';
-  return content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
+  return content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${PATHS.STATIC_MDX_URL}/${section}/$2)`);
 }
 
 /**
@@ -121,8 +121,7 @@ function extractFirstImage(
 
     // 상대 경로 ./로 시작하면 절대 경로로 변환
     if (thumbnail.startsWith('./') && section) {
-      const staticPath = '/_next/static/media/mdx';
-      return thumbnail.replace('./', `${staticPath}/${section}/`);
+      return thumbnail.replace('./', `${PATHS.STATIC_MDX_URL}/${section}/`);
     }
 
     return thumbnail;
@@ -134,8 +133,7 @@ function extractFirstImage(
 
   if (match && section) {
     const imagePath = match[2];
-    const staticPath = '/_next/static/media/mdx';
-    return `${staticPath}/${section}/${imagePath}`;
+    return `${PATHS.STATIC_MDX_URL}/${section}/${imagePath}`;
   }
 
   // 외부 URL 이미지도 추출
@@ -248,13 +246,13 @@ function buildAllRegistries(): void {
   }
 
   // 출력 디렉토리 생성
-  const outputDir = path.join(MONOREPO_ROOT, 'apps', 'web', 'public', 'data');
+  const outputPath = path.join(MONOREPO_ROOT, PATHS.REGISTRY_JSON);
+  const outputDir = path.dirname(outputPath);
   if (!fs.existsSync(outputDir)) {
     fs.mkdirSync(outputDir, { recursive: true });
   }
 
   // JSON 파일 생성
-  const outputPath = path.join(outputDir, 'registry.json');
   const registryWithTimestamp: Registry = {
     ...registry,
     generatedAt: new Date().toISOString(),

@@ -9,8 +9,7 @@
   },
   "scripts": {
     "build-registry": "tsx scripts/build-registry.ts",
-    "copy-images:dev": "cross-env NODE_ENV=development tsx scripts/copy-mdx-images.ts",
-    "copy-images:build": "cross-env NODE_ENV=production tsx scripts/copy-mdx-images.ts",
+    "copy-images": "tsx scripts/copy-mdx-images.ts",
     "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts",

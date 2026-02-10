@@ -43,3 +43,6 @@ next-env.d.ts
 
 # turbo
 .turbo/
+
+# generated registry
+apps/web/public/data/registry.json

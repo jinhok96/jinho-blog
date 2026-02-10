@@ -1,7 +1,8 @@
-import type { MDX_ROUTES } from '../../config';
+import fs from 'fs';
+import path from 'path';
 
-import { parseMdxFile } from './parser';
-import { type ContentSection, scanMdxDirectory } from './scanner';
+import type { MDX_ROUTES } from '../../config';
+import type { ContentSection } from '../../../types';
 
 export interface RegistryEntry {
   slug: string;
@@ -11,25 +12,28 @@ export interface RegistryEntry {
 }
 
 /**
- * 레지스트리 생성
+ * 레지스트리 조회
+ * - 빌드된 JSON 파일에서 읽기 (개발/프로덕션 공통)
+ * - 빌드 타임에 생성된 registry.json 필수
  */
 export function getRegistry<T extends RegistryEntry = RegistryEntry>(
   section: ContentSection,
-  router: typeof MDX_ROUTES,
+  _router: typeof MDX_ROUTES,
 ): T[] {
-  const files = scanMdxDirectory(section);
-  const entries: T[] = [];
+  try {
+    // 빌드된 registry.json 경로
+    const registryPath = path.join(process.cwd(), 'public', 'data', 'registry.json');
 
-  for (const file of files) {
-    const { metadata } = parseMdxFile(file.filePath);
+    if (!fs.existsSync(registryPath)) {
+      throw new Error(
+        `Registry JSON not found at ${registryPath}. Run 'npm run build-registry' to generate the registry.`,
+      );
+    }
 
-    entries.push({
-      slug: file.slug,
-      ...metadata,
-      filePath: file.filePath,
-      path: `${router[section]}/${file.slug}`,
-    } as T);
+    const registryData = JSON.parse(fs.readFileSync(registryPath, 'utf-8'));
+    return registryData[section] || [];
+  } catch (error) {
+    console.error('Failed to read registry from JSON:', error);
+    throw error;
   }
-
-  return entries;
 }

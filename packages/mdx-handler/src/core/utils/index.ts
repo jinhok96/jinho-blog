@@ -13,5 +13,5 @@ export { parseMdxFile, type ParsedMdx } from './internal/parser';
 // Registry
 export { getRegistry, type RegistryEntry } from './internal/registry';
 
-// Scanner
-export { scanMdxDirectory, type ContentSection, type ScannedFile } from './internal/scanner';
+// Types
+export type { ContentSection } from '../../types';

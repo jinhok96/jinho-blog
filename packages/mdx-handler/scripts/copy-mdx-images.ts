@@ -9,16 +9,48 @@
  * 실행: npm run copy-images:dev 또는 copy-images:build
  */
 
-const fs = require('fs');
-const path = require('path');
+import fs from 'fs';
+import path from 'path';
 
-const SECTIONS = ['blog', 'projects', 'libraries'];
+import type { ContentSection } from '../src/types';
+
+interface ImageFile {
+  sourcePath: string;
+  relativePath: string;
+}
+
+const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];
 const IMAGE_EXTENSIONS = ['.webp', '.png', '.jpg', '.jpeg', '.gif', '.svg'];
+
+/**
+ * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
+ */
+function findMonorepoRoot(): string {
+  let currentDir = process.cwd();
+
+  while (currentDir !== path.parse(currentDir).root) {
+    const pkgPath = path.join(currentDir, 'package.json');
+
+    if (fs.existsSync(pkgPath)) {
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+      if (pkg.workspaces) {
+        return currentDir;
+      }
+    }
+
+    currentDir = path.dirname(currentDir);
+  }
+
+  // fallback: 스크립트가 packages/mdx-handler/scripts에 있다고 가정
+  return path.join(__dirname, '..', '..', '..');
+}
+
+const MONOREPO_ROOT = findMonorepoRoot();
 
 /**
  * 파일이 이미지인지 확인
  */
-function isImageFile(filename) {
+function isImageFile(filename: string): boolean {
   const ext = path.extname(filename).toLowerCase();
   return IMAGE_EXTENSIONS.includes(ext);
 }
@@ -26,7 +58,7 @@ function isImageFile(filename) {
 /**
  * 디렉토리 재귀 생성
  */
-function ensureDirSync(dir) {
+function ensureDirSync(dir: string): void {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
@@ -34,13 +66,9 @@ function ensureDirSync(dir) {
 
 /**
  * 디렉토리를 재귀적으로 스캔하여 이미지 파일 목록 반환
- *
- * @param {string} dir - 스캔할 디렉토리
- * @param {string} baseDir - 상대 경로 기준
- * @returns {Array<{sourcePath: string, relativePath: string}>}
  */
-function scanImagesRecursive(dir, baseDir = '') {
-  const images = [];
+function scanImagesRecursive(dir: string, baseDir: string = ''): ImageFile[] {
+  const images: ImageFile[] = [];
 
   if (!fs.existsSync(dir)) return images;
 
@@ -67,7 +95,7 @@ function scanImagesRecursive(dir, baseDir = '') {
 /**
  * MDX 이미지 복사 메인 함수
  */
-function copyMdxImages() {
+function copyMdxImages(): void {
   const isDev = process.env.NODE_ENV !== 'production';
   const baseStaticPath = isDev
     ? path.join('apps', 'web', '.next', 'dev', 'static', 'media', 'mdx')
@@ -78,7 +106,7 @@ function copyMdxImages() {
   console.log(`\n📸 MDX 이미지 복사 시작 (${isDev ? '개발' : '프로덕션'} 모드)\n`);
 
   for (const section of SECTIONS) {
-    const sectionDir = path.join(process.cwd(), 'content', 'mdx', section);
+    const sectionDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);
 
     if (!fs.existsSync(sectionDir)) {
       console.warn(`⚠️  섹션 디렉토리를 찾을 수 없습니다: ${section}`);
@@ -96,12 +124,7 @@ function copyMdxImages() {
     // 이미지 복사
     for (const img of images) {
       try {
-        const destPath = path.join(
-          process.cwd(),
-          baseStaticPath,
-          section,
-          img.relativePath
-        );
+        const destPath = path.join(MONOREPO_ROOT, baseStaticPath, section, img.relativePath);
 
         // 디렉토리 생성
         ensureDirSync(path.dirname(destPath));
@@ -110,7 +133,8 @@ function copyMdxImages() {
         fs.copyFileSync(img.sourcePath, destPath);
         totalCopied++;
       } catch (error) {
-        console.error(`❌ 복사 실패: ${img.relativePath}`, error.message);
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        console.error(`❌ 복사 실패: ${img.relativePath}`, errorMessage);
       }
     }
 

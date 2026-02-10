@@ -1,0 +1,259 @@
+/**
+ * 빌드 타임에 MDX 레지스트리를 생성하는 스크립트
+ * 모든 MDX 파일을 스캔하고 Git 히스토리를 추출하여 JSON으로 출력
+ */
+
+import { execSync } from 'child_process';
+import fs from 'fs';
+import matter from 'gray-matter';
+import path from 'path';
+
+import type { ContentSection } from '../src/types';
+
+interface ScannedFile {
+  slug: string;
+  filePath: string;
+}
+
+interface GitDates {
+  createdAt?: string;
+  updatedAt?: string;
+}
+
+interface RegistryEntry {
+  slug: string;
+  filePath: string;
+  path: string;
+  [key: string]: unknown;
+}
+
+interface Registry {
+  blog: RegistryEntry[];
+  projects: RegistryEntry[];
+  libraries: RegistryEntry[];
+  generatedAt: string;
+}
+
+const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];
+const MDX_ROUTES: Record<ContentSection, string> = {
+  blog: '/blog',
+  projects: '/projects',
+  libraries: '/libraries',
+};
+
+/**
+ * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
+ */
+function findMonorepoRoot(): string {
+  let currentDir = process.cwd();
+
+  while (currentDir !== path.parse(currentDir).root) {
+    const pkgPath = path.join(currentDir, 'package.json');
+
+    if (fs.existsSync(pkgPath)) {
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+      if (pkg.workspaces) {
+        return currentDir;
+      }
+    }
+
+    currentDir = path.dirname(currentDir);
+  }
+
+  // fallback: 스크립트가 packages/mdx-handler/scripts에 있다고 가정
+  return path.join(__dirname, '..', '..', '..');
+}
+
+const MONOREPO_ROOT = findMonorepoRoot();
+
+/**
+ * Git 히스토리에서 파일의 생성/수정 날짜 추출
+ */
+function getGitDates(filePath: string): GitDates {
+  try {
+    // 첫 커밋 날짜 (createdAt)
+    const createdAt = execSync(`git log --follow --format=%aI --reverse "${filePath}" | head -1`, {
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'ignore'],
+    }).trim();
+
+    // 마지막 커밋 날짜 (updatedAt)
+    const updatedAt = execSync(`git log --follow -1 --format=%aI "${filePath}"`, {
+      encoding: 'utf-8',
+      stdio: ['pipe', 'pipe', 'ignore'],
+    }).trim();
+
+    return {
+      createdAt: createdAt || undefined,
+      updatedAt: updatedAt || undefined,
+    };
+  } catch {
+    return {};
+  }
+}
+
+/**
+ * MDX 콘텐츠에서 첫 번째 이미지 경로 추출
+ */
+function extractFirstImage(
+  frontmatter: Record<string, unknown>,
+  content: string,
+  section: ContentSection | null,
+): string | undefined {
+  // 1. frontmatter에 thumbnail이 명시되어 있으면 우선 사용
+  if (frontmatter.thumbnail && typeof frontmatter.thumbnail === 'string') {
+    const thumbnail = frontmatter.thumbnail;
+
+    // 외부 URL이면 그대로 반환
+    if (thumbnail.startsWith('http://') || thumbnail.startsWith('https://')) {
+      return thumbnail;
+    }
+
+    // 상대 경로 ./로 시작하면 절대 경로로 변환
+    if (thumbnail.startsWith('./') && section) {
+      const staticPath = '/_next/static/media/mdx';
+      return thumbnail.replace('./', `${staticPath}/${section}/`);
+    }
+
+    return thumbnail;
+  }
+
+  // 2. 콘텐츠에서 첫 번째 이미지 추출
+  const imageRegex = /!\[([^\]]*)\]\(\.\/([^)]+)\)/;
+  const match = content.match(imageRegex);
+
+  if (match && section) {
+    const imagePath = match[2];
+    const staticPath = '/_next/static/media/mdx';
+    return `${staticPath}/${section}/${imagePath}`;
+  }
+
+  // 외부 URL 이미지도 추출
+  const externalImageRegex = /!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/;
+  const externalMatch = content.match(externalImageRegex);
+
+  if (externalMatch) {
+    return externalMatch[2];
+  }
+
+  return undefined;
+}
+
+/**
+ * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
+ */
+function scanMdxDirectory(section: ContentSection): ScannedFile[] {
+  const mdxDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);
+  const files: ScannedFile[] = [];
+
+  if (!fs.existsSync(mdxDir)) {
+    console.warn(`⚠️  Warning: MDX directory not found: ${mdxDir}`);
+    return files;
+  }
+
+  const items = fs.readdirSync(mdxDir, { withFileTypes: true });
+
+  for (const item of items) {
+    if (item.isFile() && item.name.endsWith('.mdx')) {
+      const fullPath = path.join(mdxDir, item.name);
+      const slug = item.name.replace(/\.mdx$/, '');
+
+      files.push({
+        slug,
+        filePath: fullPath,
+      });
+    }
+  }
+
+  return files;
+}
+
+/**
+ * MDX 파일 파싱 및 메타데이터 추출
+ */
+function parseMdxFile(filePath: string, section: ContentSection): Record<string, unknown> {
+  const fileContent = fs.readFileSync(filePath, 'utf-8');
+  const { data, content } = matter(fileContent);
+
+  // Git에서 날짜 추출
+  const gitDates = getGitDates(filePath);
+
+  // 썸네일 추출
+  const thumbnail = extractFirstImage(data, content, section);
+
+  // 메타데이터 생성
+  const metadata = {
+    ...data,
+    createdAt: data.createdAt || gitDates.createdAt,
+    updatedAt: data.updatedAt || gitDates.updatedAt,
+    thumbnail,
+  };
+
+  return metadata;
+}
+
+/**
+ * 특정 섹션의 레지스트리 생성
+ */
+function buildRegistry(section: ContentSection): RegistryEntry[] {
+  console.log(`📝 Building registry for section: ${section}`);
+
+  const files = scanMdxDirectory(section);
+  const entries: RegistryEntry[] = [];
+
+  for (const file of files) {
+    console.log(`  - Processing: ${file.slug}`);
+    const metadata = parseMdxFile(file.filePath, section);
+
+    entries.push({
+      slug: file.slug,
+      ...metadata,
+      filePath: file.filePath,
+      path: `${MDX_ROUTES[section]}/${file.slug}`,
+    });
+  }
+
+  console.log(`✅ Built ${entries.length} entries for ${section}\n`);
+  return entries;
+}
+
+/**
+ * 전체 레지스트리 빌드
+ */
+function buildAllRegistries(): void {
+  console.log('🚀 Starting registry build...\n');
+
+  const registry: Record<ContentSection, RegistryEntry[]> = {
+    blog: [],
+    projects: [],
+    libraries: [],
+  };
+
+  for (const section of SECTIONS) {
+    registry[section] = buildRegistry(section);
+  }
+
+  // 출력 디렉토리 생성
+  const outputDir = path.join(MONOREPO_ROOT, 'apps', 'web', 'public', 'data');
+  if (!fs.existsSync(outputDir)) {
+    fs.mkdirSync(outputDir, { recursive: true });
+  }
+
+  // JSON 파일 생성
+  const outputPath = path.join(outputDir, 'registry.json');
+  const registryWithTimestamp: Registry = {
+    ...registry,
+    generatedAt: new Date().toISOString(),
+  };
+
+  fs.writeFileSync(outputPath, JSON.stringify(registryWithTimestamp, null, 2));
+
+  console.log(`✨ Registry built successfully!`);
+  console.log(`📦 Output: ${outputPath}`);
+  console.log(
+    `📊 Total entries: blog=${registry.blog.length}, projects=${registry.projects.length}, libraries=${registry.libraries.length}`,
+  );
+}
+
+// 스크립트 실행
+buildAllRegistries();

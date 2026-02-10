@@ -8,10 +8,11 @@
     "packages/*"
   ],
   "scripts": {
-    "dev": "npm run copy-images:dev && turbo dev",
-    "build": "npm run copy-images:build && turbo build",
-    "copy-images:dev": "cross-env NODE_ENV=development node scripts/copy-mdx-images.js",
-    "copy-images:build": "cross-env NODE_ENV=production node scripts/copy-mdx-images.js",
+    "build-registry": "npm run build-registry -w @jinho-blog/mdx-handler",
+    "copy-images:dev": "npm run copy-images:dev -w @jinho-blog/mdx-handler",
+    "copy-images:build": "npm run copy-images:build -w @jinho-blog/mdx-handler",
+    "dev": "npm run copy-images:dev && npm run build-registry && turbo dev",
+    "build": "npm run copy-images:build && npm run build-registry && turbo build",
     "start": "npm run start -w @jinho-blog/web",
     "lint": "turbo lint",
     "lf": "turbo lf",

@@ -1,17 +1,6 @@
 'use client';
 
-import {
-  Children,
-  cloneElement,
-  type ComponentProps,
-  type HTMLAttributes,
-  isValidElement,
-  type PropsWithChildren,
-  useLayoutEffect,
-  useMemo,
-  useRef,
-  useState,
-} from 'react';
+import { type ComponentProps, type PropsWithChildren, useLayoutEffect, useRef, useState } from 'react';
 
 import { motion, type Transition } from 'motion/react';
 
@@ -94,15 +83,6 @@ function SlideTabContent({
     setIndicatorStyle({ width, left, height, top });
   };
 
-  // 자식 요소에 index 전달
-  const childrenWithIndex = useMemo(
-    () =>
-      Children.map(children, (child, index) => {
-        if (!isValidElement(child)) return child;
-        return cloneElement(child, { index } as HTMLAttributes<HTMLElement>);
-      }),
-    [children],
-  );
 
   // 인디케이터 스타일 업데이트
   useLayoutEffect(() => {
@@ -164,18 +144,18 @@ function SlideTabContent({
           />
         </Show>
 
-        {childrenWithIndex}
+        {children}
       </div>
     </div>
   );
 }
 
 type ItemProps = ComponentProps<typeof Button> & {
-  index?: number;
+  index: number;
   containerClassName?: string;
 };
 
-function Item({ children, index = 0, containerClassName, className, ...props }: ItemProps) {
+function Item({ children, index, containerClassName, className, ...props }: ItemProps) {
   const isMounted = useIsMounted();
 
   const ref = useRef<HTMLDivElement>(null);

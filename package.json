@@ -8,11 +8,8 @@
     "packages/*"
   ],
   "scripts": {
-    "build-registry": "npm run build-registry -w @jinho-blog/mdx-handler",
-    "copy-images:dev": "npm run copy-images:dev -w @jinho-blog/mdx-handler",
-    "copy-images:build": "npm run copy-images:build -w @jinho-blog/mdx-handler",
-    "dev": "npm run copy-images:dev && npm run build-registry && turbo dev",
-    "build": "npm run copy-images:build && npm run build-registry && turbo build",
+    "dev": "turbo dev",
+    "build": "turbo build",
     "start": "npm run start -w @jinho-blog/web",
     "lint": "turbo lint",
     "lf": "turbo lf",

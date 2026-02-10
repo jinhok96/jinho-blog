@@ -83,7 +83,6 @@ function SlideTabContent({
     setIndicatorStyle({ width, left, height, top });
   };
 
-
   // 인디케이터 스타일 업데이트
   useLayoutEffect(() => {
     setIndicatorClassName(indicatorClassName);

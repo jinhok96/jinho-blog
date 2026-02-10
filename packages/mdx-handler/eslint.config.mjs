@@ -1,5 +1,6 @@
-import { defineConfig, globalIgnores } from 'eslint/config';
 import { dirname } from 'path';
+
+import { defineConfig, globalIgnores } from 'eslint/config';
 import { fileURLToPath } from 'url';
 
 const __filename = fileURLToPath(import.meta.url);
@@ -27,13 +28,7 @@ const config = defineConfig([
       'simple-import-sort/imports': [
         'error',
         {
-          groups: [
-            ['^.*\\u0000$'],
-            ['^node:', '^fs', '^path'],
-            ['^@?\\w'],
-            ['^@jinho-blog/'],
-            ['^\\.'],
-          ],
+          groups: [['^.*\\u0000$'], ['^node:', '^fs', '^path'], ['^@?\\w'], ['^@jinho-blog/'], ['^\\.']],
         },
       ],
       'simple-import-sort/exports': 'error',

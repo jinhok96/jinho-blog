@@ -2,19 +2,16 @@
   "name": "jinho-blog-monorepo",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "npm@11.6.2",
-  "workspaces": [
-    "apps/*",
-    "packages/*"
-  ],
+  "packageManager": "pnpm@10.0.0",
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo build",
-    "start": "npm run start -w @jinho-blog/web",
+    "start": "pnpm --filter @jinho-blog/web run start",
     "lint": "turbo lint",
     "lf": "turbo lf",
     "eslint": "turbo eslint",
     "type-check": "turbo type-check",
+    "test": "turbo test",
     "kill-port": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :3401 ^| findstr LISTENING') do taskkill /F /PID %a"
   },
   "devDependencies": {
@@ -23,5 +20,16 @@
     "prettier": "^3.6.2",
     "turbo": "^2.7.3",
     "typescript": "^5"
+  },
+  "pnpm": {
+    "overrides": {
+      "@types/react": "19.2.7",
+      "@types/react-dom": "19.2.3"
+    },
+    "onlyBuiltDependencies": [
+      "esbuild",
+      "sharp",
+      "unrs-resolver"
+    ]
   }
 }

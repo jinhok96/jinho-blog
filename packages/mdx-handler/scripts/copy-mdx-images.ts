@@ -7,8 +7,9 @@
  * 실행: npm run copy-images
  */
 
-import fs from 'fs';
-import path from 'path';
+import * as fs from 'fs';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 import { PATHS } from '../src/core/config';
 import type { ContentSection } from '../src/types';
@@ -41,7 +42,7 @@ function findMonorepoRoot(): string {
   }
 
   // fallback: 스크립트가 packages/mdx-handler/scripts에 있다고 가정
-  return path.join(__dirname, '..', '..', '..');
+  return path.join(fileURLToPath(new URL('../../..', import.meta.url)));
 }
 
 const MONOREPO_ROOT = findMonorepoRoot();
@@ -141,5 +142,9 @@ function copyMdxImages(): void {
   console.log(`📁 대상 경로: ${baseStaticPath}\n`);
 }
 
+export { findMonorepoRoot, isImageFile, scanImagesRecursive };
+
 // 실행
-copyMdxImages();
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  copyMdxImages();
+}

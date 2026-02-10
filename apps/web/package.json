@@ -3,24 +3,25 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "copy-images": "npm run copy-images -w @jinho-blog/mdx-handler",
-    "build-registry": "npm run build-registry -w @jinho-blog/mdx-handler",
-    "registry": "npm run copy-images && npm run build-registry",
-    "dev": "npm run registry && set PORT=3401 && next dev",
-    "build": "npm run registry && next build",
+    "copy-images": "pnpm --filter @jinho-blog/mdx-handler run copy-images",
+    "build-registry": "pnpm --filter @jinho-blog/mdx-handler run build-registry",
+    "registry": "pnpm run copy-images && pnpm run build-registry",
+    "dev": "pnpm run registry && set PORT=3401 && next dev",
+    "build": "pnpm run registry && next build",
     "start": "set PORT=3401 && next start",
-    "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",
+    "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx,.js,.jsx",
     "type-check": "tsc --noEmit",
     "generate-routes": "nextjs-routes"
   },
   "dependencies": {
-    "@jinho-blog/mdx-handler": "*",
-    "@jinho-blog/shared": "*",
+    "@jinho-blog/mdx-handler": "workspace:*",
+    "@jinho-blog/shared": "workspace:*",
     "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "motion": "^12.23.24",
     "next": "^16.1.6",
     "next-mdx-remote-client": "^2.1.7",
@@ -38,7 +39,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@jinho-blog/nextjs-routes": "*",
+    "@jinho-blog/nextjs-routes": "workspace:*",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
@@ -58,9 +59,5 @@
     "tailwindcss": "^4.1.17",
     "tsx": "^4.20.6",
     "typescript": "^5"
-  },
-  "overrides": {
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3"
   }
 }

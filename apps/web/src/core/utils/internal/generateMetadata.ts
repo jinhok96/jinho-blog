@@ -10,7 +10,13 @@ type GeneratePageMetadataParams = {
   thumbnail?: string;
 };
 
-export function generatePageMetadata({ path, title, description, type = 'website', thumbnail }: GeneratePageMetadataParams): Metadata {
+export function generatePageMetadata({
+  path,
+  title,
+  description,
+  type = 'website',
+  thumbnail,
+}: GeneratePageMetadataParams): Metadata {
   const pageTitle = title || SITE_NAME;
   const pageDescription = description || SITE_DESCRIPTION;
 

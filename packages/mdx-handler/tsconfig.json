@@ -15,7 +15,7 @@
     "paths": {
       "@jinho-blog/shared": ["../shared/src"]
     },
-    "types": ["node"]
+    "types": ["ts-node", "vitest/importMeta"]
   },
   "include": ["src/**/*", "scripts/**/*"],
   "exclude": ["node_modules", "dist"]

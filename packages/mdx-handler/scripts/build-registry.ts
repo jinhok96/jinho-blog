@@ -4,9 +4,10 @@
  */
 
 import { execSync } from 'child_process';
-import fs from 'fs';
+import * as fs from 'fs';
 import matter from 'gray-matter';
-import path from 'path';
+import * as path from 'path';
+import { fileURLToPath } from 'url';
 
 import { PATHS } from '../src/core/config';
 import type { ContentSection } from '../src/types';
@@ -62,7 +63,7 @@ function findMonorepoRoot(): string {
   }
 
   // fallback: 스크립트가 packages/mdx-handler/scripts에 있다고 가정
-  return path.join(__dirname, '..', '..', '..');
+  return path.join(fileURLToPath(new URL('../../..', import.meta.url)));
 }
 
 const MONOREPO_ROOT = findMonorepoRoot();
@@ -343,8 +344,12 @@ async function buildAllRegistries(): Promise<void> {
   );
 }
 
+export { extractFirstImage, getGitDatesFromAPI, getGitDatesFromLocal, scanMdxDirectory, transformImagePaths };
+
 // 스크립트 실행
-buildAllRegistries().catch(error => {
-  console.error('❌ Registry build failed:', error);
-  process.exit(1);
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  buildAllRegistries().catch(error => {
+    console.error('❌ Registry build failed:', error);
+    process.exit(1);
+  });
+}

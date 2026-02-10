@@ -3,7 +3,7 @@ import type { ContentSection } from '../../../types';
 import fs from 'fs';
 import path from 'path';
 
-import { type MDX_ROUTES,PATHS } from '../../config';
+import { type MDX_ROUTES } from '../../config';
 
 export interface RegistryEntry {
   slug: string;

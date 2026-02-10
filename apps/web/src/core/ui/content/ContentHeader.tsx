@@ -17,7 +17,7 @@ export function ContentHeader({ children, category, title, isModalView }: Props)
     <div className="flex-col-start w-full gap-3 border-b border-gray-2 pb-6">
       <p className="font-caption-16 text-gray-5">{category}</p>
 
-      <h1 className={cn('font-title-40', isModalView && 'font-title-32')}>{title}</h1>
+      <h1 className={cn('mb-2 font-title-40', isModalView && 'font-title-32')}>{title}</h1>
 
       {children}
     </div>

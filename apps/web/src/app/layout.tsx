@@ -5,7 +5,7 @@ import localFont from 'next/font/local';
 
 import { Analytics } from '@vercel/analytics/next';
 
-import { PORTAL, SITE_URL } from '@/core/config';
+import { PORTAL, SITE_NAME, SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 
@@ -22,6 +22,18 @@ export const metadata: Metadata = {
   description: 'Personal blog and portfolio',
   alternates: {
     canonical: SITE_URL,
+  },
+  openGraph: {
+    title: 'Jinho Blog',
+    description: 'Personal blog and portfolio',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jinho Blog',
+    description: 'Personal blog and portfolio',
   },
 };
 

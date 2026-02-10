@@ -33,6 +33,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: routes({ pathname: '/libraries/[slug]', params: { slug } }),
     title: library.title,
     description: library.description,
+    type: 'article',
   });
 }
 

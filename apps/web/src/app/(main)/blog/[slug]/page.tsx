@@ -29,6 +29,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     path: routes({ pathname: '/blog/[slug]', params: { slug } }),
     title: post.title,
     description: post.description,
+    type: 'article',
   });
 }
 

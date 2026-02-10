@@ -6,9 +6,10 @@ type GeneratePageMetadataParams = {
   path: string;
   title?: string;
   description?: string;
+  type?: 'website' | 'article';
 };
 
-export function generatePageMetadata({ path, title, description }: GeneratePageMetadataParams): Metadata {
+export function generatePageMetadata({ path, title, description, type = 'website' }: GeneratePageMetadataParams): Metadata {
   const pageTitle = title || SITE_NAME;
   const pageDescription = description || SITE_DESCRIPTION;
 
@@ -26,7 +27,12 @@ export function generatePageMetadata({ path, title, description }: GeneratePageM
       description: pageDescription,
       url,
       siteName: SITE_NAME,
-      type: 'website',
+      type,
+    },
+    twitter: {
+      card: 'summary_large_image',
+      title: pageTitle,
+      description: pageDescription,
     },
   };
 }

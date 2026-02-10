@@ -139,7 +139,7 @@ type LibraryInfoProps = {
 
 function LibraryInfo({ title, description }: LibraryInfoProps) {
   return (
-    <div className="flex-col-start gap-1.5 font-body-14 leading-snug opacity-70">
+    <div className="flex-col-start gap-1.5">
       {/* 제목 */}
       <h2 className="mb-1.5 font-subtitle-20">{title}</h2>
 

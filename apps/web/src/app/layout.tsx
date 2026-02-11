@@ -3,7 +3,9 @@ import type { PropsWithChildren, ReactNode } from 'react';
 
 import localFont from 'next/font/local';
 
-import { PORTAL, SITE_URL } from '@/core/config';
+import { Analytics } from '@vercel/analytics/next';
+
+import { PORTAL, SITE_NAME, SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { cn } from '@/core/utils';
 
@@ -20,6 +22,18 @@ export const metadata: Metadata = {
   description: 'Personal blog and portfolio',
   alternates: {
     canonical: SITE_URL,
+  },
+  openGraph: {
+    title: 'Jinho Blog',
+    description: 'Personal blog and portfolio',
+    url: SITE_URL,
+    siteName: SITE_NAME,
+    type: 'website',
+  },
+  twitter: {
+    card: 'summary_large_image',
+    title: 'Jinho Blog',
+    description: 'Personal blog and portfolio',
   },
 };
 
@@ -46,13 +60,16 @@ export default function RootLayout({ children, modal }: Props) {
         <ThemeStoreProvider theme="system">
           <div id={PORTAL.leftSidebar} />
 
-          <main className="relative flex-col-center size-full flex-1">
+          <main className="relative flex-col-center h-fit w-full flex-1">
             {children}
             {modal}
           </main>
 
           <div id={PORTAL.rightSidebar} />
         </ThemeStoreProvider>
+
+        {/* Vercel Web Analytics */}
+        <Analytics />
       </body>
     </html>
   );

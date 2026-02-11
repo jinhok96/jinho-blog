@@ -25,7 +25,7 @@ export function ErrorFallback({ error, reset }: ErrorFallbackProps) {
   const action = errorMessage?.action || '다시 시도';
 
   return (
-    <div className="flex-col-center gap-6 p-layout">
+    <div className="container flex-col-center gap-6 p-layout">
       <div className="text-center">
         <h2 className="mb-3 font-title-20">{title}</h2>
         <p className="text-gray-5">{description}</p>
@@ -40,7 +40,7 @@ export function ErrorFallback({ error, reset }: ErrorFallbackProps) {
       </Button>
 
       <Show when={process.env.NODE_ENV === 'development'}>
-        <details className="mt-4 w-full max-w-2xl">
+        <details className="mt-4 size-full">
           <summary
             className={`
               cursor-pointer font-caption-14 text-gray-5 animated-100
@@ -49,7 +49,7 @@ export function ErrorFallback({ error, reset }: ErrorFallbackProps) {
           >
             에러 상세 정보
           </summary>
-          <pre className="mt-3 overflow-auto rounded-xl bg-gray-1 p-4 font-body-12">
+          <pre className="mt-3 max-w-full rounded-xl bg-foreground-1 p-4 font-body-12 whitespace-pre-wrap">
             {isHttpError(error) ? stringifyHttpError(error) : error instanceof Error ? error.message : String(error)}
           </pre>
         </details>

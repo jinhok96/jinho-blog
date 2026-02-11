@@ -1,0 +1,45 @@
+name: CI
+
+on:
+  push:
+    branches: [main, dev]
+  pull_request:
+    branches: [main]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - name: Test nextjs-routes
+        run: pnpm --filter @jinho-blog/nextjs-routes test run
+
+      - name: Test mdx-handler
+        run: pnpm --filter @jinho-blog/mdx-handler test run
+
+      - name: Upload nextjs-routes coverage
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./packages/nextjs-routes/coverage/lcov.info
+          flags: nextjs-routes
+          fail_ci_if_error: false
+
+      - name: Upload mdx-handler coverage
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./packages/mdx-handler/coverage/lcov.info
+          flags: mdx-handler
+          fail_ci_if_error: false

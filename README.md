@@ -2,6 +2,13 @@
 
 개인 블로그 및 포트폴리오 사이트
 
+## Coverage
+
+| Package | Coverage |
+|---------|----------|
+| nextjs-routes | [![nextjs-routes coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/nextjs-routes/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/nextjs-routes) |
+| mdx-handler | [![mdx-handler coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler) |
+
 ## Tech Stack
 
 - Next.js 15.5.2

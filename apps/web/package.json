@@ -3,22 +3,27 @@
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "set PORT=3401 && next dev",
-    "build": "next build",
+    "copy-images": "pnpm --filter @jinho-blog/mdx-handler run copy-images",
+    "build-registry": "pnpm --filter @jinho-blog/mdx-handler run build-registry",
+    "registry": "pnpm run copy-images && pnpm run build-registry",
+    "dev": "pnpm run registry && set PORT=3401 && next dev",
+    "build": "pnpm run registry && next build",
     "start": "set PORT=3401 && next start",
-    "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",
+    "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx,.js,.jsx",
     "type-check": "tsc --noEmit",
     "generate-routes": "nextjs-routes"
   },
   "dependencies": {
-    "@jinho-blog/mdx-handler": "*",
-    "@jinho-blog/shared": "*",
+    "@jinho-blog/mdx-handler": "workspace:*",
+    "@jinho-blog/shared": "workspace:*",
+    "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "gray-matter": "^4.0.3",
     "motion": "^12.23.24",
-    "next": "16.1.1",
+    "next": "^16.1.6",
     "next-mdx-remote-client": "^2.1.7",
     "postcss": "^8.5.6",
     "react": "19.2.3",
@@ -34,7 +39,7 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3",
-    "@jinho-blog/nextjs-routes": "*",
+    "@jinho-blog/nextjs-routes": "workspace:*",
     "@svgr/webpack": "^8.1.0",
     "@tailwindcss/postcss": "^4.1.17",
     "@types/node": "^20",
@@ -44,7 +49,7 @@
     "@types/sanitize-html": "^2.16.0",
     "concurrently": "^9.2.1",
     "eslint": "^9",
-    "eslint-config-next": "16.1.1",
+    "eslint-config-next": "^16.1.6",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-better-tailwindcss": "^3.7.10",
     "eslint-plugin-boundaries": "^5.3.0",
@@ -54,9 +59,5 @@
     "tailwindcss": "^4.1.17",
     "tsx": "^4.20.6",
     "typescript": "^5"
-  },
-  "overrides": {
-    "@types/react": "19.2.7",
-    "@types/react-dom": "19.2.3"
   }
 }

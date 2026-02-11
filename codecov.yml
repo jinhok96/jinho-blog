@@ -1,0 +1,19 @@
+coverage:
+  status:
+    project:
+      default:
+        target: auto
+        threshold: 1%
+    patch:
+      default:
+        target: auto
+
+flags:
+  nextjs-routes:
+    paths:
+      - packages/nextjs-routes/
+    carryforward: true
+  mdx-handler:
+    paths:
+      - packages/mdx-handler/
+    carryforward: true

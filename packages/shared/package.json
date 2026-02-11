@@ -8,7 +8,7 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "lint": "concurrently \"npm run lf\" \"npm run eslint\" \"npm run type-check\"",
+    "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx",
     "type-check": "tsc --noEmit"

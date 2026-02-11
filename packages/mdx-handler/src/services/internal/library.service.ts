@@ -13,7 +13,6 @@ import {
   filterByTechStack,
   getRegistry,
   paginateContentWithMeta,
-  parseMdxFile,
   type RegistryEntry,
   searchContent,
   sortContent,
@@ -41,7 +40,7 @@ export async function getLibraries(options?: GetLibrariesOptions): Promise<Pagin
  * 카테고리별 그룹화된 라이브러리 목록 조회
  */
 export async function getLibraryGroupsByCategory(options?: GetLibraryGroupsByCategoryOptions) {
-  const { count } = options || {};
+  const count = options?.count ? Number(options.count) : null;
 
   const data = getRegistry<Library>('libraries', MDX_ROUTES);
 
@@ -60,7 +59,7 @@ export async function getLibraryGroupsByCategory(options?: GetLibraryGroupsByCat
 
   // 각 카테고리의 배열을 알파벳순으로 정렬
   Object.keys(groups).forEach(category => {
-    sortContent(groups[category], sort);
+    groups[category] = sortContent(groups[category], sort);
   });
 
   return groups;
@@ -79,8 +78,7 @@ export async function getLibrary(slug: string): Promise<Library | null> {
  */
 export async function getLibraryContent(slug: string): Promise<string | null> {
   const library = await getLibrary(slug);
-  if (!library) return null;
+  if (!library || !library.content) return null;
 
-  const { content } = parseMdxFile(library.filePath);
-  return content;
+  return library.content as string;
 }

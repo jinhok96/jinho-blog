@@ -1,59 +1,48 @@
-import { execSync } from 'child_process';
 import * as fs from 'fs';
 
 import matter from 'gray-matter';
 
 export interface ParsedMdx {
   content: string;
-  metadata: Record<string, unknown>;
 }
 
 /**
- * git 히스토리에서 파일의 생성/수정 날짜 추출
+ * filePath에서 MDX 섹션 추출 (blog/projects/libraries)
  */
-function getGitDates(filePath: string): { createdAt?: string; updatedAt?: string } {
-  try {
-    // 첫 커밋 날짜 (createdAt)
-    const createdAt = execSync(`git log --follow --format=%aI --reverse "${filePath}" | head -1`, {
-      encoding: 'utf-8',
-      stdio: ['pipe', 'pipe', 'ignore'], // stderr 무시
-    }).trim();
-
-    // 마지막 커밋 날짜 (updatedAt)
-    const updatedAt = execSync(`git log --follow -1 --format=%aI "${filePath}"`, {
-      encoding: 'utf-8',
-      stdio: ['pipe', 'pipe', 'ignore'], // stderr 무시
-    }).trim();
-
-    return {
-      createdAt: createdAt || undefined,
-      updatedAt: updatedAt || undefined,
-    };
-  } catch {
-    // git이 없거나, git 저장소가 아니거나, 파일이 커밋되지 않은 경우
-    return {};
-  }
+function extractSection(filePath: string): string | null {
+  const match = filePath.match(/content[\/\\]mdx[\/\\](blog|projects|libraries)[\/\\]/);
+  return match ? match[1] : null;
 }
 
 /**
- * MDX 파일 읽기 및 frontmatter 추출 (git 날짜 자동 추가)
+ * MDX 콘텐츠의 이미지 경로를 Next.js static 경로로 변환
+ *
+ * 변환 예시:
+ * - 입력: ![alt](./images/test.webp)
+ * - 출력: ![alt](/_next/static/media/mdx/blog/images/test.webp)
+ */
+function transformImagePaths(content: string, section: string | null): string {
+  if (!section) return content;
+
+  const staticPath = '/_next/static/media/mdx';
+  return content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
+}
+
+/**
+ * MDX 파일 읽기 및 이미지 경로 변환
+ * (런타임 전용 - 빌드 타임 로직은 scripts/build-registry.ts 참고)
  */
 export function parseMdxFile(filePath: string): ParsedMdx {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { data, content } = matter(fileContent);
+  const { content } = matter(fileContent);
 
-  // git에서 날짜 추출
-  const gitDates = getGitDates(filePath);
+  // 섹션 추출
+  const section = extractSection(filePath);
 
-  // frontmatter에 명시된 날짜가 없으면 git 날짜 사용
-  const metadata = {
-    ...data,
-    createdAt: data.createdAt || gitDates.createdAt,
-    updatedAt: data.updatedAt || gitDates.updatedAt,
-  };
+  // 이미지 경로 변환
+  const transformedContent = transformImagePaths(content, section);
 
   return {
-    content,
-    metadata,
+    content: transformedContent,
   };
 }

@@ -6,3 +6,4 @@ export { generatePageMetadata } from './internal/generateMetadata';
 export { getMDXContent } from './internal/getMDXContent';
 export { nbsp } from './internal/nbsp';
 export { parseCommaString, parseSearchParams } from './internal/parseSearchParams';
+export { stringifyURL } from './internal/stringifyURL';

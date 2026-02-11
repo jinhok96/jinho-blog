@@ -5,13 +5,9 @@ import type {
   GetLibraryGroupsByCategory,
 } from '@/entities/libraries/types';
 
-import { routes } from '@jinho-blog/nextjs-routes';
+import { getLibraries, getLibrary, getLibraryContent, getLibraryGroupsByCategory } from '@jinho-blog/mdx-handler';
 
-import { http, type HttpClient } from '@/core/http';
-
-const defaultHttpClient = http();
-
-type LibrariesService = (httpClient?: typeof defaultHttpClient) => {
+type LibrariesService = () => {
   getLibraries: (search?: GetLibraries['search']) => Promise<GetLibraries['response']>;
   getLibraryGroupsByCategory: (
     search?: GetLibraryGroupsByCategory['search'],
@@ -20,30 +16,24 @@ type LibrariesService = (httpClient?: typeof defaultHttpClient) => {
   getLibraryContent: (params: GetLibraryContent['params']) => Promise<GetLibraryContent['response']>;
 };
 
-export const createLibrariesService: LibrariesService = (httpClient: HttpClient = defaultHttpClient) => ({
+export const createLibrariesService: LibrariesService = () => ({
   getLibraries: async search => {
-    const response = await httpClient.get<GetLibraries['response']>(routes({ pathname: '/api/libraries', search }));
+    const response = await getLibraries(search);
     return response;
   },
 
   getLibraryGroupsByCategory: async search => {
-    const response = await httpClient.get<GetLibraryGroupsByCategory['response']>(
-      routes({ pathname: '/api/libraries/category', search }),
-    );
+    const response = await getLibraryGroupsByCategory(search);
     return response;
   },
 
   getLibrary: async params => {
-    const response = await httpClient.get<GetLibrary['response']>(
-      routes({ pathname: '/api/libraries/[slug]', params }),
-    );
+    const response = await getLibrary(params.slug);
     return response;
   },
 
   getLibraryContent: async params => {
-    const response = await httpClient.get<GetLibraryContent['response']>(
-      routes({ pathname: '/api/libraries/[slug]/content', params }),
-    );
+    const response = await getLibraryContent(params.slug);
     return response;
   },
 });

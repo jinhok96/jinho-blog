@@ -45,8 +45,8 @@ export function HomeTechStackSection() {
 
       <div
         className={`
-          grid size-fit grid-cols-2 gap-7
-          tablet:grid-cols-3 tablet:gap-8
+          grid size-fit grid-cols-2 gap-x-10 gap-y-8
+          tablet:grid-cols-3 tablet:gap-x-12 tablet:gap-y-10
         `}
       >
         <TechStacks
@@ -63,7 +63,7 @@ export function HomeTechStackSection() {
         />
         <TechStacks
           label="번들러, 배포"
-          stacks={['webpack', 'babel', 'electron', 'turbopack', 'vercel']}
+          stacks={['webpack', 'babel', 'electron', 'turbopack', 'vite', 'vercel']}
         />
         <TechStacks
           label="디자인"

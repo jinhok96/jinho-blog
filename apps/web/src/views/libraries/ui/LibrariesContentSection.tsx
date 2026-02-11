@@ -21,10 +21,12 @@ export async function LibrariesContentSection({ libraries }: Props) {
               key={slug}
               href={path}
               category={LIBRARY_CATEGORY_MAP[category]}
-              title={title}
               createdAt={createdAt}
             >
-              <ContentCardSection.LibraryInfo description={description} />
+              <ContentCardSection.LibraryInfo
+                title={title}
+                description={description}
+              />
               <ContentCardSection.TechStacks stacks={tech} />
             </ContentCardSection.Card>
           ))}

@@ -1,9 +1,10 @@
+import type { Timeline } from '@/views/home/types';
 import type { PropsWithChildren } from 'react';
 
 import { Show } from '@/core/ui';
 
 type TimelinesProps = PropsWithChildren<{
-  list: Array<{ name: string; date: { start: string; end: string }; info: string; job?: string; works?: string[] }>;
+  list: Timeline[];
 }>;
 
 export function Timelines({ list }: TimelinesProps) {

@@ -6,8 +6,8 @@ export type GetProjects = {
     category?: ProjectCategory;
     sort?: SortOption;
     tech?: TechStack;
-    page?: string;
-    count?: string;
+    page?: string | number;
+    count?: string | number;
     search?: string;
   };
   response: PaginatedResult<Project>;

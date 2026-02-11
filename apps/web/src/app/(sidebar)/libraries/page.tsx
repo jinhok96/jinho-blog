@@ -17,8 +17,6 @@ const librariesService = createLibrariesService();
 
 const LIMIT = 6;
 
-export const dynamic = 'force-dynamic';
-
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/libraries' }),
   title: '라이브러리',

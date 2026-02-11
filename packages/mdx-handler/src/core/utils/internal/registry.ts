@@ -1,7 +1,9 @@
-import type { MDX_ROUTES } from '../../config';
+import type { ContentSection } from '../../../types';
 
-import { parseMdxFile } from './parser';
-import { type ContentSection, scanMdxDirectory } from './scanner';
+import * as fs from 'fs';
+import * as path from 'path';
+
+import { type MDX_ROUTES } from '../../config';
 
 export interface RegistryEntry {
   slug: string;
@@ -10,55 +12,29 @@ export interface RegistryEntry {
   [key: string]: unknown; // metadata fields
 }
 
-// 메모리 캐싱
-const registryCache = new Map<ContentSection, RegistryEntry[]>();
-
 /**
- * 레지스트리 생성
- */
-export function generateRegistry<T extends RegistryEntry = RegistryEntry>(
-  section: ContentSection,
-  router: typeof MDX_ROUTES,
-): T[] {
-  const files = scanMdxDirectory(section);
-  const entries: T[] = [];
-
-  for (const file of files) {
-    const { metadata } = parseMdxFile(file.filePath);
-
-    entries.push({
-      slug: file.slug,
-      ...metadata,
-      filePath: file.filePath,
-      path: `${router[section]}/${file.slug}`,
-    } as T);
-  }
-
-  return entries;
-}
-
-/**
- * 캐시된 레지스트리 가져오기
+ * 레지스트리 조회
+ * - 빌드된 JSON 파일에서 읽기 (개발/프로덕션 공통)
+ * - 빌드 타임에 생성된 registry.json 필수
  */
 export function getRegistry<T extends RegistryEntry = RegistryEntry>(
   section: ContentSection,
-  router: typeof MDX_ROUTES,
+  _router: typeof MDX_ROUTES,
 ): T[] {
-  if (!registryCache.has(section)) {
-    const registry = generateRegistry<T>(section, router);
-    registryCache.set(section, registry);
-  }
+  try {
+    // 빌드된 registry.json 경로
+    const registryPath = path.join(process.cwd(), 'public', '_static', 'registry.json');
 
-  return registryCache.get(section)! as T[];
-}
+    if (!fs.existsSync(registryPath)) {
+      throw new Error(
+        `Registry JSON not found at ${registryPath}. Run 'npm run build-registry' to generate the registry.`,
+      );
+    }
 
-/**
- * 캐시 무효화 (개발 시 유용)
- */
-export function clearRegistryCache(section?: ContentSection) {
-  if (section) {
-    registryCache.delete(section);
-  } else {
-    registryCache.clear();
+    const registryData = JSON.parse(fs.readFileSync(registryPath, 'utf-8'));
+    return registryData[section] || [];
+  } catch (error) {
+    console.error('Failed to read registry from JSON:', error);
+    throw error;
   }
 }

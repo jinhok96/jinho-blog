@@ -88,7 +88,7 @@ export function Toc({ toc }: TocProps) {
   }, [toc]);
 
   return (
-    <div className="max-w-52 pt-7 pl-layout font-caption-14 text-gray-5">
+    <div className="w-44 pt-7 pl-8 font-caption-14 text-gray-5">
       <p className="mb-3 text-foreground">목차</p>
 
       <ul className="flex-col-start gap-1">

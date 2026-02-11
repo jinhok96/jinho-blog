@@ -84,6 +84,7 @@ export function HomeSlideTab() {
         {tabs.map(({ id, label }, index) => (
           <SlideTab.Item
             key={id}
+            index={index}
             color="background"
             size="sm"
             className={cn(

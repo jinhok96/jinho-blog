@@ -52,7 +52,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 동적 블로그 포스트
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({
     url: `${SITE_URL}${post.path}`,
-    lastModified: new Date(post.updatedAt),
+    lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
     changeFrequency: 'daily' as const,
     priority: 0.9,
   }));
@@ -60,7 +60,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 동적 프로젝트
   const projectPages: MetadataRoute.Sitemap = projects.map(project => ({
     url: `${SITE_URL}${project.path}`,
-    lastModified: new Date(project.updatedAt),
+    lastModified: project.updatedAt ? new Date(project.updatedAt) : new Date(),
     changeFrequency: 'daily' as const,
     priority: 0.5,
   }));
@@ -68,7 +68,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 동적 라이브러리
   const libraryPages: MetadataRoute.Sitemap = libraries.map(lib => ({
     url: `${SITE_URL}${lib.path}`,
-    lastModified: new Date(lib.updatedAt),
+    lastModified: lib.updatedAt ? new Date(lib.updatedAt) : new Date(),
     changeFrequency: 'daily' as const,
     priority: 0.8,
   }));

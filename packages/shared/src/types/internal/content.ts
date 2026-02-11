@@ -29,8 +29,8 @@ export type PaginatedResult<T> = {
 type GetContentOptions = {
   category?: string | null; // 카테고리
   sort?: string | null; // 정렬
-  page?: number | null; // 페이지 번호 (1-based)
-  count?: number | null; // 페이지당 아이템 수
+  page?: string | number | null; // 페이지 번호 (1-based)
+  count?: string | number | null; // 페이지당 아이템 수
   search?: string | null; // 제목/설명 검색어
 };
 

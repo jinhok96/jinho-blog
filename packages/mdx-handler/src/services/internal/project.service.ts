@@ -6,7 +6,6 @@ import {
   filterByTechStack,
   getRegistry,
   paginateContentWithMeta,
-  parseMdxFile,
   type RegistryEntry,
   searchContent,
   sortContent,
@@ -43,8 +42,7 @@ export async function getProject(slug: string): Promise<Project | null> {
  */
 export async function getProjectContent(slug: string): Promise<string | null> {
   const project = await getProject(slug);
-  if (!project) return null;
+  if (!project || !project.content) return null;
 
-  const { content } = parseMdxFile(project.filePath);
-  return content;
+  return project.content as string;
 }

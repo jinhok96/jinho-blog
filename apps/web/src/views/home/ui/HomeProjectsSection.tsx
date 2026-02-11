@@ -15,7 +15,7 @@ const projectsService = createProjectsService();
 const { id, label } = HOME_SECTION_ID_LABEL_MAP.PROJECTS;
 
 export async function HomeProjectsSection() {
-  const { items } = await projectsService.getProjects({ count: String(6) });
+  const { items } = await projectsService.getProjects({ count: 6 });
 
   return (
     <HomeSection id={id}>
@@ -33,10 +33,10 @@ export async function HomeProjectsSection() {
                 href={path}
                 scroll={false}
                 category={PROJECT_CATEGORY_MAP[category]}
-                title={title}
                 createdAt={createdAt}
               >
                 <ContentCardSection.ProjectInfo
+                  title={title}
                   period={period}
                   members={members}
                   description={description}

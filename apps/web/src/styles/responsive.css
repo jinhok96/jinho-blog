@@ -1,4 +1,40 @@
 /* Layout */
+@utility container-768 {
+  @media (width >= 40rem /* 640px */) {
+    max-width: 40rem /* 640px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 48rem /* 768px */;
+  }
+}
+
+@utility container-1024 {
+  @media (width >= 40rem /* 640px */) {
+    max-width: 40rem /* 640px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 48rem /* 768px */;
+  }
+  @media (width >= 64rem /* 1024px */) {
+    max-width: 64rem /* 1024px */;
+  }
+}
+
+@utility container-1280 {
+  @media (width >= 40rem /* 640px */) {
+    max-width: 40rem /* 640px */;
+  }
+  @media (width >= 48rem /* 768px */) {
+    max-width: 48rem /* 768px */;
+  }
+  @media (width >= 64rem /* 1024px */) {
+    max-width: 64rem /* 1024px */;
+  }
+  @media (width >= 80rem /* 1280px */) {
+    max-width: 80rem /* 1280px */;
+  }
+}
+
 @custom-variant tablet {
   @media (width >= 40rem /* 640px */) {
     @slot;
@@ -12,7 +48,7 @@
 }
 
 @custom-variant wide {
-  @media (width >= 96rem /* 1536px */) {
+  @media (width >= 80rem /* 1280px */) {
     @slot;
   }
 }

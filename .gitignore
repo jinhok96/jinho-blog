@@ -12,6 +12,7 @@ node_modules
 !.yarn/versions
 
 # testing
+coverage
 /coverage
 
 # next.js
@@ -43,3 +44,6 @@ next-env.d.ts
 
 # turbo
 .turbo/
+
+# generated static files
+apps/web/public/_static/

@@ -14,8 +14,6 @@ import {
   HomeTechStackSection,
 } from '@/views/home';
 
-export const dynamic = 'force-dynamic';
-
 export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname: '/' }) });
 
 export default async function HomePage() {

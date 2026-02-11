@@ -6,9 +6,9 @@
 
 | Package       | Coverage                                                                                                                                                            |
 | ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| web           | [![web coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/web/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/web)                               |
-| nextjs-routes | [![nextjs-routes coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/nextjs-routes/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/nextjs-routes) |
-| mdx-handler   | [![mdx-handler coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler)       |
+| web           | [![web coverage](https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=web)](https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=web)                               |
+| nextjs-routes | [![nextjs-routes coverage](https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=nextjs-routes)](https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=nextjs-routes) |
+| mdx-handler   | [![mdx-handler coverage](https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=mdx-handler)](https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=mdx-handler)       |
 
 ## Tech Stack
 

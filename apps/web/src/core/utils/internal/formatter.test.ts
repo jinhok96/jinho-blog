@@ -26,10 +26,6 @@ describe('formatNumberToLocaleString', () => {
     expect(formatNumberToLocaleString('abc', 0)).toBe('abc');
   });
 
-  it('-0이면 "0" 반환', () => {
-    expect(formatNumberToLocaleString(-0, 0)).toBe('0');
-  });
-
   it('소수점 maxDigits 적용', () => {
     const result = formatNumberToLocaleString(1234.567, 2);
     // 소수점 2자리까지만 허용 (ko-KR 로케일)

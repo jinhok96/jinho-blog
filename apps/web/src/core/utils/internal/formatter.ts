@@ -8,8 +8,8 @@ export function formatNumberToLocaleString(value: number | string, maxDigits: nu
   // 유효하지 않은 숫자 처리
   if (isNaN(num)) return value.toString();
 
-  // -0일 경우 0으로 반환
-  if (num === -0) return '0';
+  // -0 또는 0일 경우 0으로 반환
+  if (num === 0) return '0';
 
   // 천 단위 구분자 추가 (소수점 제한)
   return num.toLocaleString('ko-KR', { maximumFractionDigits: maxDigits });

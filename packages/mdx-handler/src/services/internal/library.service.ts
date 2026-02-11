@@ -59,7 +59,7 @@ export async function getLibraryGroupsByCategory(options?: GetLibraryGroupsByCat
 
   // 각 카테고리의 배열을 알파벳순으로 정렬
   Object.keys(groups).forEach(category => {
-    sortContent(groups[category], sort);
+    groups[category] = sortContent(groups[category], sort);
   });
 
   return groups;

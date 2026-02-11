@@ -9,8 +9,7 @@ coverage:
         target: auto
 
 flags:
-web:
-  paths:
+  web:
     paths:
       - apps/web/src/
     carryforward: true

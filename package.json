@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.0.0",
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo build",
+    "build": "turbo lint && turbo build",
     "start": "pnpm --filter @jinho-blog/web run start",
     "lint": "turbo lint",
     "lf": "turbo lf",

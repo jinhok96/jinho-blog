@@ -9,6 +9,10 @@ coverage:
         target: auto
 
 flags:
+  web:
+    paths:
+      - apps/web/src/
+    carryforward: true
   nextjs-routes:
     paths:
       - packages/nextjs-routes/

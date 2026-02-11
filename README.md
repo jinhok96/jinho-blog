@@ -4,10 +4,11 @@
 
 ## Coverage
 
-| Package | Coverage |
-|---------|----------|
+| Package       | Coverage                                                                                                                                                            |
+| ------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| web           | [![web coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/web/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/web)                               |
 | nextjs-routes | [![nextjs-routes coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/nextjs-routes/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/nextjs-routes) |
-| mdx-handler | [![mdx-handler coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler) |
+| mdx-handler   | [![mdx-handler coverage](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler/badge.svg)](https://codecov.io/gh/jinhok96/jinho-blog/flags/mdx-handler)       |
 
 ## Tech Stack
 

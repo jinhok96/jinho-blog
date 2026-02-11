@@ -31,7 +31,9 @@
       "Bash(git show-branch:*)",
       "Bash(postcss \")",
       "Bash(pnpm type-check:*)",
-      "Bash(grep:*)"
+      "Bash(grep:*)",
+      "Bash(pnpm test)",
+      "Bash(pnpm --filter @jinho-blog/mdx-handler test:*)"
     ],
     "deny": [],
     "ask": []

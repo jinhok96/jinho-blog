@@ -13,18 +13,14 @@ type Scope = {
   toc?: TocItem[];
 };
 
-type Options = {
-  isModalView?: boolean;
-};
-
 type GetMDXContent = {
   content: JSX.Element;
   toc: TocItem[] | undefined;
 };
 
-export async function getMDXContent(fileContent: string, { isModalView }: Options): Promise<GetMDXContent> {
+export async function getMDXContent(fileContent: string): Promise<GetMDXContent> {
   const { content: source } = matter(fileContent);
-  const components = createMDXComponents(isModalView);
+  const components = createMDXComponents();
 
   const { content, scope } = await evaluate<Record<string, unknown>, Scope>({
     source,

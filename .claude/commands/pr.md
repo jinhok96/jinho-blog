@@ -4,7 +4,7 @@
 
 1. `git log main..HEAD --oneline --no-merges` 로 커밋 목록 확인
 2. `git diff main...HEAD --stat` 로 변경 파일 요약 확인
-3. 커밋 목록을 접두어별로 분류 (Feature, Fix, Refactor, Test, Style, Chore, CI, Content, Document)
+3. 커밋 목록을 접두어별로 분류 (@/.claude/CLAUDE.md 에서 Git 브랜치 섹션 참조)
 4. 아래 규칙에 따라 PR 제목과 설명 작성
 
 **PR 제목 규칙:**

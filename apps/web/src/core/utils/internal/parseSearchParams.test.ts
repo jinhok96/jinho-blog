@@ -37,6 +37,10 @@ describe('parseCommaString', () => {
   it('쉼표만 있는 문자열이면 undefined 반환', () => {
     expect(parseCommaString(',')).toBeUndefined();
   });
+
+  it('공백 문자열이면 undefined 반환', () => {
+    expect(parseCommaString(' ')).toBeUndefined();
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -61,6 +65,18 @@ describe('parseSearchParams.page', () => {
 
   it('소수점 문자열은 parseInt로 정수 파싱', () => {
     expect(parseSearchParams.page('2.7')).toBe(2);
+  });
+
+  it('음수 문자열을 음수로 파싱', () => {
+    expect(parseSearchParams.page('-1')).toBe(-1);
+  });
+
+  it('0 문자열을 0으로 파싱', () => {
+    expect(parseSearchParams.page('0')).toBe(0);
+  });
+
+  it('공백 문자열이면 undefined 반환', () => {
+    expect(parseSearchParams.page(' ')).toBeUndefined();
   });
 });
 

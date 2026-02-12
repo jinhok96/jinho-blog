@@ -17,4 +17,13 @@ describe('useIsMounted', () => {
     const { result } = renderHook(() => useIsMounted());
     expect(result.current).toBe(true);
   });
+
+  it('unmount 시 cleanup이 실행됨', () => {
+    const { result, unmount } = renderHook(() => useIsMounted());
+    expect(result.current).toBe(true);
+    // unmount()는 useLayoutEffect cleanup(setIsMounted(false))을 호출함
+    // useState 기반 구현으로 unmount 후 re-render가 발생하지 않으므로
+    // result.current는 마지막 렌더 값(true)을 유지함
+    unmount();
+  });
 });

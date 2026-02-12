@@ -117,5 +117,11 @@ describe('isRouteObject()', () => {
         it('hash가 숫자이면 false를 반환한다', () => {
             expect(isRouteObject({ pathname: '/', hash: 123 })).toBe(false);
         });
+        it('search 값이 숫자이면 false를 반환한다', () => {
+            expect(isRouteObject({ pathname: '/', search: { page: 123 } })).toBe(false);
+        });
+        it('search 배열 값에 비문자열이 있으면 false를 반환한다', () => {
+            expect(isRouteObject({ pathname: '/', search: { tags: [1, 2] } })).toBe(false);
+        });
     });
 });

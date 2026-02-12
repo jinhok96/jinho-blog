@@ -6,9 +6,11 @@ vi.mock('fs', () => ({
   existsSync: vi.fn(),
   readdirSync: vi.fn(),
   readFileSync: vi.fn(),
+  copyFileSync: vi.fn(),
+  mkdirSync: vi.fn(),
 }));
 
-import { findMonorepoRoot, isImageFile, scanImagesRecursive } from './copy-mdx-images.js';
+import { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, scanImagesRecursive } from './copy-mdx-images.js';
 
 type MockReaddirSync = (
   path: fs.PathLike,
@@ -21,11 +23,14 @@ type MockReaddirSync = (
 const mockExistsSync = vi.mocked(fs.existsSync);
 const mockReaddirSync = vi.mocked<MockReaddirSync>(fs.readdirSync);
 const mockReadFileSync = vi.mocked(fs.readFileSync);
+const mockCopyFileSync = vi.mocked(fs.copyFileSync);
+const mockMkdirSync = vi.mocked(fs.mkdirSync);
 
 beforeAll(() => {
-  // console.warn, console.error 비활성화
+  // console.warn, console.error, console.log 비활성화
   vi.spyOn(console, 'warn').mockImplementation(() => {});
   vi.spyOn(console, 'error').mockImplementation(() => {});
+  vi.spyOn(console, 'log').mockImplementation(() => {});
 });
 
 beforeEach(() => {
@@ -139,5 +144,70 @@ describe('findMonorepoRoot', () => {
 
     const result = findMonorepoRoot();
     expect(typeof result).toBe('string');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// ensureDirSync
+// ---------------------------------------------------------------------------
+describe('ensureDirSync', () => {
+  it('디렉토리가 이미 존재하면 mkdirSync 미호출', () => {
+    mockExistsSync.mockReturnValue(true);
+    ensureDirSync('/existing/dir');
+    expect(mockMkdirSync).not.toHaveBeenCalled();
+  });
+
+  it('디렉토리가 없으면 mkdirSync 호출됨', () => {
+    mockExistsSync.mockReturnValue(false);
+    ensureDirSync('/new/dir');
+    expect(mockMkdirSync).toHaveBeenCalledWith('/new/dir', { recursive: true });
+  });
+});
+
+// ---------------------------------------------------------------------------
+// copyMdxImages
+// ---------------------------------------------------------------------------
+describe('copyMdxImages', () => {
+  it('섹션 디렉토리가 없으면 warn 로그 출력', () => {
+    mockExistsSync.mockReturnValue(false);
+    copyMdxImages();
+    expect(console.warn).toHaveBeenCalled();
+  });
+
+  it('이미지가 없으면 copyFileSync 미호출', () => {
+    // 섹션 디렉토리는 존재하지만 이미지 없음
+    mockExistsSync.mockImplementation((p: fs.PathLike) => {
+      // 출력 디렉토리는 이미 있음 (mkdirSync 미호출)
+      return true;
+    });
+    mockReaddirSync.mockReturnValue([
+      { name: 'post.mdx', isFile: () => true, isDirectory: () => false },
+    ]);
+
+    copyMdxImages();
+    expect(mockCopyFileSync).not.toHaveBeenCalled();
+  });
+
+  it('이미지가 있으면 copyFileSync 호출됨', () => {
+    mockExistsSync.mockReturnValue(true);
+    mockReaddirSync.mockReturnValue([
+      { name: 'cover.webp', isFile: () => true, isDirectory: () => false },
+    ]);
+
+    copyMdxImages();
+    expect(mockCopyFileSync).toHaveBeenCalled();
+  });
+
+  it('copyFileSync 에러 발생 시 error 로그 출력', () => {
+    mockExistsSync.mockReturnValue(true);
+    mockReaddirSync.mockReturnValue([
+      { name: 'cover.webp', isFile: () => true, isDirectory: () => false },
+    ]);
+    mockCopyFileSync.mockImplementation(() => {
+      throw new Error('copy failed');
+    });
+
+    copyMdxImages();
+    expect(console.error).toHaveBeenCalled();
   });
 });

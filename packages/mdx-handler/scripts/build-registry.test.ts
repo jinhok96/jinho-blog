@@ -1,20 +1,32 @@
 import { afterAll, afterEach, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 import { execSync } from 'child_process';
 import * as fs from 'fs';
+import matter from 'gray-matter';
 
 vi.mock('fs', () => ({
   existsSync: vi.fn(),
   readdirSync: vi.fn(),
+  readFileSync: vi.fn(),
+  writeFileSync: vi.fn(),
+  mkdirSync: vi.fn(),
 }));
 
 vi.mock('child_process', () => ({
   execSync: vi.fn(),
 }));
 
+vi.mock('gray-matter', () => ({
+  default: vi.fn(),
+}));
+
 import {
+  buildAllRegistries,
+  buildRegistry,
   extractFirstImage,
+  getGitDates,
   getGitDatesFromAPI,
   getGitDatesFromLocal,
+  parseMdxFile,
   scanMdxDirectory,
   transformImagePaths,
 } from './build-registry.js';
@@ -29,12 +41,17 @@ type MockReaddirSync = (
 
 const mockExistsSync = vi.mocked(fs.existsSync);
 const mockReaddirSync = vi.mocked<MockReaddirSync>(fs.readdirSync);
+const mockReadFileSync = vi.mocked(fs.readFileSync);
+const mockWriteFileSync = vi.mocked(fs.writeFileSync);
+const mockMkdirSync = vi.mocked(fs.mkdirSync);
 const mockExecSync = vi.mocked(execSync);
+const mockMatter = vi.mocked(matter);
 
 beforeAll(() => {
-  // console.warn, console.error 비활성화
+  // console.warn, console.error, console.log 비활성화
   vi.spyOn(console, 'warn').mockImplementation(() => {});
   vi.spyOn(console, 'error').mockImplementation(() => {});
+  vi.spyOn(console, 'log').mockImplementation(() => {});
 });
 
 beforeEach(() => {
@@ -217,6 +234,49 @@ describe('getGitDatesFromAPI', () => {
 });
 
 // ---------------------------------------------------------------------------
+// getGitDates
+// ---------------------------------------------------------------------------
+describe('getGitDates', () => {
+  const originalEnv = process.env;
+
+  beforeEach(() => {
+    process.env = { ...originalEnv };
+  });
+
+  afterEach(() => {
+    process.env = originalEnv;
+  });
+
+  it('VERCEL=true이고 GITHUB_TOKEN 있으면 API 경로 사용', async () => {
+    process.env.VERCEL = 'true';
+    process.env.GITHUB_TOKEN = 'test-token';
+
+    global.fetch = vi.fn().mockResolvedValue({
+      ok: true,
+      json: async () => [
+        { commit: { author: { date: '2024-06-01T00:00:00Z' } } },
+        { commit: { author: { date: '2024-01-01T00:00:00Z' } } },
+      ],
+    });
+
+    const result = await getGitDates('/some/file.mdx');
+    expect(result.createdAt).toBe('2024-01-01T00:00:00Z');
+    expect(global.fetch).toHaveBeenCalled();
+  });
+
+  it('VERCEL 없으면 로컬 git 경로 사용', async () => {
+    delete process.env.VERCEL;
+    mockExecSync
+      .mockReturnValueOnce('2024-01-01T00:00:00Z\n')
+      .mockReturnValueOnce('2024-06-01T00:00:00Z\n');
+
+    const result = await getGitDates('/some/file.mdx');
+    expect(result.createdAt).toBe('2024-01-01T00:00:00Z');
+    expect(mockExecSync).toHaveBeenCalled();
+  });
+});
+
+// ---------------------------------------------------------------------------
 // scanMdxDirectory
 // ---------------------------------------------------------------------------
 describe('scanMdxDirectory', () => {
@@ -250,5 +310,102 @@ describe('scanMdxDirectory', () => {
     const result = scanMdxDirectory('blog');
     expect(result).toHaveLength(1);
     expect(result[0].slug).toBe('post');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// parseMdxFile
+// ---------------------------------------------------------------------------
+describe('parseMdxFile', () => {
+  beforeEach(() => {
+    delete process.env.VERCEL;
+    mockReadFileSync.mockReturnValue('mock file content');
+  });
+
+  it('frontmatter + content 파싱 후 metadata 반환', async () => {
+    mockMatter.mockReturnValue({ data: { title: 'Test Post', createdAt: '2024-01-01' }, content: '# Hello' } as never);
+    mockExecSync.mockReturnValue('');
+
+    const result = await parseMdxFile('/test/post.mdx', 'blog');
+    expect(result.title).toBe('Test Post');
+    expect(result.createdAt).toBe('2024-01-01');
+  });
+
+  it('frontmatter에 createdAt 없으면 gitDates.createdAt 사용', async () => {
+    mockMatter.mockReturnValue({ data: { title: 'Post' }, content: '' } as never);
+    mockExecSync
+      .mockReturnValueOnce('2024-01-01T00:00:00Z\n')
+      .mockReturnValueOnce('2024-06-01T00:00:00Z\n');
+
+    const result = await parseMdxFile('/test/post.mdx', 'blog');
+    expect(result.createdAt).toBe('2024-01-01T00:00:00Z');
+    expect(result.updatedAt).toBe('2024-06-01T00:00:00Z');
+  });
+
+  it('frontmatter와 git 모두 없으면 현재 시간(now) 사용', async () => {
+    mockMatter.mockReturnValue({ data: {}, content: '' } as never);
+    mockExecSync.mockReturnValue('');
+
+    const before = new Date().toISOString();
+    const result = await parseMdxFile('/test/post.mdx', 'blog');
+    const after = new Date().toISOString();
+
+    expect((result.createdAt as string) >= before).toBe(true);
+    expect((result.createdAt as string) <= after).toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
+// buildRegistry
+// ---------------------------------------------------------------------------
+describe('buildRegistry', () => {
+  it('섹션 디렉토리 없으면 빈 배열 반환', async () => {
+    mockExistsSync.mockReturnValue(false);
+    const result = await buildRegistry('blog');
+    expect(result).toEqual([]);
+  });
+
+  it('MDX 파일이 있으면 entries 배열 반환', async () => {
+    mockExistsSync.mockReturnValue(true);
+    mockReaddirSync.mockReturnValue([
+      { name: 'post-1.mdx', isFile: () => true, isDirectory: () => false },
+    ]);
+    mockReadFileSync.mockReturnValue('mock content');
+    mockMatter.mockReturnValue({ data: { title: 'Post 1', createdAt: '2024-01-01' }, content: '' } as never);
+    mockExecSync.mockReturnValue('');
+
+    const result = await buildRegistry('blog');
+    expect(result).toHaveLength(1);
+    expect(result[0].slug).toBe('post-1');
+    expect(result[0].path).toBe('/blog/post-1');
+  });
+});
+
+// ---------------------------------------------------------------------------
+// buildAllRegistries
+// ---------------------------------------------------------------------------
+describe('buildAllRegistries', () => {
+  it('출력 디렉토리가 없으면 mkdirSync 호출됨', async () => {
+    mockExistsSync.mockReturnValue(false);
+    await buildAllRegistries();
+    expect(mockMkdirSync).toHaveBeenCalled();
+  });
+
+  it('모든 섹션 처리 후 writeFileSync 호출됨', async () => {
+    mockExistsSync.mockReturnValue(false);
+    await buildAllRegistries();
+    expect(mockWriteFileSync).toHaveBeenCalled();
+  });
+
+  it('writeFileSync에 전달된 JSON에 generatedAt 포함됨', async () => {
+    mockExistsSync.mockReturnValue(false);
+    await buildAllRegistries();
+
+    const [, content] = mockWriteFileSync.mock.calls[0];
+    const parsed = JSON.parse(content as string);
+    expect(parsed).toHaveProperty('generatedAt');
+    expect(parsed).toHaveProperty('blog');
+    expect(parsed).toHaveProperty('projects');
+    expect(parsed).toHaveProperty('libraries');
   });
 });

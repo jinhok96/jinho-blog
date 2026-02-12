@@ -12,7 +12,7 @@ export async function MDXComponent({ fileContent, isModalView }: Props) {
 
   return (
     <section className="flex-row-start size-full">
-      <article className="flex-col-start size-full gap-2">{content}</article>
+      <article className="flex-col-start size-full gap-3">{content}</article>
 
       {/* 목차 사이드바 */}
       <div

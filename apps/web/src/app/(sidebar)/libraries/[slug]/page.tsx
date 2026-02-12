@@ -50,7 +50,9 @@ export default async function LibraryPage({ params }: Props) {
   if (!library) notFound();
   if (!fileContent) notFound();
 
-  const flatGroups: Library[][] = LIBRARY_CATEGORY_MAP_KEYS.map(category => groups[category].flatMap(item => item));
+  const flatGroups: Library[][] = LIBRARY_CATEGORY_MAP_KEYS.map(category =>
+    (groups[category] ?? []).flatMap(item => item),
+  ).filter(group => group.length > 0);
 
   const flatList: Library[] = flatGroups.flatMap(item => item);
 

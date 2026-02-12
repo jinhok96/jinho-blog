@@ -17,7 +17,7 @@ export type GetLibraryGroupsByCategory = {
   search: {
     count?: string;
   };
-  response: Record<LibraryCategory, Library[]>;
+  response: Partial<Record<LibraryCategory, Library[]>>;
 };
 
 export type GetLibrary = {

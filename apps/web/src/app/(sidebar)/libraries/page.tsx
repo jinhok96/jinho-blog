@@ -38,35 +38,40 @@ export default async function LibrariesListPage() {
         <p>라이브러리 페이지 설명입니다. 이 페이지의 목적을 설명합니다. 지속적으로 추가할 예정입니다.</p>
 
         <div className="flex-col-start w-full gap-14 pt-8">
-          {LIBRARY_CATEGORY_MAP_KEYS.map(category => (
-            <section
-              key={category}
-              className="w-full"
-            >
-              <div className="mb-5 flex-row-center justify-between">
-                <span className="font-subtitle-24">{LIBRARY_CATEGORY_MAP[category]}</span>
-                <LinkButton
-                  href={routes({
-                    pathname: '/libraries/[slug]',
-                    params: { slug: groups[category][0].slug },
-                  })}
-                  size="md"
-                  color="background"
-                  className={`
-                    flex-row-center gap-1.5 leading-none text-gray-5
-                    hover:text-gray-8
-                  `}
-                >
-                  더보기
-                  <div className="size-4">
-                    <ChevronRightIcon />
-                  </div>
-                </LinkButton>
-              </div>
+          {LIBRARY_CATEGORY_MAP_KEYS.map(category => {
+            const libraries = groups[category];
+            if (!libraries?.length) return null;
 
-              <LibrariesContentSection libraries={groups[category].slice(0, LIMIT)} />
-            </section>
-          ))}
+            return (
+              <section
+                key={category}
+                className="w-full"
+              >
+                <div className="mb-5 flex-row-center justify-between">
+                  <span className="font-subtitle-24">{LIBRARY_CATEGORY_MAP[category]}</span>
+                  <LinkButton
+                    href={routes({
+                      pathname: '/libraries/[slug]',
+                      params: { slug: libraries[0].slug },
+                    })}
+                    size="md"
+                    color="background"
+                    className={`
+                      flex-row-center gap-1.5 leading-none text-gray-5
+                      hover:text-gray-8
+                    `}
+                  >
+                    더보기
+                    <div className="size-4">
+                      <ChevronRightIcon />
+                    </div>
+                  </LinkButton>
+                </div>
+
+                <LibrariesContentSection libraries={libraries.slice(0, LIMIT)} />
+              </section>
+            );
+          })}
         </div>
       </div>
     </div>

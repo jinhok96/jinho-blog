@@ -80,7 +80,7 @@ export function Toc({ toc }: TocProps) {
       },
     );
 
-    const headingElements = toc.map(item => document.querySelector(item.href)).filter(item => item !== null);
+    const headingElements = toc.map(item => document.getElementById(item.href.slice(1))).filter(item => item !== null);
 
     headingElements.forEach(item => observer.observe(item));
 

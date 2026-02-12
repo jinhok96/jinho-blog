@@ -28,13 +28,12 @@
 - 접두어 목록:
   - `Feature` — 새 기능 추가
   - `Fix` — 버그 수정
-  - `CI` — GitHub Actions 등 CI/CD 설정
-  - `Test` — 테스트 코드 추가/수정
-  - `Content` — 블로그 글 작성/수정
   - `Refactor` — 기능 변경 없는 코드 개선
   - `Style` — UI/CSS 스타일 변경
-  - `Chore` — 의존성 업데이트, 설정 변경 등
+  - `Content` — 블로그 글 작성/수정
   - `Document` — 문서 업데이트 (README, .claude/ 등)
+  - `Test` — 테스트 코드 추가/수정
+  - `Chore` — GitHub Actions 등 CI/CD 설정, 의존성 업데이트, 설정 변경 등
 
 # 문제 해결 프로세스
 

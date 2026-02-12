@@ -2,26 +2,40 @@
 
 <!-- 해당하는 항목만 작성하고 나머지 섹션은 삭제하세요 -->
 
-### Feature
+### 기능 (Feature)
+
 -
 
-### Fix
+### 버그 수정 (Fix)
+
 -
 
-### Refactor
+### 코드 품질 개선 (Refactor)
+
 -
 
-### Test
+### 스타일 (Style)
+
 -
 
-### Style
+### 콘텐츠 (Content)
+
 -
 
-### Chore
+### 문서 (Document)
+
+-
+
+### 테스트 (Test)
+
+-
+
+### 기타 (Chore)
+
 -
 
 ## 체크리스트
 
-- [ ] 빌드 통과 (`pnpm build`)
-- [ ] 타입 오류 없음 (`pnpm type-check`)
-- [ ] 테스트 통과 (`pnpm test`)
+- [ ] 타입 검사
+- [ ] 테스트 검사
+- [ ] 빌드 검사

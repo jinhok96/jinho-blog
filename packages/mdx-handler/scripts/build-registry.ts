@@ -344,7 +344,17 @@ async function buildAllRegistries(): Promise<void> {
   );
 }
 
-export { extractFirstImage, getGitDatesFromAPI, getGitDatesFromLocal, scanMdxDirectory, transformImagePaths };
+export {
+  buildAllRegistries,
+  buildRegistry,
+  extractFirstImage,
+  getGitDates,
+  getGitDatesFromAPI,
+  getGitDatesFromLocal,
+  parseMdxFile,
+  scanMdxDirectory,
+  transformImagePaths,
+};
 
 // 스크립트 실행
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

@@ -9,50 +9,44 @@ import { cn } from '@/core/utils';
 
 import LinkIcon from 'public/icons/link.svg';
 
-export function createMDXComponents(isModalView?: boolean) {
+export function createMDXComponents() {
   return {
     h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn('scroll-mt-(--height-header) pb-1 font-title-40', isModalView && 'font-title-32', className)}
+        className={cn('my-1 scroll-mt-(--height-header) font-subtitle-28', className)}
         {...props}
       />
     ),
 
     h2: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className={cn(
-          'scroll-mt-(--height-header) pb-1 font-subtitle-32',
-          isModalView && 'font-subtitle-26',
-          className,
-        )}
+        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-24', className)}
         {...props}
       />
     ),
 
+    // h3 ~ h6 동일
     h3: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className={cn('scroll-mt-(--height-header) font-subtitle-26', isModalView && 'font-subtitle-22', className)}
+        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
         {...props}
       />
     ),
-
     h4: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className={cn('scroll-mt-(--height-header) font-subtitle-20', isModalView && 'font-subtitle-18', className)}
+        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
         {...props}
       />
     ),
-
     h5: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className={cn('scroll-mt-(--height-header) font-subtitle-16', className)}
+        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
         {...props}
       />
     ),
-
     h6: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className={cn('scroll-mt-(--height-header) font-subtitle-14', className)}
+        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
         {...props}
       />
     ),

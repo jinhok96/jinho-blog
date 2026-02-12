@@ -13,7 +13,7 @@ export function createMDXComponents(isModalView?: boolean) {
   return {
     h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn('scroll-mt-(--height-header) pb-3 font-title-40', isModalView && 'font-title-32', className)}
+        className={cn('scroll-mt-(--height-header) pb-1 font-title-40', isModalView && 'font-title-32', className)}
         {...props}
       />
     ),
@@ -21,7 +21,7 @@ export function createMDXComponents(isModalView?: boolean) {
     h2: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
         className={cn(
-          'scroll-mt-(--height-header) pt-7 pb-3 font-subtitle-32',
+          'scroll-mt-(--height-header) pb-1 font-subtitle-32',
           isModalView && 'font-subtitle-26',
           className,
         )}
@@ -31,36 +31,28 @@ export function createMDXComponents(isModalView?: boolean) {
 
     h3: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className={cn(
-          'scroll-mt-(--height-header) pt-6 pb-3 font-subtitle-26',
-          isModalView && 'font-subtitle-22',
-          className,
-        )}
+        className={cn('scroll-mt-(--height-header) font-subtitle-26', isModalView && 'font-subtitle-22', className)}
         {...props}
       />
     ),
 
     h4: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className={cn(
-          'scroll-mt-(--height-header) pt-5 pb-2 font-subtitle-20',
-          isModalView && 'font-subtitle-18',
-          className,
-        )}
+        className={cn('scroll-mt-(--height-header) font-subtitle-20', isModalView && 'font-subtitle-18', className)}
         {...props}
       />
     ),
 
     h5: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className={cn('scroll-mt-(--height-header) pt-3 pb-2 font-subtitle-16', className)}
+        className={cn('scroll-mt-(--height-header) font-subtitle-16', className)}
         {...props}
       />
     ),
 
     h6: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className={cn('scroll-mt-(--height-header) pt-3 pb-2 font-subtitle-14', className)}
+        className={cn('scroll-mt-(--height-header) font-subtitle-14', className)}
         {...props}
       />
     ),

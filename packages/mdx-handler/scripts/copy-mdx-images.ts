@@ -142,7 +142,7 @@ function copyMdxImages(): void {
   console.log(`📁 대상 경로: ${baseStaticPath}\n`);
 }
 
-export { findMonorepoRoot, isImageFile, scanImagesRecursive };
+export { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, scanImagesRecursive };
 
 // 실행
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

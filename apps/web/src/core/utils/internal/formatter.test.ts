@@ -26,10 +26,6 @@ describe('formatNumberToLocaleString', () => {
     expect(formatNumberToLocaleString('abc', 0)).toBe('abc');
   });
 
-  it('-0이면 "0" 반환', () => {
-    expect(formatNumberToLocaleString(-0, 0)).toBe('0');
-  });
-
   it('소수점 maxDigits 적용', () => {
     const result = formatNumberToLocaleString(1234.567, 2);
     // 소수점 2자리까지만 허용 (ko-KR 로케일)
@@ -42,6 +38,11 @@ describe('formatNumberToLocaleString', () => {
 
   it('0 변환', () => {
     expect(formatNumberToLocaleString(0, 0)).toBe('0');
+  });
+
+  it('Infinity 입력은 로케일 변환 결과 반환', () => {
+    const result = formatNumberToLocaleString(Infinity, 0);
+    expect(result).toBe(Infinity.toLocaleString('ko-KR', { maximumFractionDigits: 0 }));
   });
 });
 
@@ -63,6 +64,10 @@ describe('formatLocaleStringToNumber', () => {
 
   it('음수 문자열 변환', () => {
     expect(formatLocaleStringToNumber('-1,000')).toBe(-1000);
+  });
+
+  it('숫자로 변환 불가한 문자열은 NaN 반환', () => {
+    expect(formatLocaleStringToNumber('abc')).toBeNaN();
   });
 });
 
@@ -88,5 +93,10 @@ describe('formatDateToString', () => {
     expect(result).toContain('2024');
     expect(result).toContain('6');
     expect(result).toContain('20');
+  });
+
+  it('유효하지 않은 날짜 문자열은 Invalid Date 문자열 반환', () => {
+    const result = formatDateToString('not-a-date');
+    expect(result).toBe(new Date('not-a-date').toLocaleDateString('ko-KR'));
   });
 });

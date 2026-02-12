@@ -5,7 +5,7 @@
   "packageManager": "pnpm@10.0.0",
   "scripts": {
     "dev": "turbo dev",
-    "build": "turbo lint && turbo build",
+    "build": "turbo lint && turbo test && turbo build",
     "start": "pnpm --filter @jinho-blog/web run start",
     "lint": "turbo lint",
     "lf": "turbo lf",
@@ -15,11 +15,13 @@
     "kill-port": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :3401 ^| findstr LISTENING') do taskkill /F /PID %a"
   },
   "devDependencies": {
+    "@vitest/coverage-v8": "^4.0.18",
     "baseline-browser-mapping": "^2.9.19",
     "cross-env": "^7.0.3",
     "prettier": "^3.6.2",
     "turbo": "^2.8.5",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.0.18"
   },
   "pnpm": {
     "overrides": {

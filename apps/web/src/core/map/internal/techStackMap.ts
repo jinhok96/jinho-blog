@@ -18,6 +18,7 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
 
   // 라이브러리
   'tanstack-query': 'Tanstack Query',
+  axios: 'Axios',
   swr: 'SWR',
   zustand: 'Zustand',
   'react-hook-form': 'React Hook Form',
@@ -66,6 +67,7 @@ export const TECH_STACK_IMAGE_MAP: Record<TechStack, string> = {
 
   // 라이브러리
   'tanstack-query': 'tanstack_query.png',
+  axios: 'axios.png',
   swr: 'swr.png',
   zustand: 'zustand.png',
   'react-hook-form': 'react_hook_form.png',

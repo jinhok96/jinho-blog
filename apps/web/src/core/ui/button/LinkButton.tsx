@@ -16,6 +16,7 @@ export function LinkButton({
   className,
   href,
   hard,
+  download,
   size,
   color,
   variant,
@@ -34,7 +35,7 @@ export function LinkButton({
     disabled,
   });
 
-  if (hard) {
+  if (hard || download) {
     const hrefString = stringifyURL(href);
 
     return (
@@ -42,6 +43,7 @@ export function LinkButton({
         <a
           className={cn(variants, className, 'touch:hidden')}
           href={hrefString}
+          download={download}
           {...props}
         >
           {children}

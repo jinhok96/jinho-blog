@@ -59,7 +59,7 @@ export function HomeTechStackSection() {
         />
         <TechStacks
           label="라이브러리"
-          stacks={['tanstack-query', 'swr', 'zustand', 'react-hook-form', 'jest', 'motion']}
+          stacks={['tanstack-query', 'axios', 'swr', 'zustand', 'react-hook-form', 'jest', 'motion']}
         />
         <TechStacks
           label="번들러, 배포"

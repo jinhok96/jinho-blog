@@ -12,6 +12,7 @@ import { cn } from '@/core/utils';
 const jbd2 = localFont({
   src: '../../../../public/fonts/JBD2-Regular.woff2',
   display: 'swap',
+  preload: false,
 });
 
 type CodePrismProps = ComponentProps<typeof Prism>;

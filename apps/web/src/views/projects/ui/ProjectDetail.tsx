@@ -1,15 +1,14 @@
 import type { Project } from '@jinho-blog/mdx-handler';
-import type { ComponentProps } from 'react';
 
 import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentHeader, MDXComponent } from '@/core/ui';
 
-type Props = Pick<ComponentProps<typeof MDXComponent>, 'isModalView'> & {
+type Props = {
   project: Project;
   fileContent: string;
 };
 
-export function ProjectDetail({ project, fileContent, isModalView }: Props) {
+export function ProjectDetail({ project, fileContent }: Props) {
   const { title, category, description, tech, period, members, links } = project;
 
   return (
@@ -17,7 +16,7 @@ export function ProjectDetail({ project, fileContent, isModalView }: Props) {
       <ContentHeader
         category={PROJECT_CATEGORY_MAP[category]}
         title={title}
-        isModalView={isModalView}
+        isModalView
       >
         <ContentHeader.ProjectInfo
           period={period}
@@ -31,7 +30,7 @@ export function ProjectDetail({ project, fileContent, isModalView }: Props) {
 
       <MDXComponent
         fileContent={fileContent}
-        isModalView={isModalView}
+        hideTableOfContents
       />
     </>
   );

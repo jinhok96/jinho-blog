@@ -4,11 +4,11 @@ import { getMDXContent } from '@/core/utils';
 
 type Props = {
   fileContent: string;
-  isModalView?: boolean;
+  hideTableOfContents?: boolean;
 };
 
-export async function MDXComponent({ fileContent, isModalView }: Props) {
-  const { content, toc } = await getMDXContent(fileContent, { isModalView });
+export async function MDXComponent({ fileContent, hideTableOfContents }: Props) {
+  const { content, toc } = await getMDXContent(fileContent);
 
   return (
     <section className="flex-row-start size-full">
@@ -21,7 +21,7 @@ export async function MDXComponent({ fileContent, isModalView }: Props) {
           not-desktop:hidden
         `}
       >
-        <Show when={!isModalView}>
+        <Show when={!hideTableOfContents}>
           <Toc toc={toc} />
         </Show>
       </div>

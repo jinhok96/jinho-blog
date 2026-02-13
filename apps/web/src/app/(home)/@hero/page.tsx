@@ -62,6 +62,7 @@ export default function HomeHeroSection() {
         <LinkButton
           href="/files/resume.pdf"
           download="강진호_이력서.pdf"
+          hard
           size="md"
           color="background"
           className={`

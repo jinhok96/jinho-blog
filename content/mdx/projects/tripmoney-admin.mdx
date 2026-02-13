@@ -1,0 +1,48 @@
+---
+title: 트립머니 어드민 웹페이지 개발
+description: 트립머니 어드민 웹페이지 개발 및 유지보수
+
+# category 옵션: tripmoney | personal
+category: tripmoney
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | swr | zustand | react-hook-form | jest | motion
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - javascript
+  - vue
+  - sass
+
+# period: '2025.01 ~ 2025.06 (상시 업무)'
+period: '2025.08 ~ 2026.02 (상시 업무)'
+
+# members: '5명 (FE 2, BE 2, DE 1)'
+members: '1명 (FE 1)'
+---
+
+Vue 2.6 기반 어드민 웹페이지 디자인, 프론트엔드, 백엔드 개발 및 유지보수를 담당했습니다.
+
+# 상세 내용
+
+## 1. 기능 구현
+
+- 웹페이지 전체 리디자인
+- 선불카드 발급/충전/픽업/환불/정산 내역 페이지 및 API 구현
+- 권한 관리 기능 구현 (사용자 그룹별 권한 세분화, 페이지별 접근 권한 설정)
+- 데이터 검색, 필터 기능 구현
+- 로그인 페이지 아이디, 비밀번호, OTP 입력 시 인풋 자동으로 포커스를 전환해 사용성 개선
+
+## 2. 성능 최적화
+
+- 대형 UI 라이브러리(Vuetify) 제거로 번들 크기 66% 감소 (2,751KB → 1,818KB)
+- JS/CSS 파일명 컨텐츠 해시 적용하고 빌드 캐시를 로드하도록 변경해 새로고침 시 로드 시간 68% 감소 (518ms → 352ms)
+- 클라이언트에서 수행하던 대규모 데이터(1,000건+) 필터링을 서버 측 로직으로 전환해 클라이언트 데이터 로드 시간 감소
+
+## 3. 코드 품질 개선
+
+- 모든 페이지에서 하드코딩된 UI를 컴포넌트로 리팩토링
+- 포맷팅 유틸 함수 전역화 (숫자 포맷팅, 날짜 포맷팅, UTC 로컬 시간 변환)

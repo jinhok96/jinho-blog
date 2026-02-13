@@ -17,6 +17,7 @@ export type TechStack =
   | 'tailwindcss'
   // 라이브러리
   | 'tanstack-query'
+  | 'axios'
   | 'swr'
   | 'zustand'
   | 'react-hook-form'

@@ -60,9 +60,8 @@ export default function HomeHeroSection() {
 
         {/* 이력서 다운로드 버튼 */}
         <LinkButton
-          href="/files/resume.pdf"
-          download="강진호_이력서.pdf"
-          hard
+          href="/files/강진호_이력서.pdf"
+          download
           size="md"
           color="background"
           className={`

@@ -27,7 +27,7 @@ export async function getMDXContent(fileContent: string): Promise<GetMDXContent>
     components,
     options: {
       mdxOptions: {
-        remarkPlugins: [remarkGfm, remarkFlexibleToc],
+        remarkPlugins: [remarkGfm, [remarkFlexibleToc, { skipLevels: [] }]],
         rehypePlugins: [rehypeSlug],
       },
       vfileDataIntoScope: 'toc',

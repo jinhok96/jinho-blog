@@ -121,7 +121,7 @@ export function createMDXComponents() {
 
     hr: ({ className, ...props }: HTMLAttributes<HTMLHRElement>) => (
       <hr
-        className={cn('mt-4 w-full border-gray-3', className)}
+        className={cn('mt-6 mb-2 w-full border-gray-2', className)}
         {...props}
       />
     ),

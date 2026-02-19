@@ -1,0 +1,55 @@
+---
+title: 개인 포트폴리오&블로그 웹사이트
+description: 모노레포, Next.js 기반 개인 웹사이트 제작
+
+# category 옵션: tripmoney | personal
+category: personal
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | pinia | react-hook-form | jest | vitest | motion
+# webpack | babel | electron | turbopack | vite | vercel
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - nextjs
+  - tailwindcss
+  - zustand
+  - vitest
+  - turbopack
+  - vercel
+
+# period: '2025.01 ~ 2025.06 (상시 업무)'
+period: '2025.11 ~ 2026.02'
+
+# members: '5명 (FE 2, BE 2, DE 1)'
+members: '1명 (FE 1)'
+
+# links (선택 사항):
+#   - 'https://example.com'
+links:
+  - 'https://jinho-blog-web.vercel.app/'
+---
+
+Next.js 기반 개인 포트폴리오&블로그 웹사이트를 제작 및 배포했습니다.
+
+# 상세 내용
+
+## 1. 기능 구현
+
+- 모노레포 구조를 차용해 기능별 패키지 분리 (웹, 콘텐츠, MDX 처리, 타입 안전 라우트, 공유 타입 등)
+- nextjs-routes 라이브러리를 포크해 수정하여 함수 기반 타입 안전 라우트 구현
+- MDX 기반 콘텐츠 파이프라인 구축
+- Next.js 기반 웹사이트 자동 빌드 및 배포 (Vercel)
+
+## 2. 성능 최적화
+
+- 빌드 시 정적 콘텐츠 레지스트리를 생성해 런타임 성능 개선
+- SSG 방식으로 렌더링하여 빠른 로딩 속도
+- `robots.txt`, `sitemap.xml`, `rss.xml`을 제공해 SEO 개선
+
+## 3. 코드 품질 개선
+
+- Vitest + GitHub Actions로 테스트 CI 구축, 테스트 커버리지 93% 이상 달성

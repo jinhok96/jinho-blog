@@ -35,7 +35,10 @@ export default async function LibrariesListPage() {
       <div className="container flex-col-start size-full gap-6 p-layout">
         <h1 className="font-title-36">라이브러리</h1>
 
-        <p>라이브러리 페이지 설명입니다. 이 페이지의 목적을 설명합니다. 지속적으로 추가할 예정입니다.</p>
+        <p>
+          재사용 가능한 컴포넌트, 훅, 유틸 함수를 보관합니다. 개발에 사용할 목적으로 작성되었으며 지속적으로 추가/관리할
+          예정입니다.
+        </p>
 
         <div className="flex-col-start w-full gap-14 pt-8">
           {LIBRARY_CATEGORY_MAP_KEYS.map(category => {

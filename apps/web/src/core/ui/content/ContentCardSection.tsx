@@ -68,7 +68,7 @@ function Card({ href, className, category, createdAt, thumbnail, showThumbnail, 
 
       <article
         className={`
-          flex-col-start w-full gap-1.5 bg-background p-5 text-foreground animated-150
+          flex-col-start size-full gap-1.5 bg-background p-5 text-foreground animated-150
           group-hover:bg-blue-6
           dark:group-hover:bg-blue-5
           light:group-hover:text-background

@@ -20,7 +20,10 @@ type CodePrismProps = ComponentProps<typeof Prism>;
 function CodePrism({ children, className, PreTag, language = 'typescript', ...props }: CodePrismProps) {
   return (
     <Prism
-      className={cn(`m-0! inline-flex bg-transparent! p-0! text-[0.875rem] tracking-normal! whitespace-pre`, className)}
+      className={cn(
+        `m-0! inline-flex bg-transparent! p-0! align-text-bottom text-[0.875rem] tracking-normal! whitespace-pre`,
+        className,
+      )}
       PreTag={PreTag}
       codeTagProps={{ className: jbd2.className }}
       language={language}

@@ -13,11 +13,11 @@ import LinkIcon from 'public/icons/link.svg';
 
 const depthClassNameMap: Record<TocItem['depth'], string> = {
   1: 'pl-0',
-  2: 'pl-0',
-  3: 'pl-2',
-  4: 'pl-4',
-  5: 'pl-6',
-  6: 'pl-8',
+  2: 'pl-2',
+  3: 'pl-4',
+  4: 'pl-6',
+  5: 'pl-8',
+  6: 'pl-10',
 };
 
 type TocLinkButtonProps = ComponentProps<typeof LinkButton> & {

@@ -65,6 +65,8 @@ export function Show<T>({
 }
 ```
 
+---
+
 # 사용법
 
 ## 1. `boolean` 조건
@@ -73,9 +75,9 @@ export function Show<T>({
 const fruit = 'apple';
 
 // 결과: 사과
-<Show when={fruit === 'apple'} >
-	<span>사과</span>
-</Show>
+<Show when={fruit === 'apple'}>
+  <span>사과</span>
+</Show>;
 ```
 
 ## 2. 타입 추론
@@ -100,6 +102,8 @@ const fruit = 'apple'
 	<span>{fruit}</span>
 </Show>
 ```
+
+---
 
 # 참조
 

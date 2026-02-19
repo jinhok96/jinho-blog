@@ -9,18 +9,22 @@ import { cn } from '@/core/utils';
 
 import LinkIcon from 'public/icons/link.svg';
 
+const H1_CLASSNAME = 'mt-4 mb-1 font-subtitle-26';
+const H2_CLASSNAME = 'mt-2 mb-0.5 font-subtitle-22';
+const H3_CLASSNAME = 'mt-2 mb-0.5 font-subtitle-18';
+
 export function createMDXComponents() {
   return {
     h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
-        className={cn('my-1 scroll-mt-(--height-header) font-subtitle-28', className)}
+        className={cn('scroll-mt-(--height-header)', H1_CLASSNAME, className)}
         {...props}
       />
     ),
 
     h2: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h2
-        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-24', className)}
+        className={cn('scroll-mt-(--height-header)', H2_CLASSNAME, className)}
         {...props}
       />
     ),
@@ -28,25 +32,25 @@ export function createMDXComponents() {
     // h3 ~ h6 동일
     h3: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h3
-        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
+        className={cn('scroll-mt-(--height-header)', H3_CLASSNAME, className)}
         {...props}
       />
     ),
     h4: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h4
-        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
+        className={cn('scroll-mt-(--height-header)', H3_CLASSNAME, className)}
         {...props}
       />
     ),
     h5: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h5
-        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
+        className={cn('scroll-mt-(--height-header)', H3_CLASSNAME, className)}
         {...props}
       />
     ),
     h6: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h6
-        className={cn('my-0.5 scroll-mt-(--height-header) font-subtitle-18', className)}
+        className={cn('scroll-mt-(--height-header)', H3_CLASSNAME, className)}
         {...props}
       />
     ),

@@ -24,6 +24,7 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
   'react-hook-form': 'React Hook Form',
   jest: 'Jest',
   motion: 'Motion',
+  pinia: 'Pinia',
 
   // 번들러, 배포
   webpack: 'Webpack',
@@ -73,6 +74,7 @@ export const TECH_STACK_IMAGE_MAP: Record<TechStack, string> = {
   'react-hook-form': 'react_hook_form.png',
   jest: 'jest.png',
   motion: 'motion.png',
+  pinia: 'pinia.png',
 
   // 번들러, 배포
   webpack: 'webpack.png',

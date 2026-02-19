@@ -23,6 +23,7 @@ export type TechStack =
   | 'react-hook-form'
   | 'jest'
   | 'motion'
+  | 'pinia'
   // 번들러, 배포
   | 'webpack'
   | 'babel'

@@ -20,10 +20,11 @@ export type TechStack =
   | 'axios'
   | 'swr'
   | 'zustand'
+  | 'pinia'
   | 'react-hook-form'
   | 'jest'
+  | 'vitest'
   | 'motion'
-  | 'pinia'
   // 번들러, 배포
   | 'webpack'
   | 'babel'

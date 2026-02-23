@@ -1,0 +1,193 @@
+---
+title: 블로그 제작기#1 - MDX 콘텐츠 파이프라인
+description: MDX 기반 콘텐츠를 생성하고 관리하는 방법
+category: frontend
+---
+
+내 포트폴리오&블로그&라이브러리 웹사이트를 만들었다. 언젠가 만들어야지 했는데, 이직 준비를 시작하면서 공부도 할 겸 만들기 시작한 게 어느새 완성되어 콘텐츠를 채워 넣기만 하면 되는 시기가 왔다. 모노레포, MDX 렌더링 등 처음 접하는 것들이 많아 발생한 이슈가 꽤 있었는데, 그 중 큰 것들을 중심으로 정리해보려고 한다.
+
+---
+
+# 콘텐츠 관리하기
+
+콘텐츠 관리 방식은 크게 두 가지다. 서버 방식은 실시간 업데이트가 가능하지만 운영 비용이 발생하고, 빌드 타임 방식은 빠른 응답 속도와 비용 절감이 가능하지만 콘텐츠가 많아질수록 빌드 시간이 증가한다. 이 웹사이트는 콘텐츠 업데이트 빈도를 주 1회 정도로 계획하고 있어 콘텐츠를 별도의 서버 없이 관리하는 방식이 더 유리하다고 판단했다.
+
+---
+
+# 콘텐츠 공급하기
+
+Vercel에서 제공하는 [Next.js 블로그 예시 템플릿]을 참고했다.
+
+하나의 콘텐츠는 하나의 페이지에 표시된다. 콘텐츠가 10개 있다면 페이지도 10개 존재해야 한다. 그런데 블로그 글이라는 것은 보통 공통 서식을 공유한다. 하나의 동적 페이지를 만들고 주소에 따라 대응하는 콘텐츠를 표시하는 방식이 관리하기 쉽다. 또, 블로그 글은 대체로 텍스트가 콘텐츠의 대부분을 차지한다. 따라서 문서 작성에 특화된 마크다운 형식을 사용하면 글을 쓸 때 가독성도 좋고, 나중에 에디터 없이 깃허브에서 직접 작성하기 매우 용이하다는 장점도 있다.
+
+<Callout>
+
+`content-1.mdx` ↘<br/>
+`content-2.mdx` → `/blog/[slug]`<br/>
+`content-3.mdx` ↗<br/>
+
+</Callout>
+
+각 페이지에는 `title`, `description`과 같은 메타데이터가 필요하고, 글 관심사에 따라 분류할 카테고리와 작성일, 수정일 같은 날짜도 필요하다. 이것들을 MDX의 Front-matter에 저장하고 파싱해 가져올 수 있다.
+
+```mdx
+---
+title: 제목
+description: 설명
+category: 카테고리
+createdAt: 2026-02-23
+updatedAt: 2026-02-23
+---
+
+# 콘텐츠
+
+...
+```
+
+<Callout>
+
+콘텐츠 (MDX) → Front-matter 파싱 → `{ title, description, category, createdAt, updatedAt }` → 메타데이터, 카테고리, 오픈그래프, ...
+
+</Callout>
+
+---
+
+# 콘텐츠 사전 생성 (SSG)
+
+앞에서 빌드 타임에 콘텐츠를 사전 생성하기로 결정했다. 일단 단순하게 아래처럼 생각해볼 수 있다.
+
+<Callout>
+
+`/blog/content-1` → `content-1.mdx` 읽기/파싱 (런타임) → 콘텐츠 표시
+
+</Callout>
+
+파일 하나만 읽는다면 딱히 문제가 없을 수 있다. 하지만 아래와 같은 경우라면 달라진다.
+
+<Callout>
+
+`/blog/list`<br/>
+→ `content-1.mdx` 읽기/파싱 (런타임)<br/>
+→ `content-2.mdx` 읽기/파싱 (런타임)<br/>
+→ `content-3.mdx` 읽기/파싱 (런타임)<br/>
+→ ...<br/>
+→ 콘텐츠 목록 표시
+
+</Callout>
+
+표시할 콘텐츠 목록 아이템이 10개라면 파일을 10개 읽고 파싱해야 한다. 20개라면 20번 해야 한다. 그만큼 콘텐츠는 늦게 렌더링된다. 나는 실제로 처음에 이렇게 구현했었는데, 페이지 로드에 10초 넘게 걸리는 일도 있었다.
+
+어차피 빌드 시점에 모든 것이 정해져 있다면 굳이 런타임에 추가 비용을 들일 필요가 없다. 빌드 타임에 미리 모든 콘텐츠를 읽고 파싱해 캐시를 만들어두면 런타임에는 저장된 캐시를 읽기만 하면 되므로 페이지 로드 시간을 크게 단축할 수 있다.
+
+<Callout>
+
+`content-1.mdx` 읽기/파싱 (빌드 타임)<br/>
+→ `content-2.mdx` 읽기/파싱 (빌드 타임)<br/>
+→ `content-3.mdx` 읽기/파싱 (빌드 타임)<br/>
+→ ...<br/>
+→ 캐시 생성 (빌드 타임) → 빌드 → 캐시 읽기 (런타임)
+
+</Callout>
+
+---
+
+# 정적 에셋 공급하기
+
+콘텐츠에는 이미지와 같은 정적 에셋이 포함될 수 있다. 이것을 `public` 폴더(Next.js의 경우)에 저장했다면 상관없지만, 콘텐츠 폴더가 빌드에 포함되지 않고 에셋을 콘텐츠 폴더에 둔다면 빌드 결과물에 해당 에셋이 포함되지 않는다. 그러므로 빌드 타임에 캐시를 생성할 때 정적 에셋도 함께 `public` 폴더에 복사해야 빌드 후 정상적으로 불러올 수 있다.
+
+<Callout>
+
+`content-1-thumbnail.webp` 복사 (빌드 타임)<br/>
+→ `content-2-thumbnail.webp` 복사 (빌드 타임)<br/>
+→ `content-3-thumbnail.webp` 복사 (빌드 타임)<br/>
+→ ...<br/>
+→ 복사된 에셋 경로가 적용된 캐시 생성 (빌드 타임) → 빌드 → 캐시/에셋 읽기 (런타임)
+
+</Callout>
+
+---
+
+# 예시
+
+- 빌드 전 폴더 구조
+
+```text
+content
+├─ assets
+│  ├─ content-1-thumbnail.webp
+│  ├─ content-2-thumbnail.webp
+│  └─ content-3-thumbnail.webp
+├─ content-1.mdx
+├─ content-2.mdx
+└─ content-3.mdx
+```
+
+- 빌드 후 폴더 구조
+
+```text
+public/_static
+├─ assets
+│  ├─ content-1-thumbnail.webp
+│  ├─ content-2-thumbnail.webp
+│  └─ content-3-thumbnail.webp
+└─ registry.json
+```
+
+- registry.json
+
+```json
+{
+  "blog": [
+    {
+      "slug": "content-1",
+      "title": "콘텐츠 1 제목",
+      "description": "콘텐츠 1 설명",
+      "category": "카테고리",
+      "createdAt": "2026-02-23T18:00:00+09:00",
+      "updatedAt": "2026-02-23T18:00:00+09:00",
+      "thumbnail": "/_static/assets/content-1-thumbnail.webp",
+      "content": "# 콘텐츠 1\n ..."
+    },
+    {
+      "slug": "content-2",
+      "title": "콘텐츠 2 제목",
+      "description": "콘텐츠 2 설명",
+      "category": "카테고리",
+      "createdAt": "2026-02-23T18:00:00+09:00",
+      "updatedAt": "2026-02-23T18:00:00+09:00",
+      "thumbnail": "/_static/assets/content-2-thumbnail.webp",
+      "content": "# 콘텐츠 2\n ..."
+    },
+    {
+      "slug": "content-3",
+      "title": "콘텐츠 3 제목",
+      "description": "콘텐츠 3 설명",
+      "category": "카테고리",
+      "createdAt": "2026-02-23T18:00:00+09:00",
+      "updatedAt": "2026-02-23T18:00:00+09:00",
+      "thumbnail": "/_static/assets/content-3-thumbnail.webp",
+      "content": "# 콘텐츠 3\n ..."
+    }
+  ]
+}
+```
+
+---
+
+# 마치며
+
+구체적인 구현 로직는 워낙 다양하기 때문에 따로 글에 넣지 않았다. 자세한 코드는 [블로그 레포지토리]의 `packages/mdx-handler`에서 확인할 수 있다.
+
+---
+
+# 참조
+
+<Callout>
+
+- [Next.js 블로그 예시 템플릿]
+
+</Callout>
+
+{/* 링크 */}
+[Next.js 블로그 예시 템플릿]: https://github.com/vercel/examples/tree/main/solutions/blog/app
+[블로그 레포지토리]: https://github.com/jinhok96/jinho-blog

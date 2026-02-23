@@ -21,10 +21,11 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
   axios: 'Axios',
   swr: 'SWR',
   zustand: 'Zustand',
+  pinia: 'Pinia',
   'react-hook-form': 'React Hook Form',
   jest: 'Jest',
+  vitest: 'Vitest',
   motion: 'Motion',
-  pinia: 'Pinia',
 
   // 번들러, 배포
   webpack: 'Webpack',
@@ -71,10 +72,11 @@ export const TECH_STACK_IMAGE_MAP: Record<TechStack, string> = {
   axios: 'axios.png',
   swr: 'swr.png',
   zustand: 'zustand.png',
+  pinia: 'pinia.png',
   'react-hook-form': 'react_hook_form.png',
   jest: 'jest.png',
+  vitest: 'vitest.png',
   motion: 'motion.png',
-  pinia: 'pinia.png',
 
   // 번들러, 배포
   webpack: 'webpack.png',

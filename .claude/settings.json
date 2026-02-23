@@ -33,7 +33,8 @@
       "Bash(pnpm type-check:*)",
       "Bash(grep:*)",
       "Bash(pnpm test)",
-      "Bash(pnpm --filter @jinho-blog/mdx-handler test:*)"
+      "Bash(pnpm --filter @jinho-blog/mdx-handler test:*)",
+      "Bash(git log:*)"
     ],
     "deny": [],
     "ask": []

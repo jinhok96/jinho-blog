@@ -15,9 +15,9 @@ model: inherit
 ## 테스트 대상 및 실행
 
 ```bash
-pnpm test -w @jinho-blog/mdx-handler
-pnpm test -w @jinho-blog/nextjs-routes
-pnpm test -w @jinho-blog/web
+pnpm test --filter @jinho-blog/mdx-handler
+pnpm test --filter @jinho-blog/nextjs-routes
+pnpm test --filter @jinho-blog/web
 ```
 
 ## 테스트 파일 위치
@@ -49,5 +49,5 @@ describe('{기능명}', () => {
 ## 완료 후 검증
 
 ```bash
-pnpm test -w @jinho-blog/{패키지명}
+pnpm test --filter @jinho-blog/{패키지명}
 ```

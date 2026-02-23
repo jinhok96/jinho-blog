@@ -24,7 +24,7 @@
 
 - 작업 브랜치: `dev`
 - PR 대상: `main`
-- 커밋 메시지 형식: `{Prefix}: 설명`
+- 커밋 메시지 형식: `{Prefix}: 설명` (상세 → @.claude/skills/output-style/SKILL.md)
 - 접두어 목록:
   - `Feature` — 새 기능 추가
   - `Fix` — 버그 수정
@@ -72,51 +72,7 @@
 
 ## 6. 작업 완료
 
-- 변경된 파일들을 유형에 따라 여러 커밋으로 나누어 커밋 메세지 제안
-- 커밋 메세지는 복사할 수 있게 독립적인 코드 블록으로 표시
-- 커밋 파일 항목들은 git add 스크립트와 실제 파일 목록을 각각 커밋 메세지와 분리된 코드 블록으로 표시
-- 예시:
-
-```text
-Document: 클로드 문서 업데이트
-```
-
-```text
-git add (커밋할 모든 파일)
-```
-
-```text
-- CLAUDE.md
-- monorepo.md
-- settings.local.json
-```
-
-```text
-Feature: *** 기능 추가
-```
-
-```text
-git add (커밋할 모든 파일)
-```
-
-```text
-- feature1.tsx
-- feature2.tsx
-- hook1.ts
-```
-
-```text
-Fix: *** 버그 수정
-```
-
-```text
-git add (커밋할 모든 파일)
-```
-
-```text
-- bug1.tsx
-- bug2.ts
-```
+변경 파일을 유형에 따라 여러 커밋으로 분리하여 제안. 커밋 메시지 형식 및 예시 → @.claude/skills/output-style/SKILL.md
 
 # Claude Code 도구 사용 원칙
 
@@ -152,3 +108,14 @@ git add (커밋할 모든 파일)
   - @.claude/shared.md
   - @.claude/mdx-handler.md
   - @.claude/nextjs-routes.md
+
+# Skills
+
+- @.claude/skills/output-style/SKILL.md — 출력 스타일, 커밋 형식 (자동 로드)
+- @.claude/skills/verify/SKILL.md — 검증 절차 (`/verify`로 호출)
+
+# Subagents
+
+- `code-reviewer` — FSD/TypeScript 코드 리뷰 전문, 코드 변경 후 호출
+- `mdx-writer` — MDX 콘텐츠 생성·완성 전문, `/write` 또는 MDX 작업 시 호출
+- `test-writer` — Vitest 테스트 작성 전문, 테스트 추가·수정 시 호출

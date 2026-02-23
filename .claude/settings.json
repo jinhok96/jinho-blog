@@ -1,0 +1,67 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(where code)",
+      "Bash(npx tsc:*)",
+      "Bash(python:*)",
+      "Bash(tree:*)",
+      "Bash(pnpm build:*)",
+      "Bash(npx eslint:*)",
+      "Bash(find:*)",
+      "Bash(git mv:*)",
+      "Bash(pnpm lint:*)",
+      "Bash(cat:*)",
+      "Bash(dir:*)",
+      "Bash(findstr:*)",
+      "Bash(tsx scripts/generate-content-registry.ts:*)",
+      "Bash(npx tsx:*)",
+      "Bash(pnpm predev:*)",
+      "Bash(pnpm dev:*)",
+      "Bash(timeout /t 5 /nobreak)",
+      "Bash(timeout /t 10 /nobreak)",
+      "Bash(code:*)",
+      "Bash(ls:*)",
+      "Bash(npx next:*)",
+      "Bash(pnpm gcr:*)",
+      "Bash(pnpm eslint:*)",
+      "Bash(node --check:*)",
+      "Bash(pnpm --version:*)",
+      "Bash(node -e:*)",
+      "mcp__chrome-devtools__*",
+      "Bash(git show-branch:*)",
+      "Bash(postcss \")",
+      "Bash(pnpm type-check:*)",
+      "Bash(grep:*)",
+      "Bash(pnpm test)",
+      "Bash(pnpm --filter @jinho-blog/mdx-handler test:*)"
+    ],
+    "deny": [],
+    "ask": []
+  },
+  "hooks": {
+    "PostToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"process.stdin.resume(); let d=''; process.stdin.on('data',c=>d+=c); process.stdin.on('end',()=>{ try { const i=JSON.parse(d); const f=(i.tool_input&&(i.tool_input.file_path||i.tool_input.path))||''; if(f.match(/\\.tsx?$/)) process.stderr.write('\\n\\u{1F4A1} TS \\ud30c\\uc77c \\uc218\\uc815\\ub428 \\u2192 pnpm lint && pnpm type-check \\uc2e4\\ud589 \\uad8c\\uc7a5\\n'); }catch(e){} });\"",
+            "timeout": 5000
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "node -e \"process.stdin.resume(); let d=''; process.stdin.on('data',c=>d+=c); process.stdin.on('end',()=>{ try { const i=JSON.parse(d); const cmd=(i.tool_input&&i.tool_input.command)||''; if((cmd.includes('git push')||cmd.includes('git commit'))&&!cmd.includes('--dry-run')) { const {execSync}=require('child_process'); try { const b=execSync('git rev-parse --abbrev-ref HEAD',{encoding:'utf8',cwd:'d:/jinho/jinho-blog'}).trim(); if(b==='main') { process.stderr.write('\\n\\u26A0\\uFE0F main \\ube0c\\ub79c\\uce58\\uc5d0\\uc11c \\uc9c1\\uc811 \\ucee4\\ubc0b/\\ud478\\uc2dc \\uac10\\uc9c0. dev \\ube0c\\ub79c\\uce58\\ub97c \\uc0ac\\uc6a9\\ud558\\uc138\\uc694.\\n'); } }catch(e){} } }catch(e){} });\"",
+            "timeout": 5000
+          }
+        ]
+      }
+    ]
+  }
+}

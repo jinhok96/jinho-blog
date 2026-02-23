@@ -56,9 +56,10 @@ function TocLinkButton({ children, href, activeId, depth, className, onClick, ..
 
 type TocProps = {
   toc?: TocItem[];
+  className?: string;
 };
 
-export function Toc({ toc }: TocProps) {
+export function Toc({ toc, className }: TocProps) {
   const [activeId, setActiveId] = useState('');
   const pathname = usePathname();
 
@@ -88,7 +89,7 @@ export function Toc({ toc }: TocProps) {
   }, [toc]);
 
   return (
-    <div className="w-44 pt-7 pl-8 font-caption-14 text-gray-5">
+    <div className={cn('font-caption-14 text-gray-5', className)}>
       <p className="mb-3 text-foreground">목차</p>
 
       <ul className="flex-col-start gap-1">

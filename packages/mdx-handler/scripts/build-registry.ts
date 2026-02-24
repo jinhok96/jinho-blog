@@ -7,6 +7,7 @@ import { execSync } from 'child_process';
 import * as fs from 'fs';
 import matter from 'gray-matter';
 import * as path from 'path';
+import sharp from 'sharp';
 import { fileURLToPath } from 'url';
 
 import { PATHS } from '../src/core/config';
@@ -223,6 +224,126 @@ function extractFirstImage(
   return undefined;
 }
 
+// 폰트 base64 캐시 (여러 blog 글 처리 시 한 번만 읽음)
+let fontBase64Cache: string | null | undefined = undefined;
+
+/**
+ * 폰트 파일을 읽어 base64로 인코딩 (캐시 사용)
+ */
+function getFontBase64(): string | null {
+  if (fontBase64Cache !== undefined) return fontBase64Cache;
+
+  try {
+    const fontPath = path.join(fileURLToPath(new URL('../assets/PretendardVariable.woff2', import.meta.url)));
+    fontBase64Cache = fs.readFileSync(fontPath).toString('base64');
+    return fontBase64Cache;
+  } catch {
+    console.warn('⚠️  Font file not found, thumbnail will use fallback font');
+    fontBase64Cache = null;
+    return null;
+  }
+}
+
+/**
+ * title 텍스트를 maxChars 기준으로 줄 배열로 분리
+ * 최대 3줄, 초과 시 마지막 줄에 말줄임 처리
+ */
+function wrapText(text: string, maxChars: number): string[] {
+  const lines: string[] = [];
+  let remaining = text.trim();
+
+  while (remaining.length > 0 && lines.length < 3) {
+    if (remaining.length <= maxChars) {
+      lines.push(remaining);
+      remaining = '';
+      break;
+    }
+
+    // 공백 기준으로 자르기 시도
+    let cutAt = maxChars;
+    while (cutAt > 0 && remaining[cutAt] !== ' ') {
+      cutAt--;
+    }
+    // 공백이 없으면 글자 수 기준으로 자르기
+    if (cutAt === 0) cutAt = maxChars;
+
+    lines.push(remaining.substring(0, cutAt));
+    remaining = remaining.substring(cutAt).trim();
+  }
+
+  // 남은 텍스트가 있으면 마지막 줄에 말줄임
+  if (remaining.length > 0 && lines.length > 0) {
+    const last = lines[lines.length - 1];
+    lines[lines.length - 1] = last.length > maxChars - 1 ? last.substring(0, maxChars - 1) + '…' : last + '…';
+  }
+
+  return lines;
+}
+
+/**
+ * SVG 썸네일 문자열 생성
+ */
+function buildThumbnailSvg(title: string, fontBase64: string | null): string {
+  const width = 1280;
+  const height = 720;
+  const paddingX = 80;
+  const fontSize = 96;
+  const lineHeight = fontSize * 1.35;
+  const letterSpacing = fontSize * -0.03;
+  // 텍스트 영역 너비 기준 자동 계산 (한/영 혼용 평균 글자 너비 ≈ fontSize * 0.79)
+  const maxChars = Math.floor((width - paddingX * 2) / (fontSize * 0.79));
+
+  const lines = wrapText(title, maxChars);
+  const totalTextHeight = lines.length * lineHeight;
+  const startY = (height - totalTextHeight) / 2 + fontSize;
+
+  const fontFamily = fontBase64 ? 'Pretendard, Arial, sans-serif' : 'Arial, sans-serif';
+
+  const fontFaceStyle = fontBase64
+    ? `@font-face { font-family: 'Pretendard'; src: url('data:font/woff2;base64,${fontBase64}') format('woff2'); }`
+    : '';
+
+  const textLines = lines
+    .map((line, i) => {
+      const y = startY + i * lineHeight;
+      const escaped = line.replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+      return `<text x="${paddingX}" y="${y}" font-family="${fontFamily}" font-size="${fontSize}" font-weight="900" letter-spacing="${letterSpacing}" fill="#ffffff" dominant-baseline="auto">${escaped}</text>`;
+    })
+    .join('\n  ');
+
+  return `<svg width="${width}" height="${height}" xmlns="http://www.w3.org/2000/svg">
+  <defs>
+    <style>${fontFaceStyle}</style>
+  </defs>
+  <rect width="${width}" height="${height}" fill="#314158"/>
+  ${textLines}
+</svg>`;
+}
+
+/**
+ * blog 글의 자동 생성 썸네일 WebP 파일 생성
+ * 실패 시 undefined 반환 (빌드 중단 없음)
+ */
+async function generateBlogThumbnail(slug: string, title: string): Promise<string | undefined> {
+  try {
+    const outputDir = path.join(MONOREPO_ROOT, PATHS.PUBLIC_STATIC_MDX_DIR, 'blog', '_generated');
+    fs.mkdirSync(outputDir, { recursive: true });
+
+    const outputPath = path.join(outputDir, `${slug}.webp`);
+
+    const fontBase64 = getFontBase64();
+    const svg = buildThumbnailSvg(title, fontBase64);
+
+    await sharp(Buffer.from(svg)).webp({ quality: 90 }).toFile(outputPath);
+
+    console.log(`    🖼️  Generated thumbnail: ${slug}.webp`);
+    return `${PATHS.STATIC_MDX_URL}/blog/_generated/${slug}.webp`;
+  } catch (error) {
+    console.warn(`⚠️  Failed to generate thumbnail for "${slug}":`, error);
+    return undefined;
+  }
+}
+
 /**
  * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
  */
@@ -262,8 +383,14 @@ async function parseMdxFile(filePath: string, section: ContentSection): Promise<
   // Git에서 날짜 추출
   const gitDates = await getGitDates(filePath);
 
-  // 썸네일 추출
-  const thumbnail = extractFirstImage(data, content, section);
+  // 썸네일 추출 (우선순위: frontmatter → 첫 이미지 → 자동 생성)
+  let thumbnail = extractFirstImage(data, content, section);
+
+  if (!thumbnail && section === 'blog') {
+    const slug = path.basename(filePath, '.mdx');
+    const title = typeof data.title === 'string' ? data.title : slug;
+    thumbnail = await generateBlogThumbnail(slug, title);
+  }
 
   // 이미지 경로 변환
   const transformedContent = transformImagePaths(content, section);
@@ -312,6 +439,10 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
 async function buildAllRegistries(): Promise<void> {
   console.log('🚀 Starting registry build...\n');
 
+  // 자동 생성 썸네일 디렉토리 초기화 (매 빌드마다 새로 생성)
+  const generatedDir = path.join(MONOREPO_ROOT, PATHS.PUBLIC_STATIC_MDX_DIR, 'blog', '_generated');
+  fs.rmSync(generatedDir, { recursive: true, force: true });
+
   const registry: Record<ContentSection, RegistryEntry[]> = {
     blog: [],
     projects: [],
@@ -347,13 +478,16 @@ async function buildAllRegistries(): Promise<void> {
 export {
   buildAllRegistries,
   buildRegistry,
+  buildThumbnailSvg,
   extractFirstImage,
+  generateBlogThumbnail,
   getGitDates,
   getGitDatesFromAPI,
   getGitDatesFromLocal,
   parseMdxFile,
   scanMdxDirectory,
   transformImagePaths,
+  wrapText,
 };
 
 // 스크립트 실행

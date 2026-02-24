@@ -5,7 +5,7 @@
   "scripts": {
     "copy-images": "pnpm --filter @jinho-blog/mdx-handler run copy-images",
     "build-registry": "pnpm --filter @jinho-blog/mdx-handler run build-registry",
-    "registry": "pnpm run copy-images && pnpm run build-registry",
+    "registry": "pnpm run copy-images && pnpm run build-registry && node -e \"require('fs').rmSync('.next/cache/images',{recursive:true,force:true})\"",
     "dev": "pnpm run registry && set PORT=3401 && next dev",
     "build": "pnpm run registry && next build",
     "start": "set PORT=3401 && next start",

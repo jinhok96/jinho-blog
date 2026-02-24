@@ -22,6 +22,7 @@
   },
   "devDependencies": {
     "@types/node": "^20.19.33",
+    "sharp": "^0.34.5",
     "@typescript-eslint/eslint-plugin": "^8.49.0",
     "@typescript-eslint/parser": "^8.49.0",
     "@vitest/coverage-v8": "^4.0.18",

@@ -1,6 +1,7 @@
 import type { Blog } from '@jinho-blog/mdx-handler';
 
-import { BLOG_CATEGORY_MAP } from '@/core/map';
+import { BLOG_CATEGORY_MAP } from '@jinho-blog/shared';
+
 import { ContentHeader, MDXComponent } from '@/core/ui';
 
 type Props = {

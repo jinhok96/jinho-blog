@@ -1,4 +1,4 @@
-import type { BlogCategory, LibraryCategory, ProjectCategory } from '@jinho-blog/shared';
+import type { BlogCategory, LibraryCategory, ProjectCategory } from '../../types';
 
 export const BLOG_CATEGORY_MAP: Record<BlogCategory, string> = {
   frontend: '프론트엔드',

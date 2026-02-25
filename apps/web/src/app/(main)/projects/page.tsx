@@ -1,9 +1,8 @@
-import type { ProjectCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
+import { PROJECT_CATEGORY_MAP, type ProjectCategory } from '@jinho-blog/shared';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { SafeHTML, type SelectOption } from '@/core/ui';
 import { generatePageMetadata, nbsp, parseSearchParams } from '@/core/utils';
 

@@ -1,9 +1,8 @@
-import type { BlogCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
+import { BLOG_CATEGORY_MAP, type BlogCategory } from '@jinho-blog/shared';
 
-import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { type SelectOption } from '@/core/ui';
 import { generatePageMetadata, parseSearchParams } from '@/core/utils';
 

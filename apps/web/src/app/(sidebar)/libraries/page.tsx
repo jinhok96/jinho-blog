@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
+import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@jinho-blog/shared';
 
-import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@/core/map';
 import { LinkButton } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 

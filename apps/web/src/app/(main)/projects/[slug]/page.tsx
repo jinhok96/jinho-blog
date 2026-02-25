@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
-import { AsyncBoundary, ContentDetailWrapper } from '@/core/ui';
-import { generatePageMetadata } from '@/core/utils';
+import { AsyncBoundary, ContentDetailWrapper, JsonLd } from '@/core/ui';
+import { generateArticleJsonLd, generatePageMetadata } from '@/core/utils';
 
 import { createProjectsService, type GetProjects } from '@/entities/projects';
 
@@ -46,20 +46,26 @@ export default async function ProjectPage({ params, searchParams }: Props) {
   if (!fileContent) notFound();
 
   const { category } = project;
+  const jsonLd = generateArticleJsonLd(project);
 
   return (
-    <ContentDetailWrapper rootHref={routes({ pathname: '/projects' })}>
-      <ProjectDetail
-        project={project}
-        fileContent={fileContent}
-      />
+    <>
+      {/* JSON-LD: TechArticle */}
+      <JsonLd jsonLd={jsonLd} />
 
-      <AsyncBoundary>
-        <OtherProjectsContentSection
-          category={category}
-          page={page}
+      <ContentDetailWrapper rootHref={routes({ pathname: '/projects' })}>
+        <ProjectDetail
+          project={project}
+          fileContent={fileContent}
         />
-      </AsyncBoundary>
-    </ContentDetailWrapper>
+
+        <AsyncBoundary>
+          <OtherProjectsContentSection
+            category={category}
+            page={page}
+          />
+        </AsyncBoundary>
+      </ContentDetailWrapper>
+    </>
   );
 }

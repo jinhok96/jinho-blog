@@ -4,8 +4,8 @@ import { notFound } from 'next/navigation';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 
-import { AsyncBoundary, ContentDetailWrapper } from '@/core/ui';
-import { generatePageMetadata } from '@/core/utils';
+import { AsyncBoundary, ContentDetailWrapper, JsonLd } from '@/core/ui';
+import { generateBlogPostingJsonLd, generatePageMetadata } from '@/core/utils';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';
 
@@ -46,9 +46,13 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
   if (!fileContent) notFound();
 
   const { category } = post;
+  const jsonLd = generateBlogPostingJsonLd(post);
 
   return (
     <>
+      {/* JSON-LD: BlogPosting */}
+      <JsonLd jsonLd={jsonLd} />
+
       <ContentDetailWrapper rootHref={routes({ pathname: '/blog' })}>
         <BlogPostContentSection
           post={post}

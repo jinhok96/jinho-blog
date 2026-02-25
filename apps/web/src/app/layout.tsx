@@ -7,7 +7,8 @@ import { Analytics } from '@vercel/analytics/next';
 
 import { PORTAL, SITE_NAME, SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
-import { cn } from '@/core/utils';
+import { JsonLd } from '@/core/ui';
+import { cn, generateWebSiteJsonLd } from '@/core/utils';
 
 import '@/styles/globals.css';
 
@@ -45,6 +46,8 @@ type Props = Readonly<
 >;
 
 export default function RootLayout({ children, modal }: Props) {
+  const jsonLd = generateWebSiteJsonLd();
+
   return (
     <html
       lang="ko"
@@ -55,6 +58,8 @@ export default function RootLayout({ children, modal }: Props) {
       <head>
         {/* FOUC 방지: 페이지 로드 시 테마 즉시 적용 */}
         <script dangerouslySetInnerHTML={{ __html: INIT_THEME_SCRIPT }} />
+        {/* JSON-LD: WebSite */}
+        <JsonLd jsonLd={jsonLd} />
       </head>
 
       <body className={cn('flex-row-start size-full min-h-screen flex-1 antialiased', pretendard.className)}>

@@ -234,7 +234,7 @@ function getFontBase64(): string | null {
   if (fontBase64Cache !== undefined) return fontBase64Cache;
 
   try {
-    const fontPath = path.join(fileURLToPath(new URL('../assets/PretendardVariable.woff2', import.meta.url)));
+    const fontPath = path.join(fileURLToPath(new URL('../assets/PretendardJPVariable.ttf', import.meta.url)));
     fontBase64Cache = fs.readFileSync(fontPath).toString('base64');
     return fontBase64Cache;
   } catch {
@@ -300,7 +300,7 @@ function buildThumbnailSvg(title: string, fontBase64: string | null): string {
   const fontFamily = fontBase64 ? 'Pretendard, Arial, sans-serif' : 'Arial, sans-serif';
 
   const fontFaceStyle = fontBase64
-    ? `@font-face { font-family: 'Pretendard'; src: url('data:font/woff2;base64,${fontBase64}') format('woff2'); }`
+    ? `@font-face { font-family: 'Pretendard'; src: url('data:font/truetype;base64,${fontBase64}') format('truetype'); }`
     : '';
 
   const textLines = lines

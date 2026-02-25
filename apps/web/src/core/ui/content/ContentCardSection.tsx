@@ -58,8 +58,6 @@ function Card({ href, className, category, createdAt, thumbnail, showThumbnail, 
                 alt={`thumbnail-${category}-${contentName}`}
                 width="640"
                 height="360"
-                priority={false}
-                preload={false}
               />
             )}
           </Show>

@@ -15,7 +15,7 @@ const blogService = createBlogService();
 const { id, label } = HOME_SECTION_ID_LABEL_MAP.BLOG;
 
 export async function HomeBlogSection() {
-  const { items } = await blogService.getBlogPosts({ count: 6 });
+  const { items } = await blogService.getBlogPosts({ count: 3 });
 
   return (
     <HomeSection id={id}>

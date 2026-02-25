@@ -9,14 +9,6 @@ vi.mock('fs', () => ({
   readFileSync: vi.fn(),
   writeFileSync: vi.fn(),
   mkdirSync: vi.fn(),
-  rmSync: vi.fn(),
-}));
-
-vi.mock('sharp', () => ({
-  default: vi.fn(() => ({
-    webp: vi.fn().mockReturnThis(),
-    toFile: vi.fn().mockResolvedValue({}),
-  })),
 }));
 
 vi.mock('child_process', () => ({
@@ -30,16 +22,13 @@ vi.mock('gray-matter', () => ({
 import {
   buildAllRegistries,
   buildRegistry,
-  buildThumbnailSvg,
   extractFirstImage,
-  generateBlogThumbnail,
   getGitDates,
   getGitDatesFromAPI,
   getGitDatesFromLocal,
   parseMdxFile,
   scanMdxDirectory,
   transformImagePaths,
-  wrapText,
 } from './build-registry.js';
 
 type MockReaddirSync = (
@@ -55,7 +44,6 @@ const mockReaddirSync = vi.mocked<MockReaddirSync>(fs.readdirSync);
 const mockReadFileSync = vi.mocked(fs.readFileSync);
 const mockWriteFileSync = vi.mocked(fs.writeFileSync);
 const mockMkdirSync = vi.mocked(fs.mkdirSync);
-const mockRmSync = vi.mocked(fs.rmSync);
 const mockExecSync = vi.mocked(execSync);
 const mockMatter = vi.mocked(matter);
 
@@ -421,137 +409,22 @@ describe('buildAllRegistries', () => {
     expect(parsed).toHaveProperty('libraries');
   });
 
-  it('빌드 시작 시 _generated 디렉토리를 rmSync로 초기화', async () => {
-    mockExistsSync.mockReturnValue(false);
-    await buildAllRegistries();
-    expect(mockRmSync).toHaveBeenCalledWith(expect.stringContaining('_generated'), { recursive: true, force: true });
-  });
 });
 
 // ---------------------------------------------------------------------------
-// wrapText
+// parseMdxFile - thumbnail undefined 케이스
 // ---------------------------------------------------------------------------
-describe('wrapText', () => {
-  it('maxChars 이하의 짧은 텍스트는 1줄 그대로 반환', () => {
-    const result = wrapText('Hello', 20);
-    expect(result).toEqual(['Hello']);
+describe('parseMdxFile - thumbnail', () => {
+  beforeEach(() => {
+    delete process.env.VERCEL;
+    mockReadFileSync.mockReturnValue('mock file content');
   });
 
-  it('공백 기준으로 줄 분리', () => {
-    const result = wrapText('Hello World Foo Bar', 10);
-    expect(result.length).toBeGreaterThan(1);
-    expect(result[0]).toBe('Hello');
-  });
+  it('이미지가 없는 blog 글이면 thumbnail이 undefined', async () => {
+    mockMatter.mockReturnValue({ data: { title: 'No Image Post' }, content: '# No images here' } as never);
+    mockExecSync.mockReturnValue('');
 
-  it('공백 없이 maxChars 초과 시 글자 수 기준으로 자르기', () => {
-    const result = wrapText('ABCDEFGHIJKLMNOPQRST', 5);
-    expect(result[0]).toBe('ABCDE');
-  });
-
-  it('최대 3줄 제한 초과 시 마지막 줄에 말줄임 추가', () => {
-    const longText = 'one two three four five six seven eight nine ten eleven twelve';
-    const result = wrapText(longText, 10);
-    expect(result.length).toBeLessThanOrEqual(3);
-    expect(result[result.length - 1]).toMatch(/…$/);
-  });
-
-  it('정확히 3줄에 맞으면 말줄임 없음', () => {
-    // maxChars=5, 각 단어가 5자 이하이면 줄당 1단어
-    const result = wrapText('ab cd ef', 3);
-    expect(result.length).toBe(3);
-    // 남은 텍스트 없으면 말줄임 없음
-    expect(result[2]).not.toMatch(/…$/);
-  });
-
-  it('빈 문자열 입력 시 빈 배열 반환', () => {
-    const result = wrapText('', 10);
-    expect(result).toEqual([]);
-  });
-
-  it('앞뒤 공백은 trim 처리됨', () => {
-    const result = wrapText('  Hello  ', 20);
-    expect(result).toEqual(['Hello']);
-  });
-
-  it('마지막 줄이 maxChars - 1 초과 시 substring 후 말줄임', () => {
-    // 4줄 이상 필요한 텍스트: 3줄 채운 뒤 남은 텍스트가 있으면
-    // last.length > maxChars - 1 분기 실행
-    const result = wrapText('aa bb cc dd ee ff gg hh ii jj', 3);
-    expect(result.length).toBe(3);
-    expect(result[2]).toMatch(/…$/);
-  });
-});
-
-// ---------------------------------------------------------------------------
-// buildThumbnailSvg
-// ---------------------------------------------------------------------------
-describe('buildThumbnailSvg', () => {
-  it('SVG 문자열 반환 (기본 구조)', () => {
-    const result = buildThumbnailSvg('Hello World', null);
-    expect(result).toContain('<svg');
-    expect(result).toContain('width="1280"');
-    expect(result).toContain('height="720"');
-    expect(result).toContain('</svg>');
-  });
-
-  it('fontBase64 없으면 @font-face 스타일 미포함', () => {
-    const result = buildThumbnailSvg('Hello', null);
-    expect(result).not.toContain('@font-face');
-    expect(result).toContain('Arial, sans-serif');
-  });
-
-  it('fontBase64 있으면 @font-face 스타일 포함', () => {
-    const result = buildThumbnailSvg('Hello', 'base64encodeddata');
-    expect(result).toContain('@font-face');
-    expect(result).toContain('Pretendard');
-    expect(result).toContain('base64encodeddata');
-  });
-
-  it('title에 특수문자 포함 시 HTML 이스케이프 처리', () => {
-    const result = buildThumbnailSvg('A & B < C > D "E"', null);
-    expect(result).toContain('&amp;');
-    expect(result).toContain('&lt;');
-    expect(result).toContain('&gt;');
-    expect(result).toContain('&quot;');
-  });
-
-  it('<text> 요소가 포함됨', () => {
-    const result = buildThumbnailSvg('Hello', null);
-    expect(result).toContain('<text');
-    expect(result).toContain('Hello');
-  });
-
-  it('배경 rect 요소 포함', () => {
-    const result = buildThumbnailSvg('Hello', null);
-    expect(result).toContain('<rect');
-    expect(result).toContain('#314158');
-  });
-});
-
-// ---------------------------------------------------------------------------
-// generateBlogThumbnail
-// ---------------------------------------------------------------------------
-describe('generateBlogThumbnail', () => {
-  it('성공 시 WebP 경로 반환', async () => {
-    mockReadFileSync.mockReturnValue(Buffer.from('fake-font-data'));
-    const result = await generateBlogThumbnail('test-slug', 'Test Title');
-    expect(result).toMatch(/test-slug\.webp$/);
-    expect(mockMkdirSync).toHaveBeenCalledWith(expect.stringContaining('_generated'), { recursive: true });
-  });
-
-  it('sharp 실패 시 undefined 반환 (빌드 중단 없음)', async () => {
-    const sharp = await import('sharp');
-    vi.mocked(sharp.default).mockImplementationOnce(() => {
-      throw new Error('sharp error');
-    });
-
-    const result = await generateBlogThumbnail('fail-slug', 'Fail Title');
-    expect(result).toBeUndefined();
-  });
-
-  it('반환 경로에 slug가 포함됨', async () => {
-    mockReadFileSync.mockReturnValue(Buffer.from('fake-font-data'));
-    const result = await generateBlogThumbnail('my-post', 'My Post Title');
-    expect(result).toContain('my-post');
+    const result = await parseMdxFile('/test/no-image-post.mdx', 'blog');
+    expect(result.thumbnail).toBeUndefined();
   });
 });

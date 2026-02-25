@@ -1,5 +1,7 @@
 import type { Metadata } from 'next';
 
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
 
 type GeneratePageMetadataParams = {
@@ -23,7 +25,8 @@ export function generatePageMetadata({
   const query = path.startsWith('/') ? path : `/${path}`;
   const url = `${SITE_URL}${query}`;
 
-  const imageUrl = thumbnail ? (thumbnail.startsWith('http') ? thumbnail : `${SITE_URL}${thumbnail}`) : undefined;
+  const resolvedThumbnail = thumbnail ?? routes({ pathname: '/api/og', search: { title } });
+  const imageUrl = resolvedThumbnail.startsWith('http') ? resolvedThumbnail : `${SITE_URL}${resolvedThumbnail}`;
 
   return {
     title: pageTitle,
@@ -37,13 +40,13 @@ export function generatePageMetadata({
       url,
       siteName: SITE_NAME,
       type,
-      ...(imageUrl && { images: [{ url: imageUrl }] }),
+      images: [{ url: imageUrl }],
     },
     twitter: {
       card: 'summary_large_image',
       title: pageTitle,
       description: pageDescription,
-      ...(imageUrl && { images: [imageUrl] }),
+      images: [imageUrl],
     },
   };
 }

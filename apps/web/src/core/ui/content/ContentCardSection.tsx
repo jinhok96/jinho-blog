@@ -101,7 +101,7 @@ function BlogInfo({ title, description }: BlogInfoProps) {
       <h2 className="mb-1.5 font-subtitle-20">{title}</h2>
 
       {/* 설명 */}
-      <p className="font-body-14 leading-snug opacity-70">{description}</p>
+      <p className="mb-2 font-body-14 leading-snug opacity-70">{description}</p>
     </div>
   );
 }

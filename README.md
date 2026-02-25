@@ -58,9 +58,9 @@ OG 이미지 동적 생성과 RSS 피드, 사이트맵을 자동으로 제공합
 [FSD(Feature-Sliced Design)][fsd]를 기반으로 한 단방향 의존성 레이어 구조입니다. Next.js 앱 라우터와 함께 IDE에서 의존성을 직관적으로 확인할 수 있도록 알파벳 순서로 레이어를 구성했습니다.
 
 ```
-App (Pages)
+App (Pages/서버 로직, 레이아웃 중심)
   ↓
-Views (Pages)
+Views (Pages/클라이언트 로직, UI 중심)
   ↓
 Modules (Widgets)
   ↓
@@ -71,49 +71,55 @@ Entities
 Core (App, Shared)
 ```
 
-| 레이어   | 역할                                              |
-| -------- | ------------------------------------------------- |
-| App      | Next.js App Router (라우트, 레이아웃, API 핸들러) |
-| Views    | 페이지 단위 조립 모듈                             |
-| Modules  | 재사용 가능한 복합 UI 블록                        |
-| Features | 재사용 가능한 독립적인 인터랙션 단위 UI           |
-| Entities | 도메인 서비스 로직                                |
-| Core     | 전역 상태, UI 컴포넌트, 유틸, 훅, 설정            |
+| 레이어   | 역할                                                          |
+| -------- | ------------------------------------------------------------- |
+| App      | Next.js App Router (라우트, 레이아웃, API 핸들러, 서버 로직)  |
+| Views    | 페이지 내에서 재사용 가능한 모듈, 각 페이지를 슬라이스로 관리 |
+| Modules  | 재사용 가능한 복합 UI 블록                                    |
+| Features | 재사용 가능한 독립적인 인터랙션 단위 UI                       |
+| Entities | 도메인 서비스 로직                                            |
+| Core     | 전역 상태, 공통 상수 및 타입, UI 컴포넌트, 유틸리티, 훅, 설정 |
 
 ## packages
 
 ### shared
 
-모노레포 전체에서 사용하는 타입과 상수의 단일 진실 공급원입니다.
+모노레포 전체에서 사용하는 공통 타입과 상수를 보관합니다.
 
-- 별도 빌드 없이 TypeScript 소스를 직접 참조
-- 블로그·프로젝트·라이브러리 메타데이터 타입 제공
-- 카테고리, 정렬 옵션, 에러 타입 등 공통 타입 관리
+- 블로그·프로젝트·라이브러리 메타데이터 타입
+- 카테고리, 정렬 옵션, 에러 타입 등 공통 타입
+- 공통 타입에 대응되는 맵 데이터
 
 ### mdx-handler
 
-MDX 기반 콘텐츠를 읽고 가공하는 패키지입니다.
+MDX 기반 콘텐츠를 읽고 가공합니다.
 
-- frontmatter 파싱으로 메타데이터 추출
+- Front-matter 파싱으로 메타데이터 추출
 - 카테고리 필터링, 정렬, 페이지네이션 지원
-- `dev`나 `build` 실행 시 첨부 이미지로부터 썸네일 자동 생성
+- 빌드 시 첨부 이미지로부터 썸네일 자동 생성
+- Git 또는 GitHub 커밋 기록에서 콘텐츠별 작성일, 수정일 추출
 
 ### nextjs-routes
 
-npm에 배포된 [nextjs-routes][nextjs-routes-repo] 패키지를 포크해 수정한 타입 안전 라우팅 도구입니다.
+기존 [nextjs-routes][nextjs-routes-repo] 패키지를 포크해 수정한 타입 안전 라우팅 도구입니다.
 
+- 기존 라이브러리가 지원하지 않던 `next.config.ts` 지원
+- Next.js의 API를 변경하지 않고 라우트 타입 및 유틸리티 함수를 제공해 Next.js 호환성 개선
 - App Router 디렉토리 구조를 분석해 TypeScript 라우트 타입 자동 생성
 - 경로 파라미터와 쿼리 파라미터를 타입으로 관리해 런타임 오류 방지
-- `next.config.ts`에 등록하면 빌드 시 자동으로 타입 갱신
 
 ## CI/CD
 
-- **CI** — `main`, `dev` 브랜치 push 및 `main` 브랜치 PR 시 GitHub Actions가 전체 테스트를 실행하고, 패키지별 커버리지를 Codecov에 업로드합니다.
-- **CD** — `main` 브랜치에 병합되면 Vercel이 자동으로 프로덕션 배포를 수행합니다.
+- **CI** — PR 생성 → GitHub Actions 전체 테스트 실행 후 Codecov 업로드 & Vercel 빌드 및 배포 → 성공 시 PR 병합 가능
+- **CD** — `main`에 변경사항 병합 → Vercel 자동 배포
 
 ## 콘텐츠 작성
 
-`content/mdx/` 아래 `blog/`, `projects/`, `libraries/` 폴더에 MDX 파일을 추가하는 것만으로 콘텐츠를 게시할 수 있습니다. 각 파일 상단의 frontmatter에 제목, 설명, 카테고리, 날짜를 작성하면 목록 페이지와 상세 페이지가 자동으로 구성됩니다.
+`content/mdx/` 아래 `blog/`, `projects/`, `libraries/` 폴더에 MDX 파일을 추가해 콘텐츠를 게시할 수 있습니다.
+
+- mdx-handler 패키지를 통해 빌드 시 web에 에셋, 문서 등록
+- MDX 파일 이름이 페이지 슬러그로 매칭
+- MDX 파일 Front-matter에 메타데이터 작성
 
 <!-- Links -->
 

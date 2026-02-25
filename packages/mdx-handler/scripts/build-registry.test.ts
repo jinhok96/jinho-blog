@@ -408,4 +408,23 @@ describe('buildAllRegistries', () => {
     expect(parsed).toHaveProperty('projects');
     expect(parsed).toHaveProperty('libraries');
   });
+
+});
+
+// ---------------------------------------------------------------------------
+// parseMdxFile - thumbnail undefined 케이스
+// ---------------------------------------------------------------------------
+describe('parseMdxFile - thumbnail', () => {
+  beforeEach(() => {
+    delete process.env.VERCEL;
+    mockReadFileSync.mockReturnValue('mock file content');
+  });
+
+  it('이미지가 없는 blog 글이면 thumbnail이 undefined', async () => {
+    mockMatter.mockReturnValue({ data: { title: 'No Image Post' }, content: '# No images here' } as never);
+    mockExecSync.mockReturnValue('');
+
+    const result = await parseMdxFile('/test/no-image-post.mdx', 'blog');
+    expect(result.thumbnail).toBeUndefined();
+  });
 });

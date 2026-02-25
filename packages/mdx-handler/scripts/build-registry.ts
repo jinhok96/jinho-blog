@@ -224,35 +224,6 @@ function extractFirstImage(
 }
 
 /**
- * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
- */
-function scanMdxDirectory(section: ContentSection): ScannedFile[] {
-  const mdxDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);
-  const files: ScannedFile[] = [];
-
-  if (!fs.existsSync(mdxDir)) {
-    console.warn(`⚠️  Warning: MDX directory not found: ${mdxDir}`);
-    return files;
-  }
-
-  const items = fs.readdirSync(mdxDir, { withFileTypes: true });
-
-  for (const item of items) {
-    if (item.isFile() && item.name.endsWith('.mdx')) {
-      const fullPath = path.join(mdxDir, item.name);
-      const slug = item.name.replace(/\.mdx$/, '');
-
-      files.push({
-        slug,
-        filePath: fullPath,
-      });
-    }
-  }
-
-  return files;
-}
-
-/**
  * MDX 파일 파싱 및 메타데이터 + 콘텐츠 추출
  */
 async function parseMdxFile(filePath: string, section: ContentSection): Promise<Record<string, unknown>> {
@@ -262,7 +233,7 @@ async function parseMdxFile(filePath: string, section: ContentSection): Promise<
   // Git에서 날짜 추출
   const gitDates = await getGitDates(filePath);
 
-  // 썸네일 추출
+  // 썸네일 추출 (우선순위: frontmatter → 첫 이미지)
   const thumbnail = extractFirstImage(data, content, section);
 
   // 이미지 경로 변환
@@ -304,6 +275,35 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
 
   console.log(`✅ Built ${entries.length} entries for ${section}\n`);
   return entries;
+}
+
+/**
+ * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
+ */
+function scanMdxDirectory(section: ContentSection): ScannedFile[] {
+  const mdxDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);
+  const files: ScannedFile[] = [];
+
+  if (!fs.existsSync(mdxDir)) {
+    console.warn(`⚠️  Warning: MDX directory not found: ${mdxDir}`);
+    return files;
+  }
+
+  const items = fs.readdirSync(mdxDir, { withFileTypes: true });
+
+  for (const item of items) {
+    if (item.isFile() && item.name.endsWith('.mdx')) {
+      const fullPath = path.join(mdxDir, item.name);
+      const slug = item.name.replace(/\.mdx$/, '');
+
+      files.push({
+        slug,
+        filePath: fullPath,
+      });
+    }
+  }
+
+  return files;
 }
 
 /**

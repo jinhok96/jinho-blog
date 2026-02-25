@@ -15,7 +15,7 @@ const blogService = createBlogService();
 const { id, label } = HOME_SECTION_ID_LABEL_MAP.BLOG;
 
 export async function HomeBlogSection() {
-  const { items } = await blogService.getBlogPosts({ count: 6 });
+  const { items } = await blogService.getBlogPosts({ count: 3 });
 
   return (
     <HomeSection id={id}>
@@ -33,7 +33,7 @@ export async function HomeBlogSection() {
                 href={path}
                 category={BLOG_CATEGORY_MAP[category]}
                 createdAt={createdAt}
-                thumbnail={thumbnail}
+                thumbnail={thumbnail ?? routes({ pathname: '/api/og', search: { title } })}
                 showThumbnail
               >
                 <ContentCardSection.BlogInfo

@@ -219,8 +219,8 @@ export function createMDXComponents() {
         className="overflow-hidden rounded-2xl"
         src={src}
         alt={alt}
-        width="800"
-        height="800"
+        width="1280"
+        height="720"
       />
     ),
   };

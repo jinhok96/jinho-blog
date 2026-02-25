@@ -7,6 +7,10 @@ const nextConfig: NextConfig = {
     globalNotFound: true,
   },
 
+  images: {
+    localPatterns: [{ pathname: '/api/og' }, { pathname: '/images/**' }],
+  },
+
   // turbopack 설정
   turbopack: {
     rules: {

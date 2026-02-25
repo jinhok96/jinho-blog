@@ -1,6 +1,8 @@
 import type { Blog } from '@jinho-blog/mdx-handler';
 import type { PaginatedResult } from '@jinho-blog/shared';
 
+import { routes } from '@jinho-blog/nextjs-routes';
+
 import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';
 
@@ -22,7 +24,7 @@ export async function BlogContentSection({ posts }: Props) {
               href={path}
               category={BLOG_CATEGORY_MAP[category]}
               createdAt={createdAt}
-              thumbnail={thumbnail}
+              thumbnail={thumbnail ?? routes({ pathname: '/api/og', search: { title } })}
               showThumbnail
             >
               <ContentCardSection.BlogInfo

@@ -106,7 +106,12 @@ export default async function LibraryPage({ params }: Props) {
 
       {/* 본문 */}
       <div className="flex-col-center size-full flex-1">
-        <div className="container flex-col-start size-full flex-1 p-layout">
+        <div
+          className={`
+            flex-col-start size-full container-768 flex-1 p-layout
+            wide:container-1024
+          `}
+        >
           {/* 헤더 */}
           <ContentHeader
             category={LIBRARY_CATEGORY_MAP[category]}

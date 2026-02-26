@@ -9,8 +9,8 @@
 | Package       | Coverage                                                                    |
 | ------------- | --------------------------------------------------------------------------- |
 | web           | [![web coverage][badge-cov-web]][codecov-web]                               |
-| nextjs-routes | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes] |
 | mdx-handler   | [![mdx-handler coverage][badge-cov-mdx-handler]][codecov-mdx-handler]       |
+| nextjs-routes | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes] |
 
 ## 💡 소개
 

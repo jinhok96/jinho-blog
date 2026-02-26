@@ -1,8 +1,10 @@
 # jinho-blog
 
-[![CI][badge-ci]][ci-workflow] [![Vercel][badge-deploy]][vercel-deploy]
+![readme-hero](.github/assets/readme-hero.png)
 
-## Coverage
+## 📊 CI / Deploy / Coverage
+
+[![CI][badge-ci]][ci-workflow] [![Vercel][badge-deploy]][vercel-deploy]
 
 | Package       | Coverage                                                                    |
 | ------------- | --------------------------------------------------------------------------- |
@@ -10,13 +12,13 @@
 | nextjs-routes | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes] |
 | mdx-handler   | [![mdx-handler coverage][badge-cov-mdx-handler]][codecov-mdx-handler]       |
 
-## 소개
+## 💡 소개
 
 개인 블로그 및 포트폴리오 사이트. 기술 글쓰기, 개인 프로젝트 소개, 사용하는 라이브러리 정리를 한 곳에서 관리합니다.
 
 Next.js 기반 Turborepo 모노레포로 구성했으며, 콘텐츠는 모두 MDX 파일로 작성합니다. FSD 아키텍처를 적용해 기능별 관심사를 레이어로 분리했고, 타입 안전 라우팅을 위한 내부 도구를 직접 제작했습니다.
 
-## 기술 스택
+## 🛠️ 기술 스택
 
 | 분류       | 기술                                                                           |
 | ---------- | ------------------------------------------------------------------------------ |
@@ -26,23 +28,23 @@ Next.js 기반 Turborepo 모노레포로 구성했으며, 콘텐츠는 모두 MD
 | 테스트     | ![Vitest][badge-vitest] ![Codecov][badge-codecov]                              |
 | 배포       | ![Vercel][badge-vercel]                                                        |
 
-## 프로젝트 구조
+## 🗂️ 프로젝트 구조
 
 ```
 jinho-blog/
 ├── apps/
-│   └── web/          # Next.js 블로그 앱
+│   └── web/            # Next.js 블로그 앱
 ├── packages/
-│   ├── shared/       # 공유 타입 및 상수
-│   ├── mdx-handler/  # MDX 콘텐츠 처리
-│   └── nextjs-routes/# 타입 안전 라우팅 생성기
+│   ├── shared/         # 공유 타입 및 상수
+│   ├── mdx-handler/    # MDX 콘텐츠 처리
+│   └── nextjs-routes/  # 타입 안전 라우팅 생성기
 └── content/
-    └── mdx/          # MDX 콘텐츠 파일
+    └── mdx/            # MDX 콘텐츠 파일
 ```
 
 패키지 의존 방향은 `shared → mdx-handler → web`으로 단방향을 유지하며, Turborepo가 빌드 순서를 자동으로 관리합니다.
 
-## web
+## 🌐 web
 
 블로그 메인 애플리케이션으로, 홈페이지와 세 가지 콘텐츠 도메인으로 구성됩니다.
 
@@ -53,7 +55,7 @@ jinho-blog/
 
 OG 이미지 동적 생성과 RSS 피드, 사이트맵을 자동으로 제공합니다.
 
-### 아키텍처
+### 🏗️ 아키텍처
 
 [FSD(Feature-Sliced Design)][fsd]를 기반으로 한 단방향 의존성 레이어 구조입니다. Next.js 앱 라우터와 함께 IDE에서 의존성을 직관적으로 확인할 수 있도록 알파벳 순서로 레이어를 구성했습니다.
 
@@ -80,9 +82,9 @@ Core (App, Shared)
 | Entities | 도메인 서비스 로직                                            |
 | Core     | 전역 상태, 공통 상수 및 타입, UI 컴포넌트, 유틸리티, 훅, 설정 |
 
-## packages
+## 📦 packages
 
-### shared
+### 🔗 shared
 
 모노레포 전체에서 사용하는 공통 타입과 상수를 보관합니다.
 
@@ -90,7 +92,7 @@ Core (App, Shared)
 - 카테고리, 정렬 옵션, 에러 타입 등 공통 타입
 - 공통 타입에 대응되는 맵 데이터
 
-### mdx-handler
+### 📝 mdx-handler
 
 MDX 기반 콘텐츠를 읽고 가공합니다.
 
@@ -99,7 +101,7 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - 빌드 시 첨부 이미지로부터 썸네일 자동 생성
 - Git 또는 GitHub 커밋 기록에서 콘텐츠별 작성일, 수정일 추출
 
-### nextjs-routes
+### 🛣️ nextjs-routes
 
 기존 [nextjs-routes][nextjs-routes-repo] 패키지를 포크해 수정한 타입 안전 라우팅 도구입니다.
 
@@ -108,12 +110,12 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - App Router 디렉토리 구조를 분석해 TypeScript 라우트 타입 자동 생성
 - 경로 파라미터와 쿼리 파라미터를 타입으로 관리해 런타임 오류 방지
 
-## CI/CD
+## 🚀 CI/CD
 
 - **CI** — PR 생성 → GitHub Actions 전체 테스트 실행 후 Codecov 업로드 & Vercel 빌드 및 배포 → 성공 시 PR 병합 가능
 - **CD** — `main`에 변경사항 병합 → Vercel 자동 배포
 
-## 콘텐츠 작성
+## ✍️ 콘텐츠 작성
 
 `content/mdx/` 아래 `blog/`, `projects/`, `libraries/` 폴더에 MDX 파일을 추가해 콘텐츠를 게시할 수 있습니다.
 

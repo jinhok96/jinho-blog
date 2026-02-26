@@ -19,7 +19,6 @@ const blogService = createBlogService();
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/blog' }),
   title: '블로그',
-  description: '블로그 목록',
 });
 
 const CATEGORY_OPTIONS: SelectOption<BlogCategory>[] = [

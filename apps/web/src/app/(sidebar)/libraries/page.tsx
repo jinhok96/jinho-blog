@@ -20,7 +20,6 @@ const LIMIT = 6;
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/libraries' }),
   title: '라이브러리',
-  description: '라이브러리 목록',
 });
 
 export default async function LibrariesListPage() {

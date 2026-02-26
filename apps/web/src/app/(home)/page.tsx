@@ -14,7 +14,9 @@ import {
   HomeTechStackSection,
 } from '@/views/home';
 
-export const metadata: Metadata = generatePageMetadata({ path: routes({ pathname: '/' }) });
+export const metadata: Metadata = generatePageMetadata({
+  path: routes({ pathname: '/' }),
+});
 
 export default async function HomePage() {
   return (

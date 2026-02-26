@@ -1,6 +1,4 @@
-import type { ProjectCategory } from '@jinho-blog/shared';
-
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
+import { PROJECT_CATEGORY_MAP, type ProjectCategory } from '@jinho-blog/shared';
 
 import { createProjectsService, type GetProjects } from '@/entities/projects';
 

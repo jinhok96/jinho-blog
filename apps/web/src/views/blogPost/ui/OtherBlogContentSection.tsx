@@ -1,8 +1,6 @@
-import type { BlogCategory } from '@jinho-blog/shared';
-
 import { routes } from '@jinho-blog/nextjs-routes';
+import { BLOG_CATEGORY_MAP, type BlogCategory } from '@jinho-blog/shared';
 
-import { BLOG_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, Show } from '@/core/ui';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';

@@ -1,6 +1,6 @@
 import { routes } from '@jinho-blog/nextjs-routes';
+import { PROJECT_CATEGORY_MAP } from '@jinho-blog/shared';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { ContentCardSection, LinkButton, Show } from '@/core/ui';
 
 import { createProjectsService } from '@/entities/projects';

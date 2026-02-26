@@ -1,7 +1,7 @@
 import type { Project } from '@jinho-blog/mdx-handler';
-import type { PaginatedResult } from '@jinho-blog/shared';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
+import { type PaginatedResult, PROJECT_CATEGORY_MAP } from '@jinho-blog/shared';
+
 import { ContentCardSection, Show } from '@/core/ui';
 
 type Props = {

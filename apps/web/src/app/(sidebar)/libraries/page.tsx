@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
+import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@jinho-blog/shared';
 
-import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@/core/map';
 import { LinkButton } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
 
@@ -20,7 +20,6 @@ const LIMIT = 6;
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/libraries' }),
   title: '라이브러리',
-  description: '라이브러리 목록',
 });
 
 export default async function LibrariesListPage() {

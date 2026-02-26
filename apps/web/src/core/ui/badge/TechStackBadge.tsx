@@ -1,12 +1,12 @@
 'use client';
 
-import type { TechStack } from '@jinho-blog/shared';
-
 import { useRef, useState } from 'react';
 import Image from 'next/image';
 
+import { TECH_STACK_MAP, type TechStack } from '@jinho-blog/shared';
+
+import { TECH_STACK_IMAGE_MAP } from '@/core/constants';
 import { useOutsideClickEffect, useTimeoutRef } from '@/core/hooks';
-import { TECH_STACK_IMAGE_MAP, TECH_STACK_MAP } from '@/core/map';
 import { cn } from '@/core/utils';
 
 const VISIBLE_TIMEOUT = 3000;

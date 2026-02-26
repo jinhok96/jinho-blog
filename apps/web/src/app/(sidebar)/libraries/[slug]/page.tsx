@@ -4,10 +4,10 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { routes } from '@jinho-blog/nextjs-routes';
+import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@jinho-blog/shared';
 
-import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@/core/map';
-import { ContentHeader, LinkButton, MDXComponent } from '@/core/ui';
-import { cn, generatePageMetadata } from '@/core/utils';
+import { ContentHeader, JsonLd, LinkButton, MDXComponent } from '@/core/ui';
+import { cn, generateArticleJsonLd, generatePageMetadata } from '@/core/utils';
 
 import { createLibrariesService } from '@/entities/libraries';
 
@@ -50,6 +50,8 @@ export default async function LibraryPage({ params }: Props) {
   if (!library) notFound();
   if (!fileContent) notFound();
 
+  const jsonLd = generateArticleJsonLd(library);
+
   const flatGroups: Library[][] = LIBRARY_CATEGORY_MAP_KEYS.map(category =>
     (groups[category] ?? []).flatMap(item => item),
   ).filter(group => group.length > 0);
@@ -65,6 +67,9 @@ export default async function LibraryPage({ params }: Props) {
 
   return (
     <>
+      {/* JSON-LD: TechArticle */}
+      <JsonLd jsonLd={jsonLd} />
+
       {/* 사이드바 */}
       <HeaderWithSidebar className={cn('border-r border-gray-2', SIDEBAR_WIDTH_CLASSNAME)}>
         <div className="flex-col-start w-full">

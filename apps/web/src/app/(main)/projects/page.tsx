@@ -1,9 +1,8 @@
-import type { ProjectCategory } from '@jinho-blog/shared';
 import type { Metadata } from 'next';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
+import { PROJECT_CATEGORY_MAP, type ProjectCategory } from '@jinho-blog/shared';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
 import { SafeHTML, type SelectOption } from '@/core/ui';
 import { generatePageMetadata, nbsp, parseSearchParams } from '@/core/utils';
 
@@ -20,7 +19,6 @@ const projectsService = createProjectsService();
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/projects' }),
   title: '프로젝트',
-  description: '프로젝트 목록',
 });
 
 const CATEGORY_OPTIONS: SelectOption<ProjectCategory>[] = [

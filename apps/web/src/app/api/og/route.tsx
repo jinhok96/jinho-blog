@@ -30,7 +30,7 @@ export async function GET(request: Request) {
         backgroundColor: 'black',
       }}
     >
-      <div tw="flex size-full flex-col items-center justify-center px-20">
+      <div tw="flex w-full flex-1 flex-col items-center justify-center px-20">
         <span tw="text-center text-[7rem] leading-[1.4] tracking-tight text-white">{title}</span>
       </div>
     </div>,

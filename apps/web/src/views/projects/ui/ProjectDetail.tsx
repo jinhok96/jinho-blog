@@ -1,6 +1,7 @@
 import type { Project } from '@jinho-blog/mdx-handler';
 
-import { PROJECT_CATEGORY_MAP } from '@/core/map';
+import { PROJECT_CATEGORY_MAP } from '@jinho-blog/shared';
+
 import { ContentHeader, MDXComponent } from '@/core/ui';
 
 type Props = {

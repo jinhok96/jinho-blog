@@ -4,7 +4,6 @@ import localFont from 'next/font/local';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
-import { SITE_URL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { LinkButton } from '@/core/ui';
 import { cn } from '@/core/utils';
@@ -19,10 +18,6 @@ const pretendard = localFont({
 
 export const metadata: Metadata = {
   title: '404 - Page Not Found',
-  description: 'Personal blog and portfolio',
-  alternates: {
-    canonical: SITE_URL,
-  },
 };
 
 export default function GlobalNotFound() {

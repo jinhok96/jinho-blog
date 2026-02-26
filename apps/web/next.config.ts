@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   },
 
   images: {
-    localPatterns: [{ pathname: '/api/og' }, { pathname: '/images/**' }],
+    localPatterns: [{ pathname: '/api/og' }, { pathname: '/images/**' }, { pathname: '/_static/**' }],
   },
 
   // turbopack 설정

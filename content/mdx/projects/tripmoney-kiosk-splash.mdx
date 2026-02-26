@@ -1,0 +1,43 @@
+---
+title: 키오스크 앱 스플래시 화면 구현
+description: 키오스크 앱 슬라이드 스플래시 화면 디자인 및 구현
+
+# category 옵션: tripmoney | personal
+category: tripmoney
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | pinia | react-hook-form | jest | vitest | motion
+# webpack | babel | electron | turbopack | vite | vercel
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - javascript
+  - vue
+  - sass
+  - figma
+
+# period: '2025.01 ~ 2025.06 (상시 업무)'
+period: '2025.02.04 ~ 2025.02.06'
+
+# members: '5명 (FE 2, BE 2, DE 1)'
+members: '1명 (FE 1)'
+---
+
+![tripmoney-kiosk-splash](./assets/tripmoney-kiosk-splash.png)
+
+키오스크 앱에서 비활동 상태를 감지해 자동으로 표시하는 스플래시 화면을 디자인·구현했으며, 주간 평균 거래 건수가 50.8% 상승했습니다.
+
+# 상세 내용
+
+## 1. 기능 구현
+
+- 스플래시 화면 3종류 디자인 (환전, 교통카드, 선불카드 홍보 이미지)
+- 홈 화면으로 이동하거나 홈 화면에서 30초 비활동 감지 시 자동 표시
+- 스플래시 이미지 10초 간격 슬라이드
+- 하단 5개 언어(한국어, 영어, 일본어, 중국어 간체/번체) 선택 버튼
+
+## 2. 성능 최적화
+
+- 컴포넌트 언마운트 시 타이머를 정리해 메모리 누수 방지

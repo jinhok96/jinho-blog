@@ -216,7 +216,7 @@ export function createMDXComponents() {
     img: ({ src, alt, ...props }: HTMLAttributes<HTMLImageElement> & { src: string; alt: string }) => (
       <Image
         {...props}
-        className="overflow-hidden rounded-2xl"
+        className="overflow-hidden"
         src={src}
         alt={alt}
         width="1280"

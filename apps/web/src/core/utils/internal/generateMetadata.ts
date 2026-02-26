@@ -19,7 +19,7 @@ export function generatePageMetadata({
   type = 'website',
   thumbnail,
 }: GeneratePageMetadataParams): Metadata {
-  const pageTitle = `${SITE_NAME} • ${title}` || SITE_NAME;
+  const pageTitle = title ? `${SITE_NAME} • ${title}` : SITE_NAME;
   const pageDescription = description || SITE_DESCRIPTION;
 
   const query = path.startsWith('/') ? path : `/${path}`;

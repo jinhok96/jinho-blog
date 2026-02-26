@@ -20,13 +20,14 @@ Next.js 기반 Turborepo 모노레포로 구성했으며, 콘텐츠는 모두 MD
 
 ## 🛠️ 기술 스택
 
-| 분류       | 기술                                                                           |
-| ---------- | ------------------------------------------------------------------------------ |
-| 환경       | ![Node.js][badge-nodejs] ![pnpm][badge-pnpm] ![Turborepo][badge-turborepo]     |
-| 프레임워크 | ![Next.js][badge-nextjs] ![React][badge-react] ![TypeScript][badge-typescript] |
-| UI         | ![Tailwind CSS][badge-tailwind] ![Zustand][badge-zustand]                      |
-| 테스트     | ![Vitest][badge-vitest] ![Codecov][badge-codecov]                              |
-| 배포       | ![Vercel][badge-vercel]                                                        |
+| 분류           | 기술                                                                           |
+| -------------- | ------------------------------------------------------------------------------ |
+| 환경           | ![Node.js][badge-nodejs] ![pnpm][badge-pnpm] ![Turborepo][badge-turborepo]     |
+| 프레임워크     | ![Next.js][badge-nextjs] ![React][badge-react] ![TypeScript][badge-typescript] |
+| UI, 라이브러리 | ![Tailwind CSS][badge-tailwind] ![Zustand][badge-zustand]                      |
+| 개발           | ![ESLint][badge-eslint] ![Prettier][badge-prettier]                            |
+| 테스트         | ![Vitest][badge-vitest] ![Codecov][badge-codecov]                              |
+| 배포           | ![Vercel][badge-vercel]                                                        |
 
 ## 🗂️ 프로젝트 구조
 
@@ -44,7 +45,7 @@ jinho-blog/
 
 패키지 의존 방향은 `shared → mdx-handler → web`으로 단방향을 유지하며, Turborepo가 빌드 순서를 자동으로 관리합니다.
 
-## 🌐 web
+## 🌐 Web
 
 블로그 메인 애플리케이션으로, 홈페이지와 세 가지 콘텐츠 도메인으로 구성됩니다.
 
@@ -57,7 +58,7 @@ OG 이미지 동적 생성과 RSS 피드, 사이트맵을 자동으로 제공합
 
 ### 🏗️ 아키텍처
 
-[FSD(Feature-Sliced Design)][fsd]를 기반으로 한 단방향 의존성 레이어 구조입니다. Next.js 앱 라우터와 함께 IDE에서 의존성을 직관적으로 확인할 수 있도록 알파벳 순서로 레이어를 구성했습니다.
+[FSD(Feature-Sliced Design)][fsd] 기반 단방향 의존성 레이어 구조입니다. Next.js 앱 라우터와 함께 IDE에서 의존성을 직관적으로 확인할 수 있도록 알파벳 순서로 레이어를 구성했습니다.
 
 ```
 App (Pages/서버 로직, 레이아웃 중심)
@@ -82,7 +83,7 @@ Core (App, Shared)
 | Entities | 도메인 서비스 로직                                            |
 | Core     | 전역 상태, 공통 상수 및 타입, UI 컴포넌트, 유틸리티, 훅, 설정 |
 
-## 📦 packages
+## 📦 Packages
 
 ### 🔗 shared
 
@@ -154,6 +155,8 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 [badge-tailwind]: https://img.shields.io/badge/Tailwind_CSS_4-06B6D4?style=flat&logo=tailwindcss&logoColor=white
 [badge-zustand]: https://img.shields.io/badge/Zustand_5-443E38?style=flat&logo=zustand&logoColor=white
 [badge-turborepo]: https://img.shields.io/badge/Turborepo-EF4444?style=flat&logo=turborepo&logoColor=white
+[badge-eslint]: https://img.shields.io/badge/ESLint_9-4B32C3?style=flat&logo=eslint&logoColor=white
+[badge-prettier]: https://img.shields.io/badge/Prettier_3-F7B93E?style=flat&logo=prettier&logoColor=black
 [badge-vitest]: https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white
 [badge-codecov]: https://img.shields.io/badge/Codecov-F01F7A?style=flat&logo=codecov&logoColor=white
 [badge-vercel]: https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white

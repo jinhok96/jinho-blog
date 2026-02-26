@@ -1,6 +1,6 @@
 # jinho-blog
 
-![readme-hero](.github/assets/readme-hero.png)
+![readme-hero](.github/assets/readme-hero.webp)
 
 ## 📊 CI / Deploy / Coverage
 

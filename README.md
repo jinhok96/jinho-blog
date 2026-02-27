@@ -96,7 +96,7 @@ Core (App, Shared)
 
 satori, @resvg/resvg-js, sharp를 사용해 썸네일 이미지(WebP)를 생성합니다.
 
-- React DOM 객체 리터럴(satori) → SVG → PNG(@resvg/resvg-js) → WebP(sharp) 변환
+- DOM 객체 리터럴(satori) → SVG → PNG(@resvg/resvg-js) → WebP(sharp) 변환
 
 ### 📝 mdx-handler
 

@@ -15,6 +15,8 @@ const H2_CLASSNAME = 'mt-2 mb-0.5 font-subtitle-22';
 const H3_CLASSNAME = 'mt-2 mb-0.5 font-subtitle-18';
 
 export function createMDXComponents() {
+  let imageIndex: number = 0;
+
   return {
     h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
       <h1
@@ -213,15 +215,22 @@ export function createMDXComponents() {
 
     Callout: (props: HTMLAttributes<HTMLDivElement>) => <Callout {...props} />,
 
-    img: ({ src, alt, ...props }: HTMLAttributes<HTMLImageElement> & { src: string; alt: string }) => (
-      <Image
-        {...props}
-        className="overflow-hidden"
-        src={src}
-        alt={alt}
-        width="1280"
-        height="720"
-      />
-    ),
+    img: ({ src, alt, ...props }: HTMLAttributes<HTMLImageElement> & { src: string; alt: string }) => {
+      // 첫번째 이미지 요소에 priority 적용
+      const priority = imageIndex === 0;
+      imageIndex = imageIndex + 1;
+
+      return (
+        <Image
+          {...props}
+          className="overflow-hidden"
+          src={src}
+          alt={alt}
+          width="1280"
+          height="720"
+          priority={priority}
+        />
+      );
+    },
   };
 }

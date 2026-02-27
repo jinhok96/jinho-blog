@@ -6,12 +6,12 @@
 
 [![CI][badge-ci]][ci-workflow] [![Vercel][badge-deploy]][vercel-deploy]
 
-| Package              | Coverage                                                                                          |
-| -------------------- | ------------------------------------------------------------------------------------------------- |
-| web                  | [![web coverage][badge-cov-web]][codecov-web]                                                     |
-| mdx-handler          | [![mdx-handler coverage][badge-cov-mdx-handler]][codecov-mdx-handler]                             |
-| nextjs-routes        | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes]                       |
-| thumbnail-generator  | [![thumbnail-generator coverage][badge-cov-thumbnail-generator]][codecov-thumbnail-generator]     |
+| Package             | Coverage                                                                                      |
+| ------------------- | --------------------------------------------------------------------------------------------- |
+| web                 | [![web coverage][badge-cov-web]][codecov-web]                                                 |
+| mdx-handler         | [![mdx-handler coverage][badge-cov-mdx-handler]][codecov-mdx-handler]                         |
+| nextjs-routes       | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes]                   |
+| thumbnail-generator | [![thumbnail-generator coverage][badge-cov-thumbnail-generator]][codecov-thumbnail-generator] |
 
 ## 💡 소개
 
@@ -38,8 +38,8 @@ jinho-blog/
 │   └── web/            # Next.js 블로그 앱
 ├── packages/
 │   ├── shared/               # 공유 타입 및 상수
+│   ├── thumbnail-generator/  # 썸네일 이미지 생성기
 │   ├── mdx-handler/          # MDX 콘텐츠 처리
-│   ├── thumbnail-generator/  # OG 이미지 생성
 │   └── nextjs-routes/        # 타입 안전 라우팅 생성기
 └── content/
     └── mdx/            # MDX 콘텐츠, 에셋
@@ -48,7 +48,7 @@ jinho-blog/
 ## 🌐 Web
 
 블로그 메인 애플리케이션으로, 홈페이지와 세 가지 콘텐츠 도메인으로 구성됩니다.
-RSS 피드, 사이트맵, JSON-LD, 동적 생성된 OG 이미지를 제공합니다.
+RSS 피드, 사이트맵, JSON-LD를 제공합니다.
 
 - **홈** - 포트폴리오
 - **블로그** — 기술 블로그
@@ -92,6 +92,12 @@ Core (App, Shared)
 - 카테고리, 정렬 옵션, 에러 타입 등 공통 타입
 - 공통 타입에 대응하는 맵 데이터
 
+### 🖼️ thumbnail-generator
+
+satori, @resvg/resvg-js, sharp를 사용해 썸네일 이미지(WebP)를 생성합니다.
+
+- React DOM 객체 리터럴(satori) → SVG → PNG(@resvg/resvg-js) → WebP(sharp) 변환
+
 ### 📝 mdx-handler
 
 MDX 기반 콘텐츠를 읽고 가공합니다.
@@ -100,14 +106,6 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - 카테고리 필터링, 정렬, 페이지네이션 지원
 - 빌드 시 `thumbnail-generator`를 통해 블로그 글 썸네일 자동 생성
 - Git 또는 GitHub 커밋 기록에서 콘텐츠별 작성일, 수정일 추출
-
-### 🖼️ thumbnail-generator
-
-satori, @resvg/resvg-js, sharp를 사용해 OG 이미지(WebP)를 생성합니다.
-
-- 객체 리터럴(satori) → SVG → PNG(@resvg/resvg-js) → WebP(sharp) 변환 파이프라인
-- 빌드 타임에 `mdx-handler`의 `build-registry`에서 호출해 블로그 글 썸네일 생성
-- `/api/og` 라우트에서도 사용 (직접 URL 접근 시)
 
 ### 🛣️ nextjs-routes
 

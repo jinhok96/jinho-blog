@@ -2,6 +2,8 @@
 
 ![readme-hero](.github/assets/readme-hero.webp)
 
+<br />
+
 ## 📊 CI / Deploy / Coverage
 
 [![CI][badge-ci]][ci-workflow] [![Vercel][badge-deploy]][vercel-deploy]
@@ -13,11 +15,18 @@
 | nextjs-routes       | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes]                   |
 | thumbnail-generator | [![thumbnail-generator coverage][badge-cov-thumbnail-generator]][codecov-thumbnail-generator] |
 
+<br />
+
 ## 💡 소개
 
-개인 블로그 및 포트폴리오 사이트. 기술 글쓰기, 개인 프로젝트 소개, 사용하는 라이브러리 정리를 한 곳에서 관리합니다.
+블로그&포트폴리오 웹사이트입니다. 포트폴리오, 기술 블로그, 참여 프로젝트 소개, 재사용 가능한 코드 라이브러리를 제공합니다.
 
-Next.js 기반 Turborepo 모노레포로 구성했으며, 콘텐츠는 모두 MDX 파일로 작성합니다. FSD 아키텍처를 적용해 기능별 관심사를 레이어로 분리했고, 타입 안전 라우팅을 위한 내부 도구를 직접 제작했습니다.
+- MDX 기반 콘텐츠 렌더링
+- 반응형 레이아웃
+- 라이트/다크 모드
+- RSS 피드, 사이트맵, JSON-LD, 오픈그래프 제공
+
+<br />
 
 ## 🛠️ 기술 스택
 
@@ -29,6 +38,8 @@ Next.js 기반 Turborepo 모노레포로 구성했으며, 콘텐츠는 모두 MD
 | 개발           | ![ESLint][badge-eslint] ![Prettier][badge-prettier]                            |
 | 테스트         | ![Vitest][badge-vitest] ![Codecov][badge-codecov]                              |
 | 배포           | ![Vercel][badge-vercel]                                                        |
+
+<br />
 
 ## 🗂️ 프로젝트 구조
 
@@ -45,15 +56,18 @@ jinho-blog/
     └── mdx/            # MDX 콘텐츠, 에셋
 ```
 
+<br />
+
 ## 🌐 Web
 
 블로그 메인 애플리케이션으로, 홈페이지와 세 가지 콘텐츠 도메인으로 구성됩니다.
-RSS 피드, 사이트맵, JSON-LD를 제공합니다.
 
 - **홈** - 포트폴리오
 - **블로그** — 기술 블로그
-- **프로젝트** — 참여한 프로젝트 소개
+- **프로젝트** — 참여 프로젝트 소개
 - **라이브러리** — 재사용 가능한 코드 보관
+
+<br />
 
 ### 🏗️ 아키텍처
 
@@ -81,6 +95,8 @@ Core (App, Shared)
 | Features | 재사용 가능한 비즈니스 기능 UI                                     |
 | Entities | 도메인 서비스 로직                                                 |
 | Core     | 전역 상태, 공통 상수 및 타입, UI 컴포넌트, 유틸리티, 훅, 설정      |
+
+<br />
 
 ## 📦 Packages
 
@@ -116,10 +132,14 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - App Router 디렉토리 구조를 분석해 TypeScript 라우트 타입 자동 생성
 - 경로 파라미터와 쿼리 파라미터를 타입으로 관리해 런타임 오류 방지
 
+<br />
+
 ## 🚀 CI/CD
 
 - **CI** — PR 생성 → GitHub Actions 전체 테스트 실행 후 Codecov 업로드 & Vercel 빌드 및 배포 → 성공 시 PR 병합 가능
 - **CD** — `main`에 변경사항 병합 → Vercel 자동 배포
+
+<br />
 
 ## ✍️ 콘텐츠 작성
 
@@ -128,6 +148,9 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - mdx-handler 패키지를 통해 빌드 시 web에 에셋과 문서를 등록
 - MDX 파일 이름이 페이지 슬러그로 매칭
 - MDX 파일 Front-matter에 메타데이터 작성
+
+<br />
+
 
 <!-- Links -->
 

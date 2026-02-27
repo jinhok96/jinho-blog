@@ -22,7 +22,8 @@
       "@/*": ["./src/*"],
       "public/*": ["./public/*"],
       "@jinho-blog/shared": ["../../packages/shared/src"],
-      "@jinho-blog/mdx-handler": ["../../packages/mdx-handler/src"]
+      "@jinho-blog/mdx-handler": ["../../packages/mdx-handler/src"],
+      "@jinho-blog/thumbnail-generator": ["../../packages/thumbnail-generator/src/index.ts"]
     }
   },
   "mdx": {

@@ -21,6 +21,7 @@
   "dependencies": {
     "@jinho-blog/mdx-handler": "workspace:*",
     "@jinho-blog/shared": "workspace:*",
+    "@jinho-blog/thumbnail-generator": "workspace:*",
     "@vercel/analytics": "^1.6.1",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",

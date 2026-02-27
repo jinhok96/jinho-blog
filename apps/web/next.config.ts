@@ -6,6 +6,7 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
   },
+  serverExternalPackages: ['@resvg/resvg-js', 'sharp', 'satori'],
 
   images: {
     localPatterns: [{ pathname: '/api/og' }, { pathname: '/images/**' }, { pathname: '/_static/**' }],

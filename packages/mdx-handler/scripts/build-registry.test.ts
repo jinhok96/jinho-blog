@@ -19,6 +19,10 @@ vi.mock('gray-matter', () => ({
   default: vi.fn(),
 }));
 
+vi.mock('@jinho-blog/thumbnail-generator', () => ({
+  generateThumbnail: vi.fn().mockResolvedValue(Buffer.from('')),
+}));
+
 import {
   buildAllRegistries,
   buildRegistry,

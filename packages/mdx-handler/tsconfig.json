@@ -9,11 +9,13 @@
     "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true,
+    "jsx": "react-jsx",
     "noEmit": true,
     "declaration": true,
     "declarationMap": true,
     "paths": {
-      "@jinho-blog/shared": ["../shared/src"]
+      "@jinho-blog/shared": ["../shared/src"],
+      "@jinho-blog/thumbnail-generator": ["../thumbnail-generator/src/index.ts"]
     },
     "types": ["ts-node", "vitest/importMeta"]
   },

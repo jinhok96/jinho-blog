@@ -9,6 +9,8 @@ import matter from 'gray-matter';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 
+import { generateThumbnail } from '@jinho-blog/thumbnail-generator';
+
 import { PATHS } from '../src/core/config';
 import type { ContentSection } from '../src/types';
 
@@ -260,10 +262,24 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
 
   const files = scanMdxDirectory(section);
   const entries: RegistryEntry[] = [];
+  let generatedCount = 0;
 
   for (const file of files) {
     console.log(`  - Processing: ${file.slug}`);
     const metadata = await parseMdxFile(file.filePath, section);
+
+    if (section === 'blog' && !metadata.thumbnail) {
+      const outputPath = path.join(
+        MONOREPO_ROOT,
+        PATHS.PUBLIC_STATIC_MDX_DIR,
+        section,
+        'generated',
+        `${file.slug}.webp`,
+      );
+      await generateThumbnail({ title: metadata.title as string, outputPath });
+      metadata.thumbnail = `${PATHS.STATIC_MDX_URL}/${section}/generated/${file.slug}.webp`;
+      generatedCount++;
+    }
 
     entries.push({
       slug: file.slug,
@@ -273,6 +289,9 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
     });
   }
 
+  if (generatedCount > 0) {
+    console.log(`📷 ${generatedCount}개 썸네일 생성 완료`);
+  }
   console.log(`✅ Built ${entries.length} entries for ${section}\n`);
   return entries;
 }
@@ -320,6 +339,12 @@ async function buildAllRegistries(): Promise<void> {
 
   for (const section of SECTIONS) {
     registry[section] = await buildRegistry(section);
+  }
+
+  const totalGenerated = registry.blog.filter(e => (e.thumbnail as string | undefined)?.includes('/generated/')).length;
+  if (totalGenerated > 0) {
+    console.log(`📷 총 ${totalGenerated}개 썸네일 생성 완료`);
+    console.log(`📁 대상 경로: ${path.join(PATHS.PUBLIC_STATIC_MDX_DIR, 'blog', 'generated')}\n`);
   }
 
   // 출력 디렉토리 생성

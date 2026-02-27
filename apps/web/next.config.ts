@@ -8,6 +8,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     localPatterns: [{ pathname: '/images/**' }, { pathname: '/icons/**' }, { pathname: '/_static/**' }],
+    imageSizes: [16, 32, 48, 64, 96, 128, 192, 256, 320, 384, 512],
   },
 
   // turbopack 설정

@@ -24,6 +24,7 @@ export async function BlogContentSection({ posts }: Props) {
               createdAt={createdAt}
               thumbnail={thumbnail}
               showThumbnail
+              thumbnailPriority
             >
               <ContentCardSection.BlogInfo
                 title={title}

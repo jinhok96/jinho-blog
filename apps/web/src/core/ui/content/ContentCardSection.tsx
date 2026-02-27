@@ -27,9 +27,20 @@ type CardProps = ComponentProps<typeof LinkButton> & {
   createdAt: string;
   thumbnail?: string;
   showThumbnail?: boolean;
+  thumbnailPriority?: boolean;
 };
 
-function Card({ href, className, category, createdAt, thumbnail, showThumbnail, children, ...props }: CardProps) {
+function Card({
+  href,
+  className,
+  category,
+  createdAt,
+  thumbnail,
+  showThumbnail,
+  children,
+  thumbnailPriority,
+  ...props
+}: CardProps) {
   const contentName = href.toString().split('/').pop();
 
   return (
@@ -58,6 +69,7 @@ function Card({ href, className, category, createdAt, thumbnail, showThumbnail, 
                 alt={`thumbnail-${category}-${contentName}`}
                 width="640"
                 height="360"
+                priority={thumbnailPriority}
               />
             )}
           </Show>

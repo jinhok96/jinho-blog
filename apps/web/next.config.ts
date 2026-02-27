@@ -6,10 +6,8 @@ const nextConfig: NextConfig = {
   experimental: {
     globalNotFound: true,
   },
-  serverExternalPackages: ['@resvg/resvg-js', 'sharp', 'satori'],
-
   images: {
-    localPatterns: [{ pathname: '/api/og' }, { pathname: '/images/**' }, { pathname: '/_static/**' }],
+    localPatterns: [{ pathname: '/images/**' }, { pathname: '/icons/**' }, { pathname: '/_static/**' }],
   },
 
   // turbopack 설정

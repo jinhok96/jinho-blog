@@ -71,6 +71,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5, scroll }
         href={firstHref}
         disabled={!hasPrev}
         scroll={scroll}
+        aria-label="첫 페이지"
       >
         <div className="size-3.5">
           <FirstPageIcon strokeWidth={1.5} />
@@ -82,6 +83,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5, scroll }
         href={prevHref || ''}
         disabled={!hasPrev}
         scroll={scroll}
+        aria-label="이전 페이지"
       >
         <div className="size-3.5">
           <ChevronLeftIcon strokeWidth={1.5} />
@@ -105,6 +107,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5, scroll }
         href={nextHref}
         disabled={!hasNext}
         scroll={scroll}
+        aria-label="다음 페이지"
       >
         <div className="size-3.5">
           <ChevronRightIcon strokeWidth={1.5} />
@@ -116,6 +119,7 @@ export function Pagination({ className, pagination, maxPageButtons = 5, scroll }
         href={lastHref}
         disabled={!hasNext}
         scroll={scroll}
+        aria-label="마지막 페이지"
       >
         <div className="size-3.5">
           <LastPageIcon strokeWidth={1.5} />

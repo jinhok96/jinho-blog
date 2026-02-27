@@ -50,6 +50,7 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
                 )}
                 color="background"
                 size="md"
+                aria-label="메뉴 열기"
                 onClick={onLeftMenuButtonClick}
                 ref={leftMenuButtonRef}
               >

@@ -18,9 +18,10 @@ function Article({ children, src, alt }: ArticleProps) {
       <Image
         src={src}
         alt={alt}
-        width={800}
-        height={600}
+        width={400}
+        height={300}
         className="aspect-4/3 h-auto w-full overflow-hidden rounded-2xl bg-foreground-2"
+        priority
       />
 
       {/* 본문 */}

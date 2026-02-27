@@ -39,6 +39,7 @@ function CopyButton({ textRef }: CopyButtonProps) {
       `}
       color="background"
       size="md"
+      aria-label={isCopied ? '복사됨' : '코드 복사'}
       onClick={handleCopy}
     >
       <Show

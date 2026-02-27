@@ -413,6 +413,36 @@ describe('buildAllRegistries', () => {
     expect(parsed).toHaveProperty('libraries');
   });
 
+  it('출력 디렉토리가 이미 존재하면 mkdirSync 호출 안 됨', async () => {
+    // scanMdxDirectory에서 false, buildAllRegistries의 outputDir 체크에서 true
+    mockExistsSync
+      .mockReturnValueOnce(false) // blog scan
+      .mockReturnValueOnce(false) // projects scan
+      .mockReturnValueOnce(false) // libraries scan
+      .mockReturnValue(true); // outputDir exists
+    await buildAllRegistries();
+    expect(mockMkdirSync).not.toHaveBeenCalled();
+  });
+
+  it('생성된 썸네일이 있으면 총 개수 로그 출력됨', async () => {
+    mockExistsSync
+      .mockReturnValueOnce(true) // blog scan: 디렉토리 존재
+      .mockReturnValueOnce(false) // projects scan
+      .mockReturnValueOnce(false) // libraries scan
+      .mockReturnValue(false); // outputDir does not exist
+    mockReaddirSync.mockReturnValue([
+      { name: 'post-1.mdx', isFile: () => true, isDirectory: () => false },
+    ]);
+    mockReadFileSync.mockReturnValue('mock content');
+    mockMatter.mockReturnValue({
+      data: { title: 'Post 1', createdAt: '2024-01-01', thumbnail: '/_static/mdx/blog/generated/post-1.webp' },
+      content: '',
+    } as never);
+    mockExecSync.mockReturnValue('');
+
+    await buildAllRegistries();
+    expect(vi.mocked(console.log)).toHaveBeenCalledWith(expect.stringContaining('총'));
+  });
 });
 
 // ---------------------------------------------------------------------------

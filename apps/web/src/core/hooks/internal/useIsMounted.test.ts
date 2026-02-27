@@ -1,3 +1,6 @@
+import React from 'react';
+import { renderToString } from 'react-dom/server';
+
 import { renderHook } from '@testing-library/react';
 import { describe, expect, it } from 'vitest';
 
@@ -24,5 +27,16 @@ describe('useIsMounted', () => {
     const { result, unmount } = renderHook(() => useIsMounted());
     expect(result.current).toBe(true);
     unmount();
+  });
+
+  it('서버 환경에서 false 반환 (SSR 시뮬레이션)', () => {
+    // renderToString은 서버 렌더링 경로를 거치므로 useSyncExternalStore의
+    // 세 번째 인자(서버 스냅샷: () => false)가 호출됨
+    function TestComponent() {
+      const isMounted = useIsMounted();
+      return React.createElement('span', null, String(isMounted));
+    }
+    const html = renderToString(React.createElement(TestComponent));
+    expect(html).toContain('false');
   });
 });

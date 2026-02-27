@@ -8,6 +8,7 @@
     ".": "./src/index.ts"
   },
   "scripts": {
+    "test": "vitest",
     "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx",
@@ -23,12 +24,14 @@
     "@types/react": "^19",
     "@typescript-eslint/eslint-plugin": "^8.49.0",
     "@typescript-eslint/parser": "^8.49.0",
+    "@vitest/coverage-v8": "^4.0.18",
     "concurrently": "^9.2.1",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.7.4",
     "react": "^19.2.3",
-    "typescript": "^5"
+    "typescript": "^5",
+    "vitest": "^4.0.18"
   }
 }

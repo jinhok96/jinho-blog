@@ -10,7 +10,7 @@ import { fileURLToPath } from 'url';
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 const FONT_PATH = path.join(__dirname, '../../../assets/Pretendard-Black.ttf');
 
-function loadFont(): ArrayBuffer {
+export function loadFont(): ArrayBuffer {
   const buffer = fs.readFileSync(FONT_PATH);
   return buffer.buffer.slice(buffer.byteOffset, buffer.byteOffset + buffer.byteLength) as ArrayBuffer;
 }

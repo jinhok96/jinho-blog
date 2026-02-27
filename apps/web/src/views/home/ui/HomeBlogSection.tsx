@@ -33,7 +33,7 @@ export async function HomeBlogSection() {
                 href={path}
                 category={BLOG_CATEGORY_MAP[category]}
                 createdAt={createdAt}
-                thumbnail={thumbnail ?? routes({ pathname: '/api/og', search: { title } })}
+                thumbnail={thumbnail}
                 showThumbnail
               >
                 <ContentCardSection.BlogInfo

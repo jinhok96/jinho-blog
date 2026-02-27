@@ -1,4 +1,3 @@
-import { routes } from '@jinho-blog/nextjs-routes';
 import { BLOG_CATEGORY_MAP, type BlogCategory } from '@jinho-blog/shared';
 
 import { ContentCardSection, Show } from '@/core/ui';
@@ -38,7 +37,7 @@ export async function OtherBlogContentSection({ category, page }: Props) {
               href={path}
               category={BLOG_CATEGORY_MAP[category]}
               createdAt={createdAt}
-              thumbnail={thumbnail ?? routes({ pathname: '/api/og', search: { title } })}
+              thumbnail={thumbnail}
               showThumbnail
             >
               <ContentCardSection.BlogInfo

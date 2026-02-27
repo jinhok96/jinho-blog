@@ -38,7 +38,8 @@
       "Bash(pnpm test --filter @jinho-blog/web -- --reporter=verbose --run)",
       "Bash(pnpm test --filter @jinho-blog/thumbnail-generator)",
       "Bash(pnpm --filter @jinho-blog/thumbnail-generator lint)",
-      "Bash(pnpm --filter @jinho-blog/thumbnail-generator test)"
+      "Bash(pnpm --filter @jinho-blog/thumbnail-generator test)",
+      "Bash(pnpm test --filter @jinho-blog/web)"
     ],
     "deny": [],
     "ask": []

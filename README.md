@@ -6,11 +6,12 @@
 
 [![CI][badge-ci]][ci-workflow] [![Vercel][badge-deploy]][vercel-deploy]
 
-| Package       | Coverage                                                                    |
-| ------------- | --------------------------------------------------------------------------- |
-| web           | [![web coverage][badge-cov-web]][codecov-web]                               |
-| mdx-handler   | [![mdx-handler coverage][badge-cov-mdx-handler]][codecov-mdx-handler]       |
-| nextjs-routes | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes] |
+| Package              | Coverage                                                                                          |
+| -------------------- | ------------------------------------------------------------------------------------------------- |
+| web                  | [![web coverage][badge-cov-web]][codecov-web]                                                     |
+| mdx-handler          | [![mdx-handler coverage][badge-cov-mdx-handler]][codecov-mdx-handler]                             |
+| nextjs-routes        | [![nextjs-routes coverage][badge-cov-nextjs-routes]][codecov-nextjs-routes]                       |
+| thumbnail-generator  | [![thumbnail-generator coverage][badge-cov-thumbnail-generator]][codecov-thumbnail-generator]     |
 
 ## 💡 소개
 
@@ -36,9 +37,10 @@ jinho-blog/
 ├── apps/
 │   └── web/            # Next.js 블로그 앱
 ├── packages/
-│   ├── shared/         # 공유 타입 및 상수
-│   ├── mdx-handler/    # MDX 콘텐츠 처리
-│   └── nextjs-routes/  # 타입 안전 라우팅 생성기
+│   ├── shared/               # 공유 타입 및 상수
+│   ├── mdx-handler/          # MDX 콘텐츠 처리
+│   ├── thumbnail-generator/  # OG 이미지 생성
+│   └── nextjs-routes/        # 타입 안전 라우팅 생성기
 └── content/
     └── mdx/            # MDX 콘텐츠, 에셋
 ```
@@ -96,8 +98,16 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 
 - Front-matter를 파싱해 메타데이터 추출
 - 카테고리 필터링, 정렬, 페이지네이션 지원
-- 빌드 시 첨부 이미지로부터 썸네일 자동 생성
+- 빌드 시 `thumbnail-generator`를 통해 블로그 글 썸네일 자동 생성
 - Git 또는 GitHub 커밋 기록에서 콘텐츠별 작성일, 수정일 추출
+
+### 🖼️ thumbnail-generator
+
+satori, @resvg/resvg-js, sharp를 사용해 OG 이미지(WebP)를 생성합니다.
+
+- 객체 리터럴(satori) → SVG → PNG(@resvg/resvg-js) → WebP(sharp) 변환 파이프라인
+- 빌드 타임에 `mdx-handler`의 `build-registry`에서 호출해 블로그 글 썸네일 생성
+- `/api/og` 라우트에서도 사용 (직접 URL 접근 시)
 
 ### 🛣️ nextjs-routes
 
@@ -133,9 +143,11 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 [badge-cov-web]: https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=web
 [badge-cov-nextjs-routes]: https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=nextjs-routes
 [badge-cov-mdx-handler]: https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=mdx-handler
+[badge-cov-thumbnail-generator]: https://codecov.io/gh/jinhok96/jinho-blog/graph/badge.svg?flag=thumbnail-generator
 [codecov-web]: https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=web
 [codecov-nextjs-routes]: https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=nextjs-routes
 [codecov-mdx-handler]: https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=mdx-handler
+[codecov-thumbnail-generator]: https://app.codecov.io/gh/jinhok96/jinho-blog/tree/main?flags%5B0%5D=thumbnail-generator
 
 <!-- CI/CD badges -->
 

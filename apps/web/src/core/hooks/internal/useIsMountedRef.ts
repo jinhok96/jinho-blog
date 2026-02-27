@@ -1,9 +1,9 @@
-import { type RefObject, useLayoutEffect, useRef } from 'react';
+import { type RefObject, useEffect, useRef } from 'react';
 
-export function useIsMounted(): RefObject<boolean> {
+export function useIsMountedRef(): RefObject<boolean> {
   const isMountedRef = useRef(false);
 
-  useLayoutEffect(() => {
+  useEffect(() => {
     isMountedRef.current = true;
     return () => {
       isMountedRef.current = false;

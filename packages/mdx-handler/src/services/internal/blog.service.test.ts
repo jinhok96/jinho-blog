@@ -25,6 +25,7 @@ function makeBlog(overrides: Partial<Blog> & Pick<Blog, 'slug' | 'title'>): Blog
     updatedAt: overrides.updatedAt ?? '2024-01-01T00:00:00Z',
     filePath: overrides.filePath ?? `/blog/${overrides.slug}.mdx`,
     path: overrides.path ?? `/blog/${overrides.slug}`,
+    thumbnail: overrides.thumbnail ?? `/_static/mdx/blog/generated/${overrides.slug}.webp`,
     content: overrides.content ?? `# ${overrides.title}`,
   };
 }

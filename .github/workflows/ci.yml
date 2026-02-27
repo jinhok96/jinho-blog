@@ -48,3 +48,11 @@ jobs:
           files: ./packages/mdx-handler/coverage/lcov.info
           flags: mdx-handler
           fail_ci_if_error: false
+
+      - name: Upload thumbnail-generator coverage
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: ./packages/thumbnail-generator/coverage/lcov.info
+          flags: thumbnail-generator
+          fail_ci_if_error: false

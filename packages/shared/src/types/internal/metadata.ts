@@ -58,6 +58,7 @@ export interface BaseMetadata {
 
 export interface BlogMetadata extends BaseMetadata {
   category: BlogCategory;
+  thumbnail: string;
 }
 
 export interface ProjectMetadata extends BaseMetadata {

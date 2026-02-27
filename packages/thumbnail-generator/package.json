@@ -1,5 +1,5 @@
 {
-  "name": "@jinho-blog/mdx-handler",
+  "name": "@jinho-blog/thumbnail-generator",
   "version": "1.0.0",
   "private": true,
   "main": "./src/index.ts",
@@ -8,32 +8,29 @@
     ".": "./src/index.ts"
   },
   "scripts": {
-    "build-registry": "tsx scripts/build-registry.ts",
-    "copy-images": "tsx scripts/copy-mdx-images.ts",
     "test": "vitest",
     "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
-    "eslint": "eslint src --fix --ext .ts",
+    "eslint": "eslint src --fix --ext .ts,.tsx",
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
-    "@jinho-blog/shared": "workspace:*",
-    "gray-matter": "^4.0.3"
+    "@resvg/resvg-js": "^2.6.2",
+    "satori": "^0.11.2",
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "@jinho-blog/thumbnail-generator": "workspace:*",
     "@types/node": "^20.19.33",
+    "@types/react": "^19",
     "@typescript-eslint/eslint-plugin": "^8.49.0",
     "@typescript-eslint/parser": "^8.49.0",
     "@vitest/coverage-v8": "^4.0.18",
     "concurrently": "^9.2.1",
-    "cross-env": "^7.0.3",
     "eslint": "^9.39.1",
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.7.4",
-    "ts-node": "^10.9.2",
-    "tsx": "^4.21.0",
+    "react": "^19.2.3",
     "typescript": "^5",
     "vitest": "^4.0.18"
   }

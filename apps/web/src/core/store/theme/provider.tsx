@@ -4,7 +4,7 @@ import type { ThemeStoreState } from '@/core/store/theme/types';
 
 import { type PropsWithChildren, useEffect } from 'react';
 
-import { useMountEffect } from '@/core/hooks';
+import { useLayoutMountEffect } from '@/core/hooks';
 import { useThemeStore } from '@/core/store/theme/store';
 
 type Props = PropsWithChildren<Pick<ThemeStoreState, 'theme'>>;
@@ -15,7 +15,7 @@ export function ThemeStoreProvider({ children, theme: initTheme }: Props) {
   const setThemeClass = useThemeStore.use.setThemeClass();
 
   // 초기 테마 설정
-  useMountEffect(() => {
+  useLayoutMountEffect(() => {
     console.log('ThemeStoreProvider', theme);
     setTheme(theme || initTheme);
   });

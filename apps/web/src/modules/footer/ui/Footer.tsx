@@ -1,10 +1,12 @@
+import type { ReactNode } from 'react';
+
 import { LINKS } from '@/core/constants';
 import { LinkButton } from '@/core/ui';
 
 import GithubIcon from 'public/icons/github.svg';
 import RssIcon from 'public/icons/solid/rss-solid.svg';
 
-function FooterLinkButton({ href, children }: { href: string; children: React.ReactNode }) {
+function FooterLinkButton({ href, children }: { href: string; children: ReactNode }) {
   return (
     <LinkButton
       href={href}

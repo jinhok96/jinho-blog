@@ -76,6 +76,7 @@ export function RouteModal({ children }: Props) {
             absolute top-5 right-5 size-11 p-3 text-foreground-5
             hover:text-foreground-7
           `}
+          aria-label="닫기"
           rounded
         >
           <CloseIcon strokeWidth={1.5} />

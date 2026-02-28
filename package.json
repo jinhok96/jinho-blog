@@ -2,7 +2,7 @@
   "name": "jinho-blog-monorepo",
   "version": "1.0.0",
   "private": true,
-  "packageManager": "pnpm@10.0.0",
+  "packageManager": "pnpm@10.30.3",
   "scripts": {
     "dev": "turbo dev",
     "build": "turbo lint && turbo test && turbo build",

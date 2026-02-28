@@ -59,10 +59,10 @@ export function HomeCoreSkillsSection() {
           src={CoreSkill1Image}
           alt="core-skill-1"
         >
-          <Article.Label>팀 개발 환경 개선</Article.Label>
+          <Article.Label>디자인을 이해하는 개발자</Article.Label>
           <Article.Description>
-            재사용 가능한 코드의 비중을 높여 개발 속도와 확장성을 높이고, 빌드 배포 절차를 정비해 프로덕션 안정성을
-            개선했습니다.
+            시각디자인과 소프트웨어를 복수전공하고, 실무에서 두 역할을 함께 담당했습니다. 디자인 시스템을 직접
+            설계·구현해 디자인-개발 간 정합성을 높였습니다.
           </Article.Description>
         </Article>
 
@@ -70,10 +70,10 @@ export function HomeCoreSkillsSection() {
           src={CoreSkill2Image}
           alt="core-skill-2"
         >
-          <Article.Label>UI/UX 디자인 경험 및 소통</Article.Label>
+          <Article.Label>사용자 경험 개선</Article.Label>
           <Article.Description>
-            시각디자인 전공한 경험을 바탕으로 에셋을 제작하고 웹 앱 UI/UX를 디자인했습니다. 이 경험을 바탕으로
-            디자이너와 원활하게 소통할 수 있습니다.
+            사용자의 행동 흐름을 고려한 UI를 설계하고 구현합니다. 비활동 감지 스플래시 화면 구현으로 주간 거래 건수
+            50.8% 상승을 이끌었습니다.
           </Article.Description>
         </Article>
 
@@ -81,10 +81,10 @@ export function HomeCoreSkillsSection() {
           src={CoreSkill3Image}
           alt="core-skill-3"
         >
-          <Article.Label>적극적인 AI 활용</Article.Label>
+          <Article.Label>성능 최적화</Article.Label>
           <Article.Description>
-            AI 에이전트를 활용해 빠르게 기능 프로토타입을 구현하였으며, 브라우저 MCP를 통해 성능을 검사하고 최적화해
-            로드 시간을 최대 68% 감소시켰습니다.
+            번들 크기, 로드 속도, 빌드 용량, 메모리 등 성능을 측정하고 개선합니다. 웹에서 빌드를 최적화하여 로드 시간
+            68% 단축을 달성한 경험이 있습니다.
           </Article.Description>
         </Article>
       </div>

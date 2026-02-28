@@ -46,7 +46,7 @@ const { id, label } = HOME_SECTION_ID_LABEL_MAP.CORE_SKILLS;
 export function HomeCoreSkillsSection() {
   return (
     <HomeSection id={id}>
-      <HomeSection.Header label={label}>다양한 경험과 시도로 빠르게 성장합니다</HomeSection.Header>
+      <HomeSection.Header label={label}>다양한 경험으로 깊이 있게 개발합니다</HomeSection.Header>
 
       <div
         className={`
@@ -70,10 +70,10 @@ export function HomeCoreSkillsSection() {
           src={CoreSkill2Image}
           alt="core-skill-2"
         >
-          <Article.Label>사용자 경험 개선</Article.Label>
+          <Article.Label>상황에 맞는 기술 선택</Article.Label>
           <Article.Description>
-            사용자의 행동 흐름을 고려한 UI를 설계하고 구현합니다. 비활동 감지 스플래시 화면 구현으로 주간 거래 건수
-            50.8% 상승을 이끌었습니다.
+            React, Vue.js, Next.js 등 다양한 프레임워크를 실무에서 다뤘습니다. SSR로 초기 로딩을 개선하고, FSD
+            아키텍처를 도입해 복잡한 도메인을 분리하는 등 상황에 맞는 기술을 선택해 적용합니다.
           </Article.Description>
         </Article>
 

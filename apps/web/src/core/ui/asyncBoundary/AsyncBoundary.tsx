@@ -1,20 +1,24 @@
 'use client';
 
-import { forwardRef, type ReactNode, Suspense } from 'react';
+import { type ReactNode, type Ref, Suspense } from 'react';
 
 import { ErrorBoundary, type ErrorBoundaryProps, type ErrorBoundaryRef } from '@/core/ui/asyncBoundary/ErrorBoundary';
-
-export type AsyncBoundaryRef = ErrorBoundaryRef;
 
 type Props = Omit<ErrorBoundaryProps, 'fallback'> & {
   errorFallback?: ErrorBoundaryProps['fallback'];
   loadingFallback?: ReactNode;
+  ref?: Ref<ErrorBoundaryRef>;
 };
 
-export const AsyncBoundary = forwardRef<AsyncBoundaryRef, Props>(function AsyncBoundary(
-  { children, errorFallback = null, loadingFallback, onError, onReset, resetKeys },
+export function AsyncBoundary({
+  children,
+  errorFallback = null,
+  loadingFallback,
+  onError,
+  onReset,
+  resetKeys,
   ref,
-) {
+}: Props) {
   return (
     <ErrorBoundary
       ref={ref}
@@ -26,4 +30,4 @@ export const AsyncBoundary = forwardRef<AsyncBoundaryRef, Props>(function AsyncB
       <Suspense fallback={loadingFallback}>{children}</Suspense>
     </ErrorBoundary>
   );
-});
+}

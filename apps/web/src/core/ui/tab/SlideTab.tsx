@@ -4,7 +4,7 @@ import { type ComponentProps, type PropsWithChildren, useLayoutEffect, useRef, u
 
 import { motion, type Transition } from 'motion/react';
 
-import { useIsMounted } from '@/core/hooks';
+import { useIsHydrated } from '@/core/hooks';
 import { Button, Show } from '@/core/ui';
 import { cn, createSharedState } from '@/core/utils';
 
@@ -155,7 +155,7 @@ type ItemProps = ComponentProps<typeof Button> & {
 };
 
 function Item({ children, index, containerClassName, className, ...props }: ItemProps) {
-  const isMounted = useIsMounted();
+  const isMounted = useIsHydrated();
 
   const ref = useRef<HTMLDivElement>(null);
   const { selectedTabIndex, indicatorClassName } = useSharedState();

@@ -1,4 +1,4 @@
-export { AsyncBoundary, type AsyncBoundaryRef } from './AsyncBoundary';
+export { AsyncBoundary } from './AsyncBoundary';
 export {
   ErrorBoundary,
   type ErrorBoundaryProps,

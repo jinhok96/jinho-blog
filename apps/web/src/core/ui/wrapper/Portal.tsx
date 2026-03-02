@@ -5,14 +5,14 @@ import type { PORTAL } from '@/core/config';
 import { type PropsWithChildren } from 'react';
 import { createPortal } from 'react-dom';
 
-import { useIsMounted } from '@/core/hooks';
+import { useIsHydrated } from '@/core/hooks';
 
 type Props = PropsWithChildren<{ portalId: keyof typeof PORTAL }>;
 
 export function Portal({ children, portalId }: Props) {
-  const mounted = useIsMounted();
+  const isHydrated = useIsHydrated();
 
-  if (!mounted) return;
+  if (!isHydrated) return null;
 
   const portalElement = document.getElementById(portalId);
   if (!portalElement) throw new Error(`Portal(${portalId})을 찾을 수 없습니다.`);

@@ -1,7 +1,7 @@
 export { useAnimatedValue } from './internal/useAnimatedValue';
 export { useBodyScrollLock } from './internal/useBodyScrollLock';
 export { useIntersectionObserver } from './internal/useIntersectionObserver';
-export { useIsMounted } from './internal/useIsMounted';
+export { useIsHydrated } from './internal/useIsHydrated';
 export { useIsMountedRef } from './internal/useIsMountedRef';
 export { useKeyDownEffect } from './internal/useKeyDownEffect';
 export { useLayoutMountEffect } from './internal/useLayoutMountEffect';

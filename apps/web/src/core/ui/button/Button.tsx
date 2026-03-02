@@ -1,9 +1,9 @@
 'use client';
 
 import type { ButtonProps } from '@/core/ui/button/types';
-import type { ButtonHTMLAttributes, DetailedHTMLProps } from 'react';
+import type { ButtonHTMLAttributes, DetailedHTMLProps, TouchEventHandler } from 'react';
 
-import { PressableButton } from '@/core/ui/button/PressableButton';
+import { usePressable } from '@/core/hooks';
 import { buttonVariants } from '@/core/ui/button/variants';
 import { cn } from '@/core/utils';
 
@@ -18,8 +18,28 @@ export function Button({
   disableHover,
   rounded,
   disabled,
+  onTouchStart,
+  onTouchEnd,
+  onTouchCancel,
   ...props
 }: Props) {
+  const pressable = usePressable();
+
+  const handleTouchStart: TouchEventHandler<HTMLButtonElement> = e => {
+    pressable.start();
+    onTouchStart?.(e);
+  };
+
+  const handleTouchEnd: TouchEventHandler<HTMLButtonElement> = e => {
+    pressable.end();
+    onTouchEnd?.(e);
+  };
+
+  const handleTouchCancel: TouchEventHandler<HTMLButtonElement> = e => {
+    pressable.end();
+    onTouchCancel?.(e);
+  };
+
   const variants = buttonVariants({
     variant,
     color,
@@ -30,21 +50,15 @@ export function Button({
   });
 
   return (
-    <>
-      <button
-        className={cn(variants, className, 'touch:hidden')}
-        disabled={disabled}
-        {...props}
-      >
-        {children}
-      </button>
-      <PressableButton
-        className={cn(variants, className, 'not-touch:hidden')}
-        disabled={disabled}
-        {...props}
-      >
-        {children}
-      </PressableButton>
-    </>
+    <button
+      className={cn(variants, className, pressable.isPressed && 'touch:scale-95')}
+      disabled={disabled}
+      onTouchStart={handleTouchStart}
+      onTouchEnd={handleTouchEnd}
+      onTouchCancel={handleTouchCancel}
+      {...props}
+    >
+      {children}
+    </button>
   );
 }

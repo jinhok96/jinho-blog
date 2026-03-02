@@ -1,0 +1,109 @@
+---
+title: useIntersectionObserver
+description: 요소가 뷰포트에 교차하는지 감지하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+`IntersectionObserver` API를 활용해 특정 요소가 뷰포트 안에 있는지 감지하는 훅입니다. 기존 API의 모든 옵션과 함께 한 번만 감지할지 여부(`onlyOnce`)와 초기값(`initValue`)을 지원합니다.
+
+# 구현
+
+```ts
+import { type RefObject, useEffect, useRef, useState } from 'react';
+
+type IntersectionObserverOptions = IntersectionObserverInit & {
+  onlyOnce?: boolean;
+  initValue?: boolean;
+};
+
+export function useIntersectionObserver<T extends HTMLElement>(
+  options?: IntersectionObserverOptions,
+): [RefObject<T | null>, boolean] {
+  const [isIntersecting, setIsIntersecting] = useState<boolean>(options?.initValue || false);
+
+  const targetRef = useRef<T>(null);
+  const observerRef = useRef<IntersectionObserver | null>(null);
+  const optionsRef = useRef(options);
+
+  useEffect(() => {
+    const target = targetRef.current;
+    if (!target) return;
+
+    const { root, rootMargin, threshold, onlyOnce } = optionsRef.current || {};
+
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && onlyOnce) {
+          // 한 번만 감지 후 추적 종료
+          setIsIntersecting(true);
+          observerRef.current?.disconnect();
+          return;
+        }
+
+        setIsIntersecting(entry.isIntersecting);
+      },
+      {
+        threshold: threshold || 0.1,
+        root,
+        rootMargin,
+      },
+    );
+
+    observerRef.current.observe(target);
+
+    return () => {
+      observerRef.current?.disconnect();
+      observerRef.current = null;
+    };
+  }, []);
+
+  return [targetRef, isIntersecting];
+}
+```
+
+---
+
+# 사용법
+
+## 1. 기본 사용
+
+```tsx
+const [targetRef, isIntersecting] = useIntersectionObserver<HTMLDivElement>({ threshold: 0.5 });
+
+<div ref={targetRef}>
+  <span>div가 50% 이상 보이나요?: {isIntersecting}</span>
+</div>;
+```
+
+## 2. 한 번만 감지 (`onlyOnce`)
+
+```tsx
+const [targetRef, isIntersecting] = useIntersectionObserver<HTMLDivElement>({
+  onlyOnce: true,
+});
+
+// isIntersecting이 true가 된 이후 다시 false로 돌아가지 않음
+<div ref={targetRef}>{isIntersecting && '감지된 영역입니다.'}</div>;
+```
+
+## 3. 초기값 설정 (`initValue`)
+
+```tsx
+// 초기 렌더링 시 isIntersecting을 true로 시작
+const [targetRef, isIntersecting] = useIntersectionObserver<HTMLDivElement>({
+  initValue: true,
+});
+```

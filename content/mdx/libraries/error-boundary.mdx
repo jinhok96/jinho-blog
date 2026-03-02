@@ -1,0 +1,153 @@
+---
+title: ErrorBoundary
+description: 선언적으로 에러 상태를 처리하는 컴포넌트
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+선언적으로 에러 상태를 처리하는 컴포넌트입니다. `react-error-boundary`의 `ErrorBoundary`를 재정의하며, 컴포넌트 외부에서 `ref.current.reset()`을 호출해 에러 상태를 리셋할 수 있습니다.
+
+# 요구 사항
+
+<Callout>
+
+- `npm i react-error-boundary`
+- React 19+ (React 19 미만에서는 `forwardRef`로 `ref` 전달해야 합니다)
+
+</Callout>
+
+# 구현
+
+```tsx
+'use client';
+
+import { type ComponentType, createElement, type ReactNode, type Ref, useImperativeHandle, useRef } from 'react';
+import {
+  type FallbackProps,
+  ErrorBoundary as ReactErrorBoundary,
+  type ErrorBoundaryProps as ReactErrorBoundaryProps,
+} from 'react-error-boundary';
+
+export type ErrorFallbackProps = Omit<FallbackProps, 'resetErrorBoundary'> & {
+  reset: FallbackProps['resetErrorBoundary'];
+};
+
+export type ErrorBoundaryRef = {
+  reset: ErrorFallbackProps['reset'];
+};
+
+export type ErrorBoundaryProps = Pick<ReactErrorBoundaryProps, 'onError' | 'onReset' | 'resetKeys' | 'children'> & {
+  fallback?: ReactNode | ComponentType<ErrorFallbackProps>;
+  ref?: Ref<ErrorBoundaryRef>;
+};
+
+export function ErrorBoundary({ fallback, ref, ...props }: ErrorBoundaryProps) {
+  const resetRef = useRef<(() => void) | undefined>(undefined);
+
+  useImperativeHandle(ref, () => ({
+    reset: () => {
+      if (resetRef.current) resetRef.current();
+    },
+  }));
+
+  if (typeof fallback === 'function') {
+    const fallbackRender: ReactErrorBoundaryProps['fallbackRender'] = ({ resetErrorBoundary: reset, ...props }) => {
+      resetRef.current = reset;
+      return createElement(fallback, { ...props, reset });
+    };
+
+    return (
+      <ReactErrorBoundary
+        fallbackRender={fallbackRender}
+        {...props}
+      />
+    );
+  }
+
+  return (
+    <ReactErrorBoundary
+      fallback={fallback}
+      {...props}
+    />
+  );
+}
+```
+
+---
+
+# 사용법
+
+## 1. 기본 사용 — `fallback`을 ReactNode로 전달
+
+```tsx
+<ErrorBoundary fallback={<ErrorFallback />}>
+  <Component />
+</ErrorBoundary>
+```
+
+## 2. `ref`로 외부에서 리셋
+
+```tsx
+const ref = useRef<ErrorBoundaryRef>(null);
+
+useEffect(() => {
+  ref.current?.reset();
+}, [...deps]);
+
+<ErrorBoundary
+  ref={ref}
+  fallback={<ErrorFallback />}
+>
+  <Component />
+</ErrorBoundary>;
+```
+
+## 3. `reset` 콜백 호출 — `fallback`을 컴포넌트로 전달
+
+```tsx
+<ErrorBoundary fallback={({ error, reset }) => <ErrorFallback onClick={() => reset()}>{error.message}</ErrorFallback>}>
+  <SuspendedComponent />
+</ErrorBoundary>
+```
+
+## 4. `resetKeys`를 변경해 리셋
+
+```tsx
+const [resetKey, setResetKey] = useState('apple');
+
+useEffect(() => {
+  setResetKey('banana');
+}, [...deps]);
+
+<ErrorBoundary
+  fallback={<ErrorFallback />}
+  resetKeys={[resetKey]}
+>
+  <SuspendedComponent />
+</ErrorBoundary>;
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [toss/slash — AsyncBoundary][async-boundary]
+
+</Callout>
+
+{/* 링크 */}
+[async-boundary]: https://www.toss/slash/ko/libraries/react/async-boundary/src/AsyncBoundary.i18n

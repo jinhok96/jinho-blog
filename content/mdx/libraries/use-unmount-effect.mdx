@@ -1,0 +1,54 @@
+---
+title: useUnmountEffect
+description: 언마운트 시 클린업 로직을 실행하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+컴포넌트가 언마운트될 때 클린업 로직을 호출하는 훅입니다. 클린업 로직을 명시적으로 분리하고 싶을 때 사용합니다.
+
+# 구현
+
+```ts
+import { useEffect } from 'react';
+
+export function useUnmountEffect(callback: () => void): void {
+  useEffect(() => {
+    return () => callback();
+  }, []);
+}
+```
+
+---
+
+# 사용법
+
+## 1. 인터벌 정리
+
+```tsx
+function Timer() {
+  const intervalRef = useRef<ReturnType<typeof setInterval>>();
+
+  const start = () => {
+    intervalRef.current = setInterval(() => { ... }, 1000);
+  };
+
+  useUnmountEffect(() => {
+    clearInterval(intervalRef.current);
+  });
+
+  return <button onClick={start}>시작</button>;
+}
+```

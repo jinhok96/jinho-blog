@@ -1,0 +1,142 @@
+---
+title: createSharedState
+description: 상태와 액션을 분리한 Context API 기반 팩토리 함수
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+Context API 보일러플레이트를 추상화한 팩토리 함수입니다. 상태와 액션을 분리하여 액션만 사용하는 컴포넌트에서 불필요한 리렌더링을 방지합니다.
+
+# 구현
+
+```tsx
+'use client';
+
+import { createContext, type Dispatch, type JSX, type PropsWithChildren, useContext, useMemo, useState } from 'react';
+
+type AnyFunction = (...args: never[]) => unknown;
+
+type Set<T extends Record<string, unknown>> = Partial<T> | ((prev: T) => Partial<T>);
+
+type CreateSharedState<TState extends Record<string, unknown>, TActions extends Record<string, AnyFunction>> = {
+  Provider: ({ children, initState }: PropsWithChildren<{ initState?: Partial<TState> }>) => JSX.Element;
+  useSharedState: () => TState;
+  useSharedActions: () => TActions;
+};
+
+export function createSharedState<TState extends Record<string, unknown>, TActions extends Record<string, AnyFunction>>(
+  initState: TState,
+  createActions: (set: Dispatch<Set<TState>>) => TActions,
+): CreateSharedState<TState, TActions> {
+  const StateContext = createContext<TState | undefined>(undefined);
+  const ActionsContext = createContext<TActions | undefined>(undefined);
+
+  const Provider: CreateSharedState<TState, TActions>['Provider'] = ({ children, initState: providedInitState }) => {
+    const [state, setState] = useState({ ...initState, ...providedInitState });
+
+    const set: Dispatch<Set<TState>> = action =>
+      setState(prev => {
+        const newState = typeof action === 'function' ? action(prev) : action;
+        return { ...prev, ...newState };
+      });
+
+    // actions는 useMemo로 안정적인 참조 유지
+    // → actions만 사용하는 컴포넌트는 state 변경 시 리렌더링 안됨
+    const actions = useMemo(() => createActions(set), []);
+
+    return (
+      <StateContext.Provider value={state}>
+        <ActionsContext.Provider value={actions}>{children}</ActionsContext.Provider>
+      </StateContext.Provider>
+    );
+  };
+
+  const useSharedState: CreateSharedState<TState, TActions>['useSharedState'] = () => {
+    const context = useContext(StateContext);
+    if (!context) {
+      throw new Error('Provider 안에서 사용되어야 합니다.');
+    }
+    return context;
+  };
+
+  const useSharedActions: CreateSharedState<TState, TActions>['useSharedActions'] = () => {
+    const context = useContext(ActionsContext);
+    if (!context) {
+      throw new Error('Provider 안에서 사용되어야 합니다.');
+    }
+    return context;
+  };
+
+  return { Provider, useSharedState, useSharedActions };
+}
+```
+
+---
+
+# 사용법
+
+## 1. 스토어 생성
+
+```tsx
+type CountState = { count: number };
+type CountActions = { increment: () => void; decrement: () => void };
+
+export const {
+  Provider: CountProvider,
+  useSharedState: useCountState,
+  useSharedActions: useCountActions,
+} = createSharedState<CountState, CountActions>({ count: 0 }, set => ({
+  increment: () => set(prev => ({ count: prev.count + 1 })),
+  decrement: () => set(prev => ({ count: prev.count - 1 })),
+}));
+```
+
+## 2. Provider로 감싸고 훅 사용
+
+```tsx
+// 상태만 구독 → 액션 변경 시 리렌더링 없음
+function Counter() {
+  const { count } = useCountState();
+  return <span>{count}</span>;
+}
+
+// 액션만 사용 → 상태 변경 시 리렌더링 없음
+function CounterButtons() {
+  const { increment, decrement } = useCountActions();
+  return (
+    <>
+      <button onClick={increment}>+</button>
+      <button onClick={decrement}>-</button>
+    </>
+  );
+}
+
+function App() {
+  return (
+    <CountProvider>
+      <Counter />
+      <CounterButtons />
+    </CountProvider>
+  );
+}
+```
+
+## 3. Provider에서 초기 상태 주입
+
+```tsx
+<CountProvider initState={{ count: 10 }}>
+  <Counter />
+</CountProvider>
+```

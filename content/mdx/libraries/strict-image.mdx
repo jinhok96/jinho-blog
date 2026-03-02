@@ -1,0 +1,87 @@
+---
+title: StrictImage
+description: 이미지 로드에 실패한 경우 에러를 던지는 Image 컴포넌트
+
+# category 옵션: tech와 동일
+category: nextjs
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+  - nextjs
+---
+
+Next.js `Image` 컴포넌트를 래핑하여 `src`가 비어있거나 이미지 로드에 실패한 경우 에러를 던지는 컴포넌트입니다. 기존 `Image` 컴포넌트와 완전히 호환됩니다. `ErrorBoundary`로 에러를 캐치해야 합니다.
+
+# 구현
+
+```tsx
+'use client';
+
+import type { ComponentProps, ReactEventHandler } from 'react';
+
+import Image from 'next/image';
+
+export function StrictImage({ src, alt, onError, ...props }: ComponentProps<typeof Image>) {
+  const [error, setError] = useState<Error>();
+
+  const handleError: ReactEventHandler<HTMLImageElement> = e => {
+    onError?.(e);
+    setError(new Error(`유효하지 않은 src입니다. (src: ${src})`));
+  };
+
+  if (!src) throw new Error('src가 비어있습니다.');
+  if (error) throw error;
+
+  return (
+    <Image
+      {...props}
+      src={src}
+      alt={alt}
+      onError={handleError}
+    />
+  );
+}
+```
+
+---
+
+# 사용법
+
+## 1. ErrorBoundary로 대체 UI 표시
+
+이미지 로드 실패 시 런타임에 에러를 던지므로 `ErrorBoundary`로 대체 UI를 표시할 수 있습니다.
+
+```tsx
+import { ErrorBoundary } from 'react-error-boundary';
+
+<ErrorBoundary fallback={<p>이미지를 불러올 수 없습니다.</p>}>
+  <StrictImage
+    src={src}
+    alt={alt}
+    width={300}
+    height={200}
+  />
+</ErrorBoundary>;
+```
+
+## 2. src 없는 경우 즉시 에러
+
+`src`가 빈 문자열이거나 `undefined`이면 렌더링 시점에 즉시 에러를 던집니다.
+
+```tsx
+// ❌ 에러 발생: 'src가 비어있습니다.'
+<StrictImage
+  src=""
+  alt="이미지"
+  width={300}
+  height={200}
+/>
+```

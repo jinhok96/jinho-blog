@@ -1,0 +1,61 @@
+---
+title: useIsMountedRef
+description: 컴포넌트의 마운트 상태를 ref로 추적하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+컴포넌트가 마운트되어 있는지 여부를 `RefObject<boolean>`으로 추적하는 훅입니다. ref를 사용하므로 값이 변경되어도 리렌더링을 유발하지 않습니다. 비동기 작업 완료 후 컴포넌트가 언마운트된 경우 상태 업데이트를 건너뛸 때 유용합니다.
+
+# 구현
+
+```ts
+import { type RefObject, useEffect, useRef } from 'react';
+
+export function useIsMountedRef(): RefObject<boolean> {
+  const isMountedRef = useRef(false);
+
+  useEffect(() => {
+    isMountedRef.current = true;
+    return () => {
+      isMountedRef.current = false;
+    };
+  }, []);
+
+  return isMountedRef;
+}
+```
+
+---
+
+# 사용법
+
+## 1. 비동기 작업 후 마운트 여부 확인
+
+```tsx
+function Component() {
+  const isMountedRef = useIsMountedRef();
+  const [data, setData] = useState(null);
+
+  useEffect(() => {
+    fetchData().then(result => {
+      if (!isMountedRef.current) return; // 언마운트 후 상태 업데이트 방지
+      setData(result);
+    });
+  }, []);
+
+  return <div>{data}</div>;
+}
+```

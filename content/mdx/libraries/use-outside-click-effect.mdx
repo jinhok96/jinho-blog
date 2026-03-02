@@ -1,0 +1,94 @@
+---
+title: useOutsideClickEffect
+description: 지정한 요소 외부 클릭 시 콜백을 호출하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+지정한 요소 외부에서 클릭 이벤트가 발생하면 콜백 함수를 호출하는 훅입니다. 여러 개의 `ref`를 배열로 전달할 수 있습니다.
+
+# 구현
+
+```ts
+import { type RefObject, useEffect } from 'react';
+
+export function useOutsideClickEffect<T extends HTMLElement>(
+  callback: () => void,
+  refDeps: RefObject<T | null>[],
+): void {
+  useEffect(() => {
+    const listener = (e: MouseEvent) => {
+      const isClickInside = refDeps.some(ref => ref.current?.contains(e.target as Node));
+
+      if (isClickInside) return;
+
+      callback();
+    };
+
+    document.addEventListener('click', listener);
+
+    return () => {
+      document.removeEventListener('click', listener);
+    };
+  }, [...refDeps, callback]);
+}
+```
+
+---
+
+# 사용법
+
+## 1. 단일 요소 외부 클릭 감지
+
+```tsx
+function Dropdown() {
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  useOutsideClickEffect(() => {
+    console.log('드롭다운 외부 클릭');
+    closeDropdown();
+  }, [dropdownRef]);
+
+  return <div ref={dropdownRef}>...</div>;
+}
+```
+
+## 2. 여러 요소 외부 클릭 감지
+
+```tsx
+const triggerRef = useRef<HTMLButtonElement>(null);
+const menuRef = useRef<HTMLDivElement>(null);
+
+// triggerRef, menuRef가 아닌 외부를 클릭하면 콜백 호출
+useOutsideClickEffect(() => {
+  closeMenu();
+}, [triggerRef, menuRef]);
+
+<button ref={triggerRef}>열기</button>
+<div ref={menuRef}>메뉴</div>
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [toss/slash - useOutsideClickEffect](https://www.toss/slash/ko/libraries/react/react/src/hooks/useOutsideClickEffect.i18n)
+
+</Callout>
+
+{/* 링크 */}
+[toss/slash - useOutsideClickEffect]: https://www.toss/slash/ko/libraries/react/react/src/hooks/useOutsideClickEffect.i18n

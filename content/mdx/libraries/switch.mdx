@@ -1,0 +1,128 @@
+---
+title: Switch
+description: 조건부 렌더링을 선언적으로 처리하는 컴포넌트
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+조건부 렌더링을 선언적으로 처리하는 컴포넌트입니다. `switch-case`문과 동일한 맥락을 가지고 있습니다. `cases`를 통해 조건별 렌더링할 요소를 객체로 전달합니다. 어떤 조건도 만족하지 않으면 `fallback`을 렌더링합니다.
+
+# 구현
+
+```tsx
+import type { ReactNode } from 'react';
+
+type BooleanCase = 'true' | 'false';
+
+// string
+export function Switch<T extends string>(props: {
+  value: T | null | undefined;
+  cases: Partial<Record<T, ReactNode>>;
+  fallback?: ReactNode;
+}): ReactNode;
+
+// boolean
+export function Switch(props: {
+  value: boolean | null | undefined;
+  cases: Partial<Record<BooleanCase, ReactNode>>;
+  fallback?: ReactNode;
+}): ReactNode;
+
+// string | boolean
+export function Switch<T extends string>({
+  value,
+  cases,
+  fallback = null,
+}: {
+  value: T | boolean | null | undefined;
+  cases: Record<string, ReactNode>;
+  fallback?: ReactNode;
+}): ReactNode {
+  if (value === null || value === undefined) return fallback;
+
+  if (typeof value === 'boolean') {
+    const key = value ? 'true' : 'false';
+    const result = cases[key];
+    return result ?? fallback;
+  }
+
+  const result = cases[value];
+  return result ?? fallback;
+}
+```
+
+---
+
+# 사용법
+
+## 1. `string` 조건
+
+```tsx
+const fruit = 'apple';
+
+// 결과: 사과
+<Switch
+  value={fruit}
+  cases={{
+    apple: <span>사과</span>,
+    banana: <span>바나나</span>,
+    cherry: <span>체리</span>,
+  }}
+/>;
+```
+
+## 2. `boolean` 조건
+
+```tsx
+const isLoggedIn = true;
+
+// 결과: 로그인됨
+<Switch
+  value={isLoggedIn}
+  cases={{
+    true: <span>로그인됨</span>,
+    false: <span>로그아웃됨</span>,
+  }}
+/>;
+```
+
+## 3. `fallback` 렌더링
+
+```tsx
+const fruit = 'grape';
+
+// 결과: 과일이 없어요
+<Switch
+  value={fruit}
+  cases={{
+    apple: <span>사과</span>,
+    banana: <span>바나나</span>,
+    cherry: <span>체리</span>,
+  }}
+  fallback={<span>과일이 없어요</span>}
+/>;
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [toss/slash - SwitchCase]
+
+</Callout>
+
+[toss/slash - SwitchCase]: https://www.toss/slash/ko/libraries/react/react/src/components/SwitchCase/SwitchCase.i18n

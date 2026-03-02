@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useCallback, useState } from 'react';
 
 import { useStopwatch } from '@/core/hooks/internal/useStopwatch';
 import { useTimeoutRef } from '@/core/hooks/internal/useTimeoutRef';
@@ -6,29 +6,29 @@ import { useTimeoutRef } from '@/core/hooks/internal/useTimeoutRef';
 export function usePressable(delay: number = 100) {
   const [isPressed, setIsPressed] = useState(false);
 
-  const timeout = useTimeoutRef();
-  const stopwatch = useStopwatch();
+  const { set: setTimeoutRef, clear: clearTimeoutRef } = useTimeoutRef();
+  const { start: startStopwatch, get: getStopwatch, reset: resetStopwatch } = useStopwatch();
 
-  const start = () => {
-    timeout.clear();
-    stopwatch.start();
+  const start = useCallback(() => {
+    clearTimeoutRef();
+    startStopwatch();
     setIsPressed(true);
-  };
+  }, []);
 
-  const end = () => {
-    const animatedTime = stopwatch.get();
+  const end = useCallback(() => {
+    const animatedTime = getStopwatch();
     const remain = Math.max(delay - animatedTime, 0);
 
     if (remain <= 0) {
       setIsPressed(false);
     } else {
-      timeout.set(() => {
+      setTimeoutRef(() => {
         setIsPressed(false);
       }, remain);
     }
 
-    stopwatch.reset();
-  };
+    resetStopwatch();
+  }, [delay]);
 
   return { start, end, isPressed };
 }

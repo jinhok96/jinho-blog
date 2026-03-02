@@ -1,4 +1,4 @@
-import { useRef } from 'react';
+import { useCallback, useRef } from 'react';
 
 import { useUnmountEffect } from '@/core/hooks';
 
@@ -7,29 +7,29 @@ export function useStopwatch() {
   const pauseStartTimeRef = useRef<number | null>(null);
   const pausedTimeRef = useRef<number>(0);
 
-  const reset = (): void => {
+  const reset = useCallback((): void => {
     pausedTimeRef.current = 0;
     pauseStartTimeRef.current = null;
     startTimeRef.current = null;
-  };
+  }, []);
 
-  const start = (): void => {
+  const start = useCallback((): void => {
     reset();
     startTimeRef.current = Date.now();
-  };
+  }, []);
 
-  const pause = (): void => {
+  const pause = useCallback((): void => {
     if (!startTimeRef.current || pauseStartTimeRef.current !== null) return;
     pauseStartTimeRef.current = Date.now();
-  };
+  }, []);
 
-  const resume = (): void => {
+  const resume = useCallback((): void => {
     if (!startTimeRef.current || pauseStartTimeRef.current === null) return;
     pausedTimeRef.current += Date.now() - pauseStartTimeRef.current;
     pauseStartTimeRef.current = null;
-  };
+  }, []);
 
-  const get = (): number => {
+  const get = useCallback((): number => {
     if (!startTimeRef.current) return 0;
 
     const elapsed = Date.now() - startTimeRef.current;
@@ -37,7 +37,7 @@ export function useStopwatch() {
     const totalPausedTime = pausedTimeRef.current + currentPausingTime;
 
     return elapsed - totalPausedTime;
-  };
+  }, []);
 
   useUnmountEffect(reset);
 

@@ -39,7 +39,8 @@
       "Bash(pnpm test --filter @jinho-blog/thumbnail-generator)",
       "Bash(pnpm --filter @jinho-blog/thumbnail-generator lint)",
       "Bash(pnpm --filter @jinho-blog/thumbnail-generator test)",
-      "Bash(pnpm test --filter @jinho-blog/web)"
+      "Bash(pnpm test --filter @jinho-blog/web)",
+      "mcp__claude_ai_Notion__notion-fetch"
     ],
     "deny": [],
     "ask": []

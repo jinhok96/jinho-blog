@@ -20,7 +20,7 @@ export function Sidebar({ className, isShow, children, ref }: Props) {
             bg-background pt-header shadow-xl animated-150
             not-desktop:dark:bg-gray-1
           `,
-          !isShow && 'not-desktop:-translate-x-2/3 not-desktop:opacity-0',
+          !isShow && 'not-desktop:-translate-x-full not-desktop:opacity-0',
           className,
         )}
         ref={ref}

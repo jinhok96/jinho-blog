@@ -1,9 +1,9 @@
 import { FlatCompat } from '@eslint/eslintrc';
-import { defineConfig, globalIgnores } from 'eslint/config';
 import nextVitals from 'eslint-config-next/core-web-vitals';
 import nextTypescript from 'eslint-config-next/typescript';
 import betterTailwindcss from 'eslint-plugin-better-tailwindcss';
 import boundaries from 'eslint-plugin-boundaries';
+import { defineConfig, globalIgnores } from 'eslint/config';
 import { dirname } from 'path';
 import { fileURLToPath } from 'url';
 
@@ -261,9 +261,6 @@ const baseConfig = defineConfig([
 
       // TypeScript
       '@typescript-eslint/consistent-type-imports': 'error',
-
-      // Eslint
-      'react-hooks/exhaustive-deps': 'off',
     },
   },
 ]);

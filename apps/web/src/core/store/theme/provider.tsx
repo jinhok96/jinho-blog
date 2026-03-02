@@ -36,7 +36,7 @@ export function ThemeStoreProvider({ children, theme: initTheme }: Props) {
     return () => {
       mediaQuery.removeEventListener('change', handleChange);
     };
-  }, [theme]);
+  }, [theme, setThemeClass]);
 
   return <>{children}</>;
 }

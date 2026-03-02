@@ -16,7 +16,7 @@ export function useStopwatch() {
   const start = useCallback((): void => {
     reset();
     startTimeRef.current = Date.now();
-  }, []);
+  }, [reset]);
 
   const pause = useCallback((): void => {
     if (!startTimeRef.current || pauseStartTimeRef.current !== null) return;

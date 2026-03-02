@@ -13,7 +13,7 @@ export function usePressable(delay: number = 100) {
     clearTimeoutRef();
     startStopwatch();
     setIsPressed(true);
-  }, []);
+  }, [clearTimeoutRef, startStopwatch]);
 
   const end = useCallback(() => {
     const animatedTime = getStopwatch();
@@ -28,7 +28,7 @@ export function usePressable(delay: number = 100) {
     }
 
     resetStopwatch();
-  }, [delay]);
+  }, [delay, getStopwatch, resetStopwatch, setTimeoutRef]);
 
   return { start, end, isPressed };
 }

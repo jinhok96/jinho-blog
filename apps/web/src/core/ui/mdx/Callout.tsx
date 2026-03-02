@@ -1,8 +1,7 @@
 'use client';
 
-import { type PropsWithChildren, type RefObject, useRef, useState } from 'react';
+import { type PropsWithChildren, type RefObject, useEffect, useRef, useState } from 'react';
 
-import { useTimeoutEffect } from '@/core/hooks';
 import { Button, Show } from '@/core/ui';
 import { cn } from '@/core/utils';
 
@@ -24,11 +23,11 @@ function CopyButton({ textRef }: CopyButtonProps) {
     setIsCopied(true);
   };
 
-  const handleReset = () => {
-    setIsCopied(false);
-  };
-
-  useTimeoutEffect(handleReset, RESET_TIMEOUT, [isCopied]);
+  useEffect(() => {
+    if (!isCopied) return;
+    const timeout = setTimeout(() => setIsCopied(false), RESET_TIMEOUT);
+    return () => clearTimeout(timeout);
+  }, [isCopied]);
 
   return (
     <Button

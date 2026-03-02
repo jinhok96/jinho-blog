@@ -1,19 +1,13 @@
-import { useEffect, useRef } from 'react';
+import { useEffect, useEffectEvent } from 'react';
 
 export function useKeyDownEffect(keys: string[], callback: (e: KeyboardEvent) => void) {
-  const callbackRef = useRef(callback);
+  const onKeyDown = useEffectEvent((e: KeyboardEvent) => {
+    if (!keys.includes(e.key)) return;
+    callback(e);
+  });
 
   useEffect(() => {
-    callbackRef.current = callback;
-  }, [callback]);
-
-  useEffect(() => {
-    const handleKeyDown = (e: KeyboardEvent) => {
-      if (!keys.includes(e.key)) return;
-      callbackRef.current(e);
-    };
-
-    window.addEventListener('keydown', handleKeyDown);
-    return () => window.removeEventListener('keydown', handleKeyDown);
-  }, [keys.join()]);
+    window.addEventListener('keydown', onKeyDown);
+    return () => window.removeEventListener('keydown', onKeyDown);
+  }, []);
 }

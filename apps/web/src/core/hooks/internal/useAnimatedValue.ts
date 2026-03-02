@@ -12,10 +12,11 @@ export function useAnimatedValue<T = number>(
     return options.transformer(count.get());
   });
 
+  const { duration } = options;
   useEffect(() => {
-    const controls = animate(count, value, { duration: options.duration });
+    const controls = animate(count, value, { duration });
     return () => controls.stop();
-  }, [value]);
+  }, [count, value, duration]);
 
   return motionValue as MotionValue<T>;
 }

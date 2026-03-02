@@ -40,7 +40,7 @@ export function RouteModal({ children }: Props) {
     else unlock();
 
     return () => unlock();
-  }, [isShow]);
+  }, [isShow, lock, unlock]);
 
   return (
     <div

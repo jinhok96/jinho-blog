@@ -5,6 +5,7 @@ import Image from 'next/image';
 import { LinkButton } from '@/core/ui/button';
 import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
+import { Demo } from '@/core/ui/mdx/Demo';
 import { cn } from '@/core/utils';
 
 import LinkIcon from 'public/icons/link.svg';
@@ -213,8 +214,6 @@ export function createMDXComponents() {
       />
     ),
 
-    Callout: (props: HTMLAttributes<HTMLDivElement>) => <Callout {...props} />,
-
     img: ({ src, alt, ...props }: HTMLAttributes<HTMLImageElement> & { src: string; alt: string }) => {
       // 첫번째 이미지 요소에 priority 적용
       const priority = imageIndex === 0;
@@ -232,5 +231,9 @@ export function createMDXComponents() {
         />
       );
     },
+
+    Callout: (props: HTMLAttributes<HTMLDivElement>) => <Callout {...props} />,
+
+    Demo: ({ name }: { name: string }) => <Demo name={name} />,
   };
 }

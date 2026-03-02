@@ -12,7 +12,7 @@ const OPTIONS = [0, 25, 50, 75, 100];
 
 export default function UseAnimatedValueDemo() {
   const [target, setTarget] = useState(0);
-  const value = useAnimatedValue(target, { duration: 0.8 });
+  const value = useAnimatedValue(target, { duration: 1 });
   const rounded = useTransform(value, v => Math.round(v));
 
   return (

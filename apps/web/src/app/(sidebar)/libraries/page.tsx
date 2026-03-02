@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
-import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@jinho-blog/shared';
+import { TECH_STACK_MAP, type TechStack } from '@jinho-blog/shared';
 
 import { LinkButton } from '@/core/ui';
 import { generatePageMetadata } from '@/core/utils';
@@ -40,7 +40,7 @@ export default async function LibrariesListPage() {
         </p>
 
         <div className="flex-col-start w-full gap-14 pt-8">
-          {LIBRARY_CATEGORY_MAP_KEYS.map(category => {
+          {(Object.keys(groups) as TechStack[]).map(category => {
             const libraries = groups[category];
             if (!libraries?.length) return null;
 
@@ -50,7 +50,7 @@ export default async function LibrariesListPage() {
                 className="w-full"
               >
                 <div className="mb-5 flex-row-center justify-between">
-                  <span className="font-subtitle-24">{LIBRARY_CATEGORY_MAP[category]}</span>
+                  <span className="font-subtitle-24">{TECH_STACK_MAP[category as TechStack]}</span>
                   <LinkButton
                     href={routes({
                       pathname: '/libraries/[slug]',

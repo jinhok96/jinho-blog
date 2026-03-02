@@ -1,6 +1,6 @@
 'use client';
 
-import { type PropsWithChildren, useState } from 'react';
+import { type PropsWithChildren, useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
 import { useBodyScrollLock, useKeyDownEffect, useMountEffect } from '@/core/hooks';
@@ -16,6 +16,7 @@ type Props = PropsWithChildren;
 export function RouteModal({ children }: Props) {
   const router = useRouter();
   const [isShow, setIsShow] = useState(false);
+  const { lock, unlock } = useBodyScrollLock();
 
   const handleClose = () => {
     setIsShow(false);
@@ -33,8 +34,13 @@ export function RouteModal({ children }: Props) {
     });
   });
 
-  // 모달이 열릴 때 배경 스크롤 잠금
-  useBodyScrollLock(isShow);
+  // 모달이 열려있으면 배경 스크롤 잠금
+  useEffect(() => {
+    if (isShow) lock();
+    else unlock();
+
+    return () => unlock();
+  }, [isShow, lock, unlock]);
 
   return (
     <div

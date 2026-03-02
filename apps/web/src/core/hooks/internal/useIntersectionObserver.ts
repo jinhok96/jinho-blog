@@ -15,23 +15,28 @@ export function useIntersectionObserver<T extends HTMLElement>(
   const optionsRef = useRef(options);
 
   useEffect(() => {
-    optionsRef.current = options;
-  }, [options]);
-
-  useEffect(() => {
     const target = targetRef.current;
     if (!target) return;
 
-    const currentOptions = optionsRef.current;
-    if (isIntersecting && currentOptions?.onlyOnce) return;
+    const { root, rootMargin, threshold, onlyOnce } = optionsRef.current || {};
 
-    const { root, rootMargin, threshold } = currentOptions || {};
+    observerRef.current = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting && onlyOnce) {
+          // 한 번만 감지 후 추적 종료
+          setIsIntersecting(true);
+          observerRef.current?.disconnect();
+          return;
+        }
 
-    observerRef.current = new IntersectionObserver(([entry]) => setIsIntersecting(entry.isIntersecting), {
-      threshold: threshold || 0.1,
-      root,
-      rootMargin,
-    });
+        setIsIntersecting(entry.isIntersecting);
+      },
+      {
+        threshold: threshold || 0.1,
+        root,
+        rootMargin,
+      },
+    );
 
     observerRef.current.observe(target);
 
@@ -39,7 +44,7 @@ export function useIntersectionObserver<T extends HTMLElement>(
       observerRef.current?.disconnect();
       observerRef.current = null;
     };
-  }, [isIntersecting]);
+  }, []);
 
   return [targetRef, isIntersecting];
 }

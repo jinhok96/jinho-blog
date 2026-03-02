@@ -1,8 +1,9 @@
-import { type DependencyList, useEffect } from 'react';
+import { useEffect, useEffectEvent } from 'react';
 
-export function useTimeoutEffect(callback: () => void, delay: number, deps: DependencyList = []) {
+export function useTimeoutEffect(callback: () => void, delay: number) {
+  const onTimeout = useEffectEvent(callback);
   useEffect(() => {
-    const timeout = setTimeout(callback, delay);
+    const timeout = setTimeout(onTimeout, delay);
     return () => clearTimeout(timeout);
-  }, deps);
+  }, [delay]);
 }

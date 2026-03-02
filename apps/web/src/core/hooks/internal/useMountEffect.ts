@@ -1,7 +1,8 @@
-import { useEffect } from 'react';
+import { useEffect, useEffectEvent } from 'react';
 
 export function useMountEffect(callback: () => void): void {
+  const onMount = useEffectEvent(callback);
   useEffect(() => {
-    callback();
+    onMount();
   }, []);
 }

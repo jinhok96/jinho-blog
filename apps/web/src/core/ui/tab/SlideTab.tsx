@@ -1,10 +1,18 @@
 'use client';
 
-import { type ComponentProps, type PropsWithChildren, useLayoutEffect, useRef, useState } from 'react';
+import {
+  type ComponentProps,
+  type PropsWithChildren,
+  useCallback,
+  useEffectEvent,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from 'react';
 
 import { motion, type Transition } from 'motion/react';
 
-import { useIsMounted } from '@/core/hooks';
+import { useIsHydrated } from '@/core/hooks';
 import { Button, Show } from '@/core/ui';
 import { cn, createSharedState } from '@/core/utils';
 
@@ -65,7 +73,7 @@ function SlideTabContent({
     return offsetLeft - offsetWidth / 4;
   };
 
-  const updateIndicatorPosition = () => {
+  const updateIndicatorPosition = useCallback(() => {
     const selectedTab = tabRefs[selectedTabIndex];
     if (!selectedTab) return;
 
@@ -75,28 +83,32 @@ function SlideTabContent({
     const containerRect = container.getBoundingClientRect();
     const tabRect = selectedTab.getBoundingClientRect();
 
-    const width = tabRect.width;
-    const left = tabRect.left - containerRect.left + container.scrollLeft;
-    const height = tabRect.height;
-    const top = tabRect.top - containerRect.top + container.scrollTop;
+    setIndicatorStyle({
+      width: tabRect.width,
+      left: tabRect.left - containerRect.left + container.scrollLeft,
+      height: tabRect.height,
+      top: tabRect.top - containerRect.top + container.scrollTop,
+    });
+  }, [tabRefs, selectedTabIndex]);
 
-    setIndicatorStyle({ width, left, height, top });
-  };
+  const notifyTabChange = useEffectEvent((index: number) => {
+    onTabChange?.(index);
+  });
 
   // 인디케이터 스타일 업데이트
   useLayoutEffect(() => {
     setIndicatorClassName(indicatorClassName);
-  }, [indicatorClassName]);
+  }, [indicatorClassName, setIndicatorClassName]);
 
   // 탭 상태 업데이트
   useLayoutEffect(() => {
     if (selectedIndex === undefined) return;
     setSelectedTabIndex(selectedIndex);
-  }, [selectedIndex]);
+  }, [selectedIndex, setSelectedTabIndex]);
 
   // 공유 상태 변경 시 외부에 알림
   useLayoutEffect(() => {
-    onTabChange?.(selectedTabIndex);
+    notifyTabChange(selectedTabIndex);
   }, [selectedTabIndex]);
 
   // 탭 인디케이터 업데이트
@@ -125,7 +137,7 @@ function SlideTabContent({
       window.removeEventListener('resize', updateIndicatorPosition);
       resizeObserver.disconnect();
     };
-  }, [selectedTabIndex, tabRefs]);
+  }, [selectedTabIndex, tabRefs, updateIndicatorPosition]);
 
   return (
     <div
@@ -155,7 +167,7 @@ type ItemProps = ComponentProps<typeof Button> & {
 };
 
 function Item({ children, index, containerClassName, className, ...props }: ItemProps) {
-  const isMounted = useIsMounted();
+  const isMounted = useIsHydrated();
 
   const ref = useRef<HTMLDivElement>(null);
   const { selectedTabIndex, indicatorClassName } = useSharedState();

@@ -1,0 +1,79 @@
+---
+title: Portal
+description: 자식 요소를 DOM의 특정 위치에 렌더링하는 컴포넌트
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+자식 요소를 DOM의 특정 위치에 렌더링하는 컴포넌트입니다. `portalId`에 해당하는 DOM 요소를 찾아 `createPortal`로 렌더링합니다.
+
+# 구현
+
+```tsx
+'use client';
+
+import { type PropsWithChildren, type ReactPortal, useEffect, useState } from 'react';
+import { createPortal } from 'react-dom';
+
+type Props = PropsWithChildren<{ portalId: string }>;
+
+export function Portal({ children, portalId }: Props): ReactPortal | null {
+  const [isMounted, setIsMounted] = useState(false);
+
+  useEffect(() => {
+    setIsMounted(true);
+  }, []);
+
+  if (!isMounted) return null;
+
+  const portalElement = document.getElementById(portalId);
+  if (!portalElement) throw new Error(`Portal(${portalId})을 찾을 수 없습니다.`);
+
+  return createPortal(children, portalElement);
+}
+```
+
+---
+
+# 사용법
+
+## 1. 포탈 위치 선언
+
+```tsx
+<body>
+  {children}
+  <div id="modal" />
+</body>
+```
+
+## 2. 컴포넌트 래핑
+
+```tsx
+<Portal portalId="modal">
+  <Modal />
+</Portal>
+```
+
+## 3. 실제 렌더링 결과
+
+```tsx
+<body>
+  {children}
+  {/* modal 컨테이너 내부에 컴포넌트가 렌더링됨 */}
+  <div id="modal">
+    <Modal />
+  </div>
+</body>
+```

@@ -1,0 +1,68 @@
+---
+title: useIsHydrated
+description: 서버 렌더링에서 클라이언트로 전환이 완료되었는지 반환하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+서버 렌더링에서 클라이언트로 전환이 완료되었는지 반환하는 훅입니다.
+
+# 구현
+
+## React 18+
+
+서버 환경에서는 `false`, 클라이언트에서는 `true`를 반환합니다. 하이드레이션 불일치 없이 클라이언트 전용 렌더링을 처리할 수 있습니다.
+
+```ts
+import { useSyncExternalStore } from 'react';
+
+export function useIsHydrated(): boolean {
+  return useSyncExternalStore(
+    () => () => {},
+    () => true, // 클라이언트: true
+    () => false, // 서버: false
+  );
+}
+```
+
+## React 18 미만
+
+```ts
+import { useEffect, useState } from 'react';
+
+export function useIsHydrated(): boolean {
+  const [isHydrated, setIsHydrated] = useState(false);
+
+  useEffect(() => {
+    setIsHydrated(true);
+  }, []);
+
+  return isHydrated;
+}
+```
+
+---
+
+# 사용법
+
+```tsx
+function Component() {
+  const isHydrated = useIsHydrated();
+
+  if (!isHydrated) return null;
+
+  return <p>클라이언트에서만 렌더링됩니다</p>;
+}
+```

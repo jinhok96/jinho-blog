@@ -1,6 +1,6 @@
 import type { Library } from '@jinho-blog/mdx-handler';
 
-import { LIBRARY_CATEGORY_MAP, type PaginatedResult } from '@jinho-blog/shared';
+import { type PaginatedResult, TECH_STACK_MAP, type TechStack } from '@jinho-blog/shared';
 
 import { ContentCardSection, Show } from '@/core/ui';
 
@@ -20,7 +20,7 @@ export async function LibrariesContentSection({ libraries }: Props) {
             <ContentCardSection.Card
               key={slug}
               href={path}
-              category={LIBRARY_CATEGORY_MAP[category]}
+              category={TECH_STACK_MAP[category as TechStack]}
               createdAt={createdAt}
             >
               <ContentCardSection.LibraryInfo

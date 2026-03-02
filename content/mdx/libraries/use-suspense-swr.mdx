@@ -1,0 +1,95 @@
+---
+title: useSuspenseSWR
+description: suspense 옵션이 활성화된 SWR 훅으로 data가 항상 정의된 상태를 보장하는 훅
+
+# category 옵션: tech와 동일
+category: swr
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+  - swr
+---
+
+`suspense: true` 옵션이 적용된 `useSWR` 커스텀 훅입니다. `data`가 항상 응답 값을 가지므로 `undefined` 검사가 필요 없습니다. `Tanstack Query`의 `useSuspenseQuery`와 동일한 맥락으로 사용되며, `ErrorBoundary`와 `Suspense`로 에러와 로딩 상태를 처리해야 합니다.
+
+# 구현
+
+```ts
+import type { Fetcher, Key, SWRConfiguration, SWRResponse } from 'swr';
+import useSWR from 'swr';
+
+type SWRKey = Key;
+type SWRFetcher<Data> = Fetcher<Data, SWRKey>;
+type SWRConfig<Data, Error = unknown> = SWRConfiguration<Data, Error, SWRFetcher<Data>>;
+type SuspenseSWRResponse<Data, Error = unknown> = Omit<
+  SWRResponse<Data, Error, SWRConfig<Data, Error>>,
+  'data' | 'isLoading'
+> & { data: Data };
+
+export default function useSuspenseSWR<Data, Error = unknown>(
+  key: SWRKey,
+  fetcher?: SWRFetcher<Data>,
+  config?: SWRConfig<Data, Error>,
+) {
+  return useSWR(key, fetcher || null, { ...config, suspense: true }) as SuspenseSWRResponse<Data, Error>;
+}
+```
+
+---
+
+# 사용법
+
+## 1. 기본 사용
+
+```tsx
+import { Suspense } from 'react';
+import { ErrorBoundary } from 'react-error-boundary';
+import useSuspenseSWR from './useSuspenseSWR';
+
+function UserProfile() {
+  const { data } = useSuspenseSWR('/api/user', fetcher);
+  // data가 항상 정의되어 있으므로 undefined 검사 불필요
+  return <div>{data.name}</div>;
+}
+
+<ErrorBoundary fallback={<ErrorFallback />}>
+  <Suspense fallback={<Spinner />}>
+    <UserProfile />
+  </Suspense>
+</ErrorBoundary>;
+```
+
+## 2. 기존 `useSWR`과 비교
+
+```tsx
+// 기존 useSWR: 로딩/에러 조건부 처리, data가 undefined일 수 있음
+const { data, error, isLoading } = useSWR('/api/user', fetcher);
+if (isLoading) return <Spinner />;
+if (error) return <ErrorFallback />;
+if (!data) return null;
+return <div>{data.name}</div>;
+
+// useSuspenseSWR: 로딩/에러는 Suspense/ErrorBoundary가 선언적 처리, data 항상 존재
+const { data } = useSuspenseSWR('/api/user', fetcher);
+return <div>{data.name}</div>;
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [SWR - Suspense][swr-suspense]
+
+</Callout>
+
+[swr-suspense]: https://swr.vercel.app/ko/docs/suspense.ko

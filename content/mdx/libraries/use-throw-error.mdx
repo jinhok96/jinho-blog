@@ -1,0 +1,83 @@
+---
+title: useThrowError
+description: 렌더링 외부의 에러를 ErrorBoundary로 전파하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+에러를 다음 렌더링 주기에 던지는 훅입니다. 이벤트 핸들러나 비동기 로직처럼 렌더링 중 캐치할 수 없는 에러를 `ErrorBoundary`로 전파할 때 사용합니다.
+
+# 구현
+
+```ts
+import { useState } from 'react';
+
+export function useThrowError() {
+  const [error, setError] = useState<Error>();
+
+  if (error) throw error;
+
+  return setError;
+}
+```
+
+---
+
+# 사용법
+
+## 1. 이벤트 핸들러에서 에러 전파
+
+```tsx
+function Button() {
+  const throwError = useThrowError();
+
+  return <button onClick={() => throwError(new Error('버튼 클릭 에러'))}>버튼</button>;
+}
+
+<ErrorBoundary fallback={<p>이벤트 핸들러 에러</p>}>
+  <Button />
+</ErrorBoundary>;
+```
+
+## 2. 비동기 로직에서 에러 전파
+
+```tsx
+function DataFetcher() {
+  const throwError = useThrowError();
+
+  const handleFetch = async () => {
+    try {
+      await fetchData();
+    } catch (error) {
+      throwError(error as Error);
+    }
+  };
+
+  return <button onClick={handleFetch}>데이터 불러오기</button>;
+}
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [toss/slash - useErrorBoundary][useErrorBoundary]
+
+</Callout>
+
+{/* 링크 */}
+[useErrorBoundary]: https://www.toss/slash/ko/libraries/react/error-boundary/src/ErrorBoundary.i18n#useerrorboundary

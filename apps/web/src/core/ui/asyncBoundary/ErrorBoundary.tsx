@@ -1,6 +1,6 @@
 'use client';
 
-import { type ComponentType, createElement, forwardRef, type ReactNode, useImperativeHandle, useRef } from 'react';
+import { type ComponentType, createElement, type ReactNode, type Ref, useImperativeHandle, useRef } from 'react';
 import {
   ErrorBoundary as ReactErrorBoundary,
   type ErrorBoundaryProps as ReactErrorBoundaryProps,
@@ -17,12 +17,10 @@ export type ErrorBoundaryRef = {
 
 export type ErrorBoundaryProps = Pick<ReactErrorBoundaryProps, 'onError' | 'onReset' | 'resetKeys' | 'children'> & {
   fallback?: ReactNode | ComponentType<ErrorFallbackProps>;
+  ref?: Ref<ErrorBoundaryRef>;
 };
 
-export const ErrorBoundary = forwardRef<ErrorBoundaryRef, ErrorBoundaryProps>(function ErrorBoundary(
-  { fallback, ...props },
-  ref,
-) {
+export function ErrorBoundary({ fallback, ref, ...props }: ErrorBoundaryProps) {
   const resetRef = useRef<(() => void) | undefined>(undefined);
 
   useImperativeHandle(ref, () => ({
@@ -51,4 +49,4 @@ export const ErrorBoundary = forwardRef<ErrorBoundaryRef, ErrorBoundaryProps>(fu
       {...props}
     />
   );
-});
+}

@@ -1,0 +1,90 @@
+---
+title: useBodyScrollLock
+description: body 스크롤을 잠그고 언마운트 시 이전 스크롤 위치를 복구하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+브라우저 스크롤을 잠그는 훅입니다. 잠금 해제 시 이전 스크롤 위치를 복구합니다. 스크롤바 너비만큼 여백을 추가해 레이아웃 시프트를 방지합니다. 전역 스크롤을 제어하므로 안전하게 컴포넌트 언마운트 시 자동으로 스크롤을 복구합니다.
+
+# 구현
+
+```ts
+import { useCallback, useEffect, useRef } from 'react';
+
+export function useBodyScrollLock(): {
+  lock: () => void;
+  unlock: () => void;
+} {
+  const scrollYRef = useRef<number | null>(null);
+
+  const lock = useCallback(() => {
+    // 페이지에 스크롤이 있는지 확인
+    const hasScroll = document.documentElement.scrollHeight > document.documentElement.clientHeight;
+    if (!hasScroll) return;
+
+    // 이미 잠긴 경우 중복 실행 방지
+    if (scrollYRef.current !== null) return;
+
+    const scrollY = window.scrollY;
+    const scrollbarWidth = window.innerWidth - document.documentElement.clientWidth;
+
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.overflowY = 'hidden';
+    document.body.style.paddingRight = `${scrollbarWidth}px`;
+
+    scrollYRef.current = scrollY;
+  }, []);
+
+  const unlock = useCallback(() => {
+    if (scrollYRef.current === null) return;
+
+    const scrollY = scrollYRef.current;
+    scrollYRef.current = null;
+
+    document.body.style.position = '';
+    document.body.style.top = '';
+    document.body.style.overflowY = '';
+    document.body.style.paddingRight = '';
+
+    window.scrollTo({ top: scrollY, behavior: 'instant' });
+  }, []);
+
+  useEffect(() => {
+    return () => unlock();
+  }, [unlock]);
+
+  return { lock, unlock };
+}
+```
+
+---
+
+# 사용법
+
+```tsx
+function Modal({ isOpen }: { isOpen: boolean }) {
+  const { lock, unlock } = useBodyScrollLock();
+
+  useEffect(() => {
+    if (isOpen) lock();
+    else unlock();
+  });
+
+  if (!isOpen) return null;
+  return <div>모달</div>;
+}
+```

@@ -1,0 +1,94 @@
+---
+title: useAnimatedValue
+description: 숫자를 애니메이션과 함께 변환하는 MotionValue를 반환하는 훅
+
+# category 옵션: tech와 동일
+category: motion
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+  - motion
+---
+
+`motion/react`의 `animate`, `useMotionValue`, `useTransform`을 조합하여 숫자 값이 변경될 때 부드럽게 애니메이션되는 `MotionValue`를 반환하는 훅입니다. `transformer` 옵션으로 숫자를 원하는 형식으로 변환할 수 있습니다.
+
+# 구현
+
+```ts
+import { useEffect } from 'react';
+
+import { animate, type MotionValue, useMotionValue, useTransform } from 'motion/react';
+
+export function useAnimatedValue<T = number>(
+  value: number,
+  options: { transformer?: (value: number) => T; duration?: number } = {},
+): MotionValue<T> {
+  const count = useMotionValue(value);
+  const motionValue = useTransform(() => {
+    if (!options.transformer) return count.get();
+    return options.transformer(count.get());
+  });
+
+  useEffect(() => {
+    const controls = animate(count, value, { duration: options.duration });
+    return () => controls.stop();
+  }, [value]);
+
+  return motionValue as MotionValue<T>;
+}
+```
+
+---
+
+# 데모
+
+<Demo name="use-animated-value" />
+
+---
+
+# 사용법
+
+## 1. 기본 숫자 애니메이션
+
+```tsx
+import { motion } from 'motion/react';
+
+function AnimatedCounter({ value }: { value: number }) {
+  const animatedValue = useAnimatedValue(value, { duration: 1 });
+
+  // 반드시 motion 컴포넌트 내부에서 렌더링
+  return <motion.span>{animatedValue}</motion.span>;
+}
+```
+
+## 2. transformer로 포맷팅
+
+```tsx
+// 소수점 2자리로 표시
+const rate = useAnimatedValue(score, {
+  duration: 5,
+  transformer: v => v.toFixed(2),
+});
+
+<motion.span>{rate}</motion.span>;
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [motion - HTML Content][motion-html]
+
+</Callout>
+
+[motion-html]: https://examples.motion.dev/react/html-content

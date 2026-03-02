@@ -1,0 +1,65 @@
+---
+title: useKeyDownEffect
+description: 특정 키 입력 시 콜백을 실행하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+특정 키 입력을 감지해 콜백을 호출합니다.
+
+# 구현
+
+```ts
+import { useEffect, useRef } from 'react';
+
+export function useKeyDownEffect(keys: string[], callback: (e: KeyboardEvent) => void) {
+  const callbackRef = useRef(callback);
+
+  useEffect(() => {
+    callbackRef.current = callback;
+  }, [callback]);
+
+  useEffect(() => {
+    const handleKeyDown = (e: KeyboardEvent) => {
+      if (!keys.includes(e.key)) return;
+      callbackRef.current(e);
+    };
+
+    window.addEventListener('keydown', handleKeyDown);
+    return () => window.removeEventListener('keydown', handleKeyDown);
+  }, [keys.join()]);
+}
+```
+
+---
+
+# 사용법
+
+## 1. Escape 키로 모달 닫기
+
+```tsx
+useKeyDownEffect(['Escape'], () => {
+  setIsOpen(false);
+});
+```
+
+## 2. 복수 키 처리
+
+```tsx
+useKeyDownEffect(['ArrowUp', 'ArrowDown'], e => {
+  if (e.key === 'ArrowUp') moveFocus(-1);
+  if (e.key === 'ArrowDown') moveFocus(1);
+});
+```

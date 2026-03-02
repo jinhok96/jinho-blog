@@ -38,18 +38,18 @@ describe('useTimeoutEffect', () => {
     expect(callback).not.toHaveBeenCalled();
   });
 
-  it('deps 변경 시 타이머 재설정 후 callback 재호출', () => {
+  it('delay 변경 시 타이머 재설정 후 callback 재호출', () => {
     const callback = vi.fn();
-    let dep = 0;
-    const { rerender } = renderHook(() => useTimeoutEffect(callback, 300, [dep]));
+    let delay = 300;
+    const { rerender } = renderHook(() => useTimeoutEffect(callback, delay));
 
     vi.advanceTimersByTime(200);
     expect(callback).not.toHaveBeenCalled();
 
-    dep = 1;
+    delay = 500;
     rerender();
 
-    vi.advanceTimersByTime(300);
+    vi.advanceTimersByTime(500);
     expect(callback).toHaveBeenCalledTimes(1);
   });
 });

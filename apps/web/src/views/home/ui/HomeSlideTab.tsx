@@ -68,7 +68,7 @@ export function HomeSlideTab() {
     sections.forEach(section => !!section && observer.observe(section));
 
     return () => observer.disconnect();
-  }, [tabs]);
+  }, []);
 
   return (
     <div className="pointer-events-none sticky top-(--height-header) right-0 left-0 z-10 w-full px-layout">

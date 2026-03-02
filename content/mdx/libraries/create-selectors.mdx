@@ -1,0 +1,108 @@
+---
+title: createSelectors
+description: Zustand 스토어에 자동으로 셀렉터를 추가하는 팩토리 함수
+
+# category 옵션: tech와 동일
+category: zustand
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - zustand
+---
+
+Zustand 스토어의 각 상태 필드에 대한 셀렉터를 자동으로 생성하는 팩토리 함수입니다. `store.use.field()` 형태로 개별 필드만 구독하여 불필요한 리렌더링을 방지합니다.
+
+# 구현
+
+```ts
+import type { StoreApi, UseBoundStore } from 'zustand';
+
+type WithSelectors<S> = S extends { getState: () => infer T } ? S & { use: { [K in keyof T]: () => T[K] } } : never;
+
+export const createSelectors = <S extends UseBoundStore<StoreApi<object>>>(_store: S) => {
+  const store = _store as WithSelectors<typeof _store>;
+
+  store.use = {};
+
+  for (const k of Object.keys(store.getState())) {
+    (store.use as Record<string, () => unknown>)[k] = () => store(s => s[k as keyof typeof s]);
+  }
+
+  return store;
+};
+```
+
+---
+
+# 사용법
+
+## 1. 스토어 생성
+
+```ts
+import { create } from 'zustand';
+import { createSelectors } from './createSelectors';
+
+type StoreState = {
+  fruit: 'apple' | 'banana';
+  drink: 'water' | 'juice';
+};
+type StoreActions = {
+  setFruit: (fruit: StoreState['fruit']) => void;
+  setDrink: (drink: StoreState['drink']) => void;
+};
+type Store = StoreState & StoreActions;
+
+const initState: StoreState = {
+  fruit: 'apple',
+  drink: 'water',
+};
+
+const store = create<Store>()(set => ({
+  ...initState,
+  setFruit: fruit => set({ fruit }),
+  setDrink: drink => set({ drink }),
+}));
+
+export const useFruitStore = createSelectors(store);
+```
+
+## 2. 컴포넌트에서 셀렉터 사용
+
+```tsx
+function Component() {
+  const fruit = useFruitStore.use.fruit();
+  const setFruit = useFruitStore.use.setFruit();
+  const setDrink = useFruitStore.use.setDrink();
+
+  // fruit 값이 변경될 때만 리렌더링
+  useEffect(() => {
+    setFruit('banana');
+  }, []);
+
+  // drink 값이 변경되어도 리렌더링되지 않음
+  useEffect(() => {
+    setDrink('juice');
+  }, [fruit]);
+
+  return <span>{fruit}</span>; // apple → banana
+}
+```
+
+---
+
+# 참조
+
+<Callout>
+
+- [Zustand - Auto Generating Selectors][zustand-selectors]
+
+</Callout>
+
+[zustand-selectors]: https://zustand.docs.pmnd.rs/guides/auto-generating-selectors#create-the-following-function:-createselectors

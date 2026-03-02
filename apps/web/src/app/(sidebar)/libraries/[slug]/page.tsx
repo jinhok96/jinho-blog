@@ -4,17 +4,15 @@ import type { Metadata } from 'next';
 import { notFound } from 'next/navigation';
 
 import { routes } from '@jinho-blog/nextjs-routes';
-import { LIBRARY_CATEGORY_MAP, LIBRARY_CATEGORY_MAP_KEYS } from '@jinho-blog/shared';
+import { TECH_STACK_MAP, type TechStack } from '@jinho-blog/shared';
 
 import { ContentHeader, JsonLd, LinkButton, MDXComponent } from '@/core/ui';
 import { cn, generateArticleJsonLd, generatePageMetadata } from '@/core/utils';
 
-import { createLibrariesService } from '@/entities/libraries';
+import { createLibrariesService, sortLibraryGroupsByCategory } from '@/entities/libraries';
 
 import { HeaderWithSidebar } from '@/modules/header';
 import { LibraryBottomLinkSection } from '@/views/library';
-
-const SIDEBAR_WIDTH_CLASSNAME = 'w-64';
 
 const librariesService = createLibrariesService();
 
@@ -52,9 +50,11 @@ export default async function LibraryPage({ params }: Props) {
 
   const jsonLd = generateArticleJsonLd(library);
 
-  const flatGroups: Library[][] = LIBRARY_CATEGORY_MAP_KEYS.map(category =>
-    (groups[category] ?? []).flatMap(item => item),
-  ).filter(group => group.length > 0);
+  const sortedGroups = sortLibraryGroupsByCategory(groups);
+
+  const flatGroups: Library[][] = sortedGroups
+    .map(category => (groups[category] ?? []).flatMap(item => item))
+    .filter(group => group.length > 0);
 
   const flatList: Library[] = flatGroups.flatMap(item => item);
 
@@ -71,29 +71,29 @@ export default async function LibraryPage({ params }: Props) {
       <JsonLd jsonLd={jsonLd} />
 
       {/* 사이드바 */}
-      <HeaderWithSidebar className={cn('border-r border-gray-2', SIDEBAR_WIDTH_CLASSNAME)}>
+      <HeaderWithSidebar className="w-64 border-r border-gray-2">
         <div className="flex-col-start w-full">
           {flatGroups.map(group => (
             <div
               key={group[0].category}
               className={`
-                w-full border-b border-gray-2 py-6
+                w-full border-b border-gray-2 pt-6 pb-4
                 first:pt-0
                 last:border-0
               `}
             >
               {/* 카테고리 */}
-              <p className="mb-2 font-caption-14 text-gray-5">{LIBRARY_CATEGORY_MAP[group[0].category]}</p>
+              <p className="mb-1.5 font-caption-14 text-foreground">{TECH_STACK_MAP[group[0].category]}</p>
 
               {/* 리스트 */}
-              <ul className="flex-col-start gap-1 font-caption-16">
+              <ul className="flex-col-start font-caption-16">
                 {group.map(item => (
                   <li key={item.slug}>
                     <LinkButton
                       href={routes({ pathname: '/libraries/[slug]', params: { slug: item.slug } })}
                       className={cn(
                         `
-                          py-1 text-gray-5
+                          py-1.5 text-gray-5
                           hover:text-gray-8
                         `,
                         item.slug === slug && 'text-blue-7 hover:text-blue-7 font-semibold',
@@ -119,7 +119,7 @@ export default async function LibraryPage({ params }: Props) {
         >
           {/* 헤더 */}
           <ContentHeader
-            category={LIBRARY_CATEGORY_MAP[category]}
+            category={TECH_STACK_MAP[category as TechStack]}
             title={title}
           >
             <ContentHeader.Date

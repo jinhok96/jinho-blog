@@ -1,0 +1,49 @@
+---
+title: useMountEffect
+description: 마운트 직후 콜백을 한 번만 실행하는 훅
+
+# category 옵션: tech와 동일
+category: react
+
+# tech 옵션 (복수 선택 가능):
+# html | javascript | typescript | react | vue | nextjs | react-native
+# css | sass | styled-components | tailwindcss
+# tanstack-query | axios | swr | zustand | react-hook-form | jest | motion | pinia
+# webpack | babel | electron | turbopack | vercel | vite
+# figma | illustrator | photoshop | in-design | after-effects
+# git | github | slack | trello | jira | notion
+tech:
+  - typescript
+  - react
+---
+
+마운트 직후 콜백 함수를 한 번만 실행하는 훅입니다. 마운트 로직을 명시적으로 분리하고 싶을 때 사용합니다.
+
+# 구현
+
+```ts
+import { useEffect } from 'react';
+
+export function useMountEffect(callback: () => void): void {
+  useEffect(() => {
+    callback();
+  }, []);
+}
+```
+
+---
+
+# 사용법
+
+## 1. 마운트 시 한 번만 실행
+
+```tsx
+function Component() {
+  useMountEffect(() => {
+    console.log('마운트됨');
+    fetchInitialData();
+  });
+
+  return <div>...</div>;
+}
+```

@@ -11,7 +11,7 @@ export async function MDXComponent({ fileContent, hideTableOfContents }: Props) 
   const { content, toc } = await getMDXContent(fileContent);
 
   return (
-    <section className="flex-row-start size-full justify-between">
+    <section className="@container flex-row-start size-full justify-between">
       {/* 본문 */}
       <article className={cn('flex-col-start size-full gap-3', !hideTableOfContents && 'max-w-180')}>{content}</article>
 
@@ -19,8 +19,8 @@ export async function MDXComponent({ fileContent, hideTableOfContents }: Props) 
       <Show when={!hideTableOfContents}>
         <div
           className={`
-            sticky top-(--height-header) max-w-48 min-w-32 shrink-0 overflow-y-visible pt-0.5
-            not-wide:hidden
+            sticky top-(--height-header) w-48 shrink-0 overflow-y-visible pt-0.5
+            @max-4xl:hidden
           `}
         >
           <Toc toc={toc} />

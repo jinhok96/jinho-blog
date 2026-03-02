@@ -1,7 +1,7 @@
 'use client';
 
-import { useRouter } from 'next/navigation';
 import { type PropsWithChildren, useEffect, useState } from 'react';
+import { useRouter } from 'next/navigation';
 
 import { useBodyScrollLock, useKeyDownEffect, useMountEffect } from '@/core/hooks';
 import { Button } from '@/core/ui';

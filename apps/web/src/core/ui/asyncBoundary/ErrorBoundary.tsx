@@ -2,9 +2,9 @@
 
 import { type ComponentType, createElement, type ReactNode, type Ref, useImperativeHandle, useRef } from 'react';
 import {
-  type FallbackProps,
   ErrorBoundary as ReactErrorBoundary,
   type ErrorBoundaryProps as ReactErrorBoundaryProps,
+  type FallbackProps,
 } from 'react-error-boundary';
 
 export type ErrorFallbackProps = Omit<FallbackProps, 'resetErrorBoundary'> & {

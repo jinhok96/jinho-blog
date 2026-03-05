@@ -16,6 +16,7 @@ import {
 
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/' }),
+  siteName: '강진호 프론트엔드 포트폴리오',
 });
 
 export default async function HomePage() {

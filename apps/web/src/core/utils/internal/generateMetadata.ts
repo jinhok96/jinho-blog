@@ -4,6 +4,7 @@ import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
 
 type GeneratePageMetadataParams = {
   path: string;
+  siteName?: string;
   title?: string;
   description?: string;
   type?: 'website' | 'article';
@@ -12,12 +13,13 @@ type GeneratePageMetadataParams = {
 
 export function generatePageMetadata({
   path,
+  siteName = SITE_NAME,
   title,
   description,
   type = 'website',
   thumbnail,
 }: GeneratePageMetadataParams): Metadata {
-  const pageTitle = title ? `${SITE_NAME} • ${title}` : SITE_NAME;
+  const pageTitle = title ? `${siteName} • ${title}` : siteName;
   const pageDescription = description || SITE_DESCRIPTION;
 
   const query = path.startsWith('/') ? path : `/${path}`;
@@ -37,7 +39,7 @@ export function generatePageMetadata({
       title: pageTitle,
       description: pageDescription,
       url,
-      siteName: SITE_NAME,
+      siteName,
       type,
       images: imageUrl,
     },

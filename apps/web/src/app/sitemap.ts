@@ -24,26 +24,18 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       url: SITE_URL,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 1,
     },
     {
       url: `${SITE_URL}/blog`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.9,
     },
     {
       url: `${SITE_URL}/projects`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.5,
     },
     {
       url: `${SITE_URL}/libraries`,
       lastModified: new Date(),
-      changeFrequency: 'daily',
-      priority: 0.8,
     },
   ];
 
@@ -53,8 +45,6 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({
     url: `${SITE_URL}${post.path}`,
     lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
-    changeFrequency: 'daily' as const,
-    priority: 0.9,
   }));
 
   // 동적 프로젝트

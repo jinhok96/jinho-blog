@@ -25,7 +25,11 @@ function transformImagePaths(content: string, section: string | null): string {
   if (!section) return content;
 
   const staticPath = '/_next/static/media/mdx';
-  return content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
+  // 인라인 이미지: ![alt](./path)
+  let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
+  // 레퍼런스 스타일 정의: [ref]: ./path
+  result = result.replace(/^(\[[^\]]+\]):\s*\.\/([\S]+)/gm, `$1: ${staticPath}/${section}/$2`);
+  return result;
 }
 
 /**

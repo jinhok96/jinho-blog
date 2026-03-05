@@ -178,7 +178,11 @@ async function getGitDates(filePath: string): Promise<GitDates> {
 function transformImagePaths(content: string, section: ContentSection | null): string {
   if (!section) return content;
 
-  return content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${PATHS.STATIC_MDX_URL}/${section}/$2)`);
+  // 인라인 이미지: ![alt](./path)
+  let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${PATHS.STATIC_MDX_URL}/${section}/$2)`);
+  // 레퍼런스 스타일 정의: [ref]: ./path
+  result = result.replace(/^(\[[^\]]+\]):\s*\.\/([\S]+)/gm, `$1: ${PATHS.STATIC_MDX_URL}/${section}/$2`);
+  return result;
 }
 
 /**
@@ -206,13 +210,56 @@ function extractFirstImage(
     return thumbnail;
   }
 
-  // 2. 콘텐츠에서 첫 번째 이미지 추출
-  const imageRegex = /!\[([^\]]*)\]\(\.\/([^)]+)\)/;
-  const match = content.match(imageRegex);
+  // 2. 콘텐츠에서 첫 번째 이미지 추출 (인라인 vs 레퍼런스 사용 위치 비교)
 
-  if (match && section) {
-    const imagePath = match[2];
-    return `${PATHS.STATIC_MDX_URL}/${section}/${imagePath}`;
+  // 레퍼런스 정의 맵 생성: { refId: 'path' }
+  const refDefRegex = /^\[([^\]]+)\]:\s*\.\/([\S]+)/gm;
+  const refDefMap: Record<string, string> = {};
+  for (const m of content.matchAll(refDefRegex)) {
+    refDefMap[m[1].toLowerCase()] = m[2];
+  }
+
+  // 인라인 이미지: ![alt](./path)
+  const inlineImageRegex = /!\[([^\]]*)\]\(\.\/([^)]+)\)/;
+  const inlineMatch = content.match(inlineImageRegex);
+
+  // 전체/축약 레퍼런스: ![alt][ref] 또는 ![id][] (collapsed)
+  const fullRefUsageRegex = /!\[([^\]]*)\]\[([^\]]*)\]/;
+  const fullRefMatch = content.match(fullRefUsageRegex);
+
+  // 축약 레퍼런스: ![id] (뒤에 [ 또는 ( 없음)
+  const shortcutRefUsageRegex = /!\[([^\]]+)\](?!\[|\()/;
+  const shortcutRefMatch = content.match(shortcutRefUsageRegex);
+
+  // 가장 앞에 위치한 레퍼런스 이미지 사용 선택
+  const fullRefPos = fullRefMatch?.index ?? Infinity;
+  const shortcutRefPos = shortcutRefMatch?.index ?? Infinity;
+
+  let refUsagePos = Infinity;
+  let refId: string | null = null;
+
+  if (fullRefPos <= shortcutRefPos && fullRefMatch) {
+    refUsagePos = fullRefPos;
+    refId = (fullRefMatch[2] || fullRefMatch[1]).toLowerCase();
+  } else if (shortcutRefMatch) {
+    refUsagePos = shortcutRefPos;
+    refId = shortcutRefMatch[1].toLowerCase();
+  }
+
+  const inlinePos = inlineMatch?.index ?? Infinity;
+
+  if (inlinePos !== Infinity || refUsagePos !== Infinity) {
+    if (section) {
+      if (refUsagePos < inlinePos && refId) {
+        // 레퍼런스 방식 이미지가 더 앞에 위치
+        const refPath = refDefMap[refId];
+        if (refPath) {
+          return `${PATHS.STATIC_MDX_URL}/${section}/${refPath}`;
+        }
+      } else if (inlineMatch) {
+        return `${PATHS.STATIC_MDX_URL}/${section}/${inlineMatch[2]}`;
+      }
+    }
   }
 
   // 외부 URL 이미지도 추출

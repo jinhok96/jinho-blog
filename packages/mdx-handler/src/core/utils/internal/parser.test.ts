@@ -73,6 +73,35 @@ describe('parseMdxFile', () => {
         '![a](/_next/static/media/mdx/blog/a.png) and ![b](/_next/static/media/mdx/blog/b.png)',
       );
     });
+
+    it('레퍼런스 스타일 정의 [ref]: ./path → static 절대경로로 변환', () => {
+      mockMatter.mockReturnValue({
+        content: '![alt][cover]\n\n[cover]: ./images/cover.webp',
+        data: {},
+      } as never);
+      const result = parseMdxFile('/project/content/mdx/blog/post.mdx');
+      expect(result.content).toBe('![alt][cover]\n\n[cover]: /_next/static/media/mdx/blog/images/cover.webp');
+    });
+
+    it('레퍼런스 스타일 정의와 인라인 이미지 혼합: 모두 변환', () => {
+      mockMatter.mockReturnValue({
+        content: '![a](./a.png)\n\n![b][img-b]\n\n[img-b]: ./b.png',
+        data: {},
+      } as never);
+      const result = parseMdxFile('/project/content/mdx/blog/post.mdx');
+      expect(result.content).toBe(
+        '![a](/_next/static/media/mdx/blog/a.png)\n\n![b][img-b]\n\n[img-b]: /_next/static/media/mdx/blog/b.png',
+      );
+    });
+
+    it('외부 URL 레퍼런스 정의는 변환하지 않음', () => {
+      mockMatter.mockReturnValue({
+        content: '[link]: https://example.com',
+        data: {},
+      } as never);
+      const result = parseMdxFile('/project/content/mdx/blog/post.mdx');
+      expect(result.content).toBe('[link]: https://example.com');
+    });
   });
 
   describe('extractSection (경로에서 섹션 추출)', () => {

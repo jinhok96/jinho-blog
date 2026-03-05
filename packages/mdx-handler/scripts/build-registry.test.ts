@@ -23,6 +23,10 @@ vi.mock('@jinho-blog/thumbnail-generator', () => ({
   generateThumbnail: vi.fn().mockResolvedValue(Buffer.from('')),
 }));
 
+vi.mock('./validate-frontmatter.js', () => ({
+  validateFrontmatter: vi.fn().mockReturnValue({ valid: true, errors: [] }),
+}));
+
 import {
   buildAllRegistries,
   buildRegistry,
@@ -34,6 +38,7 @@ import {
   scanMdxDirectory,
   transformImagePaths,
 } from './build-registry.js';
+import { validateFrontmatter } from './validate-frontmatter.js';
 
 type MockReaddirSync = (
   path: fs.PathLike,
@@ -50,6 +55,7 @@ const mockWriteFileSync = vi.mocked(fs.writeFileSync);
 const mockMkdirSync = vi.mocked(fs.mkdirSync);
 const mockExecSync = vi.mocked(execSync);
 const mockMatter = vi.mocked(matter);
+const mockValidateFrontmatter = vi.mocked(validateFrontmatter);
 
 beforeAll(() => {
   // console.warn, console.error, console.log 비활성화
@@ -96,6 +102,21 @@ describe('transformImagePaths', () => {
     const content = '# Hello\n\nsome text';
     expect(transformImagePaths(content, 'blog')).toBe(content);
   });
+
+  it('레퍼런스 스타일 정의 [ref]: ./path → static 절대경로로 변환', () => {
+    const result = transformImagePaths('[cover]: ./images/cover.webp', 'blog');
+    expect(result).toBe('[cover]: /_static/mdx/blog/images/cover.webp');
+  });
+
+  it('레퍼런스 스타일 정의와 인라인 이미지 혼합: 모두 변환', () => {
+    const result = transformImagePaths('![a](./a.png)\n\n[img-b]: ./b.png', 'blog');
+    expect(result).toBe('![a](/_static/mdx/blog/a.png)\n\n[img-b]: /_static/mdx/blog/b.png');
+  });
+
+  it('외부 URL 레퍼런스 정의는 변환하지 않음', () => {
+    const content = '[link]: https://example.com';
+    expect(transformImagePaths(content, 'blog')).toBe(content);
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -130,6 +151,42 @@ describe('extractFirstImage', () => {
   it('frontmatter thumbnail이 ./이지만 section이 null: 변환 없이 반환', () => {
     const result = extractFirstImage({ thumbnail: './cover.png' }, '', null);
     expect(result).toBe('./cover.png');
+  });
+
+  it('레퍼런스 방식 이미지가 인라인보다 앞에 위치: 레퍼런스 이미지 반환', () => {
+    const content = '![cover][img-cover]\n\n![second](./second.png)\n\n[img-cover]: ./images/cover.webp';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('/_static/mdx/blog/images/cover.webp');
+  });
+
+  it('인라인 이미지가 레퍼런스 방식보다 앞에 위치: 인라인 이미지 반환', () => {
+    const content = '![first](./first.png)\n\n![ref][img-ref]\n\n[img-ref]: ./ref.webp';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('/_static/mdx/blog/first.png');
+  });
+
+  it('레퍼런스 방식 이미지만 존재: 해당 이미지 반환', () => {
+    const content = '![cover][img-cover]\n\n[img-cover]: ./images/cover.webp';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('/_static/mdx/blog/images/cover.webp');
+  });
+
+  it('레퍼런스 사용은 있지만 ./로 시작하는 정의 없음: undefined 반환', () => {
+    const content = '![cover][img-cover]\n\n[img-cover]: https://example.com/cover.webp';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBeUndefined();
+  });
+
+  it('축약 레퍼런스 ![id] 이미지: 해당 이미지 반환', () => {
+    const content = '![cover-image]\n\n[cover-image]: ./images/cover.webp';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('/_static/mdx/blog/images/cover.webp');
+  });
+
+  it('축약 레퍼런스가 인라인보다 앞에 위치: 축약 레퍼런스 이미지 반환', () => {
+    const content = '![cover-image]\n\n![second](./second.png)\n\n[cover-image]: ./images/cover.webp';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('/_static/mdx/blog/images/cover.webp');
   });
 });
 
@@ -356,6 +413,16 @@ describe('parseMdxFile', () => {
 
     expect((result.createdAt as string) >= before).toBe(true);
     expect((result.createdAt as string) <= after).toBe(true);
+  });
+
+  it('frontmatter 검증 실패 시 에러 throw', async () => {
+    mockMatter.mockReturnValue({ data: { title: 'Post' }, content: '' } as never);
+    mockValidateFrontmatter.mockReturnValueOnce({
+      valid: false,
+      errors: [{ field: 'description', message: '필수 필드입니다.' }],
+    });
+
+    await expect(parseMdxFile('/test/post.mdx', 'blog')).rejects.toThrow('Frontmatter 검증 실패 [post.mdx]');
   });
 });
 

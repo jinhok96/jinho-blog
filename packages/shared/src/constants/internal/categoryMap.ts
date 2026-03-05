@@ -12,3 +12,6 @@ export const PROJECT_CATEGORY_MAP: Record<ProjectCategory, string> = {
   tripmoney: '트립머니',
   personal: '개인 프로젝트',
 };
+
+export const BLOG_CATEGORIES = Object.keys(BLOG_CATEGORY_MAP) as BlogCategory[];
+export const PROJECT_CATEGORIES = Object.keys(PROJECT_CATEGORY_MAP) as ProjectCategory[];

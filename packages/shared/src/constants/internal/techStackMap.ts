@@ -50,3 +50,5 @@ export const TECH_STACK_MAP: Record<TechStack, string> = {
   jira: 'Jira',
   notion: 'Notion',
 };
+
+export const TECH_STACKS = Object.keys(TECH_STACK_MAP) as TechStack[];

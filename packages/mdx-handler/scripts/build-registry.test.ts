@@ -23,6 +23,10 @@ vi.mock('@jinho-blog/thumbnail-generator', () => ({
   generateThumbnail: vi.fn().mockResolvedValue(Buffer.from('')),
 }));
 
+vi.mock('./validate-frontmatter.js', () => ({
+  validateFrontmatter: vi.fn().mockReturnValue({ valid: true, errors: [] }),
+}));
+
 import {
   buildAllRegistries,
   buildRegistry,
@@ -34,6 +38,7 @@ import {
   scanMdxDirectory,
   transformImagePaths,
 } from './build-registry.js';
+import { validateFrontmatter } from './validate-frontmatter.js';
 
 type MockReaddirSync = (
   path: fs.PathLike,
@@ -50,6 +55,7 @@ const mockWriteFileSync = vi.mocked(fs.writeFileSync);
 const mockMkdirSync = vi.mocked(fs.mkdirSync);
 const mockExecSync = vi.mocked(execSync);
 const mockMatter = vi.mocked(matter);
+const mockValidateFrontmatter = vi.mocked(validateFrontmatter);
 
 beforeAll(() => {
   // console.warn, console.error, console.log 비활성화
@@ -356,6 +362,16 @@ describe('parseMdxFile', () => {
 
     expect((result.createdAt as string) >= before).toBe(true);
     expect((result.createdAt as string) <= after).toBe(true);
+  });
+
+  it('frontmatter 검증 실패 시 에러 throw', async () => {
+    mockMatter.mockReturnValue({ data: { title: 'Post' }, content: '' } as never);
+    mockValidateFrontmatter.mockReturnValueOnce({
+      valid: false,
+      errors: [{ field: 'description', message: '필수 필드입니다.' }],
+    });
+
+    await expect(parseMdxFile('/test/post.mdx', 'blog')).rejects.toThrow('Frontmatter 검증 실패 [post.mdx]');
   });
 });
 

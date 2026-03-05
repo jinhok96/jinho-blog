@@ -12,6 +12,7 @@ import { fileURLToPath } from 'url';
 import { generateThumbnail } from '@jinho-blog/thumbnail-generator';
 
 import { PATHS } from '../src/core/config';
+import { validateFrontmatter } from './validate-frontmatter.js';
 import type { ContentSection } from '../src/types';
 
 interface ScannedFile {
@@ -231,6 +232,13 @@ function extractFirstImage(
 async function parseMdxFile(filePath: string, section: ContentSection): Promise<Record<string, unknown>> {
   const fileContent = fs.readFileSync(filePath, 'utf-8');
   const { data, content } = matter(fileContent);
+
+  // Frontmatter 검증
+  const validation = validateFrontmatter(data, section);
+  if (!validation.valid) {
+    const errorMessages = validation.errors.map(e => `  - ${e.field}: ${e.message}`).join('\n');
+    throw new Error(`Frontmatter 검증 실패 [${path.basename(filePath)}]:\n${errorMessages}`);
+  }
 
   // Git에서 날짜 추출
   const gitDates = await getGitDates(filePath);

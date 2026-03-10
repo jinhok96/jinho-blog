@@ -42,7 +42,9 @@
       "Bash(pnpm test --filter @jinho-blog/web)",
       "mcp__claude_ai_Notion__notion-fetch",
       "Bash(pnpm --filter web lint)",
-      "Bash(pnpm test -w @jinho-blog/mdx-handler)"
+      "Bash(pnpm test -w @jinho-blog/mdx-handler)",
+      "Bash(git diff:*)",
+      "Bash(tail:*)"
     ],
     "deny": [],
     "ask": []

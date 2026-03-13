@@ -103,7 +103,7 @@ function copyMdxImages(): void {
   console.log(`\n📸 MDX 이미지 복사 시작\n`);
 
   for (const section of SECTIONS) {
-    const sectionDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);
+    const sectionDir = path.join(MONOREPO_ROOT, PATHS.MDX_CONTENT_DIR, section);
 
     if (!fs.existsSync(sectionDir)) {
       console.warn(`⚠️  섹션 디렉토리를 찾을 수 없습니다: ${section}`);

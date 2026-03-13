@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 
 import { generateThumbnail } from '@jinho-blog/thumbnail-generator';
 
-import { PATHS } from '../src/core/config';
+import { MDX_ROUTES, PATHS } from '../src/core/config';
 import { validateFrontmatter } from './validate-frontmatter.js';
 import type { ContentSection } from '../src/types';
 
@@ -40,11 +40,6 @@ interface Registry {
 }
 
 const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];
-const MDX_ROUTES: Record<ContentSection, string> = {
-  blog: '/blog',
-  projects: '/projects',
-  libraries: '/libraries',
-};
 
 /**
  * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
@@ -355,7 +350,7 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
  * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
  */
 function scanMdxDirectory(section: ContentSection): ScannedFile[] {
-  const mdxDir = path.join(MONOREPO_ROOT, 'content', 'mdx', section);
+  const mdxDir = path.join(MONOREPO_ROOT, PATHS.MDX_CONTENT_DIR, section);
   const files: ScannedFile[] = [];
 
   if (!fs.existsSync(mdxDir)) {

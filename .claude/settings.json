@@ -44,7 +44,9 @@
       "Bash(pnpm --filter web lint)",
       "Bash(pnpm test -w @jinho-blog/mdx-handler)",
       "Bash(git diff:*)",
-      "Bash(tail:*)"
+      "Bash(tail:*)",
+      "Bash(pnpm --filter @jinho-blog/mdx-handler lint)",
+      "Bash(pnpm --filter @jinho-blog/mdx-handler build)"
     ],
     "deny": [],
     "ask": []

@@ -2,6 +2,8 @@ import * as fs from 'fs';
 
 import matter from 'gray-matter';
 
+import { PATHS } from '../../config';
+
 export interface ParsedMdx {
   content: string;
 }
@@ -10,7 +12,8 @@ export interface ParsedMdx {
  * filePath에서 MDX 섹션 추출 (blog/projects/libraries)
  */
 function extractSection(filePath: string): string | null {
-  const match = filePath.match(/content[\/\\]mdx[\/\\](blog|projects|libraries)[\/\\]/);
+  const mdxContentPattern = PATHS.MDX_CONTENT_DIR.replace('/', '[/\\\\]');
+  const match = filePath.match(new RegExp(`${mdxContentPattern}[/\\\\](blog|projects|libraries)[/\\\\]`));
   return match ? match[1] : null;
 }
 
@@ -24,7 +27,7 @@ function extractSection(filePath: string): string | null {
 function transformImagePaths(content: string, section: string | null): string {
   if (!section) return content;
 
-  const staticPath = '/_next/static/media/mdx';
+  const staticPath = PATHS.NEXT_STATIC_MDX_URL;
   // 인라인 이미지: ![alt](./path)
   let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
   // 레퍼런스 스타일 정의: [ref]: ./path

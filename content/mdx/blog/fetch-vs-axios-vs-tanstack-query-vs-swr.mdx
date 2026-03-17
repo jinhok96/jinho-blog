@@ -1,0 +1,551 @@
+---
+title: Fetch vs Axios vs Tanstack Query vs SWR
+description: Fetch API, Axios, Tanstack Query, SWR 기능과 차이점 비교
+category: frontend
+---
+
+React에서 서버 데이터를 다루는 방식은 크게 두 계층으로 나뉜다.
+
+첫 번째는 **HTTP 클라이언트** 계층이다. **Fetch API**와 **Axios**가 여기에 속하며, 실제 네트워크 요청을 담당한다. 두 번째는 **서버 상태 관리** 계층이다. **Tanstack Query**와 **SWR**이 여기에 속하며, 내부적으로 Fetch API나 Axios를 사용해 요청을 보내고, 그 결과를 클라이언트에서 캐싱·동기화·상태를 관리한다.
+
+일반적으로 HTTP 클라이언트 중 하나를 고르고, 필요에 따라 서버 상태 관리 라이브러리를 조합하는 방식으로 사용한다.
+
+---
+
+# 1. Fetch API
+
+브라우저와 Node.js에 기본 내장된 HTTP 요청 API다. 별도 설치 없이 사용할 수 있으며 Promise 기반으로 동작한다. 로우 레벨 API를 지향하기 때문에 응답 파싱, 에러 처리, 인터셉터 등 부가 기능은 직접 구현해야 한다.
+
+## 기본 사용법
+
+**GET 요청**
+
+```typescript
+async function getUser(id: number) {
+  const res = await fetch(`/api/users/${id}`);
+  if (!res.ok) throw new Error('요청 실패');
+  return res.json();
+}
+```
+
+**POST 요청**
+
+```typescript
+async function createUser(user: { name: string; email: string }) {
+  const res = await fetch('/api/users', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(user),
+  });
+  if (!res.ok) throw new Error('요청 실패');
+  return res.json();
+}
+```
+
+## 에러 처리
+
+Fetch는 네트워크 오류에만 Promise를 reject한다. HTTP 4xx, 5xx 응답은 정상 응답으로 처리되므로 성공 여부를 직접 확인해야 한다.
+
+```typescript
+const res = await fetch('/api/users');
+
+if (!res.ok) {
+  throw new Error(`에러 발생: ${res.status} ${res.statusText}`);
+}
+
+const data = await res.json();
+```
+
+## 요청 취소
+
+`AbortController`를 통해 진행 중인 요청을 취소할 수 있다.
+
+```typescript
+useEffect(() => {
+  const controller = new AbortController();
+
+  fetch('/api/users', { signal: controller.signal })
+    .then(res => {
+      if (!res.ok) throw new Error(`에러: ${res.status}`);
+      return res.json();
+    })
+    .then(setData)
+    .catch(err => {
+      if (err.name !== 'AbortError') setError(err);
+    });
+
+  return () => controller.abort();
+}, []);
+```
+
+## 인터셉터
+
+Fetch API는 인터셉터를 기본 제공하지 않는다. 인증 헤더 추가나 에러 공통 처리 같은 작업이 필요하다면 `fetch`를 래핑한 커스텀 함수를 만들어야 한다.
+
+```typescript
+async function apiFetch(url: string, options?: RequestInit) {
+  const headers = {
+    ...options?.headers,
+    Authorization: `Bearer ${getToken()}`,
+    'Content-Type': 'application/json',
+  };
+
+  const res = await fetch(url, { ...options, headers });
+
+  if (res.status === 401) {
+    await refreshToken();
+    return apiFetch(url, options); // 토큰 갱신 후 재요청
+  }
+
+  if (!res.ok) throw new Error(`에러: ${res.status}`);
+
+  return res.json();
+}
+```
+
+## 장단점
+
+**장점**
+
+- 별도 설치 없이 브라우저에서 바로 사용 가능
+- 번들 크기 증가 없음 (0kb)
+- Web 표준 API이므로 장기적으로 안정적
+
+**단점**
+
+- HTTP 에러를 자동으로 throw하지 않아 성공 여부 직접 확인 필요
+- `res.json()` 등 응답 파싱을 직접 처리해야 함
+- 로우 레벨 API이므로 부가 기능 직접 구현 필요
+- 요청 취소 시 `AbortError` 처리를 직접 해야 함
+- 로딩/에러 상태 관리 없음
+
+---
+
+# 2. Axios
+
+브라우저와 Node.js 환경을 모두 지원하는 Promise 기반 HTTP 클라이언트다. JSON 자동 변환, HTTP 에러 자동 throw, 인터셉터, 요청 취소 등 자주 사용하는 기능을 기본으로 제공한다.
+
+## 기본 사용법
+
+**GET 요청**
+
+```typescript
+import axios from 'axios';
+
+async function getUser(id: number) {
+  const { data } = await axios.get(`/api/users/${id}`);
+  return data;
+}
+```
+
+**POST 요청**
+
+```typescript
+import axios from 'axios';
+
+async function createUser(user: { name: string; email: string }) {
+  const { data } = await axios.post('/api/users', user);
+  return data;
+}
+```
+
+## 에러 처리
+
+Axios는 2xx 범위 밖의 상태 코드를 자동으로 reject한다. `error.response`로 상세 정보에 접근할 수 있다.
+
+```typescript
+try {
+  const { data } = await axios.get('/api/users');
+} catch (error) {
+  if (axios.isAxiosError(error)) {
+    console.error(error.response?.status, error.response?.data);
+  }
+}
+```
+
+## 인터셉터
+
+`axios.interceptors`로 요청/응답 공통 처리를 간단하게 등록할 수 있다.
+
+```typescript
+const instance = axios.create({ baseURL: '/api' });
+
+// 요청 인터셉터: 인증 헤더 자동 추가
+instance.interceptors.request.use(config => {
+  config.headers.Authorization = `Bearer ${getToken()}`;
+  return config;
+});
+
+// 응답 인터셉터: 401 시 토큰 갱신
+instance.interceptors.response.use(
+  response => response,
+  async error => {
+    if (error.response?.status === 401) {
+      await refreshToken();
+      return instance.request(error.config);
+    }
+    return Promise.reject(error);
+  },
+);
+```
+
+## 요청 취소
+
+`AbortController`를 통해 진행 중인 요청을 취소할 수 있다. 컴포넌트 언마운트 시 요청을 정리할 때 유용하다.
+
+```typescript
+useEffect(() => {
+  const controller = new AbortController();
+
+  axios
+    .get('/api/users', { signal: controller.signal })
+    .then(res => setData(res.data))
+    .catch(err => {
+      if (err.name !== 'CanceledError') setError(err);
+    });
+
+  return () => controller.abort();
+}, []);
+```
+
+## 장단점
+
+**장점**
+
+- HTTP 오류 상태 코드에서 자동으로 에러를 throw
+- JSON 자동 직렬화/역직렬화
+- 요청/응답 인터셉터 지원으로 공통 처리 용이
+- 요청 취소, 타임아웃 설정 간편
+
+**단점**
+
+- 추가 설치 및 번들 크기 증가 (~14kb)
+- 캐싱, 로딩/에러 상태 관리는 여전히 직접 구현 필요
+
+---
+
+# 3. Tanstack Query
+
+HTTP 클라이언트가 아닌 서버 상태 관리 라이브러리다. 내부적으로 Fetch API나 Axios와 함께 사용한다. 캐싱, 자동 리페치, 로딩/에러 상태, Optimistic Update 등 서버 데이터 동기화에 필요한 기능을 제공한다.
+
+## 기본 사용법
+
+**GET 요청 (useQuery)**
+
+```typescript
+import { useQuery } from '@tanstack/react-query';
+
+function UserProfile({ id }: { id: number }) {
+  const { data, isLoading, error } = useQuery({
+    queryKey: ['user', id],
+    queryFn: () => fetch(`/api/users/${id}`).then(res => res.json()),
+  });
+
+  if (isLoading) return <div>로딩 중...</div>;
+  if (error) return <div>에러 발생</div>;
+  return <div>{data.name}</div>;
+}
+```
+
+**POST 요청 (useMutation)**
+
+```typescript
+import { useMutation, useQueryClient } from '@tanstack/react-query';
+
+function CreateUserForm() {
+  const queryClient = useQueryClient();
+  const { mutate, isPending } = useMutation({
+    mutationFn: (user: { name: string; email: string }) =>
+      axios.post('/api/users', user).then(res => res.data),
+    onSuccess: () => {
+      queryClient.invalidateQueries({ queryKey: ['users'] });
+    },
+  });
+
+  return (
+    <button
+      onClick={() => mutate({ name: '홍길동', email: 'test@example.com' })}
+      disabled={isPending}
+    >
+      생성
+    </button>
+  );
+}
+```
+
+## 캐싱
+
+`queryKey` 배열을 기준으로 캐시를 식별한다. 동일한 `queryKey`로 `useQuery`를 호출하면 네트워크 요청 없이 캐시를 반환하며, `staleTime`과 `gcTime`으로 캐싱 전략을 세밀하게 제어할 수 있다.
+
+- `staleTime`: 캐시를 fresh로 유지하는 시간. 이 시간 동안은 리페치가 발생하지 않는다. 기본값은 0(즉시 stale).
+- `gcTime`: 사용하지 않는 캐시를 메모리에 보관하는 시간. 기본값은 5분(300,000ms).
+
+```typescript
+const { data } = useQuery({
+  queryKey: ['users'],
+  queryFn: fetchUsers,
+  staleTime: 1000 * 60 * 5, // 5분간 fresh 상태 유지
+  gcTime: 1000 * 60 * 10, // 10분 후 캐시 제거 (기본값: 5분)
+});
+```
+
+## 로딩·에러 상태
+
+`isPending`, `isError`, `isFetching` 등의 상태를 자동으로 제공한다. v5에서는 `isLoading`과 `isPending`이 구분된다.
+
+- `isPending`: 아직 캐시된 데이터가 없는 상태 (`status === 'pending'`)
+- `isLoading`: `isPending && isFetching` — 첫 번째 요청이 진행 중인 상태
+- `isFetching`: 백그라운드 리페치 포함, 요청이 진행 중인 모든 상태
+
+```typescript
+const { data, isPending, isError, isFetching } = useQuery({
+  queryKey: ['users'],
+  queryFn: fetchUsers,
+});
+
+if (isPending) return <Spinner />;
+if (isError) return <ErrorMessage />;
+```
+
+## 자동 리페치
+
+특정 상황에 데이터를 자동으로 다시 가져온다. 브라우저 탭이 활성화되거나 네트워크가 재연결될 때 오래된 캐시를 갱신하므로, 사용자가 항상 최신 데이터를 볼 수 있다.
+
+```typescript
+const { data } = useQuery({
+  queryKey: ['users'],
+  queryFn: fetchUsers,
+  refetchOnWindowFocus: true, // 탭 포커스 시 리페치 (기본값: true)
+  refetchOnReconnect: true, // 네트워크 재연결 시 리페치 (기본값: true)
+  refetchInterval: 1000 * 30, // 30초마다 자동 리페치
+});
+```
+
+## Devtools
+
+`@tanstack/react-query-devtools` 패키지를 추가하면 캐시 상태, 쿼리 목록, 요청 타이밍 등을 시각적으로 확인할 수 있다.
+
+```typescript
+import { ReactQueryDevtools } from '@tanstack/react-query-devtools';
+
+function App() {
+  return (
+    <QueryClientProvider client={queryClient}>
+      <YourApp />
+      <ReactQueryDevtools initialIsOpen={false} />
+    </QueryClientProvider>
+  );
+}
+```
+
+## 장단점
+
+**장점**
+
+- 서버 상태(캐싱, 동기화, 리페치) 자동 관리
+- 로딩, 에러, 성공 상태 자동 제공
+- 백그라운드 리페치, 포커스 시 리페치 등 다양한 옵션
+- Mutation 후 캐시 무효화로 일관성 유지
+- Devtools 지원
+
+**단점**
+
+- 학습 곡선이 있음 (queryKey 전략, 캐시 무효화 등)
+- 단순 요청에는 설정 비용이 높음
+- 번들 크기 증가 (~13kb)
+
+---
+
+# 4. SWR
+
+Vercel에서 만든 React 데이터 페칭 라이브러리다. `useSWR` 훅 하나로 캐싱과 자동 리페치를 간편하게 사용할 수 있다. Tanstack Query보다 API가 단순하고 번들 크기가 작지만, 복잡한 서버 상태 시나리오에는 기능이 부족할 수 있다.
+
+## 기본 사용법
+
+**GET 요청 (useSWR)**
+
+```typescript
+import useSWR from 'swr';
+
+const fetcher = (url: string) => fetch(url).then(res => res.json());
+
+function UserProfile({ id }: { id: number }) {
+  const { data, isLoading, error } = useSWR(`/api/users/${id}`, fetcher);
+
+  if (isLoading) return <div>로딩 중...</div>;
+  if (error) return <div>에러 발생</div>;
+  return <div>{data.name}</div>;
+}
+```
+
+**POST 요청 (useSWRMutation)**
+
+```typescript
+import useSWRMutation from 'swr/mutation';
+
+async function createUser(url: string, { arg }: { arg: { name: string; email: string } }) {
+  const res = await fetch(url, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify(arg),
+  });
+  return res.json();
+}
+
+function CreateUserForm() {
+  const { trigger, isMutating } = useSWRMutation('/api/users', createUser);
+
+  return (
+    <button
+      onClick={() => trigger({ name: '홍길동', email: 'test@example.com' })}
+      disabled={isMutating}
+    >
+      생성
+    </button>
+  );
+}
+```
+
+## 캐싱과 자동 리페치
+
+요청 URL(또는 키)을 기준으로 데이터를 캐싱하며, 동일한 키로 `useSWR`을 호출하면 네트워크 요청 없이 캐시를 반환한다. 브라우저 탭이 포커스되거나 네트워크가 재연결될 때 자동으로 최신 데이터를 가져온다.
+
+```typescript
+const { data } = useSWR('/api/users', fetcher, {
+  refreshInterval: 1000 * 30, // 30초마다 자동 리페치
+  revalidateOnFocus: true, // 탭 포커스 시 리페치 (기본값: true)
+  revalidateOnReconnect: true, // 네트워크 재연결 시 리페치 (기본값: true)
+});
+```
+
+## 미들웨어
+
+SWR은 미들웨어를 공식적으로 지원한다. `SWRConfig`의 `use` 옵션에 미들웨어 함수를 등록하면 모든 `useSWR` 훅 호출을 감싸는 레이어를 추가할 수 있다. 로깅, 요청 지연 측정, 에러 리포팅 등 횡단 관심사를 한곳에서 처리하기에 적합하다.
+
+```typescript
+import { SWRConfig, type Middleware, type SWRHook } from 'swr';
+
+const authMiddleware: Middleware = (useSWRNext: SWRHook) => {
+  return (key, fetcher, config) => {
+    const extendedFetcher = (url: string) => {
+      return fetcher!(url, {
+        headers: { Authorization: `Bearer ${getToken()}` },
+      });
+    };
+    return useSWRNext(key, extendedFetcher, config);
+  };
+};
+
+function App() {
+  return (
+    <SWRConfig value={{ use: [authMiddleware] }}>
+      <YourApp />
+    </SWRConfig>
+  );
+}
+```
+
+## Next.js 통합
+
+SWR은 Next.js와 함께 사용할 때 서버에서 미리 가져온 데이터를 초기값으로 주입하는 패턴이 간단하다. `fallback` 옵션에 서버 데이터를 넘기면 클라이언트에서 추가 요청 없이 즉시 렌더링하고, 이후 백그라운드에서 갱신한다.
+
+```typescript
+// app/page.tsx (서버 컴포넌트)
+export default async function Page() {
+  const users = await fetchUsers();
+
+  return (
+    <SWRConfig value={{ fallback: { '/api/users': users } }}>
+      <UserList />
+    </SWRConfig>
+  );
+}
+
+// UserList.tsx (클라이언트 컴포넌트)
+function UserList() {
+  // 서버에서 주입된 초기값을 즉시 반환, 이후 백그라운드에서 갱신
+  const { data } = useSWR('/api/users', fetcher);
+  return <ul>{data?.map(user => <li key={user.id}>{user.name}</li>)}</ul>;
+}
+```
+
+## 장단점
+
+**장점**
+
+- 간결한 API로 빠르게 적용 가능
+- 기본 캐싱, 자동 리페치 지원
+- 미들웨어로 중간 로직 처리 가능
+- 번들 크기가 작음 (~5.7kb)
+- Vercel/Next.js 환경에 최적화
+
+**단점**
+
+- 복잡한 서버 상태 시나리오에는 기능이 부족할 수 있음
+
+---
+
+# 비교 표
+
+| 항목           | Fetch API | Axios     | Tanstack Query | SWR            |
+| -------------- | --------- | --------- | -------------- | -------------- |
+| 번들 크기      | 0kb       | ~14kb     | ~13kb          | ~5.7kb         |
+| 캐싱           | X         | X         | O              | O              |
+| 자동 리페치    | X         | X         | O              | O              |
+| 로딩/에러 상태 | 직접 관리 | 직접 관리 | 자동           | 자동           |
+| 요청 취소      | O         | O         | 자동           | 자동           |
+| Mutation       | X         | X         | useMutation    | useSWRMutation |
+| 부가 기능      | -         | 인터셉터  | Devtools       | 미들웨어       |
+| 학습 곡선      | 낮음      | 낮음      | 높음           | 중간           |
+
+---
+
+# 선택 기준
+
+## 1. **Fetch API**를 선택할 때
+
+- 외부 의존성을 최소화해야 하는 경우
+- 간단한 기능으로 충분한 경우
+- 번들 크기에 민감한 환경
+
+## 2. **Axios**를 선택할 때
+
+- Fetch API보다 확장된 기능이 필요한 경우
+- 인터셉터로 중간 로직 처리가 필요한 경우
+
+## 3. **Tanstack Query**를 선택할 때
+
+- 서버 상태 및 동기화를 체계적으로 관리해야 하는 경우
+- 복잡한 데이터 페칭 시나리오 (무한 스크롤, Optimistic Update 등)
+
+## 4. **SWR**을 선택할 때
+
+- 간단한 캐싱과 자동 리페치가 필요하지만 Tanstack Query까지는 과한 경우
+- Next.js/Vercel 환경에서 가볍게 사용하고 싶은 경우
+- 번들 크기를 줄이면서도 기본적인 서버 상태 기능이 필요한 경우
+- 미들웨어로 중간 로직 처리가 필요한 경우
+
+---
+
+# 마무리
+
+Fetch API, Axios 같은 HTTP 클라이언트와 Tanstack Query, SWR 같은 서버 상태 관리 라이브러리를 조합해 데이터 페칭 전반을 관리할 수 있다. 예를 들어 간단한 기능만 필요하다면 Fetch API + SWR 조합으로 충분하고, 데이터 관리가 복잡한 프로젝트에서는 Axios + Tanstack Query가 더 나은 선택이다. Next.js 환경에서 서버 사이드 데이터 페칭이 많아 Fetch API 확장 기능을 충분히 활용할 수 있고, 체계적인 클라이언트 상태 관리도 필요하다면 Fetch API + Tanstack Query가 적절하다. 혹은 상태 관리 라이브러리 없이 HTTP 클라이언트만으로 직접 구현할 수도 있다. 결국 각 프로젝트의 요구사항에 맞게 적절한 조합을 선택하는 것이 중요하다.
+
+---
+
+# 참조
+
+<Callout>
+
+- [Fetch API - MDN Web Docs][fetch-mdn]
+- [Axios 공식 문서][axios-docs]
+- [Tanstack Query 공식 문서][tanstack-query-docs]
+- [SWR 공식 문서][swr-docs]
+
+</Callout>
+
+{/* 링크 */}
+[fetch-mdn]: https://developer.mozilla.org/ko/docs/Web/API/Fetch_API
+[axios-docs]: https://axios-http.com/kr/docs/intro
+[tanstack-query-docs]: https://tanstack.com/query/latest
+[swr-docs]: https://swr.vercel.app/ko

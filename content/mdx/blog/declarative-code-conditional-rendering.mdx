@@ -1,0 +1,301 @@
+---
+title: 조건부 렌더링을 선언적으로 작성하기
+description: Show, Switch 컴포넌트로 조건부 렌더링을 선언적으로 작성해보자
+
+# category 옵션: frontend | algorithm | cs | uiux | review
+category: frontend
+---
+
+선언적 프로그래밍은 '어떻게(How)'가 아니라 '무엇(What)'을 원하는지 묘사하는 프로그래밍 패러다임이다. 절차나 제어 흐름을 명시하는 대신 결과의 형태를 정의한다. 쉽게 풀어 설명하자면, '만약 A면 B-1을 하고 B-2를 한 뒤 B-3을 하면 되고, C면 D-1을 하고 D-2를 하거나 D-3을 해'처럼 뭘 해야하는지 구구절절 설명하는게 아니라 'A면 B고 C면 D야'처럼 결과를 명시하는 것이다. 선언적으로 코드를 작성하면 가독성을 높이고, 추상화 수준을 올려 재사용성을 향상시킬 수 있다.
+
+이번 글에서는 실제로 코드를 작성하면서 유용했던 조건부 렌더링을 선언적으로 작성하는 방법을 소개한다.
+
+---
+
+# 조건부 렌더링은 원래 이렇게 쓴다
+
+여기 로딩 상태일 때 로딩 UI를 보여주는 화면이 있다.
+
+```tsx
+return (
+  <div>
+    {isLoading ? (
+      <div>Loading...</div>
+    ) : (
+      <div>
+        <p>{data.id}</p>
+        <p>{data.nickname}</p>
+      </div>
+    )}
+  </div>
+);
+```
+
+`isLoading`이 `true`면 로딩 UI가 표시되고, `false`면 회원 정보가 표시된다. 지금 코드는 단순하니까 괜찮지만, 조건이 여러 개 생기고 각 분기의 JSX가 길어지면 가독성이 아래 예시처럼 급격히 떨어진다.
+
+```tsx
+return (
+  <section>
+    <header>
+      {isLoggedIn ? (
+        <div>
+          <img
+            src={user.avatar}
+            alt="프로필"
+          />
+          <span>{user.name}</span>
+          <button>로그아웃</button>
+        </div>
+      ) : (
+        <div>
+          <p>로그인이 필요합니다.</p>
+          <button>로그인</button>
+        </div>
+      )}
+    </header>
+    <main>
+      {isPremium ? <PremiumBanner /> : null}
+      <PostContent post={post} />
+      {isOwner ? (
+        <div>
+          <button>수정</button>
+          <button>삭제</button>
+        </div>
+      ) : null}
+    </main>
+  </section>
+);
+```
+
+일반적으로 조건부 렌더링을 할 때 많이 사용되는 삼항연산자는 아래와 같은 이유로 가독성을 해칠 수 있다.
+
+<Callout>
+
+1. 삼항연산자의 `?`와 `:`는 JSX 구조에서 빠르게 분기를 탐색하기 힘들다.
+2. 삼항연산자는 표현식인데 반해 JSX는 트리 구조 문법이다보니, JSX만 사용되었을 때는 트리 구조만 고려하면 되는데 삼항연산자가 사용되면 표현식까지 고려해야 한다.
+3. falsy 값이 렌더링되는 경우를 막기 위해 `null`을 명시하는데, 코드가 복잡해질수록 노이즈처럼 읽는 것을 방해할 수 있다.
+
+</Callout>
+
+---
+
+# Show 컴포넌트
+
+그래서 조건부 렌더링을 JSX 형식으로 말끔하게 작성할 수 있는 `Show` 컴포넌트를 만들었다.
+
+```tsx
+import type { ReactNode } from 'react';
+
+export function Show({
+  when,
+  fallback = null,
+  children,
+}: {
+  when: unknown;
+  fallback?: ReactNode;
+  children: ReactNode;
+}): ReactNode {
+  const isTruthy = Boolean(when);
+
+  // falsy면 fallback 렌더링
+  if (!isTruthy) return fallback;
+
+  // truthy면 children 렌더링
+  return <>{children}</>;
+}
+```
+
+- [SolidJS-Show]에서 영감을 얻었다. 이 코드는 로직을 소개하기 위해 단순화한 버전이다. 전체 코드는 [Show]에서 볼 수 있다.
+
+이 컴포넌트는 매우 단순하다. `when`이 falsy이면 `fallback`을 렌더링하고, truthy이면 `children`을 렌더링한다. `fallback`의 기본값은 `null`로 지정되어 있어 따로 명시하지 않아도 된다.
+
+첫 예시를 다시 가져와보자.
+
+```tsx
+return (
+  <div>
+    {isLoading ? (
+      <div>Loading...</div>
+    ) : (
+      <div>
+        <p>{data.id}</p>
+        <p>{data.nickname}</p>
+      </div>
+    )}
+  </div>
+);
+```
+
+이 컴포넌트에 `Show`를 적용하면 이렇게 된다.
+
+```tsx
+return (
+  <div>
+    <Show
+      when={!isLoading}
+      fallback={<div>Loading...</div>}
+    >
+      <div>
+        <p>{data.id}</p>
+        <p>{data.nickname}</p>
+      </div>
+    </Show>
+  </div>
+);
+```
+
+처음부터 끝까지 표현식 없이 JSX 형식으로 조건부 렌더링을 작성할 수 있다. 좀 더 복잡한 두 번째 예시에도 적용해보자.
+
+```tsx
+return (
+  <section>
+    <header>
+      <Show
+        when={isLoggedIn}
+        fallback={
+          <div>
+            <p>로그인이 필요합니다.</p>
+            <button>로그인</button>
+          </div>
+        }
+      >
+        <div>
+          <img
+            src={user.avatar}
+            alt="프로필"
+          />
+          <span>{user.name}</span>
+          <button>로그아웃</button>
+        </div>
+      </Show>
+    </header>
+    <main>
+      <Show when={isPremium}>
+        <PremiumBanner />
+      </Show>
+      <PostContent post={post} />
+      <Show when={isOwner}>
+        <div>
+          <button>수정</button>
+          <button>삭제</button>
+        </div>
+      </Show>
+    </main>
+  </section>
+);
+```
+
+여러 조건도 모두 JSX 형식으로 작성되었고, `null`도 명시하지 않아도 알아서 처리된다. 위에서 언급한 가독성을 해치는 조건 1~3이 모두 개선되었다.
+
+---
+
+# Switch 컴포넌트
+
+이번에는 아래와 같이 값에 따라 렌더링하는 예시가 있다.
+
+```tsx
+return (
+  <div>
+    {icon === 'up' ? (
+      <UpIcon />
+    ) : icon === 'down' ? (
+      <DownIcon />
+    ) : icon === 'left' ? (
+      <LeftIcon />
+    ) : icon === 'right' ? (
+      <RightIcon />
+    ) : (
+      <DefaultIcon />
+    )}
+  </div>
+);
+```
+
+`icon` 값에 따라 아이콘을 렌더링한다. 케이스가 늘어날수록 체인이 길어져 어느 값일 때 무엇이 렌더링되는지 한눈에 파악하기 어려워진다. 여기에 `Show` 컴포넌트를 적용하면 이렇게 된다.
+
+```tsx
+return (
+  <div>
+    <Show when={icon === 'up'}>
+      <UpIcon />
+    </Show>
+    <Show when={icon === 'down'}>
+      <DownIcon />
+    </Show>
+    <Show when={icon === 'left'}>
+      <LeftIcon />
+    </Show>
+    <Show when={icon === 'right'}>
+      <RightIcon />
+    </Show>
+  </div>
+);
+```
+
+JSX 형식으로 작성된 것까지는 좋지만, 동일한 변수인 `icon`을 반복해서 적어야 한다. if문을 사용할 때 같은 변수의 값을 반복적으로 분기하는 상황이라면 switch문을 사용하듯이, 이런 상황에서 효과적으로 사용할 수 있는 `Switch` 컴포넌트를 만들었다.
+
+```tsx
+import type { ReactNode } from 'react';
+
+export function Switch<T extends string>({
+  value,
+  cases,
+  fallback = null,
+}: {
+  value: T | null | undefined;
+  cases: Partial<Record<T, ReactNode>>;
+  fallback?: ReactNode;
+}): ReactNode {
+  if (value === null || value === undefined) return fallback;
+
+  return cases[value] ?? fallback;
+}
+```
+
+- [toss/slash-SwitchCase]에서 영감을 얻었다. 이 코드는 로직을 소개하기 위해 단순화한 버전이다. 전체 코드는 [Switch]에서 볼 수 있다.
+
+`value`가 `cases`에 있으면 `cases[value]`를 렌더링하고, 없거나 `value` 또는 `cases[value]`가 `null`또는 `undefined`면 `fallback`을 렌더링한다. `Show`와 마찬가지로 `fallback`의 기본값은 `null`로 지정되어 있다.
+
+이 컴포넌트를 이용해 아래와 같이 코드를 작성할 수 있다.
+
+```tsx
+return (
+  <div>
+    <Switch
+      value={icon}
+      cases={{
+        up: <UpIcon />,
+        down: <DownIcon />,
+        left: <LeftIcon />,
+        right: <RightIcon />,
+      }}
+      fallback={<DefaultIcon />}
+    />
+  </div>
+);
+```
+
+반복적으로 호출되었던 `icon` 변수는 단 한번만 사용되었고, 분기별 아이콘도 한 곳에 모아서 볼 수 있다.
+
+---
+
+# 마치며
+
+JSX에서 가독성 좋은 코드를 작성하기 위해 여러 가지로 찾아보다가 이렇게 선언적으로 조건부 렌더링을 처리할 수 있는 방법을 찾아내 지금까지 계속 유용하게 사용하고 있다. 앞으로도 내 경험을 기반으로 좋은 코드를 작성하기 위한 여러 가지 방법을 소개할 예정이다.
+
+---
+
+# 참조
+
+<Callout>
+
+- [SolidJS-Show]
+- [toss/slash-SwitchCase]
+
+</Callout>
+
+{/* 링크 */}
+[Show]: https://jinho-blog.com/libraries/show
+[Switch]: https://jinho-blog.com/libraries/switch
+[SolidJS-Show]: https://docs.solidjs.com/reference/components/show
+[toss/slash-SwitchCase]: https://www.slash.page/libraries/react/react/src/components/SwitchCase/SwitchCase.i18n

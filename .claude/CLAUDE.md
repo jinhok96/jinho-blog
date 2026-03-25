@@ -14,7 +14,7 @@
 
 # Git 브랜치
 
-- 작업 브랜치: `dev`
+- 작업 브랜치: `dev`, `mdx`
 - PR 대상: `main`
 - 커밋 메시지 형식 → @.claude/skills/output-style/SKILL.md
 

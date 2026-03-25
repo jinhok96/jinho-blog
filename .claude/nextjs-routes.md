@@ -46,7 +46,7 @@ generateRoutes('/path/to/project');
 ## 빌드
 
 ```bash
-pnpm build -w @jinho-blog/nextjs-routes  # dist/ 생성
+pnpm --filter @jinho-blog/nextjs-routes build  # dist/ 생성
 ```
 
 ## CLI

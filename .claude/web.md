@@ -42,7 +42,7 @@ import { Project } from '@/entities/project';
 
 ESLint 자동 정렬 (`pnpm lint`):
 
-** 반드시 pnpm lint 먼저 시도 **
+**반드시 pnpm lint 먼저 시도**
 
 ```typescript
 // 1. Type-only imports
@@ -110,9 +110,9 @@ import { buttonVariants } from '@/core/ui/button/variants';
 ## 패키지 스크립트
 
 ```bash
-pnpm dev -w @jinho-blog/web    # 개발 서버 (포트 3401)
-pnpm build -w @jinho-blog/web  # 빌드
-pnpm lint -w @jinho-blog/web   # lint + 자동 수정
+pnpm --filter @jinho-blog/web dev    # 개발 서버 (포트 3401)
+pnpm --filter @jinho-blog/web build  # 빌드
+pnpm --filter @jinho-blog/web lint   # lint + 자동 수정
 ```
 
 ## FSD/코딩 체크리스트
@@ -121,10 +121,9 @@ pnpm lint -w @jinho-blog/web   # lint + 자동 수정
 - [ ] 같은 레이어 다른 Slice import 없음
 - [ ] Public API(index.ts) 사용
 - [ ] Import 순서 준수
-- [ ] `import type` 사용
-- [ ] Named export 사용
 - [ ] `@/*` 절대 경로 사용 (index.ts 제외)
-- [ ] `pnpm lint` 통과
+
+> TypeScript 공통 규칙(import type, any 금지, type, named export) → [monorepo.md](.claude/monorepo.md)
 
 ## 패턴 참고 파일
 

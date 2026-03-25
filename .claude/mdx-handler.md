@@ -51,7 +51,7 @@ src/
 Vitest 기반:
 
 ```bash
-pnpm test -w @jinho-blog/mdx-handler
+pnpm --filter @jinho-blog/mdx-handler test
 ```
 
 ## 빌드 관련
@@ -60,5 +60,5 @@ pnpm test -w @jinho-blog/mdx-handler
 
 ```bash
 # 수동 실행 시
-pnpm run registry -w @jinho-blog/web
+pnpm --filter @jinho-blog/web registry
 ```

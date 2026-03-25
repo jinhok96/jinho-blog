@@ -28,10 +28,8 @@ model: haiku
 
 ### TypeScript
 
-- [ ] `import type` 사용 (값 아닌 타입)
-- [ ] `any` 없음
-- [ ] `type` 사용 (`interface` 대신)
-- [ ] Named export만 사용
+[monorepo.md](.claude/monorepo.md) TypeScript 규칙 준수 여부 확인:
+`import type` 사용 / `any` 없음 / `type` 사용 / Named export만 사용
 
 ### Import 순서
 

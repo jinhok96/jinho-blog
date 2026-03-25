@@ -1,7 +1,6 @@
 ---
 name: output-style
 description: 한국어 응답, 파일 참조 링크 형식, 커밋 메시지 포맷 등 출력 스타일 규칙. 응답 작성 시 적용.
-user-invocable: false
 ---
 
 ## 언어
@@ -22,13 +21,13 @@ user-invocable: false
 
 | Prefix     | 용도                                                        |
 | ---------- | ----------------------------------------------------------- |
-| `Feature`  | 새 기능 추가                                                |
+| `Feature`  | 새 기능 추가, 기능 변경                                     |
 | `Fix`      | 버그 수정                                                   |
 | `Refactor` | 기능 변경 없는 코드 개선                                    |
 | `Style`    | UI/CSS 스타일 변경                                          |
-| `Content`  | 블로그 글 작성/수정                                         |
-| `Document` | 문서 업데이트 (README, .claude/ 등)                         |
-| `Test`     | 테스트 코드 추가/수정                                       |
+| `Content`  | 콘텐츠 추가/변경                                            |
+| `Document` | 콘텐츠를 제외한 문서 추가/변경 (README, .claude/ 등)        |
+| `Test`     | 테스트 코드 추가/변경                                       |
 | `Chore`    | GitHub Actions 등 CI/CD 설정, 의존성 업데이트, 설정 변경 등 |
 
 ## 작업 완료 시 커밋 제안 형식

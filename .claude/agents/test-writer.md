@@ -15,9 +15,9 @@ model: inherit
 ## 테스트 대상 및 실행
 
 ```bash
-pnpm test --filter @jinho-blog/mdx-handler
-pnpm test --filter @jinho-blog/nextjs-routes
-pnpm test --filter @jinho-blog/web
+pnpm --filter @jinho-blog/mdx-handler test
+pnpm --filter @jinho-blog/nextjs-routes test
+pnpm --filter @jinho-blog/web test
 ```
 
 ## 테스트 파일 위치
@@ -42,12 +42,10 @@ describe('{기능명}', () => {
 
 ## 규칙
 
-- `any` 타입 금지
-- `import type` 사용
-- Named export 유지
+[monorepo.md](.claude/monorepo.md) TypeScript 규칙 적용: `any` 금지 / `import type` 사용 / Named export 유지
 
 ## 완료 후 검증
 
 ```bash
-pnpm test --filter @jinho-blog/{패키지명}
+pnpm --filter @jinho-blog/{패키지명} test
 ```

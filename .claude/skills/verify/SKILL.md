@@ -1,17 +1,16 @@
 ---
 name: verify
 description: 코드 변경 후 lint → type-check → build 검증 절차. /verify로 호출하거나 작업 완료 후 실행.
-disable-model-invocation: true
 ---
 
-## 단계별 완료 후 (구현 단계마다)
+## 구현 완료 시
 
 ```bash
 pnpm lint
 pnpm type-check
 ```
 
-## 모든 작업 완료 후
+## 전체 작업 완료 시
 
 ```bash
 pnpm lint
@@ -22,9 +21,9 @@ pnpm build
 ## 워크스페이스별 실행
 
 ```bash
-pnpm lint --filter @jinho-blog/web
-pnpm type-check --filter @jinho-blog/web
-pnpm build --filter @jinho-blog/web
+pnpm --filter @jinho-blog/web lint
+pnpm --filter @jinho-blog/web type-check
+pnpm --filter @jinho-blog/web build
 ```
 
 ## 판단 기준

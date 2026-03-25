@@ -62,7 +62,7 @@ export function HomeCoreSkillsSection() {
           <Article.Label>상황에 맞는 기술 선택</Article.Label>
           <Article.Description>
             React, Vue.js, Next.js 등 다양한 프레임워크를 실무에서 다뤘습니다. 성능, 구조, 유지보수성 등 프로젝트
-            요구사항을 기준으로 기술을 선택하고, 직접 설계해 적용합니다.
+            요구사항에 적합한 기술을 적용하고 활용합니다.
           </Article.Description>
         </Article>
 
@@ -72,8 +72,8 @@ export function HomeCoreSkillsSection() {
         >
           <Article.Label>성능 최적화</Article.Label>
           <Article.Description>
-            번들 크기, 로드 속도, 빌드 용량, 메모리 등 성능을 측정하고 개선합니다. 웹에서 빌드를 최적화하여 로드 시간을
-            68% 단축한 경험이 있습니다.
+            번들 크기, 로드 속도, 빌드 용량, 메모리 등 성능을 측정하고 개선합니다. 웹에서 빌드를 분석하고 최적화하여
+            로드 시간을 32% 단축한 경험이 있습니다.
           </Article.Description>
         </Article>
 
@@ -81,7 +81,7 @@ export function HomeCoreSkillsSection() {
           src={CoreSkill1Image}
           alt="core-skill-1"
         >
-          <Article.Label>디자인 역량과 사용자 경험 개선</Article.Label>
+          <Article.Label>사용자 경험 개선</Article.Label>
           <Article.Description>
             실무에서 개발과 UX/UI 디자인을 함께 담당했습니다. 사용자 시선에서 문제를 포착해 스플래시 화면을 직접
             기획·구현했고, 주간 거래 건수 50.8% 상승으로 이어졌습니다.

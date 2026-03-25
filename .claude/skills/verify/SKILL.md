@@ -22,9 +22,9 @@ pnpm build
 ## 워크스페이스별 실행
 
 ```bash
-pnpm lint --filter @jinho-blog/web
-pnpm type-check --filter @jinho-blog/web
-pnpm build --filter @jinho-blog/web
+pnpm --filter @jinho-blog/web lint
+pnpm --filter @jinho-blog/web type-check
+pnpm --filter @jinho-blog/web build
 ```
 
 ## 판단 기준

@@ -60,5 +60,5 @@ pnpm --filter @jinho-blog/mdx-handler test
 
 ```bash
 # 수동 실행 시
-pnpm run registry -w @jinho-blog/web
+pnpm --filter @jinho-blog/web registry
 ```

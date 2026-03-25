@@ -42,7 +42,7 @@ import { Project } from '@/entities/project';
 
 ESLint 자동 정렬 (`pnpm lint`):
 
-** 반드시 pnpm lint 먼저 시도 **
+**반드시 pnpm lint 먼저 시도**
 
 ```typescript
 // 1. Type-only imports

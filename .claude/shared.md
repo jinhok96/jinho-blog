@@ -37,6 +37,6 @@ import { CONTENT_ERROR_CODES, HTTP_ERROR_CODES, VALIDATION_ERROR_CODES } from '@
 ## 패키지 스크립트
 
 ```bash
-pnpm lint -w @jinho-blog/shared
-pnpm type-check -w @jinho-blog/shared
+pnpm --filter @jinho-blog/shared lint
+pnpm --filter @jinho-blog/shared type-check
 ```

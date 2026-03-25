@@ -4,14 +4,14 @@ description: 코드 변경 후 lint → type-check → build 검증 절차. /ver
 disable-model-invocation: true
 ---
 
-## 단계별 완료 후 (구현 단계마다)
+## 구현 완료 시
 
 ```bash
 pnpm lint
 pnpm type-check
 ```
 
-## 모든 작업 완료 후
+## 전체 작업 완료 시
 
 ```bash
 pnpm lint

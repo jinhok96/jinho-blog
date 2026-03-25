@@ -6,7 +6,7 @@
 2. 베이스 브랜치 감지: `git log --simplify-by-decoration --pretty=format:'%D' HEAD | tr ',' '\n' | grep -oE 'origin/[^ ]+' | grep -v "$(git rev-parse --abbrev-ref HEAD)" | head -1` 실행 후 결과를 BASE_BRANCH로 사용. 결과가 없으면 `origin/main` 사용
 3. `git log {BASE_BRANCH}..HEAD --oneline --no-merges` 로 커밋 목록 확인
 4. `git diff {BASE_BRANCH}...HEAD --stat` 로 변경 파일 요약 확인
-5. 커밋 목록을 접두어별로 분류 (@/.claude/CLAUDE.md 에서 Git 브랜치 섹션 참조)
+5. 커밋 목록을 접두어별로 분류 (@/.claude/skills/output-style/SKILL.md 의 커밋 메시지 형식 참조)
 6. 아래 규칙에 따라 PR 제목과 설명 작성
 
 **PR 제목 규칙:**

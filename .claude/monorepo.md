@@ -44,7 +44,7 @@ pnpm type-check    # TypeScript 타입 검사
 pnpm test          # 전체 테스트
 
 # 워크스페이스별 실행
-pnpm dev -w @jinho-blog/web
+pnpm --filter @jinho-blog/web dev
 ```
 
 ## 핵심 설정 파일

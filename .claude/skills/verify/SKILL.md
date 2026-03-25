@@ -1,7 +1,6 @@
 ---
 name: verify
 description: 코드 변경 후 lint → type-check → build 검증 절차. /verify로 호출하거나 작업 완료 후 실행.
-disable-model-invocation: true
 ---
 
 ## 구현 완료 시

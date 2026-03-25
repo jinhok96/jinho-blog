@@ -1,7 +1,6 @@
 ---
 name: output-style
 description: 한국어 응답, 파일 참조 링크 형식, 커밋 메시지 포맷 등 출력 스타일 규칙. 응답 작성 시 적용.
-user-invocable: false
 ---
 
 ## 언어

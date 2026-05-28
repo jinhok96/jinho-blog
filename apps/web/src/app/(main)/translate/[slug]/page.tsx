@@ -7,26 +7,25 @@ import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 import { AsyncBoundary, ContentDetailWrapper, JsonLd } from '@/core/ui';
 import { generateBlogPostingJsonLd, generatePageMetadata } from '@/core/utils';
 
-import { createBlogService, type GetBlogPosts } from '@/entities/blog';
+import { createTranslateService, type GetTranslatePosts } from '@/entities/translate';
 
-import { BlogPostContentSection, OtherBlogContentSection } from '@/views/blogPost';
+import { OtherTranslateContentSection, TranslatePostContentSection } from '@/views/translatePost';
 
-const blogService = createBlogService();
+const translateService = createTranslateService();
 
 type Props = {
   params: Promise<{ slug: string }>;
-  searchParams: Promise<SearchParams<Record<keyof GetBlogPosts['search'], string | string[] | undefined>>>;
+  searchParams: Promise<SearchParams<Record<keyof GetTranslatePosts['search'], string | string[] | undefined>>>;
 };
 
-// SEO: 동적 메타데이터
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const { slug } = await params;
-  const post = await blogService.getBlogPost({ slug });
+  const post = await translateService.getTranslatePost({ slug });
 
   if (!post) return {};
 
   return generatePageMetadata({
-    path: routes({ pathname: '/blog/[slug]', params: { slug } }),
+    path: routes({ pathname: '/translate/[slug]', params: { slug } }),
     title: post.title,
     description: post.description,
     type: 'article',
@@ -34,12 +33,12 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   });
 }
 
-export default async function BlogPostPage({ params, searchParams }: Props) {
+export default async function TranslatePostPage({ params, searchParams }: Props) {
   const [{ slug }, { page }] = await Promise.all([params, searchParams]);
 
   const [post, fileContent] = await Promise.all([
-    blogService.getBlogPost({ slug }),
-    blogService.getBlogContent({ slug }),
+    translateService.getTranslatePost({ slug }),
+    translateService.getTranslateContent({ slug }),
   ]);
 
   if (!post) notFound();
@@ -50,17 +49,16 @@ export default async function BlogPostPage({ params, searchParams }: Props) {
 
   return (
     <>
-      {/* JSON-LD: BlogPosting */}
       <JsonLd jsonLd={jsonLd} />
 
-      <ContentDetailWrapper rootHref={routes({ pathname: '/blog' })}>
-        <BlogPostContentSection
+      <ContentDetailWrapper rootHref={routes({ pathname: '/translate' })}>
+        <TranslatePostContentSection
           post={post}
           fileContent={fileContent}
         />
 
         <AsyncBoundary>
-          <OtherBlogContentSection
+          <OtherTranslateContentSection
             category={category}
             page={page}
           />

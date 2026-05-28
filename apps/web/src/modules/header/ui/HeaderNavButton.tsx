@@ -27,7 +27,7 @@ export function HeaderNavButton({ href, children, ...props }: Props) {
       href={href}
       color="background"
       size="md"
-      className={cn(isActiveState && 'underline underline-offset-2')}
+      className={cn('not-tablet:px-2', isActiveState && 'underline underline-offset-2')}
       {...props}
     >
       {children}

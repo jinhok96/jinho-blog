@@ -1,4 +1,10 @@
 {
+  // ESLint 모노레포 설정
+  "eslint.useFlatConfig": true,
+  "editor.codeActionsOnSave": {
+    "source.organizeImports": "never"
+  },
+
   // Tailwind CSS 설정
   "files.associations": {
     "*.css": "tailwindcss"

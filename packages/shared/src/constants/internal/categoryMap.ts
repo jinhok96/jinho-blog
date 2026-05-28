@@ -1,4 +1,4 @@
-import type { BlogCategory, ProjectCategory } from '../../types';
+import type { BlogCategory, ProjectCategory, TranslateCategory } from '../../types';
 
 export const BLOG_CATEGORY_MAP: Record<BlogCategory, string> = {
   frontend: '프론트엔드',
@@ -15,3 +15,10 @@ export const PROJECT_CATEGORY_MAP: Record<ProjectCategory, string> = {
 
 export const BLOG_CATEGORIES = Object.keys(BLOG_CATEGORY_MAP) as BlogCategory[];
 export const PROJECT_CATEGORIES = Object.keys(PROJECT_CATEGORY_MAP) as ProjectCategory[];
+
+export const TRANSLATE_CATEGORY_MAP: Record<TranslateCategory, string> = {
+  react: 'React',
+  nextjs: 'Next.js',
+  vercel: 'Vercel',
+};
+export const TRANSLATE_CATEGORIES = Object.keys(TRANSLATE_CATEGORY_MAP) as TranslateCategory[];

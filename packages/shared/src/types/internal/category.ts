@@ -48,3 +48,4 @@ export type TechStack =
 export type ProjectCategory = 'tripmoney' | 'personal';
 export type BlogCategory = 'frontend' | 'algorithm' | 'cs' | 'uiux' | 'review';
 export type LibraryCategory = TechStack;
+export type TranslateCategory = 'react' | 'nextjs' | 'vercel';

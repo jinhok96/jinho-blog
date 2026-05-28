@@ -75,6 +75,9 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
                 <HeaderNavButton href={routes({ pathname: '/blog' })}>블로그</HeaderNavButton>
               </li>
               <li>
+                <HeaderNavButton href={routes({ pathname: '/translate' })}>번역</HeaderNavButton>
+              </li>
+              <li>
                 <HeaderNavButton href={routes({ pathname: '/libraries' })}>라이브러리</HeaderNavButton>
               </li>
             </ul>

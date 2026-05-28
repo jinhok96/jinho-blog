@@ -1,6 +1,6 @@
 import type { Translate } from '@jinho-blog/mdx-handler';
 
-import { type PaginatedResult,TRANSLATE_CATEGORY_MAP } from '@jinho-blog/shared';
+import { type PaginatedResult, TRANSLATE_CATEGORY_MAP } from '@jinho-blog/shared';
 
 import { ContentCardSection, Show } from '@/core/ui';
 

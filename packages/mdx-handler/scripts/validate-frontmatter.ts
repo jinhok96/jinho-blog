@@ -1,4 +1,4 @@
-import { BLOG_CATEGORIES, PROJECT_CATEGORIES, TECH_STACKS } from '@jinho-blog/shared';
+import { BLOG_CATEGORIES, PROJECT_CATEGORIES, TECH_STACKS, TRANSLATE_CATEGORIES } from '@jinho-blog/shared';
 
 import type { ContentSection } from '../src/types';
 
@@ -117,6 +117,24 @@ function validateLibraryFrontmatter(data: Record<string, unknown>): ValidationEr
   return errors;
 }
 
+function validateTranslateFrontmatter(data: Record<string, unknown>): ValidationError[] {
+  const errors: ValidationError[] = [];
+
+  const titleError = validateRequiredString(data, 'title');
+  if (titleError) errors.push(titleError);
+
+  const descriptionError = validateRequiredString(data, 'description');
+  if (descriptionError) errors.push(descriptionError);
+
+  const categoryError = validateEnum(data, 'category', TRANSLATE_CATEGORIES);
+  if (categoryError) errors.push(categoryError);
+
+  const sourceUrlError = validateRequiredString(data, 'sourceUrl');
+  if (sourceUrlError) errors.push(sourceUrlError);
+
+  return errors;
+}
+
 export function validateFrontmatter(data: Record<string, unknown>, section: ContentSection): ValidationResult {
   let errors: ValidationError[];
 
@@ -129,6 +147,9 @@ export function validateFrontmatter(data: Record<string, unknown>, section: Cont
       break;
     case 'libraries':
       errors = validateLibraryFrontmatter(data);
+      break;
+    case 'translate':
+      errors = validateTranslateFrontmatter(data);
       break;
   }
 

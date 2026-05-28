@@ -1,0 +1,112 @@
+---
+title: "Next.js 플랫폼 간 호환성: 어댑터, OpenNext 및 우리의 약속"
+description: Next.js 16.2에서 안정화된 어댑터 API가 출시되어 모든 플랫폼에서 Next.js 애플리케이션의 안정적인 지원을 보장합니다.
+category: nextjs
+sourceUrl: https://nextjs.org/blog/nextjs-across-platforms
+createdAt: 2026-03-25
+---
+
+> 원문: [Next.js Across Platforms: Adapters, OpenNext, and Our Commitments](https://nextjs.org/blog/nextjs-across-platforms) — Next.js Blog
+
+Next.js 16.2는 [OpenNext](https://opennext.js.org/), Netlify, Cloudflare, AWS Amplify, Google Cloud와 협력하여 안정적인 [Adapter API](https://nextjs.org/docs/app/api-reference/config/next-config-js/adapterPath)를 도입했습니다. 이 글에서는 이 API가 어떻게 개발되었는지, 그리고 Next.js가 모든 플랫폼에서 잘 작동하도록 하기 위한 우리의 약속을 다룹니다.
+
+*   [**Adapter API (안정화)**](#the-adapter-api): 모든 플랫폼에서 사용할 수 있는 애플리케이션에 대한 타입화되고 버전이 지정된 설명입니다.
+*   [**테스트 스위트**](#the-test-suite): Vercel의 것을 포함하여 모든 어댑터에 대한 공유된 정확성 테스트입니다.
+*   [**인증된 어댑터**](#verified-adapters): Next.js 조직 산하에 호스팅되는 오픈 소스, 커뮤니티 소유 어댑터입니다.
+*   [**생태계 워킹 그룹**](#the-ecosystem-working-group): 제공업체 간의 변경 사항 조정을 위한 상설 포럼입니다.
+
+# 여기까지 온 과정[](#how-we-got-here)
+
+많은 Next.js 앱은 `next start`를 실행하는 단일 Node.js 서버로 배포됩니다. 오늘날 수십만 개의 팀이 다양한 플랫폼에서 제한 없이 이렇게 하고 있습니다.
+
+하지만 앱을 확장하려면 여러 서버 인스턴스를 실행해야 합니다. 그렇게 하면 일부 기능이 즉시 올바르게 작동해야 합니다. 캐시된 콘텐츠는 인스턴스 간에 동기화되어야 하고, 온디맨드 재유효성 검사가 전파되어야 하며, 스트리밍이 안정적으로 작동해야 합니다. _이것들은 최적화가 아닌 기능적 요구 사항입니다._
+
+그런 다음 선택하는 성능 최적화가 있습니다. 글로벌 CDN에서 캐시된 콘텐츠 제공, 엣지에서 컴퓨팅 실행, 서버리스 함수를 사용한 콜드 스타트 최적화. 이러한 각각은 이미 올바르게 작동해야 하는 기능 위에 아키텍처 복잡성을 더합니다.
+
+플랫폼과 아키텍처에 따라 전체 표면적이 누적됩니다. 스트리밍, Server Components, Partial Prerendering, 미들웨어, Cache Components, 온디맨드 재유효성 검사. 각 기능과 서로 상호 작용하는 방식은 공식적으로 문서화되지 않았습니다. 발전하는 릴리스 전반에 걸쳐 멀티 테넌트 환경에서 완전한 충실도로 Next.js를 지원하려는 플랫폼 제공업체의 경우 이러한 과제가 복잡해졌습니다.
+
+> Next.js 팀이 Netlify의 문제를 논의하자는 제안을 해왔을 때, 저희는 공유할 특정 문제 목록을 작성하기 시작했지만, 이 문제의 90%에 대한 공통점은 빌드 출력의 구성 및 읽기를 위한 안정적인 문서화된 메커니즘이 부족하다는 것이었습니다. 그것이 저희가 무엇보다 필요했던 것입니다. 그래서 Jimmy에게 그렇게 말했고, 저희는 그렇게 하길 잘했다고 생각합니다.
+> 
+> — Philippe Serhal, Netlify 엔지니어
+
+누락된 조각은 제공업체가 구축할 수 있는 **상위 수준의 안정적이고 공개적인 계약**이었습니다.
+
+# OpenNext가 다리를 놓았습니다[](#opennext-built-the-bridge)
+
+[OpenNext](https://opennext.js.org/)가 그 간극을 메웠습니다. Next.js 빌드 출력을 제공업체가 소비할 수 있는 것으로 번역하고, 프레임워크 의미론을 각 제공업체의 기본 요소에 매핑했습니다. 호환성 계층으로 시작된 것이 **초기 프로덕션 등급 어댑터**가 되었고, 특히 AWS에서 Cloudflare와 Netlify가 나중에 노력에 동참했습니다. OpenNext는 Next.js 빌드 출력이 어댑터가 직접 대상으로 하는 안정적이고 정의된 인터페이스 역할을 할 수 있음을 보여주었습니다.
+
+이 통찰력은 Next.js 팀과 OpenNext 유지보수자는 물론 Netlify, Cloudflare, AWS Amplify, Google Cloud의 엔지니어들 간의 광범위한 협업으로 이어졌습니다. 저희는 2025년 4월에 [Build Adapters RFC](https://github.com/vercel/next.js/discussions/77740)를 게시하고, 워킹 그룹을 구성했으며, API를 설계, 테스트 및 검증하기 위해 파트너들과 협력해 왔습니다.
+
+# Adapter API[](#the-adapter-api)
+
+Next.js 16.2는 안정적이고 공개적인 [Adapter API](https://nextjs.org/docs/app/api-reference/config/next-config-js/adapterPath)와 함께 제공됩니다.
+
+빌드 시 Next.js는 이제 애플리케이션의 타입화되고 버전이 지정된 설명을 생성합니다. 라우트, 미리 렌더링된 페이지, 정적 애셋, 런타임 대상, 종속성, 캐싱 규칙 및 라우팅 결정이 포함됩니다. 어댑터는 이 출력을 소비하고 제공업체 인프라에 매핑합니다.
+
+어댑터는 `modifyConfig`(구성 로드 시) 및 `onBuildComplete`(전체 출력을 사용할 수 있을 때)의 두 가지 훅을 구현합니다. 호환성이 깨지는 변경은 Next.js의 새 메이저 버전이 필요합니다.
+
+Vercel의 어댑터는 비공개 훅이나 특별한 통합 경로 없이 동일한 공개 계약을 사용합니다. [오픈 소스](https://github.com/nextjs/adapter-vercel)입니다.
+
+워킹 그룹의 피드백의 일환으로, 플랫폼 통합 표면을 더 잘 설명하기 위해 문서의 많은 부분을 재작업했습니다. 새로운 가이드에서는 [렌더링 철학](https://nextjs.org/docs/app/guides/rendering-philosophy), [플랫폼 배포](https://nextjs.org/docs/app/guides/deploying-to-platforms) 기능 매트릭스, [PPR 플랫폼 가이드](https://nextjs.org/docs/app/guides/ppr-platform-guide), [재유효성 검사 작동 방식](https://nextjs.org/docs/app/guides/how-revalidation-works), [CDN 캐싱](https://nextjs.org/docs/app/guides/cdn-caching)을 다룹니다.
+
+# 테스트 스위트[](#the-test-suite)
+
+Next.js 테스트 스위트를 어댑터 작성자가 사용할 수 있도록 했습니다. 스트리밍 동작, 캐싱 상호 작용, 클라이언트 탐색 및 실제 엣지 케이스를 다룹니다. 새로운 기능이 출시되면 해당 동작은 이러한 테스트에 인코딩됩니다.
+
+[어댑터 테스트 문서](https://nextjs.org/docs/app/api-reference/config/next-config-js/adapterPath#testing-adapters)에서 자세한 내용을 읽을 수 있습니다.
+
+어댑터 작성자는 모든 어댑터를 사용하여 스위트를 실행하고 각 기능에 대한 통과/실패 답변을 얻을 수 있습니다. 이것은 Vercel이 자체 어댑터에 사용하는 것과 동일한 테스트 스위트이므로 정확성 기준은 모든 제공업체에서 공유됩니다.
+
+# 인증된 어댑터[](#verified-adapters)
+
+**인증된 어댑터**( [Next.js GitHub 조직](https://github.com/nextjs) 산하에 호스팅되고 [플랫폼 배포](https://nextjs.org/docs/app/guides/deploying-to-platforms) 문서에 나열됨)가 되려면 두 가지가 필요합니다. 오픈 소스여야 하고 전체 테스트 스위트를 통과해야 합니다. 어댑터를 오픈 소스로 만들면 어댑터 유지 관리를 위한 장소가 확보되어 이슈를 보고하고 분류할 수 있습니다. 테스트 스위트는 Next.js와의 어댑터 호환성을 측정할 수 있도록 보장합니다.
+
+각 인증된 어댑터는 이를 구축한 팀이 소유합니다. 게시 권한, 릴리스 주기 및 구현 결정은 해당 팀의 몫입니다. 플랫폼은 매우 다를 수 있으며 특정 구현을 규정할 수 없기 때문입니다.
+
+제공업체는 동일한 공개 API에서 독점 어댑터를 구축하고 배포할 수도 있습니다.
+
+공개 어댑터 API는 오늘 다음을 제공합니다.
+
+*   **[Vercel 어댑터](https://github.com/nextjs/adapter-vercel)**: 오픈 소스이며 Next.js 출력을 Vercel의 서버리스 및 CDN 인프라에 매핑합니다.
+*   **[Bun 어댑터](https://github.com/nextjs/adapter-bun)**: 대체 런타임에서 완전한 Next.js 배포 대상을 구축하는 방법을 보여주는 참조 어댑터입니다.
+
+OpenNext를 통한 **Netlify**, **Cloudflare**, **AWS**용 어댑터는 활발히 개발 중이며 올해 말에 릴리스될 예정입니다.
+
+> Cloudflare는 개발자가 어디에서든 Next.js 앱을 배포할 수 있는 안정적이고 개방적인 계약을 받을 자격이 있다고 믿었기 때문에 처음부터 OpenNext에 참여했습니다. 공식 Next.js 어댑터 API는 그 비전을 현실로 만듭니다. Cloudflare의 글로벌 개발자 플랫폼에서 Next.js를 실행하는 개발자는 이제 프레임워크가 발전함에 따라 보조를 맞추기 위해 Next.js 팀과 협력하여 설계된 공유 기반을 갖게 될 것입니다. 저희는 이 공동 노력의 파트너가 된 것을 기쁘게 생각합니다.
+> 
+> — Fred K Schott, Cloudflare 엔지니어
+
+# 생태계 워킹 그룹[](#the-ecosystem-working-group)
+
+[Next.js 생태계 워킹 그룹](https://nextjs.org/ecosystem-working-group)을 설립하고 있습니다. 이 그룹은 Next.js 팀, 호스팅 제공업체 및 어댑터 유지보수자 간의 상설 포럼입니다. 회의록은 공개됩니다. 그룹에 참여하고 싶다면 [Jimmy](https://x.com/feedthejim)에게 연락해 주세요.
+
+저희는 제공업체가 예정된 변경 사항을 조기에 파악하고 릴리스 후에야 알게 되는 상황을 방지하고 싶습니다. 호환성이 깨지는 변경은 범위에 비례하는 사전 통지 기간을 가집니다. 새 기능은 릴리스 전에 다양한 환경에서 테스트됩니다. 전체 [거버넌스 문서](https://nextjs.org/ecosystem-working-group)는 약속을 자세히 다룹니다.
+
+파트너들의 추가 정보를 읽어보세요.
+
+*   [Next.js 어댑터 API가 방금 출시되었습니다. 다음은 무엇입니다.](https://www.netlify.com/blog/the-next-js-adapter-api-just-shipped-here-s-what-comes-next) (Netlify)
+*   [OpenNext 3년](https://opennext.js.org/news/2026-03-25-3-years-of-opennext) (OpenNext)
+*   [Next.js 배포 어댑터: Google Cloud에서 Next.js의 밝은 미래](https://firebase.blog/posts/2026/03/nextjs-adapters) (Google Cloud / Firebase)
+
+> OpenNext와 Next.js 팀 간의 협업은 커뮤니티 주도의 임시 해결책을 공식 표준으로 변화시켰으며, 웹 프레임워크의 미래는 개방성과 공유 혁신을 기반으로 구축됨을 증명했습니다.
+> 
+> — Dorseuil Nicolas, OpenNext
+
+이 API를 공동 설계하고 플랫폼에 맞게 검증하는 데 시간을 투자한 Netlify, Cloudflare, Google Cloud, AWS Amplify, OpenNext의 엔지니어들인 빌드 어댑터 워킹 그룹 회원들에게 감사합니다. 어댑터를 구축하고, 버그를 신고하고, 임시 해결책을 출시한 모든 기여자에게도 감사합니다.
+
+Next.js는 수백만 명의 개발자가 사용하고 있으며, 그중 많은 개발자가 Vercel이 아닌 인프라에서 실행합니다. 그들은 동일한 수준의 안정성과 동일한 새로운 기능 액세스를 받을 자격이 있습니다. 어댑터 API는 이를 제공합니다. 즉, 모든 플랫폼이 구축할 수 있는 공유 계약과 우리를 포함한 모든 사람을 동일한 기준으로 유지하는 공개 테스트 스위트입니다.
+
+저희가 개발하는 모든 새 기능은 어댑터 계약에 문서화될 것입니다. RFC 프로세스는 API가 발전함에 따라 어댑터 작성자와 조정되어 계속 열려 있습니다.
+
+# 자세히 알아보기[](#learn-more)
+
+*   [Adapter API](https://nextjs.org/docs/app/api-reference/config/next-config-js/adapterPath)
+*   [플랫폼 배포](https://nextjs.org/docs/app/guides/deploying-to-platforms)
+*   [렌더링 철학](https://nextjs.org/docs/app/guides/rendering-philosophy)
+*   [PPR 플랫폼 가이드](https://nextjs.org/docs/app/guides/ppr-platform-guide)
+*   [재유효성 검사 작동 방식](https://nextjs.org/docs/app/guides/how-revalidation-works)
+*   [CDN 캐싱](https://nextjs.org/docs/app/guides/cdn-caching)
+*   [빌드 어댑터 RFC](https://github.com/vercel/next.js/discussions/77740)
+*   [Vercel 어댑터](https://github.com/nextjs/adapter-vercel)
+*   [Next.js 생태계 워킹 그룹](https://nextjs.org/ecosystem-working-group)
+*   [OpenNext](https://opennext.js.org/)

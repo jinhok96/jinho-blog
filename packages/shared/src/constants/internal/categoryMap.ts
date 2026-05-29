@@ -20,7 +20,6 @@ export const TRANSLATE_CATEGORY_MAP: Record<TranslateCategory, string> = {
   // 프레임워크 / 라이브러리
   react: 'React',
   nextjs: 'Next.js',
-  tanstack: 'TanStack',
   // 배포 / 플랫폼
   vercel: 'Vercel',
   // 언어 / 스타일링

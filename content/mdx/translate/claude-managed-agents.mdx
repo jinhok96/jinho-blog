@@ -1,20 +1,21 @@
 ---
-title: "관리형 에이전트 확장: 두뇌와 실행 환경 분리"
-description: "Anthropic은 Claude Managed Agents를 출시하여 AI 에이전트의 두뇌(LLM)와 실행 환경(샌드박스, 도구)을 분리하고, 시스템의 유연성과 안정성을 향상했습니다."
+title: '관리형 에이전트 확장: 두뇌와 실행 환경 분리'
+description: 'Anthropic은 Claude Managed Agents를 출시하여 AI 에이전트의 두뇌(LLM)와 실행 환경(샌드박스, 도구)을 분리하고, 시스템의 유연성과 안정성을 향상했습니다.'
 category: claude
 sourceUrl: https://www.anthropic.com/engineering/managed-agents
 createdAt: 2026-04-08
 ---
 
 > 원문: [Scaling Managed Agents: Decoupling the brain from the hands](https://www.anthropic.com/engineering/managed-agents) — Anthropic Engineering
+>
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
 Anthropic은 Claude Managed Agents를 출시하여 AI 에이전트의 "두뇌"(Claude LLM 및 Harness)와 "손"(Sandbox 및 도구)을 분리하는 새로운 아키텍처를 도입했습니다. 이는 다음과 같은 핵심 이점을 제공합니다.
 
--   **Harness의 컨테이너 분리**: Harness가 더 이상 사용자 데이터와 함께 실행되지 않고 독립적으로 작동하여, 컨테이너 장애 시에도 세션이 안전하게 복구될 수 있습니다.
--   **세션 로그의 독립성**: 세션 로그를 Harness와 분리하여, Harness의 실패에도 불구하고 모든 이벤트 기록이 영구적으로 저장되고 복구 가능합니다.
--   **보안 강화**: Claude가 생성한 코드가 실행되는 샌드박스 환경에서 민감한 인증 정보(tokens)에 접근할 수 없도록 하여 보안 경계를 명확히 했습니다.
--   **유연한 컨텍스트 관리**: 세션 로그를 Claude의 컨텍스트 창 외부에서 관리되는 객체로 활용하여, 장기적인 작업에서 컨텍스트를 유연하게 저장, 재구성 및 재사용할 수 있습니다.
--   **성능 및 확장성 향상**: 두뇌와 실행 환경을 분리하여 Time-To-First-Token(TTFT)을 획기적으로 개선하고, 다수의 두뇌와 다수의 실행 환경을 효율적으로 연결할 수 있게 되었습니다.
+- **Harness의 컨테이너 분리**: Harness가 더 이상 사용자 데이터와 함께 실행되지 않고 독립적으로 작동하여, 컨테이너 장애 시에도 세션이 안전하게 복구될 수 있습니다.
+- **세션 로그의 독립성**: 세션 로그를 Harness와 분리하여, Harness의 실패에도 불구하고 모든 이벤트 기록이 영구적으로 저장되고 복구 가능합니다.
+- **보안 강화**: Claude가 생성한 코드가 실행되는 샌드박스 환경에서 민감한 인증 정보(tokens)에 접근할 수 없도록 하여 보안 경계를 명확히 했습니다.
+- **유연한 컨텍스트 관리**: 세션 로그를 Claude의 컨텍스트 창 외부에서 관리되는 객체로 활용하여, 장기적인 작업에서 컨텍스트를 유연하게 저장, 재구성 및 재사용할 수 있습니다.
+- **성능 및 확장성 향상**: 두뇌와 실행 환경을 분리하여 Time-To-First-Token(TTFT)을 획기적으로 개선하고, 다수의 두뇌와 다수의 실행 환경을 효율적으로 연결할 수 있게 되었습니다.
 
 자세한 내용은 원문에서 확인하세요.

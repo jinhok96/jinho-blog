@@ -1,7 +1,7 @@
 import type { Metadata } from 'next';
 
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
-import { TRANSLATE_CATEGORY_MAP, type TranslateCategory } from '@jinho-blog/shared';
+import { TRANSLATE_CATEGORIES, TRANSLATE_CATEGORY_MAP, type TranslateCategory } from '@jinho-blog/shared';
 
 import { type SelectOption } from '@/core/ui';
 import { generatePageMetadata, parseSearchParams } from '@/core/utils';
@@ -21,11 +21,10 @@ export const metadata: Metadata = generatePageMetadata({
   title: '번역',
 });
 
-const CATEGORY_OPTIONS: SelectOption<TranslateCategory>[] = [
-  { key: 'react', label: TRANSLATE_CATEGORY_MAP.react },
-  { key: 'nextjs', label: TRANSLATE_CATEGORY_MAP.nextjs },
-  { key: 'vercel', label: TRANSLATE_CATEGORY_MAP.vercel },
-];
+const CATEGORY_OPTIONS: SelectOption<TranslateCategory>[] = TRANSLATE_CATEGORIES.map(category => ({
+  key: category,
+  label: TRANSLATE_CATEGORY_MAP[category],
+}));
 
 type Props = {
   searchParams: Promise<SearchParams<Record<keyof GetTranslatePosts['search'], string | string[] | undefined>>>;

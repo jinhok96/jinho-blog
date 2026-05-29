@@ -8,7 +8,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     localPatterns: [{ pathname: '/images/**' }, { pathname: '/icons/**' }, { pathname: '/_static/**' }],
-    remotePatterns: [{ hostname: 'vercel.com' }],
+    remotePatterns: [{ hostname: 'vercel.com' }, { hostname: 'developer.chrome.com' }, { hostname: 'web.dev' }],
     imageSizes: [16, 32, 48, 64, 96, 128, 192, 256, 320, 384, 512],
   },
 

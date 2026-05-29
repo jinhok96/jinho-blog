@@ -1,0 +1,23 @@
+---
+title: Vercel CLI를 위한 실험적인 네이티브 바이너리
+description: "Vercel CLI의 새로운 실험적인 네이티브 바이너리는 더 빠른 시작, 향상된 보안, Node.js 런타임 의존성 제거를 제공합니다."
+category: vercel
+sourceUrl: https://vercel.com/changelog/experimental-native-binaries-for-vercel-cli
+createdAt: 2026-05-27
+---
+
+> 원문: [Experimental native binaries for Vercel CLI](https://vercel.com/changelog/experimental-native-binaries-for-vercel-cli) — Vercel Blog
+
+[Vercel CLI](https://vercel.com/docs/cli)가 이제 선택적으로 사용할 수 있는 실험적인 네이티브 바이너리를 출시합니다. 이 바이너리는 더 빠르게 시작되고, 훨씬 더 안전하며, Node.js 런타임에 대한 의존성이 없습니다.
+
+바이너리는 코드 서명되어 운영 체제에서 Vercel에서 제공되었으며 수정되지 않았음을 확인할 수 있습니다. 또한 macOS에서는 시스템 키체인에 자격 증명이 바이너리에 범위가 지정되어 저장되므로 다른 프로세스는 명시적인 권한 없이는 접근할 수 없습니다.
+
+실험적인 패키지를 설치하여 옵트인할 수 있습니다:
+
+```
+pnpm i -g @vercel/vc-native -f
+```
+
+`@vercel/vc-native`는 표준 CLI와 동일한 전역 `vercel` 및 `vc` 바이너리 이름을 설치하기 때문에 `-f` 플래그가 필요합니다. 설치 후 `vercel` 및 `vc`는 macOS, Linux 및 Windows의 x64 및 arm64에서 네이티브 바이너리를 실행합니다.
+
+[GitHub](https://github.com/vercel/vercel/issues)에서 여러분의 의견을 알려주세요.

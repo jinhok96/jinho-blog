@@ -1,0 +1,17 @@
+---
+title: Vercel 샌드박스에서 8080 포트 사용 가능
+description: Vercel 샌드박스가 이제 8080 포트를 통해 HTTP 서버를 제공하여 개발자가 로컬에서처럼 쉽게 애플리케이션을 테스트할 수 있도록 지원합니다.
+category: vercel
+sourceUrl: https://vercel.com/changelog/port-8080-is-now-available-in-vercel-sandboxes
+createdAt: 2026-05-29
+---
+
+> 원문: [Port 8080 is now available in Vercel Sandboxes](https://vercel.com/changelog/port-8080-is-now-available-in-vercel-sandboxes) — Vercel Blog
+
+이 포트는 컨트롤러 포트로 사용되었으며, 이제 23456 포트로 이전되었습니다.
+
+```
+import { Sandbox } from "@vercel/sandbox";const sandbox = await Sandbox.create({  ports: [8080],});await sandbox.runCommand({  cmd: "python3",  args: ["-m", "http.server", "8080", "--bind", "0.0.0.0"],  detached: true,});console.log(`url: ${sandbox.domain(8080)}`);
+```
+
+8080 포트가 열린 샌드박스 생성

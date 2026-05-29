@@ -37,6 +37,7 @@
 | UI, 라이브러리 | ![Tailwind CSS][badge-tailwind] ![Zustand][badge-zustand]                      |
 | 개발           | ![ESLint][badge-eslint] ![Prettier][badge-prettier]                            |
 | 테스트         | ![Vitest][badge-vitest] ![Codecov][badge-codecov]                              |
+| AI             | ![Gemini API][badge-gemini]                                                    |
 | 배포           | ![Vercel][badge-vercel]                                                        |
 
 <br />
@@ -66,6 +67,7 @@ jinho-blog/
 - **블로그** — 기술 블로그
 - **프로젝트** — 참여 프로젝트 소개
 - **라이브러리** — 재사용 가능한 코드 보관
+- **번역** — 주요 기술 블로그 한국어 번역 아카이브
 
 <br />
 
@@ -122,6 +124,7 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - 카테고리 필터링, 정렬, 페이지네이션 지원
 - 빌드 시 `thumbnail-generator`를 통해 블로그 글 썸네일 자동 생성
 - Git 또는 GitHub 커밋 기록에서 콘텐츠별 작성일, 수정일 추출
+- RSS 피드 기반 기술 블로그 자동 수집 및 Gemini API(gemini-2.5-flash-lite)로 한국어 번역 후 MDX 저장
 
 ### 🛣️ nextjs-routes
 
@@ -138,6 +141,7 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 
 - **CI** — PR 생성 → GitHub Actions 전체 테스트 실행 후 Codecov 업로드 & Vercel 빌드 및 배포 → 성공 시 PR 병합 가능
 - **CD** — `main`에 변경사항 병합 → Vercel 자동 배포
+- **번역 콘텐츠 자동화** — 매일 UTC 02:00 GitHub Actions 실행 → RSS 피드 신규 글 감지 → Gemini API 번역·생성 → `mdx` 브랜치에 자동 커밋
 
 <br />
 
@@ -148,9 +152,9 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - mdx-handler 패키지를 통해 빌드 시 web에 에셋과 문서를 등록
 - MDX 파일 이름이 페이지 슬러그로 매칭
 - MDX 파일 Front-matter에 메타데이터 작성
+- `translate/` 폴더 GitHub Actions가 RSS 피드에서 자동 번역·생성
 
 <br />
-
 
 <!-- Links -->
 
@@ -189,4 +193,5 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 [badge-prettier]: https://img.shields.io/badge/Prettier_3-F7B93E?style=flat&logo=prettier&logoColor=black
 [badge-vitest]: https://img.shields.io/badge/Vitest-6E9F18?style=flat&logo=vitest&logoColor=white
 [badge-codecov]: https://img.shields.io/badge/Codecov-F01F7A?style=flat&logo=codecov&logoColor=white
+[badge-gemini]: https://img.shields.io/badge/Gemini_API-8E75B2?style=flat&logo=googlegemini&logoColor=white
 [badge-vercel]: https://img.shields.io/badge/Vercel-000000?style=flat&logo=vercel&logoColor=white

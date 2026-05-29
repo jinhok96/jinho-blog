@@ -62,6 +62,7 @@ export function SelectCategory<T extends string>({ className, options, position 
             key={option.key}
             onClick={() => handleOptionClick(index)}
             isSelected={index === currentIndex}
+            className="whitespace-nowrap"
           >
             {option.label}
           </Select.Option>

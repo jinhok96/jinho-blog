@@ -1,4 +1,4 @@
-import type { BlogCategory, LibraryCategory, ProjectCategory, TechStack } from './category';
+import type { BlogCategory, LibraryCategory, ProjectCategory, TechStack, TranslateCategory } from './category';
 
 // 모든 메타데이터에 공통 필드
 export interface BaseMetadata {
@@ -28,8 +28,14 @@ export interface LibraryMetadata extends BaseMetadata {
   tech: TechStack[];
 }
 
+export interface TranslateMetadata extends BaseMetadata {
+  category: TranslateCategory;
+  thumbnail: string;
+  sourceUrl: string;
+}
+
 // Union type for all metadata
-export type ContentMetadata = BlogMetadata | ProjectMetadata | LibraryMetadata;
+export type ContentMetadata = BlogMetadata | ProjectMetadata | LibraryMetadata | TranslateMetadata;
 
 export type MdxInfo = {
   slug: string; // 슬러그

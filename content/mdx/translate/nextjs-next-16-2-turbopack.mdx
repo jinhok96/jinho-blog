@@ -1,0 +1,85 @@
+---
+title: "Turbopack: Next.js 16.2의 새로운 기능"
+description: "Next.js 16.2에서는 Turbopack의 성능 향상, 버그 수정, 기능 일치성 증대에 중점을 둔 새로운 기능들이 추가되었습니다."
+category: nextjs
+sourceUrl: https://nextjs.org/blog/next-16-2-turbopack
+createdAt: 2026-03-18
+---
+
+> 원문: [Turbopack: What's New in Next.js 16.2](https://nextjs.org/blog/next-16-2-turbopack) — Next.js Blog
+
+Next.js의 기본 번들러가 된 지 두 번의 릴리스 만에, 성능 개선, 버그 수정, 그리고 기능 일치성 증대에 집중했습니다. [Next.js 16.2](https://nextjs.org/blog/next-16-2)의 일부로 제공되는 최신 기능들을 소개합니다.
+
+*   [**Server Fast Refresh**](#server-fast-refresh): 더 세분화된 서버 측 핫 리로딩
+*   [**Web Worker Origin**](#web-worker-origin): Worker에서 WASM 라이브러리 지원 확대
+*   [**Subresource Integrity Support**](#subresource-integrity-support): JavaScript 파일에 대한 Subresource Integrity 지원
+*   [**Tree Shaking of Dynamic Imports**](#tree-shaking-of-dynamic-imports): 동적 `import()`에서 사용되지 않는 export 제거
+*   [**Inline Loader Configuration**](#inline-loader-configuration): import attributes를 통한 import 당 로더 구성
+*   [**Lightning CSS Configuration**](#lightning-css-configuration): 실험적인 LightningCSS 구성 옵션
+*   [**Log Filtering**](#log-filtering): `ignoreIssue`를 사용한 번거로운 로그 및 경고 억제
+*   [**`postcss.config.ts` Support**](#postcssconfigts-support): TypeScript PostCSS 구성
+*   [**Performance Improvements and Bug Fixes**](#performance-improvements-and-bug-fixes): 200개 이상의 변경 및 버그 수정
+
+다음 릴리스를 향해, 컴파일러 성능 향상과 메모리 사용량 감소에 집중할 예정입니다.
+
+# Server Fast Refresh[](#server-fast-refresh)
+
+개발 중 서버 측 코드의 리로드 방식을 재설계했습니다. 이전 시스템은 변경된 모듈과 해당 import 체인 내의 다른 모든 모듈에 대해 `require.cache`를 지웠습니다. 이 접근 방식은 종종 `node_modules`를 포함하여 불필요한 더 많은 코드를 리로드했습니다.
+
+새로운 시스템은 브라우저에서 사용되는 것과 동일한 Fast Refresh 방식을 서버 코드로 가져옵니다. Turbopack의 모듈 그래프에 대한 지식을 통해 실제로 변경된 모듈만 리로드하고 나머지는 그대로 둡니다. 이를 통해 서버 측 핫 리로딩이 훨씬 효율적으로 이루어집니다.
+
+실제 Next.js 애플리케이션에서 애플리케이션 새로고침 속도가 67-100% 빨라지고 Next.js 내에서 컴파일 시간이 400-900% 빨라지는 것을 확인했습니다. 이러한 결과는 가장 작은 "hello world" 스타터 프로젝트부터 `vercel.com`과 같은 대규모 사이트까지 확장됩니다.
+
+오늘부터 이 기능을 모든 개발자에게 기본으로 활성화합니다. [Proxy](https://nextjs.org/docs/app/getting-started/proxy) 및 [Route Handlers](https://nextjs.org/docs/app/getting-started/route-handlers)는 오늘 기존 시스템을 사용하지만, 이에 대한 지원은 향후 릴리스에서 제공될 예정입니다. 이 새로운 기능에 대한 피드백이나 이슈는 [GitHub](https://github.com/vercel/next.js/issues)에서 공유해 주시기 바랍니다.
+
+# Web Worker Origin[](#web-worker-origin)
+
+이전에는 Web Worker가 `blob://` URL을 통해 부트스트랩되었습니다. 이를 통해 워커 로딩이 간소화되었지만, `location.origin` 값이 비어있게 되었습니다. `importScripts()` 또는 `fetch()`를 사용하려는 Web Worker 코드(주로 타사 라이브러리)는 수정 없이는 요청을 해결할 수 없었습니다.
+
+업데이트된 Worker 부트스트랩 코드를 통해 `origin`이 도메인 이름으로 올바르게 지정되며, 상대 경로 fetch가 성공합니다. 이를 통해 이전 버전에서 Worker 내에서 WASM 코드를 실행하는 데 어려움을 겪었던 모든 사용자의 문제가 해결될 것입니다.
+
+# Subresource Integrity Support[](#subresource-integrity-support)
+
+Turbopack은 이제 [Subresource Integrity (SRI)](https://nextjs.org/docs/app/guides/content-security-policy#enabling-sri)를 지원합니다. SRI는 빌드 시점에 JavaScript 파일의 암호화 해시를 생성하여, 파일이 수정되지 않았는지 브라우저가 검증할 수 있도록 합니다.
+
+브라우저는 Content Security Policy라는 기술을 제공하여 사이트가 실행할 수 있는 JavaScript를 제한할 수 있으며, 이를 통해 전체적인 보안 문제를 제거할 수 있습니다. 그러나 이를 구현하는 일반적인 `nonce` 기반 방법은 모든 페이지가 동적으로 렌더링되어야 하므로 성능에 영향을 미칩니다. Subresource Integrity는 각 스크립트의 해시를 미리 계산하고, 승인된 해시를 가진 스크립트만 브라우저가 실행하도록 허용하는 대안입니다.
+
+# Tree Shaking of Dynamic Imports[](#tree-shaking-of-dynamic-imports)
+
+Turbopack은 이제 정적 import와 동일한 방식으로 구조 분해된 동적 import를 tree shake합니다. 사용되지 않는 export는 번들에서 제거됩니다.
+
+이는 tree shaking 목적으로 정적 import와 동일하게 작동합니다. `./lib`의 사용되지 않는 export는 tree shake됩니다.
+
+# Inline Loader Configuration[](#inline-loader-configuration)
+
+Turbopack은 이제 [import attributes](https://github.com/vercel/next.js/pull/89644)를 통해 import 당 로더 구성을 지원합니다. `turbopack.rules`를 통해 로더를 전역적으로 적용하는 대신, `with` 절을 사용하여 개별 import에서 구성할 수 있습니다.
+
+이는 특정 import만 특별한 처리가 필요한 경우 유용하며, 동일한 파일 형식의 다른 import에 대한 부작용을 방지합니다. 사용 가능한 속성은 `turbopackLoader`, `turbopackLoaderOptions`, `turbopackAs`, `turbopackModuleType`입니다.
+
+인라인 로더를 사용하는 코드는 이식성이 떨어지므로, 가능한 경우 `next.config.ts`에서 로더를 구성하는 것을 우선적으로 권장합니다. 이 옵션은 플러그인 또는 로더에서 생성된 코드에 더 유용합니다.
+
+# Lightning CSS Configuration[](#lightning-css-configuration)
+
+Lightning CSS는 Turbopack에서 CSS 축소 및 접두사 처리에 사용되는 빠르고 Rust 기반의 CSS 트랜스포머입니다. Babel 또는 SWC가 JavaScript에 대해 수행하는 것과 유사하게, 이전 브라우저에서도 최신 CSS 기능을 구현할 수 있습니다. 이전에는 이러한 설정을 전환하는 유일한 방법은 Browserslist 구성을 통하는 것이었습니다. 이제 실험적인 `lightningCssFeatures` 옵션을 통해 특정 기능을 항상 또는 절대 트랜스파일하지 않도록 강제할 수 있습니다.
+
+# Log Filtering[](#log-filtering)
+
+Turbopack은 이제 `turbopack.ignoreIssue` 구성 옵션을 사용하여 스트리밍 로그에서 번거롭거나 예상되는 경고를 억제할 수 있습니다. 이는 타사 코드, 생성된 파일, 또는 선택적 종속성에서 발생하는 경고를 억제하고 Next.js 오류 오버레이에서 예상되는 오류를 숨기는 데 유용합니다.
+
+특정 코드 경로에서 생성된 로그를 일치시킬 수 있으며, 특정 제목/설명 문자열 또는 패턴으로 필터링할 수도 있습니다.
+
+# `postcss.config.ts` Support[](#postcssconfigts-support)
+
+Turbopack은 이제 기존의 `.js` 및 `.cjs` 변형 외에 `postcss.config.ts`를 지원합니다.
+
+# Performance Improvements and Bug Fixes[](#performance-improvements-and-bug-fixes)
+
+Turbopack 내부 개선에 대한 투자를 계속했습니다. 200개 이상의 변경 및 버그 수정으로 다양한 프로젝트에서 안정성과 호환성이 향상되었습니다. 데이터 인코딩, 내부 표현 형식 및 해싱 알고리즘의 최적화는 메모리 사용량과 빌드 시간을 개선했습니다. 오류 로그를 더 명확하게 만들고 진단을 확장하여 컴파일러 오류를 더 잘 이해하도록 도왔습니다. 또한 GitHub Issues를 16.1 릴리스 이후 누락된 기능 파악에 활용했습니다.
+
+# Feedback and Community[](#feedback-and-community)
+
+피드백을 공유하고 Next.js의 미래를 만들어가는 데 도움을 주세요.
+
+*   [GitHub Discussions](https://github.com/vercel/next.js/discussions)
+*   [GitHub Issues](https://github.com/vercel/next.js/issues)
+*   [Discord Community](https://nextjs.org/discord)

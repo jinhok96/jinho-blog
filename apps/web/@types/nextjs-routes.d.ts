@@ -4,12 +4,12 @@
 /**
  * Static route pathnames (no dynamic parameters)
  */
-export type StaticPathname = '/' | '/blog' | '/libraries' | '/projects' | '/rss.xml';
+export type StaticPathname = '/' | '/blog' | '/libraries' | '/projects' | '/rss.xml' | '/translate';
 
 /**
  * Dynamic route pathnames (with parameters like [slug])
  */
-export type DynamicPathname = '/blog/[slug]' | '/libraries/[slug]' | '/projects/[slug]';
+export type DynamicPathname = '/blog/[slug]' | '/libraries/[slug]' | '/projects/[slug]' | '/translate/[slug]';
 
 /**
  * All route pathnames
@@ -28,6 +28,7 @@ export type PathParams<P extends DynamicPathname> =
   P extends '/blog/[slug]' ? { slug: string } :
   P extends '/libraries/[slug]' ? { slug: string } :
   P extends '/projects/[slug]' ? { slug: string } :
+  P extends '/translate/[slug]' ? { slug: string } :
   never;
 
 /**

@@ -1,0 +1,201 @@
+---
+title: TypeScript 7.0 베타 출시 발표
+description: "TypeScript 7.0 베타 버전이 출시되었으며, Go로 재작성되어 성능이 크게 향상되었습니다."
+category: typescript
+sourceUrl: https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-beta/
+createdAt: 2026-04-21
+---
+
+> 원문: [Announcing TypeScript 7.0 Beta](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-beta/) — TypeScript Blog
+
+오늘 TypeScript 7.0 베타 버전을 발표하게 되어 매우 기쁩니다!
+
+TypeScript 7.0의 개발 과정을 따라오지 않으셨다면, 이번 릴리스는 완전히 새로운 기반 위에서 구축되었다는 점에서 중요합니다. 지난 1년간 우리는 기존 TypeScript 코드베이스를 TypeScript(JavaScript로 컴파일되는 부트스트랩 코드베이스)에서 Go로 포팅하는 작업을 진행해 왔습니다. 네이티브 코드 속도와 공유 메모리 병렬 처리의 조합을 통해, **TypeScript 7.0은 TypeScript 6.0보다 종종 10배 더 빠릅니다.**
+
+"베타"라는 레이블에 속지 마세요. 일상 업무에서 즉시 사용하기 시작할 수 있습니다. 새로운 Go 코드베이스는 처음부터 다시 작성된 것이 아니라 기존 구현에서 체계적으로 포팅되었으며, 타입 검사 로직은 TypeScript 6.0과 구조적으로 동일합니다. 이러한 아키텍처 패리티는 컴파일러가 여러분이 이미 의존하고 있는 정확히 동일한 의미론을 계속해서 강제하도록 보장합니다. TypeScript 7.0은 10년에 걸쳐 구축된 방대한 테스트 스위트에 대해 평가되었으며, 이미 Microsoft 안팎에서 수백만 라인의 코드로 이루어진 여러 코드베이스에서 사용되고 있습니다. 매우 안정적이며, 호환성이 높고, 오늘날 여러분의 일상적인 워크플로우와 CI 파이프라인에서 테스트될 준비가 되었습니다.
+
+1년 이상 우리는 Microsoft 내부 여러 팀과 Bloomberg, Canva, Figma, Google, Lattice, Linear, Miro, Notion, Slack, Vanta, Vercel, VoidZero 등과 같은 회사 팀과 협력하여 TypeScript 7.0의 사전 릴리스 빌드를 코드베이스에서 테스트해 왔습니다. 피드백은 압도적으로 긍정적이었으며, 많은 팀에서 유사한 속도 향상을 보고하고 빌드 시간을 대부분 단축했으며 훨씬 더 가볍고 유연한 편집 경험을 즐겼습니다. 이에 따라 베타 버전이 훌륭한 상태라고 확신하며, 여러분이 곧 사용해 보기를 기대합니다.
+
+# TypeScript 7.0 베타 사용하기
+
+TypeScript 7.0 베타를 얻으려면 npm을 통해 설치할 수 있습니다.
+
+```
+npm install -D @typescript/native-preview@beta
+```
+
+> 참고: 향후 릴리스에서는 패키지 이름이 `typescript`가 될 것입니다.
+
+여기서 `tsc` 실행 파일 대신 `tsgo`를 실행할 수 있습니다.
+
+```
+> npx tsgo --version
+Version 7.0.0-beta
+```
+
+`tsgo` 실행 파일은 TypeScript 6.0의 `tsc`와 모든 TypeScript 코드에 대해 동일한 동작을 수행하지만 훨씬 빠릅니다.
+
+편집 경험을 사용해 보려면 [VS Code용 TypeScript Native Preview 확장](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.native-preview)을 설치할 수 있습니다. 편집기 지원은 매우 견고하며 이미 많은 팀에서 몇 달 동안 널리 사용되었습니다. 코드베이스에서 TypeScript 7.0을 즉시 테스트할 수 있는 쉽고 마찰 없는 방법입니다. 명령줄 경험과 동일한 기반으로 구축되었으므로 편집기에서 명령줄과 동일한 성능 향상을 얻을 수 있습니다. 특히 언어 서버 프로토콜을 기반으로 구축되어 대부분의 최신 편집기 또는 Copilot CLI와 같은 도구에서 실행하기 쉽습니다.
+
+# TypeScript 6.0과 함께 실행하기
+
+TypeScript 6.0에서 TypeScript 7.0으로 전환하는 데 도움이 되도록 이 베타 릴리스는 `tsgo` 진입점을 사용하는 `@typescript/native-preview` 패키지 이름을 통해 사용할 수 있습니다. 이를 통해 `tsc`와 `tsgo` 간의 쉬운 검증 및 비교가 가능합니다.
+
+그러나 위에서 언급했듯이 TypeScript 7.0의 안정적인 릴리스는 `typescript` 패키지 아래에 게시되며 `tsc` 진입점을 사용합니다.
+
+또한 7.0 베타는 프로덕션 준비에 가깝지만, TypeScript 7.1부터 최소 몇 달 후에야 안정적인 프로그래밍 API를 사용할 수 있게 될 것입니다. 이 점을 감안할 때, "어떤 `tsc`인가?"라는 이름 충돌 없이 가까운 미래에 TypeScript 6.0과 TypeScript 7.0을 나란히 실행할 수 있도록 하는 것을 우선순위로 삼았습니다.
+
+6.0/7.0 전환 프로세스의 일부로 `@typescript/typescript6`라는 새로운 호환성 패키지를 게시했습니다. 이 패키지는 `tsc6`라는 새로운 진입점을 노출하므로 (필요한 경우) 이름 충돌 없이 다음 TypeScript 7.0 릴리스(`tsc` 바이너리를 제공하는)를 나란히 실행할 수 있습니다. 또한 TypeScript 6.0 API를 다시 내보내므로 TypeScript 7용으로 `tsc`를 사용할 수 있으며, 다른 도구는 6.0에 계속 의존할 수 있습니다.
+
+typescript-eslint와 같은 일부 도구는 피어 종속성을 통해 `typescript`에서 직접 가져와야 하므로 npm 별칭을 통해 이를 달성하는 것이 좋습니다. 다음 명령을 실행할 수 있어야 합니다.
+
+```
+npm install -D typescript@npm:@typescript/typescript6
+```
+
+또는 `package.json`을 다음과 같이 수정하십시오.
+
+```
+{
+  "devDependencies": {
+    "typescript": "npm:@typescript/typescript6@^6.0.0",
+  }
+}
+```
+
+향후 TS7 기반 `tsc`와 TS6 기반 `tsc6`를 함께 사용하는 방법에 대한 보다 구체적인 지침을 제공할 것입니다.
+
+# 병렬 처리 및 제어
+
+TypeScript 7.0은 이제 파싱, 타입 검사, 내보내기를 포함한 여러 단계를 병렬로 수행합니다. 파싱 및 내보내기와 같은 이러한 단계 중 일부는 파일 간에 대부분 독립적으로 수행될 수 있습니다. 따라서 병렬 처리는 오버헤드가 거의 없이 대규모 코드베이스에서 자동으로 잘 확장됩니다. 그러나 TypeScript 빌드의 모든 단계가 쉽게 병렬화되는 것은 아닙니다.
+
+## 체커 병렬 처리
+
+타입 검사와 같은 다른 단계는 파일 간에 더 복잡한 종속성이 있습니다. 대부분의 파일은 결국 종속성 및 전역 범위의 동일한 타입 정보에 의존하므로 타입 체커를 완전히 독립적으로 실행하는 것은 계산 및 메모리 모두에서 낭비가 될 것입니다. 반면에 타입 검사는 프로그램에서 정보의 상대적 순서에 따라 때때로 달라지므로, 타입 검사는 동일한 결과를 보장하기 위해 항상 동일한 순서로 동일한 파일을 확인해야 합니다.
+
+이러한 함정을 피하면서 병렬 처리를 가능하게 하기 위해 TypeScript 7.0은 자체적인 세계 뷰를 가진 고정된 수의 타입 체커 워커를 생성합니다. 이러한 타입 검사 워커는 일부 공통 작업을 중복할 수 있지만, 동일한 입력 파일이 주어지면 항상 동일하게 분할하고 동일한 결과를 생성합니다.
+
+기본 타입 검사 워커 수는 4개이지만 새 `--checkers` 플래그로 구성할 수 있습니다. 이 숫자를 늘리면 일반적인 기계가 더 많은 CPU 코어를 가지고 있는 대규모 코드베이스에서 빌드 속도를 더욱 높일 수 있지만, 일반적으로 메모리 사용량이 증가하는 대가를 치르게 됩니다. 마찬가지로 CPU 코어가 적은 기계(예: CI 실행기)는 불필요한 오버헤드를 피하기 위해 이 숫자를 줄이고 싶을 수 있습니다.
+
+드물게 `--checkers` 수를 다양하게 변경하면 순서에 따른 결과가 나타날 수 있습니다. 팀 전체에서 고정된 수의 체커를 지정하면 모두가 동일한 결과를 얻도록 하는 데 도움이 될 수 있지만, 각 팀의 재량에 달려 있습니다.
+
+## 프로젝트 참조 빌더 병렬 처리
+
+TypeScript 7.0은 프로젝트 내에서 빌드를 병렬화할 수 있지만, 이제 여러 프로젝트를 동시에 빌드할 수도 있습니다. 이 동작은 동시에 실행할 수 있는 병렬 프로젝트 참조 빌더 수를 제어하는 새 `--builders` 플래그로 구성할 수 있습니다. 이는 많은 프로젝트가 있는 모노레포에 특히 유용할 수 있습니다.
+
+`--checkers`와 마찬가지로 빌더 수를 늘리면 빌드 속도를 높일 수 있지만 메모리 사용량이 증가하는 대가를 치를 수 있습니다. 또한 `--checkers`와 곱셈 효과가 있으므로 기계와 코드베이스에 맞는 적절한 균형을 찾는 것이 중요합니다. 예를 들어, `--checkers 4 --builders 4`로 빌드하면 최대 16개의 타입 체커를 동시에 실행할 수 있으며, 이는 과도할 수 있습니다.
+
+`--checkers`와 달리 빌더 수를 다양하게 변경해도 다른 결과가 나오지는 않아야 합니다. 그러나 프로젝트 참조를 빌드하는 것은 근본적으로 프로젝트의 종속성 그래프에 의해 병목 현상이 발생합니다 ( `--isolatedDeclarations`를 활용하고 별도의 구문 선언 파일 내보내기를 사용하는 코드베이스의 타입 검사를 제외하고).
+
+## 단일 스레드 모드
+
+어떤 경우에는 컴파일러 전체에서 단일 스레드 작업을 강제하는 것이 유용할 수 있습니다. 이는 디버깅, TypeScript 6 및 7과의 성능 비교, 외부에서 병렬 빌드 조정, 또는 리소스가 매우 제한적인 환경 실행에 유용할 수 있습니다. 단일 스레드 모드를 활성화하려면 새 `--singleThreaded` 플래그를 사용할 수 있습니다. 이는 타입 검사 워커 수를 1개로 제한할 뿐만 아니라 파싱 및 내보내기가 단일 스레드에서 수행되도록 합니다.
+
+# 5.x 이후 업데이트 및 6.0의 새 동작
+
+TypeScript 7.0은 TypeScript 6.0의 타입 검사 및 명령줄 동작과 호환되도록 만들어졌습니다. TypeScript 6.0에서 ( `stableTypeOrdering` 플래그가 켜진 상태로, `ignoreDeprecations` 플래그가 설정되지 않은 상태로) 깨끗하게 컴파일되는 모든 TypeScript 코드는 TypeScript 7.0에서도 동일하게 컴파일되어야 합니다.
+
+그럼에도 불구하고 TypeScript 7.0은 6.0의 새 기본값을 채택하고 TypeScript 6.0에서 사용 중단된 플래그 및 구문이 있는 경우 하드 오류를 제공합니다. 이는 6.0이 아직 비교적 새롭고 많은 프로젝트가 새 동작에 적응해야 한다는 점을 고려할 때 주목할 만합니다. TypeScript 7.0으로의 전환을 더 쉽게 만들기 위해 TypeScript 6.0을 채택하도록 개발자에게 권장하며, 이러한 사용 중단에 대한 자세한 내용은 [TypeScript 6.0 릴리스 블로그 게시물](https://devblogs.microsoft.com/typescript/announcing-typescript-6-0/)을 참조할 수도 있습니다.
+
+전체적으로 구성에 대한 주목할 만한 기본 변경 사항은 다음과 같습니다.
+
+*   `strict`는 기본적으로 `true`입니다.
+*   `module`은 `esnext`로 기본 설정됩니다.
+*   `target`은 `esnext` 바로 이전의 현재 안정적인 ECMAScript 버전으로 기본 설정됩니다.
+*   `noUncheckedSideEffectImports`는 기본적으로 `true`입니다.
+*   `libReplacement`는 기본적으로 `false`입니다.
+*   `stableTypeOrdering`은 기본적으로 `true`이며 해제할 수 없습니다.
+*   `rootDir`은 이제 `./`로 기본 설정되며, 내부 소스 디렉토리는 명시적으로 설정해야 합니다.
+*   `types`는 이제 `[]`로 기본 설정되며, `["*"]`로 설정하여 이전 동작을 복원할 수 있습니다.
+
+`rootDir` 및 `types` 변경 사항이 가장 "놀라운" 변경 사항일 수 있다고 생각하지만, 쉽게 완화할 수 있습니다. `tsconfig.json`이 `src`와 같은 디렉터리 외부에 있는 프로젝트는 동일한 디렉터리 구조를 유지하기 위해 `rootDir`을 포함하기만 하면 됩니다.
+
+```
+  {
+      "compilerOptions": {
+          // ...
++         "rootDir": "./src"
+      },
+      "include": ["./src"]
+  }
+```
+
+`types` 변경의 경우 특정 전역 선언에 의존하는 프로젝트는 명시적으로 나열해야 합니다. 예를 들어,
+
+```
+  {
+      "compilerOptions": {
+          // 필요한 @types 패키지를 명시적으로 나열합니다 (예: bun, mocha, jasmine 등)
++         "types": ["node", "jest"]
+      }
+  }
+```
+
+사용 중단되어 하드 오류가 되었고 동작 없는(no-op) 항목은 다음과 같습니다.
+
+*   `target: es5`는 더 이상 지원되지 않습니다.
+*   `downlevelIteration`는 더 이상 지원되지 않습니다.
+*   `moduleResolution: node/node10`은 더 이상 지원되지 않으며, 대신 `nodenext` 및 `bundler`가 권장됩니다.
+*   `module: amd, umd, systemjs, none`은 더 이상 지원되지 않으며, bundler 또는 브라우저 기반 모듈 해상도와 함께 `esnext` 또는 `preserve`가 권장됩니다.
+*   `baseUrl`은 더 이상 지원되지 않으며, `paths`는 `baseUrl`이 아닌 프로젝트 루트에 상대적으로 업데이트될 수 있습니다.
+*   `moduleResolution: classic`은 더 이상 지원되지 않으며, `bundler` 또는 `nodenext`가 권장 대체입니다.
+*   `esModuleInterop` 및 `allowSyntheticDefaultImports`는 `false`로 설정할 수 없습니다.
+*   `alwaysStrict`는 `true`로 간주되며 더 이상 `false`로 설정할 수 없습니다.
+*   `module` 키워드는 네임스페이스 선언에서 사용할 수 없습니다.
+*   `asserts` 키워드는 가져오기에서 사용할 수 없으며, ECMAScript의 가져오기 속성 구문 개발과 일치시키기 위해 대신 `with` 키워드를 사용해야 합니다.
+*   `/// <reference no-default-lib />` 지시문은 `skipDefaultLibCheck`에서는 더 이상 존중되지 않습니다.
+*   현재 디렉터리에 `tsconfig.json` 파일이 포함된 경우 명시적인 `--ignoreConfig` 플래그가 전달되지 않는 한 명령줄 빌드는 파일 경로를 사용할 수 없습니다.
+
+## JavaScript 차이점
+
+기존 코드베이스를 포팅하면서 JavaScript 지원 방식을 재검토할 기회도 가졌습니다.
+
+TypeScript는 원래 JSDoc 주석을 사용하고 분석 및 타입 추론을 위한 특정 코드 패턴을 인식하여 JavaScript 파일을 지원했습니다. 대부분의 경우 이는 인기 있는 코딩 패턴에 기반했지만, 때로는 사람들이 작성할 수 있는 것과 Closure 및 JSDoc 문서 생성 도구가 이해할 수 있는 것에 기반했습니다. 이 접근 방식은 느슨하게 작성된 JSDoc 코드베이스를 가진 개발자에게 유용했지만, 잘 작동하기 위해 여러 절충과 특수 사례가 필요했으며 `.ts` 파일의 TypeScript 분석과 여러 면에서 달라졌습니다.
+
+TypeScript 7.0에서는 TypeScript 파일을 분석하는 방식과 더 일관되도록 JavaScript 지원을 재작업했습니다. 몇 가지 차이점은 다음과 같습니다.
+
+*   값이 타입이 필요한 곳에 사용될 수 없습니다. 대신 `typeof someValue`를 작성하십시오.
+*   `@enum`은 더 이상 특별히 인식되지 않습니다. `(typeof YourEnumDeclaration)[keyof typeof YourEnumDeclaration]`에 대한 `@typedef`를 만드십시오.
+*   독립적인 `?`는 더 이상 타입으로 사용할 수 없습니다. 대신 `any`를 사용하십시오.
+*   `@class`는 함수를 생성자로 만들지 않습니다. 대신 `class` 선언을 사용하십시오.
+*   후위 `!`는 지원되지 않습니다. `T`를 사용하십시오.
+*   타입 이름은 식별자에 인접한 곳(즉, `/** @typedef {T} */ TypeAliasName;`)이 아니라 `@typedef` 태그 내에 정의되어야 합니다(즉, `/** @typedef {T} TypeAliasName */`).
+*   Closure 스타일 함수 구문(예: `function(string): void`)은 더 이상 지원되지 않습니다. 대신 TypeScript 약식(예: `(s: string) => void`)을 사용하십시오.
+
+또한 `this`를 별칭 지정하고 함수의 `prototype` 전체를 다시 할당하는 것과 같은 일부 JavaScript 패턴은 더 이상 특별히 처리되지 않습니다.
+
+JS 지원 중 일부는 변경 중이지만, TypeScript 6.0과 7.0 간의 차이점을 더 자세히 기록하기 위해 이 [CHANGES.md 파일](https://github.com/microsoft/typescript-go/blob/main/CHANGES.md)을 업데이트했습니다.
+
+# 편집기 경험
+
+TypeScript 7.0의 성능 향상은 명령줄 경험에만 국한되지 않습니다. 편집기 경험에도 확장됩니다. [VS Code용 TypeScript Native Preview 확장](https://marketplace.visualstudio.com/items?itemName=TypeScriptTeam.native-preview)은 편집기에서 TypeScript 7.0을 테스트할 수 있는 원활한 방법을 제공하며 널리 사용되었습니다.
+
+처음 출시된 이후 자동 가져오기, 확장 가능한 호버, 인레이 힌트, 코드 렌즈, 정의로 이동, JSX 연결 편집 및 태그 완성 등 누락된 기능을 추가했습니다. 또한 품질 기준이 높도록 테스트 및 진단 인프라의 많은 부분을 재구축했습니다.
+
+이 확장은 Visual Studio Code용 기본 TypeScript 확장과 대부분의 동일한 기능과 함께 대부분의 동일한 구성 설정을 존중합니다. 몇 가지 사항(의미론 기반 하이라이팅, 보다 구체적인 가져오기 관리 명령 등)은 아직 제공될 예정이지만, 이 확장은 이미 강력하고 안정적이며 빠릅니다.
+
+# 향후 작업
+
+향후 몇 주 안에 더 효율적인 `--watch` 구현을 출시하고 JavaScript 파일에서 선언 파일 내보내기 패리티를 달성할 것으로 예상합니다. 또한 파일 탐색기에서 "파일 참조 찾기"와 같은 사소한 편집기 기능 격차를 해소하고, 더 일반적인 "가져오기 구성" 명령 대신 더 세분화된 "가져오기 정렬" 및 "사용하지 않는 가져오기 제거" 명령을 제공할 것입니다.
+
+이 외에도 TypeScript 7.1 이상을 위한 안정적인 프로그래밍 API를 개발하고, 실제 테스트 인프라를 개선하며, 피드백을 처리할 것입니다.
+
+# TypeScript 7.0으로 가는 길
+
+TypeScript 7.0 베타가 이제 사용 가능해짐에 따라 팀은 안정적인 릴리스를 향해 나아가면서 버그 수정, 호환성 작업, 편집기 다듬기 및 성능 개선에 집중하고 있습니다. 현재 계획은 2개월 이내에 TypeScript 7.0을 출시하는 것이며, 몇 주 전에 릴리스 후보를 사용할 수 있게 될 것입니다. 릴리스 후보는 TypeScript 7의 동작이 최종 확정될 것으로 예상되는 시점이며, 이후 변경 사항은 회귀에 대한 심각한 수정에 초점을 맞출 것입니다.
+
+그때까지 실제 프로젝트에서 TypeScript 7.0을 테스트하여 피드백을 주시면 특히 감사하겠습니다. 문제가 발생하면 [microsoft/typescript-go의 이슈 트래커](https://github.com/microsoft/typescript-go/issues)에 알려주시면 안정적인 릴리스가 훌륭한 상태인지 확인할 수 있습니다.
+
+또한 TypeScript 7.0 사용 경험을 공유하고 [Bluesky의 @typescriptlang.org](https://bsky.app/profile/typescriptlang.org) 또는 [Mastodon의 @typescript@fosstodon.org](https://fosstodon.org/@TypeScript/) 또는 [Twitter의 @typescript](https://twitter.com/typescript)를 태그하도록 권장합니다.
+
+저희 팀은 여러분이 이 릴리스를 사용해 보기를 매우 기대하고 있으므로, 오늘 바로 사용해 보시고 여러분의 생각을 알려주세요. 즐거운 코딩 되세요!
+
+– TypeScript 팀
+
+# 작성자
+
+![Daniel Rosenwasser](https://devblogs.microsoft.com/typescript/wp-content/uploads/sites/11/2021/08/Daniel-Rosenwasser-635x817-1-96x96.png)
+
+Principal Product Manager
+
+Daniel Rosenwasser는 TypeScript 팀의 제품 관리자입니다. 프로그래밍 언어, 컴파일러, 훌륭한 개발자 도구에 대한 열정을 가지고 있습니다.

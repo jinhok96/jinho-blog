@@ -1,4 +1,4 @@
-export type { BlogCategory, LibraryCategory, ProjectCategory, TechStack } from './internal/category';
+export type { BlogCategory, LibraryCategory, ProjectCategory, TechStack, TranslateCategory } from './internal/category';
 export type {
   GetBlogPostsOptions,
   GetLibrariesOptions,
@@ -24,6 +24,7 @@ export type {
   LibraryMetadata,
   MdxInfo,
   ProjectMetadata,
+  TranslateMetadata,
 } from './internal/metadata';
 export type { Params, ParamsWithSearchParams } from './internal/params';
 export type { SearchParams } from './internal/searchParams';

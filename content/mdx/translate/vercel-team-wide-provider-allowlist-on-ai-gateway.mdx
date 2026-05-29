@@ -1,0 +1,46 @@
+---
+title: AI Gateway에 팀 전체 제공업체 허용 목록 기능 지원
+description: AI Gateway에서 팀 단위로 허용되는 AI 제공업체를 설정하여 보안 및 규정 준수를 강화하는 새로운 기능을 소개합니다.
+category: vercel
+sourceUrl: https://vercel.com/changelog/team-wide-provider-allowlist-on-ai-gateway
+createdAt: 2026-05-28
+---
+
+> 원문: [Team-wide provider allowlist on AI Gateway](https://vercel.com/changelog/team-wide-provider-allowlist-on-ai-gateway) — Vercel Blog
+
+AI Gateway가 팀 전체 제공업체 허용 목록 기능을 지원합니다. 팀은 요청을 처리할 수 있는 제공업체를 제한하여 승인된 제공업체로만 트래픽을 라우팅할 수 있습니다. 이 허용 목록은 Bring Your Own Key(BYOK) 트래픽을 포함하여 AI Gateway를 통해 발생하는 모든 요청에 적용됩니다.
+
+규제 대상 팀은 일반적으로 보안 및 법률 승인을 거쳐 다양한 기준으로 AI 제공업체를 심사하고, 조직의 특정 요구 사항을 반영하는 공급업체 목록을 결정합니다. 이 허용 목록은 해당 승인 공급업체 목록을 라우팅 보장으로 전환합니다.
+
+*   적용은 요청 수준이 아닌 게이트웨이 수준에서 이루어집니다. 팀의 개발자는 조직에서 승인하지 않은 제공업체로 트래픽을 라우팅할 수 없습니다.
+*   이 제한은 코딩 에이전트에도 적용됩니다. 에이전트가 요청 수준 제공업체 필터를 생략하거나 수정하더라도 AI Gateway는 승인되지 않은 제공업체를 계속 차단합니다.
+*   팀 소유자만 제공업체 허용 목록을 수정할 수 있어 통제를 중앙 집중화하고 감사 가능하게 유지합니다.
+*   허용 목록이 활성화되면 새 제공업체는 기본적으로 비활성화되므로, AI Gateway가 새 공급업체를 통합할 때 승인된 세트가 조용히 확장되지 않습니다.
+
+# [Link to heading](#how-to-configure)설정 방법
+
+![](https://vercel.com/vc-ap-vercel-marketing/_next/image?url=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Fcontentful%2Fimage%2Fe5382hct74si%2Fu7ThO4cjnLxInRHNMgOGa%2F528de956122fc76926a2608cd596a77e%2FCleanShot_2026-05-22_at_00.59.46_2x.png&w=1920&q=75)![](https://vercel.com/vc-ap-vercel-marketing/_next/image?url=https%3A%2F%2Fassets.vercel.com%2Fimage%2Fupload%2Fcontentful%2Fimage%2Fe5382hct74si%2F31HLdcvZ7UQdf306LJDWRk%2Fd99fe2436e22dbe4ca6d4d12795c3530%2FCleanShot_2026-05-22_at_01.00.13_2x.png&w=1920&q=75)
+
+AI Gateway의 **Settings** 탭에서 **Provider Allowlist**를 활성화하세요. 기본적으로 모든 현재 제공업체가 허용되므로 기존 트래픽에는 영향이 없습니다. 팀에서 사용하면 안 되는 제공업체를 비활성화하세요.
+
+허용 목록은 모델이 아닌 제공업체별로 필터링합니다. 초기 제공업체가 실패하면 AI Gateway는 동일한 모델에 대해 다른 허용된 제공업체로 대체합니다. 허용 목록은 Zero Data Retention(ZDR) 또는 요청 수준 필터링과 같은 팀에 적용되는 다른 제한 사항과 'and'로 작동합니다.
+
+예를 들어, 팀에서 허용 목록에서 DeepSeek를 비활성화했고 요청이 DeepSeek 제공업체로만 라우팅되도록 지정한 경우:
+
+```
+import { streamText } from 'ai';const result = streamText({  model: 'deepseek/deepseek-v4-pro',  prompt,  providerOptions: {    gateway: {      only: ['deepseek'],    },  },});
+```
+
+DeepSeek 제공업체만 제외한 모든 라우팅 옵션 제거
+
+DeepSeek가 허용 목록에 없으므로 AI Gateway는 요청을 거부합니다.
+
+```
+{  "error": {    "type": "no_providers_available",    "message": "Your team has restricted access to this provider. Contact the owner of the account for more details. Providers considered: deepseek"  }}
+```
+
+허용 목록에 없는 제공업체에 액세스할 때 발생하는 오류
+
+Provider Allowlist는 AI SDK, OpenAI Chat Completions API, Anthropic Messages API를 포함하여 AI Gateway에서 지원하는 모든 API 형식에 걸쳐 작동합니다.
+
+더 자세한 정보는 [provider allowlist documentation](https://vercel.com/docs/ai-gateway/capabilities/provider-allowlist)을 참조하세요. 다른 계정 수준 보안 및 규정 준수 기능에 대해서는 [Zero Data Retention](https://vercel.com/docs/ai-gateway/capabilities/zdr) 및 [Disallow Prompt Training](https://vercel.com/docs/ai-gateway/capabilities/disallow-prompt-training) 문서를 확인하세요.

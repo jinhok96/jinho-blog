@@ -219,6 +219,61 @@ describe('validateFrontmatter - projects', () => {
 });
 
 // ---------------------------------------------------------------------------
+// translate
+// ---------------------------------------------------------------------------
+describe('validateFrontmatter - translate', () => {
+  const validTranslate = {
+    title: '번역된 제목',
+    description: '번역된 설명',
+    category: 'react',
+    sourceUrl: 'https://react.dev/blog/example',
+  };
+
+  it('유효한 frontmatter → { valid: true, errors: [] }', () => {
+    const result = validateFrontmatter(validTranslate, 'translate');
+    expect(result.valid).toBe(true);
+    expect(result.errors).toHaveLength(0);
+  });
+
+  describe('category 검증', () => {
+    it('유효하지 않은 category → enum 에러', () => {
+      const result = validateFrontmatter({ ...validTranslate, category: 'angular' }, 'translate');
+      expect(result.valid).toBe(false);
+      expect(result.errors.find(e => e.field === 'category')?.message).toContain('유효하지 않은 값입니다.');
+    });
+
+    it('유효한 translate category 전체 통과', () => {
+      const categories = ['react', 'nextjs', 'vercel'];
+      for (const category of categories) {
+        const result = validateFrontmatter({ ...validTranslate, category }, 'translate');
+        expect(result.valid).toBe(true);
+      }
+    });
+  });
+
+  describe('sourceUrl 검증', () => {
+    it('sourceUrl 없음 → 필수 필드 에러', () => {
+      const result = validateFrontmatter({ ...validTranslate, sourceUrl: undefined }, 'translate');
+      expect(result.valid).toBe(false);
+      expect(result.errors).toContainEqual({ field: 'sourceUrl', message: '필수 필드입니다.' });
+    });
+
+    it('sourceUrl이 빈 문자열 → 빈 문자열 에러', () => {
+      const result = validateFrontmatter({ ...validTranslate, sourceUrl: '' }, 'translate');
+      expect(result.valid).toBe(false);
+      expect(result.errors).toContainEqual({ field: 'sourceUrl', message: '빈 문자열은 허용되지 않습니다.' });
+    });
+  });
+
+  it('여러 필드 동시에 누락 → 여러 에러 반환', () => {
+    const result = validateFrontmatter({}, 'translate');
+    expect(result.valid).toBe(false);
+    const fields = result.errors.map(e => e.field);
+    expect(fields).toEqual(expect.arrayContaining(['title', 'description', 'category', 'sourceUrl']));
+  });
+});
+
+// ---------------------------------------------------------------------------
 // libraries
 // ---------------------------------------------------------------------------
 describe('validateFrontmatter - libraries', () => {

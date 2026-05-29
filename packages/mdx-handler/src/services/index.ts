@@ -7,3 +7,4 @@ export {
   type Library,
 } from './internal/library.service';
 export { getProject, getProjectContent, getProjects, type Project } from './internal/project.service';
+export { getTranslateContent, getTranslatePost, getTranslatePosts, type Translate } from './internal/translate.service';

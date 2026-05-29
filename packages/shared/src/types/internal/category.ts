@@ -48,3 +48,20 @@ export type TechStack =
 export type ProjectCategory = 'tripmoney' | 'personal';
 export type BlogCategory = 'frontend' | 'algorithm' | 'cs' | 'uiux' | 'review';
 export type LibraryCategory = TechStack;
+export type TranslateCategory =
+  // 프레임워크 / 라이브러리
+  | 'react'
+  | 'nextjs'
+  | 'tanstack'
+  // 배포 / 플랫폼
+  | 'vercel'
+  // 언어 / 스타일링
+  | 'typescript'
+  | 'tailwindcss'
+  // 웹 플랫폼
+  | 'chrome'
+  | 'webdev'
+  | 'v8'
+  // AI
+  | 'claude'
+  | 'openai';

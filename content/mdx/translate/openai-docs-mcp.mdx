@@ -1,0 +1,65 @@
+---
+title: Docs MCP
+description: "OpenAI는 개발자 문서 접근을 위한 공개 MCP 서버를 제공하며, 이를 통해 에이전트 컨텍스트에 문서를 통합할 수 있습니다."
+category: openai
+sourceUrl: https://developers.openai.com/learn/docs-mcp/
+createdAt: 2026-01-06
+---
+
+> 원문: [Docs MCP](https://developers.openai.com/learn/docs-mcp/) — OpenAI Developers
+
+OpenAI는 developers.openai.com 및 platform.openai.com의 개발자 문서를 위한 공개 Model Context Protocol (MCP) 서버를 호스팅합니다.
+
+**서버 URL (스트리밍 HTTP):** `https://developers.openai.com/mcp`
+
+# 제공하는 기능
+
+*   OpenAI 개발자 문서에 대한 읽기 전용 액세스 (검색 + 페이지 콘텐츠).
+*   작업 중에 에이전트의 컨텍스트로 문서를 가져오는 방법.
+
+이 MCP 서버는 문서 전용입니다. 사용자를 대신하여 OpenAI API를 호출하지 않습니다.
+
+# 빠른 시작
+
+옵션 선택
+
+[CLI](https://developers.openai.com/codex/cli) 또는 [IDE 확장 프로그램](https://developers.openai.com/codex/ide)에서 [MCP 서버](https://developers.openai.com/codex/mcp)에 Codex를 연결할 수 있습니다. 둘 간에 구성이 공유되므로 한 번만 설정하면 됩니다.
+
+Codex CLI를 사용하여 서버를 추가하세요:
+
+```
+codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp
+```
+
+구성되었는지 확인하세요:
+
+```
+codex mcp list
+```
+
+또는 `~/.codex/config.toml`에 직접 추가할 수 있습니다:
+
+```
+[mcp_servers.openaiDeveloperDocs]
+url = "https://developers.openai.com/mcp"
+```
+
+Codex가 MCP 서버를 안정적으로 사용하도록 하려면 `AGENTS.md`에 다음 스니펫을 추가하세요:
+
+```
+OpenAI API, ChatGPT Apps SDK, Codex 등을 명시적으로 요청하지 않고 작업해야 할 경우 항상 OpenAI 개발자 문서 MCP 서버를 사용하세요.
+```
+
+# 팁
+
+*   AGENTS.md 파일에 스니펫이 없는 경우, 답변을 위해 Docs MCP 서버를 참조하도록 에이전트에게 명시적으로 알려야 합니다.
+*   MCP 서버가 여러 개인 경우, 에이전트가 서버를 선택하는 데 도움이 되도록 서버 이름을 짧고 설명적으로 유지하세요.
+
+# OpenAI Docs Skill
+
+AI 도구에서 스킬을 사용하는 경우, 이 MCP 서버를 [OpenAI Docs Skill](https://github.com/openai/skills/blob/main/skills/.curated/openai-docs/SKILL.md)과 함께 사용하세요. 이는 OpenAI 관련 질문에 대해 Docs MCP 도구를 먼저 사용하고, 공식 OpenAI 도메인으로 대체하도록 에이전트에게 지시합니다.
+
+1.  [OpenAI 스킬 리포지토리](https://github.com/openai/skills)에서 스킬을 설치합니다.
+2.  `https://developers.openai.com/mcp`에서 이 Docs MCP 서버를 구성했는지 확인합니다.
+3.  에이전트 도구에서 프로젝트 또는 세션에 대해 스킬을 활성화합니다.
+4.  OpenAI 제품/API 질문을 하고, 답변이 문서 소스로 추적될 수 있도록 인용을 요청하세요.

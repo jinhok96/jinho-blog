@@ -13,6 +13,7 @@
     "eslint": "turbo eslint",
     "type-check": "turbo type-check",
     "test": "turbo test",
+    "translate": "pnpm --filter @jinho-blog/mdx-handler translate-posts",
     "kill-port": "for /f \"tokens=5\" %a in ('netstat -ano ^| findstr :3401 ^| findstr LISTENING') do taskkill /F /PID %a"
   },
   "devDependencies": {

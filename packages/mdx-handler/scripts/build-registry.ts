@@ -36,10 +36,11 @@ interface Registry {
   blog: RegistryEntry[];
   projects: RegistryEntry[];
   libraries: RegistryEntry[];
+  translate: RegistryEntry[];
   generatedAt: string;
 }
 
-const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];
+const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries', 'translate'];
 
 /**
  * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
@@ -318,7 +319,7 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
     console.log(`  - Processing: ${file.slug}`);
     const metadata = await parseMdxFile(file.filePath, section);
 
-    if (section === 'blog' && !metadata.thumbnail) {
+    if ((section === 'blog' || section === 'translate') && !metadata.thumbnail) {
       const outputPath = path.join(
         MONOREPO_ROOT,
         PATHS.PUBLIC_STATIC_MDX_DIR,
@@ -385,6 +386,7 @@ async function buildAllRegistries(): Promise<void> {
     blog: [],
     projects: [],
     libraries: [],
+    translate: [],
   };
 
   for (const section of SECTIONS) {
@@ -415,7 +417,7 @@ async function buildAllRegistries(): Promise<void> {
   console.log(`✨ Registry built successfully!`);
   console.log(`📦 Output: ${outputPath}`);
   console.log(
-    `📊 Total entries: blog=${registry.blog.length}, projects=${registry.projects.length}, libraries=${registry.libraries.length}`,
+    `📊 Total entries: blog=${registry.blog.length}, projects=${registry.projects.length}, libraries=${registry.libraries.length}, translate=${registry.translate.length}`,
   );
 }
 

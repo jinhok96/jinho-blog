@@ -62,12 +62,20 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
 
           {/* 네비게이션 */}
           <nav>
-            <ul className="flex-row-center gap-1">
+            <ul
+              className={`
+                flex-row-center
+                tablet:gap-1
+              `}
+            >
               <li>
                 <HeaderNavButton href={routes({ pathname: '/projects' })}>프로젝트</HeaderNavButton>
               </li>
               <li>
                 <HeaderNavButton href={routes({ pathname: '/blog' })}>블로그</HeaderNavButton>
+              </li>
+              <li>
+                <HeaderNavButton href={routes({ pathname: '/translate' })}>번역</HeaderNavButton>
               </li>
               <li>
                 <HeaderNavButton href={routes({ pathname: '/libraries' })}>라이브러리</HeaderNavButton>

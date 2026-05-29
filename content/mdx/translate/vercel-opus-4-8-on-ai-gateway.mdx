@@ -1,0 +1,23 @@
+---
+title: Vercel AI Gateway에서 Claude Opus 4.8 사용 가능
+description: "Vercel AI Gateway에서 Claude Opus 4.8 모델을 지원하며, 장기 에이전트 실행 및 복잡한 코딩 작업에 최적화되었습니다."
+category: vercel
+sourceUrl: https://vercel.com/changelog/opus-4-8-on-ai-gateway
+createdAt: 2026-05-28
+---
+
+> 원문: [Opus 4.8 on AI Gateway](https://vercel.com/changelog/opus-4-8-on-ai-gateway) — Vercel Blog
+
+Claude Opus 4.8이 [Vercel AI Gateway](https://vercel.com/ai-gateway)에서 제공됩니다.
+
+Claude Opus 4.8은 장기적인 에이전트 실행을 위해 구축되었으며, 이전에 작업 중간에 사람의 수정이 필요했던 리팩토링과 같은 복잡하고 다단계적인 코딩 작업을 처리할 수 있습니다. 또한 이 모델은 문서 초안 작성, 데이터 분석, 프레젠테이션 구축과 같은 지식 작업을 위해 더 명확하고 덜 모호한 문체를 생성합니다.
+
+Opus 4.8을 사용하려면 [AI SDK](https://ai-sdk.dev/)에서 모델을 `anthropic/claude-opus-4.8`로 설정하세요.
+
+```
+import { streamText } from 'ai';const result = streamText({  model: 'anthropic/claude-opus-4.8',  prompt: 'Find and fix the root cause of these intermittent test failures.',  providerOptions: {    anthropic: {      thinking: { type: 'adaptive' },      effort: 'high',    },  },});
+```
+
+AI Gateway는 모델 호출, 사용량 및 비용 추적, 재시도, 장애 조치 및 성능 최적화를 위한 통합 API를 제공하여 제공업체보다 높은 가동 시간을 보장합니다. 여기에는 기본 제공되는 [사용자 지정 보고](https://vercel.com/changelog/custom-reporting-ai-gateway), [Zero Data Retention 지원](https://vercel.com/blog/zdr-on-ai-gateway), [지연 시간 및 비용별 동적 제공업체 정렬](https://vercel.com/changelog/sort-providers-by-cost-latency-or-throughput-on-ai-gateway) 등이 포함됩니다. AI Gateway는 제공업체 가격을 마크업 없이 반영하며, [Bring Your Own Key](https://vercel.com/docs/ai-gateway#bring-your-own-key) (BYOK) 요청을 포함한 추론에 대한 플랫폼 수수료를 부과하지 않습니다.
+
+[AI Gateway](https://vercel.com/docs/ai-gateway)에 대한 자세한 내용을 알아보거나 [AI Gateway 모델 리더보드](https://vercel.com/ai-gateway/leaderboards)를 확인하거나 [모델 플레이그라운드](https://vercel.com/ai-gateway/models/opus-4.8)에서 사용해 보세요.

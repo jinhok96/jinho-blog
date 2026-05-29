@@ -1,0 +1,55 @@
+---
+title: "Amazon OpenSearch Serverless, Vercel 마켓플레이스에 출시"
+description: "Vercel 마켓플레이스에서 Amazon OpenSearch Serverless를 사용할 수 있게 되어, 통합 워크플로우와 자동 설정을 제공합니다."
+category: vercel
+sourceUrl: https://vercel.com/changelog/amazon-opensearch-serverless-is-now-available-in-the-vercel-marketplace
+createdAt: 2026-05-28
+---
+
+> 원문: [Amazon OpenSearch Serverless is now available in the Vercel Marketplace](https://vercel.com/changelog/amazon-opensearch-serverless-is-now-available-in-the-vercel-marketplace) — Vercel Blog
+
+[Amazon OpenSearch Serverless](https://vercel.com/marketplace/aws)가 이제 [Vercel 마켓플레이스](https://vercel.com/marketplace)에서 제공됩니다. Vercel 대시보드에 통합된 안내 설정과 자동 프로젝트 구성 기능을 통해 더욱 편리하게 사용할 수 있습니다.
+
+# [Link to heading](#built-for-agentic-infrastructure)에이전트형 인프라를 위한 구축
+
+Amazon OpenSearch Serverless를 Vercel 마켓플레이스에 통합함으로써 팀은 통합된 워크플로우의 이점을 누릴 수 있습니다.
+
+*   **대시보드 내 프로비저닝:** Vercel 대시보드에서 직접 OpenSearch 컬렉션을 생성할 수 있습니다.
+    
+*   **자동 구성:** 프로비저닝 시 환경 변수가 프로젝트에 자동으로 주입됩니다.
+    
+*   **통합 관리:** 마켓플레이스 리소스 보기에서 애플리케이션의 다른 인프라와 함께 검색 리소스를 확인하고 관리할 수 있으며, 더 깊은 구성을 위해 AWS로 빠르게 이동할 수 있습니다.
+    
+
+lib/opensearch.ts
+
+```
+import { createOpenSearch } from '@vercel/aws';const os = createOpenSearch();
+```
+
+Vercel OIDC를 통해 인증된 OpenSearch 클라이언트로, 정적 AWS 키가 필요 없습니다.
+
+app/api/ask/route.ts
+
+```
+import { opensearch } from "@/lib/opensearch";import { embed, generateText } from "ai";export async function POST(req: Request) {  const { question } = await req.json();  // Turn the question into a vector  const { embedding } = await embed({    model: "openai/text-embedding-3-small",    value: question,  });  // Retrieve the 5 most semantically similar docs  const { body } = await opensearch.search({    index: "docs",    body: {      size: 5,      query: { knn: { embedding: { vector: embedding, k: 5 } } },    },  });  const context = body.hits.hits    .map((h: any) => h._source.content)    .join("\n\n");  // Answer grounded in the retrieved context  const { text } = await generateText({    model: "anthropic/claude-sonnet-4-5",    prompt: `Answer using only this context:\n\n${context}\n\nQuestion: ${question}`,  });  return Response.json({ answer: text });}
+```
+
+질문을 임베딩하고 OpenSearch에서 가장 유사한 상위 5개 문서를 검색하여 해당 문서에 기반한 답변을 생성하는 RAG 라우트입니다.
+
+이 통합은 차세대 Amazon OpenSearch Serverless API를 기반으로 하며, Vercel은 AWS와 함께 개발 과정에서 핵심 설계 파트너로 참여했습니다.
+
+*   단일 컬렉션에서 벡터, 렉시컬, 하이브리드, 에이전트형 검색에 대한 통합 지원
+    
+*   20배 더 빠르게 자동 확장되며, 에이전트형 워크로드의 급작스럽고 예측 불가능한 로드 패턴에 최적화되었습니다.
+    
+*   유휴 비용 없이 제로 스케일링
+    
+*   최대 용량이 아닌 실제 사용량에 대한 비용 지불로 최대 60%의 비용 절감
+    
+
+# [Link to heading](#get-started)시작하기
+
+시작을 돕기 위해 Vercel을 통해 직접 새로운 AWS 계정을 생성하고 Amazon OpenSearch Serverless를 체험할 수 있는 **100 USD 상당의 크레딧**을 받을 수 있습니다. 이미 활성 AWS 계정이 있는 경우, 즉시 연결하고 플랜을 관리하며 사용량 세부 정보를 Vercel 대시보드에서 바로 확인할 수 있습니다.
+
+이제 구축을 시작할 준비가 되셨나요? [Vercel 마켓플레이스](https://vercel.com/marketplace/aws)에서 Amazon OpenSearch를 설치하거나 [스타터 템플릿](https://vercel.com/templates/next.js/next-js-with-amazon-opensearch)을 배포하여 통합 기능을 직접 확인해 보세요.

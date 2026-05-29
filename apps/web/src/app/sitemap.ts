@@ -1,20 +1,22 @@
 import type { MetadataRoute } from 'next';
 
-import { getBlogPosts, getLibraries, getProjects } from '@jinho-blog/mdx-handler';
+import { getBlogPosts, getLibraries, getProjects, getTranslatePosts } from '@jinho-blog/mdx-handler';
 
 import { SITE_URL } from '@/core/config';
 
 async function fetchAllContent() {
-  const [blogData, projectsData, librariesData] = await Promise.all([
+  const [blogData, projectsData, librariesData, translateData] = await Promise.all([
     getBlogPosts({ count: 1000 }),
     getProjects({ count: 1000 }),
     getLibraries({ count: 1000 }),
+    getTranslatePosts({ count: 1000 }),
   ]);
 
   return {
     blogPosts: blogData.items,
     projects: projectsData.items,
     libraries: librariesData.items,
+    translatePosts: translateData.items,
   };
 }
 
@@ -37,9 +39,13 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       url: `${SITE_URL}/libraries`,
       lastModified: new Date(),
     },
+    {
+      url: `${SITE_URL}/translate`,
+      lastModified: new Date(),
+    },
   ];
 
-  const { blogPosts, projects, libraries } = await fetchAllContent();
+  const { blogPosts, projects, libraries, translatePosts } = await fetchAllContent();
 
   // 동적 블로그 포스트
   const blogPages: MetadataRoute.Sitemap = blogPosts.map(post => ({
@@ -63,6 +69,12 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     priority: 0.8,
   }));
 
+  // 동적 번역 포스트
+  const translatePages: MetadataRoute.Sitemap = translatePosts.map(post => ({
+    url: `${SITE_URL}${post.path}`,
+    lastModified: post.updatedAt ? new Date(post.updatedAt) : new Date(),
+  }));
+
   // 모든 페이지 결합
-  return [...staticPages, ...blogPages, ...projectPages, ...libraryPages];
+  return [...staticPages, ...blogPages, ...projectPages, ...libraryPages, ...translatePages];
 }

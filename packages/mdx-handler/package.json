@@ -10,6 +10,7 @@
   "scripts": {
     "build-registry": "tsx scripts/build-registry.ts",
     "copy-images": "tsx scripts/copy-mdx-images.ts",
+    "translate-posts": "tsx scripts/translate-posts.ts",
     "test": "vitest",
     "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
@@ -17,12 +18,21 @@
     "type-check": "tsc --noEmit"
   },
   "dependencies": {
+    "@google/genai": "^2.6.0",
+    "@google/generative-ai": "^0.24.1",
     "@jinho-blog/shared": "workspace:*",
-    "gray-matter": "^4.0.3"
+    "@mozilla/readability": "^0.6.0",
+    "dotenv": "^17.4.2",
+    "gray-matter": "^4.0.3",
+    "jsdom": "^26.1.0",
+    "rss-parser": "^3.13.0",
+    "turndown": "^7.2.4"
   },
   "devDependencies": {
     "@jinho-blog/thumbnail-generator": "workspace:*",
+    "@types/jsdom": "^28.0.3",
     "@types/node": "^20.19.33",
+    "@types/turndown": "^5.0.6",
     "@typescript-eslint/eslint-plugin": "^8.49.0",
     "@typescript-eslint/parser": "^8.49.0",
     "@vitest/coverage-v8": "^4.0.18",

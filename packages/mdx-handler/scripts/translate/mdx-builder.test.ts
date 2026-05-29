@@ -29,7 +29,7 @@ describe('generateSlug', () => {
 // buildMdxContent
 // ---------------------------------------------------------------------------
 describe('buildMdxContent', () => {
-  const meta = {
+  const ccMeta = {
     title: 'React 컴파일러 소개',
     description: 'React 컴파일러의 동작 방식과 활용법',
     category: 'react',
@@ -37,10 +37,21 @@ describe('buildMdxContent', () => {
     sourceName: 'React Blog',
     originalTitle: 'React Compiler',
     translatedBody: '## 개요\n\nReact 컴파일러는...',
+    license: 'cc-by-4.0' as const,
+    licenseUrl: 'https://creativecommons.org/licenses/by/4.0/',
+  };
+
+  const arMeta = {
+    ...ccMeta,
+    sourceName: 'Next.js Blog',
+    sourceUrl: 'https://nextjs.org/blog/next-15',
+    originalTitle: 'Next.js 15',
+    license: 'all-rights-reserved' as const,
+    licenseUrl: undefined,
   };
 
   it('frontmatter가 올바르게 포함됨', () => {
-    const result = buildMdxContent(meta);
+    const result = buildMdxContent(ccMeta);
     expect(result).toContain('title: React 컴파일러 소개');
     expect(result).toContain('description: React 컴파일러의 동작 방식과 활용법');
     expect(result).toContain('category: react');
@@ -48,17 +59,17 @@ describe('buildMdxContent', () => {
   });
 
   it('원문 링크 줄이 포함됨', () => {
-    const result = buildMdxContent(meta);
+    const result = buildMdxContent(ccMeta);
     expect(result).toContain('> 원문: [React Compiler](https://react.dev/blog/react-compiler) — React Blog');
   });
 
   it('번역 본문이 포함됨', () => {
-    const result = buildMdxContent(meta);
+    const result = buildMdxContent(ccMeta);
     expect(result).toContain('## 개요\n\nReact 컴파일러는...');
   });
 
-  it('frontmatter → 원문 링크 → 본문 순서', () => {
-    const result = buildMdxContent(meta);
+  it('frontmatter → attribution → 본문 순서', () => {
+    const result = buildMdxContent(ccMeta);
     const frontmatterEnd = result.indexOf('---\n\n');
     const originLine = result.indexOf('> 원문:');
     const body = result.indexOf('## 개요');
@@ -67,23 +78,37 @@ describe('buildMdxContent', () => {
   });
 
   it('createdAt 있으면 frontmatter에 포함', () => {
-    const result = buildMdxContent({ ...meta, createdAt: '2024-10-21' });
+    const result = buildMdxContent({ ...ccMeta, createdAt: '2024-10-21' });
     expect(result).toContain('createdAt: 2024-10-21');
   });
 
   it('createdAt 없으면 frontmatter에 미포함', () => {
-    const result = buildMdxContent(meta);
+    const result = buildMdxContent(ccMeta);
     expect(result).not.toContain('createdAt:');
   });
 
   it('특수문자 포함 제목은 따옴표로 감쌈', () => {
-    const result = buildMdxContent({ ...meta, title: 'React: A Deep Dive' });
+    const result = buildMdxContent({ ...ccMeta, title: 'React: A Deep Dive' });
     expect(result).toContain('title: "React: A Deep Dive"');
   });
 
   it('대괄호 포함 설명은 따옴표로 감쌈', () => {
-    const result = buildMdxContent({ ...meta, description: 'Array [1, 2, 3]' });
+    const result = buildMdxContent({ ...ccMeta, description: 'Array [1, 2, 3]' });
     expect(result).toContain('description: "Array [1, 2, 3]"');
+  });
+
+  it('CC 소스 — 라이선스 표시와 번역 안내 포함', () => {
+    const result = buildMdxContent(ccMeta);
+    expect(result).toContain('CC-BY-4.0');
+    expect(result).toContain('https://creativecommons.org/licenses/by/4.0/');
+    expect(result).toContain('한국어로 번역한 2차 저작물');
+  });
+
+  it('All-rights-reserved 소스 — 요약 안내 포함', () => {
+    const result = buildMdxContent(arMeta);
+    expect(result).toContain('핵심 내용을 요약한 것');
+    expect(result).toContain('저작권은 원문 저자에게 있으며');
+    expect(result).not.toContain('creativecommons.org');
   });
 });
 

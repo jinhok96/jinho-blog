@@ -1,68 +1,69 @@
 ---
 title: 2026년 3월 Baseline 월간 요약
-description: "2026년 3월, 여러 강력한 기능이 상호 운용성 기준을 충족하여 Baseline에 새롭게 추가되었으며, 기존 도구들도 널리 사용 가능 상태에 도달했습니다."
+description: "2026년 3월, 웹 플랫폼에 강력한 기능들이 Baseline에 추가되었으며, 기존 도구들도 널리 사용 가능하게 되었습니다."
 category: webdev
 sourceUrl: https://web.dev/blog/baseline-digest-mar-2026?hl=en
 createdAt: 2026-04-14
 ---
 
 > 원문: [March 2026 Baseline monthly digest](https://web.dev/blog/baseline-digest-mar-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
 
 # Baseline 신규 사용 가능 기능
 
-2026년 3월, 다음 기능들이 모든 주요 브라우저 엔진에서 상호 운용 가능하게 되었습니다.
+2026년 3월, 다음 기능들이 모든 핵심 브라우저 엔진에서 상호 운용 가능하게 되었습니다.
 
-## Math font family
+## `math` font family
 
-`font-family` 속성의 `math` 값은 수학 콘텐츠 렌더링을 위해 특별히 설계되었습니다. 이는 MathML 요소가 복잡한 수학 공식에 최적화된 글꼴을 사용하여 표시되도록 하여 기술 문서에 대한 더 나은 간격 및 문자 지원을 제공합니다. [MDN에서 math font family에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/font-family)
+`font-family` 속성의 `math` 값은 수학 콘텐츠 렌더링을 위해 특별히 설계되었습니다. MathML 요소가 복잡한 수학 공식에 최적화된 글꼴을 사용하여 표시되도록 하여 기술 문서에 대한 더 나은 간격 및 문자 지원을 제공합니다. [MDN에서 math font family에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/font-family)
 
 ## `Iterator.concat()`
 
-이터레이터에 대한 이 새로운 정적 메서드를 통해 개발자는 여러 이터러블(배열, 세트 또는 사용자 정의 이터레이터 등)을 단일 이터레이터로 결합할 수 있습니다. 이는 수동으로 루프를 중첩하거나 중간 배열을 생성하지 않고 연속적으로 데이터 시퀀스를 처리해야 하는 코드를 단순화합니다. [MDN에서 `Iterator.concat()`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator/concat)
+이터레이터의 이 새로운 정적 메서드를 사용하면 개발자가 여러 이터러블(예: Array, Set 또는 사용자 지정 이터레이터)을 단일 이터레이터로 결합할 수 있습니다. 이는 중첩 루프나 중간 배열을 수동으로 생성하지 않고 연속적으로 데이터 시퀀스를 처리해야 하는 코드를 간소화합니다. [MDN에서 `Iterator.concat()`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator/concat)
 
 ## Readable byte streams
 
-Streams API는 이제 readable byte streams에 대한 완전한 지원을 포함합니다. 이는 이진 데이터를 처리하도록 최적화되어 개발자가 제공한 버퍼로 직접 데이터를 읽어 효율적인 메모리 관리가 가능합니다. 대용량 파일이나 네트워크 데이터를 처리하는 성능이 중요한 애플리케이션에 획기적인 기능입니다. [MDN에서 Readable byte streams에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Streams_API/Using_readable_byte_streams)
+Streams API는 이제 Readable byte streams에 대한 완전한 지원을 포함합니다. 이는 이진 데이터를 처리하도록 최적화되어 있어 개발자가 제공한 버퍼로 직접 데이터를 읽어 메모리 관리를 효율적으로 할 수 있습니다. 대용량 파일이나 네트워크 데이터를 처리하는 성능이 중요한 애플리케이션에 획기적인 기능입니다. [MDN에서 Readable byte streams에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Streams_API/Using_readable_byte_streams)
 
 ## Reporting API
 
-Reporting API는 웹 애플리케이션이 브라우저 수준의 오류 및 위반(예: Content Security Policy(CSP) 위반, 사용 중단, 충돌 보고서)에 대한 알림을 받는 범용 보고 메커니즘을 제공합니다. 이러한 보고서를 중앙 집중화하여 지정된 엔드포인트로 전송함으로써 모니터링을 용이하게 합니다. [MDN에서 Reporting API에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Reporting_API)
+Reporting API는 웹 애플리케이션이 브라우저 수준의 오류 및 위반(예: Content Security Policy(CSP) 위반, 사용 중단, 충돌 보고서)에 대한 알림을 받는 일반적인 보고 메커니즘을 제공합니다. 이러한 보고서를 중앙 집중화하여 지정된 엔드포인트로 전송하여 모니터링을 용이하게 합니다. [MDN에서 Reporting API에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Reporting_API)
 
 ## `WebTransport`
 
-`WebTransport`는 저지연, 양방향 클라이언트-서버 통신을 제공하는 최신 API입니다. HTTP/3 위에 구축되어 안정적인 데이터 전송과 불안정한 데이터그램을 모두 지원하므로 게임 및 라이브 스트리밍과 같은 실시간 애플리케이션에 이상적입니다. [MDN에서 WebTransport에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/WebTransport_API)
+`WebTransport`는 저지연, 양방향 클라이언트-서버 통신을 제공하는 최신 API입니다. HTTP/3 위에서 구축되었으며, 안정적인 데이터 전송과 불안정한 데이터그램을 모두 지원하여 게임 및 라이브 스트리밍과 같은 실시간 애플리케이션에 이상적입니다. [MDN에서 WebTransport에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/WebTransport_API)
 
 ## `text-indent: each-line` 선언
 
-`text-indent`의 `each-line` 키워드는 블록의 첫 번째 줄을 넘어 들여쓰기를 확장합니다. 사용 시 첫 번째 줄과 강제 줄 바꿈(`br`과 같은) 다음의 모든 줄을 들여쓰므로 타이포그래피 레이아웃을 보다 세부적으로 제어할 수 있습니다. [MDN에서 `text-indent: each-line`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/text-indent#each-line)
+`text-indent`의 `each-line` 키워드는 블록의 첫 줄뿐만 아니라 들여쓰기를 확장합니다. 사용 시 첫 줄과 줄 바꿈(예: `<br>`) 다음에 오는 모든 줄을 들여 써서 타이포그래피 레이아웃에 대한 더 세밀한 제어를 제공합니다. [MDN에서 `text-indent: each-line`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/text-indent#each-line)
 
 ## `text-indent: hanging` 선언
 
-`hanging` 키워드는 기본 들여쓰기 동작을 반전시킵니다. 블록의 첫 번째 줄은 줄 시작 부분에 그대로 두고 후속 모든 줄을 들여씁니다. 이는 참고 문헌 및 특정 편집 스타일에 대한 일반적인 요구 사항입니다. [MDN에서 `text-indent: hanging`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/text-indent#hanging)
+`hanging` 키워드는 기본 들여쓰기 동작을 반전합니다. 블록의 첫 줄은 줄 시작 부분에 두고 모든 후속 줄을 들여씁니다. 이는 참고 문헌 및 특정 편집 스타일에서 흔히 요구되는 사항입니다. [MDN에서 `text-indent: hanging`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/text-indent#hanging)
 
-# Baseline 널리 사용 가능 기능
+# Baseline 널리 사용 가능한 기능
 
-2026년 3월, 다음 기능들은 널리 사용 가능 등급으로 이동했습니다. 이는 30개월 동안 상호 운용 가능했으며 폴리필 없이 대부분의 프로덕션 환경에서 사용하기에 안전함을 의미합니다.
+2026년 3월, 다음 기능들이 널리 사용 가능 등급으로 이동했습니다. 이는 30개월 동안 상호 운용 가능했음을 의미하며, 폴리필 없이 대부분의 프로덕션 환경에서 사용하기에 안전합니다.
 
 ## `contain-intrinsic-size` CSS 속성
 
-CSS Containment 모듈의 일부인 `contain-intrinsic-size`를 사용하면 개발자가 크기 포함이 적용되는 요소에 대한 자리 표시자 크기를 지정할 수 있습니다. 이는 콘텐츠가 지연 로드되거나 숨겨질 때 레이아웃 이동을 방지합니다. [MDN에서 `contain-intrinsic-size`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/contain-intrinsic-size)
+CSS Containment 모듈의 일부인 `contain-intrinsic-size`는 개발자가 크기 제약이 있는 요소에 대한 플레이스홀더 크기를 지정할 수 있도록 합니다. 이는 콘텐츠가 지연 로드되거나 숨겨질 때 레이아웃 시프트가 발생하는 것을 방지합니다. [MDN에서 `contain-intrinsic-size`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/contain-intrinsic-size)
 
 ## `@counter-style` at-rule
 
-`@counter-style` 규칙을 통해 개발자는 목록에 대한 사용자 정의 번호 또는 글머리 기호 스타일을 정의할 수 있습니다. 이는 표준 십진수 또는 디스크 스타일을 훨씬 뛰어넘어 복잡하거나 지역화되거나 순전히 장식적인 목록 마커를 허용합니다. [MDN에서 `@counter-style`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style)
+`@counter-style` 규칙을 사용하면 개발자가 목록에 대한 사용자 지정 번호 또는 글머리 기호 스타일을 정의할 수 있습니다. 이는 표준 십진수 또는 디스크 스타일을 훨씬 능가하며 복잡하거나 지역화된 또는 순전히 장식적인 목록 마커를 허용합니다. [MDN에서 `@counter-style`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@counter-style)
 
 ## Device orientation events
 
-이러한 이벤트는 자이로스코프 및 가속도계와 같은 장치 하드웨어의 데이터를 제공합니다. 개발자는 이 정보를 사용하여 사용자의 장치 물리적 움직임 및 방향에 응답하는 몰입형 경험을 만들 수 있습니다. [MDN에서 Device orientation events에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Device_orientation_events)
+이러한 이벤트는 자이로스코프 및 가속도계와 같은 장치 하드웨어의 데이터를 제공합니다. 개발자는 이 정보를 사용하여 사용자의 장치 물리적 움직임 및 방향에 응답하는 몰입형 환경을 만들 수 있습니다. [MDN에서 Device orientation events에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Device_orientation_events)
 
 ## `hyphenate-character` CSS 속성
 
-이 속성을 사용하면 단어가 하이픈으로 연결될 때 줄 끝에 사용되는 문자를 정의할 수 있습니다. 표준 하이픈이 기본값이지만, 이 속성은 특정 디자인 또는 언어 요구 사항을 위해 다른 문자를 사용할 수 있는 유연성을 제공합니다. [MDN에서 `hyphenate-character`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/hyphenate-character)
+이 속성을 사용하면 단어가 하이픈으로 연결될 때 줄 끝에 사용되는 문자를 정의할 수 있습니다. 표준 하이픈이 기본값이지만, 이 속성은 특정 디자인 또는 언어 요구 사항에 따라 다른 문자를 사용할 수 있는 유연성을 제공합니다. [MDN에서 `hyphenate-character`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/hyphenate-character)
 
 ## `hyphens` CSS 속성
 
-`hyphens` 속성은 텍스트가 줄 바꿈될 때 브라우저가 하이픈을 처리하는 방식을 제어합니다. `none`, `manual`(소프트 하이픈 사용) 또는 `auto`(브라우저가 자체 하이픈 사전을 사용하도록 허용)로 설정할 수 있습니다. [MDN에서 `hyphens` CSS 속성에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/hyphens)
+`hyphens` 속성은 텍스트 줄 바꿈 시 브라우저가 하이픈을 처리하는 방법을 제어합니다. `none`, `manual`(소프트 하이픈 사용) 또는 `auto`(브라우저가 자체 하이픈 사전을 사용하도록 허용)로 설정할 수 있습니다. [MDN에서 `hyphens` CSS 속성에 대해 자세히 알아보기](https://developer.dev/css/hyphens)
 
 ## `image-set()` CSS 함수
 
@@ -70,38 +71,38 @@ CSS Containment 모듈의 일부인 `contain-intrinsic-size`를 사용하면 개
 
 ## `<link rel="modulepreload">`
 
-이 link relation을 사용하면 개발자가 페이지 로드 프로세스 초기에 JavaScript 모듈(및 해당 종속성)을 가져오고 처리하도록 브라우저에 알릴 수 있습니다. 이는 중요 경로에 소요되는 시간을 줄이고 모듈이 많은 애플리케이션의 성능을 향상시킵니다. [MDN에서 `<link rel="modulepreload">`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/HTML/Reference/Attributes/rel/modulepreload)
+이 링크 관계는 개발자가 페이지 로드 프로세스 초기에 JavaScript 모듈(및 해당 종속성)을 가져와 처리하도록 브라우저에 알립니다. 이는 중요 경로에서 소비되는 시간을 줄이고 모듈이 많은 애플리케이션의 성능을 향상시킵니다. [MDN에서 `<link rel="modulepreload">`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/HTML/Reference/Attributes/rel/modulepreload)
 
 ## Overflow media queries
 
-`overflow-block` 및 `overflow-inline` 미디어 기능을 사용하면 장치가 초기 뷰포트를 초과하는 콘텐츠를 처리하는 방식을 쿼리할 수 있습니다. 이는 특히 페이지 미디어(인쇄물) 대 연속 스크롤 화면과 같은 다양한 유형의 디스플레이 장치에 대한 스타일을 조정하는 데 유용합니다. [MDN에서 overflow media queries에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@media/overflow-block)
+`overflow-block` 및 `overflow-inline` 미디어 기능을 사용하면 장치가 초기 뷰포트를 넘치는 콘텐츠를 처리하는 방식을 쿼리할 수 있습니다. 이는 페이지 미디어(프린터) 대 연속 스크롤 화면과 같은 다양한 유형의 디스플레이 장치에 대한 스타일을 맞춤 설정하는 데 특히 유용합니다. [MDN에서 overflow media queries에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@media/overflow-block)
 
 ## `navigator.storage`
 
-Storage API는 웹사이트의 저장소 지속성 및 할당량을 관리하고 쿼리하는 방법을 제공합니다. 개발자는 사용 가능한 공간을 확인하고 저장소가 부족할 때 브라우저가 데이터를 정리하지 않고 지속적으로 유지하도록 요청할 수 있습니다. [MDN에서 `navigator.storage`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Storage_API)
+Storage API는 웹 사이트의 스토리지 지속성 및 할당량을 관리하고 쿼리하는 방법을 제공합니다. 이를 통해 개발자는 사용 가능한 공간을 확인하고 스토리지가 낮을 때 데이터가 삭제되는 대신 브라우저에서 데이터를 지속적으로 유지하도록 요청할 수 있습니다. [MDN에서 `navigator.storage`에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/API/Storage_API)
 
 ## `update` media query
 
-`update` 미디어 기능은 출력 장치가 콘텐츠 모양을 얼마나 자주 수정할 수 있는지 감지할 수 있도록 합니다. 이는 스마트폰과 같은 빠른 새로고침 화면과 전자 잉크 리더와 같은 느린 새로고침 또는 정적 디스플레이를 구별하는 데 도움이 됩니다. [MDN에서 `update` media query에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@media/update)
+`update` 미디어 기능을 사용하면 출력 장치가 콘텐츠의 모양을 얼마나 자주 수정할 수 있는지 감지할 수 있습니다. 이는 스마트폰과 같은 빠른 새로고침 화면과 전자 잉크 리더와 같은 느린 새로고침 또는 정적 디스플레이를 구별하는 데 도움이 됩니다. [MDN에서 `update` media query에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@media/update)
 
 ## CSS subgrid
 
-CSS subgrid는 중첩된 그리드가 상위 그리드의 트랙 정의(열 및 행)를 상속할 수 있도록 하는 CSS Grid의 강력한 확장입니다. 이를 통해 DOM 트리의 다른 수준에 걸쳐 요소를 정렬하는 것이 훨씬 쉬워져 오랫동안 해결되지 않았던 레이아웃 문제를 해결합니다. [MDN에서 CSS subgrid에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Guides/Grid_layout/Subgrid)
+CSS subgrid는 CSS Grid의 강력한 확장 기능으로, 중첩된 그리드가 상위 그리드의 트랙 정의(열 및 행)를 상속할 수 있도록 합니다. 이를 통해 DOM 트리의 다른 수준에 걸쳐 요소를 정렬하는 것이 훨씬 쉬워져 오랫동안 지속된 레이아웃 문제를 해결합니다. [MDN에서 CSS subgrid에 대해 자세히 알아보기](https://developer.mozilla.org/docs/Web/CSS/Guides/Grid_layout/Subgrid)
 
-# Rachel Andrew, Web Day Out에 참여
+# Rachel Andrew, Web Day Out에 참석
 
-지난달 Chrome의 Rachel Andrew는 [웹 플랫폼의 미래 살펴보기](https://rachelandrew.co.uk/archives/2026/03/20/look-into-the-future-of-the-web-platform/)라는 글을 썼는데, 여기서 [Web Day Out](https://webdayout.com/)에서의 강연을 언급했습니다. [이 발표는 브라우저 지원에 대해 다루었습니다](https://noti.st/rachelandrew/osjHV8/a-pragmatic-guide-to-browser-support)—Baseline 타겟뿐만 아니라 Baseline 타겟에 도달하지 못한 기능을 어떻게 사용할지 결정할 수 있는지에 대해서도 다루었습니다.
+지난달 Chrome의 Rachel Andrew가 [웹 플랫폼의 미래 살펴보기](https://rachelandrew.co.uk/archives/2026/03/20/look-into-the-future-of-the-web-platform/)를 작성했으며, 여기서 [Web Day Out](https://webdayout.com/)에서 진행한 강연을 언급했습니다. [발표는 브라우저 지원](https://noti.st/rachelandrew/osjHV8/a-pragmatic-guide-to-browser-support)—Baseline 대상뿐만 아니라 Baseline 대상에 도달하지 못한 기능을 사용하는 방법에 대한 내용을 다루었습니다.
 
-Baseline 타겟을 선택하는지에 따라 상호 운용 가능한 기능의 가용성이 어떻게 달라지는지 이해하는 데 도움이 되는 좋은 강연입니다. 나중 타겟을 선택하면 더 많은 기능을 얻을 수 있지만 호환성 범위가 줄어드는 비용이 발생합니다. 프로젝트 출시일에 맞춰 Baseline 타겟을 설정하면 첫날부터 안전하게 사용할 수 있는 기능을 놓치지 않도록 하는 것이 좋습니다.
+Baseline 대상 선택에 따라 상호 운용 가능한 기능의 가용성이 어떻게 달라지는지 이해하는 데 도움이 되는 좋은 강연입니다. 나중에 대상을 선택하면 더 많은 기능을 얻을 수 있지만 호환성이 넓어지는 데는 비용이 따릅니다. Baseline 대상을 프로젝트 출시일에 맞추는 것을 고려하는 것이 좋습니다. 이렇게 하면 첫날부터 안전하게 사용할 수 있는 기능을 놓치지 않을 수 있습니다.
 
-Baseline 타겟을 실용적으로 선택하는 것은 논의하기 좋은 주제이며, [Rachel의 견해를 확인해 볼 것을 권장합니다](https://noti.st/rachelandrew/osjHV8/a-pragmatic-guide-to-browser-support)). Baseline 타겟을 특정 브라우저가 아닌 시간의 경과로 생각하면 오늘날 "안전한" 결정뿐만 아니라, 높은 수준의 호환성을 유지하면서 새로운 상호 운용 가능한 기능을 고려한 보다 미래 지향적인 결정을 내리는 데 도움이 됩니다.
+Baseline 대상을 실용적으로 선택하는 것은 이야기하기 좋은 주제이며, [Rachel의 의견](https://noti.st/rachelandrew/osjHV8/a-pragmatic-guide-to-browser-support))을 꼭 확인해 보시기 바랍니다. Baseline 대상을 특정 브라우저가 아닌 시간 지점으로 생각하면 오늘날 단순히 "안전한" 결정이 아니라, 높은 호환성 수준을 유지하면서 새로운 상호 운용 가능한 기능을 향해 진보적인 결정을 내리는 데 도움이 됩니다.
 
 # Eleventy 사이트에 Baseline 상태 추가하기
 
-[Stu Robson](https://www.alwaystwisted.com/)은 지난달에 [자신의 Eleventy 웹사이트에 Baseline 상태 웹 컴포넌트를 추가한 방법](https://www.alwaystwisted.com/articles/adding-baseline-status-to-my-eleventy-site)에 대해 글을 썼습니다. 이 글은 컴포넌트가 특정 웹 기능에 대한 일부 기사에 대해 조건부로 로드되는 방법을 포함하여 프로세스에 대해 자세히 설명합니다. 웹 기능, 사용 방법, 이러한 기능이 상호 운용 가능한지 여부를 독자에게 신속하게 알리는 방법을 웹사이트에 문서화하는 경우 훌륭한 읽을거리입니다.
+[Stu Robson](https://www.alwaystwisted.com/)은 지난달 그의 [Eleventy 웹 사이트에 Baseline 상태 웹 컴포넌트를 추가한 방법](https://www.alwaystwisted.com/articles/adding-baseline-status-to-my-eleventy-site)에 대해 작성했습니다. 이 게시물은 특정 웹 기능에 대한 일부 기사에 대해 컴포넌트가 조건부로 로드되는 방법을 포함하여 프로세스에 대한 자세한 내용을 다룹니다. 웹 사이트에 웹 기능을 문서화하고, 사용하는 방법, 그리고 해당 기능이 상호 운용 가능한지 독자에게 빠르게 알리는 방법에 관심이 있다면 훌륭한 읽을거리입니다.
 
-물론 Baseline 상태 웹 컴포넌트는 Eleventy에 국한되지 않습니다. 이는 프레임워크나 사이트 생성기와 독립적인 [오픈 소스 웹 컴포넌트](https://github.com/web-platform-dx/baseline-status)입니다.
+물론 Baseline 상태 웹 컴포넌트는 Eleventy에 국한되지 않습니다. [오픈 소스 웹 컴포넌트](https://github.com/web-platform-dx/baseline-status)이며 프레임워크나 사이트 생성기와 독립적입니다.
 
 # 피드백
 
-Baseline에 아직 없는 기능이나 여기에 나열된 기능에 문제가 있는 경우, [트래커에서 알려주세요](https://github.com/web-platform-dx/web-features/issues). 여러분의 피드백은 여러분에게 가장 중요한 작업의 우선순위를 정하는 데 도움이 됩니다.
+Baseline에 없는 기능이 기다려지거나 여기에 나열된 기능에 문제가 있다면, [트래커에서 알려주세요](https://github.com/web-platform-dx/web-features/issues). 여러분의 피드백은 가장 중요한 작업을 우선순위로 정하는 데 도움이 됩니다.

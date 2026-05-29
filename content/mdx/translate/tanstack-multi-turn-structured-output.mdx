@@ -1,96 +1,46 @@
 ---
-title: 대화 간 구조화된 출력을 유지하는 방법
-description: TanStack AI의 useChat hook이 이제 대화의 각 턴마다 구조화된 출력을 유지하여 여러 턴에 걸쳐 반복적인 UI 개발을 간소화합니다.
+title: 구조화된 출력이 대화 간에 이전 기록을 유지합니다.
+description: TanStack AI의 useChat hook이 이제 구조화된 출력을 대화 기록에 보존하여 멀티턴 UI 개발을 간소화합니다.
 category: tanstack
 sourceUrl: https://tanstack.com/blog/multi-turn-structured-output
 createdAt: 2026-05-19
 ---
 
 > 원문: [Structured Output That Remembers Across Turns](https://tanstack.com/blog/multi-turn-structured-output) — TanStack Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-LLM에게 레시피를 요청합니다. LLM은 _스파게티 포모도로_를 제목, 요리, 인분, 재료, 단계 모두 스키마에 맞춰 제공합니다. 훌륭합니다. 레시피를 비건으로 만들라고 요청합니다. 새로운 레시피가 스트리밍됩니다.
+TanStack AI의 `useChat` hook이 업데이트되어 LLM의 구조화된 출력을 대화 기록에 보존합니다. 이전에는 새 메시지가 스트리밍될 때마다 이전 구조화된 출력이 사라져 개발자가 수동으로 상태를 관리해야 했습니다.
 
-그러면 첫 번째 레시피는 사라집니다.
+새로운 변경 사항은 다음과 같습니다.
 
-이전에는 useChat({ outputSchema })의 거래 방식이었습니다: 후크 수준의 단일 부분/최종 슬롯. 새로운 턴이 스트리밍되기 시작하면 이전 턴의 레시피는 덮어씌워졌습니다. 레시피 개선, 티켓 분류, 반복적인 양식 채우기 등 여러 턴에 걸친 작업에는 수동 기록 플러밍이 필요했습니다. 모든 청크를 가로채서 자체 상태에 최종본을 스냅샷하고, recipes[] 배열을 직접 관리하며, 편차를 피하기 위해 messages[]와 동기화해야 했습니다. 스키마의 타입 안전성도 부분/최종까지만 작동했습니다. 구조화된 페이로드가 로컬 배열에 안착되면 캐스팅하지 않는 한 다시 알 수 없게 됩니다.
+*   **대화 기록 보존:** 이제 각 어시스턴트 턴의 구조화된 출력은 해당 `UIMessage`의 `parts` 배열에 자체적으로 보존됩니다. 이전 턴의 데이터가 자동으로 유지됩니다.
+*   **향상된 타입 안정성:** 스키마 제네릭이 `messages[i].parts.find(p => p.type === 'structured-output').data`까지 확장되어 캐스팅 없이 타입이 안전한 데이터에 접근할 수 있습니다.
+*   **간소화된 멀티턴 UI:** 개발자는 더 이상 별도의 상태 배열을 관리하거나 데이터 동기화를 신경 쓸 필요가 없습니다. `sendMessage()` 호출 시 이전 구조화된 응답이 LLM에 자동으로 전달되어 멀티턴 개선이 원활하게 이루어집니다.
 
-우리는 이제 다른 형태를 출시했습니다. 이제 각 어시스턴트 턴은 UIMessage에 자체 타입화된 구조화된 출력 부분을 포함합니다. 기록은 기본적으로 보존됩니다. 스키마 제네릭은 messages[i].parts.find(p => p.type === 'structured-output').data까지 모두 연결됩니다. 캐스팅이나 수동 추적이 필요 없습니다. 동일한 useChat hook, 동일한 outputSchema 옵션으로 컴포넌트의 코드가 줄어듭니다. 스트리밍되는 단일 타입화된 객체를 엔드투엔드로 스트리밍하는 이전 게시물을 놓쳤다면, [여기서 시작하세요](https://tanstack.com/blog/streaming-structured-output) — 해당 글이 이 글의 선행입니다.
+이는 다음과 같은 시나리오에서 특히 유용합니다.
 
-이 게시물에서는 무엇이 변경되었는지, 다중 턴 UI에 왜 중요한지, 그리고 레시피 빌더 패턴을 약 80줄(서버 라우트와 클라이언트 컴포넌트 간에 분할됨)로 어떻게 구축하는지 살펴봅니다.
+*   사용자가 대화를 통해 구조화된 객체를 반복적으로 수정하는 경우 (예: 레시피 생성, 디자인 사양 다듬기)
+*   최신 결과뿐만 아니라 구조화된 객체의 전체 기록을 렌더링하려는 경우
+*   LLM이 자신의 구조화된 응답을 기억하도록 하여 개발자의 수동 직렬화 부담을 줄이려는 경우
 
-이전의 useChat({ outputSchema })은 _현재_ 실행을 추적하는 두 가지 값을 노출했습니다:
+```typescript
+// Client-side example snippet
+const { messages } = useChat({
+  outputSchema: RecipeSchema,
+  // ... other options
+});
 
-*   partial — DeepPartial<T>, JSON 스트리밍 중에 점진적으로 파싱된 객체
-*   final — T | null, structured-output.complete가 발동된 후 검증된 객체
+// ... inside your component
+messages.map((message) => {
+  if (message.role === 'assistant') {
+    const recipePart = message.parts.find(p => p.type === 'structured-output');
+    if (recipePart?.data) {
+      // Render the typed recipe data
+      return <RecipeCard data={recipePart.data} />;
+    }
+  }
+  // ... render other message types
+});
+```
 
-단일 턴 추출기(단락 붙여넣기 → Person 타입 객체 얻기)의 경우 이것이 완벽했습니다. JSON이 스트리밍되는 동안 필드별로 표시되고, 종료 이벤트 시 검증된 페이로드, 둘 다 소비하기 위한 하나의 렌더링.
-
-다중 턴 채팅에서는 문제가 발생했습니다. partial과 final은 _단일 슬롯_이었으며, 가장 최근 실행에 국한되었습니다. sendMessage()를 다시 호출하는 즉시 이전 턴의 final은 사라졌습니다. 런타임에는 이를 보관할 장소가 없었습니다 — 타입화된 구조화된 페이로드는 메시지 자체에 저장되는 것이 아니라, 이 일시적인 hook 상태에만 존재했습니다.
-
-사용자 코드에서 볼 수 있었던 해결 방법:
-
-세 가지 문제점이 있습니다:
-
-1.  **데이터가 이제 두 곳에 있습니다.** messages[]는 어시스턴트 턴을 가지고 있고, recipes[]는 타입화된 객체를 가지고 있습니다. 이들을 동기화하는 것(다시 로드, 재시도, 편집, 서버 스냅샷, 재생 등)은 여러분의 문제입니다.
-2.  **모델이 기록을 볼 수 없습니다.** recipes[] 배열은 컴포넌트에 국한되어 있으며, 와이어 계층은 이를 보지 못합니다. 사용자가 "이제 비건으로 만들어 줘"라고 입력하면, LLM은 "비건인 것"이 무엇을 참조하는지 알 수 없습니다. LLM은 원래 TextPart에 안착된 구조화된 응답이 어떤 것이든 stripping된 각 이전 턴의 원시 텍스트만 볼 수 있습니다. 다중 턴 개선이 중단됩니다.
-3.  **스키마의 타입 안전성을 잃게 됩니다.** recipes는 타입화되지만, 이전 레시피를 다시 대화로 라운드트립하려고 하는 순간, 타입화된 객체를 수동으로 와이어 페이로드로 스트링화해야 합니다. 라이브러리는 recipes가 있다는 것을 모르기 때문에 도움을 줄 수 없습니다.
-
-이 상태가 있어야 할 올바른 장소는 _원본 메시지 자체_입니다. 그것이 우리가 출시한 것입니다.
-
-모든 UIMessage에는 parts: MessagePart[] 배열이 있습니다. 이전에는 variants가 text, image, audio, video, document, tool-call, tool-result, thinking이었습니다. 하나를 추가했습니다:
-
-런타임은 TEXT\_MESSAGE\_CONTENT 델타(스트리밍 JSON 바이트)를 TextPart를 구축하는 대신 이 부분으로 라우팅합니다. 최종 structured-output.complete 이벤트에서 상태는 'complete'로 변경되고 data는 검증된 객체로 채워집니다. 각 어시스턴트 턴은 _새로운_ 어시스턴트 메시지를 생성하며, 이는 _자체_ 구조화된 출력 부분을 포함합니다. 이전 턴의 부분은 변경되지 않습니다.
-
-hook 수준의 partial과 final은 여전히 존재하며, 이제 고정 슬롯이 아니라 _최신_ 어시스턴트 메시지의 부분에서 파생됩니다. 즉, sendMessage()와 첫 번째 청크 사이에는 {}와 null을 읽고, 스트리밍되는 가장 신선한 턴의 페이로드로 스냅됩니다. 마이그레이션은 제로이며, partial/final을 단일 턴 추출기에 읽었던 것과 동일한 코드가 새로운 형태에서도 동일한 값을 읽습니다.
-
-변경된 것은 _나머지 모든 것_입니다. messages[]를 순회하면 타입화된 객체의 전체 기록이 노출됩니다:
-
-스키마 제네릭은 useChat<TTools, TSchema> → UIMessage<TTools, TData> → MessagePart<TTools, TData> → StructuredOutputPart<TData>를 통해 흐르므로, part.data는 캐스팅 없이 Recipe로 해결됩니다. RecipePart 별칭은 가독성을 위한 것입니다. 이름 지정하지 않으려면 대신 Extract<typeof p, { type: 'structured-output' }>를 인라인으로 사용할 수 있습니다. 동일한 흐름이 Vue(computed), Solid(createMemo), Svelte($derived.by)에서도 실행됩니다. 해당 작업은 동일한 릴리스에서 출시되었습니다.
-
-다음은 완전한 레시피 빌더 패턴입니다. 먼저 서버 엔드포인트:
-
-이것이 전체 서버 측입니다. outputSchema: RecipeSchema와 stream: true만 structured-output 관련 줄입니다. 런타임은 스키마를 JSON 스키마로 변환하고, 제공자의 네이티브 structured-output API를 호출하고, 응답을 검증하고, 클라이언트에 structured-output.start + structured-output.complete 이벤트를 내보내는 작업을 처리합니다.
-
-클라이언트:
-
-이것이 전체 클라이언트 측입니다. 별도의 recipes[] 상태, onFinish 콜백, 수동 기록 동기화가 없습니다. 각 sendMessage()는 새로운 실행을 트리거하고, 이는 새로운 어시스턴트 메시지를 생성하며, 이는 자체 타입화된 구조화된 출력 부분을 포함합니다. 렌더 루프는 메시지를 순회하고 새로운 카드가 그냥 나타납니다.
-
-시도해 보세요:
-
-> "두 인분 파스타 저녁, 15달러 미만." → 레시피가 나옵니다.
->
-> "이제 비건으로 만들어 줘." → 두 번째 레시피가 나옵니다. 첫 번째 레시피는 여전히 화면에 있습니다.
->
-> "샐러드를 추가하고 글루텐 프리로 만들어 줘." → 세 번째 레시피가 나옵니다. 이전 두 턴은 여전히 거기에 있습니다.
-
-다중 턴 구조화된 채팅은 모델이 후속 턴마다 자신의 이전 응답을 볼 수 있을 때만 작동합니다. 그렇지 않으면 턴 N+1은 "비건으로 만들어 줘"가 무엇을 참조하는지 알 수 없습니다.
-
-와이어 계층이 이 작업을 처리합니다. useChat이 턴 N+1을 보낼 때, uiMessageToModelMessages를 통해 대화를 직렬화합니다. 완료된 구조화된 출력 부분이 있는 각 어시스턴트 메시지의 경우, 컨버터는 다음을 내보냅니다:
-
-part.raw는 모델이 생성한 원래 JSON으로, 부분을 구축한 스트리밍 바이트에서 바이트 단위로 보존됩니다. 모델은 자신의 이전 레시피를 그대로 보고 수정 사항을 추론할 수 있습니다. 스트리밍 바이트 없이 도착한 최종 완료를 위한 방어적 대체(JSON.stringify(part.data))와 직렬화할 수 없는 데이터(BigInt 또는 순환 참조)를 위한 "직렬화할 수 없는 경우 턴 삭제" 가드가 있습니다. 스트리밍 중이거나 오류가 발생한 부분은 라운드트립에서 삭제됩니다. 불완전한 JSON 조각을 LLM에 다시 피드하고 싶지 않을 것입니다.
-
-이것 중 아무것도 보이지 않습니다. '이제 비건으로 만들어 줘'라고 sendMessage()를 호출했고 모델은 무엇을 수정하고 있는지 알고 있었습니다.
-
-동일한 릴리스에서 프레임워크 hook 패키지 간에 일관성이 출시되었습니다: @tanstack/ai-react, @tanstack/ai-vue, @tanstack/ai-solid, @tanstack/ai-svelte (createChat 대신 useChat 사용). 각각 TSchema 제네릭을 동일하게 스레드합니다:
-
-*   useChat<TTools, TSchema> (또는 Svelte의 경우 createChat<TTools, TSchema>)는 스키마를 제공할 때 TData = InferSchemaType<TSchema>로 대체합니다.
-*   messages는 Array<UIMessage<TTools, TData>>가 됩니다.
-*   MessagePart<TTools, TData>는 discriminated union에 StructuredOutputPart<TData>를 대체합니다.
-
-최종 결과: 네 개의 프레임워크 중 하나에서 outputSchema: RecipeSchema를 사용하면, messages[i].parts.find(p => p.type === 'structured-output').data는 Recipe | undefined로 해결됩니다. 기본 TData = unknown은 스키마 소스를 제공하지 않는 기존의 모든 소비자를 호환되게 유지합니다.
-
-@tanstack/ai-preact는 아직 outputSchema를 지원하지 않습니다. 이는 별도로 추적됩니다.
-
-다중 턴 패턴은 다음과 같은 UI를 활성화합니다:
-
-*   사용자가 턴에 걸쳐 구조화된 객체를 반복합니다(레시피 빌더, 디자인 사양 개선, 티켓 분류, A/B 복사 변형).
-*   최신 객체뿐만 아니라 타입화된 객체의 기록을 렌더링하고 싶을 때.
-*   모델이 여러분이 자체적으로 직렬화하지 않아도 후속 턴에서 자체 구조화된 응답을 기억하게 하고 싶을 때.
-
-단일 라운드트립(하나의 프롬프트, 하나의 타입화된 객체)의 경우, [chat({ outputSchema })](https://tanstack.com/ai/docs/structured-outputs/one-shot)를 사용하세요. 스트리밍이 아닌 활동이 더 간단합니다. 하나의 객체를 점진적으로 채우는 스트리밍 UI(고전적인 필드별 양식)의 경우, [useChat({ outputSchema })](https://tanstack.com/ai/docs/structured-outputs/streaming)를 사용하고 partial/final을 읽으세요. 새로운 형태는 해당 인터페이스를 변경 없이 유지합니다. 기록이 작업이 아닌 기능일 때 [다중 턴](https://tanstack.com/ai/docs/structured-outputs/multi-turn)을 사용하세요.
-
-완전한 레시피 빌더 UI는 /generations/structured-chat의 [ts-react-chat 예제](https://github.com/TanStack/ai/tree/main/examples/ts-react-chat)에 포함되어 있습니다: 요리 인식 히어로 배너, 스트리밍 미리 보기, 다중 턴 기록 등. 문서는 [structured-outputs/multi-turn](https://tanstack.com/ai/docs/structured-outputs/multi-turn)에서 패턴을 안내합니다.
-
-이미 useChat({ outputSchema })을 사용 중이라면, 새로운 타입을 얻기 위해 아무것도 변경할 필요가 없습니다. partial과 final은 계속 작동합니다. hook 수준의 슈가를 읽는 것 대신 메시지를 순회하는 순간 다중 턴을 선택하게 됩니다.
-
-[**다중 턴 문서 읽기 →**](https://tanstack.com/ai/docs/structured-outputs/multi-turn)
+이 업데이트는 React, Vue, Solid, Svelte에서 `useChat` 및 `createChat` hook을 통해 일관되게 적용됩니다. 자세한 내용은 원문에서 확인하세요.

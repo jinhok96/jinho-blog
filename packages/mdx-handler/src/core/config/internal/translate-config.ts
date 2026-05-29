@@ -18,6 +18,7 @@ export function buildTranslatePrompt(content: string, originalTitle: string, sou
 - 고유명사(React, Next.js, TypeScript 등)는 원문 그대로 유지하세요
 - 마크다운 형식(#, **, >, - 등)을 그대로 유지하세요
 - 자연스러운 한국어로 번역하되, 기술 문서 특유의 명확하고 간결한 어조를 유지하세요
+- 문장 어미는 반드시 "~입니다/~합니다" 체로 통일하세요 ("~이다/~한다" 체 사용 금지)
 
 반드시 아래 형식으로 출력하세요. 다른 설명은 추가하지 마세요:
 
@@ -42,6 +43,7 @@ export function buildSummaryPrompt(content: string, originalTitle: string, sourc
 - 원문의 단락 구조를 그대로 따라가지 마세요 — 독자적인 요약문을 작성하세요
 - 코드 블록은 가장 핵심적인 것 1개만 포함하고, 없으면 생략하세요
 - 기술 용어(API, props, hook 등)와 고유명사(React, Next.js, TypeScript 등)는 원문 그대로 유지하세요
+- 문장 어미는 반드시 "~입니다/~합니다" 체로 통일하세요 ("~이다/~한다" 체 사용 금지)
 - 마지막 문장은 "자세한 내용은 원문에서 확인하세요."로 마무리하세요
 
 반드시 아래 형식으로 출력하세요. 다른 설명은 추가하지 마세요:

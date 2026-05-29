@@ -7,15 +7,16 @@ createdAt: 2026-01-06
 ---
 
 > 원문: [Docs MCP](https://developers.openai.com/learn/docs-mcp/) — OpenAI Developers
+>
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
 OpenAI는 개발자 문서에 대한 접근성을 높이기 위해 Model Context Protocol (MCP) 서버를 공개했습니다. 이 서버는 `https://developers.openai.com/mcp` URL을 통해 streamable HTTP 방식으로 접속할 수 있습니다.
 
 주요 내용은 다음과 같습니다.
 
--   OpenAI 개발자 문서에 대한 읽기 전용 접근 (검색 및 페이지 내용 포함)을 제공합니다.
--   개발 중인 에이전트의 컨텍스트에 문서를 직접 가져올 수 있는 기능을 제공합니다.
--   이 MCP 서버는 문서 전용이며, OpenAI API를 대신 호출하지는 않습니다.
+- OpenAI 개발자 문서에 대한 읽기 전용 접근 (검색 및 페이지 내용 포함)을 제공합니다.
+- 개발 중인 에이전트의 컨텍스트에 문서를 직접 가져올 수 있는 기능을 제공합니다.
+- 이 MCP 서버는 문서 전용이며, OpenAI API를 대신 호출하지는 않습니다.
 
 Codex CLI를 통해 MCP 서버를 추가할 수 있습니다.
 
@@ -23,6 +24,6 @@ Codex CLI를 통해 MCP 서버를 추가할 수 있습니다.
 codex mcp add openaiDeveloperDocs --url https://developers.openai.com/mcp
 ```
 
- 또한, `~/.codex/config.toml` 파일에 직접 설정하거나, `AGENTS.md` 파일에 스니펫을 추가하여 에이전트가 OpenAI 개발자 문서 MCP 서버를 사용하도록 지시할 수 있습니다.
+또한, `~/.codex/config.toml` 파일에 직접 설정하거나, `AGENTS.md` 파일에 스니펫을 추가하여 에이전트가 OpenAI 개발자 문서 MCP 서버를 사용하도록 지시할 수 있습니다.
 
 자세한 내용은 원문에서 확인하세요.

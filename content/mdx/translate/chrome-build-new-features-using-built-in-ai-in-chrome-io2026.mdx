@@ -7,17 +7,18 @@ createdAt: 2026-05-26
 ---
 
 > 원문: [Build new features using built-in AI in Chrome](https://developer.chrome.com/blog/build-new-features-using-built-in-ai-in-chrome-io2026?hl=en) — Chrome Developers
+>
 > 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
 
 Imagine building a travel blog where the blog post editor doesn't just store the text, but where it actively supports you when writing. Meet Maya and Ashok, the creators of **trAIlblazers**. They use [built-in AI in Chrome](https://developer.chrome.com/docs/ai/built-in). By running models directly on the user's device, developers bypass expensive cloud costs and latency while keeping sensitive data local.
 
 We've collaborated with Build Awesome (formerly known as Eleventy) to release a **blog template with all the AI features** listed in the talk.
 
-*   **Cost-efficient:** No cloud inference cost, all computation happens on users' supporting devices.
-*   **Privacy first:** Sensitive data never leaves the browser.
-*   **Offline functionality:** Once the model is downloaded, AI features work without an internet connection.
-*   **Performance:** Hardware acceleration allows on-device models to rival (and sometimes beat) cloud speeds.
-*   **Hybrid inference:** Using polyfills and tools like **Firebase AI Logic**, you can fall back to the cloud on unsupported devices (like mobile) while staying native on desktop.
+- **Cost-efficient:** No cloud inference cost, all computation happens on users' supporting devices.
+- **Privacy first:** Sensitive data never leaves the browser.
+- **Offline functionality:** Once the model is downloaded, AI features work without an internet connection.
+- **Performance:** Hardware acceleration allows on-device models to rival (and sometimes beat) cloud speeds.
+- **Hybrid inference:** Using polyfills and tools like **Firebase AI Logic**, you can fall back to the cloud on unsupported devices (like mobile) while staying native on desktop.
 
 # AI features for modern web apps
 
@@ -44,8 +45,8 @@ for await (const chunk of summarizer.summarizeStreaming(blogPost)) {
 
 Need specific data? By using [**JSON Schema** with the Prompt API](https://developer.chrome.com/docs/ai/structured-output-for-prompt-api), you can make the AI return predictable formats. The trAIlblazers team uses this for the following:
 
-*   **Tag Generation:** Suggest categories like "Adventure" or "Beach" from a predefined list.
-*   **Comment Moderation:** Classify comments as "Safe" or "Harmful" before they are published.
+- **Tag Generation:** Suggest categories like "Adventure" or "Beach" from a predefined list.
+- **Comment Moderation:** Classify comments as "Safe" or "Harmful" before they are published.
 
 ## Media accessibility
 
@@ -67,15 +68,15 @@ Draft content with the Translator API in English and instantly translate it to S
 
 Many partners are already shipping these APIs in production. Notable examples include the following:
 
-*   **Drupal:** Uses the Summarizer API for SEO tag generation within CKEditor.
-*   **Yahoo! Japan:** Uses the Prompt API for community comment moderation.
-*   **Trip.com:** Helps shoppers navigate complex flight booking options with AI overviews.
+- **Drupal:** Uses the Summarizer API for SEO tag generation within CKEditor.
+- **Yahoo! Japan:** Uses the Prompt API for community comment moderation.
+- **Trip.com:** Helps shoppers navigate complex flight booking options with AI overviews.
 
 # Resources from the talk
 
 Ready to build your own "trAIlblazers" experience? Check out these resources:
 
-*   **Starter template:** [Build Awesome starter-extended-blog](https://github.com/GoogleChrome/starter-extended-blog) (Includes all AI features mentioned in the talk.)
-*   **Documentation:** [Built-in AI on Chrome for Developers](https://developer.chrome.com/docs/ai/built-in)
-*   **TypeScript support:** Install [`@types/dom-chromium-ai`](https://www.npmjs.com/package/@types/dom-chromium-ai) on npm.
-*   **Google I/O 2025 talk:** [Practical built-in AI with Gemini Nano in Chrome](https://www.youtube.com/watch?v=CjpZCWYrSxM)
+- **Starter template:** [Build Awesome starter-extended-blog](https://github.com/GoogleChrome/starter-extended-blog) (Includes all AI features mentioned in the talk.)
+- **Documentation:** [Built-in AI on Chrome for Developers](https://developer.chrome.com/docs/ai/built-in)
+- **TypeScript support:** Install [`@types/dom-chromium-ai`](https://www.npmjs.com/package/@types/dom-chromium-ai) on npm.
+- **Google I/O 2025 talk:** [Practical built-in AI with Gemini Nano in Chrome](https://www.youtube.com/watch?v=CjpZCWYrSxM)

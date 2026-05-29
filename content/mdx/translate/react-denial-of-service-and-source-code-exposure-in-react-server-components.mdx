@@ -7,6 +7,7 @@ createdAt: 2025-12-11
 ---
 
 > 원문: [Denial of Service and Source Code Exposure in React Server Components](https://react.dev/blog/2025/12/11/denial-of-service-and-source-code-exposure-in-react-server-components) — React Blog
+>
 > 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
 
 보안 연구원들이 지난주 발표된 중요 취약점 패치를 테스트하던 중 React Server Components에서 두 가지 추가 취약점을 발견하여 공개했습니다.
@@ -15,8 +16,8 @@ createdAt: 2025-12-11
 
 새로운 취약점은 다음과 같이 공개되었습니다:
 
-*   **서비스 거부(Denial of Service) - 심각도 높음**: [CVE-2025-55184](https://www.cve.org/CVERecord?id=CVE-2025-55184), [CVE-2025-67779](https://www.cve.org/CVERecord?id=CVE-2025-67779), 및 [CVE-2026-23864](https://www.cve.org/CVERecord?id=CVE-2026-23864) (CVSS 7.5)
-*   **소스 코드 노출(Source Code Exposure) - 심각도 중간**: [CVE-2025-55183](https://www.cve.org/CVERecord?id=CVE-2025-55183) (CVSS 5.3)
+- **서비스 거부(Denial of Service) - 심각도 높음**: [CVE-2025-55184](https://www.cve.org/CVERecord?id=CVE-2025-55184), [CVE-2025-67779](https://www.cve.org/CVERecord?id=CVE-2025-67779), 및 [CVE-2026-23864](https://www.cve.org/CVERecord?id=CVE-2026-23864) (CVSS 7.5)
+- **소스 코드 노출(Source Code Exposure) - 심각도 중간**: [CVE-2025-55183](https://www.cve.org/CVERecord?id=CVE-2025-55183) (CVSS 5.3)
 
 새로 공개된 취약점의 심각도를 고려하여 즉시 업그레이드할 것을 권장합니다.
 
@@ -38,9 +39,9 @@ createdAt: 2025-12-11
 
 여기에는 다음의 19.0.0, 19.0.1, 19.0.2, 19.0.3, 19.1.0, 19.1.1, 19.1.2, 19.1.3, 19.2.0, 19.2.1, 19.2.2, 19.2.3 버전이 포함됩니다:
 
-*   [react-server-dom-webpack](https://www.npmjs.com/package/react-server-dom-webpack)
-*   [react-server-dom-parcel](https://www.npmjs.com/package/react-server-dom-parcel)
-*   [react-server-dom-turbopack](https://www.npmjs.com/package/react-server-dom-turbopack?activeTab=readme)
+- [react-server-dom-webpack](https://www.npmjs.com/package/react-server-dom-webpack)
+- [react-server-dom-parcel](https://www.npmjs.com/package/react-server-dom-parcel)
+- [react-server-dom-turbopack](https://www.npmjs.com/package/react-server-dom-turbopack?activeTab=readme)
 
 수정 사항은 19.0.4, 19.1.5, 19.2.4 버전으로 백포팅되었습니다. 위에 나열된 패키지를 사용 중이라면 즉시 수정된 버전으로 업그레이드하십시오.
 
@@ -74,15 +75,15 @@ createdAt: 2025-12-11
 
 모노레포에서 React Native를 사용하는 경우, 설치된 경우에만 해당되는 패키지를 업데이트해야 합니다:
 
-*   `react-server-dom-webpack`
-*   `react-server-dom-parcel`
-*   `react-server-dom-turbopack`
+- `react-server-dom-webpack`
+- `react-server-dom-parcel`
+- `react-server-dom-turbopack`
 
 이는 보안 권고 사항을 완화하기 위해 필요하지만, `react` 및 `react-dom`을 업데이트할 필요는 없으므로 React Native에서 버전 불일치 오류를 유발하지 않습니다.
 
 자세한 내용은 [이 이슈](https://github.com/facebook/react-native/issues/54772#issuecomment-3617929832)를 참조하십시오.
 
-* * *
+---
 
 # 심각도 높음: 다중 서비스 거부(Multiple Denial of Service)
 
@@ -102,7 +103,7 @@ createdAt: 2025-12-11
 
 이로 인해 이전 버전이 취약한 상태로 남았습니다. 19.0.4, 19.1.5, 19.2.4 버전은 안전합니다.
 
-* * *
+---
 
 # 심각도 높음: 서비스 거부(Denial of Service)
 
@@ -142,22 +143,22 @@ createdAt: 2025-12-11
 
 항상 프로덕션 번들을 상대로 검증하십시오.
 
-* * *
+---
 
 # 타임라인
 
-*   **12월 3일**: [Andrew MacPherson](https://github.com/AndrewMohawk)에 의해 Vercel 및 [Meta Bug Bounty](https://bugbounty.meta.com/)에 유출 보고.
-*   **12월 4일**: GMO Flatt Security Inc.의 [RyotaK](https://ryotak.net/)에 의해 초기 DoS 보고.
-*   **12월 6일**: 두 문제 모두 React 팀에서 확인했으며, 팀에서 조사 시작.
-*   **12월 7일**: 초기 수정 사항 생성 및 React 팀에서 검증 및 새 패치 계획 시작.
-*   **12월 8일**: 영향을 받는 호스팅 제공업체 및 오픈 소스 프로젝트에 통지.
-*   **12월 10일**: 호스팅 제공업체 완화 조치 완료 및 패치 검증.
-*   **12월 11일**: Shinsaku Nomura가 Meta Bug Bounty에 추가 DoS 보고.
-*   **12월 11일**: 패치 게시 및 [CVE-2025-55183](https://www.cve.org/CVERecord?id=CVE-2025-55183) 및 [CVE-2025-55184](https://www.cve.org/CVERecord?id=CVE-2025-55184)로 공개적으로 공개.
-*   **12월 11일**: 누락된 DoS 사례가 내부적으로 발견되어 패치되고 [CVE-2025-67779](https://www.cve.org/CVERecord?id=CVE-2025-67779)로 공개적으로 공개.
-*   **1월 26일**: 추가 DoS 사례가 발견되어 패치되고 [CVE-2026-23864](https://www.cve.org/CVERecord?id=CVE-2026-23864)로 공개적으로 공개.
+- **12월 3일**: [Andrew MacPherson](https://github.com/AndrewMohawk)에 의해 Vercel 및 [Meta Bug Bounty](https://bugbounty.meta.com/)에 유출 보고.
+- **12월 4일**: GMO Flatt Security Inc.의 [RyotaK](https://ryotak.net/)에 의해 초기 DoS 보고.
+- **12월 6일**: 두 문제 모두 React 팀에서 확인했으며, 팀에서 조사 시작.
+- **12월 7일**: 초기 수정 사항 생성 및 React 팀에서 검증 및 새 패치 계획 시작.
+- **12월 8일**: 영향을 받는 호스팅 제공업체 및 오픈 소스 프로젝트에 통지.
+- **12월 10일**: 호스팅 제공업체 완화 조치 완료 및 패치 검증.
+- **12월 11일**: Shinsaku Nomura가 Meta Bug Bounty에 추가 DoS 보고.
+- **12월 11일**: 패치 게시 및 [CVE-2025-55183](https://www.cve.org/CVERecord?id=CVE-2025-55183) 및 [CVE-2025-55184](https://www.cve.org/CVERecord?id=CVE-2025-55184)로 공개적으로 공개.
+- **12월 11일**: 누락된 DoS 사례가 내부적으로 발견되어 패치되고 [CVE-2025-67779](https://www.cve.org/CVERecord?id=CVE-2025-67779)로 공개적으로 공개.
+- **1월 26일**: 추가 DoS 사례가 발견되어 패치되고 [CVE-2026-23864](https://www.cve.org/CVERecord?id=CVE-2026-23864)로 공개적으로 공개.
 
-* * *
+---
 
 # 감사
 

@@ -143,13 +143,13 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
 - **CD** — `main`에 변경사항 병합 → Vercel 자동 배포
 - **번역 콘텐츠 자동화** — 매일 UTC 02:00 GitHub Actions 실행 → RSS 피드 신규 글 감지 → Gemini API로 처리 → `mdx` 브랜치에 자동 커밋
 
-  | 소스                                                                                                                                | 라이선스            | 처리 방식 |
-  | ----------------------------------------------------------------------------------------------------------------------------------- | ------------------- | --------- |
-  | React Blog                                                                                                                          | CC BY 4.0           | 전문 번역 |
-  | Chrome Developers                                                                                                                   | CC BY 4.0           | 전문 번역 |
-  | web.dev                                                                                                                             | CC BY 4.0           | 전문 번역 |
-  | V8 Blog                                                                                                                             | CC BY 3.0           | 전문 번역 |
-  | Next.js Blog, Vercel Blog, TypeScript Blog, Tailwind CSS Blog, TanStack Blog, Anthropic Engineering, Claude Blog, OpenAI Developers | All rights reserved | 핵심 요약 |
+  | 소스                                                                                                                 | 라이선스            | 처리 방식 |
+  | -------------------------------------------------------------------------------------------------------------------- | ------------------- | --------- |
+  | React Blog                                                                                                           | CC BY 4.0           | 전문 번역 |
+  | Chrome Developers                                                                                                    | CC BY 4.0           | 전문 번역 |
+  | web.dev                                                                                                              | CC BY 4.0           | 전문 번역 |
+  | V8 Blog                                                                                                              | CC BY 3.0           | 전문 번역 |
+  | Next.js Blog, Vercel Blog, TypeScript Blog, Tailwind CSS Blog, Anthropic Engineering, Claude Blog, OpenAI Developers | All rights reserved | 핵심 요약 |
 
 <br />
 

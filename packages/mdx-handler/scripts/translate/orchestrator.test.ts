@@ -1,5 +1,7 @@
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 
+import type { TranslateSource } from '../../src/core/config';
+
 import { translateNewPosts } from './orchestrator.js';
 
 // vi.mock은 호이스팅되므로 hoisted로 mock 함수를 미리 정의
@@ -34,6 +36,21 @@ const {
     MockFatalGeminiError,
   };
 });
+
+vi.mock('../../src/core/config', () => ({
+  TRANSLATE_SOURCES: [
+    { name: 'React Blog', category: 'react', rssUrl: 'https://react.dev/feed.xml' },
+    { name: 'Next.js Blog', category: 'nextjs', rssUrl: 'https://nextjs.org/feed.xml' },
+    { name: 'Vercel Blog', category: 'vercel', rssUrl: 'https://vercel.com/atom' },
+  ] satisfies TranslateSource[],
+  TRANSLATE_SCRIPT_CONFIG: {
+    GEMINI_MODEL: 'gemini-2.5-flash-lite',
+    MAX_RETRIES: 3,
+    INITIAL_POST_COUNT: 3,
+    SCRAPE_TIMEOUT_MS: 10_000,
+    SCRAPE_USER_AGENT: 'Mozilla/5.0 (compatible; TranslateBot/1.0)',
+  },
+}));
 
 vi.mock('@google/genai', () => ({
   GoogleGenAI: vi.fn().mockImplementation(function (this: object) {}),

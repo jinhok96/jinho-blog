@@ -1,59 +1,60 @@
 ---
-title: 2026년 4월 웹 플랫폼의 새로운 기능
-description: 2026년 4월에 안정 및 베타 웹 브라우저에 추가된 흥미로운 기능들을 소개합니다.
+title: 2026년 4월 웹 플랫폼 신규 기능
+description: "2026년 4월에 Chrome, Firefox, Safari 베타 및 안정 버전에 추가된 새로운 웹 플랫폼 기능을 소개합니다."
 category: webdev
 sourceUrl: https://web.dev/blog/web-platform-04-2026?hl=en
 createdAt: 2026-04-24
 ---
 
 > 원문: [New to the web platform in April](https://web.dev/blog/web-platform-04-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
 
-# 안정 브라우저 릴리스
+Chrome 147 및 Firefox 150이 4월에 안정 버전으로 출시되었습니다. 이번 달에는 Safari의 안정 버전 릴리스는 없었습니다. 이 게시물에서는 이번 달에 추가된 많은 새로운 기능들을 살펴봅니다.
 
-Chrome 147 및 Firefox 150이 4월에 안정 버전으로 출시되었습니다. 이번 달에는 Safari의 안정 버전 릴리스가 없었습니다. 이 게시물에서는 이번 달에 추가된 많은 새로운 기능들을 살펴봅니다.
+## CSS `contrast-color()` 함수가 Baseline이 됩니다
 
-## `contrast-color()` CSS 함수, Baseline 달성
-
-Chrome 147에서 [`contrast-color()`](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/color_value/contrast-color) 함수가 출시됨에 따라, 이 유용한 접근성 기능이 이제 모든 주요 엔진에서 사용할 수 있게 되어 Baseline으로 새로 사용할 수 있게 되었습니다.
+Chrome 147에서 [`contrast-color()`](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/color_value/contrast-color) 함수가 출시됨에 따라 이 유용한 접근성 기능이 이제 모든 주요 엔진에서 사용할 수 있게 되어 Baseline으로 새로 이용 가능해졌습니다.
 
 이 함수는 색상 값을 받아 제공된 색상에 대해 가장 높은 대비를 제공하는지 여부에 따라 검은색 또는 흰색을 반환합니다. 이를 통해 텍스트가 접근성 대비 요구 사항을 충족하는지 확인할 수 있습니다.
 
 ## `ariaNotify()` 메서드
 
-Firefox 150은 `Document` 및 `Element`에 대한 `ariaNotify()` 메서드 지원을 도입합니다. 이 메서드를 사용하면 콘텐츠 작성자가 화면 판독기에 의해 발음될 텍스트 문자열을 큐에 넣을 수 있습니다.
+Firefox 150은 `Document` 및 `Element`에 대한 `ariaNotify()` 메서드 지원을 도입합니다. 이 메서드를 사용하면 콘텐츠 작성자가 화면 판독기에 의해 발표될 텍스트 문자열을 큐에 넣을 수 있습니다.
 
-이는 특히 DOM 업데이트와 관련이 없는 알림에 대해 ARIA 라이브 영역에 대한 보다 안정적이고 인체공학적인 대안을 제공합니다.
+이는 DOM 업데이트와 관련이 없는 알림의 경우, 특히 ARIA 라이브 영역에 대한 더 안정적이고 인체공학적인 대안을 제공합니다.
 
-## 지연 로드되는 이미지의 자동 크기
+## 지연 로드 이미지의 자동 크기
 
-Firefox 150은 이제 `<img>` 요소의 `sizes` 속성에 대해 `"auto"` 키워드를 지원합니다. 이를 통해 지연 로드되는 이미지는 계산된 이미지 레이아웃 크기를 사용하여 `srcset`에서 최적의 소스를 선택할 수 있어 반응형 이미지 설정을 단순화합니다.
+Firefox 150은 이제 `<img>` 요소의 `sizes` 속성에 대해 `"auto"` 키워드를 지원합니다. 이를 통해 지연 로드되는 이미지는 계산된 이미지 레이아웃 크기를 사용하여 `srcset`에서 최상의 소스를 선택할 수 있어 반응형 이미지 설정을 간소화할 수 있습니다.
 
-## 요소별 뷰 전환
+## 요소 범위 뷰 전환
 
-Chrome 147은 임의의 HTML 요소에 `element.startViewTransition()`을 노출합니다. 이를 통해 특정 요소에 국한된 전환이 가능하며, 이는 의사 요소가 조상 클립 및 변환의 영향을 받고 여러 전환을 동시에 실행할 수 있음을 의미합니다.
+Chrome 147은 임의의 HTML 요소에 `element.startViewTransition()`을 노출합니다. 이를 통해 특정 요소로 범위가 지정된 전환이 가능하며, 이는 유사 요소가 조상 클립 및 변환의 영향을 받고 여러 전환이 동시에 실행될 수 있음을 의미합니다.
 
 ## CSS `border-shape` 속성
 
-Chrome 147은 `border-shape` 속성을 도입하여 다각형 또는 원과 같은 모양으로 비사각형 테두리를 만들 수 있습니다.
+Chrome 147은 `border-shape` 속성을 도입하여 다각형 또는 원과 같은 모양의 비직사각형 테두리를 만들 수 있습니다.
 
-## SVG `<textPath>` path 속성
+## SVG `<textPath>` 경로 속성
 
-Chrome 147은 SVG `<textPath>` 요소에 `path` 속성 지원을 추가하여 텍스트 경로 형상을 인라인으로 정의할 수 있습니다.
+Chrome 147은 SVG `<textPath>` 요소에 `path` 속성 지원을 추가하여 텍스트 경로 기하학을 인라인으로 정의할 수 있습니다.
 
 ## JSON 및 스타일의 Modulepreload 지원
 
-Chrome 147은 `<link rel="modulepreload">` 대상으로서 JSON 및 스타일 모듈 유형에 대한 지원을 추가합니다.
+Chrome 147은 `<link rel="modulepreload">` 대상으로서 JSON 및 스타일 모듈 유형을 지원합니다.
 
 ## `Math.sumPrecise`
 
-Chrome 147은 TC39 제안인 `Math.sumPrecise`를 구현하여 반복 가능한 값의 정확한 합계를 반환합니다. 이 메서드는 이제 Baseline으로 새로 사용할 수 있습니다.
+Chrome 147은 `Math.sumPrecise`에 대한 TC39 제안을 구현하여 반복 가능한 값의 정확한 합계를 반환합니다. 이 메서드는 이제 Baseline으로 새로 이용 가능합니다.
 
 # 베타 브라우저 릴리스
 
-베타 브라우저 버전은 브라우저의 다음 안정 버전에서 제공될 기능에 대한 미리 보기를 제공합니다. 전 세계에 릴리스되기 전에 사이트에 영향을 줄 수 있는 새로운 기능 또는 제거 사항을 테스트하기에 좋은 시기입니다. 이번 달의 새로운 베타 버전은 Chrome 148, Firefox 151 및 Safari 26.5입니다.
+베타 브라우저 버전은 다음 안정 버전 브라우저에 포함될 기능에 대한 미리 보기를 제공합니다. 전 세계가 해당 릴리스를 받기 전에 사이트에 영향을 미칠 수 있는 새로운 기능 또는 제거된 기능을 테스트하기에 좋은 시기입니다. 이번 달의 새로운 베타 버전은 [Chrome 148](https://developer.chrome.com/blog/chrome-148-beta), [Firefox 151](https://developer.mozilla.org/docs/Mozilla/Firefox/Releases/151), [Safari 26.5](https://developer.apple.com/documentation/safari-release-notes/safari-26_5-release-notes)입니다.
 
-Chrome 148 베타에는 CSS의 이름만 있는 컨테이너 쿼리, 비디오 및 오디오 요소의 지연 로딩, `@supports`에서 기능 감지를 위한 `at-rule()` 함수가 포함됩니다.
+Chrome 148 베타 버전에는 CSS의 이름만 지정하는 컨테이너 쿼리, 비디오 및 오디오 요소에 대한 지연 로딩, `@supports`에서 기능 감지를 위한 `at-rule()` 함수가 포함됩니다.
 
-Firefox 151 베타에는 CSS 컨테이너 스타일 쿼리가 포함됩니다.
+Firefox 151 베타 버전에는 CSS 컨테이너 스타일 쿼리가 포함됩니다.
 
-Safari 26.5 베타에는 `:open` 의사 클래스가 `<details>`, `<dialog>`, `<select>`, `<input>` 요소에 대한 지원과 함께 다수의 문제 해결이 포함됩니다.
+Safari 26.5 베타 버전에는 `<details>`, `<dialog>`, `<select>`, `<input>` 요소에 대한 `:open` 유사 클래스 지원과 더불어 수많은 문제 해결이 포함됩니다.
+
+_이 게시물에는 이전에 스크롤 기반 애니메이션 범위 속성이 Baseline이 되는 내용이 포함되어 있었습니다. 해당 속성은 아직 Firefox에 출시되지 않았으므로 이 게시물은 잘못된 정보를 제거하도록 업데이트되었습니다._

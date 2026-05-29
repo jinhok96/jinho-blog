@@ -223,4 +223,19 @@ DESCRIPTION: 설명`;
       FatalGeminiError,
     );
   });
+
+  it('mode가 summary면 요약 프롬프트 사용 (결과 파싱은 동일)', async () => {
+    mockGenerateContent.mockResolvedValue({ text: validResponse });
+
+    const result = await translateWithGemini(mockGenAI, 'content', 'React Compiler', 'Next.js Blog', 'summary');
+
+    expect(result).toEqual({
+      title: 'React 컴파일러 소개',
+      description: 'React 컴파일러의 동작 방식과 최적화 기법',
+      body: '## 개요\n\nReact 컴파일러는 자동으로 최적화합니다.',
+    });
+    // 프롬프트에 요약 규칙 키워드가 포함됐는지 확인
+    const calledPrompt = mockGenerateContent.mock.calls[0][0].contents as string;
+    expect(calledPrompt).toContain('15% 이내로 압축');
+  });
 });

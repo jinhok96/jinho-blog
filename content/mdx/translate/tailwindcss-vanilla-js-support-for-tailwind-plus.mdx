@@ -1,122 +1,18 @@
 ---
-title: Tailwind Plus에 바닐라 JavaScript 지원 추가
-description: "Tailwind Plus UI 블록이 이제 React, Vue와 같은 프레임워크 없이도 네이티브 JavaScript로 작동합니다."
+title: "Tailwind Plus, 바닐라 JavaScript 지원 추가"
+description: Tailwind Plus의 모든 UI 블록에 JavaScript 프레임워크 없이 사용 가능한 커스텀 엘리먼트가 추가되었습니다.
 category: tailwindcss
 sourceUrl: https://tailwindcss.com/blog/vanilla-js-support-for-tailwind-plus
 createdAt: 2025-07-25
 ---
 
 > 원문: [Vanilla JavaScript support for Tailwind Plus](https://tailwindcss.com/blog/vanilla-js-support-for-tailwind-plus) — Tailwind CSS Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-Tailwind Plus의 많은 UI 블록은 유용해지려면 JavaScript가 필요한데, 예를 들어 다이얼로그, 드롭다운, 커맨드 팔레트 등이 있습니다. React나 Vue 사용자가 아니라면 이러한 UI 블록을 사용하려면 복잡한 JavaScript를 직접 작성해야 했습니다.
+- Tailwind Plus의 모든 UI 블록(다이얼로그, 드롭다운, 커맨드 팔레트 등)이 이제 JavaScript 프레임워크 없이 바로 사용 가능합니다.
+- `@tailwindplus/elements` 라이브러리는 HTML, CSS 유틸리티 클래스만으로 인터랙티브 UI를 구축할 수 있는 헤드리스 커스텀 엘리먼트를 제공합니다.
+- 이 커스텀 엘리먼트는 `<script>` 태그로 어디서든 작동하며, ARIA 속성 관리, 포커스 처리, 키보드 지원 등 복잡한 동작을 내장합니다.
+- 최신 웹 플랫폼 기능을 활용하여 가볍고 네이티브에 가까운 경험을 제공하며, Tailwind CSS v4.0이 지원하는 모든 브라우저에서 작동합니다.
+- Svelte, Rails, React 등 다양한 프레임워크에서 HTML의 범용성을 바탕으로 Tailwind Plus UI 블록을 쉽게 통합할 수 있습니다.
 
-이제 모든 것이 달라졌습니다. **Tailwind Plus의 모든 UI 블록이 이제 일반 HTML 예제를 포함하여 완벽하게 작동하고, 접근 가능하며, 상호작용 가능**합니다.
-
-이제 [드롭다운](https://tailwindcss.com/plus/ui-blocks/application-ui/elements/dropdowns), [커맨드 팔레트](https://tailwindcss.com/plus/ui-blocks/application-ui/navigation/command-palettes), [다이얼로그](https://tailwindcss.com/plus/ui-blocks/application-ui/overlays/modal-dialogs), [드로어](https://tailwindcss.com/plus/ui-blocks/application-ui/overlays/drawers) 등을 JavaScript 프레임워크 없이도 프로젝트에 사용할 수 있습니다.
-
-* * *
-
-# [프레임워크 불필요](#no-framework-required)
-
-이를 위해 저희는 [Tailwind Plus](https://tailwindcss.com/plus) 고객만을 위해 출시하는 라이브러리인 `@tailwindplus/elements`를 구축했습니다.
-
-Elements는 HTML만으로 사용자 정의 가능한 상호작용 UI를 구축하는 데 필요한 복잡한 동작을 모두 캡슐화하는 헤드리스 [커스텀 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements) 모음이며, 유틸리티 클래스나 사용자 정의 CSS를 사용하여 원하는 방식으로 스타일링할 수 있습니다.
-
-이러한 커스텀 엘리먼트는 특정 JavaScript 프레임워크에 종속되지 않고 `<script>` 태그를 사용할 수 있는 모든 곳에서 작동합니다.
-
-index.html
-
-```
-<script src="https://cdn.jsdelivr.net/npm/@tailwindplus/elements@1" type="module"></script>
-```
-
-Elements를 사용하여 [커스텀 드롭다운](https://tailwindcss.com/plus/ui-blocks/application-ui/elements/dropdowns#component-f8a14da22f26a67757b19f2fe3ca00ed) 메뉴를 만드는 방법은 다음과 같습니다.
-
-```
-<el-dropdown class="relative inline-block text-left">  <button class="inline-flex w-full justify-center gap-x-1.5 rounded-md bg-white px-3 py-2 text-sm font-semibold text-gray-900 shadow-xs ring-1 ring-gray-300 ring-inset hover:bg-gray-50">    Options    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="-mr-1 size-5 text-gray-400">      <path d="M5.22 8.22a.75.75 0 0 1 1.06 0L10 11.94l3.72-3.72a.75.75 0 1 1 1.06 1.06l-4.25 4.25a.75.75 0 0 1-1.06 0L5.22 9.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />    </svg>  </button>  <el-menu anchor="bottom end" popover class="w-56 origin-top-right rounded-md bg-white shadow-lg ring-1 ring-black/5 transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 data-closed:transform data-closed:opacity-0 data-enter:duration-100 data-enter:ease-out data-leave:duration-75 data-leave:ease-in">    <div class="py-1">      <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Account settings</a>      <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Support</a>      <a href="#" class="block px-4 py-2 text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">License</a>      <form action="#" method="POST">        <button type="submit" class="block w-full px-4 py-2 text-left text-sm text-gray-700 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden">Sign out</button>      </form>    </div>  </el-menu></el-dropdown>
-```
-
-그리고 [커스텀 셀렉트](https://tailwindcss.com/plus/ui-blocks/application-ui/forms/select-menus#component-e0f6280e5501d69e188768909fda485e)를 만드는 방법은 다음과 같습니다.
-
-```
-<label for="select" class="block text-sm/6 font-medium text-gray-900">Assigned to</label><el-select id="select" name="selected" value="4" class="mt-2 block">  <button type="button" class="grid w-full cursor-default grid-cols-1 ...">    <el-selectedcontent></el-selectedcontent>    <svg viewBox="0 0 16 16" fill="currentColor" aria-hidden="true" class="col-start-1 row-start-1 ...">      <!-- ... -->    </svg>  </button>  <el-options anchor="bottom start" popover class="max-h-60 w-(--button-width) [--anchor-gap:--spacing(1)] ...">    <el-option value="1" class="group/option relative block focus:bg-indigo-600 ...">      <div class="flex items-center">        <span aria-hidden="true" class="inline-block size-2 shrink-0 ..."></span>        <span class="ml-3 block group-aria-selected/option:font-semibold ...">          Wade Cooper          <span class="sr-only"> is online</span>        </span>      </div>      <span class="group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden ...">        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-5">            <!-- ... -->        </svg>      </span>    </el-option>    <!-- ... -->  </el-options></el-select>
-```
-
-`<el-select>` 및 `<el-options>`와 같은 커스텀 HTML 엘리먼트가 보이나요? 이것이 자동 ARIA 속성 관리, 포커스 처리, 키보드 지원 등을 포함한 모든 것을 가능하게 하는 비결입니다.
-
-Elements를 사용하면 JavaScript를 직접 작성하지 않고도 커스텀 [커맨드 팔레트](https://tailwindcss.com/plus/ui-blocks/application-ui/navigation/command-palettes#component-5e859372042e1b3b308dc51f3ac8bad6)처럼 정교한 것도 만들 수 있습니다.
-
-```
-<button command="show-modal" commandfor="dialog" class="rounded-md bg-white/80 px-2.5 py-1.5 text-sm font-semibold text-gray-900 hover:bg-white/90">  Open command palette</button><el-dialog>  <dialog id="dialog" class="backdrop:bg-transparent">    <el-dialog-backdrop class="fixed inset-0 bg-gray-500/25 transition-opacity data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in"></div>    <div tabindex="0" class="fixed inset-0 w-screen overflow-y-auto p-4 focus:outline-none sm:p-6 md:p-20">      <el-dialog-panel class="mx-auto block max-w-3xl transform overflow-hidden rounded-xl bg-white shadow-2xl ring-1 ring-black/5 transition-all data-closed:scale-95 data-closed:opacity-0 data-enter:duration-300 data-enter:ease-out data-leave:duration-200 data-leave:ease-in">        <el-command-palette class="divide-y divide-gray-100">          <div class="grid grid-cols-1">            <input type="text" autofocus placeholder="Search..." class="col-start-1 row-start-1 h-12 w-full pr-4 pl-11 text-base text-gray-900 outline-hidden placeholder:text-gray-400 sm:text-sm" />            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="pointer-events-none col-start-1 row-start-1 ml-4 size-5 self-center text-gray-400">              <path d="M9 3.5a5.5 5.5 0 1 0 0 11 5.5 5.5 0 0 0 0-11ZM2 9a7 7 0 1 1 12.452 4.391l3.328 3.329a.75.75 0 1 1-1.06 1.06l-3.329-3.328A7 7 0 0 1 2 9Z" clip-rule="evenodd" fill-rule="evenodd" />            </svg>          </div>          <div class="flex transform-gpu divide-x divide-gray-100">            <div class="max-h-96 min-w-0 flex-auto scroll-py-4 overflow-y-auto px-6 py-4">              <el-command-list class="-mx-2 block text-sm text-gray-700">                <el-defaults>                  <h2 class="mx-2 mt-2 mb-4 text-xs font-semibold text-gray-500">Recent searches</h2>                  <div class="text-sm text-gray-700">                    <a id="person-suggestion-6" href="#" class="group flex cursor-default items-center rounded-md p-2 select-none focus:outline-hidden aria-selected:bg-gray-100 aria-selected:text-gray-900">                      <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 flex-none rounded-full" />                      <span class="ml-3 flex-auto truncate">Tom Cook</span>                      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="ml-3 hidden size-5 flex-none text-gray-400 group-aria-selected:block">                        <path d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />                      </svg>                    </a>                   <!-- ... -->                  </div>                </el-defaults>                <el-command-group hidden class="sm:h-96">                  <a id="person-1" href="#" hidden class="group flex cursor-default items-center rounded-md p-2 select-none focus:outline-hidden aria-selected:bg-gray-100 aria-selected:text-gray-900">                    <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="size-6 flex-none rounded-full" />                    <span class="ml-3 flex-auto truncate">Leslie Alexander</span>                    <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="ml-3 hidden size-5 flex-none text-gray-400 group-aria-selected:block">                      <path d="M8.22 5.22a.75.75 0 0 1 1.06 0l4.25 4.25a.75.75 0 0 1 0 1.06l-4.25 4.25a.75.75 0 0 1-1.06-1.06L11.94 10 8.22 6.28a.75.75 0 0 1 0-1.06Z" clip-rule="evenodd" fill-rule="evenodd" />                    </svg>                  </a>                  <!-- ... -->                </el-command-group>              </el-command-list>              <el-no-results hidden class="block px-6 py-14 text-center text-sm sm:px-14">                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true" class="mx-auto size-6 text-gray-400">                  <path d="M15 19.128a9.38 9.38 0 0 0 2.625.372 9.337 9.337 0 0 0 4.121-.952 4.125 4.125 0 0 0-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 0 1 8.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0 1 11.964-3.07M12 6.375a3.375 3.375 0 1 1-6.75 0 3.375 3.375 0 0 1 6.75 0Zm8.25 2.25a2.625 2.625 0 1 1-5.25 0 2.625 2.625 0 0 1 5.25 0Z" stroke-linecap="round" stroke-linejoin="round" />                </svg>                <p class="mt-4 font-semibold text-gray-900">No people found</p>                <p class="mt-2 text-gray-500">We couldn't find anything with that term. Please try again.</p>              </el-no-results>            </div>            <el-command-preview for="person-1" hidden class="h-96 w-1/2 flex-none flex-col divide-y divide-gray-100 overflow-y-auto sm:flex">              <div class="flex-none p-6 text-center">                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=facearea&facepad=2&w=256&h=256&q=80" alt="" class="mx-auto size-16 rounded-full" />                <h2 class="mt-3 font-semibold text-gray-900">Leslie Alexander</h2>                <p class="text-sm/6 text-gray-500">Co-Founder / CEO</p>              </div>              <div class="flex flex-auto flex-col justify-between p-6">                <dl class="grid grid-cols-1 gap-x-6 gap-y-3 text-sm text-gray-700">                  <dt class="col-end-1 font-semibold text-gray-900">Phone</dt>                  <dd>1-493-747-9031</dd>                  <dt class="col-end-1 font-semibold text-gray-900">URL</dt>                  <dd class="truncate"><a href="https://example.com" class="text-indigo-600 underline">https://example.com</a></dd>                  <dt class="col-end-1 font-semibold text-gray-900">Email</dt>                  <dd class="truncate"><a href="mailto:lesliealexander@example.com" class="text-indigo-600 underline">lesliealexander@example.com</a></dd>                </dl>                <button type="button" class="mt-6 w-full rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-xs hover:bg-indigo-500 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600">Send message</button>              </div>            </el-command-preview>            <!-- ... -->          </div>        </el-command-palette>      </el-dialog-panel>    </div>  </dialog></el-dialog>
-```
-
-Elements의 첫 번째 릴리스에서는 Tailwind Plus의 모든 UI 블록을 지원하기 위해 다음 기본 요소들을 제공합니다.
-
-*   [Autocomplete](https://tailwindcss.com/plus/ui-blocks/documentation/autocomplete) — 커스텀 [Combobox](https://tailwindcss.com/plus/ui-blocks/application-ui/forms/comboboxes)와 같은 것을 만드는 데 사용됩니다.
-*   [Command palette](https://tailwindcss.com/plus/ui-blocks/documentation/command-palette) — 커스텀 [Command Palettes](https://tailwindcss.com/plus/ui-blocks/application-ui/navigation/command-palettes)를 만드는 데 사용됩니다.
-*   [Dialog](https://tailwindcss.com/plus/ui-blocks/documentation/dialog) — 커스텀 [Modal Dialogs](https://tailwindcss.com/plus/ui-blocks/application-ui/overlays/modal-dialogs), [Drawers](https://tailwindcss.com/plus/ui-blocks/application-ui/overlays/drawers) 등을 만드는 데 사용됩니다.
-*   [Disclosure](https://tailwindcss.com/plus/ui-blocks/documentation/disclosure) — 접을 수 있는 [FAQ](https://tailwindcss.com/plus/ui-blocks/marketing/sections/faq-sections#component-8699d80b13ef524eb573e54b4d4b89d1), [Navbar](https://tailwindcss.com/plus/ui-blocks/application-ui/navigation/navbars)의 모바일 메뉴 등을 만드는 데 사용됩니다.
-*   [Dropdown menu](https://tailwindcss.com/ui-blocks/documentation/dropdown-menu) — 물론 커스텀 [Dropdowns](https://tailwindcss.com/plus/ui-blocks/application-ui/elements/dropdowns)를 만드는 데 사용됩니다.
-*   [Popover](https://tailwindcss.com/plus/ui-blocks/documentation/popover) — 커스텀 [Flyout Menus](https://tailwindcss.com/plus/ui-blocks/marketing/elements/flyout-menus) 등을 만드는 데 사용됩니다.
-*   [Select](https://tailwindcss.com/plus/ui-blocks/documentation/select) — 커스텀 [Select Menus](https://tailwindcss.com/plus/ui-blocks/application-ui/forms/select-menus#component-8298198b136afab3bb19391ae716077f)를 만드는 데 사용됩니다.
-*   [Tabs](https://tailwindcss.com/plus/ui-blocks/documentation/tabs) — 커스텀 텍스트 영역의 탭, [제품 개요](https://tailwindcss.com/plus/ui-blocks/ecommerce/components/product-overviews#component-13a89c2dc50a31afd66541dc28fa3c13) 등에서 사용하는 커스텀 탭을 만드는 데 사용됩니다.
-
-Tailwind Plus 고객이라면 새롭게 추가된 [Elements 문서](https://tailwindcss.com/plus/ui-blocks/documentation/elements)에서 자세한 작동 방식과 예제를 확인해 보세요.
-
-* * *
-
-# [현대 웹 활용](#leveraging-the-modern-web)
-
-Elements를 가능한 한 가볍고 네이티브하게 유지하기 위해 현대 플랫폼 기능을 많이 활용했습니다.
-
-*   [커스텀 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/API/Web_components/Using_custom_elements)는 플랫폼 간 컴포넌트 추상화를 제공합니다.
-*   [ `popover` 속성](https://developer.mozilla.org/en-US/docs/Web/HTML/Reference/Global_attributes/popover)은 오버레이 및 팝오버를 자동으로 최상위 렌더링과 함께 관리하며, [`beforetoggle`](https://developer.mozilla.org/en-US/docs/Web/API/HTMLElement/beforetoggle_event) 이벤트로 전환을 제어합니다.
-*   [기본 `<dialog>` 엘리먼트](https://developer.mozilla.org/en-US/docs/Web/API/HTMLDialogElement)는 포커스 트래핑 및 최상위 렌더링을 처리합니다.
-*   [Invoker Commands](https://developer.mozilla.org/en-US/docs/Web/API/Invoker_Commands_API)는 사용자 정의 disclosure 토글과 같은 상호작용 엘리먼트를 선언적으로 관리합니다.
-*   [`ElementInternals`](https://developer.mozilla.org/en-US/docs/Web/API/ElementInternals)는 사용자 정의 폼 컨트롤이 기본 폼 컨트롤처럼 작동하도록 합니다.
-
-또한, 이러한 기능에 필요한 모든 폴리필을 번들링하여 Elements가 Tailwind CSS v4.0과 동일한 [브라우저](https://tailwindcss.com/docs/compatibility#browser-support)에서 작동하도록 보장합니다. 이는 이러한 현대 플랫폼 기능이 더 널리 사용됨에 따라 Elements의 크기가 계속 줄어들 것임을 의미합니다.
-
-* * *
-
-# [모든 곳에서 작동하는 컴포넌트](#components-that-work-everywhere)
-
-HTML은 모든 웹 프레임워크 간의 가장 낮은 공통 분모이므로, Elements는 Tailwind Plus의 HTML 전용 UI 블록이 문자 그대로 어디에서든 작동하도록 만듭니다.
-
-다음은 [Svelte](https://svelte.dev/)에서 양방향 바인딩으로 설정된 [Combobox](https://tailwindcss.com/plus/ui-blocks/application-ui/forms/comboboxes) 예제입니다.
-
-Combobox.svelte
-
-```
-<script>  let input = $state("");  function handleSubmit() {    alert(`Selected: ${input}`);  }</script><form onsubmit={handleSubmit}>  <label for="autocomplete" class="block text-sm/6 font-medium text-gray-900">Assigned to</label>  <el-autocomplete class="relative mt-2 block">    <input bind:value={input} id="autocomplete" type="text" class="block w-full rounded-md ..." />    <button type="button" class="absolute inset-y-0 right-0 flex ...">      <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-5 text-gray-400">        <path d="M5.22 8.22a.75.75 ..." clip-rule="evenodd" fill-rule="evenodd" />      </svg>    </button>    <el-options anchor="bottom end" popover class="max-h-60 w-(--input-width) [--anchor-gap:--spacing(1)] ...">      <el-option value="Leslie Alexander" class="block truncate aria-selected:bg-indigo-600 aria-selected:text-white ...">Leslie Alexander</el-option>    </el-options>  </el-autocomplete>  <button type="submit">Submit</button></form>
-```
-
-또는 [Rails](https://rubyonrails.org/)의 사용자 정의 셀렉트 예제입니다. 네이티브 폼 컨트롤처럼 폼 제출에 포함됩니다.
-
-app/controllers/orders\_controller.rb
-
-```
-class OrdersController < ApplicationController  def new    @cars = Car.all    @selected_car = @cars.first  end  def create    car = Car.find(params[:car_id])    flash[:notice] = "Selected car: #{car.name}"    redirect_to root_path  endend
-```
-
-app/views/orders/new.html.erb
-
-```
-<%= form_with do |form| %>  <%= form.label :car_id, "Select model:" %>  <el-select name="car_id" id="car_id" value="<%= @selected_car.id %>">    <button type="button" class="grid w-full cursor-default grid-cols-1 ...">      <el-selectedcontent class="col-start-1 row-start-1 truncate pr-6">        <%= @selected_car.name %>      </el-selectedcontent>      <svg viewBox="0 0 16 16" aria-hidden="true" class="col-start-1 row-start-1 size-5 ...">        <path d="M5.22 10.22a.75.75 ..." clip-rule="evenodd" fill-rule="evenodd" />      </svg>    </button>    <el-options anchor="bottom end" popover="">      <% @cars.each do |car| %>        <el-option value="<%= car.id %>">          <span class="block truncate font-normal group-aria-selected/option:font-semibold">            <%= car.name %>          </span>          <span class="flex group-not-aria-selected/option:hidden group-focus/option:text-white in-[el-selectedcontent]:hidden ...">            <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" class="size-5">              <path d="M16.704 4.153a.75.75 0 ..." clip-rule="evenodd" fill-rule="evenodd" />            </svg>          </span>        </el-option>      <% end %>    </el-options>  </el-select>  <%= form.submit "Place order" %><% end %>
-```
-
-[React](https://react.dev/)에서 Headless UI 또는 React Aria와 같은 React 전용 라이브러리 대신 Elements를 사용할 수도 있습니다.
-
-```
-import Link from "next/link";export function Menu() {  return (    <el-dropdown className="relative inline-block text-left">      <button className="inline-flex w-full justify-center ...">        Menu        <svg viewBox="0 0 20 20" fill="currentColor" aria-hidden="true" className="-mr-1 size-5 text-gray-400">          <path d="M5.22 8.22a.75.75 ..." clip-rule="evenodd" fill-rule="evenodd" />        </svg>      </button>      <el-menu anchor="bottom end" popover className="transition transition-discrete [--anchor-gap:--spacing(2)] focus:outline-hidden data-closed:scale-95 ...">        <div className="py-1">          <Link href="/" className="block px-4 py-2 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden ...">Home</Link>          <Link href="/about" className="block px-4 py-2 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden ...">About</Link>          <Link href="/faq" className="block px-4 py-2 focus:bg-gray-100 focus:text-gray-900 focus:outline-hidden ...">FAQ</Link>        </div>      </el-menu>    </el-dropdown>  );}
-```
-
-* * *
-
-# [오늘 바로 사용해보세요](#try-it-out-today)
-
-업데이트된 모든 UI 블록과 새로운 Elements 라이브러리는 현재 모든 [Tailwind Plus](https://tailwindcss.com/plus) 고객에게 제공됩니다.
-
-[드롭다운](https://tailwindcss.com/plus/ui-blocks/application-ui/elements/dropdowns) 및 [커맨드 팔레트](https://tailwindcss.com/plus/ui-blocks/application-ui/navigation/command-palettes)와 같은 UI 블록 카테고리를 확인하여 업데이트된 인터랙티브 예제를 직접 사용해보고, 새로운 [Elements 문서](https://tailwindcss.com/plus/ui-blocks/documentation/elements)를 탐색하여 작동 방식과 프로젝트에 맞게 사용자 정의하는 방법을 알아보세요.
-
-이 기능으로 무엇을 만들지 기대됩니다!
+자세한 내용은 원문에서 확인하세요.

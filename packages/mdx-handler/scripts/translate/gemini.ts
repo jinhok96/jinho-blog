@@ -1,6 +1,6 @@
 import type { GoogleGenAI } from '@google/genai';
 
-import { TRANSLATE_SCRIPT_CONFIG, buildTranslatePrompt } from '../../src/core/config';
+import { TRANSLATE_SCRIPT_CONFIG, buildSummaryPrompt, buildTranslatePrompt } from '../../src/core/config';
 
 export class FatalGeminiError extends Error {}
 
@@ -68,8 +68,12 @@ export async function translateWithGemini(
   content: string,
   originalTitle: string,
   sourceName: string,
+  mode: 'full' | 'summary' = 'full',
 ): Promise<TranslationResult | null> {
-  const prompt = buildTranslatePrompt(content, originalTitle, sourceName);
+  const prompt =
+    mode === 'full'
+      ? buildTranslatePrompt(content, originalTitle, sourceName)
+      : buildSummaryPrompt(content, originalTitle, sourceName);
   const raw = await callGeminiWithRetry(genAI, prompt);
   if (!raw) return null;
 

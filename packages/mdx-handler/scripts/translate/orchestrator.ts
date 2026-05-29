@@ -72,9 +72,11 @@ export async function translateNewPosts(): Promise<void> {
         continue;
       }
 
+      const isCC = source.license !== 'all-rights-reserved';
+
       let translation;
       try {
-        translation = await translateWithGemini(genAI, scraped.markdown, item.title, source.name);
+        translation = await translateWithGemini(genAI, scraped.markdown, item.title, source.name, isCC ? 'full' : 'summary');
       } catch (error) {
         if (error instanceof FatalGeminiError) {
           console.error(`\n❌ 치명적 오류 — 스크립트 중단: ${error.message}`);
@@ -98,6 +100,8 @@ export async function translateNewPosts(): Promise<void> {
         originalTitle: item.title,
         translatedBody: normalizeHeadings(translation.body),
         createdAt: item.pubDate,
+        license: source.license,
+        licenseUrl: source.licenseUrl,
       });
 
       const outputPath = path.join(mdxDir, `${slug}.mdx`);

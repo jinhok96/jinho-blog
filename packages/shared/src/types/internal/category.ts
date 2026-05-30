@@ -52,8 +52,6 @@ export type TranslateCategory =
   // 프레임워크 / 라이브러리
   | 'react'
   | 'nextjs'
-  // 배포 / 플랫폼
-  | 'vercel'
   // 언어 / 스타일링
   | 'typescript'
   | 'tailwindcss'

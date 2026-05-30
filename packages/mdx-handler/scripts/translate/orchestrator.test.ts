@@ -41,7 +41,6 @@ vi.mock('../../src/core/config', () => ({
   TRANSLATE_SOURCES: [
     { name: 'React Blog', category: 'react', rssUrl: 'https://react.dev/feed.xml', license: 'cc-by-4.0', licenseUrl: 'https://creativecommons.org/licenses/by/4.0/' },
     { name: 'Next.js Blog', category: 'nextjs', rssUrl: 'https://nextjs.org/feed.xml', license: 'all-rights-reserved' },
-    { name: 'Vercel Blog', category: 'vercel', rssUrl: 'https://vercel.com/atom', license: 'all-rights-reserved' },
   ] satisfies TranslateSource[],
   TRANSLATE_SCRIPT_CONFIG: {
     GEMINI_MODEL: 'gemini-2.5-flash-lite',

@@ -149,7 +149,7 @@ MDX 기반 콘텐츠를 읽고 가공합니다.
   | Chrome Developers                                                                                                    | CC BY 4.0           | 전문 번역 |
   | web.dev                                                                                                              | CC BY 4.0           | 전문 번역 |
   | V8 Blog                                                                                                              | CC BY 3.0           | 전문 번역 |
-  | Next.js Blog, Vercel Blog, TypeScript Blog, Tailwind CSS Blog, Anthropic Engineering, Claude Blog, OpenAI Developers | All rights reserved | 핵심 요약 |
+  | Next.js Blog, TypeScript Blog, Tailwind CSS Blog, Anthropic Engineering, Claude Blog, OpenAI Developers | All rights reserved | 핵심 요약 |
 
 <br />
 

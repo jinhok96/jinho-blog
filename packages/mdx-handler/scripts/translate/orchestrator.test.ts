@@ -41,7 +41,6 @@ vi.mock('../../src/core/config', () => ({
   TRANSLATE_SOURCES: [
     { name: 'React Blog', category: 'react', rssUrl: 'https://react.dev/feed.xml', license: 'cc-by-4.0', licenseUrl: 'https://creativecommons.org/licenses/by/4.0/' },
     { name: 'Next.js Blog', category: 'nextjs', rssUrl: 'https://nextjs.org/feed.xml', license: 'all-rights-reserved' },
-    { name: 'Vercel Blog', category: 'vercel', rssUrl: 'https://vercel.com/atom', license: 'all-rights-reserved' },
   ] satisfies TranslateSource[],
   TRANSLATE_SCRIPT_CONFIG: {
     GEMINI_MODEL: 'gemini-2.5-flash-lite',
@@ -143,8 +142,8 @@ describe('translateNewPosts', () => {
 
     await translateNewPosts();
 
-    // 3 sources × 3 items = 9 scrapes
-    expect(mockScrapeArticle).toHaveBeenCalledTimes(9);
+    // 2 sources × 3 items = 6 scrapes
+    expect(mockScrapeArticle).toHaveBeenCalledTimes(6);
   });
 
   it('이미 번역된 URL은 건너뜀', async () => {
@@ -234,7 +233,7 @@ describe('translateNewPosts', () => {
     await translateNewPosts();
 
     // react source: 2개 모두 처리 (기존 글이 피드에 없음)
-    // nextjs/vercel source도 같은 items 반환 → 각 2개씩
-    expect(mockScrapeArticle).toHaveBeenCalledTimes(6); // 3 sources × 2 items
+    // nextjs source도 같은 items 반환 → 각 2개씩
+    expect(mockScrapeArticle).toHaveBeenCalledTimes(4); // 2 sources × 2 items
   });
 });

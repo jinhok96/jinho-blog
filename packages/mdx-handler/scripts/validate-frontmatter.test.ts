@@ -243,7 +243,7 @@ describe('validateFrontmatter - translate', () => {
     });
 
     it('유효한 translate category 전체 통과', () => {
-      const categories = ['react', 'nextjs', 'vercel'];
+      const categories = ['react', 'nextjs', 'typescript'];
       for (const category of categories) {
         const result = validateFrontmatter({ ...validTranslate, category }, 'translate');
         expect(result.valid).toBe(true);

@@ -39,7 +39,12 @@ const MOCK_POSTS: Translate[] = [
     createdAt: '2024-01-01T00:00:00Z',
   }),
   makeTranslate({ slug: 'nextjs-next-15', title: 'Next.js 15', category: 'nextjs', createdAt: '2024-03-01T00:00:00Z' }),
-  makeTranslate({ slug: 'vercel-v0', title: 'v0 소개', category: 'vercel', createdAt: '2024-02-01T00:00:00Z' }),
+  makeTranslate({
+    slug: 'typescript-5',
+    title: 'TypeScript 5',
+    category: 'typescript',
+    createdAt: '2024-02-01T00:00:00Z',
+  }),
 ];
 
 beforeAll(() => {

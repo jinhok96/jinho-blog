@@ -24,8 +24,6 @@ export const TRANSLATE_SOURCES: TranslateSource[] = [
   },
   // 프레임워크 / 라이브러리 — All rights reserved
   { name: 'Next.js Blog', category: 'nextjs', rssUrl: 'https://nextjs.org/feed.xml', license: 'all-rights-reserved' },
-  // 배포 / 플랫폼 — All rights reserved
-  { name: 'Vercel Blog', category: 'vercel', rssUrl: 'https://vercel.com/atom', license: 'all-rights-reserved' },
   // 언어 / 스타일링 — All rights reserved
   {
     name: 'TypeScript Blog',

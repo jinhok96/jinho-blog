@@ -43,6 +43,11 @@ jobs:
           if git diff --staged --quiet; then
             echo "committed=false" >> $GITHUB_OUTPUT
           else
+            {
+              echo "titles<<EOF"
+              git diff --staged --name-only -- content/mdx/translate/ | sed 's|.*/||; s/\.[^.]*$//; s/^/- /'
+              echo "EOF"
+            } >> $GITHUB_OUTPUT
             git commit -m "Content: 기술 블로그 자동 번역"
             git push origin mdx
             echo "committed=true" >> $GITHUB_OUTPUT
@@ -55,11 +60,14 @@ jobs:
         run: |
           PR_URL=$(gh pr list --head mdx --base main --json url --jq '.[0].url')
           if [ -z "$PR_URL" ]; then
+            BODY_FILE=$(mktemp)
+            printf "자동 번역 스크립트에 의해 생성된 PR입니다.\n\n## 번역된 콘텐츠\n" > "$BODY_FILE"
+            echo "${{ steps.commit.outputs.titles }}" >> "$BODY_FILE"
             PR_URL=$(gh pr create \
               --base main \
               --head mdx \
               --title "Content: 기술 블로그 자동 번역" \
-              --body "자동 번역 스크립트에 의해 생성된 PR입니다." \
+              --body-file "$BODY_FILE" \
               --label "콘텐츠")
           fi
           gh pr merge --auto --merge "$PR_URL"

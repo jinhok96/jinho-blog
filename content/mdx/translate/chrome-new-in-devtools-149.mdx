@@ -1,0 +1,95 @@
+---
+title: DevTools 새 소식 (Chrome 149)
+description: "Chrome 149은 AI 지원 기능의 대대적인 업그레이드, Application 패널의 실험적인 WebMCP 디버깅 도구 도입, CSS 코드 완성 지원 확장을 제공합니다."
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/new-in-devtools-149?hl=en
+createdAt: 2026-06-02
+---
+
+> 원문: [What's new in DevTools (Chrome 149)](https://developer.chrome.com/blog/new-in-devtools-149?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# DevTools for agents
+
+DevTools for agents의 MCP 서버와 CLI가 공식적으로 안정화되었습니다! 전체 공지는 [여기](https://developer.chrome.com/blog/devtools-for-agents-v1)에서 확인하십시오.
+
+v1.1.1 릴리스까지 추가된 주요 기능 및 새 도구는 다음과 같습니다.
+
+*   **사용자 정의 타사, 페이지 노출 도구:** 페이지는 이제 JavaScript를 통해 [사용자 정의 디버깅 도구](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md#third-party)를 정의할 수 있으며, 이는 DevTools for agents에서 검색 및 호출 가능합니다.
+*   **WebMCP 디버깅:** DevTools for agents는 이제 [WebMCP 도구를 나열하고 실행](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md#third-party)할 수 있습니다.
+*   **사용자 정의 HTTP 헤더 에뮬레이션:** 에뮬레이션 도구에 HTTP 헤더(예: 인증 토큰 또는 사용자 정의 User-Agent) 지원을 추가합니다.
+
+타사 도구 및 WebMCP 디버깅은 아직 실험 단계이며 기본적으로 활성화되지 않습니다. 사용 방법에 대한 정보는 [도구 참조](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md)를 확인하십시오. 해당 기능이 프로덕션 사용 준비가 되면 developer.chrome.com에 더 많은 문서를 제공할 예정입니다.
+
+DevTools for agents에 대한 최신 업데이트 및 기여는 [GitHub 리포지토리](https://github.com/ChromeDevTools/devtools-mcp-server)를 방문하십시오. [문서](https://developer.chrome.com/docs/devtools/agents/get-started)로 시작하거나 포괄적인 Google I/O 비디오 세션 [Supercharge your AI coding workflow with Chrome DevTools for agents](https://www.youtube.com/watch?v=1AD81ZselPk)를 통해 최신 정보를 얻으십시오.
+
+# AI 지원
+
+**AI 지원** 패널이 사용자 인터페이스 업데이트와 함께 대화 경험을 개선하고 페이지에 대한 더 깊은 통찰력을 제공하는 새 도구를 받았습니다.
+
+*   **에이전트 안내:** AI 지원은 이제 일반 텍스트 Markdown 대신 채팅 인터페이스 내에서 직접 위젯을 렌더링합니다. 이 위젯은 Core Web Vitals 및 관련 통찰력, LCP 요소, LCP 분해, Bottom-up 스레드 활동 등을 다룹니다. 위젯 안의 **Reveal** 링크를 클릭하면 DevTools 내부의 이 정보 소스로 이동합니다.
+*   **코딩 에이전트로 복사:** 대화는 이제 요약된 프롬프트 또는 전체 대화를 복사할 수 있는 전용 버튼으로 끝나며, 이를 선택한 코딩 에이전트에 붙여넣을 수 있습니다.
+*   **업그레이드된 기능:** AI 지원은 이제 Lighthouse 및 관련 통찰력에 액세스할 수 있어 페이지를 전체적으로 분석하고 맞춤형 조언을 제공할 수 있습니다.
+*   **개선된 응답:** Gemini 3를 기반으로 하고 사전 준비 구문을 개선하여 AI 지원은 더 간결하고 실행 가능한 답변을 제공합니다.
+*   **개선된 탐색:** 이제 **위쪽 화살표** 및 **아래쪽 화살표** 키를 사용하여 이전 채팅 프롬프트를 탐색할 수 있으므로 이전 쿼리를 빠르게 수정하거나 다시 실행할 수 있습니다.
+
+Astro.js 데모 사이트 [DevTools Times](https://chrome.dev/devtools-times)에서 "How can I improve the performance of this page?"라는 프롬프트로 AI 지원을 사용하는 모습. 에이전트 안내, 위젯, Antigravity로의 코딩 에이전트 복사 기능이 표시됩니다.
+
+전용 [피드백 버그](https://issues.chromium.org/issues/519074659)에 댓글을 달아 의견을 알려주십시오. 코딩 에이전트로 복사 기능을 선호하여 Chrome 152부터 [AI 지원을 통한 자동 스타일 수정](https://developer.chrome.com/docs/devtools/ai-assistance/chat#auto-workspace) 지원을 중단할 예정입니다.
+
+# WebMCP
+
+이번 릴리스에서는 **Application** 패널 사이드바에 실험적인 WebMCP 디버깅 도구가 도입되었습니다. WebMCP(Web Model Context Protocol)는 웹 페이지가 방문하는 LLM 에이전트에서 사용할 도구를 등록할 수 있도록 합니다. 제안된 표준에 대해 [자세히 알아보기](https://developer.chrome.com/docs/ai/webmcp)하십시오.
+
+새로운 디버깅 도구를 통해 개발자는 다음을 수행할 수 있습니다.
+
+*   클라이언트 측 도구 및 해당 스키마를 검사합니다.
+*   사용자 지정 매개변수를 사용하여 도구 실행을 수동으로 실행합니다.
+*   활성 또는 보류 중인 도구 호출 이벤트를 추적하고 필터링합니다.
+*   실행 상태를 모니터링하고 반환 페이로드를 검사합니다.
+
+WebMCP는 초기 미리 보기 상태인 제안된 웹 표준입니다. chrome://flags에서 `#devtools-webmcp-support` 및 `#enable-webmcp-testing` 플래그를 활성화하여 실험을 시작하십시오.
+
+![DevTools Application 패널의 새로운 WebMCP 디버깅 도구.](https://developer.chrome.dev/static/blog/new-in-devtools-149/images/webmcp.webp)
+
+DevTools Application 패널의 새로운 WebMCP 디버깅 도구가 데모 사이트 [L'Atelier](https://googlechromelabs.github.io/webmcp-tools/demos/hotel-chain/#/search?q=paris)를 검사하는 모습. 이전 도구 호출, 사용 가능한 도구 및 필터 옵션이 표시됩니다.
+
+Chromium 이슈: [494516094](https://issues.chromium.org/issues/494516094)
+
+# CSS 코드 완성
+
+**Styles** 탭에 Gemini 기반 CSS 코드 완성이 추가되었습니다. 이는 [Console 및 Sources 패널에 대한 지원](https://developer.chrome.com/docs/devtools/ai-assistance/code-generation)을 기반으로 합니다. **Settings > AI innovations > Code suggestions**에서 코드 제안을 활성화하십시오.
+
+이를 통해 정확한 구문을 기억하지 않고도 그라디언트나 box shadows와 같은 더 복잡한 CSS 속성 조합을 실험할 수 있습니다. 또는 여러 관련 속성에 의존하여 grid 및 flex 레이아웃을 빠르게 구축할 수 있습니다.
+
+**Styles** 탭 하단의 툴바에는 로딩 스피너를 통해 상태가 표시됩니다. 입력하는 동안 제안 사항이 업데이트되거나 지워져 AI 생성 텍스트가 수동 편집과 관련성을 유지하도록 합니다.
+
+# APCA 색상 대비 가이드라인이 안정화되었습니다.
+
+Advanced Perceptual Contrast Algorithm(APCA) 대비 계산기가 실험 단계를 공식적으로 마치고 표준 기본 설정으로 사용할 수 있게 되었습니다. APCA는 최신 디스플레이 및 텍스트 렌더링에 최적화된 현대적인 지각 대비 모델로 레거시 AAA/AA 대비 가이드라인을 대체합니다.
+
+이제 **Settings > Preferences > Elements > Enable APCA contrast guidelines** 아래에 있는 체크박스를 사용하여 APCA 가이드라인을 활성화 또는 비활성화할 수 있습니다.
+
+![DevTools 설정의 APCA 알고리즘 토글 및 Styles 탭에서 적용되는 새로운 알고리즘.](https://developer.chrome.dev/static/blog/new-in-devtools-149/images/apca.webp)
+
+DevTools 설정의 APCA 알고리즘 토글 및 Styles 탭에서 적용되는 새로운 알고리즘.
+
+# 동적 장치 모드 사용자 에이전트
+
+이전의 Responsive device mode는 하드코딩된 User Agent 문자열(Android 6.0; Nexus 5)을 사용했습니다. 이로 인해 최신 웹사이트가 기능이 저하되거나 호환성 모드가 트리거되었습니다. 보고된 OS가 10년 이상 지난 것으로 인식되었기 때문입니다.
+
+하드코딩된 사용자 에이전트는 현재 달력을 기준으로 자동 업데이트되는 동적 휴리스틱으로 대체되어 DevTools가 수동 유지 관리 없이도 항상 그럴듯하고 최신 환경을 보고하도록 합니다.
+
+# 기타 주요 사항
+
+이번 릴리스에는 몇 가지 개선 사항 및 버그 수정이 포함되었습니다.
+
+*   **Console**: Console 패널 툴바에 **모두 축소 / 모두 확장** 토글 버튼이 추가되어 모든 활성 콘솔 그룹 및 스택 추적을 한 번에 빠르게 확장하거나 축소할 수 있습니다. ([427657550](https://issues.chromium.org/issues/427657550))
+*   **Application**: Application 메타데이터 보기의 스토리지 버킷 필드에 정적 텍스트 대신 클릭 가능한 하이퍼링크가 사용되었습니다. 버킷 링크를 클릭하면 _Storage Buckets_ 사이드바 패널에서 해당 버킷으로 자동 이동하고 강조 표시됩니다. ([435311130](https://issues.chromium.org/issues/435311130))
+*   **Application**: Service Worker에 대한 전체 스토리지 검사 지원이 충돌 회귀를 해결한 후 다시 활성화되었습니다. ([406991275](https://issues.chromium.org/issues/406991275), [466134219](https://issues.chromium.org/issues/466134219))
+*   **Application**: Preloading 패널 내에서 `form_submission` prerendering 이벤트를 검사하는 지원이 추가되었습니다. ([346555939](https://issues.chromium.org/issues/346555939), [488078903](https://issues.chromium.org/issues/488078903))
+*   **Application**: Device-Bound Session Credentials(DBSC) 관리가 구현되어 개발자가 컨텍스트 메뉴에서 또는 `Delete` 또는 `Backspace` 키를 눌러 활성 세션을 지우거나 삭제할 수 있습니다. ([471017387](https://issues.chromium.org/issues/471017387))
+*   **Elements**: Issues 패널에서 숨겨진 문제를 나타내는 DOM 노드의 하이라이트가 이슈 필터 동작에 반응하여 동적으로 업데이트됩니다(표시되거나 사라짐). ([40272723](https://issues.chromium.org/issues/40272723))
+*   **Network**: Server-Sent Events(SSE)가 이제 HAR 내보내기에 완전히 직렬화되어 포함됩니다. 이를 통해 진행 중인 라이브 이벤트 스트림 캡처를 저장하고 DevTools로 다시 가져올 수 있습니다. ([494294071](https://issues.chromium.org/issues/494294071))
+*   **Performance**: Live Metrics 보기의 Core Web Vitals 추적이 기본 프레임 실행 컨텍스트에 엄격하게 고정되도록 수정되어 동적 iframe 변경으로 인한 메트릭 재설정을 방지합니다. ([494350655](https://issues.chromium.org/issues/494350655))
+*   **Performance**: `web-vitals`가 v5.2.0으로 업그레이드되어 INP 모니터링 중 메모리 누수에 대한 네이티브 업스트림 수정이 도입되었습니다. ([484342204](https://issues.chromium.org/issues/484342204))

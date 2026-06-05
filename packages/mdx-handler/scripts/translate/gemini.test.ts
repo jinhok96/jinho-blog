@@ -3,7 +3,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import {
   FatalGeminiError,
   callGeminiWithRetry,
+  extractAndReplaceLinkUrls,
   extractRetryDelay,
+  restoreLinkUrls,
   translateWithGemini,
 } from './gemini.js';
 
@@ -151,6 +153,57 @@ describe('callGeminiWithRetry', () => {
   });
 });
 
+describe('extractAndReplaceLinkUrls', () => {
+  it('일반 링크 URL을 플레이스홀더로 치환', () => {
+    const { processed, urls } = extractAndReplaceLinkUrls('[docs](https://example.com/docs)');
+    expect(processed).toBe('[docs](__URL_0__)');
+    expect(urls).toEqual(['https://example.com/docs']);
+  });
+
+  it('이미지 링크 URL을 플레이스홀더로 치환', () => {
+    const { processed, urls } = extractAndReplaceLinkUrls('![alt](https://example.com/img.webp)');
+    expect(processed).toBe('![alt](__URL_0__)');
+    expect(urls).toEqual(['https://example.com/img.webp']);
+  });
+
+  it('일반 링크와 이미지 링크를 순서대로 인덱싱', () => {
+    const input = '[link](https://a.com) ![img](https://b.com/img.webp)';
+    const { processed, urls } = extractAndReplaceLinkUrls(input);
+    expect(processed).toBe('[link](__URL_0__) ![img](__URL_1__)');
+    expect(urls).toEqual(['https://a.com', 'https://b.com/img.webp']);
+  });
+
+  it('링크 없으면 원본 그대로 반환, urls 빈 배열', () => {
+    const { processed, urls } = extractAndReplaceLinkUrls('텍스트만 있는 콘텐츠');
+    expect(processed).toBe('텍스트만 있는 콘텐츠');
+    expect(urls).toEqual([]);
+  });
+
+  it('상대 경로는 치환하지 않음', () => {
+    const { processed, urls } = extractAndReplaceLinkUrls('![img](./local.webp)');
+    expect(processed).toBe('![img](./local.webp)');
+    expect(urls).toEqual([]);
+  });
+});
+
+describe('restoreLinkUrls', () => {
+  it('플레이스홀더를 원본 URL로 복원', () => {
+    const urls = ['https://example.com/docs'];
+    expect(restoreLinkUrls('[문서](__URL_0__)', urls)).toBe('[문서](https://example.com/docs)');
+  });
+
+  it('여러 플레이스홀더를 인덱스 순서대로 복원', () => {
+    const urls = ['https://a.com', 'https://b.com/img.webp'];
+    const input = '[링크](__URL_0__) ![이미지](__URL_1__)';
+    expect(restoreLinkUrls(input, urls)).toBe('[링크](https://a.com) ![이미지](https://b.com/img.webp)');
+  });
+
+  it('인덱스 범위 초과 플레이스홀더는 그대로 유지', () => {
+    const urls = ['https://a.com'];
+    expect(restoreLinkUrls('[링크](__URL_1__)', urls)).toBe('[링크](__URL_1__)');
+  });
+});
+
 describe('translateWithGemini', () => {
   beforeEach(() => {
     vi.clearAllMocks();
@@ -222,6 +275,21 @@ DESCRIPTION: 설명`;
     await expect(translateWithGemini(mockGenAI, 'content', 'Title', 'Source')).rejects.toBeInstanceOf(
       FatalGeminiError,
     );
+  });
+
+  it('링크 URL을 플레이스홀더로 치환하여 Gemini에 전달하고 결과를 복원', async () => {
+    mockGenerateContent.mockResolvedValue({
+      text: `TITLE: 제목\nDESCRIPTION: 설명\nBODY:\n[문서](__URL_0__) ![스크린샷](__URL_1__)`,
+    });
+
+    const content = '[docs](https://example.com/docs) ![screenshot](https://example.com/img.webp)';
+    const result = await translateWithGemini(mockGenAI, content, 'Title', 'Source');
+
+    expect(result!.body).toBe('[문서](https://example.com/docs) ![스크린샷](https://example.com/img.webp)');
+
+    const calledPrompt = mockGenerateContent.mock.calls[0][0].contents as string;
+    expect(calledPrompt).toContain('__URL_0__');
+    expect(calledPrompt).not.toContain('https://example.com/docs');
   });
 
   it('mode가 summary면 요약 프롬프트 사용 (결과 파싱은 동일)', async () => {

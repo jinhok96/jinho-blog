@@ -119,6 +119,76 @@ describe('scrapeArticle', () => {
     expect(result!.title).toBe('');
   });
 
+  it('addRule에 video 규칙이 등록됨', async () => {
+    mockFetch.mockResolvedValue({
+      ok: true,
+      text: async () => '<html></html>',
+    });
+    mockParse.mockReturnValue({ title: 'Test', content: '<p>Content</p>' });
+
+    await scrapeArticle('https://example.com/post');
+
+    expect(mockAddRule).toHaveBeenCalledWith('video', expect.objectContaining({ replacement: expect.any(Function) }));
+  });
+
+  it('addRule video replacement — src 속성이 있는 경우', async () => {
+    mockFetch.mockResolvedValue({
+      ok: true,
+      text: async () => '<html></html>',
+    });
+    mockParse.mockReturnValue({ title: 'Test', content: '<p>Content</p>' });
+
+    await scrapeArticle('https://example.com/post');
+
+    const videoCall = mockAddRule.mock.calls.find(([name]) => name === 'video') as [string, { replacement: (c: string, n: unknown) => string }];
+    const [, options] = videoCall;
+    const node = {
+      getAttribute: (attr: string) => (attr === 'src' ? 'https://example.com/video.mp4' : null),
+      querySelector: () => null,
+    };
+    const result = options.replacement('', node);
+    expect(result).toContain('![](https://example.com/video.mp4)');
+  });
+
+  it('addRule video replacement — source[type="video/mp4"] 있는 경우', async () => {
+    mockFetch.mockResolvedValue({
+      ok: true,
+      text: async () => '<html></html>',
+    });
+    mockParse.mockReturnValue({ title: 'Test', content: '<p>Content</p>' });
+
+    await scrapeArticle('https://example.com/post');
+
+    const videoCall = mockAddRule.mock.calls.find(([name]) => name === 'video') as [string, { replacement: (c: string, n: unknown) => string }];
+    const [, options] = videoCall;
+    const node = {
+      getAttribute: () => null,
+      querySelector: (sel: string) =>
+        sel === 'source[type="video/mp4"]' ? { getAttribute: () => 'https://example.com/demo.mp4' } : null,
+    };
+    const result = options.replacement('', node);
+    expect(result).toContain('![](https://example.com/demo.mp4)');
+  });
+
+  it('addRule video replacement — src 없으면 빈 문자열 반환', async () => {
+    mockFetch.mockResolvedValue({
+      ok: true,
+      text: async () => '<html></html>',
+    });
+    mockParse.mockReturnValue({ title: 'Test', content: '<p>Content</p>' });
+
+    await scrapeArticle('https://example.com/post');
+
+    const videoCall = mockAddRule.mock.calls.find(([name]) => name === 'video') as [string, { replacement: (c: string, n: unknown) => string }];
+    const [, options] = videoCall;
+    const node = {
+      getAttribute: () => null,
+      querySelector: () => null,
+    };
+    const result = options.replacement('fallback content', node);
+    expect(result).toBe('');
+  });
+
   it('addRule에 등록된 codeBlock replacement 함수 — 언어 클래스 있는 경우', async () => {
     mockFetch.mockResolvedValue({
       ok: true,

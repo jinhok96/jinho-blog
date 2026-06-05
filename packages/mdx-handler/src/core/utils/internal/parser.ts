@@ -32,6 +32,8 @@ function transformImagePaths(content: string, section: string | null): string {
   let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${staticPath}/${section}/$2)`);
   // 레퍼런스 스타일 정의: [ref]: ./path
   result = result.replace(/^(\[[^\]]+\]):\s*\.\/([\S]+)/gm, `$1: ${staticPath}/${section}/$2`);
+  // HTML 태그 src="./path" 변환 (video, source 등)
+  result = result.replace(/\bsrc="\.\/([^"]+)"/g, `src="${staticPath}/${section}/$1"`);
   return result;
 }
 

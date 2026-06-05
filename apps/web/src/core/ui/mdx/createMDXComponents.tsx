@@ -2,6 +2,8 @@ import type { ComponentProps, HTMLAttributes, TableHTMLAttributes, TdHTMLAttribu
 
 import Image from 'next/image';
 
+import { VIDEO_EXTENSIONS } from '@jinho-blog/shared';
+
 import { LinkButton } from '@/core/ui/button';
 import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
@@ -215,6 +217,18 @@ export function createMDXComponents() {
     ),
 
     img: ({ src, alt, ...props }: HTMLAttributes<HTMLImageElement> & { src: string; alt: string }) => {
+      const ext = src.split('?')[0].split('#')[0].split('.').pop()?.toLowerCase();
+      if (ext && (VIDEO_EXTENSIONS as readonly string[]).includes(`.${ext}`)) {
+        return (
+          <video
+            src={src}
+            controls
+            playsInline
+            className="w-full overflow-hidden rounded-lg"
+          />
+        );
+      }
+
       // 첫번째 이미지 요소에 priority 적용
       const priority = imageIndex === 0;
       imageIndex = imageIndex + 1;
@@ -222,7 +236,7 @@ export function createMDXComponents() {
       return (
         <Image
           {...props}
-          className="overflow-hidden"
+          className="overflow-hidden rounded-lg"
           src={src}
           alt={alt}
           width="1280"

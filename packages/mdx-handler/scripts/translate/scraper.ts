@@ -45,6 +45,20 @@ export async function scrapeArticle(url: string): Promise<{ title: string; markd
       },
     });
 
+    turndown.addRule('video', {
+      filter: 'video',
+      replacement: (_content, node) => {
+        const el = node as Element;
+        const src =
+          el.getAttribute('src') ||
+          el.querySelector('source[type="video/mp4"]')?.getAttribute('src') ||
+          el.querySelector('source')?.getAttribute('src');
+        if (!src) return '';
+        const alt = el.getAttribute('alt') || '';
+        return `\n![${alt}](${src})\n`;
+      },
+    });
+
     const markdown = turndown.turndown(article.content ?? '');
     return { title: article.title || '', markdown };
   } catch (error) {

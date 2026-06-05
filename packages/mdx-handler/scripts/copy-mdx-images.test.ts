@@ -10,7 +10,7 @@ vi.mock('fs', () => ({
   mkdirSync: vi.fn(),
 }));
 
-import { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, scanImagesRecursive } from './copy-mdx-images.js';
+import { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, isVideoFile, scanImagesRecursive } from './copy-mdx-images.js';
 
 type MockReaddirSync = (
   path: fs.PathLike,
@@ -62,6 +62,24 @@ describe('isImageFile', () => {
 });
 
 // ---------------------------------------------------------------------------
+// isVideoFile
+// ---------------------------------------------------------------------------
+describe('isVideoFile', () => {
+  it.each(['.mp4', '.webm', '.ogg', '.mov'])('%s 확장자 → true', ext => {
+    expect(isVideoFile(`video${ext}`)).toBe(true);
+  });
+
+  it.each(['.ts', '.mdx', '.json', '.png'])('%s 확장자 → false', ext => {
+    expect(isVideoFile(`file${ext}`)).toBe(false);
+  });
+
+  it('대문자 확장자도 인식 (.MP4, .WEBM)', () => {
+    expect(isVideoFile('video.MP4')).toBe(true);
+    expect(isVideoFile('video.WEBM')).toBe(true);
+  });
+});
+
+// ---------------------------------------------------------------------------
 // scanImagesRecursive
 // ---------------------------------------------------------------------------
 describe('scanImagesRecursive', () => {
@@ -103,6 +121,19 @@ describe('scanImagesRecursive', () => {
 
     const result = scanImagesRecursive('/some/dir');
     expect(result).toEqual([]);
+  });
+
+  it('비디오 파일 반환', () => {
+    mockExistsSync.mockReturnValue(true);
+    mockReaddirSync.mockReturnValue([
+      { name: 'demo.mp4', isFile: () => true, isDirectory: () => false },
+      { name: 'clip.webm', isFile: () => true, isDirectory: () => false },
+    ]);
+
+    const result = scanImagesRecursive('/some/dir');
+    expect(result).toHaveLength(2);
+    expect(result[0].sourcePath).toBe(path.join('/some/dir', 'demo.mp4'));
+    expect(result[1].sourcePath).toBe(path.join('/some/dir', 'clip.webm'));
   });
 
   it('baseDir 인수가 relativePath에 반영됨', () => {

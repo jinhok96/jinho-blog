@@ -63,6 +63,26 @@ export interface TranslationResult {
   body: string;
 }
 
+const LINK_URL_REGEX = /(!?\[[^\]]*\])\((https?:\/\/[^)]+)\)/g;
+const URL_PLACEHOLDER_REGEX = /__URL_(\d+)__/g;
+
+export function extractAndReplaceLinkUrls(markdown: string): { processed: string; urls: string[] } {
+  const urls: string[] = [];
+  const processed = markdown.replace(LINK_URL_REGEX, (_, bracket, url) => {
+    const index = urls.length;
+    urls.push(url);
+    return `${bracket}(__URL_${index}__)`;
+  });
+  return { processed, urls };
+}
+
+export function restoreLinkUrls(translated: string, urls: string[]): string {
+  return translated.replace(URL_PLACEHOLDER_REGEX, (match, indexStr) => {
+    const index = parseInt(indexStr, 10);
+    return urls[index] ?? match;
+  });
+}
+
 export async function translateWithGemini(
   genAI: GoogleGenAI,
   content: string,
@@ -70,10 +90,11 @@ export async function translateWithGemini(
   sourceName: string,
   mode: 'full' | 'summary' = 'full',
 ): Promise<TranslationResult | null> {
+  const { processed, urls } = extractAndReplaceLinkUrls(content);
   const prompt =
     mode === 'full'
-      ? buildTranslatePrompt(content, originalTitle, sourceName)
-      : buildSummaryPrompt(content, originalTitle, sourceName);
+      ? buildTranslatePrompt(processed, originalTitle, sourceName)
+      : buildSummaryPrompt(processed, originalTitle, sourceName);
   const raw = await callGeminiWithRetry(genAI, prompt);
   if (!raw) return null;
 
@@ -86,6 +107,6 @@ export async function translateWithGemini(
   return {
     title: titleMatch[1].trim(),
     description: descMatch?.[1].trim() ?? '',
-    body: bodyMatch[1].trim(),
+    body: restoreLinkUrls(bodyMatch[1].trim(), urls),
   };
 }

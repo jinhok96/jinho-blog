@@ -117,6 +117,16 @@ describe('transformImagePaths', () => {
     const content = '[link]: https://example.com';
     expect(transformImagePaths(content, 'blog')).toBe(content);
   });
+
+  it('HTML src="./path" → static 절대경로로 변환', () => {
+    const result = transformImagePaths('<video src="./videos/demo.mp4" />', 'blog');
+    expect(result).toBe('<video src="/_static/mdx/blog/videos/demo.mp4" />');
+  });
+
+  it('외부 URL src는 변환하지 않음', () => {
+    const content = '<video src="https://example.com/demo.mp4" />';
+    expect(transformImagePaths(content, 'blog')).toBe(content);
+  });
 });
 
 // ---------------------------------------------------------------------------
@@ -145,6 +155,38 @@ describe('extractFirstImage', () => {
 
   it('이미지 없으면 undefined 반환', () => {
     const result = extractFirstImage({}, '# No images here', 'blog');
+    expect(result).toBeUndefined();
+  });
+
+  it('인라인 이미지가 video 확장자(.mp4)이면 스킵하고 undefined 반환', () => {
+    const result = extractFirstImage({}, '![demo](./videos/demo.mp4)', 'blog');
+    expect(result).toBeUndefined();
+  });
+
+  it('외부 URL 이미지가 video 확장자(.mp4)이면 스킵', () => {
+    const result = extractFirstImage({}, '![demo](https://example.com/video.mp4)', 'blog');
+    expect(result).toBeUndefined();
+  });
+
+  it('video URL을 스킵하고 다음 외부 이미지 반환', () => {
+    const content = '![video](https://example.com/demo.mp4)\n\n![image](https://cdn.example.com/thumb.webp)';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('https://cdn.example.com/thumb.webp');
+  });
+
+  it('.webm, .ogg, .mov 확장자도 스킵', () => {
+    const content = '![a](https://example.com/a.webm)\n![b](https://example.com/b.ogg)\n![c](https://cdn.example.com/c.png)';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('https://cdn.example.com/c.png');
+  });
+
+  it('query string 포함 비디오 URL도 스킵', () => {
+    const result = extractFirstImage({}, '![demo](https://example.com/demo.mp4?t=10)', 'blog');
+    expect(result).toBeUndefined();
+  });
+
+  it('hash fragment 포함 비디오 URL도 스킵', () => {
+    const result = extractFirstImage({}, '![demo](https://example.com/demo.mp4#t=5)', 'blog');
     expect(result).toBeUndefined();
   });
 

@@ -11,7 +11,7 @@ import * as fs from 'fs';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 
-import { PATHS } from '../src/core/config';
+import { IMAGE_EXTENSIONS, PATHS, VIDEO_EXTENSIONS } from '../src/core/config';
 import type { ContentSection } from '../src/types';
 
 interface ImageFile {
@@ -20,7 +20,6 @@ interface ImageFile {
 }
 
 const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];
-const IMAGE_EXTENSIONS = ['.webp', '.png', '.jpg', '.jpeg', '.gif', '.svg'];
 
 /**
  * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
@@ -52,7 +51,15 @@ const MONOREPO_ROOT = findMonorepoRoot();
  */
 function isImageFile(filename: string): boolean {
   const ext = path.extname(filename).toLowerCase();
-  return IMAGE_EXTENSIONS.includes(ext);
+  return (IMAGE_EXTENSIONS as readonly string[]).includes(ext);
+}
+
+/**
+ * 파일이 비디오인지 확인
+ */
+function isVideoFile(filename: string): boolean {
+  const ext = path.extname(filename).toLowerCase();
+  return (VIDEO_EXTENSIONS as readonly string[]).includes(ext);
 }
 
 /**
@@ -81,7 +88,7 @@ function scanImagesRecursive(dir: string, baseDir: string = ''): ImageFile[] {
     if (entry.isDirectory()) {
       // 재귀적으로 하위 디렉토리 스캔
       images.push(...scanImagesRecursive(fullPath, relativePath));
-    } else if (entry.isFile() && isImageFile(entry.name)) {
+    } else if (entry.isFile() && (isImageFile(entry.name) || isVideoFile(entry.name))) {
       images.push({
         sourcePath: fullPath,
         relativePath: relativePath,
@@ -142,7 +149,7 @@ function copyMdxImages(): void {
   console.log(`📁 대상 경로: ${baseStaticPath}\n`);
 }
 
-export { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, scanImagesRecursive };
+export { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, isVideoFile, scanImagesRecursive };
 
 // 실행
 if (process.argv[1] === fileURLToPath(import.meta.url)) {

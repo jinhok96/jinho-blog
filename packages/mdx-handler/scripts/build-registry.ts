@@ -11,7 +11,7 @@ import { fileURLToPath } from 'url';
 
 import { generateThumbnail } from '@jinho-blog/thumbnail-generator';
 
-import { MDX_ROUTES, PATHS } from '../src/core/config';
+import { MDX_ROUTES, PATHS, VIDEO_EXTENSIONS } from '../src/core/config';
 import { validateFrontmatter } from './validate-frontmatter.js';
 import type { ContentSection } from '../src/types';
 
@@ -178,7 +178,15 @@ function transformImagePaths(content: string, section: ContentSection | null): s
   let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${PATHS.STATIC_MDX_URL}/${section}/$2)`);
   // 레퍼런스 스타일 정의: [ref]: ./path
   result = result.replace(/^(\[[^\]]+\]):\s*\.\/([\S]+)/gm, `$1: ${PATHS.STATIC_MDX_URL}/${section}/$2`);
+  // HTML 태그 src="./path" 변환 (video, source 등)
+  result = result.replace(/\bsrc="\.\/([^"]+)"/g, `src="${PATHS.STATIC_MDX_URL}/${section}/$1"`);
   return result;
+}
+
+function isVideoPath(url: string): boolean {
+  const clean = url.split('?')[0].split('#')[0];
+  const ext = clean.split('.').pop()?.toLowerCase();
+  return ext ? (VIDEO_EXTENSIONS as readonly string[]).includes(`.${ext}`) : false;
 }
 
 /**
@@ -249,21 +257,21 @@ function extractFirstImage(
       if (refUsagePos < inlinePos && refId) {
         // 레퍼런스 방식 이미지가 더 앞에 위치
         const refPath = refDefMap[refId];
-        if (refPath) {
+        if (refPath && !isVideoPath(refPath)) {
           return `${PATHS.STATIC_MDX_URL}/${section}/${refPath}`;
         }
-      } else if (inlineMatch) {
+      } else if (inlineMatch && !isVideoPath(inlineMatch[2])) {
         return `${PATHS.STATIC_MDX_URL}/${section}/${inlineMatch[2]}`;
       }
     }
   }
 
-  // 외부 URL 이미지도 추출
-  const externalImageRegex = /!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/;
-  const externalMatch = content.match(externalImageRegex);
-
-  if (externalMatch) {
-    return externalMatch[2];
+  // 외부 URL 이미지도 추출 (video URL 제외)
+  const externalImageRegex = /!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/g;
+  for (const match of content.matchAll(externalImageRegex)) {
+    if (!isVideoPath(match[2])) {
+      return match[2];
+    }
   }
 
   return undefined;

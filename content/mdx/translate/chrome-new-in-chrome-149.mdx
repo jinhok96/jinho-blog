@@ -1,0 +1,65 @@
+---
+title: Chrome 149 최신 기능
+description: "CSS gap decorations, WebSockets bfcache 지원, Intl.Locale.prototype.variants 등 Chrome 149의 주요 변경 사항을 소개합니다."
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/new-in-chrome-149?hl=en
+createdAt: 2026-06-02
+---
+
+> 원문: [New in Chrome 149](https://developer.chrome.com/blog/new-in-chrome-149?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# Chrome 149 최신 기능
+
+Chrome 149가 배포되고 있으며, 본 게시물에서는 해당 릴리스의 주요 기능들을 공유합니다. 전체 Chrome 149 릴리스 노트를 확인해 보세요.
+
+이번 릴리스의 주요 내용:
+
+*   [CSS gap decorations](#gap-decorations)을 통해 grid 및 flexbox와 같은 컨테이너 레이아웃의 gap을 스타일링할 수 있습니다.
+*   [Disconnect WebSockets on bfcache entry](#bfcache-websockets)를 통해 활성 WebSocket 연결이 있는 페이지가 Back/Forward Cache에 진입할 수 있습니다.
+*   [Intl.Locale.prototype.variants](#intl-locale-variants)는 로케일의 variant를 반환하거나 설정합니다.
+
+## CSS gap decorations
+
+CSS gap decorations를 사용하면 grid 및 flexbox와 같은 컨테이너 레이아웃의 gap을 스타일링할 수 있어, 이전에는 복잡한 border와 pseudo-element hacks가 필요했던 일관성과 새로운 스타일링 옵션을 제공합니다. 이 기능은 점진적 향상(progressive-enhancement)에 친화적입니다. 지원하지 않는 브라우저에서는 gap이 decoration 없이 정상적으로 렌더링됩니다.
+
+`column-rule-inset` 및 `row-rule-inset`과 같은 속성을 도입하여 decoration을 축소하거나 확장할 수 있으며, `column-rule-visibility-items` 및 `row-rule-visibility-items`를 사용하여 인접한 항목 간 또는 모든 gap에만 규칙을 표시할 수 있습니다. 규칙의 너비, 색상 및 inset은 완벽하게 애니메이션 처리되므로, hover 또는 다른 상태 변경 시 전환 효과를 적용할 수 있습니다.
+
+[CSS gap decorations stable post](https://developer.chrome.com/blog/gap-decorations-stable)에서 자세히 알아보세요.
+
+## Disconnect WebSockets on bfcache entry
+
+활성 WebSocket 연결이 더 이상 페이지가 Back/Forward Cache(bfcache)에 진입하는 것을 방해하지 않습니다. BFCache 진입 시 WebSocket 연결을 비활성화하는 대신 문서를 비활성화 대상으로 표시하는 대신 선제적으로 닫음으로써, 브라우저는 활성 WebSocket이 있는 페이지를 메모리에 저장하고 즉시 복원할 수 있도록 합니다.
+
+이전에는 활성 WebSocket 연결이 있으면 사용자가 다른 페이지로 이동할 때 브라우저가 해당 페이지를 폐기해야 했으며, 이로 인해 Back/Forward Cache(bfcache)에 저장되지 못했습니다.
+
+## `Intl.Locale.prototype.variants`
+
+`Intl.Locale` 객체는 Unicode 로케일 식별자를 나타냅니다. 기본 객체는 널리 사용 가능합니다.
+
+Variant는 기본 언어 식별자의 일부이며, (언어, 지역, 스크립트) 삼중항으로 구분할 수 없는 언어의 variant를 선택합니다. 이 기능은 이미 Firefox와 Safari에서 출시되었으며, 이제 Chrome에서도 사용할 수 있습니다.
+
+예시:
+
+```
+const locale = new Intl.Locale("sl-rozaj-biske");
+console.log(locale.variants); // "rozaj-biske"
+
+```
+
+[MDN의 Intl.Locale.prototype.variants 문서](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale/variants)에서 자세히 알아보세요.
+
+## 추가 자료
+
+이것은 몇 가지 주요 내용만 다룹니다. Chrome 149의 추가 변경 사항에 대해서는 다음 링크를 확인하세요.
+
+*   [Chrome 149 릴리스 노트](https://developer.chrome.com/release-notes/149).
+*   [What's new in Chrome DevTools (149)](https://developer.chrome.com/blog/new-in-devtools-149).
+*   [ChromeStatus.com updates for Chrome 149](https://chromestatus.com/features#milestone%3D149).
+*   [Chrome release calendar](https://chromiumdash.appspot.com/schedule).
+
+## 구독
+
+최신 정보를 유지하려면 [Chrome Developers YouTube 채널](https://www.youtube.com/user/ChromeDevelopers/)을 구독하세요. 새 동영상이 출시될 때마다 이메일 알림을 받을 수 있습니다. 또는 X 또는 LinkedIn을 팔로우하여 새 기사와 블로그 게시물을 받아보세요.
+
+Chrome 150이 출시되는 즉시 Chrome의 새로운 기능에 대해 알려드리겠습니다!

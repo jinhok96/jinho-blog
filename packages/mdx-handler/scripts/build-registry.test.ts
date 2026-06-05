@@ -190,6 +190,11 @@ describe('extractFirstImage', () => {
     expect(result).toBeUndefined();
   });
 
+  it('점으로 끝나는 URL(확장자 없음)은 비디오로 취급하지 않음', () => {
+    const result = extractFirstImage({}, '![img](https://cdn.example.com/image.)', 'blog');
+    expect(result).toBe('https://cdn.example.com/image.');
+  });
+
   it('frontmatter thumbnail이 ./이지만 section이 null: 변환 없이 반환', () => {
     const result = extractFirstImage({ thumbnail: './cover.png' }, '', null);
     expect(result).toBe('./cover.png');

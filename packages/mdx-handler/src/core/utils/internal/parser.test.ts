@@ -94,6 +94,24 @@ describe('parseMdxFile', () => {
       );
     });
 
+    it('video src="./path" → static 절대경로로 변환', () => {
+      mockMatter.mockReturnValue({
+        content: '<video src="./videos/demo.mp4" controls />',
+        data: {},
+      } as never);
+      const result = parseMdxFile('/project/content/mdx/blog/post.mdx');
+      expect(result.content).toBe('<video src="/_next/static/media/mdx/blog/videos/demo.mp4" controls />');
+    });
+
+    it('source src="./path" → static 절대경로로 변환', () => {
+      mockMatter.mockReturnValue({
+        content: '<source src="./videos/demo.webm" type="video/webm" />',
+        data: {},
+      } as never);
+      const result = parseMdxFile('/project/content/mdx/blog/post.mdx');
+      expect(result.content).toBe('<source src="/_next/static/media/mdx/blog/videos/demo.webm" type="video/webm" />');
+    });
+
     it('외부 URL 레퍼런스 정의는 변환하지 않음', () => {
       mockMatter.mockReturnValue({
         content: '[link]: https://example.com',

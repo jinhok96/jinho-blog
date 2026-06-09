@@ -1,4 +1,4 @@
-import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 
 import {
   FatalGeminiError,
@@ -121,6 +121,23 @@ describe('callGeminiWithRetry', () => {
     mockGenerateContent.mockRejectedValue(error);
 
     await expect(callGeminiWithRetry(mockGenAI, 'prompt')).rejects.toBeInstanceOf(FatalGeminiError);
+  });
+
+  it('비치명적 오류(500) 시 null 반환 및 경고 출력', async () => {
+    mockGenerateContent.mockRejectedValue({ status: 500, message: 'Internal Server Error' });
+
+    const result = await callGeminiWithRetry(mockGenAI, 'prompt');
+
+    expect(result).toBeNull();
+    expect(console.warn).toHaveBeenCalled();
+  });
+
+  it('status 없는 오류 시 null 반환', async () => {
+    mockGenerateContent.mockRejectedValue(new Error('Network error'));
+
+    const result = await callGeminiWithRetry(mockGenAI, 'prompt');
+
+    expect(result).toBeNull();
   });
 
 });

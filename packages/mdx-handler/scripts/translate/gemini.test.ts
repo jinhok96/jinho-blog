@@ -77,11 +77,6 @@ describe('callGeminiWithRetry', () => {
     vi.clearAllMocks();
     vi.spyOn(console, 'warn').mockImplementation(() => {});
     vi.spyOn(console, 'log').mockImplementation(() => {});
-    vi.useFakeTimers();
-  });
-
-  afterEach(() => {
-    vi.useRealTimers();
   });
 
   it('성공 시 텍스트 반환', async () => {
@@ -100,20 +95,8 @@ describe('callGeminiWithRetry', () => {
     expect(result).toBeNull();
   });
 
-  it('429 → 재시도 후 성공', async () => {
-    const rateLimitError = { status: 429, message: 'Rate limit exceeded' };
-    mockGenerateContent.mockRejectedValueOnce(rateLimitError).mockResolvedValue({ text: 'Success' });
-
-    const promise = callGeminiWithRetry(mockGenAI, 'prompt');
-    await vi.runAllTimersAsync();
-    const result = await promise;
-
-    expect(result).toBe('Success');
-    expect(mockGenerateContent).toHaveBeenCalledTimes(2);
-  });
-
-  it('429 spending cap → FatalGeminiError throw', async () => {
-    const error = { status: 429, message: 'You have exceeded your spending cap' };
+  it('429 → FatalGeminiError throw', async () => {
+    const error = { status: 429, message: 'Rate limit exceeded' };
     mockGenerateContent.mockRejectedValue(error);
 
     await expect(callGeminiWithRetry(mockGenAI, 'prompt')).rejects.toBeInstanceOf(FatalGeminiError);
@@ -140,17 +123,6 @@ describe('callGeminiWithRetry', () => {
     await expect(callGeminiWithRetry(mockGenAI, 'prompt')).rejects.toBeInstanceOf(FatalGeminiError);
   });
 
-  it('MAX_RETRIES(3) 초과 후 null 반환', async () => {
-    // 429이지만 모든 시도에서 계속 실패 → MAX_RETRIES 번 호출 후 null
-    mockGenerateContent.mockRejectedValue({ status: 429, message: 'Rate limit exceeded' });
-
-    const promise = callGeminiWithRetry(mockGenAI, 'prompt');
-    await vi.runAllTimersAsync();
-    const result = await promise;
-
-    expect(result).toBeNull();
-    expect(mockGenerateContent).toHaveBeenCalledTimes(3);
-  });
 });
 
 describe('extractAndReplaceLinkUrls', () => {

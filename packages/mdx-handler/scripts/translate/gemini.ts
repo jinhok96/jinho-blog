@@ -32,25 +32,14 @@ export async function callGeminiWithRetry(genAI: GoogleGenAI, prompt: string): P
       });
       return result.text ?? null;
     } catch (error) {
-      const status =
-        error && typeof error === 'object' && 'status' in error ? (error as { status: number }).status : 0;
-      const message = (error as Error).message ?? '';
+      const status = error && typeof error === 'object' && 'status' in error ? (error as { status: number }).status : 0;
+      const message = (error as Error).message.split('\n')[0] ?? '';
 
-      if (status === 404 || status === 401 || status === 403) {
-        throw new FatalGeminiError(message.split('\n')[0]);
-      }
-      if (status === 429 && message.includes('spending cap')) {
-        throw new FatalGeminiError('월 지출 한도 초과 — https://ai.studio/spend 에서 한도를 올려주세요.');
+      if (status === 401 || status === 403 || status === 404 || status === 429) {
+        throw new FatalGeminiError(message);
       }
 
-      if (status === 429 && attempt < MAX_RETRIES) {
-        const delay = extractRetryDelay(error);
-        console.log(`   ⏳ Rate limit — ${delay / 1000}초 후 재시도 (${attempt}/${MAX_RETRIES - 1})...`);
-        await new Promise(resolve => setTimeout(resolve, delay));
-        continue;
-      }
-
-      console.warn(`⚠️  Gemini 오류 (시도 ${attempt}/${MAX_RETRIES}):`, message.split('\n')[0]);
+      console.warn(`⚠️  Gemini 오류 (시도 ${attempt}/${MAX_RETRIES}):`, message);
       return null;
     }
   }

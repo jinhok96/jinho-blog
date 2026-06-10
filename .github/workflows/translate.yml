@@ -56,7 +56,7 @@ jobs:
       - name: Create PR and enable auto-merge
         if: steps.commit.outputs.committed == 'true'
         env:
-          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
           PR_URL=$(gh pr list --head mdx --base main --json url --jq '.[0].url')
           if [ -z "$PR_URL" ]; then

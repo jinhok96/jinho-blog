@@ -1,0 +1,20 @@
+---
+title: Apple 플랫폼용 Claude 통합 Foundation Models 프레임워크 출시
+description: Apple Foundation Models 프레임워크에 Claude 지원이 추가되어 복잡한 워크플로우를 위한 AI 기능 통합이 간편해졌습니다.
+category: claude
+sourceUrl: https://claude.com/blog/claude-for-foundation-models
+createdAt: 2026-06-08
+---
+
+> 원문: [Building intelligent apps for Apple platforms with Claude in the Foundation Models framework](https://claude.com/blog/claude-for-foundation-models) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Apple 개발자들은 이제 Swift 패키지를 통해 Foundation Models 프레임워크에서 Claude를 사용할 수 있게 되었습니다. 이를 통해 더 복잡한 워크플로우 처리를 위해 Claude를 통합하는 것이 더욱 용이해졌습니다.
+
+*   **Apple Foundation Models 프레임워크 통합:** 이 새로운 Swift 패키지는 Apple의 Foundation Models 프레임워크를 사용하여 Claude를 호출할 수 있도록 지원합니다. 이를 통해 개발자는 Swift 코드 내에서 직접 Claude의 강력한 기능을 활용할 수 있습니다.
+*   **정형화된 Swift 값 반환:** Foundation Models 프레임워크는 @Generable 주석을 통해 정형화된 Swift 값을 반환하므로, 개발자는 Claude API 호출 시 원시 텍스트 대신 깨끗한 입력을 사용할 수 있습니다.
+*   **온디바이스 모델과 Claude의 연계:** Apple의 온디바이스 모델은 요약이나 추출과 같은 빠르고 로컬한 작업을 처리하는 데 사용될 수 있습니다. 복잡한 다단계 추론, 코드 생성 또는 최신 정보 검색이 필요한 경우 Foundation Models 프레임워크를 통해 Claude로 작업을 넘길 수 있습니다.
+*   **다양한 애플리케이션 시나리오 확장:** 이 통합은 기존의 지능형 온디바이스 기능을 확장합니다. 예를 들어, 저널링 앱은 온디바이스에서 일일 프롬프트를 생성한 후 Claude를 사용하여 수개월간의 기록을 분석할 수 있으며, 학습 앱은 온디바이스에서 용어를 정의하고 학생의 추가 질문에 Claude가 답변하도록 할 수 있습니다.
+*   **지원 플랫폼 및 시작 방법:** Claude 지원은 iOS 27, iPadOS 27, macOS 27, visionOS 27 및 watch OS 27에서 사용할 수 있습니다. Anthropic API 키로 로그인하고, Apple의 온디바이스 입력을 Claude 요청에 전달하면 패키지가 스트리밍, 도구 호출 및 구조화된 응답을 SwiftUI 뷰로 처리합니다.
+
+자세한 내용은 원문에서 확인하세요.

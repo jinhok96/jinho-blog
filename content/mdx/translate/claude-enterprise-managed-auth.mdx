@@ -1,0 +1,21 @@
+---
+title: Claude MCP 커넥터의 중앙 집중식 권한 관리
+description: Claude Enterprise는 이제 Okta를 시작으로 ID 공급자(IdP)를 통해 조직 전체의 MCP 커넥터에 대한 중앙 집중식 권한 관리를 지원합니다.
+category: claude
+sourceUrl: https://claude.com/blog/enterprise-managed-auth
+createdAt: 2026-06-18
+---
+
+> 원문: [Centrally manage authorization for MCP connectors ](https://claude.com/blog/enterprise-managed-auth) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Enterprise는 이제 Okta를 시작으로 ID 공급자(IdP)를 통해 조직 전체의 MCP 커넥터에 대한 중앙 집중식 권한 관리를 지원합니다. 사용자는 첫 로그인 시 자동으로 커넥터 액세스 권한을 부여받으며, 권한은 조직에서 중앙에서 구성됩니다.
+
+Enterprise-managed authorization은 Model Context Protocol의 Enterprise-Managed Authorization extension의 첫 번째 구현입니다. 이 기능은 개방형 표준을 기반으로 하므로 모든 커넥터가 지원할 수 있으며, 모든 Claude 고객에게 동일하게 작동합니다.
+
+-   **IdP 연동을 통한 중앙 권한 관리**: 관리자는 ID 공급자(IdP)에서 MCP 커넥터 액세스를 한 번만 승인하면, 사용자는 이미 속한 IdP 그룹 및 역할에 따라 자동으로 커넥터 액세스 권한을 상속받습니다.
+-   **제로 터치 사용자 경험**: 사용자는 별도의 설정 없이 첫 로그인 시부터 필요한 커넥터를 사용할 수 있습니다.
+-   **강화된 보안 및 관리**: 액세스 토큰 수명 주기 단축, 권한 취소 용이성, 개인/업무 계정 분리 등 중앙 집중식 보안 및 접근 제어를 제공합니다.
+-   **광범위한 생태계 지원**: Okta를 포함한 여러 IdP와 Asana, Atlassian, Canva, Figma 등 다양한 MCP 제공업체가 Enterprise-managed auth를 지원합니다.
+
+자세한 내용은 원문에서 확인하세요.

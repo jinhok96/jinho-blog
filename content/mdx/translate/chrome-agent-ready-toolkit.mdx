@@ -1,0 +1,91 @@
+---
+title: 웹사이트를 에이전트 준비 상태로 만드는 개발자 도구
+description: AI 에이전트가 웹사이트와 상호작용하고 복잡한 작업을 수행하는 데 필요한 도구와 프레임워크를 소개합니다.
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/agent-ready-toolkit?hl=en
+createdAt: 2026-06-22
+---
+
+> 원문: [A developer toolkit to make your website agent-ready](https://developer.chrome.com/blog/agent-ready-toolkit?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+AI 에이전트가 텍스트 생성뿐만 아니라 웹사이트 탐색, 상호작용 및 복잡한 작업 수행까지 할 수 있게 됨에 따라 개발자는 이러한 비인간 사용자에게 고품질 경험을 보장하기 위한 전용 도구가 필요합니다. 새로운 Lighthouse 에이전틱 브라우징 카테고리는 Chrome DevTools의 개선과 함께 결정론적 감사 및 테스트 프레임워크를 제공하여 에이전트 준비 상태의 웹사이트 구축을 지원합니다.
+
+에이전틱 웹으로의 전환은 에이전트가 웹을 _검색_하는 단계와 에이전트가 웹을 _사용_하는 두 가지 주요 단계로 이루어집니다.
+
+에이전트가 단순히 웹사이트를 검색하는 경우, 검색 엔진 최적화(SEO) 원칙이 여전히 적용됩니다. 이 블로그 게시물에서는 에이전트가 웹사이트와 직접 상호작용할 때 개발자가 수행할 수 있는 작업에 중점을 둡니다.
+
+# 에이전트 준비 상태 웹사이트 감사, 개선 및 디버깅
+
+AI 에이전트가 약속 예약이나 주문과 같은 웹사이트의 흐름을 안정적으로 완료하려면 예측 가능하고 기계가 읽을 수 있는 신호가 필요합니다. 이러한 준비 상태를 평가하고 개선하는 데 도움이 되는 도구는 다음과 같습니다.
+
+## 웹사이트 에이전트 준비 상태 감사
+
+Lighthouse의 새로운 [Agentic browsing category](https://developer.chrome.com/docs/lighthouse/agentic-browsing/scoring)는 M150부터 사용할 수 있으며 개발자에게 웹사이트가 얼마나 에이전트 친화적인지 평가하기 위한 결정론적 감사 세트를 제공하여 새로운 업계 표준 채택을 장려합니다.
+
+*   **감사 내용**: 감사는 기계 상호작용에 중요한 세 가지 주요 영역에 중점을 둡니다.
+    
+    *   **접근성**: 접근성은 인간을 우선합니다. 에이전트는 보조 기술(AT)을 위한 DOM에서 파생된 [accessibility tree](https://web.dev/learn/accessibility/aria-html#the_accessibility_tree)에 주요 데이터 모델로 의존합니다. Agentic Browsing 감사는 기계 상호작용에 중요한 [Accessibility audit](https://developer.chrome.com/docs/lighthouse/accessibility/scoring)의 일부 카테고리를 확인합니다. 예를 들어, 두 감사 모두 모든 상호작용 가능한 요소에 프로그래밍 가능한 이름이 있는지 확인합니다. 잘 구성된 접근성 트리는 AI 에이전트가 페이지를 이해하는 주요 방법입니다.
+    *   **안정성**: 누적 레이아웃 이동(CLS)을 사용하여 시각적 안정성을 측정하여 요소가 예기치 않게 이동하여 에이전트의 오 클릭을 방지합니다.
+    *   **WebMCP 통합**: 등록된 WebMCP 도구의 가용성, 선언적 WebMCP가 누락된 양식 및 스키마 유효성을 확인합니다. WebMCP를 채택하면 에이전트가 웹사이트의 로직과 양식을 명시적으로 노출하여 상호작용을 안정적으로 만들 수 있습니다.
+*   **점수**: 다른 Lighthouse 카테고리와 달리 게시 시점에는 Agentic Browsing이 _정보 제공용이며 벤치마크되지 않았습니다_. 정의된 순위보다는 실행 가능한 신호(통과 또는 실패 상태 및 경고)를 제공하는 데 중점을 둡니다.
+    
+
+특정 감사 검사 및 개선 방법에 대한 자세한 내용은 [Agent browsing audits for Lighthouse](https://developer.chrome.com/docs/lighthouse/agentic-browsing) 문서를 참조하십시오.
+
+## 에이전트와 웹사이트 간의 상호작용을 더 빠르고 안정적으로 만들기
+
+WebMCP는 기존 웹사이트에서 AI 에이전트에게 구조 도구를 노출하여 에이전트 상호작용을 가속화하고 단순화하는 것을 목표로 하는 제안된 표준입니다. 구현에 대한 자세한 내용은 [Read about WebMCP](https://developer.chrome.com/blog/webmcp-epp)를 참조하십시오.
+
+## 선호하는 코딩 에이전트를 사용하여 최신 기능 구현
+
+Modern Web Guidance는 개발자가 에이전트 준비 상태 웹사이트를 구축하는 데 도움이 되는 모범 사례 및 기술 모음입니다. 코딩 에이전트에게 WebMCP 도구 구현을 위임할 수 있는 `webmcp` 스키마를 포함합니다. Modern Web Guidance를 개발 워크플로에 통합하면 처음부터 최신 에이전트 친화적인 표준으로 애플리케이션이 구축되도록 할 수 있습니다. 자세한 내용은 [Modern Web Guidance documentation](http://goo.gle/modern-web-guidance)를 참조하십시오.
+
+## 에이전트를 위한 Chrome DevTools로 웹사이트 테스트 및 디버깅
+
+심층 디버깅 및 반복 개발을 위해 [Chrome DevTools for Agents](https://developer.chrome.com/docs/devtools/agents)는 고유한 테스트 페르소나를 제공합니다. 이를 통해 AI 지원 IDE 또는 코딩 에이전트를 브라우징 에이전트로 변환하여 높은 수준의 제어를 제공할 수 있습니다.
+
+DevTools for Agents를 사용하면 다음을 수행할 수 있습니다.
+
+*   **에이전트 상호작용 시뮬레이션**: 에이전트가 수행할 정확한 단계를 시뮬레이션하여 효과적으로 "사용자(또는 에이전트)가 되어" 실패를 재현하고 웹사이트의 흐름이 결정론적인지 확인할 수 있습니다.
+*   **Lighthouse 직접 호출**: 테스트 환경에서 활성 탭에서 `lighthouse_audit` 도구를 직접 호출할 수 있습니다. 이를 통해 페이지의 현재 상태를 기반으로 즉각적인 다중 카테고리 상태 검사를 제공하여 Agentic Browsing 표준에 대해 반복적으로 수정을 확인할 수 있습니다.
+*   **스크린캐스트 및 디버깅**: 이 도구는 상세한 로깅 및 스크린캐스트 기능을 제공하므로 에이전트가 페이지를 인식하고 상호작용하는 방식을 정확하게 볼 수 있습니다. 이를 통해 접근성 트리와 같이 에이전트를 혼란스럽게 할 수 있는 기계 판독 가능한 신호가 노출됩니다.
+
+이를 통해 배포 전에 비인간 사용자에게 고품질 경험을 보장할 수 있습니다.
+
+Chrome DevTools for Agents의 기능 및 구성에 대한 자세한 내용은 [GitHub repository](https://github.com/ChromeDevTools/chrome-devtools-mcp#chrome-devtools-for-agents)를 참조하십시오.
+
+AntigravityCLI의 `~/.gemini/config/mcp_config.json` 또는 Antigravity에서 구성된 Chrome DevTools for Agents의 다음 예제 구성은 Chrome Canary에 연결됩니다.
+
+```json
+{
+  "mcpServers": {
+    "chrome-devtools": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "chrome-devtools-mcp@latest",
+        "--autoConnect",
+        "--categoryExperimentalWebmcp",
+        "--channel=canary"
+      ]
+    }
+  }
+}
+```
+
+예제 쿼리를 사용하십시오. _"Chrome DevTools MCP를 사용하여 https://googlechromelabs.github.io/webmcp-tools/demos/pizza-maker/로 이동하여 버섯 10개와 피망 2개로 피자를 만들어 주세요. 수행한 작업과 호출한 도구에 대한 요약을 제공해 주세요."_
+
+![](https://developer.chrome.com/static/blog/agent-ready-toolkit/img/agentic-browsing-pizza.png "Chrome DevTools for Agents executing pizza maker demo")
+
+DevTools for Agents를 사용하여 에이전트 준비 상태 Lighthouse 감사를 수행할 수도 있습니다.
+
+_"Chrome DevTools MCP를 사용하여 https://googlechromelabs.github.io/webmcp-tools/demos/french-bistro/?notoolname에 대한 에이전트 라이트하우스 감사를 수행하고 싶습니다. 전체 요약을 제공해 주세요."_
+
+![](https://developer.chrome.com/static/blog/agent-ready-toolkit/img/agentic-browsing-LH-audit.png "Lighthouse audit in Chrome DevTools for Agents")
+
+# 다음 단계
+
+기여하고 토론에 참여하려면 [the official Lighthouse repository](https://github.com/GoogleChrome/lighthouse)를 참조하십시오.
+
+WebMCP에 대한 자세한 내용은 [WebMCP documentation](https://developer.chrome.com/docs/ai/webmcp)을 참조하십시오. Modern Web Guidance에 대한 자세한 내용은 [Modern Web Guidance documentation](http://goo.gle/modern-web-guidance)을 참조하십시오. 생성 AI에 대한 웹사이트 최적화에 대한 자세한 내용은 [Optimizing your website for generative AI features on Google Search](https://developers.google.com/search/docs/fundamentals/ai-optimization-guide)를 참조하십시오.

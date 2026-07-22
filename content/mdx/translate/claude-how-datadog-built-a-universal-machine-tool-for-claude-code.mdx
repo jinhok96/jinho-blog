@@ -1,0 +1,19 @@
+---
+title: "Datadog, Claude Code를 위한 \"만능 머신 툴\" 구축"
+description: "Datadog은 에이전트가 생성한 코드의 검증 간극을 줄이고, 반복 가능하며 재사용 가능한 소프트웨어 생산을 위한 'Temper'를 개발했습니다."
+category: claude
+sourceUrl: https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code
+createdAt: 2026-07-21
+---
+
+> 원문: [How Datadog built a “universal machine tool” for Claude Code](https://claude.com/blog/how-datadog-built-a-universal-machine-tool-for-claude-code) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Datadog은 에이전트가 생성하는 코드의 반복 가능성, 검증 가능성, 제어 가능성, 확장성을 높이기 위해 Courier, BitsEvolve, Helix를 거쳐 Temper라는 "만능 머신 툴"을 개발했습니다.
+
+- **Temper는 에이전트가 임의의 코드를 직접 생성하는 대신, 시스템의 동작, 데이터, 권한에 대한 명확한 명세(specification)를 생성하도록 전환했습니다.**
+- **생성된 명세는 4단계의 독립적인 분석(기호 추론, 상태 탐색, 시뮬레이션, 속성 테스트)을 거쳐 검증되며, 검증된 명세만이 실행 가능한 시스템으로 배포됩니다.**
+- **이를 통해 검증된 내용과 실행되는 내용 간의 불일치(drift)를 없애고, CNC 머신처럼 반복 가능하고 검증 가능한 소프트웨어 생산을 가능하게 합니다.**
+- **Temper는 에이전트 제어, 도구 빌더, Helix 제어 API로서 역할을 수행하며, 데이터베이스 API 주변의 제어 로직을 명시적인 상태 머신으로 만들어 수정 및 핫 리로딩을 안전하게 할 수 있도록 합니다.**
+
+자세한 내용은 원문에서 확인하세요.

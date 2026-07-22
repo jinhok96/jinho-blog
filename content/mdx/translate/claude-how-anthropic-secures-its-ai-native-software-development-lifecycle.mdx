@@ -1,0 +1,19 @@
+---
+title: Anthropic의 AI 네이티브 소프트웨어 개발 라이프사이클 보안 전략
+description: "Anthropic은 AI를 활용하여 코드 작성 단계부터 배포, 모니터링까지 소프트웨어 개발 전 과정의 보안을 강화하고 있습니다."
+category: claude
+sourceUrl: https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle
+createdAt: 2026-07-21
+---
+
+> 원문: [How Anthropic secures its AI-native software development lifecycle](https://claude.com/blog/how-anthropic-secures-its-ai-native-software-development-lifecycle) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Anthropic은 AI 네이티브 엔지니어링 조직으로서 AI 모델 자체를 활용하여 소프트웨어 개발 라이프사이클(SDLC) 전반의 보안을 강화하는 방안을 모색합니다.
+
+- **코드 생성 단계**: CLAUDE.md 파일에 보안 지침을 명시하여 AI가 코드를 생성할 때부터 보안 모범 사례를 따르도록 합니다. 또한, `/security-review` API를 통해 잠재적 공격자 제어 입력, 의심스러운 링크 등을 검사합니다.
+- **테스트(CI) 단계**: 자동화된 에이전트 기반 검토와 결정론적 검토를 결합하여 코드 검토 속도를 높입니다. 특정 영역에 집중하는 여러 검토 에이전트를 활용하며, 사람이 직접 검토하는 프로세스는 규제 또는 매우 중요한 코드에 집중합니다.
+- **배포(CD) 단계**: 스테이징 환경에서 AI 기반 DAST 스캔을 도입하여 서비스 간의 잘못된 가정을 통한 시스템 수준의 취약점을 탐지합니다.
+- **모니터링 단계**: 알림 발생 시 AI가 프로덕션 로그를 검토하고, 버그의 근본 원인을 파악하며, 필요시 수정 코드를 작성하도록 합니다. 또한, 코드 마이그레이션 프로세스를 자동화하여 보안 취약점을 신속하게 해결합니다.
+
+자세한 내용은 원문에서 확인하세요.

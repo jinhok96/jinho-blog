@@ -1,0 +1,22 @@
+---
+title: Claude Code에서 Skills를 활용한 검증 루프 구축하기
+description: "Claude Code에서 Skills를 활용하여 반복적인 검증 과정을 자동화하고, 이를 독립 실행형, 내장형, 체인형 등 다양한 방식으로 실행하는 방법을 설명합니다."
+category: claude
+sourceUrl: https://claude.com/blog/building-verification-loops-in-claude-code-with-skills
+createdAt: 2026-07-22
+---
+
+> 원문: [Building verification loops in Claude Code with skills](https://claude.com/blog/building-verification-loops-in-claude-code-with-skills) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Code에서는 "skill"을 생성하여 반복적인 검증 루프를 자동화할 수 있습니다. `/skill-creator` 플러그인을 사용하거나, `.claude/skills/` 디렉토리에 마크다운 파일로 직접 작성하여 skill을 만들 수 있습니다.
+
+-   **skill 생성**: `/skill-creator` 플러그인이나 `.claude/skills/` 디렉토리에 마크다운 파일을 사용하여 검증 로직을 skill로 정의합니다.
+-   **실행 방식**:
+    -   **Standalone (독립 실행형)**: 여러 워크플로우에 걸쳐 사용되지만 매번 실행되지 않는 검증(예: 보안 스캔, 접근성 감사)에 적합합니다.
+    -   **Embedded (내장형)**: 특정 워크플로우의 일부로 자동 실행됩니다. 수정 가능한 skill에 적용할 수 있습니다.
+    -   **Chained (체인형)**: 하나의 skill이 다른 skill을 호출하여 여러 검증 단계를 순차적으로 실행합니다. 수정할 수 없는 skill에 검증을 추가하는 데 유용합니다.
+    -   **On every PR (모든 PR에 적용)**: 개발 팀 전체의 검증 인프라로 활용됩니다.
+-   **검증 루프 구축 단계**: 자주 수행하는 수동 작업을 파악하고, `/verify` skill을 활용하며, 명확한 영어 설명으로 skill을 작성하고, skill-creator를 사용하거나 직접 파일을 생성합니다.
+
+자세한 내용은 원문에서 확인하세요.

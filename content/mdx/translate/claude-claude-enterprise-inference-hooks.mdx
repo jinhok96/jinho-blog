@@ -1,0 +1,19 @@
+---
+title: "Claude Enterprise, 인퍼런스 훅(Inference Hooks)으로 데이터 유출 방지 강화"
+description: "Claude Enterprise에 '인퍼런스 훅' 기능을 도입하여 프롬프트 및 도구 호출 응답에 대한 실시간 검사를 통해 데이터 유출을 방지하고 정책을 적용합니다."
+category: claude
+sourceUrl: https://claude.com/blog/claude-enterprise-inference-hooks
+createdAt: 2026-08-05
+---
+
+> 원문: [Inference hooks: inline data loss prevention for Claude Enterprise](https://claude.com/blog/claude-enterprise-inference-hooks) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Enterprise는 '인퍼런스 훅(Inference Hooks)' 기능을 출시하여 프롬프트 및 도구 호출 응답이 Claude에 도달하기 전에 실시간으로 검사하고 정책을 적용할 수 있게 되었습니다. 이를 통해 조직은 데이터 유출 방지(DLP) 시스템을 Claude 전반에 걸쳐 통합하고, Chat, Claude Code, Claude Cowork 등 다양한 Claude Enterprise 제품에서 일관된 보안 정책을 적용할 수 있습니다.
+
+- **실시간 검사 및 정책 적용**: 인퍼런스 훅은 모든 프롬프트와 도구 호출 응답을 Claude 모델이 처리하기 전에 조직의 DLP 서버로 라우팅합니다. DLP 서버는 검토 후 허용 또는 차단 결정을 내리며, Claude는 이 결정을 실시간으로 enforcing하여 승인되지 않은 콘텐츠를 사전에 차단합니다.
+- **통합된 단일 보안 계층**: 기존에는 Claude Code와 같은 일부 제품에서만 클라이언트 측 검사가 가능했지만, 인퍼런스 훅은 별도의 통합 작업이나 제품별 에이전트 없이 Claude Enterprise의 모든 표면에서 작동하는 단일 통합 보안 계층을 제공합니다.
+- **기존 DLP 프로그램 확장**: 오픈된 웹훅(webhook) 기반 프로토콜과 게시된 스키마를 사용하므로, Netskope, Palo Alto Networks, Zscaler 등 기존 DLP 솔루션이나 자체 구축한 AI 보안 서버에 쉽게 연결하여 활용할 수 있습니다.
+- **유연한 배포 및 설정**: 조직 전체 수준에서 한 번만 설정하면 모든 Claude Enterprise 표면에 적용됩니다. 또한, 섀도우 모드(항상 허용), 역할 기반 제외, 점진적 롤아웃 등의 기능을 통해 배포를 단순화하고, 실패 정책 허용 범위, 타임아웃 등 다양한 설정을 조직의 위험 감수 수준에 맞춰 사용자 정의할 수 있습니다.
+
+자세한 내용은 원문에서 확인하세요.

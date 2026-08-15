@@ -1,0 +1,19 @@
+---
+title: Claude Code 세션 가치 극대화
+description: "Claude Code 세션의 토큰 사용량, 프롬프트 캐싱, 컨텍스트 관리, 그리고 세션 지속 시간을 최적화하여 비용 효율성을 높이는 방법을 안내합니다."
+category: claude
+sourceUrl: https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions
+createdAt: 2026-08-14
+---
+
+> 원문: [Maximizing the value of your Claude Code sessions](https://claude.com/blog/maximizing-the-value-of-your-claude-code-sessions) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Code 세션의 비용 효율성을 높이기 위해 다음 사항을 고려하세요.
+
+-   **토큰 사용량 관리**: 입력 토큰과 출력 토큰의 가격 차이를 이해하고, `/effort` 레벨 조절 및 `MAX_THINKING_TOKENS=0` 설정을 통해 불필요한 생각 토큰을 줄이세요.
+-   **프롬프트 캐싱 활용**: 프롬프트 캐싱은 자동으로 작동하지만, `/model`, `/effort`, Fast mode, `/compact`, 시간 초과 등에 의해 캐시가 무효화될 수 있습니다. 세션 시작 시점이나 `/clear` 직후에 설정을 변경하여 캐시를 효율적으로 활용하세요.
+-   **컨텍스트 유지 시간 최소화**: 대화 기록, 파일 읽기, 명령어 실행 결과 등 모든 것이 컨텍스트에 추가되며 매 턴마다 다시 전송됩니다. `/clear` 또는 `/compact`를 사용하여 관련 없는 컨텍스트를 제거하고, `@-mention`을 활용하여 파일 읽기 비용을 절감하며, 명령어 실행 시 잡음이 많은 출력은 필터링하세요.
+-   **서브 에이전트 활용**: 대량의 출력이 예상되거나 분리된 작업에는 서브 에이전트를 사용하여 메인 세션의 컨텍스트를 깔끔하게 유지하고 비용을 절감하세요.
+
+자세한 내용은 원문에서 확인하세요.

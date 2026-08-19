@@ -1,0 +1,19 @@
+---
+title: "Next.js 16.3: 앱과 같은 사용자 경험 구축하기"
+description: "Next.js 16.3은 Instant Navigations, Cache Components, Partial Prefetching 등을 통해 SPA와 같은 빠르고 반응성 좋은 사용자 경험을 제공합니다."
+category: nextjs
+sourceUrl: https://nextjs.org/blog/building-app-like-experiences-with-nextjs-16-3
+createdAt: 2026-08-18
+---
+
+> 원문: [Building App-like Experiences with Next.js 16.3](https://nextjs.org/blog/building-app-like-experiences-with-nextjs-16-3) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js 16.3은 Instant Navigations, Cache Components, Partial Prefetching 등의 기능을 통해 SPA(Single-Page Application)처럼 즉각적인 네비게이션 경험을 제공합니다.
+
+*   **Instant Navigations**: Cache Components와 Partial Prefetching을 활용하여 사용자가 클릭하기 전에 UI를 미리 로드하고 즉시 표시합니다.
+*   **Caching across navigations**: `'use cache'`를 사용하여 데이터 캐싱을 활성화하고, 데이터 소스에 대한 요청 없이 페이지 재방문을 빠르게 처리합니다.
+*   **Prefetching URL-specific content**: `<Link>` 컴포넌트에 `prefetch={true}`를 설정하여 URL별 콘텐츠를 미리 가져와 사용자가 필요로 하는 데이터를 더 빠르게 제공합니다.
+*   **Client-side interactivity**: `'use client'` 지시자를 사용하여 Client Components를 정의하고, 인터랙티브한 부분을 즉시 응답하도록 만들면서도 서버 렌더링의 이점을 유지합니다.
+
+자세한 내용은 원문에서 확인하세요.

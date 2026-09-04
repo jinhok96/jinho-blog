@@ -1,0 +1,24 @@
+---
+title: Turbopack이 JavaScript를 청크화하는 방법
+description: Turbopack은 Next.js 앱의 JavaScript를 효율적으로 분할하여 로딩 속도와 캐시 효율성을 최적화합니다.
+category: nextjs
+sourceUrl: https://nextjs.org/blog/turbopack-chunking
+createdAt: 2026-09-03
+---
+
+> 원문: [How Turbopack chunks your JavaScript](https://nextjs.org/blog/turbopack-chunking) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Turbopack은 Next.js 애플리케이션의 JavaScript 코드를 여러 개의 작은 파일, 즉 "청크(chunk)"로 분할합니다. 이 과정에서 어떤 코드를 어떤 청크에 포함시킬지 결정하는 것이 중요합니다.
+
+-   **청크화 전략의 진화**: 초기에는 모든 JavaScript를 하나의 청크로 묶어 캐싱 효율을 높였지만, 페이지 로드 크기가 커지는 단점이 있었습니다. 페이지별로 청크를 분리하면 오버시핑은 방지되지만 캐싱 이점을 잃게 됩니다. 각 모듈별로 청크를 만들면 오버시핑과 중복 다운로드를 막지만, 네트워크 요청 수가 지나치게 많아지는 문제가 발생합니다.
+-   **청크 그룹(Chunk Group) 도입**: Turbopack은 같은 청크 그룹에 속한 청크들만 병합하여 오버시핑 문제를 해결하고, 캐싱 효율과 요청 수를 최적화합니다.
+-   **Next.js 16.3의 새로운 청크화 기능**:
+    -   `experimental.turbopackChunking.generateComponentChunks` 옵션을 사용하면 빌드 시점에 미리 병합되지 않은 청크와 병합된 청크를 모두 생성하여, 런타임에 더 효율적인 청크를 선택합니다.
+    -   `firstPageLoadPriority`, `priorityRoutes`, `clusters` 설정을 통해 분석 기반으로 청크화를 최적화할 수 있습니다.
+-   **더 작고 적은 수의 청크**:
+    -   CJS 모듈에 대한 트리쉐이킹(tree-shaking)을 지원하여 클라이언트로 불필요한 코드가 전송되는 것을 방지합니다.
+    -   `experimental.turbopackSharedRuntime` 옵션을 통해 여러 런타임 청크를 하나로 통합하여 요청 수를 줄입니다.
+    -   기본 런타임에서 WebAssembly 및 Web Worker 코드를 기본적으로 포함하지 않아 경량화했습니다.
+
+자세한 내용은 원문에서 확인하세요.

@@ -63,8 +63,10 @@ export default function Callout({ children, className, copyable, ...props }: Pro
       className={cn('group/callout relative my-0.5 size-full overflow-auto rounded-2xl bg-background pb-2', className)}
       {...props}
     >
+      {/* 스크롤 영역: 키보드 사용자도 가로 스크롤할 수 있도록 포커스 대상으로 노출 */}
       <div
         ref={textRef}
+        tabIndex={0}
         className={`
           scrollbar-margin-2.5 size-full overflow-auto p-4 pb-2
           tablet:p-5 tablet:pb-3

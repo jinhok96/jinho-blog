@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="Jinho Blog">
+  <rect width="64" height="64" rx="14" fill="#155DFC" />
+  <path
+    d="M41.5 15.5V37a11.5 11.5 0 0 1-11.5 11.5h-1A11.5 11.5 0 0 1 17.5 37"
+    fill="none"
+    stroke="#FFFFFF"
+    stroke-width="9"
+    stroke-linecap="round"
+  />
+</svg>

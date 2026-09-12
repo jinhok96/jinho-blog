@@ -21,15 +21,17 @@ export function createMDXComponents() {
   let imageIndex: number = 0;
 
   return {
+    // 페이지 제목이 이미 h1이므로 MDX 본문 제목은 한 단계씩 낮춘다.
+    // 스타일 클래스는 그대로 유지해 화면 표시는 동일하다.
     h1: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-      <h1
+      <h2
         className={cn(H_CLASSNAME, H1_CLASSNAME, className)}
         {...props}
       />
     ),
 
     h2: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-      <h2
+      <h3
         className={cn(H_CLASSNAME, H2_CLASSNAME, className)}
         {...props}
       />
@@ -37,25 +39,25 @@ export function createMDXComponents() {
 
     // h3 ~ h6 동일
     h3: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-      <h3
+      <h4
         className={cn(H_CLASSNAME, H3_CLASSNAME, className)}
         {...props}
       />
     ),
     h4: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-      <h3
+      <h5
         className={cn(H_CLASSNAME, H3_CLASSNAME, className)}
         {...props}
       />
     ),
     h5: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-      <h3
+      <h6
         className={cn(H_CLASSNAME, H3_CLASSNAME, className)}
         {...props}
       />
     ),
     h6: ({ className, ...props }: HTMLAttributes<HTMLHeadingElement>) => (
-      <h3
+      <h6
         className={cn(H_CLASSNAME, H3_CLASSNAME, className)}
         {...props}
       />
@@ -78,6 +80,7 @@ export function createMDXComponents() {
           className,
         )}
         target="_blank"
+        rel="noopener noreferrer"
         href={href || '#'}
         {...props}
       >
@@ -137,13 +140,10 @@ export function createMDXComponents() {
       return (
         <Code
           className={`
-            align-middle
-            not-group-has-[pre]/code:mr-0.5! not-group-has-[pre]/code:bg-foreground-2! not-group-has-[pre]/code:px-1.5!
-            not-group-has-[pre]/code:py-0.5!
-            in-[div]:not-group-has-[pre]/code:mb-0.5!
-            in-[h1]:not-group-has-[pre]/code:mb-1.5!
-            in-[h2]:not-group-has-[pre]/code:mb-1!
-            in-[h3]:not-group-has-[pre]/code:mb-0.75!
+            not-group-has-[pre]/code:mr-0.5! not-group-has-[pre]/code:inline not-group-has-[pre]/code:bg-foreground-2!
+            not-group-has-[pre]/code:box-decoration-clone not-group-has-[pre]/code:px-1.5!
+            not-group-has-[pre]/code:py-0.5! not-group-has-[pre]/code:wrap-anywhere!
+            not-group-has-[pre]/code:whitespace-pre-wrap! not-group-has-[pre]/code:[&>code]:whitespace-pre-wrap!
           `}
           language={language}
           {...props}
@@ -224,8 +224,11 @@ export function createMDXComponents() {
             src={src}
             controls
             playsInline
+            aria-label={alt}
             className="w-full overflow-hidden rounded-lg"
-          />
+          >
+            {alt}
+          </video>
         );
       }
 

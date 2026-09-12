@@ -7,7 +7,7 @@ import { routes } from '@jinho-blog/nextjs-routes';
 import { TECH_STACK_MAP, type TechStack } from '@jinho-blog/shared';
 
 import { ContentHeader, JsonLd, LinkButton, MDXComponent } from '@/core/ui';
-import { cn, generateArticleJsonLd, generatePageMetadata } from '@/core/utils';
+import { cn, generateArticleJsonLd, generateBreadcrumbJsonLd, generatePageMetadata } from '@/core/utils';
 
 import { createLibrariesService, sortLibraryGroupsByCategory } from '@/entities/libraries';
 
@@ -19,6 +19,12 @@ const librariesService = createLibrariesService();
 type Props = {
   params: Promise<{ slug: string }>;
 };
+
+// SEO: 전체 라이브러리를 빌드 시점에 정적 생성 (크롤러 응답 속도/색인 효율 개선)
+export async function generateStaticParams() {
+  const { items } = await librariesService.getLibraries({ count: '1000' });
+  return items.map(({ slug }) => ({ slug }));
+}
 
 // SEO: 동적 메타데이터
 export async function generateMetadata({ params }: Props): Promise<Metadata> {
@@ -33,6 +39,9 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: library.description,
     type: 'article',
     thumbnail: library.thumbnail,
+    keywords: [TECH_STACK_MAP[library.category as TechStack], ...library.tech],
+    publishedTime: library.createdAt,
+    modifiedTime: library.updatedAt,
   });
 }
 
@@ -49,6 +58,11 @@ export default async function LibraryPage({ params }: Props) {
   if (!fileContent) notFound();
 
   const jsonLd = generateArticleJsonLd(library);
+  const breadcrumbJsonLd = generateBreadcrumbJsonLd([
+    { name: '홈', path: routes({ pathname: '/' }) },
+    { name: '라이브러리', path: routes({ pathname: '/libraries' }) },
+    { name: library.title, path: library.path },
+  ]);
 
   const sortedGroups = sortLibraryGroupsByCategory(groups);
 
@@ -69,6 +83,8 @@ export default async function LibraryPage({ params }: Props) {
     <>
       {/* JSON-LD: TechArticle */}
       <JsonLd jsonLd={jsonLd} />
+      {/* JSON-LD: BreadcrumbList */}
+      <JsonLd jsonLd={breadcrumbJsonLd} />
 
       {/* 사이드바 */}
       <HeaderWithSidebar className="w-64 border-r border-gray-2">

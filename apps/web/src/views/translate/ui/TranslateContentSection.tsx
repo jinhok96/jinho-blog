@@ -23,6 +23,7 @@ export async function TranslateContentSection({ posts }: Props) {
               category={TRANSLATE_CATEGORY_MAP[category]}
               createdAt={createdAt}
               thumbnail={thumbnail}
+              title={title}
               showThumbnail
               thumbnailPriority
             >

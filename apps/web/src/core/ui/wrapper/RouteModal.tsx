@@ -44,13 +44,17 @@ export function RouteModal({ children }: Props) {
 
   return (
     <div
+      role="dialog"
+      aria-modal="true"
+      aria-label="상세 보기"
       className={`
         fixed inset-0 z-modal flex-col-center h-screen w-screen justify-center overflow-hidden
         tablet:pt-header tablet:px-layout tablet:pb-layout
       `}
     >
-      {/* 오버레이 */}
+      {/* 오버레이: 보조 기술에는 노출하지 않고, 닫기는 Escape 키와 닫기 버튼으로도 가능하다 */}
       <div
+        aria-hidden="true"
         className={cn('absolute inset-0 backdrop-blur-xs animated-150', !isShow && 'opacity-0')}
         onClick={handleClose}
       />

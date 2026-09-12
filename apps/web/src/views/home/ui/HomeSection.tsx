@@ -25,7 +25,8 @@ type HeaderProps = PropsWithChildren<{
 function Header({ label, children }: HeaderProps) {
   return (
     <div className="flex-col-center w-full gap-2 text-center">
-      <p className="w-full font-subtitle-16 text-blue-7">{label}</p>
+      {/* 문서 개요상 섹션 제목이므로 h2로 노출. 스타일은 기존과 동일 */}
+      <h2 className="w-full font-subtitle-16 text-blue-7">{label}</h2>
 
       <Show when={children}>
         <div className="font-subtitle-24">{children}</div>

@@ -1,33 +1,42 @@
+'use client';
+
+import type { Translate } from '@jinho-blog/mdx-handler';
+
 import { TRANSLATE_CATEGORY_MAP, type TranslateCategory } from '@jinho-blog/shared';
 
 import { ContentCardSection, Show } from '@/core/ui';
 
-import { createTranslateService, type GetTranslatePosts } from '@/entities/translate';
-
-import { Pagination } from '@/features/pagination';
+import { Pagination, useClientPagination } from '@/features/pagination';
 
 const COUNT: number = 6;
 
-const translateService = createTranslateService();
-
 type Props = {
   category: TranslateCategory;
-  page: string | string[] | undefined;
+  /** 해당 카테고리의 전체 목록. 페이지 분할은 클라이언트에서 처리한다 */
+  posts: Translate[];
 };
 
-export async function OtherTranslateContentSection({ category, page }: Props) {
-  const pageString = Array.isArray(page) ? page[0] : page;
-  const search: GetTranslatePosts['search'] = { category, page: pageString, count: COUNT.toString() };
+export function OtherTranslateContentSection({ category, posts }: Props) {
+  const { pagination, startIndex, endIndex, setPage } = useClientPagination({
+    totalItems: posts.length,
+    itemsPerPage: COUNT,
+  });
 
-  const { items, pagination } = await translateService.getTranslatePosts(search);
+  if (!posts.length) return null;
 
-  if (!items.length) return;
+  const items = posts.slice(startIndex, endIndex);
 
   return (
-    <section className="w-full pt-20">
-      <p className="pb-7 font-subtitle-22">
+    <section
+      className="w-full pt-20"
+      aria-labelledby="other-translate-heading"
+    >
+      <h2
+        id="other-translate-heading"
+        className="pb-7 font-subtitle-22"
+      >
         <span className="font-bold text-blue-7">&apos;{TRANSLATE_CATEGORY_MAP[category]}&apos;</span> 카테고리 다른 글
-      </p>
+      </h2>
 
       <Show when={items.length}>
         <ContentCardSection>
@@ -38,6 +47,7 @@ export async function OtherTranslateContentSection({ category, page }: Props) {
               category={TRANSLATE_CATEGORY_MAP[category]}
               createdAt={createdAt}
               thumbnail={thumbnail}
+              title={title}
               showThumbnail
             >
               <ContentCardSection.BlogInfo
@@ -51,7 +61,7 @@ export async function OtherTranslateContentSection({ category, page }: Props) {
 
       <Pagination
         pagination={pagination}
-        scroll={false}
+        onPageChange={setPage}
       />
     </section>
   );

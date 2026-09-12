@@ -23,6 +23,7 @@ export async function BlogContentSection({ posts }: Props) {
               category={BLOG_CATEGORY_MAP[category]}
               createdAt={createdAt}
               thumbnail={thumbnail}
+              title={title}
               showThumbnail
               thumbnailPriority
             >

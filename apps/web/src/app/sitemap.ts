@@ -35,7 +35,7 @@ function toLastModified(item: ContentItem): Date {
  * 빌드할 때마다 `new Date()`로 갱신되면 크롤러가 lastmod 신호를 신뢰하지 않습니다.
  */
 function latestModified(items: ContentItem[]): Date {
-  if (!items.length) return new Date(0);
+  if (!items.length) return new Date();
   return items.reduce<Date>((latest, item) => {
     const current = toLastModified(item);
     return current > latest ? current : latest;
@@ -50,7 +50,8 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   // 정적 페이지
   const staticPages: MetadataRoute.Sitemap = [
     {
-      url: SITE_URL,
+      // canonical(`${SITE_URL}/`)과 동일한 형태로 맞춘다
+      url: `${SITE_URL}/`,
       lastModified: latestModified(allItems),
       changeFrequency: 'weekly',
       priority: 1,

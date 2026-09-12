@@ -137,13 +137,10 @@ export function createMDXComponents() {
       return (
         <Code
           className={`
-            align-middle
-            not-group-has-[pre]/code:mr-0.5! not-group-has-[pre]/code:bg-foreground-2! not-group-has-[pre]/code:px-1.5!
-            not-group-has-[pre]/code:py-0.5!
-            in-[div]:not-group-has-[pre]/code:mb-0.5!
-            in-[h1]:not-group-has-[pre]/code:mb-1.5!
-            in-[h2]:not-group-has-[pre]/code:mb-1!
-            in-[h3]:not-group-has-[pre]/code:mb-0.75!
+            not-group-has-[pre]/code:mr-0.5! not-group-has-[pre]/code:inline not-group-has-[pre]/code:bg-foreground-2!
+            not-group-has-[pre]/code:box-decoration-clone not-group-has-[pre]/code:px-1.5!
+            not-group-has-[pre]/code:py-0.5! not-group-has-[pre]/code:wrap-anywhere!
+            not-group-has-[pre]/code:whitespace-pre-wrap! not-group-has-[pre]/code:[&>code]:whitespace-pre-wrap!
           `}
           language={language}
           {...props}

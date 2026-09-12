@@ -15,23 +15,24 @@ function TechStacks({ label, stacks }: TechStacksProps) {
     <div className="size-fit">
       <p className="mb-4 font-caption-14 text-foreground-6">{label}</p>
 
-      <ol
+      <ul
         className={`
           grid w-fit grid-cols-3 gap-2
           tablet:gap-2.5
         `}
       >
         {stacks.map(item => (
-          <TechStackBadge
-            key={item}
-            tech={item}
-            className={`
-              size-10
-              tablet:size-11
-            `}
-          />
+          <li key={item}>
+            <TechStackBadge
+              tech={item}
+              className={`
+                size-10
+                tablet:size-11
+              `}
+            />
+          </li>
         ))}
-      </ol>
+      </ul>
     </div>
   );
 }

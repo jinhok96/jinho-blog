@@ -11,6 +11,7 @@ function FooterLinkButton({ href, ariaLabel, children }: { href: string; ariaLab
     <LinkButton
       href={href}
       target="_blank"
+      rel="noopener noreferrer"
       aria-label={ariaLabel}
       className={`
         aspect-square w-11 rounded-full bg-gray-8 p-2 text-gray-4

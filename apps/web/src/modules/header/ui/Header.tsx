@@ -61,7 +61,7 @@ export function Header({ leftMenuButton, leftMenuButtonClassName, onLeftMenuButt
           </div>
 
           {/* 네비게이션 */}
-          <nav>
+          <nav aria-label="주요 메뉴">
             <ul
               className={`
                 flex-row-center

@@ -28,6 +28,8 @@ type CardProps = ComponentProps<typeof LinkButton> & {
   thumbnail?: string;
   showThumbnail?: boolean;
   thumbnailPriority?: boolean;
+  /** 썸네일 대체 텍스트에 사용할 콘텐츠 제목 */
+  title?: string;
 };
 
 function Card({
@@ -39,9 +41,11 @@ function Card({
   showThumbnail,
   children,
   thumbnailPriority,
+  title,
   ...props
 }: CardProps) {
   const contentName = href.toString().split('/').pop();
+  const thumbnailAlt = title ? `${title} 썸네일` : `${category} 썸네일 - ${contentName}`;
 
   return (
     <LinkButton
@@ -66,7 +70,7 @@ function Card({
               <Image
                 className="w-full object-cover"
                 src={thumbnail}
-                alt={`thumbnail-${category}-${contentName}`}
+                alt={thumbnailAlt}
                 width="640"
                 height="360"
                 priority={thumbnailPriority}
@@ -88,7 +92,14 @@ function Card({
         <div className="flex-row-center w-full justify-between opacity-70">
           <p className="font-caption-14">{category}</p>
           <Show when={createdAt}>
-            {createdAt => <time className="font-body-14">{formatDateToString(createdAt)}</time>}
+            {createdAt => (
+              <time
+                className="font-body-14"
+                dateTime={createdAt}
+              >
+                {formatDateToString(createdAt)}
+              </time>
+            )}
           </Show>
         </div>
 

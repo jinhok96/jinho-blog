@@ -31,6 +31,7 @@ export default function HomeContactSection() {
                   <LinkButton
                     href={href}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="underline underline-offset-2"
                   >
                     {value}

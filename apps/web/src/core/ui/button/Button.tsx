@@ -18,6 +18,7 @@ export function Button({
   disableHover,
   rounded,
   disabled,
+  type = 'button',
   onTouchStart,
   onTouchEnd,
   onTouchCancel,
@@ -52,6 +53,7 @@ export function Button({
   return (
     <button
       className={cn(variants, className, pressable.isPressed && 'touch:scale-95')}
+      type={type}
       disabled={disabled}
       onTouchStart={handleTouchStart}
       onTouchEnd={handleTouchEnd}

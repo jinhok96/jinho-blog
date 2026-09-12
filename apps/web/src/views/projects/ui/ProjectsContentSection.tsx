@@ -8,7 +8,7 @@ type Props = {
   projects: PaginatedResult<Project>['items'];
 };
 
-export async function ProjectsContentSection({ projects }: Props) {
+export function ProjectsContentSection({ projects }: Props) {
   return (
     <div className="flex-col-start w-full gap-6">
       <Show

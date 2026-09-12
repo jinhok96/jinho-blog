@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 import { PROJECT_CATEGORY_MAP, type ProjectCategory } from '@jinho-blog/shared';
 
-import { SafeHTML, type SelectOption } from '@/core/ui';
-import { generatePageMetadata, nbsp, parseSearchParams } from '@/core/utils';
+import { JsonLd, SafeHTML, type SelectOption } from '@/core/ui';
+import { generateCollectionPageJsonLd, generatePageMetadata, nbsp, parseSearchParams } from '@/core/utils';
 
 import { createProjectsService, type GetProjects } from '@/entities/projects';
 
@@ -16,9 +16,18 @@ import { ProjectsContentSection } from '@/views/projects';
 
 const projectsService = createProjectsService();
 
+const PAGE_DESCRIPTION = '실무와 개인 프로젝트에서 맡은 역할과 문제 해결 과정을 정리한 모음입니다.';
+
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/projects' }),
   title: '프로젝트',
+  description: PAGE_DESCRIPTION,
+});
+
+const jsonLd = generateCollectionPageJsonLd({
+  title: '프로젝트',
+  description: PAGE_DESCRIPTION,
+  path: routes({ pathname: '/projects' }),
 });
 
 const CATEGORY_OPTIONS: SelectOption<ProjectCategory>[] = [
@@ -46,6 +55,9 @@ export default async function ProjectsListPage({ searchParams }: Props) {
 
   return (
     <div className="flex-col-start size-full gap-6">
+      {/* JSON-LD: CollectionPage */}
+      <JsonLd jsonLd={jsonLd} />
+
       <h1 className="font-title-36">프로젝트</h1>
 
       <div className="z-10 flex-row-center w-full justify-between">

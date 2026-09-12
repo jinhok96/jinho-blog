@@ -1,0 +1,23 @@
+---
+title: "Claude Fable 5: 미지의 영역을 발견하기 위한 안내서"
+description: "Claude Fable 5를 활용하여 개발 과정에서 '미지의 영역(unknowns)'을 효과적으로 발견하고 관리하는 방법론을 소개합니다."
+category: claude
+sourceUrl: https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns
+createdAt: 2026-07-06
+---
+
+> 원문: [A field guide to Claude Fable 5: Finding your unknowns](https://claude.com/blog/a-field-guide-to-claude-fable-finding-your-unknowns) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Fable 5는 개발자가 인지하지 못했던 문제점(unknown unknowns)이나 간과했던 사실(unknown knowns)을 발견하도록 돕는 강력한 도구입니다. 이를 통해 복잡한 프로젝트에서도 효율적으로 작업할 수 있습니다.
+
+- **'미지의 영역' 발견**: 프롬프트, 즉 알려진 사실(Known Knowns) 외에, 아직 해결하지 못했지만 존재를 인지하는 '알려진 미지(Known Unknowns)', 당연하게 여겨 인지하지 못하는 '알려진 미지(Unknown Knowns)', 전혀 고려하지 못한 '알려지지 않은 미지(Unknown Unknowns)'를 구분하고 이를 Claude를 통해 탐색합니다.
+- **미리 구현 단계**: '블라인드 스팟 패스'를 통해 자신의 약점을 파악하고, '브레인스토밍 및 프로토타이핑'으로 다양한 아이디어를 탐색하며, '인터뷰'로 모호한 부분을 명확히 하고, '참조'로 복잡한 요구사항을 구체화하며, '구현 계획'으로 잠재적 변경 사항을 예측합니다.
+- **구현 중 단계**: '구현 노트'를 작성하여 의사 결정 과정을 기록하고, 예상치 못한 문제 발생 시 기록을 남겨 다음 시도에 활용합니다.
+- **구현 후 단계**: '피치 및 설명 자료'를 작성하여 이해 관계자의 동의를 얻고, '퀴즈'를 통해 변경 사항을 완벽히 이해한 후에 코드를 병합합니다.
+
+다음은 '블라인드 스팟 패스'의 예시 프롬프트입니다.
+```
+“I'm working on adding a new auth provider but I know nothing about the auth modules in this codebase. Can you do a blind spot pass to help me figure out my relevant unknown unknowns and help me prompt you better.”
+```
+이러한 방법론을 통해 개발자는 Claude와 함께 '미지의 영역'을 적극적으로 탐색하고, 이를 통해 비용이 많이 드는 수정 작업을 사전에 방지할 수 있습니다. 자세한 내용은 원문에서 확인하세요.

@@ -56,8 +56,9 @@ export function TechStackBadge({ className, tech }: Props) {
         />
       </div>
 
-      {/* 라벨 */}
+      {/* 라벨: 이미지 alt와 동일한 정보이므로 보조 기술에는 노출하지 않는다 */}
       <div
+        aria-hidden="true"
         className={cn(
           `
             pointer-events-none absolute bottom-full left-1/2 mb-2 size-fit -translate-x-1/2 rounded-lg bg-foreground-7

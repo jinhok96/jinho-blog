@@ -1,0 +1,23 @@
+---
+title: 2026년 7월 보안 릴리스
+description: "Next.js 16.2.11 및 15.5.21 업데이트는 App Router, Server Actions, Image Optimization API 등의 보안 취약점을 해결합니다."
+category: nextjs
+sourceUrl: https://nextjs.org/blog/july-2026-security-release
+createdAt: 2026-07-20
+---
+
+> 원문: [July 2026 Security Release](https://nextjs.org/blog/july-2026-security-release) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js는 선제적으로 공지되는 보안 릴리스 모델로 전환하며, v16.2.11 (Active LTS) 및 v15.5.21 (Maintenance LTS)에 대한 업데이트가 공개되었습니다. 이 업데이트들은 다음과 같은 보안 취약점을 해결합니다.
+
+- App Router와 Server Actions를 사용하는 애플리케이션에서 악의적으로 제작된 요청이 과도한 CPU 사용을 유발하여 서비스 거부를 초래할 수 있습니다(CVE-2026-64641).
+- Turbopack과 단일 로케일을 사용하는 App Router 애플리케이션에서 미들웨어/프록시 바이패스 취약점(CVE-2026-64642)이 발견되었습니다.
+- `rewrites()` 또는 `redirects()` 규칙에서 요청 제어 입력으로 외부 목적지 호스트 이름을 생성할 경우, 임의의 호스트 이름으로 지정되어 Server-Side Request Forgery (SSRF) 또는 Open Redirect가 발생할 수 있습니다(CVE-2026-64645).
+- 사용자 지정 서버에서 Server Actions를 사용할 때, 악의적인 호스트 헤더를 제어하는 공격자가 서버를 악성 호스트로 요청을 보내도록 유도할 수 있습니다(CVE-2026-64649).
+- Image Optimization API에서 SVG를 사용할 때, 원격으로 호스팅된 악성 이미지가 CPU 소진을 유발할 수 있습니다(CVE-2026-64644).
+- Edge runtime의 Server Actions에서 무제한 페이로드로 인해 메모리 소비가 발생할 수 있습니다(CVE-2026-64646).
+- App Router를 사용하는 Next.js 애플리케이션에서 Server Actions 또는 use cache 엔드포인트 ID가 인증 없이 노출될 수 있습니다(CVE-2026-64643).
+- 요청 본문이 있는 `fetch` 호출 시, 동일한 URL이지만 다른 본문을 가진 다른 요청의 캐시된 응답 본문을 반환할 수 있는 캐시 혼란 문제가 발생할 수 있습니다(CVE-2026-64648, CVE-2026-64647).
+
+Vercel의 Open Source Bug Bounty 프로그램을 통해 Next.js 보안에 기여할 수 있습니다. 자세한 내용은 원문에서 확인하세요.

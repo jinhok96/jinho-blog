@@ -89,7 +89,10 @@ export function Toc({ toc, className }: TocProps) {
   }, [toc]);
 
   return (
-    <div className={cn('font-caption-14 text-gray-5', className)}>
+    <nav
+      aria-label="목차"
+      className={cn('font-caption-14 text-gray-5', className)}
+    >
       <p className="mb-3 text-foreground">목차</p>
 
       <ul className="flex-col-start gap-1">
@@ -105,13 +108,18 @@ export function Toc({ toc, className }: TocProps) {
           </li>
         ))}
 
-        <hr className="mt-2 mb-3 w-full border-gray-2" />
+        {/* 구분선: 장식 목적이므로 보조 기술에는 노출하지 않는다 */}
+        <li
+          aria-hidden="true"
+          className="mt-2 mb-3 h-0 w-full border-t border-gray-2"
+        />
 
         <li>
           <TocLinkButton
             className="flex-row-center gap-2"
             href={`https://github.com/jinhok96/jinho-blog/edit/mdx/content/mdx${pathname}.mdx`}
             target="_blank"
+            rel="noopener noreferrer"
           >
             <span>이 문서 편집하기</span>
             <div className="size-3.5">
@@ -132,6 +140,6 @@ export function Toc({ toc, className }: TocProps) {
           </TocLinkButton>
         </li>
       </ul>
-    </div>
+    </nav>
   );
 }

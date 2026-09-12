@@ -35,8 +35,8 @@ function Date({ createdAt, updatedAt }: DateProps) {
 
   return (
     <div className="flex-row-center w-full gap-3 font-body-14 text-gray-5">
-      <time>작성일: {formattedCreatedAt}</time>
-      <time>수정일: {formattedUpdatedAt}</time>
+      <time dateTime={createdAt}>작성일: {formattedCreatedAt}</time>
+      <time dateTime={updatedAt}>수정일: {formattedUpdatedAt}</time>
     </div>
   );
 }
@@ -77,6 +77,7 @@ function ProjectInfo({ period, members, description, links }: ProjectInfoProps) 
                   <LinkButton
                     href={link}
                     target="_blank"
+                    rel="noopener noreferrer"
                     className="underline underline-offset-2"
                   >
                     {link}

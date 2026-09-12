@@ -1,0 +1,22 @@
+---
+title: Claude Code 세션을 자체 컴퓨팅 환경에서 실행
+description: Claude Code 세션을 자체 인프라에서 실행할 수 있는 셀프 호스트 환경이 공개 베타로 출시되었습니다.
+category: claude
+sourceUrl: https://claude.com/blog/run-claude-code-sessions-on-your-own-compute
+createdAt: 2026-08-06
+---
+
+> 원문: [Run Claude Code sessions on your own compute](https://claude.com/blog/run-claude-code-sessions-on-your-own-compute) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Code 세션을 자체 인프라에서 실행할 수 있는 셀프 호스트 환경이 공개 베타로 출시되었습니다. 이 기능을 통해 조직은 네트워크, 도구 또는 규정 준수 요구 사항에 따라 에이전트 실행을 자체 제어된 인프라 내에 유지할 수 있습니다.
+
+-   **네트워크 액세스:** 세션이 자체 네트워크 내에서 실행되므로 내부 서비스, 데이터베이스 및 레지스트리에 공개 인터넷 노출 없이 안전하게 접근할 수 있습니다.
+-   **사용자 지정:** 컴파일러, SDK 및 내부 CL I를 미리 설치하여 모든 세션이 즉시 빌드 준비 상태를 갖추도록 환경을 사용자 지정할 수 있습니다.
+-   **규정 준수:** 소스 코드 및 빌드 아티팩트가 사용자가 제어하는 인프라에만 유지되므로 데이터 보안 및 규정 준수 요구 사항을 충족할 수 있습니다.
+
+셀프 호스트 환경에서는 [runners](https://code.claude.com/docs/en/self-hosted-environments#key-concepts) 세트를 배포하며, 이 long-lived 프로세스는 세션을 가져와 각 [session](https://code.claude.com/docs/en/self-hosted-environments#session-lifecycle)에 대해 Claude Code 프로세스를 시작합니다. Runners는 고정 모드(미리 정의된 수의 runners 실행) 또는 온디맨드 모드(세션에 따라 runners를 시작 및 중지)로 작동할 수 있습니다.
+
+셀프 호스트 환경은 Claude Team 및 Enterprise 플랜을 사용하는 조직에 제공되며, ZDR을 사용하는 조직에는 사용할 수 없습니다. 이 기능의 설정 및 지속적인 운영은 플랫폼, 개발자 경험 또는 개발자 생산성 팀이 담당합니다.
+
+자세한 내용은 원문에서 확인하세요.

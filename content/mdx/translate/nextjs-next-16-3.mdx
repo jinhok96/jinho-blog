@@ -1,0 +1,28 @@
+---
+title: "Next.js 16.3 출시: 성능 향상 및 Instant Navigations 도입"
+description: "Next.js 16.3은 개발 서버 메모리 사용량 감소, 빌드 속도 향상, Instant Navigations 기능 도입 등 다양한 개선 사항을 제공합니다."
+category: nextjs
+sourceUrl: https://nextjs.org/blog/next-16-3
+createdAt: 2026-08-03
+---
+
+> 원문: [Next.js 16.3](https://nextjs.org/blog/next-16-3) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js 16.3이 출시되었습니다. 이번 릴리스는 기존 Next.js 앱을 위한 다양한 성능 향상과 함께, SPA와 같은 반응성을 Next.js에 가져오는 Instant Navigations 기능을 도입했습니다.
+
+주요 개선 사항은 다음과 같습니다:
+
+- **개발 서버 메모리 사용량 감소**: 장시간 개발 세션 시 최대 90% 적은 RAM을 사용합니다.
+- **빌드 속도 향상**: 변경되지 않은 빌드 결과물을 캐시에서 읽어 반복 빌드 시간을 단축합니다.
+- **TypeScript 7을 통한 타입 검사 속도 향상**: `next build` 시 TypeScript 7을 활용하여 타입 검사를 더 빠르게 수행합니다.
+- **서버 측 렌더링 성능 향상**: 부하 상태에서 최대 22% 더 많은 요청을 처리합니다.
+- **AI 코딩 에이전트를 위한 버전별 문서**: 설정 없이 프로젝트 버전에 맞는 문서를 AI 에이전트가 읽을 수 있습니다.
+- **Prefetch 요청 감소**: 링크가 더 작은 페이로드를 번들링하여 요청 수를 줄입니다.
+- **정적 에셋 캐싱 개선**: 불변(immutable) 에셋을 배포 간에 재사용할 수 있습니다.
+- **사용자 정의 에러 경계(Error Boundaries)**: 실패한 데이터를 재요청하여 서버 에러로부터 복구합니다.
+- **내장 Glob Imports**: 새로운 Turbopack API를 사용하여 여러 파일을 한 번에 임포트할 수 있습니다.
+
+Instant Navigations는 선택적으로 사용할 수 있는 도구 모음으로, Next.js의 서버 중심 모델 이점을 유지하면서 클라이언트 기반 SPA의 반응성을 제공합니다. 여기에는 Slow Navigations를 자동으로 감지하는 Instant Insights, 링크가 미리 가져올(prefetch) 콘텐츠 양을 세밀하게 제어하는 Partial Prefetching, 그리고 빌드 시 prerendering에서 제외된 URL에 즉시 로딩 쉘을 제공하는 Incremental Static Regeneration(ISR) 개선 등이 포함됩니다.
+
+자세한 내용은 원문에서 확인하세요.

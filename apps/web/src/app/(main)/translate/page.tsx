@@ -3,8 +3,8 @@ import type { Metadata } from 'next';
 import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 import { TRANSLATE_CATEGORIES, TRANSLATE_CATEGORY_MAP, type TranslateCategory } from '@jinho-blog/shared';
 
-import { type SelectOption } from '@/core/ui';
-import { generatePageMetadata, parseSearchParams } from '@/core/utils';
+import { JsonLd, type SelectOption } from '@/core/ui';
+import { generateCollectionPageJsonLd, generatePageMetadata, parseSearchParams } from '@/core/utils';
 
 import { createTranslateService, type GetTranslatePosts } from '@/entities/translate';
 
@@ -16,9 +16,18 @@ import { TranslateContentSection } from '@/views/translate';
 
 const translateService = createTranslateService();
 
+const PAGE_DESCRIPTION = '해외 기술 블로그의 주요 아티클을 한국어로 번역해 모았습니다.';
+
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/translate' }),
   title: '번역',
+  description: PAGE_DESCRIPTION,
+});
+
+const jsonLd = generateCollectionPageJsonLd({
+  title: '번역',
+  description: PAGE_DESCRIPTION,
+  path: routes({ pathname: '/translate' }),
 });
 
 const CATEGORY_OPTIONS: SelectOption<TranslateCategory>[] = TRANSLATE_CATEGORIES.map(category => ({
@@ -45,6 +54,9 @@ export default async function TranslateListPage({ searchParams }: Props) {
 
   return (
     <div className="flex-col-start size-full flex-1 gap-6">
+      {/* JSON-LD: CollectionPage */}
+      <JsonLd jsonLd={jsonLd} />
+
       <h1 className="font-title-36">번역</h1>
 
       <div className="z-10 flex-row-center w-full justify-between">

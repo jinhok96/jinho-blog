@@ -1,0 +1,24 @@
+---
+title: "Next.js 16.3: 즉각적인 네비게이션"
+description: "Next.js 16.3에서는 사용자 경험을 SPA처럼 즉각적으로 개선하는 'Instant Navigations' 기능을 도입하여, 서버 기반 모델의 장점을 유지하면서도 빠른 네비게이션을 지원합니다."
+category: nextjs
+sourceUrl: https://nextjs.org/blog/next-16-3-instant-navigations
+createdAt: 2026-06-25
+---
+
+> 원문: [Next.js 16.3: Instant Navigations](https://nextjs.org/blog/next-16-3-instant-navigations) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js 16.3 버전에서는 'Instant Navigations'라는 새로운 기능을 통해 SPA와 유사한 즉각적인 네비게이션 경험을 제공합니다. 이는 서버 기반 앱의 장점을 유지하면서 클라이언트 중심 SPA의 응답성을 Next.js에 통합합니다.
+
+핵심 변경 사항은 다음과 같습니다.
+
+- **`Cache Components` 활성화**: 새로운 동작을 위해 `cacheComponents` 플래그를 활성화합니다. 이 기능은 향후 주요 버전에서 기본값으로 설정될 예정입니다.
+- **`Stream`과 `Cache` 옵션**: 비동기 작업을 `Suspense`를 사용한 `Stream` 또는 `'use cache'`를 사용한 `Cache`로 전환하여 사용자가 즉시 로딩 상태 또는 이전 UI를 볼 수 있도록 합니다. 이를 통해 네비게이션이 SPA처럼 느껴지도록 합니다.
+- **`Block` 옵션**: 특정 네비게이션을 서버 바운드로 유지하고자 할 때 `export const instant = false`를 사용하여 즉각적인 네비게이션을 강제하지 않도록 할 수 있습니다.
+- **`Partial Prefetching` 도입**: 링크당 개별 요청 대신, 라우트별로 재사용 가능한 로딩 쉘(shell)을 사전 로드하여 클라이언트에 캐시합니다. 이를 통해 불필요한 요청을 줄이고 네비게이션 속도를 향상시킵니다.
+- **향상된 개발 및 테스트 도구**: `instant()` Playwright 테스트 헬퍼와 Navigation Inspector를 통해 개발 과정에서 즉각적인 라우트의 회귀를 방지하고 시각적으로 검사할 수 있습니다.
+
+이러한 변경 사항은 `cacheComponents: true` 및 `partialPrefetching: true` 플래그를 통해 활성화할 수 있습니다. 이를 통해 Next.js는 SPA와 동등한 첫 클릭 네비게이션 경험을 제공하면서도 서버 중심의 이점을 유지합니다.
+
+자세한 내용은 원문에서 확인하세요.

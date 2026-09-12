@@ -1,4 +1,4 @@
-import type { Metadata } from 'next';
+import type { Metadata, Viewport } from 'next';
 import type { PropsWithChildren, ReactNode } from 'react';
 
 import localFont from 'next/font/local';
@@ -7,7 +7,7 @@ import { Analytics } from '@vercel/analytics/next';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
-import { PORTAL } from '@/core/config';
+import { MAIN_CONTENT_ID, PORTAL } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { JsonLd } from '@/core/ui';
 import { cn, generatePageMetadata, generateWebSiteJsonLd } from '@/core/utils';
@@ -23,7 +23,16 @@ const pretendard = localFont({
 
 export const metadata: Metadata = generatePageMetadata({
   path: routes({ pathname: '/' }),
+  titleMode: 'template',
 });
+
+export const viewport: Viewport = {
+  themeColor: [
+    { media: '(prefers-color-scheme: light)', color: '#ffffff' },
+    { media: '(prefers-color-scheme: dark)', color: '#000000' },
+  ],
+  colorScheme: 'light dark',
+};
 
 type Props = Readonly<
   PropsWithChildren<{
@@ -49,10 +58,25 @@ export default function RootLayout({ children, modal }: Props) {
       </head>
 
       <body className={cn('flex-row-start size-full min-h-screen flex-1 antialiased', pretendard.className)}>
+        {/* 본문 바로가기: 포커스를 받을 때만 노출 */}
+        <a
+          href={`#${MAIN_CONTENT_ID}`}
+          className={`
+            sr-only
+            focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-modal focus:rounded-lg focus:bg-blue-7
+            focus:px-4 focus:py-2 focus:text-white
+          `}
+        >
+          본문 바로가기
+        </a>
+
         <ThemeStoreProvider theme="system">
           <div id={PORTAL.leftSidebar} />
 
-          <main className="relative flex-col-center h-fit w-full flex-1">
+          <main
+            id={MAIN_CONTENT_ID}
+            className="relative flex-col-center h-fit w-full flex-1"
+          >
             {children}
             {modal}
           </main>

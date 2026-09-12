@@ -31,7 +31,7 @@ function Article({ children, src, alt }: ArticleProps) {
 }
 
 function Label({ children }: PropsWithChildren) {
-  return <p className="font-subtitle-18">{children}</p>;
+  return <h3 className="font-subtitle-18">{children}</h3>;
 }
 
 function Description({ children }: PropsWithChildren) {
@@ -57,7 +57,7 @@ export function HomeCoreSkillsSection() {
       >
         <Article
           src={CoreSkill2Image}
-          alt="core-skill-2"
+          alt="상황에 맞는 기술 선택을 나타내는 일러스트"
         >
           <Article.Label>상황에 맞는 기술 선택</Article.Label>
           <Article.Description>
@@ -68,7 +68,7 @@ export function HomeCoreSkillsSection() {
 
         <Article
           src={CoreSkill3Image}
-          alt="core-skill-3"
+          alt="성능 최적화를 나타내는 일러스트"
         >
           <Article.Label>성능 최적화</Article.Label>
           <Article.Description>
@@ -79,7 +79,7 @@ export function HomeCoreSkillsSection() {
 
         <Article
           src={CoreSkill1Image}
-          alt="core-skill-1"
+          alt="사용자 경험 개선을 나타내는 일러스트"
         >
           <Article.Label>사용자 경험 개선</Article.Label>
           <Article.Description>

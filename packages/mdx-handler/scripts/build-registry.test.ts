@@ -195,6 +195,12 @@ describe('extractFirstImage', () => {
     expect(result).toBe('https://cdn.example.com/image.');
   });
 
+  it('외부 URL 이미지에 title 속성이 있어도 URL만 반환', () => {
+    const content = '![alt](https://example.com/img.png "Image Title")';
+    const result = extractFirstImage({}, content, 'blog');
+    expect(result).toBe('https://example.com/img.png');
+  });
+
   it('frontmatter thumbnail이 ./이지만 section이 null: 변환 없이 반환', () => {
     const result = extractFirstImage({ thumbnail: './cover.png' }, '', null);
     expect(result).toBe('./cover.png');

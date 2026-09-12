@@ -267,7 +267,7 @@ function extractFirstImage(
   }
 
   // 외부 URL 이미지도 추출 (video URL 제외)
-  const externalImageRegex = /!\[([^\]]*)\]\((https?:\/\/[^)]+)\)/g;
+  const externalImageRegex = /!\[([^\]]*)\]\((https?:\/\/[^\s)]+)/g;
   for (const match of content.matchAll(externalImageRegex)) {
     if (!isVideoPath(match[2])) {
       return match[2];

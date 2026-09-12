@@ -1,0 +1,18 @@
+---
+title: TypeScript 7.0 RC 발표
+description: "TypeScript 7.0 RC는 Go로 재구축되어 성능이 크게 향상되었으며, 병렬 처리 및 개선된 watch 모드 등 다양한 기능이 추가되었습니다."
+category: typescript
+sourceUrl: https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/
+createdAt: 2026-06-18
+---
+
+> 원문: [Announcing TypeScript 7.0 RC](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0-rc/) — TypeScript Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+- TypeScript 7.0 RC가 발표되었습니다. 이번 릴리스는 Go로 재구축된 새로운 기반 위에서 개발되었으며, 이전 버전에 비해 **평균 10배 빠른 성능**을 제공합니다.
+- 주요 변경 사항으로는 여러 컴파일 단계(파싱, 타입 체킹, 코드 생성)에서 **병렬 처리가 도입**되었으며, `--checkers` 및 `--builders` 플래그를 통해 설정 가능합니다.
+- `--watch` 모드가 Parcel bundler의 파일 감시자를 기반으로 재구축되어 **효율성과 안정성이 크게 향상**되었습니다.
+- TypeScript 6.0의 새로운 기본값(예: `strict: true`, `module: esnext`)이 채택되었으며, 일부 오래된 옵션은 지원 중단되거나 제거되었습니다.
+- JavaScript 파일 지원이 더욱 일관성 있게 개선되었으며, 템플릿 리터럴 타입은 이제 **유니코드 코드 포인트를 더 정확하게 처리**합니다.
+
+자세한 내용은 원문에서 확인하세요.

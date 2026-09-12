@@ -1,0 +1,103 @@
+---
+title: "런타임 인사이트 잠금 해제: Chrome DevTools for agents용 타사 개발자 도구 소개"
+description: Chrome DevTools for agents에 타사 개발자 도구가 추가되어 AI 에이전트가 애플리케이션의 내부 상태를 직접 파악하고 런타임 동작을 디버깅할 수 있게 되었습니다.
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/devtools-for-agents-3p-tools?hl=en
+createdAt: 2026-06-18
+---
+
+> 원문: [Unlock runtime insights: Introducing third-party developer tools for Chrome DevTools for agents](https://developer.chrome.com/blog/devtools-for-agents-3p-tools?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# 런타임 인사이트 잠금 해제: Chrome DevTools for agents용 타사 개발자 도구 소개
+
+현대 웹 애플리케이션을 효과적으로 디버깅하려면 AI 에이전트에게 소스 코드 이상의 것이 필요합니다. 런타임에 애플리케이션이 어떻게 동작하는지 이해해야 합니다.
+
+[Chrome DevTools for agents](https://developer.chrome.com/docs/devtools/agents)를 위한 [타사 개발자 도구](https://developer.chrome.com/docs/devtools/agents/use-cases/third-party-tools)를 소개하게 되어 기쁩니다. 이제 앱과 프레임워크는 AI 에이전트에게 내부 상태를 직접 살펴볼 수 있게 해줍니다. 이를 통해 에이전트는 화면에서 발생하는 일과 백엔드에서 실행되는 로직 사이의 연관성을 파악할 수 있습니다.
+
+## 목표: 정적 분석을 넘어서
+
+현대 웹 개발은 Angular, React, Vue와 같은 프레임워크, WordPress 또는 Shopify와 같은 CMS 플랫폼, CSS, 3D 그래픽 또는 애니메이션 라이브러리와 같은 추상화 위에 구축됩니다. DevTools는 최종 렌더링된 DOM에 직접 접근할 수 있지만, 애플리케이션의 "진실"은 종종 프레임워크의 내부 상태, 즉 컴포넌트 계층 구조, JavaScript 신호 또는 백엔드 상태 내에 존재합니다.
+
+타사 개발자 도구의 목표는 모든 라이브러리가 이 풍부하고 실행 가능한 컨텍스트를 AI 에이전트와 공유할 수 있는 경로를 제공하는 것입니다. 이를 통해 에이전트는 이전에는 "보이지 않았던" 문제를 디버깅할 수 있습니다. 예를 들어:
+
+*   **컴포넌트 계층 구조:** 페이지의 DOM 요소를 해당 프레임워크 컴포넌트 및 내부 상태에 직접 매핑합니다.
+*   **내부 상태 검사:** 디버깅 세션 내에서 서버 측 상태 또는 데이터베이스 콘텐츠에 직접 액세스합니다.
+
+## 작동 방식: Discovery API
+
+타사 개발자 도구는 이벤트 기반 JavaScript API를 사용합니다. Chrome DevTools MCP 서버는 전역 `window` 객체에서 `devtoolstooldiscovery` 이벤트를 디스패치하여 이러한 도구를 검색합니다. `devtoolstooldiscovery` 이벤트는 모든 페이지 탐색 시 자동으로 디스패치되거나, 선택된 페이지가 변경된 경우에도 디스패치되며, `list_3p_developer_tools` MCP 도구를 사용하여 명시적으로 디스패치될 수 있습니다.
+
+### 자체 도구 구현
+
+라이브러리 또는 애플리케이션에서 도구를 노출하려면 이 검색 이벤트에 수신 대기하고 `ToolGroup`으로 응답해야 합니다.
+
+```
+window.addEventListener('devtoolstooldiscovery', (event) => {
+  event.respondWith({
+    name: "My Library Tools",
+    description: "Tools for inspecting internal library state",
+    tools: [
+      {
+        name: "getInternalState",
+        description: "Returns the current internal state of the framework.",
+        inputSchema: {
+          type: "object",
+          properties: {
+            componentId: { type: "string" }
+          }
+        },
+        execute: async (input) => {
+          // Access your framework's internal registry
+          return myFramework.getState(input.componentId);
+        }
+      }
+    ]
+  });
+});
+
+```
+
+구현은 다음과 같습니다.
+
+1.  **스키마 정의:** [JSON Schema](https://json-schema.org/)를 사용하여 도구가 예상하는 입력을 정의합니다.
+2.  **로직 처리:** 페이지 컨텍스트에서 실행되고 직렬화 가능한 데이터를 반환하는 `execute` 함수를 구현합니다.
+3.  **DOM 요소:** 직렬화할 수 없는 개체는 페이지와 DevTools for agents 간에 전송될 수 없습니다. DOM 요소는 예외입니다. 도구가 DOM 요소를 반환하면 DevTools for agents는 자동으로 [`take_snapshot`](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/tool-reference.md#take_snapshot) 도구에서 사용되는 것과 동일한 UID에 매핑합니다. 이를 통해 에이전트는 프레임워크에서 오는 요소든 페이지 스냅샷에서 오는 요소든 모든 페이지 요소와 동일한 방식으로 상호 작용할 수 있습니다.
+
+## MCP를 사용한 도구와 상호 작용
+
+도구를 등록하면 코딩 에이전트가 DevTools for agents를 통해 도구와 상호 작용할 수 있습니다. `list_3p_developer_tools` MCP 도구는 페이지에서 사용 가능한 타사 도구에 대한 설명을 반환합니다. 또한 선택한 페이지가 변경되면(예: 탐색 후) DevTools는 MCP 도구 응답에 사용 가능한 도구 목록을 추가합니다.
+
+이러한 도구를 사용하기 위해 에이전트는 `execute_3p_developer_tool`을 호출합니다. DevTools는 입력 매개변수를 자동으로 검증하여 도구의 정의와 일치하는지 확인합니다.
+
+`evaluate_script` MCP 도구를 사용하여 도구를 호출할 수도 있습니다. 에이전트는 DevTools가 페이지에서 실행하는 JavaScript 스니펫을 제공합니다. 이 스니펫은 타사 개발자 도구를 호출하고 즉시 추가 계산에 해당 출력을 사용할 수 있습니다.
+
+`evaluate_script`를 사용하면 에이전트가 다음을 수행할 수 있어 복잡한 디버깅에 효과적입니다.
+
+*   **작업 구성:** 여러 단계를 단일 실행으로 결합합니다.
+*   **직렬화할 수 없는 값 처리:** 페이지 컨텍스트에서 프레임워크별 개체 또는 신호를 직접 처리합니다.
+*   **성능 최적화:** 직렬화 오버헤드를 최소화하고 에이전트와 브라우저 간의 여러 왕복을 방지합니다.
+
+## 초기 성공: Angular 통합
+
+Angular 팀과 협력하여 두 가지 타사 개발자 도구를 구현했습니다.
+
+1.  **Signal Graph 도구:** 에이전트가 상태와 보기 간의 관계를 시각화하여 무한 루프 또는 업데이트 실패를 유발하는 종속성을 식별하는 데 도움을 줍니다.
+2.  **Dependency Injection (DI) Graph 도구:** 요소 인젝터를 노출하여 에이전트가 서비스를 제공하는 위치 또는 누락된 위치를 정확히 확인할 수 있습니다. Angular의 DI 그래프는 런타임 전용 구조이므로 정적 분석만으로는 프로바이더 오류를 디버깅할 수 없습니다.
+
+![Angular Signal Graph 도구를 사용하여 반응형 루프를 디버깅하는 AI 에이전트를 보여주는 비디오](https://developer.chrome.com/static/blog/devtools-for-agents-3p-tools/video/screencast-CD4A-3p-tools.mp4)
+
+Angular Signal Graph 도구를 사용하여 반응형 루프를 디버깅하는 AI 에이전트를 보여주는 스크린캐스트.
+
+React 팀 또한 타사 개발자 도구를 [실험](https://github.com/react/react/pull/36600)하기 시작했습니다.
+
+## 우리와 함께 에이전트 디버깅의 미래를 구축하세요
+
+이 실험적 기능은 Chrome DevTools for agents 버전 0.25.0부터 사용할 수 있습니다. 사용하려면 `--categoryExperimentalThirdParty` 명령줄 플래그를 사용하십시오.
+
+프레임워크, 라이브러리 또는 도구를 유지 관리하고 코딩 에이전트의 디버깅 환경을 개선하고자 한다면 협업을 환영합니다.
+
+*   **문서 탐색:** [GitHub 기술 가이드](https://github.com/ChromeDevTools/chrome-devtools-mcp/blob/main/docs/third-party-developer-tools.md)
+*   **문의:** API를 반복하고 AI 기반 웹 디버깅의 미래를 정의하는 데 도움을 줄 파트너를 찾고 있습니다. [GitHub 리포지토리에서 이슈를 생성](https://github.com/ChromeDevTools/chrome-devtools-mcp/issues)하여 문의할 수 있습니다.
+
+저희와 함께 에이전트 웹 개발의 미래를 함께 만들어 갑시다!

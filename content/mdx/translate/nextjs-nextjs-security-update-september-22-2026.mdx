@@ -1,0 +1,23 @@
+---
+title: "Next.js, 중요한 상위 종속성 문제에 대한 보안 업데이트 출시"
+description: Next.js v16.3.6 및 v15.5.26 버전에서 Satori를 포함한 상위 종속성 업그레이드로 원격 코드 실행 가능성을 해결하는 보안 업데이트가 출시되었습니다.
+category: nextjs
+sourceUrl: https://nextjs.org/blog/nextjs-security-update-september-22-2026
+createdAt: 2026-09-22
+---
+
+> 원문: [Next.js Security Update for a Critical Upstream Issue](https://nextjs.org/blog/nextjs-security-update-september-22-2026) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js에서 중요한 상위 종속성 문제를 해결하기 위한 보안 업데이트가 v16.3.6 (Active LTS) 및 v15.5.26 (Maintenance LTS) 버전으로 출시되었습니다. 이 업데이트는 Satori를 포함한 상위 종속성을 업그레이드하여 특정 Next.js 버전에 영향을 미칠 수 있는 원격 코드 실행 가능성 문제를 해결합니다. Next.js 15.x 버전은 이 원격 코드 실행 문제의 영향을 받지 않습니다.
+
+주요 변경 사항은 다음과 같습니다.
+
+-   **Node.js `ImageResponse`에서 원격 코드 실행(RCE) 취약점 해결**: `next/og`의 `ImageResponse` 구현에서 Satori가 생성한 SVG 출력의 부적절한 이스케이핑으로 인해 발생하는 RCE 취약점이 수정되었습니다. 이는 관련 상위 종속성 업그레이드를 통해 해결되었습니다.
+-   **영향 받는 버전**: Next.js 버전 `>=16.2.0 <16.3.6`이 영향을 받습니다.
+-   **Edge `ImageResponse`는 영향 없음**: Edge 환경의 `ImageResponse` 구현은 이 문제의 영향을 받지 않습니다.
+-   **최신 버전으로 패치 권장**: 애플리케이션 보안을 위해 Next.js 종속성을 최신 버전으로 패치하는 것이 중요합니다.
+
+Vercel은 [Vercel의 Open Source Bug Bounty](https://hackerone.com/vercel-open-source) 프로그램을 통해 Next.js 및 기타 오픈 소스 프레임워크의 보안을 강화하고 있으며, 보안 프로그램이나 취약점 관리에 대한 문의는 [security@vercel.com](mailto:security@vercel.com)으로 연락하면 됩니다.
+
+자세한 내용은 원문에서 확인하세요.

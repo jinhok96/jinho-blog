@@ -1,0 +1,24 @@
+---
+title: 2026년 9월 Next.js 보안 릴리스
+description: "Next.js v16.3.8 및 v15.5.27에서 서버 측 요청 위조, 캐시 포이즈닝 등 여러 보안 취약점을 해결했습니다."
+category: nextjs
+sourceUrl: https://nextjs.org/blog/september-2026-security-release
+createdAt: 2026-09-30
+---
+
+> 원문: [September 2026 Security Release](https://nextjs.org/blog/september-2026-security-release) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js에서 중대한 보안 취약점 수정 사항이 포함된 업데이트가 v16.3.8 (Active LTS) 및 v15.5.27 (Maintenance LTS) 버전으로 배포되었습니다. 애플리케이션 보안을 위해 Next.js 종속성을 최신 버전으로 업데이트하는 것이 권장됩니다.
+
+이번 업데이트는 다음과 같은 주요 보안 문제를 해결합니다.
+
+- **이미지 최적화 시 서버 측 요청 위조 (SSR):** `images.remotePatterns` 설정이 없을 경우, 공격자가 제어하는 원격 URL을 통해 서버 측 요청 위조가 발생할 수 있습니다.
+- **SSG/ISR 페이지 캐시 포이즈닝:** Self-hosted Next.js 애플리케이션의 Pages Router에서 SSG 또는 ISR 페이지의 캐시가 다른 경로의 내용으로 대체되어 잘못된 콘텐츠가 제공될 수 있습니다. Vercel에 배포된 애플리케이션은 영향을 받지 않습니다.
+- **App Router 메타데이터 이미지 경로의 정보 유출:** Webpack으로 빌드된 App Router 애플리케이션에서 `dynamicParams` 옵션이 무시되어, `generateStaticParams()`에서 제외된 동적 세그먼트에 대한 메타데이터 이미지 URL을 통해 정보가 유출될 수 있습니다. Turbopack으로 빌드된 애플리케이션은 영향을 받지 않습니다.
+- **'use cache' 함수의 캐시 누수:** Cache Components 활성화 시, 중첩된 `'use cache'` 함수 호출에서 루트 파라미터가 잘못 키잉되어 다른 값의 콘텐츠가 제공될 수 있습니다.
+- **개발 서버 모델 컨텍스트 프로토콜의 정보 유출:** `next dev` 개발 서버에서 Model Context Protocol 엔드포인트의 보안 검증 부족으로 인해 민감한 개발 데이터가 유출될 수 있습니다. 프로덕션 배포에는 영향을 주지 않습니다.
+
+Vercel의 오픈 소스 버그 바운티 프로그램을 통해 Next.js 보안에 기여할 수 있습니다.
+
+자세한 내용은 원문에서 확인하세요.

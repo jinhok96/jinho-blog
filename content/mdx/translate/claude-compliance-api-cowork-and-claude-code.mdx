@@ -1,20 +1,20 @@
 ---
-title: "Claude Compliance API, Cowork 및 Claude Code 지원 확대"
-description: Claude Compliance API가 Cowork와 Claude Code 세션 데이터를 포함하도록 기능을 확장하여 보안 및 규정 준수 팀의 데이터 접근성을 높입니다.
+title: "Claude Compliance API, Cowork 및 Claude Code 지원 확장"
+description: "Claude Compliance API가 Cowork 및 Claude Code를 지원하며, 세션 콘텐츠 및 메타데이터를 기존 API 인터페이스를 통해 가져올 수 있게 되었습니다."
 category: claude
-sourceUrl: https://claude.com/blog/compliance-api-cowork-and-claude-code
+sourceUrl: https://claude.com/resources/articles/compliance-api-cowork-and-claude-code
 createdAt: 2026-08-11
 ---
 
-> 원문: [Compliance API coverage extends to Claude Cowork and Claude Code](https://claude.com/blog/compliance-api-cowork-and-claude-code) — Claude Blog
+> 원문: [Compliance API coverage extends to Claude Cowork and Claude Code](https://claude.com/resources/articles/compliance-api-cowork-and-claude-code) — Claude Blog
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-Claude Compliance API가 Cowork(데스크톱, 웹, 모바일) 및 Claude Code(CLI, 데스크톱 앱) 세션에 대한 지원을 베타로 확장했습니다.
+Claude Compliance API가 Cowork (데스크톱, 웹, 모바일) 및 Claude Code (CLI, 데스크톱)까지 지원 범위를 확장했습니다.
 
--   **기능 확장**: Claude Cowork와 Claude Code의 세션 콘텐츠 및 메타데이터를 기존 Claude 채팅 데이터와 동일한 Compliance API 인터페이스를 통해 액세스할 수 있습니다.
--   **데이터 통합**: 새 엔드포인트는 각 Cowork 및 Claude Code 세션에 대한 통합된 트랜스크립트를 반환하여 프롬프트, 응답 및 도구 활동을 단일 세션 기록으로 제공합니다.
--   **포함 데이터**: 세션 콘텐츠(프롬프트, 응답, 도구 호출, 스킬, 아티팩트)와 세션 메타데이터(사용자 ID, 조직 ID, 세션 ID, 타임스탬프)를 모두 포함합니다.
--   **현재 베타 범위**: Claude Code 웹, Claude Platform을 통한 Claude Code, Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry에서의 세션은 현재 베타에 포함되지 않습니다.
--   **기존 환경과의 호환성**: OpenTelemetry 데이터 내보내기를 사용 중인 경우, 별도의 인프라 없이 Compliance API와 함께 계속 사용할 수 있습니다.
+-   Claude Cowork 및 Claude Code 세션의 콘텐츠와 메타데이터를 기존 Compliance API 인터페이스를 통해 가져올 수 있습니다.
+-   새로운 엔드포인트는 기존 데이터 수집에 영향을 주지 않으며, 별도의 로깅 인프라 구축 없이 Claude 사용 현황을 파악할 수 있도록 돕습니다.
+-   각 세션은 프롬프트, 응답, 도구 활동을 포함하는 통합된 세션 기록과 사용자 ID, 조직 ID 등의 메타데이터를 함께 제공합니다.
+-   현재 Claude Code 웹 버전, Claude Platform을 통한 Claude Code, Amazon Bedrock, Google Cloud Vertex AI, Microsoft Foundry 세션은 베타 지원 범위에 포함되지 않습니다.
+-   기존 OpenTelemetry 데이터를 사용하는 경우, 추가적인 인프라 설정 없이 Compliance API와 함께 사용할 수 있습니다.
 
 자세한 내용은 원문에서 확인하세요.

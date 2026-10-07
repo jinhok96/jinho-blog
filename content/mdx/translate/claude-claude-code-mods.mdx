@@ -1,20 +1,27 @@
 ---
-title: Claude Code 사용자 정의를 위한 Mods 소개
-description: Claude Code의 기능을 확장하거나 변경할 수 있는 TypeScript 기반의 Mods가 출시되었습니다.
+title: Claude Code 커스터마이징을 위한 Mods 소개
+description: Claude Code의 기능을 확장하고 사용자 정의할 수 있는 Mods 기능이 새롭게 출시되었습니다.
 category: claude
-sourceUrl: https://claude.com/blog/claude-code-mods
+sourceUrl: https://claude.com/resources/articles/claude-code-mods
 createdAt: 2026-10-01
 ---
 
-> 원문: [Customize Claude Code with mods](https://claude.com/blog/claude-code-mods) — Claude Blog
+> 원문: [Customize Claude Code with mods](https://claude.com/resources/articles/claude-code-mods) — Claude Blog
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-Claude Code는 이제 TypeScript 함수인 'mods'를 통해 사용자 정의가 가능합니다. Mods는 프롬프트 재작성, UI 추가, 내장 기능 대체, 새로운 기능 추가 등 Claude Code의 작동 방식을 변경할 수 있습니다. 직접 작성하거나 Claude Code에게 작성을 요청할 수도 있습니다. Mods는 플러그인 형태로 배포되며, CLI 및 데스크톱 앱에서 작동합니다.
+Claude Code는 이제 TypeScript 함수인 'mods'를 통해 기능 확장이 가능해졌습니다. Mods는 프롬프트 재작성, UI 추가, 내장 기능 대체, 새로운 기능 추가 등 다양한 방식으로 Claude Code의 동작을 변경할 수 있습니다. 직접 작성하거나 Claude Code에게 생성을 요청할 수 있으며, 플러그인 형태로 설치 및 공유됩니다.
 
-*   **핵심 기능:** Mods는 Claude Code의 이벤트에 후킹하여 프롬프트 재작성, 도구 호출 제어, 권한 요청 처리, UI 변경 등 다양한 작업을 수행할 수 있습니다.
-*   **유연한 제어:** Mods를 통해 사용자는 Claude Code를 자신의 작업 방식에 맞게 조정할 수 있으며, 일부 내장 기능은 Mods 형태로 제공되어 비활성화하거나 자체 버전으로 대체할 수 있습니다.
-*   **팀 및 엔터프라이즈 기능:** Mods는 플러그인으로 관리되어 관리자가 설치를 제어할 수 있으며, `sec-default` 모드를 통해 보안을 강화하거나 자체 보안 및 감사 모드를 구축할 수 있습니다.
-*   **개발자 지원:** Mods 개발을 위한 가이드 및 문서를 제공하며, Claude Code 자체를 사용하여 Mods를 생성하고 설치할 수도 있습니다.
-*   **새로운 가능성:** CI/CD 상태 표시, 프로덕션 환경 안전 장치, 감사 로깅 등 팀별 맞춤형 기능 구현을 지원합니다.
+*   **Mods의 주요 기능:**
+    *   모델에 전달되기 전 프롬프트 수정
+    *   툴(Tool) 호출 차단, 재작성 또는 재시도
+    *   권한 요청 승인 또는 거부
+    *   툴 결과에서 민감 정보 제거
+    *   Claude Code 인터페이스 편집 또는 교체, 버튼 및 입력 필드 추가
+
+*   **내장 기능 커스터마이징:** `/diff`와 같은 일부 내장 기능이 Mods로 전환되어, 사용자가 기능을 비활성화하거나 자신만의 버전으로 대체할 수 있습니다. 향후 더 많은 내장 기능이 Mods 형태로 제공될 예정입니다.
+
+*   **팀 및 엔터프라이즈 기능:** Mods는 플러그인 형태로 제공되므로 기존 플러그인 정책이 적용됩니다. Team 및 Enterprise 플랜에서는 관리자가 플러그인 마켓플레이스를 제어하고, `sec-default`라는 기본 보안 Mods가 로드되어 사용자 설치 Mods의 위험한 동작을 제한합니다.
+
+*   **시작하기:** Mods는 Claude Code CLI 및 데스크톱 앱에서 오늘부터 사용할 수 있습니다. Claude 디렉토리에서 Mods를 포함한 플러그인을 설치하거나 `/plugin` 명령어로 설치할 수 있습니다. Mods 개발을 위한 가이드 및 문서를 제공합니다.
 
 자세한 내용은 원문에서 확인하세요.

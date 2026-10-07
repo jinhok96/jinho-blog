@@ -1,22 +1,19 @@
 ---
-title: "MCP 2026-07-28, Claude에 도입"
-description: MCP 2026-07-28 발표로 Claude 플랫폼의 확장성과 보안성이 강화되어 개발자와 사용자 경험이 향상됩니다.
+title: Claude에 MCP 2026-07-28 적용
+description: "MCP 2026-07-28은 상태 비저장 코어, 표준화된 확장 기능, 강화된 인증을 특징으로 하며 Claude 제품 전반에 적용됩니다."
 category: claude
-sourceUrl: https://claude.com/blog/bringing-mcp-2026-07-28-to-claude
+sourceUrl: https://claude.com/resources/articles/bringing-mcp-2026-07-28-to-claude
 createdAt: 2026-07-28
 ---
 
-> 원문: [Bringing MCP 2026-07-28 to Claude](https://claude.com/blog/bringing-mcp-2026-07-28-to-claude) — Claude Blog
+> 원문: [Bringing MCP 2026-07-28 to Claude](https://claude.com/resources/articles/bringing-mcp-2026-07-28-to-claude) — Claude Blog
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-MCP(Model Context Protocol)의 다섯 번째 사양인 MCP 2026-07-28이 출시되었습니다. 이번 업데이트는 MCP를 무상태 핵심(stateless core)으로 전환하고, 인증을 강화하며, 공식 확장 기능을 졸업시켰습니다. 이러한 변경 사항은 Claude 제품 전반에 걸쳐 적용됩니다.
+MCP 2026-07-28은 모델 컨텍스트 프로토콜(MCP)의 다섯 번째 사양 릴리스로, 상태 비저장 코어로 전환하고 인증을 강화하며 공식 확장을 정식 출시합니다.
 
-주요 변경 사항은 다음과 같습니다.
-
--   **무상태 핵심 (Stateless core):** 기존의 양방향 상태 유지 프로토콜에서 요청/응답 모델로 변경되어 서버리스 및 엣지 인프라에 배포가 용이해졌습니다.
--   **표준화된 확장 기능 (Standardized extensions):** MCP Apps 및 Tasks가 버전 관리되는 확장 기능 프레임워크 하에 제공되어, 핵심 프로토콜 변경 없이도 인터랙티브 UI 및 장기 실행 작업과 같은 기능을 추가할 수 있게 되었습니다.
--   **강화된 인증 (Auth hardening):** OAuth 2.0 및 OIDC 표준에 맞춰 인증 기능이 강화되어, 엔터프라이즈 ID 시스템과의 연동이 간편해졌습니다.
-
-Claude는 950개 이상의 MCP 서버를 커넥터 디렉토리에 등록했으며, MCP Apps, 엔터프라이즈 관리 인증, 개발자 관찰 기능 등을 통해 MCP의 개발 및 배포를 지원하고 있습니다. 또한, 프라이빗 네트워크 내 MCP 서버 연결을 위한 MCP 터널(연구 미리보기) 기능도 제공합니다.
+*   **상태 비저장 코어:** MCP는 양방향 상태 유지 프로토콜에서 요청/응답 모델로 변경되어 서버리스 및 엣지 인프라 배포를 단순화합니다.
+*   **표준화된 확장 기능:** MCP Apps 및 Tasks는 버전이 지정된 확장 프레임워크를 통해 핵심 프로토콜 변경 없이 UI 및 장기 실행 작업과 같은 기능을 추가할 수 있습니다.
+*   **인증 강화:** OAuth 2.0 및 OIDC 표준을 준수하여 Entra 또는 Okta와 같은 엔터프라이즈 ID 시스템과의 연동을 지원합니다.
+*   **Claude 내 지원 강화:** MCP Apps, 엔터프라이즈 관리 인증, 개발자 관찰 기능, MCP 터널(연구 미리 보기)을 통해 Claude에서 MCP 서버를 더욱 쉽게 구축하고 배포할 수 있습니다.
 
 자세한 내용은 원문에서 확인하세요.

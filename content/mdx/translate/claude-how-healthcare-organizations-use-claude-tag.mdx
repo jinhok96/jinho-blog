@@ -1,19 +1,23 @@
 ---
 title: Claude Tag를 활용하는 의료 기관
-description: Claude Tag는 Slack에서 Claude를 팀원으로 활용하여 의료 기관의 업무 효율성을 높입니다.
+description: "Claude Tag는 Slack에서 Claude를 팀원으로 활용하여 의료 기관의 알림 분류, 내부 도구 유지보수, 규칙 질의응답 등 PHI를 다루지 않는 방식으로 업무 효율성을 높입니다."
 category: claude
-sourceUrl: https://claude.com/blog/how-healthcare-organizations-use-claude-tag
+sourceUrl: https://claude.com/resources/articles/how-healthcare-organizations-use-claude-tag
 createdAt: 2026-09-14
 ---
 
-> 원문: [How healthcare organizations use Claude Tag](https://claude.com/blog/how-healthcare-organizations-use-claude-tag) — Claude Blog
+> 원문: [How healthcare organizations use Claude Tag](https://claude.com/resources/articles/how-healthcare-organizations-use-claude-tag) — Claude Blog
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-- Claude Tag는 Slack에서 Claude를 팀원으로 활용하여 생산 알림 분류, 내부 도구 유지보수, 보험사 규정 관련 질문 답변 등 다양한 업무에 활용되고 있습니다.
-- Claude Tag는 Protected Health Information(PHI)를 직접 다루지 않는 채널 및 커넥터에서만 사용하도록 설정하여 데이터 보안을 강화할 수 있습니다.
-- Insight Health는 Claude Tag와 자체 개발한 에이전트 Zeus를 연동하여 생산 알림 대응 시간을 97% 단축했습니다.
-- Tennr는 Claude Tag를 활용하여 내부 도구 유지보수를 자동화하고, 비기술 직군도 코드 변경 및 배포를 직접 수행할 수 있도록 지원합니다.
-- Medallion은 Claude Tag를 통해 보험사 규정 관련 지식을 축적하고 공유하여, 도메인 전문가의 병목 현상을 해소하고 있습니다.
-- Claude Tag는 GitHub 등 외부 데이터 소스와 연동 시 할인 혜택을 제공하며, 2026년 10월 1일까지 유효합니다.
+Claude Tag는 Slack에서 Claude를 팀원으로 활용하여 의료 기관의 생산 알림 분류, 내부 도구 유지보수, 보험사 규칙 관련 질의응답 등에 사용됩니다. PHI(Protected Health Information)를 다루지 않는 채널 및 커넥터에서 활용되어, 관리자가 Claude Tag의 접근 범위를 제어하여 PHI 채널 및 시스템을 분리할 수 있습니다.
+
+- **PHI 없는 환경에서의 Claude Tag 활용**: Claude Tag는 기본적으로 비활성화되어 있으며, 승인된 채널에서만 활성화되고 커넥터는 채널별로 범위가 지정됩니다. Claude Tag는 워크스페이스 멤버가 보는 것만 읽으며, 초대되지 않은 비공개 채널에는 접근할 수 없습니다.
+- **접근 번들(Access bundles) 기능**: 코드베이스, 이슈 트래커와 같은 데이터 소스를 하나의 채널에 연결하는 동안 EHR, 임상 시스템, 환자 통신에는 접근할 수 없도록 격리할 수 있습니다.
+- **주요 활용 사례**:
+    - **Insight Health**: 생산 알림 분류, 티켓 생성 및 중복 제거, PR 검토, 문맥 유지 등에 Claude Tag를 활용하여 엔지니어의 업무 부담을 줄이고 97%의 알림이 엔지니어 개입 없이 종료되도록 했습니다.
+    - **Tennr**: Claude Tag를 내부 도구의 주요 유지보수자로 활용하여, 비기술 팀이 자연어 요청만으로 코드 변경, 배포, 유지보수를 수행할 수 있게 했습니다.
+    - **Medallion**: 보험사 규칙 관련 질문에 Claude Tag가 답변하도록 하여, 지식 사일로를 해소하고 전문 지식을 축적하고 있습니다.
+
+Claude Tag는 GitHub와 연동 시 엔터프라이즈 조직에는 $25,000, 팀 조직에는 $2,500의 크레딧을 제공합니다. (크레딧은 2026년 10월 1일에 만료됩니다.)
 
 자세한 내용은 원문에서 확인하세요.

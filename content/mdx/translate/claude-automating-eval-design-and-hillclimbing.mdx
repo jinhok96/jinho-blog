@@ -1,0 +1,19 @@
+---
+title: Claude를 이용한 평가 설계 및 힐클라임 자동화
+description: Claude API skill은 평가 설계 및 힐클라임을 자동화하여 애플리케이션 성능 향상을 지원합니다.
+category: claude
+sourceUrl: https://claude.dev/blog/automating-eval-design-and-hillclimbing/
+createdAt: 2026-09-28
+---
+
+> 원문: [Automating eval design and hillclimbing with Claude](https://claude.dev/blog/automating-eval-design-and-hillclimbing/) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude API skill은 애플리케이션 평가 설계와 성능 개선을 자동화하는 기능을 제공합니다. `/claude-api build-eval` 명령어를 사용하여 코드베이스 내에서 평가를 구축하고, `/claude-api hillclimb` 명령어로 과적합을 방지하기 위한 별도 데이터셋을 활용하여 점진적으로 성능을 개선할 수 있습니다.
+
+- **평가 설계 원칙**: 프로덕션 환경을 반영하고, 더 강력한 모델과 높은 노력 수준에서 성능이 향상되며, 100% 이하의 충분한 여유 공간을 가지고, 실행 간 편차가 낮은 평가가 중요합니다.
+- **`/claude-api build-eval`**: 프로덕션 데이터, 버그 리포트, 수동 작성 사례 등을 기반으로 Claude가 평가 입력을 생성하고, 프로그램 방식 또는 LLM-as-judge를 통해 채점자를 검증합니다.
+- **힐클라임 원칙**: 저렴하고 추적 가능한 변경이 가능하며, 범위가 잘 정의된 목표를 설정해야 하며, 과적합을 방지하기 위해 데이터셋 분할, 실패 사례 프롬프트 포함 금지, 정답의 구조적 접근 제한이 필요합니다.
+- **`/claude-api hillclimb`**: 시스템 프롬프트, 스킬, 도구 설명, 모델 선택 등 다양한 요소를 최적화하며, 훈련 및 테스트 세트로 나누어 과적합을 탐지하고 성능 또는 비용 목표를 달성합니다.
+
+자세한 내용은 원문에서 확인하세요.

@@ -1,25 +1,20 @@
 ---
-title: "Asana, Claude와 함께 인간-에이전트 팀을 구축하는 방법"
-description: Asana는 Work Graph 모델을 기반으로 AI 에이전트를 설계하여 인간 팀원과의 투명하고 책임감 있는 협업을 가능하게 합니다.
+title: "Asana, Claude 활용해 인간-에이전트 팀 구축 비결"
+description: Asana는 Claude AI를 활용하여 자체 Work Graph 모델 내에서 인간과 에이전트가 협력하는 팀 구축 방식을 소개합니다.
 category: claude
-sourceUrl: https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude
+sourceUrl: https://claude.com/resources/articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude
 createdAt: 2026-09-29
 ---
 
-> 원문: [Agents you can coach: how Asana builds human-agent teams with Claude](https://claude.com/blog/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude) — Claude Blog
+> 원문: [Agents you can coach: how Asana builds human-agent teams with Claude](https://claude.com/resources/articles/agents-you-can-coach-how-asana-builds-human-agent-teams-with-claude) — Claude Blog
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-Asana는 AI 에이전트가 인간 팀원과 동일한 Work Graph® 모델 내에서 작동하도록 설계했습니다. 이를 통해 에이전트는 정의된 역할, 할당된 작업, 메시지 읽기/쓰기, 활동 피드에 표시되는 등 인간 동료와 유사하게 협업할 수 있습니다.
+Asana는 Claude AI를 활용하여 인간과 에이전트가 협력하는 팀 구축 방식을 소개합니다. Asana의 Work Graph 모델은 모든 작업, 프로젝트, 목표, 대화를 관계망으로 매핑하며, AI 에이전트도 이 모델 내에서 인간 협업자와 동일하게 역할, 작업 할당, 메시지 교환 등을 수행합니다. Claude는 Asana 플랫폼과 Google Drive, Slack 등 다양한 업무 도구와 연동되어 unstructured data를 구조화하고, 명확한 다음 단계를 도출하는 데 사용됩니다.
 
-- **업무 구조화:** Asana 사용자는 Claude를 활용하여 비정형 데이터를 구조화하고, 아이디어를 구체화하며, 실행 가능한 항목을 Asana 프로젝트와 작업으로 전환합니다. 이후 AI 에이전트가 이러한 구조화된 작업을 처리합니다.
-- **역할 및 권한 부여:** 각 AI 에이전트는 특정 역할(예: 콘텐츠 작성자, 프로젝트 관리자)을 기반으로 구축되며, 필요한 기술과 Hubspot 또는 문서 드라이브와 같은 통합 기능을 갖습니다. 접근 권한은 프로젝트, 문서, 애플리케이션별로 세밀하게 제어되며, 에이전트의 접근 권한은 트리거한 사용자의 권한 범위로 제한됩니다.
-- **학습과 사용 분리:** AI 팀원은 공유 메모리를 통해 이전 지침을 기억하고 여러 사용자가 재사용할 수 있습니다. 다만, 영구 메모리에 피드백을 반영하거나 수정하는 것은 관리자 및 편집자만 가능하며, 일반 사용자의 피드백은 현재 작업에만 적용됩니다.
-- **업무 투명성 확보:** AI 팀원의 활동, 연구 계획, 수행 단계는 공유 작업에 게시되어 모든 팀원이 확인할 수 있습니다. 이를 통해 작업 흐름을 추적하고, 에이전트의 결과물을 검토하며, 필요에 따라 지침을 수정할 수 있습니다.
-
-Asana는 Claude를 기반으로 하는 AI 에이전트를 활용하여 다음과 같은 작업을 수행합니다.
-
-- **제품 질문 응답:** Slack 채널의 반복적인 제품 질문에 답변하거나, 필요한 경우 제품팀의 백로그에 새 작업을 생성합니다.
-- **위험 갱신 지원:** 고객 성공 데이터를 분석하여 위험 갱신에 대한 일일 요약을 생성하고, 경영진 및 지역별 리더에게 제공합니다.
-- **엔지니어링 주기 관리:** 고객 피드백을 종합하고 코딩 에이전트를 통해 풀 리퀘스트(PR)를 생성하는 엔지니어링 주기 관리 프로세스를 지원합니다.
+*   **업무 구조화 우선:** 에이전트가 행동하기 전에 먼저 아이디어를 Claude와 논의하여 명확한 다음 단계를 정의하고, 이를 Asana의 Work Graph에 구조화된 작업으로 기록합니다.
+*   **역할 기반 에이전트 부여:** 각 에이전트는 콘텐츠 작성자, 인사이트 분석가 등 특정 역할에 맞춰 사전 정의된 기술과 필요한 통합 기능을 갖추고, 명확한 접근 권한으로 운영됩니다.
+*   **학습과 작업 분리:** 에이전트의 학습은 관리자 및 편집자만 영구 기억에 반영할 수 있도록 하여, 모든 팀원이 에이전트와 상호작용하며 피드백을 제공할 수 있도록 합니다.
+*   **투명한 협업:** 에이전트의 작업 과정은 모든 팀원이 볼 수 있도록 투명하게 공유되어, 피드백 및 방향 수정이 용이합니다.
+*   **주요 활용 사례:** Asana는 Claude 기반 에이전트를 활용하여 Slack 채널의 제품 질문 응답, 위험 갱신 대상 임원 브리핑, 엔지니어링 주기 계획 등 다양한 업무에 적용하고 있습니다.
 
 자세한 내용은 원문에서 확인하세요.

@@ -1,0 +1,23 @@
+---
+title: Claude Sonnet 5.5 활용 가이드
+description: "Claude Sonnet 5.5 모델의 향상된 성능, 비용 효율성, 주요 변경 사항 및 활용 전략을 소개합니다."
+category: claude
+sourceUrl: https://claude.dev/blog/building-with-claude-sonnet-5-5/
+createdAt: 2026-09-28
+---
+
+> 원문: [Building with Claude Sonnet 5.5](https://claude.dev/blog/building-with-claude-sonnet-5-5/) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Sonnet 5.5은 이전 버전 대비 스마트하고 효율적이며 30% 더 빨라진 모델입니다. per-token 가격은 동일하지만, 동일한 작업을 더 적은 토큰으로 처리하여 실제 비용은 최대 30%까지 절감됩니다.
+
+-   **Sonnet 5.5 vs. Opus 5.5:** Sonnet 5.5는 버그 수정, 기능 개선 등 일상적인 작업에 적합하며, Opus 5.5는 복잡하고 신중한 판단이 필요한 작업에 사용됩니다.
+-   **비용 효율성:** Per-token 가격은 Sonnet 5와 동일하지만, 더 적은 토큰을 사용하므로 전반적인 비용이 절감됩니다.
+-   **주요 변경 사항:**
+    -   "thinking"의 기본값은 "adaptive"이며, "between_tools" 설정을 통해 도구 호출 간에만 생각하도록 비활성화할 수 있습니다.
+    -   `tool_choice`는 "auto"로 변경되었으며, 도구를 `strict: true`로 설정하고 프롬프트에서 사용 시점을 명시해야 합니다.
+    -   Sonnet 5.5는 `{"type": "computer_toolset_20260801"}`을 통해서만 컴퓨터 사용을 지원합니다.
+-   **튜닝 전략:** Effort level을 재조정하여 최적의 성능을 찾고, Sonnet 5의 기존 workaround를 제거하며, `thinking.display`를 사용하여 진행 상황을 효과적으로 표시합니다.
+-   **안전성 및 거부:** Sonnet 5.5는 향상된 안전 기능을 갖추고 있으며, 거부 시 `stop_reason`과 `stop_details`를 통해 사유를 확인할 수 있습니다.
+
+자세한 내용은 원문에서 확인하세요.

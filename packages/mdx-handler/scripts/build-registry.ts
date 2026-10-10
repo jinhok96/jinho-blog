@@ -381,6 +381,12 @@ export async function buildOgImage(
   const inputPath = path.join(paths.mediaRootDir, thumbnail.slice(paths.mediaRootUrl.length));
   const outputPath = path.join(paths.mediaDir(name), 'og', `${slug}.jpg`);
 
+  // `../`로 미디어 루트 밖 파일을 읽어 배포하지 않도록 차단
+  if (!inputPath.startsWith(`${paths.mediaRootDir}${path.sep}`)) {
+    console.warn(`⚠️  OG 이미지 생성 건너뜀 [${slug}]: 미디어 디렉토리 밖 경로 (${thumbnail})`);
+    return;
+  }
+
   try {
     await generateOgImage({ inputPath, outputPath });
     return `${paths.mediaUrl(name)}/og/${slug}.jpg`;

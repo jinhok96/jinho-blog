@@ -423,13 +423,16 @@ export async function buildCollectionEntries(
 
     const ogImage = await buildOgImage(thumbnail, name, slug, paths);
 
-    const now = new Date().toISOString();
+    // 날짜 우선순위: frontmatter → Git → (수정일은 발행일) → 빌드 시각
+    // Git 이력이 없는 빌드 환경에서도 수정일이 빌드마다 바뀌지 않도록 발행일로 고정
+    const createdAt = data.createdAt || gitDates.createdAt || new Date().toISOString();
+    const updatedAt = data.updatedAt || gitDates.updatedAt || createdAt;
 
     entries.push({
       slug,
       ...data,
-      createdAt: data.createdAt || gitDates.createdAt || now,
-      updatedAt: data.updatedAt || gitDates.updatedAt || now,
+      createdAt,
+      updatedAt,
       thumbnail,
       ogImage,
       content: transformImagePaths(content, mediaUrl),

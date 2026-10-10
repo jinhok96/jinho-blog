@@ -121,6 +121,7 @@ Agent 도구로 웨이브 단위 실행:
   - @.claude/shared.md
   - @.claude/mdx-handler.md
   - @.claude/nextjs-routes.md
+- Next.js API 작업 시 설치 버전 번들 문서 참조 → @apps/web/AGENTS.md (`next dev`가 자동 관리)
 
 # Skills
 

@@ -1,9 +1,16 @@
-import type { BaseMetadata, PaginatedResult, PaginationInfo, SortOption } from '@jinho-blog/shared';
+import type { PaginatedResult, PaginationInfo, SortOption } from '@jinho-blog/shared';
 
 import { DEFAULT_COUNT, DEFAULT_PAGE, DEFAULT_SORT } from '../../config';
 
+/** 정렬에 필요한 최소 필드 */
+export type SortableEntry = {
+  title: string;
+  createdAt: string;
+  updatedAt: string;
+};
+
 type SortOrder = 'asc' | 'desc';
-type CompareFn<T extends BaseMetadata> = (a: T, b: T) => number;
+type CompareFn<T extends SortableEntry> = (a: T, b: T) => number;
 
 function splitComma(str: string | null | undefined): string[] {
   if (!str) return [];
@@ -17,7 +24,7 @@ function splitComma(str: string | null | undefined): string[] {
  * 콘텐츠 정렬 (공통 함수)
  * 기본값: 최신순 (createdAt,desc)
  */
-export function sortContent<T extends BaseMetadata>(items: T[], sort: string | null | undefined): T[] {
+export function sortContent<T extends SortableEntry>(items: T[], sort: string | null | undefined): T[] {
   const createdAt: (order: SortOrder) => CompareFn<T> = order => (a, b) => {
     const result = new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime();
     return order === 'asc' ? result : -result;

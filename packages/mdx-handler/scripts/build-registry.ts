@@ -1,58 +1,79 @@
 /**
- * 빌드 타임에 MDX 레지스트리를 생성하는 스크립트
- * 모든 MDX 파일을 스캔하고 Git 히스토리를 추출하여 JSON으로 출력
+ * 빌드 타임에 MDX 레지스트리를 생성
+ * - 1단계: 모든 컬렉션의 MDX 파일을 스캔하고 frontmatter 스키마 검증 (실패 시 일괄 보고)
+ * - 2단계: Git 히스토리·썸네일·이미지 경로를 처리하여 JSON으로 출력
  */
 
-import { execSync } from 'child_process';
 import * as fs from 'fs';
-import matter from 'gray-matter';
 import * as path from 'path';
+
+import { execSync } from 'child_process';
+import matter from 'gray-matter';
 import { fileURLToPath } from 'url';
+import { z } from 'zod';
 
 import { generateOgImage, generateThumbnail } from '@jinho-blog/thumbnail-generator';
 
-import { MDX_ROUTES, PATHS, VIDEO_EXTENSIONS } from '../src/core/config';
-import { validateFrontmatter } from './validate-frontmatter.js';
-import type { ContentSection } from '../src/types';
+import {
+  type BaseFrontmatter,
+  type CollectionDefinition,
+  type CollectionMap,
+  type ContentConfig,
+  type GeneratedFields,
+} from '../src/core/collection';
+import { VIDEO_EXTENSIONS } from '../src/core/config';
+import { type ContentPaths, resolveContentPaths } from '../src/core/paths';
 
-interface ScannedFile {
+// Zod 검증 메시지 한국어 로케일
+z.config(z.locales.ko());
+
+type ScannedFile = {
   slug: string;
   filePath: string;
-}
+};
 
-interface GitDates {
+type GitDates = {
   createdAt?: string;
   updatedAt?: string;
-}
+};
 
-interface RegistryEntry {
-  slug: string;
-  filePath: string;
-  path: string;
-  [key: string]: unknown;
-}
+type GithubRepo = NonNullable<ContentConfig['github']>;
 
-interface Registry {
-  blog: RegistryEntry[];
-  projects: RegistryEntry[];
-  libraries: RegistryEntry[];
-  translate: RegistryEntry[];
-  generatedAt: string;
-}
+type GitDatesReader = (filePath: string) => Promise<GitDates>;
 
-const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries', 'translate'];
+type MdxParseResult = { success: true; data: BaseFrontmatter; content: string } | { success: false; issues: string[] };
+
+type ParsedMdxFile = ScannedFile & {
+  data: BaseFrontmatter;
+  content: string;
+};
+
+type ValidatedCollection = {
+  name: string;
+  definition: CollectionDefinition;
+  files: ParsedMdxFile[];
+};
 
 /**
- * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
+ * 레지스트리 JSON에 저장되는 항목 (스키마 출력 + 생성 필드)
  */
-function findMonorepoRoot(): string {
-  let currentDir = process.cwd();
+type RegistryEntry = BaseFrontmatter & GeneratedFields;
+
+/**
+ * 모노레포 루트 찾기 (pnpm-workspace.yaml 또는 package.json에 workspaces가 있는 디렉토리)
+ */
+export function findMonorepoRoot(startDir: string = process.cwd()): string {
+  let currentDir = startDir;
 
   while (currentDir !== path.parse(currentDir).root) {
+    if (fs.existsSync(path.join(currentDir, 'pnpm-workspace.yaml'))) {
+      return currentDir;
+    }
+
     const pkgPath = path.join(currentDir, 'package.json');
 
     if (fs.existsSync(pkgPath)) {
-      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
+      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8')) as { workspaces?: unknown };
       if (pkg.workspaces) {
         return currentDir;
       }
@@ -61,20 +82,14 @@ function findMonorepoRoot(): string {
     currentDir = path.dirname(currentDir);
   }
 
-  // fallback: 스크립트가 packages/mdx-handler/scripts에 있다고 가정
-  return path.join(fileURLToPath(new URL('../../..', import.meta.url)));
+  // fallback: 이 파일이 packages/mdx-handler/scripts에 있다고 가정
+  return path.resolve(fileURLToPath(new URL('../../..', import.meta.url)));
 }
-
-const MONOREPO_ROOT = findMonorepoRoot();
-
-// GitHub repository 정보
-const GITHUB_OWNER = 'jinhok96';
-const GITHUB_REPO = 'jinho-blog';
 
 /**
  * GitHub API로 파일의 커밋 히스토리 조회
  */
-async function getGitDatesFromAPI(filePath: string): Promise<GitDates> {
+export async function getGitDatesFromAPI(filePath: string, github: GithubRepo, repoRoot: string): Promise<GitDates> {
   const token = process.env.GITHUB_TOKEN;
 
   if (!token) {
@@ -84,14 +99,14 @@ async function getGitDatesFromAPI(filePath: string): Promise<GitDates> {
 
   try {
     // 파일 경로를 repository root 기준 상대 경로로 변환
-    const relativePath = path.relative(MONOREPO_ROOT, filePath).replace(/\\/g, '/');
+    const relativePath = path.relative(repoRoot, filePath).replace(/\\/g, '/');
 
     // Vercel 배포 브랜치 또는 기본 브랜치 사용
     const branch = process.env.VERCEL_GIT_COMMIT_REF || 'main';
 
-    // GitHub API로 커밋 히스토리 조회 (oldest first)
+    // GitHub API로 커밋 히스토리 조회 (newest first)
     const response = await fetch(
-      `https://api.github.com/repos/${GITHUB_OWNER}/${GITHUB_REPO}/commits?path=${relativePath}&sha=${branch}&per_page=100`,
+      `https://api.github.com/repos/${github.owner}/${github.repo}/commits?path=${relativePath}&sha=${branch}&per_page=100`,
       {
         headers: {
           Authorization: `token ${token}`,
@@ -130,7 +145,7 @@ async function getGitDatesFromAPI(filePath: string): Promise<GitDates> {
 /**
  * 로컬 Git 명령으로 파일의 생성/수정 날짜 추출
  */
-function getGitDatesFromLocal(filePath: string): GitDates {
+export function getGitDatesFromLocal(filePath: string): GitDates {
   try {
     // 첫 커밋 날짜 (createdAt)
     const createdAt = execSync(`git log --follow --format=%aI --reverse "${filePath}" | head -1`, {
@@ -154,32 +169,29 @@ function getGitDatesFromLocal(filePath: string): GitDates {
 }
 
 /**
- * Git 히스토리에서 파일의 생성/수정 날짜 추출
- * Vercel 환경: GitHub API 사용
- * 로컬 환경: Git 명령 사용
+ * Git 날짜 조회 함수 생성
+ * - Vercel 환경 + GITHUB_TOKEN + config.github: GitHub API 사용 (얕은 clone 대응)
+ * - 그 외: 로컬 Git 명령 사용
  */
-async function getGitDates(filePath: string): Promise<GitDates> {
-  // Vercel 환경이고 GitHub token이 있으면 API 사용
-  if (process.env.VERCEL && process.env.GITHUB_TOKEN) {
-    return await getGitDatesFromAPI(filePath);
+export function createGitDatesReader(github?: GithubRepo): GitDatesReader {
+  if (process.env.VERCEL && process.env.GITHUB_TOKEN && github) {
+    const repoRoot = findMonorepoRoot();
+    return filePath => getGitDatesFromAPI(filePath, github, repoRoot);
   }
 
-  // 로컬 환경에서는 git 명령 사용
-  return getGitDatesFromLocal(filePath);
+  return async filePath => getGitDatesFromLocal(filePath);
 }
 
 /**
- * MDX 콘텐츠의 이미지 경로를 Next.js static 경로로 변환
+ * MDX 콘텐츠의 상대 이미지 경로를 컬렉션 미디어 URL로 변환
  */
-function transformImagePaths(content: string, section: ContentSection | null): string {
-  if (!section) return content;
-
+export function transformImagePaths(content: string, mediaUrl: string): string {
   // 인라인 이미지: ![alt](./path)
-  let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${PATHS.STATIC_MDX_URL}/${section}/$2)`);
+  let result = content.replace(/!\[([^\]]*)\]\(\.\/([^)]+)\)/g, `![$1](${mediaUrl}/$2)`);
   // 레퍼런스 스타일 정의: [ref]: ./path
-  result = result.replace(/^(\[[^\]]+\]):\s*\.\/([\S]+)/gm, `$1: ${PATHS.STATIC_MDX_URL}/${section}/$2`);
+  result = result.replace(/^(\[[^\]]+\]):\s*\.\/([\S]+)/gm, `$1: ${mediaUrl}/$2`);
   // HTML 태그 src="./path" 변환 (video, source 등)
-  result = result.replace(/\bsrc="\.\/([^"]+)"/g, `src="${PATHS.STATIC_MDX_URL}/${section}/$1"`);
+  result = result.replace(/\bsrc="\.\/([^"]+)"/g, `src="${mediaUrl}/$1"`);
   return result;
 }
 
@@ -190,25 +202,18 @@ function isVideoPath(url: string): boolean {
 }
 
 /**
- * MDX 콘텐츠에서 첫 번째 이미지 경로 추출
+ * 썸네일 경로 추출 (frontmatter thumbnail → 콘텐츠 첫 이미지)
  */
-function extractFirstImage(
-  frontmatter: Record<string, unknown>,
+export function extractFirstImage(
+  thumbnail: string | undefined,
   content: string,
-  section: ContentSection | null,
+  mediaUrl: string,
 ): string | undefined {
   // 1. frontmatter에 thumbnail이 명시되어 있으면 우선 사용
-  if (frontmatter.thumbnail && typeof frontmatter.thumbnail === 'string') {
-    const thumbnail = frontmatter.thumbnail;
-
-    // 외부 URL이면 그대로 반환
-    if (thumbnail.startsWith('http://') || thumbnail.startsWith('https://')) {
-      return thumbnail;
-    }
-
-    // 상대 경로 ./로 시작하면 절대 경로로 변환
-    if (thumbnail.startsWith('./') && section) {
-      return thumbnail.replace('./', `${PATHS.STATIC_MDX_URL}/${section}/`);
+  if (thumbnail) {
+    // 상대 경로 ./로 시작하면 미디어 URL로 변환 (외부 URL·절대 경로는 그대로)
+    if (thumbnail.startsWith('./')) {
+      return thumbnail.replace('./', `${mediaUrl}/`);
     }
 
     return thumbnail;
@@ -252,18 +257,14 @@ function extractFirstImage(
 
   const inlinePos = inlineMatch?.index ?? Infinity;
 
-  if (inlinePos !== Infinity || refUsagePos !== Infinity) {
-    if (section) {
-      if (refUsagePos < inlinePos && refId) {
-        // 레퍼런스 방식 이미지가 더 앞에 위치
-        const refPath = refDefMap[refId];
-        if (refPath && !isVideoPath(refPath)) {
-          return `${PATHS.STATIC_MDX_URL}/${section}/${refPath}`;
-        }
-      } else if (inlineMatch && !isVideoPath(inlineMatch[2])) {
-        return `${PATHS.STATIC_MDX_URL}/${section}/${inlineMatch[2]}`;
-      }
+  if (refUsagePos < inlinePos && refId) {
+    // 레퍼런스 방식 이미지가 더 앞에 위치
+    const refPath = refDefMap[refId];
+    if (refPath && !isVideoPath(refPath)) {
+      return `${mediaUrl}/${refPath}`;
     }
+  } else if (inlineMatch && !isVideoPath(inlineMatch[2])) {
+    return `${mediaUrl}/${inlineMatch[2]}`;
   }
 
   // 외부 URL 이미지도 추출 (video URL 제외)
@@ -278,127 +279,23 @@ function extractFirstImage(
 }
 
 /**
- * MDX 파일 파싱 및 메타데이터 + 콘텐츠 추출
+ * 디렉토리의 .mdx 파일 스캔 (하위 디렉토리 제외)
  */
-async function parseMdxFile(filePath: string, section: ContentSection): Promise<Record<string, unknown>> {
-  const fileContent = fs.readFileSync(filePath, 'utf-8');
-  const { data, content } = matter(fileContent);
-
-  // Frontmatter 검증
-  const validation = validateFrontmatter(data, section);
-  if (!validation.valid) {
-    const errorMessages = validation.errors.map(e => `  - ${e.field}: ${e.message}`).join('\n');
-    throw new Error(`Frontmatter 검증 실패 [${path.basename(filePath)}]:\n${errorMessages}`);
-  }
-
-  // Git에서 날짜 추출
-  const gitDates = await getGitDates(filePath);
-
-  // 썸네일 추출 (우선순위: frontmatter → 첫 이미지)
-  const thumbnail = extractFirstImage(data, content, section);
-
-  // 이미지 경로 변환
-  const transformedContent = transformImagePaths(content, section);
-
-  // 메타데이터 + 콘텐츠 생성
-  const now = new Date().toISOString();
-  const metadata = {
-    ...data,
-    createdAt: data.createdAt || gitDates.createdAt || now,
-    updatedAt: data.updatedAt || gitDates.updatedAt || now,
-    thumbnail,
-    content: transformedContent, // 변환된 MDX 콘텐츠 포함
-  };
-
-  return metadata;
-}
-
-/**
- * 로컬 썸네일(WebP)을 링크 미리보기용 OG 이미지(JPEG, 1200x630)로 변환
- * 외부 URL 썸네일이나 변환 실패 시 undefined를 반환하여 원본 썸네일을 그대로 사용하게 한다
- */
-async function buildOgImage(thumbnail: unknown, section: ContentSection, slug: string): Promise<string | undefined> {
-  if (typeof thumbnail !== 'string' || !thumbnail.startsWith(`${PATHS.STATIC_MDX_URL}/`)) return;
-
-  const inputPath = path.join(MONOREPO_ROOT, PATHS.PUBLIC_STATIC_MDX_DIR, thumbnail.slice(PATHS.STATIC_MDX_URL.length));
-  const outputPath = path.join(MONOREPO_ROOT, PATHS.PUBLIC_STATIC_MDX_DIR, section, 'og', `${slug}.jpg`);
-
-  try {
-    await generateOgImage({ inputPath, outputPath });
-    return `${PATHS.STATIC_MDX_URL}/${section}/og/${slug}.jpg`;
-  } catch (error) {
-    console.warn(`⚠️  OG 이미지 생성 실패 [${slug}]: ${(error as Error).message}`);
-    return;
-  }
-}
-
-/**
- * 특정 섹션의 레지스트리 생성
- */
-async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> {
-  console.log(`📝 Building registry for section: ${section}`);
-
-  const files = scanMdxDirectory(section);
-  const entries: RegistryEntry[] = [];
-  let generatedCount = 0;
-
-  for (const file of files) {
-    console.log(`  - Processing: ${file.slug}`);
-    const metadata = await parseMdxFile(file.filePath, section);
-
-    if ((section === 'blog' || section === 'translate') && !metadata.thumbnail) {
-      const outputPath = path.join(
-        MONOREPO_ROOT,
-        PATHS.PUBLIC_STATIC_MDX_DIR,
-        section,
-        'generated',
-        `${file.slug}.webp`,
-      );
-      await generateThumbnail({ title: metadata.title as string, outputPath });
-      metadata.thumbnail = `${PATHS.STATIC_MDX_URL}/${section}/generated/${file.slug}.webp`;
-      generatedCount++;
-    }
-
-    const ogImage = await buildOgImage(metadata.thumbnail, section, file.slug);
-    if (ogImage) metadata.ogImage = ogImage;
-
-    entries.push({
-      slug: file.slug,
-      ...metadata,
-      filePath: file.filePath,
-      path: `${MDX_ROUTES[section]}/${file.slug}`,
-    });
-  }
-
-  if (generatedCount > 0) {
-    console.log(`📷 ${generatedCount}개 썸네일 생성 완료`);
-  }
-  console.log(`✅ Built ${entries.length} entries for ${section}\n`);
-  return entries;
-}
-
-/**
- * MDX 디렉토리를 스캔하여 모든 .mdx 파일 찾기
- */
-function scanMdxDirectory(section: ContentSection): ScannedFile[] {
-  const mdxDir = path.join(MONOREPO_ROOT, PATHS.MDX_CONTENT_DIR, section);
+export function scanMdxDirectory(dir: string): ScannedFile[] {
   const files: ScannedFile[] = [];
 
-  if (!fs.existsSync(mdxDir)) {
-    console.warn(`⚠️  Warning: MDX directory not found: ${mdxDir}`);
+  if (!fs.existsSync(dir)) {
+    console.warn(`⚠️  Warning: MDX directory not found: ${dir}`);
     return files;
   }
 
-  const items = fs.readdirSync(mdxDir, { withFileTypes: true });
+  const items = fs.readdirSync(dir, { withFileTypes: true });
 
   for (const item of items) {
     if (item.isFile() && item.name.endsWith('.mdx')) {
-      const fullPath = path.join(mdxDir, item.name);
-      const slug = item.name.replace(/\.mdx$/, '');
-
       files.push({
-        slug,
-        filePath: fullPath,
+        slug: item.name.replace(/\.mdx$/, ''),
+        filePath: path.join(dir, item.name),
       });
     }
   }
@@ -407,67 +304,178 @@ function scanMdxDirectory(section: ContentSection): ScannedFile[] {
 }
 
 /**
- * 전체 레지스트리 빌드
+ * MDX 파일 파싱 + frontmatter 스키마 검증
  */
-async function buildAllRegistries(): Promise<void> {
+export function parseMdxFile(filePath: string, schema: CollectionDefinition['schema']): MdxParseResult {
+  let parsed: matter.GrayMatterFile<string>;
+
+  try {
+    parsed = matter(fs.readFileSync(filePath, 'utf-8'));
+  } catch (error) {
+    const message = error instanceof Error ? error.message : String(error);
+    return { success: false, issues: [`(root): frontmatter 파싱 실패: ${message}`] };
+  }
+
+  const result = schema.safeParse(parsed.data);
+
+  if (!result.success) {
+    const issues = result.error.issues.map(issue => {
+      const field = issue.path.length > 0 ? issue.path.map(String).join('.') : '(root)';
+      return `${field}: ${issue.message}`;
+    });
+    return { success: false, issues };
+  }
+
+  return { success: true, data: result.data, content: parsed.content };
+}
+
+/**
+ * 1단계: 모든 컬렉션의 MDX 파일을 파싱·검증
+ * - 실패한 파일·이슈를 모두 모아 하나의 에러로 throw
+ */
+export function validateCollections(collections: CollectionMap, paths: ContentPaths): ValidatedCollection[] {
+  console.log('🔍 Validating frontmatter...');
+
+  const validated: ValidatedCollection[] = [];
+  const failures: string[] = [];
+  let fileCount = 0;
+
+  for (const [name, definition] of Object.entries(collections)) {
+    const files: ParsedMdxFile[] = [];
+
+    for (const file of scanMdxDirectory(paths.collectionDir(name))) {
+      fileCount++;
+      const result = parseMdxFile(file.filePath, definition.schema);
+
+      if (result.success) {
+        files.push({ ...file, data: result.data, content: result.content });
+      } else {
+        const issues = result.issues.map(issue => `  - ${issue}`).join('\n');
+        failures.push(`[${name}/${path.basename(file.filePath)}]\n${issues}`);
+      }
+    }
+
+    validated.push({ name, definition, files });
+  }
+
+  if (failures.length > 0) {
+    throw new Error(`Frontmatter 검증 실패 (${failures.length}개 파일)\n${failures.join('\n')}`);
+  }
+
+  console.log(`✅ Validated ${fileCount} files\n`);
+  return validated;
+}
+
+/**
+ * 로컬 썸네일(WebP)을 링크 미리보기용 OG 이미지(JPEG, 1200x630)로 변환
+ * 외부 URL 썸네일이나 변환 실패 시 undefined를 반환하여 원본 썸네일을 그대로 사용하게 한다
+ */
+export async function buildOgImage(
+  thumbnail: string | undefined,
+  name: string,
+  slug: string,
+  paths: ContentPaths,
+): Promise<string | undefined> {
+  if (!thumbnail?.startsWith(`${paths.mediaRootUrl}/`)) return;
+
+  const inputPath = path.join(paths.mediaRootDir, thumbnail.slice(paths.mediaRootUrl.length));
+  const outputPath = path.join(paths.mediaDir(name), 'og', `${slug}.jpg`);
+
+  try {
+    await generateOgImage({ inputPath, outputPath });
+    return `${paths.mediaUrl(name)}/og/${slug}.jpg`;
+  } catch (error) {
+    console.warn(`⚠️  OG 이미지 생성 실패 [${slug}]: ${(error as Error).message}`);
+    return;
+  }
+}
+
+/**
+ * 2단계: 검증된 컬렉션의 레지스트리 항목 생성
+ */
+export async function buildCollectionEntries(
+  { name, definition, files }: ValidatedCollection,
+  paths: ContentPaths,
+  readGitDates: GitDatesReader,
+): Promise<RegistryEntry[]> {
+  console.log(`📝 Building registry for collection: ${name}`);
+
+  const mediaUrl = paths.mediaUrl(name);
+  const entries: RegistryEntry[] = [];
+  let generatedCount = 0;
+
+  for (const { slug, filePath, data, content } of files) {
+    console.log(`  - Processing: ${slug}`);
+
+    // Git에서 날짜 추출
+    const gitDates = await readGitDates(filePath);
+
+    // 썸네일 추출 (우선순위: frontmatter → 첫 이미지)
+    let thumbnail = extractFirstImage(data.thumbnail, content, mediaUrl);
+
+    // 이미지가 없으면 제목으로 썸네일 생성
+    if (definition.generateThumbnail && !thumbnail) {
+      const outputPath = path.join(paths.mediaDir(name), 'generated', `${slug}.webp`);
+      await generateThumbnail({ title: data.title, outputPath });
+      thumbnail = `${mediaUrl}/generated/${slug}.webp`;
+      generatedCount++;
+    }
+
+    const ogImage = await buildOgImage(thumbnail, name, slug, paths);
+
+    const now = new Date().toISOString();
+
+    entries.push({
+      slug,
+      ...data,
+      createdAt: data.createdAt || gitDates.createdAt || now,
+      updatedAt: data.updatedAt || gitDates.updatedAt || now,
+      thumbnail,
+      ogImage,
+      content: transformImagePaths(content, mediaUrl),
+      filePath,
+      path: `${definition.route}/${slug}`,
+    });
+  }
+
+  if (generatedCount > 0) {
+    console.log(`📷 ${generatedCount}개 썸네일 생성 완료`);
+    console.log(`📁 대상 경로: ${path.join(paths.mediaDir(name), 'generated')}`);
+  }
+  console.log(`✅ Built ${entries.length} entries for ${name}\n`);
+  return entries;
+}
+
+/**
+ * 콘텐츠 설정 기반 레지스트리 빌드
+ * - 경로는 process.cwd()(앱 루트) 기준
+ * - frontmatter 검증 실패 시 Git 조회·썸네일 생성 전에 에러 throw
+ */
+export async function buildContentRegistry<TCollections extends CollectionMap>(
+  config: ContentConfig<TCollections>,
+): Promise<void> {
   console.log('🚀 Starting registry build...\n');
 
-  const registry: Record<ContentSection, RegistryEntry[]> = {
-    blog: [],
-    projects: [],
-    libraries: [],
-    translate: [],
-  };
+  const paths = resolveContentPaths(config);
 
-  for (const section of SECTIONS) {
-    registry[section] = await buildRegistry(section);
-  }
+  // 1단계: 전체 파일 검증
+  const collections = validateCollections(config.collections, paths);
 
-  const totalGenerated = registry.blog.filter(e => (e.thumbnail as string | undefined)?.includes('/generated/')).length;
-  if (totalGenerated > 0) {
-    console.log(`📷 총 ${totalGenerated}개 썸네일 생성 완료`);
-    console.log(`📁 대상 경로: ${path.join(PATHS.PUBLIC_STATIC_MDX_DIR, 'blog', 'generated')}\n`);
-  }
+  // 2단계: 레지스트리 항목 생성
+  const readGitDates = createGitDatesReader(config.github);
+  const registry: Record<string, RegistryEntry[]> = {};
 
-  // 출력 디렉토리 생성
-  const outputPath = path.join(MONOREPO_ROOT, PATHS.REGISTRY_JSON);
-  const outputDir = path.dirname(outputPath);
-  if (!fs.existsSync(outputDir)) {
-    fs.mkdirSync(outputDir, { recursive: true });
+  for (const collection of collections) {
+    registry[collection.name] = await buildCollectionEntries(collection, paths, readGitDates);
   }
 
   // JSON 파일 생성
-  const registryWithTimestamp: Registry = {
-    ...registry,
-    generatedAt: new Date().toISOString(),
-  };
+  fs.mkdirSync(path.dirname(paths.registryFile), { recursive: true });
+  fs.writeFileSync(paths.registryFile, JSON.stringify({ ...registry, generatedAt: new Date().toISOString() }, null, 2));
 
-  fs.writeFileSync(outputPath, JSON.stringify(registryWithTimestamp, null, 2));
+  const summary = collections.map(({ name }) => `${name}=${registry[name].length}`).join(', ');
 
   console.log(`✨ Registry built successfully!`);
-  console.log(`📦 Output: ${outputPath}`);
-  console.log(
-    `📊 Total entries: blog=${registry.blog.length}, projects=${registry.projects.length}, libraries=${registry.libraries.length}, translate=${registry.translate.length}`,
-  );
-}
-
-export {
-  buildAllRegistries,
-  buildOgImage,
-  buildRegistry,
-  extractFirstImage,
-  getGitDates,
-  getGitDatesFromAPI,
-  getGitDatesFromLocal,
-  parseMdxFile,
-  scanMdxDirectory,
-  transformImagePaths,
-};
-
-// 스크립트 실행
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  buildAllRegistries().catch(error => {
-    console.error('❌ Registry build failed:', error);
-    process.exit(1);
-  });
+  console.log(`📦 Output: ${paths.registryFile}`);
+  console.log(`📊 Total entries: ${summary}`);
 }

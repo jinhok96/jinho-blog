@@ -39,6 +39,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: library.description,
     type: 'article',
     thumbnail: library.thumbnail,
+    ogImage: library.ogImage,
     keywords: [TECH_STACK_MAP[library.category as TechStack], ...library.tech],
     publishedTime: library.createdAt,
     modifiedTime: library.updatedAt,

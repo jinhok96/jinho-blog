@@ -9,7 +9,7 @@ import matter from 'gray-matter';
 import * as path from 'path';
 import { fileURLToPath } from 'url';
 
-import { generateThumbnail } from '@jinho-blog/thumbnail-generator';
+import { generateOgImage, generateThumbnail } from '@jinho-blog/thumbnail-generator';
 
 import { MDX_ROUTES, PATHS, VIDEO_EXTENSIONS } from '../src/core/config';
 import { validateFrontmatter } from './validate-frontmatter.js';
@@ -314,6 +314,25 @@ async function parseMdxFile(filePath: string, section: ContentSection): Promise<
 }
 
 /**
+ * 로컬 썸네일(WebP)을 링크 미리보기용 OG 이미지(JPEG, 1200x630)로 변환
+ * 외부 URL 썸네일이나 변환 실패 시 undefined를 반환하여 원본 썸네일을 그대로 사용하게 한다
+ */
+async function buildOgImage(thumbnail: unknown, section: ContentSection, slug: string): Promise<string | undefined> {
+  if (typeof thumbnail !== 'string' || !thumbnail.startsWith(`${PATHS.STATIC_MDX_URL}/`)) return;
+
+  const inputPath = path.join(MONOREPO_ROOT, PATHS.PUBLIC_STATIC_MDX_DIR, thumbnail.slice(PATHS.STATIC_MDX_URL.length));
+  const outputPath = path.join(MONOREPO_ROOT, PATHS.PUBLIC_STATIC_MDX_DIR, section, 'og', `${slug}.jpg`);
+
+  try {
+    await generateOgImage({ inputPath, outputPath });
+    return `${PATHS.STATIC_MDX_URL}/${section}/og/${slug}.jpg`;
+  } catch (error) {
+    console.warn(`⚠️  OG 이미지 생성 실패 [${slug}]: ${(error as Error).message}`);
+    return;
+  }
+}
+
+/**
  * 특정 섹션의 레지스트리 생성
  */
 async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> {
@@ -339,6 +358,9 @@ async function buildRegistry(section: ContentSection): Promise<RegistryEntry[]> 
       metadata.thumbnail = `${PATHS.STATIC_MDX_URL}/${section}/generated/${file.slug}.webp`;
       generatedCount++;
     }
+
+    const ogImage = await buildOgImage(metadata.thumbnail, section, file.slug);
+    if (ogImage) metadata.ogImage = ogImage;
 
     entries.push({
       slug: file.slug,
@@ -431,6 +453,7 @@ async function buildAllRegistries(): Promise<void> {
 
 export {
   buildAllRegistries,
+  buildOgImage,
   buildRegistry,
   extractFirstImage,
   getGitDates,

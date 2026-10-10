@@ -465,7 +465,8 @@ export async function buildContentRegistry<TCollections extends CollectionMap>(
   const collections = validateCollections(config.collections, paths);
 
   // 2단계: 레지스트리 항목 생성
-  const readGitDates = createGitDatesReader(config.github);
+  const readGitDates: GitDatesReader =
+    config.gitDates === false ? async () => ({}) : createGitDatesReader(config.github);
   const registry: Record<string, RegistryEntry[]> = {};
 
   for (const collection of collections) {

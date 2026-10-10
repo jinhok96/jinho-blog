@@ -40,6 +40,12 @@ export type ContentConfig<TCollections extends CollectionMap = CollectionMap> = 
   registryFile?: string;
   /** Vercel 빌드에서 GitHub API로 커밋 날짜를 조회할 저장소 */
   github?: { owner: string; repo: string };
+  /**
+   * Git 커밋 날짜를 createdAt·updatedAt 대체값으로 사용 (기본값: true)
+   * - false: frontmatter 날짜만 사용 (수정일 미지정 시 발행일)
+   * - 얕은 클론으로 빌드하는 호스트에서는 Git 날짜가 최신 커밋 날짜로 일괄 바뀌므로 false 권장
+   */
+  gitDates?: boolean;
   collections: TCollections;
 };
 

@@ -1,4 +1,4 @@
-import type { Translate } from '@jinho-blog/mdx-handler';
+import type { Translate } from '@/entities/translate';
 
 import { type PaginatedResult, TRANSLATE_CATEGORY_MAP } from '@jinho-blog/shared';
 

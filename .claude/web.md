@@ -28,10 +28,10 @@ App (최상위)
 
 ```typescript
 // ✅ Good - Public API
-import { getBlogPosts } from '@/entities/blog';
+import { createBlogService } from '@/entities/blog';
 
 // ❌ Bad - Segment 직접 접근
-import { getBlogPosts } from '@/entities/blog/service/service';
+import { createBlogService } from '@/entities/blog/service/service';
 
 // ❌ Bad - 같은 레이어 다른 Slice
 // src/entities/blog/...
@@ -46,7 +46,7 @@ ESLint 자동 정렬 (`pnpm lint`):
 
 ```typescript
 // 1. Type-only imports
-import type { BlogMetadata } from '@jinho-blog/shared';
+import type { BlogCategory } from '@jinho-blog/shared';
 import type { Blog } from '@/entities/blog';
 
 // 2. React & Next.js
@@ -57,7 +57,7 @@ import Link from 'next/link';
 import { motion } from 'motion';
 
 // 4. Internal packages (@jinho-blog/*)
-import { getBlogPosts } from '@jinho-blog/mdx-handler';
+import { sortContent } from '@jinho-blog/mdx-handler';
 import { routes } from '@jinho-blog/nextjs-routes';
 
 // 5. Absolute imports (@/)
@@ -113,7 +113,24 @@ import { buttonVariants } from '@/core/ui/button/variants';
 pnpm --filter @jinho-blog/web dev    # 개발 서버 (포트 3401)
 pnpm --filter @jinho-blog/web build  # 빌드
 pnpm --filter @jinho-blog/web lint   # lint + 자동 수정
+pnpm --filter @jinho-blog/web registry  # 미디어 복사 + registry.json 생성 (dev/build 시 자동 실행)
 ```
+
+## 콘텐츠 (MDX 컬렉션)
+
+[apps/web/src/core/content](apps/web/src/core/content) — `@jinho-blog/mdx-handler` 컬렉션 API로 사이트 콘텐츠 정의 → [mdx-handler.md](.claude/mdx-handler.md)
+
+| 파일 | 역할 |
+| --- | --- |
+| `internal/schemas.ts` | 컬렉션별 frontmatter Zod 스키마 (`frontmatterSchema.extend`, strict) |
+| `internal/config.ts` | `contentConfig`: 컬렉션 경로·스키마·썸네일/미디어 정책 |
+| `internal/reader.ts` | `contentReader`, 항목 타입 `ContentEntryOf<'blog'>` |
+
+- 항목 타입은 스키마에서 추론 → 각 entities 슬라이스가 `Blog`/`Project`/`Library`/`Translate`로 export
+- 조회 로직은 `entities/*/service`에서 `contentReader.getEntries()` + mdx-handler 콘텐츠 유틸 사용
+- frontmatter 필드 추가·변경은 `schemas.ts`만 수정 (스키마에 없는 키는 빌드 에러)
+- `reader.ts`의 registry.json 경로는 리터럴 유지 (Turbopack 파일 트레이싱), `contentConfig.staticDir`과 일치 여부는 `reader.test.ts`에서 검증
+- `config.ts`/`schemas.ts`는 `scripts/registry.ts`(tsx)도 import → `@/` 별칭 사용 금지
 
 ## 에러 바운더리
 

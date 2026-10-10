@@ -1,4 +1,4 @@
-import type { Library } from '@jinho-blog/mdx-handler';
+import type { Library } from '@/entities/libraries';
 
 import { type PaginatedResult, TECH_STACK_MAP, type TechStack } from '@jinho-blog/shared';
 

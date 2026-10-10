@@ -4,6 +4,7 @@ import localFont from 'next/font/local';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 
+import { SITE_NAME } from '@/core/config';
 import { INIT_THEME_SCRIPT, ThemeStoreProvider } from '@/core/store';
 import { LinkButton } from '@/core/ui';
 import { cn } from '@/core/utils';
@@ -17,7 +18,7 @@ const pretendard = localFont({
 });
 
 export const metadata: Metadata = {
-  title: '404 - Page Not Found',
+  title: `페이지를 찾을 수 없습니다 | ${SITE_NAME}`,
 };
 
 export default function GlobalNotFound() {

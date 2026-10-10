@@ -1,8 +1,16 @@
 import type { MetadataRoute } from 'next';
 
-import { getBlogPosts, getLibraries, getProjects, getTranslatePosts } from '@jinho-blog/mdx-handler';
-
 import { SITE_URL } from '@/core/config';
+
+import { createBlogService } from '@/entities/blog';
+import { createLibrariesService } from '@/entities/libraries';
+import { createProjectsService } from '@/entities/projects';
+import { createTranslateService } from '@/entities/translate';
+
+const blogService = createBlogService();
+const projectsService = createProjectsService();
+const librariesService = createLibrariesService();
+const translateService = createTranslateService();
 
 type ContentItem = {
   path: string;
@@ -12,10 +20,10 @@ type ContentItem = {
 
 async function fetchAllContent() {
   const [blogData, projectsData, librariesData, translateData] = await Promise.all([
-    getBlogPosts({ count: 1000 }),
-    getProjects({ count: 1000 }),
-    getLibraries({ count: 1000 }),
-    getTranslatePosts({ count: 1000 }),
+    blogService.getBlogPosts({ count: '1000' }),
+    projectsService.getProjects({ count: '1000' }),
+    librariesService.getLibraries({ count: '1000' }),
+    translateService.getTranslatePosts({ count: '1000' }),
   ]);
 
   return {

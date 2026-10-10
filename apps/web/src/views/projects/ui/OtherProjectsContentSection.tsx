@@ -1,6 +1,6 @@
 'use client';
 
-import type { Project } from '@jinho-blog/mdx-handler';
+import type { Project } from '@/entities/projects';
 
 import { PROJECT_CATEGORY_MAP, type ProjectCategory } from '@jinho-blog/shared';
 

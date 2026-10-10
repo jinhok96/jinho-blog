@@ -1,5 +1,8 @@
-import type { Project } from '@jinho-blog/mdx-handler';
+import type { ContentEntryOf } from '@/core/content';
 import type { PaginatedResult, ProjectCategory, SortOption, TechStack } from '@jinho-blog/shared';
+
+/** 프로젝트 (frontmatter + 빌드 생성 필드) */
+export type Project = ContentEntryOf<'projects'>;
 
 export type GetProjects = {
   search: {

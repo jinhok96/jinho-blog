@@ -1,55 +1,26 @@
 /**
- * MDX 이미지를 Next.js public 디렉토리로 복사
+ * 컬렉션 디렉토리의 이미지·비디오를 정적 디렉토리로 복사
  *
- * 소스: content/mdx/{section}/
- * 목적지: apps/web/public/_static/mdx/{section}/
- *
- * 실행: npm run copy-images
+ * 소스: {contentDir}/{collection}/
+ * 목적지: {staticDir}/mdx/{collection}/
  */
 
 import * as fs from 'fs';
 import * as path from 'path';
-import { fileURLToPath } from 'url';
 
-import { IMAGE_EXTENSIONS, PATHS, VIDEO_EXTENSIONS } from '../src/core/config';
-import type { ContentSection } from '../src/types';
+import { type CollectionMap, type ContentConfig } from '../src/core/collection';
+import { IMAGE_EXTENSIONS, VIDEO_EXTENSIONS } from '../src/core/config';
+import { resolveContentPaths } from '../src/core/paths';
 
-interface ImageFile {
+type ImageFile = {
   sourcePath: string;
   relativePath: string;
-}
-
-const SECTIONS: ContentSection[] = ['blog', 'projects', 'libraries'];
-
-/**
- * 모노레포 루트 찾기 (package.json에 workspaces가 있는 디렉토리)
- */
-function findMonorepoRoot(): string {
-  let currentDir = process.cwd();
-
-  while (currentDir !== path.parse(currentDir).root) {
-    const pkgPath = path.join(currentDir, 'package.json');
-
-    if (fs.existsSync(pkgPath)) {
-      const pkg = JSON.parse(fs.readFileSync(pkgPath, 'utf-8'));
-      if (pkg.workspaces) {
-        return currentDir;
-      }
-    }
-
-    currentDir = path.dirname(currentDir);
-  }
-
-  // fallback: 스크립트가 packages/mdx-handler/scripts에 있다고 가정
-  return path.join(fileURLToPath(new URL('../../..', import.meta.url)));
-}
-
-const MONOREPO_ROOT = findMonorepoRoot();
+};
 
 /**
  * 파일이 이미지인지 확인
  */
-function isImageFile(filename: string): boolean {
+export function isImageFile(filename: string): boolean {
   const ext = path.extname(filename).toLowerCase();
   return (IMAGE_EXTENSIONS as readonly string[]).includes(ext);
 }
@@ -57,7 +28,7 @@ function isImageFile(filename: string): boolean {
 /**
  * 파일이 비디오인지 확인
  */
-function isVideoFile(filename: string): boolean {
+export function isVideoFile(filename: string): boolean {
   const ext = path.extname(filename).toLowerCase();
   return (VIDEO_EXTENSIONS as readonly string[]).includes(ext);
 }
@@ -65,16 +36,16 @@ function isVideoFile(filename: string): boolean {
 /**
  * 디렉토리 재귀 생성
  */
-function ensureDirSync(dir: string): void {
+export function ensureDirSync(dir: string): void {
   if (!fs.existsSync(dir)) {
     fs.mkdirSync(dir, { recursive: true });
   }
 }
 
 /**
- * 디렉토리를 재귀적으로 스캔하여 이미지 파일 목록 반환
+ * 디렉토리를 재귀적으로 스캔하여 이미지·비디오 파일 목록 반환
  */
-function scanImagesRecursive(dir: string, baseDir: string = ''): ImageFile[] {
+export function scanImagesRecursive(dir: string, baseDir: string = ''): ImageFile[] {
   const images: ImageFile[] = [];
 
   if (!fs.existsSync(dir)) return images;
@@ -100,58 +71,62 @@ function scanImagesRecursive(dir: string, baseDir: string = ''): ImageFile[] {
 }
 
 /**
- * MDX 이미지 복사 메인 함수
+ * 콘텐츠 설정 기반 미디어 복사
+ * - 경로는 process.cwd()(앱 루트) 기준
+ * - `copyMedia: false`인 컬렉션은 건너뜀
  */
-function copyMdxImages(): void {
-  const baseStaticPath = PATHS.PUBLIC_STATIC_MDX_DIR;
+export function copyContentMedia<TCollections extends CollectionMap>(config: ContentConfig<TCollections>): void {
+  const paths = resolveContentPaths(config);
+  const collections: CollectionMap = config.collections;
 
   let totalCopied = 0;
 
   console.log(`\n📸 MDX 이미지 복사 시작\n`);
 
-  for (const section of SECTIONS) {
-    const sectionDir = path.join(MONOREPO_ROOT, PATHS.MDX_CONTENT_DIR, section);
-
-    if (!fs.existsSync(sectionDir)) {
-      console.warn(`⚠️  섹션 디렉토리를 찾을 수 없습니다: ${section}`);
+  for (const [name, definition] of Object.entries(collections)) {
+    if (definition.copyMedia === false) {
+      console.log(`⏭️  ${name}: 복사 비활성화 (copyMedia: false)`);
       continue;
     }
 
-    // 섹션 내 모든 이미지 스캔 (재귀)
-    const images = scanImagesRecursive(sectionDir);
+    const sourceDir = paths.collectionDir(name);
+
+    if (!fs.existsSync(sourceDir)) {
+      console.warn(`⚠️  컬렉션 디렉토리를 찾을 수 없습니다: ${name}`);
+      continue;
+    }
+
+    // 컬렉션 내 모든 이미지 스캔 (재귀)
+    const images = scanImagesRecursive(sourceDir);
 
     if (images.length === 0) {
-      console.log(`ℹ️  ${section} 섹션에 이미지가 없습니다`);
+      console.log(`ℹ️  ${name} 컬렉션에 이미지가 없습니다`);
       continue;
     }
+
+    const destDir = paths.mediaDir(name);
+    let copied = 0;
 
     // 이미지 복사
     for (const img of images) {
       try {
-        const destPath = path.join(MONOREPO_ROOT, baseStaticPath, section, img.relativePath);
+        const destPath = path.join(destDir, img.relativePath);
 
         // 디렉토리 생성
         ensureDirSync(path.dirname(destPath));
 
         // 파일 복사
         fs.copyFileSync(img.sourcePath, destPath);
-        totalCopied++;
+        copied++;
       } catch (error) {
         const errorMessage = error instanceof Error ? error.message : String(error);
         console.error(`❌ 복사 실패: ${img.relativePath}`, errorMessage);
       }
     }
 
-    console.log(`✅ ${section}: ${images.length}개 이미지 복사 완료`);
+    totalCopied += copied;
+    console.log(`✅ ${name}: ${copied}개 이미지 복사 완료 → ${destDir}`);
   }
 
-  console.log(`\n📸 총 ${totalCopied}개 이미지 복사 완료`);
-  console.log(`📁 대상 경로: ${baseStaticPath}\n`);
-}
-
-export { copyMdxImages, ensureDirSync, findMonorepoRoot, isImageFile, isVideoFile, scanImagesRecursive };
-
-// 실행
-if (process.argv[1] === fileURLToPath(import.meta.url)) {
-  copyMdxImages();
+  console.log(`\n📸 총 ${totalCopied}개 이미지 복사 완료\n`);
 }

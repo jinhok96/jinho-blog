@@ -1,6 +1,6 @@
 'use client';
 
-import type { Translate } from '@jinho-blog/mdx-handler';
+import type { Translate } from '@/entities/translate';
 
 import { TRANSLATE_CATEGORY_MAP, type TranslateCategory } from '@jinho-blog/shared';
 

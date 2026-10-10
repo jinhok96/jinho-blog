@@ -1,5 +1,8 @@
-import type { Translate } from '@jinho-blog/mdx-handler';
+import type { ContentEntryOf } from '@/core/content';
 import type { PaginatedResult, SortOption, TranslateCategory } from '@jinho-blog/shared';
+
+/** 번역 포스트 (frontmatter + 빌드 생성 필드) */
+export type Translate = ContentEntryOf<'translate'>;
 
 export type GetTranslatePosts = {
   search: {

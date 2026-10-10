@@ -9,12 +9,8 @@
 ### 타입
 
 ```typescript
-// 메타데이터
-import type { BlogMetadata, ProjectMetadata, LibraryMetadata } from '@jinho-blog/shared';
-import type { BaseMetadata, ContentMetadata, MdxInfo, TechStack } from '@jinho-blog/shared';
-
-// 카테고리
-import type { BlogCategory, LibraryCategory, ProjectCategory } from '@jinho-blog/shared';
+// 카테고리 (콘텐츠 메타데이터 타입은 apps/web core/content 스키마에서 추론)
+import type { BlogCategory, LibraryCategory, ProjectCategory, TechStack, TranslateCategory } from '@jinho-blog/shared';
 
 // 옵션/결과
 import type { GetBlogPostsOptions, GetProjectsOptions, GetLibrariesOptions } from '@jinho-blog/shared';

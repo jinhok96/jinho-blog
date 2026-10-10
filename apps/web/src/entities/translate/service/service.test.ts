@@ -1,19 +1,18 @@
+import type { Translate } from '@/entities/translate/types';
+
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('../../core/utils/index.js', async () => {
-  const actual = await vi.importActual<typeof import('../../core/utils/index.js')>('../../core/utils/index.js');
-  return {
-    ...actual,
-    getRegistry: vi.fn(),
-  };
-});
+import { contentReader } from '@/core/content';
 
-import type { Translate } from './translate.service.js';
+import { createTranslateService } from './service';
 
-import { getRegistry } from '../../core/utils/index.js';
-import { getTranslateContent, getTranslatePost, getTranslatePosts } from './translate.service.js';
+vi.mock('@/core/content', () => ({
+  contentReader: { getEntries: vi.fn() },
+}));
 
-const mockGetRegistry = vi.mocked(getRegistry);
+const mockGetEntries = vi.mocked(contentReader.getEntries<'translate'>);
+
+const translateService = createTranslateService();
 
 function makeTranslate(overrides: Partial<Translate> & Pick<Translate, 'slug' | 'title'>): Translate {
   return {
@@ -54,7 +53,7 @@ beforeAll(() => {
 
 beforeEach(() => {
   vi.clearAllMocks();
-  mockGetRegistry.mockReturnValue(MOCK_POSTS);
+  mockGetEntries.mockReturnValue(MOCK_POSTS);
 });
 
 afterAll(() => {
@@ -65,39 +64,44 @@ afterAll(() => {
 // getTranslatePosts
 // ---------------------------------------------------------------------------
 describe('getTranslatePosts', () => {
+  it('translate 컬렉션 조회', async () => {
+    await translateService.getTranslatePosts();
+    expect(mockGetEntries).toHaveBeenCalledWith('translate');
+  });
+
   it('옵션 없이 기본 정렬(createdAt,desc)로 전체 반환', async () => {
-    const result = await getTranslatePosts();
+    const result = await translateService.getTranslatePosts();
     expect(result.items).toHaveLength(3);
     expect(result.items[0].slug).toBe('nextjs-next-15');
   });
 
   it('category 필터링', async () => {
-    const result = await getTranslatePosts({ category: 'react' });
+    const result = await translateService.getTranslatePosts({ category: 'react' });
     expect(result.items).toHaveLength(1);
     expect(result.items[0].slug).toBe('react-react-compiler');
   });
 
   it('search 필터링 (title 기준)', async () => {
-    const result = await getTranslatePosts({ search: 'next' });
+    const result = await translateService.getTranslatePosts({ search: 'next' });
     expect(result.items).toHaveLength(1);
     expect(result.items[0].slug).toBe('nextjs-next-15');
   });
 
   it('sort: createdAt,asc 오래된 순', async () => {
-    const result = await getTranslatePosts({ sort: 'createdAt,asc' });
+    const result = await translateService.getTranslatePosts({ sort: 'createdAt,asc' });
     expect(result.items[0].slug).toBe('react-react-compiler');
   });
 
   it('pagination: count=1, page=2', async () => {
-    const result = await getTranslatePosts({ count: '1', page: '2' });
+    const result = await translateService.getTranslatePosts({ count: '1', page: '2' });
     expect(result.items).toHaveLength(1);
     expect(result.pagination.currentPage).toBe(2);
     expect(result.pagination.totalItems).toBe(3);
   });
 
   it('빈 registry: items=[], pagination.totalItems=0', async () => {
-    mockGetRegistry.mockReturnValue([]);
-    const result = await getTranslatePosts();
+    mockGetEntries.mockReturnValue([]);
+    const result = await translateService.getTranslatePosts();
     expect(result.items).toHaveLength(0);
     expect(result.pagination.totalItems).toBe(0);
   });
@@ -108,12 +112,12 @@ describe('getTranslatePosts', () => {
 // ---------------------------------------------------------------------------
 describe('getTranslatePost', () => {
   it('존재하는 slug: 해당 post 반환', async () => {
-    const result = await getTranslatePost('react-react-compiler');
+    const result = await translateService.getTranslatePost({ slug: 'react-react-compiler' });
     expect(result?.slug).toBe('react-react-compiler');
   });
 
   it('존재하지 않는 slug: null 반환', async () => {
-    const result = await getTranslatePost('nonexistent');
+    const result = await translateService.getTranslatePost({ slug: 'nonexistent' });
     expect(result).toBeNull();
   });
 });
@@ -123,21 +127,21 @@ describe('getTranslatePost', () => {
 // ---------------------------------------------------------------------------
 describe('getTranslateContent', () => {
   it('content 있는 slug: content 문자열 반환', async () => {
-    const result = await getTranslateContent('react-react-compiler');
+    const result = await translateService.getTranslateContent({ slug: 'react-react-compiler' });
     expect(result).toBe('# React 컴파일러');
   });
 
   it('존재하지 않는 slug: null 반환', async () => {
-    const result = await getTranslateContent('nonexistent');
+    const result = await translateService.getTranslateContent({ slug: 'nonexistent' });
     expect(result).toBeNull();
   });
 
   it('content 필드 없는 post: null 반환', async () => {
     const postWithoutContent = makeTranslate({ slug: 'no-content', title: 'No Content' });
     delete (postWithoutContent as Record<string, unknown>).content;
-    mockGetRegistry.mockReturnValue([postWithoutContent]);
+    mockGetEntries.mockReturnValue([postWithoutContent]);
 
-    const result = await getTranslateContent('no-content');
+    const result = await translateService.getTranslateContent({ slug: 'no-content' });
     expect(result).toBeNull();
   });
 });

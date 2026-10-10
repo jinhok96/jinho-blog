@@ -1,19 +1,19 @@
+import type { Project } from '@/entities/projects/types';
+import type { TechStack } from '@jinho-blog/shared';
+
 import { afterAll, beforeAll, beforeEach, describe, expect, it, vi } from 'vitest';
 
-vi.mock('../../core/utils/index.js', async () => {
-  const actual = await vi.importActual<typeof import('../../core/utils/index.js')>('../../core/utils/index.js');
-  return {
-    ...actual,
-    getRegistry: vi.fn(),
-  };
-});
+import { contentReader } from '@/core/content';
 
-import type { Project } from './project.service.js';
+import { createProjectsService } from './service';
 
-import { getRegistry } from '../../core/utils/index.js';
-import { getProject, getProjectContent, getProjects } from './project.service.js';
+vi.mock('@/core/content', () => ({
+  contentReader: { getEntries: vi.fn() },
+}));
 
-const mockGetRegistry = vi.mocked(getRegistry);
+const mockGetEntries = vi.mocked(contentReader.getEntries<'projects'>);
+
+const projectsService = createProjectsService();
 
 function makeProject(overrides: Partial<Project> & Pick<Project, 'slug' | 'title'>): Project {
   return {
@@ -63,7 +63,7 @@ beforeAll(() => {
 
 beforeEach(() => {
   vi.clearAllMocks();
-  mockGetRegistry.mockReturnValue(MOCK_PROJECTS);
+  mockGetEntries.mockReturnValue(MOCK_PROJECTS);
 });
 
 afterAll(() => {
@@ -74,45 +74,57 @@ afterAll(() => {
 // getProjects
 // ---------------------------------------------------------------------------
 describe('getProjects', () => {
+  it('projects 컬렉션 조회', async () => {
+    await projectsService.getProjects();
+    expect(mockGetEntries).toHaveBeenCalledWith('projects');
+  });
+
   it('옵션 없이 기본 정렬(createdAt,desc)로 전체 반환', async () => {
-    const result = await getProjects();
+    const result = await projectsService.getProjects();
     expect(result.items).toHaveLength(3);
     expect(result.items[0].slug).toBe('tripmoney-app'); // createdAt,desc 최신순
   });
 
   it('category 필터링', async () => {
-    const result = await getProjects({ category: 'personal' });
+    const result = await projectsService.getProjects({ category: 'personal' });
     expect(result.items.map(p => p.slug)).toEqual(expect.arrayContaining(['blog', 'portfolio']));
     expect(result.items).toHaveLength(2);
   });
 
   it('tech 필터링 (AND 조건)', async () => {
-    const result = await getProjects({ tech: 'react,typescript' });
+    // 서비스는 콤마로 구분된 다중 기술 스택을 지원
+    const result = await projectsService.getProjects({ tech: 'react,typescript' as TechStack });
     expect(result.items).toHaveLength(1);
     expect(result.items[0].slug).toBe('tripmoney-app');
   });
 
   it('search 필터링 (title 기준)', async () => {
-    const result = await getProjects({ search: 'trip' });
+    const result = await projectsService.getProjects({ search: 'trip' });
     expect(result.items).toHaveLength(1);
     expect(result.items[0].slug).toBe('tripmoney-app');
   });
 
+  it('search 필터링 (tech 기준)', async () => {
+    const result = await projectsService.getProjects({ search: 'nextjs' });
+    expect(result.items).toHaveLength(1);
+    expect(result.items[0].slug).toBe('blog');
+  });
+
   it('sort: alphabetic,asc 알파벳 오름차순', async () => {
-    const result = await getProjects({ sort: 'alphabetic,asc' });
+    const result = await projectsService.getProjects({ sort: 'alphabetic,asc' });
     expect(result.items[0].title).toBe('Blog');
   });
 
   it('pagination: count=1, page=2', async () => {
-    const result = await getProjects({ count: '1', page: '2' });
+    const result = await projectsService.getProjects({ count: '1', page: '2' });
     expect(result.items).toHaveLength(1);
     expect(result.pagination.currentPage).toBe(2);
     expect(result.pagination.totalItems).toBe(3);
   });
 
   it('빈 registry', async () => {
-    mockGetRegistry.mockReturnValue([]);
-    const result = await getProjects();
+    mockGetEntries.mockReturnValue([]);
+    const result = await projectsService.getProjects();
     expect(result.items).toHaveLength(0);
     expect(result.pagination.totalItems).toBe(0);
   });
@@ -123,12 +135,12 @@ describe('getProjects', () => {
 // ---------------------------------------------------------------------------
 describe('getProject', () => {
   it('존재하는 slug: 해당 project 반환', async () => {
-    const result = await getProject('blog');
+    const result = await projectsService.getProject({ slug: 'blog' });
     expect(result?.slug).toBe('blog');
   });
 
   it('존재하지 않는 slug: null 반환', async () => {
-    const result = await getProject('nonexistent');
+    const result = await projectsService.getProject({ slug: 'nonexistent' });
     expect(result).toBeNull();
   });
 });
@@ -138,21 +150,21 @@ describe('getProject', () => {
 // ---------------------------------------------------------------------------
 describe('getProjectContent', () => {
   it('content 있는 slug: content 문자열 반환', async () => {
-    const result = await getProjectContent('blog');
+    const result = await projectsService.getProjectContent({ slug: 'blog' });
     expect(result).toBe('# Blog');
   });
 
   it('존재하지 않는 slug: null 반환', async () => {
-    const result = await getProjectContent('nonexistent');
+    const result = await projectsService.getProjectContent({ slug: 'nonexistent' });
     expect(result).toBeNull();
   });
 
   it('content 필드 없는 project: null 반환', async () => {
     const projectWithoutContent = makeProject({ slug: 'no-content', title: 'No Content' });
     delete (projectWithoutContent as Record<string, unknown>).content;
-    mockGetRegistry.mockReturnValue([projectWithoutContent]);
+    mockGetEntries.mockReturnValue([projectWithoutContent]);
 
-    const result = await getProjectContent('no-content');
+    const result = await projectsService.getProjectContent({ slug: 'no-content' });
     expect(result).toBeNull();
   });
 });

@@ -1,5 +1,8 @@
-import type { Library } from '@jinho-blog/mdx-handler';
+import type { ContentEntryOf } from '@/core/content';
 import type { LibraryCategory, PaginatedResult, SortOption, TechStack } from '@jinho-blog/shared';
+
+/** 라이브러리 (frontmatter + 빌드 생성 필드) */
+export type Library = ContentEntryOf<'libraries'>;
 
 export type GetLibraries = {
   search: {

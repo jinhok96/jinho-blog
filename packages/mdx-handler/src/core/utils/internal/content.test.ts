@@ -1,4 +1,4 @@
-import type { BaseMetadata } from '@jinho-blog/shared';
+import type { SortableEntry } from './content.js';
 
 import { afterAll, beforeAll, describe, expect, it, vi } from 'vitest';
 
@@ -11,7 +11,7 @@ import {
   sortContent,
 } from './content.js';
 
-type Item = BaseMetadata & { [key: string]: unknown };
+type Item = SortableEntry & { description: string; category: string; [key: string]: unknown };
 type ItemWithTech = Item & { tech: string[] };
 
 function makeItem(overrides: Partial<Item> & Pick<Item, 'title'>): Item {

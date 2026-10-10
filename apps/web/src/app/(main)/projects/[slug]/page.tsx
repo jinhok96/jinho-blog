@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: project.description,
     type: 'article',
     thumbnail: project.thumbnail,
+    ogImage: project.ogImage,
     keywords: [PROJECT_CATEGORY_MAP[project.category], ...project.tech],
     publishedTime: project.createdAt,
     modifiedTime: project.updatedAt,

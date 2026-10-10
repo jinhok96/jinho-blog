@@ -4,7 +4,8 @@ import { fileURLToPath } from 'url';
 
 import matter from 'gray-matter';
 
-import { PATHS } from '../../src/core/config';
+// MDX 소스 콘텐츠 디렉토리 (모노레포 루트 기준)
+const MDX_CONTENT_DIR = 'content/mdx';
 
 export interface TranslatedInfo {
   urls: Set<string>;
@@ -27,7 +28,7 @@ export function findMonorepoRoot(): string {
 
 export function getMdxDir(monorepoRoot?: string): string {
   const root = monorepoRoot ?? findMonorepoRoot();
-  return path.join(root, PATHS.MDX_CONTENT_DIR, 'translate');
+  return path.join(root, MDX_CONTENT_DIR, 'translate');
 }
 
 export function getTranslatedInfo(mdxDir: string): TranslatedInfo {

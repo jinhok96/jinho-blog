@@ -1,5 +1,8 @@
-import type { Blog } from '@jinho-blog/mdx-handler';
+import type { ContentEntryOf } from '@/core/content';
 import type { BlogCategory, PaginatedResult, SortOption } from '@jinho-blog/shared';
+
+/** 블로그 포스트 (frontmatter + 빌드 생성 필드) */
+export type Blog = ContentEntryOf<'blog'>;
 
 export type GetBlogPosts = {
   search: {

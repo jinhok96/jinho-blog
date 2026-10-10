@@ -1,4 +1,4 @@
-import type { Project } from '@jinho-blog/mdx-handler';
+import type { Project } from '@/entities/projects';
 
 import { type PaginatedResult, PROJECT_CATEGORY_MAP } from '@jinho-blog/shared';
 

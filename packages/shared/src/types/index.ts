@@ -17,14 +17,5 @@ export {
   HTTP_ERROR_CODES,
   VALIDATION_ERROR_CODES,
 } from './internal/error';
-export type {
-  BaseMetadata,
-  BlogMetadata,
-  ContentMetadata,
-  LibraryMetadata,
-  MdxInfo,
-  ProjectMetadata,
-  TranslateMetadata,
-} from './internal/metadata';
 export type { Params, ParamsWithSearchParams } from './internal/params';
 export type { SearchParams } from './internal/searchParams';

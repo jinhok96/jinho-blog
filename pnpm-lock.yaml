@@ -96,6 +96,9 @@ importers:
       tailwind-merge:
         specifier: ^3.4.0
         version: 3.4.0
+      zod:
+        specifier: ^4.3.6
+        version: 4.3.6
       zustand:
         specifier: ^5.0.8
         version: 5.0.11(@types/react@19.3.0)(react@19.3.0)
@@ -190,6 +193,9 @@ importers:
       '@jinho-blog/shared':
         specifier: workspace:*
         version: link:../shared
+      '@jinho-blog/thumbnail-generator':
+        specifier: workspace:*
+        version: link:../thumbnail-generator
       '@mozilla/readability':
         specifier: ^0.6.0
         version: 0.6.0
@@ -208,10 +214,10 @@ importers:
       turndown:
         specifier: ^7.2.4
         version: 7.2.4
+      zod:
+        specifier: ^4.3.6
+        version: 4.3.6
     devDependencies:
-      '@jinho-blog/thumbnail-generator':
-        specifier: workspace:*
-        version: link:../thumbnail-generator
       '@types/jsdom':
         specifier: ^28.0.3
         version: 28.0.3

@@ -21,14 +21,18 @@ vi.mock('gray-matter', () => ({
 
 vi.mock('@jinho-blog/thumbnail-generator', () => ({
   generateThumbnail: vi.fn().mockResolvedValue(Buffer.from('')),
+  generateOgImage: vi.fn().mockResolvedValue(undefined),
 }));
 
 vi.mock('./validate-frontmatter.js', () => ({
   validateFrontmatter: vi.fn().mockReturnValue({ valid: true, errors: [] }),
 }));
 
+import { generateOgImage } from '@jinho-blog/thumbnail-generator';
+
 import {
   buildAllRegistries,
+  buildOgImage,
   buildRegistry,
   extractFirstImage,
   getGitDates,
@@ -580,5 +584,45 @@ describe('parseMdxFile - thumbnail', () => {
 
     const result = await parseMdxFile('/test/no-image-post.mdx', 'blog');
     expect(result.thumbnail).toBeUndefined();
+  });
+});
+
+// ---------------------------------------------------------------------------
+// buildOgImage
+// ---------------------------------------------------------------------------
+describe('buildOgImage', () => {
+  const mockGenerateOgImage = vi.mocked(generateOgImage);
+
+  it('로컬 썸네일이면 JPEG OG 이미지를 생성하고 URL 경로를 반환한다', async () => {
+    const result = await buildOgImage('/_static/mdx/blog/generated/post-1.webp', 'blog', 'post-1');
+
+    expect(result).toBe('/_static/mdx/blog/og/post-1.jpg');
+    expect(mockGenerateOgImage).toHaveBeenCalledWith({
+      inputPath: expect.stringMatching(/apps[\\/]web[\\/]public[\\/]_static[\\/]mdx[\\/]blog[\\/]generated[\\/]post-1\.webp$/),
+      outputPath: expect.stringMatching(/apps[\\/]web[\\/]public[\\/]_static[\\/]mdx[\\/]blog[\\/]og[\\/]post-1\.jpg$/),
+    });
+  });
+
+  it('외부 URL 썸네일이면 생성하지 않는다', async () => {
+    const result = await buildOgImage('https://example.com/image.png', 'translate', 'post-1');
+
+    expect(result).toBeUndefined();
+    expect(mockGenerateOgImage).not.toHaveBeenCalled();
+  });
+
+  it('썸네일이 없으면 생성하지 않는다', async () => {
+    const result = await buildOgImage(undefined, 'projects', 'project-1');
+
+    expect(result).toBeUndefined();
+    expect(mockGenerateOgImage).not.toHaveBeenCalled();
+  });
+
+  it('변환에 실패하면 경고 후 undefined를 반환한다', async () => {
+    mockGenerateOgImage.mockRejectedValueOnce(new Error('unsupported image format'));
+
+    const result = await buildOgImage('/_static/mdx/projects/assets/broken.webp', 'projects', 'broken');
+
+    expect(result).toBeUndefined();
+    expect(vi.mocked(console.warn)).toHaveBeenCalledWith(expect.stringContaining('broken'));
   });
 });

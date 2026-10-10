@@ -62,14 +62,34 @@ describe('postSchema', () => {
     expect(result.success).toBe(false);
     expect(result.error?.issues[0].code).toBe('unrecognized_keys');
   });
+  it('수정일이 발행일보다 앞서면 실패, 같거나 이후면 통과', () => {
+    const before = postSchema.safeParse({ ...validPost, updatedAt: '2025-12-31' });
+
+    expect(before.success).toBe(false);
+    expect(before.error?.issues[0].path).toEqual(['updatedAt']);
+    expect(postSchema.safeParse({ ...validPost, updatedAt: '2026-01-01' }).success).toBe(true);
+  });
 });
 
 describe('pageSchema', () => {
-  it('제목·설명만 있으면 통과', () => {
-    expect(pageSchema.safeParse({ title: '소개', description: '블로그 소개' }).success).toBe(true);
+  const validPage = { title: '소개', description: '블로그 소개', createdAt: '2026-01-01' };
+
+  it('제목·설명·발행일이 있으면 통과', () => {
+    expect(pageSchema.safeParse(validPage).success).toBe(true);
+  });
+
+  it('발행일 누락 → 실패 (빌드 시각이 날짜로 쓰이지 않도록)', () => {
+    const result = pageSchema.safeParse({ ...validPage, createdAt: undefined });
+
+    expect(result.success).toBe(false);
+    expect(result.error?.issues[0].path).toEqual(['createdAt']);
+  });
+
+  it('수정일이 발행일보다 앞서면 실패', () => {
+    expect(pageSchema.safeParse({ ...validPage, updatedAt: '2025-01-01' }).success).toBe(false);
   });
 
   it('정의되지 않은 키 → 실패 (strict)', () => {
-    expect(pageSchema.safeParse({ title: '소개', description: '설명', category: 'general' }).success).toBe(false);
+    expect(pageSchema.safeParse({ ...validPage, category: 'general' }).success).toBe(false);
   });
 });

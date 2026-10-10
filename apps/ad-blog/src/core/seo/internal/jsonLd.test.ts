@@ -18,7 +18,7 @@ describe('websiteJsonLd', () => {
       '@context': 'https://schema.org',
       '@type': 'WebSite',
       name: '블로그 이름',
-      url: 'https://my-blog.com/',
+      url: 'https://my-blog.com',
       inLanguage: 'ko-KR',
     });
   });
@@ -74,7 +74,7 @@ describe('breadcrumbJsonLd', () => {
         { name: '일반', path: '/categories/general' },
       ]).itemListElement,
     ).toEqual([
-      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://my-blog.com/' },
+      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://my-blog.com' },
       { '@type': 'ListItem', position: 2, name: '일반', item: 'https://my-blog.com/categories/general' },
     ]);
   });

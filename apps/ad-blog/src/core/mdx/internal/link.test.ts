@@ -1,6 +1,6 @@
 import { describe, expect, it } from 'vitest';
 
-import { isExternalHref, isInternalPath } from './link';
+import { isExternalHref, isInternalPageLink, isInternalPath } from './link';
 
 describe('isExternalHref', () => {
   it.each(['https://example.com', 'http://example.com/path', 'HTTPS://EXAMPLE.COM', '//cdn.example.com/a.js'])(
@@ -26,4 +26,17 @@ describe('isInternalPath', () => {
   it.each(['//cdn.example.com', 'https://example.com', '#section', 'mailto:me@example.com', ''])('%j → false', href => {
     expect(isInternalPath(href)).toBe(false);
   });
+});
+
+describe('isInternalPageLink', () => {
+  it.each(['/', '/posts/hello', '/categories/general?x=1', '/about#contact'])('%s → 페이지 링크', href => {
+    expect(isInternalPageLink(href)).toBe(true);
+  });
+
+  it.each(['/rss.xml', '/_static/mdx/posts/files/guide.pdf', '/sitemap.xml?v=1', '//cdn.example.com/a', '#top'])(
+    '%s → 페이지 아님 (일반 <a>)',
+    href => {
+      expect(isInternalPageLink(href)).toBe(false);
+    },
+  );
 });

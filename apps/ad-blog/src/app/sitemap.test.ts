@@ -76,7 +76,7 @@ describe('sitemap', () => {
     const { default: sitemap } = await loadSitemap();
 
     expect(sitemap().map(({ url }) => url)).toEqual([
-      'https://my-blog.com/',
+      'https://my-blog.com',
       'https://my-blog.com/posts/c',
       'https://my-blog.com/posts/b',
       'https://my-blog.com/posts/a',
@@ -117,7 +117,7 @@ describe('sitemap', () => {
     const { default: sitemap } = await loadSitemap();
 
     expect(sitemap()).toEqual([
-      { url: 'https://my-blog.com/', lastModified: undefined },
+      { url: 'https://my-blog.com', lastModified: undefined },
       { url: 'https://my-blog.com/about', lastModified: new Date('2026-02-01T00:00:00.000Z') },
     ]);
   });

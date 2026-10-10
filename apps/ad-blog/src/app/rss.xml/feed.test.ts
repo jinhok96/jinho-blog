@@ -50,7 +50,7 @@ describe('buildRssFeed', () => {
     expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>\n')).toBe(true);
     expect(xml).toContain('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">');
     expect(xml).toContain('<title>블로그 이름</title>');
-    expect(xml).toContain('<link>https://my-blog.com/</link>');
+    expect(xml).toContain('<link>https://my-blog.com</link>');
     expect(xml).toContain('<language>ko-KR</language>');
     expect(xml).toContain('<atom:link href="https://my-blog.com/rss.xml" rel="self" type="application/rss+xml" />');
     expect(xml.trimEnd().endsWith('</channel>\n</rss>')).toBe(true);

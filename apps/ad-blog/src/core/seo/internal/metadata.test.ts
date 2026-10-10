@@ -12,13 +12,13 @@ afterEach(() => {
 });
 
 describe('buildMetadata', () => {
-  it('canonical·og:url은 절대 URL (홈은 끝 슬래시 포함)', async () => {
+  it('canonical·og:url은 절대 URL (홈은 끝 슬래시 없이 — Next.js canonical 렌더링과 동일)', async () => {
     const { buildMetadata } = await loadMetadata('https://my-blog.com/');
 
     const home = buildMetadata({ path: '/' });
     const post = buildMetadata({ path: '/posts/hello' });
 
-    expect(home.alternates?.canonical).toBe('https://my-blog.com/');
+    expect(home.alternates?.canonical).toBe('https://my-blog.com');
     expect(post.alternates?.canonical).toBe('https://my-blog.com/posts/hello');
     expect(post.openGraph?.url).toBe('https://my-blog.com/posts/hello');
   });
@@ -42,7 +42,7 @@ describe('buildMetadata', () => {
     const { buildMetadata } = await loadMetadata();
 
     expect(buildMetadata({ path: '/' }).robots).toEqual({ index: false, follow: true });
-    expect(buildMetadata({ path: '/' }).alternates?.canonical).toBe('https://example.com/');
+    expect(buildMetadata({ path: '/' }).alternates?.canonical).toBe('https://example.com');
   });
 
   it('OG 이미지: 기본 이미지는 크기 포함, 사이트 경로는 절대 URL로 변환', async () => {

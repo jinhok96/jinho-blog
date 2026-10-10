@@ -19,6 +19,21 @@ describe('resolveContentPaths', () => {
     expect(paths.registryFile).toBe(path.resolve('/repo/apps/web/public/_static/registry.json'));
   });
 
+  it('registryFile 지정 시 해당 경로 사용 (앱 루트 기준)', () => {
+    const custom = resolveContentPaths(
+      {
+        contentDir: 'content',
+        staticDir: 'public/_static',
+        staticUrl: '/_static',
+        registryFile: '.content/registry.json',
+      },
+      root,
+    );
+
+    expect(custom.registryFile).toBe(path.resolve('/repo/apps/web/.content/registry.json'));
+    expect(custom.mediaRootDir).toBe(path.resolve('/repo/apps/web/public/_static/mdx'));
+  });
+
   it('미디어 루트: staticDir/mdx, staticUrl/mdx (끝 슬래시 제거)', () => {
     expect(paths.mediaRootDir).toBe(path.resolve('/repo/apps/web/public/_static/mdx'));
     expect(paths.mediaRootUrl).toBe('/_static/mdx');

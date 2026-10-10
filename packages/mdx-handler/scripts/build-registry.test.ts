@@ -654,7 +654,7 @@ describe('buildContentRegistry', () => {
     });
   });
 
-  it('frontmatter와 Git 모두 없으면 현재 시각(now) 사용', async () => {
+  it('frontmatter와 Git 모두 없으면 현재 시각(now) 사용, 수정일은 발행일과 동일', async () => {
     writeFile('content/mdx/projects/p.mdx', mdx({ title: 'P', description: 'D' }));
 
     const before = new Date().toISOString();
@@ -663,7 +663,18 @@ describe('buildContentRegistry', () => {
 
     const { createdAt, updatedAt } = readRegistry().projects[0] as { createdAt: string; updatedAt: string };
     expect(createdAt >= before && createdAt <= after).toBe(true);
-    expect(updatedAt >= before && updatedAt <= after).toBe(true);
+    expect(updatedAt).toBe(createdAt);
+  });
+
+  it('Git 이력이 없으면 수정일은 frontmatter 발행일 (빌드마다 바뀌지 않음)', async () => {
+    writeFile('content/mdx/projects/p.mdx', mdx({ title: 'P', description: 'D', createdAt: '2023-05-05' }));
+
+    await buildContentRegistry(createConfig());
+
+    expect(readRegistry().projects[0]).toMatchObject({
+      createdAt: '2023-05-05T00:00:00.000Z',
+      updatedAt: '2023-05-05T00:00:00.000Z',
+    });
   });
 
   it('generateThumbnail: true + 이미지 없음 → 제목으로 썸네일 생성', async () => {

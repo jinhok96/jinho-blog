@@ -32,4 +32,21 @@ describe('defineCollection / defineContentConfig', () => {
     expectTypeOf<WithoutThumbnail['thumbnail']>().toEqualTypeOf<string | undefined>();
     expectTypeOf<WithThumbnail['ogImage']>().toEqualTypeOf<string | undefined>();
   });
+
+  it('defineContentConfig 안에서 정의해도 generateThumbnail 리터럴 유지 (thumbnail 필수 추론)', () => {
+    const config = defineContentConfig({
+      contentDir: 'content',
+      staticDir: 'public/_static',
+      staticUrl: '/_static',
+      collections: {
+        withThumbnail: defineCollection({ route: '/a', schema: frontmatterSchema, generateThumbnail: true }),
+        withoutThumbnail: defineCollection({ route: '/b', schema: frontmatterSchema }),
+      },
+    });
+
+    expectTypeOf<CollectionEntry<typeof config.collections.withThumbnail>['thumbnail']>().toEqualTypeOf<string>();
+    expectTypeOf<CollectionEntry<typeof config.collections.withoutThumbnail>['thumbnail']>().toEqualTypeOf<
+      string | undefined
+    >();
+  });
 });

@@ -19,6 +19,8 @@ type GeneratePageMetadataParams = {
   description?: string;
   type?: 'website' | 'article';
   thumbnail?: string;
+  /** 링크 미리보기용 OG 이미지 (JPEG 1200x630). 지정 시 thumbnail보다 우선 */
+  ogImage?: string;
   keywords?: string[];
   publishedTime?: string;
   modifiedTime?: string;
@@ -51,6 +53,7 @@ export function generatePageMetadata({
   description,
   type = 'website',
   thumbnail,
+  ogImage,
   keywords,
   publishedTime,
   modifiedTime,
@@ -62,12 +65,12 @@ export function generatePageMetadata({
   const query = path.startsWith('/') ? path : `/${path}`;
   const url = `${SITE_URL}${query}`;
 
-  const resolvedThumbnail = thumbnail ?? DEFAULT_OG_IMAGE;
+  const resolvedImage = ogImage ?? thumbnail ?? DEFAULT_OG_IMAGE;
 
-  const imageUrl = resolvedThumbnail.startsWith('http') ? resolvedThumbnail : `${SITE_URL}${resolvedThumbnail}`;
+  const imageUrl = resolvedImage.startsWith('http') ? resolvedImage : `${SITE_URL}${resolvedImage}`;
 
-  // 기본 OG 이미지는 규격을 알고 있으므로 width/height를 명시해 크롤러가 큰 미리보기를 쓰도록 유도
-  const isDefaultImage = resolvedThumbnail === DEFAULT_OG_IMAGE;
+  // 기본/생성 OG 이미지는 규격(1200x630)을 알고 있으므로 width/height를 명시해 크롤러가 큰 미리보기를 쓰도록 유도
+  const hasKnownSize = resolvedImage === DEFAULT_OG_IMAGE || resolvedImage === ogImage;
 
   const metadataTitle: Metadata['title'] = (() => {
     if (titleMode === 'template') return { default: pageTitle, template: `%s | ${SITE_NAME}` };
@@ -101,7 +104,7 @@ export function generatePageMetadata({
         {
           url: imageUrl,
           alt: pageTitle,
-          ...(isDefaultImage && { width: DEFAULT_OG_IMAGE_WIDTH, height: DEFAULT_OG_IMAGE_HEIGHT }),
+          ...(hasKnownSize && { width: DEFAULT_OG_IMAGE_WIDTH, height: DEFAULT_OG_IMAGE_HEIGHT }),
         },
       ],
       ...(type === 'article' && {

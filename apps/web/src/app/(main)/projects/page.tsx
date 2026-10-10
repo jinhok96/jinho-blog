@@ -4,7 +4,13 @@ import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 import { PROJECT_CATEGORY_MAP, type ProjectCategory } from '@jinho-blog/shared';
 
 import { JsonLd, SafeHTML, type SelectOption } from '@/core/ui';
-import { generateCollectionPageJsonLd, generatePageMetadata, nbsp, parseSearchParams } from '@/core/utils';
+import {
+  generateCollectionPageJsonLd,
+  generatePageMetadata,
+  getCanonicalPage,
+  nbsp,
+  parseSearchParams,
+} from '@/core/utils';
 
 import { createProjectsService, type GetProjects } from '@/entities/projects';
 
@@ -17,12 +23,6 @@ import { ProjectsContentSection } from '@/views/projects';
 const projectsService = createProjectsService();
 
 const PAGE_DESCRIPTION = '실무와 개인 프로젝트에서 맡은 역할과 문제 해결 과정을 정리한 모음입니다.';
-
-export const metadata: Metadata = generatePageMetadata({
-  path: routes({ pathname: '/projects' }),
-  title: '프로젝트',
-  description: PAGE_DESCRIPTION,
-});
 
 const jsonLd = generateCollectionPageJsonLd({
   title: '프로젝트',
@@ -38,6 +38,17 @@ const CATEGORY_OPTIONS: SelectOption<ProjectCategory>[] = [
 type Props = {
   searchParams: Promise<SearchParams<Record<keyof GetProjects['search'], string | string[] | undefined>>>;
 };
+
+// SEO: 페이지네이션은 각 페이지를 canonical로 지정하고, 정렬/필터/검색 결과는 기본 목록으로 정리
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const page = getCanonicalPage(await searchParams);
+
+  return generatePageMetadata({
+    path: routes({ pathname: '/projects', search: { page } }),
+    title: page ? `프로젝트 (${page}페이지)` : '프로젝트',
+    description: PAGE_DESCRIPTION,
+  });
+}
 
 export default async function ProjectsListPage({ searchParams }: Props) {
   const { category, sort, tech, page, count, search } = await searchParams;

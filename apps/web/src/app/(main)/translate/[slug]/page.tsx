@@ -37,6 +37,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     description: post.description,
     type: 'article',
     thumbnail: post.thumbnail,
+    ogImage: post.ogImage,
     keywords: ['번역', TRANSLATE_CATEGORY_MAP[post.category]],
     publishedTime: post.createdAt,
     modifiedTime: post.updatedAt,

@@ -4,7 +4,7 @@ import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 import { TRANSLATE_CATEGORIES, TRANSLATE_CATEGORY_MAP, type TranslateCategory } from '@jinho-blog/shared';
 
 import { JsonLd, type SelectOption } from '@/core/ui';
-import { generateCollectionPageJsonLd, generatePageMetadata, parseSearchParams } from '@/core/utils';
+import { generateCollectionPageJsonLd, generatePageMetadata, getCanonicalPage, parseSearchParams } from '@/core/utils';
 
 import { createTranslateService, type GetTranslatePosts } from '@/entities/translate';
 
@@ -17,12 +17,6 @@ import { TranslateContentSection } from '@/views/translate';
 const translateService = createTranslateService();
 
 const PAGE_DESCRIPTION = '해외 기술 블로그의 주요 아티클을 한국어로 번역해 모았습니다.';
-
-export const metadata: Metadata = generatePageMetadata({
-  path: routes({ pathname: '/translate' }),
-  title: '번역',
-  description: PAGE_DESCRIPTION,
-});
 
 const jsonLd = generateCollectionPageJsonLd({
   title: '번역',
@@ -38,6 +32,17 @@ const CATEGORY_OPTIONS: SelectOption<TranslateCategory>[] = TRANSLATE_CATEGORIES
 type Props = {
   searchParams: Promise<SearchParams<Record<keyof GetTranslatePosts['search'], string | string[] | undefined>>>;
 };
+
+// SEO: 페이지네이션은 각 페이지를 canonical로 지정하고, 정렬/필터/검색 결과는 기본 목록으로 정리
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const page = getCanonicalPage(await searchParams);
+
+  return generatePageMetadata({
+    path: routes({ pathname: '/translate', search: { page } }),
+    title: page ? `번역 (${page}페이지)` : '번역',
+    description: PAGE_DESCRIPTION,
+  });
+}
 
 export default async function TranslateListPage({ searchParams }: Props) {
   const { category, sort, page, count, search } = await searchParams;

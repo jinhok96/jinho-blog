@@ -24,7 +24,7 @@
    - 미설정 시 `https://example.com` 기준으로 빌드되고, 모든 페이지 `noindex` + `robots.txt`가 `Disallow: /` (검색엔진 색인 차단)
    - 설정해야 canonical·OG·sitemap URL이 실제 도메인으로 바뀌고 색인이 허용됨
 4. **샘플 콘텐츠 교체**
-   - `content/posts/welcome.mdx`, `writing-guide.mdx` 삭제 후 실제 글 작성
+   - `content/posts/welcome.mdx`, `writing-guide.mdx`는 `draft: true` 샘플(개발 서버에서만 표시) — 참고 후 삭제하고 실제 글 작성
    - `content/pages/about.mdx`, `contact.mdx`, `privacy.mdx`의 `[이메일 주소]`, `[시행일]` 등 placeholder 수정
 5. **아이콘** — `src/app/icon.svg` 교체, 매니페스트 색상은 `src/app/manifest.ts`
 
@@ -53,7 +53,7 @@ tags:
 | `description` |  O   | 요약 (검색 결과·링크 미리보기 설명, 120자 내외 권장)                                 |
 | `category`    |  O   | `CATEGORY_MAP`에 정의된 카테고리 slug                                                |
 | `createdAt`   |  O   | 발행일 (예: `2026-01-01`)                                                            |
-| `updatedAt`   |      | 수정일. 생략 시 파일의 Git 마지막 커밋 날짜 (Git 이력이 없으면 발행일)               |
+| `updatedAt`   |      | 수정일 (발행일 이후). 생략 시 발행일과 동일                                          |
 | `tags`        |      | 키워드 목록 (메타 keywords·관련 글 계산용, 태그 페이지 없음)                         |
 | `thumbnail`   |      | 대표 이미지 (상대 경로 또는 URL). 생략 시 본문 첫 이미지 → 없으면 제목으로 자동 생성 |
 | `draft`       |      | `true`면 개발 서버에서만 표시 (빌드·sitemap·RSS 제외)                                |
@@ -62,9 +62,9 @@ tags:
 - 본문 소제목은 `##`부터 작성합니다 (글 제목이 페이지의 유일한 `<h1>`, 본문 `#`은 `<h2>`로 렌더링)
 - 이미지는 `content/posts/` 기준 상대 경로로 넣습니다: `![설명](./images/photo.webp)` → 빌드 시 `public/_static/`으로 복사
 - 링크 미리보기용 OG 이미지(JPEG 1200x630)는 로컬 썸네일에서 자동 생성
-- CI가 얕은 클론(shallow clone)으로 빌드하면 Git 날짜가 부정확할 수 있으므로, 내용을 크게 수정했다면 `updatedAt`을 직접 적는 것을 권장
+- 날짜는 frontmatter만 사용합니다 (Git 커밋 날짜 미사용: 얕은 클론으로 빌드하는 호스트에서도 날짜가 바뀌지 않도록). 내용을 크게 수정했다면 `updatedAt`을 갱신하세요 — sitemap `lastmod`와 구조화 데이터 `dateModified`에 반영됩니다
 
-정적 페이지(`content/pages/*.mdx`)는 `title`, `description`만 필수입니다.
+정적 페이지(`content/pages/*.mdx`)는 `title`, `description`, `createdAt`이 필수이고 `updatedAt`을 쓸 수 있습니다.
 
 ## 명령어
 

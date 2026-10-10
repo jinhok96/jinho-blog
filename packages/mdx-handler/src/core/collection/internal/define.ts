@@ -85,7 +85,7 @@ export type ContentEntry<TConfig extends ContentConfig, TName extends Collection
  */
 export function defineCollection<
   TSchema extends z.ZodType<BaseFrontmatter>,
-  TGenerateThumbnail extends boolean = false,
+  const TGenerateThumbnail extends boolean = false,
 >(definition: CollectionDefinition<TSchema, TGenerateThumbnail>): CollectionDefinition<TSchema, TGenerateThumbnail> {
   return definition;
 }

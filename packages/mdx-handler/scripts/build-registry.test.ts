@@ -666,6 +666,19 @@ describe('buildContentRegistry', () => {
     expect(updatedAt).toBe(createdAt);
   });
 
+  it('gitDates: false면 Git 날짜를 조회하지 않고 frontmatter 날짜만 사용', async () => {
+    writeFile('content/mdx/projects/p.mdx', mdx({ title: 'P', description: 'D', createdAt: '2023-05-05' }));
+    mockExecSync.mockReturnValue('2024-01-01T00:00:00Z\n');
+
+    await buildContentRegistry({ ...createConfig({ github: GITHUB }), gitDates: false });
+
+    expect(mockExecSync).not.toHaveBeenCalled();
+    expect(readRegistry().projects[0]).toMatchObject({
+      createdAt: '2023-05-05T00:00:00.000Z',
+      updatedAt: '2023-05-05T00:00:00.000Z',
+    });
+  });
+
   it('Git 이력이 없으면 수정일은 frontmatter 발행일 (빌드마다 바뀌지 않음)', async () => {
     writeFile('content/mdx/projects/p.mdx', mdx({ title: 'P', description: 'D', createdAt: '2023-05-05' }));
 
@@ -837,6 +850,14 @@ describe('buildOgImage', () => {
     expect(mockGenerateOgImage).toHaveBeenCalledWith(
       expect.objectContaining({ inputPath: path.join(tmpDir, 'public/_static/mdx/projects/assets/cover.webp') }),
     );
+  });
+
+  it('미디어 루트 밖을 가리키는 경로(../)는 생성하지 않는다', async () => {
+    const result = await buildOgImage('/_static/mdx/../../../secret.png', 'blog', 'post-1', paths());
+
+    expect(result).toBeUndefined();
+    expect(mockGenerateOgImage).not.toHaveBeenCalled();
+    expect(vi.mocked(console.warn)).toHaveBeenCalledWith(expect.stringContaining('미디어 디렉토리 밖'));
   });
 
   it('외부 URL 썸네일이면 생성하지 않는다', async () => {

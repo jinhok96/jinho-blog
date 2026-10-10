@@ -1,6 +1,7 @@
 'use client';
 
-import { type ComponentProps, useEffect, useState } from 'react';
+import type { ComponentProps } from 'react';
+
 import { usePathname } from 'next/navigation';
 
 import { routes } from '@jinho-blog/nextjs-routes';
@@ -16,18 +17,12 @@ export function HeaderNavButton({ href, children, ...props }: Props) {
   const isActive =
     href === routes({ pathname: '/' }) ? pathname === routes({ pathname: '/' }) : pathname.startsWith(href);
 
-  const [isActiveState, setIsActiveState] = useState(isActive);
-
-  useEffect(() => {
-    setIsActiveState(isActive);
-  }, [isActive]);
-
   return (
     <LinkButton
       href={href}
       color="background"
       size="md"
-      className={cn('not-tablet:px-2', isActiveState && 'underline underline-offset-2')}
+      className={cn('not-tablet:px-2', isActive && 'underline underline-offset-2')}
       {...props}
     >
       {children}

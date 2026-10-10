@@ -30,7 +30,7 @@
     "eslint-config-prettier": "^10.1.8",
     "eslint-plugin-simple-import-sort": "^12.1.1",
     "prettier": "^3.7.4",
-    "react": "^19.2.3",
+    "react": "^19.3.0",
     "typescript": "^5",
     "vitest": "^4.0.18"
   }

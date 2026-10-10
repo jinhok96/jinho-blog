@@ -115,6 +115,16 @@ pnpm --filter @jinho-blog/web build  # 빌드
 pnpm --filter @jinho-blog/web lint   # lint + 자동 수정
 ```
 
+## 에러 바운더리
+
+`error.tsx`/`global-error.tsx`는 `retry` prop 사용 (Next.js 16.3+). `reset`은 서버 컴포넌트 재요청 없이 상태만 초기화하므로 사용하지 않는다.
+
+```typescript
+export default function Error({ error, retry }: ErrorProps) {
+  return <ErrorFallback error={error} reset={retry} />;
+}
+```
+
 ## FSD/코딩 체크리스트
 
 - [ ] FSD 레이어 계층 준수 (하위만 import)

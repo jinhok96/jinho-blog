@@ -4,14 +4,14 @@ import { ErrorFallback } from '@/core/ui';
 
 type ErrorProps = {
   error: Error & { digest?: string };
-  reset: () => void;
+  retry: () => void;
 };
 
-export default function Error({ error, reset }: ErrorProps) {
+export default function Error({ error, retry }: ErrorProps) {
   return (
     <ErrorFallback
       error={error}
-      reset={reset}
+      reset={retry}
     />
   );
 }

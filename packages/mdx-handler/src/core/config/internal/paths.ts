@@ -15,9 +15,6 @@ export const PATHS = {
   // Registry JSON 파일 (모노레포 루트 기준)
   REGISTRY_JSON: `${WEB_APP_PREFIX}/${PUBLIC_STATIC_SEGMENT}/registry.json`,
 
-  // Registry JSON 파일 (apps/web 루트 기준 — 런타임 process.cwd())
-  REGISTRY_JSON_FROM_WEB_ROOT: `${PUBLIC_STATIC_SEGMENT}/registry.json`,
-
   // URL 경로 (브라우저에서 접근) — 빌드 타임 registry 생성 시 사용
   STATIC_MDX_URL: '/_static/mdx',
 

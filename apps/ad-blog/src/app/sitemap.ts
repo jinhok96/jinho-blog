@@ -12,11 +12,11 @@ type Dated = { updatedAt: string };
 
 /**
  * 사이트 경로 → sitemap `<loc>` 값
- * - 한글 등 비ASCII slug는 퍼센트 인코딩 (sitemap 프로토콜은 이스케이프된 URL 요구)
+ * - absoluteUrl이 비ASCII 경로를 퍼센트 인코딩 (canonical과 동일한 URL)
  * - Next.js가 `<loc>`를 이스케이프하지 않으므로 XML 특수문자 `&` 직접 처리
  */
 function toLoc(path: string): string {
-  return encodeURI(absoluteUrl(path)).replace(/&/g, '&amp;');
+  return absoluteUrl(path).replace(/&/g, '&amp;');
 }
 
 /**

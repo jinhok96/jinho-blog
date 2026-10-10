@@ -21,9 +21,9 @@ export function escapeXml(value: string): string {
   return value.replace(/[&<>"']/g, char => XML_ENTITIES[char]);
 }
 
-/** 사이트 경로 → 피드 링크 (한글 slug 퍼센트 인코딩) */
+/** 사이트 경로 → 피드 링크 (absoluteUrl이 한글 slug 퍼센트 인코딩, canonical과 동일한 URL) */
 function toFeedUrl(path: string): string {
-  return encodeURI(absoluteUrl(path));
+  return absoluteUrl(path);
 }
 
 /** RFC 822 날짜 (RSS 2.0 pubDate·lastBuildDate 형식) */

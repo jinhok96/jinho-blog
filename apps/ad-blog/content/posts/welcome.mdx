@@ -1,0 +1,31 @@
+---
+title: 블로그를 시작합니다
+description: 샘플 글입니다. 첫 글을 작성한 뒤 이 파일을 삭제하세요.
+category: general
+tags:
+  - 시작
+createdAt: 2026-01-01
+---
+
+이 글은 블로그 구조를 확인하기 위한 **샘플 글**입니다. `content/posts/`에 MDX 파일을 추가하면 글이 발행됩니다.
+
+## 글 작성 방법
+
+1. `content/posts/{slug}.mdx` 파일을 만듭니다. 파일 이름이 주소(`/posts/{slug}`)가 됩니다.
+2. 파일 맨 위에 frontmatter(제목, 설명, 카테고리, 발행일)를 작성합니다.
+3. 본문을 마크다운으로 작성합니다.
+
+## frontmatter 항목
+
+| 항목 | 필수 | 설명 |
+| --- | --- | --- |
+| title | O | 글 제목 (검색 결과 제목) |
+| description | O | 요약 (검색 결과 설명, 120자 내외 권장) |
+| category | O | 카테고리 slug (`src/core/config` 정의) |
+| createdAt | O | 발행일 (예: 2026-01-01) |
+| updatedAt |  | 수정일 (생략 시 Git 커밋 날짜) |
+| tags |  | 키워드 목록 |
+| thumbnail |  | 대표 이미지 (생략 시 본문 첫 이미지 또는 제목으로 자동 생성) |
+| draft |  | `true`면 개발 서버에서만 표시 |
+
+> 이미지는 글과 같은 폴더 기준 상대 경로(`./images/photo.webp`)로 넣으면 빌드 시 자동으로 복사됩니다.

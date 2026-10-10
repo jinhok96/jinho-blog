@@ -1,4 +1,4 @@
-import type { Library } from '@jinho-blog/mdx-handler';
+import type { Library } from '@/entities/libraries';
 import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';

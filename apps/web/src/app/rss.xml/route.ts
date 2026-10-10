@@ -1,6 +1,10 @@
-import { getBlogPosts, getTranslatePosts } from '@jinho-blog/mdx-handler';
-
 import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
+
+import { createBlogService } from '@/entities/blog';
+import { createTranslateService } from '@/entities/translate';
+
+const blogService = createBlogService();
+const translateService = createTranslateService();
 
 function escapeXml(unsafe: string): string {
   return unsafe.replace(/[<>&'"]/g, c => {
@@ -23,8 +27,8 @@ function escapeXml(unsafe: string): string {
 
 export async function GET() {
   const [{ items: blogPosts }, { items: translatePosts }] = await Promise.all([
-    getBlogPosts({ count: 50 }),
-    getTranslatePosts({ count: 50 }),
+    blogService.getBlogPosts({ count: '50' }),
+    translateService.getTranslatePosts({ count: '50' }),
   ]);
 
   const allPosts = [

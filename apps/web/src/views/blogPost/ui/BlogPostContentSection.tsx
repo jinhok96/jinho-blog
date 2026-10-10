@@ -1,4 +1,4 @@
-import type { Blog } from '@jinho-blog/mdx-handler';
+import type { Blog } from '@/entities/blog';
 
 import { BLOG_CATEGORY_MAP } from '@jinho-blog/shared';
 

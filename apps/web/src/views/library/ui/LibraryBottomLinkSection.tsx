@@ -1,4 +1,4 @@
-import type { Library } from '@jinho-blog/mdx-handler';
+import type { Library } from '@/entities/libraries';
 
 import { routes } from '@jinho-blog/nextjs-routes';
 

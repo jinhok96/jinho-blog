@@ -22,7 +22,7 @@ export type ContentPaths = {
  * - 런타임 엔트리에서 제외: 동적 경로 연산이 번들러 파일 트레이싱에 포함되지 않도록 함
  */
 export function resolveContentPaths(
-  config: Pick<ContentConfig, 'contentDir' | 'staticDir' | 'staticUrl'>,
+  config: Pick<ContentConfig, 'contentDir' | 'staticDir' | 'staticUrl' | 'registryFile'>,
   rootDir: string = process.cwd(),
 ): ContentPaths {
   const contentRoot = path.resolve(rootDir, config.contentDir);
@@ -32,7 +32,9 @@ export function resolveContentPaths(
 
   return {
     collectionDir: name => path.join(contentRoot, name),
-    registryFile: path.join(staticRoot, 'registry.json'),
+    registryFile: config.registryFile
+      ? path.resolve(rootDir, config.registryFile)
+      : path.join(staticRoot, 'registry.json'),
     mediaRootDir,
     mediaRootUrl,
     mediaDir: name => path.join(mediaRootDir, name),

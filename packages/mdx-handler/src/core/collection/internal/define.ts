@@ -33,6 +33,11 @@ export type ContentConfig<TCollections extends CollectionMap = CollectionMap> = 
   staticDir: string;
   /** staticDir의 공개 URL (예: '/_static') */
   staticUrl: string;
+  /**
+   * 레지스트리 JSON 경로 (앱 루트 기준, 기본값: `{staticDir}/registry.json`)
+   * - 정적 export처럼 public 디렉토리가 그대로 배포되는 경우 public 밖으로 지정해 원문 노출 방지
+   */
+  registryFile?: string;
   /** Vercel 빌드에서 GitHub API로 커밋 날짜를 조회할 저장소 */
   github?: { owner: string; repo: string };
   collections: TCollections;

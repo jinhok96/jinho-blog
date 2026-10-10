@@ -17,10 +17,10 @@ const pretendard = localFont({
 
 type Props = {
   error: Error & { digest?: string };
-  reset: () => void;
+  retry: () => void;
 };
 
-export default function GlobalError({ error, reset }: Props) {
+export default function GlobalError({ error, retry }: Props) {
   return (
     <html
       lang="ko"
@@ -38,7 +38,7 @@ export default function GlobalError({ error, reset }: Props) {
           <main className="relative flex-col-center size-full flex-1">
             <ErrorFallback
               error={error}
-              reset={reset}
+              reset={retry}
             />
           </main>
 

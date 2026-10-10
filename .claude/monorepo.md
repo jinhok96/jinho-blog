@@ -10,7 +10,8 @@ jinho-blog/
 │   └── web/              # Next.js 블로그 (포트 3401) → [web.md](.claude/web.md)
 └── packages/
     ├── shared/           # 공유 타입 및 상수 → [shared.md](.claude/shared.md)
-    ├── mdx-handler/      # MDX 파싱 및 처리 → [mdx-handler.md](.claude/mdx-handler.md)
+    ├── mdx-handler/      # MDX 컬렉션 엔진 (Zod 스키마, 레지스트리) → [mdx-handler.md](.claude/mdx-handler.md)
+    ├── thumbnail-generator/ # 썸네일·OG 이미지 생성
     └── nextjs-routes/    # 타입 안전 라우팅 생성기 → [nextjs-routes.md](.claude/nextjs-routes.md)
 ```
 
@@ -19,7 +20,7 @@ jinho-blog/
 ```
 @jinho-blog/shared (독립)
     ↓
-@jinho-blog/mdx-handler
+@jinho-blog/mdx-handler ← @jinho-blog/thumbnail-generator (빌드 엔트리 전용: 썸네일·OG 이미지)
     ↓
 @jinho-blog/web
 

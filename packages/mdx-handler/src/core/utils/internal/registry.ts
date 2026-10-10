@@ -1,9 +1,8 @@
 import type { ContentSection } from '../../../types';
+import type { MDX_ROUTES } from '../../config';
 
 import * as fs from 'fs';
 import * as path from 'path';
-
-import { type MDX_ROUTES, PATHS } from '../../config';
 
 export interface RegistryEntry {
   slug: string;
@@ -22,8 +21,10 @@ export function getRegistry<T extends RegistryEntry = RegistryEntry>(
   _router: typeof MDX_ROUTES,
 ): T[] {
   try {
-    // 빌드된 registry.json 경로
-    const registryPath = path.join(process.cwd(), PATHS.REGISTRY_JSON_FROM_WEB_ROOT);
+    // 빌드된 registry.json 경로 (apps/web 루트 기준 — 런타임 process.cwd())
+    // Turbopack 파일 트레이싱이 정적 분석할 수 있도록 경로 세그먼트를 리터럴로 지정
+    // (상수 참조 시 프로젝트 전체가 서버 출력에 트레이싱됨)
+    const registryPath = path.join(process.cwd(), 'public', '_static', 'registry.json');
 
     if (!fs.existsSync(registryPath)) {
       throw new Error(

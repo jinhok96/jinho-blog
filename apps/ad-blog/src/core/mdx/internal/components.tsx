@@ -6,7 +6,7 @@ import Link from 'next/link';
 
 import { resolveHeadingLevel } from './heading';
 import { isVideoSrc, resolveImageSize } from './image';
-import { isExternalHref, isInternalPath } from './link';
+import { isExternalHref, isInternalPageLink } from './link';
 
 /**
  * 본문 제목: `#`만 h2로 바꿔 렌더링 (페이지 `<h1>`은 글 제목)
@@ -24,12 +24,12 @@ function createHeading(level: HeadingLevel) {
 
 /**
  * 링크
- * - 사이트 내부 경로 → next/link (클라이언트 이동·프리페치)
+ * - 사이트 내부 페이지 → next/link (클라이언트 이동·프리페치), 내부 파일(/rss.xml 등) → 일반 `<a>`
  * - 외부 링크 → 새 탭 + `rel="noopener noreferrer"`, 스크린 리더에 새 탭 안내
  * - 앵커·mailto 등 → 일반 `<a>`
  */
 function MdxLink({ href = '', children, ...props }: ComponentPropsWithoutRef<'a'>) {
-  if (isInternalPath(href)) {
+  if (isInternalPageLink(href)) {
     return (
       <Link
         href={href}

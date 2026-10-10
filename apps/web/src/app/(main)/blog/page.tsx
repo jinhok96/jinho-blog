@@ -4,7 +4,7 @@ import { routes, type SearchParams } from '@jinho-blog/nextjs-routes';
 import { BLOG_CATEGORY_MAP, type BlogCategory } from '@jinho-blog/shared';
 
 import { JsonLd, type SelectOption } from '@/core/ui';
-import { generateCollectionPageJsonLd, generatePageMetadata, parseSearchParams } from '@/core/utils';
+import { generateCollectionPageJsonLd, generatePageMetadata, getCanonicalPage, parseSearchParams } from '@/core/utils';
 
 import { createBlogService, type GetBlogPosts } from '@/entities/blog';
 
@@ -17,12 +17,6 @@ import { BlogContentSection } from '@/views/blog';
 const blogService = createBlogService();
 
 const PAGE_DESCRIPTION = '프론트엔드 개발, 알고리즘, CS 등 직접 겪은 문제와 해결 과정을 기록한 글 모음입니다.';
-
-export const metadata: Metadata = generatePageMetadata({
-  path: routes({ pathname: '/blog' }),
-  title: '블로그',
-  description: PAGE_DESCRIPTION,
-});
 
 const jsonLd = generateCollectionPageJsonLd({
   title: '블로그',
@@ -41,6 +35,17 @@ const CATEGORY_OPTIONS: SelectOption<BlogCategory>[] = [
 type Props = {
   searchParams: Promise<SearchParams<Record<keyof GetBlogPosts['search'], string | string[] | undefined>>>;
 };
+
+// SEO: 페이지네이션은 각 페이지를 canonical로 지정하고, 정렬/필터/검색 결과는 기본 목록으로 정리
+export async function generateMetadata({ searchParams }: Props): Promise<Metadata> {
+  const page = getCanonicalPage(await searchParams);
+
+  return generatePageMetadata({
+    path: routes({ pathname: '/blog', search: { page } }),
+    title: page ? `블로그 (${page}페이지)` : '블로그',
+    description: PAGE_DESCRIPTION,
+  });
+}
 
 export default async function BlogListPage({ searchParams }: Props) {
   const { category, sort, page, count, search } = await searchParams;

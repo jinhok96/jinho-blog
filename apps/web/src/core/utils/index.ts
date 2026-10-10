@@ -11,6 +11,7 @@ export {
   generateWebSiteJsonLd,
 } from './internal/generateJsonLd';
 export { generatePageMetadata } from './internal/generateMetadata';
+export { getCanonicalPage } from './internal/getCanonicalPage';
 export { getMDXContent } from './internal/getMDXContent';
 export { nbsp } from './internal/nbsp';
 export { parseCommaString, parseSearchParams } from './internal/parseSearchParams';

@@ -5,8 +5,7 @@ import { Fragment } from 'react';
 import { AdSlot } from '@/core/ads';
 import { cn } from '@/core/utils';
 
-import { getInFeedAdIndex } from '@/modules/post-list/lib';
-
+import { getInFeedAdIndex } from '../lib';
 import { PostCard } from './PostCard';
 
 type Props = {

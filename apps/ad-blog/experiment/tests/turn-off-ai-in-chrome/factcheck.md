@@ -1,0 +1,106 @@
+# Fact-check sheet: turn-off-ai-in-chrome.mdx
+
+Checked 2026-10-11. Reference build: Chromium tag `155.0.8059.40` (= Chrome 155 stable).
+All Chromium paths are relative to `https://raw.githubusercontent.com/chromium/chromium/155.0.8059.40/` unless another tag is named.
+Policy YAMLs live in `components/policy/resources/templates/policy_definitions/GenerativeAI/` (abbreviated `GenAI/`).
+
+Method key:
+- **SRC** = Chromium source file opened directly in this session (raw.githubusercontent.com)
+- **OPEN** = other primary page opened directly
+- **RUN** = we ran it in the container
+- **EXTRACT** = search-result extract only (not opened); softened in the post
+- **STD** = standard OS command syntax from vendor docs opened on GitHub, or general OS UI (noted)
+
+## Version and environment
+
+| Claim | Source | Method |
+| --- | --- | --- |
+| Chrome 155 (155.0.8059.40) is the stable release on Windows and Mac, serving since 2026-10-06 | https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions/all/releases?filter=endtime=none&order_by=fraction%20desc (155.0.8059.40, fraction 1, start 2026-10-06T17:12:45Z); same for `platforms/mac` (start 2026-10-06T17:12:42Z) | OPEN (WebFetch) |
+| A Chrome 156 build was going to a small early group | Same API: 156.0.8078.12 fraction 0.005 (Win and Mac); corroborated by search extract "early Stable release to a small percentage" | OPEN + EXTRACT |
+| Tag 155.0.8059.40 exists; `main` is 157 | `chrome/VERSION` at tag (MAJOR=155 … PATCH=40) and at main (157.0.8099.0) | SRC |
+| Policy YAMLs used in the post are identical on main and at 155 (except AutofillPredictionSettings/GeminiEnterpriseSettings, not used for claims; AutofillGenAiSettings is main-only, not used) | diff of each YAML main vs tag | SRC |
+
+## Settings page labels and structure (Chrome 155)
+
+| Claim | Source | Method |
+| --- | --- | --- |
+| Left-menu/page title is **AI innovations**; alternative **AI in Chrome** used only when the 2026 WebUI refresh is on | `chrome/app/settings_strings.grdp` L4385-4390; `chrome/browser/ui/webui/settings/settings_localized_strings_provider.cc` L522-525 (`IsWebuiRefresh2026Enabled() ? AI_PAGE_TITLE : AI_INNOVATIONS_PAGE_TITLE`); `chrome/browser/ui/ui_features.cc` L83, L122-125 (kWebuiRefresh2026 disabled by default); `ui/base/ui_base_features.cc` L501 (kDesktopGlowUp disabled by default) | SRC |
+| Left menu entry exists for AI page | `chrome/browser/resources/settings/settings_menu/settings_menu.html` L113-116 | SRC |
+| URL `chrome://settings/ai`, subpages `/ai/gemini`, `/ai/helpMeWrite`, `/ai/historySearch` | `chrome/browser/resources/settings/route.ts` L177-205 | SRC |
+| Settings rows only appear for features available to the user | `chrome/browser/ui/webui/settings/settings_ui.cc` L603-664 (per-feature visibility booleans), `chrome/browser/compose/compose_enabling.cc` L224-256 (country + sign-in + per-user checks) | SRC |
+| Gemini in Chrome settings: page title "Gemini in Chrome"; sections **Preferences**, **Permissions**; toggles **Show Gemini at the top of the browser**, **Show Gemini in Chrome in system tray and turn on keyboard shortcut** (Win) / **…in Mac menu bar and turn on keyboard shortcut** (Mac), **Page content sharing**, **Share current tab by default**, **Precise Location**, **Microphone** | `chrome/app/google_chrome_strings.grd` L3241-3266; `chrome/app/glic_strings.grdp` L165, L168, L174, L240, L249, L258, L267; template `chrome/browser/resources/settings/glic_page/glic_subpage.html` L1-30, L155-211; keyboard-shortcut variant chosen by kGlicHotkeyLocalScope (disabled by default on desktop: `chrome/browser/glic/public/features.cc` L252-258; strings provider L1030-1032) | SRC |
+| No single on/off switch for Gemini in Chrome in Settings | `glic_subpage.html` (only preference/permission toggles), `glic_page.html` (link row only) | SRC |
+| "This feature is disabled by your organization" shown when blocked by policy | `glic_strings.grdp` L135; `settings_strings.grdp` L4406; `glic_subpage.html` L3-7 | SRC |
+| Help me write page: one switch **Offer writing help**; sublabel quoted | `settings_strings.grdp` L1402-1406; `chrome/browser/resources/settings/ai_page/offer_writing_help_page.html` L28-47, L83-85 (toggle bound to `compose.proactive_nudge_enabled`) | SRC |
+| Offer writing help only gates the automatic pop-up; right-click item not gated by it | `chrome/browser/compose/compose_enabling.cc` L354-358 (pref checked in `ShouldTriggerNoStatePopup`), L393-447 (`ShouldTriggerContextMenu` doesn't check it) | SRC |
+| Right-click label "Help me write" / Mac "Help Me Write" | `components/compose_strings.grdp` L4-14 | SRC |
+| Help me write requires sign-in to Chrome | `compose_enabling.cc` L240-248 (`kSignedOut`) | SRC |
+| Help me write = short-form writing assistant based on prompt and page | `GenAI/HelpMeWriteSettings.yaml` L4 | SRC |
+| History search setting label **History search, powered by AI**; everyday-language description | `settings_strings.grdp` L3825-3829; `ai_page/history_search_page.html` L19, L57-60; policy desc `GenAI/HistorySearchSettings.yaml` L4 ("based on page contents and not just the page title and URL") | SRC |
+| **On-device AI** toggle on the AI page (Chrome-branded builds), enabled by default | `ai_page/ai_page.html` (final `settings-section` with `onDeviceAiToggle`); `settings_ui.cc` L648-654; `chrome/browser/ui/webui/settings/on_device_ai_settings_handler.cc` L21-24 (`kShowOnDeviceAiSettings` ENABLED_BY_DEFAULT) | SRC |
+| On-device AI sublabel quote ("To power features like scam detection…might not work.") | `settings_strings.grdp` L3982-3987 | SRC |
+| **Settings > System** has an "On-device AI" row that navigates to the AI page | `system_page/system_page.html.ts` L141-151; `system_page/system_page.ts` L260-262 (`navigateTo(routes.AI)`); subtitle `settings_strings.grdp` L3988 | SRC |
+| Toggle shows off and locked when the policy disables the model | `ai_page/ai_page.ts` L301-315; handler L89-104 | SRC |
+| Tab Organizer sunset; policy supported only 121-136 | `GenAI/TabOrganizerSettings.yaml` L2-4, L43-45 | SRC |
+
+## On-device model
+
+| Claim | Source | Method |
+| --- | --- | --- |
+| Toggle off → model uninstalled and not downloaded; same when policy disallows; also auto-uninstall when device not capable or free disk too low | `components/optimization_guide/core/model_execution/manifest_broker/manifest_monitor.cc` L40-51, L109-135, L146-168; uninstall deletes files: `manifest_broker/manifest_asset_manager.cc` L493-515 ("Uninstall the component which will delete the model files"); toggle writes pref `optimization_guide.on_device_foundational_model_user_settings` (`model_execution_prefs.cc` L107-108, default true L139-140; handler L106-107) | SRC |
+| Folder name `OptGuideOnDeviceModel` under the component user dir | `chrome/browser/component_updater/optimization_guide_on_device_model_installer.cc` L52-54, L189-195 (legacy model kept there; other assets in `OptGuideManifestModel/<key>`) | SRC |
+| Component user dir = Chrome user data dir | `chrome/app/chrome_main_delegate.cc` L1496-1497; `components/component_updater/component_updater_paths.cc` L33-35 | SRC |
+| Windows user data dir = `%LOCALAPPDATA%\Google\Chrome\User Data` | `chrome/common/chrome_paths_win.cc` L42-48; `chrome/common/chrome_constants.h` L145 ("User Data"); `chrome/install_static/install_util.cc` L511-522; `chrome/install_static/google_chrome_install_modes.h` L20, L24 (Google, Chrome), L82-83 (stable suffix "") | SRC |
+| Mac user data dir = `~/Library/Application Support/Google/Chrome` | `chrome/common/chrome_paths_mac.mm` L26-41, L72-88; `base/base_paths_mac.mm` L29-31 (DIR_APP_DATA = Application Support) | SRC |
+| Model file was named `weights.bin` through at least Chrome 150 | tag 147.0.7727.55 `components/optimization_guide/core/optimization_guide_constants.cc` L45-46; tag 150.0.7871.0 same file L41-42; file absent at 153.0.8010.55 and 154.0.8037.98 | SRC |
+| In 155 the weights filename comes from the downloaded manifest | `manifest_broker/manifest.cc` L113-125 (`weights_file().asset_id()`), `manifest_solution_factory.cc` L355 (`ResolveFile(recipe.weights_file())`) | SRC |
+| Re-download possible if folder deleted while toggle is on | Component-updater-managed on-demand assets: `components/optimization_guide/core/model_execution/on_device.md` L60-77 (UsageTracker triggers on-demand downloads; ManifestAssetManager registers/downloads via Component Updater); installer `RegisterOnDemandComponent` L295-332 | SRC (inference from architecture; worded as "can") |
+| "Gemini Nano" = Chrome's built-in model | https://github.com/GoogleChrome/chrome-extensions-samples/tree/main/functional-samples/ai.gemini-on-device (README L1-7: "Chrome's built-in Gemini Nano model") | OPEN (Google-owned repo, raw README) |
+| Download is roughly 4 GB | 9to5Google 2026-05-06, Bitdefender, The Register 2026-05-09, Hongkiat, TechRadar (all search extracts; WebFetch DNS failed for these hosts) | EXTRACT, multiple outlets; post says "News reports in 2026 put the download at roughly 4 GB" |
+
+## Policies
+
+| Claim | Source | Method |
+| --- | --- | --- |
+| `GeminiSettings`: 1 = "Gemini integration will not be available for users"; Win/Mac since 137 | `GenAI/GeminiSettings.yaml` L5-9, L36-38 | SRC |
+| `GeminiActOnWebSettings`: 1 = Gemini app not allowed to act on web pages; desktop since 143 | `GenAI/GeminiActOnWebSettings.yaml` L3-7, L36-39 | SRC |
+| `AIModeSettings`: 1 = not available; needs Google as default search engine; since 138 | `GenAI/AIModeSettings.yaml` L4-10, L32-36 | SRC |
+| `SearchContentSharingSettings`: 1 = can't share page/file content with AI Mode (and Lens per caption); since 144 | `GenAI/SearchContentSharingSettings.yaml` caption L1, desc L8-10, L41-45 | SRC |
+| `HelpMeWriteSettings` 2 = off; since 121 | `GenAI/HelpMeWriteSettings.yaml` L10, L27-29, L41-43 | SRC |
+| `HistorySearchSettings` 2 = off; since 128 | `GenAI/HistorySearchSettings.yaml` L10, L27-29, L41-43 | SRC |
+| `TabCompareSettings` 2 = off; since 129 | `GenAI/TabCompareSettings.yaml` L10, L30-32, L42-44 | SRC |
+| `CreateThemesSettings` 2 = off; since 121 | `GenAI/CreateThemesSettings.yaml` L10, L27-29, L41-43 | SRC |
+| Three-value policies: 1 = allowed without model improvement (not off) | e.g. `GenAI/HelpMeWriteSettings.yaml` L6-8 | SRC |
+| `GenAILocalFoundationalModelSettings`: 1 = not downloaded and existing model deleted; desktop since 124; machine-wide (per_profile false) | `GenAI/GenAILocalFoundationalModelSettings.yaml` L6-10, L14-16, L32-35 | SRC |
+| `ComponentUpdatesEnabled` alternative (mentioned only in this sheet; not in post) | GenAILocalFoundationalModelSettings.yaml L10; `Miscellaneous/ComponentUpdatesEnabled.yaml` L5 | SRC |
+| `BuiltInAIAPIsEnabled`: false = pages can't use built-in AI APIs; since 137; boolean | `policy_definitions/Miscellaneous/BuiltInAIAPIsEnabled.yaml` L3-14, L19-25 | SRC |
+| Registry DWORD 0 accepted as boolean false | `components/policy/core/common/registry_dict.cc` L82-89 | SRC |
+| `GenAiDefaultSettings` is cloud-only ("can only be set from Admin Console") | `GenAI/GenAiDefaultSettings.yaml` L19-20; `components/policy/resources/templates/messages.yaml` L74-77 | SRC |
+| Cloud-only enforced on desktop: "Ignored because the policy is not set by a cloud source." | `components/policy/core/browser/configuration_policy_handler_list.cc` L166-175; `components/policy_strings.grdp` L228-229; generator `components/policy/tools/generate_policy_source.py` L1167-1168 | SRC |
+| …and observed in a running browser | Chromium 141.0.7390.37 headless, `/etc/chromium/policies/managed/toolproof-genai-test.json`; chrome://policy dump: `GenAiDefaultSettings … Error … Ignored because the policy is not set by a cloud source.`; GeminiSettings, AIModeSettings, HelpMeWriteSettings, HistorySearchSettings, GenAILocalFoundationalModelSettings = OK (output in `policy_dump_141.json`; test file removed afterwards) | RUN |
+| Sensitive policies are filtered on unmanaged Win/Mac; AI policies aren't sensitive | `components/policy/core/common/async_policy_loader.cc` L110-119; `policy_loader_common.cc` L145-163; `generate_policy_source.py` L98, L1438-1449 (`sensitive:` key); none of the GenAI YAMLs or BuiltInAIAPIsEnabled has `sensitive:` (grep) | SRC |
+| Windows key `HKLM\SOFTWARE\Policies\Google\Chrome` (Chrome-branded) | `components/policy/tools/generate_policy_source.py` L29, L1208-1218; `chrome/browser/policy/chrome_browser_policy_connector.cc` L315-320; `docs/enterprise/add_new_policy.md` L142-145; HKLM = machine scope `policy_loader_win.cc` L321-322 | SRC |
+| `reg add … /v … /t REG_DWORD /d … /f` and `reg delete … /v … /f` syntax | https://raw.githubusercontent.com/MicrosoftDocs/windowsserverdocs/main/WindowsServerDocs/administration/windows-commands/reg-add.md L17-30; …/reg-delete.md L17-28 | STD (Microsoft docs repo opened) |
+| "Run as administrator" for Command Prompt | General Windows UI; Microsoft's page not reachable from this session | Not opened (general knowledge, low risk) |
+| chrome://policy has **Reload policies** button | `components/policy_strings.grdp` L489-490 | SRC |
+| Mac: domain `com.google.Chrome`; forced (managed) values = Mandatory, others = Recommended | `chrome/browser/policy/chrome_browser_policy_connector.cc` L323-342; `components/policy/core/common/policy_loader_mac.mm` L120-135, L178-189 ("Managed Preferences") | SRC |
+| Recommended-level values show "OK" in chrome://policy (Chromium test via `/etc/chromium/policies/recommended/`) | `policy_dump_141_recommended.json` | RUN (did not test feature behavior on a Mac; post says so) |
+| `defaults write com.google.Chrome Name -int N` / `defaults delete` syntax | Standard macOS `defaults` usage; Apple docs not reachable | Not opened (general knowledge) |
+| Machine-level policies make the browser "managed" → app menu "Managed by your organization" | `chrome/browser/enterprise/browser_management/browser_management_status_provider.cc` L62-73; `chrome/browser/ui/managed_ui.cc` L108-123, L163; string `chrome/app/generated_resources.grd` L1875-1876 | SRC |
+
+## AI Mode / AI Overviews scope
+
+| Claim | Source | Method |
+| --- | --- | --- |
+| No user-facing Chrome settings switch for AI Mode in the address bar in 155 | Searched `settings_strings.grdp` / `generated_resources.grd` for "AI Mode": only side-panel position, "Google Search AI Mode and connected apps" link, and tab-sharing (smart tab sharing) options (`ai_page/ai_mode_search_page.html`); no on/off row | SRC (absence check; worded "Chrome 155's settings code has no switch for it") |
+| No Chrome AI setting or policy mentions AI Overviews | grep "AI Overview" across all GenAI YAMLs and fetched string files: only `GenAISmartGroupingSettings` (ChromeOS "overview window grouping", unrelated) | SRC (absence check) |
+
+## Dropped or softened
+
+- Google Help Center pages (support.google.com), Chrome Enterprise policy list, developer.chrome.com, blog.google, chromium.org, news sites: WebFetch failed with DNS errors (ENOTFOUND) for every Google/news host in this session; only search extracts seen. Nothing in the post is attributed to Google help text.
+- Exact model size: softened to "News reports in 2026 put the download at roughly 4 GB" (EXTRACT only).
+- Country/language availability of Gemini in Chrome, Help me write, history search: dropped (only search extracts). Post says rows appear only for features available to your account, language, and country (SRC: visibility checks).
+- "Suggestions, powered by AI" (`ChromeSuggestionsSettings`, kContextualCueingV2 disabled by default), "Select text to ask Gemini" (updates_only=true hides the row), Skills, Talk to type, Try on You: not covered in post (not visible by default or too new to verify UI).
+- `ComponentUpdatesEnabled=false`: left out of the post (blocks other component updates too).
+- Mac configuration-profile (.mobileconfig) steps: not given (Apple UI not verifiable); post points to a device-management profile generically.
+- GeminiSettings is `future_on: chrome.linux` (not yet supported on Linux Chrome); Linux not covered in the post.

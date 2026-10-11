@@ -61,7 +61,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 5. **작성**: [writing-guide.md](writing-guide.md) 기준
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인
 7. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지
-8. **기록**: log.md에 세션 기록, backlog.md 갱신, 새로 알게 된 규칙은 writing-guide.md에 반영
+8. **기록**: log.md에 세션 기록, backlog.md 갱신, 검증 자료는 [tests/](tests/README.md)에 보관, 새로 알게 된 규칙은 writing-guide.md에 반영
 
 ## 기록 원칙
 

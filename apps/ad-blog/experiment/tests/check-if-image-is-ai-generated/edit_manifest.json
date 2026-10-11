@@ -1,0 +1,9 @@
+{
+  "alg": "es256",
+  "private_key": "WORKDIR/downloads/c2patool/c2patool/sample/es256_private.key",
+  "sign_cert": "WORKDIR/downloads/c2patool/c2patool/sample/es256_certs.pem",
+  "claim_generator_info": [{"name": "ToolProof C2PA strip test (C2PA-aware edit)", "version": "1.0"}],
+  "assertions": [
+    {"label": "c2pa.actions", "data": {"actions": [{"action": "c2pa.resized"}]}}
+  ]
+}

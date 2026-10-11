@@ -9,9 +9,9 @@
 | 순위 | 주제                                                                        | 핵심 키워드                                | 점수 | 직접 검증                 | 수명                  | 상태                                         |
 | ---- | --------------------------------------------------------------------------- | ------------------------------------------ | ---- | ------------------------- | --------------------- | -------------------------------------------- |
 | 1    | 커스텀 GPT·Gemini Gems 종료 → 포터블 Skill로 옮기기                         | custom gpt retirement what to do           | 46   | 일부 (SKILL.md 검증 도구) | ~2027 중반, 이후 상시 | 보류 (도메인 연결 전이라 마감형 효과 낮음)   |
-| 2    | AI 생성 이미지 판별 (SynthID Detector·C2PA) + 출처 정보 제거 테스트         | how to check if an image is ai generated   | 44   | 예 (C2PA 제거 테스트)     | 상시                  | 작성 중 `check-if-image-is-ai-generated`     |
-| 3    | 무료 오프라인 받아쓰기 모델 정확도·속도 비교 (ChatGPT 오디오 업로드 유료)   | transcribe audio to text free offline      | 44   | 예 (전부 오프라인)        | 상시                  | 작성 중 `transcribe-audio-offline-free`      |
-| 4    | Chrome AI 기능 끄기 + 온디바이스 모델(약 4GB) 삭제, 정책 확인               | turn off ai in chrome                      | 41   | 일부 (Chromium 소스)      | 12개월+               | 작성 중 `turn-off-ai-in-chrome`              |
+| 2    | AI 생성 이미지 판별 (SynthID Detector·C2PA) + 출처 정보 제거 테스트         | how to check if an image is ai generated   | 44   | 예 (C2PA 제거 테스트)     | 상시                  | 발행 `check-if-image-is-ai-generated`        |
+| 3    | 무료 오프라인 받아쓰기 모델 정확도·속도 비교 (ChatGPT 오디오 업로드 유료)   | transcribe audio to text free offline      | 44   | 예 (전부 오프라인)        | 상시                  | 발행 `transcribe-audio-offline-free`         |
+| 4    | Chrome AI 기능 끄기 + 온디바이스 모델(약 4GB) 삭제, 정책 확인               | turn off ai in chrome                      | 41   | 일부 (Chromium 소스)      | 12개월+               | 발행 `turn-off-ai-in-chrome`                 |
 | 5    | ChatGPT Finances 무료 확대: 은행 연결 안전한가                              | chatgpt finances safe                      | 38   | 조사만                    | 12개월+               | 후보 (Free/Go 확대 공식 근거 1건뿐)          |
 | 6    | "내 Copilot 어디 갔지?" 2026년 9월 Copilot 통합 설명                        | what happened to my copilot                | 38   | 조사만                    | 6~12개월              | 후보                                         |
 | 7    | Gemini Gems → Skills 전환: 날짜, 옮겨지지 않는 것, 백업                     | gemini gems to skills                      | 37   | 조사만                    | ~2027-06              | 후보 (1번과 묶음)                            |

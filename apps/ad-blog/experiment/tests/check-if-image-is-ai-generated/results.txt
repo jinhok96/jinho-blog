@@ -1,0 +1,78 @@
+own/t/t00_original.jpg
+  c2patool:    Trusted manifests=1 fail=[] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+  c2pa-python: Trusted manifests=1 fail=[] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+own/t/t01_resave_q85.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t02_resize50.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t03_crop80.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t04_rotate90.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t05_to_png.png
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t06_to_webp.webp
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t07_im_strip.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t07b_im_resave_q85.jpg
+  c2patool:    Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+  c2pa-python: Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+own/t/t08_exif_removed_only.jpg
+  c2patool:    Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+  c2pa-python: Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+own/t/t09_pixel_edit_c2pa_copied.jpg
+  c2patool:    Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+  c2pa-python: Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['trainedAlgorithmicMedia'] dst_any=['trainedAlgorithmicMedia'] ingr=[]
+own/t/t10_chromium_screenshot.png
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+own/t/t11_resize50_c2pa_aware.jpg
+  c2patool:    Trusted manifests=2 fail=[] dst=[] dst_any=['trainedAlgorithmicMedia'] ingr=[{'title': None, 'relationship': 'parentOf', 'ingredient_validation': []}]
+  c2pa-python: Trusted manifests=2 fail=[] dst=[] dst_any=['trainedAlgorithmicMedia'] ingr=[{'title': None, 'relationship': 'parentOf', 'ingredient_validation': []}]
+fixtureC/t/t00_original.jpg
+  c2patool:    Trusted manifests=1 fail=[] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+  c2pa-python: Trusted manifests=1 fail=[] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+fixtureC/t/t01_resave_q85.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t02_resize50.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t03_crop80.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t04_rotate90.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t05_to_png.png
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t06_to_webp.webp
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t07_im_strip.jpg
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t07b_im_resave_q85.jpg
+  c2patool:    Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+  c2pa-python: Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+fixtureC/t/t08_exif_removed_only.jpg
+  c2patool:    Trusted manifests=1 fail=[] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+  c2pa-python: Trusted manifests=1 fail=[] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+fixtureC/t/t09_pixel_edit_c2pa_copied.jpg
+  c2patool:    Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+  c2pa-python: Invalid manifests=1 fail=['assertion.dataHash.mismatch'] dst=['algorithmicMedia'] dst_any=['algorithmicMedia'] ingr=[]
+fixtureC/t/t10_chromium_screenshot.png
+  c2patool:    ['Error: No claim found']
+  c2pa-python: _C2paManifestNotFound: ManifestNotFound: no JUMBF data found
+fixtureC/t/t11_resize50_c2pa_aware.jpg
+  c2patool:    Trusted manifests=2 fail=[] dst=[] dst_any=['algorithmicMedia'] ingr=[{'title': None, 'relationship': 'parentOf', 'ingredient_validation': []}]
+  c2pa-python: Trusted manifests=2 fail=[] dst=[] dst_any=['algorithmicMedia'] ingr=[{'title': None, 'relationship': 'parentOf', 'ingredient_validation': []}]

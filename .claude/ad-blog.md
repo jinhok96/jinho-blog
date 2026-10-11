@@ -46,6 +46,7 @@ scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 
 - 스키마는 strict: 정의되지 않은 frontmatter 키는 빌드 에러
 - `draft: true` 글은 개발 서버에서만 노출 (`entities/post`의 `isVisible`)
 - 본문 소제목은 `##`부터 (페이지 `<h1>`은 제목, 본문 `#`은 `<h2>`)
+- 연락처 이메일은 MDX에 직접 쓰지 않고 `<ContactEmail />` 사용 (값은 `core/config`의 `CONTACT_EMAIL`)
 - UI·콘텐츠는 영어 (`SITE_LANGUAGE = 'en-US'`, `<html lang>`도 이 값). 코드 주석·개발자용 에러 메시지·개발 서버 광고 자리표시는 한국어 유지
 - 날짜 표시는 `en-US`·**UTC 기준** (frontmatter 날짜가 UTC 자정으로 저장되므로, 미국 시간대로 표시하면 하루 전 날짜가 됨)
 - 읽기 시간은 영어 기준 분당 230단어

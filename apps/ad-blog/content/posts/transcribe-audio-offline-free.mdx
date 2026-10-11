@@ -1,0 +1,112 @@
+---
+title: How to Transcribe Audio Offline for Free (8 Models Tested)
+description: ChatGPT's audio upload is for paid plans only. We ran 8 free speech-to-text models offline on a 22-minute call to compare accuracy and speed.
+category: ai-tools
+createdAt: 2026-10-11
+tags:
+  - transcription
+  - speech to text
+  - Whisper
+  - Parakeet
+  - privacy
+---
+
+You can transcribe audio for free, without uploading it anywhere, by installing a desktop app such as [Vibe](https://github.com/thewh1teagle/vibe) or [Buzz](https://github.com/chidiwilliams/buzz) that runs an open speech-recognition model on your own computer. In our test on a real 22-minute conference call, OpenAI's Whisper large-v3-turbo and NVIDIA's Parakeet TDT 0.6B v2 were the most accurate, with word error rates of about 10 to 11 percent, and Parakeet finished about five times faster on the same CPU. The smallest models got about one word in five wrong.
+
+ChatGPT can now transcribe audio files you upload, but OpenAI's help center says [audio uploads are not available on the Free plan](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt), are capped at 512 MB, and are processed on a best-effort basis, so very long recordings may time out. An offline app costs nothing, has no length limit beyond your patience, and keeps the recording on your computer.
+
+## Which free offline app to use
+
+All three apps below are free and open source, and they run the speech model on your own computer. We didn't install them for this guide (our test machine has no desktop), so these details come from each project's official page as of October 2026.
+
+| App | Best for | Platforms | Models |
+| --- | --- | --- | --- |
+| [Vibe](https://github.com/thewh1teagle/vibe) | Transcribing audio and video files | Windows, Mac, Linux | Whisper, Parakeet TDT v3, Nemotron |
+| [Buzz](https://github.com/chidiwilliams/buzz) | Transcribing files, plus live microphone captions | Windows, Mac (Apple silicon), Linux | Whisper |
+| [Handy](https://github.com/cjpais/Handy) | Dictating into any text box with a shortcut | Windows, Mac, Linux | Whisper, Parakeet V3 |
+
+- **Vibe** says it transcribes files "fully offline," handles batches of files, and exports to TXT, SRT, VTT, DOCX, PDF and other formats. It also lists speaker identification.
+- **Buzz** exports TXT, SRT and VTT. Its README warns that the Windows installer isn't signed, so Windows will show a warning you have to click through, and that the last version for Intel Macs is 1.4.5.
+- **Handy** is for speaking into apps, not for transcribing files you already have.
+
+Each app lets you choose which model to download. That choice matters more than the app, so the rest of this guide is about the models.
+
+## Which model to choose
+
+Based on our test, here is what we'd pick:
+
+- **Most accurate:** Whisper **large-v3-turbo** (often shown as "turbo" or "Large v3 Turbo"). It had the lowest error rate, but without a graphics card it took almost 10 minutes for 22 minutes of audio.
+- **Best balance, especially without a graphics card:** **Parakeet**. Version 2 (English only) was nearly as accurate as Whisper turbo and about five times faster. The apps above offer version 3, which also handles 25 European languages; in our test it was just as fast but less accurate, mainly because it returned no text for some short clips (details below).
+- **If your app only offers smaller Whisper models:** use **base.en** at minimum. **small.en** was clearly more accurate, but it was the slowest model in our test.
+- **Avoid for anything important:** the **tiny** models. They got roughly one word in five wrong on our phone-quality call, and Whisper tiny.en wasn't even faster than Parakeet.
+
+If a model name ends in **.en**, it's the English-only version. OpenAI's [Whisper documentation](https://github.com/openai/whisper) says the English-only versions tend to do better in English, especially at the tiny and base sizes, so pick them when all your audio is in English.
+
+## Our results
+
+We transcribed the same recording with eight models and compared each transcript with a human-made reference transcript.
+
+| Model | Errors on the call (WER) | Time for the 22-minute call | Errors on clean speech (of 99 words) | Model files | Peak memory |
+| --- | --- | --- | --- | --- | --- |
+| Whisper large-v3-turbo | **10.5%** | 9 min 37 s | 2 | 988 MB | 2.3 GB |
+| Parakeet TDT 0.6B v2 | **11.1%** | 1 min 45 s | 1 | 631 MB | 1.3 GB |
+| Whisper small.en | 12.8% | 10 min 3 s | 0 | 358 MB | 1.4 GB |
+| Parakeet TDT 0.6B v3 | 14.0% | 1 min 46 s | 1 | 640 MB | 1.3 GB |
+| Whisper base.en | 15.9% | 2 min 53 s | 2 | 153 MB | 0.8 GB |
+| Moonshine base | 16.0% | 1 min 20 s | 3 | 274 MB | 0.7 GB |
+| Moonshine tiny | 20.7% | 54 s | 3 | 118 MB | 0.5 GB |
+| Whisper tiny.en | 21.4% | 1 min 45 s | 3 | 99 MB | 0.6 GB |
+
+WER (word error rate) counts every wrong, missing or extra word as a share of the words actually spoken, so 10.5% means roughly one word in ten needs fixing. Times are for 4 CPU cores with no graphics card; a newer laptop, a Mac with Apple silicon, or an app that uses your graphics card can be much faster, but the order of the models should stay about the same. Model sizes are for the compressed (int8) files we used; the same model can be a different size in each app.
+
+What the numbers show:
+
+- **Phone-quality speech is much harder than clean speech.** On 41 seconds of clear, single-speaker speech (99 words), every model made three mistakes or fewer. On the call, with several speakers on phone lines, the best model got about one word in ten wrong.
+- **Bigger isn't always slower.** Whisper turbo was more accurate than Whisper small and still finished a little sooner (9 min 37 s versus 10 min 3 s). OpenAI's [Whisper documentation](https://github.com/openai/whisper) describes turbo as "an optimized version of large-v3 that offers faster transcription speed with a minimal degradation in accuracy".
+- **The smallest model isn't the fastest.** Whisper tiny.en took 1 min 45 s, the same as Parakeet v2, while making about twice as many errors. Model size on disk is only a rough guide to speed, so it is worth testing a short file before committing to a long one.
+- **Parakeet v3 skipped some short clips.** It returned no text for 17 of the 210 speech segments, all under five seconds long, such as "115 million." Parakeet v2 transcribed the same segments. That accounts for most of the gap between the two versions in our test. Apps that feed the model longer chunks of audio may not show the same problem.
+
+### What the mistakes looked like
+
+Here is one sentence from the start of the call, as each model heard it. The reference transcript says: "Later we will conduct a question and answer session and instructions will follow at that time."
+
+| Model | Transcript |
+| --- | --- |
+| Whisper turbo | Later, we will conduct a class student answer session, and instructions will follow at the time. |
+| Parakeet v2 | Later we will conduct a question and answer session and instructions will follow at the time. |
+| Parakeet v3 | Later we will conduct a question and answer session and instructions will follow at the time. |
+| Whisper base.en | Later we look in Zaka Class to the Nancer session and instructions will follow at the time. |
+| Moonshine base | Later, we look at ZACA class in an answer session, and instructions will follow at the time. |
+
+The company name, ZAGG, comes up 10 times in the call, and none of the eight models spelled it correctly even once. Names, product terms and numbers are where you should proofread first.
+
+## What we tested
+
+- **Recording:** a 21.8-minute earnings call (ZAGG Inc., third quarter 2020) with six speakers, from Rev's [Earnings-21 dataset](https://github.com/revdotcom/speech-datasets/tree/main/earnings21) (CC BY-SA 4.0). It comes with a human-made reference transcript, which is what makes an error rate possible. The audio is real conference-call quality, not studio sound.
+- **Clean speech:** four short clips, 41 seconds in total: three audiobook clips that ship with the models as test files, and the "ask not what your country can do for you" clip from the [whisper.cpp samples](https://github.com/ggml-org/whisper.cpp/tree/master/samples).
+- **Engine:** [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) 1.13.8 with the int8 models from its [model releases](https://github.com/k2-fsa/sherpa-onnx/releases/tag/asr-models). The apps above use their own engines, so their speed will differ.
+- **Splitting:** we cut the call into 210 speech segments of up to 20 seconds with the Silero voice-activity model, and gave every model the same segments.
+- **Scoring:** both transcripts were normalized with Whisper's English text normalizer (so "3rd" and "third", or "um" and nothing, aren't counted as errors) and scored with the jiwer library.
+- **Machine:** a Linux cloud server with 4 Intel Xeon cores at 2.8 GHz and no graphics card, October 11, 2026. Each model ran alone, using 4 threads.
+
+## FAQ
+
+### Is ChatGPT's audio transcription free?
+
+No. As of October 2026, OpenAI's [help article](https://help.openai.com/en/articles/8555545-uploading-files-and-audio-to-chatgpt) says audio uploads are available on paid ChatGPT plans and not on the Free plan. Files can be up to 512 MB.
+
+### What is the most accurate free transcription model?
+
+In our test, Whisper large-v3-turbo, with a 10.5% word error rate on a phone-quality call, followed closely by Parakeet TDT 0.6B v2 at 11.1%. On clean, single-speaker audio, most models we tested were nearly perfect.
+
+### Do I need a graphics card to transcribe audio offline?
+
+No. Our test machine had none. Parakeet v2 transcribed the 22-minute call in 1 minute 45 seconds on 4 CPU cores. A graphics card mainly helps the larger Whisper models, and Vibe and Buzz both list GPU support.
+
+### Can offline models transcribe languages other than English?
+
+Yes, but not all of them. Whisper's models without ".en" in the name are multilingual, and NVIDIA's [model card](https://build.nvidia.com/nvidia/parakeet-tdt-0_6b/modelcard) says Parakeet v3 covers 25 European languages. The ".en" models and Parakeet v2 are English only. We only tested English.
+
+### Is offline transcription private?
+
+The audio is processed on your computer instead of being uploaded, which is the main privacy advantage. Vibe, for example, says "no data ever leaves your device." Apps still need the internet to download models and updates, and optional extras such as AI summaries can use online services, so check what you turn on.

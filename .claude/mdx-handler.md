@@ -14,7 +14,7 @@
 import {
   // 컬렉션 정의
   defineCollection,    // ({ route, schema, generateThumbnail?, copyMedia? }) => CollectionDefinition
-  defineContentConfig, // ({ contentDir, staticDir, staticUrl, github?, collections }) => ContentConfig
+  defineContentConfig, // ({ contentDir, staticDir, staticUrl, registryFile?, github?, gitDates?, collections }) => ContentConfig
   frontmatterSchema,   // 공통 strict 스키마 (title, description, thumbnail?, createdAt?, updatedAt?) → .extend()로 확장
   frontmatterDate,     // YAML 날짜/날짜 문자열 → ISO 문자열
   // 조회
@@ -29,6 +29,18 @@ import type { CollectionEntry, CollectionName, ContentEntry } from '@jinho-blog/
 - 항목 타입 = 스키마 출력 + 생성 필드(`slug`, `filePath`, `path`, `createdAt`, `updatedAt`, `thumbnail?`, `ogImage?`, `content`)
 - `generateThumbnail: true` 컬렉션은 `thumbnail` 필수 타입
 - `createContentReader`는 파일을 직접 읽지 않음: 앱이 리터럴 경로로 읽는 함수를 전달 (Turbopack 파일 트레이싱이 정적 분석하도록. 동적 경로는 앱 전체가 서버 출력에 포함됨)
+
+### ContentConfig 옵션
+
+| 옵션 | 기본값 | 설명 |
+|---|---|---|
+| `contentDir` | (필수) | MDX 루트, 컬렉션별 `{contentDir}/{name}/*.mdx` |
+| `staticDir` / `staticUrl` | (필수) | 미디어 출력 디렉토리와 공개 URL (`{staticDir}/mdx/{name}`) |
+| `registryFile` | `{staticDir}/registry.json` | 레지스트리 경로. public이 그대로 배포되는 정적 export 앱은 public 밖으로 지정 |
+| `github` | 없음 | Vercel 빌드에서 GitHub API로 커밋 날짜 조회 (`GITHUB_TOKEN` 필요) |
+| `gitDates` | `true` | `false`면 frontmatter 날짜만 사용 (얕은 클론으로 빌드하는 호스트용) |
+
+날짜 우선순위: `createdAt` = frontmatter → Git 첫 커밋 → 빌드 시각, `updatedAt` = frontmatter → Git 마지막 커밋 → `createdAt`
 
 ### 빌드 전용 — `@jinho-blog/mdx-handler/build`
 

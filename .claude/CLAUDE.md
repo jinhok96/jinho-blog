@@ -118,6 +118,7 @@ Agent 도구로 웨이브 단위 실행:
 - @.claude/monorepo.md (코드 변경 작업 시 참조)
 - 패키지별 전용 문서 (해당 패키지 작업 시 참조):
   - @.claude/web.md
+  - @.claude/ad-blog.md
   - @.claude/shared.md
   - @.claude/mdx-handler.md
   - @.claude/nextjs-routes.md

@@ -33,8 +33,19 @@ export type ContentConfig<TCollections extends CollectionMap = CollectionMap> = 
   staticDir: string;
   /** staticDir의 공개 URL (예: '/_static') */
   staticUrl: string;
+  /**
+   * 레지스트리 JSON 경로 (앱 루트 기준, 기본값: `{staticDir}/registry.json`)
+   * - 정적 export처럼 public 디렉토리가 그대로 배포되는 경우 public 밖으로 지정해 원문 노출 방지
+   */
+  registryFile?: string;
   /** Vercel 빌드에서 GitHub API로 커밋 날짜를 조회할 저장소 */
   github?: { owner: string; repo: string };
+  /**
+   * Git 커밋 날짜를 createdAt·updatedAt 대체값으로 사용 (기본값: true)
+   * - false: frontmatter 날짜만 사용 (수정일 미지정 시 발행일)
+   * - 얕은 클론으로 빌드하는 호스트에서는 Git 날짜가 최신 커밋 날짜로 일괄 바뀌므로 false 권장
+   */
+  gitDates?: boolean;
   collections: TCollections;
 };
 
@@ -80,7 +91,7 @@ export type ContentEntry<TConfig extends ContentConfig, TName extends Collection
  */
 export function defineCollection<
   TSchema extends z.ZodType<BaseFrontmatter>,
-  TGenerateThumbnail extends boolean = false,
+  const TGenerateThumbnail extends boolean = false,
 >(definition: CollectionDefinition<TSchema, TGenerateThumbnail>): CollectionDefinition<TSchema, TGenerateThumbnail> {
   return definition;
 }

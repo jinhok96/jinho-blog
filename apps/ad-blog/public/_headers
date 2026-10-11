@@ -1,0 +1,4 @@
+# 정적 호스팅 응답 헤더 (Cloudflare Pages·Netlify 형식, 그 외 호스트는 무시)
+# 파일명에 콘텐츠 해시가 포함된 빌드 산출물은 영구 캐시
+/_next/static/*
+  Cache-Control: public, max-age=31536000, immutable

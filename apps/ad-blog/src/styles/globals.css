@@ -1,0 +1,123 @@
+@import 'tailwindcss';
+@plugin '@tailwindcss/typography';
+
+/*
+ * 디자인 토큰
+ * - 유틸리티(bg-background, text-muted 등)는 CSS 변수를 참조하므로 다크 모드에서 변수만 교체
+ * - 다크 모드: 시스템 설정(prefers-color-scheme) 기준, JS 없음 (Tailwind 기본 `dark:` 변형과 동일 기준)
+ * - 배경색 변경 시 app/layout.tsx의 viewport.themeColor도 함께 수정
+ */
+@theme {
+  /* 웹 폰트 다운로드 없이 OS 기본 한글 글꼴 사용 */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, system-ui, 'Apple SD Gothic Neo', 'Malgun Gothic', '맑은 고딕', 'Noto Sans KR',
+    'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  --font-mono:
+    ui-monospace, SFMono-Regular, 'SF Mono', Menlo, Consolas, 'D2Coding', 'Liberation Mono', 'Noto Sans Mono CJK KR',
+    monospace;
+
+  /* 텍스트 대비: foreground·muted·accent 모두 배경 대비 WCAG AA(4.5:1) 이상 */
+  --color-background: #ffffff;
+  --color-foreground: #1a1d23;
+  --color-muted: #5b6270;
+  --color-surface: #f4f5f7;
+  --color-border: #e2e5ea;
+  --color-accent: #1d5fd6;
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --color-background: #0f1115;
+    --color-foreground: #e7e9ee;
+    --color-muted: #9aa1ad;
+    --color-surface: #191c22;
+    --color-border: #2c313a;
+    --color-accent: #6ea4ff;
+  }
+}
+
+@layer base {
+  :root {
+    color-scheme: light dark;
+  }
+
+  html {
+    -webkit-text-size-adjust: 100%;
+    text-size-adjust: 100%;
+  }
+
+  body {
+    background-color: var(--color-background);
+    color: var(--color-foreground);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    /* 한글 단어 단위 줄바꿈 + 긴 URL 등은 넘치지 않도록 강제 줄바꿈 */
+    word-break: keep-all;
+    overflow-wrap: break-word;
+  }
+
+  ::selection {
+    background-color: color-mix(in oklab, var(--color-accent) 25%, transparent);
+  }
+
+  :focus-visible {
+    outline: 2px solid var(--color-accent);
+    outline-offset: 2px;
+  }
+}
+
+/*
+ * 본문 타이포그래피(@tailwindcss/typography) 색상을 디자인 토큰에 연결
+ * - 레이어 밖 규칙이라 플러그인 기본값보다 우선 → prose-invert 없이 다크 모드 대응
+ */
+.prose {
+  --tw-prose-body: var(--color-foreground);
+  --tw-prose-headings: var(--color-foreground);
+  --tw-prose-lead: var(--color-muted);
+  --tw-prose-links: var(--color-accent);
+  --tw-prose-bold: var(--color-foreground);
+  --tw-prose-counters: var(--color-muted);
+  --tw-prose-bullets: var(--color-muted);
+  --tw-prose-hr: var(--color-border);
+  --tw-prose-quotes: var(--color-foreground);
+  --tw-prose-quote-borders: var(--color-border);
+  --tw-prose-captions: var(--color-muted);
+  --tw-prose-kbd: var(--color-foreground);
+  --tw-prose-kbd-shadows: color-mix(in oklab, var(--color-foreground) 10%, transparent);
+  --tw-prose-code: var(--color-foreground);
+  --tw-prose-pre-code: var(--color-foreground);
+  --tw-prose-pre-bg: var(--color-surface);
+  --tw-prose-th-borders: var(--color-border);
+  --tw-prose-td-borders: var(--color-border);
+}
+
+/* 코드 블록: 배경과 구분되도록 테두리 */
+.prose :where(pre):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  border: 1px solid var(--color-border);
+}
+
+/* 인라인 코드: 백틱 장식 제거 + 배경 강조 */
+.prose :where(:not(pre) > code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  border-radius: 0.25rem;
+  background-color: var(--color-surface);
+  padding: 0.125em 0.375em;
+  font-weight: 500;
+}
+
+.prose :where(:not(pre) > code):not(:where([class~='not-prose'], [class~='not-prose'] *))::before,
+.prose :where(:not(pre) > code):not(:where([class~='not-prose'], [class~='not-prose'] *))::after {
+  content: none;
+}
+
+/*
+ * 본문 제목은 한 단계 낮춰 렌더링(`####` → h5)하므로 플러그인이 스타일하지 않는 h5·h6 보완
+ */
+.prose :where(h5, h6):not(:where([class~='not-prose'], [class~='not-prose'] *)) {
+  margin-top: 1.5em;
+  margin-bottom: 0.5em;
+  color: var(--tw-prose-headings);
+  font-size: 1em;
+  font-weight: 600;
+  line-height: 1.5;
+}

@@ -47,3 +47,6 @@ next-env.d.ts
 
 # generated static files
 apps/web/public/_static/
+apps/ad-blog/public/_static/
+apps/ad-blog/.content/
+apps/ad-blog/out/

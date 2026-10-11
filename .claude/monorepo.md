@@ -7,7 +7,8 @@ Turborepo 기반 모노레포. 패키지 매니저: pnpm
 ```
 jinho-blog/
 ├── apps/
-│   └── web/              # Next.js 블로그 (포트 3401) → [web.md](.claude/web.md)
+│   ├── web/              # Next.js 블로그 (포트 3401) → [web.md](.claude/web.md)
+│   └── ad-blog/          # 광고 블로그, 정적 export (포트 3402) → [ad-blog.md](.claude/ad-blog.md)
 └── packages/
     ├── shared/           # 공유 타입 및 상수 → [shared.md](.claude/shared.md)
     ├── mdx-handler/      # MDX 컬렉션 엔진 (Zod 스키마, 레지스트리) → [mdx-handler.md](.claude/mdx-handler.md)
@@ -22,7 +23,7 @@ jinho-blog/
     ↓
 @jinho-blog/mdx-handler ← @jinho-blog/thumbnail-generator (빌드 엔트리 전용: 썸네일·OG 이미지)
     ↓
-@jinho-blog/web
+@jinho-blog/web, @jinho-blog/ad-blog
 
 @jinho-blog/nextjs-routes (독립) → @jinho-blog/web (devDependency)
 ```
@@ -33,7 +34,7 @@ Turborepo가 `turbo.json`의 `dependsOn: ["^build"]`로 자동 관리:
 
 1. `@jinho-blog/shared`
 2. `@jinho-blog/mdx-handler` + `@jinho-blog/nextjs-routes` (병렬)
-3. `@jinho-blog/web`
+3. `@jinho-blog/web` + `@jinho-blog/ad-blog` (병렬)
 
 ## Turbo 명령어
 
@@ -97,5 +98,6 @@ import { BlogMetadata } from '@jinho-blog/shared';
 | 워크스페이스 | 경로 별칭 |
 |---|---|
 | `apps/web` | `@/*`, `@jinho-blog/shared`, `@jinho-blog/mdx-handler` |
+| `apps/ad-blog` | `@/*`, `@jinho-blog/shared`, `@jinho-blog/mdx-handler` |
 | `packages/mdx-handler` | `@jinho-blog/shared` |
 | `packages/shared` | 없음 |

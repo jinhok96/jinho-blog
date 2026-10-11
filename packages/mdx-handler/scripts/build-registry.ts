@@ -381,6 +381,12 @@ export async function buildOgImage(
   const inputPath = path.join(paths.mediaRootDir, thumbnail.slice(paths.mediaRootUrl.length));
   const outputPath = path.join(paths.mediaDir(name), 'og', `${slug}.jpg`);
 
+  // `../`로 미디어 루트 밖 파일을 읽어 배포하지 않도록 차단
+  if (!inputPath.startsWith(`${paths.mediaRootDir}${path.sep}`)) {
+    console.warn(`⚠️  OG 이미지 생성 건너뜀 [${slug}]: 미디어 디렉토리 밖 경로 (${thumbnail})`);
+    return;
+  }
+
   try {
     await generateOgImage({ inputPath, outputPath });
     return `${paths.mediaUrl(name)}/og/${slug}.jpg`;
@@ -423,13 +429,16 @@ export async function buildCollectionEntries(
 
     const ogImage = await buildOgImage(thumbnail, name, slug, paths);
 
-    const now = new Date().toISOString();
+    // 날짜 우선순위: frontmatter → Git → (수정일은 발행일) → 빌드 시각
+    // Git 이력이 없는 빌드 환경에서도 수정일이 빌드마다 바뀌지 않도록 발행일로 고정
+    const createdAt = data.createdAt || gitDates.createdAt || new Date().toISOString();
+    const updatedAt = data.updatedAt || gitDates.updatedAt || createdAt;
 
     entries.push({
       slug,
       ...data,
-      createdAt: data.createdAt || gitDates.createdAt || now,
-      updatedAt: data.updatedAt || gitDates.updatedAt || now,
+      createdAt,
+      updatedAt,
       thumbnail,
       ogImage,
       content: transformImagePaths(content, mediaUrl),
@@ -462,7 +471,8 @@ export async function buildContentRegistry<TCollections extends CollectionMap>(
   const collections = validateCollections(config.collections, paths);
 
   // 2단계: 레지스트리 항목 생성
-  const readGitDates = createGitDatesReader(config.github);
+  const readGitDates: GitDatesReader =
+    config.gitDates === false ? async () => ({}) : createGitDatesReader(config.github);
   const registry: Record<string, RegistryEntry[]> = {};
 
   for (const collection of collections) {

@@ -57,7 +57,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 ## 세션 워크플로우
 
 1. **상태 파악**: 이 파일, [log.md](log.md), [backlog.md](backlog.md) 읽기. 열린 PR이 있으면 먼저 처리
-2. **지표 확인** (접근 가능할 때): Search Console 노출·클릭·CTR·순위, 색인 상태 → log.md에 기록하고 개선 작업 판단
+2. **지표 확인**: `python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests` 후 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py` → 노출·클릭·CTR·순위, 사이트맵 상태, 글별 색인 상태(URL 검사)를 log.md에 붙이고 개선 작업 판단
 3. **주제 선택**: Google Trends(미국)로 새 수요 확인 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 5. **작성**: [writing-guide.md](writing-guide.md) 기준
@@ -84,7 +84,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | 항목                          | 상태      | 필요 조치 (담당)                                                                   |
 | ----------------------------- | --------- | ---------------------------------------------------------------------------------- |
 | 도메인·호스팅                 | 설정됨    | `tool-proof.com` 연결, `NEXT_PUBLIC_SITE_URL=https://tool-proof.com`(Production). 필수 상태 체크는 `Vercel – jinho-blog-web` 등 프로젝트별 이름 |
-| Search Console                | 등록됨    | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. **API 조회는 미설정**: 서비스 계정을 제한된 사용자로 추가 + 키를 환경 시크릿으로 등록 + `searchconsole.googleapis.com`·`oauth2.googleapis.com` 허용 (사용자) |
+| Search Console                | 등록·API 설정됨 | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. 서비스 계정(제한된 권한) 키를 환경변수 `GSC_SERVICE_ACCOUNT_JSON_B64`로 등록, API 도메인 허용. 조회는 [tools/gsc_report.py](tools/gsc_report.py) |
 | Bing Webmaster Tools·IndexNow | 미설정    | 도메인 연결 후 진행 (Claude: IndexNow 키 파일·제출 스크립트)                       |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub(+trends.google.com)만 접속 가능 → 웹 서비스 직접 테스트·스크린샷·실제 사이트 확인 불가. WebFetch도 같은 제한. `tool-proof.com`과 공식 문서 도메인(help.openai.com, support.google.com 등) 허용 추가 권장 (사용자) |

@@ -226,7 +226,8 @@ const baseConfig = defineConfig([
         'error',
         {
           // adsbygoogle: AdSense 광고 단위가 요구하는 클래스명
-          ignore: ['light', 'dark', 'system', 'adsbygoogle'],
+          // not-prose: typography 플러그인이 선택자에서만 쓰는 클래스 (유틸리티 목록에 없음)
+          ignore: ['light', 'dark', 'system', 'adsbygoogle', 'not-prose'],
         },
       ],
 

@@ -7,8 +7,8 @@ import { Container } from '@/core/ui';
 
 // 404 응답에는 Next.js가 noindex를 자동 추가
 export const metadata: Metadata = {
-  title: '페이지를 찾을 수 없습니다',
-  description: '요청한 페이지가 없거나 주소가 바뀌었습니다.',
+  title: 'Page not found',
+  description: 'The page you requested does not exist or has moved.',
 };
 
 export default function NotFound() {
@@ -27,9 +27,9 @@ export default function NotFound() {
           sm:text-3xl
         `}
       >
-        페이지를 찾을 수 없습니다
+        Page not found
       </h1>
-      <p className="mt-3 text-pretty text-muted">요청한 페이지가 없거나 주소가 바뀌었을 수 있습니다.</p>
+      <p className="mt-3 text-pretty text-muted">The page you requested does not exist or may have moved.</p>
       <Link
         href={HOME_PATH}
         className={`
@@ -37,7 +37,7 @@ export default function NotFound() {
           hover:opacity-90
         `}
       >
-        홈으로 돌아가기
+        Back to home
       </Link>
     </Container>
   );

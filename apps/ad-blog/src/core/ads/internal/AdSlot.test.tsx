@@ -31,7 +31,7 @@ describe('AdSlot', () => {
     const AdSlot = await loadAdSlot({ client: CLIENT, slots: SLOTS, nodeEnv: 'production' });
     const html = renderToStaticMarkup(<AdSlot placement="postTop" />);
 
-    expect(html).toContain('aria-label="광고"');
+    expect(html).toContain('aria-label="Advertisement"');
     expect(html).toContain('data-ad-placement="postTop"');
     expect(html).toContain('min-h-70');
     expect(html).toContain('has-[ins[data-ad-status=unfilled]]:hidden');

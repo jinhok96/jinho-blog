@@ -28,7 +28,7 @@ export function PostHeader({ post }: Props) {
               dark:bg-amber-900 dark:text-amber-100
             `}
           >
-            초안
+            Draft
           </span>
         </p>
       )}
@@ -52,25 +52,25 @@ export function PostHeader({ post }: Props) {
 
       <dl className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
         <div className="flex gap-1.5">
-          <dt className="text-muted">발행일</dt>
+          <dt className="text-muted">Published</dt>
           <dd>
             <time dateTime={createdAt}>{formatDate(createdAt)}</time>
           </dd>
         </div>
         {isUpdated && (
           <div className="flex gap-1.5">
-            <dt className="text-muted">수정일</dt>
+            <dt className="text-muted">Updated</dt>
             <dd>
               <time dateTime={updatedAt}>{formatDate(updatedAt)}</time>
             </dd>
           </div>
         )}
         <div className="flex gap-1.5">
-          <dt className="text-muted">읽는 시간</dt>
-          <dd>약 {getReadingMinutes(content)}분</dd>
+          <dt className="text-muted">Reading time</dt>
+          <dd>{getReadingMinutes(content)} min</dd>
         </div>
         <div className="flex gap-1.5">
-          <dt className="text-muted">카테고리</dt>
+          <dt className="text-muted">Category</dt>
           <dd>
             <Link
               href={categoryPath(category)}

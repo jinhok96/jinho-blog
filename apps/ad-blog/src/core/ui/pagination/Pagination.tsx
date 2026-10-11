@@ -35,7 +35,7 @@ function StepLink({ href, rel, label }: StepLinkProps) {
     <Link
       href={href}
       rel={rel}
-      aria-label={`${label} 페이지`}
+      aria-label={`${label} page`}
       className={cn(ITEM_CLASS_NAME, LINK_CLASS_NAME, 'font-medium')}
     >
       {text}
@@ -63,7 +63,7 @@ export function Pagination({ basePath, currentPage, totalPages, className }: Pro
 
   return (
     <nav
-      aria-label="페이지 이동"
+      aria-label="Pagination"
       className={className}
     >
       <ul
@@ -76,7 +76,7 @@ export function Pagination({ basePath, currentPage, totalPages, className }: Pro
           <StepLink
             href={currentPage > 1 ? paginatedPath(basePath, currentPage - 1) : null}
             rel="prev"
-            label="이전"
+            label="Previous"
           />
         </li>
 
@@ -90,7 +90,7 @@ export function Pagination({ basePath, currentPage, totalPages, className }: Pro
             {currentPage} / {totalPages}
           </span>
           <span className="sr-only">
-            전체 {totalPages}페이지 중 {currentPage}페이지
+            Page {currentPage} of {totalPages}
           </span>
         </li>
 
@@ -105,7 +105,7 @@ export function Pagination({ basePath, currentPage, totalPages, className }: Pro
             >
               <Link
                 href={paginatedPath(basePath, item)}
-                aria-label={`${item}페이지`}
+                aria-label={`Page ${item}`}
                 aria-current={item === currentPage ? 'page' : undefined}
                 className={cn(
                   ITEM_CLASS_NAME,
@@ -133,7 +133,7 @@ export function Pagination({ basePath, currentPage, totalPages, className }: Pro
           <StepLink
             href={currentPage < totalPages ? paginatedPath(basePath, currentPage + 1) : null}
             rel="next"
-            label="다음"
+            label="Next"
           />
         </li>
       </ul>

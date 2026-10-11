@@ -29,7 +29,7 @@ export function PostsPageView({ posts, currentPage, totalPages, breadcrumbs }: P
         items={breadcrumbs}
         className="mb-6"
       />
-      <PageHeader title={paginatedTitle('전체 글', currentPage)} />
+      <PageHeader title={paginatedTitle('All posts', currentPage)} />
       <PostList
         posts={posts}
         priorityCount={1}

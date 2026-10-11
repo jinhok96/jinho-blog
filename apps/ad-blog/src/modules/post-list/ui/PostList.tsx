@@ -29,7 +29,7 @@ export function PostList({
   headingLevel = 2,
   priorityCount = 0,
   inFeedAd = false,
-  emptyMessage = '아직 발행된 글이 없습니다.',
+  emptyMessage = 'No posts published yet.',
   className,
 }: Props) {
   if (posts.length === 0) {

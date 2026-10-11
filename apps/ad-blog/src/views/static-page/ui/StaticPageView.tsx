@@ -37,7 +37,7 @@ export function StaticPageView({ page, content, breadcrumbs }: Props) {
         />
         <Prose className="mt-8">{content}</Prose>
         <p className="mt-12 text-sm text-muted">
-          최종 수정일 <time dateTime={page.updatedAt}>{formatDate(page.updatedAt)}</time>
+          Last updated <time dateTime={page.updatedAt}>{formatDate(page.updatedAt)}</time>
         </p>
       </article>
     </Container>

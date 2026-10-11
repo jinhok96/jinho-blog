@@ -9,7 +9,7 @@ vi.mock('@/core/content', () => ({
 vi.mock('@/core/config', async importOriginal => ({
   ...(await importOriginal<object>()),
   POSTS_PER_PAGE: 2,
-  CATEGORIES: ['general', 'review'],
+  CATEGORIES: ['ai-tools', 'software'],
 }));
 
 import { contentReader } from '@/core/content';
@@ -30,7 +30,7 @@ function makePost(overrides: Partial<Post> & Pick<Post, 'slug' | 'createdAt'>): 
   return {
     title: overrides.slug,
     description: 'desc',
-    category: 'general',
+    category: 'ai-tools',
     tags: [],
     draft: false,
     updatedAt: overrides.createdAt,
@@ -45,7 +45,7 @@ function makePost(overrides: Partial<Post> & Pick<Post, 'slug' | 'createdAt'>): 
 // 등록 순서와 무관하게 최신순 정렬되는지 확인하기 위해 섞어서 배치
 const POSTS: Post[] = [
   makePost({ slug: 'b', createdAt: '2026-02-01T00:00:00.000Z', tags: ['x'] }),
-  makePost({ slug: 'd', createdAt: '2026-04-01T00:00:00.000Z', category: 'review' as Post['category'], tags: ['x'] }),
+  makePost({ slug: 'd', createdAt: '2026-04-01T00:00:00.000Z', category: 'software' as Post['category'], tags: ['x'] }),
   makePost({ slug: 'a', createdAt: '2026-01-01T00:00:00.000Z' }),
   makePost({ slug: 'c', createdAt: '2026-03-01T00:00:00.000Z', tags: ['y'] }),
   makePost({ slug: 'draft', createdAt: '2026-05-01T00:00:00.000Z', draft: true }),
@@ -73,7 +73,7 @@ describe('getPosts', () => {
   });
 
   it('카테고리 필터', () => {
-    expect(getPosts({ category: 'review' as Post['category'] }).map(post => post.slug)).toEqual(['d']);
+    expect(getPosts({ category: 'software' as Post['category'] }).map(post => post.slug)).toEqual(['d']);
   });
 });
 
@@ -86,7 +86,7 @@ describe('getPostsPage / getPostPageCount', () => {
   });
 
   it('카테고리별 페이지', () => {
-    expect(getPostsPage(1, { category: 'general' as Post['category'] }).items.map(post => post.slug)).toEqual([
+    expect(getPostsPage(1, { category: 'ai-tools' as Post['category'] }).items.map(post => post.slug)).toEqual([
       'c',
       'b',
     ]);
@@ -94,7 +94,7 @@ describe('getPostsPage / getPostPageCount', () => {
 
   it('총 페이지 수 (글이 없어도 1)', () => {
     expect(getPostPageCount()).toBe(2);
-    expect(getPostPageCount({ category: 'review' as Post['category'] })).toBe(1);
+    expect(getPostPageCount({ category: 'software' as Post['category'] })).toBe(1);
 
     mockGetEntries.mockReturnValue([]);
     expect(getPostPageCount()).toBe(1);
@@ -114,7 +114,7 @@ describe('getPost', () => {
 
 describe('getRelatedPosts', () => {
   it('같은 카테고리·공유 태그 점수순, 자기 자신 제외', () => {
-    // b(general, x) 기준: c(general)=2, a(general)=2, d(review, x)=1
+    // b(ai-tools, x) 기준: c(ai-tools)=2, a(ai-tools)=2, d(software, x)=1
     const post = getPost('b')!;
 
     expect(getRelatedPosts(post).map(related => related.slug)).toEqual(['c', 'a', 'd']);
@@ -122,7 +122,7 @@ describe('getRelatedPosts', () => {
   });
 
   it('관련 점수가 없으면 제외', () => {
-    // d(review, x) 기준: b(x)=1만 관련
+    // d(software, x) 기준: b(x)=1만 관련
     expect(getRelatedPosts(getPost('d')!).map(related => related.slug)).toEqual(['b']);
   });
 });
@@ -148,11 +148,11 @@ describe('getAdjacentPosts', () => {
 describe('getCategorySummaries', () => {
   it('글이 있는 카테고리만 정의 순서대로 글 수와 함께 반환', () => {
     expect(getCategorySummaries()).toEqual([
-      { category: 'general', count: 3 },
-      { category: 'review', count: 1 },
+      { category: 'ai-tools', count: 3 },
+      { category: 'software', count: 1 },
     ]);
 
     mockGetEntries.mockReturnValue([POSTS[0]]);
-    expect(getCategorySummaries()).toEqual([{ category: 'general', count: 1 }]);
+    expect(getCategorySummaries()).toEqual([{ category: 'ai-tools', count: 1 }]);
   });
 });

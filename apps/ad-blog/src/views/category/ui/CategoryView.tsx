@@ -39,7 +39,9 @@ export function CategoryView({ category, posts, currentPage, totalPages, totalIt
         title={paginatedTitle(name, currentPage)}
         description={description}
       />
-      <p className="mt-2 text-sm text-muted">글 {totalItems}개</p>
+      <p className="mt-2 text-sm text-muted">
+        {totalItems} {totalItems === 1 ? 'post' : 'posts'}
+      </p>
       <PostList
         posts={posts}
         priorityCount={1}

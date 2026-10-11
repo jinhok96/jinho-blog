@@ -17,9 +17,9 @@ describe('websiteJsonLd', () => {
     expect(websiteJsonLd()).toMatchObject({
       '@context': 'https://schema.org',
       '@type': 'WebSite',
-      name: '블로그 이름',
+      name: 'ToolProof',
       url: 'https://my-blog.com',
-      inLanguage: 'ko-KR',
+      inLanguage: 'en-US',
     });
   });
 });
@@ -47,7 +47,7 @@ describe('blogPostingJsonLd', () => {
       image: ['https://my-blog.com/_static/mdx/posts/og/hello.jpg'],
       datePublished: '2026-01-01T00:00:00.000Z',
       dateModified: '2026-01-02T00:00:00.000Z',
-      author: { '@type': 'Person', name: '작성자', url: 'https://my-blog.com/about' },
+      author: { '@type': 'Organization', name: 'ToolProof', url: 'https://my-blog.com/about' },
       articleSection: '일반',
       keywords: 'a, b',
     });
@@ -70,12 +70,12 @@ describe('breadcrumbJsonLd', () => {
 
     expect(
       breadcrumbJsonLd([
-        { name: '홈', path: '/' },
-        { name: '일반', path: '/categories/general' },
+        { name: 'Home', path: '/' },
+        { name: 'AI Tools', path: '/categories/ai-tools' },
       ]).itemListElement,
     ).toEqual([
-      { '@type': 'ListItem', position: 1, name: '홈', item: 'https://my-blog.com' },
-      { '@type': 'ListItem', position: 2, name: '일반', item: 'https://my-blog.com/categories/general' },
+      { '@type': 'ListItem', position: 1, name: 'Home', item: 'https://my-blog.com' },
+      { '@type': 'ListItem', position: 2, name: 'AI Tools', item: 'https://my-blog.com/categories/ai-tools' },
     ]);
   });
 });

@@ -1,0 +1,11 @@
+Test date: 2026-10-11
+OS: Ubuntu 24.04.5 LTS, kernel 6.18.44-fc-v114, x86_64
+Python: Python 3.13.16
+c2pa-python: 0.38.0 (bundled c2pa-rs SDK 0.91.0)
+c2patool: c2patool 0.27.22  (sha256 of release tarball: 6f138ad53da1a62f1cd6ee71c60727efa27d13b811f4c0ea8c2a8528968b358b)
+Pillow: 12.3.0
+ImageMagick: Version: ImageMagick 6.9.12-98 Q16 x86_64 18038 https://legacy.imagemagick.org
+Chromium: Chromium 141.0.7390.37  via playwright-core 1.56.0 (Node v22.22.0)
+Fixture: contentauth/c2pa-rs main@58b9a092882b4dcbdbfe854073a1021d3fcbf9a9 sdk/tests/fixtures/C.jpg (signed 2024-08-06 by "C2PA Test Signing Cert", digitalSourceType algorithmicMedia)
+Own image: synthetic 1600x1067 JPEG, signed with c2patool sample es256 TEST cert (issuer "C2PA Test Signing Cert"), no timestamp, digitalSourceType trainedAlgorithmicMedia
+Trust: both checkers configured with c2patool sample/trust_anchors.pem + store.cfg (test root), so the untouched originals validate as "Trusted"

@@ -1,6 +1,6 @@
 # ad-blog
 
-광고 수익형 블로그용 Next.js 앱 (`@jinho-blog/ad-blog`). 주제·도메인은 미정이며, 블로그 기능과 검색 노출(SEO)에 필요한 구성을 미리 갖춘 템플릿입니다.
+광고 수익형 블로그 **ToolProof**(영어권 대상 IT·AI 도구 가이드)의 Next.js 앱 (`@jinho-blog/ad-blog`). 블로그 기능과 검색 노출(SEO)에 필요한 구성을 갖추고 있으며, 운영 실험의 전략·기록·글쓰기 기준은 [experiment/](experiment/README.md)에 있습니다.
 
 - `output: 'export'` 완전 정적 사이트: 빌드 결과(`out/`)를 정적 호스팅에 그대로 배포 (서버 런타임 없음)
 - MDX 콘텐츠: `content/posts`(글), `content/pages`(소개·문의·개인정보처리방침 등)
@@ -17,16 +17,14 @@
 | `/sitemap.xml`, `/robots.txt`, `/rss.xml` | SEO 파일 (빌드 시 생성)                  |
 | `/ads.txt`                                | 광고 판매자 목록 (빌드 시 생성)          |
 
-## 주제·도메인 확정 시 설정
+## 사이트 설정
 
 1. **사이트 정보** — `src/core/config/internal/site.ts`: `SITE_NAME`, `SITE_DESCRIPTION`, `SITE_KEYWORDS`, `AUTHOR_NAME`, `AUTHOR_SAME_AS`, `POSTS_PER_PAGE`
 2. **카테고리** — `src/core/config/internal/categories.ts`: `CATEGORY_MAP`의 키(slug, URL에 사용)와 이름·설명. 기존 글의 `category`가 정의에 없으면 빌드 실패
 3. **도메인** — 빌드 환경변수 `NEXT_PUBLIC_SITE_URL` (예: `https://my-blog.com`)
    - 미설정 시 `https://example.com` 기준으로 빌드되고, 모든 페이지 `noindex` + `robots.txt`가 `Disallow: /` (검색엔진 색인 차단)
    - 설정해야 canonical·OG·sitemap URL이 실제 도메인으로 바뀌고 색인이 허용됨
-4. **샘플 콘텐츠 교체**
-   - `content/posts/welcome.mdx`, `writing-guide.mdx`는 `draft: true` 샘플(개발 서버에서만 표시) — 참고 후 삭제하고 실제 글 작성
-   - `content/pages/about.mdx`, `contact.mdx`, `privacy.mdx`의 `[이메일 주소]`, `[시행일]` 등 placeholder 수정
+4. **정적 페이지** — `content/pages/about.mdx`, `contact.mdx`, `privacy.mdx` (연락처·광고·개인정보 안내)
 5. **아이콘** — `src/app/icon.svg` 교체, 매니페스트 색상은 `src/app/manifest.ts`
 
 기본 OG 이미지(`/_static/og-default.jpg`, 1200x630)는 `SITE_NAME`으로 빌드 시 자동 생성되므로 따로 만들 필요가 없습니다.
@@ -37,15 +35,15 @@
 
 ```mdx
 ---
-title: 글 제목
-description: 검색 결과에 노출될 요약
-category: general
+title: How to Turn Off ChatGPT Memory
+description: Step-by-step instructions to pause or turn off ChatGPT memory on web and mobile.
+category: ai-tools
 createdAt: 2026-01-01
 tags:
-  - 키워드
+  - ChatGPT
 ---
 
-본문 (마크다운)
+Body (Markdown)
 ```
 
 | 항목          | 필수 | 설명                                                                                 |

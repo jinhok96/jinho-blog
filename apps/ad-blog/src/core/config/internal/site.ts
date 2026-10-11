@@ -27,13 +27,20 @@ export const SITE_URL = resolveSiteUrl();
  */
 export const SITE_INDEXABLE = SITE_URL !== PLACEHOLDER_SITE_URL;
 
-export const SITE_NAME = '블로그 이름';
-export const SITE_DESCRIPTION = '블로그 소개 문구를 입력하세요. 검색 결과와 링크 미리보기에 표시됩니다.';
+export const SITE_NAME = 'ToolProof';
+export const SITE_DESCRIPTION =
+  'Practical, tested guides to AI and tech tools: how to use new features, fix common errors, and choose the right tool.';
 export const SITE_KEYWORDS: string[] = [];
-export const SITE_LOCALE = 'ko_KR';
-export const SITE_LANGUAGE = 'ko-KR';
+export const SITE_LOCALE = 'en_US';
+export const SITE_LANGUAGE = 'en-US';
 
-export const AUTHOR_NAME = '작성자';
+/**
+ * 작성자 유형 (JSON-LD author·publisher의 @type)
+ * - Organization: 브랜드 이름으로 발행 (AUTHOR_NAME = 사이트 이름)
+ * - Person: 개인 이름으로 발행
+ */
+export const AUTHOR_TYPE: 'Person' | 'Organization' = 'Organization';
+export const AUTHOR_NAME = SITE_NAME;
 /** 작성자 프로필 링크 (JSON-LD sameAs). 예: SNS, 소개 페이지 */
 export const AUTHOR_SAME_AS: string[] = [];
 

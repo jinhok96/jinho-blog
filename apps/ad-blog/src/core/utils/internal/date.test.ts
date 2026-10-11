@@ -3,17 +3,17 @@ import { describe, expect, it } from 'vitest';
 import { formatDate, isSameDate } from './date';
 
 describe('formatDate', () => {
-  it('한국 시간 기준 날짜로 표시', () => {
-    expect(formatDate('2026-01-01T00:00:00.000Z')).toBe('2026년 1월 1일');
+  it('영어(미국) 형식으로 표시', () => {
+    expect(formatDate('2026-01-01T00:00:00.000Z')).toBe('Jan 1, 2026');
   });
 
-  it('UTC로는 전날이어도 한국 시간 기준 날짜 사용', () => {
-    expect(formatDate('2025-12-31T16:00:00.000Z')).toBe('2026년 1월 1일');
+  it('frontmatter 날짜(UTC 자정)를 하루 전으로 바꾸지 않음', () => {
+    expect(formatDate('2026-10-11T00:00:00.000Z')).toBe('Oct 11, 2026');
   });
 });
 
 describe('isSameDate', () => {
-  it('한국 시간 기준 같은 날이면 true', () => {
+  it('UTC 기준 같은 날이면 true', () => {
     expect(isSameDate('2026-01-01T00:00:00.000Z', '2026-01-01T10:00:00.000Z')).toBe(true);
   });
 

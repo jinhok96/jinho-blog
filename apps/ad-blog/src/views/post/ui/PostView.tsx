@@ -23,7 +23,8 @@ type Props = {
 
 /**
  * 글 상세
- * - 광고: 제목 영역 아래(postTop), 본문 중간(postMiddle, renderMdx에서 삽입), 본문·태그 뒤 이전/다음 글 앞(postBottom)
+ * - 광고: 본문 첫 섹션 앞(postTop)·두 번째 섹션 앞(postMiddle)은 renderMdx가 삽입,
+ *   본문 끝(postBottom)은 이전/다음 글 링크 뒤·관련 글 앞 (내비게이션 링크와 붙지 않도록)
  */
 export function PostView({ post, content, toc, relatedPosts, adjacentPosts, breadcrumbs }: Props) {
   return (
@@ -42,10 +43,6 @@ export function PostView({ post, content, toc, relatedPosts, adjacentPosts, brea
 
         <article>
           <PostHeader post={post} />
-          <AdSlot
-            placement="postTop"
-            className="mt-8"
-          />
           <Toc
             toc={toc}
             className="mt-8"
@@ -71,14 +68,14 @@ export function PostView({ post, content, toc, relatedPosts, adjacentPosts, brea
           )}
         </article>
 
+        <div className="mt-12">
+          <AdjacentPostNav {...adjacentPosts} />
+        </div>
+
         <AdSlot
           placement="postBottom"
           className="mt-12"
         />
-
-        <div className="mt-12">
-          <AdjacentPostNav {...adjacentPosts} />
-        </div>
       </Container>
 
       {relatedPosts.length > 0 && (

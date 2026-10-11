@@ -56,7 +56,9 @@ scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 
 - 광고는 `core/ads`의 `<AdSlot placement="…" />`로만 삽입 (`<ins class="adsbygoogle">` 직접 작성 금지)
 - 게시자·광고 단위 ID는 `core/config/internal/ads.ts`(`ADSENSE_CLIENT`, `AD_SLOTS`)에만 작성, 형식 오류는 `validateAdsConfig`가 빌드 에러로 처리
 - ID가 비어 있으면 렌더링 안 함 (게시자 ID 없으면 스크립트·확인 메타·슬롯 없음, `ads.txt`는 주석만)
-- 위치: `postTop`(제목 아래), `postMiddle`(두 번째 `##` 앞, `##` 3개 이상인 글만), `postBottom`(본문 끝, 이전·다음 글 앞), `listInFeed`(`PostList`의 `inFeedAd` — 6번째 카드 뒤, 7개 이상일 때만. 홈·`/page/n`·카테고리만 켜고 관련 글은 끔)
+- 위치: `postTop`(첫 소제목 앞, 도입부가 있는 글만), `postMiddle`(두 번째 소제목 앞, 소제목 3개 이상인 글만), `postBottom`(이전·다음 글 링크 뒤·관련 글 앞 — 내비게이션 링크와 붙지 않게), `listInFeed`(`PostList`의 `inFeedAd` — 6번째 카드 뒤, 7개 이상일 때만. 홈·`/page/n`·카테고리만 켜고 관련 글은 끔)
+- 본문 광고(`postTop`·`postMiddle`)는 `renderMdx(…, { ads: true })`의 `rehypeContentAds`가 삽입하고, 광고 컴포넌트도 이 옵션일 때만 주입 (정적 페이지 MDX에 직접 써도 빌드 에러). 소제목은 최상위 `#`·`##`(렌더링 h2)만 세고 JSX로 쓴 `<h2>`는 세지 않음
+- 첫 화면(제목 아래)에는 광고를 두지 않음: 미게재 시 슬롯이 접히며 생기는 CLS와 모바일 광고 밀도 기준 회피 (도입부가 아주 짧으면 `postTop`이 첫 화면 하단에 걸릴 수 있음, 측정 CLS ≈ 0.03)
 - 정적 페이지·404에는 광고 없음 (루트 레이아웃 등 공통 영역에 슬롯 금지)
 - AdSense 스크립트는 `AdSenseScript`가 hydration 후 직접 삽입 — `next/script`는 `data-nscript` 속성 때문에 AdSense 콘솔 경고가 나므로 사용 금지
 - 개발 서버는 ID와 무관하게 점선 자리표시 상자 (실제 광고 요청 안 함), 슬롯은 최소 높이로 CLS 방지·미게재 시 숨김

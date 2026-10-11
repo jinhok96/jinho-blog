@@ -5,9 +5,9 @@ import type { ComponentPropsWithoutRef } from 'react';
 import Link from 'next/link';
 
 import { AdSlot } from '../../ads';
+import { CONTENT_AD_COMPONENTS } from './contentAds';
 import { resolveHeadingLevel } from './heading';
 import { isVideoSrc, resolveImageSize } from './image';
-import { IN_ARTICLE_AD_COMPONENT } from './inArticleAd';
 import { isExternalHref, isInternalPageLink } from './link';
 
 /**
@@ -121,20 +121,35 @@ function MdxTable(props: ComponentPropsWithoutRef<'table'>) {
   );
 }
 
-/**
- * 본문 중간 광고 (`rehypeInArticleAd`가 삽입한 `<InArticleAd />`)
- * - `not-prose`: 본문 타이포그래피 스타일이 광고 영역에 적용되지 않도록 제외
- */
+/** `not-prose`: 본문 타이포그래피 스타일이 광고 영역에 적용되지 않도록 제외 */
+const CONTENT_AD_CLASS_NAME = 'not-prose my-10';
+
+function PostTopAd() {
+  return (
+    <AdSlot
+      placement="postTop"
+      className={CONTENT_AD_CLASS_NAME}
+    />
+  );
+}
+
 function InArticleAd() {
   return (
     <AdSlot
       placement="postMiddle"
-      // not-prose: typography 플러그인이 선택자에서만 쓰는 클래스라 유틸리티 목록에 없음
-      // eslint-disable-next-line better-tailwindcss/no-unregistered-classes
-      className="not-prose my-10"
+      className={CONTENT_AD_CLASS_NAME}
     />
   );
 }
+
+/**
+ * 본문 광고 컴포넌트 (`rehypeContentAds`가 삽입한 `<PostTopAd />`·`<InArticleAd />`)
+ * - renderMdx의 `ads` 옵션일 때만 주입: 정적 페이지 MDX에 직접 써도 렌더링되지 않고 빌드 에러 (광고 금지 페이지 보호)
+ */
+export const contentAdComponents: MDXComponents = {
+  [CONTENT_AD_COMPONENTS.top]: PostTopAd,
+  [CONTENT_AD_COMPONENTS.middle]: InArticleAd,
+};
 
 export const mdxComponents: MDXComponents = {
   h1: createHeading(1),
@@ -146,5 +161,4 @@ export const mdxComponents: MDXComponents = {
   a: MdxLink,
   img: MdxImage,
   table: MdxTable,
-  [IN_ARTICLE_AD_COMPONENT]: InArticleAd,
 };

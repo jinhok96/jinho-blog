@@ -1,0 +1,21 @@
+# 글별 검증 자료
+
+글에 쓴 측정값을 다시 확인하거나 글을 갱신할 때 쓰는 재현 스크립트·결과·사실 확인표입니다. 폴더 이름은 글 slug와 같습니다. 다운로드한 모델·이미지 등 큰 파일은 커밋하지 않습니다 (스크립트 주석의 URL에서 다시 받음).
+
+| 폴더                                                                 | 내용                                                                                       |
+| -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
+| [transcribe-audio-offline-free](transcribe-audio-offline-free)       | 음성 인식 8개 모델 벤치마크 (sherpa-onnx 1.13.8, Earnings-21 `4387332` 통화 + 짧은 낭독 음성) |
+| [check-if-image-is-ai-generated](check-if-image-is-ai-generated)     | C2PA 출처 정보 제거 테스트 스크립트, 결과, 사실 확인표                                      |
+| [turn-off-ai-in-chrome](turn-off-ai-in-chrome)                       | Chromium 155 소스 기준 사실 확인표 (파일·줄 번호)                                          |
+
+## 받아쓰기 벤치마크 재현
+
+1. `python3 -m venv venv && ./venv/bin/pip install sherpa-onnx soundfile jiwer whisper-normalizer numpy av`
+2. 모델: `https://github.com/k2-fsa/sherpa-onnx/releases/download/asr-models/{이름}.tar.bz2`를 `models/`에 풀기 (`bench.py`의 `MODELS` 참고) + `silero_vad.onnx`
+3. 음성: `revdotcom/speech-datasets`의 `earnings21` (sparse checkout) → `prep.py`로 16 kHz WAV·정답 대본 생성 → `segment.py`로 VAD 구간 생성. 짧은 낭독 음성은 `clean_set.py`
+4. `run_all.sh <작업 폴더>` → `results/summary.jsonl`
+5. 속도는 다른 작업이 없는 상태에서 측정 (`results-timing-rerun.jsonl`이 글에 쓴 속도)
+
+## C2PA 테스트 재현
+
+`run_all.sh` 상단의 설치 안내대로 c2pa-python·c2patool·테스트 이미지를 받은 뒤 `W=<작업 폴더> ./run_all.sh`. `edit_manifest.json`의 `WORKDIR`는 작업 폴더 경로로 바꿉니다. 서명에는 c2patool에 포함된 **테스트 인증서**만 사용합니다.

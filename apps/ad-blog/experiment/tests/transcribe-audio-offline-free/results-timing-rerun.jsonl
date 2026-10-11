@@ -1,0 +1,6 @@
+{"model": "whisper-tiny.en", "threads": 4, "audio_s": 1310.2, "load_s": 0.51, "decode_s": 105.0, "rtf": 0.0801, "peak_rss_mb": 571}
+{"model": "whisper-base.en", "threads": 4, "audio_s": 1310.2, "load_s": 0.89, "decode_s": 172.6, "rtf": 0.1317, "peak_rss_mb": 809}
+{"model": "whisper-small.en", "threads": 4, "audio_s": 1310.2, "load_s": 1.96, "decode_s": 602.7, "rtf": 0.46, "peak_rss_mb": 1402}
+{"model": "whisper-turbo", "threads": 4, "audio_s": 1310.2, "load_s": 2.98, "decode_s": 576.6, "rtf": 0.4401, "peak_rss_mb": 2336}
+{"model": "moonshine-base", "threads": 4, "audio_s": 1310.2, "load_s": 1.32, "decode_s": 80.3, "rtf": 0.0613, "peak_rss_mb": 716}
+{"model": "parakeet-v2", "threads": 4, "audio_s": 1310.2, "load_s": 2.66, "decode_s": 104.5, "rtf": 0.0798, "peak_rss_mb": 1286}

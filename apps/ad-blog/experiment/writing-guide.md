@@ -83,3 +83,4 @@ tags:
 - [ ] 내부 링크(가능한 경우)·외부 출처 링크
 - [ ] 금지 표현·이모지·가상 체험담 없음
 - [ ] `pnpm --filter @jinho-blog/ad-blog build` 통과, 생성된 HTML에서 제목·설명·JSON-LD 확인
+- [ ] 측정 스크립트·결과·사실 확인표(주장 → 출처 → 확인 방법)를 `experiment/tests/{slug}/`에 저장 (큰 다운로드 파일은 제외)

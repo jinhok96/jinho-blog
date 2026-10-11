@@ -10,12 +10,13 @@
 
 ```
 src/
-├── app/            # 라우트 (얇게 유지, views 조합) + sitemap·robots·rss.xml·manifest·icon
+├── app/            # 라우트 (얇게 유지, views 조합) + sitemap·robots·rss.xml·ads.txt·manifest·icon
 ├── views/          # home, posts(/page/n), post, category, static-page
-├── modules/        # header, footer, post-list
+├── modules/        # header, footer, post-list (인피드 광고 위치 lib 포함)
 ├── entities/       # post, page (조회 서비스 + 타입)
 └── core/
-    ├── config/     # 사이트 정보·카테고리 (주제 확정 시 수정하는 곳)
+    ├── config/     # 사이트 정보·카테고리·광고 ID (주제 확정·광고 승인 시 수정하는 곳)
+    ├── ads/        # AdSlot·AdSenseScript (클라이언트), ads.txt·슬롯 속성 헬퍼
     ├── content/    # 컬렉션 Zod 스키마·설정·레지스트리 리더
     ├── seo/        # buildMetadata, JSON-LD 빌더, JsonLd, absoluteUrl
     ├── mdx/        # renderMdx (본문 # → h2, 로컬 이미지 크기 지정, 링크 처리)
@@ -32,7 +33,7 @@ scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 
 - 데이터가 없거나 페이지 번호가 잘못되면 `notFound()`
 - 라우트 props는 명시 타입 (`{ params: Promise<{ slug: string }> }`) — 전역 `PageProps`는 빌드 후에만 생성되어 `tsc` 실패
 - Route Handler·metadata 라우트(sitemap, robots, manifest, rss)는 `export const dynamic = 'force-static'`
-- 서버 컴포넌트만 사용 (`'use client'` 없음), 이미지 최적화 미사용 (`images.unoptimized`)
+- 서버 컴포넌트 기본 (`'use client'`는 `core/ads`만), 이미지 최적화 미사용 (`images.unoptimized`)
 
 ## 콘텐츠 규칙
 
@@ -49,6 +50,16 @@ scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 
 - `NEXT_PUBLIC_SITE_URL` 미설정 시 `SITE_INDEXABLE = false` → 전 페이지 noindex + robots 전체 차단
 - sitemap `lastmod`·RSS `lastBuildDate`는 콘텐츠 날짜 기준 (빌드 시각 금지)
 - 페이지당 `<h1>` 1개, 이미지는 크기 지정(CLS 0)
+
+## 광고 규칙
+
+- 광고는 `core/ads`의 `<AdSlot placement="…" />`로만 삽입 (`<ins class="adsbygoogle">` 직접 작성 금지)
+- 게시자·광고 단위 ID는 `core/config/internal/ads.ts`(`ADSENSE_CLIENT`, `AD_SLOTS`)에만 작성, 형식 오류는 `validateAdsConfig`가 빌드 에러로 처리
+- ID가 비어 있으면 렌더링 안 함 (게시자 ID 없으면 스크립트·확인 메타·슬롯 없음, `ads.txt`는 주석만)
+- 위치: `postTop`(제목 아래), `postMiddle`(두 번째 `##` 앞, `##` 3개 이상인 글만), `postBottom`(본문 끝, 이전·다음 글 앞), `listInFeed`(`PostList`의 `inFeedAd` — 6번째 카드 뒤, 7개 이상일 때만. 홈·`/page/n`·카테고리만 켜고 관련 글은 끔)
+- 정적 페이지·404에는 광고 없음 (루트 레이아웃 등 공통 영역에 슬롯 금지)
+- AdSense 스크립트는 `AdSenseScript`가 hydration 후 직접 삽입 — `next/script`는 `data-nscript` 속성 때문에 AdSense 콘솔 경고가 나므로 사용 금지
+- 개발 서버는 ID와 무관하게 점선 자리표시 상자 (실제 광고 요청 안 함), 슬롯은 최소 높이로 CLS 방지·미게재 시 숨김
 
 ## 명령어
 

@@ -18,7 +18,7 @@ function makePost(slug: string, overrides: Partial<FeedPost> = {}): FeedPost {
     title: `제목 ${slug}`,
     description: `설명 ${slug}`,
     path: `/posts/${slug}`,
-    category: 'general',
+    category: 'ai-tools',
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z',
     ...overrides,
@@ -49,9 +49,9 @@ describe('buildRssFeed', () => {
 
     expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>\n')).toBe(true);
     expect(xml).toContain('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">');
-    expect(xml).toContain('<title>블로그 이름</title>');
+    expect(xml).toContain('<title>ToolProof</title>');
     expect(xml).toContain('<link>https://my-blog.com</link>');
-    expect(xml).toContain('<language>ko-KR</language>');
+    expect(xml).toContain('<language>en-US</language>');
     expect(xml).toContain('<atom:link href="https://my-blog.com/rss.xml" rel="self" type="application/rss+xml" />');
     expect(xml.trimEnd().endsWith('</channel>\n</rss>')).toBe(true);
   });
@@ -68,7 +68,7 @@ describe('buildRssFeed', () => {
         '      <guid isPermaLink="true">https://my-blog.com/posts/a</guid>',
         '      <pubDate>Wed, 04 Mar 2026 05:06:07 GMT</pubDate>',
         '      <description>설명 a</description>',
-        '      <category>일반</category>',
+        '      <category>AI Tools</category>',
         '    </item>',
       ].join('\n'),
     );

@@ -8,6 +8,6 @@ describe('ads.txt', () => {
 
     expect(dynamic).toBe('force-static');
     expect(response.headers.get('Content-Type')).toBe('text/plain; charset=utf-8');
-    expect(await response.text()).toMatch(/^# AdSense 게시자 ID 미설정/);
+    expect(await response.text()).toMatch(/^# AdSense publisher ID not set/);
   });
 });

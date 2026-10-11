@@ -23,7 +23,7 @@ function makePost(overrides: Partial<Post> & Pick<Post, 'slug' | 'updatedAt'>): 
   return {
     title: overrides.slug,
     description: 'desc',
-    category: 'general',
+    category: 'ai-tools',
     tags: [],
     draft: false,
     createdAt: '2026-01-01T00:00:00.000Z',
@@ -48,12 +48,12 @@ function makePage(slug: string, updatedAt: string): Page {
   };
 }
 
-const REVIEW = 'review' as Post['category'];
+const SOFTWARE = 'software' as Post['category'];
 
 // getPosts()는 최신순(createdAt desc) — 수정일 순서와 다르게 배치
 const POSTS: Post[] = [
   makePost({ slug: 'c', updatedAt: '2026-03-01T00:00:00.000Z' }),
-  makePost({ slug: 'b', updatedAt: '2026-05-01T00:00:00.000Z', category: REVIEW }),
+  makePost({ slug: 'b', updatedAt: '2026-05-01T00:00:00.000Z', category: SOFTWARE }),
   makePost({ slug: 'a', updatedAt: '2026-04-01T09:00:00+09:00' }),
 ];
 
@@ -61,8 +61,8 @@ beforeEach(() => {
   vi.clearAllMocks();
   getPosts.mockReturnValue(POSTS);
   getCategorySummaries.mockReturnValue([
-    { category: 'general', count: 2 },
-    { category: REVIEW, count: 1 },
+    { category: 'ai-tools', count: 2 },
+    { category: SOFTWARE, count: 1 },
   ]);
   getPages.mockReturnValue([makePage('about', '2026-02-01T00:00:00.000Z')]);
 });
@@ -80,8 +80,8 @@ describe('sitemap', () => {
       'https://my-blog.com/posts/c',
       'https://my-blog.com/posts/b',
       'https://my-blog.com/posts/a',
-      'https://my-blog.com/categories/general',
-      'https://my-blog.com/categories/review',
+      'https://my-blog.com/categories/ai-tools',
+      'https://my-blog.com/categories/software',
       'https://my-blog.com/about',
     ]);
   });
@@ -103,10 +103,10 @@ describe('sitemap', () => {
     const entries = sitemap();
 
     expect(entries[0].lastModified).toEqual(new Date('2026-05-01T00:00:00.000Z'));
-    expect(entries.find(({ url }) => url.endsWith('/categories/general'))?.lastModified).toEqual(
+    expect(entries.find(({ url }) => url.endsWith('/categories/ai-tools'))?.lastModified).toEqual(
       new Date('2026-04-01T00:00:00.000Z'),
     );
-    expect(entries.find(({ url }) => url.endsWith('/categories/review'))?.lastModified).toEqual(
+    expect(entries.find(({ url }) => url.endsWith('/categories/software'))?.lastModified).toEqual(
       new Date('2026-05-01T00:00:00.000Z'),
     );
   });

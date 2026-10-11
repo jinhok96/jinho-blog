@@ -5,7 +5,7 @@ import { pageSchema, postSchema } from './schemas';
 const validPost = {
   title: '제목',
   description: '설명',
-  category: 'general',
+  category: 'ai-tools',
   createdAt: new Date('2026-01-01'),
 };
 
@@ -14,7 +14,7 @@ describe('postSchema', () => {
     expect(postSchema.parse(validPost)).toEqual({
       title: '제목',
       description: '설명',
-      category: 'general',
+      category: 'ai-tools',
       createdAt: '2026-01-01T00:00:00.000Z',
       tags: [],
       draft: false,
@@ -90,6 +90,6 @@ describe('pageSchema', () => {
   });
 
   it('정의되지 않은 키 → 실패 (strict)', () => {
-    expect(pageSchema.safeParse({ ...validPage, category: 'general' }).success).toBe(false);
+    expect(pageSchema.safeParse({ ...validPage, category: 'ai-tools' }).success).toBe(false);
   });
 });

@@ -27,7 +27,7 @@ describe('buildMetadata', () => {
     const { buildMetadata } = await loadMetadata('https://my-blog.com');
 
     expect(buildMetadata({ path: '/a', title: '글 제목' }).title).toBe('글 제목');
-    expect(buildMetadata({ path: '/' }).title).toEqual({ absolute: '블로그 이름' });
+    expect(buildMetadata({ path: '/' }).title).toEqual({ absolute: 'ToolProof' });
     expect(buildMetadata({ path: '/', title: '홈 제목', absoluteTitle: true }).title).toEqual({ absolute: '홈 제목' });
   });
 
@@ -49,7 +49,7 @@ describe('buildMetadata', () => {
     const { buildMetadata } = await loadMetadata('https://my-blog.com');
 
     expect(buildMetadata({ path: '/' }).openGraph?.images).toEqual([
-      { url: 'https://my-blog.com/_static/og-default.jpg', alt: '블로그 이름', width: 1200, height: 630 },
+      { url: 'https://my-blog.com/_static/og-default.jpg', alt: 'ToolProof', width: 1200, height: 630 },
     ]);
     expect(
       buildMetadata({ path: '/a', title: 'A', image: { url: 'https://cdn.example.com/a.png' } }).openGraph?.images,
@@ -71,7 +71,7 @@ describe('buildMetadata', () => {
       type: 'article',
       publishedTime: '2026-01-01T00:00:00.000Z',
       modifiedTime: '2026-01-02T00:00:00.000Z',
-      authors: ['작성자'],
+      authors: ['ToolProof'],
     });
   });
 

@@ -23,7 +23,7 @@ export function Toc({ toc, className }: Props) {
 
   return (
     <nav
-      aria-label="목차"
+      aria-label="On this page"
       className={cn(
         `
           rounded-lg border border-border bg-surface p-4
@@ -32,7 +32,7 @@ export function Toc({ toc, className }: Props) {
         className,
       )}
     >
-      <p className="text-sm font-semibold">목차</p>
+      <p className="text-sm font-semibold">On this page</p>
       <ol className="mt-2 text-sm">
         {toc.map(item => (
           <li

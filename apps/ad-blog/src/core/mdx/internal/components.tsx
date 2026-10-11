@@ -51,7 +51,7 @@ function MdxLink({ href = '', children, ...props }: ComponentPropsWithoutRef<'a'
         {...props}
       >
         {children}
-        <span className="sr-only"> (새 탭에서 열림)</span>
+        <span className="sr-only"> (opens in a new tab)</span>
       </a>
     );
   }

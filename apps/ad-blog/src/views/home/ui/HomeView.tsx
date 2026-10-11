@@ -36,7 +36,7 @@ export function HomeView({ posts, totalPages }: Props) {
           id="latest-posts-heading"
           className="text-xl font-bold tracking-tight"
         >
-          최신 글
+          Latest posts
         </h2>
         <PostList
           posts={posts}

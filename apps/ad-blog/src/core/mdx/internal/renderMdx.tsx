@@ -48,8 +48,8 @@ export async function renderMdx(
         // 광고 삽입은 제목 id 부여 이후 (제목 노드는 변경하지 않음)
         rehypePlugins: inArticleAd ? [rehypeSlug, rehypeInArticleAd] : [rehypeSlug],
         remarkRehypeOptions: {
-          footnoteLabel: '각주',
-          footnoteBackLabel: '본문으로 돌아가기',
+          footnoteLabel: 'Footnotes',
+          footnoteBackLabel: 'Back to content',
         },
       },
       vfileDataIntoScope: 'toc',

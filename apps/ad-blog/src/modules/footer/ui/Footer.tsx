@@ -26,7 +26,7 @@ export function Footer() {
           sm:flex-row sm:items-center sm:justify-between
         `}
       >
-        <nav aria-label="사이트 정보">
+        <nav aria-label="Site information">
           <ul className="-mx-2 flex flex-wrap">
             {pages.map(page => (
               <li key={page.slug}>
@@ -44,7 +44,7 @@ export function Footer() {
                 href="/rss.xml"
                 className={LINK_CLASS_NAME}
               >
-                RSS 피드
+                RSS feed
               </a>
             </li>
           </ul>

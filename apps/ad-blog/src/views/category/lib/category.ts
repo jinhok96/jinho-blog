@@ -22,7 +22,7 @@ export function getCategoryBreadcrumbs(category: Category, page: number): Breadc
   const basePath = categoryPath(category);
   const items: BreadcrumbItem[] = [HOME_BREADCRUMB, { name: CATEGORY_MAP[category].name, path: basePath }];
 
-  if (page > 1) items.push({ name: `${page}페이지`, path: paginatedPath(basePath, page) });
+  if (page > 1) items.push({ name: `Page ${page}`, path: paginatedPath(basePath, page) });
 
   return items;
 }
@@ -36,6 +36,6 @@ export function buildCategoryMetadata(category: Category, page: number): Metadat
   return buildMetadata({
     path: paginatedPath(categoryPath(category), page),
     title: paginatedTitle(name, page),
-    description: page > 1 ? `${description} (${page}페이지)` : description,
+    description: page > 1 ? `${description} (Page ${page})` : description,
   });
 }

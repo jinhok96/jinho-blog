@@ -47,7 +47,7 @@ export function AdSlot({ placement, className }: Props) {
 
   return (
     <aside
-      aria-label="광고"
+      aria-label="Advertisement"
       data-ad-placement={placement}
       className={cn(
         `
@@ -57,7 +57,7 @@ export function AdSlot({ placement, className }: Props) {
         className,
       )}
     >
-      <p className="text-xs text-muted">광고</p>
+      <p className="text-xs text-muted">Advertisement</p>
       {state === 'live' ? (
         <ins
           key={pathname}

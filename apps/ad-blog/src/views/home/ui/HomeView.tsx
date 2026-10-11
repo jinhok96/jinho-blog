@@ -42,6 +42,7 @@ export function HomeView({ posts, totalPages }: Props) {
           posts={posts}
           headingLevel={3}
           priorityCount={1}
+          inFeedAd
           className="mt-6"
         />
         <Pagination

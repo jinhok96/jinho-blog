@@ -1,7 +1,8 @@
 import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 
-import { SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
+import { AdSenseScript } from '@/core/ads';
+import { ADSENSE_CLIENT, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
 import { SkipLink } from '@/core/ui';
 
 import { Footer } from '@/modules/footer';
@@ -19,6 +20,8 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
+  // AdSense 사이트 소유권 확인 (게시자 ID 설정 시)
+  ...(ADSENSE_CLIENT && { other: { 'google-adsense-account': ADSENSE_CLIENT } }),
 };
 
 export const viewport: Viewport = {
@@ -45,6 +48,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <Footer />
+        <AdSenseScript />
       </body>
     </html>
   );

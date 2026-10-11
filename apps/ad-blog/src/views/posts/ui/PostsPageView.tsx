@@ -33,6 +33,7 @@ export function PostsPageView({ posts, currentPage, totalPages, breadcrumbs }: P
       <PostList
         posts={posts}
         priorityCount={1}
+        inFeedAd
         className="mt-8"
       />
       <Pagination

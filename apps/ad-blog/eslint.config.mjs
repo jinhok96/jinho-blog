@@ -225,7 +225,8 @@ const baseConfig = defineConfig([
       'better-tailwindcss/no-unregistered-classes': [
         'error',
         {
-          ignore: ['light', 'dark', 'system'],
+          // adsbygoogle: AdSense 광고 단위가 요구하는 클래스명
+          ignore: ['light', 'dark', 'system', 'adsbygoogle'],
         },
       ],
 

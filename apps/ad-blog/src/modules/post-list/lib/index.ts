@@ -1,0 +1,1 @@
+export { getInFeedAdIndex } from './inFeedAd';

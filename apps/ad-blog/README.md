@@ -4,7 +4,7 @@
 
 - `output: 'export'` 완전 정적 사이트: 빌드 결과(`out/`)를 정적 호스팅에 그대로 배포 (서버 런타임 없음)
 - MDX 콘텐츠: `content/posts`(글), `content/pages`(소개·문의·개인정보처리방침 등)
-- 사이트 정보·카테고리는 `src/core/config` 한 곳에서 관리
+- 사이트 정보·카테고리·광고 ID는 `src/core/config` 한 곳에서 관리
 
 ## URL 구조
 
@@ -15,6 +15,7 @@
 | `/categories/{category}`, `.../page/{n}`  | 카테고리별 글 목록                       |
 | `/{slug}`                                 | 정적 페이지 (`content/pages/{slug}.mdx`) |
 | `/sitemap.xml`, `/robots.txt`, `/rss.xml` | SEO 파일 (빌드 시 생성)                  |
+| `/ads.txt`                                | 광고 판매자 목록 (빌드 시 생성)          |
 
 ## 주제·도메인 확정 시 설정
 
@@ -107,6 +108,46 @@ pnpm --filter @jinho-blog/ad-blog registry  # 레지스트리·썸네일·OG 이
 - OG 이미지: 글별 1200x630 JPEG 자동 생성, 기본 이미지는 `SITE_NAME`으로 생성
 - 도메인 미설정 상태에서는 전 페이지 `noindex`
 
+## 광고 (AdSense)
+
+AdSense 수동 광고 단위 4곳이 연결되어 있습니다. 설정은 `src/core/config/internal/ads.ts` 한 곳입니다.
+
+| 위치 (`AD_SLOTS` 키) | 자리                                                                        |
+| -------------------- | --------------------------------------------------------------------------- |
+| `postTop`            | 글 제목 아래                                                                |
+| `postMiddle`         | 본문 두 번째 `##` 소제목 앞 (`##`이 3개 이상인 글만)                        |
+| `postBottom`         | 본문 끝, 이전·다음 글 링크 앞                                               |
+| `listInFeed`         | 글 목록(홈·`/page/{n}`·카테고리)의 6번째 카드 뒤 (글이 7개 이상인 페이지만) |
+
+- 정적 페이지(소개·문의·개인정보처리방침)·404, 글 아래 관련 글 목록에는 광고가 없습니다
+- 광고 스크립트는 페이지 로드(hydration) 후 삽입되어 본문 표시를 늦추지 않습니다
+- 게시자 ID를 넣으면 `/ads.txt`와 사이트 확인용 `<meta name="google-adsense-account">`가 자동 생성됩니다
+- ID가 비어 있으면 광고를 만들지 않습니다: 게시자 ID가 없으면 스크립트·메타 태그·슬롯 모두 없음(`ads.txt`는 주석만), 광고 단위 ID가 없는 슬롯은 렌더링 안 함
+- 개발 서버는 ID와 무관하게 점선 자리표시 상자만 보여 주고 실제 광고는 요청하지 않습니다 (본인 광고 노출·클릭 방지)
+- 슬롯마다 최소 높이(280px)를 미리 확보해 광고가 늦게 채워져도 본문이 밀리지 않고(CLS 방지), 미게재(unfilled) 응답이면 슬롯을 숨깁니다
+
+### 설정
+
+1. **신청** — AdSense 계정의 게시자 ID(`ca-pub-` + 숫자 16자리, 계정 > 계정 정보)를 `ADSENSE_CLIENT`에 넣고 배포한 뒤, AdSense에 사이트를 추가합니다. 소유권 확인은 자동 생성된 메타 태그나 `ads.txt`를 선택하면 됩니다
+2. **광고 단위 생성 (승인 후)** — AdSense > 광고 > 광고 단위별에서 만듭니다
+   - `postTop`·`postBottom`·`listInFeed`: 디스플레이 광고 (`layout: 'display'`)
+   - `postMiddle`: 콘텐츠 내 자동 삽입 광고 (`layout: 'in-article'`)
+   - `listInFeed`를 인피드 광고로 바꾸려면 `layout: 'in-feed'`와 광고 코드의 `data-ad-layout-key` 값을 `layoutKey`에 함께 입력
+3. **광고 단위 ID 입력** — 각 광고 코드의 `data-ad-slot` 값을 `AD_SLOTS.{위치}.slotId`에 넣고 배포합니다
+4. **자동 광고는 끈 채로 둡니다** — 스크립트가 모든 페이지에 로드되므로, 켜면 정적 페이지·404 등 슬롯 밖에도 광고가 삽입됩니다
+
+게시자 ID 형식, 숫자가 아닌 광고 단위 ID, `layoutKey` 없는 인피드 광고는 빌드 에러로 알려 줍니다 (오타로 광고가 조용히 빠지지 않도록).
+
+### EEA·영국 방문자 동의
+
+유럽 경제 지역(EEA)·영국·스위스 방문자에게 광고를 게재하려면 Google 인증 동의 관리 플랫폼(CMP)이 필요합니다. AdSense > **개인정보 보호 및 메시지**에서 유럽 규정 메시지를 만들어 게시하면 AdSense 스크립트가 동의 메시지를 띄웁니다 (코드 수정 불필요).
+
+### 정책 주의
+
+- 본인 광고를 클릭하지 않습니다 (무효 트래픽으로 계정 정지 사유). 배포 사이트에서 광고를 확인할 때도 클릭 금지
+- 오류 페이지·내용이 없는 페이지에는 광고를 넣지 않습니다 (404에는 슬롯 없음 — 루트 레이아웃 등 공통 영역에 슬롯을 두지 않음)
+- 광고가 콘텐츠보다 많아 보이지 않게 합니다: 짧은 글은 본문 중간 광고가 자동 생략되며, 슬롯을 추가할 때도 콘텐츠 대비 비율을 고려
+
 ## 공개 전 체크리스트
 
 - [ ] `NEXT_PUBLIC_SITE_URL` 설정 후 배포, `/robots.txt`에 `Allow: /`와 `Sitemap:`이 보이는지 확인
@@ -114,5 +155,6 @@ pnpm --filter @jinho-blog/ad-blog registry  # 레지스트리·썸네일·OG 이
 - [ ] 사이트 정보·카테고리·아이콘 교체, 샘플 글 삭제, 정적 페이지 placeholder 수정
 - [ ] [Google Search Console](https://search.google.com/search-console)에 도메인 등록 후 `https://도메인/sitemap.xml` 제출
 - [ ] (한국어 검색) [네이버 서치어드바이저](https://searchadvisor.naver.com)에 사이트 등록, sitemap·RSS 제출
-- [ ] 광고 신청 전 개인정보처리방침(`content/pages/privacy.mdx`)에 실제 연락처·시행일·쿠키 사용 안내 작성 (소개·문의 페이지도 함께)
-- [ ] 광고 연동은 포함되어 있지 않음: 광고 스크립트는 별도 추가, `ads.txt`는 `public/ads.txt`에 두면 루트에 배포됨
+- [ ] 광고 신청 전 개인정보처리방침(`content/pages/privacy.mdx`)의 연락처·시행일 placeholder 수정, 쿠키·광고 안내 확인 (소개·문의 페이지도 함께)
+- [ ] AdSense 신청: `ADSENSE_CLIENT` 입력 후 배포, `/ads.txt`와 페이지 소스의 `google-adsense-account` 메타 태그 확인
+- [ ] 승인 후 광고 단위 ID를 `AD_SLOTS`에 입력하고 자동 광고는 끈 채로 유지, EEA·영국 동의 메시지 게시 ([광고](#광고-adsense) 참고)

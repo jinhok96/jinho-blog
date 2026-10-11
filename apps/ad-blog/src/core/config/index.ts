@@ -1,3 +1,11 @@
+export {
+  AD_SLOTS,
+  type AdLayout,
+  type AdPlacement,
+  ADSENSE_CLIENT,
+  type AdSlotConfig,
+  validateAdsConfig,
+} from './internal/ads';
 export { CATEGORIES, type Category, CATEGORY_MAP } from './internal/categories';
 export {
   AUTHOR_NAME,

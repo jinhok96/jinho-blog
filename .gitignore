@@ -45,6 +45,10 @@ next-env.d.ts
 # turbo
 .turbo/
 
+# python
+__pycache__/
+*.py[cod]
+
 # generated static files
 apps/web/public/_static/
 apps/ad-blog/public/_static/

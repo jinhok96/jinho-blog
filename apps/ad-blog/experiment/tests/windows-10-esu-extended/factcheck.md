@@ -19,6 +19,8 @@
 | KB5071959(2025-11-11, 19045.6466): 등록 마법사 실패 해결, 미등록 소비자 기기에 제공 | https://support.microsoft.com/en-us/help/5071959 | 원문 대조 |
 | 2025-10 이후 월간 업데이트 "Applies to: Windows 10 ESU" | KB5068781, KB5122878, KB5129236 페이지 | "Applies to" 항목 |
 | 빌드: KB5066791 19045.6456, KB5068781 19045.6575, KB5120249 19045.7663, KB5122878 19045.7725, KB5129236 19045.7727 | 업데이트 기록 목록·각 KB 제목 | KB5122878 목록 표기가 7720/7725로 페이지마다 다름 → 해당 KB 페이지 제목(7725) 채택 |
+| Enroll now 링크는 요건 충족 시에만 표시 | https://www.microsoft.com/en-us/windows/extended-security-updates "How to get" | "If your device meets the prerequisites, you'll see a link to enroll in ESU" |
+| 로컬 계정: 등록 시 MSA 로그인 필요, 라이선스는 MSA에 연결. EEA에서 $30 구매는 이후 로컬 계정 사용 가능 | 미국판 "How to get" + en-ie 페이지 | en-ie 원문 "Allows continued use of a local account (no sign in with a Microsoft account required other than to make the purchase)". 미국판에는 등록 후 로컬 계정 전환 언급 없음 |
 | 버전 확인: Settings > System > About > Windows specifications | https://support.microsoft.com/en-us/windows/which-version-of-windows-operating-system-am-i-running-628bec99-476a-2c13-5296-9dd081cdd808 | 원문 대조 |
 
 ## 쓰지 않은 것

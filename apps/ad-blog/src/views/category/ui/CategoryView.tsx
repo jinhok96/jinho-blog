@@ -43,6 +43,7 @@ export function CategoryView({ category, posts, currentPage, totalPages, totalIt
       <PostList
         posts={posts}
         priorityCount={1}
+        inFeedAd
         className="mt-8"
       />
       <Pagination

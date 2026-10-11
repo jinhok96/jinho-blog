@@ -3,6 +3,7 @@ import type { BreadcrumbItem } from '@/core/seo';
 import type { AdjacentPosts, Post } from '@/entities/post';
 import type { ReactNode } from 'react';
 
+import { AdSlot } from '@/core/ads';
 import { Breadcrumbs, Container, Prose, Toc } from '@/core/ui';
 
 import { PostList } from '@/modules/post-list';
@@ -22,6 +23,7 @@ type Props = {
 
 /**
  * 글 상세
+ * - 광고: 제목 영역 아래(postTop), 본문 중간(postMiddle, renderMdx에서 삽입), 본문·태그 뒤 이전/다음 글 앞(postBottom)
  */
 export function PostView({ post, content, toc, relatedPosts, adjacentPosts, breadcrumbs }: Props) {
   return (
@@ -40,6 +42,10 @@ export function PostView({ post, content, toc, relatedPosts, adjacentPosts, brea
 
         <article>
           <PostHeader post={post} />
+          <AdSlot
+            placement="postTop"
+            className="mt-8"
+          />
           <Toc
             toc={toc}
             className="mt-8"
@@ -64,6 +70,11 @@ export function PostView({ post, content, toc, relatedPosts, adjacentPosts, brea
             </footer>
           )}
         </article>
+
+        <AdSlot
+          placement="postBottom"
+          className="mt-12"
+        />
 
         <div className="mt-12">
           <AdjacentPostNav {...adjacentPosts} />

@@ -4,8 +4,10 @@ import type { ComponentPropsWithoutRef } from 'react';
 
 import Link from 'next/link';
 
+import { AdSlot } from '../../ads';
 import { resolveHeadingLevel } from './heading';
 import { isVideoSrc, resolveImageSize } from './image';
+import { IN_ARTICLE_AD_COMPONENT } from './inArticleAd';
 import { isExternalHref, isInternalPageLink } from './link';
 
 /**
@@ -119,6 +121,21 @@ function MdxTable(props: ComponentPropsWithoutRef<'table'>) {
   );
 }
 
+/**
+ * 본문 중간 광고 (`rehypeInArticleAd`가 삽입한 `<InArticleAd />`)
+ * - `not-prose`: 본문 타이포그래피 스타일이 광고 영역에 적용되지 않도록 제외
+ */
+function InArticleAd() {
+  return (
+    <AdSlot
+      placement="postMiddle"
+      // not-prose: typography 플러그인이 선택자에서만 쓰는 클래스라 유틸리티 목록에 없음
+      // eslint-disable-next-line better-tailwindcss/no-unregistered-classes
+      className="not-prose my-10"
+    />
+  );
+}
+
 export const mdxComponents: MDXComponents = {
   h1: createHeading(1),
   h2: createHeading(2),
@@ -129,4 +146,5 @@ export const mdxComponents: MDXComponents = {
   a: MdxLink,
   img: MdxImage,
   table: MdxTable,
+  [IN_ARTICLE_AD_COMPONENT]: InArticleAd,
 };

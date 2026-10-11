@@ -8,9 +8,15 @@ import remarkFlexibleToc from 'remark-flexible-toc';
 import remarkGfm from 'remark-gfm';
 
 import { mdxComponents } from './components';
+import { rehypeInArticleAd } from './inArticleAd';
 
 type Scope = {
   toc?: TocItem[];
+};
+
+export type RenderMdxOptions = {
+  /** 본문 중간 광고 삽입 (글 상세 전용, 정적 페이지 제외) */
+  inArticleAd?: boolean;
 };
 
 export type MdxResult = {
@@ -26,15 +32,21 @@ export type MdxResult = {
  *
  * @param source 이미지 경로가 변환된 MDX 본문 (frontmatter 제외)
  * @param name 오류 메시지에 표시할 콘텐츠 식별자 (예: 글 경로)
+ * @param options.inArticleAd 최상위 h2가 3개 이상이면 두 번째 h2 앞에 본문 중간 광고 삽입
  */
-export async function renderMdx(source: string, name: string = 'MDX'): Promise<MdxResult> {
+export async function renderMdx(
+  source: string,
+  name: string = 'MDX',
+  { inArticleAd = false }: RenderMdxOptions = {},
+): Promise<MdxResult> {
   const { content, scope, error } = await evaluate<Record<string, unknown>, Scope>({
     source,
     components: mdxComponents,
     options: {
       mdxOptions: {
         remarkPlugins: [remarkGfm, [remarkFlexibleToc, { skipLevels: [], maxDepth: 3 }]],
-        rehypePlugins: [rehypeSlug],
+        // 광고 삽입은 제목 id 부여 이후 (제목 노드는 변경하지 않음)
+        rehypePlugins: inArticleAd ? [rehypeSlug, rehypeInArticleAd] : [rehypeSlug],
         remarkRehypeOptions: {
           footnoteLabel: '각주',
           footnoteBackLabel: '본문으로 돌아가기',

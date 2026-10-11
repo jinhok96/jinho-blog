@@ -28,11 +28,11 @@ export type AdSlotConfig = {
  * 슬롯 위치별 광고 단위
  */
 export const AD_SLOTS = {
-  /** 글 제목 아래 */
+  /** 글 본문 첫 소제목 앞 (도입부 뒤, 도입부가 있는 글만) */
   postTop: { slotId: '', layout: 'display' },
-  /** 글 본문 중간 (두 번째 `##` 소제목 앞, 소제목 3개 이상인 글만) */
+  /** 글 본문 두 번째 소제목 앞 (소제목 3개 이상인 글만) */
   postMiddle: { slotId: '', layout: 'in-article' },
-  /** 글 본문 끝 */
+  /** 글 이전·다음 글 링크 뒤, 관련 글 앞 */
   postBottom: { slotId: '', layout: 'display' },
   /** 목록 카드 사이 */
   listInFeed: { slotId: '', layout: 'display' },
@@ -50,13 +50,26 @@ export function validateAdsConfig(client: string, slots: Record<string, AdSlotCo
     throw new Error(`ADSENSE_CLIENT 형식 오류: '${client}' (예: 'ca-pub-1234567890123456')`);
   }
 
+  const placementsBySlotId = new Map<string, string>();
+
   for (const [placement, { slotId, layout, layoutKey }] of Object.entries(slots)) {
-    if (slotId && !/^\d+$/.test(slotId)) {
+    if (!slotId) continue;
+
+    if (!/^\d+$/.test(slotId)) {
       throw new Error(`AD_SLOTS.${placement}.slotId 형식 오류: '${slotId}' (숫자만)`);
     }
-    if (slotId && layout === 'in-feed' && !layoutKey) {
+    if (layout === 'in-feed' && !layoutKey) {
       throw new Error(`AD_SLOTS.${placement}: in-feed 광고는 layoutKey가 필요합니다.`);
     }
+    if (!client) {
+      throw new Error(`AD_SLOTS.${placement}: 광고 단위 ID가 있으면 ADSENSE_CLIENT도 입력해야 합니다.`);
+    }
+    // 같은 광고 단위를 여러 위치에 쓰면 한 페이지에 같은 광고가 반복되고 위치별 성과를 구분할 수 없음
+    const duplicated = placementsBySlotId.get(slotId);
+    if (duplicated) {
+      throw new Error(`AD_SLOTS.${placement}.slotId가 AD_SLOTS.${duplicated}와 같습니다: '${slotId}'`);
+    }
+    placementsBySlotId.set(slotId, placement);
   }
 }
 

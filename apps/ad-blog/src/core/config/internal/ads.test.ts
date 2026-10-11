@@ -30,4 +30,14 @@ describe('validateAdsConfig', () => {
   it('in-feed 광고는 layoutKey 필수', () => {
     expect(() => validateAdsConfig('', { listInFeed: { slotId: '1', layout: 'in-feed' } })).toThrow('layoutKey');
   });
+
+  it('광고 단위 ID만 있고 게시자 ID가 없으면 에러 (모든 슬롯이 조용히 숨겨지지 않도록)', () => {
+    expect(() => validateAdsConfig('', { postTop: display })).toThrow('ADSENSE_CLIENT도 입력');
+  });
+
+  it('같은 광고 단위 ID를 여러 위치에 쓰면 에러', () => {
+    expect(() =>
+      validateAdsConfig('ca-pub-1234567890123456', { postTop: display, postBottom: { ...display } }),
+    ).toThrow('AD_SLOTS.postBottom.slotId가 AD_SLOTS.postTop와 같습니다');
+  });
 });

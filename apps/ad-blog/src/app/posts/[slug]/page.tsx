@@ -47,7 +47,7 @@ export default async function PostPage({ params }: Props) {
   const post = getPost((await params).slug);
   if (!post) notFound();
 
-  const { content, toc } = await renderMdx(post.content, post.path, { inArticleAd: true });
+  const { content, toc } = await renderMdx(post.content, post.path, { ads: true });
   const categoryName = CATEGORY_MAP[post.category].name;
   const breadcrumbs = [
     HOME_BREADCRUMB,

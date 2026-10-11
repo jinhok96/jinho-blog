@@ -84,7 +84,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | 항목                          | 상태      | 필요 조치 (담당)                                                                   |
 | ----------------------------- | --------- | ---------------------------------------------------------------------------------- |
 | 도메인·호스팅                 | 설정됨    | `tool-proof.com` 연결, `NEXT_PUBLIC_SITE_URL=https://tool-proof.com`(Production). 필수 상태 체크는 `Vercel – jinho-blog-web` 등 프로젝트별 이름 |
-| Search Console                | 미설정    | 도메인 속성 등록(DNS TXT) → sitemap `https://tool-proof.com/sitemap.xml` 제출. API 조회용 서비스 계정을 사용자로 추가하고 키를 환경 시크릿으로 등록 (사용자) |
+| Search Console                | 등록됨    | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. **API 조회는 미설정**: 서비스 계정을 제한된 사용자로 추가 + 키를 환경 시크릿으로 등록 + `searchconsole.googleapis.com`·`oauth2.googleapis.com` 허용 (사용자) |
 | Bing Webmaster Tools·IndexNow | 미설정    | 도메인 연결 후 진행 (Claude: IndexNow 키 파일·제출 스크립트)                       |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub(+trends.google.com)만 접속 가능 → 웹 서비스 직접 테스트·스크린샷·실제 사이트 확인 불가. WebFetch도 같은 제한. `tool-proof.com`과 공식 문서 도메인(help.openai.com, support.google.com 등) 허용 추가 권장 (사용자) |

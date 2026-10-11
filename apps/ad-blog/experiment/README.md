@@ -87,4 +87,4 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub만 접속 가능 → 웹 서비스 직접 테스트·스크린샷 불가. 조사는 WebSearch·WebFetch로 가능. 필요 시 Network access 확대 (사용자) |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |
-| 정기 실행                     | 없음      | 주기적인 글 작성 세션(Routine) 여부 결정 (사용자)                                  |
+| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 월·수·금 08:45 (한국 시간), 매번 새 세션. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |

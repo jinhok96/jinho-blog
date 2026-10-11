@@ -16,7 +16,7 @@
 | 6    | "내 Copilot 어디 갔지?" 2026년 9월 Copilot 통합 설명                        | what happened to my copilot                | 38   | 조사만                    | 6~12개월              | 후보                                         |
 | 7    | Gemini Gems → Skills 전환: 날짜, 옮겨지지 않는 것, 백업                     | gemini gems to skills                      | 37   | 조사만                    | ~2027-06              | 후보 (1번과 묶음)                            |
 | 8    | 커스텀 GPT 2026-12-11 종료 체크리스트                                       | custom gpts retiring                       | 37   | 조사만                    | ~2027-02              | 후보 (1번과 묶음)                            |
-| 9    | Windows 10 ESU가 2027-10-12까지 연장됨 + 등록 오류 해결                     | windows 10 esu october 2026                | 37   | 조사만                    | ~2027-10              | 후보 (광고 가치 높음)                        |
+| 9    | Windows 10 ESU가 2027-10-12까지 연장됨 + 등록 오류 해결                     | windows 10 esu october 2026                | 37   | 조사만                    | ~2027-10              | 발행 `windows-10-esu-extended`               |
 | 10   | 이미지 배경 무료·오프라인 제거 (rembg 모델 비교)                            | remove background from image free offline  | 37   | 예                        | 상시                  | 후보 (개발자 도구라 일반 독자 각도 필요)     |
 | 11   | Gemini Windows 앱 Alt+Space 단축키 충돌 해결                                | gemini windows app alt space               | 36   | 조사만                    | 6~12개월              | 후보                                         |
 | 12   | iOS 27 Siri AI가 안 보일 때 (대기자 명단·요구 조건·Siri Classic)            | siri ai not showing ios 27                 | 36   | 조사만                    | 3~9개월               | 후보 (경쟁 심함)                             |

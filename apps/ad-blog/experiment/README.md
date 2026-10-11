@@ -87,6 +87,6 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | Search Console                | 등록·API 설정됨 | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. 서비스 계정(제한된 권한) 키를 환경변수 `GSC_SERVICE_ACCOUNT_JSON_B64`로 등록, API 도메인 허용. 조회는 [tools/gsc_report.py](tools/gsc_report.py) |
 | Bing Webmaster Tools·IndexNow | 미설정    | 도메인 연결 후 진행 (Claude: IndexNow 키 파일·제출 스크립트)                       |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
-| 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub(+trends.google.com)만 접속 가능 → 웹 서비스 직접 테스트·스크린샷·실제 사이트 확인 불가. WebFetch도 같은 제한. `tool-proof.com`과 공식 문서 도메인(help.openai.com, support.google.com 등) 허용 추가 권장 (사용자) |
+| 컨테이너 네트워크             | 일부 허용 | 2026-10-11 세션 2 확인: npm·PyPI·GitHub(Releases 다운로드)·trends.google.com·microsoft.com·support.microsoft.com·learn.microsoft.com·support.google.com·apple.com·huggingface.co·tool-proof.com 접속 가능. help.openai.com·api.github.com은 403 |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |
 | 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 월·수·금 08:45 (한국 시간), 매번 새 세션. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |

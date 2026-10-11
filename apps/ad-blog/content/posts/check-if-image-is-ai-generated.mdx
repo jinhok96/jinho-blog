@@ -23,18 +23,18 @@ Work through these steps in order.
 1. **Get the original file.** Save the image itself instead of taking a screenshot, and use the highest-quality copy you can find. In our test, screenshots and re-saved copies lost their Content Credentials entirely.
 2. **Check for Content Credentials.** Upload the file to [Inspect](https://inspect.cr), Adobe's Content Credentials viewer (in beta), or to the C2PA [Verify](https://verify.contentauthenticity.org) tool. According to the [Inspect documentation](https://github.com/contentauth/opensource.contentauth.org/blob/main/docs/getting-started/aca-inspect.mdx), it reads JPEG, PNG, WebP, HEIC, AVIF and other common formats, and shows **No Content Credential** when the file has none.
 3. **Check for a SynthID watermark.** Upload the same file to [SynthID Detector](https://synthid.com/). It looks for the invisible watermark that Google and several partner companies add to AI-generated images, video and audio. Google also lets you upload an image to the Gemini app and ask whether it was made with Google AI ([Gemini Help](https://support.google.com/gemini/answer/16722517)).
-4. **If it might come from ChatGPT or another OpenAI tool,** try OpenAI's [verification tool](https://openai.com/research/verify/). It looks for the two signals OpenAI adds to its images: C2PA Content Credentials and a SynthID watermark.
+4. **If it might come from ChatGPT or another OpenAI tool,** try OpenAI's [verification tool](https://openai.com/research/verify/). It looks for the two signals OpenAI uses for its images: C2PA Content Credentials and a SynthID watermark.
 5. **Find where the image came from.** Run a reverse image search (Google Lens and TinEye both do this) and look for the earliest copy. An image that first appeared on an AI art account, or that has no history before a viral post, deserves more doubt.
 6. **Then look closely.** Garbled text, warped hands or jewelry, shadows that fall in different directions, and backgrounds that melt into patterns are common signs of AI generation. Don't rely on these clues alone: a clean-looking image is unproven, not real.
 
 ### How to read the results
 
-| What the checker shows                                | What it means                                                                                       |
-| ----------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
-| SynthID watermark detected                            | Google says the file was likely made or edited with a model that uses SynthID                       |
-| Valid Content Credentials that say AI created it      | The signer recorded that the image is AI-generated, and the file hasn't changed since it was signed |
-| Content Credentials present but invalid or flagged    | The file changed after it was signed. The change may be harmless, such as a re-save                 |
-| No watermark and no Content Credentials               | Unknown. The image may be real, made by a tool that adds no labels, or stripped                     |
+| What the checker shows                             | What it means                                                                                       |
+| -------------------------------------------------- | --------------------------------------------------------------------------------------------------- |
+| SynthID watermark detected                         | Google says the file was likely made or edited with a model that uses SynthID                       |
+| Valid Content Credentials that say AI created it   | The signer recorded that the image is AI-generated, and the file hasn't changed since it was signed |
+| Content Credentials present but invalid or flagged | The file changed after it was signed. The change may be harmless, such as a re-save                 |
+| No watermark and no Content Credentials            | Unknown. The image may be real, made by a tool that adds no labels, or stripped                     |
 
 ## What SynthID Detector can and can't tell you
 
@@ -68,9 +68,9 @@ We took two C2PA-signed JPEG images, applied 12 edits to each, and checked every
 
 **Results.** Both images gave the same result unless noted, and c2patool and c2pa-python agreed on every file.
 
-| Edit (tool we used)                                          | Credentials still in the file? | Still valid?           |
-| ------------------------------------------------------------ | ------------------------------ | ---------------------- |
-| None (control)                                               | Yes                            | Yes                    |
+| Edit (tool we used)                                          | Credentials still in the file? | Still valid?            |
+| ------------------------------------------------------------ | ------------------------------ | ----------------------- |
+| None (control)                                               | Yes                            | Yes                     |
 | Re-save as JPEG, quality 85 (Pillow)                         | No                             | No credentials to check |
 | Resize to 50% (Pillow)                                       | No                             | No credentials to check |
 | Crop to the center 80% (Pillow)                              | No                             | No credentials to check |
@@ -79,10 +79,10 @@ We took two C2PA-signed JPEG images, applied 12 edits to each, and checked every
 | Convert to WebP (Pillow)                                     | No                             | No credentials to check |
 | Strip metadata (ImageMagick `-strip`)                        | No                             | No credentials to check |
 | Screenshot (headless Chromium, PNG)                          | No                             | No credentials to check |
-| Re-save as JPEG without stripping (ImageMagick)              | Yes                            | No: hash mismatch      |
-| Remove only the EXIF data, pixels untouched (our image only) | Yes                            | No: hash mismatch      |
-| Edit pixels but copy all metadata over (simulated editor)    | Yes                            | No: hash mismatch      |
-| Resize in a C2PA-aware tool (c2patool, original as parent)   | Yes                            | Yes                    |
+| Re-save as JPEG without stripping (ImageMagick)              | Yes                            | No: hash mismatch       |
+| Remove only the EXIF data, pixels untouched (our image only) | Yes                            | No: hash mismatch       |
+| Edit pixels but copy all metadata over (simulated editor)    | Yes                            | No: hash mismatch       |
+| Resize in a C2PA-aware tool (c2patool, original as parent)   | Yes                            | Yes                     |
 
 `C.jpg` has no EXIF data, so the EXIF-only edit didn't apply to it.
 

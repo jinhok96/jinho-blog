@@ -42,12 +42,28 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 
 후보마다 아래를 확인하고 [backlog.md](backlog.md)에 기록합니다.
 
-1. 검색 수요 신호 (뉴스·포럼·Reddit 질문, 관련 질문 수)
+1. 검색 수요 신호: 자동완성 하위 검색어가 여러 곳(Google·Bing·YouTube)에서 나오는지, 커뮤니티 질문이 있는지 (`demand_check.py suggest` 결과를 backlog에 근거로 기록)
 2. 수명 (며칠짜리 뉴스면 제외, 수개월 이상 우선)
 3. 경쟁 (상위 결과가 대형 매체·공식 문서로만 채워져 있으면 후순위, 오래되거나 부실한 결과가 있으면 우선)
 4. AI Overviews 위험 (한 줄로 답이 끝나는 질문은 후순위)
 5. 직접 검증 가능 여부 (컨테이너에서 실행·확인 가능하면 우선)
 6. 광고 가치 (소프트웨어·SaaS·보안·생산성 주제 우선)
+
+### 주제 발굴 소스
+
+Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 등)만 올라와 IT 도구 주제는 거의 안 나옵니다. RSS는 큰 IT 이슈 확인용으로만 쓰고, 아래 순서로 찾습니다. 모두 2026-10-11 컨테이너에서 접속 확인.
+
+| 단계 | 소스 | 조회 방법 |
+| --- | --- | --- |
+| 발견 | 공식 피드: Windows Blog, Chrome Releases(Stable), Google Workspace Updates, Google Blog, OpenAI News, Apple Newsroom + CISA 악용 취약점(소비자 제품) | `demand_check.py discover` |
+| 발견 | Windows 메시지 센터(종료·인증서 만료 공지), Gemini 릴리스 노트, Anthropic 뉴스, Apple 보안 업데이트, Microsoft 365 로드맵 | 직접 열기 (`discover` 출력 하단 링크) |
+| 수요 확인 | Google·Bing·YouTube 자동완성 (YouTube는 "not showing"·"not working" 같은 문제 해결형이 잘 나옴) | `demand_check.py suggest "키워드"` |
+| 소제목·FAQ 소재 | Chrome 도움말 커뮤니티, Apple Discussions 질문 제목, 자동완성 하위 검색어 | 직접 열기 |
+| 사후 판단 | Search Console 노출 검색어 | `gsc_report.py` |
+
+- 기술 뉴스 RSS(The Verge, BleepingComputer, 9to5Google, 9to5Mac, Windows Central, Ars Technica)와 Google News RSS(`news.google.com/rss/search?q=…+when:7d`)는 이슈 확인 보조용. 뉴스 자체보다 그 뒤에 생길 사용법·문제 검색을 노림
+- 쓸 수 없음: Reddit(본문 비어 있음), Quora·Downdetector(403), Google 검색 결과·Trends 상세 API(429)
+- 자동완성은 검색량 수치가 아님. 정량 판단은 발행 후 Search Console로
 
 ### 발행 속도
 
@@ -58,7 +74,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 
 1. **상태 파악**: 이 파일, [log.md](log.md), [backlog.md](backlog.md) 읽기. 열린 PR이 있으면 먼저 처리
 2. **지표 확인**: `python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests` 후 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py` → 노출·클릭·CTR·순위, 사이트맵 상태, 글별 색인 상태(URL 검사)를 log.md에 붙이고 개선 작업 판단
-3. **주제 선택**: Google Trends(미국)로 새 수요 확인 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
+3. **주제 선택**: `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 5. **작성**: [writing-guide.md](writing-guide.md) 기준
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인

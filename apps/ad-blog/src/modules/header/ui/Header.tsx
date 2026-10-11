@@ -29,7 +29,7 @@ export function Header() {
         </Link>
 
         {categories.length > 0 && (
-          <nav aria-label="카테고리">
+          <nav aria-label="Categories">
             <ul className="-mx-3 flex flex-wrap items-center">
               {categories.map(({ category }) => (
                 <li key={category}>

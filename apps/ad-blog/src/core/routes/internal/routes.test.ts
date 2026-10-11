@@ -52,10 +52,10 @@ describe('getExtraPageNumbers', () => {
 
 describe('paginatedTitle', () => {
   it('1페이지 → 제목 그대로', () => {
-    expect(paginatedTitle('일반', 1)).toBe('일반');
+    expect(paginatedTitle('AI Tools', 1)).toBe('AI Tools');
   });
 
   it('2페이지부터 페이지 번호 표시', () => {
-    expect(paginatedTitle('전체 글', 2)).toBe('전체 글 (2페이지)');
+    expect(paginatedTitle('All posts', 2)).toBe('All posts (Page 2)');
   });
 });

@@ -16,7 +16,7 @@ export function SkipLink({ href }: Props) {
         focus:px-4 focus:py-3 focus:text-sm focus:font-semibold focus:text-background
       `}
     >
-      본문 바로가기
+      Skip to content
     </a>
   );
 }

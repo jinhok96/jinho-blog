@@ -63,7 +63,7 @@ const GOOGLE_CERTIFICATION_AUTHORITY_ID = 'f08c47fec0942fa0';
  * - 미설정 시 주석만 출력 (승인 전 배포 대비)
  */
 export function buildAdsTxt(client: string): string {
-  if (!client) return '# AdSense 게시자 ID 미설정 (src/core/config/internal/ads.ts)\n';
+  if (!client) return '# AdSense publisher ID not set (src/core/config/internal/ads.ts)\n';
 
   return `google.com, ${client.replace(/^ca-/, '')}, DIRECT, ${GOOGLE_CERTIFICATION_AUTHORITY_ID}\n`;
 }

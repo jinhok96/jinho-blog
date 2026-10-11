@@ -38,7 +38,7 @@ export function AdjacentPostNav({ previous, next }: Props) {
 
   return (
     <nav
-      aria-label="이전 글과 다음 글"
+      aria-label="Previous and next posts"
       className={`
         grid gap-3
         sm:grid-cols-2
@@ -47,13 +47,13 @@ export function AdjacentPostNav({ previous, next }: Props) {
       {previous && (
         <AdjacentLink
           post={previous}
-          label="← 이전 글"
+          label="← Previous post"
         />
       )}
       {next && (
         <AdjacentLink
           post={next}
-          label="다음 글 →"
+          label="Next post →"
           className="sm:col-start-2 sm:text-right"
         />
       )}

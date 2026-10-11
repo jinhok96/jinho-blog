@@ -2,7 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 
 import { AdSenseScript } from '@/core/ads';
-import { ADSENSE_CLIENT, SITE_DESCRIPTION, SITE_NAME, SITE_URL } from '@/core/config';
+import { ADSENSE_CLIENT, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME, SITE_URL } from '@/core/config';
 import { SkipLink } from '@/core/ui';
 
 import { Footer } from '@/modules/footer';
@@ -35,7 +35,7 @@ export const viewport: Viewport = {
 
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
-    <html lang="ko">
+    <html lang={SITE_LANGUAGE}>
       <body className="flex min-h-dvh flex-col">
         <SkipLink href={`#${MAIN_CONTENT_ID}`} />
         <Header />

@@ -1,11 +1,14 @@
-import type { BlogPosting, BreadcrumbList, Person, WebSite, WithContext } from 'schema-dts';
+import type { BlogPosting, BreadcrumbList, Organization, Person, WebSite, WithContext } from 'schema-dts';
 
-import { AUTHOR_NAME, AUTHOR_SAME_AS, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME } from '../../config';
+import { AUTHOR_NAME, AUTHOR_SAME_AS, AUTHOR_TYPE, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME } from '../../config';
 import { absoluteUrl } from './url';
 
-function author(): Person {
+/**
+ * 작성자·발행자 (AUTHOR_TYPE에 따라 Person 또는 Organization)
+ */
+function author(): Person | Organization {
   return {
-    '@type': 'Person',
+    '@type': AUTHOR_TYPE,
     name: AUTHOR_NAME,
     url: absoluteUrl('/about'),
     ...(AUTHOR_SAME_AS.length > 0 && { sameAs: AUTHOR_SAME_AS }),

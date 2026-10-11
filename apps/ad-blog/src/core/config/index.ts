@@ -10,6 +10,7 @@ export { CATEGORIES, type Category, CATEGORY_MAP } from './internal/categories';
 export {
   AUTHOR_NAME,
   AUTHOR_SAME_AS,
+  AUTHOR_TYPE,
   DEFAULT_OG_IMAGE,
   OG_IMAGE_HEIGHT,
   OG_IMAGE_WIDTH,

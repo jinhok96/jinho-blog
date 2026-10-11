@@ -52,7 +52,7 @@ export function PostView({ post, content, toc, relatedPosts, adjacentPosts, brea
           {post.tags.length > 0 && (
             <footer className="mt-12">
               <ul
-                aria-label="태그"
+                aria-label="Tags"
                 className="flex flex-wrap gap-2"
               >
                 {post.tags.map(tag => (
@@ -88,7 +88,7 @@ export function PostView({ post, content, toc, relatedPosts, adjacentPosts, brea
               id="related-posts-heading"
               className="text-xl font-bold tracking-tight"
             >
-              관련 글
+              Related posts
             </h2>
             <PostList
               posts={relatedPosts}

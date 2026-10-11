@@ -4,7 +4,7 @@ import type { BreadcrumbItem } from '@/core/seo';
 export const HOME_PATH = '/';
 
 /** 탐색 경로 첫 항목 */
-export const HOME_BREADCRUMB: BreadcrumbItem = { name: '홈', path: HOME_PATH };
+export const HOME_BREADCRUMB: BreadcrumbItem = { name: 'Home', path: HOME_PATH };
 
 /**
  * 카테고리 목록 경로 (예: '/categories/general')
@@ -45,8 +45,8 @@ export function getExtraPageNumbers(totalPages: number): number[] {
 
 /**
  * 목록 n페이지 제목 (2페이지부터 페이지 번호 표시 — 페이지마다 고유한 제목)
- * - 예: ('일반', 2) → '일반 (2페이지)'
+ * - 예: ('AI Tools', 2) → 'AI Tools (Page 2)'
  */
 export function paginatedTitle(title: string, page: number): string {
-  return page > 1 ? `${title} (${page}페이지)` : title;
+  return page > 1 ? `${title} (Page ${page})` : title;
 }

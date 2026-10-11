@@ -2,12 +2,17 @@
  * 카테고리 정의 (slug → 표시 정보)
  * - slug는 URL(`/categories/{slug}`)과 글 frontmatter `category`에 사용 (영문 소문자·숫자·하이픈)
  * - description은 카테고리 페이지 메타 설명으로 사용 (페이지마다 고유한 설명이 SEO에 유리)
- * - 주제 확정 시 수정
  */
 export const CATEGORY_MAP = {
-  general: {
-    name: '일반',
-    description: '일반 카테고리 글 목록입니다.',
+  'ai-tools': {
+    name: 'AI Tools',
+    description:
+      'Guides to ChatGPT, Gemini, Claude, Copilot and other AI tools: new features, settings, limits, and fixes for common problems.',
+  },
+  software: {
+    name: 'Apps & Software',
+    description:
+      'How-to guides and fixes for browsers, operating systems, and everyday apps, including the AI features built into them.',
   },
 } as const satisfies Record<string, { name: string; description: string }>;
 

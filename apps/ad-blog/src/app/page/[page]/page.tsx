@@ -18,7 +18,7 @@ import { getPostPageCount, getPostsPage } from '@/entities/post';
 
 import { PostsPageView } from '@/views/posts';
 
-const TITLE = '전체 글';
+const TITLE = 'All posts';
 
 type Props = {
   params: Promise<{ page: string }>;
@@ -51,7 +51,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
   return buildMetadata({
     path: paginatedPath(HOME_PATH, page),
     title: paginatedTitle(TITLE, page),
-    description: `${SITE_NAME}의 전체 글 목록 ${page}페이지입니다.`,
+    description: `All posts on ${SITE_NAME}, page ${page}.`,
   });
 }
 

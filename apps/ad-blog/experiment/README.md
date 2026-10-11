@@ -56,7 +56,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 
 1. **상태 파악**: 이 파일, [log.md](log.md), [backlog.md](backlog.md) 읽기. 열린 PR이 있으면 먼저 처리
 2. **지표 확인** (접근 가능할 때): Search Console 노출·클릭·CTR·순위, 색인 상태 → log.md에 기록하고 개선 작업 판단
-3. **주제 선택**: backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
+3. **주제 선택**: Google Trends(미국)로 새 수요 확인 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 5. **작성**: [writing-guide.md](writing-guide.md) 기준
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인
@@ -84,7 +84,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | 도메인·호스팅                 | 미설정    | 도메인 구매, Cloudflare Pages 연결, `NEXT_PUBLIC_SITE_URL` 설정 (사용자)           |
 | Search Console                | 미설정    | 속성 등록, 서비스 계정을 사용자로 추가, 키를 환경 시크릿으로 등록 (사용자)         |
 | Bing Webmaster Tools·IndexNow | 미설정    | 도메인 연결 후 진행 (Claude: IndexNow 키 파일·제출 스크립트)                       |
-| Google Trends 접근            | 차단      | 클라우드 환경 Network access에 `trends.google.com` 허용 추가 (사용자)              |
+| Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub만 접속 가능 → 웹 서비스 직접 테스트·스크린샷 불가. 조사는 WebSearch·WebFetch로 가능. 필요 시 Network access 확대 (사용자) |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |
 | 정기 실행                     | 없음      | 주기적인 글 작성 세션(Routine) 여부 결정 (사용자)                                  |

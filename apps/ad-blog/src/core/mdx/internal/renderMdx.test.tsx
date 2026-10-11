@@ -6,6 +6,7 @@ vi.mock('../../ads', () => ({
   AdSlot: ({ placement }: { placement: string }) => <div data-ad-placement={placement} />,
 }));
 
+import { CONTACT_EMAIL } from '../../config';
 import { renderMdx } from './renderMdx';
 
 const ARTICLE = ['도입부입니다.', '## 첫 섹션', '내용', '## 두 번째 섹션', '내용', '## 세 번째 섹션', '내용'].join(
@@ -53,4 +54,12 @@ describe('renderMdx 본문 광고', () => {
       expect(() => renderToStaticMarkup(content)).toThrow(new RegExp(name));
     },
   );
+});
+
+describe('renderMdx 연락처 이메일', () => {
+  it('<ContactEmail />은 CONTACT_EMAIL mailto 링크로 렌더링', async () => {
+    const { html } = await render('Email us at <ContactEmail />.');
+
+    expect(html).toContain(`<a href="mailto:${CONTACT_EMAIL}">${CONTACT_EMAIL}</a>`);
+  });
 });

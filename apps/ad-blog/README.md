@@ -19,7 +19,7 @@
 
 ## 사이트 설정
 
-1. **사이트 정보** — `src/core/config/internal/site.ts`: `SITE_NAME`, `SITE_DESCRIPTION`, `SITE_KEYWORDS`, `AUTHOR_NAME`, `AUTHOR_SAME_AS`, `POSTS_PER_PAGE`
+1. **사이트 정보** — `src/core/config/internal/site.ts`: `SITE_NAME`, `SITE_DESCRIPTION`, `SITE_KEYWORDS`, `AUTHOR_NAME`, `AUTHOR_SAME_AS`, `CONTACT_EMAIL`(정적 페이지 MDX의 `<ContactEmail />`), `POSTS_PER_PAGE`
 2. **카테고리** — `src/core/config/internal/categories.ts`: `CATEGORY_MAP`의 키(slug, URL에 사용)와 이름·설명. 기존 글의 `category`가 정의에 없으면 빌드 실패
 3. **도메인** — 빌드 환경변수 `NEXT_PUBLIC_SITE_URL` (예: `https://my-blog.com`)
    - 미설정 시 `https://example.com` 기준으로 빌드되고, 모든 페이지 `noindex` + `robots.txt`가 `Disallow: /` (검색엔진 색인 차단)

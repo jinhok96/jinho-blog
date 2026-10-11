@@ -5,6 +5,7 @@ import type { ComponentPropsWithoutRef } from 'react';
 import Link from 'next/link';
 
 import { AdSlot } from '../../ads';
+import { CONTACT_EMAIL } from '../../config';
 import { CONTENT_AD_COMPONENTS } from './contentAds';
 import { resolveHeadingLevel } from './heading';
 import { isVideoSrc, resolveImageSize } from './image';
@@ -121,6 +122,13 @@ function MdxTable(props: ComponentPropsWithoutRef<'table'>) {
   );
 }
 
+/**
+ * 연락처 이메일 링크: MDX에 주소를 직접 쓰지 않고 `CONTACT_EMAIL` 한 곳에서 관리
+ */
+function ContactEmail() {
+  return <a href={`mailto:${CONTACT_EMAIL}`}>{CONTACT_EMAIL}</a>;
+}
+
 /** `not-prose`: 본문 타이포그래피 스타일이 광고 영역에 적용되지 않도록 제외 */
 const CONTENT_AD_CLASS_NAME = 'not-prose my-10';
 
@@ -161,4 +169,5 @@ export const mdxComponents: MDXComponents = {
   a: MdxLink,
   img: MdxImage,
   table: MdxTable,
+  ContactEmail,
 };

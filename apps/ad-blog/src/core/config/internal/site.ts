@@ -44,6 +44,9 @@ export const AUTHOR_NAME = SITE_NAME;
 /** 작성자 프로필 링크 (JSON-LD sameAs). 예: SNS, 소개 페이지 */
 export const AUTHOR_SAME_AS: string[] = [];
 
+/** 연락처 이메일 (정적 페이지 MDX에서 `<ContactEmail />`로 표시) */
+export const CONTACT_EMAIL = 'toolproofblog@gmail.com';
+
 /** 기본 OG 이미지 (scripts/registry.ts가 SITE_NAME으로 생성, 1200x630 JPEG) */
 export const DEFAULT_OG_IMAGE = '/_static/og-default.jpg';
 export const OG_IMAGE_WIDTH = 1200;

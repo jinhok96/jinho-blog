@@ -57,6 +57,14 @@ pnpm --filter @jinho-blog/web dev
 - [apps/web/eslint.config.mjs](apps/web/eslint.config.mjs)
 - [apps/web/next.config.ts](apps/web/next.config.ts)
 
+## 배포 (Vercel)
+
+- 앱별 Vercel 프로젝트 (Root Directory: `apps/web`, `apps/ad-blog`)
+- 영향 없는 커밋은 빌드 건너뜀: 앱별 `vercel.json`의 `ignoreCommand` → [scripts/vercel-ignore.mjs](scripts/vercel-ignore.mjs)
+  - 감시 경로: 앱 폴더 + workspace 의존 패키지(`package.json`의 `workspace:*`, 재귀) + 루트 공통 파일(`package.json`, `pnpm-lock.yaml`, `pnpm-workspace.yaml`, `turbo.json`, 스크립트 자신) + `ignoreCommand` 인자
+  - 비교 기준: 마지막 성공 배포 커밋(`VERCEL_GIT_PREVIOUS_SHA`), 판단 불가 시 항상 빌드
+- 앱이 앱 폴더·workspace 패키지 밖 경로를 새로 읽으면 해당 앱 `vercel.json`의 `ignoreCommand` 인자에 추가 (예: web의 `content/mdx`) — 누락 시 그 경로만 바뀐 커밋이 배포되지 않음
+
 ---
 
 ## 공통 TypeScript 규칙

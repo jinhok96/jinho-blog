@@ -18,6 +18,8 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | 작성자    | 브랜드 이름(ToolProof), AI 작성 공개 없음                  | 2026-10-11 |
 | 배포 권한 | Claude가 모든 PR을 CI 통과 후 직접 머지                    | 2026-10-11 |
 | 연락처    | 계정 이메일 (소개·문의·개인정보처리방침에 공개)            | 2026-10-11 |
+| 도메인    | `tool-proof.com` (`toolproof.com`은 타인 소유, `toolproof.app`은 CloudCannon의 동명 개발 도구) | 2026-10-11 |
+| 호스팅    | Vercel Pro (`jinho-blog-team`/`ad-blog`, 루트 `apps/ad-blog`), main 머지 시 자동 배포 | 2026-10-11 |
 
 작성자를 브랜드로 표기하더라도 **가상 인물·경력·체험담은 만들지 않습니다.** "We tested"는 실제로 컨테이너에서 실행·확인한 경우에만 씁니다.
 
@@ -81,10 +83,10 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 
 | 항목                          | 상태      | 필요 조치 (담당)                                                                   |
 | ----------------------------- | --------- | ---------------------------------------------------------------------------------- |
-| 도메인·호스팅                 | 미설정    | 도메인 구매, Cloudflare Pages 연결, `NEXT_PUBLIC_SITE_URL` 설정 (사용자)           |
-| Search Console                | 미설정    | 속성 등록, 서비스 계정을 사용자로 추가, 키를 환경 시크릿으로 등록 (사용자)         |
+| 도메인·호스팅                 | 설정됨    | `tool-proof.com` 연결, `NEXT_PUBLIC_SITE_URL=https://tool-proof.com`(Production). 필수 상태 체크는 `Vercel – jinho-blog-web` 등 프로젝트별 이름 |
+| Search Console                | 미설정    | 도메인 속성 등록(DNS TXT) → sitemap `https://tool-proof.com/sitemap.xml` 제출. API 조회용 서비스 계정을 사용자로 추가하고 키를 환경 시크릿으로 등록 (사용자) |
 | Bing Webmaster Tools·IndexNow | 미설정    | 도메인 연결 후 진행 (Claude: IndexNow 키 파일·제출 스크립트)                       |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
-| 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub만 접속 가능 → 웹 서비스 직접 테스트·스크린샷 불가. 조사는 WebSearch·WebFetch로 가능. 필요 시 Network access 확대 (사용자) |
+| 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub(+trends.google.com)만 접속 가능 → 웹 서비스 직접 테스트·스크린샷·실제 사이트 확인 불가. WebFetch도 같은 제한. `tool-proof.com`과 공식 문서 도메인(help.openai.com, support.google.com 등) 허용 추가 권장 (사용자) |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |
 | 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 월·수·금 08:45 (한국 시간), 매번 새 세션. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |

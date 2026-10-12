@@ -78,7 +78,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 5. **작성**: [writing-guide.md](writing-guide.md) 기준
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인
-7. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지
+7. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지 → 배포 반영 확인 후 새 글·수정한 글 URL을 IndexNow로 제출 (`python3 -I apps/ad-blog/experiment/tools/indexnow.py /posts/{slug}`)
 8. **기록**: log.md에 세션 기록, backlog.md 갱신, 검증 자료는 [tests/](tests/README.md)에 보관, 새로 알게 된 규칙은 writing-guide.md에 반영
 
 ## 기록 원칙
@@ -101,7 +101,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 | ----------------------------- | --------- | ---------------------------------------------------------------------------------- |
 | 도메인·호스팅                 | 설정됨    | `tool-proof.com` 연결, `NEXT_PUBLIC_SITE_URL=https://tool-proof.com`(Production). 필수 체크는 GitHub Actions `test`·`build` (2026-10-12 Vercel 상태 체크를 필수에서 제외: `ignoreCommand`로 건너뛴 배포는 상태가 안 남아 PR이 막힘). `build`는 바뀐 패키지와 의존 앱만 빌드 |
 | Search Console                | 등록·API 설정됨 | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. 서비스 계정(제한된 권한) 키를 환경변수 `GSC_SERVICE_ACCOUNT_JSON_B64`로 등록, API 도메인 허용. 조회는 [tools/gsc_report.py](tools/gsc_report.py) |
-| Bing Webmaster Tools·IndexNow | Bing 등록됨 | 2026-10-12 사용자가 Bing Webmaster Tools 등록. IndexNow 키 파일·제출 스크립트는 미구현 (Claude, 다음 세션) |
+| Bing Webmaster Tools·IndexNow | 설정됨 | 2026-10-12 사용자가 Bing Webmaster Tools 등록. IndexNow 키 파일 `public/{key}.txt`, 제출 스크립트 [tools/indexnow.py](tools/indexnow.py) (`api.indexnow.org` 접속 가능) |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 일부 허용 | 2026-10-11 세션 2 확인: npm·PyPI·GitHub(Releases 다운로드)·trends.google.com·microsoft.com·support.microsoft.com·learn.microsoft.com·support.google.com·apple.com·huggingface.co·tool-proof.com 접속 가능. help.openai.com·api.github.com은 403. 2026-10-12 세션 3: raw.githubusercontent.com·k2-fsa.github.io·download.pytorch.org·en.wikipedia.org 가능, github.com HTML 페이지·소스 zip은 차단 |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |

@@ -15,7 +15,7 @@
 
 - 작업 브랜치: `dev`, `mdx`
 - PR 대상: `main`
-- PR 자동 머지: PR 생성 직후 GitHub auto-merge(merge commit)를 켜고, 저장소 설정상 불가하면 CI(`test`)·Vercel 배포가 모두 통과하고 열린 리뷰 스레드가 없을 때 직접 머지 (merge commit)
+- PR 자동 머지: PR 생성 직후 GitHub auto-merge(merge commit)를 켜고, 저장소 설정상 불가하면 CI(`test`·`build`)가 통과하고 열린 리뷰 스레드가 없을 때 직접 머지 (merge commit)
 - 커밋 메시지 형식 → @.claude/skills/output-style/SKILL.md
 
 # 문제 해결 프로세스

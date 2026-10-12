@@ -46,9 +46,8 @@
 **다음 할 일**
 
 - Claude: 다음 세션 GSC에서 첫 노출 확인 (색인 완료 → 노출 시작 여부), 노출 검색어로 글 제목·FAQ 보강 판단
-- Claude: 색인이 확인됐으므로 IndexNow 키 파일·제출 스크립트 추가 검토 (Bing Webmaster 등록 후)
-- Claude: 10월 Patch Tuesday(10-13) 이후 `windows-10-esu-extended`의 최신 빌드 표 갱신
-- 사용자: Bing Webmaster Tools 등록 (이월)
+- Claude: IndexNow 키 파일·제출 스크립트 추가 (Bing Webmaster Tools는 2026-10-12 사용자 등록 완료)
+- Claude: 10월 Patch Tuesday(10-13) 이후 Windows 10 업데이트는 **새 글 후보로 판단** (사용자 제안): KB 번호·설치 오류 검색어가 자동완성에 나오면 Fix형 새 글로 쓰고, `windows-10-esu-extended`는 빌드 표만 갱신 + 새 글로 링크
 
 ## 2026-10-11 · 세션 2 (정기 실행 1회차): Windows 10 ESU 글
 

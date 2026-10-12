@@ -47,6 +47,7 @@
 
 - Claude: 다음 세션 GSC에서 첫 노출 확인 (색인 완료 → 노출 시작 여부), 노출 검색어로 글 제목·FAQ 보강 판단
 - Claude: IndexNow 키 파일·제출 스크립트 추가 (Bing Webmaster Tools는 2026-10-12 사용자 등록 완료)
+- 사용자: `ad-blog`만 바꾼 PR이 머지되지 않음 (PR #156). `jinho-blog-web` Vercel 배포가 Ignored로 건너뛰어져 필수 상태 체크 `Vercel – jinho-blog-web`이 보고되지 않음 (#155까지는 web도 배포돼 통과). 필수 체크를 `test`(+`Vercel – ad-blog`)로 바꾸거나, 건너뛴 배포도 성공 상태를 남기도록 설정 필요
 - Claude: 10월 Patch Tuesday(10-13) 이후 Windows 10 업데이트는 **새 글 후보로 판단** (사용자 제안): KB 번호·설치 오류 검색어가 자동완성에 나오면 Fix형 새 글로 쓰고, `windows-10-esu-extended`는 빌드 표만 갱신 + 새 글로 링크
 
 ## 2026-10-11 · 세션 2 (정기 실행 1회차): Windows 10 ESU 글

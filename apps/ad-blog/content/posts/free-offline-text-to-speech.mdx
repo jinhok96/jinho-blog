@@ -1,0 +1,150 @@
+---
+title: 'Free Offline Text to Speech: Piper vs Kokoro, Tested'
+description: We ran 11 free offline text-to-speech voices, including Piper, Kokoro and KittenTTS, on a plain CPU to compare speed, clarity and natural sound.
+category: ai-tools
+createdAt: 2026-10-12
+tags:
+  - text to speech
+  - Piper
+  - Kokoro
+  - offline AI
+  - privacy
+---
+
+For free, offline text to speech that sounds natural, use **Kokoro** if you can wait a little, and **Piper** if you need speed. In our test of 11 open voices on a 4-core CPU with no graphics card, Kokoro's voices scored highest and most consistently on an automatic naturalness check, while Piper's medium-quality voices were about seven times faster and almost as clear. Every voice we tested was easy to understand; the real differences were speed, how natural they sounded, and how they read numbers and dates.
+
+All of these run on your own device after a one-time download, so your text never leaves it. If you only want your computer to read a page aloud, the voices already built into Windows and macOS also work offline once downloaded, and they need no extra software.
+
+## Which free offline voice to choose
+
+Based on our test:
+
+- **Most natural:** **Kokoro v1.0** with the `af_heart` voice. The two Kokoro versions had the highest predicted naturalness scores and the smallest spread between their best and worst sentences. The older v0.19 scored slightly higher, but the gap is within the margin of the method, and v1.0 is the current release with far more voices. It made 1 minute of speech in about 28 seconds on our CPU.
+- **Best for slow computers and phones:** a **Piper medium** voice such as **lessac** or **amy**. They made 1 minute of speech in under 4 seconds, with scores close to Kokoro's.
+- **Smallest download:** **KittenTTS nano** (24 MB model file). It read plain sentences perfectly in our test but garbled large numbers, and it wasn't fast.
+- **Skip for now:** **Supertonic 3**, because its developer has archived the project and ended support, and **Matcha**, which scored lowest on naturalness and had the most misheard words, including stray sounds at the end of two sentences that the speech-recognition model heard as extra words.
+
+Piper's "high" voices weren't worth it in our test: they were about four times slower than the medium voices and didn't score meaningfully better.
+
+## Our results
+
+We had each voice read the same 40 sentences, then measured how long it took, checked how clearly it spoke by running the audio through a speech-recognition model, and estimated how natural it sounded with UTMOS, an automatic predictor of listener ratings.
+
+| Voice | Seconds to make 1 min of speech | Words misheard (of 242) | Predicted naturalness (1–5) | Model file | Peak memory |
+| --- | --- | --- | --- | --- | --- |
+| Kokoro v1.0 (af_heart) | 28 | 4 | **4.42** (lowest sentence 4.33) | 326 MB | 640 MB |
+| Kokoro v0.19 (af) | 32 | 2 | **4.45** (4.37) | 346 MB | 640 MB |
+| Supertonic 3 (int8) | 28 | 1 | 4.41 (4.18) | 144 MB | 300 MB |
+| Piper lessac high | 17 | 2 | 4.40 (3.86) | 114 MB | 350 MB |
+| Piper lessac low | **3.0** | 5 | 4.37 (3.96) | 63 MB | 240 MB |
+| Piper amy medium | **3.5** | 2 | 4.36 (4.02) | 63 MB | 340 MB |
+| Piper ryan high | 17 | 4 | 4.35 (3.95) | 121 MB | 360 MB |
+| Piper lessac medium | **3.8** | 3 | 4.33 (3.85) | 63 MB | 310 MB |
+| KittenTTS mini v0.8 | 51 | 0 | 4.33 (4.12) | 78 MB | 340 MB |
+| KittenTTS nano v0.8 (int8) | 25 | 0 | 4.24 (3.55) | **24 MB** | 220 MB |
+| Matcha (LJSpeech) | 4.5 | 6 | 3.90 (3.40) | 128 MB | 260 MB |
+
+Times are the median of three runs using 4 CPU threads. A newer laptop or a Mac with Apple silicon can be faster. "Words misheard" counts the words the speech-recognition model got wrong when it transcribed 30 standard test sentences (242 words after normalizing) read by each voice.
+
+What the numbers show:
+
+- **Every voice was easy to understand.** The worst voice had 6 of 242 words misheard, and most errors were near-misses such as "park truck" for "parked truck." Clarity isn't a reason to pick one free voice over another.
+- **Kokoro was the most consistent.** Its lowest-scoring sentence still scored 4.33, while every Piper voice had at least one sentence below 4.05. In practice, that means fewer odd-sounding sentences in a long text.
+- **The naturalness gap between Kokoro and Piper is small on paper.** All the Piper voices scored 4.33 to 4.40 on average, against 4.42 to 4.45 for Kokoro. UTMOS is a prediction, not a panel of human listeners, so treat differences under about 0.1 as a tie and listen to samples before deciding.
+- **Speed differs a lot more.** Piper medium was about 7 times faster than Kokoro v1.0. For a 10,000-word document, a little under an hour of speech at these voices' pace, that is the difference between 3 to 4 minutes and about 25 minutes on our CPU.
+- **On a single core, Kokoro can't keep up with real time.** With one CPU thread, Kokoro v1.0 needed 71 seconds to make 1 minute of speech, so reading aloud live on an older phone or computer may pause or stutter. Piper medium needed about 8 seconds.
+- **Small isn't automatically fast.** KittenTTS nano has the smallest file but was more than six times slower than Piper medium, and KittenTTS mini was the slowest voice we tested.
+
+### Numbers and dates trip up most voices
+
+We also had each voice read 10 everyday sentences with prices, times, dates and phone numbers, and checked what the speech-recognition model heard. Two problems stood out:
+
+- **Dates written with slashes were read as "slash."** For "The meeting moved from 10/21 to 11/4," 9 of the 11 voices said "ten slash twenty-one." Writing "Oct. 21" avoids this: "Tuesday, Oct. 14 at 3:30 p.m." came through correctly for most voices, although KittenTTS nano skipped "Oct."
+- **KittenTTS mangled large numbers.** For "from 1,250 to 1,712 people," both KittenTTS voices produced garbled numbers, and two different speech-recognition models agreed on that. Kokoro and Piper read the same sentence correctly.
+
+Before converting a long document, it's worth replacing slashed dates and checking how your chosen voice reads any numbers that matter.
+
+## How to use Piper or Kokoro offline
+
+None of these voices is a one-click Windows app from a big company, so how you use them depends on your device. We ran all 11 voices with [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx), a free open-source speech engine, and the same project publishes ready-made apps for them.
+
+### On Android: install a system voice
+
+sherpa-onnx publishes a free [text-to-speech engine app for Android](https://k2-fsa.github.io/sherpa/onnx/tts/apk-engine.html) for each voice, including every voice in our table, at the same engine version we tested (1.13.8). Once installed, it works as your phone's speech engine, so apps that read text aloud can use it offline.
+
+1. On the download page, find the file for the voice you want. For most phones, pick the one with **arm64-v8a** in its name and **eng** for English, for example the file ending in `kokoro-multi-lang-v1_0.apk`.
+2. Download and install it. Because it isn't from the Play Store, Android will ask you to allow installs from your browser.
+3. Open **Settings > Accessibility > Text-to-speech output** and choose the new engine. Google's [Android help page](https://support.google.com/accessibility/android/answer/6006983) notes that the available engines and menu names vary by device.
+
+We didn't install the Android app ourselves; these steps come from the sherpa-onnx and Google pages.
+
+### On Windows, Mac or Linux: the free desktop app or Piper
+
+- **Desktop app:** sherpa-onnx also offers a [simple text-to-speech app](https://k2-fsa.github.io/sherpa/onnx/flutter/pre-built-app.html) for Windows, macOS and Linux that runs locally. The [Windows downloads](https://k2-fsa.github.io/sherpa/onnx/flutter/tts-win.html) include Piper voices such as lessac, but not Kokoro or KittenTTS. We didn't run the desktop app.
+- **Piper from the command line:** if you're comfortable typing a few commands and have Python installed, Piper's [official instructions](https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/CLI.md) take three lines. We ran them on Linux with piper-tts 1.8.0:
+
+```sh
+pip install piper-tts
+python3 -m piper.download_voices en_US-lessac-medium
+python3 -m piper -m en_US-lessac-medium -f speech.wav -- 'This is a test.'
+```
+
+The first two commands need the internet once. After that, the last one saves the speech as a WAV file with no connection; we confirmed it still worked after cutting off our test machine's internet access.
+
+If Piper stops with an error containing `INVALID_PROTOBUF`, the voice file didn't download completely. That happened to us once: the file was about 1.3 MB short. Deleting the `.onnx` file and running the download command again fixed it. Piper's development has moved from the original rhasspy project to the [Open Home Foundation's repository](https://github.com/OHF-Voice/piper1-gpl), which is where these commands come from.
+
+- **Kokoro:** the official [Kokoro model page](https://huggingface.co/hexgrad/Kokoro-82M) gives Python instructions. If you'd rather not install anything, you can hear every voice in our table in sherpa-onnx's [online demo](https://huggingface.co/spaces/k2-fsa/text-to-speech), which runs on Hugging Face's servers, not offline.
+
+The Kokoro page also warns that websites with "kokoro" in their domain name are not run by the model's author and may be scams. Download it from the official model page or a project you trust.
+
+## Built-in offline voices: no install needed
+
+If you want your computer to read text aloud and don't need audio files, start with the voices you already have.
+
+- **Windows 11:** Narrator's "natural voices" use on-device speech that, according to [Microsoft](https://support.microsoft.com/en-us/accessibility/windows/narrator/appendix-j-history-of-narrator-updates), works without an internet connection once downloaded. Press **Ctrl + Windows key + N** to open Narrator settings, then use **Add natural voices**. The US English voices are Guy, Jenny and Aria, per Microsoft's [voice list](https://support.microsoft.com/en-us/Accessibility/windows/narrator/appendix-a-supported-languages-and-voices).
+- **Mac:** go to **Apple menu > System Settings > Accessibility > Read & Speak** and choose a voice from the **System voice** menu. Apple's [guide](https://support.apple.com/guide/mac-help/mchlp2290/mac) says extra voices download from Apple, which needs the internet once.
+
+We didn't test these built-in voices, so they aren't in our table.
+
+## Can you use these voices commercially or on YouTube?
+
+It depends on the voice, not just the engine. As of October 2026:
+
+- **Kokoro** is released under the Apache 2.0 license, which allows commercial use, according to its [model page](https://huggingface.co/hexgrad/Kokoro-82M).
+- **KittenTTS** is also [Apache 2.0](https://github.com/KittenML/KittenTTS).
+- **Piper voices each have their own license**, set by the recordings they were trained on. The [ryan voice's model card](https://huggingface.co/rhasspy/piper-voices/blob/main/en/en_US/ryan/high/MODEL_CARD), for example, lists CC BY-NC-SA 4.0, which doesn't allow commercial use. Check the `MODEL_CARD` file for the exact voice before using it in a monetized video.
+
+This is general information, not legal advice.
+
+## What we tested
+
+- **Engine:** [sherpa-onnx](https://github.com/k2-fsa/sherpa-onnx) 1.13.8 for Python, with the voice files from its [model releases](https://github.com/k2-fsa/sherpa-onnx/releases/tag/tts-models). Kokoro v1.0 used the `af_heart` voice, which the Kokoro team grades highest of its American English voices; the others used their first voice.
+- **Text:** the first 30 [Harvard sentences](https://en.wikipedia.org/wiki/Harvard_sentences), a standard set of phonetically balanced test sentences, plus 10 sentences we wrote with prices, times, dates, phone numbers and abbreviations.
+- **Speed:** time to generate each sentence after loading the voice, divided by the length of the audio, using 4 threads. We ran each voice three times on an otherwise idle machine and report the median.
+- **Clarity:** we transcribed each voice's audio with NVIDIA's Parakeet TDT 0.6B v2 speech-recognition model and counted wrong, missing and extra words after normalizing spelling (so "fifty" and "50" match). We rechecked the number sentences with OpenAI's Whisper small.en.
+- **Naturalness:** the UTMOS22 "strong" model, a research system trained to predict how listeners would rate speech on a 1 to 5 scale. It is an estimate; we did not run a listening panel.
+- **Machine:** a Linux cloud server with 4 Intel Xeon cores at 2.8 GHz and no graphics card, October 12, 2026.
+
+For a test of the opposite direction, turning speech into text, see our comparison of [8 free offline transcription models](/posts/transcribe-audio-offline-free), which used the same engine.
+
+## FAQ
+
+### Is Kokoro TTS free?
+
+Yes. Kokoro is an open model with Apache 2.0-licensed weights, so you can download and run it for free, including for commercial projects, according to its [official model page](https://huggingface.co/hexgrad/Kokoro-82M). Some websites charge for Kokoro or imitate its name; the model itself costs nothing.
+
+### Is Piper or Kokoro better?
+
+In our test, Kokoro sounded slightly more natural and was more consistent from sentence to sentence, while Piper's medium voices were about seven times faster with nearly the same clarity. Choose Kokoro for audiobooks and narration you'll listen to for a long time, and Piper for older computers, phones or quick results.
+
+### Does free offline text to speech need a graphics card?
+
+No. Our test machine had none. The fastest voices, Piper medium and low, made a minute of speech in 3 to 4 seconds on 4 CPU cores, and even the slowest voice we tested, KittenTTS mini, took less than a minute to produce one.
+
+### What is the best free offline text to speech for Android?
+
+The sherpa-onnx text-to-speech engine lets you install Kokoro, Piper or KittenTTS as your phone's system voice, and it runs offline. On older phones, a Piper medium voice is the safer choice because it was much faster than Kokoro in our test.
+
+### Can offline text to speech read other languages?
+
+Yes, but coverage varies. Kokoro v1.0 lists 54 voices across 8 languages on its [voice page](https://huggingface.co/hexgrad/Kokoro-82M/blob/main/VOICES.md), and Piper's [voice list](https://github.com/OHF-Voice/piper1-gpl/blob/main/docs/VOICES.md) covers more than 40 languages and regional variants. We only tested American English voices.

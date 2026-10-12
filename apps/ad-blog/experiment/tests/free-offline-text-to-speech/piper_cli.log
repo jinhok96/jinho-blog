@@ -1,0 +1,8 @@
+# 2026-10-12, Linux, Python 3.11, piper-tts 1.8.0 (pip)
+# 1) python3 -m piper.download_voices en_US-lessac-medium
+#    첫 시도: 파일이 61,920,729 bytes로 잘려 받아짐 (정상 63,201,294) → 실행 시
+#    onnxruntime "INVALID_PROTOBUF : Load model ... failed:Protobuf parsing failed."
+#    파일 삭제 후 재다운로드하자 63,201,294 bytes로 정상
+# 2) python3 -m piper -m en_US-lessac-medium -f speech.wav -- 'This is a test.'
+#    → speech.wav 22,050 Hz, 0.98 s
+# 3) 프록시를 막힌 주소(127.0.0.1:9)로 바꿔 인터넷 차단 상태에서 같은 명령 실행 → offline.wav 생성 성공

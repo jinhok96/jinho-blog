@@ -8,6 +8,7 @@
 | [check-if-image-is-ai-generated](check-if-image-is-ai-generated)     | C2PA 출처 정보 제거 테스트 스크립트, 결과, 사실 확인표                                      |
 | [turn-off-ai-in-chrome](turn-off-ai-in-chrome)                       | Chromium 155 소스 기준 사실 확인표 (파일·줄 번호)                                          |
 | [windows-10-esu-extended](windows-10-esu-extended)                   | Microsoft ESU 페이지·KB 문서 기준 사실 확인표 (문서 기반, 실행 검증 없음)                  |
+| [free-offline-text-to-speech](free-offline-text-to-speech)           | 오프라인 TTS 11개 음성 측정 (sherpa-onnx 1.13.8: 속도·Parakeet 받아쓰기 WER·UTMOS), piper-tts CLI 실행 기록, 사실 확인표 |
 
 ## 받아쓰기 벤치마크 재현
 
@@ -20,3 +21,11 @@
 ## C2PA 테스트 재현
 
 `run_all.sh` 상단의 설치 안내대로 c2pa-python·c2patool·테스트 이미지를 받은 뒤 `W=<작업 폴더> ./run_all.sh`. `edit_manifest.json`의 `WORKDIR`는 작업 폴더 경로로 바꿉니다. 서명에는 c2patool에 포함된 **테스트 인증서**만 사용합니다.
+
+## 오프라인 TTS 측정 재현
+
+1. `python3 -m venv venv && ./venv/bin/pip install sherpa-onnx soundfile jiwer whisper-normalizer numpy`
+2. 모델: `synth.py` 상단 주석의 URL에서 11개 음성 + `asr-models/sherpa-onnx-nemo-parakeet-tdt-0.6b-v2-int8`, `sherpa-onnx-whisper-small.en`을 `models/`에 풀기
+3. `synth.py <모델> models out 4`로 음성 생성 → `asr_eval.py`, `asr_crosscheck.py`로 명료도
+4. UTMOS: 별도 venv에 torch(CPU, download.pytorch.org)·soundfile 설치, SpeechMOS v1.2.0 코드는 raw.githubusercontent.com에서 받음 (torch.hub는 api.github.com 403으로 실패) → `mos.py`
+5. 속도: 다른 작업이 없는 상태에서 `run_timing.sh` → `summarize.py`로 `summary.json`

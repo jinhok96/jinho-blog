@@ -1,0 +1,2620 @@
+{
+ "piper-lessac-low": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Plue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the park truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bons."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pop nod a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9.99 a month or$99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5pm to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "term left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "set the oven to 425 degrees and bake for 20 to 25 minutes"
+   }
+  ],
+  "utmos": [
+   3.961,
+   4.413,
+   4.432,
+   4.5,
+   4.095,
+   4.476,
+   4.365,
+   4.415,
+   4.428,
+   4.472,
+   4.425,
+   4.472,
+   4.376,
+   4.395,
+   4.292,
+   4.463,
+   4.407,
+   4.404,
+   4.418,
+   4.286,
+   4.339,
+   4.364,
+   4.353,
+   4.406,
+   4.342,
+   4.394,
+   4.345,
+   4.409,
+   4.468,
+   4.26
+  ]
+ },
+ "piper-lessac-medium": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Blew the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the park truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold 50 bons."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9.99 a month or$99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5pm to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of a holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $99.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of a holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read Chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "set the oven to 425 degrees and to bake for 20 to 25 minutes"
+   }
+  ],
+  "utmos": [
+   4.394,
+   3.898,
+   4.429,
+   4.186,
+   3.976,
+   4.476,
+   3.852,
+   4.361,
+   4.371,
+   4.441,
+   4.365,
+   4.439,
+   4.424,
+   4.351,
+   4.351,
+   4.384,
+   4.416,
+   4.364,
+   4.387,
+   4.375,
+   4.344,
+   4.4,
+   4.288,
+   4.338,
+   4.417,
+   4.374,
+   4.349,
+   4.4,
+   4.455,
+   4.375
+  ]
+ },
+ "piper-lessac-high": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Blue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the park truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring,"
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold 50 bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Doctor Lopez is on Tuesday, oct 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9.99 a month or$1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-50055-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $99.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read Chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "set the oven to 425 degrees and bake for 20 to 25 minutes"
+   }
+  ],
+  "utmos": [
+   4.427,
+   4.441,
+   4.439,
+   4.495,
+   4.42,
+   4.5,
+   3.858,
+   4.42,
+   4.434,
+   4.464,
+   4.388,
+   4.5,
+   4.456,
+   4.297,
+   4.429,
+   4.479,
+   4.46,
+   4.42,
+   4.429,
+   4.382,
+   4.317,
+   4.453,
+   4.308,
+   4.407,
+   4.351,
+   4.404,
+   4.402,
+   4.401,
+   4.456,
+   4.462
+  ]
+ },
+ "piper-amy-medium": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Glue the sheet to the dark blue background"
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the parked truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose, and"
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the clear spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash, but"
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Doctor Lopez is on Tuesday, oct fourteen at three thirty PM"
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9.99 a month or$1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to four hundred twenty five degrees and bake for twenty to twenty five minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.395,
+   4.446,
+   4.394,
+   4.526,
+   4.466,
+   4.454,
+   4.417,
+   4.471,
+   4.448,
+   4.469,
+   4.452,
+   4.497,
+   4.385,
+   4.4,
+   4.184,
+   4.274,
+   4.337,
+   4.326,
+   4.373,
+   4.18,
+   4.275,
+   4.403,
+   4.265,
+   4.364,
+   4.405,
+   4.37,
+   4.307,
+   4.204,
+   4.017,
+   4.307
+  ]
+ },
+ "piper-ryan-high": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Blue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the parked truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The soft breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold 50 bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two bluefish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, OC. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9.99 a month or$1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-50055-0199 before 5pm to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download it for Microsoft, Dankom, and Mythardiopathy."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, October 14th at 3.30pm."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5pm to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Down, for Microsoft, thank you, I'm in mid-aryupathy."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meaty moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.266,
+   4.378,
+   4.409,
+   4.435,
+   4.386,
+   4.358,
+   4.347,
+   4.372,
+   4.338,
+   4.474,
+   3.95,
+   4.468,
+   4.402,
+   4.321,
+   4.285,
+   4.391,
+   4.421,
+   4.342,
+   4.387,
+   4.351,
+   4.378,
+   4.365,
+   4.259,
+   4.442,
+   4.334,
+   4.383,
+   4.254,
+   4.299,
+   4.361,
+   4.255
+  ]
+ },
+ "kokoro-v0_19-af": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Glue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the park truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us,"
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup not a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs dollar nine point nine nine a month or dollar ninety nine a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter three, then answer questions one through ten."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to four hundred twenty five degrees and bake for twenty to twenty five minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $99.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.459,
+   4.457,
+   4.462,
+   4.5,
+   4.46,
+   4.498,
+   4.415,
+   4.457,
+   4.469,
+   4.501,
+   4.422,
+   4.492,
+   4.468,
+   4.39,
+   4.422,
+   4.449,
+   4.449,
+   4.457,
+   4.462,
+   4.408,
+   4.43,
+   4.405,
+   4.435,
+   4.467,
+   4.487,
+   4.453,
+   4.368,
+   4.395,
+   4.462,
+   4.446
+  ]
+ },
+ "kokoro-v1_0-af_heart": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Glue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the park truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The body was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup not a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young bi."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct, 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9.99 a month or$99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with doctor. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.421,
+   4.414,
+   4.383,
+   4.424,
+   4.446,
+   4.472,
+   4.392,
+   4.425,
+   4.411,
+   4.485,
+   4.327,
+   4.479,
+   4.457,
+   4.38,
+   4.39,
+   4.443,
+   4.414,
+   4.424,
+   4.401,
+   4.391,
+   4.373,
+   4.434,
+   4.393,
+   4.45,
+   4.441,
+   4.437,
+   4.357,
+   4.398,
+   4.427,
+   4.399
+  ]
+ },
+ "kitten-nano-v0_8-int8": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks,"
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Glue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well,"
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch,"
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the parked truck,"
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us,"
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose,"
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring,"
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening,"
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall,"
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea,"
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock,"
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect,"
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy,"
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash"
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with doctor Lopez is on Tuesday 14 at 330 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs you nine point nine nine a month or ninety nine a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 226 from 8250 to 81712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with doctor Lopez is on Tuesday. I'll feed 14 at 3 30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs 9.99 a month or 99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-55-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 226 from 80 to 150 to 1712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read Chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.388,
+   4.089,
+   4.294,
+   4.051,
+   3.552,
+   4.435,
+   4.347,
+   4.279,
+   3.991,
+   4.433,
+   4.429,
+   4.32,
+   4.331,
+   4.165,
+   4.088,
+   4.313,
+   4.216,
+   4.314,
+   4.395,
+   4.303,
+   4.115,
+   4.359,
+   4.25,
+   4.233,
+   4.325,
+   4.275,
+   4.282,
+   4.2,
+   4.378,
+   4.179
+  ]
+ },
+ "kitten-mini-v0_8": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Glue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the parked truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold 50 bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs 9.99 a month or 99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5pm to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10-21 to 11-4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 and 50 being 12 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3 then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs 9.99 a month or 99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026 and 50 in 12 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read Chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.317,
+   4.403,
+   4.354,
+   4.466,
+   4.361,
+   4.443,
+   4.292,
+   4.393,
+   4.323,
+   4.413,
+   4.36,
+   4.454,
+   4.308,
+   4.306,
+   4.189,
+   4.427,
+   4.317,
+   4.352,
+   4.419,
+   4.176,
+   4.181,
+   4.394,
+   4.353,
+   4.314,
+   4.38,
+   4.379,
+   4.12,
+   4.144,
+   4.352,
+   4.295
+  ]
+ },
+ "supertonic-3-int8": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "Glue the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the parked truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hogs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us."
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the Clear Spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "Kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "Help the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall."
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea."
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup nod a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew a button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning."
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with doctor Lopez is on Tuesday, oct, fourteen, at three thirty pm."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs$9999 a month, or$99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on mainset and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-ER199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10.21 to 11.24 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 10712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9,999 a month or $99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on main set and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-IR 199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 30% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.41,
+   4.423,
+   4.484,
+   4.462,
+   4.452,
+   4.461,
+   4.42,
+   4.447,
+   4.44,
+   4.477,
+   4.181,
+   4.466,
+   4.493,
+   4.382,
+   4.306,
+   4.429,
+   4.39,
+   4.368,
+   4.46,
+   4.394,
+   4.418,
+   4.427,
+   4.322,
+   4.393,
+   4.475,
+   4.355,
+   4.371,
+   4.373,
+   4.434,
+   4.401
+  ]
+ },
+ "matcha-ljspeech": {
+  "parakeet": [
+   {
+    "ref": "The birch canoe slid on the smooth planks.",
+    "hyp": "The birch canoe slid on the smooth planks."
+   },
+   {
+    "ref": "Glue the sheet to the dark blue background.",
+    "hyp": "blew the sheet to the dark blue background."
+   },
+   {
+    "ref": "It's easy to tell the depth of a well.",
+    "hyp": "It's easy to tell the depth of a well."
+   },
+   {
+    "ref": "These days a chicken leg is a rare dish.",
+    "hyp": "These days a chicken leg is a rare dish."
+   },
+   {
+    "ref": "Rice is often served in round bowls.",
+    "hyp": "Rice is often served in round bowls."
+   },
+   {
+    "ref": "The juice of lemons makes fine punch.",
+    "hyp": "The juice of lemons makes fine punch."
+   },
+   {
+    "ref": "The box was thrown beside the parked truck.",
+    "hyp": "The box was thrown beside the parked truck."
+   },
+   {
+    "ref": "The hogs were fed chopped corn and garbage.",
+    "hyp": "The hubs were fed chopped corn and garbage."
+   },
+   {
+    "ref": "Four hours of steady work faced us.",
+    "hyp": "Four hours of steady work faced us, and"
+   },
+   {
+    "ref": "A large size in stockings is hard to sell.",
+    "hyp": "A large size in stockings is hard to sell."
+   },
+   {
+    "ref": "The boy was there when the sun rose.",
+    "hyp": "The boy was there when the sun rose."
+   },
+   {
+    "ref": "A rod is used to catch pink salmon.",
+    "hyp": "A rod is used to catch pink salmon."
+   },
+   {
+    "ref": "The source of the huge river is the clear spring.",
+    "hyp": "The source of the huge river is the clear spring."
+   },
+   {
+    "ref": "Kick the ball straight and follow through.",
+    "hyp": "kick the ball straight and follow through."
+   },
+   {
+    "ref": "Help the woman get back to her feet.",
+    "hyp": "helped the woman get back to her feet."
+   },
+   {
+    "ref": "A pot of tea helps to pass the evening.",
+    "hyp": "A pot of tea helps to pass the evening."
+   },
+   {
+    "ref": "Smoky fires lack flame and heat.",
+    "hyp": "Smoky fires lack flame and heat."
+   },
+   {
+    "ref": "The soft cushion broke the man's fall.",
+    "hyp": "The soft cushion broke the man's fall"
+   },
+   {
+    "ref": "The salt breeze came across from the sea.",
+    "hyp": "The salt breeze came across from the sea"
+   },
+   {
+    "ref": "The girl at the booth sold fifty bonds.",
+    "hyp": "The girl at the booth sold fifty bonds."
+   },
+   {
+    "ref": "The small pup gnawed a hole in the sock.",
+    "hyp": "The small pup gnawed a hole in the sock."
+   },
+   {
+    "ref": "The fish twisted and turned on the bent hook.",
+    "hyp": "The fish twisted and turned on the bent hook."
+   },
+   {
+    "ref": "Press the pants and sew a button on the vest.",
+    "hyp": "Press the pants and sew button on the vest."
+   },
+   {
+    "ref": "The swan dive was far short of perfect.",
+    "hyp": "The swan dive was far short of perfect."
+   },
+   {
+    "ref": "The beauty of the view stunned the young boy.",
+    "hyp": "The beauty of the view stunned the young boy."
+   },
+   {
+    "ref": "Two blue fish swam in the tank.",
+    "hyp": "Two blue fish swam in the tank."
+   },
+   {
+    "ref": "Her purse was full of useless trash.",
+    "hyp": "Her purse was full of useless trash."
+   },
+   {
+    "ref": "The colt reared and threw the tall rider.",
+    "hyp": "The colt reared and threw the tall rider."
+   },
+   {
+    "ref": "It snowed, rained, and hailed the same morning.",
+    "hyp": "It snowed, rained, and hailed the same morning as"
+   },
+   {
+    "ref": "Read verse out loud for pleasure.",
+    "hyp": "Read verse out loud for pleasure."
+   },
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "Your appointment with doctor Lopez is on Tuesday, oct fourteen, at three thirty p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs dollar nine point nine nine a month, or dollar ninety nine a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "Turn left on Main Street and drive two point five miles to exit forty two B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5 p.m. to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10 slash 21 to 11 slash 4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew thirty-seven per cent in two thousand twenty-six, from one thousand two hundred fifty to one thousand seven hundred and twelve people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter three, then answer questions one through ten."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "whisper_small_tricky": [
+   {
+    "ref": "Your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3:30 p.m.",
+    "hyp": "your appointment with Dr. Lopez is on Tuesday, Oct. 14 at 3.30 p.m."
+   },
+   {
+    "ref": "The subscription costs $9.99 a month, or $99 a year.",
+    "hyp": "The subscription costs $9.99 a month or $1.99 a year."
+   },
+   {
+    "ref": "Turn left on Main St. and drive 2.5 miles to exit 42B.",
+    "hyp": "turn left on Main Street and drive 2.5 miles to exit 42B."
+   },
+   {
+    "ref": "Call 1-800-555-0199 before 5 PM to confirm your order.",
+    "hyp": "Call 1-800-555-0199 before 5pm to confirm your order."
+   },
+   {
+    "ref": "Download the update from microsoft.com and restart your PC.",
+    "hyp": "Download the update from Microsoft.com and restart your PC."
+   },
+   {
+    "ref": "The meeting moved from 10/21 to 11/4 because of the holiday.",
+    "hyp": "The meeting moved from 10/21 to 11/4 because of the holiday."
+   },
+   {
+    "ref": "Our team grew 37% in 2026, from 1,250 to 1,712 people.",
+    "hyp": "Our team grew 37% in 2026, from 1,250 to 1,712 people."
+   },
+   {
+    "ref": "Read chapter 3, then answer questions 1 through 10.",
+    "hyp": "Read chapter 3, then answer questions 1 through 10."
+   },
+   {
+    "ref": "The NASA and FBI reports were both released on Friday.",
+    "hyp": "The NASA and FBI reports were both released on Friday."
+   },
+   {
+    "ref": "Set the oven to 425 degrees and bake for 20 to 25 minutes.",
+    "hyp": "Set the oven to 425 degrees and bake for 20 to 25 minutes."
+   }
+  ],
+  "utmos": [
+   4.023,
+   4.226,
+   4.048,
+   3.882,
+   4.084,
+   4.246,
+   3.538,
+   4.142,
+   3.913,
+   3.588,
+   3.645,
+   4.005,
+   4.291,
+   3.951,
+   3.772,
+   3.97,
+   3.836,
+   4.164,
+   3.902,
+   3.397,
+   3.554,
+   4.403,
+   3.759,
+   4.279,
+   3.935,
+   3.65,
+   3.474,
+   4.133,
+   3.565,
+   3.589
+  ]
+ }
+}

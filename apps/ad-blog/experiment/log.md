@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-12 · 세션 3 (정기 실행 2회차): 무료 오프라인 TTS 비교
+
+**지표 (Search Console API, `gsc_report.py`)**
+
+- 2026-09-13 ~ 10-11: 클릭 0 · 노출 0
+- sitemap: 오류·경고 0 (마지막 다운로드 2026-10-11 06:33 UTC)
+- 글 4편 URL 검사: **모두 `Submitted and indexed`** (PASS, 마지막 크롤링 10-11 15:47~21:45 UTC). 세션 2의 `Discovered - currently not indexed`에서 하루 만에 색인
+
+**발행한 글**
+
+| slug | 카테고리 | 유형 | 직접 검증 |
+| --- | --- | --- | --- |
+| `free-offline-text-to-speech` | `ai-tools` | 비교 (측정형) | sherpa-onnx 1.13.8로 TTS 11개 음성(Piper 5·Kokoro 2·KittenTTS 2·Supertonic·Matcha) 속도·명료도(Parakeet 받아쓰기 WER)·자연스러움 예측(UTMOS) 측정, piper-tts 1.8.0 CLI 설치·오프라인 실행 |
+
+- 선정 근거: 백로그 15 (점수 36, 상시 수요, 직접 측정 가능). 자동완성: "free text to speech offline" 21개(Google·Bing·YouTube), "piper tts"·"kokoro tts" 각 21~22개로 세 곳 모두에서 하위 검색어 다수
+- Google Trends 미국 급상승(10개): 전부 스포츠 → IT 주제 없음. 공식 피드 후보(Drive·Docs Markdown 지원, GPT-6 for everyone, SynthID 확대)는 backlog에 추가
+- 내부 링크: `transcribe-audio-offline-free` ↔ 새 글 (같은 엔진, 반대 방향)
+
+**측정값 (4코어 Xeon 2.8GHz, GPU 없음, 4스레드 3회 중앙값)**
+
+| 음성 | 1분 음성 생성 시간 | 1스레드 | 받아쓰기 오류(242단어) | UTMOS 평균(최저) |
+| --- | --- | --- | --- | --- |
+| Kokoro v1.0 af_heart | 28초 | 71초 | 4 | 4.42 (4.33) |
+| Kokoro v0.19 | 32초 | 86초 | 2 | 4.45 (4.37) |
+| Piper lessac medium | 3.8초 | 8.3초 | 3 | 4.33 (3.85) |
+| Piper amy medium | 3.5초 | 8.5초 | 2 | 4.36 (4.02) |
+| KittenTTS nano int8 | 25초 | 38초 | 0 | 4.24 (3.55) |
+| Matcha | 4.5초 | 7.0초 | 6 | 3.90 (3.40) |
+
+(전체 11개는 `tests/free-offline-text-to-speech/summary.json`)
+
+- 명료도는 모든 음성이 거의 만점(오류 0~6/242) → 차이는 속도·자연스러움·숫자 읽기
+- "10/21" 같은 슬래시 날짜를 11개 중 9개가 "slash"로 읽음. KittenTTS는 "1,250" 같은 큰 숫자를 망가뜨림 (Parakeet·Whisper small 둘 다 같은 결과)
+
+**알게 된 것**
+
+- 첫 측정은 모델 다운로드와 겹쳐 Piper 속도가 2배 가까이 느리게 나옴 (lessac-low RTF 0.107 → 재측정 0.050). 속도는 반드시 다운로드·다른 작업이 끝난 뒤 재측정
+- 네트워크: `github.com` HTML 페이지·소스 zip(archive)은 차단("GitHub access to this repository is not enabled"), Releases 다운로드·`raw.githubusercontent.com`·`k2-fsa.github.io`·`download.pytorch.org`·`en.wikipedia.org`는 가능. torch.hub는 `api.github.com` 403으로 실패 → raw 파일로 우회
+- Hugging Face에서 받은 Piper 음성 파일이 한 번 잘려 받아짐(61.9MB/63.2MB) → `INVALID_PROTOBUF` 오류. 재다운로드로 해결, 글의 문제 해결 팁으로 사용
+- UTMOS는 짧은 문장에서 4.2~4.45에 몰려 변별력이 작음 → 평균보다 최저값(일관성)이 더 쓸모 있는 지표
+
+**다음 할 일**
+
+- Claude: 다음 세션 GSC에서 첫 노출 확인 (색인 완료 → 노출 시작 여부), 노출 검색어로 글 제목·FAQ 보강 판단
+- Claude: 색인이 확인됐으므로 IndexNow 키 파일·제출 스크립트 추가 검토 (Bing Webmaster 등록 후)
+- Claude: 10월 Patch Tuesday(10-13) 이후 `windows-10-esu-extended`의 최신 빌드 표 갱신
+- 사용자: Bing Webmaster Tools 등록 (이월)
+
 ## 2026-10-11 · 세션 2 (정기 실행 1회차): Windows 10 ESU 글
 
 **지표 (Search Console API, `gsc_report.py`)**

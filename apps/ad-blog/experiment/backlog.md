@@ -22,7 +22,7 @@
 | 12   | iOS 27 Siri AI가 안 보일 때 (대기자 명단·요구 조건·Siri Classic)            | siri ai not showing ios 27                 | 36   | 조사만                    | 3~9개월               | 후보 (경쟁 심함)                             |
 | 13   | ChatGPT for Word 추가 기능: 기능·개인정보·제거 방법                         | chatgpt for word                           | 36   | 조사만                    | 6~12개월              | 후보                                         |
 | 14   | Windows 11 26H2 AI 기능 끄기                                                | windows 11 26h2 turn off ai                | 36   | 조사만                    | ~12개월               | 후보 (경쟁 심함)                             |
-| 15   | 무료 오프라인 TTS: Piper vs Kokoro 측정                                     | free text to speech offline                | 36   | 예                        | 상시                  | 후보                                         |
+| 15   | 무료 오프라인 TTS: Piper vs Kokoro 측정                                     | free text to speech offline                | 36   | 예                        | 상시                  | 발행 `free-offline-text-to-speech`           |
 | 16   | Meta Muse 개인정보: 볼 수 있는 데이터·옵트아웃                              | meta muse privacy                          | 35   | 조사만                    | 6~12개월              | 후보                                         |
 | 17   | 공식 ChatGPT 브라우저 확장 vs 유사 확장 권한                                | chatgpt chrome extension official          | 35   | 대부분 조사만             | 6~12개월              | 후보                                         |
 | 18   | AI 챗봇 학습 데이터 사용 끄기 (ChatGPT·Gemini·Claude·Copilot 등)            | stop ai from training on my data           | 32   | 조사만                    | 상시 (분기 갱신)      | 후보                                         |
@@ -32,6 +32,9 @@
 | 22   | ChatGPT 광고 개인화 끄기·Ads-Free                                           | turn off ads chatgpt                       | 28   | 조사만                    | 6~12개월              | 후보                                         |
 | 23   | Google Assistant → Gemini 전환 후 잃는 기능                                 | gemini replaced google assistant           | 27   | 조사만                    | ~6개월                | 후보                                         |
 | 24   | ChatGPT "Intelligent UI" 끄기 (Simple 레이아웃)                             | chatgpt intelligent ui turn off            | 27   | 조사만                    | 2~4개월               | 20번의 한 섹션으로                           |
+| 25   | Google Drive·Docs에서 Markdown(.md) 파일 열기·편집 (2026-10-05 Workspace 발표) | markdown google docs                       | -    | 조사만                    | 6~12개월              | 후보 (2026-10-12 추가, 자동완성 17개: enable·import·code block) |
+| 26   | GPT-6·Intelligent UI 전체 제공 (OpenAI 2026-10-07 "GPT-6 and Intelligent UI for everyone") | gpt-6 free                          | -    | 조사만                    | 2~4개월               | 20·24번과 묶어 재평가 (help.openai.com 403) |
+| 27   | SynthID 전 세계 확대 (Google 2026-10-07) → `check-if-image-is-ai-generated` 갱신 | synthid detector                         | -    | 일부                      | 상시                  | 기존 글 갱신 후보 (새 글 아님)               |
 
 ## 주요 출처 (재확인용)
 

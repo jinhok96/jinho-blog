@@ -75,9 +75,9 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 
 1. **상태 파악**: 이 파일, [log.md](log.md), [backlog.md](backlog.md) 읽기. 열린 PR이 있으면 먼저 처리
 2. **지표 확인**: `python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests` 후 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py` → 노출·클릭·CTR·순위, 사이트맵 상태, 글별 색인 상태(URL 검사)를 log.md에 붙이고 개선 작업 판단
-3. **주제 선택**: `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
+3. **주제 선택**: [backlog.md](backlog.md)의 반복 일정(Chrome·Windows)과 허브 글 기회([traffic-playbook.md](traffic-playbook.md))를 먼저 확인 → `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
-5. **작성**: [writing-guide.md](writing-guide.md) 기준
+5. **작성**: [writing-guide.md](writing-guide.md) 기준 (트래픽 노하우는 [traffic-playbook.md](traffic-playbook.md))
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인
 7. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지 → 배포 반영 확인 후 새 글·수정한 글 URL을 IndexNow로 제출 (`python3 -I apps/ad-blog/experiment/tools/indexnow.py /posts/{slug}`)
 8. **기록**: log.md에 세션 기록, backlog.md 갱신, 검증 자료는 [tests/](tests/README.md)에 보관, 새로 알게 된 규칙은 writing-guide.md에 반영

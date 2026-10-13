@@ -67,7 +67,8 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 
 ### 발행 속도
 
-- 세션당 1~3편, 하루 최대 3편. 품질이 기준에 못 미치면 발행하지 않음 (scaled content abuse 위험)
+- 매일 1편 (정기 실행 1회 = 1편). 고른 주제가 1차 출처로 검증되지 않으면 건너뛰지 말고 다음 후보로 바꿔 발행
+- 글은 직접 측정한 실험 결과·1차 출처로 확인한 정보만 다루므로, AI 작성 여부를 이유로 발행 수를 줄이지 않음 (2026-10-13 사용자 결정)
 - AdSense 신청은 글 20~30편 + 도메인 색인 확인 후
 
 ## 세션 워크플로우
@@ -105,4 +106,4 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 일부 허용 | 2026-10-11 세션 2 확인: npm·PyPI·GitHub(Releases 다운로드)·trends.google.com·microsoft.com·support.microsoft.com·learn.microsoft.com·support.google.com·apple.com·huggingface.co·tool-proof.com 접속 가능. help.openai.com·api.github.com은 403. 2026-10-12 세션 3: raw.githubusercontent.com·k2-fsa.github.io·download.pytorch.org·en.wikipedia.org 가능, github.com HTML 페이지·소스 zip은 차단 |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |
-| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 월·수·금 08:45 (한국 시간), 매번 새 세션. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |
+| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 매일 08:45 (한국 시간), 매번 새 세션. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |

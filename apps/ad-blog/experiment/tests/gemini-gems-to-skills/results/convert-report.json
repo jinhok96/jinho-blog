@@ -1,0 +1,32 @@
+{
+  "gem_name": "Weekly Newsletter Writer",
+  "skill_name": "weekly-newsletter-writer",
+  "description_chars": 185,
+  "files": [
+    {
+      "file": ".DS_Store",
+      "bytes": 108,
+      "verdict": "remove (hidden/system file)"
+    },
+    {
+      "file": "event-calendar.csv",
+      "bytes": 61,
+      "verdict": "ok"
+    },
+    {
+      "file": "past-issue.md",
+      "bytes": 56,
+      "verdict": "ok"
+    },
+    {
+      "file": "style-guide.docx",
+      "bytes": 36680,
+      "verdict": "convert (binary office file not supported)"
+    }
+  ],
+  "total_bytes": 794,
+  "under_100mb": true,
+  "description_ok": true,
+  "zip": "weekly-newsletter-writer.zip",
+  "zip_root_has_skill_md": true
+}

@@ -1,0 +1,65 @@
+[
+  {
+    "name_as_typed": "Weekly Newsletter Writer",
+    "skills_ref_errors": [
+      "Skill name 'Weekly Newsletter Writer' must be lowercase",
+      "Skill name 'Weekly Newsletter Writer' contains invalid characters. Only letters, digits, and hyphens are allowed."
+    ],
+    "spec_regex_ok": false,
+    "converted": "weekly-newsletter-writer"
+  },
+  {
+    "name_as_typed": "weekly-newsletter-writer",
+    "skills_ref_errors": [],
+    "spec_regex_ok": true,
+    "converted": "weekly-newsletter-writer"
+  },
+  {
+    "name_as_typed": "Résumé Coach",
+    "skills_ref_errors": [
+      "Skill name 'Résumé Coach' must be lowercase",
+      "Skill name 'Résumé Coach' contains invalid characters. Only letters, digits, and hyphens are allowed."
+    ],
+    "spec_regex_ok": false,
+    "converted": "resume-coach"
+  },
+  {
+    "name_as_typed": "résumé-coach",
+    "skills_ref_errors": [],
+    "spec_regex_ok": false,
+    "converted": "resume-coach"
+  },
+  {
+    "name_as_typed": "Q&A Prep (Sales)",
+    "skills_ref_errors": [
+      "Skill name 'Q&A Prep (Sales)' must be lowercase",
+      "Skill name 'Q&A Prep (Sales)' contains invalid characters. Only letters, digits, and hyphens are allowed."
+    ],
+    "spec_regex_ok": false,
+    "converted": "q-a-prep-sales"
+  },
+  {
+    "name_as_typed": "email--drafter",
+    "skills_ref_errors": [
+      "Skill name cannot contain consecutive hyphens"
+    ],
+    "spec_regex_ok": false,
+    "converted": "email-drafter"
+  },
+  {
+    "name_as_typed": "-draft-helper",
+    "skills_ref_errors": [
+      "Skill name cannot start or end with a hyphen"
+    ],
+    "spec_regex_ok": false,
+    "converted": "draft-helper"
+  },
+  {
+    "name_as_typed": "plan-meal-from-recipe-and-build-a-grocery-list-for-the-whole-family-each-week",
+    "skills_ref_errors": [
+      "Skill name 'plan-meal-from-recipe-and-build-a-grocery-list-for-the-whole-family-each-week' exceeds 64 character limit (77 chars)"
+    ],
+    "spec_regex_ok": false,
+    "converted": "plan-meal-from-recipe-and-build-a-grocery-list-for-the-whole"
+  }
+]

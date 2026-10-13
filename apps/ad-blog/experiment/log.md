@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-14 · 세션 5 (정기 실행 4회차): Gemini Gems → 스킬 전환
+
+세션 시각: 2026-10-13 22:10 UTC (한국 10-14 07:10). 열린 PR 없음.
+
+**지표 (Search Console API, `gsc_report.py`, 2026-09-15 ~ 10-13, 미확정 데이터 포함)**
+
+- 클릭 0 · **노출 21** (세션 4의 7에서 증가) · 평균 순위 16.4
+  - `turn-off-ai-in-chrome`: 노출 13, 평균 순위 5.5 / `transcribe-audio-offline-free`: 노출 5, 순위 10.6 / `check-if-image-is-ai-generated`: 노출 3, 순위 73.3
+  - 검색어(익명 처리 제외 2개): `google ai gone` 순위 3, `synthid detector` 순위 207 (세션 4와 같음)
+- sitemap: 오류·경고 0, **10-13 08:11 UTC 재다운로드** (10-11 이후 처음)
+- URL 검사: 4편 `Submitted and indexed`. `free-offline-text-to-speech`는 `URL is unknown` → **`Discovered - currently not indexed`**로 진전, `remove-background-from-image-free-offline`도 `Discovered - currently not indexed` (둘 다 크롤링 전)
+- 성과 검증: 검증 기록에 판단 시점이 지난 행 없음 (기록 0건) → 판정·노하우 상태·writing-guide 변경 없음
+- 해석(가설): 사이트맵 재다운로드 후 새 글 2편이 발견됨 → 다음 1~2일 내 크롤링 예상. 노출은 아직 글당 100회 미만이라 제목·설명 개선 판단 불가
+
+**발행한 글**
+
+| slug                    | 카테고리   | 유형                          | 직접 검증                                                                                                                                  |
+| ----------------------- | ---------- | ----------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------ |
+| `gemini-gems-to-skills` | `ai-tools` | How-to + Explainer (피드형) | 예시 Gem(지식 파일 4개)을 SKILL.md 폴더·zip으로 변환해 skills-ref 0.1.1로 검사, Gem 이름 8개 이름 규칙 검사. Gemini 로그인 화면은 확인 못 함 |
+
+- 선정 근거: 백로그 7 (Gems → Skills). 10-13 Google이 Gemini 앱 스킬 배포 시작 + Workspace 배포 연기 공지 (Workspace Updates 피드, `discover`). 자동완성 "gemini skills" 25개(Google·Bing·YouTube), "gemini skills vs gems" Google·Bing 둘 다. 경쟁 글(Android Central·PCWorld 등)은 있으나 "유료 전용" 같은 틀린 보도가 있어 Google 도움말 기준 정리 + 직접 변환 검사로 차별화
+- 반복 일정: 10월 Patch Tuesday(10-13) Windows 10 업데이트 `KB5126657`(19045.7807) 확인. 자동완성에 KB 번호·설치 오류 검색어가 없음(`KB5126657`은 Bing에 다른 KB만) → 세션 3 지침대로 새 글 대신 `windows-10-esu-extended` 빌드 표만 갱신(`updatedAt` 10-14). "windows 10 october 13 2026"·"windows 10 security updates october 2026"은 자동완성에 있음 → 기존 ESU 글이 받는 검색어인지 GSC로 관찰
+- 다른 후보: Gemini 4 Argon(10-13 출시, 자동완성 16개: free·vs opus 5.5·pricing)은 뉴스·벤치마크 경쟁이 심하고 직접 검증 불가 → 보류. CISA에 Windows 명령 주입 취약점(CVE-2026-96951, 10-13) 추가 → 소비자 검색 수요 없음
+- Google Trends 미국 급상승(10개): 스포츠·연예 → IT 주제 없음
+- 적용한 노하우: **피드형 제목 67자**(노하우 1·5, ToolProof 첫 피드형), 이미지 3장(일정 그래프 대표 1200×675 + 직접 실행 결과 화면 2), 요약 표 4개 → 사실 확인표에 기록
+- 내부 링크: 새 글 → `turn-off-ai-in-chrome`·`check-if-image-is-ai-generated` (관련 글 2편뿐이라 How-to 목표 4개 미달), `turn-off-ai-in-chrome`에서 새 글로 역링크
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 9개, og:image 생성, 본문 이미지 3장 모두 width·height 지정
+
+**측정값 (Linux, Python 3.11, skills-ref 0.1.1)**
+
+| 검사                            | 결과                                                                                  |
+| ------------------------------- | ------------------------------------------------------------------------------------- |
+| 예시 Gem 지식 파일 4개          | .csv·.md 유지, .docx 변환 필요(미지원), .DS_Store 제거 → `agentskills validate` 통과  |
+| 이름 8개 그대로 사용            | 7개 오류(대문자·공백·기호·연속/앞 하이픈·64자 초과), `résumé-coach`는 검사 통과       |
+| `résumé-coach` (악센트 소문자)  | skills-ref 0.1.1은 유니코드 소문자 허용 → 통과, 스펙 문서(agentskills.io)는 a-z만 허용 |
+
+**알게 된 것**
+
+- Google 문서끼리 메뉴 경로가 다름: Gems 전환 FAQ는 **Settings > Skills**, 스킬 도움말은 **Customize > Skills** → 글에 둘 다 표기. Workspace 관리자 문서는 11-17에 "All users"의 Gems가 Settings로 이동한다고 함
+- 스킬 유료 여부(backlog 미확인 항목): Google 도움말이 "Skills are available without a Google AI subscription"으로 명시 → 해결. 일부 언론의 "paywalled" 보도는 Google 문서와 다름
+- 공식 참조 검사기(skills-ref 0.1.1)가 스펙 문서보다 느슨함(악센트 문자 허용) → 검사 도구 결과만 믿지 않고 스펙 원문도 대조해야 함
+- support.google.com·knowledge.workspace.google.com·services.google.com(PDF)·agentskills.io·PyPI(skills-ref) 모두 curl로 접속 가능
+- frontmatter 설명에 콜론(`:`)이 있으면 YAML 파싱 실패 → 따옴표로 감쌈
+
+**다음 할 일**
+
+- Claude: 첫 피드형 글(`gemini-gems-to-skills`)의 Discover 노출 확인 (`gsc_report.py --type discover`, 발행 2주 후). 피드형 3편 이상 쌓이면 검색형과 노하우 1 비교
+- Claude: 11월 Gems 종료일(개인 계정)·Drive 파일·공유 기능 추가가 발표되면 새 글 갱신 (Workspace Updates·Gemini 도움말 확인)
+- Claude: `free-offline-text-to-speech`·`remove-background-from-image-free-offline` 색인 여부 확인
+- Claude: 허브 글 후보(backlog 28) 수요 확인, Chrome 156(10-20) 반영 여부 검토
+- Claude: 이미지 적용 글(세션 4·5부터)과 미적용 글 5편의 발행 후 28~56일 지표 비교 → 노하우 7 판정
+
 ## 2026-10-13 · 세션 4 (정기 실행 3회차): 무료 오프라인 배경 제거
 
 **지표 (Search Console API, `gsc_report.py`, 2026-09-15 ~ 10-13, 미확정 데이터 포함)**

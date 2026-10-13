@@ -14,7 +14,7 @@
 | 4    | Chrome AI 기능 끄기 + 온디바이스 모델(약 4GB) 삭제, 정책 확인                              | turn off ai in chrome                       | 41   | 일부 (Chromium 소스)      | 12개월+               | 발행 `turn-off-ai-in-chrome`                                    |
 | 5    | ChatGPT Finances 무료 확대: 은행 연결 안전한가                                             | chatgpt finances safe                       | 38   | 조사만                    | 12개월+               | 후보 (Free/Go 확대 공식 근거 1건뿐)                             |
 | 6    | "내 Copilot 어디 갔지?" 2026년 9월 Copilot 통합 설명                                       | what happened to my copilot                 | 38   | 조사만                    | 6~12개월              | 후보                                                            |
-| 7    | Gemini Gems → Skills 전환: 날짜, 옮겨지지 않는 것, 백업                                    | gemini gems to skills                       | 37   | 조사만                    | ~2027-06              | 후보 (1번과 묶음)                                               |
+| 7    | Gemini Gems → Skills 전환: 날짜, 옮겨지지 않는 것, 백업                                    | gemini gems to skills                       | 37   | 일부 (SKILL.md 변환 검사) | ~2027-06              | 발행 `gemini-gems-to-skills` (2026-10-14)                       |
 | 8    | 커스텀 GPT 2026-12-11 종료 체크리스트                                                      | custom gpts retiring                        | 37   | 조사만                    | ~2027-02              | 후보 (1번과 묶음)                                               |
 | 9    | Windows 10 ESU가 2027-10-12까지 연장됨 + 등록 오류 해결                                    | windows 10 esu october 2026                 | 37   | 조사만                    | ~2027-10              | 발행 `windows-10-esu-extended`                                  |
 | 10   | 이미지 배경 무료·오프라인 제거 (rembg 모델 비교)                                           | remove background from image free offline   | 37   | 예                        | 상시                  | 발행 `remove-background-from-image-free-offline`                |
@@ -36,7 +36,8 @@
 | 26   | GPT-6·Intelligent UI 전체 제공 (OpenAI 2026-10-07 "GPT-6 and Intelligent UI for everyone") | gpt-6 free                                  | -    | 조사만                    | 2~4개월               | 20·24번과 묶어 재평가 (help.openai.com 403)                     |
 | 27   | SynthID 전 세계 확대 (Google 2026-10-07) → `check-if-image-is-ai-generated` 갱신           | synthid detector                            | -    | 일부                      | 상시                  | 기존 글 갱신 후보 (새 글 아님)                                  |
 | 28   | 허브: 무료 오프라인 AI 도구 (받아쓰기·TTS·배경 제거 측정 글 3편 연결)                       | free offline ai tools                       | -    | 예 (기존 측정 재사용)     | 상시                  | 후보 (2026-10-13 측정 글 3편 도달, traffic-playbook 3번. 수요 확인 필요) |
-| 29   | 2026년 10월 Windows 10 ESU 업데이트(10-13 Patch Tuesday) KB·설치 오류                     | windows 10 october 2026 update              | -    | 조사만                    | ~1개월                | 후보 (10-13 17:00 UTC 배포 → 다음 세션에서 KB·자동완성 확인) |
+| 29   | 2026년 10월 Windows 10 ESU 업데이트(10-13 Patch Tuesday) KB·설치 오류                     | windows 10 october 2026 update              | -    | 조사만                    | ~1개월                | 보류 (KB5126657·19045.7807 확인, KB·오류 자동완성 없음 → ESU 글 빌드 표만 갱신 2026-10-14. 11월 업데이트 때 재확인) |
+| 30   | Gemini 4 Argon (2026-10-13 출시): 무료 사용 범위·요금                                      | gemini 4 argon free                         | -    | 조사만                    | 2~4개월               | 보류 (자동완성 16개, 경쟁·AI 요약 위험 큼, 직접 검증 불가)      |
 
 ## 반복 일정
 
@@ -63,6 +64,6 @@
 - Google Assistant 휴대폰 종료일(2026-09-04)은 제3자 출처뿐
 - Free/Go 요금제가 GPT-6 Luna인지 GPT-5.6 Luna인지 OpenAI 문서끼리 다름
 - 개인 요금제에서 커스텀 GPT 생성이 이미 막혔는지 불명
-- Gemini Skills 유료 필요 여부: 블로그 1곳은 유료, Google 도움말은 무료
+- (해결 2026-10-13) Gemini Skills 유료 필요 여부: Google 도움말(17094296) "available without a Google AI subscription" → 무료
 - Chrome 설정의 "On-device AI" 토글이 안정 버전에 있는지
 - California SB 942 세부 의무는 법령 원문 미확인

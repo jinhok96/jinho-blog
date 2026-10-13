@@ -7,8 +7,9 @@
 - 주 검색어: `remove background from image free offline`
 - 하위 검색어 (`demand_check.py suggest`, 2026-10-13): remove background from image free no sign up · remove background offline app/software · remove background ai offline · rembg · rembg models · rembg windows · rembg gpu · birefnet · birefnet-general · free software to remove background from image
 - 채널: 검색형 (상시 수요 비교 글)
-- 차별점: 같은 CPU·같은 50장(정답 알파 매트 있는 AIM-500)으로 8개 모델의 정확도·속도·메모리를 직접 측정. rembg 기본 모델(bria-rmbg)이 가장 느리고 상업 이용 불가라는 점, BiRefNet 대형 모델이 기본 설정에서 RAM 16GB 컴퓨터에서 메모리 부족으로 종료된 점
-- 적용한 노하우: 검색형 제목(노하우 1), 측정 규모를 제목에 (노하우 2), 측정 그래프·실행 화면 이미지 (노하우 7)
+- 차별점: 같은 CPU·같은 50장(정답 알파 매트 있는 AIM-500)으로 8개 모델의 정확도·속도·메모리를 직접 측정. rembg 기본 모델(bria-rmbg)이 가장 느리고 상업 이용 불가라는 점, 대형 모델은 사진 1장에 RAM 7.8~9.6GB가 필요하다는 점, 웹 UI 기본값(Alpha matting·Post process mask 켜짐)이 CLI와 다르다는 점
+- 적용한 노하우: 검색형 제목 58자(노하우 1), 측정 규모를 제목에 `8 Free Models Tested`(노하우 2), 이미지 5장 = 측정 그래프 2·예시 비교 2·웹 UI 스크린샷 1, 대표 이미지는 1200×675 측정 그래프(노하우 7). ToolProof에서 이미지를 넣은 첫 글 → 이미지 0장인 기존 5편과 비교 대상
+- 내부 링크: 새 글 → `check-if-image-is-ai-generated`·`transcribe-audio-offline-free`·`free-offline-text-to-speech` (3편), 세 글 모두에서 새 글로 역링크
 
 ## 출처
 
@@ -37,3 +38,27 @@
 - 속도: 50장 처리 시간 중앙값(4스레드, 다른 작업 없음). 모델 로딩 시간 제외
 - 메모리: onnxruntime 메모리 아레나·패턴 끔(`enable_cpu_mem_arena=False`, `enable_mem_pattern=False`) 상태의 프로세스 최대 RSS
 - 스크립트: `bench.py`(측정), `summarize.py`(요약 → `summary.json`), `examples.py`·`grid.py`(예시 그림), `charts.py`(그래프)
+- CLI 1장 처리(모델 로딩 포함 시간·최대 RSS, onnxruntime 기본 설정): `clirun.py`, 결과 `results/cli_memory.txt`. 같은 프로세스에서 여러 대형 세션을 연달아 열면 14GB를 넘어 OOM 종료됨(측정 초기 시행착오) → 측정은 모델마다 새 프로세스
+- 메타데이터: EXIF(Make·Software)를 넣은 JPEG → `rembg i -m u2netp` → 출력 PNG에 EXIF·텍스트 정보 없음 (`results/exif_test.txt`)
+- 웹 UI: `rembg s --host 127.0.0.1 --port 7000` → Playwright(Chromium 1194)로 고양이 사진 업로드·isnet-general-use 실행, 3.4초 (`shot3.py`). 체크박스 기본값은 `rembg/commands/s_command.py` 500·511행 (`Alpha matting`·`Post process mask` = True)
+- 예시 사진 결과 관찰 (그림 확인): astronaut에서 birefnet-general-lite가 헬멧 대부분을 지움, u2netp는 왼쪽 성조기 일부 남김. 고양이 근접 사진에서 u2netp·isnet은 흐린 배경 얼룩을 반투명하게 남김
+
+## 결과 요약 (summary.json)
+
+| 모델 | 깨끗(44) | 실패(44) | 투명 평균 IoU(6) | 초/장 중앙값 | CLI 1장 RAM | 파일 |
+| --- | --- | --- | --- | --- | --- | --- |
+| bria-rmbg | 40 | 0 | 0.726 | 46.0 | 9.37GB | 1024MB |
+| birefnet-general | 39 | 0 | 0.739 | 41.4 | 9.61GB | 973MB |
+| birefnet-general-lite | 38 | 0 | 0.707 | 29.6 | 7.82GB | 224MB |
+| isnet-general-use | 30 | 5 | 0.565 | 1.47 | 1.14GB | 179MB |
+| u2netp | 28 | 4 | 0.225 | 0.31 | 0.54GB | 5MB |
+| u2net | 27 | 8 | 0.217 | 0.51 | 0.85GB | 176MB |
+| silueta | 27 | 8 | 0.220 | 1.10 | 0.69GB | 44MB |
+| u2net_human_seg | 20 | 14 | 0.173 | 0.51 | 0.85GB | 176MB |
+
+## 재현
+
+1. `python3 -m venv /tmp/rb && /tmp/rb/bin/pip install "rembg[cpu,cli]==2.0.85" pyarrow pillow matplotlib scikit-image playwright`
+2. 데이터: `https://huggingface.co/datasets/nobg/AIM-500/resolve/main/data/test-00000-of-00001.parquet` → `/tmp/bgdata/aim.parquet`
+3. `bash runall.sh` (모델은 rembg가 GitHub Releases에서 자동 다운로드, 결과 `res/*.json`) → `summarize.py` → `charts.py`
+4. 예시: `examples.py <모델,…> ex` → `grid.py ex <astronaut|chelsea> <모델,…> <라벨,…> <출력.webp> 3`

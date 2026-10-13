@@ -28,3 +28,9 @@
 - 연장 발표 시점(2026-06-25 편집자 주) — 1차 출처(blogs.windows.com) 미확인, 언론 보도만 있음
 - `winver` 방법, Access work or school 경로 — 이번 세션에 Microsoft 문서로 확인 못 함
 - 상업용 ESU 2년차 가격·시작일 — 출처 간 충돌
+
+## 갱신 2026-10-14 (세션 5)
+
+- 빌드 표 최신 행을 10월 업데이트로 교체: `KB5126657` (2026-10-13, OS Build 19045.7807·19044.7807), 9월 KB5122878(7725)·9월 14일 OOB KB5129236(7727)은 "최신 아님" 범위로 이동
+- 출처: support.microsoft.com/en-us/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562 (좌측 목록 첫 항목), support.microsoft.com/en-us/help/5126657 → servicing/os/windows-10/2026/10/kb5126657-windows-10-21h2-22h2-security-update (Applies to: Windows 10 ESU, 알려진 문제: USB Audio Class 1.0 Code 10 — 9월 업데이트부터 이어짐, 부분 해결)
+- KB5126657 자동완성(Google·Bing·YouTube)에서 하위 검색어 없음 → 사용자 지침대로 새 Fix형 글 대신 빌드 표만 갱신

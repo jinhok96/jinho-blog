@@ -17,7 +17,7 @@
 | 7    | Gemini Gems → Skills 전환: 날짜, 옮겨지지 않는 것, 백업                                    | gemini gems to skills                       | 37   | 조사만                    | ~2027-06              | 후보 (1번과 묶음)                                               |
 | 8    | 커스텀 GPT 2026-12-11 종료 체크리스트                                                      | custom gpts retiring                        | 37   | 조사만                    | ~2027-02              | 후보 (1번과 묶음)                                               |
 | 9    | Windows 10 ESU가 2027-10-12까지 연장됨 + 등록 오류 해결                                    | windows 10 esu october 2026                 | 37   | 조사만                    | ~2027-10              | 발행 `windows-10-esu-extended`                                  |
-| 10   | 이미지 배경 무료·오프라인 제거 (rembg 모델 비교)                                           | remove background from image free offline   | 37   | 예                        | 상시                  | 후보 (개발자 도구라 일반 독자 각도 필요)                        |
+| 10   | 이미지 배경 무료·오프라인 제거 (rembg 모델 비교)                                           | remove background from image free offline   | 37   | 예                        | 상시                  | 발행 `remove-background-from-image-free-offline`                |
 | 11   | Gemini Windows 앱 Alt+Space 단축키 충돌 해결                                               | gemini windows app alt space                | 36   | 조사만                    | 6~12개월              | 후보                                                            |
 | 12   | iOS 27 Siri AI가 안 보일 때 (대기자 명단·요구 조건·Siri Classic)                           | siri ai not showing ios 27                  | 36   | 조사만                    | 3~9개월               | 후보 (경쟁 심함)                                                |
 | 13   | ChatGPT for Word 추가 기능: 기능·개인정보·제거 방법                                        | chatgpt for word                            | 36   | 조사만                    | 6~12개월              | 후보                                                            |
@@ -35,6 +35,8 @@
 | 25   | Google Drive·Docs에서 Markdown(.md) 파일 열기·편집 (2026-10-05 Workspace 발표)             | markdown google docs                        | -    | 조사만                    | 6~12개월              | 후보 (2026-10-12 추가, 자동완성 17개: enable·import·code block) |
 | 26   | GPT-6·Intelligent UI 전체 제공 (OpenAI 2026-10-07 "GPT-6 and Intelligent UI for everyone") | gpt-6 free                                  | -    | 조사만                    | 2~4개월               | 20·24번과 묶어 재평가 (help.openai.com 403)                     |
 | 27   | SynthID 전 세계 확대 (Google 2026-10-07) → `check-if-image-is-ai-generated` 갱신           | synthid detector                            | -    | 일부                      | 상시                  | 기존 글 갱신 후보 (새 글 아님)                                  |
+| 28   | 허브: 무료 오프라인 AI 도구 (받아쓰기·TTS·배경 제거 측정 글 3편 연결)                       | free offline ai tools                       | -    | 예 (기존 측정 재사용)     | 상시                  | 후보 (2026-10-13 측정 글 3편 도달, traffic-playbook 3번. 수요 확인 필요) |
+| 29   | 2026년 10월 Windows 10 ESU 업데이트(10-13 Patch Tuesday) KB·설치 오류                     | windows 10 october 2026 update              | -    | 조사만                    | ~1개월                | 후보 (10-13 17:00 UTC 배포 → 다음 세션에서 KB·자동완성 확인) |
 
 ## 반복 일정
 

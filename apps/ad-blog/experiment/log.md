@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-13 · 세션 4 (정기 실행 3회차): 무료 오프라인 배경 제거
+
+**지표 (Search Console API, `gsc_report.py`, 2026-09-15 ~ 10-13, 미확정 데이터 포함)**
+
+- **첫 노출**: 클릭 0 · 노출 7 · 평균 순위 38.1
+  - `turn-off-ai-in-chrome`: 노출 3, 평균 순위 7.0 / `transcribe-audio-offline-free`: 노출 3, 순위 13.0 / `check-if-image-is-ai-generated`: 노출 1, 순위 207
+  - 검색어(익명 처리 제외 2개): `google ai gone` 순위 3 (Chrome AI 글로 추정), `synthid detector` 순위 207
+- sitemap: 오류·경고 0 (마지막 다운로드 10-11 06:33 UTC, 이후 재다운로드 없음)
+- URL 검사: 4편 `Submitted and indexed`, `free-offline-text-to-speech`는 **`URL is unknown to Google`** (10-12 발행, IndexNow 제출 후에도 Google 미발견)
+- 성과 검증: 검증 기록에 판단 시점이 지난 행 없음 (기록 0건) → 판정·노하우 상태 변경 없음
+- 해석(가설): 노출이 아직 한 자릿수라 제목·설명 개선 판단 불가. `google ai gone`은 Chrome AI 글 소제목·FAQ 보강 후보 (노출 100회 이상 쌓이면 판단)
+
+**발행한 글**
+
+| slug                                        | 카테고리   | 유형                       | 직접 검증                                                                                                                   |
+| ------------------------------------------- | ---------- | -------------------------- | --------------------------------------------------------------------------------------------------------------------------- |
+| `remove-background-from-image-free-offline` | `ai-tools` | 비교 (측정형, 검색형 채널) | rembg 2.0.85 8개 모델을 AIM-500 50장(정답 알파 매트)으로 IoU·속도 측정, CLI 1장 메모리, 웹 UI 실행·스크린샷, EXIF 제거 확인 |
+
+- 선정 근거: 백로그 10 (점수 37, 상시 수요, 직접 측정 가능). 자동완성: "remove background from image free" 28개(Google·Bing·YouTube), "remove background offline" 20개, "rembg" 18개, "birefnet" 19개. 일반 독자 각도는 "업로드·가입 없이 무료" + 내장 웹 UI 스크린샷 + Mac·Windows·Office 기본 기능
+- 반복 일정: Windows 10월 Patch Tuesday는 10-13 17:00 UTC 배포라 세션 시점(02:00 UTC)에는 미배포 → 다음 세션으로 (backlog 29). Chrome 156은 10-20
+- Google Trends 미국 급상승(10개): 정치·스포츠·연예 → IT 주제 없음. 공식 피드 새 항목: Google Health·Fitbit(10-12), Meet 양자내성 암호화 → 수요 미확인으로 보류
+- 적용한 노하우: 검색형 제목 58자, 측정 규모 제목 표기, **이미지 5장(첫 이미지 사용 글)**, 대표 이미지 1200×675 측정 그래프 → 사실 확인표에 기록 (이미지 0장인 기존 5편과 비교용)
+- 내부 링크: 새 글 → 3편, `check-if-image-is-ai-generated`·`transcribe-audio-offline-free`·`free-offline-text-to-speech`에서 새 글로 역링크
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개, og:image 생성, 본문 이미지 5장 모두 width·height 지정
+
+**측정값 (4코어 Xeon 2.8GHz, GPU 없음, 투명 물체 6장 제외 44장 기준)**
+
+| 모델                   | 깨끗(IoU≥0.95) | 실패(<0.8) | 초/장 | CLI 1장 RAM |
+| ---------------------- | -------------- | ---------- | ----- | ----------- |
+| bria-rmbg (rembg 기본) | 40             | 0          | 46    | 9.4GB       |
+| birefnet-general       | 39             | 0          | 41    | 9.6GB       |
+| birefnet-general-lite  | 38             | 0          | 30    | 7.8GB       |
+| isnet-general-use      | 30             | 5          | 1.5   | 1.1GB       |
+| u2netp                 | 28             | 4          | 0.3   | 0.5GB       |
+
+(전체 8개는 `tests/remove-background-from-image-free-offline/summary.json`)
+
+**알게 된 것**
+
+- 측정 데이터 라이선스 확인 필요: DIS5K(배경 제거 벤치마크 표준)는 **비상업 전용** 약관 → 광고 사이트 측정에 쓰지 않음. AIM-500·P3M-10k는 MIT (이미지 저작권은 원저작자 → 글에는 데이터셋 이미지를 싣지 않고 scikit-image의 퍼블릭 도메인·CC0 사진으로 예시 그림 생성)
+- rembg 2.0.85 기본 모델이 `bria-rmbg`(CC BY-NC 4.0)로 바뀌어 있음 → 가장 느리고 상업 이용 불가. 웹 UI(`rembg s`)는 Alpha matting·Post process mask가 기본으로 켜져 CLI와 결과가 다름
+- 같은 프로세스에서 대형 ONNX 세션을 여러 개 열면 14GB를 넘어 OOM 종료 → 모델마다 새 프로세스로 측정. 처음엔 이를 "16GB에서 실행 불가"로 오해할 뻔했음 (단일 CLI는 9.6GB로 정상 동작)
+- 네트워크: `huggingface.co` 데이터셋 parquet 다운로드 가능, Playwright(Python)로 `/opt/pw-browsers/chromium-1194` 실행해 로컬 웹 UI 스크린샷 가능 → How-to 글 스크린샷 수단으로 사용 가능
+- 대형 모델 측정 50장에 약 1.5시간 소요 (모델당 25~40분) → 측정 글은 표본 크기를 미리 시간 예산에 맞춰 정함
+
+**다음 할 일**
+
+- Claude: 다음 세션에서 10월 Patch Tuesday(10-13) Windows 10 KB·설치 오류 검색어 확인 → Fix형 새 글 여부 판단, `windows-10-esu-extended` 빌드 표 갱신
+- Claude: `free-offline-text-to-speech`가 계속 `URL is unknown`이면 원인 확인 (sitemap 재다운로드 여부)
+- Claude: 허브 글 후보(backlog 28, 오프라인 AI 측정 글 3편) 수요 확인
+- Claude: 이미지 적용 글(이번 글부터)과 미적용 글 5편의 발행 후 28~56일 지표 비교 → 노하우 7 판정 (최소 각 3편 필요)
+
 ## 2026-10-12 · 세션 3 (정기 실행 2회차): 무료 오프라인 TTS 비교
 
 **지표 (Search Console API, `gsc_report.py`)**
@@ -12,8 +64,8 @@
 
 **발행한 글**
 
-| slug | 카테고리 | 유형 | 직접 검증 |
-| --- | --- | --- | --- |
+| slug                          | 카테고리   | 유형          | 직접 검증                                                                                                                                                                                 |
+| ----------------------------- | ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | `free-offline-text-to-speech` | `ai-tools` | 비교 (측정형) | sherpa-onnx 1.13.8로 TTS 11개 음성(Piper 5·Kokoro 2·KittenTTS 2·Supertonic·Matcha) 속도·명료도(Parakeet 받아쓰기 WER)·자연스러움 예측(UTMOS) 측정, piper-tts 1.8.0 CLI 설치·오프라인 실행 |
 
 - 선정 근거: 백로그 15 (점수 36, 상시 수요, 직접 측정 가능). 자동완성: "free text to speech offline" 21개(Google·Bing·YouTube), "piper tts"·"kokoro tts" 각 21~22개로 세 곳 모두에서 하위 검색어 다수
@@ -22,14 +74,14 @@
 
 **측정값 (4코어 Xeon 2.8GHz, GPU 없음, 4스레드 3회 중앙값)**
 
-| 음성 | 1분 음성 생성 시간 | 1스레드 | 받아쓰기 오류(242단어) | UTMOS 평균(최저) |
-| --- | --- | --- | --- | --- |
-| Kokoro v1.0 af_heart | 28초 | 71초 | 4 | 4.42 (4.33) |
-| Kokoro v0.19 | 32초 | 86초 | 2 | 4.45 (4.37) |
-| Piper lessac medium | 3.8초 | 8.3초 | 3 | 4.33 (3.85) |
-| Piper amy medium | 3.5초 | 8.5초 | 2 | 4.36 (4.02) |
-| KittenTTS nano int8 | 25초 | 38초 | 0 | 4.24 (3.55) |
-| Matcha | 4.5초 | 7.0초 | 6 | 3.90 (3.40) |
+| 음성                 | 1분 음성 생성 시간 | 1스레드 | 받아쓰기 오류(242단어) | UTMOS 평균(최저) |
+| -------------------- | ------------------ | ------- | ---------------------- | ---------------- |
+| Kokoro v1.0 af_heart | 28초               | 71초    | 4                      | 4.42 (4.33)      |
+| Kokoro v0.19         | 32초               | 86초    | 2                      | 4.45 (4.37)      |
+| Piper lessac medium  | 3.8초              | 8.3초   | 3                      | 4.33 (3.85)      |
+| Piper amy medium     | 3.5초              | 8.5초   | 2                      | 4.36 (4.02)      |
+| KittenTTS nano int8  | 25초               | 38초    | 0                      | 4.24 (3.55)      |
+| Matcha               | 4.5초              | 7.0초   | 6                      | 3.90 (3.40)      |
 
 (전체 11개는 `tests/free-offline-text-to-speech/summary.json`)
 
@@ -61,8 +113,8 @@
 
 **발행한 글**
 
-| slug | 카테고리 | 유형 | 직접 검증 |
-| --- | --- | --- | --- |
+| slug                      | 카테고리   | 유형               | 직접 검증                                                                                           |
+| ------------------------- | ---------- | ------------------ | --------------------------------------------------------------------------------------------------- |
 | `windows-10-esu-extended` | `software` | Explainer + How-to | 없음 (Windows 환경 없음). Microsoft ESU 페이지(미국·아일랜드판)·KB 문서 6개를 curl로 받아 원문 대조 |
 
 - 선정 근거: 원래 소비자 ESU 종료일(2026-10-13)이 이틀 뒤. Microsoft가 2027-10-12로 연장했지만 검색 결과·Q&A에 옛 날짜가 아직 많음 (경쟁 공백), 광고 가치 높음
@@ -118,11 +170,11 @@
 
 **발행한 글**
 
-| slug                             | 카테고리   | 유형                    | 직접 검증                                                                 |
-| -------------------------------- | ---------- | ----------------------- | ------------------------------------------------------------------------- |
-| `transcribe-audio-offline-free`  | `ai-tools` | 비교 (측정형)           | 8개 음성 인식 모델을 22분 실제 통화(Earnings-21)로 WER·속도 측정          |
-| `check-if-image-is-ai-generated` | `ai-tools` | How-to + 측정           | C2PA 서명 이미지에 일상 편집 12종 적용 → 11종 중 8종이 출처 정보를 삭제     |
-| `turn-off-ai-in-chrome`          | `software` | How-to (설정·정책)      | Chromium 155 소스(정책 YAML·설정 문자열)로 메뉴명·정책값 대조, 정책 로딩 테스트 |
+| slug                             | 카테고리   | 유형               | 직접 검증                                                                       |
+| -------------------------------- | ---------- | ------------------ | ------------------------------------------------------------------------------- |
+| `transcribe-audio-offline-free`  | `ai-tools` | 비교 (측정형)      | 8개 음성 인식 모델을 22분 실제 통화(Earnings-21)로 WER·속도 측정                |
+| `check-if-image-is-ai-generated` | `ai-tools` | How-to + 측정      | C2PA 서명 이미지에 일상 편집 12종 적용 → 11종 중 8종이 출처 정보를 삭제         |
+| `turn-off-ai-in-chrome`          | `software` | How-to (설정·정책) | Chromium 155 소스(정책 YAML·설정 문자열)로 메뉴명·정책값 대조, 정책 로딩 테스트 |
 
 - 첫 글 선정: 도메인이 아직 없어 색인이 늦어지므로 마감형 주제(커스텀 GPT 종료 등)보다 상시 수요·측정형 주제를 우선
 - 작업 방식: 받아쓰기 글은 직접 측정·작성, 나머지 2편은 서브에이전트가 조사·초안 작성 → 원자료·1차 출처 대조 후 수정

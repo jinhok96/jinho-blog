@@ -1,0 +1,100 @@
+---
+title: 새로운 Tabs Split View API로 멀티태스킹 확장 기능 향상
+description: Chrome 155부터 도입된 Split View API를 통해 개발자는 확장 프로그램 내에서 탭 분할 보기를 프로그래밍 방식으로 제어할 수 있습니다.
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/split-view-api-extensions?hl=en
+createdAt: 2026-09-16
+---
+
+> 원문: [Enhance multitasking extensions with the new Tabs Split View API](https://developer.chrome.com/blog/split-view-api-extensions?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+올해 2월, Chrome 145에서 네이티브 Split View가 도입되어 사용자는 별도의 OS 창을 관리하기 위해 타사 도구에 의존할 필요 없이 동일한 창 내에서 탭을 나란히 보고 관리할 수 있게 되었습니다. 사용자는 브라우저 컨트롤을 통해 분할 보기에 탭을 수동으로 추가하거나 제거할 수 있지만, 개발자가 Chrome 확장 프로그램에서 이러한 새로운 탭 레이아웃을 프로그래밍 방식으로 제어하는 것은 불가능했습니다.
+
+![Chrome의 분할 보기.](https://developer.chrome.com/static/blog/split-view-api-extensions/images/split-view.png)
+
+Chrome의 분할 보기는 사용자가 탭을 나란히 관리할 수 있도록 합니다.
+
+Chrome 155부터 사용 가능한 새로운 Split View API 출시를 발표하게 되어 기쁘게 생각합니다! WebExtensions Community Group에서 Mozilla 및 기타 브라우저 공급업체와 긴밀히 협력하여 개발된 이 새로운 API를 통해 확장 프로그램은 빌트인 분할 보기를 감지, 생성 및 관리할 수 있습니다.
+
+# 데모
+
+![](https://developer.chrome.com/static/blog/split-view-api-extensions/video/split-view-demo.mp4)
+
+# 작동 방식
+
+이전에는 나란히 보기를 구축하는 확장 프로그램이 여러 네이티브 창의 크기를 조정하거나, `<iframe>` 요소에 페이지를 임베드하거나, 사이드 패널을 사용하는 등 불안정한 해결 방법에 의존했습니다. 이제 새로운 Split View API는 Chrome의 [Tabs API](https://developer.chrome.com/docs/extensions/reference/api/tabs)와 직접 통합되어 새로운 탭 레이아웃 관리 기능을 활용할 수 있습니다.
+
+## Manifest 권한
+
+Split View API는 `browser.tabs` 네임스페이스의 일부이며, 사용하기 위해 별도의 권한이 필요하지 않습니다.
+
+## 분할 보기 식별
+
+모든 `Tab` 객체는 [`splitViewId` 속성](https://developer.chrome.com/docs/extensions/reference/api/tabs#:%7E:text=the%20sessions%20API.-,splitViewId,-number%C2%A0optional)을 포함합니다. 탭이 분할 보기에 포함된 경우 쌍을 이루는 탭과 고유 식별자를 공유합니다. 그렇지 않으면 `splitViewId`는 -1로 기본 설정됩니다.
+
+```
+// 현재 창의 모든 분할 보기를 쿼리합니다.
+const tabs = await browser.tabs.query({ currentWindow: true });
+const splitViews = tabs.map(tab => tab.splitViewId).filter(splitViewId => splitViewId !== -1);
+
+```
+
+## 일반 제약 조건
+
+두 개의 탭이 분할 보기에 참여하려면 다음 요구 사항을 충족해야 합니다.
+
+1. 탭은 서로 인접해 있거나(또는 생성되어야) 합니다.
+2. 탭은 이미 분할 보기에 있으면 안 됩니다.
+3. 탭은 동일한 `pinned`, `windowId`, `groupId` 상태를 가져야 합니다.
+
+반대로, 두 개의 탭이 분할 해제되면 동일한 `pinned`, `windowId`, `groupId` 상태를 유지하며 서로 상대적인 위치를 유지합니다.
+
+## 분할 보기 생성
+
+확장 프로그램이 새 분할 보기를 생성할 수 있는 두 가지 방법이 있습니다.
+
+1. `browser.tabs.create`의 새로운 `splitWithTabId` 매개변수를 사용하여 기존 탭과 분할될 새 탭을 생성합니다.
+2. 새로운 `browser.tabs.createSplit` 메서드를 사용하여 두 개의 기존 탭을 페어링합니다.
+
+### 예시
+
+기존 탭과 분할할 새 탭을 생성하기 위해 `splitWithTabId`를 사용할 수 있습니다.
+
+```
+await browser.tabs.create({splitWithTabId: existingTab.id});
+
+```
+
+기본적으로 새 탭은 기존 탭의 _오른쪽_에 생성됩니다.
+
+기존 탭의 _왼쪽_에 새 탭을 만들려면 해당 탭의 인덱스로 인덱스를 설정합니다.
+
+  ```
+  await browser.tabs.create({splitWithTabId: existingTab.id, index: existingTab.index});
+
+```
+
+두 개의 기존 탭을 페어링하여 새 분할 보기를 만들 수도 있습니다.
+
+  ```
+  await browser.tabs.createSplit([existingTab1.id, existingTab2.id]);
+
+```
+
+## 분할 보기 분할 해제
+
+분할 보기를 두 개의 독립적인 탭으로 분리하기 위해 확장 프로그램은 새로운 `browser.tabs.unsplit` 메서드를 사용할 수 있습니다.
+
+```
+const splitViewId = browser.tabs.createSplit([tab1.id, tab2.id]);
+// 분할 보기를 두 개의 독립적인 탭으로 분할합니다.
+await browser.tabs.unsplit(splitViewId);
+
+```
+
+# 자세히 알아보기
+
+이 새로운 기능을 통해 확장 프로그램의 생산성을 더욱 높일 수 있기를 바랍니다. 분할 보기 기능을 갖춘 확장 프로그램을 구축하려면 [Tabs API](https://developer.chrome.com/docs/extensions/reference/api/tabs) 문서를 확인하십시오. Split View API에 대한 질문이 있거나 도움이 필요한 경우 [Chromium extensions](https://groups.google.com/a/chromium.org/g/chromium-extensions?e=48417069) Google 그룹을 방문하십시오.
+
+즐거운 분할 되세요!

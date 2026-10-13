@@ -1,13 +1,15 @@
 # ToolProof 글쓰기 가이드
 
-글 작성·수정 시 이 기준을 따릅니다. 새로 알게 된 규칙(성과 데이터로 확인된 것 포함)은 이 문서에 추가합니다. 근거로 삼은 Google 문서·대형 블로그 사례는 [참고한 기준](#참고한-기준)에 있습니다.
+글 작성·수정 시 이 기준을 따릅니다. 새로 알게 된 규칙(성과 데이터로 확인된 것 포함)은 이 문서에 추가합니다. 대형 블로그 분석에서 뽑은 트래픽 노하우(채널별 제목, 허브 글, 반복 일정, 이미지 수 등)와 근거는 [traffic-playbook.md](traffic-playbook.md)에 있습니다.
 
-## 작성 전: 검색 의도와 차별점
+## 작성 전: 채널과 차별점
 
 - 주 검색어 1개와 하위 검색어 3~8개를 정함 (`demand_check.py suggest` 결과에서 고름)
-- WebSearch로 주 검색어 상위 결과 5~10개의 제목·구성을 보고 세 가지를 맞춤: **유형**(how-to·fix·비교·설명), **형식**(단계 목록·순위 목록·비교표), **각도**(제목에 반복되는 요소: 무료·오프라인·최신 버전·연도 등). 상위 글을 베끼지 않되, 상위 글들이 공통으로 다루는 소주제는 빠뜨리지 않음
-- 상위 글에 없는 것을 1가지 이상 차별점으로 정함: 직접 측정값, 최신 버전의 실제 메뉴 이름, 해 봤지만 안 된 방법, 무료·유료 경계. 차별점을 찾지 못하면 다른 주제로 바꿈
-- 주 검색어·하위 검색어·차별점을 `tests/{slug}/factcheck.md` 맨 위에 기록 (발행 후 Search Console의 실제 검색어와 비교)
+- 주 채널을 정함 ([traffic-playbook.md](traffic-playbook.md) 1번)
+  - **검색형**: 검색어가 분명한 How-to·Fix·비교, 상시 수요
+  - **피드형**: 출시·변경 직후 글, 업데이트 후 설정 모음, 측정 결과 자체가 흥미로운 글 (Google Discover 노출을 노림)
+- 차별점을 1가지 이상 정함: 직접 측정값, 최신 버전의 실제 메뉴 이름, 해 봤지만 안 된 방법, 무료·유료 경계. 차별점이 없으면 다른 주제로 바꿈
+- 주 검색어·하위 검색어·채널·차별점을 `tests/{slug}/factcheck.md` 맨 위에 기록 (발행 후 Search Console의 실제 검색어와 비교)
 
 ## 독자와 문체
 
@@ -40,7 +42,8 @@
 
 검색 결과에서 클릭 여부는 제목·설명·URL로 정해집니다.
 
-- **길이**: 제목 40~55자 권장, 최대 60자. 페이지 `<title>`에는 ` | ToolProof`(12자)가 붙음. 너무 짧거나 긴 제목은 Google이 고쳐 씀 (title 60자 초과는 76% 이상, 70자 초과는 거의 전부 재작성)
+- **길이**: 검색형은 40~55자 권장, 최대 60자. 페이지 `<title>`에는 ` | ToolProof`(12자)가 붙음. 너무 짧거나 긴 제목은 Google이 고쳐 씀 (title 60자 초과는 76% 이상, 70자 초과는 거의 전부 재작성). 피드형은 75자까지 허용하되 주 검색어는 앞 60자 안에 둠
+- **피드형 제목**: 독자 상황(you/your)이나 측정 결과를 앞세움. 측정 글은 `We Tested {N} {대상}: {결과 또는 독자가 궁금한 질문}`, 업데이트 직후 글은 `{바뀐 것}: What Changes for You and How to {동작}`
 - **검색어 그대로, 앞쪽에**: 주 검색어의 단어를 동의어로 바꾸지 않고 제목 앞부분에 둠. slug도 같은 단어로 (URL이 검색어와 일치하면 CTR이 높음)
 - **차별점을 제목에**: 직접 측정한 글은 규모·방식을 괄호나 콜론 뒤에 넣음 (`(8 Models Tested)`, `: Piper vs Kokoro, Tested`). 숫자는 본문과 일치해야 함 (제목이 곧 H1)
 - **기호**: 강조는 대괄호 `[ ]` 대신 괄호 `( )`, 구분은 콜론·대시 (대괄호 부분은 Google이 자주 지움)
@@ -52,7 +55,7 @@
 
 ## 구조
 
-- **도입**: 첫 2~3문장에서 답을 줌. 측정 글은 첫 문단에 결론과 함께 무엇을 몇 개, 어떤 조건에서 테스트했는지 씀 (예: `free-offline-text-to-speech` 첫 문단 — "use Kokoro if you can wait a little, and Piper if you need speed. In our test of 11 open voices on a 4-core CPU…")
+- **도입**: 첫 2~3문장에서 답을 줌. 측정 글은 첫 문단에 결론과 함께 무엇을 몇 개, 어떤 조건에서 테스트했는지 씀 (예: `free-offline-text-to-speech` 첫 문단 — "use Kokoro if you can wait a little, and Piper if you need speed. In our test of 11 open voices on a 4-core CPU…"). 첫 소제목 전까지 100~250단어 (너무 짧으면 첫 소제목 앞 광고가 첫 화면에 걸림)
 - **요약 표**: 방법이나 도구가 3개 이상이면 도입 바로 다음에 한눈에 보는 표를 둠. How-to는 방법·대상·되돌릴 수 있는지, 비교는 추천 상황(Best for)·핵심 측정값·가격(무료 여부)
 - **소제목**: `##`부터 시작 (본문 `#` 금지). 목차(TOC)에 그대로 나오므로 짧고 내용이 드러나게, 검색 질문 형태 권장. 소제목 바로 아래 첫 문장은 그 소제목의 답. 도입부가 있으면 첫 소제목 앞에, `##`이 3개 이상이면 두 번째 소제목 앞에 본문 광고가 들어감
 - **방법이 여러 개일 때**: 방법별로 `##`를 나누고, 쉽고 되돌릴 수 있는 방법을 먼저 둠. 데이터 삭제·초기화·레지스트리·정책처럼 영향이 큰 방법은 뒤에 두고 무엇이 지워지는지 경고
@@ -76,7 +79,7 @@
 
 ## 이미지
 
-- 측정 글은 결과 그래프 1개 이상, How-to·Fix는 직접 찍은 스크린샷(컨테이너의 Chromium·Playwright나 로컬 실행 화면)을 넣음. 직접 만든 이미지만 사용 (저작권). 만들 수 없으면 표·단계 목록으로 대체
+- 목표 수량: How-to·Fix 3장 이상(직접 찍은 스크린샷: 컨테이너의 Chromium·Playwright나 로컬 실행 화면), 측정·비교 글 5장 이상(결과 그래프·실행 화면). 대형 블로그 중앙값은 How-to 6장, 체험·측정 글 16장. 직접 만든 이미지만 사용 (저작권). 만들 수 없으면 표·단계 목록으로 대체
 - **대표 이미지**: frontmatter `thumbnail` → 본문 첫 이미지 순으로 썸네일·OG 이미지가 됨. 가로 1200px 이상, 16:9에 가깝고 글을 대표하는 그림(측정 그래프·실제 화면)으로 함. 로고·글자 위주 이미지 금지. 둘 다 없으면 제목 글자로 자동 생성되는데, 이는 Google Discover가 피하라고 하는 글자 위주 이미지임
 - 파일: `content/posts/images/{slug}/{내용}.webp` (예: `tts-speed-chart.webp`). `image1`·`screenshot`처럼 의미 없는 이름 금지. 본문에서는 `![구체적인 대체 텍스트](./images/{slug}/file.webp)`
 - alt 텍스트: 이미지가 보여주는 내용이나 그 단계의 동작을 구체적으로 씀. 키워드 나열 금지. 이미지는 관련 문단 바로 옆에 둠
@@ -105,7 +108,8 @@ tags:
 
 ## 링크
 
-- 내부 링크: 관련 글이 있으면 2개 이상 연결 (`/posts/{slug}`). 새 글을 쓰면 기존 관련 글에도 링크를 추가해 모든 글이 다른 글에서 1번 이상 링크되게 함
+- 내부 링크: 관련 글이 있으면 How-to·측정 글은 4개 이상, 그 밖의 글은 2개 이상 연결 (`/posts/{slug}`). 새 글을 쓰면 기존 관련 글에도 링크를 추가해 모든 글이 다른 글에서 1번 이상 링크되게 함
+- 허브 글: 같은 분야 측정 글이 3편 쌓이면 허브 글(`Best Free {분야} Tools (Tested)` 등)을 만들어 개별 글을 모두 연결하고, 새 측정이 생길 때마다 갱신 ([traffic-playbook.md](traffic-playbook.md) 3번)
 - 앵커 텍스트: 링크 대상이 드러나게 씀 (`our test of 8 offline transcription models`). "click here"·"this article"·"read more" 금지, 링크를 연달아 붙이지 않음
 - 외부 링크: 1차 출처 위주. 경쟁 블로그·제휴 링크 금지
 
@@ -126,36 +130,15 @@ tags:
 
 ## 발행 전 체크리스트
 
-- [ ] 주 검색어·차별점을 정했고, 상위 결과의 유형·형식에 맞췄다
+- [ ] 주 검색어·채널(검색형/피드형)·차별점을 정해 사실 확인표에 기록했다
 - [ ] 사실마다 1차 출처를 이번 세션에서 확인했다
 - [ ] 직접 실행한 내용과 문서 기반 내용을 구분해서 썼다
-- [ ] 제목 60자 이내(주 검색어는 앞쪽, 차별점 포함), 설명 140~160자
+- [ ] 제목은 검색형 60자·피드형 75자 이내(주 검색어는 앞쪽, 차별점 포함), 설명 140~160자
 - [ ] 첫 2~3문장에서 답을 주고, 소제목마다 첫 문장이 그 소제목의 답이다
 - [ ] `##` 소제목 3개 이상, 방법·도구가 3개 이상이면 요약 표가 있다
 - [ ] FAQ는 본문에 없는 실제 질문만 넣었다 (없으면 생략)
-- [ ] 만들 수 있으면 대표 이미지(가로 1200px 이상, 직접 만든 그래프·스크린샷)와 구체적인 alt를 넣었다
+- [ ] 이미지 목표 수량(How-to 3장·측정 글 5장)을 채웠고, 대표 이미지는 가로 1200px 이상의 직접 만든 그래프·스크린샷이다 (만들 수 없으면 이유를 log.md에 기록)
 - [ ] 내부 링크(가능한 경우)는 설명형 앵커 텍스트로, 외부 출처 링크도 넣었다
 - [ ] 금지 표현·이모지·가상 체험담 없음
 - [ ] `pnpm --filter @jinho-blog/ad-blog build` 통과, 생성된 HTML에서 제목·설명·JSON-LD 확인
 - [ ] 측정 스크립트·결과·사실 확인표(주장 → 출처 → 확인 방법)를 `experiment/tests/{slug}/`에 저장 (큰 다운로드 파일은 제외)
-
-## 참고한 기준
-
-2026-10-13 확인. 외부 연구의 수치는 다른 사이트 표본에서 나온 것이라 이 블로그에서도 같다는 보장은 없으므로, 발행 후 Search Console로 확인합니다.
-
-| 출처                                                                                                                                                                          | 반영한 내용                                                                                                                                                       |
-| ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| Google [Creating helpful content](https://developers.google.com/search/docs/fundamentals/creating-helpful-content)                                                            | 과장 없는 제목, 원본 정보·분석, 선호 분량 없음, 날짜만 바꾸는 갱신은 경고 신호                                                                                    |
-| Google [Write high quality reviews](https://developers.google.com/search/docs/specialty/ecommerce/write-high-quality-reviews)                                                 | 정량 측정, 선택 기준, 대안 비교, 근거 있는 "best" 추천, 이전 버전 대비 변화                                                                                       |
-| Google [Title links](https://developers.google.com/search/docs/appearance/title-link)·[Snippets](https://developers.google.com/search/docs/appearance/snippet)                | 제목 재작성 사유(지난 연도·키워드 반복·H1 불일치), 스니펫은 주로 본문에서 뽑음, 설명은 글마다 다르고 구체적으로                                                   |
-| Google [Discover](https://developers.google.com/search/docs/appearance/google-discover)·[Image SEO](https://developers.google.com/search/docs/appearance/google-images)       | 가로 1200px 이상 대표 이미지, 로고·글자 위주 이미지와 핵심을 숨기는 제목 금지, 파일 이름·alt                                                                      |
-| Google [Link best practices](https://developers.google.com/search/docs/crawling-indexing/links-crawlable)                                                                     | 설명형 앵커 텍스트, 모든 글이 다른 글에서 1번 이상 링크되게                                                                                                       |
-| Google [Search Central 변경 기록](https://developers.google.com/search/updates)                                                                                               | FAQ 리치 결과는 2026-05-07부터 표시 안 됨                                                                                                                         |
-| Google [AI features](https://developers.google.com/search/docs/appearance/ai-features)                                                                                        | AI Overviews용 별도 최적화는 필요 없음, 중요한 내용은 텍스트로, 내부 링크                                                                                         |
-| [Zyppy 제목 재작성 연구](https://zyppy.com/seo/google-title-rewrites/) (2022, title 80,959개)                                                                                 | 51~60자 재작성 최소(39~42%), 60자 초과 76% 이상·70자 초과 99.9%, 대괄호 77.6% 재작성, H1과 title 일치                                                             |
-| [Backlinko CTR 연구](https://backlinko.com/google-ctr-stats) (Google 결과 약 400만 개)                                                                                        | 40~60자 제목 CTR 최고, 질문형 차이 없음, URL과 검색어 일치 시 CTR 45% 높음, 2페이지 이하 클릭 0.63%                                                               |
-| Ahrefs [Search intent](https://ahrefs.com/blog/search-intent/)                                                                                                                | 상위 결과의 유형·형식·각도(3 Cs)에 맞추기, 상위 글의 공통 소주제                                                                                                  |
-| Zapier [Best transcription software](https://zapier.com/blog/best-transcription-apps/)·[How we select apps](https://zapier.com/blog/selecting-apps/)                          | 첫 문장에 테스트 규모, 요약 표(Best for·특징·가격), 평가 기준 섹션, 도구별 장단점·가격, 2018년 글을 같은 URL로 계속 갱신                                          |
-| How-To Geek [Disable Recall](https://www.howtogeek.com/how-to-disable-recall/)·[Android key icon](https://www.howtogeek.com/small-key-icon-android-status-bar-what-it-means/) | 방법별 H2와 쉬운 방법 먼저, 단계 스크린샷에 클릭 위치 표시, 본문 내부 링크. 도입 3문단을 훅으로 쓰고 답을 늦게 주는 방식은 검색 유입용 글에 맞지 않아 따르지 않음 |
-| Tom's Guide [iPhone SOS mode fix](https://www.tomsguide.com/phones/iphones/my-iphone-kept-getting-stuck-in-sos-mode-heres-how-i-finally-fixed-it)                             | 번호 붙인 해결 단계를 간단한 것부터, 설정이 지워지는 초기화는 마지막에 경고와 함께                                                                                |
-| [RTINGS](https://www.rtings.com/)                                                                                                                                             | 같은 조건(test bench)으로 측정해 결과를 비교 가능하게 하고, 방법이 바뀐 리뷰에는 변경 사실을 표시                                                                 |

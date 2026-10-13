@@ -1,0 +1,8 @@
+u2net rc 0 sec 4.0 peakGB 0.85
+silueta rc 0 sec 3.8 peakGB 0.69
+u2net_human_seg rc 0 sec 3.7 peakGB 0.85
+u2netp rc 0 sec 3.0 peakGB 0.54
+isnet-general-use rc 0 sec 4.7 peakGB 1.14
+birefnet-general-lite rc 0 sec 39.8 peakGB 7.82
+birefnet-general rc 0 sec 56.7 peakGB 9.61
+bria-rmbg rc 0 sec 64.8 peakGB 9.37

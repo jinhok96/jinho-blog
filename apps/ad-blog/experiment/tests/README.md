@@ -9,6 +9,7 @@
 | [turn-off-ai-in-chrome](turn-off-ai-in-chrome)                       | Chromium 155 소스 기준 사실 확인표 (파일·줄 번호)                                          |
 | [windows-10-esu-extended](windows-10-esu-extended)                   | Microsoft ESU 페이지·KB 문서 기준 사실 확인표 (문서 기반, 실행 검증 없음)                  |
 | [free-offline-text-to-speech](free-offline-text-to-speech)           | 오프라인 TTS 11개 음성 측정 (sherpa-onnx 1.13.8: 속도·Parakeet 받아쓰기 WER·UTMOS), piper-tts CLI 실행 기록, 사실 확인표 |
+| [remove-background-from-image-free-offline](remove-background-from-image-free-offline) | rembg 2.0.85 배경 제거 8개 모델 측정 (AIM-500 50장 IoU·속도·CLI 메모리), 예시 그림·그래프·웹 UI 스크린샷 스크립트, 사실 확인표 (재현 절차는 facts.md 하단) |
 
 ## 받아쓰기 벤치마크 재현
 

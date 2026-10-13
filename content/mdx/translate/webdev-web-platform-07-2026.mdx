@@ -1,0 +1,79 @@
+---
+title: 2026년 7월 웹 플랫폼 신규 기능
+description: 2026년 7월에 안정 및 베타 웹 브라우저에 새롭게 추가된 흥미로운 기능들을 소개합니다.
+category: webdev
+sourceUrl: https://web.dev/blog/web-platform-07-2026?hl=en
+createdAt: 2026-07-31
+---
+
+> 원문: [New to the web platform in July](https://web.dev/blog/web-platform-07-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# 안정 버전 브라우저 릴리스
+
+2026년 7월에 Chrome 151, Firefox 153, Safari 26.6이 안정 버전으로 출시되었습니다. 이번 게시물에서는 이번 달에 웹 플랫폼에 새롭게 추가된 기능들을 살펴보겠습니다.
+
+## Firefox 153의 HTML 파서 업데이트로 커스터마이징 가능한 `<select>`가 가까워집니다
+
+Firefox 153은 [`<select>`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/select) 요소에 대한 HTML 파싱 규칙을 업데이트합니다. 이전에는 `<option>`, `<optgroup>`, `<hr>` 요소만 `<select>` 내부 자식으로 파싱될 수 있었습니다. 이번 업데이트를 통해 모든 중첩된 요소를 `<select>` 내부 DOM으로 파싱할 수 있게 되어, 브라우저 전반에 걸쳐 커스터마이징 가능한 select 요소의 기반을 마련했습니다.
+
+## `ruby-overhang` CSS 속성
+
+Chrome 151은 [`ruby-overhang`](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/ruby-overhang) CSS 속성에 대한 지원을 추가합니다. 이 속성은 루비 주석 텍스트가 인접한 기본 문자를 오버행할 수 있는지 여부를 제어합니다. `auto`, `spaces`, `none` 키워드를 허용합니다. CSS 사양에 따라 `none`은 `spaces`의 별칭이며, 이는 루비 텍스트가 공백과 CJK 구두점만 오버행하도록 하여 불필요한 레이아웃 간격을 방지하는 동시에 가독성을 유지합니다.
+
+## 선언적 Shadow DOM 수동 슬롯 할당
+
+Chrome 151은 [`<template>`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/template) 요소에 `shadowrootslotassignment` 속성을 도입합니다. 이 속성을 통해 선언적 shadow root는 명명된 슬롯 할당 대신 수동 슬롯 할당을 구성할 수 있습니다. 이전에는 수동 슬롯 할당이 `attachShadow({slotAssignment: "manual"})`을 사용하여 명령형으로만 가능했습니다. `named`(기본값) 또는 `manual`을 허용하며, `HTMLTemplateElement`의 [`shadowRootSlotAssignment`](https://developer.mozilla.org/docs/Web/API/HTMLTemplateElement/shadowRootSlotAssignment) 속성을 통해 JavaScript로 반영됩니다.
+
+## `AnimationEvent` 및 `TransitionEvent`의 `animation` 속성
+
+Chrome 151은 [`AnimationEvent`](https://developer.mozilla.org/docs/Web/API/AnimationEvent) 및 [`TransitionEvent`](https://developer.mozilla.org/docs/Web/API/TransitionEvent) 인터페이스에 읽기 전용 `animation` 속성을 추가합니다. 이 속성은 이벤트와 연결된 기본 [`Animation`](https://developer.mozilla.org/docs/Web/API/Animation) 객체를 반환하여 이벤트 리스너 내에서 직접 애니메이션 상태를 쿼리할 수 있도록 합니다.
+
+## Firefox의 데스크톱 Picture-in-Picture API
+
+Firefox 153은 데스크톱 플랫폼에 [Picture-in-Picture API](https://developer.mozilla.org/docs/Web/API/Picture-in-Picture_API)에 대한 지원을 제공합니다. 이는 사이트에서 `<video>` 요소의 디스플레이를 페이지와 플로팅, 항상 위에 표시되는 창 간에 전환할 수 있는 표준 웹 API를 제공하여, 사용자가 탭을 전환하거나 다른 애플리케이션과 상호 작용하는 동안 비디오 콘텐츠를 계속 시청할 수 있도록 합니다.
+
+## `Intl.Locale` 정보 API
+
+Firefox 153은 TC39 `Intl.Locale` 정보 제안에 대한 지원을 추가합니다. 이는 [`Intl.Locale`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale) 인스턴스에 `getCalendars()`, `getCollations()`, `getHourCycles()`, `getNumberingSystems()`, `getTextInfo()`, `getTimeZones()`, `getWeekInfo()`를 포함한 여러 getter 메서드를 추가합니다. 이러한 메서드를 통해 개발자는 외부 국제화 데이터 라이브러리 없이도 로케일별 관례를 검사할 수 있습니다.
+
+이 릴리스와 함께 이러한 메서드가 이제 Baseline Newly Available이 되었습니다.
+
+```
+const jaJP = new Intl.Locale("ja-JP");
+console.log(jaJP.getCalendars()); // ["gregory", "japanese"]
+
+```
+
+## `IDBObjectStore.getAllRecords()` 및 `IDBIndex.getAllRecords()`
+
+Firefox 153은 [`IDBObjectStore.getAllRecords()`](https://developer.mozilla.org/docs/Web/API/IDBObjectStore/getAllRecords) 및 [`IDBIndex.getAllRecords()`](https://developer.mozilla.org/docs/Web/API/IDBIndex/getAllRecords)를 도입합니다. 이러한 IndexedDB 메서드는 단일 요청으로 모든 일치하는 레코드(기본 키, 인덱스 키, 값 포함)를 검색하여, 데이터셋 하위 집합 또는 전체 객체 저장소 콘텐츠를 가져올 때 복잡한 커서 반복 로직을 작성할 필요성을 없애줍니다.
+
+## `Response`, `Request`, `Blob`의 `textStream()`
+
+Chrome 151은 `Response`, `Request`, `Blob` 객체에 `textStream()` 메서드를 추가합니다. 이 편리한 도우미 메서드는 바이너리 본문 데이터에서 직접 디코딩된 텍스트 문자열의 읽기 가능한 스트림을 제공하며, `body`를 `TextDecoderStream()`을 통해 파이핑하는 것과 동일합니다.
+
+## `<usermedia>` 기능 요소 MVP
+
+Chrome 151은 선언적 `<usermedia>` 기능 요소를 도입합니다. 이 브라우저 제어 요소는 카메라 및 마이크 액세스를 요청하는 명시적이고 사용자 주도의 메커니즘을 제공합니다. `<usermedia>`는 신뢰할 수 있는 요소와의 명확한 사용자 상호 작용에 권한 프롬프트를 고정함으로써, 프롬프트 투명성과 사용자 경험을 개선하는 동시에 이전에 거부되었던 경우에도 간편한 복구 경로를 제공합니다.
+
+[Introducing the HTML `<usermedia>` element](https://developer.chrome.com/blog/usermedia-html-element)에서 더 자세히 알아보세요.
+
+## Safari 26.6의 버그 수정 및 편의성 업데이트
+
+Safari 26.6에는 중요한 버그 수정 및 안정성 향상이 포함되었습니다.
+
+*   `ic` 길이 단위가 페이지 확대/축소와 함께 잘못 스케일링되는 문제를 수정했습니다.
+*   페이지 본문이 스크롤 가능한 경우 고정된 위치 요소에 대한 `position-area` 대체 동작을 수정했습니다.
+*   iPad에서 데스크톱 사이트를 요청할 때 CSS `zoom`과 글꼴 속성(`font-size`, `font-weight`, `font-style`, `font-variant`)의 상호 작용을 수정했습니다.
+*   쿠키 헤더를 사용한 파티션된 쿠키 삭제를 수정했습니다.
+
+# 베타 버전 브라우저 릴리스
+
+베타 브라우저 버전은 다음 안정 릴리스에 포함될 기능의 미리보기를 제공합니다. 모든 사용자에게 도달하기 전에 새로운 기능을 테스트하거나 호환성 변경 사항을 확인하기에 이상적인 시기입니다. 이번 달의 새로운 베타 버전은 Chrome 152, Firefox 154, Safari 27입니다.
+
+Chrome 152 베타에는 `::backdrop`, `::scroll-marker`, `::view-transition`에 대한 `CSSPseudoElement` 지원, 전역 `autocorrect` HTML 속성, 미디어 요소 의사 클래스(`:playing`, `:paused`, `:muted`), CSS Color 5 `alpha()` 상대 색상 함수, `window-drag` 속성, CPU Performance API, WebGPU 서브그룹 크기 제어가 포함됩니다.
+
+Firefox 154 베타는 `RTCIceTransport.getSelectedCandidatePair()` 및 `selectedcandidatepairchange` 이벤트, `RTCDtlsTransport`의 `error` 이벤트를 포함한 WebRTC 전송 개선 사항을 도입합니다.
+
+Safari 27 베타는 화면 판독기 공지를 위한 `ariaNotify` API, 따옴표 카운터에 대한 `contain: style`, 속성 선택기에서 대소문자를 구분하는 `s` 수정자, box sizing에 대한 `stretch` 키워드, `:host:has()` 복합 선택기, `:heading` 의사 클래스, `revert-rule` 키워드, 변환을 인식하는 앵커 포지셔닝, 두 개 이상의 색상을 사용하는 `color-mix()` 및 `progress()`의 `no-clamp` 옵션을 포함한 대규모의 새로운 기능을 제공합니다.

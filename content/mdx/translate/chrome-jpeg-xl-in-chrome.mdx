@@ -1,0 +1,50 @@
+---
+title: Chrome에 JPEG XL 지원 기능 출시
+description: "Chrome 155부터 JPEG XL 이미지 형식 디코딩 지원이 추가되어, 더 나은 압축률과 HDR 지원 등 웹 개발자와 사진작가의 요구 사항을 충족합니다."
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/jpeg-xl-in-chrome?hl=en
+createdAt: 2026-10-06
+---
+
+> 원문: [Shipping JPEG XL in Chrome](https://developer.chrome.com/blog/jpeg-xl-in-chrome?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+Chrome 155부터 JPEG XL (`.jxl`) 이미지 형식에 대한 디코딩 지원을 출시하게 된 것을 기쁘게 생각합니다. JPEG XL은 현대 웹 개발자와 사진작가의 요구 사항을 충족하도록 설계된 차세대 이미지 형식입니다. JPEG보다 30-50% 더 나은 압축률, 무손실 압축, 내장 HDR 지원, 무손실 JPEG 트랜스코딩 등을 제공합니다.
+
+일반적으로 최상의 결과를 얻으려면 AVIF와 JPEG XL을 모두 시도해 보시는 것을 권장합니다. JPEG XL은 특히 사진 이미지의 고품질 또는 무손실 압축이나 미세한 점진적 디코딩이 선호되는 경우에 가장 유용할 것으로 예상됩니다.
+
+이 게시물에서는 JPEG XL을 Chrome에 도입한 이유, 메모리 안전을 우선으로 하기 위해 Rust를 사용한 방법, 이를 빠르게 만드는 광범위한 성능 작업, 그리고 이 여정이 개발자 피드백과 웹 표준 생태계에 대해 우리에게 무엇을 말해주는지 공유합니다.
+
+# 안전 우선: Rust(`jxl-rs`)로 디코더 재구현
+
+이미지 디코더는 모든 최신 웹 브라우저에서 가장 중요하고 공격 대상이 되는 표면 중 하나입니다. 디코더는 네트워크에서 직접 오는 복잡하고 신뢰할 수 없는 이진 구조를 처리하며 렌더러 프로세스 내부에서 실행됩니다. 역사적으로 C++와 같이 메모리 안전성이 떨어지는 언어로 작성된 디코더는 경계를 벗어나는 읽기, 힙 오버플로, 사용 후 해제 버그와 같은 취약점에 취약했습니다.
+
+저희의 보안 모델은 [이중화 규칙](https://chromium.googlesource.com/chromium/src/+/main/docs/security/rule-of-2.md)에 따라 샌드박싱과 심층 방어에 의존합니다. 그러나 샌드박싱은 2차 방어 계층입니다. 이러한 보안 위험을 근원에서 제거하기 위해 JPEG XL 디코더의 순수 Rust 구현인 `jxl-rs`를 통합했습니다.
+
+# 안전을 타협하지 않는 속도를 위한 설계
+
+메모리 안전성은 중요하지만, 메모리 안전성이 있는 디코더가 기존의 메모리 안전성이 떨어지는 대안만큼 빠르다는 것은 상당한 성능 저하를 감수하는 것보다 훨씬 더 명확한 선택입니다.
+
+현대 코덱의 성능에 근본적인 부분은 최신 장치에서 사용 가능한 SIMD 하드웨어를 최대한 활용하는 것입니다. 이를 안전하게 수행하기 위해서는 [`target_feature_11`](https://github.com/rust-lang/rust/pull/134090) Rust 기능이 안정화되어 `unsafe` 코드를 요구하지 않고 SIMD 명령을 사용할 수 있게 되었습니다.
+
+다음 단계는 C++ [Highway](https://github.com/google/highway) 라이브러리(원래 JPEG XL의 C++ 참조 구현인 `libjxl`을 위해 개발됨)에서 영감을 받은 SIMD 추상화 계층(`jxl_simd`)을 구축하는 것이었습니다. 이러한 개발을 통해 SIMD 성능 최적화에 타협하지 않는 다중 플랫폼 라이브러리를 작성할 수 있었으며, 비안전한 작업은 소수의 엄격하게 검증된 위치로 제한되었습니다.
+
+`jxl-rs`의 성능 최적화는 `libjxl`의 최적화를 기반으로 합니다. 여기에는 지역 경계를 가로지르는 단계에 대한 일반 처리 파이프라인이 포함되며, 하드웨어 성능을 극대화하기 위해 데이터 복사를 최소화합니다. 저희는 [jxl-rs 성능 대시보드](https://jxl-rs-perf.lucaversari.it/)에서 다양한 하드웨어 플랫폼에서 Rust 재구현의 성능을 추적해 왔습니다.
+
+퍼징 및 코드 AI 검토를 포함한 다양한 최신 기술을 사용하여 `jxl-rs` 구현을 검증했으며, 전체 구현 이력 동안 메모리 안전 버그를 발견하지 못하여 Rust가 메모리 안전성에 제공하는 막대한 개선 사항에 대한 또 다른 검증을 제공했습니다.
+
+# 개발자 피드백 및 상호 운용성 프로젝트
+
+Chrome팀은 버그, 설문 조사, [개발자 신호 프로젝트](https://github.com/web-platform-dx/developer-signals/issues?q=is%3Aissue%20state%3Aopen%20sort%3Areactions-%2B1-desc), [상호 운용성 프로젝트](https://github.com/web-platform-tests/interop)와 같은 다양한 채널의 웹 개발자 피드백을 고려합니다. JPEG XL을 출시하기로 한 결정은 웹 개발자로부터 일관된 피드백과 요청에 기반했으며, 이는 상호 운용성 프로세스에서 가장 두드러지게 나타났습니다. 해당 프로세스에서 2026년에 [인기 있는 제안](https://github.com/web-platform-tests/interop/issues/994)이었으며 그 이전 몇 년간도 마찬가지였습니다.
+
+브라우저 간의 형식 상호 운용성을 보장하기 위해 [상호 운용성 2026 JPEG XL 조사](https://github.com/web-platform-tests/interop-jpegxl)에 참여하여 브라우저의 모든 JPEG XL 기능에 대한 테스트 커버리지가 있는지, 그리고 Chrome에서 해당 테스트가 통과하는지 확인했습니다.
+
+# 사용해 보세요
+
+JPEG XL이 Chrome에 공식적으로 적용됨에 따라 웹은 더 빠르고 풍부하며 안전해집니다. 개발자, 콘텐츠 제작자, 플랫폼 소유자에게 `.jxl` 이미지 및 애니메이션을 파이프라인에 사용하기 시작하도록 권장합니다.
+
+사용해 보시고, [버그를 신고](https://issues.chromium.org/issues/new?component=2071994)하여 모두를 위해 더 빠르고 안전한 웹을 계속 구축하는 데 도움을 주시기 바랍니다.
+
+# 감사의 말씀
+
+`jxl-rs` 또는 Chrome 통합에 기여한 모든 분들께 감사드립니다. 특히 Chrome 통합과 `jxl-rs` 모두에 상당한 기여를 한 Helmut Januschka와 `jxl-rs` 자체에 상당한 기여를 한 Martin Bruse, Zoltan Szabadka, Sami Boukortt, Wonwoo Choi에게 특별히 감사드립니다.

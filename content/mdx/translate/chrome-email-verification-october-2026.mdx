@@ -1,0 +1,75 @@
+---
+title: "이메일 인증 업데이트, 2026년 10월"
+description: "Chrome의 이메일 인증 기능에 대한 업데이트 사항을 안내하며, Android 지원, 서드파티 오리진 트라이얼, 토큰 유효성 검사 시 키 탐색 처리 등이 포함됩니다."
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/email-verification-october-2026?hl=en
+createdAt: 2026-10-05
+---
+
+> 원문: [Email verification updates, October 2026](https://developer.chrome.com/blog/email-verification-october-2026?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# 사용자에게 표시되는 업데이트
+
+사용자 인터페이스 또는 사용자에게 표시되는 동작 변경 사항입니다.
+
+## Chrome Android 지원
+
+Chrome 154부터 Chrome for Android에서 이메일 인증을 지원합니다. API 또는 프로토콜은 동일하므로 verifier 또는 provider는 변경할 필요가 없습니다. 사용자가 브라우저에서 이메일 공급업체에 로그인되어 있어야 하는 등 동일한 사전 요구 사항이 적용됩니다.
+
+사용자는 **설정** > **주소 및 기타** > **인증된 이메일**에서 설정을 액세스할 수 있습니다.
+
+# Verifier 업데이트
+
+이메일을 수집하고 인증하는 웹사이트의 변경 사항입니다.
+
+## 서드파티 오리진 트라이얼
+
+Chrome 154부터 이메일 인증에 서드파티 오리진 트라이얼이 지원됩니다 (이슈 534377131 참조). 포함된 스크립트 또는 ID SDK를 제공하는 경우, 이제 서드파티 트라이얼 토큰을 등록하고 스크립트를 호스팅하는 페이지에 주입할 수 있습니다. 스크립트를 포함하는 웹사이트는 별도의 오리진 트라이얼 토큰을 등록할 필요가 없습니다.
+
+중요한 주의 사항이 있습니다: **오리진 트라이얼 등록자와 발급자는 동일 사이트여야 합니다**. 즉, 트라이얼에 등록된 오리진은 발급자 도메인과 일치해야 합니다.
+
+**지원되는 구성:**
+
+*   **발급자 도메인**: `issuer.example`
+*   **OT 등록자**: `https://issuer.example`
+*   **JavaScript 오리진**: `https://issuer.example` (또는 서브도메인 일치를 사용하는 `https://app.issuer.example`)
+
+**지원되지 않는 구성:**
+
+*   **서브도메인 등록자**: 발급자 도메인은 `issuer.example`이지만 OT 등록자는 `https://app.issuer.example`입니다.
+*   **교차 사이트 등록자**: 발급자 도메인은 `issuer.example`이지만 OT 등록자는 `https://different.example`입니다.
+
+## EVT에서 선택적 `kid` 처리
+
+이메일 인증 토큰(EVT)을 유효성 검사할 때, 서버는 발급자의 암호화 서명을 검증하기 위해 공급업체의 JSON Web Key Set(JWKS)를 가져옵니다. 키에는 선택적으로 `kid` 키 식별자가 포함될 수 있으며, 이는 JWT에도 선택적으로 포함되어 토큰에 서명하는 데 사용된 키를 나타냅니다. 토큰에 `kid` 클레임이 포함되어 있지 않으면(예: Gmail), 올바른 키를 찾기 위해 키를 반복합니다. 문서 및 데모에는 이를 위한 코드가 나와 있습니다.
+
+## 제공된 대로 정확한 `email` 클레임 반환
+
+Chrome 156부터 토큰의 이메일 주소는 양식 제출 시 제공된 그대로 반환됩니다 (이슈 549217427 참조). 이전에는 발급자가 계정의 표준 이메일 주소를 반환했을 수 있습니다(예: 양식 제출에 `first.last@example.com`이 포함된 경우 `First.Last@example.com` 반환). 반환된 이메일에 대해 항상 대소문자를 구분하지 않는 비교를 사용하는 것이 좋으므로 이는 브레이킹 변경이 아닐 것입니다.
+
+# Provider 업데이트
+
+이메일 공급업체의 변경 사항입니다.
+
+## 제공된 대로 정확한 `email` 클레임 반환
+
+Provider 측에서는 이 요구 사항이 더 엄격합니다. provider가 제공된 대로 이메일을 정확하게 반환하지 않으면 Chrome은 토큰을 거부합니다. 이는 확인 이메일을 보내는 것보다 더 많은 데이터를 노출하는 것을 방지합니다. 이메일 전송을 처리하는 것과 동일한 방식으로 서명된 사용자와 일치하는지 수신된 이메일을 검증합니다.
+
+## `Sec-Fetch-Dest`를 `email-verification`으로 이름 변경
+
+Chrome 154부터 토큰 발급 요청에 전송되는 `Sec-Fetch-Dest` 헤더가 하이픈을 사용하도록 업데이트되었습니다.
+
+*   **Chrome 154+**: `Sec-Fetch-Dest: email-verification`
+*   **Chrome 153**: `Sec-Fetch-Dest: emailverification`
+
+이 변경은 웹 플랫폼 명명 규칙과 함께 fetch destination 식별자를 표준화합니다 (이슈 546618576 참조).
+
+발급 엔드포인트가 `Sec-Fetch-Dest` 헤더를 유효성 검사하는 경우(CSRF 및 의도하지 않은 요청 컨텍스트로부터 보호하기 위해 권장), `email-verification`을 허용하도록 검사를 업데이트하십시오. 브라우저 롤아웃 중에 중단을 피하기 위해 전환 기간 동안 두 값 모두를 허용하십시오.
+
+# 리소스 및 피드백
+
+*   **문서**: 이메일 인증 개요, Verifier 가이드, Issuer 가이드
+*   **라이브 데모**: Verifier 데모 및 Issuer 데모
+*   **오리진 트라이얼**: 트라이얼 등록
+*   **피드백**: WICG 리포지토리에 이슈를 제출하거나 Blink>Identity>EVP 구성 요소 아래에 Chromium 버그를 보고하십시오.

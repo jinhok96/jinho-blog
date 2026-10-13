@@ -1,0 +1,79 @@
+---
+title: "연결 허용 목록: 웹 애플리케이션 네트워크 액세스 보안"
+description: Chrome 152에 도입된 연결 허용 목록 기능을 통해 웹 애플리케이션의 네트워크 접근을 엄격하게 제어하고 데이터 유출 위험을 줄일 수 있습니다.
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/connection-allowlist-announcement?hl=en
+createdAt: 2026-09-23
+---
+
+> 원문: [Connection allowlists: Secure your web application's network access](https://developer.chrome.com/blog/connection-allowlist-announcement?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+현대의 웹 애플리케이션은 점점 더 복잡해지고 있으며, 타사 스크립트와 때로는 생성 AI에서 동적으로 생성된 코드를 통합합니다. 이러한 통합은 강력하지만 데이터 유출의 위험을 크게 증가시킵니다. 이러한 위험을 해결하기 위해 Chrome 152는 [연결 허용 목록](https://wicg.github.io/connection-allowlists/)을 도입했습니다. 이는 문서 및 워커에 대한 엄격한 네트워크 샌드박스를 만들 수 있는 새로운 보안 메커니즘입니다.
+
+# 네트워크 통신 보안의 과제
+
+의존성을 관리하고 사이트 아키텍처를 보호하려면 페이지가 통신하는 엔드포인트에 대한 명시적인 제어가 필요합니다. 악성 스크립트 또는 잘못 생성된 AI 코드는 앱 수준의 검사를 우회하여 민감한 정보를 비인가된 서버로 보낼 수 있습니다.
+
+[콘텐츠 보안 정책(CSP)](https://developer.chrome.com/docs/privacy-security/csp)은 페이지가 로드하고 실행할 수 있는 것을 제어하는 강력한 도구이지만, 페이지가 통신하는 위치를 제한하도록 설계되지는 않았습니다. CSP는 요청을 특정 유형으로 분류하는데, 이는 광범위한 네트워크 경계만 필요한 경우 과도한 세분화를 초래합니다. 또한 CSP는 DNS 사전 가져오기, 탐색, WebRTC 등과 같은 메커니즘을 제외하고 모든 웹 플랫폼 API를 망라하지는 않습니다.
+
+# 연결 허용 목록이란 무엇인가요?
+
+연결 허용 목록은 브라우저를 페이지에서 발생하는 모든 네트워크 연결의 게이트키퍼로 만들어 이러한 위험을 해결합니다. Fetch 및 기타 웹 플랫폼 API를 사용하여 시작된 명시적인 네트워크 요청을 관리하는 직접적이고 간소화된 접근 방식을 제공합니다.
+
+`Connection-Allowlist` HTTP 응답 헤더를 보내면 모든 네트워크 통신에 허용되는 정확한 URL 패턴을 지정할 수 있습니다. 이는 프레임워크 수준의 기본 거부 방화벽을 시행합니다. 브라우저는 모든 연결을 설정하기 전에 대상이 허용 목록과 일치하는지 확인하고 일치하지 않으면 네트워크 수준에서 차단합니다.
+
+# 연결 허용 목록 사용 방법
+
+정책은 표준화된 `URLPattern` 구문을 사용하여 허용된 엔드포인트를 정의합니다. _이 정책은 각 창 또는 워커 컨텍스트에 대해 별개입니다._
+
+## 기본 구성
+
+`response-origin` 토큰을 사용하여 응답이 제공되는 출처를 허용 목록에 동적으로 추가하고 특정 API 엔드포인트를 추가할 수 있습니다.
+
+```
+Connection-Allowlist: ("https://api.example.com/*" response-origin)
+```
+
+## 리디렉션 및 WebRTC 처리
+
+기본적으로 연결 허용 목록은 모든 리디렉션 및 WebRTC 연결을 차단합니다. 허용 목록이 적용되는 경우, 명시적으로 선택하지 않는 한 리디렉션으로 이어지는 모든 요청은 차단됩니다.
+
+```
+Connection-Allowlist: ("https://api.example.com/*"); redirects=allow; webrtc=allow
+```
+
+## 위반 보고
+
+서비스를 중단하지 않고 잠재적인 중단을 모니터링하려면 보고 전용 모드로 기능을 배포할 수 있습니다. 이렇게 하면 정책이 구문 분석되고 연결을 차단하지 않고 지정된 Reporting API 엔드포인트로 위반 보고가 전송됩니다. 선택한 엔드포인트 이름을 실제 URL에 매핑하려면 `Reporting-Endpoints` HTTP 응답 헤더도 구성해야 합니다.
+
+```
+Connection-Allowlist-Report-Only: ("https://trusted.com/*"); report-to=security-endpoint
+```
+
+# 주요 사용 사례
+
+연결 허용 목록은 보안이 강화된 환경 또는 동적 환경을 위해 설계되었습니다. 다음의 경우 특히 유용합니다.
+
+*   **생성 AI 보안:** 웹 앱이 생성되거나 신뢰할 수 없는 코드(AI 생성 UI 또는 개발 샌드박스와 같은)를 실행하는 경우 해당 코드가 외부 도메인으로 데이터를 유출하는 것을 방지할 수 있습니다.
+*   **타사 감독:** 타사 스크립트 또는 웹 게임을 포함할 때, 이러한 스크립트가 손상되더라도 비인가된 서버로 데이터를 보내지 않도록 보장할 수 있습니다.
+*   **아키텍처 보호:** 앱의 민감한 부분 주위에 엄격한 네트워크 경계를 적용하여 승인된 백엔드와의 통신만 이루어지도록 보장할 수 있습니다.
+
+이 기능은 기존 CSP 기반 설정에 대한 _점진적 향상_으로 사용할 수 있습니다.
+
+[연결 허용 목록 기능](https://chromestatus.com/feature/5175745573945344)은 Chrome 152부터 공식적으로 사용할 수 있습니다. 지금 바로 헤더를 서버 응답에 추가하여 웹 애플리케이션을 보호할 수 있습니다.
+
+![Chrome DevTools 네트워크 패널에서 차단된 연결.](https://developer.chrome.com/static/blog/connection-allowlist-announcement/image/blocked-connection.png)
+
+Chrome DevTools 네트워크 패널에서 차단된 연결.
+
+개발 중 구성을 테스트하려면 다음을 수행하십시오.
+
+1.  로컬 개발 서버를 구성하여 `Connection-Allowlist` HTTP 응답 헤더를 보내도록 설정합니다.
+2.  Chrome DevTools를 열고 **네트워크** 패널에서 차단된 요청을 확인하거나 **문제** 탭에서 자세한 헤더 구문 분석 보고서를 확인합니다.
+
+# 추가 리소스
+
+*   [연결 허용 목록 사양](https://wicg.github.io/connection-allowlists/)
+*   [WICG GitHub 저장소](https://github.com/WICG/connection-allowlists)
+*   [ChromeStatus: 연결 허용 목록](https://chromestatus.com/feature/5175745573945344)

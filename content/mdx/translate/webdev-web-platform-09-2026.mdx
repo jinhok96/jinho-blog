@@ -1,0 +1,133 @@
+---
+title: 2026년 9월 웹 플랫폼의 새로운 기능
+description: 2026년 9월에 안정 및 베타 웹 브라우저에 추가된 새로운 기능들을 소개합니다.
+category: webdev
+sourceUrl: https://web.dev/blog/web-platform-09-2026?hl=en
+createdAt: 2026-10-02
+---
+
+> 원문: [New to the web platform in September](https://web.dev/blog/web-platform-09-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# 안정 버전 브라우저 릴리스
+
+2026년 9월은 격주 릴리스가 시작되는 첫 달입니다. 이로써 Chrome 153, Chrome 154, Firefox 155, Firefox 156, Firefox 157, Safari 27이 2026년 9월에 안정 버전으로 출시되었습니다. 이 게시물에서는 브라우저 전반에 걸쳐 새롭게 추가된 기능들을 살펴봅니다. 특히 Baseline Newly available에 도달한 많은 기능들이 있습니다.
+
+## `progress()` CSS 함수가 Baseline으로 지정됩니다
+
+Firefox 155는 [`progress()`](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/progress) CSS 수학 함수를 지원하여 Baseline Newly available로 지정합니다.
+
+`progress()` 함수는 시작 값과 끝 값 사이의 계산 위치를 나타내는 `<number>`를 반환합니다. 일반적으로 결과는 `0`과 `1` 사이로 제한되어 컨테이너 또는 뷰포트 크기에 따라 유동적인 크기, 불투명도 또는 색상을 제어하는 데 유용합니다. Firefox 155와 Safari 27은 `no-clamp` 키워드 옵션도 지원하여 반환된 진행률 값이 `0` 미만 또는 `1` 초과로 확장될 수 있도록 합니다.
+
+```
+.card {
+  opacity: progress(100vw, 320px, 1200px);
+}
+
+```
+
+## `alpha()`를 사용한 상대 알파 색상이 Baseline으로 지정됩니다
+
+Firefox 155와 Safari 27은 CSS Color 5의 [`alpha()`](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/color_value/alpha) 상대 색상 함수를 지원합니다.
+
+`alpha()` 함수는 원본 색상을 받아 색상 채널 및 색상 공간을 유지하면서 조정된 알파(투명도) 채널로 해당 색상을 반환합니다.
+
+```
+.overlay {
+  background-color: alpha(var(--brand-color) / 50%);
+}
+
+```
+
+Chrome 151, Firefox 155, Safari 27이 모두 `alpha()`를 지원함에 따라 이 함수는 이제 Baseline Newly available입니다.
+
+## `revert-rule` CSS 키워드가 Baseline으로 지정됩니다
+
+Safari 27은 [`revert-rule`](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/revert-rule) CSS 전역 키워드를 지원합니다.
+
+`revert`는 현재 스타일 규칙이 없었을 때 속성의 값이 어떻게 되었는지로 되돌리는 반면, `revert-rule`은 현재 스타일 규칙이 없었을 때 속성의 값으로 되돌립니다. Chrome, Firefox, 그리고 이제 Safari 27의 지원으로 `revert-rule`은 Baseline Newly available이 되었습니다.
+
+## `light-dark()`에서 `<image>` 값이 Baseline으로 지정됩니다
+
+Safari 27은 [`light-dark()`](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/color_value/light-dark) CSS 함수 내에서 `<image>` 값을 사용하는 것을 지원합니다.
+
+이전에는 `<color>` 값으로만 제한되었던 `light-dark()`는 이제 활성 라이트 또는 다크 `color-scheme`에 따라 두 가지 이미지(예: `url()` 이미지 또는 CSS 그라데이션) 간에 전환할 수 있습니다. Chrome, Firefox, Safari 27의 지원으로 `light-dark()`의 `<image>` 값은 이제 Baseline Newly available입니다.
+
+## `overflow-anchor`를 사용한 스크롤 앵커링이 Baseline으로 지정됩니다
+
+Safari 27은 스크롤 앵커링을 활성화하고 [`overflow-anchor`](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/overflow-anchor) CSS 속성을 지원합니다.
+
+스크롤 앵커링은 사용자가 페이지를 읽거나 상호 작용하는 동안 DOM 변경으로 인해 콘텐츠가 갑자기 점프하는 것을 방지하기 위해 뷰포트 위의 DOM 변경 시 스크롤 위치를 자동으로 조정합니다. `overflow-anchor: none`을 사용하여 특정 요소가 앵커 노드 역할을 하는 것을 옵트아웃할 수 있습니다. Safari 27이 Chrome 및 Firefox에 합류함에 따라 스크롤 앵커링은 이제 Baseline Newly available입니다.
+
+## `font-width` 속성과 `@font-face` 설명자가 Baseline으로 지정됩니다
+
+CSS Fonts 4는 `font-stretch`를 [`font-width`](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/font-width)로 대체하여 일반, 축소 또는 확장 글꼴을 선택하는 정식 이름으로 사용하고 `font-stretch`는 이전 별칭으로 유지했습니다.
+
+Firefox 155는 `font-width` CSS 속성, [`font-width`](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@font-face/font-width) `@font-face` 설명자 및 `CSSStyleDeclaration.fontWidth`를 지원합니다. Chrome 154는 `@font-face` 규칙의 `font-width` 설명자와 `FontFace` 객체의 `width` 속성을 추가했습니다. Safari의 기존 지원과 함께 `font-width`는 이제 Baseline Newly available입니다.
+
+## 지연 로드 이미지에 대한 `sizes="auto"`가 Baseline으로 지정됩니다
+
+Safari 27은 `loading="lazy"`를 사용하는 `<img>` 요소의 [`sizes`](https://developer.mozilla.org/docs/Web/API/HTMLImageElement/sizes) 속성에서 `auto` 키워드를 지원합니다.
+
+`sizes="auto"`(또는 `auto`로 시작하는 `sizes` 목록)를 지정하면 브라우저는 지연 로드된 이미지의 렌더링된 레이아웃 너비를 사용하여 `srcset`에서 가장 적합한 이미지 소스를 선택합니다. Chrome, Firefox, 그리고 이제 Safari 27의 지원으로 `sizes="auto"`는 Baseline Newly available입니다.
+
+## 비동기 반복 및 전송 가능한 `ReadableStream` 객체가 Baseline으로 지정됩니다
+
+Safari 27은 [`ReadableStream`](https://developer.mozilla.org/docs/Web/API/ReadableStream)에 대한 몇 가지 업데이트를 포함합니다.
+
+*   `for await...of` 루프 및 `ReadableStream.prototype.values()`를 사용하여 `ReadableStream` 객체를 비동기적으로 반복하는 기능 지원.
+*   `postMessage()`를 사용하여 컨텍스트 간에 `ReadableStream` 객체를 전송하는 기능 지원.
+*   이터러블 또는 비동기 이터러블 객체에서 `ReadableStream`을 생성하기 위한 [`ReadableStream.from()`](https://developer.mozilla.org/docs/Web/API/ReadableStream/from_static) 정적 메서드 지원(Firefox에서도 지원됨).
+
+Safari 27과 함께 비동기 이터러블 스트림 및 전송 가능한 `ReadableStream` 객체는 이제 Baseline Newly available입니다.
+
+## `AnimationEvent.animation` 및 `TransitionEvent.animation`이 Baseline으로 지정됩니다
+
+Safari 27은 `AnimationEvent`에 [`animation`](https://developer.mozilla.org/docs/Web/API/AnimationEvent/animation) 속성을, `TransitionEvent`에 [`animation`](https://developer.mozilla.org/docs/Web/API/TransitionEvent/animation) 속성을 추가합니다.
+
+이 속성은 CSS 애니메이션 또는 전환 이벤트와 관련된 `Animation` 객체를 반환하여 이벤트 리스너에서 직접 애니메이션을 검사하거나 제어하는 것을 더 쉽게 합니다. Chrome, Firefox, Safari 27이 이 속성을 지원함에 따라 이제 Baseline Newly available입니다.
+
+## `cookieStore.set()`의 `maxAge` 옵션이 Baseline으로 지정됩니다
+
+Safari 27은 [`cookieStore.set()`](https://developer.mozilla.org/docs/Web/API/CookieStore/set)으로 쿠키를 설정할 때 `maxAge` 옵션을 지원하여 절대 `expires` 타임스탬프를 계산하는 대신 쿠키의 수명을 초 단위 기간으로 지정할 수 있습니다. Chrome, Firefox, Safari 27의 지원으로 `maxAge` 옵션은 이제 Baseline Newly available입니다.
+
+## Safari 27의 사용자 정의 가능한 `<select>`
+
+Safari 27은 `appearance: base-select` 및 [`<selectedcontent>`](https://developer.mozilla.org/docs/Web/HTML/Reference/Elements/selectedcontent) 요소를 사용하여 사용자 정의 가능한 `<select>` 메뉴를 지원하며, 이는 Chrome과 함께 제공됩니다.
+
+`<select>`와 `::picker(select)` 의사 요소를 `appearance: base-select`로 옵트인하면 컨트롤이 스타일링 가능한 기본 모양으로 전환되어 `<option>` 요소 내의 풍부한 HTML 콘텐츠와 버튼 및 드롭다운 피커에 대한 사용자 정의 스타일링이 가능합니다.
+
+## Chrome의 선언적 `<camera>` 및 `<microphone>` 요소
+
+Chrome 153은 `<camera>` 및 `<microphone>` HTML 기능 요소를 도입합니다.
+
+`<usermedia>` 요소를 기반으로 하는 `<camera>` 및 `<microphone>`은 페이지 로드 시 스크립트 시작 권한 프롬프트를 트리거하지 않고 단일 기능 비디오 또는 오디오 캡처 액세스를 요청하기 위한 전용 사용자 활성화 선언적 제어를 제공합니다.
+
+## JavaScript `Iterator` 및 `Promise` 추가 기능
+
+Chrome 153은 [`Iterator.prototype.join()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator/join)과 함께 [`Iterator.zip()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator/zip) 및 [`Iterator.zipKeyed()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Iterator/zipKeyed)을 사용한 공동 반복을 추가합니다.
+
+Firefox 155는 사전 객체 형태의 프로미스를 받아 동일한 키를 가진 객체로 해결되는 [`Promise.allKeyed()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/allKeyed) 및 [`Promise.allSettledKeyed()`](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Promise/allSettledKeyed)를 구현합니다.
+
+## Firefox 155의 WebTransport 업데이트
+
+Firefox 155는 [`WebTransport`](https://developer.mozilla.org/docs/Web/API/WebTransport) 구현을 확장합니다.
+
+*   [`WebTransport()`](https://developer.mozilla.org/docs/Web/API/WebTransport/WebTransport) 생성자의 `protocols` 옵션 및 [`WebTransport.protocol`](https://developer.mozilla.org/docs/Web/API/WebTransport/protocol) 속성을 사용한 애플리케이션 수준 프로토콜 협상 지원. Chrome, Safari, 그리고 이제 Firefox 155의 지원으로 `WebTransport.protocol`은 Baseline Newly available입니다.
+*   [`createSendGroup()`](https://developer.mozilla.org/docs/Web/API/WebTransport/createSendGroup), [`draining`](https://developer.mozilla.org/docs/Web/API/WebTransport/draining), [`exportKeyingMaterial()`](https://developer.mozilla.org/docs/Web/API/WebTransport/exportKeyingMaterial), 및 [`WebTransportDatagramDuplexStream.createWritable()`](https://developer.mozilla.org/docs/Web/API/WebTransportDatagramDuplexStream/createWritable) 지원.
+
+## Safari 27의 Service Worker 정적 라우팅 API
+
+Safari 27은 [`InstallEvent.addRoutes()`](https://developer.mozilla.org/docs/Web/API/InstallEvent/addRoutes)를 통해 Service Worker 정적 라우팅 API를 지원합니다.
+
+이 API를 통해 서비스 워커는 설치 시 선언적 라우팅 규칙을 등록하여 일치하는 요청이 서비스 워커 시작을 건너뛰고 네트워크 또는 캐시에서 직접 가져올 수 있으므로 탐색 성능이 향상됩니다.
+
+# 베타 버전 브라우저 릴리스
+
+베타 버전 브라우저는 브라우저의 다음 안정 버전에 포함될 기능 미리보기를 제공합니다. 전 세계에 릴리스되기 전에 사이트에 영향을 줄 수 있는 새로운 기능이나 제거된 기능을 테스트하기에 좋은 시기입니다. 이번 달의 새로운 베타 버전은 Chrome 155, Chrome 156, Firefox 158, Safari 27.2입니다.
+
+Chrome 155 베타에는 CSS `margin-trim`, `symbols()`, `text-decoration-skip-spaces`와 함께 JPEG XL (`image/jxl`) 디코딩 지원, 텍스트 모듈 가져오기 (`import ... with { type: "text" }`), Digital Credentials API 발행 지원이 포함됩니다.
+
+Chrome 156 베타에는 CSS `random()` 함수, CSS `corner` 단축 속성, 단일 축 스크롤 컨테이너, `scroll-snap-type: pair`, `image-animation` 속성 및 `:animated-image` 의사 클래스, 미디어 요소 상태 의사 클래스 (`:playing`, `:paused`, `:seeking`, `:buffering`, `:stalled`, `:muted`, `:volume-locked`), 지연 모듈 평가 (`import defer`), HTML `<install>` 요소 및 Web Install API가 포함됩니다.
+
+Safari 27.2 베타는 `normal`과 함께 사용할 때 `safe` 및 `unsafe` 오버플로 정렬을 지원하고, 고정 위치 상자와 `::picker(select)` 요소에서 `safe` 정렬을 활성화하며, `display: grid-lanes`의 경우 `flow-tolerance`를 `fit-tolerance`로 이름을 변경합니다.

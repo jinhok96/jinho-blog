@@ -1,0 +1,46 @@
+---
+title: 코딩 에이전트를 사용하여 Interop 2027 지원 기능을 찾아보세요
+description: 개발자는 코딩 에이전트를 사용하여 프로젝트에서 Interop 2027 지원 기능의 격차를 식별하고 웹 플랫폼의 미래를 만드는 데 기여할 수 있습니다.
+category: webdev
+sourceUrl: https://web.dev/blog/coding-agents-interop-proposals?hl=en
+createdAt: 2026-09-18
+---
+
+> 원문: [Find features to support for Interop 2027 with your coding agent](https://web.dev/blog/coding-agents-interop-proposals?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# Interop 2027 지원 기능을 찾아보세요
+
+웹 개발자는 유지보수보다는 최신 및 상호 운용 가능한 웹 기능을 사용하여 더 나은 솔루션으로 대체하고 싶은 레거시 코드에 많은 시간을 할애합니다. 더 많은 기능이 항상 [Baseline](https://web.dev/baseline)이 되고 있지만, 개발자의 요구를 해결할 수 있는 기능은 여전히 남아 있습니다.
+
+[Interop 2027](https://web.dev/blog/interop-2027-proposals)이 진행 중입니다. 즉, 브라우저 공급업체에 일상 업무에서 가장 도움이 될 웹 기능이 무엇인지 알릴 기회가 있습니다. **하지만 제안 기간은 9월 23일에 마감됩니다.**
+
+제안하거나 투표할 기능을 찾기 위해 GitHub 이슈 페이지를 스크롤하는 대신, 터미널이나 IDE의 코딩 에이전트를 사용하여 현재 프로젝트의 웹 기능 격차를 찾을 수 있습니다. 다음은 기능을 찾는 데 사용할 수 있는 샘플 프롬프트입니다.
+
+```
+Interop 2027 정렬을 위해 이 코드베이스를 감사하세요:
+
+1.  **프로젝트 스캔**:
+   -   DevTools MCP를 사용하여 Lighthouse "Baseline Features" 감사를 실행합니다.
+   -   Polyfill, 래퍼 라이브러리, `@supports` 블록 및 사용자 지정 JS 임시 방편에 대한 파일을 스캔합니다.
+
+2.  **열린 제안과 일치**:
+    -   `gh issue list -R web-platform-tests/interop -l focus-area-proposal -s open`을 사용하여 열린 제안을 가져옵니다.
+    -   사용 중이거나 호환성 문제로 인해 사용하지 못하는 기능과 직접적으로 일치하는 제안을 나열합니다.
+
+3.  **제안되지 않은 격차 찾기**:
+    -   Interop 2027 제안이 누락된 필요한 플랫폼 기능을 식별합니다.
+    -   각 후보에 대해 안정적인 사양(W3C/WHATWG)이 있는지, ≥1개의 엔진 구현이 있는지, WPT 테스트가 있는지, 공급업체 차단이 없는지 확인합니다.
+    -   훌륭한 제안이 무엇인지에 대한 자세한 내용은 https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md를 참조하십시오.
+
+**출력**: **투표할 제안**(제거될 코드/라이브러리 추정치 포함) 및 **제안할 검증된 기능**(사양/WPT 링크 포함)의 요약 테이블입니다. 두 테이블 모두 영향도가 높은 순서대로 내림차순으로 정렬하며, 영향도는 제거된 코드/라이브러리 추정치로 측정됩니다.
+
+```
+
+이 프롬프트를 실행하면 에이전트는 프로젝트에서 웹 기능 사용을 분석하고, 찾은 내용을 [열린 Interop 제안](https://github.com/web-platform-tests/interop/issues?q=is%3Aissue%20state%3Aopen%20label%3Afocus-area-proposal) 목록과 비교 분석합니다. 에이전트의 출력은 다음과 같습니다.
+
+1.  **현재 사용 중인 기능**: 각 기능에 대한 웹 기능 ID([async-clipboard](https://webstatus.dev/features/async-clipboard)와 같은), Baseline 상태, 코드베이스에서의 잠재적 발생 횟수, 감지된 Polyfill 또는 기능 사용이 제한되는 기타 영역이 포함됩니다.
+2.  **투표할 제안**: 투표할 수 있는 현재 Interop 제안이 있는 코드베이스와 관련된 기능 목록입니다. 이것이 최적의 결과입니다. 이 목록에서 프로젝트에 유용한 기능을 발견하면 투표하십시오!
+3.  **제안할 기능**: 프로젝트와 관련이 있지만 기존 제안이 없을 가능성이 있는 기능으로, 직접 제안할 수 있습니다. 이를 위해 [훌륭한 제안이 무엇인지](https://web.dev/blog/interop-2027-proposals#what_makes_a_good_project_proposal) 읽은 다음 Interop 저장소의 [제안 가이드](https://github.com/web-platform-tests/interop/blob/main/proposal_guide.md)를 읽어보십시오. 기능이 제안 기준에 부합하면 [저장소에 이슈를 제출](https://github.com/web-platform-tests/interop/issues/new/choose)하십시오. 그렇게 할 경우 **Focus area proposal**을 선택하는 것을 잊지 마십시오. 또한 [제안 제출 규칙](https://github.com/web-platform-tests/interop/blob/main/.github/ISSUE_TEMPLATE/focus-area-proposal.yml)에 따라 제안은 사람이 작성해야 한다는 점에 유의하십시오.
+
+Interop 2027은 개발자가 일상 워크플로에 가장 중요한 기능과 수정 사항을 강조하여 웹 플랫폼의 미래를 형성할 수 있는 기회입니다. 코딩 에이전트는 가장 중요하게 생각하는 기능을 발견하고 지원하는 것을 이전보다 더 쉽게 만들 수 있습니다. 9월 23일 마감일 전에 제안을 제출하거나 투표하십시오!

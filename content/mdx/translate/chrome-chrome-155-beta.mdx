@@ -1,0 +1,88 @@
+---
+title: Chrome 155 베타
+description: "Chrome 155 베타 버전이 출시되어 CSS, JavaScript, Web API의 다양한 기능 개선 및 지원이 추가되었습니다."
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/chrome-155-beta?hl=en
+createdAt: 2026-09-16
+---
+
+> 원문: [Chrome 155 beta](https://developer.chrome.com/blog/chrome-155-beta?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# CSS 및 UI
+
+## CSS `symbols()`
+
+CSS `symbols()` 함수를 사용하면 개발자가 명명된 `@counter-style` at-rule을 먼저 선언하지 않고도 인라인으로 카운터 스타일을 정의할 수 있습니다. 이 함수는 문자열 기호 목록과 선택적 카운팅 시스템(cyclic, numeric, alphabetic, symbolic, fixed)으로 익명 카운터 스타일을 구축하며, `list-style-type`, `list-style` 단축 속성, `counter()`, `counters()`에서 카운터 스타일로 사용할 수 있습니다.
+
+## CSS 코너 단축 속성
+
+CSS `corner` 단축 속성과 각 코너에 대한 하위 단축 속성(`corner-top-left`, `corner-top-right`, `corner-bottom-left`, `corner-bottom-right`), 그리고 물리적(`corner-top`, `corner-bottom`) 및 논리적(`corner-block-start`, `corner-block-end` 등) 가장자리 단축 속성을 구현합니다. 이를 통해 단일 선언에서 개별 코너의 `border-radius`와 `corner-shape`를 모두 설정할 수 있습니다. 또한, `corners`는 `corner` 단축 속성의 호환성 별칭으로 유지됩니다.
+
+이 기능에는 캐싱 제어도 포함됩니다. 기본적으로 각 `random()` 함수는 새롭고 고유한 값으로 해석됩니다. 웹 개발자는 `<random-key>` 값을 함수의 첫 번째 인수로 전달하여 속성과 요소 간에 무작위 값이 공유되는 방식을 제어함으로써 이 기본값을 재정의할 수 있습니다.
+
+## CSS `text-decoration-skip-spaces`
+
+`text-decoration-skip-spaces` CSS 속성은 텍스트 장식선(예: 밑줄, 윗줄, 취소선)이 공백 문자를 건너뛸지 여부를 제어합니다. 이를 통해 개발자는 장식이 공백 아래에 그려지는 것을 방지할 수 있으며, 이는 종종 시각적으로 더 보기 좋습니다.
+
+## CSS `margin-trim`
+
+`margin-trim` CSS 속성을 사용하여 컨테이너의 첫 번째 또는 마지막 자식 앞이나 뒤의 마진을 생략할 수 있습니다. 이는 일반 블록 컨테이너 및 다중 컬럼 컨테이너에서 지원됩니다.
+
+# JavaScript
+
+## 모듈 실패 캐싱 방지
+
+현재 웹 개발자는 실패한 모듈 로드를 다시 시도할 수 없습니다. 이러한 실패는 캐싱되기 때문입니다(다시 시도하면 즉시 실패로 이어집니다). 모듈 로드 동작의 이러한 변경으로 인해 실패한 모듈 로드를 수동으로 다시 시도할 수 있게 되어(예: `import()`를 다시 호출하여) 불안정한 네트워크에서 모듈을 사용할 때 개발자(및 사용자)의 실제 불편함을 해결합니다.
+
+## 텍스트 가져오기(텍스트 모듈)
+
+JavaScript에 모듈 `import … with { type: "text" }` 문을 추가하기 위한 TC39 제안입니다. 가져오기 속성은 텍스트 데이터를 문자열 값으로 로드합니다.
+
+# Web API
+
+## 추가 창 제어
+
+`window-management` 권한이 있는 웹 애플리케이션은 창을 `maximize()`, `minimize()`, `restore()`할 수 있으며 `setResizable()`을 통해 크기 조정을 방지할 수 있습니다. 또한, 새로운 CSS 미디어 기능 `display-state` 및 `resizable`을 통해 스크립트와 콘텐츠가 해당 창 상태 및 크기 조정 가능성에 적응할 수 있습니다. 이러한 기능은 특히 제목 표시줄 창 제어와 관련하여 VDI 원격 애플리케이션 창의 사용성을 개선합니다. 새로운 기능은 기존 [Window Management API](https://chromestatus.com/feature/5252960583942144) 기능을 향상시킵니다.
+
+## WebCrypto의 알고리즘 업데이트
+
+NIST에서 표준화한 여러 양자 후 암호화 알고리즘을 Web Cryptography API에 추가합니다.
+
+*   ML-KEM (768, 1024)
+*   ML-DSA (44, 65, 87)
+*   ChaCha20-Poly1305
+*   X-Wing
+
+추가 정보는 초안 사양에서 확인할 수 있습니다: https://wicg.github.io/webcrypto-modern-algos/
+
+## 디지털 자격 증명 API (발급 지원)
+
+이를 통해 발급 웹사이트(예: 대학, 정부 기관 또는 은행)는 사용자의 모바일 지갑 애플리케이션에 디지털 자격 증명을 직접 프로비저닝(발급)하는 프로세스를 안전하게 시작할 수 있습니다. Android에서는 Android `IdentityCredential` CredMan 시스템(Credential Manager)을 사용합니다. 데스크톱에서는 Digital Credentials 프레젠테이션과 유사한 CTAP 프로토콜을 사용하여 크로스 디바이스 접근 방식을 사용합니다.
+
+## Blink에서의 JPEG XL 디코딩 지원 (image/jxl)
+
+메모리 안전한 순수 Rust 디코더인 [jxl-rs](https://github.com/libjxl/jxl-rs)를 사용하여 Blink에서 JPEG XL (`image/jxl`) 이미지 디코딩을 지원합니다. JPEG XL은 ISO/IEC 18181로 표준화된 최신 이미지 형식으로, 향상된 체감 로딩 성능을 위한 점진적 디코딩, 넓은 색 영역, HDR 및 높은 비트 심도 지원, 애니메이션 지원을 제공합니다.
+
+## 표시되지 않는 iframe에서 미디어 재생 일시 중지
+
+`media-playback-while-not-visible` 권한 정책을 추가하여 임베더가 현재 숨겨진 임베디드 iframe의 미디어 재생 여부를 제어할 수 있도록 합니다. 여기에는 `display` 속성이 `none`으로 설정된 iframe, `visibility` 속성이 `hidden`으로 설정된 iframe 또는 0 면적(너비 또는 높이가 0) iframe이 포함됩니다. 숨겨져 있는 동안 임베디드 iframe에서 소리가 나는 미디어를 렌더링하려는 시도는 차단됩니다. 프레임이 다시 표시되면 이러한 제한은 해제됩니다. 이를 통해 개발자는 더 사용자 친화적인 환경을 구축하고 사용자에게 보이지 않는 콘텐츠의 재생을 브라우저가 처리하도록 하여 성능을 개선할 수 있습니다.
+
+## 사전 정의된 색 공간 `srgb-linear` 및 `display-p3-linear`
+
+`PredefinedColorSpace`에 CSS에서 정의한 `srgb-linear` 및 `display-p3-linear` 색 공간을 추가하여 캔버스에서 사용할 수 있도록 합니다.
+
+## HTML 삽입 및 스트리밍 메서드 갱신
+
+기존 문서에 마크업을 동적으로 삽입하는 데 일관된 방법을 제공하는 여러 HTML 설정 메서드를 노출합니다.
+
+*   HTML을 인수로 받아 `insertAdjacentHTML()`을 효과적으로 대체하는 위치 기반 메서드(`before()`, `after()`, `append()`, `prepend()`, `replaceWith()`).
+*   `WritableStream`을 반환하는 스트리밍 메서드(`streamAppendHTML()`, `streamAppendHTMLUnsafe()` 등).
+*   `createContextualFragment` 동작을 모방하는 `SetHTMLUnsafeOptions`의 일부로 `{runScripts}` 전달.
+*   트러스티드 타입이 스크립트 모드 및 새니타이저를 재정의할 수 있도록 `createParserOptions` 지원.
+
+자세한 내용은 [Declarative Partial Updates 문서](https://developer.chrome.com/docs/web-platform/declarative-partial-updates#renewed_html_insertion_and_streaming_methods)를 참조하십시오.
+
+## WebTransport 헤더 및 responseHeaders
+
+`WebTransportOptions`를 사용하여 사용자 정의 HTTP 요청 헤더를 전달하고 `WebTransport` 인스턴스를 통해 서버 응답 헤더를 검사하는 지원을 추가합니다. 이를 통해 웹 애플리케이션은 초기 `CONNECT` 핸드셰이크 중에 메타데이터, 인증 토큰 및 사용자 정의 매개변수를 제공하고 연결이 설정된 후 서버에서 제공한 헤더에 액세스할 수 있습니다.

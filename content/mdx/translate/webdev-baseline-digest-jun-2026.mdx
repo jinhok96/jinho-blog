@@ -1,0 +1,130 @@
+---
+title: 2026년 6월 Baseline 월간 요약
+description: "2026년 6월, `field-sizing`이 Baseline Newly Available이 되어 폼 컨트롤이 콘텐츠에 맞춰 자동 조절됩니다."
+category: webdev
+sourceUrl: https://web.dev/blog/baseline-digest-jun-2026?hl=en
+createdAt: 2026-07-17
+---
+
+> 원문: [June 2026 Baseline monthly digest](https://web.dev/blog/baseline-digest-jun-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# Web Platform Status의 Baseline 알림
+
+Baseline Alerts를 통해 Web Platform Status 대시보드에서 웹 기능의 상호 운용 가능 시점을 추적하는 것이 더 쉬워졌습니다. GitHub 계정으로 로그인하면 기능이 Baseline Newly Available, Widely Available 상태가 되거나 새로운 브라우저 구현이 있을 때 알림을 구독할 수 있습니다. 알림은 월간, 주간 또는 즉시 예약하여 이메일 업데이트 또는 사용자 지정 RSS 피드를 받을 수 있도록 구성할 수 있습니다. 저장된 검색(예: 모든 HTML 기능)으로 알림 범위를 지정하거나, 사용자 지정 뉴스레터를 만들거나, 공유 가능한 기능 목록을 생성하거나, 엔지니어링 팀에 알림을 보내기 위해 Slack 웹훅을 구성할 수 있습니다.
+
+[Introducing Baseline Alerts](https://web.dev/blog/baseline-alerts)에서 자세히 알아보세요.
+
+# Baseline Newly available 기능
+
+이 섹션의 기능은 2026년 6월 기준으로 핵심 브라우저 세트에서 지원되며, 이제 Baseline Newly Available 상태입니다.
+
+## `field-sizing`
+
+`field-sizing` CSS 속성은 `<textarea>`, `<input>`, `<select>`와 같은 폼 요소의 크기 조정 동작을 제어하며, 이 요소들은 전통적으로 기본 고정 크기를 가집니다. `field-sizing: content`를 사용하면 폼 컨트롤이 콘텐츠에 맞게 자동으로 확장 또는 축소되어 사용자 지정 JavaScript 자동 크기 조정 스크립트의 필요성을 줄여줍니다.
+
+[field-sizing에 대한 MDN 참조 페이지](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/field-sizing)에서 자세히 알아보세요.
+
+# Baseline Widely available 기능
+
+다음 기능들은 Baseline Widely Available 상태가 되어 프로젝트에서 광범위하게 호환되고 사용할 수 있습니다.
+
+## `:has()` 의사 클래스
+
+`:has()` CSS 부모 선택자는 자손 또는 후속 형제 요소에 따라 요소를 스타일링할 수 있게 해줍니다. 이 함수형 의사 클래스는 DOM 구조를 검사하기 위해 JavaScript가 필요 없이 CSS에서 직접 조건부 레이아웃 패턴을 사용할 수 있도록 합니다.
+
+[ :has 의사 클래스에 대한 MDN 페이지](https://developer.mozilla.org/docs/Web/CSS/Reference/Selectors/:has)에서 자세히 읽어보세요.
+
+## `HTMLIFrameElement.loading`
+
+`<iframe>` 요소의 `loading` 속성은 임베디드 프레임에 대한 지연 로딩을 활성화합니다. `loading="lazy"`를 지정하면 브라우저는 뷰포트에 가까워질 때까지 화면 밖의 iframe 로드를 연기하여 네트워크 대역폭과 초기 페이지 로드 오버헤드를 절약합니다.
+
+[HTMLIFrameElement.loading에 대한 MDN 참조](https://developer.mozilla.org/docs/Web/API/HTMLIFrameElement/loading)에서 세부 정보를 확인하세요.
+
+## `CanvasRenderingContext2D.reset()`
+
+2D 캔버스 컨텍스트의 `reset()` 메서드는 그리기 컨텍스트 상태를 지워 변환, 클리핑 경로, 선 스타일 및 채우기 스타일과 같은 속성을 기본값으로 재설정합니다. 이를 통해 캔버스 컨텍스트를 수동 속성 정리 없이 깨끗하게 재사용할 수 있습니다.
+
+[CanvasRenderingContext2D.reset에 대한 MDN 문서](https://developer.mozilla.org/docs/Web/API/CanvasRenderingContext2D/reset)에서 더 알아보세요.
+
+## `cap` 길이 단위
+
+`cap` 폰트 상대 단위는 요소 폰트의 명목 대문자 높이에 해당합니다. 대문자의 높이에 상대적으로 요소를 정렬하고 크기를 조정할 수 있어 정확한 타이포그래피 레이아웃이 가능합니다.
+
+[길이 단위에 대한 MDN 참조](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/length#cap)에서 자세히 알아보세요.
+
+## `counter-set` 속성
+
+`counter-set` CSS 속성은 지정된 값으로 CSS 카운터를 설정하며, `counter-reset` 및 `counter-increment`를 보완합니다. 번호가 매겨진 목록, 문서 개요 또는 사용자 지정 카운터 시퀀스를 조작할 때 제어를 제공합니다.
+
+[counter-set에 대한 MDN 페이지](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/counter-set)에서 세부 정보를 읽어보세요.
+
+## `createImageBitmap()`
+
+`createImageBitmap()` 정적 메서드는 `<img>`, `<canvas>`, `Blob`, `ImageData`를 포함한 다양한 이미지 소스에서 비동기 비트맵 이미지를 생성합니다. 메인 스레드 외부에서 이미지를 디코딩하므로 복잡한 캔버스 그래픽을 처리할 때 UI 성능이 차단되는 것을 방지합니다.
+
+[createImageBitmap에 대한 MDN 문서](https://developer.mozilla.org/docs/Web/API/Window/createImageBitmap)에서 구현 세부 정보를 확인하세요.
+
+## `<easing-function>` 데이터 유형
+
+`<easing-function>` CSS 데이터 유형은 전환 및 애니메이션을 위한 수학적 변화율 곡선을 설명합니다. `ease-in` 또는 `cubic-bezier()`와 같은 표준 키워드 외에도 `linear()`와 같은 함수를 지원하여 사용자 지정 스프링 또는 바운스 효과를 구성할 수 있습니다.
+
+[easing-function에 대한 MDN 참조](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/easing-function)에서 사용 방법을 알아보세요.
+
+## `&` 네스팅 선택자
+
+`&` 네스팅 선택자는 내장 CSS 네스팅을 사용할 때 자식 규칙 선택자를 부모 선택자에 명시적으로 고정합니다. 중첩된 hover, focus 또는 의사 클래스 상태를 정의할 때 명확성과 올바른 특이성 규칙을 보장합니다.
+
+[네스팅 선택자에 대한 MDN 가이드](https://developer.mozilla.org/docs/Web/CSS/Reference/Selectors/Nesting_selector)에서 세부 정보를 읽어보세요.
+
+## `rel="preload"`를 사용한 반응형 사전 로딩
+
+`<link rel="preload">` 요소의 `media` 속성은 핵심 자산의 반응형 사전 로딩을 활성화합니다. `rel="preload"`와 미디어 쿼리를 결합하면 브라우저는 로딩 라이프사이클 초기에 사용자 뷰포트 너비 또는 디스플레이 특성과 일치하는 자산만 다운로드합니다.
+
+[rel="preload"에 대한 MDN 문서](https://developer.mozilla.org/docs/Web/HTML/Reference/Attributes/rel/preload#including_media)에서 사용 방법을 알아보세요.
+
+## `HTMLMediaElement.preservesPitch`
+
+`<audio>` 및 `<video>` 요소의 `preservesPitch` 속성은 `playbackRate`를 변경할 때 브라우저가 오디오 피치를 조정하는지 여부를 제어합니다. `false`로 설정하면 미디어 재생 속도를 높이거나 낮출 때 피치 변경이 허용됩니다.
+
+[HTMLMediaElement.preservesPitch에 대한 MDN 페이지](https://developer.mozilla.org/docs/Web/API/HTMLMediaElement/preservesPitch)에서 세부 정보를 확인하세요.
+
+## `:dir()` 의사 클래스
+
+`:dir()` CSS 의사 클래스는 텍스트 방향(예: `ltr` 또는 `rtl`)에 따라 요소를 일치시키며, `dir`과 같은 HTML 속성 또는 계산된 텍스트 컨텍스트에서 상속된 방향과 일치합니다.
+
+[:dir 의사 클래스에 대한 MDN 페이지](https://developer.mozilla.org/docs/Web/CSS/Reference/Selectors/:dir)에서 자세히 알아보세요.
+
+## `pow()` 수학 함수
+
+`pow()` CSS 함수는 CSS 선언 내에서 직접 지수 값을 계산하며, 밑수를 지수로 올립니다(예: `pow(2, 3)`). 이를 통해 반응형 스케일링과 수학적 그리드 관계를 단순화할 수 있습니다.
+
+[pow 함수에 대한 MDN 참조](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/pow)에서 세부 정보를 읽어보세요.
+
+## CSS `mask` 속성
+
+`mask` CSS 축약 속성은 이미지 또는 그라디언트를 클리핑 레이어로 사용하여 요소의 일부를 숨깁니다. `mask-image`, `mask-position`, `mask-repeat`과 같은 하위 속성을 결합하여 복잡한 시각적 마스킹 효과를 만듭니다.
+
+[mask 속성에 대한 MDN 페이지](https://developer.mozilla.org/docs/Web/CSS/Reference/Properties/mask)에서 더 알아보세요.
+
+## `@media (scripting)`
+
+`scripting` 미디어 기능은 클라이언트 측 스크립팅(예: JavaScript)이 브라우저 컨텍스트에서 활성화되고 사용 가능한지 테스트합니다. 이를 통해 점진적 향상 스타일을 JavaScript 활성화 환경 또는 비활성화 환경에 맞춰 적용할 수 있습니다.
+
+[scripting 미디어 기능에 대한 MDN 참조](https://developer.mozilla.org/docs/Web/CSS/Reference/At-rules/@media/scripting)에서 자세히 알아보세요.
+
+## `URL.canParse()`
+
+`URL.canParse()` 정적 메서드는 예외를 발생시키지 않고 주어진 문자열이 유효하고 파싱 가능한 URL인지(선택적 기본 URL 포함) 확인하여 `URL` 객체를 인스턴스화하기 전에 런타임 URL 유효성 검사를 단순화합니다.
+
+[URL.canParse에 대한 MDN 문서](https://developer.mozilla.org/docs/Web/API/URL/canParse_static)에서 구현 세부 정보를 확인하세요.
+
+## Storage Access API
+
+Storage Access API는 타사 `<iframe>` 내에 임베드된 사이트 간 콘텐츠가 파티셔닝되지 않은 쿠키 및 스토리지 액세스를 요청할 수 있는 메커니즘을 제공하여 도메인 경계 전반에 걸친 인증 및 상태 기반 상호 작용을 가능하게 합니다.
+
+[Storage Access API에 대한 MDN 페이지](https://developer.mozilla.org/docs/Web/API/Storage_Access_API)에서 세부 정보를 읽어보세요.
+
+# 마무리
+
+Baseline 관련하여 놓친 부분이 있다면 알려주세요. 다음 호에서 반드시 반영하겠습니다! 질문이 있거나 Baseline에 대한 피드백을 제공하고 싶으시면 [이슈 추적기](https://github.com/web-platform-dx/web-features/issues)에 이슈를 제출할 수 있습니다.

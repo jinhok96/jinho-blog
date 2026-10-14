@@ -1,0 +1,155 @@
+{
+ "model": "Llama-3.2-3B-Instruct-Q4_K_M.gguf",
+ "file_gb": 2.019377696,
+ "arch": "llama",
+ "load_s": 18.75318957400009,
+ "speed_prompt_tokens": 329,
+ "speed": [
+  {
+   "first_token_s": 3.813470909999978,
+   "total_s": 17.276982584000052,
+   "gen_tokens": 127,
+   "gen_tok_per_s": 9.358628198267443,
+   "text": "Here are 5 short bullet points summarizing the email:\n\n\u2022 The office move is now scheduled for Saturday, November 7, starting at 8 a.m.\n\u2022 Pack your desk into labeled boxes by 5 p.m. on Thursday, November 5.\n\u2022 Laptops, chargers, and valuable items should be taken home by Thursday, November 5.\n\u2022 Monitors and docking stations will stay at the current desk, while new ones will be set up at the new office before Monday.\n\u2022 A new badge must be picked up from reception on Monday, November 9, between 8 and 10 a.m."
+  },
+  {
+   "first_token_s": 2.9303531680000106,
+   "total_s": 16.50438609799994,
+   "gen_tokens": 127,
+   "gen_tok_per_s": 9.282429227170045,
+   "text": "Here are 5 short bullet points summarizing the email:\n\n\u2022 The office move is now scheduled for Saturday, November 7, starting at 8 a.m.\n\u2022 Pack your desk into labeled boxes by 5 p.m. on Thursday, November 5.\n\u2022 Laptops, chargers, and valuable items should be taken home by Thursday, November 5.\n\u2022 Monitors and docking stations will stay at the current desk, while new ones will be set up at the new office before Monday.\n\u2022 A new badge must be picked up from reception on Monday, November 9, between 8 and 10 a.m."
+  },
+  {
+   "first_token_s": 2.7962104649999446,
+   "total_s": 16.159462856000005,
+   "gen_tokens": 127,
+   "gen_tok_per_s": 9.428842344163089,
+   "text": "Here are 5 short bullet points summarizing the email:\n\n\u2022 The office move is now scheduled for Saturday, November 7, starting at 8 a.m.\n\u2022 Pack your desk into labeled boxes by 5 p.m. on Thursday, November 5.\n\u2022 Laptops, chargers, and valuable items should be taken home by Thursday, November 5.\n\u2022 Monitors and docking stations will stay at the current desk, while new ones will be set up at the new office before Monday.\n\u2022 A new badge must be picked up from reception on Monday, November 9, between 8 and 10 a.m."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "To find the sale price, calculate 25% of the original price and subtract it from the original price.\n\n25% of $40 = 0.25 * $40 = $10\n\nSale price = Original price - Discount\n= $40 - $10\n= $30\n\nThe sale price is $30.",
+   "ok": true,
+   "total_s": 7.08639507099997
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "To find the total number of pens, multiply the number of boxes by the number of pens in each box: \n3 boxes * 12 pens/box = 36 pens\n\nThen, subtract the number of pens given away: \n36 pens - 7 pens = 29 pens\n\nThe answer is 29.",
+   "ok": true,
+   "total_s": 7.473389204
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "11:15 a.m.",
+   "ok": false,
+   "total_s": 1.4100775320000594
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "Let Sara's current age be S and her son's current age be s.\n\nSince Sara is 3 times as old as her son, we can write an equation: S = 3s.\n\nIn 12 years, Sara's age will be S + 12 and her son's age will be s + 12.\n\nAccording to the problem, in 12 years, Sara will be twice as old as her son. So, we can write another equation: S + 12 = 2(s + 12).\n\nSubstituting S = 3s into the second equation, we get: 3s + 12 = 2(s + 12).\n\nExpanding and simplifying the equation, we get: 3s + 12 = 2s + 24.\n\nSubtracting 2s from both sides, we get: s + 12 = 24.\n\nSubtracting 12 from both sides, we get: s = 12.\n\nNow that we know s, we can find S: S = 3s = 3(12) = 36.\n\nSo, Sara is currently 36 years old.",
+   "ok": true,
+   "total_s": 26.469500347999997
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "To find the amount of sugar needed for 30 cookies, first find the amount needed for 1 cookie. \n\n3/4 cup / 12 cookies = 3/16 cup per cookie\n\nNow, multiply the amount needed for 1 cookie by 30 cookies.\n\n3/16 cup per cookie * 30 cookies = 90/16 cups = 5.625 cups\n\nThe final answer is 5.625 cups.",
+   "ok": false,
+   "total_s": 9.467921089000015
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "To find the product, I'll multiply 17 by 23.\n\n17 * 20 = 340\n17 * 3 = 51\n\nAdding the results together:\n340 + 51 = 391\n\nThe final answer is 391.",
+   "ok": true,
+   "total_s": 5.330473998999992
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "To find the total cost, first calculate the cost of the texts: \n240 texts * $0.10 per text = $24\n\nThen add the monthly cost: \n$24 + $15 = $39\n\nThe total cost for a month with 240 texts is $39.",
+   "ok": true,
+   "total_s": 6.593990663999989
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "To find the answer, we need to establish the rate at which the printers work. \n\n5 printers print 5 pages in 5 minutes. \nSo, 1 printer prints 1 page in 5 minutes.\n\nNow, we have 100 printers and 100 pages. \nSince 1 printer prints 1 page in 5 minutes, 100 printers will print 100 pages in 5 minutes.\n\nFinal answer: 5 minutes.",
+   "ok": true,
+   "total_s": 9.497264876000031
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "The capital of Australia is Canberra.",
+   "ok": true,
+   "total_s": 1.2716572430000497
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "The chemical symbol for gold is Au.",
+   "ok": true,
+   "total_s": 1.2294554430000062
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury is the planet closest to the Sun.",
+   "ok": true,
+   "total_s": 1.5010794959999885
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "The novel Pride and Prejudice was written by Jane Austen.",
+   "ok": true,
+   "total_s": 1.9869315040000401
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "The boiling point of water at sea level is 212 degrees Fahrenheit.",
+   "ok": true,
+   "total_s": 2.202300756999989
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "There are 366 days in a leap year.",
+   "ok": true,
+   "total_s": 1.4461776149998968
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.8663003279999657
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "210",
+   "ok": false,
+   "total_s": 0.8754848899999388
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "Apple, Banana, Mango",
+   "ok": true,
+   "total_s": 1.2123317519999546
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear",
+   "ok": true,
+   "total_s": 1.2410213499999827
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "{\"name\": \"Maria Lopez\", \"email\": \"maria.lopez@example.com\"}",
+   "ok": true,
+   "total_s": 2.7733403269999144
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7",
+   "ok": true,
+   "total_s": 3.3919253069999513
+  }
+ ],
+ "score": 17,
+ "peak_rss_gb": 4.426025390625,
+ "llama_cpp_python": "0.3.36"
+}

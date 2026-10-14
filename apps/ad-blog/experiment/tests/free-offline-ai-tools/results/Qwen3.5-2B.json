@@ -1,0 +1,155 @@
+{
+ "model": "Qwen3.5-2B-Q4_K_M.gguf",
+ "file_gb": 1.28083584,
+ "arch": "qwen35",
+ "load_s": 7.878804394000099,
+ "speed_prompt_tokens": 339,
+ "speed": [
+  {
+   "first_token_s": 3.502621043999966,
+   "total_s": 12.095068581999953,
+   "gen_tokens": 99,
+   "gen_tok_per_s": 11.405364951790078,
+   "text": "*   **Move Date:** Saturday, November 7, starting at 8 a.m.\n*   **Pack Deadline:** Thursday, November 5, by 5 p.m.\n*   **Labeling Deadline:** Thursday, November 5, by 5 p.m.\n*   **New Desk Number:** Provided in the seating chart attached to the email.\n*   **Badge Pickup:** Monday, November 9, between 8 and 10 a.m."
+  },
+  {
+   "first_token_s": 1.795406201999981,
+   "total_s": 9.517926407999994,
+   "gen_tokens": 99,
+   "gen_tok_per_s": 12.690157796396427,
+   "text": "*   **Move Date:** Saturday, November 7, starting at 8 a.m.\n*   **Pack Deadline:** Thursday, November 5, by 5 p.m.\n*   **Labeling Deadline:** Thursday, November 5, by 5 p.m.\n*   **New Desk Number:** Provided in the seating chart attached to the email.\n*   **Badge Pickup:** Monday, November 9, between 8 and 10 a.m."
+  },
+  {
+   "first_token_s": 1.6409704710000597,
+   "total_s": 8.980545384000038,
+   "gen_tokens": 99,
+   "gen_tok_per_s": 13.352271917876436,
+   "text": "*   **Move Date:** Saturday, November 7, starting at 8 a.m.\n*   **Pack Deadline:** Thursday, November 5, by 5 p.m.\n*   **Labeling Deadline:** Thursday, November 5, by 5 p.m.\n*   **New Desk Number:** Provided in the seating chart attached to the email.\n*   **Badge Pickup:** Monday, November 9, between 8 and 10 a.m."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "To find the sale price, first calculate the discount amount:\n$40 \\times 0.25 = \\$10$\n\nThen subtract the discount from the original price:\n$40 - 10 = \\$30$\n\nThe sale price is $30.",
+   "ok": true,
+   "total_s": 4.821163166000019
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "First, calculate the total number of pens initially:\n$3 \\text{ boxes} \\times 12 \\text{ pens/box} = 36 \\text{ pens}$.\n\nNext, subtract the pens given away:\n$36 \\text{ pens} - 7 \\text{ pens} = 29 \\text{ pens}$.\n\n29 pens are left.",
+   "ok": true,
+   "total_s": 6.232779336000021
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "9:40 a.m. + 2 hours 35 minutes = 12:15 p.m.",
+   "ok": true,
+   "total_s": 2.4031119800000624
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "Let $S$ be Sara's current age and $O$ be her son's current age.\n\nFrom the first statement, Sara is 3 times as old as her son:\n$$S = 3O$$\n\nIn 12 years, Sara's age will be $S + 12$ and her son's age will be $O + 12$. The problem states that at that time, Sara will be twice as old as her son:\n$$S + 12 = 2(O + 12)$$\n\nSubstitute $S = 3O$ into the second equation:\n$$3O + 12 = 2(O + 12)$$\n$$3O + 12 = 2O + 24$$\n\nSubtract $2O$ from both sides:\n$$O + 12 = 24$$\n\nSubtract 12 from both sides:\n$$O = 12$$\n\nSo, the son is 12 years old. Now, calculate Sara's current age using the first equation:\n$$S = 3 \\times 12 = 36$$\n\nSara is 36 years old.",
+   "ok": true,
+   "total_s": 20.266952177999997
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "To find the amount of sugar needed for 30 cookies, we can set up a proportion based on the given ratio:\n\n$$ \\frac{3}{4} \\text{ cups} = \\frac{x}{30} $$\n\nSolving for $x$:\n\n$$ x = \\frac{3}{4} \\times 30 $$\n$$ x = \\frac{90}{4} $$\n$$ x = 22.5 $$\n\n22.5 cups of sugar are needed for 30 cookies.",
+   "ok": false,
+   "total_s": 9.050099536000062
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "To find the product of 17 and 23, we can use the standard multiplication algorithm or the distributive property:\n\n$$17 \\times 23 = 17 \\times (20 + 3)$$\n$$= (17 \\times 20) + (17 \\times 3)$$\n$$= 340 + 51$$\n$$= 391$$\n\nAlternatively, using the standard algorithm:\n  17\nx 23\n----\n  51  (17 * 3)\n 340  (17 * 20)\n----\n 391\n\n391",
+   "ok": true,
+   "total_s": 11.946755386000063
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "To calculate the total cost, multiply the monthly base fee by the number of texts and add the cost of the texts.\n\n1.  **Calculate the text cost**: $240 \\text{ texts} \\times \\$0.10/\\text{text} = \\$24.00$\n2.  **Add the base fee**: $\\$15.00 + \\$24.00 = \\$39.00$\n\nThe total cost for a month with 240 texts is **$39.00**.",
+   "ok": true,
+   "total_s": 8.961034229999996
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "If 5 printers print 5 pages in 5 minutes, then 1 printer prints 1 page in 5 minutes.\n\nTherefore, 100 printers can print 100 pages in the same amount of time.\n\n**5 minutes**",
+   "ok": true,
+   "total_s": 4.298320873999955
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "The capital of Australia is Canberra.",
+   "ok": true,
+   "total_s": 0.7751321780000353
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "The chemical symbol for gold is **Au**.",
+   "ok": true,
+   "total_s": 1.0045789349999268
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury is the planet closest to the Sun.",
+   "ok": true,
+   "total_s": 1.0853892619999215
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "Jane Austen wrote the novel *Pride and Prejudice*.",
+   "ok": true,
+   "total_s": 1.2941585539999778
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "At sea level, the boiling point of water is **212\u00b0F**.",
+   "ok": true,
+   "total_s": 1.6185348879999992
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "A standard year has 365 days. A leap year has an extra day, making it 366 days.\n\n**366**",
+   "ok": true,
+   "total_s": 2.869494513999939
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.3755652470000541
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "225",
+   "ok": true,
+   "total_s": 0.4982240599999841
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "Apple, Banana, Orange",
+   "ok": true,
+   "total_s": 0.6445286580000129
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear",
+   "ok": true,
+   "total_s": 0.6350095810000767
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "{\n  \"name\": \"Maria Lopez\",\n  \"email\": \"maria.lopez@example.com\"\n}",
+   "ok": true,
+   "total_s": 2.2415203169999813
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7",
+   "ok": true,
+   "total_s": 1.9443741019999834
+  }
+ ],
+ "score": 19,
+ "peak_rss_gb": 2.677684783935547,
+ "llama_cpp_python": "0.3.36"
+}

@@ -133,7 +133,7 @@
 
 | ID  | 노하우 | 대상 글   | 바꾼 내용 | 배포일 | 지표 | 판단 시점 | 판정 | 반영 |
 | --- | ------ | --------- | --------- | ------ | ---- | --------- | ---- | ---- |
-| -   | -      | 아직 없음 | -         | -      | -    | -         | -    | -    |
+| V1  | 3      | `transcribe-audio-offline-free`, `free-offline-text-to-speech`, `remove-background-from-image-free-offline` | 허브 글 `free-offline-ai-tools`로 역링크 1개씩 추가 | 2026-10-14 | position | 2026-11-11 | - | - |
 
 ## 재분석
 

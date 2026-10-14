@@ -2,6 +2,57 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-14 · 세션 6 (정기 실행 5회차): 허브 글 — 무료 오프라인 AI 도구
+
+세션 시각: 2026-10-14 09:10 UTC (한국 18:10). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-16 ~ 10-14, 세션 5 이후 바뀐 값만)**
+
+- 노출 21 → **23** (`turn-off-ai-in-chrome` 13 → 15, 순위 5.7), 클릭 0, 평균 순위 15.6. 검색어 2개는 같음
+- URL 검사: `free-offline-text-to-speech` **`Submitted and indexed`** (10-14 00:02 UTC 크롤링). `remove-background-from-image-free-offline`은 `Discovered - currently not indexed` 유지, `gemini-gems-to-skills`(10-14 발행)는 `URL is unknown`
+- 성과 검증: 판단 시점이 지난 행 없음 → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                    | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| ----------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `free-offline-ai-tools` | `ai-tools` | 허브 + 비교 (측정형, 검색형) | 오프라인 챗봇 7개 모델(Qwen3.5 0.8B·2B·4B, Gemma 4 E2B·E4B, Llama 3.2 3B, Phi-4-mini)을 llama.cpp로 속도·RAM·20문항·이메일 요약 측정 + 기존 측정 글 3편 결과 정리 |
+
+- 선정 근거: 백로그 28 (허브, traffic-playbook 3). 자동완성: "offline ai tools" Google·Bing·YouTube 14개(for pc·for mac·free·download), "free offline ai tools" 18개(Google·Bing: is there an offline ai, ai that works offline, offline ai for windows). 기존 3편은 받아쓰기·TTS·배경 제거뿐이라 검색 의도의 중심인 "오프라인 챗봇"을 새로 측정해 허브를 채움
+- 반복 일정: Chrome 156은 10-20, Windows 다음 Patch Tuesday 11-10 → 이번 세션 해당 없음
+- 다른 후보: passkey 설정(자동완성 27개, Google 블로그 10-08 글)은 수요가 크지만 Google·Apple 공식 문서 경쟁이 강하고 직접 검증이 어려워 백로그에 추가. Google Trends 미국 급상승 10개: 스포츠·연예·"spectrum outage"(통신 장애) → IT 도구 주제 없음
+- 적용한 노하우: 첫 허브 글(노하우 3, 제목에 연도), 검색형 제목 53자, 이미지 5장(대표 그래프 1200×675 + 그래프 2 + 실제 출력 비교 1 + rembg 화면 재사용 1), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → 측정 글 3편 + `turn-off-ai-in-chrome`, 측정 글 3편에서 허브로 역링크 (검증 기록 V1)
+- 빌드 HTML 확인: title·description(160자)·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, og:image 생성, 본문 이미지 5장 모두 width·height 지정
+
+**측정값 (Xeon 2.3GHz 4코어, RAM 16GB, GPU 없음, llama-cpp-python 0.3.36, Q4_K_M, 3회 중앙값)**
+
+| 모델          | 20문항 | 이메일 요약(초) | 날짜 4개 | 단어/초 | 최대 RAM |
+| ------------- | ------ | --------------- | -------- | ------- | -------- |
+| Qwen3.5 0.8B  | 12     | 14 (13줄, 지시 무시) | 4   | 12.8    | 1.3GB    |
+| Qwen3.5 2B    | 19     | 10              | 3        | 6.7     | 2.7GB    |
+| Gemma 4 E2B   | 18     | 10              | 4        | 8.8     | 4.2GB    |
+| Llama 3.2 3B  | 17     | 16              | 3        | 7.1     | 4.4GB    |
+| Phi-4-mini    | 16     | 17              | 3        | 5.5     | 5.4GB    |
+| Qwen3.5 4B    | 19     | 22              | 4        | 3.9     | 5.6GB    |
+| Gemma 4 E4B   | 19     | 17              | 4        | 4.7     | 7.8GB    |
+
+**알게 된 것**
+
+- `github.com/.../releases/latest` 리다이렉트도 403 → llama.cpp 사전 빌드 바이너리 대신 PyPI `llama-cpp-python` 소스 빌드(약 5분, cmake·gcc 있음). Qwen3.5·Gemma 4 아키텍처 모두 0.3.36에서 동작
+- huggingface.co GGUF 7개(약 17GB) 약 6분에 다운로드. 다운로드 중 측정한 첫 실행은 속도 편차가 커서 다운로드 완료 후 재측정 (세션 3 교훈 재확인)
+- 자동 채점은 실행 후 오답을 직접 보고 고쳐야 함: "1 7/8"(=1.875), "225 minutes"가 처음엔 오답 처리됨 → 채점 함수 수정, 저장된 답으로 재채점 (`score_20_at_run`에 원래 점수 보존)
+- 측정 서버 CPU가 세션마다 다를 수 있음 (이번 2.3GHz, 세션 3·4는 2.8GHz) → 글에 행 간 비교 금지 명시. 측정 글은 `lscpu` 결과를 항상 저장
+- LM Studio 홈이 "Bionic"(에이전트 앱, 유료 클라우드 플랜)으로 바뀜. 무료 플랜은 로컬 모델 포함. Ollama도 클라우드 모델이 생겨 `OLLAMA_NO_CLOUD=1`로 로컬 전용 가능 → "오프라인" 글에서 앱의 클라우드 기능을 구분해야 함
+
+**다음 할 일**
+
+- Claude: 허브 글 노출 검색어 확인 (`offline ai tools for pc` 등), 새 측정 글(예: 오프라인 번역·OCR)이 생기면 허브 표에 추가하고 `updatedAt` 갱신
+- Claude: 검증 기록 V1(허브 역링크) 2026-11-11 판정
+- Claude: `remove-background-from-image-free-offline`·`gemini-gems-to-skills` 색인 여부 확인
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 발행 8편 / AdSense 신청 기준 20편
+
 ## 2026-10-14 · 세션 5 (정기 실행 4회차): Gemini Gems → 스킬 전환
 
 세션 시각: 2026-10-13 22:10 UTC (한국 10-14 07:10). 열린 PR 없음.

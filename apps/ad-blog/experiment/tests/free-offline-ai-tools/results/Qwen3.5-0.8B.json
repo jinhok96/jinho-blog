@@ -1,0 +1,155 @@
+{
+ "model": "Qwen3.5-0.8B-Q4_K_M.gguf",
+ "file_gb": 0.53251712,
+ "arch": "qwen35",
+ "load_s": 0.6914064430000053,
+ "speed_prompt_tokens": 339,
+ "speed": [
+  {
+   "first_token_s": 0.9171938800000135,
+   "total_s": 13.517452353999943,
+   "gen_tokens": 243,
+   "gen_tok_per_s": 19.205955219042227,
+   "text": "*   Movers are booked for Saturday, November 7, starting at 8 a.m.\n*   Desk packing deadline is Thursday, November 5, by 5 p.m.\n*   Laptops, chargers, and valuable items must go home on Thursday.\n*   Monitors and docking stations stay at your current desk.\n*   New office is at 410 Harbor Street, 4th floor.\n*   Garage parking is free for the first month.\n*   New badge must be picked up on Monday, November 9, between 8 and 10 a.m.\n*   Special items (standing desks, chairs) should be sent to Dana by Wednesday.\n*   Questions regarding computers and network access go to IT help desk.\n*   New office opens at 7 a.m. and your current badge will not work there.\n*   Reception will provide a new badge on Monday, November 9, between 8 and 10 a.m.\n*   Dana will add special items to the movers' list if you have them.\n*   Priya will contact you if you have questions about the move."
+  },
+  {
+   "first_token_s": 1.0398496569999907,
+   "total_s": 10.518460979999986,
+   "gen_tokens": 243,
+   "gen_tok_per_s": 25.531166091047883,
+   "text": "*   Movers are booked for Saturday, November 7, starting at 8 a.m.\n*   Desk packing deadline is Thursday, November 5, by 5 p.m.\n*   Laptops, chargers, and valuable items must go home on Thursday.\n*   Monitors and docking stations stay at your current desk.\n*   New office is at 410 Harbor Street, 4th floor.\n*   Garage parking is free for the first month.\n*   New badge must be picked up on Monday, November 9, between 8 and 10 a.m.\n*   Special items (standing desks, chairs) should be sent to Dana by Wednesday.\n*   Questions regarding computers and network access go to IT help desk.\n*   New office opens at 7 a.m. and your current badge will not work there.\n*   Reception will provide a new badge on Monday, November 9, between 8 and 10 a.m.\n*   Dana will add special items to the movers' list if you have them.\n*   Priya will contact you if you have questions about the move."
+  },
+  {
+   "first_token_s": 0.9477053729999625,
+   "total_s": 15.706855115999929,
+   "gen_tokens": 243,
+   "gen_tok_per_s": 16.39660849127009,
+   "text": "*   Movers are booked for Saturday, November 7, starting at 8 a.m.\n*   Desk packing deadline is Thursday, November 5, by 5 p.m.\n*   Laptops, chargers, and valuable items must go home on Thursday.\n*   Monitors and docking stations stay at your current desk.\n*   New office is at 410 Harbor Street, 4th floor.\n*   Garage parking is free for the first month.\n*   New badge must be picked up on Monday, November 9, between 8 and 10 a.m.\n*   Special items (standing desks, chairs) should be sent to Dana by Wednesday.\n*   Questions regarding computers and network access go to IT help desk.\n*   New office opens at 7 a.m. and your current badge will not work there.\n*   Reception will provide a new badge on Monday, November 9, between 8 and 10 a.m.\n*   Dana will add special items to the movers' list if you have them.\n*   Priya will contact you if you have questions about the move."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "$30",
+   "ok": true,
+   "total_s": 0.26853633700000046
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "12",
+   "ok": false,
+   "total_s": 0.2229332260000092
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "9:40 a.m.",
+   "ok": false,
+   "total_s": 0.4891853369999808
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "18",
+   "ok": false,
+   "total_s": 0.24683103199993184
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "To find the amount of sugar needed for 30 cookies, we first determine the rate of sugar per cookie.\n\n1.  **Calculate sugar per cookie**: $3/4$ cup per $12$ cookies.\n    $$ \\frac{3}{4} \\div 12 = \\frac{3}{48} = \\frac{1}{16} \\text{ cup per cookie} $$\n\n2.  **Calculate total sugar for 30 cookies**:\n    $$ 30 \\times \\frac{1}{16} = \\frac{30}{16} = \\frac{15}{8} \\text{ cups} $$\n\n3.  **Convert to a mixed number**:\n    $$ \\frac{15}{8} = 1 \\frac{7}{8} \\text{ cups} $$\n\n1 7/8",
+   "ok": false,
+   "total_s": 7.539577148999911
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "361",
+   "ok": false,
+   "total_s": 0.2839612230000057
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "$15.00",
+   "ok": false,
+   "total_s": 0.5629652949999127
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "100 minutes",
+   "ok": false,
+   "total_s": 0.36148808400002963
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "Sydney.",
+   "ok": false,
+   "total_s": 0.29550420200007466
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "Au",
+   "ok": true,
+   "total_s": 0.1987393520000751
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury.",
+   "ok": true,
+   "total_s": 0.2729179049999857
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "Jane Austen.",
+   "ok": true,
+   "total_s": 0.3398413500000288
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "212\u00b0F",
+   "ok": true,
+   "total_s": 0.3724058289999448
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "366",
+   "ok": true,
+   "total_s": 0.2695083680000607
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.22871050300000206
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "135",
+   "ok": false,
+   "total_s": 0.2842672729999549
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "apple, banana, orange",
+   "ok": true,
+   "total_s": 0.3452809600000819
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear",
+   "ok": true,
+   "total_s": 0.33323504600002707
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "{\n  \"name\": \"Maria Lopez\",\n  \"email\": \"maria.lopez@example.com\"\n}",
+   "ok": true,
+   "total_s": 1.276318730000071
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7",
+   "ok": true,
+   "total_s": 0.9803610850000268
+  }
+ ],
+ "score": 11,
+ "peak_rss_gb": 1.2615585327148438,
+ "llama_cpp_python": "0.3.36"
+}

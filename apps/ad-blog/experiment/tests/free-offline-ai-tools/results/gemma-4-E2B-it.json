@@ -1,0 +1,155 @@
+{
+ "model": "gemma-4-E2B-it-Q4_K_M.gguf",
+ "file_gb": 3.106738272,
+ "arch": "gemma4",
+ "load_s": 5.713797483000008,
+ "speed_prompt_tokens": 341,
+ "speed": [
+  {
+   "first_token_s": 2.475170595999998,
+   "total_s": 11.305180672999995,
+   "gen_tokens": 109,
+   "gen_tok_per_s": 12.231016619257709,
+   "text": "Here is the summary in five short bullet points:\n\n* Movers are scheduled for Saturday, November 7, starting at 8 a.m.\n* Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n* Take laptops and valuables home on Thursday, November 5.\n* Pick up a new badge on Monday, November 9, between 8 and 10 a.m.\n* Inform Dana by Wednesday about special items; questions about IT go to the help desk."
+  },
+  {
+   "first_token_s": 2.056250595999927,
+   "total_s": 10.543624116000046,
+   "gen_tokens": 109,
+   "gen_tok_per_s": 12.724784616289455,
+   "text": "Here is the summary in five short bullet points:\n\n* Movers are scheduled for Saturday, November 7, starting at 8 a.m.\n* Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n* Take laptops and valuables home on Thursday, November 5.\n* Pick up a new badge on Monday, November 9, between 8 and 10 a.m.\n* Inform Dana by Wednesday about special items; questions about IT go to the help desk."
+  },
+  {
+   "first_token_s": 2.0102865510000356,
+   "total_s": 10.426332758999934,
+   "gen_tokens": 109,
+   "gen_tok_per_s": 12.832629162294793,
+   "text": "Here is the summary in five short bullet points:\n\n* Movers are scheduled for Saturday, November 7, starting at 8 a.m.\n* Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n* Take laptops and valuables home on Thursday, November 5.\n* Pick up a new badge on Monday, November 9, between 8 and 10 a.m.\n* Inform Dana by Wednesday about special items; questions about IT go to the help desk."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "$30",
+   "ok": true,
+   "total_s": 0.668082873000003
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "17",
+   "ok": false,
+   "total_s": 0.5464490450001449
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "12:15",
+   "ok": true,
+   "total_s": 1.034289863999902
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "Let $S$ be Sara's current age and $N$ be her son's current age.\n\nFrom the first statement: Sara is 3 times as old as her son.\n$$S = 3N \\quad (1)$$\n\nIn 12 years, Sara's age will be $S + 12$, and her son's age will be $N + 12$.\nFrom the second statement: In 12 years she will be twice as old as him.\n$$S + 12 = 2(N + 12) \\quad (2)$$\n\nSubstitute equation (1) into equation (2):\n$$3N + 12 = 2(N + 12)$$\n$$3N + 12 = 2N + 24$$\n$$3N - 2N = 24 - 12$$\n$$N = 12$$\n\nNow find Sara's current age using equation (1):\n$$S = 3N = 3(12) = 36$$\n\nSara is currently 36 years old.\n\n36",
+   "ok": true,
+   "total_s": 19.139706051000076
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "The recipe uses $\\frac{3}{4}$ cup of sugar for 12 cookies.\nFirst, find the sugar needed per cookie:\n$\\frac{3/4 \\text{ cup}}{12 \\text{ cookies}} = \\frac{3}{4 \\times 12} = \\frac{3}{48} = \\frac{1}{16}$ cup of sugar per cookie.\n\nNext, calculate the sugar needed for 30 cookies:\n$30 \\text{ cookies} \\times \\frac{1}{16} \\text{ cup/cookie} = \\frac{30}{16} = \\frac{15}{8}$ cups.\n\nAs a mixed number: $\\frac{15}{8} = 1 \\frac{7}{8}$ cups.\n\n1 7/8",
+   "ok": false,
+   "total_s": 13.761603281999896
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "391",
+   "ok": true,
+   "total_s": 0.56931078599996
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "$15 + (240 \\times \\$0.10) = \\$15 + \\$24 = \\$39$\n\n$39",
+   "ok": true,
+   "total_s": 3.140299423999977
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "If 5 printers print 5 pages in 5 minutes, then 1 printer prints 1 page in 5 minutes.\n\nTo print 100 pages with 100 printers, each printer needs to print 1 page.\nSince 1 printer takes 5 minutes to print 1 page, 100 printers working in parallel can complete 100 pages in 5 minutes.\n\nAlternatively, using the rate:\nRate of 1 printer = $\\frac{1 \\text{ page}}{5 \\text{ minutes}}$\nRate of 100 printers = $100 \\times \\frac{1 \\text{ page}}{5 \\text{ minutes}} = 20 \\text{ pages per minute}$\n\nTime to print 100 pages = $\\frac{100 \\text{ pages}}{20 \\text{ pages/minute}} = 5 \\text{ minutes}$.\n\n10",
+   "ok": false,
+   "total_s": 15.393957052999895
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "Canberra",
+   "ok": true,
+   "total_s": 0.4752967379999973
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "Au",
+   "ok": true,
+   "total_s": 0.4534871830001066
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury",
+   "ok": true,
+   "total_s": 0.4051817720001054
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "Jane Austen",
+   "ok": true,
+   "total_s": 0.46349879099989266
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "212\u00b0F",
+   "ok": true,
+   "total_s": 0.7299845200000163
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "366",
+   "ok": true,
+   "total_s": 0.5792276899999251
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.4719081289999849
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "225",
+   "ok": true,
+   "total_s": 0.6420630919999439
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "apple,banana,orange",
+   "ok": true,
+   "total_s": 0.6955063170000813
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear",
+   "ok": true,
+   "total_s": 0.7217494989999977
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "```json\n{\n  \"name\": \"Maria Lopez\",\n  \"email\": \"maria.lopez@example.com\"\n}\n```",
+   "ok": true,
+   "total_s": 2.8543045750000147
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7",
+   "ok": true,
+   "total_s": 2.362981753999975
+  }
+ ],
+ "score": 17,
+ "peak_rss_gb": 4.147808074951172,
+ "llama_cpp_python": "0.3.36"
+}

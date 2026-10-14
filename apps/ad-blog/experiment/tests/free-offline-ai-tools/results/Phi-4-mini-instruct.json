@@ -1,0 +1,155 @@
+{
+ "model": "Phi-4-mini-instruct-Q4_K_M.gguf",
+ "file_gb": 2.491874272,
+ "arch": "phi3",
+ "load_s": 11.462801240999966,
+ "speed_prompt_tokens": 327,
+ "speed": [
+  {
+   "first_token_s": 3.281171455000049,
+   "total_s": 17.51248823000003,
+   "gen_tokens": 108,
+   "gen_tok_per_s": 7.518629631515608,
+   "text": "- Office move scheduled for Saturday, November 7, starting at 8 a.m.\n- Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n- Laptops, chargers, and valuables to be taken home; IT will set up new monitors and docking stations before Monday.\n- New office location: 410 Harbor Street, fourth floor; parking costs $85/month after the first month.\n- Pick up new badge at reception on Monday, November 9, between 8 and 10 a.m."
+  },
+  {
+   "first_token_s": 3.2612327139999024,
+   "total_s": 17.273009350999928,
+   "gen_tokens": 108,
+   "gen_tok_per_s": 7.636433463937169,
+   "text": "- Office move scheduled for Saturday, November 7, starting at 8 a.m.\n- Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n- Laptops, chargers, and valuables to be taken home; IT will set up new monitors and docking stations before Monday.\n- New office location: 410 Harbor Street, fourth floor; parking costs $85/month after the first month.\n- Pick up new badge at reception on Monday, November 9, between 8 and 10 a.m."
+  },
+  {
+   "first_token_s": 3.3620961899999884,
+   "total_s": 16.596158462999938,
+   "gen_tokens": 108,
+   "gen_tok_per_s": 8.085196955609067,
+   "text": "- Office move scheduled for Saturday, November 7, starting at 8 a.m.\n- Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n- Laptops, chargers, and valuables to be taken home; IT will set up new monitors and docking stations before Monday.\n- New office location: 410 Harbor Street, fourth floor; parking costs $85/month after the first month.\n- Pick up new badge at reception on Monday, November 9, between 8 and 10 a.m."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "The sale price is $30.",
+   "ok": true,
+   "total_s": 1.4297055910000154
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "There are 33 pens left.",
+   "ok": false,
+   "total_s": 1.4557424899999205
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "11:15 a.m.",
+   "ok": false,
+   "total_s": 1.4012909629998376
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "Sara is currently 18 years old.",
+   "ok": false,
+   "total_s": 1.5700530849999268
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "2.8125 cups of sugar.",
+   "ok": false,
+   "total_s": 1.5933039120000103
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "391",
+   "ok": true,
+   "total_s": 0.45992850300012833
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "$39",
+   "ok": true,
+   "total_s": 0.7850437720001082
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "100 printers would print 100 pages in 5 minutes.",
+   "ok": true,
+   "total_s": 1.934086046999937
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "Canberra",
+   "ok": true,
+   "total_s": 0.554968234999933
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "Au",
+   "ok": true,
+   "total_s": 0.43699887599996146
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury",
+   "ok": true,
+   "total_s": 0.5669569079998382
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "Jane Austen",
+   "ok": true,
+   "total_s": 0.5656303149999076
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "212\u00b0F",
+   "ok": true,
+   "total_s": 0.8334014560000469
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "366 days",
+   "ok": true,
+   "total_s": 0.5690696770000159
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.739029685000105
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "225 minutes",
+   "ok": false,
+   "total_s": 0.802313525000045
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "Apple, Banana, Cherry",
+   "ok": true,
+   "total_s": 1.2938048910000362
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear",
+   "ok": true,
+   "total_s": 1.2306974289999744
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "```json\n{\n  \"name\": \"Maria Lopez\",\n  \"email\": \"maria.lopez@example.com\"\n}\n```",
+   "ok": true,
+   "total_s": 3.842972710999902
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7, 2023",
+   "ok": true,
+   "total_s": 4.168510885999922
+  }
+ ],
+ "score": 15,
+ "peak_rss_gb": 5.35394287109375,
+ "llama_cpp_python": "0.3.36"
+}

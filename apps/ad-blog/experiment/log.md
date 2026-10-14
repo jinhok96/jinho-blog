@@ -91,6 +91,8 @@
 
 **알게 된 것**
 
+- (세션 후 추가, 사용자 질문으로 확인) Google Trends 상대 검색량 (`trends_compare.py`, 미국, 최근 3개월, 최고점 = 100): `remove background` 평균 35.5 · `gemini 4 argon` 1.1(최근 7일 8.1, 출시 직후 급증) · `gemini skills` 0.3(최근 7일 0.9) · `gemini gems` 0.2. 즉 **Gems → 스킬 주제는 배경 제거보다 검색량이 수십 분의 1 수준**. `gemini skills` 관련 검색어 급상승: "automate tasks using gemini skills"(Breakout), "gemini gems"(+250%), "gemini spark"(+70%)
+- 반성: 주제 선정 때 수요를 자동완성(있다/없다)으로만 봐서 크기를 비교하지 못했고, 주 검색어 `gemini gems to skills`는 자동완성 조회도 안 했음 → 다음 세션부터 후보끼리 + 기존 글 주 검색어(기준)를 Trends로 비교해 backlog에 기록 (README 선정 기준 1번에 반영)
 - Google 문서끼리 메뉴 경로가 다름: Gems 전환 FAQ는 **Settings > Skills**, 스킬 도움말은 **Customize > Skills** → 글에 둘 다 표기. Workspace 관리자 문서는 11-17에 "All users"의 Gems가 Settings로 이동한다고 함
 - 스킬 유료 여부(backlog 미확인 항목): Google 도움말이 "Skills are available without a Google AI subscription"으로 명시 → 해결. 일부 언론의 "paywalled" 보도는 Google 문서와 다름
 - 공식 참조 검사기(skills-ref 0.1.1)가 스펙 문서보다 느슨함(악센트 문자 허용) → 검사 도구 결과만 믿지 않고 스펙 원문도 대조해야 함

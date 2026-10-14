@@ -1,0 +1,290 @@
+<title>ToolProof 운영 현황</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: 실험 노트 한 장 — 위에 요약 지표, 가운데 날짜별 추이 2개, 아래에 글·노하우·세션 목록 */
+:root {
+  --bg: #f6f7f5;
+  --panel: #ffffff;
+  --ink: #17201d;
+  --ink-2: #4c5a55;
+  --ink-3: #7d8a85;
+  --line: #dde3df;
+  --accent: #116a5c;
+  --accent-soft: #d6ebe5;
+  --fresh: #b07a12;
+  --good: #1d7a3e;
+  --warn: #a8670a;
+  --bad: #b3322a;
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --font-num: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #111715; --panel: #18201d; --ink: #e6ece9; --ink-2: #aab7b2; --ink-3: #7c8a85; --line: #2b3632;
+    --accent: #4fc2ab; --accent-soft: #1d3a33; --fresh: #e0a840; --good: #5cc882; --warn: #e3a246; --bad: #ef7a6f;
+    color-scheme: dark;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #111715; --panel: #18201d; --ink: #e6ece9; --ink-2: #aab7b2; --ink-3: #7c8a85; --line: #2b3632;
+  --accent: #4fc2ab; --accent-soft: #1d3a33; --fresh: #e0a840; --good: #5cc882; --warn: #e3a246; --bad: #ef7a6f;
+  color-scheme: dark;
+}
+body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
+.wrap { max-width: 1120px; margin: 0 auto; padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
+header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
+h1 { font-size: 26px; font-weight: 700; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
+h1 span { color: var(--accent); }
+h2 { font-size: 16px; font-weight: 600; margin: 0; text-wrap: balance; }
+.meta { color: var(--ink-3); font-size: 13px; font-family: var(--font-num); }
+.num { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 2px; min-width: 0; }
+.kpi .label { font-size: 12px; color: var(--ink-2); letter-spacing: 0.02em; }
+.kpi .value { font-family: var(--font-num); font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; }
+.kpi .sub { font-size: 12px; color: var(--ink-3); }
+.charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 10px; min-width: 0; align-content: start; }
+.panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
+.legend { display: flex; gap: 12px; font-size: 12px; color: var(--ink-2); }
+.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
+svg text { font-family: var(--font-num); font-size: 11px; fill: var(--ink-3); }
+.table-scroll { overflow-x: auto; }
+table { width: 100%; border-collapse: collapse; font-size: 14px; }
+table.wide { min-width: 760px; }
+td.num { white-space: nowrap; }
+th { text-align: left; font-size: 12px; font-weight: 500; color: var(--ink-2); padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
+td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
+tr:last-child td { border-bottom: 0; }
+td.r, th.r { text-align: right; }
+.post-title { font-weight: 500; }
+.post-title a { color: var(--ink); text-decoration: none; }
+.post-title a:hover, .post-title a:focus-visible { color: var(--accent); text-decoration: underline; }
+.small { font-size: 12px; color: var(--ink-3); }
+.pill { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
+.pill.good { color: var(--good); } .pill.warn { color: var(--warn); } .pill.bad { color: var(--bad); } .pill.muted { color: var(--ink-3); }
+.chip { font-size: 12px; padding: 1px 7px; border-radius: 4px; background: var(--accent-soft); color: var(--ink); white-space: nowrap; }
+.lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+ol.sessions { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; align-content: start; }
+ol.sessions li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; font-size: 14px; }
+.empty { color: var(--ink-3); font-size: 14px; padding: 12px 0; }
+.notice { font-size: 13px; color: var(--ink-2); background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; }
+footer { font-size: 12px; color: var(--ink-3); }
+a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Tool<span>Proof</span> 운영 현황</h1>
+    <div class="meta" id="updated">데이터 불러오는 중</div>
+  </header>
+
+  <div class="notice" id="notice" hidden></div>
+
+  <section class="kpis" aria-label="최근 28일 요약">
+    <div class="kpi"><span class="label">노출 (28일)</span><span class="value" id="k-imp">–</span><span class="sub" id="k-range">Search Console 웹 검색</span></div>
+    <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
+    <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub">낮을수록 위</span></div>
+    <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
+    <div class="kpi"><span class="label">사이트맵</span><span class="value" id="k-sm" style="font-size:20px">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
+  </section>
+
+  <section class="charts">
+    <div class="panel">
+      <div class="panel-head"><h2>날짜별 노출</h2>
+        <div class="legend"><span><i style="background:var(--accent)"></i>확정</span><span><i style="background:var(--fresh)"></i>미확정</span></div>
+      </div>
+      <div id="chart-imp"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>날짜별 평균 순위</h2><span class="small">위로 갈수록 상위, 노출 없는 날 제외</span></div>
+      <div id="chart-pos"></div>
+    </div>
+  </section>
+
+  <section class="panel">
+    <div class="panel-head"><h2>글별 현황</h2><span class="small">지표는 최근 28일, 미확정 데이터 포함</span></div>
+    <div class="table-scroll">
+      <table class="wide">
+        <thead><tr><th>글</th><th>발행</th><th>채널</th><th class="r">이미지</th><th>색인</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
+        <tbody id="posts"><tr><td colspan="8" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="lists">
+    <div class="panel">
+      <div class="panel-head"><h2>트래픽 노하우 검증</h2><span class="small">traffic-playbook.md</span></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>#</th><th>노하우</th><th>상태</th><th>갱신</th></tr></thead>
+          <tbody id="knowhow"><tr><td colspan="4" class="empty">노하우 데이터가 아직 없습니다.</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>세션 기록</h2><span class="small">log.md</span></div>
+      <ol class="sessions" id="sessions"><li class="empty">세션 기록이 아직 없습니다.</li></ol>
+    </div>
+  </section>
+
+  <footer>정기 세션이 끝날 때마다 갱신됩니다. 최근 2~3일 지표는 Search Console에서 확정되기 전 값이라 나중에 조금 바뀔 수 있습니다.</footer>
+</div>
+
+<script>
+const SITE = 'https://tool-proof.com';
+const state = { daily: [], posts: [], knowhow: [], sessions: [], summary: null };
+const $ = (id) => document.getElementById(id);
+const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
+const pct = (x) => (x == null ? '–' : (x * 100).toFixed(1) + '%');
+const shortDate = (d) => d.slice(5).replace('-', '.');
+
+function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
+
+function indexPill(idx) {
+  if (!idx || !idx.coverage) return '<span class="pill muted">확인 전</span>';
+  const c = idx.coverage;
+  const cls = idx.verdict === 'PASS' ? 'good' : /unknown|Discovered|Crawled/i.test(c) ? 'warn' : 'bad';
+  const label = idx.verdict === 'PASS' ? '색인됨' : /unknown/i.test(c) ? 'Google 미발견' : /Discovered/i.test(c) ? '발견, 크롤링 전' : /Crawled/i.test(c) ? '크롤링, 미색인' : c;
+  return `<span class="pill ${cls}" title="${esc(c)}">${esc(label)}</span>`;
+}
+
+function statusPill(s) {
+  const cls = s === '검증됨' ? 'good' : s === '기각' ? 'bad' : s === '가설' ? 'muted' : 'warn';
+  return `<span class="pill ${cls}">${esc(s)}</span>`;
+}
+
+function renderSummary() {
+  const s = state.summary;
+  if (!s) return;
+  $('updated').textContent = '갱신 ' + s.updatedAt.replace('T', ' ').replace('Z', ' UTC');
+  $('k-imp').textContent = fmt(s.impressions);
+  $('k-clk').textContent = fmt(s.clicks);
+  $('k-ctr').textContent = 'CTR ' + pct(s.ctr);
+  $('k-pos').textContent = s.position == null ? '–' : s.position.toFixed(1);
+  $('k-range').textContent = `${s.range.start} ~ ${s.range.end}`;
+  const sm = s.sitemap || {};
+  const ok = !sm.errors && !sm.warnings;
+  $('k-sm').innerHTML = ok ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${sm.errors} · 경고 ${sm.warnings}</span>`;
+  $('k-sm-sub').textContent = '마지막 다운로드 ' + (sm.lastDownloaded ? sm.lastDownloaded.slice(0, 10) : '–');
+}
+
+function barChart(el, rows) {
+  if (!rows.length) { el.innerHTML = '<div class="empty">날짜별 데이터가 아직 없습니다.</div>'; return; }
+  const W = 520, H = 200, L = 36, R = 8, T = 12, B = 26;
+  const max = Math.max(1, ...rows.map((r) => r.impressions));
+  const step = niceStep(max);
+  const top = Math.ceil(max / step) * step;
+  const bw = (W - L - R) / rows.length;
+  const y = (v) => T + (H - T - B) * (1 - v / top);
+  let g = '';
+  for (let v = 0; v <= top; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const every = Math.ceil(rows.length / 8);
+  rows.forEach((r, i) => {
+    const x = L + i * bw;
+    const h = y(0) - y(r.impressions);
+    const color = r.state === 'final' ? 'var(--accent)' : 'var(--fresh)';
+    g += `<rect x="${x + bw * 0.18}" y="${y(r.impressions)}" width="${bw * 0.64}" height="${Math.max(h, 0)}" rx="3" fill="${color}"><title>${r.date} 노출 ${r.impressions} (${r.state === 'final' ? '확정' : '미확정'})</title></rect>`;
+    if (i % every === 0 || i === rows.length - 1) g += `<text x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${shortDate(r.date)}</text>`;
+  });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg>`;
+}
+
+function lineChart(el, rows) {
+  const pts = rows.filter((r) => r.position != null);
+  if (!pts.length) { el.innerHTML = '<div class="empty">순위 데이터가 아직 없습니다.</div>'; return; }
+  const W = 520, H = 200, L = 36, R = 24, T = 12, B = 26;
+  const maxP = Math.max(10, ...pts.map((r) => r.position));
+  const step = niceStep(maxP);
+  const bottom = Math.ceil(maxP / step) * step;
+  const xs = rows.map((r) => r.date);
+  const x = (d) => L + (xs.length === 1 ? (W - L - R) / 2 : ((W - L - R) * xs.indexOf(d)) / (xs.length - 1));
+  const y = (p) => T + ((H - T - B) * (p - 1)) / (bottom - 1);
+  let g = '';
+  for (let v = 1; v <= bottom; v += v === 1 ? step - 1 : step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const every = Math.ceil(xs.length / 8);
+  xs.forEach((d, i) => { if (i % every === 0 || i === xs.length - 1) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${shortDate(d)}</text>`; });
+  g += `<polyline fill="none" stroke="var(--accent)" stroke-width="2" points="${pts.map((r) => `${x(r.date)},${y(r.position)}`).join(' ')}"/>`;
+  pts.forEach((r, i) => {
+    const last = i === pts.length - 1;
+    g += `<circle cx="${x(r.date)}" cy="${y(r.position)}" r="${last ? 5 : 3.5}" fill="${r.state === 'final' ? 'var(--accent)' : 'var(--fresh)'}" stroke="var(--panel)" stroke-width="2"><title>${r.date} 평균 ${r.position}위</title></circle>`;
+    if (last) g += `<text x="${x(r.date) - 8}" y="${y(r.position) - 9}" text-anchor="end" style="fill:var(--ink)">${r.position}위</text>`;
+  });
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 평균 순위 꺾은선 그래프">${g}</svg>`;
+}
+
+function niceStep(max) {
+  const raw = max / 4;
+  const p = Math.pow(10, Math.floor(Math.log10(raw)));
+  return [1, 2, 5, 10].map((m) => m * p).find((s) => s >= raw) || p * 10;
+}
+
+function renderPosts() {
+  if (!state.posts.length) return;
+  const posts = [...state.posts].sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
+  $('k-posts').textContent = posts.length;
+  const indexed = posts.filter((p) => p.index && p.index.verdict === 'PASS').length;
+  $('k-indexed').textContent = `색인 ${indexed} / ${posts.length}`;
+  $('posts').innerHTML = posts.map((p) => `<tr>
+    <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + esc(p.updatedAt) : ''}</div></td>
+    <td class="num">${esc(p.createdAt)}</td>
+    <td>${p.channel ? `<span class="chip">${esc(p.channel)}</span>` : '<span class="small">–</span>'}</td>
+    <td class="r num">${fmt(p.images)}</td>
+    <td>${indexPill(p.index)}</td>
+    <td class="r num">${fmt(p.impressions)}</td>
+    <td class="r num">${fmt(p.clicks)}</td>
+    <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}</td>
+  </tr>`).join('');
+}
+
+function renderKnowhow() {
+  if (!state.knowhow.length) return;
+  $('knowhow').innerHTML = [...state.knowhow].sort((a, b) => a.num - b.num).map((k) => `<tr>
+    <td class="num">${k.num}</td><td>${esc(k.title)}${k.record && k.record !== '-' ? `<div class="small">${esc(k.record)}</div>` : ''}</td><td>${statusPill(k.status)}</td><td class="num small">${esc(k.updated)}</td>
+  </tr>`).join('');
+}
+
+function renderSessions() {
+  if (!state.sessions.length) return;
+  $('sessions').innerHTML = [...state.sessions].sort((a, b) => b.order - a.order).map((s) => `<li><span class="num small">${esc(s.date)}</span><span>${esc(s.title)}</span></li>`).join('');
+}
+
+function render() {
+  renderSummary();
+  const daily = [...state.daily].sort((a, b) => a.date.localeCompare(b.date));
+  barChart($('chart-imp'), daily);
+  lineChart($('chart-pos'), daily);
+  renderPosts();
+  renderKnowhow();
+  renderSessions();
+}
+
+render();
+
+(async () => {
+  const db = window.claude ? await window.claude.use('db') : null;
+  if (!db) {
+    $('updated').textContent = '데이터 연결 안 됨';
+    $('notice').hidden = false;
+    $('notice').textContent = '이 화면에서는 대시보드 데이터를 불러올 수 없습니다. claude.ai에 로그인한 상태로 열어 주세요.';
+    return;
+  }
+  // stats 컬렉션: summary, posts, knowhow, sessions, daily-YYYY-MM (달마다 1개)
+  db.collection('stats').onSnapshot(
+    (snap) => {
+      const byId = Object.fromEntries(snap.docs.map((d) => [d.id, d.data()]));
+      state.summary = byId.summary || null;
+      state.posts = byId.posts?.rows || [];
+      state.knowhow = byId.knowhow?.rows || [];
+      state.sessions = byId.sessions?.rows || [];
+      state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);
+      render();
+    },
+    (e) => { $('notice').hidden = false; $('notice').textContent = `데이터를 불러오지 못했습니다 (${e.code}). 잠시 뒤 새로고침해 주세요.`; }
+  );
+})();
+</script>

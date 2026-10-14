@@ -116,7 +116,11 @@ def main() -> None:
             idx = res.get('inspectionResult', {}).get('indexStatusResult', {})
             doc['index'] = {'verdict': idx.get('verdict'), 'coverage': idx.get('coverageState'), 'lastCrawl': idx.get('lastCrawlTime')}
         posts.append(doc)
-    docs['posts'] = {'rows': posts}
+    # 글 외 페이지(홈·카테고리·목록 등): 글별 표 합계를 사이트 전체 KPI와 맞추기 위해 따로 표시
+    post_urls = {f"{SITE_ORIGIN}/posts/{p['slug']}" for p in posts}
+    other = [{'path': url.removeprefix(SITE_ORIGIN) or '/', **metrics(r)} for url, r in by_page.items() if url not in post_urls]
+    other.sort(key=lambda o: (-o['clicks'], -o['impressions']))
+    docs['posts'] = {'rows': posts, 'otherPages': other}
     docs['knowhow'] = {'rows': knowhow()}
     docs['sessions'] = {'rows': sessions()}
 

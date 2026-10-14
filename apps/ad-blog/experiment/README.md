@@ -58,12 +58,13 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 | 발견 | 공식 피드: Windows Blog, Chrome Releases(Stable), Google Workspace Updates, Google Blog, OpenAI News, Apple Newsroom + CISA 악용 취약점(소비자 제품) | `demand_check.py discover` |
 | 발견 | Windows 메시지 센터(종료·인증서 만료 공지), Gemini 릴리스 노트, Anthropic 뉴스, Apple 보안 업데이트, Microsoft 365 로드맵 | 직접 열기 (`discover` 출력 하단 링크) |
 | 수요 확인 | Google·Bing·YouTube 자동완성 (YouTube는 "not showing"·"not working" 같은 문제 해결형이 잘 나옴) | `demand_check.py suggest "키워드"` |
-| 수요 크기 비교 | Google Trends 상대 검색량(미국, 최대 5개) + 관련 검색어(상위·급상승). 기준 키워드를 매번 함께 넣어 요청끼리 비교 | `trends_compare.py [--time "now 7-d"] [--related] "키워드" ...` |
+| 수요 크기 비교 | Google Trends 상대 검색량(미국, 최대 5개) + 관련 검색어(상위·급상승). 기준 키워드를 매번 함께 넣어 요청끼리 비교. YouTube 검색 기준(`--property youtube`), 카테고리로 뜻 좁히기(`--cat 5` Computers & Electronics), 주제 ID(`--suggest`로 찾은 `/g/…`)로 표현 차이 묶기 | `trends_compare.py [--time "now 7-d"] [--property youtube] [--cat 5] [--related] "키워드" ...` |
 | 소제목·FAQ 소재 | Chrome 도움말 커뮤니티, Apple Discussions 질문 제목, 자동완성 하위 검색어 | 직접 열기 |
 | 사후 판단 | Search Console 노출 검색어 | `gsc_report.py` |
 
 - 기술 뉴스 RSS(The Verge, BleepingComputer, 9to5Google, 9to5Mac, Windows Central, Ars Technica)와 Google News RSS(`news.google.com/rss/search?q=…+when:7d`)는 이슈 확인 보조용. 뉴스 자체보다 그 뒤에 생길 사용법·문제 검색을 노림
-- 쓸 수 없음: Reddit(본문 비어 있음), Quora·Downdetector(403), Google 검색 결과(429)
+- 쓸 수 없음: Reddit(본문 비어 있음), Quora·Downdetector(403), Google 검색 결과(429), Bing Webmaster Tools API(지원 종료), Ahrefs·Semrush 무료 도구(사람 확인·로그인 필요 → 자동 조회 안 함)
+- pytrends 4.9.2(2023-04 이후 업데이트 없음)는 같은 Trends API를 쓰므로 따로 설치하지 않음. 쓸 만한 기능(YouTube·카테고리·관련 주제·주제 ID)은 `trends_compare.py`로 옮김. 급상승 목록 함수는 404 (2026-10-14 확인)
 - Trends API는 쿠키 없이 부르면 429지만, 홈에서 `NID` 쿠키를 받은 뒤 부르면 열림 (2026-10-14 확인, `trends_compare.py`). 연속 호출하면 429가 나서 재시도(최대 약 2.5분 대기)
 - 자동완성·Trends 모두 절대 검색량이 아님 (Trends는 요청 안 최고점 = 100인 상대값). 절대량 판단은 발행 후 Search Console로
 
@@ -104,7 +105,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 | ----------------------------- | --------- | ---------------------------------------------------------------------------------- |
 | 도메인·호스팅                 | 설정됨    | `tool-proof.com` 연결, `NEXT_PUBLIC_SITE_URL=https://tool-proof.com`(Production). 필수 체크는 GitHub Actions `test`·`build` (2026-10-12 Vercel 상태 체크를 필수에서 제외: `ignoreCommand`로 건너뛴 배포는 상태가 안 남아 PR이 막힘). `build`는 바뀐 패키지와 의존 앱만 빌드 |
 | Search Console                | 등록·API 설정됨 | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. 서비스 계정(제한된 권한) 키를 환경변수 `GSC_SERVICE_ACCOUNT_JSON_B64`로 등록, API 도메인 허용. 조회는 [tools/gsc_report.py](tools/gsc_report.py) |
-| Bing Webmaster Tools·IndexNow | 설정됨 | 2026-10-12 사용자가 Bing Webmaster Tools 등록. 2026-10-14부터 프로덕션 배포마다 바뀐 글 URL 자동 제출 ([indexnow.yml](../../../.github/workflows/indexnow.yml), [scripts/indexnow.ts](../scripts/indexnow.ts)), Actions에서 수동 실행 시 sitemap 전체 제출. 키 파일 `public/{key}.txt` = `scripts/lib/indexnow.ts`의 `INDEXNOW_KEY` |
+| Bing Webmaster Tools·IndexNow | 설정됨 | 2026-10-12 사용자가 Bing Webmaster Tools 등록. 2026-10-14부터 프로덕션 배포마다 바뀐 글 URL 자동 제출 ([indexnow.yml](../../../.github/workflows/indexnow.yml), [scripts/indexnow.ts](../scripts/indexnow.ts)), Actions에서 수동 실행 시 sitemap 전체 제출. 키 파일 `public/{key}.txt` = `scripts/lib/indexnow.ts`의 `INDEXNOW_KEY`. Bing Webmaster Tools API(키워드 검색량 `GetKeywordStats` 포함)는 지원 종료 → 검색량 조회에 쓰지 않음 (2026-10-14 사용자 확인) |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US`. 2026-10-14 상대 검색량·관련 검색어 API를 쿠키 방식으로 사용 ([tools/trends_compare.py](tools/trends_compare.py)) |
 | 컨테이너 네트워크             | 일부 허용 | 2026-10-11 세션 2 확인: npm·PyPI·GitHub(Releases 다운로드)·trends.google.com·microsoft.com·support.microsoft.com·learn.microsoft.com·support.google.com·apple.com·huggingface.co·tool-proof.com 접속 가능. help.openai.com·api.github.com은 403. 2026-10-12 세션 3: raw.githubusercontent.com·k2-fsa.github.io·download.pytorch.org·en.wikipedia.org 가능, github.com HTML 페이지·소스 zip은 차단. 2026-10-13 세션 4: huggingface.co 데이터셋 parquet 다운로드 가능, Playwright(Python)+`/opt/pw-browsers/chromium-1194`로 로컬 웹 화면 스크린샷 가능. 2026-10-14 세션 6: huggingface.co GGUF 다운로드 가능, `github.com/.../releases/latest`는 403(태그를 모르면 Releases 다운로드 불가) → PyPI `llama-cpp-python` 소스 빌드로 llama.cpp 실행 |
 | AdSense                       | 미신청    | 글 20편 도달 즉시 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |

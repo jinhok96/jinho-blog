@@ -1,0 +1,25 @@
+  0%|          | 0/16991778 [00:00<?, ?it/s] 38%|███▊      | 6387712/16991778 [00:00<00:00, 63877028.62it/s]16992256it [00:00, 108444478.56it/s]                            
+  0%|          | 0/8420979 [00:00<?, ?it/s]8421376it [00:00, 107673019.54it/s]        
+	Command being timed: "venv2/bin/python /home/user/jinho-blog/apps/ad-blog/experiment/tests/image-to-text-offline-free/bench.py doctr-fast imgs results/doctr-fast.jsonl"
+	User time (seconds): 147.39
+	System time (seconds): 48.24
+	Percent of CPU this job got: 321%
+	Elapsed (wall clock) time (h:mm:ss or m:ss): 1:00.90
+	Average shared text size (kbytes): 0
+	Average unshared data size (kbytes): 0
+	Average stack size (kbytes): 0
+	Average total size (kbytes): 0
+	Maximum resident set size (kbytes): 1142904
+	Average resident set size (kbytes): 0
+	Major (requiring I/O) page faults: 0
+	Minor (reclaiming a frame) page faults: 18189178
+	Voluntary context switches: 260739
+	Involuntary context switches: 93855
+	Swaps: 0
+	File system inputs: 8
+	File system outputs: 49888
+	Socket messages sent: 0
+	Socket messages received: 0
+	Signals delivered: 0
+	Page size (bytes): 4096
+	Exit status: 0

@@ -39,7 +39,7 @@
 | 29   | 2026년 10월 Windows 10 ESU 업데이트(10-13 Patch Tuesday) KB·설치 오류                     | windows 10 october 2026 update              | -    | 조사만                    | ~1개월                | 보류 (KB5126657·19045.7807 확인, KB·오류 자동완성 없음 → ESU 글 빌드 표만 갱신 2026-10-14. 11월 업데이트 때 재확인) |
 | 30   | Gemini 4 Argon (2026-10-13 출시): 무료 사용 범위·요금                                      | gemini 4 argon free                         | -    | 조사만                    | 2~4개월               | 보류 (자동완성 16개, 경쟁·AI 요약 위험 큼, 직접 검증 불가)      |
 | 31   | 패스키 설정 (Google 계정·iPhone·Windows 11)                                                | how to set up passkey                       | -    | 일부 (Chromium 가상 인증기) | 상시                  | 후보 (2026-10-14 추가, 자동완성 27개 Google·Bing·YouTube. Google·Apple 공식 문서 경쟁 강함) |
-| 32   | 허브 확장용: 무료 오프라인 번역·OCR 측정                                                   | offline translator free                     | -    | 예                        | 상시                  | 후보 (2026-10-14 추가, 수요 확인 필요. 측정하면 `free-offline-ai-tools`에 추가) |
+| 32   | 허브 확장용: 무료 오프라인 번역·OCR 측정                                                   | image to text (OCR) / offline translator    | -    | 예                        | 상시                  | OCR 발행 `image-to-text-offline-free` (2026-10-15, 허브에 섹션 추가). 번역은 Trends `offline translator` 0.0(기준 `remove background` 35.5)으로 보류 |
 
 ## 반복 일정
 

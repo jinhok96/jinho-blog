@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-15 · 세션 7 (정기 실행 6회차): 무료 오프라인 이미지→텍스트(OCR)
+
+세션 시각: 2026-10-14 21:10 UTC (한국 10-15 06:10). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-16 ~ 10-14, 세션 6 이후 바뀐 값만)**
+
+- **첫 클릭 1** (홈 `/`, 순위 3.0). 노출 23 → **33**, CTR 3.0%, 평균 순위 14.6
+  - `turn-off-ai-in-chrome` 노출 15 → 21 (순위 5.2) / `transcribe-audio-offline-free` 6 (9.5) / `check-if-image-is-ai-generated` 5 (62.2)
+  - 검색어 2개(`google ai gone` 3위, `synthid detector` 143.5위)는 같음
+- URL 검사: `free-offline-ai-tools`(10-14 19:12 UTC 크롤링)·`gemini-gems-to-skills`(11:38 UTC) **`Submitted and indexed`** → 8편 중 7편 색인. `remove-background-from-image-free-offline`은 `Discovered - currently not indexed` → **`URL is unknown to Google`**로 바뀜 (세션 5에서 발견됐던 URL이 다시 미발견 상태로 표시, 원인 불명)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 판단 11-11) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                         | 카테고리   | 유형                      | 직접 검증                                                                                                   |
+| ---------------------------- | ---------- | ------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `image-to-text-offline-free` | `ai-tools` | 비교 (측정형, 검색형)     | OCR 4개 엔진 7개 설정(Tesseract 5.3.4 기본·`--psm 6`, RapidOCR 3.10 small·medium, EasyOCR 1.7.2, docTR 1.1.0 기본·mobile)을 직접 만든 50장(스크린샷·11px 글자·스캔·사진·영수증 각 10장)으로 측정 |
+
+- 선정 근거: 백로그 32(허브 확장용 번역·OCR). Trends(미국 3개월, 기준 `remove background` 35.5): `ocr` 13.2 · `image to text` 9.8 · `offline translator` 0.0 · `extract text from image` 0.0 → OCR, 주 검색어 `image to text`. 자동완성: "image to text free" 26개(Google·Bing·YouTube: no sign up·unlimited·offline), "image to text offline" 19개, "ocr offline" 21개(windows·free·software)
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Google Trends 미국 급상승 10개: 정치·스포츠·날씨 → IT 주제 없음. 공식 피드 새 항목(Python 3.15 Windows on Arm, Apple TV·HomePod) → 일반 사용자 검색 수요 약해 보류
+- 적용한 노하우: 검색형 제목 51자·설명 154자, 측정 규모 제목 표기, 이미지 5장(대표 표 그래프 1200×675 + 속도·메모리 + 테스트 이미지 예시 + 영수증·작은 글자 실제 출력 비교), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → 허브 + 측정 글 3편. **허브 `free-offline-ai-tools`에 OCR 섹션·요약 표 행 추가, `updatedAt` 2026-10-15** (검증 기록 V2). V1 대상 3편은 판정 전 추가 변경 금지 규칙 때문에 새 글 역링크를 넣지 않음 (허브가 역링크 역할)
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 9개, og:image 생성, 이미지 모두 width·height 지정. 허브 `dateModified` 2026-10-15
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 기본 설정)**
+
+| 엔진                  | 거의 완벽(CER≤2%, /50) | 단어 재현율 | 영수증 숫자 | 초/장 | 최대 RAM |
+| --------------------- | ---------------------- | ----------- | ----------- | ----- | -------- |
+| Tesseract `--psm 6`   | **42**                 | 96.4%       | 86%         | 0.54  | 0.05GB   |
+| Tesseract 기본        | 33                     | 93.1%       | 51%         | 0.55  | 0.05GB   |
+| docTR 기본            | 33                     | 99.0%       | 97%         | 2.99  | 1.34GB   |
+| docTR mobile          | 31                     | **99.1%**   | 98%         | 1.06  | 1.09GB   |
+| RapidOCR small        | 34                     | 93.6%       | 95%         | 1.50  | 0.61GB   |
+| RapidOCR medium       | 35                     | 97.3%       | 98%         | 26.4  | 0.89GB   |
+| EasyOCR               | 1                      | 85.6%       | 47%         | 3.56  | 1.79GB   |
+
+**알게 된 것**
+
+- 정확도 지표를 하나만 쓰면 결론이 뒤집힘: docTR은 단어는 99% 읽지만 영수증 가격을 별도 블록으로 출력해 CER 기준 영수증 0/10 → "단어 재현율(순서 무시)"과 "거의 완벽(순서 포함)"을 함께 보고
+- Tesseract 기본(`--psm 3`)은 영수증 10장 중 7장에서 가격 열 대부분을 누락, `--psm 6`으로 바꾸면 숫자 재현율 51% → 86%. 작은 글자에서는 "I"를 "|"로 읽음
+- RapidOCR(PP-OCRv6 small)은 화면 폭 전체의 긴 줄을 흩어진 글자로 내놓는 경우가 있음 (스크린샷 20장 중 12장 단어 재현율 97% 미만). medium은 덜하지만 약 18배 느림
+- 저작권 문제 없는 정답 텍스트 확보: Project Gutenberg(퍼블릭 도메인) 본문 + 직접 만든 영수증으로 이미지를 생성해 정답을 정확히 앎. gutenberg.org·modelscope.cn·doctr-static.mindee.com·EasyOCR 모델(GitHub Releases 고정 태그)·apt(archive.ubuntu.com) 모두 접속 가능
+- 측정 중 실수: (1) 실행 중인 `run_all.sh`를 수정·폴더 이름 변경 → 스크립트 중단, 나머지 엔진은 같은 순서로 따로 실행 (결과 영향 없음). (2) RapidOCR medium 측정 중 `pnpm install`(약 15초)을 함께 실행 → 이미지 1~2장 시간이 늘었을 수 있음 (중앙값 사용, 18배 차이라 결론 영향 없음). (3) Python 파일 쓰기 버퍼 때문에 결과 줄 수로 진행률을 볼 수 없었음 → 다음엔 `flush`
+- Apple Live Text 문서는 오프라인 동작 여부를 밝히지 않음 → 글에서 오프라인이라고 쓰지 않음. Microsoft는 Snipping Tool 텍스트 인식이 기기 안에서 처리된다고 명시
+
+**다음 할 일**
+
+- Claude: `remove-background-from-image-free-offline` `URL is unknown` 추적 (이번 세션 확인: 배포된 sitemap에 포함, HTTP 200, `index, follow`, canonical 자기 자신 → 사이트 쪽 문제는 없음). 다음 세션에도 같으면 사용자에게 Search Console URL 검사 → 색인 요청 제안
+- Claude: 새 글 노출 검색어 확인 (`image to text offline`, `ocr offline` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 발행 9편 / AdSense 신청 기준 20편
+
 ## 2026-10-14 · 세션 6 (정기 실행 5회차): 허브 글 — 무료 오프라인 AI 도구
 
 세션 시각: 2026-10-14 09:10 UTC (한국 18:10). 열린 PR 없음.

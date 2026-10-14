@@ -3,6 +3,7 @@ title: Best Free Offline AI Tools for Your PC (2026, Tested)
 description: 'We ran free AI tools fully offline on a 4-core PC with no GPU: 7 chatbot models, speech-to-text, text-to-speech and background removal. Our picks and RAM needs.'
 category: ai-tools
 createdAt: 2026-10-14
+updatedAt: 2026-10-15
 thumbnail: ./images/free-offline-ai-tools/offline-chatbot-speed-accuracy.webp
 tags:
   - offline AI
@@ -12,9 +13,9 @@ tags:
   - privacy
 ---
 
-You can run four everyday AI jobs on your own PC for free and with no internet connection: chatting with an AI assistant, transcribing audio, reading text aloud and removing photo backgrounds. In our tests on a plain 4-core computer with no graphics card, every job worked fully offline once the model was downloaded, and most of our top picks needed less than 3 GB of memory. For an offline chatbot, small models such as **Qwen3.5 2B** and **Gemma 4 E2B** answered 18 to 19 of our 20 test questions correctly and summarized an email in about 10 seconds.
+You can run five everyday AI jobs on your own PC for free and with no internet connection: chatting with an AI assistant, transcribing audio, reading text aloud, removing photo backgrounds and copying text out of images. In our tests on a plain 4-core computer with no graphics card, every job worked fully offline once the model was downloaded, and most of our top picks needed less than 3 GB of memory. For an offline chatbot, small models such as **Qwen3.5 2B** and **Gemma 4 E2B** answered 18 to 19 of our 20 test questions correctly and summarized an email in about 10 seconds.
 
-This page collects what we measured. For the chatbot, we ran seven free models through the same email summary and 20 short questions on October 14, 2026. The transcription, voice and background removal results come from our separate, more detailed tests, linked in each section. Everything here is free to download, and none of it needs an account once it's installed.
+This page collects what we measured. For the chatbot, we ran seven free models through the same email summary and 20 short questions on October 14, 2026. The transcription, voice, background removal and image-to-text results come from our separate, more detailed tests, linked in each section. Everything here is free to download, and none of it needs an account once it's installed.
 
 ![Two bar charts for 7 offline chatbot models. Seconds to summarize a 250-word email: Qwen3.5 0.8B 14, Qwen3.5 2B 10, Gemma 4 E2B 10, Llama 3.2 3B 16, Phi-4-mini 17, Qwen3.5 4B 22, Gemma 4 E4B 17. Correct answers out of 20: 12, 19, 18, 17, 16, 19 and 19](./images/free-offline-ai-tools/offline-chatbot-speed-accuracy.webp)
 
@@ -26,8 +27,9 @@ This page collects what we measured. For the chatbot, we ran seven free models t
 | Speech to text | Parakeet TDT (v2 for English) or Whisper turbo | Vibe, Buzz, Handy | 1 min 45 s for a 22-minute call | 1.3 GB | [8 transcription models tested](/posts/transcribe-audio-offline-free) |
 | Text to speech | Kokoro v1.0 (natural) or Piper medium (fast) | Piper, sherpa-onnx | 28 s (Kokoro) or under 4 s (Piper) per minute of speech | 0.3–0.6 GB | [11 offline voices tested](/posts/free-offline-text-to-speech) |
 | Background removal | BiRefNet (best) or IS-Net (fast) | rembg | 41 s (BiRefNet) or 1.5 s (IS-Net) per photo | 1.1–9.6 GB | [8 background removal models tested](/posts/remove-background-from-image-free-offline) |
+| Image to text (OCR) | Tesseract (fast) or docTR (most words) | Tesseract, NAPS2 | 0.5 s (Tesseract) or 3 s (docTR) per image | 0.06–1.3 GB | [4 offline OCR tools tested](/posts/image-to-text-offline-free) |
 
-The speed column comes from different test days. The chatbot ran on a 2.3 GHz server; the other three tests ran on a 2.8 GHz one, so compare models within a row, not across rows. A recent laptop, especially one with a graphics card or an Apple silicon chip, will usually be faster.
+The speed column comes from different test days. The chatbot ran on a 2.3 GHz server; the other four tests ran on a 2.8 GHz one, so compare models within a row, not across rows. A recent laptop, especially one with a graphics card or an Apple silicon chip, will usually be faster.
 
 ## Offline AI chatbot: which free model to use
 
@@ -106,6 +108,10 @@ To cut out photos offline for free, use the open-source tool rembg with **birefn
 
 ![The rembg web page running locally in a browser: the original cat photo on the left, the cutout on the right, and settings below with the Models menu set to isnet-general-use](./images/remove-background-from-image-free-offline/rembg-web-ui.webp)
 
+## Offline image to text (OCR)
+
+To copy text out of screenshots, scans and photos offline, use **Tesseract** for speed or **docTR** when you need every word. In our [test of 4 free offline OCR tools](/posts/image-to-text-offline-free) on 50 images, Tesseract took about half a second per image with around 55 MB of memory and gave near-perfect text on 42 images with its `--psm 6` setting, while docTR read 99% of all words but often scrambled the line order on receipts and photos. For a single screenshot, Windows Snipping Tool's Text actions and Live Text on a Mac or iPhone are already built in.
+
 ## How much RAM you need for offline AI
 
 8 GB of RAM is enough for every job on this page except the largest chatbot and background removal models; 16 GB gives you room for Gemma 4 E4B and BiRefNet. The chart shows the peak memory of our picks for each job, measured with each tool running alone.
@@ -127,7 +133,7 @@ Your browser and other apps need memory too, so on an 8 GB computer, close what 
 - **Email summary:** a 253-word office-move email we wrote, with the instruction to summarize it in exactly 5 bullet points including every date and deadline. We timed three runs and checked the first for the bullet count and four dates (the move, packing deadline, badge pickup and a Wednesday deadline).
 - **20 questions:** 8 math word problems, 6 general-knowledge facts and 6 instruction or extraction tasks (for example, returning a JSON object or answering only YES or NO), all with answers we could check automatically. We reviewed every answer marked wrong by hand and accepted equivalent forms such as 1 7/8 for 1.875.
 - **Memory:** the peak resident memory of the process, which includes the model file and the conversation cache.
-- **Machine:** a Linux cloud server with 4 Intel Xeon cores at 2.3 GHz, 16 GB of RAM and no graphics card, October 14, 2026. The transcription, voice and background removal tests ran on October 11 to 13 on a 2.8 GHz 4-core server; see each linked article for its method.
+- **Machine:** a Linux cloud server with 4 Intel Xeon cores at 2.3 GHz, 16 GB of RAM and no graphics card, October 14, 2026. The transcription, voice, background removal and OCR tests ran on October 11 to 14 on a 2.8 GHz 4-core server; see each linked article for its method.
 
 ## FAQ
 

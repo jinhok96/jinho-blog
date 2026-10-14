@@ -6,6 +6,7 @@
     "registry": "tsx scripts/registry.ts",
     "dev": "pnpm run registry && next dev -p 3402",
     "build": "pnpm run registry && next build",
+    "indexnow": "tsx scripts/indexnow.ts",
     "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src scripts",
     "eslint": "eslint src scripts --fix",

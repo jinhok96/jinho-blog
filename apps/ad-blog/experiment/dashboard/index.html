@@ -179,7 +179,8 @@ const state = { daily: [], posts: [], knowhow: [], sessions: [], summary: null }
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
 const pct = (x) => (x == null ? '–' : (x * 100).toFixed(1) + '%');
-const shortDate = (d) => d.slice(5).replace('-', '.');
+// 날짜 표기: YY.MM.DD (입력은 YYYY-MM-DD 또는 ISO 시각)
+const ymd = (d) => (d ? String(d).slice(2, 10).replace(/-/g, '.') : '–');
 
 function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
@@ -199,16 +200,16 @@ function statusPill(s) {
 function renderSummary() {
   const s = state.summary;
   if (!s) return;
-  $('updated').textContent = '갱신 ' + s.updatedAt.replace('T', ' ').replace('Z', ' UTC');
+  $('updated').textContent = `갱신 ${ymd(s.updatedAt)} ${s.updatedAt.slice(11, 16)} UTC`;
   $('k-imp').textContent = fmt(s.impressions);
   $('k-clk').textContent = fmt(s.clicks);
   $('k-ctr').textContent = 'CTR ' + pct(s.ctr);
   $('k-pos').textContent = s.position == null ? '–' : s.position.toFixed(1);
-  $('k-range').textContent = `${s.range.start} ~ ${s.range.end}`;
+  $('k-range').textContent = `${ymd(s.range.start)} ~ ${ymd(s.range.end)}`;
   const sm = s.sitemap || {};
   const ok = !sm.errors && !sm.warnings;
   $('k-sm').innerHTML = ok ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${sm.errors} · 경고 ${sm.warnings}</span>`;
-  $('k-sm-sub').textContent = '마지막 다운로드 ' + (sm.lastDownloaded ? sm.lastDownloaded.slice(0, 10) : '–');
+  $('k-sm-sub').textContent = '마지막 다운로드 ' + ymd(sm.lastDownloaded);
 }
 
 function barChart(el, rows) {
@@ -226,8 +227,8 @@ function barChart(el, rows) {
     const x = L + i * bw;
     const h = y(0) - y(r.impressions);
     const color = r.state === 'final' ? 'var(--series)' : 'var(--fresh)';
-    g += `<rect x="${x + bw * 0.18}" y="${y(r.impressions)}" width="${bw * 0.64}" height="${Math.max(h, 0)}" rx="3" fill="${color}"><title>${r.date} 노출 ${r.impressions} (${r.state === 'final' ? '확정' : '미확정'})</title></rect>`;
-    if (i % every === 0 || i === rows.length - 1) g += `<text x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${shortDate(r.date)}</text>`;
+    g += `<rect x="${x + bw * 0.18}" y="${y(r.impressions)}" width="${bw * 0.64}" height="${Math.max(h, 0)}" rx="3" fill="${color}"><title>${ymd(r.date)} 노출 ${r.impressions} (${r.state === 'final' ? '확정' : '미확정'})</title></rect>`;
+    if (i % every === 0 || i === rows.length - 1) g += `<text x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${ymd(r.date)}</text>`;
   });
   el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg>`;
 }
@@ -245,11 +246,11 @@ function lineChart(el, rows) {
   let g = '';
   for (let v = 1; v <= bottom; v += v === 1 ? step - 1 : step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
   const every = Math.ceil(xs.length / Math.max(2, Math.floor((W - L - R) / 64)));
-  xs.forEach((d, i) => { if (i % every === 0 || i === xs.length - 1) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${shortDate(d)}</text>`; });
+  xs.forEach((d, i) => { if (i % every === 0 || i === xs.length - 1) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${ymd(d)}</text>`; });
   g += `<polyline fill="none" stroke="var(--series)" stroke-width="2" points="${pts.map((r) => `${x(r.date)},${y(r.position)}`).join(' ')}"/>`;
   pts.forEach((r, i) => {
     const last = i === pts.length - 1;
-    g += `<circle cx="${x(r.date)}" cy="${y(r.position)}" r="${last ? 6 : 4}" fill="${r.state === 'final' ? 'var(--series)' : 'var(--fresh)'}" stroke="var(--panel)" stroke-width="2"><title>${r.date} 평균 ${r.position}위</title></circle>`;
+    g += `<circle cx="${x(r.date)}" cy="${y(r.position)}" r="${last ? 6 : 4}" fill="${r.state === 'final' ? 'var(--series)' : 'var(--fresh)'}" stroke="var(--panel)" stroke-width="2"><title>${ymd(r.date)} 평균 ${r.position}위</title></circle>`;
     if (last) g += `<text x="${x(r.date) - 8}" y="${y(r.position) - 12}" text-anchor="end" style="fill:var(--ink)">${r.position}위</text>`;
   });
   el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 평균 순위 꺾은선 그래프">${g}</svg>`;
@@ -268,8 +269,8 @@ function renderPosts() {
   const indexed = posts.filter((p) => p.index && p.index.verdict === 'PASS').length;
   $('k-indexed').textContent = `색인 ${indexed} / ${posts.length}`;
   $('posts').innerHTML = posts.map((p) => `<tr>
-    <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + esc(p.updatedAt) : ''}</div></td>
-    <td class="num">${esc(p.createdAt)}</td>
+    <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + ymd(p.updatedAt) : ''}</div></td>
+    <td class="num">${ymd(p.createdAt)}</td>
     <td>${p.channel ? `<span class="chip">${esc(p.channel)}</span>` : '<span class="small">–</span>'}</td>
     <td class="r num">${fmt(p.images)}</td>
     <td>${indexPill(p.index)}</td>
@@ -282,13 +283,13 @@ function renderPosts() {
 function renderKnowhow() {
   if (!state.knowhow.length) return;
   $('knowhow').innerHTML = [...state.knowhow].sort((a, b) => a.num - b.num).map((k) => `<tr>
-    <td class="num">${k.num}</td><td>${esc(k.title)}${k.record && k.record !== '-' ? `<div class="small">${esc(k.record)}</div>` : ''}</td><td>${statusPill(k.status)}</td><td class="num small">${esc(k.updated)}</td>
+    <td class="num">${k.num}</td><td>${esc(k.title)}${k.record && k.record !== '-' ? `<div class="small">${esc(k.record)}</div>` : ''}</td><td>${statusPill(k.status)}</td><td class="num small">${ymd(k.updated)}</td>
   </tr>`).join('');
 }
 
 function renderSessions() {
   if (!state.sessions.length) return;
-  $('sessions').innerHTML = [...state.sessions].sort((a, b) => b.order - a.order).map((s) => `<li><span class="num small">${esc(s.date)}</span><span>${esc(s.title)}</span></li>`).join('');
+  $('sessions').innerHTML = [...state.sessions].sort((a, b) => b.order - a.order).map((s) => `<li><span class="num small">${ymd(s.date)}</span><span>${esc(s.title)}</span></li>`).join('');
 }
 
 function render() {

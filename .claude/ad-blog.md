@@ -29,6 +29,7 @@ src/
 content/            # posts/*.mdx, pages/*.mdx (about·contact·privacy)
 experiment/         # 운영 실험 문서·검증 자료 (빌드·린트 대상 아님)
 scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 이미지 생성
+scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow.ts)
 ```
 
 ## 정적 export 규칙
@@ -59,6 +60,9 @@ scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 
 - sitemap `lastmod`·RSS `lastBuildDate`는 콘텐츠 날짜 기준 (빌드 시각 금지)
 - 페이지당 `<h1>` 1개, 이미지는 크기 지정(CLS 0)
 - JSON-LD author·publisher의 `@type`은 `AUTHOR_TYPE`(현재 `Organization`, 이름 = `SITE_NAME`)
+- IndexNow(Bing 등): 프로덕션 배포 성공(`deployment_status`, 환경 `Production – ad-blog`) 시 [indexnow.yml](.github/workflows/indexnow.yml)이 직전 성공 배포 이후 추가·수정·삭제된 MDX의 URL만 제출. 배포된 sitemap에 없는 수정 글(초안)은 제외. 수동 실행(workflow_dispatch)은 sitemap 전체 제출
+  - 키는 `scripts/lib/indexnow.ts`의 `INDEXNOW_KEY` = `public/{키}.txt` (테스트가 일치 검증), 도메인은 워크플로우의 `NEXT_PUBLIC_SITE_URL`
+  - URL 매핑은 mdx-handler 규칙(`content/{컬렉션}/{slug}.mdx` → `{route}/{slug}`)을 따름 — 컬렉션·라우트 구조를 바꾸면 함께 확인
 
 ## 광고 규칙
 
@@ -79,4 +83,5 @@ pnpm --filter @jinho-blog/ad-blog dev       # registry 생성 후 개발 서버
 pnpm --filter @jinho-blog/ad-blog build     # registry 생성 후 정적 빌드 → out/
 pnpm --filter @jinho-blog/ad-blog test
 pnpm --filter @jinho-blog/ad-blog lint
+INDEXNOW_MODE=all INDEXNOW_DRY_RUN=true NEXT_PUBLIC_SITE_URL=https://tool-proof.com pnpm --filter @jinho-blog/ad-blog indexnow  # 제출 대상 확인
 ```

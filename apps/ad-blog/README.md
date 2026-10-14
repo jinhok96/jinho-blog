@@ -105,6 +105,7 @@ pnpm --filter @jinho-blog/ad-blog registry  # 레지스트리·썸네일·OG 이
 - `manifest.webmanifest`, `icon.svg`
 - OG 이미지: 글별 1200x630 JPEG 자동 생성, 기본 이미지는 `SITE_NAME`으로 생성
 - 도메인 미설정 상태에서는 전 페이지 `noindex`
+- IndexNow(Bing·Naver·Yandex 등): 프로덕션 배포 후 GitHub Actions([indexnow.yml](../../.github/workflows/indexnow.yml))가 바뀐 글 URL을 자동 제출. Actions 탭에서 수동 실행하면 sitemap 전체 제출 (`dry_run`으로 대상만 확인 가능). 다른 도메인에 배포하면 워크플로우의 `NEXT_PUBLIC_SITE_URL`과 환경 이름 조건을 수정
 
 ## 광고 (AdSense)
 
@@ -153,6 +154,7 @@ AdSense 수동 광고 단위 4곳이 연결되어 있습니다. 설정은 `src/c
 - [ ] 페이지 소스의 canonical이 실제 도메인이고 `noindex`가 없는지 확인
 - [ ] 사이트 정보·카테고리·아이콘 교체, 샘플 글 삭제, 정적 페이지 placeholder 수정
 - [ ] [Google Search Console](https://search.google.com/search-console)에 도메인 등록 후 `https://도메인/sitemap.xml` 제출
+- [ ] [Bing Webmaster Tools](https://www.bing.com/webmasters)에 사이트 등록(Search Console에서 가져오기 가능) 후 sitemap 제출, IndexNow 제출 내역 확인
 - [ ] (한국어 검색) [네이버 서치어드바이저](https://searchadvisor.naver.com)에 사이트 등록, sitemap·RSS 제출
 - [ ] 광고 신청 전 개인정보처리방침(`content/pages/privacy.mdx`)의 연락처·시행일 placeholder 수정, 쿠키·광고 안내 확인 (소개·문의 페이지도 함께)
 - [ ] AdSense 신청: `ADSENSE_CLIENT` 입력 후 배포, `/ads.txt`와 페이지 소스의 `google-adsense-account` 메타 태그 확인

@@ -62,7 +62,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 5. **작성**: [writing-guide.md](writing-guide.md) 기준
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인
-7. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지
+7. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지. 배포가 끝나면 IndexNow 워크플로우가 바뀐 글 URL을 자동 제출 (Actions의 `IndexNow` 실행 로그에서 제출 대상 확인)
 8. **기록**: log.md에 세션 기록, backlog.md 갱신, 검증 자료는 [tests/](tests/README.md)에 보관, 새로 알게 된 규칙은 writing-guide.md에 반영
 
 ## 기록 원칙
@@ -85,7 +85,7 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | ----------------------------- | --------- | ---------------------------------------------------------------------------------- |
 | 도메인·호스팅                 | 설정됨    | `tool-proof.com` 연결, `NEXT_PUBLIC_SITE_URL=https://tool-proof.com`(Production). 필수 상태 체크는 `Vercel – jinho-blog-web` 등 프로젝트별 이름 |
 | Search Console                | 등록·API 설정됨 | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. 서비스 계정(제한된 권한) 키를 환경변수 `GSC_SERVICE_ACCOUNT_JSON_B64`로 등록, API 도메인 허용. 조회는 [tools/gsc_report.py](tools/gsc_report.py) |
-| Bing Webmaster Tools·IndexNow | 미설정    | 도메인 연결 후 진행 (Claude: IndexNow 키 파일·제출 스크립트)                       |
+| Bing Webmaster Tools·IndexNow | IndexNow 설정됨 | 2026-10-14 프로덕션 배포마다 바뀐 글 URL 자동 제출 ([indexnow.yml](../../../.github/workflows/indexnow.yml)), 수동 실행 시 sitemap 전체 제출. Bing Webmaster Tools 사이트 등록(Search Console에서 가져오기)·sitemap 제출 (사용자) |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US` |
 | 컨테이너 네트워크             | 제한      | npm·PyPI·GitHub(+trends.google.com)만 접속 가능 → 웹 서비스 직접 테스트·스크린샷·실제 사이트 확인 불가. WebFetch도 같은 제한. `tool-proof.com`과 공식 문서 도메인(help.openai.com, support.google.com 등) 허용 추가 권장 (사용자) |
 | AdSense                       | 미신청    | 글 20~30편 이후 신청, 승인 후 `src/core/config/internal/ads.ts`에 ID 입력          |

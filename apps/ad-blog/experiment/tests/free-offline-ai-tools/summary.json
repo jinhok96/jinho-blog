@@ -1,0 +1,222 @@
+{
+ "Qwen3.5-0.8B": {
+  "file_gb": 0.53,
+  "peak_rss_gb": 1.26,
+  "load_s": 0.7,
+  "gen_tok_per_s_median": 19.2,
+  "gen_tok_per_s_runs": [
+   19.2,
+   25.5,
+   16.4
+  ],
+  "words_per_s_median": 12.8,
+  "summary_total_s_median": 13.5,
+  "first_token_s_median": 0.9,
+  "speed_prompt_tokens": 339,
+  "summary_gen_tokens": 243,
+  "summary_bullets": 13,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)",
+   "Wednesday (tell Dana)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 11,
+  "score_20": 12,
+  "wrong": [
+   "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "What is 17 multiplied by 23?",
+   "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "What is the capital of Australia?",
+   "Convert 3 hours 45 minutes to minutes. Reply with the number only."
+  ],
+  "avg_answer_s": 0.8
+ },
+ "Qwen3.5-2B": {
+  "file_gb": 1.28,
+  "peak_rss_gb": 2.68,
+  "load_s": 7.9,
+  "gen_tok_per_s_median": 12.7,
+  "gen_tok_per_s_runs": [
+   11.4,
+   12.7,
+   13.4
+  ],
+  "words_per_s_median": 6.7,
+  "summary_total_s_median": 9.5,
+  "first_token_s_median": 1.8,
+  "speed_prompt_tokens": 339,
+  "summary_gen_tokens": 99,
+  "summary_bullets": 5,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 19,
+  "score_20": 19,
+  "wrong": [
+   "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede"
+  ],
+  "avg_answer_s": 4.1
+ },
+ "gemma-4-E2B-it": {
+  "file_gb": 3.11,
+  "peak_rss_gb": 4.15,
+  "load_s": 5.7,
+  "gen_tok_per_s_median": 12.7,
+  "gen_tok_per_s_runs": [
+   12.2,
+   12.7,
+   12.8
+  ],
+  "words_per_s_median": 8.8,
+  "summary_total_s_median": 10.5,
+  "first_token_s_median": 2.1,
+  "speed_prompt_tokens": 341,
+  "summary_gen_tokens": 109,
+  "summary_bullets": 5,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)",
+   "Wednesday (tell Dana)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 17,
+  "score_20": 18,
+  "wrong": [
+   "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need "
+  ],
+  "avg_answer_s": 3.3
+ },
+ "Llama-3.2-3B-Instruct": {
+  "file_gb": 2.02,
+  "peak_rss_gb": 4.43,
+  "load_s": 18.8,
+  "gen_tok_per_s_median": 9.4,
+  "gen_tok_per_s_runs": [
+   9.4,
+   9.3,
+   9.4
+  ],
+  "words_per_s_median": 7.1,
+  "summary_total_s_median": 16.5,
+  "first_token_s_median": 2.9,
+  "speed_prompt_tokens": 329,
+  "summary_gen_tokens": 127,
+  "summary_bullets": 5,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 17,
+  "score_20": 17,
+  "wrong": [
+   "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "Convert 3 hours 45 minutes to minutes. Reply with the number only."
+  ],
+  "avg_answer_s": 4.7
+ },
+ "Phi-4-mini-instruct": {
+  "file_gb": 2.49,
+  "peak_rss_gb": 5.35,
+  "load_s": 11.5,
+  "gen_tok_per_s_median": 7.6,
+  "gen_tok_per_s_runs": [
+   7.5,
+   7.6,
+   8.1
+  ],
+  "words_per_s_median": 5.5,
+  "summary_total_s_median": 17.3,
+  "first_token_s_median": 3.3,
+  "speed_prompt_tokens": 327,
+  "summary_gen_tokens": 108,
+  "summary_bullets": 5,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 15,
+  "score_20": 16,
+  "wrong": [
+   "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede"
+  ],
+  "avg_answer_s": 1.3
+ },
+ "Qwen3.5-4B": {
+  "file_gb": 2.74,
+  "peak_rss_gb": 5.55,
+  "load_s": 14.2,
+  "gen_tok_per_s_median": 6.2,
+  "gen_tok_per_s_runs": [
+   6.3,
+   6.2,
+   6.2
+  ],
+  "words_per_s_median": 3.9,
+  "summary_total_s_median": 21.6,
+  "first_token_s_median": 4.2,
+  "speed_prompt_tokens": 339,
+  "summary_gen_tokens": 109,
+  "summary_bullets": 5,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)",
+   "Wednesday (tell Dana)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 19,
+  "score_20": 19,
+  "wrong": [
+   "Convert 3 hours 45 minutes to minutes. Reply with the number only."
+  ],
+  "avg_answer_s": 10.0
+ },
+ "gemma-4-E4B-it": {
+  "file_gb": 4.98,
+  "peak_rss_gb": 7.83,
+  "load_s": 5.7,
+  "gen_tok_per_s_median": 7.0,
+  "gen_tok_per_s_runs": [
+   7.0,
+   7.0,
+   7.0
+  ],
+  "words_per_s_median": 4.7,
+  "summary_total_s_median": 16.8,
+  "first_token_s_median": 4.0,
+  "speed_prompt_tokens": 341,
+  "summary_gen_tokens": 91,
+  "summary_bullets": 5,
+  "summary_dates_found": [
+   "Nov 7 (movers)",
+   "Nov 5 (pack by)",
+   "Nov 9 (badge)",
+   "Wednesday (tell Dana)"
+  ],
+  "summary_same_all_runs": true,
+  "score_20_at_run": 18,
+  "score_20": 19,
+  "wrong": [
+   "At sea level, what is the boiling point of water in degrees Fahrenheit?"
+  ],
+  "avg_answer_s": 9.3
+ }
+}

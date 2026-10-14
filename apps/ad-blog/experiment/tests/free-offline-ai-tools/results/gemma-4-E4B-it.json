@@ -1,0 +1,155 @@
+{
+ "model": "gemma-4-E4B-it-Q4_K_M.gguf",
+ "file_gb": 4.977171584,
+ "arch": "gemma4",
+ "load_s": 5.675213510000049,
+ "speed_prompt_tokens": 341,
+ "speed": [
+  {
+   "first_token_s": 4.452302222999833,
+   "total_s": 17.3989425499999,
+   "gen_tokens": 91,
+   "gen_tok_per_s": 6.951610435357971,
+   "text": "* Movers are scheduled for Saturday, November 7, starting at 8 a.m.\n* Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n* Take laptops and valuables home on Thursday, November 5.\n* Pick up new badges at reception on Monday, November 9, between 8 and 10 a.m.\n* Inform Dana by Wednesday about special equipment needs."
+  },
+  {
+   "first_token_s": 3.9729419210000287,
+   "total_s": 16.801587692000112,
+   "gen_tokens": 91,
+   "gen_tok_per_s": 7.0155495448670315,
+   "text": "* Movers are scheduled for Saturday, November 7, starting at 8 a.m.\n* Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n* Take laptops and valuables home on Thursday, November 5.\n* Pick up new badges at reception on Monday, November 9, between 8 and 10 a.m.\n* Inform Dana by Wednesday about special equipment needs."
+  },
+  {
+   "first_token_s": 3.9994798180000544,
+   "total_s": 16.834026017000042,
+   "gen_tokens": 91,
+   "gen_tok_per_s": 7.012324285140086,
+   "text": "* Movers are scheduled for Saturday, November 7, starting at 8 a.m.\n* Pack desks into labeled boxes by 5 p.m. on Thursday, November 5.\n* Take laptops and valuables home on Thursday, November 5.\n* Pick up new badges at reception on Monday, November 9, between 8 and 10 a.m.\n* Inform Dana by Wednesday about special equipment needs."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "The original price of the shirt is $\\$40$.\nThe discount is $25\\%$.\n\nCalculate the discount amount:\nDiscount = $25\\%$ of $\\$40$\nDiscount = $0.25 \\times 40$\nDiscount = $\\$10$\n\nCalculate the sale price:\nSale Price = Original Price - Discount\nSale Price = $\\$40 - \\$10$\nSale Price = $\\$30$\n\nAlternatively, if the shirt is $25\\%$ off, the customer pays $100\\% - 25\\% = 75\\%$ of the original price.\nSale Price = $0.75 \\times \\$40$\nSale Price = $\\$30$\n\nThe sale price is $\\$30$.",
+   "ok": true,
+   "total_s": 23.59165252700018
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "Total pens initially: $3 \\times 12 = 36$\nPens left: $36 - 7 = 29$\n\n29",
+   "ok": true,
+   "total_s": 5.745484184999896
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "12:15 p.m.",
+   "ok": true,
+   "total_s": 2.3474897819999114
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "Let $S$ be Sara's current age and $C$ be her son's current age.\n\nFrom the first statement:\n$S = 3C$ (Equation 1)\n\nIn 12 years, Sara's age will be $S+12$ and her son's age will be $C+12$.\nFrom the second statement:\n$S+12 = 2(C+12)$ (Equation 2)\n\nSimplify Equation 2:\n$S+12 = 2C + 24$\n$S = 2C + 12$ (Equation 3)\n\nNow we have two expressions for $S$ (Equation 1 and Equation 3). Set them equal to each other:\n$3C = 2C + 12$\n$3C - 2C = 12$\n$C = 12$\n\nNow substitute the value of $C$ back into Equation 1 to find $S$:\n$S = 3C$\n$S = 3(12)$\n$S = 36$\n\nSara is currently 36 years old.\n\n36",
+   "ok": true,
+   "total_s": 37.22419339299995
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "Here is the step-by-step solution:\n\n1.  **Find the amount of sugar needed per cookie:**\n    Divide the initial amount of sugar by the number of cookies:\n    $$\\text{Sugar per cookie} = \\frac{3/4 \\text{ cup}}{12 \\text{ cookies}} = \\frac{3}{4} \\times \\frac{1}{12} = \\frac{3}{48} = \\frac{1}{16} \\text{ cup per cookie}$$\n\n2.  **Calculate the sugar needed for 30 cookies:**\n    Multiply the sugar per cookie by the desired number of cookies:\n    $$\\text{Total sugar} = \\frac{1}{16} \\text{ cup/cookie} \\times 30 \\text{ cookies} = \\frac{30}{16} \\text{ cups}$$\n\n3.  **Simplify the fraction:**\n    $$\\frac{30}{16} = \\frac{15}{8}$$\n\n4.  **Convert to a mixed number (optional but helpful):**\n    $$\\frac{15}{8} = 1 \\frac{7}{8} \\text{ cups}$$\n\nAlternatively, using ratios:\n$$\\frac{3/4 \\text{ cup}}{12 \\text{ cookies}} = \\frac{x \\text{ cups}}{30 \\text{ cookies}}$$\n$$12x = 30 \\times \\frac{3}{4}$$\n$$12x = \\frac{90}{4}$$\n$$12x = \\frac{45}{2}$$\n$$x = \\frac{45}{2 \\times 12} = \\frac{45}{24}$$\nDividing the numerator and denominator by 3:\n$$x = \\frac{15}{8}$$\n\nThe amount of sugar",
+   "ok": false,
+   "total_s": 58.31087694200005
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "$17 \\times 23 = 391$\n\n391",
+   "ok": true,
+   "total_s": 3.354390247999845
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "The monthly cost is calculated as:\nBase plan cost + (Cost per text $\\times$ Number of texts)\n$\\$15 + (\\$0.10 \\times 240)$\n$\\$15 + \\$24.00$\n$\\$39.00$\n\n$39.00",
+   "ok": true,
+   "total_s": 10.745276807999971
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "Here's the breakdown:\n\n1. **Analyze the initial rate:** 5 printers print 5 pages in 5 minutes. This means, on average, each printer prints 1 page in 5 minutes.\n2. **Determine the required work:** We need 100 pages printed.\n3. **Calculate the time:** If one printer takes 5 minutes to print 1 page, then 100 printers working simultaneously can each print 1 page in 5 minutes. Since we need 100 pages printed, and we have 100 printers, each printer can handle one page.\n\nTherefore, the time required is the time it takes for one printer to print one page.\n\n5 minutes\n\n",
+   "ok": true,
+   "total_s": 22.549942600999884
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "Canberra\n\n",
+   "ok": true,
+   "total_s": 1.1288822470000923
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "Au\n\n",
+   "ok": true,
+   "total_s": 0.9896408820000033
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury\n\n",
+   "ok": true,
+   "total_s": 0.9864365089999865
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "Jane Austen\n\n",
+   "ok": true,
+   "total_s": 1.14228786700005
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "32 degrees Fahrenheit",
+   "ok": false,
+   "total_s": 1.2118575189999774
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "366\n\n",
+   "ok": true,
+   "total_s": 1.17708337199997
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.8231878500000676
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "225",
+   "ok": true,
+   "total_s": 1.128371363999804
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "Apple,Banana,Orange",
+   "ok": true,
+   "total_s": 1.4060771189999741
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear\n\n",
+   "ok": true,
+   "total_s": 1.6496571459999814
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "```json\n{\n  \"name\": \"Maria Lopez\",\n  \"email\": \"maria.lopez@example.com\"\n}\n```",
+   "ok": true,
+   "total_s": 5.480373729999883
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7",
+   "ok": true,
+   "total_s": 4.639446742000018
+  }
+ ],
+ "score": 18,
+ "peak_rss_gb": 7.8265228271484375,
+ "llama_cpp_python": "0.3.36"
+}

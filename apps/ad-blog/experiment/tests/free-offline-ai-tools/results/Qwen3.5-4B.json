@@ -1,0 +1,155 @@
+{
+ "model": "Qwen3.5-4B-Q4_K_M.gguf",
+ "file_gb": 2.740937888,
+ "arch": "qwen35",
+ "load_s": 14.247371162000036,
+ "speed_prompt_tokens": 339,
+ "speed": [
+  {
+   "first_token_s": 6.78192181899999,
+   "total_s": 23.992158048000192,
+   "gen_tokens": 109,
+   "gen_tok_per_s": 6.275335129799904,
+   "text": "*   Movers are rescheduled for Saturday, November 7, starting at 8 a.m.\n*   Pack labeled desk boxes by 5 p.m. on Thursday, November 5.\n*   Take laptops and chargers home by Thursday, November 5; monitors stay behind.\n*   Pick up a new badge from reception Monday, November 9, between 8 and 10 a.m.\n*   Notify Dana by Wednesday for special items; parking costs $85/month after the first month."
+  },
+  {
+   "first_token_s": 4.24746238900002,
+   "total_s": 21.562155601999848,
+   "gen_tokens": 109,
+   "gen_tok_per_s": 6.237476960834274,
+   "text": "*   Movers are rescheduled for Saturday, November 7, starting at 8 a.m.\n*   Pack labeled desk boxes by 5 p.m. on Thursday, November 5.\n*   Take laptops and chargers home by Thursday, November 5; monitors stay behind.\n*   Pick up a new badge from reception Monday, November 9, between 8 and 10 a.m.\n*   Notify Dana by Wednesday for special items; parking costs $85/month after the first month."
+  },
+  {
+   "first_token_s": 3.9252310829999715,
+   "total_s": 21.349260190999985,
+   "gen_tokens": 109,
+   "gen_tok_per_s": 6.198336752686738,
+   "text": "*   Movers are rescheduled for Saturday, November 7, starting at 8 a.m.\n*   Pack labeled desk boxes by 5 p.m. on Thursday, November 5.\n*   Take laptops and chargers home by Thursday, November 5; monitors stay behind.\n*   Pick up a new badge from reception Monday, November 9, between 8 and 10 a.m.\n*   Notify Dana by Wednesday for special items; parking costs $85/month after the first month."
+  }
+ ],
+ "answers": [
+  {
+   "q": "A shirt costs $40 and is 25% off. What is the sale price in dollars?",
+   "answer": "To find the sale price, first calculate the discount amount:\n$40 \\times 0.25 = $10$\n\nThen subtract the discount from the original price:\n$40 - $10 = $30$\n\nThe sale price is $30.",
+   "ok": true,
+   "total_s": 10.294918736
+  },
+  {
+   "q": "I have 3 boxes with 12 pens each and give away 7 pens. How many pens are left?",
+   "answer": "To find the total number of pens, multiply the number of boxes by the number of pens in each box:\n$3 \\times 12 = 36$ pens.\n\nThen, subtract the pens given away:\n$36 - 7 = 29$ pens.\n\n29",
+   "ok": true,
+   "total_s": 10.78119872100001
+  },
+  {
+   "q": "A train leaves at 9:40 a.m. and the trip takes 2 hours 35 minutes. At what time ",
+   "answer": "12:15 p.m.",
+   "ok": true,
+   "total_s": 2.3797935369998413
+  },
+  {
+   "q": "Sara is 3 times as old as her son. In 12 years she will be twice as old as him. ",
+   "answer": "Let $S$ be Sara's current age and $B$ be her son's current age.\n\n1.  From the first statement: $S = 3B$.\n2.  From the second statement: In 12 years, Sara will be $S + 12$ and her son will be $B + 12$. At that time, Sara will be twice as old as her son:\n    $S + 12 = 2(B + 12)$\n\nSubstitute $S = 3B$ into the second equation:\n$3B + 12 = 2(B + 12)$\n$3B + 12 = 2B + 24$\n$3B - 2B = 24 - 12$\n$B = 12$\n\nNow, find Sara's age:\n$S = 3 \\times 12 = 36$\n\nSara is 36 years old.\n\n36",
+   "ok": true,
+   "total_s": 33.55897284499997
+  },
+  {
+   "q": "A recipe needs 3/4 cup of sugar for 12 cookies. How many cups of sugar are neede",
+   "answer": "To find the amount of sugar needed for 30 cookies, we can set up a proportion or calculate the sugar per cookie.\n\n**Method 1: Proportion**\nLet $x$ be the cups of sugar needed for 30 cookies.\n$$ \\frac{3/4 \\text{ cup}}{12 \\text{ cookies}} = \\frac{x \\text{ cup}}{30 \\text{ cookies}} $$\n\nCross-multiply to solve for $x$:\n$$ 12x = 30 \\times \\frac{3}{4} $$\n$$ 12x = \\frac{90}{4} $$\n$$ 12x = 22.5 $$\n$$ x = \\frac{22.5}{12} $$\n$$ x = 1.875 $$\n\n**Method 2: Unit Rate**\nFirst, find the sugar needed for 1 cookie:\n$$ \\frac{3}{4} \\div 12 = \\frac{3}{48} = \\frac{1}{16} \\text{ cup per cookie} $$\n\nThen, multiply by 30 cookies:\n$$ 30 \\times \\frac{1}{16} = \\frac{30}{16} = \\frac{15}{8} = 1.875 $$\n\nBoth methods yield 1.875 cups.\n\n1.875 cups",
+   "ok": true,
+   "total_s": 49.34170610399997
+  },
+  {
+   "q": "What is 17 multiplied by 23?",
+   "answer": "To find the product of 17 and 23:\n\n1.  Multiply 17 by 20: $17 \\times 20 = 340$\n2.  Multiply 17 by 3: $17 \\times 3 = 51$\n3.  Add the results: $340 + 51 = 391$\n\nAlternatively, using standard multiplication:\n$$\n\\begin{array}{r}\n  17 \\\\\n\\times 23 \\\\\n\\hline\n  51 \\quad (17 \\times 3) \\\\\n 340 \\quad (17 \\times 20) \\\\\n\\hline\n 391 \\\\\n\\end{array}\n$$\n\n391",
+   "ok": true,
+   "total_s": 28.43642505699995
+  },
+  {
+   "q": "A phone plan costs $15 a month plus $0.10 per text. How much is a month with 240",
+   "answer": "To calculate the total cost:\n\n1.  **Base cost:** $15.00\n2.  **Text cost:** 240 texts $\\times$ $0.10/text = $24.00\n3.  **Total:** $15.00 + $24.00 = $39.00\n\n$39",
+   "ok": true,
+   "total_s": 14.095297867
+  },
+  {
+   "q": "If 5 printers print 5 pages in 5 minutes, how many minutes do 100 printers need ",
+   "answer": "If 5 printers print 5 pages in 5 minutes, then 1 printer prints 1 page in 5 minutes.\n\nTherefore, 100 printers will print 100 pages in the same amount of time, which is **5 minutes**.",
+   "ok": true,
+   "total_s": 9.366831285999979
+  },
+  {
+   "q": "What is the capital of Australia?",
+   "answer": "Australia does not have a single capital city. Instead, it has three capital cities:\n*   **Canberra**: The capital of the Australian Capital Territory (ACT) and the seat of the federal government.\n*   **Sydney**: The capital of New South Wales.\n*   **Melbourne**: The capital of Victoria.\n\nThe final answer is **Canberra**.",
+   "ok": true,
+   "total_s": 12.22111428900007
+  },
+  {
+   "q": "What is the chemical symbol for gold?",
+   "answer": "The chemical symbol for gold is **Au**.\n\nThis symbol comes from the Latin word *aurum*, meaning \"shining dawn\" or \"dawn's ray.\"",
+   "ok": true,
+   "total_s": 6.073216119000108
+  },
+  {
+   "q": "Which planet is closest to the sun?",
+   "answer": "Mercury",
+   "ok": true,
+   "total_s": 1.1583105429999705
+  },
+  {
+   "q": "Who wrote the novel Pride and Prejudice?",
+   "answer": "The novel *Pride and Prejudice* was written by **Jane Austen**.",
+   "ok": true,
+   "total_s": 3.484840394999992
+  },
+  {
+   "q": "At sea level, what is the boiling point of water in degrees Fahrenheit?",
+   "answer": "212\u00b0F",
+   "ok": true,
+   "total_s": 1.371453425000027
+  },
+  {
+   "q": "How many days are in a leap year?",
+   "answer": "A leap year has **366** days.",
+   "ok": true,
+   "total_s": 2.535985768000046
+  },
+  {
+   "q": "Is 17 a prime number? Reply with only the word YES or NO.",
+   "answer": "YES",
+   "ok": true,
+   "total_s": 0.8817834310000308
+  },
+  {
+   "q": "Convert 3 hours 45 minutes to minutes. Reply with the number only.",
+   "answer": "285",
+   "ok": false,
+   "total_s": 1.181553785999995
+  },
+  {
+   "q": "List exactly three fruits, separated by commas, with nothing else in your reply.",
+   "answer": "Apple, Banana, Orange",
+   "ok": true,
+   "total_s": 1.5421057890000611
+  },
+  {
+   "q": "Sort these words alphabetically and reply with them separated by commas: pear, a",
+   "answer": "apple, mango, pear",
+   "ok": true,
+   "total_s": 1.4539866210000127
+  },
+  {
+   "q": "Return only a JSON object with keys \"name\" and \"email\" for this text: Contact Ma",
+   "answer": "{\n  \"name\": \"Maria Lopez\",\n  \"email\": \"maria.lopez@example.com\"\n}",
+   "ok": true,
+   "total_s": 4.5542961180001384
+  },
+  {
+   "q": "From the email below, on what date do the movers come? Answer with the date only",
+   "answer": "November 7",
+   "ok": true,
+   "total_s": 4.671969491000027
+  }
+ ],
+ "score": 19,
+ "peak_rss_gb": 5.546806335449219,
+ "llama_cpp_python": "0.3.36"
+}

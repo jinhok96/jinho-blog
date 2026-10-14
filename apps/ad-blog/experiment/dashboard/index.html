@@ -4,82 +4,115 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap">
 <style>
-/* Layout: 실험 노트 한 장 — 위에 요약 지표, 가운데 날짜별 추이 2개, 아래에 글·노하우·세션 목록 */
+/* Layout: Vercel Geist 계열 — #fafafa 바탕 위 흰 카드·1px 회색 선, 잉크 한 색 + 파랑 하나. 위에 요약 지표, 가운데 추이 2개, 아래 목록 */
 :root {
-  --bg: #f6f7f5;
+  --canvas: #fafafa;
   --panel: #ffffff;
-  --ink: #17201d;
-  --ink-2: #4c5a55;
-  --ink-3: #7d8a85;
-  --line: #dde3df;
-  --accent: #116a5c;
-  --accent-soft: #d6ebe5;
-  --fresh: #b07a12;
-  --good: #1d7a3e;
-  --warn: #a8670a;
-  --bad: #b3322a;
-  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
-  --font-num: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", system-ui, sans-serif;
+  --well: #f2f2f2;
+  --ink: #171717;
+  --body: #4d4d4d;
+  --mute: #8f8f8f;
+  --line: #ebebeb;
+  --link: #0070f3;
+  --link-soft: #d3e5ff;
+  --series: #171717;
+  --fresh: #f5a623;
+  --good: #0070f3;
+  --warn: #ab570a;
+  --warn-soft: #ffefcf;
+  --bad: #ee0000;
+  --shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  --font-body: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  --font-num: "Noto Sans KR", "Apple SD Gothic Neo", "Malgun Gothic", Arial, sans-serif;
+  --fs-body: 16px; --lh-body: 24px;
+  --fs-sm: 14px; --lh-sm: 20px;
+  --fs-xs: 13px; --lh-xs: 18px;
+  --fs-h1: 36px; --lh-h1: 44px;
+  --fs-h2: 18px; --lh-h2: 26px;
+  --fs-kpi: 36px; --lh-kpi: 44px;
+  --fs-chart: 13px;
+  --r-card: 12px;
+  --r-ctl: 6px;
 }
 @media (prefers-color-scheme: dark) {
   :root:not([data-theme="light"]) {
-    --bg: #111715; --panel: #18201d; --ink: #e6ece9; --ink-2: #aab7b2; --ink-3: #7c8a85; --line: #2b3632;
-    --accent: #4fc2ab; --accent-soft: #1d3a33; --fresh: #e0a840; --good: #5cc882; --warn: #e3a246; --bad: #ef7a6f;
+    --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
+    --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
+    --shadow: none;
     color-scheme: dark;
   }
 }
 :root[data-theme="dark"] {
-  --bg: #111715; --panel: #18201d; --ink: #e6ece9; --ink-2: #aab7b2; --ink-3: #7c8a85; --line: #2b3632;
-  --accent: #4fc2ab; --accent-soft: #1d3a33; --fresh: #e0a840; --good: #5cc882; --warn: #e3a246; --bad: #ef7a6f;
+  --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
+  --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
+  --shadow: none;
   color-scheme: dark;
 }
-body { background: var(--bg); color: var(--ink); font-family: var(--font-body); font-size: 15px; line-height: 1.55; }
-.wrap { max-width: 1120px; margin: 0 auto; padding-block: 28px 56px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 28px; }
-header { display: flex; flex-wrap: wrap; align-items: baseline; justify-content: space-between; gap: 8px 24px; }
-h1 { font-size: 26px; font-weight: 700; margin: 0; letter-spacing: -0.01em; text-wrap: balance; }
-h1 span { color: var(--accent); }
-h2 { font-size: 16px; font-weight: 600; margin: 0; text-wrap: balance; }
-.meta { color: var(--ink-3); font-size: 13px; font-family: var(--font-num); }
+@media (max-width: 640px) {
+  :root {
+    --fs-body: 14px; --lh-body: 20px;
+    --fs-sm: 13px; --lh-sm: 18px;
+    --fs-xs: 12px; --lh-xs: 16px;
+    --fs-h1: 28px; --lh-h1: 36px;
+    --fs-h2: 16px; --lh-h2: 24px;
+    --fs-kpi: 28px; --lh-kpi: 36px;
+    --fs-chart: 18px;
+  }
+}
+body { background: var(--canvas); color: var(--ink); font-family: var(--font-body); font-size: var(--fs-body); line-height: var(--lh-body); }
+.wrap { max-width: 1200px; margin: 0 auto; padding-block: 40px 64px; padding-left: max(16px, env(safe-area-inset-left, 0px)); padding-right: max(16px, env(safe-area-inset-right, 0px)); display: grid; gap: 24px; }
+header { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 8px 24px; padding-bottom: 24px; border-bottom: 1px solid var(--line); }
+.eyebrow { font-size: var(--fs-xs); line-height: var(--lh-xs); font-weight: 500; color: var(--mute); letter-spacing: 0.04em; text-transform: uppercase; margin: 0 0 8px; }
+h1 { font-size: var(--fs-h1); line-height: var(--lh-h1); font-weight: 600; margin: 0; letter-spacing: -1.28px; text-wrap: balance; }
+h1 span { color: var(--ink); }
+h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margin: 0; letter-spacing: -0.32px; text-wrap: balance; }
+.meta { color: var(--mute); font-size: var(--fs-sm); font-family: var(--font-num); font-variant-numeric: tabular-nums; }
 .num { font-family: var(--font-num); font-variant-numeric: tabular-nums; }
-.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 12px; }
-.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 14px 16px; display: grid; gap: 2px; min-width: 0; }
-.kpi .label { font-size: 12px; color: var(--ink-2); letter-spacing: 0.02em; }
-.kpi .value { font-family: var(--font-num); font-size: 26px; font-weight: 500; font-variant-numeric: tabular-nums; }
-.kpi .sub { font-size: 12px; color: var(--ink-3); }
+.kpis { display: grid; grid-template-columns: repeat(auto-fit, minmax(160px, 1fr)); gap: 12px; }
+.kpi { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-card); box-shadow: var(--shadow); padding: 16px 20px; display: grid; gap: 4px; min-width: 0; }
+.kpi .label { font-size: var(--fs-xs); line-height: var(--lh-xs); font-weight: 500; color: var(--mute); letter-spacing: 0.04em; }
+.kpi .value { font-family: var(--font-num); font-size: var(--fs-kpi); line-height: var(--lh-kpi); font-weight: 600; letter-spacing: -1.28px; font-variant-numeric: tabular-nums; }
+.kpi .sub { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); }
 .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
-.panel { background: var(--panel); border: 1px solid var(--line); border-radius: 10px; padding: 16px; display: grid; gap: 10px; min-width: 0; align-content: start; }
+.panel { background: var(--panel); border: 1px solid var(--line); border-radius: var(--r-card); box-shadow: var(--shadow); padding: 24px; display: grid; gap: 16px; min-width: 0; align-content: start; }
 .panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
-.legend { display: flex; gap: 12px; font-size: 12px; color: var(--ink-2); }
-.legend i { display: inline-block; width: 10px; height: 10px; border-radius: 2px; margin-right: 5px; vertical-align: -1px; }
-svg text { font-family: var(--font-num); font-size: 11px; fill: var(--ink-3); }
-.table-scroll { overflow-x: auto; }
-table { width: 100%; border-collapse: collapse; font-size: 14px; }
-table.wide { min-width: 760px; }
+.legend { display: flex; gap: 12px; font-size: var(--fs-sm); color: var(--body); }
+.legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 6px; vertical-align: 0; }
+svg text { font-family: var(--font-num); font-size: var(--fs-chart); fill: var(--mute); }
+.table-scroll { overflow-x: auto; margin: 0 -24px; padding: 0 24px; }
+table { width: 100%; border-collapse: collapse; font-size: var(--fs-body); line-height: var(--lh-body); }
+table.wide { min-width: 860px; }
 td.num { white-space: nowrap; }
-th { text-align: left; font-size: 12px; font-weight: 500; color: var(--ink-2); padding: 8px 10px; border-bottom: 1px solid var(--line); white-space: nowrap; }
-td { padding: 10px; border-bottom: 1px solid var(--line); vertical-align: top; }
-tr:last-child td { border-bottom: 0; }
+th { text-align: left; font-size: var(--fs-sm); font-weight: 500; color: var(--mute); padding: 8px 12px; background: var(--well); border-bottom: 1px solid var(--line); white-space: nowrap; }
+th:first-child { border-top-left-radius: var(--r-ctl); border-bottom-left-radius: var(--r-ctl); }
+th:last-child { border-top-right-radius: var(--r-ctl); border-bottom-right-radius: var(--r-ctl); }
+thead th { border-bottom: 0; }
+td { padding: 12px; border-bottom: 1px solid var(--line); vertical-align: top; color: var(--body); }
 td.r, th.r { text-align: right; }
-.post-title { font-weight: 500; }
+tr:last-child td { border-bottom: 0; }
+.post-title { font-weight: 500; color: var(--ink); }
 .post-title a { color: var(--ink); text-decoration: none; }
-.post-title a:hover, .post-title a:focus-visible { color: var(--accent); text-decoration: underline; }
-.small { font-size: 12px; color: var(--ink-3); }
-.pill { display: inline-flex; align-items: center; gap: 5px; font-size: 12px; padding: 2px 8px; border-radius: 999px; border: 1px solid currentColor; white-space: nowrap; }
+.post-title a:hover, .post-title a:focus-visible { color: var(--link); }
+.small { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--mute); }
+.pill { display: inline-flex; align-items: center; gap: 6px; font-size: var(--fs-xs); line-height: var(--lh-xs); font-weight: 500; padding: 2px 10px; border-radius: 9999px; border: 1px solid var(--line); background: var(--panel); white-space: nowrap; color: var(--body); }
 .pill::before { content: ""; width: 6px; height: 6px; border-radius: 50%; background: currentColor; }
-.pill.good { color: var(--good); } .pill.warn { color: var(--warn); } .pill.bad { color: var(--bad); } .pill.muted { color: var(--ink-3); }
-.chip { font-size: 12px; padding: 1px 7px; border-radius: 4px; background: var(--accent-soft); color: var(--ink); white-space: nowrap; }
+.pill.good::before { background: var(--good); } .pill.warn::before { background: var(--fresh); } .pill.bad::before { background: var(--bad); } .pill.muted::before { background: var(--mute); }
+.pill.warn { color: var(--warn); }
+.pill.bad { color: var(--bad); }
+.chip { font-size: var(--fs-xs); line-height: var(--lh-xs); font-weight: 500; padding: 2px 8px; border-radius: var(--r-ctl); border: 1px solid var(--line); background: var(--well); color: var(--ink); white-space: nowrap; }
 .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
-ol.sessions { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; align-content: start; }
-ol.sessions li { display: grid; grid-template-columns: 92px 1fr; gap: 12px; font-size: 14px; }
-.empty { color: var(--ink-3); font-size: 14px; padding: 12px 0; }
-.notice { font-size: 13px; color: var(--ink-2); background: var(--accent-soft); border-radius: 8px; padding: 10px 12px; }
-footer { font-size: 12px; color: var(--ink-3); }
-a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+ol.sessions { list-style: none; margin: 0; padding: 0; display: grid; align-content: start; }
+ol.sessions li { display: grid; grid-template-columns: 7.5em 1fr; gap: 12px; padding: 10px 0; border-bottom: 1px solid var(--line); color: var(--body); }
+ol.sessions li:last-child { border-bottom: 0; }
+.empty { color: var(--mute); padding: 12px 0; }
+.notice { font-size: var(--fs-body); color: var(--warn); background: var(--warn-soft); border-radius: var(--r-ctl); padding: 8px 12px; }
+footer { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--mute); padding-top: 24px; border-top: 1px solid var(--line); }
+a:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 2px; }
 </style>
 
 <div class="wrap">
   <header>
-    <h1>Tool<span>Proof</span> 운영 현황</h1>
+    <div><p class="eyebrow">tool-proof.com · 운영 실험</p><h1>ToolProof 운영 현황</h1></div>
     <div class="meta" id="updated">데이터 불러오는 중</div>
   </header>
 
@@ -90,13 +123,13 @@ a:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
     <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub">낮을수록 위</span></div>
     <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
-    <div class="kpi"><span class="label">사이트맵</span><span class="value" id="k-sm" style="font-size:20px">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
+    <div class="kpi"><span class="label">사이트맵</span><span class="value" id="k-sm" style="font-size:var(--fs-body);line-height:var(--lh-kpi);letter-spacing:0">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
 
   <section class="charts">
     <div class="panel">
       <div class="panel-head"><h2>날짜별 노출</h2>
-        <div class="legend"><span><i style="background:var(--accent)"></i>확정</span><span><i style="background:var(--fresh)"></i>미확정</span></div>
+        <div class="legend"><span><i style="background:var(--series)"></i>확정</span><span><i style="background:var(--fresh)"></i>미확정</span></div>
       </div>
       <div id="chart-imp"></div>
     </div>
@@ -175,7 +208,7 @@ function renderSummary() {
 
 function barChart(el, rows) {
   if (!rows.length) { el.innerHTML = '<div class="empty">날짜별 데이터가 아직 없습니다.</div>'; return; }
-  const W = 520, H = 200, L = 36, R = 8, T = 12, B = 26;
+  const W = 520, H = 220, L = 46, R = 8, T = 14, B = 32;
   const max = Math.max(1, ...rows.map((r) => r.impressions));
   const step = niceStep(max);
   const top = Math.ceil(max / step) * step;
@@ -187,7 +220,7 @@ function barChart(el, rows) {
   rows.forEach((r, i) => {
     const x = L + i * bw;
     const h = y(0) - y(r.impressions);
-    const color = r.state === 'final' ? 'var(--accent)' : 'var(--fresh)';
+    const color = r.state === 'final' ? 'var(--series)' : 'var(--fresh)';
     g += `<rect x="${x + bw * 0.18}" y="${y(r.impressions)}" width="${bw * 0.64}" height="${Math.max(h, 0)}" rx="3" fill="${color}"><title>${r.date} 노출 ${r.impressions} (${r.state === 'final' ? '확정' : '미확정'})</title></rect>`;
     if (i % every === 0 || i === rows.length - 1) g += `<text x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${shortDate(r.date)}</text>`;
   });
@@ -197,7 +230,7 @@ function barChart(el, rows) {
 function lineChart(el, rows) {
   const pts = rows.filter((r) => r.position != null);
   if (!pts.length) { el.innerHTML = '<div class="empty">순위 데이터가 아직 없습니다.</div>'; return; }
-  const W = 520, H = 200, L = 36, R = 24, T = 12, B = 26;
+  const W = 520, H = 220, L = 46, R = 30, T = 14, B = 32;
   const maxP = Math.max(10, ...pts.map((r) => r.position));
   const step = niceStep(maxP);
   const bottom = Math.ceil(maxP / step) * step;
@@ -208,10 +241,10 @@ function lineChart(el, rows) {
   for (let v = 1; v <= bottom; v += v === 1 ? step - 1 : step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 6}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
   const every = Math.ceil(xs.length / 8);
   xs.forEach((d, i) => { if (i % every === 0 || i === xs.length - 1) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${shortDate(d)}</text>`; });
-  g += `<polyline fill="none" stroke="var(--accent)" stroke-width="2" points="${pts.map((r) => `${x(r.date)},${y(r.position)}`).join(' ')}"/>`;
+  g += `<polyline fill="none" stroke="var(--series)" stroke-width="2" points="${pts.map((r) => `${x(r.date)},${y(r.position)}`).join(' ')}"/>`;
   pts.forEach((r, i) => {
     const last = i === pts.length - 1;
-    g += `<circle cx="${x(r.date)}" cy="${y(r.position)}" r="${last ? 5 : 3.5}" fill="${r.state === 'final' ? 'var(--accent)' : 'var(--fresh)'}" stroke="var(--panel)" stroke-width="2"><title>${r.date} 평균 ${r.position}위</title></circle>`;
+    g += `<circle cx="${x(r.date)}" cy="${y(r.position)}" r="${last ? 5 : 3.5}" fill="${r.state === 'final' ? 'var(--series)' : 'var(--fresh)'}" stroke="var(--panel)" stroke-width="2"><title>${r.date} 평균 ${r.position}위</title></circle>`;
     if (last) g += `<text x="${x(r.date) - 8}" y="${y(r.position) - 9}" text-anchor="end" style="fill:var(--ink)">${r.position}위</text>`;
   });
   el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 평균 순위 꺾은선 그래프">${g}</svg>`;

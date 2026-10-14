@@ -134,6 +134,7 @@
 | ID  | 노하우 | 대상 글   | 바꾼 내용 | 배포일 | 지표 | 판단 시점 | 판정 | 반영 |
 | --- | ------ | --------- | --------- | ------ | ---- | --------- | ---- | ---- |
 | V1  | 3      | `transcribe-audio-offline-free`, `free-offline-text-to-speech`, `remove-background-from-image-free-offline` | 허브 글 `free-offline-ai-tools`로 역링크 1개씩 추가 | 2026-10-14 | position | 2026-11-11 | - | - |
+| V2  | 3      | `free-offline-ai-tools` | 허브에 OCR 섹션·요약 표 행 추가 (새 측정 글 `image-to-text-offline-free` 연결), `updatedAt` 2026-10-15 | 2026-10-15 | impressions | 2026-11-12 | - | - |
 
 ## 재분석
 

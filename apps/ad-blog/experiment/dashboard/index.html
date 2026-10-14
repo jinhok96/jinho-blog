@@ -74,6 +74,8 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 .kpi { background: var(--panel); border-radius: var(--r-card); box-shadow: var(--hair), var(--shadow); padding: 16px 20px; display: grid; gap: 4px; min-width: 0; }
 .kpi .label { font-size: var(--fs-sm); line-height: var(--lh-sm); font-weight: 500; color: var(--mute); letter-spacing: 0.04em; }
 .kpi .value { font-family: var(--font-num); font-size: var(--fs-kpi); line-height: var(--lh-kpi); font-weight: 600; letter-spacing: -1.28px; font-variant-numeric: tabular-nums; }
+/* 상태 뱃지 칸: 큰 숫자 줄과 같은 높이 안에서 세로 가운데 */
+.kpi .value.status { display: flex; align-items: center; height: var(--lh-kpi); font-size: var(--fs-body); letter-spacing: 0; }
 .kpi .sub { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); }
 .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
 .panel { background: var(--panel); border-radius: var(--r-card); box-shadow: var(--hair), var(--shadow); padding: 24px; display: grid; gap: 16px; min-width: 0; align-content: start; }
@@ -126,7 +128,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
     <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub">낮을수록 위</span></div>
     <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
-    <div class="kpi"><span class="label">사이트맵</span><span class="value" id="k-sm" style="font-size:var(--fs-body);line-height:var(--lh-kpi);letter-spacing:0">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
+    <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
 
   <section class="charts">

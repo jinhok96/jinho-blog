@@ -1,0 +1,53 @@
+name: IndexNow
+
+# ad-blog(tool-proof.com) 프로덕션 배포 성공 시 직전 배포 이후 추가·수정·삭제된 글 URL을 IndexNow(Bing 등)에 제출
+# 수동 실행: 배포된 sitemap 전체 제출 (초기 제출용)
+on:
+  deployment_status:
+  workflow_dispatch:
+    inputs:
+      dry_run:
+        description: '제출하지 않고 대상 URL만 출력'
+        type: boolean
+        default: false
+
+permissions:
+  contents: read
+  deployments: read
+
+# 동시 실행 제한 없음: 실행마다 자기 배포 기준으로 비교하므로 독립적 (concurrency 대기열은 대기 중인 실행을 취소함)
+jobs:
+  submit:
+    # Vercel이 만드는 GitHub 배포 환경 이름: 'Production – ad-blog' (프로젝트별, Preview 제외)
+    if: >-
+      github.event_name == 'workflow_dispatch' ||
+      (github.event.deployment_status.state == 'success' &&
+       startsWith(github.event.deployment.environment, 'Production') &&
+       endsWith(github.event.deployment.environment, 'ad-blog'))
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          # 직전 성공 배포 커밋과 비교하기 위해 전체 이력 필요
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - name: Submit to IndexNow
+        run: pnpm --filter @jinho-blog/ad-blog indexnow
+        env:
+          NEXT_PUBLIC_SITE_URL: https://tool-proof.com
+          INDEXNOW_MODE: ${{ github.event_name == 'workflow_dispatch' && 'all' || 'changed' }}
+          INDEXNOW_DRY_RUN: ${{ inputs.dry_run && 'true' || 'false' }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          DEPLOYMENT_ID: ${{ github.event.deployment.id }}
+          DEPLOYMENT_ENVIRONMENT: ${{ github.event.deployment.environment }}
+          DEPLOYMENT_SHA: ${{ github.event.deployment.sha }}

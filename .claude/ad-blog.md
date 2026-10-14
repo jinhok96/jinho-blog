@@ -2,8 +2,8 @@
 
 광고 수익형 블로그 **ToolProof** — 영어권(미국) 일반 사용자 대상 IT·AI 도구 가이드. 블로그 기능 + SEO 중심. 사용자 문서 → [apps/ad-blog/README.md](apps/ad-blog/README.md)
 
-- 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
-- 글 작성·수정 시 [writing-guide.md](apps/ad-blog/experiment/writing-guide.md) 기준 (영어, 1차 출처 확인, 가상 체험담 금지)
+- 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 트래픽 노하우(`traffic-playbook.md`, 대형 블로그 분석 → 재분석 도구 `tools/blog_patterns.py`), 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
+- 글 작성·수정 시 [writing-guide.md](apps/ad-blog/experiment/writing-guide.md) 기준 (영어, 1차 출처 확인, 가상 체험담 금지). 채널별 제목·허브 글·반복 일정 등은 [traffic-playbook.md](apps/ad-blog/experiment/traffic-playbook.md)
 
 - Next.js 16 **정적 export** (`output: 'export'`, 결과물 `out/`), 서버 런타임 없음
 - FSD 구조·import 규칙·TS 규칙은 web과 동일 → [web.md](.claude/web.md), [monorepo.md](.claude/monorepo.md)

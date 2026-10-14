@@ -1,0 +1,399 @@
+---
+title: WebGPU 새 기능 (Chrome 155-156)
+description: "Chrome 155-156 버전의 WebGPU 주요 업데이트 내용을 소개합니다. WGSL 확장, 텍스처 압축, 색 공간 지원 등이 포함됩니다."
+category: chrome
+sourceUrl: https://developer.chrome.com/blog/new-in-webgpu-155-156?hl=en
+createdAt: 2026-10-07
+---
+
+> 원문: [What's New in WebGPU (Chrome 155-156)](https://developer.chrome.com/blog/new-in-webgpu-155-156?hl=en) — Chrome Developers
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# WGSL fragment\_depth 확장
+
+기하학적 렌더링이 많은 렌더링 패스에서 early-Z 최적화는 개발자에게 매우 유용합니다. GPU가 비용이 많이 드는 fragment 셰이더를 실행하기 전에 숨겨진 픽셀을 버리도록 하여 성능을 크게 향상시킵니다. 래스터화된 깊이가 깊이 테스트를 통과하지 못하면, 셰이더에 다른 부작용이 없는 한 GPU는 fragment 셰이더를 완전히 건너뜁니다.
+
+하드웨어가 이를 어떻게 처리하는지에 대해 더 자세히 알고 싶다면 MJP가 작성한 "[When Does Early-Z Have to be Disabled?](https://therealmjp.github.io/posts/to-earlyz-or-not-to-earlyz/#when-does-early-z-have-to-be-disabled)"를 참고하세요.
+
+사용자 지정 깊이 조작은 유용하지만, fragment 셰이더에서 이를 수행하는 데는 숨겨진 비용이 따릅니다. `@builtin(frag_depth)`에 fragment 셰이더 내에서 쓰는 것은 일반적으로 드라이버가 전체 draw call에 대해 early-Z 최적화를 비활성화하도록 강제합니다. 이는 드라이버의 휴리스틱이 셰이더의 계산된 출력 깊이가 래스터라이저가 보간한 깊이와 일치한다고 보장할 수 없기 때문입니다.
+
+이 성능 저하를 해결하기 위해 WGSL 확장 `fragment_depth`를 사용하면 `@builtin(frag_depth)`에 `less` 또는 `greater` 깊이 모드 이름을 지정하여 쓴 깊이가 보간된 깊이와 어떻게 비교되는지 명시적으로 나타낼 수 있으며, 이를 통해 GPU는 early-Z 최적화를 안전하게 적용할 수 있습니다.
+
+이 언어 확장은 JavaScript에서 `navigator.gpu.wgslLanguageFeatures`를 사용하여 기능 감지할 수 있습니다. `requires fragment_depth;`를 WGSL 셰이더 코드 상단에 사용하여 이식성이 없을 수 있음을 알리는 것이 좋습니다. 다음 예시와 "[intent to ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/sS8f4X1SEkk/m/v7fWPbr-DgAJ)"를 참조하세요.
+
+```
+if (!navigator.gpu.wgslLanguageFeatures.has("fragment_depth")) {
+  throw new Error(`WGSL fragment depth is not available`);
+}
+
+const adapter = await navigator.gpu.requestAdapter();
+const device = await adapter.requestDevice();
+
+const shaderModule = device.createShaderModule({ code: `
+  requires fragment_depth;
+
+  @fragment
+  fn main() -> @builtin(frag_depth, less) f32 {
+    // Explicitly states that the output fragment depth is less than early-Z depth,
+    // allowing the GPU to safely preserve early-Z optimizations.
+    return 0.0f;
+  }`,
+});
+
+```
+
+# 텍스처 압축 비정렬
+
+"[`texture-compression-unaligned`](https://gpuweb.github.io/gpuweb/#dom-gpufeaturename-texture-compression-unaligned)" GPU 기능은 블록 크기의 정수 배수가 아닌 차원을 가진 압축 텍스처를 생성할 수 있도록 합니다 (BC, ETC2, ASTC 형식의 4x4 등). 이전에는 WebGPU에서 텍스처 크기가 이러한 블록 경계에 정렬되도록 엄격하게 요구했습니다. 이 기능은 텍스처를 패딩하거나 스케일링하여 블록 정렬에 맞출 필요성을 제거함으로써 스케일링 왜곡을 도입하지 않고 원래 압축 충실도를 유지합니다. "[intent to ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/Hp-KNpz1iK4?e=48417069)"를 참조하세요.
+
+다음 코드 스니펫은 어댑터가 텍스처 압축 비정렬을 지원하는지 확인하고, 지원하는 경우 이를 사용하여 장치를 요청합니다.
+
+```
+const adapter = await navigator.gpu.requestAdapter();
+if (!adapter.features.has("texture-compression-unaligned")) {
+  throw new Error("Texture compression unaligned support is not available");
+}
+// Explicitly request texture compression unaligned support.
+const device = await adapter.requestDevice({
+  requiredFeatures: ["texture-compression-unaligned"],
+});
+
+```
+
+이 기능을 추진하고, 사양 및 CTS 작업을 이끈 spark.js의 외부 기여자 [Ignacio Castaño](https://www.ludicon.com/castano/blog/)님께 감사드립니다!
+
+# srgb-linear 및 display-p3-linear 색 공간
+
+"`srgb-linear`" 및 "`display-p3-linear`" 사전 정의된 색 공간이 추가됨에 따라 WebGPU 캔버스 컨텍스트는 이제 와이드 색 영역 디스플레이를 지원하기 위해 확장된 범위의 선형 색 공간으로 직접 렌더링할 수 있습니다. 이러한 색 공간은 픽셀 값과 물리적 휘도 간의 선형 관계를 유지합니다. 따라서 게임에서 물리적 광선 렌더링뿐만 아니라 안티 앨리어싱, 보간 및 데시메이션과 같은 공간 처리 작업에 이상적입니다. "[intent to ship](https://groups.google.com/a/chromium.org/g/blink-dev/c/MoKhf3DLhQM/m/41Asvc44CQAJ?e=48417069)" 및 "[Particles (HDR) sample PR #574](https://github.com/webgpu/webgpu-samples/pull/574)"를 참조하세요.
+
+```
+const adapter = await navigator.gpu.requestAdapter();
+const device = await adapter.requestDevice();
+
+const canvas = document.querySelector("canvas");
+const context = canvas.getContext("webgpu");
+
+context.configure({
+  device,
+  format: "rgba16float",
+  colorSpace: "display-p3-linear",
+});
+
+```
+
+# 추가 snorm10-10-10-2 정점 형식
+
+"`snorm10-10-10-2`" 정점 형식은 네 개의 부호 있는 정규화 값을 보유하는 32비트 압축 형식입니다: 세 개의 10비트 컴포넌트 (`r, g, b`) 및 하나의 2비트 컴포넌트 (`a`). 이 형식을 사용하면 3D 법선 벡터와 추가 2비트 스칼라 또는 정렬 플래그와 같은 속성을 효율적으로 저장하면서 메모리 대역폭을 절약할 수 있습니다. "[spec PR 6491](https://github.com/gpuweb/gpuweb/pull/6491)"를 참조하세요.
+
+# Linux NVIDIA용 f16 지원
+
+선택적 "`shader-f16`" 기능은 WGSL에서 16비트 부동 소수점 값에 대한 지원을 제공합니다. 이제 최신 NVIDIA GPU 드라이버를 사용하는 Linux에서 지원됩니다. "[issue chromium:42251215](https://issues.chromium.org/42251215)"를 참조하세요.
+
+# Dawn 업데이트
+
+이제 `WGPUAdapterPropertiesD3D` 구조체를 사용하여 특정 GPU 어댑터의 기본 DXGIAdapter의 LUID를 쿼리할 수 있습니다. "[issue chromium:562849566](https://crbug.com/562849566)"를 참조하세요.
+
+여기서는 몇 가지 주요 내용을 다루었습니다. 전체 "[list of commits](https://dawn.googlesource.com/dawn/+log/chromium/8037..chromium/8078?n=1000)"를 확인하세요.
+
+"[What's New in WebGPU](https://developer.chrome.com/docs/web-platform/webgpu/news)" 시리즈에서 다룬 모든 내용의 목록입니다.
+
+## Chrome 155-156
+
+*   [WGSL fragment\_depth 확장](https://developer.chrome.com/blog/new-in-webgpu-155-156#wgsl-fragment_depth)
+*   [텍스처 압축 비정렬](https://developer.chrome.com/blog/new-in-webgpu-155-156#texture-compression)
+*   [srgb-linear 및 display-p3-linear 색 공간](https://developer.chrome.com/blog/new-in-webgpu-155-156#srgb-linear-and)
+*   [추가 snorm10-10-10-2 정점 형식](https://developer.chrome.com/blog/new-in-webgpu-155-156#additional-snorm10-10-10-2)
+*   [Linux NVIDIA용 f16 지원](https://developer.chrome.com/blog/new-in-webgpu-155-156#f16-support)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-155-156#dawn-updates)
+
+## Chrome 153-154
+
+*   [WGSL buffer\_view 확장](https://developer.chrome.com/blog/new-in-webgpu-153-154#wgsl-buffer_view)
+*   [WGSL swizzle\_assignment 확장](https://developer.chrome.com/blog/new-in-webgpu-153-154#wgsl-swizzle_assignment)
+*   [WGSL 확장 업데이트](https://developer.chrome.com/blog/new-in-webgpu-153-154#wgsl-extension)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-153-154#dawn-updates)
+
+## Chrome 151-152
+
+*   [Subgroup 크기 제어](https://developer.chrome.com/blog/new-in-webgpu-151-152#subgroup-size)
+*   [OperationError for setImmediates validation failures](https://developer.chrome.com/blog/new-in-webgpu-151-152#operationerror-setimmediates)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-151-152#dawn-updates)
+
+## Chrome 149-150
+
+*   [Immediates](https://developer.chrome.com/blog/new-in-webgpu-149-150#immediates)
+*   [Stricter validation for transient attachments](https://developer.chrome.com/blog/new-in-webgpu-149-150#stricter_validation_for_transient_attachments)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-149-150#dawn_updates)
+
+## Chrome 147-148
+
+*   [WGSL linear\_indexing 확장](https://developer.chrome.com/blog/new-in-webgpu-147-148#wgsl_linear_indexing_extension)
+*   [WebGPU on Linux NVIDIA](https://developer.chrome.com/blog/new-in-webgpu-147-148#webgpu_on_linux_nvidia)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-147-148#dawn_updates)
+
+## Chrome 146
+
+*   [OpenGL ES 3.1에서 WebGPU 호환 모드 지원](https://developer.chrome.com/blog/new-in-webgpu-146#support_webgpu_compatibility_mode_on_opengl_es_31)
+*   [Transient attachments](https://developer.chrome.com/blog/new-in-webgpu-146#transient_attachments)
+*   [WGSL texture\_and\_sampler\_let 확장](https://developer.chrome.com/blog/new-in-webgpu-146#wgsl_texture_and_sampler_let_extension)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-146#dawn_updates)
+
+## Chrome 145
+
+*   [WGSL subgroup\_uniformity 확장](https://developer.chrome.com/blog/new-in-webgpu-145#wgsl_subgroup_uniformity_extension)
+*   [Experimental synchronous buffer mapping in workers](https://developer.chrome.com/blog/new-in-webgpu-145#experimental_synchronous_buffer_mapping_in_workers)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-145#dawn_updates)
+
+## Chrome 144
+
+*   [WGSL subgroup\_id 확장](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_subgroup_id_extension)
+*   [WGSL uniform\_buffer\_standard\_layout 확장](https://developer.chrome.com/blog/new-in-webgpu-144#wgsl_uniform_buffer_standard_layout_extension)
+*   [WebGPU on Linux](https://developer.chrome.com/blog/new-in-webgpu-144#webgpu_on_linux)
+*   [Faster writeBuffer and writeTexture](https://developer.chrome.com/blog/new-in-webgpu144#faster_writebuffer_and_writetexture)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-144#dawn_updates)
+
+## Chrome 143
+
+*   [Texture component swizzle](https://developer.chrome.com/blog/new-in-webgpu-143#texture_component_swizzle)
+*   [Remove bgra8unorm read-only storage texture usage](https://developer.chrome.com/blog/new-in-webgpu-143#remove_bgra8unorm_read-only_storage_texture_usage)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-143#dawn_updates)
+
+## Chrome 142
+
+*   [Texture format support capabilities extended](https://developer.chrome.com/blog/new-in-webgpu-142#texture_format_support_capabilities_extended)
+*   [Primitive index in WGSL](https://developer.chrome.com/blog/new-in-webgpu-142#primitive_index_in_wgsl)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-142#dawn_updates)
+
+## Chrome 141
+
+*   [Tint IR completed](https://developer.chrome.com/blog/new-in-webgpu-141#tint_ir_completed)
+*   [Integer range analysis in WGSL compiler](https://developer.chrome.com/blog/new-in-webgpu-141#integer_range_analysis_in_wgsl_compiler)
+*   [SPIR-V 1.4 update for Vulkan backend](https://developer.chrome.com/blog/new-in-webgpu-141#spir-v_14_update_for_vulkan_backend)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-141#dawn_updates)
+
+## Chrome 140
+
+*   [Device requests consume adapter](https://developer.chrome.com/blog/new-in-webgpu-140#device_requests_consume_adapter)
+*   [Shorthand for using texture where texture view is used](https://developer.chrome.com/blog/new-in-webgpu-140#shorthand_for_using_texture_where_texture_view_is_used)
+*   [WGSL textureSampleLevel supports 1D textures](https://developer.chrome.com/blog/new-in-webgpu-140#wgsl_texturesamplelevel_supports_1d_textures)
+*   [Deprecate bgra8unorm read-only storage texture usage](https://developer.chrome.com/blog/new-in-webgpu-140#deprecate_bgra8unorm_read-only_storage_texture_usage)
+*   [Remove GPUAdapter isFallbackAdapter attribute](https://developer.chrome.com/blog/new-in-webgpu-140#remove_gpuadapter_isfallbackadapter_attribute)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-140#dawn_updates)
+
+## Chrome 139
+
+*   [3D texture support for BC and ASTC compressed formats](https://developer.chrome.com/blog/new-in-webgpu-139#3d_texture_support_for_bc_and_astc_compressed_formats)
+*   [New "core-features-and-limits" feature](https://developer.chrome.com/blog/new-in-webgpu-139#new_core-features-and-limits_feature)
+*   [Origin trial for WebGPU compatibility mode](https://developer.chrome.com/blog/new-in-webgpu-139#origin_trial_for_webgpu_compatibility_mode)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-139#dawn_updates)
+
+## Chrome 138
+
+*   [Shorthand for using buffer as a binding resource](https://developer.chrome.com/blog/new-in-webgpu-138#shorthand_for_using_buffer_as_a_binding_resource)
+*   [Size requirement changes for buffers mapped at creation](https://developer.chrome.com/blog/new-in-webgpu-138#size_requirement_changes_for_buffers_mapped_at_creation)
+*   [Architecture report for recent GPUs](https://developer.chrome.com/blog/new-in-webgpu-138#architecture_report_for_recent_gpus)
+*   [Deprecate GPUAdapter isFallbackAdapter attribute](https://developer.chrome.com/blog/new-in-webgpu-138#deprecate_gpuadapter_isfallbackadapter_attribute)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-138#dawn_updates)
+
+## Chrome 137
+
+*   [Use texture view for externalTexture binding](https://developer.chrome.com/blog/new-in-webgpu-137#use_texture_view_for_externaltexture_binding)
+*   [Buffers copy without specifying offsets and size](https://developer.chrome.com/blog/new-in-webgpu-137#buffers_copy_without_specifying_offsets_and_size)
+*   [WGSL workgroupUniformLoad using pointer to atomic](https://developer.chrome.com/blog/new-in-webgpu-137#wgsl_workgroupuniformload_using_pointer_to_atomic)
+*   [GPUAdapterInfo powerPreference attribute](https://developer.chrome.com/blog/new-in-webgpu-137#gpuadapterinfo_powerpreference_attribute)
+*   [Remove GPURequestAdapterOptions compatibilityMode attribute](https://developer.chrome.com/blog/new-in-webgpu-137#remove_gpurequestadapteroptions_compatibilitymode_attribute)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-137#dawn_updates)
+
+## Chrome 136
+
+*   [GPUAdapterInfo isFallbackAdapter attribute](https://developer.chrome.com/blog/new-in-webgpu-136#gpuadapterinfo_isfallbackadapter_attribute)
+*   [Shader compilation time improvements on D3D12](https://developer.chrome.com/blog/new-in-webgpu-136#shader_compilation_time_improvements_on_d3d12)
+*   [Save and copy canvas images](https://developer.chrome.com/blog/new-in-webgpu-136#save_and_copy_canvas_images)
+*   [Lift compatibility mode restrictions](https://developer.chrome.com/blog/new-in-webgpu-136#lift_compatibility_mode_restrictions)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-136#dawn_updates)
+
+## Chrome 135
+
+*   [Allow creating pipeline layout with null bind group layout](https://developer.chrome.com/blog/new-in-webgpu-135#allow_creating_pipeline_layout_with_null_bind_group_layout)
+*   [Allow viewports to extend past the render targets bounds](https://developer.chrome.com/blog/new-in-webgpu-135#allow_viewports_to_extend_past_the_render_targets_bounds)
+*   [Easier access to the experimental compatibility mode on Android](https://developer.chrome.com/blog/new-in-webgpu-135#easier_access_to_the_experimental_compatibility_mode_on_android)
+*   [Remove maxInterStageShaderComponents limit](https://developer.chrome.com/blog/new-in-webgpu-135#remove_maxinterstageshadercomponents_limit)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-135#dawn_updates)
+
+## Chrome 134
+
+*   [Improve machine-learning workloads with subgroups](https://developer.chrome.com/blog/new-in-webgpu-134#improve_machine-learning_workloads_with_subgroups)
+*   [Remove float filterable texture types support as blendable](https://developer.chrome.com/blog/new-in-webgpu-134#remove_float_filterable_texture_types_support_as_blendable)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-134#dawn_updates)
+
+## Chrome 133
+
+*   [Additional unorm8x4-bgra and 1-component vertex formats](https://developer.chrome.com/blog/new-in-webgpu-133#additional_unorm8x4-bgra_and_1-component_vertex_formats)
+*   [Allow unknown limits to be requested with undefined value](https://developer.chrome.com/blog/new-in-webgpu-133#allow_unknown_limits_to_be_requested_with_undefined_value)
+*   [WGSL alignment rules changes](https://developer.chrome.com/blog/new-in-webgpu-133#wgsl_alignment_rules_changes)
+*   [WGSL performance gains with discard](https://developer.chrome.com/blog/new-in-webgpu-133#wgsl_performance_gains_with_discard)
+*   [Use VideoFrame displaySize for external textures](https://developer.chrome.com/blog/new-in-webgpu-133#use_videoframe_displaysize_for_external_textures)
+*   [Handle images with non-default orientations using copyExternalImageToTexture](https://developer.chrome.com/blog/new-in-webgpu-133#handle_images_with_non-default_orientations_using_copyexternalimagetotexture)
+*   [Improving developer experience](https://developer.chrome.com/blog/new-in-webgpu-133#improving_developer_experience)
+*   [Enable compatibility mode with featureLevel](https://developer.chrome.com/blog/new-in-webgpu-133#enable_compatibility_mode_with_featurelevel)
+*   [Experimental subgroup features cleanup](https://developer.chrome.com/blog/new-in-webgpu-133#experimental_subgroup_features_cleanup)
+*   [Deprecate maxInterStageShaderComponents limit](https://developer.chrome.com/blog/new-in-webgpu-133#deprecate_maxinterstageshadercomponents_limit)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-133#dawn_updates)
+
+## Chrome 132
+
+*   [Texture view usage](https://developer.chrome.com/blog/new-in-webgpu-132#texture_view_usage)
+*   [32-bit float textures blending](https://developer.chrome.com/blog/new-in-webgpu-132#32-bit_float_textures_blending)
+*   [GPUDevice adapterInfo attribute](https://developer.chrome.com/blog/new-in-webgpu-132#gpudevice_adapterinfo_attribute)
+*   [Configuring canvas context with invalid format throw JavaScript error](https://developer.chrome.com/blog/new-in-webgpu-132#configuring_canvas_context_with_invalid_format_throw_javascript_error)
+*   [Filtering sampler restrictions on textures](https://developer.chrome.com/blog/new-in-webgpu-132#filtering_sampler_restrictions_on_textures)
+*   [Extended subgroups experimentation](https://developer.chrome.com/blog/new-in-webgpu-132#extended_subgroups_experimentation)
+*   [Improving developer experience](https://developer.chrome.com/blog/new-in-webgpu-132#improving_developer_experience)
+*   [Experimental support for 16-bit normalized texture formats](https://developer.chrome.com/blog/new-in-webgpu-132#experimental_support_for_16-bit_normalized_texture_formats)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-132#dawn_updates)
+
+## Chrome 131
+
+*   [Clip distances in WGSL](https://developer.chrome.com/blog/new-in-webgpu-131#clip_distances_in_wgsl)
+*   [GPUCanvasContext getConfiguration()](https://developer.chrome.com/blog/new-in-webgpu-131#gpucanvascontext_getconfiguration)
+*   [Point and line primitives must not have depth bias](https://developer.chrome.com/blog/new-in-webgpu-131#point_and_line_primitives_must_not_have_depth_bias)
+*   [Inclusive scan built-in functions for subgroups](https://developer.chrome.com/blog/new-in-webgpu-131#inclusive_scan_built-in_functions_for_subgroups)
+*   [Experimental support for multi-draw indirect](https://developer.chrome.com/blog/new-in-webgpu-131#experimental_support_for_multi-draw_indirect)
+*   [Shader module compilation option strict math](https://developer.chrome.com/blog/new-in-webgpu-131#shader_module_compilation_option_strict_math)
+*   [Remove GPUAdapter requestAdapterInfo()](https://developer.chrome.com/blog/new-in-webgpu-131#remove_gpuadapter_requestadapterinfo)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-131#dawn_updates)
+
+## Chrome 130
+
+*   [Dual source blending](https://developer.chrome.com/blog/new-in-webgpu-130#dual_source_blending)
+*   [Shader compilation time improvements on Metal](https://developer.chrome.com/blog/new-in-webgpu-130#shader_compilation_time_improvements_on_metal)
+*   [Deprecation of GPUAdapter requestAdapterInfo()](https://developer.chrome.com/blog/new-in-webgpu-130#deprecation_of_gpuadapter_requestadapterinfo)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-130#dawn_updates)
+
+## Chrome 129
+
+*   [HDR support with canvas tone mapping mode](https://developer.chrome.com/blog/new-in-webgpu-129#hdr_support_with_canvas_tone_mapping_mode)
+*   [Expanded subgroups support](https://developer.chrome.com/blog/new-in-webgpu-129#expanded_subgroups_support)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-129#dawn_updates)
+
+## Chrome 128
+
+*   [Experimenting with subgroups](https://developer.chrome.com/blog/new-in-webgpu-128#experimenting_with_subgroups)
+*   [Deprecate setting depth bias for lines and points](https://developer.chrome.com/blog/new-in-webgpu-128#deprecate_setting_depth_bias_for_lines_and_points)
+*   [Hide uncaptured error DevTools warning if preventDefault](https://developer.chrome.com/blog/new-in-webgpu-128#hide_uncaptured_error_devtools_warning_if_preventdefault)
+*   [WGSL interpolate sampling first and either](https://developer.chrome.com/blog/new-in-webgpu-128#wgsl_interpolate_sampling_first_and_either)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-128#dawn_updates)
+
+## Chrome 127
+
+*   [Experimental support for OpenGL ES on Android](https://developer.chrome.com/blog/new-in-webgpu-127#experimental_support_for_opengl_es_on_android)
+*   [GPUAdapter info attribute](https://developer.chrome.com/blog/new-in-webgpu-127#gpuadapter_info_attribute)
+*   [WebAssembly interop improvements](https://developer.chrome.com/blog/new-in-webgpu-127#webassembly_interop_improvements)
+*   [Improved command encoder errors](https://developer.chrome.com/blog/new-in-webgpu-127#improved_command_encoder_errors)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-127#dawn_updates)
+
+## Chrome 126
+
+*   [Increase maxTextureArrayLayers limit](https://developer.chrome.com/blog/new-in-webgpu-126#increase_maxtexturearraylayers_limit)
+*   [Buffer upload optimization for Vulkan backend](https://developer.chrome.com/blog/new-in-webgpu-126#buffer_upload_optimization_for_vulkan_backend)
+*   [Shader compilation time improvements](https://developer.chrome.com/blog/new-in-webgpu-126#shader_compilation_time_improvements)
+*   [Submitted command buffers must be unique](https://developer.chrome.com/blog/new-in-webgpu-126#submitted_command_buffers_must_be_unique)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-126#dawn_updates)
+
+## Chrome 125
+
+*   [Subgroups (feature in development)](https://developer.chrome.com/blog/new-in-webgpu-125#subgroups_feature_in_development)
+*   [Render to slice of 3D texture](https://developer.chrome.com/blog/new-in-webgpu-125#render_to_slice_of_3d_texture)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-125#dawn_updates)
+
+## Chrome 124
+
+*   [Read-only and read-write storage textures](https://developer.chrome.com/blog/new-in-webgpu-124#read-only_and_read-write_storage_textures)
+*   [Service workers and shared workers support](https://developer.chrome.com/blog/new-in-webgpu-124#service_workers_and_shared_workers_support)
+*   [New adapter information attributes](https://developer.chrome.com/blog/new-in-webgpu-124#new_adapter_information_attributes)
+*   [Bug fixes](https://developer.chrome.com/blog/new-in-webgpu-124#bug_fixes)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-124#dawn_updates)
+
+## Chrome 123
+
+*   [DP4a built-in functions support in WGSL](https://developer.chrome.com/blog/new-in-webgpu-123#dp4a_built-in_functions_support_in_wgsl)
+*   [Unrestricted pointer parameters in WGSL](https://developer.chrome.com/blog/new-in-webgpu-123#unrestricted_pointer_parameters_in_wgsl)
+*   [Syntax sugar for dereferencing composites in WGSL](https://developer.chrome.com/blog/new-in-webgpu-123#syntax_sugar_for_dereferencing_composites_in_wgsl)
+*   [Separate read-only state for stencil and depth aspects](https://developer.chrome.com/blog/new-in-webgpu-123#separate_read-only_state_for_stencil_and_depth_aspects)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-123#dawn_updates)
+
+## Chrome 122
+
+*   [Expand reach with compatibility mode (feature in development)](https://developer.chrome.com/blog/new-in-webgpu-122#expand_reach_with_compatibility_mode_feature_in_development)
+*   [Increase maxVertexAttributes limit](https://developer.chrome.com/blog/new-in-webgpu-122#increase_maxvertexattributes_limit)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-122#dawn_updates)
+
+## Chrome 121
+
+*   [Support WebGPU on Android](https://developer.chrome.com/blog/new-in-webgpu-121#support-webgpu-on-android)
+*   [Use DXC instead of FXC for shader compilation on Windows](https://developer.chrome.com/blog/new-in-webgpu-121#use_dxc_instead_of_fxc_for_shader_compilation_on_windows)
+*   [Timestamp queries in compute and render passes](https://developer.chrome.com/blog/new-in-webgpu-121#timestamp_queries_in_compute_and_render_passes)
+*   [Default entry points to shader modules](https://developer.chrome.com/blog/new-in-webgpu-121#default_entry_points_to_shader_modules)
+*   [Support display-p3 as GPUExternalTexture color space](https://developer.chrome.com/blog/new-in-webgpu-121#support_display-p3_as_gpuexternaltexture_color_space)
+*   [Memory heaps info](https://developer.chrome.com/blog/new-in-webgpu-121#memory_heaps_info)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-121#dawn_updates)
+
+## Chrome 120
+
+*   [Support for 16-bit floating-point values in WGSL](https://developer.chrome.com/blog/new-in-webgpu-120#support_for_16-bit_floating-point_values_in_wgsl)
+*   [Push the limits](https://developer.chrome.com/blog/new-in-webgpu-120#push_the_limits)
+*   [Changes to depth-stencil state](https://developer.chrome.com/blog/new-in-webgpu-120#changes_to_depth-stencil_state)
+*   [Adapter information updates](https://developer.chrome.com/blog/new-in-webgpu-120#adapter_information_updates)
+*   [Timestamp queries quantization](https://developer.chrome.com/blog/new-in-webgpu-120#timestamp_queries_quantization)
+*   [Spring-cleaning features](https://developer.chrome.com/blog/new-in-webgpu-120#spring-cleaning_features)
+
+## Chrome 119
+
+*   [Filterable 32-bit float textures](https://developer.chrome.com/blog/new-in-webgpu-119#filterable_32-bit_float_textures)
+*   [unorm10-10-10-2 vertex format](https://developer.chrome.com/blog/new-in-webgpu-119#unorm10-10-10-2_vertex_format)
+*   [rgb10a2uint texture format](https://developer.chrome.com/blog/new-in-webgpu-119#rgb10a2uint_texture_format)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-119#dawn_updates)
+
+## Chrome 118
+
+*   [HTMLImageElement and ImageData support in `copyExternalImageToTexture()`](https://developer.chrome.com/blog/new-in-webgpu-118#htmlimageelement_and_imagedata_support_in_copyexternalimagetotexture)
+*   [Experimental support for read-write and read-only storage texture](https://developer.chrome.com/blog/new-in-webgpu-118#experimental_support_for_read-write_and_read-only_storage_texture)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-118#dawn_updates)
+
+## Chrome 117
+
+*   [Unset vertex buffer](https://developer.chrome.com/blog/new-in-webgpu-117#unset_vertex_buffer)
+*   [Unset bind group](https://developer.chrome.com/blog/new-in-webgpu-117#unset_bind_group)
+*   [Silence errors from async pipeline creation when device is lost](https://developer.chrome.com/blog/new-in-webgpu-117#silence_errors_from_async_pipeline_creation_when_device_is_lost)
+*   [SPIR-V shader module creation updates](https://developer.chrome.com/blog/new-in-webgpu-117#spir-v_shader_module_creation_updates)
+*   [Improving developer experience](https://developer.chrome.com/blog/new-in-webgpu-117#improving_developer_experience)
+*   [Caching pipelines with automatically generated layout](https://developer.chrome.com/blog/new-in-webgpu-117#caching_pipelines_with_automatically_generated_layout)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-117#dawn_updates)
+
+## Chrome 116
+
+*   [WebCodecs integration](https://developer.chrome.com/blog/new-in-webgpu-116#webcodecs_integration)
+*   [Lost device returned by GPUAdapter `requestDevice()`](https://developer.chrome.com/blog/new-in-webgpu-116#lost_device_returned_by_gpuadapter_requestdevice)
+*   [Keep video playback smooth if `importExternalTexture()` is called](https://developer.chrome.com/blog/new-in-webgpu-116#keep_video_playback_smooth_if_importexternaltexture_is_called)
+*   [Spec conformance](https://developer.chrome.com/blog/new-in-webgpu-116#spec_conformance)
+*   [Improving developer experience](https://developer.chrome.com/blog/new-in-webgpu-116#improving_developer_experience)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-116#dawn_updates)
+
+## Chrome 115
+
+*   [Supported WGSL language extensions](https://developer.chrome.com/blog/new-in-webgpu-115#supported_wgsl_language_extensions)
+*   [Experimental support for Direct3D 11](https://developer.chrome.com/blog/new-in-webgpu-115#experimental_support_for_direct3d_11)
+*   [Get discrete GPU by default on AC power](https://developer.chrome.com/blog/new-in-webgpu-115#get_discrete_gpu_by_default_on_ac_power)
+*   [Improving developer experience](https://developer.chrome.com/blog/new-in-webgpu-115#improving_developer_experience)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-115#dawn_updates)
+
+## Chrome 114
+
+*   [Optimize JavaScript](https://developer.chrome.com/blog/new-in-webgpu-114#optimize_javascript)
+*   [getCurrentTexture() on unconfigured canvas throws InvalidStateError](https://developer.chrome.com/blog/new-in-webgpu-114#getcurrenttexture_on_unconfigured_canvas_throws_invalidstateerror)
+*   [WGSL updates](https://developer.chrome.com/blog/new-in-webgpu-114#wgsl_updates)
+*   [Dawn 업데이트](https://developer.chrome.com/blog/new-in-webgpu-114#dawn_updates)
+
+## Chrome 113
+
+*   [Use WebCodecs VideoFrame source in `importExternalTexture()`](https://developer.chrome.com/blog/new-in-webgpu-113#use_webcodecs_videoframe_source_in_importexternaltexture)

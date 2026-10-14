@@ -5,7 +5,7 @@ import * as path from 'path';
  * - 검색엔진이 `{사이트}/{키}.txt` 내용과 대조해 소유권 확인 (공개 값)
  * - 바꾸면 public/{키}.txt 파일 이름·내용도 함께 변경 (indexnow.test.ts에서 검증)
  */
-export const INDEXNOW_KEY = '9aaa7bea721398ce964f0d57d1b78207';
+export const INDEXNOW_KEY = '47db13e3acf310ac408c13f0853b3d75';
 
 /** Bing IndexNow 엔드포인트 (제출된 URL은 IndexNow 참여 검색엔진끼리 공유) */
 export const INDEXNOW_ENDPOINT = 'https://www.bing.com/indexnow';

@@ -1,0 +1,115 @@
+---
+title: 2026년 6월 웹 플랫폼 신기능
+description: 2026년 6월에 출시된 Chrome 및 Firefox의 새로운 웹 플랫폼 기능을 소개합니다.
+category: webdev
+sourceUrl: https://web.dev/blog/web-platform-06-2026?hl=en
+createdAt: 2026-06-30
+---
+
+> 원문: [New to the web platform in June](https://web.dev/blog/web-platform-06-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# 안정 버전 브라우저 릴리스
+
+2026년 6월에 Chrome 149, Chrome 150, Firefox 152가 안정 버전으로 출시되었습니다. Safari에서는 이번 달에 안정 버전 릴리스가 없었습니다. 이번 게시물에서는 웹 브라우저에 새롭게 추가된 기능들을 살펴보겠습니다.
+
+## `field-sizing`을 이용한 폼 컨트롤 크기 조절이 Baseline으로
+
+Firefox 152는 `field-sizing` CSS 속성에 대한 지원을 도입하여, 모든 주요 브라우저 엔진에서 자동 폼 컨트롤 크기 조절 기능이 Baseline으로 새롭게 제공됩니다.
+
+`field-sizing` 속성을 사용하면 `<textarea>`, `<input>`, `<select>`와 같은 폼 컨트롤이 내용에 맞게 동적으로 축소되거나 확장되거나 (`field-sizing: content`), 기본 크기로 고정되지 않습니다 (`field-sizing: fixed`). 이를 통해 사용자가 입력함에 따라 크기가 조절되는 텍스트 입력 필드나 텍스트 영역을 구축할 때 JavaScript를 사용한 임시 해결책이 필요 없어집니다.
+
+```
+textarea {
+  field-sizing: content;
+}
+
+```
+
+## `shape-outside`에서의 기본 도형 `rect()` 및 `xywh()`이 Baseline으로
+
+Chrome 149에서 `shape-outside` 속성의 `rect()` 및 `xywh()` 도형 함수에 대한 지원이 출시됨에 따라, 이러한 기본 도형들이 주요 브라우저에서 Baseline으로 새롭게 제공됩니다.
+
+`rect()` 및 `xywh()` 함수를 사용하면 정확한 내부 여백 좌표 또는 원점 및 치수 구문을 사용하여 사각형 플로트 제외 영역을 정의할 수 있습니다. 이는 사각형 플로트 래핑 도형에 `polygon()`을 사용하는 것보다 더 간단하고 가독성이 높은 구문을 제공합니다.
+
+## CSS `text-fit`을 이용한 자동 글꼴 크기 조절
+
+Chrome 150은 `text-fit` CSS 속성을 도입하여, 개발자가 포함하는 상자의 너비에 맞게 글꼴 크기를 자동으로 조절할 수 있도록 합니다.
+
+```
+.headline {
+  text-fit: grow;
+}
+
+```
+
+## CSS gap 장식
+
+Chrome 149는 grid 및 flexbox 레이아웃에서 CSS gap 장식에 대한 지원을 도입했습니다. Gap 장식을 사용하면 다중 열 레이아웃의 `column-rule`과 유사하게 grid 및 flex 항목 간의 간격에 직접 선과 스타일을 추가할 수 있습니다.
+
+```
+.grid-container {
+  display: grid;
+  gap: 20px;
+  column-rule: 2px solid red;
+  row-rule: 1px dashed gray;
+}
+
+```
+
+[Gap decorations: Now in Chromium](https://developer.chrome.com/blog/gap-decorations-stable)에서 더 자세히 알아보세요.
+
+## CSS `background-clip: border-area`
+
+Chrome 150은 CSS Backgrounds Level 4의 `background-clip: border-area`에 대한 지원을 추가했습니다.
+
+이 값은 요소 배경을 테두리 영역에만 클리핑하여, 추가적인 래핑 요소나 의사 요소를 사용하지 않고도 사용자 지정 그라디언트 테두리, 장식 프레임 가장자리 및 애니메이션 테두리 효과를 만들 수 있습니다.
+
+## 프로그래밍 방식 스크롤 Promise
+
+Chrome 150은 프로그래밍 방식 스크롤 메서드(`scrollTo()`, `scrollBy()`, `scrollIntoView()`)를 업데이트하여 Promise를 반환하도록 했습니다.
+
+반환된 Promise는 부드러운 스크롤 애니메이션이 완료될 때 해결되어, 스크롤이 안정화된 후 후속 작업을 트리거할 수 있는 신뢰할 수 있는 신호를 제공합니다.
+
+## `focusgroup`을 이용한 선언적 키보드 탐색
+
+Chrome 150은 `focusgroup` 속성에 대한 지원을 도입했습니다.
+
+`focusgroup` 속성을 사용하면 개발자가 수동으로 키보드 이벤트 리스너를 작성하지 않고도 복합 UI 컨트롤(예: 도구 모음, 탭 목록, 메뉴) 전반의 화살표 키 탐색을 선언적으로 관리할 수 있습니다.
+
+```
+<div focusgroup="toolbar wrap" aria-label="Text formatting">
+  <button type="button">Bold</button>
+  <button type="button">Italic</button>
+  <button type="button">Underline</button>
+</div>
+
+```
+
+[Focusgroup Explainer](https://open-ui.org/components/scoped-focusgroup.explainer/)에서 더 자세히 알아보세요.
+
+## WebSocket, Back/Forward Cache(bfcache)에서 지원
+
+Chrome 149에서는 활성 WebSocket 연결이 있는 페이지도 Back/Forward Cache(bfcache)에 진입할 수 있게 되었습니다.
+
+이전에는 열린 WebSocket 연결이 페이지를 bfcache 자격에서 제외했습니다. 이제 브라우저는 bfcache 진입 시 활성 WebSocket 연결을 자동으로 닫아 페이지를 캐싱하고 다시 탐색할 때 즉시 복원할 수 있도록 합니다.
+
+## Resource Timing의 임시 및 헤더 응답 타이밍
+
+Firefox 152는 `PerformanceResourceTiming` 인터페이스에 [`firstInterimResponseStart`](https://developer.mozilla.org/docs/Web/API/PerformanceResourceTiming/firstInterimResponseStart) 및 [`finalResponseHeadersStart`](https://developer.mozilla.org/docs/Web/API/PerformanceResourceTiming/finalResponseHeadersStart)에 대한 지원을 추가했습니다.
+
+이는 요청을 보낸 후 브라우저가 임시 HTTP 응답을 받는 데 걸리는 시간과 최종 HTTP 응답을 받는 데 걸리는 시간을 각각 측정하는 데 사용될 수 있습니다.
+
+## 알림용 액션 버튼
+
+Firefox 152는 `Notification`의 [`actions`](https://developer.mozilla.org/docs/Web/API/Notification/actions) 속성과 `ServiceWorkerRegistration.showNotification()`의 옵션을 사용하여 알림 액션 버튼에 대한 지원을 추가했습니다.
+
+이제 OS 알림에 액션 버튼을 포함하고 버튼이 탭될 때 사용자 상호 작용을 수신할 수 있습니다.
+
+# 베타 버전 브라우저 릴리스
+
+베타 브라우저 버전은 다음 안정 버전의 기능을 미리 볼 수 있게 해줍니다. 전 세계에 릴리스되기 전에 사이트에 영향을 미칠 수 있는 새로운 기능이나 제거된 기능을 테스트하기에 좋은 시기입니다. 이번 달의 새로운 베타 버전은 Firefox 153 및 Safari 27입니다.
+
+Firefox 153 베타는 최대 캡처된 스택 트레이스 깊이를 구성하기 위한 `Error.stackTraceLimit`, 인덱싱된 레코드를 검색하기 위한 `IDBObjectStore.getAllRecords()` 및 `IDBIndex.getAllRecords()`, WebRTC 보안 검사를 위한 `RTCDtlsTransport.getRemoteCertificates()`에 대한 지원을 도입했습니다. 부가 기능 개발자는 온디맨드 스크립트 주입을 위한 새로운 `publicSuffix` API 및 `userScripts.execute()` 메서드도 사용할 수 있습니다.
+
+Safari 27 베타는 변환 인식 앵커 위치 지정, 헤더 요소를 일치시키기 위한 `:heading` 의사 클래스, 캐스케이드 레이어를 롤백하는 `revert-rule` 키워드, box sizing에서 `stretch` 키워드 지원, `:host:has()` 복합 선택자를 도입했습니다.

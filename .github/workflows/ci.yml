@@ -56,3 +56,46 @@ jobs:
           files: ./packages/thumbnail-generator/coverage/lcov.info
           flags: thumbnail-generator
           fail_ci_if_error: false
+
+  # 바뀐 패키지와 그 패키지에 의존하는 앱만 빌드 (Vercel ignoreCommand로 건너뛴 앱도 머지 전에 빌드 검증)
+  # 워크플로에 paths 필터를 두지 않아 모든 PR에서 항상 결과를 남김 → 필수 체크로 사용
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          fetch-depth: 0
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v6
+        with:
+          node-version: '24'
+          cache: 'pnpm'
+
+      - run: pnpm install
+
+      - name: Resolve base commit
+        id: base
+        env:
+          BASE_REF: ${{ github.base_ref }}
+          BEFORE: ${{ github.event.before }}
+        run: |
+          if [ -n "$BASE_REF" ]; then
+            echo "sha=$(git merge-base "origin/$BASE_REF" HEAD)" >> "$GITHUB_OUTPUT"
+          elif [ -n "$BEFORE" ] && git cat-file -e "$BEFORE^{commit}" 2>/dev/null; then
+            echo "sha=$BEFORE" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: Build affected
+        env:
+          BASE_SHA: ${{ steps.base.outputs.sha }}
+        run: |
+          # 루트 공통 설정이 바뀌었거나 기준 커밋을 모르면 전체 빌드
+          ROOT_FILES="package.json pnpm-lock.yaml pnpm-workspace.yaml turbo.json tsconfig.json"
+          if [ -n "$BASE_SHA" ] && git diff --quiet "$BASE_SHA" HEAD -- $ROOT_FILES; then
+            pnpm turbo build --filter="...[$BASE_SHA]"
+          else
+            pnpm turbo build
+          fi

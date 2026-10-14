@@ -1,0 +1,242 @@
+{
+ "birefnet-general-lite": {
+  "n": 50,
+  "mean_iou": 0.943,
+  "median_iou": 0.985,
+  "clean_rate": 0.76,
+  "fail_rate": 0.06,
+  "mean_mae": 0.0094,
+  "median_sec": 29.58,
+  "peak_rss_gb": 8.44,
+  "model_mb": 224,
+  "by_category": {
+   "animal": 0.983,
+   "portrait": 0.992,
+   "plant": 0.938,
+   "transparent": 0.707,
+   "furniture": 0.964,
+   "toy": 0.979,
+   "fruit": 0.99
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.975,
+   "clean_rate": 0.864,
+   "fail_rate": 0.0
+  },
+  "cli_one_image": {
+   "sec_total": 39.8,
+   "peak_rss_gb": 7.82
+  }
+ },
+ "birefnet-general": {
+  "n": 50,
+  "mean_iou": 0.95,
+  "median_iou": 0.989,
+  "clean_rate": 0.8,
+  "fail_rate": 0.08,
+  "mean_mae": 0.0076,
+  "median_sec": 41.43,
+  "peak_rss_gb": 9.88,
+  "model_mb": 973,
+  "by_category": {
+   "animal": 0.987,
+   "portrait": 0.993,
+   "plant": 0.943,
+   "transparent": 0.739,
+   "furniture": 0.97,
+   "toy": 0.983,
+   "fruit": 0.992
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.978,
+   "clean_rate": 0.886,
+   "fail_rate": 0.0
+  },
+  "cli_one_image": {
+   "sec_total": 56.7,
+   "peak_rss_gb": 9.61
+  }
+ },
+ "bria-rmbg": {
+  "n": 50,
+  "mean_iou": 0.947,
+  "median_iou": 0.986,
+  "clean_rate": 0.82,
+  "fail_rate": 0.06,
+  "mean_mae": 0.0076,
+  "median_sec": 46.04,
+  "peak_rss_gb": 10.0,
+  "model_mb": 1024,
+  "by_category": {
+   "animal": 0.985,
+   "portrait": 0.992,
+   "plant": 0.943,
+   "transparent": 0.726,
+   "furniture": 0.968,
+   "toy": 0.981,
+   "fruit": 0.99
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.977,
+   "clean_rate": 0.909,
+   "fail_rate": 0.0
+  },
+  "cli_one_image": {
+   "sec_total": 64.8,
+   "peak_rss_gb": 9.37
+  }
+ },
+ "isnet-general-use": {
+  "n": 50,
+  "mean_iou": 0.88,
+  "median_iou": 0.969,
+  "clean_rate": 0.6,
+  "fail_rate": 0.16,
+  "mean_mae": 0.0288,
+  "median_sec": 1.47,
+  "peak_rss_gb": 2.49,
+  "model_mb": 179,
+  "by_category": {
+   "animal": 0.93,
+   "portrait": 0.957,
+   "plant": 0.847,
+   "transparent": 0.565,
+   "furniture": 0.951,
+   "toy": 0.975,
+   "fruit": 0.827
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.923,
+   "clean_rate": 0.682,
+   "fail_rate": 0.114
+  },
+  "cli_one_image": {
+   "sec_total": 4.7,
+   "peak_rss_gb": 1.14
+  }
+ },
+ "silueta": {
+  "n": 50,
+  "mean_iou": 0.799,
+  "median_iou": 0.958,
+  "clean_rate": 0.54,
+  "fail_rate": 0.28,
+  "mean_mae": 0.046,
+  "median_sec": 1.1,
+  "peak_rss_gb": 2.09,
+  "model_mb": 44,
+  "by_category": {
+   "animal": 0.956,
+   "portrait": 0.875,
+   "plant": 0.743,
+   "transparent": 0.22,
+   "furniture": 0.883,
+   "toy": 0.888,
+   "fruit": 0.827
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.879,
+   "clean_rate": 0.614,
+   "fail_rate": 0.182
+  },
+  "cli_one_image": {
+   "sec_total": 3.8,
+   "peak_rss_gb": 0.69
+  }
+ },
+ "u2net": {
+  "n": 50,
+  "mean_iou": 0.801,
+  "median_iou": 0.957,
+  "clean_rate": 0.54,
+  "fail_rate": 0.28,
+  "mean_mae": 0.0445,
+  "median_sec": 0.51,
+  "peak_rss_gb": 2.11,
+  "model_mb": 176,
+  "by_category": {
+   "animal": 0.963,
+   "portrait": 0.87,
+   "plant": 0.743,
+   "transparent": 0.217,
+   "furniture": 0.884,
+   "toy": 0.893,
+   "fruit": 0.831
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.881,
+   "clean_rate": 0.614,
+   "fail_rate": 0.182
+  },
+  "cli_one_image": {
+   "sec_total": 4.0,
+   "peak_rss_gb": 0.85
+  }
+ },
+ "u2net_human_seg": {
+  "n": 50,
+  "mean_iou": 0.696,
+  "median_iou": 0.921,
+  "clean_rate": 0.4,
+  "fail_rate": 0.4,
+  "mean_mae": 0.063,
+  "median_sec": 0.51,
+  "peak_rss_gb": 2.18,
+  "model_mb": 176,
+  "by_category": {
+   "animal": 0.907,
+   "portrait": 0.967,
+   "plant": 0.623,
+   "transparent": 0.173,
+   "furniture": 0.049,
+   "toy": 0.832,
+   "fruit": 0.978
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.768,
+   "clean_rate": 0.455,
+   "fail_rate": 0.318
+  },
+  "cli_one_image": {
+   "sec_total": 3.7,
+   "peak_rss_gb": 0.85
+  }
+ },
+ "u2netp": {
+  "n": 50,
+  "mean_iou": 0.833,
+  "median_iou": 0.959,
+  "clean_rate": 0.56,
+  "fail_rate": 0.2,
+  "mean_mae": 0.0389,
+  "median_sec": 0.31,
+  "peak_rss_gb": 1.79,
+  "model_mb": 5,
+  "by_category": {
+   "animal": 0.934,
+   "portrait": 0.977,
+   "plant": 0.801,
+   "transparent": 0.225,
+   "furniture": 0.89,
+   "toy": 0.922,
+   "fruit": 0.986
+  },
+  "non_transparent": {
+   "n": 44,
+   "mean_iou": 0.916,
+   "clean_rate": 0.636,
+   "fail_rate": 0.091
+  },
+  "cli_one_image": {
+   "sec_total": 3.0,
+   "peak_rss_gb": 0.54
+  }
+ }
+}

@@ -1,0 +1,50 @@
+---
+title: 2026년 7월 Baseline 월간 요약
+description: "이번 달 Baseline 요약에서는 웹 플랫폼 기능, 커뮤니티 기사 및 도구를 다룹니다. Lighthouse 감사, React 앱 테스트, 새로운 Baseline API를 확인하세요."
+category: webdev
+sourceUrl: https://web.dev/blog/baseline-digest-jul-2026?hl=en
+createdAt: 2026-08-10
+---
+
+> 원문: [July 2026 Baseline monthly digest](https://web.dev/blog/baseline-digest-jul-2026?hl=en) — web.dev
+> 원문은 [CC-BY-4.0](https://creativecommons.org/licenses/by/4.0/) 라이선스로 제공되며, 이 글은 한국어로 번역한 2차 저작물입니다.
+
+# Baseline 기능 감사가 이제 Lighthouse에 포함되었습니다.
+
+사이트에서 사용하는 Baseline 기능을 추적하려면 Lighthouse의 Baseline 기능 감사를 사용하세요. 감사가 어떻게 웹 감사에서 최신 웹 기능을 식별하는 데 도움이 되는지 알아보려면 [Baseline 기능 감사가 Lighthouse에서 사용 가능해졌습니다.](https://github.com/web-platform-dx/web-features/issues)를 참조하세요.
+
+# React 앱에 대한 최신 웹 가이드라인 테스트
+
+[Ahmad Alfy](https://alfy.blog/)는 프로덕션 React 애플리케이션에 대해 최신 웹 가이드라인을 테스트하여 에이전트 코딩 기술이 실제 코드베이스에서 어떻게 작동하는지 확인했습니다. [실제 React 앱에 대한 Google의 "modern-web-guidance" 스킬 테스트](https://alfy.blog/2026/07/25/modern-web-guidance.html)를 읽고 오래된 패턴을 어떻게 식별하고 현재 모범 사례를 제시하는지 확인해 보세요.
+
+# Baseline 2026: 코딩 방식을 바꾼 4가지 API
+
+[Dennis Morello](https://morello.dev/)는 Navigation API, 컨테이너 스타일 쿼리, `:open`, `Math.sumPrecise()`를 포함하여 2026년에 Baseline에 도달한 4가지 웹 플랫폼 API를 살펴봅니다. [Baseline 2026: 코딩 방식을 바꾼 4가지 API](https://morello.dev/blog/baseline-2026-web-platform-apis)를 보고 이러한 추가 기능으로 인해 내장 플랫폼 기능을 선호하여 외부 종속성을 삭제할 수 있는 방법을 확인해 보세요.
+
+# 새로 사용 가능한 Baseline 기능
+
+다음 기능은 모든 핵심 브라우저 엔진에서 지원되며 이제 Baseline에서 새로 사용할 수 있습니다.
+
+## `Intl.Locale`
+
+`Intl.Locale`을 사용하면 국제화 및 로캘 식별자 작업을 더 쉽게 할 수 있습니다. `Intl.Locale` 객체는 사용자 정의 문자열 파싱 로직 없이 언어, 스크립트 및 지역 하위 태그와 같은 Unicode 로캘 태그를 파싱, 조작 및 쿼리하는 표준 방법을 제공합니다. [Intl.Locale에 대한 MDN 문서](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Intl/Locale)를 참조하세요.
+
+# 널리 사용 가능한 Baseline 기능
+
+이러한 기능은 이제 모든 주요 브라우저 엔진에서 충분히 오랫동안 지원되어 널리 사용 가능한 Baseline으로 간주될 수 있으므로 폴리필 없이 안전하게 사용할 수 있습니다.
+
+## `Array.fromAsync()`
+
+비동기 이터러블을 배열로 직접 변환하려는 경우 `Array.fromAsync()`를 이제 상호 운용할 수 있습니다. `Array.from()`과 유사하게 작동하지만 비동기 데이터 스트림을 위해 특별히 구축되었습니다. 자세한 내용은 [Array.fromAsync()에 대한 MDN 참조](https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array/fromAsync)를 참조하세요.
+
+## 이미지 파일 형식 및 포맷 가이드
+
+웹에 적합한 이미지 형식을 선택하는 것은 많은 옵션을 포함합니다. 업데이트된 MDN 가이드에는 최신 이미지 형식의 브라우저 지원에 대한 자세한 내용이 나와 있어 사이트의 이미지 전략을 선택하는 데 도움이 됩니다. 자세한 내용은 [MDN 이미지 파일 형식 및 포맷 가이드](https://developer.mozilla.org/docs/Web/Media/Guides/Formats/Image_types)를 참조하세요.
+
+## `rect()` CSS 함수
+
+CSS에서 직사각형 클립 경로 및 오프셋 경로를 정의하는 것이 `rect()` 기본 도형 함수를 사용하면 더욱 깔끔해집니다. 이를 통해 포함 블록 가장자리에서 직접 삽입 거리를 지정할 수 있습니다. 구문에 대한 자세한 내용은 [rect()에 대한 MDN 문서](https://developer.mozilla.org/docs/Web/CSS/Reference/Values/basic-shape/rect)를 참조하세요.
+
+# 이것으로 마무리합니다!
+
+이번 달 요약은 여기까지입니다. Baseline 업데이트 또는 커뮤니티 게시물이 누락된 경우 팀에 알려 다음 호에 포함될 수 있도록 하세요. Baseline에 대한 질문이나 피드백이 있는 경우 [이슈 트래커](https://github.com/web-platform-dx/web-features/issues)에 이슈를 제출하세요.

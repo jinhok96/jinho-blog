@@ -95,6 +95,7 @@ thead th { border-bottom: 0; }
 td { padding: 12px; box-shadow: inset 0 -1px 0 var(--line); vertical-align: middle; color: var(--body); }
 td.r, th.r { text-align: right; }
 tr:last-child td { box-shadow: none; }
+tr.group td { padding: 16px 12px 8px; font-size: var(--fs-sm); line-height: var(--lh-sm); font-weight: 500; color: var(--mute); box-shadow: inset 0 1px 0 var(--line), inset 0 -1px 0 var(--line); }
 .post-title { font-weight: 500; color: var(--ink); }
 .post-title a { color: var(--ink); text-decoration: none; }
 .post-title a:hover, .post-title a:focus-visible { color: var(--link); }
@@ -175,7 +176,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], knowhow: [], sessions: [], summary: null };
+const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null };
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
 const pct = (x) => (x == null ? '–' : (x * 100).toFixed(1) + '%');
@@ -277,6 +278,18 @@ function renderPosts() {
     <td class="r num">${fmt(p.impressions)}</td>
     <td class="r num">${fmt(p.clicks)}</td>
     <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}</td>
+  </tr>`).join('') + renderOtherPages();
+}
+
+// 글 외 페이지(홈·카테고리 등): 사이트 전체 KPI와 글별 합계의 차이를 보여 줌
+function renderOtherPages() {
+  if (!state.otherPages.length) return '';
+  return `<tr class="group"><td colspan="8">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => `<tr>
+    <td><div class="post-title"><a href="${SITE}${o.path === '/' ? '' : esc(o.path)}" target="_blank" rel="noopener">${o.path === '/' ? '홈' : esc(o.path)}</a></div><div class="small">${esc(o.path)}</div></td>
+    <td><span class="small">–</span></td><td><span class="small">–</span></td><td class="r"><span class="small">–</span></td><td><span class="small">–</span></td>
+    <td class="r num">${fmt(o.impressions)}</td>
+    <td class="r num">${fmt(o.clicks)}</td>
+    <td class="r num">${o.position == null ? '–' : o.position.toFixed(1)}</td>
   </tr>`).join('');
 }
 
@@ -324,6 +337,7 @@ if (window.ResizeObserver) {
       const byId = Object.fromEntries(snap.docs.map((d) => [d.id, d.data()]));
       state.summary = byId.summary || null;
       state.posts = byId.posts?.rows || [];
+      state.otherPages = byId.posts?.otherPages || [];
       state.knowhow = byId.knowhow?.rows || [];
       state.sessions = byId.sessions?.rows || [];
       state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);

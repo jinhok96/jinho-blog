@@ -90,7 +90,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 
 - 주소: **https://claude.ai/artifact/4nL6tkJXzL4YQd2FXis8Cb** (claude.ai 아티팩트, 비공개. 공유는 사용자가 Share 메뉴에서). **이 주소를 항상 유지**: 새 아티팩트를 만들지 않고, 페이지를 고칠 때도 `Artifact` publish에 `url`로 이 주소를 넘김 (다른 세션에서 `url` 없이 발행하면 새 주소가 생김). 삭제 금지
 - 페이지 원본: [dashboard/index.html](dashboard/index.html). 데이터는 아티팩트 DB(`db` 기능, 읽기 `view`·쓰기 `admin`)의 `stats` 컬렉션에 있고 페이지가 실시간으로 읽음 → 데이터만 바꿀 때는 페이지를 다시 발행하지 않음
-- `stats` 문서: `summary`(갱신 시각·28일 합계·사이트맵), `daily-YYYY-MM`(달마다 날짜별 지표, 확정/미확정 표시), `posts`(글별 메타·28일 지표·색인 상태), `knowhow`(traffic-playbook 노하우 상태), `sessions`(log.md 세션 제목)
+- `stats` 문서: `summary`(갱신 시각·28일 합계·사이트맵), `daily-YYYY-MM`(달마다 날짜별 지표, 확정/미확정 표시), `posts`(글별 메타·28일 지표·색인 상태 + `otherPages`: 홈·카테고리 등 글 외 페이지 지표, 글별 표 합계를 사이트 전체 KPI와 맞추기 위함), `knowhow`(traffic-playbook 노하우 상태), `sessions`(log.md 세션 제목)
 - 세션마다 갱신 절차 (log.md·traffic-playbook.md를 고친 뒤)
   1. `ArtifactData` `list` (`url` 위 주소, `collection: "stats"`)로 문서별 `version` 확인
   2. `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --out /tmp/dashboard --versions '{"summary": N, "posts": N, "knowhow": N, "sessions": N, "daily-2026-10": N}'` (1에서 본 버전. 새 달 문서처럼 처음 만드는 문서는 빼면 새로 생성)

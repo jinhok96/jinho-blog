@@ -1,0 +1,18 @@
+---
+title: Claude 플랫폼의 Agent Observability 발표
+description: "Claude 플랫폼이 OpenTelemetry 트레이스 지원, Messages API 및 Claude SDKs를 발표하여 Agent의 동작을 상세히 추적하고 다양한 관측 도구와의 연동을 강화합니다."
+category: claude
+sourceUrl: https://claude.com/resources/articles/agent-observability-on-the-claude-platform
+createdAt: 2026-10-14
+---
+
+> 원문: [Agent observability on the Claude Platform](https://claude.com/resources/articles/agent-observability-on-the-claude-platform) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude 플랫폼에서 OpenTelemetry 트레이스를 Claude Managed Agents, Messages API, Claude SDKs를 통해 제공합니다. 이를 통해 Agent의 각 단계를 추적하고, 기존 Claude Code 또는 Cowork 트레이스와 함께 동일한 관측 도구에서 확인할 수 있습니다.
+
+- **OpenTelemetry 트레이스를 통한 Agent 추적:** Agent의 모델 호출, 도구 사용, MCP 서버 호출 등을 상세하게 추적하여 신뢰성을 확인하고 접근 권한을 점진적으로 확대할 수 있습니다. Claude Console에서 목적지를 설정하면 Agent의 모든 동작이 표준 OpenTelemetry 트레이스로 전달되며, 지연 시간, 토큰 수, ID 등의 정보를 포함합니다.
+- **다양한 관측 도구와의 호환성:** Claude 트레이스는 OpenTelemetry GenAI 시맨틱 컨벤션을 따르므로 Grafana Cloud, Honeycomb, Sentry, Splunk 등의 도구에서 Agent 트레이스를 스택의 다른 부분과 함께 디버깅할 수 있습니다. 또한 Arize AI, Braintrust, Datadog, Langfuse 등에서 프로덕션 데이터를 활용하여 Agent 품질을 개선하고 변화의 영향을 측정할 수 있습니다. Databricks Unity Gateway를 통해 조직 전체의 사용량을 추적하여 토큰 사용량을 모니터링하고 비정상 활동을 감지할 수도 있습니다.
+- **시작하기:** OpenTelemetry 트레이스는 현재 공개 베타 버전으로 제공됩니다. Managed Agents와 Messages API는 Claude Console에서 목적지를 설정해야 하며, Claude SDKs는 자동으로 트레이스를 내보냅니다. 자세한 내용은 문서를 참고하시기 바랍니다.
+
+자세한 내용은 원문에서 확인하세요.

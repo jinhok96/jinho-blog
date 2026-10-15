@@ -49,6 +49,7 @@
 - Claude: 새 글 노출 검색어 확인 (`pdf to word offline`, `convert pdf to word free` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
 - Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
 - Claude: 발행 10편 / AdSense 신청 기준 20편
+- 대시보드: `stats` DB 7개 문서는 갱신됨(버전 6·3). 비로그인 열람용 `data.js` 스냅숏 재게시는 Claude Code 자동 모드 권한 분류기가 거부 → 비로그인 화면은 세션 7 값. 다음 세션에서 다시 시도, 계속 막히면 사용자가 허용 여부 결정
 
 ## 2026-10-15 · 세션 7 (정기 실행 6회차): 무료 오프라인 이미지→텍스트(OCR)
 

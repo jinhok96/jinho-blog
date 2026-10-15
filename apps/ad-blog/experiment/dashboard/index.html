@@ -138,6 +138,7 @@ ol.sessions li { display: grid; grid-template-columns: 104px 1fr; gap: 12px; pad
 ol.sessions li:last-child { box-shadow: none; }
 .empty { color: var(--mute); padding: 12px 0; }
 .notice { font-size: var(--fs-body); line-height: var(--lh-body); color: var(--warn); background: var(--warn-soft); border-radius: var(--r-ctl); padding: 8px 12px; }
+.notice.info { color: var(--body); background: var(--well); }
 footer { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); padding-top: 24px; box-shadow: inset 0 1px 0 var(--line); }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 4px; }
 </style>
@@ -237,6 +238,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   <footer>정기 세션이 끝날 때마다 갱신됩니다. 최근 2~3일 지표는 Search Console에서 확정되기 전 값이라 나중에 조금 바뀔 수 있습니다.</footer>
 </div>
 
+<!-- 비로그인 열람용 스냅숏: 세션마다 dashboard_data.py가 만든 data.js를 아티팩트 파일로 다시 올림 -->
+<script src="data.js"></script>
 <script>
 const SITE = 'https://tool-proof.com';
 const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null };
@@ -505,18 +508,8 @@ if (window.ResizeObserver) {
   new ResizeObserver(() => { const w = $('chart-imp').clientWidth; if (w !== lastW) { lastW = w; render(); } }).observe($('chart-imp'));
 }
 
-(async () => {
-  const db = window.claude ? await window.claude.use('db') : null;
-  if (!db) {
-    $('updated').textContent = '데이터 연결 안 됨';
-    $('notice').hidden = false;
-    $('notice').textContent = '이 화면에서는 대시보드 데이터를 불러올 수 없습니다. claude.ai에 로그인한 상태로 열어 주세요.';
-    return;
-  }
-  // stats 컬렉션: summary, posts, breakdown, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
-  db.collection('stats').onSnapshot(
-    (snap) => {
-      const byId = Object.fromEntries(snap.docs.map((d) => [d.id, d.data()]));
+// 문서 묶음({doc_id: data}) → 화면 상태. DB 실시간 값과 data.js 스냅숏이 같은 모양
+function applyDocs(byId) {
       state.summary = byId.summary || null;
       state.posts = byId.posts?.rows || [];
       state.otherPages = byId.posts?.otherPages || [];
@@ -526,8 +519,40 @@ if (window.ResizeObserver) {
       state.experiments = byId.experiments || null;
       state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);
       render();
+}
+
+const SNAPSHOT = window.DASHBOARD_SNAPSHOT && window.DASHBOARD_SNAPSHOT.docs;
+
+function showSnapshot() {
+  if (!SNAPSHOT) {
+    $('updated').textContent = '데이터 연결 안 됨';
+    $('notice').hidden = false;
+    $('notice').textContent = '이 화면에서는 대시보드 데이터를 불러올 수 없습니다. claude.ai에 로그인한 상태로 열어 주세요.';
+    return;
+  }
+  applyDocs(SNAPSHOT);
+  const at = SNAPSHOT.summary && SNAPSHOT.summary.updatedAt;
+  $('notice').hidden = false;
+  $('notice').className = 'notice info';
+  $('notice').textContent = `마지막 세션 기준 데이터입니다${at ? ` (${ymd(at)} ${at.slice(11, 16)} UTC)` : ''}. claude.ai에 로그인하면 실시간 값을 봅니다.`;
+}
+
+// 스냅숏을 먼저 그리고, DB가 연결되면 실시간 값으로 바꿈
+if (SNAPSHOT) applyDocs(SNAPSHOT);
+
+(async () => {
+  const db = window.claude ? await window.claude.use('db') : null;
+  if (!db) { showSnapshot(); return; }
+  // stats 컬렉션: summary, posts, breakdown, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
+  db.collection('stats').onSnapshot(
+    (snap) => {
+      $('notice').hidden = true;
+      applyDocs(Object.fromEntries(snap.docs.map((d) => [d.id, d.data()])));
     },
-    (e) => { $('notice').hidden = false; $('notice').textContent = `데이터를 불러오지 못했습니다 (${e.code}). 잠시 뒤 새로고침해 주세요.`; }
+    (e) => {
+      if (SNAPSHOT) { showSnapshot(); return; }
+      $('notice').hidden = false; $('notice').textContent = `데이터를 불러오지 못했습니다 (${e.code}). 잠시 뒤 새로고침해 주세요.`;
+    }
   );
 })();
 </script>

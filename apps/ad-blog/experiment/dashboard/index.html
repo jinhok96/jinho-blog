@@ -249,6 +249,21 @@ const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
 const pct = (x) => (x == null ? '–' : (x * 100).toFixed(1) + '%');
 // 날짜 표기: YY.MM.DD (입력은 YYYY-MM-DD 또는 ISO 시각)
 const ymd = (d) => (d ? String(d).slice(2, 10).replace(/-/g, '.') : '–');
+// 시각(ISO, UTC)은 보는 사람의 시간대로: YY.MM.DD HH:MM (UTC+09:00)
+const pad2 = (n) => String(n).padStart(2, '0');
+function localParts(iso) {
+  const d = new Date(iso);
+  if (!iso || isNaN(d)) return null;
+  const off = -d.getTimezoneOffset();
+  const a = Math.abs(off);
+  return {
+    date: `${String(d.getFullYear()).slice(2)}.${pad2(d.getMonth() + 1)}.${pad2(d.getDate())}`,
+    time: `${pad2(d.getHours())}:${pad2(d.getMinutes())}`,
+    tz: `UTC${off >= 0 ? '+' : '-'}${pad2(Math.floor(a / 60))}:${pad2(a % 60)}`,
+  };
+}
+const localStamp = (iso) => { const p = localParts(iso); return p ? `${p.date} ${p.time} (${p.tz})` : '–'; };
+const localDate = (iso) => { const p = localParts(iso); return p ? p.date : '–'; };
 
 function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
@@ -268,7 +283,7 @@ function statusPill(s) {
 function renderSummary() {
   const s = state.summary;
   if (!s) return;
-  $('updated').textContent = `갱신 ${ymd(s.updatedAt)} ${s.updatedAt.slice(11, 16)} UTC`;
+  $('updated').textContent = `갱신 ${localStamp(s.updatedAt)}`;
   $('k-imp').textContent = fmt(s.impressions);
   $('k-clk').textContent = fmt(s.clicks);
   $('k-ctr').textContent = 'CTR ' + pct(s.ctr);
@@ -277,7 +292,7 @@ function renderSummary() {
   const sm = s.sitemap || {};
   const ok = !sm.errors && !sm.warnings;
   $('k-sm').innerHTML = ok ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${sm.errors} · 경고 ${sm.warnings}</span>`;
-  $('k-sm-sub').textContent = '마지막 다운로드 ' + ymd(sm.lastDownloaded);
+  $('k-sm-sub').textContent = '마지막 다운로드 ' + localDate(sm.lastDownloaded);
 }
 
 function barChart(el, rows) {
@@ -377,7 +392,7 @@ function indexFacts(p) {
   const tags = (p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join('');
   return `<div><h3>색인·글 정보</h3><dl class="facts">
     <dt>상태</dt><dd>${esc(i.coverage || '확인 전')}</dd>
-    <dt>마지막 크롤링</dt><dd class="num">${i.lastCrawl ? ymd(i.lastCrawl) + ' ' + i.lastCrawl.slice(11, 16) + ' UTC' : '–'}</dd>
+    <dt>마지막 크롤링</dt><dd class="num">${i.lastCrawl ? localStamp(i.lastCrawl) : '–'}</dd>
     <dt>크롤러</dt><dd>${crawler}</dd>
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
@@ -534,7 +549,7 @@ function showSnapshot() {
   const at = SNAPSHOT.summary && SNAPSHOT.summary.updatedAt;
   $('notice').hidden = false;
   $('notice').className = 'notice info';
-  $('notice').textContent = `마지막 세션 기준 데이터입니다${at ? ` (${ymd(at)} ${at.slice(11, 16)} UTC)` : ''}. claude.ai에 로그인하면 실시간 값을 봅니다.`;
+  $('notice').textContent = `마지막 세션 기준 데이터입니다${at ? ` (${localStamp(at)})` : ''}. claude.ai에 로그인하면 실시간 값을 봅니다.`;
 }
 
 // 스냅숏을 먼저 그리고, DB가 연결되면 실시간 값으로 바꿈

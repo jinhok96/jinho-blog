@@ -10,7 +10,10 @@ Search Console API·글 frontmatter·사실 확인표·traffic-playbook·log.md�
 `ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
 - summary: 갱신 시각·28일 합계·사이트맵 상태
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
-- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, channel, 28일 지표, index}]}
+- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, channel, 28일 지표, queries, daily, index}],
+         otherPages: [{path, 28일 지표, queries, daily}]}  (queries = 검색어 상위 10, daily = 날짜별 노출·클릭)
+- breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20
+- experiments: traffic-playbook 검증 기록 표 + 발행 글 수·AdSense 신청 기준
 - knowhow: {rows: traffic-playbook 노하우 상태 표}
 - sessions: {rows: log.md 세션 제목 (date, title, order)}
 """
@@ -49,6 +52,9 @@ def frontmatter(path: pathlib.Path) -> dict:
         if m:
             fm[key] = m.group(1).strip().strip('\'"')
     fm['images'] = len(re.findall(r'!\[[^\]]*\]\(', text))
+    fm['tags'] = re.findall(r'^\s+-\s+(.+)$', head.split('tags:', 1)[1], re.M) if 'tags:' in head else []
+    body = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text.split('---', 2)[2])
+    fm['words'] = len(re.findall(r"[A-Za-z0-9][A-Za-z0-9'’.-]*", body))
     return fm
 
 
@@ -70,6 +76,19 @@ def knowhow() -> list[dict]:
         cells = [c.strip() for c in line.strip().strip('|').split('|')]
         if len(cells) == 5 and cells[0].isdigit():
             rows.append({'num': int(cells[0]), 'title': cells[1], 'status': cells[2], 'record': cells[3], 'updated': cells[4]})
+    return rows
+
+
+def experiments() -> list[dict]:
+    """traffic-playbook 검증 기록 표 (ID·노하우·대상 글·바꾼 내용·배포일·지표·판단 시점·판정·반영)."""
+    text = (EXPERIMENT / 'traffic-playbook.md').read_text(encoding='utf-8')
+    block = text.split('### 검증 기록', 1)[1].split('\n## ', 1)[0]
+    keys = ['id', 'knowhow', 'target', 'change', 'deployed', 'metric', 'judgeAt', 'verdict', 'applied']
+    rows = []
+    for line in block.splitlines():
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        if len(cells) == 9 and re.fullmatch(r'V\d+', cells[0]):
+            rows.append(dict(zip(keys, cells)))
     return rows
 
 
@@ -103,24 +122,52 @@ def main() -> None:
         d = r['keys'][0]
         docs.setdefault(f'daily-{d[:7]}', {'rows': []})['rows'].append({'date': d, **metrics(r), 'state': 'final' if d in final_dates else 'fresh'})
 
-    # 글별: 최근 28일 지표 + 색인 상태
+    # 글별: 최근 28일 지표 + 검색어 + 날짜별 추이 + 색인 상태
     since = str(today - dt.timedelta(days=28))
     by_page = {r['keys'][0]: r for r in search_analytics(token, args.site, since, end, ['page'], 1000)}
+    queries: dict[str, list] = {}
+    for r in search_analytics(token, args.site, since, end, ['page', 'query'], 5000):
+        queries.setdefault(r['keys'][0], []).append({'query': r['keys'][1], **metrics(r)})
+    page_daily: dict[str, list] = {}
+    for r in search_analytics(token, args.site, since, end, ['page', 'date'], 5000):
+        page_daily.setdefault(r['keys'][0], []).append({'date': r['keys'][1], 'clicks': int(r['clicks']), 'impressions': int(r['impressions'])})
+
+    def page_extra(url: str) -> dict:
+        q = sorted(queries.get(url, []), key=lambda x: (-x['impressions'], -x['clicks']))[:10]
+        return {'queries': q, 'daily': sorted(page_daily.get(url, []), key=lambda x: x['date'])}
+
     posts = []
     for path in sorted(POSTS_DIR.glob('*.mdx')):
         slug = path.stem
         url = f'{SITE_ORIGIN}/posts/{slug}'
-        doc = {'slug': slug, **frontmatter(path), 'channel': channel(slug), **metrics(by_page.get(url))}
+        doc = {'slug': slug, **frontmatter(path), 'channel': channel(slug), **metrics(by_page.get(url)), **page_extra(url)}
         if not args.no_inspect:
             res = call('POST', f'{API}/v1/urlInspection/index:inspect', token, {'inspectionUrl': url, 'siteUrl': args.site})
             idx = res.get('inspectionResult', {}).get('indexStatusResult', {})
-            doc['index'] = {'verdict': idx.get('verdict'), 'coverage': idx.get('coverageState'), 'lastCrawl': idx.get('lastCrawlTime')}
+            google_canonical = idx.get('googleCanonical')
+            doc['index'] = {
+                'verdict': idx.get('verdict'), 'coverage': idx.get('coverageState'), 'lastCrawl': idx.get('lastCrawlTime'),
+                'crawledAs': idx.get('crawledAs'), 'fetch': idx.get('pageFetchState'),
+                'canonicalOk': None if not google_canonical else google_canonical == url,
+            }
         posts.append(doc)
     # 글 외 페이지(홈·카테고리·목록 등): 글별 표 합계를 사이트 전체 KPI와 맞추기 위해 따로 표시
     post_urls = {f"{SITE_ORIGIN}/posts/{p['slug']}" for p in posts}
-    other = [{'path': url.removeprefix(SITE_ORIGIN) or '/', **metrics(r)} for url, r in by_page.items() if url not in post_urls]
+    other = [{'path': url.removeprefix(SITE_ORIGIN) or '/', **metrics(r), **page_extra(url)} for url, r in by_page.items() if url not in post_urls]
     other.sort(key=lambda o: (-o['clicks'], -o['impressions']))
     docs['posts'] = {'rows': posts, 'otherPages': other}
+
+    # 기기·국가·검색 유형·사이트 검색어
+    def dim(name: str, limit: int) -> list[dict]:
+        rows = search_analytics(token, args.site, since, end, [name], limit)
+        return sorted(({'key': r['keys'][0], **metrics(r)} for r in rows), key=lambda x: (-x['impressions'], -x['clicks']))[:limit]
+
+    types = []
+    for t in ('web', 'image', 'video', 'news', 'discover', 'googleNews'):
+        rows = search_analytics(token, args.site, since, end, [], 1, search_type=t)
+        types.append({'key': t, **metrics(rows[0] if rows else None)})
+    docs['breakdown'] = {'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': dim('query', 20), 'searchTypes': types}
+    docs['experiments'] = {'rows': experiments(), 'postCount': len(posts), 'adsenseGoal': 20}
     docs['knowhow'] = {'rows': knowhow()}
     docs['sessions'] = {'rows': sessions()}
 

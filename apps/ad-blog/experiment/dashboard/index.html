@@ -107,6 +107,32 @@ tr.group td { padding: 16px 12px 8px; font-size: var(--fs-sm); line-height: var(
 .pill.bad { color: var(--bad); }
 .chip { display: inline-block; vertical-align: top; font-size: var(--fs-sm); line-height: 24px; font-weight: 500; padding: 0 8px; border-radius: var(--r-ctl); box-shadow: var(--hair); background: var(--well); color: var(--ink); white-space: nowrap; }
 .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
+.trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
+.progress { height: 8px; border-radius: 9999px; background: var(--well); box-shadow: var(--hair); overflow: hidden; margin-top: 4px; }
+.progress i { display: block; height: 100%; background: var(--link); border-radius: 9999px; }
+/* 가로 막대 목록 (기기·국가·검색 유형) */
+.bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
+.bars li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: baseline; }
+.bars .name { color: var(--ink); font-size: var(--fs-sm); line-height: var(--lh-sm); overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.bars .val { font-family: var(--font-num); font-variant-numeric: tabular-nums; font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); white-space: nowrap; }
+.bars .track { grid-column: 1 / -1; height: 8px; border-radius: 4px; background: var(--well); overflow: hidden; }
+.bars .track i { display: block; height: 100%; background: var(--series); border-radius: 4px; }
+.bars li.zero .name, .bars li.zero .val { color: var(--mute); }
+/* 글별 표: 펼침 버튼과 상세 줄 */
+.toggle { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--link); }
+.toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+.toggle::before { content: "▸"; display: inline-block; transition: transform 0.15s; }
+.toggle[aria-expanded="true"]::before { transform: rotate(90deg); }
+tr.detail > td { background: var(--canvas); padding: 16px 12px 20px; }
+.detail-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 16px 24px; }
+.detail-grid h3 { font-size: var(--fs-sm); line-height: var(--lh-sm); font-weight: 600; color: var(--ink); margin: 0 0 8px; }
+.mini { width: 100%; font-size: var(--fs-sm); line-height: var(--lh-sm); }
+.mini td { padding: 4px 8px 4px 0; box-shadow: inset 0 -1px 0 var(--line); }
+.mini tr:last-child td { box-shadow: none; }
+dl.facts { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 4px 12px; font-size: var(--fs-sm); line-height: var(--lh-sm); }
+dl.facts dt { color: var(--mute); } dl.facts dd { margin: 0; color: var(--body); }
+.spark { display: block; width: 100%; height: 48px; }
+.tags { display: flex; flex-wrap: wrap; gap: 4px; }
 ol.sessions { list-style: none; margin: 0; padding: 0; display: grid; align-content: start; }
 ol.sessions li { display: grid; grid-template-columns: 104px 1fr; gap: 12px; padding: 12px 0; box-shadow: inset 0 -1px 0 var(--line); color: var(--body); }
 ol.sessions li:last-child { box-shadow: none; }
@@ -129,6 +155,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
     <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub">낮을수록 위</span></div>
     <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
+    <div class="kpi"><span class="label">AdSense 신청 기준</span><span class="value" id="k-ads">–</span><span class="sub" id="k-ads-sub">글 20편 도달 즉시</span><div class="progress"><i id="k-ads-bar" style="width:0"></i></div></div>
     <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
 
@@ -146,12 +173,48 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   </section>
 
   <section class="panel">
-    <div class="panel-head"><h2>글별 현황</h2><span class="small">지표는 최근 28일, 미확정 데이터 포함</span></div>
+    <div class="panel-head"><h2>글별 현황</h2><span class="small">지표는 최근 28일, 미확정 데이터 포함. 제목 아래를 누르면 검색어·추이·색인 상세</span></div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>글</th><th>발행</th><th>채널</th><th class="r">이미지</th><th>색인</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
-        <tbody id="posts"><tr><td colspan="8" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
+        <thead><tr><th>글</th><th>발행</th><th>채널</th><th class="r">단어</th><th class="r">이미지</th><th>색인</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
+        <tbody id="posts"><tr><td colspan="9" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
       </table>
+    </div>
+  </section>
+
+  <section class="trio" aria-label="노출 분포 (최근 28일)">
+    <div class="panel">
+      <div class="panel-head"><h2>검색 유형</h2><span class="small">노출 · 클릭</span></div>
+      <ul class="bars" id="types"><li class="empty">데이터가 아직 없습니다.</li></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>기기</h2><span class="small">노출 · 클릭 · 순위</span></div>
+      <ul class="bars" id="devices"><li class="empty">데이터가 아직 없습니다.</li></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>국가 (상위 10)</h2><span class="small">노출 · 클릭 · 순위</span></div>
+      <ul class="bars" id="countries"><li class="empty">데이터가 아직 없습니다.</li></ul>
+    </div>
+  </section>
+
+  <section class="lists">
+    <div class="panel">
+      <div class="panel-head"><h2>검색어 (상위 20)</h2><span class="small" id="q-share">최근 28일</span></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>검색어</th><th class="r">노출</th><th class="r">클릭</th><th class="r">순위</th></tr></thead>
+          <tbody id="queries"><tr><td colspan="4" class="empty">검색어 데이터가 아직 없습니다.</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>성과 검증 기록</h2><span class="small">traffic-playbook.md</span></div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>ID</th><th>바꾼 내용</th><th>판단</th></tr></thead>
+          <tbody id="experiments"><tr><td colspan="3" class="empty">검증 기록이 아직 없습니다.</td></tr></tbody>
+        </table>
+      </div>
     </div>
   </section>
 
@@ -176,7 +239,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null };
+const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null };
+const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
 const pct = (x) => (x == null ? '–' : (x * 100).toFixed(1) + '%');
@@ -263,6 +327,61 @@ function niceStep(max) {
   return [1, 2, 5, 10].map((m) => m * p).find((s) => s >= raw) || p * 10;
 }
 
+function detailToggle(key, p) {
+  const n = (p.queries || []).length;
+  const label = n ? `검색어 ${n}개 · 추이` : '추이 · 상세';
+  return `<button class="toggle" data-key="${esc(key)}" aria-expanded="${expanded.has(key)}">${label}</button>`;
+}
+
+function sparkline(daily, range) {
+  if (!range) return '<div class="small">기간 정보 없음</div>';
+  const days = [];
+  for (let d = new Date(range.start + 'T00:00:00Z'); d <= new Date(range.end + 'T00:00:00Z'); d.setUTCDate(d.getUTCDate() + 1)) days.push(d.toISOString().slice(0, 10));
+  const by = Object.fromEntries((daily || []).map((r) => [r.date, r]));
+  const max = Math.max(1, ...days.map((d) => by[d]?.impressions || 0));
+  const W = 280, H = 48, bw = W / days.length;
+  const bars = days.map((d, i) => {
+    const r = by[d];
+    const h = r ? Math.max(2, (r.impressions / max) * (H - 4)) : 0;
+    return h ? `<rect x="${i * bw + 1}" y="${H - h}" width="${Math.max(bw - 2, 1)}" height="${h}" rx="1" fill="${r.clicks ? 'var(--link)' : 'var(--series)'}"><title>${ymd(d)} 노출 ${r.impressions} · 클릭 ${r.clicks}</title></rect>` : '';
+  }).join('');
+  const total = (daily || []).reduce((a, r) => a + r.impressions, 0);
+  return `<svg class="spark" viewBox="0 0 ${W} ${H}" preserveAspectRatio="none" role="img" aria-label="날짜별 노출 막대 (최대 ${max})"><line x1="0" x2="${W}" y1="${H - 0.5}" y2="${H - 0.5}" stroke="var(--line)"/>${bars}</svg>
+    <div class="small">${ymd(range.start)} ~ ${ymd(range.end)} · 최대 하루 ${max}회 · 합계 ${total}회 · 파란 막대 = 클릭 있는 날</div>`;
+}
+
+function queryTable(qs, impressions) {
+  if (!qs || !qs.length) {
+    return impressions ? `<div class="small">노출 ${impressions}회 모두 검색어 비공개 (검색량이 적은 검색어는 Google이 개인정보 보호로 숨김)</div>` : '<div class="small">아직 노출 없음</div>';
+  }
+  const shown = qs.reduce((a, q) => a + q.impressions, 0);
+  return `<table class="mini"><tbody>${qs.map((q) => `<tr><td>${esc(q.query)}</td><td class="r num">노출 ${fmt(q.impressions)}</td><td class="r num">클릭 ${fmt(q.clicks)}</td><td class="r num">${q.position == null ? '–' : q.position.toFixed(1) + '위'}</td></tr>`).join('')}</tbody></table>
+    <div class="small">검색어가 확인된 노출 ${shown} / ${impressions}회</div>`;
+}
+
+function detailRow(key, p, extra) {
+  return `<tr class="detail" data-for="${esc(key)}"${expanded.has(key) ? '' : ' hidden'}><td colspan="9"><div class="detail-grid">
+    <div><h3>검색어</h3>${queryTable(p.queries, p.impressions)}</div>
+    <div><h3>날짜별 노출</h3>${sparkline(p.daily, state.summary && state.summary.range)}</div>
+    ${extra}
+  </div></td></tr>`;
+}
+
+function indexFacts(p) {
+  const i = p.index || {};
+  const crawler = i.crawledAs === 'MOBILE' ? '모바일' : i.crawledAs === 'DESKTOP' ? '데스크톱' : '–';
+  const canon = i.canonicalOk == null ? '–' : i.canonicalOk ? '일치' : '<span style="color:var(--bad)">다름</span>';
+  const tags = (p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join('');
+  return `<div><h3>색인·글 정보</h3><dl class="facts">
+    <dt>상태</dt><dd>${esc(i.coverage || '확인 전')}</dd>
+    <dt>마지막 크롤링</dt><dd class="num">${i.lastCrawl ? ymd(i.lastCrawl) + ' ' + i.lastCrawl.slice(11, 16) + ' UTC' : '–'}</dd>
+    <dt>크롤러</dt><dd>${crawler}</dd>
+    <dt>Google 표준 URL</dt><dd>${canon}</dd>
+    <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
+    ${tags ? `<dt>태그</dt><dd class="tags">${tags}</dd>` : ''}
+  </dl></div>`;
+}
+
 function renderPosts() {
   if (!state.posts.length) return;
   const posts = [...state.posts].sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
@@ -270,27 +389,88 @@ function renderPosts() {
   const indexed = posts.filter((p) => p.index && p.index.verdict === 'PASS').length;
   $('k-indexed').textContent = `색인 ${indexed} / ${posts.length}`;
   $('posts').innerHTML = posts.map((p) => `<tr>
-    <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + ymd(p.updatedAt) : ''}</div></td>
+    <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + ymd(p.updatedAt) : ''}</div>${detailToggle(p.slug, p)}</td>
     <td class="num">${ymd(p.createdAt)}</td>
     <td>${p.channel ? `<span class="chip">${esc(p.channel)}</span>` : '<span class="small">–</span>'}</td>
+    <td class="r num">${fmt(p.words)}</td>
     <td class="r num">${fmt(p.images)}</td>
     <td>${indexPill(p.index)}</td>
     <td class="r num">${fmt(p.impressions)}</td>
     <td class="r num">${fmt(p.clicks)}</td>
     <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}</td>
-  </tr>`).join('') + renderOtherPages();
+  </tr>${detailRow(p.slug, p, indexFacts(p))}`).join('') + renderOtherPages();
 }
 
 // 글 외 페이지(홈·카테고리 등): 사이트 전체 KPI와 글별 합계의 차이를 보여 줌
 function renderOtherPages() {
   if (!state.otherPages.length) return '';
-  return `<tr class="group"><td colspan="8">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => `<tr>
-    <td><div class="post-title"><a href="${SITE}${o.path === '/' ? '' : esc(o.path)}" target="_blank" rel="noopener">${o.path === '/' ? '홈' : esc(o.path)}</a></div><div class="small">${esc(o.path)}</div></td>
-    <td><span class="small">–</span></td><td><span class="small">–</span></td><td class="r"><span class="small">–</span></td><td><span class="small">–</span></td>
+  const dash = '<span class="small">–</span>';
+  return `<tr class="group"><td colspan="9">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => {
+    const key = 'page:' + o.path;
+    return `<tr>
+    <td><div class="post-title"><a href="${SITE}${o.path === '/' ? '' : esc(o.path)}" target="_blank" rel="noopener">${o.path === '/' ? '홈' : esc(o.path)}</a></div><div class="small">${esc(o.path)}</div>${detailToggle(key, o)}</td>
+    <td>${dash}</td><td>${dash}</td><td class="r">${dash}</td><td class="r">${dash}</td><td>${dash}</td>
     <td class="r num">${fmt(o.impressions)}</td>
     <td class="r num">${fmt(o.clicks)}</td>
     <td class="r num">${o.position == null ? '–' : o.position.toFixed(1)}</td>
-  </tr>`).join('');
+  </tr>${detailRow(key, o, '')}`;
+  }).join('');
+}
+
+// 펼침 버튼: 이벤트 위임 (표를 다시 그려도 동작)
+document.addEventListener('click', (e) => {
+  const btn = e.target.closest('.toggle');
+  if (!btn) return;
+  const key = btn.dataset.key;
+  const on = !expanded.has(key);
+  on ? expanded.add(key) : expanded.delete(key);
+  btn.setAttribute('aria-expanded', String(on));
+  const row = [...document.querySelectorAll('tr.detail')].find((r) => r.dataset.for === key);
+  if (row) row.hidden = !on;
+});
+
+const COUNTRY = { usa: 'US', ind: 'IN', gbr: 'GB', can: 'CA', aus: 'AU', deu: 'DE', fra: 'FR', kor: 'KR', jpn: 'JP', chn: 'CN', hkg: 'HK', twn: 'TW', sgp: 'SG', idn: 'ID', phl: 'PH', vnm: 'VN', tha: 'TH', mys: 'MY', pak: 'PK', bgd: 'BD', irn: 'IR', tur: 'TR', sau: 'SA', are: 'AE', isr: 'IL', egy: 'EG', nga: 'NG', zaf: 'ZA', ken: 'KE', bra: 'BR', mex: 'MX', arg: 'AR', col: 'CO', chl: 'CL', per: 'PE', esp: 'ES', ita: 'IT', nld: 'NL', bel: 'BE', che: 'CH', aut: 'AT', swe: 'SE', nor: 'NO', dnk: 'DK', fin: 'FI', pol: 'PL', cze: 'CZ', hun: 'HU', rou: 'RO', grc: 'GR', prt: 'PT', irl: 'IE', ukr: 'UA', rus: 'RU', blr: 'BY', est: 'EE', lva: 'LV', ltu: 'LT', nzl: 'NZ' };
+let regionNames = null;
+try { regionNames = new Intl.DisplayNames(['ko'], { type: 'region' }); } catch (e) { regionNames = null; }
+const countryName = (c) => { const a2 = COUNTRY[c]; return a2 && regionNames ? regionNames.of(a2) : String(c).toUpperCase(); };
+const TYPE = { web: '웹 검색', image: '이미지 검색', video: '동영상 검색', news: '뉴스 탭', discover: 'Discover', googleNews: 'Google 뉴스' };
+const DEVICE = { DESKTOP: '데스크톱', MOBILE: '모바일', TABLET: '태블릿' };
+
+function barList(el, rows, name, withPos) {
+  if (!rows || !rows.length) { el.innerHTML = '<li class="empty">데이터가 아직 없습니다.</li>'; return; }
+  const max = Math.max(1, ...rows.map((r) => r.impressions));
+  el.innerHTML = rows.map((r) => `<li class="${r.impressions ? '' : 'zero'}"><span class="name">${esc(name(r.key))}</span><span class="val">${fmt(r.impressions)} · ${fmt(r.clicks)}${withPos ? ' · ' + (r.position == null ? '–' : r.position.toFixed(1) + '위') : ''}</span><span class="track"><i style="width:${(r.impressions / max) * 100}%"></i></span></li>`).join('');
+}
+
+function renderBreakdown() {
+  const b = state.breakdown;
+  if (!b) return;
+  barList($('types'), b.searchTypes, (k) => TYPE[k] || k, false);
+  barList($('devices'), b.devices, (k) => DEVICE[k] || k, true);
+  barList($('countries'), b.countries, countryName, true);
+  const qs = b.queries || [];
+  const total = state.summary ? state.summary.impressions : 0;
+  const shown = qs.reduce((a, q) => a + q.impressions, 0);
+  $('q-share').textContent = `검색어가 확인된 노출 ${shown} / ${total}회 (나머지는 Google이 비공개 처리)`;
+  $('queries').innerHTML = qs.length ? qs.map((q) => `<tr><td>${esc(q.key)}</td><td class="r num">${fmt(q.impressions)}</td><td class="r num">${fmt(q.clicks)}</td><td class="r num">${q.position == null ? '–' : q.position.toFixed(1)}</td></tr>`).join('')
+    : '<tr><td colspan="4" class="empty">공개된 검색어가 아직 없습니다.</td></tr>';
+}
+
+function renderExperiments() {
+  const x = state.experiments;
+  if (!x) return;
+  const goal = x.adsenseGoal || 20;
+  $('k-ads').textContent = `${x.postCount} / ${goal}`;
+  $('k-ads-sub').textContent = x.postCount >= goal ? '기준 도달: 신청 가능' : `${goal - x.postCount}편 남음`;
+  $('k-ads-bar').style.width = Math.min(100, (x.postCount / goal) * 100) + '%';
+  const today = new Date().toISOString().slice(0, 10);
+  const rows = x.rows || [];
+  $('experiments').innerHTML = rows.length ? rows.map((r) => {
+    const done = r.verdict && r.verdict !== '-';
+    const days = Math.round((new Date(r.judgeAt) - new Date(today)) / 86400000);
+    const st = done ? statusPill(r.verdict) : days <= 0 ? '<span class="pill warn">판정 필요</span>' : `<span class="pill muted">D-${days}</span>`;
+    return `<tr><td class="num">${esc(r.id)}<div class="small">노하우 ${esc(r.knowhow)}</div></td><td>${esc(r.change.replace(/`/g, ''))}<div class="small">${esc(r.target.replace(/`/g, '').replace(/, /g, ' · '))} · 배포 ${ymd(r.deployed)} · 지표 ${esc(r.metric)}</div></td><td>${st}<div class="small">${ymd(r.judgeAt)}</div></td></tr>`;
+  }).join('') : '<tr><td colspan="3" class="empty">검증 기록이 아직 없습니다.</td></tr>';
 }
 
 function renderKnowhow() {
@@ -313,6 +493,8 @@ function render() {
   renderPosts();
   renderKnowhow();
   renderSessions();
+  renderBreakdown();
+  renderExperiments();
 }
 
 render();
@@ -331,7 +513,7 @@ if (window.ResizeObserver) {
     $('notice').textContent = '이 화면에서는 대시보드 데이터를 불러올 수 없습니다. claude.ai에 로그인한 상태로 열어 주세요.';
     return;
   }
-  // stats 컬렉션: summary, posts, knowhow, sessions, daily-YYYY-MM (달마다 1개)
+  // stats 컬렉션: summary, posts, breakdown, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
   db.collection('stats').onSnapshot(
     (snap) => {
       const byId = Object.fromEntries(snap.docs.map((d) => [d.id, d.data()]));
@@ -340,6 +522,8 @@ if (window.ResizeObserver) {
       state.otherPages = byId.posts?.otherPages || [];
       state.knowhow = byId.knowhow?.rows || [];
       state.sessions = byId.sessions?.rows || [];
+      state.breakdown = byId.breakdown || null;
+      state.experiments = byId.experiments || null;
       state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);
       render();
     },

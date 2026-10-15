@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 9 (정기 실행 8회차): HEIC→JPG 오프라인 변환
+
+세션 시각: 2026-10-15 21:11 UTC (한국 10-16 06:11). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-17 ~ 10-15, 세션 8 이후 바뀐 값만)**
+
+- 클릭 1 → **3**, 노출 39 → **58**, CTR 5.2%, 평균 순위 21.2
+  - `turn-off-ai-in-chrome` **클릭 2**·노출 36 (순위 10.8, 세션 8의 5.4보다 낮은 순위 노출이 늘어 평균 하락) / `transcribe-audio-offline-free` 12 (26.3) / `check-if-image-is-ai-generated` 8 (64.2) / `gemini-gems-to-skills` 첫 노출 1 (7.0) / 홈 1클릭
+  - 새 검색어: `offline transcription software` 2 (79위), `synthid checker` 1 (86위), `turn off ai` 2 (57.5위)
+- sitemap 마지막 다운로드 10-15 03:42 UTC (변화 없음). URL 검사: `convert-pdf-to-word-offline-free`(10-15 발행) `URL is unknown`, `remove-background-from-image-free-offline` `Discovered - currently not indexed` 유지 (발행 5일째) → 10편 중 8편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                       | 카테고리   | 유형                       | 직접 검증                                                                                                   |
+| -------------------------- | ---------- | -------------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `convert-heic-to-jpg-free` | `software` | 비교 + How-to (측정형, 검색형) | 직접 만든 HEIC 24장(CC0 사진 → 4032×3024 Display P3, GPS·날짜, 세로 4장은 irot+EXIF 회전)을 XnConvert 1.118·ImageMagick 7.1.2·GIMP 3.2.6으로 변환, 원본 대비 ΔE2000·메타데이터·회전·속도 측정 + 설정 변경 후 재측정 |
+
+- 선정 근거: 백로그 34. Trends(미국 3개월, 기준 `remove background` 35.7): `heic to jpg` **8.8** · `png to jpg` 4.0 · `compress video` 2.5 · `webp to jpg` 1.9. 자동완성: "heic to jpg" 34개(converter·windows·bulk·free·offline), "convert heic to jpg" 25개(windows 11·on mac·on iphone)
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Google Trends 미국 급상승 10개: 스포츠·화재·"varonis"(주식) → IT 도구 주제 없음. 공식 피드 새 항목: Windows 11 새 Photos 앱(Insider, HEIC 편집 포함)·Windows 11 기능 업데이트 글(10-15) → 직접 검증 불가라 새 글로 쓰지 않고 HEIC 글에 Photos 앱 소식 1문장으로 반영
+- 적용한 노하우: 검색형 제목 53자·설명 155자, 측정 규모 제목 표기, 이미지 5장(대표 그래프 1200×675 + 설정 후 색·메모리 그래프 + 같은 사진 색 비교 + **직접 캡처한 앱 설정 화면 2장**(XnConvert·GIMP, Xvfb)), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → 허브·배경 제거·OCR·PDF→Word·AI 이미지 판별 (5개). `convert-pdf-to-word-offline-free`에서 새 글로 역링크 1개 (V 기록 대상 아님). V1·V2 대상 글은 판정 전이라 변경하지 않음
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, og:image 생성, 본문 이미지 5장 모두 width·height 지정
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 24장 일괄 × 3회 중앙값)**
+
+| 도구 (기본 설정)  | 색 차이 ΔE2000 (중앙값) | 색 프로필 | GPS·날짜 | 세로 회전 | 24장 시간 | 최대 RAM | 평균 크기 |
+| ----------------- | ----------------------- | --------- | -------- | --------- | --------- | -------- | --------- |
+| XnConvert 1.118   | 1.63                    | 0/24      | 24/24    | 4/4       | **33초**  | 255MB    | 2.03MB    |
+| ImageMagick 7.1.2 | **0.61**                | 24/24     | 24/24    | 4/4       | 55초      | 244MB    | 2.85MB    |
+| GIMP 3.2.6        | 1.60                    | 0/24      | **0/24** | 4/4       | 67초      | 448MB    | 2.50MB    |
+
+- 설정 변경 후: XnConvert **Preserve color profile** 켬 → ΔE 0.67, GIMP **Save Exif·Save color profile** 켬 → ΔE 0.63·GPS 24/24. XnConvert Preserve Metadata 끔 + 색 프로필 켬 → GPS·날짜 0/24, ΔE 0.67 (공유 전 위치 제거 방법)
+
+**알게 된 것**
+
+- 색 프로필을 버리는 변환기는 겉보기엔 정상이라 단어·해상도 비교로는 안 드러남 → 원본 대비 ΔE와 같은 사진 비교 이미지로 차이를 보여 줌. 기본 설정이 결론을 가르는 주제(메타데이터·색)는 "기본값 vs 설정 변경"을 둘 다 측정해야 함
+- GUI 앱도 측정 가능: Xvfb + xdotool로 XnConvert(Qt) 창을 열어 클릭·스크린샷. 부족한 라이브러리(`libxcb-cursor0`, `libxcb-icccm4`, `libxcb-keysyms1`)는 apt로 설치. GIMP 3.2.6 AppImage는 `gimp-console --batch-interpreter python-fu-eval`로 배치 가능. 창 관리자가 없어 키 입력이 캔버스로 가는 경우가 있음 → 입력 전 `xdotool windowfocus`, 결과를 GUI 결과와 대조
+- `pkill -f`/`pgrep -f` 패턴이 내 셸 명령 문자열과도 맞아 셸이 종료됨 (exit 144) → 프로세스 이름(`pgrep -x`)이나 PID로 종료
+- Wikimedia Commons API·upload.wikimedia.org는 컨테이너에서 429(Too Many Requests) → 퍼블릭 도메인 사진은 Hugging Face `Spawning/PD12M` 메타데이터(parquet) + `pd12m.s3.us-west-2.amazonaws.com` 사본으로 받음. download.gimp.org·xnview.com·imagemagick.org(→ GitHub Releases 고정 태그)·apps.microsoft.com 접속 가능
+- 실수: Wikimedia 다운로드 재시도 중 요청 User-Agent에 계정 이메일을 1회 넣음 (요청은 429로 거부). 외부 요청 헤더에 개인 정보를 넣지 않도록 함
+- 1차 출처가 없는 일반 상식(“iPhone은 Display P3로 저장”, “ΔE 1 이하는 안 보임”)은 글에 쓰지 않고 측정 조건으로만 표현
+
+**다음 할 일**
+
+- 사용자: `remove-background-from-image-free-offline`이 발행 5일째 크롤링 전(`Discovered - currently not indexed`). Search Console URL 검사 → **색인 생성 요청** 1회 권장 (API로는 요청 불가, 세션 8에서도 요청)
+- Claude: 새 글 노출 검색어 확인 (`heic to jpg`, `convert heic to jpg free` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`, 클릭 2회로 가장 성과 있는 글)
+- Claude: 발행 11편 / AdSense 신청 기준 20편
+
 ## 2026-10-15 · 세션 8 (정기 실행 7회차): PDF→Word 오프라인 변환
 
 세션 시각: 2026-10-15 09:10 UTC (한국 18:10). 열린 PR 없음.

@@ -51,7 +51,8 @@
       "Bash(wc:*)",
       "Bash(where code)",
       "mcp__chrome-devtools__*",
-      "mcp__claude_ai_Notion__notion-fetch"
+      "mcp__claude_ai_Notion__notion-fetch",
+      "Artifact"
     ],
     "deny": [],
     "ask": []

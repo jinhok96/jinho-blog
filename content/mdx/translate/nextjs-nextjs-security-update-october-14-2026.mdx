@@ -1,0 +1,18 @@
+---
+title: "Next.js 보안 업데이트: 업스트림 취약점 해결"
+description: Next.js v16.4.1 및 v15.5.28에서 심각한 보안 취약점 3가지가 수정되었습니다. 즉시 업데이트하세요.
+category: nextjs
+sourceUrl: https://nextjs.org/blog/nextjs-security-update-october-14-2026
+createdAt: 2026-10-14
+---
+
+> 원문: [Next.js Security Update for Upstream Vulnerabilities](https://nextjs.org/blog/nextjs-security-update-october-14-2026) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js의 최신 보안 업데이트가 v16.4.1 (Active LTS) 및 v15.5.28 (Maintenance LTS) 버전으로 출시되었습니다. 이는 업스트림 의존성 지연으로 인해 연기되었던 두 가지 중요한 보안 문제를 해결하기 위한 조치입니다.
+
+- `use cache` 함수에서 Typed Array를 반환할 때 발생하는 인증되지 않은 원격 코드 실행 취약점(Critical Severity)이 App Router 사용 시 발견되었습니다. 이 문제는 즉시 업그레이드해야 하며, 알려진 해결 방법은 없습니다.
+- SVG를 사용하는 Image Optimization API에서 발생하는 인증되지 않은 원격 코드 실행 취약점(Critical Severity)은 `sharp` 라이브러리 버전 0.35.5 이상을 사용하면 해결됩니다. Next.js 업데이트 시 `sharp`도 자동으로 최신 버전으로 업데이트됩니다.
+- App Router에서 Server Actions를 사용할 때 발생하는 서비스 거부(Denial of Service) 취약점(High Severity)은 특정 요청으로 인해 과도한 CPU 사용을 유발하여 다른 요청 처리를 막는 문제입니다. Pages Router를 사용하거나 Server Actions를 사용하지 않는 애플리케이션은 이 문제에 영향을 받지 않습니다.
+
+Vercel의 Open Source Bug Bounty 프로그램을 통해 Next.js 보안에 기여할 수 있습니다. 자세한 내용은 원문에서 확인하세요.

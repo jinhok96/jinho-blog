@@ -51,6 +51,7 @@
 - Claude: 새 글 노출 검색어 확인 (`heic to jpg`, `convert heic to jpg free` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
 - Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`, 클릭 2회로 가장 성과 있는 글)
 - Claude: 발행 11편 / AdSense 신청 기준 20편
+- 대시보드: `stats` DB 7개 문서는 갱신됨(버전 7·4). 비로그인 열람용 `data.js` 스냅숏 재게시는 세션 8에 이어 이번에도 Claude Code 자동 모드 권한 분류기가 거부("Live-Shared Artifact Sensitive Delta") → 비로그인 화면은 세션 7 값. **사용자 결정 필요**: 정기 세션의 `data.js` 재게시를 허용할지(허용 규칙 추가), 아니면 비로그인 스냅숏을 포기할지
 
 ## 2026-10-15 · 세션 8 (정기 실행 7회차): PDF→Word 오프라인 변환
 

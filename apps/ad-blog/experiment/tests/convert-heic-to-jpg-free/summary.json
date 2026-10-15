@@ -1,0 +1,1577 @@
+{
+ "magick": {
+  "files": 24,
+  "orientation_ok": 24,
+  "icc_kept": 24,
+  "gps_kept": 24,
+  "date_kept": 24,
+  "jpg_total_mb": 68.3,
+  "jpg_mean_mb": 2.85,
+  "ssim_median": 0.9875,
+  "ssim_min": 0.9722,
+  "deltaE_median": 0.61,
+  "deltaE_max": 0.86,
+  "sec_24_median": 55.46,
+  "sec_runs": [
+   55.77,
+   54.94,
+   55.46
+  ],
+  "max_rss_mb": 244,
+  "per_file": [
+   {
+    "file": "01",
+    "bytes": 1048617,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9932,
+    "deltaE": 0.36
+   },
+   {
+    "file": "02",
+    "bytes": 1323229,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9898,
+    "deltaE": 0.27
+   },
+   {
+    "file": "03",
+    "bytes": 2276440,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9839,
+    "deltaE": 0.61
+   },
+   {
+    "file": "04",
+    "bytes": 2804658,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9846,
+    "deltaE": 0.41
+   },
+   {
+    "file": "05",
+    "bytes": 5662752,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9947,
+    "deltaE": 0.86
+   },
+   {
+    "file": "06",
+    "bytes": 3022601,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9833,
+    "deltaE": 0.57
+   },
+   {
+    "file": "07",
+    "bytes": 1958558,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9925,
+    "deltaE": 0.61
+   },
+   {
+    "file": "08",
+    "bytes": 2213741,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9862,
+    "deltaE": 0.67
+   },
+   {
+    "file": "09",
+    "bytes": 1650276,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9952,
+    "deltaE": 0.64
+   },
+   {
+    "file": "10",
+    "bytes": 3182334,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9834,
+    "deltaE": 0.5
+   },
+   {
+    "file": "11",
+    "bytes": 3360645,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9854,
+    "deltaE": 0.71
+   },
+   {
+    "file": "12",
+    "bytes": 5117200,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9889,
+    "deltaE": 0.78
+   },
+   {
+    "file": "13",
+    "bytes": 2626323,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9817,
+    "deltaE": 0.49
+   },
+   {
+    "file": "14",
+    "bytes": 2375141,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9927,
+    "deltaE": 0.74
+   },
+   {
+    "file": "15",
+    "bytes": 2499116,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9858,
+    "deltaE": 0.57
+   },
+   {
+    "file": "16",
+    "bytes": 2987734,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.982,
+    "deltaE": 0.51
+   },
+   {
+    "file": "17",
+    "bytes": 4500609,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9722,
+    "deltaE": 0.8
+   },
+   {
+    "file": "18",
+    "bytes": 5401554,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9849,
+    "deltaE": 0.86
+   },
+   {
+    "file": "19",
+    "bytes": 3123355,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9851,
+    "deltaE": 0.54
+   },
+   {
+    "file": "20",
+    "bytes": 2013791,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.992,
+    "deltaE": 0.76
+   },
+   {
+    "file": "21",
+    "bytes": 1926401,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9894,
+    "deltaE": 0.57
+   },
+   {
+    "file": "22",
+    "bytes": 2008169,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9904,
+    "deltaE": 0.67
+   },
+   {
+    "file": "23",
+    "bytes": 2803137,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9913,
+    "deltaE": 0.72
+   },
+   {
+    "file": "24",
+    "bytes": 2430726,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9891,
+    "deltaE": 0.49
+   }
+  ]
+ },
+ "gimp": {
+  "files": 24,
+  "orientation_ok": 24,
+  "icc_kept": 0,
+  "gps_kept": 0,
+  "date_kept": 0,
+  "jpg_total_mb": 60.1,
+  "jpg_mean_mb": 2.5,
+  "ssim_median": 0.9859,
+  "ssim_min": 0.9659,
+  "deltaE_median": 1.6,
+  "deltaE_max": 2.77,
+  "sec_24_median": 66.83,
+  "sec_runs": [
+   84.62,
+   65.76,
+   66.83
+  ],
+  "max_rss_mb": 448,
+  "per_file": [
+   {
+    "file": "01",
+    "bytes": 950065,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9931,
+    "deltaE": 2.77
+   },
+   {
+    "file": "02",
+    "bytes": 1143627,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9896,
+    "deltaE": 1.42
+   },
+   {
+    "file": "03",
+    "bytes": 2009395,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9829,
+    "deltaE": 1.34
+   },
+   {
+    "file": "04",
+    "bytes": 2487929,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9842,
+    "deltaE": 2.46
+   },
+   {
+    "file": "05",
+    "bytes": 4951747,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9892,
+    "deltaE": 1.56
+   },
+   {
+    "file": "06",
+    "bytes": 2640873,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9816,
+    "deltaE": 1.23
+   },
+   {
+    "file": "07",
+    "bytes": 1725578,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9928,
+    "deltaE": 1.7
+   },
+   {
+    "file": "08",
+    "bytes": 1970738,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9859,
+    "deltaE": 1.58
+   },
+   {
+    "file": "09",
+    "bytes": 1537104,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9954,
+    "deltaE": 1.68
+   },
+   {
+    "file": "10",
+    "bytes": 2747842,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9816,
+    "deltaE": 2.3
+   },
+   {
+    "file": "11",
+    "bytes": 2935396,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9838,
+    "deltaE": 1.61
+   },
+   {
+    "file": "12",
+    "bytes": 4396418,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.986,
+    "deltaE": 1.52
+   },
+   {
+    "file": "13",
+    "bytes": 2289997,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9802,
+    "deltaE": 2.17
+   },
+   {
+    "file": "14",
+    "bytes": 2143500,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9926,
+    "deltaE": 0.94
+   },
+   {
+    "file": "15",
+    "bytes": 2220495,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.985,
+    "deltaE": 2.12
+   },
+   {
+    "file": "16",
+    "bytes": 2649554,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9807,
+    "deltaE": 2.59
+   },
+   {
+    "file": "17",
+    "bytes": 3803187,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9659,
+    "deltaE": 1.02
+   },
+   {
+    "file": "18",
+    "bytes": 4705266,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9814,
+    "deltaE": 0.86
+   },
+   {
+    "file": "19",
+    "bytes": 2730626,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9832,
+    "deltaE": 1.24
+   },
+   {
+    "file": "20",
+    "bytes": 1787837,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9921,
+    "deltaE": 0.94
+   },
+   {
+    "file": "21",
+    "bytes": 1730419,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9894,
+    "deltaE": 1.49
+   },
+   {
+    "file": "22",
+    "bytes": 1810440,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9907,
+    "deltaE": 1.92
+   },
+   {
+    "file": "23",
+    "bytes": 2491402,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9909,
+    "deltaE": 1.68
+   },
+   {
+    "file": "24",
+    "bytes": 2200027,
+    "icc": false,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9893,
+    "deltaE": 2.69
+   }
+  ]
+ },
+ "gimp_meta": {
+  "files": 24,
+  "orientation_ok": 24,
+  "icc_kept": 24,
+  "gps_kept": 24,
+  "date_kept": 24,
+  "jpg_total_mb": 60.1,
+  "jpg_mean_mb": 2.5,
+  "ssim_median": 0.9854,
+  "ssim_min": 0.9658,
+  "deltaE_median": 0.63,
+  "deltaE_max": 0.88,
+  "sec_24_median": 66.6,
+  "sec_runs": [
+   68.21,
+   66.6,
+   66.56
+  ],
+  "max_rss_mb": 448,
+  "per_file": [
+   {
+    "file": "01",
+    "bytes": 951169,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9928,
+    "deltaE": 0.37
+   },
+   {
+    "file": "02",
+    "bytes": 1144731,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9889,
+    "deltaE": 0.29
+   },
+   {
+    "file": "03",
+    "bytes": 2010499,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9823,
+    "deltaE": 0.64
+   },
+   {
+    "file": "04",
+    "bytes": 2489033,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9833,
+    "deltaE": 0.42
+   },
+   {
+    "file": "05",
+    "bytes": 4952851,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9891,
+    "deltaE": 0.88
+   },
+   {
+    "file": "06",
+    "bytes": 2641977,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9811,
+    "deltaE": 0.58
+   },
+   {
+    "file": "07",
+    "bytes": 1726682,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9919,
+    "deltaE": 0.62
+   },
+   {
+    "file": "08",
+    "bytes": 1971842,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.985,
+    "deltaE": 0.7
+   },
+   {
+    "file": "09",
+    "bytes": 1538208,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9948,
+    "deltaE": 0.66
+   },
+   {
+    "file": "10",
+    "bytes": 2748946,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9811,
+    "deltaE": 0.52
+   },
+   {
+    "file": "11",
+    "bytes": 2936500,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9834,
+    "deltaE": 0.73
+   },
+   {
+    "file": "12",
+    "bytes": 4397522,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9858,
+    "deltaE": 0.81
+   },
+   {
+    "file": "13",
+    "bytes": 2291101,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9795,
+    "deltaE": 0.51
+   },
+   {
+    "file": "14",
+    "bytes": 2144604,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9921,
+    "deltaE": 0.76
+   },
+   {
+    "file": "15",
+    "bytes": 2221599,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9842,
+    "deltaE": 0.59
+   },
+   {
+    "file": "16",
+    "bytes": 2650658,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9798,
+    "deltaE": 0.53
+   },
+   {
+    "file": "17",
+    "bytes": 3804291,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9658,
+    "deltaE": 0.83
+   },
+   {
+    "file": "18",
+    "bytes": 4706370,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9814,
+    "deltaE": 0.88
+   },
+   {
+    "file": "19",
+    "bytes": 2731730,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9829,
+    "deltaE": 0.56
+   },
+   {
+    "file": "20",
+    "bytes": 1788941,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9914,
+    "deltaE": 0.79
+   },
+   {
+    "file": "21",
+    "bytes": 1731523,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9885,
+    "deltaE": 0.59
+   },
+   {
+    "file": "22",
+    "bytes": 1811544,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9897,
+    "deltaE": 0.69
+   },
+   {
+    "file": "23",
+    "bytes": 2492506,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9905,
+    "deltaE": 0.73
+   },
+   {
+    "file": "24",
+    "bytes": 2201131,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9883,
+    "deltaE": 0.51
+   }
+  ]
+ },
+ "xnconvert": {
+  "files": 24,
+  "orientation_ok": 24,
+  "icc_kept": 0,
+  "gps_kept": 24,
+  "date_kept": 24,
+  "jpg_total_mb": 48.7,
+  "jpg_mean_mb": 2.03,
+  "ssim_median": 0.9804,
+  "ssim_min": 0.9523,
+  "deltaE_median": 1.63,
+  "deltaE_max": 2.78,
+  "sec_24_median": 33.47,
+  "sec_runs": [
+   33.36,
+   33.69,
+   33.47
+  ],
+  "max_rss_mb": 255,
+  "per_file": [
+   {
+    "file": "01",
+    "bytes": 671897,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9922,
+    "deltaE": 2.78
+   },
+   {
+    "file": "02",
+    "bytes": 831674,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9865,
+    "deltaE": 1.43
+   },
+   {
+    "file": "03",
+    "bytes": 1545439,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9783,
+    "deltaE": 1.37
+   },
+   {
+    "file": "04",
+    "bytes": 1995975,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9801,
+    "deltaE": 2.47
+   },
+   {
+    "file": "05",
+    "bytes": 4153142,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9791,
+    "deltaE": 1.58
+   },
+   {
+    "file": "06",
+    "bytes": 2145234,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9756,
+    "deltaE": 1.27
+   },
+   {
+    "file": "07",
+    "bytes": 1382003,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9908,
+    "deltaE": 1.71
+   },
+   {
+    "file": "08",
+    "bytes": 1517707,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.982,
+    "deltaE": 1.62
+   },
+   {
+    "file": "09",
+    "bytes": 1271778,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9906,
+    "deltaE": 1.7
+   },
+   {
+    "file": "10",
+    "bytes": 2249327,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9755,
+    "deltaE": 2.31
+   },
+   {
+    "file": "11",
+    "bytes": 2423662,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9785,
+    "deltaE": 1.64
+   },
+   {
+    "file": "12",
+    "bytes": 3771263,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9776,
+    "deltaE": 1.56
+   },
+   {
+    "file": "13",
+    "bytes": 1813137,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.974,
+    "deltaE": 2.19
+   },
+   {
+    "file": "14",
+    "bytes": 1723735,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9906,
+    "deltaE": 1.0
+   },
+   {
+    "file": "15",
+    "bytes": 1745968,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9806,
+    "deltaE": 2.14
+   },
+   {
+    "file": "16",
+    "bytes": 2119837,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9749,
+    "deltaE": 2.6
+   },
+   {
+    "file": "17",
+    "bytes": 3137550,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9523,
+    "deltaE": 1.06
+   },
+   {
+    "file": "18",
+    "bytes": 4094036,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9724,
+    "deltaE": 0.89
+   },
+   {
+    "file": "19",
+    "bytes": 2240557,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9775,
+    "deltaE": 1.27
+   },
+   {
+    "file": "20",
+    "bytes": 1386598,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9903,
+    "deltaE": 1.0
+   },
+   {
+    "file": "21",
+    "bytes": 1308140,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9864,
+    "deltaE": 1.52
+   },
+   {
+    "file": "22",
+    "bytes": 1391831,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9883,
+    "deltaE": 1.94
+   },
+   {
+    "file": "23",
+    "bytes": 2046478,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9881,
+    "deltaE": 1.71
+   },
+   {
+    "file": "24",
+    "bytes": 1739521,
+    "icc": false,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9863,
+    "deltaE": 2.7
+   }
+  ]
+ },
+ "xnconvert_icc": {
+  "files": 24,
+  "orientation_ok": 24,
+  "icc_kept": 24,
+  "gps_kept": 24,
+  "date_kept": 24,
+  "jpg_total_mb": 48.7,
+  "jpg_mean_mb": 2.03,
+  "ssim_median": 0.9794,
+  "ssim_min": 0.9523,
+  "deltaE_median": 0.67,
+  "deltaE_max": 0.92,
+  "sec_24_median": 33.31,
+  "sec_runs": [
+   33.53,
+   33.31,
+   32.8
+  ],
+  "max_rss_mb": 255,
+  "per_file": [
+   {
+    "file": "01",
+    "bytes": 672531,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9917,
+    "deltaE": 0.4
+   },
+   {
+    "file": "02",
+    "bytes": 832308,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9859,
+    "deltaE": 0.32
+   },
+   {
+    "file": "03",
+    "bytes": 1546073,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9777,
+    "deltaE": 0.69
+   },
+   {
+    "file": "04",
+    "bytes": 1996609,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9791,
+    "deltaE": 0.45
+   },
+   {
+    "file": "05",
+    "bytes": 4153776,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.979,
+    "deltaE": 0.92
+   },
+   {
+    "file": "06",
+    "bytes": 2145868,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9751,
+    "deltaE": 0.63
+   },
+   {
+    "file": "07",
+    "bytes": 1382637,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9899,
+    "deltaE": 0.65
+   },
+   {
+    "file": "08",
+    "bytes": 1518341,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9812,
+    "deltaE": 0.76
+   },
+   {
+    "file": "09",
+    "bytes": 1272412,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9899,
+    "deltaE": 0.69
+   },
+   {
+    "file": "10",
+    "bytes": 2249961,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9749,
+    "deltaE": 0.55
+   },
+   {
+    "file": "11",
+    "bytes": 2424296,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9781,
+    "deltaE": 0.77
+   },
+   {
+    "file": "12",
+    "bytes": 3771897,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9773,
+    "deltaE": 0.86
+   },
+   {
+    "file": "13",
+    "bytes": 1813771,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9733,
+    "deltaE": 0.55
+   },
+   {
+    "file": "14",
+    "bytes": 1724369,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9901,
+    "deltaE": 0.82
+   },
+   {
+    "file": "15",
+    "bytes": 1746602,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9797,
+    "deltaE": 0.63
+   },
+   {
+    "file": "16",
+    "bytes": 2120471,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.974,
+    "deltaE": 0.57
+   },
+   {
+    "file": "17",
+    "bytes": 3138184,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9523,
+    "deltaE": 0.87
+   },
+   {
+    "file": "18",
+    "bytes": 4094670,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9724,
+    "deltaE": 0.91
+   },
+   {
+    "file": "19",
+    "bytes": 2241191,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9772,
+    "deltaE": 0.6
+   },
+   {
+    "file": "20",
+    "bytes": 1387232,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9896,
+    "deltaE": 0.86
+   },
+   {
+    "file": "21",
+    "bytes": 1308774,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9855,
+    "deltaE": 0.64
+   },
+   {
+    "file": "22",
+    "bytes": 1392465,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9873,
+    "deltaE": 0.74
+   },
+   {
+    "file": "23",
+    "bytes": 2047112,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9877,
+    "deltaE": 0.77
+   },
+   {
+    "file": "24",
+    "bytes": 1740155,
+    "icc": true,
+    "gps": true,
+    "date": true,
+    "orientation_ok": true,
+    "ssim": 0.9852,
+    "deltaE": 0.55
+   }
+  ]
+ },
+ "_input": {
+  "files": 24,
+  "heic_total_mb": 69.4
+ },
+ "xnconvert_icc_nometa": {
+  "files": 24,
+  "orientation_ok": 24,
+  "icc_kept": 24,
+  "gps_kept": 0,
+  "date_kept": 0,
+  "jpg_total_mb": 48.7,
+  "jpg_mean_mb": 2.03,
+  "ssim_median": 0.9794,
+  "ssim_min": 0.9523,
+  "deltaE_median": 0.67,
+  "deltaE_max": 0.92,
+  "sec_24_median": 33.97,
+  "sec_runs": [
+   33.97
+  ],
+  "max_rss_mb": 255,
+  "note": "1 run only",
+  "per_file": [
+   {
+    "file": "01",
+    "bytes": 672137,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9917,
+    "deltaE": 0.4
+   },
+   {
+    "file": "02",
+    "bytes": 831914,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9859,
+    "deltaE": 0.32
+   },
+   {
+    "file": "03",
+    "bytes": 1545679,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9777,
+    "deltaE": 0.69
+   },
+   {
+    "file": "04",
+    "bytes": 1996215,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9791,
+    "deltaE": 0.45
+   },
+   {
+    "file": "05",
+    "bytes": 4153382,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.979,
+    "deltaE": 0.92
+   },
+   {
+    "file": "06",
+    "bytes": 2145474,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9751,
+    "deltaE": 0.63
+   },
+   {
+    "file": "07",
+    "bytes": 1382243,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9899,
+    "deltaE": 0.65
+   },
+   {
+    "file": "08",
+    "bytes": 1517947,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9812,
+    "deltaE": 0.76
+   },
+   {
+    "file": "09",
+    "bytes": 1272018,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9899,
+    "deltaE": 0.69
+   },
+   {
+    "file": "10",
+    "bytes": 2249567,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9749,
+    "deltaE": 0.55
+   },
+   {
+    "file": "11",
+    "bytes": 2423902,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9781,
+    "deltaE": 0.77
+   },
+   {
+    "file": "12",
+    "bytes": 3771503,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9773,
+    "deltaE": 0.86
+   },
+   {
+    "file": "13",
+    "bytes": 1813377,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9733,
+    "deltaE": 0.55
+   },
+   {
+    "file": "14",
+    "bytes": 1723975,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9901,
+    "deltaE": 0.82
+   },
+   {
+    "file": "15",
+    "bytes": 1746208,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9797,
+    "deltaE": 0.63
+   },
+   {
+    "file": "16",
+    "bytes": 2120077,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.974,
+    "deltaE": 0.57
+   },
+   {
+    "file": "17",
+    "bytes": 3137790,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9523,
+    "deltaE": 0.87
+   },
+   {
+    "file": "18",
+    "bytes": 4094276,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9724,
+    "deltaE": 0.91
+   },
+   {
+    "file": "19",
+    "bytes": 2240797,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9772,
+    "deltaE": 0.6
+   },
+   {
+    "file": "20",
+    "bytes": 1386838,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9896,
+    "deltaE": 0.86
+   },
+   {
+    "file": "21",
+    "bytes": 1308368,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9855,
+    "deltaE": 0.64
+   },
+   {
+    "file": "22",
+    "bytes": 1392059,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9873,
+    "deltaE": 0.74
+   },
+   {
+    "file": "23",
+    "bytes": 2046706,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9877,
+    "deltaE": 0.77
+   },
+   {
+    "file": "24",
+    "bytes": 1739749,
+    "icc": true,
+    "gps": false,
+    "date": false,
+    "orientation_ok": true,
+    "ssim": 0.9852,
+    "deltaE": 0.55
+   }
+  ]
+ }
+}

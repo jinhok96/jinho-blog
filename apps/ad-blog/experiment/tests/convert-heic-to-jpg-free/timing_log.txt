@@ -1,0 +1,15 @@
+magick 0 {'sec': 55.77, 'rss_mb': 243, 'files': 24}
+magick 1 {'sec': 54.94, 'rss_mb': 244, 'files': 24}
+magick 2 {'sec': 55.46, 'rss_mb': 244, 'files': 24}
+gimp 0 {'sec': 84.62, 'rss_mb': 448, 'files': 24}
+gimp 1 {'sec': 65.76, 'rss_mb': 448, 'files': 24}
+gimp 2 {'sec': 66.83, 'rss_mb': 448, 'files': 24}
+gimp_meta 0 {'sec': 68.21, 'rss_mb': 448, 'files': 24}
+gimp_meta 1 {'sec': 66.6, 'rss_mb': 447, 'files': 24}
+gimp_meta 2 {'sec': 66.56, 'rss_mb': 448, 'files': 24}
+xnconvert 0 {'sec': 33.36, 'rss_mb': 255, 'files': 24}
+xnconvert 1 {'sec': 33.69, 'rss_mb': 255, 'files': 24}
+xnconvert 2 {'sec': 33.47, 'rss_mb': 255, 'files': 24}
+xnconvert_icc 0 {'sec': 33.53, 'rss_mb': 254, 'files': 24}
+xnconvert_icc 1 {'sec': 33.31, 'rss_mb': 254, 'files': 24}
+xnconvert_icc 2 {'sec': 32.8, 'rss_mb': 255, 'files': 24}

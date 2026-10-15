@@ -89,13 +89,14 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 ## 운영 대시보드
 
 - 주소: **https://claude.ai/artifact/4nL6tkJXzL4YQd2FXis8Cb** (claude.ai 아티팩트, 비공개. 공유는 사용자가 Share 메뉴에서). **이 주소를 항상 유지**: 새 아티팩트를 만들지 않고, 페이지를 고칠 때도 `Artifact` publish에 `url`로 이 주소를 넘김 (다른 세션에서 `url` 없이 발행하면 새 주소가 생김). 삭제 금지
-- 페이지 원본: [dashboard/index.html](dashboard/index.html). 데이터는 아티팩트 DB(`db` 기능, 읽기 `view`·쓰기 `admin`)의 `stats` 컬렉션에 있고 페이지가 실시간으로 읽음 → 데이터만 바꿀 때는 페이지를 다시 발행하지 않음
+- 페이지 원본: [dashboard/index.html](dashboard/index.html). 데이터는 아티팩트 DB(`db` 기능, 읽기 `view`·쓰기 `admin`)의 `stats` 컬렉션에 있고 로그인한 사람에게는 페이지가 실시간으로 읽음. **비로그인 방문자**는 DB를 읽을 수 없어(플랫폼 규칙) 아티팩트 파일 `data.js`(마지막 세션 기준 스냅숏)를 보여 줌 → 데이터만 바꿀 때는 `index.html`을 다시 발행하지 않고 `data.js`만 다시 올림
 - `stats` 문서: `summary`(갱신 시각·28일 합계·사이트맵), `daily-YYYY-MM`(달마다 날짜별 지표, 확정/미확정 표시), `posts`(글별 메타·단어 수·태그·28일 지표·검색어 상위 10·날짜별 노출·색인 상세(크롤러·표준 URL) + `otherPages`: 홈·카테고리 등 글 외 페이지, 글별 표 합계를 사이트 전체 KPI와 맞추기 위함), `breakdown`(28일 기기·국가·검색 유형별 지표, 사이트 검색어 상위 20), `experiments`(traffic-playbook 검증 기록 + 발행 글 수·AdSense 기준), `knowhow`(traffic-playbook 노하우 상태), `sessions`(log.md 세션 제목)
 - 세션마다 갱신 절차 (log.md·traffic-playbook.md를 고친 뒤)
   1. `ArtifactData` `list` (`url` 위 주소, `collection: "stats"`)로 문서별 `version` 확인
   2. `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --out /tmp/dashboard --versions '{"summary": N, "posts": N, "breakdown": N, "experiments": N, "knowhow": N, "sessions": N, "daily-2026-10": N}'` (1에서 본 버전. 새 달 문서처럼 처음 만드는 문서는 빼면 새로 생성)
   3. `/tmp/dashboard/writes.json` 내용을 `ArtifactData` `batch`의 `writes`로 그대로 전달 (버전이 어긋나면 아무것도 쓰이지 않음 → 1부터 다시)
-  4. 실패하면 log.md '다음 할 일'에 기록 (대시보드 갱신은 글 발행을 막지 않음)
+  4. 비로그인 열람용 스냅숏: `/tmp/dashboard/data.js`를 스크래치패드로 복사한 뒤 `Artifact` publish (`file_path` 페이지 원본, `url` 위 주소, `files: {"data.js": "<복사한 경로>"}`, `capabilities` 생략). 파일 원본은 작업 디렉터리나 스크래치패드 안에 있어야 함
+  5. 실패하면 log.md '다음 할 일'에 기록 (대시보드 갱신은 글 발행을 막지 않음)
 - 페이지 구성을 바꿀 때: `dashboard/index.html` 수정 → `Artifact` publish (`file_path` 원본, `url` 위 주소, `capabilities`는 생략해 기존 접근 규칙 유지) → 같은 PR로 커밋
 - 폰트: Pretendard 1.3.9 가변 폰트(OFL-1.1)를 아티팩트 파일 `fonts/PretendardVariable.woff2`로 함께 발행 (저장소에는 넣지 않음). 페이지만 다시 발행할 때는 `files`를 생략하면 기존 폰트 파일이 유지됨. 폰트를 바꿀 때만 `files`로 다시 올림 (`https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/woff2/PretendardVariable.woff2`)
 

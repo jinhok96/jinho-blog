@@ -5,6 +5,7 @@ Search Console API·글 frontmatter·사실 확인표·traffic-playbook·log.md�
 
 실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}']
 출력: {out}/stats/{doc_id}.json + {out}/writes.json (ArtifactData batch의 writes 값 그대로)
+      + {out}/data.js (비로그인 열람용 스냅숏, 아티팩트 파일 `data.js`로 발행)
 
 `stats` 컬렉션 하나에 문서 몇 개만 둔다 (세션마다 버전을 옮겨 적는 수를 줄이려고). 기존 문서를 덮어쓰려면
 `ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
@@ -193,6 +194,9 @@ def main() -> None:
             w['if_version'] = int(versions[doc_id])
         writes.append(w)
     (out.parent / 'writes.json').write_text(json.dumps(writes, ensure_ascii=False), encoding='utf-8')
+    # 비로그인 열람용 스냅숏 (아티팩트 DB는 로그인한 사람만 읽을 수 있음). 아티팩트 파일 data.js로 발행
+    snapshot = json.dumps({'docs': docs}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
+    (out.parent / 'data.js').write_text(f'window.DASHBOARD_SNAPSHOT = {snapshot};\n', encoding='utf-8')
     new = [w['doc_id'] for w in writes if 'if_version' not in w]
     print(f'{len(writes)}개 문서 → {out.parent}/writes.json' + (f' (새 문서: {", ".join(new)})' if new else ''))
 

@@ -12,6 +12,7 @@
 | [remove-background-from-image-free-offline](remove-background-from-image-free-offline) | rembg 2.0.85 배경 제거 8개 모델 측정 (AIM-500 50장 IoU·속도·CLI 메모리), 예시 그림·그래프·웹 UI 스크린샷 스크립트, 사실 확인표 (재현 절차는 facts.md 하단) |
 | [free-offline-ai-tools](free-offline-ai-tools)                       | 오프라인 챗봇 7개 모델 측정 (llama-cpp-python 0.3.36: 속도·RAM·20문항·이메일 요약), 그래프, 사실 확인표 |
 | [image-to-text-offline-free](image-to-text-offline-free)             | 오프라인 OCR 4개 엔진(7개 설정) 측정: 직접 만든 50장(스크린샷·작은 글자·스캔·사진·영수증) 정확도·속도·메모리, 그래프·출력 비교 이미지, 사실 확인표 |
+| [convert-pdf-to-word-offline-free](convert-pdf-to-word-offline-free) | PDF→Word 오프라인 변환 3개 도구(LibreOffice 26.8.1·pdf2docx 0.5.13·Calibre 7.6) 측정: 직접 만든 PDF 11개 문단·표·텍스트 상자·속도, 편집 테스트, OCR 후 재변환, 사실 확인표 |
 
 ## 받아쓰기 벤치마크 재현
 
@@ -39,3 +40,11 @@
 2. `python gen.py src imgs` → 50장 + `truth.json`
 3. `./run_all.sh <작업 폴더>` (엔진을 하나씩 실행, 다른 작업이 없을 때) → `results/*.jsonl`·`*.time`
 4. `python score.py imgs results` → `summary.json`, `python charts.py <작업 폴더>` → 글 이미지 5장
+
+## PDF→Word 변환 측정 재현
+
+1. venv에 `pdf2docx python-docx reportlab pymupdf matplotlib lxml ocrmypdf` 설치, `apt-get install calibre tesseract-ocr ghostscript`, LibreOffice 최신판은 `download.documentfoundation.org`의 deb tar.gz를 `dpkg -x`로 풀어 사용 (시스템 LibreOffice 24.2는 09·10 PDF 생성과 렌더링용)
+2. Gutenberg 텍스트 3권(`gen.py` 상단 URL)을 받아 `python gen.py <텍스트 폴더> pdfs /usr/bin/soffice` → PDF 11개 + `truth.json`
+3. `bash bench.sh pdfs out <LibreOffice 26.8 soffice> <venv>/bin/pdf2docx` → `python score.py pdfs out` → `summary.json`
+4. 렌더링: 각 `out/{도구}/*.docx`를 시스템 LibreOffice 24.2로 `render/{도구}/`에 PDF 저장 (26.8 압축 해제본은 글꼴 대체가 달라 쓰지 않음). `python edit_test.py out edited` 후 같은 방식으로 렌더링, `pdftoppm -r 60`으로 `edited/{도구}-1.png`
+5. `python charts.py <작업 폴더> <출력 폴더>` → 글 이미지 5장. OCR: `ocr_test.py` 상단 명령 실행 후 `python ocr_test.py <작업 폴더>`

@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-15 · 세션 8 (정기 실행 7회차): PDF→Word 오프라인 변환
+
+세션 시각: 2026-10-15 09:10 UTC (한국 18:10). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-17 ~ 10-15, 세션 7 이후 바뀐 값만)**
+
+- 노출 33 → **39**, 클릭 1(홈), CTR 2.6%, 평균 순위 15.4
+  - `turn-off-ai-in-chrome` 21 → 25 (순위 5.4) / `transcribe-audio-offline-free` 6 → 8 (18.8) / `check-if-image-is-ai-generated` 5 (62.2)
+  - 새 검색어 `speech to text offline` (85위, `transcribe-audio-offline-free`로 추정)
+- sitemap 10-15 03:42 UTC 재다운로드. URL 검사: `image-to-text-offline-free` **`Submitted and indexed`** (10-15 07:14 UTC 크롤링, 발행 당일) → 9편 중 8편 색인. `remove-background-from-image-free-offline`은 `URL is unknown` → 다시 **`Discovered - currently not indexed`** (발행 후 4일째 미크롤링)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                               | 카테고리   | 유형                  | 직접 검증                                                                                                   |
+| ---------------------------------- | ---------- | --------------------- | ----------------------------------------------------------------------------------------------------------- |
+| `convert-pdf-to-word-offline-free` | `software` | 비교 (측정형, 검색형) | 직접 만든 PDF 11개(텍스트 10개 15쪽 + 스캔 1개)를 LibreOffice 26.8.1·pdf2docx 0.5.13·Calibre 7.6으로 변환, 정답과 비교 + 편집 테스트 + OCRmyPDF 후 재변환 |
+
+- 선정 근거: Trends(미국 3개월, 기준 `remove background` 35.3): `pdf to word` **23.4** · `passkey` 16.6 · `heic to jpg` 8.6 · `compress pdf` 4.9 · `upscale image` 1.3 · `photo enhancer` 1.4. 자동완성: "pdf to word offline" 16개(Google·Bing·YouTube: converter·free download·for pc), "convert pdf to word free" 29개(no sign up·ocr·editable). 상위 결과가 업로드형 온라인 변환기 → "업로드 없이"·직접 측정으로 차별화
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Google Trends 미국 급상승 10개: 연예·스포츠·복권·"fortnite servers"(게임 서버 장애) → IT 도구 주제 없음. 공식 피드 새 항목(Chrome 조기 안정판 업데이트, Gemini 4 Argon 안전성 글) → 새 글 대상 아님
+- 적용한 노하우: 검색형 제목 53자·설명 156자, 측정 규모 제목 표기, 이미지 5장(대표 그래프 1200×675 + 송장 표 비교 + 편집 테스트 + 2단 뉴스레터 비교 + 속도·메모리), 요약 표 → 사실 확인표에 기록. **첫 `software` 카테고리 측정 글**
+- 내부 링크: 새 글 → OCR 글·허브·받아쓰기·배경 제거 (4개). `image-to-text-offline-free`에서 새 글로 역링크 1개 (V 기록 대상 아님). 허브는 V2 판정 전이라 변경하지 않음
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 9개, og:image 생성, 본문 이미지 5장 모두 width·height 지정
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 기본 설정, 파일당 1회 실행 × 3회 중앙값)**
+
+| 도구             | 문단 유지 | 격자 표 재구성(/4) | 텍스트 상자 비율 | 2단 순서 유지 | 초/파일 | 최대 RAM |
+| ---------------- | --------- | ------------------ | ---------------- | ------------- | ------- | -------- |
+| pdf2docx 0.5.13  | **95.5%** | **4**              | 0%               | 10/10         | 0.68    | 125MB    |
+| LibreOffice 26.8 | 0%        | 0                  | 100%             | 2/10          | 0.71    | 202MB    |
+| Calibre 7.6      | 84%       | 0                  | 0%               | 2/10          | 0.94    | 100MB    |
+
+- 3개 모두 텍스트 PDF의 단어 100%·이미지 3/3 유지, 스캔 PDF는 0%. OCRmyPDF 17.13(3.1초) 후 재변환: LibreOffice 95.5%, pdf2docx·Calibre 0% (보이지 않는 OCR 텍스트 층을 무시)
+
+**알게 된 것**
+
+- LibreOffice는 `--convert-to docx`만 쓰면 PDF를 Draw로 열어 "no export filter" 오류 (24.2·26.8 모두). `--infilter=writer_pdf_import` 필요. 결과는 한 줄마다 텍스트 상자라 겉모양은 가장 비슷하지만 문장을 넣으면 상자 밖으로 잘림
+- 렌더링 함정: `dpkg -x`로 푼 LibreOffice 26.8은 시스템 글꼴 대체 설정을 못 써 Helvetica를 Noto Serif로 그려 글자가 잘려 보였음 → 결과 화면은 시스템 LibreOffice 24.2(Liberation Sans)로 다시 렌더링. 처음 화면만 보고 "LibreOffice가 글자를 자른다"고 쓸 뻔함 → 렌더링 환경의 글꼴(`pdffonts`)부터 확인
+- download.documentfoundation.org(LibreOffice deb 220MB)·archive.ubuntu.com(calibre·tesseract) 접속 가능. download.calibre-ebook.com·code.calibre-ebook.com은 curl TLS 오류(exit 60) → apt calibre 7.6.0 사용
+- 정답을 아는 문서를 직접 만들면 "단어 보존"은 세 도구 모두 100%라 변별력이 없음 → 편집 가능성(문단·표·텍스트 상자) 지표가 결론을 가름
+
+**다음 할 일**
+
+- 사용자: `remove-background-from-image-free-offline`이 발행 4일째 크롤링 전(`Discovered`↔`URL is unknown` 반복). Search Console URL 검사 → **색인 생성 요청** 1회 권장 (API로는 요청 불가)
+- Claude: 새 글 노출 검색어 확인 (`pdf to word offline`, `convert pdf to word free` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 발행 10편 / AdSense 신청 기준 20편
+- 대시보드: `stats` DB 7개 문서는 갱신됨(버전 6·3). 비로그인 열람용 `data.js` 스냅숏 재게시는 Claude Code 자동 모드 권한 분류기가 거부 → 비로그인 화면은 세션 7 값. 다음 세션에서 다시 시도, 계속 막히면 사용자가 허용 여부 결정
+
 ## 2026-10-15 · 세션 7 (정기 실행 6회차): 무료 오프라인 이미지→텍스트(OCR)
 
 세션 시각: 2026-10-14 21:10 UTC (한국 10-15 06:10). 열린 PR 없음.

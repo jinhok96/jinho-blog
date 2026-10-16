@@ -50,3 +50,10 @@
 3. `bash bench.sh pdfs out <LibreOffice 26.8 soffice> <venv>/bin/pdf2docx` → `python score.py pdfs out` → `summary.json`
 4. 렌더링: 각 `out/{도구}/*.docx`를 시스템 LibreOffice 24.2로 `render/{도구}/`에 PDF 저장 (26.8 압축 해제본은 글꼴 대체가 달라 쓰지 않음). `python edit_test.py out edited` 후 같은 방식으로 렌더링, `pdftoppm -r 60`으로 `edited/{도구}-1.png`
 5. `python charts.py <작업 폴더> <출력 폴더>` → 글 이미지 5장. OCR: `ocr_test.py` 상단 명령 실행 후 `python ocr_test.py <작업 폴더>`
+
+## 영상 압축(Discord·이메일) 측정 재현
+
+1. FFmpeg: BtbN `releases/download/latest/ffmpeg-n9.0-latest-linux64-gpl-9.0.tar.xz`를 `/tmp/cv/tools`에 풀기. HandBrake: `apt-get install flatpak` → `flatpak install HandBrake-1.11.2-x86_64.flatpak`(GitHub Releases 1.11.2, Flathub 런타임 자동 설치) → `hb.sh`를 `/tmp/cv/hb.sh`로 복사 (flatpak run은 D-Bus 없이 실패해 런타임 ld-linux로 직접 실행)
+2. download.blender.org에서 `bbb_sunflower_2160p_30fps_normal.mp4.zip`·`ToS-4k-1920.mov.zip`을 `/tmp/cv/dl`에 풀고 `record_screen.sh` → `make_sources.sh`로 60초 클립 3개
+3. `python3 -I run_tests.py [설정 …]` → `/tmp/cv/out/results.json` (다른 작업이 없을 때 실행해야 시간이 정확함)
+4. `results.json`을 이 폴더로 복사 후 venv(matplotlib·pillow)에서 `python -I charts.py /tmp/cv <출력 폴더>` → 글 이미지 5장. HandBrake 원본 차이 확인은 `hb_psnr_check.sh`

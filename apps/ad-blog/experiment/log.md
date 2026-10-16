@@ -2,6 +2,64 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 12 (정기 실행 11회차): Discord·이메일용 영상 압축
+
+세션 시각: 2026-10-16 09:14 UTC (한국 18:14). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 11 이후 바뀐 값만)**
+
+- 노출 60 → **65**, 클릭 3, CTR 4.6%, 평균 순위 21.1
+  - `turn-off-ai-in-chrome` 노출 38 (10.6) / `check-if-image-is-ai-generated` 9 (67.0) / `gemini-gems-to-skills` 2 (8.5) / `free-offline-text-to-speech` 2 (13.5)
+  - 새 검색어: `google ai gone` 1 (3위), `synthid checker` 2 (87.5), `synthid detector` 3 (134)
+- sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사 변화 없음 → 13편 중 8편 색인 (미색인: PDF 압축·HEIC→JPG·PDF→Word·영상→GIF `URL is unknown`, 배경 제거 `Discovered - currently not indexed`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                               | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| ---------------------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `compress-video-for-discord-email` | `software` | 비교 + How-to (측정형, 검색형) | 60초 1080p 클립 3개(BBB·ToS CC BY 3.0 + 직접 녹화 화면)를 HandBrake 1.11.2(설정 7개)·FFmpeg 9.0.2(x264·x265·SVT-AV1, 설정 7개)로 압축, 크기·VMAF(평균·하위 5%)·시간·메모리 측정 + HandBrake Social 프리셋 내부 값 확인 |
+
+- 선정 근거: 백로그 39. Trends(미국 3개월, 기준 `remove background` 35.0): `mp4 to mp3` 8.8 · `screen recorder` 3.5 · `compress video` **2.4** · `upscale image` 1.4. 자동완성 "compress video" 32개(for discord·free·without losing quality·to 10mb·for email·with handbrake). `mp4 to mp3`는 측정 차별점이 약해 계속 보류
+- 차별점: Discord 무료 한도가 2026-08 **10MB → 20MB**로 바뀜(Discord File Attachments FAQ, 10-15 갱신). HandBrake Social 프리셋은 10MB·25MB용이라 20MB에 맞지 않음을 측정으로 보임
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Google Trends 미국 급상승 10개: 스포츠·연예·주식·"artificial intelligence news" → 새 IT 도구 주제 없음. 공식 피드 새 항목은 세션 11과 같음
+- 적용한 노하우: 검색형 제목 57자·설명 157자, 측정 규모 제목 표기, 이미지 5장(대표 그래프 1200×675 + 인코더별 VMAF + 시간 + 화면 글자·얼굴 확대 비교), 요약 표 + 길이별 비트레이트 표 + 전체 결과 표 → 사실 확인표에 기록. 앱 화면 스크린샷 없음 (아래)
+- 내부 링크: 새 글 → 영상→GIF·PDF 압축·HEIC→JPG·허브 (4개). `video-to-gif-high-quality-free` 마지막 문단에서 새 글로 역링크 1개 (V 기록 대상 아님)
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, og:image 생성, 본문 이미지 5장 모두 width·height 지정
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 60초 클립, 크기 MB · 평균 VMAF, 1회 실행)**
+
+| 설정                               | 애니메이션  | 실사        | 화면 녹화   |
+| ---------------------------------- | ----------- | ----------- | ----------- |
+| HandBrake Fast 1080p30 (기본)      | 20.5 · 91.6 | 32.9 · 95.4 | 4.8 · 99.6  |
+| HandBrake Social 10 MB 1 Minute    | 9.7 · 83.7  | 9.7 · 84.0  | 8.3 · 82.2  |
+| HandBrake Social 25 MB 1 Minute    | 23.9 · 90.1 | 23.8 · 93.9 | 20.2 · 96.3 |
+| HandBrake 평균 비트레이트 19MB     | 19.0 · 91.2 | 19.0 · 90.4 | 17.0 · 99.6 |
+| FFmpeg x264 2-pass 19MB            | 19.0 · 95.8 | 19.0 · 93.2 | 14.6 · 99.6 |
+| FFmpeg x265 2-pass 19MB            | 18.9 · 96.1 | 18.9 · 94.8 | 18.9 · 99.6 |
+| FFmpeg SVT-AV1 19MB (1-pass VBR)   | 17.4 · 96.3 | 15.5 · 94.8 | 12.7 · 99.6 |
+| FFmpeg x264 9.5MB 1280 폭          | 9.5 · 90.0  | 9.5 · 84.9  | 9.0 · 96.2  |
+
+- 3개 클립 합계 시간: HandBrake 19MB 3.6분, FFmpeg x264 2-pass 3.3분, x265 6.8분, AV1 4.2분(최대 RAM 1,003MB)
+
+**알게 된 것**
+
+- support.discord.com 일반 페이지는 403이지만 Zendesk API(`/api/v2/help_center/en-us/articles/{id}.json`, 검색 `/api/v2/help_center/articles/search.json?query=…`)는 열림 → 본문·갱신일을 1차 출처로 확인 가능. 뉴스 보도(Nitro 500MB)와 공식 문서(Nitro 최대 1GB)가 달라 공식 문서를 따름
+- HandBrake 최신판(1.11.2) Linux는 GUI flatpak만 배포. `apt install flatpak` + Flathub 런타임 설치는 되지만 `flatpak run`은 D-Bus 없이 실패 → 런타임의 `ld-linux-x86-64.so.2`로 `HandBrakeCLI`를 직접 실행하면 동작(`hb.sh`). GUI(`ghb`)는 같은 방식으로 Xvfb에 창이 뜨지 않아 스크린샷을 못 찍음 → GUI 라벨은 바이너리 문자열로 확인
+- HandBrake 출력은 우리 애니메이션·실사 클립에서 RF 5(거의 무손실)에서도 원본 대비 PSNR 40.8dB(FFmpeg CRF 5는 60.9dB), 화면 녹화는 50.8dB. 색 태그·crop·decomb·인코더 preset·profile 모두 원인 아님. 원인을 못 찾아 글에 "우리 클립에 한정될 수 있음"으로 명시. 측정 도구 간 비교에서 한쪽만 이상하면 거의 무손실 설정으로 파이프라인 자체 손실부터 확인
+- 측정 실수 2건: (1) 2.4:1 영상을 `scale=-2:720`으로 줄여 1728×720이 됨 → 16:9 상자 기준(`scale=1280:-2`)으로 바꿔 재측정. (2) PSNR 기준 파일을 다르게 잘라 FFmpeg CRF 5를 51.6dB로 잘못 계산 → 같은 기준 파일로 다시 재서 60.9dB. 비교 기준 파일은 스크립트로 고정
+- 시간 측정 중 다른 확인 작업을 함께 돌려 일부 HandBrake 시간이 늘어남 → 글에 "30% 미만 차이는 노이즈"로 밝힘. 다음 측정은 시간 측정 중 다른 작업을 하지 않음
+- trac.ffmpeg.org는 Anubis 봇 차단(JS 필요) → FFmpeg 기본값은 출력 파일의 x264 설정 문자열(`crf=23.0`)로 직접 확인
+
+**다음 할 일**
+
+- 사용자: `remove-background-from-image-free-offline`이 발행 6일째 크롤링 전(`Discovered - currently not indexed`). Search Console URL 검사 → **색인 생성 요청** 1회 권장 (API로는 요청 불가)
+- Claude: 새 글 노출 검색어 확인 (`compress video for discord`, `compress video to 10mb` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 5편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF·영상 압축). V2 판정(11-12) 후 기존 허브와 역할 정리해 결정
+- Claude: 발행 14편 / AdSense 신청 기준 20편
+- 대시보드: `stats` DB 7개 문서 갱신(버전 10·7). 정기 세션 규칙에 따라 `data.js` 재게시는 건너뜀
+
 ## 2026-10-16 · 세션 11 (정기 실행 10회차): 영상→GIF 고화질 변환
 
 세션 시각: 2026-10-16 03:21 UTC (한국 12:21). 열린 PR 없음.

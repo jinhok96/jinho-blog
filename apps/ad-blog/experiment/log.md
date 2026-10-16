@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 10 (정기 실행 9회차): PDF 오프라인 압축
+
+세션 시각: 2026-10-16 01:25 UTC (한국 10:25). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 9 이후 바뀐 값만)**
+
+- 노출 58 → **60**, 클릭 3, CTR 5.0%, 평균 순위 20.6. `turn-off-ai-in-chrome` 노출 37 (순위 10.7), 홈 노출 2, `/about` 첫 노출 1 (3위)
+- sitemap 마지막 다운로드 10-15 03:42 UTC (변화 없음). URL 검사: `convert-heic-to-jpg-free`(10-16 발행)·`convert-pdf-to-word-offline-free` `URL is unknown`, `remove-background-from-image-free-offline` `Discovered - currently not indexed` 유지 → 11편 중 8편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                        | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| --------------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `compress-pdf-offline-free` | `software` | 비교 + How-to (측정형, 검색형) | 직접 만든 PDF 4개(46쪽, 48.1MB: 사진 안내서·스캔·스크린샷 슬라이드·텍스트 보고서)를 Ghostscript 10.08.0(소스 빌드)·OCRmyPDF 17.13.0·qpdf 12.4.2의 설정 10개로 압축, 크기·쪽별 SSIM·OCR 판독률·링크·텍스트 층·시간·메모리 측정 |
+
+- 선정 근거: Trends(미국 3개월, 기준 `remove background` 34.9): `mp4 to mp3` 8.7 · `compress pdf` **4.8** · `compress video` 2.4 · `reduce pdf size` 1.9. 자동완성: "compress pdf" 31개(free·on mac·without losing quality·to 1mb), "compress pdf offline" 12개(windows 10/11·free download·mac). PDF→Word 글과 같은 PDF 주제군, 업로드 없는 측정으로 차별화. `mp4 to mp3`는 도구 간 차이(같은 인코더)가 작아 측정 글 차별점이 약해 보류
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Google Trends 미국 급상승 10개: 스포츠·연예·정치 → IT 주제 없음. 공식 피드 새 항목(Edge 업데이트 방식, Gmail AI Inbox 유료 Workspace, Circle to Search 문자 사기 확인) → 직접 검증 불가·유료 대상이라 새 글로 쓰지 않음
+- 적용한 노하우: 검색형 제목 48자·설명 152자, 측정 규모 제목 표기, 이미지 6장(대표 그래프 1200×675 + 판독률·속도 그래프 + 사진·스캔·슬라이드 확대 비교 3장), 요약 표 + 전체 결과 표 → 사실 확인표에 기록. 앱 화면 스크린샷은 없음(세 도구 모두 명령줄)
+- 내부 링크: 새 글 → OCR·PDF→Word·HEIC→JPG·허브 (4개). `convert-pdf-to-word-offline-free`에서 새 글로 역링크 1개 (V 기록 대상 아님). 허브는 V2 판정 전이라 변경하지 않음
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 9개, og:image 생성, 본문 이미지 6장 모두 width·height 지정
+
+**측정값 (Xeon 2.1GHz 4코어, RAM 16GB, GPU 없음, 3회 중앙값)**
+
+| 설정                 | 사진 39.6MB | 스캔 7.1MB | 슬라이드 1.4MB | 텍스트 86KB | 합계      | 최저 쪽 SSIM | 스캔/슬라이드 OCR |
+| -------------------- | ----------- | ---------- | -------------- | ----------- | --------- | ------------ | ----------------- |
+| qpdf (무손실)        | 100%        | 100%       | 88%            | 87%         | 99.6%     | 1.000        | 100% / 100%       |
+| OCRmyPDF -O3         | 14%         | 33%        | 29%            | 89%         | **17%**   | 0.988        | 100% / 100%       |
+| Ghostscript /ebook   | 4%          | 19%        | 115%           | 133%        | 10%       | 0.798        | 100% / 100%       |
+| Ghostscript /screen  | 1%          | 7%         | 76%            | 133%        | 4.5%      | 0.853        | **79% / 76%**     |
+
+- 사진 안내서 시간·메모리: qpdf 0.08초·27MB, OCRmyPDF -O3 2.0초·817MB, GS /ebook 4.0초·86MB. 모든 설정에서 링크 28개·텍스트 층 유지
+
+**알게 된 것**
+
+- Ghostscript는 파일 전체를 다시 쓰므로 큰 이미지가 없는 PDF(텍스트·PNG 스크린샷)는 모든 프리셋에서 오히려 커짐(+15~40%). "압축 도구 = 항상 작아짐"이 아니라는 점이 측정으로 드러난 차별점
+- 테스트 파일 생성 함정: ReportLab 기본값(`useA85=1`)이 이미지를 ASCII85로 한 번 더 감싸 OCRmyPDF가 최적화를 건너뜀("multiple compression filters") → 실제 앱 PDF와 다른 입력이 결론을 바꿀 뻔함. 생성한 입력 파일의 필터·인코딩을 `pdfimages -list`로 먼저 확인
+- 최신판 확보: Ghostscript는 Linux 바이너리를 더 배포하지 않고(GitHub `ghostpdl-downloads` 바이너리 404), Ubuntu 최신 deb는 glibc 2.43 필요 → 공식 소스 tar.gz(`releases/download/gs10080/ghostscript-10.08.0.tar.gz`)를 4코어에서 약 10분에 빌드. qpdf는 공식 `qpdf-12.4.2-bin-linux-x86_64.zip` 바로 사용 가능. 태그 이름을 알면 github.com Releases 다운로드 가능
+- 컨테이너 CPU가 세션마다 다를 수 있음(이번 2.1GHz, 이전 2.8GHz) → 측정 글마다 `lscpu`로 다시 확인해 적음
+- OCRmyPDF -O2/-O3는 pngquant로 PNG를 16색으로 줄여 스크린샷 PDF를 크게 줄임. Windows 설치 가이드에서 pngquant는 선택 사항이라 결과가 환경마다 다를 수 있음
+
+**다음 할 일**
+
+- 사용자: `remove-background-from-image-free-offline`이 발행 6일째 크롤링 전(`Discovered - currently not indexed`). Search Console URL 검사 → **색인 생성 요청** 1회 권장 (API로는 요청 불가)
+- Claude: 새 글 노출 검색어 확인 (`compress pdf offline`, `compress pdf without losing quality` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 `free-offline-ai-tools`는 V2 판정(11-12) 후 PDF·이미지 변환 측정 글(PDF→Word·HEIC→JPG·PDF 압축) 연결 검토 (현재 `software` 측정 글 3편 → 별도 허브 `Best Free Offline File Converters` 후보)
+- Claude: 발행 12편 / AdSense 신청 기준 20편
+- 대시보드: 정기 세션 규칙에 따라 `data.js` 재게시는 건너뜀
+
 ## 2026-10-16 · 세션 9 (정기 실행 8회차): HEIC→JPG 오프라인 변환
 
 세션 시각: 2026-10-15 21:11 UTC (한국 10-16 06:11). 열린 PR 없음.

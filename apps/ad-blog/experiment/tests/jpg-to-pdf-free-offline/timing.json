@@ -1,0 +1,212 @@
+[
+ {
+  "config": "img2pdf",
+  "rep": 0,
+  "sec": 0.3,
+  "max_rss_mb": 108,
+  "rc": 0,
+  "bytes": 61773174,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "img2pdf",
+  "rep": 1,
+  "sec": 0.28,
+  "max_rss_mb": 108,
+  "rc": 0,
+  "bytes": 61773174,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "img2pdf",
+  "rep": 2,
+  "sec": 0.27,
+  "max_rss_mb": 108,
+  "rc": 0,
+  "bytes": 61773174,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "img2pdf-letter",
+  "rep": 0,
+  "sec": 0.27,
+  "max_rss_mb": 108,
+  "rc": 0,
+  "bytes": 61773246,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "img2pdf-letter",
+  "rep": 1,
+  "sec": 0.31,
+  "max_rss_mb": 108,
+  "rc": 0,
+  "bytes": 61773246,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "img2pdf-letter",
+  "rep": 2,
+  "sec": 0.24,
+  "max_rss_mb": 108,
+  "rc": 0,
+  "bytes": 61773246,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "imagemagick",
+  "rep": 0,
+  "sec": 38.51,
+  "max_rss_mb": 3403,
+  "rc": 0,
+  "bytes": 61799205,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "imagemagick",
+  "rep": 1,
+  "sec": 34.04,
+  "max_rss_mb": 3402,
+  "rc": 0,
+  "bytes": 61799205,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "imagemagick",
+  "rep": 2,
+  "sec": 34.06,
+  "max_rss_mb": 3402,
+  "rc": 0,
+  "bytes": 61799205,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "imagemagick-orient",
+  "rep": 0,
+  "sec": 37.67,
+  "max_rss_mb": 3506,
+  "rc": 0,
+  "bytes": 61790761,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "imagemagick-orient",
+  "rep": 1,
+  "sec": 37.6,
+  "max_rss_mb": 3506,
+  "rc": 0,
+  "bytes": 61790761,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "imagemagick-orient",
+  "rep": 2,
+  "sec": 38.29,
+  "max_rss_mb": 3506,
+  "rc": 0,
+  "bytes": 61790761,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "pillow",
+  "rep": 0,
+  "sec": 3.14,
+  "max_rss_mb": 1138,
+  "rc": 0,
+  "bytes": 33115862,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "pillow",
+  "rep": 1,
+  "sec": 3.07,
+  "max_rss_mb": 1138,
+  "rc": 0,
+  "bytes": 33115862,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "pillow",
+  "rep": 2,
+  "sec": 3.17,
+  "max_rss_mb": 1138,
+  "rc": 0,
+  "bytes": 33115862,
+  "files": 1,
+  "err": ""
+ },
+ {
+  "config": "libreoffice",
+  "rep": 0,
+  "sec": 34.28,
+  "max_rss_mb": 220,
+  "rc": 0,
+  "bytes": 20341041,
+  "files": 24,
+  "err": ""
+ },
+ {
+  "config": "libreoffice",
+  "rep": 1,
+  "sec": 33.57,
+  "max_rss_mb": 219,
+  "rc": 0,
+  "bytes": 20341041,
+  "files": 24,
+  "err": ""
+ },
+ {
+  "config": "libreoffice",
+  "rep": 2,
+  "sec": 32.98,
+  "max_rss_mb": 220,
+  "rc": 0,
+  "bytes": 20341041,
+  "files": 24,
+  "err": ""
+ },
+ {
+  "config": "chromium",
+  "rep": 0,
+  "sec": 31.61,
+  "max_rss_mb": 381,
+  "rc": 0,
+  "bytes": 146345291,
+  "files": 24,
+  "err": ""
+ },
+ {
+  "config": "chromium",
+  "rep": 1,
+  "sec": 30.56,
+  "max_rss_mb": 381,
+  "rc": 0,
+  "bytes": 146345252,
+  "files": 24,
+  "err": ""
+ },
+ {
+  "config": "chromium",
+  "rep": 2,
+  "sec": 31.63,
+  "max_rss_mb": 381,
+  "rc": 0,
+  "bytes": 146345291,
+  "files": 24,
+  "err": ""
+ }
+]

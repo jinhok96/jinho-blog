@@ -1,0 +1,213 @@
+{
+ "input_bytes": 61760327,
+ "configs": {
+  "img2pdf": {
+   "bytes": 61773174,
+   "ratio_vs_input": 1.0,
+   "sec_median": 0.28,
+   "max_rss_mb": 108,
+   "identical": 24,
+   "ssim2_median": 100.0,
+   "ssim2_min": 100.0,
+   "ssim2_min_photo": 1,
+   "orientation_ok": 24,
+   "portrait_ok": 4,
+   "emb_px": [
+    [
+     "4032x3024",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "4032.0x3024.0",
+     24
+    ]
+   ],
+   "n": 24
+  },
+  "img2pdf-letter": {
+   "bytes": 61773246,
+   "ratio_vs_input": 1.0,
+   "sec_median": 0.27,
+   "max_rss_mb": 108,
+   "identical": 24,
+   "ssim2_median": 100.0,
+   "ssim2_min": 100.0,
+   "ssim2_min_photo": 1,
+   "orientation_ok": 24,
+   "portrait_ok": 4,
+   "emb_px": [
+    [
+     "4032x3024",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "612.0x792.0",
+     24
+    ]
+   ],
+   "n": 24
+  },
+  "imagemagick": {
+   "bytes": 61799205,
+   "ratio_vs_input": 1.001,
+   "sec_median": 34.06,
+   "max_rss_mb": 3403,
+   "identical": 0,
+   "ssim2_median": 92.3,
+   "ssim2_min": 89.28,
+   "ssim2_min_photo": 20,
+   "orientation_ok": 20,
+   "portrait_ok": 0,
+   "emb_px": [
+    [
+     "4032x3024",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "4032.0x3024.0",
+     24
+    ]
+   ],
+   "n": 24
+  },
+  "imagemagick-orient": {
+   "bytes": 61790761,
+   "ratio_vs_input": 1.0,
+   "sec_median": 37.67,
+   "max_rss_mb": 3506,
+   "identical": 0,
+   "ssim2_median": 92.3,
+   "ssim2_min": 89.28,
+   "ssim2_min_photo": 20,
+   "orientation_ok": 24,
+   "portrait_ok": 4,
+   "emb_px": [
+    [
+     "4032x3024",
+     20
+    ],
+    [
+     "3024x4032",
+     4
+    ]
+   ],
+   "page_pt": [
+    [
+     "4032.0x3024.0",
+     20
+    ],
+    [
+     "3024.0x4032.0",
+     4
+    ]
+   ],
+   "n": 24
+  },
+  "pillow": {
+   "bytes": 33115862,
+   "ratio_vs_input": 0.536,
+   "sec_median": 3.14,
+   "max_rss_mb": 1138,
+   "identical": 0,
+   "ssim2_median": 78.9,
+   "ssim2_min": 73.61,
+   "ssim2_min_photo": 17,
+   "orientation_ok": 20,
+   "portrait_ok": 0,
+   "emb_px": [
+    [
+     "4032x3024",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "4032.0x3024.0",
+     24
+    ]
+   ],
+   "n": 24
+  },
+  "libreoffice": {
+   "bytes": 20341041,
+   "ratio_vs_input": 0.329,
+   "sec_median": 33.57,
+   "max_rss_mb": 220,
+   "identical": 0,
+   "ssim2_median": 59.5,
+   "ssim2_min": 26.7,
+   "ssim2_min_photo": 18,
+   "orientation_ok": 20,
+   "portrait_ok": 0,
+   "emb_px": [
+    [
+     "2244x1683",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "595.3x841.9",
+     24
+    ]
+   ],
+   "n": 24
+  },
+  "lo-lossless": {
+   "bytes": 61920333,
+   "ratio_vs_input": 1.003,
+   "sec_median": null,
+   "max_rss_mb": null,
+   "identical": 24,
+   "ssim2_median": 100.0,
+   "ssim2_min": 100.0,
+   "ssim2_min_photo": 1,
+   "orientation_ok": 20,
+   "portrait_ok": 0,
+   "emb_px": [
+    [
+     "4032x3024",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "595.3x841.9",
+     24
+    ]
+   ],
+   "n": 24
+  },
+  "chromium": {
+   "bytes": 146345291,
+   "ratio_vs_input": 2.37,
+   "sec_median": 31.61,
+   "max_rss_mb": 381,
+   "identical": 24,
+   "ssim2_median": 100.0,
+   "ssim2_min": 100.0,
+   "ssim2_min_photo": 1,
+   "orientation_ok": 24,
+   "portrait_ok": 4,
+   "emb_px": [
+    [
+     "4032x3024",
+     24
+    ]
+   ],
+   "page_pt": [
+    [
+     "612.0x792.0",
+     24
+    ]
+   ],
+   "n": 24
+  }
+ }
+}

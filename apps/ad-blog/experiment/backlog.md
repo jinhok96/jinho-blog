@@ -50,6 +50,7 @@
 | 40   | 이미지 목표 용량 압축 (100KB·200KB·1MB, 크기 조정 + JPEG 품질 측정)                        | compress image to 100kb                     | -    | 예 (1,900건)              | 상시                  | 발행 `compress-image-to-100kb` (2026-10-16). Trends 429로 미비교, 자동완성 "compress image" 30개·"reduce image size" 30개 |
 | 41   | AI 이미지 업스케일 무료 오프라인 (Real-ESRGAN 등 CPU 측정)                                  | upscale image ai free                       | -    | 예 (CPU, 느림)            | 상시                  | 후보 (2026-10-16, 자동완성 32개 3곳: ai·free. Trends 1.4 기준 `remove background` 35.0) |
 | 42   | WebP → JPG 변환 (Windows·Mac 내장 + 오프라인 도구)                                        | webp to jpg                                 | -    | 예                        | 상시                  | 후보 (2026-10-16, 자동완성 22개: converter·free·bulk·mac. Trends 1.8) |
+| 43   | JPG → PDF 무료 오프라인 변환 (img2pdf·ImageMagick·Pillow·LibreOffice·Chromium 측정)       | jpg to pdf                                  | -    | 예 (24장, 세로 4장)       | 상시                  | 발행 `jpg-to-pdf-free-offline` (2026-10-16). Trends `jpg to pdf` 13.1 · `image to pdf` 8.1 · `png to jpg` 3.9 (기준 `remove background` 35.4) |
 
 ## 반복 일정
 

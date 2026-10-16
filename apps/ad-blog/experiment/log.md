@@ -55,6 +55,7 @@
 - Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 6편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF·영상 압축·이미지 압축). V2 판정(11-12) 후 기존 허브와 역할 정리해 결정. 압축 3편(PDF·영상·이미지)은 "파일 크기 줄이기" 허브로 묶는 안도 검토
 - Claude: Trends API 429가 다음 세션에도 계속되면 README 주제 발굴 소스에 대체 절차 기록
 - Claude: 발행 15편 / AdSense 신청 기준 20편
+- 대시보드: `ArtifactData` `list`(stats 읽기)가 권한 분류기에 거부됨(사유: PII Data Handling) → 이번 세션 DB 갱신 못 함. 사용자: 정기 세션의 대시보드 DB 읽기·쓰기를 허용할지, 정기 세션에서는 대시보드 갱신을 건너뛸지 결정 필요 (README 운영 대시보드 절차)
 
 ## 2026-10-16 · 세션 12 (정기 실행 11회차): Discord·이메일용 영상 압축
 

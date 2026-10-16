@@ -1,0 +1,251 @@
+{
+ "expected": {
+  "pages": 21,
+  "toc": [
+   [
+    1,
+    "Test report A",
+    1
+   ],
+   [
+    2,
+    "Summary (A)",
+    1
+   ],
+   [
+    2,
+    "Measurements (A)",
+    2
+   ],
+   [
+    2,
+    "Appendix (A)",
+    3
+   ],
+   [
+    1,
+    "Test report B",
+    19
+   ],
+   [
+    2,
+    "Summary (B)",
+    19
+   ],
+   [
+    2,
+    "Measurements (B)",
+    20
+   ],
+   [
+    2,
+    "Appendix (B)",
+    21
+   ]
+  ],
+  "input_bytes": 5623998
+ },
+ "ghostscript": {
+  "bytes": 5235762,
+  "pages": 21,
+  "toc_count": 8,
+  "toc_correct": 8,
+  "internal_links": 6,
+  "internal_links_ok": 6,
+  "external_links": 2,
+  "widgets": 0,
+  "name_fields": {},
+  "acroform": false,
+  "name_fields_shared": false,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 17
+ },
+ "pdftk": {
+  "bytes": 5285255,
+  "pages": 21,
+  "toc_count": 8,
+  "toc_correct": 8,
+  "internal_links": 6,
+  "internal_links_ok": 6,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "1.topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": true,
+  "acroform_terminal_fields": 46,
+  "need_appearances": false,
+  "name_fields_shared": false,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ },
+ "pdfunite": {
+  "bytes": 5328182,
+  "pages": 21,
+  "toc_count": 0,
+  "toc_correct": 0,
+  "internal_links": 6,
+  "internal_links_ok": 0,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": false,
+  "name_fields_shared": true,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ },
+ "pymupdf": {
+  "bytes": 5278000,
+  "pages": 21,
+  "toc_count": 0,
+  "toc_correct": 0,
+  "internal_links": 0,
+  "internal_links_ok": 0,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "topmostSubform[0].Page1[0] [215].f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": true,
+  "acroform_terminal_fields": 70,
+  "need_appearances": false,
+  "name_fields_shared": false,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ },
+ "pypdf-topname": {
+  "bytes": 5289217,
+  "pages": 21,
+  "toc_count": 8,
+  "toc_correct": 8,
+  "internal_links": 6,
+  "internal_links_ok": 6,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "file2.topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "file3.topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": true,
+  "acroform_terminal_fields": 46,
+  "need_appearances": false,
+  "name_fields_shared": false,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ },
+ "pypdf": {
+  "bytes": 5289041,
+  "pages": 21,
+  "toc_count": 8,
+  "toc_correct": 8,
+  "internal_links": 6,
+  "internal_links_ok": 6,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": true,
+  "acroform_terminal_fields": 46,
+  "need_appearances": false,
+  "name_fields_shared": true,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ },
+ "qpdf-primary": {
+  "bytes": 5290339,
+  "pages": 21,
+  "toc_count": 4,
+  "toc_correct": 4,
+  "internal_links": 6,
+  "internal_links_ok": 3,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "topmostSubform[0]+1.Page1[0].f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": true,
+  "acroform_terminal_fields": 46,
+  "need_appearances": false,
+  "name_fields_shared": false,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ },
+ "qpdf": {
+  "bytes": 5284563,
+  "pages": 21,
+  "toc_count": 0,
+  "toc_correct": 0,
+  "internal_links": 6,
+  "internal_links_ok": 0,
+  "external_links": 2,
+  "widgets": 46,
+  "name_fields": {
+   "4": [
+    "topmostSubform[0].Page1[0].f1_01[0]",
+    "TEST VENDOR ONE LLC"
+   ],
+   "10": [
+    "topmostSubform[0]+1.Page1[0].f1_01[0]",
+    "TEST VENDOR TWO LLC"
+   ]
+  },
+  "acroform": true,
+  "acroform_terminal_fields": 46,
+  "need_appearances": false,
+  "name_fields_shared": false,
+  "photos_stream_identical": 3,
+  "photos_pixels_identical": 3,
+  "text_pages_identical": 21
+ }
+}

@@ -2,6 +2,64 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 16 (정기 실행 15회차): PDF 합치기
+
+세션 시각: 2026-10-16 21:10 UTC 무렵 (한국 10-17 06:10). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 15 이후 바뀐 값만)**
+
+- 노출 74 → **85**, 클릭 4, CTR 5.4% → 4.7%, 평균 순위 20.6
+  - `turn-off-ai-in-chrome` 노출 46 (10.0) / `transcribe-audio-offline-free` 14 (28.6) / `check-if-image-is-ai-generated` 11 (72.2) / `gemini-gems-to-skills` 6 (7.2) / `free-offline-text-to-speech` 3 (10.7) / `image-to-text-offline-free` **첫 노출** 1 (3.0)
+  - 새 검색어: `chrome disable ai` 1 (7), `toolproof` 1 (5), `synthid detector` 4 (125.5)
+- sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사 변화 없음 → 17편 중 8편 색인 (미색인 9편 모두 `URL is unknown`, `pdf-to-jpg-high-quality` 포함)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                           | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| ------------------------------ | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `merge-pdf-files-free-offline` | `software` | 비교 + How-to (측정형, 검색형) | 5개 PDF 21쪽(직접 만든 책갈피·목차 링크 보고서 2개 + 이름을 다르게 채운 IRS W-9 2부 + CC0 사진 3쪽)을 qpdf 12.4.2·pdfunite(Poppler 26.10.0)·Ghostscript 10.08.0·pdftk-java 3.3.3·pypdf 6.21.0·PyMuPDF 1.28.2 기본 명령으로 합침 + 변형 2개(qpdf 첫 파일 기본 입력, pypdf `add_form_topname`). 책갈피·목차 링크·양식 분리·사진 픽셀·쪽별 텍스트·시간·메모리 측정, **Chrome 141 PDF 뷰어에서 링크 클릭·책갈피 패널·양식 입력을 직접 조작** |
+
+- 선정 근거: Trends(미국 3개월, 429 3회 재시도 후 응답, 기준 `remove background` 35.1): `merge pdf` **6.3** · `png to jpg` 3.9 · `webp to jpg` 1.9 · `upscale image` 1.3. 자동완성 "merge pdf" 28개(offline·free download·mac·iphone), "combine pdf" 24개(preview on mac·microsoft edge). 백로그 45번이 "측정 차별점 약함"이었으나 책갈피·링크·양식 보존으로 각도를 잡음. 파일 변환 시리즈 9번째
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Trends 미국 급상승 10개: 연예·스포츠·날씨·"tesla autopilot"(뉴스) → IT 도구 주제 없음
+- 차별점: 기본 명령으로 책갈피 8개·목차 링크 6개·양식 분리·사진 4항목을 모두 지킨 도구는 **pdftk뿐**. qpdf·pdfunite는 링크를 남기지만 이름 목적지(`/Dests`)를 빼서 클릭해도 그대로, PyMuPDF는 문서 안 링크를 삭제. **같은 W-9 2부를 합치면 pypdf·pdfunite 결과에서 4쪽에 입력한 값이 10쪽에도 들어감**(Chrome에서 직접 확인). Ghostscript는 양식 평면화
+- 적용한 노하우: 검색형 제목 48자·설명 155자, 측정 규모 제목 표기, 이미지 6장(대표 점검표 1200×675 + Chrome 양식 입력·책갈피·링크 클릭·평면화 캡처 4장 + 속도·메모리 그래프), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → JPG→PDF·PDF→Word·PDF 압축·OCR·PDF→JPG (5개). `compress-pdf-offline-free` 마지막 문단에서 새 글로 역링크 1개 (V 기록 대상 아님)
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, og:image 생성, 본문 이미지 6장 모두 width·height 지정
+
+**측정값 (Xeon 2.1GHz 4코어, RAM 16GB, 입력 5.6MB, 시간은 3회 중앙값, 프로그램 시작 포함)**
+
+| 도구 (기본 명령)          | 책갈피 | 목차 링크 | W-9 2부 양식                 | 사진 픽셀 | 시간 · 최대 RAM |
+| ------------------------- | ------ | --------- | ---------------------------- | --------- | --------------- |
+| pdftk-java 3.3.3          | 8/8    | 6/6       | 분리 (`1.` 접두사)           | 3/3       | 0.61초 · 87MB   |
+| pypdf 6.21.0              | 8/8    | 6/6       | **연결됨** (같은 이름)       | 3/3       | 0.24초 · 42MB   |
+| Ghostscript 10.08.0       | 8/8    | 6/6       | 평면화 (입력 불가)           | 3/3       | 0.50초 · 30MB   |
+| qpdf 12.4.2               | 0/8    | 0/6       | 분리 (`+1`)                  | 3/3       | 0.06초 · 22MB   |
+| pdfunite (Poppler 26.10)  | 0/8    | 0/6       | **연결됨**, AcroForm 삭제    | 3/3       | 0.16초 · 11MB   |
+| PyMuPDF 1.28.2            | 0/8    | 0/6 (삭제) | 분리 (`[215]`)              | 3/3       | 0.16초 · 58MB   |
+| qpdf 첫 파일 기본 입력    | 4/8    | 3/6       | 분리                         | 3/3       | 0.05초          |
+| pypdf + `add_form_topname`| 8/8    | 6/6       | 분리                         | 3/3       | 0.23초          |
+
+- 외부 링크 2개는 모두 유지. 쪽별 텍스트는 Ghostscript(17/21, 평면화된 W-9 쪽) 외 모두 21/21 동일
+- Poppler 24.02·Ghostscript 10.02.1(Ubuntu 패키지)도 같은 항목 결과 (10.02.1만 JPEG 끝에 2바이트 덧붙임, 픽셀 동일)
+
+**알게 된 것**
+
+- "무손실이라 차이 없음"으로 보이던 작업도 **문서 수준 구조(책갈피·이름 목적지·AcroForm)** 를 재면 도구 차이가 큼. 백로그에서 "측정 차별점 약함"으로 보류한 주제는 결과물의 구조·동작을 측정 항목으로 바꿔 다시 검토할 것 (예: MP4→MP3의 메타데이터·챕터)
+- Chromium 141 `--headless=new`에서 내장 PDF 뷰어가 열리고, 마우스 클릭·`insert_text`로 양식 입력, 휠 스크롤로 쪽 이동이 됨. `keyboard.type`은 공백이 빠지고 `Control+A`는 안 먹음(End → Shift+Home 사용). `location.hash`로 쪽 이동은 안 됨. PDF 관련 글에서 실제 뷰어 동작 스크린샷 재료로 재사용 가능
+- 같은 이름 양식 칸 문제는 pypdf 문서("Merging forms")·PyMuPDF 문서(`join_duplicates`)에 적혀 있지만 기본값이 서로 다름 → 도구 문서의 기본값을 측정 전에 확인하면 측정 항목을 빨리 정할 수 있음
+- 네트워크: irs.gov·poppler.freedesktop.org·GitHub Releases(qpdf v12.4.2, ghostpdl gs10080)·gitlab.com API(pdftk-java releases·README raw)·formulae.brew.sh·support.apple.com·tools.pdf24.org·pdflabs.com·readthedocs(qpdf·pypdf·PyMuPDF·Ghostscript)·archive.ubuntu.com(apt) 가능. gitlab.com 릴리스 HTML 페이지는 WebFetch에서 본문이 비어 API로 확인
+- 실수: 처음 링크 판정 스크립트가 "같은 쪽을 가리키는 링크"를 오답으로 셌음(Summary 링크는 1쪽→1쪽) → 입력 파일의 링크 대상과 비교하도록 고침
+
+**다음 할 일**
+
+- 사용자: 미색인 9편(모두 `URL is unknown`, 가장 오래된 `remove-background-from-image-free-offline` 발행 6일째). Search Console URL 검사 → **색인 생성 요청** 권장 (API로는 요청 불가). sitemap이 10-15 이후 다시 읽히지 않아 sitemap 재제출도 검토
+- 사용자: 대시보드 — 정기 세션의 대시보드 DB 갱신 허용 여부 결정 전까지 이번 세션도 갱신 건너뜀
+- Claude: 새 글 노출 검색어 확인 (`merge pdf files free`, `merge pdf offline`, `combine pdf files into one` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 9편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF·영상 압축·이미지 압축·JPG→PDF·PDF→JPG·PDF 합치기). V2 판정(11-12) 후 결정. PDF 4편(압축·Word·JPG·합치기)은 "PDF 도구" 허브로 따로 묶는 안도 검토
+- Claude: 발행 18편 / AdSense 신청 기준 20편 (2편 남음)
+
 ## 2026-10-16 · 세션 15 (정기 실행 14회차): PDF→JPG 고화질 변환
 
 세션 시각: 2026-10-16 16:55 UTC 무렵 (한국 10-17 01:55). 열린 PR 없음.

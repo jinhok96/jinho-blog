@@ -1,0 +1,28 @@
+{
+  "viewer": "Chromium 141.0.7390.37 built-in PDF viewer (PDFium), Playwright 1.64 --headless=new, 2026-10-16",
+  "form_test": {
+    "how": "chrome_form_test.py: 4쪽(W-9 A) 1번 Name 칸 클릭 → End, Shift+Home → 'EDITED ON PAGE 4' 입력 → Tab → 6쪽 아래로 스크롤해 10쪽(W-9 B) Name 칸 캡처. 결과는 캡처 화면을 직접 보고 기록",
+    "page10_after_edit": {
+      "qpdf": "TEST VENDOR TWO LLC (unchanged)",
+      "qpdf-primary": "TEST VENDOR TWO LLC (unchanged)",
+      "pdftk": "TEST VENDOR TWO LLC (unchanged)",
+      "pymupdf": "TEST VENDOR TWO LLC (unchanged)",
+      "pypdf-topname": "TEST VENDOR TWO LLC (unchanged)",
+      "pypdf": "EDITED ON PAGE 4 (changed with page 4)",
+      "pdfunite": "EDITED ON PAGE 4 (changed with page 4)",
+      "ghostscript": "not fillable: no form fields in output (values printed into the page)"
+    }
+  },
+  "link_test": {
+    "how": "chrome_shot.py <pdf> 'page=1&navpanes=0' out.png 401,280: 1쪽 목차의 'Measurements' 링크 클릭 후 툴바 쪽 번호 캡처 (기대: 2 / 21)",
+    "page_after_click": {"qpdf": 1, "pdfunite": 1, "pymupdf": 1, "pdftk": 2, "pypdf": 2, "ghostscript": 2}
+  },
+  "outline_test": {
+    "how": "chrome_shot.py <pdf> 'page=1' out.png 33,146 (사이드바 Document outline 버튼)",
+    "result": {"pdftk": "outline button shown; Test report A / Test report B with 3 children each", "qpdf": "no outline button (thumbnails only)"}
+  },
+  "notes": [
+    "Ghostscript 출력의 탭 제목(문서 Title)은 마지막 입력 파일의 'Test report B'",
+    "Ghostscript 10.08.0 출력으로 다시 확인(처음 10.02.1과 같은 결과). Ghostscript 출력은 '#page=4' 조각으로 열 때 4쪽으로 가지 않아 스크롤로 캡처함"
+  ]
+}

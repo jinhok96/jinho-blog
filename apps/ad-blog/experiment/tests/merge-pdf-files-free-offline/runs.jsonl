@@ -1,0 +1,24 @@
+{"tool": "qpdf", "run": 0, "sec": 0.058, "maxrss_mb": 21.5, "rc": 0, "stderr": "", "bytes": 5284563}
+{"tool": "qpdf", "run": 1, "sec": 0.064, "maxrss_mb": 21.3, "rc": 0, "stderr": "", "bytes": 5284563}
+{"tool": "qpdf", "run": 2, "sec": 0.048, "maxrss_mb": 21.5, "rc": 0, "stderr": "", "bytes": 5284563}
+{"tool": "pdftk", "run": 0, "sec": 0.615, "maxrss_mb": 83.8, "rc": 0, "stderr": "(JVM 환경 변수 안내 1줄, 삭제)", "bytes": 5285255}
+{"tool": "pdftk", "run": 1, "sec": 0.625, "maxrss_mb": 87.3, "rc": 0, "stderr": "(JVM 환경 변수 안내 1줄, 삭제)", "bytes": 5285255}
+{"tool": "pdftk", "run": 2, "sec": 0.528, "maxrss_mb": 83.6, "rc": 0, "stderr": "(JVM 환경 변수 안내 1줄, 삭제)", "bytes": 5285255}
+{"tool": "pypdf", "run": 0, "sec": 0.222, "maxrss_mb": 42.5, "rc": 0, "stderr": "", "bytes": 5289041}
+{"tool": "pypdf", "run": 1, "sec": 0.239, "maxrss_mb": 42.4, "rc": 0, "stderr": "", "bytes": 5289041}
+{"tool": "pypdf", "run": 2, "sec": 0.249, "maxrss_mb": 42.5, "rc": 0, "stderr": "", "bytes": 5289041}
+{"tool": "pymupdf", "run": 0, "sec": 0.18, "maxrss_mb": 57.6, "rc": 0, "stderr": "", "bytes": 5278000}
+{"tool": "pymupdf", "run": 1, "sec": 0.161, "maxrss_mb": 57.5, "rc": 0, "stderr": "", "bytes": 5278000}
+{"tool": "pymupdf", "run": 2, "sec": 0.154, "maxrss_mb": 57.5, "rc": 0, "stderr": "", "bytes": 5278000}
+{"tool": "qpdf-primary", "run": 0, "sec": 0.047, "maxrss_mb": 21.3, "rc": 0, "stderr": "", "bytes": 5290339}
+{"tool": "qpdf-primary", "run": 1, "sec": 0.064, "maxrss_mb": 21.4, "rc": 0, "stderr": "", "bytes": 5290339}
+{"tool": "qpdf-primary", "run": 2, "sec": 0.05, "maxrss_mb": 21.3, "rc": 0, "stderr": "", "bytes": 5290339}
+{"tool": "pypdf-topname", "run": 0, "sec": 0.23, "maxrss_mb": 42.4, "rc": 0, "stderr": "", "bytes": 5289217}
+{"tool": "pypdf-topname", "run": 1, "sec": 0.275, "maxrss_mb": 42.5, "rc": 0, "stderr": "", "bytes": 5289217}
+{"tool": "pypdf-topname", "run": 2, "sec": 0.232, "maxrss_mb": 42.5, "rc": 0, "stderr": "", "bytes": 5289217}
+{"tool": "ghostscript", "run": 0, "sec": 0.513, "maxrss_mb": 29.3, "rc": 0, "stderr": "", "bytes": 5235762}
+{"tool": "ghostscript", "run": 1, "sec": 0.487, "maxrss_mb": 29.5, "rc": 0, "stderr": "", "bytes": 5235762}
+{"tool": "ghostscript", "run": 2, "sec": 0.501, "maxrss_mb": 29.1, "rc": 0, "stderr": "", "bytes": 5235762}
+{"tool": "pdfunite", "run": 0, "sec": 0.161, "maxrss_mb": 11.0, "rc": 0, "stderr": "", "bytes": 5328182}
+{"tool": "pdfunite", "run": 1, "sec": 0.163, "maxrss_mb": 11.0, "rc": 0, "stderr": "", "bytes": 5328182}
+{"tool": "pdfunite", "run": 2, "sec": 0.152, "maxrss_mb": 11.0, "rc": 0, "stderr": "", "bytes": 5328182}

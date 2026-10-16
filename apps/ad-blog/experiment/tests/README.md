@@ -14,6 +14,7 @@
 | [image-to-text-offline-free](image-to-text-offline-free)             | 오프라인 OCR 4개 엔진(7개 설정) 측정: 직접 만든 50장(스크린샷·작은 글자·스캔·사진·영수증) 정확도·속도·메모리, 그래프·출력 비교 이미지, 사실 확인표 |
 | [convert-pdf-to-word-offline-free](convert-pdf-to-word-offline-free) | PDF→Word 오프라인 변환 3개 도구(LibreOffice 26.8.1·pdf2docx 0.5.13·Calibre 7.6) 측정: 직접 만든 PDF 11개 문단·표·텍스트 상자·속도, 편집 테스트, OCR 후 재변환, 사실 확인표 |
 | [convert-heic-to-jpg-free](convert-heic-to-jpg-free) | HEIC→JPG 오프라인 변환 3개 도구(XnConvert 1.118·ImageMagick 7.1.2·GIMP 3.2.6) 측정: 직접 만든 HEIC 24장(Display P3·GPS·날짜·세로 4장) 색 차이(ΔE2000)·메타데이터·회전·속도·메모리, 기본/설정 변경 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tools.py` → `analyze.py` → `charts.py`) |
+| [video-to-gif-high-quality-free](video-to-gif-high-quality-free) | 영상→GIF 오프라인 변환 3개 도구 7개 설정(FFmpeg 9.0.2·gifski 1.34.0·ImageMagick 7.1.2-34) 측정: 클립 3개(애니메이션·실사·화면 녹화, 75프레임) 크기·SSIM·재생 시간·속도·메모리, 폭·fps별 크기, 확대 비교 이미지, 사실 확인표 (재현: facts.md 하단) |
 
 ## 받아쓰기 벤치마크 재현
 

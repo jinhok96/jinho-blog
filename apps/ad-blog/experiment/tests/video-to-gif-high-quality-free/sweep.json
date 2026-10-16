@@ -1,0 +1,38 @@
+[
+ {
+  "fps": 10,
+  "width": 320,
+  "ffmpeg_small_kb": 1261,
+  "gifski_q90_kb": 932
+ },
+ {
+  "fps": 10,
+  "width": 480,
+  "ffmpeg_small_kb": 2714,
+  "gifski_q90_kb": 1960
+ },
+ {
+  "fps": 10,
+  "width": 640,
+  "ffmpeg_small_kb": 4714,
+  "gifski_q90_kb": 3374
+ },
+ {
+  "fps": 15,
+  "width": 320,
+  "ffmpeg_small_kb": 1704,
+  "gifski_q90_kb": 1268
+ },
+ {
+  "fps": 15,
+  "width": 480,
+  "ffmpeg_small_kb": 3711,
+  "gifski_q90_kb": 2692
+ },
+ {
+  "fps": 15,
+  "width": 640,
+  "ffmpeg_small_kb": 6468,
+  "gifski_q90_kb": 4649
+ }
+]

@@ -2,6 +2,60 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 13 (정기 실행 12회차): 이미지 100KB 압축
+
+세션 시각: 2026-10-16 11:09 UTC (한국 20:09). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 12 이후 바뀐 값만)**
+
+- 노출 65 → **66**, 클릭 3, CTR 4.5%, 평균 순위 22.2. `check-if-image-is-ai-generated` 노출 9 → 10 (순위 69.4)
+- sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사: `remove-background-from-image-free-offline`이 `Discovered - currently not indexed` → **`URL is unknown to Google`**로 바뀜 (원인 불명, 색인 생성 요청 필요성 커짐). 14편 중 8편 색인 (미색인 6편 모두 `URL is unknown`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                      | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| ------------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `compress-image-to-100kb` | `software` | How-to + 측정 (검색형)         | 12MP 사진 20장(CC0, HEIC 글과 같은 세트)을 목표 5개(1MB·500KB·200KB·100KB·50KB) × 크기 9개로 ImageMagick 7.1.2-34(`jpeg:extent`)·jpegoptim 1.5.6(`--size`)·cwebp 1.6.0(`-size`) 압축, 1,900건의 크기·목표 통과·SSIMULACRA2(1600×1200 화면 기준) 측정 + GIMP 3.2.6 크기 조정·JPEG 내보내기(파일 크기 미리보기) 직접 조작 |
+
+- 선정 근거: 자동완성 "compress image" 30개(to 2mb·without losing quality가 Google·Bing·YouTube 3곳, to 1mb·free·online, to 100kb·200kb·50kb), "reduce image size" 30개(in kb·to 100kb·mac). 압축 시리즈(PDF·영상)와 같은 독자, 업로드 한도 검색이 구체적이라 측정 차별점이 큼. "upscale image"(32개)·"webp to jpg"(22개)는 후보로 남김
+- **Google Trends API 429**: 쿠키 방식으로도 3회 재시도(최대 약 2.5분) 후 실패, 몇 분 뒤 재시도도 실패 → 이번 세션은 상대 검색량 비교 없이 자동완성으로 선정 (RSS는 정상)
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Trends 미국 급상승 10개: 스포츠·날씨·연예 → IT 주제 없음. 공식 피드 새 항목은 세션 12와 같음
+- 차별점: 원본 크기(4032px)로 100KB를 지정하면 ImageMagick은 품질 2까지 내려도 6/20장이 목표를 넘기고 **오류 없이(종료 코드 0) 저장**, jpegoptim은 KB=1,024 + 근사 탐색으로 2/20만 100,000바이트 이하. 1024px로 줄인 뒤엔 20/20 통과·화질 중앙값 -49.9 → 52.8
+- 적용한 노하우: 검색형 제목 52자·설명 153자, 측정 규모 제목 표기, 이미지 5장(대표 그래프 1200×675 + 통과 수 그래프 + 고양이 확대 비교 + GIMP 스크린샷 2장), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → HEIC→JPG·PDF 압축·영상 압축·허브·배경 제거 (5개). `compress-pdf-offline-free` 마지막 문단에서 새 글로 역링크 1개 (V 기록 대상 아님)
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, og:image 생성, 본문 이미지 5장 모두 width·height 지정 (관련 글 카드 썸네일 3장은 크기 속성 없음 — 기존 글과 같은 동작)
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 20장 중앙값, SSIMULACRA2 1600×1200 화면 기준, ImageMagick JPEG)**
+
+| 목표   | 원본 4032px (통과) | 최적 긴 변 | 최적 점수 (하위 10%) | 고른 JPEG 품질 중앙값 (범위) |
+| ------ | ------------------ | ---------- | -------------------- | ---------------------------- |
+| 1MB    | 88.0 (20/20)       | 1600px     | 89.7 (85.8)          | 96.5 (90~100)                |
+| 500KB  | 75.1 (20/20)       | 1600~1920px| 83.4~83.8 (72.4)     | 89 (64~97) @1600             |
+| 200KB  | 15.3 (19/20)       | 1280px     | 69.1 (49.4)          | 78 (33~94)                   |
+| 100KB  | -49.9 (14/20)      | 1024px     | 52.8 (26.7)          | 67 (23~92)                   |
+| 50KB   | -50.6 (0/20)       | 800px      | 32.9 (1.5)           | 50.5 (17~90)                 |
+
+- WebP(cwebp -size)는 같은 크기에서 점수가 비슷하거나 조금 높지만(100KB@1024 54.4, 200KB@1600 71.6) 목표 초과가 잦음(표 크기에서 0~5/20 초과, 원본 크기 100KB 11/20 초과)
+- GIMP 3.2.6: 1600×1200 품질 60에서 4:4:4 213.5 kB → 4:2:0 181.8 kB, 저장 파일 181,788바이트 (kB = 1,000바이트)
+
+**알게 된 것**
+
+- 목표 용량 기능(`jpeg:extent`, jpegoptim `--size`, cwebp `-size`)은 모두 "최선을 다함"이지 보장이 아님. 문서(ImageMagick "does not exceed the value")와 실제 동작이 달라 측정이 곧 차별점이 됨. "도구가 약속한 값을 지켰는지"를 측정 항목에 넣을 것
+- 화질 지표를 고정 화면 크기(1600×1200)로 계산하면 1600px 근처가 구조적으로 유리함 → 본문에 기준과 한계(작게 쓰는 프로필 사진이면 손해가 적음)를 밝힘. 원본 해상도 SSIMULACRA2는 12MP 1회 약 14초라 1,900건엔 부적합
+- 속도 함정: 첫 실행은 점수용 리사이즈를 ImageMagick AppImage로 해 1건 3.7초 → Pillow Lanczos로 바꿔 0.5초. 4개 병렬 + `MAGICK_THREAD_LIMIT=1`로 1,900건 약 37분. 또 `pkill -f gimp`가 같은 문자열을 가진 내 셸까지 종료함(exit 144) → 프로세스 종료는 PID로
+- 네트워크: storage.googleapis.com(libwebp 1.6.0 바이너리)·github.com Releases(libjxl v0.11.1 static, jpegoptim v1.5.6, ImageMagick 7.1.2-34)·download.gimp.org·archive.ubuntu.com(apt) 가능. Windows Photos 앱 크기 조정의 Microsoft 공식 문서는 찾지 못해 PowerToys 문서로 대체
+- GIMP 3.2.6 첫 실행 시 "Welcome to GIMP" 창이 떠 xdotool `search --name`이 기대한 창을 못 찾음 → `xdotool search --name .`로 창 ID 목록을 보고 ID로 조작
+
+**다음 할 일**
+
+- 사용자: `remove-background-from-image-free-offline`이 발행 6일째 미색인이고 이번에 `URL is unknown`으로 바뀜. Search Console URL 검사 → **색인 생성 요청** 1회 권장 (API로는 요청 불가)
+- Claude: 새 글 노출 검색어 확인 (`compress image to 100kb`, `reduce image size in kb` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 6편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF·영상 압축·이미지 압축). V2 판정(11-12) 후 기존 허브와 역할 정리해 결정. 압축 3편(PDF·영상·이미지)은 "파일 크기 줄이기" 허브로 묶는 안도 검토
+- Claude: Trends API 429가 다음 세션에도 계속되면 README 주제 발굴 소스에 대체 절차 기록
+- Claude: 발행 15편 / AdSense 신청 기준 20편
+
 ## 2026-10-16 · 세션 12 (정기 실행 11회차): Discord·이메일용 영상 압축
 
 세션 시각: 2026-10-16 09:14 UTC (한국 18:14). 열린 PR 없음.

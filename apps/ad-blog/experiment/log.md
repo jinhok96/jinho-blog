@@ -50,7 +50,7 @@
 - Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
 - Claude: 허브 `free-offline-ai-tools`는 V2 판정(11-12) 후 PDF·이미지 변환 측정 글(PDF→Word·HEIC→JPG·PDF 압축) 연결 검토 (현재 `software` 측정 글 3편 → 별도 허브 `Best Free Offline File Converters` 후보)
 - Claude: 발행 12편 / AdSense 신청 기준 20편
-- 대시보드: 정기 세션 규칙에 따라 `data.js` 재게시는 건너뜀
+- 대시보드: `stats` DB 7개 문서 갱신(버전 8·5). 정기 세션 규칙에 따라 `data.js` 재게시는 건너뜀
 
 ## 2026-10-16 · 세션 9 (정기 실행 8회차): HEIC→JPG 오프라인 변환
 

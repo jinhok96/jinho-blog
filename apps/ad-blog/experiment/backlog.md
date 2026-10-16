@@ -46,7 +46,7 @@
 | 36   | PDF 압축 무료 오프라인 (Ghostscript·OCRmyPDF·qpdf 측정)                                    | compress pdf offline                        | -    | 예 (설정 10개)            | 상시                  | 발행 `compress-pdf-offline-free` (2026-10-16). Trends `compress pdf` 4.8 (기준 `remove background` 34.9) |
 | 37   | MP4 → MP3 오프라인 변환                                                                    | mp4 to mp3                                  | -    | 예                        | 상시                  | 보류 (Trends 8.7로 수요 큼, 도구 간 차이가 작아 측정 차별점 약함. 2026-10-16) |
 | 38   | 영상 → GIF 고화질 변환 (FFmpeg 팔레트·gifski·ImageMagick 측정)                            | video to gif                                | -    | 예 (설정 7개)             | 상시                  | 발행 `video-to-gif-high-quality-free` (2026-10-16). Trends `video to gif` 7.1 (기준 `remove background` 35.0) |
-| 39   | 영상 압축 무료 오프라인 (HandBrake·FFmpeg 측정, 디스코드·이메일 용량)                       | compress video                              | -    | 예                        | 상시                  | 후보 (2026-10-16 추가, Trends 2.4, 자동완성 32개: for discord·to 10mb·without losing quality. 용량 제한은 1차 출처 확인 필요) |
+| 39   | 영상 압축 무료 오프라인 (HandBrake·FFmpeg 측정, 디스코드·이메일 용량)                       | compress video for discord                  | -    | 예 (설정 14개)            | 상시                  | 발행 `compress-video-for-discord-email` (2026-10-16). Discord 무료 20MB(2026-08 변경)·Gmail 25MB 공식 문서 확인 |
 
 ## 반복 일정
 

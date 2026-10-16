@@ -2,6 +2,59 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 11 (정기 실행 10회차): 영상→GIF 고화질 변환
+
+세션 시각: 2026-10-16 03:21 UTC (한국 12:21). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 10 이후 바뀐 값만)**
+
+- 변화 없음: 노출 60, 클릭 3, CTR 5.0%, 평균 순위 20.6. sitemap 마지막 다운로드 10-15 03:42 UTC 그대로
+- URL 검사: `compress-pdf-offline-free`(10-16 발행)도 `URL is unknown` → 12편 중 8편 색인 (미색인: PDF 압축·HEIC→JPG·PDF→Word `URL is unknown`, 배경 제거 `Discovered - currently not indexed`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                             | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| -------------------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `video-to-gif-high-quality-free` | `software` | 비교 + How-to (측정형, 검색형) | 클립 3개(Big Buck Bunny·Tears of Steel CC BY 3.0 장면 + 직접 녹화한 화면, 각 5초·15fps·75프레임)를 FFmpeg 9.0.2·gifski 1.34.0·ImageMagick 7.1.2-34의 설정 7개로 변환, 크기·프레임별 SSIM·재생 시간(지연값)·시간·메모리 측정 + 폭·fps별 크기 |
+
+- 선정 근거: Trends(미국 3개월, 기준 `remove background` 35.0): `video to gif` **7.1** · `gif maker` 6.5 · `mp4 to gif` 3.0 · `compress video` 2.4 · `webp to jpg` 1.8 · `upscale image` 1.4. 자동완성: "video to gif" 23개(converter·high quality가 Google·Bing·YouTube 3곳, free·discord·iphone), "compress video" 32개. 측정 차별점(도구별 화질·크기 차이가 큼)이 분명해 `video to gif` 선택, `compress video`는 후보로 남김
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Google Trends 미국 급상승 10개: 야구·연예 → IT 주제 없음. 공식 피드 새 항목(Gmail Live 유료 Workspace, SynthID TIME 선정, Google 검색 AI 모드 변경) → 새 글 대상 아님
+- 적용한 노하우: 검색형 제목 51자·설명 159자, 측정 규모 제목 표기, 이미지 6장(대표 그래프 1200×675 + 하늘·얼굴·화면 글자 확대 비교 3장 + 폭·fps 크기 + 속도·메모리), 요약 표 + 전체 결과 표 → 사실 확인표에 기록. 앱 화면 스크린샷 없음(세 도구 모두 명령줄)
+- 내부 링크: 새 글 → PDF 압축·HEIC→JPG·배경 제거·허브 (4개). `convert-heic-to-jpg-free` 마지막 문단에서 새 글로 역링크 1개 (V 기록 대상 아님). V1·V2 대상 글은 변경하지 않음
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 9개, og:image 생성, 본문 이미지 6장 모두 width·height 지정
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 같은 PNG 프레임 입력, 3회 중앙값)**
+
+| 설정                  | 3개 GIF 합계 | 평균 SSIM | 재생 시간 | 3개 변환 시간 | 최대 RAM |
+| --------------------- | ------------ | --------- | --------- | ------------- | -------- |
+| FFmpeg 기본           | 13.8MB       | **0.482** | 5.0초     | 0.8초         | 44MB     |
+| FFmpeg + 팔레트       | 10.5MB       | 0.962     | 5.0초     | 5.8초         | 120MB    |
+| FFmpeg small 팔레트   | 8.9MB        | 0.970     | 5.0초     | 2.0초         | 121MB    |
+| gifski 기본(Q90)      | **6.5MB**    | 0.948     | 5.0초     | 7.2초         | 57MB     |
+| gifski Q70            | 4.1MB        | 0.897     | 5.0초     | 5.6초         | 57MB     |
+| ImageMagick 기본      | 12.5MB       | 0.972     | **4.5초** | 41.2초        | 744MB    |
+| ImageMagick Optimize  | 9.6MB        | 0.958     | **4.5초** | 59.2초        | 451MB    |
+
+- 폭 480→320px: 52~54% 감소, 15→10fps: 26~27% 감소 (실사 클립, FFmpeg small·gifski 모두)
+
+**알게 된 것**
+
+- SSIM은 띠(banding)를 거의 벌하지 않고 디더링 입자를 벌함 → gifski가 SSIM은 낮아도 하늘 그라데이션은 가장 원본에 가까워 보였고, SSIM이 높은 FFmpeg small·ImageMagick은 띠가 보임. 화질 측정 글은 점수 + 같은 영역 확대 비교를 함께 실어야 결론이 틀리지 않음
+- 측정 함정: 처음엔 GIF와 원본을 ffmpeg 타임스탬프로 맞춰 비교 → GIF 지연값 반올림(70/60ms) 때문에 프레임이 어긋나 SSIM이 0.5~0.9로 왜곡. GIF를 `-fps_mode passthrough`로 프레임별로 풀어 1:1 비교로 바꿈. 새 비교 방식은 프레임 수(75=75)부터 확인
+- ImageMagick `-delay 1x15`는 60ms로 저장돼 10% 빨리 재생 (100으로 나누어떨어지지 않는 fps의 함정). 크기·화질만 보면 놓치는 차이 → GIF·영상 주제는 재생 시간도 측정 항목에 넣음
+- 컨테이너: `/usr/bin/time` 없음 → `os.wait4`의 `ru_maxrss`로 최대 메모리 측정. Pillow도 기본 python에 없어 venv 사용. download.blender.org(Blender 오픈 무비, CC BY 3.0)·BtbN FFmpeg 빌드(`releases/download/latest/…`)·crates.io API·formulae.brew.sh API 접속 가능
+- Xvfb + Chromium 키오스크 + `ffmpeg -f x11grab`(libx264rgb `-qp 0`)로 저작권 문제 없는 무손실 화면 녹화 클립을 직접 만들 수 있음 (Chromium 시작에 약 3~4초 걸리므로 페이지 동작을 지연 시작)
+
+**다음 할 일**
+
+- 사용자: `remove-background-from-image-free-offline`이 발행 6일째 크롤링 전(`Discovered - currently not indexed`). Search Console URL 검사 → **색인 생성 요청** 1회 권장 (API로는 요청 불가)
+- Claude: 새 글 노출 검색어 확인 (`video to gif`, `video to gif high quality` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 4편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF). V2 판정(11-12) 후 기존 허브와 역할 정리해 결정
+- Claude: 발행 13편 / AdSense 신청 기준 20편
+- 대시보드: `stats` DB 7개 문서 갱신(버전 9·6). 정기 세션 규칙에 따라 `data.js` 재게시는 건너뜀
+
 ## 2026-10-16 · 세션 10 (정기 실행 9회차): PDF 오프라인 압축
 
 세션 시각: 2026-10-16 01:25 UTC (한국 10:25). 열린 PR 없음.

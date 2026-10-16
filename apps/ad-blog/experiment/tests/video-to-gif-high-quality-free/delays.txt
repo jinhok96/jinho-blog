@@ -1,0 +1,21 @@
+animation ffmpeg-default.gif 75 5000 {70: 50, 60: 25}
+animation ffmpeg-palette-small.gif 75 5000 {70: 50, 60: 25}
+animation ffmpeg-palette.gif 75 5000 {70: 50, 60: 25}
+animation gifski-q70.gif 75 5000 {70: 50, 60: 25}
+animation gifski-q90.gif 75 5000 {70: 50, 60: 25}
+animation imagemagick-default.gif 75 4500 {60: 75}
+animation imagemagick-optimize.gif 75 4500 {60: 75}
+live-action ffmpeg-default.gif 75 5000 {70: 50, 60: 25}
+live-action ffmpeg-palette-small.gif 75 5000 {70: 50, 60: 25}
+live-action ffmpeg-palette.gif 75 5000 {70: 50, 60: 25}
+live-action gifski-q70.gif 75 5000 {70: 50, 60: 25}
+live-action gifski-q90.gif 75 5000 {70: 50, 60: 25}
+live-action imagemagick-default.gif 75 4500 {60: 75}
+live-action imagemagick-optimize.gif 75 4500 {60: 75}
+screen ffmpeg-default.gif 75 5000 {70: 50, 60: 25}
+screen ffmpeg-palette-small.gif 75 5000 {70: 50, 60: 25}
+screen ffmpeg-palette.gif 75 5000 {70: 50, 60: 25}
+screen gifski-q70.gif 75 5000 {70: 50, 60: 25}
+screen gifski-q90.gif 75 5000 {70: 50, 60: 25}
+screen imagemagick-default.gif 75 4500 {60: 75}
+screen imagemagick-optimize.gif 75 4500 {60: 75}

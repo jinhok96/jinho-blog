@@ -1,0 +1,81 @@
+{"config": "pdftoppm-default", "doc": "irs-1040", "sec_median": 0.175, "secs": [0.175, 0.2, 0.135], "max_rss_mb": 21, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-default", "doc": "mixed", "sec_median": 0.07, "secs": [0.07, 0.069, 0.105], "max_rss_mb": 20, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-default", "doc": "photos", "sec_median": 0.317, "secs": [0.456, 0.311, 0.317], "max_rss_mb": 24, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftocairo-default", "doc": "irs-1040", "sec_median": 0.138, "secs": [0.106, 0.138, 0.147], "max_rss_mb": 28, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftocairo-default", "doc": "mixed", "sec_median": 0.31, "secs": [0.31, 0.311, 0.247], "max_rss_mb": 22, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftocairo-default", "doc": "photos", "sec_median": 0.495, "secs": [0.495, 0.574, 0.475], "max_rss_mb": 46, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "gs-default", "doc": "irs-1040", "sec_median": 0.185, "secs": [0.171, 0.237, 0.185], "max_rss_mb": 36, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "gs-default", "doc": "mixed", "sec_median": 0.12, "secs": [0.106, 0.12, 0.153], "max_rss_mb": 32, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "gs-default", "doc": "photos", "sec_median": 0.401, "secs": [0.401, 0.451, 0.401], "max_rss_mb": 31, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "magick-default", "doc": "irs-1040", "sec_median": 0.534, "secs": [0.534, 0.557, 0.526], "max_rss_mb": 38, "files": ["p-0.jpg", "p-1.jpg"], "stderr": ""}
+{"config": "magick-default", "doc": "mixed", "sec_median": 0.267, "secs": [0.263, 0.267, 0.333], "max_rss_mb": 34, "files": ["p-0.jpg"], "stderr": ""}
+{"config": "magick-default", "doc": "photos", "sec_median": 1.329, "secs": [1.329, 1.258, 1.451], "max_rss_mb": 46, "files": ["p-0.jpg", "p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pymupdf-default", "doc": "irs-1040", "sec_median": 0.314, "secs": [0.314, 0.402, 0.293], "max_rss_mb": 60, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pymupdf-default", "doc": "mixed", "sec_median": 0.223, "secs": [0.204, 0.223, 0.237], "max_rss_mb": 56, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pymupdf-default", "doc": "photos", "sec_median": 0.501, "secs": [0.482, 0.575, 0.501], "max_rss_mb": 73, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "libreoffice-default", "doc": "irs-1040", "sec_median": 1.575, "secs": [1.575, 1.52, 1.81], "max_rss_mb": 178, "files": ["irs-1040.jpg"], "stderr": ""}
+{"config": "libreoffice-default", "doc": "mixed", "sec_median": 0.76, "secs": [0.76, 0.701, 0.859], "max_rss_mb": 164, "files": ["mixed.jpg"], "stderr": ""}
+{"config": "libreoffice-default", "doc": "photos", "sec_median": 1.017, "secs": [1.017, 1.068, 0.945], "max_rss_mb": 231, "files": ["photos.jpg"], "stderr": ""}
+{"config": "pdftoppm-300", "doc": "irs-1040", "sec_median": 0.462, "secs": [0.436, 0.483, 0.462], "max_rss_mb": 46, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-300", "doc": "mixed", "sec_median": 0.277, "secs": [0.277, 0.293, 0.245], "max_rss_mb": 44, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-300", "doc": "photos", "sec_median": 1.049, "secs": [1.121, 1.049, 0.906], "max_rss_mb": 66, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "gs-300", "doc": "irs-1040", "sec_median": 0.519, "secs": [0.519, 0.651, 0.5], "max_rss_mb": 33, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "gs-300", "doc": "mixed", "sec_median": 0.346, "secs": [0.346, 0.344, 0.352], "max_rss_mb": 29, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "gs-300", "doc": "photos", "sec_median": 1.484, "secs": [1.484, 1.526, 1.473], "max_rss_mb": 29, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "gs-300-aa", "doc": "irs-1040", "sec_median": 0.896, "secs": [0.763, 0.896, 0.959], "max_rss_mb": 33, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "gs-300-aa", "doc": "mixed", "sec_median": 0.478, "secs": [0.496, 0.447, 0.478], "max_rss_mb": 29, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "gs-300-aa", "doc": "photos", "sec_median": 1.499, "secs": [1.39, 1.499, 1.515], "max_rss_mb": 29, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "magick-300", "doc": "irs-1040", "sec_median": 4.104, "secs": [3.784, 4.455, 4.104], "max_rss_mb": 371, "files": ["p-0.jpg", "p-1.jpg"], "stderr": ""}
+{"config": "magick-300", "doc": "mixed", "sec_median": 2.185, "secs": [2.185, 1.811, 2.263], "max_rss_mb": 243, "files": ["p-0.jpg"], "stderr": ""}
+{"config": "magick-300", "doc": "photos", "sec_median": 12.918, "secs": [13.35, 12.918, 12.89], "max_rss_mb": 500, "files": ["p-0.jpg", "p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "magick-300-flat", "doc": "irs-1040", "sec_median": 4.564, "secs": [4.766, 4.519, 4.564], "max_rss_mb": 371, "files": ["p-0.jpg", "p-1.jpg"], "stderr": ""}
+{"config": "magick-300-flat", "doc": "mixed", "sec_median": 2.405, "secs": [2.405, 2.289, 2.464], "max_rss_mb": 243, "files": ["p-0.jpg"], "stderr": ""}
+{"config": "magick-300-flat", "doc": "photos", "sec_median": 14.472, "secs": [14.472, 13.644, 14.492], "max_rss_mb": 500, "files": ["p-0.jpg", "p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "libreoffice-2550", "doc": "irs-1040", "sec_median": 1.63, "secs": [1.725, 1.63, 1.578], "max_rss_mb": 236, "files": ["irs-1040.jpg"], "stderr": ""}
+{"config": "libreoffice-2550", "doc": "mixed", "sec_median": 0.846, "secs": [0.846, 0.853, 0.829], "max_rss_mb": 222, "files": ["mixed.jpg"], "stderr": ""}
+{"config": "libreoffice-2550", "doc": "photos", "sec_median": 1.135, "secs": [1.135, 1.171, 1.011], "max_rss_mb": 289, "files": ["photos.jpg"], "stderr": ""}
+{"config": "pymupdf-300", "doc": "irs-1040", "sec_median": 1.142, "secs": [1.142, 1.114, 1.283], "max_rss_mb": 127, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pymupdf-300", "doc": "mixed", "sec_median": 0.65, "secs": [0.65, 0.66, 0.573], "max_rss_mb": 128, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pymupdf-300", "doc": "photos", "sec_median": 2.726, "secs": [2.589, 2.981, 2.726], "max_rss_mb": 186, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r72-q75", "doc": "irs-1040", "sec_median": 0.066, "secs": [0.066], "max_rss_mb": 15, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r72-q75", "doc": "mixed", "sec_median": 0.036, "secs": [0.036], "max_rss_mb": 13, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r72-q75", "doc": "photos", "sec_median": 0.214, "secs": [0.214], "max_rss_mb": 14, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r72-q90", "doc": "irs-1040", "sec_median": 0.086, "secs": [0.086], "max_rss_mb": 15, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r72-q90", "doc": "mixed", "sec_median": 0.05, "secs": [0.05], "max_rss_mb": 13, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r72-q90", "doc": "photos", "sec_median": 0.24, "secs": [0.24], "max_rss_mb": 14, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r100-q75", "doc": "irs-1040", "sec_median": 0.118, "secs": [0.118], "max_rss_mb": 17, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r100-q75", "doc": "mixed", "sec_median": 0.071, "secs": [0.071], "max_rss_mb": 15, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r100-q75", "doc": "photos", "sec_median": 0.256, "secs": [0.256], "max_rss_mb": 17, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r100-q90", "doc": "irs-1040", "sec_median": 0.079, "secs": [0.079], "max_rss_mb": 17, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r100-q90", "doc": "mixed", "sec_median": 0.043, "secs": [0.043], "max_rss_mb": 15, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r100-q90", "doc": "photos", "sec_median": 0.25, "secs": [0.25], "max_rss_mb": 17, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r150-q75", "doc": "irs-1040", "sec_median": 0.199, "secs": [0.199], "max_rss_mb": 21, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r150-q75", "doc": "mixed", "sec_median": 0.068, "secs": [0.068], "max_rss_mb": 19, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r150-q75", "doc": "photos", "sec_median": 0.317, "secs": [0.317], "max_rss_mb": 24, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r150-q90", "doc": "irs-1040", "sec_median": 0.237, "secs": [0.237], "max_rss_mb": 21, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r150-q90", "doc": "mixed", "sec_median": 0.069, "secs": [0.069], "max_rss_mb": 19, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r150-q90", "doc": "photos", "sec_median": 0.339, "secs": [0.339], "max_rss_mb": 24, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r200-q75", "doc": "irs-1040", "sec_median": 0.2, "secs": [0.2], "max_rss_mb": 28, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r200-q75", "doc": "mixed", "sec_median": 0.11, "secs": [0.11], "max_rss_mb": 26, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r200-q75", "doc": "photos", "sec_median": 0.424, "secs": [0.424], "max_rss_mb": 35, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r200-q90", "doc": "irs-1040", "sec_median": 0.231, "secs": [0.231], "max_rss_mb": 28, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r200-q90", "doc": "mixed", "sec_median": 0.121, "secs": [0.121], "max_rss_mb": 26, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r200-q90", "doc": "photos", "sec_median": 0.473, "secs": [0.473], "max_rss_mb": 35, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r300-q75", "doc": "irs-1040", "sec_median": 0.43, "secs": [0.43], "max_rss_mb": 46, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r300-q75", "doc": "mixed", "sec_median": 0.26, "secs": [0.26], "max_rss_mb": 44, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r300-q75", "doc": "photos", "sec_median": 0.975, "secs": [0.975], "max_rss_mb": 66, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r300-q90", "doc": "irs-1040", "sec_median": 0.469, "secs": [0.469], "max_rss_mb": 46, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r300-q90", "doc": "mixed", "sec_median": 0.267, "secs": [0.267], "max_rss_mb": 44, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r300-q90", "doc": "photos", "sec_median": 1.008, "secs": [1.008], "max_rss_mb": 66, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r400-q75", "doc": "irs-1040", "sec_median": 0.612, "secs": [0.612], "max_rss_mb": 71, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r400-q75", "doc": "mixed", "sec_median": 0.379, "secs": [0.379], "max_rss_mb": 70, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r400-q75", "doc": "photos", "sec_median": 1.599, "secs": [1.599], "max_rss_mb": 109, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r400-q90", "doc": "irs-1040", "sec_median": 0.721, "secs": [0.721], "max_rss_mb": 71, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r400-q90", "doc": "mixed", "sec_median": 0.404, "secs": [0.404], "max_rss_mb": 70, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r400-q90", "doc": "photos", "sec_median": 1.349, "secs": [1.349], "max_rss_mb": 109, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r600-q75", "doc": "irs-1040", "sec_median": 1.14, "secs": [1.14], "max_rss_mb": 144, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r600-q75", "doc": "mixed", "sec_median": 0.906, "secs": [0.906], "max_rss_mb": 144, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r600-q75", "doc": "photos", "sec_median": 2.376, "secs": [2.376], "max_rss_mb": 232, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}
+{"config": "pdftoppm-r600-q90", "doc": "irs-1040", "sec_median": 1.175, "secs": [1.175], "max_rss_mb": 144, "files": ["p-1.jpg", "p-2.jpg"], "stderr": ""}
+{"config": "pdftoppm-r600-q90", "doc": "mixed", "sec_median": 0.719, "secs": [0.719], "max_rss_mb": 144, "files": ["p-1.jpg"], "stderr": ""}
+{"config": "pdftoppm-r600-q90", "doc": "photos", "sec_median": 2.821, "secs": [2.821], "max_rss_mb": 232, "files": ["p-1.jpg", "p-2.jpg", "p-3.jpg"], "stderr": ""}

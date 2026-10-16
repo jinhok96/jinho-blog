@@ -2,6 +2,60 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 15 (정기 실행 14회차): PDF→JPG 고화질 변환
+
+세션 시각: 2026-10-16 16:55 UTC 무렵 (한국 10-17 01:55). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 14 이후 바뀐 값만)**
+
+- 변화 없음: 노출 74, 클릭 4, CTR 5.4%, 평균 순위 20.6. sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사 변화 없음 → 16편 중 8편 색인 (미색인 8편 모두 `URL is unknown`, `jpg-to-pdf-free-offline` 포함)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                      | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| ------------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `pdf-to-jpg-high-quality` | `software` | 비교 + How-to (측정형, 검색형) | PDF 3개(IRS Form 1040 2쪽 + 직접 만든 흰 배경 없는 보고서 1쪽 + CC0 사진 3쪽)를 pdftoppm(Poppler 26.10.0)·PyMuPDF 1.28.2·Ghostscript 10.08.0·ImageMagick 7.1.2-34·LibreOffice 26.8.1의 기본·300 DPI 설정으로 변환, 픽셀 크기·JPEG 품질·쪽당 크기·Tesseract OCR 단어 재현율·시간·메모리 측정 + pdftoppm DPI 7단계 × 품질 2단계 스윕 + GIMP 3.2.6 가져오기·LibreOffice JPEG 옵션 대화상자 스크린샷 |
+
+- 선정 근거: Trends API 429(세션 13에 이어 두 번째) → 자동완성으로 선정. "pdf to jpg" 30개(converter·converter free·free·canva 3곳, high quality·iphone 2곳, high resolution·in pc·no sign up), "merge pdf" 28개, "png to jpg" 29개, "webp to jpg" 22개. `merge pdf`는 무손실 결합이라 측정 차별점이 약하고, `pdf to jpg`는 "high quality/high resolution" 하위 검색어가 측정(DPI)과 바로 맞아서 선택. 파일 변환 시리즈 8번째, JPG→PDF의 반대 방향
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Trends 미국 급상승 10개: 연예·스포츠 → IT 주제 없음. 공식 피드 새 항목은 세션 14와 같음
+- 차별점: 기본 설정에서 **3개 도구(PyMuPDF·Ghostscript·ImageMagick)가 72 DPI** → IRS 1040 1쪽 OCR 3~7%, 300 DPI로 바꾸면 5개 모두 82~91%. **ImageMagick이 흰 배경을 칠하지 않는 브라우저 PDF를 검은 페이지로 저장**(OCR 0%) → `-background white -alpha remove`. LibreOffice는 1쪽만 내보내고 글꼴을 바꿔 글자가 겹침
+- 적용한 노하우: 검색형 제목 55자·설명 154자, 측정 규모 제목 표기, 이미지 7장(대표 그래프 1200×675 + DPI별 확대 + DPI 크기·판독률 + ImageMagick 검은 배경 + LibreOffice 글꼴 + 스크린샷 2장), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → JPG→PDF·이미지 100KB·OCR·PDF→Word·PDF 압축 (5개). `jpg-to-pdf-free-offline` 마지막 문단에서 새 글로 역링크 1개 (V 기록 대상 아님)
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 15개, og:image 생성, 본문 이미지 7장 모두 width·height 지정
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, OCR = Tesseract 5.3.4가 1040 1쪽 단어를 읽어 낸 비율)**
+
+| 도구                | 기본 크기(Letter) · 품질 | 기본 OCR | 300 DPI·Q90 OCR | 300 DPI 시간(6쪽) | 기본 설정 문제 |
+| ------------------- | ------------------------ | -------- | --------------- | ----------------- | -------------- |
+| pdftoppm 26.10      | 1275×1650 (150) · 75     | 81%      | 91%             | 1.8초             | 없음           |
+| PyMuPDF 1.28        | 612×792 (72) · 95        | 7%       | 90%             | 4.5초             | 72 DPI         |
+| Ghostscript 10.08   | 612×792 (72) · 75        | 3%       | 90% (AA 켬)     | 2.9초             | 72 DPI, 안티앨리어싱 없음 |
+| ImageMagick 7.1.2   | 612×792 (72) · 92        | 6%       | 82% (흰 배경)   | 21.4초 · 500MB    | 72 DPI, 투명 → 검은 배경 |
+| LibreOffice 26.8    | 816×1056 (96) · 75       | 58%      | 82% (2550×3300) | -                 | 1쪽만, 글꼴 대체 |
+
+- DPI 스윕(pdftoppm, 1040 KB/쪽 Q75): 72 125KB·4% / 150 386KB·81% / 200 576KB·87% / 300 1.0MB·89% / 600 2.6MB·93%. Q75→Q90은 크기 +40%, OCR 차이 없음(±3~5%p)
+- Poppler 24.02(Ubuntu 패키지)와 26.10.0 pdftoppm 출력이 바이트 단위로 같음
+
+**알게 된 것**
+
+- 문서→이미지 변환 글은 "기본 DPI"가 가장 큰 차이. 도구 기본값을 픽셀 크기로 직접 재면 문서(Ghostscript "usually 72 dpi")보다 확실한 근거가 됨
+- 흰 배경을 칠하지 않는 PDF(브라우저 인쇄)를 입력에 넣어야 투명도 문제가 드러남. 공문서 양식만 썼다면 ImageMagick 검은 배경을 못 찾았음 → 문서 변환 측정 세트에는 브라우저 PDF를 항상 포함
+- PyMuPDF는 JPEG 헤더에 96 DPI를 적지만 실제 픽셀은 72 DPI 크기. 헤더 DPI가 아니라 픽셀 크기로 판단할 것
+- GIMP 내보내기 대화상자는 창 관리자 없는 Xvfb에서 xdotool 입력이 본 창으로 가서 실패(도구 단축키가 눌림). GUI 측정이 필요하면 가벼운 창 관리자를 먼저 띄울 것. GIMP 출력은 측정하지 않고 가져오기 기본값만 썼음
+- Poppler 26.10 소스 빌드는 `-DENABLE_HARFBUZZ=OFF` 등 옵션으로 약 3분. Ubuntu 패키지 24.02와 렌더링 결과가 같아 다음부터는 패키지로 충분
+- Google Trends API 429가 세션 13에 이어 다시 발생(세션 14는 정상) → 간헐적. README에 "429면 자동완성만으로 선정하고 log에 기록" 정도의 대체 절차를 다음 세션에서 검토
+- 네트워크: irs.gov PDF·poppler.freedesktop.org·formulae.brew.sh API·download.gimp.org·download.documentfoundation.org·GitHub Releases(ImageMagick·ghostpdl)·archive.ubuntu.com(apt) 가능. support.apple.com에 Preview PDF→JPEG 전용 문서는 찾지 못함(이미지 형식 변환 문서만)
+
+**다음 할 일**
+
+- 사용자: 미색인 8편(모두 `URL is unknown`, 가장 오래된 `remove-background-from-image-free-offline` 발행 6일째). Search Console URL 검사 → **색인 생성 요청** 권장 (API로는 요청 불가). sitemap이 10-15 이후 다시 읽히지 않아 sitemap 재제출도 검토
+- 사용자: 대시보드 — 정기 세션의 대시보드 DB 갱신 허용 여부 결정 전까지 이번 세션도 갱신 건너뜀
+- Claude: 새 글 노출 검색어 확인 (`pdf to jpg`, `pdf to jpg high quality` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 8편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF·영상 압축·이미지 압축·JPG→PDF·PDF→JPG). V2 판정(11-12) 후 결정
+- Claude: 발행 17편 / AdSense 신청 기준 20편
+
 ## 2026-10-16 · 세션 14 (정기 실행 13회차): JPG→PDF 오프라인 변환
 
 세션 시각: 2026-10-16 15:50 UTC 무렵 (한국 10-17 00:50). 열린 PR 없음.

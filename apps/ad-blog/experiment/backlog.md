@@ -47,6 +47,9 @@
 | 37   | MP4 → MP3 오프라인 변환                                                                    | mp4 to mp3                                  | -    | 예                        | 상시                  | 보류 (Trends 8.7로 수요 큼, 도구 간 차이가 작아 측정 차별점 약함. 2026-10-16) |
 | 38   | 영상 → GIF 고화질 변환 (FFmpeg 팔레트·gifski·ImageMagick 측정)                            | video to gif                                | -    | 예 (설정 7개)             | 상시                  | 발행 `video-to-gif-high-quality-free` (2026-10-16). Trends `video to gif` 7.1 (기준 `remove background` 35.0) |
 | 39   | 영상 압축 무료 오프라인 (HandBrake·FFmpeg 측정, 디스코드·이메일 용량)                       | compress video for discord                  | -    | 예 (설정 14개)            | 상시                  | 발행 `compress-video-for-discord-email` (2026-10-16). Discord 무료 20MB(2026-08 변경)·Gmail 25MB 공식 문서 확인 |
+| 40   | 이미지 목표 용량 압축 (100KB·200KB·1MB, 크기 조정 + JPEG 품질 측정)                        | compress image to 100kb                     | -    | 예 (1,900건)              | 상시                  | 발행 `compress-image-to-100kb` (2026-10-16). Trends 429로 미비교, 자동완성 "compress image" 30개·"reduce image size" 30개 |
+| 41   | AI 이미지 업스케일 무료 오프라인 (Real-ESRGAN 등 CPU 측정)                                  | upscale image ai free                       | -    | 예 (CPU, 느림)            | 상시                  | 후보 (2026-10-16, 자동완성 32개 3곳: ai·free. Trends 1.4 기준 `remove background` 35.0) |
+| 42   | WebP → JPG 변환 (Windows·Mac 내장 + 오프라인 도구)                                        | webp to jpg                                 | -    | 예                        | 상시                  | 후보 (2026-10-16, 자동완성 22개: converter·free·bulk·mac. Trends 1.8) |
 
 ## 반복 일정
 

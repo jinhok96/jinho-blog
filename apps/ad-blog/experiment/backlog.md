@@ -43,6 +43,8 @@
 | 33   | PDF → Word 무료 오프라인 변환 (LibreOffice·pdf2docx·Calibre 측정)                          | pdf to word offline                         | -    | 예                        | 상시                  | 발행 `convert-pdf-to-word-offline-free` (2026-10-15). Trends `pdf to word` 23.4 (기준 `remove background` 35.3) |
 | 34   | HEIC → JPG 변환 (Windows·Mac 내장 + 오프라인 도구 측정)                                    | heic to jpg                                 | -    | 예 (XnConvert·ImageMagick·GIMP) | 상시                  | 발행 `convert-heic-to-jpg-free` (2026-10-16). Trends 8.8 (기준 `remove background` 35.7). Windows·Mac 내장 방법은 문서 기반 |
 | 35   | Windows 11 새 Photos 앱 (2026-10-15 Insider 배포: Gallery·Editor·HEIC 편집)               | windows 11 new photos app                   | -    | 조사만                    | 6~12개월              | 보류 (Insider 단계, 직접 검증 불가. 일반 배포 시 재검토) |
+| 36   | PDF 압축 무료 오프라인 (Ghostscript·OCRmyPDF·qpdf 측정)                                    | compress pdf offline                        | -    | 예 (설정 10개)            | 상시                  | 발행 `compress-pdf-offline-free` (2026-10-16). Trends `compress pdf` 4.8 (기준 `remove background` 34.9) |
+| 37   | MP4 → MP3 오프라인 변환                                                                    | mp4 to mp3                                  | -    | 예                        | 상시                  | 보류 (Trends 8.7로 수요 큼, 도구 간 차이가 작아 측정 차별점 약함. 2026-10-16) |
 
 ## 반복 일정
 

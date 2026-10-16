@@ -52,7 +52,8 @@
 | 42   | WebP → JPG 변환 (Windows·Mac 내장 + 오프라인 도구)                                        | webp to jpg                                 | -    | 예                        | 상시                  | 후보 (2026-10-16, 자동완성 22개: converter·free·bulk·mac. Trends 1.8) |
 | 43   | JPG → PDF 무료 오프라인 변환 (img2pdf·ImageMagick·Pillow·LibreOffice·Chromium 측정)       | jpg to pdf                                  | -    | 예 (24장, 세로 4장)       | 상시                  | 발행 `jpg-to-pdf-free-offline` (2026-10-16). Trends `jpg to pdf` 13.1 · `image to pdf` 8.1 · `png to jpg` 3.9 (기준 `remove background` 35.4) |
 | 44   | PDF → JPG 고화질 변환 (pdftoppm·PyMuPDF·Ghostscript·ImageMagick·LibreOffice 측정, DPI)   | pdf to jpg                                  | -    | 예 (PDF 3개, 설정 25개)   | 상시                  | 발행 `pdf-to-jpg-high-quality` (2026-10-16). Trends 429로 미비교, 자동완성 30개(high quality·high resolution) |
-| 45   | PDF 합치기 무료 오프라인 (qpdf·pdfunite·Ghostscript)                                       | merge pdf                                   | -    | 예                        | 상시                  | 후보 (2026-10-16, 자동완성 28개 3곳. 무손실 결합이라 측정 차별점 약함 → 링크·책갈피·양식 유지 여부로 각도 필요) |
+| 45   | PDF 합치기 무료 오프라인 (qpdf·pdfunite·Ghostscript·pdftk·pypdf·PyMuPDF, 책갈피·링크·양식 보존) | merge pdf files free                        | -    | 예 (6개 + 변형 2개)       | 상시                  | 발행 `merge-pdf-files-free-offline` (2026-10-16). Trends `merge pdf` 6.3 · `png to jpg` 3.9 · `webp to jpg` 1.9 · `upscale image` 1.3 (기준 `remove background` 35.1) |
+| 46   | PDF 나누기·페이지 추출 무료 오프라인 (같은 도구, 책갈피·양식 유지)                          | split pdf                                   | -    | 예                        | 상시                  | 후보 (2026-10-16, 합치기 글의 짝. 수요 확인 전) |
 
 ## 반복 일정
 

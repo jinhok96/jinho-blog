@@ -16,6 +16,7 @@
 | [convert-heic-to-jpg-free](convert-heic-to-jpg-free) | HEIC→JPG 오프라인 변환 3개 도구(XnConvert 1.118·ImageMagick 7.1.2·GIMP 3.2.6) 측정: 직접 만든 HEIC 24장(Display P3·GPS·날짜·세로 4장) 색 차이(ΔE2000)·메타데이터·회전·속도·메모리, 기본/설정 변경 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tools.py` → `analyze.py` → `charts.py`) |
 | [video-to-gif-high-quality-free](video-to-gif-high-quality-free) | 영상→GIF 오프라인 변환 3개 도구 7개 설정(FFmpeg 9.0.2·gifski 1.34.0·ImageMagick 7.1.2-34) 측정: 클립 3개(애니메이션·실사·화면 녹화, 75프레임) 크기·SSIM·재생 시간·속도·메모리, 폭·fps별 크기, 확대 비교 이미지, 사실 확인표 (재현: facts.md 하단) |
 | [jpg-to-pdf-free-offline](jpg-to-pdf-free-offline) | JPG→PDF 오프라인 변환 5개 도구(img2pdf 0.6.3·ImageMagick 7.1.2-34·Pillow 12.3.0·LibreOffice 26.8.1·Chromium 141) 측정: 12MP 사진 24장(세로 4장 EXIF Orientation=6) PDF 크기·픽셀 동일 여부·SSIMULACRA2·세로 사진 방향·속도·메모리, LibreOffice 무손실 설정 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tests.py` → `analyze.py` → `summarize.py` → `charts.py`) |
+| [merge-pdf-files-free-offline](merge-pdf-files-free-offline) | PDF 합치기 6개 도구(qpdf 12.4.2·pdfunite 26.10·Ghostscript 10.08·pdftk-java 3.3.3·pypdf 6.21·PyMuPDF 1.28.2) 측정: 책갈피·목차 링크·W-9 양식 2부·사진 보존, Chrome 141 PDF 뷰어 입력·클릭 테스트, 사실 확인표 |
 
 ## 받아쓰기 벤치마크 재현
 

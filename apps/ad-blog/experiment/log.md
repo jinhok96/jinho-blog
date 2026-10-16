@@ -2,6 +2,64 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-16 · 세션 14 (정기 실행 13회차): JPG→PDF 오프라인 변환
+
+세션 시각: 2026-10-16 15:50 UTC 무렵 (한국 10-17 00:50). 열린 PR 없음.
+
+**지표 (`gsc_report.py`, 2026-09-18 ~ 10-16, 세션 13 이후 바뀐 값만)**
+
+- 노출 66 → **74**, 클릭 3 → **4**, CTR 5.4%, 평균 순위 20.6
+  - `turn-off-ai-in-chrome` 노출 42 (10.5) / `transcribe-audio-offline-free` 13 (24.6) / `gemini-gems-to-skills` 4 (7.8) / 홈 클릭 2·노출 3 / `/about` 노출 2
+  - 새 검색어: `tool proof` 클릭 1 (4위, 브랜드 검색 첫 클릭), `offline transcription software` 2 (79), `speech to text offline` 1 (85), `turn off ai` 2 (57.5)
+- sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사 변화 없음 → 15편 중 8편 색인 (미색인 7편 모두 `URL is unknown`: 이미지 100KB·PDF 압축·영상 압축·HEIC→JPG·PDF→Word·배경 제거·영상→GIF)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 판정·노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                       | 카테고리   | 유형                           | 직접 검증                                                                                                   |
+| -------------------------- | ---------- | ------------------------------ | ----------------------------------------------------------------------------------------------------------- |
+| `jpg-to-pdf-free-offline`  | `software` | 비교 + How-to (측정형, 검색형) | 12MP 사진 24장(CC0 20장 + EXIF Orientation=6 세로 4장)을 img2pdf 0.6.3·ImageMagick 7.1.2-34·Pillow 12.3.0·LibreOffice 26.8.1·Chromium 141(Playwright `page.pdf`)로 변환, PDF 크기·삽입 사진 픽셀 동일 여부·SSIMULACRA2·세로 사진 방향·시간·메모리 측정 + LibreOffice 무손실 설정 비교 + Draw·PDF 내보내기 대화상자 스크린샷 |
+
+- 선정 근거: Trends(미국 3개월, 기준 `remove background` 35.4): `jpg to pdf` **13.1** · `mp4 to mp3` 8.8 · `image to pdf` 8.1 · `compress pdf` 4.8 · `png to jpg` 3.9 · `webp to jpg` 1.9 · `upscale image` 1.4. 자동완성 "jpg to pdf" 32개(converter·free 3곳, merge·combine·high quality·on mac·windows 11), "image to pdf" 29개. 백로그 후보(업스케일·WebP→JPG)보다 수요가 5~9배라 새 후보로 선정
+- Google Trends API: 이번 세션은 쿠키 방식으로 정상 응답 (세션 13의 429는 일시적이었음 → README 대체 절차 기록 불필요)
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음. Trends 미국 급상승 10개: 연예·정치·주식 → IT 주제 없음. 공식 피드 새 항목은 세션 13과 같음
+- 차별점: 기본 설정에서 **세로 사진(EXIF 회전 태그)을 옆으로 눕히는 도구가 5개 중 3개**(ImageMagick·Pillow·LibreOffice), 사진을 그대로 넣는 도구는 img2pdf·Chromium뿐. LibreOffice 기본 내보내기는 JPEG 90%·300 DPI로 사진 픽셀을 약 1/3로 줄임
+- 적용한 노하우: 검색형 제목 56자·설명 159자, 측정 규모 제목 표기, 이미지 6장(대표 그래프 1200×675 + 세로 사진 방향 비교 + 확대 비교 + 속도 그래프 + LibreOffice 스크린샷 2장), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → HEIC→JPG·이미지 100KB·PDF 압축·OCR·PDF→Word (5개). `convert-pdf-to-word-offline-free` 마지막 문단에서 새 글로 역링크 1개 (V 기록 대상 아님)
+- 빌드 HTML 확인: title·description·BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, og:image 생성, 본문 이미지 6장 모두 width·height 지정
+
+**측정값 (Xeon 2.8GHz 4코어, RAM 16GB, GPU 없음, 24장 61.8MB, 시간은 3회 중앙값)**
+
+| 도구 (기본 설정)        | PDF 크기 | 픽셀 동일 | SSIMULACRA2 중앙값 (최저) | 세로 사진 바로 | 시간 · 최대 RAM |
+| ----------------------- | -------- | --------- | ------------------------- | -------------- | --------------- |
+| img2pdf 0.6.3           | 61.8MB   | 24/24     | 100                       | 4/4            | 0.28초 · 108MB  |
+| Chromium 141 인쇄       | 146.3MB  | 24/24     | 100 (세로 쪽은 무압축 20~27MB) | 4/4       | 31.6초*         |
+| ImageMagick 7.1.2-34    | 61.8MB   | 0/24      | 92.3 (89.3), 품질 92 재인코딩 | 0/4 (`-auto-orient` 4/4) | 34.1초 · 3.3GB |
+| Pillow 12.3.0           | 33.1MB   | 0/24      | 78.9 (73.6), 품질 75       | 0/4            | 3.1초 · 1.1GB   |
+| LibreOffice 26.8.1      | 20.3MB   | 0/24      | 59.5 (26.7), 2244px·품질 90 | 0/4           | 33.6초*         |
+| LibreOffice 무손실+해상도 변경 끔 | 61.9MB | 24/24 | 100                      | 0/4            | -               |
+
+- \* 사진당 PDF 1개, 프로그램 시작 포함. 메모리는 자식 프로세스가 빠져 기록 안 함
+
+**알게 된 것**
+
+- "변환"이라는 같은 이름 아래 도구가 하는 일이 셋으로 갈림: 그대로 복사(img2pdf), 다시 압축(ImageMagick·Pillow·LibreOffice), 풀어서 무압축(Chromium 세로 사진). 크기만 보면 ImageMagick이 img2pdf와 같아 보여 픽셀 동일 여부를 따로 재야 차이가 드러남 → 파일 변환 글은 "결과가 원본과 비트·픽셀 단위로 같은가"를 측정 항목에 넣을 것
+- 휴대폰 세로 사진의 EXIF 회전 태그는 HEIC 글에 이어 이번에도 도구 간 차이가 가장 큰 항목. 이미지 관련 측정 세트에는 세로(회전 태그) 사진을 항상 포함
+- LibreOffice는 로캘이 없으면 A4, `LANG=en_US.UTF-8`이면 Letter. 기본값은 대화상자 스크린샷과 `share/registry/main.xcd`(`Filter/PDF/Export`)로 확인 가능
+- ImageMagick `-orient`은 EXIF가 없는 파일에 태그를 쓰지 않음 → JPEG를 다시 인코딩하지 않고 APP1을 직접 삽입하는 스크립트(`set_orientation.py`)로 해결
+- 실수: `pgrep -f "lo-gui" | xargs kill`이 같은 문자열을 가진 내 셸까지 종료(exit 144, 세션 13과 같은 함정). 프로세스 종료는 반드시 PID로
+- Windows `Microsoft Print to PDF`는 support.microsoft.com 공식 문서를 찾지 못함(검색·Learn 검색 모두 Q&A 커뮤니티 답변뿐) → 본문에 단계 없이 "테스트하지 못함"만 씀
+- 네트워크: pd12m S3·GitHub Releases(ImageMagick·libjxl)·download.documentfoundation.org·PyPI·gitlab.mister-muffin.de 가능
+
+**다음 할 일**
+
+- 사용자: 미색인 7편(모두 `URL is unknown`, 가장 오래된 `remove-background-from-image-free-offline`은 발행 6일째). Search Console URL 검사 → **색인 생성 요청** 권장 (API로는 요청 불가). sitemap이 10-15 이후 다시 읽히지 않아 sitemap 재제출도 검토
+- 사용자: 대시보드 — 세션 13에서 `ArtifactData` 읽기가 권한 분류기에 거부됨. 정기 세션의 대시보드 DB 갱신 허용 여부 결정 전까지 이번 세션도 갱신 건너뜀
+- Claude: 새 글 노출 검색어 확인 (`jpg to pdf`, `image to pdf`, `jpg to pdf free` 등), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: 허브 후보 `Best Free Offline File Converters` — `software` 측정 글 7편(PDF→Word·HEIC→JPG·PDF 압축·영상→GIF·영상 압축·이미지 압축·JPG→PDF). V2 판정(11-12) 후 결정
+- Claude: 발행 16편 / AdSense 신청 기준 20편
+
 ## 2026-10-16 · 세션 13 (정기 실행 12회차): 이미지 100KB 압축
 
 세션 시각: 2026-10-16 11:09 UTC (한국 20:09). 열린 PR 없음.

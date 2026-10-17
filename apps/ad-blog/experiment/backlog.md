@@ -76,6 +76,10 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | iPhone Duo 사전 주문 매진·배송 1월 말 지연: 결제 방식별 비용(일시불·ACMI·Apple Upgrade 리스) | 화제 | 2026-10-16 (사전 주문·매진), 2026-09-09 발표 | 신규 주문 배송 2027-01 말(보도), 10-23 출시·10-30 28개국 | apple.com/newsroom (09-09·10-15), apple.com/shop/apple-upgrade, apple.com/shop/help/viewing_changing_orders | 발행 `iphone-duo-sold-out` (2026-10-17) |
 | Windows 11 10월 업데이트(2026-10-15 "Everyday experiences, reimagined") | 화제 | 2026-10-15 | 미확인 | blogs.windows.com/windowsexperience/2026/10/15/ | 후보 (Google News 48시간 54건, Trends `windows 11 update` 0.0 → 화제성 낮음, 2026-10-17) |
 | Google Universal Cart (Search·Chrome 쇼핑 카트) | 화제 | 2026-10-15 | 미확인 | blog.google/products-and-platforms/products/shopping/universal-cart-launch/ | 후보 (기사 49건, Trends 0.0, 2026-10-17) |
+| Pixel Watch 2·3 LTE Safety Signal 종료: 휴대폰 없이 긴급 SOS·낙상 감지 끊김, 회선 추가·Fi 무료 워치 회선 | 영향 | 2026-10-08 (커뮤니티 공지) | 2026-12-12 종료, 이메일 후 30일 전환 | support.google.com/googlepixelwatch/thread/471984501, answer/13889549·12663810 | 발행 `pixel-watch-safety-signal-ending` (2026-10-17). 12-12 전후 Google 변경(연기·보상)이 있으면 같은 글 갱신 |
+| 커스텀 GPT 2026-12-11 종료 → 플러그인 이전 (기존 1·8번) | 영향 | 2026-09 (FAQ, 일자 미확인) | 2026-12-11 종료 (검색 발췌) | help.openai.com/en/articles/20001519 | 보류 (2026-10-17 help.openai.com·openai.com·chatgpt.com 모두 403 → 1차 출처 직접 확인 불가. 접근 가능해지면 최우선) |
+| Android Auto의 Android 10 지원 종료 | 영향 | 2026-10-05 (보도) | 미확인 | 미확인 (보도는 "could soon") | 보류 (공식 날짜 확인 시 재검토, 기사 66건/30일) |
+| OneDrive iOS 18 지원 종료 (iPhone XR·XS) | 영향 | 2026-10 (TestFlight 노트 기반 보도) | 미확인 | 없음 (Microsoft 공식 공지 없음) | 보류 |
 
 ## 반복 일정
 

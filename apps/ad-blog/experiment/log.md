@@ -2,6 +2,45 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-17 · 세션 18 (정기 실행, 영향 뉴스 세션): Pixel Watch Safety Signal 종료
+
+세션 시각: 2026-10-17 18:09 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치가 `origin/main`(9a6a674)과 같아 그대로 시작.
+
+**지표 (`gsc_report.py`, 2026-09-19 ~ 10-17, 세션 17 이후 바뀐 값만)**
+
+- 노출 103 → **106**, 클릭 4, CTR 3.9% → 3.8%, 평균 순위 25.0 → 24.6
+  - `turn-off-ai-in-chrome` 노출 52 → 54 (12.4) / `image-to-text-offline-free` 3 → 4 (10.0) / 나머지 글 변화 없음
+  - 새 검색어: `optguideondevicemodel disable` 1 (3위, Chrome 글)
+- sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사: `iphone-duo-sold-out` 포함 4편 `URL is unknown`(`compress-image-to-100kb`·`compress-video-for-discord-email`·`convert-heic-to-jpg-free`·`iphone-duo-sold-out`), 나머지 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                               | 카테고리 | 유형             | 독창 요소 |
+| ---------------------------------- | -------- | ---------------- | --------- |
+| `pixel-watch-safety-signal-ending` | `news`   | 뉴스 칼럼 (영향) | 연결 상황별 전후 비교 표(대표 이미지), Google 문서끼리의 차이 지적(공지 "Wi-Fi에서 계속 작동" vs 도움말 "LTE 워치는 휴대폰 없이 긴급 통화하려면 LTE 연결 필요"), 사용자 유형별 영향 표, 종료 타임라인(확정/추정 구분), Fi 2년 무료 데이터는 통화 미포함 |
+
+- 선정 근거 (최근 30일, Google News RSS 기사 수): `"Safety Signal" "Pixel Watch"` 24. 마감일 2026-12-12, 발표 10-08. 공식 1차 출처(Google 커뮤니티 관리자 공지·도움말 4건)를 Playwright 렌더링으로 직접 확인. 자동완성 "pixel watch safety signal" 11개, "pixel watch lte" 22개(lte plan·without phone·vs wifi)
+- 제외·보류: **커스텀 GPT 12-11 종료**(마감일 가장 가깝고 backlog 점수 최고지만 help.openai.com·openai.com·chatgpt.com 모두 403 → 1차 출처 미확인으로 보류), Fitbit 앱 종료(기사 100+지만 마감일 없음), Android Auto Android 10 종료(66건, "could soon" 추정 보도), Google Messages SMS 토글(APK 분석 = 루머), OneDrive iOS 18(공식 날짜 없음)
+- `Our take`: 혼자 있는 시간이 많은 착용자(부모님 등)는 12-12 전에 워치 회선 추가, Wi-Fi만 믿지 않음(Google 도움말 근거). Fi 사용자는 무료. 반대 관점: 대부분은 휴대폰을 지니고 다니고, 2개 모델·4개국·유료 구독자만 해당이라 월 요금을 안 내는 선택도 합리적
+- 이미지 2장 (직접 만든 그래픽 1200×675): 연결 상황별 전후 표(`thumbnail`), 종료 타임라인. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `windows-10-esu-extended`·`iphone-duo-sold-out` (관련 주제 기존 글 없음). 기존 글에서 새 글로 가는 역링크는 맞는 문맥이 없어 추가하지 않음 (카테고리·홈·관련 글 목록으로만 연결)
+- 빌드 HTML 확인: title 77자(접미사 포함, 본제목 65자)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, 본문 이미지 2장 width·height 지정, 코드 블록 0개, sitemap·RSS 포함
+- lint·test(30파일 229개)·build 통과
+
+**알게 된 것**
+
+- support.google.com 도움말·커뮤니티 글은 curl로는 본문이 비어 있음(JS 로딩) → Playwright(Python, `/opt/pw-browsers/chromium-1194`)로 렌더링하면 본문·관련 글 링크까지 받을 수 있음. 도움말 검색 결과 페이지(`/search?q=`)도 렌더링으로 열려 관련 문서 ID 찾기에 유용
+- store.google.com 상품 페이지는 렌더링으로 가격 텍스트를 받을 수 있음. 통신사 요금 페이지는 Verizon 워치 목록(기기 할부)만 열리고 T-Mobile·AT&T 요금 페이지는 실패 → 통신사 회선 요금은 이번 세션에서 확인 불가
+- droid-life.com·9to5google.com 본문은 curl로 열림, androidauthority.com은 Cloudflare 차단
+
+**다음 할 일**
+
+- Claude: 11월 중순 이메일 통지 이후나 12-12 전후로 Google이 일정 변경·보상을 발표하면 `pixel-watch-safety-signal-ending`에 반영하고 `updatedAt` 갱신
+- Claude: 칼럼 발행 4주 후(11-14) H4 판정 자료: `gsc_report.py --compare /posts/pixel-watch-safety-signal-ending --changed 2026-10-17 --metric impressions --type discover`(웹은 `--type web`). H5 비교용 영향 칼럼 1편째(화제 1편: `iphone-duo-sold-out`)
+- Claude: 커스텀 GPT 종료(12-11)는 help.openai.com 접근이 되면 최우선 영향 칼럼 후보. 계속 403이면 사용자에게 허용 도메인 추가 여부 확인 필요 (사용자 결정 사항: 네트워크 설정)
+- Claude: 발행 12편 / AdSense 신청 기준 20편
+
 ## 2026-10-17 · 세션 17 (사용자 요청): 첫 뉴스 칼럼 — iPhone Duo 매진·결제 방식별 비용
 
 세션 시각: 2026-10-17 13:20 KST (일반 세션 시각대지만 사용자가 "화제성 높은 주제"를 요청해 화제 뉴스 칼럼으로 작성). 열린 PR 없음. 작업 브랜치가 main보다 뒤처져 있어 `origin/main`에서 다시 시작.

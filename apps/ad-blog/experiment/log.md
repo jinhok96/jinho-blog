@@ -2,6 +2,20 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-17 · 규칙 변경: 비개발자 독자 기준 (사용자 요청)
+
+- 사용자 결정: 블로그 독자는 비개발자. **비개발자가 이해·사용할 수 없는 방법(명령줄·코드·개발 도구)은 쓰지 않음** ("고급 사용자용" 섹션으로도 넣지 않음)
+- 배경: 발행 18편 중 8편이 첫 답으로 명령줄 도구·Python 라이브러리를 권함 (`pdf-to-jpg-high-quality`·`merge-pdf-files-free-offline`·`jpg-to-pdf-free-offline`·`compress-pdf-offline-free`·`convert-pdf-to-word-offline-free`·`remove-background-from-image-free-offline`·`video-to-gif-high-quality-free`·`free-offline-text-to-speech`). 원인: 컨테이너에서 측정하기 쉬운 명령줄 도구가 비교 대상이 되고, 측정 1위가 그대로 첫 답이 됨. 반대로 GUI 앱을 Xvfb로 측정한 `convert-heic-to-jpg-free`, OS 내장 기능부터 안내한 `image-to-text-offline-free`는 비개발자가 따라 할 수 있음
+- 반영: [README.md](README.md) 결정사항(독자)·주제 선정 기준 0번(필수 조건)·5번(직접 검증 = 독자가 쓸 방법을 실행), [writing-guide.md](writing-guide.md) 독자 규칙·도입 순서·비교 대상·측정 보조 도구·이미지·체크리스트, [backlog.md](backlog.md) 제외 기준·직접 검증 정의·19번(제외)·41번·46번(GUI 앱·내장 기능으로 각도 변경)
+- 기존 8편은 정기 세션에서 1편씩 다시 씀 (사용자 결정, 아래 '다음 할 일')
+
+**다음 할 일**
+
+- Claude (정기 세션): 위 8편을 세션마다 1편씩 비개발자 방법으로 다시 씀. 새 글 발행이 우선이고, 수정은 그다음에 함. 순서는 첫 문장에 명령어가 있는 `pdf-to-jpg-high-quality` → `merge-pdf-files-free-offline` → `jpg-to-pdf-free-offline` → `compress-pdf-offline-free`, 이어서 나머지 4편
+  - 명령줄·코드 내용은 모두 빼고, OS 내장 기능·GUI 앱을 직접 실행·측정해 첫 답과 비교 표를 다시 만듦. 직접 실행하지 못한 방법은 문서 기반으로 표시
+  - 내용이 크게 바뀌므로 `updatedAt`을 갱신하고, traffic-playbook 검증 기록에 행을 추가. 허브 글 `free-offline-ai-tools`의 해당 설명도 함께 고침
+  - 비개발자 방법으로 답할 수 없는 글은 고치지 말고 log.md에 남겨 사용자 확인
+
 ## 2026-10-16 · 세션 16 (정기 실행 15회차): PDF 합치기
 
 세션 시각: 2026-10-16 21:10 UTC 무렵 (한국 10-17 06:10). 열린 PR 없음.

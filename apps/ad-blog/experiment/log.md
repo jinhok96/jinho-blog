@@ -2,6 +2,45 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-17 · 세션 17 (사용자 요청): 첫 뉴스 칼럼 — iPhone Duo 매진·결제 방식별 비용
+
+세션 시각: 2026-10-17 13:20 KST (일반 세션 시각대지만 사용자가 "화제성 높은 주제"를 요청해 화제 뉴스 칼럼으로 작성). 열린 PR 없음. 작업 브랜치가 main보다 뒤처져 있어 `origin/main`에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-19 ~ 10-17, 세션 16 이후 바뀐 값만)**
+
+- 노출 85 → **103**, 클릭 4, CTR 4.7% → 3.9%, 평균 순위 20.6 → 25.0
+  - `turn-off-ai-in-chrome` 노출 52 (12.7) / `transcribe-audio-offline-free` 22 (45.5) / `gemini-gems-to-skills` 8 (7.8) / `image-to-text-offline-free` 3 (5.3) / 홈 3 (5.7) / `about` 2
+  - 새 검색어: `google ai gone` 1 (3), `turn off ai` 2 (57.5), `gems to skills` 1 (10), `synthid checker` 3 (88.7)
+- sitemap 마지막 다운로드 10-15 03:42 UTC 그대로. URL 검사: 남은 10편 중 7편 색인, `compress-image-to-100kb`·`compress-video-for-discord-email`·`convert-heic-to-jpg-free` 3편 `URL is unknown`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12)
+
+**발행한 글**
+
+| slug                  | 카테고리 | 유형              | 독창 요소                                                                                                                             |
+| --------------------- | -------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------- |
+| `iphone-duo-sold-out` | `news`   | 뉴스 칼럼 (화제)  | 결제 방식별 24개월 비용 계산(일시불·ACMI·Apple Upgrade 리스 반납/인수·12개월 리스·통신사) + 그래프, 사용자 유형별 영향 표, 일정 타임라인(공식/보도 구분), 리스 약관 함정 정리 |
+
+- 선정 근거 (최근 48시간 발표, Google News RSS 기사 수, 100 = 100건 이상): `"iPhone Duo"` **100+** · `"Gemini 4"` 73(10-13 발표라 48시간 밖) · Apple TV 4K 71 · Windows 11 10월 기능 54 · Google Universal Cart 49 · AI Mode 37 · Windows Photos 28 · Gmail AI Inbox 7. Trends 7일(미국): `iphone duo` 평균 8.0·최고 67 vs `chatgpt` 69.9, `windows 11 update`·`universal cart` 0.0. 자동완성 "iphone duo" 38개(sold out·delivery date·pre order·price). Trends 급상승 RSS 10개는 연예·스포츠
+- 각도: 배송 지연 소식 자체가 아니라 "기다리는 동안 무엇을 결정해야 하나" → 결제 방식(새 Klarna 리스 Apple Upgrade)의 실제 비용과 약관. 핵심 계산: 24개월 리스 $57.99×24 = $1,391.76(가격의 69.6%, iPhone 18 Pro도 70.0%), 인수 $607.24 → 리스+인수 = 정가 $1,999 = ACMI와 같음 (ACMI는 3% Daily Cash $59.97만큼 유리)
+- `Our take`: 2년 안에 바꿀 사람에게는 리스가 낫다(인수 시 ACMI와 총액 동일 + 1세대 폴더블의 중고 가치 위험을 넘김). 반대 관점: Apple Card ACMI의 3% Daily Cash·소유권·Klarna 카드 제한 없음
+- 1차 출처: Apple 보도자료(09-09·10-15), 스토어·사양·Apple Upgrade·ACMI(support 102730)·AppleCare·주문 취소·반품 정책 페이지. 배송 예정일(1월 25일, 일부 1월 29일)과 Apple 성명(CNBC)은 9to5Mac 본문(WebFetch)으로 확인해 "reported"로 표기. CNBC(매장 재고 미공개)·MacRumors($5,000 재판매)는 헤드라인만 확인 → 출처 표기
+- 이미지 2장 (직접 만든 그래픽, 1200×675): 결제 방식별 비용 그래프(대표 이미지, `thumbnail`), 발표~배송 타임라인. 팔레트는 기존 글과 같은 파랑·주황 (dataviz 검증 스크립트 통과)
+- 내부 링크: 새 글 → `convert-heic-to-jpg-free`(HEIF 사진)·`check-if-image-is-ai-generated`(Apple의 SynthID 지원 예정). 역링크: `check-if-image-is-ai-generated` SynthID 섹션에 Apple 지원 예정 1문장 + 링크 (`updatedAt` 변경 없음)
+- 빌드 HTML 확인: title 73자(접미사 포함)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 6개, og:image 생성, 본문 이미지 2장 width·height 지정, `news` 카테고리 페이지·sitemap·RSS에 노출. 모바일(390px)·데스크톱 가로 스크롤 없음
+
+**알게 된 것**
+
+- Apple Store 배송 예정일 API(`/shop/fulfillment-messages`)는 curl·Playwright 브라우저 세션 모두 HTTP 541 → 배송 예정일은 직접 확인 불가, 보도 기반으로만 씀. apple.com 보도자료·스토어·사양·도움말 페이지 본문은 정적 HTML로 받을 수 있음 (AppleCare 요금·보상 판매 금액·수리비는 동적 로딩이라 불가)
+- 9to5mac.com(RSS·WebFetch 본문)·appleinsider.com(RSS 요약만, 본문 403)·Google News RSS 접속 가능. 뉴스 칼럼의 "reported" 확인에는 9to5Mac 본문이 가장 쓸 만함
+- 화제 판단에 Google News RSS 기사 수는 100건에서 잘림 → 100+ 후보끼리는 Trends 7일 상대값으로 구분
+
+**다음 할 일**
+
+- Claude: 10-23(첫 배송·매장 재고)·10-30(28개국 출시) 이후 배송 예정일·매장 판매 변화가 있으면 같은 글에 반영하고 `updatedAt` 갱신 (뉴스 칼럼 후속 갱신 규칙)
+- Claude: 칼럼 발행 4주 후(11-14) H4 판정 자료: `gsc_report.py --compare /posts/iphone-duo-sold-out --changed 2026-10-17 --metric impressions --type discover`(웹은 `--type web`)
+- 사용자: 대시보드 DB 갱신은 이번 세션도 건너뜀 (정기·대화형 세션 갱신 허용 여부 결정 대기)
+- Claude: 발행 11편 / AdSense 신청 기준 20편
+
 ## 2026-10-17 · 명령줄 글 정리: 8편 삭제 + 남은 글의 명령줄 내용 제거 (사용자 요청)
 
 - 사용자 결정: 명령줄 방법은 비개발자가 이해할 수 없으므로 쓰지 않음. 명령줄을 첫 답으로 권한 8편은 재작성하지 않고 **삭제**, 남은 글의 명령줄 섹션도 지금 제거

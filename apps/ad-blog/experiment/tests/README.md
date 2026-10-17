@@ -17,6 +17,7 @@
 | [video-to-gif-high-quality-free](video-to-gif-high-quality-free) | 영상→GIF 오프라인 변환 3개 도구 7개 설정(FFmpeg 9.0.2·gifski 1.34.0·ImageMagick 7.1.2-34) 측정: 클립 3개(애니메이션·실사·화면 녹화, 75프레임) 크기·SSIM·재생 시간·속도·메모리, 폭·fps별 크기, 확대 비교 이미지, 사실 확인표 (재현: facts.md 하단) **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
 | [jpg-to-pdf-free-offline](jpg-to-pdf-free-offline) | JPG→PDF 오프라인 변환 5개 도구(img2pdf 0.6.3·ImageMagick 7.1.2-34·Pillow 12.3.0·LibreOffice 26.8.1·Chromium 141) 측정: 12MP 사진 24장(세로 4장 EXIF Orientation=6) PDF 크기·픽셀 동일 여부·SSIMULACRA2·세로 사진 방향·속도·메모리, LibreOffice 무손실 설정 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tests.py` → `analyze.py` → `summarize.py` → `charts.py`) **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
 | [merge-pdf-files-free-offline](merge-pdf-files-free-offline) | PDF 합치기 6개 도구(qpdf 12.4.2·pdfunite 26.10·Ghostscript 10.08·pdftk-java 3.3.3·pypdf 6.21·PyMuPDF 1.28.2) 측정: 책갈피·목차 링크·W-9 양식 2부·사진 보존, Chrome 141 PDF 뷰어 입력·클릭 테스트, 사실 확인표 **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
+| [iphone-duo-sold-out](iphone-duo-sold-out) | 뉴스 칼럼(화제) 사실 확인표: Apple 보도자료·스토어·Apple Upgrade·반품 정책 대조, 화제성 신호(Google News 기사 수·Trends), 결제 방식별 비용 계산, 그래프 스크립트(`charts.py <출력 폴더>`), 기사 수 집계 스크립트(`news_count.py`) |
 
 ## 받아쓰기 벤치마크 재현
 

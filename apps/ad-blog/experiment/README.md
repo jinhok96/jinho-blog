@@ -123,7 +123,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 - 주소: **https://claude.ai/artifact/4nL6tkJXzL4YQd2FXis8Cb** (claude.ai 아티팩트, 비공개. 공유는 사용자가 Share 메뉴에서). **이 주소를 항상 유지**: 새 아티팩트를 만들지 않고, 페이지를 고칠 때도 `Artifact` publish에 `url`로 이 주소를 넘김 (다른 세션에서 `url` 없이 발행하면 새 주소가 생김). 삭제 금지
 - 페이지 원본: [dashboard/index.html](dashboard/index.html). 데이터는 아티팩트 DB(`db` 기능, 읽기 `view`·쓰기 `admin`)의 `stats` 컬렉션에 있고 로그인한 사람에게는 페이지가 실시간으로 읽음. **비로그인 방문자**는 DB를 읽을 수 없어(플랫폼 규칙) 아티팩트 파일 `data.js`(마지막 세션 기준 스냅숏)를 보여 줌. **`data.js`는 정기 세션에서 자동으로 올리지 않음** (2026-10-16 사용자 결정: 대시보드가 링크 공개 상태라 정기 실행의 재게시는 권한 분류기가 매번 거부함). 비로그인 화면은 사용자가 요청한 대화형 세션에서만 갱신
 - `stats` 문서: `summary`(갱신 시각·28일 합계·사이트맵), `daily-YYYY-MM`(달마다 날짜별 지표, 확정/미확정 표시), `posts`(글별 메타·단어 수·태그·28일 지표·검색어 상위 10·날짜별 노출·색인 상세(크롤러·표준 URL) + `otherPages`: 홈·카테고리 등 글 외 페이지, 글별 표 합계를 사이트 전체 KPI와 맞추기 위함), `breakdown`(28일 기기·국가·검색 유형별 지표, 사이트 검색어 상위 20), `experiments`(traffic-playbook 검증 기록 + 발행 글 수·AdSense 기준), `knowhow`(traffic-playbook 노하우 상태), `sessions`(log.md 세션 제목)
-- 세션마다 갱신 절차 (log.md·traffic-playbook.md를 고친 뒤)
+- 세션마다 갱신 절차 (log.md·traffic-playbook.md를 고친 뒤). 정기 세션도 매번 이 절차를 시도하고, 권한 분류기 등에 막히면 5번대로 기록 (2026-10-17 사용자 결정: "루틴 규칙 그대로")
   1. `ArtifactData` `list` (`url` 위 주소, `collection: "stats"`)로 문서별 `version` 확인
   2. `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --out /tmp/dashboard --versions '{"summary": N, "posts": N, "breakdown": N, "experiments": N, "knowhow": N, "sessions": N, "daily-2026-10": N}'` (1에서 본 버전. 새 달 문서처럼 처음 만드는 문서는 빼면 새로 생성)
   3. `/tmp/dashboard/writes.json` 내용을 `ArtifactData` `batch`의 `writes`로 그대로 전달 (버전이 어긋나면 아무것도 쓰이지 않음 → 1부터 다시)

@@ -73,6 +73,9 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | ChatGPT 광고 개인화 끄기·Ads-Free (기존 22번) | 영향 | 미확인 | 미확인 (기존 수명 6~12개월) | 미기록 | 재평가 필요(최신성 확인) |
 | Gemini 4 Argon: 무료 사용 범위·요금 (기존 30번) | 화제 | 2026-10-13 (출시) | 미확인 (기존 수명 2~4개월) | 미기록 | 재평가 필요(최신성 확인) |
 | Windows 11 새 Photos 앱: Gallery·Editor·HEIC 편집 (기존 35번) | 영향 | 2026-10-15 (Insider 배포) | 일반 배포일 미확인 (기존 수명 6~12개월) | 미기록 | 재평가 필요(최신성 확인) |
+| iPhone Duo 사전 주문 매진·배송 1월 말 지연: 결제 방식별 비용(일시불·ACMI·Apple Upgrade 리스) | 화제 | 2026-10-16 (사전 주문·매진), 2026-09-09 발표 | 신규 주문 배송 2027-01 말(보도), 10-23 출시·10-30 28개국 | apple.com/newsroom (09-09·10-15), apple.com/shop/apple-upgrade, apple.com/shop/help/viewing_changing_orders | 발행 `iphone-duo-sold-out` (2026-10-17) |
+| Windows 11 10월 업데이트(2026-10-15 "Everyday experiences, reimagined") | 화제 | 2026-10-15 | 미확인 | blogs.windows.com/windowsexperience/2026/10/15/ | 후보 (Google News 48시간 54건, Trends `windows 11 update` 0.0 → 화제성 낮음, 2026-10-17) |
+| Google Universal Cart (Search·Chrome 쇼핑 카트) | 화제 | 2026-10-15 | 미확인 | blog.google/products-and-platforms/products/shopping/universal-cart-launch/ | 후보 (기사 49건, Trends 0.0, 2026-10-17) |
 
 ## 반복 일정
 

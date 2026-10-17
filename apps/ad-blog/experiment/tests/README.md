@@ -19,6 +19,7 @@
 | [merge-pdf-files-free-offline](merge-pdf-files-free-offline) | PDF 합치기 6개 도구(qpdf 12.4.2·pdfunite 26.10·Ghostscript 10.08·pdftk-java 3.3.3·pypdf 6.21·PyMuPDF 1.28.2) 측정: 책갈피·목차 링크·W-9 양식 2부·사진 보존, Chrome 141 PDF 뷰어 입력·클릭 테스트, 사실 확인표 **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
 | [iphone-duo-sold-out](iphone-duo-sold-out) | 뉴스 칼럼(화제) 사실 확인표: Apple 보도자료·스토어·Apple Upgrade·반품 정책 대조, 화제성 신호(Google News 기사 수·Trends), 결제 방식별 비용 계산, 그래프 스크립트(`charts.py <출력 폴더>`), 기사 수 집계 스크립트(`news_count.py`) |
 | [pixel-watch-safety-signal-ending](pixel-watch-safety-signal-ending) | 뉴스 칼럼(영향) 사실 확인표: Google 커뮤니티 공지·Pixel Watch·Google Fi·Google Health 도움말 대조(Playwright 렌더링), 후보별 기사 수, 공지 원문(`source-announcement.txt`), 그래픽 스크립트(`charts.py <출력 폴더>`) |
+| [split-pdf-free](split-pdf-free) | PDF 나누기 GUI 방법 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Chromium 141 인쇄 Save as PDF) 측정: 12쪽 입력(보고서 책갈피·목차 링크, W-9 양식, 사진) 텍스트·사진·책갈피·링크·양식 보존, 한 쪽씩·크기별 나누기, Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 
 ## 받아쓰기 벤치마크 재현
 
@@ -61,3 +62,10 @@
 2. download.blender.org에서 `bbb_sunflower_2160p_30fps_normal.mp4.zip`·`ToS-4k-1920.mov.zip`을 `/tmp/cv/dl`에 풀고 `record_screen.sh` → `make_sources.sh`로 60초 클립 3개
 3. `python3 -I run_tests.py [설정 …]` → `/tmp/cv/out/results.json` (다른 작업이 없을 때 실행해야 시간이 정확함)
 4. `results.json`을 이 폴더로 복사 후 venv(matplotlib·pillow)에서 `python -I charts.py /tmp/cv <출력 폴더>` → 글 이미지 5장. HandBrake 원본 차이 확인은 `hb_psnr_check.sh`
+
+## PDF 나누기(GUI) 측정 재현
+
+1. venv(`/tmp/pdfs`)에 `pypdf pikepdf pymupdf playwright pillow img2pdf matplotlib` 설치. `apt-get install xdotool imagemagick flatpak`, PDFsam Basic은 `github.com/torakiki/pdfsam/releases/download/v6.0.6/pdfsam-basic_6.0.6-1_amd64.deb`를 `dpkg -i`, PDF Arranger는 `flatpak install flathub com.github.jeromerobert.pdfarranger` (시스템 D-Bus 필요: `dbus-daemon --system --fork`)
+2. `/tmp/split/src/fw9.pdf`(IRS)와 `/tmp/split/photos/14.jpg`·`15.jpg`(convert-heic-to-jpg-free/sources.json의 PD12M URL)를 받은 뒤 `/tmp/pdfs/bin/python -I build_input.py` → `/tmp/split/in/packet.pdf`
+3. `Xvfb :99 -screen 0 1600x1000x24` 위에서 각 앱을 화면 조작(xdotool)으로 실행: PDFsam Extract `1-4,5-10`(각 범위 별도 파일)·Split Every page·Split by size 1MB, PDF Arranger(`pa_launch.sh`, `XDG_RUNTIME_DIR` 필요) Ctrl+E로 1~4·5~10쪽·Shift+Ctrl+E로 한 쪽씩, Chromium(`chrome_launch.sh`) Ctrl+P → Save as PDF → Custom `1-4`·`5-10`·`11` (드롭다운은 클릭 후 방향키로 Custom 선택). 결과는 `run_analyze.sh`의 경로에 저장
+4. `./run_analyze.sh` → `results.jsonl`, `chrome_form_shot.py`로 양식 입력 캡처, `/tmp/pdfs/bin/python -I charts.py /tmp/split <출력 폴더>` → 글 이미지 7장

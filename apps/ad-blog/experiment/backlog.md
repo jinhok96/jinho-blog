@@ -55,7 +55,7 @@
 | 43   | JPG → PDF 무료 오프라인 변환 (img2pdf·ImageMagick·Pillow·LibreOffice·Chromium 측정)       | jpg to pdf                                  | -    | 예 (24장, 세로 4장)       | 상시                  | 삭제 `jpg-to-pdf-free-offline` (2026-10-17 명령줄 방법 → GUI 앱·내장 기능으로 새로 쓸 후보) (2026-10-16). Trends `jpg to pdf` 13.1 · `image to pdf` 8.1 · `png to jpg` 3.9 (기준 `remove background` 35.4) |
 | 44   | PDF → JPG 고화질 변환 (pdftoppm·PyMuPDF·Ghostscript·ImageMagick·LibreOffice 측정, DPI)   | pdf to jpg                                  | -    | 예 (PDF 3개, 설정 25개)   | 상시                  | 삭제 `pdf-to-jpg-high-quality` (2026-10-17 명령줄 방법 → GUI 앱·내장 기능으로 새로 쓸 후보) (2026-10-16). Trends 429로 미비교, 자동완성 30개(high quality·high resolution) |
 | 45   | PDF 합치기 무료 오프라인 (qpdf·pdfunite·Ghostscript·pdftk·pypdf·PyMuPDF, 책갈피·링크·양식 보존) | merge pdf files free                        | -    | 예 (6개 + 변형 2개)       | 상시                  | 삭제 `merge-pdf-files-free-offline` (2026-10-17 명령줄 방법 → GUI 앱·내장 기능으로 새로 쓸 후보) (2026-10-16). Trends `merge pdf` 6.3 · `png to jpg` 3.9 · `webp to jpg` 1.9 · `upscale image` 1.3 (기준 `remove background` 35.1) |
-| 46   | PDF 나누기·페이지 추출 무료 오프라인 (OS 내장 기능·GUI 앱, 책갈피·양식 유지)                | split pdf                                   | -    | 예                        | 상시                  | 후보 (2026-10-16, 합치기 글의 짝. 수요 확인 전). 합치기 글의 명령줄 도구가 아닌 내장 기능·GUI 앱(Mac 미리보기, Chrome 인쇄의 페이지 지정 등)으로 측정 (2026-10-17) |
+| 46   | PDF 나누기·페이지 추출 무료 오프라인 (OS 내장 기능·GUI 앱, 책갈피·양식 유지)                | split pdf free                              | -    | 예 (GUI 3개)              | 상시                  | 발행 `split-pdf-free` (2026-10-17 세션 19, PDFsam Basic·PDF Arranger·Chrome 인쇄를 GUI로 측정, Mac 미리보기는 문서 기반). Trends `split pdf` 22.6 · `merge pdf` 23.5 (3개월 평균, 미국) |
 
 ## 뉴스 칼럼 후보
 

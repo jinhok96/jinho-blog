@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-18 · 세션 19 (정기 실행, 일반 세션): PDF 나누기 GUI 3가지 측정
+
+세션 시각: 2026-10-18 00:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(f4c758e)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-19 ~ 10-17, 세션 18 이후 바뀐 값만)**
+
+- 노출 106 → **109**, 클릭 4, CTR 3.8% → 3.7%, 평균 순위 24.6 → 24.9
+  - `turn-off-ai-in-chrome` 노출 54 → 56 (12.1) / `check-if-image-is-ai-generated` 11 → 12 (73.7) / 나머지 글 변화 없음
+  - 검색어: `synthid checker` 3 → 4 (89.0)
+- **sitemap 마지막 다운로드 10-15 03:42 → 10-17 10:45 UTC** (이틀 만에 다시 읽음). URL 검사 변화 없음: 4편 `URL is unknown`(`compress-image-to-100kb`·`compress-video-for-discord-email`·`convert-heic-to-jpg-free`·`iphone-duo-sold-out`) + `pixel-watch-safety-signal-ending`(10-17 발행) 미색인, 나머지 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug             | 카테고리   | 유형                                   | 직접 검증 |
+| ---------------- | ---------- | -------------------------------------- | --------- |
+| `split-pdf-free` | `software` | 비교 + How-to (측정형, 검색형)          | 12쪽 PDF(직접 만든 보고서 4쪽: 책갈피 4·목차 링크 3·외부 링크 1 + IRS W-9 6쪽: 양식 23칸·1번 칸 입력 + CC0 사진 2쪽)를 **GUI 3가지로 직접 조작**해 나눔: PDFsam Basic 6.0.6(Extract·Split Every page·Split by size), PDF Arranger 1.14.0(Export Selection·Export All Pages), Chromium 141 인쇄 → Save as PDF(Custom 쪽 범위). 결과마다 쪽별 텍스트·사진 바이트·책갈피·링크·양식 칸을 점검하고 Chrome 뷰어에서 양식 입력 시험 |
+
+- 선정 근거: Trends(미국 3개월, 이번 세션은 429 없이 응답) `merge pdf` 23.5 · **`split pdf` 22.6** · `png to jpg` 14.4 · `webp to jpg` 6.6. 자동완성 "split pdf" 25개 이상(free·into individual pages·online·pages, by size·into multiple pdfs). backlog 46번(합치기 글의 짝, GUI 앱·내장 기능으로 측정하기로 한 후보)
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음
+- 차별점: 나누기는 "무손실"이라 차이가 없어 보이지만 결과 파일의 **동작**이 다름 → Chrome Save as PDF는 텍스트·사진은 그대로지만 **W-9 양식을 평면화**(입력 불가)하고 책갈피 0/4·목차 링크 0/3. PDF Arranger는 양식·링크를 지키지만 **W-9만 내보낸 파일에 보고서 책갈피 4개가 남음**(Chrome에서 눌러도 이동 없음, 사용자 설명서의 "Preserve document information from the first file opened" 설정과 일치). PDFsam Basic은 모두 유지. PDFsam Split by size 1MB는 한 쪽이 한도보다 크면 그 쪽이 한도를 넘는 파일로 남음(사진 쪽 1.19·1.28MB)
+- Mac 미리보기는 macOS를 실행할 수 없어 Apple 사용자 가이드 기반으로만 쓰고 요약 표에 "Not tested" 표기
+- 적용한 노하우: 검색형 제목 57자·설명 154자, 측정 규모 제목 표기 `(3 Ways Tested)`, 이미지 7장(대표 점검표 1200×675 + Chrome 양식 입력 비교 + PDF Arranger 남은 책갈피 + PDFsam Extract·Split by size 화면 + PDF Arranger Export 메뉴 + Chrome 인쇄 미리 보기), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → `compress-video-for-discord-email`(Gmail 25MB)·`compress-image-to-100kb`·`image-to-text-offline-free`·`convert-heic-to-jpg-free` (4개). 역링크: `image-to-text-offline-free` NAPS2 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 69자(접미사 포함)·description 154자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 이미지 7장 width·height 지정, sitemap·RSS 포함
+- lint·test(30파일 229개)·build 통과
+
+**알게 된 것**
+
+- PDFsam Basic(JavaFX)도 Xvfb + xdotool로 조작 가능. 파일 선택은 GTK 대화상자에 경로를 바로 입력(`xdotool type --window`)하면 되고, 입력 칸은 창 포커스를 준 뒤(`windowfocus --sync`) 입력해야 들어감. 크롬 창이 함께 떠 있으면 포커스를 가져가 입력이 빠짐
+- PDF Arranger Flatpak(1.14.0)은 `flatpak run`에 시스템 D-Bus(`dbus-daemon --system --fork`)와 세션 D-Bus(`dbus-run-session`)가 필요하고, 저장은 문서 포털(FUSE)을 거치므로 `XDG_RUNTIME_DIR=/run/user/0`을 지정해야 함 (없으면 `/root/.cache/doc/...` 없음 오류). Ubuntu apt 판은 1.10.1로 오래됨
+- Chromium 인쇄 미리 보기는 Xvfb 창 모드(`--no-sandbox`)에서 열리고, "Pages" 드롭다운은 클릭으로 펼친 목록이 화면 캡처에 안 잡힐 때가 있어 포커스 후 방향키(↓×3 = Custom)가 확실함. "Print as image" 체크 상자를 잘못 누르지 않게 주의 (측정 중 한 번 눌려 다시 해제)
+- `pgrep -f`/`pkill -f`에 앱 이름을 쓰면 같은 문자열을 가진 셸 명령까지 죽어 Bash 호출이 끊김(exit 144) → `pgrep -x`나 `flatpak kill` 사용
+- 네트워크: pdfsam.org(다운로드 페이지)·GitHub Releases(pdfsam v6.0.6)·dl.flathub.org·flathub.org API·raw.githubusercontent.com(README·wiki)·irs.gov·support.apple.com(Playwright 렌더링)·support.google.com(렌더링) 가능. github.com 저장소·archive 소스 zip은 403
+
+**다음 할 일**
+
+- Claude: 새 글 노출 검색어 확인 (`split pdf free`, `split pdf into individual pages`, `split pdf by size`), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: PDF 글 GUI 시리즈 후보 — 삭제한 PDF 합치기·JPG→PDF·PDF→JPG를 PDFsam Basic·PDF Arranger·Mac 미리보기·Chrome으로 다시 측정 가능 (이번 세션 설치·조작 절차 재사용: tests/README "PDF 나누기(GUI) 측정 재현")
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 11·8 → 12·9). 이번 세션은 `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 13편 / AdSense 신청 기준 20편
+
 ## 2026-10-17 · 세션 18 (정기 실행, 영향 뉴스 세션): Pixel Watch Safety Signal 종료
 
 세션 시각: 2026-10-17 18:09 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치가 `origin/main`(9a6a674)과 같아 그대로 시작.

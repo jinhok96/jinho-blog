@@ -77,8 +77,10 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | Windows 11 10월 업데이트(2026-10-15 "Everyday experiences, reimagined") | 화제 | 2026-10-15 | 미확인 | blogs.windows.com/windowsexperience/2026/10/15/ | 후보 (Google News 48시간 54건, Trends `windows 11 update` 0.0 → 화제성 낮음, 2026-10-17) |
 | Google Universal Cart (Search·Chrome 쇼핑 카트) | 화제 | 2026-10-15 | 미확인 | blog.google/products-and-platforms/products/shopping/universal-cart-launch/ | 후보 (기사 49건, Trends 0.0, 2026-10-17) |
 | Pixel Watch 2·3 LTE Safety Signal 종료: 휴대폰 없이 긴급 SOS·낙상 감지 끊김, 회선 추가·Fi 무료 워치 회선 | 영향 | 2026-10-08 (커뮤니티 공지) | 2026-12-12 종료, 이메일 후 30일 전환 | support.google.com/googlepixelwatch/thread/471984501, answer/13889549·12663810 | 발행 `pixel-watch-safety-signal-ending` (2026-10-17). 12-12 전후 Google 변경(연기·보상)이 있으면 같은 글 갱신 |
+| iPhone Handoff 통신사 요금: Verizon $10/월(10-16 발표, 시작일 미정)·T-Mobile $5/월·AT&T 미지원 | 화제 | 2026-10-16 (Verizon), 2026-09-10 (T-Mobile) | Verizon 시작일 미정 | verizon.com/about/news/iphone-duo-verizon-offers, t-mobile.com/news/devices/iphone-18-pro-iphone-duo-apple-watch-release, support.apple.com/en-us/127274 | 발행 `iphone-handoff-verizon-cost` (2026-10-17 세션 20). Verizon 시작·AT&T 지원 발표 시 같은 글 갱신 |
 | 커스텀 GPT 2026-12-11 종료 → 플러그인 이전 (기존 1·8번) | 영향 | 2026-09 (FAQ, 일자 미확인) | 2026-12-11 종료 (검색 발췌) | help.openai.com/en/articles/20001519 | 보류 (2026-10-17 help.openai.com·openai.com·chatgpt.com 모두 403 → 1차 출처 직접 확인 불가. 접근 가능해지면 최우선) |
 | Android Auto의 Android 10 지원 종료 | 영향 | 2026-10-05 (보도) | 미확인 | 미확인 (보도는 "could soon") | 보류 (공식 날짜 확인 시 재검토, 기사 66건/30일) |
+| Samsung One UI 9 배포 확대 (Galaxy S23 마지막 메이저 업데이트, A 시리즈) | 화제 | 2026-09-16 (공식 배포 시작), 10-15~16 기기별 배포 보도 | 미확인 | news.samsung.com/global (RSS) | 보류 (2026-10-18 Trends 급상승 `one ui 9` 200+, 48시간 기사 30건. 공식 발표가 48시간 밖이고 기기별 일정은 보도 위주) |
 | OneDrive iOS 18 지원 종료 (iPhone XR·XS) | 영향 | 2026-10 (TestFlight 노트 기반 보도) | 미확인 | 없음 (Microsoft 공식 공지 없음) | 보류 |
 
 ## 반복 일정

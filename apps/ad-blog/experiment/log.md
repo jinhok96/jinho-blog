@@ -2,6 +2,47 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-18 · 세션 20 (정기 실행, 화제 뉴스 세션): iPhone Handoff 통신사 요금
+
+세션 시각: 2026-10-18 06:16 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(9efd2e0)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-19 ~ 10-17, 세션 19 이후 바뀐 값만)**
+
+- 노출 109 → **114**, 클릭 4, CTR 3.7% → 3.5%, 평균 순위 24.9 → 25.3
+  - `turn-off-ai-in-chrome` 노출 56 → 58 (11.8) / `check-if-image-is-ai-generated` 12 → 14 (74.6) / `transcribe-audio-offline-free` 22 → 23 (43.7) / 나머지 변화 없음
+  - 검색어: `synthid checker` 4 → 5 (86.4), 새 검색어 `synthid check` 1 (84), `360converter offline transcriber` 1 (97)
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 6편 `URL is unknown`(`compress-image-to-100kb`·`compress-video-for-discord-email`·`convert-heic-to-jpg-free`·`iphone-duo-sold-out`·`pixel-watch-safety-signal-ending`·`split-pdf-free`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                          | 카테고리 | 유형             | 독창 요소 |
+| ----------------------------- | -------- | ---------------- | --------- |
+| `iphone-handoff-verizon-cost` | `news`   | 뉴스 칼럼 (화제) | 통신사별 12·24개월 누적 요금 그래프(대표 이미지)·표, 사용자 유형별 영향 표, 발표 일정 타임라인(미정 구간 점선), Apple 지원 통신사 목록(미국 T-Mobile만)과 Verizon 발표의 차이, eSIM을 지워도 요금이 계속될 수 있다는 Apple 문서 경고, iPad·Mac은 Handoff 없이 무료로 번호 사용 |
+
+- 선정 근거 (최근 48시간 발표, Google News RSS 기사 수): `"iPhone Handoff"` **32**(10-16 Verizon $10 발표 기사) · `"One UI 9"` 30 · ChatGPT Chrome 확장 29 · Universal Cart 21 · App Store 가이드라인 12 · Gmail AI Inbox 8 · Pixel AI Pro 체험 7. Trends 7일: `iphone handoff` 0.3(최고 5) > `one ui 9` 0.2. 자동완성 "iphone handoff" 22개(verizon·att·setting·not working)
+- 제외: Trends 급상승 RSS의 IT 주제는 `one ui 9`(200+)뿐이지만 공식 배포 발표가 09-16(Samsung Newsroom)이라 48시간 밖, 최근 기사는 기기별 배포·QuickStar 문제(Samsung 커뮤니티 403). Apple TV 4K·HomePod mini(10-13)·지진 경보·Windows Photos(10-15)는 48시간 밖. ChatGPT Chrome 확장은 openai.com 403
+- `Our take`: 대부분은 돈 낼 필요 없음, Verizon $10은 매주 iPhone을 바꿔 쓰는 사람 아니면 정당화 어려움(근거: 번호를 옮길 뿐 한 번에 한 대만 활성, iPad·Mac은 무료로 번호 사용, Verizon은 포함 내용 미발표). 반대 관점: 두 번째 회선을 따로 내고 있다면 Handoff가 대체해 더 쌀 수 있음
+- 1차 출처: Verizon 발표(10-16), T-Mobile Newsroom(09-10)·FAQ, Apple 지원 문서 127274(09-09)·108758, Apple Newsroom(10-15, 리스 $57.99). 모두 curl 정적 HTML로 본문 확인
+- 이미지 2장 (직접 만든 그래픽 1200×675): 통신사별 누적 요금(`thumbnail`), 일정 타임라인. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `iphone-duo-sold-out`·`pixel-watch-safety-signal-ending`. 역링크: `iphone-duo-sold-out` eSIM 문단에 1문장 추가 (`updatedAt` 변경 없음)
+- 빌드 HTML 확인: title 78자(접미사 포함, 본제목 66자)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(30파일 229개)·build 통과
+
+**알게 된 것**
+
+- verizon.com/about/news·t-mobile.com(뉴스룸·기기 페이지 FAQ)·support.apple.com 문서는 curl 정적 HTML로 본문을 받을 수 있음. news.samsung.com은 페이지 직접 접속 실패(000), RSS(`/global/feed`)는 가능. us.community.samsung.com 403
+- Python `urllib`로 여러 RSS를 연속으로 받으면 멈춤(프록시 연결 대기) → 뉴스 RSS는 `curl -m 25`로 받고 파싱만 Python으로
+- Google News RSS 토픽(TECHNOLOGY) 피드는 빈 응답 → 검색 RSS(`when:2d`)와 매체 RSS로 대체
+
+**다음 할 일**
+
+- Claude: Verizon이 Handoff 시작일·포함 조건을 발표하거나 AT&T가 지원을 발표하면 `iphone-handoff-verizon-cost`에 반영하고 `updatedAt` 갱신 (Apple 지원 문서 127274 통신사 목록도 확인)
+- Claude: 칼럼 발행 4주 후(11-15) H4 판정 자료: `gsc_report.py --compare /posts/iphone-handoff-verizon-cost --changed 2026-10-17 --metric impressions --type discover`(웹은 `--type web`). H5 화제 칼럼 2편째
+- Claude: 검증 기록 V1(11-11)·V2(11-12) 판정, Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 12·9 → 13·10). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 14편 / AdSense 신청 기준 20편
+
 ## 2026-10-18 · 세션 19 (정기 실행, 일반 세션): PDF 나누기 GUI 3가지 측정
 
 세션 시각: 2026-10-18 00:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(f4c758e)에서 다시 시작.

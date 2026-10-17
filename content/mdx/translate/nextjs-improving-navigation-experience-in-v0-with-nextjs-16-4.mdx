@@ -1,0 +1,23 @@
+---
+title: Next.js 16.4로 v0의 네비게이션 경험 개선
+description: Next.js 16.4의 Partial Prefetching 및 새로운 최적화 Skill을 활용하여 v0의 네비게이션 경험을 개선하고 로딩 시간을 단축한 사례를 소개합니다.
+category: nextjs
+sourceUrl: https://nextjs.org/blog/improving-navigation-experience-in-v0-with-nextjs-16-4
+createdAt: 2026-10-16
+---
+
+> 원문: [Improving navigation experience in v0 with Next.js 16.4](https://nextjs.org/blog/improving-navigation-experience-in-v0-with-nextjs-16-4) — Next.js Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Next.js 16.4는 Partial Prefetching 기능을 강화하고 `next-partial-prefetching-optimizer` Skill을 도입하여 애플리케이션의 네비게이션 경험을 개선했습니다. 이 Skill은 Playwright의 `instant()` helper와 함께 사용하여, 사용자가 페이지를 클릭하기 전에 필요한 콘텐츠를 미리 가져오고, 재방문 시에는 캐시된 콘텐츠를 활용하여 로딩 경험을 Single-Page Application처럼 부드럽게 만들도록 돕습니다.
+
+v0에서는 이 Skill을 활용하여 다양한 영역의 네비게이션을 최적화했습니다.
+
+-   `/templates/[id]` 경로는 템플릿 헤더, 제목, 미리보기를 즉시 로딩되도록 하여 사용자 경험을 향상시켰습니다.
+-   대규모 그리드에서는 사용자의 의도(호버, 포커스, 터치)에 따라 콘텐츠 미리보기를 시작하도록 하여 불필요한 미리보기를 방지했습니다.
+-   `/settings` 하위 페이지에서는 개인화된 콘텐츠를 브라우저 캐시에 저장하고, 필요한 페이지는 미리 가져와 재방문 시에도 즉시 로딩되도록 했습니다.
+-   `/projects` 페이지에서는 프로젝트 제목과 특정 섹션을 미리 가져오고, 다른 콘텐츠는 필요할 때 로딩되도록 하여 로딩 시간과 비용 간의 균형을 맞췄습니다.
+
+이러한 개선은 총 비용을 2.9% 절감했으며, 사용자들은 페이지를 열자마자 더 많은 유용한 콘텐츠를 보고, 재방문 시 로딩 상태를 덜 경험하게 되었습니다.
+
+자세한 내용은 원문에서 확인하세요.

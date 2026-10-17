@@ -93,7 +93,7 @@ What stood out:
 - **When credentials survived a tool that doesn't support them, they broke.** ImageMagick copied the C2PA block into its re-saved JPEG, but the new image data no longer matched the signed hash, so both checkers marked the file **Invalid** (`assertion.dataHash.mismatch`). Deleting only the EXIF fields, without changing a single pixel, had the same effect. The AI label was still readable in the raw data, which is why "invalid" means "changed since signing," not "fake."
 - **Only the C2PA-aware edit kept a valid record.** When c2patool signed the resized copy with the original attached as its parent, the new file validated as **Trusted** and still carried the original's AI label in its history.
 
-We tested a Python imaging library, ImageMagick and a browser. We did not test phone gallery apps, Photoshop or social media uploads, which may handle credentials differently, and we did not test SynthID watermarks. Cutting a subject out of its background is another common edit: in our [test of free offline background removal tools](/posts/remove-background-from-image-free-offline), the PNG that rembg saved kept none of the camera details stored in the original JPEG.
+We tested a Python imaging library, ImageMagick and a browser. We did not test phone gallery apps, Photoshop or social media uploads, which may handle credentials differently, and we did not test SynthID watermarks.
 
 ## FAQ
 

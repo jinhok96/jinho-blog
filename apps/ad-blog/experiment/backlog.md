@@ -3,7 +3,8 @@
 후보 주제와 선정 근거를 기록합니다. 기준은 [README.md](README.md)의 "주제 선정 기준". 발행하면 상태를 `발행`으로 바꾸고 slug를 적습니다. 날짜·기능 정보는 조사 시점 기준이므로 **글을 쓰기 전에 1차 출처를 다시 확인**합니다.
 
 - 조사일: 2026-10-11 (WebSearch 미국 결과, 공식 문서 위주. help.openai.com·support.google.com·apple.com·microsoft.com은 WebFetch로 열리지 않아 검색 발췌로만 확인 → 발행 전 재확인 필요)
-- 직접 검증: 컨테이너는 npm·PyPI·GitHub만 접속 가능. 모델 파일이 GitHub Releases에 있는 것만 직접 실행 가능 (sherpa-onnx 음성 인식·TTS, rembg). Hugging Face·Ollama 모델은 불가
+- **제외 기준**: 비개발자가 쓸 수 있는 방법(OS 내장 기능·설정 메뉴·무료 GUI 앱·웹 서비스)으로 끝나지 않는 주제는 점수와 상관없이 제외 (README 주제 선정 기준 0번, 2026-10-17 사용자 결정)
+- 직접 검증: 독자가 쓸 방법(GUI 앱·웹 화면·설정 메뉴)을 컨테이너에서 실행·확인할 수 있는지. GUI 앱은 Xvfb+xdotool로 조작·캡처 가능 (세션 9). 명령줄 도구만 실행할 수 있으면 직접 검증으로 치지 않음. 받을 수 있는 앱 범위는 README 인프라 상태 참고
 - 점수: 2×최신성 + 2×문제 구체성 + 2×직접 검증 + 2×광고 가치 + 경쟁 공백 + 수명 + AI 요약 내성 (최대 55)
 
 | 순위 | 주제                                                                                       | 핵심 키워드                                 | 점수 | 직접 검증                 | 수명                  | 상태                                                            |
@@ -26,7 +27,7 @@
 | 16   | Meta Muse 개인정보: 볼 수 있는 데이터·옵트아웃                                             | meta muse privacy                           | 35   | 조사만                    | 6~12개월              | 후보                                                            |
 | 17   | 공식 ChatGPT 브라우저 확장 vs 유사 확장 권한                                               | chatgpt chrome extension official           | 35   | 대부분 조사만             | 6~12개월              | 후보                                                            |
 | 18   | AI 챗봇 학습 데이터 사용 끄기 (ChatGPT·Gemini·Claude·Copilot 등)                           | stop ai from training on my data            | 32   | 조사만                    | 상시 (분기 갱신)      | 후보                                                            |
-| 19   | Ollama 0.40 변경 사항                                                                      | ollama 0.40                                 | 32   | 일부                      | 2~4개월               | 후보 (수요 약함)                                                |
+| 19   | Ollama 0.40 변경 사항                                                                      | ollama 0.40                                 | 32   | 일부                      | 2~4개월               | 제외 (개발자 대상, 2026-10-17 기준 0번)                         |
 | 20   | ChatGPT GPT-6: Sol·Luna·Astra와 요금제별 제공                                              | gpt-6 free                                  | 30   | 조사만                    | 2~4개월               | 후보 (수요 최대, 경쟁·AI 요약 위험 최대)                        |
 | 21   | AI 구독 비교 (2026년 10월)                                                                 | chatgpt plus vs google ai pro vs claude pro | 30   | 조사만                    | 월간 갱신 시 상시     | 후보                                                            |
 | 22   | ChatGPT 광고 개인화 끄기·Ads-Free                                                          | turn off ads chatgpt                        | 28   | 조사만                    | 6~12개월              | 후보                                                            |
@@ -48,12 +49,12 @@
 | 38   | 영상 → GIF 고화질 변환 (FFmpeg 팔레트·gifski·ImageMagick 측정)                            | video to gif                                | -    | 예 (설정 7개)             | 상시                  | 발행 `video-to-gif-high-quality-free` (2026-10-16). Trends `video to gif` 7.1 (기준 `remove background` 35.0) |
 | 39   | 영상 압축 무료 오프라인 (HandBrake·FFmpeg 측정, 디스코드·이메일 용량)                       | compress video for discord                  | -    | 예 (설정 14개)            | 상시                  | 발행 `compress-video-for-discord-email` (2026-10-16). Discord 무료 20MB(2026-08 변경)·Gmail 25MB 공식 문서 확인 |
 | 40   | 이미지 목표 용량 압축 (100KB·200KB·1MB, 크기 조정 + JPEG 품질 측정)                        | compress image to 100kb                     | -    | 예 (1,900건)              | 상시                  | 발행 `compress-image-to-100kb` (2026-10-16). Trends 429로 미비교, 자동완성 "compress image" 30개·"reduce image size" 30개 |
-| 41   | AI 이미지 업스케일 무료 오프라인 (Real-ESRGAN 등 CPU 측정)                                  | upscale image ai free                       | -    | 예 (CPU, 느림)            | 상시                  | 후보 (2026-10-16, 자동완성 32개 3곳: ai·free. Trends 1.4 기준 `remove background` 35.0) |
+| 41   | AI 이미지 업스케일 무료 오프라인 (GUI 앱 CPU 측정)                                          | upscale image ai free                       | -    | 확인 필요 (GUI 앱)        | 상시                  | 후보 (2026-10-16, 자동완성 32개 3곳: ai·free. Trends 1.4 기준 `remove background` 35.0). Real-ESRGAN 명령은 쓸 수 없음 → GUI 앱으로 측정할 수 있을 때만 (2026-10-17) |
 | 42   | WebP → JPG 변환 (Windows·Mac 내장 + 오프라인 도구)                                        | webp to jpg                                 | -    | 예                        | 상시                  | 후보 (2026-10-16, 자동완성 22개: converter·free·bulk·mac. Trends 1.8) |
 | 43   | JPG → PDF 무료 오프라인 변환 (img2pdf·ImageMagick·Pillow·LibreOffice·Chromium 측정)       | jpg to pdf                                  | -    | 예 (24장, 세로 4장)       | 상시                  | 발행 `jpg-to-pdf-free-offline` (2026-10-16). Trends `jpg to pdf` 13.1 · `image to pdf` 8.1 · `png to jpg` 3.9 (기준 `remove background` 35.4) |
 | 44   | PDF → JPG 고화질 변환 (pdftoppm·PyMuPDF·Ghostscript·ImageMagick·LibreOffice 측정, DPI)   | pdf to jpg                                  | -    | 예 (PDF 3개, 설정 25개)   | 상시                  | 발행 `pdf-to-jpg-high-quality` (2026-10-16). Trends 429로 미비교, 자동완성 30개(high quality·high resolution) |
 | 45   | PDF 합치기 무료 오프라인 (qpdf·pdfunite·Ghostscript·pdftk·pypdf·PyMuPDF, 책갈피·링크·양식 보존) | merge pdf files free                        | -    | 예 (6개 + 변형 2개)       | 상시                  | 발행 `merge-pdf-files-free-offline` (2026-10-16). Trends `merge pdf` 6.3 · `png to jpg` 3.9 · `webp to jpg` 1.9 · `upscale image` 1.3 (기준 `remove background` 35.1) |
-| 46   | PDF 나누기·페이지 추출 무료 오프라인 (같은 도구, 책갈피·양식 유지)                          | split pdf                                   | -    | 예                        | 상시                  | 후보 (2026-10-16, 합치기 글의 짝. 수요 확인 전) |
+| 46   | PDF 나누기·페이지 추출 무료 오프라인 (OS 내장 기능·GUI 앱, 책갈피·양식 유지)                | split pdf                                   | -    | 예                        | 상시                  | 후보 (2026-10-16, 합치기 글의 짝. 수요 확인 전). 합치기 글의 명령줄 도구가 아닌 내장 기능·GUI 앱(Mac 미리보기, Chrome 인쇄의 페이지 지정 등)으로 측정 (2026-10-17) |
 
 ## 반복 일정
 

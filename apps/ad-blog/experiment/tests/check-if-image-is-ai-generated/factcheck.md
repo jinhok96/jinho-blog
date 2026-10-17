@@ -62,3 +62,7 @@ Reachability note: WebFetch and the shell could NOT open blog.google, synthid.co
 - **openai.com/verify login requirement and OpenAI's "don't crop/convert before checking" tip**: extract only. Dropped (our own test supports the "use the original file" advice).
 - **Gemini Help 100 MB limit and "crop tight around screenshots" tip**: extract only. Dropped.
 - **Platform labels (Meta, YouTube, TikTok, LinkedIn, etc.)**: not verifiable. Dropped; FAQ says we didn't test platforms.
+
+## 변경 기록
+
+- 2026-10-17: 삭제된 글(`remove-background-from-image-free-offline`)로 가는 링크와 rembg PNG 메타데이터 문장 제거

@@ -45,3 +45,7 @@
 - huggingface.co GGUF 다운로드 가능 (7개 약 17GB, 약 6분)
 - github.com/ggml-org/llama.cpp/releases/latest 403 → llama.cpp 사전 빌드 대신 PyPI `llama-cpp-python` 소스 빌드(약 5분)
 - ollama.com·docs.ollama.com·lmstudio.ai·jan.ai·nomic.ai 접속 가능
+
+## 변경 기록
+
+- 2026-10-17: 명령줄 방법 제거 — Ollama(터미널 단계·`OLLAMA_NO_CLOUD` 환경 변수·모델 이름 열·태그), TTS(Piper·Kokoro)·배경 제거(rembg) 섹션·요약 표 행·rembg 스크린샷, OCR 행·섹션의 Tesseract·docTR 측정값(내장 도구·NAPS2 안내로 교체), 삭제된 글 링크. 작업 수 5→3(첫 문단·설명). `charts.py` 그래프 3(작업별 RAM)에서 Piper·Kokoro·IS-Net·BiRefNet 막대를 빼고 다시 그림(측정값 그대로)

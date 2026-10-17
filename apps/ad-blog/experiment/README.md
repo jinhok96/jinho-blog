@@ -111,7 +111,6 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
    - **영향 뉴스 세션** (15:00~20:59, 18시 실행): 영향이 오래 가는 뉴스. [backlog.md](backlog.md)의 뉴스 칼럼 후보·반복 일정과 최근 30일 발표·시행일이 다가오는 변경 확인
    - **일반 세션** (그 외 시각, 00·12시 실행): `ai-tools`·`software` 일반 사용자 대상 글. [backlog.md](backlog.md)의 반복 일정(Chrome·Windows)과 허브 글 기회([traffic-playbook.md](traffic-playbook.md))를 먼저 확인 → `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인하고 `trends_compare.py`로 후보끼리 크기 비교 → backlog 상위 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
    - **대체 순서** (기준을 통과하는 뉴스가 없어도 세션마다 1편 유지): 화제 세션은 화제 뉴스 → 영향 뉴스 → 일반 글, 영향 세션은 영향 뉴스 → 화제 뉴스(최근 7일) → 일반 글
-   - **기존 글 다시 쓰기** (명령줄 도구를 첫 답으로 권한 8편, [log.md](log.md) 2026-10-17): 일반 세션에서만, 새 글 발행 후 1편씩. 뉴스 세션은 시의성 때문에 하지 않음
 4. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 5. **작성**: [writing-guide.md](writing-guide.md) 기준 (트래픽 노하우는 [traffic-playbook.md](traffic-playbook.md))
 6. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인

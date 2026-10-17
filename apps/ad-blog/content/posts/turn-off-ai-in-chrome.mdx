@@ -3,6 +3,7 @@ title: How to Turn Off AI in Chrome, Including the On-Device Model
 description: Turn off Gemini in Chrome, Help me write, AI history search, and the on-device AI model, with Chrome 155 menu names and policies for a hard off switch.
 category: software
 createdAt: 2026-10-11
+updatedAt: 2026-10-17
 tags:
   - Google Chrome
   - Gemini
@@ -11,13 +12,13 @@ tags:
   - settings
 ---
 
-To turn off AI in Chrome, open **Settings > AI innovations**. In Chrome 155, the stable version as of October 2026, that page lets you hide Gemini in Chrome, stop "Help me write" from popping up, turn off AI history search, and switch off **On-device AI**, which also deletes the AI model Chrome downloaded to your computer. Gemini in Chrome and AI Mode in the address bar have no full off switch in Settings, so for those, or for a switch that can't be flipped back by accident, you set a Chrome policy on your own PC or Mac.
+To turn off AI in Chrome, open **Settings > AI innovations**. In Chrome 155, the stable version as of October 2026, that page lets you hide Gemini in Chrome, stop "Help me write" from popping up, turn off AI history search, and switch off **On-device AI**, which also deletes the AI model Chrome downloaded to your computer. Gemini in Chrome and AI Mode in the address bar have no full off switch in Settings, so for those, or for a switch that can't be flipped back by accident, you set a Chrome policy on a Windows PC with Registry Editor, a tool built into Windows.
 
-We checked every menu name and policy below against Chrome 155's source code, the Chromium release tagged [155.0.8059.40](https://github.com/chromium/chromium/tree/155.0.8059.40). Chrome only shows settings for AI features that are available to your account, language, and country, so your list may be shorter than ours.
+We checked every Chrome menu name and policy below against Chrome 155's source code, the Chromium release tagged [155.0.8059.40](https://github.com/chromium/chromium/tree/155.0.8059.40). Chrome only shows settings for AI features that are available to your account, language, and country, so your list may be shorter than ours.
 
 ## Quick reference
 
-| Feature | In Settings | Hard off switch (policy) |
+| Feature | In Settings | Hard off switch (Windows policy) |
 | --- | --- | --- |
 | Gemini in Chrome | Hide the button and shortcut only | `GeminiSettings` = 1 |
 | Help me write | **Offer writing help** stops the pop-up only | `HelpMeWriteSettings` = 2 |
@@ -93,7 +94,7 @@ Don't just delete the folder while **On-device AI** is still on. Chrome manages 
 
 ## How to set a hard off switch with Chrome policies
 
-Policies are the settings IT departments use to manage Chrome, and you can set them on your own computer. They override the matching switches in Settings, so nobody can turn the feature back on from the Settings page.
+Policies are the settings IT departments use to manage Chrome, and you can set them on your own Windows PC. They override the matching switches in Settings, so nobody can turn the feature back on from the Settings page. This guide covers policies on Windows only, so on a Mac, use the Settings switches shown in the quick reference above.
 
 These are the policies that matter for home users, from Chrome 155's [generative AI policy definitions](https://github.com/chromium/chromium/tree/155.0.8059.40/components/policy/resources/templates/policy_definitions/GenerativeAI):
 
@@ -116,31 +117,68 @@ There is also a `GenAiDefaultSettings` policy that sets all of these at once, bu
 
 On a computer that no company manages, Chrome ignores a short list of "sensitive" policies. None of the AI policies above are on that list, so they work on a personal PC.
 
-### On Windows
+### On Windows: use Registry Editor
 
-1. Search the Start menu for **Command Prompt**, right-click it, and choose **Run as administrator**.
-2. Run one line for each policy you want. For example, to turn off Gemini in Chrome, remove the on-device model, and turn off Help me write:
+On Windows, Chrome reads policies from the registry, the database where Windows keeps settings for the system and your apps. You add them with Registry Editor. Each policy is a **DWORD (32-bit) Value**, named after the policy, inside this key (keys look like folders in Registry Editor):
 
-   ```text
-   reg add "HKLM\SOFTWARE\Policies\Google\Chrome" /v GeminiSettings /t REG_DWORD /d 1 /f
-   reg add "HKLM\SOFTWARE\Policies\Google\Chrome" /v GenAILocalFoundationalModelSettings /t REG_DWORD /d 1 /f
-   reg add "HKLM\SOFTWARE\Policies\Google\Chrome" /v HelpMeWriteSettings /t REG_DWORD /d 2 /f
-   ```
+`HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome`
 
-3. Restart Chrome, or open `chrome://policy` and click **Reload policies**.
+Microsoft's [registry documentation](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) warns: "Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system." Add only the keys and values in these steps, and don't change or delete anything else.
 
-To undo one, run `reg delete "HKLM\SOFTWARE\Policies\Google\Chrome" /v GeminiSettings /f` (with that policy's name) and restart Chrome.
+First, open Registry Editor and go to the **Policies** key:
 
-### On a Mac
+1. Open the **Start** menu, type **regedit**, and press **Enter**.
+2. If Windows asks for permission or an administrator password, confirm it or type the password.
+3. In the left pane, double-click **HKEY_LOCAL_MACHINE**.
+4. Double-click **SOFTWARE**.
+5. Double-click **Policies**.
 
-Chrome reads Mac policies from the `com.google.Chrome` preference domain. Chromium's Mac policy code counts a value as mandatory only when macOS reports it as managed, which usually means a configuration profile from a device management tool. You can write the same names yourself in Terminal:
+If **Policies** has no **Google** key inside it, create one:
 
-```text
-defaults write com.google.Chrome GeminiSettings -int 1
-defaults write com.google.Chrome GenAILocalFoundationalModelSettings -int 1
-```
+1. Click **Policies**.
+2. Choose **Edit > New > Key**.
+3. Type **Google** and press **Enter**.
 
-Chrome loads values set this way as "Recommended" rather than "Mandatory," and we couldn't test on a Mac whether every feature honors a recommended value. After restarting Chrome, check `chrome://policy` and the matching settings page. To undo, run `defaults delete com.google.Chrome GeminiSettings` and restart Chrome. If you need a guaranteed lock, use a configuration profile.
+If **Google** has no **Chrome** key inside it, create one:
+
+1. Click **Google**.
+2. Choose **Edit > New > Key**.
+3. Type **Chrome** and press **Enter**.
+
+Then add each policy you want as a value in the **Chrome** key:
+
+1. Click the **Chrome** key.
+2. Choose **Edit > New > DWORD (32-bit) Value**.
+3. Type the policy name exactly as it appears in the table above, such as `GeminiSettings`, and press **Enter**.
+4. Choose **Edit > Modify**.
+5. In **Value data**, type the number from the table's **Value for off** column, such as **1** for `GeminiSettings`. You don't need to change **Base**, because 0, 1, and 2 are the same in hexadecimal and decimal.
+6. Click **OK**.
+7. Repeat steps 2 to 6 for each policy.
+
+For example, to turn off Gemini in Chrome, remove the on-device model, and turn off Help me write, add these three values:
+
+| Value name | Value data |
+| --- | --- |
+| `GeminiSettings` | 1 |
+| `GenAILocalFoundationalModelSettings` | 1 |
+| `HelpMeWriteSettings` | 2 |
+
+To apply the policies and check that they worked:
+
+1. Close Registry Editor.
+2. In Chrome, type `chrome://policy` in the address bar and press **Enter**.
+3. Click **Reload policies**. Restarting Chrome also works.
+4. Check that each policy you added is listed with the status **OK**.
+
+If a policy is missing or shows a different status, check that it's inside the **Chrome** key and that its name, type, and value match the table.
+
+To undo a policy:
+
+1. Open Registry Editor and go to the **Chrome** key, as in the steps above.
+2. Click the value you want to remove.
+3. Choose **Edit > Delete**.
+4. Make sure the selected value is one you added, then click **Yes**. Registry Editor has no undo for deletions.
+5. Restart Chrome.
 
 ### What you'll see afterward
 
@@ -151,7 +189,7 @@ Chrome treats the browser as managed once a machine-wide policy is set, so its m
 - **Chrome version:** Google's [VersionHistory API](https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions/all/releases?filter=endtime=none) listed 155.0.8059.40 as the stable release on Windows and Mac, serving since October 6, 2026. A Chrome 156 build was going to a small early group.
 - **Source code:** We read the Chromium source at tag 155.0.8059.40 on October 11, 2026: the policy definitions, the settings page code and its English text, and the on-device model manager. Chrome labels in this guide are copied from that code.
 - **Policy test:** We ran Chromium 141 (the open-source browser Chrome is built on, not Chrome) on Linux with a policy file. `chrome://policy` showed `GeminiSettings`, `AIModeSettings`, `HelpMeWriteSettings`, `HistorySearchSettings`, and `GenAILocalFoundationalModelSettings` as OK, and rejected `GenAiDefaultSettings` as cloud-only.
-- **Not tested:** We didn't click through Google Chrome itself, Chromium can't show Gemini features, and we couldn't reach Google's help pages from our test environment. This guide relies on Chrome's source instead.
+- **Not tested:** We didn't click through Google Chrome itself, Chromium can't show Gemini features, and we couldn't reach Google's help pages from our test environment. This guide relies on Chrome's source instead. We also didn't run the Registry Editor steps on a Windows PC; the menu names follow Microsoft's Registry Editor documentation.
 
 ## FAQ
 

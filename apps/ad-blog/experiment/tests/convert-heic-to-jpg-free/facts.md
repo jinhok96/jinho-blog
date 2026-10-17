@@ -55,3 +55,7 @@
 - ΔE 수치의 체감(“1 이하면 안 보임” 등) 기준은 출처를 열지 않아 쓰지 않고, 같은 사진 비교 이미지로 대신 보여 줌
 - XnConvert 멀티코어 옵션 속도: 측정하지 않음
 - Wikimedia Commons API·upload.wikimedia.org는 429(Too Many Requests)로 이미지 다운로드 실패 → PD12M S3 사본 사용
+
+## 변경 기록
+
+- 2026-10-17: 비개발자 기준(명령줄 금지)에 따라 ImageMagick 섹션(`magick mogrify` 명령·`-quality`·`-path`·`-strip`), 첫 문단·요약 표·결과·추천의 ImageMagick 언급·수치, 삭제된 글(배경 제거·PDF→Word·GIF) 링크 제거 → 이미지 압축 글 링크 추가. 제목 "(3 Tools Tested)" → "(2 Tools Tested)", 설명 교체, `updatedAt: 2026-10-17`. `charts_no_cli.py`로 대표 그래프·설정 후 색·메모리 그래프를 XnConvert·GIMP만으로 다시 그림(측정값 그대로). 색 비교 이미지는 원본 변환 파일이 없어 다시 만들 수 없으므로 왼쪽 제목의 "(ImageMagick default)"만 지움(사진·ΔE 0.51은 ImageMagick 출력 그대로)

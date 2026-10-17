@@ -66,18 +66,15 @@ fig.subplots_adjust(left=0.15, right=0.97, top=0.88, bottom=0.12)
 save(fig, 'img/offline-chatbot-memory.webp')
 
 # 3. 허브: 작업별 추천 도구의 최대 메모리 (각 글의 측정값)
+# 2026-10-17: 명령줄 도구(Piper·Kokoro TTS, rembg IS-Net·BiRefNet) 막대 제거, 글 삭제에 따라. 원래 값은 git 기록 참고
 jobs = [
-    ('Text to speech: Piper medium', 0.31, 'free-offline-text-to-speech'),
-    ('Text to speech: Kokoro v1.0', 0.64, 'free-offline-text-to-speech'),
-    ('Background removal: IS-Net', 1.1, 'remove-background-from-image-free-offline'),
     ('Transcription: Parakeet TDT v2', 1.3, 'transcribe-audio-offline-free'),
     ('Transcription: Whisper turbo', 2.3, 'transcribe-audio-offline-free'),
     ('Chatbot: Qwen3.5 2B', S['Qwen3.5-2B']['peak_rss_gb'], 'this test'),
     ('Chatbot: Gemma 4 E4B', S['gemma-4-E4B-it']['peak_rss_gb'], 'this test'),
-    ('Background removal: BiRefNet', 9.6, 'remove-background-from-image-free-offline'),
 ]
 fig, ax = plt.subplots(figsize=(12, 6.75))
-bars(ax, [j[0] for j in jobs], [j[1] for j in jobs], lambda v: f'{v:.1f} GB', 'Peak RAM of our top picks for each offline AI job', 11.5)
+bars(ax, [j[0] for j in jobs], [j[1] for j in jobs], lambda v: f'{v:.1f} GB', 'Peak RAM of our top picks for each offline AI job', 9.5)
 fig.text(0.012, 0.015, 'ToolProof tests, Oct 11–14, 2026 · each tool run alone on a 4-core Linux server, no GPU', fontsize=12, color=INK2)
 fig.subplots_adjust(left=0.3, right=0.97, top=0.9, bottom=0.1)
 save(fig, 'img/offline-ai-tools-memory.webp')

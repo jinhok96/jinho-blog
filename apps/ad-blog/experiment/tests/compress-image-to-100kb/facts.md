@@ -50,3 +50,7 @@
 - AVIF(avifenc): 목표 용량 옵션이 없어 같은 방식으로 비교할 수 없어 제외
 - 원본 해상도 기준(확대 비교) 점수: 12MP SSIMULACRA2 1회 약 14초로 1,900건에 너무 오래 걸려 화면 기준(1600×1200)만 측정. 작은 크기는 확대 시 손해라는 한계를 본문에 밝힘
 - 시간: 4개 프로세스 병렬 실행 중 GIMP 조작을 함께 해 시간은 글에 쓰지 않음
+
+## 변경 기록
+
+- 2026-10-17: 비개발자 기준(명령줄 금지)에 따라 "from the command line" 섹션(ImageMagick `magick` 명령·`jpeg:extent`·`-strip`), jpegoptim·cwebp 비교(How we tested 목록·"Hitting the size" 문단의 도구 동작 설명·WebP 섹션의 cwebp 미통과 수·FAQ의 jpegoptim 예), "many photos" 추천(ImageMagick), 태그 ImageMagick, 삭제된 글(PDF 압축·배경 제거) 링크 제거 → OCR 글 링크로 교체. ImageMagick은 How we tested에 측정 도구로 한 문장만 남김(JPEG 측정값은 그대로). `charts_no_cli.py`로 대표 그래프 부제의 "via ImageMagick" 삭제, 목표 용량 통과 수 그래프에서 jpegoptim·cwebp 막대를 빼고 원본 크기 vs 줄인 뒤만 다시 그림(측정값 그대로). 제목·설명 그대로, `updatedAt: 2026-10-17`

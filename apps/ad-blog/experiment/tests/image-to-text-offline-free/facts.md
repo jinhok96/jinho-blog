@@ -39,3 +39,7 @@
 | RapidOCR 3.10.0·EasyOCR 1.7.2·docTR 1.1.0 Apache 2.0 | PyPI JSON API |
 | EasyOCR 80개 이상 언어 | raw.githubusercontent.com/JaidedAI/EasyOCR/master/README.md |
 | Apple 페이지는 Live Text가 인터넷 없이 되는지 밝히지 않음 → 글에서 오프라인이라고 주장하지 않음 | 위 Apple 문서 2개 |
+
+## 변경 기록
+
+- 2026-10-17: 비개발자 기준(명령줄 금지)에 따라 명령줄 OCR 엔진(Tesseract·RapidOCR·EasyOCR·docTR) 비교 표·결과·추천·설치 단계·What we tested와 이미지 5장 전부 제거. 본문은 Snipping Tool·PowerToys Text Extractor·Live Text·NAPS2(모두 문서 기반, 직접 측정 없음)만 남김. 제목 "Image to Text Offline for Free on Windows and Mac", 설명 교체, thumbnail 삭제, 삭제된 글(PDF to Word·배경 제거·TTS) 링크 정리. 측정 자료(`summary.json`·`results/`)는 보관

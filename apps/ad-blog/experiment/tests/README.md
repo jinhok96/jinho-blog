@@ -8,15 +8,15 @@
 | [check-if-image-is-ai-generated](check-if-image-is-ai-generated)     | C2PA 출처 정보 제거 테스트 스크립트, 결과, 사실 확인표                                      |
 | [turn-off-ai-in-chrome](turn-off-ai-in-chrome)                       | Chromium 155 소스 기준 사실 확인표 (파일·줄 번호)                                          |
 | [windows-10-esu-extended](windows-10-esu-extended)                   | Microsoft ESU 페이지·KB 문서 기준 사실 확인표 (문서 기반, 실행 검증 없음)                  |
-| [free-offline-text-to-speech](free-offline-text-to-speech)           | 오프라인 TTS 11개 음성 측정 (sherpa-onnx 1.13.8: 속도·Parakeet 받아쓰기 WER·UTMOS), piper-tts CLI 실행 기록, 사실 확인표 |
-| [remove-background-from-image-free-offline](remove-background-from-image-free-offline) | rembg 2.0.85 배경 제거 8개 모델 측정 (AIM-500 50장 IoU·속도·CLI 메모리), 예시 그림·그래프·웹 UI 스크린샷 스크립트, 사실 확인표 (재현 절차는 facts.md 하단) |
+| [free-offline-text-to-speech](free-offline-text-to-speech)           | 오프라인 TTS 11개 음성 측정 (sherpa-onnx 1.13.8: 속도·Parakeet 받아쓰기 WER·UTMOS), piper-tts CLI 실행 기록, 사실 확인표 **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
+| [remove-background-from-image-free-offline](remove-background-from-image-free-offline) | rembg 2.0.85 배경 제거 8개 모델 측정 (AIM-500 50장 IoU·속도·CLI 메모리), 예시 그림·그래프·웹 UI 스크린샷 스크립트, 사실 확인표 (재현 절차는 facts.md 하단) **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
 | [free-offline-ai-tools](free-offline-ai-tools)                       | 오프라인 챗봇 7개 모델 측정 (llama-cpp-python 0.3.36: 속도·RAM·20문항·이메일 요약), 그래프, 사실 확인표 |
 | [image-to-text-offline-free](image-to-text-offline-free)             | 오프라인 OCR 4개 엔진(7개 설정) 측정: 직접 만든 50장(스크린샷·작은 글자·스캔·사진·영수증) 정확도·속도·메모리, 그래프·출력 비교 이미지, 사실 확인표 |
-| [convert-pdf-to-word-offline-free](convert-pdf-to-word-offline-free) | PDF→Word 오프라인 변환 3개 도구(LibreOffice 26.8.1·pdf2docx 0.5.13·Calibre 7.6) 측정: 직접 만든 PDF 11개 문단·표·텍스트 상자·속도, 편집 테스트, OCR 후 재변환, 사실 확인표 |
+| [convert-pdf-to-word-offline-free](convert-pdf-to-word-offline-free) | PDF→Word 오프라인 변환 3개 도구(LibreOffice 26.8.1·pdf2docx 0.5.13·Calibre 7.6) 측정: 직접 만든 PDF 11개 문단·표·텍스트 상자·속도, 편집 테스트, OCR 후 재변환, 사실 확인표 **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
 | [convert-heic-to-jpg-free](convert-heic-to-jpg-free) | HEIC→JPG 오프라인 변환 3개 도구(XnConvert 1.118·ImageMagick 7.1.2·GIMP 3.2.6) 측정: 직접 만든 HEIC 24장(Display P3·GPS·날짜·세로 4장) 색 차이(ΔE2000)·메타데이터·회전·속도·메모리, 기본/설정 변경 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tools.py` → `analyze.py` → `charts.py`) |
-| [video-to-gif-high-quality-free](video-to-gif-high-quality-free) | 영상→GIF 오프라인 변환 3개 도구 7개 설정(FFmpeg 9.0.2·gifski 1.34.0·ImageMagick 7.1.2-34) 측정: 클립 3개(애니메이션·실사·화면 녹화, 75프레임) 크기·SSIM·재생 시간·속도·메모리, 폭·fps별 크기, 확대 비교 이미지, 사실 확인표 (재현: facts.md 하단) |
-| [jpg-to-pdf-free-offline](jpg-to-pdf-free-offline) | JPG→PDF 오프라인 변환 5개 도구(img2pdf 0.6.3·ImageMagick 7.1.2-34·Pillow 12.3.0·LibreOffice 26.8.1·Chromium 141) 측정: 12MP 사진 24장(세로 4장 EXIF Orientation=6) PDF 크기·픽셀 동일 여부·SSIMULACRA2·세로 사진 방향·속도·메모리, LibreOffice 무손실 설정 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tests.py` → `analyze.py` → `summarize.py` → `charts.py`) |
-| [merge-pdf-files-free-offline](merge-pdf-files-free-offline) | PDF 합치기 6개 도구(qpdf 12.4.2·pdfunite 26.10·Ghostscript 10.08·pdftk-java 3.3.3·pypdf 6.21·PyMuPDF 1.28.2) 측정: 책갈피·목차 링크·W-9 양식 2부·사진 보존, Chrome 141 PDF 뷰어 입력·클릭 테스트, 사실 확인표 |
+| [video-to-gif-high-quality-free](video-to-gif-high-quality-free) | 영상→GIF 오프라인 변환 3개 도구 7개 설정(FFmpeg 9.0.2·gifski 1.34.0·ImageMagick 7.1.2-34) 측정: 클립 3개(애니메이션·실사·화면 녹화, 75프레임) 크기·SSIM·재생 시간·속도·메모리, 폭·fps별 크기, 확대 비교 이미지, 사실 확인표 (재현: facts.md 하단) **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
+| [jpg-to-pdf-free-offline](jpg-to-pdf-free-offline) | JPG→PDF 오프라인 변환 5개 도구(img2pdf 0.6.3·ImageMagick 7.1.2-34·Pillow 12.3.0·LibreOffice 26.8.1·Chromium 141) 측정: 12MP 사진 24장(세로 4장 EXIF Orientation=6) PDF 크기·픽셀 동일 여부·SSIMULACRA2·세로 사진 방향·속도·메모리, LibreOffice 무손실 설정 비교, 그래프·스크린샷, 사실 확인표 (재현: `build_set.sh` → `run_tests.py` → `analyze.py` → `summarize.py` → `charts.py`) **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
+| [merge-pdf-files-free-offline](merge-pdf-files-free-offline) | PDF 합치기 6개 도구(qpdf 12.4.2·pdfunite 26.10·Ghostscript 10.08·pdftk-java 3.3.3·pypdf 6.21·PyMuPDF 1.28.2) 측정: 책갈피·목차 링크·W-9 양식 2부·사진 보존, Chrome 141 PDF 뷰어 입력·클릭 테스트, 사실 확인표 **(글 삭제 2026-10-17: 명령줄 방법, 측정 자료만 보관)** |
 
 ## 받아쓰기 벤치마크 재현
 

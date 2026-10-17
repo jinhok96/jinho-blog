@@ -37,7 +37,7 @@
 - **적용**: 글마다 주 채널을 하나 정합니다
   - **검색형** (검색어가 분명한 How-to·Fix·비교, 상시 수요): 검색어 그대로, 60자 이내
   - **피드형** (출시·변경 직후 글, 측정 결과 자체가 흥미로운 글): 독자 상황(you/your)이나 측정 결과를 앞세우고 75자까지 허용. 주 검색어는 앞 60자 안에 둠. 결과를 숨기는 제목은 쓰지 않음 (Google Discover 정책)
-  - 예: 검색형 `Free Offline Text to Speech: Piper vs Kokoro, Tested` / 피드형 `We Tested 11 Free Offline Voices: Piper Was About 7x Faster Than Kokoro`
+  - 예: 검색형 `How to Transcribe Audio Offline for Free (8 Models Tested)` / 피드형 `We Tested 8 Free Offline Transcription Models: Parakeet Was About 5x Faster Than Whisper`
 
 ### 2. 직접 해 본 결과를 제목에서 내세운다
 
@@ -133,8 +133,8 @@
 
 | ID  | 노하우 | 대상 글   | 바꾼 내용 | 배포일 | 지표 | 판단 시점 | 판정 | 반영 |
 | --- | ------ | --------- | --------- | ------ | ---- | --------- | ---- | ---- |
-| V1  | 3      | `transcribe-audio-offline-free`, `free-offline-text-to-speech`, `remove-background-from-image-free-offline` | 허브 글 `free-offline-ai-tools`로 역링크 1개씩 추가 | 2026-10-14 | position | 2026-11-11 | - | - |
-| V2  | 3      | `free-offline-ai-tools` | 허브에 OCR 섹션·요약 표 행 추가 (새 측정 글 `image-to-text-offline-free` 연결), `updatedAt` 2026-10-15 | 2026-10-15 | impressions | 2026-11-12 | - | - |
+| V1  | 3      | `transcribe-audio-offline-free` (같이 바꾼 `free-offline-text-to-speech`·`remove-background-from-image-free-offline`은 2026-10-17 삭제) | 허브 글 `free-offline-ai-tools`로 역링크 1개씩 추가 | 2026-10-14 | position | 2026-11-11 | - | - |
+| V2  | 3      | `free-offline-ai-tools` | 허브에 OCR 섹션·요약 표 행 추가 (새 측정 글 `image-to-text-offline-free` 연결), `updatedAt` 2026-10-15. 2026-10-17 TTS·배경 제거 섹션과 명령줄 내용 삭제가 판단 기간에 겹침 → 판정 때 참고 | 2026-10-15 | impressions | 2026-11-12 | - | - |
 
 ## 재분석
 

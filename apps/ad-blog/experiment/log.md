@@ -2,11 +2,32 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-17 · 명령줄 글 정리: 8편 삭제 + 남은 글의 명령줄 내용 제거 (사용자 요청)
+
+- 사용자 결정: 명령줄 방법은 비개발자가 이해할 수 없으므로 쓰지 않음. 명령줄을 첫 답으로 권한 8편은 재작성하지 않고 **삭제**, 남은 글의 명령줄 섹션도 지금 제거
+- 삭제(8편, 측정 자료는 `tests/{slug}/`에 보관): `pdf-to-jpg-high-quality`·`merge-pdf-files-free-offline`·`jpg-to-pdf-free-offline`·`compress-pdf-offline-free`·`convert-pdf-to-word-offline-free`·`remove-background-from-image-free-offline`·`video-to-gif-high-quality-free`·`free-offline-text-to-speech`. 7편은 미색인(`URL is unknown`), 색인된 글은 TTS 1편. 삭제 URL은 배포 후 IndexNow 워크플로우가 자동 제출. backlog에는 "GUI 앱·내장 기능으로 새로 쓸 후보"로 남김
+- 남은 글 수정 (모두 `updatedAt: 2026-10-17`, 사실 확인표에 변경 기록)
+  - `turn-off-ai-in-chrome`: Windows 정책을 명령 프롬프트 대신 레지스트리 편집기 화면 단계로(같은 키·값), Mac 정책(터미널) 섹션 삭제. 레지스트리 편집기 메뉴 이름은 Microsoft 문서 기준, Windows PC에서 직접 실행하지는 못함
+  - `compress-image-to-100kb`: 명령줄 섹션·jpegoptim·cwebp 비교 삭제, 그래프 2장 다시 그림 (측정값 그대로, ImageMagick은 측정 도구로만 표기)
+  - `compress-video-for-discord-email`: FFmpeg 섹션·표 행 삭제, 제목 "(14 Settings Tested)" → "(7 Settings Tested)", 그래프 다시 그림, FFmpeg 비교 그래프 1장 삭제 → 이미지 4장(측정 글 목표 5장 미달)
+  - `convert-heic-to-jpg-free`: ImageMagick 섹션·행 삭제, 제목 "(3 Tools Tested)" → "(2 Tools Tested)", 그래프 다시 그림. 색 비교 이미지의 "프로필 유지" 쪽은 ImageMagick 결과물이라 도구명·ΔE 수치를 지우고 예시로만 둠
+  - `image-to-text-offline-free`: 측정한 OCR 엔진 4개가 모두 명령줄 도구라 측정 내용 전부 삭제 → 2,014단어 → 570단어, 이미지 0장. 제목 "Image to Text Offline for Free on Windows and Mac". 남은 내용은 Snipping Tool·PowerToys·Live Text·NAPS2 (모두 문서 기반)
+  - 허브 `free-offline-ai-tools`: TTS·배경 제거·Ollama(터미널) 섹션 삭제, "five" → "three" jobs, 메모리 그래프 다시 그림 → 이미지 4장
+  - `transcribe-audio-offline-free`·`check-if-image-is-ai-generated`: 삭제된 글 링크 정리
+- 문서: README 세션 워크플로우의 재작성 항목 삭제, backlog 상태, tests/README 삭제 표시, traffic-playbook 예시·V1(대상 2편 삭제)·V2(허브 변경이 판단 기간에 겹침), writing-guide 예시, 정기 실행 프롬프트에서 재작성 단계 삭제
+- 검증 기록에 행을 추가하지 않음: 규칙 준수용 삭제·정리라 성과 개선 실험이 아님. 단 제목이 바뀐 3편(영상 압축·HEIC·OCR)은 이후 CTR·노출 비교 때 2026-10-17 변경을 감안
+
+**다음 할 일**
+
+- Claude (일반 세션): `image-to-text-offline-free`는 측정 없는 570단어 글이 됨 → 내장 기능(Snipping Tool·Live Text)과 GUI 앱(NAPS2 등)을 직접 확인할 수 있으면 보강, 어려우면 사용자에게 유지·삭제 확인
+- Claude: 삭제한 주제(PDF 합치기·PDF→JPG·JPG→PDF·PDF 압축·PDF→Word·배경 제거·영상→GIF·TTS)는 수요가 확인된 주제이므로, GUI 앱·OS 내장 기능으로 직접 검증할 수 있을 때 새 글로 다시 씀 (backlog 해당 행)
+- 다른 글에서 링크되지 않는 글: `compress-image-to-100kb`·`windows-10-esu-extended` → 다음 관련 글 작성 때 연결
+
 ## 2026-10-17 · 규칙 변경: 뉴스 칼럼 카테고리 + 정기 실행 하루 4회 (사용자 요청)
 
 - 사용자 결정: 화제성 높은 뉴스도 다룸. 소식 전달·카피캣이 아니라, 독자(비개발자)에게 미칠 영향을 분석하고 ToolProof의 견해를 담는 칼럼. 카테고리 `news`("News & Analysis")
 - 정기 실행: 하루 4회 6시간 간격(한국 시간 00·06·12·18시), 세션마다 1편. 06시 화제 뉴스 칼럼, 18시 영향이 오래 가는 뉴스 칼럼, 00·12시 일반 글(`ai-tools`·`software`). 세션 유형은 시작 시각으로 판단, 기준을 통과하는 뉴스가 없으면 다른 뉴스 유형 → 일반 글 순으로 대체
-- 기존 명령줄 글 8편 재작성은 일반 세션(00·12시)에서만 함 (뉴스 세션은 시의성 우선)
+- ~~기존 명령줄 글 8편 재작성은 일반 세션(00·12시)에서만 함~~ → 취소 (위 '명령줄 글 정리' 기록: 8편 삭제)
 - 반영: `src/core/config` 카테고리 `news` 추가 (글 0개 카테고리는 헤더·사이트맵·카테고리 페이지에서 자동 숨김이라 첫 칼럼 발행 전에는 노출 없음), [README.md](README.md) 결정사항·콘텐츠 구성·뉴스 칼럼 선정 기준·발행 속도·세션 워크플로우·가설 H4·H5·인프라 상태, [writing-guide.md](writing-guide.md) 뉴스 칼럼 유형·구성·`Our take` 규칙·이미지·체크리스트, [backlog.md](backlog.md) 뉴스 칼럼 후보 섹션
 - 근거(해석): 신규 도메인은 뉴스 검색 순위를 잡기 어렵고 색인도 느림(10-16 기준 16편 중 8편 색인) → 피드형(Discover) 채널과 영향이 오래 가는 뉴스로 보완. 화제 vs 영향 뉴스 성과는 H5로 비교
 
@@ -15,14 +36,7 @@
 - 사용자 결정: 블로그 독자는 비개발자. **비개발자가 이해·사용할 수 없는 방법(명령줄·코드·개발 도구)은 쓰지 않음** ("고급 사용자용" 섹션으로도 넣지 않음)
 - 배경: 발행 18편 중 8편이 첫 답으로 명령줄 도구·Python 라이브러리를 권함 (`pdf-to-jpg-high-quality`·`merge-pdf-files-free-offline`·`jpg-to-pdf-free-offline`·`compress-pdf-offline-free`·`convert-pdf-to-word-offline-free`·`remove-background-from-image-free-offline`·`video-to-gif-high-quality-free`·`free-offline-text-to-speech`). 원인: 컨테이너에서 측정하기 쉬운 명령줄 도구가 비교 대상이 되고, 측정 1위가 그대로 첫 답이 됨. 반대로 GUI 앱을 Xvfb로 측정한 `convert-heic-to-jpg-free`, OS 내장 기능부터 안내한 `image-to-text-offline-free`는 비개발자가 따라 할 수 있음
 - 반영: [README.md](README.md) 결정사항(독자)·주제 선정 기준 0번(필수 조건)·5번(직접 검증 = 독자가 쓸 방법을 실행), [writing-guide.md](writing-guide.md) 독자 규칙·도입 순서·비교 대상·측정 보조 도구·이미지·체크리스트, [backlog.md](backlog.md) 제외 기준·직접 검증 정의·19번(제외)·41번·46번(GUI 앱·내장 기능으로 각도 변경)
-- 기존 8편은 정기 세션에서 1편씩 다시 씀 (사용자 결정, 아래 '다음 할 일')
-
-**다음 할 일**
-
-- Claude (정기 세션): 위 8편을 세션마다 1편씩 비개발자 방법으로 다시 씀. 새 글 발행이 우선이고, 수정은 그다음에 함. 순서는 첫 문장에 명령어가 있는 `pdf-to-jpg-high-quality` → `merge-pdf-files-free-offline` → `jpg-to-pdf-free-offline` → `compress-pdf-offline-free`, 이어서 나머지 4편
-  - 명령줄·코드 내용은 모두 빼고, OS 내장 기능·GUI 앱을 직접 실행·측정해 첫 답과 비교 표를 다시 만듦. 직접 실행하지 못한 방법은 문서 기반으로 표시
-  - 내용이 크게 바뀌므로 `updatedAt`을 갱신하고, traffic-playbook 검증 기록에 행을 추가. 허브 글 `free-offline-ai-tools`의 해당 설명도 함께 고침
-  - 비개발자 방법으로 답할 수 없는 글은 고치지 말고 log.md에 남겨 사용자 확인
+- ~~기존 8편은 정기 세션에서 1편씩 다시 씀~~ → 취소, 8편 삭제 (위 '명령줄 글 정리' 기록)
 
 ## 2026-10-16 · 세션 16 (정기 실행 15회차): PDF 합치기
 

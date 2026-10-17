@@ -18,7 +18,7 @@ src/
 ├── modules/        # header, footer, post-list (인피드 광고 위치 lib 포함)
 ├── entities/       # post, page (조회 서비스 + 타입)
 └── core/
-    ├── config/     # 사이트 정보(ToolProof, en-US, AUTHOR_TYPE)·카테고리(ai-tools, software)·광고 ID
+    ├── config/     # 사이트 정보(ToolProof, en-US, AUTHOR_TYPE)·카테고리(ai-tools, software, news — 글 0개 카테고리는 자동 숨김)·광고 ID
     ├── ads/        # AdSlot·AdSenseScript (클라이언트), ads.txt·슬롯 속성 헬퍼
     ├── content/    # 컬렉션 Zod 스키마·설정·레지스트리 리더
     ├── seo/        # buildMetadata, JSON-LD 빌더, JsonLd, absoluteUrl

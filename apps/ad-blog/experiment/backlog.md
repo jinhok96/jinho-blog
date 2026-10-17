@@ -6,6 +6,7 @@
 - **제외 기준**: 비개발자가 쓸 수 있는 방법(OS 내장 기능·설정 메뉴·무료 GUI 앱·웹 서비스)으로 끝나지 않는 주제는 점수와 상관없이 제외 (README 주제 선정 기준 0번, 2026-10-17 사용자 결정)
 - 직접 검증: 독자가 쓸 방법(GUI 앱·웹 화면·설정 메뉴)을 컨테이너에서 실행·확인할 수 있는지. GUI 앱은 Xvfb+xdotool로 조작·캡처 가능 (세션 9). 명령줄 도구만 실행할 수 있으면 직접 검증으로 치지 않음. 받을 수 있는 앱 범위는 README 인프라 상태 참고
 - 점수: 2×최신성 + 2×문제 구체성 + 2×직접 검증 + 2×광고 가치 + 경쟁 공백 + 수명 + AI 요약 내성 (최대 55)
+- 뉴스 칼럼 후보는 README "[뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)"으로 고르고 아래 [뉴스 칼럼 후보](#뉴스-칼럼-후보) 표에 따로 기록 (2026-10-17)
 
 | 순위 | 주제                                                                                       | 핵심 키워드                                 | 점수 | 직접 검증                 | 수명                  | 상태                                                            |
 | ---- | ------------------------------------------------------------------------------------------ | ------------------------------------------- | ---- | ------------------------- | --------------------- | --------------------------------------------------------------- |
@@ -13,8 +14,8 @@
 | 2    | AI 생성 이미지 판별 (SynthID Detector·C2PA) + 출처 정보 제거 테스트                        | how to check if an image is ai generated    | 44   | 예 (C2PA 제거 테스트)     | 상시                  | 발행 `check-if-image-is-ai-generated`                           |
 | 3    | 무료 오프라인 받아쓰기 모델 정확도·속도 비교 (ChatGPT 오디오 업로드 유료)                  | transcribe audio to text free offline       | 44   | 예 (전부 오프라인)        | 상시                  | 발행 `transcribe-audio-offline-free`                            |
 | 4    | Chrome AI 기능 끄기 + 온디바이스 모델(약 4GB) 삭제, 정책 확인                              | turn off ai in chrome                       | 41   | 일부 (Chromium 소스)      | 12개월+               | 발행 `turn-off-ai-in-chrome`                                    |
-| 5    | ChatGPT Finances 무료 확대: 은행 연결 안전한가                                             | chatgpt finances safe                       | 38   | 조사만                    | 12개월+               | 후보 (Free/Go 확대 공식 근거 1건뿐)                             |
-| 6    | "내 Copilot 어디 갔지?" 2026년 9월 Copilot 통합 설명                                       | what happened to my copilot                 | 38   | 조사만                    | 6~12개월              | 후보                                                            |
+| 5    | ChatGPT Finances 무료 확대: 은행 연결 안전한가                                             | chatgpt finances safe                       | 38   | 조사만                    | 12개월+               | 후보 (Free/Go 확대 공식 근거 1건뿐) → 뉴스 칼럼 후보로 이동              |
+| 6    | "내 Copilot 어디 갔지?" 2026년 9월 Copilot 통합 설명                                       | what happened to my copilot                 | 38   | 조사만                    | 6~12개월              | 후보 → 뉴스 칼럼 후보로 이동                                             |
 | 7    | Gemini Gems → Skills 전환: 날짜, 옮겨지지 않는 것, 백업                                    | gemini gems to skills                       | 37   | 일부 (SKILL.md 변환 검사) | ~2027-06              | 발행 `gemini-gems-to-skills` (2026-10-14)                       |
 | 8    | 커스텀 GPT 2026-12-11 종료 체크리스트                                                      | custom gpts retiring                        | 37   | 조사만                    | ~2027-02              | 후보 (1번과 묶음)                                               |
 | 9    | Windows 10 ESU가 2027-10-12까지 연장됨 + 등록 오류 해결                                    | windows 10 esu october 2026                 | 37   | 조사만                    | ~2027-10              | 발행 `windows-10-esu-extended`                                  |
@@ -24,26 +25,26 @@
 | 13   | ChatGPT for Word 추가 기능: 기능·개인정보·제거 방법                                        | chatgpt for word                            | 36   | 조사만                    | 6~12개월              | 후보                                                            |
 | 14   | Windows 11 26H2 AI 기능 끄기                                                               | windows 11 26h2 turn off ai                 | 36   | 조사만                    | ~12개월               | 후보 (경쟁 심함 → 세부 각도 필요: AI 기능별 레지스트리·정책 값 확인 등) |
 | 15   | 무료 오프라인 TTS: Piper vs Kokoro 측정                                                    | free text to speech offline                 | 36   | 예                        | 상시                  | 발행 `free-offline-text-to-speech`                              |
-| 16   | Meta Muse 개인정보: 볼 수 있는 데이터·옵트아웃                                             | meta muse privacy                           | 35   | 조사만                    | 6~12개월              | 후보                                                            |
+| 16   | Meta Muse 개인정보: 볼 수 있는 데이터·옵트아웃                                             | meta muse privacy                           | 35   | 조사만                    | 6~12개월              | 후보 → 뉴스 칼럼 후보로 이동                                             |
 | 17   | 공식 ChatGPT 브라우저 확장 vs 유사 확장 권한                                               | chatgpt chrome extension official           | 35   | 대부분 조사만             | 6~12개월              | 후보                                                            |
 | 18   | AI 챗봇 학습 데이터 사용 끄기 (ChatGPT·Gemini·Claude·Copilot 등)                           | stop ai from training on my data            | 32   | 조사만                    | 상시 (분기 갱신)      | 후보                                                            |
 | 19   | Ollama 0.40 변경 사항                                                                      | ollama 0.40                                 | 32   | 일부                      | 2~4개월               | 제외 (개발자 대상, 2026-10-17 기준 0번)                         |
-| 20   | ChatGPT GPT-6: Sol·Luna·Astra와 요금제별 제공                                              | gpt-6 free                                  | 30   | 조사만                    | 2~4개월               | 후보 (수요 최대, 경쟁·AI 요약 위험 최대)                        |
+| 20   | ChatGPT GPT-6: Sol·Luna·Astra와 요금제별 제공                                              | gpt-6 free                                  | 30   | 조사만                    | 2~4개월               | 후보 (수요 최대, 경쟁·AI 요약 위험 최대) → 뉴스 칼럼 후보로 이동         |
 | 21   | AI 구독 비교 (2026년 10월)                                                                 | chatgpt plus vs google ai pro vs claude pro | 30   | 조사만                    | 월간 갱신 시 상시     | 후보                                                            |
-| 22   | ChatGPT 광고 개인화 끄기·Ads-Free                                                          | turn off ads chatgpt                        | 28   | 조사만                    | 6~12개월              | 후보                                                            |
+| 22   | ChatGPT 광고 개인화 끄기·Ads-Free                                                          | turn off ads chatgpt                        | 28   | 조사만                    | 6~12개월              | 후보 → 뉴스 칼럼 후보로 이동                                             |
 | 23   | Google Assistant → Gemini 전환 후 잃는 기능                                                | gemini replaced google assistant            | 27   | 조사만                    | ~6개월                | 후보                                                            |
 | 24   | ChatGPT "Intelligent UI" 끄기 (Simple 레이아웃)                                            | chatgpt intelligent ui turn off             | 27   | 조사만                    | 2~4개월               | 20번의 한 섹션으로                                              |
 | 25   | Google Drive·Docs에서 Markdown(.md) 파일 열기·편집 (2026-10-05 Workspace 발표)             | markdown google docs                        | -    | 조사만                    | 6~12개월              | 후보 (2026-10-12 추가, 자동완성 17개: enable·import·code block) |
-| 26   | GPT-6·Intelligent UI 전체 제공 (OpenAI 2026-10-07 "GPT-6 and Intelligent UI for everyone") | gpt-6 free                                  | -    | 조사만                    | 2~4개월               | 20·24번과 묶어 재평가 (help.openai.com 403)                     |
+| 26   | GPT-6·Intelligent UI 전체 제공 (OpenAI 2026-10-07 "GPT-6 and Intelligent UI for everyone") | gpt-6 free                                  | -    | 조사만                    | 2~4개월               | 20·24번과 묶어 재평가 (help.openai.com 403) → 뉴스 칼럼 후보로 이동      |
 | 27   | SynthID 전 세계 확대 (Google 2026-10-07) → `check-if-image-is-ai-generated` 갱신           | synthid detector                            | -    | 일부                      | 상시                  | 기존 글 갱신 후보 (새 글 아님)                                  |
 | 28   | 허브: 무료 오프라인 AI 도구 (받아쓰기·TTS·배경 제거 측정 글 3편 연결)                       | free offline ai tools                       | -    | 예 (기존 측정 재사용)     | 상시                  | 발행 `free-offline-ai-tools` (2026-10-14, 오프라인 챗봇 7개 측정 추가) |
 | 29   | 2026년 10월 Windows 10 ESU 업데이트(10-13 Patch Tuesday) KB·설치 오류                     | windows 10 october 2026 update              | -    | 조사만                    | ~1개월                | 보류 (KB5126657·19045.7807 확인, KB·오류 자동완성 없음 → ESU 글 빌드 표만 갱신 2026-10-14. 11월 업데이트 때 재확인) |
-| 30   | Gemini 4 Argon (2026-10-13 출시): 무료 사용 범위·요금                                      | gemini 4 argon free                         | -    | 조사만                    | 2~4개월               | 보류 (자동완성 16개, 경쟁·AI 요약 위험 큼, 직접 검증 불가)      |
+| 30   | Gemini 4 Argon (2026-10-13 출시): 무료 사용 범위·요금                                      | gemini 4 argon free                         | -    | 조사만                    | 2~4개월               | 보류 (자동완성 16개, 경쟁·AI 요약 위험 큼, 직접 검증 불가) → 뉴스 칼럼 후보로 이동 |
 | 31   | 패스키 설정 (Google 계정·iPhone·Windows 11)                                                | how to set up passkey                       | -    | 일부 (Chromium 가상 인증기) | 상시                  | 후보 (2026-10-14 추가, 자동완성 27개 Google·Bing·YouTube. Google·Apple 공식 문서 경쟁 강함) |
 | 32   | 허브 확장용: 무료 오프라인 번역·OCR 측정                                                   | image to text (OCR) / offline translator    | -    | 예                        | 상시                  | OCR 발행 `image-to-text-offline-free` (2026-10-15, 허브에 섹션 추가). 번역은 Trends `offline translator` 0.0(기준 `remove background` 35.5)으로 보류 |
 | 33   | PDF → Word 무료 오프라인 변환 (LibreOffice·pdf2docx·Calibre 측정)                          | pdf to word offline                         | -    | 예                        | 상시                  | 발행 `convert-pdf-to-word-offline-free` (2026-10-15). Trends `pdf to word` 23.4 (기준 `remove background` 35.3) |
 | 34   | HEIC → JPG 변환 (Windows·Mac 내장 + 오프라인 도구 측정)                                    | heic to jpg                                 | -    | 예 (XnConvert·ImageMagick·GIMP) | 상시                  | 발행 `convert-heic-to-jpg-free` (2026-10-16). Trends 8.8 (기준 `remove background` 35.7). Windows·Mac 내장 방법은 문서 기반 |
-| 35   | Windows 11 새 Photos 앱 (2026-10-15 Insider 배포: Gallery·Editor·HEIC 편집)               | windows 11 new photos app                   | -    | 조사만                    | 6~12개월              | 보류 (Insider 단계, 직접 검증 불가. 일반 배포 시 재검토) |
+| 35   | Windows 11 새 Photos 앱 (2026-10-15 Insider 배포: Gallery·Editor·HEIC 편집)               | windows 11 new photos app                   | -    | 조사만                    | 6~12개월              | 보류 (Insider 단계, 직접 검증 불가. 일반 배포 시 재검토) → 뉴스 칼럼 후보로 이동 |
 | 36   | PDF 압축 무료 오프라인 (Ghostscript·OCRmyPDF·qpdf 측정)                                    | compress pdf offline                        | -    | 예 (설정 10개)            | 상시                  | 발행 `compress-pdf-offline-free` (2026-10-16). Trends `compress pdf` 4.8 (기준 `remove background` 34.9) |
 | 37   | MP4 → MP3 오프라인 변환                                                                    | mp4 to mp3                                  | -    | 예                        | 상시                  | 보류 (Trends 8.7로 수요 큼, 도구 간 차이가 작아 측정 차별점 약함. 2026-10-16) |
 | 38   | 영상 → GIF 고화질 변환 (FFmpeg 팔레트·gifski·ImageMagick 측정)                            | video to gif                                | -    | 예 (설정 7개)             | 상시                  | 발행 `video-to-gif-high-quality-free` (2026-10-16). Trends `video to gif` 7.1 (기준 `remove background` 35.0) |
@@ -56,9 +57,28 @@
 | 45   | PDF 합치기 무료 오프라인 (qpdf·pdfunite·Ghostscript·pdftk·pypdf·PyMuPDF, 책갈피·링크·양식 보존) | merge pdf files free                        | -    | 예 (6개 + 변형 2개)       | 상시                  | 발행 `merge-pdf-files-free-offline` (2026-10-16). Trends `merge pdf` 6.3 · `png to jpg` 3.9 · `webp to jpg` 1.9 · `upscale image` 1.3 (기준 `remove background` 35.1) |
 | 46   | PDF 나누기·페이지 추출 무료 오프라인 (OS 내장 기능·GUI 앱, 책갈피·양식 유지)                | split pdf                                   | -    | 예                        | 상시                  | 후보 (2026-10-16, 합치기 글의 짝. 수요 확인 전). 합치기 글의 명령줄 도구가 아닌 내장 기능·GUI 앱(Mac 미리보기, Chrome 인쇄의 페이지 지정 등)으로 측정 (2026-10-17) |
 
+## 뉴스 칼럼 후보
+
+README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으로 고른 후보입니다. 발행하면 상태를 `발행`으로 바꾸고 slug를 적습니다.
+
+- 유형: 화제(06시 세션, 최근 48시간 발표) / 영향(18시 세션, 영향이 몇 주~몇 달 지속)
+- 아래 행은 2026-10-17 기존 후보 표에서 옮김. 유형은 원래 행의 수명·발표일로 잠정 분류, 날짜·출처는 원래 행에 적힌 것만 옮김 → 재평가 때 1차 출처로 채움
+
+| 주제 | 유형 | 발표일 | 영향 기간(시행일·마감일) | 1차 출처 | 상태 |
+| --- | --- | --- | --- | --- | --- |
+| ChatGPT Finances 무료 확대: 은행 연결 안전한가 (기존 5번) | 영향 | 미확인 | 미확인 (기존 수명 12개월+) | 미기록 (Free/Go 확대 공식 근거 1건뿐) | 재평가 필요(최신성 확인) |
+| "내 Copilot 어디 갔지?" 2026년 9월 Copilot 통합 (기존 6번) | 영향 | 2026-09 (일자 미확인) | 미확인 (기존 수명 6~12개월) | 미기록 | 재평가 필요(최신성 확인) |
+| Meta Muse 개인정보: 볼 수 있는 데이터·옵트아웃 (기존 16번) | 영향 | 미확인 | 미확인 (기존 수명 6~12개월) | 미기록 | 재평가 필요(최신성 확인) |
+| ChatGPT GPT-6 요금제별 제공(Sol·Luna·Astra)·Intelligent UI 전체 제공 (기존 20·26번, 24번은 한 섹션) | 영향 | 2026-10-07 (OpenAI "GPT-6 and Intelligent UI for everyone") | 미확인 (기존 수명 2~4개월) | help.openai.com/en/articles/20001354, 20001598, 6825453 (릴리스 노트, help.openai.com 403). Free/Go 모델명 문서 충돌 (아래 미확인·충돌 정보) | 재평가 필요(최신성 확인) |
+| ChatGPT 광고 개인화 끄기·Ads-Free (기존 22번) | 영향 | 미확인 | 미확인 (기존 수명 6~12개월) | 미기록 | 재평가 필요(최신성 확인) |
+| Gemini 4 Argon: 무료 사용 범위·요금 (기존 30번) | 화제 | 2026-10-13 (출시) | 미확인 (기존 수명 2~4개월) | 미기록 | 재평가 필요(최신성 확인) |
+| Windows 11 새 Photos 앱: Gallery·Editor·HEIC 편집 (기존 35번) | 영향 | 2026-10-15 (Insider 배포) | 일반 배포일 미확인 (기존 수명 6~12개월) | 미기록 | 재평가 필요(최신성 확인) |
+
 ## 반복 일정
 
 출시·업데이트 당일이나 다음 날 세션에서 우선 검토합니다 ([traffic-playbook.md](traffic-playbook.md) 4번). 기존 글에 반영할 변경이 있으면 새 글보다 갱신을 먼저 합니다. 2026-10-13 확인.
+
+영향이 오래 가는 뉴스 칼럼(18시 세션) 소재로도 씁니다: 기능 종료·지원 종료·정책 시행일처럼 사용자 영향이 몇 주 이상 가는 변경은 [뉴스 칼럼 후보](#뉴스-칼럼-후보)에 올림 (2026-10-17).
 
 | 일정                                                       | 날짜                                        | 확인 방법                                                                                                | 관련 글                   |
 | ---------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------- |

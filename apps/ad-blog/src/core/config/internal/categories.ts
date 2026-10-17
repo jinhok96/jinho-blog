@@ -14,6 +14,11 @@ export const CATEGORY_MAP = {
     description:
       'How-to guides and fixes for browsers, operating systems, and everyday apps, including the AI features built into them.',
   },
+  news: {
+    name: 'News & Analysis',
+    description:
+      'Analysis of the latest tech and AI news for everyday users: what changed, who it affects, what to do now, and our take.',
+  },
 } as const satisfies Record<string, { name: string; description: string }>;
 
 export type Category = keyof typeof CATEGORY_MAP;

@@ -39,6 +39,7 @@
 - Claude: 11월 중순 이메일 통지 이후나 12-12 전후로 Google이 일정 변경·보상을 발표하면 `pixel-watch-safety-signal-ending`에 반영하고 `updatedAt` 갱신
 - Claude: 칼럼 발행 4주 후(11-14) H4 판정 자료: `gsc_report.py --compare /posts/pixel-watch-safety-signal-ending --changed 2026-10-17 --metric impressions --type discover`(웹은 `--type web`). H5 비교용 영향 칼럼 1편째(화제 1편: `iphone-duo-sold-out`)
 - Claude: 커스텀 GPT 종료(12-11)는 help.openai.com 접근이 되면 최우선 영향 칼럼 후보. 계속 403이면 사용자에게 허용 도메인 추가 여부 확인 필요 (사용자 결정 사항: 네트워크 설정)
+- 대시보드: README 절차 1단계 `ArtifactData list`(stats)가 권한 분류기에 거부됨(Data Exfiltration) → 이번 세션 갱신 못 함. 다음 세션에서 다시 시도, 계속 막히면 사용자가 대화형 세션에서 갱신하거나 정기 세션 허용 여부 결정 필요
 - Claude: 발행 12편 / AdSense 신청 기준 20편
 
 ## 2026-10-17 · 세션 17 (사용자 요청): 첫 뉴스 칼럼 — iPhone Duo 매진·결제 방식별 비용

@@ -49,3 +49,7 @@
 - 기기·Discord 플레이어의 H.265·AV1 재생 호환성 (직접 테스트 불가) → "H.264가 안전" 정도로만, 재생 테스트 안 했다고 명시
 - HandBrake Windows·Mac GUI의 정확한 라벨 (Linux 라벨만 확인)
 - trac.ffmpeg.org 인코딩 가이드는 Anubis 봇 차단 → 인용하지 않음
+
+## 변경 기록
+
+- 2026-10-17: 비개발자 기준(명령줄 금지)에 따라 FFmpeg 섹션 전체(설치 `winget`·`brew`, 2-pass 명령, H.264·H.265·AV1 비교, 해상도 낮추기, 기본 명령), 요약 표·전체 결과 표의 FFmpeg 값·행 7개, FFmpeg 추천, 태그 FFmpeg, 삭제된 글(GIF·PDF 압축) 링크 제거 → 이미지 압축 글 링크로 교체. 10MB 행은 FFmpeg 9.5MB 대신 측정한 HandBrake Social 10 MB로, HandBrake-FFmpeg 차이 설명은 HandBrake slow·high 결과와 RF 5 주의 문장으로 정리. 제목 "(14 Settings Tested)" → "(7 Settings Tested)", 설명 교체, `updatedAt: 2026-10-17`. `charts_no_cli.py`로 대표 그래프(HandBrake 4개)·인코딩 시간(HandBrake 7개)을 다시 그리고, 확대 비교 2장은 FFmpeg 타일이 있는 아래 줄을 잘라냄(측정값·픽셀 그대로). 인코더별 VMAF 그래프(`compress-video-encoder-quality-19mb.webp`)는 FFmpeg를 빼면 HandBrake 1개만 남아 글과 이미지 폴더에서 삭제

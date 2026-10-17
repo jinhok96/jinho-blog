@@ -1,33 +1,33 @@
 ---
-title: Compress Video for Discord and Email (14 Settings Tested)
-description: 'We shrank three 1-minute 1080p clips with HandBrake 1.11.2 and FFmpeg 9.0.2. Neither HandBrake Social preset suits Discord''s 20 MB limit; a set bitrate does.'
+title: Compress Video for Discord and Email (7 Settings Tested)
+description: 'We shrank three 1-minute 1080p clips with 7 settings in the free HandBrake 1.11.2. Neither Social preset suits Discord''s 20 MB limit; a set bitrate does.'
 category: software
 createdAt: 2026-10-16
+updatedAt: 2026-10-17
 thumbnail: ./images/compress-video-for-discord-email/compress-video-size-quality-chart.webp
 tags:
   - video
   - HandBrake
-  - FFmpeg
   - Discord
   - offline tools
 ---
 
 To compress a video for Discord, aim for 19 MB and set the bitrate yourself instead of picking a preset. As of October 2026, free Discord accounts can upload files up to 20 MB. HandBrake's built-in "Social" presets were made for 10 MB and 25 MB: the 10 MB one shrank our 1-minute clips to 540p and lost the most quality, and the 25 MB one made files of 20.2 to 23.9 MB, too big for Discord. Setting an average bitrate for 19 MB landed every clip at 17 to 19 MB at full resolution.
 
-We tested 14 settings in two free, offline tools on October 16, 2026: HandBrake 1.11.2 and FFmpeg 9.0.2. Each one compressed the same three 60-second 1080p clips: a scene from an animated film, a live-action scene with faces, and a screen recording of a settings page with small text. We measured the file size, the quality against the original with [VMAF](https://github.com/Netflix/vmaf), a perceptual video quality score developed by Netflix (higher is better, up to 100), and the time each encode took. Both tools run on your own computer, so your video is never uploaded.
+We tested 7 settings in HandBrake 1.11.2, a free, offline video converter, on October 16, 2026. Each one compressed the same three 60-second 1080p clips: a scene from an animated film, a live-action scene with faces, and a screen recording of a settings page with small text. We measured the file size, the quality against the original with [VMAF](https://github.com/Netflix/vmaf), a perceptual video quality score developed by Netflix (higher is better, up to 100), and the time each encode took. HandBrake runs on your own computer, so your video is never uploaded.
 
-![Three bar charts of file size and VMAF quality for 10 settings on each clip. HandBrake Fast 1080p30 made 20.5, 32.9 and 4.8 MB files. HandBrake Social 25 MB 1 Minute made 23.9, 23.8 and 20.2 MB files, all over Discord's 20 MB limit. HandBrake with an average bitrate for 19 MB made 19.0, 19.0 and 17.0 MB files. FFmpeg x264 aimed at 19 MB scored 95.8, 93.2 and 99.6. HandBrake Social 10 MB 1 Minute made 9.7, 9.7 and 8.3 MB files with the lowest scores, 83.7, 84.0 and 82.2](./images/compress-video-for-discord-email/compress-video-size-quality-chart.webp)
+![Three bar charts of file size and VMAF quality for 4 HandBrake settings on each clip. Fast 1080p30 made 20.5, 32.9 and 4.8 MB files. Social 25 MB 1 Minute made 23.9, 23.8 and 20.2 MB files, all over Discord's 20 MB limit. An average bitrate for 19 MB made 19.0, 19.0 and 17.0 MB files, scoring 91.2, 90.4 and 99.6. Social 10 MB 1 Minute made 9.7, 9.7 and 8.3 MB files with the lowest scores, 83.7, 84.0 and 82.2](./images/compress-video-for-discord-email/compress-video-size-quality-chart.webp)
 
 ## Video size limits and what fits
 
 | Where you send it | Size limit (as of October 2026) | Setting that fit in our test | Quality (VMAF) |
 | --- | --- | --- | --- |
-| **Discord (free)** | 20 MB per file | Bitrate set for 19 MB, 1080p | 90.4-99.6 (HandBrake), 93.2-99.6 (FFmpeg) |
-| Discord Nitro Basic / Nitro | 50 MB / up to 1 GB | HandBrake **Fast 1080p30** for most 1-minute clips | 91.6-99.6 |
-| **Gmail (personal)** | 25 MB of attachments | HandBrake **Social 25 MB** or a bitrate set for 24 MB | 90.1-96.3 / 95.3-99.6 |
-| Older or stricter 10 MB limits | 10 MB | Bitrate set for 9.5 MB at 1280 pixels wide | 84.9-96.2 |
+| **Discord (free)** | 20 MB per file | Bitrate set for 19 MB, 1080p | 90.4-99.6 |
+| Discord Nitro Basic / Nitro | 50 MB / up to 1 GB | **Fast 1080p30** for most 1-minute clips | 91.6-99.6 |
+| **Gmail (personal)** | 25 MB of attachments | **Social 25 MB 1 Minute** | 90.1-96.3 |
+| Older or stricter 10 MB limits | 10 MB | **Social 10 MB 1 Minute** (960 x 540) | 82.2-84.0 |
 
-The limits come from Discord's [File Attachments FAQ](https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ) and Google's [Gmail attachment help page](https://support.google.com/mail/answer/6584?hl=en). Discord says the free limit went from 10 MB to 20 MB in August 2026, and that Nitro Basic offers 50 MB and Nitro up to 1 GB. Gmail turns attachments over 25 MB into a Google Drive link instead of attaching the file. The quality ranges cover our three clips; the screen recording always scored highest.
+The limits come from Discord's [File Attachments FAQ](https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ) and Google's [Gmail attachment help page](https://support.google.com/mail/answer/6584?hl=en). Discord says the free limit went from 10 MB to 20 MB in August 2026, and that Nitro Basic offers 50 MB and Nitro up to 1 GB. Gmail turns attachments over 25 MB into a Google Drive link instead of attaching the file. The quality ranges cover our three clips. The screen recording scored highest, except with Social 10 MB, which cut it to 540p and blurred its small text.
 
 ## How we tested
 
@@ -40,14 +40,14 @@ We cut three 60-second clips and saved each one in high quality (H.264 at CRF 14
 We judged each setting on three things:
 
 - **Size:** does the file fit under the limit, and how much of the limit does it use? We aimed at 19,000,000 bytes for Discord because its help page doesn't say whether "20MB" means 20,000,000 bytes or 20 x 1,024 x 1,024
-- **Quality:** VMAF between the compressed video and the original, on every third frame, with smaller videos scaled back up to the original size first. We report the average and the worst 5% of frames, where blockiness shows up during fast motion
+- **Quality:** VMAF between the compressed video and the original, on every third frame, with smaller videos scaled back up to the original size first. We report the average score
 - **Speed:** time for one run of each setting on a 4-core 2.8 GHz Intel Xeon with 16 GB of RAM and no GPU, including both passes when a setting uses two
 
 HandBrake's official presets are fixed recipes, so we read their settings from HandBrake itself. **Social 10 MB 1 Minute 540p60** encodes H.264 at an average of 1,125 kbit/s in two passes and caps the picture at 960 x 540. **Social 25 MB 1 Minute 720p60** uses 3,000 kbit/s at up to 1280 x 720. Both add 160 kbit/s AAC audio.
 
 ## How to compress a video for Discord in HandBrake
 
-HandBrake is the easiest free choice: it has a normal window, runs on Windows, Mac and Linux, and is free and open source according to the [HandBrake website](https://handbrake.fr/). On Windows it needs Microsoft's .NET Desktop Runtime 10.0, according to its [system requirements](https://handbrake.fr/docs/en/latest/technical/system-requirements.html). Instead of a Social preset, keep the default **Fast 1080p30** preset and set the bitrate:
+HandBrake has a normal window, runs on Windows, Mac and Linux, and is free and open source according to the [HandBrake website](https://handbrake.fr/). On Windows it needs Microsoft's .NET Desktop Runtime 10.0, according to its [system requirements](https://handbrake.fr/docs/en/latest/technical/system-requirements.html). Instead of a Social preset, keep the default **Fast 1080p30** preset and set the bitrate:
 
 1. Open your video in HandBrake. The default preset is **Fast 1080p30**.
 2. Go to the **Video** tab and switch from **Constant Quality** to the average bitrate option (labeled **Bitrate (kbps)** in the Linux version we checked).
@@ -74,52 +74,23 @@ HandBrake's [official presets page](https://handbrake.fr/docs/en/latest/technica
 - **Social 10 MB 1 Minute** uses only half of the 20 MB you're allowed and drops the picture to 960 x 540. It had the lowest scores in our test, 82.2 to 84.0, and small text on the screen recording turned soft
 - **Social 25 MB 1 Minute** made files of 23.8 to 23.9 MB with sound and 20.2 MB without, all over 20,000,000 bytes. It's a good fit for Gmail
 
-![Four 2x zoomed crops of the same line of 16-pixel text. The original and FFmpeg at 14.6 MB in 1080p are sharp. FFmpeg at 9.0 MB in 1280 x 720 is slightly soft but clear. HandBrake Social 10 MB at 8.3 MB in 960 x 540 is blurry with fuzzy letter edges](./images/compress-video-for-discord-email/compress-video-screen-text-comparison.webp)
+![Two 2x zoomed crops of the same lines of 16-pixel text. The original is sharp. HandBrake Social 10 MB at 8.3 MB in 960 x 540 is blurry with fuzzy letter edges](./images/compress-video-for-discord-email/compress-video-screen-text-comparison.webp)
 
 ### What the default HandBrake preset does
 
 **Fast 1080p30** keeps the quality steady and lets the size follow the video. Our 1-minute clips came out at 20.5 MB for the animation, 32.9 MB for the live-action scene and 4.8 MB for the screen recording. So it might fit Discord, or it might not: it depends on how much is moving on screen. HandBrake's [quality guide](https://handbrake.fr/docs/en/latest/workflow/adjust-quality.html) recommends RF 20 to 24 for 1080p with the x264 and x265 encoders; Fast 1080p30 uses RF 22.
 
-One caveat about our HandBrake numbers. On the animation and live-action clips, HandBrake's files differed slightly from the original even at near-lossless quality (RF 5 scored 40.8 dB PSNR, against 60.9 dB for FFmpeg at CRF 5), which pulled its VMAF scores down by about 3 to 5 points against FFmpeg at the same size. Changing **Encoder Preset** to slow and the H.264 profile to high narrowed the gap on the live-action clip (90.4 to 92.7, against 93.2 for FFmpeg) but barely on the animation (91.2 to 92.2, against 95.8). On the screen recording, HandBrake and FFmpeg scored the same 99.6. We couldn't find the cause, so the HandBrake-versus-FFmpeg gap may be specific to our clips. The faces below look close either way.
+With a bitrate set for 19 MB, changing **Encoder Preset** to slow and the H.264 profile to high raised the scores a little: from 90.4 to 92.7 on the live-action clip and from 91.2 to 92.2 on the animation. It also took longer, 4.8 minutes for our three clips against 3.6. In the faces below, the 19 MB file looks close to the original, while the 540p Social 10 MB file is visibly softer.
 
-## How to compress a video with FFmpeg (best quality per MB)
+![Three crops of the same face from the live-action clip: the original, HandBrake Social 10 MB at 960 x 540, and HandBrake average bitrate at 19 MB. The 540p file is visibly softer; the 19 MB file looks close to the original](./images/compress-video-for-discord-email/compress-video-live-action-faces.webp)
 
-FFmpeg gave the best quality at every size we tried. It's a command-line tool, free from [ffmpeg.org](https://ffmpeg.org/download.html), and you can install it with `winget install ffmpeg` on Windows ([gyan.dev builds](https://www.gyan.dev/ffmpeg/builds/)) or `brew install ffmpeg` on a Mac ([Homebrew](https://formulae.brew.sh/formula/ffmpeg) lists 9.0.2).
-
-For Discord, run two passes with the bitrate from the table above (2,380 kbps for 1 minute):
-
-```bash
-ffmpeg -y -i input.mp4 -c:v libx264 -preset slow -b:v 2380k -pass 1 -an -f null /dev/null
-ffmpeg -i input.mp4 -c:v libx264 -preset slow -b:v 2380k -pass 2 -c:a aac -b:a 128k -movflags +faststart output.mp4
-```
-
-On Windows, replace `/dev/null` with `NUL`. The first command only analyzes the video; the second writes `output.mp4`. Our files came out at 18.95 to 19.00 MB for the clips with sound and 14.6 MB for the screen recording.
-
-![Six crops of the same face from the live-action clip: the original, HandBrake Social 10 MB at 960 x 540, HandBrake average bitrate at 19 MB, and FFmpeg H.264, H.265 and AV1 at 15.5 to 19 MB. The 540p HandBrake file is visibly softer; the others look close to the original](./images/compress-video-for-discord-email/compress-video-live-action-faces.webp)
-
-### H.264, H.265 or AV1?
-
-At the same 19 MB budget, H.265 and AV1 scored higher than H.264 on both film clips, but the gain was small: 96.1 and 96.3 against 95.8 on the animation, and 94.8 for both against 93.2 on the live-action scene. Discord's help page lists MP4 files with H.264, HEVC (H.265) or AV1 video among the common upload types.
-
-![Two grouped bar charts of VMAF at a 19 MB budget. Animation: HandBrake H.264 91.2 average, FFmpeg H.264 at 1280 wide 93.3, FFmpeg H.264 95.8, H.265 96.1, AV1 96.3. Live action: HandBrake 90.4, FFmpeg H.264 at 1280 wide 92.8, H.264 93.2, H.265 94.8, AV1 94.8, with AV1's worst 5% of frames at 83.5](./images/compress-video-for-discord-email/compress-video-encoder-quality-19mb.webp)
-
-- **H.265** (`-c:v libx265 -preset medium -b:v 2380k -tag:v hvc1`, two passes with `-x265-params pass=1` and `pass=2`) took about twice as long as H.264: 6.8 minutes for our three clips against 3.3
-- **AV1** (`-c:v libsvtav1 -preset 6 -b:v 2380k -svtav1-params rc=1`, one pass) undershot the target, making 12.7 to 17.4 MB files, so you get less than you paid for. Its worst 5% of frames on the live-action clip scored 83.5, the lowest of any 19 MB file
-- **H.264** is the safest choice if you don't know what your recipient will play the video on. We didn't test playback on phones or in Discord's player
-
-### Should you lower the resolution?
-
-Not for Discord's 20 MB at 1 minute. Scaling to 1280 pixels wide at the same 19 MB scored lower than staying at full width: 93.3 against 95.8 on the animation and 92.8 against 93.2 on the live-action scene. Smaller pictures help when the budget is tight. At 9.5 MB, FFmpeg at 1280 x 720 scored 90.0 on the animation and 96.2 on the screen recording, against 83.7 and 82.2 for HandBrake's 540p Social 10 MB preset at the same size.
-
-### FFmpeg's default command
-
-`ffmpeg -i input.mp4 output.mp4` uses H.264 at CRF 23 (we confirmed `crf=23.0` in the settings string the encoder writes into the file). It kept high quality, 95.3 to 99.6, but doesn't aim at a size: our clips came out at 18.3, 27.8 and 4.6 MB.
+One caveat about our HandBrake numbers. On the animation and live-action clips, HandBrake's files differed slightly from the original even at near-lossless quality (RF 5), and we couldn't find the cause. That may have lowered its scores on those two clips by a few points.
 
 ## How long does it take?
 
-On our 4-core CPU, every setting finished three 1-minute clips in under 7 minutes. Two-pass H.264 took 3.3 minutes in FFmpeg and 3.6 minutes in HandBrake. A computer with a newer or faster processor will be quicker.
+On our 4-core CPU, every HandBrake setting finished three 1-minute clips in under 5 minutes. A bitrate set for 19 MB, with two passes, took 3.6 minutes, against 2.5 minutes for the default Fast 1080p30 preset. A computer with a newer or faster processor will be quicker.
 
-![Horizontal bar chart of total encoding time for three 1-minute clips: HandBrake Social 10 MB 1.8 minutes, HandBrake average bitrate 19 MB 3.6, FFmpeg default 2.0, FFmpeg x264 two-pass 3.3, FFmpeg AV1 4.2 with peak 1,003 MB of RAM, FFmpeg x265 two-pass 6.8](./images/compress-video-for-discord-email/compress-video-encoding-time.webp)
+![Horizontal bar chart of total HandBrake encoding time for three 1-minute clips: Social 10 MB 1 Minute 1.8 minutes, Fast 1080p30 with interlace detection off 1.8, Social 25 MB 1 Minute 2.2, Fast 1080p30 2.5, average bitrate for 19 MB 3.6, the same with preset slow 4.7, and with preset slow and profile high 4.8](./images/compress-video-for-discord-email/compress-video-encoding-time.webp)
 
 ## What about Discord's own compression on your phone?
 
@@ -136,27 +107,20 @@ Discord's mobile app compresses videos when you upload them, according to its [V
 | HandBrake bitrate for 19 MB | 19.0 MB · 91.2 | 19.0 MB · 90.4 | 17.0 MB · 99.6 | 3.6 min |
 | HandBrake bitrate for 19 MB, preset slow | 19.0 MB · 91.7 | 19.0 MB · 91.4 | 16.5 MB · 99.6 | 4.7 min |
 | HandBrake bitrate for 19 MB, preset slow, profile high | 19.0 MB · 92.2 | 19.0 MB · 92.7 | 16.5 MB · 99.6 | 4.8 min |
-| FFmpeg default (x264 CRF 23) | 18.3 MB · 95.3 | 27.8 MB · 96.2 | 4.6 MB · 99.6 | 2.0 min |
-| FFmpeg x264 two-pass, 19 MB | 19.0 MB · 95.8 | 19.0 MB · 93.2 | 14.6 MB · 99.6 | 3.3 min |
-| FFmpeg x264 two-pass, 19 MB, 1280 wide | 18.9 MB · 93.3 | 19.0 MB · 92.8 | 17.1 MB · 97.1 | 2.3 min |
-| FFmpeg x265 two-pass, 19 MB | 18.9 MB · 96.1 | 18.9 MB · 94.8 | 18.9 MB · 99.6 | 6.8 min |
-| FFmpeg SVT-AV1, 19 MB | 17.4 MB · 96.3 | 15.5 MB · 94.8 | 12.7 MB · 99.6 | 4.2 min |
-| FFmpeg x264 two-pass, 24 MB | 23.9 MB · 96.6 | 24.0 MB · 95.3 | 17.2 MB · 99.6 | 3.6 min |
-| FFmpeg x264 two-pass, 9.5 MB, 1280 wide | 9.5 MB · 90.0 | 9.5 MB · 84.9 | 9.0 MB · 96.2 | 1.9 min |
 
-Each cell is file size and average VMAF. Sizes are in millions of bytes. All clips are 60 seconds; the animation and live-action files include stereo AAC audio (160 kbit/s in HandBrake's presets, 128 kbit/s in the others). Times are one run each, and some runs overlapped with other work on the test machine, so treat time differences under about 30% as noise. Turning off HandBrake's interlace detection didn't change quality, so it wasn't the cause of the HandBrake gap.
+Each cell is file size and average VMAF. Sizes are in millions of bytes. All clips are 60 seconds; the animation and live-action files include stereo AAC audio (160 kbit/s in HandBrake's presets, 128 kbit/s with a set bitrate). Times are one run each, and some runs overlapped with other work on the test machine, so treat time differences under about 30% as noise. Turning off HandBrake's interlace detection didn't change quality.
 
 ## Other tools we looked at
 
-- **Online compressors:** they ask you to upload the video, which these offline tools don't need. We didn't test them
+- **Online compressors:** they ask you to upload the video, which HandBrake doesn't need. We didn't test them
 - **Discord's mobile app compression:** limited to 720p without Nitro, and the 20 MB check happens before it compresses (see above)
 - **HandBrake's hardware encoders (NVENC, Quick Sync, VideoToolbox):** faster on computers that have them, but our test machine had no GPU, so we couldn't measure them
 
-If you'd rather send a short loop than a video file, our [test of video to GIF converters](/posts/video-to-gif-high-quality-free) covers that. For other files that are too big to send, see our [PDF compression test](/posts/compress-pdf-offline-free) and our [HEIC to JPG converter test](/posts/convert-heic-to-jpg-free). Our [list of free offline AI tools](/posts/free-offline-ai-tools) covers transcription, voices and background removal that also run without uploading anything.
+For photos that are too big to send, see our [test of compressing an image to 100 KB](/posts/compress-image-to-100kb) and our [HEIC to JPG converter test](/posts/convert-heic-to-jpg-free). Our [list of free offline AI tools](/posts/free-offline-ai-tools) covers chatbots, transcription and other tools that also run without uploading anything.
 
 ## Which one should you use?
 
 - **You want the easy way for Discord:** HandBrake with **Fast 1080p30** and the bitrate from the table. Every clip fit in 17 to 19 MB at full resolution
-- **You want the best quality in 20 MB:** FFmpeg two-pass H.264 at `-preset slow`, or H.265 if you can wait twice as long
+- **You want a little more quality in 20 MB:** also set **Encoder Preset** to slow and the H.264 profile to high, if you can wait about a third longer
 - **You're emailing it from Gmail:** HandBrake **Social 25 MB 1 Minute** for clips up to a minute, or a bitrate set for 24 MB
-- **Your limit is 10 MB:** set a bitrate for 9.5 MB and scale to 1280 pixels wide rather than using HandBrake's 540p Social 10 MB preset, especially if the video has text
+- **Your limit is 10 MB:** HandBrake's **Social 10 MB 1 Minute** preset fits, but it drops the picture to 540p and blurs small text

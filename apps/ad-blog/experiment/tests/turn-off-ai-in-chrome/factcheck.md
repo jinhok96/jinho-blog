@@ -1,6 +1,7 @@
 # Fact-check sheet: turn-off-ai-in-chrome.mdx
 
 Checked 2026-10-11. Reference build: Chromium tag `155.0.8059.40` (= Chrome 155 stable).
+Updated 2026-10-17: Windows policy steps changed from Command Prompt `reg add`/`reg delete` commands to Registry Editor (regedit) screen steps with the same key, value names, type (REG_DWORD) and values (see "Windows Registry Editor steps" below); the Mac policy section (Terminal `defaults` commands) removed, Mac readers pointed to the Settings switches; post `updatedAt: 2026-10-17`. No new policy, value, or Chrome fact added.
 All Chromium paths are relative to `https://raw.githubusercontent.com/chromium/chromium/155.0.8059.40/` unless another tag is named.
 Policy YAMLs live in `components/policy/resources/templates/policy_definitions/GenerativeAI/` (abbreviated `GenAI/`).
 
@@ -10,6 +11,7 @@ Method key:
 - **RUN** = we ran it in the container
 - **EXTRACT** = search-result extract only (not opened); softened in the post
 - **STD** = standard OS command syntax from vendor docs opened on GitHub, or general OS UI (noted)
+- **MSDOC** = Microsoft documentation page opened directly in this session (learn.microsoft.com / support.microsoft.com, WebFetch)
 
 ## Version and environment
 
@@ -80,13 +82,28 @@ Method key:
 | …and observed in a running browser | Chromium 141.0.7390.37 headless, `/etc/chromium/policies/managed/toolproof-genai-test.json`; chrome://policy dump: `GenAiDefaultSettings … Error … Ignored because the policy is not set by a cloud source.`; GeminiSettings, AIModeSettings, HelpMeWriteSettings, HistorySearchSettings, GenAILocalFoundationalModelSettings = OK (output in `policy_dump_141.json`; test file removed afterwards) | RUN |
 | Sensitive policies are filtered on unmanaged Win/Mac; AI policies aren't sensitive | `components/policy/core/common/async_policy_loader.cc` L110-119; `policy_loader_common.cc` L145-163; `generate_policy_source.py` L98, L1438-1449 (`sensitive:` key); none of the GenAI YAMLs or BuiltInAIAPIsEnabled has `sensitive:` (grep) | SRC |
 | Windows key `HKLM\SOFTWARE\Policies\Google\Chrome` (Chrome-branded) | `components/policy/tools/generate_policy_source.py` L29, L1208-1218; `chrome/browser/policy/chrome_browser_policy_connector.cc` L315-320; `docs/enterprise/add_new_policy.md` L142-145; HKLM = machine scope `policy_loader_win.cc` L321-322 | SRC |
-| `reg add … /v … /t REG_DWORD /d … /f` and `reg delete … /v … /f` syntax | https://raw.githubusercontent.com/MicrosoftDocs/windowsserverdocs/main/WindowsServerDocs/administration/windows-commands/reg-add.md L17-30; …/reg-delete.md L17-28 | STD (Microsoft docs repo opened) |
-| "Run as administrator" for Command Prompt | General Windows UI; Microsoft's page not reachable from this session | Not opened (general knowledge, low risk) |
 | chrome://policy has **Reload policies** button | `components/policy_strings.grdp` L489-490 | SRC |
-| Mac: domain `com.google.Chrome`; forced (managed) values = Mandatory, others = Recommended | `chrome/browser/policy/chrome_browser_policy_connector.cc` L323-342; `components/policy/core/common/policy_loader_mac.mm` L120-135, L178-189 ("Managed Preferences") | SRC |
-| Recommended-level values show "OK" in chrome://policy (Chromium test via `/etc/chromium/policies/recommended/`) | `policy_dump_141_recommended.json` | RUN (did not test feature behavior on a Mac; post says so) |
-| `defaults write com.google.Chrome Name -int N` / `defaults delete` syntax | Standard macOS `defaults` usage; Apple docs not reachable | Not opened (general knowledge) |
+| chrome://policy status column shows **OK** for a valid policy value (2026-10-17) | `components/policy_strings.grdp` L385-387 (`IDS_POLICY_OK`, "Text displayed in the status column when a valid value is set for a policy"), re-opened at tag 155.0.8059.40 | SRC |
 | Machine-level policies make the browser "managed" → app menu "Managed by your organization" | `chrome/browser/enterprise/browser_management/browser_management_status_provider.cc` L62-73; `chrome/browser/ui/managed_ui.cc` L108-123, L163; string `chrome/app/generated_resources.grd` L1875-1876 | SRC |
+
+## Windows Registry Editor steps (added 2026-10-17)
+
+Replaces the Command Prompt commands. Key, value names, type and values are copied from the old commands (`reg add "HKLM\SOFTWARE\Policies\Google\Chrome" /v {Name} /t REG_DWORD /d {N} /f`, example values GeminiSettings=1, GenAILocalFoundationalModelSettings=1, HelpMeWriteSettings=2) and the policy table above; nothing new. Steps were not run on a Windows PC (post says so in How we checked).
+
+| Claim | Source | Method |
+| --- | --- | --- |
+| Key `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome` (= old `HKLM\…`); HKLM abbreviation | Chrome side: "Windows key" row above (SRC). HKLM = HKEY_LOCAL_MACHINE: https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users (predefined keys table) | SRC + MSDOC |
+| REG_DWORD is shown as **DWORD (32-bit) Value** in Registry Editor's **Edit > New** menu | Same Learn page (types table: "DWORD Value / REG_DWORD"); https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc772023(v=ws.10) ("On the **Edit** menu, point to **New**, and then click … **DWORD (32-bit) Value**, **QWORD (64-bit) Value** …"; "Type a name for the new value and then press ENTER") | MSDOC (archived page, Windows Server 2008 / Vista) |
+| Registry "warning" quote: "Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system." | Learn page above, "Use Registry Editor" > Warning (ms.date 2026-02-12) | MSDOC |
+| Registry = database for system/app settings; navigation area shows keys as folders | Learn page above ("A central hierarchical database …"; "The navigation area of Registry Editor displays folders. Each folder represents a predefined key") | MSDOC |
+| Open: Start, type **regedit**, press **Enter**; "If you are prompted for an administrator password or for confirmation, type the password or provide confirmation." | https://support.microsoft.com/en-us/topic/how-to-back-up-and-restore-the-registry-in-windows-855140ad-e318-2a13-2829-d428a2ab0692 (page says "regedit.exe") | MSDOC |
+| Create key: select parent key, **Edit > New > Key**, type name, press ENTER | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-r2-and-2008/cc731733(v=ws.11) ("Add a Registry Key", Windows 7 / Server 2008 R2: "Click **New** on the **Edit** menu and then click **Key**") | MSDOC (archived) |
+| Set data: **Edit > Modify**, type in **Value data**, **OK**; DWORD has a base option (hexadecimal or decimal) | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2008-R2-and-2008/cc771057(v=ws.10) ("Change a Value"); https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc737085(v=ws.10) ("the base (hexadecimal or decimal) for DWORD values", **Value data**) | MSDOC (archived) |
+| 0, 1, 2 are the same in hexadecimal and decimal, so **Base** doesn't matter for these values | Arithmetic (single digits below 10) | — |
+| Undo: select value, **Edit > Delete**, confirm; "There is no Undo command for deletions." | https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-server-2003/cc782088(v=ws.10) ("On the **Edit** menu, click **Delete**"); https://learn.microsoft.com/en-us/previous-versions/windows/it-pro/windows-2000-server/cc976614(v=technet.10) (prompt "Registry Editor will delete the currently selected value. Do you want to continue the operation?" + no Undo) | MSDOC (archived). **Yes** button = general Windows UI for that yes/no prompt (not on the page) |
+| UAC dialog wording, double-click to expand a key in the left pane | General Windows UI; post words step 2 after Microsoft's text ("asks for permission or an administrator password") | Not opened (general knowledge, low risk) |
+
+No current (Windows 10/11) Microsoft page with the full step list was found; menu names come from the archived Microsoft pages above, and the current Learn page confirms Registry Editor can add, change and delete keys and values.
 
 ## AI Mode / AI Overviews scope
 
@@ -102,5 +119,7 @@ Method key:
 - Country/language availability of Gemini in Chrome, Help me write, history search: dropped (only search extracts). Post says rows appear only for features available to your account, language, and country (SRC: visibility checks).
 - "Suggestions, powered by AI" (`ChromeSuggestionsSettings`, kContextualCueingV2 disabled by default), "Select text to ask Gemini" (updates_only=true hides the row), Skills, Talk to type, Try on You: not covered in post (not visible by default or too new to verify UI).
 - `ComponentUpdatesEnabled=false`: left out of the post (blocks other component updates too).
-- Mac configuration-profile (.mobileconfig) steps: not given (Apple UI not verifiable); post points to a device-management profile generically.
+- Mac configuration-profile (.mobileconfig) steps: not given (Apple UI not verifiable).
+- Mac policy section removed 2026-10-17 (Terminal `defaults write/delete` commands; no non-developer GUI method). Removed claims: domain `com.google.Chrome`, managed values = Mandatory / others = Recommended (`chrome/browser/policy/chrome_browser_policy_connector.cc` L323-342; `components/policy/core/common/policy_loader_mac.mm` L120-135, L178-189, SRC), recommended values "OK" in Chromium (`policy_dump_141_recommended.json`, RUN), `defaults` syntax (general knowledge). Post now says policies are covered on Windows only and points Mac readers to the Settings switches.
+- Command Prompt `reg add`/`reg delete` syntax (MicrosoftDocs `reg-add.md` L17-30, `reg-delete.md` L17-28) and "Run as administrator": removed from the post 2026-10-17 with the commands.
 - GeminiSettings is `future_on: chrome.linux` (not yet supported on Linux Chrome); Linux not covered in the post.

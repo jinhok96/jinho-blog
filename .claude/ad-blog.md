@@ -44,12 +44,13 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 
 - 레지스트리는 public 밖 `.content/registry.json` (정적 export에 원문 JSON 노출 방지). `core/content/internal/reader.ts`는 경로를 리터럴로 유지하고 `reader.test.ts`가 설정과 일치 검증
 - 날짜는 frontmatter만 사용 (`gitDates: false`): `createdAt` 필수(글·페이지), `updatedAt` 미지정 시 발행일, 수정일 < 발행일이면 빌드 에러
+- `createdAt`은 UTC 시각까지 작성 (예: `2026-10-17T21:44:00Z`, 날짜만 쓰면 UTC 자정). 목록·이전/다음 글은 시각까지 비교해 최신순, 화면에는 날짜만 표시
 - 스키마는 strict: 정의되지 않은 frontmatter 키는 빌드 에러
 - `draft: true` 글은 개발 서버에서만 노출 (`entities/post`의 `isVisible`)
 - 본문 소제목은 `##`부터 (페이지 `<h1>`은 제목, 본문 `#`은 `<h2>`)
 - 연락처 이메일은 MDX에 직접 쓰지 않고 `<ContactEmail />` 사용 (값은 `core/config`의 `CONTACT_EMAIL`)
 - UI·콘텐츠는 영어 (`SITE_LANGUAGE = 'en-US'`, `<html lang>`도 이 값). 코드 주석·개발자용 에러 메시지·개발 서버 광고 자리표시는 한국어 유지
-- 날짜 표시는 `en-US`·**UTC 기준** (frontmatter 날짜가 UTC 자정으로 저장되므로, 미국 시간대로 표시하면 하루 전 날짜가 됨)
+- 날짜 표시는 `en-US`·**UTC 기준** (frontmatter 날짜는 날짜만 쓰면 UTC 자정, 시각은 UTC로 작성 — 미국 시간대로 표시하면 하루 전 날짜가 됨)
 - 읽기 시간은 영어 기준 분당 230단어
 
 ## SEO 규칙

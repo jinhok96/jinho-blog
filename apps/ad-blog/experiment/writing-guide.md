@@ -136,7 +136,7 @@
 title: How to Turn Off ChatGPT Memory (and Delete What It Saved)
 description: Step-by-step instructions to pause, turn off, or clear ChatGPT memory on web and mobile, plus what happens to chats you already had.
 category: ai-tools
-createdAt: 2026-10-11
+createdAt: 2026-10-11T14:05:00Z
 tags:
   - ChatGPT
   - privacy
@@ -145,8 +145,9 @@ tags:
 ```
 
 - `category`: `ai-tools`(AI 도구·AI 기능), `software`(앱·OS·브라우저), `news`(뉴스 칼럼, 표시 이름 News & Analysis. AI·앱 뉴스도 여기에 둠)
+- `createdAt`: 글을 커밋하는 시점의 **UTC 시각** (`date -u +%Y-%m-%dT%H:%M:00Z`). 화면에는 UTC 날짜만 표시되고, 목록은 시각까지 비교해 최신순 정렬 (날짜만 쓰면 UTC 자정 = 그날 가장 오래된 글)
 - `tags`: 3~6개, 제품명·주제 (관련 글 계산에 사용)
-- 내용을 크게 고쳤을 때만 `updatedAt` 갱신. 오탈자 수정, 제목·설명만 바꾼 경우, 날짜만 바꾸는 갱신은 제외 (내용 변화 없이 날짜만 바꾸는 것을 Google은 경고 신호로 봄)
+- 내용을 크게 고쳤을 때만 `updatedAt` 갱신. 오탈자 수정, 제목·설명만 바꾼 경우, 날짜만 바꾸는 갱신은 제외 (내용 변화 없이 날짜만 바꾸는 것을 Google은 경고 신호로 봄). 발행일과 같은 UTC 날짜에 수정했다면 `updatedAt`에도 시각을 씀 (수정일 < 발행일이면 빌드 에러)
 
 ## 링크
 

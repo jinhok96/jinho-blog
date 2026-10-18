@@ -1,5 +1,5 @@
 /**
- * frontmatter 날짜(YYYY-MM-DD)는 UTC 자정으로 저장되므로 UTC 기준으로 표시
+ * frontmatter 날짜는 UTC 기준(날짜만 쓰면 UTC 자정, 시각은 UTC로 작성)이므로 UTC 기준으로 날짜만 표시
  * - 방문자·빌드 환경 시간대(미국 등 UTC-)를 쓰면 하루 전 날짜로 보이는 문제 방지
  */
 const TIME_ZONE = 'UTC';

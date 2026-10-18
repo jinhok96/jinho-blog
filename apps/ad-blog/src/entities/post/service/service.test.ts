@@ -66,6 +66,16 @@ describe('getPosts', () => {
     expect(mockGetEntries).toHaveBeenCalledWith('posts');
   });
 
+  it('같은 날짜는 시각까지 비교 (날짜만 쓴 글은 UTC 자정)', () => {
+    mockGetEntries.mockReturnValue([
+      makePost({ slug: 'morning', createdAt: '2026-02-01T09:00:00.000Z' }),
+      makePost({ slug: 'midnight', createdAt: '2026-02-01T00:00:00.000Z' }),
+      makePost({ slug: 'night', createdAt: '2026-02-01T21:00:00.000Z' }),
+    ]);
+
+    expect(getPosts().map(post => post.slug)).toEqual(['night', 'morning', 'midnight']);
+  });
+
   it('개발 서버에서는 초안 포함', () => {
     vi.stubEnv('NODE_ENV', 'development');
 

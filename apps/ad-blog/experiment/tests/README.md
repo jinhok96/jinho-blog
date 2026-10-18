@@ -21,6 +21,7 @@
 | [pixel-watch-safety-signal-ending](pixel-watch-safety-signal-ending) | 뉴스 칼럼(영향) 사실 확인표: Google 커뮤니티 공지·Pixel Watch·Google Fi·Google Health 도움말 대조(Playwright 렌더링), 후보별 기사 수, 공지 원문(`source-announcement.txt`), 그래픽 스크립트(`charts.py <출력 폴더>`) |
 | [split-pdf-free](split-pdf-free) | PDF 나누기 GUI 방법 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Chromium 141 인쇄 Save as PDF) 측정: 12쪽 입력(보고서 책갈피·목차 링크, W-9 양식, 사진) 텍스트·사진·책갈피·링크·양식 보존, 한 쪽씩·크기별 나누기, Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 | [merge-pdf-files-free](merge-pdf-files-free) | PDF 합치기 GUI 앱 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판) 측정: 보고서(책갈피·목차 링크)+W-9+사진 3파일 합치기, 순서 바꾸기(W-9 먼저), W-9 2부 양식 이름 충돌(PDFsam 양식 옵션 3개), Sejda 무료 한도(50쪽·하루 3회), Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
+| [jpg-to-pdf-free](jpg-to-pdf-free) | JPG→PDF GUI 방법 3개(PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판·Chromium 141 인쇄 Save as PDF) 측정: 12MP 사진 10장(세로 2장 EXIF Orientation=6) 세로 사진 방향·사진 바이트 보존·페이지 크기·파일 크기, PDF Arranger Page Size(US Letter), Sejda 페이지 옵션·하루 3회 한도, Chrome 머리글·Landscape 2쪽 넘침, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 
 ## 받아쓰기 벤치마크 재현
 
@@ -77,3 +78,10 @@
 2. `/tmp/merge/src/fw9.pdf`(IRS)·`/tmp/merge/photos/14.jpg`·`15.jpg`를 받은 뒤 `build_input.py /tmp/merge` → `/tmp/merge/parts/{report,w9,photos}.pdf`(+ 비교용 `in/packet.pdf`). 두 번째 W-9 `w9-vendor2.pdf`는 1번 칸 값만 `TEST VENDOR TWO INC`로 바꿔 같은 방식으로 만듦 (factcheck.md)
 3. `Xvfb :99` 위에서 화면 조작: PDFsam Merge(Add → `addfile.sh`로 경로 입력, Run), PDF Arranger(`pa_launch.sh 파일들`, 툴바 Save As), Sejda(Merge → Choose PDF & image files → Files view에서 끌어 순서 맞춤 → Merge PDF files). PDFsam 양식 옵션은 JavaFX 드롭다운을 클릭으로 고르면 적용되지 않을 때가 있어 클릭 후 방향키 + Enter. Sejda 무료판은 하루 3회라 시험 순서를 미리 정함
 4. `./run_analyze.sh` → `results.jsonl`, `chrome_shared_check.py`로 W-9 2부 입력 캡처, `/tmp/pdfs/bin/python -I charts.py /tmp/merge <출력 폴더>` → 글 이미지 8장
+
+## JPG→PDF(GUI) 측정 재현
+
+1. "PDF 나누기(GUI) 측정 재현" 1단계와 같은 venv(`/tmp/pdfs`)·apt(`xvfb xdotool imagemagick flatpak poppler-utils`) + `flatpak install flathub com.github.jeromerobert.pdfarranger com.sejda.Sejda`. Sejda는 `sejda_launch.sh --no-sandbox`
+2. `convert-heic-to-jpg-free/sources.json`의 01~08 URL을 `/tmp/j2p/orig/NN.jpg`로 받은 뒤 `/tmp/pdfs/bin/python -I build_set.py /tmp/j2p` → `in/01~10.jpg`(09·10은 세로, EXIF Orientation=6)·`ref/*.png`
+3. `Xvfb :99` 위에서 화면 조작(`shot.sh`로 캡처, 저장 대화상자는 `typepath.sh <x> <y> <경로>`로 이름 칸에 경로 입력): PDF Arranger(`pa_launch.sh /tmp/j2p/in/*.jpg` → Ctrl+Shift+S, Page Size는 Ctrl+A 후 S → Fit to paper·US Letter), Sejda(All Tools > JPG to PDF > Choose image files, 기본값·Letter+Small margin·Fit to image 3회, 4번째는 한도 화면), Chromium(`chrome_launch.sh file:///tmp/j2p/in/09.jpg` → Ctrl+P → Save, 01은 기본·Landscape·Margins None+Scale 90). 저장 경로는 `/tmp/j2p/out/*.pdf`
+4. `/tmp/pdfs/bin/python -I analyze.py /tmp/j2p /tmp/j2p/out/*.pdf > results.jsonl`, `sejda_portrait_diff.py`, `/tmp/pdfs/bin/python -I charts.py /tmp/j2p <출력 폴더>` → 글 이미지 8장

@@ -20,6 +20,7 @@
 | [iphone-duo-sold-out](iphone-duo-sold-out) | 뉴스 칼럼(화제) 사실 확인표: Apple 보도자료·스토어·Apple Upgrade·반품 정책 대조, 화제성 신호(Google News 기사 수·Trends), 결제 방식별 비용 계산, 그래프 스크립트(`charts.py <출력 폴더>`), 기사 수 집계 스크립트(`news_count.py`) |
 | [pixel-watch-safety-signal-ending](pixel-watch-safety-signal-ending) | 뉴스 칼럼(영향) 사실 확인표: Google 커뮤니티 공지·Pixel Watch·Google Fi·Google Health 도움말 대조(Playwright 렌더링), 후보별 기사 수, 공지 원문(`source-announcement.txt`), 그래픽 스크립트(`charts.py <출력 폴더>`) |
 | [split-pdf-free](split-pdf-free) | PDF 나누기 GUI 방법 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Chromium 141 인쇄 Save as PDF) 측정: 12쪽 입력(보고서 책갈피·목차 링크, W-9 양식, 사진) 텍스트·사진·책갈피·링크·양식 보존, 한 쪽씩·크기별 나누기, Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
+| [merge-pdf-files-free](merge-pdf-files-free) | PDF 합치기 GUI 앱 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판) 측정: 보고서(책갈피·목차 링크)+W-9+사진 3파일 합치기, 순서 바꾸기(W-9 먼저), W-9 2부 양식 이름 충돌(PDFsam 양식 옵션 3개), Sejda 무료 한도(50쪽·하루 3회), Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 
 ## 받아쓰기 벤치마크 재현
 
@@ -69,3 +70,10 @@
 2. `/tmp/split/src/fw9.pdf`(IRS)와 `/tmp/split/photos/14.jpg`·`15.jpg`(convert-heic-to-jpg-free/sources.json의 PD12M URL)를 받은 뒤 `/tmp/pdfs/bin/python -I build_input.py` → `/tmp/split/in/packet.pdf`
 3. `Xvfb :99 -screen 0 1600x1000x24` 위에서 각 앱을 화면 조작(xdotool)으로 실행: PDFsam Extract `1-4,5-10`(각 범위 별도 파일)·Split Every page·Split by size 1MB, PDF Arranger(`pa_launch.sh`, `XDG_RUNTIME_DIR` 필요) Ctrl+E로 1~4·5~10쪽·Shift+Ctrl+E로 한 쪽씩, Chromium(`chrome_launch.sh`) Ctrl+P → Save as PDF → Custom `1-4`·`5-10`·`11` (드롭다운은 클릭 후 방향키로 Custom 선택). 결과는 `run_analyze.sh`의 경로에 저장
 4. `./run_analyze.sh` → `results.jsonl`, `chrome_form_shot.py`로 양식 입력 캡처, `/tmp/pdfs/bin/python -I charts.py /tmp/split <출력 폴더>` → 글 이미지 7장
+
+## PDF 합치기(GUI) 측정 재현
+
+1. "PDF 나누기(GUI) 측정 재현" 1단계와 같은 venv·apt·PDFsam Basic 설치 + `flatpak install flathub com.github.jeromerobert.pdfarranger com.sejda.Sejda`. Sejda(Electron)는 root에서 `--no-sandbox`가 필요 (`sejda_launch.sh --no-sandbox`)
+2. `/tmp/merge/src/fw9.pdf`(IRS)·`/tmp/merge/photos/14.jpg`·`15.jpg`를 받은 뒤 `build_input.py /tmp/merge` → `/tmp/merge/parts/{report,w9,photos}.pdf`(+ 비교용 `in/packet.pdf`). 두 번째 W-9 `w9-vendor2.pdf`는 1번 칸 값만 `TEST VENDOR TWO INC`로 바꿔 같은 방식으로 만듦 (factcheck.md)
+3. `Xvfb :99` 위에서 화면 조작: PDFsam Merge(Add → `addfile.sh`로 경로 입력, Run), PDF Arranger(`pa_launch.sh 파일들`, 툴바 Save As), Sejda(Merge → Choose PDF & image files → Files view에서 끌어 순서 맞춤 → Merge PDF files). PDFsam 양식 옵션은 JavaFX 드롭다운을 클릭으로 고르면 적용되지 않을 때가 있어 클릭 후 방향키 + Enter. Sejda 무료판은 하루 3회라 시험 순서를 미리 정함
+4. `./run_analyze.sh` → `results.jsonl`, `chrome_shared_check.py`로 W-9 2부 입력 캡처, `/tmp/pdfs/bin/python -I charts.py /tmp/merge <출력 폴더>` → 글 이미지 8장

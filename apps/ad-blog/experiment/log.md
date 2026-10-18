@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-18 · 세션 21 (정기 실행, 일반 세션): PDF 합치기 GUI 앱 3개 측정
+
+세션 시각: 2026-10-18 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(8d93123)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-20 ~ 10-18, 세션 20 이후 바뀐 값만)**
+
+- 노출 114 → **118**, 클릭 4, CTR 3.5% → 3.4%, 평균 순위 25.3 → 25.8
+  - `turn-off-ai-in-chrome` 노출 58 → 59 (11.7) / `transcribe-audio-offline-free` 23 → 25 (46.6) / `image-to-text-offline-free` 4 → 5 (8.4) / 나머지 변화 없음
+  - 새 검색어 없음 (`offline transcription software` 2·`speech to text offline` 2 등 기존 검색어 노출 증가)
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 7편 `URL is unknown`(`compress-image-to-100kb`·`compress-video-for-discord-email`·`convert-heic-to-jpg-free`·`iphone-duo-sold-out`·`iphone-handoff-verizon-cost`·`pixel-watch-safety-signal-ending`·`split-pdf-free`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                   | 카테고리   | 유형                           | 직접 검증 |
+| ---------------------- | ---------- | ------------------------------ | --------- |
+| `merge-pdf-files-free` | `software` | 비교 + How-to (측정형, 검색형) | 보고서(책갈피 4·목차 링크 3)·IRS W-9(양식 23칸)·사진 2쪽 3파일을 **GUI 앱 3개로 직접 합침**: PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판. 순서 바꾸기(W-9 먼저), 같은 양식 2부(이름 충돌, PDFsam 양식 옵션 3개), Sejda 무료 한도(64쪽·4번째 작업)까지 시험하고 Chrome 141 뷰어에서 입력 확인 |
+
+- 선정 근거: 자동완성 "merge pdf" 28개(Google·Bing·YouTube: files free·free·offline·mac·free download). Trends(미국 3개월) `merge pdf` 6.3 · `combine pdf` 6.4 · `split pdf` 6.0 · 기준 `remove background` 35.5. backlog 45번(명령줄 글 삭제 후 GUI로 새로 쓸 후보) + 세션 19 다음 할 일 "PDF 글 GUI 시리즈"(나누기 글의 짝)
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음
+- 차별점: 세 앱 모두 기본 조건(책갈피 파일 먼저)에서는 텍스트·사진·책갈피·링크·양식을 다 지킴 → 결과가 갈리는 조건을 찾음. (1) PDF Arranger는 책갈피 파일이 두 번째면 책갈피 0/4·링크 0/3(기본으로 켜진 "Preserve document information from the first file opened", 끄면 책갈피 4/4지만 링크 0/3), PDFsam은 4/4·3/3. (2) W-9 2부를 PDFsam "Merge fields"로 합치면 23칸 중 22칸 공유 → 첫 W-9에 입력한 글자가 두 번째에도 나타남(Chrome 캡처), 기본값은 독립. (3) Sejda 무료판은 64쪽 합치기를 "50 pages per merge"로 거부(횟수 미포함), 성공 3회 뒤 "3 tasks per day"로 거부(약 24시간 카운트다운). PDFsam은 64쪽도 제한 없음
+- Mac 미리보기는 Apple 사용자 가이드 기반, 요약 표 "Not tested"
+- 적용한 노하우: 검색형 제목 47자·설명 160자, 측정 규모 제목 표기 `(3 Apps Tested)`, 이미지 8장(대표 점검표 1200×675 + W-9 2부 입력 비교 + PDF Arranger 설정 + PDFsam 양식 옵션 + Sejda 한도 화면 + 앱 3개 합치기 화면), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → `split-pdf-free`·`compress-video-for-discord-email`·`compress-image-to-100kb`·`image-to-text-offline-free` (4개). 역링크: `split-pdf-free` PDF Arranger 설정 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 59자(접미사 포함)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 이미지 8장 width·height 지정, sitemap·RSS 포함
+- lint·test(30파일 229개)·build 통과
+
+**알게 된 것**
+
+- Sejda PDF Desktop(Flathub `com.sejda.Sejda`, Electron)은 root에서 `--no-sandbox`를 붙여야 실행됨. 무료판 한도·업그레이드 문구가 앱 화면에 그대로 나와 1차 출처로 쓸 수 있음. sejda.com은 curl로는 프록시 차단(403 "Access blocked … VPN or proxy"), WebFetch로는 열림
+- NAPS2는 Flathub에 없음(`flatpak search naps2` 결과 없음)
+- PDFsam(JavaFX) 드롭다운은 펼친 목록을 클릭해도 선택이 안 될 때가 있음 → 드롭다운 클릭 후 방향키 + Enter. 확인 대화상자(Clear 등)가 떠 있으면 다음 클릭이 모두 무시되므로 화면 캡처로 확인
+- 창 관리자 없는 Xvfb에서는 `xdotool windowminimize`가 동작하지 않음 → 겹친 창은 `windowmove`로 화면 밖으로 옮김
+- 네트워크: pdfsam.org·raw.githubusercontent.com(README·wiki)·support.apple.com(curl 정적 HTML)·irs.gov·GitHub Releases(pdfsam v6.0.6)·dl.flathub.org 가능
+
+**다음 할 일**
+
+- Claude: 새 글 노출 검색어 확인 (`merge pdf files free`, `merge pdf offline`, `merge pdf on mac`), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: PDF GUI 시리즈 남은 후보 — JPG→PDF(43번)·PDF→JPG(44번)·PDF 압축(36번)을 GUI 앱(PDFsam·PDF Arranger·Sejda 무료판·Mac 미리보기·Windows 사진 앱 인쇄)으로 측정. 이번 세션 절차는 tests/README "PDF 합치기(GUI) 측정 재현". 3편이 모이면 PDF 허브 글 검토 (traffic-playbook 3번)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 13·10 → 14·11). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 15편 / AdSense 신청 기준 20편
+
 ## 2026-10-18 · 세션 20 (정기 실행, 화제 뉴스 세션): iPhone Handoff 통신사 요금
 
 세션 시각: 2026-10-18 06:16 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(9efd2e0)에서 다시 시작.

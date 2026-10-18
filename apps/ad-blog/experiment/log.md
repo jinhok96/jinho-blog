@@ -2,6 +2,47 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-18 · 세션 22 (정기 실행, 영향 뉴스 세션): Microsoft 365 Family 저장 공간 2TB 공유 전환
+
+세션 시각: 2026-10-18 18:16 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(175324c)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-20 ~ 10-18, 세션 21 이후 바뀐 값만)**
+
+- 노출 118 → **123**, 클릭 4, CTR 3.4% → 3.3%, 평균 순위 25.8 → 25.1
+  - `turn-off-ai-in-chrome` 노출 59 → 61 (11.5) / `image-to-text-offline-free` 5 → 7 (7.9) / `gemini-gems-to-skills` 8 → 9 (8.0) / 나머지 변화 없음
+  - 새 검색어 없음
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 8편 `URL is unknown`(세션 21의 7편 + `merge-pdf-files-free`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                               | 카테고리 | 유형             | 독창 요소 |
+| ---------------------------------- | -------- | ---------------- | --------- |
+| `microsoft-365-family-storage-2tb` | `news`   | 뉴스 칼럼 (영향) | 가구 인원별 총 용량 전후 그래프(대표 이미지), 구독 유형·갱신일별 전환 시점 계산(연간 5-01 갱신이면 2028-05-01까지 유지), 전환을 앞당기는 행동 2가지(Premium 업그레이드·만료 후 재구매), Microsoft 문서끼리의 차이(초과 시 3개월 동결·6개월 삭제 vs 최대 1년 접근), 자사 페이지끼리의 차이(OneDrive 페이지 "Up to 6 TB" vs 요금 페이지 "2 TB shared"), 6TB를 iCloud+로 옮길 때 연 $359.88 |
+
+- 선정 근거 (최근 30일 발표, Google News RSS 기사 수): `"Microsoft 365 Family" storage` **38** · `"Microsoft 365" storage shared 2TB` 22 (10-08~13 ZDNET·Windows Central·TechRadar·The Verge 등). 자동완성 "microsoft 365 family storage" 31개(additional storage·onedrive storage·share storage·increase storage). 시행일: 새 구독 10-08, 기존 구독 2027-05-02 이후 첫 갱신, 기존 Pro 2027-11-01
+- 제외·보류: Windows 11 24H2 Home·Pro 지원 종료(10-13, 이미 지남 → 일반 글 후보로 backlog 추가), Gemini 앱 Skills 배포(기존 글 갱신 대상), Edge 업데이트 방식(프로토타입·기업 기능), Canada 시간대 변경(미국 독자 아님), Marvel Unlimited 종료(분야 밖), 커스텀 GPT 12-11 종료(help.openai.com·openai.com 여전히 403)
+- `Our take`: 기존 구독자 대부분은 유지하고 지금 사용량만 확인, 갱신 전 이메일 때 다시 판단(최소 6개월, 연간이면 최대 약 18개월 여유). 이미 합계 2TB 근처인 가구만 정리 필요. 근거: 6인 가구 67% 감소에 가격 동일, 다른 곳으로 6TB를 옮기면 iCloud+ 기준 연 $359.88. 반대 관점: 1TB를 채우는 사람은 적고, 1~2인은 오히려 이득
+- 1차 출처: Microsoft Support "Changes to Microsoft 365 storage"·"Microsoft storage quotas"·"What is Microsoft cloud storage"(curl 정적 HTML), Microsoft 요금 비교·OneDrive 페이지(Playwright 렌더링), Apple 지원 108047(iCloud+ 요금). Microsoft 공식 발표 블로그는 찾지 못함 → 지원 문서 기준, AI 혜택 공유는 보도만 있고 요금 페이지가 "AI for subscription owner only"라 다루지 않음
+- 이미지 2장 (직접 만든 그래픽 1200×675): 인원별 총 용량(`thumbnail`), 전환 시점 타임라인. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `compress-video-for-discord-email`·`windows-10-esu-extended`·`iphone-handoff-verizon-cost`. 기존 글 역링크는 맞는 문맥이 없어 추가하지 않음
+- 빌드 HTML 확인: title 83자(접미사 포함, 본제목 71자)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(30파일 230개)·build 통과
+
+**알게 된 것**
+
+- support.microsoft.com 문서는 curl 정적 HTML로 본문 전체를 받을 수 있음. microsoft.com 요금·제품 페이지는 JS 로딩이라 Playwright 렌더링 필요(가격 텍스트 확인 가능). zdnet.com은 WebFetch 차단
+- one.google.com/about/plans는 렌더링해도 요금 카드가 나오지 않음(15GB만) → Google One 요금은 이번 세션에서 확인 불가
+- 같은 회사의 페이지끼리 표기가 엇갈리는 경우(제품 페이지 미갱신)는 칼럼의 독창 요소가 됨 (세션 18 Google 도움말 차이와 같은 방식)
+
+**다음 할 일**
+
+- Claude: Microsoft가 갱신 전 이메일 내용·보너스 저장 공간·추가 저장 공간 가격을 발표하거나 OneDrive 페이지 표기를 고치면 `microsoft-365-family-storage-2tb`에 반영하고 `updatedAt` 갱신
+- Claude: 칼럼 발행 4주 후(11-15) H4 판정 자료: `gsc_report.py --compare /posts/microsoft-365-family-storage-2tb --changed 2026-10-18 --metric impressions --type discover`(웹은 `--type web`). H5 영향 칼럼 2편째(화제 2편: `iphone-duo-sold-out`·`iphone-handoff-verizon-cost`)
+- Claude: 검증 기록 V1(11-11)·V2(11-12) 판정, Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), Gemini 앱 Skills 배포(10-13 시작, 11월 중순 완료)·Workspace 연기를 `gemini-gems-to-skills`에 반영 검토
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 14·11 → 15·12). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 16편 / AdSense 신청 기준 20편
+
 ## 2026-10-18 · 세션 21 (정기 실행, 일반 세션): PDF 합치기 GUI 앱 3개 측정
 
 세션 시각: 2026-10-18 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(8d93123)에서 다시 시작.

@@ -1,0 +1,237 @@
+# ECF 78-1 Settlement Agreement 발췌 (줄 136-150, 196-220, 300-320, 460-560, 918-930, 2240-2300)
+Accardi v. Apple Inc., No. 5:25-cv-04160; Feldt v. Apple Inc., No. 5:25-cv-04785; Robinson v.
+Apple Inc., No. 3:25-cv-04776); and Norman v. Apple, Inc., Case No. 3:25-cv-07985-NW.
+
+         17.   “Long-Form Class Notice” means the Notice that will be posted on the Settlement
+Website and mailed to any member of the Settlement Class who requests a hard copy, substantially
+in the form attached hereto as Exhibit D, subject to such modifications as may be agreed by the
+Parties.
+
+        18.    “Net Settlement Amount” means the Total Settlement Amount, reduced by the sum
+of the following amounts: (1) the costs of Notice and the costs of administering the Settlement
+(including the payment of any taxes if applicable), as set forth in Section F below; (2) any
+Attorneys’ Fees and Expenses Payment to Class Counsel awarded by the Court, as set forth in
+Section B.2 and Section G below; and (3) any Service Award to the Class Representatives awarded
+by the Court, as set forth in Section G below.
+
+        29.    “Settlement” or “Settlement Agreement” means this agreement and the settlement
+and release described herein.
+
+       30.      “Settlement Administrator” means Verita Global, LLC, an independent settlement
+administrator, subject to approval of the Court.
+
+        31.     “Settlement Class” means all purchasers of the Eligible Devices (iPhone 16, iPhone
+16e, iPhone 16 Plus, iPhone 16 Pro, iPhone 16 Pro Max, iPhone 15 Pro, or iPhone 15 Pro Max)
+who reside in the United States and purchased an Eligible Device in the United States for purposes
+other than resale, during the Class Period. The Settlement Class excludes Apple; any entity in
+which Apple has a controlling interest; Apple’s directors, officers, and employees; Apple’s legal
+representatives, successors, and assigns. Also excluded from the Settlement Class are all judicial
+officers assigned to this case as well as their staff and immediate family members.
+
+        32.    “Settlement Class Member” means every member of the Settlement Class who does
+not validly and timely request exclusion from the Settlement Class.
+
+       33.     “Settlement Date” means the date that this Settlement Agreement becomes fully
+executed.
+
+        34.     “Total Settlement Amount” means two-hundred fifty million U.S. dollars and zero
+cents ($250,000,000.00). The Total Settlement Amount represents the total extent of Apple’s
+monetary obligations under this Settlement Agreement, and includes the Class Payment, as set
+forth in Section B below; the costs of Notice and the costs of administering the Settlement, as set
+forth in Section F below; any Attorneys’ Fees and Expenses Payment to Class Counsel awarded
+Apple Intelligence features at issue.
+
+       WHEREAS, no litigation class has been certified in the Lawsuit.
+
+       WHEREAS, the Parties mediated before the Honorable Layn R. Phillips (Ret.) on October
+24, 2025, December 8, 2025, and March 23, 2026, and continued to negotiate the terms of this
+Settlement during the ensuing months with the mediator’s assistance.
+
+       WHEREAS, Plaintiffs and the Settlement Class are represented by Ryan J. Clarkson of
+Clarkson Law Firm, P.C., Brian Danitz of Cotchett, Pitre & McCarthy, LLP, and Laurence D. King
+of Kaplan Fox & Kilsheimer LLP.
+
+       WHEREAS, Apple has at all times denied and continues to deny any and all alleged
+wrongdoing and liability, specifically denies each of Plaintiffs’ contentions and claims, and
+continues to deny that Plaintiffs’ claims and allegations would be suitable for class action status.
+This Agreement shall not be construed in any fashion as an admission of liability or wrongdoing
+by Apple.
+
+        WHEREAS, Apple has delivered more than 20 Apple Intelligence features and anticipates
+delivering additional Siri Apple Intelligence features in future software updates at no additional
+cost.
+
+       3.      The Total Settlement Amount shall be applied to all of the following:
+
+               a.      To pay the costs of Notice and the costs of administering the Settlement and
+                       any taxes owed by the Settlement Fund, as set forth in Section F below;
+
+               b.      To pay any approved Attorneys’ Fees and Expenses Payment to Class
+                       Counsel and any Service Awards to the Class Representatives, as set forth
+                       in Section B.2 above and Section G below;
+
+               c.      To distribute the Net Settlement Amount to Settlement Class Members as
+                       set forth in Sections B.4–B.7 below.
+
+        4.     Plan of Allocation. The Net Settlement Amount will be distributed according to the
+following Plan of Allocation, subject to Court approval. The Net Settlement Amount shall be
+allocated to Claimants who submit valid Claim Forms during the Claim Period establishing that
+they purchased an Eligible Device in the United States during the Class Period (between June 10,
+2024, and March 29, 2025).
+
+               a.      In consideration of the releases and dismissals set forth in this Settlement
+                       Agreement, subject to Court approval, and subject to the other terms and
+                       conditions of this Settlement Agreement, Claimants who personally submit
+                       timely and valid Claim Forms shall receive the Per-Device Payment, a
+                       presumptive payment from the Net Settlement Amount of $25 per Eligible
+                       Device. The actual Per-Device Payment may differ, depending on whether
+                       the aggregate value of valid Claims submitted is more or less than the Net
+                       Settlement Amount. Settlement Class Members will be given the option of
+                       providing information to the Settlement Administrator to receive payment
+                       by physical check or digital payment.
+
+               b.      In the event that the aggregate value of valid Claims submitted is more than
+                       the Net Settlement Amount, then the Per-Device Payment for each Eligible
+                       Device shall be reduced on a pro rata basis. In the event that the aggregate
+                       value of valid Claims submitted is less than the Net Settlement Amount,
+                       then the Per-Device Payment for each Eligible Device will be increased on
+                       a pro rata basis up to a per-device cap of ninety-five dollars ($95). If any
+                       funds remain of the Total Settlement Amount after the per-device cap is
+                       reached, then the Parties shall confer on the distribution of the remaining
+                       amount. If distribution to the Class Members is not practical, then the
+                       remaining funds will be delivered to a cy pres recipient to be agreed upon
+                       by the Parties and approved by the Court. If the Parties cannot agree on a
+                       proposal for cy pres distribution, then the Parties shall present their
+                       competing proposals to the Court as part of the briefing on Final Approval.
+                       In no event shall any residual funds revert to Apple.
+
+        5.      Claim Form. Unless otherwise ordered by the Court, the Claim Form will not
+require a certification under the penalty of perjury, but will require that the Claimant confirm the
+following:
+
+                                                 9
+
+     Case 5:25-cv-02668-NW           Document 78-1        Filed 05/05/26      Page 11 of 153
+
+
+
+
+               a.      The Claimant purchased their Eligible Device in the United States between
+                       June 10, 2024 and March 29, 2025;
+
+               b.      Information sufficient to confirm the Claimant’s purchase of the Eligible
+                       Device, such as serial number, Apple Account ID, or phone number
+                       associated with the Eligible Device; and
+
+               c.      At the time of purchase, the Claimant expected to receive a Siri Apple
+                       Intelligence feature and did not receive it.
+
+        6.      Claim Validation. The Settlement Administrator will review all claims to determine
+their validity and eligibility under this Section. The Settlement Administrator will reject any claim
+that does not materially comply with the instructions on the Claim Form; is not submitted by a
+Settlement Class Member (including, in the case of a Settlement Class Member that is an entity,
+an authorized representative employed by the entity), and will reject any claim that is duplicative
+or fraudulent. The Settlement Administrator will confer with Class Counsel on any claims that may
+be deficient and curable.
+
+        7.      Claims Review and Dispute Resolution. No later than ten (10) calendar days after
+the completion of the Claim Period, the Settlement Administrator shall provide access to Class
+Counsel and Apple Counsel with reporting of claims, including a synopsis of the claims that were
+submitted, the Settlement Administrator’s determination of validity and eligibility for each claim,
+and the reasoning for any rejected claims. Class Counsel and Apple Counsel shall have ten (10)
+calendar days after the Settlement Administrator provides the reporting of claims to meet and
+confer in good faith regarding any concerns with the Settlement Administrator’s determination
+with respect to any of the submitted claims and to reach resolution of any disputed claims.
+Approval of a claim shall not be withheld without good cause. If Class Counsel and Apple Counsel
+cannot agree on a resolution of any such disputed claim, then the disputed claim shall be presented
+to the Court as part of the briefing on Final Approval.
+
+        8.     Timing of Distribution. For those Settlement Class Members who submitted a valid
+claim during the Claim Period, their payment shall be transmitted to each Settlement Class
+Member within sixty (60) calendar days after the Effective Date or as soon as practicable thereafter.
+Settlement Class Members who fail to submit a claim during the Claim Period will nonetheless be
+bound by the Settlement Agreement, including the releases set forth in Section H, unless they elect
+to exclude themselves through the procedure set forth in Section E.
+
+       9.      Uncashed Checks Follow Up. To the extent economically feasible, the Settlement
+Administrator shall follow up and communicate with Settlement Class Members who have not
+cashed their checks within sixty (60) calendar days of the payment being provided.
+
+        10.     Deadline to Cash Checks. Depositing a settlement check (paper or electronic) is a
+condition precedent to any Settlement Class Member’s right to receive monetary settlement
+benefits. All settlement checks shall be void one hundred and twenty (120) calendar days after
+issuance, and shall bear the language substantially similar to: “This check must be cashed within
+on the assumptions provided to the Settlement Administrator. In the event that unanticipated
+costs and expenses arise in connection with the notice and/or administration process, such that
+they exceed the estimated amount of $5,444,056,the Settlement Administrator shall promptly
+raise the matter with Apple Counsel and Class Counsel as soon as practicable after becoming
+aware of the unanticipated costs and expenses. If both Apple Counsel and Class Counsel, acting
+in good faith, agree that unanticipated costs and expenses justify an increase to the amount
+payable to the Settlement Administrator in excess of the agreed-upon estimate, then the amount
+in excess of the estimated amount shall be paid for exclusively from the Total Settlement
+Amount. Under no circumstances will Apple be responsible for any costs of Settlement
+administration in excess of its contribution to the Total Settlement Amount.
+
+       11.    Notice of Objection or Exclusion Procedure. The Long-Form Class Notice and
+Settlement Website shall provide information on the procedure by which members of the
+
+                                               91
+
+Case 5:25-cv-02668-NW   Document 78-1     Filed 05/05/26      Page 93 of 153
+
+
+
+
+                            APPENDIX B
+
+
+   EXHIBIT                  DESCRIPTION                     REFERENCED
+
+                                                            PARAGRAPH
+
+       A            Claim Form                        ¶3
+
+       B            Proposed Final Approval Order     ¶14
+
+       C            Proposed Judgment                 ¶15
+
+       D            Long-Form Class Notice            ¶17, F.2, F.6
+
+       E            Postcard Notice                   ¶24, F.2, F.5.b
+
+       F            Email Notice                      ¶12, F.2, F.5.a
+
+                    Proposed Preliminary Approval ¶26
+       G
+                    Order
+
+       H            Proposed Stipulated Undertaking   ¶35, B.2.b
+
+
+
+
+                                   92
+
+Case 5:25-cv-02668-NW   Document 78-1   Filed 05/05/26   Page 94 of 153
+
+
+
+
+                        EXHIBIT A
+
+                Case 5:25-cv-02668-NW                 Document 78-1         Filed 05/05/26           Page 95 of 153
+         Landsheft, et al. v. Apple Inc.
+         Settlement Administrator
+         P.O. Box 301132
+         Los Angeles CA, 90030-1132
+                                                                            VISIT THE SETTLEMENT WEBSITE BY
+                                                                            SCANNING THE PROVIDED QR CODE
+         APLS
+         «Barcode»
+         Postal Service: Please do not mark barcode
+
+
+         APLS: ClaimID: «ClaimID»                                                                                             XXXX\
+         PIN: «PIN»
+         «First1» «Last1»
+                                                                                        LANDSHEFT, ET AL. V. APPLE INC.

@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-19 · 세션 24 (정기 실행, 화제 뉴스 세션 → 영향 뉴스로 대체): Apple Siri 합의금 청구
+
+세션 시각: 2026-10-19 06:15 KST → 화제 뉴스 칼럼 세션. 48시간 안 발표 중 기준을 통과한 후보가 없어 README 대체 순서대로 영향 뉴스로 씀. 열린 PR 없음. 작업 브랜치를 `origin/main`(090761d)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-20 ~ 10-18, 세션 23 이후 바뀐 값만)**
+
+- 노출 130 → **134**, 클릭 4 → **5**, CTR 3.1% → 3.7%, 평균 순위 25.8 → 25.3
+  - `turn-off-ai-in-chrome` 노출 63 → 64 (12.2) / `gemini-gems-to-skills` 10 → 11 (8.2) / 나머지 변화 없음
+  - 페이지별 클릭: 홈 2·`turn-off-ai-in-chrome` 2·`free-offline-text-to-speech`(10-17 삭제한 글) 1. 검색어 `where did gems go in gemini` 2 (6.0)
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 10편 `URL is unknown`(세션 23의 9편 + `jpg-to-pdf-free`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                          | 카테고리 | 유형                             | 독창 요소 |
+| ----------------------------- | -------- | -------------------------------- | --------- |
+| `apple-siri-settlement-claim` | `news`   | 뉴스 칼럼 (영향, 화제 세션 대체) | 법원 문서 수치로 계산한 청구율별 기기당 지급액 그래프(대표 이미지): 최대 보수·비용을 뺀 순액 약 $174.4M ÷ 청구 기기 → $25 유지에 약 19% 청구 필요, 약 5% 이하면 $95 상한. 원고 측이 비교로 든 과거 청구율(2.57~3.6%, Nexus 6P 18%) 표시. 일정 타임라인(지급일 미정 점선), 대상 여부 표(모델·기간·선물·중고·여러 대·캐나다) |
+
+- 화제 뉴스 후보 (48시간, Google News RSS): 기준 통과 없음. T-Mobile T-Mix 요금제(유출만), WhatsApp 게스트 통화(10-14)·Fitbit Edge(10-15)는 48시간 밖, Meta 10-30 약관은 사업자·웹사이트 대상, ChatGPT Chrome 탭 제어는 openai.com 403, Gemini 이름 변경은 Android Police 1건뿐. Trends 급상승 RSS는 스포츠만. Mashable 10-18 09:00 기사 다수(YouTube Video Editor 종료·Bluesky 인증 등)는 과거 소식 재게시라 제외
+- 선정 근거: 청구 시작 9-21(보도, 최근 30일), 마감 12-21. Google News 48시간 `"$250 million" Apple claim` 9 · `Apple settlement Siri claim` 6 (CNET 10-18 등 재보도). 자동완성 "apple siri settlement" 22개(claim·claim form·payout·payout date·legit·website·canada). Trends 7일 0.0 → 검색량 신호는 약함
+- `Our take`: 청구할 것. 근거: 순액 약 $174M을 청구자끼리 나누고 상한 $95, $25는 약 19% 청구를 가정, 과거 청구율 2.6~3.6%면 모두 상한. 반대 관점: 이번엔 Apple이 등록 사용자 최대 99%에게 직접 통지 → 청구율이 훨씬 높을 수 있고 18%면 약 $26
+- 1차 출처: CourtListener RECAP의 법원 문서 PDF(ECF 77 신청서·78 공동 진술서·78-1 합의서·78-2 관리자 진술서·94 예비 승인 명령·96·97 최종 심리 일정), Apple 지원 108037(시리얼 찾기), 원고 측 변호인 Clarkson Law Firm 페이지(12-21 마감, WebFetch)
+- 청구 마감 충돌: 예비 승인 명령대로 계산하면 07-17 + 45 + 90 = 11-29인데 변호인 페이지·보도는 12-21 → 통지일 연장(08-28 연장 신청 보도)으로 판단. 연장 명령 원문은 RECAP에 없음. 글은 변호인 페이지 문구("before December 21") 기준 + "well before" 권고
+- 이미지 2장 (직접 만든 그래픽 1200×675): 청구율별 지급액(`thumbnail`), 일정 타임라인. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `iphone-duo-sold-out`·`iphone-handoff-verizon-cost`. 역링크: `iphone-duo-sold-out` 보상 판매 문단에 "보상 판매 전 시리얼 번호 복사" 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 80자(접미사 포함, 본제목 68자)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(30파일 230개)·build 통과
+
+**알게 된 것**
+
+- CourtListener: 검색 API는 비로그인 하루 125회 제한(이번 세션에 소진), RECAP PDF는 `storage.courtlistener.com/recap/gov.uscourts.{법원}.{pacer_case_id}.{번호}.{첨부}.pdf`로 직접 받을 수 있음(없는 번호는 404 → 번호를 훑어 보관된 문서만 찾음). 집단소송 합의 뉴스는 법원 문서가 1차 출처가 됨
+- 합의 공식 사이트(Verita 운영 SmartphoneAISettlement.com)는 Cloudflare 봇 확인으로 curl·Playwright 모두 차단, web.archive.org는 프록시 연결 끊김(이전 기록 없음), archive.ph 429, clarksonlawfirm.com은 curl 403·WebFetch 가능
+- 주말(미국 토·일) 화제 세션은 48시간 안 공식 발표가 거의 없음 → 영향 뉴스 대체가 잦을 것
+
+**다음 할 일**
+
+- Claude: 청구 기간 연장·최종 승인(2027-02-24)·보수 결정·청구 수 공개(2027-01 최종 승인 신청서)가 나오면 `apple-siri-settlement-claim`에 반영하고 `updatedAt` 갱신. 공식 사이트에 접근되면 12-21 마감·지급 방식을 직접 확인
+- Claude: 칼럼 발행 4주 후(11-16) H4 판정 자료: `gsc_report.py --compare /posts/apple-siri-settlement-claim --changed 2026-10-18 --metric impressions --type discover`(웹은 `--type web`). H5 영향 칼럼 3편째(화제 2편)
+- Claude: 새 글 노출 검색어 확인 (`jpg to pdf free` 등), 검증 기록 V1(11-11)·V2(11-12) 판정, Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: T-Mobile T-Mix 요금제가 공식 발표되면 화제/영향 칼럼 후보 (현재 유출만)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 16·13 → 17·14). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 18편 / AdSense 신청 기준 20편
+
 ## 2026-10-19 · 세션 23 (정기 실행, 일반 세션): JPG→PDF GUI 3가지 측정
 
 세션 시각: 2026-10-19 00:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a057f71)에서 다시 시작.

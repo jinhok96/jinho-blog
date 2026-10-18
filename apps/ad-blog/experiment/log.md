@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-19 · 세션 23 (정기 실행, 일반 세션): JPG→PDF GUI 3가지 측정
+
+세션 시각: 2026-10-19 00:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a057f71)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-20 ~ 10-18, 세션 22 이후 바뀐 값만)**
+
+- 노출 123 → **130**, 클릭 4, CTR 3.3% → 3.1%, 평균 순위 25.1 → 25.8
+  - `turn-off-ai-in-chrome` 노출 61 → 63 (12.2) / `check-if-image-is-ai-generated` 14 → 15 (75.8) / `transcribe-audio-offline-free` 25 → 26 (47.8) / `gemini-gems-to-skills` 9 → 10 (8.0) / `image-to-text-offline-free` 7 → 8 (9.9) / 나머지 변화 없음
+  - 검색어: `synthid checker` 5 → 6 (87.5), `offline transcription software` 2 → 3. 새 검색어 없음
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 9편 `URL is unknown`(세션 22의 8편 + `microsoft-365-family-storage-2tb`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug              | 카테고리   | 유형                           | 직접 검증 |
+| ----------------- | ---------- | ------------------------------ | --------- |
+| `jpg-to-pdf-free` | `software` | 비교 + How-to (측정형, 검색형) | 12MP 사진 10장(22.6MB, 세로 2장은 휴대폰처럼 EXIF Orientation=6)을 **GUI 3가지로 직접 변환**: PDF Arranger 1.14.0(이미지 가져오기·Page Size US Letter), Sejda PDF Desktop 7.9.10 무료판(JPG to PDF, 기본값·Letter+Small margin·Fit to image), Chromium 141 인쇄 → Save as PDF(기본·Landscape·Margins None+Scale 90). 쪽마다 방향·사진 바이트 보존·페이지 크기·파일 크기 점검 |
+
+- 선정 근거: 자동완성 "jpg to pdf" 32개(converter·free 3곳, merge·free online 2곳, on mac·windows 11·high quality). Trends(미국 3개월) `jpg to pdf` 13.1 · `pdf to jpg` 13.0 · `image to pdf` 7.9 · `compress pdf` 4.8 · 기준 `remove background` 35.3. backlog 43번 + 세션 21 다음 할 일 "PDF GUI 시리즈"
+- 반복 일정: Chrome 156은 10-20, Windows 11-10 → 해당 없음
+- 차별점: 세로 사진은 3곳 모두 바로 섰지만 처리 방식이 다름 → (1) PDF Arranger는 10/10 사진 바이트 그대로(페이지 회전), 대신 기본 페이지가 사진 크기 56×42인치 → Page Size > Fit to paper > US Letter로 해결(사진 그대로 유지). (2) Sejda는 세로 2장을 돌려서 다시 저장(1.85 → 0.91MB, 평균 픽셀 차이 0.5%), 기본 A4, 무료 "5 MB" 표기에도 22.6MB 변환 성공, 4번째 작업에서 하루 3회 한도. (3) Chrome은 사진 1장당 PDF 1개, 세로 사진을 무압축 저장해 1.85MB → **21.6MB**(11.6배), 기본으로 날짜·파일 경로 머리글 인쇄, Landscape로 바꾸면 2쪽으로 넘침(Margins None + Scale 90으로 1쪽), Layout 설정이 다음 인쇄에 남음
+- Mac Finder Create PDF는 Apple 문서 기반(요약 표 "Not tested"), Windows Microsoft Print to PDF는 공식 Microsoft 단계 문서를 찾지 못해 단계 없이 언급만
+- 적용한 노하우: 검색형 제목 50자·설명 160자, 측정 규모 제목 표기 `(3 Ways Tested)`, 이미지 8장(대표 점검표 1200×675 + 사진 크기 그래프 + PDF Arranger 화면 2 + Sejda 화면 2 + Chrome 화면 2), 요약 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → `merge-pdf-files-free`·`convert-heic-to-jpg-free`·`compress-image-to-100kb`·`split-pdf-free` (4개). 역링크: `merge-pdf-files-free` 입력 파일 설명에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 62자(접미사 포함)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 이미지 8장 width·height 지정, sitemap 포함
+- lint·test(30파일 230개)·build 통과
+
+**알게 된 것**
+
+- PDF Arranger는 JPG를 바로 열어 페이지로 가져옴(열기 대화상자 "All supported files"). EXIF 세로 사진은 사진 데이터를 바꾸지 않고 페이지 회전(/Rotate 90)으로 세움
+- Chrome 인쇄 미리 보기는 Margins를 None으로 바꾸면 Headers and footers 옵션이 사라짐. Layout·Margins 설정은 다음 인쇄에 유지됨
+- Sejda 무료판 한도는 앱 화면 문구(30쪽 또는 5MB)·웹사이트 문구(Images up to 5MB)와 실제 동작(22.6MB 변환 성공)이 다를 수 있음 → 앱 화면 문구 대신 실제 변환 결과를 씀. 하루 3회 한도는 JPG to PDF에서도 같음(새 설치에서 3회 성공 후 4번째 차단)
+- `pkill -f`로 앱을 끄면 Bash 호출이 끊김(세션 19 기록 재발, exit 144) → Flatpak 앱은 `flatpak kill`
+- 네트워크: support.google.com(Chrome·Gmail 도움말, curl 정적 HTML)·support.apple.com·raw.githubusercontent.com(PDF Arranger README·wiki)·pd12m S3·dl.flathub.org 가능. sejda.com은 WebFetch로 열림
+
+**다음 할 일**
+
+- Claude: 새 글 노출 검색어 확인 (`jpg to pdf free`, `jpg to pdf on mac`, `jpg to pdf windows 11`), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: PDF GUI 시리즈 남은 후보 — PDF→JPG(44번, Trends 13.0)·PDF 압축(36번). JPG→PDF 측정 절차는 tests/README "JPG→PDF(GUI) 측정 재현". 합치기·나누기·JPG→PDF 3편이 모였으므로 PDF 허브 글(`Best Free PDF Tools (Tested)` 등) 검토 (traffic-playbook 3번)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 15·12 → 16·13). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 17편 / AdSense 신청 기준 20편
+
 ## 2026-10-18 · 세션 22 (정기 실행, 영향 뉴스 세션): Microsoft 365 Family 저장 공간 2TB 공유 전환
 
 세션 시각: 2026-10-18 18:16 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(175324c)에서 다시 시작.

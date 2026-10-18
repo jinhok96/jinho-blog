@@ -38,7 +38,7 @@
 title: How to Turn Off ChatGPT Memory
 description: Step-by-step instructions to pause or turn off ChatGPT memory on web and mobile.
 category: ai-tools
-createdAt: 2026-01-01
+createdAt: 2026-01-01T09:30:00Z
 tags:
   - ChatGPT
 ---
@@ -51,7 +51,7 @@ Body (Markdown)
 | `title`       |  O   | 제목 (검색 결과 제목)                                                                |
 | `description` |  O   | 요약 (검색 결과·링크 미리보기 설명, 120자 내외 권장)                                 |
 | `category`    |  O   | `CATEGORY_MAP`에 정의된 카테고리 slug                                                |
-| `createdAt`   |  O   | 발행일 (예: `2026-01-01`)                                                            |
+| `createdAt`   |  O   | 발행 시각, UTC (예: `2026-01-01T09:30:00Z`). 날짜만 쓰면 UTC 자정                    |
 | `updatedAt`   |      | 수정일 (발행일 이후). 생략 시 발행일과 동일                                          |
 | `tags`        |      | 키워드 목록 (메타 keywords·관련 글 계산용, 태그 페이지 없음)                         |
 | `thumbnail`   |      | 대표 이미지 (상대 경로 또는 URL). 생략 시 본문 첫 이미지 → 없으면 제목으로 자동 생성 |
@@ -63,6 +63,7 @@ Body (Markdown)
 - 이미지는 `content/posts/` 기준 상대 경로로 넣습니다: `![설명](./images/photo.webp)` → 빌드 시 `public/_static/`으로 복사
 - 링크 미리보기용 OG 이미지(JPEG 1200x630)는 로컬 썸네일에서 자동 생성
 - 날짜는 frontmatter만 사용합니다 (Git 커밋 날짜 미사용: 얕은 클론으로 빌드하는 호스트에서도 날짜가 바뀌지 않도록). 내용을 크게 수정했다면 `updatedAt`을 갱신하세요 — sitemap `lastmod`와 구조화 데이터 `dateModified`에 반영됩니다
+- 화면에는 날짜만 UTC 기준으로 표시하고, 목록·이전/다음 글은 시각까지 비교해 최신순으로 정렬합니다 (같은 날짜에 여러 글을 발행하면 시각을 함께 쓰세요)
 
 정적 페이지(`content/pages/*.mdx`)는 `title`, `description`, `createdAt`이 필수이고 `updatedAt`을 쓸 수 있습니다.
 

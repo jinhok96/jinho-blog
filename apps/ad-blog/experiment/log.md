@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-19 · 세션 25 (정기 실행, 일반 세션): PDF→JPG GUI 앱 3개 측정
+
+세션 시각: 2026-10-19 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(027c2f2)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-21 ~ 10-19, 세션 24 이후 바뀐 값만)**
+
+- 노출 134 → **138**, 클릭 5, CTR 3.7% → 3.6%, 평균 순위 25.3 → 24.6
+  - `turn-off-ai-in-chrome` 노출 64 → 67 (11.7) / `image-to-text-offline-free` 8 → 9 (9.7) / 나머지 변화 없음
+  - 새 검색어 없음
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 11편 `URL is unknown`(세션 24의 10편 + `apple-siri-settlement-claim`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug              | 카테고리   | 유형                           | 직접 검증 |
+| ----------------- | ---------- | ------------------------------ | --------- |
+| `pdf-to-jpg-free` | `software` | 비교 + How-to (측정형, 검색형) | IRS Form 1040(2쪽)·보고서(흰 배경 없음, 7pt 각주)·사진 3쪽 PDF를 **GUI 앱 3개로 직접 변환**: GIMP 3.2.6(기본 Layers·Images), LibreOffice Draw 26.8.1(기본·해상도 300 입력·해결 설정), Sejda PDF Desktop 7.9.10 무료판(Medium 150·Large 220 dpi, 4번째 작업 한도). 저장된 쪽·픽셀 크기·파일 크기·OCR 판독률 점검 |
+
+- 선정 근거: 자동완성 "pdf to jpg" 31개(converter·converter free·free 3곳, canva·high quality·iphone 2곳, mac·windows·high resolution). Trends(미국 3개월) `pdf to jpg` 12.9 · `compress pdf` 4.8 · `webp to jpg` 1.8 · 기준 `remove background` 35.2. backlog 44번 + 세션 23 다음 할 일 "PDF GUI 시리즈"
+- 반복 일정: Chrome 156은 10-20(내일), Windows 11-10 → 해당 없음. discover의 새 소식(Circle to Search 문자 사기 확인 10-15 등)은 직접 검증 불가로 제외
+- 차별점: 기본값의 함정 → (1) GIMP는 기본 `Open pages as: Layers`라 2쪽 PDF에서 **2쪽(마지막 쪽)만** JPG로 저장(300 ppi, 2550×3301). `Images`로 바꾸면 쪽마다 따로 열림. (2) LibreOffice Draw는 기본 96 ppi(816×1056, OCR 52%), **Modify resolution에 300을 넣어도 픽셀 그대로**(인치만 2.72×3.52로 줄어듦) → 300 입력 후 Modify dimensions에서 8.50인치로 되돌리면 2550×3300(OCR 82%). 해상도는 다음 내보내기에서 96으로 초기화, 글꼴이 바뀌어 "Digital Assets"가 옆 글과 붙음. (3) Sejda는 모든 쪽을 따로 저장하지만 기본 150 dpi·최대 220 dpi, 품질 추정 100이라 150 dpi 쪽이 GIMP 300 ppi 쪽만큼 큼(1.21 vs 1.28MB), 무료 20쪽·하루 3회
+- Mac Preview는 Apple 문서 기반(요약 표 "Not tested")
+- 적용한 노하우: 검색형 제목 50자·설명 158자, 측정 규모 제목 표기 `(3 Apps Tested)`, 이미지 9장(대표 점검표 1200×675 + 해상도 확대 비교 + LibreOffice 글꼴 비교 + GIMP 화면 2 + LibreOffice 화면 2 + Sejda 화면 2), 요약 표·결과 표 → 사실 확인표에 기록
+- 내부 링크: 새 글 → `jpg-to-pdf-free`·`split-pdf-free`·`merge-pdf-files-free`·`compress-image-to-100kb`·`image-to-text-offline-free` (5개). 역링크: `jpg-to-pdf-free` 다른 도구 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 62자(접미사 포함)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 이미지 9장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- GIMP 3.2.6 AppImage의 저장 대화상자는 `xdotool windowfocus --sync <창>` 후 입력해야 들어감 (세션 9·이전 PDF→JPG 측정에서 막혔던 원인). 포커스 없이 입력하면 본 창 단축키로 들어가 도구·확대가 바뀜
+- LibreOffice 대화상자는 `xdotool key --window`(XSendEvent)를 무시함 → 창에 포커스를 준 뒤 일반 `xdotool key`·`type`
+- `pkill -f`뿐 아니라 `pgrep -f` 패턴을 `kill`에 넘겨도 Bash 호출이 같이 죽음(exit 144) → `pgrep -x`
+- Sejda 웹사이트 무료 한도("Docs up to 50MB and 200 pages")와 앱 PDF to JPG 화면("up to 20 pages or 50 MB")이 다름 → 앱 화면 기준
+- 네트워크: download.gimp.org·download.documentfoundation.org·gimp.org·libreoffice.org·support.apple.com·irs.gov·pd12m S3·dl.flathub.org 가능, sejda.com은 curl 403·WebFetch 가능
+
+**다음 할 일**
+
+- Claude: 새 글 노출 검색어 확인 (`pdf to jpg free`, `pdf to jpg high quality`, `pdf to jpg on mac`), 검증 기록 V1(11-11)·V2(11-12) 판정
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`)
+- Claude: PDF GUI 시리즈 4편(나누기·합치기·JPG→PDF·PDF→JPG)이 모였으므로 PDF 허브 글(`Best Free PDF Tools (Tested)` 등) 검토 (traffic-playbook 3번). 남은 후보 PDF 압축(36번)
+- (실패) 대시보드: `ArtifactData` list가 권한 분류기(auto mode)에 거부되어 `stats` DB를 갱신하지 못함 (세션 21~24는 거부 없음). 다음 세션에서 README 절차대로 다시 시도
+- Claude: 발행 19편 / AdSense 신청 기준 20편 (다음 세션에서 20편 도달 예정 → 그 세션 '다음 할 일'에 사용자용 AdSense 신청 항목)
+
 ## 2026-10-19 · 세션 24 (정기 실행, 화제 뉴스 세션 → 영향 뉴스로 대체): Apple Siri 합의금 청구
 
 세션 시각: 2026-10-19 06:15 KST → 화제 뉴스 칼럼 세션. 48시간 안 발표 중 기준을 통과한 후보가 없어 README 대체 순서대로 영향 뉴스로 씀. 열린 PR 없음. 작업 브랜치를 `origin/main`(090761d)에서 다시 시작.

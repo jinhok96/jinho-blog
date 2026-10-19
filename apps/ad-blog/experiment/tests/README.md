@@ -22,6 +22,7 @@
 | [split-pdf-free](split-pdf-free) | PDF 나누기 GUI 방법 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Chromium 141 인쇄 Save as PDF) 측정: 12쪽 입력(보고서 책갈피·목차 링크, W-9 양식, 사진) 텍스트·사진·책갈피·링크·양식 보존, 한 쪽씩·크기별 나누기, Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 | [merge-pdf-files-free](merge-pdf-files-free) | PDF 합치기 GUI 앱 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판) 측정: 보고서(책갈피·목차 링크)+W-9+사진 3파일 합치기, 순서 바꾸기(W-9 먼저), W-9 2부 양식 이름 충돌(PDFsam 양식 옵션 3개), Sejda 무료 한도(50쪽·하루 3회), Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 | [jpg-to-pdf-free](jpg-to-pdf-free) | JPG→PDF GUI 방법 3개(PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판·Chromium 141 인쇄 Save as PDF) 측정: 12MP 사진 10장(세로 2장 EXIF Orientation=6) 세로 사진 방향·사진 바이트 보존·페이지 크기·파일 크기, PDF Arranger Page Size(US Letter), Sejda 페이지 옵션·하루 3회 한도, Chrome 머리글·Landscape 2쪽 넘침, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
+| [pdf-to-jpg-free](pdf-to-jpg-free) | PDF→JPG GUI 앱 3개(GIMP 3.2.6·LibreOffice Draw 26.8.1·Sejda PDF Desktop 7.9.10 무료판) 측정: IRS 1040(2쪽)·보고서(흰 배경 없음, 7pt 각주)·사진 3쪽, 기본값으로 저장되는 쪽·픽셀 크기·파일 크기·OCR 판독률, GIMP Layers/Images, LibreOffice 해상도 함정·해결, Sejda 해상도·하루 3회 한도, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 
 ## 받아쓰기 벤치마크 재현
 
@@ -85,3 +86,11 @@
 2. `convert-heic-to-jpg-free/sources.json`의 01~08 URL을 `/tmp/j2p/orig/NN.jpg`로 받은 뒤 `/tmp/pdfs/bin/python -I build_set.py /tmp/j2p` → `in/01~10.jpg`(09·10은 세로, EXIF Orientation=6)·`ref/*.png`
 3. `Xvfb :99` 위에서 화면 조작(`shot.sh`로 캡처, 저장 대화상자는 `typepath.sh <x> <y> <경로>`로 이름 칸에 경로 입력): PDF Arranger(`pa_launch.sh /tmp/j2p/in/*.jpg` → Ctrl+Shift+S, Page Size는 Ctrl+A 후 S → Fit to paper·US Letter), Sejda(All Tools > JPG to PDF > Choose image files, 기본값·Letter+Small margin·Fit to image 3회, 4번째는 한도 화면), Chromium(`chrome_launch.sh file:///tmp/j2p/in/09.jpg` → Ctrl+P → Save, 01은 기본·Landscape·Margins None+Scale 90). 저장 경로는 `/tmp/j2p/out/*.pdf`
 4. `/tmp/pdfs/bin/python -I analyze.py /tmp/j2p /tmp/j2p/out/*.pdf > results.jsonl`, `sejda_portrait_diff.py`, `/tmp/pdfs/bin/python -I charts.py /tmp/j2p <출력 폴더>` → 글 이미지 8장
+
+## PDF→JPG(GUI) 측정 재현
+
+1. apt(`xvfb xdotool imagemagick flatpak poppler-utils tesseract-ocr img2pdf`), venv(`/tmp/pdfs`)에 `matplotlib pillow`. GIMP는 `download.gimp.org/gimp/v3.2/linux/GIMP-3.2.6-x86_64.AppImage`를 `--appimage-extract`(`gimp_launch.sh`), LibreOffice는 `download.documentfoundation.org/libreoffice/stable/26.8.1/deb/x86_64/LibreOffice_26.8.1_Linux_x86-64_deb.tar.gz`의 deb를 `dpkg -i`(`/opt/libreoffice26.8`), Sejda는 `flatpak install flathub com.sejda.Sejda`(`sejda_launch.sh --no-sandbox`, 시스템 D-Bus 필요)
+2. `./build_inputs.sh` → `/tmp/p2j/in/{irs-1040,mixed,photos}.pdf`, 기준 렌더 `/tmp/p2j/ref/*.png`
+3. `Xvfb :99 -screen 0 1600x1000x24` 위에서 화면 조작(`shot.sh`로 캡처). 저장·열기 대화상자는 `dlgtype.sh "<창 이름>" <x> <y> <경로>`로 그 창에 포커스를 준 뒤 입력 (포커스 없이 입력하면 GIMP 본 창 단축키로 들어감). GIMP: 열기 → Open → Shift+Ctrl+E → `out/gimp/*.jpg` → Export, Images 모드는 드롭다운에서 선택. LibreOffice: File > Export → JPG Options(기본 / Modify resolution 300 / 300 입력 후 Modify dimensions 8.5), LibreOffice 대화상자에는 `xdotool key --window`가 안 먹어 포커스 후 일반 입력. Sejda: All Tools > PDF to JPG > Choose PDF files(대화상자 Ctrl+L로 경로) → 해상도 → Convert → Select output folder(Ctrl+L) → Continue. 하루 3회라 순서를 미리 정함
+4. `python3 -I analyze.py /tmp/p2j > results.jsonl`, `/tmp/pdfs/bin/python -I charts.py /tmp/p2j <출력 폴더>` → 글 이미지 9장
+5. 주의: `pkill -f`·`pgrep -f`로 앱을 끄면 Bash 호출 자체가 걸려 끊김(exit 144) → `pgrep -x soffice.bin`·`flatpak kill`

@@ -43,6 +43,7 @@
 - Claude: 새 글 노출 검색어 확인 (`pdf to word free`, `pdf to word free no sign up`, `pdf to word ocr free`). Sejda 나머지 7개 파일은 하루 3회 제한으로 미측정 → 필요하면 다음 날 세션에서 보강(같은 글 갱신, `updatedAt`)
 - Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토(PDF GUI 글 5편: 나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word). 남은 후보 PDF 압축(36번)
 - Claude: 11-10 Patch Tuesday 후 `windows-11-24h2-end-of-support`·`windows-10-esu-extended` 갱신 검토, 칼럼 H4 판정(11-16)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 19·16·17 → 20·17·18). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
 - Claude: 발행 21편
 
 ## 2026-10-19 · 세션 26 (정기 실행, 영향 뉴스 세션): Windows 11 24H2 Home·Pro 업데이트 종료

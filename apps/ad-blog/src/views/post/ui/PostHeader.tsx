@@ -4,7 +4,8 @@ import Link from 'next/link';
 
 import { CATEGORY_MAP } from '@/core/config';
 import { categoryPath } from '@/core/routes';
-import { formatDate, getReadingMinutes, isSameDate } from '@/core/utils';
+import { LocalDate } from '@/core/ui';
+import { getReadingMinutes, isSameDate } from '@/core/utils';
 
 type Props = {
   post: Post;
@@ -54,14 +55,14 @@ export function PostHeader({ post }: Props) {
         <div className="flex gap-1.5">
           <dt className="text-muted">Published</dt>
           <dd>
-            <time dateTime={createdAt}>{formatDate(createdAt)}</time>
+            <LocalDate dateTime={createdAt} />
           </dd>
         </div>
         {isUpdated && (
           <div className="flex gap-1.5">
             <dt className="text-muted">Updated</dt>
             <dd>
-              <time dateTime={updatedAt}>{formatDate(updatedAt)}</time>
+              <LocalDate dateTime={updatedAt} />
             </dd>
           </div>
         )}

@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-19 · 세션 26 (정기 실행, 영향 뉴스 세션): Windows 11 24H2 Home·Pro 업데이트 종료
+
+세션 시각: 2026-10-19 18:15 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8790289)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-21 ~ 10-19, 세션 25 이후 바뀐 값만)**
+
+- 노출 138 → **142**, 클릭 5, CTR 3.6% → 3.5%, 평균 순위 24.6 → 24.5
+  - `transcribe-audio-offline-free` 노출 26 → 28 (46.6) / `gemini-gems-to-skills` 11 → 12 (8.1) / 나머지 변화 없음
+  - 새 검색어 없음
+- sitemap 마지막 다운로드 10-17 10:45 UTC 그대로. URL 검사 변화 없음: 12편 `URL is unknown`(세션 25의 11편 + `pdf-to-jpg-free`), 7편 색인
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                             | 카테고리 | 유형             | 독창 요소 |
+| -------------------------------- | -------- | ---------------- | --------- |
+| `windows-11-24h2-end-of-support` | `news`   | 뉴스 칼럼 (영향) | 버전별 Home·Pro 지원 기간 타임라인(대표 이미지), 오늘 기준 남은 보안 업데이트 개월 수(24H2 0·25H2 약 12·26H2 약 24)와 첫 누락 업데이트일(11-10), 사용자 유형별 영향 표(Home/Pro·Enterprise/Education·25H2·26H2·26H1·23H2·Windows 10), 같은 KB(KB5127648)가 24H2·25H2·26H2에 함께 나가는 점으로 enablement package 설명 |
+
+- 선정 근거 (최근 30일 발표, Google News RSS): `Windows 11 24H2 end of support` 38 · `Windows 11 26H2` 100. 자동완성 "windows 11 24h2 end of support" 17개(Google·Bing·YouTube: date·end of life·end of service), "windows 11 26h2" 25개(download·iso·release date·update 3곳). Trends 미국 1개월 `windows 11 26h2` 4.7 · `25h2` 1.7 · `24h2` 0.5 (기준 `remove background` 35.8). backlog 뉴스 칼럼 후보("날짜가 지나 업데이트 방법 일반 글로 검토")를 영향 칼럼으로 씀: 종료일은 지났지만 첫 누락 업데이트(11-10)부터 영향이 계속됨
+- 제외·보류: Fitbit 클래식 앱 → Google Health 강제 전환(10-12 보도 100건, Google 공식 블로그 2편에 종료 언급 없음·이미 종료된 상태), "Windows Update가 패치 안 된 PC에서 내년 작동 중단"(TechPowerUp 10-11, 1차 출처 못 찾음·techpowerup.com 403), Windows 11 23H2 Enterprise 11-10 종료(기업 대상), Disney+·Amazon Prime 가격 인상(분야 밖), Samsung SmartThings Tracker 종료(보도만)
+- `Our take`: 25H2가 아니라 26H2로 지금 업데이트. 근거: 같은 작은 다운로드·재시작 1회로 지원 2년(25H2는 1년), Microsoft 문서상 26H2 파일이 이미 최신 24H2 PC에 있음, 26H2 알려진 문제는 주로 기업 환경이고 24H2에도 같음. safeguard hold는 강제로 넘지 않음(11-10 전까지 비용 없음). 반대 관점: 기능 업데이트는 몇 달 기다리는 사람도 있음 → 11월 초까지는 합리적
+- 1차 출처: Microsoft Learn Windows 메시지 센터·Windows 11 release information·24H2/26H2 상태 페이지·safeguard holds·lifecycle FAQ, Microsoft Support KB5121794·기기 정보 확인 문서, Windows Experience Blog 26H2 발표, Windows 11 다운로드 페이지(Installation Assistant). 모두 curl 정적 HTML로 확인
+- Windows는 컨테이너에서 실행할 수 없어 단계는 Microsoft 문서 기반(본문에 출처 링크, 직접 실행 표현 없음)
+- 이미지 2장 (직접 만든 그래픽 1200×675): 버전별 지원 기간 타임라인(`thumbnail`), 버전별 남은 업데이트 개월 수. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `windows-10-esu-extended`(2회)·`microsoft-365-family-storage-2tb`. 역링크: `windows-10-esu-extended` "Should you enroll or move to Windows 11?" 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 74자(접미사 포함, 본제목 62자)·description 152자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Microsoft Learn release information 표의 버전별 릴리스 기록은 24H2·25H2·26H2가 같은 KB 번호를 씀 → enablement package 구조를 독자에게 보여 주는 근거로 쓸 수 있음
+- support.microsoft.com의 예전 문서 주소(628bec99…)는 "Find information about your Windows device"로 리디렉트됨(curl `-L` 필요). blog.google 글은 `<article>` 안만 뽑아야 본문이 나옴
+- 종료일이 지난 변경도 "다음 누락 업데이트일"처럼 앞으로 올 날짜가 있으면 영향 칼럼이 됨
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글이 이번 세션으로 **20편**에 도달 (README 기준: 글 20편 도달 즉시). 단, Search Console에서 12편이 아직 `URL is unknown`이고 sitemap 마지막 다운로드가 10-17이라 색인은 7편뿐. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 11-10 Patch Tuesday 후 26H2 safeguard hold·배포 확대 상황을 `windows-11-24h2-end-of-support`에 반영 검토 (`updatedAt` 갱신). 같은 날 `windows-10-esu-extended` 빌드 표 갱신 검토
+- Claude: 칼럼 발행 4주 후(11-16) H4 판정 자료: `gsc_report.py --compare /posts/windows-11-24h2-end-of-support --changed 2026-10-19 --metric impressions --type discover`(웹은 `--type web`). H5 영향 칼럼 4편째(화제 2편)
+- Claude: 검증 기록 V1(11-11)·V2(11-12) 판정, Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), PDF 허브 글 검토
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 17·14 → 18·15). `ArtifactData` list·batch 모두 권한 분류기 거부 없음 (세션 25 실패 해소). 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 20편 / AdSense 신청 기준 20편 도달
+
 ## 2026-10-19 · 세션 25 (정기 실행, 일반 세션): PDF→JPG GUI 앱 3개 측정
 
 세션 시각: 2026-10-19 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(027c2f2)에서 다시 시작.

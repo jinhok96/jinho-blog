@@ -14,7 +14,7 @@ Search Console API·글 frontmatter·사실 확인표·traffic-playbook·log.md�
 - posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, channel, 28일 지표, queries, daily, index}],
          otherPages: [{path, 28일 지표, queries, daily}]}  (queries = 검색어 상위 10, daily = 날짜별 노출·클릭)
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20
-- experiments: traffic-playbook 검증 기록 표 + 발행 글 수·AdSense 신청 기준
+- experiments: {rows: traffic-playbook 검증 기록 표}
 - knowhow: {rows: traffic-playbook 노하우 상태 표}
 - sessions: {rows: log.md 세션 제목 (date, title, order)}
 """
@@ -168,7 +168,7 @@ def main() -> None:
         rows = search_analytics(token, args.site, since, end, [], 1, search_type=t)
         types.append({'key': t, **metrics(rows[0] if rows else None)})
     docs['breakdown'] = {'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': dim('query', 20), 'searchTypes': types}
-    docs['experiments'] = {'rows': experiments(), 'postCount': len(posts), 'adsenseGoal': 20}
+    docs['experiments'] = {'rows': experiments()}
     docs['knowhow'] = {'rows': knowhow()}
     docs['sessions'] = {'rows': sessions()}
 

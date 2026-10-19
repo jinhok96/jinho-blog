@@ -2,6 +2,48 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-20 · 세션 28 (정기 실행, 화제 뉴스 세션): Spotify Family QR 코드 인증
+
+세션 시각: 2026-10-20 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(f33bc6e)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-21 ~ 10-19, 세션 27 이후 바뀐 값만)**
+
+- 노출 152 → **157**, 클릭 5, CTR 3.3% → 3.2%, 평균 순위 25.2 → 25.1
+  - `turn-off-ai-in-chrome` 노출 69 → 72 (11.4) / `check-if-image-is-ai-generated` 15 → 17 (76.9) / `image-to-text-offline-free` 12 → 13 (13.0) / `transcribe-audio-offline-free` 29 → 30 (48.7)
+- URL 검사: **색인 8 → 12편** (새로 색인: `convert-heic-to-jpg-free`·`iphone-handoff-verizon-cost`·`jpg-to-pdf-free`·`microsoft-365-family-storage-2tb`, 크롤링 10-19 17~20시 UTC). `URL is unknown` 9편: `apple-siri-settlement-claim`·`compress-video-for-discord-email`·`iphone-duo-sold-out`·`merge-pdf-files-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`pixel-watch-safety-signal-ending`·`split-pdf-free`·`windows-11-24h2-end-of-support`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                                  | 카테고리 | 유형             | 독창 요소 |
+| ------------------------------------- | -------- | ---------------- | --------- |
+| `spotify-family-qr-code-verification` | `news`   | 뉴스 칼럼 (화제) | QR 인증 기한·결과 흐름도(대표 이미지), 요금제별 1인당 월 요금과 Individual 전환 시 연간 추가 비용(6인 Family $3.67 → $12.99, 연 $111.90), 사용자 유형별 영향 표, Spotify 문서끼리의 차이(주소 인증 실패는 같은 플랜 재가입 가능 명시 vs QR 항목엔 없음, Duo 문서엔 QR 없음) |
+
+- 선정 근거 (48시간, Google News RSS): `Spotify QR code family` 11 · `Spotify Premium Family` 37 (모두 10-19). Trends 미국 7일 `spotify family` 9.9(최고 24) · `spotify qr code` 0.1(최고 11) · 기준 `remove background` 65.9. 자동완성 "spotify family plan" 31개(address verification·different address·not working 등)
+- 발표 시점: Spotify 공식 발표 없음. 지원 문서 `updatedAt` 10-07, 사용자 알림 보도 10-19(9to5Google, Reddit 인용) → 보도·배포 시점으로 48시간 판단
+- 제외·보류: "Google이 Gmail·Photos 정보로 광고 타기팅"(Techlicious 10-19, 기사 3~4건, Google 공식 발표 미확인 → 다음 뉴스 세션에서 재확인), Windows 11 10월 업데이트 Smart App Control 차단(1건, Microsoft 문서 미확인), iOS 27.2 RC(정식 배포 전), Amazon Alexa Tablet(신제품 소개), Netflix·Spotify 실적(업계 뉴스)
+- `Our take`: 규칙(같은 주소)은 그대로지만 증명 방식이 "주소 입력 → 7일 안 대면 스캔"으로 바뀌어 놓쳤을 때 12개월 차단을 피하기 어려워짐. 함께 사는 가구는 알림 즉시 스캔, 떨어져 사는 구성원(대학생 등)은 알림 전에 Student·Individual로 옮기는 편이 안전. Spotify는 연장·이의 절차를 공개해야 함. 반대 관점: "일부" 구성원만 대상이고 실제 가구에는 몇 초짜리 확인
+- 우회 방법(영상 통화 등 보도)은 약관 위반이라 다루지 않음
+- 1차 출처: Spotify 지원 문서(Family 주소·인증, Family plan, Duo 주소·인증, 플랜 변경), Paid Subscription Terms 2.2.1, spotify.com/us/premium 요금. 모두 curl 정적 HTML(지원 문서는 `__NEXT_DATA__`의 `updatedAt`까지 확인)
+- 이미지 2장 (직접 만든 그래픽 1200×675): 인증 흐름도(`thumbnail`), 1인당 요금·연간 추가 비용. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `microsoft-365-family-storage-2tb`·`iphone-handoff-verizon-cost`. 역링크: `microsoft-365-family-storage-2tb` 마지막 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 84자(접미사 포함, 본제목 72자)·description 157자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- support.spotify.com 문서는 curl로 열리고, `__NEXT_DATA__` JSON의 `article.updatedAt`으로 문서 수정일을 확인할 수 있음. spotify.com/us/premium 요금도 정적 HTML에 있음. `premium-family-terms`는 Paid Subscription Terms로 리디렉트
+- 공식 발표 없이 지원 문서만 바뀌고 보도로 화제가 되는 경우가 있음 → 화제 세션의 "48시간 발표"는 보도·배포 시점으로 판단하고 사실 확인표에 문서 수정일을 함께 적음
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 22편. Search Console 색인 12편(이번 세션 4편 증가), 9편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Spotify가 Duo로 QR 확대·연장/이의 절차·공식 발표를 내면 `spotify-family-qr-code-verification` 갱신(`updatedAt`). H4 판정(11-16 이후): `gsc_report.py --compare /posts/spotify-family-qr-code-verification --changed 2026-10-19 --metric impressions --type discover`. H5 화제 칼럼 3편째(영향 4편)
+- Claude: Google 광고에 Gmail·Photos 정보 사용(Personal Intelligence) 공식 발표 확인 → 사실이면 영향/화제 칼럼 후보
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 20·17·18 → 21·18·19). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 22편
+
 ## 2026-10-20 · 세션 27 (정기 실행, 일반 세션): PDF→Word 무료 도구 3개 측정
 
 세션 시각: 2026-10-20 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(6ca54ff)에서 다시 시작.

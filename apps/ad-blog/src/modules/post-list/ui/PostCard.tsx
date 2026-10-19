@@ -4,7 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 
 import { CATEGORY_MAP } from '@/core/config';
-import { formatDate } from '@/core/utils';
+import { LocalDate } from '@/core/ui';
 
 type Props = {
   post: Post;
@@ -62,12 +62,10 @@ export function PostCard({ post, headingLevel = 2, priority = false }: Props) {
           </Link>
         </Heading>
         <p className="line-clamp-2 text-sm text-muted">{post.description}</p>
-        <time
+        <LocalDate
           dateTime={post.createdAt}
           className="mt-auto pt-2 text-xs text-muted"
-        >
-          {formatDate(post.createdAt)}
-        </time>
+        />
       </div>
     </article>
   );

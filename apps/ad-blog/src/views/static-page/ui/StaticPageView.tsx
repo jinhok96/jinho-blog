@@ -2,8 +2,7 @@ import type { BreadcrumbItem } from '@/core/seo';
 import type { Page } from '@/entities/page';
 import type { ReactNode } from 'react';
 
-import { Breadcrumbs, Container, PageHeader, Prose } from '@/core/ui';
-import { formatDate } from '@/core/utils';
+import { Breadcrumbs, Container, LocalDate, PageHeader, Prose } from '@/core/ui';
 
 type Props = {
   page: Page;
@@ -37,7 +36,7 @@ export function StaticPageView({ page, content, breadcrumbs }: Props) {
         />
         <Prose className="mt-8">{content}</Prose>
         <p className="mt-12 text-sm text-muted">
-          Last updated <time dateTime={page.updatedAt}>{formatDate(page.updatedAt)}</time>
+          Last updated <LocalDate dateTime={page.updatedAt} />
         </p>
       </article>
     </Container>

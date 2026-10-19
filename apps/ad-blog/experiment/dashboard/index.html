@@ -108,8 +108,6 @@ tr.group td { padding: 16px 12px 8px; font-size: var(--fs-sm); line-height: var(
 .chip { display: inline-block; vertical-align: top; font-size: var(--fs-sm); line-height: 24px; font-weight: 500; padding: 0 8px; border-radius: var(--r-ctl); box-shadow: var(--hair); background: var(--well); color: var(--ink); white-space: nowrap; }
 .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
 .trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
-.progress { height: 8px; border-radius: 9999px; background: var(--well); box-shadow: var(--hair); overflow: hidden; margin-top: 4px; }
-.progress i { display: block; height: 100%; background: var(--link); border-radius: 9999px; }
 /* 가로 막대 목록 (기기·국가·검색 유형) */
 .bars { list-style: none; margin: 0; padding: 0; display: grid; gap: 12px; }
 .bars li { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 4px 12px; align-items: baseline; }
@@ -158,7 +156,6 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
     <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub">낮을수록 위</span></div>
     <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
-    <div class="kpi"><span class="label">AdSense 신청 기준</span><span class="value" id="k-ads">–</span><span class="sub" id="k-ads-sub">글 20편 도달 즉시</span><div class="progress"><i id="k-ads-bar" style="width:0"></i></div></div>
     <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
 
@@ -523,10 +520,6 @@ function renderBreakdown() {
 function renderExperiments() {
   const x = state.experiments;
   if (!x) return;
-  const goal = x.adsenseGoal || 20;
-  $('k-ads').textContent = `${x.postCount} / ${goal}`;
-  $('k-ads-sub').textContent = x.postCount >= goal ? '기준 도달: 신청 가능' : `${goal - x.postCount}편 남음`;
-  $('k-ads-bar').style.width = Math.min(100, (x.postCount / goal) * 100) + '%';
   const today = new Date().toISOString().slice(0, 10);
   const rows = x.rows || [];
   $('experiments').innerHTML = rows.length ? rows.map((r) => {

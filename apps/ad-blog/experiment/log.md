@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-20 · 세션 27 (정기 실행, 일반 세션): PDF→Word 무료 도구 3개 측정
+
+세션 시각: 2026-10-20 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(6ca54ff)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-21 ~ 10-19, 세션 26 이후 바뀐 값만)**
+
+- 노출 142 → **152**, 클릭 5, CTR 3.5% → 3.3%, 평균 순위 24.5 → 25.2
+  - `turn-off-ai-in-chrome` 노출 67 → 69 (11.6) / `gemini-gems-to-skills` 12 → 14 (8.1) / `image-to-text-offline-free` 9 → 12 (13.4) / `transcribe-audio-offline-free` 28 → 29 (47.9)
+- sitemap 마지막 다운로드 10-17 10:45 → **10-19 10:59 UTC**. `rss.xml`이 10-19 11:24 UTC에 피드로 제출됨(Claude 세션 기록 없음 → 사용자가 제출한 것으로 보임), 같은 시각 다운로드·오류 0
+- URL 검사: `compress-image-to-100kb`가 **색인됨**(크롤링 10-19 12:27 UTC) → 8편 색인, 12편 `URL is unknown`(세션 26의 12편 중 `compress-image-to-100kb` 제외 + `windows-11-24h2-end-of-support`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug               | 카테고리   | 유형                           | 직접 검증 |
+| ------------------ | ---------- | ------------------------------ | --------- |
+| `pdf-to-word-free` | `software` | 비교 + How-to (측정형, 검색형) | 정답을 아는 PDF 11개(삭제한 명령줄 글의 `gen.py` 재사용)를 **LibreOffice Writer 26.8.1(GUI)·Sejda PDF Desktop 7.9.10 무료판(GUI, 3개)·iLovePDF 웹(Playwright, 로그인 안 함)**으로 변환해 채점: 편집 가능한 문단·실제 Word 표·텍스트 상자·단어 보존·OCR, 편집 테스트(문장 추가 후 재배치) |
+
+- 선정 근거: backlog 33번(PDF→Word, 2026-10-17 명령줄 글 삭제 후 GUI로 새로 쓸 후보), Trends `pdf to word` 23.4(기준 `remove background` 35.3, PDF 주제 중 최대). 자동완성 "pdf to word free" 32개(converter·no sign up·ocr·ilovepdf·smallpdf)
+- 반복 일정: Chrome 156은 10-20(미국 시간, 세션 시점 미출시), Windows 11-10 → 해당 없음
+- 결과: 단어는 세 도구 모두 거의 100%. LibreOffice는 문단 0%(모든 줄이 텍스트 상자, 상태 표시줄 0 words), 표 0/5, 송장 머리글 행이 음영에 가려짐. Sejda는 문단 100%지만 표 0/2(행이 텍스트 줄), 1단·본문 9pt(원본 11pt), 2쪽 → 1쪽. iLovePDF는 표 4/5, 2단 구역·제목 스타일·글머리표 목록 유지, 문단 82%(일부가 두 문단으로 나뉨). 스캔 PDF: LibreOffice 그림, Sejda 거부("Scanned documents are not supported"), iLovePDF는 OCR 안내 → Apply OCR(로그인 안 함)로 단어 99.7%(요금표상 OCR은 Premium)
+- 기본값 함정: LibreOffice에서 PDF를 그냥 열면 Draw로 열리고 Draw는 Word로 저장 불가 → Writer 열기 창 파일 형식 "PDF - Portable Document Format (Writer)" 선택 필요
+- Word·Google Docs는 공식 문서 기반(요약 표 "Not tested")
+- 이미지 11장(대표 점검표 1200×675 + 송장 표 2×2 비교 + 편집 테스트 + LibreOffice 화면 3 + Sejda 화면 3 + iLovePDF 화면 2), 요약 표·결과 표
+- 내부 링크: 새 글 → `image-to-text-offline-free`·`pdf-to-jpg-free`·`jpg-to-pdf-free`·`split-pdf-free`·`merge-pdf-files-free` (5개). 역링크: `pdf-to-jpg-free` 마지막 문단 뒤 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 64자(접미사 포함, 본제목 52자)·description 153자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 이미지 11장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 웹 서비스(iLovePDF)도 Playwright로 직접 측정 가능: `input[type=file]`에 파일 지정 → `#processTask` 클릭 → 다운로드 이벤트. 스캔 PDF는 OCR 안내 화면이 뜨고 같은 문구 버튼이 숨김 요소로 2개 있어 `button:visible`로 골라야 함
+- Sejda Desktop 무료판은 변환 도구에서 "작업당 파일 1개"라 여러 파일 선택 시 업그레이드 화면. 단일 파일 작업은 출력 폴더 대신 저장 파일 대화상자가 뜸. flatpak 문서 포털 경로 때문에 첫 결과 파일 이름이 `.docx`(이름 없음)로 저장된 적 있음(환경 문제로 판단, 글에는 안 씀)
+- ONLYOFFICE Desktop Editors flatpak(10.0.0)은 이 컨테이너에서 `Gtk-ERROR: Can't create a GtkStyleContext without a display connection`으로 실행 실패 (Sejda flatpak은 `--no-sandbox`로 정상). 시스템 dbus(`dbus-daemon --system --fork`)는 필요 없었음
+- `flatpak run --command=sh … -c env`처럼 샌드박스 환경 변수를 출력하면 컨테이너의 비밀 환경 변수까지 찍힘 → 필요한 변수만 `echo`
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 21편(세션 26에서 20편 도달). Search Console 색인 8편, 12편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 새 글 노출 검색어 확인 (`pdf to word free`, `pdf to word free no sign up`, `pdf to word ocr free`). Sejda 나머지 7개 파일은 하루 3회 제한으로 미측정 → 필요하면 다음 날 세션에서 보강(같은 글 갱신, `updatedAt`)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토(PDF GUI 글 5편: 나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word). 남은 후보 PDF 압축(36번)
+- Claude: 11-10 Patch Tuesday 후 `windows-11-24h2-end-of-support`·`windows-10-esu-extended` 갱신 검토, 칼럼 H4 판정(11-16)
+- Claude: 발행 21편
+
 ## 2026-10-19 · 세션 26 (정기 실행, 영향 뉴스 세션): Windows 11 24H2 Home·Pro 업데이트 종료
 
 세션 시각: 2026-10-19 18:15 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8790289)에서 다시 시작.

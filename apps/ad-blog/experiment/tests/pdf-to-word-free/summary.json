@@ -1,0 +1,446 @@
+{
+ "libreoffice": {
+  "docs": {
+   "01-letter": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 26,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "02-report": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 68,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "03-invoice": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 45,
+    "out_tables": 0,
+    "tables_expected": 1,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "04-schedule": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 55,
+    "out_tables": 0,
+    "tables_expected": 2,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0,
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "05-newsletter": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 0.2,
+    "textbox_share": 1.0,
+    "out_paragraphs": 108,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "06-images": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 29,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 2,
+    "images_expected": 2
+   },
+   "07-resume": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 25,
+    "out_tables": 0,
+    "tables_expected": 1,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "08-header-footer": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 59,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "09-word-report": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 55,
+    "out_tables": 0,
+    "tables_expected": 1,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "10-word-image": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 1.0,
+    "out_paragraphs": 28,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 1,
+    "images_expected": 1
+   },
+   "11-scanned": {
+    "word_recall": 0.0,
+    "para_intact": 0.0,
+    "order_intact": 0.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 0,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 1,
+    "images_expected": 0
+   }
+  },
+  "overall_text": {
+   "docs": 10,
+   "word_recall": 1.0,
+   "para_intact": 0.0,
+   "order_intact": 0.92,
+   "textbox_share": 1.0,
+   "tables_ok": 0,
+   "tables_expected": 5,
+   "images": 3,
+   "images_expected": 3
+  },
+  "overall_common": {
+   "docs": 3,
+   "word_recall": 1.0,
+   "para_intact": 0.0,
+   "order_intact": 0.7333,
+   "textbox_share": 1.0,
+   "tables_ok": 0,
+   "tables_expected": 2,
+   "images": 0,
+   "images_expected": 0
+  },
+  "scanned_word_recall": 0.0,
+  "scanned_ocr_word_recall": null
+ },
+ "sejda": {
+  "docs": {
+   "03-invoice": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 13,
+    "out_tables": 0,
+    "tables_expected": 1,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "05-newsletter": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 12,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "09-word-report": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 9,
+    "out_tables": 0,
+    "tables_expected": 1,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   }
+  },
+  "overall_text": {
+   "docs": 3,
+   "word_recall": 1.0,
+   "para_intact": 1.0,
+   "order_intact": 1.0,
+   "textbox_share": 0.0,
+   "tables_ok": 0,
+   "tables_expected": 2,
+   "images": 0,
+   "images_expected": 0
+  },
+  "overall_common": {
+   "docs": 3,
+   "word_recall": 1.0,
+   "para_intact": 1.0,
+   "order_intact": 1.0,
+   "textbox_share": 0.0,
+   "tables_ok": 0,
+   "tables_expected": 2,
+   "images": 0,
+   "images_expected": 0
+  },
+  "scanned_word_recall": null,
+  "scanned_ocr_word_recall": null
+ },
+ "ilovepdf": {
+  "docs": {
+   "01-letter": {
+    "word_recall": 1.0,
+    "para_intact": 0.75,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 9,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "02-report": {
+    "word_recall": 0.996,
+    "para_intact": 0.8889,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 22,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "03-invoice": {
+    "word_recall": 1.0,
+    "para_intact": 0.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 38,
+    "out_tables": 1,
+    "tables_expected": 1,
+    "tables_ok": 1,
+    "table_cell_scores": [
+     1.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "04-schedule": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 40,
+    "out_tables": 2,
+    "tables_expected": 2,
+    "tables_ok": 2,
+    "table_cell_scores": [
+     1.0,
+     1.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "05-newsletter": {
+    "word_recall": 1.0,
+    "para_intact": 0.8,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 14,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "06-images": {
+    "word_recall": 1.0,
+    "para_intact": 0.75,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 8,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 2,
+    "images_expected": 2
+   },
+   "07-resume": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 13,
+    "out_tables": 0,
+    "tables_expected": 1,
+    "tables_ok": 0,
+    "table_cell_scores": [
+     0.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "08-header-footer": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 11,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   },
+   "09-word-report": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 28,
+    "out_tables": 1,
+    "tables_expected": 1,
+    "tables_ok": 1,
+    "table_cell_scores": [
+     1.0
+    ],
+    "images": 0,
+    "images_expected": 0
+   },
+   "10-word-image": {
+    "word_recall": 1.0,
+    "para_intact": 1.0,
+    "order_intact": 1.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 10,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 1,
+    "images_expected": 1
+   },
+   "11-scanned": {
+    "word_recall": 0.0,
+    "para_intact": 0.0,
+    "order_intact": 0.0,
+    "textbox_share": 0.0,
+    "out_paragraphs": 0,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 1,
+    "images_expected": 0
+   },
+   "11-scanned-ocr": {
+    "word_recall": 0.997,
+    "para_intact": 0.75,
+    "order_intact": 0.75,
+    "textbox_share": 0.0,
+    "out_paragraphs": 9,
+    "out_tables": 0,
+    "tables_expected": 0,
+    "tables_ok": 0,
+    "table_cell_scores": [],
+    "images": 0,
+    "images_expected": 0
+   }
+  },
+  "overall_text": {
+   "docs": 10,
+   "word_recall": 0.9996,
+   "para_intact": 0.8189,
+   "order_intact": 1.0,
+   "textbox_share": 0.0,
+   "tables_ok": 4,
+   "tables_expected": 5,
+   "images": 3,
+   "images_expected": 3
+  },
+  "overall_common": {
+   "docs": 3,
+   "word_recall": 1.0,
+   "para_intact": 0.6,
+   "order_intact": 1.0,
+   "textbox_share": 0.0,
+   "tables_ok": 2,
+   "tables_expected": 2,
+   "images": 0,
+   "images_expected": 0
+  },
+  "scanned_word_recall": 0.0,
+  "scanned_ocr_word_recall": 0.997
+ }
+}

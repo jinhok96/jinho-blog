@@ -2,6 +2,48 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-20 · 세션 30 (정기 실행, 영향 뉴스 세션): Office 2021 지원 종료
+
+세션 시각: 2026-10-20 18:16 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(d50d0ab)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 29 이후 바뀐 값만)**
+
+- 노출 166 → **184**, 클릭 6 → **7**, CTR 3.6% → 3.8%, 평균 순위 24.8 → 24.6
+  - `turn-off-ai-in-chrome` 노출 75 → 83 (12.6) / `image-to-text-offline-free` 14 → 20 (10.2), **클릭 1** / `check-if-image-is-ai-generated` 20 → 22 (70.7) / `transcribe-audio-offline-free` 31 → 32 (47.5)
+  - 새 검색어: `free ocr offline`(7.0), `image to text offline`(6.0)
+- URL 검사: 색인 16편 그대로. `URL is unknown` 7편(세션 29의 6편 + `compress-pdf-free`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                         | 카테고리 | 유형             | 독창 요소 |
+| ---------------------------- | -------- | ---------------- | --------- |
+| `office-2021-end-of-support` | `news`   | 뉴스 칼럼 (영향) | 일회성 구매 Office 버전별 지원 타임라인(대표 이미지), Office 2024 종료(2029-10-09)까지 3년 비용 비교(무료 웹 $0·Home 2024 1대 $179.99·Personal $299.97·Family $389.97·Home 2024 3대 $539.97)와 PC 대수별 손익분기(2대 $359.98 vs Family $389.97), Office Home 2024 가격 출시 $149.99 → 현재 $179.99, 사용자 유형별 영향 표 |
+
+- 선정 근거 (최근 30일 발표·영향 지속): Microsoft 지원 문서 "Support for Office 2021 ended on October 13, 2026… no extension and no extended security updates". Google News 30일 `"Office 2021"` 34건·`"Office 2024"` 44건, 자동완성 `office 2021 end of support` 13개(Google·Bing·YouTube: date·end of life·mac·ltsc), Trends 미국 1개월 `office 2021` 3.3 · `office 2024` 9.1 · 기준 `remove background` 35.3
+- 제외·보류: Google 광고 Gmail·Photos 정보 사용(여전히 보도만, 공식 발표 없음 → 보류 유지), Edge 재시작 없는 업데이트(테스트 단계), Discovery+ 가격 인상(분야 밖), Pixel 6 지원 종료(공식 날짜 미확인)
+- `Our take`: PC 1대·데스크톱 앱이 꼭 필요하면 Office Home 2024가 3년 기준 가장 쌈(연 약 $60 vs Personal $99.99)이지만 Outlook 없음·출시 대비 $30 인상·2029년 같은 상황 반복. 3대 이상 가구는 Family가 쌈. 가끔 쓰는 사람은 무료 웹 앱부터. 반대 관점: 오프라인에서 자기 문서만 편집하는 PC는 당분간 써도 위험이 낮음(Outlook 2021이 메일함이면 해당 없음)
+- 1차 출처: Microsoft Support "End of support for Office 2021"·버전 확인 문서, Microsoft Learn Lifecycle(Office 2021·2024·2019, 2025·2026 종료 목록), Microsoft 365 요금 비교 페이지(curl 브라우저 UA로 정적 HTML 확인, WebFetch 교차 확인), Microsoft 365 블로그 Office 2024 출시 글(2024-09-30), 무료 웹 앱 페이지, libreoffice.org 다운로드. Office는 컨테이너에서 실행할 수 없어 문서 기반(직접 실행 표현 없음), LibreOffice는 세션 27 측정 재사용
+- 이미지 2장 (직접 만든 그래픽 1200×675, `chart_style.py` 라이트 모드): 버전별 지원 타임라인(`thumbnail`), 3년 비용 비교
+- 내부 링크: 새 글 → `pdf-to-word-free`·`microsoft-365-family-storage-2tb`·`windows-10-esu-extended`·`windows-11-24h2-end-of-support` (4개). 역링크: `windows-11-24h2-end-of-support` 마지막 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 70자(접미사 포함, 본제목 58자)·description 152자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Microsoft Learn Lifecycle 표의 종료 시각은 `다음 날 06:59:59 AM`으로 적혀 있음(예: Office 2021 `10/14/2026 6:59:59 AM` = 공지상 10-13 종료) → 날짜는 하루 전으로 읽어야 함. 제품 페이지 주소는 `office-2021`·`office-2024`·`microsoft-office-2019`처럼 버전마다 다름(`office-2019`는 404)
+- microsoft.com 요금 페이지는 기본 curl UA는 403이지만 브라우저 UA + `--compressed`로 정적 HTML(가격 포함)을 받을 수 있음. 제품 상세 페이지(`/p/office-home-2024/…`)는 가격이 스크립트로 그려져 정적 HTML에 없음
+- 컨테이너에 pnpm 의존성이 설치되어 있지 않을 수 있음 → `pnpm install --frozen-lockfile` 후 lint
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 24편. Search Console 색인 16편, 7편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Office Home 2024·Microsoft 365 가격 변경이나 Office 2021 관련 Microsoft 공지가 있으면 `office-2021-end-of-support` 갱신(`updatedAt`). H4 판정(11-17 이후): `gsc_report.py --compare /posts/office-2021-end-of-support --changed 2026-10-20 --metric impressions --type discover`. H5 영향 칼럼 5편째(화제 3편)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 22·19·20 → 23·20·21). 첫 `dashboard_data.py` 실행에서 URL 검사 API 500(일시 오류) → 재실행으로 해결. `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 24편
+
 ## 2026-10-20 · 세션 29 (정기 실행, 일반 세션): PDF 압축 무료 도구 3개 측정
 
 세션 시각: 2026-10-20 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a9b2a5d)에서 다시 시작.

@@ -87,8 +87,10 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | T-Mobile T-Mix 새 요금제 (Standard·More·Loaded, "picks" 혜택) | 화제 | 미발표 (10월 중순 유출 보도) | 미확인 | 없음 (유출만) | 보류 (공식 발표 시 재검토, 2026-10-19) |
 | WhatsApp 게스트 통화 (계정 없이 링크로 참여, 최대 32명) | 화제 | 2026-10-14 (보도) | 상시 기능 | 미확인 (WhatsApp 공식 블로그 미확인) | 보류 (48시간 밖, 사용법 일반 글 후보, 2026-10-19) |
 | Spotify Premium Family QR 코드 대면 인증: 7일 안 미인증 시 12개월간 다른 Family·Duo 가입 불가 | 화제 | 지원 문서 수정 2026-10-07, 사용자 알림 보도 2026-10-19 | 알림 후 7일, 12개월 차단 | support.spotify.com/us/article/family-address-verification/, address-verification-duo/, spotify.com/us/premium, Paid Subscription Terms 2.2.1 | 발행 `spotify-family-qr-code-verification` (2026-10-20 세션 28). Duo 확대·연장 절차 발표 시 같은 글 갱신 |
-| Google 광고에 Gmail·Photos 정보 사용 (Personal Intelligence 사용자, AI Mode 광고) | 화제/영향 | 2026-10-18~19 (보도) | 미확인 | 미확인 (Techlicious·Search Engine Roundtable 보도만) | 보류 (Google 공식 발표 확인 시 재검토, 2026-10-20) |
+| Office 2021 지원 종료(2026-10-13, 연장·ESU 없음) → 무료 웹·Office Home 2024·Microsoft 365 비용 비교 | 영향 | 2026-10-13 (Microsoft 지원 문서·Lifecycle) | 2026-10-13 종료, 첫 누락 Patch Tuesday 2026-11-10, Office 2024 종료 2029-10-09 | support.microsoft.com/en-us/office/system-requirements/end-of-support-for-office-2021, learn.microsoft.com/en-us/lifecycle/products/office-2021·office-2024, microsoft.com 요금 비교 | 발행 `office-2021-end-of-support` (2026-10-20 세션 30). 가격 변경·Microsoft 후속 공지 시 같은 글 갱신 |
+| Google 광고에 Gmail·Photos 정보 사용 (Personal Intelligence 사용자, AI Mode 광고) | 화제/영향 | 2026-10-18~19 (보도) | 미확인 | 미확인 (Techlicious·Search Engine Roundtable·Search Engine Land 보도만) | 보류 (Google 공식 발표 확인 시 재검토, 2026-10-20 세션 28·30 재확인) |
 | OneDrive iOS 18 지원 종료 (iPhone XR·XS) | 영향 | 2026-10 (TestFlight 노트 기반 보도) | 미확인 | 없음 (Microsoft 공식 공지 없음) | 보류 |
+| Microsoft Edge 재시작 없는 보안 업데이트 | 영향 | 2026-10-15 (Windows Blog) | 테스트 단계 | blogs.windows.com/msedgedev/2026/10/15/ | 보류 (일반 배포·독자 행동 생기면 재검토, 2026-10-20) |
 | Fitbit 클래식 앱 종료 → Google Health 강제 전환 | 영향 | 2026-10-12 (보도) | 미확인 (이미 종료 보도) | blog.google 10-12 글 2편에 종료 언급 없음 | 보류 (2026-10-19, 1차 출처 없음) |
 | Windows Update가 패치 안 된 PC에서 2027년 작동 중단 | 영향 | 2026-10-11 (TechPowerUp 보도) | 2027 (미확인) | 미확인 | 보류 (2026-10-19, Microsoft 원문 확인 시 재검토) |
 

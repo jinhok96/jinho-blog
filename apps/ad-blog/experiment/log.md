@@ -2,6 +2,47 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-21 · 세션 32 (정기 실행, 화제 뉴스 세션): Android Auto Gemini Personal Intelligence
+
+세션 시각: 2026-10-21 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(c37cdc1)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 31 이후 바뀐 값만)**
+
+- 노출 189 → **198**, 클릭 7, CTR 3.7% → 3.5%, 평균 순위 24.0 → 23.5
+  - `turn-off-ai-in-chrome` 노출 84 → 85 (12.5) / `image-to-text-offline-free` 21 → 23 (11.0) / `transcribe-audio-offline-free` 32 → 34 (45.6) / `gemini-gems-to-skills` 15 → 16 (7.9)
+  - 첫 노출: `spotify-family-qr-code-verification` 1회(2.0), `/categories/news` 1회(2.0)
+- URL 검사: 색인 16편 그대로. `URL is unknown` 9편 = 세션 31의 8편 + `best-free-pdf-tools`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                                        | 카테고리 | 유형             | 독창 요소 |
+| ------------------------------------------- | -------- | ---------------- | --------- |
+| `gemini-android-auto-personal-intelligence` | `news`   | 뉴스 칼럼 (화제) | 차 안 답변 데이터 흐름도(연결 앱 6종 → 음성 답변·활동 기록, 대표 이미지), 설정별 효과 표(앱 연결 해제·채팅 삭제·Keep Activity 끄기: "앞으로 사용 중지" vs "이미 가진 정보 삭제"), 사용자 유형별 영향 표, Google 문서끼리 연결한 분석(설정이 계정 전체로 차에 따라옴 + 차 안 누구나 Gemini 사용 가능 → 동승자 위험, 차 전용 스위치 없음) |
+
+- 선정 근거 (48시간): Google 공식 블로그 2026-10-20 20:00 UTC 발표. Google News RSS `Gemini Android Auto` 47건 · `"Personal Intelligence"` 18건. 자동완성 `gemini android auto` 22개(update·rollout·settings·not working), `gemini personal intelligence` 19개(privacy·settings). Trends 미국 7일 `gemini android auto` 0.1 · 기준 `remove background` 68.1 → 검색량은 작음, 피드형
+- 제외: Xbox Game Pass(Trends 급상승 200+, 기사 100건이지만 신규 게임 소식 + 개편은 소식통 보도), CISA(정치), iOS 27.2 RC(정식 전), Walmart+ 번들(분야 밖), Google 금융 광고 인증(광고주 대상). Google 광고에 Gmail·Photos 정보 사용은 여전히 공식 발표 없음 → 보류 유지
+- `Our take`: 기본값(옵트인)은 괜찮지만 설정이 계정 전체 하나라 차에 그대로 따라오고, Google 도움말상 차 안 누구나 Gemini를 쓸 수 있음 → 동승자 위험. Workspace·Search services만 연결하고 Wallet·Contacts·Photos는 빼라. Google은 차 전용 스위치를 둬야 함. 반대 관점: 혼자 운전하면 휴대폰을 집는 것보다 안전하고, 학습·검토 규칙은 휴대폰과 같음
+- 1차 출처: Google 블로그(10-20), Gemini 도움말 16598406(연결·관리·삭제)·16836988(데이터 사용·학습·사람 검토)·16735982(차 안 Gemini)·13278892(활동 기록·자동 삭제 18개월·72시간), Android Auto 도움말 6348083, gemini.google Personal Intelligence 페이지. 모두 curl 정적 HTML. Android Auto는 컨테이너에서 실행할 수 없어 문서 기반(본문에 밝힘)
+- 이미지 2장 (직접 만든 그래픽 1200×675, `chart_style.py` 라이트 모드): 데이터 흐름도(`thumbnail`), 설정별 효과 표
+- 내부 링크: 새 글 → `gemini-gems-to-skills`·`turn-off-ai-in-chrome` (2개). 역링크: `gemini-gems-to-skills` "Should you move your Gems now?" 마지막 문단에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 86자(접미사 포함, 본제목 74자)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- support.google.com 도움말은 curl(브라우저 UA)로 본문 전체가 열림. `?p=b_pi_ca` 같은 단축 링크는 `answer/16836988`로 리디렉트
+- blog.google 글은 정적 HTML의 JSON-LD `datePublished`로 발표 시각(UTC)을 확인할 수 있음 → 화제 세션 48시간 판단에 사용
+- Google News RSS 기사 수는 `<item>` 개수로 세야 함 (한 줄짜리 XML이라 `grep -c`는 1이 나옴)
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 26편. Search Console 색인 16편, 9편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Google built-in 차 배포·차 전용 설정 추가·연결 앱 확대가 발표되면 `gemini-android-auto-personal-intelligence` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/gemini-android-auto-personal-intelligence --changed 2026-10-20 --metric impressions --type discover`. H5 화제 칼럼 4편째(영향 5편)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후), PDF 글 색인 여부 확인
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월, 이번 글과 같은 Personal Intelligence 주제 → 확인되면 이 글 갱신 또는 새 칼럼)
+- Claude: 발행 26편
+
 ## 2026-10-21 · 세션 31 (정기 실행, 일반 세션): PDF 허브 글
 
 세션 시각: 2026-10-21 00:17 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(7971743)에서 다시 시작.

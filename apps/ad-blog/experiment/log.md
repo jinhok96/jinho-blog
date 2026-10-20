@@ -2,6 +2,45 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-21 · 세션 31 (정기 실행, 일반 세션): PDF 허브 글
+
+세션 시각: 2026-10-21 00:17 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(7971743)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 30 이후 바뀐 값만)**
+
+- 노출 184 → **189**, 클릭 7, CTR 3.8% → 3.7%, 평균 순위 24.6 → 24.0
+  - `turn-off-ai-in-chrome` 노출 83 → 84 (12.5) / `image-to-text-offline-free` 20 → 21 (10.0)
+- URL 검사: 색인 16편 그대로. `URL is unknown` 8편 = 세션 30의 7편 + `office-2021-end-of-support`(PDF 글 5편 `compress-pdf-free`·`merge-pdf-files-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`split-pdf-free` 포함)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                  | 카테고리   | 유형                       | 독창 요소 |
+| --------------------- | ---------- | -------------------------- | --------- |
+| `best-free-pdf-tools` | `software` | 허브 (비교, 검색형) | PDF 측정 글 6편(나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축)의 결과를 모은 작업별 추천 매트릭스(대표 이미지), 도구별 담당 작업 수 그래프, 기본값 함정 7개 표, 무료판 한도·업로드 여부 표, Sejda 3회/일이 앱 전체 공유라는 점에서 나온 설치 조합 추천(Windows: PDFsam + PDF Arranger + iLovePDF) |
+
+- 선정 근거: traffic-playbook 3번(같은 분야 측정 글 3편 이상 → 허브) + 세션 27·29·30 다음 할 일 "PDF 허브 글 우선 검토". 자동완성 `free pdf tools` 23개(Google·Bing·YouTube: for windows·online·download), `best free pdf` 27개(editor·reader·converter·compressor·merger·software). Trends 미국 1개월 `free pdf tools` 0.7 · `pdf editor free` 4.8 · `compress pdf` 5.2 · 기준 `remove background` 35.9 → 허브 자체 수요는 작지만, 미색인 PDF 글 5편으로 가는 내부 링크 경로를 늘리는 목적을 겸함
+- 반복 일정: Chrome 156(10-20 미국 시간) → 이번 세션은 새 글 우선, `turn-off-ai-in-chrome` 반영 검토는 다음 일반 세션으로 이월
+- 새 측정 없음(개별 글 측정 재사용). 이번 세션 1차 출처로 현재 버전·무료 한도 재확인: PDFsam Basic 6.0.6, GIMP 3.2.6, LibreOffice 26.8.1, PDF Arranger 1.14.0(Flathub), Sejda Desktop 무료 한도(3 tasks/day·50MB·200쪽·합치기 30개 50쪽·압축 100MB·변환 1개씩), iLovePDF 무료 파일 크기(Word 15MB·JPG 25MB·합치기/나누기 100MB·압축 200MB, Premium 연 $60), PDF24 "No artificial limits"·1시간 후 삭제
+- 이미지 6장: 새 그래픽 2장(작업별 추천 매트릭스 `thumbnail`, 도구별 작업 수, `chart_style.py` 라이트 모드) + 개별 글 측정 이미지 4장 재사용(`./images/{다른 slug}/…` 경로도 빌드에서 width·height 정상)
+- 내부 링크: 새 글 → PDF 글 6편 + `image-to-text-offline-free` (7개). 역링크: PDF 글 6편 마지막 문단 뒤 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 61자(접미사 포함, 본제목 49자)·description 156자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 이미지 6장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 다른 글 폴더의 이미지(`./images/split-pdf-free/…`)를 새 글에서 그대로 참조해도 `/_static/mdx/posts/images/…`로 해석되고 크기도 지정됨 → 허브 글은 측정 이미지를 복사하지 않고 재사용 가능
+- matplotlib 막대(`rounded_barh`)는 y축을 `set_ylim(큰 값, 작은 값)`으로 뒤집으면 모서리 보정이 깨져 흰 사각형이 생김 → 축은 정방향으로 두고 y 위치를 거꾸로 배치
+- 컨테이너 기본 python에는 matplotlib이 없음 → `/tmp/gsc` venv에 `matplotlib pillow` 설치 후 실행
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 25편. Search Console 색인 16편, 8편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 허브 글은 새 PDF 측정 글이 생기면 섹션·매트릭스를 갱신하고 `updatedAt`·제목 시점 표기 검토. PDF 글 5편 색인 여부 다음 세션에서 확인(허브 링크 효과 참고용)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: 발행 25편
+
 ## 2026-10-20 · 세션 30 (정기 실행, 영향 뉴스 세션): Office 2021 지원 종료
 
 세션 시각: 2026-10-20 18:16 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(d50d0ab)에서 다시 시작.

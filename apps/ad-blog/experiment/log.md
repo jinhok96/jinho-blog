@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-20 · 세션 29 (정기 실행, 일반 세션): PDF 압축 무료 도구 3개 측정
+
+세션 시각: 2026-10-20 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a9b2a5d)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 28 이후 바뀐 값만)**
+
+- 노출 157 → **166**, 클릭 5 → **6**, CTR 3.2% → 3.6%, 평균 순위 25.1 → 24.8
+  - `turn-off-ai-in-chrome` 노출 72 → 75 (11.3) / `gemini-gems-to-skills` 14 → 15 (7.8), **클릭 1** / `check-if-image-is-ai-generated` 17 → 20 (69.8) / `image-to-text-offline-free` 13 → 14 (12.6) / `transcribe-audio-offline-free` 30 → 31 (48.8)
+- URL 검사: **색인 12 → 16편** (새로 색인: `apple-siri-settlement-claim`·`iphone-duo-sold-out`·`spotify-family-qr-code-verification`·`windows-11-24h2-end-of-support`, 크롤링 10-19 22시~10-20 01시 UTC). `URL is unknown` 6편: `compress-video-for-discord-email`·`merge-pdf-files-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`pixel-watch-safety-signal-ending`·`split-pdf-free`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                | 카테고리   | 유형                           | 직접 검증 |
+| ------------------- | ---------- | ------------------------------ | --------- |
+| `compress-pdf-free` | `software` | 비교 + How-to (측정형, 검색형) | 삭제한 명령줄 글과 같은 PDF 4개(사진 39.6MB·스캔 7.1MB·스크린샷 슬라이드 1.4MB·텍스트 86KB)를 **iLovePDF 웹 3단계·PDF24 웹(기본값 + DPI 100·품질 60)·Sejda PDF Desktop 7.9.10 무료판(GUI, 기본값, 3개)**으로 압축해 크기·남은 해상도·OCR 판독률·링크·텍스트 층 확인 |
+
+- 선정 근거: backlog 36번(PDF 압축, 2026-10-17 명령줄 글 삭제 후 GUI로 새로 쓸 후보), Trends `compress pdf` 4.8(10-16 기록, PDF 남은 후보 중 최대). 자동완성 "compress pdf" 31개(file·free·online·on mac·i love pdf·pdf24·extreme·to 1mb·without losing quality)
+- 반복 일정: Chrome 156은 10-20(미국 시간, 세션 시점 미출시), Windows 11-10 → 해당 없음
+- 결과: 사진 PDF는 세 도구 기본값 모두 1MB 미만(iLovePDF Recommended 0.80·Sejda 0.94·PDF24 0.99MB, 사진 약 150ppi). 스캔은 Recommended 1.23MB(150ppi)·PDF24 1.41·Sejda 1.43MB(144ppi), OCR 모두 100%. 스크린샷 슬라이드는 Sejda 99%("already very well compressed")·PDF24 89%·Recommended 74%. Extreme은 72ppi로 스캔 0.44MB(OCR 99.1%)·슬라이드 0.39MB(작은 글자 OCR 93.1%). PDF24 DPI 100·품질 60은 스캔 0.75MB(OCR 100%)·슬라이드 0.62MB(98.7%). iLovePDF Less는 JPEG 2000으로 저장, 스캔 61%. 링크·텍스트 층은 모두 유지
+- 추천: 대부분 iLovePDF Recommended, 크기 제한 맞추기는 PDF24(DPI·품질 입력), 업로드하기 싫으면 Sejda Desktop(작업당 1개·하루 3회). Mac Preview는 Apple 문서 기반(요약 표 "Not tested")
+- 이미지 9장(대표 크기 그래프 1200×675 + 스캔·작은 글자 확대 비교 2 + iLovePDF·PDF24·Sejda 화면 각 2), 요약 표·결과 표. 디자인 시스템 라이트 모드(`chart_style.py`) 첫 측정 글 적용
+- 내부 링크: 새 글 → `split-pdf-free`·`merge-pdf-files-free`·`pdf-to-word-free`·`pdf-to-jpg-free`·`compress-image-to-100kb` (5개). 역링크: `merge-pdf-files-free`·`split-pdf-free` 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 59자(접미사 포함, 본제목 47자)·description 155자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, `<pre>`·`<code>` 0개, 본문 이미지 9장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Sejda Desktop 무료판은 압축에서도 작업당 파일 1개(여러 개 선택 시 처리 후 업그레이드 화면, 작업 횟수는 안 깎인 것으로 보임: 그 뒤 3개 성공 후 4번째에 한도 화면). 저장 대화상자 이름 칸에 전체 경로를 입력하면 원하는 폴더에 저장됨
+- iLovePDF 압축 화면은 옵션 패널 마크업이 요청마다 달라짐(`li[data-value]` 대문자 화면 / 소문자 문구 화면) → 문구(`get_by_text`)로 고르면 안정적. 결과 화면 크기는 이진 MB(37.73 MB = 39.6 MB)
+- PDF24 Tools 웹은 결과·Download 버튼이 `job-monitor` iframe 안에 있음 → `frame_locator("iframe[src*=job-monitor]")`. 업로드 중에는 Compress 버튼이 비활성이라 활성화까지 기다려야 함. 페이지에 광고가 있어 화면 캡처는 광고 영역을 잘라냄
+- 네트워크: tools.pdf24.org·ilovepdf.com·smallpdf.com·adobe.com·support.apple.com 가능, sejda.com은 curl 403·WebFetch 가능, pd12m S3·dl.flathub.org 가능
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 23편. Search Console 색인 16편(이번 세션 4편 증가), 6편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 새 글 노출 검색어 확인 (`compress pdf free`, `compress pdf to 1mb`, `compress pdf without losing quality`). Sejda 텍스트 보고서·Good/Best는 하루 3회 제한으로 미측정
+- Claude: PDF GUI 글 6편(나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축)이 모였으므로 PDF 허브 글(`Best Free PDF Tools (Tested)`) 우선 검토 (traffic-playbook 3번)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28에서 이월)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 21·18·19 → 22·19·20). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 23편
+
 ## 2026-10-20 · 세션 28 (정기 실행, 화제 뉴스 세션): Spotify Family QR 코드 인증
 
 세션 시각: 2026-10-20 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(f33bc6e)에서 다시 시작.

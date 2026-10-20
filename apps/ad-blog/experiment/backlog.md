@@ -56,6 +56,7 @@
 | 44   | PDF → JPG 고화질 변환 (pdftoppm·PyMuPDF·Ghostscript·ImageMagick·LibreOffice 측정, DPI)   | pdf to jpg                                  | -    | 예 (PDF 3개, 설정 25개)   | 상시                  | 삭제 `pdf-to-jpg-high-quality` (2026-10-17 명령줄 방법 → GUI 앱·내장 기능으로 새로 쓸 후보) (2026-10-16). Trends 429로 미비교, 자동완성 30개(high quality·high resolution). 2026-10-18 Trends `pdf to jpg` 13.0 (`jpg to pdf` 13.1과 같은 수준) → PDF GUI 시리즈 다음 후보 |
 | 45   | PDF 합치기 무료 (GUI 앱, 책갈피·링크·양식 보존)                                             | merge pdf files free                        | -    | 예 (GUI 3개)              | 상시                  | 발행 `merge-pdf-files-free` (2026-10-18 세션 21, PDFsam Basic·PDF Arranger·Sejda Desktop 무료판을 GUI로 측정, Mac 미리보기는 문서 기반). 이전 명령줄 글 `merge-pdf-files-free-offline`은 2026-10-17 삭제. Trends `merge pdf` 6.3 · `combine pdf` 6.4 · `split pdf` 6.0 (기준 `remove background` 35.5) |
 | 46   | PDF 나누기·페이지 추출 무료 오프라인 (OS 내장 기능·GUI 앱, 책갈피·양식 유지)                | split pdf free                              | -    | 예 (GUI 3개)              | 상시                  | 발행 `split-pdf-free` (2026-10-17 세션 19, PDFsam Basic·PDF Arranger·Chrome 인쇄를 GUI로 측정, Mac 미리보기는 문서 기반). Trends `split pdf` 22.6 · `merge pdf` 23.5 (3개월 평균, 미국) |
+| 47   | 허브: 무료 PDF 도구 (나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축 측정 글 6편 연결)              | free pdf tools                              | -    | 예 (기존 측정 재사용)     | 상시                  | 발행 `best-free-pdf-tools` (2026-10-21 세션 31, 자동완성 23개 3곳, Trends 0.7 기준 `remove background` 35.9). 새 PDF 측정 글이 생기면 갱신 |
 
 ## 뉴스 칼럼 후보
 

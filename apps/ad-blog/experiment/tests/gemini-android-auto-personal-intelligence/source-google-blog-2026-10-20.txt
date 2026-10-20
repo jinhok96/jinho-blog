@@ -1,0 +1,31 @@
+Gemini — your helpful AI assistant — is now available globally on
+Android Auto
+and
+cars with Google built-in
+. With Gemini, you can speak naturally to get more done or brainstorm ideas while driving.
+An assistant is even more helpful when it knows the world and knows you. That’s why we’re rolling out
+Personal Intelligence
+with Gemini starting today,
+to give you uniquely tailored answers and make Gemini even more valuable on the road.
+With your permission, Personal Intelligence securely connects information from the Google apps you already use — Workspace (including Gmail and Google Calendar), Google Photos, Google Maps, YouTube, and Search.
+Just ask — Gemini gets it
+Personal Intelligence has two core strengths: retrieving specific details from, say, an email, photo or a place you saved in Google Maps to answer your question and reasoning across complex sources. That’s especially helpful when your hands are on the wheel. Personal Intelligence does the heavy lifting so you can speak naturally, without having to explain context or dig for information. Here are a few examples.
+Make complex requests:
+On your way to the airport, ask, “What's my flight gate? And is my flight on time?” You don’t have to hunt for the confirmation email, then do a separate search for delays. Gemini gives you both answers in one go.
+Get personalized picks every time:
+Looking for dinner in an unfamiliar town? Say, “Find me an indoor restaurant along my route that matches my usual vibe.” If you're vegetarian, you'll get a shortlist of places that fit your needs.
+Speak naturally:
+Heading to an appointment? Say, “Take me to my doctor’s appointment.” You don’t have to remember the street address or look it up before you drive.
+Retrieve details without pulling over:
+Trying to return to a place you saw earlier? Say, “Find the car wash from the photo I took last week and navigate there.” You don’t need to scroll through your camera roll or pull over to get the name and directions.
+Pick up where you left off:
+Heading out for the morning? Say, “Take me to the coffee shop we were talking about yesterday”. Gemini will handle the digging and send you on your way.
+Share only what you want
+We built Personal Intelligence with
+privacy at the center
+. Your apps aren’t connected until you choose to turn it on, and you can turn it off anytime in your Gemini settings. And cars with Google built-in only share personal responses when you’re in the car with your phone connected. If you don’t use Personal Intelligence, everything in the car still works: You can use navigation, listen to music, make calls, and ask questions, but the answers won't be tailored to you.
+Get started
+Personal Intelligence is rolling out starting today
+on Android Auto and in the coming months on cars with Google built-in. If you've already enabled it in the Gemini app, it comes with you into the car. If you haven't, you can set your preferences anytime in your Gemini settings.
+Personal Intelligence is currently rolling out to eligible personal Google accounts (and not for Workspace business, enterprise, or education users) aged 18 and older globally, excluding the European Economic Area, Switzerland, the United Kingdom, and Nigeria.
+datePublished: 2026-10-20T20:00:00+00:00

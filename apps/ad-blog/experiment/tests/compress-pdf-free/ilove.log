@@ -1,0 +1,42 @@
+  - waiting for locator("li[data-name=compression_level][data-value=recommended]")
+
+slides-screens recommended slides-screens_compressed.pdf 7.5 1022244
+text-report recommended text-report_compressed.pdf 6.1 60121
+  - waiting for locator("li[data-name=compression_level][data-value=recommended]")
+
+scanned-letter extreme scanned-letter_compressed.pdf 7.2 437566
+  - waiting for locator("li[data-name=compression_level][data-value=extreme]")
+
+  - waiting for locator("li[data-name=compression_level][data-value=extreme]")
+
+photo-brochure extreme photo-brochure_compressed.pdf 8.1 263899
+  - waiting for locator("li[data-name=compression_level][data-value=low]")
+
+  - waiting for locator("li[data-name=compression_level][data-value=low]")
+
+  - waiting for locator("li[data-name=compression_level][data-value=low]")
+
+photo-brochure low photo-brochure_compressed.pdf 8.5 2050059
+fail scanned-letter recommended
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 90000ms exceeded.
+fail scanned-letter recommended
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 90000ms exceeded.
+photo-brochure recommended photo-brochure_compressed.pdf 12.2 797834
+slides-screens extreme slides-screens_compressed.pdf 6.9 393494
+text-report extreme text-report_compressed.pdf 6.2 60121
+fail scanned-letter low
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 90000ms exceeded.
+scanned-letter low scanned-letter_compressed.pdf 11.3 4297282
+fail slides-screens low
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 90000ms exceeded.
+fail slides-screens low
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 90000ms exceeded.
+fail text-report low
+    raise rewrite_error(error, f"{parsed_st['apiName']}: {error}") from None
+playwright._impl._errors.TimeoutError: Page.wait_for_selector: Timeout 90000ms exceeded.
+text-report low text-report_compressed.pdf 6.2 56357

@@ -1,0 +1,115 @@
+ Choose your Safe Browsing protection level in Chrome - Computer - Google Chrome Help Skip to main content 
+ Google Chrome Help 
+ Sign in 
+ Google Help 
+ Help Center
+ Community
+ Google Chrome 
+ Privacy Policy 
+ Terms of Service 
+ Submit feedback
+ Send feedback on...
+This help content & information 
+General Help Center experience 
+ Close Next 
+ Help Center 
+ Community 
+ Google Chrome 
+ Choose your Safe Browsing protection level in Chrome
+ When you use Google Safe Browsing in Chrome, you receive warnings that help protect you against malware, abusive sites and extensions, phishing, malicious and intrusive ads, and social engineering attacks.
+ Safe Browsing crawls and analyzes the web to discover potentially harmful sites and add them to its lists. Each time you visit a website or attempt a download, Chrome checks with Safe Browsing based on the protection level you've selected.
+ You can choose:
+ Enhanced protection: Google’s most secure browsing experience, Enhanced protection offers security from known and potential new dangers.
+ Standard protection: By default, Standard protection offers security from known dangers.
+ No protection (not recommended): You can also turn off Safe Browsing, but you won't be protected against potentially dangerous websites, downloads, and extensions. Your Safe Browsing setting in other Google products won’t be affected.
+ You can choose to visit an unsafe site or download a file after you receive a warning from Chrome.
+ About Safe Browsing protection levels
+ Enhanced protection 
+ When you turn on Enhanced protection, you'll receive warnings about potentially dangerous sites, downloads, and extensions, even ones Google didn’t previously know about.
+ When you visit a site, Chrome sends the URL of the site and a small sample of page content, extension activity, and system information to Google Safe Browsing to check if they’re potentially harmful, including in-depth scans of suspicious downloads. Info sent to Google Safe Browsing is only used for security purposes.
+ If you choose to turn on Enhanced Safe Browsing for your account, Enhanced Safe Browsing keeps you safe when you’re signed in and improves your security in Google Chrome and Gmail. If you’re signed in to your Google Account, Safe Browsing protection extends across your Google services by saving this data to your Google Account — for example, Safe Browsing can increase protection in Gmail after a security incident.
+ Enhanced protection:
+ Improves security for you and everyone on the web.
+ Warns you if you use a password that's been compromised in a data breach.
+ Doesn’t noticeably slow down your browser or device.
+ Standard protection 
+ When you use Chrome, Standard protection is on by default, and you'll receive warnings about sites, downloads, and extensions that have been identified as dangerous.
+ In order to hide your IP address when you visit a site, Chrome sends an obfuscated portion of the URLs you visit through privacy servers before they're forwarded to Google. Neither Google nor the third-party operating the privacy server can see both the URL you're visiting and your IP address. Google checks the obfuscated portion of the URL against Safe Browsing lists and warns you if the site is on one of the lists.
+ Standard protection sends full URLs and bits of page content to Google only if a site does something suspicious.
+ Change your Safe Browsing protection level
+ On your computer, open Chrome.
+ At the top right, select More Settings .
+ On the left, select Privacy and security Security .
+ Select the level of "Safe Browsing" you want to use.
+ Enhanced protection
+ Standard protection
+ No protection
+ For a more private and secure browsing experience, you can also review and manage your Advanced security settings. Learn how to manage additional Chrome security settings .
+ Related resources
+ Manage warnings about unsafe sites 
+ How Chrome Safe Browsing keeps your browsing data private 
+ Google Chrome blocks some downloads 
+ Was this helpful?
+ How can we improve it?
+ Yes No 
+ Submit 
+ Computer Android phone & tablet iPhone & iPad More 
+ Need more help?
+ Try these next steps:
+ Post to the help community Get answers from community members 
+ true
+ Help 
+ 1 of 14
+ Get started with Chrome 
+ 2 of 14
+ Create & personalize a profile 
+ 3 of 14
+ Browse the web 
+ 4 of 14
+ Let Chrome do tasks for you 
+ 5 of 14
+ Privacy in Chrome 
+ 6 of 14
+ Delete your history & activity 
+ 7 of 14
+ Use Google Password Manager 
+ 8 of 14
+ Control your safety 
+ 9 of 14
+ Use Chrome with another device 
+ 10 of 14
+ Change Chrome settings 
+ 11 of 14
+ Use AI features in Chrome 
+ 12 of 14
+ Fix problems 
+ 13 of 14
+ Choose your Safe Browsing protection level in Chrome 
+ 14 of 14
+ Use Chrome on Googlebook 
+ ©2026 Google Privacy Policy 
+ Terms of Service 
+ Language Afrikaans‎ català‎ dansk‎ Deutsch‎ eesti‎ English (United Kingdom)‎ español‎ español (Latinoamérica)‎ Filipino‎ français‎ hrvatski‎ Indonesia‎ isiZulu‎ italiano‎ Kiswahili‎ latviešu‎ lietuvių‎ magyar‎ Melayu‎ Nederlands‎ norsk‎ polski‎ português‎ português (Brasil)‎ română‎ slovenčina‎ slovenščina‎ suomi‎ svenska‎ Tiếng Việt‎ Türkçe‎ čeština‎ Ελληνικά‎ български‎ русский‎ српски‎ українська‎ ‏ עברית ‏ العربية ‏ فارسی मराठी‎ हिन्दी‎ తెలుగు‎ ไทย‎ አማርኛ‎ 中文（简体）‎ 中文（繁體）‎ 日本語‎ 한국어‎ English‎ Enable Dark Mode
+ Send feedback on...
+ This help content & information General Help Center experience 
+ Search
+ Clear search
+ Close search
+ Google apps
+ Main menu
+ 8435379064834766725
+ true
+ Search Help Center
+ false
+ true
+ true
+ true
+ true
+ true
+ 237
+ false
+ false
+ false
+ false
+ false
+ 

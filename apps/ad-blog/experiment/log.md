@@ -28,6 +28,13 @@
 - 빌드 HTML 확인: title 71자(접미사 포함, 본제목 59자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
 - lint·test(31파일 233개)·build 통과
 
+**추가 작업 (사용자 요청): `turn-off-ai-in-chrome` Chrome 156 재검증**
+
+- Chrome 156(10-20 안정판, VersionHistory API 156.0.8078.48)과 글의 기준 155.0.8059.40을 소스로 비교: 글에 쓴 정책 10개 + `BuiltInAIAPIsEnabled` 정의 파일 완전히 동일, 설정 문구(`settings_strings`·`compose_strings`) 변화 없음, 설정 페이지는 Polymer → Lit 이전(코드만, 토글·pref 동일), 페이지 제목 "AI innovations" 유지. 바뀐 것은 글에 없는 Gemini Spark 원격 브라우징 문구·단축키 범위 옵션, 기본 꺼진 Gemini Enterprise 하위 페이지뿐
+- 글 수정: 설명·첫 문단의 현재 버전 155 → 156, 재검증 문단 1개, How we checked에 156 비교. 단계·라벨·정책 변경 없음 → `updatedAt` 유지. 근거는 `tests/turn-off-ai-in-chrome/factcheck.md` "Chrome 156 recheck"
+- traffic-playbook 검증 기록 V3 추가(노하우 4, position, 판단 2026-11-18). Chrome 157(11-03)은 출시 후 같은 방법으로 비교
+- (사용자 요청) 같은 글에 이미지 0 → 4장: 끄는 방법 한눈에 보기(`thumbnail`), 온디바이스 모델 삭제 흐름, 레지스트리 위치(직접 만든 그래픽 3장, `chart_style.py`) + Chromium 141 `chrome://policy`에 예시 정책 3개를 실제로 넣고 찍은 캡처(모두 Status OK). 같은 배포라 V3에 함께 기록. 대표 이미지가 생겨 Discover·이미지 검색 노출 조건(가로 1200px 대표 이미지)도 충족
+
 **알게 된 것**
 
 - support.google.com 도움말의 체크 표시 표는 이미지 아이콘이라 정적 텍스트로는 안 보임 → Playwright로 셀 `img`의 `alt`("Checkmark" vs 빈 alt)를 읽으면 요금제별 제공 여부를 확인할 수 있음
@@ -40,7 +47,7 @@
 - **사용자: AdSense 신청** — 발행 글 28편. Search Console 색인 17편, 10편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
 - Claude: AI Plus 시행일 공개·한도 변경·문서 충돌 해소 시 `gemini-free-flash-lite` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/gemini-free-flash-lite --changed 2026-10-21 --metric impressions --type discover`. H5 영향 칼럼 6편째(화제 4편)
 - Claude: Samsung Messages 종료 공식 공지 확인 (다음 뉴스 세션 후보)
-- Claude: Chrome 156(10-20)·157(11-03) 반영 여부 검토 (`turn-off-ai-in-chrome`, 4세션 이월), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome` 소스 비교(156 재검증 완료, 같은 방법), 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
 - Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
 - Claude: 발행 28편
 

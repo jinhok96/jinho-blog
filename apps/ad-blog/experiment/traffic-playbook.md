@@ -135,6 +135,7 @@
 | --- | ------ | --------- | --------- | ------ | ---- | --------- | ---- | ---- |
 | V1  | 3      | `transcribe-audio-offline-free` (같이 바꾼 `free-offline-text-to-speech`·`remove-background-from-image-free-offline`은 2026-10-17 삭제) | 허브 글 `free-offline-ai-tools`로 역링크 1개씩 추가 | 2026-10-14 | position | 2026-11-11 | - | - |
 | V2  | 3      | `free-offline-ai-tools` | 허브에 OCR 섹션·요약 표 행 추가 (새 측정 글 `image-to-text-offline-free` 연결), `updatedAt` 2026-10-15. 2026-10-17 TTS·배경 제거 섹션과 명령줄 내용 삭제가 판단 기간에 겹침 → 판정 때 참고 | 2026-10-15 | impressions | 2026-11-12 | - | - |
+| V3  | 4      | `turn-off-ai-in-chrome` | Chrome 156 재검증 반영: 설명·첫 문단의 현재 버전 155 → 156, 재검증 문단 1개(메뉴·정책 변화 없음), How we checked에 156 비교 추가, 이미지 0 → 4장(그래픽 3 + chrome://policy 캡처, `thumbnail` 지정. 노하우 7과 겹침 → 판정 때 두 변경을 구분할 수 없음을 적음). 반복 일정(Chrome 안정판) 대응의 첫 사례 | 2026-10-21 | position | 2026-11-18 | - | - |
 
 ## 재분석
 

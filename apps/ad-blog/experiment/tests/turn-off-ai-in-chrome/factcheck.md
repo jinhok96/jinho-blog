@@ -123,3 +123,31 @@ No current (Windows 10/11) Microsoft page with the full step list was found; men
 - Mac policy section removed 2026-10-17 (Terminal `defaults write/delete` commands; no non-developer GUI method). Removed claims: domain `com.google.Chrome`, managed values = Mandatory / others = Recommended (`chrome/browser/policy/chrome_browser_policy_connector.cc` L323-342; `components/policy/core/common/policy_loader_mac.mm` L120-135, L178-189, SRC), recommended values "OK" in Chromium (`policy_dump_141_recommended.json`, RUN), `defaults` syntax (general knowledge). Post now says policies are covered on Windows only and points Mac readers to the Settings switches.
 - Command Prompt `reg add`/`reg delete` syntax (MicrosoftDocs `reg-add.md` L17-30, `reg-delete.md` L17-28) and "Run as administrator": removed from the post 2026-10-17 with the commands.
 - GeminiSettings is `future_on: chrome.linux` (not yet supported on Linux Chrome); Linux not covered in the post.
+
+## Chrome 156 recheck (2026-10-21)
+
+Reference build: Chromium tag `156.0.8078.48`. VersionHistory API (win·mac stable, `endtime=none`) listed 156.0.8078.48 with fraction 1, serving since 2026-10-20T19:56Z (155.0.8059.85/.86 still listed at partial fractions). All files fetched from raw.githubusercontent.com at both tags and compared (`cmp` + message-level diff of `.grd/.grdp`).
+
+| Checked | Result | Method |
+| --- | --- | --- |
+| 10 policy YAMLs used in the post (`GeminiSettings`, `GeminiActOnWebSettings`, `AIModeSettings`, `SearchContentSharingSettings`, `HelpMeWriteSettings`, `HistorySearchSettings`, `TabCompareSettings`, `CreateThemesSettings`, `GenAILocalFoundationalModelSettings`, `GenAiDefaultSettings`) + `Miscellaneous/BuiltInAIAPIsEnabled.yaml` | Byte-identical 155 → 156 | SRC |
+| `settings_strings.grdp`, `compose_strings.grdp` | No AI/Gemini/compose/history-search/on-device message changed | SRC |
+| `glic_strings.grdp` | Only changes: Gemini Spark remote-browsing texts reworded (toggle now "Let other Gemini apps browse remotely from any device"), hotkey scope option strings replaced. Not used in the post | SRC |
+| `google_chrome_strings.grd` | Only `IDS_SETTINGS_GLIC_HOTKEY_SCOPE_CHROME` removed (not used) | SRC |
+| Settings pages | Migrated Polymer → Lit (`*.html` → `*.html.ts`). `ai_page.html.ts` still has `onDeviceAiToggle` with `onDeviceAiEnabledLabel`; `offer_writing_help_page.html.ts` still binds `compose.proactive_nudge_enabled`; `system_page.html.ts` still has the On-device AI link row; Gemini subpage i18n keys identical except hotkey scope keys | SRC |
+| Page title | `kWebuiRefresh2026` and `kDesktopGlowUp` still disabled by default → "AI innovations" title unchanged | SRC |
+| New in 156, not covered | `/ai/geminienterprise` subpage behind `showGeicSettings` (`kGeic` disabled by default) | SRC |
+| On-device model | `kShowOnDeviceAiSettings` enabled by default; `manifest_monitor.cc` identical; installer still uses `OptGuideOnDeviceModel` folder | SRC |
+
+Post change: description and intro now say Chrome 156; one recheck paragraph in the intro; "How we checked" notes the 156 comparison. Steps, labels and policies unchanged. `updatedAt` not changed (no change to instructions).
+
+## Images (2026-10-21)
+
+| Image | What it shows | Basis |
+| --- | --- | --- |
+| `chrome-ai-off-switches.webp` (thumbnail) | Quick reference as a graphic: Settings full/partial/no switch per feature + policy values | Same rows as the post's Quick reference table (SRC above) |
+| `chrome-on-device-ai-removal.webp` | Switch off → uninstall + no re-download vs. deleting folder → can re-download | On-device model rows above (manifest_monitor.cc, manifest_asset_manager.cc, installer `RegisterOnDemandComponent`) |
+| `chrome-policy-registry-location.webp` | Key tree `HKLM\SOFTWARE\Policies\Google\Chrome` + example REG_DWORD values | Policies rows above; key path as in the post |
+| `chrome-policy-page-status-ok.webp` | **RUN**: Chromium 141.0.7390.37 (`/opt/pw-browsers/chromium-1194`) `chrome://policy` with `/etc/chromium/policies/managed/50-toolproof-ai-off.json` = `{"GeminiSettings": 1, "GenAILocalFoundationalModelSettings": 1, "HelpMeWriteSettings": 2}`; all three Status OK, Source Platform, Level Mandatory. Name filter "Settings" hides the container's own policies; file removed after capture. Accent boxes added on Reload policies and Status | `policy_screenshot.py`, then `charts.py` |
+
+Generated with `charts.py <out> <policy PNG>` (`chart_style.py` light mode).

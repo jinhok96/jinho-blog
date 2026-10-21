@@ -1,0 +1,17 @@
+---
+title: 병렬 Claude 팀으로 C 컴파일러 구축하기
+description: 16개의 Claude 에이전트 팀이 2만 달러를 들여 처음부터 Linux 커널을 컴파일할 수 있는 10만 줄의 C 컴파일러를 성공적으로 구축했습니다.
+category: claude
+sourceUrl: https://www.anthropic.com/research/building-c-compiler
+createdAt: 2026-02-05
+---
+
+> 원문: [Building a C compiler with a team of parallel Claudes](https://www.anthropic.com/research/building-c-compiler) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+- 16개의 Claude 인스턴스가 인간의 개입 없이 병렬로 작동하는 "에이전트 팀" 접근 방식을 개발했습니다.
+- 이 팀은 2,000번의 Claude Code 세션과 20,000달러의 API 비용을 투입하여 100,000라인의 Rust 기반 C 컴파일러를 완성했습니다.
+- 이 컴파일러는 x86, ARM, RISC-V 아키텍처에서 Linux 6.9를 성공적으로 빌드할 수 있으며, QEMU, FFmpeg 등 다양한 프로젝트도 컴파일 가능합니다.
+- 프로젝트를 통해 장시간 실행되는 자율 에이전트 팀을 위한 효과적인 테스트 작성, 병렬 작업 분담, 그리고 현재 LLM의 한계점을 파악했습니다.
+
+자세한 내용은 원문에서 확인하세요.

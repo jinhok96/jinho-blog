@@ -1,0 +1,21 @@
+---
+title: 컨텍스트 인식 검색 소개
+description: "AI 모델의 정보 검색 정확도를 49%까지 향상시키는 컨텍스트 인식 검색 기술을 소개합니다."
+category: claude
+sourceUrl: https://www.anthropic.com/engineering/contextual-retrieval
+createdAt: 2024-09-19
+---
+
+> 원문: [Introducing Contextual Retrieval](https://www.anthropic.com/engineering/contextual-retrieval) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+AI 모델이 특정 맥락에서 유용하게 활용되기 위해서는 배경 지식 접근이 필수적입니다. 기존의 검색 증강 생성(RAG) 방식은 정보 인코딩 시 맥락을 제거하여 관련 정보 검색에 실패하는 경우가 많았습니다.
+
+본 게시물에서는 RAG의 검색 단계를 획기적으로 개선하는 "컨텍스트 인식 검색(Contextual Retrieval)" 방법을 소개합니다. 이는 컨텍스트 인식 임베딩(Contextual Embeddings)과 컨텍스트 인식 BM25(Contextual BM25)의 두 가지 하위 기술을 사용합니다. 이 방법을 통해 검색 실패율을 49% 감소시킬 수 있으며, 리랭킹(reranking)과 결합 시 67%까지 줄일 수 있습니다. 이는 다운스트림 작업의 성능을 직접적으로 향상시키는 검색 정확도의 상당한 개선을 의미합니다.
+
+- **컨텍스트 인식 검색(Contextual Retrieval)**: RAG에서 발생하는 맥락 손실 문제를 해결하기 위해, 각 텍스트 조각(chunk)에 맥락 정보를 추가하여 임베딩 및 BM25 인덱싱을 수행합니다.
+- **검색 실패율 감소**: 컨텍스트 인식 임베딩만 사용 시 35%, 컨텍스트 인식 임베딩과 컨텍스트 인식 BM25를 결합 시 49%의 검색 실패율 감소를 보였습니다.
+- **리랭킹(Reranking)과의 시너지**: 컨텍스트 인식 검색에 리랭킹 단계를 추가하면 검색 실패율을 최대 67%까지 낮출 수 있습니다.
+- **Claude를 활용한 구현**: Claude의 프롬프트 기능을 활용하여 각 텍스트 조각에 대한 맥락 정보를 효율적으로 생성하고, 프롬프트 캐싱(prompt caching)을 통해 비용 효율성을 높일 수 있습니다.
+
+자세한 내용은 원문에서 확인하세요.

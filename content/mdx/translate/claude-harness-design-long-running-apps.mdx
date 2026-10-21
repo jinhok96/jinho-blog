@@ -1,0 +1,31 @@
+---
+title: 장기 실행 애플리케이션 개발을 위한 하네스 설계
+description: Claude를 활용하여 고품질 프론트엔드 디자인과 완전 자동 애플리케이션 개발을 달성하기 위한 새로운 AI 엔지니어링 접근 방식을 소개합니다.
+category: claude
+sourceUrl: https://www.anthropic.com/research/harness-design-long-running-apps
+createdAt: 2026-03-24
+---
+
+> 원문: [Harness design for long-running application development](https://www.anthropic.com/research/harness-design-long-running-apps) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+장기 실행 애플리케이션 개발을 위해 Claude를 활용하여 고품질 프론트엔드 디자인과 완전 자동 애플리케이션 개발을 달성하기 위한 새로운 AI 엔지니어링 접근 방식이 제시됩니다. GAN(Generative Adversarial Networks)에서 영감을 받은 **생성자(generator)**와 **평가자(evaluator)** 에이전트 구조가 핵심입니다.
+
+-   **주요 변경 사항 및 핵심 내용:**
+    *   **GAN 기반 멀티 에이전트 구조:** 생성자 에이전트와 평가자 에이전트를 활용하여 주관적인 디자인 품질을 객관적인 평가 기준으로 변환하고, 이를 통해 생성자의 성능을 향상시킵니다.
+    *   **프론트엔드 디자인의 주관적 품질 평가 기준화:** 디자인 품질, 독창성, 완성도, 기능성을 구체적인 평가 기준으로 삼아 "좋은 디자인인가?"와 같은 주관적 질문을 객관적으로 평가 가능한 질문으로 전환합니다.
+    *   **세 에이전트 아키텍처 (기획자, 생성자, 평가자):** 장기 실행 자율 코딩을 위해 작업을 작은 단위로 분해하고, 에이전트 간에 구조화된 결과물을 전달하여 컨텍스트를 유지하는 3 에이전트 시스템을 구축합니다.
+    *   **컨텍스트 리셋 및 평가자 분리:** 장기 실행 작업에서 발생하는 모델의 컨텍스트 손실 및 자기 평가의 편향 문제를 해결하기 위해 컨텍스트 리셋과 별도의 평가자 에이전트 도입을 통해 성능을 향상시킵니다.
+    *   **간소화된 하네스 아키텍처:** 모델 성능 향상에 따라 불필요한 컴포넌트(예: 스프린트 구조)를 제거하고, 평가자의 역할을 조정하여 효율성을 높입니다.
+
+```python
+# 예시: 프론트엔드 디자인 평가 기준 (내부 요약)
+grading_criteria = [
+    "Design quality: Coherent whole vs. collection of parts.",
+    "Originality: Evidence of custom decisions, not template layouts.",
+    "Craft: Technical execution (typography, spacing, color harmony).",
+    "Functionality: Usability independent of aesthetics.",
+]
+```
+
+자세한 내용은 원문에서 확인하세요.

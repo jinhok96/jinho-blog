@@ -246,8 +246,6 @@ const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
 const pct = (x) => (x == null ? '–' : (x * 100).toFixed(1) + '%');
-// 날짜 표기: YY.MM.DD (입력은 YYYY-MM-DD 또는 ISO 시각)
-const ymd = (d) => (d ? String(d).slice(2, 10).replace(/-/g, '.') : '–');
 // 시각(ISO, UTC)은 보는 사람의 시간대로: YY.MM.DD HH:MM (UTC+09:00)
 const pad2 = (n) => String(n).padStart(2, '0');
 function localParts(iso) {
@@ -263,6 +261,9 @@ function localParts(iso) {
 }
 const localStamp = (iso) => { const p = localParts(iso); return p ? `${p.date} ${p.time} (${p.tz})` : '–'; };
 const localDate = (iso) => { const p = localParts(iso); return p ? p.date : '–'; };
+// 날짜 표기: YY.MM.DD. YYYY-MM-DD 날짜는 그대로, ISO 시각(글 발행 시각 등)은 보는 사람의 시간대 날짜로
+const hasTime = (d) => String(d).includes('T');
+const ymd = (d) => (!d ? '–' : hasTime(d) ? localDate(d) : String(d).slice(2, 10).replace(/-/g, '.'));
 
 function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
@@ -451,7 +452,7 @@ function renderPosts() {
   $('k-indexed').textContent = `색인 ${indexed} / ${posts.length}`;
   $('posts').innerHTML = posts.map((p) => `<tr>
     <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + ymd(p.updatedAt) : ''}</div>${detailToggle(p.slug, p)}</td>
-    <td class="num">${ymd(p.createdAt)}</td>
+    <td class="num"${p.createdAt && hasTime(p.createdAt) ? ` title="${esc(localStamp(p.createdAt))}"` : ''}>${ymd(p.createdAt)}</td>
     <td>${p.channel ? `<span class="chip">${esc(p.channel)}</span>` : '<span class="small">–</span>'}</td>
     <td class="r num">${fmt(p.words)}</td>
     <td class="r num">${fmt(p.images)}</td>
@@ -520,11 +521,13 @@ function renderBreakdown() {
 function renderExperiments() {
   const x = state.experiments;
   if (!x) return;
-  const today = new Date().toISOString().slice(0, 10);
+  // 오늘 = 보는 사람 시간대의 날짜 (판단일 YYYY-MM-DD와 날짜 단위로 비교)
+  const now = new Date();
+  const today = Date.UTC(now.getFullYear(), now.getMonth(), now.getDate());
   const rows = x.rows || [];
   $('experiments').innerHTML = rows.length ? rows.map((r) => {
     const done = r.verdict && r.verdict !== '-';
-    const days = Math.round((new Date(r.judgeAt) - new Date(today)) / 86400000);
+    const days = Math.round((new Date(r.judgeAt) - today) / 86400000);
     const st = done ? statusPill(r.verdict) : days <= 0 ? '<span class="pill warn">판정 필요</span>' : `<span class="pill muted">D-${days}</span>`;
     return `<tr><td class="num">${esc(r.id)}<div class="small">노하우 ${esc(r.knowhow)}</div></td><td>${esc(r.change.replace(/`/g, ''))}<div class="small">${esc(r.target.replace(/`/g, '').replace(/, /g, ' · '))} · 배포 ${ymd(r.deployed)} · 지표 ${esc(r.metric)}</div></td><td>${st}<div class="small">${ymd(r.judgeAt)}</div></td></tr>`;
   }).join('') : '<tr><td colspan="3" class="empty">검증 기록이 아직 없습니다.</td></tr>';

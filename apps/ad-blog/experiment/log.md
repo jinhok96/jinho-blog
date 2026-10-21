@@ -2,6 +2,46 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-22 · 세션 35 (정기 실행, 일반 세션): WebP → JPG 무료 변환 5개 도구 측정
+
+세션 시각: 2026-10-22 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(d38fc84)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 34 이후 바뀐 값만)**
+
+- 노출 233 → **258**, 클릭 7, CTR 3.0% → 2.7%, 평균 순위 23.5 → 23.7
+  - `turn-off-ai-in-chrome` 89 → 94 (13.4) / `image-to-text-offline-free` 31 → 34 (9.5) / `gemini-gems-to-skills` 19 → 22 (7.5) / `spotify-family-qr-code-verification` 10 → 17 (25.2) / `transcribe-audio-offline-free` 35 → 36
+- URL 검사: 색인 17편 그대로. `URL is unknown` 11편 = 세션 34의 10편 + `gemini-free-flash-lite`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                       | 카테고리   | 유형                | 직접 검증 |
+| -------------------------- | ---------- | ------------------- | --------- |
+| `convert-webp-to-jpg-free` | `software` | 비교 (측정, 검색형) | 직접 만든 WebP 10개(CC0 사진 6·투명 그래픽 3·12프레임 애니메이션 1)를 XnConvert 1.118.0(Xvfb GUI)·GIMP 3.2.6(기본 내보내기)·ezgif·CloudConvert·iLoveIMG(Chromium 자동 조작, 계정 없음) 기본 설정으로 변환 → 크기·SSIM·투명 영역 채움색·애니메이션 처리 측정 |
+
+- 선정 근거: backlog 42번(WebP → JPG). 자동완성 `webp to jpg` 22개(converter·free·bulk·mac·cloudconvert·ezgif), `convert webp` 28개. Trends 미국 1개월 `webp to jpg` 2.4 · `webp to png` 4.3 · `heic to jpg` 9.3 · 기준 `remove background` 40.3. 반복 일정: Chrome 156은 세션 34에서 반영 완료, 다음은 157(11-03)
+- 결과: 사진은 모든 도구가 해상도 유지·SSIM 0.973 이상. JPG 크기는 WebP의 1.66배(XnConvert, 품질 85)~2.23배(iLoveIMG, 92). 투명 영역은 4개 도구가 흰색(흰 스티커 사라짐), iLoveIMG만 검은색(검은 로고 사라짐, 잘라내기 사진은 녹색 줄무늬). 배경색 선택은 ezgif만. 애니메이션: XnConvert 첫 프레임, GIMP 마지막 프레임, iLoveIMG·CloudConvert는 프레임별 JPG지만 8~9개가 잘린 조각, ezgif 서버 변환 실패(3회). iLoveIMG·CloudConvert 사진 JPG는 바이트 단위로 동일. CloudConvert는 무료 하루 10크레딧 한도에 걸려 사진 5장만
+- 이미지 5장: 투명 결과 비교(`thumbnail`)·크기 그래프·애니메이션 결과(직접 만든 그래픽, `chart_style.py`) + XnConvert JPG 설정·CloudConvert Options 화면 캡처
+- 내부 링크: 새 글 → `compress-image-to-100kb`·`convert-heic-to-jpg-free`·`remove-bg-alternative-free`·`jpg-to-pdf-free` (4개). 역링크: `convert-heic-to-jpg-free`·`compress-image-to-100kb` 마지막에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 64자(접미사 포함, 본제목 52자)·description 155자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 이미지 5장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 애니메이션 WebP는 보통 바뀐 부분만 프레임에 저장하므로, 프레임을 그대로 꺼내는 변환기(iLoveIMG·CloudConvert)는 잘린 조각을 돌려줌 → 애니메이션 변환 측정에는 libwebp 기본 인코더로 만든 파일이 현실적인 시험 재료
+- 손실 WebP의 투명 영역 아래 RGB는 인코더가 남긴 값이라, 알파를 버리는 변환기(iLoveIMG)는 그 값을 그대로 드러냄. `cwebp -exact`로 만들면 원본 사진이 그대로 보여 비현실적 → 기본 옵션으로 다시 만듦
+- XnConvert 첫 실행은 Startup Wizard가 뜨고, Qt xcb 플러그인에 `libxcb-cursor0`가 필요(apt 설치). 창 관리자(openbox) 없이도 xdotool 클릭은 동작
+- ezgif 서버 변환은 시간 초과가 잦아 2~3회 재시도 필요. 페이지 스크린샷은 웹 폰트 대기로 시간 초과 → 폰트 요청을 막으면 진행
+- CloudConvert 무료 한도(하루 10크레딧)는 애니메이션 1개가 여러 크레딧을 쓰는 것으로 보여, 측정 순서를 정할 때 애니메이션을 마지막에 둘 것
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 29편. Search Console 색인 17편, 11편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: `convert-webp-to-jpg-free` 후속 후보: `webp to png`(Trends 4.3으로 더 큼) 수요가 Search Console에 보이면 PNG 섹션 보강 또는 별도 글 검토. Windows Paint·Photos 공식 문서가 생기면 반영
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome` 소스 비교, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 29편
+
 ## 2026-10-21 · 세션 34 (정기 실행, 영향 뉴스 세션): Gemini 무료 요금제 Flash-Lite 전환
 
 세션 시각: 2026-10-21 18:15 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(400dba8)에서 다시 시작.

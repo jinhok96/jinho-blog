@@ -33,6 +33,7 @@
 - Chrome 156(10-20 안정판, VersionHistory API 156.0.8078.48)과 글의 기준 155.0.8059.40을 소스로 비교: 글에 쓴 정책 10개 + `BuiltInAIAPIsEnabled` 정의 파일 완전히 동일, 설정 문구(`settings_strings`·`compose_strings`) 변화 없음, 설정 페이지는 Polymer → Lit 이전(코드만, 토글·pref 동일), 페이지 제목 "AI innovations" 유지. 바뀐 것은 글에 없는 Gemini Spark 원격 브라우징 문구·단축키 범위 옵션, 기본 꺼진 Gemini Enterprise 하위 페이지뿐
 - 글 수정: 설명·첫 문단의 현재 버전 155 → 156, 재검증 문단 1개, How we checked에 156 비교. 단계·라벨·정책 변경 없음 → `updatedAt` 유지. 근거는 `tests/turn-off-ai-in-chrome/factcheck.md` "Chrome 156 recheck"
 - traffic-playbook 검증 기록 V3 추가(노하우 4, position, 판단 2026-11-18). Chrome 157(11-03)은 출시 후 같은 방법으로 비교
+- (사용자 요청) 같은 글에 이미지 0 → 4장: 끄는 방법 한눈에 보기(`thumbnail`), 온디바이스 모델 삭제 흐름, 레지스트리 위치(직접 만든 그래픽 3장, `chart_style.py`) + Chromium 141 `chrome://policy`에 예시 정책 3개를 실제로 넣고 찍은 캡처(모두 Status OK). 같은 배포라 V3에 함께 기록. 대표 이미지가 생겨 Discover·이미지 검색 노출 조건(가로 1200px 대표 이미지)도 충족
 
 **알게 된 것**
 

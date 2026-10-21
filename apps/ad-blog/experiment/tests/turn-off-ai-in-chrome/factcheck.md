@@ -140,3 +140,14 @@ Reference build: Chromium tag `156.0.8078.48`. VersionHistory API (win·mac stab
 | On-device model | `kShowOnDeviceAiSettings` enabled by default; `manifest_monitor.cc` identical; installer still uses `OptGuideOnDeviceModel` folder | SRC |
 
 Post change: description and intro now say Chrome 156; one recheck paragraph in the intro; "How we checked" notes the 156 comparison. Steps, labels and policies unchanged. `updatedAt` not changed (no change to instructions).
+
+## Images (2026-10-21)
+
+| Image | What it shows | Basis |
+| --- | --- | --- |
+| `chrome-ai-off-switches.webp` (thumbnail) | Quick reference as a graphic: Settings full/partial/no switch per feature + policy values | Same rows as the post's Quick reference table (SRC above) |
+| `chrome-on-device-ai-removal.webp` | Switch off → uninstall + no re-download vs. deleting folder → can re-download | On-device model rows above (manifest_monitor.cc, manifest_asset_manager.cc, installer `RegisterOnDemandComponent`) |
+| `chrome-policy-registry-location.webp` | Key tree `HKLM\SOFTWARE\Policies\Google\Chrome` + example REG_DWORD values | Policies rows above; key path as in the post |
+| `chrome-policy-page-status-ok.webp` | **RUN**: Chromium 141.0.7390.37 (`/opt/pw-browsers/chromium-1194`) `chrome://policy` with `/etc/chromium/policies/managed/50-toolproof-ai-off.json` = `{"GeminiSettings": 1, "GenAILocalFoundationalModelSettings": 1, "HelpMeWriteSettings": 2}`; all three Status OK, Source Platform, Level Mandatory. Name filter "Settings" hides the container's own policies; file removed after capture. Accent boxes added on Reload policies and Status | `policy_screenshot.py`, then `charts.py` |
+
+Generated with `charts.py <out> <policy PNG>` (`chart_style.py` light mode).

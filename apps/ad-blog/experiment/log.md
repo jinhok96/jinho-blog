@@ -2,6 +2,48 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-21 · 세션 34 (정기 실행, 영향 뉴스 세션): Gemini 무료 요금제 Flash-Lite 전환
+
+세션 시각: 2026-10-21 18:15 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(400dba8)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 33 이후 바뀐 값만)**
+
+- 노출 212 → **233**, 클릭 7, CTR 3.3% → 3.0%, 평균 순위 22.9 → 23.5
+  - `spotify-family-qr-code-verification` 3 → **10** (21.5, `spotify family qr code` 26~30위) / `image-to-text-offline-free` 27 → 31 (9.9) / `gemini-gems-to-skills` 18 → 19 (7.5) / `check-if-image-is-ai-generated` 26 (70.5)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 10편 = 세션 33의 9편 + `remove-bg-alternative-free`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                     | 카테고리 | 유형             | 독창 요소 |
+| ------------------------ | -------- | ---------------- | --------- |
+| `gemini-free-flash-lite` | `news`   | 뉴스 칼럼 (영향) | 요금제별 모델·사용 한도·컨텍스트 창 매트릭스(Google 문서 4곳을 한 표로, 대표 이미지), 컨텍스트 창 쪽수 환산(Google 자체 비율 1M ≈ 1,500쪽 → 무료 약 48쪽·Plus 약 192쪽, 추정임을 표시), Google 문서 간 충돌(About Gemini models는 AI Plus에 Pro 표시 vs 변경 공지·요금 페이지 미포함), 무료 사용자가 Flash·Pro에 닿는 유일한 경로(Auto) 설정 위치·응답 모델 확인법 |
+
+- 선정 근거 (최근 30일 발표·영향 지속): Gemini 도움말 17004136 "Changes to Gemini model access and limits" — 무료 10-09 시행, AI Plus는 계정별 이메일 날짜(진행 중). Google News 30일 `Gemini free Flash-Lite` 51건, 자동완성 `gemini free` 약 45개(free tier limits·free vs pro·for students), Trends 미국 1개월 `gemini free` 14.5 · 기준 `remove background` 40.0
+- 제외·보류: Samsung Messages 종료(보도 10-19, Samsung 공식 공지 미확인 → 다음 후보), WhatsApp 구형 Android 지원 종료(공식 날짜 미확인), Mac Developer ID 인증서(개발자), Windows 11 23H2 Enterprise 종료(기업), Marvel Unlimited·Discovery+(분야 밖)
+- `Our take`: 대부분 무료로 충분하지만 Auto는 켜 둘 것(끄면 전부 Flash-Lite). 진짜 손실은 긴 문서(약 48쪽) → 그 용도면 AI Plus $4.99가 가장 싼 해결(128k), Pro는 Pro·Argon·1M이 필요할 때만. AI Plus 구독자가 가장 손해(이메일로 날짜 통보, 문서끼리 충돌) → Google은 요금 페이지에 날짜를 둬야 함. 반대 관점: 무료에도 Deep Research·Canvas·연결 앱이 남아 여전히 넉넉하고, 짧은 질문은 더 빨라질 것
+- 1차 출처: Gemini 도움말 17004136·16275805(한도·컨텍스트·기능 표)·18648722(모델·Auto·thinking level)·14517446(요금제 변경), gemini.google/subscriptions(미국 가격), gemini.google/release-notes(Argon 10-13), gemini.google/students(학생 AI Pro 1년, 12-31 마감). 표의 체크 아이콘은 Playwright로 셀 이미지 alt를 읽어 확인. Gemini 앱은 로그인 불가로 실행하지 않음(문서 기반)
+- 이미지 2장 (직접 만든 그래픽 1200×675, `chart_style.py` 라이트 모드): 요금제 매트릭스(`thumbnail`), 컨텍스트 창 쪽수 비교
+- 내부 링크: 새 글 → `split-pdf-free`·`free-offline-ai-tools`·`gemini-gems-to-skills`·`gemini-android-auto-personal-intelligence` (4개). 역링크: `gemini-gems-to-skills` "Should you move your Gems now?" 마지막에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 71자(접미사 포함, 본제목 59자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- support.google.com 도움말의 체크 표시 표는 이미지 아이콘이라 정적 텍스트로는 안 보임 → Playwright로 셀 `img`의 `alt`("Checkmark" vs 빈 alt)를 읽으면 요금제별 제공 여부를 확인할 수 있음
+- 언론 기사가 출처로 든 도움말 번호(Engadget → `answer/17004136`)를 직접 열면 보도만 있던 시행일을 1차 출처로 확인할 수 있음
+- Google 도움말끼리도 갱신 시점이 달라 내용이 충돌할 수 있음(18648722 vs 17004136) → 충돌은 숨기지 않고 본문에 밝힘
+- web.archive.org는 프록시에서 연결 리셋(사용 불가), one.google.com 요금 페이지는 Chromium 렌더링에서도 가격이 나오지 않음
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 28편. Search Console 색인 17편, 10편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: AI Plus 시행일 공개·한도 변경·문서 충돌 해소 시 `gemini-free-flash-lite` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/gemini-free-flash-lite --changed 2026-10-21 --metric impressions --type discover`. H5 영향 칼럼 6편째(화제 4편)
+- Claude: Samsung Messages 종료 공식 공지 확인 (다음 뉴스 세션 후보)
+- Claude: Chrome 156(10-20)·157(11-03) 반영 여부 검토 (`turn-off-ai-in-chrome`, 4세션 이월), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: 발행 28편
+
 ## 2026-10-21 · 세션 33 (정기 실행, 일반 세션): remove.bg 종료 → 무료 대안 측정
 
 세션 시각: 2026-10-21 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(ddbfbd0)에서 다시 시작.

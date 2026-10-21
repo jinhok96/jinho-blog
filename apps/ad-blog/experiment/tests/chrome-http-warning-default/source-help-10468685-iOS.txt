@@ -1,0 +1,124 @@
+ Manage Chrome safety and security - iPhone & iPad - Google Chrome Help Skip to main content 
+ Google Chrome Help 
+ Sign in 
+ Google Help 
+ Help Center
+ Community
+ Google Chrome 
+ Privacy Policy 
+ Terms of Service 
+ Submit feedback
+ Send feedback on...
+This help content & information 
+General Help Center experience 
+ Close Next 
+ Help Center 
+ Community 
+ Google Chrome 
+ Manage Chrome safety and security
+ For a more private and secure browsing experience, you can use Chrome’s safety features, like Safety Check and Safe Browsing.
+ Compromised passwords 
+ If you notice an unfamiliar activity on your account or think that your password may have been compromised, change your password immediately. Learn how to secure a compromised Google Account .
+ To change your password from another site, follow the instructions in Chrome. Learn how to manage passwords .
+ Safe Browsing protection levels 
+ With Google Safe Browsing, you get alerts about malware, risky extensions, phishing or sites on Google’s list of potentially unsafe sites. Learn how to choose Safe Browsing protection level .
+ Automatic Chrome updates 
+ To make sure you're protected by the latest security updates, when available, Chrome can automatically update to the newest browser version.  Learn how to update Chrome .
+ On-device encryption for passwords 
+ Important: Make sure you’ve already set up on-device encryption. Learn how to set up on-device encryption . 
+ Once on-device encryption is set up, you can use your Google password or the screen lock for compatible phones or tablets to unlock your password. This type of encryption means that only you have the key to unlock your passwords.
+ Run a Safety Check on an iPhone or iPad
+ Chrome runs Safety Check automatically to help you find and fix privacy and security problems.
+ You can review Chrome's privacy and security with Safety Check. Safety Check searches for:
+ Compromised, reused, or weak passwords: To ensure your online security, Safety Check can warn you if a username or password stored in the Google Password Manager was involved in a data breach. Learn more about how Chrome protects your passwords .
+ Safe Browsing status: To ensure you’re protected against malware, phishing, and other risks, Safety Check can occasionally remind you to review your Safe Browsing settings. Learn more about Safe Browsing protection in Chrome .
+ Available Chrome updates: To ensure that you’re protected by the latest security updates, Safety Check can occasionally remind you to update Chrome.
+ On your iPhone or iPad, open Chrome .
+ Tap More Settings .
+ Select Safety check Check now .
+ If Chrome finds any issues, tap the item with the issue.
+ Follow the instructions on screen.
+ Tip: When Safety Check takes action, Chrome will notify you if there are issues that need your attention. These messages will show up on your New Tab page. You can select the item with the issue and follow the on-screen instructions.
+ Turn on Safety check notifications 
+ On your iPhone or iPad, open Chrome .
+ Tap More Settings Safety check .
+ Tap Turn On Safety Check Notifications… .
+ On the notifications page, turn on Safety check .
+ If you’ve not allowed Chrome to send you notifications, follow the on-screen prompts to enable them.
+ Tip: When you touch and hold the “Safety check” card, you also get an option to turn on notifications. To turn on notifications, tap Turn on Notifications for Safety Check Allow .
+ Turn on Always use secure connections 
+ When a website’s URL has HTTPS, it can indicate a secure connection. Connections to sites that use HTTPS are more secure than sites that don’t. When you turn on Always Use Secure Connections, Chrome attempts to load all sites over HTTPS and displays a warning before you visit a site that doesn’t support it.
+ On your iPhone or iPad, open Chrome .
+ Tap More Settings Privacy and security .
+ Turn on Always use secure connections .
+ Tip: When you’re about to load a site that doesn’t use HTTPS in its URL, a “Not Secure” warning appears in the address bar.
+ Turn compromised password notifications on or off 
+ Compromised password notifications are automatically turned on with Enhanced Protection.
+ On your iPhone or iPad, open Chrome .
+ Tap More Settings Privacy and security .
+ Tap Safe Browsing Standard Protection .
+ Turn Warn You If Passwords Are Exposed in a Data Breach on or off.
+ Related resources 
+ Manage passwords in Chrome 
+ Update Google Chrome 
+ Install and manage extensions 
+ Change site settings permissions 
+ Use notifications to get alerts  
+ Was this helpful?
+ How can we improve it?
+ Yes No 
+ Submit 
+ iPhone & iPad Android phone & tablet Computer More 
+ Need more help?
+ Try these next steps:
+ Post to the help community Get answers from community members 
+ true
+ Help 
+ 1 of 11
+ Manage Chrome safety and security 
+ 2 of 11
+ Check if a site's connection is secure 
+ 3 of 11
+ Manage warnings about unsafe sites 
+ 4 of 11
+ Lock or erase your lost phone or computer 
+ 5 of 11
+ Remove unwanted software & ads 
+ 6 of 11
+ Manage your location settings in Chrome 
+ 7 of 11
+ Start or stop automatically reporting errors & crashes 
+ 8 of 11
+ Check if your Chrome browser is managed 
+ 9 of 11
+ Make your account more secure 
+ 10 of 11
+ About DMA & your linked services 
+ 11 of 11
+ Manage your linked Google services 
+ ©2026 Google Privacy Policy 
+ Terms of Service 
+ Language Afrikaans‎ català‎ dansk‎ Deutsch‎ eesti‎ English (United Kingdom)‎ español‎ español (Latinoamérica)‎ Filipino‎ français‎ hrvatski‎ Indonesia‎ isiZulu‎ italiano‎ Kiswahili‎ latviešu‎ lietuvių‎ magyar‎ Melayu‎ Nederlands‎ norsk‎ polski‎ português‎ português (Brasil)‎ română‎ slovenčina‎ slovenščina‎ suomi‎ svenska‎ Tiếng Việt‎ Türkçe‎ čeština‎ Ελληνικά‎ български‎ русский‎ српски‎ українська‎ ‏ עברית ‏ العربية ‏ فارسی मराठी‎ हिन्दी‎ తెలుగు‎ ไทย‎ አማርኛ‎ 中文（简体）‎ 中文（繁體）‎ 日本語‎ 한국어‎ English‎ Enable Dark Mode
+ Send feedback on...
+ This help content & information General Help Center experience 
+ Search
+ Clear search
+ Close search
+ Google apps
+ Main menu
+ 1809680093356574162
+ true
+ Search Help Center
+ false
+ true
+ true
+ true
+ true
+ true
+ 237
+ false
+ false
+ false
+ false
+ false
+ 

@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-22 · 세션 36 (정기 실행, 화제 뉴스 세션): Chrome HTTP 경고 기본값 + Enhanced 전용 사기 경고
+
+세션 시각: 2026-10-22 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(11396d2)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 35 이후 바뀐 값만)**
+
+- 노출 258 → **281**, 클릭 7, CTR 2.7% → 2.5%, 평균 순위 23.7 → 23.6
+  - `turn-off-ai-in-chrome` 94 → 97 (13.2) / `image-to-text-offline-free` 34 → 42 (9.3) / `spotify-family-qr-code-verification` 17 → 21 (25.9) / `gemini-gems-to-skills` 22 → 23 (7.4) / `transcribe-audio-offline-free` 36 → 37
+- URL 검사: 색인 17편 그대로. `URL is unknown` 12편 = 세션 35의 11편 + `convert-webp-to-jpg-free`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                          | 카테고리 | 유형             | 독창 요소 |
+| ----------------------------- | -------- | ---------------- | --------- |
+| `chrome-http-warning-default` | `news`   | 뉴스 칼럼 (화제) | Chrome 156(Google 공식 Linux deb)을 컨테이너에서 직접 실행: HTTP 경고 창·Continue 후 재방문 무경고·새 프로필 첫 실행 스위치 꺼짐 → 재실행 시 켜짐 관찰(캡처 3장). Standard vs Enhanced 보호 수준별 기능·전송 데이터 표(대표 이미지), 2022 → 2026-10-21 타임라인 |
+
+- 선정 근거 (48시간): Google 블로그 2026-10-21 17:00 UTC "Chrome Now Warns Before Insecure HTTP Connections"(모든 사용자 기본값) + 2026-10-20 17:00 UTC "Our latest defenses against evolving web scams"(suspicious site·서버 Gemini 검사·ClickFix 경고는 Enhanced 전용). Google News 48시간 `Chrome scam protection` 40건·`Chrome insecure HTTP warning` 6건, 자동완성 `chrome enhanced protection` 17개(vs standard·turn off)·`always use secure connections` 24개. Trends 미국 7일 `chrome enhanced protection` 0.1 · 기준 `remove background` 65.6 → 피드형
+- 제외: PHP2Shell(기사 100건+로 화제성 최대지만 웹사이트 운영자·개발자 대상, 일반 독자 행동 없음), ChatGPT Ads 26개국 확대(미국 영향 없음·사업 뉴스), Google Maps CarPlay Gemini(기능 소개), Xbox Cloud Playtime(Insider 테스트), Apple Music 로고
+- `Our take`: HTTP 경고 기본값은 옳고 비용이 거의 없음(Google 수치 95%는 주간 0회, 승인한 사이트는 유지, 우리 테스트도 사이트당 1회). 약점은 가장 새로운 사기 방어가 Enhanced 뒤에 있다는 것 → 사기에 취약한 가족 Chrome은 Enhanced로. 반대 관점: Enhanced는 전체 URL을 계정에 연결해 Google에 보냄, 링크에 신중하면 Standard + HTTP 경고로 충분
+- 1차 출처: Google 블로그 3건(2025-10-28 HTTPS by default·2026-10-20·10-21, JSON-LD 발표 시각), Chrome 도움말 9890866·10468685(Desktop·Android·iOS), Chromium Dash(147: 04-07, 154: 09-22, 156: 10-20), VersionHistory API
+- 이미지 5장: 직접 만든 그래픽 2(보호 수준 표 `thumbnail`, 타임라인, `chart_style.py` 라이트 모드) + Chrome 156 직접 캡처 3(경고 창, 설정 스위치·옵션, Enhanced 설명)
+- 내부 링크: 새 글 → `turn-off-ai-in-chrome`·`windows-10-esu-extended` (2개). 역링크: `windows-10-esu-extended` "Should you enroll…" 마지막에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판단 기간이라 고치지 않음
+- 빌드 HTML 확인: title 78자(접미사 포함, 본제목 66자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개, `<pre>`·`<code>` 0개, 본문 이미지 5장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- `dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb` 다운로드 가능 → `dpkg -x`로 풀면 설치 없이 Google Chrome 안정판 실행 가능(root라 `--no-sandbox` 필요). Chromium과 달리 Google 서버 설정(variations)이 적용되어 실제 기본값을 볼 수 있음
+- Playwright `launch`의 기본 인자(`--disable-features`·`--disable-field-trial-config` 등)는 Chrome 기본 동작을 바꿈 → 기본값 확인은 Chrome을 직접 실행하고 `connect_over_cdp`로 붙여야 함
+- 새 프로필 첫 실행에는 서버 설정이 아직 없어 단계적 기본값이 꺼져 보일 수 있음 → 두 번째 실행에서 확인
+- Chrome의 HTTP 경고 창은 페이지 밖 대화상자라 CDP 스크린샷에 안 나옴 → `import -window root`(Xvfb 화면) + xdotool 클릭
+- blog.google 보안 글은 `blog.google/security/` 아래에 있고 Chrome RSS에는 안 나옴 → 관련 글 링크·WebSearch로 주소 확인
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 30편. Search Console 색인 17편, 12편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Edge·Safari·Firefox의 같은 기본값 변경, Standard 보호에 사기 경고 확대가 발표되면 `chrome-http-warning-default` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/chrome-http-warning-default --changed 2026-10-21 --metric impressions --type discover`. H5 화제 칼럼 5편째(영향 6편)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`(V3 판정 뒤 Enhanced 서버 Gemini 전환 문장 추가 검토)·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 30편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 36 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+
 ## 2026-10-22 · 세션 35 (정기 실행, 일반 세션): WebP → JPG 무료 변환 5개 도구 측정
 
 세션 시각: 2026-10-22 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(d38fc84)에서 다시 시작.

@@ -1,0 +1,63 @@
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0
++
+iPhone User Guide
+Select version:
+iOS 27
+iOS 26
+iOS 18
+iOS 17
+iOS 16
+Search this guide
+Table of Contents 
+Lift a subject from the photo or video background on iPhone
+
+You can isolate the subject of a photo or video frame from its background, then copy or share it in other documents and apps.
+
+You can use this feature in Photos, Safari, Quick Look, and more.
+
+Open a photo in full screen, or pause a video on any frame.
+
+Touch and hold the subject. When an outline appears around the subject, do one of the following:
+
+Tap Copy or Copy Subject, then paste the subject into an email, text message, or note.
+
+Continue to hold, then with another finger, open a document in another app and drag the subject into the document.
+
+Tap Look Up to learn more about the subject.
+
+Tap Add Sticker, then save the sticker to use in Markup, Messages, and more.
+
+Tap Share, then choose a sharing option, such as AirDrop or Mail.
+
+See also
+Identify objects in your photos and videos on iPhone
+Select, edit, and move text on iPhone
+Add emoji, Memoji, and stickers with the iPhone keyboard
+Previous
+Identify objects in your photos and videos
+Next
+Camera basics
+Helpful?
+Yes
+No
+Apple Footer
+
+Apple
+ Support
+ iPhone User Guide
+ Lift a subject from the photo or video background on iPhone
+United States
+Copyright © 2026 Apple Inc. All rights reserved.
+Privacy Policy Terms of Use Sales and Refunds Site Map

@@ -1,0 +1,50 @@
+{
+ "removebg": {
+  "n": 20,
+  "iou_median": 0.9845198385262419,
+  "iou_mean": 0.9680071948492959,
+  "clean": 19,
+  "fail": 1,
+  "edge_mae_median": 0.06187639944255352,
+  "mae_median": 0.0044941704254597425,
+  "out_size": "408x612",
+  "megapixels_median": 0.24967050000000002,
+  "alpha_levels_median": 256.0
+ },
+ "iloveimg": {
+  "n": 20,
+  "iou_median": 0.9830825086389205,
+  "iou_mean": 0.9373513249023608,
+  "clean": 17,
+  "fail": 2,
+  "edge_mae_median": 0.08423860371112823,
+  "mae_median": 0.006923885317519307,
+  "out_size": "1080x1620",
+  "megapixels_median": 1.7496,
+  "alpha_levels_median": 59.0
+ },
+ "removalai": {
+  "n": 20,
+  "iou_median": 0.9866469991100646,
+  "iou_mean": 0.9382478454682616,
+  "clean": 18,
+  "fail": 2,
+  "edge_mae_median": 0.055231038480997086,
+  "mae_median": 0.00624083005823195,
+  "out_size": "400x600",
+  "megapixels_median": 0.24,
+  "alpha_levels_median": 256.0
+ },
+ "pixlr": {
+  "n": 3,
+  "iou_median": 0.9718903376134054,
+  "iou_mean": 0.8510530368735832,
+  "clean": 2,
+  "fail": 1,
+  "edge_mae_median": 0.09015322476625443,
+  "mae_median": 0.007054536137729883,
+  "out_size": "1080x1620",
+  "megapixels_median": 1.7496,
+  "alpha_levels_median": 256
+ }
+}

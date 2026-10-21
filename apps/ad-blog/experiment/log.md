@@ -2,6 +2,46 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-21 · 세션 33 (정기 실행, 일반 세션): remove.bg 종료 → 무료 대안 측정
+
+세션 시각: 2026-10-21 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(ddbfbd0)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 32 이후 바뀐 값만)**
+
+- 노출 198 → **212**, 클릭 7, CTR 3.5% → 3.3%, 평균 순위 23.5 → 22.9
+  - `turn-off-ai-in-chrome` 노출 85 → 89, **클릭 1 → 2** (12.2) / `image-to-text-offline-free` 23 → 27 (10.3) / `transcribe-audio-offline-free` 34 → 35 / `gemini-gems-to-skills` 16 → 18 (7.6) / `spotify-family-qr-code-verification` 1 → 3 (29.7)
+- URL 검사: **색인 16 → 17편** (`merge-pdf-files-free` 새로 색인, 크롤링 10-20 21:59 UTC). `URL is unknown` 9편 = 세션 32의 9편 − `merge-pdf-files-free` + `gemini-android-auto-personal-intelligence`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                         | 카테고리   | 유형                    | 직접 검증 |
+| ---------------------------- | ---------- | ----------------------- | --------- |
+| `remove-bg-alternative-free` | `software` | 비교 (측정, 검색형) | 웹 도구 4개(remove.bg·iLoveIMG·removal.ai·Pixlr)를 Chromium으로 직접 조작해 AIM-500 20장(정답 알파 매트) 처리 → 정확도(IoU)·경계 오차·무료 다운로드 해상도 측정. Pixlr는 하루 무료 저장 3회 한도에 걸림(우회 안 함) |
+
+- 선정 근거: backlog 10번(배경 제거, 2026-10-17 명령줄 글 삭제 후 GUI·웹으로 새로 쓸 후보). 조사 중 remove.bg 업로드 화면에서 **독립 웹사이트 2026-12-01 09:00 CET 종료**(Canva로 이전) 공지를 발견 → 대체 수요 각도로 정함. Trends 미국 1개월 `remove background` 40.0 · `background remover` 21.2 · `remove bg` 14.4 (기준 키워드 자체가 최대 수요군). 자동완성 `remove.bg alternative` 14개(free·hd·reddit), `remove bg free` 28개(hd·high quality·no sign up). Google News 30일 `"remove.bg" Canva` 2건 → 경쟁 공백
+- 결과: 깨끗한 컷아웃(IoU ≥ 0.95) remove.bg 19/20 · removal.ai 18 · iLoveIMG 17, 실패는 모두 식물. 무료 다운로드는 iLoveIMG만 원본 크기(1.75MP)·무가입, remove.bg·removal.ai는 약 0.25MP 미리보기, Pixlr는 원본이지만 하루 3회. 경계 오차는 iLoveIMG가 가장 큼(8.4% vs 5.5~6.2%)
+- 반복 일정: Chrome 156(10-20) `turn-off-ai-in-chrome` 반영 검토는 이번에도 새 글 우선으로 이월
+- 이미지 6장: 그래프 2(무료 다운로드 크기 `thumbnail`, 정확도) + 퍼블릭 도메인 사진 결과 비교 1 + 사이트 화면 3(remove.bg 종료 배너·미리보기 메뉴, removal.ai 다운로드 버튼, Pixlr 한도 팝업). AIM-500 사진은 저작권 때문에 공개하지 않고 수치만 씀
+- 내부 링크: 새 글 → `convert-heic-to-jpg-free`·`compress-image-to-100kb`·`best-free-pdf-tools`·`free-offline-ai-tools`·`check-if-image-is-ai-generated` (5개). 역링크: `compress-image-to-100kb`·`convert-heic-to-jpg-free` 마지막에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 68자(접미사 포함, 본제목 56자)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, `<pre>`·`<code>` 0개, 본문 이미지 6장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- remove.bg·iLoveIMG·removal.ai·Pixlr 웹 화면은 Playwright(Python) + `/opt/pw-browsers/chromium-1194`로 업로드·다운로드까지 자동 조작 가능. Photoroom은 업로드 버튼이 반응하지 않았고(파일 선택 창 안 열림), canva.com은 curl·Chromium·WebFetch 모두 403/차단 페이지 → Canva 무료 요금제 포함 여부는 확인 불가로 씀
+- 정답 마스크가 있는 공개 데이터셋(AIM-500, MIT)으로 웹 도구 출력도 점수화할 수 있음. 단 사진 저작권은 원저작자라 글에는 퍼블릭 도메인 예시(scikit-image)만 사용
+- 웹 도구의 무료 한도는 직접 돌려 봐야 드러남(Pixlr 하루 3회는 가격 페이지에 없음). 한도에 걸리면 우회하지 않고 그 자체를 결과로 씀
+- `pip install playwright pyarrow`는 `/tmp/gsc` venv에서 수 분 걸림 → 백그라운드 타임아웃 주의
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 27편. Search Console 색인 17편, 9편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: remove.bg 종료(12-01) 전후 변화(Canva 무료 제공 범위 발표, 일정 변경)가 있으면 `remove-bg-alternative-free` 갱신(`updatedAt`). canva.com 접근이 되면 무료 요금제 포함 여부 확인. 12-01 이후 remove.bg 화면 스크린샷·설명 갱신
+- Claude: Chrome 156(10-20)·157(11-03) 반영 여부 검토 (`turn-off-ai-in-chrome`, 3세션 이월), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: 발행 27편
+
 ## 2026-10-21 · 세션 32 (정기 실행, 화제 뉴스 세션): Android Auto Gemini Personal Intelligence
 
 세션 시각: 2026-10-21 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(c37cdc1)에서 다시 시작.

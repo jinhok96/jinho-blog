@@ -41,6 +41,7 @@
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome` 소스 비교, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
 - Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
 - Claude: 발행 29편
+- 대시보드 갱신 실패: `ArtifactData` `list`(stats)가 auto mode 권한 분류기에 거부됨([PII Data Handling]) → 이번 세션 데이터 미반영. 다음 세션에서 다시 시도
 
 ## 2026-10-21 · 세션 34 (정기 실행, 영향 뉴스 세션): Gemini 무료 요금제 Flash-Lite 전환
 

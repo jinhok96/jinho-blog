@@ -1,0 +1,70 @@
+Skip to main content
+Gemini Apps Help
+Sign in
+Help Center
+Community
+Privacy Hub
+Gemini Apps
+Changes to Gemini model access and limits
+
+Important:
+
+For the best experience, make sure you've updated to the latest version of the Gemini mobile app.
+Learn how to update Google Play apps for Android
+Learn how to update App Store apps for iOS 
+ 
+
+Starting in October 2026, there will be changes to model availability for Gemini Apps when you use a personal account.
+
+These changes will start to take effect for users without an AI subscription on October 9th. For users with an AI Plus subscription, you should receive an email that explains when these changes will take effect for you.
+
+Model availability after these changes take effect:
+
+ 	Gemini Model
+Google AI Plan	Flash-Lite	Flash	Pro
+Without a plan	Auto
+AI Plus			
+AI Pro			
+AI Ultra			
+
+
+Auto will be the default setting for users without a Google AI plan. Gemini will use auto model selection to send each prompt to the Gemini model that suits it best. Most prompts will go to Flash-Lite, our fastest model. Prompts that need deeper reasoning may go to Flash or Pro.
+
+If smart model selection is turned off, chats for users without an AI plan will use Flash-Lite for all responses.
+
+Tips: 
+
+For each available model, you can also select the model’s effort level from low, medium, and high.  This will increase the model’s ability to complete tasks and provide more thorough answers to queries, but will also use more of your limit. 
+Manage your Google AI plan
+
+You can subscribe to a Google AI plan, upgrade your current plan, change your plan, or cancel your plan at any time. Learn how to manage your Google AI plan from Gemini Apps.
+
+Previous changes
+
+Starting on May 17, 2026 there were changes to usage limits and model availability for Gemini Apps for users over 18. These changes took effect for users under 18 on July 24, 2026.
+
+Usage limits for Gemini Apps
+
+Gemini will move to compute-based usage limits that will refresh every 5 hours until you reach your weekly limit. Calculation of your usage will factor in the complexity of your prompt, the features you use, and the length of your chat. Paid users have higher limits than users without a Google AI subscription. 
+
+Premium models and features require more usage and may cause you to reach your limit faster. This would include things like:
+
+Media generation
+Images, videos and music
+Deep Research
+Pro Model
+Extended thinking and Deep Think
+Usage limits
+Plan	Limit
+Without a plan	Standard limits
+AI Plus	2x higher than standard limits
+AI Pro	4x higher than standard limits
+AI Ultra 	5x or 20x higher than AI Pro depending on your subscription
+Give feedback about this article
+Need more help?
+Try these next steps:
+Post to the help community
+Get answers from community members
+©2026 Google  Privacy Policy  Terms of Service
+Language
+English‎

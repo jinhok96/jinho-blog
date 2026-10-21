@@ -1,0 +1,109 @@
+Skip to main content
+Gemini Apps Help
+Sign in
+Help Center
+Community
+Privacy Hub
+Gemini Apps
+Gemini Apps limits & feature availability
+Gemini Apps have compute-based usage limits that determine how much you can interact with Gemini tools and features. These limits factor in the complexity of your prompt, the models and features you use, and the length of your chat. Your limit refreshes every 5 hours until you reach your weekly limit. 
+
+You can upgrade to a Google AI plan for expanded access to features and models in Gemini Apps. Gemini Apps upgrades are part of select Google One paid plans for personal accounts. Learn more about available subscriptions.
+
+Important: This article is for users managing Gemini Apps for a personal Google Account. If you’re using a work or school Google Account, learn more about using Gemini Apps with a work or school account.
+
+What you need
+To use Gemini Apps with a Google AI plan in most countries, you must be 13 (or the applicable age in your country) or over.
+To use Gemini Apps with a Google AI plan in the European Economic Area, Switzerland, or the United Kingdom, you must be 18 years of age or older.
+Some features may not be available for users under the age of 18 or 13 (or the applicable age in your country). In the help center, you will find additional information about age requirements.
+Where Google AI Plus is available
+Where Google AI Pro & Google AI Ultra are available
+Gemini app access and limits
+
+Important:
+
+Gemini Apps limits may change. Access is subject to change or may be limited based on testing, experimentation, or availability. 
+Gemini Apps usage limits are designed to ensure an optimal experience for everyone. This means we may at times have to cap the number of prompts and conversations you can have, or how much you can use some features, within a specific timeframe.
+Usage limits
+Plan	Limit
+Without an AI plan	Standard limits
+AI Plus	2x higher than standard limits
+AI Pro	4x higher than standard limits
+AI Ultra	5x or 20x higher than AI Pro limits depending on your subscription
+Context windows
+
+When you upload files to Gemini Apps, it needs to "read" the content to provide useful insights or answers. The context window is like the reading capacity. It determines how much content can be understood together at one time. A larger context window allows Gemini Apps to work with longer prompts and chats.
+
+Plan	Context window
+Without an AI plan	32k tokens
+AI Plus	128k tokens
+AI Pro & AI Ultra	1 million tokens
+ 
+Understanding usage
+Prompt type	Relative usage cost	Explanation	Example Prompt
+Simple conversation in chat	Very low	Short text prompts without followup questions don’t require a lot of thinking power from Gemini.	"Write a subject line for my email."
+Ongoing Conversations	Medium	These require Gemini to re-read the previous conversation history to maintain context. As the chat gets longer, this requires more thinking power.	
+Long chats with dynamic editing.
+A programming project with a lot of revisions.
+
+Large File Analysis	Medium	Long documents, codebases, or spreadsheets require that Gemini reads large blocks of data to create a response.	"Analyze this 100-page PDF financial report."
+Deep Research	High	This requires Gemini to use multiple, multi-step search queries and several rounds of reasoning sweeps to create a comprehensive report.	"Perform a deep competitive analysis on clean energy technology."
+Video Generation	High	Multimedia requests (including images, music, and video) require a lot of thinking power from Gemini. Video generally requires the most usage.	"Create a dramatic video of a flight over Rome."
+Tip: Start a new chat when you move to a new topic. This will help save usage because Gemini won’t have to re-read a long conversation history before creating a response.
+Feature availability
+
+Some features are only available with Google AI subscription plans. Some features (like media generation or Deep Research) will consume more of your usage.
+
+Feature	Without a Google AI plan	Google AI Plus	Google AI Pro	Google AI Ultra
+Canvas				
+Skills				
+Storybook				
+Connected apps				
+Quizzes & flashcards				
+Audio overviews				
+Screen automation				
+Slide generation				
+Deep Research				
+Daily brief				
+Tasks in Gemini				
+Image generation with Nano Banana 2				
+Redo images with Nano Banana Pro				
+Video generation				
+Music generation				
+Scheduled actions				
+Early access to features		Priority access to some new features
+
+More info about limits
+What you can do when you reach a usage limit
+Usage limit changes
+How to tell if you’re close to a limit & when it refreshes
+Why you might want a larger context window
+Give feedback about this article
+Need more help?
+Try these next steps:
+Post to the help community
+Get answers from community members
+Help
+Use Gemini Apps
+What you need to sign in to Gemini Apps
+About Gemini models
+Gemini Apps limits & feature availability
+Find & manage your recent chats in Gemini Apps
+Use & manage Connected Apps in Gemini
+Manage your Google AI plan from Gemini Apps
+Where you can use the Gemini web app
+Upload & analyze files in Gemini Apps
+Organize your projects with notebooks in Gemini Apps
+Schedules in Gemini Apps
+Use Deep Think in Gemini Apps
+Verify AI-generated images, videos, and audio
+Import from other AI platforms to Gemini Apps
+Learn about generative AI
+Learn in creative ways with generative AI
+Guide your child's Gemini Apps experience
+Use the Gemini app on Mac
+Use the Gemini app for Windows
+Customize your Gemini chats experience
+©2026 Google  Privacy Policy  Terms of Service
+Language
+English‎

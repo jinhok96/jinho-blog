@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-23 · 세션 40 (정기 실행, 뉴스 세션 · 화제): Gemini Connected Apps가 Customize 메뉴로
+
+세션 시각: 2026-10-23 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8d2dfb4)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-24 ~ 10-22, 세션 39 이후 바뀐 값만)**
+
+- 노출 325 → **351**, 클릭 8, CTR 2.5% → 2.3%, 평균 순위 22.6 → 22.7
+  - `image-to-text-offline-free` 51 → 55 (9.1) / `spotify-family-qr-code-verification` 30 → 34 (26.6) / `iphone-duo-sold-out` 10 → 13 (9.4) / `transcribe-audio-offline-free` 42 (48.3)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 16편 = 세션 39의 15편 + `turn-off-gemini-in-gmail`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 39와 같은 8건(같은 클러스터 링크 1·칼럼 → 상시 글 1·받는 링크 2개 미만 6). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `gemini-connected-apps` | `news` | `ai-settings` 뉴스 칼럼 (화제, 피드형) | Google 공식 Connected Apps 표(table/17434654) 83행을 파싱(`parse_apps.py`)해 회사 유형(Google 12·휴대폰 20·그 밖의 회사 51)·지역(그 밖의 회사 중 미국 전용 27, 브라질·인도 전용 10)·나이(18세 이상 55)·계정 유형(업무·학교 가능 23) 집계, 연결/해제/활동 삭제/Keep Activity 끄기별로 남는 데이터 표, 5월 ~ 10월 앱 추가 타임라인 |
+
+- 선정 근거 (48시간): Google Workspace Updates 2026-10-21 "An easier way to customize how Gemini works for you"(릴리스 노트 2026.10.13, 10-13부터 최대 15일 배포). Google News 48시간 `Gemini connected apps` 59건·`Gemini customize connected apps` 21건, 자동완성 `gemini connected apps` 3곳(list·missing·privacy·settings)
+- 제외: ChatGPT Locked Chats(3일 75건으로 화제성 최대, openai.com·help.openai.com 403 → 1차 출처 확인 불가, 백로그 보류), iPhone Duo 출시(앱 소개 위주, 같은 주제 칼럼 있음), Outlook Copilot 우선순위 기능 종료(보도만), Meet 번역 63개 언어(독자 행동 없음)
+- `Our take`: 연결은 휴대폰 앱 권한처럼 — 민감한 데이터 앱(신용·진료)은 작업할 때만 연결하고 끝나면 해제. 근거: 해제해도 Gemini 활동·외부 앱이 받은 데이터·검토된 채팅(3년)은 남음, @로 고르면 연결 요청이 다시 뜸. 반대 관점: 매주 장보기·예약에 쓰면 연결 유지가 핵심, 미국 밖은 대부분 앱이 아직 없음
+- 1차 출처: Workspace Updates 2026-10-21, Gemini 릴리스 노트, Gemini 도움말 18736938·13695044(컴퓨터·Android·iOS)·14959807·17209137·17094296, Privacy Hub 13594961, Connected Apps 표 17434654, Google 블로그 2026-08-12·09-23. Gemini 계정이 없어 Customize 화면은 직접 실행 못 함(본문에 밝힘)
+- 도움말끼리 다른 점: 커스텀 앱 문서는 아직 Settings > Connected Apps 경로, 스킬 문서는 Windows 앱 미지원(Workspace 글은 Windows 포함) → 본문 How we checked에 밝힘
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 566492349, 49.5분, 세이지 그린 + 살구·자두색, 약간 높은 측면 시점. 관 다섯 개 대신 케이블 하나지만 주제·화풍이 맞아 그대로 사용, `hero-image.md`) + 본문 그래픽 4장(회사 유형·지역 막대, 해제 시 남는 데이터 표, 메뉴 경로, 타임라인, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → `turn-off-gemini-in-gmail`·`gemini-gems-to-skills`·`gemini-android-auto-personal-intelligence`·`turn-off-ai-in-chrome` (4개). 역링크: `gemini-gems-to-skills`(색인됨) "What's the difference" 목록 뒤, `turn-off-gemini-in-gmail` Connected Apps 단계 뒤에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 62자(접미사 포함, 본제목 50자)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+- lint·test(33파일 241개)·build 통과
+
+**알게 된 것**
+
+- 백그라운드 Bash 실행은 `timeout`을 주지 않으면 30분에 종료됨 → 대표 이미지 생성(약 50분)은 `timeout: 7200000`으로 실행해야 함 (첫 시도가 30분에 중단되어 1회 다시 생성)
+- Google 도움말 표(support.google.com/gemini/table/…)는 `<tr data-category="…">` 행 구조라 curl HTML로 카테고리·요구 조건을 그대로 파싱 가능
+- `next build`가 처음 실행에서 "SecurityFatalError: Your version of Next.js is affected by a known security vulnerability"로 멈추고 `next upgrade --agent=security …` 실행을 권함(다시 실행하면 통과). 의존성 업그레이드는 사용자 결정이라 실행하지 않음
+- openai.com·help.openai.com·chatgpt.com은 계속 403 (WebFetch도 403) → OpenAI 뉴스는 1차 출처 확인 불가
+
+**다음 할 일**
+
+- **사용자: Next.js 보안 업그레이드 검토** — 빌드가 `next@^16.4.0`에 알려진 취약점이 있다며 업그레이드를 권함 (2026-10-23). 업그레이드 여부·시점은 사용자 결정
+- **사용자: Search Console 색인 요청** — `URL is unknown` 16편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, 새 글 `turn-off-gemini-in-gmail`·`gemini-connected-apps`
+- Claude(다음 일반 세션): `ai-settings` 공백 후보 `turn off copilot in word` (상시 글 5편째가 되면 허브 `turn off ai`)
+- Claude(다음 개선 세션): `photo-video` 허브, `link_audit` 문제 8건
+- Claude: Customize 배포 완료(약 10-28)·외부 앱 국가 확대·도움말 경로 정리 시 `gemini-connected-apps` 갱신(`updatedAt`). H4 판정(11-20 이후): `gsc_report.py --compare /posts/gemini-connected-apps --changed 2026-10-23 --metric impressions --type discover`. H5 화제 칼럼 6편째(영향 7편)
+- Claude: ChatGPT Locked Chats — OpenAI 1차 출처에 접근 가능해지면 뉴스 칼럼 후보로 재검토
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 34편
+
 ## 2026-10-23 · 세션 39 (정기 실행, 일반 세션): Gmail에서 Gemini 끄기
 
 세션 시각: 2026-10-23 00:23 KST → 일반 세션(`ai-tools`·`software`). 전략 개편 후 첫 일반 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(11799ae)에서 다시 시작.

@@ -59,11 +59,26 @@
 | 47   | 허브: 무료 PDF 도구 (나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축 측정 글 6편 연결)              | free pdf tools                              | -    | 예 (기존 측정 재사용)     | 상시                  | 발행 `best-free-pdf-tools` (2026-10-21 세션 31, 자동완성 23개 3곳, Trends 0.7 기준 `remove background` 35.9). 새 PDF 측정 글이 생기면 갱신 |
 | 48   | 사진 메타데이터·위치 정보 지우기 무료 (데스크톱 앱·웹·OS 내장, 남는 항목·세로 사진 방향·업로드 여부 측정) | remove metadata from photo | -    | 예 (앱 2·웹 4)            | 상시                  | 발행 `remove-metadata-from-photos` (2026-10-22 세션 37). 자동완성 21개(android·iphone·free·online) + `remove location from photo` 20개, Trends `photo location` 3.4 · `remove metadata` 0.4 (기준 `remove background` 35.4). 후속: Metadata2Go·HEIC·PNG 측정, Windows 11 내장 기능 공식 문서 |
 
+## 클러스터 공백 후보
+
+[clusters.md](clusters.md) 우선순위 클러스터를 채울 후보입니다 (2026-10-22 전략 개편). 일반 세션(00·12시)과 개선 세션의 공백 글은 이 표의 위에서부터 고르고, 위 표의 같은 클러스터 후보(14·18·41번 등)도 함께 봅니다. 뉴스 칼럼을 쓰면 다음 날 생길 상시 검색을 이 표에 1개 이상 올립니다. 주 검색어는 자동완성 3곳에 나오는 가장 구체적인 변형으로 적고(README 주제 선정 기준 3번), 쓰기 전에 수요·1차 출처를 다시 확인합니다.
+
+| 클러스터 | 역할 | 주제 | 주 검색어 | 수요 근거 (2026-10-22) | 직접 검증 | 상태 |
+| --- | --- | --- | --- | --- | --- | --- |
+| `ai-settings` | 상시 글 | Gmail·Docs·Chrome의 Gemini 끄기 (Workspace 스마트 기능 설정과 차이) | turn off gemini in gmail | 자동완성 `turn off gemini` 25개: in chrome·in gmail 3곳, in google docs 2곳. Trends `turn off gemini` 1.8 (기준 `remove background` 35.4, 3개월) | Chrome은 컨테이너 Chromium, Gmail·Docs는 문서 기반(계정 없음) | 후보 |
+| `ai-settings` | 상시 글 | Word·Outlook·Excel·Windows 11의 Copilot 끄기 | turn off copilot in word | 자동완성 `turn off copilot` 24개: in excel·in outlook·in word·windows 11 3곳, outlook classic 2곳. Trends 0.5 | 문서 기반 (Microsoft 365 앱 없음) | 후보 (14번 Windows 11 26H2 AI 끄기와 범위 나눔) |
+| `ai-settings` | 상시 글 | Instagram·WhatsApp·Facebook의 Meta AI 끄기 (끌 수 없는 부분 포함) | turn off meta ai instagram | 자동완성 `turn off meta ai` 22개: instagram 3곳, facebook·search instagram·whatsapp·messenger 2곳. Trends 0.0 | 문서 기반 | 후보 |
+| `ai-settings` | 상시 글 | iPhone·iPad·Mac의 Apple Intelligence 끄기 (iOS 27) | turn off apple intelligence iphone | 자동완성 26개: iphone·ios 27·report 2곳 이상. Trends 0.2 | 문서 기반 | 후보 |
+| `ai-settings` | 상시 글 | Google 검색 AI Overviews·AI Mode 끄기 (끌 수 있는 범위) | turn off ai overviews google | 자동완성 23개: google·in gmail(Bing·YouTube). Trends 0.0. 상위 결과가 대형 매체로 붐빌 가능성 큼 → 상위 결과 확인 후 세부 각도 | 컨테이너 Chromium (로그인 없는 검색 화면) | 후보 |
+| `ai-settings` | 상시 글 | Samsung Galaxy AI 끄기 | turn off galaxy ai | 자동완성 21개 (3곳) | 문서 기반 | 후보 |
+| `ai-settings` | 허브 | AI 기능 끄기 모음 (제품별 요약 표 + 상시 글 연결) | turn off ai | Search Console `turn off ai` 57위(`turn-off-ai-in-chrome`), YouTube 자동완성 `how to turn off ai` | 기존 글 재사용 | 상시 글 3편 추가 후 (개선 세션) |
+| `photo-video` | 허브 | 무료 사진·영상 도구 모음 (변환·압축·배경·메타데이터 측정 6편 연결) | free image converter | 자동완성 `image converter free` 24개 (download·online·software, Google·Bing). 허브 제목·주 검색어는 쓰기 전에 `best free photo editor` 등과 Trends 비교 | 기존 측정 재사용 | 다음 개선 세션 |
+
 ## 뉴스 칼럼 후보
 
 README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으로 고른 후보입니다. 발행하면 상태를 `발행`으로 바꾸고 slug를 적습니다.
 
-- 유형: 화제(06시 세션, 최근 48시간 발표) / 영향(18시 세션, 영향이 몇 주~몇 달 지속)
+- 유형: 화제(최근 48시간 발표) / 영향(영향이 몇 주~몇 달 지속). 2026-10-22부터 둘 다 06시 뉴스 세션에서 씀 (화제 우선, 없으면 영향)
 - 아래 행은 2026-10-17 기존 후보 표에서 옮김. 유형은 원래 행의 수명·발표일로 잠정 분류, 날짜·출처는 원래 행에 적힌 것만 옮김 → 재평가 때 1차 출처로 채움
 
 | 주제 | 유형 | 발표일 | 영향 기간(시행일·마감일) | 1차 출처 | 상태 |
@@ -109,7 +124,7 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 
 출시·업데이트 당일이나 다음 날 세션에서 우선 검토합니다 ([traffic-playbook.md](traffic-playbook.md) 4번). 기존 글에 반영할 변경이 있으면 새 글보다 갱신을 먼저 합니다. 2026-10-13 확인.
 
-영향이 오래 가는 뉴스 칼럼(18시 세션) 소재로도 씁니다: 기능 종료·지원 종료·정책 시행일처럼 사용자 영향이 몇 주 이상 가는 변경은 [뉴스 칼럼 후보](#뉴스-칼럼-후보)에 올림 (2026-10-17).
+영향이 오래 가는 뉴스 칼럼(06시 뉴스 세션의 대체 1순위) 소재로도 씁니다: 기능 종료·지원 종료·정책 시행일처럼 사용자 영향이 몇 주 이상 가는 변경은 [뉴스 칼럼 후보](#뉴스-칼럼-후보)에 올림 (2026-10-17).
 
 | 일정                                                       | 날짜                                        | 확인 방법                                                                                                | 관련 글                   |
 | ---------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------- |

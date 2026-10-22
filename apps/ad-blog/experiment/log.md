@@ -2,6 +2,48 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-22 · 전략 개편: SEO 플러그인 분석 → 클러스터·개선 세션·주간 SEO 점검 (사용자 요청)
+
+사용자가 설치한 searchfit-seo 플러그인 스킬(`content-strategy`·`keyword-clustering`·`internal-linking`·`technical-seo`·`ai-visibility`·`content-brief`)로 전략을 다시 짜고, 정기 글 작성 루틴과 주간 SEO 점검 루틴을 새 전략에 맞춰 갱신함.
+
+**분석 (Search Console 2026-09-24 ~ 10-22, 글 32편, 라이브 사이트)**
+
+- 웹 노출 328·클릭 8·평균 순위 22.6. Discover·Google News 노출 0, 이미지 검색 16. 미국 노출 97(30%), 데스크톱 80%
+- 노출 상위: `turn-off-ai-in-chrome` 103(12.9위)·`image-to-text-offline-free` 51(9.4)·`transcribe-audio-offline-free` 38(47.3)·`spotify-family-qr-code-verification` 30(28.8)·`gemini-gems-to-skills` 27(7.6)·`check-if-image-is-ai-generated` 26(70.5)
+- 10위 안 비브랜드 검색어 11개는 모두 구체적 롱테일 (`google ai gone` 3·`optguideondevicemodel disable` 3·`offline ocr tools` 5·`where did gems go in gemini` 6·`chrome disable ai` 7). 상위 검색어를 노린 PDF 글 7편은 4편 색인 전, `merge-pdf-files-free`는 99위
+- 뉴스 칼럼 12편: Discover 0, 웹 노출 합계 약 50(15%)
+- 색인 17/32. `URL is unknown` 15편 (PDF 4편·허브 `best-free-pdf-tools` 포함). sitemap 10-21 다운로드, 오류 0
+- 기술 SEO: robots·sitemap(39 URL)·HSTS·HTTP→HTTPS 308 정상. **삭제 글 8개 URL 404**(`free-offline-text-to-speech`는 아직 노출 12·클릭 1). `www.tool-proof.com` → 307(임시). JSON-LD는 WebSite·BlogPosting·BreadcrumbList 정상
+- 내부 링크(`link_audit.py` 첫 실행): 글당 나가는/받는 링크 평균 3.9개, 깨진 링크 0. 허브 필요 클러스터 2개(`ai-settings`·`photo-video`), 받는 링크 1개뿐인 글 7편, 비슷한 태그 `Chrome`·`Google Chrome`
+- 수요 확인 (자동완성 3곳): `turn off gemini`(25개, in gmail·in chrome)·`turn off copilot`(24개, in word·outlook·excel·windows 11)·`turn off meta ai`(22개)·`turn off apple intelligence`(26개)·`turn off galaxy ai`(21개). Trends 3개월(기준 `remove background` 35.4): `turn off gemini` 1.8·`turn off copilot` 0.5·나머지 0.0~0.2, `pdf to word` 23.2·`heic to jpg` 8.5
+
+**사용자 결정**
+
+- 정기 실행 구성: 06시 뉴스 칼럼 1편(화제 → 영향 → 클러스터 글), 00·12시 클러스터 일반 글, **18시 개선 세션**(기존 글 보강·허브·내부 링크·색인, 허브·공백 글 1편 허용)
+- 삭제 글 URL 301 리디렉트를 이번 PR에 포함
+- 주간 SEO 점검: searchfit-seo 스킬로 점검하고 결과를 log.md에 보고 섹션 PR로 기록 (글·코드는 수정하지 않음), 개선 세션이 이어받음
+
+**바꾼 것**
+
+- 새 문서 [clusters.md](clusters.md): 클러스터 6개(`ai-settings`·`photo-video`·`pdf`·`offline-ai`·`windows-microsoft`·`phones-subscriptions`)에 32편 배정, 우선순위 매트릭스, 허브·스포크 링크 규칙, 삭제 규칙
+- 새 도구 [tools/link_audit.py](tools/link_audit.py): 클러스터 맵과 본문 내부 링크를 대조 (허브 누락·받는 링크 2개 미만·칼럼 → 상시 글·깨진 링크·비슷한 태그)
+- README: 데이터로 본 현재 상태, 결정사항(정기 실행·주제 클러스터·삭제 글), 주제 선정 기준 3번 강화(가장 구체적인 롱테일)·7번 추가(클러스터), 뉴스 칼럼 06시 1편, 세션 워크플로우(브리프·link_audit), 개선 세션, SEO 플러그인 사용표, 주간 SEO 점검, 가설 H6, 목표 지표
+- writing-guide: 작성 전 브리프(content-brief 형식 축약), AI 답변 인용 규칙, 클러스터 링크 규칙, 태그 표기 통일, 체크리스트 3항목
+- traffic-playbook: 노하우 8(가장 구체적인 롱테일)·9(클러스터 링크로 발견) 가설 추가, 허브는 클러스터 기준, 따르지 않는 SEO 스킬 조언
+- backlog: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) 표 (`ai-settings` 상시 글 6·허브 1, `photo-video` 허브)
+- 리디렉트: `vercel.json` 7개 (TTS → `free-offline-ai-tools`, PDF 4개·배경 제거는 같은 주제 GUI 글), 테스트 `scripts/lib/vercel-redirects.test.ts`. `video-to-gif-high-quality-free`는 대체 글이 없어 404
+- 루틴: "ToolProof 정기 글 작성" 프롬프트 갱신 완료. "주간 SEO 점검"은 루틴이 게시하는 스레드에서만 프롬프트를 바꿀 수 있어(플랫폼 제약) 새 프롬프트만 준비
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 15편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free` (URL 검사 → 색인 생성 요청, API로는 불가)
+- **사용자: 주간 SEO 점검 루틴 프롬프트 적용** — 루틴이 게시하는 스레드에서 새 프롬프트(README [주간 SEO 점검](README.md#주간-seo-점검) 내용, 이번 세션에서 전달)로 바꿔 달라고 요청
+- **사용자: Vercel 도메인** — `www.tool-proof.com` 리디렉트를 307 → 308(영구)로
+- **사용자: AdSense 신청** (이월)
+- Claude(다음 개선 세션): `photo-video` 허브 작성 → `link_audit.py` 문제 7건(받는 링크 2개 미만)·`check-if-image-is-ai-generated` 같은 클러스터 링크·`apple-mail-exchange-not-syncing` → `windows-10-esu-extended` 링크·`Google Chrome` 태그를 `Chrome`으로 통일
+- Claude(일반 세션): [클러스터 공백 후보](backlog.md#클러스터-공백-후보)의 `ai-settings` 상시 글부터. 3편이 모이면 허브 `turn off ai`
+- Claude: 리디렉트 배포 후 `curl -sI https://tool-proof.com/posts/pdf-to-jpg-high-quality`가 308·대상 글인지 확인
+
 ## 2026-10-22 · 규칙 변경: 제목 꼬리표 금지 (사용자 요청)
 
 - 사용자 결정: 제목은 주제만 씀. `: What It Means for You` 같은 콜론·대시 부제, `(6 Tools Tested)` 같은 괄호 꼬리표를 붙이지 않음. 새 글부터 적용하고 기존 글 제목은 바꾸지 않음

@@ -22,11 +22,26 @@ export function resolveAdSlotState({
 }
 
 /**
- * AdSense 스크립트 로드 여부 (개발 서버 제외, 게시자 ID 설정 시)
+ * AdSense 스크립트 로드 여부 (개발 서버·광고 제외 페이지 제외, 게시자 ID 설정 시)
+ * - 자동 광고는 스크립트를 로드한 페이지 어디에나 광고를 넣으므로, 광고를 두지 않을 페이지는 스크립트 자체를 로드하지 않음
  */
-export function shouldLoadAdsense({ isDevelopment, client }: { isDevelopment: boolean; client: string }): boolean {
-  return !isDevelopment && Boolean(client);
+export function shouldLoadAdsense({
+  isDevelopment,
+  client,
+  isExcludedPage,
+}: {
+  isDevelopment: boolean;
+  client: string;
+  /** 광고 제외 페이지 (`NoAds` 표시가 있는 404·정적 페이지) */
+  isExcludedPage: boolean;
+}): boolean {
+  return !isDevelopment && Boolean(client) && !isExcludedPage;
 }
+
+/**
+ * 광고 제외 페이지 표시 속성 (`NoAds`가 렌더링, `AdSenseScript`가 확인)
+ */
+export const NO_ADS_ATTRIBUTE = 'data-no-ads';
 
 /**
  * AdSense 스크립트 URL

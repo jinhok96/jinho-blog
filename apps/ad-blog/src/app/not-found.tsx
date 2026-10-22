@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import Link from 'next/link';
 
+import { NoAds } from '@/core/ads';
 import { HOME_PATH } from '@/core/routes';
 import { Container } from '@/core/ui';
 
@@ -20,6 +21,8 @@ export default function NotFound() {
         sm:py-28
       `}
     >
+      {/* 오류 페이지에는 광고 금지 (AdSense 정책) → 자동 광고 스크립트를 로드하지 않음 */}
+      <NoAds />
       <p className="text-sm font-semibold text-accent">404</p>
       <h1
         className={`

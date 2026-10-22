@@ -16,7 +16,8 @@ API를 쓰지 않으므로 비용이 없다.
 - 생성 중에는 CPU를 전부 쓰므로 속도를 재는 측정과 동시에 돌리지 않는다
 - 장면 설명 뒤에 공통 화풍·금지 조건(글자·로고·실존 인물·화면 캡처)을 자동으로 붙인다 (STYLE)
 - STYLE에는 색이 없으므로 장면 설명에 이 글의 색 조합(배경 + 강조색)과 시점을 직접 넣는다 (글마다 다르게)
-- Pillow 필요 (없으면 python3 -m venv /tmp/hero && /tmp/hero/bin/pip install pillow 후 그 python으로 실행)
+- Pillow 필요. 실행한 python에서 Pillow를 못 불러오면(컨테이너 기본 Pillow는 `_imaging` 오류로 깨져 있음)
+  /tmp/hero venv를 만들어 Pillow를 설치하고 그 python으로 자동으로 다시 실행한다
 """
 
 import argparse
@@ -29,7 +30,27 @@ import sys
 import time
 from pathlib import Path
 
-from PIL import Image
+VENV_DIR = Path("/tmp/hero")
+
+
+def _ensure_pillow() -> None:
+    """Pillow를 못 불러오면 venv에 설치하고 같은 인자로 다시 실행 (venv 안에서도 실패하면 오류를 그대로 냄)"""
+    try:
+        import PIL.Image  # noqa: F401
+    except ImportError:
+        venv_python = VENV_DIR / "bin" / "python"
+        if Path(sys.executable).resolve() == venv_python.resolve():
+            raise
+        if not venv_python.exists():
+            subprocess.run([sys.executable, "-m", "venv", str(VENV_DIR)], check=True)
+        subprocess.run([str(venv_python), "-m", "pip", "install", "-q", "pillow"], check=True)
+        print(f"Pillow를 불러올 수 없어 {venv_python}로 다시 실행", file=sys.stderr)
+        os.execv(str(venv_python), [str(venv_python), "-I", *sys.argv])
+
+
+_ensure_pillow()
+
+from PIL import Image  # noqa: E402
 
 APP_DIR = Path(__file__).resolve().parents[2]
 WORK_DIR = Path(os.environ.get("HERO_WORK_DIR", "/tmp/hero-image"))

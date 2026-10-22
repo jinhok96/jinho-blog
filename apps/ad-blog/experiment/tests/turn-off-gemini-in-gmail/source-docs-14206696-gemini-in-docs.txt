@@ -1,0 +1,370 @@
+## Collaborate with Gemini in Google Docs
+With Gemini in Google Docs, you can:
+- Write and edit with Gemini in Google Docs (Gemini Beta and Workspace Experiments).
+- Create personalized documents with Gemini in Google Docs.
+- Summarize your files from Google Drive and emails from Gmail.
+- Reference other files to edit or refine content.
+- Create images.
+Feature availability
+- This feature requires an eligible Google Workspace or Google AI plan. Learn about Gemini features and plans.
+- Learn about supported languages for Google Workspace with Gemini.
+- This feature is available in Google Workspace Experiments, a trusted tester program for users with personal accounts to try new AI features. Learn how to get started with Google Workspace Experiments.
+## Identify supported languages
+You can use the Gemini in Docs side panel in some languages. Learn more about language availability.
+## Get started with Gemini in Docs
+- On your computer, open a document in Google Docs.
+- At the top right, click Ask Gemini .
+- In the side panel, select a suggested prompt or write your own prompt. Select a suggestion
+- Select from the list of suggestions.
+- To get more options, select More suggestions.
+- At the bottom, in the prompt box, replace the example text with the information you want.
+- Press Enter.
+    Enter a prompt in Gemini
+- At the bottom, in the prompt box, enter a prompt.
+- Press Enter.
+- Optional: To remove your history, click More options   Clear history.
+Tips:
+- To avoid the loss of your history, insert generated output in the document.
+- You lose your conversation history when:
+- You refresh your browser.
+- You close and reopen the document.
+- Your computer goes offline.
+## Explore Gemini in Docs
+      Action
+      Description
+Ask Gemini 
+Open Gemini.
+More options 
+Clear your recent Gemini history and ask for more suggestions.
+Expand 
+Make Gemini larger.
+Collapse 
+Return Gemini to its original size.
+Close 
+Close Gemini.
+Clear history 
+Remove all generated text and images you didn't insert into the document yet.
+More suggestions 
+Find more suggestions from Gemini.
+More image suggestions 
+Find more suggestions of images from Gemini.
+Insert 
+Insert generated text into your document.
+Insert image 
+Insert a generated image into your document.
+Copy 
+Copy a suggestion.
+Retry 
+Generate a different response from Gemini.
+Preview 
+Preview the full suggestion before you insert it.
+      Retry with Google Search 
+      Search on Google for more information about your question or request.
+View more 
+View more of the response from Gemini.
+View less 
+Minimize the response from Gemini.
+Good suggestion 
+Give positive feedback about a response from Gemini.
+Bad suggestion 
+Report an issue with a response from Gemini.
+      Gem 
+      To save time with repetitive tasks, chat with a Gem or create your own.
+## Things to ask Gemini in Docs
+Summarize text with Gemini
+- On your computer, open a document from Google Docs.
+- At the top right, click Ask Gemini .
+- When you open a document that has text, on the side panel, you’ll find a summary of your document.
+- To get a summary of your document, ask Gemini.
+- Examples:
+- “Summarize this document in 3 bullet points.”
+- “Explain this document like I'm 5 years old.”
+- To summarize a specific section of your document:
+- Highlight the text.
+- On the side panel, ask Gemini to summarize your text.
+- You can also:
+- Add the text to your document: Click Insert .
+- Find a different version: Click Retry .
+- Send feedback about the suggested text: Click Good suggestion  or Bad suggestion .
+Create documents or new text
+- On your computer, open a document in Google Docs.
+- At the bottom bar, in the prompt field, enter a prompt that describes the document you want to create.
+- Optional:
+- Learn how to reference other files to create content.
+- Learn how to match a writing style.
+- Learn how to match a document format.
+- Click Submit.
+- Optional: To review sources used, select Source .
+Edit or refine content
+You can use Gemini to:
+- Rewrite specific sections.
+- Adjust the tone of your writing.
+- Substantiate your arguments with facts.
+- Gemini can pull stats, evidence, and citations directly from your Google Drive, Gmail, or the web into your document.
+- On your computer, open a document in Google Docs.
+- Select the text you want to rewrite.
+- On the floating bar, click Refine .
+- To refine the content how you want, you can:
+- Select:
+- Match writing style
+- Learn how to match a writing style.
+- Enhance
+- Rephrase
+- More  Shorten, Elaborate, More formal, or More casual
+- Enter a prompt:
+- To target a specific section, enter a prompt like “Add evidence to my Research section.”
+- To review the whole document, you can enter a prompt like “Suggest places where I can better substantiate my argument.”
+- Review the suggested changes.
+- To apply the changes, click Accept all.
+- To reject the changes, click Reject all.
+  Tip: If you paste new content to an existing doc and want to improve the text, select Match writing style.
+Create images with Gemini
+You can ask Gemini to generate images in Docs.
+- On your computer, open a document from Google Docs.
+- At the top right, click Ask Gemini .
+- On the side panel, create your own prompt.
+- Example: “Create an image of a dog with glasses.”
+- On the image that you like, you can hover over to:
+- Insert an image: Click Insert .
+- Find similar images: Click Generate more .
+- You can also:
+- Find more images: At the bottom, click Generate more .
+- Change your prompt: Click Edit prompt .
+- Send feedback about the generated images: At the bottom, click Good suggestion  or Bad suggestion .
+Reference other files to edit or refine content
+You can ask Gemini to use specific files to write, edit, or refine content. For example: “Update the project timeline based on the latest updates from our meeting notes doc.”
+- At the bottom bar, click Sources   Add from Drive or other location.
+- Or, you can type “@” and then search and select from the menu.
+- Select one or more files.
+- Click Add.
+## Select where Gemini can search for information
+  You can select the locations where Gemini can proactively search for content related to your prompt. Learn how to use sources with Google Workspace with Gemini.
+Get help with Google Docs
+- 
+“How do I make my document pageless?”
+- 
+“Can I add markups to my document?”
+Get answers from the web
+Important: To get answers from the web, make sure to include phrases like “Use Google Search” or “Using web search” in your prompt.
+- 
+“Write a paragraph describing the weather today in Mountain View, California using web search.”
+- 
+“Help me write a paragraph explaining if lightning can strike the same place twice using only information from the web.”
+Use a Gem
+- On your computer, at the top right, click Ask Gemini .
+- On the right, in the side panel, click Gems.
+- Click the Gem you want to use.
+- Select a custom or premade Gem.
+- To start a conversation with the Gem, type a question or prompt at the bottom.
+  Tip: To create a Gem, go to gemini.google.com. You can then use your Gem in the Gemini app and Gemini side panel. Learn how to use Gems in Gemini Apps.
+Generate a spreadsheet
+You can use Ask Gemini to create a Google Sheets spreadsheet.
+- In Google Docs, open Ask Gemini .
+- In the side panel, describe the spreadsheet you want to build. For example:
+- Create a sheet to track my monthly expenses with columns for date, category, amount, and notes.
+- Create a table for a project tracker in Google Sheets with columns for task, assignee, deadline, and status.
+- Create a 10-day itinerary for a first-time visitor covering Tokyo, Kyoto, and Osaka.
+- Create a visual dashboard in Sheets of this sales data.
+- Click Submit 
+Generate a presentation
+You can use Ask Gemini to create a fully editable presentation in Google Slides with a single prompt.
+- In Google Docs, open Ask Gemini .
+- In the side panel describe the presentation you want to create. For example: "Create a slide on quantum computing for a general audience with a modern design."
+- Optional: To give your presentation the same style as an existing slide deck, you can use @<presentation name> to reference it. For example: "Create a presentation based on @old_project".
+- Click Submit 
+- Tip: Keep the tab open until Gemini generates your presentation; this may take up to several minutes. You can switch to other tabs or windows but do not close the existing tab.
+- Once the presentation is generated, you can open it in Google Slides to view and edit. Learn more about how to generate presentations with Gemini in Google Slides.
+Use Ask Gemini to draft communications
+You can use Ask Gemini to draft email or chat responses.
+- In Google Docs, open Ask Gemini 
+- In the side panel, enter a prompt. For example:
+- "Draft an email to Kevin summarizing our progress on Project Clover."
+- "Refine this chat message I am sending to Lori: ‘We are good to start Project Clover.’ Make sure it’s professional and concise."
+- Click Submit 
+Use Gemini to manage Drive files
+You can use Ask Gemini to move, rename, share, and copy files in Drive.
+- In Google Docs, open open Ask Gemini .
+- IIn the side panel, enter a prompt. For example:
+- “Copy Q2 Operational Plan and name it Q2 Operational Plan v2”
+- "Save the attachment from this email to my Prospects folder"
+- “Share the @Q3 Marketing Plan with @dougm as commenter.”
+- “Who is my Quarterly Review document shared with?”
+- “Create a new folder called Working Drafts and add @December Brainstorming to it”
+- Click Submit 
+Important: Review suggested file management actions before confirmation.
+Create a skill with Skill Builder
+Important: To create and save your skill, make sure to complete Steps 8 and 9 below. If you only generate instructions in Step 5, your skill won’t be created or saved.
+- On your computer, open a doc in Google Docs.
+- At the top right, click Ask Gemini .
+- Click Tools   Skill builder .
+- In the prompt box, describe the skill you want to create. Then, review the skill instructions that Gemini generates.
+- Optional: Edit the generated instructions as needed.
+- Share the Google Doc file with others.
+- When you’ve all agreed on the skill, click Make this skill in Studio .
+- This creates a copy of the skill for each collaborator who clicks this option.
+- When you’re redirected to Workspace Studio with the new preloaded skill, to enable the skill, at the top right, click Turn on.
+If you make updates or enhance your skill instructions in Google Doc, you can sync these instructions inside Workspace Studio. To sync updates from your document, at the top right of your skills page, click More options   Sync with Docs .
+Tip: If you have your skill open already, the sync option won't show unless you refresh your page.
+Use skills with Ask Gemini
+Important: Before you can use a skill, you must create the skill and turn it on in Workspace Studio.
+You can use skills in your conversation in Google Docs or Google Slides.
+- On your computer, open a file in Google Docs or Google Slides.
+- At the top right, click Ask Gemini .
+- In the message field, type @ followed by the skill name in your prompt. For example: “@Project Summary.”
+- Enter your prompt.
+- Click Submit .
+## Give feedback on generated output
+Google Workspace with Gemini is constantly learning and may not be able to support your request. Because feedback may be human readable, please do not submit data that contains personal, confidential, or sensitive information.
+If you get a suggestion that’s inaccurate or that you feel is unsafe, you can submit feedback. Your feedback can help improve AI-assisted Workspace features and broader Google efforts in AI.
+- In the bottom bar, click Leave feedback .
+- Or, in the side panel, click Good response  or Bad response .
+- Select the data you want to share. This includes prompts and outputs.
+- Enter additional feedback.
+- Click Submit.
+To provide general feedback on this feature, at the top, go to Help  Help Docs improve.
+To report a legal issue, create a request.
+## Related resources
+- Get started with Google Workspace Experiments
+- Collaborate with Gemini in Google Sheets
+- Collaborate with Gemini in Google Slides
+- Collaborate with Gemini in Google Drive
+- Collaborate with Gemini in Gmail
+ Computer Android phone & tabletiPhone & iPad 
+  More   
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 35
+Get started with Google Workspace with Gemini
+- 
+2 of 35
+Use enhanced Smart Fill with Gemini in Google Sheets
+- 
+3 of 35
+Remove image backgrounds in Google Drawings, Slides & Vids
+- 
+4 of 35
+Collaborate with Gemini in Google Sheets
+- 
+5 of 35
+Collaborate with Gemini in Google Slides
+- 
+6 of 35
+Create voiceovers with AI in Google Vids
+- 
+7 of 35
+Summarize & analyze responses with Gemini in Google Forms
+- 
+8 of 35
+Learn how to generate an image with Gemini in Google Docs
+- 
+9 of 35
+Plan your video with AI in Google Vids
+- 
+10 of 35
+Create a form with Gemini in Google Forms
+- 
+11 of 35
+Generate audio with Gemini in Google Docs
+- 
+12 of 35
+Generate & edit images with Gemini in Google Slides & Vids
+- 
+13 of 35
+Improve your content with Gemini in Google Slides
+- 
+14 of 35
+Tables in Google Sheets with Gemini
+- 
+15 of 35
+Supported languages for Google Workspace with Gemini
+- 
+16 of 35
+Learn about prompts for Gemini in Docs, Sheets, Slides, Vids & Forms
+- 
+17 of 35
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data
+- 
+18 of 35
+Learn how to use sources with Google Workspace with Gemini
+- 
+19 of 35
+Find & manage your Gemini in Workspace conversation history
+- 
+20 of 35
+Generate music with AI in Google Vids
+- 
+21 of 35
+Generate a slide with Gemini in Google Slides
+- 
+22 of 35
+Create, use & manage your personal avatar with Gemini in Google Vids
+- 
+23 of 35
+Use AI to generate video clips in Google Vids
+- 
+24 of 35
+Use AI avatars in Google Vids
+- 
+25 of 35
+Customize Gemini in Workspace's responses with your instructions
+- 
+26 of 35
+Collaborate with Gemini in Google Docs
+- 
+27 of 35
+Write & edit with Gemini in Docs
+- 
+28 of 35
+Create personalized documents with Gemini in Google Docs
+- 
+29 of 35
+Generate presentations with Gemini in Google Slides
+- 
+30 of 35
+Use Deep Research in Gemini in Workspace apps
+- 
+31 of 35
+Create summary videos from documents in Google Vids
+- 
+32 of 35
+Learn about AI labels & content credentials
+- 
+33 of 35
+Use integrations with Gemini in Workspace
+- 
+34 of 35
+Generate documents with voice in Google Docs
+- 
+35 of 35
+Generate and edit slides with Gemini in Google Slides (Beta)   
+ Visit the Prompt Guide  
+Learn how to write effective prompts for Gemini in Docs, Sheets, Slides, and Vids. Get tips, see examples, and unlock the power of AI in your daily workflow.          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service             Language   català‎dansk‎Deutsch‎English (United Kingdom)‎español‎español (Latinoamérica)‎français‎Indonesia‎italiano‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎русский‎українська‎‏עברית‏العربيةमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+12758820689539038521                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+35                                                                                                              
+false    
+false                                                                                                                                                                                        
+false   
+false                                                                   
+false  

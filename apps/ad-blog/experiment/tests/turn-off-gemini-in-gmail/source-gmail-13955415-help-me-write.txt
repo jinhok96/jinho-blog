@@ -1,0 +1,145 @@
+## Draft emails with Gemini in Gmail
+In Gmail, you can use “Help me write” to:
+- Generate a new email draft, such as a birthday invitation or an introduction to a potential business contact.
+- Refine existing text in your draft for tone and clarity. For example, you can turn a rough outline into a formal email.
+## What you need
+You can use “Help me write” with:
+- An eligible Google Workspace or Google AI plan: Available in multiple supported languages globally.
+- A personal Google Account: Available in supported languages, but restricted to the US only. Learn about supported languages for Google Workspace with Gemini.
+## Draft an email with "Help me write"
+- On your computer, open Gmail.
+- At the top left, click Compose.
+- Or, you can reply to an email or open a draft.
+- In the compose window, enter your message or leave the field blank.
+- At the bottom, in the prompt bar, enter your prompt.
+- If you can’t find the prompt bar, click Help me write .
+- Click Create .
+## Refine your draft
+To polish your draft:
+- Enter a new instruction into the prompt bar like:
+- "Make it more professional."
+- "Mention the Friday deadline."
+- Use these options in the prompt bar:
+- Formalize .
+- Friendly .
+- Shorten .
+Tip: To switch between different drafts, at the right of the prompt bar, click Undo  or Redo .
+## Learn how to improve your drafts
+To get the most relevant, personalized, and helpful drafts from Gemini, make your prompt as specific and detailed as you can.
+What to include in your prompt
+Example
+Mention the person or group you are writing to.
+“Write an apology to my child's teacher for their absence.”
+Clarify the subject and required action.
+“Decline the meeting on Thursday.”
+Use words like “formal,” “casual,” or other adjectives so that the draft matches your intent and tone.
+“Write a formal invitation to a business partner.”
+To ensure factual accuracy, mention a specific email or file.
+“Write a summary of the Q4 earnings email I received last week.”
+## Learn how “Help me write” personalizes your drafts
+When you use “Help me write,” it proactively takes details from your other emails and Drive files, like flight times, soccer schedules, or hotel booking codes, to draft a personalized response that includes relevant details and matches your tone and style without the need for explicit instructions. This info is only used to improve your drafts when you use “Help me write.”
+Tip: To find the emails and documents that Gemini uses to personalize your response, click Sources .
+## Give feedback about a draft
+Google Workspace with Gemini is constantly learning and may not be able to support your request.
+If the generated draft is inaccurate or looks unsafe, you can let us know by submitting feedback.
+- Below the generated text, click Good suggestion  or Bad suggestion .
+- Enter your feedback.
+- Click Submit.
+Important:
+- To send feedback with screenshots, click Help  in the top right of Gmail  Send feedback to Google. Learn more about sending feedback in Gmail.
+- To report a legal issue, create a request.
+## Learn about Gemini feature suggestions
+- Gemini feature suggestions don’t represent Google’s views, and should not be attributed to Google.
+- Don’t rely on Gemini features as medical, legal, financial or other professional advice.
+- Gemini features may suggest inaccurate or inappropriate information. Your feedback makes Gemini more helpful and safe.
+- Enterprise end users can submit feedback about their experience using this feature. End users are informed before they submit feedback that the feedback data shouldn’t contain personal, sensitive, or confidential information.
+ Computer Android phone & tabletiPhone & iPad 
+  More   
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 19
+Get started with Google Workspace with Gemini
+- 
+2 of 19
+Learn about Gemini features in Gmail
+- 
+3 of 19
+Talk naturally with Gmail Live
+- 
+4 of 19
+Manage to-dos & topics with AI Inbox
+- 
+5 of 19
+Get an AI Overview in Gmail search
+- 
+6 of 19
+Catch up on email threads with AI Overview conversation summaries
+- 
+7 of 19
+Draft emails with Gemini in Gmail
+- 
+8 of 19
+Proofread your drafts with Gemini in Gmail
+- 
+9 of 19
+Use Suggested Replies in Gmail
+- 
+10 of 19
+Collaborate with Gemini in Gmail
+- 
+11 of 19
+Suggest times to meet with Gemini in Gmail
+- 
+12 of 19
+Take quick actions from your Gmail inbox
+- 
+13 of 19
+Find & manage your Gemini in Workspace conversation history
+- 
+14 of 19
+Customize Gemini in Workspace's responses with your instructions
+- 
+15 of 19
+Learn how to use sources with Google Workspace with Gemini
+- 
+16 of 19
+Use Deep Research in Gemini in Workspace apps
+- 
+17 of 19
+Use integrations with Gemini in Workspace
+- 
+18 of 19
+Supported languages for Google Workspace with Gemini
+- 
+19 of 19
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service      
+-   Program Policies           Language   català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+3851746400634280131                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+17                                                                                                     
+false    
+false                                                                                                                                                             
+false   
+false                                                                   
+false  

@@ -1,0 +1,106 @@
+activity data by turning smart features and cross-product data sharing on or off
+in Google Workspace apps. These settings also control how your users'
+Google Workspace content and activity data can be used to provide smart
+features in other Google products.
+## On this page
+- Learn about smart feature settings & experiences
+- Set smart features & controls on or off for users
+## Learn about smart feature settings & experiences
+Each Workspace smart feature setting works independently from one another and
+provides different experiences. For example, you can turn on smart features for
+Google Workspace, and turn off smart features for other Google products. To
+understand how each smart feature setting works, use the following table.
+Smart feature setting
+Where to find the setting
+Description
+Experience example
+Smart features in Gmail, Chat, and Meet
+Gmail
+Controls use of your Gmail, Chat, and Meet data to provide smart features for these products.
+Smart Compose in Gmail
+Summary cards
+Smart features in Google Workspace
+Gmail
+Calendar*
+Chat*
+Drive*
+Meet*
+Controls use of your Workspace data to provide smart features across Workspace products.
+This setting doesn't affect smart features that personalize your experience in Gmail, Chat, and Meet, which are subject to the control described earlier.
+Show events from Gmail in Calendar, such as flight itineraries and invitations
+Google Workspace with Gemini
+Smart features in other Google products
+Gmail
+Calendar*
+Chat*
+Drive*
+Meet*
+Controls use of your Workspace data to provide smart features in other Google products.
+Data sharing and personalization in certain Google products may be subject to additional controls, such as Web and App Activity and DMA linked services (in the EU).
+Restaurant reservations and to-go orders in Maps (personal accounts only)
+Suggested tickets, passes and loyalty cards in Wallet (personal accounts only)
+* You can only turn on this setting from a web browser.
+## Smart features in Gmail, Chat & Meet
+When you turn on smart features in Gmail, Chat, and Meet, you agree to let Gmail, Chat and Meet use your content and activity in these products to personalize your experience in those apps.
+When you turn this setting on, you can get experiences in Gmail, Chat and Meet that include:
+- Automatic email filtering / categorization (Primary/Social/Promotions)
+- Smart Compose (suggested text) in email
+- Smart Reply (suggested quick replies) in email
+- Summary cards above emails (travel, package tracking, and more)
+The setting controls app-level smart features which personalize your experience within Gmail, Chat, or Meet. Changes to this setting don't affect your existing control over the smart features in Google Workspace setting.
+When you turn off this setting, you can't use the experiences listed in Gmail, Chat, and Meet earlier on this page. To continue to use these experiences, you need to turn the setting back on.
+Even if you turn off smart features in Gmail, Chat, and Meet, some smart features with individual on and off settings are still available. Some examples include:
+- Conversation summaries in Chat
+- Smart Reply in Chat
+## Smart features in Google Workspace
+When you turn on smart features in Google Workspace, you agree to let Google Workspace use your Workspace content and activity to personalize your experience across Workspace. Workspace includes apps for businesses and schools, such as Calendar, Gmail, Chat, Meet, Drive, and more. To learn more, visit the Workspace website.
+When you turn this setting on, you can get experiences across Workspace that include:
+- Show events from Gmail in Calendar (such as flight itineraries and invitations).
+- Personalized search (such as keyword suggestions, file suggestions, and more relevant results) in products like Drive.
+- Ask Gemini to summarize content, create drafts, and find key information, along with other Google Workspace with Gemini features.
+- Personalized recommendations on features to use across Google Workspace services.
+When you turn off this setting, you can't use the experiences listed earlier on this page in Google Workspace products. To continue to use these experiences, you need to turn the setting back on.
+Changes to the smart features in Google Workspace settings don't affect your existing control over the smart features in Gmail, Chat, and Meet setting described earlier on this page.
+## Smart features in other Google products
+When you turn on smart features in other Google products, you agree to let Google use your Workspace content and activity to personalize your experience in other Google products.
+When you turn this setting on, you can get experiences in other Google products that include:
+- Restaurant reservations and to-go orders in Maps (personal accounts only)
+- Suggested tickets, passes and loyalty cards in Wallet (personal accounts only)
+- Personal Intelligence in the Gemini app (personal accounts only)
+- Personal Intelligence in Search services (personal accounts only)
+When you turn off this setting, you can't use the experiences listed earlier on this page in other Google products. To continue to use these experiences, you need to turn the setting back on.
+In addition, data sharing and personalization in other Google products may be subject to additional controls, such as Web and App Activity and DMA linked services (in the EU).
+Even when the setting for smart features in other Google products is turned off, if you choose to share your Workspace data through screen actions (including screenshots), some smart features in other Google products will still be available. An example is when you use screen actions to chat with Gemini Apps.
+## Set smart features & controls on or off for users
+Note: If your domain is based in the European Economic Area, Japan, Switzerland, or the UK, Workspace smart features and controls are turned off by default. For all other regions, Workspace smart features and controls are turned on by default. Admins can set a default for their users, but users can override the default in their individual settings.
+- 
+In the Google Admin console, go to Menu 
+     Account
+    Account settings
+    Smart features for Google Workspace.
+Go to Smart features for Google Workspace
+You must be signed in as a super administrator for this task.
+- Choose whether to set a default:
+- Don't set a default experience—Your users choose whether to turn
+smart features and controls on or off. You can share this helpful
+resource with your users: Smart features & controls in Google
+products.
+- Set a default—You choose to turn smart features and controls on or
+off by default for your users. Select this setting and be sure to select
+the relevant options. Otherwise, a default isn't set, and your users
+decide their own settings. Your users can later opt to turn the features
+on or off.
+Notes:
+- Once you change the setting, if you or your users have multiple windows or
+tabs open, you must refresh your browser to ensure the change is applied
+across all windows or tabs.
+- 
+Changes can take up to 24 hours but typically happen more quickly. Learn more
+Across Google and Workspace, we've long shared robust
+privacy commitments that outline how we protect user data and prioritize privacy.
+Generative AI doesn't change these commitments — it actually reaffirms their
+importance. For details, go to the 
+Generative AI in Google Workspace Privacy Hub.
+## Related topics
+- Updated smart feature settings give users increased choice and control
+(blog post)

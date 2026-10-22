@@ -2,6 +2,53 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-23 · 세션 39 (정기 실행, 일반 세션): Gmail에서 Gemini 끄기
+
+세션 시각: 2026-10-23 00:23 KST → 일반 세션(`ai-tools`·`software`). 전략 개편 후 첫 일반 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(11799ae)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-24 ~ 10-22, 세션 38 이후 바뀐 값만)**
+
+- 노출 310 → **325**, 클릭 8, CTR 2.6% → 2.5%, 평균 순위 23.1 → 22.6 (전략 개편 기록과 같은 기간·같은 값)
+  - `turn-off-ai-in-chrome` 103 (12.9) / `image-to-text-offline-free` 51 (9.4) / `gemini-gems-to-skills` 27 (7.6) / `iphone-duo-sold-out` 10 (9.6, 클릭 1)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 15편 = 세션 38의 14편 + `apple-mail-exchange-not-syncing`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems` (발행 전): 같은 클러스터 링크 없음 1(`check-if-image-is-ai-generated`), 칼럼 → 상시 글 링크 없음 1(`apple-mail-exchange-not-syncing`), 받는 링크 2개 미만 7 → 발행 후 6 (`gemini-free-flash-lite` 해결). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-gemini-in-gmail` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Gmail·Gemini·Workspace 도움말 12개 문서를 맞대어 Gmail Gemini 기능 7개 → 계정 유형별 제공 범위 → 끄는 설정 대응표, 설정 3개가 각각 끄는 기능(Gemini와 무관한 받은편지함 탭·Smart Compose 포함), 개별로 끌 수 있는 기능(AI Inbox 체크박스·Proofread = Grammar suggestions off), Chrome 156 직접 실행으로 Chrome 쪽 AI 설정 화면 확인 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` 1번. 자동완성 `turn off gemini in gmail` 16개 (Google·Bing·YouTube 3곳, app·android·iphone·workspace), `turn off gemini in google docs` 17개. Trends 미국 3개월 `turn off gemini` 1.8 · `turn off copilot` 0.5 · `turn off ai overviews` 0.0 · 기준 `remove background` 35.7 → 같은 클러스터 후보 중 최대
+- 상위 결과(WebSearch): Proton·Croma·Revolgy·BGR·Android Authority·SlashGear 등. 경로는 같고, "맞춤법 검사까지 꺼진다" 주장이 출처마다 다름 → 공식 목록에 맞춤법 언급이 없음을 본문에 밝힘
+- 1차 출처: Gmail 도움말 15604322(컴퓨터·Android·iPhone 탭)·16831098·16561387·16789526·16845247·16887555·15464729·13955415, Gemini 13695044, Docs 14206696, Workspace 관리자 10095404·15698295(→ knowledge.workspace.google.com 301). Gmail 계정이 없어 Gmail 화면은 직접 실행 못 함(본문에 밝힘)
+- 직접 실행: Google Chrome 156.0.8078.47(공식 deb, headless + Playwright CDP), 로그인 안 한 새 프로필의 Settings > AI innovations에는 "Google Search AI Mode and connected apps"(클릭 시 My Activity 로그인)와 On-device AI만 있고 Help me write는 로그인 후에만 보임
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 94700673, 57.3분, 연분홍 배경 + 민트·남색, 3/4 시점. 토글 스위치는 안 그려졌지만 주제·화풍이 맞아 그대로 사용, `hero-image.md`) + 본문 4장(계정별 기능 표·설정 3개 대응표·플랫폼별 메뉴 경로 그래픽 `chart_style.py` 라이트 모드 + Chrome 156 AI innovations 캡처)
+- 내부 링크: 새 글 → `gemini-android-auto-personal-intelligence`·`turn-off-ai-in-chrome`·`gemini-free-flash-lite`·`gemini-gems-to-skills` (4개). 역링크: `gemini-gems-to-skills`(색인됨) 마지막 관련 글 문단, `gemini-free-flash-lite` "Most features are still free" 문단 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판단 기간이라 고치지 않음
+- 빌드 HTML 확인: title 43자(접미사 포함, 본제목 31자)·description 154자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 14개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장 width·height 지정, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+- lint·test(32파일 239개)·build 통과
+
+**알게 된 것**
+
+- Google 도움말은 `?hl=en&co=GENIE.Platform%3DAndroid`(또는 `iOS`)로 플랫폼 탭별 본문을 curl로 받을 수 있음
+- Workspace 관리자 도움말(support.google.com/a/answer/…)은 일부가 knowledge.workspace.google.com으로 301, 본문은 curl HTML에 그대로 있음
+- 컨테이너의 `/etc/chromium/policies/managed` 정책 때문에 Chrome 설정에 "Your browser is managed by your organization"이 표시됨 → 캡처할 때 그 부분을 잘라야 함
+- 시스템 python3에 Playwright가 없음 → `python3 -m venv /tmp/pw && /tmp/pw/bin/pip install playwright`(Chromium은 `/opt/pw-browsers`가 아니라 Google Chrome deb을 직접 실행해 CDP 연결)
+- `pnpm install`이 `packages/nextjs-routes/dist/cli.js`를 바꿈 → 커밋 전 되돌림
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 15편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, 새 글 `turn-off-gemini-in-gmail`
+- Claude(다음 일반 세션): `ai-settings` 공백 후보 다음 `turn off copilot in word` → 상시 글 5편째가 되면 허브 `turn off ai` (개선 세션)
+- Claude(다음 개선 세션): `photo-video` 허브, `link_audit` 문제 8건(받는 링크 2개 미만 6·`check-if-image-is-ai-generated` 같은 클러스터 링크·`apple-mail-exchange-not-syncing` → 상시 글)
+- Claude: Gmail Gemini 기능 제공 범위(무료 계정 Help me write·Suggested Replies 국가 확대, AI Inbox 정식 출시)가 바뀌면 `turn-off-gemini-in-gmail` 표 갱신(`updatedAt`)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 33편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 39 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+
 ## 2026-10-22 · 결정: AdSense 자동 광고 (사용자 요청)
 
 - 사용자 결정: 광고 위치를 직접 관리하지 않고 AdSense 자동 광고를 씀. 수동 슬롯 4곳(`AD_SLOTS`)은 ID를 비워 두어 렌더링 안 함

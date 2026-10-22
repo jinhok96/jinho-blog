@@ -49,6 +49,8 @@
 - Claude: ChatGPT Locked Chats — OpenAI 1차 출처에 접근 가능해지면 뉴스 칼럼 후보로 재검토
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
 - Claude: 발행 34편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 40 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #246 머지 (auto-merge, CI 통과 후)
 
 ## 2026-10-23 · 세션 39 (정기 실행, 일반 세션): Gmail에서 Gemini 끄기
 

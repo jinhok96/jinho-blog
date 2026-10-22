@@ -2,6 +2,7 @@ import type { Metadata } from 'next';
 
 import { notFound } from 'next/navigation';
 
+import { NoAds } from '@/core/ads';
 import { renderMdx } from '@/core/mdx';
 import { HOME_BREADCRUMB } from '@/core/routes';
 import { breadcrumbJsonLd, buildMetadata, JsonLd } from '@/core/seo';
@@ -45,6 +46,8 @@ export default async function StaticPage({ params }: Props) {
 
   return (
     <>
+      {/* 소개·문의·개인정보처리방침에는 광고를 두지 않음 → 자동 광고 스크립트를 로드하지 않음 */}
+      <NoAds />
       <JsonLd jsonLd={breadcrumbJsonLd(breadcrumbs)} />
       <StaticPageView
         page={page}

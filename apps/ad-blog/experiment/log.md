@@ -49,6 +49,14 @@
 - Claude: 발행 33편
 - 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 39 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 
+## 2026-10-22 · 결정: AdSense 자동 광고 (사용자 요청)
+
+- 사용자 결정: 광고 위치를 직접 관리하지 않고 AdSense 자동 광고를 씀. 수동 슬롯 4곳(`AD_SLOTS`)은 ID를 비워 두어 렌더링 안 함
+- AdSense 사이트 설정(사용자가 승인 후 적용): 자동 광고 켜기, 본문 내·하단 고정(anchor)·사이드 레일 켜기, 전면 광고(vignette) 끄기, 자동 최적화 켜기 + 실험 차단에 vignette. Google 도움말 기준 자동 최적화는 새 사이트에 기본으로 켜져 있고 트래픽 50%에 실험·승자 자동 적용 (vignette·anchor 실험도 포함)
+- 코드: 자동 광고는 스크립트를 로드한 페이지 어디에나 광고를 넣으므로, 404·정적 페이지에 `<NoAds />` 표시를 두고 `AdSenseScript`가 그 페이지에서 스크립트를 로드하지 않게 함 (AdSense 정책: 오류 페이지 광고 금지, 기존 규칙 "정적 페이지·404에는 광고 없음" 유지). 그래서 AdSense 페이지 제외 설정은 필요 없음
+- 포기한 것: 첫 화면 광고 없음·광고 삽입 시 CLS 최소화는 자동 광고에서 보장되지 않음 → 주간 SEO 점검·개선 세션에서 페이지 경험이 나빠지면 광고 양 조정을 사용자에게 제안
+- 반영: README 결정사항·인프라 상태, `apps/ad-blog/README.md` 광고 절, `.claude/ad-blog.md` 광고 규칙, writing-guide·traffic-playbook의 "첫 소제목 앞 광고" 문구 제거
+
 ## 2026-10-22 · 전략 개편: SEO 플러그인 분석 → 클러스터·개선 세션·주간 SEO 점검 (사용자 요청)
 
 사용자가 설치한 searchfit-seo 플러그인 스킬(`content-strategy`·`keyword-clustering`·`internal-linking`·`technical-seo`·`ai-visibility`·`content-brief`)로 전략을 다시 짜고, 정기 글 작성 루틴과 주간 SEO 점검 루틴을 새 전략에 맞춰 갱신함.

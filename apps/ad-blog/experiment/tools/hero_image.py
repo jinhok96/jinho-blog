@@ -15,6 +15,7 @@ API를 쓰지 않으므로 비용이 없다.
 - 작업 폴더: 환경 변수 HERO_WORK_DIR (기본 /tmp/hero-image). 저장소 밖이라 커밋되지 않음
 - 생성 중에는 CPU를 전부 쓰므로 속도를 재는 측정과 동시에 돌리지 않는다
 - 장면 설명 뒤에 공통 화풍·금지 조건(글자·로고·실존 인물·화면 캡처)을 자동으로 붙인다 (STYLE)
+- STYLE에는 색이 없으므로 장면 설명에 이 글의 색 조합(배경 + 강조색)과 시점을 직접 넣는다 (글마다 다르게)
 - Pillow 필요 (없으면 python3 -m venv /tmp/hero && /tmp/hero/bin/pip install pillow 후 그 python으로 실행)
 """
 
@@ -51,11 +52,12 @@ MODEL_URLS = {
 }
 MODEL_LABEL = f"Z-Image-Turbo ({DIFFUSION_MODEL}, stable-diffusion.cpp {SDCPP_TAG})"
 
-# ToolProof 공통 화풍 (2026-10-22 사용자 결정: 2.5D 일러스트, 글마다 일관되게). 바꾸면 이후 모든 글의 화풍이 바뀜
+# ToolProof 공통 화풍 (2026-10-22 사용자 결정: 2.5D 일러스트, 같은 사람이 그린 것처럼).
+# 그리는 방식만 고정하고 특정 색·구도는 넣지 않음 — 색 조합·시점은 글마다 장면 설명에서 정함. 바꾸면 이후 모든 글의 화풍이 바뀜
 STYLE = (
-    "Consistent house style: 2.5D isometric illustration, soft matte 3D shapes with rounded edges,"
-    " gentle studio lighting with soft shadows, clean off-white background,"
-    " muted pastel palette with royal blue accents, minimal composition with the main subject centered"
+    "Drawn in one consistent house style, as if by the same illustrator every time: 2.5D illustration,"
+    " soft matte 3D shapes with rounded edges, gentle diffused lighting with soft shadows, smooth subtle gradients,"
+    " pastel tones, simple uncluttered background, minimal composition with the main subject centered"
     " and empty space around it. No text, letters, numbers, logos, brand marks, watermarks, real people,"
     " or screenshots of real apps or websites."
 )

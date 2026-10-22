@@ -7,6 +7,9 @@
 - 사용자 결정
   - 이미지 생성에 비용을 쓰지 않음 → Gemini·OpenAI 이미지 API 대신 무료 오픈 모델을 컨테이너에서 실행. 두 API 모두 이미지 모델에 무료 등급 없음 (Gemini 가격표: `gemini-nano-banana-2.1`·`gemini-3.1-flash-image`·`gemini-3.1-flash-lite-image`·`gemini-2.5-flash-image` 모두 Free Tier "Not available")
   - 화풍: 모든 글 공통 2.5D 일러스트 (일관성)
+  - 화풍 보완: 화풍은 그리는 방식만 고정하고 색은 고정하지 않음 ("파스텔 톤"은 화풍, "연노란색"은 아님). 같은 사람이 그린 것처럼 보이되 결과물은 글마다 다양하게 → `STYLE`에서 특정 색(밝은 배경·파랑 강조) 삭제, 색 조합·시점은 장면 설명에서 글마다 정하고 최근 3장과 겹치지 않게
+  - 생성 결과 판단: 주제·화풍이 맞으면 장면 설명과 조금 다른 점(사물 누락 등)은 그대로 쓰고, 금지 사항·주제 불명·화풍 이탈·깨진 형태일 때만 다시 생성
+  - 예시 생성 (같은 시드 42, 이전 `STYLE`): Office 2021 칼럼 48.0분, PDF→Word 글 47.0분, 둘 다 1280×720·글자 없음. 세 번째(Chrome 칼럼)는 컨테이너 재시작으로 중단, 사용자 요청으로 추가 생성 안 함
   - 모델: Z-Image-Turbo (사용자가 시험 결과를 보고 FLUX.2 klein 4B보다 낫다고 판단. 1장 약 47분으로 klein(약 16분)의 3배지만 품질 우선)
 - [tools/hero_image.py](tools/hero_image.py) 교체: Z-Image-Turbo(Q8_0, 8단계) + stable-diffusion.cpp `master-987-a77d362` CPU 실행, `--setup`(엔진 빌드·모델 약 10GB 다운로드, `/tmp/hero-image`), 1280×720·4단계·`--vae-tiling`, 공통 화풍·금지 조건 문구(`STYLE`)를 장면 설명 뒤에 자동으로 붙임, 시드·소요 시간 기록. API 코드는 삭제, `--from-file` 유지
 - 문서: writing-guide 대표 이미지(만드는 법·화풍·장면·확인·실패 처리), README 결정사항·세션 워크플로우 5번·인프라 상태(이미지 생성 설정됨), tests/README

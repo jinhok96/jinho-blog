@@ -2,6 +2,48 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-22 · 세션 37 (정기 실행, 일반 세션): 사진 메타데이터 지우기 무료 도구 6개 측정
+
+세션 시각: 2026-10-22 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(47182a4)에서 다시 시작. 대표 이미지 규칙(2026-10-22) 적용 첫 글.
+
+**지표 (`gsc_report.py`, 2026-09-24 ~ 10-22, 세션 36 이후 바뀐 값만)**
+
+- 노출 281 → **298**, 클릭 7 → **8**, CTR 2.5% → 2.7%, 평균 순위 23.6 → 23.4
+  - `turn-off-ai-in-chrome` 97 → 101 (13.0, 클릭 2) / `image-to-text-offline-free` 42 → 43 (9.2) / `spotify-family-qr-code-verification` 21 → 25 (28.8) / `iphone-duo-sold-out` 노출 5·클릭 1 (11.8) / 홈 클릭 2
+- URL 검사: 색인 17편 그대로. `URL is unknown` 13편 = 세션 36의 12편 + `chrome-http-warning-default`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 유형 | 직접 검증 |
+| --- | --- | --- | --- |
+| `remove-metadata-from-photos` | `software` | 비교 + How-to (측정형, 검색형) | 직접 만든 테스트 사진 8장(CC0, GPS·카메라·일련번호·작성자·썸네일 등 기록, 세로 2장은 회전 태그 방식)을 ExifCleaner 4.6.0·XnConvert 1.118.0(Xvfb GUI)과 ExifRemove·Jimpl·Verexif·IMGonline(Chromium 자동 조작, 4장씩)으로 처리 → ExifTool로 남은 항목, 세로 사진 방향, 픽셀 동일 여부, 브라우저가 보낸 요청 크기(CDP)로 업로드 여부 측정 |
+
+- 선정 근거: 반복 일정 없음(Chrome 157은 11-03, Patch Tuesday 11-10). 자동완성 `remove metadata from photo` 21개(android·iphone·free·online, 3곳), `remove location from photo` 20개. Trends 미국 3개월 `photo location` 3.4 · `remove metadata` 0.4 · 기준 `remove background` 35.4. 개인정보 주제(광고 가치), 무료 GUI 앱·웹으로 해결, 컨테이너에서 직접 검증 가능
+- 결과: 6개 모두 개인 정보 제거(XnConvert는 기본값이 유지 → Preserve Metadata 해제 시). Jimpl·Verexif·IMGonline은 회전 태그까지 지워 세로 사진 2/2가 옆으로 눕고, 사진 전체를 서버로 업로드. ExifRemove는 업로드 없음·세로 사진은 고화질로 다시 저장(+20%)해 정상 방향. ExifCleaner 4.6.0은 회전·색 프로필·DPI만 남기고 픽셀 동일. 단 기본 "Save as copy"가 우리 Linux 환경에서 8장 모두 "Couldn't verify cleaned output"으로 실패 → 끄면 성공. 구버전 3.6.0은 회전 태그까지 지워 세로 사진이 누움. XnConvert는 전부 재압축(5.9~18.9% 감소, SSIM 0.98~0.996)
+- OS 내장 방법(직접 실행 못 함, 문서 기반): iPhone Share > Options > Location, Mac Photos Image > Location > Hide Location, Google Photos는 카메라가 넣은 위치를 못 지움(Pixel "Save location"·Samsung "Location tags" 끄기), Windows Properties > Details > Remove Properties and Personal Information(Windows 7 보관 문서뿐)
+- 이미지: 대표 이미지(Z-Image-Turbo, HERO_RESULT) + 본문 6장(결과 표·세로 사진 비교 그래픽 2 + ExifCleaner 설정·XnConvert Output 탭·ExifRemove·Jimpl 화면 캡처 4)
+- 내부 링크: 새 글 → `convert-heic-to-jpg-free`·`convert-webp-to-jpg-free`·`compress-image-to-100kb`·`check-if-image-is-ai-generated` (4개). 역링크: `convert-heic-to-jpg-free` GPS 문단 끝에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: BUILD_RESULT
+
+**알게 된 것**
+
+- 시스템 python3의 Pillow가 깨져 있음(`cannot import name '_imaging'`) → `hero_image.py --setup`이 바로 실패. `python3 -m venv /tmp/hero && /tmp/hero/bin/pip install pillow` 후 그 python으로 실행해야 함 (스크립트 docstring에 있음, 세션 프롬프트의 `python3 -I`로는 안 됨)
+- XnConvert 실행에 `libxcb-cursor0` 외에 `libxcb-icccm4`·`libxcb-image0`·`libxcb-keysyms1`·`libxcb-render-util0`·`libxkbcommon-x11-0` 등이 필요(apt). 원인은 `QT_DEBUG_PLUGINS=1`로 확인
+- Playwright `request.post_data_buffer`는 multipart 파일 업로드 본문을 비워서 보여 줌 → 업로드 여부는 CDP `Network.requestWillBeSentExtraInfo`의 `content-length`로 판정
+- GitHub Releases 최신 태그는 `releases/download/v{버전}/…` 주소에 HEAD 요청(302 = 있음, 404 = 없음)으로 찾을 수 있음 (api.github.com 403). 처음 받은 ExifCleaner 3.6.0이 최신이 아니었음 → 측정 도구는 버전 확인 후 측정
+- `pkill -f`는 같은 문자열이 든 내 셸까지 종료(exit 144) → PID(`pgrep -x`)로 종료
+- 메타데이터를 지우는 도구는 회전 태그도 함께 지우는 경우가 많음 → 이미지 처리 측정에 세로 사진(회전 태그)을 기본으로 넣을 것
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 31편. Search Console 색인 17편, 13편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: `remove-metadata-from-photos` 후속: Metadata2Go 측정, HEIC·PNG, Windows 11 내장 기능 최신 공식 문서가 있으면 반영. ExifCleaner "Save as copy" 오류가 새 버전에서 고쳐지면 문단 수정
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 31편
+- DASHBOARD_RESULT
+
 ## 2026-10-22 · 규칙 보완: 대표 이미지를 무료 로컬 생성 + 2.5D 공통 화풍으로 (사용자 요청)
 
 - 사용자 결정

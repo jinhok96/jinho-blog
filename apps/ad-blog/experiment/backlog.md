@@ -57,6 +57,7 @@
 | 45   | PDF 합치기 무료 (GUI 앱, 책갈피·링크·양식 보존)                                             | merge pdf files free                        | -    | 예 (GUI 3개)              | 상시                  | 발행 `merge-pdf-files-free` (2026-10-18 세션 21, PDFsam Basic·PDF Arranger·Sejda Desktop 무료판을 GUI로 측정, Mac 미리보기는 문서 기반). 이전 명령줄 글 `merge-pdf-files-free-offline`은 2026-10-17 삭제. Trends `merge pdf` 6.3 · `combine pdf` 6.4 · `split pdf` 6.0 (기준 `remove background` 35.5) |
 | 46   | PDF 나누기·페이지 추출 무료 오프라인 (OS 내장 기능·GUI 앱, 책갈피·양식 유지)                | split pdf free                              | -    | 예 (GUI 3개)              | 상시                  | 발행 `split-pdf-free` (2026-10-17 세션 19, PDFsam Basic·PDF Arranger·Chrome 인쇄를 GUI로 측정, Mac 미리보기는 문서 기반). Trends `split pdf` 22.6 · `merge pdf` 23.5 (3개월 평균, 미국) |
 | 47   | 허브: 무료 PDF 도구 (나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축 측정 글 6편 연결)              | free pdf tools                              | -    | 예 (기존 측정 재사용)     | 상시                  | 발행 `best-free-pdf-tools` (2026-10-21 세션 31, 자동완성 23개 3곳, Trends 0.7 기준 `remove background` 35.9). 새 PDF 측정 글이 생기면 갱신 |
+| 48   | 사진 메타데이터·위치 정보 지우기 무료 (데스크톱 앱·웹·OS 내장, 남는 항목·세로 사진 방향·업로드 여부 측정) | remove metadata from photo | -    | 예 (앱 2·웹 4)            | 상시                  | 발행 `remove-metadata-from-photos` (2026-10-22 세션 37). 자동완성 21개(android·iphone·free·online) + `remove location from photo` 20개, Trends `photo location` 3.4 · `remove metadata` 0.4 (기준 `remove background` 35.4). 후속: Metadata2Go·HEIC·PNG 측정, Windows 11 내장 기능 공식 문서 |
 
 ## 뉴스 칼럼 후보
 

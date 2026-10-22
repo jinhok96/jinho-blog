@@ -39,7 +39,8 @@ def _ensure_pillow() -> None:
         import PIL.Image  # noqa: F401
     except ImportError:
         venv_python = VENV_DIR / "bin" / "python"
-        if Path(sys.executable).resolve() == venv_python.resolve():
+        # venv의 python은 시스템 python을 가리키는 링크라 실행 파일 경로로는 구분이 안 됨 → sys.prefix로 판단
+        if Path(sys.prefix).resolve() == VENV_DIR.resolve():
             raise
         if not venv_python.exists():
             subprocess.run([sys.executable, "-m", "venv", str(VENV_DIR)], check=True)

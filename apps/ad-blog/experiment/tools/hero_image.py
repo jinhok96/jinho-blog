@@ -1,15 +1,15 @@
 """글 대표 이미지 생성 (ToolProof 운영 실험용)
 
-무료 오픈 모델 FLUX.2 klein 4B(Apache-2.0)를 stable-diffusion.cpp로 컨테이너 CPU에서 돌려
+무료 오픈 모델 Z-Image-Turbo(Apache-2.0)를 stable-diffusion.cpp로 컨테이너 CPU에서 돌려
 ToolProof 공통 화풍(2.5D 일러스트)의 16:9 그림을 만들고, content/posts/images/{slug}/{name}.webp
 (1280x720)로 저장한 뒤 모델·프롬프트·시드·소요 시간을 experiment/tests/{slug}/hero-image.md에 남긴다.
 API를 쓰지 않으므로 비용이 없다.
 
 실행:
   python3 -I apps/ad-blog/experiment/tools/hero_image.py --setup
-      → 엔진 빌드 + 모델 다운로드(약 8GB). 세션 초반에 백그라운드로 먼저 실행
+      → 엔진 빌드 + 모델 다운로드(약 10GB). 세션 초반에 백그라운드로 먼저 실행
   python3 -I apps/ad-blog/experiment/tools/hero_image.py {slug} {name} "장면 설명(영어)" [--seed N]
-      → 생성·저장·기록 (4코어 기준 약 16분). 준비가 안 됐으면 --setup부터 수행
+      → 생성·저장·기록 (4코어 기준 약 47분). 준비가 안 됐으면 --setup부터 수행
   ... --from-file 그림.png   생성 대신 사용자가 준 그림을 같은 규격으로 변환
 
 - 작업 폴더: 환경 변수 HERO_WORK_DIR (기본 /tmp/hero-image). 저장소 밖이라 커밋되지 않음
@@ -41,15 +41,15 @@ SDCPP_REPO = "https://github.com/leejet/stable-diffusion.cpp"
 SDCPP_TAG = "master-987-a77d362"
 
 HF = "https://huggingface.co"
-DIFFUSION_MODEL = "flux-2-klein-4b-Q8_0.gguf"
-VAE = "flux2-vae.safetensors"
-TEXT_ENCODER = "Qwen3-4B-Q6_K.gguf"
+DIFFUSION_MODEL = "z_image_turbo-Q8_0.gguf"
+VAE = "ae.safetensors"
+TEXT_ENCODER = "Qwen3-4B-Instruct-2507-Q6_K.gguf"
 MODEL_URLS = {
-    DIFFUSION_MODEL: f"{HF}/leejet/FLUX.2-klein-4B-GGUF/resolve/main/{DIFFUSION_MODEL}",
-    VAE: f"{HF}/Comfy-Org/flux2-dev/resolve/main/split_files/vae/{VAE}",
-    TEXT_ENCODER: f"{HF}/unsloth/Qwen3-4B-GGUF/resolve/main/{TEXT_ENCODER}",
+    DIFFUSION_MODEL: f"{HF}/leejet/Z-Image-Turbo-GGUF/resolve/main/{DIFFUSION_MODEL}",
+    VAE: f"{HF}/Comfy-Org/z_image_turbo/resolve/main/split_files/vae/{VAE}",
+    TEXT_ENCODER: f"{HF}/unsloth/Qwen3-4B-Instruct-2507-GGUF/resolve/main/{TEXT_ENCODER}",
 }
-MODEL_LABEL = f"FLUX.2 klein 4B ({DIFFUSION_MODEL}, stable-diffusion.cpp {SDCPP_TAG})"
+MODEL_LABEL = f"Z-Image-Turbo ({DIFFUSION_MODEL}, stable-diffusion.cpp {SDCPP_TAG})"
 
 # ToolProof 공통 화풍 (2026-10-22 사용자 결정: 2.5D 일러스트, 글마다 일관되게). 바꾸면 이후 모든 글의 화풍이 바뀜
 STYLE = (
@@ -61,7 +61,7 @@ STYLE = (
 )
 
 WIDTH, HEIGHT = 1280, 720
-STEPS = 4
+STEPS = 8
 NAME_PATTERN = re.compile(r"^[a-z0-9]+(-[a-z0-9]+)*$")
 
 
@@ -100,7 +100,7 @@ def generate(prompt: str, seed: int, png: Path) -> float:
         "--vae", str(MODEL_DIR / VAE),
         "--llm", str(MODEL_DIR / TEXT_ENCODER),
         "-p", prompt,
-        "--cfg-scale", "1.0", "--steps", str(STEPS), "--sampling-method", "euler",
+        "--cfg-scale", "1.0", "--steps", str(STEPS),
         "-W", str(WIDTH), "-H", str(HEIGHT), "--seed", str(seed),
         "-t", str(os.cpu_count()),
         # VAE 디코딩을 타일로 나눠 메모리 초과(15GB) 방지
@@ -151,7 +151,7 @@ def record(slug: str, output: Path, image: Image.Image, lines: list[str]) -> Pat
 
 
 def main():
-    parser = argparse.ArgumentParser(description="글 대표 이미지 생성 (FLUX.2 klein 4B, 로컬 CPU)")
+    parser = argparse.ArgumentParser(description="글 대표 이미지 생성 (Z-Image-Turbo, 로컬 CPU)")
     parser.add_argument("slug", nargs="?")
     parser.add_argument("name", nargs="?", help="파일 이름 (확장자 제외, 내용이 드러나게. 예: office-2021-support-ending-hero)")
     parser.add_argument("scene", nargs="?", help="장면 설명 (영어). 화풍·금지 조건은 자동으로 붙음")

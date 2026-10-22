@@ -1,4 +1,41 @@
 {
   "$schema": "https://openapi.vercel.sh/vercel.json",
-  "ignoreCommand": "node ../../scripts/vercel-ignore.mjs"
+  "ignoreCommand": "node ../../scripts/vercel-ignore.mjs",
+  "redirects": [
+    {
+      "source": "/posts/free-offline-text-to-speech",
+      "destination": "/posts/free-offline-ai-tools",
+      "permanent": true
+    },
+    {
+      "source": "/posts/pdf-to-jpg-high-quality",
+      "destination": "/posts/pdf-to-jpg-free",
+      "permanent": true
+    },
+    {
+      "source": "/posts/merge-pdf-files-free-offline",
+      "destination": "/posts/merge-pdf-files-free",
+      "permanent": true
+    },
+    {
+      "source": "/posts/jpg-to-pdf-free-offline",
+      "destination": "/posts/jpg-to-pdf-free",
+      "permanent": true
+    },
+    {
+      "source": "/posts/compress-pdf-offline-free",
+      "destination": "/posts/compress-pdf-free",
+      "permanent": true
+    },
+    {
+      "source": "/posts/convert-pdf-to-word-offline-free",
+      "destination": "/posts/pdf-to-word-free",
+      "permanent": true
+    },
+    {
+      "source": "/posts/remove-background-from-image-free-offline",
+      "destination": "/posts/remove-bg-alternative-free",
+      "permanent": true
+    }
+  ]
 }

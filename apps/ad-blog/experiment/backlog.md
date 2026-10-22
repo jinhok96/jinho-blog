@@ -72,6 +72,7 @@
 | `ai-settings` | 상시 글 | Google 검색 AI Overviews·AI Mode 끄기 (끌 수 있는 범위) | turn off ai overviews google | 자동완성 23개: google·in gmail(Bing·YouTube). Trends 0.0. 상위 결과가 대형 매체로 붐빌 가능성 큼 → 상위 결과 확인 후 세부 각도 | 컨테이너 Chromium (로그인 없는 검색 화면) | 후보 |
 | `ai-settings` | 상시 글 | Samsung Galaxy AI 끄기 | turn off galaxy ai | 자동완성 21개 (3곳) | 문서 기반 | 후보 |
 | `ai-settings` | 허브 | AI 기능 끄기 모음 (제품별 요약 표 + 상시 글 연결) | turn off ai | Search Console `turn off ai` 57위(`turn-off-ai-in-chrome`), YouTube 자동완성 `how to turn off ai` | 기존 글 재사용 | 상시 글 3편 추가 후 (개선 세션) |
+| `ai-settings` | 상시 글 | Gemini 앱 활동(Keep Activity) 끄기·삭제와 끄면 안 되는 것 (Connected Apps 대부분 중단, 72시간 보관, 검토된 채팅 3년) | turn off gemini apps activity | 2026-10-23 `demand_check.py suggest "disconnect apps from gemini"`에서 Bing `turn off gemini apps activity`, `gemini connected apps privacy`(Google). 3곳 확인·Trends 비교는 쓰기 전에 | 문서 기반 (Gemini 계정 없음) | 후보 (`gemini-connected-apps` 칼럼 후속, 2026-10-23 세션 40) |
 | `photo-video` | 허브 | 무료 사진·영상 도구 모음 (변환·압축·배경·메타데이터 측정 6편 연결) | free image converter | 자동완성 `image converter free` 24개 (download·online·software, Google·Bing). 허브 제목·주 검색어는 쓰기 전에 `best free photo editor` 등과 Trends 비교 | 기존 측정 재사용 | 다음 개선 세션 |
 
 ## 뉴스 칼럼 후보
@@ -114,6 +115,8 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | Xbox Cloud Playtime (Game Pass 없이 시간당 클라우드 게임) | 화제 | 2026-10-21 (Xbox Wire, Insider 테스트) | 테스트 단계 | news.xbox.com | 보류 (2026-10-22, 기사 82건. 일반 배포·가격 확정 시 재검토, 분야 경계) |
 | Samsung Messages 종료 (Google Messages로 전환) | 영향 | 2026-04 (보도: Samsung 미국 지원 사이트 종료 공지) | 2026-07 종료 (보도) | 미확인 (Samsung 공지 직접 미확인) | 제외 (2026-10-22 세션 38: 보도상 7월에 이미 종료, 영향 기간 지남) |
 | Exchange Web Services(EWS) 종료 → Mac Mail·Calendar·legacy Outlook for Mac의 Microsoft 365 동기화 중단, Apple 해결책은 macOS 27(Apple silicon 전용) 향후 업데이트 | 영향 | 2026-02-05 (Microsoft 계획), 2026-10-13 (Apple 공지) | 2026-10-01 조직별 차단 시작, 2027-04-01 완전 종료 | techcommunity.microsoft.com/blog/exchange/exchange-online-ews-your-time-is-almost-up/4492361, learn.microsoft.com/.../deprecation-of-ews-exchange-online, support.apple.com/en-us/149092·100100, support.microsoft.com/en-us/outlook/end-of-support-for-legacy-outlook-for-mac | 발행 `apple-mail-exchange-not-syncing` (2026-10-22 세션 38). Apple Graph 업데이트 출시·Tahoe 지원 발표·Microsoft 일정 변경 시 같은 글 갱신 |
+| Gemini Customize 메뉴: Connected Apps(외부 40개+)·Skills를 한곳에, 연결 해제는 기존 데이터를 지우지 않음 | 화제 | 2026-10-21 (Google Workspace Updates), 릴리스 노트 2026.10.13 | 10-13 배포 시작, 최대 15일 (약 10-28) | workspaceupdates.googleblog.com 2026-10-21, gemini.google/release-notes, support.google.com/gemini/answer/18736938·13695044·13594961·17209137·table/17434654 | 발행 `gemini-connected-apps` (2026-10-23 세션 40, 공식 목록 83행 집계). 외부 앱 국가 확대·Customize 배포 완료 시 같은 글 갱신 |
+| ChatGPT Locked Chats (민감한 대화 잠금) | 화제 | 2026-10-21 (보도) | 미확인 | openai.com·help.openai.com 403 → 미확인 | 보류 (2026-10-23 Google News 3일 75건으로 화제성 최대, 1차 출처 접근 불가) |
 | Xbox Game Pass 개편(à la carte) | 화제 | 미발표 (소식통 보도) | 미확인 | 없음 | 제외 (루머, 2026-10-21. 10-21 Trends 급상승 200+는 신규 게임 추가 소식) |
 | OneDrive iOS 18 지원 종료 (iPhone XR·XS) | 영향 | 2026-10 (TestFlight 노트 기반 보도) | 미확인 | 없음 (Microsoft 공식 공지 없음) | 보류 |
 | Microsoft Edge 재시작 없는 보안 업데이트 | 영향 | 2026-10-15 (Windows Blog) | 테스트 단계 | blogs.windows.com/msedgedev/2026/10/15/ | 보류 (일반 배포·독자 행동 생기면 재검토, 2026-10-20) |

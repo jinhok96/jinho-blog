@@ -65,7 +65,7 @@
 
 | 클러스터 | 역할 | 주제 | 주 검색어 | 수요 근거 (2026-10-22) | 직접 검증 | 상태 |
 | --- | --- | --- | --- | --- | --- | --- |
-| `ai-settings` | 상시 글 | Gmail·Docs·Chrome의 Gemini 끄기 (Workspace 스마트 기능 설정과 차이) | turn off gemini in gmail | 자동완성 `turn off gemini` 25개: in chrome·in gmail 3곳, in google docs 2곳. Trends `turn off gemini` 1.8 (기준 `remove background` 35.4, 3개월) | Chrome은 컨테이너 Chromium, Gmail·Docs는 문서 기반(계정 없음) | 후보 |
+| `ai-settings` | 상시 글 | Gmail·Docs·Chrome의 Gemini 끄기 (Workspace 스마트 기능 설정과 차이) | turn off gemini in gmail | 자동완성 `turn off gemini` 25개: in chrome·in gmail 3곳, in google docs 2곳. Trends `turn off gemini` 1.8 (기준 `remove background` 35.4, 3개월) | Chrome은 컨테이너 Chromium, Gmail·Docs는 문서 기반(계정 없음) | 발행 `turn-off-gemini-in-gmail` (2026-10-23 세션 39, Gmail 도움말 10여 개 문서로 기능 → 설정 대응표, Chrome 156 AI innovations 직접 확인. 주 검색어 `turn off gemini in gmail` 자동완성 3곳 16개) |
 | `ai-settings` | 상시 글 | Word·Outlook·Excel·Windows 11의 Copilot 끄기 | turn off copilot in word | 자동완성 `turn off copilot` 24개: in excel·in outlook·in word·windows 11 3곳, outlook classic 2곳. Trends 0.5 | 문서 기반 (Microsoft 365 앱 없음) | 후보 (14번 Windows 11 26H2 AI 끄기와 범위 나눔) |
 | `ai-settings` | 상시 글 | Instagram·WhatsApp·Facebook의 Meta AI 끄기 (끌 수 없는 부분 포함) | turn off meta ai instagram | 자동완성 `turn off meta ai` 22개: instagram 3곳, facebook·search instagram·whatsapp·messenger 2곳. Trends 0.0 | 문서 기반 | 후보 |
 | `ai-settings` | 상시 글 | iPhone·iPad·Mac의 Apple Intelligence 끄기 (iOS 27) | turn off apple intelligence iphone | 자동완성 26개: iphone·ios 27·report 2곳 이상. Trends 0.2 | 문서 기반 | 후보 |

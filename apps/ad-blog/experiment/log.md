@@ -25,9 +25,11 @@
 - 상위 결과(WebSearch): Proton·Croma·Revolgy·BGR·Android Authority·SlashGear 등. 경로는 같고, "맞춤법 검사까지 꺼진다" 주장이 출처마다 다름 → 공식 목록에 맞춤법 언급이 없음을 본문에 밝힘
 - 1차 출처: Gmail 도움말 15604322(컴퓨터·Android·iPhone 탭)·16831098·16561387·16789526·16845247·16887555·15464729·13955415, Gemini 13695044, Docs 14206696, Workspace 관리자 10095404·15698295(→ knowledge.workspace.google.com 301). Gmail 계정이 없어 Gmail 화면은 직접 실행 못 함(본문에 밝힘)
 - 직접 실행: Google Chrome 156.0.8078.47(공식 deb, headless + Playwright CDP), 로그인 안 한 새 프로필의 Settings > AI innovations에는 "Google Search AI Mode and connected apps"(클릭 시 My Activity 로그인)와 On-device AI만 있고 Help me write는 로그인 후에만 보임
-- 이미지: 대표 이미지(Z-Image-Turbo, 연분홍 배경 + 민트·남색, 3/4 시점, `hero-image.md`) + 본문 4장(계정별 기능 표·설정 3개 대응표·플랫폼별 메뉴 경로 그래픽 `chart_style.py` 라이트 모드 + Chrome 156 AI innovations 캡처)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 94700673, 57.3분, 연분홍 배경 + 민트·남색, 3/4 시점. 토글 스위치는 안 그려졌지만 주제·화풍이 맞아 그대로 사용, `hero-image.md`) + 본문 4장(계정별 기능 표·설정 3개 대응표·플랫폼별 메뉴 경로 그래픽 `chart_style.py` 라이트 모드 + Chrome 156 AI innovations 캡처)
 - 내부 링크: 새 글 → `gemini-android-auto-personal-intelligence`·`turn-off-ai-in-chrome`·`gemini-free-flash-lite`·`gemini-gems-to-skills` (4개). 역링크: `gemini-gems-to-skills`(색인됨) 마지막 관련 글 문단, `gemini-free-flash-lite` "Most features are still free" 문단 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판단 기간이라 고치지 않음
-- lint·test(32파일 239개) 통과
+- 빌드 HTML 확인: title 43자(접미사 포함, 본제목 31자)·description 154자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 14개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장 width·height 지정, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+- lint·test(32파일 239개)·build 통과
 
 **알게 된 것**
 

@@ -68,14 +68,16 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 
 ## 광고 규칙
 
-- 광고는 `core/ads`의 `<AdSlot placement="…" />`로만 삽입 (`<ins class="adsbygoogle">` 직접 작성 금지)
+- **AdSense 자동 광고(Auto ads) 사용** (2026-10-22 사용자 결정: 광고 위치를 직접 관리하지 않음). 위치·개수·형식은 AdSense 화면 설정이 정함 → [experiment/README.md](apps/ad-blog/experiment/README.md) 결정사항. 수동 슬롯(`AD_SLOTS`)은 ID를 비워 두어 렌더링 안 함 (다시 쓰려면 사용자 결정)
+- 광고 제외 페이지(404·정적 페이지)는 `core/ads`의 `<NoAds />`를 렌더링 → `AdSenseScript`가 그 페이지에서 스크립트를 로드하지 않음 (자동 광고는 스크립트를 로드한 페이지 어디에나 광고를 넣으므로). 광고를 두면 안 되는 새 페이지(오류·내용 없는 페이지)를 만들면 `<NoAds />`를 넣음
+- 수동 광고를 쓸 때는 `core/ads`의 `<AdSlot placement="…" />`로만 삽입 (`<ins class="adsbygoogle">` 직접 작성 금지)
 - 게시자·광고 단위 ID는 `core/config/internal/ads.ts`(`ADSENSE_CLIENT`, `AD_SLOTS`)에만 작성, 형식 오류는 `validateAdsConfig`가 빌드 에러로 처리
 - ID가 비어 있으면 렌더링 안 함 (게시자 ID 없으면 스크립트·확인 메타·슬롯 없음, `ads.txt`는 주석만)
-- 위치: `postTop`(첫 소제목 앞, 도입부가 있는 글만), `postMiddle`(두 번째 소제목 앞, 소제목 3개 이상인 글만), `postBottom`(이전·다음 글 링크 뒤·관련 글 앞 — 내비게이션 링크와 붙지 않게), `listInFeed`(`PostList`의 `inFeedAd` — 6번째 카드 뒤, 7개 이상일 때만. 홈·`/page/n`·카테고리만 켜고 관련 글은 끔)
+- 수동 슬롯 위치: `postTop`(첫 소제목 앞, 도입부가 있는 글만), `postMiddle`(두 번째 소제목 앞, 소제목 3개 이상인 글만), `postBottom`(이전·다음 글 링크 뒤·관련 글 앞 — 내비게이션 링크와 붙지 않게), `listInFeed`(`PostList`의 `inFeedAd` — 6번째 카드 뒤, 7개 이상일 때만. 홈·`/page/n`·카테고리만 켜고 관련 글은 끔)
 - 본문 광고(`postTop`·`postMiddle`)는 `renderMdx(…, { ads: true })`의 `rehypeContentAds`가 삽입하고, 광고 컴포넌트도 이 옵션일 때만 주입 (정적 페이지 MDX에 직접 써도 빌드 에러). 소제목은 최상위 `#`·`##`(렌더링 h2)만 세고 JSX로 쓴 `<h2>`는 세지 않음
-- 첫 화면(제목 아래)에는 광고를 두지 않음: 미게재 시 슬롯이 접히며 생기는 CLS와 모바일 광고 밀도 기준 회피 (도입부가 아주 짧으면 `postTop`이 첫 화면 하단에 걸릴 수 있음, 측정 CLS ≈ 0.03)
-- 정적 페이지·404에는 광고 없음 (루트 레이아웃 등 공통 영역에 슬롯 금지)
-- AdSense 스크립트는 `AdSenseScript`가 hydration 후 직접 삽입 — `next/script`는 `data-nscript` 속성 때문에 AdSense 콘솔 경고가 나므로 사용 금지
+- (수동 슬롯) 첫 화면(제목 아래)에는 광고를 두지 않음: 미게재 시 슬롯이 접히며 생기는 CLS와 모바일 광고 밀도 기준 회피 (도입부가 아주 짧으면 `postTop`이 첫 화면 하단에 걸릴 수 있음, 측정 CLS ≈ 0.03). 자동 광고는 위치를 코드로 제어하지 않으므로 이 보장은 없음
+- 정적 페이지·404에는 광고 없음 (`<NoAds />`로 스크립트 미로드, 루트 레이아웃 등 공통 영역에 슬롯 금지)
+- AdSense 스크립트는 `AdSenseScript`(루트 레이아웃)가 hydration 후 직접 삽입하고 경로가 바뀔 때마다 제외 페이지인지 다시 확인 — `next/script`는 `data-nscript` 속성 때문에 AdSense 콘솔 경고가 나므로 사용 금지. 정적 HTML에 스크립트가 없으므로 AdSense 사이트 확인은 `ads.txt`·메타 태그로
 - 개발 서버는 ID와 무관하게 점선 자리표시 상자 (실제 광고 요청 안 함), 슬롯은 최소 높이로 CLS 방지·미게재 시 숨김
 
 ## 명령어

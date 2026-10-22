@@ -1,0 +1,50 @@
+{
+ "01": {
+  "ok": true,
+  "file_bytes": 830416,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "jimpl.com",
+    "path": "/uploads?target=exif",
+    "bytes": 830599
+   }
+  ]
+ },
+ "03": {
+  "ok": true,
+  "file_bytes": 1865028,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "jimpl.com",
+    "path": "/uploads?target=exif",
+    "bytes": 1865211
+   }
+  ]
+ },
+ "05": {
+  "ok": true,
+  "file_bytes": 5346599,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "jimpl.com",
+    "path": "/uploads?target=exif",
+    "bytes": 5346782
+   }
+  ]
+ },
+ "06": {
+  "ok": true,
+  "file_bytes": 2370750,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "jimpl.com",
+    "path": "/uploads?target=exif",
+    "bytes": 2370933
+   }
+  ]
+ }
+}

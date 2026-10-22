@@ -55,7 +55,7 @@ Both tools have a setting that fixes it. With **Preserve color profile** ticked 
 
 XnConvert kept the GPS location and the date taken in all 24 JPGs. GIMP's default export kept neither in any of the 24, because **Save Exif** was unticked.
 
-Which result you want depends on what you do next. If the JPGs go into your photo library, you want the date and location kept, so the photos sort correctly and show up on a map. If you are about to post or send them, kept GPS coordinates let anyone who downloads the file see where the photo was taken. Apple's [personal safety guide](https://support.apple.com/guide/personal-safety/manage-location-metadata-in-photos-ips0d7a5df82/web) warns about the same thing for photos shared from an iPhone.
+Which result you want depends on what you do next. If the JPGs go into your photo library, you want the date and location kept, so the photos sort correctly and show up on a map. If you are about to post or send them, kept GPS coordinates let anyone who downloads the file see where the photo was taken. Apple's [personal safety guide](https://support.apple.com/guide/personal-safety/manage-location-metadata-in-photos-ips0d7a5df82/web) warns about the same thing for photos shared from an iPhone. To strip the location and other hidden details from JPGs you already have, see our [test of six free photo metadata removers](/posts/remove-metadata-from-photos).
 
 To remove the location in XnConvert, untick **Preserve Metadata** and tick **Preserve color profile**. In our test this removed the GPS location and date from all 24 photos and still kept the colors accurate (median shift 0.67).
 

@@ -1,0 +1,212 @@
+{
+ "exifcleaner_3.6.0": {
+  "01": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 830416,
+   "size_out": 821912,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": true,
+   "pixels_identical": true,
+   "ssim": 1.0,
+   "raw_pixels_identical": true
+  },
+  "02": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 1245053,
+   "size_out": 1237513,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": true,
+   "pixels_identical": true,
+   "ssim": 1.0,
+   "raw_pixels_identical": true
+  },
+  "03": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 1865028,
+   "size_out": 1855038,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": false,
+   "pixels_identical": false,
+   "ssim": null,
+   "raw_pixels_identical": true
+  },
+  "04": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 2491986,
+   "size_out": 2479462,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": true,
+   "pixels_identical": true,
+   "ssim": 1.0,
+   "raw_pixels_identical": true
+  },
+  "05": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 5346599,
+   "size_out": 5334647,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": true,
+   "pixels_identical": true,
+   "ssim": 1.0,
+   "raw_pixels_identical": true
+  },
+  "06": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 2370750,
+   "size_out": 2361544,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": false,
+   "pixels_identical": false,
+   "ssim": null,
+   "raw_pixels_identical": true
+  },
+  "07": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 2040954,
+   "size_out": 2032134,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": true,
+   "pixels_identical": true,
+   "ssim": 1.0,
+   "raw_pixels_identical": true
+  },
+  "08": {
+   "gps": false,
+   "camera": false,
+   "serial": false,
+   "date": false,
+   "author": false,
+   "xmp_iptc_city": false,
+   "thumbnail": false,
+   "icc": false,
+   "orientation_tag": false,
+   "remaining_tags": [
+    "Composite:ImageSize",
+    "Composite:Megapixels",
+    "SourceFile"
+   ],
+   "size_in": 2113813,
+   "size_out": 2103287,
+   "shown_size": [
+    4032,
+    3024
+   ],
+   "orientation_ok": true,
+   "pixels_identical": true,
+   "ssim": 1.0,
+   "raw_pixels_identical": true
+  }
+ }
+}

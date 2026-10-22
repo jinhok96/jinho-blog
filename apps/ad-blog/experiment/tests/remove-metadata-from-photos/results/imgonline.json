@@ -1,0 +1,50 @@
+{
+ "01": {
+  "ok": true,
+  "file_bytes": 830416,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "",
+    "path": "",
+    "bytes": 830602
+   }
+  ]
+ },
+ "03": {
+  "ok": true,
+  "file_bytes": 1865028,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "",
+    "path": "",
+    "bytes": 1865214
+   }
+  ]
+ },
+ "05": {
+  "ok": true,
+  "file_bytes": 5346599,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "",
+    "path": "",
+    "bytes": 5346785
+   }
+  ]
+ },
+ "06": {
+  "ok": true,
+  "file_bytes": 2370750,
+  "uploaded": true,
+  "upload_requests": [
+   {
+    "host": "",
+    "path": "",
+    "bytes": 2370936
+   }
+  ]
+ }
+}

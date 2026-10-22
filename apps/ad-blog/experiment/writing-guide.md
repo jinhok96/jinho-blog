@@ -126,12 +126,12 @@
 
 - **위치**: 본문 첫 줄 (frontmatter 바로 다음, 첫 문단 위). 글 내용을 대표하는 AI 생성 그림 1장
 - **썸네일·OG 이미지**: frontmatter `thumbnail`은 쓰지 않음 → 본문 첫 이미지인 대표 이미지가 목록 썸네일·OG 이미지가 됨. 측정 그래프를 `thumbnail`로 지정하거나, 제목 글자로 만드는 자동 썸네일(`@jinho-blog/thumbnail-generator`)에 맡기지 않음
-- **만드는 법**: 비용 없이 컨테이너에서 생성 (2026-10-22 사용자 결정: 이미지 생성에 비용을 쓰지 않음). [tools/hero_image.py](tools/hero_image.py)가 무료 오픈 모델 FLUX.2 klein 4B(Apache-2.0)를 stable-diffusion.cpp로 CPU에서 돌려 1280×720 WebP로 `content/posts/images/{slug}/`에 저장하고, 모델·시드·장면·소요 시간을 `tests/{slug}/hero-image.md`에 기록함
+- **만드는 법**: 비용 없이 컨테이너에서 생성 (2026-10-22 사용자 결정: 이미지 생성에 비용을 쓰지 않음). [tools/hero_image.py](tools/hero_image.py)가 무료 오픈 모델 Z-Image-Turbo(Apache-2.0)를 stable-diffusion.cpp로 CPU에서 돌려 1280×720 WebP로 `content/posts/images/{slug}/`에 저장하고, 모델·시드·장면·소요 시간을 `tests/{slug}/hero-image.md`에 기록함
 
   ```bash
-  # 세션 초반에 백그라운드로: 엔진 빌드 + 모델 다운로드(약 8GB)
+  # 세션 초반에 백그라운드로: 엔진 빌드 + 모델 다운로드(약 10GB)
   python3 -I apps/ad-blog/experiment/tools/hero_image.py --setup
-  # 생성 (4코어 기준 1장 약 16분, 백그라운드로)
+  # 생성 (4코어 기준 1장 약 47분, 백그라운드로)
   python3 -I apps/ad-blog/experiment/tools/hero_image.py {slug} {내용}-hero "장면 설명(영어)"
   ```
 
@@ -145,7 +145,7 @@
   - 기업 로고·상표, 특정 제품의 알아볼 수 있는 모양(Windows 로고 같은 4칸 창, iPhone 카메라 배치 등), 실존 인물, 실제 앱·웹 화면을 흉내 낸 그림 → 일반 기기·기호로 표현
   - 측정 그래프·실제 화면처럼 보이는 그림 (직접 측정한 결과로 오해할 수 있음)
   - 저작권 캐릭터, 생존 작가 이름이나 화풍 지정
-- **확인**: 저장된 그림을 직접 열어 깨진 글자·로고·어색한 형태가 있으면 장면 설명을 고치거나 `--seed`를 바꿔 다시 생성 (1회 약 16분이라 최대 2회, 모든 시도가 `hero-image.md`에 남음)
+- **확인**: 저장된 그림을 직접 열어 깨진 글자·로고·어색한 형태가 있으면 장면 설명을 고치거나 `--seed`를 바꿔 다시 생성 (1회 약 47분이라 다시 생성은 1회까지, 모든 시도가 `hero-image.md`에 남음)
 - **alt 텍스트**: 그림 장면을 구체적으로 (`Illustration of …`)
 - **메타데이터**: Google은 AI 생성 이미지 IPTC 표시를 전자상거래 상품 이미지에만 요구 (2026-10-22 확인) → 따로 넣지 않음
 - **생성 실패 시**: 엔진 빌드·다운로드·생성이 실패하면 대표 이미지 없이 발행하고 `thumbnail`에 본문 그래픽을 임시로 지정. log.md '다음 할 일'에 기록해 다음 세션에서 대표 이미지를 넣고 `thumbnail`을 지움 (글 발행은 막지 않음)

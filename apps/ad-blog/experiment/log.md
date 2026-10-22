@@ -7,9 +7,10 @@
 - 사용자 결정
   - 이미지 생성에 비용을 쓰지 않음 → Gemini·OpenAI 이미지 API 대신 무료 오픈 모델을 컨테이너에서 실행. 두 API 모두 이미지 모델에 무료 등급 없음 (Gemini 가격표: `gemini-nano-banana-2.1`·`gemini-3.1-flash-image`·`gemini-3.1-flash-lite-image`·`gemini-2.5-flash-image` 모두 Free Tier "Not available")
   - 화풍: 모든 글 공통 2.5D 일러스트 (일관성)
-- [tools/hero_image.py](tools/hero_image.py) 교체: FLUX.2 klein 4B(Q8_0) + stable-diffusion.cpp `master-987-a77d362` CPU 실행, `--setup`(엔진 빌드·모델 약 8GB 다운로드, `/tmp/hero-image`), 1280×720·4단계·`--vae-tiling`, 공통 화풍·금지 조건 문구(`STYLE`)를 장면 설명 뒤에 자동으로 붙임, 시드·소요 시간 기록. API 코드는 삭제, `--from-file` 유지
+  - 모델: Z-Image-Turbo (사용자가 시험 결과를 보고 FLUX.2 klein 4B보다 낫다고 판단. 1장 약 47분으로 klein(약 16분)의 3배지만 품질 우선)
+- [tools/hero_image.py](tools/hero_image.py) 교체: Z-Image-Turbo(Q8_0, 8단계) + stable-diffusion.cpp `master-987-a77d362` CPU 실행, `--setup`(엔진 빌드·모델 약 10GB 다운로드, `/tmp/hero-image`), 1280×720·4단계·`--vae-tiling`, 공통 화풍·금지 조건 문구(`STYLE`)를 장면 설명 뒤에 자동으로 붙임, 시드·소요 시간 기록. API 코드는 삭제, `--from-file` 유지
 - 문서: writing-guide 대표 이미지(만드는 법·화풍·장면·확인·실패 처리), README 결정사항·세션 워크플로우 5번·인프라 상태(이미지 생성 설정됨), tests/README
-- 정기 실행 프롬프트 1번(시작 직후 `--setup` 백그라운드)·6번(2.5D 공통 화풍, 약 16분·측정과 겹치지 않게)·제약(유료 API 금지) 수정
+- 정기 실행 프롬프트 1번(시작 직후 `--setup` 백그라운드)·6번(2.5D 공통 화풍, 약 47분·측정과 겹치지 않게)·제약(유료 API 금지) 수정
 
 ## 2026-10-22 · 규칙 변경: AI 생성 대표 이미지 + 본문 이미지 3장 이상 (사용자 요청)
 

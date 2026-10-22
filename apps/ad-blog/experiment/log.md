@@ -22,9 +22,10 @@
 - 선정 근거: 반복 일정 없음(Chrome 157은 11-03, Patch Tuesday 11-10). 자동완성 `remove metadata from photo` 21개(android·iphone·free·online, 3곳), `remove location from photo` 20개. Trends 미국 3개월 `photo location` 3.4 · `remove metadata` 0.4 · 기준 `remove background` 35.4. 개인정보 주제(광고 가치), 무료 GUI 앱·웹으로 해결, 컨테이너에서 직접 검증 가능
 - 결과: 6개 모두 개인 정보 제거(XnConvert는 기본값이 유지 → Preserve Metadata 해제 시). Jimpl·Verexif·IMGonline은 회전 태그까지 지워 세로 사진 2/2가 옆으로 눕고, 사진 전체를 서버로 업로드. ExifRemove는 업로드 없음·세로 사진은 고화질로 다시 저장(+20%)해 정상 방향. ExifCleaner 4.6.0은 회전·색 프로필·DPI만 남기고 픽셀 동일. 단 기본 "Save as copy"가 우리 Linux 환경에서 8장 모두 "Couldn't verify cleaned output"으로 실패 → 끄면 성공. 구버전 3.6.0은 회전 태그까지 지워 세로 사진이 누움. XnConvert는 전부 재압축(5.9~18.9% 감소, SSIM 0.98~0.996)
 - OS 내장 방법(직접 실행 못 함, 문서 기반): iPhone Share > Options > Location, Mac Photos Image > Location > Hide Location, Google Photos는 카메라가 넣은 위치를 못 지움(Pixel "Save location"·Samsung "Location tags" 끄기), Windows Properties > Details > Remove Properties and Personal Information(Windows 7 보관 문서뿐)
-- 이미지: 대표 이미지(Z-Image-Turbo, HERO_RESULT) + 본문 6장(결과 표·세로 사진 비교 그래픽 2 + ExifCleaner 설정·XnConvert Output 탭·ExifRemove·Jimpl 화면 캡처 4)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 7, 51.5분, 1280×720, 연노랑 배경 + 청록·코랄, 아이소메트릭. 지우개는 안 그려졌지만 주제·화풍이 맞아 그대로 사용, og:image가 이 그림에서 생성됨) + 본문 6장(결과 표·세로 사진 비교 그래픽 2 + ExifCleaner 설정·XnConvert Output 탭·ExifRemove·Jimpl 화면 캡처 4)
 - 내부 링크: 새 글 → `convert-heic-to-jpg-free`·`convert-webp-to-jpg-free`·`compress-image-to-100kb`·`check-if-image-is-ai-generated` (4개). 역링크: `convert-heic-to-jpg-free` GPS 문단 끝에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
-- 빌드 HTML 확인: BUILD_RESULT
+- 빌드 HTML 확인: title 72자(접미사 포함, 본제목 60자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 6장 width·height 지정, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- lint·test(31파일 233개)·build 통과
 
 **알게 된 것**
 
@@ -42,7 +43,8 @@
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
 - Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
 - Claude: 발행 31편
-- DASHBOARD_RESULT
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 37 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 사용자 검토: 정기 실행 프롬프트 1번의 `python3 -I …hero_image.py --setup`은 컨테이너 기본 Pillow 고장으로 바로 실패함 → venv python(`/tmp/hero/bin/python`)으로 실행하도록 프롬프트 수정 검토 (이번 세션은 venv로 다시 실행해 성공)
 
 ## 2026-10-22 · 규칙 보완: 대표 이미지를 무료 로컬 생성 + 2.5D 공통 화풍으로 (사용자 요청)
 

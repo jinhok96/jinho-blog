@@ -2,6 +2,50 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-22 · 세션 38 (정기 실행, 영향 뉴스 세션): Apple Mail × Microsoft 365 EWS 종료
+
+세션 시각: 2026-10-22 18:10 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8c5cf9d)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-24 ~ 10-22, 세션 37 이후 바뀐 값만)**
+
+- 노출 298 → **310**, 클릭 8, CTR 2.7% → 2.6%, 평균 순위 23.4 → 23.1
+  - `image-to-text-offline-free` 43 → 45 (9.7) / `spotify-family-qr-code-verification` 25 → 29 (28.4) / `gemini-gems-to-skills` 23 → 26 (7.5) / `iphone-duo-sold-out` 5 → 7 (10.4, 클릭 1)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 14편 = 세션 37의 13편 + `remove-metadata-from-photos`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 유형 | 독창 요소 |
+| --- | --- | --- | --- |
+| `apple-mail-exchange-not-syncing` | `news` | 뉴스 칼럼 (영향) | Apple 공지(해결책은 macOS 27 향후 업데이트)와 Apple 보안 업데이트 목록(macOS 27은 Apple silicon 전용)을 맞대어 Intel Mac은 해결 계획이 없음을 확인, 앱·계정별 영향 표, Mac 종류별 선택지(Outlook for Mac 최소 macOS 14.0), Microsoft·Apple 일정 타임라인 |
+
+- 선정 근거 (최근 30일 시행·마감 있음): Microsoft가 2026-10-01부터 Exchange Online EWS를 조직별로 차단 시작, 2027-04-01 완전 종료(Exchange 팀 블로그 2026-02-05). Apple 지원 문서 149092(2026-10-13): Mac Mail·Calendar·Contacts·Notes·Reminders 동기화 중단 시 관리자 문의, Graph 전환은 "future update to macOS 27". Microsoft legacy Outlook for Mac도 2026년 10월부터 작동 중지. Google News 30일 `EWS retirement` 36건·`Apple Mail Microsoft 365 sync` 26건, 자동완성 `apple mail exchange` 22개(not syncing·not working·exchange web services). Trends 미국 1개월 `apple mail exchange` 0.0 · `outlook for mac` 4.7 · 기준 `remove background` 72.0 → 피드형
+- 제외: Samsung Messages 종료(보도상 2026-07 종료로 이미 지남, Samsung 공지는 직접 미확인), ChatGPT Atlas 종료(2026-08-09, 30일 밖), Samsung SmartThings Tracker 종료(대상 적음), Marvel Unlimited(분야 밖), Windows 11 23H2 Enterprise 종료(기업)
+- `Our take`: Intel Mac은 지금 업무 메일을 Outlook for Mac으로 옮기고, Apple silicon Mac은 Outlook을 백업으로 설정해 두고 Apple 업데이트를 기다림. 근거: Microsoft는 2023년부터 2026년 10월을 예고했는데 Apple 공지는 차단 시작 12일 뒤, 해결책은 날짜 없음·macOS 27 전용. 반대 관점: Microsoft가 실제 사용 기반으로 허용 목록을 미리 채우고 IT가 다시 켤 수 있어, 많은 사용자는 몇 달간 변화가 없을 것
+- 1차 출처: Microsoft Exchange 팀 블로그(2026-02-05, Playwright는 차단 → curl HTML에서 본문 추출), Microsoft Learn EWS 중단 문서, Microsoft 지원 legacy Outlook for Mac 종료, Apple 지원 149092·105128·116943·100100, Apple Mail 사용 설명서(계정 추가·제거), Mac App Store Outlook 페이지. Microsoft 365 업무 계정·macOS가 없어 직접 실행은 없음(본문에 문서 기반임을 밝힘)
+- 이미지: 대표 이미지(Z-Image-Turbo, 연보라 배경 + 하늘색·복숭아색, 정면 시점, `hero-image.md`) + 본문 그래픽 3장(일정 타임라인·영향 표·Mac 종류별 선택지, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → `office-2021-end-of-support`·`microsoft-365-family-storage-2tb` (2개). 역링크: `office-2021-end-of-support` "What happened" 둘째 문단 끝에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- (도구 수정) `hero_image.py`: 시스템 python3로 생성 명령을 실행하면 `/tmp/hero` venv로 다시 실행하지 않고 Pillow 오류로 끝나던 문제 수정. venv의 python이 시스템 python 링크라 `Path(sys.executable).resolve()` 비교가 항상 같아 `raise`로 빠졌음 → `sys.prefix`로 venv 여부 판단. `--setup`만 성공했던 이유는 venv가 아직 없을 때만 통과했기 때문으로 보임. `python3 -I hero_image.py --help`로 재실행 확인
+- 대표 이미지: 시드 310306084, 55.7분(lint·test·그래픽 생성과 겹침). 노트북·닫힌 문·봉투·구름 사이 다리, 새 다리 짓는 장면·연락처 카드는 빠졌지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: title 83자(접미사 포함, 본제목 71자)·description 152자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 3장 width·height 지정, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Microsoft Tech Community 블로그는 Playwright 접속이 "The request is blocked"지만, curl(`-A "Mozilla/5.0" --compressed`)로 받은 HTML 안에 본문이 JSON 문자열로 들어 있어 추출 가능. 발행일은 JSON-LD `datePublished`
+- Apple 보안 업데이트 목록(support.apple.com/100100)의 OS 행에 지원 기기 목록이 있어, macOS 버전별 지원 Mac 확인에 쓸 수 있음
+- 대기 루프에 `pgrep -f "hero_image.py …"`를 쓰면 루프 자신의 명령 문자열이 걸려 끝나지 않음(세션 37의 `pkill -f`와 같은 원인) → `pgrep -x sd-cli`나 출력 파일 존재로 판단할 것
+- outlook.office.com은 컨테이너에서 HTTP 417
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 32편. Search Console 색인 17편, 14편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Apple의 macOS 27 Graph 업데이트 출시·macOS Tahoe 26 지원 발표·Microsoft 일정 변경 시 `apple-mail-exchange-not-syncing` 갱신(`updatedAt`). H4 판정(11-19 이후): `gsc_report.py --compare /posts/apple-mail-exchange-not-syncing --changed 2026-10-22 --metric impressions --type discover`. H5 영향 칼럼 7편째(화제 5편)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 32편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 38 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+
 ## 2026-10-22 · 세션 37 (정기 실행, 일반 세션): 사진 메타데이터 지우기 무료 도구 6개 측정
 
 세션 시각: 2026-10-22 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(47182a4)에서 다시 시작. 대표 이미지 규칙(2026-10-22) 적용 첫 글.

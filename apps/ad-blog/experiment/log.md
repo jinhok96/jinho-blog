@@ -38,8 +38,8 @@
 
 - **사용자: Search Console 색인 요청** — `URL is unknown` 15편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free` (URL 검사 → 색인 생성 요청, API로는 불가)
 - **사용자: 주간 SEO 점검 루틴 프롬프트 적용** — 루틴이 게시하는 스레드에서 새 프롬프트(README [주간 SEO 점검](README.md#주간-seo-점검) 내용, 이번 세션에서 전달)로 바꿔 달라고 요청
-- **사용자: Vercel 도메인** — `www.tool-proof.com` 리디렉트를 307 → 308(영구)로
-- **사용자: AdSense 신청** (이월)
+- (완료) 사용자: Vercel 도메인 — `www.tool-proof.com` 리디렉트 307 → 308(영구), 2026-10-22 `https://www.tool-proof.com/posts/…` → 308 → `tool-proof.com` 확인
+- 사용자: AdSense 신청 — 2026-10-22 신청, 게시자 ID 입력·`ads.txt` 배포(README 인프라 상태). 승인 후 광고 단위 ID 전달·EEA 동의 메시지 켜기
 - Claude(다음 개선 세션): `photo-video` 허브 작성 → `link_audit.py` 문제 7건(받는 링크 2개 미만)·`check-if-image-is-ai-generated` 같은 클러스터 링크·`apple-mail-exchange-not-syncing` → `windows-10-esu-extended` 링크·`Google Chrome` 태그를 `Chrome`으로 통일
 - Claude(일반 세션): [클러스터 공백 후보](backlog.md#클러스터-공백-후보)의 `ai-settings` 상시 글부터. 3편이 모이면 허브 `turn off ai`
 - Claude: 리디렉트 배포 후 `curl -sI https://tool-proof.com/posts/pdf-to-jpg-high-quality`가 308·대상 글인지 확인

@@ -39,26 +39,29 @@
 
 ## 글 유형
 
-| 유형       | 검색 의도 예                                  | 제목 패턴                                                      | 핵심 구성                                                          |
-| ---------- | --------------------------------------------- | -------------------------------------------------------------- | ------------------------------------------------------------------ |
-| How-to     | how to use / turn on / set up X               | `How to {동작} {제품}, {범위·조건}`                            | 짧은 답 → 요구 조건 → 방법별 단계 → 문제 해결 → FAQ                |
-| Fix        | X not working / error message                 | `{증상·오류 메시지 그대로}: {원인 또는 해결 방법}`             | 원인 요약 → 빠른 해결 → 원인별 해결 → 그래도 안 될 때 → FAQ        |
-| Comparison | X vs Y / best X for Y                         | `{A} vs {B}, Tested` · `Best Free {X} ({N} Tested)`            | 결론 먼저 → 요약 표 → 평가 기준 → 도구별 결과 → 상황별 추천        |
-| Explainer  | what is X / is X free / is X safe             | `Is {X} Free? {핵심 조건}` · `What {X} Does and How to {동작}` | 한 문단 정의 → 무엇을 할 수 있나 → 가격·한도 → 주의점              |
-| 뉴스 칼럼  | X price increase / X shutting down / X update | `{바뀐 것}: What It Means for You`                             | 결론 → What happened → Who is affected → What to do now → Our take |
+| 유형       | 검색 의도 예                                  | 제목 패턴                              | 핵심 구성                                                          |
+| ---------- | --------------------------------------------- | -------------------------------------- | ------------------------------------------------------------------ |
+| How-to     | how to use / turn on / set up X               | `How to {동작} {제품}`                 | 짧은 답 → 요구 조건 → 방법별 단계 → 문제 해결 → FAQ                |
+| Fix        | X not working / error message                 | `How to Fix {증상·오류 메시지 그대로}` | 원인 요약 → 빠른 해결 → 원인별 해결 → 그래도 안 될 때 → FAQ        |
+| Comparison | X vs Y / best X for Y                         | `{A} vs {B}` · `Best Free {X}`         | 결론 먼저 → 요약 표 → 평가 기준 → 도구별 결과 → 상황별 추천        |
+| Explainer  | what is X / is X free / is X safe             | `Is {X} Free?` · `What Is {X}`         | 한 문단 정의 → 무엇을 할 수 있나 → 가격·한도 → 주의점              |
+| 뉴스 칼럼  | X price increase / X shutting down / X update | `{바뀐 것}` (한 문장)                  | 결론 → What happened → Who is affected → What to do now → Our take |
 
 ## 제목·설명 (클릭률)
 
 검색 결과에서 클릭 여부는 제목·설명·URL로 정해집니다.
 
+- **제목은 주제만** (2026-10-22 사용자 결정): 제목은 글의 주제를 한 문장(구)으로 쓰고 끝냄. 뒤에 꼬리표를 붙이지 않음. 기존 글 제목은 그대로 두고 새 글부터 적용
+  - 금지: 콜론·대시로 붙이는 부제·정형 문구(`: What It Means for You`, `: What Changes for You and How to …`, `— What to Check`), 괄호 덧붙임(`(6 Tools Tested)`, `(2026, Tested)`, `(and Delete What It Saved)`), `We Tested {N} …:` 같은 앞머리
+  - 예: `iPhone Handoff Costs $10 a Month on Verizon: What It Means for You` → `iPhone Handoff Costs $10 a Month on Verizon`, `How to Merge PDF Files for Free (3 Apps Tested)` → `How to Merge PDF Files for Free`
 - **길이**: 검색형은 40~55자 권장, 최대 60자. 페이지 `<title>`에는 ` | ToolProof`(12자)가 붙음. 너무 짧거나 긴 제목은 Google이 고쳐 씀 (title 60자 초과는 76% 이상, 70자 초과는 거의 전부 재작성). 피드형은 75자까지 허용하되 주 검색어는 앞 60자 안에 둠
-- **피드형 제목**: 독자 상황(you/your)이나 측정 결과를 앞세움. 측정 글은 `We Tested {N} {대상}: {결과 또는 독자가 궁금한 질문}`, 업데이트 직후 글은 `{바뀐 것}: What Changes for You and How to {동작}`
+- **피드형 제목**: 바뀐 사실이나 측정 결과를 독자 입장의 한 문장으로 씀 (예: `Microsoft 365 Family Storage Drops to 2TB Shared`)
 - **검색어 그대로, 앞쪽에**: 주 검색어의 단어를 동의어로 바꾸지 않고 제목 앞부분에 둠. slug도 같은 단어로 (URL이 검색어와 일치하면 CTR이 높음)
-- **차별점을 제목에**: 직접 측정한 글은 규모·방식을 괄호나 콜론 뒤에 넣음 (`(8 Models Tested)`). 숫자는 본문과 일치해야 함 (제목이 곧 H1)
-- **기호**: 강조는 대괄호 `[ ]` 대신 괄호 `( )`, 구분은 콜론·대시 (대괄호 부분은 Google이 자주 지움)
+- **차별점은 설명·첫 문단에**: 직접 측정한 규모·방식(8개 모델 측정 등)은 제목에 붙이지 않고 설명(description)과 첫 문단에 씀. 제목에 숫자가 들어가면 본문과 일치해야 함 (제목이 곧 H1)
+- **기호**: 대괄호 `[ ]`·괄호 `( )`를 쓰지 않음 (대괄호 부분은 Google이 자주 지움)
 - **답을 숨기지 않음**: "Here's what it means"처럼 핵심을 감춰 클릭을 유도하는 제목 금지 (Google Discover가 금지하는 방식). 무엇을 알려 주는 글인지 제목에서 드러나게
 - 질문형 제목은 CTR 차이가 거의 없으므로 고집하지 않음. 문제를 강조하기보다 해결을 말하는 표현을 우선
-- **연도**: 목록·가격이 해마다 바뀌는 글에만 넣음. 넣었다면 매년 내용을 재검증하고 연도와 `updatedAt`을 함께 갱신 (지난 연도가 남은 제목은 Google이 고쳐 씀)
+- **연도**: 목록·가격이 해마다 바뀌는 글에만 괄호 없이 문장 안에 넣음 (`Best Free PDF Editors in 2026`). 넣었다면 매년 내용을 재검증하고 연도와 `updatedAt`을 함께 갱신 (지난 연도가 남은 제목은 Google이 고쳐 씀)
 - **설명(description)**: 140~160자. 글 전체를 요약하고 구체 정보(측정 규모·핵심 결과·대상 버전·무료 여부)를 넣음. 키워드 나열, 다른 글과 같은 문장 금지
 - Google은 스니펫을 주로 본문에서 뽑고, 설명이 더 정확할 때만 설명을 씀 → 첫 문단과 각 소제목의 첫 문장도 그대로 스니펫이 될 수 있게 씀
 
@@ -111,7 +114,7 @@
   - 사실은 공식 발표·문서·릴리스 노트로 확인하고 링크 (정확성 섹션 기준)
   - 언론 단독 보도에만 있는 내용은 "{매체} reported"로 출처를 밝히고 확정 사실처럼 쓰지 않음. 익명 소식통·유출에 기댄 보도는 루머로 보고 쓰지 않음
   - 다른 매체 기사의 문장·구성을 따라 쓰지 않음
-- **제목**: 피드형 기준(75자 이내, 주 검색어는 앞 60자 안). 패턴 `{바뀐 것}: What It Means for You`. `{바뀐 것}`에 금액·날짜·기능 같은 구체 내용을 넣어 결론이 제목에 드러나게 함 (답을 숨기는 제목 금지는 제목·설명 섹션 기준)
+- **제목**: 피드형 기준(75자 이내, 주 검색어는 앞 60자 안). 바뀐 것을 한 문장으로만 씀 (`: What It Means for You` 같은 꼬리표 금지). 금액·날짜·기능 같은 구체 내용을 넣어 결론이 제목에 드러나게 함 (예: `Pixel Watch Safety Signal Ends December 12`. 답을 숨기는 제목 금지는 제목·설명 섹션 기준)
 - **이미지**: 2장 이상 (이미지 섹션)
 - **길이**: 800~1,500단어
 - **시점 표시**: 날짜까지 "as of {Month D, YYYY}" (예: as of October 17, 2026)
@@ -133,7 +136,7 @@
 
 ```mdx
 ---
-title: How to Turn Off ChatGPT Memory (and Delete What It Saved)
+title: How to Turn Off ChatGPT Memory
 description: Step-by-step instructions to pause, turn off, or clear ChatGPT memory on web and mobile, plus what happens to chats you already had.
 category: ai-tools
 createdAt: 2026-10-11T14:05:00Z
@@ -152,7 +155,7 @@ tags:
 ## 링크
 
 - 내부 링크: 관련 글이 있으면 How-to·측정 글은 4개 이상, 그 밖의 글은 2개 이상 연결 (`/posts/{slug}`). 새 글을 쓰면 기존 관련 글에도 링크를 추가해 모든 글이 다른 글에서 1번 이상 링크되게 함
-- 허브 글: 같은 분야 측정 글이 3편 쌓이면 허브 글(`Best Free {분야} Tools (Tested)` 등)을 만들어 개별 글을 모두 연결하고, 새 측정이 생길 때마다 갱신 ([traffic-playbook.md](traffic-playbook.md) 3번)
+- 허브 글: 같은 분야 측정 글이 3편 쌓이면 허브 글(`Best Free {분야} Tools` 등)을 만들어 개별 글을 모두 연결하고, 새 측정이 생길 때마다 갱신 ([traffic-playbook.md](traffic-playbook.md) 3번)
 - 앵커 텍스트: 링크 대상이 드러나게 씀 (`our test of 8 offline transcription models`). "click here"·"this article"·"read more" 금지, 링크를 연달아 붙이지 않음
 - 외부 링크: 1차 출처 위주. 경쟁 블로그·제휴 링크 금지
 
@@ -177,7 +180,8 @@ tags:
 - [ ] 사실마다 1차 출처를 이번 세션에서 확인했다
 - [ ] 직접 실행한 내용과 문서 기반 내용을 구분해서 썼다
 - [ ] 모든 방법을 비개발자가 따라 할 수 있다: 명령어·코드·코드 블록·패키지 관리자 없음, 전문 용어는 처음 나올 때 풀이
-- [ ] 제목은 검색형 60자·피드형 75자 이내(주 검색어는 앞쪽, 차별점 포함), 설명 140~160자
+- [ ] 제목은 검색형 60자·피드형 75자 이내(주 검색어는 앞쪽), 설명 140~160자(차별점 포함)
+- [ ] 제목은 주제만 썼다: 콜론·대시로 붙인 부제(`: What It Means for You`)·괄호(`(6 Tools Tested)`) 없음
 - [ ] 첫 2~3문장에서 답을 주고, 소제목마다 첫 문장이 그 소제목의 답이다
 - [ ] `##` 소제목 3개 이상, 방법·도구가 3개 이상이면 요약 표가 있다
 - [ ] FAQ는 본문에 없는 실제 질문만 넣었다 (없으면 생략)

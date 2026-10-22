@@ -1,6 +1,6 @@
 # 글별 검증 자료
 
-글에 쓴 측정값을 다시 확인하거나 글을 갱신할 때 쓰는 재현 스크립트·결과·사실 확인표입니다. 폴더 이름은 글 slug와 같습니다. 다운로드한 모델·이미지 등 큰 파일은 커밋하지 않습니다 (스크립트 주석의 URL에서 다시 받음).
+글에 쓴 측정값을 다시 확인하거나 글을 갱신할 때 쓰는 재현 스크립트·결과·사실 확인표입니다. 폴더 이름은 글 slug와 같습니다. 다운로드한 모델·이미지 등 큰 파일은 커밋하지 않습니다 (스크립트 주석의 URL에서 다시 받음). 대표 이미지 생성 기록(모델·시드·장면·소요 시간)은 [tools/hero_image.py](../tools/hero_image.py)가 `{slug}/hero-image.md`에 자동으로 남깁니다.
 
 | 폴더                                                                 | 내용                                                                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
@@ -23,6 +23,7 @@
 | [merge-pdf-files-free](merge-pdf-files-free) | PDF 합치기 GUI 앱 3개(PDFsam Basic 6.0.6·PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판) 측정: 보고서(책갈피·목차 링크)+W-9+사진 3파일 합치기, 순서 바꾸기(W-9 먼저), W-9 2부 양식 이름 충돌(PDFsam 양식 옵션 3개), Sejda 무료 한도(50쪽·하루 3회), Chrome 뷰어 입력 테스트, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 | [jpg-to-pdf-free](jpg-to-pdf-free) | JPG→PDF GUI 방법 3개(PDF Arranger 1.14.0·Sejda PDF Desktop 7.9.10 무료판·Chromium 141 인쇄 Save as PDF) 측정: 12MP 사진 10장(세로 2장 EXIF Orientation=6) 세로 사진 방향·사진 바이트 보존·페이지 크기·파일 크기, PDF Arranger Page Size(US Letter), Sejda 페이지 옵션·하루 3회 한도, Chrome 머리글·Landscape 2쪽 넘침, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
 | [pdf-to-jpg-free](pdf-to-jpg-free) | PDF→JPG GUI 앱 3개(GIMP 3.2.6·LibreOffice Draw 26.8.1·Sejda PDF Desktop 7.9.10 무료판) 측정: IRS 1040(2쪽)·보고서(흰 배경 없음, 7pt 각주)·사진 3쪽, 기본값으로 저장되는 쪽·픽셀 크기·파일 크기·OCR 판독률, GIMP Layers/Images, LibreOffice 해상도 함정·해결, Sejda 해상도·하루 3회 한도, GUI 캡처, 사실 확인표 (재현: 아래 절차) |
+| [pdf-to-word-free](pdf-to-word-free) | PDF→Word 무료 도구 3개(LibreOffice Writer 26.8.1 GUI·Sejda PDF Desktop 7.9.10 무료판 GUI·iLovePDF 웹) 측정: 정답을 아는 PDF 11개(`../convert-pdf-to-word-offline-free/gen.py`) 단어 보존·편집 가능한 문단·실제 Word 표·텍스트 상자·스캔 PDF OCR, 편집 테스트, LibreOffice Draw/Writer 필터 함정, Sejda 작업당 1파일·하루 3회, GUI·웹 캡처, 사실 확인표 (재현: `gen.py` → `convert_libreoffice.sh`·Sejda GUI·`ilove_one.py`·`ilove_scan.py` → `score.py` → `edit_test.py` → `charts.py`) |
 
 ## 받아쓰기 벤치마크 재현
 

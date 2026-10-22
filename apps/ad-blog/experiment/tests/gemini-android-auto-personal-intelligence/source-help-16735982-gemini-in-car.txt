@@ -1,0 +1,71 @@
+Chat with Gemini in your car - Gemini Apps Help
+Skip to main content
+Gemini Apps Help
+Sign in
+Google Help
+Help Center
+Community
+Gemini Apps
+Privacy Policy
+Terms of Service
+Submit feedback
+Send feedback on...
+This help content & information
+General Help Center experience
+Close
+Next
+Help Center
+Community
+Privacy Hub
+Gemini Apps
+Chat with Gemini in your car
+When you connect your phone to your car with Android Auto, you can use your voice to chat with Gemini to get things done. With Gemini as your driving co-pilot, you can do things like:
+Place calls and send text messages
+Find places and start navigation
+Start, stop, and change your music
+Have a back-and-forth conversation with Gemini
+What you need to connect to Gemini in Android Auto
+On Android Auto from your phone:
+An Android phone with at least 2 GB of RAM, running Android 11 or newer
+Gemini set as your digital assistant.
+Learn how to get started with Gemini
+A vehicle that supports Android Auto.
+Learn how to connect your phone with Android Auto
+For a vehicle with Google built-in:
+A vehicle with Google built-in.
+A Google Account signed in to your vehicle.
+Gemini enabled as your assistant in the vehicle's settings. To enable Gemini:
+On your car's screen, tap Settings
+Google
+Assistant.
+Select Gemini [icon] as your digital assistant.
+If Gemini is not listed, ensure your vehicle's software is up to date.
+Gemini and Android Auto are not available in all languages and regions. Find
+where Gemini is supported
+and
+where Android Auto is supported
+Chat with Gemini
+When your phone is connected to your vehicle, to start a chat with Gemini:
+Say “Hey Google”
+“Hey Google” only works when Voice Match and “Hey Google” are turned on.
+Learn more about Voice Match and “Hey Google.”
+On your car’s screen, tap Microphone
+If available, press and hold the voice command button on your steering wheel until Gemini activates
+Then, say what you want Gemini to help you with. For example, try saying, “Hey Google, call Mom.” Gemini can also help with more complex tasks. Try asking, “Hey Google, find a supercharger near a sushi restaurant that’s open now.”
+Chat Live with Gemini
+You can have a free-flowing, natural conversation with Gemini when you tap Microphone on the screen and say, “Let’s talk Live.” When you chat Live with Gemini in your car, you can do things like:
+Discuss a topic that interests you, like music artists or quantum theory.
+Ask Gemini for entertainment, like trivia questions, jokes, or help finding a podcast.
+Get travel info, like discussing a destination or asking about landmarks you pass by.
+Tip
+: To stop your Live conversation, say “Stop.” For now, you can only start and stop Live with your voice.
+Using Gemini for Android Auto with children
+When you use Gemini with Android Auto, Gemini is available to anyone in the vehicle, including children. This means that children in the vehicle may hear content that may be age inappropriate.
+Gemini is conversational and can feel like a human. It’s important to remind any children in the vehicle that Gemini is an AI tool, not a person.
+Learn more about guiding your child’s Gemini Apps experience
+Gemini in Android Auto is new and evolving, and can hallucinate and present inaccurate information as factual so should not be relied on for critical information or safety-related matters while operating the vehicle.
+Related Resources
+Get started with Gemini mobile app
+Get started with Android Auto
+Guiding your child’s Gemini Apps experience
+Learn about generative AI

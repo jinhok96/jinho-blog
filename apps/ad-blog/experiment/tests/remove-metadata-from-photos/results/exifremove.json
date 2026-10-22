@@ -1,0 +1,26 @@
+{
+ "01": {
+  "ok": true,
+  "file_bytes": 830416,
+  "uploaded": false,
+  "upload_requests": []
+ },
+ "03": {
+  "ok": true,
+  "file_bytes": 1865028,
+  "uploaded": false,
+  "upload_requests": []
+ },
+ "05": {
+  "ok": true,
+  "file_bytes": 5346599,
+  "uploaded": false,
+  "upload_requests": []
+ },
+ "06": {
+  "ok": true,
+  "file_bytes": 2370750,
+  "uploaded": false,
+  "upload_requests": []
+ }
+}

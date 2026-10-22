@@ -1,0 +1,91 @@
+Exchange Web Services (EWS) is approaching end of service in Exchange Online. We first announced this change was coming in 2018, when we announced that&nbsp;Exchange Web Services (EWS) will no longer receive functionality updates. In 2023, we announced that&nbsp;EWS will be disabled in Exchange Online in October 2026.
+Today we’re announcing we will use a phased, admin controllable disablement plan that starts in October 2026 and concludes with a complete shutdown of EWS in 2027. This post explains what’s happening, when, and what administrators should be doing now.
+Today’s announcement and the retirement of EWS&nbsp;apply only to Microsoft 365 and Exchange Online (all environments);&nbsp;there are&nbsp;no changes to&nbsp;EWS&nbsp;in Exchange Server.&nbsp;
+Why is EWS being retired?
+EWS was built nearly 20 years ago, and while it served the ecosystem well, it no longer aligns with today’s security, scale, or reliability requirements. Over the past several years:
+
+Microsoft Graph has reached near‑complete feature parity for the vast majority of EWS scenarios.
+Microsoft’s own applications have either migrated from EWS or are nearing completion.
+Many third-party vendors have already transitioned or are actively doing so.
+
+Retiring EWS lets us reduce legacy surface area, simplify platform behavior, and deliver a more consistent, modern experience for everyone.
+How will EWS be disabled?
+We’ll disable EWS tenant-by-tenant using the EWSEnabled property, which supports three values: True, False, and Null (the default today). A new feature will allow admins to define an&nbsp;AppID Allow List - read more here Introducing EWSAllowedAppIDs: Preparing for the Final Phase of EWS Retirement | Microsoft Community Hub. When enabled, only apps on that list can access EWS.
+The EWSEnabled property in your tenant will change on (or soon after) Oct 1, 2026, as follows:
+
+EWSEnabled value
+
+Before Oct 2026
+
+Starting Oct 2026
+
+True
+
+
+
+If no AppID Allow List, all EWS is allowed
+
+If AppID Allow List is configured with AppIDs, only apps on it are allowed
+If AppID Allow List is configured with no entries, all EWS is allowed.&nbsp;
+
+
+Only Apps in the AppID Allow List allowed.
+If the list exists, but has no entries, no EWS will be allowed.&nbsp;
+In both cases, cross-tenant organization relationship EWS traffic is allowed (reference here)
+
+False
+
+All EWS Blocked
+
+All EWS Blocked
+
+Null
+
+All EWS Allowed
+
+Changes from Null to False starting October 2026.
+If then changed back to Null, all EWS Allowed (AppID Allow List is ignored)
+
+Any tenant with EWSEnabled still set to Null on October 1, 2026, will see the value changed to False as the deployment rolls out. That will block EWS for all applications in the tenant at that time.
+If you want to keep EWS blocked, you can simply leave it that way.
+But if you still need to use EWS, you will have two choices:
+
+Set EWSEnabled to True and maintain an AppID Allow List (via Baseline Security Mode or Exchange Online PowerShell).
+Set EWSEnabled back to Null, which re-enables EWS without restrictions until the final deprecation occurs. This will have to be done using Exchange Online PowerShell.
+
+Additionally, if you proactively configure an AppID Allow List and set EWSEnabled to True by the end of September 2026, your tenant will be excluded from the October 1 automatic change to EWSEnabled=False.
+To help you during this transition, we will pre-populate the AppID Allow List for customers who have not created one, based on each tenants own usage. If in October 2026 you realize that you still need EWS, the admin can re-enable EWS (by setting EWSEnabled to True) after we block it. But note that there will be a service interruption in this case.
+Key dates
+Preparation (starting now)
+During this phase, EWS remains available, but admins are encouraged to prepare:
+
+Review EWS usage reports in the Microsoft 365 admin center, and consider the published scripts if you need more information. See&nbsp;
+Notes From the Field: Finding and Remediating EWS App Usage Before Retirement.
+
+Optional: by end of September 2026, populate your AppID Allow List and set EWSEnabled=True
+Begin migrating applications to Microsoft Graph.
+
+Initial blocking for tenants who still use EWS – starting October 1, 2026
+EWS will be disabled by default (EWSEnabled=False) in Exchange Online tenants that have not explicitly chosen to keep it enabled with an AppID Allow List and setting EWSEnabled to True in September 2026. At this point:
+
+EWS calls will be blocked unless the tenant has already taken admin action.
+Admins can temporarily enable EWS if critical workflows are affected (EWSEnabled=True)
+
+Final EWS shutdown – April 1, 2027
+Starting with April 1, 2027, EWS will be fully and permanently disabled:
+
+The ability to control EWSEnabled will be removed from tenant admins.
+
+Here is a graphical representation of timelines:
+
+Ongoing communication and monitoring
+To keep admins informed and avoid surprises we will send monthly Message Center posts to provide tenant specific EWS usage summaries and reminders.
+We may perform temporary “scream tests” (shorter periods of time when we turn EWS off and then back on) which can help expose hidden dependencies before the final cutoff. We will provide more information in the coming weeks. If your organization sets EWSEnabled = True now, you will not be impacted by any "scream tests" that we might conduct.
+The bottom line
+Now is the right time to evaluate your environment, talk with application owners, and plan your move to Microsoft Graph. Early action avoids last‑minute surprises and gives you the smoothest possible transition path.
+FAQs
+We already configured EWS blocking using the EWSApplicationAccessPolicy settings – how will this new AppID Allow List and the list we have work together?The new AppID Allow List takes precedence. An app will have to pass both checks to gain access.
+We have all kinds of apps still using EWS. We have no idea how much work it’s going to take to migrate them – help!Start with the usage tools we’ve published (WW tenants see this and government and sovereign clouds see this). Most apps use only a handful of EWS actions, and with modern tooling (including AI-assisted migrations), many can be converted more easily than expected.
+There are parity gaps in the Graph API. How can we possibly migrate to Graph from EWS?We actively track and publish the remaining gaps. Most EWS-based workloads can migrate now. The best place to see the current status of the remaining parity gaps is here: Deprecation of Exchange Web Services in Exchange Online | Microsoft Learn. We keep this up to date and link to more information as it becomes available.
+What about on-prem Exchange, and hybrid scenarios? EWS is not being retired on-prem. Hybrid scenarios vary depending on how apps access data. On-prem mailboxes may continue using EWS; cloud mailboxes must move to Graph. Autodiscover will help apps determine mailbox location automatically. But note that only Exchange SE will support Graph for calls to Exchange Online, so hybrid customers will have to use Exchange SE to host on-premises mailboxes. Read more here.
+We will

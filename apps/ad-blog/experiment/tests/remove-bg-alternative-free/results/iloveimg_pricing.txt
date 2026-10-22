@@ -1,0 +1,219 @@
+COMPRESS IMAGE
+RESIZE IMAGE
+CROP IMAGE
+CONVERT TO JPG
+PHOTO EDITOR
+MORE TOOLS
+Login
+Sign up
+
+Pricing plans
+
+Choose the plan that suits you
+
+Monthly Billing
+
+Yearly Billing
+
+-42%
+
+Basic
+
+1
+Free
+
+Start for free
+
+Free features include:
+
+Access to essential iLoveIMG tools
+Limited document processing
+
+Premium
+
+1 - 25
+$5 / month
+
+$60 Billed annually
+
+Get Premium How many users do you need? (Up to 25)
+
+Premium features include:
+
+Full access to all iLoveIMG tools
+Unlimited document processing
+Highest image processing capabilities
+AI tools
+Ad-free experience
+Priority customer support
+Regional file processing
+2,000 AI Credits
+
+Business
+
+25 +
+Let's talk
+
+Scalable solutions for your business with customized pricing.
+
+Contact sales
+
+What’s included:
+
+All Premium features
+Custom contracts designed for scalability
+Dedicated Account Manager
+Single Sign On (SSO)
+
+Compare the plans
+
+Basic
+
+Best for simple use
+
+Start for free
+
+Premium
+
+Best for advanced use
+
+Get Premium
+
+Business
+
+Best for growing teams
+
+Contact sales
+
+Features
+
+Tools
+
+Limited tools
+
+All tools included
+
+All tools included
+
+Batch processing
+
+Filesize per task
+
+Teams
+
+Volume discount
+
+Workflows
+
+Ad-free service
+
+Customer support
+
+Basic
+
+Preferential
+
+Dedicated support
+
+AI Credits
+
+2,000
+Custom
+
+Applications
+
+Web
+
+Mobile (via iLovePDF)
+
+Security
+
+Secure HTTPs connection
+
+ISO27001 certified
+
+Single Sign On (SSO)
+
+Regional file processing
+
+7 regions
+
+11 regions
+
+Automate document processes with iLoveIMG API
+
+Millions of people trust iLoveIMG to simplify their work with images. Now, you can access the same tools and infrastructure, built to scale.
+
+See guides
+Your images are in good hands
+
+Our tools are designed to meet the highest security and performance standards, ensuring your images are handled with the most care.
+
+Frequently Asked Questions
+
+Our support team answers these questions almost daily
+
+General Questions
+
+What do I get with the Free Plan?
+
+Premium unlocks unlimited image processing, removes ads, and gives you priority support. It’s the full iLoveIMG experience!
+
+Why should I upgrade to Premium?
+
+Premium unlocks unlimited document processing, works across web, mobile, and desktop, removes ads, and gives you priority support. It’s the full iLoveIMG experience!
+
+Can I switch plans if my needs change?
+
+Absolutely. You’re always in control—upgrade, downgrade, or cancel anytime in your account settings.
+
+Billing & Payments
+
+Can I share single billing for multiple accounts?
+
+Yes. You can put everyone's account on one credit card for centralized billing. Just enter the email addresses of your team members and your plan will automatically upgrade.
+
+What payment methods do you accept?
+
+We accept card payments via Visa, MasterCard, and American Express. We also accept payments using PayPal or directly in the mobile app (using Apple Pay or Google Pay). For the Business plan, we offer additional methods, such as payment via Bank transfer.
+
+What if I need to change my plan partway through my contract?
+
+You can add and remove licenses as needed from your Account. In the same way, you can upgrade your subscription and we'll automatically adjust the pricing.
+
+Can you invoice me?
+
+Yes, we issue a tax invoice on all paid plans. All prices include VAT. Depending on your location,VAT may be included directly, and in others VAT appears as 0% and is handled via the reverse-charge mechanism. To ensure your invoicing details appear on the invoice, please add them either before you subscribe or within 72 hours of the invoice being issued.
+
+Security & Technical Questions
+
+Is my data safe with iLoveIMG?
+
+Rest assured, your documents are fully encrypted and processed securely, adhering to international data protection regulations, including GDPR.
+
+Will iLoveIMG work for my industry?
+
+iLoveIMG caters to a wide range of professionals, including those in legal, educational, and business fields. Designed with versatility in mind, iLoveIMG seamlessly integrates into any workflow, providing flexible solutions for all users.
+
+Trusted by well known companies
+PRODUCT
+Home
+Features
+Pricing
+Tools
+FAQ
+RESOURCES
+iLoveSign
+iLoveAPI
+iLovePDF
+LEGAL
+Privacy policy
+Terms & conditions
+Cookies
+COMPANY
+About us
+Contact us
+Blog
+Press
+English
+© iLoveIMG 2026 ® - Your Image Editor

@@ -1,0 +1,19 @@
+---
+title: "Claude Code: 에이전트 코딩을 위한 모범 사례"
+description: "Claude Code를 효과적으로 사용하기 위한 설정, 도구 활용, 일반적인 워크플로우 및 최적화 전략을 안내합니다."
+category: claude
+sourceUrl: https://www.anthropic.com/research/claude-code-best-practices
+createdAt: 2025-04-18
+---
+
+> 원문: [Claude Code: Best practices for agentic coding](https://www.anthropic.com/research/claude-code-best-practices) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude Code는 연구 프로젝트로 개발된 에이전트 코딩을 위한 커맨드라인 도구입니다. Claude Code는 유연하고 사용자 정의 가능한 파워 툴이지만, 에이전트 코딩 도구에 익숙하지 않은 개발자에게는 학습 곡선이 존재할 수 있습니다. 본 글에서는 Anthropic 내부 팀과 외부 엔지니어들이 다양한 코드베이스, 언어, 환경에서 Claude Code를 사용할 때 효과적이었던 일반적인 패턴을 소개합니다.
+
+-   **`CLAUDE.md` 파일을 활용하여 Claude Code의 환경을 사용자 정의하세요.** 이 파일은 Claude가 대화 시작 시 자동으로 불러오는 컨텍스트에 포함되어, 일반적인 bash 명령어, 핵심 파일, 코드 스타일 가이드라인 등을 문서화하는 데 이상적입니다.
+-   **Claude Code에 더 많은 도구를 제공하세요.** Claude Code는 bash 환경에 액세스하며, MCP 및 REST API를 통해 더 복잡한 도구를 활용할 수 있습니다. `.mcp.json` 파일이나 사용자 정의 슬래시 명령어를 통해 도구를 추가할 수 있습니다.
+-   **일반적인 워크플로우를 시도하세요.** "탐색, 계획, 코딩, 커밋" 또는 "테스트 작성, 커밋; 코딩, 반복, 커밋"과 같은 워크플로우는 Claude Code의 성능을 크게 향상시킬 수 있습니다.
+-   **헤드리스 모드를 사용하여 인프라를 자동화하세요.** CI, 사전 커밋 훅, 빌드 스크립트 등에 Claude Code의 헤드리스 모드를 활용하여 자동화를 구현할 수 있습니다.
+
+자세한 내용은 원문에서 확인하세요.

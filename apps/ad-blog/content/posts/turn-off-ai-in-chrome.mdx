@@ -1,9 +1,10 @@
 ---
 title: How to Turn Off AI in Chrome, Including the On-Device Model
-description: Turn off Gemini in Chrome, Help me write, AI history search, and the on-device AI model, with Chrome 155 menu names and policies for a hard off switch.
+description: Turn off Gemini in Chrome, Help me write, AI history search, and the on-device AI model, with Chrome 156 menu names and policies for a hard off switch.
 category: software
 createdAt: 2026-10-11T04:31:00Z
 updatedAt: 2026-10-17
+thumbnail: ./images/turn-off-ai-in-chrome/chrome-ai-off-switches.webp
 tags:
   - Google Chrome
   - Gemini
@@ -12,9 +13,11 @@ tags:
   - settings
 ---
 
-To turn off AI in Chrome, open **Settings > AI innovations**. In Chrome 155, the stable version as of October 2026, that page lets you hide Gemini in Chrome, stop "Help me write" from popping up, turn off AI history search, and switch off **On-device AI**, which also deletes the AI model Chrome downloaded to your computer. Gemini in Chrome and AI Mode in the address bar have no full off switch in Settings, so for those, or for a switch that can't be flipped back by accident, you set a Chrome policy on a Windows PC with Registry Editor, a tool built into Windows.
+To turn off AI in Chrome, open **Settings > AI innovations**. In Chrome 156, the stable version since October 20, 2026, that page lets you hide Gemini in Chrome, stop "Help me write" from popping up, turn off AI history search, and switch off **On-device AI**, which also deletes the AI model Chrome downloaded to your computer. Gemini in Chrome and AI Mode in the address bar have no full off switch in Settings, so for those, or for a switch that can't be flipped back by accident, you set a Chrome policy on a Windows PC with Registry Editor, a tool built into Windows.
 
 We checked every Chrome menu name and policy below against Chrome 155's source code, the Chromium release tagged [155.0.8059.40](https://github.com/chromium/chromium/tree/155.0.8059.40). Chrome only shows settings for AI features that are available to your account, language, and country, so your list may be shorter than ours.
+
+We rechecked the same files in Chrome 156 (tag [156.0.8078.48](https://github.com/chromium/chromium/tree/156.0.8078.48)) on October 21, 2026. None of the menu names, switches or policies in this guide changed, so where the steps below say Chrome 155, the same applies to Chrome 156.
 
 ## Quick reference
 
@@ -25,6 +28,8 @@ We checked every Chrome menu name and policy below against Chrome 155's source c
 | AI history search | **History search, powered by AI** | `HistorySearchSettings` = 2 |
 | AI Mode in the address bar | No switch | `AIModeSettings` = 1 |
 | On-device AI model | **On-device AI** (removes the model) | `GenAILocalFoundationalModelSettings` = 1 |
+
+![Chart of how to turn off each AI feature in Chrome: AI history search and the on-device AI model can be fully turned off in Settings; Gemini in Chrome and Help me write can only be limited there; AI Mode in the address bar has no switch; each has a Windows policy that turns it off completely, such as GeminiSettings set to 1](./images/turn-off-ai-in-chrome/chrome-ai-off-switches.webp)
 
 Tab Organizer, the AI tab-grouping tool, is already gone. Chrome's policy definition for it says the feature "has been sunset" and lists support only through Chrome 136.
 
@@ -92,6 +97,8 @@ News reports in 2026 put the download at roughly 4 GB. Chromium's code named the
 
 Don't just delete the folder while **On-device AI** is still on. Chrome manages it through its component updater, so it can download the model again the next time a feature asks for it. Turn the switch off, or set the policy below, and let Chrome remove the files.
 
+![Diagram comparing two ways to remove Chrome's on-device AI model: turning off On-device AI makes Chrome uninstall the model and not download it again while the switch stays off; deleting the OptGuideOnDeviceModel folder with the switch still on removes the files only until a feature asks for the model again](./images/turn-off-ai-in-chrome/chrome-on-device-ai-removal.webp)
+
 ## How to set a hard off switch with Chrome policies
 
 Policies are the settings IT departments use to manage Chrome, and you can set them on your own Windows PC. They override the matching switches in Settings, so nobody can turn the feature back on from the Settings page. This guide covers policies on Windows only, so on a Mac, use the Settings switches shown in the quick reference above.
@@ -122,6 +129,8 @@ On a computer that no company manages, Chrome ignores a short list of "sensitive
 On Windows, Chrome reads policies from the registry, the database where Windows keeps settings for the system and your apps. You add them with Registry Editor. Each policy is a **DWORD (32-bit) Value**, named after the policy, inside this key (keys look like folders in Registry Editor):
 
 `HKEY_LOCAL_MACHINE\SOFTWARE\Policies\Google\Chrome`
+
+![Registry Editor key tree from HKEY_LOCAL_MACHINE to SOFTWARE, Policies, Google and Chrome, with Google and Chrome created if missing, and an example of three DWORD values inside the Chrome key: GeminiSettings 1, GenAILocalFoundationalModelSettings 1, HelpMeWriteSettings 2](./images/turn-off-ai-in-chrome/chrome-policy-registry-location.webp)
 
 Microsoft's [registry documentation](https://learn.microsoft.com/en-us/troubleshoot/windows-server/performance/windows-registry-advanced-users) warns: "Serious problems might occur if you modify the registry incorrectly by using Registry Editor or by using another method. These problems might require that you reinstall the operating system." Add only the keys and values in these steps, and don't change or delete anything else.
 
@@ -170,6 +179,10 @@ To apply the policies and check that they worked:
 3. Click **Reload policies**. Restarting Chrome also works.
 4. Check that each policy you added is listed with the status **OK**.
 
+![The chrome://policy page filtered to show GeminiSettings with value 1, GenAILocalFoundationalModelSettings with value 1 and HelpMeWriteSettings with value 2, each with the status OK, with the Reload policies button and the Status column highlighted](./images/turn-off-ai-in-chrome/chrome-policy-page-status-ok.webp)
+
+We took this screenshot in Chromium 141, the open-source browser Chrome is built on, after setting the same three example policies on our Linux test machine. Chrome uses the same policy page.
+
 If a policy is missing or shows a different status, check that it's inside the **Chrome** key and that its name, type, and value match the table.
 
 To undo a policy:
@@ -186,8 +199,8 @@ Chrome treats the browser as managed once a machine-wide policy is set, so its m
 
 ## How we checked
 
-- **Chrome version:** Google's [VersionHistory API](https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions/all/releases?filter=endtime=none) listed 155.0.8059.40 as the stable release on Windows and Mac, serving since October 6, 2026. A Chrome 156 build was going to a small early group.
-- **Source code:** We read the Chromium source at tag 155.0.8059.40 on October 11, 2026: the policy definitions, the settings page code and its English text, and the on-device model manager. Chrome labels in this guide are copied from that code.
+- **Chrome version:** Google's [VersionHistory API](https://versionhistory.googleapis.com/v1/chrome/platforms/win/channels/stable/versions/all/releases?filter=endtime=none) listed 155.0.8059.40 as the stable release on Windows and Mac, serving since October 6, 2026. A Chrome 156 build was going to a small early group. On October 21, 2026, the same API listed 156.0.8078.48 as the stable release.
+- **Source code:** We read the Chromium source at tag 155.0.8059.40 on October 11, 2026: the policy definitions, the settings page code and its English text, and the on-device model manager. Chrome labels in this guide are copied from that code. On October 21, 2026, we compared the same policy definitions, settings pages, English text and model installer at tag 156.0.8078.48: the policies were identical, and the only settings changes touched features this guide doesn't cover.
 - **Policy test:** We ran Chromium 141 (the open-source browser Chrome is built on, not Chrome) on Linux with a policy file. `chrome://policy` showed `GeminiSettings`, `AIModeSettings`, `HelpMeWriteSettings`, `HistorySearchSettings`, and `GenAILocalFoundationalModelSettings` as OK, and rejected `GenAiDefaultSettings` as cloud-only.
 - **Not tested:** We didn't click through Google Chrome itself, Chromium can't show Gemini features, and we couldn't reach Google's help pages from our test environment. This guide relies on Chrome's source instead. We also didn't run the Registry Editor steps on a Windows PC; the menu names follow Microsoft's Registry Editor documentation.
 

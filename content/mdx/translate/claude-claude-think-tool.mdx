@@ -1,0 +1,17 @@
+---
+title: "Claude를 위한 \"생각\" 도구: 복잡한 도구 사용 시 멈춰 생각하게 하기"
+description: "Claude 모델이 복잡한 도구 사용 상황에서 구조화된 사고 과정을 거칠 수 있도록 돕는 \"생각\" 도구를 소개합니다."
+category: claude
+sourceUrl: https://www.anthropic.com/research/claude-think-tool
+createdAt: 2025-03-20
+---
+
+> 원문: [The "think" tool: Enabling Claude to stop and think in complex tool use situations](https://www.anthropic.com/research/claude-think-tool) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+- **"생각" 도구란?** Claude가 최종 답변에 도달하기 전에 추가적인 사고 단계를 포함하도록 하여, 복잡한 문제 해결 및 도구 사용 능력을 향상시킵니다. 이는 '확장된 사고'와는 다른 개념으로, Claude가 응답 생성 중 외부 정보를 처리하고 다음 단계를 결정할 때 유용합니다.
+- **τ-Bench에서의 성능 향상**: "생각" 도구를 사용한 Claude 3.7 Sonnet은 항공 및 리테일 고객 서비스 시나리오에서 pass^1 지표를 기준으로 상당한 성능 향상을 보였습니다. 특히, 최적화된 프롬프트와 결합되었을 때 항공 도메인에서 54%의 상대적 개선을 달성했습니다.
+- **SWE-Bench에서의 활용**: Claude 3.7 Sonnet의 SWE-Bench 평가에서도 "생각" 도구는 0.623의 최첨단 점수를 달성하는 데 기여했습니다. 이는 복잡한 도구 출력 분석, 정책 중심 환경 탐색, 순차적 의사 결정에 특히 유용합니다.
+- **최적의 구현 방법**: 도메인별 예시가 포함된 전략적인 프롬프팅과 시스템 프롬프트에 복잡한 지침을 포함하는 것이 효과적입니다. "생각" 도구는 비순차적 도구 호출이나 단순한 지침 준수에는 적용되지 않습니다.
+
+자세한 내용은 원문에서 확인하세요.

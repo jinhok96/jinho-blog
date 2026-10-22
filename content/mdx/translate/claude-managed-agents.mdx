@@ -1,21 +1,26 @@
 ---
-title: '관리형 에이전트 확장: 두뇌와 실행 환경 분리'
-description: 'Anthropic은 Claude Managed Agents를 출시하여 AI 에이전트의 두뇌(LLM)와 실행 환경(샌드박스, 도구)을 분리하고, 시스템의 유연성과 안정성을 향상했습니다.'
+title: "관리형 에이전트 확장: 두뇌와 손의 분리"
+description: "Anthropic은 Claude Managed Agents를 통해 에이전트의 '두뇌'(Claude 및 Harness)와 '손'(Sandbox 및 도구)을 분리하여 확장성, 복원력, 보안성을 개선했습니다."
 category: claude
-sourceUrl: https://www.anthropic.com/engineering/managed-agents
+sourceUrl: https://www.anthropic.com/research/managed-agents
 createdAt: 2026-04-08
 ---
 
-> 원문: [Scaling Managed Agents: Decoupling the brain from the hands](https://www.anthropic.com/engineering/managed-agents) — Anthropic Engineering
->
+> 원문: [Scaling Managed Agents: Decoupling the brain from the hands](https://www.anthropic.com/research/managed-agents) — Anthropic Engineering
 > 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
 
-Anthropic은 Claude Managed Agents를 출시하여 AI 에이전트의 "두뇌"(Claude LLM 및 Harness)와 "손"(Sandbox 및 도구)을 분리하는 새로운 아키텍처를 도입했습니다. 이는 다음과 같은 핵심 이점을 제공합니다.
+Anthropic은 Claude Managed Agents를 출시하여 에이전트 아키텍처를 혁신했습니다. 이전에는 에이전트의 모든 구성 요소가 단일 컨테이너에 결합되어 있었지만, 이는 "펫(pet)"처럼 관리해야 하는 단일 실패 지점을 만들었습니다. 이로 인해 컨테이너 오류 시 세션 데이터 손실, 디버깅의 어려움, 고객 환경과의 통합 문제 등이 발생했습니다.
 
-- **Harness의 컨테이너 분리**: Harness가 더 이상 사용자 데이터와 함께 실행되지 않고 독립적으로 작동하여, 컨테이너 장애 시에도 세션이 안전하게 복구될 수 있습니다.
-- **세션 로그의 독립성**: 세션 로그를 Harness와 분리하여, Harness의 실패에도 불구하고 모든 이벤트 기록이 영구적으로 저장되고 복구 가능합니다.
-- **보안 강화**: Claude가 생성한 코드가 실행되는 샌드박스 환경에서 민감한 인증 정보(tokens)에 접근할 수 없도록 하여 보안 경계를 명확히 했습니다.
-- **유연한 컨텍스트 관리**: 세션 로그를 Claude의 컨텍스트 창 외부에서 관리되는 객체로 활용하여, 장기적인 작업에서 컨텍스트를 유연하게 저장, 재구성 및 재사용할 수 있습니다.
-- **성능 및 확장성 향상**: 두뇌와 실행 환경을 분리하여 Time-To-First-Token(TTFT)을 획기적으로 개선하고, 다수의 두뇌와 다수의 실행 환경을 효율적으로 연결할 수 있게 되었습니다.
+이 문제를 해결하기 위해 Anthropic은 에이전트의 세 가지 핵심 구성 요소인 세션(기록 로그), 하네스(Claude 호출 및 도구 라우팅), 샌드박스(코드 실행 및 파일 편집 환경)를 분리했습니다. 이러한 분리는 운영체제가 하드웨어 추상화를 통해 미래의 프로그램을 지원한 방식과 유사합니다.
+
+주요 변경 사항은 다음과 같습니다.
+
+*   **두뇌와 손의 분리**: 하네스는 더 이상 컨테이너에 상주하지 않고, 샌드박스를 다른 도구처럼 `execute(name, input) → string` 인터페이스를 통해 호출합니다. 샌드박스가 실패하면 하네스는 이를 도구 호출 오류로 처리하고 Claude에게 전달합니다.
+*   **하네스 실패 복구**: 세션 로그가 하네스 외부에 있어 하네스 실패 시 세션 데이터가 보존됩니다. 새로운 하네스는 `wake(sessionId)`를 통해 재시작되고, `getSession(id)`으로 이벤트 로그를 복구하여 이전 상태에서 작업을 재개할 수 있습니다.
+*   **보안 강화**: Claude가 생성한 코드는 자격 증명과 분리된 샌드박스에서 실행됩니다. Git 토큰은 샌드박스 초기화 시 복제되어 직접 처리되지 않으며, 사용자 지정 도구의 OAuth 토큰은 보안 저장소에 보관되고 전용 프록시를 통해 액세스됩니다.
+
+또한, 세션은 Claude의 컨텍스트 창 외부에 별도의 컨텍스트 객체 역할을 합니다. `getEvents()` 인터페이스를 통해 에이전트는 이벤트 스트림의 위치별 슬라이스를 선택하여 컨텍스트를 질의할 수 있으며, 하네스는 Claude에게 전달하기 전에 컨텍스트를 변환할 수 있습니다.
+
+이러한 분리는 여러 에이전트(두뇌)가 동시에 실행될 때 컨테이너 프로비저닝 시간을 크게 단축하여 사용자 경험을 개선했습니다. 또한, 각 에이전트가 여러 실행 환경(손)에 접근할 수 있도록 하여 더 복잡하고 유연한 작업을 가능하게 합니다.
 
 자세한 내용은 원문에서 확인하세요.

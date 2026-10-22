@@ -1,0 +1,156 @@
+ Manage Chrome safety and security - Android phone & tablet - Google Chrome Help Skip to main content 
+ Google Chrome Help 
+ Sign in 
+ Google Help 
+ Help Center
+ Community
+ Google Chrome 
+ Privacy Policy 
+ Terms of Service 
+ Submit feedback
+ Send feedback on...
+This help content & information 
+General Help Center experience 
+ Close Next 
+ Help Center 
+ Community 
+ Google Chrome 
+ Manage Chrome safety and security
+ For a more private and secure browsing experience, you can use Chrome’s safety features, like Safety Check and Safe Browsing.
+ Compromised passwords 
+ If you notice an unfamiliar activity on your account or think that your password may have been compromised, change your password immediately. Learn how to secure a compromised Google Account .
+ To change your password from another site, follow the instructions in Chrome. Learn how to manage passwords .
+ Safe Browsing protection levels 
+ With Google Safe Browsing, you get alerts about malware, risky extensions, phishing or sites on Google’s list of potentially unsafe sites. Learn how to choose Safe Browsing protection level .
+ Automatic Chrome updates 
+ To make sure you're protected by the latest security updates, when available, Chrome can automatically update to the newest browser version.  Learn how to update Chrome .
+ On-device encryption for passwords 
+ Important: Make sure you’ve already set up on-device encryption. Learn how to set up on-device encryption . 
+ Once on-device encryption is set up, you can use your Google password or the screen lock for compatible phones or tablets to unlock your password. This type of encryption means that only you have the key to unlock your passwords.
+ Run a Safety Check on an Android device
+Chrome runs Safety Check automatically to help you find and fix privacy and security problems.
+ You can review your Chrome's privacy and security with Safety Check. Safety Check searches for:
+ Compromised, reused, or weak passwords: To ensure your online security, Safety Check can warn you if a username or password stored in the Google Password Manager was involved in a data breach. Learn more about how Chrome protects your passwords .
+ Safe Browsing status: To ensure you’re protected against malware, phishing, and other risks, Safety Check can occasionally remind you to review your Safe Browsing settings. Learn more about Safe Browsing protection in Chrome .
+ Available Chrome updates: To ensure that you’re protected by the latest security updates, Safety Check can occasionally remind you to update Chrome.
+ Potentially unwanted notifications: From time to time, Chrome will remind you to review your notification permission grants.
+ Unused site permissions: To protect your data, Chrome removes permissions from sites you haven't used recently.
+ Abusive notifications: Notification permissions are removed by Chrome from sites that Google Safe Browsing finds to be deceiving users into granting the permission.
+ On your Android device, open Chrome .
+ At the top right, tap More Settings .
+ Tap Safety check .
+ If Chrome finds any issues:
+ Tap the item with the issue.
+ Follow the on-screen instructions.
+ Tip: When Safety Check takes action, Chrome will notify you if there are issues that need your attention. These messages will show up on your new tab page. You can select the item with the issue and follow the on-screen instructions.
+ Turn on Always use secure connections 
+ When a website’s URL has HTTPS, it can indicate a secure connection. Connections to sites that use HTTPS are more secure than those that don’t.
+ When you turn on Always use secure connections, Chrome upgrades URLs to use HTTPS and displays a warning before you visit a site that doesn’t support it.
+ On your Android device, open Chrome .
+ At the top right, tap More Settings Privacy and security .
+ Under “Security,” turn on Always use secure connections .
+ Select your preferred configuration:
+ Warns you for insecure public sites: Does not warn you for private sites, like your company's intranet.
+ Warns you for insecure public & private sites: Warns you for both public sites and private sites, like your company's intranet.
+ Tip: When you’re about to load a site that doesn’t use HTTPS in its URL, you'll find a “Not Secure” warning in the address bar.
+ Turn on Warn you if a password was compromised in a data breach 
+ On your Android device, open Chrome .
+ At the top right, tap More Settings Privacy and security .
+ Under “Security,” turn on Warn you if a password was compromised in a data breach .
+ Use a secure connection to look up a site’s IP address 
+ When you visit a site, Chrome looks up the site’s host server’s IP address. To protect your privacy and security, if secure Domain Name System (DNS) lookup is turned on, Chrome encrypts your information during the lookup process.
+ By default, secure DNS in Chrome is turned on in automatic mode. If Chrome has issues looking up a site in this mode, it'll look up the site in the unencrypted mode.
+ You can select a custom provider. When you select a custom provider, Chrome won't default to unencrypted mode. If you have issues, like error messages, you can check your provider setting or turn secure DNS off. The error messages may say that the server’s IP address couldn't be found.
+ Important: If your device is managed or parental controls are turned on, you can’t use Chrome’s secure DNS feature.
+ To turn secure DNS on or off:
+ On your Android device, open Chrome .
+ At the top right, tap More Settings Privacy and security .
+ Under “Security,” tap Use secure DNS .
+ Turn on or off Use secure DNS .
+ Select your current or another service provider.
+ Manage V8 security settings 
+ Important: To improve site performance, V8 optimizations are turned on by default.
+ For additional security but reduced site performance, you can turn off the “V8 optimizer.”
+ On your Android device, open Chrome .
+ At the top right, tap More Settings Privacy and security .
+ Under “Security,” tap Javascript optimization and security .
+ Turn off Javascript optimization and security .
+ Tips: 
+ You can also specify which URLs can use the V8 optimizer. To add the URL of websites that are allowed or not allowed to use V8 optimizer, tap Add site exception .
+ In the “Site settings,” you can also turn off the "V8 optimizer."
+ Android Advanced Protection mode in Chrome 
+ You can help protect Chrome browser on your Android device with Android Advanced Protection. This feature is designed to reduce the number of potential entry points for attackers, helping keep your data more secure.
+ Understand Android Advanced Protection settings
+ On your Android device, open Chrome .
+ At the top right, tap More Settings Privacy and security .
+ Tap Android Advanced Protection is on .
+ Tips: 
+ The following Chrome settings are controlled by Android Advanced Protection:
+ Always use secure connections: This feature is turned on and "Warns you for insecure public & private sites" is selected. To ensure safer browsing, Chrome automatically uses HTTPS for all website connections whenever possible.
+ Android Safe Browsing: To block phishing attacks from new malicious websites, “Android Safe Browsing Live Threat Protection” is turned on.
+ JavaScript optimization and security: When Advanced Protection is on, “JavaScript optimizations” are turned off.
+ You can turn Advanced Protection on or off in your device’s Settings app. Learn how to turn off device protection .
+ Related resources 
+ Manage passwords in Chrome 
+ Update Google Chrome 
+ Install and manage extensions 
+ Change site settings permissions 
+ Use notifications to get alerts  
+ Was this helpful?
+ How can we improve it?
+ Yes No 
+ Submit 
+ Android phone & tablet Computer iPhone & iPad More 
+ Need more help?
+ Try these next steps:
+ Post to the help community Get answers from community members 
+ true
+ Help 
+ 1 of 11
+ Manage Chrome safety and security 
+ 2 of 11
+ Check if a site's connection is secure 
+ 3 of 11
+ Manage warnings about unsafe sites 
+ 4 of 11
+ Lock or erase your lost phone or computer 
+ 5 of 11
+ Remove unwanted software & ads 
+ 6 of 11
+ Manage your location settings in Chrome 
+ 7 of 11
+ Start or stop automatically reporting errors & crashes 
+ 8 of 11
+ Check if your Chrome browser is managed 
+ 9 of 11
+ Make your account more secure 
+ 10 of 11
+ About DMA & your linked services 
+ 11 of 11
+ Manage your linked Google services 
+ ©2026 Google Privacy Policy 
+ Terms of Service 
+ Language Afrikaans‎ català‎ dansk‎ Deutsch‎ eesti‎ English (United Kingdom)‎ español‎ español (Latinoamérica)‎ Filipino‎ français‎ hrvatski‎ Indonesia‎ isiZulu‎ italiano‎ Kiswahili‎ latviešu‎ lietuvių‎ magyar‎ Melayu‎ Nederlands‎ norsk‎ polski‎ português‎ português (Brasil)‎ română‎ slovenčina‎ slovenščina‎ suomi‎ svenska‎ Tiếng Việt‎ Türkçe‎ čeština‎ Ελληνικά‎ български‎ русский‎ српски‎ українська‎ ‏ עברית ‏ العربية ‏ فارسی मराठी‎ हिन्दी‎ తెలుగు‎ ไทย‎ አማርኛ‎ 中文（简体）‎ 中文（繁體）‎ 日本語‎ 한국어‎ English‎ Enable Dark Mode
+ Send feedback on...
+ This help content & information General Help Center experience 
+ Search
+ Clear search
+ Close search
+ Google apps
+ Main menu
+ 2906090992101460896
+ true
+ Search Help Center
+ false
+ true
+ true
+ true
+ true
+ true
+ 237
+ false
+ false
+ false
+ false
+ false
+ 

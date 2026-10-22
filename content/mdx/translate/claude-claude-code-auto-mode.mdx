@@ -1,0 +1,23 @@
+---
+title: "Claude Code 자동 모드: 권한을 건너뛰는 더 안전한 방법"
+description: "Anthropic은 Claude Code에 새로운 '자동 모드'를 도입하여 권한 승인 부담을 줄이면서도 보안 위험을 낮추는 새로운 기능을 선보입니다."
+category: claude
+sourceUrl: https://www.anthropic.com/research/claude-code-auto-mode
+createdAt: 2026-03-25
+---
+
+> 원문: [How we built Claude Code auto mode: a safer way to skip permissions](https://www.anthropic.com/research/claude-code-auto-mode) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Anthropic은 Claude Code의 기본 동작인 명령 실행 및 파일 수정 전 사용자 승인 요청을 개선하기 위해 새로운 '자동 모드'를 출시했습니다. 이는 반복적인 승인으로 인한 피로를 줄이고자 설계되었으며, 수동 승인과 모든 권한 검사를 생략하는 `--dangerously-skip-permissions` 플래그 사이의 균형을 제공합니다.
+
+주요 변경 사항 및 기능은 다음과 같습니다.
+
+*   **자동 모드 도입**: 모델 기반 분류기가 사용자 승인을 대신하여 위험한 작업을 차단하고 나머지는 승인 없이 실행하도록 합니다.
+*   **이중 방어 계층**:
+    *   **입력 계층**: 서버 측 프롬프트 주입 탐지기가 도구 출력(파일 읽기, 웹 검색 등)을 스캔하여 악의적인 콘텐츠를 탐지하고 에이전트에게 경고를 전달합니다.
+    *   **출력 계층**: 스크립트 분류기가 Claude의 각 작업을 실행 전에 평가하여 인간 승인자를 대체합니다. 빠른 단일 토큰 필터와 필요한 경우에만 실행되는 연쇄적 추론(chain-of-thought reasoning)으로 구성됩니다.
+*   **위협 모델**: 과도한 열의, 단순 실수, 프롬프트 주입, 잘못 정렬된 모델 등 네 가지 위험 시나리오를 고려하여 모든 위험한 작업을 차단하도록 설계되었습니다.
+*   **결정 기준**: 분류기는 작업의 실제 영향, 사용자 의도, 환경 신뢰 경계를 평가하며, 파괴, 보안 약화, 신뢰 경계 교차, 검토 우회 등의 위험 범주를 차단합니다.
+
+이 새로운 자동 모드는 특히 `--dangerously-skip-permissions`를 사용하는 경우보다 훨씬 안전하며, 높은 수준의 자율성과 낮은 유지보수 비용을 목표로 합니다. 자세한 내용은 원문에서 확인하세요.

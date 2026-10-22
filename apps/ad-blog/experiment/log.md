@@ -8,6 +8,552 @@
 - 반영: [writing-guide.md](writing-guide.md) 글 유형별 제목 패턴·제목 규칙·뉴스 칼럼 제목·frontmatter 예시·허브 글·체크리스트, [traffic-playbook.md](traffic-playbook.md) 노하우 1·2·3·5 적용과 "따르지 않는 것"(노하우 2는 "결과를 설명·첫 문단에서 내세운다"로 변경), [README.md](README.md) 결정사항
 - 측정 규모·차별점은 설명(description)과 첫 문단에 씀
 
+## 2026-10-22 · 세션 38 (정기 실행, 영향 뉴스 세션): Apple Mail × Microsoft 365 EWS 종료
+
+세션 시각: 2026-10-22 18:10 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8c5cf9d)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-24 ~ 10-22, 세션 37 이후 바뀐 값만)**
+
+- 노출 298 → **310**, 클릭 8, CTR 2.7% → 2.6%, 평균 순위 23.4 → 23.1
+  - `image-to-text-offline-free` 43 → 45 (9.7) / `spotify-family-qr-code-verification` 25 → 29 (28.4) / `gemini-gems-to-skills` 23 → 26 (7.5) / `iphone-duo-sold-out` 5 → 7 (10.4, 클릭 1)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 14편 = 세션 37의 13편 + `remove-metadata-from-photos`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 유형 | 독창 요소 |
+| --- | --- | --- | --- |
+| `apple-mail-exchange-not-syncing` | `news` | 뉴스 칼럼 (영향) | Apple 공지(해결책은 macOS 27 향후 업데이트)와 Apple 보안 업데이트 목록(macOS 27은 Apple silicon 전용)을 맞대어 Intel Mac은 해결 계획이 없음을 확인, 앱·계정별 영향 표, Mac 종류별 선택지(Outlook for Mac 최소 macOS 14.0), Microsoft·Apple 일정 타임라인 |
+
+- 선정 근거 (최근 30일 시행·마감 있음): Microsoft가 2026-10-01부터 Exchange Online EWS를 조직별로 차단 시작, 2027-04-01 완전 종료(Exchange 팀 블로그 2026-02-05). Apple 지원 문서 149092(2026-10-13): Mac Mail·Calendar·Contacts·Notes·Reminders 동기화 중단 시 관리자 문의, Graph 전환은 "future update to macOS 27". Microsoft legacy Outlook for Mac도 2026년 10월부터 작동 중지. Google News 30일 `EWS retirement` 36건·`Apple Mail Microsoft 365 sync` 26건, 자동완성 `apple mail exchange` 22개(not syncing·not working·exchange web services). Trends 미국 1개월 `apple mail exchange` 0.0 · `outlook for mac` 4.7 · 기준 `remove background` 72.0 → 피드형
+- 제외: Samsung Messages 종료(보도상 2026-07 종료로 이미 지남, Samsung 공지는 직접 미확인), ChatGPT Atlas 종료(2026-08-09, 30일 밖), Samsung SmartThings Tracker 종료(대상 적음), Marvel Unlimited(분야 밖), Windows 11 23H2 Enterprise 종료(기업)
+- `Our take`: Intel Mac은 지금 업무 메일을 Outlook for Mac으로 옮기고, Apple silicon Mac은 Outlook을 백업으로 설정해 두고 Apple 업데이트를 기다림. 근거: Microsoft는 2023년부터 2026년 10월을 예고했는데 Apple 공지는 차단 시작 12일 뒤, 해결책은 날짜 없음·macOS 27 전용. 반대 관점: Microsoft가 실제 사용 기반으로 허용 목록을 미리 채우고 IT가 다시 켤 수 있어, 많은 사용자는 몇 달간 변화가 없을 것
+- 1차 출처: Microsoft Exchange 팀 블로그(2026-02-05, Playwright는 차단 → curl HTML에서 본문 추출), Microsoft Learn EWS 중단 문서, Microsoft 지원 legacy Outlook for Mac 종료, Apple 지원 149092·105128·116943·100100, Apple Mail 사용 설명서(계정 추가·제거), Mac App Store Outlook 페이지. Microsoft 365 업무 계정·macOS가 없어 직접 실행은 없음(본문에 문서 기반임을 밝힘)
+- 이미지: 대표 이미지(Z-Image-Turbo, 연보라 배경 + 하늘색·복숭아색, 정면 시점, `hero-image.md`) + 본문 그래픽 3장(일정 타임라인·영향 표·Mac 종류별 선택지, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → `office-2021-end-of-support`·`microsoft-365-family-storage-2tb` (2개). 역링크: `office-2021-end-of-support` "What happened" 둘째 문단 끝에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- (도구 수정) `hero_image.py`: 시스템 python3로 생성 명령을 실행하면 `/tmp/hero` venv로 다시 실행하지 않고 Pillow 오류로 끝나던 문제 수정. venv의 python이 시스템 python 링크라 `Path(sys.executable).resolve()` 비교가 항상 같아 `raise`로 빠졌음 → `sys.prefix`로 venv 여부 판단. `--setup`만 성공했던 이유는 venv가 아직 없을 때만 통과했기 때문으로 보임. `python3 -I hero_image.py --help`로 재실행 확인
+- 대표 이미지: 시드 310306084, 55.7분(lint·test·그래픽 생성과 겹침). 노트북·닫힌 문·봉투·구름 사이 다리, 새 다리 짓는 장면·연락처 카드는 빠졌지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: title 83자(접미사 포함, 본제목 71자)·description 152자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 3장 width·height 지정, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Microsoft Tech Community 블로그는 Playwright 접속이 "The request is blocked"지만, curl(`-A "Mozilla/5.0" --compressed`)로 받은 HTML 안에 본문이 JSON 문자열로 들어 있어 추출 가능. 발행일은 JSON-LD `datePublished`
+- Apple 보안 업데이트 목록(support.apple.com/100100)의 OS 행에 지원 기기 목록이 있어, macOS 버전별 지원 Mac 확인에 쓸 수 있음
+- 대기 루프에 `pgrep -f "hero_image.py …"`를 쓰면 루프 자신의 명령 문자열이 걸려 끝나지 않음(세션 37의 `pkill -f`와 같은 원인) → `pgrep -x sd-cli`나 출력 파일 존재로 판단할 것
+- outlook.office.com은 컨테이너에서 HTTP 417
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 32편. Search Console 색인 17편, 14편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Apple의 macOS 27 Graph 업데이트 출시·macOS Tahoe 26 지원 발표·Microsoft 일정 변경 시 `apple-mail-exchange-not-syncing` 갱신(`updatedAt`). H4 판정(11-19 이후): `gsc_report.py --compare /posts/apple-mail-exchange-not-syncing --changed 2026-10-22 --metric impressions --type discover`. H5 영향 칼럼 7편째(화제 5편)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 32편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 38 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+
+## 2026-10-22 · 세션 37 (정기 실행, 일반 세션): 사진 메타데이터 지우기 무료 도구 6개 측정
+
+세션 시각: 2026-10-22 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(47182a4)에서 다시 시작. 대표 이미지 규칙(2026-10-22) 적용 첫 글.
+
+**지표 (`gsc_report.py`, 2026-09-24 ~ 10-22, 세션 36 이후 바뀐 값만)**
+
+- 노출 281 → **298**, 클릭 7 → **8**, CTR 2.5% → 2.7%, 평균 순위 23.6 → 23.4
+  - `turn-off-ai-in-chrome` 97 → 101 (13.0, 클릭 2) / `image-to-text-offline-free` 42 → 43 (9.2) / `spotify-family-qr-code-verification` 21 → 25 (28.8) / `iphone-duo-sold-out` 노출 5·클릭 1 (11.8) / 홈 클릭 2
+- URL 검사: 색인 17편 그대로. `URL is unknown` 13편 = 세션 36의 12편 + `chrome-http-warning-default`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 유형 | 직접 검증 |
+| --- | --- | --- | --- |
+| `remove-metadata-from-photos` | `software` | 비교 + How-to (측정형, 검색형) | 직접 만든 테스트 사진 8장(CC0, GPS·카메라·일련번호·작성자·썸네일 등 기록, 세로 2장은 회전 태그 방식)을 ExifCleaner 4.6.0·XnConvert 1.118.0(Xvfb GUI)과 ExifRemove·Jimpl·Verexif·IMGonline(Chromium 자동 조작, 4장씩)으로 처리 → ExifTool로 남은 항목, 세로 사진 방향, 픽셀 동일 여부, 브라우저가 보낸 요청 크기(CDP)로 업로드 여부 측정 |
+
+- 선정 근거: 반복 일정 없음(Chrome 157은 11-03, Patch Tuesday 11-10). 자동완성 `remove metadata from photo` 21개(android·iphone·free·online, 3곳), `remove location from photo` 20개. Trends 미국 3개월 `photo location` 3.4 · `remove metadata` 0.4 · 기준 `remove background` 35.4. 개인정보 주제(광고 가치), 무료 GUI 앱·웹으로 해결, 컨테이너에서 직접 검증 가능
+- 결과: 6개 모두 개인 정보 제거(XnConvert는 기본값이 유지 → Preserve Metadata 해제 시). Jimpl·Verexif·IMGonline은 회전 태그까지 지워 세로 사진 2/2가 옆으로 눕고, 사진 전체를 서버로 업로드. ExifRemove는 업로드 없음·세로 사진은 고화질로 다시 저장(+20%)해 정상 방향. ExifCleaner 4.6.0은 회전·색 프로필·DPI만 남기고 픽셀 동일. 단 기본 "Save as copy"가 우리 Linux 환경에서 8장 모두 "Couldn't verify cleaned output"으로 실패 → 끄면 성공. 구버전 3.6.0은 회전 태그까지 지워 세로 사진이 누움. XnConvert는 전부 재압축(5.9~18.9% 감소, SSIM 0.98~0.996)
+- OS 내장 방법(직접 실행 못 함, 문서 기반): iPhone Share > Options > Location, Mac Photos Image > Location > Hide Location, Google Photos는 카메라가 넣은 위치를 못 지움(Pixel "Save location"·Samsung "Location tags" 끄기), Windows Properties > Details > Remove Properties and Personal Information(Windows 7 보관 문서뿐)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 7, 51.5분, 1280×720, 연노랑 배경 + 청록·코랄, 아이소메트릭. 지우개는 안 그려졌지만 주제·화풍이 맞아 그대로 사용, og:image가 이 그림에서 생성됨) + 본문 6장(결과 표·세로 사진 비교 그래픽 2 + ExifCleaner 설정·XnConvert Output 탭·ExifRemove·Jimpl 화면 캡처 4)
+- 내부 링크: 새 글 → `convert-heic-to-jpg-free`·`convert-webp-to-jpg-free`·`compress-image-to-100kb`·`check-if-image-is-ai-generated` (4개). 역링크: `convert-heic-to-jpg-free` GPS 문단 끝에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 72자(접미사 포함, 본제목 60자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 6장 width·height 지정, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 시스템 python3의 Pillow가 깨져 있음(`cannot import name '_imaging'`) → `hero_image.py --setup`이 바로 실패. `python3 -m venv /tmp/hero && /tmp/hero/bin/pip install pillow` 후 그 python으로 실행해야 함 (스크립트 docstring에 있음, 세션 프롬프트의 `python3 -I`로는 안 됨)
+- XnConvert 실행에 `libxcb-cursor0` 외에 `libxcb-icccm4`·`libxcb-image0`·`libxcb-keysyms1`·`libxcb-render-util0`·`libxkbcommon-x11-0` 등이 필요(apt). 원인은 `QT_DEBUG_PLUGINS=1`로 확인
+- Playwright `request.post_data_buffer`는 multipart 파일 업로드 본문을 비워서 보여 줌 → 업로드 여부는 CDP `Network.requestWillBeSentExtraInfo`의 `content-length`로 판정
+- GitHub Releases 최신 태그는 `releases/download/v{버전}/…` 주소에 HEAD 요청(302 = 있음, 404 = 없음)으로 찾을 수 있음 (api.github.com 403). 처음 받은 ExifCleaner 3.6.0이 최신이 아니었음 → 측정 도구는 버전 확인 후 측정
+- `pkill -f`는 같은 문자열이 든 내 셸까지 종료(exit 144) → PID(`pgrep -x`)로 종료
+- 메타데이터를 지우는 도구는 회전 태그도 함께 지우는 경우가 많음 → 이미지 처리 측정에 세로 사진(회전 태그)을 기본으로 넣을 것
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 31편. Search Console 색인 17편, 13편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: `remove-metadata-from-photos` 후속: Metadata2Go 측정, HEIC·PNG, Windows 11 내장 기능 최신 공식 문서가 있으면 반영. ExifCleaner "Save as copy" 오류가 새 버전에서 고쳐지면 문단 수정
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 31편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 37 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- (해결) 정기 실행 프롬프트 1번의 `python3 -I …hero_image.py --setup`이 컨테이너 기본 Pillow 고장으로 실패하던 문제 → 프롬프트 대신 `hero_image.py`를 고침: Pillow를 못 불러오면 `/tmp/hero` venv에 설치하고 그 python으로 자동 재실행 (같은 날 사용자 요청, 시스템 python3로 `--setup` 실행 확인)
+
+## 2026-10-22 · 규칙 보완: 대표 이미지를 무료 로컬 생성 + 2.5D 공통 화풍으로 (사용자 요청)
+
+- 사용자 결정
+  - 이미지 생성에 비용을 쓰지 않음 → Gemini·OpenAI 이미지 API 대신 무료 오픈 모델을 컨테이너에서 실행. 두 API 모두 이미지 모델에 무료 등급 없음 (Gemini 가격표: `gemini-nano-banana-2.1`·`gemini-3.1-flash-image`·`gemini-3.1-flash-lite-image`·`gemini-2.5-flash-image` 모두 Free Tier "Not available")
+  - 화풍: 모든 글 공통 2.5D 일러스트 (일관성)
+  - 화풍 보완: 화풍은 그리는 방식만 고정하고 색은 고정하지 않음 ("파스텔 톤"은 화풍, "연노란색"은 아님). 같은 사람이 그린 것처럼 보이되 결과물은 글마다 다양하게 → `STYLE`에서 특정 색(밝은 배경·파랑 강조) 삭제, 색 조합·시점은 장면 설명에서 글마다 정하고 최근 3장과 겹치지 않게
+  - 생성 결과 판단: 주제·화풍이 맞으면 장면 설명과 조금 다른 점(사물 누락 등)은 그대로 쓰고, 금지 사항·주제 불명·화풍 이탈·깨진 형태일 때만 다시 생성
+  - 예시 생성 (같은 시드 42, 이전 `STYLE`): Office 2021 칼럼 48.0분, PDF→Word 글 47.0분, 둘 다 1280×720·글자 없음. 세 번째(Chrome 칼럼)는 컨테이너 재시작으로 중단, 사용자 요청으로 추가 생성 안 함
+  - 모델: Z-Image-Turbo (사용자가 시험 결과를 보고 FLUX.2 klein 4B보다 낫다고 판단. 1장 약 47분으로 klein(약 16분)의 3배지만 품질 우선)
+- [tools/hero_image.py](tools/hero_image.py) 교체: Z-Image-Turbo(Q8_0, 8단계) + stable-diffusion.cpp `master-987-a77d362` CPU 실행, `--setup`(엔진 빌드·모델 약 10GB 다운로드, `/tmp/hero-image`), 1280×720·4단계·`--vae-tiling`, 공통 화풍·금지 조건 문구(`STYLE`)를 장면 설명 뒤에 자동으로 붙임, 시드·소요 시간 기록. API 코드는 삭제, `--from-file` 유지
+- 문서: writing-guide 대표 이미지(만드는 법·화풍·장면·확인·실패 처리), README 결정사항·세션 워크플로우 5번·인프라 상태(이미지 생성 설정됨), tests/README
+- 정기 실행 프롬프트 1번(시작 직후 `--setup` 백그라운드)·6번(2.5D 공통 화풍, 약 47분·측정과 겹치지 않게)·제약(유료 API 금지) 수정
+
+## 2026-10-22 · 규칙 변경: AI 생성 대표 이미지 + 본문 이미지 3장 이상 (사용자 요청)
+
+- 사용자 결정
+  - 모든 글 본문 맨 앞에 글 내용을 대표하는 AI 생성 그림 1장. 제목 글자로 만드는 자동 썸네일 대신 썸네일·OG 이미지로 씀 (`thumbnail` 비움)
+  - 대표 이미지를 뺀 본문 이미지 최소 3장 (모든 유형, 뉴스 칼럼 2장 → 3장). 필요하면 본문에도 AI 그림을 넣고 3장에 셈
+  - 생성 수단: Gemini·ChatGPT 이미지 모델 (로컬 오픈 모델 시험 결과를 본 뒤 결정)
+- 추가: [tools/hero_image.py](tools/hero_image.py) (Gemini `gemini-nano-banana-2.1` 또는 OpenAI `gpt-image-2.5-flare` 호출 → 16:9 자르기 → 가로 1600px 이하 WebP → `tests/{slug}/hero-image.md` 기록, `--from-file`로 웹 화면에서 받은 파일 변환). 키 없이 요청 형식·인증 오류 처리·자르기를 확인. 실제 생성은 키 등록 후 첫 세션에서 확인
+- 문서: writing-guide 이미지 섹션(대표 이미지·본문 이미지) 재작성·구조·frontmatter·체크리스트, README 결정사항·세션 워크플로우 5번·인프라 상태, traffic-playbook 7번, tests/README
+- 정기 실행 프롬프트("ToolProof 정기 글 작성") 6번(작성)·7번(검증)을 새 이미지 규칙으로 수정 ("직접 만든 그래프·스크린샷으로 채움" → 대표 이미지 + 본문 3장, 생성 실패 처리)
+- 로컬 오픈 모델 시험 (stable-diffusion.cpp `a77d362` CPU 빌드, 4코어·15GB, 1280×720, 같은 프롬프트·시드 42, Windows 11 24H2 칼럼용 장면)
+  - FLUX.2 klein 4B (Q8_0, 4단계): 959초(16분), 단계당 약 200초. 반실사 느낌, 지시한 물건은 모두 그림
+  - Z-Image-Turbo (Q8_0, 8단계): 2,797초(47분), 단계당 약 330초. 일러스트 느낌. 첫 시도는 VAE 디코딩에서 메모리 초과로 종료 → `--vae-tiling`으로 해결
+  - FLUX.1-schnell은 공식 저장소가 로그인 필요(401), GGUF 사본은 받을 수 있지만 klein보다 연산량이 커서 시험 생략
+  - 두 모델 모두 프롬프트에 "no text"가 있어도 달력에 깨진 숫자가 생김 → 글자가 생기기 쉬운 물건은 프롬프트에서 빼는 규칙 추가
+- 확인한 출처: Gemini API 이미지 생성 문서(Interactions API, 16:9 2K = 2752×1536)·가격표(2K 장당 $0.0504, 무료 등급 없음), OpenAI 이미지 생성 가이드(크기 16의 배수, `1536x864` 가능), Google 생성형 AI 콘텐츠 문서(AI 이미지 IPTC 표시는 전자상거래 상품 이미지만 요구)·Discover 문서(가로 1200px 이상, 16:9, 일반 이미지·글자 위주 이미지 피함)
+
+**다음 할 일**
+
+- (취소) API 키 등록·API 생성 확인: 같은 날 사용자가 비용을 쓰지 않기로 해 무료 로컬 생성으로 바꿈 (위 기록)
+- 기존 글 소급 적용은 하지 않음 (요청 범위: 이후 세션)
+
+## 2026-10-22 · 세션 36 (정기 실행, 화제 뉴스 세션): Chrome HTTP 경고 기본값 + Enhanced 전용 사기 경고
+
+세션 시각: 2026-10-22 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(11396d2)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 35 이후 바뀐 값만)**
+
+- 노출 258 → **281**, 클릭 7, CTR 2.7% → 2.5%, 평균 순위 23.7 → 23.6
+  - `turn-off-ai-in-chrome` 94 → 97 (13.2) / `image-to-text-offline-free` 34 → 42 (9.3) / `spotify-family-qr-code-verification` 17 → 21 (25.9) / `gemini-gems-to-skills` 22 → 23 (7.4) / `transcribe-audio-offline-free` 36 → 37
+- URL 검사: 색인 17편 그대로. `URL is unknown` 12편 = 세션 35의 11편 + `convert-webp-to-jpg-free`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                          | 카테고리 | 유형             | 독창 요소 |
+| ----------------------------- | -------- | ---------------- | --------- |
+| `chrome-http-warning-default` | `news`   | 뉴스 칼럼 (화제) | Chrome 156(Google 공식 Linux deb)을 컨테이너에서 직접 실행: HTTP 경고 창·Continue 후 재방문 무경고·새 프로필 첫 실행 스위치 꺼짐 → 재실행 시 켜짐 관찰(캡처 3장). Standard vs Enhanced 보호 수준별 기능·전송 데이터 표(대표 이미지), 2022 → 2026-10-21 타임라인 |
+
+- 선정 근거 (48시간): Google 블로그 2026-10-21 17:00 UTC "Chrome Now Warns Before Insecure HTTP Connections"(모든 사용자 기본값) + 2026-10-20 17:00 UTC "Our latest defenses against evolving web scams"(suspicious site·서버 Gemini 검사·ClickFix 경고는 Enhanced 전용). Google News 48시간 `Chrome scam protection` 40건·`Chrome insecure HTTP warning` 6건, 자동완성 `chrome enhanced protection` 17개(vs standard·turn off)·`always use secure connections` 24개. Trends 미국 7일 `chrome enhanced protection` 0.1 · 기준 `remove background` 65.6 → 피드형
+- 제외: PHP2Shell(기사 100건+로 화제성 최대지만 웹사이트 운영자·개발자 대상, 일반 독자 행동 없음), ChatGPT Ads 26개국 확대(미국 영향 없음·사업 뉴스), Google Maps CarPlay Gemini(기능 소개), Xbox Cloud Playtime(Insider 테스트), Apple Music 로고
+- `Our take`: HTTP 경고 기본값은 옳고 비용이 거의 없음(Google 수치 95%는 주간 0회, 승인한 사이트는 유지, 우리 테스트도 사이트당 1회). 약점은 가장 새로운 사기 방어가 Enhanced 뒤에 있다는 것 → 사기에 취약한 가족 Chrome은 Enhanced로. 반대 관점: Enhanced는 전체 URL을 계정에 연결해 Google에 보냄, 링크에 신중하면 Standard + HTTP 경고로 충분
+- 1차 출처: Google 블로그 3건(2025-10-28 HTTPS by default·2026-10-20·10-21, JSON-LD 발표 시각), Chrome 도움말 9890866·10468685(Desktop·Android·iOS), Chromium Dash(147: 04-07, 154: 09-22, 156: 10-20), VersionHistory API
+- 이미지 5장: 직접 만든 그래픽 2(보호 수준 표 `thumbnail`, 타임라인, `chart_style.py` 라이트 모드) + Chrome 156 직접 캡처 3(경고 창, 설정 스위치·옵션, Enhanced 설명)
+- 내부 링크: 새 글 → `turn-off-ai-in-chrome`·`windows-10-esu-extended` (2개). 역링크: `windows-10-esu-extended` "Should you enroll…" 마지막에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판단 기간이라 고치지 않음
+- 빌드 HTML 확인: title 78자(접미사 포함, 본제목 66자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개, `<pre>`·`<code>` 0개, 본문 이미지 5장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- `dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb` 다운로드 가능 → `dpkg -x`로 풀면 설치 없이 Google Chrome 안정판 실행 가능(root라 `--no-sandbox` 필요). Chromium과 달리 Google 서버 설정(variations)이 적용되어 실제 기본값을 볼 수 있음
+- Playwright `launch`의 기본 인자(`--disable-features`·`--disable-field-trial-config` 등)는 Chrome 기본 동작을 바꿈 → 기본값 확인은 Chrome을 직접 실행하고 `connect_over_cdp`로 붙여야 함
+- 새 프로필 첫 실행에는 서버 설정이 아직 없어 단계적 기본값이 꺼져 보일 수 있음 → 두 번째 실행에서 확인
+- Chrome의 HTTP 경고 창은 페이지 밖 대화상자라 CDP 스크린샷에 안 나옴 → `import -window root`(Xvfb 화면) + xdotool 클릭
+- blog.google 보안 글은 `blog.google/security/` 아래에 있고 Chrome RSS에는 안 나옴 → 관련 글 링크·WebSearch로 주소 확인
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 30편. Search Console 색인 17편, 12편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Edge·Safari·Firefox의 같은 기본값 변경, Standard 보호에 사기 경고 확대가 발표되면 `chrome-http-warning-default` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/chrome-http-warning-default --changed 2026-10-21 --metric impressions --type discover`. H5 화제 칼럼 5편째(영향 6편)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`(V3 판정 뒤 Enhanced 서버 Gemini 전환 문장 추가 검토)·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 30편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 36 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+
+## 2026-10-22 · 세션 35 (정기 실행, 일반 세션): WebP → JPG 무료 변환 5개 도구 측정
+
+세션 시각: 2026-10-22 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(d38fc84)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 34 이후 바뀐 값만)**
+
+- 노출 233 → **258**, 클릭 7, CTR 3.0% → 2.7%, 평균 순위 23.5 → 23.7
+  - `turn-off-ai-in-chrome` 89 → 94 (13.4) / `image-to-text-offline-free` 31 → 34 (9.5) / `gemini-gems-to-skills` 19 → 22 (7.5) / `spotify-family-qr-code-verification` 10 → 17 (25.2) / `transcribe-audio-offline-free` 35 → 36
+- URL 검사: 색인 17편 그대로. `URL is unknown` 11편 = 세션 34의 10편 + `gemini-free-flash-lite`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                       | 카테고리   | 유형                | 직접 검증 |
+| -------------------------- | ---------- | ------------------- | --------- |
+| `convert-webp-to-jpg-free` | `software` | 비교 (측정, 검색형) | 직접 만든 WebP 10개(CC0 사진 6·투명 그래픽 3·12프레임 애니메이션 1)를 XnConvert 1.118.0(Xvfb GUI)·GIMP 3.2.6(기본 내보내기)·ezgif·CloudConvert·iLoveIMG(Chromium 자동 조작, 계정 없음) 기본 설정으로 변환 → 크기·SSIM·투명 영역 채움색·애니메이션 처리 측정 |
+
+- 선정 근거: backlog 42번(WebP → JPG). 자동완성 `webp to jpg` 22개(converter·free·bulk·mac·cloudconvert·ezgif), `convert webp` 28개. Trends 미국 1개월 `webp to jpg` 2.4 · `webp to png` 4.3 · `heic to jpg` 9.3 · 기준 `remove background` 40.3. 반복 일정: Chrome 156은 세션 34에서 반영 완료, 다음은 157(11-03)
+- 결과: 사진은 모든 도구가 해상도 유지·SSIM 0.973 이상. JPG 크기는 WebP의 1.66배(XnConvert, 품질 85)~2.23배(iLoveIMG, 92). 투명 영역은 4개 도구가 흰색(흰 스티커 사라짐), iLoveIMG만 검은색(검은 로고 사라짐, 잘라내기 사진은 녹색 줄무늬). 배경색 선택은 ezgif만. 애니메이션: XnConvert 첫 프레임, GIMP 마지막 프레임, iLoveIMG·CloudConvert는 프레임별 JPG지만 8~9개가 잘린 조각, ezgif 서버 변환 실패(3회). iLoveIMG·CloudConvert 사진 JPG는 바이트 단위로 동일. CloudConvert는 무료 하루 10크레딧 한도에 걸려 사진 5장만
+- 이미지 5장: 투명 결과 비교(`thumbnail`)·크기 그래프·애니메이션 결과(직접 만든 그래픽, `chart_style.py`) + XnConvert JPG 설정·CloudConvert Options 화면 캡처
+- 내부 링크: 새 글 → `compress-image-to-100kb`·`convert-heic-to-jpg-free`·`remove-bg-alternative-free`·`jpg-to-pdf-free` (4개). 역링크: `convert-heic-to-jpg-free`·`compress-image-to-100kb` 마지막에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 64자(접미사 포함, 본제목 52자)·description 155자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 이미지 5장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 애니메이션 WebP는 보통 바뀐 부분만 프레임에 저장하므로, 프레임을 그대로 꺼내는 변환기(iLoveIMG·CloudConvert)는 잘린 조각을 돌려줌 → 애니메이션 변환 측정에는 libwebp 기본 인코더로 만든 파일이 현실적인 시험 재료
+- 손실 WebP의 투명 영역 아래 RGB는 인코더가 남긴 값이라, 알파를 버리는 변환기(iLoveIMG)는 그 값을 그대로 드러냄. `cwebp -exact`로 만들면 원본 사진이 그대로 보여 비현실적 → 기본 옵션으로 다시 만듦
+- XnConvert 첫 실행은 Startup Wizard가 뜨고, Qt xcb 플러그인에 `libxcb-cursor0`가 필요(apt 설치). 창 관리자(openbox) 없이도 xdotool 클릭은 동작
+- ezgif 서버 변환은 시간 초과가 잦아 2~3회 재시도 필요. 페이지 스크린샷은 웹 폰트 대기로 시간 초과 → 폰트 요청을 막으면 진행
+- CloudConvert 무료 한도(하루 10크레딧)는 애니메이션 1개가 여러 크레딧을 쓰는 것으로 보여, 측정 순서를 정할 때 애니메이션을 마지막에 둘 것
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 29편. Search Console 색인 17편, 11편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: `convert-webp-to-jpg-free` 후속 후보: `webp to png`(Trends 4.3으로 더 큼) 수요가 Search Console에 보이면 PNG 섹션 보강 또는 별도 글 검토. Windows Paint·Photos 공식 문서가 생기면 반영
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome` 소스 비교, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
+- Claude: 발행 29편
+- 대시보드 갱신 실패: `ArtifactData` `list`(stats)가 auto mode 권한 분류기에 거부됨([PII Data Handling]) → 이번 세션 데이터 미반영. 다음 세션에서 다시 시도
+
+## 2026-10-21 · 세션 34 (정기 실행, 영향 뉴스 세션): Gemini 무료 요금제 Flash-Lite 전환
+
+세션 시각: 2026-10-21 18:15 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(400dba8)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 33 이후 바뀐 값만)**
+
+- 노출 212 → **233**, 클릭 7, CTR 3.3% → 3.0%, 평균 순위 22.9 → 23.5
+  - `spotify-family-qr-code-verification` 3 → **10** (21.5, `spotify family qr code` 26~30위) / `image-to-text-offline-free` 27 → 31 (9.9) / `gemini-gems-to-skills` 18 → 19 (7.5) / `check-if-image-is-ai-generated` 26 (70.5)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 10편 = 세션 33의 9편 + `remove-bg-alternative-free`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                     | 카테고리 | 유형             | 독창 요소 |
+| ------------------------ | -------- | ---------------- | --------- |
+| `gemini-free-flash-lite` | `news`   | 뉴스 칼럼 (영향) | 요금제별 모델·사용 한도·컨텍스트 창 매트릭스(Google 문서 4곳을 한 표로, 대표 이미지), 컨텍스트 창 쪽수 환산(Google 자체 비율 1M ≈ 1,500쪽 → 무료 약 48쪽·Plus 약 192쪽, 추정임을 표시), Google 문서 간 충돌(About Gemini models는 AI Plus에 Pro 표시 vs 변경 공지·요금 페이지 미포함), 무료 사용자가 Flash·Pro에 닿는 유일한 경로(Auto) 설정 위치·응답 모델 확인법 |
+
+- 선정 근거 (최근 30일 발표·영향 지속): Gemini 도움말 17004136 "Changes to Gemini model access and limits" — 무료 10-09 시행, AI Plus는 계정별 이메일 날짜(진행 중). Google News 30일 `Gemini free Flash-Lite` 51건, 자동완성 `gemini free` 약 45개(free tier limits·free vs pro·for students), Trends 미국 1개월 `gemini free` 14.5 · 기준 `remove background` 40.0
+- 제외·보류: Samsung Messages 종료(보도 10-19, Samsung 공식 공지 미확인 → 다음 후보), WhatsApp 구형 Android 지원 종료(공식 날짜 미확인), Mac Developer ID 인증서(개발자), Windows 11 23H2 Enterprise 종료(기업), Marvel Unlimited·Discovery+(분야 밖)
+- `Our take`: 대부분 무료로 충분하지만 Auto는 켜 둘 것(끄면 전부 Flash-Lite). 진짜 손실은 긴 문서(약 48쪽) → 그 용도면 AI Plus $4.99가 가장 싼 해결(128k), Pro는 Pro·Argon·1M이 필요할 때만. AI Plus 구독자가 가장 손해(이메일로 날짜 통보, 문서끼리 충돌) → Google은 요금 페이지에 날짜를 둬야 함. 반대 관점: 무료에도 Deep Research·Canvas·연결 앱이 남아 여전히 넉넉하고, 짧은 질문은 더 빨라질 것
+- 1차 출처: Gemini 도움말 17004136·16275805(한도·컨텍스트·기능 표)·18648722(모델·Auto·thinking level)·14517446(요금제 변경), gemini.google/subscriptions(미국 가격), gemini.google/release-notes(Argon 10-13), gemini.google/students(학생 AI Pro 1년, 12-31 마감). 표의 체크 아이콘은 Playwright로 셀 이미지 alt를 읽어 확인. Gemini 앱은 로그인 불가로 실행하지 않음(문서 기반)
+- 이미지 2장 (직접 만든 그래픽 1200×675, `chart_style.py` 라이트 모드): 요금제 매트릭스(`thumbnail`), 컨텍스트 창 쪽수 비교
+- 내부 링크: 새 글 → `split-pdf-free`·`free-offline-ai-tools`·`gemini-gems-to-skills`·`gemini-android-auto-personal-intelligence` (4개). 역링크: `gemini-gems-to-skills` "Should you move your Gems now?" 마지막에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 71자(접미사 포함, 본제목 59자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**추가 작업 (사용자 요청): `turn-off-ai-in-chrome` Chrome 156 재검증**
+
+- Chrome 156(10-20 안정판, VersionHistory API 156.0.8078.48)과 글의 기준 155.0.8059.40을 소스로 비교: 글에 쓴 정책 10개 + `BuiltInAIAPIsEnabled` 정의 파일 완전히 동일, 설정 문구(`settings_strings`·`compose_strings`) 변화 없음, 설정 페이지는 Polymer → Lit 이전(코드만, 토글·pref 동일), 페이지 제목 "AI innovations" 유지. 바뀐 것은 글에 없는 Gemini Spark 원격 브라우징 문구·단축키 범위 옵션, 기본 꺼진 Gemini Enterprise 하위 페이지뿐
+- 글 수정: 설명·첫 문단의 현재 버전 155 → 156, 재검증 문단 1개, How we checked에 156 비교. 단계·라벨·정책 변경 없음 → `updatedAt` 유지. 근거는 `tests/turn-off-ai-in-chrome/factcheck.md` "Chrome 156 recheck"
+- traffic-playbook 검증 기록 V3 추가(노하우 4, position, 판단 2026-11-18). Chrome 157(11-03)은 출시 후 같은 방법으로 비교
+- (사용자 요청) 같은 글에 이미지 0 → 4장: 끄는 방법 한눈에 보기(`thumbnail`), 온디바이스 모델 삭제 흐름, 레지스트리 위치(직접 만든 그래픽 3장, `chart_style.py`) + Chromium 141 `chrome://policy`에 예시 정책 3개를 실제로 넣고 찍은 캡처(모두 Status OK). 같은 배포라 V3에 함께 기록. 대표 이미지가 생겨 Discover·이미지 검색 노출 조건(가로 1200px 대표 이미지)도 충족
+
+**알게 된 것**
+
+- support.google.com 도움말의 체크 표시 표는 이미지 아이콘이라 정적 텍스트로는 안 보임 → Playwright로 셀 `img`의 `alt`("Checkmark" vs 빈 alt)를 읽으면 요금제별 제공 여부를 확인할 수 있음
+- 언론 기사가 출처로 든 도움말 번호(Engadget → `answer/17004136`)를 직접 열면 보도만 있던 시행일을 1차 출처로 확인할 수 있음
+- Google 도움말끼리도 갱신 시점이 달라 내용이 충돌할 수 있음(18648722 vs 17004136) → 충돌은 숨기지 않고 본문에 밝힘
+- web.archive.org는 프록시에서 연결 리셋(사용 불가), one.google.com 요금 페이지는 Chromium 렌더링에서도 가격이 나오지 않음
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 28편. Search Console 색인 17편, 10편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: AI Plus 시행일 공개·한도 변경·문서 충돌 해소 시 `gemini-free-flash-lite` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/gemini-free-flash-lite --changed 2026-10-21 --metric impressions --type discover`. H5 영향 칼럼 6편째(화제 4편)
+- Claude: Samsung Messages 종료 공식 공지 확인 (다음 뉴스 세션 후보)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome` 소스 비교(156 재검증 완료, 같은 방법), 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: 발행 28편
+
+## 2026-10-21 · 세션 33 (정기 실행, 일반 세션): remove.bg 종료 → 무료 대안 측정
+
+세션 시각: 2026-10-21 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(ddbfbd0)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-23 ~ 10-21, 세션 32 이후 바뀐 값만)**
+
+- 노출 198 → **212**, 클릭 7, CTR 3.5% → 3.3%, 평균 순위 23.5 → 22.9
+  - `turn-off-ai-in-chrome` 노출 85 → 89, **클릭 1 → 2** (12.2) / `image-to-text-offline-free` 23 → 27 (10.3) / `transcribe-audio-offline-free` 34 → 35 / `gemini-gems-to-skills` 16 → 18 (7.6) / `spotify-family-qr-code-verification` 1 → 3 (29.7)
+- URL 검사: **색인 16 → 17편** (`merge-pdf-files-free` 새로 색인, 크롤링 10-20 21:59 UTC). `URL is unknown` 9편 = 세션 32의 9편 − `merge-pdf-files-free` + `gemini-android-auto-personal-intelligence`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                         | 카테고리   | 유형                    | 직접 검증 |
+| ---------------------------- | ---------- | ----------------------- | --------- |
+| `remove-bg-alternative-free` | `software` | 비교 (측정, 검색형) | 웹 도구 4개(remove.bg·iLoveIMG·removal.ai·Pixlr)를 Chromium으로 직접 조작해 AIM-500 20장(정답 알파 매트) 처리 → 정확도(IoU)·경계 오차·무료 다운로드 해상도 측정. Pixlr는 하루 무료 저장 3회 한도에 걸림(우회 안 함) |
+
+- 선정 근거: backlog 10번(배경 제거, 2026-10-17 명령줄 글 삭제 후 GUI·웹으로 새로 쓸 후보). 조사 중 remove.bg 업로드 화면에서 **독립 웹사이트 2026-12-01 09:00 CET 종료**(Canva로 이전) 공지를 발견 → 대체 수요 각도로 정함. Trends 미국 1개월 `remove background` 40.0 · `background remover` 21.2 · `remove bg` 14.4 (기준 키워드 자체가 최대 수요군). 자동완성 `remove.bg alternative` 14개(free·hd·reddit), `remove bg free` 28개(hd·high quality·no sign up). Google News 30일 `"remove.bg" Canva` 2건 → 경쟁 공백
+- 결과: 깨끗한 컷아웃(IoU ≥ 0.95) remove.bg 19/20 · removal.ai 18 · iLoveIMG 17, 실패는 모두 식물. 무료 다운로드는 iLoveIMG만 원본 크기(1.75MP)·무가입, remove.bg·removal.ai는 약 0.25MP 미리보기, Pixlr는 원본이지만 하루 3회. 경계 오차는 iLoveIMG가 가장 큼(8.4% vs 5.5~6.2%)
+- 반복 일정: Chrome 156(10-20) `turn-off-ai-in-chrome` 반영 검토는 이번에도 새 글 우선으로 이월
+- 이미지 6장: 그래프 2(무료 다운로드 크기 `thumbnail`, 정확도) + 퍼블릭 도메인 사진 결과 비교 1 + 사이트 화면 3(remove.bg 종료 배너·미리보기 메뉴, removal.ai 다운로드 버튼, Pixlr 한도 팝업). AIM-500 사진은 저작권 때문에 공개하지 않고 수치만 씀
+- 내부 링크: 새 글 → `convert-heic-to-jpg-free`·`compress-image-to-100kb`·`best-free-pdf-tools`·`free-offline-ai-tools`·`check-if-image-is-ai-generated` (5개). 역링크: `compress-image-to-100kb`·`convert-heic-to-jpg-free` 마지막에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 68자(접미사 포함, 본제목 56자)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, `<pre>`·`<code>` 0개, 본문 이미지 6장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- remove.bg·iLoveIMG·removal.ai·Pixlr 웹 화면은 Playwright(Python) + `/opt/pw-browsers/chromium-1194`로 업로드·다운로드까지 자동 조작 가능. Photoroom은 업로드 버튼이 반응하지 않았고(파일 선택 창 안 열림), canva.com은 curl·Chromium·WebFetch 모두 403/차단 페이지 → Canva 무료 요금제 포함 여부는 확인 불가로 씀
+- 정답 마스크가 있는 공개 데이터셋(AIM-500, MIT)으로 웹 도구 출력도 점수화할 수 있음. 단 사진 저작권은 원저작자라 글에는 퍼블릭 도메인 예시(scikit-image)만 사용
+- 웹 도구의 무료 한도는 직접 돌려 봐야 드러남(Pixlr 하루 3회는 가격 페이지에 없음). 한도에 걸리면 우회하지 않고 그 자체를 결과로 씀
+- `pip install playwright pyarrow`는 `/tmp/gsc` venv에서 수 분 걸림 → 백그라운드 타임아웃 주의
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 27편. Search Console 색인 17편, 9편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: remove.bg 종료(12-01) 전후 변화(Canva 무료 제공 범위 발표, 일정 변경)가 있으면 `remove-bg-alternative-free` 갱신(`updatedAt`). canva.com 접근이 되면 무료 요금제 포함 여부 확인. 12-01 이후 remove.bg 화면 스크린샷·설명 갱신
+- Claude: Chrome 156(10-20)·157(11-03) 반영 여부 검토 (`turn-off-ai-in-chrome`, 3세션 이월), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: 발행 27편
+
+## 2026-10-21 · 세션 32 (정기 실행, 화제 뉴스 세션): Android Auto Gemini Personal Intelligence
+
+세션 시각: 2026-10-21 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(c37cdc1)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 31 이후 바뀐 값만)**
+
+- 노출 189 → **198**, 클릭 7, CTR 3.7% → 3.5%, 평균 순위 24.0 → 23.5
+  - `turn-off-ai-in-chrome` 노출 84 → 85 (12.5) / `image-to-text-offline-free` 21 → 23 (11.0) / `transcribe-audio-offline-free` 32 → 34 (45.6) / `gemini-gems-to-skills` 15 → 16 (7.9)
+  - 첫 노출: `spotify-family-qr-code-verification` 1회(2.0), `/categories/news` 1회(2.0)
+- URL 검사: 색인 16편 그대로. `URL is unknown` 9편 = 세션 31의 8편 + `best-free-pdf-tools`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                                        | 카테고리 | 유형             | 독창 요소 |
+| ------------------------------------------- | -------- | ---------------- | --------- |
+| `gemini-android-auto-personal-intelligence` | `news`   | 뉴스 칼럼 (화제) | 차 안 답변 데이터 흐름도(연결 앱 6종 → 음성 답변·활동 기록, 대표 이미지), 설정별 효과 표(앱 연결 해제·채팅 삭제·Keep Activity 끄기: "앞으로 사용 중지" vs "이미 가진 정보 삭제"), 사용자 유형별 영향 표, Google 문서끼리 연결한 분석(설정이 계정 전체로 차에 따라옴 + 차 안 누구나 Gemini 사용 가능 → 동승자 위험, 차 전용 스위치 없음) |
+
+- 선정 근거 (48시간): Google 공식 블로그 2026-10-20 20:00 UTC 발표. Google News RSS `Gemini Android Auto` 47건 · `"Personal Intelligence"` 18건. 자동완성 `gemini android auto` 22개(update·rollout·settings·not working), `gemini personal intelligence` 19개(privacy·settings). Trends 미국 7일 `gemini android auto` 0.1 · 기준 `remove background` 68.1 → 검색량은 작음, 피드형
+- 제외: Xbox Game Pass(Trends 급상승 200+, 기사 100건이지만 신규 게임 소식 + 개편은 소식통 보도), CISA(정치), iOS 27.2 RC(정식 전), Walmart+ 번들(분야 밖), Google 금융 광고 인증(광고주 대상). Google 광고에 Gmail·Photos 정보 사용은 여전히 공식 발표 없음 → 보류 유지
+- `Our take`: 기본값(옵트인)은 괜찮지만 설정이 계정 전체 하나라 차에 그대로 따라오고, Google 도움말상 차 안 누구나 Gemini를 쓸 수 있음 → 동승자 위험. Workspace·Search services만 연결하고 Wallet·Contacts·Photos는 빼라. Google은 차 전용 스위치를 둬야 함. 반대 관점: 혼자 운전하면 휴대폰을 집는 것보다 안전하고, 학습·검토 규칙은 휴대폰과 같음
+- 1차 출처: Google 블로그(10-20), Gemini 도움말 16598406(연결·관리·삭제)·16836988(데이터 사용·학습·사람 검토)·16735982(차 안 Gemini)·13278892(활동 기록·자동 삭제 18개월·72시간), Android Auto 도움말 6348083, gemini.google Personal Intelligence 페이지. 모두 curl 정적 HTML. Android Auto는 컨테이너에서 실행할 수 없어 문서 기반(본문에 밝힘)
+- 이미지 2장 (직접 만든 그래픽 1200×675, `chart_style.py` 라이트 모드): 데이터 흐름도(`thumbnail`), 설정별 효과 표
+- 내부 링크: 새 글 → `gemini-gems-to-skills`·`turn-off-ai-in-chrome` (2개). 역링크: `gemini-gems-to-skills` "Should you move your Gems now?" 마지막 문단에 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 86자(접미사 포함, 본제목 74자)·description 160자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- support.google.com 도움말은 curl(브라우저 UA)로 본문 전체가 열림. `?p=b_pi_ca` 같은 단축 링크는 `answer/16836988`로 리디렉트
+- blog.google 글은 정적 HTML의 JSON-LD `datePublished`로 발표 시각(UTC)을 확인할 수 있음 → 화제 세션 48시간 판단에 사용
+- Google News RSS 기사 수는 `<item>` 개수로 세야 함 (한 줄짜리 XML이라 `grep -c`는 1이 나옴)
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 26편. Search Console 색인 16편, 9편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Google built-in 차 배포·차 전용 설정 추가·연결 앱 확대가 발표되면 `gemini-android-auto-personal-intelligence` 갱신(`updatedAt`). H4 판정(11-18 이후): `gsc_report.py --compare /posts/gemini-android-auto-personal-intelligence --changed 2026-10-20 --metric impressions --type discover`. H5 화제 칼럼 4편째(영향 5편)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후), PDF 글 색인 여부 확인
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월, 이번 글과 같은 Personal Intelligence 주제 → 확인되면 이 글 갱신 또는 새 칼럼)
+- Claude: 발행 26편
+
+## 2026-10-21 · 세션 31 (정기 실행, 일반 세션): PDF 허브 글
+
+세션 시각: 2026-10-21 00:17 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(7971743)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 30 이후 바뀐 값만)**
+
+- 노출 184 → **189**, 클릭 7, CTR 3.8% → 3.7%, 평균 순위 24.6 → 24.0
+  - `turn-off-ai-in-chrome` 노출 83 → 84 (12.5) / `image-to-text-offline-free` 20 → 21 (10.0)
+- URL 검사: 색인 16편 그대로. `URL is unknown` 8편 = 세션 30의 7편 + `office-2021-end-of-support`(PDF 글 5편 `compress-pdf-free`·`merge-pdf-files-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`split-pdf-free` 포함)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                  | 카테고리   | 유형                       | 독창 요소 |
+| --------------------- | ---------- | -------------------------- | --------- |
+| `best-free-pdf-tools` | `software` | 허브 (비교, 검색형) | PDF 측정 글 6편(나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축)의 결과를 모은 작업별 추천 매트릭스(대표 이미지), 도구별 담당 작업 수 그래프, 기본값 함정 7개 표, 무료판 한도·업로드 여부 표, Sejda 3회/일이 앱 전체 공유라는 점에서 나온 설치 조합 추천(Windows: PDFsam + PDF Arranger + iLovePDF) |
+
+- 선정 근거: traffic-playbook 3번(같은 분야 측정 글 3편 이상 → 허브) + 세션 27·29·30 다음 할 일 "PDF 허브 글 우선 검토". 자동완성 `free pdf tools` 23개(Google·Bing·YouTube: for windows·online·download), `best free pdf` 27개(editor·reader·converter·compressor·merger·software). Trends 미국 1개월 `free pdf tools` 0.7 · `pdf editor free` 4.8 · `compress pdf` 5.2 · 기준 `remove background` 35.9 → 허브 자체 수요는 작지만, 미색인 PDF 글 5편으로 가는 내부 링크 경로를 늘리는 목적을 겸함
+- 반복 일정: Chrome 156(10-20 미국 시간) → 이번 세션은 새 글 우선, `turn-off-ai-in-chrome` 반영 검토는 다음 일반 세션으로 이월
+- 새 측정 없음(개별 글 측정 재사용). 이번 세션 1차 출처로 현재 버전·무료 한도 재확인: PDFsam Basic 6.0.6, GIMP 3.2.6, LibreOffice 26.8.1, PDF Arranger 1.14.0(Flathub), Sejda Desktop 무료 한도(3 tasks/day·50MB·200쪽·합치기 30개 50쪽·압축 100MB·변환 1개씩), iLovePDF 무료 파일 크기(Word 15MB·JPG 25MB·합치기/나누기 100MB·압축 200MB, Premium 연 $60), PDF24 "No artificial limits"·1시간 후 삭제
+- 이미지 6장: 새 그래픽 2장(작업별 추천 매트릭스 `thumbnail`, 도구별 작업 수, `chart_style.py` 라이트 모드) + 개별 글 측정 이미지 4장 재사용(`./images/{다른 slug}/…` 경로도 빌드에서 width·height 정상)
+- 내부 링크: 새 글 → PDF 글 6편 + `image-to-text-offline-free` (7개). 역링크: PDF 글 6편 마지막 문단 뒤 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 61자(접미사 포함, 본제목 49자)·description 156자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 이미지 6장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 다른 글 폴더의 이미지(`./images/split-pdf-free/…`)를 새 글에서 그대로 참조해도 `/_static/mdx/posts/images/…`로 해석되고 크기도 지정됨 → 허브 글은 측정 이미지를 복사하지 않고 재사용 가능
+- matplotlib 막대(`rounded_barh`)는 y축을 `set_ylim(큰 값, 작은 값)`으로 뒤집으면 모서리 보정이 깨져 흰 사각형이 생김 → 축은 정방향으로 두고 y 위치를 거꾸로 배치
+- 컨테이너 기본 python에는 matplotlib이 없음 → `/tmp/gsc` venv에 `matplotlib pillow` 설치 후 실행
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 25편. Search Console 색인 16편, 8편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 허브 글은 새 PDF 측정 글이 생기면 섹션·매트릭스를 갱신하고 `updatedAt`·제목 시점 표기 검토. PDF 글 5편 색인 여부 다음 세션에서 확인(허브 링크 효과 참고용)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: 발행 25편
+
+## 2026-10-20 · 세션 30 (정기 실행, 영향 뉴스 세션): Office 2021 지원 종료
+
+세션 시각: 2026-10-20 18:16 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(d50d0ab)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 29 이후 바뀐 값만)**
+
+- 노출 166 → **184**, 클릭 6 → **7**, CTR 3.6% → 3.8%, 평균 순위 24.8 → 24.6
+  - `turn-off-ai-in-chrome` 노출 75 → 83 (12.6) / `image-to-text-offline-free` 14 → 20 (10.2), **클릭 1** / `check-if-image-is-ai-generated` 20 → 22 (70.7) / `transcribe-audio-offline-free` 31 → 32 (47.5)
+  - 새 검색어: `free ocr offline`(7.0), `image to text offline`(6.0)
+- URL 검사: 색인 16편 그대로. `URL is unknown` 7편(세션 29의 6편 + `compress-pdf-free`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                         | 카테고리 | 유형             | 독창 요소 |
+| ---------------------------- | -------- | ---------------- | --------- |
+| `office-2021-end-of-support` | `news`   | 뉴스 칼럼 (영향) | 일회성 구매 Office 버전별 지원 타임라인(대표 이미지), Office 2024 종료(2029-10-09)까지 3년 비용 비교(무료 웹 $0·Home 2024 1대 $179.99·Personal $299.97·Family $389.97·Home 2024 3대 $539.97)와 PC 대수별 손익분기(2대 $359.98 vs Family $389.97), Office Home 2024 가격 출시 $149.99 → 현재 $179.99, 사용자 유형별 영향 표 |
+
+- 선정 근거 (최근 30일 발표·영향 지속): Microsoft 지원 문서 "Support for Office 2021 ended on October 13, 2026… no extension and no extended security updates". Google News 30일 `"Office 2021"` 34건·`"Office 2024"` 44건, 자동완성 `office 2021 end of support` 13개(Google·Bing·YouTube: date·end of life·mac·ltsc), Trends 미국 1개월 `office 2021` 3.3 · `office 2024` 9.1 · 기준 `remove background` 35.3
+- 제외·보류: Google 광고 Gmail·Photos 정보 사용(여전히 보도만, 공식 발표 없음 → 보류 유지), Edge 재시작 없는 업데이트(테스트 단계), Discovery+ 가격 인상(분야 밖), Pixel 6 지원 종료(공식 날짜 미확인)
+- `Our take`: PC 1대·데스크톱 앱이 꼭 필요하면 Office Home 2024가 3년 기준 가장 쌈(연 약 $60 vs Personal $99.99)이지만 Outlook 없음·출시 대비 $30 인상·2029년 같은 상황 반복. 3대 이상 가구는 Family가 쌈. 가끔 쓰는 사람은 무료 웹 앱부터. 반대 관점: 오프라인에서 자기 문서만 편집하는 PC는 당분간 써도 위험이 낮음(Outlook 2021이 메일함이면 해당 없음)
+- 1차 출처: Microsoft Support "End of support for Office 2021"·버전 확인 문서, Microsoft Learn Lifecycle(Office 2021·2024·2019, 2025·2026 종료 목록), Microsoft 365 요금 비교 페이지(curl 브라우저 UA로 정적 HTML 확인, WebFetch 교차 확인), Microsoft 365 블로그 Office 2024 출시 글(2024-09-30), 무료 웹 앱 페이지, libreoffice.org 다운로드. Office는 컨테이너에서 실행할 수 없어 문서 기반(직접 실행 표현 없음), LibreOffice는 세션 27 측정 재사용
+- 이미지 2장 (직접 만든 그래픽 1200×675, `chart_style.py` 라이트 모드): 버전별 지원 타임라인(`thumbnail`), 3년 비용 비교
+- 내부 링크: 새 글 → `pdf-to-word-free`·`microsoft-365-family-storage-2tb`·`windows-10-esu-extended`·`windows-11-24h2-end-of-support` (4개). 역링크: `windows-11-24h2-end-of-support` 마지막 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 70자(접미사 포함, 본제목 58자)·description 152자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap·RSS 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Microsoft Learn Lifecycle 표의 종료 시각은 `다음 날 06:59:59 AM`으로 적혀 있음(예: Office 2021 `10/14/2026 6:59:59 AM` = 공지상 10-13 종료) → 날짜는 하루 전으로 읽어야 함. 제품 페이지 주소는 `office-2021`·`office-2024`·`microsoft-office-2019`처럼 버전마다 다름(`office-2019`는 404)
+- microsoft.com 요금 페이지는 기본 curl UA는 403이지만 브라우저 UA + `--compressed`로 정적 HTML(가격 포함)을 받을 수 있음. 제품 상세 페이지(`/p/office-home-2024/…`)는 가격이 스크립트로 그려져 정적 HTML에 없음
+- 컨테이너에 pnpm 의존성이 설치되어 있지 않을 수 있음 → `pnpm install --frozen-lockfile` 후 lint
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 24편. Search Console 색인 16편, 7편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Office Home 2024·Microsoft 365 가격 변경이나 Office 2021 관련 Microsoft 공지가 있으면 `office-2021-end-of-support` 갱신(`updatedAt`). H4 판정(11-17 이후): `gsc_report.py --compare /posts/office-2021-end-of-support --changed 2026-10-20 --metric impressions --type discover`. H5 영향 칼럼 5편째(화제 3편)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28부터 이월)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 22·19·20 → 23·20·21). 첫 `dashboard_data.py` 실행에서 URL 검사 API 500(일시 오류) → 재실행으로 해결. `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 24편
+
+## 2026-10-20 · 세션 29 (정기 실행, 일반 세션): PDF 압축 무료 도구 3개 측정
+
+세션 시각: 2026-10-20 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a9b2a5d)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-22 ~ 10-20, 세션 28 이후 바뀐 값만)**
+
+- 노출 157 → **166**, 클릭 5 → **6**, CTR 3.2% → 3.6%, 평균 순위 25.1 → 24.8
+  - `turn-off-ai-in-chrome` 노출 72 → 75 (11.3) / `gemini-gems-to-skills` 14 → 15 (7.8), **클릭 1** / `check-if-image-is-ai-generated` 17 → 20 (69.8) / `image-to-text-offline-free` 13 → 14 (12.6) / `transcribe-audio-offline-free` 30 → 31 (48.8)
+- URL 검사: **색인 12 → 16편** (새로 색인: `apple-siri-settlement-claim`·`iphone-duo-sold-out`·`spotify-family-qr-code-verification`·`windows-11-24h2-end-of-support`, 크롤링 10-19 22시~10-20 01시 UTC). `URL is unknown` 6편: `compress-video-for-discord-email`·`merge-pdf-files-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`pixel-watch-safety-signal-ending`·`split-pdf-free`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                | 카테고리   | 유형                           | 직접 검증 |
+| ------------------- | ---------- | ------------------------------ | --------- |
+| `compress-pdf-free` | `software` | 비교 + How-to (측정형, 검색형) | 삭제한 명령줄 글과 같은 PDF 4개(사진 39.6MB·스캔 7.1MB·스크린샷 슬라이드 1.4MB·텍스트 86KB)를 **iLovePDF 웹 3단계·PDF24 웹(기본값 + DPI 100·품질 60)·Sejda PDF Desktop 7.9.10 무료판(GUI, 기본값, 3개)**으로 압축해 크기·남은 해상도·OCR 판독률·링크·텍스트 층 확인 |
+
+- 선정 근거: backlog 36번(PDF 압축, 2026-10-17 명령줄 글 삭제 후 GUI로 새로 쓸 후보), Trends `compress pdf` 4.8(10-16 기록, PDF 남은 후보 중 최대). 자동완성 "compress pdf" 31개(file·free·online·on mac·i love pdf·pdf24·extreme·to 1mb·without losing quality)
+- 반복 일정: Chrome 156은 10-20(미국 시간, 세션 시점 미출시), Windows 11-10 → 해당 없음
+- 결과: 사진 PDF는 세 도구 기본값 모두 1MB 미만(iLovePDF Recommended 0.80·Sejda 0.94·PDF24 0.99MB, 사진 약 150ppi). 스캔은 Recommended 1.23MB(150ppi)·PDF24 1.41·Sejda 1.43MB(144ppi), OCR 모두 100%. 스크린샷 슬라이드는 Sejda 99%("already very well compressed")·PDF24 89%·Recommended 74%. Extreme은 72ppi로 스캔 0.44MB(OCR 99.1%)·슬라이드 0.39MB(작은 글자 OCR 93.1%). PDF24 DPI 100·품질 60은 스캔 0.75MB(OCR 100%)·슬라이드 0.62MB(98.7%). iLovePDF Less는 JPEG 2000으로 저장, 스캔 61%. 링크·텍스트 층은 모두 유지
+- 추천: 대부분 iLovePDF Recommended, 크기 제한 맞추기는 PDF24(DPI·품질 입력), 업로드하기 싫으면 Sejda Desktop(작업당 1개·하루 3회). Mac Preview는 Apple 문서 기반(요약 표 "Not tested")
+- 이미지 9장(대표 크기 그래프 1200×675 + 스캔·작은 글자 확대 비교 2 + iLovePDF·PDF24·Sejda 화면 각 2), 요약 표·결과 표. 디자인 시스템 라이트 모드(`chart_style.py`) 첫 측정 글 적용
+- 내부 링크: 새 글 → `split-pdf-free`·`merge-pdf-files-free`·`pdf-to-word-free`·`pdf-to-jpg-free`·`compress-image-to-100kb` (5개). 역링크: `merge-pdf-files-free`·`split-pdf-free` 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 59자(접미사 포함, 본제목 47자)·description 155자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, `<pre>`·`<code>` 0개, 본문 이미지 9장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- Sejda Desktop 무료판은 압축에서도 작업당 파일 1개(여러 개 선택 시 처리 후 업그레이드 화면, 작업 횟수는 안 깎인 것으로 보임: 그 뒤 3개 성공 후 4번째에 한도 화면). 저장 대화상자 이름 칸에 전체 경로를 입력하면 원하는 폴더에 저장됨
+- iLovePDF 압축 화면은 옵션 패널 마크업이 요청마다 달라짐(`li[data-value]` 대문자 화면 / 소문자 문구 화면) → 문구(`get_by_text`)로 고르면 안정적. 결과 화면 크기는 이진 MB(37.73 MB = 39.6 MB)
+- PDF24 Tools 웹은 결과·Download 버튼이 `job-monitor` iframe 안에 있음 → `frame_locator("iframe[src*=job-monitor]")`. 업로드 중에는 Compress 버튼이 비활성이라 활성화까지 기다려야 함. 페이지에 광고가 있어 화면 캡처는 광고 영역을 잘라냄
+- 네트워크: tools.pdf24.org·ilovepdf.com·smallpdf.com·adobe.com·support.apple.com 가능, sejda.com은 curl 403·WebFetch 가능, pd12m S3·dl.flathub.org 가능
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 23편. Search Console 색인 16편(이번 세션 4편 증가), 6편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 새 글 노출 검색어 확인 (`compress pdf free`, `compress pdf to 1mb`, `compress pdf without losing quality`). Sejda 텍스트 보고서·Good/Best는 하루 3회 제한으로 미측정
+- Claude: PDF GUI 글 6편(나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word·압축)이 모였으므로 PDF 허브 글(`Best Free PDF Tools (Tested)`) 우선 검토 (traffic-playbook 3번)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 칼럼 H4 판정(11-16 이후)
+- Claude: Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (세션 28에서 이월)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 21·18·19 → 22·19·20). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 23편
+
+## 2026-10-20 · 세션 28 (정기 실행, 화제 뉴스 세션): Spotify Family QR 코드 인증
+
+세션 시각: 2026-10-20 06:15 KST → 화제 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(f33bc6e)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-21 ~ 10-19, 세션 27 이후 바뀐 값만)**
+
+- 노출 152 → **157**, 클릭 5, CTR 3.3% → 3.2%, 평균 순위 25.2 → 25.1
+  - `turn-off-ai-in-chrome` 노출 69 → 72 (11.4) / `check-if-image-is-ai-generated` 15 → 17 (76.9) / `image-to-text-offline-free` 12 → 13 (13.0) / `transcribe-audio-offline-free` 29 → 30 (48.7)
+- URL 검사: **색인 8 → 12편** (새로 색인: `convert-heic-to-jpg-free`·`iphone-handoff-verizon-cost`·`jpg-to-pdf-free`·`microsoft-365-family-storage-2tb`, 크롤링 10-19 17~20시 UTC). `URL is unknown` 9편: `apple-siri-settlement-claim`·`compress-video-for-discord-email`·`iphone-duo-sold-out`·`merge-pdf-files-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`pixel-watch-safety-signal-ending`·`split-pdf-free`·`windows-11-24h2-end-of-support`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug                                  | 카테고리 | 유형             | 독창 요소 |
+| ------------------------------------- | -------- | ---------------- | --------- |
+| `spotify-family-qr-code-verification` | `news`   | 뉴스 칼럼 (화제) | QR 인증 기한·결과 흐름도(대표 이미지), 요금제별 1인당 월 요금과 Individual 전환 시 연간 추가 비용(6인 Family $3.67 → $12.99, 연 $111.90), 사용자 유형별 영향 표, Spotify 문서끼리의 차이(주소 인증 실패는 같은 플랜 재가입 가능 명시 vs QR 항목엔 없음, Duo 문서엔 QR 없음) |
+
+- 선정 근거 (48시간, Google News RSS): `Spotify QR code family` 11 · `Spotify Premium Family` 37 (모두 10-19). Trends 미국 7일 `spotify family` 9.9(최고 24) · `spotify qr code` 0.1(최고 11) · 기준 `remove background` 65.9. 자동완성 "spotify family plan" 31개(address verification·different address·not working 등)
+- 발표 시점: Spotify 공식 발표 없음. 지원 문서 `updatedAt` 10-07, 사용자 알림 보도 10-19(9to5Google, Reddit 인용) → 보도·배포 시점으로 48시간 판단
+- 제외·보류: "Google이 Gmail·Photos 정보로 광고 타기팅"(Techlicious 10-19, 기사 3~4건, Google 공식 발표 미확인 → 다음 뉴스 세션에서 재확인), Windows 11 10월 업데이트 Smart App Control 차단(1건, Microsoft 문서 미확인), iOS 27.2 RC(정식 배포 전), Amazon Alexa Tablet(신제품 소개), Netflix·Spotify 실적(업계 뉴스)
+- `Our take`: 규칙(같은 주소)은 그대로지만 증명 방식이 "주소 입력 → 7일 안 대면 스캔"으로 바뀌어 놓쳤을 때 12개월 차단을 피하기 어려워짐. 함께 사는 가구는 알림 즉시 스캔, 떨어져 사는 구성원(대학생 등)은 알림 전에 Student·Individual로 옮기는 편이 안전. Spotify는 연장·이의 절차를 공개해야 함. 반대 관점: "일부" 구성원만 대상이고 실제 가구에는 몇 초짜리 확인
+- 우회 방법(영상 통화 등 보도)은 약관 위반이라 다루지 않음
+- 1차 출처: Spotify 지원 문서(Family 주소·인증, Family plan, Duo 주소·인증, 플랜 변경), Paid Subscription Terms 2.2.1, spotify.com/us/premium 요금. 모두 curl 정적 HTML(지원 문서는 `__NEXT_DATA__`의 `updatedAt`까지 확인)
+- 이미지 2장 (직접 만든 그래픽 1200×675): 인증 흐름도(`thumbnail`), 1인당 요금·연간 추가 비용. 팔레트는 기존 글과 같은 파랑·주황
+- 내부 링크: 새 글 → `microsoft-365-family-storage-2tb`·`iphone-handoff-verizon-cost`. 역링크: `microsoft-365-family-storage-2tb` 마지막 문단에 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 84자(접미사 포함, 본제목 72자)·description 157자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 7개, `<pre>`·`<code>` 0개, 본문 이미지 2장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- support.spotify.com 문서는 curl로 열리고, `__NEXT_DATA__` JSON의 `article.updatedAt`으로 문서 수정일을 확인할 수 있음. spotify.com/us/premium 요금도 정적 HTML에 있음. `premium-family-terms`는 Paid Subscription Terms로 리디렉트
+- 공식 발표 없이 지원 문서만 바뀌고 보도로 화제가 되는 경우가 있음 → 화제 세션의 "48시간 발표"는 보도·배포 시점으로 판단하고 사실 확인표에 문서 수정일을 함께 적음
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 22편. Search Console 색인 12편(이번 세션 4편 증가), 9편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: Spotify가 Duo로 QR 확대·연장/이의 절차·공식 발표를 내면 `spotify-family-qr-code-verification` 갱신(`updatedAt`). H4 판정(11-16 이후): `gsc_report.py --compare /posts/spotify-family-qr-code-verification --changed 2026-10-19 --metric impressions --type discover`. H5 화제 칼럼 3편째(영향 4편)
+- Claude: Google 광고에 Gmail·Photos 정보 사용(Personal Intelligence) 공식 발표 확인 → 사실이면 영향/화제 칼럼 후보
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 20·17·18 → 21·18·19). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 22편
+
+## 2026-10-20 · 세션 27 (정기 실행, 일반 세션): PDF→Word 무료 도구 3개 측정
+
+세션 시각: 2026-10-20 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(6ca54ff)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-21 ~ 10-19, 세션 26 이후 바뀐 값만)**
+
+- 노출 142 → **152**, 클릭 5, CTR 3.5% → 3.3%, 평균 순위 24.5 → 25.2
+  - `turn-off-ai-in-chrome` 노출 67 → 69 (11.6) / `gemini-gems-to-skills` 12 → 14 (8.1) / `image-to-text-offline-free` 9 → 12 (13.4) / `transcribe-audio-offline-free` 28 → 29 (47.9)
+- sitemap 마지막 다운로드 10-17 10:45 → **10-19 10:59 UTC**. `rss.xml`이 10-19 11:24 UTC에 피드로 제출됨(Claude 세션 기록 없음 → 사용자가 제출한 것으로 보임), 같은 시각 다운로드·오류 0
+- URL 검사: `compress-image-to-100kb`가 **색인됨**(크롤링 10-19 12:27 UTC) → 8편 색인, 12편 `URL is unknown`(세션 26의 12편 중 `compress-image-to-100kb` 제외 + `windows-11-24h2-end-of-support`)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12) → 노하우 상태·writing-guide 변경 없음
+
+**발행한 글**
+
+| slug               | 카테고리   | 유형                           | 직접 검증 |
+| ------------------ | ---------- | ------------------------------ | --------- |
+| `pdf-to-word-free` | `software` | 비교 + How-to (측정형, 검색형) | 정답을 아는 PDF 11개(삭제한 명령줄 글의 `gen.py` 재사용)를 **LibreOffice Writer 26.8.1(GUI)·Sejda PDF Desktop 7.9.10 무료판(GUI, 3개)·iLovePDF 웹(Playwright, 로그인 안 함)**으로 변환해 채점: 편집 가능한 문단·실제 Word 표·텍스트 상자·단어 보존·OCR, 편집 테스트(문장 추가 후 재배치) |
+
+- 선정 근거: backlog 33번(PDF→Word, 2026-10-17 명령줄 글 삭제 후 GUI로 새로 쓸 후보), Trends `pdf to word` 23.4(기준 `remove background` 35.3, PDF 주제 중 최대). 자동완성 "pdf to word free" 32개(converter·no sign up·ocr·ilovepdf·smallpdf)
+- 반복 일정: Chrome 156은 10-20(미국 시간, 세션 시점 미출시), Windows 11-10 → 해당 없음
+- 결과: 단어는 세 도구 모두 거의 100%. LibreOffice는 문단 0%(모든 줄이 텍스트 상자, 상태 표시줄 0 words), 표 0/5, 송장 머리글 행이 음영에 가려짐. Sejda는 문단 100%지만 표 0/2(행이 텍스트 줄), 1단·본문 9pt(원본 11pt), 2쪽 → 1쪽. iLovePDF는 표 4/5, 2단 구역·제목 스타일·글머리표 목록 유지, 문단 82%(일부가 두 문단으로 나뉨). 스캔 PDF: LibreOffice 그림, Sejda 거부("Scanned documents are not supported"), iLovePDF는 OCR 안내 → Apply OCR(로그인 안 함)로 단어 99.7%(요금표상 OCR은 Premium)
+- 기본값 함정: LibreOffice에서 PDF를 그냥 열면 Draw로 열리고 Draw는 Word로 저장 불가 → Writer 열기 창 파일 형식 "PDF - Portable Document Format (Writer)" 선택 필요
+- Word·Google Docs는 공식 문서 기반(요약 표 "Not tested")
+- 이미지 11장(대표 점검표 1200×675 + 송장 표 2×2 비교 + 편집 테스트 + LibreOffice 화면 3 + Sejda 화면 3 + iLovePDF 화면 2), 요약 표·결과 표
+- 내부 링크: 새 글 → `image-to-text-offline-free`·`pdf-to-jpg-free`·`jpg-to-pdf-free`·`split-pdf-free`·`merge-pdf-files-free` (5개). 역링크: `pdf-to-jpg-free` 마지막 문단 뒤 1문장 추가 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 64자(접미사 포함, 본제목 52자)·description 153자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개, `<pre>`·`<code>` 0개, 본문 이미지 11장 width·height 지정, sitemap 포함
+- lint·test(31파일 233개)·build 통과
+
+**알게 된 것**
+
+- 웹 서비스(iLovePDF)도 Playwright로 직접 측정 가능: `input[type=file]`에 파일 지정 → `#processTask` 클릭 → 다운로드 이벤트. 스캔 PDF는 OCR 안내 화면이 뜨고 같은 문구 버튼이 숨김 요소로 2개 있어 `button:visible`로 골라야 함
+- Sejda Desktop 무료판은 변환 도구에서 "작업당 파일 1개"라 여러 파일 선택 시 업그레이드 화면. 단일 파일 작업은 출력 폴더 대신 저장 파일 대화상자가 뜸. flatpak 문서 포털 경로 때문에 첫 결과 파일 이름이 `.docx`(이름 없음)로 저장된 적 있음(환경 문제로 판단, 글에는 안 씀)
+- ONLYOFFICE Desktop Editors flatpak(10.0.0)은 이 컨테이너에서 `Gtk-ERROR: Can't create a GtkStyleContext without a display connection`으로 실행 실패 (Sejda flatpak은 `--no-sandbox`로 정상). 시스템 dbus(`dbus-daemon --system --fork`)는 필요 없었음
+- `flatpak run --command=sh … -c env`처럼 샌드박스 환경 변수를 출력하면 컨테이너의 비밀 환경 변수까지 찍힘 → 필요한 변수만 `echo`
+
+**다음 할 일**
+
+- **사용자: AdSense 신청** — 발행 글 21편(세션 26에서 20편 도달). Search Console 색인 8편, 12편 `URL is unknown`. 승인 후 `src/core/config/internal/ads.ts`에 ID 입력은 Claude가 진행
+- Claude: 새 글 노출 검색어 확인 (`pdf to word free`, `pdf to word free no sign up`, `pdf to word ocr free`). Sejda 나머지 7개 파일은 하루 3회 제한으로 미측정 → 필요하면 다음 날 세션에서 보강(같은 글 갱신, `updatedAt`)
+- Claude: Chrome 156(10-20) 반영 여부 검토 (`turn-off-ai-in-chrome`), 검증 기록 V1(11-11)·V2(11-12) 판정, PDF 허브 글 검토(PDF GUI 글 5편: 나누기·합치기·JPG→PDF·PDF→JPG·PDF→Word). 남은 후보 PDF 압축(36번)
+- Claude: 11-10 Patch Tuesday 후 `windows-11-24h2-end-of-support`·`windows-10-esu-extended` 갱신 검토, 칼럼 H4 판정(11-16)
+- (완료) 대시보드: README 절차대로 `stats` DB 7개 문서 갱신(버전 19·16·17 → 20·17·18). `ArtifactData` list·batch 모두 권한 분류기 거부 없음. 비로그인용 `data.js`는 정기 세션 규칙대로 건너뜀
+- Claude: 발행 21편
+
 ## 2026-10-19 · 세션 26 (정기 실행, 영향 뉴스 세션): Windows 11 24H2 Home·Pro 업데이트 종료
 
 세션 시각: 2026-10-19 18:15 KST → 영향이 오래 가는 뉴스 칼럼 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8790289)에서 다시 시작.

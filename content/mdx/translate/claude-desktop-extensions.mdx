@@ -1,0 +1,20 @@
+---
+title: "Claude 데스크톱 확장 기능: MCP 서버 원클릭 설치"
+description: Claude 데스크톱에서 MCP 서버 설치 복잡성을 제거하는 새로운 패키징 형식인 데스크톱 확장 기능(.mcpb)을 소개합니다.
+category: claude
+sourceUrl: https://www.anthropic.com/research/desktop-extensions
+createdAt: 2025-06-26
+---
+
+> 원문: [Desktop Extensions: One-click MCP server installation for Claude Desktop](https://www.anthropic.com/research/desktop-extensions) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude 데스크톱 확장 기능(.mcpb)은 더 이상 `.dxt`가 아닌 `.mcpb` (MCP Bundle) 파일 확장자를 사용합니다.
+
+- **데스크톱 확장 기능 도입**: MCP 서버 설치를 단순화하여 사용자가 버튼 클릭만으로 설치할 수 있습니다.
+- **쉬운 설치 프로세스**: `.mcpb` 파일을 다운로드하고 Claude 데스크톱에서 열어 "설치" 버튼을 누르는 것으로 충분합니다.
+- **종속성 자동 관리**: Node.js를 Claude 데스크톱에 내장하고, 확장 프로그램은 자동으로 업데이트되며, API 키와 같은 민감한 정보는 OS 보안 금고에 저장됩니다.
+- **개발자 도구**: `manifest.json` 파일을 통해 사용자 정의 설정, 기능 선언, 런타임 요구 사항을 지정할 수 있습니다.
+- **오픈 생태계 구축**: MCPB 사양, 패키징 도구, 참조 구현 코드를 오픈 소스화하여 다른 AI 데스크톱 애플리케이션에서도 확장 기능 지원을 추가할 수 있습니다.
+
+자세한 내용은 원문에서 확인하세요.

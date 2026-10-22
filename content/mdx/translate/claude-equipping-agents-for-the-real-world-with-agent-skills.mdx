@@ -1,0 +1,19 @@
+---
+title: "에이전트 스킬: 실세계 작동을 위한 에이전트 역량 강화"
+description: "Anthropic은 에이전트가 특정 작업에 대한 전문성을 동적으로 로드하고 적용할 수 있도록 하는 'Agent Skills'라는 개방형 표준을 발표했습니다."
+category: claude
+sourceUrl: https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills
+createdAt: 2025-10-16
+---
+
+> 원문: [Equipping agents for the real world with Agent Skills](https://www.anthropic.com/research/equipping-agents-for-the-real-world-with-agent-skills) — Anthropic Engineering
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Anthropic은 에이전트가 특정 작업에 대한 전문성을 동적으로 로드하고 적용할 수 있도록 하는 'Agent Skills'라는 개방형 표준을 발표했습니다.
+
+*   Agent Skills는 지침, 스크립트 및 리소스를 포함하는 폴더로, 에이전트는 이를 동적으로 발견하고 로드하여 특정 작업 수행 능력을 향상시킬 수 있습니다.
+*   Skills는 YAML 프론트매터에 `name`과 `description` 메타데이터를 포함하며, 에이전트는 이를 통해 어떤 스킬을 언제 사용할지 결정합니다.
+*   복잡성이 증가하면 `SKILL.md` 파일 내에 추가 파일을 번들로 묶어 점진적인 공개를 통해 컨텍스트를 관리할 수 있으며, Python 스크립트와 같은 코드를 포함하여 에이전트가 실행하도록 할 수 있습니다.
+*   보안을 위해 신뢰할 수 있는 출처의 Skills만 설치하고, 설치 전에는 코드 종속성 및 외부 네트워크 소스 연결과 같은 잠재적 취약점을 철저히 감사해야 합니다.
+
+자세한 내용은 원문에서 확인하세요.

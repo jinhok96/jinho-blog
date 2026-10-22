@@ -1,5 +1,8 @@
 import { describe, expect, it } from 'vitest';
 
+import { buildAdsTxt } from '@/core/ads';
+import { ADSENSE_CLIENT } from '@/core/config';
+
 import { dynamic, GET } from './route';
 
 describe('ads.txt', () => {
@@ -8,6 +11,7 @@ describe('ads.txt', () => {
 
     expect(dynamic).toBe('force-static');
     expect(response.headers.get('Content-Type')).toBe('text/plain; charset=utf-8');
-    expect(await response.text()).toMatch(/^# AdSense publisher ID not set/);
+    // 내용 형식은 buildAdsTxt 테스트에서 검증, 여기서는 설정된 게시자 ID로 생성하는지만 확인
+    expect(await response.text()).toBe(buildAdsTxt(ADSENSE_CLIENT));
   });
 });

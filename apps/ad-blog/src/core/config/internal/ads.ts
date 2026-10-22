@@ -6,7 +6,7 @@
 /**
  * 게시자 ID (AdSense > 계정 > 계정 정보, 예: 'ca-pub-1234567890123456')
  */
-export const ADSENSE_CLIENT: string = '';
+export const ADSENSE_CLIENT: string = 'ca-pub-8310707193208097';
 
 /**
  * 광고 단위 형식

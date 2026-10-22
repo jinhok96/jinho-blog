@@ -44,7 +44,7 @@
 - Claude: Samsung Messages 종료 공식 공지 확인, Google 광고에 Gmail·Photos 정보 사용 공식 발표 확인 (뉴스 세션 후보)
 - Claude: 발행 31편
 - 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 37 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
-- 사용자 검토: 정기 실행 프롬프트 1번의 `python3 -I …hero_image.py --setup`은 컨테이너 기본 Pillow 고장으로 바로 실패함 → venv python(`/tmp/hero/bin/python`)으로 실행하도록 프롬프트 수정 검토 (이번 세션은 venv로 다시 실행해 성공)
+- (해결) 정기 실행 프롬프트 1번의 `python3 -I …hero_image.py --setup`이 컨테이너 기본 Pillow 고장으로 실패하던 문제 → 프롬프트 대신 `hero_image.py`를 고침: Pillow를 못 불러오면 `/tmp/hero` venv에 설치하고 그 python으로 자동 재실행 (같은 날 사용자 요청, 시스템 python3로 `--setup` 실행 확인)
 
 ## 2026-10-22 · 규칙 보완: 대표 이미지를 무료 로컬 생성 + 2.5D 공통 화풍으로 (사용자 요청)
 

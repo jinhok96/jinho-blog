@@ -47,6 +47,7 @@
 - Claude: Gmail Gemini 기능 제공 범위(무료 계정 Help me write·Suggested Replies 국가 확대, AI Inbox 정식 출시)가 바뀌면 `turn-off-gemini-in-gmail` 표 갱신(`updatedAt`)
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
 - Claude: 발행 33편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 39 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 
 ## 2026-10-22 · 전략 개편: SEO 플러그인 분석 → 클러스터·개선 세션·주간 SEO 점검 (사용자 요청)
 

@@ -28,9 +28,13 @@ describe('resolveAdSlotState', () => {
 
 describe('shouldLoadAdsense', () => {
   it('개발 서버가 아니고 게시자 ID가 있을 때만 로드', () => {
-    expect(shouldLoadAdsense({ isDevelopment: false, client: CLIENT })).toBe(true);
-    expect(shouldLoadAdsense({ isDevelopment: true, client: CLIENT })).toBe(false);
-    expect(shouldLoadAdsense({ isDevelopment: false, client: '' })).toBe(false);
+    expect(shouldLoadAdsense({ isDevelopment: false, client: CLIENT, isExcludedPage: false })).toBe(true);
+    expect(shouldLoadAdsense({ isDevelopment: true, client: CLIENT, isExcludedPage: false })).toBe(false);
+    expect(shouldLoadAdsense({ isDevelopment: false, client: '', isExcludedPage: false })).toBe(false);
+  });
+
+  it('광고 제외 페이지(404·정적 페이지)는 로드하지 않음 (자동 광고 차단)', () => {
+    expect(shouldLoadAdsense({ isDevelopment: false, client: CLIENT, isExcludedPage: true })).toBe(false);
   });
 });
 

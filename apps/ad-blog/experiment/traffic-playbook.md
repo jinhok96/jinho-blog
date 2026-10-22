@@ -15,6 +15,8 @@
 | 5   | 새 소식은 "그래서 내가 할 일"로 받는다 | 가설 | -         | 2026-10-22 |
 | 6   | 모르던 기능·설정 모음                  | 가설 | -         | 2026-10-13 |
 | 7   | 사용법 글은 짧고 이미지가 많다         | 가설 | -         | 2026-10-13 |
+| 8   | 주 검색어는 가장 구체적인 롱테일로 잡는다 | 가설 | -         | 2026-10-22 |
+| 9   | 클러스터 링크로 새 글을 빨리 발견시킨다 | 가설 | -         | 2026-10-22 |
 
 ## 분석 방법 (2026-10-13)
 
@@ -49,7 +51,7 @@
 
 - **발견**: TechRadar `The best VPN service 2026`은 2023-08 발행 후 2026-10-07 수정, PCMag는 `The Best VPNs We've Tested (October 2026)`처럼 월까지 표기, Zapier 추천 글은 2018 발행 후 2026-04 갱신. 반면 단순 사용법 글(Tom's Guide 아이폰 초기화)은 2021년 이후 수정 기록이 없음. best 글 본문은 중앙값 5,736단어, h2 10·h3 12, 이미지 103장, 내부 링크 34개, FAQ 100%, 요약 박스 73%, 영상 67%
 - **적용**
-  - 같은 분야 측정 글이 3편 쌓이면 `Best Free {분야} Tools` 같은 **허브 글**을 만들어 개별 글로 모두 연결 (허브는 상위 검색어, 개별 글은 세부 검색어)
+  - 같은 클러스터([clusters.md](clusters.md)) 상시 글이 3편 쌓이면 `Best Free {분야} Tools` 같은 **허브 글**을 만들어 개별 글로 모두 연결 (허브는 상위 검색어, 개별 글은 세부 검색어). 허브 작성·갱신은 18시 개선 세션에서
   - 허브는 새 측정이 생길 때마다 갱신하고 `updatedAt`과 제목의 시점 표기(괄호 없이 `in 2026`)를 함께 바꿈. 단순 사용법 글은 메뉴·버전이 바뀔 때만 갱신
   - 분량 경쟁(5,000단어 이상)은 따라 하지 않음. 허브의 요약 표·평가 기준·도구별 섹션 구성만 따름
 
@@ -91,6 +93,20 @@
   - 내부 링크: 관련 글이 있으면 How-to·측정 글 4개 이상, 허브는 모든 개별 글
   - FAQ·요약 박스는 허브(best)에서 거의 항상 쓰고 사용법 글에서는 드묾 → 사용법 글은 FAQ를 선택 사항으로 둠
 
+### 8. 주 검색어는 가장 구체적인 롱테일로 잡는다
+
+외부 분석이 아니라 **우리 Search Console 데이터**에서 나온 가설입니다 (2026-10-22, searchfit-seo `content-strategy`·`keyword-clustering` 기준 분석).
+
+- **발견**: 2026-09-24 ~ 10-22 노출 325회 중 10위 안 비브랜드 검색어 11개는 모두 제품·기능에 동작·조건이 붙은 롱테일 (`chrome disable ai` 7위, `google ai gone` 3위, `offline ocr tools` 5위, `where did gems go in gemini` 6위). 사이트 노출 1위 `turn-off-ai-in-chrome`(103회, 13위)의 주 검색어는 Trends 상대량 0.0인데, 상대량이 큰 상위 검색어(`pdf to word` 23.2·`heic to jpg` 8.5)를 노린 글은 노출이 거의 없거나 색인 전. 상위 검색어 결과는 iLovePDF·Smallpdf 같은 도구 사이트가 차지
+- **적용**: 주 검색어는 자동완성 3곳에 나오는 가장 구체적인 변형 (`turn off copilot in word`). Trends는 같은 클러스터 후보끼리 비교에만 씀. 상위 검색어는 허브가 맡고, 상시 글은 세부 검색어를 맡음 ([writing-guide.md](writing-guide.md#작성-전-브리프) 브리프)
+- **검증**: README 가설 H6 (롱테일 vs 상위 검색어 글의 발행 28일 노출·순위)
+
+### 9. 클러스터 링크로 새 글을 빨리 발견시킨다
+
+- **발견**: 2026-10-22 발행 32편 중 15편이 `URL is unknown`. 홈은 12편씩 보여서 하루 4편 발행이면 사흘 만에 첫 페이지에서 밀려남. 받는 링크가 1개뿐인 글 7편은 모두 최근 칼럼·새 글. Google 지침: 모든 글이 다른 글에서 링크되어야 발견됨 ([Link best practices](https://developers.google.com/search/docs/crawling-indexing/links-crawlable))
+- **적용**: 허브 ↔ 상시 글 ↔ 뉴스 칼럼 링크 규칙과 받는 링크 2개 이상 ([clusters.md](clusters.md#규칙)). 새 글은 이미 색인된 같은 클러스터 글에서 링크를 받음. 개선 세션은 `URL is unknown` 3일 넘은 글부터 연결. 점검은 `link_audit.py`
+- **검증**: 개선 세션에서 링크를 보강한 글이 보강 후 7일 안에 색인되는 비율을 log.md에 기록. 같은 기간 보강하지 않은 글과 비교해 5편 이상 쌓이면 판정 (검증 기록에 행 추가, 지표는 색인 여부)
+
 ## 따르지 않는 것
 
 대형 블로그는 하지만 ToolProof는 하지 않습니다.
@@ -100,6 +116,7 @@
 - 1인칭 체험담·사용 기간 주장 (가상 체험 금지. 실제 측정한 `we`만)
 - 할인·제휴 글 (최근 글의 24%를 차지하지만, 수익 모델이 AdSense이고 제휴 링크 금지)
 - 분량 경쟁 (Google은 선호 분량이 없다고 밝힘)
+- SEO 스킬의 일반 조언 중 우리 근거와 다른 것 (2026-10-22 searchfit-seo 설치 후): FAQPage 구조화 데이터(리치 결과 종료), 키워드 3~5회 반복 목표, 결론 요약 문단 + CTA, llms.txt (Google이 쓰지 않음)
 
 ## 성과 검증
 
@@ -161,3 +178,4 @@
 | Google [AI features](https://developers.google.com/search/docs/appearance/ai-features)                                                                                                                                                                                                                                                                                                                 | AI Overviews용 별도 최적화는 필요 없음, 중요한 내용은 텍스트로, 내부 링크                                                        |
 | 구성 사례: Zapier [추천 글](https://zapier.com/blog/best-transcription-apps/)·[앱 선정 방식](https://zapier.com/blog/selecting-apps/), How-To Geek [Disable Recall](https://www.howtogeek.com/how-to-disable-recall/), Tom's Guide [iPhone SOS fix](https://www.tomsguide.com/phones/iphones/my-iphone-kept-getting-stuck-in-sos-mode-heres-how-i-finally-fixed-it), [RTINGS](https://www.rtings.com/) | 첫 문장에 테스트 규모와 요약 표, 방법별 소제목과 쉬운 방법 먼저, 지워지는 설정 경고, 같은 조건(test bench) 측정과 방법 변경 표시 |
 | [Chromium Dash](https://chromiumdash.appspot.com/schedule)·[Microsoft Learn](https://learn.microsoft.com/en-us/windows/deployment/update/release-cycle)                                                                                                                                                                                                                                                | Chrome·Windows 반복 일정                                                                                                         |
+| searchfit-seo 플러그인 스킬 (`content-strategy`·`keyword-clustering`·`internal-linking`·`technical-seo`·`ai-visibility`·`content-brief`) + 우리 Search Console (2026-09-24 ~ 10-22) | 노하우 8·9, 클러스터 맵·우선순위 매트릭스, 브리프 형식, AI 답변 인용 규칙, 개선 세션·주간 SEO 점검 (2026-10-22) |

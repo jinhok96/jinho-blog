@@ -2,7 +2,7 @@
 
 광고 수익형 블로그 **ToolProof** — 영어권(미국) 일반 사용자 대상 IT·AI 도구 가이드. 블로그 기능 + SEO 중심. 사용자 문서 → [apps/ad-blog/README.md](apps/ad-blog/README.md)
 
-- 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 트래픽 노하우(`traffic-playbook.md`, 대형 블로그 분석 → 재분석 도구 `tools/blog_patterns.py`), 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
+- 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 트래픽 노하우(`traffic-playbook.md`, 대형 블로그 분석 → 재분석 도구 `tools/blog_patterns.py`), 주제 클러스터 맵(`clusters.md`, 점검 도구 `tools/link_audit.py`), 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
 - 글 작성·수정 시 [writing-guide.md](apps/ad-blog/experiment/writing-guide.md) 기준 (영어, 1차 출처 확인, 가상 체험담 금지, 독자는 비개발자: 명령줄·코드·개발 도구 방법 금지, 모든 글: 본문 첫 줄 AI 생성 대표 이미지(`experiment/tools/hero_image.py`, 썸네일 겸용) + 본문 이미지 3장 이상). 채널별 제목·허브 글·반복 일정 등은 [traffic-playbook.md](apps/ad-blog/experiment/traffic-playbook.md)
 
 - Next.js 16 **정적 export** (`output: 'export'`, 결과물 `out/`), 서버 런타임 없음
@@ -61,6 +61,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - sitemap `lastmod`·RSS `lastBuildDate`는 콘텐츠 날짜 기준 (빌드 시각 금지)
 - 페이지당 `<h1>` 1개, 이미지는 크기 지정(CLS 0)
 - JSON-LD author·publisher의 `@type`은 `AUTHOR_TYPE`(현재 `Organization`, 이름 = `SITE_NAME`)
+- 삭제한 글 URL은 같은 주제 글로 `vercel.json` `redirects`(`permanent: true` → 308). 원본 글 파일이 없고 대상 글 파일이 있는지 `scripts/lib/vercel-redirects.test.ts`가 검증. 대체 글이 없으면 같은 클러스터 허브, 허브도 없으면 404 ([clusters.md](apps/ad-blog/experiment/clusters.md#규칙))
 - IndexNow(Bing 등): 프로덕션 배포 성공(`deployment_status`, 환경 `Production – ad-blog`) 시 [indexnow.yml](.github/workflows/indexnow.yml)이 직전 성공 배포 이후 추가·수정·삭제된 MDX의 URL만 제출. 배포된 sitemap에 없는 수정 글(초안)은 제외. 수동 실행(workflow_dispatch)은 sitemap 전체 제출
   - 키는 `scripts/lib/indexnow.ts`의 `INDEXNOW_KEY` = `public/{키}.txt` (테스트가 일치 검증), 도메인은 워크플로우의 `NEXT_PUBLIC_SITE_URL`
   - URL 매핑은 mdx-handler 규칙(`content/{컬렉션}/{slug}.mdx` → `{route}/{slug}`)을 따름 — 컬렉션·라우트 구조를 바꾸면 함께 확인

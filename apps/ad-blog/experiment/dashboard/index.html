@@ -120,6 +120,52 @@ tr.group td { padding: 16px 12px 8px; font-size: var(--fs-sm); line-height: var(
 .bars .track { grid-column: 1 / -1; height: 8px; border-radius: 4px; background: var(--well); overflow: hidden; }
 .bars .track i { display: block; height: 100%; background: var(--series); border-radius: 4px; }
 .bars li.zero .name, .bars li.zero .val { color: var(--mute); }
+/* 목표 지표: 막대 목록 + 기준일 값 줄. 이름이 길어 줄바꿈 허용 */
+.goals .name { white-space: normal; }
+.goals .val b { color: var(--ink); font-weight: 600; }
+.goals .note { grid-column: 1 / -1; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
+.goals li.met .track i { background: var(--good); }
+.goals li.met .note b { color: var(--good); font-weight: 600; }
+/* 개선 세션 할 일: README 개선 세션 순서(1~4)를 그대로 번호로 씀 */
+ol.todo { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
+.todo-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.todo-head .step { flex: none; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--well); box-shadow: var(--hair); font-size: var(--fs-xs); font-weight: 600; color: var(--ink); }
+.todo-head b { font-weight: 600; color: var(--ink); }
+.todo .why { margin: 4px 0 0 32px; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
+.todo-items { list-style: none; margin: 8px 0 0 32px; padding: 0; display: grid; gap: 4px; }
+.todo-items li { display: grid; min-width: 0; font-size: var(--fs-sm); line-height: var(--lh-sm); }
+.todo-items .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; min-width: 0; }
+.todo-items .t { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; color: var(--ink); }
+.todo-items .m { flex: none; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); font-variant-numeric: tabular-nums; }
+.todo-items .s { min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
+.todo-items li.more { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
+.todo-items + .why { margin-top: 12px; }
+/* 좁은 화면: 제목이 잘리지 않게 보조 정보를 아래 줄로 */
+@media (max-width: 640px) { .todo-items .row { flex-direction: column; align-items: stretch; gap: 0; } }
+/* 목표·할 일 두 패널은 내용 높이대로 (빈 칸으로 늘이지 않음) */
+.lists.top { align-items: start; }
+/* 글로 이동·클러스터 거르기 버튼: 글자처럼 보이되 누를 수 있게 */
+.jump { all: unset; cursor: pointer; }
+.jump:hover { color: var(--link); }
+.jump:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+.jump:hover .chip, .jump:focus-visible .chip { color: var(--link); box-shadow: inset 0 0 0 1px var(--link); }
+/* 글별 표 필터·정렬 */
+.filters { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.filters label { display: inline-flex; align-items: center; gap: 8px; font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--mute); }
+.filters select { font: inherit; color: var(--ink); background: var(--panel); border: 0; box-shadow: var(--hair); border-radius: var(--r-ctl); height: 32px; padding: 0 8px; max-width: 220px; }
+.filters select:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.filters .reset { all: unset; cursor: pointer; font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--link); }
+.filters .reset:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+.sort { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; }
+.sort::after { content: "↕"; font-size: var(--fs-xs); opacity: 0.4; }
+th[aria-sort="ascending"] .sort::after { content: "↑"; opacity: 1; }
+th[aria-sort="descending"] .sort::after { content: "↓"; opacity: 1; }
+th[aria-sort] .sort, .sort:hover { color: var(--ink); }
+.sort:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+/* 할 일에서 글로 이동했을 때 그 줄을 잠깐 표시 */
+@keyframes flash { from { background: var(--link-soft); } to { background: transparent; } }
+tr.focus > td { animation: flash 1.6s ease-out; }
+@media (prefers-reduced-motion: reduce) { tr.focus > td { animation: none; } }
 /* 글별 표: 펼침 버튼과 상세 줄 */
 .toggle { all: unset; cursor: pointer; display: inline-flex; align-items: center; gap: 4px; margin-top: 4px; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--link); }
 .toggle:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
@@ -163,6 +209,17 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
 
+  <section class="lists top">
+    <div class="panel">
+      <div class="panel-head"><h2>목표 지표</h2><span class="small" id="goal-due">README 목표 지표</span></div>
+      <ul class="bars goals" id="goals"><li class="empty">목표 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</li></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>개선 세션 할 일</h2><span class="small">README 개선 세션 순서 · 글을 누르면 표에서 상세</span></div>
+      <ol class="todo" id="todo"><li class="empty">글 데이터가 아직 없습니다.</li></ol>
+    </div>
+  </section>
+
   <section class="charts">
     <div class="panel">
       <div class="panel-head"><h2>날짜별 노출</h2>
@@ -177,10 +234,28 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   </section>
 
   <section class="panel">
-    <div class="panel-head"><h2>글별 현황</h2><span class="small">지표는 최근 28일, 미확정 데이터 포함. 노출·클릭·순위는 웹 검색, 유입 경로는 검색 유형별 노출. 제목 아래를 누르면 검색어·추이·색인 상세</span></div>
+    <div class="panel-head"><h2>클러스터별 현황</h2><span class="small">clusters.md · 최근 28일 · 클러스터를 누르면 아래 글별 표를 그 클러스터로 거름</span></div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>글</th><th>발행</th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r">단어</th><th class="r">이미지</th><th>색인</th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
+        <thead><tr><th>클러스터</th><th class="r">우선순위</th><th>글</th><th>색인</th><th>유입 경로</th><th class="r">노출</th><th class="r">클릭</th><th class="r" title="노출 가중 평균">평균 순위</th><th>허브</th></tr></thead>
+        <tbody id="clusters"><tr><td colspan="9" class="empty">클러스터 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</td></tr></tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="panel" id="posts-panel">
+    <div class="panel-head"><h2>글별 현황</h2>
+      <div class="filters">
+        <label for="f-cluster">클러스터 <select id="f-cluster"><option value="">전체</option></select></label>
+        <label for="f-index">색인 <select id="f-index"><option value="">전체</option><option value="pass">색인됨</option><option value="wait">미색인</option></select></label>
+        <span class="small" id="f-count"></span>
+        <button class="reset" id="f-reset" type="button" hidden>필터 해제</button>
+      </div>
+    </div>
+    <div class="small">지표는 최근 28일, 미확정 데이터 포함. 노출·클릭·순위는 웹 검색, 유입 경로는 검색 유형별 노출. 머리글을 누르면 정렬, 제목 아래를 누르면 검색어·추이·색인 상세</div>
+    <div class="table-scroll">
+      <table class="wide">
+        <thead><tr><th>글</th><th><button class="sort" data-sort="createdAt" type="button">발행</button></th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r"><button class="sort" data-sort="words" type="button">단어</button></th><th class="r"><button class="sort" data-sort="images" type="button">이미지</button></th><th>색인</th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r"><button class="sort" data-sort="impressions" type="button">노출</button></th><th class="r"><button class="sort" data-sort="clicks" type="button">클릭</button></th><th class="r"><button class="sort" data-sort="position" type="button">평균 순위</button></th></tr></thead>
         <tbody id="posts"><tr><td colspan="10" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
       </table>
     </div>
@@ -271,13 +346,29 @@ const ymd = (d) => (!d ? '–' : hasTime(d) ? localDate(d) : String(d).slice(2, 
 
 function esc(s) { return String(s ?? '').replace(/[&<>"]/g, (c) => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c])); }
 
-function indexPill(idx) {
-  if (!idx || !idx.coverage) return '<span class="pill muted">확인 전</span>';
+function indexState(idx) {
+  if (!idx || !idx.coverage) return { cls: 'muted', label: '확인 전', title: '' };
   const c = idx.coverage;
   const cls = idx.verdict === 'PASS' ? 'good' : /unknown|Discovered|Crawled/i.test(c) ? 'warn' : 'bad';
   const label = idx.verdict === 'PASS' ? '색인됨' : /unknown/i.test(c) ? 'Google 미발견' : /Discovered/i.test(c) ? '발견, 크롤링 전' : /Crawled/i.test(c) ? '크롤링, 미색인' : c;
-  return `<span class="pill ${cls}" title="${esc(c)}">${esc(label)}</span>`;
+  return { cls, label, title: c };
 }
+
+function indexPill(idx) {
+  const s = indexState(idx);
+  return `<span class="pill ${s.cls}"${s.title ? ` title="${esc(s.title)}"` : ''}>${esc(s.label)}</span>`;
+}
+
+// 날짜 → 일 번호. 날짜만 쓴 값은 그 날짜 그대로, 시각이 있으면 보는 사람 시간대의 날짜
+function dayIndex(d) {
+  if (!hasTime(d)) return Date.parse(String(d).slice(0, 10) + 'T00:00:00Z') / 86400000;
+  const x = new Date(d);
+  return Date.UTC(x.getFullYear(), x.getMonth(), x.getDate()) / 86400000;
+}
+const todayIndex = () => { const n = new Date(); return Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()) / 86400000; };
+const ageDays = (d) => (d ? Math.round(todayIndex() - dayIndex(d)) : null); // 발행일 = D+0
+const isIndexed = (p) => p.index?.verdict === 'PASS';
+const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
 function statusPill(s) {
   const cls = s === '검증됨' ? 'good' : s === '기각' ? 'bad' : s === '가설' ? 'muted' : 'warn';
@@ -444,6 +535,7 @@ function indexFacts(p) {
     <dt>크롤러</dt><dd>${crawler}</dd>
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
+    ${p.inbound ? `<dt>받는 링크</dt><dd>${p.inbound.length}개${p.inbound.length ? `<div class="small">${p.inbound.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     ${tags ? `<dt>태그</dt><dd class="tags">${tags}</dd>` : ''}
   </dl></div>`;
 }
@@ -467,15 +559,101 @@ function sourceCell(src) {
   }).join('')}</div>`;
 }
 
-function renderPosts() {
-  if (!state.posts.length) return;
-  const posts = [...state.posts].sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
-  $('k-posts').textContent = posts.length;
-  const indexed = posts.filter((p) => p.index && p.index.verdict === 'PASS').length;
-  $('k-indexed').textContent = `색인 ${indexed} / ${posts.length}`;
-  $('posts').innerHTML = posts.map((p) => `<tr>
+// 클러스터별 글 묶음 (우선순위 순, 미지정은 맨 뒤). cluster 항목이 없는 예전 데이터는 빈 목록
+function clusterGroups() {
+  const by = new Map();
+  for (const p of state.posts) {
+    if (p.cluster === undefined) continue;
+    const id = p.cluster ? p.cluster.id : '-';
+    if (!by.has(id)) by.set(id, { id, name: p.cluster ? p.cluster.name : 'clusters.md 클러스터 맵에 없는 글', priority: p.cluster ? Number(p.cluster.priority) || 99 : 100, posts: [] });
+    by.get(id).posts.push(p);
+  }
+  return [...by.values()].sort((a, b) => a.priority - b.priority || a.id.localeCompare(b.id));
+}
+const roleCount = (g, role) => g.posts.filter((p) => p.cluster?.role === role).length;
+const needsHub = (g) => g.id !== '-' && !roleCount(g, '허브') && roleCount(g, '상시 글') >= 3; // link_audit "허브 필요" 기준
+
+function sumSources(posts) {
+  if (!posts.some((p) => p.sources)) return undefined;
+  const by = {};
+  posts.forEach((p) => (p.sources || []).forEach((s) => {
+    const t = (by[s.key] ||= { key: s.key, impressions: 0, clicks: 0 });
+    t.impressions += s.impressions; t.clicks += s.clicks;
+  }));
+  return Object.values(by).sort((a, b) => b.impressions - a.impressions || b.clicks - a.clicks);
+}
+
+function renderClusters() {
+  const groups = clusterGroups();
+  if (!groups.length) return;
+  $('clusters').innerHTML = groups.map((g) => {
+    const ps = g.posts;
+    const imp = ps.reduce((a, p) => a + p.impressions, 0);
+    const clk = ps.reduce((a, p) => a + p.clicks, 0);
+    const pos = imp ? ps.reduce((a, p) => a + (p.position || 0) * p.impressions, 0) / imp : null;
+    const roles = [['허브', '허브'], ['상시 글', '상시'], ['뉴스 칼럼', '칼럼']].map(([r, short]) => [short, roleCount(g, r)]).filter(([, n]) => n).map(([s, n]) => `${s} ${n}`).join(' · ');
+    const ever = roleCount(g, '상시 글');
+    const hub = g.id === '-' ? DASH : roleCount(g, '허브') ? '<span class="pill good">있음</span>' : needsHub(g) ? '<span class="pill warn">필요</span>' : `<span class="small">상시 글 ${ever}/3편</span>`;
+    return `<tr>
+      <td><button class="jump" type="button" data-cluster="${esc(g.id)}" title="글별 표를 이 클러스터로 거르기"><span class="chip">${g.id === '-' ? '미지정' : esc(g.id)}</span></button><div class="small">${esc(g.name)}</div></td>
+      <td class="r num">${g.id === '-' ? '–' : g.priority}</td>
+      <td class="num">${ps.length}편${roles ? `<div class="small">${roles}</div>` : ''}</td>
+      <td class="num">${ps.some((p) => p.index) ? `${ps.filter(isIndexed).length} / ${ps.length}` : '–'}</td>
+      <td>${sourceCell(sumSources(ps))}</td>
+      <td class="r num">${fmt(imp)}</td>
+      <td class="r num">${fmt(clk)}</td>
+      <td class="r num">${pos == null ? '–' : pos.toFixed(1)}</td>
+      <td>${hub}</td>
+    </tr>`;
+  }).join('');
+}
+
+// 글별 표 보기 상태 (거르기·정렬). 보는 사람 브라우저에만 기억
+const SORTS = { createdAt: 'desc', words: 'desc', images: 'desc', impressions: 'desc', clicks: 'desc', position: 'asc' }; // 처음 누를 때 방향
+const view = { cluster: '', index: '', sort: 'createdAt', dir: 'desc' };
+try {
+  const saved = JSON.parse(localStorage.getItem('postsView') || 'null');
+  if (saved && SORTS[saved.sort]) {
+    Object.assign(view, { cluster: String(saved.cluster || ''), index: ['pass', 'wait'].includes(saved.index) ? saved.index : '', sort: saved.sort, dir: saved.dir === 'asc' ? 'asc' : 'desc' });
+  }
+} catch (e) { /* 저장소를 쓸 수 없는 환경: 기본 보기 */ }
+function saveView() { try { localStorage.setItem('postsView', JSON.stringify(view)); } catch (e) { /* 기억하지 않음 */ } }
+
+function matches(p) {
+  if (view.cluster === '-' && p.cluster) return false;
+  if (view.cluster && view.cluster !== '-' && p.cluster?.id !== view.cluster) return false;
+  if (view.index === 'pass' && !isIndexed(p)) return false;
+  if (view.index === 'wait' && isIndexed(p)) return false;
+  return true;
+}
+
+// 값 없음(순위 없음 등)은 방향과 관계없이 맨 뒤, 같으면 최신 글 먼저
+function compare(a, b) {
+  const va = a[view.sort], vb = b[view.sort];
+  const newer = (b.createdAt || '').localeCompare(a.createdAt || '');
+  if (va == null || vb == null) return va == null && vb == null ? newer : va == null ? 1 : -1;
+  const d = typeof va === 'string' ? va.localeCompare(vb) : va - vb;
+  return (view.dir === 'asc' ? d : -d) || newer;
+}
+
+let clusterOptionsKey = '';
+function renderFilters(groups) {
+  if (view.cluster && !groups.some((g) => g.id === view.cluster)) view.cluster = '';
+  const key = groups.map((g) => g.id).join('|');
+  if (key !== clusterOptionsKey) { // 목록이 바뀔 때만 다시 만듦 (고르는 중 포커스 유지)
+    clusterOptionsKey = key;
+    $('f-cluster').innerHTML = '<option value="">전체</option>' + groups.map((g) => `<option value="${esc(g.id)}">${g.id === '-' ? '미지정' : esc(g.id)}</option>`).join('');
+  }
+  $('f-cluster').value = view.cluster;
+  $('f-index').value = view.index;
+  $('f-cluster').disabled = !groups.length;
+}
+
+function postRow(p) {
+  const age = ageDays(p.createdAt);
+  return `<tr data-slug="${esc(p.slug)}">
     <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + ymd(p.updatedAt) : ''}</div>${detailToggle(p.slug, p)}</td>
-    <td class="num"${p.createdAt && hasTime(p.createdAt) ? ` title="${esc(localStamp(p.createdAt))}"` : ''}>${ymd(p.createdAt)}</td>
+    <td class="num"${p.createdAt && hasTime(p.createdAt) ? ` title="${esc(localStamp(p.createdAt))}"` : ''}>${ymd(p.createdAt)}${age == null ? '' : `<div class="small">D+${age}</div>`}</td>
     <td>${clusterCell(p.cluster)}</td>
     <td class="r num">${fmt(p.words)}</td>
     <td class="r num">${fmt(p.images)}</td>
@@ -484,7 +662,124 @@ function renderPosts() {
     <td class="r num">${fmt(p.impressions)}</td>
     <td class="r num">${fmt(p.clicks)}</td>
     <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}</td>
-  </tr>${detailRow(p.slug, p, indexFacts(p))}`).join('') + renderOtherPages();
+  </tr>${detailRow(p.slug, p, indexFacts(p))}`;
+}
+
+function renderPosts() {
+  if (!state.posts.length) return;
+  const all = state.posts;
+  $('k-posts').textContent = all.length;
+  $('k-indexed').textContent = `색인 ${all.filter(isIndexed).length} / ${all.length}`;
+  renderFilters(clusterGroups());
+  const posts = all.filter(matches).sort(compare);
+  const filtered = Boolean(view.cluster || view.index);
+  $('f-count').textContent = filtered ? `${posts.length} / ${all.length}편` : `${all.length}편`;
+  $('f-reset').hidden = !filtered;
+  document.querySelectorAll('#posts-panel th').forEach((th) => {
+    const b = th.querySelector('.sort');
+    if (b && b.dataset.sort === view.sort) th.setAttribute('aria-sort', view.dir === 'asc' ? 'ascending' : 'descending');
+    else th.removeAttribute('aria-sort');
+  });
+  // 글 외 페이지는 클러스터·색인이 없어 거르는 중에는 숨김
+  $('posts').innerHTML = (posts.length ? posts.map(postRow).join('') : '<tr><td colspan="10" class="empty">조건에 맞는 글이 없습니다.</td></tr>') + (filtered ? '' : renderOtherPages());
+}
+
+// 개선 세션 할 일: README "개선 세션" 1~4번을 데이터로 채움 (5번 이후는 일정·판단이라 제외)
+const TODO_LIMIT = 5;
+// 목록 안 이동은 링크로 (버튼은 줄임표로 잘리지 않음). 누르면 스크립트가 글별 표로 이동
+const jumpPost = (p) => `<a class="jump" href="#posts-panel" data-focus="${esc(p.slug)}">${esc(p.title)}</a>`;
+
+function todoItems(items) {
+  if (!items.length) return '';
+  const rows = items.slice(0, TODO_LIMIT).map((it) => `<li><div class="row"><span class="t">${it.main}</span><span class="m">${it.meta}</span></div>${it.sub ? `<div class="s">${it.sub}</div>` : ''}</li>`).join('');
+  return `<ul class="todo-items">${rows}${items.length > TODO_LIMIT ? `<li class="more">외 ${items.length - TODO_LIMIT}개</li>` : ''}</ul>`;
+}
+
+// blocks = [{why, items}] (items가 null이면 데이터가 없어 판단 못 함)
+function todoGroup(step, title, blocks) {
+  const known = blocks.filter((b) => b.items);
+  const count = known.length ? known.reduce((a, b) => a + b.items.length + (b.extra || 0), 0) : null;
+  const badge = count == null ? '<span class="pill muted">데이터 없음</span>' : count ? `<span class="pill warn">${count}건</span>` : '<span class="pill good">없음</span>';
+  return `<li><div class="todo-head"><span class="step">${step}</span><b>${title}</b>${badge}</div>${blocks.map((b) => `<p class="why">${b.why}${b.items && !b.items.length && !b.extra ? ' · 없음' : ''}</p>${b.items ? todoItems(b.items) : ''}`).join('')}</li>`;
+}
+
+function renderTodo() {
+  const posts = state.posts;
+  if (!posts.length) return;
+  const hasIndex = posts.some((p) => p.index);
+  const waiting = hasIndex ? posts.filter((p) => p.index && !isIndexed(p) && ageDays(p.createdAt) > 3).sort((a, b) => ageDays(b.createdAt) - ageDays(a.createdAt)) : null;
+  const hasLinks = posts.some((p) => p.inbound);
+  const weak = hasLinks ? posts.filter((p) => p.inbound && p.inbound.length < 2).sort((a, b) => a.inbound.length - b.inbound.length || ageDays(b.createdAt) - ageDays(a.createdAt)) : null;
+  const other = Object.entries(state.summary?.linkAudit || {}).filter(([k]) => k !== '받는 링크 2개 미만');
+  const groups = clusterGroups();
+  const hubs = groups.length ? groups.filter(needsHub) : null;
+  // 같은 검색어로 노출되는 글 수 (서로 경쟁하는 글)
+  const queryPosts = new Map();
+  posts.forEach((p) => (p.queries || []).forEach((q) => queryPosts.set(q.query, (queryPosts.get(q.query) || 0) + 1)));
+  const near = posts.flatMap((p) => (p.queries || []).filter((q) => q.position != null && q.position >= 8 && q.position <= 20).map((q) => ({ p, q })))
+    .sort((a, b) => b.q.impressions - a.q.impressions || a.q.position - b.q.position);
+  const siteCtr = state.summary?.ctr ?? 0;
+  const lowCtr = posts.filter((p) => p.impressions >= 100 && p.ctr < siteCtr).sort((a, b) => b.impressions - a.impressions);
+
+  $('todo').innerHTML = [
+    todoGroup(1, '색인', [{
+      why: '발행 3일이 지나도 색인되지 않은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 링크 추가, 필요하면 Search Console 색인 요청',
+      items: waiting && waiting.map((p) => ({ main: jumpPost(p), meta: `${esc(indexState(p.index).label)} · D+${ageDays(p.createdAt)}` })),
+    }]),
+    todoGroup(2, '링크 점검', [{
+      why: `받는 링크 2개 미만 글 → 같은 클러스터 글에서 문맥에 맞는 링크 추가${other.length ? `. 그 밖의 link_audit.py 문제: ${other.map(([k, n]) => `${esc(k)} ${n}건`).join(' · ')}` : ''}`,
+      items: weak && weak.map((p) => ({ main: jumpPost(p), meta: `받는 링크 ${p.inbound.length}개` })),
+      extra: other.reduce((a, [, n]) => a + n, 0),
+    }]),
+    todoGroup(3, '허브', [{
+      why: '상시 글 3편 이상인데 허브가 없는 클러스터 → 허브 글 작성 (traffic-playbook 3번)',
+      items: hubs && hubs.map((g) => ({ main: `<a class="jump" href="#posts-panel" data-cluster="${esc(g.id)}">${esc(g.id)}</a>`, meta: `상시 글 ${roleCount(g, '상시 글')}편`, sub: esc(g.name) })),
+    }]),
+    todoGroup(4, 'Search Console 보강', [{
+      why: '8~20위 검색어 → 그 검색어를 다루는 소제목·FAQ 보강',
+      items: near.map(({ p, q }) => {
+        const n = queryPosts.get(q.query);
+        return { main: esc(q.query), meta: `${q.position.toFixed(1)}위 · 노출 ${fmt(q.impressions)}`, sub: `→ ${jumpPost(p)}${n > 1 ? ` · 같은 검색어로 글 ${n}편 노출` : ''}` };
+      }),
+    }, {
+      why: `노출 100회 이상인데 CTR이 사이트 평균(${pct(siteCtr)})보다 낮은 글 → 실제 검색어에 맞춰 제목·설명 수정`,
+      items: lowCtr.map((p) => ({ main: jumpPost(p), meta: `노출 ${fmt(p.impressions)} · CTR ${pct(p.ctr)}` })),
+    }]),
+  ].join('');
+}
+
+function renderGoals() {
+  const g = state.summary?.goals;
+  if (!g?.rows?.length) return;
+  const days = Math.round(dayIndex(g.due) - todayIndex());
+  $('goal-due').textContent = `${ymd(g.due)}까지 ${days > 0 ? `D-${days}` : days === 0 ? 'D-day' : '기한 지남'}`;
+  $('goals').innerHTML = g.rows.map((r) => {
+    const w = r.progress == null ? 0 : Math.round(r.progress * 100);
+    const status = r.met ? ' · <b>달성</b>' : r.progress != null ? ` · 진행 ${w}%` : '';
+    return `<li class="${r.met ? 'met' : ''}" title="확인: ${esc(r.check)}"><span class="name">${esc(r.label)}</span><span class="val"><b>${esc(r.currentText ?? '–')}</b> / ${esc(r.targetText)}</span><span class="track" role="img" aria-label="진행 ${w}%"><i style="width:${w}%"></i></span><span class="note">${ymd(g.baseDate)} 기준 ${esc(r.baseText)}${r.lowerBetter ? ' · 적을수록 좋음' : ''}${status}</span></li>`;
+  }).join('');
+}
+
+// 할 일·클러스터에서 글별 표로 이동: 거르기에 걸리면 풀고, 상세를 펼친 뒤 그 줄로 스크롤
+function focusPost(slug) {
+  const p = state.posts.find((x) => x.slug === slug);
+  if (!p) return;
+  if (!matches(p)) { view.cluster = ''; view.index = ''; saveView(); }
+  expanded.add(slug);
+  renderPosts();
+  const row = [...document.querySelectorAll('#posts tr[data-slug]')].find((r) => r.dataset.slug === slug);
+  if (!row) return;
+  row.scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'center' });
+  row.classList.add('focus');
+  setTimeout(() => row.classList.remove('focus'), 1600);
+  row.querySelector('.toggle')?.focus({ preventScroll: true });
+}
+
+function filterCluster(id) {
+  view.cluster = id;
+  saveView();
+  renderPosts();
+  $('posts-panel').scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'start' });
 }
 
 // 글 외 페이지(홈·카테고리 등): 사이트 전체 KPI와 글별 합계의 차이를 보여 줌
@@ -503,17 +798,37 @@ function renderOtherPages() {
   }).join('');
 }
 
-// 펼침 버튼: 이벤트 위임 (표를 다시 그려도 동작)
+// 펼침·정렬·이동 버튼: 이벤트 위임 (표를 다시 그려도 동작)
 document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.toggle');
+  const btn = e.target.closest('.toggle, .sort, [data-focus], [data-cluster], #f-reset');
   if (!btn) return;
-  const key = btn.dataset.key;
-  const on = !expanded.has(key);
-  on ? expanded.add(key) : expanded.delete(key);
-  btn.setAttribute('aria-expanded', String(on));
-  const row = [...document.querySelectorAll('tr.detail')].find((r) => r.dataset.for === key);
-  if (row) row.hidden = !on;
+  e.preventDefault();
+  if (btn.classList.contains('toggle')) {
+    const key = btn.dataset.key;
+    const on = !expanded.has(key);
+    on ? expanded.add(key) : expanded.delete(key);
+    btn.setAttribute('aria-expanded', String(on));
+    const row = [...document.querySelectorAll('tr.detail')].find((r) => r.dataset.for === key);
+    if (row) row.hidden = !on;
+  } else if (btn.classList.contains('sort')) {
+    const k = btn.dataset.sort;
+    view.dir = view.sort === k ? (view.dir === 'asc' ? 'desc' : 'asc') : SORTS[k];
+    view.sort = k;
+    saveView();
+    renderPosts();
+  } else if (btn.dataset.focus) {
+    focusPost(btn.dataset.focus);
+  } else if (btn.dataset.cluster != null) {
+    filterCluster(btn.dataset.cluster);
+  } else {
+    view.cluster = '';
+    view.index = '';
+    saveView();
+    renderPosts();
+  }
 });
+$('f-cluster').addEventListener('change', (e) => { view.cluster = e.target.value; saveView(); renderPosts(); });
+$('f-index').addEventListener('change', (e) => { view.index = e.target.value; saveView(); renderPosts(); });
 
 const COUNTRY = { usa: 'US', ind: 'IN', gbr: 'GB', can: 'CA', aus: 'AU', deu: 'DE', fra: 'FR', kor: 'KR', jpn: 'JP', chn: 'CN', hkg: 'HK', twn: 'TW', sgp: 'SG', idn: 'ID', phl: 'PH', vnm: 'VN', tha: 'TH', mys: 'MY', pak: 'PK', bgd: 'BD', irn: 'IR', tur: 'TR', sau: 'SA', are: 'AE', isr: 'IL', egy: 'EG', nga: 'NG', zaf: 'ZA', ken: 'KE', bra: 'BR', mex: 'MX', arg: 'AR', col: 'CO', chl: 'CL', per: 'PE', esp: 'ES', ita: 'IT', nld: 'NL', bel: 'BE', che: 'CH', aut: 'AT', swe: 'SE', nor: 'NO', dnk: 'DK', fin: 'FI', pol: 'PL', cze: 'CZ', hun: 'HU', rou: 'RO', grc: 'GR', prt: 'PT', irl: 'IE', ukr: 'UA', rus: 'RU', blr: 'BY', est: 'EE', lva: 'LV', ltu: 'LT', nzl: 'NZ' };
 let regionNames = null;
@@ -574,6 +889,9 @@ function render() {
   const daily = [...state.daily].sort((a, b) => a.date.localeCompare(b.date));
   barChart($('chart-imp'), daily);
   lineChart($('chart-pos'), daily);
+  renderGoals();
+  renderTodo();
+  renderClusters();
   renderPosts();
   renderKnowhow();
   renderSessions();

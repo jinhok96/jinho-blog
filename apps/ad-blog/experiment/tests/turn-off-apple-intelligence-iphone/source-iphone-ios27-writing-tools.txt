@@ -1,0 +1,37 @@
+## Use Writing Tools to write, improve, and summarize content on iPhone
+With Apple Intelligence, you can use Writing Tools to write text and rewrite selected text to find the right wording and tone. You can also proofread and summarize documents. Writing Tools are available in most places you write, including third-party apps and websites.
+If you’re using Siri AI (Beta), you can compose, rewrite, proofread, and get feedback on your writing. See Write with Siri  for more information.
+Note: Siri AI is available in beta on iOS 27 or later on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later with Siri and device language set to a supported language. Available in English to start. Siri AI will not initially be available in the EU on iOS. Usage limits may apply.
+Note: Apple Intelligence on iOS 27 or later is available on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later. Apple Intelligence is not available in all languages or regions. Usage limits may apply.*
+## Proofread, rewrite, summarize, and organize text with Writing Tools
+- 
+While writing, select the text you want to refine, then tap .
+- 
+Choose an option to refine or summarize your text. Here are some of the things you can do:
+- 
+Tap “Describe a change” to describe the kind of change you want to make.
+- 
+Tap Rewrite. To choose a particular tone, tap Friendly, Professional, or Concise.
+- 
+Tap Proofread.
+- 
+Tap Summarize or Key Points to only summarize the most important points of your text.
+- 
+When you’re finished, tap .
+## Compose text with ChatGPT in Writing Tools
+- 
+While typing, tap the text field, then tap .
+- 
+Swipe up, then tap Compose.
+- 
+Describe what you want ChatGPT** to write—for example, “A bedtime story about a girl who visits a magical world where she befriends a caterpillar on its journey to becoming a butterfly”— choose Include All Text or Selected Text, then tap .
+- 
+If you’re asked for more details, tap a field, enter a response, then tap —or tap Ignore to continue without adding details.
+After viewing the text, you can rewrite text, incorporate suggestions made by ChatGPT, and revert to the original version of your text. To learn more about the ChatGPT extension, see Use ChatGPT with Apple Intelligence.
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at apple.com/apple-intelligence.
+**ChatGPT uses generative models and outputs may vary. Check important information for accuracy. When using the ChatGPT extension, you choose what content to send to ChatGPT. Your request and attachments, as well as limited data associated with the request, such as current time zone, country, device type, language, and feature being used when making the request, are sent to ChatGPT to answer your request and enable ChatGPT to provide you accurate and relevant results.
+See alsoUse Siri to find information and get things done on iPhone
+				Previous
+				Use Image Wand with Apple Intelligence
+				Next 
+				Turn on ChatGPT

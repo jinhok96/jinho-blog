@@ -1,0 +1,53 @@
+Access your Account Privacy Settings
+			Applies ToMicrosoft Loop Excel for Microsoft 365 Word for Microsoft 365 Outlook for Microsoft 365 PowerPoint for Microsoft 365 Access for Microsoft 365 OneNote for Microsoft 365 Project Online Desktop Client Publisher for Microsoft 365 Excel for Microsoft 365 for Mac Word for Microsoft 365 for Mac Outlook for Microsoft 365 for Mac PowerPoint for Microsoft 365 for Mac Excel 2024 Word 2024 Outlook 2024 PowerPoint 2024 Access 2024 OneNote 2024 Project Professional 2024 Project Standard 2024 Visio Professional 2024 Visio Standard 2024 Excel 2024 for Mac Word 2024 for Mac Outlook 2024 for Mac PowerPoint 2024 for Mac Excel 2021 Word 2021 Outlook 2021 PowerPoint 2021 Access 2021 Project Professional 2021 Project Standard 2021 Publisher 2021 Visio Professional 2021 Visio Standard 2021 OneNote 2021 Excel 2021 for Mac Word 2021 for Mac Outlook 2021 for Mac PowerPoint 2021 for Mac Excel 2019 Word 2019 Outlook 2019 PowerPoint 2019 Access 2019 Project Professional 2019 Project Standard 2019 Publisher 2019 Visio Professional 2019 Visio Standard 2019 Excel 2016 Word 2016 Outlook 2016 PowerPoint 2016 Access 2016 OneNote 2016 Project Professional 2016 Project Standard 2016 Publisher 2016 Visio Professional 2016 Visio Standard 2016 Skype for Business 
+Windows
+macOS
+Web
+Office for iOS
+Office for Android
+Microsoft account privacy dashboard
+To access your privacy settings when you open any Office application:
+Select Account in the bottom of the left pane, and  under Account Privacy, choose Manage Settings.
+If you already have an Office application open:
+Go to the File tab, select Account (or Office Account in Outlook) in the bottom of the left pane, and then choose Manage Settings.
+To access your privacy settings in the new Outlook for Windows:
+On the View tab, select View settings and then choose General.
+Select Privacy and data then choose Privacy settings.
+This opens the Account Privacy settings dialog box where you can select your privacy options.
+Note
+This applies to Version 1904 or newer of Microsoft 365 apps or Office.
+If you're using Microsoft 365 apps or Office with a work or school account, your administrator may have configured what settings you can change.
+On Windows these settings apply to Word, Excel, PowerPoint, Outlook, OneNote, Access, Project, and Visio.
+More details
+On opening an office app, or selecting File, look for Account or Office Account towards the bottom left corner of the window. 
+Select Manage Settings under Account Privacy.
+For the new Outlook for Windows:
+On the View tab, select View settings.
+On the General tab, choose Privacy and data and select Privacy settings.
+Note
+Users with a personal account will have additional settings on this screen, but the button for Privacy settings remain the same.
+To access your privacy settings, open any Office application, select the app menu > Preferences > Privacy. This will open the Account Privacy settings dialog box where you can select your privacy options.
+On Mac these settings apply to Word, Excel, PowerPoint, Outlook, and OneNote.
+To access privacy settings in Word, Excel, PowerPoint, OneNote, and Visio:  
+In edit mode: Select File > About > Privacy Settings.
+In view mode: At the top of the page, select 
+ > Privacy Settings.
+To access privacy settings in Outlook: 
+On the View tab, select View settings.
+On the General tab, choose Privacy and data and select Privacy settings.
+To access your privacy settings, open any Office app and go to Settings > Privacy Settings. This will open the Privacy Settings menu where you can select your privacy options.
+On iOS these settings apply to Word, Excel, PowerPoint, Outlook, OneNote, Visio, and Microsoft Copilot.
+To access your privacy settings, open any Office app, select your account picture in the upper-left corner, and select Privacy Settings. This will open the Privacy Settings menu where you can select your privacy options.
+On Android these settings apply to Word, Excel, PowerPoint, OneNote, Visio, and Microsoft Copilot.
+To access your privacy settings, sign in to the privacy dashboard at https://account.microsoft.com/privacy with your Microsoft account. In the dashboard, go to Privacy > Find privacy settings in Microsoft products > Microsoft 365.
+Your settings go with you
+When you adjust your privacy settings, turning things on or off, those settings will roam to all of your Windows, Mac, Android, and iOS devices. If you decide to turn off experiences that analyze your content on your Windows desktop computer, for example, the next time you sign into a Microsoft 365 app on your phone that setting will be applied there as well. If you turn the setting back on, the next time you sign into a Microsoft 365 app on the desktop, it will be turned back on there as well. Your settings travel with you.
+Note that on Mac only the settings for Word, Excel, PowerPoint, OneNote, and Outlook will roam.
+Important
+The settings are associated to your account so they only roam if you sign into the other devices with the same personal, work, or school account.
+The exception to this is if you turn off the setting that disables all non-essential connected experiences. The service that roams your privacy settings across devices is also turned off by that switch, so when that setting is off your settings will not roam to, or from, that particular device. If you have other devices where that switch is not turned off, they will continue to roam your settings among themselves.
+If you want to turn off all non-essential connected experiences on all of your eligible devices, you'll need to turn it off on each of them. 
+Related articles
+Diagnostic data for Microsoft 365
+Connected Experiences in Microsoft 365
+								

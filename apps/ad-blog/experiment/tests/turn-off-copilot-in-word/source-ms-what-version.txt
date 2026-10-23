@@ -1,0 +1,36 @@
+		Related topics
+			Related topics
+			×
+						Microsoft 365 apps
+Get started
+Can't install
+						Subscription versions
+Check version
+Difference between Microsoft 365 and Office 2024
+About Office: What version of Office am I using?
+			Applies ToExcel for Microsoft 365 Word for Microsoft 365 Outlook for Microsoft 365 PowerPoint for Microsoft 365 Access for Microsoft 365 OneNote for Microsoft 365 Publisher for Microsoft 365 Excel for Microsoft 365 for Mac Word for Microsoft 365 for Mac Outlook for Microsoft 365 for Mac PowerPoint for Microsoft 365 for Mac OneNote for Microsoft 365 for Mac Excel 2024 Word 2024 Outlook 2024 PowerPoint 2024 Access 2024 OneNote 2024 Project Professional 2024 Project Standard 2024 Visio Professional 2024 Visio Standard 2024 Office 2024 Word 2024 for Mac Outlook 2024 for Mac PowerPoint 2024 for Mac OneNote 2024 for Mac Office 2024 for Mac Excel 2021 Word 2021 Outlook 2021 PowerPoint 2021 Access 2021 Project Professional 2021 Project Standard 2021 Publisher 2021 Visio Professional 2021 Visio Standard 2021 Office 2021 OneNote 2021 Word 2021 for Mac Outlook 2021 for Mac PowerPoint 2021 for Mac OneNote 2021 for Mac Office 2021 for Mac Excel 2019 Word 2019 Outlook 2019 PowerPoint 2019 Access 2019 Project Professional 2019 Project Standard 2019 Publisher 2019 Visio Professional 2019 Visio Standard 2019 Office 2019 Excel 2019 for Mac Word 2019 for Mac Excel 2016 Word 2016 PowerPoint 2016 Access 2016 OneNote 2016 Project Professional 2016 Project Standard 2016 Publisher 2016 Visio Professional 2016 Visio Standard 2016 Office 2016 OneNote for Mac Microsoft 365 for home Office 365 Small Business Office 365 operated by 21Vianet - Small Business Admin InfoPath 2013 
+		Get help with Copilot
+				Which version of Office am I using?
+				How do I manage a third-party Microsoft 365 subscription?
+				Build a Microsoft 365 version reference card.
+Windows
+Mac
+Open any Office application, such as Word or Excel, and select Account.
+Note
+If the Account option isn't available or you already have a file or document open, select File, and then select either Account or Help from the list.
+Under Product Information, you'll find your Office product name and, in some cases, the full version number.
+1 - Product name, such as Microsoft 365 ProPlus or Office Home and Student.
+2 - Version number, which includes version, build number, and the type of installation such as Click-to-run or Windows Store.
+For more information, such as the bit-version, choose About Excel. A dialog box opens, showing the full version number and bit version (32-bit or 64-bit).
+Related articles
+What version of Outlook do I have?
+How can I tell if my computer is running a 32-bit or 64-bit version of Windows
+Open any Office application, such as Word.
+Go to the Word menu and select About Word.
+In the dialog box that opens, it will show the version number as well as the license type. In the example below, the version number is 16.18 and the license is a one-time purchase of Office 2019 for Mac.
+Related articles
+Update history for Office for Mac
+Release notes for Office for Mac
+Still not sure?
+If the steps above didn't work for you, you're likely using an older version of Office. To learn what version you have, go to Find details for other versions of Office.
+								

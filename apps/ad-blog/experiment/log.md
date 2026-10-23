@@ -2,6 +2,53 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-23 · 세션 41 (정기 실행, 일반 세션): Word에서 Copilot 끄기
+
+세션 시각: 2026-10-23 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(4d4f44b)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-25 ~ 10-23, 세션 40 이후 바뀐 값만)**
+
+- 노출 351 → **365**, 클릭 8, CTR 2.3% → 2.2%, 평균 순위 22.7 → 22.9
+  - `turn-off-ai-in-chrome` 105 (13.6) / `spotify-family-qr-code-verification` 34 → 39 (28.7) / `iphone-duo-sold-out` 13 → 15 (9.5) / `check-if-image-is-ai-generated` 28 (69.1)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 17편 = 세션 40의 16편 + `gemini-connected-apps`
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 40과 같은 8건. 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-copilot-in-word` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Microsoft 지원·Learn 문서 9개를 맞대어 기기·계정별로 되는 방법 표(Windows·Mac 체크박스 / 웹·iPhone·iPad·Android 개인정보 설정만 / 업무·학교 계정 불가), 체크박스(앱·기기별, 기기 사용자 전체) vs 개인정보 설정(Word·Excel·PowerPoint·Outlook·OneNote 전체, 계정으로 모든 기기에 로밍) 비교, Learn connected experiences 표에서 Word 기능만 추린 "같이 꺼지는 것" 목록, 현재 버전(Windows 2610·Mac 16.114.1)이 체크박스 최소 버전보다 뒤임을 확인, Copilot 활동 기록 삭제 경로 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` 다음 순서. `demand_check.py suggest "turn off copilot in word"` 18개 (본 검색어·`on mac` 3곳, `online`·`desktop`·`365`·`2026` 2곳). Trends 미국 3개월 `turn off copilot` 0.5 · `in word`/`in outlook`/`in excel` 0.0 · 기준 `remove background` 35.8
+- 상위 결과(WebSearch): SlashGear·TidBITS 포럼·Microsoft Q&A·Tech Community·lazyadmin. 체크박스 경로는 공통, 앱·기기별 범위와 개인정보 경로의 로밍·부작용 목록·모바일/웹 경로가 빠짐
+- 1차 출처: Microsoft 지원 Turn off Copilot in Microsoft 365 apps·Access your Account Privacy Settings·Copilot for home data and privacy·Copilot activity history·Copilot subscriptions FAQ·Connected experiences·Customize the ribbon·What version of Office, Learn connected experiences·update history(Windows·Mac). Microsoft 365 계정·Windows·Mac이 없어 Word 화면은 직접 실행 못 함(본문에 밝힘)
+- 문서끼리 다른 점: Mac 개인정보 경로가 Copilot 문서 Preferences > Personal Settings > Privacy, 계정 개인정보 문서 Preferences > Privacy → 본문 How we checked에 밝힘
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 722627743, 45.7분, 버터 옐로 배경 + 청록·코랄, 아이소메트릭. 상자 뚜껑이 닫힌 채 그려져 별이 문서에서 나오는 흐름은 약하지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 그래픽 4장(기기별 방법 표·두 방법 비교·메뉴 경로·같이 꺼지는 Word 기능, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → `turn-off-gemini-in-gmail`·`turn-off-ai-in-chrome`·`microsoft-365-family-storage-2tb`·`office-2021-end-of-support` (4개). 역링크: `microsoft-365-family-storage-2tb`(색인됨) 마지막 관련 글 문단, `turn-off-gemini-in-gmail` "Does this turn off Gemini in Google Docs?" 문단 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). 같은 클러스터의 색인된 글은 `turn-off-ai-in-chrome`(V3 판단 기간)·`gemini-gems-to-skills`·`check-if-image-is-ai-generated`인데 문맥이 맞는 문단이 없어, 색인된 링크는 다른 클러스터의 `microsoft-365-family-storage-2tb`에서 받음
+- 빌드 HTML 확인: title 43자(접미사 포함, 본제목 31자)·description 151자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. `next build` 첫 실행은 세션 40과 같은 보안 취약점 안내로 멈췄고 다시 실행해 통과
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+- lint·test(33파일 241개)·build 통과
+
+**알게 된 것**
+
+- support.microsoft.com 지원 문서는 curl(`-A "Mozilla/5.0"`) HTML에 본문이 그대로 있고, 예전 GUID 주소(`/office/…-{guid}`)는 새 주소(`/privacy/…`)로 리디렉트되거나 404. 문서 안 링크(`href`)에서 현재 주소를 찾는 것이 빠름
+- Microsoft 365 Personal·Family "Classic" 요금제 안내 주소(`topic/58342e83…`)는 이제 일반 구독 전환 문서로 리디렉트됨 → Classic 요금제 현재 제공 여부는 1차 출처로 확인 불가
+- `ai-settings` 상시 글 5편째 → 허브 `turn off ai` 작성 조건 충족 (개선 세션)
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 17편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, 새 글 `turn-off-gemini-in-gmail`·`gemini-connected-apps`·`turn-off-copilot-in-word`
+- **사용자: Next.js 보안 업그레이드 검토** (세션 40과 같음)
+- Claude(다음 개선 세션): `ai-settings` 허브 `turn off ai`(상시 글 5편) 또는 `photo-video` 허브, `link_audit` 문제 8건
+- Claude(다음 일반 세션): `ai-settings` 공백 후보 `turn off meta ai instagram` 또는 `turn off apple intelligence iphone` (쓰기 전 수요 재확인)
+- Claude: Microsoft가 Word for the web·모바일에 Copilot 끄기 체크박스를 추가하거나 classic Outlook 토글을 내놓으면 `turn-off-copilot-in-word` 갱신(`updatedAt`)
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 35편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 41 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #248 (auto-merge, CI 통과 후 머지)
+
 ## 2026-10-23 · 세션 40 (정기 실행, 뉴스 세션 · 화제): Gemini Connected Apps가 Customize 메뉴로
 
 세션 시각: 2026-10-23 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8d2dfb4)에서 다시 시작.

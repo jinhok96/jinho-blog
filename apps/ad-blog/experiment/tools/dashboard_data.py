@@ -4,8 +4,11 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
 업로드는 세션에서 `ArtifactData` 도구로 한다 (README "운영 대시보드" 절차).
 
 실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}']
-출력: {out}/stats/{doc_id}.json + {out}/writes.json (ArtifactData batch의 writes 값 그대로)
+출력: {out}/stats/{doc_id}.json + {out}/history/*.json + {out}/writes.json (ArtifactData batch의 writes 값 그대로)
       + {out}/data.js (비로그인 열람용 스냅숏, 아티팩트 파일 `data.js`로 발행)
+
+`stats`는 화면이 읽는 최신 값이라 회차마다 바뀌고, 같은 내용을 `history` 컬렉션에 회차별 새 문서
+(`{summary.updatedAt}_{doc_id}` = {runAt, doc, data})로 함께 남긴다. history는 만들기만 하고 고치거나 지우지 않는다.
 
 `stats` 컬렉션 하나에 문서 몇 개만 둔다 (세션마다 버전을 옮겨 적는 수를 줄이려고). 기존 문서를 덮어쓰려면
 `ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
@@ -356,12 +359,28 @@ def main() -> None:
         if doc_id in versions:
             w['if_version'] = int(versions[doc_id])
         writes.append(w)
+    writes += history_writes(docs, pathlib.Path(args.out) / 'history')
     (out.parent / 'writes.json').write_text(json.dumps(writes, ensure_ascii=False), encoding='utf-8')
     # 비로그인 열람용 스냅숏 (아티팩트 DB는 로그인한 사람만 읽을 수 있음). 아티팩트 파일 data.js로 발행
     snapshot = json.dumps({'docs': docs}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     (out.parent / 'data.js').write_text(f'window.DASHBOARD_SNAPSHOT = {snapshot};\n', encoding='utf-8')
-    new = [w['doc_id'] for w in writes if 'if_version' not in w]
-    print(f'{len(writes)}개 문서 → {out.parent}/writes.json' + (f' (새 문서: {", ".join(new)})' if new else ''))
+    new = [w['doc_id'] for w in writes if w['collection'] == 'stats' and 'if_version' not in w]
+    recorded = sum(w['collection'] == 'history' for w in writes)
+    print(f'stats {len(writes) - recorded}개 + history {recorded}개 → {out.parent}/writes.json' + (f' (새 stats 문서: {", ".join(new)})' if new else ''))
+
+
+def history_writes(docs: dict[str, dict], out: pathlib.Path) -> list[dict]:
+    """회차 기록: stats 문서마다 history 컬렉션에 `{갱신 시각}_{문서 ID}` 새 문서를 만드는 쓰기 목록.
+    if_version 없이 만들므로 같은 ID가 이미 있으면 서버가 거부함 (기록은 덮어쓰거나 지우지 않음, 2026-10-23 사용자 결정)"""
+    run_at = docs['summary']['updatedAt']
+    out.mkdir(parents=True, exist_ok=True)
+    writes = []
+    for doc_id, data in docs.items():
+        hid = f'{run_at}_{doc_id}'
+        f = out / f"{hid.replace(':', '-')}.json"
+        f.write_text(json.dumps({'runAt': run_at, 'doc': doc_id, 'data': data}, ensure_ascii=False, separators=(',', ':')), encoding='utf-8')
+        writes.append({'op': 'set', 'collection': 'history', 'doc_id': hid, 'file_path': str(f)})
+    return writes
 
 
 if __name__ == '__main__':

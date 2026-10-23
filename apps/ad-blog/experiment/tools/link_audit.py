@@ -76,7 +76,7 @@ def parse_post(path: pathlib.Path) -> dict:
 
 
 def parse_clusters(path: pathlib.Path) -> tuple[list[dict], str | None]:
-    """`## 클러스터 맵` 아래 첫 표 → [{id, 허브, 상시 글, 뉴스 칼럼}]. 읽지 못하면 (빈 목록, 사유)"""
+    """`## 클러스터 맵` 아래 첫 표 → [{id, name, priority, 허브, 상시 글, 뉴스 칼럼}]. 읽지 못하면 (빈 목록, 사유)"""
     if not path.is_file():
         return [], f"{path} 파일 없음"
     lines = path.read_text(encoding="utf-8").splitlines()
@@ -101,7 +101,7 @@ def parse_clusters(path: pathlib.Path) -> tuple[list[dict], str | None]:
         if all(re.fullmatch(r":?-{3,}:?", c) for c in row):  # 구분선
             continue
         cells = {name: row[i] if i < len(row) else "" for name, i in col.items()}
-        cluster = {"id": cells["ID"].strip("` ")}
+        cluster = {"id": cells["ID"].strip("` "), "name": cells.get("클러스터", ""), "priority": cells.get("우선순위", "")}
         for role in ROLES:
             cluster[role] = re.findall(r"`([^`]+)`", cells[role])
         clusters.append(cluster)

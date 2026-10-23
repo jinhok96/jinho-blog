@@ -2,6 +2,51 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-24 · 세션 43 (정기 실행, 일반 세션): iPhone에서 Apple Intelligence 끄기
+
+세션 시각: 2026-10-24 00:18 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(090d3f1)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-25 ~ 10-23, 세션 42 이후 바뀐 값만)**
+
+- 노출 386 → **406**, 클릭 8, CTR 2.1% → 2.0%, 평균 순위 23.0 → 23.4
+  - `turn-off-ai-in-chrome` 112 → 117 (13.1) / `image-to-text-offline-free` 60 → 63 (12.0) / `spotify-family-qr-code-verification` 40 → 48 (32.2) / `gemini-gems-to-skills` 29 (7.4)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 19편 = 세션 42의 18편 + `turn-off-ai-features` → 색인율 17/36 (47%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 시작 6건(세션 42와 같음) → 끝 5건 (새 글이 `apple-siri-settlement-claim`에 링크해 받는 링크 2개). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-apple-intelligence-iphone` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Apple iPhone User Guide iOS 27판과 26판 대조(26판의 "Turn off Apple Intelligence" 한 버튼 문단이 27판에 없음, Screen Time 메뉴도 Intelligence & Siri → Siri로 바뀜), 27판 설정 9개 전부(음성 사서함 제안·Call Context·Journal 포함) + ChatGPT 확장·Screen Time(+ 암호)·Apple Intelligence Report, 가이드에 스위치가 없는 기능(Writing Tools·Clean Up·Image Playground 등), 끄기로 저장 공간이 돌아온다는 공식 근거 없음(Apple 수치 8GB/14GB), iPhone·iPad·Mac 경로 표 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` (세션 42 다음 할 일). `demand_check.py suggest "turn off apple intelligence"` 27개 (본 검색어 3곳, `iphone` Google·Bing + YouTube `on iphone`, `ios 27` 2곳, `ipad` 2곳). Trends 미국 3개월 `turn off apple intelligence` 0.3(최근 7개 지점 1.0) · `turn off meta ai` 0.0 · `turn off ai in windows 11` 0.0 · 기준 `remove background` 35.6
+- 상위 결과(WebSearch): pandasecurity·ithinkdiff·Cult of Mac·analyticsinsight·nerdschalk. "전체 스위치 없음"은 공통, Apple 공식 목록 전체·iOS 26 대조·iPad/Mac·스위치 없는 기능이 빠짐, 일부는 출처 없는 저장 공간 수치(16~37GB)
+- 1차 출처: iPhone User Guide iOS 27(iph3fed3f2c3·iph1fbe7d2b9·iph00fd3c8c2·iph3ff83f3b1·iph272b4c4bd·iphe3f499e0e·iph6f08da1d2), iOS 26(iphc28624b81/26·iph3fed3f2c3/26), iPad Guide ipad3b7f1217, Mac Help mchlb2e44f94, Apple Support 121115, Apple Newsroom 2026-10(SynthID "later this year"). iPhone·iPad·Mac이 없어 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
+- 문서 오기: iPad 가이드 본문이 "Settings app on your iPhone"이라고 씀 → 본문엔 Settings 경로만 씀
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1003115277, 44.4분, 라벤더 배경 + 민트·탠저린, 3/4 위 시점. 토글 다섯 개 대신 두 칸 스위치 세 개지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 그래픽 4장(iOS 26 vs 27·iOS 27 메뉴 경로·끌 수 있는 범위·iPhone/iPad/Mac 경로, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`turn-off-gemini-in-gmail`·`turn-off-copilot-in-word`·`turn-off-ai-in-chrome`·`check-if-image-is-ai-generated`·`apple-siri-settlement-claim` (6개). 역링크: `check-if-image-is-ai-generated`(색인됨) SynthID 문단 끝, 허브 iPhone 절 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 빌드 HTML 확인: title 56자(접미사 포함, 본제목 44자)·description 152자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 14개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 241개)·build 통과
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+
+**알게 된 것**
+
+- Apple 가이드는 버전별 주소(`/26/ios/26`)로 이전 버전 문서를 그대로 받을 수 있어, iOS 버전 간 설정 변화를 1차 출처로 대조할 수 있음 (26판 주소는 새 slug로 리디렉트되지만 본문은 26판)
+- `hero_image.py --setup`이 모델을 받는 중에 생성을 시작하면 같은 `.part` 파일을 두 프로세스가 받아 rename에서 실패함 → 생성은 setup 프로세스가 끝난 뒤 시작해야 함 (이번 세션 1회 실패 후 setup 종료를 기다려 다시 실행)
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 19편 중 우선 허브 `turn-off-ai-features`, 새 글 `turn-off-apple-intelligence-iphone`, `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, `turn-off-gemini-in-gmail`·`turn-off-copilot-in-word`
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off meta ai instagram`(meta.com 도움말 JS 렌더링 → WebFetch로 확인 가능한지 먼저) 또는 `turn off ai in windows 11`(3곳 확인 필요)
+- Claude(다음 개선 세션): `photo-video` 허브, `link_audit` 남은 5건(받는 링크 1개 칼럼 3편 등), 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude: iOS 27.1 등 업데이트로 Apple 가이드의 스위치 목록이 바뀌거나 SynthID 지원이 나오면 `turn-off-apple-intelligence-iphone`·허브 iPhone 절 갱신(`updatedAt`)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 37편
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 세션 43 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-23 · 세션 42 (정기 실행, 개선 세션): `ai-settings` 허브 + 색인·링크 보강
 
 세션 시각: 2026-10-23 18:15 KST → 개선 세션 (전략 개편 후 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(224c79b)에서 다시 시작.

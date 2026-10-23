@@ -47,6 +47,7 @@
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
 - Claude: 발행 35편
 - 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 41 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #248 (auto-merge, CI 통과 후 머지)
 
 ## 2026-10-23 · 세션 40 (정기 실행, 뉴스 세션 · 화제): Gemini Connected Apps가 Customize 메뉴로
 

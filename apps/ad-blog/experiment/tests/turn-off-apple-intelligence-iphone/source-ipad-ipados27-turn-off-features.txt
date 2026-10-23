@@ -1,0 +1,36 @@
+## Turn off and restrict access to Apple Intelligence features on iPad
+You can turn off Apple Intelligence features like Siri AI (Beta), summarization features, and more. For more information on parental controls, see Apple Devices for Kids and Families.
+Note: Apple Intelligence on iPadOS 27 or later is available on an Apple Intelligence-enabled iPad mini (A17 Pro) and iPad models with M1 or later. Apple Intelligence is not available in all languages or regions. Usage limits may apply.*
+To change these settings, go to the Settings app  on your iPhone, then do any of the following:
+Option
+Description
+Siri AI (Beta)
+Tap Siri, scroll down, then tap Turn Off Siri. Tap Turn Off Siri again to confirm.
+Note: Siri AI is available in beta on iPadOS 27 or later on an Apple Intelligence-enabled iPad mini (A17 Pro) or iPad model with M1 or later set to a supported language. Available in English to start. Siri AI will not initially be available in the EU on iPadOS. Usage limits may apply.
+Switch to Siri Classic
+To use Siri Classic instead of Siri AI, follow the steps above to turn off Siri. Tap Turn on Siri, then tap Siri Classic.
+Messages summaries
+Tap Apps, tap Messages, then turn off Summarize Messages.
+Email summaries
+Tap Apps, tap Mail, then turn off Summarize Message Previews.
+Notification summaries
+Tap Notifications, tap Summarize Notifications, then turn off Summarize Notifications.
+Priority notifications
+Tap Notifications, tap Prioritize Notifications, then turn off Prioritize Notifications.
+Personalized Smart Replies in Mail
+Tap Apps, tap Mail, then turn Personalize Smart Replies on or off.
+Voicemail suggestions in Phone
+Tap Apps, tap Phone, then turn Suggestions in Voicemail on or off.
+Call Context cards
+Tap Apps, tap Phone, tap Apple Intelligence & Siri, then tap Show When Calling.
+Writing Prompts in Journal
+Tap Apps, tap Journal, then turn Get Writing Prompts on or off.
+Restrict access to Apple Intelligence features in Screen Time
+See Block or allow Siri and Apple Intelligence features for restricting access for yourself. For your child, see Block or allow access and changes to features on your kid’s device in Apple Devices for Kids and Families.
+Change how you see suggestions from your apps
+See Customize where suggestions appear.
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at apple.com/apple-intelligence.
+				Previous
+				Apple Intelligence and privacy
+				Next 
+				Set up Family Sharing

@@ -1,0 +1,37 @@
+## Block access to Apple Intelligence features in Screen Time on iPhone
+You can turn on Content & Privacy Restrictions in Screen Time to restrict access to certain Apple Intelligence* features like Writing Tools, image creation features, and intelligence extensions on supported devices.
+Note: Apple Intelligence is not available on all iPhone models or in all languages or regions.** To access the most recent available features, make sure you’re using the latest version of iOS and have Apple Intelligence turned on.
+## Block access to Writing Tools
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time.
+- 
+Tap Content & Privacy Restrictions, then turn on Content & Privacy Restrictions.
+- 
+Tap Intelligence & Siri, tap Writing Tools, then tap Allow or Don’t Allow.
+## Block access to image creation features
+You can restrict access to image creation features like Image Playground, Genmoji, and Image Wand.
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time.
+- 
+Tap Content & Privacy Restrictions, then turn on Content & Privacy Restrictions.
+- 
+Tap Intelligence & Siri, tap Image Creation, then tap Allow or Don’t Allow.
+## Block access to Intelligence Extensions
+You can restrict access to third-party AI provider extensions—like ChatGPT.
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time.
+- 
+Tap Content & Privacy Restrictions, then turn on Content & Privacy Restrictions.
+- 
+Tap Intelligence & Siri, tap Intelligence Extensions, then tap Allow or Don’t Allow.*Apple Intelligence uses generative models and outputs may vary. Check important information for accuracy.**Apple Intelligence is available in beta with support for the following languages: English, Danish, Dutch, French, German, Italian, Norwegian, Portuguese, Spanish, Swedish, Turkish, Chinese (Simplified), Chinese (Traditional), Japanese, Korean, and Vietnamese. Some features may not be available in all languages or regions. For more information on language and feature availability and system requirements, see the Apple Support article How to get Apple Intelligence.
+See alsoBlock apps, app downloads, websites, and purchases on iPhoneAdd a member to a Family Sharing group on iPhoneUse Writing Tools with Apple Intelligence on iPhoneCreate original images with Image Playground on iPhoneUse ChatGPT with Apple Intelligence on iPhone
+				Previous
+				Apple Intelligence and privacy
+				Next 
+				Contact emergency services

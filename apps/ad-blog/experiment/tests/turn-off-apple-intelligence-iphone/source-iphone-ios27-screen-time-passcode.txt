@@ -1,0 +1,29 @@
+## Create, change, or remove a Screen Time passcode on iPhone
+You can create a passcode that you must enter before changing Screen Time settings you selected for yourself. After you set a passcode, you can change or remove it later in Settings.
+If you want to set up Screen Time or parental control features for your child, see Apple Devices for Kids and Families.
+## Create a Screen Time passcode
+You can choose to enter a Screen Time passcode before you can change the settings you’ve chosen for yourself.
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time, tap Manage Screen Time, then tap Lock Screen Time Settings.
+- 
+Enter a four-digit passcode, then enter the passcode again to verify it.
+Note: After setting a passcode for yourself, you can also set up Screen Time Passcode Recovery. If you set up this feature, you can use your Apple Account to reset your Screen Time passcode if you ever forget it.
+## Change a Screen Time passcode
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time, tap Change Screen Time Passcode, then tap Change Screen Time Passcode.
+- 
+Enter your current passcode, enter a new four-digit passcode, then enter the new passcode again to verify it.
+## Remove a Screen Time passcode
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time, tap Change Screen Time Passcode, select Turn Off Screen Time Passcode, then enter your current passcode.
+See alsoApple Support article: If you forgot a Screen Time passcodeSet, change, and manage your child’s Screen Time passcodeSet up Screen Time for yourself on iPhone
+				Previous
+				Choose who you can communicate with at certain times
+				Next 
+				Charging cable

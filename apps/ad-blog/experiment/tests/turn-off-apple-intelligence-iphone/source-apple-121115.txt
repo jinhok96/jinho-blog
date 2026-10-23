@@ -1,0 +1,81 @@
+## Get started with the next generation of Apple Intelligence
+The next generation of Apple Intelligence is integrated deeply into the OS and powers helpful features across apps that simplify the things you do every day, from browsing the web, to generating images in virtually any style, staying on top of your communication and schedule, editing photos, and more.
+The next generation of Apple Intelligence is automatically available on eligible devices as part of the operating system when you update to the 27.0 software releases across iOS, iPadOS, macOS, watchOS, and visionOS in supported languages and regions.
+Apple Intelligence also powers an entirely new version of Siri: Siri AI. Find out how to get Siri AI (Beta).
+## Device requirements
+Apple Intelligence in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 is available on iPhone Duo, iPhone 16 models or later, iPhone 15 Pro, iPhone 15 Pro Max, iPhone Air, iPad mini (A17 Pro), iPad models with M1 or later, MacBook Neo (A18 Pro), Mac with M1 or later, Apple Vision Pro, Apple Watch Series 9 or later, Apple Watch Ultra 2 or later, and Apple Watch SE 3 when paired with an Apple Intelligence-enabled iPhone; some features require iPhone nearby.
+## System requirements
+- 
+iOS 27, iPadOS 27, macOS 27 Golden Gate, visionOS 27, watchOS 27
+- 
+Up to 14 GB of storage on device for iPhone Duo, iPhone 17 Pro models and later, iPhone Air, iPad models with M4 and later and at least 12GB of unified memory, Mac models with M3 and later and at least 12GB of unified memory, and Apple Vision Pro (M5)
+- 
+Up to 8 GB of storage for other Apple Intelligence-enabled iPhone, iPad, Mac, and Apple Vision Pro models*
+- 
+Up to 1.5 GB of storage is required on Apple Watch
+- 
+Device language and Siri language set to the same supported language
+If you change Siri language, Apple Intelligence might become unavailable until the new Siri language fully downloads and matches the device language.
+*Learn how to free up storage on your iPhone, iPad, or Mac. Storage used by Apple Intelligence may temporarily exceed storage requirements during and shortly after a software update, as new models are downloaded and older ones are removed.
+## Supported languages and regions
+With iOS 27, iPadOS 27, and macOS 27, many Apple Intelligence features are available in most regions around the world on compatible iPhone, iPad, and Mac models. Apple Intelligence is available with support for these languages: English, Danish, Dutch, French, German, Italian, Norwegian, Portuguese, Spanish, Swedish, Turkish, Vietnamese, Chinese (simplified), Chinese (traditional), Japanese, and Korean. Some features may not be available in all regions or languages. Some Apple Intelligence features are available in these languages with watchOS 27 when paired with an Apple Intelligence-enabled iPhone.
+With visionOS 27, many Apple Intelligence features are available on Apple Vision Pro in English, French, German, Italian, Chinese (simplified), Chinese (traditional), Japanese, Korean, and Spanish.
+Feature availability can vary by platform, language, and region. Apple Intelligence will continue to work when you travel to other regions around the world.
+## For European Union residents
+The next generation of Apple Intelligence features across apps—such as advanced photo-editing, the reimagined Image Playground, and intelligent features for browsing—are available for users based in the EU with iOS 27 and iPadOS 27 on supported iPhone and iPad models, with macOS 27 Golden Gate on supported Mac models, and with visionOS 27.
+## For China residents
+Apple Intelligence features will not currently work for supported devices purchased in China mainland. For supported devices purchased outside of China mainland, Apple Intelligence features will not currently work if you are in China mainland and if your Apple Account Country or Region is also in China mainland.
+When Apple Intelligence is available in China mainland, previously-purchased devices that support Apple Intelligence will be able to activate and start using a core set of Apple Intelligence features in that region. New Apple Intelligence features will not be available in China while Apple works through regulatory requirements.
+## Feature Usage Limits
+Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at Apple Intelligence Usage Terms.
+## Feature availability by platform
+With iOS 27, iPadOS 27, macOS 27 Golden Gate, watchOS 27, and visionOS 27 the next generation of Apple Intelligence powers these features:
+- 
+Advanced photo-editing tools (Spatial Reframing, Extend, Improved Clean Up): iPhone, iPad, Mac. Usage limits may apply
+- 
+Intelligent features in Safari (Notify Me, Describe an Extension, Organize tabs by topics): iPhone, iPad, Mac; Apple Vision Pro supports organizing bookmarks and reading lists by topic
+- 
+Describe a shortcut in natural language: iPhone, iPad, Mac. Usage limits may apply
+- 
+Reimagined Image Playground: iPhone, iPad, Mac, Apple Vision Pro. Usage limits may apply
+- 
+Suggestions in Mail (English only): iPhone, iPad, Mac
+- 
+Personalized Smart Reply in Messages (English only): iPhone, iPad, Mac, Apple Vision Pro
+- 
+Personalized Smart Reply in Mail: iPhone, iPad, Mac
+- 
+Automatic proofreading: iPhone, iPad, Mac
+- 
+Call Context: iPhone, iPad, Mac, Apple Watch
+- 
+Describe a calendar event in natural language: iPhone, iPad, Mac
+- 
+Describe a reminder in natural language: iPhone, iPad, Mac
+- 
+Intelligent file and folder name suggestions in Finder: iPhone, iPad, Mac
+- 
+Combining related activity notifications in the Home app:1 iPhone, iPad, Mac, Apple Vision Pro
+- 
+HomeKit Secure Video AI Search and Captions:1 iPhone, iPad, Mac, Apple Vision Pro. Usage limits may apply
+- 
+Enhanced Workout Buddy, without iPhone nearby (English, Spanish only): iPhone, Apple Watch
+- 
+Customized writing prompts in Journal entries: iPhone, iPad, Mac
+- 
+Intelligent Accessibility features
+- 
+Ask questions and get detailed image and scene descriptions in VoiceOver: iPhone, iPad, Mac, Apple Vision Pro; and in Magnifier: iPhone, iPad, Mac
+- 
+Use flexible item names with Voice Control commands (English US, UK, Canada, Australia): iPhone, iPad
+- 
+Content cleanup and summaries in Accessibility Reader: iPhone, iPad, Mac, Apple Vision Pro
+Apple Intelligence supports the following features with iOS 26, iPadOS 26, macOS Tahoe 26, and visionOS 26 and later:
+- 
+Writing Tools, available for users without Siri AI writing support: iPhone, iPad, Mac, Apple Vision Pro
+                            Get started with the next generation of Apple Intelligence
+                United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use                    Sales and Refunds Site Map
+- 
+    

@@ -20,6 +20,9 @@
   --warn: #ab570a;
   --warn-soft: #ffefcf;
   --bad: #ee0000;
+  /* 계열 2개짜리 비교 그래프 (dataviz 검사 통과: 라이트·다크 모두 색약 구분 ΔE 30 이상) */
+  --cat-1: #0070f3;
+  --cat-2: #eb6834;
   --shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
   /* 테두리는 box-shadow inset으로 그려 상자 크기가 4px 그리드에서 벗어나지 않게 함 */
   --hair: inset 0 0 0 1px var(--line);
@@ -40,6 +43,7 @@
   :root:not([data-theme="light"]) {
     --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
     --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
+    --cat-1: #3291ff; --cat-2: #d95926;
     --shadow: 0 0 0 transparent;
     color-scheme: dark;
   }
@@ -47,6 +51,7 @@
 :root[data-theme="dark"] {
   --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
   --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
+  --cat-1: #3291ff; --cat-2: #d95926;
   --shadow: 0 0 0 transparent;
   color-scheme: dark;
 }
@@ -131,7 +136,7 @@ ol.todo { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
 .todo-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
 .todo-head .step { flex: none; width: 24px; height: 24px; border-radius: 50%; display: inline-grid; place-items: center; background: var(--well); box-shadow: var(--hair); font-size: var(--fs-xs); font-weight: 600; color: var(--ink); }
 .todo-head b { font-weight: 600; color: var(--ink); }
-.todo .why { margin: 4px 0 0 32px; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
+.todo .why, .movers-list .why { margin: 4px 0 0 32px; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
 .todo-items { list-style: none; margin: 8px 0 0 32px; padding: 0; display: grid; gap: 4px; }
 .todo-items li { display: grid; min-width: 0; font-size: var(--fs-sm); line-height: var(--lh-sm); }
 .todo-items .row { display: flex; align-items: baseline; justify-content: space-between; gap: 12px; min-width: 0; }
@@ -162,6 +167,13 @@ th[aria-sort="ascending"] .sort::after { content: "↑"; opacity: 1; }
 th[aria-sort="descending"] .sort::after { content: "↓"; opacity: 1; }
 th[aria-sort] .sort, .sort:hover { color: var(--ink); }
 .sort:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; border-radius: 4px; }
+/* 증감 표시: 색 + 부호·글자(상승·하락)로 함께 나타냄 */
+.delta { font-weight: 600; font-variant-numeric: tabular-nums; white-space: nowrap; }
+.delta.good { color: var(--good); } .delta.bad { color: var(--bad); } .delta.flat { color: var(--mute); font-weight: 500; }
+#chart-cohort svg { display: block; }
+/* 순위 변화 목록: 할 일 목록 모양을 쓰되 번호 들여쓰기 없음 */
+.movers-list { display: grid; gap: 20px; }
+.movers-list .todo-items, .movers-list .why { margin-left: 0; }
 /* 할 일에서 글로 이동했을 때 그 줄을 잠깐 표시 */
 @keyframes flash { from { background: var(--link-soft); } to { background: transparent; } }
 tr.focus > td { animation: flash 1.6s ease-out; }
@@ -200,11 +212,12 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   </header>
 
   <div class="notice" id="notice" hidden></div>
+  <div class="notice" id="stale" role="status" hidden></div>
 
   <section class="kpis" aria-label="최근 28일 요약">
-    <div class="kpi"><span class="label">노출 (28일)</span><span class="value" id="k-imp">–</span><span class="sub" id="k-range">Search Console 웹 검색</span></div>
+    <div class="kpi"><span class="label">노출 (28일)</span><span class="value" id="k-imp">–</span><span class="sub" id="k-imp-sub">Search Console 웹 검색</span></div>
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
-    <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub">낮을수록 위</span></div>
+    <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub" id="k-pos-sub">낮을수록 위</span></div>
     <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
     <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
@@ -230,6 +243,19 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="panel">
       <div class="panel-head"><h2>날짜별 평균 순위</h2><span class="small">위로 갈수록 상위, 노출 없는 날 제외</span></div>
       <div id="chart-pos"></div>
+    </div>
+  </section>
+
+  <section class="charts">
+    <div class="panel">
+      <div class="panel-head"><h2>경과일별 누적 노출</h2>
+        <div class="legend"><span><i style="background:var(--cat-1)"></i>상시 글·허브</span><span><i style="background:var(--cat-2)"></i>뉴스 칼럼</span></div>
+      </div>
+      <div id="chart-cohort"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>검색어 순위 변화</h2><span class="small" id="m-range">최근 7일 vs 직전 7일</span></div>
+      <div class="movers-list" id="movers"><div class="empty">순위 변화 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</div></div>
     </div>
   </section>
 
@@ -320,7 +346,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 <script src="data.js"></script>
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null };
+const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, live: false }; // live = 실시간 DB 값을 보는 중
 const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
@@ -378,17 +404,61 @@ function statusPill(s) {
 function renderSummary() {
   const s = state.summary;
   if (!s) return;
-  $('updated').textContent = `갱신 ${localStamp(s.updatedAt)}`;
+  $('updated').textContent = `갱신 ${localStamp(s.updatedAt)} · 집계 ${ymd(s.range.start)} ~ ${ymd(s.range.end)}`;
   $('k-imp').textContent = fmt(s.impressions);
   $('k-clk').textContent = fmt(s.clicks);
-  $('k-ctr').textContent = 'CTR ' + pct(s.ctr);
   $('k-pos').textContent = s.position == null ? '–' : s.position.toFixed(1);
-  $('k-range').textContent = `${ymd(s.range.start)} ~ ${ymd(s.range.end)}`;
+  // 요약 아래 줄: 최근 7일 값 + 직전 7일 대비 증감
+  const w = weekly();
+  const tip = (el, text) => { el.title = text; };
+  if (w) {
+    const { now, prev } = w;
+    $('k-imp-sub').innerHTML = `최근 7일 ${fmt(now.imp)}회 ${deltaChip(now.imp - prev.imp)}`;
+    tip($('k-imp-sub'), `직전 7일 ${fmt(prev.imp)}회 (최근 2~3일 미확정 포함)`);
+    $('k-ctr').innerHTML = `CTR ${pct(s.ctr)} · 7일 ${fmt(now.clk)}회 ${deltaChip(now.clk - prev.clk)}`;
+    tip($('k-ctr'), `직전 7일 클릭 ${fmt(prev.clk)}회`);
+    $('k-pos-sub').innerHTML = now.pos == null ? '낮을수록 위' : `7일 ${now.pos.toFixed(1)}위 ${prev.pos == null ? '' : deltaChip(now.pos - prev.pos, { rank: true })}`;
+    tip($('k-pos-sub'), prev.pos == null ? '낮을수록 위' : `직전 7일 ${prev.pos.toFixed(1)}위 · 노출 가중 평균, 낮을수록 위`);
+  } else {
+    $('k-ctr').textContent = 'CTR ' + pct(s.ctr);
+  }
   const sm = s.sitemap || {};
   const ok = !sm.errors && !sm.warnings;
   $('k-sm').innerHTML = ok ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${sm.errors} · 경고 ${sm.warnings}</span>`;
   $('k-sm-sub').textContent = '마지막 다운로드 ' + localDate(sm.lastDownloaded);
 }
+
+// 최근 7일 vs 직전 7일 (마지막 집계일 기준, 빠진 날은 0). 순위는 노출 가중 평균
+function weekly() {
+  const rows = fillDays([...state.daily].sort((a, b) => a.date.localeCompare(b.date)));
+  if (rows.length < 14) return null;
+  const agg = (a) => {
+    const imp = a.reduce((s, r) => s + r.impressions, 0);
+    return { imp, clk: a.reduce((s, r) => s + (r.clicks || 0), 0), pos: imp ? a.reduce((s, r) => s + (r.position || 0) * r.impressions, 0) / imp : null };
+  };
+  return { now: agg(rows.slice(-7)), prev: agg(rows.slice(-14, -7)) };
+}
+
+// 증감 표시. rank: 순위라서 숫자가 작아지면 좋음 ("2.1위 상승")
+function deltaChip(d, { rank = false } = {}) {
+  if (d == null || !Number.isFinite(d)) return '';
+  const r = rank ? Math.round(d * 10) / 10 : Math.round(d);
+  if (!r) return '<span class="delta flat">변화 없음</span>';
+  const good = rank ? r < 0 : r > 0;
+  const text = rank ? `${Math.abs(r).toFixed(1)}위 ${r < 0 ? '상승' : '하락'}` : `${r > 0 ? '+' : '−'}${fmt(Math.abs(r))}`;
+  return `<span class="delta ${good ? 'good' : 'bad'}">${text}</span>`;
+}
+
+// 데이터 지연 경고: 정기 세션(하루 4번, 6시간 간격)이 두 번 연속 갱신하지 못하면 표시. 실시간 DB를 볼 때만
+const STALE_HOURS = 12;
+function renderStale() {
+  const at = state.summary?.updatedAt;
+  const el = $('stale');
+  const hours = at ? (Date.now() - Date.parse(at)) / 3600000 : 0;
+  el.hidden = !state.live || !at || hours < STALE_HOURS;
+  if (!el.hidden) el.textContent = `마지막 갱신이 ${Math.floor(hours)}시간 전입니다 (${localStamp(at)}). 정기 세션이 대시보드를 갱신하지 못했을 수 있으니 log.md '다음 할 일'을 확인하세요.`;
+}
+setInterval(renderStale, 10 * 60 * 1000);
 
 // 날짜 축 표기: MM.DD + 요일 (YYYY-MM-DD 날짜 그대로, 시간대 변환 없음)
 const WEEKDAY = ['일', '월', '화', '수', '목', '금', '토'];
@@ -470,6 +540,97 @@ function niceStep(max) {
   return [1, 2, 5, 10].map((m) => m * p).find((s) => s >= raw) || p * 10;
 }
 
+// 경과일별 누적 노출: 발행일(D+0)부터 같은 날짜끼리 비교. 그날까지 도달한 글이 COHORT_MIN편 이상일 때만 중앙값
+const COHORT_MIN = 3;
+const isNews = (p) => (p.cluster ? p.cluster.role === '뉴스 칼럼' : p.category === 'news');
+const COHORTS = [
+  { label: '상시 글·허브', color: 'var(--cat-1)', test: (p) => !isNews(p) },
+  { label: '뉴스 칼럼', color: 'var(--cat-2)', test: isNews },
+];
+const median = (a) => { const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
+
+function cohortSeries() {
+  return COHORTS.map((c) => {
+    const posts = state.posts.filter((p) => p.firstDays && c.test(p));
+    const reached = (k) => posts.filter((p) => p.firstDays.length > k).map((p) => p.firstDays[k]);
+    const pts = [];
+    for (let k = 0; k <= 28; k++) {
+      const vals = reached(k);
+      if (vals.length < COHORT_MIN) break; // 도달한 글 수는 날이 갈수록 줄어듦
+      pts.push({ k, v: median(vals), n: vals.length });
+    }
+    return { ...c, reached, pts };
+  });
+}
+
+function cohortChart(el) {
+  if (!state.posts.some((p) => p.firstDays)) { el.innerHTML = '<div class="empty">경과일 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</div>'; return; }
+  const series = cohortSeries();
+  if (!series.some((s) => s.pts.length)) { el.innerHTML = `<div class="empty">발행일 데이터가 있는 글이 계열마다 ${COHORT_MIN}편 이상 모이면 표시합니다.</div>`; return; }
+  const maxK = Math.max(1, ...series.flatMap((s) => s.pts.map((p) => p.k)));
+  const W = Math.max(280, Math.round(el.clientWidth)), H = 240, L = 40, R = 16, T = 24, B = 32;
+  const maxV = Math.max(1, ...series.flatMap((s) => s.pts.map((p) => p.v)));
+  const step = niceStep(maxV);
+  const top = Math.ceil(maxV / step) * step;
+  const x = (k) => L + ((W - L - R) * k) / maxK;
+  const y = (v) => T + (H - T - B) * (1 - v / top);
+  let g = '';
+  for (let v = 0; v <= top; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  const every = Math.ceil((maxK + 1) / Math.max(2, Math.floor((W - L - R) / 44)));
+  const half = (W - L - R) / maxK / 2;
+  for (let k = 0; k <= maxK; k++) {
+    // 날짜 칸마다 마우스 올리는 영역 + 두 계열 값
+    const tip = series.map((s) => { const p = s.pts.find((q) => q.k === k); return p ? `${s.label} 중앙값 ${p.v}회 (${p.n}편)` : `${s.label} ${COHORT_MIN}편 미만 (${s.reached(k).length}편 도달)`; }).join(' · ');
+    g += `<g><title>D+${k} 누적 노출 · ${tip}</title><rect x="${x(k) - half}" y="${T}" width="${half * 2}" height="${H - T - B}" fill="transparent"/></g>`;
+    if (k % every === 0 || k === maxK) g += `<text x="${x(k)}" y="${H - 8}" text-anchor="middle">D+${k}</text>`;
+  }
+  // 선 끝 값 라벨: 두 계열이 겹치면 위아래로 벌림
+  const ends = series.filter((s) => s.pts.length).map((s) => { const p = s.pts[s.pts.length - 1]; return { s, p, ly: y(p.v) - 10 }; });
+  if (ends.length === 2 && Math.abs(ends[0].ly - ends[1].ly) < 16) {
+    const [hi, lo] = ends[0].ly <= ends[1].ly ? ends : [ends[1], ends[0]];
+    hi.ly = Math.max(T - 8, lo.ly - 16);
+  }
+  ends.forEach(({ s }) => {
+    g += `<polyline fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" points="${s.pts.map((p) => `${x(p.k)},${y(p.v)}`).join(' ')}"/>`;
+  });
+  ends.forEach(({ s, p, ly }) => {
+    const right = x(p.k) > W - R - 100;
+    g += `<circle cx="${x(p.k)}" cy="${y(p.v)}" r="4" fill="${s.color}" stroke="var(--panel)" stroke-width="2"><title>D+${p.k} ${s.label} 중앙값 ${p.v}회 (${p.n}편)</title></circle>`;
+    g += `<text x="${x(p.k) + (right ? -8 : 8)}" y="${ly}" text-anchor="${right ? 'end' : 'start'}" style="fill:var(--ink);font-weight:600">${p.v}회 · ${p.n}편</text>`;
+  });
+  // 요약 줄: D+7(없으면 D+3) 중앙값 비교 — 가설 H1·H4 판단용
+  const ref = series.some((s) => s.pts.some((p) => p.k === 7)) ? 7 : 3;
+  const line = series.map((s) => { const p = s.pts.find((q) => q.k === ref); return p ? `${s.label} <b style="color:var(--ink)">${p.v}회</b> (${p.n}편)` : `${s.label} ${COHORT_MIN}편 미만 (${s.reached(ref).length}편 도달)`; }).join(' · ');
+  el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">D+${ref} 누적 노출 중앙값: ${line}</div>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="발행 후 경과일별 누적 노출 중앙값 꺾은선 그래프">${g}</svg>
+    <div class="small">발행일 = D+0 · 웹 검색 노출 누적 · 그날까지 도달한 글이 ${COHORT_MIN}편 이상인 날만 표시</div>`;
+}
+
+// 검색어 순위 변화 (최근 7일 vs 직전 7일)
+function renderMovers() {
+  const m = state.breakdown?.movers;
+  if (!m) return;
+  const md = (d) => mdLabel(d);
+  $('m-range').textContent = `최근 7일(${md(m.recent[0])}~${md(m.recent[1])}) vs 직전 7일 · 노출 가중 평균 순위`;
+  const page = (path) => {
+    const p = path?.startsWith('/posts/') && state.posts.find((x) => x.slug === path.slice(7));
+    return p ? jumpPost(p) : esc(path === '/' ? '홈' : path || '–');
+  };
+  const moved = (q) => ({ main: esc(q.key), meta: `${q.prevPos.toFixed(1)} → ${q.pos.toFixed(1)}위 ${deltaChip(-q.delta, { rank: true })}`, sub: `→ ${page(q.page)}` });
+  const blocks = [
+    ['오른 검색어', '두 기간 모두 노출 2회 이상, 1위 이상 오른 검색어', m.up.map(moved)],
+    ['내린 검색어', '두 기간 모두 노출 2회 이상, 1위 이상 내린 검색어', m.down.map(moved)],
+    ['새로 노출된 검색어', '직전 7일에는 노출이 없던 검색어 (노출 많은 순)', m.new.map((q) => ({ main: esc(q.key), meta: `${q.pos.toFixed(1)}위 · 노출 ${fmt(q.imp)}`, sub: `→ ${page(q.page)}` }))],
+  ];
+  $('movers').innerHTML = blocks.map(([title, why, items]) => `<div><div class="todo-head"><b>${title}</b><span class="small">${items.length}개</span></div><p class="why">${why}${items.length ? '' : ' · 없음'}</p>${todoItems(items)}</div>`).join('');
+}
+
+// 글별 표 평균 순위 아래: 최근 7일 vs 직전 7일 (두 기간 노출이 적으면 표시 안 함)
+function moveNote(m) {
+  if (!m || m.delta == null || Math.abs(m.delta) < 0.1) return '';
+  return `<div class="small" title="최근 7일 평균 ${m.pos}위 (직전 7일 ${m.prevPos}위)">7일 ${deltaChip(-m.delta, { rank: true })}</div>`;
+}
+
 function detailToggle(key, p) {
   const n = (p.queries || []).length;
   const label = n ? `검색어 ${n}개 · 추이` : '추이 · 상세';
@@ -492,7 +653,7 @@ function sparkline(daily) {
   rows.forEach((r, i) => {
     const x = L + i * bw, cx = x + bw / 2;
     const h = Math.max(y(0) - y(r.impressions), r.impressions ? 2 : 0);
-    g += `<g><title>${mdLabel(r.date)} (${weekday(r.date)}) 노출 ${r.impressions}회 · 클릭 ${r.clicks || 0}회</title><rect x="${x}" y="0" width="${bw}" height="${H - B}" fill="transparent"/>`;
+    g += `<g><title>${mdLabel(r.date)} (${weekday(r.date)}) 노출 ${r.impressions}회 · 클릭 ${r.clicks || 0}회${r.position ? ` · 평균 ${r.position}위` : ''}</title><rect x="${x}" y="0" width="${bw}" height="${H - B}" fill="transparent"/>`;
     if (h) g += `<rect x="${x + bw * 0.2}" y="${y(0) - h}" width="${bw * 0.6}" height="${h}" rx="2" fill="var(--series)"/>`;
     if (showVal && r.impressions) {
       g += `<text x="${cx}" y="${y(0) - h - 6}" text-anchor="middle" style="fill:var(--ink);font-weight:600">${r.impressions}</text>`;
@@ -661,7 +822,7 @@ function postRow(p) {
     <td>${sourceCell(p.sources)}</td>
     <td class="r num">${fmt(p.impressions)}</td>
     <td class="r num">${fmt(p.clicks)}</td>
-    <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}</td>
+    <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}${moveNote(p.move)}</td>
   </tr>${detailRow(p.slug, p, indexFacts(p))}`;
 }
 
@@ -889,6 +1050,9 @@ function render() {
   const daily = [...state.daily].sort((a, b) => a.date.localeCompare(b.date));
   barChart($('chart-imp'), daily);
   lineChart($('chart-pos'), daily);
+  cohortChart($('chart-cohort'));
+  renderMovers();
+  renderStale();
   renderGoals();
   renderTodo();
   renderClusters();
@@ -929,6 +1093,7 @@ function showSnapshot() {
     $('notice').textContent = '이 화면에서는 대시보드 데이터를 불러올 수 없습니다. claude.ai에 로그인한 상태로 열어 주세요.';
     return;
   }
+  state.live = false; // 스냅숏은 원래 대화형 세션에서만 갱신되므로 지연 경고를 띄우지 않음
   applyDocs(SNAPSHOT);
   const at = SNAPSHOT.summary && SNAPSHOT.summary.updatedAt;
   $('notice').hidden = false;
@@ -946,6 +1111,7 @@ if (SNAPSHOT) applyDocs(SNAPSHOT);
   db.collection('stats').onSnapshot(
     (snap) => {
       $('notice').hidden = true;
+      state.live = true;
       applyDocs(Object.fromEntries(snap.docs.map((d) => [d.id, d.data()])));
     },
     (e) => {

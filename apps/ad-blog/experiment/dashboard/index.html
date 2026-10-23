@@ -86,7 +86,7 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 svg text { font-family: var(--font-num); font-size: var(--fs-chart); fill: var(--mute); }
 .table-scroll { overflow-x: auto; margin: 0 -24px; padding: 0 24px; }
 table { width: 100%; border-collapse: collapse; font-size: var(--fs-body); line-height: var(--lh-body); }
-table.wide { min-width: 860px; }
+table.wide { min-width: 980px; }
 td.num { white-space: nowrap; }
 th { text-align: left; font-size: var(--fs-sm); line-height: var(--lh-sm); font-weight: 500; color: var(--mute); padding: 8px 12px; background: var(--well); white-space: nowrap; }
 th:first-child { border-top-left-radius: var(--r-ctl); border-bottom-left-radius: var(--r-ctl); }
@@ -106,6 +106,10 @@ tr.group td { padding: 16px 12px 8px; font-size: var(--fs-sm); line-height: var(
 .pill.warn { color: var(--warn); }
 .pill.bad { color: var(--bad); }
 .chip { display: inline-block; vertical-align: top; font-size: var(--fs-sm); line-height: 24px; font-weight: 500; padding: 0 8px; border-radius: var(--r-ctl); box-shadow: var(--hair); background: var(--well); color: var(--ink); white-space: nowrap; }
+.chip + .small { margin-top: 4px; white-space: nowrap; }
+/* 유입 경로: 검색 유형별 노출 (한 줄에 하나) */
+.sources { display: grid; font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); white-space: nowrap; }
+.sources .src { color: var(--mute); }
 .lists { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 12px; }
 .trio { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 12px; }
 /* 가로 막대 목록 (기기·국가·검색 유형) */
@@ -173,11 +177,11 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   </section>
 
   <section class="panel">
-    <div class="panel-head"><h2>글별 현황</h2><span class="small">지표는 최근 28일, 미확정 데이터 포함. 제목 아래를 누르면 검색어·추이·색인 상세</span></div>
+    <div class="panel-head"><h2>글별 현황</h2><span class="small">지표는 최근 28일, 미확정 데이터 포함. 노출·클릭·순위는 웹 검색, 유입 경로는 검색 유형별 노출. 제목 아래를 누르면 검색어·추이·색인 상세</span></div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>글</th><th>발행</th><th>채널</th><th class="r">단어</th><th class="r">이미지</th><th>색인</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
-        <tbody id="posts"><tr><td colspan="9" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
+        <thead><tr><th>글</th><th>발행</th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r">단어</th><th class="r">이미지</th><th>색인</th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
+        <tbody id="posts"><tr><td colspan="10" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -422,7 +426,7 @@ function queryTable(qs, impressions) {
 }
 
 function detailRow(key, p, extra) {
-  return `<tr class="detail" data-for="${esc(key)}"${expanded.has(key) ? '' : ' hidden'}><td colspan="9"><div class="detail-grid">
+  return `<tr class="detail" data-for="${esc(key)}"${expanded.has(key) ? '' : ' hidden'}><td colspan="10"><div class="detail-grid">
     <div><h3>검색어</h3>${queryTable(p.queries, p.impressions)}</div>
     <div><h3>날짜별 노출</h3>${sparkline(p.daily)}</div>
     ${extra}
@@ -444,6 +448,25 @@ function indexFacts(p) {
   </dl></div>`;
 }
 
+const DASH = '<span class="small">–</span>';
+// 클러스터 칸: clusters.md 등재 정보. undefined = 이 항목이 생기기 전 데이터, null = 미지정
+function clusterCell(c) {
+  if (c === undefined) return DASH;
+  if (!c) return '<span class="pill warn" title="clusters.md 클러스터 맵에 없는 글">미지정</span>';
+  return `<span class="chip" title="${esc(c.name)}">${esc(c.id)}</span><div class="small">${esc(c.role)}${c.priority ? ` · 우선순위 ${esc(c.priority)}` : ''}</div>`;
+}
+
+const SOURCE = { web: '웹', image: '이미지', video: '동영상', news: '뉴스 탭', discover: 'Discover', googleNews: 'Google 뉴스' };
+// 유입 경로 칸: 검색 유형별 노출 (노출 많은 순, 클릭은 툴팁)
+function sourceCell(src) {
+  if (!src) return DASH;
+  if (!src.length) return '<span class="small">노출 없음</span>';
+  return `<div class="sources num">${src.map((s) => {
+    const name = SOURCE[s.key] || s.key;
+    return `<span title="${esc(name)} 노출 ${s.impressions}회 · 클릭 ${s.clicks}회"><span class="src">${esc(name)}</span> ${fmt(s.impressions)}</span>`;
+  }).join('')}</div>`;
+}
+
 function renderPosts() {
   if (!state.posts.length) return;
   const posts = [...state.posts].sort((a, b) => (b.createdAt || '').localeCompare(a.createdAt || ''));
@@ -453,10 +476,11 @@ function renderPosts() {
   $('posts').innerHTML = posts.map((p) => `<tr>
     <td><div class="post-title"><a href="${SITE}/posts/${encodeURIComponent(p.slug)}" target="_blank" rel="noopener">${esc(p.title)}</a></div><div class="small">${esc(p.category)}${p.updatedAt ? ' · 수정 ' + ymd(p.updatedAt) : ''}</div>${detailToggle(p.slug, p)}</td>
     <td class="num"${p.createdAt && hasTime(p.createdAt) ? ` title="${esc(localStamp(p.createdAt))}"` : ''}>${ymd(p.createdAt)}</td>
-    <td>${p.channel ? `<span class="chip">${esc(p.channel)}</span>` : '<span class="small">–</span>'}</td>
+    <td>${clusterCell(p.cluster)}</td>
     <td class="r num">${fmt(p.words)}</td>
     <td class="r num">${fmt(p.images)}</td>
     <td>${indexPill(p.index)}</td>
+    <td>${sourceCell(p.sources)}</td>
     <td class="r num">${fmt(p.impressions)}</td>
     <td class="r num">${fmt(p.clicks)}</td>
     <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}</td>
@@ -466,12 +490,12 @@ function renderPosts() {
 // 글 외 페이지(홈·카테고리 등): 사이트 전체 KPI와 글별 합계의 차이를 보여 줌
 function renderOtherPages() {
   if (!state.otherPages.length) return '';
-  const dash = '<span class="small">–</span>';
-  return `<tr class="group"><td colspan="9">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => {
+  return `<tr class="group"><td colspan="10">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => {
     const key = 'page:' + o.path;
     return `<tr>
     <td><div class="post-title"><a href="${SITE}${o.path === '/' ? '' : esc(o.path)}" target="_blank" rel="noopener">${o.path === '/' ? '홈' : esc(o.path)}</a></div><div class="small">${esc(o.path)}</div>${detailToggle(key, o)}</td>
-    <td>${dash}</td><td>${dash}</td><td class="r">${dash}</td><td class="r">${dash}</td><td>${dash}</td>
+    <td>${DASH}</td><td>${DASH}</td><td class="r">${DASH}</td><td class="r">${DASH}</td><td>${DASH}</td>
+    <td>${sourceCell(o.sources)}</td>
     <td class="r num">${fmt(o.impressions)}</td>
     <td class="r num">${fmt(o.clicks)}</td>
     <td class="r num">${o.position == null ? '–' : o.position.toFixed(1)}</td>

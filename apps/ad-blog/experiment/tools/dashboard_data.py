@@ -1,6 +1,6 @@
 """운영 대시보드(claude.ai 아티팩트) 데이터 생성 (ToolProof 운영 실험용)
 
-Search Console API·글 frontmatter·사실 확인표·traffic-playbook·log.md를 읽어 대시보드 DB 문서를 JSON 파일로 만든다.
+Search Console API·글 frontmatter·clusters.md·traffic-playbook·log.md를 읽어 대시보드 DB 문서를 JSON 파일로 만든다.
 업로드는 세션에서 `ArtifactData` 도구로 한다 (README "운영 대시보드" 절차).
 
 실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}']
@@ -11,8 +11,10 @@ Search Console API·글 frontmatter·사실 확인표·traffic-playbook·log.md�
 `ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
 - summary: 갱신 시각·28일 합계·사이트맵 상태
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
-- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, channel, 28일 지표, queries, daily, index}],
-         otherPages: [{path, 28일 지표, queries, daily}]}  (queries = 검색어 상위 10, daily = 날짜별 노출·클릭)
+- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, 28일 지표, queries, daily, sources, index}],
+         otherPages: [{path, 28일 지표, queries, daily, sources}]}
+         (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), 28일 지표 = 웹 검색,
+          queries = 검색어 상위 10, daily = 날짜별 노출·클릭, sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만))
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20
 - experiments: {rows: traffic-playbook 검증 기록 표}
 - knowhow: {rows: traffic-playbook 노하우 상태 표}
@@ -29,9 +31,11 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from gsc_report import API, POSTS_DIR, SITE_ORIGIN, call, load_token, search_analytics, site_path  # noqa: E402
+from link_audit import CLUSTERS_FILE, ROLES, parse_clusters  # noqa: E402
 
 EXPERIMENT = pathlib.Path(__file__).resolve().parents[1]
 LAUNCH = dt.date(2026, 10, 10)  # 도메인 연결 전날부터 집계
+SEARCH_TYPES = ('web', 'image', 'video', 'news', 'discover', 'googleNews')
 
 
 def metrics(row: dict | None) -> dict:
@@ -59,14 +63,17 @@ def frontmatter(path: pathlib.Path) -> dict:
     return fm
 
 
-def channel(slug: str) -> str | None:
-    for name in ('facts.md', 'factcheck.md'):
-        f = EXPERIMENT / 'tests' / slug / name
-        if f.exists():
-            m = re.search(r'채널:\s*\**(검색형|피드형)', f.read_text(encoding='utf-8'))
-            if m:
-                return m.group(1)
-    return None
+def cluster_map() -> dict[str, dict]:
+    """slug → {id, name, priority, role} (clusters.md 클러스터 맵. 여러 곳에 있으면 link_audit처럼 첫 번째)"""
+    clusters, error = parse_clusters(CLUSTERS_FILE)
+    if error:
+        print(f'클러스터 표를 읽지 못함: {error}', file=sys.stderr)
+    out: dict[str, dict] = {}
+    for c in clusters:
+        for role in ROLES:
+            for slug in c[role]:
+                out.setdefault(slug, {'id': c['id'], 'name': c['name'], 'priority': c['priority'], 'role': role})
+    return out
 
 
 def knowhow() -> list[dict]:
@@ -132,16 +139,23 @@ def main() -> None:
     page_daily: dict[str, list] = {}
     for r in search_analytics(token, args.site, since, end, ['page', 'date'], 5000):
         page_daily.setdefault(r['keys'][0], []).append({'date': r['keys'][1], 'clicks': int(r['clicks']), 'impressions': int(r['impressions'])})
+    # 유입 경로: 검색 유형별 페이지 지표 (웹은 위 by_page 재사용)
+    type_page = {'web': by_page}
+    for t in SEARCH_TYPES[1:]:
+        type_page[t] = {r['keys'][0]: r for r in search_analytics(token, args.site, since, end, ['page'], 1000, search_type=t)}
 
     def page_extra(url: str) -> dict:
         q = sorted(queries.get(url, []), key=lambda x: (-x['impressions'], -x['clicks']))[:10]
-        return {'queries': q, 'daily': sorted(page_daily.get(url, []), key=lambda x: x['date'])}
+        sources = [{'key': t, 'clicks': int(rows[url]['clicks']), 'impressions': int(rows[url]['impressions'])} for t, rows in type_page.items() if rows.get(url, {}).get('impressions')]
+        sources.sort(key=lambda x: (-x['impressions'], -x['clicks']))
+        return {'queries': q, 'daily': sorted(page_daily.get(url, []), key=lambda x: x['date']), 'sources': sources}
 
+    clusters = cluster_map()
     posts = []
     for path in sorted(POSTS_DIR.glob('*.mdx')):
         slug = path.stem
         url = f'{SITE_ORIGIN}/posts/{slug}'
-        doc = {'slug': slug, **frontmatter(path), 'channel': channel(slug), **metrics(by_page.get(url)), **page_extra(url)}
+        doc = {'slug': slug, **frontmatter(path), 'cluster': clusters.get(slug), **metrics(by_page.get(url)), **page_extra(url)}
         if not args.no_inspect:
             res = call('POST', f'{API}/v1/urlInspection/index:inspect', token, {'inspectionUrl': url, 'siteUrl': args.site})
             idx = res.get('inspectionResult', {}).get('indexStatusResult', {})
@@ -164,7 +178,7 @@ def main() -> None:
         return sorted(({'key': r['keys'][0], **metrics(r)} for r in rows), key=lambda x: (-x['impressions'], -x['clicks']))[:limit]
 
     types = []
-    for t in ('web', 'image', 'video', 'news', 'discover', 'googleNews'):
+    for t in SEARCH_TYPES:
         rows = search_analytics(token, args.site, since, end, [], 1, search_type=t)
         types.append({'key': t, **metrics(rows[0] if rows else None)})
     docs['breakdown'] = {'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': dim('query', 20), 'searchTypes': types}

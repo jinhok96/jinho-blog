@@ -2,6 +2,65 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-23 · 세션 42 (정기 실행, 개선 세션): `ai-settings` 허브 + 색인·링크 보강
+
+세션 시각: 2026-10-23 18:15 KST → 개선 세션 (전략 개편 후 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(224c79b)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-25 ~ 10-23, 세션 41 이후 바뀐 값만)**
+
+- 노출 365 → **386**, 클릭 8, CTR 2.2% → 2.1%, 평균 순위 22.9 → 23.0
+  - `turn-off-ai-in-chrome` 105 → 112 (13.4) / `image-to-text-offline-free` 55 → 60 (11.8) / `transcribe-audio-offline-free` 44 (48.4) / `spotify-family-qr-code-verification` 39 → 40 (28.1)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 18편 = 세션 41의 17편 + `turn-off-copilot-in-word` → 색인율 17/35 (49%), 절반 아래로 내려감 (README 발행 속도: 개선 세션은 링크 보강 우선)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 시작 8건 → 끝 6건 (아래)
+- 주간 SEO 점검 보고: 아직 없음 → README 개선 세션 순서 1~3번으로 진행
+
+**한 일 (개선 세션 3건)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 3 허브 | 새 글 `turn-off-ai-features` | `ai-settings` 허브 발행 (새 글 1편). 상시 글 5편·칼럼 4편 전부 연결 | 새 글 (V 대상 아님) |
+| 2 | 1 색인 | `remove-metadata-from-photos` (`URL is unknown` 1일+) ← 색인된 `compress-image-to-100kb` | GIMP 단계 뒤 "File size without metadata" 문단에 1문장 링크 | 역링크 (V 대상 아님). 노하우 9 관찰: 11-01까지 색인 여부 확인 |
+| 3 | 2 링크 점검 | `check-if-image-is-ai-generated` 같은 클러스터 링크 없음, `chrome-http-warning-default` 받는 링크 1개 | `check-if-image-is-ai-generated` Apple Intelligence 문단 끝 1문장(허브 + `turn-off-ai-in-chrome`), 허브 Chrome 절 → `chrome-http-warning-default` | 역링크 |
+
+- 허브 역링크: `gemini-gems-to-skills`(색인됨) 마지막 관련 글 문단, `check-if-image-is-ai-generated`(색인됨), `turn-off-gemini-in-gmail` Docs 문단 끝, `turn-off-copilot-in-word` Outlook 문단 끝에 각 1문장 (`updatedAt` 변경 없음). `turn-off-ai-in-chrome`은 V3 판단 기간이라 허브 링크를 넣지 않음 → `link_audit`에 "상시 글 → 허브 누락" 1건으로 남김 (11-18 판정 뒤 추가)
+- `link_audit` 남은 6건: Chrome → 허브 1(의도적 보류), `apple-mail-exchange-not-syncing` → 상시 글 1(같은 클러스터 상시 글이 `windows-10-esu-extended`뿐이라 문맥이 안 맞음), 받는 링크 1개 4편(`apple-mail-exchange-not-syncing`·`apple-siri-settlement-claim`·`pixel-watch-safety-signal-ending`·`spotify-family-qr-code-verification`, `phones-subscriptions`·`windows-microsoft` 칼럼)
+
+**발행한 글 (허브)**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-ai-features` | `ai-tools` | `ai-settings` 허브 (검색형) | 제품 8개 기능별 "완전히 끔 / 일부만 / 끌 수 없음" 판정표(우리 상시 글의 Chrome 소스 코드·Gmail·Word 문서 대조 결과 + 새 1차 출처), iOS 27 문서에 Apple Intelligence 전체 스위치가 없고 기능별로 끈다는 점(+ Screen Time으로 Siri Classic만 허용), Google 공식 "AI Overviews는 끌 수 없음"·Labs "AI in Search"를 꺼도 AI Overviews는 남음, 끄기 ≠ 지우기 정리, 상황별 추천 |
+
+- 주 검색어: `turn off ai` (`demand_check.py suggest` 2026-10-23 Google·Bing·YouTube 3곳, 하위 31개: ai overview google·ai mode·in gmail·on iphone·in windows 11). Search Console `turn off ai` 57위(10-22 분석, `turn-off-ai-in-chrome`)
+- 상위 결과(WebSearch `how to turn off ai`): productlift(SaaS 도움말)·스팸성 페이지·Honor 블로그·Croma·Consumer Reports(유료). 완전히 꺼지는지 구분, iOS 27 기능별 스위치, Google 공식 문구가 빠짐
+- 1차 출처: Google Search Help 14901683(AI Overviews)·16011537(AI Mode), Apple Support 121115, iPhone User Guide iOS 27 iph3fed3f2c3(Apple Intelligence 끄기)·iph3ff83f3b1(Screen Time), Microsoft Support Copilot on Windows·앱 제거, Microsoft Learn Copilot 앱 관리. Chrome·Gmail·Word·Gemini 절은 상시 글 요약 (각 글의 factcheck). iPhone·Windows 11이 없어 직접 실행은 없음(본문 How we checked에 밝힘)
+- 확인하지 못해 쓰지 않은 것: Meta AI(meta.com 도움말이 JS 렌더링, WebFetch로 본 문서엔 끄는 방법 없음), Samsung Galaxy AI, Windows 작업 표시줄 Copilot 토글
+- 작성 중 고친 것: 처음 쓴 "Workspace 스위치가 받은편지함 탭·Smart Compose도 끈다"는 `turn-off-gemini-in-gmail` 표와 달라(다른 체크박스) 고침
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1992140669, 47.0분, 하늘색 배경 + 복숭아·라일락, 정면 시점. 토글이 기기 옆이 아니라 화면 구석에 그려졌지만 주제·화풍이 맞아 그대로 사용, `hero-image.md`) + 본문 그래픽 3장(제품별 끌 수 있는 범위·iPhone iOS 27 기능별 경로·제품별 메뉴 경로, `chart_style.py` 라이트 모드)
+- 내부 링크: 나가는 링크 9개(상시 글 5·칼럼 4), 받는 링크 4개(색인된 2편 포함)
+- 빌드 HTML 확인: title 62자(접미사 포함, 본제목 50자)·description 150자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 13개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 3장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 241개)·build 통과 (이번엔 `next build` 보안 안내 없이 첫 실행 통과)
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+
+**알게 된 것**
+
+- Apple iPhone User Guide는 `support.apple.com/guide/iphone/welcome/ios` HTML의 `data-ajax-endpoint` 속성에 모든 문서 주소가 있어, 문서 ID를 몰라도 curl로 찾을 수 있음. 예전 `aside/…` 주소는 404
+- iOS 27 iPhone User Guide에는 Apple Intelligence 전체 끄기 스위치가 없음 (기능별 + Screen Time). 상위 결과의 "Settings > Apple Intelligence & Siri 토글"은 이전 iOS 기준
+- meta.com·help.instagram.com 도움말은 curl HTML에 본문이 없음(JS 렌더링) → Meta AI 상시 글을 쓰려면 다른 접근 필요(WebFetch는 일부 가능)
+- 시스템 python3에 matplotlib이 없음 → `python3 -m venv /tmp/mpl && /tmp/mpl/bin/pip install matplotlib pillow`로 `charts.py` 실행
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 18편 중 우선 허브 `turn-off-ai-features`(새 글), `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, `turn-off-gemini-in-gmail`·`gemini-connected-apps`·`turn-off-copilot-in-word`
+- (완료) Next.js 보안 업그레이드 — main에 `Chore: Next.js 16.4.2 업데이트`(PR #249) 반영 확인, 이번 빌드는 보안 안내 없이 통과
+- Claude(다음 개선 세션): `photo-video` 허브 (backlog), `link_audit` 받는 링크 1개 칼럼 4편, 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 `turn-off-ai-features` 링크 1문장
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off apple intelligence iphone`(허브 iPhone 절 확장, iOS 27 문서 확인됨) 또는 `turn off meta ai instagram`·`turn off ai in windows 11`. 쓰면 허브 표·링크 갱신
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default`·허브 Chrome 절 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 36편
+- 대시보드: `stats` 7개 문서 갱신 성공(batch, 세션 42 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-23 · 세션 41 (정기 실행, 일반 세션): Word에서 Copilot 끄기
 
 세션 시각: 2026-10-23 12:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(4d4f44b)에서 다시 시작.
@@ -40,7 +99,7 @@
 **다음 할 일**
 
 - **사용자: Search Console 색인 요청** — `URL is unknown` 17편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, 새 글 `turn-off-gemini-in-gmail`·`gemini-connected-apps`·`turn-off-copilot-in-word`
-- **사용자: Next.js 보안 업그레이드 검토** (세션 40과 같음)
+- (완료) Next.js 보안 업그레이드 — main에 `Chore: Next.js 16.4.2 업데이트`(PR #249) 반영 확인, 이번 빌드는 보안 안내 없이 통과
 - Claude(다음 개선 세션): `ai-settings` 허브 `turn off ai`(상시 글 5편) 또는 `photo-video` 허브, `link_audit` 문제 8건
 - Claude(다음 일반 세션): `ai-settings` 공백 후보 `turn off meta ai instagram` 또는 `turn off apple intelligence iphone` (쓰기 전 수요 재확인)
 - Claude: Microsoft가 Word for the web·모바일에 Copilot 끄기 체크박스를 추가하거나 classic Outlook 토글을 내놓으면 `turn-off-copilot-in-word` 갱신(`updatedAt`)

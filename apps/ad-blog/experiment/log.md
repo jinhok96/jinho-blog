@@ -99,7 +99,7 @@
 **다음 할 일**
 
 - **사용자: Search Console 색인 요청** — `URL is unknown` 17편 중 우선 `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`, 새 글 `turn-off-gemini-in-gmail`·`gemini-connected-apps`·`turn-off-copilot-in-word`
-- (완료) Next.js 보안 업그레이드 — main에 `Chore: Next.js 16.4.2 업데이트`(PR #249) 반영 확인, 이번 빌드는 보안 안내 없이 통과
+- **사용자: Next.js 보안 업그레이드 검토** (세션 40과 같음)
 - Claude(다음 개선 세션): `ai-settings` 허브 `turn off ai`(상시 글 5편) 또는 `photo-video` 허브, `link_audit` 문제 8건
 - Claude(다음 일반 세션): `ai-settings` 공백 후보 `turn off meta ai instagram` 또는 `turn off apple intelligence iphone` (쓰기 전 수요 재확인)
 - Claude: Microsoft가 Word for the web·모바일에 Copilot 끄기 체크박스를 추가하거나 classic Outlook 토글을 내놓으면 `turn-off-copilot-in-word` 갱신(`updatedAt`)

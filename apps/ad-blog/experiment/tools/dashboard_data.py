@@ -12,12 +12,15 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
 - summary: 갱신 시각·28일 합계·사이트맵 상태·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
            ·goals(README 목표 지표 표 + 현재 값·진행률)
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
-- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, 28일 지표, queries, daily, sources, index}],
+- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, 28일 지표, queries, daily, sources,
+                  firstDays, move, index}],
          otherPages: [{path, 28일 지표, queries, daily, sources}]}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
-          28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭,
-          sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만))
-- breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20
+          28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
+          sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만), firstDays = 발행일부터 날짜별 누적 노출(최대 D+28),
+          move = 최근 7일 vs 직전 7일 순위 {pos, prevPos, imp, prevImp, delta} 또는 null(최근 7일 노출 없음))
+- breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
+             movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10)
 - experiments: {rows: traffic-playbook 검증 기록 표}
 - knowhow: {rows: traffic-playbook 노하우 상태 표}
 - sessions: {rows: log.md 세션 제목 (date, title, order)}
@@ -43,6 +46,9 @@ BRAND = re.compile(r'tool\s*-?\s*proof', re.I)  # 브랜드 검색어 (목표 �
 GOAL_KEYS = (('색인율', 'indexRate'), ('28일 노출', 'impressions'), ('10위 안', 'top10Queries'), ('허브', 'hubClusters'), ('받는 링크', 'weakInbound'))
 RATIO_GOALS = {'indexRate', 'hubClusters'}  # 0~1 비율로 비교 ("17/32 (53%)"·"2/4"·"전부")
 LOWER_BETTER = {'weakInbound'}
+FIRST_DAYS = 28  # 경과일별 누적 노출: 발행일(D+0)부터 D+28까지
+MOVE_MIN_IMP = 2  # 순위 변화: 두 기간 모두 노출이 이만큼 있어야 비교 (노출 1회짜리 순위는 크게 흔들림)
+MOVE_MIN_DELTA = 1.0  # 이보다 작게 움직인 검색어는 목록에서 뺌
 
 
 def metrics(row: dict | None) -> dict:
@@ -78,6 +84,32 @@ def cluster_map(clusters: list[dict]) -> dict[str, dict]:
             for slug in c[role]:
                 out.setdefault(slug, {'id': c['id'], 'name': c['name'], 'priority': c['priority'], 'role': role})
     return out
+
+
+def first_days(created: str, by_date: dict[str, dict], last_day: dt.date) -> list[int]:
+    """발행일부터 날짜별 누적 노출 [D+0, D+1, ...] (마지막 집계일까지, 최대 D+28).
+    발행일은 createdAt의 UTC 날짜 (Search Console 날짜는 태평양 시간이라 하루 어긋날 수 있음)"""
+    day0 = dt.date.fromisoformat(created[:10])
+    out, total = [], 0
+    for k in range(min(FIRST_DAYS, (last_day - day0).days) + 1):
+        r = by_date.get(str(day0 + dt.timedelta(days=k)))
+        total += int(r['impressions']) if r else 0
+        out.append(total)
+    return out
+
+
+def position_move(now: dict | None, before: dict | None) -> dict | None:
+    """두 기간 순위 비교 {pos, prevPos, imp, prevImp, delta}. delta = 직전 순위 - 최근 순위 (양수면 오름).
+    한쪽 노출이 MOVE_MIN_IMP 미만이면 delta는 None"""
+    if not now:
+        return None
+    move = {
+        'pos': round(now['position'], 1), 'imp': int(now['impressions']),
+        'prevPos': round(before['position'], 1) if before else None, 'prevImp': int(before['impressions']) if before else 0,
+    }
+    ok = before and move['imp'] >= MOVE_MIN_IMP and move['prevImp'] >= MOVE_MIN_IMP
+    move['delta'] = round(before['position'] - now['position'], 1) if ok else None
+    return move
 
 
 def goal_number(text: str, ratio: bool) -> float | None:
@@ -180,9 +212,12 @@ def main() -> None:
 
     # 날짜별: 미확정 포함 값을 쓰고, 확정 데이터에 있는 날짜는 final로 표시. 달마다 문서 1개
     final_dates = {r['keys'][0] for r in search_analytics(token, args.site, start, end, ['date'], 1000, data_state='final')}
-    for r in search_analytics(token, args.site, start, end, ['date'], 1000):
+    site_days = search_analytics(token, args.site, start, end, ['date'], 1000)
+    for r in site_days:
         d = r['keys'][0]
         docs.setdefault(f'daily-{d[:7]}', {'rows': []})['rows'].append({'date': d, **metrics(r), 'state': 'final' if d in final_dates else 'fresh'})
+    # 마지막 집계일 (Search Console은 1~2일 늦게 채워져 오늘보다 이를 수 있음)
+    last_day = max((dt.date.fromisoformat(r['keys'][0]) for r in site_days), default=today)
 
     # 글별: 최근 28일 지표 + 검색어 + 날짜별 추이 + 색인 상태
     since = str(today - dt.timedelta(days=28))
@@ -190,9 +225,22 @@ def main() -> None:
     queries: dict[str, list] = {}
     for r in search_analytics(token, args.site, since, end, ['page', 'query'], 5000):
         queries.setdefault(r['keys'][0], []).append({'query': r['keys'][1], **metrics(r)})
-    page_daily: dict[str, list] = {}
-    for r in search_analytics(token, args.site, since, end, ['page', 'date'], 5000):
-        page_daily.setdefault(r['keys'][0], []).append({'date': r['keys'][1], 'clicks': int(r['clicks']), 'impressions': int(r['impressions'])})
+    # 페이지별 날짜 지표는 집계 시작일부터 받음: 상세 추이는 최근 28일만, 경과일별 누적 노출은 발행일부터
+    page_dates: dict[str, dict[str, dict]] = {}
+    for r in search_analytics(token, args.site, start, end, ['page', 'date'], 25000):
+        page_dates.setdefault(r['keys'][0], {})[r['keys'][1]] = r
+    page_daily = {
+        url: [{'date': d, 'clicks': int(r['clicks']), 'impressions': int(r['impressions']), 'position': round(r['position'], 1)} for d, r in rows.items() if d >= since]
+        for url, rows in page_dates.items()
+    }
+    # 순위 변화: 마지막 집계일까지 최근 7일 vs 직전 7일 (기간 합산 = 노출 가중 평균 순위)
+    recent = (last_day - dt.timedelta(days=6), last_day)
+    prev = (recent[0] - dt.timedelta(days=7), recent[0] - dt.timedelta(days=1))
+
+    def window(dims: list[str], w: tuple[dt.date, dt.date], limit: int = 1000) -> dict[str, dict]:
+        return {r['keys'][0]: r for r in search_analytics(token, args.site, str(w[0]), str(w[1]), dims, limit)}
+
+    page_now, page_prev = window(['page'], recent), window(['page'], prev)
     # 유입 경로: 검색 유형별 페이지 지표 (웹은 위 by_page 재사용)
     type_page = {'web': by_page}
     for t in SEARCH_TYPES[1:]:
@@ -218,6 +266,9 @@ def main() -> None:
         slug = path.stem
         url = f'{SITE_ORIGIN}/posts/{slug}'
         doc = {'slug': slug, **frontmatter(path), 'cluster': clusters.get(slug), 'inbound': inbound[slug], **metrics(by_page.get(url)), **page_extra(url)}
+        if doc.get('createdAt'):
+            doc['firstDays'] = first_days(doc['createdAt'], page_dates.get(url, {}), last_day)
+        doc['move'] = position_move(page_now.get(url), page_prev.get(url))
         if not args.no_inspect:
             res = call('POST', f'{API}/v1/urlInspection/index:inspect', token, {'inspectionUrl': url, 'siteUrl': args.site})
             idx = res.get('inspectionResult', {}).get('indexStatusResult', {})
@@ -244,7 +295,21 @@ def main() -> None:
         rows = search_analytics(token, args.site, since, end, [], 1, search_type=t)
         types.append({'key': t, **metrics(rows[0] if rows else None)})
     site_queries = dim('query', 1000)  # 화면에는 상위 20개, 목표 지표(10위 안 검색어 수)는 전체로 셈
-    docs['breakdown'] = {'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': site_queries[:20], 'searchTypes': types}
+
+    # 검색어 순위 변화: 오른·내린 검색어(두 기간 모두 노출 MOVE_MIN_IMP 이상) + 최근 7일에 처음 노출된 검색어
+    q_now, q_prev = window(['query'], recent), window(['query'], prev)
+    top_page: dict[str, str] = {}  # 검색어 → 최근 7일 노출이 가장 많은 페이지 경로
+    for r in sorted(search_analytics(token, args.site, str(recent[0]), str(recent[1]), ['query', 'page'], 5000), key=lambda r: -r['impressions']):
+        top_page.setdefault(r['keys'][0], r['keys'][1].removeprefix(SITE_ORIGIN) or '/')
+    moves = [{'key': q, 'page': top_page.get(q), **position_move(r, q_prev.get(q))} for q, r in q_now.items()]
+    changed = [m for m in moves if m['delta'] is not None and abs(m['delta']) >= MOVE_MIN_DELTA]
+    movers = {
+        'recent': [str(d) for d in recent], 'prev': [str(d) for d in prev],
+        'up': sorted((m for m in changed if m['delta'] > 0), key=lambda m: (-m['delta'], -m['imp']))[:10],
+        'down': sorted((m for m in changed if m['delta'] < 0), key=lambda m: (m['delta'], -m['imp']))[:10],
+        'new': sorted((m for m in moves if m['key'] not in q_prev), key=lambda m: (-m['imp'], m['pos']))[:10],
+    }
+    docs['breakdown'] = {'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': site_queries[:20], 'searchTypes': types, 'movers': movers}
     docs['experiments'] = {'rows': experiments()}
     docs['knowhow'] = {'rows': knowhow()}
     docs['sessions'] = {'rows': sessions()}

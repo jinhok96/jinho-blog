@@ -11,7 +11,7 @@
 
 | ID | 클러스터 | 우선순위 | 허브 | 상시 글 | 뉴스 칼럼 |
 | --- | --- | --- | --- | --- | --- |
-| `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | - | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` |
+| `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | `turn-off-ai-features` | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` |
 | `photo-video` | 무료 사진·영상 도구 (변환·압축·배경·메타데이터) | 2 | - | `convert-heic-to-jpg-free` `convert-webp-to-jpg-free` `compress-image-to-100kb` `remove-bg-alternative-free` `remove-metadata-from-photos` `compress-video-for-discord-email` | - |
 | `pdf` | 무료 PDF 도구 | 3 | `best-free-pdf-tools` | `split-pdf-free` `merge-pdf-files-free` `jpg-to-pdf-free` `pdf-to-jpg-free` `pdf-to-word-free` `compress-pdf-free` | - |
 | `offline-ai` | 무료 오프라인 AI 도구 | 4 | `free-offline-ai-tools` | `transcribe-audio-offline-free` `image-to-text-offline-free` | - |
@@ -24,7 +24,7 @@ content-strategy 우선순위 매트릭스(경쟁 × 사업 가치)에 우리 Se
 
 | 순위 | 클러스터 | 분류 | 근거 | 할 일 |
 | --- | --- | --- | --- | --- |
-| 1 | `ai-settings` | 빠른 성과 | 사이트 노출 1위 `turn-off-ai-in-chrome`(103회, 평균 13위)과 `gemini-gems-to-skills`(7.6위)가 여기 있음. 검색어 `turn off ai`(57위)·`google ai gone`(3위)·`chrome disable ai`(7위)처럼 "제품 + AI 기능 + 끄기" 롱테일에서 순위가 남. 자동완성 3곳(Google·Bing·YouTube)에서 `turn off gemini in gmail/chrome/docs`, `turn off copilot in word/outlook/excel/windows 11`, `turn off meta ai instagram/whatsapp/facebook`, `turn off apple intelligence iphone`이 나옴 | 상시 글 3편 이상 추가 → 허브 `How to Turn Off AI Features`(주 검색어 `turn off ai`) |
+| 1 | `ai-settings` | 빠른 성과 | 사이트 노출 1위 `turn-off-ai-in-chrome`(103회, 평균 13위)과 `gemini-gems-to-skills`(7.6위)가 여기 있음. 검색어 `turn off ai`(57위)·`google ai gone`(3위)·`chrome disable ai`(7위)처럼 "제품 + AI 기능 + 끄기" 롱테일에서 순위가 남. 자동완성 3곳(Google·Bing·YouTube)에서 `turn off gemini in gmail/chrome/docs`, `turn off copilot in word/outlook/excel/windows 11`, `turn off meta ai instagram/whatsapp/facebook`, `turn off apple intelligence iphone`이 나옴 | 허브 `turn-off-ai-features` 발행(2026-10-23, 주 검색어 `turn off ai`). 공백 상시 글(Meta AI·Apple Intelligence·Windows 11 등)을 채우고 허브 갱신. `turn-off-ai-in-chrome` → 허브 링크는 V3 판정(11-18) 뒤 |
 | 2 | `photo-video` | 빠른 성과 | 상시 글 6편인데 허브 없음 (허브 기준 3편 초과). 이미지 검색 노출(`compress-image-to-100kb` 9회)이 이 클러스터에서 나옴. 기존 측정 재사용 가능 | 허브 작성 (개선 세션), 주 검색어 후보 `free image converter`(자동완성 24개: download·online·software) |
 | 3 | `pdf` | 큰 승부 | 상위 검색어(`pdf to word` Trends 23.2 등)는 iLovePDF·Smallpdf 같은 도구 사이트가 차지. 7편 중 4편이 아직 `URL is unknown`, 색인된 `merge-pdf-files-free`는 99위 | 새 글보다 색인·세부 각도 보강 우선. 색인 후 4주 데이터로 재평가 |
 | 4 | `offline-ai` | 채우기 | `image-to-text-offline-free`가 `offline ocr tools` 5위·`free offline ocr` 8위. 받아쓰기는 47위 | 8~20위 검색어 보강, GUI로 측정 가능한 새 도구가 생길 때만 글 추가 |

@@ -1,0 +1,105 @@
+Connected experiences that analyze your content
+Connected experiences that analyze your content are experiences that use your Office content to provide you with design recommendations, editing suggestions, data insights, and similar features. For example, PowerPoint Designer or Translator.
+The following table provides a list of connected experiences that analyze your content and also provides links to more information about them.
+Name
+More information
+3D Maps [1]
+Get started with 3D Maps
+Analyze Data
+Analyze Data in Excel
+Automatic alt text [2]
+Everything you need to know to write effective alt text
+Automatically apply or recommend sensitivity labels [2] [3] [4]
+Sensitivity labels are automatically applied or recommended for your files and emails in Office
+Data types
+Excel data types: Stocks and geography
+Dictation
+Dictate in Microsoft 365
+Editor [4] [5]
+Microsoft Editor checks grammar and more in documents, mail, and the web
+Friendly links
+Friendlier link names in email
+Ink to Text, Ink to Shape, Ink to Math [6]
+Change handwritten ink to shapes, text, or math in PowerPoint for Microsoft 365
+Insert data from picture
+Insert data from picture
+Learning Tools
+Learning Tools
+Live captions & subtitles
+Present with real-time, automatic captions or subtitles in PowerPoint
+Map chart [1]
+Create a Map chart in Excel
+Microsoft Purview Data Loss Prevention policy tips [2] [3] [4]
+Send email notifications and show policy tips for DLP policies
+PivotTable recommendations
+Create a PivotTable to analyze worksheet data
+PowerPoint Designer [2]
+Create professional slide layouts with Designer
+Print
+When you print a file in the Microsoft 365 mobile app, or in the individual Word, Excel, and PowerPoint apps for iOS and Android.
+Publish to Power BI
+Publish to Power BI from Microsoft Excel
+Python in Excel
+Get started with Python in Excel
+Read Aloud [7]
+Listen to your Word documents
+Research [1]
+Add or change research services
+Send to Kindle [1]
+Send to Kindle
+Sharing notification
+Get notified when members of your team update your shared file
+Similarity checker [1] [2]
+Check your document for similarity to online sources
+Smart Lookup [1]
+Get insights into what you're working on with Smart Lookup
+Speaker Coach
+Rehearse your slide show with Speaker Coach
+Suggested replies
+Use suggested replies in Outlook
+Text predictions [8]
+Editor text predictions in Word
+Transcribe
+Transcribe your recordings
+Translate text on images
+Translate text on images
+Translator [2]
+Translate text into a different language
+Note
+[1] When users are signed in with a work or school account, these connected experiences are optional connected experiences and are provided under the terms of the Microsoft Services Agreement and privacy statement, and other terms may also apply. For more information, see Overview of optional connected experiences in Office. If you're an admin, these optional connected experiences can be managed by privacy controls for connected experiences or by the Allow the use of additional optional connected experiences in Office policy setting.
+[2] These connected experiences in Word, Excel, PowerPoint, and Outlook (classic) of Microsoft 365 Apps won’t be available to your users in the following scenarios on Windows devices:
+If your organization is using the PowerShell advanced setting BlockContentAnalysisServices with sensitivity labels from Microsoft Purview Information Protection. For more information, see Prevent some connected experiences that analyze content.
+If your organization is using Double Key Encryption (DKE) to protect files and emails.
+This applies to Version 2406 or later in Current Channel and Monthly Enterprise Channel, and Version 2402 (Build 17328.20550) or later in Semi-Annual Enterprise Channel.
+[3] Starting with Version 2406 of Microsoft 365 Apps, these connected experiences are no longer managed by privacy controls for connected experiences. Instead, these connected experiences can be managed by using existing security controls available in Microsoft Purview portals. For more information, see Apply a sensitivity label to content automatically and Send email notifications and show policy tips for DLP policies.
+[4] These connected experiences won’t be available to your users in Outlook (classic) on Windows devices if all of the following conditions are true:
+You’ve configured the “Block processing of S/MIME encrypted messages by certain connected experiences” policy setting to Enabled.
+The email messages are using S/MIME encryption.
+Your users have Version 2405 or later in Current Channel or Monthly Enterprise Channel, or have Version 2402 (Build 17328.20550) or later in Semi-Annual Enterprise Channel.
+For Editor, only spelling and grammar check are affected.
+[5] Basic functionality of Editor remains available even if you're not connected to the internet. That same basic functionality also remains available if you decide to disable the use of connected experiences that analyze your content. In both cases, no content or data related to your use of Editor is sent to Microsoft.
+[6] For devices running Android, these ink capabilities remain available even if you're not connected to the internet. These ink capabilities also remain available on devices running Android even if you decide to disable the use of connected experiences that analyze your content. In both cases, no data about the use of these ink capabilities is sent to Microsoft.
+[7] If you're not connected to the internet, Read Aloud only uses the text-to-speech functionality your device provides.
+[8] In some scenarios, basic functionality of text predictions remains available even if you're not connected to the internet or if you've decided to disable the use of connected experiences that analyze your content. For example, if you're using text predictions in Outlook on a Windows device or in Word on a Mac device. In those scenarios, no content or data related to your use of text predictions is sent to Microsoft.
+Connected experiences that download online content
+Connected experiences that download online content are experiences that allow you to search and download online content including templates, images, 3D models, videos, and reference materials to enhance your documents. For example, Office templates or PowerPoint QuickStarter.
+The following table provides a list of connected experiences that download online content and also provides links to more information about them.
+Name
+More information
+Cloud fonts
+Cloud fonts in Office
+FAQs
+When you choose Settings > Help & Feedback > FAQs on Outlook for iOS and Android, you're taken to either Outlook for iOS Help or Outlook for Android Help.
+Ink effects
+Draw and write with ink in Office
+Insert icons
+Insert icons in Microsoft 365
+Insert Microsoft Forms
+Insert a form or quiz into PowerPoint
+Insert online 3D models [9]
+Get creative with 3D models
+Insert online pictures [9]
+Insert pictures (Word)
+Insert a picture in PowerPoint
+Insert online video [9]
+Insert a video from YouTube or another

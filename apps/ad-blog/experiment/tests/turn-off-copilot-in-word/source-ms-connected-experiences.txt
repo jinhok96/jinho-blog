@@ -1,0 +1,24 @@
+Connected experiences in Microsoft 365
+			Applies ToMicrosoft Loop Excel for Microsoft 365 Word for Microsoft 365 Outlook for Microsoft 365 PowerPoint for Microsoft 365 Access for Microsoft 365 OneNote for Microsoft 365 Publisher for Microsoft 365 Excel for Microsoft 365 for Mac Word for Microsoft 365 for Mac Outlook for Microsoft 365 for Mac PowerPoint for Microsoft 365 for Mac OneNote for Microsoft 365 for Mac 
+	Microsoft 365 has a number of helpful features that are backed by cloud-based services, which we call "connected experiences", that provide essential functionality for those features. These include:
+Experiences that analyze your content
+These are experiences that use your Microsoft 365 content to provide design recommendations, editing suggestions, data insights, and similar features. PowerPoint Designer, Dictate, and Translator are examples of these kind of experiences.
+If you ask us to translate your text into another language, for example, we have to send the text to our automated translator service which automatically translates your text into the language requested and returns it to you.
+Note
+For a more complete list of these connected experiences, see Connected experiences that analyze your content.
+Experiences that download online content
+These are experiences that allow you to search and download online content including templates, images, 3D models, Microsoft 365 help, videos, and reference materials to enhance your documents. 
+Outlook's weather info is another example of these kinds of experiences. In order to provide you with the weather forecast for the next couple of days, for example, Outlook connects to Bing to retrieve the relevant weather data.
+Note
+For a more complete list of these connected experiences, see Connected experiences that download online content.
+Controlling these experiences
+Microsoft 365 includes these connected experiences. If you'd like to turn these experiences off, go to any Microsoft 365 application - such as Word, Excel, or PowerPoint - and go to File > Account > Manage Settings (In Outlook it's under Office Account). There you can disable or enable, either category (or both).
+For more information see: Access your Account Privacy Settings.
+Note
+If you're using Copilot in Microsoft 365 apps for home (with your personal Microsoft account), your privacy settings can affect the availability of Copilot features. For more information, see Copilot in Microsoft 365 apps for home: your data and privacy.
+In addition, there is a setting that allows you turn off these connected experiences, and which will also turn off other connected experiences, such as document co-authoring and online file storage. Note that if you use this setting to turn off connected experiences, some Microsoft 365 service functionality will remain available, such as synching your mailbox in Outlook, as well as a small number of services that are essential to how Microsoft 365 functions and cannot be disabled, for example, the licensing service that confirms that you are properly licensed to use Microsoft 365. On the Mac these essential services also includes OneNote syncing to OneDrive. Required service data about these services is collected and sent to Microsoft, regardless of any other settings that you have configured.
+Note
+For more information, see Required service data for Microsoft 365 products and Essential services for Office.
+See Also
+Privacy at Microsoft
+								

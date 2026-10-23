@@ -1,0 +1,64 @@
+Turn off Copilot in Microsoft 365 apps
+			Applies ToExcel for Microsoft 365 Word for Microsoft 365 PowerPoint for Microsoft 365 OneNote for Microsoft 365 Excel for Microsoft 365 for Mac Word for Microsoft 365 for Mac PowerPoint for Microsoft 365 for Mac 
+Note
+The information in this article applies only when you're signed in to your Microsoft 365 apps with a Microsoft account. For example, a personal email address.
+The settings described in this article aren't available if you're signed in with a work or school account.
+Copilot is built with the principles of fairness, reliability and safety, privacy and security, inclusiveness, transparency, and accountability at its core. Learn more about our approach to responsible AI.
+If you want to turn off Copilot in a Microsoft 365 app (for example, Word, PowerPoint, and Excel), you can clear the Enable Copilot checkbox in the app on your Windows or Mac device. When you turn off Copilot in an app, the Copilot icon on the ribbon is disabled and you won't be able to use any Copilot capabilities in that app.
+As an alternative to turning off Copilot, you can remove the Copilot icon from the ribbon. For more info, see Customize the ribbon in Office. Removing the icon from the ribbon doesn't turn off Copilot; you can still access Copilot through other methods, such as the shortcut menu.
+Use the "Enable Copilot" checkbox to turn off Copilot in Word, PowerPoint, and Excel
+Note
+For information about Outlook, see the Use the “Turn on Copilot” toggle to turn off Copilot in Outlook section later in this article.
+There is a separate Enable Copilot checkbox in each app and the checkbox only applies to that app on that device. For example, if you want to turn off Copilot in Word and Excel, you need to go to both apps and clear the Enable Copilot checkbox. If you have multiple devices, you need to go to each device and clear the Enable Copilot checkbox for each app. Also, turning off Copilot on a device turns off Copilot for anybody using that device.
+As of March 13, 2025, the Enable Copilot checkbox is available in the following apps starting with the versions listed:
+On Windows:
+Word: Version 2412
+Excel: Version 2501
+PowerPoint: Version 2501
+OneNote: Version 2502
+On Mac:
+Word: Version 16.93
+Excel: Version 16.93.2
+PowerPoint: Version 16.93.2
+If you don't see the Enable Copilot checkbox in the app, check which version of the app that you have. If necessary, update your version of the app on your device.
+Note
+You can’t turn off Copilot in the iOS, Android, or web versions of Word, Excel, or PowerPoint.
+In the meantime, you can change your privacy settings to turn off Copilot.
+Clear the "Enable Copilot" checkbox on Windows devices
+In your app (for example, Excel), go to File > Options > Copilot.
+Clear the Enable Copilot checkbox.
+Select OK, and then close and restart the app.
+If you want to turn Copilot back on, repeat these steps, but select the Enable Copilot checkbox in Step 2.
+Clearing the Enable Copilot checkbox allows you to turn off Copilot without having to change your account privacy settings. If you previously changed your account privacy settings to turn off Copilot, you can change your account privacy settings back to their previous setting. To change your account privacy settings, see Change privacy settings on Windows devices.
+Clear the "Enable Copilot" checkbox on Mac devices
+In your app (for example, Word), select the app menu, and then go to Preferences > Authoring and Proofing Tools > Copilot.
+Clear the Enable Copilot checkbox.
+Close and restart the app.
+If you want to turn Copilot back on, repeat these steps, but select the Enable Copilot checkbox in Step 2.
+Clearing the Enable Copilot checkbox allows you to turn off Copilot without having to change your account privacy settings. If you previously changed your account privacy settings to turn off Copilot, you can change your account privacy settings back to their previous setting. To change your account privacy settings, see Change privacy settings on Mac devices.
+Use the “Turn on Copilot” toggle to turn off Copilot in Outlook
+The steps for turning off Copilot in Outlook are different than for Word, Excel, and PowerPoint. In Outlook, there is a Turn on Copilot toggle. 
+As of June 3, 2025, the Turn on Copilot toggle is available in Outlook on the following platforms:
+Android: Quick Settings > Copilot
+iOS: Quick Settings > Copilot
+Mac: Quick Settings > Copilot
+Web: Settings > Copilot
+Windows (new Outlook): Settings > Copilot
+To see the Turn on Copilot toggle in Outlook on iOS and Android devices, update to the latest version of Outlook available on the respective app store. For Outlook on Mac devices, update to at least Version 16.95.3 from within Outlook. For Outlook on the web, no update is needed.
+One other difference for turning off Copilot in Outlook (compared to Word, Excel, and PowerPoint) is that your selection will apply to Outlook on all your devices when you’re signed in with the same account. For example, if you turn off Copilot in Outlook on a Mac device, Copilot will also be turned off for that same account when using Outlook on an iOS device.
+There is currently no estimated date for when turning Copilot on or off will be available in classic Outlook on Windows.
+Change your privacy settings to turn off Copilot
+If your Microsoft 365 apps don't yet have the Enable Copilot checkbox, you can turn off Copilot by changing your account privacy settings.
+But, when you change your account privacy settings to turn off Copilot, you're also turning off other features in your Microsoft 365 apps that you might want to use. For example, suggested replies in Outlook, text predictions in Word, PowerPoint Designer, and automatic alt text for images. For a list of features that would be turned off, see Connected experiences in Office.
+Change privacy settings on Windows devices
+In your app (for example, PowerPoint), go to File > Account > Account Privacy > Manage Settings.
+Under Connected experiences, clear the Turn on experiences that analyze your content checkbox.
+Select OK, and then close and restart the app.
+You only have to change your privacy settings in one of the apps. The change will take effect in the other apps next time you open them.
+Change privacy settings on Mac devices
+In your app (for example, Word), select the app menu, and then go to Preferences > Personal Settings > Privacy.
+In the Privacy dialog, go to Connected Experiences > Manage Connected Experiences.
+Clear the Turn on experiences that analyze your content checkbox.
+Select OK, and then close and restart the app.
+You only have to change your privacy settings in one of the apps. The change will take effect in the other apps next time you open them.
+								

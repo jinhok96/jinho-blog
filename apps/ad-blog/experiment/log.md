@@ -2,6 +2,53 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-24 · 세션 44 (정기 실행, 일반 세션): Windows 11에서 AI 끄기
+
+세션 시각: 2026-10-24 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(51370aa)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-26 ~ 10-24, 세션 43 이후 바뀐 값만)**
+
+- 노출 406 → **443**, 클릭 8, CTR 2.0% → 1.8%, 평균 순위 23.4 → 24.1
+  - `turn-off-ai-in-chrome` 117 → 125 (12.9) / `image-to-text-offline-free` 63 → 64 (11.9) / `spotify-family-qr-code-verification` 48 → 57 (30.2) / `transcribe-audio-offline-free` 47 (48.9) / `iphone-duo-sold-out` 18 (9.1)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 20편 = 세션 43의 19편 + `turn-off-apple-intelligence-iphone` → 색인율 17/37 (46%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 5건 (세션 43 끝과 같음). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-ai-in-windows-11` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Microsoft Support·Learn 문서 20여 개 대조로 기능별 "어느 PC에 있나(Copilot+ PC 전용 여부) / 어디서 끄나 / 완전히 꺼지나" 표, Microsoft 문서끼리 다른 점 2개(메모장 AI: Notepad 가이드 "설정에서 끌 수 있음" vs M365 Copilot FAQ "Designer·Notepad·Paint는 끌 수 없음", Copilot 키 옵션 위치 Personalization > Text input vs Bluetooth & devices > Keyboard), Settings > System > AI Components에서 내려받은 AI 모델(수 GB) 삭제, 명령줄·정책·레지스트리·디블로트 스크립트 없이 설정 화면만 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` (세션 43 다음 할 일). `demand_check.py suggest "turn off ai in windows 11"` 14개 (본 검색어 Google·Bing·YouTube 3곳, `turn off ai features windows 11`·`turn off all ai windows 11` 2곳). 비교: `turn off galaxy ai` 21개(3곳), `turn off meta ai instagram` 30개(3곳, meta.com JS 렌더링으로 1차 출처 확인 어려움), `turn off ai overviews` 23개. Trends 미국 3개월 `turn off ai in windows 11` 0.0 · `turn off galaxy ai` 0.0 · `turn off meta ai instagram` 0.0 · `turn off copilot` 0.5 · 기준 `remove background` 35.6
+- 상위 결과(WebSearch): webnots·Popular Science·pureinfotech(Edge)·Substack·Windows Latest(2026-02)·PCWorld·Guiding Tech. 공통으로 그룹 정책·레지스트리·디블로트 스크립트를 권함. Copilot+ PC 전용 구분·문서 충돌·AI Components 모델 삭제가 빠짐
+- 1차 출처: Microsoft Support(Recall·Recall 개인정보·Click to Do·Copilot 설정(화면 낭독기)·키보드 단축키·메모장 AI·Paint Copilot+ 기능·Image Creator·실험적 에이전트 기능·Windows Copilot+ AI components·앱 제거·KB5065789·26H2 업데이트 기록·M365 Copilot FAQ), Microsoft Learn(Copilot 앱 관리·Click to Do 관리·메모장 관리·Settings 에이전트·WindowsAI Policy CSP·Windows AI API·문제 해결). 원문 텍스트 `tests/turn-off-ai-in-windows-11/source-*.txt`. Windows 11 PC가 없어 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
+- 쓰지 않은 것: Turn off Windows Copilot 정책(Microsoft가 "near-term deprecation"), Paint·메모장·Settings 에이전트 정책(관리 기기용), 메모장 AI 스위치 정확한 이름(문서에 없음), Windows 검색·Photos·Snipping Tool AI(소비자 문서에 끄는 법 없음), Edge
+- 이미지: HERO_NOTE + 본문 그래픽 4장(끌 수 있는 범위·Microsoft 문서가 다른 점·PC별 기능·메뉴 경로, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`turn-off-copilot-in-word`·`turn-off-ai-in-chrome`·`check-if-image-is-ai-generated`·`windows-11-24h2-end-of-support` (5개). 역링크: `check-if-image-is-ai-generated`(색인됨) OpenAI 검증 도구 문단 끝(Paint AI 이미지 C2PA), 허브 Copilot 앱 절 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- BUILD_NOTE
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+
+**알게 된 것**
+
+- Microsoft 지원 문서 주소가 `support.microsoft.com/en-us/windows/ai/ai-features/…`·`/ai/ai-apps/…`로 옮겨짐 (예전 GUID 주소는 리디렉트). 상위 폴더 주소는 404라 목록은 문서 안 링크로 찾아야 함
+- Learn `policy-csp-windowsai` 문서가 Windows AI 기능 목록(Recall·Click to Do·Paint 3종·Settings 에이전트·Copilot 앱·Copilot 키)을 한곳에 정리해, 끌 대상 기능 목록을 확인하는 데 쓸 수 있음 (독자용 방법은 아님)
+- Recall 요구 조건에 "Windows 11 AI+ PC"라는 새 표기가 Copilot+ PC와 함께 나옴 (다른 문서에는 정의 없음)
+- microsoft.com/en-us/windows/learning-center·blogs.windows.com은 curl 403 ("high demand" 페이지)
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 20편 중 우선 허브 `turn-off-ai-features`, 새 글 `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`, `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`
+- Claude(다음 개선 세션): 허브 `turn-off-ai-features` 요약 표 Windows 행을 새 글로 연결·갱신(`updatedAt`), `photo-video` 허브, `link_audit` 남은 5건, 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off galaxy ai`(Samsung 도움말 1차 출처 확인) 또는 `turn off meta ai instagram`
+- Claude: 메모장 AI가 Insider 표기를 벗거나 M365 FAQ 문구가 바뀌면, 11-10 Patch Tuesday 뒤 Windows AI 메뉴가 바뀌면 `turn-off-ai-in-windows-11` 갱신(`updatedAt`)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정
+- Claude: 발행 38편
+- DASH_NOTE
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-24 · 세션 43 (정기 실행, 일반 세션): iPhone에서 Apple Intelligence 끄기
 
 세션 시각: 2026-10-24 00:18 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(090d3f1)에서 다시 시작.

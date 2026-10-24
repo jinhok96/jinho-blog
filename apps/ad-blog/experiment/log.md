@@ -2,6 +2,14 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-24 · 대시보드: 글별 색인 시점 기록 (사용자 요청)
+
+- 목적: 발행 → 색인까지 걸리는 기간 측정. Search Console은 색인 날짜를 주지 않아 `posts` 행에 3가지를 기록: `indexedAt`(URL 검사가 처음 PASS인 회차 시각), `firstCrawlAt`(그때의 `lastCrawl`, 이후 크롤링으로 바뀌지 않게 고정), `firstImpressionAt`(첫 웹 검색 노출일)
+- `dashboard_data.py`: `--prev`(필수)로 이전 `posts` 문서를 읽어 앞의 두 값을 이어받음. README 갱신 절차 1번 `list`에 `out_dir: "/tmp/dashboard-prev"` 추가
+- 소급: 색인 17편의 `indexedAt`은 이 로그 URL 검사 기록에서 처음 PASS로 확인한 세션 날짜(날짜만), `firstCrawlAt`은 현재 `lastCrawl`(로그의 첫 크롤링 시각과 같음). `stats/posts` v40 → v41로 직접 반영 (history 회차 없음)
+- 소급 결과 (KST 날짜 기준): 발행 → 색인 확인 D+0~4, 중앙값 D+1 (세션 간격만큼 늦게 잡힐 수 있음). 발행 → 첫 크롤링도 D+0~4, 중앙값 D+1
+- 화면: 글별 표 색인 칸에 `D+N`(정렬 가능), 요약 지표에 색인 중앙값, 상세에 색인 확인·첫 크롤링·첫 노출
+
 ## 2026-10-24 · 세션 44 (정기 실행, 일반 세션): Windows 11에서 AI 끄기
 
 세션 시각: 2026-10-24 12:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(51370aa)에서 다시 시작.

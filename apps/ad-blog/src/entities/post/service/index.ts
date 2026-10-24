@@ -1,6 +1,7 @@
 export {
   getAdjacentPosts,
   getCategorySummaries,
+  getHubPosts,
   getPost,
   getPostPageCount,
   getPosts,

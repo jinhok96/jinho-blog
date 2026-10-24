@@ -1,7 +1,7 @@
 import { HOME_PATH } from '@/core/routes';
 import { buildMetadata, JsonLd, websiteJsonLd } from '@/core/seo';
 
-import { getPostsPage } from '@/entities/post';
+import { getHubPosts, getPostsPage } from '@/entities/post';
 
 import { HomeView } from '@/views/home';
 
@@ -14,6 +14,7 @@ export default function HomePage() {
     <>
       <JsonLd jsonLd={websiteJsonLd()} />
       <HomeView
+        hubs={getHubPosts()}
         posts={items}
         totalPages={pagination.totalPages}
       />

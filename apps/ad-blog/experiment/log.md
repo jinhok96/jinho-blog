@@ -27,10 +27,10 @@
 - `Our take`: 계정을 여러 개 쓰면 자동 인증을 끄고 번호가 필요 없는 계정에서 지우기, Google은 계정을 추가할 때마다 묻는 방식이어야 함 — 근거: 두 번째 계정은 분리가 목적, Google 로그인 도움말 자체가 번호 공유를 말림, 끄기는 과거 연결을 되돌리지 않음. 반대 관점: 계정 1개인 사람에겐 복구·RCS·Quick Share·긴급 위치에 도움, 끄면 무엇이 멈추는지 Google 문서에 없음
 - 1차 출처: support.google.com/android/answer/7521240, /accounts/answer/3463280(Android판), 7222352(Android판), 183723, /messages/answer/9592174(참고만). 원문 `tests/google-phone-number-verification/source-*.txt`. 보도: Android Authority 10-14(2025-08~10 도움말 변경·확인 메일·스위치 이름·Reddit 재활성 보고), Kaspersky 2026-07-22(2025-09 시스템 업데이트). Android 기기·Google 계정이 없어 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
 - 쓰지 않은 것: Play Services의 SIM 식별자 공유(Reddit 주장), 직장 계정 관리자가 개인 번호를 보는지(문서 없음), 사기 전화 차단 효과(Kaspersky 주장, Google 원문 없음)
-- 이미지: 대표 이미지(Z-Image-Turbo 시드 930042182, HERO_TIME, 모래 베이지 + 틸·베리 레드, 약간 낮은 정면, `hero-image.md`) + 본문 4장(도움말 화면 캡처 + accent 상자·Google 문서 3곳 문장 대조·스위치 3곳 효과·보도 타임라인, `charts.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 930042182, 49.1분, 모래 베이지 + 틸·베리 레드, 약간 낮은 정면, `hero-image.md`) + 본문 4장(도움말 화면 캡처 + accent 상자·Google 문서 3곳 문장 대조·스위치 3곳 효과·보도 타임라인, `charts.py` 라이트 모드)
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`google-gmail-photos-ads` (2개). 역링크: `gemini-gems-to-skills`(색인됨) 마지막 관련 글 문단 끝(개인·업무 계정), `google-gmail-photos-ads` What to do now 6번(My Ad Center) 끝(번호별 광고 스위치) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
 - 점검: 저장소 `seo-audit` 스킬 On-Page 항목(제목 74자·H1 일치, 설명 159자에 주 검색어 포함하도록 고침, 첫 100단어에 주 검색어, 소제목, 이미지 alt·파일 이름, 내부 링크 앵커, em dash 0). searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_LINE
+- 빌드 HTML 확인: title 86자(접미사 포함, 본제목 74자 → 피드형 75자 이내)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 242개)·build 통과
 
 **알게 된 것**
 

@@ -25,9 +25,9 @@
 - 상위 결과(WebSearch): webnots·Popular Science·pureinfotech(Edge)·Substack·Windows Latest(2026-02)·PCWorld·Guiding Tech. 공통으로 그룹 정책·레지스트리·디블로트 스크립트를 권함. Copilot+ PC 전용 구분·문서 충돌·AI Components 모델 삭제가 빠짐
 - 1차 출처: Microsoft Support(Recall·Recall 개인정보·Click to Do·Copilot 설정(화면 낭독기)·키보드 단축키·메모장 AI·Paint Copilot+ 기능·Image Creator·실험적 에이전트 기능·Windows Copilot+ AI components·앱 제거·KB5065789·26H2 업데이트 기록·M365 Copilot FAQ), Microsoft Learn(Copilot 앱 관리·Click to Do 관리·메모장 관리·Settings 에이전트·WindowsAI Policy CSP·Windows AI API·문제 해결). 원문 텍스트 `tests/turn-off-ai-in-windows-11/source-*.txt`. Windows 11 PC가 없어 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
 - 쓰지 않은 것: Turn off Windows Copilot 정책(Microsoft가 "near-term deprecation"), Paint·메모장·Settings 에이전트 정책(관리 기기용), 메모장 AI 스위치 정확한 이름(문서에 없음), Windows 검색·Photos·Snipping Tool AI(소비자 문서에 끄는 법 없음), Edge
-- 이미지: HERO_NOTE + 본문 그래픽 4장(끌 수 있는 범위·Microsoft 문서가 다른 점·PC별 기능·메뉴 경로, `chart_style.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 204555387, 44.6분, 연분홍 배경 + 코발트·레몬, 아이소메트릭. 토글 스위치가 손잡이 달린 블록 세 개로 그려졌지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 그래픽 4장(끌 수 있는 범위·Microsoft 문서가 다른 점·PC별 기능·메뉴 경로, `chart_style.py` 라이트 모드)
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`turn-off-copilot-in-word`·`turn-off-ai-in-chrome`·`check-if-image-is-ai-generated`·`windows-11-24h2-end-of-support` (5개). 역링크: `check-if-image-is-ai-generated`(색인됨) OpenAI 검증 도구 문단 끝(Paint AI 이미지 C2PA), 허브 Copilot 앱 절 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
-- BUILD_NOTE
+- 빌드 HTML 확인: title 44자(접미사 포함, 본제목 32자)·description 157자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 14개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 241개)·build 통과
 - searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
 
 **알게 된 것**
@@ -46,7 +46,7 @@
 - Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정
 - Claude: 발행 38편
-- DASH_NOTE
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 세션 44 반영). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 - 배포: PR (CI 통과 후 머지)
 
 ## 2026-10-24 · 세션 43 (정기 실행, 일반 세션): iPhone에서 Apple Intelligence 끄기

@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-25 · 세션 48 (정기 실행, 뉴스 세션 · 영향): Android 전화번호 인증이 모든 Google 계정에 번호 추가
+
+세션 시각: 2026-10-25 06:16 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(3af5b5e)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-26 ~ 10-24, 세션 47 이후 바뀐 값만)**
+
+- 노출 527 → **546**, 클릭 8 → **10**, CTR 1.5% → 1.8%, 평균 순위 22.8 → 23.2
+  - 클릭: 홈 3·`turn-off-ai-in-chrome` 3(노출 131, 13.7위)·`gemini-gems-to-skills` 1·`image-to-text-offline-free` 1(69, 13.6위)·`iphone-duo-sold-out` 1·삭제 글 `free-offline-text-to-speech` 1 / `spotify-family-qr-code-verification` 126 (18.5위)
+- URL 검사: 색인 17편 그대로 (마지막 새 크롤링 10-20). `URL is unknown` 23편 = 세션 47의 22편 + `turn-off-meta-ai-instagram` → 색인율 17/40 (43%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 47과 같은 3건 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글, `pixel-watch-safety-signal-ending` 받는 링크 1개). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `google-phone-number-verification` | `news` | `ai-settings` 뉴스 칼럼 (영향, 피드형) | Google 도움말 4개 문장 대조: Android Help 7521240 "add them to all Google Accounts"(기본값, 현재·앞으로의 계정) vs Account Help 3463280 "can be added to any Google Account" vs 로그인 도움말 7222352 "다른 Google 계정 로그인에 쓰지 않는 번호를 쓰라". 번호별 **Better ads and Google services**(번호를 광고에 쓰는 스위치, "Across Google") — 상위 결과에 없던 내용. 스위치 3곳(기기 스위치·계정별 번호 삭제·번호별 광고 스위치) 효과 표, 사용자 유형별 영향 표, 새 Android 기기 로그인 때 번호로 계정 찾기(7222352), 도움말 화면 Chromium 캡처 |
+
+- 선정 근거: 48시간 안 공식 발표 중 기준을 넘는 화제 뉴스 없음 → 영향 뉴스. Google News 30일 `Google "phone number" accounts Android linking` 60건(10-14 Android Authority → 10-18 Android Central·10-19 BGR·10-20 Malwarebytes·10-22 Lifehacker → 10-24 Engadget), 48시간 15건. 자동완성 `phone number verification google` 3곳(하위 28개: settings·google account·pixel), `remove phone number from google account` 3곳. Trends 미국 7일 `phone number verification` 12.8 · `google account phone number` 5.2 · 기준 `remove background` 67.5 → 피드형
+- 제외한 48시간 후보: ChatGPT Locked Chats(38건, openai.com·help.openai.com·chatgpt.com 403 → 1차 출처 불가), iOS 27 사칭 위험 감지(3건, 9월 기능), Verizon iPhone Duo 지연 $100 상품권(사전 주문자만), Texas AG OpenAI 소송(소송), Gemini 4 Argon 가격(개발자 API), ChromeOS 156(3건)
+- 주 검색어: `phone number verification google`. 제목 `Android Phone Number Verification Adds Your Number to Every Google Account`(74자, 피드형 75자 이내, 주 검색어 앞쪽)
+- `Our take`: 계정을 여러 개 쓰면 자동 인증을 끄고 번호가 필요 없는 계정에서 지우기, Google은 계정을 추가할 때마다 묻는 방식이어야 함 — 근거: 두 번째 계정은 분리가 목적, Google 로그인 도움말 자체가 번호 공유를 말림, 끄기는 과거 연결을 되돌리지 않음. 반대 관점: 계정 1개인 사람에겐 복구·RCS·Quick Share·긴급 위치에 도움, 끄면 무엇이 멈추는지 Google 문서에 없음
+- 1차 출처: support.google.com/android/answer/7521240, /accounts/answer/3463280(Android판), 7222352(Android판), 183723, /messages/answer/9592174(참고만). 원문 `tests/google-phone-number-verification/source-*.txt`. 보도: Android Authority 10-14(2025-08~10 도움말 변경·확인 메일·스위치 이름·Reddit 재활성 보고), Kaspersky 2026-07-22(2025-09 시스템 업데이트). Android 기기·Google 계정이 없어 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
+- 쓰지 않은 것: Play Services의 SIM 식별자 공유(Reddit 주장), 직장 계정 관리자가 개인 번호를 보는지(문서 없음), 사기 전화 차단 효과(Kaspersky 주장, Google 원문 없음)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 930042182, 49.1분, 모래 베이지 + 틸·베리 레드, 약간 낮은 정면, `hero-image.md`) + 본문 4장(도움말 화면 캡처 + accent 상자·Google 문서 3곳 문장 대조·스위치 3곳 효과·보도 타임라인, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`google-gmail-photos-ads` (2개). 역링크: `gemini-gems-to-skills`(색인됨) 마지막 관련 글 문단 끝(개인·업무 계정), `google-gmail-photos-ads` What to do now 6번(My Ad Center) 끝(번호별 광고 스위치) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page 항목(제목 74자·H1 일치, 설명 159자에 주 검색어 포함하도록 고침, 첫 100단어에 주 검색어, 소제목, 이미지 alt·파일 이름, 내부 링크 앵커, em dash 0). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 86자(접미사 포함, 본제목 74자 → 피드형 75자 이내)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 242개)·build 통과
+
+**알게 된 것**
+
+- web.archive.org는 컨테이너에서 연결이 끊김(agent proxy `ws_closed_mid_exchange`, 2회) → 도움말 문구 변경 시점은 보관본으로 확인할 수 없어 보도로만 표기
+- Google 도움말은 같은 기능을 문서마다 다르게 씀(7521240 "add them to all" vs 3463280 "can be added") → 정책·기본값 칼럼에서 관련 도움말을 함께 대조하면 독창 요소가 됨 (Windows 11 글의 Microsoft 문서 충돌과 같은 방식)
+- support.google.com 도움말은 `co=GENIE.Platform%3DAndroid`를 붙이면 Android 탭 본문(메뉴 경로가 기기 기준)을 curl로 받을 수 있음
+- 클릭이 8 → 10 (홈·`turn-off-ai-in-chrome` 3씩)
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 23편 중 우선 허브 `turn-off-ai-features`·`best-free-pdf-tools`, 새 글 `google-phone-number-verification`·`turn-off-meta-ai-instagram`, `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`google-gmail-photos-ads`, `remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`
+- Claude(다음 개선 세션): `image-to-text-offline-free`(13.6위)·`spotify-family-qr-code-verification`(18.5위, 노출 126) 8~20위 검색어 보강 — `seo-audit` rankings-push, 검증 기록 행 추가. 색인율이 50%를 넘으면 `photo-video` 허브. 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(다음 일반 세션): `ai-settings` 공백 `remove phone number from google account`(이번 칼럼 후속, backlog 추가)·`turn off galaxy ai`·`google personal intelligence settings`
+- Claude: Google이 전화번호 인증 기본값·계정별 확인을 바꾸거나 입장을 내면 `google-phone-number-verification` 갱신(`updatedAt`). H4 판정(11-21 이후): `gsc_report.py --compare /posts/google-phone-number-verification --changed 2026-10-24 --metric impressions --type discover`. H5 영향 칼럼 8편째(화제 7편)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 41편
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 회차 2026-10-24T21:38:12Z, DB 문서 56개, 스크래치패드 경로). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-25 · 세션 47 (정기 실행, 일반 세션): Instagram에서 Meta AI 끄기
 
 세션 시각: 2026-10-25 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(2e7bcd3)에서 다시 시작.

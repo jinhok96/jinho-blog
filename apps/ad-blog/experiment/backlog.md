@@ -75,6 +75,7 @@
 | `ai-settings` | 상시 글 | Windows 11 AI 끄기 (Copilot 앱 삭제 외 Recall·Click to Do·작업 표시줄 등 OS 기능) | turn off ai in windows 11 | 2026-10-23 `demand_check.py suggest "turn off ai"`·`"how to turn off ai features"`에서 Bing `turn off ai in windows 11`, Google·Bing `how to turn off ai features windows 11`. 3곳 확인·Trends 비교는 쓰기 전에 | 문서 기반 (Windows 11 없음) | 발행 `turn-off-ai-in-windows-11` (2026-10-24 세션 44, Microsoft Support·Learn 문서 20여 개로 기능별 "어느 PC에 있나·어디서 끄나·완전히 꺼지나" 표, 문서 충돌(메모장 AI 끄기 가능 vs M365 FAQ 불가, Copilot 키 경로 2곳), AI Components 모델 삭제. 2026-10-24 자동완성 본 검색어 3곳·하위 14개, Trends 0.0) |
 | `ai-settings` | 상시 글 | Gemini 앱 활동(Keep Activity) 끄기·삭제와 끄면 안 되는 것 (Connected Apps 대부분 중단, 72시간 보관, 검토된 채팅 3년) | turn off gemini apps activity | 2026-10-23 `demand_check.py suggest "disconnect apps from gemini"`에서 Bing `turn off gemini apps activity`, `gemini connected apps privacy`(Google). 3곳 확인·Trends 비교는 쓰기 전에 | 문서 기반 (Gemini 계정 없음) | 후보 (`gemini-connected-apps` 칼럼 후속, 2026-10-23 세션 40) |
 | `ai-settings` | 상시 글 | Google 검색 Personal Intelligence 끄기·Gmail·Photos 연결 해제 (Search Services Personalization, Personalized Recommendations, Search Services History 삭제) | google personal intelligence settings | 2026-10-23 `demand_check.py suggest "google personal intelligence"` 20개: 본 검색어 3곳, settings·features·review(Google). 3곳 확인·Trends 비교는 쓰기 전에 | 문서 기반 (Google 계정 없음) | 후보 (`google-gmail-photos-ads` 칼럼 후속, 2026-10-24 세션 45) |
+| `ai-settings` | 상시 글 | Google 계정에서 전화번호 지우기·바꾸기 (복구 전화·2단계 인증·로그인 번호·Across Google 광고 사용 구분, 지워지지 않을 때) | remove phone number from google account | 2026-10-24 `demand_check.py suggest`: 본 검색어 Google·Bing·YouTube 3곳, `delete phone number from google account`·`remove old phone number`·`remove my phone number` 2곳, `can't remove`·`remove verified phone number`(1곳). Trends 미국 7일 0.0 · `google account phone number` 5.2 · 기준 `remove background` 67.5 | 문서 기반 (Google 계정 없음) | 후보 (`google-phone-number-verification` 칼럼 후속, 2026-10-25 KST 세션 48) |
 | `photo-video` | 허브 | 무료 사진·영상 도구 모음 (변환·압축·배경·메타데이터 측정 6편 연결) | free image converter | 자동완성 `image converter free` 24개 (download·online·software, Google·Bing). 허브 제목·주 검색어는 쓰기 전에 `best free photo editor` 등과 Trends 비교 | 기존 측정 재사용 | 다음 개선 세션 |
 
 ## 뉴스 칼럼 후보
@@ -120,12 +121,13 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | Gemini Customize 메뉴: Connected Apps(외부 40개+)·Skills를 한곳에, 연결 해제는 기존 데이터를 지우지 않음 | 화제 | 2026-10-21 (Google Workspace Updates), 릴리스 노트 2026.10.13 | 10-13 배포 시작, 최대 15일 (약 10-28) | workspaceupdates.googleblog.com 2026-10-21, gemini.google/release-notes, support.google.com/gemini/answer/18736938·13695044·13594961·17209137·table/17434654 | 발행 `gemini-connected-apps` (2026-10-23 세션 40, 공식 목록 83행 집계). 외부 앱 국가 확대·Customize 배포 완료 시 같은 글 갱신 |
 | iOS 27.1 (iPhone Duo 전용 출시) | 화제 | 2026-10-23 (보도) | iPhone Duo만 | 미확인 (Apple 보안 업데이트·릴리스 노트 미확인) | 제외 (2026-10-24 세션 45: Google News 48시간 47건, 다른 iPhone 사용자는 설치 불가 → 독자 행동 없음) |
 | ChatGPT Ads 26개국 확대 | 화제 | 2026-10-21 (OpenAI News 피드) | 상시 | openai.com (컨테이너 403) | 제외 (2026-10-24: 미국은 이미 대상, 1차 출처 본문 확인 불가) |
-| ChatGPT Locked Chats (민감한 대화 잠금) | 화제 | 2026-10-21 (보도) | 미확인 | openai.com·help.openai.com 403 → 미확인 | 보류 (2026-10-23 Google News 3일 75건으로 화제성 최대, 1차 출처 접근 불가) |
+| ChatGPT Locked Chats (민감한 대화 잠금) | 화제 | 2026-10-21 (보도) | 미확인 | openai.com·help.openai.com 403 → 미확인 | 보류 (2026-10-23 Google News 3일 75건으로 화제성 최대, 1차 출처 접근 불가. 2026-10-24 48시간 38건, openai.com·help.openai.com·chatgpt.com 여전히 403) |
 | Xbox Game Pass 개편(à la carte) | 화제 | 미발표 (소식통 보도) | 미확인 | 없음 | 제외 (루머, 2026-10-21. 10-21 Trends 급상승 200+는 신규 게임 추가 소식) |
 | OneDrive iOS 18 지원 종료 (iPhone XR·XS) | 영향 | 2026-10 (TestFlight 노트 기반 보도) | 미확인 | 없음 (Microsoft 공식 공지 없음) | 보류 |
 | Microsoft Edge 재시작 없는 보안 업데이트 | 영향 | 2026-10-15 (Windows Blog) | 테스트 단계 | blogs.windows.com/msedgedev/2026/10/15/ | 보류 (일반 배포·독자 행동 생기면 재검토, 2026-10-20) |
 | Fitbit 클래식 앱 종료 → Google Health 강제 전환 | 영향 | 2026-10-12 (보도) | 미확인 (이미 종료 보도) | blog.google 10-12 글 2편에 종료 언급 없음 | 보류 (2026-10-19, 1차 출처 없음) |
 | Windows Update가 패치 안 된 PC에서 2027년 작동 중단 | 영향 | 2026-10-11 (TechPowerUp 보도) | 2027 (미확인) | 미확인 | 보류 (2026-10-19, Microsoft 원문 확인 시 재검토) |
+| Android 전화번호 인증 기본값: 인증한 번호를 기기에 로그인한 모든 Google 계정에 추가 (현재·앞으로의 계정과 번호), 끄면 앞으로만 멈춤 | 영향 (화제 세션 대체) | 도움말 변경 2025-08~10(Android Authority 보도), 보도 2026-10-14~24 | 상시 기본값 | support.google.com/android/answer/7521240, /accounts/answer/3463280·7222352·183723 | 발행 `google-phone-number-verification` (2026-10-25 KST 세션 48, Google 도움말 4개 문장 대조·스위치 3곳 효과·사용자 유형별 영향·도움말 화면 캡처). Google이 기본값·계정별 확인을 바꾸거나 입장을 내면 같은 글 갱신 |
 
 ## 반복 일정
 

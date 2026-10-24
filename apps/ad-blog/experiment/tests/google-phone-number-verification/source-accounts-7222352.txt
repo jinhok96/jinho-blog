@@ -1,0 +1,46 @@
+URL: https://support.google.com/accounts/answer/7222352?hl=en&co=GENIE.Platform%3DAndroid
+Fetched: 2026-10-24 (UTC)
+
+Sign in with your phone number instead of a username
+You may sign in to your Google Account with your phone number on any sign-in screen with an "Email or phone number" field.
+This option gives you another way to sign in if you don't remember your username.
+Use your phone number to sign in
+You may sign in with your phone number if you've added it to your Google Account.
+ On any Google sign-in screen with an "Email or phone number" field, enter your phone number.
+ Select Next.
+ Finish signing in as you usually do.
+Add or change the phone number on your account
+You might have added a phone number when you created your Google Account, set up your device, or updated your settings.
+To make sure your current number is connected to your account:
+ Open your device's Settings app.
+ Tap {Username} Your name Manage your Google Account.
+ You can also visit myaccount.google.com.
+ At the top, tap Personal info.
+ Tap Phone.
+ From here you can:
+ Add a phone number: Under "Recovery phone," tap Add recovery phone. (If you don't have a recovery phone number yet, we recommend you add one.)
+ Change your phone number: Next to your number, tap Edit . At the top right, tap Update number.
+ Enter your phone number. Use a number that:
+ Belongs only to you
+ You don't use on another Google Account to sign in
+ You don't use to connect with others on Google services, like Photos
+ Follow the steps on the screen.
+Important: If you see "Number not verified" next to your number, select Verify now and follow the steps on the screen.
+Fix problems
+You get an error message
+ If you get an error message that says "Couldn't find your Google Account," your phone number might not be connected to your account.
+ Follow the steps above to add your phone number.
+ If you can't sign in with your phone number, sign in with your username or email address.
+You can’t access the device you used to sign in 
+ Important:
+ This option is only available for Android devices.
+ To use this feature, before you try to sign in, the "Skip password when possible" option must be turned on in your account's Security & sign-in page.
+ If your Android device is lost, stolen, or replaced, you can sign in to your account on your new Android device without entering your email address or password. Instead, we’ll attempt to identify the Google Accounts associated with the phone number on the new device, allowing you to sign in directly from there.
+ Open your device’s Settings app.
+ Under "Accounts for," tap Add account.
+ Follow the instructions on screen.
+ Your account will be automatically identified with your mobile phone number.
+ Tap the account to sign in to.
+ Approve “Sign in on another signed-in device” or enter the screen lock passcode of your previous Android device.
+ Tip: To sign in with your screen lock passcode, you must’ve been signed in to your Google Account on your previous device within the past 14 days.
+ Android phone & tablet ComputeriPhone & iPad More

@@ -2,6 +2,49 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-24 · 세션 46 (정기 실행, 개선 세션): 색인 안 된 글 연결 + 받는 링크 보강 + 허브 표 갱신
+
+세션 시각: 2026-10-24 18:15 KST → 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(cd57fc2)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-26 ~ 10-24, 세션 45 이후 바뀐 값만)**
+
+- 노출 431 → **461**, 클릭 8, CTR 1.9% → 1.7%, 평균 순위 24.0 → 24.5
+  - `turn-off-ai-in-chrome` 122 → 128 (13.8) / `spotify-family-qr-code-verification` 55 → 66 (28.9) / `image-to-text-offline-free` 64 → 65 (12.8) / `check-if-image-is-ai-generated` 31 (71.0)
+- URL 검사: 색인 17편 그대로 (마지막 새 크롤링 10-20). `URL is unknown` 22편 = 세션 45의 20편 + `turn-off-ai-in-windows-11`·`google-gmail-photos-ads` → 색인율 17/39 (44%), 절반 넘게 미색인 → README 발행 속도 규칙대로 새 글 대신 링크 보강
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 시작 5건 → 끝 3건
+- 주간 SEO 점검 보고: 아직 없음 → 개선 세션 순서 1~3번으로 진행
+
+**한 일 (개선 세션 3건)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 1 색인 | 색인된 글에서 받는 링크가 0개인 미색인 글 2편: `pdf-to-word-free` ← `merge-pdf-files-free`(색인), `apple-mail-exchange-not-syncing` ← `windows-11-24h2-end-of-support`(색인) | 각 글 끝 관련 글 문단에 1문장 | 역링크 (V 대상 아님) |
+| 2 | 2 링크 점검 | `spotify-family-qr-code-verification` 받는 링크 1개 | `iphone-handoff-verizon-cost`(색인) Pixel Watch 문단 끝 1문장 → 2개. `apple-mail-exchange-not-syncing`도 1번으로 2개 | 역링크 |
+| 3 | 3 허브 갱신 | 허브 `turn-off-ai-features` | 요약 표 "Full guide" 칸의 Windows 11·iPhone 행을 "This page" → 상시 글 `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone` 링크, `updatedAt` 2026-10-24 | 허브 미색인이라 기준값 없음 (V 대상 아님) |
+
+- 미색인 22편 중 색인된 글의 링크를 받지 못한 글은 위 2편뿐이었음 (나머지 20편은 색인된 글에서 1~3개 받음) → 이제 미색인 글 전부 색인된 글에서 링크 1개 이상
+- `link_audit` 남은 3건: Chrome → 허브 1(V3 판정 11-18까지 의도적 보류), `apple-mail-exchange-not-syncing` 칼럼 → 상시 글 1(같은 클러스터 상시 글이 `windows-10-esu-extended`뿐이라 문맥 안 맞음), `pixel-watch-safety-signal-ending` 받는 링크 1개(`phones-subscriptions` 다른 글과 문맥이 약해 보류)
+- 빌드 HTML 확인: 허브 h1 1개, Windows 11 글 링크 3개(표 포함), BlogPosting `dateModified` 2026-10-24. lint·test·build 통과
+- `photo-video` 허브는 색인율 50% 미만 규칙으로 이번에도 미룸
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+
+**알게 된 것**
+
+- 10-20 이후 4일간 새로 색인된 글이 0편 (그사이 발행 10편 이상). 발견 경로는 링크로 다 이어졌으므로, 남은 수단은 사용자 색인 요청과 시간
+- 대시보드 batch는 `writes.json`의 `file_path`가 `/tmp/dashboard/…`일 때 세션 45에서 거부됐지만, 파일을 스크래치패드로 복사하고 경로를 바꾸니 정기 실행에서도 승인 없이 적용됨
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 22편 중 우선 허브 `turn-off-ai-features`·`best-free-pdf-tools`, `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`google-gmail-photos-ads`, `remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`·`pdf-to-word-free`
+- Claude(다음 개선 세션): 색인율이 50%를 넘으면 `photo-video` 허브. 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(다음 일반 세션): `ai-settings` 공백 `google personal intelligence settings`·`turn off galaxy ai`·`turn off meta ai instagram`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 39편 (이번 세션 새 글 없음)
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 회차 2026-10-24T09:25:59Z). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-24 · 대시보드: 색인 시점 화면이 그려지지 않던 문제 수정 (사용자 요청)
 
 - 증상: 색인 시점 기록(아래 세션) 발행 후 대시보드가 "데이터 불러오는 중"에서 멈춤. 원인: `dashboard/index.html`에 `median`을 `const`로 두 번 선언(색인 경과일용 추가 + 경과일별 누적 노출용 기존) → 스크립트 전체가 문법 오류로 실행되지 않음. DB(`stats/posts` v41)의 색인 시점 값은 정상

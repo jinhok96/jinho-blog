@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-24 · 세션 44 (정기 실행, 뉴스 세션 · 화제): Google Personal Intelligence가 Gmail·Photos 데이터를 광고에
+
+세션 시각: 2026-10-24 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(51370aa)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-25 ~ 10-23, 세션 43 이후 바뀐 값만)**
+
+- 노출 406 → **431**, 클릭 8, CTR 2.0% → 1.9%, 평균 순위 23.4 → 24.0
+  - `turn-off-ai-in-chrome` 117 → 122 (12.9) / `image-to-text-offline-free` 63 → 64 (11.9) / `spotify-family-qr-code-verification` 48 → 55 (29.4) / `iphone-duo-sold-out` 17 (9.2)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 20편 = 세션 43의 19편 + `turn-off-apple-intelligence-iphone` → 색인율 17/37 (46%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 43과 같은 5건 (Chrome → 허브 1·의도적 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글 1, 받는 링크 1개 3편). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `google-gmail-photos-ads` | `news` | `ai-settings` 뉴스 칼럼 (화제, 피드형) | Google 개인정보처리방침 4개 판(04-02·05-26·10-01·10-16) 광고 문장 대조(`policy_diff.py`: 10-16판에서 바뀐 문장 3곳 + Personal Intelligence 첫 언급), 2017-06-23 Gmail 광고 약속 글에 붙은 10-16 갱신 문단, 스위치 4개별 효과 표(연결 해제·Personalized Recommendations·Gmail Smart features in other Google products·My Ad Center), 지원 국가 194곳 집계(영국·EU 없음), Gemini 앱 채팅은 광고 미사용(Privacy Hub) 구분 |
+
+- 선정 근거 (48시간): Google News 48시간 `Google Gmail Photos ads privacy policy` 25건(10-23 Android Authority·Ars Technica·9to5Google·The Verge 등). 정책 시행은 10-16이지만 보도가 10-23에 집중. backlog 보류 행(10-20 보도만)이 1차 출처 확보로 해제
+- 제외: iOS 27.1(iPhone Duo 전용, 독자 행동 없음), ChatGPT Ads 26개국(openai.com 403, 미국 영향 적음), Chrome 오디오 음소거(보도만), Gemini Notebook 앱 연동(Workspace 위주)
+- 주 검색어: `google personal intelligence` (자동완성 3곳, 하위 settings·features). 뉴스 표현 `google gmail ads`·`google email ads`
+- `Our take`: Search에 Gmail·Photos를 연결하지 않은 채로 두기 — 근거: 2017년부터의 무조건 약속이 "연결하면 예외"로 바뀜, Google FAQ는 "directly"만 부정(요약·추론은 광고에 쓰임), 연결 시 모든 Search 서비스·AI 학습·사람 검토 대상. 반대 관점: 옵트인이고 유용, 이미 쓰면 My Ad Center로 광고 쪽만 끄기
+- 1차 출처: policies.google.com/privacy(10-16)·archive 3개 판, blog.google 2017-06-23(10-16 갱신), Search Help 16859283·17025248·17026260, My Ad Center Help 12155656, Gemini Privacy Hub 13594961. AI Mode 광고 테스트는 SE Roundtable(10-19, Search Engine Land 인용) 보도로만 표기. Google 계정이 없어 설정 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 846821759, 44.1분, 연한 하늘색 배경 + 코랄·올리브, 약간 높은 정면 시점. 열린 봉투·원판 모양 사진 더미·버튼형 스위치로 그려졌지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 그래픽 4장(정책 전후 비교·스위치별 효과·2017 → 2026 타임라인·메뉴 경로, `chart_style.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`turn-off-gemini-in-gmail`·`gemini-connected-apps`·`gemini-android-auto-personal-intelligence` (4개). 역링크: `gemini-gems-to-skills`(색인됨) 마지막 관련 글 문단, `turn-off-gemini-in-gmail` "How to stop the Gemini app from reading your Gmail" 끝, 허브 Google 검색 절 끝에 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 태그: 처음 `Google Photos`를 넣었다가 `link_audit` 비슷한 태그(`photos`)로 잡혀 뺌
+- 빌드 HTML 확인: title 77자(접미사 포함, 본제목 65자 → 피드형 75자 이내, 주 검색어는 맨 앞)·description 159자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 그래픽 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 241개)·build 통과
+- searchfit-seo 스킬은 이번 세션에 없어 문서 체크리스트로 점검
+
+**알게 된 것**
+
+- policies.google.com 보관본은 `/privacy/archive/{시행일}`이 그 판 원문, `/privacy/archive/{이전}-{다음}`이 두 판 비교(추가·삭제 표시가 섞인 본문) → 원문끼리 대조해야 정확함 (`policy_diff.py`)
+- Google은 정책을 바꿀 때 관련 옛 블로그 글에 "Update, {날짜}" 문단을 붙이기도 함 (2017 Gmail 글) → 정책 변경 칼럼의 1차 출처로 쓸 수 있음
+- Search Personal Intelligence(Search Services Personalization)는 Gemini 앱 Connected Apps와 별개 설정이고, 광고 관련 정책도 다름 (Gemini 채팅은 광고 미사용)
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 20편 중 우선 허브 `turn-off-ai-features`, `turn-off-apple-intelligence-iphone`, 새 글 `google-gmail-photos-ads`, `best-free-pdf-tools`·`remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`
+- Claude(다음 일반 세션): `ai-settings` 공백 `google personal intelligence settings`(이번 칼럼 후속, backlog 추가) 또는 `turn off meta ai instagram`·`turn off ai in windows 11`
+- Claude(다음 개선 세션): `photo-video` 허브, `link_audit` 남은 5건, 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude: Google이 AI Mode 광고를 공식 발표하거나 연결 데이터 전용 광고 스위치를 내놓으면 `google-gmail-photos-ads` 갱신(`updatedAt`). H4 판정(11-21 이후): `gsc_report.py --compare /posts/google-gmail-photos-ads --changed 2026-10-24 --metric impressions --type discover`. H5 화제 칼럼 7편째(영향 7편)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 38편
+- 대시보드: **갱신 실패** — `dashboard_data.py`로 writes.json(stats 7 + history 7, 회차 2026-10-23T22:18:32Z)은 만들었지만 `ArtifactData` batch가 1회차 "승인 기록 없음", 2회차 "file_path 원본이 링크·특이 경로라 사람만 승인 가능"으로 거부되어 아무것도 쓰이지 않음 (정기 실행이라 승인할 사람 없음). 다음 세션에서 다시 시도 (README 절차 5번)
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-24 · 세션 43 (정기 실행, 일반 세션): iPhone에서 Apple Intelligence 끄기
 
 세션 시각: 2026-10-24 00:18 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(090d3f1)에서 다시 시작.

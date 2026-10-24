@@ -1,0 +1,66 @@
+URL: https://help.instagram.com/890932425718081/?cms_platform=iphone-app&helpref=platform_switcher
+TITLE: Remove a message in your Instagram chat | Instagram Help Center
+DEVICE: iPhone App Help clicked=true
+FETCHED: 2026-10-24T15:32:53.700Z
+
+Help Center
+English (US)
+Instagram Features
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Privacy and Reporting
+Terms and Policies
+Threads
+ 
+Remove a message in your Instagram chat
+Copy link
+More
+Android App Help
+iPhone App Help
+iPad App Help
+How do I delete an Instagram message?
+How do I unsend an Instagram message?
+What happens to deleted Instagram messages?
+How do I hide Instagram messages?
+I have a different question
+You can remove a message that appears in your Instagram chat by deleting it.
+Note: Deleting messages in your conversation does not delete them for others in the chat. You can instead, unsend a message you’ve sent.
+Delete a message
+Tap Messages at the bottom.
+
+Tap a conversation.
+Tap and hold a message you’ve sent or received.
+Tap Delete for you.
+Tap  Select next to each message you want to delete.
+Tap Delete for you at the bottom and confirm your choice.
+Keep in mind
+When you download a copy of your information, your data download file won’t include messages that you've deleted.
+If the chat or a surrounding message is reported, deleted messages could also be included in the report.
+Was this helpful?
+Yes
+No
+Related Articles
+Delete a chat on Instagram
+Unsend a message you've sent in a chat on Instagram
+Manage read receipts for your chats on Instagram
+Mark a chat as unread in your Instagram inbox
+Delete conversations on Threads
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Get help with removing a message in your Instagram chat
+You can remove messages from your Instagram chat by tapping and holding a message and selecting Delete for you. This action only removes the message for you and does not delete it for other people in the conversation.
+How do I delete an Instagram message?
+How do I unsend an Instagram message?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

@@ -1,0 +1,119 @@
+URL: https://help.instagram.com/2050445508681504/?cms_platform=iphone-app&helpref=platform_switcher
+TITLE: Use Meta AI on Instagram | Instagram Help Center
+DEVICE: iPhone App Help clicked=true
+FETCHED: 2026-10-24T15:28:52.198Z
+
+Help Center
+English (US)
+Instagram Features
+Your Profile
+Sharing Photos and Videos
+Exploring Photos and Videos
+Messaging
+Send, View and Manage Messages
+Group Chats
+Audio and Video Calls
+Channels
+Reels
+Edits
+Stories
+Live
+Fundraisers and Donations
+Shop
+Payments in Instagram
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Privacy and Reporting
+Terms and Policies
+Threads
+Instagram Features
+Messaging
+Use Meta AI on Instagram
+Copy link
+More
+Android App Help
+iPad App Help
+iPhone App Help
+How do I use Meta AI on Instagram?
+How do I send Meta AI commands?
+How do I use Meta AI in search?
+How do I animate a Meta AI image?
+I have a different question
+This feature currently isn’t available to everyone.
+You can use Meta AI on Instagram to get advice or ask questions.
+Use Meta AI on Instagram
+Tap an option below to learn how to access and use Meta AI on Instagram.
+Start a conversation with Meta AI
+Tap Messages at the bottom.
+
+Tap Compose in the top right.
+Below Suggested, tap Meta AI.
+Enter a message or tap a message prompt. Note: Be mindful before including any personal information in your message (examples: name, address, email, or phone number).
+Tap Send.
+After you’ve started a chat with Meta AI, you can revisit your conversation at any time from your inbox. Note: If you permanently delete a chat with Meta AI from your inbox and start a new conversation with Meta AI, your previous messages will no longer be available.
+You can send the commands to Meta AI as messages in the chat. Some commands include:
+/imagine: Generates an image based on your text prompt. Once the image is sent, you and others in your chat can tap and hold on the image, then tap Reimagine to submit another prompt to change the image. Note: To animate an image that Meta AI generates, tap and hold the image, tap Reply and enter “animate” after the auto-populated mention of Meta AI. Meta AI will generate an animated version of the image.
+/imagine yourself: Create an AI-generated image of yourself.
+Learn more about how to start a chat with an AI.
+Use Meta AI in a chat with others
+In an existing conversation, tap Message… at the bottom.
+Enter “@” and then tap Meta AI.
+Enter your question or request for Meta AI, then tap Submit next to your message. Note: Be mindful before including any personal information in your message (examples: name, address, email, or phone number).
+Your question and Meta AI’s response will be sent as messages in the chat.
+Note: Meta AI will read and reply to content that is shared with Meta AI, including messages that mention @Meta AI, image prompts, messages you ask Meta AI to summarize and more.
+When you share a message with Meta AI, others in your chat will be able to see your message to Meta AI, as well as Meta AI’s response.
+To ask Meta AI another question or to reply to its response, you can tap and hold a message from Meta AI and then tap Reply. Any message for Meta AI, such as a reply to Meta AI or a follow-up question, must be directed to Meta AI for it to respond. (Example: “@Meta AI can you clarify that?”)
+With the use of commands, you can ask Meta AI to provide more details on your conversations with AIs and perform certain tasks, such as deleting information about you from a conversation. To use a command, send the command as a message in the chat. Learn more about generative AI at Meta.
+Some commands include:
+/imagine: Generates an image based on your text prompt. Once the image is sent, you and others in your chat can tap and hold on the image, then tap Reimagine to submit another prompt to change the image. To animate an image that Meta AI generates, tap and hold the image, tap Reply and enter “animate” after the auto-populated mention of Meta AI. Meta AI will generate an animated version of the image.
+/imagine yourself: Create an AI-generated image of yourself.
+Keep in mind that when you or others mention @Meta AI, messages from the past 30 days will be used to provide relevant responses. Learn more about sharing with Meta AI.
+Access Meta AI in search
+Go to Explore or your inbox.
+Tap the search bar at the top. From here you can:
+Tap a question or request for Meta AI that already appears below the search bar.
+Enter your own question or request for Meta AI. Tap  Submit to the right of the search bar or tap a suggested prompt below Ask Meta AI. Tapping the enter key on your keyboard may also start a chat with Meta AI, depending on the nature of the question or request. Note:  Meta AI will appear next to a suggested prompt for Meta AI.
+Meta AI will provide a response in your chat, where you can continue the conversation.
+You can also tap  Meta AI next to the search bar at the top of Explore or your inbox to see your chat with Meta AI.
+Note
+Similar to other chats, interactions with AI are subject to our Community Standards and Terms of Service.
+An AI’s response may be inaccurate or inappropriate and should not be used to make important decisions.
+Meta uses your interactions with AIs to improve AI at Meta. If the AIs cannot answer your query, Meta shares the messages you send to AI and general information, like your region, with select partners so you can get better results. Visit our Meta AI Terms of Service to learn more.
+Meta AI uses your location information to give you more relevant responses. Your location information is based on things like the settings you've chosen on your device, or your activity across our products. Learn more about how to manage your location in the Privacy Center.
+Other information from your profile such as your age and gender, and interests based on your activity across our products, such as the types of content, including ads, you view or interact with and how you interact with it, will be used to help personalize your interactions with AI. Learn more about how Meta uses this information in the Privacy Center. You can also see how information is used across your accounts in the same Accounts Center and export your information. Learn how to Export a copy of your information.
+Depending on your prompt, the content generated may go against our Community Standards or Terms of Service of Meta's platforms. Sharing AI-generated content on our platforms that go against these standards will be treated the same as sharing other content that go against our standards. If you share generated content that goes against our standards, your content may be removed and your account may be restricted or disabled. Learn more about the Community Standards and Terms of Service on:
+Facebook, Messenger and Instagram
+WhatsApp
+Depending on your region, your interactions with AI products can be used to personalize content and ads.
+
+
+Learn more about how Meta uses information for generative AI models.
+Learn how to write or use voice with Meta AI on Instagram.
+Was this helpful?
+Yes
+No
+Related Articles
+Write with Meta AI on Instagram
+About sharing with Meta AI on Instagram
+Use Meta AI on Threads
+About Meta Ad Account options for ads on Instagram
+Ways to advertise on Instagram
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Get help with using Meta AI on Instagram
+Meta AI on Instagram allows you to get advice, ask questions, and generate images. You can start a chat by tapping Compose in your inbox and selecting Meta AI, using the search bar in Explore or your inbox, or by mentioning @Meta AI in an existing group conversation. Key features include the /imagine command to create images and the /imagine yourself command for AI images of yourself.
+How do I use Meta AI on Instagram?
+How do I send Meta AI commands?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

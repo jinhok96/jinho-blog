@@ -1,0 +1,92 @@
+URL: https://help.instagram.com/329208821595430
+TITLE: What audio you can use in your reel on Instagram | Instagram Help Center
+DEVICE: iPhone App Help clicked=false
+FETCHED: 2026-10-24T15:32:14.476Z
+
+Help Center
+English (US)
+Instagram Features
+Your Profile
+Sharing Photos and Videos
+Exploring Photos and Videos
+Messaging
+Reels
+Create and Edit Reels
+Manage Your Reels
+Sharing Instagram Reels to Facebook
+Discovering Reels
+Business and Creator Accounts
+Edits
+Stories
+Live
+Fundraisers and Donations
+Shop
+Payments in Instagram
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Privacy and Reporting
+Terms and Policies
+Threads
+Instagram Features
+Reels
+What audio you can use in your reel on Instagram
+Copy link
+More
+iPhone App Help
+Android App Help
+Computer Help
+What audio can I use?
+How do I use original audio?
+How do I use licensed audio?
+How do I remove a reel from an audio page?
+I have a different question
+You can record a reel with your own original audio, with original audio by another Reels creator, or with audio from the Instagram audio library using the Audio tool in Reels. Note that you can’t use original audio from a feed video unless you remix the video.
+You can also learn how to replace a muted audio track on your Instagram reel.
+Original audio
+Original audio is unique audio you created, either while filming your reel in the Instagram app or in a video you uploaded, or unique audio by another Reels creator. When someone posts a reel with original audio, it will display their username.
+When you post a reel on a public account, anyone on Instagram, the Meta AI apps or Meta AI websites can record a reel using your original audio. You can turn this off for the Meta AI apps or websites at any time in your Instagram settings. Note: If you cross-post a public reel to Facebook, anyone on that app can create a reel with your original audio unless you’ve turned this off in your Facebook settings. Additionally, anyone on Instagram can record a reel using your original audio and crosspost it to their Facebook profile or Page.
+To allow or disallow people on Meta AI apps or websites to create reels using your original audio:
+Tap  Profile or your profile picture in the bottom right to go to your profile.
+
+Tap  Menu in the top right.
+Under How others can interact with you, tap Sharing and reuse.
+Under Allow people to create with and reuse your original audio on Meta AI, switch the toggle on or off next to Reels.
+If you upload licensed audio as original audio, we may change the description to the artist's name and song.
+Licensed audio
+Licensed audio is copyrighted audio available on the Instagram audio library and includes things like music, movies, TV shows and sound effects. All licensed audio must be attributed or linked to the artist and include the name of the track.
+Keep in mind that as we make sure to uphold our agreements with music rights holders, audio tracks in your posts can become muted as a result of any changes made to these agreements. While the audio tracks of your post may be muted, your post can still be viewed.
+Notification that your reel was added to an audio page
+When we detect the audio you recorded or uploaded uses licensed audio, we’ll automatically change attribution from Original Audio to the artist and song title. Your reel will be added to the audio page for that song, where more people on Instagram may find it.
+What if the attribution is wrong?
+If we’ve identified the wrong audio track, you can remove your reel from the audio page.
+On Android, tap  Options at the bottom of the reel, then tap Remove From Audio Page.
+On iPhone, tap  Options at the bottom of the reel, then tap Remove From Audio Page.
+Your audio will be attributed to you and will say Original Audio next to your username.
+Was this helpful?
+Yes
+No
+Related Articles
+Replace muted audio on your Instagram reel
+Add your own audio or someone else's original audio in your Instagram reel
+Add music, effects and more to your reel on Instagram
+Add a voiceover to your reel on Instagram
+Reuse audio from a reel with Edits
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Find out what audio you can use in your reel on Instagram
+On Instagram, you can use original audio that you created or that another Reels creator made, as well as licensed audio fro… Learn more
+What audio can I use?
+How do I use original audio?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

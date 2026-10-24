@@ -25,10 +25,10 @@
 - 상위 결과(WebSearch): jotform(도구 사이트), blogto·doral.edu·manual.msf.mx(스팸성), getmanifest·airdroid(2024), TheWrap·TechRadar·Android Authority(매체, 2024 Mute 단계). 2026 Instagram 도움말 기준·삭제와 초기화 차이·그룹 채팅 공유·광고 사용이 빠짐
 - 1차 출처: help.instagram.com 2050445508681504·1325125818682650·454257637526184·1030118265547894·814837257408912·1467256816910908·890932425718081·1637687493174595·413913451428736·512686498916530·329208821595430·1347046113872049·1912013665981064·963211828280354·658522825492278 + 검색, facebook.com/help 검색·/privacy/dialog/change-or-delete-ai-chat-info·/privacy/genai, about.fb.com 2025-10-01(AI 대화 광고)·2025-10-09(Reels 번역, 2026-07-14 갱신), faq.whatsapp.com 2257017191175152·688464770796037. 원문 `tests/turn-off-meta-ai-instagram/source-*.txt`. Instagram 계정이 없어 앱 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
 - 쓰지 않은 것: Mute·Block 단계(Instagram 도움말에 없음, 2024 매체 글에만 → FAQ에서 "문서에 없음"으로만), Meta AI 앱 Your likeness(별도 앱), EU·영국 이의 제기, 광고 사용 제외 국가(Reuters 보도만)
-- 이미지: 대표 이미지(HERO_PLACEHOLDER) + 본문 4장(Instagram 도움말 검색 화면 캡처·끌 수 있는 범위 3묶음·메뉴 경로·삭제 vs 초기화, `charts.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 856500509, 52.6분, 세이지 그린 배경 + 마젠타·앰버. 위에서 본 평면 대신 정면에 가까운 폰, 지우개가 둥근 스펀지 모양이지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(Instagram 도움말 검색 화면 캡처·끌 수 있는 범위 3묶음·메뉴 경로·삭제 vs 초기화, `charts.py` 라이트 모드)
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`gemini-connected-apps`·`check-if-image-is-ai-generated`·`google-gmail-photos-ads`·`turn-off-apple-intelligence-iphone` (5개). 역링크: `check-if-image-is-ai-generated`(색인됨) FAQ "Do social media sites keep Content Credentials?" 끝, 허브 "What turning off AI doesn't do" 목록에 Meta AI 1줄 (`updatedAt` 변경 없음, V 기록 대상 아님)
 - 점검: 저장소 `seo-audit` 스킬 On-Page 항목(제목·설명·소제목·첫 100단어·이미지 alt·내부 링크·AI 문체(em dash 0)) — 우리 규칙과 다른 지적 없음. searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_PLACEHOLDER
+- 빌드 HTML 확인: title 48자(접미사 포함, 본제목 36자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 15개·h3 5개, `<pre>`·`<code>` 0개(채팅 명령 `/reset-ai`는 굵게 표기), 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 242개)·build 통과
 
 **알게 된 것**
 
@@ -45,7 +45,7 @@
 - Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
 - Claude: 발행 40편
-- DASHBOARD_PLACEHOLDER
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 회차 2026-10-24T17:00:00Z, DB 문서 49개). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 - 배포: PR (CI 통과 후 머지)
 
 ## 2026-10-24 · 크롤링 통계 분석 → 발행 속도 축소·홈 허브 고정·SEO 스킬 도입 (사용자 요청)

@@ -393,8 +393,10 @@ function dayIndex(d) {
 }
 const todayIndex = () => { const n = new Date(); return Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()) / 86400000; };
 const ageDays = (d) => (d ? Math.round(todayIndex() - dayIndex(d)) : null); // 발행일 = D+0
-// 발행일부터 그 날짜까지 경과일 (색인 시점 3가지: indexedAt·firstCrawlAt·firstImpressionAt). 날짜가 없으면 null
-const daysFrom = (p, d) => (p.createdAt && d ? Math.round(dayIndex(d) - dayIndex(p.createdAt)) : null);
+// 발행일부터 그 날짜까지 경과일 (색인 시점 3가지: indexedAt·firstCrawlAt·firstImpressionAt). 날짜가 없으면 null.
+// 첫 노출일(태평양 시간 날짜)은 발행일(보는 사람 시간대)보다 하루 앞설 수 있어 0 미만은 발행 당일(D+0)로 봄
+const daysFrom = (p, d) => (p.createdAt && d ? Math.max(0, Math.round(dayIndex(d) - dayIndex(p.createdAt))) : null);
+// 중앙값 (경과일별 누적 노출·색인 경과일). 빈 목록은 null
 const median = (xs) => { const s = [...xs].sort((a, b) => a - b); const m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : null; };
 const isIndexed = (p) => p.index?.verdict === 'PASS';
 const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
@@ -550,7 +552,6 @@ const COHORTS = [
   { label: '상시 글·허브', color: 'var(--cat-1)', test: (p) => !isNews(p) },
   { label: '뉴스 칼럼', color: 'var(--cat-2)', test: isNews },
 ];
-const median = (a) => { const s = [...a].sort((x, y) => x - y); const m = s.length >> 1; return s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2; };
 
 function cohortSeries() {
   return COHORTS.map((c) => {

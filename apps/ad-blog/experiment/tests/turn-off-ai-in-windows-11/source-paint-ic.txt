@@ -1,0 +1,29 @@
+
+Use Image Creator in Paint to generate AI art	
+Get help with Copilot
+				How do I use an image cre at or in paint to generate ai?
+				Explain how to use bing image creator in Microsoft swiftkey
+				Show me how I'm stuck on Copilot in PowerPoint image
+Do you want to create amazing artwork with just a few words? Try Image Creator in Microsoft Paint, a new feature that lets you collaborate with a powerful AI model called DALL-E. DALL-E can generate diverse and realistic images from any text description you enter. Whether you want to draw a dragon, a unicorn, or anything else, Image Creator will help you unleash your creativity and make your own artworks with the help of AI.
+Note
+This feature was recently renamed to Image Creator, and the update is being gradually rolled out to users. Once it’s available on your device, you will start seeing the new name.
+Using Image Creator
+To use Image Creator, open Microsoft Paint and select the Image Creator icon on the toolbar to see the side panel. In the text box, enter a description of the image you want to create. For example, you can type "a blue cat with a red hat" or "a landscape with mountains and a lake". Be as descriptive as possible to generate results matching your expectations.  
+Tip
+If you don't have Microsoft Paint installed, you can get Paint from the Microsoft Store.
+After you enter the text, choose a style in which you want to create your image and then select the Create button. Image Creator will generate three different variants of the image you requested, you can click on any of the variants to apply that image to Paint canvas and start creating.
+Important
+To use Image Creator, you need to sign in with your Microsoft account. Image Creator uses a cloud-based service that requires authentication and authorization. Signing in with your Microsoft account also allows you to access your credits, which are needed to generate images with DALL-E. 
+AI credits
+Credits are the currency that you use to generate images with Image Creator. Each time you generate a set of images, you spend one credit. 
+Microsoft 365 Personal and Family subscribers, as well as Copilot Pro subscribers, can use AI credits for Image Creator in Paint. Microsoft 365 Personal and Family Subscribers get 60 AI credits per month, while Copilot Pro Subscribers receive extensive usage of AI features. Notifications are sent when credits are running low (5 credits remaining) and when they are exhausted. Credits for Microsoft 365 subscribers are automatically replenished at the beginning of each month. If you use all your monthly AI credits, you can purchase additional AI credits by subscribing to Copilot Pro. Learn more about AI credits. 
+Content filtering
+Microsoft is committed to responsible AI practices and ethical use of technology. When you use Image Creator, we apply content filtering to prevent the generation of images that may be harmful, offensive, or inappropriate. Content filtering is based on a set of criteria that reflect our values and standards, such as human dignity, diversity, and inclusion. Content filtering is not perfect and may not catch all cases of undesirable images. If you encounter an image that is inappropriate or unexpected, report it using the Give feedback button in the Image Creator pane.  
+You are responsible for using Image Creator in a respectful and lawful manner. You should not use Image Creator to create or share images that may infringe on the rights or privacy of others, or that may violate any laws or regulations in your jurisdiction. You should respect the intellectual property and copyright of others, and not use Image Creator to create or share images that may infringe on their ownership or attribution. You should also be mindful of the potential impact and consequences of your images, and not use Image Creator to create or share images that may cause harm, distress, or confusion to others. 
+Content Credentials
+We have implemented content credentials, provenance based on the C2PA standard, to help users identify AI generated Images. Images generated with Image Creator, or any other AI feature in Paint, will contain C2PA manifest helping users identify that it is an AI generated image.
+Privacy
+Microsoft values your privacy and data security. We acknowledge the safety risks of AI generated images and hence we run Azure online services to help ensure the safe and ethical use of AI.
+The Azure online services perform content filtering to prevent the generation of harmful, offensive, or inappropriate content. Microsoft collects attributes such as device and user identifiers, along with the user prompts, to facilitate abuse prevention and monitoring. 
+Microsoft does not store your generated images.
+					

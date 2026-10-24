@@ -10,7 +10,7 @@ const validPost = {
 };
 
 describe('postSchema', () => {
-  it('필수 필드만 있으면 통과하고 기본값 적용 (tags: [], draft: false)', () => {
+  it('필수 필드만 있으면 통과하고 기본값 적용 (tags: [], draft: false, hub: false)', () => {
     expect(postSchema.parse(validPost)).toEqual({
       title: '제목',
       description: '설명',
@@ -18,16 +18,18 @@ describe('postSchema', () => {
       createdAt: '2026-01-01T00:00:00.000Z',
       tags: [],
       draft: false,
+      hub: false,
     });
   });
 
-  it('선택 필드 허용 (tags, updatedAt, thumbnail, draft)', () => {
+  it('선택 필드 허용 (tags, updatedAt, thumbnail, draft, hub)', () => {
     const result = postSchema.parse({
       ...validPost,
       tags: ['태그'],
       updatedAt: '2026-02-01',
       thumbnail: './images/cover.webp',
       draft: true,
+      hub: true,
     });
 
     expect(result).toMatchObject({
@@ -35,6 +37,7 @@ describe('postSchema', () => {
       updatedAt: '2026-02-01T00:00:00.000Z',
       thumbnail: './images/cover.webp',
       draft: true,
+      hub: true,
     });
   });
 

@@ -16,6 +16,7 @@ const DATE_ORDER = {
  * - updatedAt 미지정 시 발행일과 동일 (내용을 크게 고치면 직접 갱신)
  * - tags는 메타 키워드·관련 글 계산용 (태그 페이지 없음)
  * - draft: true인 글은 개발 서버에서만 노출
+ * - hub: true인 글(클러스터 허브)은 홈 상단에 항상 고정
  */
 export const postSchema = frontmatterSchema
   .extend({
@@ -23,6 +24,7 @@ export const postSchema = frontmatterSchema
     tags: z.array(z.string().trim().min(1)).default([]),
     createdAt: frontmatterDate,
     draft: z.boolean().default(false),
+    hub: z.boolean().default(false),
   })
   .refine(DATE_ORDER.check, DATE_ORDER.params);
 

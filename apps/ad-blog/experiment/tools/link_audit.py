@@ -47,7 +47,7 @@ def unquote(value: str) -> str:
 
 
 def parse_post(path: pathlib.Path) -> dict:
-    """frontmatter(category·draft·tags)와 본문 내부 링크 대상 slug 집합"""
+    """frontmatter(category·draft·hub·tags)와 본문 내부 링크 대상 slug 집합"""
     text = path.read_text(encoding="utf-8")
     meta: dict = {"tags": []}
     body = text
@@ -70,6 +70,7 @@ def parse_post(path: pathlib.Path) -> dict:
     return {
         "category": meta.get("category", ""),
         "draft": meta.get("draft", "").lower() == "true",
+        "hub": meta.get("hub", "").lower() == "true",
         "tags": [t for t in dict.fromkeys(meta["tags"]) if t],
         "links": set(LINK_RE.findall(body)) - {path.stem},
     }
@@ -136,6 +137,13 @@ def audit(posts: dict, clusters: list[dict], label) -> dict[str, list[tuple[set,
         for cid, role in places:
             if (role == "뉴스 칼럼") != (category == "news"):
                 add(sec, [cid], f"역할·카테고리 불일치: {label(slug)} ({cid} {role}, category: {category or '없음'})")
+    # 허브 표시: clusters.md 허브 ↔ frontmatter `hub: true` (홈 상단 고정 대상)
+    hub_role = {slug for slug, places in listed.items() if any(role == "허브" for _, role in places)}
+    for slug in sorted(hub_role & posts.keys()):
+        if not posts[slug]["hub"]:
+            add(sec, [home[slug]], f"허브 표시 누락: {label(slug)} (clusters.md 허브인데 frontmatter `hub: true` 없음)")
+    for slug in sorted(s for s in posts if posts[s]["hub"] and s not in hub_role):
+        add(sec, [home.get(slug)], f"허브 표시 불일치: {label(slug)} (frontmatter `hub: true`인데 clusters.md 허브 아님)")
 
     # 클러스터 안 링크 규칙 (글 파일이 있는 slug만)
     for c in clusters:

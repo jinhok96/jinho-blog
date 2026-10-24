@@ -24,6 +24,13 @@ export function getPosts(options?: PostListOptions): Post[] {
 }
 
 /**
+ * 허브 글 (홈 상단 고정, 최신순)
+ */
+export function getHubPosts(): Post[] {
+  return getPosts().filter(post => post.hub);
+}
+
+/**
  * 목록 페이지 (1부터 시작, POSTS_PER_PAGE개씩)
  */
 export function getPostsPage(page: number, options?: PostListOptions): PaginatedResult<Post> {

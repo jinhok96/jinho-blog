@@ -3,6 +3,7 @@
 광고 수익형 블로그 **ToolProof** — 영어권(미국) 일반 사용자 대상 IT·AI 도구 가이드. 블로그 기능 + SEO 중심. 사용자 문서 → [apps/ad-blog/README.md](apps/ad-blog/README.md)
 
 - 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 트래픽 노하우(`traffic-playbook.md`, 대형 블로그 분석 → 재분석 도구 `tools/blog_patterns.py`), 주제 클러스터 맵(`clusters.md`, 점검 도구 `tools/link_audit.py`), 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
+- 개선 세션 SEO 스킬(`seo-audit`·`copy-editing`·`link-building`·`ai-seo`, 외부 공개 스킬을 고정 커밋으로 받아 둠) → [.claude/skills/MARKETINGSKILLS.md](.claude/skills/MARKETINGSKILLS.md)
 - 글 작성·수정 시 [writing-guide.md](apps/ad-blog/experiment/writing-guide.md) 기준 (영어, 1차 출처 확인, 가상 체험담 금지, 독자는 비개발자: 명령줄·코드·개발 도구 방법 금지, 모든 글: 본문 첫 줄 AI 생성 대표 이미지(`experiment/tools/hero_image.py`, 썸네일 겸용) + 본문 이미지 3장 이상). 채널별 제목·허브 글·반복 일정 등은 [traffic-playbook.md](apps/ad-blog/experiment/traffic-playbook.md)
 
 - Next.js 16 **정적 export** (`output: 'export'`, 결과물 `out/`), 서버 런타임 없음
@@ -47,6 +48,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - `createdAt`은 UTC 시각까지 작성 (예: `2026-10-17T21:44:00Z`, 날짜만 쓰면 UTC 자정). 목록·이전/다음 글은 시각까지 비교해 최신순, 화면에는 날짜만 표시 (시각은 표시 안 함)
 - 스키마는 strict: 정의되지 않은 frontmatter 키는 빌드 에러
 - `draft: true` 글은 개발 서버에서만 노출 (`entities/post`의 `isVisible`)
+- `hub: true` 글(클러스터 허브)은 홈 상단 "Start here"에 항상 고정 (`getHubPosts`). clusters.md 허브 칸과 일치해야 함 (`link_audit.py`가 점검)
 - 본문 소제목은 `##`부터 (페이지 `<h1>`은 제목, 본문 `#`은 `<h2>`)
 - 연락처 이메일은 MDX에 직접 쓰지 않고 `<ContactEmail />` 사용 (값은 `core/config`의 `CONTACT_EMAIL`)
 - UI·콘텐츠는 영어 (`SITE_LANGUAGE = 'en-US'`, `<html lang>`도 이 값). 코드 주석·개발자용 에러 메시지·개발 서버 광고 자리표시는 한국어 유지

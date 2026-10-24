@@ -22,7 +22,8 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | 도메인    | `tool-proof.com` (`toolproof.com`은 타인 소유, `toolproof.app`은 CloudCannon의 동명 개발 도구) | 2026-10-11 |
 | 호스팅    | Vercel Pro (`jinho-blog-team`/`ad-blog`, 루트 `apps/ad-blog`), main 머지 시 자동 배포 | 2026-10-11 |
 | 뉴스 칼럼 | 카테고리 `news`("News & Analysis"). 화제 뉴스도 다루되 단순 소식 전달·카피캣 금지. 독자(비개발자)에게 미칠 영향을 분석하고 ToolProof 견해를 담는 칼럼 | 2026-10-17 |
-| 정기 실행 | 하루 4회. 한국 시간 06시 뉴스 칼럼 1편(화제 → 영향 → 클러스터 글 순으로 대체), 00·12시 클러스터 일반 글(`ai-tools`·`software`), 18시 개선 세션(기존 글 보강·허브·내부 링크, 허브·클러스터 공백 글 1편 허용). 2026-10-17의 뉴스 2·일반 2에서 변경 (근거: [데이터로 본 현재 상태](#데이터로-본-현재-상태-2026-10-22)) | 2026-10-22 |
+| 정기 실행 | 하루 4회, **새 글 하루 2편**. 한국 시간 00시 클러스터 일반 글 1편(`ai-tools`·`software`), 06시 뉴스 칼럼 1편(화제 → 영향 → 클러스터 글 순으로 대체), **12·18시 개선 세션**(기존 글 보강·허브·내부 링크·문제 찾기·대시보드/DB 개선. 새 글은 허브만). 2026-10-22의 뉴스 1·일반 2·개선 1에서 변경 (근거: 크롤링 통계에서 새 URL 발견 요청이 7.5%뿐, 10-20 이후 새 색인 0편 → log.md 2026-10-24 크롤링 통계 분석) | 2026-10-24 |
+| 홈 허브 고정 | 허브 글(frontmatter `hub: true`)은 홈 상단 "Start here"에 항상 고정. 홈이 Googlebot이 가장 자주 다시 오는 페이지라 홈 → 허브 → 클러스터 글로 이어지게 함 | 2026-10-24 |
 | 주제 클러스터 | 모든 글은 [clusters.md](clusters.md)의 클러스터 1개에 속하고 허브 ↔ 상시 글로 내부 링크. 일반 글은 우선순위 높은 클러스터의 공백부터 | 2026-10-22 |
 | 광고 | AdSense **자동 광고**. 위치를 직접 관리하지 않음 (수동 슬롯 `AD_SLOTS`는 비워 둠). AdSense 사이트 설정: 자동 광고 켜기, 형식은 본문 내·하단 고정(anchor)·사이드 레일 켜고 **전면 광고(vignette) 끄기**, 자동 최적화 켜고 실험 차단에 vignette. 404·정적 페이지는 코드(`<NoAds />`)가 스크립트를 로드하지 않아 광고 없음 | 2026-10-22 |
 | 삭제 글 | 같은 주제 글로 301 리디렉트(`apps/ad-blog/vercel.json`). 대체 글이 없으면 같은 클러스터 허브, 허브도 없으면 404 | 2026-10-22 |
@@ -55,10 +56,10 @@ searchfit-seo 플러그인의 content-strategy·keyword-clustering·internal-lin
 
 ### 콘텐츠 구성
 
-- 하루 새 글 3~4편 = 뉴스 칼럼 1편(06시) + 클러스터 일반 글 2편(00·12시) + 개선 세션(18시)의 허브·클러스터 공백 글 0~1편 (2026-10-22 변경. 이전: 뉴스 2·일반 2)
+- 하루 새 글 2편 = 클러스터 일반 글 1편(00시) + 뉴스 칼럼 1편(06시). 개선 세션(12·18시)은 허브가 필요할 때만 허브 1편 (2026-10-24 변경. 이전: 뉴스 1·일반 2·개선 공백 글 0~1)
 - 한 분야(IT·AI 도구)에 집중해 주제 권위(topical authority)를 쌓음. 카테고리: `ai-tools`, `software`, `news`(News & Analysis, 뉴스 칼럼 전용)
 - **주제 클러스터** ([clusters.md](clusters.md)): 모든 글은 클러스터 1개에 속함. 클러스터마다 상시 글이 3편 모이면 허브를 쓰고, 허브 ↔ 상시 글 ↔ 뉴스 칼럼을 정해진 규칙으로 링크. 우선순위(2026-10-22): 1 `ai-settings`(AI 기능 끄기·옵트아웃) → 2 `photo-video`(허브 필요) → 3 `pdf` → 4 `offline-ai` → 5 `windows-microsoft` → 6 `phones-subscriptions`
-- **새 글보다 기존 글 개선도 같은 비중**: 18시 개선 세션이 Search Console 데이터로 기존 글 제목·설명·소제목을 보강하고, 허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
+- **새 글보다 기존 글 개선을 더 많이** (2026-10-24, 하루 4회 중 2회): 12·18시 개선 세션이 Search Console 데이터로 기존 글 제목·설명·소제목을 보강하고, 허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
 
 ### 주제 선정 기준
 
@@ -120,7 +121,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 
 ### 발행 속도
 
-- 매일 새 글 3~4편 (정기 실행 하루 4회 00:00·06:00·12:00·18:00 한국 시간. 뉴스·일반 세션은 1편씩, 18시 개선 세션은 0~1편, 2026-10-22 사용자 결정). 세션 유형은 [세션 워크플로우](#세션-워크플로우) 3번. 뉴스·일반 세션에서 고른 주제가 1차 출처로 검증되지 않으면 건너뛰지 말고 대체 순서대로 다음 후보로 바꿔 발행
+- 매일 새 글 2편 (정기 실행 하루 4회 00:00·06:00·12:00·18:00 한국 시간. 00시 일반·06시 뉴스 세션은 1편씩, 12·18시 개선 세션은 허브만 0~1편, 2026-10-24 사용자 결정. 이전: 3~4편). 세션 유형은 [세션 워크플로우](#세션-워크플로우) 3번. 뉴스·일반 세션에서 고른 주제가 1차 출처로 검증되지 않으면 건너뛰지 말고 대체 순서대로 다음 후보로 바꿔 발행
 - 새 URL이 색인 속도를 넘지 않게 함: `URL is unknown`이 발행 글의 절반을 넘으면 개선 세션은 새 글 대신 색인된 글 → 색인 안 된 글 링크 보강을 우선 (2026-10-22)
 - 글은 직접 측정한 실험 결과·1차 출처로 확인한 정보만 다루므로, AI 작성 여부를 이유로 발행 수를 줄이지 않음 (2026-10-13 사용자 결정)
 - AdSense 신청은 글 20편 도달 즉시 (도메인 색인 확인 후, 2026-10-14 사용자 결정)
@@ -131,8 +132,8 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 2. **지표 확인**: `python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests` 후 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py` → 노출·클릭·CTR·순위, 사이트맵 상태, 글별 색인 상태(URL 검사)를 log.md에 붙이고 개선 작업 판단. 판단 시점이 지난 [검증 기록](traffic-playbook.md#검증-기록)은 `--compare`로 판정해 노하우 상태를 갱신. 이어서 `python3 -I apps/ad-blog/experiment/tools/link_audit.py --only-problems`로 클러스터·내부 링크 문제 확인
 3. **세션 유형**: 세션 시작 시각(한국 시간, `TZ=Asia/Seoul date`)으로 정함. 실행 지연을 흡수하도록 시각 범위로 판단 (2026-10-22 변경)
    - **뉴스 세션** (03:00~08:59, 06시 실행): [뉴스 칼럼 선정 기준](#뉴스-칼럼-선정-기준). 공식 피드·Google News RSS·Trends 급상승 RSS로 최근 48시간 발표(화제)를 찾고 화제성 신호 비교. 기준을 넘는 화제 뉴스가 없으면 [backlog.md](backlog.md)의 뉴스 칼럼 후보·반복 일정과 최근 30일 발표·시행일이 다가오는 변경(영향)에서 고름
-   - **개선 세션** (15:00~20:59, 18시 실행): 새 글 대신 기존 글·허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
-   - **일반 세션** (그 외 시각, 00·12시 실행): `ai-tools`·`software` 클러스터 글. [clusters.md](clusters.md) 우선순위 1·2의 [클러스터 공백 후보](backlog.md#클러스터-공백-후보)와 반복 일정(Chrome·Windows)을 먼저 확인 → 부족하면 `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인하고 `trends_compare.py`로 같은 클러스터 후보끼리 크기 비교 → 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
+   - **개선 세션** (09:00~20:59, 12·18시 실행, 2026-10-24부터 하루 2회): 새 글 대신 기존 글·허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
+   - **일반 세션** (그 외 시각 21:00~02:59, 00시 실행): `ai-tools`·`software` 클러스터 글. [clusters.md](clusters.md) 우선순위 1·2의 [클러스터 공백 후보](backlog.md#클러스터-공백-후보)와 반복 일정(Chrome·Windows)을 먼저 확인 → 부족하면 `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인하고 `trends_compare.py`로 같은 클러스터 후보끼리 크기 비교 → 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
    - **대체 순서** (기준을 통과하는 후보가 없어도 뉴스·일반 세션은 1편 유지): 뉴스 세션은 화제 뉴스 → 영향 뉴스 → 클러스터 일반 글
 4. **브리프**: 주제가 정해지면 쓰기 전에 `tests/{slug}/factcheck.md` 맨 위에 브리프를 씀 ([writing-guide.md](writing-guide.md#작성-전-브리프): 클러스터·역할, 주 검색어·하위 검색어, 검색 의도, 상위 결과 유형과 빈틈, 차별점, 내부 링크 계획, 소제목 개요)
 5. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
@@ -144,7 +145,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 
 ### 개선 세션
 
-18시 세션은 새 글보다 이미 쓴 글의 성과를 올리는 데 씁니다 (2026-10-22 사용자 결정). 아래 순서로 할 일을 고르고, 세션당 1~3개를 끝냅니다. 한 글에는 한 번에 한 가지 변경만 하고, 지표를 노린 변경은 [검증 기록](traffic-playbook.md#검증-기록)에 행을 추가합니다 (같은 글은 이전 변경 판정이 끝난 뒤에. 역링크 1문장 추가는 기록 대상 아님).
+12·18시 세션은 새 글보다 이미 쓴 글의 성과를 올리는 데 씁니다 (2026-10-22 사용자 결정, 2026-10-24 하루 2회로). 할 일 선택과 방법은 Claude가 자율로 정하되, 혼자 판단하기보다 **널리 쓰이는 SEO 스킬을 먼저 적용**합니다 (2026-10-24 사용자 결정, 아래 [SEO 스킬](#seo-플러그인-searchfit-seo)). 아래 순서로 할 일을 고르고, 세션당 1~3개를 끝냅니다. 같은 날 두 개선 세션은 서로 다른 글을 다룹니다 (12시 세션 기록을 읽고 이어서). 한 글에는 한 번에 한 가지 변경만 하고, 지표를 노린 변경은 [검증 기록](traffic-playbook.md#검증-기록)에 행을 추가합니다 (같은 글은 이전 변경 판정이 끝난 뒤에. 역링크 1문장 추가는 기록 대상 아님).
 
 1. **색인**: `URL is unknown`이 3일 넘은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 문맥에 맞는 링크 1개 추가. 사용자에게 Search Console 색인 요청이 필요한 URL은 log.md '다음 할 일'에 적음 (API로는 요청할 수 없음)
 2. **링크 점검**: `link_audit.py` 문제 해결 (허브 누락 링크, 받는 링크 2개 미만, 칼럼 → 상시 글 링크 없음, 비슷한 태그 정리)
@@ -152,9 +153,12 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 4. **Search Console 기반 보강** ([writing-guide.md](writing-guide.md#발행-후-개선)): 노출 100회 이상인데 CTR이 낮은 글의 제목·설명, 8~20위 검색어를 다루는 소제목·FAQ, 예상하지 못한 검색어는 backlog 후보로
 5. **뉴스 칼럼 후속**: 시행일·마감일이 지났거나 후속 발표가 있는 칼럼을 같은 글에 반영 (`updatedAt`)
 6. **반복 일정**: Chrome 안정판·Windows 월간 업데이트 후 관련 글 메뉴·버전 재확인
-7. 고칠 것이 없으면 우선순위 1·2 클러스터의 공백 글 1편을 일반 세션 절차대로 씀
+7. 고칠 것이 없으면 새 글을 쓰지 않고 아래 중 하나 (2026-10-24 변경. 이전: 공백 글 1편)
+   - **문제 찾기**: `seo-audit` 스킬로 사이트·최근 글을 점검해 노출·색인·클릭을 막는 문제를 찾고 고치거나 log.md에 기록
+   - **대시보드 개선**: 최신 데이터로 판단할 때 부족했던 화면을 [운영 대시보드](#운영-대시보드) 절차대로 고침 (`dashboard_check.cjs` 통과 후 발행)
+   - **DB 구조 개선**: 가설·노하우를 지표로 판정하는 데 필요한 값을 `dashboard_data.py`가 쌓도록 `stats`·`history` 구조를 고침 (예: 회차별 URL 검사 `lastCrawl`로 크롤링 시점 추적). 기존 history는 고치지 않음
 
-log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용·검증 기록 ID를 표로 남깁니다.
+log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용·검증 기록 ID와 **쓴 스킬**을 표로 남깁니다.
 
 ### SEO 플러그인 (searchfit-seo)
 
@@ -167,6 +171,18 @@ log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용�
 | 개선 세션 | `searchfit-seo:internal-linking`, `searchfit-seo:on-page-seo` | `link_audit.py` 결과를 보고 링크 추가 위치·앵커 텍스트 정함, 보강할 글의 제목·설명·소제목 점검 |
 | 클러스터 재평가 (월 1회, 개선 세션) | `searchfit-seo:keyword-clustering`, `searchfit-seo:content-strategy` | Search Console 검색어·자동완성으로 클러스터·우선순위([clusters.md](clusters.md)) 재평가 |
 | 주간 SEO 점검 | `searchfit-seo:technical-seo`, `searchfit-seo:seo-audit`, `searchfit-seo:internal-linking`, `searchfit-seo:ai-visibility` | [주간 SEO 점검](#주간-seo-점검) |
+
+**저장소에 받아 둔 스킬** (2026-10-24, 모든 세션에서 쓸 수 있음): 계정 플러그인은 정기 세션에 로드되지 않을 때가 많아, 널리 쓰이는 공개 스킬 모음 [marketingskills](https://github.com/coreyhaines31/marketingskills)(MIT)에서 SEO 스킬 4개를 `.claude/skills/`에 넣었습니다. 출처·포함 파일·우리 규칙과의 우선순위는 [.claude/skills/MARKETINGSKILLS.md](../../../.claude/skills/MARKETINGSKILLS.md). 개선 세션은 작업에 맞는 스킬을 Skill 도구로 불러 그 절차를 따르고(우리 규칙과 다르면 우리 규칙), searchfit-seo가 있으면 함께 씁니다.
+
+| 개선 작업 | 스킬 |
+| --- | --- |
+| 8~20위 글 보강, CTR 낮은 글 제목·설명 | `seo-audit` (references/rankings-push.md·title-tags.md) |
+| 기존 글 갱신 범위 정하기 (상위 결과 대비 빠진 소제목), AI 문체 점검 | `copy-editing` (references/content-refresh.md) |
+| AI 답변 인용 구조 | `ai-seo` |
+| 외부 링크 후보·공유 문안 (사용자에게 제안만) | `link-building` |
+| 색인·기술 점검, 문제 찾기 | `seo-audit` |
+
+더 좋은 스킬이 필요하면 개선 세션에서 받아 올 수 있습니다: 널리 쓰이는 출처(스타 수·사용처 확인)에서 받아 **전체를 읽고** 커밋을 고정해 `.claude/skills/`에 넣고 MARKETINGSKILLS.md 같은 출처 문서를 남김. 내용을 읽지 않은 파일은 넣지 않음
 
 ### 주간 SEO 점검
 
@@ -242,7 +258,7 @@ content-strategy 스킬의 성공 지표를 우리 상황에 맞춰 정했습니
 | AdSense                       | 심사 중   | 2026-10-22 사용자 신청, 게시자 ID `ca-pub-8310707193208097`를 `src/core/config/internal/ads.ts`에 입력 → 확인 메타 태그·`ads.txt`·스크립트 출력. 사이트 확인은 `ads.txt` 방식 (스크립트는 hydration 후 삽입이라 정적 HTML에 없음). 승인 후 AdSense에서 자동 광고를 결정사항 설정대로 켜고 Privacy & messaging에서 EEA·영국 동의 메시지 켜기 (사용자, 코드 작업 없음) |
 | 이미지 생성                   | 설정됨    | 2026-10-22 [tools/hero_image.py](tools/hero_image.py): Z-Image-Turbo(Apache-2.0, `leejet/Z-Image-Turbo-GGUF` Q8_0 + `unsloth/Qwen3-4B-Instruct-2507-GGUF` Q6_K + `Comfy-Org/z_image_turbo` VAE)를 stable-diffusion.cpp(`master-987-a77d362`, github.com git clone)로 CPU 실행. 키·비용 없음. 필요 네트워크: github.com(git clone)·huggingface.co. 4코어·15GB에서 1280×720 1장 약 47분(8단계), 메모리는 `--vae-tiling`으로 15GB 안. Gemini·OpenAI 이미지 API는 무료 등급이 없어 쓰지 않음 (사용자 결정) |
 | 운영 대시보드                 | 설정됨    | 2026-10-14 생성: https://claude.ai/artifact/4nL6tkJXzL4YQd2FXis8Cb ([운영 대시보드](#운영-대시보드)). 세션마다 데이터 갱신 |
-| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 매일 00:00·06:00·12:00·18:00 (한국 시간), 세션 유형(06 뉴스·18 개선·00·12 일반)은 시작 시각으로 구분, 매번 새 세션. 2026-10-22 프롬프트를 개편 전략(클러스터·브리프·개선 세션·searchfit-seo 스킬)으로 갱신. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |
+| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 매일 00:00·06:00·12:00·18:00 (한국 시간), 세션 유형(00 일반·06 뉴스·12·18 개선, 2026-10-24 변경)은 시작 시각으로 구분, 매번 새 세션. 2026-10-22 프롬프트를 개편 전략(클러스터·브리프·개선 세션·searchfit-seo 스킬)으로 갱신. 2026-10-24 세션 유형 변경은 루틴 프롬프트도 바꿔야 적용됨 (사용자, log.md 다음 할 일). 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |
 | 주간 SEO 점검                 | 설정됨    | Routine "주간 SEO 점검": 매주 월요일 08:45 (한국 시간, cron `45 23 * * 0` UTC), 같은 세션에 이어서 실행. 2026-10-22 searchfit-seo 스킬로 점검하고 log.md에 보고 섹션만 PR로 기록하는 새 프롬프트를 준비함 ([주간 SEO 점검](#주간-seo-점검)). 루틴 프롬프트는 루틴이 게시하는 스레드에서만 바꿀 수 있어 그 스레드에서 적용 필요 (사용자) |
 | SEO 플러그인                  | 설치됨    | 2026-10-22 사용자가 searchfit-seo 설치. 스킬 이름 `searchfit-seo:{content-strategy, content-brief, seo-check, seo-audit, technical-seo, internal-linking, on-page-seo, keyword-clustering, ai-visibility, schema-markup}` ([SEO 플러그인](#seo-플러그인-searchfit-seo)) |
 | 리디렉트                      | 설정됨    | 2026-10-22 삭제 글 7개 URL → 같은 주제 글 308(`apps/ad-blog/vercel.json`, 테스트 `scripts/lib/vercel-redirects.test.ts`). `video-to-gif-high-quality-free`는 대체 글이 없어 404. `www.tool-proof.com`은 2026-10-22 Vercel 도메인 설정(`ad-blog` 프로젝트 Domains에 www 추가, Redirect to Another Domain 308 → `tool-proof.com`)으로 307 → 308 (확인 완료) |

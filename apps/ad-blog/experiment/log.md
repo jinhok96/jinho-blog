@@ -2,6 +2,34 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-24 · 크롤링 통계 분석 → 발행 속도 축소·홈 허브 고정·SEO 스킬 도입 (사용자 요청)
+
+**크롤링 통계** (사용자가 Search Console에서 내보낸 CSV, 2026-10-07 ~ 10-21. API에는 이 보고서가 없음: Search Console API 기능은 검색 실적·사이트맵·URL 검사·모바일 테스트뿐, 권한을 '전체'로 바꿔도 같음)
+
+- 날짜별 요청: 10-10 221 · 10-11 99 · 10-12~14 17~40 · 10-15~18 거의 0(0·5·0·0) · 10-19 234 · 10-20 54 · 10-21 3 → 매일이 아니라 3~5일 간격으로 몰아서 옴. 색인된 17편의 마지막 크롤링(10-11·14·15·19·20)이 몰림과 겹침. 보고서는 2~3일 늦게 반영되어 10-22 이후는 아직 없음
+- 목적: 새로고침 92.5% · 검색(새 URL 발견) 7.5% → 12일간 708회 중 새 URL 발견은 약 50회(HTML·JS·CSS·이미지 합계)
+- 파일 형식: HTML 62.9% · JS 15.4% · 기타 15.0% · CSS 4.1% · 이미지 1.8% · 실패 0.7%. Googlebot 유형: 데스크톱 74.7% · 리소스 9.9% · 기타 6.9% · 스마트폰 5.9% · 이미지 2.5%. 호스트 `tool-proof.com` 705·`www` 3, 모두 문제 없음. 평균 응답 52~236ms
+- 기술 점검(이 세션): 미색인 글 3편 200·`index, follow`·self canonical·sitemap 포함·robots 전체 허용. URL 검사 상세에 미색인 글은 크롤링·참조 URL 기록이 전혀 없음(크롤링 전 상태)
+- 해석: 기술 문제가 아니라 크롤링 수요(신규 도메인 신뢰) 부족. 하루 3~4편 발행이 새 URL 발견 속도를 넘음. "대량 생산 콘텐츠" 평가 가능성은 이 데이터로 구분 불가 → 다음 몰림 때 새 글을 크롤링하는지로 판단
+
+**사용자 결정과 반영**
+
+| 결정 | 반영 |
+| --- | --- |
+| 새 글 하루 2편 (00시 일반 1 + 06시 뉴스 1), 12·18시 개선 세션 | README 결정사항·콘텐츠 구성·발행 속도·세션 유형, clusters.md·backlog.md·writing-guide.md·traffic-playbook.md의 세션 시각 |
+| 개선 세션은 자율, 널리 쓰이는 LLM 스킬을 적극 사용. 고칠 것이 없으면 문제 찾기·대시보드 개선·DB 구조 개선 | README 개선 세션 7번 변경(공백 글 → 문제 찾기·대시보드·DB), 스킬 표 추가. 공개 스킬 모음 marketingskills(MIT, 커밋 `e85f3cb`)에서 `seo-audit`·`copy-editing`·`link-building`·`ai-seo`를 전부 읽고 `.claude/skills/`에 추가 ([MARKETINGSKILLS.md](../../../.claude/skills/MARKETINGSKILLS.md)) |
+| 허브 글은 홈 상단에 계속 고정 | frontmatter `hub: true` + `getHubPosts()` → 홈 "Start here" 섹션(최신 글 위). 허브 3편에 `hub: true`. `link_audit.py`가 clusters.md 허브 칸 ↔ `hub: true` 불일치를 "클러스터 미지정 글" 항목에 알림 |
+
+- 계정 플러그인 확인: `ListPlugins` 결과 없음(searchfit-seo도 이 세션에 없음) → 저장소에 스킬을 넣는 방식으로 정함. Anthropic 공식 Marketing 플러그인(seo-audit)은 계정 설치가 필요해 제외
+- 빌드 확인: 홈 HTML h1 1개, "Start here"에 허브 3편(`turn-off-ai-features`·`best-free-pdf-tools`·`free-offline-ai-tools`). lint·test(33파일 242개)·build 통과
+
+**다음 할 일**
+
+- **사용자: 루틴 프롬프트 수정** — Routine "ToolProof 정기 글 작성"의 세션 유형 줄을 바꿔야 12시가 개선 세션으로 동작함 (수정안은 이 PR 설명·세션 답변에 있음). 바꾸기 전까지 12시 세션은 프롬프트대로 일반 세션으로 돌 수 있음
+- Claude(다음 개선 세션): `image-to-text-offline-free`(12.8위, 노출 65) 8~20위 검색어 보강 — `seo-audit` rankings-push 절차, 검증 기록 행 추가. 이어서 `spotify-family-qr-code-verification`(28.9위). `turn-off-ai-in-chrome`은 V3 판정(11-18) 뒤
+- Claude: 다음 크롤링 몰림 때 미색인 글이 크롤링되는지 URL 검사 `lastCrawl`로 확인 (몰림이 왔는데 새 글을 건너뛰면 품질 평가 가설 쪽)
+- 사용자(선택): 외부 링크 1~2곳 (`link-building` 스킬로 후보·문안을 개선 세션에서 제안 가능)
+
 ## 2026-10-24 · 세션 46 (정기 실행, 개선 세션): 색인 안 된 글 연결 + 받는 링크 보강 + 허브 표 갱신
 
 세션 시각: 2026-10-24 18:15 KST → 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(cd57fc2)에서 다시 시작.

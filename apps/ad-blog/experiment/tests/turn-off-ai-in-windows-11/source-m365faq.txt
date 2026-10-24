@@ -1,0 +1,51 @@
+
+Frequently asked questions about Copilot in Microsoft 365 subscriptions	
+Get help with Copilot
+				What's the best way to manage Microsoft 365 subscription?
+				Help me with Microsoft 365 subscription.
+Microsoft Copilot is available in Microsoft 365 Personal, Family, and Premium plans. You may have questions about how to use and manage Copilot in your Microsoft 365 subscription. Browse the questions below for more information on each topic.
+About Microsoft Copilot
+Microsoft Copilot is an AI-powered digital assistant designed to help you with a range of tasks and activities. It can create drafts of content, recommend different ways to reword something you've written, suggest and insert images or banners, create PowerPoint presentations from your Word documents, and many other helpful things.
+What are common scenarios someone might use Copilot in Microsoft 365 for?
+Copilot brings the power of AI to the Microsoft 365 apps you use every day to unleash your creativity, unlock your potential, and help you communicate with confidence. With Copilot, you can easily plan your next trip or event with in OneNote, polish up your resume and cover letter in Word, quickly write great emails with the right tone and catch up on long email threads in Outlook, or produce a PowerPoint presentation for your next client pitch. Copilot works alongside you, taking care of the busy work so you can improve your workflow and make time for things that spark joy. 
+Does Copilot work across my apps (e.g., Outlook to Word, Word to PowerPoint, etc.)?
+There are several types of functionalities today, including the ability to reference a file to begin a document or presentation in Word and PowerPoint respectively, as well as the ability to generate an image with Designer directly from your Word or PowerPoint canvases from the Copilot chat panels. 
+Important
+If you do not see Copilot in your Microsoft 365 apps, learn how to update your license.
+Microsoft 365 Subscription management
+Important
+Minimum age limits may apply to subscription activation and use of AI features.
+How can I manage my Microsoft 365 Personal, Family, or Premium subscription?
+You can manage your Microsoft 365 subscription by logging into your account, or viewing your account dashboard if you're already signed in. Learn more about managing your subscriptions.
+I'm a Microsoft 365 Family or Premium subscriber. Can I share access to Copilot as a part of my plan?
+AI features in Word, Excel, PowerPoint, Outlook and Designer included in Microsoft 365 Family and Premium plans are only available to the subscription owner and cannot be shared with others
+Note
+Copilot in Excel requires AutoSave to be enabled, meaning the file must be saved to OneDrive; it doesn't function with unsaved files.
+Are there any special offers for college students?
+Yes, the best value for college students is our discounted version of Microsoft 365 Premium, which provides access to our powerful productivity and creativity apps, now infused with AI in Word, Excel, PowerPoint, Designer, and Outlook, along with spacious cloud storage and advanced digital security. Learn more about our student offers.
+I heard about changes to Microsoft 365 plans but haven't received an email.
+As an existing subscriber, you will not see a change with your subscription price until your next renewal. You will receive an email notice at least 30 days ahead of the renewal date. Renewal dates for some annual subscribers extend into January 2026, so you may not receive an email notice until December 2025. 
+AI credits
+Microsoft 365 Personal, Family, Premium, and Pro plans now include AI credits. To learn about AI credits and how to use them with your subscription, seeUnderstanding AI Credits. 
+Where did my Boosts go in Designer?
+In Designer, every image is now automatically boosted. This means your creation speed will no longer vary based on your creation frequency. All images are created at the quickest available speed.
+Why don't I see Copilot in my applications, even though I should be eligible for AI credits?
+As a Microsoft 365 Personal, Family, or Premium subscriber, you have access to AI credits that can be used to access AI features in Word, Excel, PowerPoint, Outlook, Forms, OneNote, Designer, Notepad, Photos, and Paint.  
+The use of AI features in these applications are limited to people who meet certain age requirements, which may vary by region. Users who do not meet these age requirements for their region will not be able to use AI features, even if they qualify for AI credits. In most cases, the AI features will be removed from the affected Microsoft 365 apps. 
+Privacy
+For more details on privacy and age limits for AI, choose any of the following questions and expand it for more information.
+Copilot in Microsoft 365 apps available in Microsoft 365 Personal, Family, Premium, and Pro subscriptions is covered by the Microsoft Services Agreement and the Copilot Terms of Use. For information about how Microsoft uses your personal data, see the Microsoft Privacy Statement.
+Where can I learn more about the privacy of my data with Copilot in Microsoft 365 apps?
+Copilot and Microsoft 365 are built on Microsoft's comprehensive approach to security, compliance, and privacy. For more information about privacy, see Copilot in Microsoft 365 apps for home: your data and privacy.
+How do I turn off Copilot?
+We know there are times when using Copilot isn't desired, so we've added settings in apps like Word, Excel, and PowerPoint that allow you to turn off or turn on Copilot as needed. For more information, see How to turn off Copilot in Microsoft 365 Family and Personal subscriptions.
+Note
+You can't turn off Copilot features in Designer, Notepad, or Paint.
+I have a work account and personal account linked. Can Copilot access my work files?
+If your employer has multi-account access turned on, you can use your personal Copilot subscription at work. Note that all access and permissions remain tied to your work account. For more information, see Use Microsoft 365 Personal, Family, or Premium at work. 
+Are there any age limits on the use of AI apps and features?
+Yes. AI features in the Microsoft 365 apps (Word, Excel, PowerPoint, Outlook and OneNote) are disabled for users under the ages listed here. For information on age restrictions in other Microsoft Copilot apps and features, see How old do I have to be to use Copilot?
+What controls as a parent do I have over my child's access to generative AI features?
+Most applications providing access to AI Credits automatically restrict access to AI based on age requirements. To ensure this protection is in place, please ensure the age is properly set for your child's account. See How to change a birth date on a Microsoft account for more information. 
+Some Windows applications such as Paint and Notepad can still use AI credits. Parents who wish to limit access to AI in these applications can leverage Windows Family Safety controls.
+					

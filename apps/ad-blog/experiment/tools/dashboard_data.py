@@ -3,7 +3,7 @@
 Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 지표·traffic-playbook·log.md를 읽어 대시보드 DB 문서를 JSON 파일로 만든다.
 업로드는 세션에서 `ArtifactData` 도구로 한다 (README "운영 대시보드" 절차).
 
-실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}']
+실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --prev /tmp/dashboard-prev/stats/posts.json [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}']
 출력: {out}/stats/{doc_id}.json + {out}/history/*.json + {out}/writes.json (ArtifactData batch의 writes 값 그대로)
       + {out}/data.js (비로그인 열람용 스냅숏, 아티팩트 파일 `data.js`로 발행)
 
@@ -16,12 +16,16 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
            ·goals(README 목표 지표 표 + 현재 값·진행률)
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
 - posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, 28일 지표, queries, daily, sources,
-                  firstDays, move, index}],
+                  firstDays, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
          otherPages: [{path, 28일 지표, queries, daily, sources}]}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
           28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
           sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만), firstDays = 발행일부터 날짜별 누적 노출(최대 D+28),
-          move = 최근 7일 vs 직전 7일 순위 {pos, prevPos, imp, prevImp, delta} 또는 null(최근 7일 노출 없음))
+          move = 최근 7일 vs 직전 7일 순위 {pos, prevPos, imp, prevImp, delta} 또는 null(최근 7일 노출 없음),
+          색인 시점 3가지 (Search Console은 색인된 날짜를 주지 않아 회차마다 처음 본 값을 고정, 한번 정하면 바꾸지 않음):
+          indexedAt = URL 검사가 처음 PASS인 회차 시각, firstCrawlAt = 그때의 lastCrawl(마지막 크롤링은 이후 바뀌므로 첫 값),
+          firstImpressionAt = 웹 검색 노출이 처음 생긴 날짜(Search Console 날짜, 태평양 시간).
+          앞의 두 값은 이전 posts 문서(--prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급)
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
              movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10)
 - experiments: {rows: traffic-playbook 검증 기록 표}
@@ -99,6 +103,29 @@ def first_days(created: str, by_date: dict[str, dict], last_day: dt.date) -> lis
         total += int(r['impressions']) if r else 0
         out.append(total)
     return out
+
+
+def first_impression(by_date: dict[str, dict]) -> str | None:
+    """노출이 처음 생긴 날짜 (YYYY-MM-DD)"""
+    return min((d for d, r in by_date.items() if r.get('impressions')), default=None)
+
+
+def load_prev(path: str | None) -> dict[str, dict]:
+    """이전 회차 posts 문서의 글별 행 {slug: row}. 색인 시점 필드를 이어받는 데 씀"""
+    if not path:
+        return {}
+    data = json.loads(pathlib.Path(path).read_text(encoding='utf-8'))
+    return {r['slug']: r for r in data.get('rows', []) if r.get('slug')}
+
+
+def index_dates(prev: dict, index: dict | None, run_at: str, first_imp: str | None) -> dict:
+    """색인 시점 3가지. 이전 값이 있으면 유지하고, 이번 회차에 처음 PASS면 지금 시각·lastCrawl로 정함"""
+    indexed_at, first_crawl = prev.get('indexedAt'), prev.get('firstCrawlAt')
+    if index and index.get('verdict') == 'PASS':
+        indexed_at = indexed_at or run_at
+        first_crawl = first_crawl or index.get('lastCrawl')
+    imps = [d for d in (first_imp, prev.get('firstImpressionAt')) if d]
+    return {'indexedAt': indexed_at, 'firstCrawlAt': first_crawl, 'firstImpressionAt': min(imps) if imps else None}
 
 
 def position_move(now: dict | None, before: dict | None) -> dict | None:
@@ -205,8 +232,11 @@ def main() -> None:
     ap.add_argument('--site', default='sc-domain:tool-proof.com')
     ap.add_argument('--out', default='/tmp/dashboard')
     ap.add_argument('--no-inspect', action='store_true', help='URL 검사 생략 (하루 2,000회 할당량)')
+    ap.add_argument('--prev', required=True, help='이전 회차 posts 문서 JSON (ArtifactData list stats의 out_dir 저장본). 빠뜨리면 색인 시점이 지워짐')
     ap.add_argument('--versions', help='기존 문서 버전 JSON (예: \'{"summary": 3, "posts": 3}\')')
     args = ap.parse_args()
+    prev_rows = load_prev(args.prev)
+    run_at = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
 
     token = load_token()
     today = dt.date.today()
@@ -281,6 +311,7 @@ def main() -> None:
                 'crawledAs': idx.get('crawledAs'), 'fetch': idx.get('pageFetchState'),
                 'canonicalOk': None if not google_canonical else google_canonical == url,
             }
+        doc.update(index_dates(prev_rows.get(slug, {}), doc.get('index'), run_at, first_impression(page_dates.get(url, {}))))
         posts.append(doc)
     # 글 외 페이지(홈·카테고리·목록 등): 글별 표 합계를 사이트 전체 KPI와 맞추기 위해 따로 표시
     post_urls = {f"{SITE_ORIGIN}/posts/{p['slug']}" for p in posts}
@@ -340,7 +371,7 @@ def main() -> None:
         'weakInbound': (weak, f'{weak}편'),
     }
     docs['summary'] = {
-        'updatedAt': dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ'),
+        'updatedAt': run_at,
         'range': {'start': since, 'end': end},
         **site,
         'sitemap': {'lastDownloaded': sm.get('lastDownloaded'), 'errors': int(sm.get('errors', 0)), 'warnings': int(sm.get('warnings', 0))},

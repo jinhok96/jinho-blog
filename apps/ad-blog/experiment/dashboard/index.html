@@ -281,7 +281,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="small">지표는 최근 28일, 미확정 데이터 포함. 노출·클릭·순위는 웹 검색, 유입 경로는 검색 유형별 노출. 머리글을 누르면 정렬, 제목 아래를 누르면 검색어·추이·색인 상세</div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>글</th><th><button class="sort" data-sort="createdAt" type="button">발행</button></th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r"><button class="sort" data-sort="words" type="button">단어</button></th><th class="r"><button class="sort" data-sort="images" type="button">이미지</button></th><th>색인</th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r"><button class="sort" data-sort="impressions" type="button">노출</button></th><th class="r"><button class="sort" data-sort="clicks" type="button">클릭</button></th><th class="r"><button class="sort" data-sort="position" type="button">평균 순위</button></th></tr></thead>
+        <thead><tr><th>글</th><th><button class="sort" data-sort="createdAt" type="button">발행</button></th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r"><button class="sort" data-sort="words" type="button">단어</button></th><th class="r"><button class="sort" data-sort="images" type="button">이미지</button></th><th title="발행일부터 색인을 처음 확인한 날까지 경과일 (D+N)"><button class="sort" data-sort="indexDays" type="button">색인</button></th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r"><button class="sort" data-sort="impressions" type="button">노출</button></th><th class="r"><button class="sort" data-sort="clicks" type="button">클릭</button></th><th class="r"><button class="sort" data-sort="position" type="button">평균 순위</button></th></tr></thead>
         <tbody id="posts"><tr><td colspan="10" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
       </table>
     </div>
@@ -393,6 +393,9 @@ function dayIndex(d) {
 }
 const todayIndex = () => { const n = new Date(); return Date.UTC(n.getFullYear(), n.getMonth(), n.getDate()) / 86400000; };
 const ageDays = (d) => (d ? Math.round(todayIndex() - dayIndex(d)) : null); // 발행일 = D+0
+// 발행일부터 그 날짜까지 경과일 (색인 시점 3가지: indexedAt·firstCrawlAt·firstImpressionAt). 날짜가 없으면 null
+const daysFrom = (p, d) => (p.createdAt && d ? Math.round(dayIndex(d) - dayIndex(p.createdAt)) : null);
+const median = (xs) => { const s = [...xs].sort((a, b) => a - b); const m = s.length >> 1; return s.length ? (s.length % 2 ? s[m] : (s[m - 1] + s[m]) / 2) : null; };
 const isIndexed = (p) => p.index?.verdict === 'PASS';
 const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
@@ -690,8 +693,13 @@ function indexFacts(p) {
   const crawler = i.crawledAs === 'MOBILE' ? '모바일' : i.crawledAs === 'DESKTOP' ? '데스크톱' : '–';
   const canon = i.canonicalOk == null ? '–' : i.canonicalOk ? '일치' : '<span style="color:var(--bad)">다름</span>';
   const tags = (p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join('');
+  // 색인 시점: 날짜 + 발행일부터 경과일. 날짜만 있는 값(소급분)은 날짜만, 시각이 있으면 보는 사람 시간대로
+  const when = (d) => (!d ? '–' : `${hasTime(d) ? localStamp(d) : ymd(d)} <span class="small">D+${daysFrom(p, d)}</span>`);
   return `<div><h3>색인·글 정보</h3><dl class="facts">
     <dt>상태</dt><dd>${esc(i.coverage || '확인 전')}</dd>
+    <dt>색인 확인</dt><dd class="num">${when(p.indexedAt)}</dd>
+    <dt>첫 크롤링</dt><dd class="num">${when(p.firstCrawlAt)}</dd>
+    <dt>첫 노출</dt><dd class="num">${when(p.firstImpressionAt)}</dd>
     <dt>마지막 크롤링</dt><dd class="num">${i.lastCrawl ? localStamp(i.lastCrawl) : '–'}</dd>
     <dt>크롤러</dt><dd>${crawler}</dd>
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
@@ -770,7 +778,7 @@ function renderClusters() {
 }
 
 // 글별 표 보기 상태 (거르기·정렬). 보는 사람 브라우저에만 기억
-const SORTS = { createdAt: 'desc', words: 'desc', images: 'desc', impressions: 'desc', clicks: 'desc', position: 'asc' }; // 처음 누를 때 방향
+const SORTS = { createdAt: 'desc', indexDays: 'asc', words: 'desc', images: 'desc', impressions: 'desc', clicks: 'desc', position: 'asc' }; // 처음 누를 때 방향
 const view = { cluster: '', index: '', sort: 'createdAt', dir: 'desc' };
 try {
   const saved = JSON.parse(localStorage.getItem('postsView') || 'null');
@@ -818,7 +826,7 @@ function postRow(p) {
     <td>${clusterCell(p.cluster)}</td>
     <td class="r num">${fmt(p.words)}</td>
     <td class="r num">${fmt(p.images)}</td>
-    <td>${indexPill(p.index)}</td>
+    <td>${indexPill(p.index)}${p.indexDays == null ? '' : `<div class="small" title="발행 → 색인 확인 ${esc(ymd(p.indexedAt))}">D+${p.indexDays}</div>`}</td>
     <td>${sourceCell(p.sources)}</td>
     <td class="r num">${fmt(p.impressions)}</td>
     <td class="r num">${fmt(p.clicks)}</td>
@@ -830,7 +838,9 @@ function renderPosts() {
   if (!state.posts.length) return;
   const all = state.posts;
   $('k-posts').textContent = all.length;
-  $('k-indexed').textContent = `색인 ${all.filter(isIndexed).length} / ${all.length}`;
+  all.forEach((p) => { p.indexDays = daysFrom(p, p.indexedAt); });
+  const mid = median(all.map((p) => p.indexDays).filter((d) => d != null));
+  $('k-indexed').textContent = `색인 ${all.filter(isIndexed).length} / ${all.length}${mid == null ? '' : ` · 중앙값 D+${mid}`}`;
   renderFilters(clusterGroups());
   const posts = all.filter(matches).sort(compare);
   const filtered = Boolean(view.cluster || view.index);

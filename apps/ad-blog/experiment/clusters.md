@@ -11,7 +11,7 @@
 
 | ID | 클러스터 | 우선순위 | 허브 | 상시 글 | 뉴스 칼럼 |
 | --- | --- | --- | --- | --- | --- |
-| `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | `turn-off-ai-features` | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` `turn-off-apple-intelligence-iphone` `turn-off-ai-in-windows-11` `turn-off-meta-ai-instagram` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` `google-gmail-photos-ads` |
+| `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | `turn-off-ai-features` | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` `turn-off-apple-intelligence-iphone` `turn-off-ai-in-windows-11` `turn-off-meta-ai-instagram` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` `google-gmail-photos-ads` `google-phone-number-verification` |
 | `photo-video` | 무료 사진·영상 도구 (변환·압축·배경·메타데이터) | 2 | - | `convert-heic-to-jpg-free` `convert-webp-to-jpg-free` `compress-image-to-100kb` `remove-bg-alternative-free` `remove-metadata-from-photos` `compress-video-for-discord-email` | - |
 | `pdf` | 무료 PDF 도구 | 3 | `best-free-pdf-tools` | `split-pdf-free` `merge-pdf-files-free` `jpg-to-pdf-free` `pdf-to-jpg-free` `pdf-to-word-free` `compress-pdf-free` | - |
 | `offline-ai` | 무료 오프라인 AI 도구 | 4 | `free-offline-ai-tools` | `transcribe-audio-offline-free` `image-to-text-offline-free` | - |

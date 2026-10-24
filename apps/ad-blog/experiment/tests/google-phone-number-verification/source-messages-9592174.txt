@@ -1,0 +1,40 @@
+URL: https://support.google.com/messages/answer/9592174?hl=en
+Fetched: 2026-10-24 (UTC)
+
+How RCS chats keep your conversations secure
+RCS chats let you send messages over mobile data and Wi-Fi, share files and high-resolution photos, show you when someone is typing, and show you when messages are read.
+When you use RCS chats, your messages are sent using the Rich Communication Services (RCS) protocol, an industry standard for carrier messaging. Before messages can be sent with RCS, everyone in a conversation must have RCS chats turned on. Otherwise, messages can be sent via SMS or MMS. RCS chats are typically provided by your mobile carrier and, in some cases, by Google.
+This article describes how Google uses and protects your RCS message data when RCS chats are provided by Google. Learn how to activate RCS chats.
+How RCS chats work
+ When you use RCS chats by Google, messages are sent and received through Google’s RCS infrastructure over the internet. Messages can either be delivered to or received from users on other RCS service providers. If RCS chats are provided by Google, but your recipient’s RCS service is with another provider, your messages are routed through Google’s RCS infrastructure and then routed to your recipient's RCS infrastructure.
+Delivery of SMS and MMS messages, which are always sent through your carrier, won't change as part of your use of RCS chats.
+ Information we use
+ To make sure your messages are properly delivered, Google uses information like your phone number, device identifiers, and SIM card number. This data may be stored for about a month to keep you connected to RCS and in cases where you temporarily go offline.
+When you turn on RCS chats, and each time you send a message, Google checks your contacts to find out if they can also use RCS chats. These checks may go through Google’s RCS infrastructure and other service providers to reach your contacts.
+How we protect your data
+ RCS chats between Google Messages users are end-to-end encrypted by default. Learn how to use end-to-end encryption in Google Messages. The GSM Association (GSMA) sets Mobile and RCS standards, and we are currently working to define security standards cross platform.
+RCS chats by Google uses Transport Layer Security (TLS) encryption to protect your messages even when end-to-end encryption is not available. This means that anyone trying to intercept your messages between you and Google would only be able to find encrypted, unreadable text.
+ How and why your data is temporarily stored
+ RCS chats you send using Google’s RCS infrastructure are temporarily queued for delivery and deleted after they’re delivered. For undelivered RCS messages, you can switch to SMS or MMS provided by your carrier, in which case the corresponding RCS message is deleted from the queue.
+Google’s RCS infrastructure sends and temporarily stores files like images, videos, GIFs, and stickers with random, unguessable URLs. These links aren't shared with you or the person receiving your message. To prevent connections between the hosted file and your phone number, Google uses a special algorithm (hash function) that transforms these URLs and makes it very difficult to associate the file and your phone number.
+You're in control
+ Learn how to activate RCS chats.
+ Check if RCS chats are turned on
+ If your message’s compose bar says "RCS message," your message will be sent through RCS from either Google or from your carrier’s RCS service.
+ If your message’s compose bar says "Text message," your message will be sent through your carrier as SMS/MMS. Conversations will have "SMS" or "MMS" below the send icon.
+ Turn RCS chats on or off
+ Important: After you remove your SIM card, RCS chats may still work for about 8 days.
+ Open Google Messages .
+ Tap your profile photo or icon Messages settings.
+ Tap RCS chats.
+ If you can't find "RCS chats," tap Chat features.
+ Turn on RCS chats.
+When you turn RCS chats off, other functions like typing indicators and read receipts also turn off.
+ RCS chats with other messaging apps
+ RCS is an industry standard for carrier messaging. This means that messaging apps that support the RCS standard, like Samsung Messages or Messages on iOS, may connect to RCS chats by Google. To learn about other apps’ settings and data handling, refer to your messaging app’s documentation.
+ Turn RCS chats on or off on most Samsung devices
+ Open the Samsung Messages app.
+ Go to Menu  Settings.
+ Tap RCS chats settings.
+ Turn Rich Communication Settings (RCS) on or off.
+ 

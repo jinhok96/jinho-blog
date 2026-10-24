@@ -2,6 +2,52 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-25 · 세션 47 (정기 실행, 일반 세션): Instagram에서 Meta AI 끄기
+
+세션 시각: 2026-10-25 00:16 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(2e7bcd3)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-26 ~ 10-24, 세션 46 이후 바뀐 값만)**
+
+- 노출 461 → **527**, 클릭 8, CTR 1.7% → 1.5%, 평균 순위 24.5 → 22.8
+  - `spotify-family-qr-code-verification` 66 → **125 (28.9 → 18.5위)** / `turn-off-ai-in-chrome` 128 (13.8) / `image-to-text-offline-free` 65 (12.8) / `check-if-image-is-ai-generated` 31 → 33 (72.2) / `iphone-duo-sold-out` 19 (9.2)
+- URL 검사: 색인 17편 그대로 (마지막 새 크롤링 10-20). `URL is unknown` 22편 그대로 → 색인율 17/39 (44%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 46 끝과 같은 3건 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글, `pixel-watch-safety-signal-ending` 받는 링크 1개). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-meta-ai-instagram` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Meta 공식 페이지 23개(Instagram 도움말 16·Facebook 도움말 검색·WhatsApp 2·Privacy Center 2·Newsroom 2)를 Chromium으로 렌더링해 대조, Instagram 도움말 검색 "turn off meta ai"에서 Meta AI 지원 도우미가 "The provided articles do not contain information on how to turn off Meta AI"라고 답한 화면 직접 캡처, 채팅 삭제(내 받은 편지함만) vs `/reset-ai`·`/reset-all-ais`(Meta AI 사본 삭제) 비교, 그룹 채팅 최근 30일 메시지 공유, 끌 수 있는 것 3가지(Imagine yourself·Reels 번역·Meta AI 앱 오디오 재사용), 2025-12-16부터 AI 대화 광고 개인화(발표문에 옵트아웃 없음) |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` (세션 43~46 다음 할 일). `demand_check.py suggest`: `turn off meta ai` 22개 중 `turn off meta ai instagram`만 Google·Bing·YouTube 3곳, 하위 `search instagram`(2곳)·`summary instagram`·`translation`. 비교: `turn off galaxy ai` 21개(본 검색어 3곳, 하위는 1~2곳), `google personal intelligence` 19개(settings는 Google만), `turn off gemini apps activity` 25개(본 검색어 2곳). Trends 미국 3개월 네 후보 모두 0.0~0.1 · 기준 `remove background` 35.5 → 3곳 자동완성과 상위 결과 빈틈으로 결정
+- 상위 결과(WebSearch): jotform(도구 사이트), blogto·doral.edu·manual.msf.mx(스팸성), getmanifest·airdroid(2024), TheWrap·TechRadar·Android Authority(매체, 2024 Mute 단계). 2026 Instagram 도움말 기준·삭제와 초기화 차이·그룹 채팅 공유·광고 사용이 빠짐
+- 1차 출처: help.instagram.com 2050445508681504·1325125818682650·454257637526184·1030118265547894·814837257408912·1467256816910908·890932425718081·1637687493174595·413913451428736·512686498916530·329208821595430·1347046113872049·1912013665981064·963211828280354·658522825492278 + 검색, facebook.com/help 검색·/privacy/dialog/change-or-delete-ai-chat-info·/privacy/genai, about.fb.com 2025-10-01(AI 대화 광고)·2025-10-09(Reels 번역, 2026-07-14 갱신), faq.whatsapp.com 2257017191175152·688464770796037. 원문 `tests/turn-off-meta-ai-instagram/source-*.txt`. Instagram 계정이 없어 앱 화면은 직접 실행 못 함(본문 How we checked에 밝힘)
+- 쓰지 않은 것: Mute·Block 단계(Instagram 도움말에 없음, 2024 매체 글에만 → FAQ에서 "문서에 없음"으로만), Meta AI 앱 Your likeness(별도 앱), EU·영국 이의 제기, 광고 사용 제외 국가(Reuters 보도만)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 856500509, 52.6분, 세이지 그린 배경 + 마젠타·앰버. 위에서 본 평면 대신 정면에 가까운 폰, 지우개가 둥근 스펀지 모양이지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(Instagram 도움말 검색 화면 캡처·끌 수 있는 범위 3묶음·메뉴 경로·삭제 vs 초기화, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`·`gemini-connected-apps`·`check-if-image-is-ai-generated`·`google-gmail-photos-ads`·`turn-off-apple-intelligence-iphone` (5개). 역링크: `check-if-image-is-ai-generated`(색인됨) FAQ "Do social media sites keep Content Credentials?" 끝, 허브 "What turning off AI doesn't do" 목록에 Meta AI 1줄 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page 항목(제목·설명·소제목·첫 100단어·이미지 alt·내부 링크·AI 문체(em dash 0)) — 우리 규칙과 다른 지적 없음. searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 48자(접미사 포함, 본제목 36자)·description 158자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 15개·h3 5개, `<pre>`·`<code>` 0개(채팅 명령 `/reset-ai`는 굵게 표기), 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(33파일 242개)·build 통과
+
+**알게 된 것**
+
+- help.instagram.com·facebook.com/help·faq.whatsapp.com은 curl로 받으면 오류 페이지("Sorry, something went wrong"), WebFetch는 제목만 → Playwright로 렌더링하면 본문을 읽을 수 있음. 기기별 문서는 `?cms_platform=iphone-app`(WhatsApp은 `?cms_platform=iphone`)을 붙이면 iPhone 판, 접힌 단계는 `aria-expanded="false"` 요소를 눌러 펼침 (`tests/turn-off-meta-ai-instagram/render_dev.cjs`). 이전 backlog의 "meta.com JS 렌더링으로 1차 출처 확인 어려움"은 이 방법으로 해결
+- Meta 도움말 검색 결과 맨 위의 "From Meta AI support assistant" 답은 AI 생성이라 같은 검색어도 사이트별로 표현이 다름 (Instagram: "articles do not contain information", Facebook: "there isn't a direct option")
+- `spotify-family-qr-code-verification`이 하루 만에 노출 66 → 125, 평균 28.9 → 18.5위 → 8~20위 보강 후보 (개선 세션)
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 22편 + 새 글 중 우선 허브 `turn-off-ai-features`·`best-free-pdf-tools`, 새 글 `turn-off-meta-ai-instagram`, `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`google-gmail-photos-ads`, `remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`·`compress-pdf-free`
+- Claude(다음 개선 세션): `image-to-text-offline-free`(12.8위)·`spotify-family-qr-code-verification`(18.5위, 노출 125) 8~20위 검색어 보강 — `seo-audit` rankings-push, 검증 기록 행 추가. 색인율이 50%를 넘으면 `photo-video` 허브. 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off galaxy ai`(Samsung 도움말을 Playwright 렌더링으로 확인) 또는 `google personal intelligence settings`
+- Claude: Instagram이 Meta AI 끄기·음소거 설정을 내놓거나 Meta가 AI 대화 광고 옵트아웃을 발표하면 `turn-off-meta-ai-instagram` 갱신(`updatedAt`)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 40편
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 회차 2026-10-24T17:00:00Z, DB 문서 49개). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-24 · 크롤링 통계 분석 → 발행 속도 축소·홈 허브 고정·SEO 스킬 도입 (사용자 요청)
 
 **크롤링 통계** (사용자가 Search Console에서 내보낸 CSV, 2026-10-07 ~ 10-21. API에는 이 보고서가 없음: Search Console API 기능은 검색 실적·사이트맵·URL 검사·모바일 테스트뿐, 권한을 '전체'로 바꿔도 같음)

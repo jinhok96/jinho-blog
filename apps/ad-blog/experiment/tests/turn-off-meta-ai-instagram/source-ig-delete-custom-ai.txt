@@ -1,0 +1,72 @@
+URL: https://help.instagram.com/1912013665981064
+TITLE: Delete your custom AI on Instagram | Instagram Help Center
+FETCHED: 2026-10-24T15:28:03.739Z
+
+Help Center
+English (US)
+Instagram Features
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Privacy and Reporting
+Terms and Policies
+Threads
+ 
+Delete your custom AI on Instagram
+Copy link
+More
+Computer Help
+iPhone App Help
+Android App Help
+How do I delete Instagram AI?
+How do I delete AI on computer?
+What happens when I delete AI?
+I have a different question
+Custom AIs on Instagram aren’t yet available for everyone.
+You can delete an custom AI you created on Instagram at any time.
+Delete your custom AI
+Go to aistudio.instagram.com using a computer.
+Click Your AIs.
+Click  Options next to the AI you want to delete.
+Click Delete AI.
+Note
+Similar to other chats, interactions with AI are subject to our Community Standards and Terms of Service.
+An AI’s response may be inaccurate or inappropriate and should not be used to make important decisions.
+Meta uses your interactions with AIs to improve AI at Meta. If the AIs cannot answer your query, Meta shares the messages you send to AI and general information, like your region, with select partners so you can get better results. Visit our Meta AI Terms of Service to learn more.
+Meta AI uses your location information to give you more relevant responses. Your location information is based on things like the settings you've chosen on your device, or your activity across our products. Learn more about how to manage your location in the Privacy Center.
+Other information from your profile such as your age and gender, and interests based on your activity across our products, such as the types of content, including ads, you view or interact with and how you interact with it, will be used to help personalize your interactions with AI. Learn more about how Meta uses this information in the Privacy Center. You can also see how information is used across your accounts in the same Accounts Center and export your information. Learn how to Export a copy of your information.
+Depending on your prompt, the content generated may go against our Community Standards or Terms of Service of Meta's platforms. Sharing AI-generated content on our platforms that go against these standards will be treated the same as sharing other content that go against our standards. If you share generated content that goes against our standards, your content may be removed and your account may be restricted or disabled. Learn more about the Community Standards and Terms of Service on:
+Facebook, Messenger and Instagram
+WhatsApp
+Depending on your region, your interactions with AI products can be used to personalize content and ads.
+When you delete a custom AI that someone has chatted with, they’ll be able to see their history with it. They won’t be able to send that AI any new messages.
+People who create an AI in Meta AI Studio do not have access to the chats other people have with that AI, unless they’re a creator using an AI based on themselves to respond to their personal messages. Learn more about AI auto replies.
+Custom AIs are not licensed professionals or experts trained to help people. Chats with custom AIs can’t replace professional advice. You shouldn’t rely on AI chats for medical, psychological, financial, legal or any other type of professional advice. Visit our Meta AI Terms of Service for appropriate ways to use AIs for self-help or other purposes.
+Learn more about how Meta uses information for generative AI models.
+Was this helpful?
+Yes
+No
+Related Articles
+Write with Meta AI on Instagram
+Use Meta AI on Instagram
+Delete posts you've shared on Instagram
+Delete comments you've made on Instagram posts
+Edit an image with Meta AI in chats on Instagram
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Get help with deleting your custom AI on Instagram
+You can delete a custom AI you created on Instagram via a computer by visiting AI Studio and selecting Delete AI from… Learn more
+How do I delete Instagram AI?
+What happens to Instagram AI chats?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

@@ -1,0 +1,81 @@
+URL: https://help.instagram.com/1325125818682650
+TITLE: About sharing with Meta AI on Instagram | Instagram Help Center
+FETCHED: 2026-10-24T15:27:14.391Z
+
+Help Center
+English (US)
+Instagram Features
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Privacy and Reporting
+Terms and Policies
+Threads
+ 
+About sharing with Meta AI on Instagram
+Copy link
+More
+Android App Help
+iPhone App Help
+Computer Help
+What is Meta AI on Instagram?
+How do I share with Meta AI?
+How do I control Meta AI chat content?
+I have a different question
+AI features on Instagram are being gradually introduced and may not be available to you yet. For the most up-to-date experience, make sure to install the latest version of the app.
+You can use Meta AI in your chats on Instagram to help you:
+Ask questions and get personalized suggestions. You can mention @Meta AI in a reply to a message. For example, in a group chat with your friends, you can reply with Meta AI to get dinner suggestions when someone mentions wanting Mexican food.
+Summarize unread chats
+Write or rephrase messages
+Edit photos
+Sharing with Meta AI on Instagram
+When you or others use these AI features for messages or content in your chats, messages from the past 30 days are shared. This means people can share your messages and photos from chats with Meta AI.
+Because others in your chats can share your messages and photos with Meta AI to use AI features, be mindful before sharing sensitive information in chats that you do not want AIs to use, such as passwords, financial information or other sensitive information. We take steps to try to remove certain personal identifiers from your messages that others share with Meta AI prior to improving AI at Meta.
+If you don't want others to share certain messages with Meta AI, you can delete the chat or delete the messages in the chat. You can also edit a message or delete information from the chat.
+Control your chat content on Instagram
+Change or delete your information from chats with AIs from Meta
+Remove a message in your chat
+Delete a chat
+Unsend a message you’ve sent in a chat
+Use Meta AI in chats
+Use Meta AI to edit an image
+Use Meta AI in chats with others
+Use Meta AI to summarize unread messages
+Note:
+Similar to other chats, interactions with AI are subject to our Community Standards and Terms of Service.
+An AI’s response may be inaccurate or inappropriate and should not be used to make important decisions.
+Meta uses your interactions with AIs to improve AI at Meta. If the AIs cannot answer your query, Meta shares the messages you send to AI and general information, like your region, with select partners so you can get better results. Visit our Meta AI Terms of Service to learn more.
+Meta AI uses your location information to give you more relevant responses. Your location information is based on things like the settings you've chosen on your device, or your activity across our products. Learn more about how to manage your location in the Privacy Center.
+Other information from your profile such as your age and gender, and interests based on your activity across our products, such as the types of content, including ads, you view or interact with and how you interact with it, will be used to help personalize your interactions with AI. Learn more about how Meta uses this information in the Privacy Center. You can also see how information is used across your accounts in the same Accounts Center and export your information. Learn how to Export a copy of your information.
+Depending on your prompt, the content generated may go against our Community Standards or Terms of Service of Meta's platforms. Sharing AI-generated content on our platforms that go against these standards will be treated the same as sharing other content that go against our standards. If you share generated content that goes against our standards, your content may be removed and your account may be restricted or disabled. Learn more about the Community Standards and Terms of Service on:
+Facebook, Messenger and Instagram
+WhatsApp
+Depending on your region, your interactions with AI products can be used to personalize content and ads.
+Learn more about how Meta uses information for generative AI models.
+Was this helpful?
+Yes
+No
+Related Articles
+Use Meta AI on Instagram
+Share a custom AI from Meta AI Studio with someone on Instagram
+Write with Meta AI on Instagram
+Ask Meta AI about an image you share in a chat on Instagram
+Connect your Instagram professional account to a Meta ad account
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Learn more about sharing with Meta AI on Instagram
+Meta AI on Instagram allows you to ask questions, summarize unread chats, rephrase messages, and edit photos.… Learn more
+What is Meta AI on Instagram?
+How do I share with Meta AI?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

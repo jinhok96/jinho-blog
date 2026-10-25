@@ -6,7 +6,8 @@
 환경변수 (클라우드 환경 설정 → 새 세션부터 적용, 값은 절대 출력하지 않음):
 - CF_API_TOKEN: API 토큰 (권한: Account → Account Analytics → Read)
 - CF_ACCOUNT_ID: Cloudflare 계정 ID (대시보드 주소 dash.cloudflare.com/{계정 ID}/...)
-- CF_SITE_TAG (선택): Web Analytics 사이트 태그. 없으면 사이트 목록에서 비컨 토큰(SITE_TOKEN)으로 찾음
+- CF_SITE_TAG (선택): Web Analytics 사이트 태그. 없으면 사이트 도메인(requestHost)으로 거름
+  (사이트 목록 REST API는 Account Analytics Read 토큰으로 403이라 쓰지 않음, 2026-10-25 확인)
 
 실행: python3 -I apps/ad-blog/experiment/tools/cf_analytics.py [--days 7]  → 경로별 조회수 상위 20
 - 필요 도메인: api.cloudflare.com
@@ -21,8 +22,7 @@ import sys
 import urllib.request
 
 API = 'https://api.cloudflare.com/client/v4'
-# 광고 블로그 core/config/internal/analytics.ts의 CF_WEB_ANALYTICS_TOKEN과 같은 값 (공개 값)
-SITE_TOKEN = '11ff5f9f67bb4894aadec935d7891e61'
+SITE_HOSTS = ('tool-proof.com', 'www.tool-proof.com')  # 비컨은 이 도메인에서만 로드됨 (광고 블로그 core/analytics)
 CHUNK_DAYS = 7  # 한 번에 조회하는 기간 (조회 범위·행 수 제한 대비)
 
 QUERY = """
@@ -52,16 +52,17 @@ def _request(method: str, url: str, body: dict | None = None) -> dict:
         return json.load(res)
 
 
-def site_tag() -> str:
+def site_filter() -> dict:
+    """측정 대상 필터: CF_SITE_TAG가 있으면 사이트 태그, 없으면 사이트 도메인"""
     tag = os.environ.get('CF_SITE_TAG', '').strip()
     if tag:
-        return tag
-    account = os.environ['CF_ACCOUNT_ID'].strip()
-    res = _request('GET', f'{API}/accounts/{account}/rum/site_info/list?per_page=100')
-    for site in res.get('result') or []:
-        if site.get('site_token') == SITE_TOKEN:
-            return site['site_tag']
-    raise RuntimeError('Web Analytics 사이트 목록에 비컨 토큰이 일치하는 사이트가 없음 (CF_SITE_TAG로 직접 지정 가능)')
+        return {'siteTag': tag}
+    return {'OR': [{'requestHost': host} for host in SITE_HOSTS]}
+
+
+def period_filter(start: dt.date, end: dt.date) -> dict:
+    """[start, end] (UTC 날짜) + 측정 대상"""
+    return {'AND': [{'datetime_geq': f'{start}T00:00:00Z', 'datetime_lt': f'{end + dt.timedelta(days=1)}T00:00:00Z'}, site_filter()]}
 
 
 def normalize_path(path: str) -> str:
@@ -80,13 +81,12 @@ def merge_rows(rows: list[dict], into: dict[str, dict[str, dict]]) -> None:
 
 def page_views(start: dt.date, end: dt.date) -> dict[str, dict[str, dict]]:
     """[start, end] (UTC 날짜) 경로·날짜별 조회수(views = 페이지 로드)·방문(visits = 다른 사이트에서 들어온 페이지 로드)"""
-    account, tag = os.environ['CF_ACCOUNT_ID'].strip(), site_tag()
+    account = os.environ['CF_ACCOUNT_ID'].strip()
     out: dict[str, dict[str, dict]] = {}
     day = start
     while day <= end:
         stop = min(end, day + dt.timedelta(days=CHUNK_DAYS - 1))
-        flt = {'AND': [{'datetime_geq': f'{day}T00:00:00Z', 'datetime_lt': f'{stop + dt.timedelta(days=1)}T00:00:00Z'}, {'siteTag': tag}]}
-        res = _request('POST', f'{API}/graphql', {'query': QUERY, 'variables': {'accountTag': account, 'filter': flt}})
+        res = _request('POST', f'{API}/graphql', {'query': QUERY, 'variables': {'accountTag': account, 'filter': period_filter(day, stop)}})
         if res.get('errors'):
             raise RuntimeError(f"GraphQL 오류: {res['errors'][0].get('message')}")
         accounts = res['data']['viewer']['accounts']
@@ -112,9 +112,8 @@ query ($accountTag: string!, $filter: AccountRumPageloadEventsAdaptiveGroupsFilt
 
 def referers(start: dt.date, end: dt.date, limit: int = 10) -> list[dict]:
     """[start, end] 유입 사이트별 조회수·방문 (자기 사이트·주소 없음(직접 방문)은 'direct'로 묶음), 조회수 많은 순"""
-    account, tag = os.environ['CF_ACCOUNT_ID'].strip(), site_tag()
-    flt = {'AND': [{'datetime_geq': f'{start}T00:00:00Z', 'datetime_lt': f'{end + dt.timedelta(days=1)}T00:00:00Z'}, {'siteTag': tag}]}
-    res = _request('POST', f'{API}/graphql', {'query': REFERER_QUERY, 'variables': {'accountTag': account, 'filter': flt}})
+    account = os.environ['CF_ACCOUNT_ID'].strip()
+    res = _request('POST', f'{API}/graphql', {'query': REFERER_QUERY, 'variables': {'accountTag': account, 'filter': period_filter(start, end)}})
     if res.get('errors'):
         raise RuntimeError(f"GraphQL 오류: {res['errors'][0].get('message')}")
     accounts = res['data']['viewer']['accounts']

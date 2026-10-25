@@ -20,12 +20,16 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
          otherPages: [{path, 28일 지표, queries, daily, sources}]}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
           28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
-          sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만), firstDays = 발행일부터 날짜별 누적 노출(최대 D+28),
+          sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만),
+          views·visits = Cloudflare Web Analytics 28일 조회수·방문 (CF 환경변수가 있을 때만, daily 각 날짜에도 views·visits,
+          조회수만 있고 검색 노출이 없는 날은 노출 0으로 추가. 날짜는 UTC), firstDays = 발행일부터 날짜별 누적 노출(최대 D+28),
           move = 최근 7일 vs 직전 7일 순위 {pos, prevPos, imp, prevImp, delta} 또는 null(최근 7일 노출 없음),
           색인 시점 3가지 (Search Console은 색인된 날짜를 주지 않아 회차마다 처음 본 값을 고정, 한번 정하면 바꾸지 않음):
           indexedAt = URL 검사가 처음 PASS인 회차 시각, firstCrawlAt = 그때의 lastCrawl(마지막 크롤링은 이후 바뀌므로 첫 값),
           firstImpressionAt = 웹 검색 노출이 처음 생긴 날짜(Search Console 날짜, 태평양 시간).
           앞의 두 값은 이전 posts 문서(--prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급)
+- traffic: (Cloudflare 환경변수가 있을 때만) 사이트 전체 실제 조회수 {range, views, visits, daily: [{date, views, visits}](UTC 날짜, 빠진 날 0),
+           referers: 유입 사이트별 28일 조회수·방문 상위 10 (자기 사이트·직접 방문은 'direct')}
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
              movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10)
 - experiments: {rows: traffic-playbook 검증 기록 표}
@@ -43,6 +47,7 @@ import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from gsc_report import API, POSTS_DIR, SITE_ORIGIN, call, load_token, search_analytics, site_path  # noqa: E402
+import cf_analytics  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
 
 EXPERIMENT = pathlib.Path(__file__).resolve().parents[1]
@@ -266,6 +271,23 @@ def main() -> None:
         url: [{'date': d, 'clicks': int(r['clicks']), 'impressions': int(r['impressions']), 'position': round(r['position'], 1)} for d, r in rows.items() if d >= since]
         for url, rows in page_dates.items()
     }
+    # 실제 조회수 (Cloudflare Web Analytics, UTC 날짜): 환경변수가 있을 때만. 실패해도 나머지 갱신은 계속
+    page_views: dict[str, dict[str, dict]] = {}
+    if cf_analytics.available():
+        try:
+            page_views = {SITE_ORIGIN + path: days for path, days in cf_analytics.page_views(dt.date.fromisoformat(since), today).items()}
+            docs['traffic'] = traffic_doc(page_views, dt.date.fromisoformat(since), today)
+        except Exception as error:  # noqa: BLE001 - 조회수는 부가 지표라 대시보드 갱신을 막지 않음
+            print(f'Cloudflare 조회수를 읽지 못함 (조회수 없이 진행): {error}', file=sys.stderr)
+    for url, days in page_views.items():
+        rows = {r['date']: r for r in page_daily.setdefault(url, [])}
+        for d, v in days.items():
+            if d < since:
+                continue
+            if d not in rows:
+                rows[d] = {'date': d, 'clicks': 0, 'impressions': 0, 'position': None}
+                page_daily[url].append(rows[d])
+            rows[d].update(v)
     # 순위 변화: 마지막 집계일까지 최근 7일 vs 직전 7일 (기간 합산 = 노출 가중 평균 순위)
     recent = (last_day - dt.timedelta(days=6), last_day)
     prev = (recent[0] - dt.timedelta(days=7), recent[0] - dt.timedelta(days=1))
@@ -283,7 +305,11 @@ def main() -> None:
         q = sorted(queries.get(url, []), key=lambda x: (-x['impressions'], -x['clicks']))[:10]
         sources = [{'key': t, 'clicks': int(rows[url]['clicks']), 'impressions': int(rows[url]['impressions'])} for t, rows in type_page.items() if rows.get(url, {}).get('impressions')]
         sources.sort(key=lambda x: (-x['impressions'], -x['clicks']))
-        return {'queries': q, 'daily': sorted(page_daily.get(url, []), key=lambda x: x['date']), 'sources': sources}
+        extra = {'queries': q, 'daily': sorted(page_daily.get(url, []), key=lambda x: x['date']), 'sources': sources}
+        if page_views:  # 조회수를 읽은 회차만 (없으면 화면이 조회수 칸을 숨김)
+            days = page_views.get(url, {}).values()
+            extra.update(views=sum(v['views'] for v in days), visits=sum(v['visits'] for v in days))
+        return extra
 
     cluster_rows, error = parse_clusters(CLUSTERS_FILE)
     if error:
@@ -398,6 +424,27 @@ def main() -> None:
     new = [w['doc_id'] for w in writes if w['collection'] == 'stats' and 'if_version' not in w]
     recorded = sum(w['collection'] == 'history' for w in writes)
     print(f'stats {len(writes) - recorded}개 + history {recorded}개 → {out.parent}/writes.json' + (f' (새 stats 문서: {", ".join(new)})' if new else ''))
+
+
+def traffic_doc(page_views: dict[str, dict[str, dict]], since: dt.date, today: dt.date) -> dict:
+    """사이트 전체 조회수 문서: 날짜별(빠진 날 0)·28일 합계·유입 사이트 상위 10 (유입 사이트 조회 실패는 빈 목록)"""
+    by_date: dict[str, dict] = {}
+    for days in page_views.values():
+        for d, v in days.items():
+            cell = by_date.setdefault(d, {'views': 0, 'visits': 0})
+            cell['views'] += v['views']
+            cell['visits'] += v['visits']
+    daily = [{'date': str(since + dt.timedelta(days=i)), **by_date.get(str(since + dt.timedelta(days=i)), {'views': 0, 'visits': 0})} for i in range((today - since).days + 1)]
+    try:
+        refs = cf_analytics.referers(since, today)
+    except Exception as error:  # noqa: BLE001
+        print(f'Cloudflare 유입 사이트를 읽지 못함: {error}', file=sys.stderr)
+        refs = []
+    return {
+        'range': {'start': str(since), 'end': str(today)},
+        'views': sum(r['views'] for r in daily), 'visits': sum(r['visits'] for r in daily),
+        'daily': daily, 'referers': refs,
+    }
 
 
 def history_writes(docs: dict[str, dict], out: pathlib.Path) -> list[dict]:

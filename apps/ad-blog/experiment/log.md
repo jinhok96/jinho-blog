@@ -27,10 +27,10 @@
 - `Our take`: The Browser Company는 2개월 예고·Dia 원클릭 이전을 주지만 다른 브라우저로 나가는 길은 링크 목록뿐 → 12-22 전에 표준 북마크·비밀번호 내보내기를 내놔야 함. 근거: Arc는 Chromium 기반(Chrome은 HTML 북마크 내보내기), 문서화된 경로가 Dia 전체 이전 vs 링크 목록, Arc의 "방문 사이트를 모름" 약속과 Dia의 콘텐츠 데이터 기본 공유. 반대 관점: 대부분 사이드바·Spaces 때문에 Arc를 썼고 Dia 무료 요금제에 AI 없이 그대로 있음, Dia가 AI 데이터 처리를 다른 브라우저보다 자세히 공개
 - 1차 출처: arc.net, resources.arc.net/hc/en-us/articles/44412972248471·44413577819159·44413129117591·25583851606039·22351623346327·25482329571479·19434846038935·19401542261911 + macOS·Windows 릴리스 노트(모두 10-22 갱신), diabrowser.com/plans·security·privacy(2026-04-09 시행)·release-notes/latest, support.google.com/chrome/answer/96816. 원문 `tests/arc-browser-shutting-down/source-*.txt`. Arc·Dia는 Mac·Windows 전용이라 직접 실행 못 함(본문 How we checked에 밝힘)
 - 쓰지 않은 것: 다른 브라우저의 Arc 직접 가져오기 지원(공식 문서로 확인 못 함), Arc 비밀번호 내보내기(Arc 문서에 없음), Arc Max가 무료였는지(문서 목록에 없음), 대안 브라우저 추천(보도 의견)
-- 이미지: HERO_PLACEHOLDER + 본문 4장(arc.net 일정 화면 캡처 + accent 상자·도움말에만 있는 날짜, 공식 일정 5개 타임라인, 데이터 종류별 행방 표, Dia 요금제·기본값, `charts.py` 라이트 모드). Dia 요금 페이지 화면은 Dia·연동 서비스 로고가 있어 캡처 대신 그래픽으로
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1646362721, 48.9분, 하늘색 배경 + 살구·포레스트 그린. 살구색·파란 브라우저 창 2개 사이에 열쇠가 든 이사 상자와 모래시계. 왼쪽 창이 흐려지지 않고 탭이 날아가지 않았고 시점이 정면에 가깝지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(arc.net 일정 화면 캡처 + accent 상자·도움말에만 있는 날짜, 공식 일정 5개 타임라인, 데이터 종류별 행방 표, Dia 요금제·기본값, `charts.py` 라이트 모드). Dia 요금 페이지 화면은 Dia·연동 서비스 로고가 있어 캡처 대신 그래픽으로
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-ai-in-chrome` (2개). 역링크: `gemini-gems-to-skills`(색인됨) 끝 관련 글 문단 뒤 1문장(2026 마감 주제), 허브 Chrome 절 HTTP 문단 끝 1문장, 칼럼 `chrome-http-warning-default` 마지막 문단 끝 1문장(같은 Chromium 엔진·보안 업데이트 중단) (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판정 전이라 손대지 않음
 - 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 64자·H1 일치, 설명에 주 검색어가 없어 155자로 고침, 첫 100단어에 주 검색어, 소제목 h2 7개, 이미지 alt·파일 이름, 받는 링크 3개, em dash 0). searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_PLACEHOLDER
+- 빌드 HTML 확인: title 76자(접미사 포함, 본제목 64자 → 피드형 75자 이내)·description 155자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
 
 **알게 된 것**
 

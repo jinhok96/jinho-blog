@@ -1,0 +1,106 @@
+# 가져온 시각: 2026-10-25T15:27:30.544Z
+# 원본: https://support.google.com/accounts/answer/185834?hl=en
+Fix common issues with 2-Step Verification - Google Account Help
+https://support.google.com/accounts/answer/185834?hl=en&ai1hc=1
+
+Fix common issues with 2-Step Verification
+My phone was lost or stolen
+We recommend you:
+Sign out of the lost or stolen phone.
+Change your Google Account password.
+You have several ways you can get back into your account, depending on your circumstances.
+Use backup options
+
+If you've lost access to your primary phone, you can verify it’s you with:
+
+Another phone signed in to your Google Account.
+Another phone number you’ve added in the 2-Step Verification section of your Google Account.
+A backup code you previously saved.
+A hardware security key you’ve added in the 2-Step Verification section of your Google Account.
+A passkey created on another device.
+Sign in from a trusted device
+If you previously signed in from a device and checked the box next to “Don’t ask again on this computer,” you might be able to sign in from that device without a second verification step. After you sign in to your Google Account, you can manage your verification methods.
+Get a new phone from your carrier
+If you lose your phone, you can ask your carrier to transfer your phone number to a new phone or SIM card.
+Recover your account
+If you can’t sign in, follow the steps to recover your account. If you're having trouble, try the tips to complete account recovery steps.
+My security key was lost or stolen
+Choose the right steps to get back into your account, based on if you set up another second step, like:
+Verification codes
+Google prompts
+Backup codes
+A backup security key you’ve added to your account
+A registered computer where you chose not to be asked for a verification code
+Important: If you added Advanced Protection to your account, you can only use a backup security key. If you don’t have a backup security key, follow the steps to recover your account.
+If you have another second step
+Sign in to your Google Account with your password and your other second step.
+Follow the steps to remove the lost key from your account.
+Get a new security key. You may want to get an extra key you can keep in a safe place.
+Add the new key to your account.
+If you don’t have another second step or forgot your password
+Important: 2-Step Verification requires an extra step to prove you own an account. Because of this added security, it can take 3-5 business days for Google to make sure it’s you.
+
+Follow the steps to recover your account. You'll be asked questions to confirm you own the account.
+
+Use these tips to answer as best you can.
+
+You may be asked:
+
+To enter an email address or phone number where you can be reached.
+To enter a code sent to your email address or phone number. This code helps make sure you can access that email address or phone number.
+My passkey was lost or stolen
+Lost or stolen device
+On a device you’re able to access, sign in to your Google Account.
+Remove the passkey associated with the lost or stolen device.
+Learn how to remove a passkey.
+Missing or unavailable passkey
+
+If you have passkeys on your account but aren't offered a passkey during sign-in, make sure that:
+
+The device with the passkey has the screen lock enabled.
+If your device's screen lock is disabled, you can’t use the passkey on that device until you enable the screen lock again.
+The "Skip password when possible" toggle is on in your security settings at myaccount.google.com/security.
+
+To sign in to your Google Account without a passkey, tap Try another way to skip the passkey challenge and go back to your earlier sign-in choices.
+
+Tip: If you choose "Try another way" often, Google will offer the passkey challenge less frequently in the future to reflect your implied preferences. You can change this by repeatedly signing in with passkeys.
+Require a security key as your second step
+If you turn on 2-Step Verification and sign in on an eligible phone, you can get Google prompts. To make a security key your required second step, enroll in Advanced Protection.
+Revoke lost backup codes
+If you lost your backup codes, you can revoke them and get new ones.
+Go to the 2-Step Verification section of your Google Account.
+Select Show codes.
+Select Get new codes.
+You didn't get a verification code
+You might have been sent a Google prompt instead. Learn why we recommend Google prompts instead of text message (SMS) verification codes.
+If we notice something different about how you sign in, like your location, you might not be able to get a verification code through text message.
+If a text message with a verification code was sent to your phone, make sure your service plan and mobile device supports text message delivery.
+Delivery speed and availability may vary by location and service provider.
+Make sure you have adequate internet connection when you try to get your codes.
+If you get a voice call with a verification code sent to your phone, you get a voicemail if:
+You can’t answer the call.
+You don’t have an adequate internet connection.
+
+Tips:
+
+If you requested multiple verification codes, only the newest one works.
+If you are trying to verify a new sign-in method, you must use an unphishable method like a trusted passkey or physical security key. You will not receive a verification code.
+An app doesn’t work after you turn on 2-Step Verification
+When you turn on 2-Step Verification, you may need to sign in to some apps again.
+
+Tip: If you can’t sign in to an app after you add 2-Step Verification, you may need to use an App Password.
+
+Why you shouldn’t use Google Voice to get verification codes
+If you use Google Voice to get verification codes, you could lock yourself out of your account.
+
+For example, if you sign out of your Google Voice app, you might need a verification code to get back in. But, because it’s sent to your Google Voice, you can’t get the code.
+
+Work, school, or other organization accounts
+If you use an account through your work, school, or other group that’s protected by 2-Step Verification, and you can’t sign in, you can:
+Use backup options.
+Contact your administrator.
+You can’t use a second step to sign in
+Use a device you marked as trusted and go to account recovery.
+I can’t sign in to my backup phone with text messages
+This can happen when there’s something different about how you sign in, like your location. You may need to move to your main phone, or another trusted device, to sign in to your backup phone.
+Give feedback about this article

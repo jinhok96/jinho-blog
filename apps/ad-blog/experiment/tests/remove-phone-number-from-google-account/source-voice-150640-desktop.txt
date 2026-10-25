@@ -1,0 +1,48 @@
+# 가져온 시각: 2026-10-25T15:28:11.524Z
+# 원본: https://support.google.com/voice/answer/150640?hl=en&co=GENIE.Platform%3DDesktop
+Delete your Google Voice number - Computer - Google Voice Help
+https://support.google.com/voice/answer/150640?hl=en&co=GENIE.Platform%3DDesktop
+
+Delete your Google Voice number
+If you choose to discontinue Google Voice, you can delete your number. You can also port your number out of Google Voice or transfer your number to a different Google Voice account. Learn how to port or transfer your personal number.
+
+Important:
+
+This feature operates differently based on the type of account you have. Learn more about Google Voice account types.
+If you have a Voice Starter standalone or Voice Standard standalone plan, you can delete numbers in the Google Admin console. Learn how to unassign or reassign a Voice number.
+You can only use credits for long-distance and international calls and texts.
+If you have a Voice Starter standalone or Voice Standard standalone subscription, you can’t purchase credits. Charges for long-distance and international paid calls and texts will appear on your monthly invoice.
+
+To make paid calls without a Google Voice subscription plan, buy credit from Google Voice.
+
+Delete your Google Voice number
+Important: After you delete your Google Voice number, you can only reclaim it within 90 days.
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+On your computer, open Google Voice.
+Sign in with the Google Account you used to register your number.
+At the top right, click Settings .
+On the left, click Account.
+Under “Google Voice number,” find the number you want to delete.
+Click Delete  Delete number.
+Reclaim your Google Voice number
+On your computer, open Google Voice.
+Sign in with the Google Account you used to delete your number.
+At the top right, click Settings .
+On the left, click Account.
+When you get the message “You don’t have a Google Voice number,” click Get a number. 
+Find the number you want to reclaim.
+Click Reclaim.
+To verify your number, follow the on-screen instructions.
+
+ 
+
+Related resources
+Change your Google Voice number
+Port or transfer your personal number
+
+ 
+
+Give feedback about this article

@@ -1,0 +1,27 @@
+# Arc for iOS & Android: Arc Search
+URL: https://resources.arc.net/hc/en-us/articles/25482329571479-Arc-for-iOS-Android-Arc-Search
+created_at: 2024-08-07T19:12:52Z updated_at: 2026-10-22T15:26:22Z edited_at: 2026-10-22T15:26:22Z
+fetched: 2026-10-25 UTC (Zendesk Help Center API)
+
+Arc is being sunset on December 22, 2026. On November 23, AI features turn off in Arc Search for iOS and Android, and you can no longer sign in or sync with Arc. Arc Search keeps working as a browser on iOS. On December 22, Arc Search for Android is removed from the Google Play Store and from the devices it's installed on. Please note that we will deactivate all Arc accounts on December 22. Once an account is deactivated, we will delete user personal data associated with the account within 30 days.
+ Arc Search keeps working as a mobile browser on iOS and Android, but some features are turning off as Arc is sunset. To see the full timeline, read Arc Sunset: Key Dates and What to Expect [https://resources.arc.net/hc/en-us/articles/44412972248471].
+ What's changing in Arc Search?
+- 
+ November 23, 2026: Browse for Me and other AI features turn off, and you can no longer sign in or sync with Arc. Arc Search keeps working as a browser.
+- 
+ December 22, 2026: Arc Search for Android is removed from the Google Play Store and from the devices it's installed on. Arc Search keeps working as a browser on iOS.
+ Call Arc has already been removed from Arc Search for iOS.
+ Will Browse for Me keep working?
+ Until November 23, 2026. On that date, Browse for Me and the other AI features in Arc Search turn off on iOS and Android. You can still search the web and browse as usual.
+ Can I still sync Arc Search with Arc on my computer?
+ Until November 23, 2026. If you already have an Arc account, you can sign in to Arc Search to see the Spaces, pinned tabs and Today tabs you've synced from Arc on your computer. As of November 23, signing in and syncing with Arc turn off, and new Arc accounts can no longer be created.
+ How do I save my open tabs?
+ On Android, tap the Tab Switcher (the stacked tabs button) in the bottom-left corner, tap Settings (⚙️), tap Storage , then tap Export data to share or copy a list of your open tabs. On iOS, tap the Tab Switcher icon in the bottom-left corner, tap Settings (⚙️), then tap Export Data . Browse for Me and Incognito tabs aren't included.
+ How do I clear my browsing history in Arc Search?
+ You can clear your browsing history in Arc Search for iOS and Android at any time. Tap the Tab Switcher (the stacked tabs button) in the bottom-left corner, tap Settings (⚙️) in the bottom-right corner, then tap Clear Browsing Data .
+ Is Arc Search available on Android?
+ Yes, until December 22, 2026, when Arc Search for Android is removed from the Google Play Store and from the devices it's installed on. If you already have it installed, you can keep using it as a browser until then.
+ Is there a Dia app for iPhone or Android?
+ Dia is available for macOS and Windows. Arc Search keeps working as a browser on iOS. To learn how to bring your Arc setup to Dia, read Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].
+ How do I get help with Arc Search?
+ Until December 22, 2026, simply select the chat button in the corner of this page, and we'll help you out. Please note that we're no longer accepting feedback or feature requests for Arc Search.

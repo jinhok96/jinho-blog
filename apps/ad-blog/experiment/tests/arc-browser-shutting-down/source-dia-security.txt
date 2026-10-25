@@ -1,0 +1,198 @@
+# Dia Browser | Security
+URL: https://www.diabrowser.com/security
+fetched: 2026-10-25 UTC (Chromium render innerText)
+
+What's New
+Apps
+Security
+Security
+Keeping Dia Secure
+The Browser Company Bounty Program
+FAQ
+Security Bulletin
+Keeping Dia Secure
+
+Your browser is your doorway to the internet—work, personal life, and everything in between. Keeping that doorway secure is core to how we design, build, and ship Dia.
+
+We’re a focused team that treats security as a product feature, not an afterthought. Our goal is simple: you shouldn’t have to worry that your data is being misused, mishandled, or sold.
+
+To make that concrete, here’s what we do and how we think about it:
+
+Outside security assessments
+
+We work with independent security firms to run regular audits of our products. Each year, we conduct full‑scope assessments and schedule point‑in‑time reviews for new or high‑risk features. These engagements include code reviews, architecture analysis, and exploit testing. When appropriate, we publish notable findings and fixes in our Security Bulletins.
+
+Browser engine
+Dia is built on Chromium—the same open‑source engine behind Chrome and Edge—so we inherit a battle‑tested foundation and the latest upstream security patches. We prioritize upgrades and keep Dia aligned with the newest Chromium releases and hotfixes on an aggressive cadence.
+
+List of Disabled Chromium Features
+
+Google Accounts Integration (GAIA) disabled
+Chromium won’t send requests for accounts on startup to accounts.google.com
+No syncing of Chromium profiles, cookies, passwords, bookmarks to Google via your Google account
+Google metrics (UMA) reporting is disabled
+Uploading settings after resetting profile is disabled
+Reporting Observers and Reporting API are disabled
+Network logging to file is disabled
+
+Infrastructure
+We restrict production access by role, log and review access regularly, and encrypt data at rest and in transit. We store as little personal data as possible, and we routinely audit what we collect to ensure it stays minimal and appropriate for the service.
+
+How to reach us
+If you have questions or see something we should look at, email help@diabrowser.com. If you’re a security researcher, our bug bounty program welcomes your reports
+
+The Browser Company Bounty Program
+
+At The Browser Company of New York, we care deeply about safeguarding the security and privacy of everyone who uses our products. We also recognize the security research community’s invaluable role in this mission. If you spot a vulnerability, we want to hear about it so we can make things right as soon as possible. Your work helps us build a safer, more secure browsing experience for all.
+
+Our Bug Bounty Program is ran through HackerOne. Please visit our HackerOne program page to review our program policy, scope, and to submit your findings.
+
+How to Submit your Research
+
+If you believe you’ve identified a security or privacy issue that affects BCNY products, services, or software, please submit it to us through our HackerOne program.
+
+FAQ
+Where does my data live?
+
+By default, your conversations, history, bookmarks, and files are encrypted and stored locally on your device. When you use Dia, the data needed to fulfill your request (such as your question and relevant context) is sent through our servers to trusted AI partners, who are contractually restricted from retaining or using your data to train their own models. Some features, like the Morning Brief, do this on their own to prepare information for you. Memory allows you to ask Dia about your previous activity. This is powered by summaries, created on our servers and stored locally on your device. Memory can be disabled in your Dia Settings at any time.
+
+When you enable Sync, your data is sent off your device and passes through our servers so that we can sync the data to another device of your choosing. This data is end-to-end encrypted, and our servers cannot read the data. Sync can be disabled in your Dia Settings at any time. Read more on our Privacy page: Privacy ↗
+
+Does Dia come with a built in ad-blocker?
+
+Yes. By default, all ads are blocked in Dia natively. No ads, no ad-based tracking. You can control the ad blocking settings at Dia > Settings > Privacy
+
+Do you sell my data?
+
+Your data is not for sale. We will never sell your personal data. Period. We use it only to help Dia provide the most accurate and helpful results. Unlike many of our competitors, Dia doesn’t collect your browsing data to build ad profiles.
+
+Is my data used for training?
+
+The partners we rely on for AI (Anthropic, OpenAI, Gemini, Azure, AWS) are contractually restricted from retaining and using your data to train their own models.
+
+By default, we use some content data to improve Dia. This content data isn’t tied to your account, is retained for 30 days, and then deleted. You can turn this off at any time in Settings. See our Privacy ↗ page for more details.
+
+We also train small models that run on your device, for tasks like choosing which AI provider to handle a request. We may use some content data to help improve and train these models. You can turn this off at any time in Settings, and organizations can disable it for everyone.
+
+Enterprises can disable content sharing org-wide.
+
+Why am I signing in with Atlassian?
+
+The Browser Company is part of Atlassian, and Dia now uses Atlassian to sign you in. When you sign up or log in, you’ll see a Dia‑branded sign‑in screen that uses Atlassian’s identity system. If you already use Dia, you’ll see this the next time you sign in.
+
+If your email is managed by an organization (like your employer), you’ll sign in through that organization’s existing login, and your account will be governed by that organization’s Atlassian settings.
+
+Logging in also helps us keep Dia’s AI features fast and available for everyone by managing how much traffic any single user can send to our systems.
+
+Which AI models do you use to power Dia’s AI features?
+
+Dia’s AI is built on top of the following models and providers: GPT (OpenAI Azure), Claude (Anthropic, Vertex, AWS), Gemini (Vertex). By default, we use some content data to improve Dia’s speed and accuracy. You can disable this by going to Settings → Privacy → Share content data to help improve Dia.
+
+What if I want to delete my chats, files, or history?
+
+When you clear your local chats, files, or history, they are removed from your device. If you choose to share content data with Dia, it is not associated with your account and deleted from our servers after 30 days.
+
+What happens to my data if I delete my account?
+
+When you delete your account, associated data is deleted within 30 days in accordance with our privacy policy. Previously submitted feedback or content data is retained separately and is not linked to your account. Analytics data is retained but no longer linked to your profile. If you have Sync enabled, your synced data will also be deleted from our servers as part of the account deletion process.
+
+Is Dia safe to use on sensitive sites like banking or healthcare portals?
+
+It depends on whose data is involved.
+
+Some of Dia’s AI features work by sending information to an outside AI service, including content from the pages you open and the actions you take. When you include a page in a request, or when a proactive feature like the Morning Brief builds a summary based on the pages you’ve viewed, Dia sends your prompt and the relevant page content to a third-party AI model (such as Anthropic, OpenAI, or Google). That company receives your information to generate a response, but is contractually restricted from keeping it or using it to train its models.
+
+For your own data and accounts, it’s your call. You decide your tolerance for using AI on your bank or personal health portal.
+
+Dia should not be used for work that involves PHI or other data you’re obligated to protect under a law like HIPAA (e.g. a clinician accessing patient records). Dia is not HIPAA-compliant and The Browser company does not offer a Business Associate Agreement (BAA). Organizations that need to block AI on specific sites can use MDM controls as an added safeguard.
+
+Separately, Dia makes a best-effort attempt to keep sensitive sites out of passive features like memory and out of the content data we use to improve Dia. That’s not a guarantee, and it doesn’t apply when you deliberately include a site in a request.
+
+Has Dia completed a SOC 2 Type II audit?
+
+Yes. The Browser Company completed a SOC 2 Type II examination for Dia covering security, confidentiality, and privacy for calendar year 2025. The final report was issued in 2026. To learn more about our compliance program and to request a copy, visit trust.diabrowser.com.
+
+Is Dia vulnerable to prompt injections?
+
+Prompt injections happen when a webpage or third party slips instructions into an assistant’s context, and the assistant follows those instructions instead of the user's instructions. All AI chat systems face this risk. Our stance is to assume prompt injections may occur and keep you safe through layered controls.
+
+Examples of these layered controls include:
+
+Dia won't automatically open or follow LLM‑generated URLs . Attackers often use generated links to exfiltrate data; we block this class of action.
+Dia won't allow tools beyond what you intend to use. Dia’s chat session starts with no access to other tabs or ability to take write actions. Your review is needed to grant access before the assistant can use anything with real-world effects.
+Dia won't insert data into third-party sites without your approval. For actions like “fill form” or “draft email,” Dia shows you the exact content first in a Dia-controlled view. You choose whether to proceed.
+Dia won't take irreversible actions on behalf of the user. Items like calendar events stay in draft until you click “Create.”
+Dia won't run agentic mode on unapproved context. When Dia drives your computer (e.g., replying to email), the assistant only sees what you saw and approved, limiting third-party influence.
+Dia won't let agentic mode navigate to other websites. To contain the blast radius of actions, the assistant is unable to navigate on its own to another website
+Dia won't expose sensitive elements to the agent. Web form fields like passwords and irreversible action buttons are invisible to the agentic system.
+Dia won't pass URLs to the LLM verbatim. Links can hide instructions; Dia filters those so they can’t influence the AI.
+What are the limits of prompt injection defenses?
+
+We design Dia’s features so that, even if a prompt injection occurs, the potential impact is contained. The web is adversarial and we are constantly researching and finding more ways to protect you while you use Dia.
+
+That said, prompt injections can still:
+
+Cause unexpected style or tone shifts (e.g., making the assistant “talk like a pirate”).
+Nudge content toward misinformation if a tab is treated as local “ground truth.” Context improves relevance, not universal correctness.
+Trigger unintended assistant actions, like searches or lookups you didn’t ask for.
+
+Our layered controls are designed to prevent the most harmful outcomes like sending your data to an attacker or taking actions you didn’t approve, but no defense is perfect. We recommend reviewing the assistant’s responses carefully, especially when working with untrusted content.
+
+Practical tips to reduce prompt‑injection risk:
+
+Be specific about what you want the assistant to do, and review its actions before approving.
+Be cautious when asking the assistant to work with content from unfamiliar or untrusted sources.
+Review the assistant’s responses carefully, especially when the output will be shared or acted on.
+Does Dia retain flagged AI content or “misuse” data, and why?
+
+We sometimes keep a small set of AI-related data, if it helps with security or compliance. Think content moderation flags, suspected misuse (like trying to get the model to do something dangerous), or prompt‑injection and safety‑violation events. This data is only kept as long as we need to detect, investigate, and prevent abuse, meet legal obligations, and make Dia safer. It’s access‑controlled, used only for security and compliance, and never used to train models. When it’s no longer needed for those purposes, we delete it according to our policies.
+
+How does Dia apply Chromium Patches?
+
+Dia follows a strict patching schedule to keep you secure:
+
+Weekly updates: Dia releases every Thursday with the latest stable version of Chromium that Google has shipped to users.
+Critical security fixes: When Google releases a patch for a critical vulnerability, Dia publishes the fix to production within 48 hours.
+
+This means Dia stays current with Google Chrome's security updates while maintaining our weekly release cadence.
+
+Does Dia support MDM controls?
+
+Yes. Dia supports standard Chromium enterprise policies, including Google Chrome Cloud Management, and also provides Dia-specific MDM policies that let you disable all AI-powered features on specific websites.
+
+Dia makes it easy for your IT team to be managed and deployed.
+
+Does Dia support Single Sign On (SSO)?
+
+Yes. Dia supports SAML-based SSO with most identity providers, including Google, Okta, Microsoft Entra ID, and more. You can also use Dia’s MDM policies to restrict sign-ins to approved email domains, ensuring only your employees can access Dia securely.
+
+Does the Atlassian acquisition change how my data is handled?
+
+The Browser Company is part of Atlassian, and Dia uses Atlassian services for account sign-in and identity. Dia continues to operate under its own privacy policy, which describes how your data is handled. See https://diabrowser.com/privacy for the latest details.
+
+PRODUCT
+FOR WORK
+RELEASE NOTES
+CHANGELOG
+WINDOWS
+RESOURCES
+HELP
+STATUS
+PRIVACY
+TERMS OF USE
+SECURITY
+TRUST CENTER
+COMPANY
+ABOUT US
+CAREERS
+NEWSLETTER
+EARLY BIRDS PROGRAM
+CONNECT
+X
+LINKEDIN
+INSTAGRAM
+COPYRIGHT
+© 2026
+
+DESIGNED AND BUILT BY
+THE BROWSER COMPANY OF NEW YORK

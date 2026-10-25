@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-26 · 세션 51 (정기 실행, 뉴스 세션 · 영향): Arc 브라우저 12-22 종료와 Dia 이전
+
+세션 시각: 2026-10-26 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(f8a4577)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-27 ~ 10-25, 세션 50 이후 바뀐 값만)**
+
+- 노출 647 → **676**, 클릭 10, CTR 1.5%, 평균 순위 22.4 → 22.0
+  - `spotify-family-qr-code-verification` 190 → **213 (14.7 → 14.1위)**, 클릭 0 (V4 제목 교체 뒤 아직 크롤링 전, 마지막 크롤링 10-20) / `turn-off-ai-in-chrome` 134 (13.9) / `image-to-text-offline-free` 75 → 76 (14.3 → 14.2) / `transcribe-audio-offline-free` 66 (54.6)
+- URL 검사: 색인 17편 그대로 (마지막 새 크롤링 10-20). `URL is unknown` 25편(세션 50 새 글 포함) → 색인율 17/42 (40%), 새 글 포함 17/43
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 50과 같은 3건 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글, `pixel-watch-safety-signal-ending` 받는 링크 1개). 새 글 문제 없음
+- 주간 SEO 점검 보고: 아직 없음 (첫 실행 10-26 08:45, 이 세션 뒤)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `arc-browser-shutting-down` | `news` | `ai-settings` 뉴스 칼럼 (영향, 피드형) | Arc Help Center 문서 10개(Zendesk API 원문) + arc.net 작별 페이지 + Dia 요금·보안·개인정보 페이지 대조. 상위 보도에 없던 것: **12-15 계정 데이터 요청 마감**(도움말에만), Arc 내보내기가 북마크 파일이 아닌 `Arc Data Export.md` 링크 목록(→ Chrome 북마크 가져오기로 못 읽음), Easels·Boosts·결제 수단·자동 완성은 Dia로 안 옴, **Dia 요금 페이지가 Better Answers를 카드 $10·FAQ $20으로 다르게 표기**, 새 사용자는 $100 요금제 14일 체험, Dia 콘텐츠 데이터 공유 기본 켜짐(`Settings > Privacy > Share content data to help improve Dia`), Arc 개인정보 문구("방문 사이트를 모름") vs Dia 방침("방문한 페이지"를 콘텐츠 데이터로). 데이터 종류별 행방 표, 공식 일정 5개 타임라인, arc.net 일정 화면 캡처 |
+
+- 선정 근거: 48시간 안 공식 발표 중 기준을 넘는 화제 뉴스 없음(10-24~25 주말) → 영향 뉴스. Google News 7일 `Arc browser shut down` 39건(10-22 The Verge·TechCrunch·9to5Mac·How-To Geek → 10-25 The Verge 대안 브라우저 글), 48시간 `Arc browser` 14건. 자동완성 `arc browser` 23개(`alternative`·`windows` 3곳, `sunset` Google·YouTube), `arc browser shutting down` Google·Bing, `dia browser` 24개(`vs arc`·`pricing`). Trends 미국 7일 `arc browser` 4.5(최고 50) · `dia browser` 5.0(최고 93) · `instagram apple tv` 0.0 · 기준 `remove background` 65.9 → 피드형
+- 제외한 48시간 후보: Instagram Apple TV 앱(45건, Trends 0.0, 독자 행동이 설치뿐), Gmail Gemini 새 기능·Chrome 탭 기능 3가지(Mashable 10-24, 공식 발표 미확인), Windows Outlook 접속 문제(3건), Capcom 유출(분야 밖), YouTube·Meta 배심 평결(소송)
+- 주 검색어: `arc browser shutting down`. 제목 `Arc Browser Is Shutting Down December 22 and Moving Users to Dia`(64자, 피드형), 설명 155자(주 검색어 포함)
+- `Our take`: The Browser Company는 2개월 예고·Dia 원클릭 이전을 주지만 다른 브라우저로 나가는 길은 링크 목록뿐 → 12-22 전에 표준 북마크·비밀번호 내보내기를 내놔야 함. 근거: Arc는 Chromium 기반(Chrome은 HTML 북마크 내보내기), 문서화된 경로가 Dia 전체 이전 vs 링크 목록, Arc의 "방문 사이트를 모름" 약속과 Dia의 콘텐츠 데이터 기본 공유. 반대 관점: 대부분 사이드바·Spaces 때문에 Arc를 썼고 Dia 무료 요금제에 AI 없이 그대로 있음, Dia가 AI 데이터 처리를 다른 브라우저보다 자세히 공개
+- 1차 출처: arc.net, resources.arc.net/hc/en-us/articles/44412972248471·44413577819159·44413129117591·25583851606039·22351623346327·25482329571479·19434846038935·19401542261911 + macOS·Windows 릴리스 노트(모두 10-22 갱신), diabrowser.com/plans·security·privacy(2026-04-09 시행)·release-notes/latest, support.google.com/chrome/answer/96816. 원문 `tests/arc-browser-shutting-down/source-*.txt`. Arc·Dia는 Mac·Windows 전용이라 직접 실행 못 함(본문 How we checked에 밝힘)
+- 쓰지 않은 것: 다른 브라우저의 Arc 직접 가져오기 지원(공식 문서로 확인 못 함), Arc 비밀번호 내보내기(Arc 문서에 없음), Arc Max가 무료였는지(문서 목록에 없음), 대안 브라우저 추천(보도 의견)
+- 이미지: HERO_PLACEHOLDER + 본문 4장(arc.net 일정 화면 캡처 + accent 상자·도움말에만 있는 날짜, 공식 일정 5개 타임라인, 데이터 종류별 행방 표, Dia 요금제·기본값, `charts.py` 라이트 모드). Dia 요금 페이지 화면은 Dia·연동 서비스 로고가 있어 캡처 대신 그래픽으로
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-ai-in-chrome` (2개). 역링크: `gemini-gems-to-skills`(색인됨) 끝 관련 글 문단 뒤 1문장(2026 마감 주제), 허브 Chrome 절 HTTP 문단 끝 1문장, 칼럼 `chrome-http-warning-default` 마지막 문단 끝 1문장(같은 Chromium 엔진·보안 업데이트 중단) (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판정 전이라 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 64자·H1 일치, 설명에 주 검색어가 없어 155자로 고침, 첫 100단어에 주 검색어, 소제목 h2 7개, 이미지 alt·파일 이름, 받는 링크 3개, em dash 0). searchfit-seo 스킬은 이번 세션에 없음
+- BUILD_PLACEHOLDER
+
+**알게 된 것**
+
+- resources.arc.net(Zendesk 도움말)은 일반 페이지가 Cloudflare 확인 화면이지만 Help Center API(`/api/v2/help_center/en-us/articles.json`, `/articles/{id}.json`)는 curl로 원문·수정 시각까지 받힘 → Zendesk 기반 도움말은 API를 먼저 시도 (Discord 도움말 세션 12와 같은 방식)
+- diabrowser.com/help는 본문이 비어 있고(JS 위젯), 요금·보안·개인정보 페이지는 curl로 받힘. 요금 페이지는 카드와 FAQ의 가격이 달라(Better Answers $10 vs $20) 같은 페이지 안에서도 대조할 가치가 있음
+- 주말(토·일 UTC)에는 공식 피드 발표가 거의 없어 06시 뉴스 세션은 영향 뉴스로 대체될 가능성이 큼
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 25편 + 새 글 중 우선 허브 `turn-off-ai-features`·`best-free-pdf-tools`, 새 글 `arc-browser-shutting-down`·`remove-phone-number-from-google-account`·`google-phone-number-verification`·`turn-off-meta-ai-instagram`, `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`google-gmail-photos-ads`, `remove-bg-alternative-free`
+- Claude(다음 개선 세션): 첫 주간 SEO 점검(10-26 08:45) 우선순위 확인. 색인율 50%를 넘으면 `photo-video` 허브. 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off galaxy ai`·`turn off gemini apps activity`·`google personal intelligence settings`, 이번에 올린 `dia browser ai privacy`·`turn off ai in adobe acrobat`(3곳 확인 필요)
+- Claude: Arc 일정 변경·북마크/비밀번호 내보내기 추가·Dia Better Answers 가격 정리·Windows 유료 전환 시 `arc-browser-shutting-down` 갱신(`updatedAt`). 11-23(Arc Search AI 종료)·12-15·12-22 전후 재확인. H4 판정(11-22 이후): `gsc_report.py --compare /posts/arc-browser-shutting-down --changed 2026-10-25 --metric impressions --type discover`. H5 영향 칼럼 9편째(화제 7편)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 43편
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 10·방문 8) + `history` 기록(batch, 회차 2026-10-25T21:38:57Z, DB 문서 88개, 스크래치패드 경로). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-26 · 세션 50 (정기 실행, 일반 세션): Google 계정에서 전화번호 지우기
 
 세션 시각: 2026-10-26 00:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(b2cbde4)에서 다시 시작.

@@ -1,0 +1,114 @@
+# Chrome Help: Import Chrome bookmarks & settings
+URL: https://support.google.com/chrome/answer/96816?hl=en
+fetched: 2026-10-25 UTC (curl)
+
+Import Chrome bookmarks & settings - Google Chrome Help - - - - Skip to main content 
+ Google Chrome Help 
+ Sign in 
+ Google Help 
+ - Help Center
+ - Community
+ - Google Chrome
+ - Privacy Policy
+ - Terms of Service
+ - Submit feedback
+ Send feedback on...
+This help content & information 
+General Help Center experience 
+ Close Next 
+ - Help Center 
+- Community 
+ Google Chrome 
+ Import Chrome bookmarks & settings
+ You can switch browsers without losing your settings and bookmarks for your favorite websites. Depending on the browser, your settings can include the following info:
+ - Browsing history
+ - Default homepage
+ - Bookmarks
+ - Default search engines
+ - Saved passwords
+ Add bookmarks to Chrome
+ To import bookmarks from most browsers, like Firefox or Safari, follow that browser's instructions to save or export bookmarks as an HTML file, then:
+ - On your computer, open Chrome.
+ - At the top right, select More Bookmarks and lists Import bookmarks and settings .
+ - Select Choose file .
+ - Choose a file and select Open Done .
+ Tip: You can import passwords from other apps with Google Password Manager on Chrome. Learn how to import passwords with Chrome .
+ On a Chromebook
+ Important: 
+ - If you haven't created any bookmarks in Chrome , the bookmarks show up in the bookmarks bar.
+ - If you already have bookmarks in Chrome , the bookmarks are in a new folder labeled "Imported."
+ - Open Chrome.
+ - At the top right, select More     Bookmarks and lists   Bookmark manager .
+ - At the top left, click Organize .
+ - From the drop-down menu, select Import Bookmarks from HTML file .
+ - Upload the saved HTML.
+ Open your bookmarks
+ - At the top right, select More Bookmarks and lists Bookmark manager .
+ - If you already had bookmarks in Chrome, find a new folder named "Other bookmarks."
+ Tip: You can also reorder, edit, and delete your bookmarks in the side panel.
+ How bookmarks are imported
+ If you didn't have any bookmarks in Chrome, the imported bookmarks appear in the bookmarks bar.
+ If you already have bookmarks in Chrome, the imported bookmarks are added to the "Other bookmarks" folder at the end of the bookmarks bar.
+ Learn more about the bookmarks bar .
+ Move or export bookmarks to another browser
+ If you decide to use a different browser, you can take your Chrome bookmarks with you.
+ - On your computer, open Chrome.
+ - At the top right, select More Bookmarks and lists Bookmark Manager .
+ - At the top, select More Export Bookmarks .
+ Chrome exports your bookmarks as an HTML file. Use this file to import your bookmarks into another browser.
+ Related resources
+ - Get your bookmarks, passwords, and more on all your devices 
+ - Manage Chrome Side panel 
+ - Read pages later and offline 
+ Was this helpful?
+ How can we improve it?
+ Yes No 
+ Submit 
+ Need more help?
+ Try these next steps:
+ Post to the help community Get answers from community members 
+ true
+ Help 
+ - 1 of 9
+ Import Chrome bookmarks & settings 
+- 2 of 9
+ Create a shortcut for Chrome 
+- 3 of 9
+ Manage Chrome with multiple profiles 
+- 4 of 9
+ Set your homepage and startup page 
+- 5 of 9
+ Create, find and edit bookmarks in Chrome 
+- 6 of 9
+ Get your bookmarks, passwords, and more on all your devices 
+- 7 of 9
+ Browse Chrome as a guest 
+- 8 of 9
+ Change the address bar’s position 
+- 9 of 9
+ Learn about third-party sign-in 
+ ©2026 Google - Privacy Policy 
+ - Terms of Service 
+ Language Afrikaans‎ català‎ dansk‎ Deutsch‎ eesti‎ English (United Kingdom)‎ español‎ español (Latinoamérica)‎ Filipino‎ français‎ hrvatski‎ Indonesia‎ isiZulu‎ italiano‎ Kiswahili‎ latviešu‎ lietuvių‎ magyar‎ Melayu‎ Nederlands‎ norsk‎ polski‎ português‎ português (Brasil)‎ română‎ slovenčina‎ slovenščina‎ suomi‎ svenska‎ Tiếng Việt‎ Türkçe‎ čeština‎ Ελληνικά‎ български‎ русский‎ српски‎ українська‎ ‏ עברית ‏ العربية ‏ فارسی मराठी‎ हिन्दी‎ తెలుగు‎ ไทย‎ አማርኛ‎ 中文（简体）‎ 中文（繁體）‎ 日本語‎ 한국어‎ English‎ Enable Dark Mode
+ Send feedback on...
+ This help content & information General Help Center experience 
+ Search
+ Clear search
+ Close search
+ Google apps
+ Main menu
+ 14872579252261997277
+ true
+ Search Help Center
+ false
+ true
+ true
+ true
+ true
+ true
+ 237
+ false
+ false
+ false
+ false
+ false

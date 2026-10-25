@@ -1,0 +1,191 @@
+# Dia Privacy Policy
+URL: https://www.diabrowser.com/privacy
+fetched: 2026-10-25 UTC (curl)
+
+- - - - - - Dia Browser Privacy Policy - - - 
+ - What's New 
+- Apps 
+- Security 
+ Watch the trailer video 
+ - What's New 
+- Apps 
+- Security 
+ Privacy
+ - Privacy Policy Intro 
+- What does this Privacy Policy cover? 
+- What is personal data? 
+- How we may disclose your personal data 
+- Cookies 
+- Data security 
+- Data retention 
+- Personal data from children 
+- U.S. State Privacy Rights 
+- Exercising your rights under U.S. State Privacy Laws 
+- European data subject rights 
+- Contact information 
+ Privacy Policy Intro
+ Effective date: April 9, 2026
+ At The Browser Company, we take your privacy seriously and built Dia for people with privacy in mind. This policy explains how we handle personal data. A heads up that by using or accessing Dia, you are agreeing to the practices and policies outlined below, and letting us collect, use and share your information as described in this Privacy Policy. 
+ This Privacy Policy applies to the use of Dia and is incorporated into Dia’s Terms of Use. Any terms we use in this Policy without defining them have the definitions given to them in Dia’s Terms of Use .
+ You may print a copy of this Privacy Policy by clicking here .
+ We’re always working to make Dia better, which means this Privacy Policy might change from time to time. When it does, we’ll let you know of any material changes by placing a notice on our website, an email, and/or by some other means. If you’ve opted out of receiving these emails (or never gave us your email address), those legal notices will still apply, and you’re still responsible for reading and understanding them. By continuing to use Dia after we post changes, you’re agreeing to the updated policy.
+ What does this Privacy Policy cover?
+ This Privacy Policy covers how we handle personal data that we gather when you use Dia. Generally, “personal data” means any information that identifies or relates to you. Please note that this Privacy Policy does not cover the practices of companies we don’t own or control or people we don’t manage.
+ What is personal data?
+ Categories of personal data we may collect or process 
+ The personal data you provide, including:
+ - Account or contact data , like your email address, Dia login credentials, or other account-related information. We collect this information to provide you with Dia and so we can stay in touch.
+- Payment data, like payment card type, last 4 digits of payment card, and billing address, phone number and email. We collect this information to provide you with paid features of Dia (including Dia Pro), if you choose to receive such feature. Payment data is predominantly processed by our payment processor, Stripe, Inc. (“Stripe”).
+- Content data , like the pages you visit using Dia and queries submitted to and responses created by the Dia Assistant feature, and other “User Content” as described in the Terms of Use . We process this information to provide you with Dia. If you enable Sync, all User Content will be sent off your device and processed by our servers in order to provide the Sync feature; this data will be encrypted end-to-end and will not be processed or stored in a readable format on our servers.
+- Skills data related to Skills that you create, submit to, share or use through Dia, such as the name, prompt, descriptions, image, and unique URL associated with the Skill. We collect this information to provide you with Dia, improve Dia, and to stay in touch with you. You can find more information in the “Skill data” section below.
+- Feedback and other information you provide , like feedback you provide about responses from Dia Assistant, information we process when you initiate a performance report through Dia’s “Record a Trance” function, or other information you provide in emails, surveys, or other communications you send us. We collect this information to provide you with Dia, improve Dia, and to stay in touch with you.
+ Personal data regarding your use of Dia, including:
+ - Feature usage data , like activity logs or event-based information regarding your use of Dia including the product features you use and when you use them. This information will be collected automatically when you use Dia to provide you with Dia, improve Dia, and to stay in touch with you.
+- IP/device data , like your IP address, IP address-location data, device-related data such as your device ID, and the kind of device or operating system used to access Dia. This information will be collected automatically when you use Dia to provide you with Dia.
+ How we use and process personal data
+ - To provide you with Dia - Creating and managing your account or other user profiles.
+- Processing your purchase of any paid features of Dia.
+- Providing you with Dia or other related services or information you request.
+- Meeting or fulfilling the reason you provided the information to us.
+- Providing support and assistance for Dia.
+- Personalizing Dia or our communications based on your preferences.
+- Doing fraud protection, security and debugging.
+- Carrying out other business purposes stated when collecting your personal data or as otherwise set forth in applicable data privacy laws, such as the comprehensive consumer privacy laws applicable in California, Colorado, Connecticut, Delaware, Iowa, Minnesota, Montana, Nebraska, Oregon, Texas, New Hampshire, New Jersey, Tennessee, Utah, and Virginia (collectively, the “U.S. State Privacy Laws”).
+- To improve Dia - Improving Dia, including testing, research, internal analytics and product development. We may also collect and use your Content to improve Dia, unless you opt out. 
+- To stay in touch - Replying to your messages and support requests, and sending you information related to your use of Dia or other Browser-related updates.
+- Sending you other updates or news about The Browser Company (only if you’ve given us permission) and our other offerings.
+ Other permitted ways we may use your personal data 
+ In addition, each of the above referenced categories of personal data listed above may be collected, used, and shared with the government (including law enforcement) or other parties, to meet and enforce our terms. This includes: fulfilling our legal obligations under applicable law, regulation, court order or other legal process, such as preventing, detecting and investigating security incidents and potentially illegal or prohibited activities; protecting the rights, property or safety of you, The Browser Company or another party; enforcing any agreements with you; responding to claims that any posting or other content violates someone else’s rights; and resolving disputes.
+ We will not collect additional categories of personal data or use the personal data we collected for other, unrelated or incompatible purposes without first letting you know or getting your permission.
+ How we may disclose your personal data
+ We will only disclose your personal data to the following parties:
+ - Service providers. These trusted partners help us provide Dia and support our business. They include: - Hosting, technology and communication providers.
+- Analytics providers that help us analyze usage of Dia.
+- Security and fraud prevention consultants.
+- Support and customer service vendors.
+- Payment processors. - Our payment processing partner, Stripe, Inc. (“Stripe”) collects your voluntarily-provided payment card information necessary to process your payment.
+- Please see Stripe’s terms of service and privacy policy for information on its use and storage of your Personal Data.
+- Parties you authorize. - Third parties you engage with or otherwise access through Dia.
+- Third parties you otherwise authorize (including the public, as described in the “Skills data” paragraph below).
+- Organization administrators. If you register or access the Services using an email address with a domain that is owned by your employer or organization, and your organization has connected that domain to Dia through an identity provider, Account and Contact Data such as name and email address may become accessible to administrators of that organization. Content Data is not accessible to that organization’s administrator at this time. Organization administrators may enable or disable features for all users using an email address for a connected domain.
+ Skills data 
+ When you share a Skill in Dia, you will be provided with a URL or other mechanism to share that Skill with others in accordance with our Terms of Use . Shared Skills will then live on our servers in an unmodified state. If you choose to share a Skill to the Skills Gallery , certain Skills data will be made publicly available.
+ Legal obligations 
+ We may disclose any personal data that we collect with third parties when it is required for any reason listed in the “Other permitted reasons to process personal data” section above.
+ Business transfers 
+ Any personal data we collect may be transferred to a third party if we undergo a merger, acquisition, bankruptcy or other transaction in which that third party assumes control of our business (in whole or in part).
+ Data that is not considered personal data 
+ We may create aggregated, de-identified, or anonymized data from the personal data we collect. We would do so by removing information that makes the data personally identifiable to a particular user. We may use such aggregated, de-identified, or anonymized data and disclose it with third parties for our lawful business purposes, including to analyze, build, and improve Dia and promote our business, provided that we will not disclose such data in a manner that could identify you.
+ Cookies
+ Dia’s website may use certain cookies and similar technologies – like pixel tags, web beacons, clear GIFs and JavaScript (collectively, “Cookies”) – to power certain features of the website. Because of how these features rely on Cookies, we do not support “Do Not Request” requests at this time. Disabling Cookies may affect how certain features and services function. Want to learn more about how to manage and delete Cookies? Please visit http://www.allaboutcookies.org/ or https://ico.org.uk/for-the-public/online/cookies/ if you are located in the European Union.
+ Data security
+ We work to protect your personal data from unauthorized access, use, and disclosure by using appropriate physical, technical, organizational, and administrative security measures. These measures vary based on the type of personal data and how it is being processed. You should also help protect your data by appropriately selecting and protecting your password and/or other sign-on mechanism; limiting access to your computer or device and browser; and signing off after you have finished accessing your account. Although we work to protect the security of your account and other data that we hold in our records, please be aware that no method of transmitting data over the internet or storing data is completely secure.
+ Data retention
+ We keep personal data for as long as necessary to provide you with Dia, to perform our business, or commercial purposes for collecting your personal data. When deciding how long to retain specific types of data, we consider who the data came from, whether we need it, why we collected the personal data, and how sensitive it is. We may keep personal data for longer, if needed to meet with legal obligations, resolve disputes, collect fees owed, or as otherwise allowed or required by applicable law. We may also retain information in an anonymous, de-identified, or aggregated form where that information would not identify you personally. 
+ For example:
+ - We retain your profile information and credentials for as long as you have an account with us.
+- We retain your IP/device data for as long as we need it to ensure that our systems are working appropriately, effectively and efficiently.
+- We retain your payment data for as long as we need to process your purchase or subscription.
+- We retain certain Skills data for as long as we need to prevent, detect, and investigate potentially illegal or prohibited activities.
+ Personal data from children
+ As noted in the Terms of Use, we do not knowingly collect or solicit personal data from children under 18 years of age. If you are a child under the age of 18, please do not attempt to register for or otherwise use Dia or send us any personal data. If we learn we have collected personal data from a child under 18 years of age, we will delete that information as quickly as possible. If you believe this has happened, please contact us at help@diabrowser.com .
+ U.S. State Privacy Rights
+ If you reside in certain U.S. states such as California, Colorado, Connecticut, Delaware, Iowa, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Tennessee, Texas, Utah, and Virginia you may have certain rights afforded to you (as described below) depending on your state of residence. Please see the ‘Exercising Your Rights under U.S. State Privacy Laws’ section below for instructions regarding how to exercise these rights. Please note that we may process personal data of our customers’ end users or employees in connection with our provision of certain services to our customers. If we are processing your personal data as a service provider, you should contact the entity that collected your personal data in the first instance to address your rights with respect to such data. Please note that your rights may be subject to certain conditions or exceptions, including as otherwise described to you, in accordance with applicable U.S. State Privacy Laws.
+ If you have any questions about this section or whether any of the following rights apply to you, please contact us at help@diabrowser.com .
+ - Access: You may have the right to ask for confirmation of or access to the personal data that we process about you. You can also request access to a portable copy of your personal data. If you are an Oregon resident or Minnesota resident, you also have the right to request a list of specific third parties, other than natural persons, we’ve shared your personal data with.
+- Deletion: You may have the right to ask us to delete the personal data we have collected about you. You can delete your Dia account within your account Settings.
+- Correction: You may have the right to ask that we correct any inaccurate personal data we have collected about you.
+- Portability: You may have the right to ask for a copy of your personal data in a machine-readable format, to the extent technically feasible.
+ “Selling,” “sharing,” or “targeted advertising”
+ We do not sell, share, or process your personal data for the purposes of targeted advertising, and have not done so over the last 12 months.
+ Sensitive personal data
+ If you provide personal data that may be deemed “sensitive” under certain U.S. State Privacy Laws (“Sensitive Personal Data”) to Dia, we will not process that information to infer characteristics about you or any other person. We will only process sensitive personal data to provide the particular service or to help with the related request, or if you are a California resident, another permitted purpose set forth in 7027(m) of the regulations California Consumer Privacy Act.
+ Anti-discrimination
+ We will not discriminate against you for exercising your rights under applicable privacy laws. We will not deny you access to Dia, charge you different prices, or provide you a lower quality of goods and services because you chose to exercise your rights under applicable privacy laws. However, we may offer different versions or tiers of Dia at different prices or service level as allowed by applicable data privacy laws in relation to the value of personal data that we receive from you.
+ Other state-specific privacy rights
+ Under California Civil Code Sections 1798.83-1798.84, California residents can contact us to prevent disclosure of personal data to third parties for such third parties’ direct marketing purposes. However, we do not make any such disclosures.
+ If you are a resident of Nevada, you have the right to opt-out of the sale of certain personal data to third parties. We do not currently sell your personal data as sales are defined in Nevada Revised Statutes Chapter 603A.
+ Exercising your rights under U.S. State Privacy Laws
+ To exercise the rights described in this Privacy Policy, you or your authorized agent (if applicable and as defined below), must send us a request that (1) includes sufficient information to allow us to verify that you are the person about whom we have collected personal data (such as your account or contact data), and (2) clearly describes your request, so we can understand, evaluate, and respond to it. Each request that meets both of these criteria will be considered a “valid request.” We may not respond to requests that do not meet these criteria. We will only use personal data provided in a valid request to verify your identity and complete your request. You do not need an account to submit a valid request, however, you can delete your Dia account within your account Settings.
+ We aim to respond to your valid request within the time period required by applicable U.S. state privacy laws. We will not charge you a fee for making a valid request unless your request(s) is excessive, repetitive or manifestly unfounded. If a fee applies, we’ll let you know before proceeding.
+ You may submit a valid request to delete your Dia account within your account Settings, and submit all other valid requests by emailing us at help@diabrowser.com .
+ If you are a California, Colorado, Connecticut, Delaware, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, or Texas resident, you may also authorize an agent (an “authorized agent”) to exercise your rights on your behalf. To do this, you must provide your authorized agent with written permission to exercise your rights on your behalf, and we may request a copy of this written permission from your authorized agent when they make a valid request on your behalf.
+ Appealing a denial
+ If you live in Colorado, Connecticut, Delaware, Iowa, Maryland, Minnesota, Montana, Nebraska, New Hampshire, New Jersey, Oregon, Tennessee, Texas, or Virginia and we refuse to take action on your valid request within a reasonable period of time after receipt in accordance with this section, you may appeal our decision. In such appeal, you must (1) provide sufficient information to allow us to verify that you are the person about whom the original valid request pertains and to identify the original valid request, and (2) provide a description of your appeal. Please note that your appeal will be subject to your rights and obligations afforded to you under the U.S. State Privacy Laws (as applicable). We will respond to your appeal within the time period required under the applicable law. You can submit a valid request to appeal by the emailing us at: help@diabrowser.com (title must include “[STATE OF RESIDENCE] Appeal”)’
+ If we deny your appeal, you have the right to contact the Attorney General of your state, including by the following links: Colorado , Connecticut , Delaware , Iowa , Maryland , Minnesota , Montana , Nebraska , New Hampshire , New Jersey , Oregon , Tennessee , Texas , and Virginia .
+ European data subject rights
+ If you live in the European Union (“EU”), United Kingdom (“UK”), Lichtenstein, Norway or Iceland, you may have additional rights under the EU or UK General Data Protection Regulation (the “GDPR”) with respect to your personal data, as outlined below.
+ For this section, we use the terms “personal data” and “processing” as they are defined in the GDPR, but “personal data” generally means information that can be used to individually identify a person, and “processing” generally covers actions that can be performed in connection with data such as collection, use, storage and disclosure. The Browser Company will be the controller of your personal data processed in connection with Dia.
+ If there are any conflicts between this section and any other section of this Privacy Policy, the policy or portion that is more protective of personal data shall control to the extent of such conflict. If you have any questions about this section or whether any of the following applies to you, please reach out at help@diabrowser.com .
+ Personal data use and processing grounds
+ The “How we use your personal data” section above explains how we use your personal data.
+ We will only process your personal data if we have a lawful basis for doing so. Lawful bases for processing include consent, contractual necessity and our “legitimate interests” or the legitimate interest of others, as further described below.
+ - Contractual necessity: We process the following categories of personal data as a matter of “contractual necessity”, meaning that we need to process the data to perform under our Terms of Use with you, which enables us to provide you with Dia. When we process data due to contractual necessity, failure to provide such personal data will result in your inability to use some or all portions of Dia that require such data. - Account or contact data
+- Content data
+- Skills data
+- IP/device data
+- Feature usage data
+- Payment data
+- Legitimate Interest: We process the following categories of personal data when we believe it furthers the legitimate interest of us or third parties: - Account or contact data
+- Content data
+- Skills data
+- Feedback and other information you provide
+- Feature usage data
+- Payment data
+- IP/device data
+- De-identified or anonymized personal data to further our legitimate interests.
+ Examples of these legitimate interests include (as described above):
+ - Providing, customizing and improving Dia.
+- Marketing Dia.
+- Corresponding with you.
+- Meeting legal requirements and enforcing legal terms.
+- Completing corporate transactions.
+- Consent: In some cases, we may process personal data based on your expressed content, which we’ll clearly indicate at the time of collection.
+- Other processing grounds: We may also need to process personal data to comply with a legal obligation, if it is necessary to protect the vital interests of you or others, or if it is necessary for a task carried out in the public interest.
+ Disclosing personal data
+ The “How we may disclose your personal data” section above details how we disclose your personal data with third parties.
+ EU, UK and Swiss data subject rights
+ - You have certain rights with regarding your personal data, including those set forth below. Please note that your rights may be subject to certain conditions or exceptions, including as otherwise described to you, in accordance with the GDPR. For example, we may not be able to fully comply with your request, if it is frivolous or extremely impractical, jeopardizes the rights of others, or otherwise not required by law, but in those circumstances, we will still respond to notify you of such a decision. In some cases, we may also need you to provide us with additional information, which may include personal data, if necessary to verify your identity and the nature of your request. To learn more or make a request email us at help@diabrowser.com . Please note that in some circumstances, Access : You can ask for more information about the personal data we hold about you and request a copy of such personal data. You can also access some of your account and contact data by logging on to your Dia account.
+- Rectification : If you believe that any personal data we are holding about you is incorrect or incomplete, you can request that we correct such data. You can also correct some of this information directly by logging on to your Dia account.
+- Erasure : You can request that we erase some or all of your personal data from our systems by deleting your Dia account within your account settings.
+- Withdrawal of consent : If we are processing your personal data based on your consent (as indicated at the time of collection of such data), you have the right to withdraw your consent at any time. Please note, however, that if you exercise this right, you may have to then provide express consent on a case-by-case basis for the use or disclosure of certain of your personal data, if such use or disclosure is necessary to enable you to utilize some or all of Dia.
+- Portability : You can ask for a copy of your personal data in a machine-readable format. You can also request that we transmit the data to another controller where technically feasible.
+- Objection : You can contact us to let us know that you object to the further use or disclosure of your personal data for certain purposes, such as for direct marketing purposes.
+- Restriction of processing : You can ask us to restrict further processing of your personal data.
+- Right to File Complaint : You have the right to lodge a complaint about The Browser Company’s practices with respect to your personal data with the supervisory authority of your country or EU Member State. A list of Supervisory Authorities is available here: https://edpb.europa.eu/about-edpb/board/members_en .
+ Transfers of personal data
+ Dia is hosted and operated in the United States (“U.S.”) through The Browser Company and its service providers. If you live outside the U.S., local laws may differ. By using Dia, you acknowledge that any personal data about you, regardless of whether provided by you or obtained from a third party, is being provided to The Browser Company in the U.S. and will be hosted on U.S. servers, and you authorize The Browser Company to transfer, store and process your information to and in the U.S., and possibly other countries. In some circumstances, your personal data may be transferred to the U.S. pursuant to a data processing agreement incorporating standard data protection clauses.
+ Contact information
+ If you have any questions about this Privacy Policy, how we collect and use your personal data or your choices and rights regarding such collection and use, please do not hesitate to contact us at:
+ - www.diabrowser.com 
+- help@diabrowser.com 
+ If you are located in the EU or UK, you may use the following information to contact our EU or UK-based member representative:
+ - By mail: - EU: DP-Dock GmbH, Attn: The Browser Company, Ballindamm 39, 20095 Hamburg, Germany
+- UK: DP Data Protection Services UK Ltd., Attn: The Browser Company, 16 Great Queen Street, Covent Garden, London, WC2B 5AH, United Kingdom
+- By email:
+ thebrowser.company@gdpr-rep.com 
+ Product
+ - For Work 
+- Release Notes 
+- Changelog 
+- Windows 
+ Resources
+ - Help 
+- Status 
+- Privacy 
+- Terms of Use 
+- Security 
+- Trust Center 
+ Company
+ - About Us 
+- Careers 
+- Newsletter 
+- Early Birds Program 
+ Connect
+ - X 
+- LinkedIn 
+- Instagram 
+ Copyright © 
+ Designed and Built by The Browser Company of New York 
+ - Copyright
+- ©

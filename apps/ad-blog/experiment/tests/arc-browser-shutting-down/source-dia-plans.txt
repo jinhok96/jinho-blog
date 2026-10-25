@@ -1,0 +1,147 @@
+# Dia Browser | Plans
+URL: https://www.diabrowser.com/plans
+fetched: 2026-10-25 UTC (Chromium render innerText)
+
+What's New
+Apps
+Security
+A better work day is waiting.
+Better Browser
+
+Free
+
+Download
+
+INCLUDES
+
+Profiles and tab groups
+Split-view and picture-in-picture video
+Built-in ad and tracking blocker
+Cross-device sync
+Better Answers
+
+$10/month
+
+Try it now
+
+EVERYTHING IN BROWSER, AND:
+
+Ask Dia anything on any page
+Chat with context from all your tools
+Work with models that won't store your data
+Better Days
+
+$100/month
+
+Try it now
+
+EVERYTHING IN BROWSER, ANSWERS, AND:
+
+6x more tasks and chats
+Get the daily Morning Brief
+Create reports, decks, and recaps
+Prep and follow-up for every meeting
+
+USAGE LIMITS APPLY
+
+GET IN TOUCH TO LEARN ABOUT OUR ENTERPRISE AI SECURITY AND PRIVACY FEATURES.
+
+Frequently asked questions
+PLANS & PRICING
+What plans does Dia offer?
+Better Browser (Free) — A clean, calm, effortlessly organized browser with no AI features.
+Better Answers ($20/month) — Chat that digs across your tools, tabs, and docs to answer with full context.
+Better Days ($100/month) — 6x the usage of Better Answers for your busiest days, plus a daily briefing, recaps in your voice, and polished reports and decks ready to send.
+Can I change or cancel my plan?
+
+Any time, from your account settings. If you cancel, you'll keep AI access through the end of your current billing cycle, then Dia continues as a free browser. Unused usage isn't refunded when you cancel or downgrade, unless the law where you live requires otherwise.
+
+What happens when I upgrade?
+
+Your new plan starts right away, with the higher usage allowance available immediately. You're credited for the unused part of your old plan, and we'll show you the exact amount and your next renewal date before you confirm.
+
+What happens when I downgrade?
+
+Your new plan starts at your next billing date. Until then you keep your current plan and everything you've already paid for.
+
+How is my usage calculated?
+
+Usage is measured in Tasks, our unit for calculating effort. Simple requests can use fractions of a Task, while requests that involve more tools, context, or longer outputs can use more, since they require more work behind the scenes.
+
+FREE TRIAL
+How does the free trial work?
+
+Every new Dia user gets a 14-day free trial with access to the Dia Better Days plan. No credit card is required to start. When the trial ends, choose a paid plan to keep using AI features, or keep using Dia as a free browser.
+
+Are there any limits during the trial?
+
+The trial is designed to comfortably cover normal, everyday use. There's a light limit on how much you can do in a short window to keep things running smoothly for everyone, but most people won't run into it.
+
+What happens when my trial ends?
+
+If you haven't chosen a plan, Dia keeps working as a browser and AI features pause. At times, when you reach for an AI feature, you'll see a prompt to upgrade.
+
+BILLING & USAGE
+How am I charged?
+
+Your monthly plan price is all you pay unless you opt into more usage. If you run out before your cycle resets, we won't bill you for the overage, AI features simply pause until your next billing date. Two ways to keep going:
+
+Auto-reload. Dia adds another block of usage for you when you run low, so you're never interrupted. Turn it on when you first subscribe, or switch it on/off anytime in settings. This will charge you automatically for extra credit blocks.
+One-time top-up. Buy a block of usage whenever you need it, with no ongoing commitment.
+How much usage allowance is included per plan?
+
+The Better Answers and Better Days plans include a monthly allowance measured in Tasks. A Task is our unit for measuring effort, so your real mileage depends on what you ask for. Simple requests can use a fraction of a Task, while heavier ones that pull in more tools, context, or longer outputs use more.
+
+Your allowance resets at the start of each billing cycle and doesn’t carry over. If you need more, you can add usage in $20 credits — automatically with auto-reload, or as a one-time top-up.
+
+Where can I see and manage my usage?
+
+Go to Dia > Settings > Usage. You'll see what you've used this billing cycle, how much is left, and any credit usage still available. You can turn auto-reload on or off here, too.
+
+What if I use up my monthly usage?
+
+Extra usage credits come in $20 blocks. Credits are added for you if auto-reload is on, or bought ad hoc. Your monthly plan allowance resets each billing cycle and doesn't carry over, but credit blocks you buy rolls over until you use it, up to three months from the date of purchase. Unused credits aren't refunded if you cancel or downgrade, unless the law where you live requires otherwise.
+
+Where do I manage my subscription and payment details?
+
+From Dia > Settings > Billing. Card and invoice management open securely through Stripe, where you can update your payment method or view past charges.
+
+AVAILABILITY OF PAID PLANS
+When do paid plans start?
+
+Paid plans begin rolling out to most new Mac users on August 17.
+
+I'm already a Dia user — does anything change for me?
+
+Not right now. Existing users keep what they have for free, and you'll get at least 30 days' notice by email before paid plans apply to your account.
+
+I'm on Windows — does this apply to me?
+
+Not yet. Paid plans are starting with new Mac users. Dia on Windows stays as it is for now, and we'll let you know before anything changes.
+
+PRODUCT
+FOR WORK
+RELEASE NOTES
+CHANGELOG
+WINDOWS
+RESOURCES
+HELP
+STATUS
+PRIVACY
+TERMS OF USE
+SECURITY
+TRUST CENTER
+COMPANY
+ABOUT US
+CAREERS
+NEWSLETTER
+EARLY BIRDS PROGRAM
+CONNECT
+X
+LINKEDIN
+INSTAGRAM
+COPYRIGHT
+© 2026
+
+DESIGNED AND BUILT BY
+THE BROWSER COMPANY OF NEW YORK

@@ -1,0 +1,52 @@
+# Dia Release Notes (latest)
+URL: https://www.diabrowser.com/release-notes/latest
+fetched: 2026-10-25 UTC (curl)
+
+- - - - - - Dia Browser | Update 1.54.0 for macOS - - - 
+ - What's New 
+- Apps 
+- Security 
+ Watch the trailer video 
+ - What's New 
+- Apps 
+- Security 
+ See All October 22, 2026 Faster chat, more shortcuts
+ Mac v 1.54.0 
+ Dia 1.54.0 brings faster Chat, new keyboard shortcuts, and a Chromium upgrade. 
+ - Faster Chat starts
+ Dia's built-in tools are pre-loaded and ready the moment you ask, so Chat starts answering sooner. 
+ Shipped by: Rosey 
+- Pin Tabs with Keyboard Shortcuts
+ Cmd+Shift+D pins tabs to Favorites for faster keyboard access. 
+ Shipped by: alexandra 
+- Keyboard Shortcuts Support External App Dialogs
+ External app dialogs now support keyboard shortcuts, making them easier to use without reaching for the mouse. 
+ Shipped by: Connor ) 
+- Upgrade Dia to Chromium M156
+ Updates Dia’s browsing engine and adopts Chrome’s Perplexity search integration. 
+ Shipped by: Mikolaj 
+ Product
+ - For Work 
+- Release Notes 
+- Changelog 
+- Windows 
+ Resources
+ - Help 
+- Status 
+- Privacy 
+- Terms of Use 
+- Security 
+- Trust Center 
+ Company
+ - About Us 
+- Careers 
+- Newsletter 
+- Early Birds Program 
+ Connect
+ - X 
+- LinkedIn 
+- Instagram 
+ Copyright © 
+ Designed and Built by The Browser Company of New York 
+ - Copyright
+- ©

@@ -2,6 +2,51 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-25 · 세션 49 (정기 실행, 개선 세션): Spotify 칼럼 제목·설명(CTR) + OCR 글 NAPS2 직접 측정 보강
+
+세션 시각: 2026-10-25 18:16 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(로그·PR 모두 없음). 열린 PR 없음. 작업 브랜치를 `origin/main`(d0ac4f0)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-27 ~ 10-25, 세션 48 이후 바뀐 값만)**
+
+- 노출 546 → **612**, 클릭 10, CTR 1.8% → 1.6%, 평균 순위 23.2 → 23.1
+  - `spotify-family-qr-code-verification` 126 → **164 (18.5 → 16.2위)**, 클릭 0 / `turn-off-ai-in-chrome` 133 (14.0) / `image-to-text-offline-free` 69 → 74 (13.6 → 14.4) / `check-if-image-is-ai-generated` 35 (71.5)
+  - Spotify 글별 검색어: 다른 매체 기사 제목을 그대로 친 검색어 3개가 85회·4.8~5.6위인데 클릭 0 (`spotify's family plan qr code could cost you premium access` 36회 5.6위 등), `spotify qr code` 16회 63.6위
+  - OCR 글 날짜별 순위: 10-15 6.0 → 10-21 9.8 → **10-22 19.1 → 10-23 29.0 → 10-24 25.7**. 마지막 크롤링은 10-15(측정 표가 있던 판) 그대로
+- URL 검사: 색인 17편 그대로 (마지막 새 크롤링 10-20). `URL is unknown` 24편 = 세션 48의 23편 + `google-phone-number-verification` → 색인율 17/41 (41%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 48과 같은 3건 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글, `pixel-watch-safety-signal-ending` 받는 링크 1개)
+- 주간 SEO 점검 보고: 아직 없음 (첫 실행 10-26 08:45) → 개선 세션 순서대로. 1 색인(미색인 글 모두 색인된 글에서 링크 받음, 세션 46) → 2 링크 점검(남은 3건은 보류 사유 그대로) → 3 허브(`photo-video`는 색인율 50% 미만 규칙으로 보류) → **4 Search Console 기반 보강** 2건
+
+**한 일 (개선 세션 2건, 쓴 스킬: `seo-audit` — references/rankings-push.md·title-tags.md)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 4 CTR | `spotify-family-qr-code-verification` | rankings-push "Weak click-through"(5위 안팎·CTR이 비슷한 순위 글보다 낮음 → 제목·설명만). 제목 `Spotify Family QR Code Check and 12-Month Lockout: What It Means for You` → `Spotify Family Plan QR Code Verification Gives Members 7 Days to Scan`(69자, 검색어 공통 단어 `family plan`·`qr code verification`을 앞쪽에, 꼬리표 제거), 설명 154자로 교체. 본문·`updatedAt` 그대로. 7일·12개월 문장은 Spotify 도움말을 이번 세션에 다시 받아 확인 | V4 (ctr, 11-22) |
+| 2 | 4 8~20위 | `image-to-text-offline-free` | rankings-push "Diagnose against the top three": 상위 결과(App Store 앱 목록·Umi-OCR/Kaizen OCR 소개·도구 목록)에 직접 측정 정확도가 없고, 우리 글도 10-17 명령줄 삭제 뒤 문서 기반만 남음(이미지 0장) → **NAPS2 8.5.1 GUI를 Xvfb에서 직접 실행**해 테스트 이미지 50장(5유형)을 설정 3가지(Fast·Best·Best + 노이즈 제거)로 검색 가능한 PDF로 저장하고 판독률 측정. 사용 단계 5개, 유형별 정확도 표, Best·노이즈 제거 비교, How we tested NAPS2, 둘째 문단을 측정 결과로 교체, 본문 이미지 3장(OCR 설정 화면 캡처·유형별 정확도·영수증 출력 비교) + 대표 이미지, `updatedAt` 2026-10-25 | V5 (position, 11-22) |
+
+- 측정 결과 (NAPS2 8.5.1, 2026-10-25, 기본 Fast): 단어 재현율 스캔 99.8%(8/10장 100%)·스크린샷 98.4%·11px 작은 글자 90.6%·영수증 65.6%·휴대폰 사진 61.5%. 영수증 가격 36/133, **6장은 가격 0개**(합계 포함). 사진 7장은 연속 39~104단어를 통째로 건너뜀. Best 82.4%·Best + 노이즈 제거 81.3%로 Fast 83.2%와 차이 없음, 가격 0개인 영수증 6장은 그대로. 원자료 `tests/image-to-text-offline-free/naps2/`, 사실 확인표 `facts.md` 'NAPS2 측정'
+- 세 번째 후보로 `pixel-watch-safety-signal-ending` 받는 링크를 봤지만 `google-phone-number-verification`의 긴급 위치 문장과도 문맥이 약해 이번에도 보류
+- 대표 이미지: Z-Image-Turbo 시드 1960165497, 49.6분, 연한 버터 노랑 배경 + 페리윙클 블루·토마토 레드, 아이소메트릭(최근 3장 모두 정면이라 시점 변경). 종이가 키보드 위에 놓였지만 주제·화풍이 맞아 그대로 사용 (`tests/image-to-text-offline-free/hero-image.md`)
+- 빌드 HTML 확인: OCR 글 title 61자(접미사 포함)·description 154자·h1 1개·h2 5·h3 10, BlogPosting `dateModified` 2026-10-25, 본문 첫 이미지가 대표 이미지 + 본문 이미지 3장, og 이미지가 대표 이미지에서 만들어짐, `<pre>`·`<code>` 0개. Spotify 글 title·h1·og:title·BlogPosting headline이 새 제목, description 154자. lint·test(33파일 242개)·build 통과. `link_audit` 새 문제 없음
+
+**알게 된 것**
+
+- NAPS2 8.5.1 Linux deb는 naps2.com/download의 고정 태그 링크(`github.com/cyanfish/naps2/releases/download/v8.5.1/…`)로 받을 수 있고, `libsane1`만 있으면 Xvfb에서 GUI가 뜸. openbox를 띄우면 창 테두리가 있는 캡처가 됨. OCR 언어는 첫 OCR 클릭 때 `~/.config/naps2/components/tesseract4/`로 받음 → 스캔·PDF 글에서 쓸 수 있는 GUI 측정 도구
+- 백그라운드 명령에 `pkill -f {이름}`을 넣으면 같은 명령줄 문자열에 그 이름이 있어 셸 자신이 죽음 (대표 이미지 생성 1회 실패, exit 144) → 종료할 프로세스는 별도 명령으로
+- Search Console에서 다른 매체 기사 제목을 그대로 친 검색어가 우리 칼럼에 5위 안팎으로 노출됨(Spotify 85회). 뉴스 칼럼 제목이 그 기사들의 공통 단어(`family plan`·`qr code verification`)를 놓치면 클릭이 0일 수 있음 → V4로 확인
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 24편 중 우선 허브 `turn-off-ai-features`·`best-free-pdf-tools`, 새 글 `google-phone-number-verification`·`turn-off-meta-ai-instagram`, `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`google-gmail-photos-ads`, `remove-bg-alternative-free`·`convert-webp-to-jpg-free`·`remove-metadata-from-photos`. 이번에 고친 `image-to-text-offline-free`(색인됨, 마지막 크롤링 10-15)도 URL 검사에서 색인 생성 요청하면 새 판이 빨리 반영됨
+- Claude(11-22): V4(`--compare /posts/spotify-family-qr-code-verification --changed 2026-10-25 --metric ctr`)·V5(`--compare /posts/image-to-text-offline-free --changed 2026-10-25 --metric position`) 판정
+- Claude(다음 개선 세션): 첫 주간 SEO 점검(10-26) 우선순위 확인. 색인율 50%를 넘으면 `photo-video` 허브. 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰). NAPS2는 스캔 측정 도구로 `pdf` 클러스터(스캔 PDF 검색 가능하게 만들기) 후보 검토
+- Claude(다음 일반 세션): `ai-settings` 공백 `remove phone number from google account`·`turn off galaxy ai`·`google personal intelligence settings`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 41편 (이번 세션 새 글 없음)
+- 대시보드: `stats` 7개 문서 갱신 + `history` 기록(batch, 회차 2026-10-25T10:33:30Z, DB 문서 63개, 스크래치패드 경로). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-25 · 세션 48 (정기 실행, 뉴스 세션 · 영향): Android 전화번호 인증이 모든 Google 계정에 번호 추가
 
 세션 시각: 2026-10-25 06:16 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(3af5b5e)에서 다시 시작.

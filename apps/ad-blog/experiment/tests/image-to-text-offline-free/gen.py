@@ -16,6 +16,7 @@
 """
 
 import json
+import os
 import random
 import re
 import sys
@@ -210,7 +211,8 @@ def html_page(text, font, size, width):
 
 meta = []
 with sync_playwright() as pw:
-    b = pw.chromium.launch(executable_path="/opt/pw-browsers/chromium-1194/chrome-linux/chrome")
+    # 2026-10-14 chromium-1194/chrome-linux/chrome, 2026-10-25 재생성은 chromium-1243/chrome-linux64/chrome (정답 텍스트 50개 동일)
+    b = pw.chromium.launch(executable_path=os.environ.get("CHROMIUM", "/opt/pw-browsers/chromium-1194/chrome-linux/chrome"))
     pg = b.new_page(viewport={"width": 1000, "height": 400}, device_scale_factor=1)
     for cond, size, words in (("screenshot", 16, 150), ("small", 11, 150)):
         for i in range(10):

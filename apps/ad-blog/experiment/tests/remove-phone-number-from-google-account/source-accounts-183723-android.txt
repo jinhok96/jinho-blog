@@ -1,0 +1,158 @@
+# 가져온 시각: 2026-10-25T15:30:07.881Z
+# 원본: https://support.google.com/accounts/answer/183723?hl=en&co=GENIE.Platform%3DAndroid
+Set up recovery options - Android phone & tablet - Google Account Help
+https://support.google.com/accounts/answer/183723?hl=en&co=GENIE.Platform%3DAndroid&ai1hc=1
+
+Set up recovery options
+
+Important:
+
+Not all recovery options are available for all regions, accounts, or devices.
+If you use an account through your work, school, or other groups, these steps may not work. Ask your administrator for help.
+
+To make sure you can get back into your Google Account if you ever can’t sign in, add recovery information.
+
+How recovery info helps you
+
+Recovery info helps you get back in to your account if:
+
+You forget your password
+Someone else uses your account
+You’re locked out of your account for another reason
+
+You can’t add recovery info while you’re locked out of your account or in the account recovery process.
+
+Tip: If you change your recovery info or other authentication factors, Google may send codes to your previous info for 7 days. If someone starts to use your account without your permission, this allows you to quickly secure your account.
+
+Android phone & tablet ComputeriPhone & iPad
+More
+More
+More
+Add or delete recovery contacts
+Add a recovery contact
+
+Important: Make sure to choose a recovery contact who you know well and trust, like a family member or a close friend.
+
+Open your Google Account.
+Tap Security & sign-in.
+In the “How you sign in to Google” section, tap Recovery contacts.
+You may need to sign in.
+Tap Add recovery contact.
+Enter an email address.
+You’ll get a prompt that a request is emailed to your recovery contact.
+Your recovery contact gets your name, email address and profile photo.
+Tap Send request.
+
+Tip: The request only lasts for 7 days. Afterwards, you either need to submit another request or choose another recovery contact.
+
+Add recovery contact
+
+Delete a recovery contact
+Open your Google Account.
+Tap Security & sign-in.
+In the “How you sign in to Google” section, tap Recovery contacts.
+You may need to sign in.
+Tap Trash .
+To delete a contact, tap Confirm.
+Add or change a recovery phone number
+
+When you add or change your recovery phone number, it may take up to 7 days for those changes to take effect. If someone tries to use your account without your permission, this allows you to quickly secure your account.
+
+If you have a trusted passkey or security key, you may be able to speed up the process for Google to trust your new recovery phone number. Learn how to speed up this process.
+
+Open your device's Settings app.
+Tap {Username}  Your name  Manage your Google Account.
+You can also visit myaccount.google.com.
+Tap Security & sign-in.
+Under "How you sign into Google," tap Recovery phone. You might need to sign in.
+From here, you can:
+Add a recovery phone.
+Change your recovery phone: Next to your number, tap Edit .
+Delete your recovery phone: Next to your number, tap Delete .
+Follow the steps on the screen.
+Add recovery phone
+
+Tip: If you delete your recovery phone number, it may still be used for other Google services. To manage your phone numbers, go to your account.
+
+Which number to use
+
+Use a mobile phone that:
+
+Gets text messages
+Belongs only to you
+You use regularly and keep with you
+
+Tip: Do not use a Google Voice number as a recovery phone number. If you do, you could lock yourself out of your account. For example, if you can’t sign in to your Google Account, you might need a verification code to get back in. But, because it’s sent to your Google Voice, you can’t get the code.
+
+Add or change a recovery email address
+Open your device's Settings app.
+Tap {Username}  Your name  Manage your Google Account.
+You can also visit myaccount.google.com.
+Tap Security & sign-in.
+Under "How you sign into Google," tap Recovery email. You might need to sign in.
+From here, you can:
+Add a recovery email.
+Change or delete your recovery email.
+Follow the steps on the screen.
+
+Change recovery email
+
+Which email to use
+
+Choose an email address that:
+
+You use regularly
+Is different from the one you use to sign in to your Google Account
+How recovery info is used
+
+Recovery info helps you get back into your account and helps keep your account secure.
+
+Recovery contact
+
+You can use your recovery contact to help you get into your account if you forget your password or can't sign in for another reason. They don't get your security alerts and notifications.
+
+Tip: A recovery contact request is valid for 7 days. Once a recovery contact accepts your invite, there’s a 7-day period before you can use them for account recovery.
+
+Recovery phone number
+
+Here are some ways your recovery phone number can be used:
+
+To send you a code to get into your account if you’re ever locked out
+To block someone from using your account without your permission
+To make it easier for you to prove that an account is yours
+To tell you if there’s suspicious activity on your account
+
+If your recovery phone number is the same as another phone number you’ve added to your account, it might be used for other purposes. Learn more about how phone numbers are used.
+
+Recovery email address
+
+Here are some ways your recovery email address can be used:
+
+To confirm your username after you create an email address
+To help you get into your account if you forget your password or can't sign in for another reason
+To let you know if you're about to run out of storage space
+To tell you if there’s suspicious activity on your account
+Fix problems
+Can't sign in
+
+Go to the account recovery page, and answer the questions as best you can. These tips can help.
+
+Use the account recovery page if:
+
+You forgot your password.
+Someone changed your password.
+Someone deleted your account.
+You can’t sign in for another reason.
+
+Tip: To make sure you’re trying to sign in to the right account, try recovering your username.
+
+Can't change recovery info
+
+If there’s something different about how you’re signing in, you might not have the option to change your recovery info. You can try again:
+
+From a device you normally use to sign in.
+From a location where you normally sign in.
+The following week from the device that you’re currently using.
+Recovery method removed from account
+If we detect a suspicious sign-in method on your account, we will disable it and notify you. You have 30 days from the warning notification date to confirm you added the disabled recovery method. If no action is taken, the suspicious sign-in method will then be deleted from your account.
+Give feedback about this article

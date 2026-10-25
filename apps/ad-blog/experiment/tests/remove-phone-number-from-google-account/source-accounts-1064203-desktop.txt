@@ -1,0 +1,34 @@
+# 가져온 시각: 2026-10-25T15:27:17.781Z
+# 원본: https://support.google.com/accounts/answer/1064203?hl=en&co=GENIE.Platform%3DDesktop
+Turn off 2-Step Verification - Computer - Google Account Help
+https://support.google.com/accounts/answer/1064203?hl=en&co=GENIE.Platform%3DDesktop
+
+Turn off 2-Step Verification
+
+2-Step Verification makes your account more secure. If you turn off 2-Step Verification, you remove an additional layer of security, which can make it easier for someone else to access your account.
+
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Open your Google Account.
+In the "Security & sign-in" section, click 2-Step Verification. You might need to sign in.
+Click Turn off.
+A pop-up window will appear to confirm that you want to turn off 2-Step Verification. Click Turn off.
+
+Destroy all the backup codes that you've saved for signing in to this account.
+
+Revoke app passwords you no longer use
+
+If you use app passwords to let apps access your Google Account, you may get errors when you turn off 2-Step Verification. If this happens, re-enter your Google Account password.
+
+We recommend you revoke your app passwords:
+
+Sign in to your Google Account.
+In the "Security & sign-in" section, click How you sign in to Google.
+Click App passwords. You might need to sign in.
+Next to an application or device, click Remove .
+
+The next time you sign in to the app or device, you'll be asked to enter your Google Account username and password. If an app doesn't ask right away, it might take longer to recognize that its app password has been revoked.
+
+Give feedback about this article

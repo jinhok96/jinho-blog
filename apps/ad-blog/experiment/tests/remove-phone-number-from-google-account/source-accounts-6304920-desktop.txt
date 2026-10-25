@@ -1,0 +1,110 @@
+# 가져온 시각: 2026-10-25T15:29:42.232Z
+# 원본: https://support.google.com/accounts/answer/6304920?hl=en&co=GENIE.Platform%3DDesktop
+Control what others see about you across Google services - Computer - Google Account Help
+https://support.google.com/accounts/answer/6304920?hl=en&co=GENIE.Platform%3DDesktop&ai1hc=1
+
+Control what others see about you across Google services
+
+You can make some information on your Google Account private or visible to anyone. That way, you’re in control of who views info like your birthday or phone number across Google services.
+
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Choose what info to show
+Other people who use Google services or devices where your Google Account profile is shown can check your name and profile picture.
+Go to your Google Account.
+On the left, click Personal info.
+Under "Choose what others see," click Go to About me.
+Below a type of info, you can choose who currently can see your info.
+Choose one of the following:
+To make the info private, click Only you .
+To make the info visible to anyone, click Anyone .
+
+Edit personal info
+
+Add, edit, or remove personal information
+
+Important: Some info can't be removed from your Google Account. For example, you can edit, but not remove, your name and date of birth.
+
+Go to your Google Account.
+On the left, click Personal info.
+Under "Choose what others see," click Go to About me.
+Change your info:
+Add: For each category you want to add info to, click  Add.
+Edit: Click the info you’d like to change and then click Edit .
+Tip: If you've changed your name recently, you might need to wait before you can change it again.
+Remove: Click the info you’d like to remove and then click Remove .
+Follow the on-screen steps.
+
+Edit personal info
+
+Tip: To change some other account info, like your password, go to your Google Account.
+View & manage your profiles in Google services
+
+In some Google services, you have a profile that’s visible to other people who use that service. You can find your profiles for some services in your Google Account.
+
+Go to your Google Account.
+On the left, click Personal info.
+Scroll to "Your profiles."
+Click See profiles.
+Go to the service to manage your profile info.
+Profile Discovery
+Learn about Profile Discovery
+
+Important: Profile Discovery isn't available to EDU users.
+
+When people search for you by your phone number or email address in Google products and services, profile discovery helps determine what they'll find. When you set it up, you decide whether people you haven't interacted with on Google services, but who have your contact information, can see your profile picture and your full or abbreviated name. 
+
+After you interact with someone, for example when you communicate in Google Chat or share an album in Google Photos, they can typically see your full name and profile picture from your Google Account. 
+
+With profile discovery, you can choose to:
+
+Use either your name from your main profile or a shortened version of your name.
+Show or hide your profile picture.
+Manage Profile Discovery
+
+Important: To let people find you by phone number, turn on Let people find you by phone number in your phone number settings.
+
+Go to your Google Account.
+On the left, click Personal info.
+Under "Your profiles," click See profiles.
+Below your photo and name, click Profile discovery settings.
+Turn on Profile discovery.
+To edit how your name and photo appear in your profile, click Change.
+More details about your info
+What info can be shown
+
+Here’s some info you can show or hide to other people who use Google services:
+
+Your birthday
+Your gender
+Employment info, like where you work
+Personal and work contact info
+Places you've lived
+Education info
+
+The following info might be shown to people you contact or share with:
+
+Your name
+Nickname
+Profile picture
+Cover photo
+Your Google Account email
+
+Tip: The name and profile picture on your "About me" page will show up in most Google services. If you use a different name or profile picture in certain Google services, you’ll still see them there.
+
+Where this info can show up
+Info in your Google Account that you make visible to Anyone can be found in a few places:
+On Google services where you can contact other people, like Google Chat and Gmail.
+On Google services where you create content, like Maps, Play, and YouTube.
+Who can view your info
+Private: Only visible to you.
+Anyone: Visible to anyone.
+People you interact with: Visible to people you interact with, such as through Chat and photo albums shared in Google Photos.
+Your organization: Visible to everyone in your organization, such as work or school. 
+Family: Visible to anyone in your family group.
+Related resources
+Access and control activity on your account
+Delete your activity
+Give feedback about this article

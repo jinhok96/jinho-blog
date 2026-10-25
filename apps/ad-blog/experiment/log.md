@@ -2,6 +2,52 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-26 · 세션 50 (정기 실행, 일반 세션): Google 계정에서 전화번호 지우기
+
+세션 시각: 2026-10-26 00:15 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(b2cbde4)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-27 ~ 10-25, 세션 49 이후 바뀐 값만)**
+
+- 노출 612 → **647**, 클릭 10, CTR 1.6% → 1.5%, 평균 순위 23.1 → 22.4
+  - `spotify-family-qr-code-verification` 164 → **190 (16.2 → 14.7위)**, 클릭 0 (V4 제목 교체는 10-25 배포, 아직 크롤링 전) / `turn-off-ai-in-chrome` 134 (13.9) / `image-to-text-offline-free` 75 (14.3) / `check-if-image-is-ai-generated` 36 (69.8) / `gemini-gems-to-skills` 31 (7.5)
+- URL 검사: 색인 17편 그대로 (마지막 새 크롤링 10-20). `URL is unknown` 24편 그대로 → 색인율 17/41 (41%), 새 글 포함 17/42
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 세션 49와 같은 3건 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글, `pixel-watch-safety-signal-ending` 받는 링크 1개). 새 글은 처음에 "같은 클러스터 링크 없음"(상시 글로 가는 링크 없음) → `turn-off-gemini-in-gmail` 링크를 넣어 해결
+- 주간 SEO 점검 보고: 아직 없음 (첫 실행 10-26 08:45)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `remove-phone-number-from-google-account` | `software` | `ai-settings` 상시 글 (검색형) | Google 도움말 11개(Account Help 3463280 컴퓨터·Android·iPhone판, 183723, 185839, 185834, 1064203, 7222352, 6304920 + 개요 2개, Android Help 7521240, Voice Help 150640)를 Chromium으로 렌더링해 **접힌 단락까지** 대조. 번호가 있는 6곳(Phone·Recovery phone·2-Step Verification·Better ads & Google services·Android 인증·Google Voice) 요약 표, "복구 전화를 지워도 다른 서비스에서 쓰일 수 있음" Tip 화면 캡처, 지워지지 않을 때 원인 5가지 → 해결(평소 기기·위치 또는 다음 주, 관리자, Android 재인증, 다른 서비스 설정, Voice 번호), 바꾼 뒤 7일간 이전 번호로 코드·새 번호 신뢰 대기·Voice 90일 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` (세션 48·49 다음 할 일). `demand_check.py suggest`: `remove phone number from google account` 하위 23개, 본 검색어 3곳 + `delete …`·`remove my …`·`remove old …`·`remove contact number …` 2곳, `can't`·`cannot`·`unable to remove …` 각 1곳. 비교: `turn off galaxy ai` 21개(본 검색어만 3곳, 나머지는 기종별 1곳), `google personal intelligence settings` 13개(본 검색어 Google 1곳), `turn off ai overviews` 22개(본 검색어 2곳). Trends 미국 3개월 세 후보 모두 0.0 · `google account phone number` 2.8 · 기준 `remove background` 35.5 → 자동완성 폭과 상위 결과 빈틈으로 결정
+- 상위 결과(WebSearch): maketecheasier·analyticsinsight(작은 매체), oryon 지식 베이스, 스팸성 3곳(Google Business 혼동). `can't remove …`는 JustAnswer·Samsung 커뮤니티·Malwarebytes·Google 도움말. 현재 메뉴 이름(`Security & sign-in` > `How you sign in to Google`), 복구 전화 삭제와 Phone 삭제 차이, 광고 스위치, Android 재추가, 지워지지 않는 원인별 해결, 바꾼 뒤 7일이 빠짐
+- 주 검색어: `remove phone number from google account`. 제목 `How to Remove a Phone Number From Your Google Account`(53자), 설명 155자
+- 1차 출처: 위 11개 문서 원문 `tests/remove-phone-number-from-google-account/source-*.txt`(2026-10-25 UTC). Google 계정·Android 기기가 없어 계정 화면은 직접 실행 못 함(본문 How we checked에 밝힘). 2-Step Verification 화면 안의 버튼 이름, 유일한 두 번째 단계인 번호를 지울 수 있는지는 문서에 없어 쓰지 않음
+- 이미지: 대표 이미지(HERO_LOG) + 본문 4장(도움말 화면 캡처 2장 + accent 상자, 원인 → 해결 표, 바꾼 뒤 일정, `charts.py` 라이트 모드). 번호가 있는 6곳 그래픽은 도입 요약 표와 겹쳐 뺌
+- 내부 링크: 새 글 → 칼럼 `google-phone-number-verification`·`google-gmail-photos-ads`, 허브 `turn-off-ai-features`, 상시 글 `turn-off-gemini-in-gmail` (4개). 역링크: `gemini-gems-to-skills`(색인됨) 끝 관련 글 문단의 전화번호 문장 뒤, 칼럼 `google-phone-number-verification` "중간 옵션" 문단 끝, 허브 Google 검색 절 광고 문단 끝 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 칼럼 `google-phone-number-verification` 메뉴 이름 정정: 2026-10-25 Google 도움말(183723 컴퓨터·Android판)이 `Security & sign-in`이라 "**Security** tab" 2곳을 `Security & sign-in`으로 (오탈자 수준 정정, `updatedAt` 그대로)
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 53자·H1 일치, 설명 155자, 첫 100단어에 주 검색어, 소제목, 이미지 alt·파일 이름, 받는 링크 3개, AI 문체(em dash 0)). "Why you can't remove" 첫 문장을 원인 5가지를 담은 완결 문장으로 고침. searchfit-seo 스킬은 이번 세션에 없음
+- BUILD_LOG
+
+**알게 된 것**
+
+- support.google.com 도움말의 접힌 단락(`a.zippy`)은 `inert` 속성이 붙어 있어 Playwright 클릭이 안 먹힘 → `inert`를 지우고 `click()`하면 펼쳐짐(`shot.cjs`). 텍스트만 필요하면 숨김 스타일을 풀어 `innerText`로 받으면 됨(`render.cjs`). 이전 세션의 curl 원문은 접힌 단락이 빠질 수 있음
+- Google Account 도움말의 보안 탭 이름이 `Security & sign-in`, 하위 묶음이 `How you sign in to Google` (2026-10-25 기준). 상위 결과 글들은 아직 `Security`로 씀
+- 복구 정보·인증 요소를 바꾸면 Google이 7일간 이전 정보로 코드를 보낼 수 있음(183723) → "번호를 지웠는데 아직 코드가 온다" 검색에 답이 됨
+
+**다음 할 일**
+
+- **사용자: Search Console 색인 요청** — `URL is unknown` 24편 + 새 글 중 우선 허브 `turn-off-ai-features`·`best-free-pdf-tools`, 새 글 `remove-phone-number-from-google-account`·`google-phone-number-verification`·`turn-off-meta-ai-instagram`, `turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`google-gmail-photos-ads`, `remove-bg-alternative-free`·`convert-webp-to-jpg-free`
+- Claude(다음 개선 세션): 첫 주간 SEO 점검(10-26) 우선순위 확인. 색인율 50%를 넘으면 `photo-video` 허브. 11-01에 `remove-metadata-from-photos` 색인 여부 확인(노하우 9 관찰)
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off galaxy ai`(본 검색어 3곳, Samsung 도움말을 Playwright로) 또는 `turn off gemini apps activity`·`google personal intelligence settings`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토
+- Claude: 발행 42편
+- 대시보드: `stats` 8개 문서 갱신(`traffic` 포함: Cloudflare 28일 조회수 4·방문 3, 비컨 10-25 추가 후 첫 값) + `history` 기록(batch, 회차 2026-10-25T15:41:56Z, DB 문서 80개, 스크래치패드 경로). 28일 노출은 대시보드 회차에서 653. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-25 · 세션 49 (정기 실행, 개선 세션): Spotify 칼럼 제목·설명(CTR) + OCR 글 NAPS2 직접 측정 보강
 
 세션 시각: 2026-10-25 18:16 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(로그·PR 모두 없음). 열린 PR 없음. 작업 브랜치를 `origin/main`(d0ac4f0)에서 다시 시작.

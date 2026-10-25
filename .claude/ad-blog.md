@@ -89,7 +89,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - 사이트 토큰은 `core/config/internal/analytics.ts`의 `CF_WEB_ANALYTICS_TOKEN`에만 작성 (비어 있으면 로드 안 함, 32자리 16진수가 아니면 빌드 에러)
 - `AnalyticsScript`(루트 레이아웃)가 hydration 후 비컨을 직접 삽입 (`next/script` 금지, AdSense와 같은 이유). 개발 서버·`SITE_URL` 도메인(www 포함)이 아닌 호스트(미리보기 배포 등)에서는 로드 안 함. 클라이언트 라우팅 이동은 비컨이 직접 집계하므로 한 번만 삽입
 - 측정 항목을 바꾸면 개인정보처리방침(`content/pages/privacy.mdx`) Analytics 항목도 함께 수정
-- 운영 대시보드 조회수(KPI·날짜별 조회수·유입 사이트·클러스터/글별 표·글 순위)는 `experiment/tools/cf_analytics.py`가 Cloudflare GraphQL API로 읽어 `dashboard_data.py`가 `stats` DB(`traffic` 문서, `posts`의 `views`)에 기록. 비컨 토큰을 바꾸면 `cf_analytics.py`의 `SITE_TOKEN`도 함께 수정
+- 운영 대시보드 조회수(KPI·날짜별 조회수·유입 사이트·클러스터/글별 표·글 순위)는 `experiment/tools/cf_analytics.py`가 Cloudflare GraphQL API로 읽어 `dashboard_data.py`가 `stats` DB(`traffic` 문서, `posts`의 `views`)에 기록. 사이트 도메인으로 거르므로(`SITE_HOSTS`, 사이트 목록 REST API는 Account Analytics Read 토큰으로 403) 도메인을 바꾸면 함께 수정. 필요한 토큰 권한은 Account → Account Analytics → Read
 
 ## 명령어
 

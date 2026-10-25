@@ -21,6 +21,7 @@ src/
 └── core/
     ├── config/     # 사이트 정보(ToolProof, en-US, AUTHOR_TYPE)·카테고리(ai-tools, software, news — 글 0개 카테고리는 자동 숨김)·광고 ID
     ├── ads/        # AdSlot·AdSenseScript (클라이언트), ads.txt·슬롯 속성 헬퍼
+    ├── analytics/  # AnalyticsScript (Cloudflare Web Analytics 비컨 로더, 클라이언트)·로드 조건 헬퍼
     ├── content/    # 컬렉션 Zod 스키마·설정·레지스트리 리더
     ├── seo/        # buildMetadata, JSON-LD 빌더, JsonLd, absoluteUrl
     ├── mdx/        # renderMdx (본문 # → h2, 로컬 이미지 크기 지정, 링크 처리)
@@ -39,7 +40,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - 데이터가 없거나 페이지 번호가 잘못되면 `notFound()`
 - 라우트 props는 명시 타입 (`{ params: Promise<{ slug: string }> }`) — 전역 `PageProps`는 빌드 후에만 생성되어 `tsc` 실패
 - Route Handler·metadata 라우트(sitemap, robots, manifest, rss)는 `export const dynamic = 'force-static'`
-- 서버 컴포넌트 기본 (`'use client'`는 `core/ads`와 `core/ui`의 `LocalDate`만), 이미지 최적화 미사용 (`images.unoptimized`)
+- 서버 컴포넌트 기본 (`'use client'`는 `core/ads`·`core/analytics`와 `core/ui`의 `LocalDate`만), 이미지 최적화 미사용 (`images.unoptimized`)
 
 ## 콘텐츠 규칙
 
@@ -81,6 +82,13 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - 정적 페이지·404에는 광고 없음 (`<NoAds />`로 스크립트 미로드, 루트 레이아웃 등 공통 영역에 슬롯 금지)
 - AdSense 스크립트는 `AdSenseScript`(루트 레이아웃)가 hydration 후 직접 삽입하고 경로가 바뀔 때마다 제외 페이지인지 다시 확인 — `next/script`는 `data-nscript` 속성 때문에 AdSense 콘솔 경고가 나므로 사용 금지. 정적 HTML에 스크립트가 없으므로 AdSense 사이트 확인은 `ads.txt`·메타 태그로
 - 개발 서버는 ID와 무관하게 점선 자리표시 상자 (실제 광고 요청 안 함), 슬롯은 최소 높이로 CLS 방지·미게재 시 숨김
+
+## 방문 측정 (Cloudflare Web Analytics)
+
+- 실제 페이지뷰는 Cloudflare Web Analytics로 측정 (2026-10-25 사용자 결정: Vercel Web Analytics는 유료라 제외). 쿠키 없음, JS를 실행한 방문만 집계
+- 사이트 토큰은 `core/config/internal/analytics.ts`의 `CF_WEB_ANALYTICS_TOKEN`에만 작성 (비어 있으면 로드 안 함, 32자리 16진수가 아니면 빌드 에러)
+- `AnalyticsScript`(루트 레이아웃)가 hydration 후 비컨을 직접 삽입 (`next/script` 금지, AdSense와 같은 이유). 개발 서버·`SITE_URL` 도메인(www 포함)이 아닌 호스트(미리보기 배포 등)에서는 로드 안 함. 클라이언트 라우팅 이동은 비컨이 직접 집계하므로 한 번만 삽입
+- 측정 항목을 바꾸면 개인정보처리방침(`content/pages/privacy.mdx`) Analytics 항목도 함께 수정
 
 ## 명령어
 

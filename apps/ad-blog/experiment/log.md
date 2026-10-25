@@ -25,11 +25,11 @@
 - 상위 결과(WebSearch): maketecheasier·analyticsinsight(작은 매체), oryon 지식 베이스, 스팸성 3곳(Google Business 혼동). `can't remove …`는 JustAnswer·Samsung 커뮤니티·Malwarebytes·Google 도움말. 현재 메뉴 이름(`Security & sign-in` > `How you sign in to Google`), 복구 전화 삭제와 Phone 삭제 차이, 광고 스위치, Android 재추가, 지워지지 않는 원인별 해결, 바꾼 뒤 7일이 빠짐
 - 주 검색어: `remove phone number from google account`. 제목 `How to Remove a Phone Number From Your Google Account`(53자), 설명 155자
 - 1차 출처: 위 11개 문서 원문 `tests/remove-phone-number-from-google-account/source-*.txt`(2026-10-25 UTC). Google 계정·Android 기기가 없어 계정 화면은 직접 실행 못 함(본문 How we checked에 밝힘). 2-Step Verification 화면 안의 버튼 이름, 유일한 두 번째 단계인 번호를 지울 수 있는지는 문서에 없어 쓰지 않음
-- 이미지: 대표 이미지(HERO_LOG) + 본문 4장(도움말 화면 캡처 2장 + accent 상자, 원인 → 해결 표, 바꾼 뒤 일정, `charts.py` 라이트 모드). 번호가 있는 6곳 그래픽은 도입 요약 표와 겹쳐 뺌
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1118472335, 54.8분, 라일락 배지 + 민트·탠저린 끈, 정면에 가까운 3/4 시점. 수화기 장식이 1개, 배경이 연회색이지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(도움말 화면 캡처 2장 + accent 상자, 원인 → 해결 표, 바꾼 뒤 일정, `charts.py` 라이트 모드). 번호가 있는 6곳 그래픽은 도입 요약 표와 겹쳐 뺌
 - 내부 링크: 새 글 → 칼럼 `google-phone-number-verification`·`google-gmail-photos-ads`, 허브 `turn-off-ai-features`, 상시 글 `turn-off-gemini-in-gmail` (4개). 역링크: `gemini-gems-to-skills`(색인됨) 끝 관련 글 문단의 전화번호 문장 뒤, 칼럼 `google-phone-number-verification` "중간 옵션" 문단 끝, 허브 Google 검색 절 광고 문단 끝 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
 - 칼럼 `google-phone-number-verification` 메뉴 이름 정정: 2026-10-25 Google 도움말(183723 컴퓨터·Android판)이 `Security & sign-in`이라 "**Security** tab" 2곳을 `Security & sign-in`으로 (오탈자 수준 정정, `updatedAt` 그대로)
 - 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 53자·H1 일치, 설명 155자, 첫 100단어에 주 검색어, 소제목, 이미지 alt·파일 이름, 받는 링크 3개, AI 문체(em dash 0)). "Why you can't remove" 첫 문장을 원인 5가지를 담은 완결 문장으로 고침. searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_LOG
+- 빌드 HTML 확인: title 65자(접미사 포함, 본제목 53자)·description 155자, BlogPosting/BreadcrumbList JSON-LD 정상, h1 1개·h2 14개·h3 5개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
 
 **알게 된 것**
 

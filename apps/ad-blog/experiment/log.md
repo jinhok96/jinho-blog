@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-26 · 주간 SEO 점검
+
+점검 시각: 2026-10-26 08:45 KST (정기 실행 "주간 SEO 점검", 첫 회). 기준 `origin/main` 7ca80af. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(10-19 ~ 10-25) `main`에 머지된 글 39편(새 글 25 · 수정 14)·코드. 스킬 `searchfit-seo:technical-seo`·`seo-audit`·`internal-linking`·`ai-visibility`를 불러 체크리스트대로 확인하고, 문서 규칙(FAQPage 없음·키워드 반복 목표 없음·제목 꼬리표 금지·llms.txt 없음)과 다른 스킬 조언(Organization·FAQ 스키마 추가, 외부 리뷰·Reddit 활동 등)은 적용하지 않음. 글·코드는 고치지 않음.
+
+**문제 (심각도별)**
+
+- 치명: 없음
+- 높음
+  - **Google 색인 정체**: 발행 43편 중 `URL is unknown` 26편, 색인 17편 그대로. 마지막 새 크롤링 10-20, sitemap 마지막 다운로드 10-22 23:03(제출 시각). 7일 이상 미발견: `/posts/compress-video-for-discord-email`(10-16 발행) · `/posts/pixel-watch-safety-signal-ending`(10-17) · `/posts/split-pdf-free`(10-17). `/posts/pdf-to-jpg-free`(10-19 03:42)도 곧 7일. 허브 2편 `/posts/turn-off-ai-features`·`/posts/best-free-pdf-tools`도 미발견
+  - **`photo-video` 허브 없음**: 상시 글 6편(`convert-heic-to-jpg-free`·`convert-webp-to-jpg-free`·`compress-image-to-100kb`·`remove-bg-alternative-free`·`remove-metadata-from-photos`·`compress-video-for-discord-email`)인데 허브가 없음 (`link_audit.py` "허브 필요"). 우선순위 2 클러스터
+- 보통
+  - **대표 이미지 규칙 미적용 29편** (writing-guide 대표 이미지, 2026-10-22 "모든 글"): frontmatter `thumbnail`에 측정 그래프를 지정한 글 25편 — 노출이 많은 순으로 `/posts/spotify-family-qr-code-verification`(215회) · `/posts/turn-off-ai-in-chrome`(134회) · `/posts/microsoft-365-family-storage-2tb` · `/posts/iphone-handoff-verizon-cost` · `/posts/merge-pdf-files-free` 등. 본문 첫 줄 대표 이미지도 `thumbnail`도 없는 글 4편 `/posts/check-if-image-is-ai-generated` · `/posts/gemini-gems-to-skills` · `/posts/transcribe-audio-offline-free` · `/posts/windows-10-esu-extended`. OG 이미지는 43편 모두 글별 `/_static/mdx/posts/og/{slug}.jpg`로 나옴 (기본 OG 이미지 사용 0편)
+  - **내부 링크** (`link_audit.py`): 받는 링크 2개 미만 `/posts/pixel-watch-safety-signal-ending` 1개(← `iphone-handoff-verizon-cost`, 7일 이상 미발견 글이기도 함) · 칼럼 → 상시 글 링크 없음 `/posts/apple-mail-exchange-not-syncing`(windows-microsoft 상시 글은 `windows-10-esu-extended`뿐) · 상시 글 → 허브 누락 `/posts/turn-off-ai-in-chrome` → `turn-off-ai-features`(V3 판정 11-18까지 의도적 보류)
+  - **비슷한 태그 2묶음**: `Chrome`(2) · `Google Chrome`(2), `AI`(1) · `Meta AI`(1). 1개 글에만 쓴 태그 74/107개
+  - **AI 답변 인용** (writing-guide AI 답변 인용): 소제목 첫 문장이 앞 문맥에 기대는 곳 3개 — `/posts/office-2021-end-of-support` "Who is affected"(`This only matters if…`) · `/posts/remove-metadata-from-photos` "Jimpl, Verexif and IMGonline"(`These three websites…`) · `/posts/windows-11-24h2-end-of-support` "What to watch next"(`This is the second…`). 나머지 새 글 22편은 소제목 첫 문장이 답(`No, Instagram has no setting that…` 형태 포함), 25편 모두 비교·요약 표 1개 이상
+  - **HTTP → HTTPS 미확인**: 컨테이너에서 80 포트로 나가지 못해 `http://tool-proof.com/`·`http://www.tool-proof.com/` 리디렉트를 확인하지 못함. Search Console 페이지별에 `http://tool-proof.com/` 노출 1회 기록 (28일)
+
+**통과한 항목**
+
+- robots.txt 200, `Allow: /` + sitemap 위치. sitemap.xml 200, `<loc>` 50개 = 발행 글 43 + 고정 페이지 3 + 홈 1 + 카테고리 3(`ai-tools`·`software`·`news`), 빠진 글 0, `lastmod`는 frontmatter 날짜(시각 포함)
+- sitemap URL 50개 모두 200, canonical 자기 참조, `robots: index, follow`, `X-Robots-Tag` 없음, h1 1개
+- `vercel.json` 리디렉트 7개 모두 308 한 번에 대상 글 200 도착. `video-to-gif-high-quality-free`는 규칙대로 404. `https://www.tool-proof.com/` → 308 → `https://tool-proof.com/`, 끝 슬래시 URL → 308 → 슬래시 없는 URL
+- 지난 7일 글 39편: 설명 140~160자(143~160), BlogPosting·BreadcrumbList JSON-LD, 글별 OG 이미지. 꼬리표 금지 규칙(2026-10-22 13:31 UTC) 이후 발행한 새 글 11편 모두 꼬리표 없음, 검색형 60자·피드형 75자 이하. 규칙 전 제목(`: What It Means for You`·`(3 Tools Tested)` 등)은 규칙대로 그대로 둠
+- 이미지 alt: 본문 이미지는 모두 alt 있음. alt가 빈 이미지는 관련 글 카드 썸네일 3개(카드 제목 텍스트가 있어 장식 이미지)뿐
+
+**목표 지표 현재값** (`gsc_report.py`, 2026-09-27 ~ 10-25, 최신 미확정 데이터 포함)
+
+| 지표 | 현재 (10-26) | 목표 (11-30) | 10-22 대비 |
+| --- | --- | --- | --- |
+| 색인율 | 17/43 (40%) | 80% 이상 | 17/32 → 17/43 (새 글만 늘고 색인 0) |
+| 28일 노출 | 683 (클릭 10, CTR 1.5%, 평균 22.2위) | 2,000 | 325 → 683. 최근 7일 538 vs 그 전 7일 142 |
+| 10위 안 비브랜드 검색어 수 | 18개 | 40개 | 11 → 18 |
+| 허브가 있는 클러스터 (상시 글 3편 이상) | 3/4 (`photo-video` 없음) | 전부 | 2/4 → 3/4 |
+| 받는 링크 2개 미만 글 | 1편 | 0편 | 7 → 1 |
+
+- 새로 10위 안에 든 검색어 (28일 창을 7일 앞당긴 기간 대비 13개): Spotify QR 칼럼 긴 검색어 3개(`spotify's family plan qr code could cost you premium access` 5.8위 54회 · `spotify implements qr code verification…` 6.1위 42회 · `spotify strengthens household residency…` 4.5위 36회, 모두 클릭 0) + 중국어 1개, OCR 4개(`offline ocr tools` 5 · `image to text offline` 6.7 · `free ocr offline` 7 · `free offline ocr` 8), Chrome AI 2개(`delete chrome on device ai` 8 · `"aimodesettings"` 10), `microsoft 365 family storage space` 9, `heic to jpg cc relevant` 10, `text to speech free offline` 10(삭제 글 → 리디렉트 URL)
+- Spotify QR 칼럼은 28일 노출 215회·14.5위인데 클릭 0 → V4 제목 교체(10-25) 판정 대상
+
+**다음 개선 세션 할 일 (우선순위)**
+
+1. 미발견 글 발견 경로 보강: 7일 이상 미발견 3편(`compress-video-for-discord-email`·`pixel-watch-safety-signal-ending`·`split-pdf-free`)과 허브 2편에 색인된 같은 클러스터 글(최근 크롤링 10-19~20: `compress-image-to-100kb`·`convert-heic-to-jpg-free`·`merge-pdf-files-free`·`jpg-to-pdf-free`·`iphone-handoff-verizon-cost`)에서 본문 링크 추가. `pixel-watch-safety-signal-ending` 받는 링크 2개 이상, `apple-mail-exchange-not-syncing` → `windows-10-esu-extended` 링크
+2. `photo-video` 허브 작성 (주 검색어 후보 `free image converter`, clusters.md 우선순위 2), `hub: true`로 홈 고정, 상시 글 6편 → 허브 링크
+3. 노출 있는 글부터 대표 이미지 추가: `turn-off-ai-in-chrome`·`microsoft-365-family-storage-2tb`·`iphone-handoff-verizon-cost`의 `thumbnail` 비우고 본문 첫 줄 대표 이미지(`spotify-family-qr-code-verification`은 V4 판정 11-22 뒤). 같은 PR에 태그 통합(`Google Chrome` → `Chrome`)과 소제목 첫 문장 3곳 수정
+
+**사용자가 할 일**
+
+- Search Console URL 검사 → 색인 생성 요청: `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` (하루 요청 한도 안에서 허브 2편 먼저)
+- 브라우저에서 `http://tool-proof.com/`이 `https://tool-proof.com/`으로 넘어가는지 한 번 확인 (컨테이너에서 확인 불가)
+
 ## 2026-10-26 · 세션 51 (정기 실행, 뉴스 세션 · 영향): Arc 브라우저 12-22 종료와 Dia 이전
 
 세션 시각: 2026-10-26 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(f8a4577)에서 다시 시작.

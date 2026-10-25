@@ -42,7 +42,7 @@ async function main() {
       await page.goto('file://' + path.join(dir, 'index.html'));
       await page.waitForTimeout(500);
       // 정렬 버튼을 모두 눌러 정렬·다시 그리기 경로도 실행
-      for (const b of await page.$$('#posts-panel .sort')) await b.click();
+      for (const b of await page.$$('#posts-panel th:not([hidden]) .sort')) await b.click();
       const s = await page.evaluate(() => ({
         updated: document.getElementById('updated').textContent,
         notice: document.getElementById('notice').hidden ? '' : document.getElementById('notice').textContent,

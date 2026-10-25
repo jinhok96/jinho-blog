@@ -87,10 +87,10 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 .panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
 .legend { display: flex; gap: 12px; font-size: var(--fs-sm); color: var(--body); }
 .legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 8px; vertical-align: 0; }
-#chart-imp svg, #chart-pos svg { display: block; }
+#chart-imp svg, #chart-pos svg, #chart-views svg { display: block; }
 /* 막대 차트: 막대마다 숫자가 들어갈 최소 너비를 지키고, 화면보다 넓으면 가로 스크롤 (최근 날짜가 보이게 오른쪽 끝에서 시작) */
 .chart-scroll { overflow-x: auto; overflow-y: hidden; }
-#chart-imp, .detail-grid > div { min-width: 0; } /* 그리드 칸이 넓은 차트 폭만큼 늘어나지 않게 (스크롤은 차트 안에서) */
+#chart-imp, #chart-views, .detail-grid > div { min-width: 0; } /* 그리드 칸이 넓은 차트 폭만큼 늘어나지 않게 (스크롤은 차트 안에서) */
 .chart-scroll svg { display: block; }
 /* 글 순위표: 기간·지표 전환 버튼 */
 .rank-ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
@@ -234,6 +234,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
     <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub" id="k-pos-sub">낮을수록 위</span></div>
     <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
+    <div class="kpi" id="k-views-card" hidden><span class="label" title="Cloudflare Web Analytics 실측 페이지뷰 (쿠키 없음, 봇 대부분 제외)">조회수 (28일)</span><span class="value" id="k-views">–</span><span class="sub" id="k-views-sub">방문 –</span></div>
     <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
   </section>
 
@@ -261,11 +262,22 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     </div>
   </section>
 
+  <section class="charts" id="traffic-section" hidden>
+    <div class="panel">
+      <div class="panel-head"><h2>날짜별 조회수</h2><span class="small">실제 방문 · Cloudflare Web Analytics · UTC 날짜</span></div>
+      <div id="chart-views"></div>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>유입 사이트</h2><span class="small" title="direct = 주소 직접 입력·북마크·앱 등 리퍼러 없음 + 사이트 안 이동">최근 28일 · 조회수 · 방문</span></div>
+      <ul class="bars" id="referers"><li class="empty">데이터가 아직 없습니다.</li></ul>
+    </div>
+  </section>
+
   <section class="panel" id="rank-panel">
     <div class="panel-head"><h2>글 순위</h2>
       <div class="rank-ctl">
         <div class="seg" role="group" aria-label="기간"><button type="button" data-rank-period="day">일간</button><button type="button" data-rank-period="week">주간</button></div>
-        <div class="seg" role="group" aria-label="지표"><button type="button" data-rank-metric="impressions">노출</button><button type="button" data-rank-metric="clicks">클릭</button></div>
+        <div class="seg" role="group" aria-label="지표"><button type="button" data-rank-metric="impressions">노출</button><button type="button" data-rank-metric="clicks">클릭</button><button type="button" data-rank-metric="views" hidden>조회수</button></div>
         <div class="seg" role="group" aria-label="기간 이동"><button type="button" data-rank-step="1" aria-label="이전 기간">◀</button><button type="button" data-rank-step="-1" aria-label="다음 기간">▶</button></div>
         <span class="rank-range" id="rank-range"></span>
       </div>
@@ -273,8 +285,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="small" id="rank-note">웹 검색 기준 상위 10편. 변동은 직전 같은 길이 기간의 순위와 비교</div>
     <div class="table-scroll">
       <table class="rank">
-        <thead><tr><th class="r">#</th><th>변동</th><th>글</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
-        <tbody id="rank"><tr><td colspan="6" class="empty">글 데이터가 아직 없습니다.</td></tr></tbody>
+        <thead><tr><th class="r">#</th><th>변동</th><th>글</th><th class="r">노출</th><th class="r">클릭</th><th class="r" data-views-col hidden title="Cloudflare Web Analytics 실측 페이지뷰 (UTC 날짜)">조회수</th><th class="r">평균 순위</th></tr></thead>
+        <tbody id="rank"><tr><td colspan="7" class="empty">글 데이터가 아직 없습니다.</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -296,8 +308,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="panel-head"><h2>클러스터별 현황</h2><span class="small">clusters.md · 최근 28일 · 클러스터를 누르면 아래 글별 표를 그 클러스터로 거름</span></div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>클러스터</th><th class="r">우선순위</th><th>글</th><th>색인</th><th>유입 경로</th><th class="r">노출</th><th class="r">클릭</th><th class="r" title="노출 가중 평균">평균 순위</th><th>허브</th></tr></thead>
-        <tbody id="clusters"><tr><td colspan="9" class="empty">클러스터 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</td></tr></tbody>
+        <thead><tr><th>클러스터</th><th class="r">우선순위</th><th>글</th><th>색인</th><th>유입 경로</th><th class="r">노출</th><th class="r">클릭</th><th class="r" data-views-col hidden title="Cloudflare Web Analytics 실측 페이지뷰">조회수</th><th class="r" title="노출 가중 평균">평균 순위</th><th>허브</th></tr></thead>
+        <tbody id="clusters"><tr><td colspan="10" class="empty">클러스터 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -314,8 +326,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="small">지표는 최근 28일, 미확정 데이터 포함. 노출·클릭·순위는 웹 검색, 유입 경로는 검색 유형별 노출. 머리글을 누르면 정렬, 제목 아래를 누르면 검색어·추이·색인 상세</div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>글</th><th><button class="sort" data-sort="createdAt" type="button">발행</button></th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r"><button class="sort" data-sort="words" type="button">단어</button></th><th class="r"><button class="sort" data-sort="images" type="button">이미지</button></th><th title="발행일부터 색인을 처음 확인한 날까지 경과일 (D+N)"><button class="sort" data-sort="indexDays" type="button">색인</button></th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r"><button class="sort" data-sort="impressions" type="button">노출</button></th><th class="r"><button class="sort" data-sort="clicks" type="button">클릭</button></th><th class="r"><button class="sort" data-sort="position" type="button">평균 순위</button></th></tr></thead>
-        <tbody id="posts"><tr><td colspan="10" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
+        <thead><tr><th>글</th><th><button class="sort" data-sort="createdAt" type="button">발행</button></th><th title="clusters.md 클러스터 · 역할 · 우선순위">클러스터</th><th class="r"><button class="sort" data-sort="words" type="button">단어</button></th><th class="r"><button class="sort" data-sort="images" type="button">이미지</button></th><th title="발행일부터 색인을 처음 확인한 날까지 경과일 (D+N)"><button class="sort" data-sort="indexDays" type="button">색인</button></th><th title="검색 유형별 노출 (웹·이미지·Discover·뉴스 등)">유입 경로</th><th class="r"><button class="sort" data-sort="impressions" type="button">노출</button></th><th class="r"><button class="sort" data-sort="clicks" type="button">클릭</button></th><th class="r" data-views-col hidden title="Cloudflare Web Analytics 실측 페이지뷰 (28일)"><button class="sort" data-sort="views" type="button">조회수</button></th><th class="r"><button class="sort" data-sort="position" type="button">평균 순위</button></th></tr></thead>
+        <tbody id="posts"><tr><td colspan="11" class="empty">글 데이터가 아직 없습니다. 정기 세션이 끝나면 채워집니다.</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -379,7 +391,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 <script src="data.js"></script>
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, live: false }; // live = 실시간 DB 값을 보는 중
+const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, live: false }; // live = 실시간 DB 값을 보는 중
 const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
@@ -437,6 +449,29 @@ const reduceMotion = () => window.matchMedia('(prefers-reduced-motion: reduce)')
 function statusPill(s) {
   const cls = s === '검증됨' ? 'good' : s === '기각' ? 'bad' : s === '가설' ? 'muted' : 'warn';
   return `<span class="pill ${cls}">${esc(s)}</span>`;
+}
+
+// 실제 조회수 (traffic 문서: Cloudflare Web Analytics). 문서가 없으면 관련 칸을 숨김
+function renderTraffic() {
+  const t = state.traffic;
+  $('traffic-section').hidden = !t;
+  $('k-views-card').hidden = !t;
+  if (!t) return;
+  $('k-views').textContent = fmt(t.views);
+  const rows = t.daily || [];
+  const sum = (a, k) => a.reduce((s, r) => s + (r[k] || 0), 0);
+  if (rows.length >= 14) {
+    const now = rows.slice(-7), prev = rows.slice(-14, -7);
+    $('k-views-sub').innerHTML = `방문 ${fmt(t.visits)} · 7일 ${fmt(sum(now, 'views'))}회 ${deltaChip(sum(now, 'views') - sum(prev, 'views'))}`;
+    $('k-views-sub').title = `직전 7일 조회수 ${fmt(sum(prev, 'views'))}회 · 오늘(UTC)은 집계 중`;
+  } else {
+    $('k-views-sub').textContent = `방문 ${fmt(t.visits)}`;
+  }
+  barChart($('chart-views'), rows.map((r) => ({ ...r, state: r.views ? 'final' : 'empty' })), BAR_VIEWS);
+  const refs = t.referers || [];
+  const max = Math.max(1, ...refs.map((r) => r.views));
+  $('referers').innerHTML = refs.length ? refs.map((r) => `<li><span class="name">${r.key === 'direct' ? '직접·사이트 안 이동' : esc(r.key)}</span><span class="val">${fmt(r.views)} · ${fmt(r.visits)}</span><span class="track"><i style="width:${(r.views / max) * 100}%"></i></span></li>`).join('')
+    : '<li class="empty">유입 사이트 데이터가 아직 없습니다.</li>';
 }
 
 function renderSummary() {
@@ -520,39 +555,45 @@ const BAR_MIN = 36;
 // 가로 스크롤 차트는 최근 날짜(오른쪽 끝)부터 보이게
 const scrollEnd = (root) => root.querySelectorAll('.chart-scroll').forEach((s) => { s.scrollLeft = s.scrollWidth; });
 
-function barChart(el, rawRows) {
+// 막대 그래프 지표: v = 막대 값, s = 막대 위 보조 값(파란 글자, 없으면 null), t = 툴팁에만 쓰는 보조 값
+const BAR_IMP = { v: 'impressions', vName: '노출', s: 'clicks', sName: '클릭', aria: '날짜별 노출 막대 그래프' };
+const BAR_VIEWS = { v: 'views', vName: '조회수', s: null, t: 'visits', tName: '방문', aria: '날짜별 조회수 막대 그래프' };
+
+function barChart(el, rawRows, m = BAR_IMP) {
   if (!rawRows.length) { el.innerHTML = '<div class="empty">날짜별 데이터가 아직 없습니다.</div>'; return; }
   const rows = fillDays(rawRows);
   const H = 240, L = 8, R = 8, T = 36, B = 40;
   // 날짜가 늘거나 화면이 좁아도 막대 위 숫자가 사라지지 않게 칸 너비를 BAR_MIN 이상으로 두고, 넘치면 가로 스크롤
   const W = Math.max(280, Math.floor(el.clientWidth), L + R + rows.length * BAR_MIN);
-  const max = Math.max(1, ...rows.map((r) => r.impressions));
+  const val = (r) => r[m.v] || 0;
+  const max = Math.max(1, ...rows.map(val));
   const bw = (W - L - R) / rows.length;
   const y = (v) => T + (H - T - B) * (1 - v / max);
   let g = `<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)"/>`;
   const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - L - R) / 56)));
   rows.forEach((r, i) => {
     const x = L + i * bw, cx = x + bw / 2;
-    const h = Math.max(y(0) - y(r.impressions), r.impressions ? 2 : 0);
+    const h = Math.max(y(0) - y(val(r)), val(r) ? 2 : 0);
     const fresh = r.state === 'fresh';
-    const tip = `${mdLabel(r.date)} (${weekday(r.date)}) 노출 ${r.impressions}회 · 클릭 ${r.clicks || 0}회${fresh ? ' · 미확정' : r.state === 'empty' ? ' · 데이터 없음' : ''}`;
+    const side = m.s || m.t;
+    const tip = `${mdLabel(r.date)} (${weekday(r.date)}) ${m.vName} ${val(r)}회${side ? ` · ${m.s ? m.sName : m.tName} ${r[side] || 0}회` : ''}${fresh ? ' · 미확정' : r.state === 'empty' ? ' · 데이터 없음' : ''}`;
     // 넓은 투명 막대 = 마우스 올리는 영역
     g += `<g><title>${tip}</title><rect x="${x}" y="${T - 28}" width="${bw}" height="${H - T + 28 - B}" fill="transparent"/>`;
     if (h) g += `<rect x="${x + bw * 0.2}" y="${y(0) - h}" width="${bw * 0.6}" height="${h}" rx="3" fill="var(--series)"${fresh ? ' fill-opacity="0.28" stroke="var(--series)" stroke-dasharray="3 2"' : ''}/>`;
     {
-      g += `<text x="${cx}" y="${y(0) - h - 8}" text-anchor="middle" style="fill:${r.impressions ? 'var(--ink)' : 'var(--mute)'};font-weight:${r.impressions ? 600 : 400}">${r.impressions}</text>`;
-      if (r.clicks) g += `<text x="${cx}" y="${y(0) - h - 24}" text-anchor="middle" style="fill:var(--link);font-weight:600">클릭 ${r.clicks}</text>`;
+      g += `<text x="${cx}" y="${y(0) - h - 8}" text-anchor="middle" style="fill:${val(r) ? 'var(--ink)' : 'var(--mute)'};font-weight:${val(r) ? 600 : 400}">${val(r)}</text>`;
+      if (m.s && r[m.s]) g += `<text x="${cx}" y="${y(0) - h - 24}" text-anchor="middle" style="fill:var(--link);font-weight:600">${m.sName} ${r[m.s]}</text>`;
     }
     g += '</g>';
     if ((rows.length - 1 - i) % every === 0) g += `<text x="${cx}" y="${H - 22}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 6}" text-anchor="middle">${weekday(r.date)}</text>`;
   });
   // 요약 줄: 최근 7일 합계와 직전 7일 비교
-  const sum = (a) => a.reduce((s, r) => s + r.impressions, 0);
+  const sum = (a) => a.reduce((s, r) => s + val(r), 0);
   const last7 = sum(rows.slice(-7)), prev7 = rows.length > 7 ? sum(rows.slice(-14, -7)) : null;
-  const peak = rows.reduce((a, r) => (r.impressions > a.impressions ? r : a), rows[0]);
+  const peak = rows.reduce((a, r) => (val(r) > val(a) ? r : a), rows[0]);
   const diff = prev7 == null ? '' : ` · 직전 7일 ${prev7}회 대비 ${last7 >= prev7 ? '+' : ''}${last7 - prev7}`;
-  el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">최근 7일 노출 <b style="color:var(--ink)">${last7}회</b>${diff} · 최고 ${mdLabel(peak.date)} ${peak.impressions}회</div>
-    <div class="chart-scroll"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg></div>`;
+  el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">최근 7일 ${m.vName} <b style="color:var(--ink)">${last7}회</b>${diff} · 최고 ${mdLabel(peak.date)} ${val(peak)}회</div>
+    <div class="chart-scroll"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="${m.aria}">${g}</svg></div>`;
   scrollEnd(el);
 }
 
@@ -722,7 +763,7 @@ function queryTable(qs, impressions) {
 }
 
 function detailRow(key, p, extra) {
-  return `<tr class="detail" data-for="${esc(key)}"${expanded.has(key) ? '' : ' hidden'}><td colspan="10"><div class="detail-grid">
+  return `<tr class="detail" data-for="${esc(key)}"${expanded.has(key) ? '' : ' hidden'}><td colspan="${POST_COLS}"><div class="detail-grid">
     <div><h3>검색어</h3>${queryTable(p.queries, p.impressions)}</div>
     <div><h3>날짜별 노출</h3>${sparkline(p.daily)}</div>
     ${extra}
@@ -751,6 +792,10 @@ function indexFacts(p) {
 }
 
 const DASH = '<span class="small">–</span>';
+// 실제 조회수(Cloudflare)는 데이터에 있을 때만 칸을 보임 (없으면 예전 화면 그대로)
+const hasViews = () => state.posts.some((p) => p.views != null);
+let POST_COLS = 10; // 글별 표 열 수 (조회수 칸 포함 여부에 따라 renderPosts에서 갱신)
+const viewsCell = (p) => (hasViews() ? `<td class="r num"${p.visits != null ? ` title="방문 ${fmt(p.visits)}회"` : ''}>${fmt(p.views ?? 0)}</td>` : '');
 // 클러스터 칸: clusters.md 등재 정보. undefined = 이 항목이 생기기 전 데이터, null = 미지정
 function clusterCell(c) {
   if (c === undefined) return DASH;
@@ -800,6 +845,7 @@ function renderClusters() {
     const ps = g.posts;
     const imp = ps.reduce((a, p) => a + p.impressions, 0);
     const clk = ps.reduce((a, p) => a + p.clicks, 0);
+    const views = hasViews() ? `<td class="r num">${fmt(ps.reduce((a, p) => a + (p.views || 0), 0))}</td>` : '';
     const pos = imp ? ps.reduce((a, p) => a + (p.position || 0) * p.impressions, 0) / imp : null;
     const roles = [['허브', '허브'], ['상시 글', '상시'], ['뉴스 칼럼', '칼럼']].map(([r, short]) => [short, roleCount(g, r)]).filter(([, n]) => n).map(([s, n]) => `${s} ${n}`).join(' · ');
     const ever = roleCount(g, '상시 글');
@@ -811,7 +857,7 @@ function renderClusters() {
       <td class="num">${ps.some((p) => p.index) ? `${ps.filter(isIndexed).length} / ${ps.length}` : '–'}</td>
       <td>${sourceCell(sumSources(ps))}</td>
       <td class="r num">${fmt(imp)}</td>
-      <td class="r num">${fmt(clk)}</td>
+      <td class="r num">${fmt(clk)}</td>${views}
       <td class="r num">${pos == null ? '–' : pos.toFixed(1)}</td>
       <td>${hub}</td>
     </tr>`;
@@ -819,7 +865,7 @@ function renderClusters() {
 }
 
 // 글별 표 보기 상태 (거르기·정렬). 보는 사람 브라우저에만 기억
-const SORTS = { createdAt: 'desc', indexDays: 'asc', words: 'desc', images: 'desc', impressions: 'desc', clicks: 'desc', position: 'asc' }; // 처음 누를 때 방향
+const SORTS = { createdAt: 'desc', indexDays: 'asc', words: 'desc', images: 'desc', impressions: 'desc', clicks: 'desc', views: 'desc', position: 'asc' }; // 처음 누를 때 방향
 const view = { cluster: '', index: '', sort: 'createdAt', dir: 'desc' };
 try {
   const saved = JSON.parse(localStorage.getItem('postsView') || 'null');
@@ -870,13 +916,15 @@ function postRow(p) {
     <td>${indexPill(p.index)}${p.indexDays == null ? '' : `<div class="small" title="발행 → 색인 확인 ${esc(ymd(p.indexedAt))}">D+${p.indexDays}</div>`}</td>
     <td>${sourceCell(p.sources)}</td>
     <td class="r num">${fmt(p.impressions)}</td>
-    <td class="r num">${fmt(p.clicks)}</td>
+    <td class="r num">${fmt(p.clicks)}</td>${viewsCell(p)}
     <td class="r num">${p.position == null ? '–' : p.position.toFixed(1)}${moveNote(p.move)}</td>
   </tr>${detailRow(p.slug, p, indexFacts(p))}`;
 }
 
 function renderPosts() {
   if (!state.posts.length) return;
+  POST_COLS = hasViews() ? 11 : 10;
+  document.querySelectorAll('[data-views-col]').forEach((el) => { el.hidden = !hasViews(); });
   const all = state.posts;
   $('k-posts').textContent = all.length;
   all.forEach((p) => { p.indexDays = daysFrom(p, p.indexedAt); });
@@ -893,7 +941,7 @@ function renderPosts() {
     else th.removeAttribute('aria-sort');
   });
   // 글 외 페이지는 클러스터·색인이 없어 거르는 중에는 숨김
-  $('posts').innerHTML = (posts.length ? posts.map(postRow).join('') : '<tr><td colspan="10" class="empty">조건에 맞는 글이 없습니다.</td></tr>') + (filtered ? '' : renderOtherPages());
+  $('posts').innerHTML = (posts.length ? posts.map(postRow).join('') : `<tr><td colspan="${POST_COLS}" class="empty">조건에 맞는 글이 없습니다.</td></tr>`) + (filtered ? '' : renderOtherPages());
   scrollEnd($('posts'));
 }
 
@@ -962,30 +1010,38 @@ function renderTodo() {
 }
 
 // 글 순위표: 일간(하루)·주간(7일), 마지막 집계일에서 offset 기간만큼 앞으로. 글별 날짜별 지표(최근 28일)로 계산
+// 조회수(views)는 Cloudflare Web Analytics 실측(UTC 날짜, 데이터에 있을 때만), 노출·클릭은 Search Console(태평양 시간 날짜)
 const rankView = { period: 'week', metric: 'impressions', offset: 0 };
+const RANK_METRICS = { impressions: '노출', clicks: '클릭', views: '조회수' };
 try {
   const saved = JSON.parse(localStorage.getItem('rankView') || 'null');
-  if (saved) Object.assign(rankView, { period: saved.period === 'day' ? 'day' : 'week', metric: saved.metric === 'clicks' ? 'clicks' : 'impressions' });
+  if (saved) Object.assign(rankView, { period: saved.period === 'day' ? 'day' : 'week', metric: RANK_METRICS[saved.metric] ? saved.metric : 'impressions' });
 } catch (e) { /* 기본 보기 */ }
 const RANK_LIMIT = 10;
 const addDays = (d, n) => { const x = new Date(d + 'T00:00:00Z'); x.setUTCDate(x.getUTCDate() + n); return x.toISOString().slice(0, 10); };
 
-// 기간 [start, end] 안의 글별 합계 → 지표 내림차순 (같으면 다른 지표, 그다음 평균 순위)
+// 기간 [start, end] 안의 글별 합계 → 지표 내림차순 (같으면 다음 지표, 그다음 평균 순위)
 function rankPeriod(start, end, metric) {
-  const other = metric === 'clicks' ? 'impressions' : 'clicks';
+  const next = { impressions: ['clicks', 'views'], clicks: ['impressions', 'views'], views: ['clicks', 'impressions'] }[metric];
   return state.posts.map((p) => {
     const ds = (p.daily || []).filter((r) => r.date >= start && r.date <= end);
-    const impressions = ds.reduce((a, r) => a + r.impressions, 0);
+    const sum = (k) => ds.reduce((a, r) => a + (r[k] || 0), 0);
+    const impressions = sum('impressions');
     const posW = ds.reduce((a, r) => a + (r.position || 0) * r.impressions, 0);
-    return { p, impressions, clicks: ds.reduce((a, r) => a + (r.clicks || 0), 0), position: impressions ? posW / impressions : null };
+    return { p, impressions, clicks: sum('clicks'), views: sum('views'), position: impressions ? posW / impressions : null };
   }).filter((r) => r[metric] > 0)
-    .sort((a, b) => b[metric] - a[metric] || b[other] - a[other] || (a.position ?? 999) - (b.position ?? 999));
+    .sort((a, b) => b[metric] - a[metric] || b[next[0]] - a[next[0]] || b[next[1]] - a[next[1]] || (a.position ?? 999) - (b.position ?? 999));
 }
 
 function renderRank() {
   if (!state.posts.length || !state.daily.length) return;
+  const views = hasViews();
+  if (!views && rankView.metric === 'views') rankView.metric = 'impressions';
+  document.querySelectorAll('#rank-panel [data-views-col], [data-rank-metric="views"]').forEach((el) => { el.hidden = !views; });
   const len = rankView.period === 'day' ? 1 : 7;
-  const last = state.daily.reduce((m, r) => (r.date > m ? r.date : m), '');
+  // 마지막 날: 조회수는 그날 값이 있는 마지막 날짜(오늘까지), 노출·클릭은 Search Console 마지막 집계일
+  const viewDays = rankView.metric === 'views' ? state.posts.flatMap((p) => (p.daily || []).filter((r) => r.views).map((r) => r.date)) : [];
+  const last = [...viewDays, ...(viewDays.length ? [] : state.daily.map((r) => r.date))].reduce((m, d) => (d > m ? d : m), '');
   // 글별 날짜별 지표가 있는 가장 이른 날짜까지만 이동
   const first = state.posts.reduce((m, p) => (p.daily || []).reduce((mm, r) => (r.date < mm ? r.date : mm), m), last);
   const days = Math.round((Date.parse(last) - Date.parse(first)) / 86400000) + 1;
@@ -994,20 +1050,21 @@ function renderRank() {
   const end = addDays(last, -rankView.offset * len), start = addDays(end, -(len - 1));
   const cur = rankPeriod(start, end, rankView.metric);
   const prevRank = new Map(rankPeriod(addDays(start, -len), addDays(start, -1), rankView.metric).map((r, i) => [r.p.slug, i + 1]));
-  const fresh = state.daily.some((r) => r.date >= start && r.date <= end && r.state === 'fresh');
+  const fresh = rankView.metric !== 'views' && state.daily.some((r) => r.date >= start && r.date <= end && r.state === 'fresh');
   const label = len === 1 ? `${mdLabel(end)} (${weekday(end)})` : `${mdLabel(start)} ~ ${mdLabel(end)}`;
-  $('rank-range').textContent = `${label}${fresh ? ' · 미확정 포함' : ''}`;
+  $('rank-range').textContent = `${label}${fresh ? ' · 미확정 포함' : ''}${rankView.metric === 'views' ? ' · UTC' : ''}`;
   document.querySelectorAll('[data-rank-period]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.rankPeriod === rankView.period)));
   document.querySelectorAll('[data-rank-metric]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.rankMetric === rankView.metric)));
   document.querySelector('[data-rank-step="1"]').disabled = rankView.offset >= maxOffset;
   document.querySelector('[data-rank-step="-1"]').disabled = rankView.offset <= 0;
-  const name = rankView.metric === 'clicks' ? '클릭' : '노출';
-  $('rank-note').textContent = `웹 검색 ${name} 상위 ${RANK_LIMIT}편 (${name}이 있는 글 ${cur.length}편). 변동은 직전 ${len === 1 ? '하루' : '7일'}의 순위와 비교`;
+  const name = RANK_METRICS[rankView.metric];
+  const source = rankView.metric === 'views' ? '실제 방문(Cloudflare Web Analytics)' : '웹 검색';
+  $('rank-note').textContent = `${source} ${name} 상위 ${RANK_LIMIT}편 (${name}${name === '조회수' ? '가' : '이'} 있는 글 ${cur.length}편). 변동은 직전 ${len === 1 ? '하루' : '7일'}의 순위와 비교${views ? ' · 조회수는 UTC 날짜, 노출·클릭은 태평양 시간 날짜라 하루 경계가 다름' : ''}`;
   $('rank').innerHTML = cur.length ? cur.slice(0, RANK_LIMIT).map((r, i) => {
     const before = prevRank.get(r.p.slug);
     const move = before == null ? '<span class="small">신규</span>' : before === i + 1 ? '<span class="delta flat">–</span>' : `<span class="delta ${before > i + 1 ? 'good' : 'bad'}" title="직전 ${before}위">${before > i + 1 ? '▲' : '▼'}${Math.abs(before - i - 1)}</span>`;
-    return `<tr><td class="r n num">${i + 1}</td><td>${move}</td><td><div class="post-title">${jumpPost(r.p)}</div></td><td class="r num">${fmt(r.impressions)}</td><td class="r num">${fmt(r.clicks)}</td><td class="r num">${r.position == null ? '–' : r.position.toFixed(1)}</td></tr>`;
-  }).join('') : `<tr><td colspan="6" class="empty">이 기간에 ${name}이 있는 글이 없습니다.</td></tr>`;
+    return `<tr><td class="r n num">${i + 1}</td><td>${move}</td><td><div class="post-title">${jumpPost(r.p)}</div></td><td class="r num">${fmt(r.impressions)}</td><td class="r num">${fmt(r.clicks)}</td>${views ? `<td class="r num">${fmt(r.views)}</td>` : ''}<td class="r num">${r.position == null ? '–' : r.position.toFixed(1)}</td></tr>`;
+  }).join('') : `<tr><td colspan="7" class="empty">이 기간에 ${name}${name === '조회수' ? '가' : '이'} 있는 글이 없습니다.</td></tr>`;
 }
 
 $('rank-panel').addEventListener('click', (e) => {
@@ -1057,14 +1114,14 @@ function filterCluster(id) {
 // 글 외 페이지(홈·카테고리 등): 사이트 전체 KPI와 글별 합계의 차이를 보여 줌
 function renderOtherPages() {
   if (!state.otherPages.length) return '';
-  return `<tr class="group"><td colspan="10">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => {
+  return `<tr class="group"><td colspan="${POST_COLS}">글 외 페이지 (홈·카테고리·목록)</td></tr>` + state.otherPages.map((o) => {
     const key = 'page:' + o.path;
     return `<tr>
     <td><div class="post-title"><a href="${SITE}${o.path === '/' ? '' : esc(o.path)}" target="_blank" rel="noopener">${o.path === '/' ? '홈' : esc(o.path)}</a></div><div class="small">${esc(o.path)}</div>${detailToggle(key, o)}</td>
     <td>${DASH}</td><td>${DASH}</td><td class="r">${DASH}</td><td class="r">${DASH}</td><td>${DASH}</td>
     <td>${sourceCell(o.sources)}</td>
     <td class="r num">${fmt(o.impressions)}</td>
-    <td class="r num">${fmt(o.clicks)}</td>
+    <td class="r num">${fmt(o.clicks)}</td>${viewsCell(o)}
     <td class="r num">${o.position == null ? '–' : o.position.toFixed(1)}</td>
   </tr>${detailRow(key, o, '')}`;
   }).join('');
@@ -1160,6 +1217,7 @@ function render() {
   renderSummary();
   const daily = [...state.daily].sort((a, b) => a.date.localeCompare(b.date));
   barChart($('chart-imp'), daily);
+  renderTraffic();
   lineChart($('chart-pos'), daily);
   cohortChart($('chart-cohort'));
   renderMovers();
@@ -1191,6 +1249,7 @@ function applyDocs(byId) {
       state.knowhow = byId.knowhow?.rows || [];
       state.sessions = byId.sessions?.rows || [];
       state.breakdown = byId.breakdown || null;
+      state.traffic = byId.traffic || null;
       state.experiments = byId.experiments || null;
       state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);
       render();

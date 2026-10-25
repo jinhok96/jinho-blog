@@ -88,6 +88,21 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 .legend { display: flex; gap: 12px; font-size: var(--fs-sm); color: var(--body); }
 .legend i { display: inline-block; width: 8px; height: 8px; border-radius: 2px; margin-right: 8px; vertical-align: 0; }
 #chart-imp svg, #chart-pos svg { display: block; }
+/* 막대 차트: 막대마다 숫자가 들어갈 최소 너비를 지키고, 화면보다 넓으면 가로 스크롤 (최근 날짜가 보이게 오른쪽 끝에서 시작) */
+.chart-scroll { overflow-x: auto; overflow-y: hidden; }
+#chart-imp, .detail-grid > div { min-width: 0; } /* 그리드 칸이 넓은 차트 폭만큼 늘어나지 않게 (스크롤은 차트 안에서) */
+.chart-scroll svg { display: block; }
+/* 글 순위표: 기간·지표 전환 버튼 */
+.rank-ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
+.seg { display: inline-flex; padding: 2px; gap: 2px; border-radius: var(--r-ctl); background: var(--well); box-shadow: var(--hair); }
+.seg button { all: unset; cursor: pointer; height: 28px; line-height: 28px; padding: 0 12px; border-radius: 6px; font-size: var(--fs-sm); color: var(--mute); white-space: nowrap; }
+.seg button[aria-pressed="true"] { background: var(--panel); color: var(--ink); font-weight: 500; box-shadow: var(--hair); }
+.seg button:disabled { cursor: default; opacity: 0.4; }
+.seg button:focus-visible { outline: 2px solid var(--link); outline-offset: 2px; }
+.rank-range { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); font-variant-numeric: tabular-nums; white-space: nowrap; }
+table.rank { min-width: 560px; }
+table.rank td.n { width: 32px; font-weight: 600; color: var(--ink); }
+table.rank .post-title { max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 svg text { font-family: var(--font-num); font-size: var(--fs-chart); fill: var(--mute); }
 .table-scroll { overflow-x: auto; margin: 0 -24px; padding: 0 24px; }
 table { width: 100%; border-collapse: collapse; font-size: var(--fs-body); line-height: var(--lh-body); }
@@ -243,6 +258,24 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="panel">
       <div class="panel-head"><h2>날짜별 평균 순위</h2><span class="small">위로 갈수록 상위, 노출 없는 날 제외</span></div>
       <div id="chart-pos"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="rank-panel">
+    <div class="panel-head"><h2>글 순위</h2>
+      <div class="rank-ctl">
+        <div class="seg" role="group" aria-label="기간"><button type="button" data-rank-period="day">일간</button><button type="button" data-rank-period="week">주간</button></div>
+        <div class="seg" role="group" aria-label="지표"><button type="button" data-rank-metric="impressions">노출</button><button type="button" data-rank-metric="clicks">클릭</button></div>
+        <div class="seg" role="group" aria-label="기간 이동"><button type="button" data-rank-step="1" aria-label="이전 기간">◀</button><button type="button" data-rank-step="-1" aria-label="다음 기간">▶</button></div>
+        <span class="rank-range" id="rank-range"></span>
+      </div>
+    </div>
+    <div class="small" id="rank-note">웹 검색 기준 상위 10편. 변동은 직전 같은 길이 기간의 순위와 비교</div>
+    <div class="table-scroll">
+      <table class="rank">
+        <thead><tr><th class="r">#</th><th>변동</th><th>글</th><th class="r">노출</th><th class="r">클릭</th><th class="r">평균 순위</th></tr></thead>
+        <tbody id="rank"><tr><td colspan="6" class="empty">글 데이터가 아직 없습니다.</td></tr></tbody>
+      </table>
     </div>
   </section>
 
@@ -482,14 +515,20 @@ function fillDays(rows) {
   return out;
 }
 
+// 막대 차트 칸 최소 너비 (막대 위 노출 수·"클릭 N"이 들어가는 폭)
+const BAR_MIN = 36;
+// 가로 스크롤 차트는 최근 날짜(오른쪽 끝)부터 보이게
+const scrollEnd = (root) => root.querySelectorAll('.chart-scroll').forEach((s) => { s.scrollLeft = s.scrollWidth; });
+
 function barChart(el, rawRows) {
   if (!rawRows.length) { el.innerHTML = '<div class="empty">날짜별 데이터가 아직 없습니다.</div>'; return; }
   const rows = fillDays(rawRows);
-  const W = Math.max(280, Math.round(el.clientWidth)), H = 240, L = 8, R = 8, T = 36, B = 40;
+  const H = 240, L = 8, R = 8, T = 36, B = 40;
+  // 날짜가 늘거나 화면이 좁아도 막대 위 숫자가 사라지지 않게 칸 너비를 BAR_MIN 이상으로 두고, 넘치면 가로 스크롤
+  const W = Math.max(280, Math.floor(el.clientWidth), L + R + rows.length * BAR_MIN);
   const max = Math.max(1, ...rows.map((r) => r.impressions));
   const bw = (W - L - R) / rows.length;
   const y = (v) => T + (H - T - B) * (1 - v / max);
-  const showVal = bw >= 22; // 막대가 좁으면 숫자는 툴팁으로만
   let g = `<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)"/>`;
   const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - L - R) / 56)));
   rows.forEach((r, i) => {
@@ -500,12 +539,12 @@ function barChart(el, rawRows) {
     // 넓은 투명 막대 = 마우스 올리는 영역
     g += `<g><title>${tip}</title><rect x="${x}" y="${T - 28}" width="${bw}" height="${H - T + 28 - B}" fill="transparent"/>`;
     if (h) g += `<rect x="${x + bw * 0.2}" y="${y(0) - h}" width="${bw * 0.6}" height="${h}" rx="3" fill="var(--series)"${fresh ? ' fill-opacity="0.28" stroke="var(--series)" stroke-dasharray="3 2"' : ''}/>`;
-    if (showVal) {
+    {
       g += `<text x="${cx}" y="${y(0) - h - 8}" text-anchor="middle" style="fill:${r.impressions ? 'var(--ink)' : 'var(--mute)'};font-weight:${r.impressions ? 600 : 400}">${r.impressions}</text>`;
       if (r.clicks) g += `<text x="${cx}" y="${y(0) - h - 24}" text-anchor="middle" style="fill:var(--link);font-weight:600">클릭 ${r.clicks}</text>`;
     }
     g += '</g>';
-    if (i % every === 0 || i === rows.length - 1) g += `<text x="${cx}" y="${H - 22}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 6}" text-anchor="middle">${weekday(r.date)}</text>`;
+    if ((rows.length - 1 - i) % every === 0) g += `<text x="${cx}" y="${H - 22}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 6}" text-anchor="middle">${weekday(r.date)}</text>`;
   });
   // 요약 줄: 최근 7일 합계와 직전 7일 비교
   const sum = (a) => a.reduce((s, r) => s + r.impressions, 0);
@@ -513,7 +552,8 @@ function barChart(el, rawRows) {
   const peak = rows.reduce((a, r) => (r.impressions > a.impressions ? r : a), rows[0]);
   const diff = prev7 == null ? '' : ` · 직전 7일 ${prev7}회 대비 ${last7 >= prev7 ? '+' : ''}${last7 - prev7}`;
   el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">최근 7일 노출 <b style="color:var(--ink)">${last7}회</b>${diff} · 최고 ${mdLabel(peak.date)} ${peak.impressions}회</div>
-    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg>`;
+    <div class="chart-scroll"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg></div>`;
+  scrollEnd(el);
 }
 
 function lineChart(el, rows) {
@@ -529,7 +569,7 @@ function lineChart(el, rows) {
   let g = '';
   for (let v = 1; v <= bottom; v += v === 1 ? step - 1 : step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
   const every = Math.ceil(xs.length / Math.max(2, Math.floor((W - L - R) / 64)));
-  xs.forEach((d, i) => { if (i % every === 0 || i === xs.length - 1) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${ymd(d)}</text>`; });
+  xs.forEach((d, i) => { if ((xs.length - 1 - i) % every === 0) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${ymd(d)}</text>`; });
   g += `<polyline fill="none" stroke="var(--series)" stroke-width="2" points="${pts.map((r) => `${x(r.date)},${y(r.position)}`).join(' ')}"/>`;
   pts.forEach((r, i) => {
     const last = i === pts.length - 1;
@@ -647,11 +687,11 @@ function sparkline(daily) {
   const sorted = [...daily].sort((a, b) => a.date.localeCompare(b.date));
   const siteLast = state.daily.reduce((m, r) => (r.date > m ? r.date : m), sorted[sorted.length - 1].date);
   const rows = fillDays([...sorted, ...(siteLast > sorted[sorted.length - 1].date ? [{ date: siteLast, impressions: 0, clicks: 0, state: 'empty' }] : [])]);
-  const W = 320, H = 132, L = 4, R = 4, T = 28, B = 36;
+  const H = 140, L = 4, R = 4, T = 36, B = 36;
+  const W = Math.max(320, L + R + rows.length * BAR_MIN); // 칸이 넓으면 가로 스크롤 (실제 픽셀 크기로 그려 글자가 줄어들지 않게)
   const max = Math.max(1, ...rows.map((r) => r.impressions));
   const bw = (W - L - R) / rows.length;
   const y = (v) => T + (H - T - B) * (1 - v / max);
-  const showVal = bw >= 18;
   const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - L - R) / 48)));
   let g = `<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)"/>`;
   rows.forEach((r, i) => {
@@ -659,16 +699,16 @@ function sparkline(daily) {
     const h = Math.max(y(0) - y(r.impressions), r.impressions ? 2 : 0);
     g += `<g><title>${mdLabel(r.date)} (${weekday(r.date)}) 노출 ${r.impressions}회 · 클릭 ${r.clicks || 0}회${r.position ? ` · 평균 ${r.position}위` : ''}</title><rect x="${x}" y="0" width="${bw}" height="${H - B}" fill="transparent"/>`;
     if (h) g += `<rect x="${x + bw * 0.2}" y="${y(0) - h}" width="${bw * 0.6}" height="${h}" rx="2" fill="var(--series)"/>`;
-    if (showVal && r.impressions) {
+    if (r.impressions) {
       g += `<text x="${cx}" y="${y(0) - h - 6}" text-anchor="middle" style="fill:var(--ink);font-weight:600">${r.impressions}</text>`;
       if (r.clicks) g += `<text x="${cx}" y="${y(0) - h - 20}" text-anchor="middle" style="fill:var(--link);font-weight:600">클릭 ${r.clicks}</text>`;
     }
     g += '</g>';
-    if (i % every === 0 || i === rows.length - 1) g += `<text x="${cx}" y="${H - 20}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 4}" text-anchor="middle">${weekday(r.date)}</text>`;
+    if ((rows.length - 1 - i) % every === 0) g += `<text x="${cx}" y="${H - 20}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 4}" text-anchor="middle">${weekday(r.date)}</text>`;
   });
   const total = sorted.reduce((a, r) => a + r.impressions, 0);
   const clicks = sorted.reduce((a, r) => a + (r.clicks || 0), 0);
-  return `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg>
+  return `<div class="chart-scroll"><svg viewBox="0 0 ${W} ${H}" width="${W}" height="${H}" role="img" aria-label="날짜별 노출 막대 그래프">${g}</svg></div>
     <div class="small">합계 노출 ${total}회 · 클릭 ${clicks}회 · 노출 없는 날은 막대 없음</div>`;
 }
 
@@ -854,6 +894,7 @@ function renderPosts() {
   });
   // 글 외 페이지는 클러스터·색인이 없어 거르는 중에는 숨김
   $('posts').innerHTML = (posts.length ? posts.map(postRow).join('') : '<tr><td colspan="10" class="empty">조건에 맞는 글이 없습니다.</td></tr>') + (filtered ? '' : renderOtherPages());
+  scrollEnd($('posts'));
 }
 
 // 개선 세션 할 일: README "개선 세션" 1~4번을 데이터로 채움 (5번 이후는 일정·판단이라 제외)
@@ -920,6 +961,65 @@ function renderTodo() {
   ].join('');
 }
 
+// 글 순위표: 일간(하루)·주간(7일), 마지막 집계일에서 offset 기간만큼 앞으로. 글별 날짜별 지표(최근 28일)로 계산
+const rankView = { period: 'week', metric: 'impressions', offset: 0 };
+try {
+  const saved = JSON.parse(localStorage.getItem('rankView') || 'null');
+  if (saved) Object.assign(rankView, { period: saved.period === 'day' ? 'day' : 'week', metric: saved.metric === 'clicks' ? 'clicks' : 'impressions' });
+} catch (e) { /* 기본 보기 */ }
+const RANK_LIMIT = 10;
+const addDays = (d, n) => { const x = new Date(d + 'T00:00:00Z'); x.setUTCDate(x.getUTCDate() + n); return x.toISOString().slice(0, 10); };
+
+// 기간 [start, end] 안의 글별 합계 → 지표 내림차순 (같으면 다른 지표, 그다음 평균 순위)
+function rankPeriod(start, end, metric) {
+  const other = metric === 'clicks' ? 'impressions' : 'clicks';
+  return state.posts.map((p) => {
+    const ds = (p.daily || []).filter((r) => r.date >= start && r.date <= end);
+    const impressions = ds.reduce((a, r) => a + r.impressions, 0);
+    const posW = ds.reduce((a, r) => a + (r.position || 0) * r.impressions, 0);
+    return { p, impressions, clicks: ds.reduce((a, r) => a + (r.clicks || 0), 0), position: impressions ? posW / impressions : null };
+  }).filter((r) => r[metric] > 0)
+    .sort((a, b) => b[metric] - a[metric] || b[other] - a[other] || (a.position ?? 999) - (b.position ?? 999));
+}
+
+function renderRank() {
+  if (!state.posts.length || !state.daily.length) return;
+  const len = rankView.period === 'day' ? 1 : 7;
+  const last = state.daily.reduce((m, r) => (r.date > m ? r.date : m), '');
+  // 글별 날짜별 지표가 있는 가장 이른 날짜까지만 이동
+  const first = state.posts.reduce((m, p) => (p.daily || []).reduce((mm, r) => (r.date < mm ? r.date : mm), m), last);
+  const days = Math.round((Date.parse(last) - Date.parse(first)) / 86400000) + 1;
+  const maxOffset = Math.max(0, Math.floor((days - 1) / len)); // 기간 끝이 first 이후인 데까지 (첫 주는 일부 날짜만 있을 수 있음)
+  rankView.offset = Math.min(Math.max(0, rankView.offset), maxOffset);
+  const end = addDays(last, -rankView.offset * len), start = addDays(end, -(len - 1));
+  const cur = rankPeriod(start, end, rankView.metric);
+  const prevRank = new Map(rankPeriod(addDays(start, -len), addDays(start, -1), rankView.metric).map((r, i) => [r.p.slug, i + 1]));
+  const fresh = state.daily.some((r) => r.date >= start && r.date <= end && r.state === 'fresh');
+  const label = len === 1 ? `${mdLabel(end)} (${weekday(end)})` : `${mdLabel(start)} ~ ${mdLabel(end)}`;
+  $('rank-range').textContent = `${label}${fresh ? ' · 미확정 포함' : ''}`;
+  document.querySelectorAll('[data-rank-period]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.rankPeriod === rankView.period)));
+  document.querySelectorAll('[data-rank-metric]').forEach((b) => b.setAttribute('aria-pressed', String(b.dataset.rankMetric === rankView.metric)));
+  document.querySelector('[data-rank-step="1"]').disabled = rankView.offset >= maxOffset;
+  document.querySelector('[data-rank-step="-1"]').disabled = rankView.offset <= 0;
+  const name = rankView.metric === 'clicks' ? '클릭' : '노출';
+  $('rank-note').textContent = `웹 검색 ${name} 상위 ${RANK_LIMIT}편 (${name}이 있는 글 ${cur.length}편). 변동은 직전 ${len === 1 ? '하루' : '7일'}의 순위와 비교`;
+  $('rank').innerHTML = cur.length ? cur.slice(0, RANK_LIMIT).map((r, i) => {
+    const before = prevRank.get(r.p.slug);
+    const move = before == null ? '<span class="small">신규</span>' : before === i + 1 ? '<span class="delta flat">–</span>' : `<span class="delta ${before > i + 1 ? 'good' : 'bad'}" title="직전 ${before}위">${before > i + 1 ? '▲' : '▼'}${Math.abs(before - i - 1)}</span>`;
+    return `<tr><td class="r n num">${i + 1}</td><td>${move}</td><td><div class="post-title">${jumpPost(r.p)}</div></td><td class="r num">${fmt(r.impressions)}</td><td class="r num">${fmt(r.clicks)}</td><td class="r num">${r.position == null ? '–' : r.position.toFixed(1)}</td></tr>`;
+  }).join('') : `<tr><td colspan="6" class="empty">이 기간에 ${name}이 있는 글이 없습니다.</td></tr>`;
+}
+
+$('rank-panel').addEventListener('click', (e) => {
+  const b = e.target.closest('[data-rank-period], [data-rank-metric], [data-rank-step]');
+  if (!b || b.disabled) return;
+  if (b.dataset.rankPeriod) { rankView.period = b.dataset.rankPeriod; rankView.offset = 0; }
+  else if (b.dataset.rankMetric) rankView.metric = b.dataset.rankMetric;
+  else rankView.offset += Number(b.dataset.rankStep);
+  try { localStorage.setItem('rankView', JSON.stringify({ period: rankView.period, metric: rankView.metric })); } catch (err) { /* 기억하지 않음 */ }
+  renderRank();
+});
+
 function renderGoals() {
   const g = state.summary?.goals;
   if (!g?.rows?.length) return;
@@ -981,7 +1081,7 @@ document.addEventListener('click', (e) => {
     on ? expanded.add(key) : expanded.delete(key);
     btn.setAttribute('aria-expanded', String(on));
     const row = [...document.querySelectorAll('tr.detail')].find((r) => r.dataset.for === key);
-    if (row) row.hidden = !on;
+    if (row) { row.hidden = !on; if (on) scrollEnd(row); }
   } else if (btn.classList.contains('sort')) {
     const k = btn.dataset.sort;
     view.dir = view.sort === k ? (view.dir === 'asc' ? 'desc' : 'asc') : SORTS[k];
@@ -1063,6 +1163,7 @@ function render() {
   lineChart($('chart-pos'), daily);
   cohortChart($('chart-cohort'));
   renderMovers();
+  renderRank();
   renderStale();
   renderGoals();
   renderTodo();

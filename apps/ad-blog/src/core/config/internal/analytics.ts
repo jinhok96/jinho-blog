@@ -6,7 +6,7 @@
 /**
  * 사이트 토큰 (Cloudflare 대시보드 > Web Analytics > 사이트 > Manage site > JS 스니펫의 "token" 값)
  */
-export const CF_WEB_ANALYTICS_TOKEN: string = '';
+export const CF_WEB_ANALYTICS_TOKEN: string = '11ff5f9f67bb4894aadec935d7891e61';
 
 const TOKEN_PATTERN = /^[0-9a-f]{32}$/i;
 

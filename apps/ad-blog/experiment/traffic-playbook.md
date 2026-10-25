@@ -156,6 +156,8 @@
 | V1  | 3      | `transcribe-audio-offline-free` (같이 바꾼 `free-offline-text-to-speech`·`remove-background-from-image-free-offline`은 2026-10-17 삭제) | 허브 글 `free-offline-ai-tools`로 역링크 1개씩 추가 | 2026-10-14 | position | 2026-11-11 | - | - |
 | V2  | 3      | `free-offline-ai-tools` | 허브에 OCR 섹션·요약 표 행 추가 (새 측정 글 `image-to-text-offline-free` 연결), `updatedAt` 2026-10-15. 2026-10-17 TTS·배경 제거 섹션과 명령줄 내용 삭제가 판단 기간에 겹침 → 판정 때 참고 | 2026-10-15 | impressions | 2026-11-12 | - | - |
 | V3  | 4      | `turn-off-ai-in-chrome` | Chrome 156 재검증 반영: 설명·첫 문단의 현재 버전 155 → 156, 재검증 문단 1개(메뉴·정책 변화 없음), How we checked에 156 비교 추가, 이미지 0 → 4장(그래픽 3 + chrome://policy 캡처, `thumbnail` 지정. 노하우 7과 겹침 → 판정 때 두 변경을 구분할 수 없음을 적음). 반복 일정(Chrome 안정판) 대응의 첫 사례 | 2026-10-21 | position | 2026-11-18 | - | - |
+| V4  | 1      | `spotify-family-qr-code-verification` | 제목·설명만 교체 (CTR): 노출 164·클릭 0, 상위 검색어(다른 매체 기사 제목형 3개, 4.8~5.6위)에서 클릭 0 → `seo-audit` Weak click-through. 제목 `Spotify Family QR Code Check and 12-Month Lockout: What It Means for You` → `Spotify Family Plan QR Code Verification Gives Members 7 Days to Scan`(검색어의 `family plan`·`qr code verification`을 앞쪽에, 꼬리표 제거), 설명 교체. 본문·`updatedAt` 그대로 | 2026-10-25 | ctr | 2026-11-22 | - | - |
+| V5  | 2      | `image-to-text-offline-free` | `seo-audit` rankings-push: NAPS2 8.5.1 GUI 직접 측정(50장·설정 3가지) 섹션 추가 — 사용 단계, 유형별 정확도 표, Best·노이즈 제거 비교, How we tested, 둘째 문단을 측정 결과로 교체. 이미지 0 → 대표 + 본문 3장(노하우 7과 겹침 → 판정 때 구분 불가로 적음), `updatedAt` 2026-10-25. 마지막 크롤링 10-15라 10-17 명령줄 내용 삭제판도 아직 Google이 못 봄 → 판정은 '10-15판 → 10-25판' 비교. 변경 전 28일 노출 74(100 미만이면 보류) | 2026-10-25 | position | 2026-11-22 | - | - |
 
 ## 재분석
 

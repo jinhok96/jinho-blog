@@ -2,6 +2,7 @@ import type { Metadata, Viewport } from 'next';
 import type { ReactNode } from 'react';
 
 import { AdSenseScript } from '@/core/ads';
+import { AnalyticsScript } from '@/core/analytics';
 import { ADSENSE_CLIENT, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME, SITE_URL } from '@/core/config';
 import { SkipLink } from '@/core/ui';
 
@@ -49,6 +50,7 @@ export default function RootLayout({ children }: { children: ReactNode }) {
         </main>
         <Footer />
         <AdSenseScript />
+        <AnalyticsScript />
       </body>
     </html>
   );

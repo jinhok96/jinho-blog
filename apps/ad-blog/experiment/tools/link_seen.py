@@ -11,7 +11,7 @@
 - 그 시점의 판: origin/main 첫 부모 이력에서 크롤링 시각 이전 마지막 커밋 (배포 지연 몇 분은 무시)
 - 그 판이 가진 링크: 글은 본문 `/posts/{slug}` 링크 + 관련 글 3개 + 이전·다음 글,
   홈은 허브(`hub: true`) + 최신 12편, 카테고리는 그 카테고리 최신 12편 (src/entities/post 규칙과 같게)
-- `git fetch origin main`을 먼저 해 둬야 최신 이력을 봄
+- `git fetch origin main`을 먼저 해 둬야 최신 이력을 봄. 얕은 clone이면 `seen_links()`가 전체 이력을 받아 옴 (크롤링 시점 커밋이 없으면 링크를 빠뜨리므로)
 - dashboard_data.py가 `seen_links()`로 같은 계산을 회차마다 대시보드 DB(posts `seenLinks`·`firstSeenLinkAt`)에 남김
 """
 
@@ -115,6 +115,10 @@ def list_pages() -> list[str]:
 
 def seen_links(crawled: dict[str, dt.datetime], targets: set[str]) -> dict[str, list[dict]]:
     """targets 글마다 크롤링된 판에서 받은 링크 [{page, kind, crawl}] (crawled = 경로 → 마지막 크롤링)"""
+    # 정기 세션 컨테이너는 얕은 clone이라 크롤링 시점의 커밋이 없으면 그 페이지의 링크를 빠뜨림 (2026-10-27: 10편 → 7편)
+    if git("rev-parse", "--is-shallow-repository").strip() == "true":
+        print("얕은 clone → 전체 이력을 받음 (git fetch --unshallow origin main)", file=sys.stderr)
+        git("fetch", "-q", "--unshallow", "origin", "main")
     revs = [line.split(" ", 1) for line in git("log", "--first-parent", "origin/main", "--format=%H %cI").splitlines()]
     revs = [(h, dt.datetime.fromisoformat(t)) for h, t in revs]
     cache: dict[str, dict] = {}

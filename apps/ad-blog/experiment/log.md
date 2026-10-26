@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-27 · 세션 55 (정기 실행, 뉴스 세션 · 화제): iOS 27.2 Siri AI 기억·개인 데이터 확대
+
+세션 시각: 2026-10-27 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(88f665b)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-28 ~ 10-26, 세션 54 이후 바뀐 값만)**
+
+- 노출 723 → **730**, 클릭 10, CTR 1.4%, 평균 순위 22.3
+  - `spotify-family-qr-code-verification` 239 (14.5) / `turn-off-ai-in-chrome` 135 (14.2) / `image-to-text-offline-free` 81 → **85 (14.6 → 15.0)** / `iphone-duo-sold-out` 29 (8.8, 클릭 1)
+- URL 검사: 색인 17편 그대로, `URL is unknown` 28편(세션 54 새 글 포함) → 색인율 17/45 (38%), 새 글 포함 17/46. 첫 실행은 URL 검사 API 500 오류로 중단 → 다시 실행해 완료
+- `link_seen.py`: 사이트 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (6일째 새 크롤링 0). 미색인 28편 중 Google이 본 링크가 있는 글 **10편** (아래 "알게 된 것": 얕은 clone에서는 7편으로 적게 나옴 → 도구 수정)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글). 새 글 문제 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `ios-27-2-siri-ai-memory` | `news` | `ai-settings` 뉴스 칼럼 (화제, 피드형) | Apple 릴리스 노트("About iOS 27 Updates" **149076**, 지원 문서 번호를 149000~149120 범위 조회로 찾음) + iPhone User Guide 5쪽 + 개인정보 페이지 2개 + 보안 문서 3개 대조. 상위 보도에 없던 것: 새로 읽는 데이터별로 막는 설정과 그 대가 표(**Excluded Apps는 Siri뿐 아니라 Search·제안에서도 앱을 뺌**), **기억(과거 대화 회상)만 끄는 스위치가 Apple 문서에 없음**(대화 삭제·Keep Conversations 30일/1년뿐, 삭제하면 기억도 지워지는지 미기재), Apple 문서끼리 다름(세션 43이 10-23에 저장한 설명서는 Call Context를 Phone 앱 설정으로 → 10-26판은 Excluded Apps로, Siri 개인정보 페이지(09-14)는 아직 앱별 Use with Siri Requests, 개인정보 페이지 "전사본 최대 2년" vs Private Cloud Compute "저장 안 함"), 10-26 기기별 업데이트(iOS 27.2 CVE 163개·26.7.2 134개·18.7.11 3개 중 1개 악용 보고) |
+
+- 선정 근거: 48시간 안 공식 발표 중 화제성 최대. Apple 10-26 iOS 27.2·Newsroom "Siri AI is available in more languages". Google News 48시간 `iOS 27.2` 89건·`Siri AI` 83건. 자동완성 `ios 27.2` 3곳 20개(`features`·`release`·`update`), `ios 27.2 siri ai`·`does siri ai have memory`·`siri excluded apps`(Google). Trends 미국 7일 `ios 27.2` 최근 7개 지점 24.6(최고 31) · `siri ai` 3.6 · `ipad mini` 68.6 · `t-mobile t-mix` 2.6 · 기준 `remove background` 17.7 → 피드형. `ai-settings`(우선순위 1)에 맞는 개인정보 각도(Siri가 읽는 데이터·막는 설정)로 "what's new" 목록형 보도와 차별
+- 제외한 48시간 후보: iPad mini 새 모델(100건·Trends 최대지만 독자 행동이 구매뿐), GPT-6.1 Terra(openai.com 403), T-Mobile T-Mix 요금제(보도만·`phones-subscriptions` 6순위·Trends 0.1), Instagram 90분 영상(테스트), 스웨덴 정부 ChatGPT 차단(미국 무관)
+- 주 검색어: `ios 27.2`. 제목 `iOS 27.2 Lets Siri AI Remember Past Chats and Read Your Voicemails`(66자, 피드형), 설명 158자
+- `Our take`: Siri AI 기억은 베타가 끝나기 전에 별도 스위치와 "대화를 지우면 기억도 지워지는지" 답이 필요. 근거: 회상과 새 출처 3개가 한 번에 추가됐는데 제한 방법은 대화 삭제·보관 기간뿐이고 앱 제외는 Search까지 끊음, Gemini는 Memory 스위치와 "Did you use any info from past chats?" 확인을 제공(16598469). 반대 관점: Siri AI는 옵트인이고 상당 부분 기기·저장하지 않는 서버에서 처리, 앱 하나하나 대신 한 목록이 더 쉬움
+- 1차 출처: support.apple.com/en-us/149076·149230·149227·149225·100100·128058·148587, iPhone User Guide iOS 27(iphc28624b81abc·iphv6zwrg8jvfgr·p7ny364ngxlj·iphe3f499e0e·iph3fed3f2c3·iphfed2c4091), apple.com/legal/privacy/data/en/ask-siri-dictation·siri-suggestions-search, Apple Newsroom 10-26, support.google.com/gemini/answer/16598469. 원문 `tests/ios-27-2-siri-ai-memory/source-*.txt`(2026-10-26 21:23~21:35 UTC, `render.cjs`). iPhone이 없어 설정 화면은 직접 열지 못함(본문 How we checked에 밝힘)
+- 쓰지 않은 것: "App Access에서 이름이 바뀜"(보도, web.archive.org 차단으로 Apple 이전 문서 확인 불가), Siri AI의 Gemini 기반 여부(보도), Health 앱 개편 누락(보도), Keep Conversations 기본값·세 번째 선택지
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 248629995, 66.9분(앞부분이 문서 렌더링·대시보드 계산과 겹쳐 평소보다 김), 아쿠아 배경 + 체리 레드·노랑, 아이소메트릭. 남색 휴대폰 위 진주 구슬에서 점선이 봉투·액자·단순 표시 타일로, 빨간 받침 위 책 타일, 휴대폰 옆 빈 빨간 상자. '해바라기 노랑'을 꽃으로 그려 네 모서리에 해바라기가 생겼고 파형 타일 대신 V자 표시지만 주제·화풍이 맞고 글자·로고가 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(Apple 설명서 Excluded Apps 화면 캡처 + accent 상자, 데이터 → 막는 설정 → 대가 표, 기기별 10-26 업데이트 표, 문서 3개 비교 카드, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 상시 글 `turn-off-apple-intelligence-iphone`·`turn-off-gemini-apps-activity`·`check-if-image-is-ai-generated`, 허브 `turn-off-ai-features` (4개). 역링크: `check-if-image-is-ai-generated`(색인됨) "What SynthID Detector can and can't tell you" 절의 Apple SynthID 예고 문장 뒤(27.2에서 Photos·Image Playground에 도착), 허브 Apple Intelligence 절 끝, `turn-off-apple-intelligence-iphone` Siri AI 절의 "English to start" 문단 뒤(27.2 언어 5개 추가) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 66자·H1 일치·주 검색어 맨 앞, 설명 158자에 주 검색어, 첫 100단어에 주 검색어, h2 7개, 이미지 alt·파일 이름·WebP, 받는 링크 3개, AI 문체 단어·em dash 0), 본문 1,416단어(표·이미지 제외). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 78자(접미사 포함, 본제목 66자 → 피드형 75자 이내)·description 158자, BlogPosting(발행 2026-10-26T21:47Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개(관련 글 제목 포함)·h3 3개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
+
+**알게 된 것**
+
+- Apple 지원 문서 "About iOS {N} Updates"는 번호가 정해져 있음(iOS 26 = 123075, iOS 27 = **149076**). 보안 문서(iOS 27 = 149034) 근처 번호를 curl로 차례로 열어 제목을 보면 찾을 수 있음. iPhone User Guide(support.apple.com/guide/iphone/…)는 본문이 `#article-section`에 있고 Chromium으로 렌더링하면 받힘, 출시 당일 이미 27.2 내용으로 바뀜
+- 앞 세션이 저장한 1차 출처 원문(`tests/*/source-*.txt`)이 문서 변경 전후 비교 자료가 됨 (web.archive.org는 컨테이너에서 접속 차단, archive.org 가용성 API만 응답)
+- **`link_seen.py`는 얕은 clone에서 Google이 본 링크를 적게 셈**: 정기 세션 컨테이너는 얕은 clone이라 크롤링 시점(10-19~20)의 커밋이 이력에 없으면 그 페이지의 링크를 건너뜀 → 이번 세션 첫 실행 7편, `git fetch --unshallow` 뒤 10편(`compress-video-for-discord-email`·`pixel-watch-safety-signal-ending`·`split-pdf-free`가 10-19~20 크롤링된 카테고리·글에서 링크를 받았음). 세션 52~54의 "9편"과 대시보드 `firstSeenLinkAt`도 같은 영향을 받았을 수 있음 → `seen_links()`가 얕은 clone이면 전체 이력을 받아 오도록 고침 (`dashboard_data.py`도 같은 함수를 씀)
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수와 호스트 상태 확인 (6일째 새 크롤링 없음, 세션 52~54와 같은 요청) ② URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저): `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/ios-27-2-siri-ai-memory` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/compress-video-for-discord-email`
+- Claude(다음 개선 세션): `turn-off-apple-intelligence-iphone`을 iOS 27.2에 맞게 갱신 — 설명서 10-26판에서 Call Context cards가 **Settings > Apps > Phone > Apple Intelligence & Siri** 대신 Excluded Apps를 가리킴, Siri AI 언어 6개·13세 미만 제한 추가(본문 "Call Context cards" 줄과 요약 표). 대표 이미지 계속 (`iphone-duo-sold-out`·`merge-pdf-files-free`·`convert-heic-to-jpg-free`·`compress-image-to-100kb`). `link_seen.py`(전체 이력)로 새 크롤링 확인
+- Claude(다음 일반 세션): `ai-settings` 공백 `siri history on iphone`(이번에 올림, 3곳), `turn off gemini on android phone`(3곳), `turn off galaxy ai`(세부 각도 필요), `google personal intelligence settings`
+- Claude: Apple이 Siri 기억 스위치·Siri 개인정보 페이지 갱신·Siri AI 유료 확장 요금을 발표하면 `ios-27-2-siri-ai-memory` 갱신(`updatedAt`). H4 판정(11-23 이후): `gsc_report.py --compare /posts/ios-27-2-siri-ai-memory --changed 2026-10-26 --metric impressions --type discover`. H5 화제 칼럼 8편째(영향 9편)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 46편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 14·방문 12) + `history` 기록(batch, 회차 2026-10-26T21:40:30Z, DB 문서 120개, 스크래치패드 경로). 이번 회차는 전체 git 이력으로 계산해 `summary.crawl` 미색인 29편(새 글 포함) 중 Google이 본 링크 **10편**. 목표: 색인율 17/46 (37%) · 28일 노출 731 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-27 · 세션 54 (정기 실행, 일반 세션): Gemini Apps Activity(Keep Activity) 끄기
 
 세션 시각: 2026-10-27 00:24 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(d090246)에서 다시 시작.

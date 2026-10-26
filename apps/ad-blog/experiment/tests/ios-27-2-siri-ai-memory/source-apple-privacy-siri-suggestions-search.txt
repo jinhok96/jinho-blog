@@ -1,0 +1,50 @@
+# 가져온 시각: 2026-10-26T21:27:26.565Z
+# 원본: https://www.apple.com/legal/privacy/data/en/siri-suggestions-search/
+Legal - Search & Privacy- Apple
+https://www.apple.com/legal/privacy/data/en/siri-suggestions-search/
+
+English  Choose your preferred language
+Search & Privacy
+
+Help improve Search by allowing Apple to store the searches you enter in Safari and Spotlight, and the searches you make through Siri, in a way that is not linked to you. Searches include lookups of world knowledge, and requests to do things like play music.
+ 
+
+
+Search is designed to protect your information and enable you to choose what you share.
+
+
+
+
+To Make Search Results More Relevant, Some Information Is Sent to Apple and Not Associated with You
+
+When you use Look Up or Visual Look Up, when you type in Search, Safari search, #images search in Messages, or when you invoke Spotlight, limited information will be sent to Apple to provide up-to-date suggestions. Any information sent to Apple does not identify you, and is associated with a 15-minute random, rotating device-generated identifier. This information may include location, topics of interest (for example, cooking or basketball), your search queries, including visual search queries, contextual information related to your search queries, suggestions you have selected, apps you use, and related device usage data. This information does not include search results that show files or content on your device. If you subscribe to music or video subscription services, the names of these services and the type of subscription may be sent to Apple. Your account name, number, and password will not be sent to Apple.
+
+You can also search using Siri, such as by asking Siri to look up general knowledge. When you use Siri, the transcript of your request and other data may be sent to Apple to process your request and may be stored. You can learn more about how Siri handles your data by going to Settings > Siri.
+
+When you open Safari, Apple also collects information about whether or not you use Safari search, and your device specifications, in order to improve Safari. This information is associated with longer-lived identifiers that are not attached to your Apple Account or other information that might identify you, and does not include what you search for.
+
+Information sent to Apple related to your searches is used to process your request and to develop and improve search results, such as by using your search queries to fine-tune Search models. It is not linked to your Apple Account or email address.
+
+Aggregated information may be used to improve other Apple products and services. Apple may also send a limited, randomly sampled set of search queries to search tools for the purpose of evaluating and improving the performance and quality of Search.
+
+Search Engine Suggestions in Safari
+
+Safari has a single field for searches and web addresses so you can browse the web from one convenient place. When Search Engine Suggestions are enabled, Safari will ask your selected search engine for suggestions based on what you’ve typed.
+
+Preload Top Hit in Safari
+
+With Preload Top Hit enabled, as soon as Safari determines a Top Hit based on your bookmarks and browsing history, Safari will begin loading the webpage in the background. If you disable this option, the page will load normally.
+
+You Have Choice and Control
+
+If you do not want your search queries to be stored by Apple and used to improve Search, you can disable Improve Search by going to Settings > Search and tapping to turn off Help Apple Improve Search. Searches you make through Siri will still be stored and used to improve Siri if you have enabled Improve Siri & Dictation. You can disable Improve Siri & Dictation by going to Settings > Privacy & Security > Analytics & Improvements and tapping to turn off Improve Siri & Dictation.
+
+If you do not want web-based content and search results, you can disable “Show Recent Searches” and “Show Related Content” by going to Settings > Search and tapping to turn off those features.
+
+You can disable Location Services for Search by going to Settings > Privacy & Security > Location Services > System Services and tapping to turn off Suggestions & Search. If you turn off Location Services on your device, your location will not be sent to Apple.
+
+Apple may process and store the information that is sent to Apple with trusted third-party service providers.
+
+By using Search, you agree and consent to Apple’s and its subsidiaries’ and agents’ transmission, collection, maintenance, processing, and use of this information. At all times, information collected by Apple will be treated in accordance with Apple’s Privacy Policy, which can be found at www.apple.com/privacy.
+
+2026-09-14

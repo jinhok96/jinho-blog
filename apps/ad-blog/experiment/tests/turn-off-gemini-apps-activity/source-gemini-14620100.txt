@@ -1,0 +1,263 @@
+# 가져온 시각: 2026-10-26T15:41:16.333Z
+# 원본: https://support.google.com/gemini/answer/14620100?hl=en
+Use Gemini Apps with a work or school Google Account - Business / Enterprise - Gemini Apps Help
+https://support.google.com/gemini/answer/14620100?hl=en
+
+Use Gemini Apps with a work or school Google Account
+
+Most users with a work or school Google Account have access to Gemini Apps. Feature availability and how your data is handled depends on your Workspace license. 
+
+In the help center, you will find important notifications and tips about info that differs depending on whether work or school users have enterprise-grade data protections. Learn how to check your level of access and data protections below.
+
+Important: The information in this article is only applicable if your access to Gemini is through a Workspace license from your work, school, or other organization. If you are using Gemini with a personal Google Account, your feature availability and limits will be different.  Learn about Gemini Apps limits & upgrades for personal accounts.
+
+Business / Enterprise Education
+More
+More
+More
+Gemini Apps by Workspace editions
+
+Important:
+
+Gemini is AI and can make mistakes, including about people. Some content may not be suitable for everyone.
+Gemini Apps limits may change. Learn more about limit changes.
+There are separate limits when you use Gemini in Workspace apps. Learn about usage limits for Gemini with Google Workspace.
+To use Gemini Apps with a work account, you must be 18 or over.
+
+Compare instead: Gemini Apps for users with a school Google Account
+
+Edition	
+
+Gemini Apps as an additional service with:
+
+Android Enterprise
+Cloud Identity
+Chrome Enterprise
+Business Base
+Essentials Starter
+G Suite
+Workspace Individual
+	
+
+Gemini Apps as a core service with:
+
+Business Starter
+Essentials
+Enterprise Essentials
+Enterprise Essentials Plus
+Frontline Starter
+Frontline Standard
+Frontline Plus
+Nonprofits
+	
+
+Gemini Apps as a core service with:
+
+Business Plus
+Business Standard
+Enterprise Plus
+Enterprise Standard
+Gemini Enterprise - Legacy (no longer available for purchase)
+Gemini Business - Legacy (no longer available for purchase)
+	Gemini Apps as a core service with AI Expanded Access	
+
+Gemini Apps as a core service with AI Ultra Access
+
+
+Access	Standard access to features & models	Standard access to features & models with enterprise-grade security & privacy	Pro access to features & models with enterprise-grade security & privacy	Higher access to features & models with enterprise-grade security & privacy	Highest access to features & models with enterprise-grade security & privacy
+Models
+Argon	N/A	N/A	N/A	Up to 200 prompts / day	Up to 500 prompts / day
+Pro	
+Basic access - access varies; daily limits may change frequently.
+	
+Basic access - access varies; daily limits may change frequently.
+	Up to 25 prompts per 4 hours	N/A	N/A
+Thinking	
+Basic access - access varies; daily limits may change frequently.
+	
+Basic access - access varies; daily limits may change frequently.
+	Up to 300 prompts / day	Up to 600 prompts / day	Up to 1500 prompts / day
+Fast	General access
+Context Window
+Context size	32 thousand	1 million
+Features
+Audio Overviews	Up to 20 audio overviews / day
+Connect to Google Workspace apps	-	General access
+Connect to GitHub & upload code folders	-	-	General access
+Deep Research	5 reports / month	20 reports / day	30 reports / day	120 reports / day
+Image generation & editing with Nano Banana 2 **	Up to 20 images / day	Up to 100 images / day
+Redo images with Nano Banana Pro **	3 images / day	Up to 100 images / day	Up to 200 images / day	Up to 1000 images / day
+Scheduled actions	-	-	Up to 10 active actions at a time
+
+
+
+Music generation
+30s tracks
+
+	 Up to 10 tracks / day
+ 	 Up to 50 tracks / day	 Up to 60 tracks / day	 Up to 100 tracks / day
+Music generation 
+Full tracks (up to 3 minutes)	Up to 5 tracks / day	 Up to 20 tracks / day	 Up to 30 tracks / day	 Up to 50 tracks / day
+Video generation	-	-	Up to 3 videos / day using Omni	Up to 3 videos / day using Omni	Up to 5 videos / day using Omni
+Slide generation	Up to 20 presentations / day
+Additional features*	Usage limits subject to the selected model
+Terms of Service & data handling-
+Enterprise-grade security & privacy	-				
+How your data may be used	Your chats in Gemini Apps may be reviewed by human reviewers and used to improve Google's products, services, and machine-learning technologies.	Your chats and uploaded files in Gemini Apps won’t be reviewed by human reviewers or otherwise used to improve generative AI models.	Your chats and uploaded files in Gemini Apps won’t be reviewed by human reviewers or otherwise used to improve generative AI models.	Your chats and uploaded files in Gemini Apps won’t be reviewed by human reviewers or otherwise used to improve generative AI models.	Your chats and uploaded files in Gemini Apps won’t be reviewed by human reviewers or otherwise used to improve generative AI models.
+Use terms of service	Google Terms of Service and Gemini Apps Privacy Notice	Google Workspace Terms	Google Workspace Terms	Google Workspace Terms	Google Workspace Terms
+
+* Tip: There are more features that are not listed above, like Canvas, Gems, and more. These features are generally available to most users. Learn more in the Help Center.
+
+** Image generation & editing is in high demand. Limits may change frequently and will reset daily.
+
+Note: Your use of Gemini Apps (including gemini.google.com, Gemini mobile app, and Gemini in Chrome) across devices counts toward your usage limits. For example, when you use Gemini in Chrome, then switch to the Gemini mobile app using the same model, both will apply to your usage limits. 
+How to get the Google AI Ultra for Business add-on
+
+Your Google Workspace administrator can upgrade your license to Google AI Ultra for Business. The add-on must be enabled by your Google Workspace administrator. 
+
+If you’re a Google Workspace administrator, learn how to enable Google AI Ultra for Business. 
+
+Where Google AI Ultra for Business is available
+
+For now, the Gemini app in Google AI Ultra for Business is available in more than 150 countries & territories.
+
+How to use Gemini as an additional service
+
+If you don’t have an edition of Google Workspace that includes Gemini Apps as a core service, you use them as an additional service. To use Gemini Apps as an additional service: 
+
+Access must be enabled by your Google Workspace administrator.
+You will be subject to the Google Terms of Service and Gemini Apps Privacy Notice.
+Check if you have access to expanded features & models
+
+Some features and models are only available with certain Google Workspace licenses. To check if you have access to expanded features and models in Gemini Apps:
+
+Go to gemini.google.com .
+Make sure you’re signed into your work or school account.
+At the top, check for the Pro, Expanded, or Ultra badge. 
+If you find the Pro badge, you more access to features and models as described above.
+If you find the Expanded badge, you higher access to features and models as described above.
+If you find the Ultra badge, you have the highest access to features and models as described above.  
+If you don’t find Pro, Expanded or Ultra, you have standard access to features and models.
+
+Tip: If you don’t have access to these features, your Google Workspace administrator needs to upgrade your license to get access.
+
+Check if you have enterprise-grade data protections
+
+Important: Gemini in Chrome is pending HIPAA, SOC, ISO and other compliance certifications, as further described at Turn the Gemini app on or off.
+
+Google Workspace licenses that include Gemini app as a core service provide enterprise-grade data protections. Please refer to this resource to verify if your specific Workspace subscription includes Gemini as a core service.
+
+Use the Gemini mobile app with a work or school Google Account
+
+Important: If you try to open the Gemini mobile app with an Android Work Profile, you will be brought to the Gemini web app.
+
+What you cannot do in the Gemini mobile app
+
+If you are using a work or school Google Account, some Gemini mobile app features aren’t available. Users with a work or school Google Account cannot delete chats or create public links for chats
+
+Troubleshoot error messages in the Gemini mobile app
+
+If you get an error message when you try to access the Gemini mobile app with a work or school account, check the troubleshooting steps below:
+
+Make sure that you have the most recent version of the Gemini app. In your app store settings, check if there’s an upgrade for the Gemini app.
+If there’s an upgrade available, upgrade to the latest version.
+If there isn’t an upgrade available, move to step 2. 
+Contact your Google Workspace administrator to confirm you have access to Gemini Apps.
+Gemini Apps limits & upgrades
+
+Gemini Apps has usage limits designed to ensure an optimal experience for everyone. This means we may at times have to cap the number of prompts and conversations you can have, or how much you can use some features, within a specific timeframe. 
+
+The number of prompts you can use before hitting the limit varies and depends on factors like how long and complex your prompts are, the size and number of files you upload, and the length of your conversations with Gemini Apps.
+
+Your capacity replenishes regularly, so you can get back to chatting with Gemini Apps soon, or you can upgrade to a higher plan.
+
+Users with certain Workspace editions have higher limits in Gemini Apps. Learn about limits for work accounts or school accounts.
+How model limits work
+
+Tip: If you have a Google AI subscription plan and hit your limit, you can continue chats with Flash-Lite.
+
+What you can do if you reach model limits:
+
+If you reach your capacity limits for Thinking and Pro for a given period, you can continue the conversation with Fast in the same chat.
+
+When your limit for Thinking or Pro resets, you can select it again. Learn how to switch between Gemini models.
+
+How feature limits work
+
+Some features in Gemini Apps have limits for how many assets you can generate or actions you can schedule. These features include:
+
+Audio Overviews
+Deep Research
+Scheduled actions
+Video generation
+Image generation
+
+Learn more about limits for these features.
+
+Additional features
+
+Usage limits for all additional features are subject to the limits of the model that you select when you use the feature. These features include, but are not limited to:
+
+Canvas
+Gems
+Storybook
+Usage limit changes
+
+Limits may change without notice, including due to capacity constraints. When there’s a large increase in activity in Gemini Apps, we may change limits to maintain a high standard of quality. 
+
+Important: 
+
+For users without a Google AI plan, some features that require more compute resources, like Deep Research, may be unavailable during periods of high demand.
+If capacity changes, limits for users without a Google AI plan may be limited before users with a plan.
+What you can do when you reach a usage limit
+If you have a Google AI subscription and reach your limit, you can continue your conversation with Flash-Lite.
+If you reach your five hour or weekly usage limits you can upgrade to a Google AI subscription with higher limits or wait until your model limit is refreshed. Learn how to upgrade.
+
+If you want additional limits with a work or school Google Account, your organization can:
+
+Upgrade to a Google Workspace plan that includes higher limits
+Upgrade to Google AI Pro for Education
+Upgrade to Google AI Expanded Access or AI Ultra Access for Business
+
+
+If you’re a Google Workspace administrator, learn how to upgrade your organization’s Google Workspace license.
+
+Contact your Google Workspace administrator to request an upgraded license. Learn which licenses have expanded access:
+
+Licenses for work accounts
+Licenses for school accounts
+
+If you’re a Google Workspace administrator, learn how to upgrade your organization’s Google Workspace license.
+
+How to tell if you’re close to a limit & when it refreshes
+
+Gemini Apps will notify you when you're close to your limit based on your plan's level. When you reach your limit, Gemini Apps gives you another notification that tells you when your limit will refresh.
+
+To view your usage limits:
+Visit gemini.google.com.
+At the bottom left, select Settings   Usage Limits .
+What is a context window?
+What is a context window?
+
+When you upload files to Gemini Apps, it needs to "read" the content to provide useful insights or answers. The context window is like the reading capacity. It determines how much content can be understood together at one time.
+
+Why you might want a larger context window
+
+A larger context window allows Gemini to read and comprehend more. For example, with a 1M token context window, Gemini can understand up to 1,500 pages of text or 30,000 lines of code.
+
+If you exceed the context window, this could lead to responses that don’t take into account all the content provided or miss connections or details throughout the content. This is most relevant for prompts that require attention to many details scattered throughout large files.
+
+Activity for users with a work or school Google Account
+Manage & delete Gemini Apps activity
+
+For users with a work or school Google Account and access to Gemini Apps, Keep Activity is on by default and can only be turned off by your account’s Workspace administrator.
+
+When you use the Gemini web app or mobile app with your work or school account, conversation history is saved by default for 18 months. Your admin can change the auto-delete setting to delete activity after 3, 18, or 36 months or turn history off altogether.
+If your administrator turns on Gemini history retention, you won’t be able to change your activity settings as they will be controlled by your admin.  You won’t be able to view the retention period, only that the retention period is managed by your administrator. Learn how to find your administrator.
+When Keep Activity is on, it includes activity from the Gemini web and mobile apps. Clearing your Gemini for Google Workspace history from a Workspace app doesn’t affect information saved to Gemini Apps Activity.
+Find your Gemini Apps activity
+On your computer, go to gemini.google.com.
+Click Settings & help   Activity .
+You can also go to myactivity.google.com/product/gemini.
+Go to Gemini Apps Activity
+Give feedback about this article

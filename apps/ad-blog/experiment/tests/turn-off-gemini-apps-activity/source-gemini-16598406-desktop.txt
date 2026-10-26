@@ -1,0 +1,169 @@
+# 가져온 시각: 2026-10-26T15:42:27.446Z
+# 원본: https://support.google.com/gemini/answer/16598406?hl=en&co=GENIE.Platform%3DDesktop
+Connect your Google apps to personalize your Gemini experience - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/16598406?hl=en&co=GENIE.Platform%3DDesktop
+
+Connect your Google apps to personalize your Gemini experience
+
+You can get personalized Gemini experiences that are uniquely helpful to you using Personal Intelligence. When you connect Google apps that work with Personal Intelligence, Gemini can:
+
+Personalize your experience with insights about you, your relationships, and people in your world.
+Do things for you, like make recommendations based on your preferences, or create a tailored itinerary.
+Find and summarize information from these apps. For example, you can ask “What did I search for last month?”
+Get content from Gmail and Google Photos, like photos from your last vacation.
+
+You can control which apps are connected at any time from your Connected Apps settings.
+
+Important: Personal Intelligence is being released gradually and may not be available to you just yet.
+
+What you need
+
+To get Gemini with Personal Intelligence, you need to:
+
+Be 18 or over.
+Sign in with a personal Google Account. This feature isn’t available when you sign in to a work, school, or supervised Google Account. Learn how to sign in to Gemini Apps.
+Have Keep Activity on. This feature isn’t available when this setting is off.
+Additional requirements
+
+To get personalized Gemini experiences based on your data in other Google apps:
+
+Have Web & App Activity on. Personalization in Gemini based on your Search services data isn’t available when this setting is off. Learn how to manage your Web & App Activity.
+Have YouTube History on. Personalization in Gemini based on your YouTube activity isn’t available when this setting is off. Learn how to manage your YouTube watch history and YouTube search history.
+Have Smart features in other Google products on. Gemini Apps can’t connect to Google Workspace when this setting is off. Learn how to change smart features settings.
+Meet eligibility criteria for Google Photos. Connecting Google Photos to Gemini Apps is only available in certain countries and territories. Before Gemini Apps can personalize your experience based on your Photos data, you’ll need to complete the following steps in Google Photos:
+Turn on Face Groups and select which face is yours. Learn how to turn on Face Groups and how to select your face group.
+Turn on Estimate missing locations if not enabled. Learn how to turn on Estimate missing locations.
+
+Important: For now, this feature is:
+
+Not available in the European Economic Area, Nigeria, Switzerland, or the United Kingdom.
+Only available in the Gemini mobile app, the Gemini web app at gemini.google.com, Gemini in Chrome (in countries where Gemini in Chrome is available), and Gemini on your smartwatch.
+Not available in certain features, like Gems.
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Connect your Google apps
+On your computer, go to gemini.google.com.
+If you’re eligible, a card will show where you can opt in to Personal Intelligence in Gemini.
+Click Get started.
+Choose which apps to connect to Gemini.
+To connect all available apps, click Connect all.
+To choose which apps to connect, click Choose apps.
+Or click Don’t connect.
+Follow any on-screen instructions.
+Manage in Connected Apps settings
+What Google apps work with Personal Intelligence
+
+For now, only the following Google apps work with Personal Intelligence in Gemini:
+
+Contacts, which includes contacts data from Google Contacts and your device, and insights derived from them.
+Google Photos (in certain countries and territories), which includes your photos and videos, and insights derived from these.
+Google Wallet (in the US only), which includes your payment methods, receipts, data from Google services saved in Wallet, and financial account info linked with services such as Plaid.
+Google Workspace, which includes your content in services like Gmail, Calendar, and Drive. Learn more about the services included.
+Search services, which includes your saved data in services like Search, Maps, and Shopping. Learn more about the services included.
+YouTube, which includes your YouTube History.
+Tip:  When you connect Google Apps that work with Personal Intelligence, Gemini may offer suggestions for topics or features based on info from those apps. For instance, Gemini might suggest: 
+to create a grocery list based on a cooking video you watched on YouTube.
+to use Nano Banana or Canvas to design invites for a birthday party you’ve discussed in Gmail.
+to create a notebook to plan an upcoming business project.
+Turn off Personal Intelligence for a chat
+
+Important: We're gradually releasing this feature, so it might not be available to you just yet.
+
+If you don’t want a specific Gemini chat to be personalized using Personal Intelligence, you can turn it off. When it’s off, your chat won’t be personalized based on the memory of your Gemini chats, instructions for Gemini, or info from Connected Apps.
+
+In the text box, click Tools .
+Turn Personal Intelligence off.
+If you turn off Personal Intelligence during your chat, Gemini can still use earlier parts of that chat as context.
+Gemini remembers your setting choice for this chat. It’ll be the same if you leave the chat and continue it later.
+If you start a new chat, Personal Intelligence is on by default.
+
+Tips:
+
+To regenerate a personalized response without personalization, you can also select Try without personalization.
+If you turn off Personal Intelligence, it doesn’t stop your chat from being saved to Gemini Apps Activity and used to personalize a response in another chat. To chat without saving activity to your Google Account, use a temporary chat. Learn how to start a temporary chat.
+Manage your Connected Apps
+
+Important:
+
+Only certain Google apps work with Personal Intelligence in Gemini.
+Learn more about what happens when you disconnect an app in Gemini.
+
+You can change the apps that personalize your Gemini Apps experiences in your Connected Apps settings at any time.
+
+On your computer, go to gemini.google.com.
+At the bottom, click Settings & help   Personal Intelligence  Connected Apps.
+Disconnect or connect Contacts, Google Photos (if available), Google Wallet (if available), Google Workspace, Search services, or YouTube.
+To disconnect an app, turn it off .
+To connect an app, turn it on .
+Follow any on-screen instructions.
+
+Tip: Gemini Apps can still use public information from certain Google services, like Google Search and YouTube, even if the app is disconnected for Personal Intelligence. Learn more about the Google services Gemini uses public info from.
+
+Delete something Gemini knows about you from a connected app
+
+If you want to delete something that Gemini remembered about you:
+
+Delete all chats with this info from Gemini Apps Activity or Recent chats. Learn how to manage your Gemini Apps Activity and delete a chat from Recent chats.
+Disconnect the app with this info, so Gemini doesn’t use it again. Learn how to manage your Connected Apps.
+
+You must complete both steps because:
+
+If you only disconnect the app, Gemini might still use the info if it’s in a past chat.
+If you only delete the chats, Gemini might still find the info in the connected app.
+What happens when you delete data from a connected app
+
+If you delete or update data in a connected app, like an email from Gmail or photo from Google Photos, your experience in Gemini may not be affected until days later.
+
+How Personal Intelligence improves your Connected Apps experience
+
+Before, Gemini was great at finding info from your apps. With Personal Intelligence:
+
+Gemini has access to your data from more Connected Apps like Contacts, Google Photos (if available), Google Wallet (if available), Google Workspace, Search services, and YouTube.
+Gemini can connect and understand your info across Connected Apps.
+
+This allows Gemini to:
+
+Handle complex, multi-step requests across those apps.
+Understand the context and how your info across those apps are related.
+Provide more personalized responses based on your info from Connected Apps.
+Fix a problem
+I’ve previously connected the Google Workspace and Google Photos apps. Why are they now disconnected?
+
+If you’ve previously connected the Google Workspace app or the Google Photos app, your settings have been reset with the launch of Personal Intelligence with Connected Apps. If you want, you can reconnect those apps with Personal Intelligence.
+
+Gemini’s info about me is wrong. How can I correct it?
+
+To correct what Gemini knows about you and uses in a response:
+
+Make sure that Memory is turned on. Learn how to turn Memory on or off.
+Correct Gemini directly in your chat.
+
+While Gemini continues to improve, it might not always get it right.
+
+Why is my experience different across Gemini Apps?
+
+If you’re eligible for Personal Intelligence in Gemini but your personalized experience is different across Gemini Apps, make sure you’re signed in to the same personal Google Account across your Gemini Apps. Learn how to sign in to Gemini Apps.
+
+I’m eligible for Personal Intelligence in Gemini but don’t get the option to opt in.
+
+Important: Personal Intelligence is being released gradually and may not be available to you just yet.
+
+If you meet the eligibility criteria but don’t get the option to opt in to Personal Intelligence, try connecting the Google Workspace and Google Photos apps (if available) in Connected Apps settings. You may have additional steps to set up and connect those apps.
+
+Connect the Google Workspace app and confirm Smart features in other Google products is on.
+Connect the Google Photos app and complete the setup steps, which includes turning on Face Groups and selecting which face is yours if you haven’t done so already.
+
+If you don’t want to get personalization based on your content and info in these apps, you can disconnect them at any time in your Connected Apps settings.
+
+How your data is handled
+
+Learn more about how your data is handled when Gemini works with Connected Apps.
+
+Related resources
+Gemini Apps Privacy Hub
+Get personalization in Gemini Apps
+Get personalization based on your past Gemini chats
+Customize Gemini’s responses with your instructions
+Give feedback about this article

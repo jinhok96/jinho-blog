@@ -1,0 +1,75 @@
+# 가져온 시각: 2026-10-26T15:48:07.780Z
+# 원본: https://support.google.com/gemini/answer/16938321?hl=en
+Manage or delete the Gemini app on your Android device - Gemini Apps Help
+https://support.google.com/gemini/answer/16938321?hl=en
+
+Manage or delete the Gemini app on your Android device
+
+If you want to change how Gemini activates on Android or just prefer a different digital assistant experience, you don't always need to delete the Gemini mobile app. Depending on what you want, you can:
+
+Change how & where you can activate Gemini
+Remove Gemini from your Power button
+Turn off "Hey Google" so Gemini doesn’t open by voice
+Stop Gemini from opening when your phone is locked
+Switch from Gemini to Google Assistant
+Change or remove your default digital assistant app
+Delete the Gemini mobile app
+Manage Gemini in other Google products
+Change how & where you can activate Gemini
+
+You can change your settings to stop Gemini from opening by voice or touch, and still keep the Gemini mobile app to use directly.
+
+Remove Gemini from your Power button
+
+Important: The steps below vary by Android device. For steps specific to your device, check your device manufacturer’s support site.
+
+To keep the Gemini app but stop Gemini from opening when you hold your Power or Home button, change your Gestures settings.
+
+On your Android phone or tablet, open Settings.
+Tap System  Gestures  Press & hold power button.
+Select the action you want when you press and hold the power button.
+Tip: “Digital assistant” opens your default digital assistant app.
+
+Can’t find the setting? In your Settings app, try the search box or Search . Search for “power,” “side button,” or “gesture.” Then check results for a setting to customize your power or side button.
+
+Turn off "Hey Google" so Gemini doesn’t open by voice
+To keep the Gemini app but stop Gemini from opening when it hears “Hey Google,” turn off “Hey Google.”
+On your Android phone or tablet, open the Gemini mobile app .
+At the left, tap Menu   your Profile picture or initial  Settings  Talk to Gemini hands-free.
+Turn off "Hey Google."
+Stop Gemini from opening when your phone is locked
+
+Important: If you already stopped Gemini from activating by voice or touch, you must unlock your phone and open the Gemini mobile app to use Gemini.
+
+If the Gemini app starts when you don’t want it to when your phone is locked, you can turn off Gemini on your lock screen.
+
+On your Android phone or tablet, open your Gemini mobile app .
+At the left, tap Menu   your Profile picture or initial  Settings  Gemini on lock screen.
+Turn off Use Gemini without unlocking.
+Change or remove your default digital assistant app
+
+Important: The steps below vary by Android device. For steps specific to your device, check your device manufacturer’s support site.
+
+Your default digital assistant app is the primary assistant app on your device, like Gemini or Google Assistant. You can activate it by touch or voice to get quick help with navigation, answers to questions, device control, and much more. You can change, remove, or set a default digital assistant app at any time.
+
+On your Android phone or tablet, open Settings.
+Tap Apps  Default apps  Digital assistant app.
+Tap Default digital assistant app.
+Select a different assistant app or None.
+“Google” is selected if you use either Google Assistant or Gemini as your default digital assistant app.
+Can’t find the setting? In your Settings app, try the search box or Search . Search for “digital assistant app.”
+Delete the Gemini mobile app
+
+Important: Deleting the Gemini mobile app doesn’t automatically remove Gemini as your device's default digital assistant. To keep the app but stop it from activating by your voice or shortcuts, like the power button, review the other options above.
+
+If you want to delete the Gemini mobile app from your device, follow the steps to delete apps on your Android device.
+
+Manage Gemini in other Google products
+Delete your Gemini chat in Google Messages.
+Manage Gemini in Chrome settings. This includes steps to remove the Gemini icon from your Chrome browser and desktop system tray or menu bar.
+Manage smart features for Google Workspace. This includes Gemini in Workspace apps like Gmail, Docs, and more.
+Related resources
+Manage & delete your activity in Gemini Apps
+Get started with the Gemini mobile app
+How your Gemini mobile app can help when your phone is locked
+Give feedback about this article

@@ -2,6 +2,52 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-27 · 세션 54 (정기 실행, 일반 세션): Gemini Apps Activity(Keep Activity) 끄기
+
+세션 시각: 2026-10-27 00:24 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(d090246)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-28 ~ 10-26, 세션 53 이후 바뀐 값만)**
+
+- 노출 718 → **723**, 클릭 10, CTR 1.4%, 평균 순위 22.4 → 22.3
+  - `spotify-family-qr-code-verification` 236 → **239 (14.6 → 14.5위)**, 클릭 0 / `turn-off-ai-in-chrome` 135 (14.2) / `image-to-text-offline-free` 80 → 81 (14.7 → 14.6) / `check-if-image-is-ai-generated` 39 (69.6)
+- URL 검사: 색인 17편 그대로. `URL is unknown` 27편 → 색인율 17/44 (39%), 새 글 포함 17/45
+- `link_seen.py`: 사이트 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (글 중에서는 10-20 21:59 `merge-pdf-files-free`). 미색인 27편 중 Google이 본 링크가 있는 글 9편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글). 새 글 문제 없음
+- 주간 SEO 점검(10-26) 우선순위 1~3은 세션 52·53이 처리
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-gemini-apps-activity` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Gemini 도움말 13개(활동 13278892 컴퓨터·Android·iPhone판, Privacy Hub 13594961(10-23 갱신), Connected Apps 13695044, Memory 16598469, Personal Intelligence 16598406·16836988, skills 17094296, Gems 15146780, 최근 채팅 13666746, 임시 채팅 13275745, 피드백 13275746, Android 앱 관리 16938321, 회사·학교 14620100)를 Chromium으로 렌더링해 **접힌 단락까지** 대조. 끄면 멈추는 기능 7가지 표(최근 채팅 목록·Memory·Personal Intelligence·skills·Tasks·Connected Apps(Android 4개만, 웹·iPhone·워치 0)·지도/항공/호텔/YouTube 정보·Gem 채팅), 보관 기간 4가지(꺼짐 72시간·켜짐 18개월·검토된 채팅 3년·**꺼진 상태에서 피드백을 보내면 최근 24시간 대화와 함께 3년**), **문서 충돌**(13278892는 꺼진 상태 앱에 Gemini Notebook 포함, 13695044·Privacy Hub는 없음), 이름 변경(2025-08-13 Google 블로그) |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings` (세션 51 다음 할 일). `demand_check.py suggest`: `turn off gemini apps activity` Google·Bing + YouTube `how to turn off …`, 하위 26개(`what happens if i turn off`·`what does turning off … do`·`should i turn off`·`can t turn on`·`android`). 비교한 후보: `turn off galaxy ai`(3곳, 21개), `turn off ai in adobe acrobat`(Google·Bing만, 10개), `dia browser ai privacy`(본 검색어 Google 1곳), `turn off ai overviews`(Google·Bing). Trends 미국 3개월 기준 `remove background` 35.5 대비 네 후보 모두 0.0, 후보끼리 12개월: `gemini apps activity` 36.3(최근 6.6) · `turn off galaxy ai` 35.1(21.0) · `turn off ai in chrome` 26.8(33.4) · `turn off ai overviews` 0.9 · `turn off ai in acrobat` 0.2
+- Galaxy AI 대신 고른 이유: 상위 결과가 Tom's Guide·Android Central·AOL·Yahoo·Android Authority 대형 매체이고 기기가 없어 One UI 9 메뉴를 확인할 수 없음. Gemini 활동은 상위 결과가 공식 도움말 + 작은 블로그(redact.dev 2026-09-21, techlicious 2025-06, reclaimthenet) + PCWorld. redact.dev가 72시간·Memory·3년·이름 변경까지 다루지만 Connected Apps·skills·Tasks·최근 채팅 목록·Gem 채팅·피드백 24시간·문서 충돌·회사 계정이 빠짐. techlicious는 "끄면 사람 검토 안 함"이라고 씀(Google은 꺼도 보호 목적 사람 검토가 있다고 함)
+- 주 검색어: `turn off gemini apps activity`. 제목 `How to Turn Off Gemini Apps Activity and What Changes`(53자), 설명 157자
+- 1차 출처: 위 13개 문서 + blog.google 2025-08-13 이름 변경 글. 원문 `tests/turn-off-gemini-apps-activity/source-*.txt`(2026-10-26 15:34~16:00 UTC). Google 계정이 없어 Gemini 활동 화면은 직접 열지 못함(본문 How we checked에 밝힘). 18세 미만 기본값은 공식 문장이 없어 쓰지 않음
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1980172838, 52.4분, 세이지 그린 배경 + 네이비·라즈베리, 눈높이 정면. 네이비 트레이에 종이 카드 묶음·분홍 다이얼 스위치, 위에 빈 말풍선 2개와 반짝임, 옆에 분홍 자물쇠. 토글 대신 다이얼, 말풍선 모양 카드 대신 회색 줄 종이(글자 아님)지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 3장(도움말 "Turn off Keep Activity" 화면 캡처 + accent 상자, 켜짐 vs 꺼짐 기능 표, 보관 기간 4가지 카드, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `gemini-gems-to-skills`·`turn-off-gemini-in-gmail`, 칼럼 `gemini-connected-apps`·`gemini-android-auto-personal-intelligence` (5개). 역링크: `gemini-gems-to-skills`(색인됨) skills 요구 조건 목록 뒤 문단, 허브 "How to stop the Gemini app from using your other apps" 절, 칼럼 `gemini-connected-apps` Keep Activity 줄 각 1문장 (앵커 3가지, `updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page 항목(제목 53자·H1 일치·주 검색어 앞, 설명 157자에 주 검색어, 첫 100단어에 주 검색어, h2 11개·FAQ h3 2개, 이미지 alt·파일 이름·WebP, 설명형 앵커, AI 문체 단어·em dash 0)과 `ai-seo` 기준 소제목 첫 문장(떼어 읽어도 답). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 65자(접미사 포함, 본제목 53자)·description 157자, BlogPosting(발행 2026-10-26T16:02Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개(관련 글 제목 포함)·h3 5개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 3장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
+
+**알게 된 것**
+
+- Gemini 도움말끼리 Keep Activity가 꺼졌을 때 남는 앱 목록이 다름(13278892에 Gemini Notebook 추가, 다른 두 문서는 Android 4개). Google 도움말은 같은 기능의 문서끼리도 갱신 시점이 달라 여러 문서를 대조할 가치가 있음
+- Privacy Hub(13594961)는 `#retention`·`#feedback`·`#keep_activity_setting` 같은 앵커로 접힌 단락이 나뉘어 있고, `render.cjs`로 한 번에 펼쳐 받으면 58,000자. 링크 목록(`links.cjs`)으로 `?p=` 단축 주소가 가리키는 문서를 찾을 수 있음
+- 피드백 버튼(Good response·Bad response)이 Keep Activity를 끈 사용자에게도 최근 24시간 대화를 3년 보관으로 보내는 경로라는 점은 상위 결과에 없던 내용
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수와 호스트 상태 확인 (세션 52·53과 같은 요청, 6일째 새 크롤링 없음) ② URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저): `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-gemini-apps-activity` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/split-pdf-free`
+- Claude(다음 개선 세션): 대표 이미지 계속 (`iphone-duo-sold-out`·`merge-pdf-files-free`·`convert-heic-to-jpg-free`·`compress-image-to-100kb`), `link_seen.py`·대시보드 `summary.crawl`로 새 크롤링 확인
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`(이번에 올림, 3곳), `turn off galaxy ai`(세부 각도 필요), `google personal intelligence settings`, `dia browser ai privacy`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 45편 (허브 4개)
+- DASHBOARD_NOTE
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-26 · 세션 53 (정기 실행, 개선 세션): 기존 글 3편 대표 이미지 + 대시보드 DB에 Google이 본 링크 기록
 
 세션 시각: 2026-10-26 18:16 KST → 개선 세션. 같은 날 12시 개선 세션(세션 52)이 다룬 글(허브·소제목 첫 문장 3곳·Pixel Watch 역링크)과 겹치지 않게 주간 SEO 점검 3순위(대표 이미지)를 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(7e71478)에서 다시 시작.

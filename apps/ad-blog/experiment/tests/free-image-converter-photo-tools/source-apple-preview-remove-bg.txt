@@ -1,0 +1,129 @@
+Remove a background or extract an image in Preview on Mac - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+ Preview User Guide
+ Select version:
+ macOS 27 Golden Gate
+ macOS Tahoe 26
+ macOS Sequoia 15
+ macOS Sonoma 14
+ macOS Ventura 13
+ macOS Monterey 12
+ macOS Big Sur 11.0
+ macOS Catalina 10.15
+ macOS Mojave 10.14
+ macOS High Sierra
+Modifying this control will update this page automatically
+ Search this guide
+ Clear Search
+ Table of Contents
+Preview User Guide
+ Welcome
+ Get started
+ Open PDFs and images
+ View PDFs or images
+ View PDFs and images
+ Find text in PDFs
+ Interact with text in a photo
+ Bookmark PDF pages
+ View information about PDFs and images
+ Import images from a camera
+ See where a photo was taken
+ Display a PDF as a slideshow
+ View an animated GIF’s frames
+ Edit PDFs
+ Fill out and sign PDF forms
+ Select and copy text in a PDF
+ Highlight, underline, and strike out text
+ Add notes and speech bubbles to a PDF
+ Annotate a PDF
+ Combine PDFs
+ Add, delete, or move PDF pages
+ Crop or rotate a PDF
+ Add effects to a PDF
+ Edit images
+ Crop, resize, or rotate an image
+ Convert image file types
+ Remove a background or extract an image
+ Annotate an image
+ See what an image looks like on another device
+ Apply a color profile to an image
+ Share PDFs or images
+ Manage PDFs or images
+ Revert changes to PDFs and images
+ Copy PDFs and images
+ Lock PDFs and images
+ Export PDFs and images
+ Password-protect a PDF
+ Reduce the size of a PDF
+ Print PDFs and images
+ Work with 3D files
+ 3D file formats supported in Preview
+ View 3D files
+ Edit a 3D file
+ Export a 3D file
+ View content from your Mac on Apple Vision Pro
+ Save files
+ Change Preview settings
+ Keyboard shortcuts
+ Troubleshooting
+ If you can’t select or copy text in a PDF
+ If images or PDFs aren’t the correct size
+ If Go to Page shows the wrong page of a PDF
+ Copyright and trademarks
+Remove a background or extract an image in Preview on Mac
+You can remove the background from an image, or extract part of an image. For example, you can extract one person’s face from a group photo and then paste the face elsewhere.
+Open Preview for me
+Remove the background from an image
+Go to the Preview app on your Mac.
+Open an image.
+Click .
+If you’re asked whether you want to convert the document to a PNG file, do one of the following:
+Make a copy of the original image: Click Cancel, then choose File > Duplicate.
+Convert the original image: Click Convert.
+To undo the background removal, choose Edit > Undo.
+Extract an image
+Go to the Preview app on your Mac.
+Open an image.
+Click (if the Markup toolbar isn’t showing), click , then choose .
+Trace the edge of the image you want to extract.
+Make sure the image’s edge is within the thick border that appears as you trace.
+Connect the end of the border back to its beginning, or stop dragging to connect the border in a straight line back to the beginning.
+Choose Edit > Copy to copy the image so that you can paste it in a document.
+Extract a PDF page as an image
+You can select part of an image opened in Preview, then copy and paste it elsewhere or crop the content surrounding it. If the image is in a PDF, you need to extract the PDF page as an image before you can use the image markup tools.
+Go to the Preview app on your Mac.
+Open the PDF, choose View > Thumbnails, then select the page in the thumbnail sidebar.
+Click File > Export, type a name, add a tag (optional), then choose where you want to save it.
+Click the Format pop-up menu and choose an image format (such as PNG).
+Click Save.
+See alsoAnnotate an image in Preview on MacTake a picture of your screen in Preview on Mac
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Please don’t include any personal information in your comment.
+ Maximum character limit is 250.
+ Submit
+ Thanks for your feedback.
+Apple Footer
+ 
+ Apple
+ Support
+ Preview User Guide
+ Remove a background or extract an image in Preview on Mac
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

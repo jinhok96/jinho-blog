@@ -27,10 +27,10 @@
 - `Our take`: Siri AI 기억은 베타가 끝나기 전에 별도 스위치와 "대화를 지우면 기억도 지워지는지" 답이 필요. 근거: 회상과 새 출처 3개가 한 번에 추가됐는데 제한 방법은 대화 삭제·보관 기간뿐이고 앱 제외는 Search까지 끊음, Gemini는 Memory 스위치와 "Did you use any info from past chats?" 확인을 제공(16598469). 반대 관점: Siri AI는 옵트인이고 상당 부분 기기·저장하지 않는 서버에서 처리, 앱 하나하나 대신 한 목록이 더 쉬움
 - 1차 출처: support.apple.com/en-us/149076·149230·149227·149225·100100·128058·148587, iPhone User Guide iOS 27(iphc28624b81abc·iphv6zwrg8jvfgr·p7ny364ngxlj·iphe3f499e0e·iph3fed3f2c3·iphfed2c4091), apple.com/legal/privacy/data/en/ask-siri-dictation·siri-suggestions-search, Apple Newsroom 10-26, support.google.com/gemini/answer/16598469. 원문 `tests/ios-27-2-siri-ai-memory/source-*.txt`(2026-10-26 21:23~21:35 UTC, `render.cjs`). iPhone이 없어 설정 화면은 직접 열지 못함(본문 How we checked에 밝힘)
 - 쓰지 않은 것: "App Access에서 이름이 바뀜"(보도, web.archive.org 차단으로 Apple 이전 문서 확인 불가), Siri AI의 Gemini 기반 여부(보도), Health 앱 개편 누락(보도), Keep Conversations 기본값·세 번째 선택지
-- 이미지: 대표 이미지(HERO_LINE) + 본문 4장(Apple 설명서 Excluded Apps 화면 캡처 + accent 상자, 데이터 → 막는 설정 → 대가 표, 기기별 10-26 업데이트 표, 문서 3개 비교 카드, `charts.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 248629995, 66.9분(앞부분이 문서 렌더링·대시보드 계산과 겹쳐 평소보다 김), 아쿠아 배경 + 체리 레드·노랑, 아이소메트릭. 남색 휴대폰 위 진주 구슬에서 점선이 봉투·액자·단순 표시 타일로, 빨간 받침 위 책 타일, 휴대폰 옆 빈 빨간 상자. '해바라기 노랑'을 꽃으로 그려 네 모서리에 해바라기가 생겼고 파형 타일 대신 V자 표시지만 주제·화풍이 맞고 글자·로고가 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(Apple 설명서 Excluded Apps 화면 캡처 + accent 상자, 데이터 → 막는 설정 → 대가 표, 기기별 10-26 업데이트 표, 문서 3개 비교 카드, `charts.py` 라이트 모드)
 - 내부 링크: 새 글 → 상시 글 `turn-off-apple-intelligence-iphone`·`turn-off-gemini-apps-activity`·`check-if-image-is-ai-generated`, 허브 `turn-off-ai-features` (4개). 역링크: `check-if-image-is-ai-generated`(색인됨) "What SynthID Detector can and can't tell you" 절의 Apple SynthID 예고 문장 뒤(27.2에서 Photos·Image Playground에 도착), 허브 Apple Intelligence 절 끝, `turn-off-apple-intelligence-iphone` Siri AI 절의 "English to start" 문단 뒤(27.2 언어 5개 추가) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
 - 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 66자·H1 일치·주 검색어 맨 앞, 설명 158자에 주 검색어, 첫 100단어에 주 검색어, h2 7개, 이미지 alt·파일 이름·WebP, 받는 링크 3개, AI 문체 단어·em dash 0), 본문 1,416단어(표·이미지 제외). searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_LINE
+- 빌드 HTML 확인: title 78자(접미사 포함, 본제목 66자 → 피드형 75자 이내)·description 158자, BlogPosting(발행 2026-10-26T21:47Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개(관련 글 제목 포함)·h3 3개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
 
 **알게 된 것**
 

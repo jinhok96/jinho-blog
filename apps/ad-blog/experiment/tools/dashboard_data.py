@@ -14,6 +14,8 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
 `ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
 - summary: 갱신 시각·28일 합계·사이트맵 상태·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
            ·goals(README 목표 지표 표 + 현재 값·진행률)
+           ·crawl(URL 검사 회차만: latest = 색인된 페이지 중 가장 최근 크롤링, listPages = 홈·카테고리 첫 페이지별 lastCrawlTime,
+                  unindexed = 색인 안 된 글 수, unindexedSeen = 그중 Google이 본 링크가 있는 글 수)
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
 - posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, 28일 지표, queries, daily, sources,
                   firstDays, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
@@ -27,7 +29,10 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
           색인 시점 3가지 (Search Console은 색인된 날짜를 주지 않아 회차마다 처음 본 값을 고정, 한번 정하면 바꾸지 않음):
           indexedAt = URL 검사가 처음 PASS인 회차 시각, firstCrawlAt = 그때의 lastCrawl(마지막 크롤링은 이후 바뀌므로 첫 값),
           firstImpressionAt = 웹 검색 노출이 처음 생긴 날짜(Search Console 날짜, 태평양 시간).
-          앞의 두 값은 이전 posts 문서(--prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급)
+          앞의 두 값은 이전 posts 문서(--prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급),
+          seenLinks = (색인 안 된 글만) Google이 마지막으로 크롤링한 판에서 이 글로 가던 링크 [{page, kind, crawl}] (link_seen.py),
+          firstSeenLinkAt = 그 링크를 Google이 처음 본 크롤링 시각 (--prev에서 이어받아 고정, 색인 뒤에도 유지 → 노하우 9 판정)
+          (2026-10-26 회차부터. 그 전 회차 history에는 없음)
 - traffic: (Cloudflare 환경변수가 있을 때만) 사이트 전체 실제 조회수 {range, views, visits, daily: [{date, views, visits}](UTC 날짜, 빠진 날 0),
            referers: 유입 사이트별 28일 조회수·방문 상위 10 (자기 사이트·직접 방문은 'direct')}
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
@@ -48,6 +53,7 @@ import sys
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
 from gsc_report import API, POSTS_DIR, SITE_ORIGIN, call, load_token, search_analytics, site_path  # noqa: E402
 import cf_analytics  # noqa: E402
+import link_seen  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
 
 EXPERIMENT = pathlib.Path(__file__).resolve().parents[1]
@@ -131,6 +137,41 @@ def index_dates(prev: dict, index: dict | None, run_at: str, first_imp: str | No
         first_crawl = first_crawl or index.get('lastCrawl')
     imps = [d for d in (first_imp, prev.get('firstImpressionAt')) if d]
     return {'indexedAt': indexed_at, 'firstCrawlAt': first_crawl, 'firstImpressionAt': min(imps) if imps else None}
+
+
+def seen_link_fields(token: str, site: str, posts: list[dict], crawled: dict[str, dt.datetime], prev: dict[str, dict]) -> dict:
+    """색인 안 된 글에 Google이 본 링크(seenLinks)와 처음 본 시각(firstSeenLinkAt)을 붙이고 summary.crawl을 돌려줌 (노하우 9 판정용).
+
+    seenLinks = Google이 마지막으로 크롤링한 판(홈·카테고리 첫 페이지·색인된 글)에서 그 글로 가던 링크 [{page, kind, crawl}].
+    firstSeenLinkAt = 그 링크들의 크롤링 시각 중 가장 이른 값. 페이지가 다시 크롤링되면 crawl 값이 늦어지므로
+    처음 정한 값을 이전 회차(--prev)에서 이어받고 바꾸지 않음 (색인된 뒤에도 유지 → indexedAt과 비교)
+    """
+    pages = {}
+    for page in link_seen.list_pages():
+        res = call('POST', f'{API}/v1/urlInspection/index:inspect', token, {'inspectionUrl': SITE_ORIGIN + page, 'siteUrl': site})
+        idx = res.get('inspectionResult', {}).get('indexStatusResult', {})
+        pages[page] = idx.get('lastCrawlTime')
+        if when := link_seen.crawl_time(idx):
+            crawled[page] = when
+    unindexed = {p['slug'] for p in posts if p.get('index', {}).get('verdict') != 'PASS'}
+    try:
+        seen = link_seen.seen_links(crawled, unindexed)
+    except Exception as error:  # noqa: BLE001 - git 이력이 없으면(origin/main 미fetch) 이 값만 빼고 갱신
+        print(f'Google이 본 링크를 계산하지 못함 (seenLinks 없이 진행): {error}', file=sys.stderr)
+        seen = None
+    for p in posts:
+        first = prev.get(p['slug'], {}).get('firstSeenLinkAt')
+        if seen is not None and p['slug'] in unindexed:
+            p['seenLinks'] = seen[p['slug']]
+            first = first or min((s['crawl'] for s in p['seenLinks']), default=None)
+        p['firstSeenLinkAt'] = first
+    latest = max(crawled.values(), default=None)
+    return {
+        'latest': latest.strftime('%Y-%m-%dT%H:%M:%SZ') if latest else None,
+        'listPages': pages,
+        'unindexed': len(unindexed),
+        'unindexedSeen': None if seen is None else sum(1 for s in seen.values() if s),
+    }
 
 
 def position_move(now: dict | None, before: dict | None) -> dict | None:
@@ -323,6 +364,7 @@ def main() -> None:
     problems = audit(linked, cluster_rows, lambda slug: f'`{slug}`')
 
     posts = []
+    crawled: dict[str, dt.datetime] = {}  # 색인된 페이지 경로 → 마지막 크롤링 (Google이 본 링크 계산용)
     for path in sorted(POSTS_DIR.glob('*.mdx')):
         slug = path.stem
         url = f'{SITE_ORIGIN}/posts/{slug}'
@@ -339,8 +381,11 @@ def main() -> None:
                 'crawledAs': idx.get('crawledAs'), 'fetch': idx.get('pageFetchState'),
                 'canonicalOk': None if not google_canonical else google_canonical == url,
             }
+            if when := link_seen.crawl_time(idx):
+                crawled[f'/posts/{slug}'] = when
         doc.update(index_dates(prev_rows.get(slug, {}), doc.get('index'), run_at, first_impression(page_dates.get(url, {}))))
         posts.append(doc)
+    crawl = None if args.no_inspect else seen_link_fields(token, args.site, posts, crawled, prev_rows)
     # 글 외 페이지(홈·카테고리·목록 등): 글별 표 합계를 사이트 전체 KPI와 맞추기 위해 따로 표시
     post_urls = {f"{SITE_ORIGIN}/posts/{p['slug']}" for p in posts}
     other = [{'path': url.removeprefix(SITE_ORIGIN) or '/', **metrics(r), **page_extra(url)} for url, r in by_page.items() if url not in post_urls]
@@ -406,6 +451,8 @@ def main() -> None:
         'linkAudit': {name: len(items) for name, items in problems.items() if items},
         'goals': goals(current),
     }
+    if crawl:
+        docs['summary']['crawl'] = crawl
 
     versions = json.loads(args.versions) if args.versions else {}
     out = pathlib.Path(args.out) / 'stats'

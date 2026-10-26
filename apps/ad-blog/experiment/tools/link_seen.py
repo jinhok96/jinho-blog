@@ -12,6 +12,7 @@
 - 그 판이 가진 링크: 글은 본문 `/posts/{slug}` 링크 + 관련 글 3개 + 이전·다음 글,
   홈은 허브(`hub: true`) + 최신 12편, 카테고리는 그 카테고리 최신 12편 (src/entities/post 규칙과 같게)
 - `git fetch origin main`을 먼저 해 둬야 최신 이력을 봄
+- dashboard_data.py가 `seen_links()`로 같은 계산을 회차마다 대시보드 DB(posts `seenLinks`·`firstSeenLinkAt`)에 남김
 """
 
 import datetime as dt
@@ -93,37 +94,60 @@ def links_of(page: str, posts: dict[str, dict]) -> dict[str, str]:
     return found
 
 
-def main() -> None:
-    token = gsc.load_token()
+def inspect(token: str, page: str) -> dict:
+    """URL 검사 indexStatusResult (page는 `/`·`/categories/…`·`/posts/…` 경로)"""
+    body = {"inspectionUrl": gsc.SITE_ORIGIN + page, "siteUrl": SITE}
+    res = gsc.call("POST", f"{gsc.API}/v1/urlInspection/index:inspect", token, body)
+    return res.get("inspectionResult", {}).get("indexStatusResult", {})
+
+
+def crawl_time(idx: dict) -> dt.datetime | None:
+    """색인된(PASS) 페이지의 마지막 크롤링 시각. 색인 안 됐으면 None (Google이 본 판이 없음)"""
+    if idx.get("verdict") == "PASS" and idx.get("lastCrawlTime"):
+        return dt.datetime.fromisoformat(idx["lastCrawlTime"].replace("Z", "+00:00"))
+    return None
+
+
+def list_pages() -> list[str]:
+    """홈·카테고리 첫 페이지 (글 목록으로 링크하는 페이지, 글은 따로 검사)"""
+    return ["/", *[f"/categories/{c}" for c in CATEGORIES]]
+
+
+def seen_links(crawled: dict[str, dt.datetime], targets: set[str]) -> dict[str, list[dict]]:
+    """targets 글마다 크롤링된 판에서 받은 링크 [{page, kind, crawl}] (crawled = 경로 → 마지막 크롤링)"""
     revs = [line.split(" ", 1) for line in git("log", "--first-parent", "origin/main", "--format=%H %cI").splitlines()]
     revs = [(h, dt.datetime.fromisoformat(t)) for h, t in revs]
-    pages = ["/", *[f"/categories/{c}" for c in CATEGORIES], *[u.removeprefix(gsc.SITE_ORIGIN) for u in gsc.post_urls()]]
-
-    crawled, unknown = {}, []
-    for page in pages:
-        body = {"inspectionUrl": gsc.SITE_ORIGIN + page if page != "/" else gsc.SITE_ORIGIN + "/", "siteUrl": SITE}
-        idx = gsc.call("POST", f"{gsc.API}/v1/urlInspection/index:inspect", token, body)
-        idx = idx.get("inspectionResult", {}).get("indexStatusResult", {})
-        if idx.get("verdict") == "PASS" and idx.get("lastCrawlTime"):
-            crawled[page] = dt.datetime.fromisoformat(idx["lastCrawlTime"].replace("Z", "+00:00"))
-        elif page.startswith("/posts/"):
-            unknown.append((page.rsplit("/", 1)[1], idx.get("coverageState", "-")))
-
     cache: dict[str, dict] = {}
-    seen: dict[str, list[str]] = {slug: [] for slug, _ in unknown}
-    for page, when in crawled.items():
+    seen: dict[str, list[dict]] = {slug: [] for slug in targets}
+    for page, when in sorted(crawled.items()):
         rev = next((h for h, t in revs if t <= when), None)
         if rev is None:
             continue
         posts = cache.setdefault(rev, posts_at(rev))
         for slug, kind in links_of(page, posts).items():
             if slug in seen:
-                seen[slug].append(f"{page} ({kind}, {when:%m-%d %H:%M})")
+                seen[slug].append({"page": page, "kind": kind, "crawl": when.strftime("%Y-%m-%dT%H:%M:%SZ")})
+    return seen
 
+
+def main() -> None:
+    token = gsc.load_token()
+    pages = [*list_pages(), *[u.removeprefix(gsc.SITE_ORIGIN) for u in gsc.post_urls()]]
+
+    crawled, unknown = {}, []
+    for page in pages:
+        idx = inspect(token, page)
+        if when := crawl_time(idx):
+            crawled[page] = when
+        elif page.startswith("/posts/"):
+            unknown.append((page.rsplit("/", 1)[1], idx.get("coverageState", "-")))
+
+    seen = seen_links(crawled, {slug for slug, _ in unknown})
     print(f"## Google이 본 링크 ({dt.date.today()}, 크롤링된 페이지 {len(crawled)}개 기준)\n")
     print("| 색인 안 된 글 | 상태 | 크롤링된 판에서 받은 링크 |\n| --- | --- | --- |")
     for slug, state in unknown:
-        print(f"| `{slug}` | {state} | {'<br>'.join(seen[slug]) or '없음'} |")
+        links = [f"{s['page']} ({s['kind']}, {s['crawl'][5:10]} {s['crawl'][11:16]})" for s in seen[slug]]
+        print(f"| `{slug}` | {state} | {'<br>'.join(links) or '없음'} |")
     print(f"\n- 링크를 본 글 {sum(1 for s in seen.values() if s)}편 / 색인 안 된 글 {len(unknown)}편")
     last = max(crawled.values()) if crawled else None
     print(f"- 크롤링된 페이지 중 가장 최근 크롤링: {last:%Y-%m-%d %H:%M} UTC" if last else "- 크롤링된 페이지 없음")

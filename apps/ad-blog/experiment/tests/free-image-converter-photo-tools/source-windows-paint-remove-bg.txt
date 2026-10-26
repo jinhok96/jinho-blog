@@ -1,0 +1,140 @@
+Background Removal in Paint begins rolling out to Windows Insiders | Windows Insider Blog
+ Skip to main content
+ Windows Blogs 
+ Windows Experience
+ Devices
+ Windows Developer
+ Microsoft Edge
+ Windows Insider
+ Microsoft 365
+ Microsoft 365
+ Azure
+ Copilot
+ Windows
+ Surface
+ XBOX
+ Deals
+ Small Business
+ Support
+ Windows Apps
+ Outlook
+ OneDrive
+ Microsoft Teams
+ OneNote
+ Microsoft Edge
+ Moving from Skype to Teams
+ Computers
+ Shop XBOX
+ Accessories
+ VR & mixed reality
+ Certified Refurbished
+ Trade-in for cash
+ XBOX Game Pass Ultimate
+ PC Game Pass
+ XBOX games
+ PC games
+ Microsoft AI
+ Microsoft Security
+ Dynamics 365
+ Microsoft 365 for business
+ Microsoft Power Platform
+ Windows 365
+ Small Business
+ Digital Sovereignty
+ Azure
+ Microsoft Developer
+ Microsoft Learn
+ Support for AI marketplace apps
+ Microsoft Tech Community
+ Microsoft Marketplace
+ Software companies
+ Visual Studio
+ Microsoft Rewards
+ Free downloads & security
+ Education
+ Gift cards
+ Licensing
+ Unlocked stories
+ View Sitemap
+ / Windows Insider Blog
+Share on Facebook
+Share on X
+Share on LinkedIn
+Share on Threads
+Subscribe to RSS
+ Background Removal in Paint begins rolling out to Windows Insiders
+ Written By
+ Dave Grochocki
+ published
+ September 7, 2023
+UPDATE 9/20: The update to the Paint app for Windows 11 that includes background removal is now rolling out to Windows Insiders in the Release Preview Channel (version 11.2306.30.0 and higher). 
+UPDATE 9/18: The update to the Paint app for Windows 11 that includes background removal is now rolling out to Windows Insiders in the Beta Channel (version 11.2306.30.0). 
+Hello Windows Insiders,
+Today we are beginning to roll out an update for the Paint app to Windows Insiders in the Canary and Dev Channels (version 11.2306.30.0). With this update, we are introducing background removal! With background removal, you can now remove the background of any image automatically in just one click leaving a smooth cutout of the subject. Background removal can detect the subject from the entire canvas or from a selection using the selection tool.
+Short animation showing the background getting removed in Paint.
+To get started, paste or import content onto the canvas and click on the new remove background button in the toolbar to remove the background on your entire image. You can also use the rectangle select to specify an area that you want to remove the background on.
+As always, we love getting feedback from the community and we will be looking out for your thoughts and suggestions on this update!
+Please note that an earlier version of this update (version 11.2306.28.0) went live earlier today and includes a bug where a confidentality banner is shown. The newer update (version 11.2306.30.0) will correct the issue.
+FEEDBACK: Please file feedback in Feedback Hub (WIN + F) under Apps > Paint.
+Thanks,
+Dave Grochocki, Principal Product Manager Lead – Windows Inbox Apps
+ Tags:
+Windows Insider Program
+ Surface Laptop Ultra 
+ Surface Pro 
+ Surface Laptop 
+ Surface RTX Spark Dev Box 
+ Explore Copilot 
+ Explore Microsoft products 
+ Windows 11 apps 
+ Account profile 
+ Download Center 
+ Microsoft Store support 
+ Returns 
+ Order tracking 
+ Certified Refurbished 
+ Why buy from Microsoft Store 
+ Flexible Payments 
+ Microsoft in education 
+ Devices for education 
+ Microsoft Teams for Education 
+ Microsoft 365 Education 
+ How to buy for your school 
+ Educator training and development 
+ Deals for students and parents 
+ AI for education 
+ Microsoft AI 
+ Microsoft Security 
+ Dynamics 365 
+ Microsoft 365 
+ Microsoft Power Platform 
+ Microsoft Teams 
+ Microsoft Copilot 
+ Small Business 
+ Azure 
+ Microsoft Developer 
+ Microsoft Learn 
+ Support for AI marketplace apps 
+ Microsoft Tech Community 
+ Microsoft Marketplace 
+ Software companies 
+ Visual Studio 
+ Careers 
+ About Microsoft 
+ Company news 
+ Privacy at Microsoft 
+ Investors 
+ Diversity and inclusion 
+ Accessibility 
+ Sustainability 
+ Your Privacy Choices
+ Consumer Health Privacy
+ Sitemap
+ Contact Microsoft
+ Privacy 
+ Manage cookies
+ Terms of use
+ Trademarks
+ Safety & eco
+ Recycling
+ About our ads

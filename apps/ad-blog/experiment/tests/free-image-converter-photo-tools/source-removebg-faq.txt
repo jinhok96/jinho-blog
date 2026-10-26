@@ -1,0 +1,105 @@
+remove.bg is moving to Canva - remove.bg
+ Skip to main content
+ remove.bg is moving to Canva
+As you may know, remove.bg became part of Canva in 2021. We're now migrating remove.bg's background removal functionality into the Canva platform, where it'll sit alongside everything else Canva has to offer.
+ Learn more
+ All features
+ Photographers
+ Marketing
+ Developers
+ Ecommerce
+ Media
+ Car Dealerships
+ Enterprise
+ Success stories
+ Tools & API
+ API Documentation
+ Integrations, tools & apps
+ Photoshop Extension
+ Windows / Mac / Linux
+ Android App
+ Design Templates
+ Support
+ Help & FAQs
+ Contact us
+ Refunds
+ Platform Status
+ Resources
+ Company
+ Blog
+ Affiliate Program
+ Create automatic designs
+ Video Background Removal
+ Careers
+ About us
+ Press & Partnerships
+© remove.bg, a Canva Austria GmbH brand
+ Terms of Service
+ General Terms and Conditions
+ Privacy Policy
+ Cookie Policy
+ Imprint
+ Thanks for your feedback!
+ Want to help us improve? (optional)
+ Contribute this image & help us make remove.bg better
+ Teach the Artificial Intelligence
+ Get better results for similar images in the future
+ I agree to the Improvement Program Conditions.*
+ Remember my decision for future images that I rate negatively
+ Yes, contribute image
+ Choose if you want us to use this image for quality improvements.
+ No, don't contribute
+ Choose if you do NOT want us to use this image for quality improvements.
+Your image will be used for future improvements of remove.bg.
+ Close
+Your image will NOT be used for future improvements of remove.bg.
+ Close
+
+# FAQ (페이지에 박힌 JSON에서 추출, 2026-10-26 UTC)
+Q: What is happening to remove.bg?
+A: From 1 December 2026 at 9:00am CET, remove.bg's standalone website will no longer be available. Background removal is moving to Canva and API access to Leonardo.ai, with upgraded offerings on both. Enterprise API contracts aren't affected and continue as normal.
+
+Q: Why is this happening?
+A: remove.bg is part of Canva, which has integrated background removal directly into its platform. Rather than maintain two separate products, we are consolidating to give users the best possible experience through Canva's tools.
+
+Q: Where can I use the remove.bg functionality after 1 December 2026?
+A: Canva offers background removal as part of its design platform at canva.com. You can remove the background from any image directly within a Canva design. Additional functionality will be added before 1 December 2026.
+
+Q: Is there an alternative to remove.bg?
+A: Yes - Canva's Background Remover. It uses the same background-removal technology as remove.bg. Remove a background just as easily as before, then keep designing if you want, with no separate app needed.
+
+Q: What should I replace remove.bg with?
+A: For single images and bulk batches, Canva is the best replacement. For larger-volume or automated use, that's now part of Leonardo.Ai's suite of APIs, also owned by Canva.
+
+Q: I have an active annual subscription. Will I receive a refund?
+A: Your subscription will continue to work normally until 1 December 2026 at 9:00 a.m. CET. After that, it ends automatically and you wonât be charged again. If you have unused time on your plan beyond that date, you'll receive a pro-rata refund to your original payment method. No action is required from you to receive this refund.
+
+Q: I have an active monthly subscription. What happens?
+A: Your subscription will continue to work normally until 1 December 2026 at 9:00 a.m. CET and ends automatically after that. Any final renewal on or after 1 November is free. If you'd like to cancel earlier, you can do so at remove.bg/dashboard.
+
+Q: What happens to my PAYG (pay-as-you-go) credits?
+A: Any unused PAYG credits will expire on 1 December 2026. We recommend using your credits before the migration date.
+
+Q: What happens to my account data after shutdown?
+A: Your account data will remain accessible until 1 December 2026 at 9:00 a.m. CET. After that, the website and accounts won't be accessible. Make sure you export your credit usage report and invoices from your Account page before then. You won't be able to download them afterward.
+
+Q: How can I remove backgrounds in bulk moving forward?
+A: Canva offers bulk background removal, so you can process multiple images at once instead of one at a time. For larger volumes, you can also use the Leonardo.Ai's API.
+
+Q: Are there any alternatives for the desktop app?
+A: Canva's bulk background removal covers it. Upload a batch and remove all the backgrounds together, whether you're in the web app or the Canva desktop app.
+
+Q: I use the remove.bg API. What should I do?
+A: Enterprise API customers are not affected: contracts continue as normal.The self-service API will stop accepting requests from 1 December 2026. remove.bg's background removal API is now available through Leonardo.ai, also part of Canva, with additional features such as upscaling and scene generation. Learn more about Leonardo's API and how to migrate, or contact our team to discuss your options.
+
+Q: Is there an alternative to the remove.bg API?
+A: Yes - Leonardo.Ai's API, also part of Canva, offers remove.bg's background removal API among its suite of APIs. It uses the same background-removal technology as remove.bg's API, plus APIs for upscaling and scene generation. Enterprise contracts continue as normal, and self-service users can use our migration guide for a smooth transition.
+
+Q: What happens to the remove.bg plugin for Photoshop?
+A: The remove.bg plugin for Photoshop won't be available after 1 December 2026. For background removal in a professional editing workflow, try Affinity, also part of Canva. Affinity itself is free to use, and it has remove.bg's background removal technology built directly into its editor. The background removal feature runs on Canva AI, so you'll need a Canva Pro subscription to use it.
+
+Q:  What happens to remove.bg's other integrations and plugins
+A: These will be discontinued on 1 December 2026. You can explore Canva's own plugins and integrations instead. Canvaâs App Marketplace already offers hundreds of apps, with new ones added continuously.
+
+Q: How do I contact support?
+A: You can contact support at remove.bg/support or email support@remove.bg.

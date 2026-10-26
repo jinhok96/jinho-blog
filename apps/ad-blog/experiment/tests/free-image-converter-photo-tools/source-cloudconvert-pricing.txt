@@ -1,0 +1,269 @@
+Pricing | CloudConvert
+CloudConvert
+Tools
+API
+Pricing
+Sign inSign up
+ Pricing 
+ Pay only for what you need. Use the slider to choose the number of conversion credits you want, and see prices update instantly. 
+ Select your volume 
+1,000credits
+5001,000,000
+ Packages from ...
+Free
+For personal use, testing and hobby projects.
+€0
+Sign Up
+Package
+One-time payment. Credits never expire.
+...
+Buy Now
+Subscription
+Monthly credits at our best rates.
+...
+ /month
+Subscribe
+Enterprise
+Custom plans for large-scale workloads.
+Custom
+Contact Sales
+Pricing
+Conversion Credits
+10 / day
+1,000
+1,000 / month
+Custom
+Cost per Credit
+Free
+...
+...
+Custom
+Credit Expiry
+Daily reset
+Never
+Monthly reset
+Custom
+Features
+All API Features
+All Bandwidth Included
+Processing Priority
+Low
+High
+High
+High
+Max File Size
+1 GB
+Unlimited
+Unlimited
+Unlimited
+Max Processing Time
+5 minutes
+Unlimited
+Unlimited
+Unlimited
+Concurrent Tasks
+5
+Unlimited
+Unlimited
+Unlimited
+Dedicated Capacity
+Optional
+Install Custom Fonts
+Support & Compliance
+Support
+Standard
+Standard
+Priority
+99.9% SLA
+Data Processing Agreement
+Auto-Refill
+Team Billing
+SSO / SAML 2.0
+Custom Security Reviews
+Custom Contracts & NDAs
+Metered Billing / Invoicing
+Free
+For personal use, testing and hobby projects.
+€0
+Sign Up
+Pricing
+Conversion Credits
+10 / day
+Cost per Credit
+Free
+Credit Expiry
+Daily reset
+Features
+All API Features
+All Bandwidth Included
+Processing Priority
+Low
+Max File Size
+1 GB
+Max Processing Time
+5 minutes
+Concurrent Tasks
+5
+Dedicated Capacity
+Install Custom Fonts
+Support & Compliance
+Support
+99.9% SLA
+Data Processing Agreement
+Auto-Refill
+Team Billing
+SSO / SAML 2.0
+Custom Security Reviews
+Custom Contracts & NDAs
+Metered Billing / Invoicing
+Package
+One-time payment. Credits never expire.
+...
+Buy Now
+Pricing
+Conversion Credits
+1,000
+Cost per Credit
+...
+Credit Expiry
+Never
+Features
+All API Features
+All Bandwidth Included
+Processing Priority
+High
+Max File Size
+Unlimited
+Max Processing Time
+Unlimited
+Concurrent Tasks
+Unlimited
+Dedicated Capacity
+Install Custom Fonts
+Support & Compliance
+Support
+Standard
+99.9% SLA
+Data Processing Agreement
+Auto-Refill
+Team Billing
+SSO / SAML 2.0
+Custom Security Reviews
+Custom Contracts & NDAs
+Metered Billing / Invoicing
+Subscription
+Monthly credits at our best rates.
+...
+ /month
+Subscribe
+Pricing
+Conversion Credits
+1,000 / month
+Cost per Credit
+...
+Credit Expiry
+Monthly reset
+Features
+All API Features
+All Bandwidth Included
+Processing Priority
+High
+Max File Size
+Unlimited
+Max Processing Time
+Unlimited
+Concurrent Tasks
+Unlimited
+Dedicated Capacity
+Install Custom Fonts
+Support & Compliance
+Support
+Standard
+99.9% SLA
+Data Processing Agreement
+Auto-Refill
+Team Billing
+SSO / SAML 2.0
+Custom Security Reviews
+Custom Contracts & NDAs
+Metered Billing / Invoicing
+Enterprise
+Custom plans for large-scale workloads.
+Custom
+Contact Sales
+Pricing
+Conversion Credits
+Custom
+Cost per Credit
+Custom
+Credit Expiry
+Custom
+Features
+All API Features
+All Bandwidth Included
+Processing Priority
+High
+Max File Size
+Unlimited
+Max Processing Time
+Unlimited
+Concurrent Tasks
+Unlimited
+Dedicated Capacity
+Optional
+Install Custom Fonts
+Support & Compliance
+Support
+Priority
+99.9% SLA
+Data Processing Agreement
+Auto-Refill
+Team Billing
+SSO / SAML 2.0
+Custom Security Reviews
+Custom Contracts & NDAs
+Metered Billing / Invoicing
+What are conversion credits?
+The longer a conversion takes, the more resources it consumes and the more expensive it becomes. Our packages and subscriptions typically consume one credit per minute of conversion time.
+Depending on the conversion type, each conversion also has a base credit cost. By default, conversions consume at least one credit, with additional credits charged for every extra minute if the conversion takes longer than one minute. We also offer a few premium conversion types that require more resources and therefore have a minimum base cost of two credits. Of course, only successful conversions are charged.
+Conversion Type
+Base Credits
+General
+1
+Office to PDF
+2
+iWork to PDF
+2
+PDF to Office
+4Credits Calculator
+Why do I have to pay for a base amount of credits per conversion?
+Ninety-five percent of our conversions take only a few seconds, and we already account for that. To make costs more predictable, our pricing is based on a combination of the minimum credits consumed per conversion type and the total conversion time.
+What is the difference between a package and a subscription?
+Packages are one-time purchases — your credits never expire and you can use them whenever you like ("pay as you go"). Subscriptions charge a monthly fee for a fixed amount of credits at a lower per-credit price, but unused credits do not roll over at the end of the month. Subscriptions can be up to 50% cheaper than packages.
+Can I combine packages and subscriptions?
+Yes! Your credits from your monthly subscription will be consumed first, and then your package credits will be consumed.
+How can I make sure my account never runs out of credits?
+An auto-refill option is available for packages. When enabled, your account is automatically refilled as soon as it runs out of credits. You can activate it in the billing settings.
+Can I share my package/subscription with multiple accounts?
+Yes. Team billing is available, so organizations such as companies or schools can use one central billing account with unlimited team members. Only billing is shared across accounts; files and conversions remain private.
+When can I cancel/change my subscription?
+You can cancel your subscription at any time. There is no minimum term. You can also switch to a different subscription at any time, but any remaining conversion credits will expire.
+Which payment methods are available?
+We accept all major credit cards including Visa, MasterCard, and American Express.
+ Ready to get started? 
+ Start free with 10 conversions per day. No credit card required. 
+Get Started FreeContact Sales
+Company
+About Us
+Security
+Resources
+Blog
+Status
+Legal
+Privacy
+Terms
+Imprint
+Contact
+Contact Us
+© 2026 Lunaweb GmbH 
+ Made in Munich, Germany

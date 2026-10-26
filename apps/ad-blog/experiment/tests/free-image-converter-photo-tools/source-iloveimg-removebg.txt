@@ -1,0 +1,108 @@
+Image background remover
+ All Image tools 
+Compress IMAGE
+Resize IMAGE
+Crop IMAGE
+Convert to JPG
+Photo editor
+ More tools 
+Optimize
+ Compress IMAGE
+Upscale
+Remove background
+Create
+ Meme generator
+Photo editor
+Modify
+ Resize IMAGE
+ Crop IMAGE
+ Rotate IMAGE
+Convert
+ Convert to JPG
+ Convert from JPG
+HTML to IMAGE
+Security
+ Watermark IMAGE
+Blur face
+ Login
+ Sign up
+Other products
+iLovePDF
+Simplify document management 
+iLoveSign
+e-Signing made simple 
+iLoveAPI
+Document automation for developers 
+Integrations
+Zapier, Make, Wordpress... 
+Pricing
+Security
+Features
+About us
+Help
+FAQ
+Tools
+Legal & Privacy
+Contact
+Language
+ English 
+ English
+ Español
+ Français
+ Deutsch
+ Italiano
+ Português
+ 日本語
+ Pусский
+ 한국어
+ 中文 (简体)
+ 中文 (繁體)
+ العربية
+ Български
+ Català
+ Nederlands
+ Ελληνικά
+ हिन्दी
+ Bahasa Indonesia
+ Bahasa Melayu
+ Polski
+ Svenska
+ ภาษาไทย
+ Türkçe
+ Українська
+ Tiếng Việt
+ Kiswahili
+ Login
+ Sign up
+ Remove background 
+ Cut out image background. Remove the background of your JPG and PNG images with exceptional quality. 
+ Select images
+or drop images here
+ / 
+Remove background
+Write your text here
+ Opacity:
+Arial
+ Arial 
+ Impact 
+ Arial unicode ms 
+ Verdana 
+ Courier 
+ Comic 
+ Times new roman 
+ Lohit marathi 
+ Lohit devanagari 
+ Font Size:
+ Background color
+ Font color:
+ Font shadow:
+ Opacity:
+Getting files from Drive
+Getting files from Dropbox
+Uploading file 0 of 0
+ Time left - seconds -
+ Upload speed - MB/S 
+ Uploaded 
+Removing backgrounds...
+ © iLoveIMG 2026 ® - Your Image Editor 
+ Woops! Something is wrong with your Internet connection...

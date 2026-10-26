@@ -1,0 +1,22 @@
+HandBrake: Open Source Video Transcoder
+HandBrake
+ The open source video transcoder
+ News
+ Features
+ Downloads
+ Community
+ Docs
+ GitHub 
+HandBrake is a open-source tool, built by volunteers, for converting video from nearly any format to a selection of modern, widely supported codecs. 
+Reasons you’ll love HandBrake:
+Convert video from nearly any format
+Free and Open Source
+Multi-Platform (Windows, Mac and Linux)
+ Download HandBrake 1.11.2
+ Linux, Flatpak (via flathub.org)
+(Other Platforms) 
+It's free!
+ >
+ >
+ © The HandBrake Team | Privacy Policy | Project Information | Report Problem 
+ Website by Ethercycle

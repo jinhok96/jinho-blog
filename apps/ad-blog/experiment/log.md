@@ -2,6 +2,70 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-26 · 세션 52 (정기 실행, 개선 세션): photo-video 허브 + Google이 본 링크 분석 + 소제목 첫 문장
+
+세션 시각: 2026-10-26 12:15 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(이 세션이 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(d36ea70)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-28 ~ 10-26, 세션 51 이후 바뀐 값만)**
+
+- 노출 676 → **703**, 클릭 10, CTR 1.5% → 1.4%, 평균 순위 22.0 → 22.5
+  - `spotify-family-qr-code-verification` 213 → **227 (14.1 → 15.0위)**, 클릭 0 / `turn-off-ai-in-chrome` 134 → 135 (14.2) / `image-to-text-offline-free` 76 → 79 (14.2 → 14.7) / 홈 12회·클릭 3
+- URL 검사: 색인 17편 그대로. `URL is unknown` 26편 → 색인율 17/43 (40%), 새 허브 포함 17/44
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 시작 3건(Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글, `pixel-watch-safety-signal-ending` 받는 링크 1개) → 끝 2건 (Pixel Watch 해결). `photo-video` "허브 필요" 해소
+- 주간 SEO 점검(10-26 08:45) 우선순위 확인: 1 미발견 글 발견 경로 보강 → 아래 분석으로 대체, 2 `photo-video` 허브 → 작성, 3 대표 이미지 추가 → 18시 세션으로 넘김(이 세션은 허브 대표 이미지에 CPU 사용). 같은 묶음의 소제목 첫 문장 3곳 → 수정, 태그 통합 → 보류(아래)
+
+**한 일 (개선 세션 3건, 쓴 스킬: `seo-audit` — Crawlability·Internal Linking·On-Page, `ai-seo` — 섹션 첫 문장 답 구조)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 주간 1 · 1 색인 | 미색인 26편 | 링크를 더 넣기 전에 **Google이 실제로 본 링크**를 확인하는 도구 `tools/link_seen.py` 추가(URL 검사 `lastCrawlTime` 시점의 main 판에서 본문 링크·관련 글·이전/다음·홈 목록·카테고리 목록 계산). 결과는 아래 "Google이 본 링크". 링크를 더 넣어도 Google이 다시 오기 전에는 효과가 없어 추가 링크는 넣지 않음. `pixel-watch-safety-signal-ending` 받는 링크는 `windows-10-esu-extended`(색인됨) "Windows 밖 다른 기기 확인" 문단 끝에 1문장(Google 공지로 12-12 재확인) → 2개 | 역링크 (V 대상 아님) |
+| 2 | 주간 2 · 3 허브 | 새 허브 `free-image-converter-photo-tools` | 아래 "발행한 허브". 상시 글 6편 끝 문단에 허브로 1문장씩(앵커 6가지로 다르게), `hub: true`로 홈 "Start here" 고정, clusters.md 허브 칸 | 허브 새 글 (V 대상 아님) |
+| 3 | 주간 보통 · AI 답변 인용 | `office-2021-end-of-support` "Who is affected", `remove-metadata-from-photos` "Jimpl, Verexif and IMGonline", `windows-11-24h2-end-of-support` "What to watch next" | 앞 문맥에 기대던 첫 문장 3개를 주어를 밝힌 완결 문장으로 (`This only matters…` → `Office 2021's end of support only matters…`, `These three websites…` → `Jimpl, Verexif and IMGonline…`, `This is the second…` → `The 24H2 cutoff is the second…`). 단어 몇 개만 바꿈, `updatedAt` 그대로 | 오탈자 수준 (V 대상 아님) |
+
+- 태그 통합(`Google Chrome` → `Chrome`) 보류: `Chrome` 태그는 PDF 글 2편(`jpg-to-pdf-free`·`split-pdf-free`, Chrome 인쇄)이 쓰고 `Google Chrome`은 Chrome AI·HTTP 글 2편이 씀. 합치면 PDF 글과 Chrome AI 글이 관련 글로 엮이고, V3 판정 중인 `turn-off-ai-in-chrome` 페이지의 관련 글 계산이 바뀜 → V3 판정(11-18) 뒤에 다시 판단
+- `apple-mail-exchange-not-syncing` → 상시 글 링크는 이번에도 보류 (`windows-microsoft` 상시 글이 `windows-10-esu-extended`뿐이라 문맥 없음)
+
+**Google이 본 링크 (`link_seen.py`, 크롤링된 페이지 21개 = 색인 글 17 + 홈 + 카테고리 3)**
+
+- 사이트에서 가장 최근 크롤링: **2026-10-21 08:37 UTC 홈** → 5일째 새 크롤링 없음. `/page/2`~`/page/4`(목록 2쪽 이후)는 `URL is unknown`
+- 미색인 26편 중 크롤링된 판에서 링크를 받은 글 **9편**: 홈 목록(10-21) 7편(`best-free-pdf-tools`·`compress-pdf-free`·`gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`·`pdf-to-jpg-free`·`pdf-to-word-free`·`remove-bg-alternative-free`) + `merge-pdf-files-free` 본문(10-20 21:59) 4편(`best-free-pdf-tools`·`compress-pdf-free`·`compress-video-for-discord-email`·`split-pdf-free`). 이 9편도 5~6일째 `URL is unknown`
+- 나머지 17편은 링크를 단 글이 링크를 넣은 뒤 한 번도 크롤링되지 않음 (세션 46 등에서 넣은 링크 포함)
+- Googlebot 사용자 에이전트(데스크톱·스마트폰)로 robots.txt·홈·sitemap·미색인 글 모두 200, robots `Allow: /` → 컨테이너에서 보이는 차단은 없음 (Google IP에서의 응답·호스트 상태는 Search Console 크롤링 통계로만 확인 가능)
+- 해석: 지금 병목은 링크 경로가 아니라 크롤링 빈도. 홈이 가장 마지막에 크롤링된 페이지라 허브를 홈 "Start here"에 두는 것이 가장 짧은 발견 경로 → 이 근거로 색인율 50% 미만인데도 `photo-video` 허브를 씀 (README 발행 속도 규칙은 "링크 보강 우선"이고, 링크 보강은 이미 끝났고 더 넣어도 효과가 없음). traffic-playbook 노하우 9에 중간 관찰로 기록
+
+**발행한 허브**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `free-image-converter-photo-tools` | `software` | `photo-video` 허브 (검색형), `hub: true` | 상시 글 6편의 직접 측정(10-15 ~ 10-22, 도구 14개)을 작업별 추천 1개로 묶음: HEIC → JPG XnConvert(24장 33초, Preserve color profile로 색 변화 1.63 → 0.67), WebP → JPG XnConvert·투명 이미지는 ezgif, 100 KB는 1024 px로 줄인 뒤 GIMP(20/20 vs 원래 크기 14/20), 배경 제거 iLoveIMG(무료 원본 크기 유일, 17/20), 메타데이터 ExifCleaner·ExifRemove, 영상 HandBrake 19 MB 비트레이트(17~19 MB, Social 25 MB 프리셋은 20.2~23.9 MB로 Discord 초과). 기본값 함정 7가지 그래픽, 앱 vs 웹(업로드 여부·무료 한도) 표 |
+
+- 주 검색어: `free image converter` (자동완성 Google·Bing·YouTube 3곳 24개, Trends 0.5 · `free photo tools`·`free image tools`·`free photo editing tools` 0.0 · 기준 `remove background` 35.4). 상위 결과는 도구 사이트(StockSnap·Adobe Express·Chrome 확장·Movavi)와 작은 블로그 1개 → 직접 측정한 비교가 빈틈
+- 제목 `Best Free Image Converter and Photo Tools`(41자), 설명 152자. 브리프·사실 확인표 `tests/free-image-converter-photo-tools/factcheck.md`
+- 이번 세션에 다시 연 1차 출처: remove.bg FAQ(12-01 09:00 CET 종료), XnConvert 1.118.0·라이선스, GIMP 3.2.6(현재 안정판), HandBrake 1.11.2, ExifRemove 한도, iLoveIMG 요금(무료에 Remove background 포함·한 번에 3장, Premium $5/$9), ezgif 배경색·1시간 삭제, CloudConvert 하루 10회, Discord 무료 20MB, Gmail 25 MB, Apple(Most Compatible·공유 시 Location 끄기·Finder Convert Image·Preview 내보내기·Adjust Size·배경 제거), Windows Paint 배경 제거. 원문 `source-*.txt`
+- 측정 방식 정정: HEIC·WebP 테스트의 GIMP는 스크립트로 기본 내보내기, HandBrake는 컨테이너에서 창이 뜨지 않아 같은 버전·프리셋으로 창 없이 실행 → 허브 How we tested에 그대로 밝힘 ("모든 앱을 창으로 조작"이라고 쓰지 않음)
+- 쓰지 않은 것: removal.ai·Pixlr 요금(재확인 안 함), Canva 무료 요금제의 배경 제거 포함 여부, 상위 결과의 브라우저 변환기(측정 안 함)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 586174953, 41.9분, 연살구 배경 + 코발트 블루·라임, 정면. 파란 도구 상자에 사진 인화지·붓 2개, 옆에 필름 릴. 작아지는 사진·집게·마술봉은 빠졌지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 5장(작업별 추천 카드·기본값 함정 표 새로 만듦 `charts.py` 라이트 모드, 상시 글 그래픽 3장 재사용: 투명 WebP 결과·100 KB 고양이 확대·세로 사진 결과)
+- 내부 링크: 허브 → 상시 글 6편 전부(절마다) + `best-free-pdf-tools`·`image-to-text-offline-free`. 상시 글 6편 → 허브 (색인된 `compress-image-to-100kb`·`convert-heic-to-jpg-free` 포함)
+- 점검: 저장소 `seo-audit` On-Page 항목(제목 41자·H1 일치, 설명 152자, 첫 100단어에 주 검색어, 첫 소제목 전 176단어, h2 11개, 이미지 alt·파일 이름, em dash 0), `ai-seo` 섹션 첫 문장 답 구조. searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 53자(접미사 포함, 본제목 41자)·description 152자, BlogPosting(발행 2026-10-26T04:10Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개(관련 글 제목 포함), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 5장, og 이미지 1200×630이 대표 이미지에서 만들어짐, 홈 "Start here" 맨 앞, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 6개)
+
+**알게 된 것**
+
+- URL 검사의 `lastCrawlTime` + git 이력으로 "Google이 크롤링한 판에 그 링크가 있었는지"를 계산할 수 있음 (`link_seen.py`). 링크 보강의 효과(노하우 9)는 링크를 Google이 본 글만 따로 봐야 판정이 맞음
+- Google이 크롤링한 홈(10-21)·`merge-pdf-files-free`(10-20)에서 링크를 본 미색인 글 9편도 5~6일째 `URL is unknown` → 링크를 본 것만으로는 발견 상태로 바뀌지 않음(또는 URL 검사에 늦게 반영). 목록 2쪽 이후(`/page/2`~)도 홈에서 링크되지만 미발견
+- 상시 글 측정 기록(`tests/*/facts.md`)에 도구를 창으로 조작했는지 스크립트로 돌렸는지가 남아 있어, 허브처럼 여러 측정을 묶을 때 측정 방식을 정확히 쓸 수 있음
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① 크롤링 통계(설정 > 크롤링 통계)에서 10-22 이후 요청 수와 호스트 상태(robots.txt 가져오기·DNS·서버 연결) 확인: 5일째 새 크롤링이 없음. 호스트 문제가 보이면 알려 주세요 ② URL 검사 → 색인 생성 요청: 허브 3편 `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools`, 이어서 `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` (하루 한도 안에서 허브 먼저) ③ 브라우저에서 `http://tool-proof.com/` → `https://` 리디렉트 확인 (주간 점검 요청, 컨테이너에서 확인 불가)
+- Claude(18시 개선 세션): 주간 점검 3순위 — `microsoft-365-family-storage-2tb`·`iphone-handoff-verizon-cost`의 `thumbnail` 비우고 본문 첫 줄 대표 이미지 (V 판정 중인 `turn-off-ai-in-chrome`(V3)·`spotify-family-qr-code-verification`(V4)은 판정 뒤). 다음 세션마다 `link_seen.py`로 새 크롤링이 왔는지, 왔다면 허브 3편이 발견됐는지 확인
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리 다시 판단
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 44편 (허브 4개: `ai-settings`·`photo-video`·`pdf`·`offline-ai`)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 11·방문 9) + `history` 기록(batch, 회차 2026-10-26T04:19:20Z, DB 문서 96개, 스크래치패드 경로). **`dashboard_data.py` 목표 지표 버그 수정**: README 목표 지표 표 아래 설명 문단(열 형식 안내 안의 `|`)이 표 행으로 읽혀 목표 패널 맨 위에 빈 가짜 행이 있었음 → `|`로 시작하는 줄만 읽게 고침. 이번 회차 목표: 색인율 17/44 (39%) · 28일 노출 709 · 10위 안 18개 · 허브 4/4(달성) · 받는 링크 부족 0편(달성). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-26 · 주간 SEO 점검
 
 점검 시각: 2026-10-26 08:45 KST (정기 실행 "주간 SEO 점검", 첫 회). 기준 `origin/main` 7ca80af. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(10-19 ~ 10-25) `main`에 머지된 글 39편(새 글 25 · 수정 14)·코드. 스킬 `searchfit-seo:technical-seo`·`seo-audit`·`internal-linking`·`ai-visibility`를 불러 체크리스트대로 확인하고, 문서 규칙(FAQPage 없음·키워드 반복 목표 없음·제목 꼬리표 금지·llms.txt 없음)과 다른 스킬 조언(Organization·FAQ 스키마 추가, 외부 리뷰·Reddit 활동 등)은 적용하지 않음. 글·코드는 고치지 않음.

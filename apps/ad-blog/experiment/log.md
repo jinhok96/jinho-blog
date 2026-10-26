@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-26 · 세션 53 (정기 실행, 개선 세션): 기존 글 3편 대표 이미지 + 대시보드 DB에 Google이 본 링크 기록
+
+세션 시각: 2026-10-26 18:16 KST → 개선 세션. 같은 날 12시 개선 세션(세션 52)이 다룬 글(허브·소제목 첫 문장 3곳·Pixel Watch 역링크)과 겹치지 않게 주간 SEO 점검 3순위(대표 이미지)를 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(7e71478)에서 다시 시작.
+
+**지표 (`gsc_report.py`, 2026-09-28 ~ 10-26, 세션 52 이후 바뀐 값만)**
+
+- 노출 703 → **718**, 클릭 10, CTR 1.4%, 평균 순위 22.5 → 22.4
+  - `spotify-family-qr-code-verification` 227 → **236 (15.0 → 14.6위)**, 클릭 0 / `turn-off-ai-in-chrome` 135 (14.2) / `image-to-text-offline-free` 79 → 80 (14.7) / 홈 12 → 13회·클릭 3
+- URL 검사: 색인 17편 그대로, `URL is unknown` 27편 → 색인율 17/44 (39%)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글)
+- `link_seen.py`: 사이트 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (5일 이상 새 크롤링 0). 카테고리 첫 페이지는 `ai-tools`·`software` 10-19 11:38, `news` 10-20 00:46. 미색인 27편 중 Google이 본 링크가 있는 글 9편 그대로
+- 주간 SEO 점검(10-26) 우선순위: 1·2는 세션 52가 처리, 3(대표 이미지) → 이번 세션
+
+**한 일 (개선 세션 2건, 쓴 스킬: `seo-audit` — Crawlability·Indexation 우선순위, Image Optimization 항목(설명적 파일 이름·alt·WebP))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 주간 3 · 대표 이미지 | `microsoft-365-family-storage-2tb`(색인, 28일 노출 18) · `iphone-handoff-verizon-cost`(색인, 15) · `gemini-gems-to-skills`(색인, 31·7.5위) | 앞 2편은 frontmatter `thumbnail`(측정 그래프, 본문에 그대로 있음)을 지우고 본문 첫 줄에 AI 대표 이미지 → 목록 썸네일·og:image가 대표 이미지로. `gemini-gems-to-skills`는 대표 이미지도 `thumbnail`도 없던 글(og:image가 본문 첫 그래픽)에 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님: 세 글 모두 노출 100회 미만이라 판정 불가) |
+| 2 | 7 · DB 구조 개선 | `dashboard_data.py`·`link_seen.py` | 아래 "DB 구조 개선" | - |
+
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): Microsoft 365 — 시드 1357107766, 54.3분, 버터 옐로 배경 + 청록·코럴, 아이소메트릭(구름 뚜껑 그릇에 폴더, 둘레에 말 5개). Gemini — 시드 1873282446, 55.1분, 크림 배경 + 인디고·로즈, 정면 위(보석이 컨베이어에서 톱니·반짝임 카드로 바뀌어 상자로). iPhone Handoff — 1차(시드 1118306820, 53.9분)는 동전에 비트코인 기호 같은 문자가 새겨져 **미사용**, 동전을 빼고 다시 생성한 2차(시드 317850377, 55.6분, 페리윙클 블루 배경 + 마리골드·자두색, 3/4 시점, 전화기 2대 사이 수화기 + 돼지 저금통) 사용. 세 장 모두 장면 설명과 조금 다른 점(말 개수·카드 모양 등)은 writing-guide 기준대로 넘어가고 alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: 세 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD, 본문 첫 이미지가 대표 이미지(`Illustration of …` alt), og 이미지 1200×630이 대표 이미지에서 만들어짐(iPhone Handoff `public/_static/mdx/posts/og/` 직접 열어 확인), `<pre>` 0개. `microsoft-365-family-storage-2tb`·`iphone-handoff-verizon-cost`는 대표 이미지를 뺀 본문 이미지가 2장(규칙 3장 미만) → 이번에는 한 글 한 변경이라 그대로 둠. lint·test(35파일 253개)·build 통과
+- 남은 대표 이미지 미적용: `thumbnail` 글 23편 + 아무것도 없는 글 3편(`check-if-image-is-ai-generated`·`transcribe-audio-offline-free`(V1 판정 중)·`windows-10-esu-extended`)
+
+**DB 구조 개선 (노하우 9 판정용)**
+
+- 문제: 노하우 9(클러스터 링크로 새 글 발견) 판정에는 "Google이 링크를 본 시점 → 색인 시점" 간격이 필요한데, `link_seen.py`는 현재 마지막 크롤링 기준으로만 계산해 링크한 페이지가 다시 크롤링되면 과거에 언제 봤는지가 사라짐. 홈·카테고리 크롤링 시각도 DB에 없었음
+- 바꾼 것: `dashboard_data.py`가 회차마다 (1) 색인 안 된 글에 `seenLinks`(Google이 마지막으로 크롤링한 판의 홈·카테고리 첫 페이지·색인된 글에서 받은 링크 `{page, kind, crawl}`), (2) `firstSeenLinkAt`(그 링크를 처음 본 크롤링 시각. `--prev`로 이어받아 고정하고 색인 뒤에도 유지 → `indexedAt`과 비교), (3) `summary.crawl`(가장 최근 크롤링, 홈·카테고리별 마지막 크롤링, 미색인 글 수·그중 Google이 본 링크가 있는 글 수)을 남김. `link_seen.py`는 같은 계산을 `seen_links()`로 분리하고 출력은 그대로(리팩터 전후 결과 같음 확인). URL 검사 4회 추가(홈·카테고리)
+- 이번 회차 값(시험 실행): `summary.crawl` latest 10-21 08:37, 미색인 27 · Google이 본 링크 9. `firstSeenLinkAt` 10-20 21:59(`merge-pdf-files-free` 본문): `best-free-pdf-tools`·`compress-pdf-free`·`split-pdf-free`·`compress-video-for-discord-email` / 10-21 08:37(홈 목록만): `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`·`pdf-to-jpg-free`·`pdf-to-word-free`·`remove-bg-alternative-free`
+- 화면(`dashboard/index.html`)은 바꾸지 않음 (DB 필드만 추가, 화면은 새 필드를 무시). 문서: README 운영 대시보드 `stats` 문서 설명, traffic-playbook 노하우 9 검증 방법
+
+**보류한 것**
+
+- `iphone-duo-sold-out` 칼럼 후속(개선 세션 5번): Apple Newsroom 10-23 "iPhone Duo arrives at Apple Store locations worldwide"로 매장 판매 시작은 1차 확인(재고 수량 언급 없음). 하지만 새 주문 배송 예정일은 Apple 스토어에서 직접 조회가 안 되고(동적 로딩), 보도끼리 엇갈림(MacRumors 10-19 "일부 사전 주문이 11월로 당겨짐", 다른 보도 12월 중순·1월 22일, 표시 오류설). 제목의 "Until Late January"를 바꿀 근거가 1차 출처로 서지 않아 보류. 이 글도 `thumbnail` 글이라 대표 이미지와 내용 갱신 중 하나만 먼저 해야 함(한 글 한 변경)
+
+**알게 된 것**
+
+- Z-Image-Turbo는 장면에 "plain blank coins"라고 써도 동전 표면에 문자·기호를 새김 → writing-guide 금지 물건(달력·문서·표지판)에 동전을 추가하고, 돈은 동전 없는 돼지 저금통 등으로 표현
+- 4코어에서 1장 54~56분(이번 4장 평균 54.7분)이라 백그라운드 명령 한도(2시간)에 2장까지만 들어감 → 3장 이상은 명령을 나눠 차례로 돌림 (writing-guide 대표 이미지에 기록)
+- 홈은 10-21, 카테고리 첫 페이지는 10-19~20이 마지막 크롤링 → 홈이 여전히 Google이 가장 최근에 본 페이지. 허브 "Start here" 고정이 발견 경로로 작동하려면 홈 재크롤링이 먼저 필요
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수와 호스트 상태 확인: 사이트 전체가 5일 넘게 크롤링되지 않음 (세션 52에서 요청한 것과 같음) ② URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저): `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` ③ 브라우저에서 `http://tool-proof.com/` → `https://` 리디렉트 확인 (주간 점검 요청)
+- Claude(다음 개선 세션): 대표 이미지 계속 — 색인된 글 중 노출 순 `iphone-duo-sold-out`(28회, 후속 갱신과 둘 중 하나 먼저) · `merge-pdf-files-free`(11) · `convert-heic-to-jpg-free`(9) · `compress-image-to-100kb`(8). 한 세션 2장까지. 대시보드 `summary.crawl`·`firstSeenLinkAt`으로 새 크롤링이 왔는지 확인
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리, 대표 이미지
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 44편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 12·방문 10) + `history` 기록(batch, 회차 2026-10-26T13:10:56Z, DB 문서 104개, 스크래치패드 경로). 이번 회차부터 `summary.crawl`·글별 `seenLinks`·`firstSeenLinkAt` 포함. 목표: 색인율 17/44 (39%) · 28일 노출 721 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #277 (CI 통과 후 머지)
+
 ## 2026-10-26 · 세션 52 (정기 실행, 개선 세션): photo-video 허브 + Google이 본 링크 분석 + 소제목 첫 문장
 
 세션 시각: 2026-10-26 12:15 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(이 세션이 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(d36ea70)에서 다시 시작.

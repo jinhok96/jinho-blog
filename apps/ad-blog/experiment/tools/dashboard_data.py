@@ -172,6 +172,8 @@ def goals(current: dict[str, tuple[float, str] | None]) -> dict | None:
         return None
     rows = []
     for line in block.splitlines():
+        if not line.lstrip().startswith('|'):  # 표 설명 문단 안의 `|`(열 형식 안내)를 행으로 읽지 않음
+            continue
         cells = [c.strip() for c in line.strip().strip('|').split('|')]
         if len(cells) != 4 or cells[0] == '지표' or re.fullmatch(r':?-{3,}:?', cells[0]):
             continue

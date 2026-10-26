@@ -26,10 +26,10 @@
 - Galaxy AI 대신 고른 이유: 상위 결과가 Tom's Guide·Android Central·AOL·Yahoo·Android Authority 대형 매체이고 기기가 없어 One UI 9 메뉴를 확인할 수 없음. Gemini 활동은 상위 결과가 공식 도움말 + 작은 블로그(redact.dev 2026-09-21, techlicious 2025-06, reclaimthenet) + PCWorld. redact.dev가 72시간·Memory·3년·이름 변경까지 다루지만 Connected Apps·skills·Tasks·최근 채팅 목록·Gem 채팅·피드백 24시간·문서 충돌·회사 계정이 빠짐. techlicious는 "끄면 사람 검토 안 함"이라고 씀(Google은 꺼도 보호 목적 사람 검토가 있다고 함)
 - 주 검색어: `turn off gemini apps activity`. 제목 `How to Turn Off Gemini Apps Activity and What Changes`(53자), 설명 157자
 - 1차 출처: 위 13개 문서 + blog.google 2025-08-13 이름 변경 글. 원문 `tests/turn-off-gemini-apps-activity/source-*.txt`(2026-10-26 15:34~16:00 UTC). Google 계정이 없어 Gemini 활동 화면은 직접 열지 못함(본문 How we checked에 밝힘). 18세 미만 기본값은 공식 문장이 없어 쓰지 않음
-- 이미지: HERO_NOTE + 본문 3장(도움말 "Turn off Keep Activity" 화면 캡처 + accent 상자, 켜짐 vs 꺼짐 기능 표, 보관 기간 4가지 카드, `charts.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1980172838, 52.4분, 세이지 그린 배경 + 네이비·라즈베리, 눈높이 정면. 네이비 트레이에 종이 카드 묶음·분홍 다이얼 스위치, 위에 빈 말풍선 2개와 반짝임, 옆에 분홍 자물쇠. 토글 대신 다이얼, 말풍선 모양 카드 대신 회색 줄 종이(글자 아님)지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 3장(도움말 "Turn off Keep Activity" 화면 캡처 + accent 상자, 켜짐 vs 꺼짐 기능 표, 보관 기간 4가지 카드, `charts.py` 라이트 모드)
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `gemini-gems-to-skills`·`turn-off-gemini-in-gmail`, 칼럼 `gemini-connected-apps`·`gemini-android-auto-personal-intelligence` (5개). 역링크: `gemini-gems-to-skills`(색인됨) skills 요구 조건 목록 뒤 문단, 허브 "How to stop the Gemini app from using your other apps" 절, 칼럼 `gemini-connected-apps` Keep Activity 줄 각 1문장 (앵커 3가지, `updatedAt` 변경 없음, V 기록 대상 아님)
 - 점검: 저장소 `seo-audit` 스킬 On-Page 항목(제목 53자·H1 일치·주 검색어 앞, 설명 157자에 주 검색어, 첫 100단어에 주 검색어, h2 11개·FAQ h3 2개, 이미지 alt·파일 이름·WebP, 설명형 앵커, AI 문체 단어·em dash 0)과 `ai-seo` 기준 소제목 첫 문장(떼어 읽어도 답). searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_NOTE
+- 빌드 HTML 확인: title 65자(접미사 포함, 본제목 53자)·description 157자, BlogPosting(발행 2026-10-26T16:02Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개(관련 글 제목 포함)·h3 5개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 3장, og 이미지 1200×630이 대표 이미지에서 만들어짐, sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
 
 **알게 된 것**
 

@@ -1,0 +1,90 @@
+# 가져온 시각: 2026-10-27T09:4xZ (curl, HTML 태그 제거)
+# 원본: https://support.microsoft.com/en-us/onedrive/changes-to-microsoft-365-storage
+Changes to Microsoft 365 storage
+Applies To
+Microsoft 365 Family   Microsoft 365 Premium   Microsoft 365 Pro
+Understanding Microsoft 365 shared storage
+Microsoft 365 subscriptions now use shared cloud storage instead of individual user storage quotas.
+Microsoft 365 Family and Premium subscriptions include 2 TB of shared cloud storage, and Microsoft 365 Pro includes 5 TB. The primary subscriber and up to five additional members draw from the same shared storage pool. Storage add-ons purchased by subscription members automatically add to the shared pool. Eligible family members' free storage grants also contribute to the shared pool.
+While storage quotas are shared, files remain private. Each member can access only their own files unless they explicitly share content with others. Shared storage changes how storage is allocated across the subscription, not who can see your files.
+For existing Microsoft 365 Family and Premium subscribers, this change generally takes effect after the first subscription renewal on or after May 2, 2027, unless an eligible plan change occurs earlier.
+This approach provides more flexibility by making storage available to the people who need it most.
+How storage works by subscription
+The following amounts apply after a subscription moves to shared storage. Microsoft 365 Basic and Personal storage remains dedicated to the account holder.
+Microsoft 365 subscription
+Included cloud storage
+Who can use the storage
+Basic
+100 GB
+Account holder only
+Personal
+1 TB
+Account holder only
+Family
+2 TB shared
+Primary subscriber and up to five additional members
+Premium
+2 TB shared
+Primary subscriber and up to five additional members
+Pro
+5 TB shared
+Primary subscriber and up to five additional members
+For Microsoft 365 Family, Premium, and Pro, storage is shared rather than assigned individually. Each person's files, photos, and documents remain private by default, even when using shared storage. Additional storage purchases add to the shared storage pool.
+Common questions
+What are the benefits of shared storage?
+Shared storage provides greater flexibility for families. With shared storage:
+Storage is available where it's needed most.
+Unused storage benefits all members.
+Members are less likely to encounter individual storage limits.
+Additional storage purchases help everyone on the subscription.
+How much storage is included?
+Microsoft 365 Family and Premium subscriptions include 2 TB of shared storage, while Microsoft 365 Pro includes 5 TB. The primary subscriber and up to five additional members (six members total) can use the storage. Storage comes from a single shared pool rather than separate per-person allocations. Existing subscribers in eligible markets might also qualify for transitional bonus storage. For more information, see  Will I receive any additional storage during the transition to shared storage?
+Will I receive any additional storage during the transition to shared storage?
+Existing Microsoft 365 Family and Premium customers who meet eligibility requirements in supported markets might receive bonus storage when their subscription renews after shared storage rolls out.
+For existing Microsoft 365 Family and Premium subscribers, the transition to shared storage generally takes effect after the first subscription renewal that occurs on or after May 2, 2027. Customers receive communications with more details before the change is applied to their subscription.
+If you switch to another eligible Microsoft 365 subscription before your scheduled transition date, such as moving from Microsoft 365 Family to Microsoft 365 Premium, the shared storage model might be applied as part of that subscription change and could take effect before your first renewal after May 2, 2027.
+You don't pay extra for this bonus storage. It's added to the storage included with your subscription.
+What happens if I upgrade or downgrade my subscription before May 2, 2027?
+If you're an existing subscriber and upgrade before May 2, 2027, your subscription moves to the shared storage model. For example, if you upgrade from Microsoft 365 Family to Microsoft 365 Premium before May 2, 2027, your new shared storage allocation is 2 TB.
+If you downgrade before May 2, 2027, the downgrade alone doesn't move your subscription to the shared storage model. Your subscription continues under its current storage model until it renews on or after May 2, 2027. It then moves to the shared storage model for your plan. You'll receive a notification before this change.
+When does this change go into effect for existing subscribers?
+New and upgraded subscriptions include shared storage starting October 8, 2026. If you already have a subscription before October 8, 2026, your plan moves to shared storage when it renews on or after May 2, 2027. Nothing changes before then, and you'll receive an email before your renewal.
+How do I manage my storage?
+You can view and manage your storage at any time in your Microsoft account. The storage dashboard shows how much storage you're using and how much is available.
+Sign in
+How can I see how much storage my family/group is using?
+After your account moves to shared storage, you’ll be able to see how much storage you and each member of your subscription group are using by signing in to  onedrive.com  or your  Microsoft account .
+Sign in
+You will be able to see a detailed breakdown of your own storage usage, but for other members, you'll only see the total storage used.  Their storage details and individual files remain private and are not visible to you .
+Note
+Before your subscription moves to shared storage, you’ll need to check with the other members of your subscription group to understand how much storage they are using.
+If your group is over its shared storage limit, you’ll see alerts and guidance to help you manage your group’s storage or purchase additional storage.
+What happens if my family uses more than the storage quota?
+You don't immediately lose access to your files. If your subscription approaches the 2 TB limit, you'll receive notifications so that you can plan ahead. You can free up space, purchase additional storage, upgrade your subscription, or take other steps to avoid disruption. If your subscription exceeds the limit, you can continue to access your files for up to one year while you manage your storage.
+Can I buy more storage?
+Yes. You can add storage to your subscription, up to a total of 10 TB, to give everyone  more OneDrive storage .
+What if I already use a lot of storage?
+If you use a large amount of storage, you'll receive advance notice and transition support. Additional storage options might be available depending on your eligibility.
+Is this change a reduction in storage?
+Total storage varies by plan, but the shared storage model gives you more flexibility in how you use storage across the subscription. Instead of dividing storage into fixed per-person allocations, those who need it most can use the available storage. For example, if the subscription owner doesn't share the plan, they can use the full shared storage allotment. Similarly, if one member needs significantly more storage than others, they can use more of the shared pool without being limited by an individual allocation.
+How do I cancel my subscription?
+You can cancel your Microsoft 365 subscription at any time by signing in to your Microsoft account and managing your subscription settings.
+To cancel your subscription:
+Go to  account.microsoft.com/services/microsoft365 . If prompted, sign in with the Microsoft account that you used to purchase your Microsoft 365 subscription.
+Sign in
+Select  Cancel subscription . The option might be labeled  Upgrade or Cancel .
+Note
+If you don't see an option to cancel but see a  Turn on recurring billing  link, your subscription is already set to expire on the date shown. You won't be charged after this date, and you can continue to use the subscription until it expires.
+See the  Please review  section at the top of the cancel page.
+Tip
+This section might include less expensive subscription options.
+Review the additional information on the page. At the bottom, select  I want to keep my benefits  if you decide to keep your subscription, or  I don't want my subscription  if you choose to cancel.
+Follow the on-screen instructions to confirm your choice.
+Note
+If you cancel, you'll continue to have access to your subscription benefits until the end of your current billing period unless local laws or your purchase terms provide otherwise.
+See also
+What is Microsoft cloud storage?
+Need more help?
+Contact support
+For technical support, go to  Contact Microsoft Support , enter your problem, and select  Get Help . If you still need help, select  Contact Support  to find the best support option.
+For presales support or help with a purchase,  contact Sales support .

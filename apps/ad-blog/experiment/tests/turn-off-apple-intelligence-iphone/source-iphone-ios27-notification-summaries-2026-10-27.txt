@@ -1,0 +1,97 @@
+# 가져온 시각: 2026-10-27T03:30:06.399Z
+# 원본: https://support.apple.com/guide/iphone/summarize-notifications-reduce-interruptions-iph1fbe7d2b9/ios
+Summarize notifications and reduce interruptions with Apple Intelligence on iPhone - Apple Support
+https://support.apple.com/guide/iphone/summarize-notifications-reduce-interruptions-iph1fbe7d2b9/ios
+
+Select version:
+iOS 27
+iOS 26
+iOS 18
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Summarize notifications and reduce interruptions with Apple Intelligence on iPhone
+
+With its deep understanding of language, Apple Intelligence can help condense the information most important to you. Notifications are summarized so you can scan them for key details, such as when a group chat is particularly active. Your iPhone can also determine which notifications have priority over others. And the Reduce Interruptions Focus shows you only the notifications that might need immediate attention, like a text about an early pickup from daycare.
+
+Note: Apple Intelligence on iOS 27 or later is available on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later. Apple Intelligence is not available in all languages or regions. Usage limits may apply.*
+
+Customize notification summaries
+
+Your iPhone can summarize long or stacked notifications, making them easier to understand at a glance.
+
+Go to the Settings app  on your iPhone.
+
+Tap Notifications.
+
+Tap Summarize Notifications, turn on Summarize Notifications, then tap Choose Notifications to Summarize.
+
+Tap the notifications you want to summarize, then tap Summarize Selected Notifications.
+
+To change which notifications you want to summarize, tap the button next to an app.
+
+Turn notification summaries on or off
+
+Go to the Settings app  on your iPhone.
+
+Tap Notifications.
+
+Tap Summarize Notifications, then turn Summarize Notifications on or off.
+
+Turn priority notifications on
+
+Your iPhone can determine which notifications have priority over others. Priority notifications appear at the top of the stack, so you can catch up on what you may have missed.
+
+Go to the Settings app  on your iPhone.
+
+Tap Notifications.
+
+Tap Prioritize Notifications, then turn Prioritize Notifications on.
+
+To turn off priority notifications, turn Prioritize Notifications off.
+
+To change which notifications you want to prioritize, tap the button next to an app.
+
+You can also change settings when you receive a priority notification on the Lock Screen. When a priority notification appears, do one of the following:
+
+Turn off Priority Notifications for a specific app: Swipe left, tap Options, then tap Turn Off All [app] Notifications.
+
+Turn off all Priority Notifications: Swipe left, tap Options, then tap Turn Off Prioritization.
+
+Use the Reduce Interruptions Focus
+
+The Reduce Interruptions Focus understands the content of your notifications and shows you the most important ones, but silences notifications that are less important.
+
+You can customize a Reduced Interruptions Focus.
+
+Go to the Settings app  on your iPhone.
+
+Tap Focus.
+
+Tap  at the top right, then tap Reduce Interruptions.
+
+Tap Customize Focus, then tap People or Apps.
+
+Choose the people and apps to allow notifications from.
+
+Note: When you turn on Intelligent Breakthrough & Silencing for any Focus, any notifications specifically allowed or silenced will always be allowed or silenced.
+
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English, French, Japanese, Korean, Portuguese, and Spanish to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Siri AI is not available for users under 13. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at support.apple.com/148587.
+
+See also
+Change notification settings on iPhone
+Turn on or schedule a Focus on iPhone
+Previous
+Turn on ChatGPT
+Next
+Apple Intelligence and privacy
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

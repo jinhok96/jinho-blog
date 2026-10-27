@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-27 · 세션 56 (정기 실행, 개선 세션): Apple Intelligence 글 iOS 27.2 갱신 + 기존 글 2편 대표 이미지
+
+세션 시각: 2026-10-27 12:15 KST → 개선 세션. 같은 날 앞 개선 세션 없음(이 세션이 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(c009e27)에서 다시 시작, `git fetch --unshallow`로 전체 이력을 받은 뒤 `link_seen.py` 실행.
+
+**지표 (`gsc_report.py`, 2026-09-29 ~ 10-27, 세션 55 이후 바뀐 값만)**
+
+- 노출 730 → **752**, 클릭 10 → **12**, CTR 1.4% → 1.6%, 평균 순위 22.3 → 22.5
+  - `spotify-family-qr-code-verification` 239 → 242 (14.5 → 14.9), 클릭 0 / `turn-off-ai-in-chrome` 135 → 138 (14.2 → 14.3), **클릭 3** / `image-to-text-offline-free` 85 → 88 (15.0 → 14.7) / `iphone-duo-sold-out` 29 → 30 (8.8 → 8.6), **클릭 2**
+- URL 검사: 색인 17편 그대로, `URL is unknown` 29편 → 색인율 17/46 (37%)
+- `link_seen.py`(전체 이력): 사이트 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (6일 넘게 새 크롤링 0). 미색인 29편 중 Google이 본 링크가 있는 글 10편 그대로. sitemap 마지막 다운로드도 10-22 23:03(제출 시각) 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글)
+- 주간 SEO 점검(10-26) 우선순위 3(대표 이미지) 이어서 처리
+
+**한 일 (개선 세션 3건, 쓴 스킬: `copy-editing` — references/content-refresh.md Accuracy·Freshness pass, AI-Tell Check / `seo-audit` — Crawlability·Indexation, Image Optimization, rankings-push 8~20위 점검)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 5 · 칼럼 후속(세션 55 다음 할 일) | `turn-off-apple-intelligence-iphone`(미색인) | iOS 27.2 뒤 바뀐 Apple 문서 반영: Call Context cards 경로 **Settings > Apps > Phone > Apple Intelligence & Siri > Show When Calling → Settings > Siri > Excluded Apps**(10-23판과 비교해 밝힘), Siri AI 언어 6개·13세 미만·중국 본토 불가, iPad mini "(A17 Pro or later)", FAQ "Apple Intelligence 이미지 확인" 답을 "later this year" → iOS 27.2부터 SynthID 워터마크 + Apple이 안내하는 SynthID Detector로, How we checked에 10-27 재확인 문단. `updatedAt` 2026-10-27. 제목·설명 그대로 | 정확성 갱신 (V 대상 아님: 미색인이라 판정 불가) |
+| 2 | 주간 3 · 대표 이미지 | `iphone-duo-sold-out`(색인, 28일 노출 30·8.6위·클릭 2) | `thumbnail`(결제 방식별 비용 그래프, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님: 노출 100회 미만) |
+| 3 | 주간 3 · 대표 이미지 | `merge-pdf-files-free`(색인, 14·82.9위) | 같은 방식 | 규칙 적용 (V 대상 아님) |
+
+- Apple 문서 대조: 세션 43이 저장한 10-23판 `source-*.txt` 12개와 이번 세션 Chromium(`render.cjs`)으로 받은 10-27판(`source-*-2026-10-27.txt`)을 공백 정규화 후 diff. 바뀐 것 7가지(R1~R7)와 그대로인 것은 `tests/turn-off-apple-intelligence-iphone/factcheck.md` "iOS 27.2 갱신". iPhone 설명서 목차(990개 링크)에서 SynthID 안내가 있는 쪽을 찾음: Clean Up·Extend·Reframe, Image Playground 쪽에 "In iOS 27.2 or later, most images created or edited with Apple Intelligence tools include a SynthID hidden watermark … You can use the SynthID Detector"(링크 synthid.com, 200 확인). Mac 문서에서는 "Voicemail suggestions in Phone" 행이 빠짐(글의 Mac 항목은 음성 사서함을 다루지 않아 변경 없음)
+- 대표 이미지 `iphone-duo-sold-out`: Z-Image-Turbo 시드 1123967122, 50.4분, 라일락 배경 + 민트·탠저린, 아이소메트릭. 받침대 위 휴대폰 + 리본 상자 + 모래시계 + 돼지 저금통(반쯤 펼친 폴더블 대신 일반 휴대폰, 골판지 대신 선물 상자지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 대표 이미지를 뺀 본문 이미지는 2장(규칙 3장 미만) → 한 글 한 변경이라 그대로
+- 대표 이미지 `merge-pdf-files-free`: 시드 1056454117, 49.0분, 블러시 핑크 배경 + 코발트 블루·머스터드 옐로, 위에서 본 3/4 시점. 휜 파랑·노랑 종이 사이에 클립·책갈피 리본을 단 빈 종이 묶음 + 사슬 고리(종이 세 장 대신 두 장이지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 본문 이미지 8장 그대로
+- 빌드 HTML 확인: 세 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD(`turn-off-apple-intelligence-iphone` dateModified 2026-10-27), `<pre>` 0개, 설명 152·159·160자. `iphone-duo-sold-out`·`merge-pdf-files-free`는 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·test(35파일 253개)·build 통과
+- 남은 대표 이미지 미적용: `thumbnail` 글 21편 + 아무것도 없는 글 3편(`check-if-image-is-ai-generated`·`transcribe-audio-offline-free`(V1 판정 중)·`windows-10-esu-extended`)
+
+**문제 찾기 (`seo-audit` Crawlability, 6일 넘은 크롤링 정체)**
+
+- 컨테이너에서 Googlebot 스마트폰 사용자 에이전트로 홈·robots.txt·sitemap·새 글 모두 HTTP/2 200, `x-robots-tag` 없음, `x-vercel-cache: HIT`(Vercel 방화벽 차단·챌린지 표시 없음), HSTS. robots `Allow: /` + sitemap 위치. sitemap `<loc>` 53개 = 글 46 + 고정 3 + 홈 1 + 카테고리 3. DNS A 216.150.1.129·216.150.16.1(Vercel) → 컨테이너에서 보이는 원인 없음 (세션 52와 같은 결론). Google 쪽 요청 수·호스트 상태는 Search Console 크롤링 통계로만 확인 가능
+- 8~20위 검색어(페이지 × 검색어, 28일): 9쌍뿐이고 최대 노출 4회(Spotify 칼럼 중국어 검색어) → 소제목·FAQ 보강 대상 없음
+
+**알게 된 것**
+
+- Apple 설명서는 OS 마이너 업데이트(27.2) 날 같은 URL의 내용이 바뀜: Call Context 경로처럼 메뉴 위치가 바뀌는 변경도 공지 없이 들어감. 앞 세션이 저장한 원문(`tests/*/source-*.txt`)과 diff하면 바뀐 줄만 바로 찾을 수 있어, Apple 글은 iOS 업데이트 다음 개선 세션에서 같은 방법으로 재확인하는 것이 효율적
+- 설명서 목차를 `render.cjs --links`로 받으면(이번 990개) 특정 기능(SynthID) 안내가 어느 쪽에 있는지 찾을 수 있음
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수와 호스트 상태 확인 (6일 넘게 새 크롤링 0, sitemap도 10-22 이후 다시 받지 않음. 세션 52~55와 같은 요청) ② Sitemaps에서 `sitemap.xml` 다시 제출 ③ URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저): `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/ios-27-2-siri-ai-memory` · `https://tool-proof.com/posts/compress-video-for-discord-email`
+- Claude(18시 개선 세션): 대표 이미지 계속 (`compress-image-to-100kb`(10·8.7위) · `convert-heic-to-jpg-free`(9)), `link_seen.py`로 새 크롤링 확인. `iphone-duo-sold-out`·`microsoft-365-family-storage-2tb`·`iphone-handoff-verizon-cost`는 대표 이미지를 뺀 본문 이미지 2장 → 다른 변경이 없을 때 그래픽 1장 추가 검토
+- Claude: iOS·macOS 마이너 업데이트 다음 개선 세션에서 Apple 글(`turn-off-apple-intelligence-iphone`·`ios-27-2-siri-ai-memory`·`apple-mail-exchange-not-syncing`) 원문 diff 재확인
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 46편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 15·방문 13) + `history` 기록(batch, 회차 2026-10-27T04:20:27Z, DB 문서 128개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 29편 중 Google이 본 링크 10편. 목표: 색인율 17/46 (37%) · 28일 노출 753 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-27 · 세션 55 (정기 실행, 뉴스 세션 · 화제): iOS 27.2 Siri AI 기억·개인 데이터 확대
 
 세션 시각: 2026-10-27 06:15 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(88f665b)에서 다시 시작.

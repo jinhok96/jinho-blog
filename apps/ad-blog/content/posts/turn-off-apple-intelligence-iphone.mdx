@@ -3,6 +3,7 @@ title: How to Turn Off Apple Intelligence on iPhone
 description: iOS 27 removed the single Apple Intelligence switch. See every feature you can still turn off on iPhone, what has no switch, and the iPad and Mac paths.
 category: ai-tools
 createdAt: 2026-10-23T16:14:00Z
+updatedAt: 2026-10-27
 tags:
   - Apple Intelligence
   - iPhone
@@ -47,7 +48,7 @@ Turning off Siri, then turning it back on with **Siri Classic**, gives you the o
 
 If you'd rather not have Siri at all, stop after step 2.
 
-Siri AI is still labeled a beta. Apple says it is available in English to start and won't initially be available in the European Union on iOS, so if you're in the EU or use Siri in another language, you may only have Siri Classic already. iOS 27.2, released October 26, 2026, added French, Japanese, Korean, Portuguese and Spanish and let Siri AI recall your past conversations; our [breakdown of iOS 27.2's Siri changes](/posts/ios-27-2-siri-ai-memory) covers the new Excluded Apps setting that limits what it reads.
+Siri AI is still labeled a beta. Apple's guide, updated for iOS 27.2 on October 26, 2026, says it works in English, French, Japanese, Korean, Portuguese and Spanish, isn't available to anyone under 13, won't initially be available in the European Union on iOS and isn't available in mainland China. If any of those applies to you, or your Siri uses another language, you may only have Siri Classic already. iOS 27.2 also let Siri AI recall your past conversations; our [breakdown of iOS 27.2's Siri changes](/posts/ios-27-2-siri-ai-memory) covers the new Excluded Apps setting that limits what it reads.
 
 ![Menu paths for each Apple Intelligence switch on an iPhone with iOS 27: Siri AI under Siri, Turn Off Siri, Turn on Siri, Siri Classic; message and email summaries under Apps, Messages or Mail; notification summaries and priority notifications under Notifications; Smart Replies under Apps, Mail; voicemail suggestions under Apps, Phone; and ChatGPT under Siri, ChatGPT](./images/turn-off-apple-intelligence-iphone/iphone-ios-27-apple-intelligence-menu-paths.webp)
 
@@ -77,7 +78,7 @@ While you're in the Mail settings, you can also turn off **Personalize Smart Rep
 Three smaller features have their own switches in apps you might not think to check, according to Apple's iOS 27 guide.
 
 - **Voicemail suggestions:** **Settings > Apps > Phone**, then turn off **Suggestions in Voicemail**.
-- **Call Context cards:** **Settings > Apps > Phone > Apple Intelligence & Siri**, then tap **Show When Calling** to change it. These are the cards that show related information during a call.
+- **Call Context cards:** **Settings > Siri > Excluded Apps**, then tap **Add Apps** and choose the apps to keep out. These cards bring up information from your other apps during a call, such as a confirmation code or reservation number. On October 23, Apple's guide pointed to **Settings > Apps > Phone > Apple Intelligence & Siri > Show When Calling** for them; since iOS 27.2 it points to Excluded Apps, which keeps the apps you add out of Siri, Search and suggestions as a whole.
 - **Journal writing prompts:** **Settings > Apps > Journal**, then turn off **Get Writing Prompts**.
 
 ## How to turn off ChatGPT in Siri
@@ -123,7 +124,7 @@ If you choose off in step 2, the report stops recording. Apple says data process
 
 iPad and Mac follow the same feature-by-feature approach as iPhone, according to Apple's iPadOS 27 and macOS 27 guides.
 
-- **iPad (iPadOS 27):** the [iPad guide](https://support.apple.com/guide/ipad/turn-restrict-access-apple-intelligence-ipad3b7f1217/ipados) uses the same **Settings** paths as iPhone, from **Settings > Siri** to **Settings > Apps > Mail**. It covers the iPad mini (A17 Pro) and iPad models with M1 or later.
+- **iPad (iPadOS 27):** the [iPad guide](https://support.apple.com/guide/ipad/turn-restrict-access-apple-intelligence-ipad3b7f1217/ipados) uses the same **Settings** paths as iPhone, from **Settings > Siri** to **Settings > Apps > Mail**. It covers the iPad mini (A17 Pro or later) and iPad models with M1 or later.
 - **Mac (macOS 27):** the [Mac guide](https://support.apple.com/guide/mac-help/turn-restrict-access-apple-intelligence-mchlb2e44f94/mac) turns off Siri AI and notification summaries in **System Settings**, but message and email summaries and Smart Replies are inside each app: **Messages > Settings**, **Mail > Settings > Viewing** and **Mail > Settings > Composing**. The Mac list doesn't include priority notifications.
 
 ![Table of where each Apple Intelligence switch is on iPhone, iPad and Mac: iPhone and iPad use the same Settings paths, such as Settings, Siri and Settings, Apps, Mail; on a Mac, Siri AI and notification summaries are in System Settings, while message and email summaries and Smart Replies are in the Messages and Mail settings](./images/turn-off-apple-intelligence-iphone/apple-intelligence-iphone-ipad-mac.webp)
@@ -131,6 +132,8 @@ iPad and Mac follow the same feature-by-feature approach as iPhone, according to
 ## How we checked
 
 On October 23, 2026, we read Apple's iPhone User Guide for iOS 27 pages on turning off Apple Intelligence features, notification summaries, ChatGPT, Screen Time and Apple Intelligence privacy, the iPhone User Guide for iOS 26 pages on Apple Intelligence and Screen Time, the iPadOS 27 and macOS 27 guides on turning off Apple Intelligence, and Apple Support's [Apple Intelligence overview](https://support.apple.com/en-us/121115). We didn't have an iPhone, iPad or Mac running the 27 releases, so every menu name comes from Apple's instructions, not our own screens.
+
+On October 27, 2026, the day after iOS 27.2 came out, we read the same pages again, plus Apple's [iOS 27 release notes](https://support.apple.com/en-us/149076) and its iPhone guide pages on [Excluded Apps](https://support.apple.com/guide/iphone/change-siri-settings-iphc28624b81abc/ios) and [Clean Up, Extend and Reframe](https://support.apple.com/guide/iphone/clean-up-extend-and-reframe-photos-xy0grrlxue5w/ios). The changes were the Call Context cards entry, the Siri AI languages and age limit, the iPad mini models and the new SynthID watermark on Apple Intelligence images. Every other path in this guide was the same.
 
 ## Which settings should you turn off?
 
@@ -147,4 +150,4 @@ No. The $250 million settlement over Siri features Apple advertised but didn't s
 
 ### How do I tell if an image was made with Apple Intelligence?
 
-There's no built-in checker on iPhone yet. Apple says support for the SynthID watermark, which lets you identify images generated or edited with AI, will arrive "in a software update later this year" ([Apple Newsroom](https://www.apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/)). Our guide on [how to check if an image is AI-generated](/posts/check-if-image-is-ai-generated) covers the free tools you can use now.
+Upload it to Google's [SynthID Detector](https://synthid.com/). Since iOS 27.2, most images created or edited with Apple Intelligence tools, such as Image Playground and Clean Up in Photos, carry a hidden SynthID watermark, and Apple's [iPhone guide](https://support.apple.com/guide/iphone/create-original-images-with-image-playground-iph0063238b5/ios) points you to SynthID Detector to check for it rather than to a checker on the iPhone. Our guide on [how to check if an image is AI-generated](/posts/check-if-image-is-ai-generated) walks through SynthID Detector and the other free tools, and what a negative result does and doesn't prove.

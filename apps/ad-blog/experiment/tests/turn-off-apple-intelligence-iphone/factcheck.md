@@ -40,3 +40,18 @@
 | 17 | 버전 확인 Settings > General > About | support.apple.com/guide/iphone/iphone-models-compatible-with-ios-27-iphe3fa5df43/ios | 원문 대조 |
 | 18 | SynthID 지원 "will be available in a software update later this year" | apple.com/newsroom/2026/10/open-up-to-new-possibilities-with-iphone-duo/ | curl 본문 대조 (09월 보도자료에는 "upcoming support"만) |
 | 19 | Siri 합의금: $250M, 2024-06 ~ 2025-03 미국 구매, 마감 12-21 | 우리 글 `apple-siri-settlement-claim` (해당 글 factcheck) | FAQ에서 그 글로 링크, 새 사실 추가 없음 |
+
+## iOS 27.2 갱신 (2026-10-27 세션 56, 개선 세션)
+
+iOS 27.2(2026-10-26) 뒤 Apple 문서가 바뀌어 같은 글을 갱신(`updatedAt` 2026-10-27). 세션 43이 저장한 10-23판 `source-*.txt`와 이번 세션에 Chromium(`render.cjs`)으로 다시 받은 `source-*-2026-10-27.txt`(2026-10-27 03:2x UTC)를 공백 정규화 후 diff로 대조. 쓴 스킬: `copy-editing` (references/content-refresh.md의 Accuracy pass·Freshness pass, AI-Tell Check)
+
+| # | 바뀐 사실 (10-23판 → 10-27판) | 출처 | 글에 반영한 곳 |
+| --- | --- | --- | --- |
+| R1 | Call Context cards 행: "Tap Apps, tap Phone, tap Apple Intelligence & Siri, then tap Show When Calling." → "See Exclude apps from Siri, Search, and suggestions." (iPhone·iPad·Mac 모두) | iph3fed3f2c3, ipad3b7f1217, mchlb2e44f94 | "How to turn off other Apple Intelligence suggestions" Call Context 줄 |
+| R2 | Excluded Apps 경로: Settings > Siri > Excluded Apps > Add Apps, "Excluded apps aren't available to Siri, Search, or suggestions. All apps are included by default" | iphc28624b81abc (`source-iphone-ios27-change-siri-settings-2026-10-27.txt`) | 같은 줄 |
+| R3 | Call Context 설명: "understands when you're speaking to certain businesses and proactively surfaces relevant information from across your apps, like a confirmation code or a reservation number" | 149076 (iOS 27 섹션) | 같은 줄 |
+| R4 | Siri AI 언어 "English to start" → "English, French, Japanese, Korean, Portuguese, and Spanish to start", 추가 문장 "Apple Intelligence and Siri AI are not available in China mainland", "Siri AI is not available for users under 13" | iph3fed3f2c3 각주·Screen Time·ChatGPT 문서 각주, 149076 iOS 27.2 "Siri AI is not available in the EU or mainland China" | Siri AI 절 마지막 문단. 13세 미만 제한이 27.2에서 새로 생긴 것인지 문서에 새로 적힌 것인지는 알 수 없어 "Apple's guide, updated for iOS 27.2 … says"로 씀 |
+| R5 | iPad mini "(A17 Pro)" → "(A17 Pro or later)" (10-26 새 iPad mini 출시와 같은 날) | ipad3b7f1217 | iPad·Mac 절 |
+| R6 | SynthID: "In iOS 27.2 or later, most images created or edited with Apple Intelligence tools include a SynthID hidden watermark … You can use the SynthID Detector to check for this watermark." (SynthID Detector 링크 → synthid.com, 200 확인) / 149076 iOS 27.2 "Support for SynthID watermarking … in Photos and Image Playground" | Clean Up·Extend·Reframe(xy0grrlxue5w), Image Playground(iph0063238b5), 149076 | FAQ "How do I tell if an image was made with Apple Intelligence?" (이전 답 "later this year" 교체) |
+| R7 | Mac 목록에서 "Voicemail suggestions in Phone" 행이 빠짐 | mchlb2e44f94 | 글의 Mac 항목은 음성 사서함을 다루지 않아 변경 없음 |
+| - | 그대로인 것: Siri Classic 단계, 요약·우선 알림·Smart Replies·음성 사서함·Journal 경로, ChatGPT 끄기·개인정보, Screen Time Siri 선택지, Apple Intelligence Report, 121115의 "integrated deeply"·"automatically available"·저장 공간 8GB/14GB | 위 문서들 | 변경 없음 |

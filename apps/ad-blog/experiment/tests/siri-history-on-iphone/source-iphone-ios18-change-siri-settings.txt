@@ -1,0 +1,106 @@
+# 가져온 시각: 2026-10-27T16:01:09.062Z
+# 원본: https://support.apple.com/guide/iphone/change-siri-settings-iphc28624b81abc/18.0/ios/18.0
+Change Siri settings on iPhone - Apple Support
+https://support.apple.com/guide/iphone/change-siri-settings-iphc28624b81abc/18.0/ios/18.0
+
+Select version:
+iOS 27
+iOS 26
+iOS 18
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Change Siri settings on iPhone
+
+You can change the voice Siri uses, prevent access to Siri when your device is locked, retrain Siri with your voice, and more.
+
+For information about how to set up and use Siri, see Use Siri. To change settings for Siri Suggestions, see Siri Suggestions.
+
+Change when Siri responds
+
+You can customize when Siri responds to your voice. You can also choose which language Siri responds to.
+
+Go to Settings  > Siri (or Apple Intelligence & Siri).
+
+Do any of the following:
+
+Prevent Siri from responding to the voice request “Hey Siri”: Tap Talk to Siri, then tap Off.
+
+Prevent access to Siri when iPhone is locked: Turn off Allow Siri When Locked.
+
+You can also make requests by typing. See Type instead of speaking to Siri.
+
+Change the voice for Siri
+
+You can change the Siri voice (not available for all languages).
+
+Go to Settings  > Siri (or Apple Intelligence & Siri).
+
+Tap Voice, then choose a different variety or voice.
+
+Change how Siri responds
+
+Siri can respond out loud or silently (with text onscreen). You can also see your request onscreen.
+
+Go to Settings  > Siri (or Apple Intelligence & Siri).
+
+Do any of the following:
+
+Change when Siri provides voice responses: Tap Siri Responses, then choose an option below Spoken Responses.
+
+Always see the response from Siri onscreen: Tap Siri Responses, then turn on Always Show Siri Captions.
+
+See your request onscreen: Tap Siri Responses, then turn on Always Show Request.
+
+Change the language Siri responds to: Tap Language, then select a new language.
+
+Change Siri settings for Phone, FaceTime, and Messages
+
+You can perform tasks for Phone, FaceTime, and Messages with just your voice. With Siri, you can hang up calls and skip the confirmation step when sending messages. You can enable these features in Settings.
+
+Go to Settings  > Siri (or Apple Intelligence & Siri).
+
+Do any of the following:
+
+Hang up Phone and FaceTime calls: Tap Call Hang Up, then turn on Call Hang Up. For more information, see End calls with Siri.
+
+Send messages without confirmation: Tap Messaging with Siri, then turn on Automatically Send Messages. See Send and reply to messages.
+
+On supported headphones, Siri can also announce calls, messages, and more.
+
+Change which apps appear in search
+
+You can change which apps appear when you search with Siri.
+
+Go to Settings  > Search, then scroll down and select an app.
+
+Turn settings on or off.
+
+Retrain Siri with your voice
+
+Go to Settings  > Siri (or Apple Intelligence & Siri).
+
+Tap Talk to Siri, then tap Off.
+
+Turn on “Siri” or “Hey Siri” again, then follow the onscreen instructions.
+
+To change Siri accessibility settings, see Change Siri accessibility settings.
+
+If Siri doesn’t work as expected on your iPhone, see the Apple Support article If Siri isn’t working on your iPhone.
+
+See also
+Find out what Siri can do on iPhone
+Previous
+Use Siri in your car
+Next
+Intro to Apple Intelligence
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

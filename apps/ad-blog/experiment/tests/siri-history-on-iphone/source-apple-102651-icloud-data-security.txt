@@ -1,0 +1,844 @@
+# 가져온 시각: 2026-10-27T16:03:35.489Z
+# 원본: https://support.apple.com/en-us/102651
+iCloud data security overview - Apple Support
+https://support.apple.com/en-us/102651
+
+iCloud data security overview
+
+iCloud uses strong security methods, employs strict policies to protect your information, and leads the industry in using privacy-preserving security technologies like end-to-end encryption for your data.
+
+iCloud data security and encryption
+
+The security of your data in iCloud starts with the security of your Apple Account. All new Apple Accounts require two-factor authentication to help protect you from fraudulent attempts to gain access to your account. Two-factor authentication is also required for many features across Apple’s ecosystem, including end-to-end encryption.
+
+Apple offers two options to encrypt and protect the data you store in iCloud:
+
+Standard data protection is the default setting for your account. Your iCloud data is encrypted, the encryption keys are secured in Apple data centers so we can help you with data recovery, and only certain data is end-to-end encrypted.
+
+Advanced Data Protection for iCloud is an optional setting that offers our highest level of cloud data security. If you choose to enable Advanced Data Protection, your trusted devices retain sole access to the encryption keys for the majority of your iCloud data, thereby protecting it using end-to-end encryption. Additional data protected includes iCloud Backup, Photos, Notes, and more.
+
+About end-to-end encrypted data
+
+End-to-end encrypted data can be decrypted only on your trusted devices where you’re signed in to your Apple Account. No one else can access your end-to-end encrypted data — not even Apple — and this data remains secure even in the case of a data breach in the cloud. If you lose access to your account, only you can recover this data, using your device passcode or password, recovery contact, or recovery key.
+
+Standard data protection
+
+Standard data protection is the default setting for your account. Your iCloud data is encrypted in transit and stored in an encrypted format at rest. The encryption keys from your trusted devices are secured in Apple data centers, so Apple can decrypt your data on your behalf whenever you need it, such as when you sign in on a new device, restore from a backup, or recover your data after you’ve forgotten your password. As long as you can successfully sign in to your Apple Account, you can access your backups, photos, documents, notes, and more.
+
+For additional privacy and security, 15 data categories — including Health and passwords in iCloud Keychain — are end-to-end encrypted. Apple doesn't have the encryption keys for these categories, and we can't help you recover this data if you lose access to your account. The table below includes a list of data categories that are always protected by end-to-end encryption.
+
+Advanced Data Protection for iCloud
+
+Starting with iOS 16.2, iPadOS 16.2 and macOS 13.1, you can choose to enable Advanced Data Protection to protect the vast majority of your iCloud data, even in the case of a data breach in the cloud.
+
+With Advanced Data Protection, the number of data categories that use end-to-end encryption rises to 25 and includes your iCloud Backup, Photos, Notes, and more. The table below lists the additional data categories that are protected by end-to-end encryption when you enable Advanced Data Protection.
+
+If you enable Advanced Data Protection and then lose access to your account, Apple will not have the encryption keys to help you recover it — you’ll need to use your device passcode or password, a recovery contact, or a personal recovery key. Because the majority of your iCloud data will be protected by end-to-end encryption, you’ll be guided to set up at least one recovery contact or recovery key before you turn on Advanced Data Protection. You must also update all your Apple devices to a software version that supports this feature.
+
+You can turn off Advanced Data Protection at any time. Your device will securely upload the required encryption keys to Apple servers, and your account will once again use standard data protection.
+
+Learn how to turn on Advanced Data Protection for iCloud
+
+Data categories and encryption
+
+The table below provides more detail on how iCloud protects your data when using standard data protection or Advanced Data Protection.
+
+	
+
+Standard data protection
+
+	
+
+Advanced Data Protection
+
+
+
+
+Data category
+
+	
+
+Encryption
+
+	
+
+Key storage
+
+	
+
+Encryption
+
+	
+
+Key storage
+
+
+
+
+iCloud Mail (1)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+
+
+
+Contacts (2)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+
+
+
+Calendars (2)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+
+
+
+iCloud Backup (including device and Messages backup) (3)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+iCloud Drive (4)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Photos
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Notes
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Reminders (5)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Safari Bookmarks
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Shortcuts
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Voice Memos
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Wallet passes
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Freeform (6)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Apple Invites (7)
+
+	
+
+In transit & on server
+
+	
+
+Apple
+
+	
+
+*See additional note
+
+
+
+
+Passwords and Keychain (8)
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Health data
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Journal data
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Home data
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Messages in iCloud (9)
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Payment information
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Apple Card transactions
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Maps (10)
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+QuickType Keyboard learned vocabulary
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Safari (11)
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Screen Time
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Siri information (12)
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Wi-Fi passwords
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+W1 and H1 Bluetooth keys
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+
+
+
+Memoji
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+	
+
+End-to-end
+
+	
+
+Trusted devices
+
+Additional notes
+
+iCloud Mail: iCloud Mail does not use end-to-end encryption because of the need to interoperate with the global email system. All native Apple email clients support optional S/MIME for message encryption.
+
+Contacts and Calendars: Contacts and calendars are built on industry standards (CalDAV and CardDAV) that do not provide built-in support for end-to-end encryption.
+
+iCloud Backup (including device and Messages backup)
+
+Standard data protection: When iCloud Backup is enabled, the keys to your backups are secured in Apple data centers. If you use both iCloud Backup and Messages in iCloud, your backup includes a copy of the Messages in iCloud encryption key to help you recover your data.
+
+Advanced Data Protection: iCloud Backup and everything inside it is end-to-end encrypted, including the Messages in iCloud encryption key.
+
+iCloud Drive: Includes Pages, Keynote, and Numbers documents, PDFs, Safari downloads, or any other files manually or automatically saved to iCloud Drive.
+
+Reminders: Reminders synced using CalDAV don’t support end-to end encryption.
+
+Freeform: When you use "Send a Copy" to share a Freeform board, it's stored in an unencrypted state while the sharing link is active — so that people with whom you share the link can access it to download — regardless of your account's encryption setting.
+
+Apple Invites: With Advanced Data Protection turned on, unpublished invitations are protected with end-to-end encryption. Once published, most data is protected with standard data protection unless the host and all participants have turned on Advanced Data Protection, in which case that data remains protected by end-to-end encryption after publication. Some data (including time and date, city-level location, and poster image if shared) is always protected by standard data protection after publication, regardless of Advanced Data Protection.
+
+Passwords and Keychain: Includes your saved accounts and passwords.
+
+Messages in iCloud
+
+Standard data protection: Messages in iCloud is end-to-end encrypted when iCloud Backup is disabled. When iCloud Backup is enabled, your backup includes a copy of the Messages in iCloud encryption key to help you recover your data. If you turn off iCloud Backup, a new key is generated on your device to protect future Messages in iCloud. This key is end-to-end encrypted between your devices and isnʼt stored by Apple.
+
+Advanced Data Protection: Messages in iCloud is always end-to-end encrypted. When iCloud Backup is enabled, everything inside it is end-to-end encrypted, including the Messages in iCloud encryption key.
+
+Maps: Includes Pins, My Guides, and Search History.
+
+Safari: Includes History, Tab Groups, and iCloud Tabs.
+
+Siri information: Includes Siri Settings and personalization and, if you have set up Hey Siri, a small sample of your requests.
+
+Encryption of certain metadata and usage information
+
+Some metadata and usage information stored in iCloud remains under standard data protection, even when Advanced Data Protection is enabled. For example, dates and times when a file or object was modified are used to sort your information, and checksums of file and photo data are used to help Apple de-duplicate and optimize your iCloud and device storage — all without having access to the files and photos themselves. Representative examples are provided in the table below.
+
+This metadata is always encrypted, but the encryption keys are still stored by Apple. As we continue to strengthen security protections for all users, Apple is committed to ensuring more data, including this kind of metadata, is end-to-end encrypted when Advanced Data Protection is enabled.
+
+Data category
+
+	
+
+Information protected with standard data encryption
+
+
+
+
+iCloud Backup
+
+	
+
+Name, model, color, and serial number of the device associated with each backup
+
+List of apps and file formats that are included in the backup
+
+Date, time, and size of each backup snapshot
+
+
+
+
+iCloud Drive
+
+	
+
+The raw byte checksums of the file content and the file name
+
+Type of file, when it was created, last modified, or last opened
+
+Whether the file has been marked as a favorite
+
+Size of the file
+
+Signature of any app installers (.pkg signature) and bundle signature
+
+Whether a synced file is an executable
+
+
+
+
+Photos
+
+	
+
+The raw byte checksum of the photo or video
+
+Whether an item has been marked as a favorite, hidden, or marked as deleted
+
+When the item was originally created on the device
+
+When the item was originally imported and modified
+
+How many times an item has been viewed
+
+
+
+
+Notes
+
+	
+
+Date and time when the note was created, last modified, or last viewed
+
+Whether the note has been pinned or marked as deleted
+
+Whether the note contains a drawing or handwriting
+
+The raw byte checksum of content from an imported or migrated note
+
+
+
+
+Safari Bookmarks
+
+	
+
+Whether the bookmark resides in the favorites folder
+
+When the bookmark was last modified
+
+Whether the bookmark has been marked as deleted
+
+
+
+
+Messages in iCloud
+
+	
+
+When the last sync was completed and whether syncing has been disabled
+
+Date when content was last modified
+
+Error codes
+
+Type of message, such as a normal iMessage, SMS, or tapback
+
+Sharing and collaboration
+
+With standard data protection, iCloud content that you share with other people is not end-to-end encrypted.
+
+Advanced Data Protection is designed to maintain end-to-end encryption for shared content as long as all participants have Advanced Data Protection enabled. This level of protection is supported in most iCloud sharing features, including iCloud Shared Photo Library, iCloud Drive shared folders, shared Notes, and the collaboration feature in Freeform.
+
+iWork collaboration, the Shared Albums feature in Photos, and sharing content with “anyone with the link,” do not support Advanced Data Protection. When you use these features, the encryption keys for the shared content are securely uploaded to Apple data centers so that iCloud can facilitate real-time collaboration or web sharing. This means shared content is not end-to-end encrypted, even when Advanced Data Protection is enabled.
+
+To initiate sharing or collaboration, the names and Apple Accounts of participants are sent to Apple servers, and a title and representative thumbnail of the shared item may be used to show a preview to the participants.
+
+iCloud.com and data access on the web
+
+iCloud.com provides access to your iCloud data via any web browser. All sessions at iCloud.com are encrypted in transit between Apple's servers and the browser on your device. When Advanced Data Protection is enabled, access to your data via iCloud.com is disabled by default. You have the option to turn on data access on iCloud.com, which allows the web browser that you're using and Apple to have temporary access to data-specific encryption keys provided by your device to decrypt and view your information.
+
+Learn more about iCloud.com web access
+
+Third-party app data
+
+Third-party app data stored in iCloud is always encrypted in transit and on server. When you turn on Advanced Data Protection, third-party app data stored in iCloud Backup and CloudKit encrypted fields and assets are end-to-end encrypted.
+
+About third-party data centers
+
+Both Apple and third-party data centers may be used to store and process your data. When processing data stored in a third-party data center, encryption keys are accessed only by Apple software running on secure servers, and only while conducting the necessary processing. The keys are always stored and secured in Apple data centers. Apple doesn't access or store keys for any end-to-end encrypted data.
+
+Information about products not manufactured by Apple, or independent websites not controlled or tested by Apple, is provided without recommendation or endorsement. Apple assumes no responsibility with regard to the selection, performance, or use of third-party websites or products. Apple makes no representations regarding third-party website accuracy or reliability. Contact the vendor for additional information.
+
+Published Date: January 05, 2026

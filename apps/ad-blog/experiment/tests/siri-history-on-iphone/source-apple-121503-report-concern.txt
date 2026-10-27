@@ -1,0 +1,42 @@
+# 가져온 시각: 2026-10-27T16:03:16.599Z
+# 원본: https://support.apple.com/121503
+Use Report a Concern to share feedback about Apple Intelligence or Siri AI - Apple Support
+https://support.apple.com/en-us/121503
+
+Use Report a Concern to share feedback about Apple Intelligence or Siri AI
+
+Your feedback is used to help improve Apple products and services.
+
+Share feedback to help improve Apple Intelligence and Siri AI
+
+Apple Intelligence and Siri AI are designed to protect your privacy at every step, while making responses and conversations more contextual and helpful.
+
+If you have feedback about the response of an Apple Intelligence feature, you can share your response with Apple through Report a Concern, Apple’s built-in feedback mechanism. Apple will evaluate your feedback and may use what you’ve reported to help improve Apple products and services, for example to train models.
+
+Siri AI is currently in beta. Both Apple Intelligence and Siri AI use models, and the quality of outputs may vary. You should always check for appropriateness and accuracy.
+
+How to report a concern about an Apple Intelligence response
+
+Report a Concern is the best way for you to provide feedback on output from Apple Intelligence features. Apple Support doesn’t have access to information about your prompt or the response, or the feedback that you provide through Report a Concern.
+
+Look for the Report a Concern button on the screen. For some features, such as Siri AI, you might need to tap and hold the response to reveal the Report a Concern button.
+
+If you don't see Report a Concern, look for the More button or Options menu. On a Mac, hover over the response for the More button to appear.
+
+Provide feedback about an Apple Intelligence response when you're viewing the response on your screen. If you’re not viewing the response, you can’t use Report a Concern.
+
+To provide feedback, you select from categories to help describe the issue. You also have the opportunity to provide additional information.
+
+When you submit feedback, Apple collects the information that you provide in your feedback report — including answers to questions, descriptions, photos, videos, messages, and emails. Before submitting, you can review and remove any information or attachments that you don’t want to include in your feedback report.
+
+Apple also collects your device model, operating system version, language, and the version of the Apple Intelligence model that is relevant to your feedback.
+
+Learn more about Report a Concern & Privacy
+
+Need more help?
+
+Tell us more about what's happening, and we’ll suggest what you can do next.
+
+Get suggestions
+
+Published Date: September 15, 2026

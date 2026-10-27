@@ -1,0 +1,48 @@
+# 가져온 시각: 2026-10-27T16:02:03.978Z
+# 원본: https://support.apple.com/guide/mac-help/delete-siri-and-dictation-history-mchlf55961c0/15.0/mac/15.0
+Delete Siri and Dictation history on Mac - Apple Support
+https://support.apple.com/guide/mac-help/delete-siri-and-dictation-history-mchlf55961c0/15.0/mac/15.0
+
+Select version:
+macOS Tahoe 26
+macOS Sequoia 15
+macOS Sonoma 14
+macOS Ventura 13
+macOS Monterey 12
+macOS Big Sur 11.0
+macOS Catalina 10.15
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Delete Siri and Dictation history on Mac
+
+When you turn on Siri or turn on Dictation, you can choose to share audio recordings of your Siri and Dictation interactions on your Mac with Apple.
+
+Your requests are associated with a random identifier, and not with your Apple Account. You can delete request history—both audio recordings and transcripts—that is associated with a random identifier and less than six months old.
+
+Note: You must be connected to the internet to delete Siri and Dictation history.
+
+On your Mac, choose Apple menu  > System Settings, then click Apple Intelligence & Siri  (or Siri ) in the sidebar. (You may need to scroll down.)
+
+Open Siri settings for me
+
+Click Delete Siri & Dictation History.
+
+Click Delete.
+
+Important: Deleting Siri and Dictation history doesn’t change the choice you made about sharing audio recordings. To change that setting, see Change Privacy & Security settings.
+
+See also
+Siri settings on Mac
+Apple Privacy website
+Apple Support article: Use Siri on all your Apple devices
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

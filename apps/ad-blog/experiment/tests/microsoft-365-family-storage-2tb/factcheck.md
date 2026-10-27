@@ -64,3 +64,18 @@
 - Microsoft 공식 발표문(블로그) 원문: 검색에서 찾지 못함 → 지원 문서 기준으로만 씀. AI 혜택 공유는 보도만 있고 요금 페이지는 "AI for subscription owner only"라 본문에서 다루지 않음
 - OneDrive 추가 저장 공간 가격 (로그인 필요)
 - Google One 요금: one.google.com/about/plans 렌더링에 요금이 나오지 않음 → 본문 비교에서 제외
+
+## 2026-10-27 재확인 (세션 57 개선 세션: 칼럼 후속 확인 + 본문 그래픽 1장)
+
+- 두 Microsoft 문서를 curl로 다시 받아(`source-changes-to-microsoft-365-storage-2026-10-27.txt`·`source-microsoft-storage-quotas-2026-10-27.txt`) 10-18 저장본과 diff
+  - **본문이 인용한 사실은 모두 그대로**: 10-08 신규·재구매 2 TB 공유, 기존 Family·Premium은 2027-05-02 이후 첫 갱신, Pro 2027-11-01 5 TB, 업그레이드 시 즉시 전환·다운그레이드만으로는 전환 안 됨, 10 TB까지 추가, "supported markets" 보너스 저장 공간, 넘으면 "can continue to access your files for up to one year"(변경 문서) vs 읽기 전용·3개월 동결·6개월 삭제 가능(할당량 문서)
+  - 바뀐 것: 변경 문서의 요금제 목록이 표로 바뀜(내용 같음), "Why did storage change?" → "What are the benefits of shared storage?", "Why is Microsoft making this change?" 단락 삭제, **"How can I see how much storage my family/group is using?" 단락 추가**: 전환 뒤에는 onedrive.com·Microsoft 계정에서 구성원별 사용 총량(다른 사람은 총량만)을 볼 수 있고, 전환 전에는 구성원에게 직접 물어봐야 함, 한도를 넘으면 알림 → 본문 "What to do now" 1번(각자 확인 후 합산)과 맞음. 할당량 문서 10-18 저장본은 한도 초과 절이 빠진 채 저장돼 있었고(2,249자) 10-27판(5,081자)에 그 절 전체가 있음: OneDrive 업로드·편집·동기화 불가(카메라 롤 포함)·기존 파일 읽기 전용, Outlook.com 송수신 불가, Teams 첨부 메시지 불가, 3개월 동결, 6개월 삭제 가능
+  - 추가 저장 공간 가격은 여전히 문서에 없음 → 본문 "Its support pages don't list the add-on price" 그대로
+- 판단: 칼럼 내용 갱신 없음(`updatedAt` 그대로)
+- 새 본문 그래픽 `microsoft-365-over-2tb-two-answers.webp`(`over_limit_card.py`, 디자인 시스템 라이트 모드): 본문 "The bigger risk" 문단의 두 문서 설명을 나란히. 카드 문장 ↔ 원문
+  - Near 2 TB ↔ "If your subscription approaches the 2 TB limit, you'll receive notifications so that you can plan ahead. You can free up space, purchase additional storage…"
+  - Over 2 TB ↔ "If your subscription exceeds the limit, you can continue to access your files for up to one year while you manage your storage."
+  - Over the limit ↔ "OneDrive: You can't upload, edit, or sync new files, including files from your camera roll. Your existing files remain, but they're read-only." + "Outlook.com: You can't send or receive email if you exceed either your cloud storage quota or mailbox storage quota."
+  - After 3 months ↔ "If you remain over your OneDrive storage limit, your OneDrive account is frozen."
+  - After 6 months ↔ "If you remain over your OneDrive storage limit, Microsoft might delete your OneDrive and all files in it."
+- 대표 이미지를 뺀 본문 이미지 2 → 3장 (writing-guide 본문 이미지 규칙)

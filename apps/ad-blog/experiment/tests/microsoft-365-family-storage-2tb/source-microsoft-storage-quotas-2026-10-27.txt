@@ -1,0 +1,81 @@
+# 가져온 시각: 2026-10-27T09:4xZ (curl, HTML 태그 제거)
+# 원본: https://support.microsoft.com/en-us/onedrive/microsoft-storage-quotas
+Microsoft storage quotas
+Applies To
+Outlook.com   Microsoft 365 Family   Microsoft 365 Premium   Microsoft 365 Pro   OneDrive (home or personal)
+About storage  |  Storage quotas  |  Storage FAQs
+Compare Microsoft storage quotas
+Mailbox storage includes your Outlook.com emails, contacts, and calendar items. Cloud storage includes your email attachments, files, and photos in OneDrive.
+Microsoft 365 plan
+Cloud storage
+People included
+Free (no subscription)
+5 GB
+1
+Basic
+100 GB
+1
+Personal
+1 TB
+1
+Family (subscriptions started before October 8, 2026)
+1 TB per person
+Up to 6
+Premium (subscriptions started before October 8, 2026)
+1 TB per person
+Up to 6
+Pro (subscriptions started before October 8, 2026)
+1 TB per person
+Up to 6
+Family (new subscriptions starting October 8, 2026, and renewals starting May 2, 2027)
+2 TB shared storage
+Up to 6
+Premium (new subscriptions starting October 8, 2026, and renewals starting May 2, 2027)
+2 TB shared storage
+Up to 6
+Pro (new subscriptions starting October 8, 2026, and existing subscriptions starting November 1, 2027)
+5 TB shared storage
+Up to 6
+Note
+Starting October 8, 2026, new Microsoft 365 Family and Premium subscriptions, including expired subscriptions that you repurchase, include 2 TB of shared OneDrive cloud storage. New Microsoft 365 Pro subscriptions include 5 TB of shared OneDrive cloud storage.
+Starting May 2, 2027, existing Microsoft 365 Family and Premium subscriptions include 2 TB of shared cloud storage when the subscription renews. On November 1, 2027, existing Microsoft 365 Pro subscriptions automatically include 5 TB of shared cloud storage.
+Shared storage is available to all members of a shared subscription, but each person's mailbox, files, and folders remain private.
+Microsoft 365 Personal, Family, Premium, and Pro subscribers can subscriptions can be extended up to 10 TB to give everyone  even more OneDrive storage .
+All Microsoft 365 subscriptions include 100 GB of mailbox storage.
+Learn more about the  changes to Microsoft 365 storage .
+To check your current usage and quotas, open the  Microsoft storage  area of your account dashboard.
+Open account dashboard
+What happens when you exceed your Microsoft storage quota
+If you exceed your Microsoft storage quota, some Microsoft services stop working.
+OneDrive:  You can't upload, edit, or sync new files, including files from your camera roll. Your existing files remain, but they're read-only.
+Outlook.com:  You can't send or receive email if you exceed either your cloud storage quota or mailbox storage quota. Incoming emails are returned to the sender and must be resent after you free up or buy more storage.
+Microsoft Teams:  You can't send or receive messages that contain attachments.
+After three months:  If you remain over your OneDrive storage limit, your OneDrive account is frozen.
+After six months:  If you remain over your OneDrive storage limit, Microsoft might delete your OneDrive and all files in it. Deleted files can't be recovered.
+Tip
+Your OneDrive taskbar or menu bar icon shows the status of your storage:
+Cloud icon with a yellow warning triangle
+Your OneDrive storage is nearly full.
+Cloud icon with a red circle and white minus sign
+You exceeded your storage allowance.
+Manage your storage
+To prevent or resolve storage limit issues, you can buy more storage or free up space.
+Buy more storage
+If you use the free 5-GB Microsoft storage plan, buy a Microsoft 365 subscription to increase your storage quota.
+Buy a Microsoft 365 subscription
+If you have a Microsoft 365 Basic subscription, switch to a Microsoft 365 Personal, Family, Premium, or Pro subscription.
+Switch your subscription
+If you have a Microsoft 365 Personal, Family, Premium, or Pro subscription, Microsoft 365 Personal, Family, Premium, and Pro subscriptions can be extended up to 10 TB to give everyone  even more OneDrive storage . Only the subscription account holder can add storage. For shared subscriptions, all members share the additional storage.
+Add OneDrive cloud storage
+After you purchase additional OneDrive storage, your new quota can take up to 24 hours to appear. If your quota hasn't updated after 48 hours,  contact support .
+Free up cloud storage
+View the largest files on your OneDrive .
+Reduce the size of your  Loop workspace  by deleting unneeded pages and page-version history. For more options, see  Reduce Loop storage usage .
+Open your  Designer projects , hover over an image, select
+, and then select  Delete . For more information, see  Delete Designer files .
+Tip
+For more tips on cleaning up your email, removing files, and reducing your storage, see  How to reduce your cloud storage .
+Free up mailbox storage
+To check your mailbox storage usage and free up space in Outlook.com, go to  Settings
+>  Account  >  Storage .
+Mailbox storage for consumer accounts is limited to 100 GB. If you need more than 100 GB of mailbox storage, see  Microsoft 365 enterprise plans .

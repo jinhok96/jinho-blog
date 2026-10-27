@@ -2,6 +2,52 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-27 · 세션 57 (정기 실행, 개선 세션): 칼럼 2편 본문 그래픽 + 기존 글 2편 대표 이미지
+
+세션 시각: 2026-10-27 18:15 KST → 개선 세션. 같은 날 12시 개선 세션(세션 56)이 다룬 글(`turn-off-apple-intelligence-iphone`·`iphone-duo-sold-out`·`merge-pdf-files-free`)과 겹치지 않게 세션 56 다음 할 일(대표 이미지 `compress-image-to-100kb`·`convert-heic-to-jpg-free`, 대표 이미지를 뺀 본문 이미지가 2장인 칼럼에 그래픽 1장)을 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(033c4f1)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 세션 초반 Bash 권한 분류기가 응답 없이 실패하는 일이 여러 번 있었음(재시도로 진행)
+
+**지표 (`gsc_report.py`, 2026-09-29 ~ 10-27, 세션 56 이후 바뀐 값만)**
+
+- 노출 752 → **766**, 클릭 12, CTR 1.6%, 평균 순위 22.5 → 22.3
+  - `spotify-family-qr-code-verification` 242 → 243 (14.9), 클릭 0 / `turn-off-ai-in-chrome` 138 → 140 (14.3 → 14.1), 클릭 3 / `image-to-text-offline-free` 88 → 89 (14.7 → 14.6) / `iphone-duo-sold-out` 30 → **34 (8.6 → 8.4)**, 클릭 2
+- URL 검사: 색인 17편 그대로, `URL is unknown` 29편 → 색인율 17/46 (37%)
+- `link_seen.py`(전체 이력): 사이트 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (6일 넘게 새 크롤링 0). 미색인 29편 중 Google이 본 링크가 있는 글 10편 그대로. sitemap 마지막 다운로드도 10-22 23:03(제출 시각) 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글)
+- 주간 SEO 점검(10-26) 우선순위 3(대표 이미지) 이어서 처리
+
+**한 일 (개선 세션 3건, 쓴 스킬: `seo-audit` — Image Optimization(설명적 파일 이름·alt·WebP), Crawlability·Indexation 우선순위, rankings-push "Refresh what's stale")**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 주간 3 · 대표 이미지 | `compress-image-to-100kb`(색인, 28일 노출 10·8.7위) · `convert-heic-to-jpg-free`(색인, 9·38.3위) | `thumbnail`(측정 그래프, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님: 노출 100회 미만) |
+| 2 | 5 · 칼럼 후속 + 본문 이미지 규칙 | `iphone-handoff-verizon-cost`(색인, 16·8.2위) | Apple 127274·Verizon 10-16 발표 재확인: 지원 통신사 T-Mobile·Telekom, Verizon "coming soon" $10 그대로 → 본문 그대로. Apple 문서 기준 "번호를 나눠 쓰면 달라지는 6가지" 카드 그래픽 추가 → 대표 이미지를 뺀 본문 이미지 2 → 3장 | 규칙 적용 (V 대상 아님) |
+| 3 | 5 · 칼럼 후속 + 본문 이미지 규칙 | `microsoft-365-family-storage-2tb`(색인, 19·19.7위) | Microsoft 문서 2개 재확인: 인용한 날짜·용량·한도 초과 규칙 그대로 → 본문 그대로. "2 TB를 넘으면" 두 문서의 다른 답(1년 접근 vs 읽기 전용·3개월 동결·6개월 삭제 가능) 비교 그래픽 추가 → 2 → 3장 | 규칙 적용 (V 대상 아님) |
+
+- 대표 이미지 `compress-image-to-100kb`: Z-Image-Turbo 시드 769967772, 57.6분(그래픽 제작·lint와 CPU를 나눠 씀), 피스타치오 그린 배경 + 바이올렛·코럴, 정면. 큰 원판 사진(코럴 해·바이올렛 산) 옆 저울에 중간 인화지와 깃털을 얹은 작은 인화지(둥근 인화지 대신 원판, 깃털이 반대쪽 접시 대신 작은 인화지 위지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 본문 이미지 5장 그대로
+- 대표 이미지 `convert-heic-to-jpg-free`: 시드 976813262, 59.8분, 파우더 블루 배경 + 테라코타·앰버, 3/4 시점. 둥근 변환기에 풍경 사진이 들어가고 반대쪽으로 같은 사진 묶음이 나옴 + 위치 핀 + 색상환(들어가는 쪽이 묶음 대신 한 장이지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 본문 이미지 5장 그대로
+- 빌드 HTML 확인: 네 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD, `<pre>` 0개, 본문 첫 이미지가 대표 이미지(`Illustration of …` alt). `compress-image-to-100kb`·`convert-heic-to-jpg-free`는 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). 칼럼 2편 본문 이미지 4장(대표 포함). lint·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음)
+- 남은 대표 이미지 미적용: `thumbnail` 글 19편 + 아무것도 없는 글 3편(`check-if-image-is-ai-generated`·`transcribe-audio-offline-free`(V1 판정 중)·`windows-10-esu-extended`)
+- 칼럼 재확인 방법: 앞 세션이 저장한 원문(`tests/*/source-*.txt`)과 오늘 curl로 받은 판을 공백 정규화 후 문장 단위 diff. Apple 127274는 Published Date 09-09 → **10-19 개정**, 바뀐 문장 2개(전환 전 iPhone에 화살표 아이콘 표시, "does not" → "doesn't"). Microsoft 변경 안내는 요금제 목록이 표로 바뀌고 "Why is Microsoft making this change?" 단락이 빠지고 **"How can I see how much storage my family/group is using?" 단락이 생김**(전환 뒤 구성원별 총량 확인 가능, 전환 전에는 직접 물어봐야 함 → 본문 "What to do now" 1번과 맞음). 그래픽 카드 문장 ↔ 원문 대조는 두 글의 `factcheck.md` "2026-10-27 재확인"
+- 그래픽: `tests/iphone-handoff-verizon-cost/rules_card.py`, `tests/microsoft-365-family-storage-2tb/over_limit_card.py` (`chart_style.py` 라이트 모드 토큰, 강조는 돈이 계속 나가는 함정·더 엄격한 문서 1곳만 `accent`)
+
+**알게 된 것**
+
+- Apple 지원 문서(support.apple.com/en-us/{번호})는 본문 끝 `Published Date`가 개정일로 바뀜 → 저장본과 날짜만 비교해도 바뀌었는지 바로 알 수 있음. 칼럼 후속은 "날짜 비교 → 바뀌었으면 문장 diff" 순서가 빠름
+- `microsoft-365-family-storage-2tb`의 10-18 저장본 `source-microsoft-storage-quotas.txt`(2,249자)에는 본문이 인용한 한도 초과 절이 없었음(10-27판 5,081자에 있음). 원문을 저장할 때 인용한 문장이 파일 안에 있는지 확인해야 나중 대조 자료로 쓸 수 있음 → writing-guide 정확성에 규칙 추가
+- 크롤링 정체(10-21 08:37 이후 6일 넘게 0) 동안에도 색인된 글 노출은 계속 늘어남(28일 노출 10-26 703 → 10-27 766). 새 글 색인만 멈춘 상태
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수와 호스트 상태 확인 (6일 넘게 새 크롤링 0, sitemap도 10-22 이후 다시 받지 않음. 세션 52~56과 같은 요청) ② Sitemaps에서 `sitemap.xml` 다시 제출 ③ URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저): `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/ios-27-2-siri-ai-memory` · `https://tool-proof.com/posts/compress-video-for-discord-email`
+- Claude(다음 개선 세션): 대표 이미지 계속 — 남은 `thumbnail` 글 19편 중 색인된 글 `jpg-to-pdf-free`(11·5.5위) · `windows-11-24h2-end-of-support`(7) · `apple-siri-settlement-claim`(6) · `free-offline-ai-tools`, 대표 이미지도 `thumbnail`도 없는 `check-if-image-is-ai-generated`(40) · `windows-10-esu-extended` (V 판정 중인 `turn-off-ai-in-chrome`(V3)·`spotify-family-qr-code-verification`(V4)·`transcribe-audio-offline-free`(V1)은 판정 뒤). `iphone-duo-sold-out`은 대표 이미지를 뺀 본문 이미지 2장 → 다른 변경이 없을 때 그래픽 1장. `link_seen.py`로 새 크롤링 확인
+- Claude: iOS·macOS 마이너 업데이트 다음 개선 세션에서 Apple 글 원문 diff 재확인, Verizon이 Handoff를 시작하거나 Apple 127274 지원 통신사가 늘면 `iphone-handoff-verizon-cost` 갱신(`updatedAt`)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 46편 (허브 4개)
+- 대시보드: (갱신 후 기록)
+- 배포: PR #283 (CI 통과 후 머지)
+
 ## 2026-10-27 · 세션 56 (정기 실행, 개선 세션): Apple Intelligence 글 iOS 27.2 갱신 + 기존 글 2편 대표 이미지
 
 세션 시각: 2026-10-27 12:15 KST → 개선 세션. 같은 날 앞 개선 세션 없음(이 세션이 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(c009e27)에서 다시 시작, `git fetch --unshallow`로 전체 이력을 받은 뒤 `link_seen.py` 실행.

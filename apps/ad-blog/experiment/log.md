@@ -47,7 +47,7 @@
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 47편 (허브 4개)
 - 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 18·방문 16) + `history` 기록(batch, 회차 2026-10-27T17:00:30Z, DB 문서 144개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 30편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/47 (36%) · 28일 노출 773 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
-- 배포: PR (CI 통과 후 머지)
+- 배포: PR #285 (auto-merge, CI 통과 후 머지)
 
 ## 2026-10-27 · 세션 57 (정기 실행, 개선 세션): 칼럼 2편 본문 그래픽 + 기존 글 2편 대표 이미지
 

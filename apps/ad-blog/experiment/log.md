@@ -26,10 +26,10 @@
 - 주 검색어: `siri history on iphone`. 제목 `How to See and Delete Siri History on iPhone`(44자), 설명 153자
 - 1차 출처: support.apple.com/guide/iphone (p7ny364ngxlj·iphc28624b81abc(27·26·18판)·iphv6zwrg8jvfgr·iph83aad8922·iph3c511548·iphe3f499e0e·iph2c0651d2·iph0193a9d54·iph00fd3c8c2·iph9c79f9786), support.apple.com/guide/mac-help/mchlf55961c0 (26·15.0판, 버전 없는 주소는 macOS 27 첫 화면), apple.com/legal/privacy/data/en/ask-siri-dictation·improve-siri-dictation·siri-suggestions-search, support.apple.com/guide/icloud/mm155e8d9577, support.apple.com/en-us/102651·149076·121503. 원문 `tests/siri-history-on-iphone/source-*.txt`(2026-10-27 15:59~16:03 UTC). 개인정보 페이지는 세션 55 저장본(10-26)과 diff: 변경 없음. iPhone이 없어 Siri 앱·설정 화면은 직접 열지 못함(본문 How we checked에 밝힘)
 - 쓰지 않은 것: Keep Conversations 세 번째 선택지·기본값(블로그는 "Forever", Apple 문서에 없음), 대화 삭제가 다른 기기에도 반영되는지(Apple은 기록 동기화만 씀), iOS 27에서 Siri & Dictation History 메뉴가 실제로 있는지(확인 불가 → 문서 차이와 대안을 씀), 삭제 확인 대화상자(문서에 없음)
-- 이미지: 대표 이미지(HERO_LOG) + 본문 4장(기록이 있는 곳 4가지 표, Apple 설명서 Keep Conversations 화면 캡처 + accent 상자, Delete Siri & Dictation History 문서 4곳 비교 카드, 보관 기간 막대 그래프, `charts.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 2000890236, 52.8분, 옅은 피치 배경 + 딥 틸·플럼, 아이소메트릭. 청록 휴대폰 화면에 빈 말풍선 3개가 쌓이고 4번째가 오른쪽 휴지통 쪽으로 떠 있음, 왼쪽 모래시계. 플럼은 그림자에만 옅게 나오고 말풍선이 화면 위로 올라가는 대신 화면 안에 쌓였지만 주제·화풍이 맞고 글자·로고가 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(기록이 있는 곳 4가지 표, Apple 설명서 Keep Conversations 화면 캡처 + accent 상자, Delete Siri & Dictation History 문서 4곳 비교 카드, 보관 기간 막대 그래프, `charts.py` 라이트 모드)
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-apple-intelligence-iphone`·`turn-off-gemini-apps-activity`, 칼럼 `ios-27-2-siri-ai-memory` (4개). 역링크 5개: 색인된 `apple-siri-settlement-claim`(Who is affected 표 뒤: 대상 iPhone이 Siri AI 기종) · 색인된 `check-if-image-is-ai-generated`(iOS 27.2 Siri 기억 문장 뒤) · 허브 Apple Intelligence 절 끝 · `ios-27-2-siri-ai-memory` What changes for you 기억 문단 · `turn-off-apple-intelligence-iphone` Siri AI 절 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
 - 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 44자·H1 일치, 설명 153자에 주 검색어, 첫 문장에 주 검색어, h2 12개·FAQ h3 2개, 이미지 alt·파일 이름·WebP, 기존 글 5개에서 받는 링크, em dash 0). 점검 중 "삭제해도 서버 사본은 그대로"라는 소제목 첫 문장이 Apple 문서보다 단정적이라 "iPhone 문서는 기기 전사본 삭제만 설명"으로 고침, 문서에 없는 "삭제 확인" 단계 삭제. searchfit-seo 스킬은 이번 세션에 없음
-- 빌드 HTML 확인: BUILD_LOG
+- 빌드 HTML 확인: title 56자(접미사 포함, 본제목 44자)·description 158자(HTML 엔티티 포함 기준, frontmatter 153자), BlogPosting(발행 2026-10-27T16:58Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 13개(관련 글 제목 포함)·h3 5개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. 본문 2,398단어(표·이미지 제외). lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 5개)
 
 **알게 된 것**
 
@@ -46,7 +46,7 @@
 - Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 47편 (허브 4개)
-- 대시보드: DASH_LOG
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 18·방문 16) + `history` 기록(batch, 회차 2026-10-27T17:00:30Z, DB 문서 144개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 30편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/47 (36%) · 28일 노출 773 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 - 배포: PR (CI 통과 후 머지)
 
 ## 2026-10-27 · 세션 57 (정기 실행, 개선 세션): 칼럼 2편 본문 그래픽 + 기존 글 2편 대표 이미지

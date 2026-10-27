@@ -26,7 +26,9 @@
 
 - Apple 문서 대조: 세션 43이 저장한 10-23판 `source-*.txt` 12개와 이번 세션 Chromium(`render.cjs`)으로 받은 10-27판(`source-*-2026-10-27.txt`)을 공백 정규화 후 diff. 바뀐 것 7가지(R1~R7)와 그대로인 것은 `tests/turn-off-apple-intelligence-iphone/factcheck.md` "iOS 27.2 갱신". iPhone 설명서 목차(990개 링크)에서 SynthID 안내가 있는 쪽을 찾음: Clean Up·Extend·Reframe, Image Playground 쪽에 "In iOS 27.2 or later, most images created or edited with Apple Intelligence tools include a SynthID hidden watermark … You can use the SynthID Detector"(링크 synthid.com, 200 확인). Mac 문서에서는 "Voicemail suggestions in Phone" 행이 빠짐(글의 Mac 항목은 음성 사서함을 다루지 않아 변경 없음)
 - 대표 이미지 `iphone-duo-sold-out`: Z-Image-Turbo 시드 1123967122, 50.4분, 라일락 배경 + 민트·탠저린, 아이소메트릭. 받침대 위 휴대폰 + 리본 상자 + 모래시계 + 돼지 저금통(반쯤 펼친 폴더블 대신 일반 휴대폰, 골판지 대신 선물 상자지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 대표 이미지를 뺀 본문 이미지는 2장(규칙 3장 미만) → 한 글 한 변경이라 그대로
-- 대표 이미지 `merge-pdf-files-free`: (생성 중)
+- 대표 이미지 `merge-pdf-files-free`: 시드 1056454117, 49.0분, 블러시 핑크 배경 + 코발트 블루·머스터드 옐로, 위에서 본 3/4 시점. 휜 파랑·노랑 종이 사이에 클립·책갈피 리본을 단 빈 종이 묶음 + 사슬 고리(종이 세 장 대신 두 장이지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 본문 이미지 8장 그대로
+- 빌드 HTML 확인: 세 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD(`turn-off-apple-intelligence-iphone` dateModified 2026-10-27), `<pre>` 0개, 설명 152·159·160자. `iphone-duo-sold-out`·`merge-pdf-files-free`는 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·test(35파일 253개)·build 통과
+- 남은 대표 이미지 미적용: `thumbnail` 글 21편 + 아무것도 없는 글 3편(`check-if-image-is-ai-generated`·`transcribe-audio-offline-free`(V1 판정 중)·`windows-10-esu-extended`)
 
 **문제 찾기 (`seo-audit` Crawlability, 6일 넘은 크롤링 정체)**
 

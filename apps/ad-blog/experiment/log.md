@@ -25,7 +25,9 @@
 | 3 | 5 · 칼럼 후속 + 본문 이미지 규칙 | `microsoft-365-family-storage-2tb`(색인, 19·19.7위) | Microsoft 문서 2개 재확인: 인용한 날짜·용량·한도 초과 규칙 그대로 → 본문 그대로. "2 TB를 넘으면" 두 문서의 다른 답(1년 접근 vs 읽기 전용·3개월 동결·6개월 삭제 가능) 비교 그래픽 추가 → 2 → 3장 | 규칙 적용 (V 대상 아님) |
 
 - 대표 이미지 `compress-image-to-100kb`: Z-Image-Turbo 시드 769967772, 57.6분(그래픽 제작·lint와 CPU를 나눠 씀), 피스타치오 그린 배경 + 바이올렛·코럴, 정면. 큰 원판 사진(코럴 해·바이올렛 산) 옆 저울에 중간 인화지와 깃털을 얹은 작은 인화지(둥근 인화지 대신 원판, 깃털이 반대쪽 접시 대신 작은 인화지 위지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 본문 이미지 5장 그대로
-- 대표 이미지 `convert-heic-to-jpg-free`: (생성 중)
+- 대표 이미지 `convert-heic-to-jpg-free`: 시드 976813262, 59.8분, 파우더 블루 배경 + 테라코타·앰버, 3/4 시점. 둥근 변환기에 풍경 사진이 들어가고 반대쪽으로 같은 사진 묶음이 나옴 + 위치 핀 + 색상환(들어가는 쪽이 묶음 대신 한 장이지만 주제·화풍이 맞아 사용, alt를 실제 그림에 맞춤). 본문 이미지 5장 그대로
+- 빌드 HTML 확인: 네 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD, `<pre>` 0개, 본문 첫 이미지가 대표 이미지(`Illustration of …` alt). `compress-image-to-100kb`·`convert-heic-to-jpg-free`는 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). 칼럼 2편 본문 이미지 4장(대표 포함). lint·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음)
+- 남은 대표 이미지 미적용: `thumbnail` 글 19편 + 아무것도 없는 글 3편(`check-if-image-is-ai-generated`·`transcribe-audio-offline-free`(V1 판정 중)·`windows-10-esu-extended`)
 - 칼럼 재확인 방법: 앞 세션이 저장한 원문(`tests/*/source-*.txt`)과 오늘 curl로 받은 판을 공백 정규화 후 문장 단위 diff. Apple 127274는 Published Date 09-09 → **10-19 개정**, 바뀐 문장 2개(전환 전 iPhone에 화살표 아이콘 표시, "does not" → "doesn't"). Microsoft 변경 안내는 요금제 목록이 표로 바뀌고 "Why is Microsoft making this change?" 단락이 빠지고 **"How can I see how much storage my family/group is using?" 단락이 생김**(전환 뒤 구성원별 총량 확인 가능, 전환 전에는 직접 물어봐야 함 → 본문 "What to do now" 1번과 맞음). 그래픽 카드 문장 ↔ 원문 대조는 두 글의 `factcheck.md` "2026-10-27 재확인"
 - 그래픽: `tests/iphone-handoff-verizon-cost/rules_card.py`, `tests/microsoft-365-family-storage-2tb/over_limit_card.py` (`chart_style.py` 라이트 모드 토큰, 강조는 돈이 계속 나가는 함정·더 엄격한 문서 1곳만 `accent`)
 

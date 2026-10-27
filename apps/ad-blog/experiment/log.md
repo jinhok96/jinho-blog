@@ -45,8 +45,8 @@
 - Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 46편 (허브 4개)
-- 대시보드: (갱신 후 기록)
-- 배포: PR #283 (CI 통과 후 머지)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 18·방문 16) + `history` 기록(batch, 회차 2026-10-27T11:35:50Z, DB 문서 136개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 29편 중 Google이 본 링크 10편. 목표: 색인율 17/46 (37%) · 28일 노출 766 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #283 (auto-merge, CI 통과 후 머지)
 
 ## 2026-10-27 · 세션 56 (정기 실행, 개선 세션): Apple Intelligence 글 iOS 27.2 갱신 + 기존 글 2편 대표 이미지
 

@@ -1,0 +1,46 @@
+# 가져온 시각: 2026-10-27T16:00:29.225Z
+# 원본: https://www.apple.com/legal/privacy/data/en/improve-siri-dictation/
+Legal - Improve Siri and Dictation & Privacy- Apple
+https://www.apple.com/legal/privacy/data/en/improve-siri-dictation/
+
+English  Choose your preferred language
+Improve Siri and Dictation & Privacy
+
+Improve Siri and Dictation allows Apple to store and review a sample of audio interactions with Siri and Dictation in order to help Apple develop and improve Siri, Dictation, and limited other language processing features like Translate or Voice Control.
+ 
+
+
+Improve Siri and Dictation allows Apple to store and review a sample of audio interactions with Siri, Dictation, and Translate in order to help Apple develop and improve Siri, Dictation, and limited other language processing features like Translate or Voice Control.
+
+
+
+
+Siri and Dictation
+
+If you opt in to Improve Siri and Dictation, Apple may store the audio of your interactions with Siri and Dictation. Audio data, transcripts including your request and Siri’s response, and related request data, such as the category of request you made, device specifications, performance statistics, and the approximate location of your device at the time the request was made, may be used to develop and improve Siri, Dictation, Search, and limited other language processing functionality in Apple products and services. For example, transcripts may be used to fine-tune Siri, Search, Voice Control, Translate, and automatic speech recognition models. A subset of this data may be reviewed by graders, with audio review being conducted only by Apple employees.
+
+Your request history, which includes your audio data, transcripts, and related request data, is associated with a random, device-generated identifier that rotates multiple times per hour and is not tied to your Apple Account or email address. Apple may retain and use this data for up to two years, and the small subset of interactions that has been reviewed may be kept beyond two years for the ongoing improvement of Siri, Dictation, Search, and limited other language processing features.
+
+A history of your Siri and Dictation interactions is stored on your device, and may be used to personalize your Siri experience.
+
+Your request history is not used to build a marketing profile, and is never sold to anyone.
+
+If one of your Siri or Dictation interactions is selected for review, the request, as well as the response Siri provided, will be analyzed to determine accuracy and to generally improve Siri, Dictation, Search, and limited other language processing functionality in Apple products and services. Depending on the context of your request, a reviewer may access additional contextual data directly relevant to the request, such as names of your contacts or apps installed on your devices, in order to grade the effectiveness of Siri’s response. Only Apple employees, subject to strict confidentiality obligations, are able to access audio interactions with Siri and Dictation. You can change your setting for Improve Siri and Dictation at any time. To do so, go to Settings > Privacy & Security > Analytics & Improvements.
+
+You can delete the transcripts of your Siri and Dictation requests that are stored on your device by going to Settings > Siri > Siri & Dictation History and tapping Delete Siri & Dictation History.
+
+You can disable Siri and Dictation by going to Settings > General > Keyboard and tapping to turn off Enable Dictation. Then go to Settings > Siri > Talk to Siri and tap Off, and go to Settings > Siri and tap to turn off “Press Home for Siri” or “Press Side Button for Siri”. The transcripts of your Siri and Dictation requests that are stored on your device and used to personalize your experience will be deleted if you disable Siri and Dictation.
+
+Translate
+
+If you opt in to Improve Siri and Dictation, your audio, text input and transcripts of your Translate requests, associated with random, rotating, device-generated identifiers, may be stored and reviewed to develop and improve Siri, Dictation, Translate, and limited other language processing functionality in Apple products and services.
+
+Your Translate requests may be retained for up to two years to help Apple develop and improve Siri, Dictation, Translate, and limited other language processing functionality. For example, transcripts may be used to fine-tune Siri, Search, Voice Control, Translate, and automatic speech recognition models. If one of your Translate interactions is selected for review, the translation request, as well as the translation response provided, will be analyzed to determine accuracy. Only Apple employees, subject to strict confidentiality obligations, are able to access your Translate audio. The small subset of your Translate interactions that have been reviewed may be kept beyond two years for ongoing improvement of Siri, Dictation, Translate, and limited other language processing functionality in Apple products and services.
+
+General
+
+The opt-in preference you selected when you set up an iPhone or iPad will apply to any new Apple connected device or supported HomeKit accessory set up with that iPhone or iPad that has Siri turned on. You can change this later in the settings for each device.
+
+By enabling Improve Siri and Dictation, you agree and consent to Apple’s and its subsidiaries’ and agents’ transmission, collection, maintenance, processing, and use of this information to provide and improve Siri, Dictation, Search, Translate, and limited other language processing functionality in Apple products and services as described above. Apple may process and store this information with trusted third-party service providers. At all times, information collected by Apple from your use of Siri, Dictation, or Translate will be treated in accordance with Apple’s Privacy Policy, which can be found at www.apple.com/privacy.
+
+2026-09-14

@@ -1,0 +1,39 @@
+# 가져온 시각: 2026-10-27T16:03:12.209Z
+# 원본: https://support.apple.com/guide/iphone/hide-recent-searches-iph9c79f9786/ios
+Hide recent searches in Safari on iPhone - Apple Support
+https://support.apple.com/guide/iphone/hide-recent-searches-iph9c79f9786/ios
+
+Select version:
+iOS 27
+iOS 26
+iOS 18
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Hide recent searches in Safari on iPhone
+
+You can hide the recent searches that appear when the search field is empty in the Safari app .
+
+Go to the Settings app  on your iPhone.
+
+Tap Apps, then tap Safari.
+
+Below Search, turn off Show Recent Searches.
+
+See also
+Search for websites in Safari on iPhone
+Clear your cache and cookies on iPhone
+Previous
+Enable cookies
+Next
+Browse the web privately
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

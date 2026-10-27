@@ -150,6 +150,7 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | ---------------------------------------------------------- | ------------------------------------------- | -------------------------------------------------------------------------------------------------------- | ------------------------- |
 | Chrome 안정판 156·157·158·159·160                          | 2026-10-20, 11-03, 11-17, 12-08, 2027-01-05 | `https://chromiumdash.appspot.com/fetch_milestone_schedule?offset=-1&n=5`                                | `turn-off-ai-in-chrome`   |
 | Windows 월간 보안 업데이트 (둘째 화요일 10:00 태평양 시간) | 2026-10-13, 11-10, 12-08, 2027-01-12        | [Microsoft Learn 릴리스 주기](https://learn.microsoft.com/en-us/windows/deployment/update/release-cycle) | `windows-10-esu-extended` |
+| iOS·iPadOS·macOS 마이너 업데이트 (2026-10-27 추가) | 비정기 (27.2: 2026-10-26) | [About iOS 27 Updates](https://support.apple.com/en-us/149076)·[보안 업데이트](https://support.apple.com/100100). 같은 URL의 설명서가 업데이트 날 바뀜 → 저장한 `tests/*/source-*.txt`와 diff (세션 56) | `turn-off-apple-intelligence-iphone` `ios-27-2-siri-ai-memory` `apple-mail-exchange-not-syncing` |
 
 ## 주요 출처 (재확인용)
 

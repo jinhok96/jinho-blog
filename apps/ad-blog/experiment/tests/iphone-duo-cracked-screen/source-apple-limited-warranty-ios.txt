@@ -1,0 +1,1166 @@
+# 가져온 시각: 2026-10-27T21:37:52.566Z
+# 원본: https://www.apple.com/legal/warranty/products/ios-warranty-document-us.html
+Legal - iOS Warranty Document Us - Apple
+https://www.apple.com/legal/warranty/products/ios-warranty-document-us.html
+
+View Warranty version
+January 19, 2024 - Present
+ 
+April 22, 2022 - January 18, 2024
+ 
+November 19, 2021 - April 21, 2022
+ 
+January 26, 2021 - November 18, 2021
+ 
+July 13, 2018 - January 25, 2021
+ 
+August 27, 2016 - July 12, 2018
+ 
+February 04, 2016 - August 26, 2016
+ 
+March 28, 2013 - February 03, 2016
+ 
+September 12, 2012 - March 27, 2013
+Apple One (1) Year Limited Warranty
+
+For Apple Branded Product Only
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD, APPLE TV,HOMEPOD, OR APPLE VISION PRO PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Apple Park Way, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod, Apple TV, HomePod, or Apple Vision Pro hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, liquid contact, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities or registries that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (e.g., by presenting proof of purchase). To the extent permitted by local law, Apple may provide hardware identifier information from the Apple Product to such authorities or registries for security and fraud prevention purposes.
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD, APPLE TV, HOMEPOD, AND APPLE VISION PRO SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad, Apple TV, HomePod, and Apple Vision Pro to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used Apple genuine parts that have been tested and passed Apple functional requirements,
+
+(ii) replace the Apple Product with a replacement product of the same model (or with your consent a product that has the same or substantially similar features as the original product – e.g., a different model with the same features, or the same model in a different color) that is new or comprised of new and/or previously used Apple genuine parts and has been tested and passed Apple functional requirements, or
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. Apple may use Apple Products or replacement parts for service that are sourced from a country that is different from the country from which the Apple Product or original parts were sourced. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+
+International Support Information
+
+www.apple.com/support/country
+
+
+Authorized Distributors
+
+support.apple.com/kb/HT1434
+
+
+Apple Authorized Service Providers
+
+support.apple.com/kb/HT1937
+
+support.apple.com/kb/HT1434
+
+
+Apple Retail Store
+
+www.apple.com/retail/storelist/
+
+
+Apple Support and Service
+
+www.apple.com/support/contact/phone_contacts.html
+
+
+Apple Complimentary Support
+
+www.apple.com/support/country/?dest=complimentary
+
+
+
+
+© 2023 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+060523-iOS-Warranty-Document-US-v1.6
+
+Apple One (1) Year Limited Warranty
+
+For Apple Branded Product Only
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD, APPLE TV or HOMEPOD PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Apple Park Way, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod, Apple TV or HomePod hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, liquid contact, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities or registries that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (e.g., by presenting proof of purchase). To the extent permitted by local law, Apple may provide hardware identifier information from the Apple Product to such authorities or registries for security and fraud prevention purposes.
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD, APPLE TV and HOMEPOD SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad, Apple TV and HomePod to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used Apple genuine parts that have been tested and passed Apple functional requirements,
+
+(ii) replace the Apple Product with a replacement product of the same model (or with your consent a product that has the same or substantially similar features as the original product – e.g., a different model with the same features, or the same model in a different color) that is new or comprised of new and/or previously used Apple genuine parts and has been tested and passed Apple functional requirements, or
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. Apple may use Apple Products or replacement parts for service that are sourced from a country that is different from the country from which the Apple Product or original parts were sourced. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+International Support Information
+
+www.apple.com/support/country
+
+Authorized Distributors
+
+support.apple.com/kb/HT1434
+
+Apple Authorized Service Providers
+
+support.apple.com/kb/HT1937
+
+support.apple.com/kb/HT1434
+
+Apple Retail Store
+
+www.apple.com/retail/storelist/
+
+Apple Support and Service
+
+www.apple.com/support/contact/phone_contacts.html
+
+Apple Complimentary Support
+
+www.apple.com/support/country/?dest=complimentary
+
+© 2021 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+100121-iOS-Warranty-Document-US-v1.5
+
+Apple One (1) Year Limited Warranty
+
+For Apple Branded Product Only
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD, APPLE TV or HOMEPOD PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Apple Park Way, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod, Apple TV or HomePod hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, liquid contact, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities or registries that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (e.g., by presenting proof of purchase). To the extent permitted by local law, Apple may provide hardware identifier information from the Apple Product to such authorities or registries for security and fraud prevention purposes.
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD, APPLE TV and HOMEPOD SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad, Apple TV and HomePod to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used Apple genuine parts that have been tested and passed Apple functional requirements,
+
+(ii) replace the Apple Product with a replacement product of the same model (or with your consent a product that has the same or substantially similar features as the original product – e.g., a different model with the same features, or the same model in a different color) that is new or comprised of new and/or previously used Apple genuine parts and has been tested and passed Apple functional requirements, or
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. Apple may use Apple Products or replacement parts for service that are sourced from a country that is different from the country from which the Apple Product or original parts were sourced. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+International Support Information
+
+www.apple.com/support/country
+
+Authorized Distributors
+
+support.apple.com/kb/HT1434
+
+Apple Authorized Service Providers
+
+support.apple.com/kb/HT1937
+
+support.apple.com/kb/HT1434
+
+Apple Retail Store
+
+www.apple.com/retail/storelist/
+
+Apple Support and Service
+
+www.apple.com/support/contact/phone_contacts.html
+
+Apple Complimentary Support
+
+www.apple.com/support/country/?dest=complimentary
+
+© 2021 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+100121-iOS-Warranty-Document-US-v1.5
+
+Apple One (1) Year Limited Warranty 
+
+For Apple Branded Product Only
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD, APPLE TV or HOMEPOD PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE. 
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Apple Park Way, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod, Apple TV or HomePod hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, liquid contact, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (eg. by presenting proof of purchase).
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD, APPLE TV and HOMEPOD SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad, Apple TV and HomePod to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES. 
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used parts that are equivalent to new in performance and reliability,
+
+(ii) replace the Apple Product with the same model (or with your consent a product that has similar functionality) formed from new and/or previously used parts that are equivalent to new in performance and reliability, or 
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply. 
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part. 
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. Apple may use Apple Products or replacement parts for service that are sourced from a country that is different from the country from which the Apple Product or original parts were sourced. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+International Support Information
+
+www.apple.com/support/country
+
+Authorized Distributors 
+
+support.apple.com/kb/HT1434
+
+Apple Authorized Service Providers
+
+support.apple.com/kb/HT1937 
+
+support.apple.com/kb/HT1434
+
+Apple Retail Store
+
+www.apple.com/retail/storelist/
+
+Apple Support and Service
+
+www.apple.com/support/contact/phone_contacts.html
+
+Apple Complimentary Support
+
+www.apple.com/support/country/?dest=complimentary
+
+© 2020 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+100620-iOS-Warranty-Document-US-v1.4
+
+Apple One (1) Year Limited Warranty 
+
+For Apple Branded Product Only
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD, APPLE TV or HOMEPOD PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE. 
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Apple Park Way, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod, Apple TV or HomePod hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, liquid contact, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (eg. by presenting proof of purchase).
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD, APPLE TV and HOMEPOD SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad, Apple TV and HomePod to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES. 
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used parts that are equivalent to new in performance and reliability,
+
+(ii) replace the Apple Product with the same model (or with your consent a product that has similar functionality) formed from new and/or previously used parts that are equivalent to new in performance and reliability, or 
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply. 
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part. 
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+International Support Information
+
+	
+
+www.apple.com/support/country
+
+
+
+
+Authorized Distributors 
+
+	
+
+support.apple.com/kb/HT1434
+
+
+
+
+Apple Authorized Service Providers
+
+	
+
+support.apple.com/kb/HT1937 
+
+support.apple.com/kb/HT1434
+
+
+
+
+Apple Retail Store
+
+	
+
+www.apple.com/retail/storelist/
+
+
+
+
+Apple Support and Service
+
+	
+
+www.apple.com/support/contact/phone_contacts.html
+
+
+
+
+Apple Complimentary Support
+
+	
+
+www.apple.com/support/country/?dest=complimentary
+
+ 
+
+© 2018 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+043018-iOS-Warranty-Document-US-v1.3
+
+Apple One (1) Year Limited Warranty
+
+For Apple Branded Product Only
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD or APPLE TV PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW. DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Infinite Loop, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod or Apple TV hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, liquid contact, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (eg. by presenting proof of purchase).
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD AND APPLE TV SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad and Apple TV to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used parts that are equivalent to new in performance and reliability,
+
+(ii) replace the Apple Product with the same model (or with your consent a product that has similar functionality) formed from new and/or previously used parts that are equivalent to new in performance and reliability, or
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+
+
+
+International Support Information
+
+Authorized Distributors
+
+Apple Authorized Service Providers support.apple.com/kb/HT1937 | support.apple.com/kb/HT1434
+
+Apple Retail Store
+
+Apple Support and Service
+
+Apple Complimentary Support
+
+
+
+
+
+© 2016 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+071816-iOS-Warranty-Document-US-v1.2
+
+Apple One (1) Year Limited Warranty
+
+For Apple Branded Product Only
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD, iPOD or APPLE TV PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Infinite Loop, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad, iPod or Apple TV hardware product and the Apple-branded accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports unless failure has occurred due to a defect in materials or workmanship; (c) to damage caused by use with a third party component or product that does not meet the Apple Product’s specifications (Apple Product specifications are available at www.apple.com under the technical specifications for each product and also available in stores); (d) to damage caused by accident, abuse, misuse, fire, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product; (i) if any serial number has been removed or defaced from the Apple Product; or (j) if Apple receives information from relevant public authorities that the product has been stolen or if you are unable to deactivate passcode-enabled or other security measures designed to prevent unauthorized access to the Apple Product, and you cannot prove in any way that you are the authorized user of the product (eg. by presenting proof of purchase).
+
+IMPORTANT RESTRICTION FOR iPHONE, iPAD AND APPLE TV SERVICE.
+
+Apple may restrict warranty service for iPhone, iPad and Apple TV to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a claim to Apple or an AASP in accordance with this warranty, Apple will, at its option:
+
+(i) repair the Apple Product using new or previously used parts that are equivalent to new in performance and reliability,
+
+(ii) replace the Apple Product with the same model (or with your consent a product that has similar functionality) formed from new and/or previously used parts that are equivalent to new in performance and reliability, or
+
+(iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will retrieve the Apple Product from the Apple Retail or AASP location without delay unless Apple notifies you that the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material and instructions on how to properly pack and address your Apple product, so that you may ship your Apple Product to an ARS or AASP location. Instructions may be sent to you via email or in hard copy with the packaging material. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions regarding the method of packaging and shipping the Apple Product are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY APPLE PRODUCT UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+
+
+
+International Support Information
+
+Authorized Distributors
+
+Apple Authorized Service Providers support.apple.com/kb/HT1937 | support.apple.com/kb/HT1434
+
+Apple Retail Store
+
+Apple Support and Service
+
+Apple Complimentary Support
+
+
+
+
+
+© 2016 Apple Inc. All rights reserved. Apple and the Apple logo are trademarks of Apple Inc., registered in the U.S. and other countries.
+
+100615-iOS-Warranty-Document-US-v1.1
+
+Your Hardware Warranty
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD or iPOD PRODUCT YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW. DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND. Apple One (1) Year Limited Warranty – iOS For Apple Branded Product Only
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Infinite Loop, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad or iPod hardware product and accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports; (c) to damage caused by use with another product; (d) to damage caused by accident, abuse, misuse, liquid contact, fire, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product, or (i) if any serial number has been removed or defaced from the Apple Product.
+
+IMPORTANT RESTRICTION FOR iPHONE AND iPAD SERVICE.
+
+Apple may restrict warranty service for iPhone and iPad to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a valid claim to Apple or an AASP, Apple will, at its option, (i) repair the Apple Product using new or previously used parts that are equivalent to new in performance and reliability, (ii) replace the Apple Product with a device that is at least functionally equivalent to the Apple Product and is formed from new and/or previously used parts that are equivalent to new in performance and reliability, or (iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will promptly retrieve the Apple Product from the Apple Retail or AASP location, or the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material, so that you may ship your Apple Product to an ARS or AASP location in accordance with Apple’s instructions. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY iOS DEVICE UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+PRIVACY
+
+Apple will maintain and use customer information in accordance with the Apple Customer Privacy Policy available at www.apple.com/legal/internet-services/privacy.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+International Support Information
+Authorized Distributors
+Apple Authorized Service Providers support.apple.com/kb/HT1937 | support.apple.com/kb/HT1434
+Apple Retail Store
+Apple Support and Service
+Apple Complimentary Support
+WARRANTY OBLIGOR FOR REGION OR COUNTRY OF PURCHASE
+Region/Country of Purchase	Apple	Address
+Americas
+Brazil	Apple Computer Brasil Ltda	Rua: Leopoldo Couto Magalhães Júnior, nº 700, 7º andares, São Paulo, SP, Brasil
+04542-000
+SAC: 0800-761-0880
+http://www.apple.com/br/support
+Canada	Apple Canada Inc.	7495 Birchmount Rd.; Markham, Ontario, Canada; L3R 5G2 Canada
+Mexico	Apple Operations Mexico, S.A. de C.V.	Prolongación Paseo de la Reforma #600, Suite 132, Colonia Peña Blanca, Santa Fé, Delegación Álvaro Obregón, México D.F., CP 01210, Mexico
+United States and Other Americas Countries	Apple Inc.	1 Infinite Loop; Cupertino, CA 95014, U.S.A.
+Europe, Middle East and Africa
+Russian Federation	Limited Liability Company Apple Rus	5 Petrovka Street, Berlin House Business Center, 107031, Moscow, Russian Federation
+Turkey	Apple Teknoloji ve Satış Limited Şirketi	
+Büyükdere Caddesi Levent 199 Kat:22-23 
+34394 Şişli İstanbul, Turkey
+
+All Other Countries	Apple Distribution International	Hollyhill Industrial Estate Hollyhill, Cork, Republic of Ireland
+Asia Pacific
+Australia; New Zealand; Fiji, Papua New Guinea; Vanuatu	Apple Pty. Limited.	PO Box A2629, Sydney South, NSW 1235, Australia Tel: 133 622
+Hong Kong	Apple Asia Limited	2401 Tower One, Times Square, Causeway Bay; Hong Kong
+India	Apple India Private Ltd.	19th Floor, Concorde Tower C, UB City No 24, Vittal Mallya Road, Bangalore 560-001, India
+Japan	Apple Japan Inc.	6-10-1 Roppongi, Minato-ku Tokyo 106-6140, Japan
+Korea	Apple Korea Ltd.	3901, ASEM Tower; 159, Samsung-dong, Gangnam-Gu; Seoul 135-798, Republic of Korea
+Afghanistan, Bangladesh, Bhutan, Brunei, Cambodia, Guam, Indonesia, Laos, Singapore, Malaysia, Nepal, Pakistan, Philippines, Sri Lanka, Vietnam	Apple South Asia Pte. Ltd.	7 Ang Mo Kio Street 64
+Singapore 569086
+People's Republic of China	Apple Computer Trading (Shanghai) Co. Ltd.	Room 1815, No. 1 Jilong Road, Waigaoqiao Free Trade Zone, Shanghai 200131 China
+Thailand	Apple South Asia (Thailand) Limited	44th Floor, Room No. HH4401-6, The Offices at Central World, 999/9 Rama 1 Road, Pathumwan, Pathumwan, Bangkok 10330 Thailand
+Taiwan	Apple Asia LLC	19F., No.1, Songzhi Rd.,
+Xinyi Dist., Taipei City 110,
+Taiwan
+Other Asian Pacific Countries	Apple Inc.	1 Infinite Loop; Cupertino, CA 95014, U.S.A.
+
+
+Your Hardware Warranty
+
+IMPORTANT: BY USING YOUR iPHONE, iPAD or iPOD PRODUCT
+YOU ARE AGREEING TO BE BOUND BY THE TERMS OF THE
+APPLE ONE (1) YEAR LIMITED WARRANTY (“WARRANTY”) AS SET OUT BELOW.
+DO NOT USE YOUR PRODUCT UNTIL YOU HAVE READ THE TERMS OF THE WARRANTY.. IF YOU DO NOT AGREE TO THE TERMS OF THE WARRANTY, DO NOT USE THE PRODUCT AND RETURN IT WITHIN THE RETURN PERIOD STATED IN APPLE’S RETURN POLICY (FOUND AT www.apple.com/legal/sales_policies/) TO THE APPLE OWNED RETAIL STORE OR THE AUTHORIZED DISTRIBUTOR WHERE YOU PURCHASED IT FOR A REFUND.
+Apple One (1) Year Limited Warranty – iOS
+For Apple Branded Product Only
+
+HOW CONSUMER LAW RELATES TO THIS WARRANTY
+
+THIS WARRANTY GIVES YOU SPECIFIC LEGAL RIGHTS, AND YOU MAY HAVE OTHER RIGHTS THAT VARY FROM STATE TO STATE (OR BY COUNTRY OR PROVINCE). OTHER THAN AS PERMITTED BY LAW, APPLE DOES NOT EXCLUDE, LIMIT OR SUSPEND OTHER RIGHTS YOU MAY HAVE, INCLUDING THOSE THAT MAY ARISE FROM THE NONCONFORMITY OF A SALES CONTRACT. FOR A FULL UNDERSTANDING OF YOUR RIGHTS YOU SHOULD CONSULT THE LAWS OF YOUR COUNTRY, PROVINCE OR STATE.
+
+WARRANTY LIMITATIONS SUBJECT TO CONSUMER LAW
+
+TO THE EXTENT PERMITTED BY LAW, THIS WARRANTY AND THE REMEDIES SET FORTH ARE EXCLUSIVE AND IN LIEU OF ALL OTHER WARRANTIES, REMEDIES AND CONDITIONS, WHETHER ORAL, WRITTEN, STATUTORY, EXPRESS OR IMPLIED. APPLE DISCLAIMS ALL STATUTORY AND IMPLIED WARRANTIES, INCLUDING WITHOUT LIMITATION, WARRANTIES OF MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE AND WARRANTIES AGAINST HIDDEN OR LATENT DEFECTS, TO THE EXTENT PERMITTED BY LAW. IN SO FAR AS SUCH WARRANTIES CANNOT BE DISCLAIMED, APPLE LIMITS THE DURATION AND REMEDIES OF SUCH WARRANTIES TO THE DURATION OF THIS EXPRESS WARRANTY AND, AT APPLE'S OPTION, THE REPAIR OR REPLACEMENT SERVICES DESCRIBED BELOW. SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW LIMITATIONS ON HOW LONG AN IMPLIED WARRANTY (OR CONDITION) MAY LAST, SO THE LIMITATION DESCRIBED ABOVE MAY NOT APPLY TO YOU.
+
+WHAT IS COVERED BY THIS WARRANTY?
+
+Apple Inc. of One Infinite Loop, Cupertino, California, U.S.A. 95014 (“Apple”) warrants the Apple-branded iPhone, iPad or iPod hardware product and accessories contained in the original packaging (“Apple Product”) against defects in materials and workmanship when used normally in accordance with Apple's published guidelines for a period of ONE (1) YEAR from the date of original retail purchase by the end-user purchaser ("Warranty Period"). Apple’s published guidelines include but are not limited to information contained in technical specifications, user manuals and service communications.
+
+WHAT IS NOT COVERED BY THIS WARRANTY?
+
+This Warranty does not apply to any non-Apple branded hardware products or any software, even if packaged or sold with Apple hardware. Manufacturers, suppliers, or publishers, other than Apple, may provide their own warranties to you – please contact them for further information. Software distributed by Apple with or without the Apple brand (including, but not limited to system software) is not covered by this Warranty. Please refer to the licensing agreement accompanying the software for details of your rights with respect to its use. Apple does not warrant that the operation of the Apple Product will be uninterrupted or error-free. Apple is not responsible for damage arising from failure to follow instructions relating to the Apple Product’s use.
+
+This Warranty does not apply: (a) to consumable parts, such as batteries or protective coatings that are designed to diminish over time, unless failure has occurred due to a defect in materials or workmanship; (b) to cosmetic damage, including but not limited to scratches, dents and broken plastic on ports; (c) to damage caused by use with another product; (d) to damage caused by accident, abuse, misuse, liquid contact, fire, earthquake or other external cause; (e) to damage caused by operating the Apple Product outside Apple’s published guidelines; (f) to damage caused by service (including upgrades and expansions) performed by anyone who is not a representative of Apple or an Apple Authorized Service Provider (“AASP”); (g) to an Apple Product that has been modified to alter functionality or capability without the written permission of Apple; (h) to defects caused by normal wear and tear or otherwise due to the normal aging of the Apple Product, or (i) if any serial number has been removed or defaced from the Apple Product.
+
+IMPORTANT RESTRICTION FOR iPHONE AND iPAD SERVICE.
+
+Apple may restrict warranty service for iPhone and iPad to the country where Apple or its Authorized Distributors originally sold the device.
+
+YOUR RESPONSIBILITIES
+
+YOU SHOULD MAKE PERIODIC BACKUP COPIES OF THE INFORMATION CONTAINED ON THE APPLE PRODUCT STORAGE MEDIA TO PROTECT THE CONTENTS AND AS A PRECAUTION AGAINST POSSIBLE OPERATIONAL FAILURES.
+
+Before receiving warranty service, Apple or its agents may require that you furnish proof of purchase details, respond to questions designed to assist with diagnosing potential issues and follow Apple's procedures for obtaining warranty service. Before submitting your Apple Product for warranty service you should maintain a separate backup copy of the contents of its storage media, remove all personal information that you want to protect and disable all security passwords.
+
+DURING WARRANTY SERVICE THE CONTENTS OF THE STORAGE MEDIA WILL BE DELETED AND REFORMATTED. APPLE AND ITS AGENTS ARE NOT RESPONSIBLE FOR ANY LOSS OF SOFTWARE PROGRAMS, DATA OR OTHER INFORMATION CONTAINED ON THE STORAGE MEDIA OR ANY OTHER PART OF THE APPLE PRODUCT SERVICED.
+
+Following warranty service your Apple Product or a replacement device will be returned to you as your Apple Product was configured when originally purchased, subject to applicable updates. Apple may install system software updates as part of warranty service that will prevent the Apple Product from reverting to an earlier version of the system software. Third party applications installed on the Apple Product may not be compatible or work with the Apple Product as a result of the system software update. You will be responsible for reinstalling all other software programs, data and information. Recovery and reinstallation of other software programs, data and information are not covered under this Warranty.
+
+Important: Do not open the Apple Product. Opening the Apple Product may cause damage that is not covered by this Warranty. Only Apple or an AASP should perform service on this Apple Product.
+
+WHAT WILL APPLE DO IN THE EVENT THE WARRANTY IS BREACHED?
+
+If during the Warranty Period you submit a valid claim to Apple or an AASP, Apple will, at its option, (i) repair the Apple Product using new or previously used parts that are equivalent to new in performance and reliability, (ii) replace the Apple Product with a device that is at least functionally equivalent to the Apple Product and is formed from new and/or previously used parts that are equivalent to new in performance and reliability, or (iii) exchange the Apple Product for a refund of your purchase price.
+
+Apple may request that you replace certain user-installable parts or Apple Products. A replacement part or Apple Product, including a user-installable part that has been installed in accordance with instructions provided by Apple, assumes the remaining term of the Warranty or ninety (90) days from the date of replacement or repair, whichever provides longer coverage for you. When an Apple Product or part is replaced or a refund provided, any replacement item becomes your property and the replaced or refunded item becomes Apple's property.
+
+HOW TO OBTAIN WARRANTY SERVICE?
+
+Please access and review the online help resources described below before seeking warranty service. If the Apple Product is still not functioning properly after making use of these resources, please contact an Apple representative or, if applicable, an Apple owned retail store ("Apple Retail") or AASP, using the information provided below. An Apple representative or AASP will help determine whether your Apple Product requires service and, if it does, will inform you how Apple will provide it. When contacting Apple via telephone, other charges may apply depending on your location.
+
+Online information with details on obtaining warranty service is provided below.
+
+WARRANTY SERVICE OPTIONS
+
+Apple will provide warranty service through one or more of the following options:
+
+(i) Carry-in service. You may return your Apple Product to an Apple Retail or AASP location offering carry-in service. Service will be performed at the location, or Apple Retail or an AASP may send your Apple Product to an Apple Repair Service (“ARS”) location to be serviced. Once you are notified that service is complete, you will promptly retrieve the Apple Product from the Apple Retail or AASP location, or the Apple Product will be sent directly to your location from the ARS location.
+
+(ii) Mail-in service. If Apple determines that your Apple Product is eligible for mail-in service, Apple will send you prepaid waybills and if applicable, packaging material, so that you may ship your Apple Product to an ARS or AASP location in accordance with Apple’s instructions. Once service is complete, the ARS or AASP location will return the Apple Product to you. Apple will pay for shipping to and from your location if all instructions are followed.
+
+(iii) Do-it-yourself (DIY) parts service. DIY parts service allows you to service your own Apple Product. If DIY parts service is available in the circumstances, the following process will apply.
+
+(a) Service where Apple requires return of the replaced Apple Product or part. Apple may require a credit card authorization as security for the retail price of the replacement Apple Product or part and applicable shipping costs. If you are unable to provide credit card authorization, DIY parts service may not be available to you and Apple will offer alternative arrangements for service. Apple will ship a replacement Apple Product or part to you with installation instructions, if applicable, and any requirements for the return of the replaced Apple Product or part. If you follow the instructions, Apple will cancel the credit card authorization, so you will not be charged for the Apple Product or part and shipping to and from your location. If you fail to return the replaced Apple Product or part as instructed or return a replaced Apple Product or part that is ineligible for service, Apple will charge your credit card for the authorized amount.
+
+(b) Service where Apple does not require return of the replaced Apple Product or part. Apple will ship you free of charge a replacement Apple Product or part accompanied by instructions on installation, if applicable, and any requirements for the disposal of the replaced Apple Product or part.
+
+(c) Apple is not responsible for any labor costs you incur relating to DIY parts service. Should you require further assistance, contact Apple at the telephone number listed below.
+
+Apple reserves the right to change the method by which Apple may provide warranty service to you, and your Apple Product’s eligibility to receive a particular method of service. Service will be limited to the options available in the country where service is requested. Service options, parts availability and response times may vary according to country. You may be responsible for shipping and handling charges if the Apple Product cannot be serviced in the country it is in. If you seek service in a country that is not the original country of purchase, you will comply with all applicable import and export laws and regulations and be responsible for all custom duties, V.A.T. and other associated taxes and charges. Where international service is available, Apple may repair or replace Apple Products and parts with comparable Apple Product and parts that comply with local standards.
+
+LIMITATION OF LIABILITY
+
+EXCEPT AS PROVIDED IN THIS WARRANTY AND TO THE MAXIMUM EXTENT PERMITTED BY LAW, APPLE IS NOT RESPONSIBLE FOR DIRECT, SPECIAL, INCIDENTAL OR CONSEQUENTIAL DAMAGES RESULTING FROM ANY BREACH OF WARRANTY OR CONDITION, OR UNDER ANY OTHER LEGAL THEORY, INCLUDING BUT NOT LIMITED TO LOSS OF USE; LOSS OF REVENUE; LOSS OF ACTUAL OR ANTICIPATED PROFITS (INCLUDING LOSS OF PROFITS ON CONTRACTS); LOSS OF THE USE OF MONEY; LOSS OF ANTICIPATED SAVINGS; LOSS OF BUSINESS; LOSS OF OPPORTUNITY; LOSS OF GOODWILL; LOSS OF REPUTATION; LOSS OF, DAMAGE TO, COMPROMISE OR CORRUPTION OF DATA; OR ANY INDIRECT OR CONSEQUENTIAL LOSS OR DAMAGE HOWSOEVER CAUSED INCLUDING THE REPLACEMENT OF EQUIPMENT AND PROPERTY, ANY COSTS OF RECOVERING, PROGRAMMING, OR REPRODUCING ANY PROGRAM OR DATA STORED IN OR USED WITH THE APPLE PRODUCT OR ANY FAILURE TO MAINTAIN THE CONFIDENTIALITY OF INFORMATION STORED ON THE APPLE PRODUCT.
+
+THE FOREGOING LIMITATION SHALL NOT APPLY TO DEATH OR PERSONAL INJURY CLAIMS, OR ANY STATUTORY LIABILITY FOR INTENTIONAL AND GROSS NEGLIGENT ACTS AND/OR OMISSIONS. APPLE DISCLAIMS ANY REPRESENTATION THAT IT WILL BE ABLE TO REPAIR ANY iOS DEVICE UNDER THIS WARRANTY OR REPLACE THE APPLE PRODUCT WITHOUT RISK TO OR LOSS OF INFORMATION STORED IN THE APPLE PRODUCT.
+
+SOME STATES (COUNTRIES AND PROVINCES) DO NOT ALLOW THE EXCLUSION OR LIMITATION OF INCIDENTAL OR CONSEQUENTIAL DAMAGES, SO THE ABOVE LIMITATION OR EXCLUSION MAY NOT APPLY TO YOU.
+
+PRIVACY
+
+Apple will maintain and use customer information in accordance with the Apple Customer Privacy Policy available at www.apple.com/legal/internet-services/privacy.
+
+GENERAL
+
+No Apple reseller, agent, or employee is authorized to make any modification, extension, or addition to this Warranty. If any term is held to be illegal or unenforceable, the legality or enforceability of the remaining terms shall not be affected or impaired. This Warranty is governed by and construed under the laws of the country in which the Apple Product purchase took place. Apple or its successor in title is the warrantor under this Warranty.
+
+ONLINE INFORMATION
+
+More information of the following is available online:
+
+International Support Information
+Authorized Distributors
+Apple Authorized Service Providers support.apple.com/kb/HT1937 | support.apple.com/kb/HT1434
+Apple Retail Store
+Apple Support and Service
+Apple Complimentary Support
+WARRANTY OBLIGOR FOR REGION OR COUNTRY OF PURCHASE
+Region/Country of Purchase	Apple	Address
+Americas
+Brazil	Apple Computer Brasil Ltda	Rua: Leopoldo Couto Magalhães Júnior, nº 700, 7º andares, São Paulo, SP, Brasil
+04542-000
+SAC: 0800-761-0880
+http://www.apple.com/br/support
+Canada	Apple Canada Inc.	7495 Birchmount Rd.; Markham, Ontario, Canada; L3R 5G2 Canada
+Mexico	Apple Operations Mexico, S.A. de C.V.	Prolongación Paseo de la Reforma #600, Suite 132, Colonia Peña Blanca, Santa Fé, Delegación Álvaro Obregón, México D.F., CP 01210, Mexico
+United States and Other Americas Countries	Apple Inc.	1 Infinite Loop; Cupertino, CA 95014, U.S.A.
+Europe, Middle East and Africa
+Russian Federation	Limited Liability Company Apple Rus	5 Petrovka Street, Berlin House Business Center, 107031, Moscow, Russian Federation
+Turkey	Apple Teknoloji ve Satış Limited Şirketi	FSM Mahallesi Poligon Caddesi Buyaka 2 Sitesi No:8, Blok No.2 (C Blok) Kat:18 34471 Ümraniye İstanbul, Turkey
+All Other Countries	Apple Distribution International	Hollyhill Industrial Estate Hollyhill, Cork, Republic of Ireland
+Asia Pacific
+Australia; New Zealand; Fiji, Papua New Guinea; Vanuatu	Apple Pty. Limited.	PO Box A2629, Sydney South, NSW 1235, Australia Tel: 133 622
+Hong Kong	Apple Asia Limited	2401 Tower One, Times Square, Causeway Bay; Hong Kong
+India	Apple India Private Ltd.	19th Floor, Concorde Tower C, UB City No 24, Vittal Mallya Road, Bangalore 560-001, India
+Japan	Apple Japan Inc.	6-10-1 Roppongi, Minato-ku Tokyo 106-6140, Japan
+Korea	Apple Korea Ltd.	3901, ASEM Tower; 159, Samsung-dong, Gangnam-Gu; Seoul 135-798, Republic of Korea
+Afghanistan, Bangladesh, Bhutan, Brunei, Cambodia, Guam, Indonesia, Laos, Singapore, Malaysia, Nepal, Pakistan, Philippines, Sri Lanka, Vietnam	Apple South Asia Pte. Ltd.	7 Ang Mo Kio Street 64
+Singapore 569086
+People's Republic of China	Apple Computer Trading (Shanghai) Co. Ltd.	Room 1815, No. 1 Jilong Road, Waigaoqiao Free Trade Zone, Shanghai 200131 China
+Thailand	Apple South Asia (Thailand) Limited	44th Floor, Room No. HH4401-6, The Offices at Central World, 999/9 Rama 1 Road, Pathumwan, Pathumwan, Bangkok 10330 Thailand
+Taiwan	Apple Asia LLC	19F., No.1, Songzhi Rd.,
+Xinyi Dist., Taipei City 110,
+Taiwan
+Other Asian Pacific Countries	Apple Inc.	1 Infinite Loop; Cupertino, CA 95014, U.S.A.

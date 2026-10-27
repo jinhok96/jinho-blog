@@ -1,0 +1,66 @@
+# 가져온 시각: 2026-10-27T21:41:45.764Z
+# 원본: https://support.apple.com/en-us/109519
+Prepare your iPhone or iPad for a service appointment - Apple Support
+https://support.apple.com/en-us/109519
+
+Prepare your iPhone or iPad for a service appointment
+
+Before you bring in your iPhone or iPad for service, follow these steps to help protect your personal information and save time on your repair.
+
+Get your iPhone or iPad ready for service
+
+When you bring your iPhone or iPad in for service
+
+When you get your iPhone or iPad back from service
+
+Never give your Apple Account password, device passcode, or account security details to anyone else. Neither Apple nor Apple Authorized Service Providers will ask for this information.
+
+For some software support, you might be asked to enter your device passcode or Apple Account password. Always remain present while the technician has access to your device.
+
+Get your iPhone or iPad ready for service
+
+Before you bring your device to an Apple Store or Apple Authorized Service Provider:
+
+If your device is unresponsive or you otherwise can't complete some of the steps, do as many as you can. You might also be able to complete some steps on the web at your Apple Account page or icloud.com/find.
+
+Back up your iPhone or iPad.
+
+Make sure the iCloud features you use have finished syncing: Open the Settings app, tap your name, then tap iCloud. The status icon next to Saved to iCloud should be green.
+
+Turn off Apple Cash: Open the Settings app, scroll down, then tap Wallet & Apple Pay. Then turn off Apple Cash.
+
+Remove your cards and passes from Apple Wallet: Open the Wallet app, select a card or pass, tap the More button, then tap Card (or Pass) Details. Tap Remove Card (or Pass).
+
+Check your iPhone Parts and Service History or iPad Parts and Service History. If a part has Finish Repair next to it, you need to finish that repair before you bring your device to an Apple Store or Apple Authorized Service Provider. If you can't finish a repair for a part that needs service, you might be charged an out-of-warranty fee or the service might be denied for that part.1
+
+In iOS 27 or iPadOS 27 or later, turn on Ready for Repair or Trade-In for your device: In the Find My app, select your device, tap the More button, tap Repair or Trade In, then tap Enable. In iOS 26 or iPadOS 26 or earlier, turn off Find My: Go to the Settings app, tap your name, then tap Find My. Tap "Find My [Device]" and turn off "Find My [Device]".2
+
+If you can't turn off Find My on your device, go to the Find My app on another device or go to icloud.com/find. Select your iPhone, then select Repair or Trade-In or Remove This Device. Follow the onscreen instructions to prepare it for repair.
+
+When you bring your iPhone or iPad in for service
+
+Before you bring your device into an Apple Store or Apple Authorized Service Provider, check whether you need an appointment. For example, you should schedule a Genius Bar reservation before you go to an Apple Store.
+
+When you go to the service location, you should bring:
+
+Your device and any accessories that you need help with (if you need help with your Apple Pencil, bring the iPad that you use with your Apple Pencil)
+
+If possible, your sales receipt (some repairs might require proof of purchase)
+
+A form of personal identification (such as driver’s license, passport, or other government-issued ID)
+
+When you get your iPhone or iPad back from service
+
+When you get your iPhone or iPad back from an Apple Store or Apple Authorized Service Provider, keep in mind that your device might have been erased. If so, you need to restore it from an existing iCloud backup or a backup on your computer, or set it up as a new device.
+
+If you choose to set up your iPhone or iPad as a new device, then decide to restore the device to an existing iCloud backup at a later time, you need to erase your device and restore it from a previously saved iCloud backup as soon as possible. If you don't erase your device and restore from a previous iCloud backup, the new iCloud backups created when you set up the device as a new device will overwrite your previously saved iCloud backups.
+
+If you turned off Find My as part of the service process, be sure to turn Find My back on when you get your iPhone or iPad back.
+
+Need help with an appointment or figuring out your options? Find your service and support options
+
+Find out what to do if you can't finish a repair.
+
+In iOS 26 or iPadOS 26 or earlier, to prevent anyone else from getting service for your device without your knowledge, Apple might not be able to service your device if Find My isn't turned off.
+
+Published Date: September 15, 2026

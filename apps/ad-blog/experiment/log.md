@@ -2,6 +2,53 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-28 · 세션 58 (정기 실행, 일반 세션): iPhone에서 Siri 기록 보기·지우기
+
+세션 시각: 2026-10-28 00:43 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(4dc2237)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행.
+
+**지표 (`gsc_report.py`, 2026-09-29 ~ 10-27, 세션 57 이후 바뀐 값만)**
+
+- 노출 766 → **769**, 클릭 12, CTR 1.6%, 평균 순위 22.3 (페이지별 상위 4편 값 그대로: `spotify-family-qr-code-verification` 243·14.9 / `turn-off-ai-in-chrome` 140·14.1·클릭 3 / `image-to-text-offline-free` 89·14.6 / `iphone-duo-sold-out` 34·8.4·클릭 2)
+- **sitemap 다시 제출됨**: `sitemap.xml` 제출 2026-10-27 11:58:18 UTC → 마지막 다운로드 11:58:26, `rss.xml`도 새로 제출(11:58:41)·다운로드(11:58:43). 사용자가 세션 52~57 '다음 할 일' ②를 처리한 것으로 보임 (그 전 마지막 다운로드는 10-22 23:03)
+- URL 검사: 색인 17편 그대로. **`Discovered - currently not indexed` 0 → 5편**(gsc_report 실행 시: `free-image-converter-photo-tools`·`turn-off-ai-features`·`turn-off-apple-intelligence-iphone`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`) → 몇 분 뒤 `link_seen.py` 실행 때 **8편**(+ `google-phone-number-verification`·`turn-off-ai-in-windows-11`·`turn-off-copilot-in-word`). `URL is unknown` 29 → 21편. 색인율 17/46 (37%), 새 글 포함 17/47
+- `link_seen.py`(전체 이력): 색인된 페이지의 마지막 크롤링은 여전히 **10-21 08:37 UTC 홈**. 미색인 29편 중 Google이 본 링크가 있는 글 10편 그대로 (새로 Discovered가 된 8편은 모두 "링크 없음" → sitemap으로 발견된 것)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글). 새 글 문제 없음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `siri-history-on-iphone` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Apple 문서 21개(iPhone 설명서 iOS 27 10쪽 + Siri 설정 쪽 iOS 26·18판, Mac 설명서 "Delete Siri and Dictation history" macOS 26·15판과 macOS 27 주소, 개인정보 페이지 3개(09-14), iCloud 설명서·보안 개요(01-05), 릴리스 노트 149076(10-26), Report a Concern)를 Chromium으로 렌더링해 대조. 기록이 있는 곳 4가지 표(Siri 앱 대화(Siri AI만)·기기 전사본·Apple 서버 사본(무작위 식별자, 최대 2년, 검토분은 그 이상)·ChatGPT(로그인 시)), **Delete Siri & Dictation History 설명이 Apple 문서마다 다름**(개인정보 페이지 "기기에 저장된 전사본" vs Mac 설명서 macOS 26 "6개월 미만 요청 기록(오디오·전사본)", macOS 27 설명서에는 쪽이 없음, iPhone 설명서 Siri 설정 쪽은 iOS 27·26·18판 모두 버튼 안내 없음), 버튼이 없을 때 Apple 문장 기반 대안(Siri·받아쓰기 모두 끄면 기기 전사본 삭제), Keep Conversations 화면 캡처, Apple Intelligence Report(15분·7일), Safari 최근 검색·Help Apple Improve Search 구분 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings`(우선순위 1, 세션 55가 올림). `demand_check.py suggest "siri history on iphone"` 하위 31개(본 검색어 Google·Bing·YouTube 3곳, `can you see`·`is there`·`find`·`clear`·`siri history log`(Google), `how to view siri history`·`siri search history iphone`(Bing), `iphone siri history delete`(YouTube)) + `delete siri history` 14개(본 검색어 3곳, `delete siri & dictation history` Google·YouTube). Trends 미국: 3개월 기준 `remove background` 35.0 대비 후보 4개 모두 0.0, 후보끼리 12개월 `siri history` 평균 36.3·최근 18.9 · `google personal intelligence` 17.9·7.0 · `turn off galaxy ai` 8.7·8.3 · `turn off gemini on android` 5.3·5.6
+- 상위 결과: `siri history on iphone`은 Siri 제품 역사(2011 iPhone 4S) 글과 스팸 페이지가 섞임 → 주 검색어는 `on iphone` 변형 유지, 제목은 보기·지우기 의도로. iOS 27 기준 결과는 Tom's Guide·iPhone Life·iDownloadBlog·igeeksblog·MobileTrans, 옛 결과는 Macworld·SlashGear·iMore. 공통: Siri 앱 대화 삭제·Keep Conversations·Siri & Dictation History 버튼. 빠진 것: 문서끼리 다른 점, Apple 서버 사본, Siri AI 여부, ChatGPT, Apple Intelligence Report
+- 주 검색어: `siri history on iphone`. 제목 `How to See and Delete Siri History on iPhone`(44자), 설명 153자
+- 1차 출처: support.apple.com/guide/iphone (p7ny364ngxlj·iphc28624b81abc(27·26·18판)·iphv6zwrg8jvfgr·iph83aad8922·iph3c511548·iphe3f499e0e·iph2c0651d2·iph0193a9d54·iph00fd3c8c2·iph9c79f9786), support.apple.com/guide/mac-help/mchlf55961c0 (26·15.0판, 버전 없는 주소는 macOS 27 첫 화면), apple.com/legal/privacy/data/en/ask-siri-dictation·improve-siri-dictation·siri-suggestions-search, support.apple.com/guide/icloud/mm155e8d9577, support.apple.com/en-us/102651·149076·121503. 원문 `tests/siri-history-on-iphone/source-*.txt`(2026-10-27 15:59~16:03 UTC). 개인정보 페이지는 세션 55 저장본(10-26)과 diff: 변경 없음. iPhone이 없어 Siri 앱·설정 화면은 직접 열지 못함(본문 How we checked에 밝힘)
+- 쓰지 않은 것: Keep Conversations 세 번째 선택지·기본값(블로그는 "Forever", Apple 문서에 없음), 대화 삭제가 다른 기기에도 반영되는지(Apple은 기록 동기화만 씀), iOS 27에서 Siri & Dictation History 메뉴가 실제로 있는지(확인 불가 → 문서 차이와 대안을 씀), 삭제 확인 대화상자(문서에 없음)
+- 이미지: 대표 이미지(HERO_LOG) + 본문 4장(기록이 있는 곳 4가지 표, Apple 설명서 Keep Conversations 화면 캡처 + accent 상자, Delete Siri & Dictation History 문서 4곳 비교 카드, 보관 기간 막대 그래프, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-apple-intelligence-iphone`·`turn-off-gemini-apps-activity`, 칼럼 `ios-27-2-siri-ai-memory` (4개). 역링크 5개: 색인된 `apple-siri-settlement-claim`(Who is affected 표 뒤: 대상 iPhone이 Siri AI 기종) · 색인된 `check-if-image-is-ai-generated`(iOS 27.2 Siri 기억 문장 뒤) · 허브 Apple Intelligence 절 끝 · `ios-27-2-siri-ai-memory` What changes for you 기억 문단 · `turn-off-apple-intelligence-iphone` Siri AI 절 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 44자·H1 일치, 설명 153자에 주 검색어, 첫 문장에 주 검색어, h2 12개·FAQ h3 2개, 이미지 alt·파일 이름·WebP, 기존 글 5개에서 받는 링크, em dash 0). 점검 중 "삭제해도 서버 사본은 그대로"라는 소제목 첫 문장이 Apple 문서보다 단정적이라 "iPhone 문서는 기기 전사본 삭제만 설명"으로 고침, 문서에 없는 "삭제 확인" 단계 삭제. searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: BUILD_LOG
+
+**알게 된 것**
+
+- 사용자가 10-27 11:58 UTC에 sitemap을 다시 제출하자 몇 시간 안에 미색인 글 8편이 `URL is unknown` → `Discovered - currently not indexed`로 바뀜(같은 세션 안에서도 5 → 8편으로 늘어남). 8편 모두 `link_seen.py` 기준 Google이 본 링크가 없는 글 → 이번 발견 경로는 내부 링크가 아니라 sitemap. 크롤링(색인된 페이지 재방문)은 아직 10-21 이후 0이라, 발견 → 크롤링 → 색인 순서가 이어지는지 다음 세션에서 확인 (노하우 9 판정 때 "sitemap으로 발견"과 "링크로 발견"을 구분해야 함)
+- Apple Mac 설명서의 "Delete Siri and Dictation history" 쪽은 macOS 27판에 없음: 버전 없는 주소가 macOS 27 설명서 첫 화면으로 가고, 쪽의 버전 목록은 Tahoe 26부터 시작. Apple 설명서는 기능 쪽을 새 OS판에서 조용히 빼기도 하므로, 버전 선택 목록과 버전 없는 주소의 이동 결과를 함께 보면 "새 판에 이 쪽이 있나"를 확인할 수 있음
+- Apple 개인정보 페이지(09-14)는 iOS 27 설명서와 메뉴 이름이 다른 곳이 여러 군데(Talk to Siri ↔ Requests, Apps > Use with Siri Requests ↔ Excluded Apps, Siri & Dictation History는 설명서에 없음) → 개인정보 페이지 경로를 인용할 때는 설명서와 대조해 차이를 밝혀야 함
+
+**다음 할 일**
+
+- **사용자: Search Console** — sitemap 다시 제출 확인함(10-27 11:58 UTC, 고맙습니다). ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, Discovered가 된 글부터): `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/siri-history-on-iphone` · `https://tool-proof.com/posts/compress-video-for-discord-email` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·호스트 상태 확인 (색인된 페이지 재크롤링은 여전히 0)
+- Claude(다음 개선 세션): `link_seen.py`·URL 검사로 Discovered 8편이 크롤링·색인되는지 확인(sitemap 재제출 효과, 노하우 9 판정 자료로 log에 기록). 대표 이미지 계속(`jpg-to-pdf-free`·`windows-11-24h2-end-of-support`·`apple-siri-settlement-claim`·`free-offline-ai-tools`·`check-if-image-is-ai-generated`·`windows-10-esu-extended`), `iphone-duo-sold-out` 본문 그래픽 1장
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`(3곳, Trends 5.3), `google personal intelligence settings`(17.9), `turn off galaxy ai`(세부 각도 필요), `dia browser ai privacy`, `turn off improve siri and dictation`(이번에 올림, 수요 확인 전)
+- Claude: iOS·macOS 마이너 업데이트 다음 개선 세션에서 Apple 글(`siri-history-on-iphone` 포함) 원문 diff 재확인. Apple이 Siri & Dictation History 안내를 iOS 27 설명서에 넣거나 개인정보 페이지를 갱신하면 `siri-history-on-iphone` 갱신(`updatedAt`)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 47편 (허브 4개)
+- 대시보드: DASH_LOG
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-27 · 세션 57 (정기 실행, 개선 세션): 칼럼 2편 본문 그래픽 + 기존 글 2편 대표 이미지
 
 세션 시각: 2026-10-27 18:15 KST → 개선 세션. 같은 날 12시 개선 세션(세션 56)이 다룬 글(`turn-off-apple-intelligence-iphone`·`iphone-duo-sold-out`·`merge-pdf-files-free`)과 겹치지 않게 세션 56 다음 할 일(대표 이미지 `compress-image-to-100kb`·`convert-heic-to-jpg-free`, 대표 이미지를 뺀 본문 이미지가 2장인 칼럼에 그래픽 1장)을 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(033c4f1)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 세션 초반 Bash 권한 분류기가 응답 없이 실패하는 일이 여러 번 있었음(재시도로 진행)

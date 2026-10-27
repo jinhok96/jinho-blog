@@ -1,0 +1,148 @@
+# 가져온 시각: 2026-10-27T21:38:07.058Z
+# 원본: https://support.apple.com/guide/iphone/important-handling-information-iph301fc905/ios
+Important safety information for iPhone - Apple Support
+https://support.apple.com/guide/iphone/important-safety-information-iph301fc905/ios
+
+Select version:
+iOS 27
+iOS 26
+iOS 18
+iOS 17
+iOS 16
+iOS 15
+iOS 14
+iOS 13
+iOS 12
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Important safety information for iPhone
+
+WARNING: Failure to follow these safety instructions could result in fire, electric shock, injury, or damage to iPhone or other property. Read all the safety information below before using iPhone.
+
+Handling.  Handle iPhone with care. It is made of metal, glass, and plastic and has sensitive electronic components inside. iPhone or its battery can be damaged if dropped, burned, punctured, or crushed, or if it comes in contact with liquid. If you suspect damage to iPhone or the battery, discontinue use of iPhone, as it may cause overheating or injury. Don’t use iPhone with cracked glass, as it may cause injury. If you’re concerned about scratching the surface of iPhone, consider using a case or cover.
+
+Repairing.  iPhone should only be serviced by a trained technician. Disassembling iPhone may damage it, result in loss of splash and water resistance (supported models), or cause injury to you. If iPhone is damaged or malfunctions, you should contact Apple, or an Apple Authorized Service Provider for service. Repairs performed by untrained individuals or using non-genuine Apple parts may affect the safety and functionality of the device. You can find more information about repairs and service at the iPhone Repair website.
+
+Battery.  An iPhone battery should only be repaired by a trained technician to avoid battery damage, which could cause overheating, fire, or injury. Batteries should be recycled or disposed of separately from household waste and according to local environmental laws and guidelines. For information about battery service and recycling, see the Battery Service and Recycling website.
+
+Lasers.  The proximity sensor in iPhone 7 and later, the TrueDepth camera system, and the LiDAR Scanner contain one or more lasers. These laser systems may be disabled for safety reasons if the device is damaged or malfunctions. If you receive a notification on your iPhone that the laser system is disabled, you should contact Apple or an Apple Authorized Service Provider for service. Improper repair, modification, or use of non-genuine Apple components in the laser systems may prevent the safety mechanisms from functioning properly, and could cause hazardous exposure and injury to eyes or skin.
+
+Distraction.  Using iPhone in some circumstances may distract you and might cause a dangerous situation (for example, avoid listening to music with headphones while riding a bicycle and avoid playing video content or typing a text message while driving a car). Observe rules that prohibit or restrict the use of mobile devices or headphones. For more about safety while driving, see Stay focused while driving with iPhone.
+
+Navigation.  Maps depends on data services. These data services are subject to change and may not be available in all countries or regions, resulting in maps and location-based information that may be unavailable, inaccurate, or incomplete. Compare the information provided in Maps to your surroundings. Use common sense when navigating. Always observe current road conditions and posted signs to resolve any discrepancies. Some Maps features require Location Services.
+
+Charging. To charge iPhone, do any of the following:
+
+Charge the iPhone battery using the charging cable (included) and an Apple USB power adapter (sold separately).
+
+Place iPhone face up on MagSafe Charger or MagSafe Duo Charger (connected to Apple 20W USB-C power adapter or other compatible power adapter) or on a Qi-certified charger. (MagSafe Charger, MagSafe Duo Charger, power adapters, and Qi-certified chargers are sold separately.)
+
+Connect iPhone and your computer with a cable.
+
+You can also charge iPhone with “Made for iPhone” or other third-party cables and power adapters that are compliant with USB 2.0 or later and with applicable country regulations and international and regional safety standards. Other adapters may not meet applicable safety standards, and charging with such adapters could pose a risk of death or injury.
+
+Using damaged cables or chargers, or charging when moisture is present, can cause fire, electric shock, injury, or damage to iPhone or other property. When you use the charging cable (included) or a wireless charger (sold separately) to charge iPhone, make sure its USB connector is fully inserted into a compatible power adapter before you plug the adapter into a power outlet. It’s important to keep iPhone, the charging cable, the power adapter, and any wireless charger in a well-ventilated area when in use or charging. When using a wireless charger, remove metallic cases and avoid placing metallic foreign objects on the charger (for example, keys, coins, batteries, or jewelry), as they may become warm or interfere with charging.
+
+Charging cable and connector.  Avoid prolonged skin contact with the charging cable and connector when the charging cable is connected to a power source because it may cause discomfort or injury. Sleeping or sitting on the charging cable or connector should be avoided.
+
+Prolonged heat exposure.  iPhone and Apple USB power adapters (sold separately) comply with required surface temperature limits defined by applicable country regulations and international and regional safety standards. However, even within these limits, sustained contact with warm surfaces for long periods of time may cause discomfort or injury. Use common sense to avoid situations where your skin is in contact with a device, its power adapter, or a wireless charger when it’s operating or connected to a power source for long periods of time. For example, don’t sleep on a device, power adapter, or wireless charger, or place them under a blanket, pillow, or your body, when it’s connected to a power source. Keep your iPhone, the power adapter, and any wireless charger in a well-ventilated area when in use or charging. Take special care if you have a physical condition that affects your ability to detect heat against the body.
+
+USB power adapter.  (sold separately) To operate an Apple USB power adapter safely and reduce the possibility of heat-related injury or damage, plug the power adapter directly into a power outlet. Donʼt use the power adapter in wet locations, such as near a sink, bathtub, or shower stall, and don’t connect or disconnect the power adapter with wet hands. Stop using the power adapter and any cables if any of the following conditions exist:
+
+The power adapter plug or prongs are damaged.
+
+The charge cable becomes frayed or otherwise damaged.
+
+The power adapter is exposed to excessive moisture, or liquid is spilled into the power adapter.
+
+The power adapter has been dropped, and its enclosure is damaged.
+
+Apple 40W Dynamic Power Adapter with 60W Max specifications*:
+
+Frequency: 50 to 60 Hz, single phase
+
+Line Voltage: 100 to 240 V
+
+Output Voltage/Current: (AVS) 15-20VDC/2A [3.0A DPS] or (AVS) 9-15VDC/2.67A [3.0A DPS] or 9VDC/3A or 5VDC/3A
+
+Continuous Sustained Power: 40W
+
+Maximum Output Power: 60W
+
+Output Port: USB-C
+
+Apple 20W USB-C power adapter specifications:
+
+Frequency: 50 to 60 Hz, single phase
+
+Line voltage: 100 to 240 V
+
+Output power: 5V/3A or 9V2.2A
+
+Output Port: USB-C
+
+Apple 18W USB-C power adapter specifications:
+
+Frequency: 50 to 60 Hz, single phase
+
+Line voltage: 100 to 240 V
+
+Output power: 5V/3A or 9V/2A
+
+Output Port: USB-C
+
+Apple 5W USB power adapter specifications:
+
+Frequency: 50 to 60 Hz, single phase
+
+Line voltage: 100 to 240 V
+
+Output power: 5V/1A
+
+Output Port: USB
+
+Hearing loss.  Listening to sound at high volumes may damage your hearing. Background noise, as well as continued exposure to high volume levels, can make sounds seem quieter than they actually are. Turn on audio playback and check the volume before inserting anything in your ear. For information about how to set a maximum volume limit, see Use hearing health features in Health. For more information about hearing loss, see the Sound and Hearing website.
+
+WARNING: To prevent possible hearing damage, do not listen at high volume levels for long periods.
+
+Radio frequency exposure.  iPhone uses radio signals to connect to wireless networks. For information about radio frequency (RF) energy resulting from radio signals, and steps you can take to minimize exposure, go to Settings  > General > Legal & Regulatory > RF Exposure, or see the RF Exposure website.
+
+Radio frequency interference.  Observe signs and notices that prohibit or restrict the use of electronic devices. Although iPhone is designed, tested, and manufactured to comply with regulations governing radio frequency emissions, such emissions from iPhone can negatively affect the operation of other electronic equipment, causing them to malfunction. When use is prohibited, such as while traveling in aircraft, or when asked to do so by authorities, turn off iPhone, or use airplane mode or Settings  > Wi-Fi and Settings > Bluetooth to turn off the iPhone wireless transmitters.
+
+Medical device interference.  iPhone, MagSafe accessories, and Apple Pencil contain magnets as well as components and/or radios that emit electromagnetic fields. These magnets and electromagnetic fields might interfere with medical devices.
+
+Consult your physician and medical device manufacturer for information specific to your medical device and whether you need to maintain a safe distance of separation between your medical device and iPhone, MagSafe accessories, or Apple Pencil. Manufacturers often provide recommendations on the safe use of their devices around wireless or magnetic products to prevent possible interference. If you suspect iPhone, MagSafe accessories, or Apple Pencil are interfering with your medical device, stop using these products.
+
+Medical devices such as implanted pacemakers and defibrillators may contain sensors that respond to magnets and radios when in close contact. To avoid any potential interactions with these devices, keep your MagSafe compatible iPhone models, MagSafe accessories, and Apple Pencil a safe distance away from your device (more than 6 inches/15 cm, or more than 12 inches/30 cm while wirelessly charging, but consult with your physician and your device manufacturer for specific guidelines).
+
+Not a medical device.  iPhone is not a medical device and should not be used as a substitute for professional medical judgment. It is not designed or intended for use in the diagnosis of disease or other conditions, or in the cure, mitigation, treatment, or prevention of any condition or disease. Please consult your healthcare provider prior to making any decisions related to your health.
+
+Medical conditions.  If you have any medical condition or experience symptoms that you believe could be affected by iPhone or flashing lights (for example, seizures, blackouts, eyestrain, or headaches), consult with your physician prior to using iPhone.
+
+Explosive and other atmospheric conditions.  Charging or using iPhone in any area with a potentially explosive atmosphere, such as areas where the air contains high levels of flammable chemicals, vapors, or particles (such as grain, dust, or metal powders), may be hazardous. Exposing iPhone to environments having high concentrations of industrial chemicals, including near evaporating liquified gasses such as helium, may damage or impair iPhone functionality. Obey all signs and instructions.
+
+Repetitive motion.  When you perform repetitive activities such as typing, swiping, or playing games on iPhone, you may experience discomfort in your hands, arms, wrists, shoulders, neck, or other parts of your body. If you experience discomfort, stop using iPhone and consult a physician.
+
+High-consequence activities.  This device is not intended for use where the failure of the device could lead to death, personal injury, or severe environmental damage.
+
+Choking hazard.  Some iPhone accessories may present a choking hazard to small children. Keep these accessories away from small children.
+
+For Australian customers, see the Online Safety resources website.
+
+*Not available in all countries or regions.
+
+Previous
+Install or remove configuration profiles
+Next
+Important handling information
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

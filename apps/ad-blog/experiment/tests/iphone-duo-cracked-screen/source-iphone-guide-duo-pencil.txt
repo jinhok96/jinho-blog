@@ -1,0 +1,61 @@
+# 가져온 시각: 2026-10-27T21:40:57.841Z
+# 원본: https://support.apple.com/guide/iphone/use-apple-pencil-usb-c-with-iphone-duo-iphnr6p9qfqx/ios
+Use Apple Pencil (USB-C) with iPhone Duo - Apple Support
+https://support.apple.com/guide/iphone/use-apple-pencil-usb-c-with-iphone-duo-iphnr6p9qfqx/ios
+
+Search this guide
+Clear Search
+Table of Contents 
+Use Apple Pencil (USB-C) with iPhone Duo
+
+iPhone Duo works with Apple Pencil (USB-C), sold separately. Other Apple Pencil models aren’t compatible with iPhone Duo.
+
+Pair and charge Apple Pencil (USB-C)
+
+Slide open the end of Apple Pencil, then connect it to the USB-C charge cable that came with your iPhone Duo.
+
+Connect the other end of the USB-C charge cable to the USB-C connector on iPhone Duo.
+
+Do any of the following:
+
+Pair Apple Pencil: Tap “Tap to Connect.”
+
+After you pair Apple Pencil, you can disconnect it from the USB-C charge cable. Apple Pencil stays paired until you restart your iPhone Duo, turn off Bluetooth®, or pair Apple Pencil with another device. To use it again, repeat these steps to pair it.
+
+Charge Apple Pencil: Apple Pencil charges while it’s plugged into your iPhone Duo.
+
+Tip: You can also charge Apple Pencil using the USB-C charge cable and a USB-C power adapter.
+
+Check the battery level of Apple Pencil
+
+Do any of the following:
+
+Check the Batteries widget. See Add, edit, and remove widgets on iPhone.
+
+Go to the Settings app  on your iPhone, then tap Apple Pencil.
+
+Change Apple Pencil settings
+
+Go to the Settings app  on your iPhone.
+
+Tap Apple Pencil, then do any of the following:
+
+Draw only with Apple Pencil: Turn on Only Draw with Apple Pencil. You can still use your finger to scroll and select.
+
+Turn handwriting into typed text: Turn on Scribble.
+
+Practice with Scribble: Tap Try Scribble.
+
+Previous
+Apple Watch
+Next
+Draw and write with Apple Pencil (USB-C) on iPhone Duo
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

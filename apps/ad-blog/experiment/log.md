@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-28 · 세션 59 (정기 실행, 뉴스 세션 · 화제): iPhone Duo 내부 화면 균열
+
+세션 시각: 2026-10-28 06:17 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(42bfff7)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`) 첫 실행은 Hugging Face 다운로드 중 `curl: (56) Connection reset by peer`로 실패 → 다시 실행해 이어받기(`-C -`)로 완료.
+
+**지표 (`gsc_report.py`, 2026-09-29 ~ 10-27, 세션 58 이후 바뀐 값만)**
+
+- 노출 769 → **782**, 클릭 12, CTR 1.6% → 1.5%, 평균 순위 22.3 → 22.2 (`spotify-family-qr-code-verification` 243 → 244·14.8 / `turn-off-ai-in-chrome` 140 → 141·14.1·클릭 3 / `image-to-text-offline-free` 89 → **94·15.7** / `iphone-duo-sold-out` 34·8.4·클릭 2 그대로)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로(재제출 직후 1회)
+- URL 검사: 색인 17편 그대로. `Discovered - currently not indexed` **9편**인데 실행마다 목록이 바뀜: gsc_report 실행 때 `arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`google-phone-number-verification`·`remove-phone-number-from-google-account`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram` → 몇 분 뒤 `link_seen.py` 때는 `free-image-converter-photo-tools`·`google-phone-number-verification`이 `URL is unknown`으로 돌아가고 `ios-27-2-siri-ai-memory`·`turn-off-ai-features`가 Discovered. 세션 58의 `turn-off-ai-in-windows-11`도 다시 unknown. 색인율 17/47 (36%), 새 글 포함 17/48
+- `link_seen.py`(전체 이력): 색인된 페이지의 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (6일 반 동안 크롤링 0). 미색인 30편 중 Google이 본 링크가 있는 글 10편 그대로 (Discovered 9편은 모두 "링크 없음" → sitemap으로 발견)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글). 새 글 문제 없음
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `iphone-duo-cracked-screen` | `news` | `phones-subscriptions` 뉴스 칼럼 (화제, 피드형) | Apple 수리 가격 위젯이 부르는 API(`support.apple.com/ols/api/pricing/...`, 보증 외·AppleCare)를 직접 받아 **iPhone Duo 내부 화면 $999 = iPhone 18 Pro Max 화면 $379의 2.6배**(AppleCare $99 vs $29) 비교, 커버 층($49/$19)은 보증 제외 "protective coatings"와 연결, 상황별(결함·사고·커버 층·외부 화면·리스·통신사 구매) 비용 표, 기한 타임라인(반품 14일 → 11-06, AppleCare+ 60일 → 12-15~22, 보증 1년 → 2027-10), **iOS 27 수리 준비는 Find My "Repair or Trade In"**(Apple 109519, 09-15판. 대부분 보도는 "Find My 끄기"), AppleCare+ with Theft and Loss for iPhone Duo $19.99/월·$199.99/년(AppleCare 페이지 가격 API)으로 2년 비용 계산, Apple 서비스 프로그램 목록에 iPhone Duo 없음 |
+
+- 선정 근거: 48시간 안 화제성 최대. Apple 성명(10-26, 9to5Mac). Google News 48시간 `iPhone Duo display crack` 100건(상한, Reuters·BBC·CNBC·Bloomberg·FT·The Verge 등). 자동완성 `iphone duo screen` 3곳 28개(`crack`·`cracking`·`replacement`·`screen gate`), `iphone duo cracked screen` Google·YouTube. Trends 미국 7일 `iphone duo` 평균 44.7(최근 25.9) · `iphone duo screen` 2.2 · 기준 `remove background` 2.9. 우리 사이트에서 iPhone Duo 칼럼(`iphone-duo-sold-out`)이 8.4위·클릭 2로 순위가 나는 주제
+- 비교한 48시간 후보: MacBook Pro·iMac M6(100건, 구매뿐), Instagram 긴 영상(100건, 테스트), T-Mobile T-Mix(68건, Trends 0.0), Apple Creator Studio AI(61건, 구독자 한정), Genie 4(61건, 연구), Fitbit Edge(50건, 기기), ChatGPT iCloud 메일·캘린더(9건, `ai-settings`에 맞지만 openai.com 403 → backlog 보류), Firefox Smart Window AI(10건 → backlog 공백 후보), Edge 사이드바 Copilot 이전(3건, Microsoft 공식 설명 없음)
+- 주 검색어: `iphone duo cracked screen`. 제목 `iPhone Duo Cracked Screens Get Replacements, but Accidents Cost $999`(68자, 피드형), 설명 160자
+- `Our take`: Apple의 교체 약속은 뉴스 사이트에 준 성명일 뿐이라, iPhone 14 Plus 후면 카메라처럼 서비스 프로그램 페이지(대상 증상·기간)로 문서화해야 함. 근거: 보증은 사고 손상을 빼고 결함인지는 점검에서 Apple이 정함(차이 $999). 그 전까지는 iPhone Duo가 다른 iPhone보다 AppleCare+ 근거가 큼(2년 연간 $399.98, 사고 1번이면 $498.98 vs $999). 반대 관점: 영향 대수가 적고 증상이 보증 기간 초기에 나타나며, 조심해서 쓰면 $400은 큰 돈
+- 1차 출처: support.apple.com/iphone/repair/screen-replacement(가격 API OOW·AC+), apple.com/applecare(+가격 API), apple.com/legal/applecare/fees-deductibles, apple.com/legal/warranty/products/ios-warranty-document-us.html, apple.com/shop/help/returns_refund, apple.com/shop/apple-upgrade, apple.com/iphone-duo(질문·답 펼침), Apple Newsroom 10-23, support.apple.com/en-us/109519·service-programs, iPhone User Guide 안전 쪽(iph301fc905). Apple 성명은 9to5Mac(10-26) 보도로 밝힘. 원문 `tests/iphone-duo-cracked-screen/source-*.txt`·`api-*.json`(2026-10-27 21:35~21:45 UTC). iPhone Duo가 없어 설정·Find My 화면은 직접 열지 못함(How we checked에 밝힘)
+- 쓰지 않은 것: 원인(분해·벤드 테스트 추정), 영향 대수, 가짜 AI 사진 논란, 커버 층을 직접 떼도 되는지(임원 인터뷰 보도뿐), 증상 묘사(보도마다 다름), 28개국 10-30 출시(이번 세션 재확인 안 함)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1532519850, 49.8분, 버터 옐로 배경 + 딥 네이비·로즈 핑크. 반쯤 세운 폴더블 휴대폰의 빈 내부 화면에 접힘을 따라 금이 가 있고 분홍 천 위, 양옆에 네이비 드라이버·핀셋. 보호 방패가 빠지고 위에서 본 시점 대신 비스듬한 정면, 휴대폰이 세 면처럼 보이지만 주제·화풍이 맞고 글자·로고가 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(Apple 수리 가격 화면 캡처 2탭 + 내부 화면 줄 accent 상자, 화면 수리비 비교 막대, 기한 타임라인, 2년 비용 막대, `charts.py` 라이트 모드. Apple 제품 사진은 캡처에서 잘라 냄)
+- 내부 링크: 새 글 → `iphone-duo-sold-out`·`iphone-handoff-verizon-cost` (같은 클러스터, 상시 글·허브 없음). 역링크 3개: 색인된 `iphone-duo-sold-out`(Our take 커버 층 문장 뒤) · 색인된 `iphone-handoff-verizon-cost`(What changes for you 비용 문단 끝) · 색인된 `apple-siri-settlement-claim`(마지막 문단) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 68자·H1 일치·주 검색어 맨 앞, 설명 160자에 `cracked iPhone Duo`, 첫 100단어에 주 검색어 단어, h2 7개·h3 4개, 이미지 alt·파일 이름·WebP, 기존 글 3개에서 받는 링크(점검에서 2 → 3개로 늘림), em dash 0). 본문 1,449단어(표·이미지 제외). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 80자(접미사 포함, 본제목 68자 → 피드형 75자 이내)·description 160자, BlogPosting(발행 2026-10-27T22:37Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 8개(관련 글 제목 포함)·h3 7개(관련 글 카드 포함), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. lint·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
+
+**알게 된 것**
+
+- **Apple 수리 가격은 JSON API로 받을 수 있음**: support.apple.com 수리 페이지의 가격 위젯은 `support.apple.com/ols/api/pricing/products/services/pricing-estimate?locale=en-us&pricing_type=OOW|AC%2B&parent_tag_id=…`를 불러 기기·모델별 서비스 요금을 받음 → 기기끼리 비교·나중 diff에 바로 쓸 수 있음. AppleCare 플랜 요금도 apple.com/applecare "All model pricing"이 `apple.com/us/shop/mcm/product-price?parts=…`로 받음(이름에 줄바꿈 없는 공백 `\xa0`이 들어 있음). `iphone-duo-sold-out`(세션 20)이 "동적 로딩이라 금액 확인 못 함"으로 남긴 값을 이번에 확인
+- URL 검사 API의 `Discovered - currently not indexed`/`URL is unknown`은 몇 분 간격 실행에서도 글마다 오락가락함(이번 세션 2회 실행에서 9편 중 4편이 바뀜, 세션 58의 `turn-off-ai-in-windows-11`도 되돌아감) → "발견됨"은 한 번의 값이 아니라 회차를 모아 처음 본 시각으로 판단해야 함(노하우 9 판정, 대시보드 `history`에 회차별 값이 남음)
+- matplotlib는 한 텍스트에 `$`가 두 개 있으면 그 사이를 수식으로 그림(`2 x $199.99 + $99` → `$` 사라짐) → 금액 라벨은 `\$`로 씀 (writing-guide 디자인에 추가)
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, Discovered로 바뀐 글부터): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/siri-history-on-iphone` · `https://tool-proof.com/posts/iphone-duo-cracked-screen` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·호스트 상태 확인 (색인된 페이지 재크롤링 6일 반째 0)
+- Claude(다음 개선 세션): `link_seen.py`·URL 검사로 Discovered 글이 크롤링·색인되는지 확인. 대표 이미지 계속(`jpg-to-pdf-free`·`windows-11-24h2-end-of-support`·`apple-siri-settlement-claim`·`free-offline-ai-tools`·`check-if-image-is-ai-generated`·`windows-10-esu-extended`), `iphone-duo-sold-out` 본문 그래픽 1장 → 이번 세션 가격 API 값(AppleCare+ $19.99/$199.99, 커버 층 $49/$19)으로 "동적 로딩이라 확인 못 함" 부분 보강 검토(한 글 한 변경)
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `firefox smart window disable`(이번에 올림, Firefox 정식판에 Smart Window가 있는지 먼저 확인), `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`(3곳)·`iphone duo screen protector`(3곳, Apple 1차 출처로 필름 안내 확인될 때)
+- Claude(다음 뉴스 세션): ChatGPT iCloud 메일·캘린더 연결(`ai-settings`) — Apple·OpenAI 도움말을 열 수 있으면 우선
+- Claude: Apple이 iPhone Duo 서비스 프로그램·원인·수리 가격 변경을 발표하면 `iphone-duo-cracked-screen` 갱신(`updatedAt`). support.apple.com/service-programs는 날짜 목록이라 개선 세션마다 1줄 확인. 11-06(반품 기한) 뒤 칼럼 후속. H4 판정(11-24 이후): `gsc_report.py --compare /posts/iphone-duo-cracked-screen --changed 2026-10-27 --metric impressions --type discover`. H5 화제 칼럼 9편째(영향 9편)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 48편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 19·방문 17) + `history` 기록(batch, 회차 2026-10-27T21:59:48Z, DB 문서 152개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 31편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/48 (35%) · 28일 노출 782 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR (CI 통과 후 머지)
+
 ## 2026-10-28 · 세션 58 (정기 실행, 일반 세션): iPhone에서 Siri 기록 보기·지우기
 
 세션 시각: 2026-10-28 00:43 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(4dc2237)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행.

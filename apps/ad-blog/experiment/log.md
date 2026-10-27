@@ -50,7 +50,7 @@
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 48편 (허브 4개)
 - 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 19·방문 17) + `history` 기록(batch, 회차 2026-10-27T21:59:48Z, DB 문서 152개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 31편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/48 (35%) · 28일 노출 782 · 10위 안 18개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
-- 배포: PR (CI 통과 후 머지)
+- 배포: PR #286 (auto-merge, CI 통과 후 머지)
 
 ## 2026-10-28 · 세션 58 (정기 실행, 일반 세션): iPhone에서 Siri 기록 보기·지우기
 

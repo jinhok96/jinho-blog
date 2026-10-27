@@ -195,6 +195,7 @@ AI Overviews·ChatGPT 검색 같은 AI 답변이 우리 글을 출처로 인용�
   - 스크린샷 자체(앱 화면)는 그대로 두고, 클릭 위치 상자·화살표 같은 주석만 `accent`
   - 글꼴은 Inter(사이트의 OS 기본 글꼴 SF Pro·Segoe UI·Roboto 대체): 제목 bold, 라벨 semibold. 막대 모서리 6px(`rounded-md`)
   - 구성: 왼쪽 위 제목·부제 → 그래프 → 구분선 아래 출처, 오른쪽 아래 사이트 이름(`ToolProof`). 범례 대신 막대 옆 직접 라벨
+  - 금액 라벨: matplotlib는 한 텍스트에 `$`가 두 개 있으면 그 사이를 수식으로 그려 `$`가 사라짐 → `\$`로 씀 (2026-10-28 세션 59)
 
 ## 파일·frontmatter
 

@@ -1,0 +1,188 @@
+Firefox for Android 155.0, See All New Features, Updates and Fixes
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Get Firefox
+Get Firefox
+Firefox for mobile
+Get Firefox on your phone
+Menu
+Menu
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Release Notes
+Menu
+Desktop
+Enterprise
+Desktop Beta & Developer Edition
+Desktop Nightly
+Android
+iOS
+Firefox for Android Release Notes
+Release Notes tell you what's new in Firefox for Android. As always, we welcome your feedback. You can also file a bug in Bugzilla or see the system requirements of this release.
+155.0
+Firefox for Android Release
+September 1, 2026
+Version 155.0, first offered to Release channel users on September 1, 2026
+Enjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation on Mozilla Connect. Need help? Our volunteer support community has you covered on Mozilla Support
+Previous
+Firefox for Android 154.0
+Next
+Firefox for Android 156.0
+New
+Toolbar shortcuts: Long-press a shortcut to edit its setting directly.
+Tab groups: Ungroup and share them more easily.
+Shake to summarize: Adjust shake sensitivity for easier access to page summaries.
+Translations: Now supports Marathi and Urdu.
+Fixed
+Autofill prompts: Now automatically close when you move away from a field.
+Text selection: Long-press now selects text inside buttons, so you can copy direct messages on X and comments on YouTube.
+Background audio: Live audio streams such as internet radio now keep playing after the screen turns off.
+Private extension tabs: Tabs opened by extensions while in private browsing now load privately, preventing site data from being left behind in regular browsing.
+Various security fixes.
+Developer
+Developer Information
+Previous
+Firefox for Android 154.0
+Next
+Firefox for Android 156.0
+Get the most recent version
+Need help or want to leave feedback?
+File a bug
+Leave feedback
+Get Involved
+Did you know that most of the content in Firefox Support was written by volunteers?
+Find out more
+Other Resources
+Developer Information
+Complete list of changes for this release
+Press Kit
+Mozilla and Firefox News
+Firefox Extended Support Release
+All Firefox for Desktop Releases
+Learn more about Firefox
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Website Privacy Notice
+Terms of Use
+Cookie Policy
+Community Participation Guidelines
+Logo Trademark Licensing
+Help us improve your firefox.com experience
+In addition to Cookies necessary for this site to function, we’d like your permission to set some additional Cookies to better understand your browsing needs and improve your experience. Rest assured — we value your privacy.
+Accept All Additional Cookies
+Reject All Additional Cookies
+Cookie settings

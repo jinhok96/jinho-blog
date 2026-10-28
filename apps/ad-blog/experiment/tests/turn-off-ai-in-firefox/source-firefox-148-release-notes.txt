@@ -1,0 +1,307 @@
+Firefox 148.0, See All New Features, Updates and Fixes
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Get Firefox
+Get Firefox
+Firefox for mobile
+Get Firefox on your phone
+Menu
+Menu
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Release Notes
+Menu
+Desktop
+Enterprise
+Desktop Beta & Developer Edition
+Desktop Nightly
+Android
+iOS
+Firefox Release Notes
+Release Notes tell you what's new in Firefox. As always, we welcome your feedback. You can also file a bug in Bugzilla or see the system requirements of this release.
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Your system may not meet the requirements for Firefox, but you can try one of these versions:
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Firefox is no longer supported on Windows 8.1 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR 64-bit
+Download Firefox ESR 32-bit
+Download a different build
+Firefox is no longer supported on macOS 10.14 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download for Linux 64-bit
+Download for Linux ARM64
+Firefox for Android
+Firefox for iOS
+Firefox Privacy Notice
+148.0
+Firefox Release
+February 24, 2026
+Version 148.0, first offered to Release channel users on February 24, 2026
+Previous
+Firefox 147.0
+Next
+Firefox 149.0
+New
+Added an AI Controls section to Settings for managing AI-enhanced features. Learn more.
+Firefox now has improved support for screen readers accessing mathematical formulas embedded in PDFs.
+Remote improvements are now decoupled from telemetry requirements in Firefox Settings. You can now opt into receiving remote browser changes even if you have opted out of sharing telemetry or participating in our experimental studies.
+Firefox Backup is now available on Windows 10 to users who also use the “Clear history when Firefox closes” capability. Backups will not include any data which is set to be cleared when Firefox is closed.
+The following languages are now available for translation:
+Translation into and from Traditional Chinese.
+Translation into Vietnamese.
+New Tab wallpapers will now appear on new container tabs as well as new default tabs.
+Fixed
+Fixed an issue where a language pack could become disabled after a major update, causing Firefox to display in the wrong language.
+On Windows, dragging a downloaded image to Adobe Illustrator now correctly inserts the image instead of its URL.
+Various security fixes.
+Developer
+Developer Information
+Web Platform
+The initial about:blank document is now Web-compatible. If the first navigation of a browsing context goes to about:blank, it completes synchronously and is no longer replaced by a second parser-generated document.
+Service worker support for WebGPU has been added, making it available in all worker contexts. Service workers allow WebGPU to run in the background, which is particularly useful for extensions and other pages that can meaningfully share resources across multiple tabs and time periods.
+Firefox now supports the Iterator.zip() and Iterator.zipKeyed() methods from the joint iteration proposal. This allows zipping together underlying iterators into an iterator over values grouped by position, similar to zip in many other languages.
+Firefox now supports the Trusted Types API, which is primarily aimed at preventing cross-site scripting attacks.
+Firefox now supports the Sanitizer API, which provides new methods for HTML manipulation. The element.setHTML() method enables developers to insert HTML content similarly to element.innerHTML, but without the security vulnerabilities such as cross-site scripting (XSS). A complementary method, document.parseHTML(), is also available for parsing HTML safely.
+Firefox now supports the location.ancestorOrigins attribute.
+Firefox now supports the NavigationPrecommitController.addHandler() interface of the Navigation API. This allows registering a post-commit navigation handler during the pre-commit phase, to allow a multi-step navigation process.
+Firefox now supports the position-try-order property as part of CSS Anchor Positioning, controlling the order of fallback positioning attempts.
+Firefox now supports the CSS shape() function, which allows defining responsive free-form shapes in properties that take shapes like clip-path. Unlike path(), it uses standard CSS syntax, supports various CSS units, and allows mathematical functions.
+Community Contributions
+With the release of Firefox 148, we are pleased to welcome the developers who contributed their first code change to Firefox in this release, 18 of whom were brand new volunteers! Please join us in thanking each of these diligent and enthusiastic individuals, and take a look at their contributions:
+Charlotte Wilson [:cswilson252]: 1774438
+Doğu Abaris: 2006856
+Ethan Hawksley: 2008109
+Johannes Odland: 2005934
+kentaro tachikawa: 1819853
+Kiril Panayotov: 2001615
+Matt Kwee: 1938752
+Nathan: 2004797
+Noriaki Watanabe: 2004688, 2005964, 2006047, 2006777, 2007503, 2008007, 2008072, 2008282
+Rachel Rusiecki: 1804921
+Rocco Jiang: 2008967
+Sameem [:sameembaba]: 1976416
+Serah Nderi: 1306461, 2007291
+Sergey Radionov: 1976489
+valadaptive: 1983387
+Vignesh Sadankae: 2003183
+Will Medina [:willyelm]: 2003345
+Yunju Lee: 1987021, 2003165, 2004209, 2004268
+Previous
+Firefox 147.0
+Next
+Firefox 149.0
+Get the most recent version
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Your system may not meet the requirements for Firefox, but you can try one of these versions:
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Firefox is no longer supported on Windows 8.1 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR 64-bit
+Download Firefox ESR 32-bit
+Download a different build
+Firefox is no longer supported on macOS 10.14 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download for Linux 64-bit
+Download for Linux ARM64
+Firefox for Android
+Firefox for iOS
+Firefox Privacy Notice
+Need help or want to leave feedback?
+File a bug
+Leave feedback
+Get Involved
+Did you know that most of the content in Firefox Support was written by volunteers?
+Find out more
+Other Resources
+Developer Information
+Complete list of changes for this release
+Press Kit
+Mozilla and Firefox News
+Firefox Extended Support Release
+All Firefox for Desktop Releases
+Learn more about Firefox
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Website Privacy Notice
+Terms of Use
+Cookie Policy
+Community Participation Guidelines
+Logo Trademark Licensing
+Help us improve your firefox.com experience
+In addition to Cookies necessary for this site to function, we’d like your permission to set some additional Cookies to better understand your browsing needs and improve your experience. Rest assured — we value your privacy.
+Accept All Additional Cookies
+Reject All Additional Cookies
+Cookie settings

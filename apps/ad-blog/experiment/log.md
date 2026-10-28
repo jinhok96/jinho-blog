@@ -29,10 +29,10 @@
 - `Our take`: Find and fill with Gemini는 주문 번호·항공 정보를 자주 옮겨 적는 사람만 켤 것. 근거: Chrome 문구가 요청·페이지 제목·주소가 Google로 가고 검토될 수 있다고 함, 관련 스위치가 Chrome Enhanced autofill·Gemini Connected Apps·Keep Activity·Smarter form understanding 네 곳에 흩어져 있고 한 화면에서 켜진 것을 볼 수 없음. 반대 관점: Personal Intelligence에 이미 opt-in한 사람만 대상, 출처 메일 보기·제안 지우기는 일반 자동 완성보다 투명, 자주 쓰면 시간 절약
 - 1차 출처: blog.google 2026-10-28·2025-11-03, support.google.com/chrome/answer/142893(Desktop·Android·iOS), chrome/a/answer/16278400(관리자), gemini/answer/16598406(Personal Intelligence), chromiumdash 일정, Chrome 156 앱·언어 파일. 원문 `tests/chrome-enhanced-autofill-gmail/source-*.txt`, 캡처 `screens/*.webp`(무손실), 실행 기록 `capture-notes.md`
 - 쓰지 않은 것: Gmail 제안 화면·Enhanced autofill 페이지(Google 계정 없음), Find and fill with Gemini 기본값(문서에 없음 → What to watch next), Mac·휴대폰 단축키, "Autofill verification codes from Gmail"(Chrome 156 DOM에 있지만 로그아웃 화면에 숨김, 도움말 링크 `?p=one_time_password`가 curl로 열리지 않음 → 위치·기본값 미확인), 2026-07 Canary 보도(`@@` 단축키)
-- 이미지: HERO_NOTE + 본문 4장(Chrome 156 Autofill settings 캡처 + accent 상자·측면 설명, 자격 조건 6개, 스위치별 효과, 타임라인, `charts.py` 라이트 모드)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 337278763, 55.2분, 피치 배경 + 청록·머스터드, 아이소메트릭. 왼쪽 열린 청록 봉투(크림색 카드), 가운데 종이비행기·금색 반짝이 별·머스터드 택배 상자와 점선, 오른쪽 청록 제목 줄의 일반 브라우저 창(빈 입력 칸). 점선이 입력 칸까지 닿지 않지만 주제·화풍이 맞고 글자·로고가 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`. 생성 중에 임시 `thumbnail`(자격 조건 그래픽)로 먼저 푸시하고 생성 뒤 지움) + 본문 4장(Chrome 156 Autofill settings 캡처 + accent 상자·측면 설명, 자격 조건 6개, 스위치별 효과, 타임라인, `charts.py` 라이트 모드)
 - 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-ai-in-chrome`·`turn-off-gemini-apps-activity`·`turn-off-gemini-in-gmail`, 칼럼 `google-gmail-photos-ads`·`gemini-connected-apps` (6개). 역링크 3개: 색인된 `gemini-gems-to-skills`(Gemini in Chrome 문장 뒤) · 허브 `turn-off-ai-features`(Chrome 절 정책 문장 뒤) · `google-gmail-photos-ads`(What to watch next "More services") 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판정(11-18) 전이라 손대지 않음
 - 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 58자·H1 일치·주 검색어 맨 앞, 설명 152자에 `Chrome enhanced autofill`, 첫 문장에 주 검색어, h2 8개·FAQ h3 2개(자동완성 `greyed out`·`missing`), 이미지 alt·파일 이름·WebP, 기존 글 3개에서 받는 링크, em dash 0, 백틱 0). 본문 약 1,600단어(표·이미지·링크 주소 제외, FAQ·How we checked 포함). searchfit-seo 스킬은 이번 세션에 없음
-- BUILD_NOTE
+- 빌드 HTML 확인: title 70자(접미사 포함, 본제목 58자 → 피드형 75자 이내)·description 152자, BlogPosting(발행 2026-10-28T22:38Z)/BreadcrumbList JSON-LD 정상, canonical 자기 참조, h1 1개·h2 9개(관련 글 제목 포함)·h3 5개(FAQ 2 + 관련 글 카드), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. lint·type-check·test(35파일 253개)·build 통과, 임시 썸네일판 CI `test`·`build` 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
 
 **알게 된 것**
 
@@ -51,8 +51,8 @@
 - Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장 + Firefox·Chrome 자동 완성 글 링크, 태그 `Google Chrome`/`Chrome` 정리
 - Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 50편 (허브 4개)
-- DASH_NOTE
-- DEPLOY_NOTE
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 29·방문 22) + `history` 기록(batch, 회차 2026-10-28T22:42:57Z, DB 문서 184개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 33편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/50 (34%) · 28일 노출 816 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. 첫 `dashboard_data.py` 실행은 세션 작업 프로세스 재시작으로 종료 코드 137 → 다시 실행해 완료
+- 배포: PR #291 (대표 이미지 생성 중에 임시 썸네일판으로 먼저 열어 CI `test`·`build` 통과 확인, 대표 이미지 추가 뒤 CI 통과 후 머지)
 
 ## 2026-10-29 · 세션 62 (정기 실행, 일반 세션): Firefox에서 AI 끄기
 

@@ -179,3 +179,4 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 - (해결 2026-10-13) Gemini Skills 유료 필요 여부: Google 도움말(17094296) "available without a Google AI subscription" → 무료
 - Chrome 설정의 "On-device AI" 토글이 안정 버전에 있는지
 - California SB 942 세부 의무는 법령 원문 미확인
+- iPhone Duo 새 주문 배송 예정일(Apple 스토어): 스토어 페이지는 예정일을 동적으로 불러와 원문에 없고, 배송 예정 API 직접 호출은 정기 세션 권한 분류기가 막음(2026-10-28 세션 60) → `iphone-duo-sold-out` 제목 "Until Late January"는 보도(9to5Mac·MacRumors 10-16) 기반. MacRumors 10-19는 일부 예약 주문이 11월 중하순으로 당겨졌다고 보도, 새 주문 예정일 변화는 1차 출처로 확인 못 함

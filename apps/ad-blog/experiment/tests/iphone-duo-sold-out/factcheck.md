@@ -50,7 +50,7 @@
 | Apple Intelligence SynthID 지원 예정 | 9월 보도자료 "with upcoming support for the SynthID standard, users can identify images generated or edited with AI" | 원문 대조 (날짜 없음) |
 | Siri AI 베타·영어 우선, EU 초기 미제공, 서버 기능 일일 한도, "Expanded access to such features will be available for a fee in the future." | 9월·10월 보도자료 각주, 스토어 페이지 각주 | 원문 대조 |
 | Apple Pencil(USB-C) 지원 연내 | 9월 보도자료 "Later this year, iPhone Duo will support Apple Pencil with USB-C" | 원문 대조 |
-| AppleCare: Duo는 커버 레이어 교체에 별도 서비스 수수료 | https://www.apple.com/applecare/ 각주 "For iPhone Duo, a separate service fee applies for the replacement of the cover layer." | 원문 대조 (금액은 동적 로딩이라 미확인 → 금액 안 씀) |
+| AppleCare: Duo는 커버 레이어 교체에 별도 서비스 수수료 | https://www.apple.com/applecare/ 각주 "For iPhone Duo, a separate service fee applies for the replacement of the cover layer." | 원문 대조 (금액은 동적 로딩이라 미확인 → 금액 안 씀. 2026-10-28: AppleCare 요금 $19를 fees-deductibles 페이지로 확인해 본문에 넣음) |
 | 주문 취소: Processing 상태에서 Order Listing → Cancel Item, 배송 주문은 미청구, 픽업 주문은 즉시 환불 시작 | https://www.apple.com/shop/help/viewing_changing_orders "Cancel Your Order" | 원문 대조 |
 | 반품 14일(수령일 기준), 14일 안 가격 인하 시 차액(기간 한정 할인 제외), Apple 직접 구매품만 반품, 재판매 의심 주문 취소 가능 | https://www.apple.com/shop/help/returns_refund (Sales Policy 포함) | 원문 대조 |
 
@@ -60,3 +60,22 @@
 - 수리비 $1,499(AppleInsider 헤드라인), AppleCare+ 월 요금: Apple 페이지에서 금액이 동적 로딩이라 확인 못 함
 - Bloomberg "Orders Slip Into 2027": 본문 미확인 (헤드라인만), 같은 내용은 9to5Mac 본문으로 확인
 - 접는 화면 주름·내구성 평가, 판매량 추정: 1차 출처 없음
+
+## 2026-10-28 후속 갱신 (세션 60, 개선 세션)
+
+칼럼 후속(README 개선 세션 5번): 출시(10-23) 뒤 상황과 세션 59가 찾은 AppleCare+ 요금을 반영. `updatedAt` 2026-10-28. 제목·설명은 그대로(한 글 한 변경). 원문은 이 폴더 `source-*-2026-10-28.txt`·`source-apple-newsroom-2026-10-23-iphone-duo-arrives.txt` (curl로 받은 일반 페이지에서 인용 부분 발췌). Apple Store 배송 예정 API(`/shop/delivery-message`·`/shop/fulfillment-messages`)는 이번 세션에서도 열지 않음(권한 분류기가 막음) → 새 주문 배송 예정일은 여전히 보도 기반
+
+| 주장 | 출처 | 확인 |
+| --- | --- | --- |
+| 10-23 Apple Store에 출시, 매장·온라인·Apple Store 앱에서 구입 가능, 재고 언급 없음 | https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/ "On Friday, October 23, the highly anticipated iPhone Duo made its debut at Apple Store locations worldwide", "Customers can explore and shop for … iPhone Duo … at Apple Store locations around the world, on apple.com, and in the Apple Store app" | 원문 대조 (`source-apple-newsroom-2026-10-23-iphone-duo-arrives.txt`) |
+| 수요가 공급을 넘음, 워크인 고객 빈손, 10-24 미국·캐나다 픽업 재개 때 대부분 매장 픽업 없음 | MacRumors "Where to Buy iPhone Duo: Stores, Pickup, and Wait Times" (Tim Hardwick, 2026-10-25) | 보도 → "MacRumors reported" |
+| 일부 예약 주문 배송일 앞당김 (12-01~08 → 11-16~23) | MacRumors "Apple Starts Moving Up iPhone Duo Delivery Dates" (Joe Rossignol, 2026-10-19) | 보도 → "MacRumors reported". 새 주문 예정일은 기사에 없음 |
+| AppleCare+ with Theft and Loss for iPhone Duo $19.99/mo (SHPG3LL/A), $199.99/yr (SHPH3LL/A), "for this product only" | https://www.apple.com/shop/buy-iphone/iphone-duo (AppleCare 선택 데이터) | 원문 대조 (`source-apple-buy-iphone-duo-2026-10-28.txt`). 세션 59 API 값과 같음 |
+| ACMI $83.29, 리스 $57.99(24개월)·$82.99(12개월) 그대로 | 같은 스토어 페이지, https://www.apple.com/shop/apple-upgrade "Lease from $57.99/mo. … for 24 mo. or from $82.99/mo. … for 12 mo." | 원문 대조 (`source-apple-upgrade-2026-10-28.txt`) |
+| AppleCare는 리스와 별도로 Apple이 청구, 가입 후 60일 안 추가, AppleCare 없이 손상 반납 시 Klarna 1회 손상 수수료(금액 없음) | Apple Upgrade FAQ "billed separately from your lease by Apple", "up to 60 days after you enroll", "Klarna will charge you a one-time damage fee" | 원문 대조. 수수료 금액은 페이지에 없음 → "doesn't say how much" |
+| AppleCare 포함 월 비용: 19.99 / 83.29+19.99 = 103.28 / 82.99+19.99 = 102.98 / 57.99+19.99 = 77.98, 103.28 − 77.98 = 25.30 | 위 값으로 계산 | 계산 (`applecare_monthly_chart.py`) |
+| 커버 층 AppleCare 요금 $19 ("$19 for cover layer-only damage") | https://www.apple.com/legal/applecare/fees-deductibles/ | 원문 대조 (`source-apple-applecare-fees-2026-10-28.txt`). 보증 외 $49는 수리 가격 API(세션 59) 값이라 이번 세션에 다시 열지 않아 쓰지 않음 |
+| 반품 14일: 10-23 수령분은 11-06까지 | https://www.apple.com/shop/help/returns_refund "You have 14 calendar days to return an item from the date you received it" | 원문 대조 + 계산 (`source-apple-returns-2026-10-28.txt`) |
+
+- 그래픽: `iphone-duo-monthly-cost-with-applecare.webp` (`applecare_monthly_chart.py`, `chart_style.py` 라이트 모드. 기기 납부액 `muted` + AppleCare+ `accent`). 대표 이미지를 뺀 본문 이미지 2 → 3장
+- 지운 것: What to watch next "October 23: first deliveries…"(지난 일정) → 11-06 반품 기한·11월 중하순 앞당긴 배송 추가. Who is affected "Hope to buy in an Apple Store on October 23 | Uncertain…" → 출시 후 보도로 교체

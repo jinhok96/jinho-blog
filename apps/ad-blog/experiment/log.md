@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-28 · 세션 60 (정기 실행, 개선 세션): iPhone Duo 품절 칼럼 후속 갱신 + 기존 글 2편 대표 이미지
+
+세션 시각: 2026-10-28 12:16 KST → 개선 세션. 같은 날 앞 개선 세션 없음(이 세션이 첫 개선 세션, 18시 세션은 이 기록을 이어받음). 열린 PR 없음. 작업 브랜치를 `origin/main`(e8aabea)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료(모델 약 10GB 다운로드 5분).
+
+**지표 (`gsc_report.py`, 2026-09-30 ~ 10-28, 세션 59 이후 바뀐 값만)**
+
+- 노출 782 → **791**, 클릭 12, CTR 1.5%, 평균 순위 22.2 (`spotify-family-qr-code-verification` 244 → 245·15.0 / `turn-off-ai-in-chrome` 141·14.1·클릭 3 그대로 / `image-to-text-offline-free` 94·15.7 그대로 / `iphone-duo-sold-out` 34·8.4·클릭 2 그대로 / `check-if-image-is-ai-generated` 42·69.4)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로. `Discovered - currently not indexed`는 gsc_report 실행 때 8편(`arc-browser-shutting-down`·`google-gmail-photos-ads`·`ios-27-2-siri-ai-memory`·`remove-phone-number-from-google-account`·`turn-off-ai-features`·`turn-off-ai-in-windows-11`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`) → 몇 분 뒤 `link_seen.py` 때 10편(`free-image-converter-photo-tools`·`google-phone-number-verification`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`가 들어오고 `arc-browser-shutting-down`·`ios-27-2-siri-ai-memory`가 빠짐). 세션 59와 같은 오락가락. 색인율 17/48 (35%)
+- `link_seen.py`(전체 이력): 색인된 페이지의 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (7일째 크롤링 0). 미색인 31편 중 Google이 본 링크가 있는 글 10편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 세션 52 판단대로 문맥 없음 보류)
+- 주간 SEO 점검: 최근 10-26 보고. 우선순위 1·2는 세션 52가 처리, 3(대표 이미지) 이어서
+- 8~20위 검색어(페이지 × 검색어, 28일, 78쌍): 노출 10회 이상은 Spotify 칼럼 다른 매체 기사 제목형 3개(V4 판정 중)뿐 → 소제목·FAQ 보강 대상 없음
+
+**한 일 (개선 세션 3건, 쓴 스킬: `seo-audit` — rankings-push(8~20위 후보 찾기, "Refresh what's stale"), Image Optimization / `copy-editing` — Content Refresh, AI-Tell Check)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 5 · 칼럼 후속 (세션 59 다음 할 일) | `iphone-duo-sold-out`(색인, 28일 노출 34·8.4위·클릭 2) | 출시(10-23) 뒤 상황과 AppleCare+ 요금 반영: What happened에 Apple Newsroom 10-23 매장 출시(재고 언급 없음) + MacRumors 보도(수요 > 공급, 10-24 픽업 대부분 없음, 10-19 일부 예약 주문 12월 → 11월 중하순)를 보도로 구분해 1문단, Who is affected 2행 갱신, 리스 "Damage and loss"에 AppleCare+ with Theft and Loss $19.99/월·$199.99/년(Apple이 리스와 따로 청구), 결제 방식별 AppleCare+ 포함 월 비용 문단 + **그래픽 1장**(대표 이미지를 뺀 본문 이미지 2 → 3장), Our take 커버 층 AppleCare 요금 $19, What to watch next 지난 10-23 항목 → 11-06 반품 기한·11월 중하순 배송. `updatedAt` 2026-10-28. 제목·설명 그대로 | 정확성·후속 갱신 (V 대상 아님: 노출 100회 미만) |
+| 2 | 주간 3 · 대표 이미지 | `check-if-image-is-ai-generated`(색인, 42·69.4위) | 대표 이미지도 `thumbnail`도 없던 글(og:image는 자동 썸네일)에 본문 첫 줄 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
+| 3 | 주간 3 · 대표 이미지 | `jpg-to-pdf-free`(색인, 12·5.1위) | `thumbnail`(앱별 비교 그리드, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 | 규칙 적용 (V 대상 아님) |
+
+- 1번 확인 방법: Apple 스토어 iPhone Duo 구매 페이지·Apple Upgrade 페이지·AppleCare 수수료 페이지·반품 정책·Newsroom 10-23을 이번 세션에 curl로 받아(일반 페이지) 인용 부분을 `tests/iphone-duo-sold-out/source-*-2026-10-28.txt`로 저장. 할부 $83.29·리스 $57.99/$82.99 그대로, AppleCare+ $19.99/$199.99는 세션 59 API 값과 같음. 배송 예정 API(`/shop/delivery-message`·`/shop/fulfillment-messages`)는 호출하려 했지만 권한 분류기가 막아(웹사이트 접근 우회로 분류) 더 시도하지 않음 → 새 주문 예정일은 여전히 보도 기반이라 제목 "Until Late January"는 그대로(세션 53 보류 사유와 같음). 보증 외 커버 층 $49·내부 화면 $999는 수리 가격 API 값이라 이번에 다시 열지 않아 새로 쓰지 않음(기존 Our take 문장의 $999는 세션 59 기록 그대로). 사실 확인표는 `factcheck.md` "2026-10-28 후속 갱신"
+- 그래픽: `iphone-duo-monthly-cost-with-applecare.webp` (`tests/iphone-duo-sold-out/applecare_monthly_chart.py`, `chart_style.py` 라이트 모드. 기기 납부액 `muted` + AppleCare+ `accent` 누적 막대: 일시불 $19.99 · 할부 $103.28 · 12개월 리스 $102.98 · 24개월 리스 $77.98)
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `check-if-image-is-ai-generated` — 시드 181789073, 67.1분, 아쿠아 배경 + 마젠타 계열 분홍·골든 옐로, 정면(3/4 시점 요청). 언덕·해 사진을 담은 분홍 액자 위 파란 돋보기 + 방패 배지 + 반짝임 별. `jpg-to-pdf-free` — 시드 1938176338, 70.2분, 크림 배경 + 더스티 블루·토마토 레드, 3/4 시점(정면 요청). 둥근 사진 인화지 더미 → 사진 4장이 한 쪽에 담긴 펼친 폴더 → 닫힌 소책자. 두 장 모두 장면 설명과 다른 점(시점·클립 대신 핀 등)은 writing-guide 기준대로 넘어가고 alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: 세 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD(`iphone-duo-sold-out` dateModified 2026-10-28), `<pre>` 0개, 설명 159·143·160자(HTML 기준). 대표 이미지 2편은 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). `iphone-duo-sold-out` 본문 이미지 대표 + 3장. lint·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음)
+- Apple 서비스 프로그램 목록(support.apple.com/service-programs): 맨 위 Mac mini(2025-06-13) 그대로, iPhone Duo 항목 없음 → `iphone-duo-cracked-screen` 변경 없음
+- 남은 대표 이미지 미적용: `thumbnail` 글 18편 + 아무것도 없는 글 2편(`transcribe-audio-offline-free`(V1 판정 중)·`windows-10-esu-extended`). `check-if-image-is-ai-generated`는 대표 이미지를 뺀 본문 이미지 0장(규칙 3장) → 다음 변경으로 남김
+
+**알게 된 것**
+
+- Apple 스토어 구매 페이지(일반 HTML)에 AppleCare+ 선택 데이터(`SHPG3LL/A` $19.99 월간, `SHPH3LL/A` $199.99 연간, "AppleCare+ with Theft and Loss for this product only")가 들어 있음 → 가격 API를 따로 부르지 않고 페이지 원문만으로 AppleCare+ 요금을 확인·저장할 수 있음. Apple Upgrade 페이지 원문에도 기기별 리스 월 요금("Lease from $57.99/mo. … for 24 mo.")이 있음
+- Apple 스토어 배송 예정 API를 curl로 직접 부르는 것은 정기 세션 권한 분류기가 "웹사이트 접근 우회"로 막음 → 배송 예정일은 보도로만 쓰는 현재 방식 유지 (backlog 미확인 정보에 기록)
+- 대표 이미지 생성이 이번 세션 1장 67.1·70.2분(세션 53 54분, 세션 59 49.8분)으로 느려짐: 2장을 한 명령에 묶으면 백그라운드 2시간 한도를 넘을 수 있음 → 한 명령에 1장씩 (writing-guide 대표 이미지에 반영). 원인은 확인 못 함(같은 4코어·15GB, 생성 중 다른 무거운 작업 없음)
+- Google은 10-27 11:58 UTC에 sitemap을 받아 갔으므로(사용자 재제출 직후) 호스트 접근 자체는 됨. 그런데도 색인된 페이지 재크롤링은 10-21 이후 7일째 0 → 차단보다 신규 도메인의 크롤링 수요(빈도)가 낮은 상태로 보임 (해석, 크롤링 통계로 확인 필요)
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, Discovered 글부터): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/siri-history-on-iphone` · `https://tool-proof.com/posts/iphone-duo-cracked-screen` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (색인된 페이지 재크롤링 7일째 0, sitemap은 10-27에 받아 감) ③ 여유가 있으면 이번에 갱신한 `https://tool-proof.com/posts/iphone-duo-sold-out`도 색인 생성 요청(재크롤링)
+- Claude(18시 개선 세션): 이 세션과 다른 글로. 대표 이미지 계속(`windows-11-24h2-end-of-support`·`apple-siri-settlement-claim`·`free-offline-ai-tools`·`windows-10-esu-extended`), `link_seen.py`·URL 검사로 새 크롤링·Discovered 변화 확인
+- Claude(다음 개선 세션 중 하나): `check-if-image-is-ai-generated` 본문 이미지 0 → 3장 (`tests/check-if-image-is-ai-generated/results.txt`의 C2PA 편집 측정값 그래프 + SynthID Detector·Inspect 화면 캡처, iOS 27.2 SynthID 안내 반영 여부 함께 검토, 한 글 한 변경)
+- Claude: iPhone Duo — Apple이 서비스 프로그램·원인·수리 가격 변경을 발표하면 `iphone-duo-cracked-screen` 갱신. 11-06(반품 기한) 뒤 두 칼럼 후속. support.apple.com/service-programs는 개선 세션마다 1줄 확인
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `firefox smart window disable`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`·`iphone duo screen protector`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 48편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 20·방문 18) + `history` 기록(batch, 회차 2026-10-28T06:16:46Z, DB 문서 160개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 31편 중 Google이 본 링크 10편. 목표: 색인율 17/48 (35%) · 28일 노출 800 · 10위 안 20개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #287 (auto-merge, CI 통과 후 머지)
+
 ## 2026-10-28 · 세션 59 (정기 실행, 뉴스 세션 · 화제): iPhone Duo 내부 화면 균열
 
 세션 시각: 2026-10-28 06:17 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(42bfff7)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`) 첫 실행은 Hugging Face 다운로드 중 `curl: (56) Connection reset by peer`로 실패 → 다시 실행해 이어받기(`-C -`)로 완료.

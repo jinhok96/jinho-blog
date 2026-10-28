@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-29 · 세션 62 (정기 실행, 일반 세션): Firefox에서 AI 끄기
+
+세션 시각: 2026-10-29 00:27 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(f502e0a)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-09-30 ~ 10-28, 세션 61 이후 바뀐 값만)**
+
+- 노출 802 → **809**, 클릭 12, CTR 1.5%, 평균 순위 22.0 → 22.1 (`spotify-family-qr-code-verification` 246 → 248·15.2 / `turn-off-ai-in-chrome` 142 → 144·13.9·클릭 3 / `image-to-text-offline-free` 98 → 99·15.3 / `iphone-duo-sold-out` 34·8.4·클릭 2 그대로 / `gemini-gems-to-skills` 33·7.5·클릭 1)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로. `Discovered - currently not indexed` **12편**(`arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`google-phone-number-verification`·`ios-27-2-siri-ai-memory`·`remove-phone-number-from-google-account`·`turn-off-ai-features`·`turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`) → 몇 분 뒤 `link_seen.py` 때는 `free-image-converter-photo-tools`·`google-phone-number-verification`·`turn-off-gemini-apps-activity`가 다시 unknown(9편). 색인율 17/48 (35%), 새 글 포함 17/49
+- `link_seen.py`(전체 이력): 색인된 페이지의 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (7일 반 동안 크롤링 0). 미색인 31편 중 Google이 본 링크가 있는 글 10편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글). 새 글 문제 없음
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-ai-in-firefox` | `software` | `ai-settings` 상시 글 (검색형) | **Firefox 159.0(10-27 출시)을 컨테이너 Xvfb에서 새 프로필로 직접 실행**: AI controls 기본 화면(6개 기능 모두 Available, Smart Window 행 없음) 캡처, Block AI enhancements 확인 창 목록 7개(**Smart Window 포함**), 같은 프랑스어 시험 페이지에서 차단 전후 비교(오른쪽 클릭 메뉴 **Translate Selection to English·Ask an AI Chatbot 사라짐**, 사이드바 아이콘 **5 → 4**, 주소창 번역 아이콘 사라짐), Translations만 Available로 되돌리면 번역만 돌아오고 챗봇은 그대로 숨음, 재시작 후 유지, **차단 뒤에도 Show search suggestions·Perplexity 검색 엔진은 켜짐**, 주소창 **disable ai → Manage AI controls** 빠른 동작, 챗봇 공급자 4곳(Claude·ChatGPT·Gemini·Mistral Vibe), 159의 챗봇 Summarize page가 페이지 글 대신 주소를 보내는 변경, Android 159 앱 파일 문자열로 휴대폰 AI controls 항목(Page summaries·Voice search(Google Speech Services)·Shake to summarize) |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings`(우선순위 1)의 `firefox smart window disable`(세션 59가 올림, 직접 검증 "Firefox GUI 실행 가능할 때")에서 출발. `demand_check.py suggest`: `turn off ai in firefox` 하위 14개(본 검색어 Google·Bing + YouTube `how to turn off ai in firefox`, `turn off all ai`·`mobile`·`ai overview in firefox`), `firefox smart window` 11개(본 검색어 3곳, `disable`은 Google 1곳), `firefox ai controls` 12개. Trends 미국 12개월 같은 클러스터 후보끼리: `turn off ai in firefox` 1.3 · `firefox smart window` 0.1 · `turn off gemini on android` 10.8 · `google personal intelligence` 27.8 · `turn off galaxy ai` 15.8 → 수요는 작지만 주제 선정 기준 5번(직접 검증)과 사이트 노출 1위 `turn-off-ai-in-chrome`과 같은 "브라우저 + AI 끄기" 롱테일이라 선택. `turn off gemini on android phone`은 상위 결과가 스팸 위주라 기회가 있지만 문서 기반뿐이라 다음으로
+- 상위 결과: Mozilla 블로그(2026-02-24 공식)·pureinfotech(about:config)·PCWorld·The Register·flowingdata·omgubuntu → 모두 148(2월) 발표 기준. 빠진 것: 159 화면, Smart Window가 차단 목록에 든 점, 차단 뒤 실제로 사라지는 것, 남는 것, 휴대폰
+- 주 검색어: `turn off ai in firefox`. 제목 `How to Turn Off AI in Firefox on Desktop and Mobile`(51자), 설명 149자
+- 1차 출처: Firefox 159.0 앱(직접 실행) + 인터페이스 문자열(`browser/omni.ja`의 preferences.ftl·aiFeatures.ftl·browser.ftl·policies-descriptions.ftl), firefox.com 데스크톱 릴리스 노트 148~159·Android·iOS 148~159, blog.mozilla.org "How to turn off AI features in Firefox"(02-24), firefox.com/smart-window, Firefox for Android 159 APK(archive.mozilla.org) 기본 문자열. 원문 `tests/turn-off-ai-in-firefox/source-*.txt`, 캡처 `screens/*.webp`(무손실)
+- 쓰지 않은 것: about:config(상위 결과 다수가 권하지만 고급 설정 편집기·Mozilla 문서로 효과 미확인), 기업 정책 설정법, Smart Window 설정 화면 메뉴 이름(배포 안 됨), iPhone 앱 메뉴 위치(릴리스 노트만), 차단 시 실제 모델 삭제 용량(새 프로필이라 받은 모델 없음)
+- 이미지: 대표 이미지(HERO_TBD) + 본문 6장(AI controls 화면 캡처 + accent 상자·측면 설명, 확인 창 캡처 Smart Window 표시, 차단 전후 메뉴·사이드바 비교, Translations만 남긴 설정·메뉴, 주소창 disable ai 캡처, 끄는 것 vs 남는 것 표, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`(AI Overviews 절 앵커), 상시 글 `turn-off-ai-in-chrome`·`turn-off-gemini-apps-activity`(공급자 목록이 각 회사 채팅 웹사이트라 Gemini를 고르면 Gemini Apps Activity가 적용), 칼럼 `arc-browser-shutting-down` (4개). 역링크 4개: 색인된 `gemini-gems-to-skills`(Gemini in Chrome 문단 끝: Firefox 사이드바에도 Gemini) · 색인된 `check-if-image-is-ai-generated`(Chrome 가이드 문장 뒤) · `arc-browser-shutting-down` 6단계(Chrome으로 옮길 때 문장 뒤) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님) + 허브 갱신(아래). `turn-off-ai-in-chrome`은 V3 판정(11-18) 전이라 손대지 않음
+- 허브 갱신 `turn-off-ai-features`(`updatedAt` 2026-10-28): 첫 문단 경로 목록·요약 표에 Firefox 행, `## How to turn off AI in Firefox` 절 2문단, "No company offers one switch for all of its AI features" 문장을 Firefox 사례에 맞게 고침(사실 정정), How we checked에 Firefox 절 추가 날짜. 허브 이미지(표·경로 그래픽)에는 Firefox가 없음 → 다음 허브 갱신 때 그래픽 갱신 검토
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 51자·H1 일치·주 검색어 맨 앞, 설명에 `turn off AI in Firefox`, 첫 문장에 주 검색어, h2 10개·FAQ h3 2개, 이미지 alt·파일 이름·WebP, 기존 글 4개에서 받는 링크, em dash 0, 백틱 0). 점검 중 설명을 주 검색어가 들어가게 고침. searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: BUILD_TBD
+
+**알게 된 것**
+
+- **support.mozilla.org(SUMO)는 컨테이너에서 열리지 않음**: curl·Chromium(12초 대기)·WebFetch 모두 "Client Challenge" 페이지만 받음 → 우회하지 않고 blog.mozilla.org·firefox.com 릴리스 노트(curl 가능)·앱 자체로 대신함. README 인프라 상태(네트워크)에 기록
+- **Firefox는 정식판 tar.xz를 Mozilla CDN에서 바로 받아 Xvfb로 실행 가능**(`download.mozilla.org/?product=firefox-latest-ssl&os=linux64&lang=en-US` → `download-installer.cdn.mozilla.net`, 약 90MB, 설치 불필요). 현재 버전은 `product-details.mozilla.org/1.0/firefox_versions.json`. 설정 화면 문자열·기본값은 `browser/omni.ja`(zip)를 풀어 `localization/en-US/*.ftl`·`defaults/preferences/firefox.js`로 확인 가능 → 메뉴 이름을 화면과 문자열 두 곳에서 대조할 수 있음. Android는 archive.mozilla.org의 Fenix APK에서 `androguard`로 문자열 추출 가능(앱 실행은 안 함)
+- Firefox의 순차 배포(Nimbus) 기능은 새 프로필에서 꺼져 있을 수 있음(Smart Window: `browser.smartwindow.enabled` 기본 false) → 화면에 없는 기능은 "우리 사본에 없음"으로 쓰고 확인 창 목록 같은 직접 본 근거만 씀
+- matplotlib 없이 시작하는 컨테이너에서는 `python3 -m venv /tmp/chart && /tmp/chart/bin/pip install matplotlib pillow`로 `charts.py`를 돌림(Inter 글꼴은 시스템에 있음)
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, Discovered 글부터): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/turn-off-ai-in-firefox` · `https://tool-proof.com/posts/siri-history-on-iphone` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (색인된 페이지 재크롤링 7일 넘게 0)
+- Claude(다음 개선 세션): 대표 이미지 계속(`free-offline-ai-tools`(허브)·`windows-11-24h2-end-of-support`, 미색인 `thumbnail` 글), `check-if-image-is-ai-generated` 본문 이미지 0 → 3장, `office-2021-end-of-support` 칼럼 후속. 허브 `turn-off-ai-features` 그래픽 2장에 Firefox 추가 검토
+- Claude: Firefox 160(11-06 예정, `product-details.mozilla.org` NEXT_RELEASE_DATE) 출시 뒤 `turn-off-ai-in-firefox` 재확인(같은 방법: tar.xz 받아 AI controls 화면·확인 창·문자열 diff). Smart Window가 새 프로필에 켜지면 Smart Window 행·차단 확인 문구를 화면으로 확인해 갱신. backlog 반복 일정에 Firefox 행 추가함
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`(상위 결과 스팸 위주), `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장 + Firefox 글 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 49편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 22·방문 20) + `history` 기록(batch, 회차 2026-10-28T16:14:59Z, DB 문서 176개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 32편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/49 (35%) · 28일 노출 809 · 10위 안 20개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR_TBD
+
 ## 2026-10-28 · 세션 61 (정기 실행, 개선 세션): Windows 11 24H2 칼럼 후속 갱신 + 기존 글 2편 대표 이미지
 
 세션 시각: 2026-10-28 18:15 KST → 개선 세션. 같은 날 12시 개선 세션(세션 60)이 다룬 글(`iphone-duo-sold-out`·`check-if-image-is-ai-generated`·`jpg-to-pdf-free`)과 겹치지 않게 세션 60 다음 할 일(대표 이미지 `windows-10-esu-extended`·`apple-siri-settlement-claim` 등)을 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(b364fa5)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

@@ -1,0 +1,10 @@
+# https://blog.google/products-and-platforms/products/chrome/enhanced-autofill/ (fetched 2026-10-28 UTC, datePublished 2025-11-03T17:00:00+00:00)
+Nico Jersch
+Senior Product Manager, Chrome
+Nov 03, 2025
+Chrome already saves you time every day by securely filling in your addresses, passwords and payment information. Today, we’re making it even more helpful. For desktop users with
+smarter form understanding
+enabled, Chrome can now also fill in your passport and driver’s license number, vehicle info (like license plate or VIN) and more. It can also better understand complex forms and varied formatting requirements, improving accuracy across the web.
+We’ve designed smarter form understanding to be private and secure. When you enter relevant info into a form, Chrome will save this data only with your permission and protect it through encryption. And before filling in saved info on your behalf, Chrome will ask you to confirm, keeping you in full control of your data.
+Starting today, these updates are available globally in all languages, and we plan to support even more data types over the coming months.
+Posted in:

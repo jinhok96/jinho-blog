@@ -1,0 +1,94 @@
+# Google Chrome 156.0.8078.73 (Linux, google-chrome-stable_current_amd64.deb, 2026-10-28) locales/en-US.pak — enhanced autofill / Gmail related strings (resource ID<TAB>text)
+826	By turning this off, you can sign in to Google sites like Gmail without signing in to Chrome
+861	When signing into Google services like Gmail or Youtube with $1, you can automatically sign in to Chrome with the same account
+1105	Remove from Chrome
+2152	Manage connected apps
+6205	When on
+6206	Things to consider
+6334	Enhanced autofill shortcut
+6335	Edit enhanced autofill shortcut
+6336	Clear enhanced autofill shortcut
+6338	Press Ctrl twice for enhanced autofill
+6340	Custom shortcut for enhanced autofill
+6342	Custom shortcut for enhanced autofill
+6343	Edit custom shortcut for enhanced autofill
+6344	Clear custom shortcut for enhanced autofill
+6460	Remove from Chrome
+6575	When on, Google Translate will offer to translate sites into your preferred language. It can also automatically translate sites.
+6576	When on, Google Translate will offer to translate sites and PDFs into your preferred language. It can also automatically translate sites.
+6719	When you're signed in, this data is linked to your Google Account to protect you across Google services, for example increasing protection in Gmail after a security incident.
+7358	When on, data is saved in your Google Account and can be used on all your devices. When off, data is saved only to this device.
+7413	Google Search AI Mode and connected apps
+7575	Your content will not be used by human reviewers to improve AI. Your organization may change these settings at any time
+8622	To make timely password change suggestions, the content and URLs of the pages you visit can be processed in a private space in the cloud. $1
+8626	To make timely password change suggestions, the content and URLs of the pages you visit can be processed in a private space in the cloud
+9036	Find and fill
+10332	Remove from Chrome
+34996	Manage enhanced autofill
+35047	Autofill verification codes from Gmail
+35048	Autofill verification codes sites use to improve your security. Chrome can get these codes from your Gmail. <a href="$1" tabindex="0" aria-description="$2" target="_blank">Learn more about this feature</a>
+35049	To use this feature, first turn on smart features in Gmail
+35050	Turn on “Smart features” in <a href="$1" tabindex="0" aria-description="$2" target="_blank">Gmail settings</a>
+35052	Open Gmail
+35053	Autofill verification codes from Gmail
+35054	Google Password Manager can get these codes for you from your Gmail $1. You can change your mind and $2.
+35164	Find and fill
+35173	Suggested by Gemini
+35174	Couldn't find this info
+35182	Find and fill with Gemini
+35184	Find and fill with Gemini
+35186	Reviewing info from Connected Apps…
+35189	Couldn't find this info
+35193	Powered by Personal Intelligence with Gemini. Your requests, page titles, and URLs may be reviewed to improve enhanced autofill. <link>Manage settings</link>
+35194	Powered by Personal Intelligence with Gemini. <link>Manage settings</link>
+35195	Now you can find and fill info from Gmail and more
+35196	Try "running shoes order number"
+35197	Try "confirmation code for LAX flight"
+35198	Try "running shoes tracking number"
+35199	Try "address for my hotel in Tokyo"
+35206	Suggested by Gemini
+35207	Suggested by Gemini
+35208	From Gemini and connected apps · $1
+35210	Gmail
+35219	Your content will not be used to improve AI. Your organization may change these settings at any time.
+35344	Turn on enhanced autofill to automatically fill more fields
+35420	{NUM_SOURCES, plural,\n     =1 {Suggestion removed. Your original source won't be deleted.}\n     other {Suggestion removed. Your original sources won't be deleted.}}
+35422	Remove from Chrome?
+35423	{NUM_SOURCES, plural,\n     =1 {Chrome will stop suggesting this info. Your original source won't be deleted.}\n     other {Chrome will stop suggesting this info. Your original sources won't be deleted.}}
+35426	To better understand and fill forms, the content and URLs of the pages you visit can be processed in a private space in the cloud.
+35510	Enhanced autofill understands forms better and can autofill them faster for you
+35512	learn more about enhanced autofill in settings
+35514	Press Ctrl twice in any form to find and fill info without switching tabs
+35515	Enhanced autofill can now find and fill info — like flight numbers and appointment times — from apps like Gmail and Photos
+35519	Enhanced autofill
+35520	Smarter form understanding
+35521	When on
+35522	Things to consider
+35525	The content and URLs of the pages you visit can be processed in a private space in the cloud
+35532	You're helping improve enhanced autofill by sharing data with Google
+35533	When you make a request for enhanced autofill, your usage data, requests, and page details are shared with Google to improve the autofill experience
+35536	Your requests, page titles, and URLs are sent to Google and may be reviewed to improve enhanced autofill
+35538	Your content will not be used to improve AI. Your organization may change these settings at any time.
+35539	Now you can find and fill info from Gmail and more.
+35540	Powered by Gemini with Personal Intelligence.
+35541	Powered by Gemini with Personal Intelligence. Your requests, page titles, and URLs may be reviewed to improve enhanced autofill.
+35546	Autofill from Gmail and more notice opened at full height
+35547	Autofill from Gmail and more notice closed
+35548	Now you can find and fill info from Gmail and more
+35549	Powered by Gemini with Personal Intelligence. Manage your choices in settings.
+35552	Enhanced autofill
+35553	Powered by Personal Intelligence
+35555	Find and fill with Gemini
+35556	Autofill info from apps such as Gmail and Photos. Powered by Personal Intelligence.
+35557	Manage Connected Apps
+35764	Your text and the content and URL of the page you're writing on will be sent to Google. Your content will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
+35778	Your text and page content are sent to Google, but will not be used to improve AI.\n    <a href="#" id="enterpriseLearnMore" role="button">Learn more</a>
+36169	Your searches, best matches, and their page contents are sent to Google. It will not be used by human reviewers to improve AI. Your organization may change these settings at any time.
+38068	List entry "$1": Unknown or unsupported language.
+38069	List entry "$1": Entry ignored because it is also included in the SpellcheckLanguage policy.
+39290	When on, Chrome will share relevant tabs in this window to help you get more relevant responses.
+39308	When on, Chrome will share relevant tabs in this window to help you get more relevant responses.
+39646	Chrome processes page titles and URLs in a private space in the cloud
+39965	change gmail password, change my gmail password, google password change, reset gmail account password
+39966	google account password, gmail account password, google password, gmail password
+45984	Remove from Chrome

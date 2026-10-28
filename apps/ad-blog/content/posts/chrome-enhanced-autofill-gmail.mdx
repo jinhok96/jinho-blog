@@ -1,0 +1,108 @@
+---
+title: Chrome Enhanced Autofill Now Pulls Details From Your Gmail
+description: "Chrome enhanced autofill now fills forms with order, tracking and flight details from Gmail for some US users. We opened Chrome 156 to map the switches."
+category: news
+thumbnail: ./images/chrome-enhanced-autofill-gmail/chrome-gmail-autofill-requirements.webp
+createdAt: 2026-10-28T22:30:00Z
+tags:
+  - Google Chrome
+  - Gmail
+  - Gemini
+  - Personal Intelligence
+  - privacy
+  - settings
+---
+
+Starting October 28, 2026, Chrome enhanced autofill can fill online forms with details it finds in your Gmail, such as order numbers, package tracking and flight bookings. It only reaches your inbox if you're in the US, use Gemini in Chrome and turned on Gemini's Personal Intelligence. If that's you and you'd rather keep your email out of web forms, turn off **Find and fill with Gemini** under **Settings > Autofill and passwords > Enhanced autofill**.
+
+We ran Google Chrome 156.0.8078.73, the current stable version, on October 28, 2026, and read the interface text built into the browser alongside Google's announcement and help pages. We have no Google account in our test setup, so we saw Chrome's autofill settings only while signed out.
+
+## What happened
+
+Google announced in a [Chrome blog post on October 28, 2026](https://blog.google/products-and-platforms/products/chrome/enhanced-autofill-gmail/) that enhanced autofill "can automatically suggest information pulled directly from Gmail as you fill out online forms." It uses Gemini with Personal Intelligence to find details like order numbers, tracking information and flight bookings. The rollout starts in the US on desktop, Android and iOS, for Gemini in Chrome users who have Personal Intelligence turned on.
+
+Enhanced autofill itself isn't new. On [November 3, 2025](https://blog.google/products-and-platforms/products/chrome/enhanced-autofill/), Chrome started filling passport numbers, driver's license numbers and vehicle info that you had saved, for desktop users with smarter form understanding turned on. The October change is the first time it fills forms from a Google app instead of from info you saved in Chrome.
+
+Chrome's help page, [Fill out forms automatically in Chrome](https://support.google.com/chrome/answer/142893?hl=en), says Gmail suggestions appear in the autofill dropdown with the Gemini spark icon, controlled by a switch named **Find and fill with Gemini**.
+
+![Timeline: on November 3, 2025 Chrome's smarter form understanding started filling saved passports, licenses and vehicle info; on October 28, 2026 enhanced autofill started pulling order, tracking and flight details from Gmail in the US; Chrome 157 reaches the stable channel on November 3, 2026; Photos is named in Chrome's setting text but not in Google's announcement, with no date](./images/chrome-enhanced-autofill-gmail/chrome-autofill-gmail-timeline.webp)
+
+## Who is affected
+
+You'll see Gmail suggestions in Chrome only if you meet every condition on two Google help pages. Chrome's page names the US, age 18 or older and Personal Intelligence. Gemini's [Personal Intelligence page](https://support.google.com/gemini/answer/16598406?hl=en) adds a personal Google account, the Keep Activity setting and, for Gmail, a Gmail setting called **Smart features in other Google products**.
+
+| If you... | What happens |
+| --- | --- |
+| Live in the US, use Gemini in Chrome and turned on Personal Intelligence | Gmail suggestions start appearing as the rollout reaches you |
+| Never turned on Personal Intelligence | No Gmail suggestions. Regular autofill works as before |
+| Turned off Keep Activity in Gemini | Personal Intelligence isn't available, so no Gmail suggestions |
+| Turned off Gmail's Smart features in other Google products | Gemini can't connect to Gmail, Calendar or Drive |
+| Use a work, school or supervised Google account | Not eligible for Personal Intelligence |
+| Live outside the US | Not available yet. Personal Intelligence itself isn't offered in the EEA, Nigeria, Switzerland or the UK |
+| Aren't signed in to Chrome | Google says autofill needs a signed-in Google account |
+
+Our guide to [turning off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) explains what Gmail's three smart feature switches each control, including the one Gemini needs to read your email.
+
+![Six conditions before Chrome fills forms from your Gmail: live in the US and be 18 or older; use a personal Google account; be signed in to Chrome and use Gemini in Chrome; have Keep Activity on; have Personal Intelligence on with Google Workspace connected, which needs Gmail's Smart features in other Google products; and have Find and fill with Gemini on. Then Chrome can suggest order numbers, tracking and flight details from Gmail in forms](./images/chrome-enhanced-autofill-gmail/chrome-gmail-autofill-requirements.webp)
+
+## What changes for you
+
+For eligible users, Chrome can now fill fields you would normally copy out of an email. Chrome 156's interface text includes sample requests such as "running shoes order number" and "confirmation code for LAX flight." In the Linux version we checked, a shortcut setting reads "Press Ctrl twice for enhanced autofill," which opens that search inside any form without switching tabs.
+
+Three details from Google's help page matter once suggestions show up:
+
+- **You can see the source.** Hover over a Gemini suggestion on a computer, or long-press the suggestion chip above the keyboard on a phone and tap **View sources**, to get a link that opens the original email in a new tab.
+- **You can't correct it in Chrome.** Google says info pulled from Gmail "can't be edited in Chrome."
+- **Removing isn't deleting.** Removing a suggestion doesn't delete the email, but deleting the email removes the suggestion. Gemini's help page separately says changes to data in a connected app may not reach Gemini "until days later."
+
+Chrome 156's notice for this feature says, "Your requests, page titles, and URLs may be reviewed to improve enhanced autofill." A version for browsers an organization manages says instead, "Your content will not be used to improve AI." Google's [Chrome Enterprise page on enhanced autofill](https://support.google.com/chrome/a/answer/16278400?hl=en) lists the consumer default as "Allow feature and improve AI models," with data that "can also be read by human reviewers." Google's announcement says sensitive data is encrypted.
+
+Photos may come next. Chrome 156 already describes the switch as "Autofill info from apps such as Gmail and Photos," while Google's announcement and help page mention only Gmail.
+
+## What to do now
+
+If you'd rather Chrome didn't search your email when you fill out forms, these steps follow Google's [Chrome autofill help page](https://support.google.com/chrome/answer/142893?hl=en) and [Personal Intelligence help page](https://support.google.com/gemini/answer/16598406?hl=en).
+
+![Chrome 156 Autofill and passwords settings, signed out, with a blue box around Smarter form understanding under Autofill settings: the switch is greyed out, and Things to consider says the page's URL and content are shared with Google. A side panel notes that eligible US accounts get an Enhanced autofill item here with the Find and fill with Gemini switch](./images/chrome-enhanced-autofill-gmail/chrome-autofill-settings-chrome-156.webp)
+
+1. **On a computer:** open Chrome, click **More** (the three dots) > **Settings** > **Autofill and passwords**. Under **Autofill settings**, select **Enhanced autofill** and turn off **Find and fill with Gemini**.
+2. **On Android:** open Chrome, tap **More** > **Settings** > **Autofill and passwords**. Under **Autofill settings**, tap **Enhanced autofill** and turn off **Find and fill with Gemini**.
+3. **On iPhone or iPad:** open Chrome, tap **More** > **Settings** > **Autofill and passwords** > **Autofill settings** > **Enhanced autofill**, and turn off **Find and fill with Gemini**.
+4. **To hide one wrong or outdated suggestion:** on a computer, open the dropdown in the form field, hover over the Gemini suggestion and select **Remove from Chrome**. On Android, long-press the suggestion chip above the keyboard and tap **Remove suggestion**. On iPhone, long-press it and tap **Remove**. Delete the email in Gmail if you want the details gone from both.
+5. **To keep Gmail away from Gemini everywhere:** in the Gemini app, tap **Menu**, then your profile picture > **Personal Intelligence** > **Connected Apps** (on gemini.google.com: **Menu** > **Settings & help** > **Personal Intelligence** > **Connected Apps**), and turn off **Google Workspace**. That also stops Gemini from using Gmail, Calendar and Drive for Personal Intelligence in chats. Our look at [Gemini's Customize menu for Connected Apps](/posts/gemini-connected-apps) covers the other app connections.
+6. **Optional:** in the same **Autofill settings** list, turn off **Smarter form understanding** if you don't want Chrome to send the page's URL and content to Google to understand forms. Google's help page says it is on unless you turn it off, and filling saved IDs and vehicle info depends on it.
+
+![What each switch stops: turning off Find and fill with Gemini stops Gmail suggestions while saved addresses, cards and passwords keep working; removing one suggestion hides it but keeps the email; deleting the email removes the suggestion, though changes can take days to reach Gemini; disconnecting Google Workspace in Gemini's Connected Apps stops Gemini using Gmail, Calendar and Drive; turning off Smarter form understanding stops sending page URLs and content to Google](./images/chrome-enhanced-autofill-gmail/chrome-gmail-autofill-switches.webp)
+
+Turning off Keep Activity ends Personal Intelligence entirely, with side effects our guide to [turning off Gemini Apps Activity](/posts/turn-off-gemini-apps-activity) lists. To remove Gemini from Chrome altogether, see our guide to [turning off AI in Chrome](/posts/turn-off-ai-in-chrome), and for AI switches in other apps, our roundup of [how to turn off AI in Chrome, Gmail, Word and more](/posts/turn-off-ai-features).
+
+## Our take
+
+Leave **Find and fill with Gemini** off unless you regularly copy order numbers or flight details into web forms. For most people, the convenience is small next to what the feature sends.
+
+The facts behind that: Chrome's own text says your requests, page titles and URLs are sent to Google and may be reviewed. The controls are also spread out: the Gmail switch is in Chrome's Enhanced autofill page, the Gmail connection in Gemini's Connected Apps, Keep Activity in Gemini's activity settings, and Smarter form understanding, on by default, is a separate Chrome switch. Chrome's Enhanced autofill page links to Connected Apps, but no single page shows which of these are on for you. Forms that ask for an order number are a small part of most people's browsing, while the review notice covers every request.
+
+The other side: this only reaches people who already opted in to Personal Intelligence, so Chrome isn't reading an inbox the user hasn't opened to Gemini. Showing the source email and letting you remove a suggestion is more transparency than ordinary autofill offers. If you rebook flights or track packages often, skipping the trip to your inbox saves real time, and Chrome's text says the info you autofill is never seen by anyone.
+
+## What to watch next
+
+- **Google Photos**: we'll update this article if Google adds Photos or other connected apps
+- **More countries**: Google says the rollout is "beginning" in the US and hasn't named other countries. Connecting Gmail to Google Search is a separate switch, which our article on [Google using Gmail and Photos for ads](/posts/google-gmail-photos-ads) explains
+- **Chrome 157 on November 3, 2026**: we'll recheck the autofill settings and interface text in the next stable release
+- **Default setting**: Google doesn't say whether Find and fill with Gemini starts on or off. Chrome 156 includes a "Now you can find and fill info from Gmail and more" notice with **Manage settings** and **OK** buttons
+
+## FAQ
+
+### Why is Chrome enhanced autofill greyed out?
+
+You're probably signed out of Chrome, or an organization manages your browser. In our test, signed-out Chrome 156 showed Smarter form understanding, Save and fill identity docs, and Save and fill travel info greyed out. Google's help page says autofill needs you to be signed in to Chrome, and Google's admin page says organizations control enhanced autofill from the Google Admin console.
+
+### Why is enhanced autofill missing from Chrome settings?
+
+The Enhanced autofill item appears only for eligible accounts. In our signed-out copy of Chrome 156, the Autofill settings section had only Smarter form understanding and no Enhanced autofill item. If you're signed in, check the six conditions above, and keep in mind that Google is rolling the Gmail feature out gradually in the US.
+
+## How we checked
+
+- **Chrome**: on October 28, 2026, we ran Google Chrome 156.0.8078.73 for Linux with a new profile without signing in, opened **Autofill and passwords** and recorded which switches appeared and whether they were on or greyed out. We read the Enhanced autofill settings, notices, sample requests and shortcut in Chrome's English language file. Our test environment's network settings make Chrome show a "managed by your organization" note, but no autofill or AI policies were set
+- **Google pages** (opened October 28, 2026): the Chrome blog posts of [October 28, 2026](https://blog.google/products-and-platforms/products/chrome/enhanced-autofill-gmail/) and [November 3, 2025](https://blog.google/products-and-platforms/products/chrome/enhanced-autofill/), Chrome Help "Fill out forms automatically in Chrome" for computer, Android and iPhone, the Chrome Enterprise page on enhanced autofill, Gemini Apps Help on Personal Intelligence and Connected Apps, and Google's [Chrome release schedule](https://chromiumdash.appspot.com/schedule)
+- **Not checked**: we couldn't sign in, so we didn't see Gmail suggestions, the Enhanced autofill page, or whether Find and fill with Gemini starts on or off. We didn't check the shortcut on Mac, Android or iPhone

@@ -1,0 +1,62 @@
+https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-26h2 (curl 2026-10-28 09:2x UTC)
+ Summarize this article for me
+Find information on known issues and the status of the Windows 11, version 26H2 availability. For immediate help with Windows update issues, open the Get Help app if you are using a Windows device, or go to support.microsoft.com. Follow @WindowsUpdate on X for Windows release health updates. If you are an IT administrator and want to programmatically get information from this page, use the Windows Updates API in Microsoft Graph.
+Current status as of October 21, 2026
+Windows 11, version 26H2 has reached general availability. This new version contains all the recently announced features in Windows 11, versions 25H2 and 24H2 and will be delivered using servicing technology, providing a fast installation experience.
+The Windows 11, version 26H2 phased rollout has reached full availability for devices running Windows 11, versions 25H2 and 24H2. You can check for the update by going to Settings > Windows Update and selecting Check for Windows updates. If Windows 11, version 26H2 is available for your device, select Download & install. A single restart will complete the process. If you want updates to be installed as soon as they’re available, turn on Get the latest updates as soon as they’re available. For more details, watch this video.
+For more details on how to install Windows 11, version 26H2, watch this video.
+How to get the Windows 11 2026 Update
+An IT pro’s guide to Windows 11, version 26H2
+See all messages >
+Known issues
+See open issues, content updated in the last 30 days, and information on safeguard holds. To find a specific issue, use the search function on your browser (CTRL + F for Microsoft Edge).
+Summary
+Originating update
+Status
+Last updated
+Devices might experience a black screen or desktop loading issues after sign-in
+Microsoft has received reports of this issue occurring in some virtual desktop environments.
+N/A 
+Resolved
+ KB5127648
+2026-10-13 
+10:13 PT
+Remote Desktop connections might fail for non-admin users with error 0xC000000D
+This issue affects non-admin users connecting through Remote Desktop with Administrator protection enabled.
+OS Build 26300.9550
+ KB5124010
+2026-09-22
+Mitigated
+2026-10-13 
+10:13 PT
+Applications which require AC-3 audio decoding might close unexpectedly
+This issue is more likely to occur in legacy applications, and unlikely for many modern applications.
+OS Build 26300.9550
+ KB5124010
+2026-09-22
+Resolved
+ KB5127648
+2026-10-13 
+10:13 PT
+Domain-joined devices might lose their secure trust relationship with the domain
+Some Credential Guard protected machine accounts might be unable to sign in interactively will valid domain credentials.
+N/A 
+Resolved
+ KB5124010
+2026-10-08 
+17:44 PT
+USB audio devices might fail to start or produce no sound
+Some USB Audio Class 1.0 devices display Code 10 or fail in multichannel audio modes after installing the Sept. 8 update
+N/A 
+Mitigated
+2026-09-29 
+13:05 PT
+Issue details
+October 2026
+Devices might experience a black screen or desktop loading issues after sign-in
+Status
+Originating update
+History
+Resolved KB5127648
+N/A 
+Resolved: 2026-10-13, 10:00 PT

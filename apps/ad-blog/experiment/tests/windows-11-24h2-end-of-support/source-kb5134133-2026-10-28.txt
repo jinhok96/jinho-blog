@@ -1,0 +1,62 @@
+https://support.microsoft.com/en-us/help/5134133 -> https://support.microsoft.com/en-us/servicing/os/windows-11/2026/10/kb5134133-windows-11-24h2-25h2-26h2-update (curl 2026-10-28 09:2x UTC)
+ Applies To
+Windows 11 version 26H2, all editions Windows 11 version 25H2, all editions Windows 11 version 24H2, all editions 
+This non-security out-of-band (OOB) update for Windows 11, versions 24H2, 25H2, and 26H2 (KB5134133) is cumulative. It includes updates from previous releases, along with additional non-security improvements.
+Who should install this update
+This out-of-band (OOB) update is intended for devices that do not receive current certificate trust list (CTL) updates, including updates to the list of untrusted certificates. Examples include devices in disconnected environments, devices that cannot access Microsoft’s certificate-update service and devices where automatic CTL updates are disabled.
+Improvements
+This update includes fixes and improvements from the following previously released update:
+October 13, 2026-KB5127648 (OS Builds 26300.9711, 26200.9711 and 26100.9711)
+The following summary outlines key quality improvements addressed by this update. The bold text within the brackets indicates the item or area of the change.
+[Certificates] This update includes an updated trusted root certificate payload in the Windows cumulative update for devices that cannot access Microsoft’s certificate-update service and devices where automatic certificate trust list (CTL) updates are disabled. To learn more, see Certificates and trust in Windows.
+For more information about the Windows certificate trust changes related to eMudhra, see Microsoft’s response to compromised eMudhra certificate authority keys.
+If you've already installed previous updates, your device will download and install only the new updates included in this package.
+Note: Devices enrolled in hotpatch updates that install this update will not receive hotpatch updates until after they install the January 2027 baseline update.
+Components updates
+AI components
+This release updates the following AI components to version 1.2608.951.0: Image Search, Content Extraction, Semantic Analysis, and Settings Model.
+To learn more, see Release information for AI components.​
+Servicing stack update
+Includes KB5127647 (Build 26100.9703), which improves the reliability of the Windows update installation process. To learn more about SSUs, see Servicing stack updates.
+Known issues in this update
+You might be unable to turn on Smart App Control
+Symptoms
+After installing this update, some devices might be unable to turn on Smart App Control in the Windows Security app if it has been turned off. On affected devices, the option to turn on Smart App Control might be grayed out.
+Devices where Smart App Control is already turned on are not affected and remain protected.
+Resolution
+Important: This section contains information about modifying the registry. Before you modify the registry, back it up and make sure that you know how to restore it if a problem occurs. For more information, see How to back up and restore the registry in Windows.
+Option #1: Modify the registry
+You can modify the registry to restore the ability to turn on Smart App Control by following these steps:
+Open a Command Prompt window by typing cmd in the Search box.
+Select Run as administrator.
+At the command prompt, enter the following commands. Then restart the device.
+reg add "HKLM\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides" /v 2883193997 /t REG_DWORD /d 1 /f
+reg add "HKLM\SYSTEM\CurrentControlSet\Policies\Microsoft\FeatureManagement\Overrides" /v 2850574478 /t REG_DWORD /d 1 /f
+Option #2: Install a Group Policy
+IT administrators can instead choose to mitigate this issue for enterprise-managed devices managed by IT departments by installing and configuring the special Group Policies listed below.
+Group Policy downloads with Group Policy name:
+Download #1 for Windows 11, versions 24H2, 25H2, and 26H2 — KB5074105 261015_19222 Feature Preview
+Download #2 for Windows 11, versions 24H2, 25H2, and 26H2 — KB5074105 261015_19221 Feature Preview
+Important: You should install and configure both Group Policies to resolve this issue. The first Group Policy is needed to turn on Smart App Control. The second Group Policy ensures that logging is available to assist with troubleshooting in case any problems arise.
+The special Group Policies can be found in Computer Configuration > Administrative Templates > {Group Policy name} > Windows 11, version 24H2, 25H2. After installing the Group Policies, configure the value for both settings to Enabled and restart your device(s) to apply the Group Policy settings.
+Next steps: Microsoft is working on a resolution and will provide an update in an upcoming release.
+Remote Desktop connections might fail for non-admin users with error 0xC000000D
+Symptoms
+After installing the September 2026 non-security preview update KB5124010, or later updates, non-admin users might be unable to establish Remote Desktop connections to remote devices that have Administrator protection enabled. Attempts to connect might fail with error 0xC000000D and display the message, “The token that was passed to the function is invalid.” This issue primarily affects enterprise-managed remote devices used as Remote Desktop hosts with Administrator protection enabled, regardless of how the feature was enabled.
+Note: If your organization uses Windows security baselines, published through the Microsoft Security Compliance Toolkit, Administrator protection is enabled by default in Windows 11, version 24H2, 25H2, and 26H2 security baselines, unless your organization has configured the policy differently.
+Resolution
+IT administrators can mitigate this issue on devices affected by the Remote Desktop connection failure by using their existing policy management method to temporarily turn off Administrator protection. Reset the User Account Control Type Of Admin Approval Mode policy in Microsoft Intune or Group Policy. For more information, see Administrator protection on Windows 11.
+Next steps: Microsoft is working to address this issue in a future Windows update and will provide more information when it is available.
+USB audio devices might fail to start or produce no sound
+Symptoms
+After installing the September 8, 2026, Windows security update (KB5124012), some USB Audio Class 1.0 devices might fail to start or produce audio. Affected devices might experience one or more of the following symptoms:
+The device displays an error in Device Manager: "This device cannot start (Code 10).”
+No audio output.
+Volume controls are unresponsive or remain at zero.
+Sound settings are unresponsive or unavailable.
+Some devices might function in standard stereo configurations but fail when using multichannel audio features, including 8-channel or 3D audio modes. Some customers have reported that they're able to restore audio in these cases by switching to 2-channel mode.
+This issue is limited to USB Audio Class 1.0 devices.
+Resolution
+This issue is partially resolved in the out-of-band (OOB) update released on September 14, 2026, (KB5129195). This OOB update resolves the symptoms experienced on devices using 8-channel or 3D audio modes. Microsoft is working to address the other symptoms and will provide more information when it is available.
+IT administrators who need an immediate workaround for the symptoms not addressed yet by the OOB update should contact Microsoft Support for Business for assistance.
+How to get this update

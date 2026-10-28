@@ -34,3 +34,14 @@
 - "Windows Update will stop working on unpatched PCs next year"(TechPowerUp 10-11): 1차 출처를 찾지 못해 다루지 않음
 - CISA KEV에 10-13 추가된 Windows 명령 주입 취약점(CVE-2026-96951): 영향 버전을 확인하지 못해 본문에서 뺌
 - 24H2에서 25H2만 골라 설치하는 방법: Microsoft 문서에서 확인하지 못해 쓰지 않음 (Windows Update는 26H2를 제공)
+
+## 2026-10-28 후속 갱신 (세션 61, 개선 세션 5번 칼럼 후속)
+
+- 방법: 세션 이전 저장본(`source-status-24h2.txt` 10-13판)과 이번 세션 curl로 받은 판(`source-*-2026-10-28.txt`, 2026-10-28 09:2x UTC)을 공백 정규화 후 비교. 쓴 스킬: `copy-editing` Content Refresh(Refresh vs. Rewrite → "Core message still valid, details outdated" = Light refresh: Freshness·Accuracy pass만, URL·소제목·목소리 유지), AI-Tell Check
+- 바뀐 것
+  - R1. 24H2·26H2 상태 페이지 "Current status as of October 21, 2026": "rollout is phased and will expand over the next few months" → "The Windows 11, version 26H2 phased rollout has reached full availability for devices running Windows 11, versions 25H2 and 24H2." 설정 문장도 "If the update is ready for your device, it will download and install automatically" → "If you want updates to be installed as soon as they're available, turn on Get the latest updates as soon as they're available."
+  - R2. 2026-10-26 비보안 OOB 업데이트 KB5134133(26300/26200/26100.9725): Applies To "Windows 11 version 24H2, all editions", "intended for devices that do not receive current certificate trust list (CTL) updates … devices in disconnected environments" (eMudhra 인증 기관 키 유출 대응, 메시지 센터 10-26 항목). release information 표 24H2 Home/Pro 열은 여전히 "End of updates"
+- 그대로인 것: 메시지 센터 10-13 항목(24H2 Home·Pro 업데이트 종료, 26H2·25H2 권장), release information 종료일(26H2 2028-10-10 · 26H1 2028-03-14 · 25H2 2027-10-12 · 24H2 Enterprise/Education 2027-10-12 · 23H2 End of updates), 10-13 KB5127648 세 버전 공통, KB5121794 "common core … identical set of system files"·"master switch", safeguard holds "on its way, but not ready"·"don't attempt to manually update", 다운로드 페이지 Current release 26H2·9 GB·관리자·라이선스·x64만, lifecycle FAQ "may still work with programs and hardware"
+- 알려진 문제(26H2 상태 페이지 10-28): 미해결 2건 모두 Mitigated — Remote Desktop 0xC000000D(Administrator protection, KB5134133 "primarily affects enterprise-managed remote devices"), USB Audio Class 1.0 장치 시작 실패. 24H2 상태 페이지에도 둘 다 있음. "safeguard hold" 문구는 두 페이지 모두 표 머리말에만 있음 → 본문에 "doesn't list any safeguard hold"
+- 본문 반영: 첫 문단 "October 2026 security update", 둘째 문단 10-21 전면 배포 1문장, 확인 날짜 10-28 추가, What happened 단계 배포 문장 → 10-21 전면 배포 인용, Who is affected 확인 날짜, What changes for you KB5134133 문단, What to do now 3·5·6단계(설정 설명을 새 문장에 맞춤, 10-28 hold 없음, "by November 10" → "still offers nothing"), Our take 알려진 문제 문장·"three weeks or so" 삭제·단계 배포 반론 삭제, What to watch next "Safeguard holds lifting" → "New known issues or holds". `updatedAt` 2026-10-28. 제목·설명·이미지 그대로
+- 쓰지 않은 것: KB5134133의 Smart App Control 알려진 문제(해결 방법이 레지스트리 명령·그룹 정책뿐 → 비개발자 기준 밖, 24H2만의 문제도 아님), eMudhra 인증서 신뢰 목록 변경 자체(Windows가 자동 갱신)

@@ -1,0 +1,15 @@
+https://learn.microsoft.com/en-us/windows/release-health/windows-message-center (curl 2026-10-28 09:2x UTC, 관련 항목만)
+Recent announcements
+Message
+Date
+New MSRC blog: Microsoft’s response to compromised eMudhra certificate authority keys
+Microsoft has published a new blog post outlining our response to compromised eMudhra intermediate certificate authority keys, including changes to Windows and Microsoft Edge trust lists. For more information, see Microsoft’s response to compromised eMudhra certificate authority keys.
+2026-10-26 
+19:00 PT
+2026-10-13 
+10:00 PT
+Windows 11, version 24H2 (Home and Pro) and Windows 10 LTSB 2016 have reached end of updates
+Today, October 13, 2026, Windows 11, version 24H2 Home and Pro, and Windows 10 Enterprise LTSB 2016 have reached end of updates. The October 2026 monthly security update is the last update available for these editions. Devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+We recommend updating devices running Windows 11, version 24H2 Home and Pro editions to Windows 11, version 26H2 or Windows 11, version 25H2 to continue receiving monthly security and quality updates. Windows 11, version 24H2 Enterprise and Education remain supported until October 12, 2027. For more information, see the How to get the Windows 11 2026 Update video.
+For devices running Windows 10 Enterprise LTSB 2016, we recommend updating to the latest Long-Term Servicing Channel (LTSC) release, Windows 11 Enterprise LTSC 2024. Extended Security Updates (ESU) are also available for organizations that need additional time to complete their transition.
+For more information about product lifecycle dates, see Windows 11 release information, Windows 10 release information, and Lifecycle FAQ - Windows.

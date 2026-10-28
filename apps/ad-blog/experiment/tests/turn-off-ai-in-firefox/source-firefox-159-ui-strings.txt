@@ -147,3 +147,9 @@ quickactions-cmd-manageai = disable ai, off ai, manage ai
 497:pref("browser.preferences.aiControls.showUnavailable", false);
 934:pref("browser.smartwindow.enabled", false);
 policy-AIControls = Configure AI controls.  (browser/localization/en-US/browser/policies/policies-descriptions.ftl:5)
+
+# gre/moz-src/browser/components/genai/GenAI.sys.mjs (사이드바 챗봇 공급자 주소)
+162:      "https://claude.ai/new",
+180:      "https://chatgpt.com",
+207:      "https://gemini.google.com",
+237:      "https://chat.mistral.ai/chat",

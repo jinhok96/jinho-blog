@@ -18,7 +18,7 @@ We installed Firefox 159 on a new profile on October 28, 2026, and checked what 
 
 ## Firefox AI features at a glance
 
-Firefox 159's **AI controls** page lists six features on a new profile, and a seventh, Smart Window, once it reaches your copy. The descriptions below are Firefox's own, from that page.
+Firefox 159's **AI controls** page lists six features on a new profile, and a seventh, Smart Window, once it reaches your copy. The descriptions below follow Firefox's wording on that page, and the last column is what we saw after blocking.
 
 | Feature | What it does | After Block AI enhancements |
 | --- | --- | --- |
@@ -28,7 +28,7 @@ Firefox 159's **AI controls** page lists six features on a new profile, and a se
 | Tab group suggestions | Suggests names and groupings for your tabs | Blocked |
 | Key points in link previews | Shows a quick summary before you open a link | Blocked |
 | Chatbot in sidebar | Puts Claude, ChatGPT, Gemini or Mistral Vibe in the sidebar and right-click menu | Blocked; sidebar icon and menu item gone |
-| Smart Window | Firefox's built-in AI assistant window, still rolling out | Blocked |
+| Smart Window | Firefox's built-in AI assistant window, still rolling out | Listed as blocked in the confirmation window |
 
 The first five are "on-device AI," which Firefox describes as small AI models that download to your computer only if you use the feature. The chatbot sends what you ask to the provider you pick, such as ChatGPT or Claude.
 
@@ -51,7 +51,7 @@ After you click **Block**, every feature on the page shows **Blocked**, and Fire
 
 ![Firefox's Block AI enhancements confirmation window listing Translations, Speech recognition, Image alt text in Firefox PDF viewer, Tab group suggestions, Key points in link previews, Smart Window and Chatbot providers in sidebar, with a box around Smart Window, plus a note that blocking also affects extensions that use AI provided by Firefox](./images/turn-off-ai-in-firefox/firefox-block-ai-confirmation.webp)
 
-This is simpler than Chrome, where some AI features can only be hidden in Settings and fully removed only with a Windows policy; our guide to [turning off AI in Chrome](/posts/turn-off-ai-in-chrome) covers each one. On a work or school computer, the switch or a single feature may be grayed out: Firefox locks these settings when your organization manages them with its **AI controls** policy, so ask your IT team.
+This is simpler than Chrome, where some AI features can only be hidden in Settings and fully removed only with a Windows policy; our guide to [turning off AI in Chrome](/posts/turn-off-ai-in-chrome) covers each one. On a work or school computer, the switch or a single feature may be grayed out: Firefox locks these settings when your organization manages them with an AI controls policy, so ask your IT team.
 
 ## What disappears when you block AI in Firefox?
 
@@ -64,7 +64,7 @@ In our October 2026 test of Firefox 159.0, blocking AI removed two items from th
 
 ![Before and after comparison in Firefox 159: before blocking, the right-click menu on selected French text includes Translate Selection to English and Ask an AI Chatbot, and the sidebar has an AI chatbot icon; after Block AI enhancements, both menu items and the chatbot icon are gone](./images/turn-off-ai-in-firefox/firefox-before-after-block.webp)
 
-The page also says blocked on-device features have their downloaded models "removed," which frees the space they used. A new profile like ours hadn't downloaded any, so we didn't measure how much space that saves.
+Firefox's AI controls page also says blocked on-device features have their downloaded models "removed." A new profile like ours hadn't downloaded any, so we didn't measure how much space that saves.
 
 ## How to keep one AI feature and block the rest
 
@@ -78,7 +78,7 @@ When we set only **Translations** back to **Available**, the translation icon an
 
 ![Firefox AI controls with a box around Translations set to Available while Speech recognition, Image alt text and Tab group suggestions stay Blocked, next to a right-click menu where Translate Selection to English is back and Ask an AI Chatbot is still missing](./images/turn-off-ai-in-firefox/firefox-keep-translations-block-rest.webp)
 
-The menus offer different choices. **Translations** had only **Available** and **Blocked**. **Chatbot in sidebar** also listed the four chatbot providers, **Anthropic Claude**, **ChatGPT**, **Google Gemini** and **Mistral Vibe**, so picking one keeps the chatbot and chooses its provider in one step. If you keep the chatbot, note one change in Firefox 159: its **Summarize page** option now sends the page's address to the chatbot provider instead of the page's text. If you pick Gemini, its settings in your Google account apply as well, which our guide to [turning off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) covers for Gmail.
+The menus offer different choices. **Translations** had only **Available** and **Blocked**. **Chatbot in sidebar** also listed the four chatbot providers, **Anthropic Claude**, **ChatGPT**, **Google Gemini** and **Mistral Vibe**, so picking one keeps the chatbot and chooses its provider in one step. Each provider in that list is the company's own chat website, such as gemini.google.com, opened in the sidebar, so your chats there follow that company's account and history settings. If you pick Gemini, our guide to [turning off Gemini Apps Activity](/posts/turn-off-gemini-apps-activity) explains how long Google keeps those chats. And if you keep the chatbot, note one change in Firefox 159: its **Summarize page** option now sends the page's address to the chatbot provider instead of the page's text.
 
 You can also do the reverse: leave the main switch off and set only the features you dislike to **Blocked**. The difference is the future. With the main switch off, an AI feature added in a later update starts out available.
 

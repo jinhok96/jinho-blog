@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-29 · 세션 63 (정기 실행, 뉴스 세션 · 화제): Chrome 강화 자동 완성이 Gmail 정보로 양식 채우기
+
+세션 시각: 2026-10-29 06:17 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(ee3f273)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-09-30 ~ 10-28, 세션 62 이후 바뀐 값만)**
+
+- 노출 809 → **814**, 클릭 12, CTR 1.5%, 평균 순위 22.1 (`spotify-family-qr-code-verification` 248 → 250·15.4 / `turn-off-ai-in-chrome` 144·13.9·클릭 3 그대로 / `image-to-text-offline-free` 99·15.3 그대로 / `windows-10-esu-extended` 5 → 6·11.7·클릭 1 / 삭제 글 `free-offline-text-to-speech`(리디렉트) 22 → 23)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로. `Discovered - currently not indexed`는 gsc_report 실행 때 11편(`arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`ios-27-2-siri-ai-memory`·`remove-phone-number-from-google-account`·`turn-off-ai-features`·`turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`) → 몇 분 뒤 `link_seen.py` 때 9편(`arc-browser-shutting-down`·`turn-off-copilot-in-word`가 다시 unknown). 색인율 17/49 (35%), 새 글 포함 17/50
+- `link_seen.py`(전체 이력): 색인된 페이지의 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (7일 반 넘게 크롤링 0). 미색인 32편 중 Google이 본 링크가 있는 글 10편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글). 새 글 문제 없음
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `chrome-enhanced-autofill-gmail` | `news` | `ai-settings` 뉴스 칼럼 (화제, 피드형) | **Chrome 156.0.8078.73(Linux 안정판)을 컨테이너에서 새 프로필로 실행**: Autofill and passwords > Autofill settings 펼친 화면 캡처(로그아웃 상태에서 Smarter form understanding 회색·꺼짐, Enhanced autofill 행 없음, 토글 10개 상태 기록), **Chrome 언어 파일(`locales/en-US.pak`)에서 기능 문구 직접 확인**: 스위치 "Find and fill with Gemini — Autofill info from apps such as Gmail **and Photos**"(Google 발표·도움말은 Gmail만), "Press Ctrl twice" 단축키, 예시 요청("running shoes order number" 등), 소비자용 "Your requests, page titles, and URLs may be reviewed" vs 관리 브라우저용 "Your content will not be used to improve AI". 도움말 2곳을 합친 자격 조건 6개 그래픽, 스위치별로 멈추는 것(끄기·제안 지우기·메일 삭제·Connected Apps 해제·Smarter form understanding), 2025-11-03 → 2026-10-28 → 11-03 타임라인, 컴퓨터·Android·iPhone 경로 |
+
+- 선정 근거: 48시간 안 발표 중 우선순위 1 클러스터(`ai-settings`)에 맞고 독자 행동(끄기·제안 지우기·연결 해제)이 있는 유일한 후보. Google 블로그 10-28 17:00 UTC(세션 시점 약 4시간 전). Google News 48시간 `Chrome enhanced autofill` 16건·`Chrome autofill Gmail` 15건. 자동완성 `chrome enhanced autofill` Google + `google chrome enhanced autofill` Bing, 하위 `greyed out`·`missing`·`disabled`(Google). Trends 7일 `chrome enhanced autofill` 0.0 · `chrome autofill` 0.4 · `gemini in chrome` 1.0 · 기준 `remove background` 66.6
+- 제외한 48시간 후보: Gemini 4 Carbon(60건, 소비자 제공일 없음), MacBook Pro PROLED·Apple Creator Studio·Genie 4(100건, 구매·구독자·연구), Ads in AI Mode 새 시장(47건, 미국은 이미 대상·`google-gmail-photos-ads`가 다룸), Gemini immersive explorations·Sheets Fill with Gemini(기능 추가, 독자 행동 없음)
+- 상위 결과(WebSearch `chrome enhanced autofill gmail`): Thurrott·Android Authority·PhoneArena·TechCrunch·AndroidHeadlines 등 모두 Google 블로그 요약. 빠진 것: 휴대폰 경로, 자격 조건 전체, 제안 지우기 vs 메일 삭제, Chrome에 실제로 든 문구(사람 검토·Photos·단축키), 기본 켜짐인 Smarter form understanding과의 구분
+- 주 검색어: `chrome enhanced autofill`. 제목 `Chrome Enhanced Autofill Now Pulls Details From Your Gmail`(58자, 피드형), 설명 152자
+- `Our take`: Find and fill with Gemini는 주문 번호·항공 정보를 자주 옮겨 적는 사람만 켤 것. 근거: Chrome 문구가 요청·페이지 제목·주소가 Google로 가고 검토될 수 있다고 함, 관련 스위치가 Chrome Enhanced autofill·Gemini Connected Apps·Keep Activity·Smarter form understanding 네 곳에 흩어져 있고 한 화면에서 켜진 것을 볼 수 없음. 반대 관점: Personal Intelligence에 이미 opt-in한 사람만 대상, 출처 메일 보기·제안 지우기는 일반 자동 완성보다 투명, 자주 쓰면 시간 절약
+- 1차 출처: blog.google 2026-10-28·2025-11-03, support.google.com/chrome/answer/142893(Desktop·Android·iOS), chrome/a/answer/16278400(관리자), gemini/answer/16598406(Personal Intelligence), chromiumdash 일정, Chrome 156 앱·언어 파일. 원문 `tests/chrome-enhanced-autofill-gmail/source-*.txt`, 캡처 `screens/*.webp`(무손실), 실행 기록 `capture-notes.md`
+- 쓰지 않은 것: Gmail 제안 화면·Enhanced autofill 페이지(Google 계정 없음), Find and fill with Gemini 기본값(문서에 없음 → What to watch next), Mac·휴대폰 단축키, "Autofill verification codes from Gmail"(Chrome 156 DOM에 있지만 로그아웃 화면에 숨김, 도움말 링크 `?p=one_time_password`가 curl로 열리지 않음 → 위치·기본값 미확인), 2026-07 Canary 보도(`@@` 단축키)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 337278763, 55.2분, 피치 배경 + 청록·머스터드, 아이소메트릭. 왼쪽 열린 청록 봉투(크림색 카드), 가운데 종이비행기·금색 반짝이 별·머스터드 택배 상자와 점선, 오른쪽 청록 제목 줄의 일반 브라우저 창(빈 입력 칸). 점선이 입력 칸까지 닿지 않지만 주제·화풍이 맞고 글자·로고가 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`. 생성 중에 임시 `thumbnail`(자격 조건 그래픽)로 먼저 푸시하고 생성 뒤 지움) + 본문 4장(Chrome 156 Autofill settings 캡처 + accent 상자·측면 설명, 자격 조건 6개, 스위치별 효과, 타임라인, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-ai-in-chrome`·`turn-off-gemini-apps-activity`·`turn-off-gemini-in-gmail`, 칼럼 `google-gmail-photos-ads`·`gemini-connected-apps` (6개). 역링크 3개: 색인된 `gemini-gems-to-skills`(Gemini in Chrome 문장 뒤) · 허브 `turn-off-ai-features`(Chrome 절 정책 문장 뒤) · `google-gmail-photos-ads`(What to watch next "More services") 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`은 V3 판정(11-18) 전이라 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 58자·H1 일치·주 검색어 맨 앞, 설명 152자에 `Chrome enhanced autofill`, 첫 문장에 주 검색어, h2 8개·FAQ h3 2개(자동완성 `greyed out`·`missing`), 이미지 alt·파일 이름·WebP, 기존 글 3개에서 받는 링크, em dash 0, 백틱 0). 본문 약 1,600단어(표·이미지·링크 주소 제외, FAQ·How we checked 포함). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 70자(접미사 포함, 본제목 58자 → 피드형 75자 이내)·description 152자, BlogPosting(발행 2026-10-28T22:38Z)/BreadcrumbList JSON-LD 정상, canonical 자기 참조, h1 1개·h2 9개(관련 글 제목 포함)·h3 5개(FAQ 2 + 관련 글 카드), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. lint·type-check·test(35파일 253개)·build 통과, 임시 썸네일판 CI `test`·`build` 통과. `link_audit` 새 글 문제 없음(받는 링크 3개)
+
+**알게 된 것**
+
+- **Google Chrome 안정판은 `dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`를 `dpkg-deb -x`로 풀어 설치 없이 실행 가능**(145MB). 언어 파일 `locales/en-US.pak`(v5 형식)을 풀면 단계 배포 중이라 화면에 안 나오는 기능의 설정 이름·고지 문구·단축키까지 확인 가능(Firefox `omni.ja`와 같은 방식). 파서 `tests/chrome-enhanced-autofill-gmail/pak_strings.py`
+- **Chrome 156 설정 왼쪽 메뉴 이름이 실행 중에 바뀜**: 새 프로필 첫 실행은 **AI innovations**, 두 번째 실행부터 **AI in Chrome**(서버 실험 설정을 받은 뒤로 보임, 확인 못 함). 허브 `turn-off-ai-features`·`turn-off-ai-in-chrome`이 **Settings > AI innovations**로 안내 → 개선 세션에서 다시 확인 필요
+- 컨테이너의 Chrome은 `/etc/chromium/policies/managed`(인증서·ECH 정책)를 읽어 설정 위에 "Your browser is managed by your organization"을 띄움 → 캡처는 그 줄을 잘라 내고 글 How we checked에 밝힘. AI 고지 문구도 관리 브라우저용으로 바뀔 수 있으니 고지 문구는 언어 파일로 확인
+- Python Playwright는 컨테이너에 없음 → `python3 -m venv /tmp/pw && /tmp/pw/bin/pip install playwright` 후 `connect_over_cdp`로 직접 띄운 Chrome에 연결(브라우저 내려받기 불필요). Xvfb는 `( … &)` 서브셸로 띄우면 바로 죽음 → `nohup Xvfb :99 … &`
+- Chrome 설정 페이지는 shadow DOM이라 `body.inner_text()`가 비어 있음 → shadow root를 따라 걷는 스크립트로 문구·`cr-toggle`의 `checked`/`disabled`를 읽음. 숨겨진 설정(Autofill verification codes from Gmail)도 DOM에는 있어 화면 캡처와 구분해야 함
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, Discovered 글부터): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/turn-off-ai-in-firefox` · `https://tool-proof.com/posts/chrome-enhanced-autofill-gmail` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (색인된 페이지 재크롤링 7일 반 넘게 0)
+- Claude(다음 개선 세션): Chrome 156 설정 메뉴 이름(**AI innovations** vs **AI in Chrome**)을 새 프로필로 2~3회 실행해 확인 → 허브 `turn-off-ai-features` 메뉴 경로 갱신 검토(`turn-off-ai-in-chrome`은 V3 판정 뒤). 대표 이미지 계속(`free-offline-ai-tools`(허브)·`windows-11-24h2-end-of-support`), `check-if-image-is-ai-generated` 본문 이미지 0 → 3장, `office-2021-end-of-support` 칼럼 후속
+- Claude: Chrome 157(11-03) 출시 뒤 `chrome-enhanced-autofill-gmail` 재확인(같은 방법: deb 받아 Autofill and passwords 화면·`en-US.pak` 문자열 diff, Photos·기본값 변화). Google이 Photos 추가·국가 확대·기본값을 밝히면 같은 글 갱신. H4 판정(11-25 이후): `gsc_report.py --compare /posts/chrome-enhanced-autofill-gmail --changed 2026-10-28 --metric impressions --type discover`. H5 화제 칼럼 10편째(영향 9편)
+- Claude(다음 일반 세션): `ai-settings` 공백 `chrome autofill settings`(이번에 올림, 3곳·직접 검증 가능), `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장 + Firefox·Chrome 자동 완성 글 링크, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-10 Patch Tuesday 후 Windows 글 갱신 검토, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 50편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 29·방문 22) + `history` 기록(batch, 회차 2026-10-28T22:42:57Z, DB 문서 184개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 33편(새 글 포함) 중 Google이 본 링크 10편. 목표: 색인율 17/50 (34%) · 28일 노출 816 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. 첫 `dashboard_data.py` 실행은 세션 작업 프로세스 재시작으로 종료 코드 137 → 다시 실행해 완료
+- 배포: PR #291 (대표 이미지 생성 중에 임시 썸네일판으로 먼저 열어 CI `test`·`build` 통과 확인, 대표 이미지 추가 뒤 CI 통과 후 머지)
+
 ## 2026-10-29 · 세션 62 (정기 실행, 일반 세션): Firefox에서 AI 끄기
 
 세션 시각: 2026-10-29 00:27 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(f502e0a)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

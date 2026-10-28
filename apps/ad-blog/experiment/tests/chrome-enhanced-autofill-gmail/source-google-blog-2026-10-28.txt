@@ -1,0 +1,13 @@
+# https://blog.google/products-and-platforms/products/chrome/enhanced-autofill-gmail/ (fetched 2026-10-28 21:25 UTC, datePublished 2026-10-28T17:00:00+00:00)
+Chrome’s enhanced autofill helps you fill out forms with suggestions pulled from Gmail.
+Amanda Lim
+Product Manager, Chrome
+Oct 28, 2026
+Filling out online forms can be tedious, especially when you have to switch between tabs or search through your inbox to track down information. While autofill has always handled the basics — like your name, address, and credit card number — now it’s handling even more.
+Starting today, Chrome’s enhanced autofill feature can automatically suggest information pulled directly from Gmail as you fill out online forms. Using Gemini with Personal Intelligence, it can surface details like order numbers, tracking information, and flight bookings, right when you need them.
+As always, sensitive data is encrypted and you remain in control. You can manage whether enhanced autofill is enabled and what it can access via your Chrome settings.
+These capabilities are beginning to roll out in the U.S. on desktop, Android and iOS for Gemini in Chrome users with Personal Intelligence enabled.
+Posted in:
+Chrome
+Related stories
+Chrome

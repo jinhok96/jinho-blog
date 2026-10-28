@@ -4,7 +4,7 @@ description: Turn off AI in Chrome, Gmail, Word, Windows 11 and iPhone. See whic
 category: ai-tools
 hub: true
 createdAt: 2026-10-23T10:14:00Z
-updatedAt: 2026-10-24
+updatedAt: 2026-10-28
 tags:
   - AI
   - privacy
@@ -16,7 +16,7 @@ tags:
 
 ![Illustration of a phone, a laptop and a tablet standing side by side on a sky blue background, each with a small rounded toggle switch in the corner of its blank screen, while peach and lilac sparkle stars float up and away above them](./images/turn-off-ai-features/turn-off-ai-features-hero.webp)
 
-There is no single switch that turns off AI everywhere. Each app has its own setting: **Settings > AI innovations** in Chrome, **Manage Workspace smart feature settings** in Gmail, **File > Options > Copilot** in Word, **Settings > Apps > Installed apps** to remove the Copilot app from Windows 11, and a separate switch for each Apple Intelligence feature on an iPhone with iOS 27. Google Search is the exception: Google says AI Overviews can't be turned off, so the closest you can get is the **Web** filter after each search.
+There is no single switch that turns off AI everywhere. Each app has its own setting: **Settings > AI innovations** in Chrome, **Settings > AI controls** in Firefox, **Manage Workspace smart feature settings** in Gmail, **File > Options > Copilot** in Word, **Settings > Apps > Installed apps** to remove the Copilot app from Windows 11, and a separate switch for each Apple Intelligence feature on an iPhone with iOS 27. Google Search is the exception: Google says AI Overviews can't be turned off, so the closest you can get is the **Web** filter after each search.
 
 Some of these switches remove the AI feature completely, while others only hide a button. To tell them apart, we read Apple, Google and Microsoft's own help pages on October 23, 2026, and combined them with our earlier guides, which checked Chrome's menus against its source code and matched every Gmail and Word AI feature to the setting that controls it. The table below shows how far each switch goes; the sections after it give the steps and link to the full guide for each product.
 
@@ -25,6 +25,7 @@ Some of these switches remove the AI feature completely, while others only hide 
 | Product | Can you fully turn it off? | Where | Full guide |
 | --- | --- | --- | --- |
 | Chrome | Partly in Settings, fully with a Windows policy | **Settings > AI innovations** | [Turn off AI in Chrome](/posts/turn-off-ai-in-chrome) |
+| Firefox | Yes, one switch | **Settings > AI controls > Block AI enhancements** | [Turn off AI in Firefox](/posts/turn-off-ai-in-firefox) |
 | Gmail (and Docs) | Yes, one switch | **Settings > See all settings > General > Manage Workspace smart feature settings** | [Turn off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) |
 | Gemini app | Disconnect each app | **Customize > Connectors** | [Gemini Connected Apps](/posts/gemini-connected-apps) |
 | Google Search | No | **Web** filter on each search | This page |
@@ -34,7 +35,7 @@ Some of these switches remove the AI feature completely, while others only hide 
 
 ## Is there one switch that turns off all AI?
 
-No company offers one switch for all of its AI features, and no setting on your phone or computer turns off AI in every app at once. Each product's AI is controlled where that product's other settings live, and turning off one doesn't change the others. Gmail's switch doesn't affect Chrome, and Word's checkbox doesn't affect Excel or Windows.
+No setting on your phone or computer turns off AI in every app at once. Some apps have one switch for their own AI, such as Firefox's **Block AI enhancements**, which also blocks AI features added in later updates, but even that covers only Firefox. Each product's AI is controlled where that product's other settings live, and turning off one doesn't change the others. Gmail's switch doesn't affect Chrome, and Word's checkbox doesn't affect Excel or Windows.
 
 The words also differ by company. Google groups its switches under "smart features" and "AI innovations," Microsoft under "Copilot" and "connected experiences," and Apple under "Apple Intelligence & Siri." Searching each app's settings for those words is the quickest way to find a switch we don't cover here.
 
@@ -47,6 +48,12 @@ Chrome's AI switches are on one page: open the three-dot menu, choose **Settings
 Gemini in Chrome and AI Mode in the address bar have no full off switch in Settings. You can hide Gemini's button and shortcut, but removing it completely takes a Chrome policy set with Registry Editor on Windows. Our guide to [turning off AI in Chrome, including the on-device model](/posts/turn-off-ai-in-chrome) lists every switch with the matching policy, checked against Chrome's own source code.
 
 Chrome 156 also changed a security default: it now stops you before opening sites without HTTPS. That change isn't AI, but if you're reviewing Chrome's settings anyway, our look at [Chrome's new warning before insecure HTTP sites](/posts/chrome-http-warning-default) compares its Standard and Enhanced protection options. If you're coming to Chrome from Arc, which stops working on December 22, our look at [Arc's shutdown and the move to Dia](/posts/arc-browser-shutting-down) covers what you can bring with you and the AI defaults in Dia, Arc's replacement.
+
+## How to turn off AI in Firefox
+
+Firefox has one switch for all of its AI: open the menu, choose **Settings**, click **AI controls**, turn on **Block AI enhancements**, and click **Block**. In Firefox 159, released October 27, 2026, it blocks translations, the AI chatbot in the sidebar, link preview summaries, tab group suggestions, speech recognition, PDF image descriptions and Smart Window, Firefox's AI assistant window. You can type **disable ai** in the address bar to jump to the same page.
+
+In our test on a new profile, the chatbot and translation items disappeared from the right-click menu and the block stayed on after a restart. You can then set a single feature, such as **Translations**, back to **Available**. The switch doesn't cover search engines, so Perplexity stays in Firefox's search settings and Google's AI Overviews still appear on Google. Our guide to [turning off AI in Firefox on desktop and mobile](/posts/turn-off-ai-in-firefox) shows what the switch removes and covers the Android and iPhone apps.
 
 ## How to turn off Gemini in Gmail and Google Docs
 
@@ -136,4 +143,4 @@ Start with the AI that can read your personal data, then deal with the buttons t
 
 ## How we checked
 
-On October 23, 2026, we read Google's AI Overviews and AI Mode help pages, Apple's iOS 27 iPhone User Guide pages on turning off Apple Intelligence features and on Screen Time, Apple's Apple Intelligence overview, and Microsoft's Copilot on Windows, Copilot app management and app uninstall pages. The Chrome, Gmail, Word and Gemini sections summarize our separate guides, each of which lists its own sources and test dates. We didn't have an iPhone with iOS 27 or a Windows 11 PC, so the iPhone and Windows steps come from Apple's and Microsoft's instructions rather than our own screens.
+On October 23, 2026, we read Google's AI Overviews and AI Mode help pages, Apple's iOS 27 iPhone User Guide pages on turning off Apple Intelligence features and on Screen Time, Apple's Apple Intelligence overview, and Microsoft's Copilot on Windows, Copilot app management and app uninstall pages. The Chrome, Firefox, Gmail, Word and Gemini sections summarize our separate guides, each of which lists its own sources and test dates; we added the Firefox section on October 28, 2026. We didn't have an iPhone with iOS 27 or a Windows 11 PC, so the iPhone and Windows steps come from Apple's and Microsoft's instructions rather than our own screens.

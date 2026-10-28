@@ -1,0 +1,155 @@
+# Firefox 159.0 (Linux x86_64 en-US, firefox-159.0.tar.xz) 인터페이스 문자열 발췌, 2026-10-28
+# browser/omni.ja → localization/en-US/browser/preferences/preferences.ftl (AI controls)
+pane-privacy-section =
+    .heading = Privacy and security
+
+pane-sync-title3 = Sync
+
+pane-ai-controls-title2 = AI controls
+  .title = AI controls
+
+pane-about-firefox-title = About { -brand-short-name }
+  .title = { pane-about-firefox-title }
+
+motion-and-link-group =
+  .label = Motion and link styling
+
+
+preferences-ai-controls-header3 =
+    .heading = AI controls
+
+preferences-ai-controls-description = You always have a choice in { -brand-short-name }, including whether to use features enhanced with AI. More controls coming soon.
+
+preferences-ai-controls-block-ai-label = Block AI enhancements
+preferences-ai-controls-block-ai =
+    .label = { preferences-ai-controls-block-ai-label }
+preferences-ai-controls-block-ai-description = Blocking means you won’t see new or current AI enhancements in { -brand-short-name }, or pop-ups about them. <a data-l10n-name="link">Get more details</a> about what’s included and how to control traditional machine learning features, like search suggestions and recommendations.
+
+preferences-ai-controls-blocked-message =
+    .message = New and current AI enhancements are blocked by default. To unblock a specific feature, use the controls below.
+
+preferences-ai-controls-on-device-group =
+    .label = On-device AI
+    .description = These use small AI models that download to your device if you use the feature. This approach helps protect your privacy.
+
+preferences-ai-controls-translations-control =
+    .label = Translations
+    .description = Seamlessly browse the web in your preferred language.
+preferences-ai-controls-translations-more-link = More translations settings
+
+preferences-ai-controls-pdfjs-control =
+    .label = Image alt text in { -brand-short-name } PDF viewer
+    .description = When you add images to PDFs, this adds descriptions to make them accessible.
+
+preferences-ai-controls-tab-group-suggestions-control =
+    .label = Tab group suggestions
+    .description = Get suggestions to name and organize your tabs.
+
+preferences-ai-controls-key-points-control =
+    .label = Key points in link previews
+    .description = See a quick summary before opening a link.
+
+preferences-ai-controls-speech-recognition-control =
+    .label = Speech recognition
+    .description = Transcribe speech locally.
+
+preferences-ai-controls-sidebar-chatbot-group-3 =
+    .label = AI chatbot providers in sidebar
+    .description = Keep a chatbot in view as you browse. Choose from multiple providers and switch anytime.
+
+preferences-ai-controls-sidebar-chatbot-control =
+    .label = Chatbot in sidebar
+
+preferences-ai-controls-state-available =
+    .label = Available
+preferences-ai-controls-state-enabled =
+    .label = Enabled
+preferences-ai-controls-state-blocked =
+    .label = Blocked
+
+preferences-ai-controls-state-description-before = What the options mean:
+preferences-ai-controls-state-description-available = <strong>Available:</strong> You’ll see the feature and can use it.
+preferences-ai-controls-state-description-enabled = <strong>Enabled:</strong> You’ve opted in to use the feature.
+preferences-ai-controls-state-description-blocked = <strong>Blocked:</strong> You won’t see and can’t use the feature. For on-device AI, any models already downloaded are removed.
+
+preferences-ai-controls-block-confirmation-heading = Block AI enhancements?
+preferences-ai-controls-block-confirmation-description = You won’t see new or current AI enhancements in { -brand-short-name }, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.
+
+preferences-ai-controls-block-confirmation-features-start = What will be blocked:
+preferences-ai-controls-block-confirmation-translations = Translations
+preferences-ai-controls-block-confirmation-pdfjs = Image alt text in { -brand-short-name } PDF viewer
+preferences-ai-controls-block-confirmation-tab-group-suggestions = Tab group suggestions
+preferences-ai-controls-block-confirmation-key-points = Key points in link previews
+preferences-ai-controls-block-confirmation-sidebar-chatbot = Chatbot providers in sidebar
+preferences-ai-controls-block-confirmation-speech-recognition = Speech recognition
+preferences-ai-controls-block-confirmation-features-after = Blocking also affects extensions that use AI provided by { -brand-short-name }.
+
+preferences-ai-controls-block-confirmation-cancel =
+    .label = Cancel
+preferences-ai-controls-block-confirmation-confirm =
+    .label = Block
+
+
+security-privacy-status-ok-header = { -brand-short-name } is on guard
+
+
+# browser/localization/en-US/browser/aiFeatures.ftl (Smart Window 차단·설정 일부)
+preferences-ai-controls-block-confirmation-smart-window = { -smart-window-brand-name }
+smart-window-block-title = Block { -smart-window-brand-name }?
+smart-window-block-description-both = This will delete your { -smart-window-brand-name } chats and memories.
+smart-window-block-description-chats = This will delete your { -smart-window-brand-name } chats.
+smart-window-block-description-memories = This will delete your { -smart-window-brand-name } memories.
+ai-window-features-group =
+    .label = { -smart-window-brand-name }
+    .description = Ask questions, compare pages, and get personalized suggestions with a built-in assistant.
+smart-window-select-label =
+    .label = { -smart-window-brand-name }
+ai-window-activate-link =
+    .label = Get started
+ai-window-personalize-button =
+    .label = { -smart-window-brand-name } settings
+ai-window-personalize-header =
+    .heading = { -smart-window-brand-name }
+ai-window-default-section =
+    .label = Default settings
+ai-window-is-default-window =
+    .label = Use { -smart-window-brand-name } by default
+    .description = Open { -smart-window-brand-name } when { -brand-short-name } starts, restarts, or opens links from other apps.
+ai-window-open-sidebar =
+    .label = Open assistant automatically
+    .description = Show the assistant sidebar on each new tab. Close it anytime.
+ai-window-smart-cursor-in-smart-window =
+    .label = Show shortcuts when selecting text
+    .description = Get quick access to summarize, explain, and more.
+smart-window-model-section =
+    .label = Assistant model
+    .description = Choose a model based on what’s important to you.
+smart-window-model-radio-group =
+    .aria-label = Assistant model
+smart-window-model-learn-link = Learn about models
+smart-window-model-fast =
+    .label = Fast: Answers quickly
+    .description = Model { $model } by { $ownerName }
+smart-window-model-flexible =
+    .label = Flexible: Solid fit for most needs
+    .description = Model { $model } by { $ownerName }
+smart-window-model-personal =
+
+# browser/localization/en-US/browser/browser.ftl (주소창 빠른 동작)
+quickactions-cmd-addons3 = extensions, themes, addons, add-ons
+
+quickactions-manageai = Manage AI controls
+quickactions-cmd-manageai = disable ai, off ai, manage ai
+
+
+# browser/defaults/preferences/firefox.js
+496:pref("browser.preferences.aiControls", true);
+497:pref("browser.preferences.aiControls.showUnavailable", false);
+934:pref("browser.smartwindow.enabled", false);
+policy-AIControls = Configure AI controls.  (browser/localization/en-US/browser/policies/policies-descriptions.ftl:5)
+
+# gre/moz-src/browser/components/genai/GenAI.sys.mjs (사이드바 챗봇 공급자 주소)
+162:      "https://claude.ai/new",
+180:      "https://chatgpt.com",
+207:      "https://gemini.google.com",
+237:      "https://chat.mistral.ai/chat",

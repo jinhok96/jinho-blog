@@ -1,0 +1,28 @@
+# Firefox for Android 159.0 (fenix-159.0.multi.android-x86_64.apk, archive.mozilla.org) 기본(영어) 문자열 발췌, 2026-10-28
+ai_controls_ai_powered_features	AI-powered features
+ai_controls_banner_headline	You always have a choice in %s
+ai_controls_banner_supporting_text_2	That includes whether to use features enhanced with AI. %s
+ai_controls_block_ai_description	Blocking means you won’t see new or current AI enhancements in %s, or pop-ups about them.
+ai_controls_block_ai_title	Block AI enhancements
+ai_controls_block_dialog_block	Block
+ai_controls_block_dialog_body	You won’t see new or current AI enhancements in %1$s, or pop-ups about them. Afterwards, you can unblock anything you want to keep using.
+ai_controls_block_dialog_cancel	Cancel
+ai_controls_block_dialog_title	Block AI enhancements?
+ai_controls_block_dialog_what_will_be_blocked	What will be blocked:
+ai_controls_blocked_info_banner	New and current AI enhancements are blocked by default. Unblock specific features below.
+ai_controls_learn_more	Learn more
+ai_controls_more_page_summary_settings	More page summary settings
+ai_controls_more_translations_settings	More translations settings
+ai_controls_see_whats_included	See what is and isn’t included
+ai_controls_translations_description	All translations stay private on your device.
+ai_controls_translations_title	Translations
+ai_controls_voice_search_description	Audio is converted to text by Google Speech Services.
+ai_controls_voice_search_title	Voice search
+mozac_ai_controls_page_summary_description	Pages and summaries are never stored.
+mozac_ai_controls_page_summary_title	Page summaries
+mozac_summarize_settings_shake_to_summarize	Shake to summarize
+mozac_summarize_settings_shake_to_summarize_description	Shake your device side to side to summarize a page.
+pref_key_enable_shake_to_summarize	pref_key_enable_shake_to_summarize
+preferences_ai_controls	AI controls
+preferences_key_enable_shake_to_summarize	Enable Shake to Summarize Feature Flag
+preferences_shake_to_summarize	Shake to summarize

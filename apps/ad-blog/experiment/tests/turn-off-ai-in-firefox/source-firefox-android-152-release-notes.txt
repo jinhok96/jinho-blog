@@ -1,0 +1,184 @@
+Firefox for Android 152.0, See All New Features, Updates and Fixes
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Get Firefox
+Get Firefox
+Firefox for mobile
+Get Firefox on your phone
+Menu
+Menu
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Release Notes
+Menu
+Desktop
+Enterprise
+Desktop Beta & Developer Edition
+Desktop Nightly
+Android
+iOS
+Firefox for Android Release Notes
+Release Notes tell you what's new in Firefox for Android. As always, we welcome your feedback. You can also file a bug in Bugzilla or see the system requirements of this release.
+152.0
+Firefox for Android Release
+June 16, 2026
+Version 152.0, first offered to Release channel users on June 16, 2026
+Enjoying Firefox? Leave a review. Got ideas or feedback? Join the conversation on Mozilla Connect. Need help? Our volunteer support community has you covered on Mozilla Support
+Previous
+Firefox for Android 151.0
+Next
+Firefox for Android 153.0
+New
+World Cup widget: Follow live scores, match schedules and results in one place.
+Page summaries: Get key points from long articles with a tap or shake. Now available to all users in English.
+PDF sharing: Share the PDF file itself, or copy and share a link from the address bar.
+Pinch zooming: Improved zooming performance on web pages, especially on lower-spec devices.
+Fixed
+Various security fixes.
+Developer
+Developer Information
+Previous
+Firefox for Android 151.0
+Next
+Firefox for Android 153.0
+Get the most recent version
+Need help or want to leave feedback?
+File a bug
+Leave feedback
+Get Involved
+Did you know that most of the content in Firefox Support was written by volunteers?
+Find out more
+Other Resources
+Developer Information
+Complete list of changes for this release
+Press Kit
+Mozilla and Firefox News
+Firefox Extended Support Release
+All Firefox for Desktop Releases
+Learn more about Firefox
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Website Privacy Notice
+Terms of Use
+Cookie Policy
+Community Participation Guidelines
+Logo Trademark Licensing
+Help us improve your firefox.com experience
+In addition to Cookies necessary for this site to function, we’d like your permission to set some additional Cookies to better understand your browsing needs and improve your experience. Rest assured — we value your privacy.
+Accept All Additional Cookies
+Reject All Additional Cookies
+Cookie settings

@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-28 · 세션 61 (정기 실행, 개선 세션): Windows 11 24H2 칼럼 후속 갱신 + 기존 글 2편 대표 이미지
+
+세션 시각: 2026-10-28 18:15 KST → 개선 세션. 같은 날 12시 개선 세션(세션 60)이 다룬 글(`iphone-duo-sold-out`·`check-if-image-is-ai-generated`·`jpg-to-pdf-free`)과 겹치지 않게 세션 60 다음 할 일(대표 이미지 `windows-10-esu-extended`·`apple-siri-settlement-claim` 등)을 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(b364fa5)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-09-30 ~ 10-28, 세션 60 이후 바뀐 값만)**
+
+- 노출 791 → **802**, 클릭 12, CTR 1.5%, 평균 순위 22.2 → 22.0 (`spotify-family-qr-code-verification` 245 → 246·15.0 / `turn-off-ai-in-chrome` 141 → 142·14.0·클릭 3 / `image-to-text-offline-free` 94 → **98·15.4** / `iphone-duo-sold-out` 34·8.4·클릭 2 그대로 / `windows-10-esu-extended` 5·12.2·클릭 1 / 삭제 글 `free-offline-text-to-speech`(리디렉트) 22·클릭 1)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로. `Discovered - currently not indexed`는 gsc_report 실행 때 10편(`arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`google-phone-number-verification`·`ios-27-2-siri-ai-memory`·`turn-off-ai-features`·`turn-off-ai-in-windows-11`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`) → 몇 분 뒤 `link_seen.py` 때 11편(`ios-27-2-siri-ai-memory`가 빠지고 `remove-phone-number-from-google-account`·`turn-off-apple-intelligence-iphone`이 들어옴). 색인율 17/48 (35%)
+- `link_seen.py`(전체 이력): 색인된 페이지의 마지막 크롤링 여전히 **10-21 08:37 UTC 홈** (7일 넘게 크롤링 0). 미색인 31편 중 Google이 본 링크가 있는 글 10편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 주간 SEO 점검: 최근 10-26 보고. 우선순위 1·2는 세션 52가 처리, 3(대표 이미지) 이어서
+- 8~20위 검색어: 세션 60과 같음(노출 10회 이상은 V4 판정 중인 Spotify 칼럼뿐) → 소제목·FAQ 보강 대상 없음
+- Apple 서비스 프로그램 목록: 맨 위 Mac mini(2025-06-13) 그대로, iPhone Duo 없음 → `iphone-duo-cracked-screen` 변경 없음
+
+**한 일 (개선 세션 3건, 쓴 스킬: `copy-editing` — Content Refresh(Refresh vs. Rewrite: "Core message still valid, details outdated" → Light refresh), AI-Tell Check / `seo-audit` — Image Optimization(설명적 파일 이름·alt·WebP), On-Page(H1·설명·제목 유지))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 5 · 칼럼 후속 | `windows-11-24h2-end-of-support`(색인, 28일 노출 7·55.7위) | Microsoft release health 상태 페이지 "Current status as of October 21, 2026": 26H2 단계 배포 → **24H2·25H2 기기 전면 배포(full availability)**, 10-26 비보안 OOB 업데이트 **KB5134133**(24H2 "all editions", 자동 인증서 목록 갱신을 못 받는 PC용, eMudhra 대응) 반영. 첫 문단 "security update", 둘째 문단 10-21 1문장, 확인 날짜 10-28, What happened 단계 배포 문장 → 10-21 인용, What changes for you KB5134133 문단, What to do now 3·5·6단계(설정 설명을 새 문장에 맞춤, 10-28 safeguard hold 없음, "by November 10" 삭제), Our take 알려진 문제 문장 갱신·"three weeks"·단계 배포 반론 삭제, What to watch next. `updatedAt` 2026-10-28. 제목·설명·이미지 그대로 | 정확성·후속 갱신 (V 대상 아님: 노출 100회 미만) |
+| 2 | 주간 3 · 대표 이미지 | `windows-10-esu-extended`(색인, 5·12.2위·클릭 1) | 대표 이미지도 `thumbnail`도 없던 글(og:image는 제목 글자 자동 썸네일)에 본문 첫 줄 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
+| 3 | 주간 3 · 대표 이미지 | `apple-siri-settlement-claim`(색인, 7·20.6위) | `thumbnail`(청구율별 지급액 그래프, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 | 규칙 적용 (V 대상 아님) |
+
+- 1번 확인 방법: 세션 26 저장본(`source-status-24h2.txt` 10-13판)과 이번 세션 curl 판(`source-*-2026-10-28.txt` 6개: 24H2·26H2 상태 페이지, release information, KB5134133, 메시지 센터, 다운로드·safeguard holds)을 공백 정규화 후 비교. 종료일·KB5121794·safeguard holds 문구·다운로드 페이지 조건·lifecycle FAQ는 그대로. 26H2 상태 페이지 미해결 문제 2건(Remote Desktop 0xC000000D·USB Audio Class 1.0, 모두 Mitigated)은 24H2 페이지에도 있음. KB5134133의 Smart App Control 문제는 해결법이 레지스트리 명령뿐이라 쓰지 않음. 사실 확인표 `factcheck.md` "2026-10-28 후속 갱신"
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `windows-10-esu-extended` — 시드 224097344, 53.2분, 라일락 배경 + 포레스트 그린·웜 오렌지(뒤쪽 흐린 나무), 아이소메트릭. 투명 보호 막 안 빈 화면 모니터(피치색 받침) + 왼쪽 모래시계 + 오른쪽 방석 위 금색 열쇠. `apple-siri-settlement-claim` — 시드 1087076655, 53.7분, 페일 민트 배경 + 슬레이트 블루·분홍(딥 라즈베리 요청), 3/4 시점. 빈 화면 휴대폰(노치만 있는 일반 모양) + 왼쪽 판사봉 + 오른쪽 돼지 저금통 + 투명 말풍선(빛나는 구슬 요청). 두 장 모두 장면 설명과 다른 점은 writing-guide 기준대로 넘어가고 alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: 세 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD(`windows-11-24h2-end-of-support` dateModified 2026-10-28), `<pre>` 0개, 설명 152·157·159자(HTML 기준). 대표 이미지 2편은 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·type-check·test(35파일 253개)·build 통과, CI `test`·`build` 통과(중간 커밋 3회), `link_audit` 2건 그대로(새 문제 없음)
+- 남은 대표 이미지 미적용: `thumbnail` 글 17편 + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1 판정 중)). `windows-10-esu-extended`는 대표 이미지를 뺀 본문 이미지 0장(규칙 3장) → 다음 변경(11-10 Patch Tuesday 빌드 번호 표 갱신과 함께 검토하되 한 글 한 변경)
+
+**알게 된 것**
+
+- Microsoft release health 상태 페이지(learn.microsoft.com/…/status-windows-11-*)는 맨 위 "Current status as of {날짜}"가 바뀔 때 본문 문장이 바뀜 → Apple 지원 문서 `Published Date`처럼 날짜만 비교해도 후속 갱신 필요 여부를 바로 알 수 있음(이번: 10-13 → 10-21, 단계 배포 → 전면 배포). backlog 반복 일정 Windows 행에 적음
+- 지원 종료(End of updates) 뒤에도 Microsoft가 "all editions"로 표시한 비보안 OOB 업데이트를 낼 수 있음(KB5134133, 인증서 신뢰 목록용). release information 표에는 24H2 행의 최신 빌드로 잡혀 "October 2026 update was the last one" 같은 문장은 "security update"로 좁혀 써야 정확함
+- 대표 이미지 생성 1장 53.2분(세션 60 67~70분보다 빠름). 생성 중 커밋·테스트(vitest 35파일)를 함께 돌려도 큰 차이 없음
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, Discovered 글부터): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` · `https://tool-proof.com/posts/siri-history-on-iphone` · `https://tool-proof.com/posts/iphone-duo-cracked-screen` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (색인된 페이지 재크롤링 7일 넘게 0, sitemap은 10-27에 받아 감) ③ 여유가 있으면 오늘 갱신한 `https://tool-proof.com/posts/windows-11-24h2-end-of-support`·`https://tool-proof.com/posts/iphone-duo-sold-out`도 색인 생성 요청(재크롤링)
+- Claude(다음 개선 세션): 대표 이미지 계속 — 색인된 `thumbnail` 글 중 남은 것은 `free-offline-ai-tools`(허브)와 오늘 갱신한 `windows-11-24h2-end-of-support`(다음 변경으로), 나머지 `thumbnail` 글은 미색인(`office-2021-end-of-support`·`best-free-pdf-tools` 등). V 판정 중인 `turn-off-ai-in-chrome`(V3)·`spotify-family-qr-code-verification`(V4)·`transcribe-audio-offline-free`(V1)·`image-to-text-offline-free`(V5)는 판정 뒤. `check-if-image-is-ai-generated` 본문 이미지 0 → 3장(세션 60 다음 할 일). `office-2021-end-of-support` 칼럼 후속(10-13 종료 뒤 변경 확인)
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `windows-10-esu-extended` 빌드 번호 표(19045.7807 → 11월 빌드) 갱신, `windows-11-24h2-end-of-support` 첫 누락 업데이트 반영 검토
+- Claude: iPhone Duo — Apple 서비스 프로그램·원인·수리 가격 변경 시 `iphone-duo-cracked-screen` 갱신, 11-06(반품 기한) 뒤 두 칼럼 후속
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `firefox smart window disable`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`·`iphone duo screen protector`
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 허브 링크 1문장, 태그 `Google Chrome`/`Chrome` 정리
+- Claude: Chrome 157(11-03) 출시 후 `turn-off-ai-in-chrome`·`chrome-http-warning-default` 확인, 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 48편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 21·방문 19) + `history` 기록(batch, 회차 2026-10-28T11:18:52Z, DB 문서 168개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-21 08:37, 미색인 31편 중 Google이 본 링크 10편. 목표: 색인율 17/48 (35%) · 28일 노출 803 · 10위 안 20개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #289 (CI 통과 후 머지)
+
 ## 2026-10-28 · 세션 60 (정기 실행, 개선 세션): iPhone Duo 품절 칼럼 후속 갱신 + 기존 글 2편 대표 이미지
 
 세션 시각: 2026-10-28 12:16 KST → 개선 세션. 같은 날 앞 개선 세션 없음(이 세션이 첫 개선 세션, 18시 세션은 이 기록을 이어받음). 열린 PR 없음. 작업 브랜치를 `origin/main`(e8aabea)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료(모델 약 10GB 다운로드 5분).

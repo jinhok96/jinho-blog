@@ -1,0 +1,161 @@
+# https://support.google.com/chrome/answer/142893?hl=en&co=GENIE.Platform%3DAndroid (fetched 2026-10-29 UTC)
+To reduce manual data entry and improve accuracy, you can use Chrome to automatically fill out online forms with saved info, like your name, passwords, addresses, and payment info. It can also use your name and email address from your Google Account and certain info from your Google Wallet. This provides an easy and complete filling experience.
+Chrome never shares your info without your permission. Learn how Chrome protects your autofill and password data.
+If you would like to save your password info to Chrome, learn how to manage saved passwords.
+If you're having issues with your saved info, learn how to fix issues with info saved to Chrome.
+To use autofill, make sure you’re signed in to your Google Account in Chrome.
+Tip: Not all autofill features are available in all regions.
+Manage saved form info
+Important: The save and fill info setting is on by default for Google Password Manager, payments, contact info, identity docs, and travel. If you've turned the save and fill setting off, autofill won't work for that info.
+To access your saved info:
+On your Android device, open Chrome .
+Tap More Settings.
+Tap Passwords and autofill.
+You can manage your autofill info for forms, like:
+Contact info
+Google Password Manager
+Identity docs
+Payments
+Shopping info
+Travel info
+Add, edit, or delete your saved autofill info in Chrome
+If your payment method is saved in Google Wallet, you'll need to edit or delete it in Google Wallet.
+On your Android device, open Chrome .
+Tap More Settings.
+Tap Autofill and passwords.
+Select the info you want to update, like payments or contact info.
+Under each category, you can turn Save and fill [info] on or off.
+Add, edit, or delete info:
+Add:
+At the bottom of the info type you want to add, tap Add.
+Edit or Delete:
+Tap the info you want to edit or delete. Tap Save after you edit info, or Delete to confirm you want to delete the info.
+If you add, edit, or delete info and you’re signed in to Chrome with your Google Account, your changes will also show up on your other devices where you’re signed in to Chrome with the same account.
+Tips:
+When you submit forms with new or updated info, Chrome may prompt you to save this data to your Google Wallet.
+When you’re signed into your Google Account, address info is saved in your Google Account. All other info, like identification and vehicle information, is saved in your Google Wallet.
+If Use passes across Google is turned off in your Google Wallet settings, your info is saved locally to your device.
+Manage autofill payment info
+Manage payment info in Chrome
+Manage payment info in Google Wallet
+Manage card benefits with autofill
+Use buy now, pay later with Chrome autofill
+Manage autofill for one-time SMS verification codes
+When Chrome identifies a website form with a one-time SMS verification code field for the first time, it requests permission to autofill SMS codes.
+If you've given Chrome permission to access and autofill SMS codes:
+A prompt will be displayed. To fill the code, tap the prompt.
+The SMS code field is automatically filled in.
+If SMS code autofill doesn’t work or if you previously denied Chrome access, you can review and manage your autofill settings.
+On your Android device, open the Settings app.
+At the top, tap your Google Account.
+Under “Google services,” tap All services.
+Under “Autofill & passwords,” tap Verification codes by SMS.
+In “Verification codes by SMS,” to autofill SMS codes, turn on:
+Autofill codes in apps and sites
+Autofill codes in your default browser
+Use your fingerprint or face to verify payment
+Use your fingerprint or device lock to verify your identity. You must still follow instructions and enter your security code at least once per payment method.
+On your Android device, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords Payments.
+Turn Verify it’s you to autofill payment methods on or off.
+The first time you enter info for a card, you must manually enter the security code. After that, you can use your fingerprint to fill the form.
+Manage your name and email in your Google Account
+To automatically fill out forms, Chrome uses your name and email from your Google Account.
+When you first use this feature, Chrome shows a message that informs you how it works and how to manage your data in Chrome settings.
+To use this feature, make sure:
+You're signed in to Chrome.
+The "Save and fill addresses" is on.
+On your Android device, open Chrome .
+At the top right, tap More Settings Autofill and passwords.
+Tap Addresses and more.
+Turn Save and fill addresses on or off.
+To manage your name and email:
+Go to myaccount.google.com.
+Tap Personal info Name & pronunciation or Email Save.
+Tip: Any changes made to your information will be automatically updated across Chrome’s autofill settings.
+Fix issues with autofill not working
+If Chrome is not suggesting your saved info:
+Check Chrome settings:
+Make sure "Save and fill" is turned on for the info you want to autofill.
+Review your Account:
+Confirm the name and email shared from your Google Account for autofill at myaccount.google.com/personal-info.
+Confirm the info you want to populate is saved, tap More Passwords and autofill.
+Enter your credentials again: If your login credentials fail, like passkeys or PINs, Chrome can’t access your sensitive info. Learn how to fix issues with passwords and passkeys.
+Check website security:
+If the website is secure, Chrome may not be able to detect certain fields in the form.
+If the website is not secure enough, it may not be able to receive info from Chrome.
+Check Google Wallet settings: To allow autofill to use info from Google Wallet, make sure Use passes across Google is turned on.
+Delete your saved autofill form info in Chrome
+To delete your addresses, payment methods, or other saved info in Chrome at the same time:
+On your Android device, open Chrome .
+Tap More Settings.
+Tap Privacy and security Delete browsing data.
+Choose a time range, like "Last hour" or "All time."
+Under "Advanced," choose Autofill form data.
+Tap Delete data.
+This method doesn't delete payment info and addresses stored in Google Pay, or info stored in Google Wallet. Learn how to remove info from Google Wallet.
+Use enhanced autofill
+Important: Enhanced autofill is currently available on Desktop, Android, and iOS for Gemini in Chrome users in the US who are 18 or older and have opted into Gemini Personal Intelligence.
+Enhanced autofill uses data from your Gmail account, such as flights, vehicles, and orders, to fill out forms for you. Suggestions are displayed with the Gemini spark icon and will appear in a dropdown.
+You can manage or turn off enhanced autofill by adjusting your Chrome settings.
+On your Android device, open Chrome .
+At the top right, select More Settings Autofill and passwords.
+Under "Autofill settings," select Enhanced autofill.
+Turn "Find and fill with Gemini" on or off.
+To see where Chrome found your information:
+On your Android device, tap a form field.
+On the bar above your keyboard, touch and hold (long-press) the suggestion chip with the Gemini icon .
+Tap View sources.
+Tap a link to the original source. The email in Gmail will open in a new tab.
+If Chrome suggests info you don't want to see or that is outdated:
+On your Android device, tap a form field.
+On the bar above your keyboard, touch and hold (long-press) the suggestion chip with the Gemini icon .
+Tap Remove suggestion.
+Tips:
+Info pulled from Gmail can’t be edited in Chrome.
+Removing suggestions from Chrome does not delete the original email. However, deleting the original email does remove the suggestion.
+Fill more fields with smarter form understanding
+Important: Not all websites and forms are compatible with smarter form understanding.
+With smarter form understanding, Chrome is able to autofill forms faster for you.
+To use this feature, make sure you're signed in to your Google Account in Chrome.
+Turn Smarter form understanding on or off
+Important: This setting is on unless you choose to turn it off.
+On your Android device, open Chrome .
+Tap More Settings.
+Tap Autofill and passwords Autofill settings.
+Turn Smarter form understanding on or off.
+Turn re-authentication on or off
+Re-authentication is on by default to provide extra protection for your sensitive info. Sensitive personally identifiable info is partially hidden. You must use a screen lock, fingerprint, face unlock, or device PIN before Chrome has access to populate this info in forms.
+If your device doesn't support biometrics, Chrome uses your default device screen lock like password or passcode instead.
+On your Android device, open Chrome .
+Tap More Settings.
+Tap Autofill and passwords Autofill settings.
+Turn Verify it’s you when filling sensitive info on or off.
+If this toggle is off, authentications like screen lock or biometric verification won’t appear when you attempt to autofill sensitive info.
+Choose your autofill provider
+You can choose between Google or another autofill provider to save and fill in forms automatically in Chrome on Android devices.
+Important:
+If you use another autofill service in Chrome, all autofill data will be sourced from a third-party password manager instead of Google. To use another autofill service, you must first add the service in Android settings.
+If you turn off autofill in Chrome, you can’t autofill or save across devices for:
+Contact info
+Google Password Manager
+Identity docs
+Payments
+Shopping info
+Travel info
+To choose your preferred autofill service:
+On your Android device, open Chrome .
+Tap More Settings.
+Tap Autofill and passwords Autofill settings.
+To use Google Password Manager and Chrome Autofill, select Autofill with Google.
+To use another autofill service in Chrome, select Autofill using another service.
+To confirm the setting change, tap Restart Chrome.
+This restarts your Chrome window.
+To cancel the change, tap Cancel.
+Tip: If you use Chrome for work or school, only your administrator can manage this setting for you. Learn about managed Chrome browser.
+Related resources
+Manage passwords in Chrome
+Manage payment methods added to the Google Wallet app
+Fix issues with passwords and passkeys
+Fix payment info issues in Chrome

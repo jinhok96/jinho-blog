@@ -1,0 +1,178 @@
+# https://support.google.com/chrome/answer/95606?hl=en&co=GENIE.Platform%3DDesktop (fetched 2026-10-29 UTC)
+When you use Chrome, Google Password Manager saves your passwords for different sites.
+You can save your passwords with Google Password Manager in many ways:
+Save passwords to your Google Account: When you're signed in to Chrome, you can save your passwords to your Google Account and use them across your devices and in some apps.
+Save passwords to your device: When you’re not signed in to Chrome, it stores passwords locally on your device. This is helpful if you don’t want to save passwords to your Google Account or share them across multiple devices.
+Import passwords from your device to your Google Account: You can always import passwords saved on your device to your Google Account. Learn how to import passwords with Chrome.
+You can manage passwords saved to your Google Account in Chrome or any other web browser at passwords.google.com.
+Learn more about how Chrome protects your passwords.
+Learn more about on-device encryption for passwords.
+Manage new passwords
+Automatically save or preview a new password
+If you enter a new password on a site, Chrome will ask to save it. To accept, select Save.
+If you want to preview, review, or adjust a password:
+To check the password that will be saved, select Preview .
+If there are multiple passwords on the page, select the Down arrow . Choose the password you want saved.
+If your username is blank or incorrect, select the text box next to "Username." Enter the username you want saved.
+If you want to save a different password, select the text box next to "Password." Enter the password you want saved.
+Manually add a new password
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+Select Add.
+Enter a website, username, and password.
+Select Save.
+Use a suggested password
+On your computer, sign in to Chrome.
+Go to a website and sign up for an account.
+Select the password text box Use strong password.
+If this option doesn’t show, right-click the password text box Generate password.
+You'll get a preview of the password. To confirm, select Use suggested password.
+Finish your account sign-up.
+Your generated password is automatically saved to your Google Account.
+Start or stop saving passwords
+By default, Chrome offers to save your password. You can turn this option off or on at any time.
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+On the left, select Settings.
+Turn Offer to save passwords and passkeys on or off.
+Check or remove sites that don’t save passwords
+If you choose not to save passwords for a site or app, in settings, you can manage them from the "Declined sites and apps."
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+Select Settings.
+Under "Declined sites and apps," remove the site.
+Manage saved passwords
+Sign in with a saved password
+If you saved your password to Chrome on a previous visit to a website, Chrome can help you sign in.
+On your computer, go to a site you've visited before.
+Go to the site’s sign-in form.
+If you’ve saved a single username and password for the site: Chrome will fill in the sign-in form automatically.
+If you’ve saved more than one username and password: Select the username field and choose the sign-in info you want to use.
+Add notes to your saved password
+You can add notes to a saved password to help you remember info about an account or to save login details. Once you add a note, it has the same security protection as a password.
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+Under "Passwords," choose the password you want to add a note to.
+Select Edit.
+Enter your note.
+When you're finished, select Save.
+Show, edit, delete, or export saved passwords
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+Show, edit, delete, or export a password:
+Show:
+Under “Passwords,” select the password.
+On the right of your password, select Show password .
+Edit:
+Under “Passwords,” select the password.
+Select Edit.
+Edit your password.
+Select Save.
+Delete:
+Under “Passwords,” select the password.
+Select Delete.
+Export:
+On the left, select Settings.
+On the right of "Export Passwords," select Download file.
+Delete all Google Password Manager data
+You can delete your Google Password Manager data, which include passwords and passkeys from Google Password Manager settings.
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+On the left, select Settings.
+On the right of "Delete all Google Password Manager data," select Delete data Delete.
+Tip: To delete other browsing data, learn how to delete browsing data in Chrome.
+Check for compromised passwords
+You can check all your saved passwords at once to find out if they're exposed in a data breach or potentially weak and easy to guess.
+To check your saved passwords:
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+On the left, select Checkup .
+You'll get details on any password exposed in a data breach and any weak, easy to guess passwords.
+Learn what you can do with your passwords
+Use biometric authentication with passwords
+When biometric authentication is turned on, you can use your device's fingerprint sensor to increase privacy when you autofill passwords. You can also use biometric authentication to reveal, copy, or edit your passwords.
+Important: By default, biometric authentication is off.
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+Select Settings.
+To turn on biometric authentication:
+On PC: Turn on Use Windows Hello when filling passwords.
+On Mac: Turn on Use your screen lock when filling passwords.
+Follow the on-screen instructions to confirm your selection.
+Share your password
+Important:
+You can only share your password with a member of your family group. Create a family group.
+Use Google Password Manager and update Google Chrome.
+To securely share a copy of your saved password with a family member:
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+Under "Passwords," select the password you want to share.
+Select Share.
+Select the family member or members you want to share the password with.
+Select Share Done.
+The password will be saved in the receiver's Google Account and will be available for autofill.
+Tips:
+Use unique passwords for all your online accounts.
+If you use the same password for multiple accounts, anyone you share a password with may be able to access your other accounts.
+If you don’t want to share this service, change your password.
+Sign in to sites and apps automatically
+You can automatically sign in to any sites and apps where you've saved your info with "Sign in automatically." When you turn on "Sign in automatically," you don't need to confirm your username, password, or third-party sign-in credentials.
+If you want to confirm your saved info when you sign in, you can turn off "Sign in automatically."
+On your computer, open Chrome.
+At the top right, select More ​​​​​ Passwords and autofill Google Password Manager.
+On the left, select Settings.
+Turn Sign in automatically on or off.
+Tips:
+If you use an identity service, both the identity service and the site must support "Sign in automatically" for it to work. Learn more about third-party sign-in.
+If you recently dismissed the prompt to sign in automatically, it might be temporarily turned off.
+Add Google Password Manager to your home screen
+For quick access, you can add Google Password Manager as a shortcut.
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+On the left, select Settings Add shortcut.
+Select Install.
+Learn more about web apps.
+Manage password change alerts
+You may get an alert from Chrome if you use a password and username combination that has been compromised in a data leak on a third-party website or app. Compromised password and username combinations are unsafe because they’ve been published online.
+We recommend that you change any compromised passwords as soon as you can. You can follow the instructions in Chrome to change your password on the site where you’ve used that password, and check your saved passwords for any other site the password may be saved on.
+Chrome makes sure that your passwords and username are protected so they can’t be read by Google.
+To start or stop notifications:
+On your computer, open Chrome.
+At the top right, select More Settings Privacy and security.
+Select Security Standard protection.
+Turn Warn you if a password was compromised in a data breach on or off.
+Tip: This feature is only available if the "Safe Browsing" option is turned on.
+Dismiss notifications for specific sites:
+On your computer, open Chrome.
+At the top right, select More Passwords and autofill Google Password Manager.
+To check which of your saved passwords are compromised, select Checkup.
+To the right of “Compromised passwords,” select the Arrow .
+Find the site of the notifications that you want to stop.
+Select More Dismiss warning.
+Tip: To restore site warnings, under "Dismissed warnings," select More next to the site whose notifications you want to begin again. Then, select Restore warning.
+Fix issues with passwords
+If Chrome doesn't save or offer to save passwords, learn how to fix issues with saved payment info and passwords.
+Change compromised passwords automatically
+The Chrome security team always monitors the web for danger. If a password for one of your online accounts is found in a public data breach, you can update your password to a new and secure one with Chrome’s automated password change feature.
+To use this feature, you must:
+Sign in to your Google Account in Chrome.
+Have at least one saved password in Google Password Manager.
+Turn on password saving in Google Password Manager. Learn how to manage passwords on Chrome.
+On your computer, open Chrome.
+Sign in to a site that requires an account with a username and password.
+If your password was compromised, you’ll receive the alert “Your password was found in a public data breach” on compatible websites.
+To automatically update your password, select Change it for me.
+If your password was successfully updated, the dialog will display “Password changed.”
+To get the details of the updated password, select Show password .
+If your password wasn’t updated successfully, select Change it on the site to manually change your password.
+Tips:
+If you close the tab or window while the password change is in progress, the password might not be updated. Learn how to show, edit, delete, or export saved passwords.
+In case of login issues, automated password change temporarily saves a recovery password, and may offer you to fill it in consecutive logins.
+Related resources
+Change or reset your password
+Get your bookmarks, passwords, and more on all your devices
+Fix issues with saved payment info & passwords
+Import passwords with Chrome
+How Sign in with Google works
+Learn about third-party sign-in
+Get started with Google Password Manager

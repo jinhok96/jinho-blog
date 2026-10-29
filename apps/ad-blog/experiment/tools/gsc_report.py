@@ -22,6 +22,7 @@ import json
 import os
 import pathlib
 import sys
+import time
 import urllib.parse
 
 import requests
@@ -40,6 +41,7 @@ CTR_DELTA_PP = 1.0  # CTR: 대조군 대비 변화 ±1.0%p
 IMPRESSIONS_LIFT = 1.2  # 노출: 대조군 대비 1.2배 이상 / 1/1.2배 이하
 POSITION_DELTA = 2.0  # 평균 순위: 대조군 대비 ±2위
 FINAL_DATA_LAG_DAYS = 3  # 확정 데이터 지연
+RETRY_WAITS = (5, 20, 60)  # 일시 오류(시간 초과·연결 끊김·5xx) 재시도 대기(초). URL 검사 API가 간헐적으로 500·시간 초과를 냄 (2026-10-29 세션 64)
 
 
 def load_token() -> str:
@@ -59,7 +61,17 @@ def load_token() -> str:
 
 
 def call(method: str, url: str, token: str, body: dict | None = None) -> dict:
-    res = requests.request(method, url, headers={"Authorization": f"Bearer {token}"}, json=body, timeout=30)
+    for wait in (*RETRY_WAITS, None):
+        try:
+            res = requests.request(method, url, headers={"Authorization": f"Bearer {token}"}, json=body, timeout=30)
+        except (requests.Timeout, requests.ConnectionError):
+            if wait is None:
+                raise
+        else:
+            if res.status_code < 500 or wait is None:
+                break
+        print(f"일시 오류 → {wait}초 뒤 다시 시도: {url}", file=sys.stderr)
+        time.sleep(wait)
     if res.status_code == 403:
         sys.exit(f"403 권한 없음: 서비스 계정이 Search Console 속성의 사용자로 추가됐는지 확인하세요.\n{res.text[:300]}")
     res.raise_for_status()

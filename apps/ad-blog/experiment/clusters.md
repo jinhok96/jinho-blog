@@ -15,7 +15,7 @@
 | `photo-video` | 무료 사진·영상 도구 (변환·압축·배경·메타데이터) | 2 | `free-image-converter-photo-tools` | `convert-heic-to-jpg-free` `convert-webp-to-jpg-free` `compress-image-to-100kb` `remove-bg-alternative-free` `remove-metadata-from-photos` `compress-video-for-discord-email` | - |
 | `pdf` | 무료 PDF 도구 | 3 | `best-free-pdf-tools` | `split-pdf-free` `merge-pdf-files-free` `jpg-to-pdf-free` `pdf-to-jpg-free` `pdf-to-word-free` `compress-pdf-free` | - |
 | `offline-ai` | 무료 오프라인 AI 도구 | 4 | `free-offline-ai-tools` | `transcribe-audio-offline-free` `image-to-text-offline-free` | - |
-| `windows-microsoft` | Windows·Microsoft 365 변경 대응 | 5 | - | `windows-10-esu-extended` | `windows-11-24h2-end-of-support` `office-2021-end-of-support` `microsoft-365-family-storage-2tb` `apple-mail-exchange-not-syncing` |
+| `windows-microsoft` | Windows·Microsoft 365 변경 대응 | 5 | - | `windows-10-esu-extended` | `windows-11-24h2-end-of-support` `office-2021-end-of-support` `microsoft-365-family-storage-2tb` `apple-mail-exchange-not-syncing` `customize-right-click-menu-windows-11` |
 | `phones-subscriptions` | 휴대폰·구독 서비스 변경 대응 | 6 | - | - | `iphone-duo-sold-out` `iphone-handoff-verizon-cost` `pixel-watch-safety-signal-ending` `apple-siri-settlement-claim` `spotify-family-qr-code-verification` `iphone-duo-cracked-screen` |
 
 ## 우선순위 (2026-10-22)

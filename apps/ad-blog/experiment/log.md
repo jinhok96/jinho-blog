@@ -2,6 +2,38 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-29 · 세션 65 (정기 실행, 개선 세션): AI 이미지 판별 글 본문 이미지·Inspect 직접 확인 + 기존 글 대표 이미지
+
+세션 시각: 2026-10-29 18:10 KST → 개선 세션. 같은 날 12시 세션 64가 다룬 글(`turn-off-ai-features`·`turn-off-gemini-in-gmail`·`best-free-pdf-tools`·`windows-11-24h2-end-of-support`·`office-2021-end-of-support`)과 겹치지 않게 세션 64 다음 할 일(`check-if-image-is-ai-generated` 본문 이미지, 미색인 `thumbnail` 글 대표 이미지)을 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(f65b83e)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-01 ~ 10-29, 세션 64 이후 바뀐 값만)**
+
+- 노출 825 → **842**, 클릭 13, CTR 1.5%, 평균 순위 22.3 (`turn-off-ai-in-chrome` 145 → 148·15.0·클릭 3 / `image-to-text-offline-free` 102 → 107·15.3 / `iphone-duo-sold-out` 36 → 39·7.9 / `gemini-gems-to-skills` 39·7.4 / `spotify-family-qr-code-verification` 251 그대로 / `check-if-image-is-ai-generated` 42·69.4)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로 (색인율 17/50, 34%). `Discovered - currently not indexed` 7편(`arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`google-phone-number-verification`·`turn-off-ai-features`·`turn-off-ai-in-windows-11`·`turn-off-copilot-in-word`), 나머지 26편 `URL is unknown`
+- `link_seen.py`: 가장 최근 크롤링 **10-28 23:14 UTC 홈 그대로** (세션 64 이후 새 크롤링 없음). 미색인 33편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 8~20위 검색어(페이지 × 검색어, 28일, 85쌍 중 11쌍): 모두 노출 1~4회 → 소제목·FAQ 보강 대상 없음
+- 이미지 규칙 미충족 전수 점검: `thumbnail` 글 15편 + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1)) — 세션 64와 같음. 대표 이미지만 있고 본문 이미지 0장인 `windows-10-esu-extended`(11-10 빌드 표 갱신 때)
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — 포인트 편집(C 모드)으로 바꾼 문장만 Clarity·AI-Tell Check: 2단계 끝 ", while …, so …" 덧붙임을 결론 먼저 두 문장으로, 33단어 환경 문장 나눔, 뜻이 모호한 연결 문장("show the same split") 삭제)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 세션 60~64 다음 할 일 · 이미지 규칙 | `check-if-image-is-ai-generated`(색인, 42·69.4위) | **Adobe Inspect(beta)·CAI Verify에 직접 업로드해 확인**: 10-11과 같은 스크립트·테스트 인증서로 AI 라벨 이미지를 다시 만들고 원본·Chromium 스크린숏(픽셀 동일)·ImageMagick 재저장본을 올려 캡처. 본문 이미지 0 → 4장(Inspect 원본 결과 + 원본 vs 스크린숏 + 재저장본 Inspect vs Verify + 10-11 편집 12개 결과 3묶음 그래픽). 결과 표 아래·What stood out 뒤에 측정 문장, How we tested에 10-29 확인 1문장. **정확성 정정**: 2단계 "Inspect shows **No Content Credential**"(Inspect 문서 인용) → 지금 화면 **We couldn't verify how this was made** + Verify는 메시지 없이 업로드 화면으로 돌아감, FAQ의 테스트 인증서 경고 문구는 Verify 문구였음 → 두 도구의 실제 문구로. `updatedAt` 2026-10-29 | V6 (노하우 7, position, 11-26) |
+
+- 확인 결과: 원본 — Inspect **AI actions > Created with AI** + "These Content Credentials were issued by an unrecognized source." / Verify "Unrecognized" + "This image was generated with an AI tool." 스크린숏 — Inspect **We couldn't verify how this was made**(이유 목록에 "stripped due to screenshotting, social media compression, re-saving"), Verify는 결과 화면 없이 업로드 화면(콘솔 `No C2PA manifest found in this file`). ImageMagick 재저장 — Inspect는 Created with AI + "There are unrecorded changes to this asset since Content Credentials were applied.", Verify는 Invalid + "This file may have been tampered with. Its Content Credentials can't be verified or viewed."(AI 라벨 숨김)
+- 방법: c2patool-v0.27.22 릴리스(타르볼 sha256 10-11과 동일)의 sample es256 테스트 인증서, c2pa-python 0.38.0, Playwright + Chromium 153.0.8010.12 headless 1280×900. Inspect는 숨은 file input에 파일을 넣으면 반응이 없고 "Browse files" 파일 선택 창으로 올려야 함. 캡처 `tests/check-if-image-is-ai-generated/screens/*.webp`(무손실)·`capture-notes.json`, 스크립트 `inspect_capture.js`, 그래픽 `charts.py`(상단 Adobe 로고 헤더 잘라 냄, 라이트 모드 토큰), 사실 확인표 `factcheck.md` "2026-10-29 Inspect·Verify 직접 확인"
+- SynthID Detector(synthid.com)는 headless Chromium에서 빈 화면 → 이번에도 실행하지 않음 (본문 그대로)
+- 빌드 HTML 확인: h1 1개·h2 6개, BlogPosting dateModified 2026-10-29, `<pre>` 0개, 본문 이미지 alt 5개(대표 1 + 본문 4), title 70자(접미사 포함, 기존 제목 그대로)·설명 143자. lint·type-check·test(35파일 253개)·build 통과
+
+**알게 된 것**
+
+- **웹 도구 문서의 화면 문구는 지금 화면과 다를 수 있음**: CAI 문서의 Inspect "No Content Credential"은 지금 "We couldn't verify how this was made", 문서가 Inspect 문구라고 한 테스트 인증서 경고는 Verify 문구였음 → writing-guide 정확성에 "웹 도구 화면 문구는 직접 올려 본 결과로" 추가
+- **Inspect가 Verify보다 결과를 읽기 쉬움**: 자격 증명이 없으면 Inspect는 이유 목록을 보여 주고 Verify는 아무 말 없이 첫 화면으로 돌아감. 변경된 파일은 Inspect가 AI 라벨과 변경 경고를 함께, Verify는 변조 경고만 보여 줌 → `turn-off-ai-features` 등에서 AI 이미지 확인 도구를 안내할 때 Inspect 먼저
+- 같은 날 다른 작업(빌드·캡처)과 겹치면 대표 이미지 1단계가 약 9~10분까지 늘어남 (평소 약 6분)
+
 ## 2026-10-29 · 세션 64 (정기 실행, 개선 세션): AI 끄기 허브 Chrome 메뉴 이름 확인 + 기존 글 2편 대표 이미지
 
 세션 시각: 2026-10-29 12:15 KST → 개선 세션. 같은 날 앞 개선 세션 없음(이 세션이 첫 개선 세션, 18시 세션은 이 기록을 이어받음). 열린 PR 없음. 작업 브랜치를 `origin/main`(d0ab200)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

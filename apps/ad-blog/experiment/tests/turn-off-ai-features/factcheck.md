@@ -36,3 +36,29 @@
 - Samsung Galaxy AI: 1차 출처 미확인 → 쓰지 않음
 - Windows 작업 표시줄 Copilot 토글: 공식 문서 미확인 → 쓰지 않음
 - 직접 실행: 이번 허브는 문서 기반. Chrome 156 화면은 `turn-off-gemini-in-gmail` 세션 39 캡처 결과를 상시 글에서 인용
+
+## 2026-10-29 Chrome 메뉴 이름 (세션 64 개선 세션)
+
+세션 63(`chrome-enhanced-autofill-gmail`)에서 Chrome 156 새 프로필의 왼쪽 메뉴가 첫 실행 **AI innovations** → 두 번째 실행 **AI in Chrome**으로 바뀐 것을 보고, 허브가 안내하는 경로를 다시 확인했다.
+
+- 실행: `dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`를 `dpkg-deb -x`로 풀어 **Google Chrome 156.0.8078.73**(세션 63과 같은 판), Xvfb `:99` 1280×900, 새 프로필(`--user-data-dir`) 10개를 각각 2번 실행, Google 로그인 없음. `menu_check.py`(왼쪽 메뉴 링크 이름·`chrome://settings/ai` 첫 문구·Local State의 variations 키), `ai_page.py`(같은 페이지 문구 전체·캡처). 2026-10-29 03:32~03:40 UTC
+- 결과 (메뉴 `/ai` 항목 이름)
+
+| 프로필 | 1번째 실행 | 2번째 실행 |
+| --- | --- | --- |
+| p1 | AI innovations | **AI in Chrome** |
+| p2 | AI innovations | AI innovations |
+| p3 | AI innovations | AI innovations |
+| p4 | AI innovations | AI innovations |
+| p5 | AI innovations | **AI in Chrome** |
+| p6 | AI innovations | AI innovations |
+| p7 | AI innovations | **AI in Chrome** |
+| p8 | AI innovations | AI innovations |
+| p9 | AI innovations | AI innovations |
+| p10 | AI innovations | AI innovations |
+
+- 첫 실행 10/10 **AI innovations**, 두 번째 실행 3/10 **AI in Chrome**. 10개 프로필 모두 첫 실행 중에 같은 variations seed(`variations_seed_serial_number` 같음, 가져오기 실패 0)를 받았고 `low_entropy_source3`는 프로필마다 다름(1461·106·7964·7037 …) → 서버 실험 설정이 프로필마다 다르게 적용된 것으로 해석 (Google 문서로 확인한 것은 아님 → 글에는 "Two computers on the same Chrome version can show different names"까지만 씀)
+- 두 이름 모두 주소는 `chrome://settings/ai`, 페이지 문구(로그아웃 상태 DOM 전체: Automated Password Change·History search, powered by AI·Help me write·Suggestions, powered by AI·Select text to ask Gemini·Skills in Chrome·Talk to type·Try it on·Google Search AI Mode and connected apps·On-device AI)가 제목만 빼고 같음 (p5 vs p6 `ai_page.py` 출력 대조). 캡처 `screens/chrome-156-menu-ai-in-chrome.webp`·`screens/chrome-156-menu-ai-innovations.webp`(무손실, 관리 브라우저 줄은 컨테이너 정책 파일 때문)
+- 언어 파일 `locales/en-US.pak`(`../chrome-enhanced-autofill-gmail/pak_strings.py`): 리소스 7569 `AI innovations`, 7570 `AI in Chrome` 두 문구가 나란히 있음
+- 반영: 첫 문단·요약 표·"words also differ" 문단·Chrome 절(10개 중 3개 결과 1문장)·How we checked, 그래픽 2장(`charts.py`: 요약 그래픽 Chrome 설명 + Firefox 행 추가, 경로 그래픽 Chrome 상자 "AI innovations or AI in Chrome" + Firefox 행 추가. Firefox 경로는 `turn-off-ai-in-firefox` 세션 62 화면 확인 내용). `updatedAt` 2026-10-29
+- 함께 고친 글: `turn-off-gemini-in-gmail` 118행 경로 괄호에 "on some computers the AI innovations item is named AI in Chrome" (`updatedAt` 그대로). `turn-off-ai-in-chrome`은 검증 기록 V3(11-18 판정) 전이라 손대지 않음 → 판정 뒤 같은 문장 반영

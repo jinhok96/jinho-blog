@@ -1,6 +1,8 @@
 """AI 끄기 허브: 제품별 끌 수 있는 범위 + iPhone iOS 27 기능별 스위치 경로 + 제품별 메뉴 경로 (1200×675 webp).
 
 내용 출처는 factcheck.md (Google·Apple·Microsoft 도움말, 상시 글 5편, 2026-10-23 확인).
+2026-10-29: Firefox 행 추가(turn-off-ai-in-firefox, Firefox 159), Chrome 메뉴 이름 두 가지(AI innovations / AI in Chrome,
+Chrome 156 새 프로필 10개 실행 결과는 factcheck.md "2026-10-29 Chrome 메뉴 이름").
 실행: python3 -I charts.py <출력 폴더>
 """
 import sys
@@ -31,8 +33,9 @@ def canvas(title, subtitle):
 
 # (제품·기능, 판정, 설명) 판정: full / part / none
 PRODUCTS = [
-    ('Chrome: AI history search, on-device AI model', 'full', 'Switches in Settings > AI innovations'),
+    ('Chrome: AI history search, on-device AI model', 'full', 'Settings > AI innovations (or AI in Chrome)'),
     ('Chrome: Gemini in Chrome, AI Mode in address bar', 'part', 'Hide only; full off needs a Windows policy'),
+    ('Firefox: all AI features', 'full', 'One switch: Block AI enhancements in AI controls'),
     ('Gmail and Google Docs: Gemini', 'full', 'One switch: Smart features in Google Workspace'),
     ('Gemini app: Connected Apps', 'part', 'Disconnect each app; past chats stay'),
     ('Word, Excel and other Microsoft 365 apps', 'full', 'Enable Copilot checkbox in each app (Windows, Mac)'),
@@ -46,7 +49,7 @@ LABEL = {'full': 'Fully off', 'part': 'Partly', 'none': 'No switch'}
 def switch_by_product():
     fig, ax = canvas('How far you can turn off AI in each product',
                      'Some switches remove the AI feature, some only hide a button, and one can\'t be turned off at all.')
-    rh = 0.118
+    rh = 0.106
     for i, (name, verdict, note) in enumerate(PRODUCTS):
         y = 0.93 - i * rh
         ax.text(0.0, y, name, fontsize=13.5, fontweight='bold', va='center', zorder=2)
@@ -57,8 +60,8 @@ def switch_by_product():
         ax.text(0.6, y, note, fontsize=12.5, va='center', zorder=2, color=cs.MUTED if verdict == 'none' else cs.FOREGROUND)
         if i < len(PRODUCTS) - 1:
             ax.plot([0, 1], [y - rh / 2, y - rh / 2], color=cs.BORDER, lw=1)
-    cs.footer(fig, 'Personal accounts. Chrome 156, iOS 27, Microsoft 365 version 2610. Work and school accounts are set by the IT admin.',
-              'Sources: Google Search Help, Apple iPhone User Guide (iOS 27), Microsoft Support and Learn, ToolProof guides, checked October 23, 2026')
+    cs.footer(fig, 'Personal accounts. Chrome 156, Firefox 159, iOS 27, Microsoft 365 version 2610. Work and school accounts are set by the IT admin.',
+              'Sources: Google Search Help, Apple iPhone User Guide (iOS 27), Microsoft Support and Learn, ToolProof guides, checked October 23 to 29, 2026')
     cs.save(fig, f'{OUT}/ai-off-switch-by-product.webp')
 
 
@@ -96,7 +99,8 @@ def iphone_switches():
 
 
 PATHS = [
-    ('Chrome', ['Three-dot menu', 'Settings', 'AI innovations', 'Turn off each\nswitch']),
+    ('Chrome', ['Three-dot menu', 'Settings', 'AI innovations\nor AI in Chrome', 'Turn off each\nswitch']),
+    ('Firefox', ['Menu', 'Settings', 'AI controls', 'Block AI\nenhancements']),
     ('Gmail', ['Settings', 'See all settings', 'Manage Workspace\nsmart features', 'Smart features in\nWorkspace off']),
     ('Gemini app', ['Sidebar', 'Customize', 'Connectors', 'Disconnect']),
     ('Word', ['File', 'Options', 'Copilot', 'Clear Enable\nCopilot']),
@@ -108,9 +112,9 @@ PATHS = [
 def menu_paths():
     fig, ax = canvas('Where each AI switch lives',
                      'Every product keeps its AI setting in its own menu. Changing one doesn\'t change the others.')
-    path_rows(ax, PATHS, x0=0.165, bw=0.185, gap=0.022, rh=0.163, top=0.91, fs=12)
+    path_rows(ax, PATHS, x0=0.165, bw=0.185, gap=0.022, rh=0.142, top=0.93, fs=12)
     cs.footer(fig, 'Personal accounts on a computer. Phone apps use different menus; see each guide.',
-              'Sources: Google, Microsoft and ToolProof guides to Chrome, Gmail, Gemini, Word and Windows 11, checked October 23, 2026')
+              'Sources: Google, Mozilla, Microsoft and ToolProof guides to Chrome, Firefox, Gmail, Gemini, Word and Windows 11, checked October 23 to 29, 2026')
     cs.save(fig, f'{OUT}/where-each-ai-switch-lives.webp')
 
 

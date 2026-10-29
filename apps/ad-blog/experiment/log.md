@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-29 · 세션 64 (정기 실행, 개선 세션): AI 끄기 허브 Chrome 메뉴 이름 확인 + 기존 글 2편 대표 이미지
+
+세션 시각: 2026-10-29 12:15 KST → 개선 세션. 같은 날 앞 개선 세션 없음(이 세션이 첫 개선 세션, 18시 세션은 이 기록을 이어받음). 열린 PR 없음. 작업 브랜치를 `origin/main`(d0ab200)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-01 ~ 10-29, 세션 63 이후 바뀐 값만)**
+
+- 노출 814 → **825**, 클릭 12 → **13**, CTR 1.6%, 평균 순위 22.0 (`spotify-family-qr-code-verification` 250 → 251·15.8 / `turn-off-ai-in-chrome` 144 → 145·13.8·클릭 3 / `image-to-text-offline-free` 99 → 102·15.4·클릭 2 / `gemini-gems-to-skills` 38·7.4·클릭 1 / `iphone-duo-sold-out` 36·8.2·클릭 2 / `windows-10-esu-extended` 7·11.0·클릭 1 / 홈 14·클릭 3)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로. `Discovered - currently not indexed`는 gsc_report 실행 때 9편(`free-image-converter-photo-tools`·`google-phone-number-verification`·`ios-27-2-siri-ai-memory`·`remove-phone-number-from-google-account`·`turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`) → 몇 분 뒤 `link_seen.py` 때 11편(`arc-browser-shutting-down`·`google-gmail-photos-ads`·`turn-off-ai-features`가 들어오고 `turn-off-meta-ai-instagram`이 빠짐). 색인율 17/50 (34%)
+- **`link_seen.py`: 홈이 10-28 23:14 UTC에 다시 크롤링됨** (10-21 08:37 이후 7일 15시간 만. 카테고리 첫 페이지 3개는 10-19·10-20, 색인된 글 16편은 10-11~10-20 그대로 → 그 사이 크롤링된 페이지는 홈뿐). 세션 63 배포(10-28 22:38 UTC 발행) 약 36분 뒤라 홈 판에 `chrome-enhanced-autofill-gmail`까지 들어감. 미색인 33편 중 Google이 본 링크가 있는 글 **10편 → 20편**(홈 목록 11·홈 허브 고정 3·10-19~20 크롤링된 글 본문 등 6). 링크를 본 글이 없는 13편 중 10편은 두 홈 크롤링 사이(10-21 09:27 `gemini-free-flash-lite` ~ 10-24 04:18 `turn-off-ai-in-windows-11`)에 발행돼 어느 크롤링에서도 홈 최신 12편에 걸리지 않은 글 → [traffic-playbook 노하우 9](traffic-playbook.md#9-클러스터-링크로-새-글을-빨리-발견시킨다) 중간 관찰에 추가
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22) → 노하우 상태·writing-guide 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 주간 SEO 점검: 최근 10-26 보고. 우선순위 1·2는 세션 52가 처리, 3(대표 이미지) 이어서
+- 8~20위 검색어(페이지 × 검색어, 28일, 82쌍 중 11쌍): 모두 노출 1~4회 → 소제목·FAQ 보강 대상 없음
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — 포인트 편집(C 모드)으로 바꾼 문장만 Clarity·AI-Tell Check(긴 문장 끝 "so …" 덧붙임을 두 문장으로 나눔) / `seo-audit` — Image Optimization(설명적 파일 이름·alt·WebP·OG 이미지))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 6 · 반복 일정 + 3 · 허브 갱신 (세션 62·63 다음 할 일) | `turn-off-ai-features`(허브, Discovered) | **Chrome 156 설정 메뉴 이름 직접 확인**: 새 프로필 10개를 2번씩 실행 → 첫 실행 10/10 **AI innovations**, 재시작 뒤 3/10 **AI in Chrome**(같은 서버 실험 설정을 받았고 프로필마다 무작위 값이 다름 → 실험으로 해석). 두 이름 모두 같은 `chrome://settings/ai` 페이지·같은 항목. 첫 문단·요약 표·"words also differ" 문단에 두 이름, Chrome 절에 측정 1문장(10개 중 3개), How we checked에 실행 방법. 그래픽 2장 다시 그림: 요약 그래픽 Chrome 설명 "(or AI in Chrome)" + **Firefox 행 추가**(세션 62 다음 할 일), 경로 그래픽 Chrome 상자 "AI innovations or AI in Chrome" + **Firefox 행 추가**, alt 2개 갱신. `updatedAt` 2026-10-29 | 정확성 (V 대상 아님: 미색인) |
+| 1-1 | 같은 확인 | `turn-off-gemini-in-gmail`(unknown) | Chrome 경로 괄호에 "on some computers the AI innovations item is named AI in Chrome" 1구절 (`updatedAt` 그대로) | 정확성 |
+| 2 | 주간 3 · 대표 이미지 | `best-free-pdf-tools`(허브, unknown, 홈 허브 고정으로 10-28 크롤링된 홈에 링크 있음) | `thumbnail`(작업별 추천 그리드, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 | 규칙 적용 (V 대상 아님) |
+| 3 | 주간 3 · 대표 이미지 | `windows-11-24h2-end-of-support`(색인, 7·55.7위) | `thumbnail`(버전별 지원 타임라인, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
+| 4 | 5 · 칼럼 후속 (세션 60~63 다음 할 일) | `office-2021-end-of-support`(unknown) | 종료 문서·Lifecycle(2021·2024)·요금 비교 페이지를 다시 받아 저장본과 비교 → **변경 없음**, 글 변경 없음. 다음 확인 11-10 뒤 | - |
+| 5 | 도구 (대시보드 갱신 실패 대응) | `tools/gsc_report.py` `call()` | 시간 초과·연결 끊김·5xx를 5·20·60초 뒤 재시도 (gsc_report·link_seen·dashboard_data 공용) | - |
+
+- 1번 확인 방법: `dl.google.com` Chrome 안정판 deb(156.0.8078.73, 세션 63과 같은 판)를 `dpkg-deb -x`로 풀어 Xvfb에서 실행, Playwright(Python) CDP 연결로 설정 왼쪽 메뉴 링크 이름·`chrome://settings/ai` 문구·Local State variations 키를 기록(`tests/turn-off-ai-features/menu_check.py`·`ai_page.py`). 10개 프로필 모두 같은 `variations_seed_serial_number`, `low_entropy_source3`는 다름. 언어 파일 `en-US.pak`에 리소스 7569 `AI innovations`·7570 `AI in Chrome`. 캡처 `screens/chrome-156-menu-ai-*.webp`(무손실). 사실 확인표 `factcheck.md` "2026-10-29 Chrome 메뉴 이름". `turn-off-ai-in-chrome`은 V3 판정(11-18) 전이라 손대지 않음
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `best-free-pdf-tools` — 시드 2136353754, 52.0분, 세이지 그린 배경 + 벽돌색·딥 인디고, 3/4 시점. 열린 벽돌색 도구 상자 속 빈 문서 더미 + 왼쪽 인디고 손잡이 가위·잘린 종이 + 오른쪽 빨간 클립으로 묶은 페이지(아래쪽 언덕 그림) + 앞쪽 얇은 종이 더미(압축 집게는 빠짐). `windows-11-24h2-end-of-support` — 시드 1422783292, 49.9분, 옅은 레몬 배경 + 딥 플럼·로즈 핑크, 정면. 빈 화면 모니터를 한 바퀴 감싼 화살표(재시작 한 번) + 위에서 내려오는 리본 선물 상자(무료 26H2) + 오른쪽 방패(보안 업데이트), 장면 설명대로. 두 장 모두 글자·로고 없음, alt를 실제 그림에 맞춤. `windows-11-24h2-end-of-support`는 대표 이미지를 뺀 본문 이미지 2장(규칙 3장) → 11-10 뒤 갱신 때 함께 검토
+- 빌드 HTML 확인: 네 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD(`turn-off-ai-features` dateModified 2026-10-29), `<pre>` 0개, title 62·61·74·43자(접미사 포함), 설명 150·156·152·154자. 대표 이미지 2편은 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·type-check·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음)
+- **`free-offline-ai-tools`는 V2(11-12 판정, 노출 지표) 대상** → 세션 60·61이 대표 이미지 다음 후보로 적었지만 판정 뒤로 미룸 (한 글 한 변경)
+- 남은 대표 이미지 미적용: `thumbnail` 글 15편 + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1)). V 판정 중 4편(`turn-off-ai-in-chrome` V3·`free-offline-ai-tools` V2·`spotify-family-qr-code-verification` V4·`transcribe-audio-offline-free` V1)을 빼면 모두 미색인 글
+
+**알게 된 것**
+
+- **Chrome 156 설정의 AI 메뉴 이름은 서버 실험으로 갈림**: 새 프로필 첫 실행은 항상 **AI innovations**(서버 설정을 받기 전), 서버 설정(variations seed)을 받은 뒤 일부(이번 10개 중 3개)만 **AI in Chrome**. 같은 판·같은 seed라도 컴퓨터마다 다를 수 있음 → 메뉴 이름을 확인할 때는 새 프로필을 한 번 실행하고 끝내지 말고 **재시작 뒤 이름을 여러 프로필로** 봐야 함. Chrome 157(11-03)에서 다시 같은 방법(`menu_check.py`)으로 확인
+- **홈 재크롤링 간격 약 7.6일**(10-21 08:37 → 10-28 23:14 UTC). 하루 2편 발행이면 글이 홈 최신 12편에 머무는 기간은 약 6일 → 간격이 이보다 길면 일부 글은 홈 경로를 놓침(이번 10편). 한 번 더 관찰한 뒤 홈 목록 편수 조정 검토
+- 대표 이미지 생성 1장 52.0·49.9분 (Chrome 실행·차트·테스트·빌드와 겹쳐도 큰 차이 없음)
+- **Search Console URL 검사 API가 간헐적으로 읽기 시간 초과(30초)·500을 냄**: 이번 세션 `dashboard_data.py`가 3번 연속 중간에 멈춤(같은 시각 단건 호출은 정상). `gsc_report.call()`(gsc_report·link_seen·dashboard_data 공용)에 일시 오류(시간 초과·연결 끊김·5xx) 재시도 5·20·60초를 넣어 해결. 403·4xx는 재시도하지 않음
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저. 허브 3편은 홈에서 링크를 받았지만 아직 크롤링 전, 그 뒤는 홈 경로를 놓친 글): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` · `https://tool-proof.com/posts/turn-off-copilot-in-word` · `https://tool-proof.com/posts/turn-off-apple-intelligence-iphone` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (홈은 10-28에 크롤링, 그 밖의 페이지는 10-20 이후 0)
+- Claude(18시 개선 세션): 이 세션과 다른 글로. `check-if-image-is-ai-generated` 본문 이미지 0 → 3장(세션 60 다음 할 일), 미색인 `thumbnail` 글 대표 이미지 계속(PDF 클러스터 `split-pdf-free`·`compress-pdf-free`·`pdf-to-word-free`·`pdf-to-jpg-free`, `compress-video-for-discord-email` 등). `link_seen.py`로 홈 다음 크롤링 확인
+- Claude: Chrome 157(11-03) 출시 뒤 `menu_check.py`로 메뉴 이름 다시 확인(새 프로필 10개, 재시작 포함) → 이름이 하나로 정리되면 허브 갱신. `chrome-enhanced-autofill-gmail` 재확인(세션 63 다음 할 일)
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 메뉴 이름 두 가지 반영 + 허브 링크 1문장 + Firefox·Chrome 자동 완성 글 링크, 태그 `Google Chrome`/`Chrome` 정리. (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `windows-10-esu-extended` 빌드 번호 표 갱신, `windows-11-24h2-end-of-support` 첫 누락 업데이트 반영 + 본문 이미지 2 → 3장 검토, `office-2021-end-of-support` 후속 확인
+- Claude(다음 일반 세션): `ai-settings` 공백 `chrome autofill settings`, `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 50편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 30·방문 23) + `history` 기록(batch, 회차 2026-10-29T05:22:19Z, DB 문서 192개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 **10-28 23:14(홈)**, 미색인 33편 중 Google이 본 링크 20편. 목표: 색인율 17/50 (34%) · 28일 노출 830 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. `dashboard_data.py` 첫 3회는 URL 검사 API 시간 초과·500으로 중단 → `gsc_report.call()`에 재시도 추가 뒤 4번째에 완료(재시도 2번)
+- 배포: PR #292 (auto-merge, CI `test`·`build` 통과 후 머지)
+
 ## 2026-10-29 · 세션 63 (정기 실행, 뉴스 세션 · 화제): Chrome 강화 자동 완성이 Gmail 정보로 양식 채우기
 
 세션 시각: 2026-10-29 06:17 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(ee3f273)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

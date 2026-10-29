@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-30 · 세션 66 (정기 실행, 일반 세션): Chrome 자동 완성 설정
+
+세션 시각: 2026-10-30 00:32 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a79a9a0)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-01 ~ 10-29, 세션 65 이후 바뀐 값만)**
+
+- 노출 842 → **848**, 클릭 13, CTR 1.5%, 평균 순위 22.3 (`spotify-family-qr-code-verification` 251 → 253·16.1 / `turn-off-ai-in-chrome` 148 → 149·14.9·클릭 3 / `image-to-text-offline-free` 107 → 108·15.2 / `gemini-gems-to-skills` 39 → 40·7.4 / `iphone-duo-sold-out` 39·7.9·클릭 2 그대로)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로 (색인율 17/50, 새 글 포함 17/51). `Discovered - currently not indexed` 10편(`arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`google-phone-number-verification`·`remove-phone-number-from-google-account`·`turn-off-ai-features`·`turn-off-ai-in-windows-11`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`), 몇 분 뒤 `link_seen.py` 때는 `ios-27-2-siri-ai-memory`가 들어오고 일부가 unknown으로 바뀜 (세션 63·64와 같은 흔들림)
+- `link_seen.py`: 가장 최근 크롤링 **10-28 23:14 UTC 홈 그대로** (세션 64 이후 새 크롤링 없음). 미색인 33편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `chrome-autofill-settings` | `software` | `ai-settings` 상시 글 (검색형) | **Chrome 156.0.8078.73(Linux 안정판)을 새 프로필(로그아웃)로 실행해 우리 시험 양식(로컬 http 페이지, 만든 값)에서 차례로 확인**: 제출 뒤 **Save address?**(입력하지 않은 "United States" 추가·전화번호 형식 변경) → "Address saved to this device"(로그인하면 Google 계정에 저장), 이름 칸 제안 클릭으로 7칸 채움, 자유 입력 칸(배송 메모)도 한 번 입력한 값 제안 → **Save and fill addresses를 끄면 이름·메모 칸 제안 모두 사라지고 새 주소 저장 제안도 없음, 저장 주소는 남고 Add만 회색, 다시 켜면 돌아옴(끈 동안 입력한 값은 저장 안 됨)** → 제안을 고른 채 Shift+Delete로 하나 삭제 → **카드 저장 제안 "save your card and encrypted security code to your device", Payments에 "CVC saved"**(Save security codes 기본 켜짐) → http 페이지 카드 채우기 차단 메시지 → Delete browsing data에서 **Autofill form data만**(기본 해제, Show more 아래) 지워 카드·주소 1 → 0. 관리 정책(`AutofillAddressEnabled`·`AutofillCreditCardEnabled` false)으로 회색 스위치·건물 아이콘·"This setting is managed by your administrator." 재현, 로그아웃 상태에서 Identity docs·Travel·Smarter form understanding 회색. 언어 파일의 Smarter form understanding 고지 문구 3가지 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보) `ai-settings`(우선순위 1)의 `chrome autofill settings`(세션 63이 칼럼 후속으로 올림, 직접 검증 가능). `demand_check.py suggest` 2026-10-29: 본 검색어 Google·Bing·YouTube 3곳·하위 18개(`greyed out`·`turn off`·`not working`·`email`·`android`·`iphone`), `chrome autofill` 하위 21개 중 3곳은 `settings`·`not working`·`extension`. Trends는 429 3회로 실패(세션 63 값: 7일 `chrome autofill` 0.4, 기준 `remove background` 66.6). 반복 일정(Chrome 157 11-03, Windows 11-10)은 아직 아님
+- 상위 결과(WebSearch `chrome autofill settings`): ExpressVPN·NordVPN 블로그, Android Central, Dummies, Micro Center. 빠진 것: Chrome 156 새 구성(Contact info·Identity docs·Travel), 끄기 vs 지우기, Smarter form understanding의 주소·내용 전송, CVC 기본 저장, 회색 원인, http 카드 차단
+- 주 검색어: `chrome autofill settings`. 제목 `Chrome Autofill Settings and What Each Switch Does`(50자), 설명 159자
+- 1차 출처: Chrome 156 앱(직접 실행) + 설정 화면 글자·스위치 상태(`source-chrome-156-settings-text.txt`)·언어 파일(`source-chrome-156-strings.txt`), support.google.com/chrome/answer/142893(Desktop·Android·iOS, 10-28 저장본과 같음)·95606(비밀번호), chromiumdash(현재 안정판·157 일정). 실행 기록 `tests/chrome-autofill-settings/capture-notes.md`, 캡처 `screens/*.webp`(무손실), 스크립트 `run.py`·`scenarios/*.py`, 시험 페이지 `test-site/`
+- 쓰지 않은 것: 로그인 상태 화면(Enhanced autofill·Wallet 저장), Verify it's you 스위치(Linux 화면에 없음 → 도움말 인용), Mac·휴대폰에서 제안 하나 지우는 법, HTTPS 페이지 카드 채우기, 로그아웃 상태 회색의 정확한 조건(화면에 설명 없음)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 745287618, 54.6분, 라벤더 배경 + 초록·피치, 아이소메트릭. 초록 제목 줄 브라우저 창의 빈 입력 칸 3개 + 피치색 패널 초록 토글 3개(장면은 2개 켜짐·2개 꺼짐인데 모두 켜진 모양) + 작은 집·금색 열쇠·점선. 글자·로고 없음 → 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 5장(설정 첫 화면 + 묶음 설명, 스위치 켜짐/꺼짐 비교, 주소·카드 저장 말풍선 + CVC saved(카드 회사 로고는 회색 상자로 가림), Autofill form data만 고른 삭제 대화상자 + 전후, 회색 스위치 두 원인 + 직접 끈 스위치, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-ai-in-chrome`·`turn-off-gemini-apps-activity`·`remove-phone-number-from-google-account`, 칼럼 `chrome-enhanced-autofill-gmail` (5개). 역링크 3개: 색인된 `gemini-gems-to-skills`(enhanced autofill 문장 뒤) · `chrome-enhanced-autofill-gmail`(단계 목록 뒤 문단) · 허브 `turn-off-ai-features`(Chrome 절 enhanced autofill 문장 뒤) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님). `turn-off-ai-in-chrome`(V3)·`check-if-image-is-ai-generated`(V6)는 판정 전이라 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 50자·H1 일치·주 검색어 맨 앞, 설명에 `Chrome autofill settings` 그대로 넣도록 점검 중 고침, 첫 문장에 주 검색어, h2 11개·FAQ h3 2개(자동완성 `email`·카드 not working), 이미지 alt·파일 이름·WebP, 기존 글 3개에서 받는 링크, em dash 0, 백틱 0). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 62자(접미사 포함)·description 159자, BlogPosting(발행 2026-10-29T16:47Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 13개(관련 글 제목 포함)·h3 5개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 5장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. 본문 약 2,500단어(표·이미지 제외, FAQ·How we tested 포함). lint·type-check·test(35파일)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개, 새 태그 `autofill`)
+
+**알게 된 것**
+
+- **Chrome의 Save and fill addresses는 주소만이 아니라 자유 입력 칸 기록(autocomplete)까지 함께 멈춤**: 끄면 저장 주소·한 번 입력한 메모 제안이 모두 사라지고 새 입력은 저장되지 않음. 저장된 것은 지워지지 않음 → "끄기 = 일시 정지, 지우기는 따로"를 다른 브라우저 글에도 확인 항목으로 씀
+- **로그아웃 Chrome도 주소·카드를 기기에 저장하고 채움** (도움말의 "자동 완성은 로그인 필요"와 다름). 카드는 보안 코드까지 저장 제안. 반면 Identity docs·Travel·Smarter form understanding은 로그아웃 상태에서 꺼짐·회색
+- **로컬 http 시험 페이지에서는 카드 채우기가 막힘**(localhost여도 "does not use a secure connection") → 카드 채우기를 시험하려면 HTTPS 시험 페이지가 필요
+- **실험 도구**: 시나리오가 오류로 멈추면 `run.py`가 Chrome을 닫지 못해 다음 실행이 9333 포트를 잡은 **이전 브라우저에 붙음**(새로 지정한 프로필이 아님). 탭 수가 늘고 `Web Data` DB가 예상과 다를 때 알아챔 → `try/finally`로 항상 닫게 고침. `pkill -f`의 패턴이 자기 셸 명령줄에도 걸려 셸이 죽음(종료 코드 144) → PID로 kill. Chrome 말풍선·자동 완성 목록은 페이지 밖이라 xdotool 클릭(apt 설치 가능), 말풍선이 열린 채 방향키+Enter를 누르면 양식이 제출됨. Delete browsing data는 마지막으로 고른 기간을 기억해 좌표 클릭이 다른 칩을 고름
+- `chrome://policy`는 `AutofillAddressEnabled`·`AutofillCreditCardEnabled`를 Deprecated로 표시하지만 정책은 그대로 적용됨
+- Trends API 429가 재시도 3번(약 2.5분) 뒤에도 계속 → 이번 세션은 자동완성으로만 수요 확인
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, 세션 65 목록 이어서): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/chrome-autofill-settings`(새 글) · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (10-28 홈 이후 크롤링 없음)
+- Claude(다음 개선 세션): 미색인 `thumbnail` 글 대표 이미지 계속 — `compress-video-for-discord-email`(photo-video), PDF 클러스터 `compress-pdf-free`·`pdf-to-word-free`·`pdf-to-jpg-free`. 본문 이미지 2장인 칼럼(`office-2021-end-of-support`·`pixel-watch-safety-signal-ending`·`gemini-free-flash-lite`·`gemini-android-auto-personal-intelligence`)은 대표 이미지와 함께 그래픽 1장 검토. 생성 중에는 전면 대기 명령으로. `link_seen.py`로 홈 다음 크롤링 확인
+- Claude: Chrome 157(11-03) 출시 뒤 `chrome-autofill-settings` 재확인(같은 방법: deb 받아 새 프로필로 `scenarios/s_dump.py` + 스위치 상태·문구 diff), `menu_check.py`로 AI 메뉴 이름, `chrome-enhanced-autofill-gmail` 재확인
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 메뉴 이름 두 가지 반영 + 허브 링크 1문장 + Firefox·Chrome 자동 완성 글 링크(새 글 `chrome-autofill-settings` 포함), 태그 `Google Chrome`/`Chrome` 정리. (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `windows-10-esu-extended` 빌드 번호 표 갱신 + 본문 이미지 0 → 3장, `windows-11-24h2-end-of-support` 첫 누락 업데이트 반영, `office-2021-end-of-support` 후속 확인
+- Claude(다음 일반 세션): `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`. `chrome autofill not working`(자동완성 3곳)은 새 글보다 `chrome-autofill-settings`의 소제목 보강 후보(Search Console에서 그 검색어로 노출이 생기면)
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 51편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 31·방문 24) + `history` 기록(batch, 회차 2026-10-29T16:50:56Z, DB 문서 208개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-28 23:14(홈), 미색인 34편(새 글 포함) 중 Google이 본 링크 20편. 목표: 색인율 17/51 (33%) · 28일 노출 850 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #295 (첫 푸시 뒤 기록 커밋 추가, CI 통과 후 머지)
+
 ## 2026-10-29 · 세션 65 (정기 실행, 개선 세션): AI 이미지 판별 글 본문 이미지·Inspect 직접 확인 + 기존 글 대표 이미지
 
 세션 시각: 2026-10-29 18:10 KST → 개선 세션. 같은 날 12시 세션 64가 다룬 글(`turn-off-ai-features`·`turn-off-gemini-in-gmail`·`best-free-pdf-tools`·`windows-11-24h2-end-of-support`·`office-2021-end-of-support`)과 겹치지 않게 세션 64 다음 할 일(`check-if-image-is-ai-generated` 본문 이미지, 미색인 `thumbnail` 글 대표 이미지)을 이어받음. 열린 PR 없음. 작업 브랜치를 `origin/main`(f65b83e)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

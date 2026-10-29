@@ -63,6 +63,24 @@ Reachability note: WebFetch and the shell could NOT open blog.google, synthid.co
 - **Gemini Help 100 MB limit and "crop tight around screenshots" tip**: extract only. Dropped.
 - **Platform labels (Meta, YouTube, TikTok, LinkedIn, etc.)**: not verifiable. Dropped; FAQ says we didn't test platforms.
 
+## 2026-10-29 Inspect·Verify 직접 확인 (세션 65, 개선 세션)
+
+방법: `make_source.py`로 10-11과 같은 AI 라벨(trainedAlgorithmicMedia) 테스트 이미지를 다시 만듦(c2pa-python 0.38.0/SDK 0.91.0, c2patool-v0.27.22 릴리스의 sample es256 테스트 인증서, 타르볼 sha256 10-11과 동일). 사본 2개: Chromium 153 요소 스크린숏(PNG, 원본과 픽셀 차이 0 확인), ImageMagick 6.9.12-98 `-quality 85` 재저장. `inspect_capture.js`로 세 파일을 Adobe Inspect(beta, `inspect.cr` → contentauthenticity.adobe.com/inspect, "Browse files" 파일 선택)와 CAI Verify(verify.contentauthenticity.org, revision a09c33d)에 올리고 화면·문구 저장(`screens/*.webp` 무손실, `screens/capture-notes.json`). 그래픽은 `charts.py`(상단 Adobe 로고 헤더는 잘라 냄)
+
+| 본문 주장 | 확인한 것 |
+| --- | --- |
+| Inspect·Verify 모두 JPEG·PNG·WebP·HEIC·AVIF 등을 읽음 | 두 업로드 화면의 지원 형식 목록 (Inspect: AVI, AVIF, C2PA, DNG, GIF, HEIC, HEIF, JPEG, JXL, M4A, MOV, MP3, MP4, PDF, PNG, SVG, TIFF, WAV, WebP / Verify: AVI, AVIF, DNG, HEIC, HEIF, JPEG, M4A, MOV, MP3, MP4, PDF, PNG, SVG, TIFF, WAV, WebP) |
+| 자격 증명 없는 파일: Inspect **We couldn't verify how this was made**, Verify는 메시지 없이 업로드 화면으로 돌아감 | 스크린숏 사본 결과. Inspect 제목·이유 4개(스크린숏·소셜 압축·재저장으로 지워짐 포함). Verify는 화면 변화 없음, 콘솔 오류 `No C2PA manifest found in this file`. 이전 본문의 "No Content Credential"(Inspect 문서 인용)은 지금 화면과 달라 바꿈 |
+| 원본: Inspect **AI actions > Created with AI** + "were issued by an unrecognized source" | 원본 결과 (Created with: ToolProof C2PA strip test, AI model: ToolProof test generator (not a real AI model)) |
+| 재저장 사본: Inspect는 Created with AI + "There are unrecorded changes to this asset since Content Credentials were applied." / Verify는 Invalid + "This file may have been tampered with. Its Content Credentials can't be verified or viewed." (라벨 안 보임) | 재저장 사본 결과 두 화면 |
+| FAQ: Inspect "were issued by an unrecognized source", Verify "The Content Credential issuer couldn't be recognized." | 원본 결과. 이전 본문은 CAI 문서를 근거로 Verify 문구를 Inspect 문구로 적었음 → 직접 본 두 문구로 바꿈 |
+
+- Verify는 원본에 "Content summary: This image was generated with an AI tool." + "AI tool used: ToolProof test generator"도 보여 줌 (본문에는 쓰지 않음)
+- c2pa-rs 샘플 `C.jpg`(digitalSourceType `algorithmicMedia`)도 같은 방법으로 확인: Inspect "Created with make_test_images" + legacy C2PA 버전·unrecognized source 경고(AI actions 없음), 스크린숏은 Inspect "We couldn't verify how this was made"(Pillow 재저장은 Verify에만 올림: 업로드 화면으로 돌아감), ImageMagick 재저장은 Inspect "unrecorded changes" 경고·Verify Invalid. 이 확인은 스크래치 스크립트로 했고 캡처는 저장하지 않음. 본문 그래픽에는 AI 라벨 이미지만 씀
+- SynthID Detector(synthid.com)는 headless Chromium에서 쿠키 안내만 뜨고 빈 화면 → 이번에도 실행하지 않음 (본문 "We did not run SynthID Detector" 유지)
+- openai.com/research/verify/는 403
+
 ## 변경 기록
 
 - 2026-10-17: 삭제된 글(`remove-background-from-image-free-offline`)로 가는 링크와 rembg PNG 메타데이터 문장 제거
+- 2026-10-29: 본문 이미지 0 → 4장(Inspect 캡처 그래픽 3 + 10-11 편집 측정 결과 그래픽 1), 2단계·FAQ의 Inspect 문구를 직접 확인한 문구로 정정, How we tested에 10-29 확인 1문장, `updatedAt` 2026-10-29

@@ -1,0 +1,61 @@
+{
+  "browser": "153.0.8010.12",
+  "date": "2026-10-29T09:34:22.267Z",
+  "inspect": {
+    "ai-labeled-original": {
+      "text": "Adobe Content Authenticity\nInspect\nAdd Chrome extension\nSign in\nInspect new file\nai-labeled-original.jpg\nContent Credentials\nImage (JPEG) • Retrieved from file\nHow this was made\nCREATED WITH\nToolProof C2PA strip test\nAI MODEL\nToolProof test generator (not a real AI model)\nAI actions\nCreated with AI\nSome details need a second look\nThese Content Credentials were issued by an unrecognized source.\nMore actions\nAdditional Content Credentials for the most recent version of ai-labeled-original.jpg may exist. Search Adobe's Content Credentials cloud to find visually similar matches.\nSearch for matches",
+      "boxes": {
+        "Created with AI": {
+          "x": 674,
+          "y": 410.59375,
+          "width": 131.75,
+          "height": 24
+        }
+      }
+    },
+    "ai-labeled-screenshot": {
+      "text": "Adobe Content Authenticity\nInspect\nAdd Chrome extension\nSign in\nInspect new file\nai-labeled-screenshot.png\nWe couldn't verify how this was made\nContent Credentials are still new, so most files don't have them yet. Here are some common reasons that a file might be missing credentials:\nIt was created before Content Credentials existed\nIt was made with tools that don't support Content Credentials yet\nExisting Content Credentials were stripped due to screenshotting, social media compression, re-saving, etc.\nThe person who created the file chose not to include them\nMore actions\nA credentialed version of this file may exist. Search Adobe's Content Credentials cloud to find visually similar matches.\nSearch for matches",
+      "boxes": {
+        "We couldn't verify how this was made": {
+          "x": 652,
+          "y": 114,
+          "width": 604,
+          "height": 28.59375
+        }
+      }
+    },
+    "ai-labeled-imagemagick-resave": {
+      "text": "Adobe Content Authenticity\nInspect\nAdd Chrome extension\nSign in\nInspect new file\nai-labeled-imagemagick-resave.jpg\nContent Credentials\nImage (JPEG) • Retrieved from file\nHow this was made\nCREATED WITH\nToolProof C2PA strip test\nAI MODEL\nToolProof test generator (not a real AI model)\nAI actions\nCreated with AI\nSome details need a second look\nThere are unrecorded changes to this asset since Content Credentials were applied.\nThese Content Credentials were issued by an unrecognized source.\nMore actions\nAdditional Content Credentials for the most recent version of ai-labeled-imagemagick-resave.jpg may exist. Search Adobe's Content Credentials cloud to find visually similar matches.\nSearch for matches",
+      "boxes": {
+        "Created with AI": {
+          "x": 674,
+          "y": 410.59375,
+          "width": 131.75,
+          "height": 24
+        },
+        "There are unrecorded changes": {
+          "x": 698,
+          "y": 536.59375,
+          "width": 468.40625,
+          "height": 21
+        }
+      }
+    }
+  },
+  "verify": {
+    "ai-labeled-original": {
+      "text": "Select another file from your device or drag and drop anywhere\nsource_signed.jpg\nUnrecognized\n\nUnrecognized\nFit\nCompare\nsource_signed.jpg\nUnrecognized\nThe Content Credential issuer couldn’t be recognized. This file may not come from where it claims to.\nContent summary\nThis image was generated with an AI tool.\nProcess\nThe app or device used to produce this content recorded the following info:\nApp or device used\nC2PA Signer\nAI tool used\nToolProof test generator (not a real AI model)\nActions\nCreated\nThe asset was created.\nAbout this Content Credential\nIssued by\nC2PA Test Signing Cert\nHome\nVerify Content Credentials\nGet involved\nContent Authenticity Initiative\nOpen-source tools\nDiscord\nGithub",
+      "consoleErrors": []
+    },
+    "ai-labeled-screenshot": {
+      "text": "Inspect content to dig deeper\nDrag content into Verify to inspect its Content Credentials in detail and see how it has changed over time.\nContent Credentials are still rolling out, so the content you choose to inspect may not have information to view.\nSelect a file from your device\nor drag and drop anywhere\nSupported formats: AVI, AVIF, DNG, HEIC, HEIF, JPEG, M4A, MOV, MP3, MP4, PDF, PNG, SVG, TIFF, WAV, WebP\n\nHome\nVerify Content Credentials\nGet involved\nContent Authenticity Initiative\nOpen-source tools\nDiscord\nGithub",
+      "consoleErrors": [
+        "createC2paReader.read() error: Error: No C2PA manifest found in this file"
+      ]
+    },
+    "ai-labeled-imagemagick-resave": {
+      "text": "Select another file from your device or drag and drop anywhere\nai-labeled-imagemagick-resave.jpg\nInvalid\n\nInvalid\nFit\nCompare\nai-labeled-imagemagick-resave.jpg\nInvalid\nThis file may have been tampered with. Its Content Credentials can’t be verified or viewed.\nHome\nVerify Content Credentials\nGet involved\nContent Authenticity Initiative\nOpen-source tools\nDiscord\nGithub",
+      "consoleErrors": []
+    }
+  }
+}

@@ -49,3 +49,8 @@
 - Office 2021 Outlook의 Microsoft 365 서비스 연결 지원 종료 여부: 1차 출처 못 찾음
 - 연말 할인·구형 키 판매: 출처 없음 → 삭제
 - 컨테이너에서 Office를 실행할 수 없어 직접 실행 표현 없음 (모두 문서 기반)
+
+## 2026-10-29 후속 확인 (세션 64 개선 세션)
+
+- 종료 10-13 뒤 변경 여부를 같은 1차 출처로 다시 받음(curl, 브라우저 UA): support.microsoft.com end-of-support-for-office-2021 본문은 `source-end-of-support-office-2021.txt`와 공백 정규화 후 **같음**("ended on October 13, 2026 … no extension and no extended security updates" 그대로), Lifecycle office-2021(Retirement 10/14/2026 6:59:59 AM)·office-2024(10/10/2029 6:59:59 AM) **같음**, 요금 비교 페이지 Office Home 2024 $179.99 · Personal $99.99/년 · Family $129.99/년 · Premium $199.99/년 **같음**
+- → 글 변경 없음. 다음 확인: 11-10 첫 누락 Patch Tuesday 뒤 (Microsoft가 Office 2021 관련 공지·보안 권고를 내는지)

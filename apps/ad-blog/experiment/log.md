@@ -24,12 +24,13 @@
 | 1 | 6 · 반복 일정 + 3 · 허브 갱신 (세션 62·63 다음 할 일) | `turn-off-ai-features`(허브, Discovered) | **Chrome 156 설정 메뉴 이름 직접 확인**: 새 프로필 10개를 2번씩 실행 → 첫 실행 10/10 **AI innovations**, 재시작 뒤 3/10 **AI in Chrome**(같은 서버 실험 설정을 받았고 프로필마다 무작위 값이 다름 → 실험으로 해석). 두 이름 모두 같은 `chrome://settings/ai` 페이지·같은 항목. 첫 문단·요약 표·"words also differ" 문단에 두 이름, Chrome 절에 측정 1문장(10개 중 3개), How we checked에 실행 방법. 그래픽 2장 다시 그림: 요약 그래픽 Chrome 설명 "(or AI in Chrome)" + **Firefox 행 추가**(세션 62 다음 할 일), 경로 그래픽 Chrome 상자 "AI innovations or AI in Chrome" + **Firefox 행 추가**, alt 2개 갱신. `updatedAt` 2026-10-29 | 정확성 (V 대상 아님: 미색인) |
 | 1-1 | 같은 확인 | `turn-off-gemini-in-gmail`(unknown) | Chrome 경로 괄호에 "on some computers the AI innovations item is named AI in Chrome" 1구절 (`updatedAt` 그대로) | 정확성 |
 | 2 | 주간 3 · 대표 이미지 | `best-free-pdf-tools`(허브, unknown, 홈 허브 고정으로 10-28 크롤링된 홈에 링크 있음) | `thumbnail`(작업별 추천 그리드, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 | 규칙 적용 (V 대상 아님) |
-| 3 | 주간 3 · 대표 이미지 | `windows-11-24h2-end-of-support`(색인, 7·55.7위) | HERO2_PLACEHOLDER | 규칙 적용 (V 대상 아님) |
+| 3 | 주간 3 · 대표 이미지 | `windows-11-24h2-end-of-support`(색인, 7·55.7위) | `thumbnail`(버전별 지원 타임라인, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
 | 4 | 5 · 칼럼 후속 (세션 60~63 다음 할 일) | `office-2021-end-of-support`(unknown) | 종료 문서·Lifecycle(2021·2024)·요금 비교 페이지를 다시 받아 저장본과 비교 → **변경 없음**, 글 변경 없음. 다음 확인 11-10 뒤 | - |
+| 5 | 도구 (대시보드 갱신 실패 대응) | `tools/gsc_report.py` `call()` | 시간 초과·연결 끊김·5xx를 5·20·60초 뒤 재시도 (gsc_report·link_seen·dashboard_data 공용) | - |
 
 - 1번 확인 방법: `dl.google.com` Chrome 안정판 deb(156.0.8078.73, 세션 63과 같은 판)를 `dpkg-deb -x`로 풀어 Xvfb에서 실행, Playwright(Python) CDP 연결로 설정 왼쪽 메뉴 링크 이름·`chrome://settings/ai` 문구·Local State variations 키를 기록(`tests/turn-off-ai-features/menu_check.py`·`ai_page.py`). 10개 프로필 모두 같은 `variations_seed_serial_number`, `low_entropy_source3`는 다름. 언어 파일 `en-US.pak`에 리소스 7569 `AI innovations`·7570 `AI in Chrome`. 캡처 `screens/chrome-156-menu-ai-*.webp`(무손실). 사실 확인표 `factcheck.md` "2026-10-29 Chrome 메뉴 이름". `turn-off-ai-in-chrome`은 V3 판정(11-18) 전이라 손대지 않음
-- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `best-free-pdf-tools` — 시드 2136353754, 52.0분, 세이지 그린 배경 + 벽돌색·딥 인디고, 3/4 시점. 열린 벽돌색 도구 상자 속 빈 문서 더미 + 왼쪽 인디고 손잡이 가위·잘린 종이 + 오른쪽 빨간 클립으로 묶은 페이지(아래쪽 언덕 그림) + 앞쪽 얇은 종이 더미(압축 집게는 빠짐). HERO2_DETAIL
-- BUILD_PLACEHOLDER
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `best-free-pdf-tools` — 시드 2136353754, 52.0분, 세이지 그린 배경 + 벽돌색·딥 인디고, 3/4 시점. 열린 벽돌색 도구 상자 속 빈 문서 더미 + 왼쪽 인디고 손잡이 가위·잘린 종이 + 오른쪽 빨간 클립으로 묶은 페이지(아래쪽 언덕 그림) + 앞쪽 얇은 종이 더미(압축 집게는 빠짐). `windows-11-24h2-end-of-support` — 시드 1422783292, 49.9분, 옅은 레몬 배경 + 딥 플럼·로즈 핑크, 정면. 빈 화면 모니터를 한 바퀴 감싼 화살표(재시작 한 번) + 위에서 내려오는 리본 선물 상자(무료 26H2) + 오른쪽 방패(보안 업데이트), 장면 설명대로. 두 장 모두 글자·로고 없음, alt를 실제 그림에 맞춤. `windows-11-24h2-end-of-support`는 대표 이미지를 뺀 본문 이미지 2장(규칙 3장) → 11-10 뒤 갱신 때 함께 검토
+- 빌드 HTML 확인: 네 글 h1 1개, BlogPosting·BreadcrumbList JSON-LD(`turn-off-ai-features` dateModified 2026-10-29), `<pre>` 0개, title 62·61·74·43자(접미사 포함), 설명 150·156·152·154자. 대표 이미지 2편은 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·type-check·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음)
 - **`free-offline-ai-tools`는 V2(11-12 판정, 노출 지표) 대상** → 세션 60·61이 대표 이미지 다음 후보로 적었지만 판정 뒤로 미룸 (한 글 한 변경)
 - 남은 대표 이미지 미적용: `thumbnail` 글 15편 + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1)). V 판정 중 4편(`turn-off-ai-in-chrome` V3·`free-offline-ai-tools` V2·`spotify-family-qr-code-verification` V4·`transcribe-audio-offline-free` V1)을 빼면 모두 미색인 글
 
@@ -37,7 +38,8 @@
 
 - **Chrome 156 설정의 AI 메뉴 이름은 서버 실험으로 갈림**: 새 프로필 첫 실행은 항상 **AI innovations**(서버 설정을 받기 전), 서버 설정(variations seed)을 받은 뒤 일부(이번 10개 중 3개)만 **AI in Chrome**. 같은 판·같은 seed라도 컴퓨터마다 다를 수 있음 → 메뉴 이름을 확인할 때는 새 프로필을 한 번 실행하고 끝내지 말고 **재시작 뒤 이름을 여러 프로필로** 봐야 함. Chrome 157(11-03)에서 다시 같은 방법(`menu_check.py`)으로 확인
 - **홈 재크롤링 간격 약 7.6일**(10-21 08:37 → 10-28 23:14 UTC). 하루 2편 발행이면 글이 홈 최신 12편에 머무는 기간은 약 6일 → 간격이 이보다 길면 일부 글은 홈 경로를 놓침(이번 10편). 한 번 더 관찰한 뒤 홈 목록 편수 조정 검토
-- 대표 이미지 생성 1장 52.0분 (Chrome 실행·차트·테스트와 겹쳐도 큰 차이 없음)
+- 대표 이미지 생성 1장 52.0·49.9분 (Chrome 실행·차트·테스트·빌드와 겹쳐도 큰 차이 없음)
+- **Search Console URL 검사 API가 간헐적으로 읽기 시간 초과(30초)·500을 냄**: 이번 세션 `dashboard_data.py`가 3번 연속 중간에 멈춤(같은 시각 단건 호출은 정상). `gsc_report.call()`(gsc_report·link_seen·dashboard_data 공용)에 일시 오류(시간 초과·연결 끊김·5xx) 재시도 5·20·60초를 넣어 해결. 403·4xx는 재시도하지 않음
 
 **다음 할 일**
 
@@ -49,7 +51,7 @@
 - Claude(다음 일반 세션): `ai-settings` 공백 `chrome autofill settings`, `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
 - Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 50편 (허브 4개)
-- DASHBOARD_PLACEHOLDER
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 30·방문 23) + `history` 기록(batch, 회차 2026-10-29T05:22:19Z, DB 문서 192개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 **10-28 23:14(홈)**, 미색인 33편 중 Google이 본 링크 20편. 목표: 색인율 17/50 (34%) · 28일 노출 830 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. `dashboard_data.py` 첫 3회는 URL 검사 API 시간 초과·500으로 중단 → `gsc_report.call()`에 재시도 추가 뒤 4번째에 완료(재시도 2번)
 - 배포: PR_PLACEHOLDER
 
 ## 2026-10-29 · 세션 63 (정기 실행, 뉴스 세션 · 화제): Chrome 강화 자동 완성이 Gmail 정보로 양식 채우기

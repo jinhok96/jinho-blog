@@ -52,7 +52,7 @@
 - Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
 - Claude: 발행 50편 (허브 4개)
 - 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 30·방문 23) + `history` 기록(batch, 회차 2026-10-29T05:22:19Z, DB 문서 192개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 **10-28 23:14(홈)**, 미색인 33편 중 Google이 본 링크 20편. 목표: 색인율 17/50 (34%) · 28일 노출 830 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. `dashboard_data.py` 첫 3회는 URL 검사 API 시간 초과·500으로 중단 → `gsc_report.call()`에 재시도 추가 뒤 4번째에 완료(재시도 2번)
-- 배포: PR_PLACEHOLDER
+- 배포: PR #292 (auto-merge, CI `test`·`build` 통과 후 머지)
 
 ## 2026-10-29 · 세션 63 (정기 실행, 뉴스 세션 · 화제): Chrome 강화 자동 완성이 Gmail 정보로 양식 채우기
 

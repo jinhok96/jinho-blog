@@ -22,17 +22,35 @@
 | # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
 | --- | --- | --- | --- | --- |
 | 1 | 세션 60~64 다음 할 일 · 이미지 규칙 | `check-if-image-is-ai-generated`(색인, 42·69.4위) | **Adobe Inspect(beta)·CAI Verify에 직접 업로드해 확인**: 10-11과 같은 스크립트·테스트 인증서로 AI 라벨 이미지를 다시 만들고 원본·Chromium 스크린숏(픽셀 동일)·ImageMagick 재저장본을 올려 캡처. 본문 이미지 0 → 4장(Inspect 원본 결과 + 원본 vs 스크린숏 + 재저장본 Inspect vs Verify + 10-11 편집 12개 결과 3묶음 그래픽). 결과 표 아래·What stood out 뒤에 측정 문장, How we tested에 10-29 확인 1문장. **정확성 정정**: 2단계 "Inspect shows **No Content Credential**"(Inspect 문서 인용) → 지금 화면 **We couldn't verify how this was made** + Verify는 메시지 없이 업로드 화면으로 돌아감, FAQ의 테스트 인증서 경고 문구는 Verify 문구였음 → 두 도구의 실제 문구로. `updatedAt` 2026-10-29 | V6 (노하우 7, position, 11-26) |
+| 2 | 주간 3 · 대표 이미지 | `split-pdf-free`(unknown 12일, Google이 본 링크 4곳) | `thumbnail`(앱별로 남는 것 그리드, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
 
 - 확인 결과: 원본 — Inspect **AI actions > Created with AI** + "These Content Credentials were issued by an unrecognized source." / Verify "Unrecognized" + "This image was generated with an AI tool." 스크린숏 — Inspect **We couldn't verify how this was made**(이유 목록에 "stripped due to screenshotting, social media compression, re-saving"), Verify는 결과 화면 없이 업로드 화면(콘솔 `No C2PA manifest found in this file`). ImageMagick 재저장 — Inspect는 Created with AI + "There are unrecorded changes to this asset since Content Credentials were applied.", Verify는 Invalid + "This file may have been tampered with. Its Content Credentials can't be verified or viewed."(AI 라벨 숨김)
 - 방법: c2patool-v0.27.22 릴리스(타르볼 sha256 10-11과 동일)의 sample es256 테스트 인증서, c2pa-python 0.38.0, Playwright + Chromium 153.0.8010.12 headless 1280×900. Inspect는 숨은 file input에 파일을 넣으면 반응이 없고 "Browse files" 파일 선택 창으로 올려야 함. 캡처 `tests/check-if-image-is-ai-generated/screens/*.webp`(무손실)·`capture-notes.json`, 스크립트 `inspect_capture.js`, 그래픽 `charts.py`(상단 Adobe 로고 헤더 잘라 냄, 라이트 모드 토큰), 사실 확인표 `factcheck.md` "2026-10-29 Inspect·Verify 직접 확인"
 - SynthID Detector(synthid.com)는 headless Chromium에서 빈 화면 → 이번에도 실행하지 않음 (본문 그대로)
-- 빌드 HTML 확인: h1 1개·h2 6개, BlogPosting dateModified 2026-10-29, `<pre>` 0개, 본문 이미지 alt 5개(대표 1 + 본문 4), title 70자(접미사 포함, 기존 제목 그대로)·설명 143자. lint·type-check·test(35파일 253개)·build 통과
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `split-pdf-free` — 시드 1249859823, **77.0분**, 살구색 배경 + 에메랄드 그린·슬레이트 블루, 3/4 시점. 두꺼운 서류 더미 + 가위로 자르는 가운데 더미 + 책갈피 리본이 꽂힌 오른쪽 더미(리본은 하나뿐, 가위는 틈 대신 더미를 자름 → 기준대로 그대로 사용). 글자·로고 없음, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: `check-if-image-is-ai-generated` h1 1개·h2 6개, BlogPosting dateModified 2026-10-29, `<pre>` 0개, 본문 이미지 alt 5개(대표 1 + 본문 4), title 70자(접미사 포함, 기존 제목 그대로)·설명 143자. `split-pdf-free` h1 1개, `<pre>` 0개, 본문 첫 이미지가 대표 이미지, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), dateModified 그대로. lint·type-check·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음). 첫 푸시(본문 이미지·문서) CI `test`·`build` 통과
+- 남은 대표 이미지 미적용: `thumbnail` 글 14편 + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1)). 1장에 77분이 걸려 이번 세션은 1장만 (`compress-video-for-discord-email`은 다음 세션)
 
 **알게 된 것**
 
 - **웹 도구 문서의 화면 문구는 지금 화면과 다를 수 있음**: CAI 문서의 Inspect "No Content Credential"은 지금 "We couldn't verify how this was made", 문서가 Inspect 문구라고 한 테스트 인증서 경고는 Verify 문구였음 → writing-guide 정확성에 "웹 도구 화면 문구는 직접 올려 본 결과로" 추가
 - **Inspect가 Verify보다 결과를 읽기 쉬움**: 자격 증명이 없으면 Inspect는 이유 목록을 보여 주고 Verify는 아무 말 없이 첫 화면으로 돌아감. 변경된 파일은 Inspect가 AI 라벨과 변경 경고를 함께, Verify는 변조 경고만 보여 줌 → `turn-off-ai-features` 등에서 AI 이미지 확인 도구를 안내할 때 Inspect 먼저
-- 같은 날 다른 작업(빌드·캡처)과 겹치면 대표 이미지 1단계가 약 9~10분까지 늘어남 (평소 약 6분)
+- **세션이 응답을 끝내고 기다리는 동안 컨테이너가 멈춤**: 대표 이미지를 백그라운드로 돌려 두고 턴을 끝냈더니 모니터 30분 동안 컨테이너 시계는 약 1분, 생성은 2/8단계 그대로였음. 전면 명령(`timeout 580 bash -c 'while kill -0 PID; do sleep 15; done'`)으로 기다리는 동안에만 진행 → 생성 중에는 턴을 끝내지 말고 전면 대기 명령을 이어 감 (writing-guide 대표 이미지에 추가). 대기 확인용 `pgrep -f sd-cli`는 자기 명령줄도 잡아 오탐 → PID로 확인
+- 대표 이미지 1단계 약 8.5~9.9분(1장 77.0분), sd-cli만 CPU를 쓸 때도 비슷 → 이 컨테이너는 세션 64(1장 50분 안팎)보다 느림
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, 세션 64 목록 이어서): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/check-if-image-is-ai-generated`(색인됨, 오늘 본문 이미지·정정 → 재크롤링 요청) · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (10-28 홈 이후 크롤링 없음)
+- Claude(다음 개선 세션): 미색인 `thumbnail` 글 대표 이미지 계속 — `compress-video-for-discord-email`(photo-video, unknown 13일, 장면 후보: 필름 릴 → 작은 꾸러미 → 말풍선·봉투), PDF 클러스터 `compress-pdf-free`·`pdf-to-word-free`·`pdf-to-jpg-free`. 본문 이미지 2장인 칼럼(`office-2021-end-of-support`·`pixel-watch-safety-signal-ending`·`gemini-free-flash-lite`·`gemini-android-auto-personal-intelligence`)은 대표 이미지와 함께 그래픽 1장 검토(한 글 한 변경 안에서). 생성 중에는 전면 대기 명령으로. `link_seen.py`로 홈 다음 크롤링 확인
+- Claude: 허브 `turn-off-ai-features`·`check-if-image-is-ai-generated`에서 AI 이미지 확인 도구를 안내할 때 Inspect를 먼저 (오늘 확인: 결과 문구가 Verify보다 분명). SynthID Detector는 headless에서 빈 화면 → Xvfb + 일반 Chromium으로 다시 시도 검토
+- Claude: Chrome 157(11-03) 출시 뒤 `menu_check.py`로 메뉴 이름 다시 확인(새 프로필 10개, 재시작 포함), `chrome-enhanced-autofill-gmail` 재확인
+- Claude(11-18 V3 판정 뒤): `turn-off-ai-in-chrome` → 메뉴 이름 두 가지 반영 + 허브 링크 1문장 + Firefox·Chrome 자동 완성 글 링크, 태그 `Google Chrome`/`Chrome` 정리. (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `windows-10-esu-extended` 빌드 번호 표 갱신 + 본문 이미지 0 → 3장, `windows-11-24h2-end-of-support` 첫 누락 업데이트 반영 + 본문 이미지 검토, `office-2021-end-of-support` 후속 확인
+- Claude(다음 일반 세션): `ai-settings` 공백 `chrome autofill settings`, `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 50편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 31·방문 24) + `history` 기록(batch, 회차 2026-10-29T10:42:31Z, DB 문서 200개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-28 23:14(홈), 미색인 33편 중 Google이 본 링크 20편. 목표: 색인율 17/50 (34%) · 28일 노출 843 · 10위 안 21개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #294 (첫 푸시 CI `test`·`build` 통과, 대표 이미지·기록 추가 뒤 auto-merge)
 
 ## 2026-10-29 · 세션 64 (정기 실행, 개선 세션): AI 끄기 허브 Chrome 메뉴 이름 확인 + 기존 글 2편 대표 이미지
 

@@ -1,0 +1,35 @@
+# https://learn.microsoft.com/en-us/windows-insider/release-notes/release-preview-24h2-25h2/build-26200-9807-26300-9807 (fetched 2026-10-29 UTC)
+ Windows 11 Insider Release Preview Build 26200.9807/26300.9807
+ Feedback
+ Summarize this article for me
+ Release date: 16 October 2026
+These release notes are for Windows 11 Builds 26200.9807 and 26300.9807 (KB5127936) in the Release Preview channel on Windows 11, versions 25H2 (Build 26200) and 26H2 (Build 26300), all editions.
+This update is available through two release phases: gradual rollout and normal rollout. A gradual rollout delivers an update in phases, so features reach devices over time instead of all at once, meaning availability varies by device. A normal rollout is the broad release to all eligible devices at the same time, usually when it reaches general availability (GA).
+Gradual rollout
+This section highlights some new features and enhancements for Windows 11 PCs, including AI-powered capabilities, continuous innovation, and performance improvements.
+[File Explorer]
+- New! This update introduces an updated context menu that's faster, simpler, and more customizable. The updated menu opens more quickly, reduces clutter, and gives you more control over the commands and app extensions that appear when you right-click.
+- You can now customize the context menu to better fit how you use Windows. Select Customize menu at the bottom of the context menu to open its Settings page:
+- Turn built-in Windows commands, such as Send to and Create shortcut, on or off.
+- Add commands such as Print to the context menu.
+- Choose which app extensions appear in the main menu or a submenu, or hide the app extensions submenu.
+- Display Cut, Copy, Paste, Rename, Delete, and Share directly in the menu instead of as a row of icons.
+- Move Properties to the bottom of the context menu.
+- To personalize the context menu, right-click and select Customize menu, then choose the commands, app extensions, and layout you prefer. No action is required to use the default configuration. To see more options, hold down Shift and right-click your desktop.
+- New! Key file information, such as name, location, and date, now appears in a consistent layout on the File Explorer search results page, making search results easier to scan.
+- New! The address bar now supports ~, making it quicker to navigate directly to your user profile folder and subfolders, for example, ~\AppData.
+- New! This update enables dark mode support in the Folder Options dialog in File Explorer.
+[XBOX mode]
+- New! This update introduces a refreshed Gaming Task View experience in XBOX mode, featuring a new navigation bar that provides quick access to Exit to Desktop and Power Options, making key system actions easier to access while gaming.1
+[Settings]
+- New! This update improves the Privacy & security page in Windows Settings by grouping related Camera, Microphone, and Location privacy controls and elevating usage information from linked pages onto the main page.
+- New! The Device Info card on the Settings Home page, first introduced in the March 2026 preview update (KB5079391), is expanding to additional markets. Available to users signed in with a Microsoft account, the card provides a quick view of key PC specifications and usage, with more detailed device information available under Settings > System > About.1
+- This update makes some small visual refinements to the design of the temporary files section under Settings > System > Storage.
+[Phone Link]
+- New! You can now hover over a recent message or notification in the Recent section to preview its content directly in Start without opening the item. You can manage this experience under Phone Link > Settings > Start menu personalization.
+[Taskbar]
+- New! This update improves animations of app window previews when you move the mouse across app icons in the taskbar.
+- This update improves the underlying state persistence of taskbar settings related to multiple monitors across monitor connections and disconnections.
+[Magnifier]
+- New! Magnifier now includes a contrast theme toggle that can reduce screen glare while keeping the original colors in photos, videos, and charts. The toggle applies a dark contrast theme by default and is available from the Magnifier toolbar. To choose a different contrast theme, go to Settings > Accessibility > Magnifier. Color inversion remains available as a separate option.
+- New! Magnifier now supports per-monitor zoom, allowing each display to use its own zoom level while keeping the magnified view within that display. To use per-monitor zoom, set your displays to Extend under Settings > System > Display.

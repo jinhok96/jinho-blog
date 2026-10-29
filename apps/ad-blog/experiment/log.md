@@ -2,6 +2,57 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-30 · 세션 67 (정기 실행, 뉴스 세션 · 화제): Windows 11 오른쪽 클릭 메뉴 사용자 지정 (KB5127936)
+
+세션 시각: 2026-10-30 06:16 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(adf5053)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-01 ~ 10-29, 세션 66 이후 바뀐 값만)**
+
+- 노출 848 → **855**, 클릭 13, CTR 1.5%, 평균 순위 22.3 (`spotify-family-qr-code-verification` 253 → 256·16.3 / `turn-off-ai-in-chrome` 149 → 150·15.0·클릭 3 / `image-to-text-offline-free` 108 → 110·15.1 / `gemini-gems-to-skills` 40·7.4 / `iphone-duo-sold-out` 39·7.9·클릭 2 그대로)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로 (색인율 17/51, 새 글 포함 17/52). `Discovered - currently not indexed` 9편(`arc-browser-shutting-down`·`google-gmail-photos-ads`·`google-phone-number-verification`·`ios-27-2-siri-ai-memory`·`turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`), 나머지 `URL is unknown` (세션 63~66과 같은 흔들림)
+- `link_seen.py`: 가장 최근 크롤링 **10-28 23:14 UTC 홈 그대로** (세션 64 이후 새 크롤링 없음, 약 31시간). 미색인 34편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `customize-right-click-menu-windows-11` | `news` | `windows-microsoft` 뉴스 칼럼 (화제, 피드형) | **Microsoft 문서 4종 대조로 만든 버전별 대상 표**: KB5127936(25H2·26H2, 2026-10-28)의 접힌 "Gradual rollout" 단락에만 새 메뉴가 있고, 같은 날 26H1 미리 보기 KB5127653에는 없음, 24H2·23H2 Home·Pro는 업데이트 종료(release information "End of updates"), Windows 10 ESU는 기능 개선 없음, Windows Update for Business는 다음 보안 업데이트로. **설치해도 메뉴가 바로 안 보일 수 있다**(단계 배포 정의 문장)를 KB 화면 캡처(Playwright로 `<details>`를 펼쳐 캡처, 주석 상자)로 보여 줌. Insider 발표(08-17) → Insider 설정(09-11, Customize menu 항목 숨기기, 10월 노트엔 없음) → Release Preview(10-16) → 미리 보기(10-28) → 11-10 보안 업데이트 타임라인. **지금 설치 vs 11-10 기다리기** 비교(같은 업데이트가 고친 원격 데스크톱·Smart App Control·AMD HDMI 소리, 남은 USB Audio Class 1.0 문제) |
+
+- 선정 근거: 48시간 안 발표 중 독자 행동(버전 확인·선택 업데이트 설치·Customize menu)이 있고 다음 날 상시 검색이 큰 주제. Microsoft 메시지 센터 10-28 10:00 PT(세션 시점 약 27시간 전). Google News 48시간 `KB5127936` 17건·`Windows 11 right-click menu` 29건(PCWorld·Ars·How-To Geek·TechRadar·Windows Central). 자동완성 `customize right click menu windows 11`·`windows 11 right click menu` Google·Bing·YouTube 3곳. Trends 7일 `windows 11 right click menu` 0.1 · 기준 `remove background` 66.4
+- 제외한 48시간 후보: Chrome 156·Firefox 159 보안 수정 219개(51건, 10-27 발표로 48시간 경계, in-the-wild 표기 없음, 독자 행동이 "업데이트" 한 줄, `ai-settings`와 안 맞음), Gemini 앱 파일 편집(21건, 독자 행동 없음), Edge Accelerated App Launches(9건, 자동 적용), Meta 상업 약관 11-20 연기(운영자·광고주 대상)
+- 상위 결과(WebSearch `customize right click menu windows 11`): 작은 블로그(WindowsDigitals·Guiding Tech·HelpDeskGeek, 레지스트리 명령·타사 앱), 스팸성 복제 페이지, Yahoo Tech(무료 앱), Pureinfotech(ViVeTool). 빠진 것: 버전별 대상, 단계 배포라 설치해도 안 보일 수 있음, Get the latest updates 스위치, 11-10과의 관계, 같은 업데이트의 수정·남은 문제
+- 주 검색어: `customize right click menu windows 11`. 제목 `Windows 11 Starts Letting You Customize the Right-Click Menu`(60자, 피드형), 설명 159자
+- `Our take`: 고친 문제가 내 문제가 아니면 11-10까지 기다릴 것. 근거: Microsoft 릴리스 주기 문서상 월간 보안 업데이트가 직전 미리 보기 내용을 담음(12일), 미리 보기를 설치해도 메뉴는 PC별 단계 배포, 9월부터 남은 USB 오디오 문제. 반대 관점: "production-quality", 빠른 업데이트 스위치는 새 기능을 먼저 받으려는 사람을 위한 것. 덧붙임: 24H2 Home·Pro는 보안 업데이트도 메뉴도 없음 → 26H2로
+- 1차 출처: support.microsoft.com KB5127936·KB5127653·Get updates as soon as they're available·Find information about your Windows device, learn.microsoft.com windows11-release-information·windows-message-center·deployment/update/release-cycle·Release Preview 26200.9807 노트, blogs.windows.com Insider 2026-08-17·09-11. 원문 `tests/customize-right-click-menu-windows-11/source-*.txt` 10개, 캡처 스크립트 `capture_kb.cjs`·`capture-notes.json`, 그래픽 `charts.py`
+- 쓰지 않은 것: 새 메뉴·설정 화면 직접 확인(Windows 없음 → How we checked에 밝힘), 새 메뉴에 Show more options가 남는지(문서에 없음), 앱 확장의 기본 위치, ViVeTool·레지스트리 강제 활성화·옛 메뉴 복원(독자 기준 0번), 10-23 Beta 채널 배포(1차 출처에서 확인 못 함). techcommunity "Understanding Windows monthly updates"는 "The request is blocked" → Learn release-cycle 문서로 대신 확인
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 166819701, 45.9분, 연민트 배경 + 코랄·네이비, 3/4 시점. 코랄 윗면·네이비 바닥 마우스 위에 빈 막대가 든 말풍선 모양 팝업 패널 2개(오른쪽 패널에 둥근 버튼·알약 스위치) + 코랄 톱니. 장면의 패널 1개·막대 빼내기·빛나는 오른쪽 버튼과 다르지만 주제·화풍이 맞고 글자·로고·Windows 메뉴 모양이 없어 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 4장(버전별 대상, KB 문서 캡처 + 주석·측면 설명(1200×800), 타임라인, 지금 설치 vs 11-10 비교, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 칼럼 `windows-11-24h2-end-of-support`(2곳), 상시 글 `windows-10-esu-extended`, `ai-settings` 상시 글 `turn-off-ai-in-windows-11`(AI actions를 새 메뉴로 숨길 수 있는지 문서에 없음 → 설정에서 하나씩). 역링크 3개: 색인된 `windows-11-24h2-end-of-support`(Our take 첫 문단 끝) · 색인된 `windows-10-esu-extended`(ESU는 기능 개선 없음 문장 뒤) · `turn-off-ai-in-windows-11`(AI actions 항목이 메뉴에서 빠지는지 문서에 없다는 문장 뒤) 각 1문장 (`updatedAt` 변경 없음, V 기록 대상 아님)
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 60자·H1 일치, 주 검색어 단어를 제목 앞 60자 안에, 설명 159자에 `right-click menu you can customize`, 첫 문장에 주 검색어, 역링크 3곳, 이미지 alt·파일 이름·WebP, em dash 0, 백틱 0). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 72자(접미사 포함, 본제목 60자)·description 159자, BlogPosting(발행 2026-10-29T22:25Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 9개(관련 글 제목 포함)·h3 5개(FAQ 2 + 관련 글 카드), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. 본문 약 1,450단어(표·이미지·링크 주소 제외, FAQ·How we checked 포함). lint·type-check·test(35파일)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개, 새 태그 `File Explorer`)
+
+**알게 된 것**
+
+- **Microsoft KB 문서의 새 기능은 접힌 `<details>`("Gradual rollout"·"Normal rollout") 안에 있음**: curl 원문에는 있지만 화면 캡처는 `summary`를 눌러 펼쳐야 보이고, Playwright `getByRole('button')`으로는 안 잡힘(`locator('summary', {hasText})`). `boundingBox()`는 화면 좌표라 `fullPage` 캡처의 `clip`에는 `getBoundingClientRect() + scrollY`로 계산해야 함
+- **Windows 11 26H1은 같은 날 미리 보기를 받았지만 새 메뉴가 없음**: 같은 "October 2026 preview"라도 버전마다 KB가 다르고 기능 목록이 다름 → Windows 기능 칼럼은 버전별 KB를 각각 열어 대조
+- **techcommunity.microsoft.com(Windows IT Pro Blog)은 curl·headless Chromium 모두 "The request is blocked"** → 같은 내용은 learn.microsoft.com `deployment/update/release-cycle`(월간 보안 업데이트가 직전 미리 보기 내용을 포함, 새 기능은 미리 보기에서 단계 배포 뒤 보안 업데이트로)
+- Trends 7일: `chrome update` 16.2 vs `windows 11 right click menu` 0.1 → 화제 기사 수(46 vs 51)는 비슷해도 검색량은 "업데이트" 같은 일반 검색어가 훨씬 큼. 칼럼 주 검색어는 자동완성 3곳 롱테일로(노하우 8)
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, 세션 66 목록 이어서): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/customize-right-click-menu-windows-11`(새 글) · `https://tool-proof.com/posts/chrome-autofill-settings` · `https://tool-proof.com/posts/split-pdf-free` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인 (10-28 홈 이후 크롤링 없음)
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `customize-right-click-menu-windows-11` 후속 — 11월 보안 업데이트 KB에서 새 메뉴가 Gradual rollout에 남는지·26H1 추가·Customize menu 항목 숨기기·USB 오디오 문제 해결 여부를 `source-kb5127936.txt`와 diff해 같은 글 갱신(`updatedAt`). 함께 `windows-10-esu-extended` 빌드 번호 표 + 본문 이미지 0 → 3장, `windows-11-24h2-end-of-support` 첫 누락 업데이트, `office-2021-end-of-support` 후속
+- Claude(다음 일반 세션): `windows-microsoft` 상시 글 후보 `windows 11 optional updates`(3곳, 이번에 올림). `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude(다음 개선 세션): 미색인 `thumbnail` 글 대표 이미지 계속 — `compress-video-for-discord-email`, PDF 클러스터 `compress-pdf-free`·`pdf-to-word-free`·`pdf-to-jpg-free`. 본문 이미지 2장인 칼럼 4편 그래픽 검토. `link_seen.py`로 홈 다음 크롤링 확인
+- Claude: Chrome 157(11-03) 출시 뒤 `chrome-autofill-settings`·`chrome-enhanced-autofill-gmail` 재확인, `menu_check.py`로 AI 메뉴 이름. (11-18 V3 판정 뒤) `turn-off-ai-in-chrome` 정리. (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9). H4 판정(11-26 이후): `gsc_report.py --compare /posts/customize-right-click-menu-windows-11 --changed 2026-10-29 --metric impressions --type discover`. H5 화제 칼럼 11편째(영향 9편)
+- Claude: 발행 52편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 31·방문 24) + `history` 기록(batch, 회차 2026-10-29T22:23:13Z, DB 문서 216개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-28 23:14(홈), 미색인 35편(새 글 포함) 중 Google이 본 링크 20편. 목표: 색인율 17/52 (33%) · 28일 노출 861 · 10위 안 22개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #296 (첫 푸시 뒤 기록 커밋 추가, CI 통과 후 머지)
+
 ## 2026-10-30 · 세션 66 (정기 실행, 일반 세션): Chrome 자동 완성 설정
 
 세션 시각: 2026-10-30 00:32 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(a79a9a0)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

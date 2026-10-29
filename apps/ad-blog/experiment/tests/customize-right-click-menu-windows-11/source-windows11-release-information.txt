@@ -1,0 +1,117 @@
+# https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information (fetched 2026-10-29 UTC)
+ Access to this page requires authorization. You can try changing directories.
+ Windows 11 release information
+ Feedback
+ Summarize this article for me
+ Windows 11 has an annual feature update cadence. Feature updates are released in the second half of the calendar year and come with 24 months of support for Home, Pro, Pro for Workstations, and Pro Education editions; 36 months of support for Enterprise and Education editions. For more information, see the Windows lifecycle FAQ.
+Windows 11 also releases monthly security updates on the second Tuesday of each month. These releases are cumulative, containing all previous updates to keep devices protected and productive.
+If you are an IT administrator and want to programmatically get information from this page, use the Windows Updates API in Microsoft Graph.
+Note
+Windows 11, version 26H1 is scoped to support new devices that started coming to market in early 2026 and is not designed as a feature update for existing devices. This version is not offered as an in-place update from 24H2 or 25H2 on existing devices.
+Windows 11 current versions by servicing option
+(All dates are listed in ISO 8601 format: YYYY-MM-DD)
+Servicing channels
+Version | Servicing option | Availability date | End of updates: Home, Pro, Pro Education, and Pro for Workstations | End of updates: Enterprise, Education, IoT Enterprise, and Enterprise multi-session | Latest update | Latest revision date | Latest build | 
+26H2 | 
+General Availability Channel | 
+2026-09-29 | 
+2028-10-10 | 
+2029-10-09 | 
+2026-10 D | 
+2026-10-28 | 
+26300.9818 | 
+26H1 | 
+General Availability Channel | 
+2026-02-10 | 
+2028-03-14 | 
+2029-03-13 | 
+2026-10 D | 
+2026-10-28 | 
+28000.3365 | 
+25H2 | 
+General Availability Channel | 
+2025-09-30 | 
+2027-10-12 | 
+2028-10-10 | 
+2026-10 D | 
+2026-10-28 | 
+26200.9818 | 
+24H2 | 
+General Availability Channel | 
+2024-10-01 | 
+End of updates | 
+2027-10-12 | 
+2026-10 OOB | 
+2026-10-26 | 
+26100.9725 | 
+23H2 | 
+General Availability Channel | 
+2023-10-31 | 
+End of updates | 
+2026-11-10 | 
+2026-10 OOB | 
+2026-10-26 | 
+22631.7654 | 
+Enterprise and IoT Enterprise LTSC editions
+Version | Servicing option | Availability date | Mainstream support end date | Extended support end date | Latest update | Latest revision date | Latest build | 
+24H21 | 
+ Long-Term Servicing Channel (LTSC) | 
+2024-10-01 | 
+2029-10-09 | 
+2034-10-10 | 
+2026-10 OOB | 
+2026-10-26 | 
+26100.9725 | 
+Note
+1 Windows 11 Enterprise LTSC 2024 edition does not have extended support. It will reach end of updates (also known as end of servicing) on 2029-10-09. Only Windows 11 IoT Enterprise LTSC 2024 will have extended support until 2034-10-10.
+Note
+IoT Enterprise edition is not supported on Windows 11, version 26H1.
+Windows 11 release history
+View a history of all monthly security and non-security preview updates released for Windows 11. Note that the Update type column references each monthly update by the year and the month of its release, followed by a letter indicating the week of the month (B is the second week of the month; D is the fourth week of the month). Out-of-band updates are referenced as OOB. This shorthand notation aligns with what you see in Microsoft Intune. For more information, see Type of update releases.
+Visit the Windows 11 update history for details on the content of each release.
+Version 26H2 (OS build 26300)
+Servicing option | Update type | Availability date | Build | KB article | 
+General Availability Channel | 
+2026-10 D | 
+2026-10-28 | 
+26300.9818 | 
+KB5127936 | 
+General Availability Channel | 
+2026-10 OOB | 
+2026-10-26 | 
+26300.9725 | 
+KB5134133 | 
+General Availability Channel | 
+2026-10 B | 
+2026-10-13 | 
+26300.9711 | 
+KB5127648 | 
+General Availability Channel | 
+2026-09 D | 
+2026-09-29 | 
+26300.9550 | 
+KB5124010 | 
+General Availability Channel | 
+ | 
+2026-09-29 | 
+26300.9457 | 
+ | 
+Version 26H1 (OS build 28000)
+Servicing option | Update type | Availability date | Build | KB article | 
+General Availability Channel | 
+2026-10 D | 
+2026-10-28 | 
+28000.3365 | 
+KB5127653 | 
+General Availability Channel | 
+2026-10 OOB | 
+2026-10-26 | 
+28000.3237 | 
+KB5134134 | 
+General Availability Channel | 
+2026-10 B | 
+2026-10-13 | 
+28000.3231 | 
+KB5127646 | 
+General Availability Channel | 
+2026-09 D | 

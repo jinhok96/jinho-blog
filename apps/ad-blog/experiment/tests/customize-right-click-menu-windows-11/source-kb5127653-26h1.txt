@@ -1,0 +1,123 @@
+# https://support.microsoft.com/en-us/servicing/os/windows-11/2026/10/kb5127653-windows-11-26h1-update (fetched 2026-10-29 UTC) — 26H1 October preview; no context menu item
+ Applies ToWindows 11 version 26H1, all editions 
+Highlights
+This update is available through two release phases: gradual rollout and normal rollout. A gradual rollout delivers an update in phases, so features reach devices over time instead of all at once, meaning availability varies by device. A normal rollout is the broad release to all eligible devices at the same time, usually when it reaches general availability (GA). 
+Note If you installed earlier updates, your device downloads and installs only the new updates contained in this package.
+Gradual rollout
+The following summary outlines new Windows 11 PC experiences, along with improvements and fixes. The bold text within the brackets indicates the item or area of the change.
+- [File Explorer]
+- New! This update adjusts how the preview pane handles files downloaded from the web. For HTML files, a new Preview anyway button lets you acknowledge the warning and preview the file. Non-HTML files, such as PDFs, are now previewed automatically.
+- New! File Explorer Home now preserves the state of sections (expanded or collapsed), so you can pick up where you left off.
+- New! This update improves the reliability of thumbnail previews for cloud files in the Details pane. The pane has also been reorganized, so file properties are easier to find and review at a glance.
+- New! The update addresses an issue that could clear the address bar contents when entering edit mode by clicking near the right side of the address bar.
+- [Emoji]
+- New! This update adds support for Emoji 17.0, including new emoji such as distorted face, fight cloud, and hairy creature. To insert them, press the Windows key + Period (.) to open the emoji panel.
+- New! This update also refines the design of several existing emoji for better consistency across platforms, including saluting face, face with peeking eye, goose, lotus, and kissing cat.
+- [Widgets]
+- New! This update introduces the Tips widget, which provides short, helpful guidance about Windows features. To add it to your Widgets board, open the board, select Add widgets, and then choose Tips. To add it to your lock screen, go to Settings > Personalization > Lock screen and add Tips to your lock screen widgets.
+- [Personalization]
+- This update includes a variety of improvements to desktop background experiences.
+- This update improves the reliability of the Personalization > Background page in Settings.
+- This update adds support for using DIB image files as desktop backgrounds.
+- This update improves reliability of desktop slideshow transitions on newly created accounts.
+- This update improves resolution of previews when selecting a desktop background in Personalization > Background.
+- This update improves desktop background preview display in Settings for users with portrait mode monitors.
+- This update improves reliability of processing desktop wallpaper changes when they happen in quick succession.
+- This update adds support for using slideshow wallpapers with multiple desktops, so that it won’t automatically switch you back to Picture.
+- [Bluetooth]
+- This update contains several enhancements to improve reliability and experience when connecting to and using Bluetooth devices:
+- During voice calls, the Windows shell volume flyout now appears when adjusting the volume of a Bluetooth Classic Audio accessory via the volume controls on the accessory, providing visual feedback of the new volume level.
+- This update improves the accuracy of the connection state displayed by Windows for accessories that have disconnected from the PC.
+- This update improves stability of the Bluetooth and devices page in Settings when managing Bluetooth and audio devices.
+- This update resolves an issue where the Bluetooth radio could be turned off, but the state of the radio control toggle in the Bluetooth and devices page in Settings shows as on.
+- This update improves Bluetooth audio stability and compatibility.
+- This update improves microphone compatibility with certain Bluetooth Classic audio accessories.
+- This update resolves an issue that could result in a crash (error code 0x139) while streaming Bluetooth audio.
+- This update improves reliability and performance with LE Audio accessories.
+- This update improves the reliability of shared audio.
+- [Accessibility]
+- New! This update introduces Open apps maximized, an accessibility setting that automatically maximizes app windows as they open. It removes a bit of everyday friction whether you use a screen reader or magnification, work in tablet mode, or simply prefer a consistent, full-screen workspace. To turn it on, go to Settings > Accessibility > Visual effects and turn on Open apps maximized.
+- This update improves navigation of the Bluetooth quick settings page when using keyboard input, gamepad input, or Narrator.
+- [Magnifier]
+- New! This update brings a modernized visual refresh to the Magnifier taskbar.
+- Updated icons. Magnifier's toolbar icons align with Windows 11 visual design, giving the tool a cleaner, more modernized feel.
+- Refined spacing and padding. The padding is adjusted with spacing across the toolbar for a more polished, consistent layout.
+- Views, zoom controls, keyboard shortcuts, and Read Aloud all behave exactly as they did in earlier versions.
+- [Settings]
+- This update improves the reliability of Settings when interacting with the contents of the Settings > Bluetooth & Devices > Printers & Scanners page.
+- This update updates Settings > Apps > Installed apps to show the version number at the top level for packaged apps, as it already does for other apps.
+- This update improves the time picker control in Settings so that it reflects your preferred time format when you switch between 12-hour and 24-hour. This applies in places such as setting active hours and scheduling night light.
+- This update improves persistence of the Allow multiple apps to use camera at the same time option in Settings > Bluetooth & Devices > Camera settings.
+- [Touchpad]
+- New! Additional gesture controls for precision touchpads are available in Settings > Bluetooth & devices > Touchpad:
+- Single-finger scrolling — Scroll vertically with one finger starting from the left or right side of the touchpad.
+- Automatic scrolling — Keep scrolling without lifting your fingers by moving them near the edge of your touchpad while scrolling.
+- [Copilot key]
+- New! This update introduces a new Windows 11 setting that lets you remap the Copilot key to function as the Right Ctrl or Context Menu key, helping preserve familiar keyboard shortcuts and accessibility workflows. For more information, see Understand updates to the Copilot key on Windows devices.
+- [Camera roll]
+- New! This update introduces Camera roll backup in Settings, helping eligible users protect their photos with OneDrive. You can turn on the feature from the Settings Home or Accounts page and complete setup on their mobile phone using a QR code.1
+- [Fonts]
+- New! This update adds support for the Garay and Beria Erfe scripts to the Ebrima font, the first Microsoft font to support both. Garay was encoded in Unicode 16.0 and Beria Erfe in Unicode 17.0.
+- New! This update also refines the Adlam glyph designs in Ebrima to align with the current Unicode standard and improve consistency.
+- [Power and battery]
+- This update improves display and performance in certain scenarios where a plugged-in laptop incorrectly detects a transition from AC power to battery power.
+- [Administrator protection]
+- New! This update introduces a new way to turn on Administrator protection from Windows Security > Account protection. IT admins have been able to enable Administrator protection since it was first introduced in the KB5120998. This new experience is beginning a gradual rollout and will roll out progressively over the coming months, so it might not be available on all devices right away. When it becomes available, turn on the Administrator protection toggle, and then restart your device. For more information, see Administrator protection.
+- [Windows Recovery (WinRE)]
+- New! This update enables WinRE to automatically reuse eligible Wi-Fi profiles already saved in Windows, including supported certificate-based networks. Devices can now get online automatically during recovery scenarios such as quick machine recovery or cloud rebuild, without preconfiguring Wi-Fi credentials in WinRE. This capability is on by default, and IT admins can disable it. For more information, see Windows Recovery Environment (Windows RE).
+- New! This update adds recovery remote management plug-in for extending WinRE management capabilities for MDM providers. For more information, see Recovery Remote Management Overview.
+- [Windows settings backup and restore]
+- New! This update introduces a Restore Summary that appears after you restore a backup profile to a new device. The summary gives a clear overview of what was successfully restored, including Windows settings and the list of Microsoft Store apps. This improves transparency during device transitions and helps you validate your restore results and continue setup on your new device with confidence.
+- For more information see, Windows settings backup and restore overview.
+- [Data Protection API (DPAPI)]
+- New! This update adds a warning before prompt-based protect and unprotect operations. The warning explains that this prompt-based experience will be retired in April 2027. If you or an app use these prompts, stop creating new prompt-protected data, use a supported non-interactive protection flow, and decrypt or migrate existing prompt-protected data before retirement. DPAPI operations that do not use the prompt-based flow aren't affected. For more details, see CRYPTPROTECT_PROMPTSTRUCT structure (dpapi.h).
+- [Kiosk mode]
+- The Windows key plus Tab keyboard shortcut is now disabled when using a restricted UX kiosk.
+- The Windows key plus A and Windows key plus C keyboard shortcuts are now disabled when using single app kiosk mode.
+1 Feature availability may depend on your device or market.
+Normal rollout
+This non-security update includes quality improvements. The following summary outlines key issues addressed by the KB update after you install it. Also, included are available new features. The bold text within the brackets indicates the item or area of the change.
+- [Microsoft Edge on Windows now supports Accelerated App Launch]
+- New! Microsoft Edge now opens faster and more consistently on Windows, with the biggest improvements when your device is busy or under load. Accelerated app launch streamlines how Windows launches Edge when it's already running in the background, reducing launch delays when you open a link or launch Edge from the taskbar or Start menu.
+- This capability is available on Windows 11, version 25H2, 26H2, and 26H1, with Microsoft Edge version 150 or later required.
+- For more information, see Edge is faster on Windows with Accelerated App Launches.
+- [App management]
+- New! Policy-based in-box app removal now supports multi-session environments. IT administrators can use the existing policy-based app removal capability to manage the removal of supported in-box apps on Windows 11 Enterprise and Education devices in multi-session environments.
+- To learn more, see Policy-based in-box app removal.
+- [Remote Desktop (Known issue)] Fixed
+- This update addresses an issue that prevented non-admin users from establishing Remote Desktop connections to remote devices with Administrator protection enabled. Affected connections might have failed with error 0xC000000D and displayed the message, “The token that was passed to the function is invalid.”
+- This update addresses an issue that prevents the “Specify thumbprints of certificates representing trusted .rdp publishers” policy from being configured through Microsoft Intune.
+- [Windows PowerShell] This update adds version 5.1 to the names of Windows PowerShell and Windows PowerShell Integrated Scripting Environment (ISE). On existing devices, some Start menu shortcuts might retain their previous names after you install this update.
+- [BitLocker] This update improves BitLocker pre-boot PIN retry handling to prevent unintended repeated submissions from causing TPM dictionary-attack lockout and recovery.
+- [Always On VPN] This update fixes an issue that affects Always On VPN connections after installing September security update. When automatic protocol selection or protocol fallback was configured, affected VPN connections could remain stuck in a Connecting state or fail to connect after an initial connection attempt failed. In some cases, subsequent connection attempts could display the error, "The specified port is already in use."
+- [Time and Date]
+- This update enables permanent Daylight Saving Time (DST) support for British Columbia and Alberta starting in November 2026. For information about managing this change in Outlook, see Outlook Time Zone Changes for Alberta and British Columbia.
+- This update introduces the new time zone Manitoba Standard Time, "(UTC-05:00) Manitoba."
+- For the latest information about DST and time zone changes, see the Daylight Saving Time & Time Zone Blog.
+- [Application Control] This update addresses an issue that could prevent a device from starting after using the PS_UpdateAndCompareCIPolicy CIM method.
+- [Audio] This update fixes an issue where HDMI and DisplayPort audio playback might fail on certain AMD graphics cards.
+- [Certificates] This update addresses an issue where TPM attestation identity key (AIK) certificate enrollment could stop responding when a non-Microsoft CNG key storage provider reported a malformed algorithm name or faulted during provider enumeration.
+- [Windows Subsystem for Linux (WSL)] This update fixes an issue where nested virtualization might not be available in Windows Subsystem for Linux version 2 (WSL2) on devices with AMD processors.
+Components updates
+AI components
+This release updates the following AI components to version 1.2610.1071.0: Image Search, Content Extraction, Semantic Analysis, and Settings Model.
+To learn more, see Release information for AI components.
+Servicing stack update (SSU)
+Microsoft combines the latest servicing stack update (SSU) for your operating system with the latest cumulative update (LCU). This Windows update includes KB5133111 (Build 28000.3354), which improves the reliability of the Windows update installation process. To learn more about SSUs, see Servicing stack updates.
+Known issues in this update
+USB Audio Class 1.0 devices with error Code 10 or no output
+Symptoms
+After installing the September 8, 2026, Windows security update, some USB Audio Class 1.0 devices might fail to start or produce audio. Affected devices might experience one or more of the following symptoms:
+- The device displays an error in Device Manager: "This device cannot start (Code 10)."
+- No audio output.
+- Volume controls are unresponsive or remain at zero.
+- Sound settings are unresponsive or unavailable.
+This issue is limited to USB Audio Class 1.0 devices.
+Resolution
+Microsoft is working on a resolution and will update this documentation when more information is available.
+How to get this update
+Before you install this update
+Important You must have the latest Servicing stack updates installed. Not installing the latest SSU before applying Windows updates might result in the Windows update not being offered until the latest SSU is installed.
+Deployment
+If you deploy dynamic updates such as this update to an existing Windows image, ensure the boot.stl file is included as part of the installation media. Failure to include the file might prevent devices from successfully starting from the installation media and can result in error code 0xc0430001.
+Note

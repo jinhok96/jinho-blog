@@ -1,0 +1,31 @@
+# https://blogs.windows.com/windows-insider/2026/09/11/announcing-new-builds-for-11-september-2026/ (fetched 2026-10-29 UTC)
+ Written By
+- 
+ Stephen Lines
+ published
+ September 11, 2026
+Hello Windows Insiders,
+Today, we’re releasing new Windows 11 Insider Preview builds to the Beta, Experimental, and Release Preview channels.
+New builds this week
+Select your channel below to view its release notes:
+- Beta: Build 26220.9472
+- Experimental: Build 26340.9482
+For those on other specific Windows build versions, here are today’s new builds and release notes:
+- Beta (26H1): Build 28020.2991
+- Experimental (26H1): Build 28120.3002
+- Experimental (Future Platforms): Build 29667.1000
+- Please note it may take your device up to 30 minutes post announce to pick up this build.
+We also have the Windows 11, version 26H1 Release Preview going out today:
+- Release Preview (26H1): Build 28000.3079
+Notable new features:
+[Context menu]
+Release channel: Experimental
+Building on the work we’ve been doing to improve the context menu experience:
+- We’ve added a new teaching tip you might see as a first-time experience to help you learn about the customization options.
+- In theme with giving you more control, you can also now turn off the customize context menu entry in the new context menu settings.
+- We’ve fixed a few small issues with the Send To option in the context menu not working as expected.
+[File Explorer search]
+Release channel: Experimental
+- Search from This PC in File Explorer is now indexer-based, making it much faster and consistent with search from File Explorer Home.
+Thanks,
+Stephen and the Windows Insider Program team

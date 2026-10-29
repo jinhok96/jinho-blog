@@ -1,0 +1,10 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Test payment form</title>
+<style>body{font-family:Arial,sans-serif;margin:40px 80px;color:#222}label{display:block;margin-top:12px;font-size:15px}input{width:420px;padding:8px;font-size:15px;border:1px solid #999;border-radius:6px}button{margin-top:18px;padding:10px 22px;font-size:15px}</style></head>
+<body><h2>Test payment form</h2>
+<form action="/thanks.html" method="get">
+<label>Name on card<input id="ccname" name="ccname" autocomplete="cc-name"></label>
+<label>Card number<input id="ccnum" name="ccnum" autocomplete="cc-number" inputmode="numeric"></label>
+<label>Expiration (MM/YY)<input id="ccexp" name="ccexp" autocomplete="cc-exp"></label>
+<label>Security code<input id="cccsc" name="cccsc" autocomplete="cc-csc"></label>
+<button id="pay" type="submit">Pay</button>
+</form></body></html>

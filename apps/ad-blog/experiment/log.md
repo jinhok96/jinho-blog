@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-31 · 세션 69 (정기 실행, 일반 세션): Microsoft Edge Copilot 끄기
+
+세션 시각: 2026-10-31 01:08 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(aecc641)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-02 ~ 10-30, 세션 68 이후 바뀐 값만)**
+
+- 노출 881 → **884**, 클릭 14, CTR 1.6%, 평균 순위 22.2 → 22.1 (`image-to-text-offline-free` 119 → 121·15.9·클릭 3 / `spotify-family-qr-code-verification` 257·16.3 / `turn-off-ai-in-chrome` 154·14.8 그대로)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로 (색인율 17/52, 새 글 포함 17/53). `Discovered - currently not indexed` 3편(`free-image-converter-photo-tools`·`turn-off-ai-features`·`turn-off-apple-intelligence-iphone`), 몇 분 뒤 `link_seen.py` 때는 `arc-browser-shutting-down`·`google-phone-number-verification`·`ios-27-2-siri-ai-memory`·`turn-off-ai-in-windows-11`이 Discovered (세션 63~68과 같은 흔들림)
+- `link_seen.py`: 가장 최근 크롤링 **10-30 06:36 UTC 그대로**(`image-to-text-offline-free`, 약 34시간 새 크롤링 없음). 미색인 35편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-copilot-in-edge` | `software` | `ai-settings` 상시 글 (검색형) | **Microsoft Edge 156.0.4314.56(Linux 안정판, 10-29)을 새 프로필(로그아웃)로 실행해 같은 시험 페이지에서 Copilot 진입점 6곳을 스위치 전후로 비교**: Settings > Copilot and AI의 **Show Copilot button in toolbar**를 끄면 툴바 Chat 버튼뿐 아니라 오른쪽 클릭 **Summarize with Copilot**, 텍스트 선택 미니 메뉴의 Copilot 아이콘, **Ctrl+Shift+.** 단축키가 함께 사라지고(즉시 적용, 재시작 뒤 유지), 다시 켜면 넷 다 돌아옴. 끄면 문맥 단서 스위치·Manage settings가 회색. 글 입력 칸의 **Help me rewrite**·Alt+I는 Languages > **Use writing assistance**까지 꺼도 남음(로그아웃이라 "Sign in to use Writing assistance…" 창만). 주소창 제안에는 로그아웃 상태에서 Copilot 줄 없음. 새 프로필 기본값(버튼 On, 문맥 단서·Copilot 새 탭·Cowork Off), Use text prediction 기본 On("typed characters … sent to Microsoft Cloud"). **Copilot Mode는 2026-05-13 폐지**(Edge 블로그) → 기존 사용자는 Copilot in Edge Preview, 설정 화면 문구 "If you opt out, any features that were turned on will stay on" |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보)의 `ai-settings`(우선순위 1) 후보 중 직접 검증 가능한 것이 없어(`turn off gemini on android`·`turn off galaxy ai`·`google personal intelligence settings`·`turn off ai in adobe acrobat` 모두 문서 기반) 새로 발굴. `demand_check.py suggest "turn off copilot in edge"` 21개: 본 검색어 Google·Bing + YouTube `how to turn off copilot in edge`(3곳). Trends 12개월 후보끼리 `edge copilot` 65.3 · `turn off gemini on android` 7.6 · `disable copilot in edge` 0.3 · 본 검색어 0.0 (흩어진 롱테일, 노하우 8). packages.microsoft.com에서 Edge 156 Linux deb를 받아 Copilot and AI 설정이 리눅스판에도 있는 것을 확인하고 결정. 반복 일정(Chrome 157 11-03, Windows 11-10)은 아직 아님
+- 상위 결과(WebSearch `turn off copilot in edge`): 작은 블로그(Pureinfotech·Techloy·Guiding Tech·geekrewind), 포럼(ElevenForum·Microsoft Q&A), IT 블로그(NinjaOne), Windows Report. 빠진 것: Edge 156의 실제 화면(Cowork·Preview), 스위치별로 실제 사라지는 진입점, 남는 Help me rewrite, 단축키, Copilot Mode 폐지와 Preview 탈퇴 주의
+- 주 검색어: `turn off copilot in edge`. 제목 `How to Turn Off Copilot in Microsoft Edge`(41자), 설명 156자
+- 1차 출처: Edge 156 앱(직접 실행) + 설정 글자·기본값(`source-edge-156-settings-text.txt`)·언어 파일(`source-edge-156-strings.txt`, 단축키 툴팁 "Copilot (Ctrl+Shift+.)"), support.microsoft.com Copilot in Edge 도움말 6개(getting started·context clues·browse with Copilot·at work·Journeys·shopping), explore.microsoft.com Copilot·Preview, blogs.windows.com/msedgedev 2026-05-13, learn.microsoft.com 릴리스 노트·릴리스 일정·정책 2개(Microsoft365CopilotChatIconEnabled·CopilotPageContext). 실행 기록 `tests/turn-off-copilot-in-edge/capture-notes.md`, 스크립트 `run.py`·`common.py`·`probe.py`·`scenarios/*.py`, 시험 페이지 `test-site/`, 캡처 `screens/*.webp`(무손실)
+- 쓰지 않은 것: 로그인 상태(Copilot 창 대화·Journeys 스위치·Cowork 동작·로그인 뒤 Help me rewrite), Windows·Mac·모바일 화면(Microsoft 도움말 경로만 인용), 그룹 정책·레지스트리·정책 파일(독자 기준 0번), Shopping·AI Theme Generator·탭 정리 제안(Copilot 이름이 아님), 언어 파일의 Copilot Mode 이전 안내 문구(화면에서 못 봄 → Microsoft 블로그로 대신)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 156539891, 54.4분, 연분홍 배경 + 청록·파랑, 장면은 아이소메트릭이었지만 정면으로 그려짐. 청록→파랑 테두리 일반 브라우저 창의 빈 페이지 안에 민트 말풍선·노란 반짝이 별, 그 아래 파랑·흰색 반반의 알약 모양 스위치와 마우스 포인터(옆 패널은 빠짐). 글자·로고 없음 → 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 5장(Copilot and AI 설정 화면 + 기본값, 끄기 전후 비교(툴바·오른쪽 클릭·미니 메뉴·단축키), 두 스위치를 꺼도 남는 Help me rewrite·로그인 요청, 회색이 된 문맥 단서·Manage settings, 진입점 × 상태 결과 표, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, 상시 글 `turn-off-ai-in-firefox`·`turn-off-ai-in-chrome`·`turn-off-copilot-in-word`·`turn-off-ai-in-windows-11` (5개). 역링크 4개: 색인된 `gemini-gems-to-skills`(다른 앱 AI 문단, Firefox 문장 뒤) · 색인된 `windows-10-esu-extended`(브라우저 문단, Chrome 문장 뒤) · 허브 `turn-off-ai-features`(첫 문단 경로 목록·제품 표 행·새 절 "How to turn off Copilot in Microsoft Edge", `updatedAt` 10-30, 세션 62 Firefox 추가와 같은 방식) · `turn-off-ai-in-windows-11`("Edge has its own Copilot settings" 문장 뒤 1문장). `turn-off-ai-in-chrome`(V3)·`check-if-image-is-ai-generated`(V6)는 판정 전이라 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 41자·H1 일치·주 검색어 앞쪽, 설명 156자에 `turn off Copilot in Microsoft Edge`, 첫 문장에 주 검색어, 역링크 4곳(3곳 이상), 이미지 alt·파일 이름·WebP, em dash 0, 백틱 0). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 53자(접미사 포함, 본제목 41자)·description 156자, BlogPosting(발행 2026-10-30T17:39Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개(관련 글 제목 포함)·h3 5개(FAQ 2 + 관련 글 카드), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 5장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함. 본문 약 1,950단어(표·이미지·링크 주소 제외, FAQ·How we tested 포함). lint·type-check·test(35파일 253개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 4개, 새 태그 `Microsoft Edge`)
+
+**알게 된 것**
+
+- **Edge 156의 "Show Copilot button in toolbar"는 이름보다 넓음**: 버튼뿐 아니라 오른쪽 클릭 Summarize with Copilot·미니 메뉴 아이콘·Ctrl+Shift+.까지 한꺼번에 숨기고, 문맥 단서·Manage settings를 회색으로 만듦. 반대로 "Use writing assistance"는 이름과 달리 Help me rewrite(오른쪽 클릭·Alt+I)를 없애지 않음 → 스위치 글은 이름이 아니라 진입점 전후 비교로 씀 (writing-guide 정확성에 추가)
+- **Copilot Mode는 2026-05-13 폐지**: Edge 156 설정에는 Copilot Mode 스위치가 없고 Copilot in Edge Preview가 그 자리를 이음. 상위 결과 다수가 아직 Copilot Mode 끄기를 안내 → 오래된 상위 결과의 빈틈
+- **실험 도구**: Edge 설정 스위치는 shadow DOM 안 `FLUENT-SWITCH`(`checked`·`disabled` 속성)라 `role=switch`·체크박스로는 안 잡힘. 단축키로 연 Copilot 사이드 창은 창 단위로 남아 다음 단계 단축키 결과를 가림 → 단계마다 새 프로필 또는 같은 단축키로 닫기. Edge 언어 파일(`locales/en-US.pak`)은 머리 16바이트·항목 8바이트(uint32 id + offset)로 읽어야 문구가 맞음. `edge://settings/search?search=` 주소로는 설정 검색이 안 됨
+- 대표 이미지 1단계 약 6.2~6.6분(Edge 실험·그래픽 렌더링과 겹침), 1장 54.4분
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, 세션 68 목록 이어서): `https://tool-proof.com/posts/turn-off-ai-features`(오늘 Edge 절 추가) · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/turn-off-copilot-in-edge`(새 글) · `https://tool-proof.com/posts/customize-right-click-menu-windows-11` · `https://tool-proof.com/posts/compress-video-for-discord-email` ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인
+- Claude(Edge 157 안정판, 11-05 주 뒤): `turn-off-copilot-in-edge` 재확인 — packages.microsoft.com 새 deb로 같은 `scenarios/s_final.py`·`s_toggles.py` 실행, `source-edge-156-settings-text.txt`·`source-edge-156-strings.txt`와 diff (Help me rewrite 스위치가 생기는지, Copilot and AI 항목 변화)
+- Claude(다음 개선 세션): 남은 `thumbnail` 글 대표 이미지 — PDF 클러스터 `compress-pdf-free`·`pdf-to-word-free`·`pdf-to-jpg-free`, 본문 이미지 2장인 칼럼 `office-2021-end-of-support`(11-10 뒤 후속과 함께)·`gemini-free-flash-lite`·`gemini-android-auto-personal-intelligence`, `chrome-http-warning-default`·`convert-webp-to-jpg-free`·`remove-bg-alternative-free`. `link_seen.py`로 홈·색인 글 다음 크롤링 확인
+- Claude(다음 일반 세션): `windows-microsoft` 상시 글 후보 `windows 11 optional updates`. `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`, `turn off copilot in edge android`(1차 출처 확인 필요). `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `customize-right-click-menu-windows-11` 후속, `windows-10-esu-extended` 빌드 번호 표 + 본문 이미지 0 → 3장, `windows-11-24h2-end-of-support` 첫 누락 업데이트, `office-2021-end-of-support` 후속
+- Claude: Chrome 157(11-03) 출시 뒤 `chrome-autofill-settings`·`chrome-enhanced-autofill-gmail` 재확인, `menu_check.py`로 AI 메뉴 이름. (11-18 V3 판정 뒤) `turn-off-ai-in-chrome` 정리(허브 링크 + Edge·Firefox 글 링크). (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지. `pixel-watch-safety-signal-ending` 후속(이메일·도움말 종료 안내·12-12)
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9)
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 35·방문 28) + `history` 기록(batch, 회차 2026-10-30T17:08:36Z, DB 문서 232개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 10-30 06:36(`image-to-text-offline-free`), 홈 10-28 23:14 그대로, 미색인 36편(새 글 포함) 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 885 · 10위 안 22개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-10-30 · 세션 68 (정기 실행, 개선 세션): Pixel Watch 칼럼 후속 확인·흐름도 + 기존 글 2편 대표 이미지
 
 세션 시각: 2026-10-30 18:15 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(이 세션이 그날 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(4ddf4e5)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

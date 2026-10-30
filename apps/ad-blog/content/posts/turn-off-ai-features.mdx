@@ -4,7 +4,7 @@ description: Turn off AI in Chrome, Gmail, Word, Windows 11 and iPhone. See whic
 category: ai-tools
 hub: true
 createdAt: 2026-10-23T10:14:00Z
-updatedAt: 2026-10-29
+updatedAt: 2026-10-30
 tags:
   - AI
   - privacy
@@ -16,7 +16,7 @@ tags:
 
 ![Illustration of a phone, a laptop and a tablet standing side by side on a sky blue background, each with a small rounded toggle switch in the corner of its blank screen, while peach and lilac sparkle stars float up and away above them](./images/turn-off-ai-features/turn-off-ai-features-hero.webp)
 
-There is no single switch that turns off AI everywhere. Each app has its own setting: **Settings > AI innovations** (called **AI in Chrome** on some computers) in Chrome, **Settings > AI controls** in Firefox, **Manage Workspace smart feature settings** in Gmail, **File > Options > Copilot** in Word, **Settings > Apps > Installed apps** to remove the Copilot app from Windows 11, and a separate switch for each Apple Intelligence feature on an iPhone with iOS 27. Google Search is the exception: Google says AI Overviews can't be turned off, so the closest you can get is the **Web** filter after each search.
+There is no single switch that turns off AI everywhere. Each app has its own setting: **Settings > AI innovations** (called **AI in Chrome** on some computers) in Chrome, **Settings > AI controls** in Firefox, **Settings > Copilot and AI** in Microsoft Edge, **Manage Workspace smart feature settings** in Gmail, **File > Options > Copilot** in Word, **Settings > Apps > Installed apps** to remove the Copilot app from Windows 11, and a separate switch for each Apple Intelligence feature on an iPhone with iOS 27. Google Search is the exception: Google says AI Overviews can't be turned off, so the closest you can get is the **Web** filter after each search.
 
 Some of these switches remove the AI feature completely, while others only hide a button. To tell them apart, we read Apple, Google and Microsoft's own help pages on October 23, 2026, and combined them with our earlier guides, which checked Chrome's menus against its source code and matched every Gmail and Word AI feature to the setting that controls it. The table below shows how far each switch goes; the sections after it give the steps and link to the full guide for each product.
 
@@ -26,6 +26,7 @@ Some of these switches remove the AI feature completely, while others only hide 
 | --- | --- | --- | --- |
 | Chrome | Partly in Settings, fully with a Windows policy | **Settings > AI innovations** or **AI in Chrome** | [Turn off AI in Chrome](/posts/turn-off-ai-in-chrome) |
 | Firefox | Yes, one switch | **Settings > AI controls > Block AI enhancements** | [Turn off AI in Firefox](/posts/turn-off-ai-in-firefox) |
+| Microsoft Edge | Partly; one switch hides Copilot from the toolbar and menus | **Settings > Copilot and AI > Show Copilot button in toolbar** | [Turn off Copilot in Edge](/posts/turn-off-copilot-in-edge) |
 | Gmail (and Docs) | Yes, one switch | **Settings > See all settings > General > Manage Workspace smart feature settings** | [Turn off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) |
 | Gemini app | Disconnect each app | **Customize > Connectors** | [Gemini Connected Apps](/posts/gemini-connected-apps) |
 | Google Search | No | **Web** filter on each search | This page |
@@ -54,6 +55,12 @@ Chrome 156 also changed a security default: it now stops you before opening site
 Firefox has one switch for all of its AI: open the menu, choose **Settings**, click **AI controls**, turn on **Block AI enhancements**, and click **Block**. In Firefox 159, released October 27, 2026, it blocks translations, the AI chatbot in the sidebar, link preview summaries, tab group suggestions, speech recognition, PDF image descriptions and Smart Window, Firefox's AI assistant window. You can type **disable ai** in the address bar to jump to the same page.
 
 In our test on a new profile, the chatbot and translation items disappeared from the right-click menu and the block stayed on after a restart. You can then set a single feature, such as **Translations**, back to **Available**. The switch doesn't cover search engines, so Perplexity stays in Firefox's search settings and Google's AI Overviews still appear on Google. Our guide to [turning off AI in Firefox on desktop and mobile](/posts/turn-off-ai-in-firefox) shows what the switch removes and covers the Android and iPhone apps.
+
+## How to turn off Copilot in Microsoft Edge
+
+Edge has no single switch for all of its Copilot features. Open **Settings and more** (**...**), choose **Settings**, select **Copilot and AI**, and turn off **Show Copilot button in toolbar**. In our test of Edge 156.0.4314.56 on a new signed-out profile on October 30, 2026, that switch also removed **Summarize with Copilot** from the right-click menu, the Copilot icon from the menu that appears when you select text, and the **Ctrl+Shift+.** shortcut.
+
+One item stayed: **Help me rewrite** in the right-click menu of text boxes, even after we also turned off **Use writing assistance** under **Settings > Languages**. Copilot Mode is gone too, since Microsoft retired it in May 2026. Our guide to [turning off Copilot in Microsoft Edge](/posts/turn-off-copilot-in-edge) compares what each switch removes and covers the context clues, new tab page and Cowork switches.
 
 ## How to turn off Gemini in Gmail and Google Docs
 

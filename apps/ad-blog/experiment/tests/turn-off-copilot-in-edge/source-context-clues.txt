@@ -1,0 +1,125 @@
+URL: https://support.microsoft.com/en-us/edge/copilot/how-context-clues-work-copilot-edge
+Final: https://support.microsoft.com/en-us/edge/copilot/how-context-clues-work-copilot-edge
+Title: How context clues work in Copilot in Edge | Microsoft Support
+Fetched: 2026-10-30 16:46 UTC
+
+Skip to main content
+Microsoft
+Cancel
+Getting started with Copilot in Microsoft Edge
+Using Microsoft Copilot in Edge at work
+Browse with Copilot
+How context clues work in Copilot in Edge
+Shopping with Microsoft Copilot
+Copilot Journeys
+How Context Clues work in Copilot in Edge
+
+When using Copilot in Microsoft Edge, Copilot can provide a better experience by using your browsing data. Access to this browsing context is controlled by the Context Clues setting in Edge.
+
+Key takeaways
+Context Clues lets Copilot use information from your current browsing session, like the page you're on, to give you more relevant answers and suggestions.
+If you turn Context Clues off, Copilot won't use your browsing data, and you'll see more generic suggestions and responses.
+Browsing context is never saved to your conversation history; only your prompt and Copilot's response are.
+You can turn Context Clues on or off anytime from More menu (…) > Copilot and AI > Allow Copilot to read context clues on the web.
+
+Important
+
+Don't share sensitive information that you wouldn't want used as browsing context. You can remove information from browsing context by closing tabs and clearing your browsing history.
+
+What are suggestions in Copilot in Edge?
+
+Copilot can provide chat suggestions to help get you started or learn how to start conversations. When you open Copilot in Edge, Edge uses the current page title and URL to suggest prompts you may find useful. Select a suggestion tile to start a conversation. Context Clues aren't used to generate these suggestions.
+
+Simply select the suggestion tile to start a conversation.
+
+If Context Clues is turned off, you see generic suggestions instead.
+
+How is the data from browsing context used?
+
+When you ask Copilot a question or make a request, browsing data is shared with Copilot to provide additional context. For requests such as "Help me plan a trip to Cannon Beach", Copilot analyzes the shared browsing data and incorporates the context in its response.
+
+Copilot also uses shared browsing data to respond to requests to analyze or summarize a page, or create content like podcasts, study guides, or quizzes.
+
+If Context Clues is turned off, Copilot doesn't have access to your browsing data and won't answer questions or perform requests based on your websites or browsing data. You can turn off Context Clues when browsing websites that may contain information you don't want to share with Copilot.
+
+The browsing data isn't stored in your conversation history; only the prompt and Copilot's response are.
+
+Which data is shared as browsing context?
+
+Browsing data that can be used as browsing context includes:
+
+URL
+Page title
+Page content or screenshots
+Browsing history
+Turn off and on Context Clues in Edge
+
+You can turn Context Clues off and on in your Edge settings by completing the following steps:
+
+At the top right of Edge, select the More menu (…).
+From the menu, select Settings.
+In Settings, select Copilot and AI.
+Turn Allow Copilot to read context clues on the web on or off.
+
+When Context Clues are turned off, suggestions and some Copilot answers won't be as relevant.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026

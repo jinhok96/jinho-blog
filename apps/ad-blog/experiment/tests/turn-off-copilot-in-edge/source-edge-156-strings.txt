@@ -1,0 +1,302 @@
+# Microsoft Edge 156.0.4314.56 Linux, locales/en-US.pak, entries 21638
+1306 	 Get a quick overview of this document and ask questions with Copilot in Microsoft Edge
+1307 	 Share this document with Copilot in Microsoft Edge to get a quick overview and ask follow-up questions
+1308 	 Click the Summarize button to share this document with Copilot in Microsoft Edge to get a quick overview and ask follow-up questions
+2075 	 Copilot is working on this tab.
+2076 	 $1 - Copilot is working.
+2086 	 Installation can't continue because the Copilot host component isn't installed yet. Please install the undocked Copilot component first, and then try again.
+3181 	 Copilot Mode
+3415 	 Copilot Agent
+8206 	 Copilot
+8239 	 Microsoft Copilot version $1$2  ($3) $4 $5
+8419 	 Sidebar will show when using the side pane; you can access it from the Copilot icon
+8741 	 Writing assistance
+8747 	 Writing assistance languages
+8748 	 When you add languages at the top of this page, the writing assistance settings will appear below.
+8749 	 Apply writing assistance to preferred languages
+8751 	 Collaborate with Copilot as you write on the web
+8752 	 Draft with Microsoft 365 Copilot as you write on the web
+8753 	 Use writing assistance
+8756 	 Occasionally show a blue dot on the blinking cursor to help you discover writing assistance.
+8900 	 With your permission, we'll save your Microsoft Edge browsing activity to personalize and improve advertising and experiences for Microsoft Edge, Microsoft Bing, Microsoft News, Copilot, and other Microsoft services. We'll use your browsing activity to make your web experience, including ads, search results, and news articles, more relevant and useful to you.
+9711 	 Import your cookies from Microsoft Edge each time you open Copilot. $1
+9716 	 Simple tools you can add to Copilot to customize your browsing       experience.
+10010 	 Allow Microsoft Edge to share browsing history with M365 Copilot Search
+10011 	 Edge shares your browsing history with Microsoft 365 Copilot Search as turned on by your organization. Only organization-approved work-related sites are included. $1
+10323 	 Ask Copilot
+10327 	 Copilot and AI
+10334 	 Are you finding Copilot features helpful?
+10335 	 What do you like about Copilot?
+10336 	 I like the Copilot new tab page
+10337 	 I like that I can chat with Copilot about my open tabs
+10338 	 I like that Copilot uses browsing history to personalize responses
+10339 	 I like that Copilot can perform tasks on the web for me
+10340 	 What don't you like about Copilot?
+10341 	 I don't like the Copilot new tab page
+10342 	 The Copilot new tab page takes too long to load
+10343 	 Copilot isn't accurate when answering questions about my open tabs
+10344 	 I don't like that Copilot personalizes responses with my browsing history
+10345 	 Copilot is too slow or unreliable when performing actions for me
+10346 	 Copilot Mode preferences
+10352 	 Copilot in Edge
+10359 	 Unlock all Copilot features in Edge when you sign in.
+10360 	 Sign in to use Copilot in Edge
+10362 	 Show Copilot button in toolbar
+10364 	 Quickly open Copilot whenever you need it.
+10366 	 Show Copilot button in the address bar
+10368 	 Allow Copilot to read context clues on the web
+10369 	 Allow Microsoft AI to read context clues on the web
+10370 	 Allow Copilot to use browser content
+10372 	 Allow Copilot to transcribe your video
+10374 	 Copilot may give better answers based on the current webpage, browser history, or your preferences in Microsoft Edge. $1
+10376 	 Copilot may give better answers based on the current webpage, open tabs, and browser history in Microsoft Edge. $1
+10378 	 Copilot may give better video highlights with timestamps based on video transcript. $1
+10383 	 Allow Cowork to take actions on your behalf
+10384 	 Cowork may perform tasks such as creating tabs, taking screenshots, and interact with web pages.
+10387 	 Copilot new tab page
+10388 	 Search, explore the web, and chat with Copilot from one search box in the new tab page.
+10397 	 Copilot turns your browsing data and page content into helpful summaries that make it easy to revisit past work and resume tasks through timely suggestions. Journeys may also use your web searches and Copilot conversations to make them more personal. Data from journeys isn’t used for AI training or advertising. $1
+10405 	 Read aloud with Copilot Vision
+10407 	 Copilot Vision turns Read Aloud into an interactive experience. You can ask questions, get summaries, and explore meanings while listening. Turning off Copilot Vision in Copilot settings will disable this setting.
+10409 	 Copilot settings
+10414 	 Copilot theme
+10415 	 Personalize your browser with a Copilot-inspired color theme.
+10416 	 Copilot in Edge Preview
+10417 	 Get priority access to new Copilot features before they're available broadly. If you opt out, any features that were turned on will stay on and need to be turned off individually.
+10422 	 $1 wants to enroll you in Copilot in Edge Preview. You'll get priority access to new Copilot features before they're available broadly.
+10423 	 $1 wants to end your Copilot in Edge Preview membership. Features already turned on will stay on and need to be turned off individually.
+11176 	 Help me write
+16897 	 Copilot is working on this tab and the task will stop if you close this tab.
+16900 	 Copilot is working on this tab and the task may be interrupted.
+16931 	 Copilot saves screenshots, so don’t share anything you don’t want it to see or use. It may make mistakes.
+16954 	 Allow Copilot to find files and read content on your PC
+16955 	 Copilot needs your permission to search for files and read system content on your PC. You can always control what Copilot has access to in Settings > Data controls > Copilot access to your PC.
+16956 	 Allow Copilot to perform file actions in this directory on your PC
+16957 	 Allow Copilot to analyze the contents of files in this directory on your PC
+16959 	 Copilot needs your permission to read file content and make changes to files in this directory. This permission only applies to this conversation.
+16960 	 Copilot needs your permission to analyze the contents of files in this directory. This permission only applies to this conversation.
+17288 	 Blocked by your organization's policies. Complete with Microsoft 365 Copilot, the trusted AI chat companion for work.
+17298 	 Open M365 Copilot
+17580 	 Copilot (preview)
+17581 	 Copilot header
+17772 	 Summarize with Copilot
+17777 	 Ask Copilot to…
+17787 	 Send to Copilot
+17810 	 Sorry, Copilot is not available due to internal server error, Please try again later.
+17814 	 Copilot is almost ready…
+17815 	 Did you know? Copilot can create images for you to be inspired.
+17816 	 Did you know? Copilot can answer questions about your page.
+17817 	 Did you know? Copilot can summarize long online documents for you.
+17818 	 Did you know? Copilot can organize tabs for you.
+17819 	 Did you know? Copilot can write product proposals for you.
+17820 	 Did you know? Copilot can change browser settings for you.
+17825 	 Windows Copilot
+17826 	 Rewrite with Copilot
+17849 	 Try asking Copilot a specific question instead.
+17851 	 Try to make your query more specific or ask Copilot for help.
+17853 	 Copilot logo
+17910 	 Hide Copilot
+18288 	 Circle To Copilot
+18290 	 Scribble To Copilot
+18292 	 This capture will be sent to Copilot. Press Esc to cancel.
+18328 	 Quit Copilot
+18329 	 Open Copilot
+18336 	 Talk to Copilot + Share tab
+18339 	 Let Copilot work with your PC
+18342 	 Copilot can search and read content on your PC to answer questions and help with diagnostics.
+18343 	 Copilot can search and read files on your PC to answer questions and help with diagnostics.
+18347 	 Copilot can create folders, move files, and make changes to your device. This also allows file reading.
+18349 	 Copilot will always let you know what information it's accessing. You can delete conversations and change settings at any time.
+18356 	 By continuing, you accept the Copilot terms and authorize Copilot to access data on your PC.
+18357 	 Allow Copilot to access the following file?
+18363 	 Explore the latest features and improvements in Copilot.
+18364 	 Get to know Copilot
+18365 	 Take a quick tour and discover how Copilot can help you at work.
+18367 	 Use Copilot to streamline workflows and focus on work that matters most.
+18368 	 Copilot as your companion
+18369 	 Learn how Copilot can play the role of an assistant to help prioritize your day.
+18372 	 Plan your day with Copilot
+18375 	 Get a quick summary of interactions with your key collaborators using Copilot.
+18401 	 This feature may not be available for your account or active yet. Open the Copilot app if installed, then try again.
+18403 	 Ask Copilot anything
+18404 	 Talk to Copilot
+18405 	 Share screen with Copilot
+18415 	 Remove from Microsoft Copilot
+18435 	 Allow Copilot Code to run without approval?
+18436 	 Turn on auto-approval in settings to let Copilot Code work without asking for approval each time.
+18444 	 This version of the Copilot app isn't available for your account
+18445 	 Your organization uses a different version of the app. Download the supported version to access Copilot for work.
+18446 	 This version of the Copilot app isn't available on this device
+18447 	 This device requires a different version of the app. Download the supported version to access Copilot for work.
+18451 	 Install the latest version of Copilot to continue. The app will restart automatically after the update.
+18456 	 Updating Copilot
+18458 	 Copilot Context Menu
+18459 	 Ask Copilot about this page
+18460 	 Ask Copilot about this image
+18461 	 Ask Copilot about this text
+18473 	 Experience AI Browsing with Copilot Mode
+18474 	 Turn on Copilot Mode
+18476 	 Turn on Copilot Mode for AI browsing
+18477 	 Copilot Mode disabled
+18478 	 Copilot Mode enabled
+18770 	 Microsoft Copilot: Your AI companion
+18775 	 Sorry, it looks like I'm not yet available in your region. If you'd like, you can hide the Copilot icon by going to your
+18777 	 Copilot Vision
+18785 	 Get Copilot Pro
+18791 	 Open Copilot discover feed
+18796 	 Copilot is not allowed to see this page
+18797 	 Copilot Vision is active on this page
+18798 	 Activate Copilot Vision on this page
+18800 	 Message Copilot
+18831 	 Must be a popular time! Try coming back in a little while or subscribe to Copilot Pro for priority access.
+18835 	 Copilot Vision isn't available near you
+18845 	 Get help from Copilot by sharing what you see on your browser, screen, or camera, and talking about it. Copilot can hear and respond to your voice. Do not share images of other people without their consent.
+18846 	 Get help from Copilot by sharing the images you see on your browser, screen, or camera, and talking about it. Copilot can hear and respond to your voice.
+18847 	 Please use caution before sharing information you consider to be sensitive with Copilot.
+18848 	 Whenever you share images with Copilot it may process physical characteristics like faces. It will not use these images to uniquely identify you or other people not considered to be public figures. Do not share images of other people without consent.
+18855 	 Stay focused, flowing, and in control of your time online when you use Microsoft Edge. Equipped with AI-powered Microsoft Copilot, browser actions, tab organization, and advanced performance features. Edge is built to help you do more with every minute you spend online.
+18882 	 Introducing writing assistance
+18883 	 Hover over the blinking cursor to open writing assistance. Writing assistance can use your current input, selected text, and relevant page context to generate writing suggestions such as rewrites, tone changes, and drafts. This service operates without storing any user data.
+18887 	 Sign in to use Writing assistance for drafting and rewriting in Edge.
+18891 	 Write with Copilot inline
+18898 	 Draft with Copilot
+18903 	 Ask Edge to help me rewrite
+18950 	 The option to rewrite isn't available without Copilot commercial data protections. Try contacting your admin.
+18971 	 Use your voice to dictate or transcribe with Copilot, or press $1 to start.
+19019 	 Copilot Vision Overlay
+19037 	 Ask M365 Copilot, search the web, find work files, open a webpage
+19039 	 Message Copilot or @ mention a tab
+19068 	 Explore the web or chat with Copilot (GPT-5.1)
+19069 	 Explore the web or chat with Copilot
+19071 	 Ask M365 Copilot
+19088 	 Open Copilot Discover feed
+19107 	 Help me write a
+19152 	 See what Copilot can do
+19154 	 These cards provide quick examples of how Copilot can enhance your     browsing experience in Edge.
+19160 	 Copilot suggestions
+19161 	 See what Copilot can do for you.
+19167 	 Show Copilot-inspired feed.
+19170 	 Your tools at a glance, plus Copilot-suggested actions.
+19204 	 Turn off Copilot new tab page
+19207 	 Sign in to start a conversation and use features on the Copilot new tab page
+19233 	 Copilot Prompts
+19265 	 You're now on the Copilot new tab page, turned on by your organization.
+19266 	 Ask M365 Copilot anything and get things done faster with curated work content.
+19267 	 Copilot new tab page notification
+19272 	 Turn on Copilot New Tab Page
+19273 	 Copilot New Tab Page enabled
+19274 	 Copilot New Tab Page disabled
+19342 	 Power this workspace with Copilot
+19383 	 Copilot is working on a tab
+19384 	 Copilot overlay
+19385 	 Copilot is in control right now
+19388 	 Copilot is working
+19389 	 Copilot is browsing
+19392 	 Close Copilot
+19394 	 Copilot couldn't be loaded. Check your connection and try again.
+19396 	 Copilot needs an internet connection. Reconnect and it'll retry automatically.
+19398 	 Copilot is still loading. You can keep waiting or try again.
+19401 	 Sign-in is required to access Copilot in Edge. Chat about your tabs and make Copilot yours with memory across conversations.
+19403 	 Copilot wants to use content in your browser
+19404 	 Copilot may give better answers based on the current webpage, open tabs, and browser history in Microsoft Edge.
+19410 	 Allow Browse with Copilot
+19411 	 Let Copilot perform actions for you, including browsing tasks, opening tabs, selecting text, and completing forms. Your admin manages which sites Copilot can interact with.
+19424 	 Talk to your screen with Copilot Vision
+19426 	 Share your screen and Copilot will understand what you're working on. Ask it to make suggestions, spark new ideas, or show you how to do something. When you end Vision, your chat history is saved but nothing from your screen is kept.
+19429 	 Learn more about Copilot Vision
+19430 	 Copilot can help you with your Files
+19431 	 Ask Copilot to help with your files in File Explorer—type commands like "organize my folder" or "move my photos" to get help with your files.
+19434 	 Turning on Vision gives Copilot more context for smarter responses. Manage your Vision settings in Copilot Settings any time.
+19435 	 If you continue, Vision will be available across all Copilot experiences.
+19436 	 Copilot Notification Flyout Internals
+19463 	 Try Copilot in Edge
+19662 	 Copilot internals
+20029 	 Allow Microsoft to save your browsing activity including history, usage, favorites, web content, and other browsing data to personalize and improve Microsoft Edge and Microsoft services like ads, search, shopping, news, and Copilot.
+20472 	 Automatically open Copilot chat with contextual insights in the side pane
+20473 	 When a web link is opened from an Outlook email, Copilot side pane will automatically open to show the page insights.
+20474 	 Understand links faster with email context in Copilot.
+20739 	 Ask Copilot instead
+20809 	 Copilot Side Panel Renderer Process
+21022 	 Copilot (Ctrl+Shift+.)
+21131 	 Copilot Header
+21152 	 Copilot Feedback
+21303 	 Copilot Chat Diagnostic Data
+21304 	 Copilot Vision Diagnostic Data
+21381 	 M365 Copilot
+21778 	 Copilot pane opened
+21779 	 Copilot pane closed
+22095 	 Try Copilot new tab page
+22455 	 Help via &Copilot
+22697 	 Try Copilot
+22698 	 Learn with Copilot
+22720 	 Try Copilot Mode
+22725 	 Chat side-by-side with Copilot
+22729 	 summarize my current conversation on the webpage so I can continue the conversation with Copilot
+22770 	 Copilot — $1
+22772 	 You're in control of this tab. Review or make any changes you want, then click "I'm done" to return control to Copilot.
+22793 	 Set up Copilot
+22808 	 Import your cookies from Microsoft Edge each time you open Copilot.
+22809 	 Import your cookies, history, payment info, passwords, and autofill data from Microsoft Edge each time you open Copilot.
+22811 	 Sync your browsing data from $1 between Copilot apps and Edge across your signed-in devices.
+22815 	 Copilot always collects required diagnostic data to keep it secure, up to date, and working as expected. You can send optional diagnostic data, which further helps troubleshoot problems and improve Microsoft products by including info about the websites you browse, how you use the Copilot and other apps, device health and activity and enhanced error reporting.
+22816 	 Start Copilot on login to keep it handy
+22817 	 Start Copilot automatically when you sign into your device.
+22837 	 See your favorite sites from Microsoft Edge when navigating to a website in Copilot.
+22839 	 Import passwords, history, cookies and more from Google Chrome each time you open Copilot.
+22843 	 Choose the data you want Copilot to bring over when it starts.
+22846 	 You signed in to Copilot with $1 as $2, but you need to have a Microsoft account to get all of Copilot`s features.
+22852 	 Hello, I'm Copilot, your personal AI companion.
+22857 	 Copilot is an AI and may make mistakes.
+22858 	 Welcome to Copilot
+22861 	 How can Copilot help me?
+22872 	 Copilot Dev
+22878 	 We couldn't connect to Copilot
+22881 	 We're having trouble loading Copilot. Try reloading, or come back in a bit.
+22883 	 Copilot is not responding
+22884 	 Copilot is taking longer than usual to respond. You can keep waiting, or exit to try again.
+22887 	 Copilot Permission Request
+22888 	 Let Copilot $1?
+22895 	 Try Copilot Vision
+22900 	 Click here to send your message and get a response from Copilot.
+39132 	 Help me write. Tab and press enter to open
+39133 	 Resume Help me write. Tab and press enter to open
+39145 	 Turn on this setting to use Help me write
+39146 	 Turn on the Make Searches and Browsing Better setting to use Help me write
+39198 	 Send feedback for Help me write.
+39441 	 Ask Copilot about this file
+39445 	 Generate smart keywords for this document with Copilot
+39448 	 Summarize this file with Copilot
+39459 	 Copilot is currently disabled as your organization doesn't allow access to page content.
+39460 	 Using Copilot with PDF requires enabling access to page content. Please turn it on in Copilot settings to enable it.
+39461 	 Copilot is disabled for this PDF as it is protected or restricted.
+42771 	 Once you organize tabs, either manually or with the help of Copilot, those groups will be saved here.
+43015 	 Sharing Browsing History with Copilot Search
+43016 	 Your browsing history in Edge is currently being shared with Microsoft 365 Copilot Search to provide more relevant results, as turned on by your organization. Only work-related sites approved by your organization will be included. You can turn this off anytime in <a target="_blank" href="edge://settings/privacy/services">Settings</a>.
+43646 	 Help me rewrite some text to sound more professional
+46381 	 Ask Copilot for assistance, quickly translate text, and so much more with Microsoft Edge as your default PDF viewer.
+46383 	 Copilot Mode is enabled.
+46425 	 Allow Microsoft to save browsing activity, including history,     usage, web content and more, to personalize and improve Edge     and Microsoft services like ads, suggestions, Copilot and search.
+46584 	 You have access to AI-powered experiences with Copilot for the web!
+46585 	 Enhance your browsing experience with Copilot in Microsoft Edge
+46586 	 Sign in to access AI-powered experiences with Copilot in Microsoft Edge
+46587 	 Setup Microsoft Edge and discover a smarter way to search with Copilot
+46588 	 Set up Microsoft Edge and explore AI-powered experiences with Copilot
+46644 	 Edge comes with AI-powered Microsoft Copilot built-in which helps you search faster, create, get more done, and protect your privacy online.
+47211 	 Links from Outlook open in Microsoft Edge, the only browser with Copilot built-in
+47212 	 Access the AI-powered Copilot for the web when you open links in Microsoft Edge.     <br><br>     You can change this setting at any time in Outlook. This will affect links opened from supported Microsoft 365 apps. <a id="nurturing-link-1" class="nurturing-link" href="#">Learn more</a>
+47213 	 Access the AI-powered Copilot for the web when you open links in Microsoft Edge.     <br><br>     After this message, you can change this setting at any time in Outlook. This will affect links opened from supported Microsoft 365 apps. <a id="nurturing-link-1" class="nurturing-link" href="#">Learn more</a>
+47280 	 Copilot gives you a jump start on common work tasks - and it's safe because your chats are always private.
+47330 	 Features that were limited to Copilot Mode are now available under the Copilot and AI Settings page. Since you were part of Copilot Mode, you'll now get priority access to new features through Copilot in Edge Preview
+48840 	 Allow Microsoft to save your browsing activity to personalize and improve Microsoft Edge and other Microsoft services like shopping, search, news, ads, and Copilot.*br*Your browsing activity includes history, usage, favorites, web content, and other browsing content. $1 | $2
+50791 	 Welcome to Circle to Copilot
+50792 	 Capture and ask Copilot
+50850 	 Copilot Search
+50855 	 $1, ask Copilot
+50955 	 $2 $1, switch to Copilot conversation
+51131 	 Chat with Copilot
+51144 	 Copilot uses AI to create summaries. Double-check for mistakes.
+51153 	 Explain this page with Copilot
+51156 	 Using Copilot with this page requires enabling access to page content. Please turn it on in Copilot settings to enable it.
+60578 	 One Copilot CIQ
+60778 	 Help me rewrite
+60779 	 Rewrite with Microsoft 365 Copilot

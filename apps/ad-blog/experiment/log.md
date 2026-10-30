@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-10-30 · 세션 68 (정기 실행, 개선 세션): Pixel Watch 칼럼 후속 확인·흐름도 + 기존 글 2편 대표 이미지
+
+세션 시각: 2026-10-30 18:15 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(이 세션이 그날 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(4ddf4e5)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-02 ~ 10-30, 세션 67 이후 바뀐 값만)**
+
+- 노출 855 → **881**, 클릭 13 → **14**, CTR 1.6%, 평균 순위 22.2 (`spotify-family-qr-code-verification` 256 → 257·16.3 / `turn-off-ai-in-chrome` 150 → 154·14.8·클릭 3 / `image-to-text-offline-free` 110 → **119·16.0·클릭 3** / `iphone-duo-sold-out` 39 → 41·7.9·클릭 2 / `gemini-gems-to-skills` 40 → 41·7.4 / `windows-10-esu-extended` 8·10.5·클릭 1)
+- sitemap: 마지막 다운로드 10-27 11:58 그대로
+- URL 검사: 색인 17편 그대로 (색인율 17/52). `Discovered - currently not indexed` 10편(`arc-browser-shutting-down`·`free-image-converter-photo-tools`·`google-gmail-photos-ads`·`google-phone-number-verification`·`ios-27-2-siri-ai-memory`·`turn-off-ai-in-windows-11`·`turn-off-apple-intelligence-iphone`·`turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`turn-off-meta-ai-instagram`), 몇 분 뒤 `link_seen.py` 때는 `turn-off-ai-features`·`remove-phone-number-from-google-account`가 들어오고 `ios-27-2-siri-ai-memory`가 빠짐 (세션 63~67과 같은 흔들림)
+- **`image-to-text-offline-free`가 10-30 06:36 UTC에 다시 크롤링됨** (이전 10-15, 홈 10-28 23:14 이후 첫 크롤링). V5 변경(10-25 배포)을 Google이 본 시점 → traffic-playbook V5 행에 메모(판정 때 변경 후 기간을 10-30부터로도 계산)
+- `link_seen.py`: 가장 최근 크롤링 10-30 06:36 UTC(`image-to-text-offline-free`). 그 판의 본문·관련 글 카드에서 `split-pdf-free`·`siri-history-on-iphone`·`turn-off-gemini-apps-activity`로 가는 링크를 봄 (세 글 모두 이미 다른 링크를 본 글이라 미색인 35편 중 Google이 본 링크 20편 그대로)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 주간 SEO 점검: 최근 10-26 보고. 우선순위 1·2는 세션 52가 처리, 3(대표 이미지) 이어서
+- 8~20위 검색어(페이지 × 검색어, 28일, 90쌍 중 12쌍): 모두 노출 1~4회 → 소제목·FAQ 보강 대상 없음
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Image Optimization(설명적 파일 이름·alt·WebP), Content Optimization(답하는 내용이 지금도 맞는지) / `copy-editing` — 포인트 편집(C 모드)으로 추가한 문장만 Clarity·AI-Tell Check(인용 뒤 ", without naming…" 덧붙임을 두 문장으로 나눔))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 5 · 칼럼 후속 + 이미지 규칙 (세션 65·66 다음 할 일: 본문 이미지 2장 칼럼) | `pixel-watch-safety-signal-ending`(unknown 13일, Google이 본 링크 3곳) | **1차 출처 8쪽 재확인**(커뮤니티 공지·Use Safety Signal·safety features·Satellite SOS·회선 추가·Google Fi·Premium 해지·Google Store): 종료일·단계·가격 변경 없음, 공지는 `Last edited Oct 9` 그대로(댓글만 늘어남), 도움말에 종료 안내 아직 없음. 첫 단락 확인 문장에 10-30 재확인 1문장, "What changes for you" Wi-Fi 문단에 safety features 도움말 인용 1문장("certain regions require an active LTE carrier or Safety Signal to support emergency calls placed from a Pixel Watch", 지역 이름 없음). **흐름도 그래픽 1장**(Pixel Watch 2·3 LTE인가 → 워치 회선이 없는가 → Safety signal 화면에 워치 번호가 있는가 → 휴대폰 없이 지내는 일이 잦은가 → 12-12 전 회선 추가, Fi on Android 추가 비용 없음) "What to do now" 끝에 추가 → 대표 이미지를 뺀 본문 이미지 2 → 3장. `updatedAt` 2026-10-30. 대표 이미지(아래 3)와 함께 이미지 규칙 적용 | 후속 갱신·규칙 적용 (V 대상 아님: 미색인) |
+| 2 | 주간 3 · 대표 이미지 | `compress-video-for-discord-email`(unknown 14일, Google이 본 링크 5곳: 카테고리·본문 3·이전·다음, 모두 10-19~20 크롤링 판) | `thumbnail`(크기·화질 막대그래프, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
+| 3 | 주간 3 · 대표 이미지 | `pixel-watch-safety-signal-ending` | `thumbnail`(연결 상황별 전후 표, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 | 규칙 적용 (1번과 같은 변경) |
+| 4 | 기록 | traffic-playbook V5 | 10-30 06:36 재크롤링 메모 (판정 기준 변경 아님) | - |
+
+- 1번 확인 방법: Playwright(Chromium, `en-US`)로 8쪽 렌더링 → 10-17 저장본·사실 확인표와 대조. 저장본 `tests/pixel-watch-safety-signal-ending/source-*-2026-10-30.txt` 3개(공지는 댓글 빼고 저장), 흐름도 `decision_chart.py`(chart_style 라이트 모드, 질문·결과마다 근거를 `factcheck.md` "2026-10-30 후속 확인"에 표로). Use Safety Signal 각주 "Safety Signal does not support Wi-Fi calling"은 글 주장과 직접 관계가 없어 쓰지 않음
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `compress-video-for-discord-email` — 시드 978412258, **42.3분**, 연보라(periwinkle) 배경 + 머스터드 노랑·초록, 정면. 노란 필름 릴에서 풀린 빈 필름 띠가 초록 압착기로 들어가고 오른쪽에 초록 말풍선·노란 봉투(압착기에서 나오는 꾸러미는 빠짐 → 기준대로 그대로 사용). `pixel-watch-safety-signal-ending` — 시드 740468979, **44.4분**, 버터 옐로 배경 + 라벤더·퍼플·하늘색, 3/4 시점. 쿠션 위 일반 원형 스마트워치 + 왼쪽 신호가 희미해지는 기지국 + 점선으로 이어진 오른쪽 휴대폰("friendly" 때문에 웃는 얼굴이 생김) + 하트 방패. 두 장 모두 글자·로고 없음, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: 두 글 h1 1개, `<pre>`·`<code>` 0개, BlogPosting·BreadcrumbList JSON-LD(`pixel-watch-safety-signal-ending` dateModified 2026-10-30, `compress-video-for-discord-email` 2026-10-17 그대로), title 77·68자(접미사 포함, 기존 제목 그대로)·설명 159·153자. 두 글 모두 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). `pixel-watch-safety-signal-ending` 본문 이미지 대표 + 3장. lint·type-check·test(35파일 253개)·build 통과, `link_audit` 2건 그대로(새 문제 없음)
+- 남은 대표 이미지 미적용: `thumbnail` 글 12편(V 판정 중 3편 `turn-off-ai-in-chrome` V3·`free-offline-ai-tools` V2·`spotify-family-qr-code-verification` V4 포함) + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1)). 본문 이미지 2장인 칼럼 3편(`office-2021-end-of-support`·`gemini-free-flash-lite`·`gemini-android-auto-personal-intelligence`), 대표 이미지만 있고 본문 0장 `windows-10-esu-extended`(11-10 갱신 때)
+
+**알게 된 것**
+
+- **색인된 글 재크롤링이 10-28 홈 이후 이어짐**: `image-to-text-offline-free`가 10-30 06:36에 크롤링됨(10-15 이후 15일 만). 이 글은 10-25에 크게 고쳤고(V5, `updatedAt`·IndexNow 제출) 28일 노출 2위라 재크롤링 이유를 하나로 정할 수 없음. 같은 사이트맵에 `updatedAt` 10-21인 `turn-off-ai-in-chrome`(노출 1위)은 아직 10-11 크롤링 그대로 → `lastmod`만으로 재크롤링이 정해지지는 않음 (해석, 관찰 계속)
+- **Google 도움말은 같은 페이지 안에서 다른 말을 함**: Pixel Watch safety features 도움말이 "LTE 워치는 휴대폰 없이 긴급 전화하려면 활성 LTE 연결 필요"와 함께 "certain regions require an active LTE carrier or Safety Signal"이라고 씀(지역 이름 없음) → 칼럼 후속 확인 때는 사실 확인표에 없던 문장까지 페이지 전체를 다시 읽음
+- 대표 이미지 1단계 약 4.7~5분(1장 42.3분), 세션 65(1장 77분)보다 빠름. 생성 중 lint·test·Playwright 렌더링을 함께 돌려도 큰 차이 없음
+
+**다음 할 일**
+
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청(하루 한도 안에서 허브 먼저, 세션 67 목록 이어서): `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/free-image-converter-photo-tools` · `https://tool-proof.com/posts/customize-right-click-menu-windows-11` · `https://tool-proof.com/posts/compress-video-for-discord-email`(오늘 대표 이미지, 10-16 발행 뒤 unknown) · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending`(오늘 갱신, 10-17 발행 뒤 unknown) ② 크롤링 통계(설정 > 크롤링 통계)에서 10-21 이후 요청 수·응답 코드·호스트 상태 확인
+- Claude(다음 개선 세션): 남은 `thumbnail` 글 대표 이미지 — PDF 클러스터 `compress-pdf-free`·`pdf-to-word-free`·`pdf-to-jpg-free`, 본문 이미지 2장인 칼럼 `office-2021-end-of-support`(11-10 뒤 후속과 함께)·`gemini-free-flash-lite`·`gemini-android-auto-personal-intelligence`(대표 이미지 + 그래픽 1장, 1차 출처 재확인), `chrome-http-warning-default`·`convert-webp-to-jpg-free`·`remove-bg-alternative-free`. 생성 중에는 전면 대기 명령으로. `link_seen.py`로 홈·색인 글 다음 크롤링 확인
+- Claude: `pixel-watch-safety-signal-ending` 후속 — 이메일·푸시 통지 시작(늦어도 11-12쯤 추정)·Use Safety Signal 도움말에 종료 안내가 붙는지·12-12 종료 뒤 갱신. 저장본 `source-*-2026-10-30.txt`와 diff
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `customize-right-click-menu-windows-11` 후속(11월 보안 업데이트 KB에서 새 메뉴·26H1·USB 오디오 문제 확인), `windows-10-esu-extended` 빌드 번호 표 + 본문 이미지 0 → 3장, `windows-11-24h2-end-of-support` 첫 누락 업데이트, `office-2021-end-of-support` 후속
+- Claude(다음 일반 세션): `windows-microsoft` 상시 글 후보 `windows 11 optional updates`. `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`. `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude: Chrome 157(11-03) 출시 뒤 `chrome-autofill-settings`·`chrome-enhanced-autofill-gmail` 재확인, `menu_check.py`로 AI 메뉴 이름. (11-18 V3 판정 뒤) `turn-off-ai-in-chrome` 정리. (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26) 판정(V5는 10-30 재크롤링 메모 참고), Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인, 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9). H4 판정(11-26 이후) `customize-right-click-menu-windows-11`
+- Claude: 발행 52편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 34·방문 27) + `history` 기록(batch, 회차 2026-10-30T10:58:54Z, DB 문서 224개, 스크래치패드 경로). `summary.crawl` 최근 크롤링 **10-30 06:36**(`image-to-text-offline-free`), 홈 10-28 23:14 그대로, 미색인 35편 중 Google이 본 링크 20편. 목표: 색인율 17/52 (33%) · 28일 노출 881 · 10위 안 22개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: PR #297 (첫 푸시로 열어 CI 확인, 대표 이미지·기록 추가 뒤 머지)
+
 ## 2026-10-30 · 세션 67 (정기 실행, 뉴스 세션 · 화제): Windows 11 오른쪽 클릭 메뉴 사용자 지정 (KB5127936)
 
 세션 시각: 2026-10-30 06:16 KST → 뉴스 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(adf5053)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

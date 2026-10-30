@@ -52,3 +52,32 @@
 
 - 통신사별 워치 회선 월 요금: Verizon 워치 페이지는 기기 할부만, T-Mobile·AT&T 요금 페이지는 404/렌더링 실패 → 본문에 금액을 쓰지 않고 "Ask your carrier"로 안내
 - 플랜 없는 LTE 워치가 Wi-Fi만으로 911 통화를 걸 수 있는지: Google 문서에 명시 없음 → 본문에서 "Google doesn't say"로 표기하고 Our take 근거로 사용
+
+## 2026-10-30 후속 확인 (세션 68 개선 세션)
+
+Playwright(Chromium, `en-US`)로 아래 8쪽을 다시 렌더링해 10-17 내용과 대조. 저장본은 `source-*-2026-10-30.txt` 3개(공지·Use Safety Signal·safety features 앞부분).
+
+| 확인한 것 | 출처 | 결과 |
+| --- | --- | --- |
+| 공지 본문(종료일 12-12, 대상 모델, 30일 전환, Wi-Fi·Bluetooth·회선이면 계속 작동) | 커뮤니티 공지 471984501 | 그대로, `Last edited Oct 9, 2026` 그대로. 바뀐 것은 댓글(10-19 이후 사용자 불만·Product Expert 답글)뿐 |
+| Safety Signal 설명·요건·4개국·AT&T/Verizon 제외·번호 위치·이전 불가 | 13889549 | 그대로. 종료 안내는 아직 도움말에 없음. 각주 "When your watch is not connected to your phone, Safety Signal does not support Wi-Fi calling."은 본문에 쓰지 않음 |
+| LTE 워치는 휴대폰 없이 긴급 전화하려면 활성 LTE 연결 필요, Wi-Fi 모델은 휴대폰 필요 | 12663810 | 그대로 |
+| **"Certain regions require an active LTE carrier or Safety Signal to support emergency calls placed from a Pixel Watch."** | 12663810 | 10-17 사실 확인표에 없던 문장 (그때 페이지에 있었는지는 저장본이 없어 모름) → 본문 "What changes for you" Wi-Fi 문단에 인용 1문장 추가. 지역 이름은 페이지에 없음 |
+| Satellite SOS는 Pixel Watch 4·5 LTE, 미국 + 여러 나라 | 16407554 | 그대로 |
+| 회선 추가 경로 Connectivity > Mobile network > your carrier | 13541778 | 그대로 |
+| Fi: 모든 요금제에 워치 통화·문자·데이터 추가 비용 없음, 2년 혜택은 통화 없음, iPhone 불가, Android 13 이상 | fi/12812644 | 그대로 |
+| Premium 해지 경로·결제 기간 끝까지 유지·대부분 환불 없음 | googlehealth/18072871 | 그대로 |
+| Google Health Premium "From $9.99" | Google Store | 그대로 |
+
+### 새 그래픽 `safety-signal-who-needs-to-act.webp` (대표 이미지를 뺀 본문 이미지 2 → 3장)
+
+[decision_chart.py](decision_chart.py) (chart_style 라이트 모드). 질문·결과는 모두 본문과 위 출처에 있는 내용만 씀.
+
+| 그래픽 문구 | 근거 |
+| --- | --- |
+| Pixel Watch 2 or 3 LTE가 아니면 Not affected (Wi-Fi 모델은 Safety Signal 없음, Pixel Watch 4·5는 쓰지 않음) | 공지 대상 모델 목록, 13889549 각주 "Not available on Pixel Watch 2 or 3 (Wi-Fi)", 본문 Who is affected 표 |
+| 워치에 회선이 있으면 No change | 13889549 "You won't have access to Safety Signal when you already have carrier services on your watch" |
+| Safety signal 화면에 워치 번호가 없으면 No change (가입하지 않음) | 13889549 "Your watch number is always available in Safety & emergency > Safety signal" |
+| 휴대폰이 늘 가까이 있으면 그대로 둬도 됨 | 공지 "paired via Bluetooth with a phone nearby"이면 계속 작동 |
+| 집에서 Wi-Fi로 지내는 시간도 셈 | 12663810 LTE 워치는 휴대폰 없이 긴급 전화하려면 활성 LTE 연결 필요 + 본문 "We would not count on it at home" |
+| 그 밖에는 12-12 전에 워치 회선 추가. Fi on Android는 워치 1개 추가 비용 없음, 다른 통신사는 월 요금 문의 | 공지 "set up a mobile plan or eSIM", fi/12812644, 본문 What to do now 3·4단계 |

@@ -1,0 +1,185 @@
+URL: https://support.microsoft.com/en-us/edge/copilot/copilot-journeys
+Final: https://support.microsoft.com/en-us/edge/copilot/copilot-journeys
+Title: Copilot Journeys | Microsoft Support
+Fetched: 2026-10-30 16:47 UTC
+
+Skip to main content
+Microsoft
+Cancel
+Getting started with Copilot in Microsoft Edge
+Using Microsoft Copilot in Edge at work
+Browse with Copilot
+How context clues work in Copilot in Edge
+Shopping with Microsoft Copilot
+Copilot Journeys
+Copilot Journeys in Microsoft Edge
+
+This article applies to: Personal Microsoft accounts — Microsoft 365 Personal, Family, Premium, and Pro.
+
+Browsing the web often spans multiple tabs, sessions, and days. When you turn on Copilot Journeys, Copilot can recognize your top topics of interest and help you return to what mattered most, so you do not have to start from scratch every time you open your browser.
+
+Each Journey appears as a topic-based card topic-based card which responds with a quick summary and a suggested next step when you want to dive into your topic of interest. Use these cards to keep exploring a topic, compare your options, build a plan, or simply decide what to do next.
+
+How do Copilot Journeys work?
+
+As you browse, Copilot creates a short summary of the page content you view. This summary captures the essence of the page, not the entire content. For example, Copilot might summarize a pizza recipe page as "A step-by-step guide to making pizza from scratch, including dough recipes and topping suggestions."
+
+That summary, along with related page titles, URLs, searches, and Copilot chats, helps create a topic-based card called a Copilot Journey. Each Journey reflects a topic you've explored, so you can dive deeper into a previous topic.
+
+Copilot Journeys are refreshed regularly to stay relevant to what you are currently exploring. Older Journeys, along with their underlying data, are automatically deleted after 14 days.
+
+How do I turn on and use Copilot Journeys?
+
+Copilot Journeys is turned off by default. It is available on Microsoft Edge for desktop and mobile. To start using Journeys, turn on the Copilot new tab page and Journeys in Microsoft Edge.
+
+For Edge on desktop
+In Microsoft Edge, select Settings and more (...).
+Select Settings.
+Select Copilot and AI.
+Turn on Copilot new tab page.
+Turn on Journeys.
+For Edge on mobile
+
+Note
+
+Copilot Journeys is rolling out on Edge mobile and might not be available to everyone yet.
+
+In Microsoft Edge, select Settings and more (...).
+Select Settings.
+Select Copilot and AI.
+Turn on Copilot new tab page.
+Turn on Journeys.
+
+Once Journeys is turned on, it works quietly in the background while you browse. It might take a little browsing activity before your first Journey cards appear, so give it some time.
+
+When you have enough browsing activity, new Journeys appear as cards at the bottom of your Edge new tab page, up to three at a time.
+
+Select a Journey card to open a chat with Microsoft Copilot about that topic. From there, Copilot can help you summarize information, compare options, build a plan, or continue exploring the topic.
+
+How do I get started quickly with Journeys?
+
+If you are new to Microsoft Edge or just signed in, you might not have enough browsing history yet for Journeys to organize. There are two easy ways to get started right away.
+
+Import browsing history from another browser
+
+If you are new to Microsoft Edge and have limited browsing history, Journeys might offer to import recent history from another browser on your device.
+
+If you choose to import:
+
+Only recent browsing history is used to create your first Journeys.
+Imported history is added to your Edge browsing history and might be used by other Edge features, just like any other browsing data.
+
+You can also skip this step and let Journeys build naturally from your new browsing activity instead.
+
+Use your existing Edge browsing history
+
+If you already have browsing history in Microsoft Edge but are new to Journeys, Copilot might offer to use your recent Edge browsing activity to create your first Journey cards. This way, you can see relevant Journeys right away, without waiting for new browsing sessions to build up.
+
+What data is used to create your first Journeys?
+
+To create your first Journeys, Copilot uses URLs and page titles from your recent browsing history.
+
+Copilot does not access the full content of previously visited pages.
+A multi-layered filtering system helps exclude sensitive sites and personal information. For more details, see How does Copilot Journeys use your data? below.
+
+Creating your first Journeys from existing browsing history is a one-time process. After that, the feature works on an ongoing basis using your new browsing activity, as described above in How do Copilot Journeys work?
+
+You are always in control
+
+During setup, you can choose not to import history or use existing browsing data. If you skip this step, Journeys simply builds cards from your new browsing activity as it accumulates over time. Check back soon to see your first Journeys appear.
+
+Syncing Journeys across devices
+
+When History sync is on, Copilot Journeys data syncs across your signed-in devices, so each one generates and displays the same Journeys. When History sync is off, Journeys are built locally on each device and do not sync across devices.
+
+To manage your sync preferences, go to Edge Settings > Profiles > Sync. You can also see the Journeys sync state under Edge Settings > Copilot and AI > Journeys.
+
+How does Copilot Journeys use your data?
+
+Copilot Journeys is designed to help you stay organized while keeping your privacy top of mind. It only uses the information needed to build helpful cards for your browsing topics. When you enable Journeys, it might access the following:
+
+Page metadata and content: The page title, URL, and non-sensitive content from the sites you visit.
+Dwell time: How long you spend on a site, which helps Copilot recognize which sites might matter most to you.
+Copilot chats: When you use Copilot in Edge, your conversations might help create more helpful Journeys.
+Navigation context: How your visited sites connect through links, search paths, and browsing flow.
+
+To keep things safe and useful, Copilot Journeys uses a multi-layered filtering system so generated cards stay privacy-safe:
+
+Excluded data: When generating summaries, Journeys excludes sensitive sites, such as banking and healthcare sites, personal information such as emails, account numbers, IDs, or other sign-in details, and sensitive topics such as medical records or adult content. Any activity from InPrivate or Guest Mode browsing is also excluded automatically.
+Secure AI processing: Non-sensitive content is sent to Microsoft's secure services to create short summaries and cards. This data is encrypted and stored securely, and it is never used to train AI models or for advertising.
+How do I manage the data Copilot Journeys uses?
+
+You are in control of your data at every step:
+
+Turn off Journeys: Turning off the feature in Edge Settings stops data collection right away and deletes information previously stored to create your Journeys.
+Hide individual Journey cards: You can hide any Journey card directly from your new tab page.
+Clear browsing history: To prevent Journeys from using your browsing history, first turn off Journeys in Edge Settings, then clear your browsing history by selecting Settings and more (...) > History.
+Where is Copilot Journeys available?
+
+Copilot Journeys is available on:
+
+Microsoft Edge on Windows and Mac, signed in with a personal Microsoft account.
+Microsoft Edge on iOS and Android, signed in with a personal Microsoft account.
+
+For now, device sync is available on PCs only. Mobile sync isn't available yet.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026

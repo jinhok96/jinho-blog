@@ -1,0 +1,161 @@
+URL: https://support.microsoft.com/en-us/edge/copilot/getting-started-with-copilot-in-microsoft-edge
+Final: https://support.microsoft.com/en-us/edge/copilot/getting-started-with-copilot-in-microsoft-edge
+Title: Getting started with Copilot in Microsoft Edge | Microsoft Support
+Fetched: 2026-10-30 16:45 UTC
+
+Skip to main content
+Microsoft
+Cancel
+Getting started with Copilot in Microsoft Edge
+Using Microsoft Copilot in Edge at work
+Browse with Copilot
+How context clues work in Copilot in Edge
+Shopping with Microsoft Copilot
+Copilot Journeys
+Getting started with Copilot in Microsoft Edge
+
+Copilot in Microsoft Edge is a built-in AI assistant that helps you make decisions, research topics online, and summarize web pages, videos, and PDFs, so you can find exactly what you're looking for without leaving your browser. Copilot in Edge is also available on mobile, so you can get AI-powered help while browsing across your devices. This guide explains how Copilot in Edge works, how to set it up, and how to manage its privacy settings.
+
+Key takeaways
+Copilot in Edge can summarize your open tabs, videos, or PDFs, answer questions, and suggest prompts based on what you're viewing.
+Depending on your prompt, Copilot might use your query, recent conversation history, and browsing context — the current page, page title, open tabs, and browser history — to respond.
+You can start with a typed prompt, a voice conversation using Copilot Vision, or a one-click page summary.
+You control what Copilot can access. You can turn off context clues by going to the More menu (…) in the Edge toolbar > Copilot and AI > Allow Copilot to read context clues on the web.
+
+Important
+
+Don't share sensitive information that you wouldn't want used as browsing context. You can remove information from browsing context by closing tabs and clearing your browsing history.
+
+How Copilot in Edge answers your prompts
+
+When you send a prompt to Copilot in Microsoft Edge, we might use multiple sources of information to help answer in a way that's relevant and helpful to you. These sources include the query, recent conversation history, and your browsing context.
+
+Microsoft Edge will determine the sources it uses to respond based on the nature of your prompt. For example:
+
+Prompts that reference page content — asking Copilot to summarize a webpage, video, or PDF. Edge can use information from the current webpage, the page title, your open tabs, and your browser history to answer the question.
+Prompts that don't reference page content — a prompt like, "Help me plan a trip to Cannon Beach." Edge doesn't use information beyond the URL, the page title, your prompt, and previous conversation history to help Copilot respond effectively.
+How Copilot in Edge suggests prompts
+
+When you open Copilot in Microsoft Edge, we use the page titles and URLs of your open tabs to suggest useful prompts to get you started.
+
+How to use Copilot in Edge
+
+Follow these steps to start using Copilot in Edge:
+
+Sign in to Edge using your personal Microsoft account. If you haven't done this before, learn how to sign in and create multiple profiles in Microsoft Edge.
+
+Open a website, video, or PDF you want to ask questions about.
+
+Select the Copilot icon in the upper-right corner of Edge to open Copilot in Edge.
+
+Note
+
+The first time you open Copilot in Edge, Copilot informs you or explicitly asks for your permission (depending on your region) before using information from Microsoft Edge. Copilot then remembers this preference and uses browser information as appropriate.
+
+Ask Copilot about page content in any of the following ways:
+
+Type a prompt. Type and submit a question. Copilot looks at the page and gives a response to your question.
+Select a recommended prompt. Copilot will suggest prompts based on the context of your page. Select a recommended prompt from the available options to begin chatting about that topic.
+Use voice dictation. If you're a Microsoft 365 subscriber, select the microphone button and speak your message. Copilot converts your speech into text before you submit it.
+Use Copilot Voice or Vision. If you're a Microsoft 365 subscriber, select the Waves button to start a Voice session where you can have a natural, spoken conversation with Copilot. You can choose to share your screen with Copilot to discuss the content of the page. Read more about Copilot Vision.
+Ask Copilot for a summary. Select "Create a Summary" or "Expand on this topic" in Copilot if you just want a straightforward analysis of the page content.
+Turning on the Copilot new tab page
+
+If you'd like to try the Copilot new tab page, which brings together Copilot chat, search, and web navigation into a single experience right on your new tab page, you can turn it on in one of two ways:
+
+Go to the More menu (…) in the Edge toolbar. Then select Copilot and AI and turn on Copilot new tab page.
+On the web, go to the Edge Copilot page to learn more about the Copilot features available in Microsoft Edge.
+How to change Copilot in Edge privacy settings
+
+If you want to change privacy settings for these Copilot features in Edge, you can update your preferences by following these steps:
+
+Go to the More menu (…) in the Edge toolbar, then select Copilot and AI.
+To prevent Copilot from using the current webpage, page title, your open tabs, or your browser history to provide responses, turn off Allow Copilot to read context clues on the web. Learn how to turn off this setting at How Context Clues work in Copilot in Edge.
+
+For IT administrators that need to manage this feature in your organization, you can learn how Copilot in Edge works in your organization.
+
+Frequently asked questions
+What is Copilot in Microsoft Edge?
+
+Copilot in Microsoft Edge is a built-in AI assistant that helps you make decisions, research topics online, and summarize web pages, videos, and PDFs directly from the Edge sidebar.
+
+Can Copilot in Edge summarize a webpage, video, or PDF?
+
+Yes. Open the website, video, or PDF, select the Copilot icon in the upper-right corner of Edge, and then type a prompt or select Create a Summary to get a straightforward analysis of the page content.
+
+What information does Copilot in Edge use to answer my prompts?
+
+Depending on your prompt, Copilot might use your query, recent conversation history, and browsing context — which can include the current webpage, the page title, your open tabs, and your browser history. Edge chooses these sources based on whether your prompt needs to reference page content.
+
+How do I stop Copilot from using my browsing information?
+
+Go to the More menu (…) in the Edge toolbar, then select Copilot and AI, and turn off Allow Copilot to read context clues on the web. This prevents Copilot from using the current webpage, page title, open tabs, or browser history in its responses.
+
+Do I need to sign in to use Copilot in Edge?
+
+Yes. Sign in to Edge with your personal Microsoft account to get started.
+
+Can I use Copilot in Microsoft Edge on mobile?
+
+Yes. Copilot is available in Edge on mobile, giving you AI-powered help while browsing on your phone or tablet.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026

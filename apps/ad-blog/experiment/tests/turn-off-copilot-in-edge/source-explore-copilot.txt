@@ -1,0 +1,317 @@
+URL: https://explore.microsoft.com/en-us/edge/copilot
+Final: https://explore.microsoft.com/en-us/edge/copilot?form=MA13SQ&cs=1961846949&profile=personal
+Title: Copilot in Edge | Microsoft Edge
+Fetched: 2026-10-30 16:45 UTC
+
+Skip to main content
+Copilot in Edge
+FAQs
+Download Edge
+Copilot in Edge | Microsoft Edge
+hero
+animate-intro
+
+Browse smarter with Copilot
+
+Create, organize, and get more done with AI-powered help in Edge
+
+Try these prompts
+
+Help me not regret this purchase
+
+Click
+
+Find a deal for these shoes
+
+Click
+
+Get me out of analysis-paralysis
+
+Click
+
+Turn my research into an itinerary
+
+Click
+
+Decide between these apartments
+
+Click
+
+Distill my 47 tabs
+
+Click
+Summarize my tabs
+Click
+
+Tailor my resume to this role
+
+Click
+
+Create an itinerary from my tabs
+
+Click
+
+Turn these options into a trip
+
+Click
+
+Find the best choice
+
+Click
+
+Build a grocery list
+
+Click
+what-columns
+
+Get more done, faster
+
+Planning a trip or researching a big purchase? Copilot compares, summarizes, and handles the tasks you don’t want to do — all in one place.
+
+AI that works alongside you
+
+Copilot works in your browser, using your tabs to compare options, surface key details, and give clear answers — no jumping between tools.
+
+Gets better the more you use it
+
+Copilot remembers what you’ve worked on, so you don’t start over. The more you use it, the more helpful and personalized it becomes.
+
+get-started
+
+Get started with Copilot
+
+Two ways to get started. Pick what fits your flow.
+
+Best for multitasking
+Copilot sidepane
+
+No more tab-hopping. Copilot is built into Edge — click icon in the top right of your window to summarize, compare, or get answers without leaving the page.
+
+Try now
+Most immersive
+Copilot new tab page
+
+Open a Copilot new tab and type anything — a question, a search, or a website. Copilot routes you instantly to the right place, so you can start faster.
+
+trio
+Journeys
+Pick up where you left off
+
+Copilot groups your browsing into journeys — related pages, searches, and chats. Revisit what matters, go deeper, and jump back in with one click.
+
+Turn on Journeys to organize your browsing, then find them anytime on your new tab page.
+
+Journeys is on
+
+Turn on Journeys
+
+feature-cards
+
+Experience the full power of Copilot
+
+Discover how Copilot helps you browse smarter and do more with Microsoft Edge.
+
+Copilot connectors
+
+Stop switching apps to find things
+
+Click
+
+Writing assistance
+
+Turn ideas into clear drafts
+
+Click
+Compare across tabs
+
+See what matters across pages
+
+Click
+
+Summarize any page
+
+Get the gist instantly
+
+Click
+Image Creator
+
+Turn ideas into images
+
+Click
+m365
+
+Get more from Copilot and Microsoft 365
+
+Unlock premium AI experiences, trusted Microsoft apps, cloud storage, and security tools that help you create, organize, and stay productive every day.
+
+Go further with AI
+
+Get higher limits and premium AI experiences to help you research, write, create, and work through tasks more efficiently.
+
+Create with confidence
+
+Build documents, presentations, spreadsheets, and more using familiar Microsoft tools designed to help you do your best work.
+
+Access your content anywhere
+
+Keep photos, files, and important information available across devices with cloud storage and Microsoft services.
+
+Protect what matters most
+
+Help keep your files, photos, personal information, and devices safer with built-in Microsoft security benefits.
+
+mobile
+
+Copilot in Edge, wherever you go
+
+Turn ideas into done, cut through tab clutter and move forward faster right in Edge on your phone.
+
+Scan to get the Edge mobile app
+in-control
+
+Your web, your control​
+
+Copilot in Edge works with you, on your terms. It helps when you ask, so you stay in control.​
+
+Control your experience​
+
+Choose which features to use, and switch them on or off whenever you want. You’re always in control of your experience.
+
+Manage with ease
+
+Update permissions, clear history, and adjust settings in just a few steps. Control how Copilot works, all in one place.​
+
+Privacy on your terms
+
+Optional features like context clues, video highlights, and memory are always up to you. Your data stays private and follows Microsoft’s trusted standards.​
+
+faqs
+header
+Frequently Asked Questions
+learn-what-is-changing-with-copilot 
+
+Learn more about what's changing with Copilot
+
+Expand All
+Collapse All
+What's changing with Copilot?
+
+We’re updating Copilot to create a simpler, more cohesive experience for everyone. Depending on the account and device you use, you will see changes to the Copilot app including changes to appearance and functionality, such as navigation, feature availability, or sign-in experience. You will be able to sign in to the updated Copilot app with a personal account, a work or school account, or both. Work and personal accounts remain separate. Your organization’s security, privacy, compliance, and administrative controls continue to apply when you use Copilot with your work or school account.
+
+What improvements will the updated Copilot app have?
+Will I need to pay to use the Copilot app?
+
+When you hit a limit, you can choose to upgrade to a paid option or come back later. Copilot users in Edge or using the Copilot Windows app may benefit from a higher free usage allowance. 
+
+For higher limits to chat and create, use agents, or tackle complex multi-step tasks, purchase a Microsoft 365 subscription.
+
+how-does-it-affect-me
+
+How does it affect me?
+
+Expand All
+Collapse All
+If you use Microsoft Copilot with a personal account:
+If you use the Microsoft 365 Copilot app with a personal account:
+If you use both Microsoft Copilot and the Microsoft 365 Copilot app with a personal account:
+
+Your chat history and content you’ve created will be merged to a single updated Copilot app.
+
+If you use Microsoft 365 Copilot with a Microsoft Entra (organizational) account:
+Do I need to do anything to prepare for the update?
+
+No. Most updates will happen automatically. Existing users will be guided through the transition, and web users will be automatically redirected to an updated version of Copilot.
+
+what-happens-to-my-chats-and-data
+
+What happens to my chats and data
+
+Expand All
+Collapse All
+Will data be shared between my personal and work accounts?
+Can I switch between my personal email and work or school (Microsoft Entra ID) accounts?
+
+Yes. You can continue to switch between personal and work or school accounts using the account switcher within Copilot, just as you might be doing today. Work and personal experiences remain separated by design, and data does not flow between them.
+
+Where are my chats going to be stored?
+How does Copilot handle my privacy, data, conversations, and uploaded files?
+what-is-going-away-or-unavailable
+
+What's going away or unavailable
+
+Expand All
+Collapse All
+Is anything going away as part of this update?
+
+Most user data will be moved with you to the updated Copilot app: your chats, images and other content you’ve created with Copilot will be migrated. Group Chat threads, messages, and content, including images created in Group Chats, will not be carried forward. Podcasts will also not be carried forward. Before your account updates, copy any messages you want to keep into a document or notes app and download any images you want to save.  
+
+Some features may be temporarily unavailable, or you may experience functionality gaps while the latest version of Copilot is being rolled out. Learn more.
+
+toggle
+Personal
+Work
+* Feature availability and functionality may vary by device type, market, and browser version.
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026

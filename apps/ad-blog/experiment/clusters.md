@@ -33,7 +33,7 @@ content-strategy 우선순위 매트릭스(경쟁 × 사업 가치)에 우리 Se
 
 ## 규칙
 
-- **새 글**: 발행 전 클러스터를 정함. 일반 세션(00시)은 우선순위 1·2 클러스터의 [backlog.md](backlog.md#클러스터-공백-후보) 공백 후보를 먼저 씀. 어느 클러스터에도 속하지 않는 주제는 같은 클러스터로 이어질 상시 글 3편을 backlog에 함께 적을 수 있을 때만 새 클러스터로 시작
+- **새 글**: 발행 전 클러스터를 정함. 일반 세션(월·수·금 00시, 2026-11-01)은 우선순위 1·2 클러스터의 [backlog.md](backlog.md#클러스터-공백-후보) 공백 후보를 먼저 씀. 어느 클러스터에도 속하지 않는 주제는 같은 클러스터로 이어질 상시 글 3편을 backlog에 함께 적을 수 있을 때만 새 클러스터로 시작
 - **허브**: 상시 글이 3편 모이면 개선 세션에서 허브를 씀 ([traffic-playbook.md](traffic-playbook.md) 3번). 허브를 만들면 이 표의 `허브` 칸을 채우고, 허브 글 frontmatter에 `hub: true`(홈 상단 고정, 2026-10-24)를 넣고, 상시 글마다 허브로 링크 1개 추가
 - **내부 링크** (internal-linking 허브·스포크 모델)
   - 허브 → 클러스터의 모든 상시 글
@@ -42,3 +42,25 @@ content-strategy 우선순위 매트릭스(경쟁 × 사업 가치)에 우리 Se
   - 모든 글은 다른 글에서 링크 2개 이상을 받음. 새 글은 이미 색인된 같은 클러스터 글에서 1개 이상 받음 (색인 상태는 `gsc_report.py` URL 검사)
 - **점검**: 매 세션 지표 확인 뒤 `python3 -I apps/ad-blog/experiment/tools/link_audit.py`. 새 글을 쓴 세션은 그 글의 문제를 발행 전에 고치고, 기존 글 문제는 개선 세션에서 고침
 - **삭제·통합**: 글을 지우면 같은 주제의 글로 301 리디렉트를 [vercel.json](../vercel.json)에 추가하고 이 표에서 뺌. 대체 글이 없으면 같은 클러스터 허브로, 허브도 없으면 404로 둠 (주제가 다른 글로 보내면 Google이 soft 404로 봄)
+
+## 콘텐츠 정리 (2026-11-01)
+
+AdSense "가치가 별로 없는 콘텐츠" 거절 대응([README](README.md#adsense-거절-분석-2026-11-01), 사용자 결정). 겹치는 글과 날짜가 지난 칼럼이 사이트를 대량 생산처럼 보이게 하므로, 개선 세션이 아래 목록을 위에서부터 **세션당 1건** 처리합니다. 끝낸 항목은 `~~취소선~~` + 처리 날짜·세션 번호, 이 표·[vercel.json](../vercel.json)·`link_audit.py` 결과를 함께 갱신합니다.
+
+**규칙**
+
+- **통합**: 같은 질문에 답하는 글 2편 → 남길 글 1편에 다른 글의 고유한 내용(측정값·단계·1차 출처)만 옮기고 다시 확인한 뒤 `updatedAt` 갱신. 남길 글은 Search Console 28일 노출·색인 상태가 나은 쪽, 비슷하면 상시 글(`ai-tools`·`software`). 지운 글은 `vercel.json` 308 리디렉트(`scripts/lib/vercel-redirects.test.ts` 통과)와 이 맵·다른 글의 링크를 남긴 글로 바꿈
+- **전환**: 날짜가 지난 칼럼 → 같은 주소에서 '지금 할 일' 중심 상시 글로 고침. 1차 출처를 다시 열어 현재 상태로 첫 단락·`What to do now`를 쓰고, 지난 일정은 배경으로 줄임. 카테고리를 `news`에서 상시 카테고리로 바꾸면 이 맵의 칸도 옮김. 제목·설명도 현재 기준으로(제목 틀 반복 금지)
+- 판정 중인 검증 기록(traffic-playbook V1~V7) 대상 글은 판정 날짜 뒤에 처리. 노출이 있는 글을 지울 때는 지우기 전 28일 검색어를 log.md에 남김
+- 새 칼럼은 같은 클러스터의 상시 글로 이어질 때만 쓰고, 이 목록에 있는 글과 겹치면 새로 쓰지 않고 기존 글을 고침
+
+**목록** (위에서부터. 각 세션이 처리 전 Search Console 값으로 남길 글을 다시 판단)
+
+1. 통합: `chrome-enhanced-autofill-gmail`(news) → `chrome-autofill-settings` (같은 Chrome 156 자동 완성 스위치)
+2. 통합: `google-phone-number-verification`(news) → `remove-phone-number-from-google-account` (같은 Google 계정 전화번호)
+3. 통합 + 전환: `google-gmail-photos-ads` + `gemini-android-auto-personal-intelligence`(둘 다 news, Personal Intelligence의 Gmail·Photos 사용) → 상시 글 1편 (backlog `google personal intelligence settings` 후보와 합침)
+4. 전환: `office-2021-end-of-support` (10-13 지원 종료 지남)
+5. 전환: `windows-11-24h2-end-of-support` (10-13 Home·Pro 업데이트 종료 지남, 11-10 Patch Tuesday 뒤 첫 누락 업데이트 확인과 함께)
+6. 검토: `iphone-duo-sold-out` + `iphone-duo-cracked-screen` (같은 기기 칼럼 2편, 상시 글 없는 `phones-subscriptions`) → 구매·수리 비용 상시 글 1편으로 합칠지
+7. 전환(일정 뒤): `pixel-watch-safety-signal-ending`(12-12 뒤, V7 판정 뒤) · `apple-siri-settlement-claim`(12-21 마감 뒤) · `arc-browser-shutting-down`(12-22 종료 뒤)
+

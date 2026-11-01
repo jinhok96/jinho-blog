@@ -28,7 +28,7 @@ src/
     ├── routes/     # 경로·페이지 번호·제목 헬퍼
     ├── ui/         # Breadcrumbs, Container, LocalDate, Pagination, Prose, Toc 등
     └── utils/      # cn, 날짜, 읽기 시간, withEmptyStaticParam
-content/            # posts/*.mdx, pages/*.mdx (about·contact·privacy)
+content/            # posts/*.mdx, pages/*.mdx (about·contact·editorial-policy·privacy)
 experiment/         # 운영 실험 문서·검증 자료 (빌드·린트 대상 아님)
 scripts/registry.ts # 미디어 복사 → 레지스트리 생성 → 기본 OG 이미지 생성
 scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow.ts)
@@ -64,7 +64,8 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - sitemap `lastmod`·RSS `lastBuildDate`는 콘텐츠 날짜 기준 (빌드 시각 금지)
 - sitemap은 전체 URL, RSS는 최근 변경: RSS 항목은 `updatedAt` 내림차순 상위 `RSS_ITEM_LIMIT`(20)개, `pubDate`는 `updatedAt`(마지막 의미 있는 수정 시각, sitemap `lastmod`와 같은 값). 크게 고친 옛 글도 sitemap보다 자주 받아 가는 피드에 다시 오르게 함 (Google Search Central "Best practices for XML sitemaps and RSS/Atom feeds", 2026-11-01)
 - 페이지당 `<h1>` 1개, 이미지는 크기 지정(CLS 0)
-- JSON-LD author·publisher의 `@type`은 `AUTHOR_TYPE`(현재 `Organization`, 이름 = `SITE_NAME`)
+- JSON-LD author·publisher의 `@type`은 `AUTHOR_TYPE`(현재 `Organization`, 이름 = `SITE_NAME`), `url`은 `/about`, `publishingPrinciples`는 `/editorial-policy` (편집 정책 페이지 slug를 바꾸면 `jsonLd.ts`도 함께)
+- 글 머리(`PostHeader`) 메타 첫 항목은 작성자 `By {AUTHOR_NAME}` → `/about` (AdSense 신뢰 신호, 2026-11-01)
 - 삭제한 글 URL은 같은 주제 글로 `vercel.json` `redirects`(`permanent: true` → 308). 원본 글 파일이 없고 대상 글 파일이 있는지 `scripts/lib/vercel-redirects.test.ts`가 검증. 대체 글이 없으면 같은 클러스터 허브, 허브도 없으면 404 ([clusters.md](apps/ad-blog/experiment/clusters.md#규칙))
 - IndexNow(Bing 등): 프로덕션 배포 성공(`deployment_status`, 환경 `Production – ad-blog`) 시 [indexnow.yml](.github/workflows/indexnow.yml)이 직전 성공 배포 이후 추가·수정·삭제된 MDX의 URL만 제출. 배포된 sitemap에 없는 수정 글(초안)은 제외. 수동 실행(workflow_dispatch)은 sitemap 전체 제출
   - 키는 `scripts/lib/indexnow.ts`의 `INDEXNOW_KEY` = `public/{키}.txt` (테스트가 일치 검증), 도메인은 워크플로우의 `NEXT_PUBLIC_SITE_URL`

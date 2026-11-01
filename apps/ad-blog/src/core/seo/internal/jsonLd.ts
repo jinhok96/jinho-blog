@@ -11,6 +11,8 @@ function author(): Person | Organization {
     '@type': AUTHOR_TYPE,
     name: AUTHOR_NAME,
     url: absoluteUrl('/about'),
+    // 편집 원칙 페이지 (작성·검증·수정 기준 공개)
+    publishingPrinciples: absoluteUrl('/editorial-policy'),
     ...(AUTHOR_SAME_AS.length > 0 && { sameAs: AUTHOR_SAME_AS }),
   };
 }

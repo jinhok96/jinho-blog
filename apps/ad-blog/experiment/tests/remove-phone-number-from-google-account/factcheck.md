@@ -64,3 +64,38 @@
 - 기기·통신사별 메뉴 이름 차이 (출처 없음)
 - 상위 결과의 "다른 기기에서 먼저 로그아웃하라" 조언 (Google 문서 근거 없음)
 - 계정 화면 직접 실행: 컨테이너에 Google 계정·Android 기기 없음 → How we checked에 밝힘
+
+## 2026-11-02 KST 세션 72 (개선 세션): 콘텐츠 정리 2번 통합
+
+`google-phone-number-verification`(news, 2026-10-24 발행)을 이 글에 합치고 308 리디렉트. 두 글 모두 28일(10-04~11-01) 웹·Discover·이미지·뉴스 노출 0, URL 검사 둘 다 `Discovered - currently not indexed` → 규칙(clusters.md 콘텐츠 정리)대로 상시 글(`software`)인 이 글을 남김. 지운 글의 사실 확인표·원문·캡처 스크립트는 `tests/google-phone-number-verification/`에 그대로 둠.
+
+**1차 출처 재확인** (2026-11-01T21:31Z UTC, `render.cjs`로 Chromium 렌더링, `source-*-2026-11-01.txt`): 10-24·25판과 공백만 다르고 문장이 같음 (줄 앞뒤 공백·빈 줄을 지우고 diff)
+
+| 원문 | 이전 판 | 결과 |
+| --- | --- | --- |
+| android/answer/7521240 | `source-android-7521240.txt`(10-25) | 같음 |
+| accounts/answer/3463280 (Android) | `source-accounts-3463280-android.txt`(10-25) | 같음 |
+| accounts/answer/3463280 (Desktop) | `source-accounts-3463280-desktop.txt`(10-25) | 같음 |
+| accounts/answer/7222352 (Android) | `../google-phone-number-verification/source-accounts-7222352.txt`(10-24) | 같음 (제목·주소 줄, 플랫폼 선택 줄 위치만 다름) |
+| accounts/answer/183723 (Desktop) | `source-accounts-183723-desktop.txt`(10-25) | 같음 |
+
+**옮긴 내용 → 출처**
+
+| 주장 (새 절 "Why your number is on every Google account…", 고친 절 "How to stop Android…") | 출처 | 확인 |
+| --- | --- | --- |
+| 인증 기본 켜짐, 기기에 로그인한 모든 계정에 추가, 현재·앞으로의 계정·번호 모두, 새 계정은 모든 번호에·새 번호는 모든 계정에 | 7521240 "Turn phone number verification on or off" Important | `source-android-7521240-2026-11-01.txt` 28~29행, 캡처 이미지(10-24 캡처, 문장 같음) |
+| 기기 설정에서만 관리 | 7521240 "You can only manage phone number verification in device settings." | 같음 |
+| 영향 표: 계정 하나·두 번째 개인 계정·두 SIM은 위 문장에서 바로 나옴. 직장·학교 계정은 7521240에 제외 문구 없음 + 183723 "these steps may not work for accounts from work, school"(관리자). 다른 사람 계정은 "all Google Accounts that are signed in on the device" 문구. iPhone·iPad는 Android Help 문서이고 Android 기기 설정 경로뿐 | 7521240, 183723 | 같음. 지운 글의 "Android Authority가 직장 계정 사례를 보도" 문장은 보도라 옮기지 않음 |
+| 3463280: verified numbers "can be added to any Google Account that is signed into that device" | 3463280 (Android) "Verify your Android phone's number" Important | `source-accounts-3463280-android-2026-11-01.txt` 129행 |
+| 7222352: Use a number that "Belongs only to you", "You don't use on another Google Account to sign in" | 7222352 (Android) | `source-accounts-7222352-android-2026-11-01.txt` 38~39행 |
+| 새 Android 기기에서 번호로 계정을 찾아 이메일·비밀번호 없이 로그인 시도, 다른 로그인 기기 승인이나 이전 기기 화면 잠금 필요 | 7222352 (Android) "attempt to identify the Google Accounts associated with the phone number on the new device", "Approve 'Sign in on another signed-in device' or enter the screen lock passcode of your previous Android device" | 같은 파일 61~68행 |
+| 주기적 재인증, "Carrier charges may apply" | 7521240 | 21행 |
+| 계정별 번호 경로: Settings > Google > 맨 위 계정 선택 > Manage your Google Account > Personal info > Phone | 7521240 "Manage Better sharing on Google" 단계 | 같음 |
+| Better sharing on Google: 인증이 켜지면 함께 켜짐, 영상 통화·메시지·사진 등 알림을 Google 서비스로 이 번호에, 여러 계정이면 한 계정만 | 7521240 "Manage Better sharing on Google" | 같음 (두 글 본문에 없던 내용, 지운 글 브리프의 '빠진 것'에 적혀 있었음) |
+| Google 항목 이름이 기기에 따라 "Google services and preferences", 스위치 이름 "Verify phone numbers automatically" | Android Authority (2026-10-14) 보도 | 지운 글 사실 확인표 근거 그대로, 본문에 "Android Authority reported"로 출처 표시 |
+
+**옮기지 않은 것**: 보도 일정 타임라인(10-14 Android Authority ~ 10-24 Engadget)·이미지, 2025년 도움말 문구 변경 시점(Android Authority·Kaspersky 보도), Reddit의 "스위치가 다시 켜진다" 보고(Android Authority도 재현 못 함 → 근거 부족), `Our take` 견해(상시 글이라 견해 절 없음), "세 곳 확인" 그래픽(이 글 도입 요약 표와 겹침). 대표 이미지는 이 글 것을 유지
+
+**이미지**: 지운 글의 `google-help-default-all-accounts.webp` → `google-help-verification-default.webp`, `google-help-pages-compared.webp`를 이 글 폴더로 옮김 (그래픽 원본 `../google-phone-number-verification/charts.py`·`shot.cjs`). 본문 이미지 4 → 6장
+
+**링크 교체**: `gemini-gems-to-skills`(끝 관련 글 문단: 두 링크 → 이 글 하나로), `google-gmail-photos-ads`(What to do now 6번). 이 글의 "our article on Android phone number verification" 링크 → "the next section"

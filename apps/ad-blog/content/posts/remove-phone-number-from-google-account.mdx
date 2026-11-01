@@ -3,6 +3,7 @@ title: How to Remove a Phone Number From Your Google Account
 description: "Remove a phone number from your Google account on a computer, Android or iPhone, then clear it from recovery, 2-Step Verification and Android verification."
 category: software
 createdAt: 2026-10-25T16:23:00Z
+updatedAt: 2026-11-01T21:50:00Z
 tags:
   - Google
   - Google Account
@@ -15,7 +16,7 @@ tags:
 
 To remove a phone number from your Google account, open your Google Account, go to **Personal info > Phone**, select the number, and choose **Delete > Remove number**. That takes the number off the account. It can still sit in your recovery phone, your 2-Step Verification settings and other Google services, and on an Android phone, automatic verification can add it back.
 
-On October 25, 2026, we read 11 Google help pages on phone numbers, recovery options, 2-Step Verification, Google Voice and Android phone number verification, including the sections Google folds behind expandable headings, and listed every place a number can sit. We don't have a Google account or an Android phone in our test setup, so the steps below come from Google's help pages, not from our own screens. The menu names are the ones Google's pages used on that date: the security tab is called **Security & sign-in**, where some older guides say **Security**.
+On October 25, 2026, we read 11 Google help pages on phone numbers, recovery options, 2-Step Verification, Google Voice and Android phone number verification, including the sections Google folds behind expandable headings, and listed every place a number can sit. On November 1, 2026, we rechecked the Android verification, phone number, sign-in and recovery pages, and their wording hadn't changed. We don't have a Google account or an Android phone in our test setup, so the steps below come from Google's help pages, not from our own screens. The menu names are the ones Google's pages used on that date: the security tab is called **Security & sign-in**, where some older guides say **Security**.
 
 | Where the number is | Where to remove it | What removing it does |
 | --- | --- | --- |
@@ -103,19 +104,43 @@ You can keep the number on your account and stop it being used for ads by turnin
 
 When the setting is on, **Across Google** appears next to **Usage** for that number. Google also documents a stricter option: delete the number on the Phone page, then add it back only as a **Recovery phone** under **Security & sign-in**. Then re-add it in any other Google service where you still want it.
 
-If the number got onto a second account you didn't expect, our article on [Android phone number verification](/posts/google-phone-number-verification) explains why Android adds it to every Google account on the phone. Our look at [Google's privacy policy change on Gmail and Photos ads](/posts/google-gmail-photos-ads) covers the separate switch that keeps your inbox out of ads.
+If the number got onto a second account you didn't expect, the next section explains why Android adds it to every Google account on the phone. Our look at [Google's privacy policy change on Gmail and Photos ads](/posts/google-gmail-photos-ads) covers the separate switch that keeps your inbox out of ads.
+
+## Why your number is on every Google account on your Android phone
+
+Your phone number ends up on every Google account on an Android phone because Android's phone number verification is on by default and adds each verified number to all accounts signed in on the device. Google's [Android help page](https://support.google.com/android/answer/7521240?hl=en) says: "We verify the phone number and add them to all Google Accounts that are signed in on the device. This applies to both current and future accounts and phone numbers." In Google's example, a new account links to every number on the phone, and a new number is added to every account.
+
+![Google's Android help page section "Turn phone number verification on or off," with a box around the text saying verification is on by default and verified numbers are added to all Google Accounts signed in on the device, for current and future accounts and numbers](./images/remove-phone-number-from-google-account/google-help-verification-default.webp)
+
+| Your setup | What Google's help page means for you |
+| --- | --- |
+| One Google account on the phone | The phone's number is verified and added to that account |
+| A second personal account, such as a separate Gmail address | The same number is added to it too, even if you keep the accounts apart on purpose |
+| A work or school account on your personal phone | Google's page doesn't exclude it. Your administrator may control whether you can remove the number |
+| Two SIMs, or an eSIM and a SIM | Each verified number is added to each account |
+| Someone else's account signed in on your phone | Google's wording covers "all Google Accounts that are signed in on the device," not only yours |
+| iPhone or iPad | Not covered: the setting is part of Android |
+
+Google's own help pages don't describe this the same way. Google Account Help on [how phone numbers are used](https://support.google.com/accounts/answer/3463280?hl=en&co=GENIE.Platform%3DAndroid) says verified numbers "can be added to any Google Account" signed in on the device, and the page on [signing in with your phone number](https://support.google.com/accounts/answer/7222352?hl=en&co=GENIE.Platform%3DAndroid) tells you to use a number that "Belongs only to you" and that "You don't use on another Google Account to sign in." Automatic verification still puts one number on every account signed in on the phone.
+
+![Three Google help pages compared: Android Help says verified numbers are added to all Google Accounts signed in on the device; Google Account Help says they can be added to any account signed in; the sign-in help page says to use a number that belongs only to you and that you don't use on another Google Account to sign in](./images/remove-phone-number-from-google-account/google-help-pages-compared.webp)
+
+One shared number also matters when you replace your phone. Google's sign-in page says that if your Android phone is lost, stolen or replaced, Google will "attempt to identify the Google Accounts associated with the phone number on the new device" so you can sign in without your email address or password. Google still asks you to approve the sign-in on another signed-in device or enter your old phone's screen lock.
 
 ## How to stop Android from adding your number back
 
-Android can add your phone's number back to your Google accounts because phone number verification is on by default. Google's [Android help page](https://support.google.com/android/answer/7521240?hl=en) says it adds verified numbers "to all Google Accounts that are signed in on the device," for current and future accounts, and Google and your carrier "will try to periodically reverify them."
+To stop Android adding your number back, turn off phone number verification in your phone's Settings app, then remove the number from each account that shouldn't have it. Google's Android help page says you can only manage verification in the device's settings.
 
 1. Open your phone's **Settings** app.
-2. Tap **Google > All services**.
+2. Tap **Google > All services**. On some phones the Google entry has a longer name, such as **Google services and preferences**, Android Authority reported.
 3. Under **Privacy & security**, tap **Phone number verification**.
-4. Choose not to verify your phone number.
-5. Then delete the number from each account, as in the Android steps above.
+4. Choose not to verify your phone number. Android Authority reported the switch is labeled **Verify phone numbers automatically**.
+5. Go back to **Settings > Google**, select the account that shouldn't have the number at the top, then tap **Manage your Google Account > Personal info > Phone**. Check that the account has a recovery email first, as in [Before you remove your phone number](#before-you-remove-your-phone-number).
+6. Select the number and tap **Delete > Remove number**. Repeat steps 5 and 6 for every account where you don't want it.
 
-Turning verification off only stops new links. Google's page lists features verification helps with, including signing in with your number, getting back into your account, emergency location, finding a lost phone, RCS messages and Quick Share, but doesn't say which ones stop when you turn it off.
+Turning verification off only stops new links. While it's on, Google and your carrier "will try to periodically reverify" your numbers, and Google notes that "Carrier charges may apply." Google's page lists features verification helps with, including signing in with your number, getting back into your account, emergency location, finding a lost phone, RCS messages and Quick Share, but doesn't say which ones stop when you turn it off. If you use only one Google account on the phone, you can leave verification on.
+
+Verification also turns on a second switch, **Better sharing on Google**, which Google says helps video calls, messages and notifications for incoming photos and other content reach your number through Google services. If more than one account is signed in on the phone, Google turns it on for only one of them. It sits on the same **Phone** page: select the number and turn **Better sharing on Google** on or off.
 
 ## Why you can't remove a phone number from your Google account
 
@@ -162,4 +187,6 @@ Phone numbers are one of several Google defaults worth checking. Our [guide to t
 ## How we checked
 
 - **Google pages** (opened October 25, 2026, rendered in Chromium with collapsed sections expanded): Google Account Help, [Change the phone number on your account & how it's used](https://support.google.com/accounts/answer/3463280?hl=en&co=GENIE.Platform%3DDesktop) (Computer, Android and iPhone versions), [Set up recovery options](https://support.google.com/accounts/answer/183723?hl=en&co=GENIE.Platform%3DDesktop), [Turn on 2-Step Verification](https://support.google.com/accounts/answer/185839?hl=en&co=GENIE.Platform%3DDesktop), [Fix common issues with 2-Step Verification](https://support.google.com/accounts/answer/185834?hl=en), [Turn off 2-Step Verification](https://support.google.com/accounts/answer/1064203?hl=en&co=GENIE.Platform%3DDesktop), [Sign in with your phone number instead of a username](https://support.google.com/accounts/answer/7222352?hl=en&co=GENIE.Platform%3DDesktop), [Control what others see about you](https://support.google.com/accounts/answer/6304920?hl=en&co=GENIE.Platform%3DDesktop) and two personal info overview pages; Android Help, [Manage phone number verification on your device](https://support.google.com/android/answer/7521240?hl=en); Google Voice Help, [Delete your Google Voice number](https://support.google.com/voice/answer/150640?hl=en&co=GENIE.Platform%3DDesktop)
+- **Rechecked November 1, 2026**: the Android verification page, the phone number page (Android and Computer versions), the Android version of [Sign in with your phone number instead of a username](https://support.google.com/accounts/answer/7222352?hl=en&co=GENIE.Platform%3DAndroid) and Set up recovery options, with the same wording as in October. The two help page images come from our captures on October 24, 2026
+- **Reports**: Android Authority (October 14, 2026) for the label of the verification switch and the longer Google menu name on some phones
 - **Not checked**: we couldn't open the account screens without a Google account or an Android phone, so we couldn't confirm button labels inside the 2-Step Verification section or whether Google blocks removing a number that is your only second step. Google's pages don't say

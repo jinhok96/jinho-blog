@@ -2,6 +2,50 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-02 · 세션 72 (정기 실행, 개선 세션): 콘텐츠 정리 2번 통합(Android 전화번호 인증 칼럼 → Google 계정 전화번호 글) + `compress-pdf-free` 대표 이미지·제목 꼬리표 정리
+
+세션 시각: 2026-11-02 06:15 KST(월) → 개선 세션. 같은 날 앞 세션은 00시 일반 세션 71(DuckDuckGo 새 글) → 다른 글을 다룸. 열린 PR 없음. 작업 브랜치를 `origin/main`(b7bf622)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료. 주간 SEO 점검은 오늘 08:45 예정이라 최근 보고는 10-26 그대로(우선순위 3 대표 이미지를 이어서 처리).
+
+**지표 (`gsc_report.py`, 2026-10-04 ~ 11-01, 세션 71 이후 바뀐 값만)**
+
+- 노출 917 → **925**, 클릭 14, CTR 1.5%, 평균 순위 22.4 → 22.6 (`turn-off-ai-in-chrome` 159 → 161·16.1 / `gemini-gems-to-skills` 45·8.7 / 나머지 상위 글 그대로). 데이터 마지막 날이 아직 11-01이라 주간 클릭은 그대로: 10-05~11 0 → 10-12~18 4 → 10-19~25 6 → 10-26~11-01 4
+- sitemap: `sitemap.xml` 10-27 11:58, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17편 그대로. 발행 54 → **53편**(통합으로 1편 삭제) → 색인율 17/53. 통합 전 54편 기준 `Discovered` 13(지운 글 포함) · `URL is unknown` 24. 몇 분 뒤 `link_seen.py` 때는 `customize-right-click-menu-windows-11`·`free-image-converter-photo-tools`·`turn-off-ai-features`·`chrome-enhanced-autofill-gmail`이 Discovered, `turn-off-copilot-in-word`·`turn-off-gemini-apps-activity`·`ios-27-2-siri-ai-memory`·`iphone-duo-cracked-screen`이 unknown으로 흔들림 (세션 63~71과 같음)
+- `link_seen.py`: 가장 최근 크롤링 **10-30 06:36 UTC 그대로**(`image-to-text-offline-free`, 약 3일째 새 크롤링 없음), 홈 10-28 23:14 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 8~20위 검색어(페이지 × 검색어, 28일, 95쌍 중 14쌍): 모두 노출 1~4회 → 소제목·FAQ 보강 대상 없음. CTR이 낮은 노출 100회 이상 글 3편(`spotify-family-qr-code-verification`·`turn-off-ai-in-chrome`·`image-to-text-offline-free`)은 모두 V 판정 중
+- **AdSense 재신청 조건** (세션 71 대비 바뀐 값만): 색인율 31% → **32%**(17/53, 글 1편 통합) · 운영 22일/92일 · 주간 클릭 증가 0주 그대로 → 미충족
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — 포인트 편집(C 모드)으로 새 절만 Clarity·AI-Tell Check: 콜론 공개형 "Google's example: …" → "In Google's example, …", 판단형 "leaving verification on is reasonable" → "you can leave verification on", "… anyway" → 사실 문장 / `seo-audit` — Image Optimization, On-Page 제목)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 · 콘텐츠 정리 2번 (통합) | `google-phone-number-verification`(news, 10-24) → `remove-phone-number-from-google-account`(software, 10-25) | 남길 글 판단: 두 글 모두 28일 웹·Discover·이미지·뉴스 노출 0(지울 글 검색어 없음), URL 검사 둘 다 `Discovered` → 규칙대로 상시 글을 남김. **1차 출처 4쪽 재확인**(Android 7521240, 계정 3463280 Android·Desktop, 7222352 Android, 183723 Desktop을 Chromium으로 렌더링, `source-*-2026-11-01.txt`): 10-24·25판과 문장이 같음. 옮긴 것: 새 절 "Why your number is on every Google account on your Android phone"(기본 켜짐·모든 계정·현재와 앞으로 문장, 설정별 영향 표 6행, 도움말 3쪽 표현 차이, 새 휴대폰에서 번호로 계정 식별 + 승인 필요) + 도움말 캡처·3쪽 비교 그래픽 2장(이미지 이동), "How to stop Android…" 절을 계정별 삭제까지 6단계로(Android Authority 보도의 메뉴·스위치 이름은 출처 표시), 재인증 통신사 요금, **Better sharing on Google**(인증이 켜지면 함께 켜짐·여러 계정이면 한 계정만: 두 글 본문에 없던 7521240 내용). 옮기지 않은 것: 보도 타임라인, 2025년 도움말 변경 시점, Reddit "다시 켜짐" 보고, `Our take`. 도입 둘째 문단에 11-01 재확인 1문장, How we checked에 재확인·보도 항목. `updatedAt` 2026-11-01T21:50Z(본문 이미지 4 → 6장). `vercel.json` 308 추가(모두 8개), 링크 교체: `gemini-gems-to-skills`(색인 글, 끝 관련 글 문단 두 링크 → 하나), `google-gmail-photos-ads`(What to do now 6번). clusters.md 맵·콘텐츠 정리 목록 2번 취소선 | 콘텐츠 정리 (V 대상 아님). V7 행에 "빠지는 글 관찰에서 제외" 메모: 지운 글은 이미 피드 밖(22번째), 남긴 글은 이미 피드 20편 안(20번째 → 맨 앞)이라 **피드 구성은 그대로** |
+| 2 | 주간 3 · 대표 이미지 + 제목 규칙 | `compress-pdf-free`(unknown 13일, Google이 본 링크 `merge-pdf-files-free` 본문) | `thumbnail`(크기 그래프, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. writing-guide "나머지 기존 글의 괄호 꼬리표는 그 글을 고칠 때 함께 정리"대로 제목 `How to Compress a PDF for Free (3 Tools Tested)` → `How to Compress a PDF for Free`. 본문·설명·`updatedAt` 그대로(RSS 순서 영향 없음) | 규칙 적용 (V 대상 아님: 미색인·노출 0) |
+
+- 대표 이미지 (Z-Image-Turbo, `tests/compress-pdf-free/hero-image.md`): 시드 977581876, **47.7분**, 연분홍 배경 + 청록·남색, 약간 위에서 본 정면. 남색 테두리 받침 위 산호색 둥근 프레스(도장 모양)가 빈 종이 더미를 누르고 긴 종이 한 장이 청록 봉투 쪽으로 흘러나옴. 글자·로고 없음 → 그대로 사용, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: `remove-phone-number-from-google-account` title 65자(접미사 포함, 기존 그대로)·설명 155자, h1 1개·h2 15개(관련 글 제목 포함), BlogPosting dateModified 2026-11-01T21:50Z·BreadcrumbList, `<pre>`·`<code>` 0, 본문 이미지 6장(+ 대표), 본문 앵커 `#before-you-remove-your-phone-number` 연결, `rss.xml` 첫 항목. 지운 글은 `out/posts`·sitemap·rss에서 빠짐, `vercel-redirects.test.ts` 통과. `compress-pdf-free` title 42자(접미사 포함)·H1 일치·설명 155자, dateModified 10-20 그대로, 본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). 두 글 본문 이미지 alt·WebP·lazy 모두 있음(alt 없는 3장은 관련 글 카드 썸네일). lint·type-check·test(35파일 254개)·build 통과, `link_audit` 2건 그대로. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+- 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`)은 Chrome 157 안정판(11-03) 뒤로 미룸: 지금 하면 156으로 확인하고 157에서 다시 확인해야 함. 또 지울 글이 피드 안(9번째)이라 지우면 21번째 글(`image-to-text-offline-free`)이 피드에 다시 들어와 V7 피드 구성이 바뀜 → 2번은 피드 구성을 바꾸지 않아 먼저 처리
+- **발견: 괄호 꼬리표 `(N … Tested)` 제목 14편** — 11-01 정리한 `: What It Means for You`(11편)와 같은 반복 틀. `compress-pdf-free`는 이번에 정리, 남은 13편을 [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) 8번으로 추가(한 세션에 묶어 1건, V1·V2 대상 2편은 판정 뒤, 노출 있는 색인 글은 바꾸기 전 28일 검색어 기록)
+
+**알게 된 것**
+
+- 통합할 두 글이 같은 1차 출처를 쓰면 지운 글 브리프의 '빠진 것' 칸이 옮길 거리 목록이 됨 (이번 Better sharing on Google: 지운 칼럼 브리프에는 적혀 있었지만 두 글 본문 모두에 없었음)
+- 통합은 RSS 피드(최근 변경순 20편) 구성을 바꿀 수 있음: 남길 글이 피드 밖이면 새로 들어오고, 지울 글이 피드 안이면 21번째 글이 들어옴 → V7 판정 중에는 피드 구성을 바꾸지 않는 통합부터 (이번 2번은 둘 다 해당 없음)
+
+**다음 할 일**
+
+- **사용자: Search Console** — 세션 70의 색인 요청 목록 그대로 유효(10-22 이전 발행 unknown 글부터). 지운 `https://tool-proof.com/posts/google-phone-number-verification`은 요청하지 않음(308)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 22일·색인율 32%·클릭 증가 0주)
+- Claude(11-04 이후 개선 세션, Chrome 157 출시 확인 뒤): 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) — Chrome 157로 메뉴 재확인과 함께. 피드 구성이 바뀌는 점을 V7 행에 적음
+- Claude(그 전 개선 세션): 콘텐츠 정리 8번(괄호 꼬리표 제목, V1·V2 2편 빼고 11편) — 3·5·6번은 V7 대상 글 포함, 4번은 11-10 뒤
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정. 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)
+- Claude: 세션 70·71 다음 할 일(남은 대표 이미지 `pdf-to-jpg-free`·`chrome-http-warning-default`·`convert-webp-to-jpg-free`·`remove-bg-alternative-free`·칼럼 2편, Edge 157·Firefox 160·Chrome 157 재확인, 11-10 Patch Tuesday 뒤 Windows 글 후속) 그대로
+- Claude: 발행 53편 (허브 4개). 홈 재크롤링 간격을 노하우 9 중간 관찰에 이어 기록 (10-21 08:37 → 10-28 23:14 → 11-01 22:38: 약 7.6일 → 4일)
+- 대시보드: `stats` 9개 문서 갱신(`daily-2026-11` 처음 생성, `traffic`: Cloudflare 28일 조회수 49·방문 41) + `history` 기록(batch 18개, 회차 2026-11-01T22:36:01Z, DB 문서 258개, 스크래치패드 경로). 회차 시점 28일 노출 931·클릭 14·평균 22.5위. **`summary.crawl`: 홈 마지막 크롤링 11-01 22:38:55 UTC**(10-28 23:14 이후 약 4일 만, 이 세션 PR 배포 전이라 통합 전 홈 목록), 미색인 36편 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 931 · 10위 안 23개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-02 · 세션 71 (정기 실행, 일반 세션): DuckDuckGo AI 끄기와 AI 없는 검색 유지
 
 세션 시각: 2026-11-02 00:16 KST(월) → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(9fad3ab)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료. 지난 7일(10-26~11-01)에 뉴스 칼럼 5편이 있어 칼럼 대체 없이 상시 글.

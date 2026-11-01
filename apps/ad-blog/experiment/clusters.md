@@ -11,7 +11,7 @@
 
 | ID | 클러스터 | 우선순위 | 허브 | 상시 글 | 뉴스 칼럼 |
 | --- | --- | --- | --- | --- | --- |
-| `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | `turn-off-ai-features` | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` `turn-off-apple-intelligence-iphone` `turn-off-ai-in-windows-11` `turn-off-meta-ai-instagram` `remove-phone-number-from-google-account` `turn-off-gemini-apps-activity` `siri-history-on-iphone` `turn-off-ai-in-firefox` `chrome-autofill-settings` `turn-off-copilot-in-edge` `duckduckgo-no-ai` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` `google-gmail-photos-ads` `google-phone-number-verification` `arc-browser-shutting-down` `ios-27-2-siri-ai-memory` `chrome-enhanced-autofill-gmail` |
+| `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | `turn-off-ai-features` | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` `turn-off-apple-intelligence-iphone` `turn-off-ai-in-windows-11` `turn-off-meta-ai-instagram` `remove-phone-number-from-google-account` `turn-off-gemini-apps-activity` `siri-history-on-iphone` `turn-off-ai-in-firefox` `chrome-autofill-settings` `turn-off-copilot-in-edge` `duckduckgo-no-ai` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` `google-gmail-photos-ads` `arc-browser-shutting-down` `ios-27-2-siri-ai-memory` `chrome-enhanced-autofill-gmail` |
 | `photo-video` | 무료 사진·영상 도구 (변환·압축·배경·메타데이터) | 2 | `free-image-converter-photo-tools` | `convert-heic-to-jpg-free` `convert-webp-to-jpg-free` `compress-image-to-100kb` `remove-bg-alternative-free` `remove-metadata-from-photos` `compress-video-for-discord-email` | - |
 | `pdf` | 무료 PDF 도구 | 3 | `best-free-pdf-tools` | `split-pdf-free` `merge-pdf-files-free` `jpg-to-pdf-free` `pdf-to-jpg-free` `pdf-to-word-free` `compress-pdf-free` | - |
 | `offline-ai` | 무료 오프라인 AI 도구 | 4 | `free-offline-ai-tools` | `transcribe-audio-offline-free` `image-to-text-offline-free` | - |
@@ -57,10 +57,11 @@ AdSense "가치가 별로 없는 콘텐츠" 거절 대응([README](README.md#ads
 **목록** (위에서부터. 각 세션이 처리 전 Search Console 값으로 남길 글을 다시 판단)
 
 1. 통합: `chrome-enhanced-autofill-gmail`(news) → `chrome-autofill-settings` (같은 Chrome 156 자동 완성 스위치)
-2. 통합: `google-phone-number-verification`(news) → `remove-phone-number-from-google-account` (같은 Google 계정 전화번호)
+2. ~~통합: `google-phone-number-verification`(news) → `remove-phone-number-from-google-account` (같은 Google 계정 전화번호)~~ — 2026-11-02 세션 72 완료 (두 글 28일 노출 0·둘 다 `Discovered` → 상시 글을 남김. 모든 계정에 붙는 이유·영향 표·도움말 3쪽 비교·새 휴대폰 계정 식별·Better sharing을 옮기고 1차 출처 4쪽 재확인, 308 리디렉트, 링크 2곳 교체. 1번은 Chrome 157(11-03) 뒤로 미룸)
 3. 통합 + 전환: `google-gmail-photos-ads` + `gemini-android-auto-personal-intelligence`(둘 다 news, Personal Intelligence의 Gmail·Photos 사용) → 상시 글 1편 (backlog `google personal intelligence settings` 후보와 합침)
 4. 전환: `office-2021-end-of-support` (10-13 지원 종료 지남)
 5. 전환: `windows-11-24h2-end-of-support` (10-13 Home·Pro 업데이트 종료 지남, 11-10 Patch Tuesday 뒤 첫 누락 업데이트 확인과 함께)
 6. 검토: `iphone-duo-sold-out` + `iphone-duo-cracked-screen` (같은 기기 칼럼 2편, 상시 글 없는 `phones-subscriptions`) → 구매·수리 비용 상시 글 1편으로 합칠지
 7. 전환(일정 뒤): `pixel-watch-safety-signal-ending`(12-12 뒤, V7 판정 뒤) · `apple-siri-settlement-claim`(12-21 마감 뒤) · `arc-browser-shutting-down`(12-22 종료 뒤)
+8. 제목 정리 (2026-11-02 세션 72 추가, 한 세션에 묶어 1건): 괄호 꼬리표 `(N … Tested)` 제목이 14편 중 13편 남음(`compress-pdf-free`는 세션 72 대표 이미지 때 정리) — 11-01 정리한 `: What It Means for You`와 같은 반복 틀. `title`만 바꾸고 `updatedAt`·설명·본문 그대로(RSS 순서·V7 영향 없음). 노출이 있는 색인 글은 바꾸기 전 28일 검색어를 log.md에 남기고, 판정 중인 `transcribe-audio-offline-free`(V1 11-11)·`free-offline-ai-tools`(V2 11-12)는 판정 뒤. 대상: `best-free-pdf-tools` `compress-video-for-discord-email` `convert-heic-to-jpg-free` `compress-image-to-100kb` `jpg-to-pdf-free` `pdf-to-jpg-free` `pdf-to-word-free` `convert-webp-to-jpg-free` `merge-pdf-files-free` `remove-metadata-from-photos` `split-pdf-free` + 판정 뒤 2편. 새 제목끼리도 같은 틀이 반복되지 않게(writing-guide 제목 규칙)
 

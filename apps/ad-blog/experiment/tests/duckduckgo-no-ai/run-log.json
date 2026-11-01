@@ -1,0 +1,153 @@
+{
+  "startedAt": "2026-11-01T15:42:03.644Z",
+  "browser": "Chromium 153.0.8010.12 (Playwright, headless)",
+  "steps": [
+    {
+      "step": "1 default home",
+      "home": {
+        "askAIToggle": 2,
+        "searchToggle": 2,
+        "duckAiHeaderLink": 7,
+        "aiSettingsButton": 3,
+        "optionalBanner": true,
+        "visibleDuckAiLinks": [
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website",
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website",
+          "Duck.ai -> https://duck.ai/?origin=funnel_marketing_website__duckaifeaturecard",
+          "Duck.ai -> https://duck.ai/",
+          "Duck.ai -> https://duck.ai/"
+        ]
+      }
+    },
+    {
+      "step": "2 default AI tab",
+      "ai": {
+        "duckAi_kbg": true,
+        "searchAssist_kbe": "Sometimes",
+        "exploreMore_kbl": "Sometimes",
+        "hideAiImages_kbj": false
+      },
+      "cookies": []
+    },
+    {
+      "step": "3 AI Settings button",
+      "url": "https://duckduckgo.com/",
+      "text": "Search\nAsk AI\nOPTIONAL\n\nToggle to private AI chat or disable in settings.\n\nChat with popular AI models, anonymized by us.\n\nDuck.ai\nSEARCH\nHomepage\nThemes\nSettings\nDOWNLOADS\niOS Browser\nAndroid Browser\nMac Browser\nWindows Browser\nBrowser Extensions\nMORE FROM DUCKDUCKGO\nDuckDuckGo Subscription\nDuck.ai\nEmail Protection\nNewsletter\nBlog\nPodcast\nCollaborations\nNEW\nLEARN MORE\nWhat’s New\nCompare Privacy\nAbout Our Browser\nAbout DuckDuckGo\nOTHER RESOURCES\nHelp\nCommunity\nCareers\nPrivacy Policy\nTerms of Service\nPress Kit\nAdvertise on Search\nSwitch to DuckDuckGo.\nIt’s privateand free!\n\nMake DuckDuckGo your default search engine.\n\nSet As Default Search\n\nRECOMMENDED\n\nAdd our free extension to block web trackers.\n\nAdd Extension\n\nTrusted by tens of millions worldwide!\n\nAI Settings\nDiscover more from DuckDuckGo.\n\nPrivate Search\n\nDuck.ai\n\nSubscription\n\nEmail\n\nSearch or enter address\nThe browser that actively protects your personal information.\nDownload DuckDuckGo\n\nEvade scams & data-hungry companies\n\nPROTECTION\n\nBlock most ads & cookie pop-ups\n\nPRIVACY\n\nSearch & chat without being tracked\n\nPEACE OF MIND\n\nSee how DuckDuckGo compares.\nChrome\nEdge\nSafari\nFirefox\nBrave\n\t\t\n\n\nSearch privately by default\n\n\t\n\t\n\n\n\nChat privately with popular AI chatbots (optional)\n\n\t\n\t\n\n\n\nBlocks 3rd-party trackers from Facebook, Google, and others\n\n\t\n\t\n\n\n\nBlocks targeted ads\n\n\t\n\t\n\n\n\nBlocks cookie pop-ups\n\n\t\n\t\n\n\n\nWatch YouTube videos without ads\n\n\t\n\t\n\n\n\nSecurely manages passwords\n\n\t\n\t\n\n\n\nBlocks email trackers\n\n\t\n\t\n\n\n\nDel"
+    },
+    {
+      "step": "4 after Duck.ai off",
+      "cookies": [
+        "duckduckgo.com bg=-1"
+      ],
+      "home": {
+        "askAIToggle": 0,
+        "searchToggle": 0,
+        "duckAiHeaderLink": 5,
+        "aiSettingsButton": 0,
+        "optionalBanner": false,
+        "visibleDuckAiLinks": [
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website",
+          "Duck.ai -> https://duck.ai/?origin=funnel_marketing_website__duckaifeaturecard",
+          "Duck.ai -> https://duck.ai/",
+          "Duck.ai -> https://duck.ai/"
+        ]
+      }
+    },
+    {
+      "step": "5a modal after Search Assist Never",
+      "label": "search-assist-never",
+      "modal": true,
+      "text": "X\n\nYour settings are saved, but clearing cookies will reset them. Install the DuckDuckGo No AI extension to make it permanent. Learn More\n\nInstall Now",
+      "links": [
+        " -> https://duckduckgo.com/settings#",
+        "X -> https://duckduckgo.com/settings#",
+        "Learn More -> https://duckduckgo.com/duckduckgo-help-pages/ai-features/about-noaiduckduckgocom",
+        "Install Now -> https://chromewebstore.google.com/detail/duckduckgo-no-ai-search/faoilnlkccdjdkpljainiiimmijofmpd"
+      ],
+      "buttons": [],
+      "stillShowing": false
+    },
+    {
+      "step": "5b modal after Explore More Never",
+      "label": "explore-more-never",
+      "modal": false
+    },
+    {
+      "step": "5 after all AI off",
+      "ai": {
+        "duckAi_kbg": false,
+        "searchAssist_kbe": "Never",
+        "exploreMore_kbl": "Never",
+        "hideAiImages_kbj": true
+      },
+      "cookies": [
+        "duckduckgo.com bg=-1",
+        "duckduckgo.com be=0",
+        "duckduckgo.com bl=0",
+        "duckduckgo.com bj=1"
+      ]
+    },
+    {
+      "step": "6 bookmarklet data",
+      "urls": null,
+      "snippet": "Bookmarklet URL:\n\nSettings in JSON:\n\n{\"kbg\":\"-1\",\"kbe\":\"0\",\"kbl\":\"0\",\"kbj\":\"1\"}\n\nCookie data:\n\nbg=-1; be=0; bl=0; bj=1\n\nSee the URL Parameter Reference page for more details.\n\nSearch settings are stored in non-personal browser cookies and local storage in your browser, but you can also use Cloud Save to store your settings anonymously on a remote server in the cloud. No personally identifiable information will be stored in the cloud, and your passphrase will never leave your browser.\n\nReset All Search Settings\nLearn how DuckDuckGo settings are managed\nClose menu\nSEARCH\nHomepage\nThemes\nSettings\nDOWNLOADS\niOS Browser\nAndroid Browser\nMac Browser\nWindows Browser\nBrowser Extensions\nMORE FROM DUCKDUCKGO\nDuck.ai\nEmail Protection\nNewsletter\nBlog\nPodcast\nCollaborations\nLEARN MORE\nWhat’s New\nCompare Privacy\nAbout Our Browser\nAbout DuckDuckGo\nOTHER RESOURCES\nHelp\nCommunity\nCareers\nPrivacy Policy\nTerms of Service\nPress Kit\nAdvertise on Search\nSet DuckDuckGo as your default search engine\n×"
+    },
+    {
+      "step": "7 same profile new tab",
+      "home": {
+        "askAIToggle": 0,
+        "searchToggle": 0,
+        "duckAiHeaderLink": 5,
+        "aiSettingsButton": 0,
+        "optionalBanner": false,
+        "visibleDuckAiLinks": [
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website",
+          "Duck.ai -> https://duck.ai/?origin=funnel_marketing_website__duckaifeaturecard",
+          "Duck.ai -> https://duck.ai/",
+          "Duck.ai -> https://duck.ai/"
+        ]
+      }
+    },
+    {
+      "step": "8 new profile (cookies cleared)",
+      "home": {
+        "askAIToggle": 2,
+        "searchToggle": 2,
+        "duckAiHeaderLink": 7,
+        "aiSettingsButton": 3,
+        "optionalBanner": true,
+        "visibleDuckAiLinks": [
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website",
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website",
+          "Duck.ai -> https://duck.ai/?origin=funnel_marketing_website__duckaifeaturecard",
+          "Duck.ai -> https://duck.ai/",
+          "Duck.ai -> https://duck.ai/"
+        ]
+      }
+    },
+    {
+      "step": "9 new profile AI tab",
+      "ai": {
+        "duckAi_kbg": true,
+        "searchAssist_kbe": "Sometimes",
+        "exploreMore_kbl": "Sometimes",
+        "hideAiImages_kbj": false
+      }
+    },
+    {
+      "step": "11 noai home",
+      "home": {
+        "askAIToggle": 0,
+        "searchToggle": 0,
+        "duckAiHeaderLink": 1,
+        "aiSettingsButton": 0,
+        "optionalBanner": false,
+        "visibleDuckAiLinks": [
+          "Duck.ai -> https://duck.ai/?origin=funnel_home_website"
+        ]
+      },
+      "cookies": []
+    }
+  ],
+  "finishedAt": "2026-11-01T15:43:46.066Z"
+}

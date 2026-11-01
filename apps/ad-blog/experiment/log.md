@@ -2,6 +2,57 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-02 · 세션 71 (정기 실행, 일반 세션): DuckDuckGo AI 끄기와 AI 없는 검색 유지
+
+세션 시각: 2026-11-02 00:16 KST(월) → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(9fad3ab)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료. 지난 7일(10-26~11-01)에 뉴스 칼럼 5편이 있어 칼럼 대체 없이 상시 글.
+
+**지표 (`gsc_report.py`, 2026-10-04 ~ 11-01, 세션 70 이후 바뀐 값만)**
+
+- 노출 915 → **917**, 클릭 14, CTR 1.5%, 평균 순위 22.4 (`image-to-text-offline-free` 123 → 124·16.0 / `iphone-duo-sold-out` 42 → 43·7.9 / `spotify-family-qr-code-verification` 261·16.6 / `turn-off-ai-in-chrome` 159·15.2 그대로)
+- 주간 검색 클릭 (`--days 7/14/21/28` 차이): 10-05~11 0 → 10-12~18 4 → 10-19~25 6 → **10-26~11-01 4** (감소)
+- sitemap: `sitemap.xml` 10-27 11:58, `rss.xml` 11-01 08:38 UTC 그대로 → V7(피드 최근 변경순) 배포 뒤 아직 피드 다운로드 없음
+- URL 검사: 색인 17편 그대로 (새 글 포함 17/54), `Discovered` 16 · `URL is unknown` 20 (몇 분 뒤 `link_seen.py` 때는 `arc-browser-shutting-down`·`remove-phone-number-from-google-account` 등이 unknown으로 흔들림, 세션 63~70과 같음)
+- `link_seen.py`: 가장 최근 크롤링 **10-30 06:36 UTC 그대로**(`image-to-text-offline-free`), 홈 10-28 23:14 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- **AdSense 재신청 조건**: 운영 22일/92일(2027-01-11) · 색인율 31%(17/54, 목표 70%) · 주간 검색 클릭 4주 연속 증가 0주(최근 주 4 < 직전 주 6) → 미충족
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02 08:45)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `duckduckgo-no-ai` | `software` | `ai-settings` 상시 글 (검색형) | **duckduckgo.com 홈·Search Settings·noai.duckduckgo.com·Chromium 설정을 headless Chromium 153(새 프로필·로그인 없음)으로 직접 확인**: AI Features 탭 설정 4개와 기본값(Duck.ai On, Search Assist Sometimes, **Explore More** Sometimes — DuckDuckGo의 AI opt-out 도움말에 없는 AI 후속 질문 설정, Hide AI-Generated Images Off), Duck.ai를 끄면 홈의 Ask AI 토글·Duck.ai 버튼·OPTIONAL 안내·AI Settings 버튼이 사라짐, Search Assist를 Never로 바꾸면 "clearing cookies will reset them" 경고 창 + No-AI 확장 Install Now, 설정은 쿠키 4개(`bg`·`be`·`bl`·`bj`, 각 365일)라 새 프로필에서 모두 기본값으로 돌아옴, 홈 AI Settings 창의 **Search Only는 Ask AI 토글만** 숨기고 Duck.ai는 그대로, noai 설정 페이지에는 AI Features 탭이 없고 AI 이미지 숨기기 기본 On, Chrome **Site search → Make default**로 noai를 기본 검색으로("DuckDuckGo No AI (Default)"), Firefox용 No-AI 확장 패키지가 기본 검색 "DuckDuckGo (No AI)"를 noai 주소로 지정 |
+
+- 선정 근거: [클러스터 공백 후보](backlog.md#클러스터-공백-후보)의 `ai-settings` 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`·`turn off improve siri and dictation`·`turn off ai in adobe acrobat`)는 모두 문서 기반이고, `google personal intelligence settings`는 콘텐츠 정리 3번과 겹쳐 제외. 반복 일정(Chrome 157 11-03, Firefox 160 11-06, Windows 11-10)은 아직. `duckduckgo ai`·`brave leo`·`turn off ai overviews`를 자동완성으로 비교해 직접 확인할 수 있는 DuckDuckGo를 고름. `demand_check.py suggest`: `duckduckgo no ai` Google·Bing·YouTube 3곳, `noai duckduckgo` 3곳, `turn off ai in duckduckgo` Google·Bing. Trends 12개월 후보끼리 `duckduckgo ai` 43.5 · `edge copilot` 30.9 · `turn off galaxy ai` 6.6 · `brave leo` 5.8 · `turn off gemini on android` 3.9
+- 상위 결과(WebSearch `duckduckgo no ai`): 5~6월 트래픽 뉴스(TechCrunch·MacRumors·Decrypt·Vice), noai.duckduckgo.com, Tom's Guide 활용법, 개인 블로그(사용자 지정 검색 엔진). `how to turn off AI in DuckDuckGo`: lireo.com·DuckDuckGo 도움말·Tom's Guide·Vice·devx. 빠진 것: Explore More, 설정이 쿠키라 지워진다는 직접 확인, 설정별 진입점, Search Only의 한계, 확장 없이 Chrome 기본값
+- 주 검색어: `duckduckgo no ai`. 제목 `How to Use DuckDuckGo With No AI and Keep It That Way`(53자, 최근 제목 10편의 `How to Turn Off …` 틀을 피함), 설명 145자
+- 1차 출처: DuckDuckGo 도움말 13쪽(noai·opt-out·optional AI·approach·Search Assist·AI 이미지·Duck.ai 숨기기·설정 저장·Cloud Save·URL 매개변수·비공식 확장 등, `source-help-*.txt`), DuckDuckGo 설정·noai 페이지 직접 확인(`source-ddg-settings-ai-features-tab.txt`·`source-noai-*.txt`), Chrome Web Store·Firefox Add-ons(사용자 40,000·39,560, 2026-11-01), Google Chrome 도움말 95426, Firefox용 확장 패키지 `manifest.json`. 실행 기록 `tests/duckduckgo-no-ai/capture-notes.md`, 스크립트 `run.cjs`·`homepage-panel.cjs`·`chrome-se2.cjs`·`cookies-all.cjs` 등, 결과 `run-log.json`·`homepage-panel-log.json`·`chrome-site-search-log.json`·`cookie-attributes.txt`
+- 쓰지 않은 것: 검색 결과 화면(Search Assist 답변·Explore More 질문·이미지 탭 필터) — **DuckDuckGo 검색 결과 페이지가 자동화 브라우저에 418 오류 페이지를 돌려줌**, 차단은 우회하지 않고 도움말 문장으로만 씀(우회 설정 시도는 권한 분류기도 거부). DuckDuckGo 브라우저 앱(리눅스판 없음, 도움말 기반), 확장 설치 뒤 동작(설치하지 않음), URL 매개변수 북마크(Bookmarklet URL 칸이 비어 있고 도움말에 AI 매개변수 없음), Safari·모바일 검색 엔진 목록 동작(1차 출처 없음)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1318772707, 46.4분, 연보라 배경 + 머스터드·세이지, 3/4 시점 요청이 정면에 가깝게 그려짐. 연노랑 받침 위 빈 검색창 캡슐에 돋보기가 기대 있고 빗자루가 작은 별 3개를 쓸어 냄. 글자·로고·오리 모양 없음 → 그대로 사용, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 5장(AI Features 설정 화면 + 기본값, 홈 위쪽 3상태(기본·Duck.ai 끔·noai), 홈 AI Settings 창 Search Only, 쿠키 초기화 경고 창, Chrome 사이트 검색 추가·기본값, `charts.py` 라이트 모드). 처음 넣은 장면(검색창 옆 반짝이 별을 상자에 넣는 그림)은 `turn-off-ai-in-firefox` 대표 이미지(열린 상자 위 반짝이 별)와 구도가 겹쳐 12분 만에 멈추고 빗자루 장면으로 바꿈
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, `turn-off-ai-in-firefox`·`turn-off-copilot-in-edge`·`turn-off-ai-in-chrome` (4개). 역링크 3개: 색인된 `gemini-gems-to-skills`(다른 앱 AI 문단, Firefox 문장 뒤 1문장) · 허브(제품 표 행 + 새 절 "How to turn off AI in DuckDuckGo", `updatedAt` 11-01) · `turn-off-ai-in-firefox`(Perplexity 항목 끝 1문장). `turn-off-ai-in-chrome`(V3)·`check-if-image-is-ai-generated`(V6)는 판정 전이라 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page 항목(제목 53자·H1 일치·주 검색어 첫 문장, 설명 145자, 받는 링크 3곳, 이미지 alt·파일 이름·WebP, em dash 0, 백틱 0). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 65자(접미사 포함, 본제목 53자)·description 145자, BlogPosting(발행 2026-11-01T16:40Z, author ToolProof)/BreadcrumbList JSON-LD 정상, h1 1개·h2 10개(관련 글 제목 포함)·h3 8개(소제목 3·FAQ 3·관련 글 카드), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 5장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함, `rss.xml` 첫 항목 새 글·둘째 허브(`updatedAt` 11-01 → V7 피드 진입 글이 하나 늘어남: 허브는 미색인). 허브 dateModified 2026-11-01. 본문 약 1,930단어(표·이미지·링크 주소 제외, FAQ·How we tested 포함). lint·type-check·test(35파일 254개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개, 새 태그 `DuckDuckGo`·`search`). 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+
+**알게 된 것**
+
+- **DuckDuckGo AI 설정은 계정이 아니라 쿠키**: 4개 모두 1년짜리 쿠키(서버가 아니라 페이지 스크립트가 씀)라 쿠키 삭제·비공개 창·새 프로필에서 기본값으로 돌아옴. DuckDuckGo 스스로 Search Assist를 Never로 바꾸는 순간 경고 창으로 알리고 No-AI 확장을 권함 → 설정 글은 "어디에 저장되나"와 새 프로필 유지 여부를 함께 봄 (writing-guide 정확성에 추가)
+- **도움말이 설정 화면보다 늦음**: 설정 화면의 Explore More(AI 후속 질문)는 AI opt-out 도움말에 없고, Duck.ai 숨기기 도움말은 스위치를 옛 이름 Chat으로 부름 → 직접 본 화면이 차별점
+- **noai의 검색 설명 파일은 duckduckgo.com을 가리킴**: noai 홈은 검색 설명 링크가 없고 `opensearch.xml`도 duckduckgo.com 주소라 브라우저가 noai를 자동으로 검색 엔진에 넣지 않음 → 확장이나 직접 추가가 필요
+- DuckDuckGo 검색 결과 페이지는 자동화 브라우저를 418로 막음. 홈·설정·도움말은 열림 (README 인프라 상태)
+
+**다음 할 일**
+
+- **사용자: Search Console** — 세션 70의 색인 요청 목록 그대로 유효(10-22 이전 발행 unknown 글부터). 새 글 `https://tool-proof.com/posts/duckduckgo-no-ai`는 V7 판정과 섞이지 않게 요청하지 않고 피드·sitemap 발견을 봄
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 22일·색인율 31%·클릭 증가 0주)
+- Claude(다음 개선 세션): [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) — 세션 70 이후 아직 처리 전. Chrome 157(11-03) 뒤에 하면 메뉴 재확인과 함께
+- Claude(다음 일반 세션 11-04 수): `ai-settings` 후보 `turn off leo ai in brave`(Brave Linux 설치 파일 확인), `turn off gemini on android phone`, `turn off galaxy ai`, `dia browser ai privacy`. `windows-microsoft` `windows 11 optional updates`(11-10 뒤가 나음)
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정 (세션 70 다음 할 일 그대로). 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)
+- Claude: 세션 70 다음 할 일(대표 이미지 남은 글, Edge 157·Firefox 160·Chrome 157 재확인, 11-10 Patch Tuesday 뒤 Windows 글 후속) 그대로
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 47·방문 39) + `history` 기록(batch 16개, 회차 2026-11-01T16:06:16Z, DB 문서 248개, 스크래치패드 경로). `daily-2026-11` 문서는 이번에도 만들어지지 않음(다음 회차). `summary.crawl` 최근 크롤링 10-30 06:36, 홈 10-28 23:14, 미색인 37편 중 Google이 본 링크 20편. 목표: 색인율 17/54 (31%) · 28일 노출 917 · 10위 안 23개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-01 · AdSense 거절(가치가 별로 없는 콘텐츠) 대응: 발행 주 3편·콘텐츠 정리·신뢰 요소 (사용자 요청)
 
 사용자가 AdSense 심사 결과를 전달: **"가치가 별로 없는 콘텐츠"로 거절**. 문구는 고유 가치·꾸준한 운영·상업 광고를 뒷받침할 사용자 관심을 따로 짚었고, 재제출 전 확인 사항으로 신뢰할 수 있는 고품질 정보, 지속적인 큐레이션·구조 유지, 실제 사용자 관심 유도를 들고 빈약한 콘텐츠·웹 검색 스팸 정책을 링크함.

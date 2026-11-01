@@ -1,0 +1,59 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/ai-features/opting-out-of-ai
+Fetched: 2026-11-01T15:31:59.740Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/ai-features/opting-out-of-ai
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+DuckDuckGo’s Approach to AI
+Opting Out of AI Features
+About noai.duckduckgo.com
+Misconceptions
+Legal
+Privacy Guides
+AI Features
+Opting Out of DuckDuckGo AI Features
+
+At DuckDuckGo, we recognize not everyone wants AI in their browser or search results. That’s why all our AI features are optional and can be turned off or tuned down.
+
+Turn off Duck.ai in the DuckDuckGo browser
+
+Go to Settings > AI Features
+Turn off Duck.ai to completely disable Duck.ai features in the browser
+
+Turn off Duck.ai in DuckDuckGo search
+
+Go to Search Settings > AI Features
+Turn off Duck.ai
+Select Save and Exit to refresh DuckDuckGo search with Duck.ai disabled
+
+Turn off Search Assist
+
+Go to Search Settings > AI Features
+Select Never from the Search Assist dropdown options
+Select Save and Exit to refresh DuckDuckGo search with Search Assist disabled
+Learn More
+About noai.duckduckgo.com
+AI Features - Duck.ai
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

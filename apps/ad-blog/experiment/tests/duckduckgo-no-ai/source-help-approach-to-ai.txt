@@ -1,0 +1,49 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/duckai/approach-to-ai
+Fetched: 2026-11-01T15:33:57.135Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/duckai/approach-to-ai
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+DuckDuckGo’s Approach to AI
+Opting Out of AI Features
+About noai.duckduckgo.com
+Misconceptions
+Legal
+Privacy Guides
+Optional AI
+What is DuckDuckGo’s approach to AI?
+
+At DuckDuckGo, we believe the best way to protect your personal information from hackers, scammers, and privacy-invasive companies is to stop it from being collected at all. Our search engine doesn’t collect your search history; our browser offers a suite of built-in protections like ad tracker blocking and cookie blocking; and our optional DuckDuckGo subscription includes a VPN that prevents websites from collecting your IP address.
+
+Our approach to AI extends this strategy by integrating private, useful, and optional AI features that don’t track how you use them or train on your data. We’re not making AI features just for the sake of it. We believe our AI features will help people get faster, high-quality answers to their questions. However, we recognize not everyone wants AI in their lives, which is why all our AI features are optional and can be turned off or tuned down from your search and browser settings.
+
+We currently have two AI features. Duck.ai offers free access to popular chatbots, anonymized by us. Search Assist answers are sourced from the web and appear alongside our traditional search results.
+
+Both Duck.ai and Search Assist are free to use and anonymized by us, with no account required.
+
+Learn More
+Opting Out of DuckDuckGo AI Features
+About noai.duckduckgo.com
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

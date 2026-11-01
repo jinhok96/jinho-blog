@@ -1,0 +1,11 @@
+[
+ {
+  "name": "bg",
+  "value": "-1",
+  "domain": "duckduckgo.com",
+  "httpOnly": false,
+  "expiresInDays": 365
+ }
+]
+Set-Cookie headers: 0 []
+[{"name":"bg","value":"-1","domain":"duckduckgo.com","httpOnly":false,"expiresInDays":365},{"name":"be","value":"0","domain":"duckduckgo.com","httpOnly":false,"expiresInDays":365},{"name":"bl","value":"0","domain":"duckduckgo.com","httpOnly":false,"expiresInDays":365},{"name":"bj","value":"1","domain":"duckduckgo.com","httpOnly":false,"expiresInDays":365}]

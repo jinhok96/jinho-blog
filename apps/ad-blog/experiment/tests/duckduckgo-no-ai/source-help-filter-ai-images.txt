@@ -1,0 +1,97 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/results/how-to-filter-out-ai-images-in-duckduckgo-search-results
+Fetched: 2026-11-01T15:34:11.314Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/results/how-to-filter-out-ai-images-in-duckduckgo-search-results
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Features
+Search Assist
+Recent Search Improvements
+Where Our Results Come From
+Improve Local Results on Mobile
+Improve Local Results on Desktop
+Using 3rd-Party Map Apps on Mobile
+Sort Results by Date
+Filter Out AI Images
+How To Block Sites in Results
+Safe Search
+Translations
+Advanced Search Syntax
+Keyboard Shortcuts
+!Bang Shortcuts
+Save Settings With Cloud Save
+Instant Answers and Other Features
+How News Rankings Work
+Number of Results
+Can a traditional search result be removed from DuckDuckGo?
+Our Short Domain
+About DuckDuckBot
+About DuckAssistBot
+Advertise on DuckDuckGo Search
+Easter Egg Dax Logos
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+Search Results
+How To Filter Out AI Images in DuckDuckgo Search Results
+
+If you don't want AI-generated images to show up in DuckDuckGo image search results, you can filter them out a few different ways:
+
+Anytime you’re viewing image search results in the Images tab on DuckDuckGo search, you can click the AI images filter and select Hide to reload results without AI-generated content.
+Alternatively, open Search Settings > General or Search Settings > AI Features and turn on Hide AI-Generated Images.
+In the DuckDuckGo browser, go to Settings > AI Features and turn on Hide AI Images.
+Finally, if you want a search experience without AI-generated images, without Search Assist answers, and without Duck.ai prompts and entry points, start your searches on noai.duckduckgo.com instead of duckduckgo.com, or go to Settings > AI Features in the DuckDuckGo browser and select Use DuckDuckGo Without AI.
+How does DuckDuckGo filter out AI-generated images in search results?
+
+We rely on publicly available lists to filter out AI-generated content, like those provided by uBlockOrigin & uBlacklist Huge AI Blocklist, an open-source blocklist, manually curated by project contributors.
+
+These lists are not exhaustive, but our aim with the “AI images” filter is to filter out as much AI-generated content as possible.
+
+Learn More
+What search features does DuckDuckGo Search have?
+About DuckDuckGo Search Assist
+What search improvements has DuckDuckGo made recently?
+Where do DuckDuckGo search results come from?
+How to improve your local search results on DuckDuckGo (mobile)
+How to improve your local search results on DuckDuckGo (desktop)
+Using 3rd-Party Mapping Apps on Mobile Devices
+How To Sort DuckDuckGo Search Results by Date
+How To Block Sites From Appearing in DuckDuckGo Search Results
+How To Use the Safe Search Setting To Adjust Adult Content in DuckDuckGo Search Results
+Does DuckDuckGo Search have a Translation feature?
+How to use advanced syntax on DuckDuckGo Search
+How To Use Keyboard Shortcuts on DuckDuckGo Search
+How To Use “!Bang” Shortcuts on DuckDuckGo Search
+How To Use Cloud Save to Save and Sync Your DuckDuckGo Search Settings
+Does DuckDuckGo Search have Instant Answers?
+How do news rankings work on DuckDuckGo Search?
+Why doesn't DuckDuckGo Search display the number of results?
+Can a traditional search result be removed from DuckDuckGo?
+Does DuckDuckGo Search have a shorter domain name?
+Is DuckDuckBot related to DuckDuckGo?
+Is DuckAssistBot related to DuckDuckGo?
+Advertise on DuckDuckGo Search
+Easter Egg Dax Logos
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

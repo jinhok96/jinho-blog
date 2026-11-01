@@ -1,0 +1,72 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/add-ons/removal
+Fetched: 2026-11-01T15:46:17.425Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/add-ons/removal
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+How much does DuckDuckGo cost?
+Does DuckDuckGo make a browser?
+Add the DuckDuckGo Extension
+How to Deploy DuckDuckGo Private Search in Your Organization
+Get the DuckDuckGo Browser
+Get the DuckDuckGo Browser Extension
+Firefox
+Chrome
+Edge
+Opera
+Firefox Mobile Add-On
+Remove unofficial DuckDuckGo extensions
+Get DuckDuckGo Private Search
+Mobile Search Widget
+Search Results
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+How To Get DuckDuckGo/Get the DuckDuckGo Browser Extension
+How do I remove unofficial DuckDuckGo Chrome extensions?
+
+We've discovered some malicious Chrome extensions, often with the word "video" in the name, are incorrectly sending searches to DuckDuckGo and Bing. Some of the extension names we've seen are "My Video Grid", "Video Tips", and "My Vital Video". DuckDuckGo is in no way affiliated with these extensions. However, we would like to help you resolve this issue.
+
+Please refer to Google’s official instructions for removing extensions from Chrome.
+
+Some extensions we suspect to be malicious are also listed below, where the company behind these extensions appears in the referrer header of search requests on DuckDuckGo that triggered our fraud detection.
+
+CoolSearches New Tab
+RecipeSearch
+GameVille
+
+If you have one of these extensions installed or suspect you may have installed a malicious extension, you can help DuckDuckGo identify and mitigate fraudulent requests to our search engine (sometimes known as “botty traffic”) by letting us know.
+
+To report an extension you think is malicious, send an email to ops@duckduckgo.com. If you email us, we may contact you using the email provided to troubleshoot the issue.
+
+Learn More
+How To Get the DuckDuckGo Firefox Extension
+How To Get the DuckDuckGo Chrome Extension
+How To Get the DuckDuckGo Edge Extension
+How To Get the DuckDuckGo Opera Extension
+How To Add DuckDuckGo to Firefox Mobile
+How To Get DuckDuckGo - Get the DuckDuckGo Browser
+How To Get DuckDuckGo - Get DuckDuckGo Private Search
+How To Get DuckDuckGo - Mobile Search Widget
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

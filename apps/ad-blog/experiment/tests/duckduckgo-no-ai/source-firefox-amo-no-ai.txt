@@ -1,0 +1,193 @@
+URL: https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-no-ai-search/
+Fetched: 2026-11-01T15:46:06.201Z
+Final URL: https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-no-ai-search/
+
+Firefox Browser Add-ons
+Extensions
+Themes
+More…
+Log in
+Search
+Search
+DuckDuckGo No-AI Search
+by DuckDuckGo
+
+Search privately by default, without AI features.
+
+4 (45 reviews)
+4 (45 reviews)
+39,560 Users
+39,560 Users
+Download Firefox and get the extension
+Download file
+Extension Metadata
+Screenshots
+About this extension
+At DuckDuckGo, we believe AI should be optional. That's why we've created this extension, which sets your default search engine to DuckDuckGo, but to a version that doesn't use AI tools.
+
+Searching with the DuckDuckGo No-AI Search works the same as searching with DuckDuckGo Search, except AI-generated images are filtered out of image results by default, and all other AI features have been removed completely, all while delivering the trusted DuckDuckGo results you love.
+
+Feature highlights:
+- All the great features of DuckDuckGo Search, minus AI tools.
+- Ideal for straightforward, seamless searching without AI tools.
+- Perfect if you never want AI to help you search.
+
+Considering AI?
+If you prefer more flexibility, check out our full-featured extension, DuckDuckGo Search & Tracker Protection, where you can easily toggle AI settings on and off according to your preferences. It also blocks trackers as you browse for even more privacy. Get started at https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/
+
+Privacy Policy: https://duckduckgo.com/privacy
+Terms of Service: https://duckduckgo.com/terms
+Expand to
+Read more
+Rated 4 by 45 reviewers
+Log in to rate this extension
+There are no ratings yet
+5
+29
+4
+4
+3
+3
+2
+3
+1
+6
+Read all 45 reviews
+Permissions and data
+Required permissions:
+Block content on any page
+Access browser tabs
+Access your data for sites in the duckduckgo.com domain
+Access your data for duckduckgo.com
+Optional permissions:
+Access your data for sites in the duckduckgo.com domain
+Access your data for duckduckgo.com
+Data collection:
+The developer says this extension doesn't require data collection.
+Learn more
+Expand to
+Read more
+More information
+Add-on Links
+Homepage
+Copy add-on ID
+Version
+2026.9.25
+Size
+22.44 KB
+Last updated
+a month ago (Sep 25, 2026)
+Related Categories
+Search Tools
+License
+Apache License 2.0
+Version History
+See all versions
+Tags
+image searchprivacy
+Add to collection
+Select a collection…
+Create new collection
+Report this add-on
+Other popular extensions
+Dark Reader
+Recommended
+Recommended
+1,360,869 users
+Grammar and Spell Checker - LanguageTool
+321,225 users
+Search by Image
+Recommended
+Recommended
+465,644 users
+Tree Style Tab
+Recommended
+Recommended
+140,778 users
+Go to Mozilla's homepage
+Add-ons
+About
+Firefox Add-ons Blog
+Extension Workshop
+Developer Hub
+Developer Policies
+Community Blog
+Forum
+Report a bug
+Review Guide
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+All
+Latest Builds
+Nightly
+Beta
+Firefox for Business
+Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+PrivacyCookiesLegal
+
+Except where otherwise noted, content on this site is licensed under the Creative Commons Attribution Share-Alike License v3.0 or any later version.
+
+Change language
+Čeština
+Deutsch
+Dolnoserbšćina
+Ελληνικά
+English (Canadian)
+English (British)
+English (US)
+Español (de Argentina)
+Español (de Chile)
+Español (de España)
+Español (de México)
+فارسی
+suomi
+Français
+Furlan
+Frysk
+עברית
+Hrvatski
+Hornjoserbsce
+magyar
+Interlingua
+Italiano
+日本語
+ქართული
+Taqbaylit
+한국어
+Norsk bokmål
+Nederlands
+Norsk nynorsk
+Polski
+Português (do Brasil)
+Português (Europeu)
+Română
+Русский
+slovenčina
+Slovenščina
+Shqip
+Српски
+Svenska
+Türkçe
+Українська
+Tiếng Việt
+中文 (简体)
+正體中文 (繁體)
+Change theme
+Automatic (match system)
+Light
+Dark

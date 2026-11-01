@@ -1,0 +1,636 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/settings/params
+Fetched: 2026-11-01T15:34:44.374Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/settings/params
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Does DuckDuckGo Search track you?
+Is DuckDuckGo Search encrypted?
+Can my internet provider see my DuckDuckGo searches?
+How We Keep Local Results Anonymous
+How We Save Settings Anonymously
+How To Save Settings With URL Parameters
+About improving.duckduckgo.com
+About CSP Reports
+About the ‘t’ URL Parameter
+About the ‘r.duckduckgo.com’ Domain
+About the ‘links.duckduckgo.com’ Domain
+About the '*.nel.duckduckgo.com' domain
+Non-JavaScript Search
+Anonymous Favicons
+Ads by Tripadvisor on DuckDuckGo Private Search
+Ads By Microsoft on DuckDuckGo Private Search
+Ads By Yelp on DuckDuckGo Private Search
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+Search Privacy Protection
+How To Use URL Parameters To Change Your DuckDuckGo Search Settings
+URL Parameters
+
+You can change DuckDuckGo settings via URL parameters by adding them after the search query, for example: https://duckduckgo.com/?q=search&kp=-1&kl=us-en.
+
+These parameters are intended for individual use. If using them for any other purpose beyond individual use (e.g. for apps/extensions), please do not remove our branding (ko, kr params etc.) or advertising (k1, k4 params etc.) as we have contracts in place that we would be violating if you did so. Please see our partnerships page for more info on guidelines and getting in touch with us.
+
+Result Settings
+
+Name
+
+	
+
+Parameter
+
+	
+
+Values
+
+
+
+
+Region
+
+	
+
+kl
+
+	
+xa-ar for Arabia
+xa-en for Arabia (en)
+ar-es for Argentina
+au-en for Australia
+at-de for Austria
+be-fr for Belgium (fr)
+be-nl for Belgium (nl)
+br-pt for Brazil
+bg-bg for Bulgaria
+ca-en for Canada
+ca-fr for Canada (fr)
+ct-ca for Catalan
+cl-es for Chile
+cn-zh for China
+co-es for Colombia
+hr-hr for Croatia
+cz-cs for Czech Republic
+dk-da for Denmark
+ee-et for Estonia
+fi-fi for Finland
+fr-fr for France
+de-de for Germany
+gr-el for Greece
+hk-tzh for Hong Kong
+hu-hu for Hungary
+in-en for India
+id-id for Indonesia
+id-en for Indonesia (en)
+ie-en for Ireland
+il-he for Israel
+it-it for Italy
+jp-jp for Japan
+kr-kr for Korea
+lv-lv for Latvia
+lt-lt for Lithuania
+xl-es for Latin America
+my-ms for Malaysia
+my-en for Malaysia (en)
+mx-es for Mexico
+nl-nl for Netherlands
+nz-en for New Zealand
+no-no for Norway
+pe-es for Peru
+ph-en for Philippines
+ph-tl for Philippines (tl)
+pl-pl for Poland
+pt-pt for Portugal
+ro-ro for Romania
+ru-ru for Russia
+sg-en for Singapore
+sk-sk for Slovak Republic
+sl-sl for Slovenia
+za-en for South Africa
+es-es for Spain
+se-sv for Sweden
+ch-de for Switzerland (de)
+ch-fr for Switzerland (fr)
+ch-it for Switzerland (it)
+tw-tzh for Taiwan
+th-th for Thailand
+tr-tr for Turkey
+ua-uk for Ukraine
+uk-en for United Kingdom
+us-en for United States
+ue-es for United States (es)
+ve-es for Venezuela
+vn-vi for Vietnam
+wt-wt for No region
+
+
+
+Safe Search
+
+	
+
+kp
+
+	
+1 for On
+kp = -1 for Moderate; kp = -2 for Off
+
+
+
+Open Instant Answers
+
+	
+
+kz
+
+	
+1 for On
+-1 for Off
+
+
+
+Auto-load Images
+
+	
+
+kc
+
+	
+1 for On
+-1 for Off
+
+
+
+Auto-load Results
+
+	
+
+kav
+
+	
+1 for On
+-1 for Off
+
+
+
+New Window
+
+	
+
+kn
+
+	
+1 for On
+-1 for Off
+
+
+
+Favicons
+
+	
+
+kf
+
+	
+1 for Just favicons
+w for Just WOT (trust) ratings
+fw for All WOT + favicons (both)
+-1 for Off
+
+
+
+Full URLs
+
+	
+
+kaf
+
+	
+1 for On
+-1 for Off
+
+
+
+Auto-suggest
+
+	
+
+kac
+
+	
+1 for On
+-1 for Off
+Privacy Settings
+
+Name
+
+	
+
+Parameter
+
+	
+
+Values
+
+
+
+
+Redirect
+
+	
+
+kd
+
+	
+1 for On
+-1 for Off
+
+
+
+HTTPS
+
+	
+
+kh
+
+	
+1 for On
+-1 for Off
+
+
+
+Address bar
+
+	
+
+kg
+
+	
+g for GET
+p for POST
+
+
+
+Video Playback
+
+	
+
+k5
+
+	
+1 for Always play on DuckDuckGo
+2 for Open on third-party site
+-1 for Prompt me
+Colour Settings
+
+Name
+
+	
+
+Parameter
+
+	
+
+Values
+
+
+
+
+Header
+
+	
+
+kj
+
+	
+r3 for Muted red (default)
+d for Light green
+g for Intense green
+g2 for Green
+b for Light blue
+b2 for Blue
+r for Intense red
+r2 for Red
+p for Purple
+o for Orange
+w for White
+or write out the colour code you want, e.g. 395323
+
+
+
+URLs
+
+	
+
+kx
+
+	
+r for Red (default)
+g for Green
+l for Black
+b for Blue
+p for Purple
+o for Orange
+e for Grey
+or write out the colour code you want, e.g. 395323
+
+
+
+Background
+
+	
+
+k7
+
+	
+w for White (default)
+d for Light green
+g for Intense green
+g2 for Green
+b for Light blue
+b2 for Blue
+r for Intense red
+r2 for Red
+p for Purple
+o for Orange
+or write out the colour code you want, e.g. 395323.
+
+
+
+Text
+
+	
+
+k8
+
+	
+g for Grey (default)
+or write out the colour code you want, e.g. 395323
+
+
+
+Links
+
+	
+
+k9
+
+	
+g for Dark Grey (default)
+b for Blue
+or write out the colour code you want, e.g. 395323
+
+
+
+Visited links
+
+	
+
+kaa
+
+	
+p for Grey with checkmark (default)
+p for Purple
+or write out the colour code you want, e.g. 395323.
+Look & Feel Settings
+
+Name
+
+	
+
+Parameter
+
+	
+
+Values
+
+
+
+
+Theme
+
+	
+
+kae
+
+	
+-1 for Default (default)
+c for Contrast
+r for Retro
+d for Dark
+t for Terminal
+or write out the colour code you want, e.g. 395323
+
+
+
+Size
+
+	
+
+ks
+
+	
+n for Large (default)
+l for Larger
+t for Largest
+m for Medium
+s for Small
+
+
+
+Width
+
+	
+
+kw
+
+	
+n for Normal (default)
+w for Wide
+s for Super wide
+
+
+
+Placement
+
+	
+
+km
+
+	
+m for Middle (default)
+l for Left
+
+
+
+Link font
+
+	
+
+ka
+
+	
+a for Arial
+c for Century Gothic
+g for Georgia
+h for Helvetica
+p for Proxima Nova (default)
+n for Sans-serif
+e for Segoe UI
+s for Serif
+o for Tahoma
+t for Times
+b for Trebuchet MS
+v for Verdana
+or write out the font you want
+
+
+
+Underline
+
+	
+
+ku
+
+	
+1 for On
+-1 for Off (default)
+
+
+
+Text font
+
+	
+
+kt
+
+	
+a for Arial
+c for Century Gothic
+g for Georgia
+h for Helvetica
+p for Proxima Nova (default)
+n for Sans-serif
+e for Segoe UI
+s for Serif
+o for Tahoma
+t for Times
+b for Trebuchet MS
+v for Verdana
+or write out the font you want
+Interface Settings
+
+Name
+
+	
+
+Parameter
+
+	
+
+Values
+
+
+
+
+Header
+
+	
+
+ko
+
+	
+1 for On & floating
+s for On & scrolling (default)
+-1 for Off except for Instant Answer Menu (Please do not remove our header for anything other than individual use. See paragraph at the top for more details.)
+-2 for Off (Please do not remove our header for anything other than individual use. See paragraph at the top for more details.)
+
+
+
+Advertisements
+
+	
+
+k1
+
+	
+1 for On (default)
+-1 for Off
+
+
+
+Page #s
+
+	
+
+kv
+
+	
+1 for On
+n for On but no numbers
+-1 for Off (default)
+
+
+
+Units of Measure
+
+	
+
+kaj
+
+	
+1 for On
+n for On but no numbers
+-1 for Off (default)
+
+
+
+Source
+
+	
+
+t
+
+	
+A string to identify the source
+See this help page for more info
+Learn More
+Does DuckDuckGo Search track you?
+Is DuckDuckGo Search encrypted?
+Can my internet provider see my DuckDuckGo searches?
+How DuckDuckGo Keeps Your Local Search Results Anonymous
+How DuckDuckGo Keeps Your Search Settings Anonymous
+How does DuckDuckGo improve its products while keeping search and browsing history anonymous?
+DuckDuckGo Content Security Policy (CSP) Reports
+What is the ‘t’ URL parameter for on DuckDuckGo Search?
+What does the ‘r.duckduckgo.com’ domain do?
+What does the ‘links.duckduckgo.com’ domain do?
+What does the ‘*.nel.duckduckgo.com’ domain do?
+How To Use the Non-JavaScript Version of DuckDuckGo Search
+How DuckDuckGo Keeps Favicons Anonymous
+Ads by Tripadvisor on DuckDuckGo Private Search
+Ads By Microsoft on DuckDuckGo Private Search
+Ads By Yelp on DuckDuckGo Private Search
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

@@ -1,0 +1,91 @@
+URL: https://support.google.com/chrome/answer/95426?hl=en&co=GENIE.Platform%3DDesktop
+Fetched: 2026-11-01T15:49:11.870Z
+Final URL: https://support.google.com/chrome/answer/95426?hl=en&co=GENIE.Platform%3DDesktop
+
+Skip to main content
+Google Chrome Help
+Sign in
+Help Center
+Community
+Google Chrome
+Set default search engine and site search shortcuts
+
+You can use the address bar (omnibox) to search the web. In some countries, Google Search is Chrome's default search engine. In others, you may be asked to choose your default search engine. You can change your default search engine anytime.
+
+If you notice unexpected changes in your search engine, you might have malware. Learn how to remove malware.
+
+Computer Android phone & tabletiPhone & iPad
+Set your default search engine
+On your computer, open Chrome.
+At the top right, select More   Settings.
+Select Search engine.
+Under "Search engine," select Change.
+Select a new default search engine.
+
+Tips:
+
+A Chrome feature might not be available if your search engine doesn't support it.
+If you've tried to set your search engine but it doesn't work, you may have malware. Learn how to restore your Chrome settings.
+If you use Chrome at work or school, your network admin may choose a default search engine or manage your search engines for you. Learn more about a managed Chrome organization or check if your Chromebook is managed.
+Manage search engines and site shortcuts
+You can add, edit, or remove site search shortcuts and set a default search engine. In some countries, custom site searches aren't able to be set as default for Guest profiles.
+On your computer, open Chrome.
+At the top right, select More   Settings.
+On the left, select Search engine  Manage search engines and site search.
+To change site search shortcuts:
+Add: To the right of "Site search," select Add. After you fill out the text fields, select Add.
+Edit: To the right of a site search shortcut, select Edit .
+Set as default: To the right of a site search shortcut, select More   Make default.
+Deactivate: To the right of a site search shortcut, select More   Deactivate.
+Delete: To the right of a site search shortcut, select More   Delete.
+
+Tips:
+
+You can set up shortcuts to search specific sites.
+You can edit or turn off the shortcuts for open tabs, bookmarks, and browsing history in site searches. But they can't be deleted.
+You can’t edit, delete, or set Gemini as your default search engine. Learn how to use the Gemini web app to get answers in Chrome.
+When you deactivate a site search shortcut, it moves to the section "Inactive shortcuts."
+You can also find other suggested sites listed in the section "Inactive shortcuts." To add them to your site search shortcuts, select Activate.
+For some search sites, the site appears in the "Inactive shortcuts" section only after you search on that site.
+Fill out text fields
+"Search engine" field
+"Shortcut" field
+"URL with %s in place of query" field
+Related resources
+Reset Chrome settings to default
+Remove unwanted ads, pop-ups and malware
+Give feedback about this article
+Was this helpful?YesNo
+Need more help?
+Try these next steps:
+Post to the help community
+Get answers from community members
+Help
+Manage tabs in Chrome
+Search the web in Chrome
+Set default search engine and site search shortcuts
+Download a file
+Read pages later & offline
+Visit a site by turning off Chrome's ad blocker
+Print from Chrome
+Browse in Dark mode or Dark theme
+Share tabs in Chrome
+Share or link to quotes & text in Chrome
+Use web apps
+Control your music, videos, and more
+Test experimental features in Chrome
+Manage Chrome side panel
+Customize your New Tab page in Chrome
+Use the Gemini web app to get answers in Chrome
+Create shortcuts for websites in Chrome
+Search with Google Lens in Chrome
+Adjust microphone volume
+Customize the Chrome toolbar on your device
+Browse through your open tabs on your device's app list
+Install and manage extensions
+Join Chrome Beta for Android
+Change your Search browser settings
+Use split view for multitasking in Chrome
+©2026 Google  Privacy Policy  Terms of Service
+Language
+English‎

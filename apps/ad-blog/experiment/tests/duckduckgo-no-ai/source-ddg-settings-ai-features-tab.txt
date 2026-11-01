@@ -1,0 +1,86 @@
+URL: https://duckduckgo.com/settings (AI Features tab)
+Fetched: 2026-11-01T15:3xZ (explore.cjs, headless Chromium 153, new profile)
+
+DuckDuckGo
+Open menu
+Search Settings
+GeneralAppearancePrivacyAI Features
+On
+
+Duck.ai
+
+Duck.ai lets you chat privately with popular AI models. Disabling it hides Duck.ai buttons and links, but you can still visit duck.ai directly.
+
+Never
+On demand
+Sometimes
+Often
+
+Search Assist
+
+Anonymously generates answers for search queries based on web content. Choose how often you want it to appear, or disable it completely.
+
+Never
+Sometimes
+Often
+
+Explore More
+
+Anonymously generates follow-up questions for search queries based on web content. Choose how often you want it to appear, or disable it completely.
+
+Off
+
+Hide AI-Generated Images
+
+Filters out known AI spam sites from image search results. Learn More
+
+Don’t want AI? Visit noai.duckduckgo.com to search with no AI features and AI images filtered out. Learn more
+Deleting cookies will reset these settings. Learn more
+Save and Exit
+
+Get our browser to never lose your settings.
+
+Download Browser
+c
+Cloud Save
+
+Save your settings anonymously to the cloud
+
+What is this?
+Save SettingsLoad Settings
+Show Bookmarklet and Settings Data
+Reset All Search Settings
+Learn how DuckDuckGo settings are managed
+Close menu
+SEARCH
+Homepage
+Themes
+Settings
+DOWNLOADS
+iOS Browser
+Android Browser
+Mac Browser
+Windows Browser
+Browser Extensions
+MORE FROM DUCKDUCKGO
+Duck.ai
+Email Protection
+Newsletter
+Blog
+Podcast
+Collaborations
+LEARN MORE
+What’s New
+Compare Privacy
+About Our Browser
+About DuckDuckGo
+OTHER RESOURCES
+Help
+Community
+Careers
+Privacy Policy
+Terms of Service
+Press Kit
+Advertise on Search
+Set DuckDuckGo as your default search engine
+×

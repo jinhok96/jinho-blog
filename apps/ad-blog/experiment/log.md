@@ -2,6 +2,66 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-01 · 세션 70 (정기 실행, 개선 세션): RSS 피드를 최근 변경순으로(색인 발견 경로) + Gemini 무료 칼럼 후속·흐름도 + 대표 이미지 2편
+
+세션 시각: 2026-11-01 18:15 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(이 세션이 그날 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(19d091d)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+- **정기 세션 6회 공백**: 세션 69(10-31 01:08 KST) 뒤 10-31 06·12·18시, 11-01 00·06·12시 세션의 log 기록·PR·원격 브랜치가 모두 없음 (마지막 머지 PR #298, 10-30 18:01 UTC). 원인은 저장소에서 알 수 없음 → 사용자 확인 필요(다음 할 일)
+
+**지표 (`gsc_report.py`, 2026-10-04 ~ 11-01, 세션 69 이후 바뀐 값만)**
+
+- 노출 884 → **915**, 클릭 14, CTR 1.5%, 평균 순위 22.1 → 22.4 (`spotify-family-qr-code-verification` 257 → 261·16.6 / `turn-off-ai-in-chrome` 154 → 159·15.2·클릭 3 / `image-to-text-offline-free` 121 → 123·15.7·클릭 3 / `gemini-gems-to-skills` 43·7.5·클릭 1 / `iphone-duo-sold-out` 42·7.9·클릭 2)
+- sitemap: `sitemap.xml` 마지막 다운로드 10-27 11:58 그대로. **`rss.xml`이 11-01 08:38 UTC에 다시 다운로드됨** (10-27 11:58 제출·다운로드 이후 처음)
+- URL 검사: 색인 17편 그대로 (색인율 17/53). `Discovered - currently not indexed` **16편**(세션 69 때 3~4편), `URL is unknown` 20편. 몇 분 뒤 다시 검사하면 `turn-off-copilot-in-edge`가 unknown, `iphone-duo-cracked-screen`·`google-phone-number-verification`이 Discovered로 흔들림(세션 63~69와 같음)
+- `link_seen.py`: 가장 최근 크롤링 **10-30 06:36 UTC 그대로**(`image-to-text-offline-free`, 약 2일 반 새 크롤링 없음), 홈 10-28 23:14 그대로. 미색인 36편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26) → 노하우 상태·writing-guide 판정 변경 없음. 11-01 `remove-metadata-from-photos` 색인 여부(노하우 9): 여전히 unknown, Google이 본 링크 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 주간 SEO 점검: 최근 10-26 보고 그대로 (다음 11-02). 우선순위 3(대표 이미지) 이어서
+- 8~20위 검색어(페이지 × 검색어, 28일, 93쌍 중 13쌍): 모두 노출 1~4회 → 소제목·FAQ 보강 대상 없음
+
+**색인 분석: 발견 여부는 sitemap·피드에 처음 실린 회차가 가름 (쓴 스킬: `seo-audit` Crawlability & Indexation)**
+
+- `Discovered` 16편은 **모두** 11-01 08:38에 받아 간 `rss.xml`(발행순 최신 20편) 안 글. URL 검사 원자료의 `sitemap` 칸에 `rss.xml`·`sitemap.xml`이 둘 다 찍힘(`turn-off-ai-features`·`arc-browser-shutting-down` 확인)
+- 반대로 **10-22 23:03 UTC sitemap 다운로드 전에 발행한 미색인 글 20편은 전부 `URL is unknown`**이고 `sitemap` 칸이 비어 있음(`split-pdf-free`·`compress-pdf-free`·`gemini-connected-apps` 확인). sitemap.xml에는 10-17부터 계속 있었음. 경계가 뚜렷함: 10-22 22:30 발행 `gemini-connected-apps` unknown, 10-23 04:10 발행 `turn-off-copilot-in-word`부터 Discovered. 10-27 사용자 재제출 때 새로 실린 글만 발견되고, 그 전 회차에 실렸던 글은 Google이 다시 줄을 세우지 않은 것으로 보임 (해석)
+- 사이트 쪽 차단 요인 없음: 미색인 5편 모두 200·자기 참조 canonical·`index, follow`·`X-Robots-Tag` 없음, robots.txt `Allow: /`, 홈 → `/page/2~5`·허브·카테고리로 연결
+- Google Search Central "Best practices for XML sitemaps and RSS/Atom feeds"(이번 세션에 원문 확인): sitemap은 전체 URL, **피드는 최근 변경**을 담고 sitemap보다 자주 받아 감, RSS는 `pubDate`가 마지막 의미 있는 수정 시각. 우리 피드는 발행순·발행 시각이라 크게 고친 옛 글(`updatedAt`)이 피드에 다시 오르지 않았음 → 아래 2번으로 고침
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Crawlability & Indexation(robots·sitemap·canonical·noindex·사이트 구조), Image Optimization / `copy-editing` — 포인트 편집(C 모드)으로 추가 문장만 Clarity·AI-Tell Check: "free-plan change … hadn't moved" → "free-plan notice … were unchanged", "Students come before AI Plus" → "The student question comes before AI Plus", 시제 통일)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 1 · 색인 (분석) | 미색인 36편 | 위 분석. 링크는 늘리지 않음(색인된 글이 10-30 이후 다시 크롤링되지 않아 새 링크를 Google이 볼 수 없음, README 개선 세션 1번) | - |
+| 2 | 1 · 색인 (문제 찾기 → 수정) | `/rss.xml` (`src/app/rss.xml/feed.ts`) | 피드 항목을 발행순 최신 20개 → **최근 변경순(`updatedAt` 내림차순, 같으면 기존 순서) 20개**, `pubDate` 발행 시각 → `updatedAt`(sitemap `lastmod`와 같은 값). 테스트 2개 수정 + 1개 추가(크게 고친 옛 글이 맨 앞, 가장 오래 안 바뀐 글이 빠짐). `.claude/ad-blog.md` SEO 규칙, writing-guide `updatedAt` 규칙에 반영. 배포 때 새로 들어가는 글: 미색인 `gemini-free-flash-lite`·`pixel-watch-safety-signal-ending` + 색인된 `check-if-image-is-ai-generated`·`windows-11-24h2-end-of-support`·`iphone-duo-sold-out`·`image-to-text-offline-free`, 빠지는 글 6편(V7 행) | **V7** (색인 상태, 첫 `rss.xml` 다운로드 + 7일, 늦어도 11-15) |
+| 3 | 5 · 칼럼 후속 + 이미지 규칙 (세션 68·69 다음 할 일: 본문 이미지 2장 칼럼) | `gemini-free-flash-lite`(unknown 11일, Google이 본 링크 없음) | **1차 출처 6쪽 재확인**(변경 공지 17004136·한도 16275805·모델 18648722·요금·학생·요금제 변경 14517446, Playwright 렌더링 저장본 `source-*-2026-11-01.txt`와 10-21판 diff): 무료 변경·가격·학생 조건·AI Plus 이메일 안내 그대로, 모델 도움말이 여전히 AI Plus에 Pro 표시(충돌 유지), 요금 페이지 소개 문구에서 Daily Brief·Jules 행 빠짐. 첫 단락 재확인 2문장, 가격·"One wrinkle"·마지막 줄 시점 11-01, What to watch next AI Plus 날짜 문장. **흐름도 그래픽 1장**(48쪽 넘나 → 미국 대학생인가 → 192쪽 넘거나 Pro가 필요한가 → Free·학생 무료 1년 AI Pro·AI Plus $4.99·AI Pro $19.99, 학생 질문을 AI Plus보다 먼저: 무료 1년이 $4.99보다 쌈) What to do now 끝에 추가 → 본문 이미지 2 → 3장. `updatedAt` 2026-11-01. 대표 이미지(4번)와 함께 이미지 규칙 적용 | 후속 갱신·규칙 적용 (V 대상 아님: 미색인. V7 피드 진입 글) |
+| 4 | 주간 3 · 대표 이미지 | `gemini-free-flash-lite` | `thumbnail`(요금제 매트릭스, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 | 규칙 적용 (3번과 같은 변경) |
+| 5 | 주간 3 · 대표 이미지 | `pdf-to-word-free`(unknown 13일, Google이 본 링크 3곳) | `thumbnail`(결과 그래프, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 본문·`updatedAt`·제목·설명 그대로 | 규칙 적용 (V 대상 아님) |
+
+- 대표 이미지 (Z-Image-Turbo, `hero-image.md`): `gemini-free-flash-lite` — 시드 1669753694, **55.2분**, 연한 아쿠아 배경 + 피치, 아이소메트릭. 둥근 피치 받침 위 앞쪽 작은 유리병(구슬 몇 개) + 뒤쪽 빈 큰 병 3개(가장 큰 병만 유리 돔 아래) + 종이비행기(장면의 병 3개·열린 작은 병·자물쇠와 다르지만 기준대로 그대로 사용). `pdf-to-word-free` — 시드 1883498303, **54.5분**, 연한 모래 베이지 + 콘플라워 블루·테라코타, 3/4 시점. 자물쇠 클립이 달린 투명 비닐 속 빈 종이 → 파란 화살표 → 연필이 놓인 휘어진 종이(둥근 빈 칸 두 줄). 두 장 모두 글자·로고 없음, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: `gemini-free-flash-lite` title 71자(접미사 포함, 기존 제목 그대로)·설명 158자, h1 1개, `<pre>`·`<code>` 0개, BlogPosting dateModified 2026-11-01·BreadcrumbList, 본문 첫 이미지가 대표 이미지 + 본문 3장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). `out/rss.xml` 첫 항목 `gemini-free-flash-lite`(pubDate 11-01), 넷째 `pixel-watch-safety-signal-ending`(10-30) 확인. `pdf-to-word-free` title 64자(접미사 포함, 기존 제목 그대로)·설명 153자, h1 1개, `<pre>`·`<code>` 0개, dateModified 2026-10-19 그대로, 본문 첫 이미지가 대표 이미지이고 og 이미지가 대표 이미지에서 만들어짐. lint·type-check·test(35파일 254개)·build 통과, `link_audit` 2건 그대로(새 문제 없음). CI(`test`·`build`) 첫 푸시에서 통과
+- 남은 대표 이미지 미적용: `thumbnail` 글 10편(V 판정 중 3편 `turn-off-ai-in-chrome` V3·`free-offline-ai-tools` V2·`spotify-family-qr-code-verification` V4 포함) + 아무것도 없는 글 1편(`transcribe-audio-offline-free`(V1)). 본문 이미지 2장인 칼럼 2편(`office-2021-end-of-support`·`gemini-android-auto-personal-intelligence`)
+
+**알게 된 것**
+
+- **미색인 글은 두 무리로 갈림**: sitemap·피드에 10-27 재제출 때 처음 실린 글은 `Discovered`, 그 전 회차(10-22 23:03까지)에 실렸던 글은 몇 주째 `URL is unknown`. 내부 링크 수와는 상관이 없음(Google이 본 링크 5~6곳인 `compress-video-for-discord-email`·`pdf-to-jpg-free`도 unknown) → 오래 묵은 unknown 글은 Search Console 색인 요청(사용자)이 가장 직접적인 방법이고, 사이트 쪽에서는 실제로 크게 고친 글을 피드 맨 앞에 다시 올리는 것(V7)이 할 수 있는 일
+- **`rss.xml`은 `sitemap.xml`보다 자주 받아 감**: 10-27 이후 sitemap.xml은 그대로인데 rss.xml은 11-01에 다시 받아 감(Google 문서 설명과 같음). 새 글·갱신 글을 알리는 데는 피드가 빠름
+- Google 도움말은 같은 내용을 두 쪽에서 다르게 둔 채 11일째 그대로(Gemini 모델 도움말 AI Plus Pro 표시) → 칼럼 후속 확인 때 충돌이 이어지는지 날짜와 함께 적음
+- 대표 이미지 1장 54.5~55.2분: 1차 출처 캡처·빌드·테스트·대시보드 생성과 겹쳐도 세션 68(42~44분)보다 조금 느린 정도
+
+**다음 할 일**
+
+- **사용자: 정기 실행 확인** — 10-31 06시 ~ 11-01 12시 정기 세션 6회가 기록·PR 없이 지나감. claude.ai Routines의 "ToolProof 정기 글 작성" 실행 기록에서 실패·미실행 원인 확인 (GitHub 연결·한도 등)
+- **사용자: Search Console** — ① URL 검사 → 색인 생성 요청: 이번 분석상 sitemap·피드로는 더 발견되지 않는 **10-22 이전 발행 unknown 글**부터, 하루 한도 안에서 허브 먼저: `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free`(오늘 대표 이미지) · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` (다음 날: `gemini-connected-apps`·`apple-mail-exchange-not-syncing`·`chrome-http-warning-default`·`gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`. `pixel-watch-safety-signal-ending`·`gemini-free-flash-lite`는 V7 판정을 위해 요청하지 않고 둠) ② 설정 > Sitemaps에서 `sitemap.xml` 다시 제출(10-27 이후 다운로드 없음)은 V7 판정이 끝난 뒤(11-15 이후)에 — 지금 재제출하면 피드 효과와 구분할 수 없음
+- Claude(다음 세션마다): V7 — `gsc_report.py` 사이트맵 표에서 `rss.xml` 다운로드 시각 확인, 그 뒤 `gemini-free-flash-lite`·`pixel-watch-safety-signal-ending`(피드 진입 unknown 2편)이 Discovered가 되는지 vs 나머지 unknown 18편, 피드에서 빠진 Discovered 5편이 unknown으로 돌아가는지, 피드 진입 색인 글 4편 `lastCrawlTime`. 회차별 값은 대시보드 `history` `posts`
+- Claude(다음 개선 세션): 남은 `thumbnail` 글 대표 이미지 — `compress-pdf-free`·`pdf-to-jpg-free`, 본문 이미지 2장인 칼럼 `gemini-android-auto-personal-intelligence`(1차 출처 재확인 + 그래픽 1장)·`office-2021-end-of-support`(11-10 뒤 후속과 함께), `chrome-http-warning-default`·`convert-webp-to-jpg-free`·`remove-bg-alternative-free`. `link_seen.py`로 홈·색인 글 다음 크롤링 확인
+- Claude(Edge 157 안정판, 11-05 주 뒤): `turn-off-copilot-in-edge` 재확인 (세션 69 다음 할 일 그대로)
+- Claude(다음 일반 세션): `windows-microsoft` 상시 글 후보 `windows 11 optional updates`. `ai-settings` 공백 `turn off gemini on android phone`, `google personal intelligence settings`, `turn off galaxy ai`, `dia browser ai privacy`, `turn off improve siri and dictation`, `turn off ai in adobe acrobat`, `turn off copilot in edge android`(1차 출처 확인 필요). `phones-subscriptions` 첫 상시 글 후보 `iphone repair mode`
+- Claude(11-10 Patch Tuesday 뒤 개선 세션): `customize-right-click-menu-windows-11` 후속, `windows-10-esu-extended` 빌드 번호 표 + 본문 이미지 0 → 3장, `windows-11-24h2-end-of-support` 첫 누락 업데이트, `office-2021-end-of-support` 후속
+- Claude: Chrome 157(11-03) 출시 뒤 `chrome-autofill-settings`·`chrome-enhanced-autofill-gmail` 재확인, `menu_check.py`로 AI 메뉴 이름. (11-18 V3 판정 뒤) `turn-off-ai-in-chrome` 정리(허브 링크 + Edge·Firefox 글 링크). (11-12 V2 판정 뒤) `free-offline-ai-tools` 대표 이미지. `pixel-watch-safety-signal-ending` 후속(이메일·도움말 종료 안내·12-12). `gemini-free-flash-lite` 후속(AI Plus 날짜 공개·모델 도움말 충돌 해소·12-31 학생 혜택 마감)
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V7(첫 rss.xml 다운로드 + 7일, 늦어도 11-15) 판정, Firefox 160(11-06) 뒤 `turn-off-ai-in-firefox` 재확인
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 8개 문서 갱신(`traffic`: Cloudflare 28일 조회수 46·방문 38) + `history` 기록(batch, 회차 2026-11-01T10:34:26Z, DB 문서 240개, 스크래치패드 경로). 11월 `daily-2026-11` 문서는 아직 만들어지지 않음(11-01 데이터 없음 → 다음 회차). `summary.crawl` 최근 크롤링 10-30 06:36(`image-to-text-offline-free`), 홈 10-28 23:14 그대로, 미색인 36편 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 915 · 10위 안 23개 · 허브 4/4 · 받는 링크 부족 0편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-10-31 · 세션 69 (정기 실행, 일반 세션): Microsoft Edge Copilot 끄기
 
 세션 시각: 2026-10-31 01:08 KST → 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(aecc641)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

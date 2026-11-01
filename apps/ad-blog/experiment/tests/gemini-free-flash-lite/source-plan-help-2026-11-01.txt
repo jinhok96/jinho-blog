@@ -1,0 +1,110 @@
+Skip to main content
+Gemini Apps Help
+Sign in
+Help Center
+Community
+Privacy Hub
+Gemini Apps
+Manage your Google AI plan from Gemini Apps
+
+You can upgrade to a Google AI plan for higher limits and priority access to some features in Gemini Apps. You can also cancel or change your plan at any time. Learn more about Gemini Apps limits & feature availability.
+
+Important:
+
+This article is for users managing Gemini Apps for a personal Google Account. If you’re using a work or school Google Account, learn more about using Gemini Apps with a work or school account.
+To use Gemini Apps with a Google AI plan in most countries, you must be 13 (or the applicable age in your country) or over.
+To use Gemini Apps with a Google AI plan in the European Economic Area, Switzerland, or the United Kingdom, you must be 18 years of age or older.
+Some features may not be available for users under the age of 18 or 13 (or the applicable age in your country). In the help center, you will find additional information about age requirements.
+Computer Android phone & tabletiPhone & iPad
+Upgrade to a Google AI plan in Gemini Apps
+
+Important: Some Google AI plans are only available in certain countries. Learn more about plans and availability.
+
+You can subscribe to a Google AI plan through Google One.
+
+Upgrade to a Google AI plan (without a current plan)
+Go to gemini.google.com.
+At the bottom, click Settings & help   View Subscriptions.
+Select the Google AI plan you want.
+Follow the on-screen instructions.
+
+Tip: When you subscribe to the plan, you’ll need to select or provide a form of payment. Learn how to manage your Google payment info.
+
+Upgrade your Google AI plan (from a current plan)
+Go to gemini.google.com.
+At the bottom, click Settings & help .
+Click the available upgrade option.
+Follow the on-screen instructions.
+Upgrade
+Choose a different Gemini model to use
+
+Important: To switch between models in Gemini Apps, you must be signed in. Learn how to sign in to Gemini Apps.
+
+Gemini Apps use auto model selection to select the most appropriate available model for your prompt.
+
+If you want to manually select a different available model, you can select it from the menu.  Learn how to manually switch between Gemini models. 
+
+Change your plan
+
+To switch to a different Google One plan:
+
+On your computer, go to Google One.
+Click Manage membership  Change membership plan.
+Choose your new plan.
+To upgrade: Select a plan under "Upgrade options."
+To downgrade: Select a plan under "Downgrade options."
+If there’s no downgrade option, you're on the lowest plan.
+To review the membership details, click See all benefits.
+To confirm the new plan price and details, click Yes, continue.
+Select your payment method.
+Click Subscribe.
+
+Change your storage plan
+
+Cancel your plan
+
+You can cancel your plan in Google One settings.
+
+Go to gemini.google.com.
+At the bottom, click Settings & help   Manage subscription. This opens Google One settings, where you can cancel your plan.
+Click Cancel membership  Cancel.
+Go to Google One settings
+What happens when you cancel your plan
+Related resources
+Use Gemini Apps
+Get started with the Gemini mobile app
+Give feedback about this article
+Need more help?
+Try these next steps:
+Post to the help community
+Get answers from community members
+Help
+Use Gemini Apps
+What you need to sign in to Gemini Apps
+About Gemini models
+Gemini Apps limits & feature availability
+Find & manage your recent chats in Gemini Apps
+Use & manage Connected Apps in Gemini
+Manage your Google AI plan from Gemini Apps
+Where you can use the Gemini web app
+Upload & analyze files in Gemini Apps
+Organize your projects with notebooks in Gemini Apps
+Schedules in Gemini Apps
+Use Deep Think in Gemini Apps
+Verify AI-generated images, videos, and audio
+Import from other AI platforms to Gemini Apps
+Learn about generative AI
+Learn in creative ways with generative AI
+Guide your child's Gemini Apps experience
+Use the Gemini app on Mac
+Use the Gemini app for Windows
+Customize your Gemini chats experience
+Learn how to get started with Gems
+
+Use the Gems guide to get ideas for how to use Gems, learn how to get a quick start with premade Gems, and find suggestions for writing great Gem instructions.
+
+Get started
+
+©2026 Google  Privacy Policy  Terms of Service
+Language
+English‎

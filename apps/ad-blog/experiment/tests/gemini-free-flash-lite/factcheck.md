@@ -47,3 +47,30 @@
 
 - 보도로만 확인(본문 미사용): AI Pro에 Deep Think 추가, AI Plus가 잃는 모델명 "Gemini 3.1 Pro"(Engadget 10-06). Engadget이 출처로 든 17004136을 직접 열어 날짜 확인
 - 접근 불가: web.archive.org(연결 리셋) → 변경 전 페이지 비교 못 함. one.google.com 요금 페이지는 렌더링해도 가격이 나오지 않음
+
+## 2026-11-01 후속 확인 (세션 70, 개선 세션)
+
+- 방법: `capture_followup.cjs`(Playwright Chromium, `en-US`)로 1차 출처 6쪽을 다시 렌더링해 `source-*-2026-11-01.txt`로 저장하고 10-21 저장본과 diff (학생 페이지는 `networkidle` 시간 초과 → curl HTML에서 글자만 뽑아 저장)
+- 결과
+
+| 쪽 | 10-21 대비 바뀐 것 | 글에 반영 |
+| --- | --- | --- |
+| 변경 공지 17004136 | 없음 (무료 10-09 시행, AI Plus는 이메일로 시행일 안내 그대로) | 첫 단락 재확인 문장, What to watch next "As of November 1, 2026" |
+| 한도 16275805 | 첫 문장 "limits may change" → "usage limits may change" 한 단어. 컨텍스트 창·기능 표(Daily brief 유료 포함) 그대로 | 없음 |
+| 모델 18648722 | 없음 (Model availability 표가 여전히 AI Plus에 Pro 표시 → 변경 공지와 충돌 유지) | "One wrinkle" 문단에 10-21·11-01 두 번 확인 |
+| 요금 gemini.google/subscriptions | 가격 그대로($4.99·$19.99·$99.99·$199.99). Plus·Pro 소개 문구에서 "Daily Brief" 빠짐, Jules 행 삭제 | 가격 시점 "as of November 1, 2026". Daily Brief 유료 여부는 한도 도움말 표를 근거로 그대로 둠 |
+| 학생 gemini.google/students | 조건 그대로(2026-12-31까지 신청, 결제 수단, 이후 $19.99/월). FAQ에 "trouble redeeming" 항목 추가 | 없음 |
+| 요금제 변경 14517446 | Manage membership > Change membership plan 경로 그대로 | 없음 |
+
+- 새 그래픽 `gemini-which-plan-fits.webp` ([decision_chart.py](decision_chart.py)): 질문·결과 근거
+
+| 흐름도 칸 | 근거 |
+| --- | --- |
+| 무료는 약 32,000토큰(약 48쪽), Auto가 대부분 Flash-Lite·필요할 때 Flash·Pro | 16275805 컨텍스트 창 표, 17004136 Auto 설명. 48쪽·192쪽은 Google 환산 1M ≈ 1,500쪽과 같은 비율(우리 추정, 기존 본문과 같음) |
+| 미국 18세 이상 대학생 → AI Pro 1년 무료, 2026-12-31까지, 이후 $19.99/월 | gemini.google/students (11-01 저장본) |
+| AI Plus $4.99: Flash-Lite·Flash, 128,000토큰(약 192쪽), 이메일 날짜에 Pro 제외 | 17004136 변경 후 표, 16275805, subscriptions |
+| AI Pro $19.99: Pro·Argon 추가, 1M토큰(약 1,500쪽), 무료 대비 4x 한도 | subscriptions, 16275805·17004136 한도 표 |
+| Ultra $99.99부터, 더 높은 한도 | subscriptions |
+| 학생 질문을 AI Plus 질문보다 먼저 둔 이유 | 49~192쪽이 필요한 학생도 무료 1년 AI Pro가 $4.99보다 쌈 (본문 그래픽 앞 문장에 밝힘) |
+
+- 본문 변경: 첫 단락 재확인 2문장, 가격·"One wrinkle"·마지막 줄 시점 11-01, What to do now 끝 그래픽 + 안내 2문장, What to watch next AI Plus 날짜 문장. `updatedAt` 2026-11-01. 대표 이미지 추가·`thumbnail` 제거(요금제 매트릭스는 본문에 그대로)

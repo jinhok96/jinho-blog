@@ -19,7 +19,6 @@ function makePost(slug: string, overrides: Partial<FeedPost> = {}): FeedPost {
     description: `설명 ${slug}`,
     path: `/posts/${slug}`,
     category: 'ai-tools',
-    createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z',
     ...overrides,
   };
@@ -56,9 +55,9 @@ describe('buildRssFeed', () => {
     expect(xml.trimEnd().endsWith('</channel>\n</rss>')).toBe(true);
   });
 
-  it('항목: 제목·링크·guid(permalink)·RFC 822 pubDate·설명·카테고리 이름', async () => {
+  it('항목: 제목·링크·guid(permalink)·RFC 822 pubDate(마지막 수정 시각)·설명·카테고리 이름', async () => {
     const { buildRssFeed } = await loadFeed();
-    const xml = buildRssFeed([makePost('a', { createdAt: '2026-03-04T05:06:07.000Z' })]);
+    const xml = buildRssFeed([makePost('a', { updatedAt: '2026-03-04T05:06:07.000Z' })]);
 
     expect(xml).toContain(
       [
@@ -74,7 +73,7 @@ describe('buildRssFeed', () => {
     );
   });
 
-  it('최신 20개만 포함 (입력 순서 유지)', async () => {
+  it('최근 변경 20개만 포함 (updatedAt이 같으면 입력 순서 유지)', async () => {
     const { buildRssFeed, RSS_ITEM_LIMIT } = await loadFeed();
     const posts = Array.from({ length: 25 }, (_, index) => makePost(`p${index}`));
     const links = tagContents(buildRssFeed(posts), 'guid');
@@ -83,6 +82,24 @@ describe('buildRssFeed', () => {
     expect(links).toHaveLength(20);
     expect(links[0]).toBe('https://my-blog.com/posts/p0');
     expect(links[19]).toBe('https://my-blog.com/posts/p19');
+  });
+
+  it('최근 변경 순: 크게 고친 옛 글(updatedAt 갱신)이 앞으로 오고, 가장 오래 안 바뀐 글이 빠짐', async () => {
+    const { buildRssFeed } = await loadFeed();
+    const posts = [
+      ...Array.from({ length: 20 }, (_, index) =>
+        makePost(`new${index}`, { updatedAt: `2026-05-${String(20 - index).padStart(2, '0')}T00:00:00.000Z` }),
+      ),
+      makePost('old-updated', { updatedAt: '2026-06-01T09:00:00.000Z' }),
+    ];
+    const xml = buildRssFeed(posts);
+    const links = tagContents(xml, 'guid');
+
+    expect(links).toHaveLength(20);
+    expect(links[0]).toBe('https://my-blog.com/posts/old-updated');
+    expect(links[1]).toBe('https://my-blog.com/posts/new0');
+    expect(links).not.toContain('https://my-blog.com/posts/new19');
+    expect(tagContents(xml, 'pubDate')[0]).toBe('Mon, 01 Jun 2026 09:00:00 GMT');
   });
 
   it('lastBuildDate는 포함된 글의 최신 updatedAt, 글이 없으면 생략', async () => {

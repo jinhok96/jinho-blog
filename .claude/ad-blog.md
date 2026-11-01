@@ -62,6 +62,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - URL은 `absoluteUrl` 한 곳에서 생성 (홈은 끝 슬래시 없음, 비ASCII 경로 퍼센트 인코딩) — canonical·JSON-LD·sitemap·RSS가 같은 URL을 쓰도록
 - `NEXT_PUBLIC_SITE_URL` 미설정 시 `SITE_INDEXABLE = false` → 전 페이지 noindex + robots 전체 차단
 - sitemap `lastmod`·RSS `lastBuildDate`는 콘텐츠 날짜 기준 (빌드 시각 금지)
+- sitemap은 전체 URL, RSS는 최근 변경: RSS 항목은 `updatedAt` 내림차순 상위 `RSS_ITEM_LIMIT`(20)개, `pubDate`는 `updatedAt`(마지막 의미 있는 수정 시각, sitemap `lastmod`와 같은 값). 크게 고친 옛 글도 sitemap보다 자주 받아 가는 피드에 다시 오르게 함 (Google Search Central "Best practices for XML sitemaps and RSS/Atom feeds", 2026-11-01)
 - 페이지당 `<h1>` 1개, 이미지는 크기 지정(CLS 0)
 - JSON-LD author·publisher의 `@type`은 `AUTHOR_TYPE`(현재 `Organization`, 이름 = `SITE_NAME`)
 - 삭제한 글 URL은 같은 주제 글로 `vercel.json` `redirects`(`permanent: true` → 308). 원본 글 파일이 없고 대상 글 파일이 있는지 `scripts/lib/vercel-redirects.test.ts`가 검증. 대체 글이 없으면 같은 클러스터 허브, 허브도 없으면 404 ([clusters.md](apps/ad-blog/experiment/clusters.md#규칙))

@@ -1,0 +1,172 @@
+Skip to main content
+Gemini Apps Help
+Sign in
+Help Center
+Community
+Privacy Hub
+Gemini Apps
+About Gemini models
+
+When you use Gemini Apps, different Gemini models can provide the best experience based on your specific needs, whether you want quick everyday answers or in-depth analysis for complex problems. Some models are only available with Google AI plans. Learn how to manage your Google AI plan from Gemini Apps.
+
+Important: The info below is accurate if your access to Gemini is through a personal Google Account. If your access to Gemini is through a work or school account, model and feature availability will depend on your Workspace license.  Learn about Gemini Apps with a work or school account.
+
+Overview of Gemini models
+
+Google offers several Gemini models designed for different types of tasks:
+
+Gemini Flash-Lite: A fast, cost-efficient model built for quick answers to everyday questions and lightweight tasks.
+Gemini Flash: A high-speed, capable model that balances performance and responsiveness across standard chat and task modes.
+Gemini Pro: An advanced reasoning model designed for complex prompts, sophisticated coding, and in-depth problem-solving.
+Gemini Argon: Top-tier intelligence, dynamic deep reasoning, and the highest performance for complex workflows.
+Model availability 
+
+Access to specific Gemini models, thinking levels, and task features varies depending on your plan and your remaining available usage. The information below is subject to change without notice.
+
+Google AI Plan	Available Models (Chats)	Available Models (Tasks)	Thinking Levels
+
+
+No Google AI Plan
+
+	
+Auto or Flash-Lite*
+	
+N/A
+	
+
+Low, Medium, High
+
+
+
+
+Google AI Plus
+
+	
+Flash-Lite
+Flash
+Pro
+	
+N/A
+	
+
+Low, Medium, High
+
+
+
+
+Google AI Pro
+
+	
+Flash-Lite
+Flash
+Pro
+Argon
+	
+Flash
+Argon
+	
+
+Low, Medium, High
+
+
+
+
+Google AI Ultra
+
+	
+Flash-Lite
+Flash
+Pro
+Argon
+	
+Flash
+Argon
+	
+
+Low, Medium, High
+
+*If auto model selection is turned on, Gemini will choose the appropriate model for each prompt. Most prompts will use Flash-Lite for quick answers. Prompts that require more reasoning may use Flash or Pro. If auto model selection is turned off, all responses will use Flash-Lite.
+
+Thinking levels
+
+When using Gemini, you can adjust the depth of reasoning the model uses to generate responses:
+
+Low: Provides fast, concise answers for straightforward queries.
+Medium: Balances processing speed and reasoning depth for everyday tasks.
+High: Allows the model to carefully process and reason through complex, multistep prompts.
+
+Tips:  
+
+More advanced models and higher thinking levels require more of your usage. Learn more about Gemini Apps limits.
+If you have a Google AI plan and reach your usage limit, your chat will continue with Flash-Lite. 
+Computer Android phone & tabletiPhone & iPad
+Auto model selection
+
+Gemini Apps uses auto model selection to decide the best model for your prompt. Learn how to turn this feature on or off.
+
+When auto model selection is on, your prompts are automatically routed to the most efficient model and thinking level to deliver the best possible response and preserve your usage.
+
+View which model generated a response
+On your computer, go to gemini.google.com.
+At the top left, tap Open sidebar  and from the panel, click a chat.
+At the bottom of a response, click More .
+From the menu, select Show thinking steps .
+Scroll to the bottom of the thinking steps to view which model was used.
+Manually switch models
+
+If you have a Google AI plan you can manually switch models in both Chat Mode and Task Mode. Learn more about Tasks in Gemini apps.
+
+Switch your model in Chat Mode or Task Mode
+
+On your Computer, go to gemini.google.com.
+At the bottom of the chat box, click the current selected model .
+Click the model you want to use.
+Higher-tier models marked with a lock icon require an eligible plan upgrade
+(Optional) Select your preferred thinking level: 
+Low
+Medium 
+High
+
+Gemini will continue to use that model and thinking level during the current conversation including if you later return to that same conversation.
+
+Tip:  If you don’t select a thinking level, it will default to Low.
+
+Turn auto model selection on or off
+On your Computer, go to gemini.google.com.
+At the bottom left click Settings > Usage limits .
+At the bottom, turn auto model selection on  or off .
+Related resources
+Gemini Apps Privacy Hub
+What you need to sign in to Gemini Apps
+Use Gemini Apps
+Gemini Apps limits & feature availability
+Manage your Google AI plan from Gemini Apps
+Give feedback about this article
+Need more help?
+Try these next steps:
+Post to the help community
+Get answers from community members
+Help
+Use Gemini Apps
+What you need to sign in to Gemini Apps
+About Gemini models
+Gemini Apps limits & feature availability
+Find & manage your recent chats in Gemini Apps
+Use & manage Connected Apps in Gemini
+Manage your Google AI plan from Gemini Apps
+Where you can use the Gemini web app
+Upload & analyze files in Gemini Apps
+Organize your projects with notebooks in Gemini Apps
+Schedules in Gemini Apps
+Use Deep Think in Gemini Apps
+Verify AI-generated images, videos, and audio
+Import from other AI platforms to Gemini Apps
+Learn about generative AI
+Learn in creative ways with generative AI
+Guide your child's Gemini Apps experience
+Use the Gemini app on Mac
+Use the Gemini app for Windows
+Customize your Gemini chats experience
+©2026 Google  Privacy Policy  Terms of Service
+Language
+English‎

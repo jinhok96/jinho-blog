@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-01 · AdSense 거절(가치가 별로 없는 콘텐츠) 대응: 발행 주 3편·콘텐츠 정리·신뢰 요소 (사용자 요청)
+
+사용자가 AdSense 심사 결과를 전달: **"가치가 별로 없는 콘텐츠"로 거절**. 문구는 고유 가치·꾸준한 운영·상업 광고를 뒷받침할 사용자 관심을 따로 짚었고, 재제출 전 확인 사항으로 신뢰할 수 있는 고품질 정보, 지속적인 큐레이션·구조 유지, 실제 사용자 관심 유도를 들고 빈약한 콘텐츠·웹 검색 스팸 정책을 링크함.
+
+**진단** (세션 70 지표 + 이번 세션 확인)
+
+| 신호 | 값 | 판단 |
+| --- | --- | --- |
+| 사이트 나이 | 운영 시작 10-11, 신청 10-22(11일째), 오늘 21일째 | 거절 문구의 "꾸준한 운영"에 못 미침. 코드로 고칠 수 없음 |
+| 사용자 관심 | 28일 검색 노출 915·클릭 14, Cloudflare 28일 방문 38 | 문구의 "실제 사용자 관심"에 못 미침. 가장 큰 요인으로 봄 (해석) |
+| 색인 | 17/53(32%), Discovered 16·unknown 20 | Google 검색도 대부분 글을 아직 크롤링할 가치로 보지 않음 |
+| 발행 패턴 | 20일 53편(하루 최대 4편), 뉴스 칼럼 20편(38%), `: What It Means for You` 제목 9편 + 비슷한 틀 2편, 같은 주제 2편씩(Personal Intelligence·Chrome 자동 완성·Google 계정 전화번호) | 링크된 스팸 정책의 대량 생산 콘텐츠처럼 보일 수 있음 |
+| 신뢰 요소 | 글에 작성자 표시 없음, 소개 페이지 분야가 실제 글과 다름(ChatGPT·Claude·Perplexity 글 0편), 편집 원칙 페이지 없음 | 누가·어떻게 만드는지 보이지 않음 |
+| 글 한 편 품질 | 1,400~2,700단어, 직접 측정·1차 출처·How we tested 있음 (`split-pdf-free` 라이브 페이지 확인) | 글 단위로는 빈약하지 않음 → 사이트 전체 신호 문제로 판단 |
+
+- 사이트 차단 요인 없음: `https://tool-proof.com/` 200, `ads.txt`에 `pub-8310707193208097`, robots `Allow: /`
+- 외부 자료(WebSearch): 공식 최소 운영 기간·방문 수는 없음. 커뮤니티·블로그에서는 신규 사이트가 이 사유로 자주 거절되고 3~6개월 이력을 권함(일화, Google 공식 아님)
+
+**사용자 결정 (AskUserQuestion)**
+
+| 질문 | 결정 | 반영 |
+| --- | --- | --- |
+| 발행 속도 | 새 글 주 3편 + 나머지 개선 | 월·수·금 00시 일반 세션만 새 글(그중 주 1편까지 영향 뉴스 칼럼), 06시 뉴스 세션 폐지, 나머지 모두 개선 세션. README 결정사항·콘텐츠 구성·뉴스 칼럼 선정 기준·발행 속도·세션 유형·개선 세션, backlog, clusters, writing-guide, traffic-playbook. 정기 실행 프롬프트 갱신 |
+| 작성자·공개 | 브랜드 유지, AI 공개 없음 | 글 머리에 `By ToolProof`(→ `/about`), 편집 정책 페이지 `/editorial-policy` 새로 작성, JSON-LD author·publisher에 `publishingPrinciples`. 소개 페이지 분야를 실제 클러스터로, "tool, command, or website" → "app, setting, or website"(비개발자 기준), 편집 정책 링크 |
+| 기존 글 정리 | 통합·전환 + 제목 정리 | 제목 11편 이번에 정리(아래). 통합·전환 7건은 [clusters.md 콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) 목록으로 개선 세션이 세션당 1건 (README 개선 세션 0번) |
+| 재신청 시점 | 조건 충족 후 | 운영 3개월(2027-01-11) 이후 · 색인율 70% 이상 · 4주 연속 주간 검색 클릭 증가. 매 세션 지표 확인 때 현재 값 한 줄 기록 |
+
+**제목 정리 11편** (`title`만 변경, `updatedAt`·설명·본문 그대로 → RSS 순서·V7 영향 없음. 지표용 변경이 아니라 검증 기록 행 없음)
+
+| 글 | 전 | 후 |
+| --- | --- | --- |
+| `apple-mail-exchange-not-syncing` | Apple Mail Exchange Accounts Stop Syncing on Mac: What It Means for You | Apple Mail Exchange Accounts Can Stop Syncing on Your Mac |
+| `chrome-http-warning-default` | Chrome Now Warns Before Insecure HTTP Sites: What It Means for You | Chrome HTTP Warnings Turn On by Default for All Users |
+| `gemini-android-auto-personal-intelligence` | Android Auto's Gemini Can Use Your Gmail and Photos: What It Means for You | Gemini on Android Auto Can Now Use Your Gmail and Photos |
+| `gemini-free-flash-lite` | Gemini Free Plan Now Uses Flash-Lite: What It Means for You | Gemini Free Tier Moves Most Answers to Flash-Lite |
+| `gemini-gems-to-skills` | Gemini Gems Are Becoming Skills: What Changes and How to Move Yours | How to Move Gemini Gems to Skills and Keep Their Files |
+| `iphone-duo-sold-out` | iPhone Duo Sold Out Until Late January: What It Means for You | iPhone Duo Sold Out, New Orders Ship in Late January |
+| `iphone-handoff-verizon-cost` | iPhone Handoff Costs $10 a Month on Verizon: What It Means for You | iPhone Handoff Is $10 a Month on Verizon and $5 on T-Mobile |
+| `microsoft-365-family-storage-2tb` | Microsoft 365 Family Storage Drops to 2TB Shared: What It Means for You | Microsoft 365 Family Storage Becomes One Shared 2TB Pool |
+| `office-2021-end-of-support` | Office 2021 End of Support (Oct 13): What It Means for You | Office 2021 Support Has Ended With No Paid Extension |
+| `pixel-watch-safety-signal-ending` | Pixel Watch Safety Signal Ends December 12: What It Means for You | Pixel Watch 2 and 3 LTE Lose Safety Signal on December 12 |
+| `windows-11-24h2-end-of-support` | Windows 11 24H2 End of Support (Oct 13): What It Means for You | Windows 11 24H2 Home and Pro Updates Have Ended |
+
+- 제목은 모두 60자 이내, 콜론·대시 부제·괄호 없음, 본문 첫 단락과 대조 (Windows는 Enterprise·Education 지원이 2027-10-12까지라 "Home and Pro"로 한정)
+- `gemini-gems-to-skills`(노출 43·7.5위)·`iphone-duo-sold-out`(42·7.9위)은 노출이 있는 글이라 다음 지표 확인 때 CTR 변화를 함께 봄
+
+**다음 할 일**
+
+- **사용자**: AdSense 재신청은 조건 충족 전까지 하지 않음 (게시자 ID·`ads.txt`·스크립트는 그대로 둠). 세션 70의 Search Console 색인 요청 목록은 그대로 유효
+- Claude(개선 세션): [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`)부터 세션당 1건
+- Claude(매 세션): AdSense 재신청 조건 3개 현재 값 기록 (현재: 운영 21일/92일 · 색인율 32% · 주간 클릭 증가 0주)
+
 ## 2026-11-01 · 세션 70 (정기 실행, 개선 세션): RSS 피드를 최근 변경순으로(색인 발견 경로) + Gemini 무료 칼럼 후속·흐름도 + 대표 이미지 2편
 
 세션 시각: 2026-11-01 18:15 KST → 개선 세션. 같은 날 12시 개선 세션 기록 없음(이 세션이 그날 첫 개선 세션). 열린 PR 없음. 작업 브랜치를 `origin/main`(19d091d)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

@@ -2,7 +2,7 @@ import type { Post } from '@/entities/post';
 
 import Link from 'next/link';
 
-import { CATEGORY_MAP } from '@/core/config';
+import { AUTHOR_NAME, CATEGORY_MAP } from '@/core/config';
 import { categoryPath } from '@/core/routes';
 import { LocalDate } from '@/core/ui';
 import { getReadingMinutes, isSameDate } from '@/core/utils';
@@ -12,7 +12,7 @@ type Props = {
 };
 
 /**
- * 글 제목 영역: 초안 배지, `<h1>`, 요약, 메타 정보(발행일·수정일·읽는 시간·카테고리)
+ * 글 제목 영역: 초안 배지, `<h1>`, 요약, 메타 정보(작성자·발행일·수정일·읽는 시간·카테고리)
  */
 export function PostHeader({ post }: Props) {
   const { title, description, category, createdAt, updatedAt, draft, content } = post;
@@ -52,6 +52,21 @@ export function PostHeader({ post }: Props) {
       </p>
 
       <dl className="flex flex-wrap gap-x-4 gap-y-1 text-sm">
+        {/* 작성 주체 노출: 소개 페이지로 연결해 책임 소재를 명시 */}
+        <div className="flex gap-1.5">
+          <dt className="text-muted">By</dt>
+          <dd>
+            <Link
+              href="/about"
+              className={`
+                font-medium text-accent underline-offset-4
+                hover:underline
+              `}
+            >
+              {AUTHOR_NAME}
+            </Link>
+          </dd>
+        </div>
         <div className="flex gap-1.5">
           <dt className="text-muted">Published</dt>
           <dd>

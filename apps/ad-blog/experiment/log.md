@@ -2,6 +2,76 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-02 · 세션 73 (정기 실행, 개선 세션): 콘텐츠 정리 8번 제목 정리(괄호 꼬리표 11편 + 대시 부제 1편) + `pdf-to-jpg-free` 대표 이미지 + PDF 클러스터 발견 경로 확인
+
+세션 시각: 2026-11-02 18:17 KST(월) → 개선 세션. 같은 날 앞 세션은 00시 일반 세션 71(DuckDuckGo 새 글)·06시 개선 세션 72(콘텐츠 정리 2번·`compress-pdf-free`)·08:45 주간 SEO 점검 → 다른 글을 다루고, 주간 점검 우선순위 1·2를 이어서 처리. 열린 PR 없음. 작업 브랜치를 `origin/main`(28e9ec8)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-05 ~ 11-02, 세션 72·주간 점검 이후 바뀐 값만)**
+
+- 노출 931 → **944**, 클릭 14 → **15**, CTR 1.6%, 평균 순위 22.8 (`turn-off-ai-in-chrome` 165·16.7 / `spotify-family-qr-code-verification` 264·16.8 / `image-to-text-offline-free` 126·15.9 / `iphone-duo-sold-out` 45·7.8·클릭 2 / `gemini-gems-to-skills` 45·8.7)
+- 주간 검색 클릭 (`--days 7/14/21/28` 차이, 끝 주는 11-02 미확정 포함): 10-05~11 0 → 10-12~18 5 → 10-19~25 5 → **10-26~11-02 5** (그대로). 주간 노출 576 → 223
+- sitemap: **`sitemap.xml` 11-02 04:15 UTC 다운로드** — 10-27 11:58 제출 뒤 처음. 제출 시각이 그대로라 다시 제출하지 않았는데 Google이 스스로 받음 → 주간 점검의 "사용자: sitemap 다시 제출"은 할 필요 없어짐. `rss.xml`은 11-01 08:38 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 16 · `URL is unknown` 20 (주간 점검과 같은 목록)
+- `link_seen.py`: 가장 최근 크롤링 11-01 22:38 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 20편
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- 8~20위 검색어(페이지 × 검색어, 28일): 97쌍 중 14쌍, 모두 노출 1~4회 → 소제목·FAQ 보강 대상 없음
+- **AdSense 재신청 조건**: 운영 22일/92일 · 색인율 32%(17/53) · 주간 클릭 증가 0주(최근 주 5 = 직전 주 5) → 미충족
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — references/title-tags.md: 검색어를 앞에 두고 뒤에 클릭할 이유(구체적 결과·범위), How-to는 `How to [Task]`·`How to [Task] Without [Obstacle]`, 제목·H1·slug·설명이 같은 주제, `free`는 글이 지킬 때만, 중요한 단어는 앞 50자 안. 스킬의 "브랜드 뒤에"·"연도 넣기"는 우리 규칙(접미사 자동·연도는 해마다 바뀌는 목록만)대로 적용 안 함)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 · 콘텐츠 정리 8번 (제목 정리 1건) | 괄호 꼬리표 11편 + `windows-10-esu-extended`(대시 부제 `— What to Check`, writing-guide 금지 틀) | `title`만 변경, `updatedAt`·설명·본문 그대로 (RSS 순서·V7 피드 구성 영향 없음). 꼬리표만 떼면 `How to … for Free`로 끝나는 제목이 `compress-pdf-free`까지 7편이 되어 같은 틀이 반복 → 글마다 첫 문단의 실제 결론·범위로 끝을 다르게 하고, `Without …`도 1편만 남김 (아래 표) | V 대상 아님 (규칙 적용, 판정 중인 `transcribe-audio-offline-free`·`free-offline-ai-tools`는 V1·V2 뒤) |
+| 2 | 주간 1 · 색인 | `pdf` 클러스터 미발견 5편 | `link_seen.py`로 확인: 허브 `best-free-pdf-tools`(홈 허브 11-01 22:38 + `merge-pdf-files-free` 본문 10-20) · `compress-pdf-free`(`merge-pdf-files-free` 본문) · `pdf-to-jpg-free`(6곳) · `pdf-to-word-free`(3곳) · `split-pdf-free`(5곳) **모두 Google이 크롤링한 판에서 이미 링크를 받음** → 주간 점검 지시대로 링크를 더하지 않고 사용자 색인 요청으로 넘김 | - |
+| 3 | 주간 2 · 대표 이미지 | `pdf-to-jpg-free`(unknown 14일, Google이 본 링크 6곳) | `thumbnail`(기본값 결과 그래픽, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지 (아래). 1번 제목 정리와 같은 글이지만 둘 다 규칙 적용(세션 72 `compress-pdf-free`와 같음) | 규칙 적용 (V 대상 아님: 미색인·노출 0) |
+
+제목 정리 12편 (전 → 후, 글자 수는 접미사 ` | ToolProof` 제외)
+
+| 글 | 전 | 후 | 근거 |
+| --- | --- | --- | --- |
+| `best-free-pdf-tools` (허브) | Best Free PDF Tools (8 Tested on 6 Everyday Jobs) | Best Free PDF Tools to Split, Merge, Convert and Compress (57) | 허브가 다루는 6가지 작업을 동사로 |
+| `compress-video-for-discord-email` | Compress Video for Discord and Email (7 Settings Tested) | How to Compress a Video for Discord and Email (45) | 주 검색어 `compress video for discord` |
+| `convert-heic-to-jpg-free` | Convert HEIC to JPG Free and Offline (2 Tools Tested) | Convert HEIC to JPG Free and Offline With Accurate Colors (57) | 두 도구 모두 기본값에서 색 프로필을 버림 → Preserve color profile |
+| `compress-image-to-100kb` | How to Compress an Image to 100KB (20 Photos Tested) | How to Compress an Image to 100KB by Resizing It First (54) | 첫 문단 결론(1024 px로 줄인 뒤 압축) |
+| `jpg-to-pdf-free` | How to Convert JPG to PDF for Free (3 Ways Tested) | How to Convert JPG to PDF and Combine Photos in One File (56) | 하위 검색어 `jpg to pdf merge`·`combine` |
+| `pdf-to-jpg-free` | How to Convert PDF to JPG for Free (3 Apps Tested) | Convert PDF to JPG for Free, One Sharp Image per Page (53) | 기본값이 한 쪽만·흐리게 저장하는 문제와 해결 |
+| `pdf-to-word-free` | How to Convert PDF to Word for Free (3 Tools Tested) | How to Convert PDF to Word for Free and Keep the Layout (55) | iLovePDF만 표·두 단을 유지 |
+| `convert-webp-to-jpg-free` | How to Convert WebP to JPG for Free (5 Tools Tested) | How to Convert WebP to JPG, Including Transparent Images (56) | 도구 차이는 투명·애니메이션 WebP에서 남 |
+| `merge-pdf-files-free` | How to Merge PDF Files for Free (3 Apps Tested) | How to Merge PDF Files for Free With No Page Limits (51) | PDFsam Basic 쪽수·하루 한도 없음(Sejda 무료 50쪽·하루 3회) |
+| `remove-metadata-from-photos` | How to Remove Metadata From Photos for Free (6 Tools Tested) | How to Remove Metadata From Photos Before You Share Them (56) | 공유 전 위치 정보 제거가 글의 목적 |
+| `split-pdf-free` | Split a PDF for Free Without Losing Forms (3 Ways Tested) | Split a PDF for Free Without Losing Forms (41) | 괄호만 뗌 |
+| `windows-10-esu-extended` | Windows 10 ESU Now Runs to October 2027 — What to Check | Windows 10 ESU Now Runs to October 2027 (39) | 대시 부제만 뗌 |
+
+- 모두 60자 이내, 콜론·대시 부제·괄호 없음, 주 검색어가 앞쪽, 본문 첫 문단과 대조. 다른 글·코드에서 옛 제목을 인용한 곳 없음(grep)
+- 바꾸기 전 28일 검색어 (2026-10-05 ~ 11-02, 노출 있는 색인 글만. 나머지 7편은 웹·이미지 노출 0)
+  - `compress-image-to-100kb`: 웹 15(검색어는 `una foto` 1위 1회 외 익명), **이미지 225**(평균 45.4위: `compress image to 100kb` 9회 42.4위, `100kb images`·`100 kb jpg` 각 3회, 나머지 1~2회 46개)
+  - `merge-pdf-files-free`: 웹 26(77.6위: `open source pdf merge` 9회 89.2위, `free pdf merge software` 5회 88.6위, `combine pdf open source` 2회, `where can i merge pdfs for free` 1회 28위 등), **이미지 111**(54.1위: `pdfsam basic` 13회 83.6위, `merge pdf` 3회, `merge 12 pdf files` 1회 2위 등)
+  - `jpg-to-pdf-free`: 웹 13(4.8위, 검색어 익명), 이미지 54(44.7위, 24개 모두 1회: `jpg to pdf original size` 2위, `jpg to pdf 10 mb` 11위 등)
+  - `convert-heic-to-jpg-free`: 웹 12(29.9위: `heic to jpg cc relevant` 10위 등 4개 각 1회), 이미지 0
+  - `windows-10-esu-extended`: 웹 9·클릭 1(10.0위, 검색어 익명)
+- 제목만 바꿨으므로 지표용 검증 기록 행은 만들지 않음 (11-01 제목 11편 정리와 같은 기준). 다음 주간 점검 때 `compress-image-to-100kb`·`merge-pdf-files-free` 이미지 검색 노출만 함께 봄
+- 대표 이미지 (Z-Image-Turbo, `tests/pdf-to-jpg-free/hero-image.md`): 시드 1839830643, **51.3분**, 연민트 배경 + 코발트 파랑·호박색, 정면. 코발트 받침 위 빈 흰 종이 2장 → 파란 화살표 → 언덕·해가 그려진 그림 카드 2장 위에 큰 돋보기 (한 쪽이 그림 한 장씩 = 글 결론). 글자·로고·PDF/JPG 아이콘 없음 → 그대로 사용, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인 (12편): title = H1 = og:title = BlogPosting headline, h1 1개, 설명 143~160자, BlogPosting·BreadcrumbList JSON-LD, `dateModified` 모두 그대로(`updatedAt` 변경 없음), `rss.xml` 앞 3개 항목 그대로. `pdf-to-jpg-free`: 본문 첫 이미지가 대표 이미지 + 본문 이미지 12장, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), `<pre>`·`<code>` 0. lint·type-check·test(35파일 254개)·build 통과, `link_audit` 2건 그대로. `convert-heic-to-jpg-free` 본문의 인라인 `<code>` 2개(`_result`·`.jpg`, 파일 이름 접미사 표기)는 기존 내용이라 이번에 손대지 않음
+
+**알게 된 것**
+
+- 괄호 꼬리표를 떼기만 하면 새 반복 틀이 생김: PDF·사진 글 8편이 `How to {동작} … for Free`로 끝남. 꼬리표 자리에 각 글 첫 문단의 결론이나 범위(`by Resizing It First`, `One Sharp Image per Page`, `With No Page Limits`)를 넣으면 꼬리표 없이도 글마다 달라짐 (writing-guide 제목 규칙에 추가)
+- `pdf` 클러스터 미발견 5편은 링크 경로 문제가 아님: 모두 10-19~11-01 크롤링 판에서 링크를 받았는데 2주째 `URL is unknown` → 노하우 9 중간 관찰(10-26·11-01)과 같은 결론, 남은 수단은 사용자 색인 요청과 sitemap·피드 회차
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (하루 한도 안에서 위에서부터, 주간 점검 목록에 PDF 4편을 더함): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending`
+- 사용자: sitemap 다시 제출은 필요 없음 (Google이 11-02 04:15 UTC에 받음)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 22일·색인율 32%·클릭 증가 0주)
+- Claude(11-04 이후 개선 세션, Chrome 157 출시 확인 뒤): 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) + 주간 점검 3번(확정 데이터로 상시 글 노출 감소 원인 기록, 태그 `Google Chrome` → `Chrome`, `chrome-autofill-settings` "at a glance" 첫 문장은 통합 때 함께)
+- Claude: 콘텐츠 정리 8번 남은 2편(`transcribe-audio-offline-free` V1 11-11 뒤, `free-offline-ai-tools` V2 11-12 뒤) — 같은 반복 틀을 피해 각 글 결론으로
+- Claude: 남은 대표 이미지 `convert-webp-to-jpg-free`·`remove-bg-alternative-free`·`chrome-http-warning-default`·`gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(뒤 2편은 콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정. 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 9개 문서 갱신(`traffic`: Cloudflare 28일 조회수 38·방문 32, 10-05~11-02) + `history` 기록(batch 18개, 회차 2026-11-02T09:37:18Z, DB 문서 267개, 스크래치패드 경로). 회차 시점 28일 노출 944·클릭 15. `summary.crawl`: 최근 크롤링·홈 11-01 22:38 그대로, 미색인 36편 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 944 · 10위 안 23개 · 허브 4/4 · 받는 링크 부족 0편. 제목 정리는 이 회차 뒤 배포라 다음 회차부터 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-02 · 주간 SEO 점검
 
 점검 시각: 2026-11-02 08:46 KST (정기 실행 "주간 SEO 점검", 2회). 기준 `origin/main` 0222b14. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(10-26 ~ 11-01) `main`에 머지된 글 45편(새 글 11 · 수정 34, 통합으로 지운 `google-phone-number-verification` 제외)·코드. 스킬 `searchfit-seo:technical-seo`·`seo-audit`·`internal-linking`·`ai-visibility`를 불러 체크리스트대로 확인하고, 문서 규칙(FAQPage 없음·키워드 반복 목표 없음·제목 꼬리표 금지·llms.txt 없음)과 다른 스킬 조언(Organization·FAQ 스키마, 외부 리뷰·Reddit 활동, 제목 50~60자 일괄 맞춤 등)은 적용하지 않음. 글·코드는 고치지 않음.

@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-02 · 주간 SEO 점검
+
+점검 시각: 2026-11-02 08:46 KST (정기 실행 "주간 SEO 점검", 2회). 기준 `origin/main` 0222b14. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(10-26 ~ 11-01) `main`에 머지된 글 45편(새 글 11 · 수정 34, 통합으로 지운 `google-phone-number-verification` 제외)·코드. 스킬 `searchfit-seo:technical-seo`·`seo-audit`·`internal-linking`·`ai-visibility`를 불러 체크리스트대로 확인하고, 문서 규칙(FAQPage 없음·키워드 반복 목표 없음·제목 꼬리표 금지·llms.txt 없음)과 다른 스킬 조언(Organization·FAQ 스키마, 외부 리뷰·Reddit 활동, 제목 50~60자 일괄 맞춤 등)은 적용하지 않음. 글·코드는 고치지 않음.
+
+**문제 (심각도별)**
+
+- 치명: 없음
+- 높음
+  - **색인 정체 2주째**: 발행 53편 중 색인 17편 그대로(색인율 32%), `Discovered - currently not indexed` 16편, `URL is unknown` 20편. 10-21 이후 새로 크롤링된 글은 `/posts/image-to-text-offline-free`(10-30, 이미 색인된 글 재크롤링) 하나뿐. `sitemap.xml` 마지막 다운로드가 10-27 11:58(제출 시각) 그대로, `rss.xml`은 11-01 08:38 다운로드
+  - **`URL is unknown` 7일 이상 20편** (10-25 이전 발행): `/posts/compress-video-for-discord-email`(10-16) · `/posts/pixel-watch-safety-signal-ending`(10-17) · `/posts/split-pdf-free`(10-17) · `/posts/pdf-to-jpg-free` · `/posts/pdf-to-word-free` · `/posts/compress-pdf-free` · `/posts/office-2021-end-of-support` · **허브 `/posts/best-free-pdf-tools`**(10-20) · `/posts/gemini-android-auto-personal-intelligence` · `/posts/remove-bg-alternative-free` · `/posts/gemini-free-flash-lite` · `/posts/convert-webp-to-jpg-free` · `/posts/chrome-http-warning-default` · `/posts/remove-metadata-from-photos` · `/posts/apple-mail-exchange-not-syncing` · `/posts/turn-off-gemini-in-gmail` · `/posts/gemini-connected-apps` · `/posts/turn-off-apple-intelligence-iphone` · `/posts/turn-off-meta-ai-instagram` · `/posts/remove-phone-number-from-google-account`(10-25). `pdf` 클러스터는 허브 포함 7편 중 5편이 미발견
+  - **주간 노출 급감**: 10-19~25 노출 576 → 10-26~11-01 **211**(-63%, 마지막 2~3일 미확정 포함), 클릭 5 → 4. 가장 큰 원인은 `/posts/spotify-family-qr-code-verification` 239 → 23(화제 소멸, V4 판정 11-22)이고 상시 글도 함께 줄어듦: `/posts/turn-off-ai-in-chrome` 67 → 26 · `/posts/transcribe-audio-offline-free` 41 → 6 · `/posts/check-if-image-is-ai-generated` 23 → 3 · `/posts/image-to-text-offline-free` 70 → 45. 늘어난 글은 `/posts/free-offline-ai-tools` 1 → 13 · `/posts/windows-10-esu-extended` 1 → 8 정도. 확정 데이터가 쌓이는 11-04 이후 다시 확인 필요 (지금은 변경하지 않음)
+- 보통
+  - **대표 이미지 규칙 미적용 10편** (10-26 29편 → 10편): `thumbnail`에 측정 그래프를 쓰는 글 9편 `/posts/turn-off-ai-in-chrome`(V3 판정 11-18 뒤) · `/posts/spotify-family-qr-code-verification`(V4 11-22 뒤) · `/posts/free-offline-ai-tools` · `/posts/pdf-to-jpg-free` · `/posts/convert-webp-to-jpg-free` · `/posts/remove-bg-alternative-free` · `/posts/chrome-http-warning-default` · `/posts/gemini-android-auto-personal-intelligence` · `/posts/office-2021-end-of-support`, 본문 첫 줄 대표 이미지도 `thumbnail`도 없는 글 1편 `/posts/transcribe-audio-offline-free`(28일 노출 75). OG 이미지는 53편 모두 글별 `/_static/mdx/posts/og/{slug}.jpg`
+  - **괄호 꼬리표 제목 9편** (지난 7일 수정 글 중): `compress-image-to-100kb` · `compress-video-for-discord-email` · `convert-heic-to-jpg-free` · `convert-webp-to-jpg-free` · `jpg-to-pdf-free` · `merge-pdf-files-free` · `pdf-to-word-free` · `remove-metadata-from-photos` · `split-pdf-free` (`(N … Tested)`). 이미 [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) 8번 목록에 있음 → 새 문제 아님, 처리 순서만 확인
+  - **비슷한 태그 2묶음**: `Google Chrome`(4) · `Chrome`(2) (10-26 2·2 → 4·2), `AI`(1) · `Meta AI`(1). 1개 글에만 쓴 태그 77/115개
+  - **내부 링크** (`link_audit.py`): 2건 그대로 — `turn-off-ai-in-chrome` → 허브(V3 판정까지 보류), `/posts/apple-mail-exchange-not-syncing` 칼럼 → 상시 글 링크 없음(문맥 없음 보류). 받는 링크 2개 미만 0편, 깨진 링크 0
+  - **AI 답변 인용**: 새 글 11편 모두 비교·요약 표 1~2개. 소제목 첫 문장이 앞 문맥에 기대는 곳 1개 — `/posts/chrome-autofill-settings` "Chrome autofill settings at a glance"(`These are the Chrome 156 switches…`). 10-26 지적한 3곳(`office-2021-end-of-support`·`remove-metadata-from-photos`·`windows-11-24h2-end-of-support`)은 고쳐짐
+
+**통과한 항목**
+
+- robots.txt 200(`Allow: /` + sitemap 위치). sitemap.xml 200, `<loc>` **61개 = 발행 글 53 + 고정 페이지 4(about·contact·editorial-policy·privacy) + 홈 1 + 카테고리 3**, 저장소 글과 차이 0, `lastmod`는 frontmatter 날짜(최신 2026-11-01T21:50Z)
+- sitemap URL 61개 모두 200, canonical 자기 참조, `robots: index, follow`, `X-Robots-Tag` 없음, h1 1개
+- `vercel.json` 리디렉트 8개(새 `google-phone-number-verification` 포함) 모두 308 한 번에 대상 글 200 도착. `video-to-gif-high-quality-free`는 규칙대로 404. `https://www.tool-proof.com/` → 308 → 루트, 끝 슬래시 → 308 → 슬래시 없는 URL
+- **HTTP → HTTPS 확인** (10-26 미확인 항목): `http://tool-proof.com/` → 308 → `https://tool-proof.com/`, `http://www.tool-proof.com/` → 308 → `https://www.tool-proof.com/` → 308 → 루트. HSTS `max-age=63072000`
+- 지난 7일 글 45편: 설명 140~160자(143~160), BlogPosting·BreadcrumbList JSON-LD, 글별 OG 이미지, h1 1개. 새 글 11편 꼬리표 없음, 검색형 60자 이내(최대 `customize-right-click-menu-windows-11` 60자), 뉴스 칼럼(피드형) 최대 68자로 75자 이내
+- 이미지 alt: 본문 이미지 모두 alt 있음. alt 없는 이미지는 글마다 관련 글 카드 썸네일 3개(카드 제목 텍스트가 있는 장식 이미지)뿐
+
+**목표 지표 현재값** (`gsc_report.py`, 2026-10-04 ~ 11-01, 최신 미확정 데이터 포함)
+
+| 지표 | 현재 (11-02) | 목표 (11-30) | 10-26 대비 |
+| --- | --- | --- | --- |
+| 색인율 | 17/53 (32%) | 80% 이상 | 17/43 (40%) → 17/53 (새 글만 늘고 색인 0) |
+| 28일 노출 | 931 (클릭 14, CTR 1.5%, 평균 22.5위) | 2,000 | 683 → 931. 단 최근 7일 211 vs 그 전 7일 576 |
+| 10위 안 비브랜드 검색어 수 | 23개 | 40개 | 18 → 23 |
+| 허브가 있는 클러스터 (상시 글 3편 이상) | 4/4 (`photo-video` 허브 `free-image-converter-photo-tools` 추가) | 전부 | 3/4 → 4/4 |
+| 받는 링크 2개 미만 글 | 0편 | 0편 | 1 → 0 (달성) |
+
+- 새로 10위 안에 든 검색어 (28일 창을 7일 앞당긴 기간 대비, 모두 노출 1회): `image to text converter offline` 5위 · `spotify qr` 7위 · `gemini gems tools capabilities limitations` 10위 · Chrome AI 레지스트리 명령(`reg add … aimodesettings …`) 10위 · `una foto` 1위(스페인어). 노출이 붙은 새 검색어가 없어 순위 상승보다 노출 감소가 큼
+
+**다음 개선 세션 할 일 (우선순위)**
+
+1. 미발견 `pdf` 클러스터 발견 경로: 허브 `best-free-pdf-tools`와 `split-pdf-free`·`pdf-to-jpg-free`·`pdf-to-word-free`·`compress-pdf-free`(7일 이상 unknown). 링크를 더 넣기 전에 `link_seen.py`로 색인 글(`merge-pdf-files-free`·`jpg-to-pdf-free`, 마지막 크롤링 10-19~20)의 크롤링 판에 이미 링크가 있는지 확인하고, 있으면 링크 대신 사용자 색인 요청으로 넘김. 함께 콘텐츠 정리 8번(괄호 꼬리표 제목, V1·V2 대상 빼고) 진행
+2. 대표 이미지 남은 10편 중 판정 대상이 아닌 글부터: `transcribe-audio-offline-free`(노출 75, 대표 이미지·`thumbnail` 모두 없음) → `free-offline-ai-tools`(최근 노출 증가) → `pdf-to-jpg-free`·`convert-webp-to-jpg-free`·`remove-bg-alternative-free`
+3. 주간 노출 감소 원인 확인: 11-04 이후 확정 데이터로 상시 글(`turn-off-ai-in-chrome`·`transcribe-audio-offline-free`·`check-if-image-is-ai-generated`)의 검색어별 순위 변화를 보고 순위 하락인지 검색량 감소인지 log.md에 기록(제목·본문은 바꾸지 않음). 같은 PR에 태그 통합(`Google Chrome` → `Chrome`, 4편)과 `chrome-autofill-settings` "at a glance" 소제목 첫 문장 수정
+
+**사용자가 할 일**
+
+- Search Console URL 검사 → 색인 생성 요청 (하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free`
+- Search Console Sitemaps에서 `sitemap.xml` 다시 제출 (10-27 제출 뒤 Google이 한 번도 다시 받지 않음, 그 뒤 새 글 6편·삭제 1편 반영)
+- 10-26 요청한 HTTP → HTTPS 확인은 이번에 컨테이너에서 확인됨 → 할 필요 없음
+- AdSense 재신청은 조건 충족 전까지 하지 않음 (운영 22일·색인율 32%·주간 클릭 증가 0주)
+
 ## 2026-11-02 · 세션 72 (정기 실행, 개선 세션): 콘텐츠 정리 2번 통합(Android 전화번호 인증 칼럼 → Google 계정 전화번호 글) + `compress-pdf-free` 대표 이미지·제목 꼬리표 정리
 
 세션 시각: 2026-11-02 06:15 KST(월) → 개선 세션. 같은 날 앞 세션은 00시 일반 세션 71(DuckDuckGo 새 글) → 다른 글을 다룸. 열린 PR 없음. 작업 브랜치를 `origin/main`(b7bf622)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료. 주간 SEO 점검은 오늘 08:45 예정이라 최근 보고는 10-26 그대로(우선순위 3 대표 이미지를 이어서 처리).

@@ -2,6 +2,63 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-03 · 세션 74 (정기 실행, 개선 세션): 기존 글 2편 대표 이미지(`convert-webp-to-jpg-free`·`remove-bg-alternative-free`) + 콘텐츠 정리 대기 항목 확인
+
+세션 시각: 2026-11-03 01:08 KST(화) → 00시 실행·화요일이라 개선 세션. 11-03 첫 세션이라 같은 날 앞 세션 없음 → 전날 세션 73과 11-02 주간 SEO 점검 우선순위를 이어서 처리. 열린 PR 없음. 작업 브랜치를 `origin/main`(98b493b)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료(약 20분).
+
+**지표 (`gsc_report.py`, 2026-10-05 ~ 11-02, 세션 73 이후 바뀐 값만)**
+
+- 노출 944 → **949**, 클릭 15, CTR 1.6%, 평균 순위 22.8 (`turn-off-ai-in-chrome` 165 → 166·16.6, 나머지 상위 글 그대로)
+- 주간 검색 클릭 (`--days 7/14/21/28` 차이, 끝 주는 11-02 미확정 포함): 10-05~11 0 → 10-12~18 5 → 10-19~25 5 → **10-26~11-02 5** (그대로). 주간 노출 576 → 228
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로. `gsc_report` 회차 `Discovered` 7 · `URL is unknown` 29, 몇 분 뒤 `link_seen.py` 회차 `Discovered` 9 · unknown 27 (같은 글이 두 상태를 오가는 흔들림, 세션 63~73과 같음)
+- **크롤링**: `image-to-text-offline-free`가 **11-02 13:28 UTC 재크롤링**(10-15 → 10-30 06:36 → 11-02, 간격 약 15일 → 3.3일). 홈은 11-01 22:38 그대로. 이 크롤링으로 `split-pdf-free`(본문)·`siri-history-on-iphone`·`turn-off-gemini-apps-activity`(관련 글)가 Google이 본 링크를 하나씩 더 얻음. 미색인 36편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태·writing-guide 판정 변경 없음. V5 대상 글의 새 크롤링(11-02)은 10-25판 이후 두 번째라 V5 판정 기준(10-30부터 변경 후 기간)은 그대로
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건**: 운영 23일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주(최근 주 5 = 직전 주 5) → 미충족
+
+**콘텐츠 정리 목록 확인 (0순위) — 이번 세션에 처리할 수 있는 항목 없음**
+
+| # | 항목 | 대기 이유 (11-03 01시 KST 기준) |
+| --- | --- | --- |
+| 1 | `chrome-enhanced-autofill-gmail` → `chrome-autofill-settings` 통합 | Chrome 157 안정판 예정일 11-03(미국, chromiumdash `fetch_milestone_schedule`), 최신 안정판은 아직 156.0.8078.80(10-29, `fetch_releases`) → 157 출시 뒤 메뉴 재확인과 함께 (11-04 06시 이후 세션) |
+| 3·5·6 | Personal Intelligence 칼럼 2편 통합·전환, `windows-11-24h2-end-of-support` 전환, iPhone Duo 칼럼 2편 검토 | V7 대상 글 포함(피드 구성이 바뀜) → V7 판정 뒤. 5번은 11-10 Patch Tuesday 뒤 |
+| 4 | `office-2021-end-of-support` 전환 | 11-10 뒤 (세션 72 결정) |
+| 7 | 일정 뒤 전환 3편 | 12-12·12-21·12-22 뒤 |
+| 8 | 남은 제목 2편 | V1(11-11)·V2(11-12) 판정 뒤 |
+
+→ README 개선 세션 순서의 다음 항목인 주간 점검 우선순위 2(대표 이미지 남은 글 중 판정 대상이 아닌 글)를 처리. 우선순위 3(주간 노출 감소 원인·태그 통합·"at a glance" 첫 문장)은 확정 데이터가 쌓이는 11-04 이후·콘텐츠 정리 1번과 함께라 이번에는 하지 않음
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Image Optimization(설명형 파일 이름·alt가 그림 내용을 설명·WebP·용량·지연 로딩), On-Page(제목 56자·설명 155/160자·H1 1개·제목/H1/slug 일치), Core Web Vitals(LCP 요소 측정, 아래))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 주간 2 · 대표 이미지 | `convert-webp-to-jpg-free`(unknown 12일, Google이 본 링크 0) | `thumbnail`(투명 WebP 변환 결과 그래픽, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 제목·설명·본문·`updatedAt` 그대로 | 규칙 적용 (V 대상 아님: 미색인·노출 0) |
+| 2 | 주간 2 · 대표 이미지 | `remove-bg-alternative-free`(unknown 13일, Google이 본 링크 0) | 같은 방식 (`thumbnail` 무료 다운로드 크기 그래프 → 본문 첫 줄 AI 대표 이미지) | 규칙 적용 (V 대상 아님: 미색인·노출 0) |
+| 3 | 1 · 색인 | `photo-video` 미발견 3편(`convert-webp-to-jpg-free`·`remove-bg-alternative-free`·`remove-metadata-from-photos`) | `link_seen.py`: 세 글 모두 Google이 본 링크 0. 하지만 지금 원본에서는 이미 색인된 같은 클러스터 글 `compress-image-to-100kb`·`convert-heic-to-jpg-free`(둘 다 마지막 크롤링 10-19, 세 글 발행 전)와 허브가 모두 링크함 → 링크한 글이 다시 크롤링되기 전에는 링크를 더해도 발견 경로가 되지 않으므로(README 개선 세션 1번) 링크를 더하지 않고 사용자 색인 요청 목록으로 | - |
+
+- 대표 이미지 1 (Z-Image-Turbo, `tests/convert-webp-to-jpg-free/hero-image.md`): 시드 185462106, **48.1분**, 연한 페리윙클 배경 + 탠저린·라즈베리 분홍, 아이소메트릭에 가까운 3/4. 탠저린 받침 위 투명 유리판 속 흰 꽃, 위쪽 가장자리에 흰 페인트 롤러, 옆에 물감 접시 (투명 영역이 흰색으로 칠해지는 글 결론). 요청한 "유리 위쪽 절반을 덮은 흰 칠"은 그려지지 않았지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤
+- 대표 이미지 2 (`tests/remove-bg-alternative-free/hero-image.md`): 시드 366841740, **48.8분**, 연한 살구색 배경 + 포레스트 그린·자두색, 정면에 가까운 약간 위 시점. 초록 받침 위 아치형 초록 사진 카드의 오른쪽 위 모서리가 스티커처럼 벗겨지고 앞에 머그잔, 머그잔에 끝이 빛나는 막대 (배경 층을 자동으로 떼어 냄). 머그잔이 투명한 자리에 홀로 서는 모습·공중의 마술봉은 그려지지 않았지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인 (2편): title 68자(접미사 포함, 그대로)·H1 일치·h1 1개, 설명 155·160자(`remove-bg`는 HTML에서 `&#x27;` 때문에 165로 셈), BlogPosting·BreadcrumbList JSON-LD, `dateModified` 그대로(10-21, `updatedAt` 변경 없음), `<pre>`·`<code>` 0, 본문 첫 이미지가 대표 이미지 + 본문 이미지 5·6장(모두 alt·WebP·`loading="lazy"`), og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·type-check·test(35파일 254개)·build 통과, `link_audit` 2건 그대로. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+- **`seo-audit` Core Web Vitals 확인 — 문제 아님**: 대표 이미지도 `loading="lazy"`라 LCP 이미지 지연 로딩인지 봄. 빌드한 `out/`을 로컬 서버로 띄워 Playwright(Chromium)로 3편(`convert-webp-to-jpg-free`·`remove-bg-alternative-free`·`duckduckgo-no-ai`)을 측정: 모바일 412×823(지연 150ms·1.6Mbps 흉내, 3회씩)에서 대표 이미지 위쪽이 1,097~1,177px로 첫 화면 밖이고 LCP 요소는 첫 문단 `P`(1.48~1.57초), 데스크톱 1366×768도 대표 이미지 918~946px·LCP `P`(1.52초). → 첫 화면 밖 이미지라 지연 로딩이 맞음, 코드(`src/core/mdx/internal/components.tsx`) 바꾸지 않음. 레이아웃이 바뀌어 대표 이미지가 첫 화면에 올라오면 다시 확인
+
+**알게 된 것**
+
+- 콘텐츠 정리 목록 8개 항목이 모두 날짜(Chrome 157·Patch Tuesday·일정)나 검증 판정(V1·V2·V7)을 기다리는 날이 생김. V7이 `updatedAt`을 바꾸는 작업(통합·전환·후속 갱신)을 모두 묶고 있어, 판정 전까지 개선 세션이 할 수 있는 일은 `updatedAt`을 바꾸지 않는 작업(대표 이미지·제목·링크 확인)뿐임 → V7 판정(늦어도 11-15) 뒤 3·5·6번을 차례로 처리
+- 색인된 글 중 Google이 가장 자주 다시 오는 글은 `image-to-text-offline-free`(노출 126, 10-30 → 11-02 3.3일). 다만 V5 판정 중이라 이 글에 역링크를 넣지 않음 (판정 뒤에는 미발견 글로 가는 문맥 링크 후보)
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 73 목록 그대로, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → 이번에 확인한 `photo-video` 3편 `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos`
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 23일·색인율 32%·클릭 증가 0주)
+- Claude(11-04 06시 이후 개선 세션, Chrome 157 출시 확인 뒤): 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) + 주간 점검 3번(확정 데이터로 상시 글 노출 감소 원인 기록, 태그 `Google Chrome` → `Chrome`, `chrome-autofill-settings` "at a glance" 첫 문장)
+- Claude: 남은 대표 이미지 `chrome-http-warning-default`(칼럼, `thumbnail` 그래프) · `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15) → 판정 뒤 콘텐츠 정리 3·5·6번. 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)
+- Claude(11-04 수 일반 세션): 세션 71 후보(`turn off leo ai in brave`·`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`) 그대로
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 9개 문서 갱신(`traffic`: Cloudflare 28일 조회수 41·방문 35, 10-05~11-02) + `history` 기록(batch 18개, 회차 2026-11-02T18:10:06Z, DB 문서 276개, 스크래치패드 경로). 회차 시점 28일 노출 952·클릭 15·평균 22.9위. `summary.crawl`: 최근 크롤링 11-02 13:28(`image-to-text-offline-free`)·홈 11-01 22:38, 미색인 36편 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 952 · 10위 안 23개 · 허브 4/4 · 받는 링크 부족 0편. URL 검사 API 일시 오류가 몇 번 나와 재시도로 끝남. 대표 이미지 2편은 이 회차 뒤 배포라 다음 회차부터 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-02 · 세션 73 (정기 실행, 개선 세션): 콘텐츠 정리 8번 제목 정리(괄호 꼬리표 11편 + 대시 부제 1편) + `pdf-to-jpg-free` 대표 이미지 + PDF 클러스터 발견 경로 확인
 
 세션 시각: 2026-11-02 18:17 KST(월) → 개선 세션. 같은 날 앞 세션은 00시 일반 세션 71(DuckDuckGo 새 글)·06시 개선 세션 72(콘텐츠 정리 2번·`compress-pdf-free`)·08:45 주간 SEO 점검 → 다른 글을 다루고, 주간 점검 우선순위 1·2를 이어서 처리. 열린 PR 없음. 작업 브랜치를 `origin/main`(28e9ec8)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

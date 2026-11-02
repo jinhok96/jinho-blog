@@ -68,7 +68,8 @@
 - **제목은 주제만** (2026-10-22 사용자 결정): 제목은 글의 주제를 한 문장(구)으로 쓰고 끝냄. 뒤에 꼬리표를 붙이지 않음. 2026-11-01 AdSense 거절 대응으로 기존 글 중 같은 틀이 반복되던 11편도 정리 (나머지 기존 글의 괄호 꼬리표는 그 글을 고칠 때 함께 정리)
   - 금지: 콜론·대시로 붙이는 부제·정형 문구(`: What It Means for You`, `: What Changes for You and How to …`, `— What to Check`), 괄호 덧붙임(`(6 Tools Tested)`, `(2026, Tested)`, `(and Delete What It Saved)`), `We Tested {N} …:` 같은 앞머리
   - **같은 틀 반복 금지** (2026-11-01): 여러 글의 제목이 같은 문구로 끝나거나 시작하지 않게 함 (사이트 전체가 틀로 찍어 낸 글처럼 보임). 새 제목은 최근 글 제목 목록과 비교해 정함
-  - 예: `iPhone Handoff Costs $10 a Month on Verizon: What It Means for You` → `iPhone Handoff Costs $10 a Month on Verizon`, `How to Merge PDF Files for Free (3 Apps Tested)` → `How to Merge PDF Files for Free`
+  - 꼬리표를 떼서 정리할 때는 뗀 뒤의 제목끼리도 비교: 꼬리표만 떼면 같은 분야 글이 `How to {동작} … for Free`처럼 같은 끝맺음으로 모임 (2026-11-02 세션 73: PDF·사진 글 8편). 꼬리표 자리에 그 글 첫 문단의 결론이나 범위를 넣어 끝을 다르게 함 (`How to Compress an Image to 100KB by Resizing It First`, `Convert PDF to JPG for Free, One Sharp Image per Page`, `How to Merge PDF Files for Free With No Page Limits`). `Without …` 같은 연결어도 한두 편에만
+  - 예: `iPhone Handoff Costs $10 a Month on Verizon: What It Means for You` → `iPhone Handoff Costs $10 a Month on Verizon`, `How to Merge PDF Files for Free (3 Apps Tested)` → `How to Merge PDF Files for Free With No Page Limits`
 - **길이**: 검색형은 40~55자 권장, 최대 60자. 페이지 `<title>`에는 ` | ToolProof`(12자)가 붙음. 너무 짧거나 긴 제목은 Google이 고쳐 씀 (title 60자 초과는 76% 이상, 70자 초과는 거의 전부 재작성). 피드형은 75자까지 허용하되 주 검색어는 앞 60자 안에 둠
 - **피드형 제목**: 바뀐 사실이나 측정 결과를 독자 입장의 한 문장으로 씀 (예: `Microsoft 365 Family Storage Drops to 2TB Shared`)
 - **검색어 그대로, 앞쪽에**: 주 검색어의 단어를 동의어로 바꾸지 않고 제목 앞부분에 둠. slug도 같은 단어로 (URL이 검색어와 일치하면 CTR이 높음)

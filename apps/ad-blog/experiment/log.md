@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-03 · 세션 75 (정기 실행, 개선 세션): `chrome-http-warning-default` 대표 이미지 + `seo-audit` 문제 찾기(클릭 깊이·카니벌라이제이션)
+
+세션 시각: 2026-11-03 06:15 KST(화) → 06시 실행이라 개선 세션. 같은 날 앞 세션은 00시 개선 세션 74(`convert-webp-to-jpg-free`·`remove-bg-alternative-free` 대표 이미지) → 다른 글을 다룸. 열린 PR 없음. 작업 브랜치를 `origin/main`(2a882b3)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.
+
+**지표 (`gsc_report.py`, 2026-10-05 ~ 11-02, 세션 74 이후 바뀐 값만)**
+
+- 노출 949 → **958**, 클릭 15, CTR 1.6%, 평균 순위 22.9 (`turn-off-ai-in-chrome` 166 → 168·16.9 / `iphone-duo-sold-out` 46·7.8 / 나머지 상위 글 그대로)
+- 주간 검색 클릭 (`--days 7/14/21/28` 차이, 끝 주는 11-02 미확정 포함): 10-05~11 0 → 10-12~18 5 → 10-19~25 5 → **10-26~11-02 5** (그대로). 주간 노출 576 → 237
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로. `Discovered` 14 · `URL is unknown` 22 (같은 글이 두 상태를 오가는 흔들림 그대로). `link_seen.py`: 가장 최근 크롤링 11-02 13:28 UTC(`image-to-text-offline-free`) 그대로, 미색인 36편 중 Google이 본 링크 20편 그대로
+- Chrome 157 안정판: chromiumdash `stable_date` 2026-11-03, `fetch_releases` 최신 안정판 156.0.8078.80 그대로 → 콘텐츠 정리 1번은 여전히 대기
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건**: 운영 23일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주(최근 주 5 = 직전 주 5) → 미충족
+
+**콘텐츠 정리 목록 (0순위)**: 세션 74 표와 같음 — 1번은 Chrome 157 출시 뒤, 3·5·6번은 V7 판정 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1·V2 판정 뒤 → 이번 세션에 처리할 항목 없음. 주간 점검 우선순위 3(확정 데이터로 노출 감소 원인)은 11-04 이후
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Image Optimization(설명형 파일 이름·alt가 그림 내용을 설명·WebP·용량·지연 로딩), On-Page(제목·설명·H1), Crawlability(Site Architecture: 홈에서 3클릭 이내·고아 페이지), Indexation·Canonicalization(페이지네이션), Keyword Targeting(카니벌라이제이션))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 주간 2 · 대표 이미지 | `chrome-http-warning-default`(칼럼, unknown 12일, Google이 본 링크 0) | `thumbnail`(Standard vs Enhanced 보호 비교 그래픽, 본문에 그대로) 지우고 본문 첫 줄에 AI 대표 이미지. 제목·설명·본문·`updatedAt` 그대로 (RSS 피드 순서·V7 영향 없음) | 규칙 적용 (V 대상 아님: 미색인·노출 0) |
+| 2 | 7 · 문제 찾기 | 사이트 전체 (라이브 `https://tool-proof.com`) | **문제 없음, 바꾼 것 없음** (아래) | - |
+
+- 대표 이미지 (Z-Image-Turbo, `tests/chrome-http-warning-default/hero-image.md`): 시드 232131529, **51.9분**, 연한 버터 노랑 배경 + 진보라·코랄, 약간 낮은 옆 시점(최근 3장의 아이소메트릭·약간 위 3/4·정면과 다름). 보라 받침 위 코랄 아치형 문 + 문 앞을 막은 빨강·흰 줄무늬 차단봉 + 자물쇠 방패 (HTTPS가 아닌 사이트를 열기 전에 Chrome이 멈춰 묻는다는 주제). 문의 자물쇠가 "열린 자물쇠"가 아니라 잠긴 모양이지만 주제·화풍이 맞아 그대로 사용, alt를 실제 그림에 맞춤
+- 빌드 HTML 확인: title 65자(접미사 포함, 그대로)·H1 일치·h1 1개, 설명 158자, BlogPosting·BreadcrumbList JSON-LD, `dateModified` 그대로(10-21, `updatedAt` 없음), `<pre>`·`<code>` 0, 본문 첫 이미지가 대표 이미지 + 본문 이미지 5장(모두 alt·WebP·`loading="lazy"`), og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인). lint·type-check·test(35파일 254개)·build 통과, `link_audit` 2건 그대로. `pnpm install`이 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+- **`seo-audit` 문제 찾기 (주간 점검에서 아직 보지 않은 항목)**
+  - Site Architecture: 홈에서 내부 링크를 따라 라이브 사이트 전체를 크롤링(68쪽, 모두 200) → **글 53편 모두 홈에서 2클릭 이내**(1클릭 26쪽: 홈 목록·허브 고정·카테고리, 2클릭 41쪽), 고아 페이지 0. 내부 링크를 받는 페이지 수가 가장 적은 글도 6쪽(`transcribe-audio-offline-free`·`chrome-http-warning-default`·`spotify-family-qr-code-verification`·`pixel-watch-safety-signal-ending`) → 클릭 깊이는 색인 정체 원인이 아님
+  - 페이지네이션: `/page/2`~`/page/5`, `/categories/{ai-tools,software,news}/page/2` 모두 200·자기 참조 canonical·`index, follow`·`rel="prev"/"next"` 링크 → sitemap에는 없지만(규칙대로) 크롤링 경로로 문제 없음
+  - 카니벌라이제이션: Search Console 검색어 × 페이지(2026-08-05 ~ 11-02, 최근 3개월): 웹 97쌍·검색어 94개 중 **두 페이지 이상이 노출된 검색어는 브랜드 검색어 2개뿐**(`toolproof`·`tool proof` → 홈·소개 페이지, 정상), 이미지 검색 118개는 0 → 같은 검색어를 두고 경쟁하는 글 없음. 콘텐츠 정리 1·3·6번(같은 질문에 답하는 글 쌍)은 노출이 거의 없어 아직 검색어로는 겹침이 드러나지 않음 → 목록대로 통합 진행
+  - 참고: 웹 검색에 `http://tool-proof.com/`이 노출 1회로 잡힘 (HTTP → HTTPS 308은 주간 점검에서 확인됨, Google이 합칠 때까지의 잔여로 보고 조치 안 함)
+
+**알게 된 것**
+
+- 색인 정체(색인 17/53, 2주째)는 사이트 구조 문제가 아님: 모든 글이 홈에서 2클릭 이내, 페이지네이션도 색인 가능, 카니벌라이제이션 없음. 남은 원인은 크롤링 빈도(노하우 9 중간 관찰과 같음) → 사용자 색인 요청·sitemap·피드 회차가 계속 주된 수단
+- 남은 대표 이미지는 모두 다른 작업을 기다리는 글뿐: 콘텐츠 정리 3·4번 대상 2편(`gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`), 판정 대상 4편 → 다음 개선 세션부터는 대표 이미지 작업이 없음
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 74 목록에 이번 글을 더함, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default`
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 23일·색인율 32%·클릭 증가 0주)
+- Claude(11-04 06시 이후 개선 세션, Chrome 157 출시 확인 뒤): 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) + 주간 점검 3번(확정 데이터로 상시 글 노출 감소 원인 기록, 태그 `Google Chrome` → `Chrome`, `chrome-autofill-settings` "at a glance" 첫 문장). Chrome 157이 나오면 `chrome-http-warning-default`(Chrome 156 기준 칼럼)도 메뉴·경고 화면 재확인 대상 (V7 판정 뒤 `updatedAt`)
+- Claude: 남은 대표 이미지 `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15) → 판정 뒤 콘텐츠 정리 3·5·6번. 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)
+- Claude(11-04 수 일반 세션): 세션 71 후보(`turn off leo ai in brave`·`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`) 그대로
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 9개 문서 갱신(`traffic`: Cloudflare 28일 조회수 43·방문 37, 10-05~11-02) + `history` 기록(batch 18개, 회차 2026-11-02T22:25:40Z, DB 문서 285개, 스크래치패드 경로). 회차 시점 28일 노출 960·클릭 15·평균 23.0위. `summary.crawl`: 최근 크롤링 11-02 13:28(`image-to-text-offline-free`)·홈 11-01 22:38 그대로, 미색인 36편 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 960 · 10위 안 23개 · 허브 4/4 · 받는 링크 부족 0편. 대표 이미지는 이 회차 뒤 배포라 다음 회차부터 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-03 · 세션 74 (정기 실행, 개선 세션): 기존 글 2편 대표 이미지(`convert-webp-to-jpg-free`·`remove-bg-alternative-free`) + 콘텐츠 정리 대기 항목 확인
 
 세션 시각: 2026-11-03 01:08 KST(화) → 00시 실행·화요일이라 개선 세션. 11-03 첫 세션이라 같은 날 앞 세션 없음 → 전날 세션 73과 11-02 주간 SEO 점검 우선순위를 이어서 처리. 열린 PR 없음. 작업 브랜치를 `origin/main`(98b493b)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료(약 20분).

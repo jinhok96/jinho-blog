@@ -2,6 +2,63 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-04 · 세션 78 (정기 실행, 개선 세션): 콘텐츠 정리 1번 통합(Chrome Gmail 자동 완성 칼럼 → Chrome 자동 완성 설정 글) + 주간 점검 3번(노출 감소 원인·태그)
+
+세션 시각: 2026-11-04 06:15 KST(수) → 06시 실행이라 개선 세션. 같은 날 앞 세션은 00시 일반 세션 77(`turn-off-ai-in-brave` 새 글) → 다른 글을 다룸. 열린 PR 없음. 작업 브랜치를 `origin/main`(3acad2b)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-06 ~ 11-03, 세션 77 이후 바뀐 값만)**
+
+- 노출 987 → **1,002**, 클릭 15, CTR 1.5%, 평균 순위 23.2 (`turn-off-ai-in-chrome` 174·17.6 / `spotify-family-qr-code-verification` 267·17.2, 나머지 상위 글 그대로)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 그대로 · 11-02~ 0 (진행 중, 노출 53)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/54(새 글 포함, 통합 뒤 17/53), `Discovered` 18 · `URL is unknown` 19 (흔들림 그대로). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 37편 중 Google이 본 링크 20편 그대로
+- **Chrome 157 안정판 출시 확인**: chromereleases.googleblog.com 11-03 "Stable Channel Update for Desktop"(Linux 157.0.8103.38, Windows·Mac .38/.39), versionhistory API Windows 안정판 157.0.8103.39. 단 Linux 안정판 deb·versionhistory Linux는 아직 156.0.8078.79 → Chrome for Testing 157.0.8103.38로 확인 (아래)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). **비슷한 태그 `Google Chrome`·`Chrome` 묶음 해소**(아래 3), 남은 묶음 `AI`·`Meta AI` 1개
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 24일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — On-Page(제목 50자·H1 일치·설명 156자·첫 100단어 주 검색어·소제목 구조), Keyword Targeting(통합 뒤 같은 검색 의도 글 없음), Internal Linking(받는 링크 3곳 설명형 앵커·깨진 링크 0), Image Optimization(옮긴 그래픽 alt·WebP), AI Writing Detection(em dash 0·군더더기 없음, 근거보다 단정한 2문장 고침))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 · 콘텐츠 정리 1번 (통합) | `chrome-enhanced-autofill-gmail`(news) → `chrome-autofill-settings`(software) | 두 글 28일 노출 0(웹·이미지·Discover·News)·둘 다 `Discovered` → 규칙대로 상시 글을 남김 (지우기 전 검색어 없음). 칼럼의 고유 내용을 새 절 "How do you stop Chrome from filling forms with your Gmail?"(경로·조건 3줄 + 조건 그래픽·검토 안내 문구·관리 브라우저 문구·Photos 문구·출처 보기·제안 숨기기·Connected Apps)과 표 행(Find and fill with Gemini), FAQ 1개, 상황별 추천 1줄로 옮김. 1차 출처 5쪽(도움말 142893 컴퓨터·Android·iOS, Gemini 16598406, Chrome Enterprise 16278400) + Google 블로그 다시 열어 10-28·29 사본과 비교: 단계 변화 없음, Gemini 웹 경로만 `Menu` 없이 "Settings & help at the bottom"으로 고침. **Chrome 157 확인**: 설정 6쪽 스위치 이름·상태가 156과 같음, 인용한 Chrome 문구 157에 모두 있음, 단축키 줄 1개 바뀜 → 첫 문단·"at a glance" 첫 문장(앞 문맥 없이 읽히게, 주간 점검 지적)·How we tested·다음 확인(Chrome 158, 11-17) 갱신. 설명 "…in Chrome 156 and 157 … how to stop Gmail suggestions…"(156자), 태그 `Gmail`·`Gemini` 추가, `updatedAt` 2026-11-03T21:53Z. `vercel.json` 308 1개(모두 9개), 링크 3곳 교체(허브 `turn-off-ai-features` Chrome 절·색인된 `gemini-gems-to-skills`·`google-gmail-photos-ads` → 남긴 글, 마지막은 새 절 앵커). 칼럼 이미지 4장 삭제·조건 그래픽 1장 이동 | 규칙 적용 (V 대상 아님: 두 글 미색인·노출 0). V7 피드 구성 변화는 traffic-playbook V7 행에 적음 |
+| 2 | 주간 3 · 노출 감소 원인 | `turn-off-ai-in-chrome`·`transcribe-audio-offline-free`·`check-if-image-is-ai-generated` | **분석만, 글은 바꾸지 않음** (V1·V3·V6 판정 중). 아래 표 | - |
+| 3 | 주간 3 · 태그 통합 | `jpg-to-pdf-free`·`split-pdf-free` | 태그 `Chrome` → `Google Chrome` (주간 점검 제안은 반대 방향이었지만 `Google Chrome` 쪽 글에 V3 판정 중인 `turn-off-ai-in-chrome`이 있어, 그 글을 건드리지 않는 방향으로 맞춤). `related.py`(관련 글 규칙 복제)로 계산: 두 글·다른 글 모두 관련 글 3개 변화 없음 → `keywords` 메타·JSON-LD만 바뀜. `updatedAt` 그대로 | - |
+
+- **Chrome 157 확인 방법** (`tests/chrome-autofill-settings/`): Linux 안정판 deb가 아직 156이라 Google이 공개하는 Chrome for Testing 157.0.8103.38 linux64(storage.googleapis.com, 203 MB)를 스크래치패드에 풀어 `survey157.cjs`(Node Playwright·Xvfb·새 프로필·로그아웃)로 설정 페이지 글자·스위치 상태 저장 → `source-chrome-157-settings-text.txt`. 언어 파일은 `pak_strings.py`로 156 문자열 175개와 대조 → `source-chrome-157-strings-check.txt`(브랜드 차이 5개는 Chrome for Testing의 Chromium 표기, 실제로 바뀐 것: 단축키 "Press Ctrl twice anywhere on the web to find and fill more info", 알림 예시 "order numbers and flight confirmation codes", "Powered by Gemini with Personal Intelligence" 어순). 글에는 "Chrome for Testing 157.0.8103.38, the Linux build of Chrome 157 that Google publishes for testing"로 밝힘
+- **피드(V7) 변화**: 빌드한 `rss.xml` 20개를 `origin/main`과 비교 → 칼럼이 빠지고 `arc-browser-shutting-down`(Discovered, 10-25 갱신)이 20번째로 들어옴, `chrome-autofill-settings`는 9번째 → 맨 앞
+- **관련 글 변화** (통합으로 칼럼이 빠져서): 9편의 관련 글 3개 중 1개가 바뀜. V 대상 글은 `gemini-free-flash-lite`의 관련 글에 `spotify-family-qr-code-verification`(V4, CTR 판정)이 새로 들어간 것 하나 (받는 링크 1개 추가, CTR 지표와는 무관하다고 보고 판정 때 참고로 적음). `turn-off-gemini-in-gmail`은 칼럼 대신 남긴 글을 관련 글로 받음
+- 빌드 HTML 확인: title 62자(접미사 포함, 본제목 50자 그대로)·H1 일치·h1 1개·h2 14개, 설명 156자, BlogPosting(`dateModified` 2026-11-03T21:53Z, keywords 6개)/BreadcrumbList JSON-LD, `<pre>`·`<code>` 0, 본문 첫 이미지가 대표 이미지 + 본문 이미지 6장(모두 alt), 새 절 앵커 id 있음, `out/posts/chrome-enhanced-autofill-gmail*` 없음·sitemap·rss에 없음. 본문 약 3,400단어(표·이미지·링크 주소 제외). lint·type-check·test(35파일 254개, `vercel-redirects.test.ts` 6개 포함)·build 통과, `link_audit` 2건 그대로. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+
+**주간 점검 3번: 상시 글 노출 감소 원인 (확정 데이터, 월~일 주, 웹)**
+
+| 글 | 10-12~18 | 10-19~25 | 10-26~11-01 | 판단 |
+| --- | --- | --- | --- | --- |
+| `turn-off-ai-in-chrome` (V3) | 66회·11.8위 | 67회·16.7위 | **30회·27.9위** | 날짜별로 10-24까지 하루 6~16회(5~20위) → 10-25부터 1~7회(6~72위). Trends US `turn off ai in chrome` 30일 평균 2.8, 최근 7개 지점 평균 6.0(수요는 늘어남) → **검색량 감소가 아니라 순위 하락**. 보이는 검색어는 노출의 약 1/9(익명 검색어가 대부분)이라 어느 검색어에서 내려갔는지는 못 봄 |
+| `transcribe-audio-offline-free` (V1) | 27회·47.6위 | 41회·60.8위 | 6회·27.8위 | 보이는 검색어 11개 모두 80~100위(미국 데스크톱)에서 1~3회씩 → 10-29부터 노출 0. 100위 밖으로 밀렸거나 깊은 페이지 노출이 끊긴 것. 클릭이 날 수 있는 순위가 아니었음 |
+| `check-if-image-is-ai-generated` (V6) | 16회·76.4위 | 23회·64.9위 | 3회·66.7위 | 검색어 모두 53~100위(SynthID·C2PA 확인 계열), 10-28부터 노출 0. Trends `synthid` 30일 평균 43.2·최근 43.1(수요 그대로) → 낮은 순위 노출이 빠진 것 |
+
+- 결론: 사이트 주간 노출 감소(10-19 주 600 → 10-26 주 247, 확정)는 ① `spotify-family-qr-code-verification` 화제 소멸(239 → 25, V4) ② `turn-off-ai-in-chrome` 순위 하락(16.7 → 27.9위) ③ 80위 밖 노출이 사라진 두 글로 설명됨. 늘어난 글은 `free-offline-ai-tools` 1 → 17·`windows-10-esu-extended` 1 → 8 · `merge-pdf-files-free` 11 → 17. ②는 Chrome 156 재검증(V3, 10-21 배포) 뒤라 V3 판정(11-18)의 핵심 근거가 됨 → 그때 `--compare`로 판정하고, 순위 하락이면 V3 변경(이미지 4장·156 재검증 문단)이 원인인지 경쟁 글 변화인지 상위 결과를 다시 봄 (지금은 바꾸지 않음)
+
+**알게 된 것**
+
+- **Chrome 안정판 출시일에 Linux deb가 늦게 올라올 수 있음**: 157은 블로그·Windows 안정판(11-03)에 나왔지만 Linux 저장소는 다음 날 아침(KST)까지 156. Chrome for Testing(같은 빌드 번호)은 먼저 받을 수 있어 설정 화면·언어 파일 확인에 쓸 수 있음. 다만 일부 문구가 Chromium 표기라 브랜드 문구 인용은 156 정식판 기록이나 다음 정식판으로
+- 통합 2건째(세션 72·78) 모두 두 글 노출 0·미색인이라 지우기 전 검색어가 없었음. 칼럼의 `Our take`는 상시 글로 옮기지 않고(편집 정책) 상황별 추천 1줄로 바꾸는 방식이 맞음
+- 노출이 큰 글의 감소는 대부분 익명 검색어라 검색어 단위로 원인을 못 봄 → 날짜별 순위·Trends 상대량으로 '순위 vs 수요'를 나누는 방법이 쓸 만함 (`turn-off-ai-in-chrome`: 순위 하락)
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 77 목록 그대로, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default` → 이번에 통합한 `https://tool-proof.com/posts/chrome-autofill-settings`
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 24일·색인율 32%·주간 클릭 증가 0주)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번 `office-2021-end-of-support`는 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤. → 11-04~09 개선 세션은 0번 대상이 없음(개선 세션 1~7번으로)
+- Claude: Chrome 157 Linux 정식판 deb가 올라오면 `chrome-http-warning-default` 재확인(V7 판정 뒤 `updatedAt`), `turn-off-ai-in-chrome`은 V3 판정(11-18) 뒤 157·158 재확인과 태그 통합 여부 함께. `chrome-autofill-settings` 다음 확인은 Chrome 158(11-17)
+- Claude: 남은 대표 이미지 `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15, 11-04 피드 변화는 V7 행 참고). 검증 기록 V1(11-11)·V2(11-12)·V3(11-18, 위 순위 하락 분석 참고)·V4·V5(11-22)·V6(11-26). V6 뒤 backlog 27번(SynthID), 11-30·V7 뒤 backlog 45번(오픈소스 PDF 합치기)
+- Claude(11-06 금 일반 세션): 세션 77 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`, 문서 기반) + Firefox 160(11-06) 출시 확인
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 9개 문서 갱신(`traffic`: Cloudflare 28일 조회수 51·방문 44, 10-06~11-03) + `history` 기록(batch 18개, 회차 2026-11-03T21:53:53Z, DB 문서 312개, 스크래치패드 경로). 회차 시점 28일 노출 1,002·클릭 15·평균 23.2위. `summary.crawl`: 최근 크롤링 11-03 05:18(홈), 미색인 36편(통합 뒤) 중 Google이 본 링크 19편(지운 칼럼이 빠짐). 목표: 색인율 17/53 (32%) · 28일 노출 1,002 · 10위 안 25개 · 허브 4/4 · 받는 링크 부족 0편. `summary.adsense`: 운영 24/92일 · 색인율 0.321 · 클릭 연속 증가 0/4 · 충족 0/3. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-04 · 세션 77 (정기 실행, 일반 세션): Brave에서 AI(Leo) 끄기
 
 세션 시각: 2026-11-04 00:16 KST(수) → 00시 실행·수요일이라 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(106cf38)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료. 지난 7일(10-26~11-01)에 뉴스 칼럼이 있어 칼럼 대체 없이 상시 글.

@@ -1,0 +1,27 @@
+# 156 문자열(source-chrome-156-strings.txt 두 파일)이 Chrome for Testing 157.0.8103.38 locales/en-US.pak에 그대로 있는지 (2026-11-03 UTC, pak_strings.py로 추출). 없으면 157의 비슷한 문구
+
+## ../chrome-enhanced-autofill-gmail/source-chrome-156-strings.txt
+- 브랜드 차이만: By turning this off, you can sign in to Google sites like Gmail without signing in to Chrome → 157 #826 (Chromium 표기)
+- 브랜드 차이만: When signing into Google services like Gmail or Youtube with $1, you can automatically sign in to Chrome with the same account → 157 #861 (Chromium 표기)
+- 157에 없음: Autofill verification codes sites use to improve your security. Chrome can get these codes from your Gmail. <a href="$1" tabindex="0" aria-description="$2" target="_blank">Learn more about this featur
+- 157에 없음: Powered by Personal Intelligence with Gemini. Your requests, page titles, and URLs may be reviewed to improve enhanced autofill. <link>Manage settings</link>
+- 157에 없음: Powered by Personal Intelligence with Gemini. <link>Manage settings</link>
+- 157에 없음: Press Ctrl twice in any form to find and fill info without switching tabs
+- 157에 없음: Enhanced autofill can now find and fill info — like flight numbers and appointment times — from apps like Gmail and Photos
+→ 93개 중 86개 그대로
+
+## source-chrome-156-strings.txt
+- 157에 없음: manage your Wallet settings
+- 157에 없음: Press Ctrl twice in any form to find and fill info without switching tabs
+- 157에 없음: Enhanced autofill can now find and fill info — like flight numbers and appointment times — from apps like Gmail and Photos
+- 브랜드 차이만: Chrome understands forms better and can autofill them faster for you → 157 #36533 (Chromium 표기)
+- 브랜드 차이만: Help Chrome better understand and fill complex forms by securely processing data on Google's servers. Your info remains private and isn't reviewed by  → 157 #36534 (Chromium 표기)
+- 브랜드 차이만: Chrome can autofill difficult fields that standard autofill might miss → 157 #36535 (Chromium 표기)
+→ 82개 중 76개 그대로
+
+## 157의 바뀐 문구 (관련)
+- 36521 Press Ctrl twice anywhere on the web to find and fill more info (156: Press Ctrl twice in any form to find and fill info without switching tabs). 6346 Press Ctrl twice for enhanced autofill 는 그대로
+- 36522 Enhanced autofill can now find and fill info — like order numbers and flight confirmation codes — from apps like Gmail and Photos (156: like flight numbers and appointment times)
+- 36202 Powered by Gemini with Personal Intelligence. Your requests, page titles, and URLs may be reviewed to improve enhanced autofill. <link>Manage settings</link> (156: Powered by Personal Intelligence with Gemini. …). 36548·36543 검토 안내 문장은 그대로
+- 36517 Enhanced autofill understands forms better and can autofill them faster for you (157에서 처음 보임, 화면에서는 확인 안 함)
+- 36055 Autofill verification codes … (aria-label 속성만 추가)

@@ -1,0 +1,251 @@
+URL: https://brave.com/origin/
+Final: https://brave.com/origin/
+Status: 200
+Fetched: 2026-11-03 15:48 UTC
+
+Browser
+Search
+Search API
+Brave Ads
+Search the Web
+Brave Origin
+
+Get the Web your way: Best-in-class privacy, with just the features you want.
+
+Buy Brave Origin License
+Download Brave Origin
+Streamlined
+
+A minimalist browser that lets you manage (or totally remove) features found in the free version of Brave.
+
+Fast & private
+
+Simplified to the core of Brave’s industry-leading ad blocking and privacy protections (via Shields), plus best-in-class speed.
+
+Always current
+
+Regularly updated with the same fixes, Chromium patches, and security & privacy improvements sent to Brave’s other releases.
+
+Brave, your way
+
+Use Brave Origin as a standalone app, with no extra features. Or upgrade the existing Brave app on your device, and toggle features on/off as you wish.
+
+ 	AVAILABLE AS AN UPGRADE	AVAILABLE AS A STANDALONE APP	AVAILABLE AS A ONE-TIME PURCHASE	AVAILABLE FOR FREE
+Android 1.91 and above	
+		
+	
+iOS 1.91 and above	
+		
+	
+macOS / Windows 1.91 and above	
+	
+	
+	
+Linux 1.91 and above	
+	
+	
+	
+Brave Origin Beta
+
+The early preview version of Brave Origin, showcasing improvements & updates.
+
+Buy Brave Origin License
+Get Brave Origin Beta*
+
+Brave Origin Beta is a stable preview version of Origin that includes improvements and updates migrated from the Nightly channel. This build showcases the newest advances and is ready for daily use.
+
+* This will download Brave Origin Beta as a new, standalone version of the Brave browser app on your desktop device. Downloads are available on Linux, macOS and Windows.
+
+Brave Origin Nightly
+
+The untested—but stable—version of Brave Origin for advanced users and developers.
+
+Buy Brave Origin License
+Get Brave Origin Nightly*
+
+Brave Origin Nightly is an early, untested version of Origin that may include incomplete or in-progress improvements. Nightly has good stability, and many advanced users and developers treat Nightly as their main Brave instance.
+
+* This will download Brave Origin Nightly as a new, standalone version of the Brave browser app on your desktop device. Downloads are available on Linux, macOS and Windows.
+
+FAQ
+How can I try Brave Origin?
+
+Brave Origin is available in two ways:
+
+As a new, standalone browser product, available via a separate app download on your device
+As an upgrade to the existing version of Brave on your device
+
+Both versions will be available via a one-time purchase of $59.99 US, and a single purchase will give you access to both options. For example, after making this one-time purchase, you could choose to download the standalone app and upgrade your existing version of Brave, or use only one of these options. See detailed instructions on how to activate Origin across devices.
+
+How many devices can I cover with my Brave Origin purchase?
+
+Purchasing Brave Origin will provide a purchase ID that can be activated across all your devices, in either—or a combination of both—standalone and upgrade modes. For example, you could choose to use Origin as a standalone app on your desktop and as an upgrade to the existing Brave app on your phone. There is no limit to the number of times you can activate Origin across your devices and platforms, but there is a rate limit. You can manage your activations using self-serve controls in account.brave.com (or contact the Brave Support team for help).
+
+Can I remove activations from devices I no longer use, or that I no longer want to be connected to Brave Origin?
+
+Technically, your device isn’t linked to your Brave account in any way (based on Privacy Pass). There is no limit to the number of times you can activate Origin across your devices and platforms, but there is a rate limit. However, you can manage your activations using self-serve controls in account.brave.com (or contact the Brave Support team for help).
+
+Will the regular, non-Origin version of Brave cost money?
+
+For users who prefer Brave’s rich feature set, or who simply don’t want to pay for Brave Origin, the existing Brave browser product will remain free and fully supported.
+
+Why did you build Brave Origin?
+
+Brave has always been about putting the user first. The choice to block (or allow) ads and trackers in order to protect user privacy depends on blocking by default, or game over. Brave also enables users to explore (or ignore) emerging spaces like AI and Web3, where a user-first browser will be crucial. And, most of all, Brave allows users to access the Web on their terms, free of Big Tech’s influence. By default, Brave blocks the data theft that feeds the Surveillance Economy, and combats the algorithmic bias that can harm free access to information.
+
+At the same time, we’re conscious of the economics of the Web. We have strived to put users first while enabling them to support their favorite publishers and creators, all the while building Brave into a sustainable business.
+
+We built Brave Origin in response to requests from users who wanted to support Brave’s industry-leading work on Web privacy and open-source adblocking, without having to manage or remove features they weren’t interested in using.
+
+Why is Brave Origin free for Linux users, but not users of other operating systems?
+
+Some Linux distros already offer a version of Brave that’s similar to Origin, where various features are turned off. We’re making Origin free to all Linux users so that Brave can offer a consistent user experience across these distros. On other platforms, Brave users are still able to hide or disable unwanted features for free in the non-Origin version of Brave.
+
+What features can I manage with Brave Origin?
+
+Brave Origin can help manage most out-of-the-box features in Brave, including:
+
+Email aliases
+Leo
+News
+Playlist
+Rewards (and Brave Ads)
+Speedreader
+Talk
+Tor
+VPN
+Wallet (and Web3 domains)
+Wayback Machine
+Web Discovery Project
+
+Origin will also remove the daily usage ping, crash logs, and privacy-preserving product analytics (P3A).
+
+If I enabled the upgrade option, could I then
+disable
+Brave Origin? How would I do so?
+
+Yes, you can easily disable Brave Origin on a device where you had previously enabled it. To do so, visit brave://flags and disable the flag titled brave://flags/#brave-origin. This flag applies on both desktop and mobile devices.
+
+How does Brave Origin maintain user privacy?
+
+Some early Brave Origin users have asked how Brave can maintain user privacy while requiring a purchase ID (either from a Brave premium account or from the App Store / Play Store).
+
+Brave uses a blind token protocol based on Privacy Pass, which decouples payment identity from service usage. These privacy-preserving subscription credentials allow the browser to verify you have a valid purchase of a premium product (like Origin) without learning anything about you.
+
+Why is Brave Origin available as both an upgrade and a separate download?
+
+We chose to offer Brave Origin in two different ways (i.e. as both a separate download and as an upgrade to the existing version of Brave on your device) to honor user choice. Some users requested the ability to disable certain features, while enabling others (and to try out new features before deciding whether to toggle). Other users asked to have all features disabled by default, which reduces the build size and also makes the browser easier to adopt in enterprise or IT-managed workplace settings. With the upgrade and the standalone paths, there is an option for each set of users.
+
+USER RESOURCES
+Help center
+Community
+What's new in Brave?
+Release notes
+Status
+FAQs
+Transparency report
+Merch store
+PRIVACY POLICY
+Brave Browser
+Brave Search
+Brave Search RTBF
+Website & email
+Publishers & creators
+Advertisers
+CCPA
+BLOGS
+Brave blog
+Privacy updates
+Web standards
+Research
+Podcast
+FOR BUSINESSES
+Search API
+Brave Ads
+Group policy
+BEGINNER GUIDES
+Intros to browsers, search, & AI
+Intros to Web3
+Privacy glossary
+API glossary
+World Cup Ad Blocker
+DOWNLOADS
+Desktop
+Android
+iOS
+Linux
+Brave Origin
+Beta
+Nightly
+SOCIAL MEDIA
+Reddit
+X (formerly Twitter)
+Brave API on X
+Mastodon
+Bluesky
+Facebook
+YouTube
+COMPANY
+Reviewer's guide
+Brand assets
+Careers
+Events
+GitHub
+Reviews
+Tor Onion address
+More AI features
+WEB3
+Rewards
+Wallet
+Basic Attention Token
+Brave Creators
+Brave Wallet docs
+CONTACT
+SUPPORT
+community.brave.app
+user-support@brave.com
+API SALES
+api-sales@brave.com
+ADVERTISING
+adsales@brave.com
+Please only use this email address if you are interested in purchasing advertising with Brave. For support, please visit community.brave.app.
+BUSINESS
+bizdev@brave.com
+PRESS
+press@brave.com
+legal@brave.com
+OFFICES
+
+Brave San Francisco
+48 2nd St, Floor 3
+San Francisco, CA 94105
+
+CHOOSE A LANGUAGE 
+Bahasa Indonesia
+Dansk
+Deutsch
+English
+Español
+Français
+Hrvatski
+Italiano
+Magyar
+Nederlands
+Norsk (Bokmål)
+Polski
+Português
+Română
+Slovenčina
+Svenska
+Tiếng Việt
+Türkçe
+Български
+Русский
+Српски
+ภาษาไทย
+한국어
+中文 (中国)
+中文 (繁體)
+日本語
+Terms of use | Report a security issue
+© 2015 - 2026 Brave Software, Inc. | All rights reserved

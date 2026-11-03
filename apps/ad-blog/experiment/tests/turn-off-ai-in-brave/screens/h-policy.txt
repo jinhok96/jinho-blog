@@ -1,0 +1,41 @@
+Policies
+Filter policies by name
+Reload policies
+More actions
+Export to JSON
+Copy as JSON
+View logs
+Show policies with no value set
+This instance of Brave is running with command line flags manually set. Note that command line flags may change at any time and are not supported.
+lang, no-first-run, no-sandbox, remote-debugging-port, test-type, user-data-dir, window-position, window-size
+Chrome Policies
+Policy name
+Policy value
+Source
+Applies to
+Level
+Status
+BraveAIChatEnabled
+false
+Platform
+Machine
+Mandatory
+OK
+Policy Precedence
+Policy name
+Policy value
+Source
+Applies to
+Level
+Status
+No policies set
+Current precedence order
+Platform machine > Cloud machine > Platform user > Cloud user
+Extension Install Policies
+Policy name
+Policy value
+Source
+Applies to
+Level
+Status
+No policies set

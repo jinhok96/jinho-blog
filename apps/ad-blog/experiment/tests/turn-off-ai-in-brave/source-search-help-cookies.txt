@@ -1,0 +1,89 @@
+URL: https://search.brave.com/help/anonymous-cookies
+Final: https://search.brave.com/help/anonymous-cookies
+Status: error Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "https://search.brave.com/help/anonymous-cookies", waiting until "networkidle"
+
+Fetched: 2026-11-03 15:52 UTC
+
+Brave Search Help
+Anonymous cookies
+
+An HTTP cookie (also called web cookie, Internet cookie, browser cookie, or simply cookie) is a small piece of data stored on a user’s computer by the web browser while browsing a website. Cookies perform essential functions in the modern web. For example, authentication cookies are the most common method web servers use to know whether a user is logged in, and which account they’re logged in with [1]. Unfortunately, cookies can also be used to track users. This is why it’s so important that cookies not be unique to a user (if they don’t have to be).
+
+Brave Search only uses anonymous cookies. If you change settings in Brave Search, a cookie will be set to remember this preference, and the value this cookie takes is linked to the setting on the page. For example, if you see Imperial units of measurement (pounds, feet, fahrenheit), but would prefer metric (kilograms, meters, celsius), then a cookie called units will be set with the value metric. With Brave Search, every user will have the same cookie names and set of cookie values. They cannot be used to identify anyone.
+
+Here’s a list of the cookies we use on Brave Search:
+
+safesearch: Used to enforce a particular choice over whether—and how—adult content is shown in search results. It can take one of three possible values:
+off: adult results are shown normally
+moderate: adult results are shown, but multimedia is not
+strict: adult results are removed
+country: By default, we set your country as us. If changed, a cookie with the new country code will be set.
+units: These are the units of measurement for the search results (e.g. temperature or distances). They can take the following values:
+us: Imperial (pounds, feet, fahrenheit)
+metric: Metric (kilograms, meters, celsius)
+useLocation: If you opt out of local results, this cookie will be set with value 0.
+olnt: Open links in new tab. By default it’s switched off and no cookie is set. If switched on, a cookie with value 1 will be set.
+geoloc: If you decide to manually set the location for results, this cookie will be set with the coordinates of the chosen location. Both latitude and longitude will be truncated to 3 decimal places.
+geoloc_src: The source information if geoloc comes from manyally inputting the geoloc (0) or from the device geolocation (1). This is used to better explain why you received certain results in the UI.
+theme: The color scheme of Brave Search. If not set the system preference is used.
+fallback: If you use Brave Search from the Brave browser, for any query where we may not return enough results, you can allow the Brave Browser to anonymously check Google for the same query. The fallback mixer will present the results together for you, and send the query result back to Brave Search so we can improve responses next time. If you opt in, this cookie will be set with value 1. Learn more about Google fallback mixing.
+goggles_boost: Used to store raise rules of Rerank.
+goggles_discard: Used to store discard rules of Rerank.
+
+Brave Search is designed to be private by default. We don’t collect personal information about you, your device, or your searches. We also don’t transmit information to the web that could be used to profile you, track you, or learn anything about you. Your searches are entirely private to you. Learn more.
+
+HTTP Cookie ↩︎
+
+Articles
+How to use Brave Search: an overview
+Ads in Brave Search
+AI in Brave Search
+What are bangs, and how can I use them in Brave Search?
+Brave Search Index & the Right to be Forgotten & to Object
+Contact Brave Search
+Anonymous cookies
+Report copyright infringement - DMCA
+Brave Search Discussions
+EU Digital Services Act
+Featured snippets
+Feedback
+Financial data disclaimers
+Goggles
+Google fallback mixing
+Anonymous local results
+Set Brave Search as default
+Not Found - A page is no longer available
+Brave Search Partner Integrations
+Proof of Work captchas
+What is Brave Search Premium?
+Brave Search privacy notice
+Referrer Policy
+Rerank
+Safe Search
+Brave Search Crawler
+Search Operators
+Sharing conversations with AI
+Anonymous usage metrics
+Resources
+Brave Search Premium
+Brave Search Help
+Transparency Report
+Report a security issue
+Status
+Products
+Brave Browser
+Brave Search
+Brave Wallet
+Brave Talk
+Brave Firewall + VPN
+Brave Playlist
+Brave News
+Brave Rewards
+Brave Search API
+Brave Ads
+Policies
+Privacy Policy
+Terms of Use
+Brave Search uses private usage metrics to estimate overall activity and performance. You can turn off this option in Settings. Learn more.

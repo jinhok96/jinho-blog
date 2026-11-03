@@ -1,0 +1,155 @@
+URL chrome://settings/leo-ai
+
+Settings
+Search settings
+Get started
+Appearance
+Content
+Shields
+Privacy and security
+Web3
+Leo
+Sync
+Search engine
+Extensions
+Autofill and passwords
+Languages
+Downloads
+Accessibility
+System
+Reset settings
+About Brave
+v 1.98.63
+Leo
+About Leo AI
+Brave Leo provides privacy-first AI chat and other AI-powered interfaces in the browser. Leo never learns from your data or uses it for model training. All requests are proxied through an anonymizing server.
+Read more about how Brave protects your use of AI in Leo's privacy policy.
+Learn more
+Show Leo icon in the sidebar
+Show Leo in the context menu on websites
+Leo will appear in the context menu when you right-click on a website. This will send context from the current web page to Leo.
+Tab Focus Mode
+Enable tab organization in Tab Search page. When opened, this will automatically send the titles and origins of all non-private tabs to Leo to classify them.
+Learn more
+Adjust autocomplete suggestions
+Clear Leo data
+Personalization
+Default model for new conversations
+Automatic
+Language models
+Automatic
+Model changes dynamically to use the best one for the task
+Claude Sonnet
+Search • Vision • Tools
+Premium
+Qwen 3.5 35B
+Fast • Search • Vision
+GLM 4.7 Flash
+Fast • Search
+Nemotron Nano 3 30B
+Fast • Search • Tools
+GPT 5.6 Luna
+Fast • Search • Vision
+GPT 5.6 Terra
+Search • Vision
+Premium
+Grok 4.6
+Search • Vision • Tools
+Premium
+Mistral Large 3
+Search
+Premium
+Kimi K2.5
+Search
+Premium
+Qwen 3.8 Flash Next
+Search • Vision
+Premium
+Deepseek V3.2
+Search • Tools
+Premium
+Claude Opus
+Search • Vision
+Premium
+Brave Ocelot
+Default model for tab focus
+The model used to organize your tabs in Tab Focus Mode.
+Learn more
+Automatic
+Language models
+Automatic
+Model changes dynamically to use the best one for the task
+Claude Sonnet
+Search • Vision • Tools
+Premium
+Qwen 3.5 35B
+Fast • Search • Vision
+GLM 4.7 Flash
+Fast • Search
+Nemotron Nano 3 30B
+Fast • Search • Tools
+GPT 5.6 Luna
+Fast • Search • Vision
+GPT 5.6 Terra
+Search • Vision
+Premium
+Grok 4.6
+Search • Vision • Tools
+Premium
+Mistral Large 3
+Search
+Premium
+Kimi K2.5
+Search
+Premium
+Qwen 3.8 Flash Next
+Search • Vision
+Premium
+Deepseek V3.2
+Search • Tools
+Premium
+Claude Opus
+Search • Vision
+Premium
+Brave Ocelot
+Store my conversation history
+Customize Leo's responses and memories
+Bring your own model
+Your models
+Connect your self-hosted or third-party hosted LLM to Leo and use them within the browser.
+Use any OpenAI Chat Protocol compatible framework such as Ollama.
+Learn more
+You haven't connected a model yet.
+Add new model
+
+TOGGLES
+[
+ {
+  "label": "Show Leo icon in the sidebar",
+  "checked": true,
+  "disabled": false,
+  "x": 1034,
+  "y": 330
+ },
+ {
+  "label": "Show Leo in the context menu on websites",
+  "checked": true,
+  "disabled": false,
+  "x": 1034,
+  "y": 397
+ },
+ {
+  "label": "Tab Focus Mode",
+  "checked": true,
+  "disabled": false,
+  "x": 1034,
+  "y": 482
+ },
+ {
+  "label": "Store my conversation history",
+  "checked": true,
+  "disabled": false,
+  "x": 1034,
+  "y": 876
+ }
+]

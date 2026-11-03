@@ -1,0 +1,283 @@
+[
+ {
+  "step": "s0-default",
+  "probe": {
+   "offset": {
+    "x": 0,
+    "y": 137
+   },
+   "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-1-window.png",
+   "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-2-context.png",
+   "selected": "A typical home solar panel turns sunligh",
+   "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-3-context-selection.png",
+   "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-3b-context-submenu.png",
+   "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-4-context-textarea.png",
+   "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-5-omnibox.png",
+   "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-6-tab-search.png",
+   "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s0-default-7-tab-organize.png"
+  }
+ },
+ {
+  "step": "s1-toolbar-hidden",
+  "action": {
+   "action": "toolbar right-click > last item"
+  },
+  "prefs": {
+   "brave.ai_chat.show_toolbar_button": false,
+   "brave.today.p3a_total_sidebar_filter_usages": [
+    {
+     "day": 1793664000.0,
+     "value": 0.0
+    }
+   ],
+   "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+   "toolbar.pinned_cast_migration_complete": true,
+   "toolbar.pinned_chrome_labs_migration_complete": true
+  },
+  "probe": {
+   "offset": {
+    "x": 0,
+    "y": 137
+   },
+   "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-1-window.png",
+   "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-2-context.png",
+   "selected": "A typical home solar panel turns sunligh",
+   "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-3-context-selection.png",
+   "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-3b-context-submenu.png",
+   "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-4-context-textarea.png",
+   "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-5-omnibox.png",
+   "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-6-tab-search.png",
+   "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s1-toolbar-hidden-7-tab-organize.png"
+  }
+ },
+ {
+  "step": "s2-sidebar-off",
+  "action": {
+   "label": "Show Leo icon in the sidebar",
+   "before": true,
+   "after": false
+  },
+  "prefs": {
+   "brave.ai_chat.show_toolbar_button": false,
+   "brave.sidebar.hidden_built_in_items": [
+    7
+   ],
+   "brave.sidebar.sidebar_items": [
+    {
+     "built_in_item_type": 1,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 2,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 3,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 4,
+     "type": 0
+    }
+   ],
+   "brave.today.p3a_total_sidebar_filter_usages": [
+    {
+     "day": 1793664000.0,
+     "value": 0.0
+    }
+   ],
+   "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+   "toolbar.pinned_cast_migration_complete": true,
+   "toolbar.pinned_chrome_labs_migration_complete": true
+  },
+  "probe": {
+   "offset": {
+    "x": 0,
+    "y": 137
+   },
+   "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-1-window.png",
+   "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-2-context.png",
+   "selected": "A typical home solar panel turns sunligh",
+   "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-3-context-selection.png",
+   "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-3b-context-submenu.png",
+   "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-4-context-textarea.png",
+   "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-5-omnibox.png",
+   "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-6-tab-search.png",
+   "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s2-sidebar-off-7-tab-organize.png"
+  }
+ },
+ {
+  "step": "s3-context-off",
+  "action": {
+   "label": "Show Leo in the context menu",
+   "before": true,
+   "after": false
+  },
+  "prefs": {
+   "brave.ai_chat.context_menu_enabled": false,
+   "brave.ai_chat.show_toolbar_button": false,
+   "brave.sidebar.hidden_built_in_items": [
+    7
+   ],
+   "brave.sidebar.sidebar_items": [
+    {
+     "built_in_item_type": 1,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 2,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 3,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 4,
+     "type": 0
+    }
+   ],
+   "brave.today.p3a_total_sidebar_filter_usages": [
+    {
+     "day": 1793664000.0,
+     "value": 0.0
+    }
+   ],
+   "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+   "toolbar.pinned_cast_migration_complete": true,
+   "toolbar.pinned_chrome_labs_migration_complete": true
+  },
+  "probe": {
+   "offset": {
+    "x": 0,
+    "y": 81
+   },
+   "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-1-window.png",
+   "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-2-context.png",
+   "selected": "A typical home solar panel turns sunligh",
+   "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-3-context-selection.png",
+   "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-3b-context-submenu.png",
+   "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-4-context-textarea.png",
+   "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-5-omnibox.png",
+   "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-6-tab-search.png",
+   "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s3-context-off-7-tab-organize.png"
+  }
+ },
+ {
+  "step": "s4-autocomplete-off",
+  "action": {
+   "label": "Leo AI Assistant",
+   "before": true,
+   "after": false
+  },
+  "prefs": {
+   "brave.ai_chat.autocomplete_provider_enabled": false,
+   "brave.ai_chat.context_menu_enabled": false,
+   "brave.ai_chat.show_toolbar_button": false,
+   "brave.sidebar.hidden_built_in_items": [
+    7
+   ],
+   "brave.sidebar.sidebar_items": [
+    {
+     "built_in_item_type": 1,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 2,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 3,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 4,
+     "type": 0
+    }
+   ],
+   "brave.today.p3a_total_sidebar_filter_usages": [
+    {
+     "day": 1793664000.0,
+     "value": 0.0
+    }
+   ],
+   "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+   "toolbar.pinned_cast_migration_complete": true,
+   "toolbar.pinned_chrome_labs_migration_complete": true
+  },
+  "probe": {
+   "offset": {
+    "x": 0,
+    "y": 137
+   },
+   "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-1-window.png",
+   "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-2-context.png",
+   "selected": "A typical home solar panel turns sunligh",
+   "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-3-context-selection.png",
+   "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-3b-context-submenu.png",
+   "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-4-context-textarea.png",
+   "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-5-omnibox.png",
+   "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-6-tab-search.png",
+   "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s4-autocomplete-off-7-tab-organize.png"
+  }
+ },
+ {
+  "step": "s5-tabfocus-off",
+  "action": {
+   "label": "Tab Focus Mode",
+   "before": true,
+   "after": false
+  },
+  "prefs": {
+   "brave.ai_chat.autocomplete_provider_enabled": false,
+   "brave.ai_chat.context_menu_enabled": false,
+   "brave.ai_chat.show_toolbar_button": false,
+   "brave.ai_chat.tab_organization_enabled": false,
+   "brave.sidebar.hidden_built_in_items": [
+    7
+   ],
+   "brave.sidebar.sidebar_items": [
+    {
+     "built_in_item_type": 1,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 2,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 3,
+     "type": 0
+    },
+    {
+     "built_in_item_type": 4,
+     "type": 0
+    }
+   ],
+   "brave.today.p3a_total_sidebar_filter_usages": [
+    {
+     "day": 1793664000.0,
+     "value": 0.0
+    }
+   ],
+   "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+   "toolbar.pinned_cast_migration_complete": true,
+   "toolbar.pinned_chrome_labs_migration_complete": true
+  },
+  "probe": {
+   "offset": {
+    "x": 0,
+    "y": 137
+   },
+   "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-1-window.png",
+   "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-2-context.png",
+   "selected": "A typical home solar panel turns sunligh",
+   "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-3-context-selection.png",
+   "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-3b-context-submenu.png",
+   "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-4-context-textarea.png",
+   "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-5-omnibox.png",
+   "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-6-tab-search.png",
+   "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/c-s5-tabfocus-off-7-tab-organize.png"
+  }
+ }
+]

@@ -1,0 +1,20 @@
+---
+title: 긴 실행 에이전트의 속도를 메시지 스레드로 향상시키세요
+description: Claude 메시지 스레드 기능을 통해 긴 대화에서 응답 지연 시간을 줄여 에이전트 성능을 개선합니다.
+category: claude
+sourceUrl: https://claude.com/resources/articles/message-threads
+createdAt: 2026-11-02
+---
+
+> 원문: [Make long-running agents faster with message threads](https://claude.com/resources/articles/message-threads) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Claude 플랫폼에 메시지 스레드 기능이 공개 베타로 출시되었습니다. 이 기능은 에이전트가 매번 전체 대화 기록을 다시 보낼 필요 없이 변경된 내용만 전송하도록 하여, 긴 대화 세션에서의 응답 지연 시간을 크게 줄입니다.
+
+-   **응답 속도 향상:** 긴 코딩 세션이나 파일 수정이 많은 작업에서 이전 메시지 및 도구 결과 전체를 다시 보내지 않고, 변경된 내용과 이전 응답 ID만 전송하여 최초 응답까지의 시간(TTFT)을 단축합니다.
+-   **실질적인 성능 개선:** 500k에서 1M 토큰에 이르는 요청에서 중간 TTFT가 약 35% 감소하는 것을 확인했습니다.
+-   **활용 시나리오:** 긴 코딩 에이전트, 스크린샷을 활용하는 컴퓨터 사용 에이전트, 문서 및 이미지 기반 워크플로우 등 에이전트가 많은 컨텍스트를 가질수록 효과가 큽니다.
+-   **메시지 스레드 작동 방식:** Messages API 요청 시 `thread` 매개변수를 추가하여 사용하며, 첫 요청은 전체 대화를 포함하고 이후 요청은 변경된 메시지만 포함합니다. 각 스레드는 마지막 요청 후 5분 동안 메모리에 유지되며, 이후 새로운 스레드를 시작하려면 전체 대화를 다시 전송해야 합니다. 토큰 사용량은 동일하게 유지됩니다.
+-   **사용 가능 환경:** 네이티브 Claude 플랫폼, Claude on AWS, Microsoft Foundry의 Claude, Google Cloud의 Claude Models 등 다양한 환경에서 사용 가능합니다.
+
+자세한 내용은 원문에서 확인하세요.

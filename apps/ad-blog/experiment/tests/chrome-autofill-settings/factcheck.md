@@ -59,3 +59,22 @@
 - Mac에서 제안 하나 지우는 키, 휴대폰에서 제안 하나 지우는 법: 직접 확인 못 함
 - HTTPS 페이지에서 카드 채우기: 우리 시험 페이지가 http라 차단 메시지만 확인
 - Identity docs·Travel이 로그아웃 상태에서 회색인 정확한 조건: 화면에 설명 없음, 도움말은 로그인 필요라고만 함 → "우리 로그아웃 사본에서 회색"으로만 씀
+
+## 콘텐츠 정리 통합 (2026-11-04 세션 78, `chrome-enhanced-autofill-gmail` → 이 글)
+
+AdSense 거절 대응 [콘텐츠 정리](../../clusters.md#콘텐츠-정리-2026-11-01) 1번. 두 글 모두 28일(10-06~11-03) 웹·이미지·Discover·News 노출 0, URL 검사 `Discovered - currently not indexed` → 규칙대로 상시 글(이 글)을 남기고 칼럼은 308 리디렉트(`vercel.json`). 지우기 전 28일 검색어 없음.
+
+| 옮긴 내용 | 1차 출처 (2026-11-03 UTC 다시 엶) | 확인 결과 |
+| --- | --- | --- |
+| 새 절 "How do you stop Chrome from filling forms with your Gmail?": 경로 Settings > Autofill and passwords > Autofill settings > Enhanced autofill > Find and fill with Gemini (컴퓨터·Android·iPhone 같음) | support.google.com/chrome/answer/142893 Desktop·Android·iOS (curl → `help_text.py`) | 10-28·10-29 사본(`../chrome-enhanced-autofill-gmail/source-help-142893-*.txt`)과 본문 줄 차이 없음 (제목·피드백 줄만 파서 차이) |
+| 발표: "information pulled directly from Gmail", 주문 번호·배송 추적·항공 예약, 미국 데스크톱·Android·iOS, Gemini 스파크 아이콘 | blog.google 2026-10-28 글 (datePublished 10-28T17:00Z, dateModified 10-28T20:21Z) · 도움말 "Use enhanced autofill" | 같은 문장 그대로 |
+| 조건: 미국·18세 이상·Gemini in Chrome·Chrome 로그인, 개인 계정(직장·학교·관리 계정 불가), EEA·나이지리아·스위스·영국 불가, Keep Activity, Personal Intelligence + Google Workspace 연결(Gmail Smart features in other Google products 필요) | 도움말 142893 ("To use autofill, make sure you're signed in"), support.google.com/gemini/answer/16598406 | 그대로. 조건 그래픽 `chrome-gmail-autofill-requirements.webp`는 칼럼에서 옮김(10-28 출처 표기, 내용 변화 없음) |
+| 검토 안내 "Your requests, page titles, and URLs may be reviewed to improve enhanced autofill", 관리 브라우저용 "Your content will not be used to improve AI", 스위치 설명 "Autofill info from apps such as Gmail and Photos" | Chrome 156 언어 파일(칼럼 사본) + Chrome for Testing 157 언어 파일 | 157에도 그대로 (`source-chrome-157-strings-check.txt`) |
+| 소비자 기본값 "Allow feature and improve AI models" | support.google.com/chrome/a/answer/16278400 | 그대로 (표 줄바꿈만 다름) |
+| 출처 보기(컴퓨터 마우스 올리고 링크, 휴대폰 길게 눌러 View sources)·제안 하나 숨기기(Remove from Chrome / Remove suggestion / Remove)·Gmail에서 메일 지우면 제안도 사라짐·Chrome에서 고칠 수 없음 | 도움말 142893 3개 플랫폼 | 그대로 |
+| Connected Apps: 웹 gemini.google.com 아래 Settings & help > Personal Intelligence > Connected Apps, 앱 Menu > 프로필 사진 > Personal Intelligence > Connected Apps, Google Workspace 끄기, 변경이 "until days later" | Gemini 도움말 16598406 (이번에는 컴퓨터판이 열림, 앱 경로는 10-28 사본) | 웹 경로에 칼럼의 `Menu`가 없음 → 본문은 "click Settings & help at the bottom"으로 고침 |
+| FAQ "Why is enhanced autofill missing from Chrome settings?" | Chrome 156(10-28)·157(11-03) 로그아웃 화면 | 두 판 모두 Autofill settings에 Smarter form understanding만 |
+
+**Chrome 157 확인** (2026-11-03 21:50 UTC): Chrome 157은 11-03 안정판 승격(chromereleases.googleblog.com "Stable Channel Update for Desktop", Linux 157.0.8103.38·Windows/Mac .38/.39)이지만 dl.google.com Linux 저장소 `Packages`·versionhistory API Linux 안정판은 아직 156.0.8078.79 (157 deb 404) → Google이 공개하는 Chrome for Testing 157.0.8103.38 linux64로 확인. `survey157.cjs`(Node Playwright, Xvfb, 새 프로필) → `source-chrome-157-settings-text.txt`: Autofill and passwords·Contact info·Payments·Identity docs·Travel·Password Manager 설정의 스위치 이름·켜짐/꺼짐/회색이 156 기록(`source-chrome-156-settings-text.txt`)과 같음. 언어 파일(`../chrome-enhanced-autofill-gmail/pak_strings.py`) 비교: 이 글이 인용한 Chrome 문구는 157에 모두 있음(일부는 Chrome for Testing이라 "Chromium" 표기), 바뀐 문구는 단축키 줄 "Press Ctrl twice anywhere on the web to find and fill more info" 등 3개 (`source-chrome-157-strings-check.txt`)
+
+**옮기지 않은 것**: 칼럼의 `Our take`(편집 정책상 견해는 칼럼에만 → 상시 글은 상황별 추천 1줄로), 타임라인 그래픽(11-03 Chrome 157 예정 등 지난 일정), 설정 화면 캡처(이 글의 설정 화면 캡처와 겹침), 스위치별 효과 그래픽(본문 목록과 겹침), "What to watch next"(Photos 문구는 본문 1문장으로)

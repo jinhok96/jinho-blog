@@ -23,3 +23,9 @@
 
 - `s_addr2.py`가 오류(`input_value` 시간 초과)로 멈추면서 `run.py`가 Chrome을 닫지 못해, 그 뒤 실행(p3·p4·p5 지정)은 모두 **9333 포트를 잡고 있던 p3 브라우저 하나**에 붙었음 (새로 띄운 Chrome은 포트를 못 열거나 같은 프로필이라 기존 창으로 넘김). 탭 수가 늘어나는 것과 `Web Data` DB(p4 복사본: 주소 1·입력 기록 7, p3·p5: 0)로 확인. 따라서 4~8번은 같은 로그아웃 프로필에서 순서대로 진행된 것이고, 결과 해석은 그대로 유효. `run.py`는 이후 `try/finally`로 항상 Chrome을 닫게 고침
 - 7-1 대화상자의 기간 칩은 앞선 실행에서 고른 값(All time)을 기억해, 좌표 클릭이 "Last 4 weeks"를 고름. 데이터는 몇 분 전에 저장한 것이라 결과는 같음. 글 그래픽에 기간을 밝힘
+
+## Chrome 157 확인 (2026-11-03 21:45~21:55 UTC, 세션 78)
+
+- Chrome: `Google Chrome for Testing 157.0.8103.38 (Official Build)` (storage.googleapis.com/chrome-for-testing-public/157.0.8103.38/linux64/chrome-linux64.zip, 203 MB, 스크래치패드에 풂). 같은 날 Linux 안정판 deb는 아직 156.0.8078.79
+- 실행: `DISPLAY=:99 node survey157.cjs {작업 폴더}` — Node Playwright `launchPersistentContext`(headless 아님, Xvfb 1280×900, `--lang=en-US`), 새 프로필, 로그인 없음. 각 설정 페이지의 글자와 `cr-toggle` 상태를 `survey.json`으로 저장 → `source-chrome-157-settings-text.txt`
+- `chrome://settings/autofill/enhanced`·`/enhancedAutofill`은 로그아웃 상태에서 설정 첫 화면으로 돌아감 (이 주소가 실제 하위 페이지 주소인지는 모름. Autofill settings에 Enhanced autofill 항목이 없는 것은 156 로그아웃 화면과 같음)

@@ -1,0 +1,1244 @@
+Policies
+Filter policies by name
+Reload policies
+More actions
+Export to JSON
+Copy as JSON
+View logs
+Show policies with no value set
+This instance of Brave is running with command line flags manually set. Note that command line flags may change at any time and are not supported.
+lang, no-first-run, no-sandbox, remote-debugging-port, test-type, user-data-dir, window-position, window-size
+Chrome Policies
+Policy name
+Policy value
+Source
+Applies to
+Level
+Status
+AIModeSettings
+Not set.
+AbusiveExperienceInterventionEnforce
+Not set.
+AccessCodeCastDeviceDuration
+Not set.
+AccessCodeCastEnabled
+Not set.
+AccessControlAllowMethodsInCORSPreflightSpecConformant
+Not set.
+AccessibilityImageLabelsEnabled
+Not set.
+AdditionalDnsQueryTypesEnabled
+Not set.
+AdsSettingForIntrusiveAdsSites
+Not set.
+AdvancedProtectionAllowed
+Not set.
+AllHttpAuthSchemesAllowedForOrigins
+Not set.
+AllowBackForwardCacheForCacheControlNoStorePageEnabled
+Not set.
+AllowCrossOriginAuthPrompt
+Not set.
+AllowDeletingBrowserHistory
+Not set.
+AllowDinosaurEasterEgg
+Not set.
+AllowFileSelectionDialogs
+Not set.
+AllowSocketPoolSizeRandomizationForProxies
+Not set.
+AllowSystemNotifications
+Not set.
+AllowWebAuthnWithBrokenTlsCerts
+Not set.
+AllowedDomainsForApps
+Not set.
+AllowedDomainsForAppsList
+Not set.
+AlternateErrorPagesEnabled
+Not set.
+AlternativeBrowserParameters
+Not set.
+AlternativeBrowserPath
+Not set.
+AlwaysOpenPdfExternally
+Not set.
+AmbientAuthenticationInPrivateModesEnabled
+Not set.
+AudioCaptureAllowed
+Not set.
+AudioCaptureAllowedUrls
+Not set.
+AudioSandboxEnabled
+Not set.
+AuthNegotiateDelegateAllowlist
+Not set.
+AuthNegotiateDelegateByKdcPolicy
+Not set.
+AuthSchemes
+Not set.
+AuthServerAllowlist
+Not set.
+AutoFillEnabled
+Not set.
+AutoLaunchProtocolsFromOrigins
+Not set.
+AutoOpenAllowedForURLs
+Not set.
+AutoOpenFileTypes
+Not set.
+AutoSelectCertificateForUrls
+Not set.
+AutofillAddressEnabled
+Not set.
+AutofillCreditCardEnabled
+Not set.
+AutofillGenAiSettings
+Not set.
+AutofillPredictionSettings
+Not set.
+AutofillSettings
+Not set.
+AutomatedPasswordChangeSettings
+Not set.
+AutomaticDownloadsAllowedForUrls
+Not set.
+AutomaticDownloadsBlockedForUrls
+Not set.
+AutomaticFullscreenAllowedForUrls
+Not set.
+AutomaticFullscreenBlockedForUrls
+Not set.
+AutoplayAllowed
+Not set.
+AutoplayAllowlist
+Not set.
+BackForwardCacheForWebSocketsAllowed
+Not set.
+BackgroundModeEnabled
+Not set.
+BackgroundTabFreezingEnabled
+Not set.
+BasicAuthOverHttpEnabled
+Not set.
+BatterySaverModeAvailability
+Not set.
+BlockExternalExtensions
+Not set.
+BlockThirdPartyCookies
+Not set.
+BookmarkBarEnabled
+Not set.
+BraveAIChatEnabled
+Not set.
+BraveDeAmpEnabled
+Not set.
+BraveDebouncingEnabled
+Not set.
+BraveGlobalPrivacyControlEnabled
+Not set.
+BraveLocalAIEnabled
+Not set.
+BraveNewsDisabled
+Not set.
+BraveP3AEnabled
+Not set.
+BravePlaylistEnabled
+Not set.
+BraveReduceLanguageEnabled
+Not set.
+BraveRewardsDisabled
+Not set.
+BraveShieldsDisabledForUrls
+Not set.
+BraveShieldsEnabledForUrls
+Not set.
+BraveSpeedreaderEnabled
+Not set.
+BraveStatsPingEnabled
+Not set.
+BraveSyncUrl
+Not set.
+BraveTalkDisabled
+Not set.
+BraveTrackingQueryParametersFilteringEnabled
+Not set.
+BraveVPNDisabled
+Not set.
+BraveWalletDisabled
+Not set.
+BraveWaybackMachineEnabled
+Not set.
+BraveWebDiscoveryEnabled
+Not set.
+BrowserAddPersonEnabled
+Not set.
+BrowserContextAwareAccessSignalsAllowlist
+Not set.
+BrowserGuestModeEnabled
+Not set.
+BrowserGuestModeEnforced
+Not set.
+BrowserLabsEnabled
+Not set.
+BrowserNetworkTimeQueriesEnabled
+Not set.
+BrowserSignin
+Not set.
+BrowserSwitcherDelay
+Not set.
+BrowserSwitcherEnabled
+Not set.
+BrowserSwitcherExternalGreylistUrl
+Not set.
+BrowserSwitcherExternalSitelistUrl
+Not set.
+BrowserSwitcherKeepLastChromeTab
+Not set.
+BrowserSwitcherParsingMode
+Not set.
+BrowserSwitcherUrlGreylist
+Not set.
+BrowserSwitcherUrlList
+Not set.
+BrowserThemeColor
+Not set.
+BrowsingDataLifetime
+Not set.
+BuiltInAIAPIsEnabled
+Not set.
+BuiltInDnsClientEnabled
+Not set.
+CACertificateManagementAllowed
+Not set.
+CACertificates
+Not set.
+CACertificatesWithConstraints
+Not set.
+CADistrustedCertificates
+Not set.
+CAHintCertificates
+Not set.
+CAPlatformIntegrationEnabled
+Not set.
+CORSNonWildcardRequestHeadersSupport
+Not set.
+CacheEncryptionEnabled
+Not set.
+CertificateTransparencyEnforcementDisabledForCas
+Not set.
+CertificateTransparencyEnforcementDisabledForUrls
+Not set.
+ChromeDataRegionSetting
+Not set.
+ChromeForTestingAllowed
+Not set.
+ChromeSuggestionsSettings
+Not set.
+ChromeVariations
+Not set.
+ClearBrowsingDataOnExitList
+Not set.
+ClearWindowNameForNewBrowsingContextGroup
+Not set.
+ClipboardAllowedForUrls
+Not set.
+ClipboardBlockedForUrls
+Not set.
+CloudExtensionRequestEnabled
+Not set.
+CloudManagementEnrollmentMandatory
+Not set.
+CloudManagementEnrollmentToken
+Not set.
+CloudPolicyOverridesPlatformPolicy
+Not set.
+CloudProfileReportingEnabled
+Not set.
+CloudReportingEnabled
+Not set.
+CloudReportingUploadFrequency
+Not set.
+CloudUserPolicyMerge
+Not set.
+CloudUserPolicyOverridesCloudMachinePolicy
+Not set.
+CoalesceH2ConnectionsWithClientCertificatesForHosts
+Not set.
+CommandLineFlagSecurityWarningsEnabled
+Not set.
+ComponentUpdatesEnabled
+Not set.
+CompressionDictionaryTransportEnabled
+Not set.
+ControlledFrameAllowedForUrls
+Not set.
+ControlledFrameBlockedForUrls
+Not set.
+CookiesAllowedForUrls
+Not set.
+CookiesBlockedForUrls
+Not set.
+CookiesSessionOnlyForUrls
+Not set.
+CopyPreventionSettings
+Not set.
+CpuPerformanceTierOverride
+Not set.
+CreateThemesSettings
+Not set.
+DNSInterceptionChecksEnabled
+Not set.
+DataControlsRules
+Not set.
+DataURLWhitespacePreservationEnabled
+Not set.
+DataUrlInSvgUseEnabled
+Not set.
+DataUrlInWebWorkerOpaqueOriginEnabled
+Not set.
+DefaultAutomaticDownloadsSetting
+Not set.
+DefaultBraveAdblockSetting
+Not set.
+DefaultBraveFingerprintingV2Setting
+Not set.
+DefaultBraveHttpsUpgradeSetting
+Not set.
+DefaultBraveReferrersSetting
+Not set.
+DefaultBraveRemember1PStorageSetting
+Not set.
+DefaultBrowserSettingEnabled
+Not set.
+DefaultClipboardSetting
+Not set.
+DefaultControlledFrameSetting
+Not set.
+DefaultCookiesSetting
+Not set.
+DefaultDirectSocketsSetting
+Not set.
+DefaultDownloadDirectory
+Not set.
+DefaultFileSystemReadGuardSetting
+Not set.
+DefaultFileSystemWriteGuardSetting
+Not set.
+DefaultGeolocationSetting
+Not set.
+DefaultIdleDetectionSetting
+Not set.
+DefaultImagesSetting
+Not set.
+DefaultInsecureContentSetting
+Not set.
+DefaultJavaScriptJitSetting
+Not set.
+DefaultJavaScriptOptimizerSetting
+Not set.
+DefaultJavaScriptSetting
+Not set.
+DefaultLocalFontsSetting
+Not set.
+DefaultMediaStreamSetting
+Not set.
+DefaultNotificationsSetting
+Not set.
+DefaultPopupsSetting
+Not set.
+DefaultPrinterSelection
+Not set.
+DefaultSearchProviderAlternateURLs
+Not set.
+DefaultSearchProviderContextMenuAccessAllowed
+Not set.
+DefaultSearchProviderEnabled
+Not set.
+DefaultSearchProviderEncodings
+Not set.
+DefaultSearchProviderImageURL
+Not set.
+DefaultSearchProviderImageURLPostParams
+Not set.
+DefaultSearchProviderKeyword
+Not set.
+DefaultSearchProviderName
+Not set.
+DefaultSearchProviderNewTabURL
+Not set.
+DefaultSearchProviderSearchURL
+Not set.
+DefaultSearchProviderSearchURLPostParams
+Not set.
+DefaultSearchProviderSuggestURL
+Not set.
+DefaultSearchProviderSuggestURLPostParams
+Not set.
+DefaultSensorsSetting
+Not set.
+DefaultSerialGuardSetting
+Not set.
+DefaultSubAppsWithoutPromptsSetting
+Not set.
+DefaultWebBluetoothGuardSetting
+Not set.
+DefaultWebHidGuardSetting
+Not set.
+DefaultWebUsbGuardSetting
+Not set.
+DefaultWindowManagementSetting
+Not set.
+DefaultWindowPlacementSetting
+Not set.
+DeletingUndecryptablePasswordsEnabled
+Not set.
+DesktopSharingHubEnabled
+Not set.
+DevToolsGenAiSettings
+Not set.
+DevToolsGoogleDeveloperProgramProfileAvailability
+Not set.
+DeveloperToolsAvailability
+Not set.
+DeveloperToolsAvailabilityAllowlist
+Not set.
+DeveloperToolsAvailabilityBlocklist
+Not set.
+DeveloperToolsDisabled
+Not set.
+DirectSocketsAllowedForUrls
+Not set.
+DirectSocketsBlockedForUrls
+Not set.
+Disable3DAPIs
+Not set.
+DisableAuthNegotiateCnameLookup
+Not set.
+DisablePrintPreview
+Not set.
+DisableSafeBrowsingProceedAnyway
+Not set.
+DisableScreenshots
+Not set.
+DisabledSchemes
+Not set.
+DiskCacheDir
+Not set.
+DiskCacheSize
+Not set.
+DnsOverHttpsMode
+Not set.
+DnsOverHttpsTemplates
+Not set.
+DomainReliabilityAllowed
+Not set.
+DownloadDirectory
+Not set.
+DownloadRestrictions
+Not set.
+EditBookmarksEnabled
+Not set.
+EmailAliasesEnabled
+Not set.
+EnableAuthNegotiatePort
+Not set.
+EnableExperimentalPolicies
+Not set.
+EnableMediaRouter
+Not set.
+EnableOnlineRevocationChecks
+Not set.
+EnableProxyOverrideRulesForAllUsers
+Not set.
+EnableUnsafeSwiftShader
+Not set.
+EncryptedClientHelloEnabled
+Not set.
+EnterpriseCustomLabel
+Not set.
+EnterpriseCustomLabelForBrowser
+Not set.
+EnterpriseHardwarePlatformAPIEnabled
+Not set.
+EnterpriseLogoUrl
+Not set.
+EnterpriseLogoUrlForBrowser
+Not set.
+EnterpriseProfileBadgeToolbarSettings
+Not set.
+EnterpriseProfileCreationKeepBrowsingData
+Not set.
+EnterprisePublishedSkills
+Not set.
+EnterpriseRealTimeUrlCheckMode
+Not set.
+EnterpriseSearchAggregatorSettings
+Not set.
+ExemptDomainFileTypePairsFromFileTypeDownloadWarnings
+Not set.
+ExplicitlyAllowedNetworkPorts
+Not set.
+ExtensionAllowedTypes
+Not set.
+ExtensionDOMActivityLoggingEnabled
+Not set.
+ExtensionDeveloperModeSettings
+Not set.
+ExtensionExtendedBackgroundLifetimeForPortConnectionsToUrls
+Not set.
+ExtensionInstallAllowlist
+Not set.
+ExtensionInstallBlocklist
+Not set.
+ExtensionInstallCloudPolicyChecksEnabled
+Not set.
+ExtensionInstallForcelist
+Not set.
+ExtensionInstallSources
+Not set.
+ExtensionInstallTypeBlocklist
+Not set.
+ExtensionReviewPromptsEnabled
+Not set.
+ExtensionSettings
+Not set.
+ExtensionUnpublishedAvailability
+Not set.
+ExternalProtocolDialogShowAlwaysOpenCheckbox
+Not set.
+FeedbackSurveysEnabled
+Not set.
+FetchKeepaliveDurationSecondsOnShutdown
+Not set.
+FileOrDirectoryPickerWithoutGestureAllowedForOrigins
+Not set.
+FileSystemReadAskForUrls
+Not set.
+FileSystemReadBlockedForUrls
+Not set.
+FileSystemWriteAskForUrls
+Not set.
+FileSystemWriteBlockedForUrls
+Not set.
+ForceBrowserSignin
+Not set.
+ForceEphemeralProfiles
+Not set.
+ForceForegroundPriorityForAllTabs
+Not set.
+ForceForegroundPriorityForUrls
+Not set.
+ForceGoogleSafeSearch
+Not set.
+ForcePermissionPolicyUnloadDefaultEnabled
+Not set.
+ForceSafeSearch
+Not set.
+ForceYouTubeRestrict
+Not set.
+ForceYouTubeSafetyMode
+Not set.
+ForcedLanguages
+Not set.
+FullscreenAllowed
+Not set.
+GSSAPILibraryName
+Not set.
+GeminiActOnWebAllowedForURLs
+Not set.
+GeminiActOnWebBlockedForURLs
+Not set.
+GeminiActOnWebSettings
+Not set.
+GeminiChromeFileUploadSettings
+Not set.
+GeminiEnterpriseSettings
+Not set.
+GeminiSettings
+Not set.
+GeminiSparkSettings
+Not set.
+GenAILocalFoundationalModelSettings
+Not set.
+GenAiDefaultSettings
+Not set.
+GeolocationBlockedForUrls
+Not set.
+GloballyScopeHTTPAuthCacheEnabled
+Not set.
+GoogleSearchSidePanelEnabled
+Not set.
+HSTSPolicyBypassList
+Not set.
+HappyEyeballsV3Enabled
+Not set.
+HardwareAccelerationModeEnabled
+Not set.
+HeadlessMode
+Not set.
+HelpMeWriteSettings
+Not set.
+HideWebStoreIcon
+Not set.
+HighEfficiencyModeEnabled
+Not set.
+HistoryClustersVisible
+Not set.
+HistorySearchSettings
+Not set.
+HomepageIsNewTabPage
+Not set.
+HomepageLocation
+Not set.
+HttpAllowlist
+Not set.
+HttpHeaderInjection
+Not set.
+HttpsOnlyMode
+Not set.
+HttpsUpgradesEnabled
+Not set.
+IPFSEnabled
+Not set.
+IPv6ReachabilityOverrideEnabled
+Not set.
+IdleDetectionAllowedForUrls
+Not set.
+IdleDetectionBlockedForUrls
+Not set.
+IdleTimeout
+Not set.
+IdleTimeoutActions
+Not set.
+ImagesAllowedForUrls
+Not set.
+ImagesBlockedForUrls
+Not set.
+ImportAutofillFormData
+Not set.
+ImportBookmarks
+Not set.
+ImportHistory
+Not set.
+ImportHomepage
+Not set.
+ImportSavedPasswords
+Not set.
+ImportSearchEngine
+Not set.
+IncognitoEnabled
+Not set.
+IncognitoModeAvailability
+Not set.
+IncognitoModeUrlAllowlist
+Not set.
+IncognitoModeUrlBlocklist
+Not set.
+InsecureContentAllowedForUrls
+Not set.
+InsecureContentBlockedForUrls
+Not set.
+InsecureFormsWarningsEnabled
+Not set.
+IntensiveWakeUpThrottlingEnabled
+Not set.
+IntranetRedirectBehavior
+Not set.
+IsolateOrigins
+Not set.
+IsolateOriginsShortlist
+Not set.
+IsolatedModeSettings
+Not set.
+IsolatedWebAppInstallForceList
+Not set.
+JavaScriptAllowedForUrls
+Not set.
+JavaScriptBlockedForUrls
+Not set.
+JavaScriptJitAllowedForSites
+Not set.
+JavaScriptJitBlockedForSites
+Not set.
+JavaScriptOptimizerAllowedForSites
+Not set.
+JavaScriptOptimizerBlockedForSites
+Not set.
+JavascriptEnabled
+Not set.
+LegacyCookieScopeEnabled
+Not set.
+LegacyCookieScopeEnabledForDomainList
+Not set.
+LegacyTechReportAllowlist
+Not set.
+LensDesktopNTPSearchEnabled
+Not set.
+LensOverlaySettings
+Not set.
+LensRegionSearchEnabled
+Not set.
+LiveCaptionEnabled
+Not set.
+LiveTranslateEnabled
+Not set.
+LocalFontsAllowedForUrls
+Not set.
+LocalFontsBlockedForUrls
+Not set.
+LocalNetworkAccessAllowedForUrls
+Not set.
+LocalNetworkAccessBlockedForUrls
+Not set.
+LocalNetworkAccessIpAddressSpaceOverrides
+Not set.
+LocalNetworkAccessPermissionsPolicyDefaultEnabled
+Not set.
+LocalNetworkAccessRestrictionsTemporaryOptOut
+Not set.
+LocalNetworkAllowedForUrls
+Not set.
+LocalNetworkBlockedForUrls
+Not set.
+LookalikeWarningAllowlistDomains
+Not set.
+LoopbackNetworkAllowedForUrls
+Not set.
+LoopbackNetworkBlockedForUrls
+Not set.
+ManagedAccountsSigninRestriction
+Not set.
+ManagedBookmarks
+Not set.
+ManagedConfigurationPerOrigin
+Not set.
+MandatoryExtensionsForIncognitoNavigation
+Not set.
+MaxConnectionsPerProxy
+Not set.
+MaxConnectionsPerProxyForWebSocket
+Not set.
+MaxInvalidationFetchDelay
+Not set.
+MediaRecommendationsEnabled
+Not set.
+MediaRouterCastAllowAllIPs
+Not set.
+MemorySaverModeSavings
+Not set.
+MetricsReportingEnabled
+Not set.
+NTPCardsVisible
+Not set.
+NTPCustomBackgroundEnabled
+Not set.
+NTPFooterExtensionAttributionEnabled
+Not set.
+NTPFooterManagementNoticeEnabled
+Not set.
+NTPOutlookCardVisible
+Not set.
+NTPSharepointCardVisible
+Not set.
+NTPShortcuts
+Not set.
+NativeMessagingAllowlist
+Not set.
+NativeMessagingBlocklist
+Not set.
+NativeMessagingUserLevelHosts
+Not set.
+NetworkPredictionOptions
+Not set.
+NetworkServiceSandboxEnabled
+Not set.
+NewTabPageLocation
+Not set.
+NotificationsAllowedForUrls
+Not set.
+NotificationsBlockedForUrls
+Not set.
+NtlmV2Enabled
+Not set.
+OnBulkDataEntryEnterpriseConnector
+Not set.
+OnDataCopiedEnterpriseConnector
+Not set.
+OnFileAttachedEnterpriseConnector
+Not set.
+OnFileDownloadedEnterpriseConnector
+Not set.
+OnNetworkRequestEnterpriseConnector
+Not set.
+OnPrintEnterpriseConnector
+Not set.
+OnSecurityEventEnterpriseConnector
+Not set.
+OopPrintDriversAllowed
+Not set.
+OriginAgentClusterDefaultEnabled
+Not set.
+OriginKeyedProcessesEnabled
+Not set.
+OutOfProcessSystemDnsResolutionEnabled
+Not set.
+OverrideSecurityRestrictionsOnInsecureOrigin
+Not set.
+PartitionedBlobUrlUsage
+Not set.
+PasswordDismissCompromisedAlertEnabled
+Not set.
+PasswordLeakDetectionEnabled
+Not set.
+PasswordManagerBlocklist
+Not set.
+PasswordManagerEnabled
+Not set.
+PasswordManagerPasskeysEnabled
+Not set.
+PasswordProtectionChangePasswordURL
+Not set.
+PasswordProtectionLoginURLs
+Not set.
+PasswordProtectionWarningTrigger
+Not set.
+PasswordSharingEnabled
+Not set.
+PaymentMethodQueryEnabled
+Not set.
+PdfAnnotationsEnabled
+Not set.
+PdfLocalFileAccessAllowedForDomains
+Not set.
+PdfUseSkiaRendererEnabled
+Not set.
+PdfViewerOutOfProcessIframeEnabled
+Not set.
+PolicyAtomicGroupsEnabled
+Not set.
+PolicyDictionaryMultipleSourceMergeList
+Not set.
+PolicyListMultipleSourceMergeList
+Not set.
+PolicyRefreshRate
+Not set.
+PolicyTestPageEnabled
+Not set.
+PopupsAllowedForUrls
+Not set.
+PopupsBlockedForUrls
+Not set.
+PreciseGeolocationAllowedForUrls
+Not set.
+PreferSlowCiphers
+Not set.
+PreferSlowKexAlgorithms
+Not set.
+PrefetchWithServiceWorkerEnabled
+Not set.
+PrintHeaderFooter
+Not set.
+PrintPdfAsImageDefault
+Not set.
+PrintPreviewUseSystemDefaultPrinter
+Not set.
+PrintRasterizePdfDpi
+Not set.
+PrinterTypeDenyList
+Not set.
+PrintingAllowedBackgroundGraphicsModes
+Not set.
+PrintingBackgroundGraphicsDefault
+Not set.
+PrintingEnabled
+Not set.
+PrintingPaperSizeDefault
+Not set.
+PrivacySandboxAdMeasurementEnabled
+Not set.
+PrivacySandboxAdTopicsEnabled
+Not set.
+PrivacySandboxPromptEnabled
+Not set.
+PrivacySandboxSiteEnabledAdsEnabled
+Not set.
+ProfilePickerOnStartupAvailability
+Not set.
+ProfileReauthPrompt
+Not set.
+ProfileSeparationDataMigrationSettings
+Not set.
+ProfileSeparationDomainExceptionList
+Not set.
+ProfileSeparationSettings
+Not set.
+PromotionalTabsEnabled
+Not set.
+PromotionsEnabled
+Not set.
+PromptForDownloadLocation
+Not set.
+PromptOnMultipleMatchingCertificates
+Not set.
+ProvisionManagedClientCertificateForBrowser
+Not set.
+ProvisionManagedClientCertificateForUser
+Not set.
+ProxyBypassList
+Not set.
+ProxyMode
+Not set.
+ProxyOverrideRules
+Not set.
+ProxyPacUrl
+Not set.
+ProxyProvisioningDomains
+Not set.
+ProxyServer
+Not set.
+ProxyServerMode
+Not set.
+ProxySettings
+Not set.
+PsstEnabled
+Not set.
+QRCodeGeneratorEnabled
+Not set.
+QuicAllowed
+Not set.
+ReduceAcceptLanguageEnabled
+Not set.
+RegisteredProtocolHandlers
+Not set.
+RelaunchFastIfOutdated
+Not set.
+RelaunchNotification
+Not set.
+RelaunchNotificationPeriod
+Not set.
+RelaunchWindow
+Not set.
+RemoteAccessHostAllowClientPairing
+Not set.
+RemoteAccessHostAllowFileTransfer
+Not set.
+RemoteAccessHostAllowGnubbyAuth
+Not set.
+RemoteAccessHostAllowPinAuthentication
+Not set.
+RemoteAccessHostAllowRelayedConnection
+Not set.
+RemoteAccessHostAllowRemoteAccessConnections
+Not set.
+RemoteAccessHostAllowRemoteSupportConnections
+Not set.
+RemoteAccessHostAllowUrlForwarding
+Not set.
+RemoteAccessHostClientDomain
+Not set.
+RemoteAccessHostClientDomainList
+Not set.
+RemoteAccessHostClipboardSizeBytes
+Not set.
+RemoteAccessHostDomain
+Not set.
+RemoteAccessHostDomainList
+Not set.
+RemoteAccessHostEnableUserInterface
+Not set.
+RemoteAccessHostFirewallTraversal
+Not set.
+RemoteAccessHostMatchUsername
+Not set.
+RemoteAccessHostMaximumSessionDurationMinutes
+Not set.
+RemoteAccessHostRequireCurtain
+Not set.
+RemoteAccessHostUdpPortRange
+Not set.
+RemoteDebuggingAllowed
+Not set.
+RendererAccessibilityEnabled
+Not set.
+ReportExtensionsAndPluginsData
+Not set.
+ReportMachineIDData
+Not set.
+ReportPolicyData
+Not set.
+ReportUserIDData
+Not set.
+ReportVersionData
+Not set.
+RequireOnlineRevocationChecksForLocalAnchors
+Not set.
+RestoreOnStartup
+Not set.
+RestoreOnStartupURLs
+Not set.
+RestrictBackgroundFetchFromServiceWorkerEnabled
+Not set.
+RestrictPdfSaveToGoogleDriveAccountsToPattern
+Not set.
+RestrictSigninToPattern
+Not set.
+RestrictYouTubeCookiesDeletion
+Not set.
+RoamingProfileLocation
+Not set.
+RoamingProfileSupportEnabled
+Not set.
+SSLErrorOverrideAllowed
+Not set.
+SSLErrorOverrideAllowedForOrigins
+Not set.
+SaasUsageReportingDomainUrlsForBrowsers
+Not set.
+SaasUsageReportingDomainUrlsForProfiles
+Not set.
+SafeBrowsingAllowlistDomains
+Not set.
+SafeBrowsingDeepScanningEnabled
+Not set.
+SafeBrowsingEnabled
+Not set.
+SafeBrowsingProtectionLevel
+Not set.
+SafeBrowsingProxiedRealTimeChecksAllowed
+Not set.
+SafeBrowsingSurveysEnabled
+Not set.
+SafeSitesFilterBehavior
+Not set.
+SameOriginTabCaptureAllowedByOrigins
+Not set.
+SandboxExternalProtocolBlocked
+Not set.
+SavingBrowserHistoryDisabled
+Not set.
+ScreenCaptureAllowed
+Not set.
+ScreenCaptureAllowedByOrigins
+Not set.
+ScreenCaptureWithoutGestureAllowedForOrigins
+Not set.
+ScrollToTextFragmentEnabled
+Not set.
+SearchContentSharingSettings
+Not set.
+SearchSuggestEnabled
+Not set.
+SecurityKeyPermitAttestation
+Not set.
+SecuritySignalsClientCertificatesSelectors
+Not set.
+SensorsAllowedForUrls
+Not set.
+SensorsBlockedForUrls
+Not set.
+SerialAllowAllPortsForUrls
+Not set.
+SerialAllowUsbDevicesForUrls
+Not set.
+SerialAskForUrls
+Not set.
+SerialBlockedForUrls
+Not set.
+ServiceWorkerAutoPreloadEnabled
+Not set.
+ServiceWorkerToControlSrcdocIframeEnabled
+Not set.
+SharedArrayBufferUnrestrictedAccessAllowed
+Not set.
+SharedWorkerBlobURLFixEnabled
+Not set.
+SharedWorkerExtendedLifetimeEnabled
+Not set.
+ShoppingListEnabled
+Not set.
+ShowAppsShortcutInBookmarkBar
+Not set.
+ShowCastIconInToolbar
+Not set.
+ShowCastSessionsStartedByOtherDevices
+Not set.
+ShowFullUrlsInAddressBar
+Not set.
+ShowHomeButton
+Not set.
+SideSearchEnabled
+Not set.
+SignedHTTPExchangeEnabled
+Not set.
+SigninAllowed
+Not set.
+SigninInterceptionEnabled
+Not set.
+SilentPrintingEnabled
+Not set.
+SitePerProcess
+Not set.
+SiteSearchSettings
+Not set.
+SmartTabSharingSettings
+Not set.
+SpellCheckServiceEnabled
+Not set.
+SpellcheckEnabled
+Not set.
+SpellcheckLanguage
+Not set.
+SpellcheckLanguageBlocklist
+Not set.
+StandardizedBrowserZoomEnabled
+Not set.
+StaticStorageQuotaEnabled
+Not set.
+StrictMimetypeCheckForWorkerScriptsEnabled
+Not set.
+SubAppsWithoutPromptsAllowedForOrigins
+Not set.
+SubAppsWithoutPromptsBlockedForOrigins
+Not set.
+SuppressDifferentOriginSubframeDialogs
+Not set.
+SuppressUnsupportedOSWarning
+Not set.
+SyncDisabled
+Not set.
+SyncTypesListDisabled
+Not set.
+TLS13EarlyDataEnabled
+Not set.
+TabCaptureAllowedByOrigins
+Not set.
+TabCompareSettings
+Not set.
+TabDiscardingExceptions
+Not set.
+TabGroupSharingSettings
+Not set.
+TaskManagerEndProcessEnabled
+Not set.
+ThirdPartyAiChatSettings
+Not set.
+TorDisabled
+Not set.
+TranslateEnabled
+Not set.
+TranslatorAPIAllowed
+Not set.
+TryOnYouSettings
+Not set.
+URLAllowlist
+Not set.
+URLBlocklist
+Not set.
+UnmanagedDeviceSignalsConsentFlowEnabled
+Not set.
+UnsafelyTreatInsecureOriginAsSecure
+Not set.
+UrlKeyedAnonymizedDataCollectionEnabled
+Not set.
+UrlKeyedMetricsAllowed
+Not set.
+UserContextAwareAccessSignalsAllowlist
+Not set.
+UserDataSnapshotRetentionLimit
+Not set.
+UserFeedbackAllowed
+Not set.
+UserSecurityAuthenticatedReporting
+Not set.
+UserSecuritySignalsReporting
+Not set.
+VariationsRestrictParameter
+Not set.
+VideoCaptureAllowed
+Not set.
+VideoCaptureAllowedUrls
+Not set.
+VoiceTypingSettings
+Not set.
+WPADQuickCheckEnabled
+Not set.
+WatermarkStyle
+Not set.
+WebAppInstallByUserEnabled
+Not set.
+WebAppInstallForceList
+Not set.
+WebAppSettings
+Not set.
+WebAudioOutputBufferingEnabled
+Not set.
+WebAuthenticationRemoteDesktopAllowedOrigins
+Not set.
+WebAuthenticationRemoteProxiedRequestsAllowed
+Not set.
+WebHidAllowAllDevicesForUrls
+Not set.
+WebHidAllowDevicesForUrls
+Not set.
+WebHidAllowDevicesWithHidUsagesForUrls
+Not set.
+WebHidAskForUrls
+Not set.
+WebHidBlockedForUrls
+Not set.
+WebRtcDiagnosticLogCollectionAllowedForOrigins
+Not set.
+WebRtcEventLogCollectionAllowed
+Not set.
+WebRtcIPHandling
+Not set.
+WebRtcIPHandlingUrl
+Not set.
+WebRtcLocalIpsAllowedUrls
+Not set.
+WebRtcPostQuantumKeyAgreement
+Not set.
+WebRtcTextLogCollectionAllowed
+Not set.
+WebRtcUdpPortRange
+Not set.
+WebUsbAllowDevicesForUrls
+Not set.
+WebUsbAskForUrls
+Not set.
+WebUsbBlockedForUrls
+Not set.
+WindowCaptureAllowedByOrigins
+Not set.
+WindowManagementAllowedForUrls
+Not set.
+WindowManagementBlockedForUrls
+Not set.
+WindowPlacementAllowedForUrls
+Not set.
+WindowPlacementBlockedForUrls
+Not set.
+XSLTEnabled
+Not set.
+Policy Precedence
+Policy name
+Policy value
+Source
+Applies to
+Level
+Status
+CloudPolicyOverridesPlatformPolicy
+Not set.
+CloudUserPolicyOverridesCloudMachinePolicy
+Not set.
+Current precedence order
+Platform machine > Cloud machine > Platform user > Cloud user
+Extension Install Policies
+Policy name
+Policy value
+Source
+Applies to
+Level
+Status
+No policies set

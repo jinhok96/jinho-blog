@@ -1,0 +1,63 @@
+URL chrome://leo-ai/
+
+Leo AI
+Conversation history
+Your conversation history will appear here once you start a conversation.
+New conversation
+Introducing Leo AI
+Your
+private
+AI assistant, built right into the browser.
+Truly private AI
+Leo doesn’t retain or share chats, or use them for model training. No account or login is required. Just open and chat. Privately.
+Chat with your tabs and files
+Need to know more about the sites you’re visiting? Just add them to a chat. Attach your tabs and local files for fast, relevant answers.
+Bring your own model
+Connect your own AI models, whether running locally or remotely. Tailor Leo's behavior, outputs, and capabilities to your preferences.
+Learn more about Leo AI
+Share this conversation
+Your conversation will be uploaded encrypted and can only be decrypted with the generated link. Brave will not be able to view your conversation. Only you and the people you share this link with can decrypt your shared conversation. All shared conversations will expire after 7 days.
+You can
+manage your shares
+to find or delete them at any time.
+Generate link
+No skills found. Create a new one by clicking the "New" button.
+New
+Add tabs, bookmarks, or history for context. Selected contents will be sent to Leo with your messages.
+Attach file…
+Bookmarks…
+History…
+Automatic
+Automatic
+Current
+Model changes dynamically to use the best one for the task
+Qwen 3.5 35B
+Fast • Search • Vision
+Qwen 3.8 Flash Next
+Premium
+Search • Vision
+Show all models
+Delete conversation
+New conversation
+Are you sure you want to delete this conversation? This action cannot be undone.
+Cancel
+Delete
+Response Feedback
+Liking or disliking an answer will send rating, conversation, model, language, version, and premium status to Brave in order to improve Leo.
+Learn more
+Cancel
+Send
+Provide Brave AI Feedback
+What's your feedback about?
+Not helpful
+Incorrect
+Unsafe/harmful
+Other
+Provide feedback here
+Leo Premium provides access to an expanded set of language models for even greater answer nuance.
+Learn more
+Cancel
+Submit
+
+TOGGLES
+[]

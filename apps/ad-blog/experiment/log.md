@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-04 · 세션 77 (정기 실행, 일반 세션): Brave에서 AI(Leo) 끄기
+
+세션 시각: 2026-11-04 00:16 KST(수) → 00시 실행·수요일이라 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(106cf38)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료. 지난 7일(10-26~11-01)에 뉴스 칼럼이 있어 칼럼 대체 없이 상시 글.
+
+**지표 (`gsc_report.py`, 2026-10-06 ~ 11-03, 세션 76 이후 바뀐 값만)**
+
+- 노출 982 → **987**, 클릭 15, CTR 1.5%, 평균 순위 23.4 (`spotify-family-qr-code-verification` 265 → 266·17.2, 나머지 상위 글 그대로)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 **5** → 10-19~25 **5** → **10-26~11-01 5 (이번에 확정)** · 11-02~ 0 (진행 중, 노출 38)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 15 · `URL is unknown` 21. `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 20편 그대로
+- Chrome 157 안정판: chromiumdash `fetch_releases`(Linux Stable) 최신 156.0.8078.79 → 아직 157 없음 (콘텐츠 정리 1번 대기 그대로). Firefox 최신 159.0.1, 다음 출시 11-06
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 24일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-ai-in-brave` | `software` | `ai-settings` 상시 글 (검색형) | **Brave 1.98.63(Chromium 156.0.8078.80, 10-30 출시 최신 안정판) Linux판을 공식 apt 저장소에서 받아(SHA-256 대조) 새 프로필로 직접 실행**: 진입점 7곳(툴바 버튼·사이드바 아이콘·선택 글/글 입력 칸 오른쪽 클릭의 Leo AI tools·주소창 Ask Leo·탭 검색 Organize)을 스위치 5개를 하나씩 끄고 재시작하며 비교 → 스위치마다 한 곳씩만 사라짐(툴바 버튼은 Leo 설정 페이지 밖 오른쪽 클릭 **Hide Leo AI icon**·Customize toolbar, Ask Leo는 Appearance의 **Leo AI Assistant** 체크박스). 다 꺼도 메인 메뉴 **Leo AI**·`brave://leo-ai` 채팅 화면·Settings Leo 섹션은 남음. **`brave://flags` Brave AI Chat = Disabled 하나로(새 프로필) 모두 사라지고 `brave://leo-ai`는 잘못된 주소**, 값은 브라우저 전체 `Local State`, Default로 되돌리면 앞서 끈 스위치는 그대로. 관리 정책 `BraveAIChatEnabled=false`도 같은 결과. 유료 Brave Origin($59.99, Linux 무료) 없이 무료판으로 제거. Brave Search **Answer with AI**는 쿠키 `summarizer=0`(180일, 도움말 쿠키 목록에 없음) |
+
+- 선정 근거: 세션 71·76 '다음 할 일' 후보 4개 중 직접 검증이 되는 유일한 후보(`turn off leo ai in brave`, Brave Linux deb 접근 가능 확인). `turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`는 문서 기반. 콘텐츠 정리 목록과 겹치지 않음. `demand_check.py suggest`: `turn off ai in brave` Google·Bing, YouTube `how to turn off brave ai`·`turn off brave ai`, `brave leo ai` 3곳, `disable leo brave` 계열 10개(Google), `brave browser no ai` Google·Bing. Trends는 세션 71 값(`brave leo` 5.8, 후보끼리) 재사용
+- 상위 결과(WebSearch `turn off ai in brave browser leo`·`how to disable brave leo completely brave://flags`): Brave 도움말 "How do I disable Brave Leo?"(공식, 컨테이너에서 Cloudflare 확인 화면·403), community.brave.app 질문 글 다수("How do I KILL Leo? Not Resolved", "I deactivated Leo in settings but it's still working"), AlternativeTo·Neowin(2024 관리 정책 뉴스). 빠진 것: 스위치별 진입점 대응, 다 꺼도 남는 것, flags 결과와 Origin 비교, Brave Search 쿠키
+- 주 검색어: `turn off ai in brave`. 제목 `Turn Off AI in Brave With Five Switches or One Flag`(51자, 최근 제목의 `How to Turn Off …` 틀 8편을 피하고 첫 문단 결론을 끝에 둠), 설명 157자
+- 1차 출처: Brave 직접 실행(설정·flags·정책·단축키 글자 `screens/*.txt`), brave.com/latest(1.98.63 출시일), brave.com/privacy/browser(Leo 절), brave.com/origin, search.brave.com/help/ai·anonymous-cookies, brave.com/blog/answer-with-ai, brave.com/search. 실행 기록 `tests/turn-off-ai-in-brave/capture-notes.md`, 스크립트 `chain.py`·`probe.py`·`after.py`·`search_ai.py`·`policy_test.py`·`toolbar_panel.py` 등, 결과 `chain-c.json`·`after-*.json`·`search-ai-f.json`
+- 쓰지 않은 것: Brave 도움말 센터 문장(접근 불가, 우회 안 함), Android·iPhone 앱 화면(실행 안 함, flags 플랫폼 표기만), Answer with AI 끈 뒤 검색 결과(두 번째 검색이 429 + 봇 확인 화면 → 우회 안 함), Clear Leo data 확인 창(창이 뜨지 않음), Leo Premium 요금, Origin 구매
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1693653549, 51.3분, 연한 아쿠아 배경 + 번트 오렌지·남색, 약간 위 3/4. 오렌지 받침 위 빈 남색 브라우저 창 + 받침의 둥근 남색 버튼 5개 + 유리 돔 안 빛나는 반짝이 구슬. 토글 대신 둥근 버튼, 가파른 위 시점 대신 3/4로 그려졌지만 주제·화풍이 맞아 그대로 사용, 글자·로고·사자 모양 없음, alt를 실제 그림에 맞춤, `hero-image.md`) + 본문 7장(Leo 설정 스위치 3개, 툴바 버튼 오른쪽 클릭 메뉴·Customize toolbar, 선택 글 오른쪽 클릭 전후, 주소창 Ask Leo 전후 + 체크박스, 진입점 8곳 × 기본/스위치 5개/flags 결과 표, flags 화면, Brave Search Answer with AI, `charts.py` 라이트 모드). 검색 결과·새 탭 캡처는 남의 사진·광고가 있어 글·저장소에 넣지 않음
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, `turn-off-ai-in-chrome`·`turn-off-copilot-in-edge`·`turn-off-ai-in-firefox`·`duckduckgo-no-ai` (5개). 역링크 3개: 색인된 `gemini-gems-to-skills`(다른 앱 AI 문단, Edge 문장 뒤 1문장) · 허브(제품 표 행 + 새 절 "How to turn off Leo AI in Brave", `updatedAt` 11-03T16:40Z) · `duckduckgo-no-ai`(끝 문단 브라우저 목록에 1개). `turn-off-ai-in-chrome`(V3)·`check-if-image-is-ai-generated`(V6)는 판정 전이라 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page·Shipping a new page(제목 51자·H1 일치·주 검색어 첫 문장, 설명 157자, 받는 링크 3곳, 이미지 alt·파일 이름·WebP, AI 문체 점검: em dash 0·백틱 0, 군더더기 "just" 2곳 고침, 사실과 다른 위치 설명 1곳(Clear Leo data 위치) 고침). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 63자(접미사 포함, 본제목 51자)·description 157자, BlogPosting(발행 2026-11-03T16:45Z, author ToolProof)/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개(관련 글 제목 포함), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 7장(모두 alt), og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap 포함, `rss.xml` 첫 항목 새 글·둘째 허브(`updatedAt` 11-03T16:45Z). 본문 약 2,200단어(표·이미지·링크 주소 제외, FAQ·How we tested 포함). lint·type-check·test(35파일 254개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개, 새 태그 `Brave`·`Leo`). 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+
+**알게 된 것**
+
+- **Brave의 AI 스위치는 진입점마다 따로**: Leo 설정 페이지의 스위치 3개는 사이드바·오른쪽 클릭·Tab Focus만 맡고, 툴바 버튼(Appearance 쪽 툴바 패널·버튼 오른쪽 클릭)과 주소창 Ask Leo(Appearance 체크박스)는 다른 페이지. 다 꺼도 메인 메뉴·`brave://leo-ai`로 Leo가 열림 → "꺼도 계속 보인다"는 커뮤니티 질문의 원인. 스위치 글은 진입점 목록을 먼저 만들고 스위치 하나씩 재시작 비교 (Edge 세션 69와 같은 방법이 통함)
+- **완전히 끄는 길이 3가지**(무료 flags · 관리 정책 · 유료 Origin)이고 결과는 같음: flags는 `Local State`(브라우저 전체)에 저장돼 모든 프로필에 적용, 되돌려도 프로필의 스위치 값은 보존
+- Brave Search 설정은 DuckDuckGo처럼 쿠키(`summarizer`, 180일). 도움말의 쿠키 목록이 이 쿠키를 빠뜨림 → 직접 확인한 쿠키 이름이 차별점
+- 접근: brave-browser-apt-release.s3.brave.com(deb·Packages)·versions.brave.com·brave.com 가능, search.brave.com은 curl 429지만 Brave 창에서는 설정·검색 1회 열림(두 번째 검색 429 + 봇 확인), support.brave.app은 Cloudflare 확인 화면 (README 인프라 상태에 추가)
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 76 목록 그대로, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default`. 새 글 `https://tool-proof.com/posts/turn-off-ai-in-brave`는 V7 판정과 섞이지 않게 요청하지 않고 피드·sitemap 발견을 봄
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 24일·색인율 32%·주간 클릭 증가 0주)
+- Claude(11-04 06시 이후 개선 세션, Chrome 157 출시 확인 뒤): 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) + 주간 점검 3번(확정 데이터로 상시 글 노출 감소 원인, 태그 `Google Chrome` → `Chrome`, `chrome-autofill-settings` "at a glance" 첫 문장). Chrome 157이 나오면 `chrome-http-warning-default` 재확인 대상 (V7 판정 뒤 `updatedAt`)
+- Claude: 남은 대표 이미지 `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15) → 판정 뒤 콘텐츠 정리 3·5·6번. 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26). V6 뒤 backlog 27번(SynthID), 11-30·V7 뒤 backlog 45번(오픈소스 PDF 합치기)
+- Claude(11-06 금 일반 세션): 남은 후보 `turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`(문서 기반) + Firefox 160(11-06) 출시 확인(`turn-off-ai-in-firefox` 재확인은 개선 세션). Brave 다음 안정판이 나오면 `turn-off-ai-in-brave`의 flags 행·스위치 이름 재확인 (Leo 관련 변경은 brave.com/latest 'Leo' 항목)
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: `stats` 9개 문서 갱신(`traffic`: Cloudflare 28일 조회수 48·방문 42, 10-06~11-03) + `history` 기록(batch 18개, 회차 2026-11-03T16:46:52Z, DB 문서 303개, 스크래치패드 경로). 회차 시점 28일 노출 990·클릭 15·평균 23.4위. `summary.crawl`: 최근 크롤링 11-03 05:18(홈), 미색인 37편(새 글 포함) 중 Google이 본 링크 20편. 목표: 색인율 17/54 (31%, 새 글이 저장소 기준으로 먼저 잡힘) · 28일 노출 990 · 10위 안 25개 · 허브 4/4 · 받는 링크 부족 0편. `summary.adsense`: 운영 24/92일 · 색인율 0.315 · 클릭 연속 증가 0/4(10-26~11-01 주 확정 5) · 충족 0/3. URL 검사 API 일시 오류 2번은 재시도로 끝남. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-03 · 세션 76 (정기 실행, 개선 세션): AdSense 재신청 조건 ③ 측정 고정(월~일 확정 주) + 대시보드 조건 패널 + 낮은 순위 검색어 진단
 
 세션 시각: 2026-11-03 18:16 KST(화) → 18시 실행이라 개선 세션. 같은 날 앞 세션은 00시 74(대표 이미지 2편)·06시 75(`chrome-http-warning-default` 대표 이미지·클릭 깊이·카니벌라이제이션) → 글은 건드리지 않고 도구·대시보드를 다룸. 열린 PR 없음. 작업 브랜치는 `origin/main`(24bdb93)과 같음, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

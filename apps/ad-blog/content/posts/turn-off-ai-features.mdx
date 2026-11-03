@@ -4,7 +4,7 @@ description: Turn off AI in Chrome, Gmail, Word, Windows 11 and iPhone. See whic
 category: ai-tools
 hub: true
 createdAt: 2026-10-23T10:14:00Z
-updatedAt: 2026-11-01
+updatedAt: 2026-11-03T16:45:00Z
 tags:
   - AI
   - privacy
@@ -27,6 +27,7 @@ Some of these switches remove the AI feature completely, while others only hide 
 | Chrome | Partly in Settings, fully with a Windows policy | **Settings > AI innovations** or **AI in Chrome** | [Turn off AI in Chrome](/posts/turn-off-ai-in-chrome) |
 | Firefox | Yes, one switch | **Settings > AI controls > Block AI enhancements** | [Turn off AI in Firefox](/posts/turn-off-ai-in-firefox) |
 | Microsoft Edge | Partly; one switch hides Copilot from the toolbar and menus | **Settings > Copilot and AI > Show Copilot button in toolbar** | [Turn off Copilot in Edge](/posts/turn-off-copilot-in-edge) |
+| Brave | Yes, with one setting on the flags page; the regular switches only hide Leo | **brave://flags > Brave AI Chat > Disabled**, or **Settings > Leo** to hide it | [Turn off AI in Brave](/posts/turn-off-ai-in-brave) |
 | Gmail (and Docs) | Yes, one switch | **Settings > See all settings > General > Manage Workspace smart feature settings** | [Turn off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) |
 | Gemini app | Disconnect each app | **Customize > Connectors** | [Gemini Connected Apps](/posts/gemini-connected-apps) |
 | Google Search | No | **Web** filter on each search | This page |
@@ -62,6 +63,12 @@ In our test on a new profile, the chatbot and translation items disappeared from
 Edge has no single switch for all of its Copilot features. Open **Settings and more** (**...**), choose **Settings**, select **Copilot and AI**, and turn off **Show Copilot button in toolbar**. In our test of Edge 156.0.4314.56 on a new signed-out profile on October 30, 2026, that switch also removed **Summarize with Copilot** from the right-click menu, the Copilot icon from the menu that appears when you select text, and the **Ctrl+Shift+.** shortcut.
 
 One item stayed: **Help me rewrite** in the right-click menu of text boxes, even after we also turned off **Use writing assistance** under **Settings > Languages**. Copilot Mode is gone too, since Microsoft retired it in May 2026. Our guide to [turning off Copilot in Microsoft Edge](/posts/turn-off-copilot-in-edge) compares what each switch removes and covers the context clues, new tab page and Cowork switches.
+
+## How to turn off Leo AI in Brave
+
+Brave's AI assistant, Leo, can be removed completely: type **brave://flags/#brave-ai-chat** in the address bar, set **Brave AI Chat** to **Disabled**, and click **Relaunch**. In our November 3, 2026 test of Brave 1.98.63 on a new profile, that removed every Leo button and menu, the Leo section in Settings and Leo's chat page.
+
+The regular switches only hide Leo. Right-clicking the **Leo AI** toolbar button and choosing **Hide Leo AI icon**, turning off three switches in **Settings > Leo**, and unchecking **Leo AI Assistant** in **Settings > Appearance** cleared Leo from the toolbar, sidebar, right-click menus, address bar and tab search, but **Leo AI** stayed in the main menu. AI answers in Brave Search have a separate **Answer with AI** switch at search.brave.com/settings. Our guide to [turning off AI in Brave](/posts/turn-off-ai-in-brave) shows what each switch removes and how to undo the flag.
 
 ## How to turn off Gemini in Gmail and Google Docs
 
@@ -157,4 +164,4 @@ Start with the AI that can read your personal data, then deal with the buttons t
 
 ## How we checked
 
-On October 23, 2026, we read Google's AI Overviews and AI Mode help pages, Apple's iOS 27 iPhone User Guide pages on turning off Apple Intelligence features and on Screen Time, Apple's Apple Intelligence overview, and Microsoft's Copilot on Windows, Copilot app management and app uninstall pages. The Chrome, Firefox, Gmail, Word and Gemini sections summarize our separate guides, each of which lists its own sources and test dates; we added the Firefox section on October 28, 2026. On October 29, 2026, we started Google Chrome 156.0.8078.73 for Linux with 10 new profiles, twice each, without signing in, and noted the name of the AI item in the Settings menu each time. We didn't have an iPhone with iOS 27 or a Windows 11 PC, so the iPhone and Windows steps come from Apple's and Microsoft's instructions rather than our own screens.
+On October 23, 2026, we read Google's AI Overviews and AI Mode help pages, Apple's iOS 27 iPhone User Guide pages on turning off Apple Intelligence features and on Screen Time, Apple's Apple Intelligence overview, and Microsoft's Copilot on Windows, Copilot app management and app uninstall pages. The Chrome, Firefox, Gmail, Word and Gemini sections summarize our separate guides, each of which lists its own sources and test dates; we added the Firefox section on October 28, 2026, and the Brave section on November 3, 2026. On October 29, 2026, we started Google Chrome 156.0.8078.73 for Linux with 10 new profiles, twice each, without signing in, and noted the name of the AI item in the Settings menu each time. We didn't have an iPhone with iOS 27 or a Windows 11 PC, so the iPhone and Windows steps come from Apple's and Microsoft's instructions rather than our own screens.

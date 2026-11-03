@@ -1,0 +1,16 @@
+URL: https://support.brave.app/hc/en-us/articles/26727068494221
+Final: https://support.brave.app/hc/en-us/articles/26727068494221
+Status: error Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "https://support.brave.app/hc/en-us/articles/26727068494221", waiting until "networkidle"
+
+Fetched: 2026-11-03 15:48 UTC
+
+support.brave.app
+Performing security verification
+
+This website uses a security service to protect against malicious bots. This page is displayed while the website verifies you are not a bot.
+
+Ray ID: a54c84a28ad3310a
+Performance and Security by Cloudflare
+Privacy

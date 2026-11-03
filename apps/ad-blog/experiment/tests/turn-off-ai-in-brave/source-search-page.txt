@@ -1,0 +1,184 @@
+URL: https://brave.com/search/
+Final: https://brave.com/search/
+Status: 200
+Fetched: 2026-11-03 15:47 UTC
+
+Browser
+Search
+Search API
+Brave Ads
+Get Brave
+Search the Web
+
+Brave Search
+
+The smarter way to search.
+Get real answers. Faster.
+
+AI-powered answers to almost any question, lightning fast and incredibly accurate. An independent index delivering actually useful results, without big tech’s SEO spam.
+
+All in the same sleek results page.
+
+Search without a trace. Search that puts you first.
+
+Brave Search doesn’t profile you. It’s impossible for us to share, sell, or lose your personal data, because we don’t collect it in the first place.
+
+Ask Brave
+
+Get comprehensive answers to any question. Ask Brave combines the power of AI chat with the familiarity of a search results page.
+
+Find useful summaries plus supporting videos, websites, products, & more, and then ask follow-up questions.
+
+Independent
+
+Even supposedly “neutral” or “private” search engines rely on big tech for results. Brave delivers results from its own, built-from-scratch index. No secret methods or algorithms, no bias or censorship.
+
+Open to power the Web
+
+Brave Search is available in any browser, at search.brave.com. Want to power your own search or AI app? Check out the Brave Search API.
+
+How does Brave Search stack up?
+
+Built-in features
+
+Brave
+Google
+DuckDuckGo
+
+Private, anonymous search
+
+AI-powered answers
+
+Transparency in results ranking
+
+Powered by independent index
+
+Community-driven ranking options
+
+Social discussions in results page
+
+Note: DuckDuckGo is dependent on the Bing search index for its search results.
+
+FAQs
+What is Brave Search?
+How do I use Brave Search, or set it as default?
+Do I have to use Brave Search if I use the Brave browser?
+Can I use Brave Search in browsers other than Brave?
+How can I change the default language for search results?
+How can I share feedback about Brave Search?
+Will I see ads in Brave Search? Do these ads work with Brave Rewards?
+How is Brave Search different? What does “independent” mean?
+Does Brave Search filter, downrank, or censor search results?
+What is the Goggles feature, and can it help limit search censorship?
+What's the Web Discovery Project, and how do I opt in?
+What is an answer engine, and how does Brave Search use AI?
+Get Brave
+User resources
+Help center
+Community
+What's new in Brave?
+Release notes
+Status
+FAQs
+Transparency report
+Merch store
+Privacy policy
+Brave Browser
+Brave Search
+Brave Search RTBF
+Website & email
+Publishers & creators
+Advertisers
+CCPA
+Blogs
+Brave blog
+Privacy updates
+Web standards
+Research
+Podcast
+For businesses
+Search API
+Brave Ads
+Group policy
+Beginner guides
+Intros to browsers, search, & AI
+Intros to Web3
+Privacy glossary
+API glossary
+World Cup Ad Blocker
+Downloads
+Desktop
+Android
+iOS
+Linux
+Brave Origin
+Beta
+Nightly
+Social media
+Reddit
+X (formerly Twitter)
+Brave API on X
+Mastodon
+Bluesky
+Facebook
+YouTube
+Company
+Reviewer's guide
+Brand assets
+Careers
+Events
+GitHub
+Reviews
+Tor Onion address
+More AI features
+Web3
+Rewards
+Wallet
+Basic Attention Token
+Brave Creators
+Brave Wallet docs
+Contact
+Support
+community.brave.app
+user-support@brave.com
+API sales
+api-sales@brave.com
+Advertising
+adsales@brave.com
+Please only use this email address if you are interested in purchasing advertising with Brave. For support, please visit community.brave.app.
+Business
+bizdev@brave.com
+Press
+press@brave.com
+legal@brave.com
+Offices
+
+Brave San Francisco
+48 2nd St, Floor 3
+San Francisco, CA 94105
+
+Choose a language 
+Bahasa Indonesia
+Català
+Deutsch
+English
+Español
+Filipino
+Français
+Italiano
+Nederlands
+Polski
+Português
+Română
+Tiếng Việt
+Türkçe
+Русский
+Українська
+हिन्दी
+ภาษาไทย
+한국어
+中文 (中国)
+中文 (繁體)
+日本語
+Terms of use | Report a security issue
+© 2015 - 2026 Brave Software, Inc. | All rights reserved

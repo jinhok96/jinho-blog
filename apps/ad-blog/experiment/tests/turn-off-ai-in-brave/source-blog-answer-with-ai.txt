@@ -1,0 +1,222 @@
+URL: https://brave.com/blog/answer-with-ai/
+Final: https://brave.com/blog/answer-with-ai/
+Status: 200
+Fetched: 2026-11-03 15:52 UTC
+
+Browser
+Search
+Search API
+Brave Ads
+Get Brave
+Search the Web
+All blog posts
+AI news & features
+B2B & advertiser news
+BAT, creators, & Brave Rewards
+Brave Search news
+Browser performance
+BLOG
+>
+AI NEWS & FEATURES
+Brave Unveils New Privacy-Focused AI Answer Engine, Set to Handle Nearly 10 Billion Annual Queries
+
+PUBLISHED APR 17, 2024 (Last updated Aug 23, 2024)
+
+Share on X (formerly Twitter)
+Share on Reddit
+Share on Telegram
+Share on LinkedIn
+AI news & features
+
+Update: As of August 23, 2024, CodeLLM is now part of Answer with AI to offer a more consistent user experience when asking questions in Brave Search.
+
+Answer with AI is the only large real-time answer engine that puts privacy first and does not rely on Big Tech search engines
+
+Today, Brave is announcing a major update to Brave Search and to how users find answers online. The new Brave Search answer engine synthesizes information from multiple sources into a single, intelligible answer to almost any query—a significant step forward from Brave’s AI Summarizer released in 2023.
+
+Brave Search Answer with AI is unique in several respects:
+
+It is the first privacy-preserving answer engine available at scale, serving the almost 10 billion queries a year that Brave Search currently receives, making it, overnight, one of the largest AI solutions on the market.
+It produces near instant answers (with sources cited) with sources alongside traditional search results.
+The answers result from the only independent search index at scale outside of Big Tech, as the largest real-time answer engines rely on the Google or Bing search engines, directly or indirectly.
+
+Brave Search’s Answer with AI feature is available for free to all users across platforms, on both desktop and mobile. No matter which browser users choose, it can be accessed on the Web at search.brave.com. The answer engine also supports multiple languages besides English. Brave Search’s 27 million queries a day makes it the fastest growing search engine since Bing.
+
+Clicking the Answer with AI button
+The need for answer engines
+
+Web-scale search engines have undergone many iterations: directory listings, ten blue links, query-dependent snippets, knowledge graphs and featured snippets. The Brave Search Answer with AI feature evolves this paradigm. An answer engine is a system that tries to answer a question, rather than point to websites about the question. Thanks to the proliferation and quality of large language models (LLMs), search-integrated answer engines are now a possibility at scale. In fact, several companies that operate search engines have released similar systems (including Bing Copilot and Google Gemini). Other answer engines rely on API access to existing search solutions to serve at least some portion of their real-time results.
+
+Brave Search released an AI tool for synthesized results known as the Summarizer in March 2023 to help users better navigate search results. With today’s release, we’re taking a big step forward in delivering a next-level search experience, whether an answer or links of page results.
+
+“With the new Brave Search and its integration of Answer with AI, users get the best of both worlds: one place to get generative answers as well as up-to-date links, providing instant and highly relevant results,” said Josep M. Pujol, Chief of Search at Brave. “Brave Search is uniquely positioned in this landscape, with the only independent search index besides Bing and Google. Unlike many search companies that are forced to rely on results from third parties, or others that solely offer answer engines, Brave now combines its index with AI to redefine the search experience and raise the bar on immediate pertinence in results, while preserving users’ privacy.”
+
+Listen to the Brave Search team talk about building Answer with AI:
+
+Transcript
+What the Brave Search answer engine can do
+
+The secret ingredient of an answer engine is not the LLM that powers it, but the combination of a model with up-to-date, reliable data. Such data can help supply the context from which the model derives the answers it presents to the user. Or, to put it another way: an effective answer engine requires both a model and access to a search engine. With API access to a search engine, even individual contributors can generate a reasonable answer engine.
+
+This is why Brave Search—with its index of 20 billion pages, curated and cleansed of the SEO spam and junk content that plagues other indexes—is uniquely positioned to provide such a powerful answer engine. It has the data needed to generate an accurate and timely answer, and the context.
+
+Answers enriched with text and other media
+
+With the new answer engine, Brave Search aims to provide not just answers, but an integrated system to satisfy the multiple intents a user might have, and to do so at scale (currently Brave Search serves more than 27 million queries per day). Loosely speaking, these intents fall into one of a handful of categories:
+
+Navigational: Queries for specific sites, such as “Facebook” or “Twitter.”
+Informational: Question-based queries, or those seeking information, which generally fall into two subcategories:
+Specific lookups: These are often served by rich user interfaces built around structured realtime information (e.g. currency conversion rates, weather, or sports results) or custom widgets with non-real time based, deterministic data (e.g. unit conversion or time and timezone conversions).
+Question-like queries: Queries such as “How do I find north when hiking?”
+Commercial: Queries with the intent of finding or researching products and services.
+Transactional: Queries with the intent of completing an action (e.g. buying a product).
+
+Given relevant context, most existing answer engines do well at informational, question-like queries. However, they tend not to perform as well on other kinds of queries. With this latest release, Brave Search will default to an answer engine experience for likely informational, question-like queries.
+
+Answers for informational queries
+
+For all other categories, users can trigger the answer engine on demand by simply clicking Answer with AI. This offers a best-in-class experience of both options: an answer engine that’s both predictive and optional.
+
+Brave Search’s generative answers are not just text. The deep integration between the index and model makes it possible for us to combine online, contextual, named entities enrichments (a process that adds more context to a person, place, or thing) as the answer is generated. This means that answers combine generative text with other media types, including informational cards and images.
+
+Answer with AI results
+
+The Brave Search answer engine can even combine data from the index and geo local results to provide rich information on points of interest. To date, the Brave Search index has more than 1 billion location-based schemas, from which we can extract more than 100 million businesses and other points of interest. These listings—larger than any public dataset—mean the answer engine can provide rich, instant results for points of interest all over the world.
+
+Result for point of interest
+Summary of top stories related to a current event
+Summary showing cited sources
+How to try Brave Search’s Answer with AI feature
+
+Brave Search can be accessed by anyone on the Web at search.brave.com, and is also the default search engine in the Brave browser for multiple countries. Answer with AI is available for all Brave Search users for searches in English, French, German, Italian, and Spanish (the answer engine functionality is available in other languages as well, but some answers may appear in English). It’s available on all platforms, on desktop and mobile.
+
+If Brave Search is already your default search engine, simply start a search in the address bar of your browser. For question-like queries, the answer engine should produce an answer by default, which will appear at the top of the search results page. Users also have the option to request answers on-demand by clicking / tapping the Answer with AI icon that appears beside the search bar on any search results page.
+
+The Brave Search answer engine is free to all users, and we hope to keep it this way, as we believe this is a natural evolution of search engines. In the future, we may also add a paid option, with premium experiences such as the ability to have an open ended chat, possibly in conjunction with the premium options offered by Brave Leo, the AI assistant in the Brave browser.
+
+The impact of answer engines on the Web
+
+There is a clear demand from users for convenient methods of consuming content, and AI-augmented answers are a key example. On the other hand, delivering on this demand can contribute to the erosion of the incentives for publishers to put out content on the Web, ultimately changing its very nature.
+
+This challenge is not unique to Brave Search, but present across most AI-powered answer engines and chatbots, premium or open. Brave, as both a browser and search engine, is aware of these challenges. Consequently, we will be monitoring and quantifying the impact of AI-generated content on site visits, and eventually will address the disruptions that could be caused by the drop in traffic. We hope others are working on this as well.
+
+Note: This post was updated June, 2024 to include a link to the Brave Technologist Podcast interview with the Brave Search team.
+
+Share on X (formerly Twitter)
+Share on Reddit
+Share on Telegram
+Share on LinkedIn
+PREVIOUS: LEO IS NOW INTEGRATED WITH BRAVE…
+NEXT: BRAVE LAUNCHES SEARCH ADS IN KEY…
+Related articles
+Another Brave User-First AI Win: Leo adds End-to-end Encryption, Oblivious HTTP, and Verifiable Confidential Computing
+
+OCT 15, 2026
+
+Leo chats with the open-weight GLM 5.3 Flash model are now end-to-end encrypted with Oblivious HTTP and run inside attested, Nvidia-backed Trusted Execution Environments, so even Brave can't read them, and you can verify it.
+
+Read this article
+Indirect Prompt Injection remains a fundamental security challenge for AI
+
+JUN 8, 2026
+
+Instructions hidden in webpages and documents can hijack AI agents mid-task. Research shows indirect prompt injection hits cloud and on-device LLMs alike—local deployment doesn't eliminate the risk.
+
+Read this article
+Brave is the only search API offering true Zero Data Retention, unlocking growth and privacy compliance for AI companies
+
+JAN 26, 2026
+
+The only search API offering true Zero Data Retention. While competitors funnel queries to Google or Bing, the Brave Search API is built with privacy at its core, and powered by an independent index.
+
+Read this article
+Get Brave
+USER RESOURCES
+Help center
+Community
+What's new in Brave?
+Release notes
+Status
+FAQs
+Transparency report
+Merch store
+PRIVACY POLICY
+Brave Browser
+Brave Search
+Brave Search RTBF
+Website & email
+Publishers & creators
+Advertisers
+CCPA
+BLOGS
+Brave blog
+Privacy updates
+Web standards
+Research
+Podcast
+FOR BUSINESSES
+Search API
+Brave Ads
+Group policy
+BEGINNER GUIDES
+Intros to browsers, search, & AI
+Intros to Web3
+Privacy glossary
+API glossary
+World Cup Ad Blocker
+DOWNLOADS
+Desktop
+Android
+iOS
+Linux
+Brave Origin
+Beta
+Nightly
+SOCIAL MEDIA
+Reddit
+X (formerly Twitter)
+Brave API on X
+Mastodon
+Bluesky
+Facebook
+YouTube
+COMPANY
+Reviewer's guide
+Brand assets
+Careers
+Events
+GitHub
+Reviews
+Tor Onion address
+More AI features
+WEB3
+Rewards
+Wallet
+Basic Attention Token
+Brave Creators
+Brave Wallet docs
+CONTACT
+SUPPORT
+community.brave.app
+user-support@brave.com
+API SALES
+api-sales@brave.com
+ADVERTISING
+adsales@brave.com
+Please only use this email address if you are interested in purchasing advertising with Brave. For support, please visit community.brave.app.
+BUSINESS
+bizdev@brave.com
+PRESS
+press@brave.com
+legal@brave.com
+OFFICES
+
+Brave San Francisco
+48 2nd St, Floor 3
+San Francisco, CA 94105
+
+CHOOSE A LANGUAGE 
+English
+日本語
+Terms of use | Report a security issue
+© 2015 - 2026 Brave Software, Inc. | All rights reserved

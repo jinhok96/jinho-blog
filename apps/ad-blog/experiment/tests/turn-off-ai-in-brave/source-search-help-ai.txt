@@ -1,0 +1,71 @@
+URL: https://search.brave.com/help/ai
+Final: https://search.brave.com/help/ai
+Status: error Page.goto: Timeout 45000ms exceeded.
+Call log:
+  - navigating to "https://search.brave.com/help/ai", waiting until "networkidle"
+
+Fetched: 2026-11-03 15:51 UTC
+
+Brave Search Help
+AI in Brave Search
+
+Brave Search utilises state-of-the-art artificial intelligence to enhance your search experience and provide you with the most useful results. Advanced machine learning models are used broadly and deeply across most parts of the technology stack that powers Brave Search. Large language models (LLMs) are also used to synthesize information into more digestible bits. Some of our user-facing AI-powered features include:
+
+AI Answers: When you ask Brave Search a question, we provide a concise summary answer along with references to sources to back up the key claims. AI Answers can help with questions related to code, news, language, people, and more. Provenance and transparency are crucial, so we always show you where the information comes from. Parts of this feature are built with open source LLMs. Read the announcement.
+Ask Brave: While AI Answers give our users quick summaries, Ask Brave can provide longer, more detailed answers, the ability to follow up using chat, as well as Deep Research mode, for cases where thoroughness is more important than latency. Most importantly, Ask Brave also providers contextually relevant enrichments such as videos, news articles, products businesses, shopping, and more - right when and where you need them. Read the announcement.
+Featured Snippets: For certain questions, one source may do an excellent job of directly answering your query. In these cases, we analyze the page and extract the most relevant snippet of text that answers your question. This helps you get the information you need as quickly as possible.
+AI-powered descriptions: Where possible, we generate descriptions for search results using a Question Answering model. This provides you with a helpful brief on what the results contain and their relevance to your search, saving you time clicking and scanning.
+
+Brave Search AI is built in-house and powered by our own models and algorithms. Our goal is to provide you with independent, private search experiences that put you in control.
+
+Articles
+How to use Brave Search: an overview
+Ads in Brave Search
+AI in Brave Search
+What are bangs, and how can I use them in Brave Search?
+Brave Search Index & the Right to be Forgotten & to Object
+Contact Brave Search
+Anonymous cookies
+Report copyright infringement - DMCA
+Brave Search Discussions
+EU Digital Services Act
+Featured snippets
+Feedback
+Financial data disclaimers
+Goggles
+Google fallback mixing
+Anonymous local results
+Set Brave Search as default
+Not Found - A page is no longer available
+Brave Search Partner Integrations
+Proof of Work captchas
+What is Brave Search Premium?
+Brave Search privacy notice
+Referrer Policy
+Rerank
+Safe Search
+Brave Search Crawler
+Search Operators
+Sharing conversations with AI
+Anonymous usage metrics
+Resources
+Brave Search Premium
+Brave Search Help
+Transparency Report
+Report a security issue
+Status
+Products
+Brave Browser
+Brave Search
+Brave Wallet
+Brave Talk
+Brave Firewall + VPN
+Brave Playlist
+Brave News
+Brave Rewards
+Brave Search API
+Brave Ads
+Policies
+Privacy Policy
+Terms of Use
+Brave Search uses private usage metrics to estimate overall activity and performance. You can turn off this option in Settings. Learn more.

@@ -41,6 +41,11 @@
       "source": "/posts/google-phone-number-verification",
       "destination": "/posts/remove-phone-number-from-google-account",
       "permanent": true
+    },
+    {
+      "source": "/posts/chrome-enhanced-autofill-gmail",
+      "destination": "/posts/chrome-autofill-settings",
+      "permanent": true
     }
   ]
 }

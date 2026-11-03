@@ -1,7 +1,8 @@
 """Search Console 리포트 (ToolProof 운영 실험용)
 
 환경변수 GSC_SERVICE_ACCOUNT_JSON_B64(서비스 계정 JSON 키를 base64로 인코딩한 값)로 인증해
-검색 성과·사이트맵 상태·글별 색인 상태를 Markdown으로 출력한다. 출력은 log.md에 붙여 넣는 용도.
+검색 성과·사이트맵 상태·글별 색인 상태·AdSense 재신청 조건(운영 일수·색인율·월~일 확정 주 클릭 연속 증가)을
+Markdown으로 출력한다. 출력은 log.md에 붙여 넣는 용도.
 
 설치: python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests
 실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py [--days 28] [--site sc-domain:tool-proof.com]
@@ -42,6 +43,13 @@ IMPRESSIONS_LIFT = 1.2  # 노출: 대조군 대비 1.2배 이상 / 1/1.2배 이�
 POSITION_DELTA = 2.0  # 평균 순위: 대조군 대비 ±2위
 FINAL_DATA_LAG_DAYS = 3  # 확정 데이터 지연
 RETRY_WAITS = (5, 20, 60)  # 일시 오류(시간 초과·연결 끊김·5xx) 재시도 대기(초). URL 검사 API가 간헐적으로 500·시간 초과를 냄 (2026-10-29 세션 64)
+
+# AdSense 재신청 조건 (README 결정사항 "AdSense 재신청", 2026-11-01 사용자 결정)과 같게 유지
+LAUNCH_DATE = dt.date(2026, 10, 11)  # 도메인 운영 시작
+ADSENSE_AFTER = dt.date(2027, 1, 11)  # ① 운영 3개월
+ADSENSE_INDEX_RATE = 0.7  # ② 색인율
+ADSENSE_CLICK_STREAK = 4  # ③ 주간 검색 클릭이 직전 주보다 늘어난 주가 연속 4주
+KST = dt.timezone(dt.timedelta(hours=9))  # 운영 일수는 한국 날짜로 셈 (log.md 세션 날짜와 같게)
 
 
 def load_token() -> str:
@@ -114,6 +122,90 @@ def fmt_row(row: dict) -> str:
 
 def post_urls() -> list[str]:
     return sorted(f"{SITE_ORIGIN}/posts/{p.stem}" for p in POSTS_DIR.glob("*.mdx"))
+
+
+def first_monday() -> dt.date:
+    """주간 집계 시작일: 운영 시작일 당일이 월요일이면 그날, 아니면 다음 월요일 (운영 하루뿐인 첫 주를 빼야 첫 증가가 부풀지 않음)"""
+    return LAUNCH_DATE + dt.timedelta(days=(7 - LAUNCH_DATE.weekday()) % 7)
+
+
+def weekly_clicks(days: list[dict], final_dates: set[str]) -> list[dict]:
+    """월~일 주별 웹 검색 클릭·노출 [{start, end, clicks, impressions, complete}] (AdSense 조건 ③).
+
+    days = 날짜 차원 search_analytics 행(미확정 포함), final_dates = 확정(final) 데이터가 있는 날짜.
+    날짜는 Search Console 날짜(태평양 시간). 첫 월요일부터 마지막 집계일이 든 주까지, 행이 없는 주는 0.
+    complete = 그 주 일요일까지 확정 데이터가 있음. 미확정 날짜가 섞인 주는 조건 판정에 쓰지 않음
+    (끝 날짜를 매일 옮기는 7일 창은 미확정 2~3일 때문에 마지막 주가 작게 나와 증가 판정이 흔들림, 2026-11-03 세션 76)"""
+    start = first_monday()
+    by_date = {r["keys"][0]: r for r in days if r["keys"][0] >= str(start)}
+    if not by_date:
+        return []
+    last_day = max(dt.date.fromisoformat(d) for d in by_date)
+    last_final = max((dt.date.fromisoformat(d) for d in final_dates), default=None)
+    weeks = []
+    monday = start
+    while monday <= last_day:
+        sunday = monday + dt.timedelta(days=6)
+        rows = [by_date[str(monday + dt.timedelta(days=i))] for i in range(7) if str(monday + dt.timedelta(days=i)) in by_date]
+        weeks.append({
+            "start": str(monday),
+            "end": str(sunday),
+            "clicks": int(sum(r["clicks"] for r in rows)),
+            "impressions": int(sum(r["impressions"] for r in rows)),
+            "complete": last_final is not None and sunday <= last_final,
+        })
+        monday += dt.timedelta(days=7)
+    return weeks
+
+
+def adsense_status(weeks: list[dict], indexed: int | None, total: int, today: dt.date | None = None) -> dict:
+    """AdSense 재신청 조건 3개의 현재 값. indexed = URL 검사 PASS 글 수 (검사를 건너뛰면 None → 조건 ② 판정 없음).
+    clickStreak = 마지막 확정 주부터 거슬러 올라가며 직전 주보다 클릭이 많았던 주가 몇 주 연속인지"""
+    today = today or dt.datetime.now(KST).date()
+    done = [w for w in weeks if w["complete"]]
+    streak = 0
+    for prev, cur in zip(reversed(done[:-1]), reversed(done)):
+        if cur["clicks"] <= prev["clicks"]:
+            break
+        streak += 1
+    rate = round(indexed / total, 3) if indexed is not None and total else None
+    met = {
+        "age": today >= ADSENSE_AFTER,
+        "indexRate": None if rate is None else rate >= ADSENSE_INDEX_RATE,
+        "clicks": streak >= ADSENSE_CLICK_STREAK,
+    }
+    return {
+        "today": str(today),
+        "operatingDays": (today - LAUNCH_DATE).days,
+        "requiredDays": (ADSENSE_AFTER - LAUNCH_DATE).days,
+        "eligibleFrom": str(ADSENSE_AFTER),
+        "indexed": indexed,
+        "total": total,
+        "indexRate": rate,
+        "indexRateTarget": ADSENSE_INDEX_RATE,
+        "weeks": weeks,
+        "clickStreak": streak,
+        "clickStreakTarget": ADSENSE_CLICK_STREAK,
+        "met": met,
+        "allMet": all(met.values()),
+    }
+
+
+def adsense_lines(status: dict) -> list[str]:
+    """log.md에 그대로 붙이는 AdSense 재신청 조건 요약 (한 줄 + 주별 표)"""
+    s = status
+    age = f"운영 {s['operatingDays']}일/{s['requiredDays']}일({s['eligibleFrom']})"
+    if s["indexRate"] is None:
+        index = "색인율 - (URL 검사 생략)"
+    else:
+        index = f"색인율 {round(s['indexRate'] * 100)}%({s['indexed']}/{s['total']}, 목표 {round(s['indexRateTarget'] * 100)}%)"
+    done = [w for w in s["weeks"] if w["complete"]]
+    span = " → ".join(f"{w['start'][5:]}~{w['end'][5:]} {w['clicks']}" for w in done[-(s["clickStreakTarget"] + 1):]) or "확정 주 없음"
+    clicks = f"주간 클릭 증가 {s['clickStreak']}주/{s['clickStreakTarget']}주 (월~일 확정 주: {span})"
+    verdict = "**모두 충족 → 사용자: AdSense 재신청**" if s["allMet"] else "미충족"
+    lines = [f"- {age} · {index} · {clicks} → {verdict}", "", "| 주 (월~일, 태평양 시간) | 클릭 | 노출 | 확정 |", "| --- | --- | --- | --- |"]
+    lines += [f"| {w['start']} ~ {w['end'][5:]} | {w['clicks']} | {w['impressions']} | {'확정' if w['complete'] else '미확정 포함'} |" for w in s["weeks"]]
+    return lines
 
 
 def window_stats(token: str, site: str, start: dt.date, end: dt.date, page: str, search_type: str) -> tuple[dict, dict]:
@@ -231,18 +323,28 @@ def main() -> None:
             f"| {sm.get('isPending', False)} | {sm.get('errors', 0)} | {sm.get('warnings', 0)} |"
         )
 
-    if args.no_inspect:
-        return
-    print("\n### 글별 색인 상태 (URL 검사)\n")
-    print("| URL | 판정 | 상태 | 마지막 크롤링 | 가져오기 |\n| --- | --- | --- | --- | --- |")
-    for url in post_urls():
-        body = {"inspectionUrl": url, "siteUrl": args.site}
-        result = call("POST", f"{API}/v1/urlInspection/index:inspect", token, body)
-        idx = result.get("inspectionResult", {}).get("indexStatusResult", {})
-        print(
-            f"| {url.removeprefix(SITE_ORIGIN)} | {idx.get('verdict', '-')} | {idx.get('coverageState', '-')} "
-            f"| {idx.get('lastCrawlTime', '-')} | {idx.get('pageFetchState', '-')} |"
-        )
+    indexed = None
+    urls = post_urls()
+    if not args.no_inspect:
+        indexed = 0
+        print("\n### 글별 색인 상태 (URL 검사)\n")
+        print("| URL | 판정 | 상태 | 마지막 크롤링 | 가져오기 |\n| --- | --- | --- | --- | --- |")
+        for url in urls:
+            body = {"inspectionUrl": url, "siteUrl": args.site}
+            result = call("POST", f"{API}/v1/urlInspection/index:inspect", token, body)
+            idx = result.get("inspectionResult", {}).get("indexStatusResult", {})
+            indexed += idx.get("verdict") == "PASS"
+            print(
+                f"| {url.removeprefix(SITE_ORIGIN)} | {idx.get('verdict', '-')} | {idx.get('coverageState', '-')} "
+                f"| {idx.get('lastCrawlTime', '-')} | {idx.get('pageFetchState', '-')} |"
+            )
+
+    # AdSense 재신청 조건: 주간 클릭은 --days와 상관없이 첫 월요일부터 월~일 주로 셈
+    since, until = str(first_monday()), str(dt.date.today())
+    final_dates = {r["keys"][0] for r in search_analytics(token, args.site, since, until, ["date"], 1000, data_state="final")}
+    days = search_analytics(token, args.site, since, until, ["date"], 1000)
+    print("\n### AdSense 재신청 조건\n")
+    print("\n".join(adsense_lines(adsense_status(weekly_clicks(days, final_dates), indexed, len(urls)))))
 
 
 if __name__ == "__main__":

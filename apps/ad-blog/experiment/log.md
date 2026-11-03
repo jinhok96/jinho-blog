@@ -2,6 +2,53 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-03 · 세션 76 (정기 실행, 개선 세션): AdSense 재신청 조건 ③ 측정 고정(월~일 확정 주) + 대시보드 조건 패널 + 낮은 순위 검색어 진단
+
+세션 시각: 2026-11-03 18:16 KST(화) → 18시 실행이라 개선 세션. 같은 날 앞 세션은 00시 74(대표 이미지 2편)·06시 75(`chrome-http-warning-default` 대표 이미지·클릭 깊이·카니벌라이제이션) → 글은 건드리지 않고 도구·대시보드를 다룸. 열린 PR 없음. 작업 브랜치는 `origin/main`(24bdb93)과 같음, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-06 ~ 11-03, 세션 75 이후 바뀐 값만)**
+
+- 노출 958 → **982**, 클릭 15, CTR 1.5%, 평균 순위 23.3 (`turn-off-ai-in-chrome` 172·17.6 / `spotify-family-qr-code-verification` 265·17.0 / `image-to-text-offline-free` 126·15.9 / `iphone-duo-sold-out` 47·7.9)
+- 주간 검색 클릭 (**이번 세션부터 월~일 확정 주**, 아래 한 일 1): 10-12~18 **5** → 10-19~25 **5** (둘 다 확정) · 10-26~11-01 5 (11-01 미확정) · 11-02~ 0 (진행 중). 주간 노출 142 → 576 → 228. 같은 날짜를 지금까지 방식(끝 날짜 11-03 기준 7일 창 차이)으로 세면 1 → 6 → 5 → **3**이라 미확정 이틀이 든 마지막 주가 줄어 보였음
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 15 · `URL is unknown` 21 (두 상태를 오가는 흔들림 그대로). `link_seen.py`: **홈 11-03 05:18 UTC 재크롤링**(11-01 22:38 뒤, 가장 최근 크롤링), 미색인 36편 중 Google이 본 링크 20편 그대로
+- Chrome 157 안정판: chromiumdash `stable_date` 2026-11-03, `fetch_releases` 최신 안정판 156.0.8078.80 그대로(11-03 09:30 UTC) → 콘텐츠 정리 1번 대기
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 새 출력 그대로): 운영 23일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5) → 미충족
+
+**콘텐츠 정리 목록 (0순위)**: 세션 74 표와 같음 — 1번은 Chrome 157 출시 뒤(아직 156), 3·5·6번은 V7 판정 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1·V2 판정 뒤 → 처리할 항목 없음. 개선 세션 1~6번도 대상이 없음: 색인(링크한 색인 글이 10-19~20 이후 다시 크롤링되지 않아 링크 추가가 발견 경로가 되지 않음, 세션 73~75와 같음) · 링크 점검 2건 보류 · 허브 4/4 · 노출 100회 이상 글 3편은 모두 V3~V5 판정 중 · 칼럼 후속·반복 일정은 `updatedAt`을 바꿔 V7과 겹침. → 7번(대시보드·DB 구조 개선)과 4번의 '예상하지 못한 검색어 → backlog'를 함
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Rankings Push(striking distance 8~20위·노출 하한, 상위 3개 결과와 의도 비교, 작은 변경·3~4주 대기), Keyword Targeting(카니벌라이제이션은 세션 75 결과 그대로))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · DB 구조 개선 | `tools/gsc_report.py`·`tools/dashboard_data.py` | AdSense 재신청 조건 3개를 도구가 계산: 운영 일수(한국 날짜), 색인율(URL 검사 PASS/발행 글), **주간 클릭 = 월~일 주(Search Console 날짜) 중 7일 모두 확정된 주끼리 비교해 마지막 확정 주까지 연속 증가한 주 수** (운영 하루뿐인 10-05~11 주는 빼고 10-12 월요일부터). `gsc_report.py` 출력 끝에 'AdSense 재신청 조건' 한 줄 + 주별 표, `dashboard_data.py`는 `summary.adsense`로 저장(history에도 회차별로 남음) | - (지표를 노린 변경 아님) |
+| 2 | 7 · 대시보드 개선 | `dashboard/index.html` → 아티팩트 Version 28 | 목표 지표 패널 아래 'AdSense 재신청 조건' 3줄(운영 기간·색인율·주간 검색 클릭 연속 증가 + 최근 확정 주 클릭과 진행 중 주(미확정)). `dashboard_check.cjs` 통과(데스크톱·모바일, 글별 표 53줄), 375px 가로 넘침 없음 확인 뒤 기존 주소로 발행 | - |
+| 3 | 4 · 예상하지 못한 검색어 | backlog 27·45번 | 28일 검색어×페이지 105쌍 중 8~20위는 모두 노출 4회 이하(Rankings Push 노출 하한 미달)이고 대부분 V 판정 중인 글 → 바꾸지 않음. 50위 밖인데 노출이 모이는 검색어 2묶음을 상위 결과와 비교해 backlog에 근거로 적음: SynthID 확인(`synthid checker` 6·87.5위 등 → `check-if-image-is-ai-generated`, V6 판정 뒤 직접 확인 결과 후보), 오픈소스 PDF 합치기(`open source pdf merge` 10·88.7위 등 → `merge-pdf-files-free`, 11-02 제목 변경 뒤 4주·V7 뒤 라이선스 열 후보) | - |
+
+- 왜 1·2를 했나: 조건 ③은 지금까지 세션마다 `--days 7/14/21/28` 차이로 셌는데, 끝 날짜가 매 세션 하루씩 밀리고 마지막 2~3일이 미확정이라 같은 날 두 세션의 주 경계·값이 달랐음 (세션 75 0 → 5 → 5 → 5, 이번 세션 같은 방식 1 → 6 → 5 → 3). 재신청 판단 근거가 흔들리지 않게 주 경계와 확정 기준을 도구에 고정하고 README 세션 워크플로우 2번에 정의를 적음 (조건 자체는 바꾸지 않음)
+- 확인: 가짜 주별 데이터로 연속 증가 계산 확인(1<2<3<4<5 모두 확정 → 4주·충족, 마지막 주 미확정 → 3주, 같은 값 → 끊김), 실제 데이터 `--no-inspect` 실행으로 표 출력 확인. Python 컴파일 통과(저장소에 Python 테스트 없음)
+- 상위 결과 (WebSearch 11-03): `open source pdf merge` → WPS 블로그·Softpedia·SourceForge 디렉터리·SnapFiles·It's FOSS(오픈소스 앱 목록·다운로드 의도), `synthid checker` → SynthID Detector 전 세계 공개 기사·사용 안내(도구 사용법 의도)
+
+**알게 된 것**
+
+- 확정 주 기준으로 보면 사이트 주간 검색 클릭은 10-12 주부터 5 → 5 → (5, 미확정)로 제자리. 조건 ③(4주 연속 증가)은 10-26~11-01 주가 5로 확정되면 11-02 주부터 4주 연속 늘어야 해 **빨라도 11-23~29 주가 확정되는 12월 초**(그 주가 6 이상으로 확정되면 11-16~22 주가 확정되는 11월 말)이고, 운영 3개월(2027-01-11)이 여전히 가장 늦은 조건
+- 홈은 1.5~2일 간격으로 다시 크롤링됨(11-01 22:38 → 11-03 05:18). 홈 '최근 글' 12편 안에 든 미색인 글은 Google이 본 링크가 있지만, 색인된 글 본문 링크는 그 글들이 10-19~20 이후 다시 크롤링되지 않아 늘지 않음
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 75 목록 그대로, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default`
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 23일·색인율 32%·주간 클릭 증가 0주. 대시보드 'AdSense 재신청 조건' 패널에서 확인 가능)
+- Claude(모든 세션): AdSense 조건은 `gsc_report.py` 출력의 'AdSense 재신청 조건' 줄을 그대로 기록 (월~일 확정 주 기준)
+- Claude(11-04 06시 이후 개선 세션, Chrome 157 출시 확인 뒤): 콘텐츠 정리 1번(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`) + 주간 점검 3번(확정 데이터로 상시 글 노출 감소 원인 기록, 태그 `Google Chrome` → `Chrome`, `chrome-autofill-settings` "at a glance" 첫 문장). Chrome 157이 나오면 `chrome-http-warning-default`도 메뉴·경고 화면 재확인 대상 (V7 판정 뒤 `updatedAt`)
+- Claude: 남은 대표 이미지 `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15) → 판정 뒤 콘텐츠 정리 3·5·6번. 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26). V6 뒤 backlog 27번(SynthID), 11-30·V7 뒤 backlog 45번(오픈소스 PDF 합치기) 검토
+- Claude(11-04 수 일반 세션): 세션 71 후보(`turn off leo ai in brave`·`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`) 그대로
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: 페이지 Version 28 발행(AdSense 재신청 조건 패널) + `stats` 9개 문서 갱신(`traffic`: Cloudflare 28일 조회수 43·방문 37, 10-06~11-03) + `history` 기록(batch 18개, 회차 2026-11-03T09:37:58Z, DB 문서 294개, 스크래치패드 경로). 회차 시점 28일 노출 982·클릭 15·평균 23.3위. `summary.crawl`: 최근 크롤링 11-03 05:18(홈), 미색인 36편 중 Google이 본 링크 20편. 목표: 색인율 17/53 (32%) · 28일 노출 982 · 10위 안 24개 · 허브 4/4 · 받는 링크 부족 0편. **`summary.adsense` 첫 회차**: 운영 23/92일 · 색인율 0.321 · 클릭 연속 증가 0/4 · 충족 0/3. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신(비로그인 화면에는 다음 대화형 갱신 전까지 조건 패널이 빈 안내로 보임)
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-03 · 세션 75 (정기 실행, 개선 세션): `chrome-http-warning-default` 대표 이미지 + `seo-audit` 문제 찾기(클릭 깊이·카니벌라이제이션)
 
 세션 시각: 2026-11-03 06:15 KST(화) → 06시 실행이라 개선 세션. 같은 날 앞 세션은 00시 개선 세션 74(`convert-webp-to-jpg-free`·`remove-bg-alternative-free` 대표 이미지) → 다른 글을 다룸. 열린 PR 없음. 작업 브랜치를 `origin/main`(2a882b3)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 한 번에 완료.

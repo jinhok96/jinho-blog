@@ -146,6 +146,8 @@ tr.group td { padding: 16px 12px 8px; font-size: var(--fs-sm); line-height: var(
 .goals .note { grid-column: 1 / -1; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
 .goals li.met .track i { background: var(--good); }
 .goals li.met .note b { color: var(--good); font-weight: 600; }
+/* AdSense 재신청 조건: 목표 지표 패널 아래 같은 막대 목록 */
+.panel-head.sub { margin-top: 8px; padding-top: 16px; border-top: 1px solid var(--line); }
 /* 개선 세션 할 일: README 개선 세션 순서(1~4)를 그대로 번호로 씀 */
 ol.todo { list-style: none; margin: 0; padding: 0; display: grid; gap: 20px; }
 .todo-head { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
@@ -242,6 +244,8 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="panel">
       <div class="panel-head"><h2>목표 지표</h2><span class="small" id="goal-due">README 목표 지표</span></div>
       <ul class="bars goals" id="goals"><li class="empty">목표 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</li></ul>
+      <div class="panel-head sub"><h2>AdSense 재신청 조건</h2><span class="small" id="adsense-state">README 결정사항 · 모두 충족하면 사용자가 재신청</span></div>
+      <ul class="bars goals" id="adsense"><li class="empty">조건 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</li></ul>
     </div>
     <div class="panel">
       <div class="panel-head"><h2>개선 세션 할 일</h2><span class="small">README 개선 세션 순서 · 글을 누르면 표에서 상세</span></div>
@@ -1089,6 +1093,32 @@ function renderGoals() {
   }).join('');
 }
 
+// AdSense 재신청 조건 3개 (README 결정사항, summary.adsense). 주간 클릭은 월~일 확정 주만 셈 (미확정 날짜가 섞인 주는 참고로만 표시)
+function renderAdsense() {
+  const a = state.summary?.adsense;
+  if (!a) return;
+  const met = Object.values(a.met || {}).filter(Boolean).length;
+  $('adsense-state').innerHTML = a.allMet ? '<span class="pill good">모두 충족 · 사용자 재신청</span>' : `${met}/3 충족 · ${ymd(a.today)} 기준`;
+  const weeks = a.weeks || [];
+  const done = weeks.filter((w) => w.complete).slice(-(a.clickStreakTarget + 1));
+  const open = weeks.filter((w) => !w.complete);
+  const wk = (w) => `${ymd(w.start).slice(3)}~${ymd(w.end).slice(3)} ${fmt(w.clicks)}회`;
+  const row = (name, value, target, progress, ok, note, tip) => {
+    const w = progress == null ? 0 : Math.round(Math.min(1, progress) * 100);
+    return `<li class="${ok ? 'met' : ''}" title="${esc(tip)}"><span class="name">${name}</span><span class="val"><b>${value}</b> / ${target}</span><span class="track" role="img" aria-label="진행 ${w}%"><i style="width:${w}%"></i></span><span class="note">${note}${ok ? ' · <b>충족</b>' : ''}</span></li>`;
+  };
+  $('adsense').innerHTML = [
+    row('운영 기간', `${fmt(a.operatingDays)}일`, `${fmt(a.requiredDays)}일`, a.operatingDays / a.requiredDays, a.met?.age,
+      `${ymd(a.eligibleFrom)}부터 재신청 가능`, '도메인 운영 시작 2026-10-11부터 한국 날짜로 셈'),
+    row('색인율', a.indexRate == null ? '–' : `${Math.round(a.indexRate * 100)}% (${a.indexed}/${a.total})`, `${Math.round(a.indexRateTarget * 100)}%`,
+      a.indexRate == null ? null : a.indexRate / a.indexRateTarget, a.met?.indexRate,
+      a.indexRate == null ? 'URL 검사를 생략한 회차' : 'URL 검사 PASS 글 / 발행 글', 'gsc_report.py URL 검사와 같은 기준'),
+    row('주간 검색 클릭 연속 증가', `${a.clickStreak}주`, `${a.clickStreakTarget}주`, a.clickStreak / a.clickStreakTarget, a.met?.clicks,
+      `${done.length ? done.map(wk).join(' → ') : '확정 주 없음'}${open.length ? ` · 진행 중 ${open.map(wk).join(', ')} (미확정)` : ''}`,
+      '월~일 주(Search Console 날짜, 태평양 시간)의 웹 검색 클릭. 7일 모두 확정된 주만 비교하고 직전 주보다 많아야 증가'),
+  ].join('');
+}
+
 // 할 일·클러스터에서 글별 표로 이동: 거르기에 걸리면 풀고, 상세를 펼친 뒤 그 줄로 스크롤
 function focusPost(slug) {
   const p = state.posts.find((x) => x.slug === slug);
@@ -1224,6 +1254,7 @@ function render() {
   renderRank();
   renderStale();
   renderGoals();
+  renderAdsense();
   renderTodo();
   renderClusters();
   renderPosts();

@@ -14,6 +14,8 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
 `ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
 - summary: 갱신 시각·28일 합계·사이트맵 상태·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
            ·goals(README 목표 지표 표 + 현재 값·진행률)
+           ·adsense(README AdSense 재신청 조건 3개: operatingDays·indexRate·weeks(월~일 주별 클릭·노출, complete = 확정 주)
+                    ·clickStreak(확정 주 기준 직전 주보다 클릭이 늘어난 연속 주 수)·met·allMet. 2026-11-03 회차부터)
            ·crawl(URL 검사 회차만: latest = 색인된 페이지 중 가장 최근 크롤링, listPages = 홈·카테고리 첫 페이지별 lastCrawlTime,
                   unindexed = 색인 안 된 글 수, unindexedSeen = 그중 Google이 본 링크가 있는 글 수)
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
@@ -51,7 +53,7 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from gsc_report import API, POSTS_DIR, SITE_ORIGIN, call, load_token, search_analytics, site_path  # noqa: E402
+from gsc_report import API, POSTS_DIR, SITE_ORIGIN, adsense_status, call, load_token, search_analytics, site_path, weekly_clicks  # noqa: E402
 import cf_analytics  # noqa: E402
 import link_seen  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
@@ -450,6 +452,8 @@ def main() -> None:
         'sitemap': {'lastDownloaded': sm.get('lastDownloaded'), 'errors': int(sm.get('errors', 0)), 'warnings': int(sm.get('warnings', 0))},
         'linkAudit': {name: len(items) for name, items in problems.items() if items},
         'goals': goals(current),
+        # AdSense 재신청 조건 (README 결정사항): 주간 클릭은 위 날짜별 행을 월~일로 묶어 확정 주만 판정 (2026-11-03 회차부터)
+        'adsense': adsense_status(weekly_clicks(site_days, final_dates), None if args.no_inspect else indexed, len(posts)),
     }
     if crawl:
         docs['summary']['crawl'] = crawl

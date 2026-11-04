@@ -1,0 +1,193 @@
+About the transition from Gems to skills
+Starting in November 2026, Gems will transition to skills in Gemini Apps for personal Google Accounts, and in 2027, for work and school accounts.
+Check when Gems are going away
+.
+Skills are reusable custom instructions that can help you automate tasks and save time in Gemini. The key benefits of skills are:
+Easy access:
+Use a skill by typing
+/
+(soon to be
+@
+) followed by the skill's name directly in any Gemini chat.
+Automatic use:
+Gemini automatically recognizes when a skill is relevant to your current prompt and applies it for you.
+Stackable:
+Combine multiple skills in a single chat to handle more complex tasks.
+Skills are now available in Gemini chat to individuals over 18 signed in to a personal Google Account. We'll soon expand availability to work and school accounts.
+Learn more about skills
+.
+Recreate your Gem as a skill
+When we remove Gems, we’ll automatically recreate your Gems as skills. If you want to start using your Gems as skills earlier, you can manually recreate them following the steps below.
+Step 1: Open the Gem you want to recreate & download any knowledge files
+On your computer, go to
+gemini.google.com
+.
+At the top, click Open Sidebar
+Gems
+.
+If you don’t find “Gems,” first click
+More
+.
+Next to the Gem that you want to recreate, click Edit
+.
+If the Gem has files under “Knowledge,” download your files.
+For each file, click the file to open it and at the top, click Download
+.
+Create a new folder on your device and name it the same as your skill. The name must be in all lowercase with hyphens separating words, like
+sample-skill-name
+.
+Move all your downloaded knowledge files into the folder you created.
+Keep the browser tab with your Gem open and continue to
+Step 2
+.
+Step 2: Create a new skill & copy over details from your Gem
+Open a new browser tab.
+Go to
+gemini.google.com
+.
+On the sidebar, click
+Customize
+Skills
+.
+If you don’t find “Customize,” first click
+More
+.
+Near the top of the Skills page, click
+Create
+Create manually
+.
+Copy and paste the name, description, and instructions from your Gem to your skill.
+Your skill’s name will automatically update to the correct format.
+At the top of the skill, click
+Create
+.
+If you don’t need to upload files to your skill, you’re done recreating your Gem as a skill.
+If you need to upload files to your skill, continue to
+Step 3
+.
+Step 3: To add files, download your skill & upload it with your files
+Important:
+A skill can have up to 100 MB of files. If your Gem's files exceed this, choose which ones to add to stay under the limit.
+Some file types that are supported in Gems are not currently supported in skills.
+Learn which files are not supported
+.
+To add files to your skill:
+On the Skills page, next to the skill you just created and click More options
+Download
+.
+This downloads a
+.zip
+file containing the
+SKILL.md
+file.
+On your computer, open the
+.zip
+file and move the
+SKILL.md
+file into the folder with your Gem files.
+Go back to the Skills page, and next to the same skill, click More options
+Replace skill
+.
+In the upload area, click
+folder
+.
+Go to the folder that contains the
+SKILL.md
+file and your Gem files.
+Important:
+The name of the folder must match the name of the skill.
+Click
+Upload
+Upload
+. Your skill now includes the files.
+FAQs
+About skills
+What are skills and why should I use them?
+Skills are reusable instructions that customize how Gemini works for you. Instead of retyping prompts for recurring tasks, you can save them as a skill and quickly add them to any chat to save time. For example, you can use skills to:
+Consistently apply your unique writing style
+Generate specific meeting agendas
+Brainstorm with multiple perspectives
+What are some best practices for creating skills?
+To create an effective skill, focus on these 3 best practices:
+Define when to use it:
+Describe specific situations when Gemini should use the skill automatically.
+Keep it concise:
+Focus your instructions only on the unique guidelines for the task.
+Provide examples:
+Include concrete examples of the output you expect.
+Learn about more best practices for writing effective skills
+.
+Is there a limit to the number of skills I can make?
+You can create as many skills as you want, but only 100 can be active at a time. If you reach the limit, you can disable one to enable a new one.
+Learn how to disable and enable skills
+.
+Can I bring skills I made in other platforms to use in chat?
+Yes, you can import skills you created on other platforms by uploading their
+SKILL.md
+files.
+Learn how to upload files to create a skill
+.
+For now, the option to upload files to create skills is only available in the Gemini app on Mac and in the Gemini web app at
+gemini.google.com
+.
+Do skills work with other Gemini features?
+Skills work with some but not all features. You can use them with Connected Apps like Workspace apps, but they do not yet work with features like Canvas and Deep Research.
+For now, most default tools that are available in Gems do not work with skills, including:
+Create video
+Create music
+Canvas
+Deep research
+Guided learning
+How do I find my chats where a specific skill was used?
+Unlike Gems, skills don’t have a dedicated page that lists your recent chats with that skill. Because you can use skills in any chat, those chats are listed directly in the side panel.
+About the transition from Gems to skills
+When are Gems going away?
+We’re removing support for Gems at different times based on the type of account you sign in to the Gemini app with:
+November 2026:
+Personal Google accounts if you're 18 or over.
+November 17, 2026:
+Gems transition to skills and become read only. You can still access your Gems, but can’t use or edit them, or create new ones.
+December 17, 2026:
+Gems are removed from Gemini Apps. You’ll no longer be able to access your Gems.
+If you’re under 18 and signed in to a personal Google account, your Gems will transition to skills at a later date. We’ll share more details soon.
+March 2027:
+Workspace business, enterprise, and non-profit accounts.
+June 2027:
+Workspace education accounts.
+As part of this change, Opal, our experiment for building mini apps, as well as Gems by Google Labs, will also go away at the same time in November.
+Learn more
+.
+How can I save my Gems? Will they automatically become skills?
+Yes, we’ll automatically transition your Gems to skills for you when Gems go away. If you prefer, you can also
+manually recreate your Gems as skills
+.
+Can knowledge files be transitioned in bulk from a Gem to a Skill, or must each file be uploaded individually?
+We’ll automatically transition your Gems, along with any
+supported files
+, to skills for you
+when Gems go away
+. If you want to manually transition knowledge files from a Gem to a skill before then, you’ll need to download the files individually to your device. You can then upload all files at the same time to a skill.
+Learn how to recreate your Gems as skills
+.
+Limits on files during the transition
+Important:
+Some files will not carry over when your Gems transition to skills. For personal Google accounts, you can download your files from Gems before December 17, 2026. After this, your Gems and their files will no longer be available in Gemini Apps.
+Skills have a 100 MB total size limit for files.
+If your Gem is larger than this when we transition it to a skill, we automatically remove the largest files first until it’s under the limit.
+Some file types are not supported in skills.
+When we transition your Gems to skills, these unsupported file types will not be included:
+GitHub files
+Audio files
+Video files
+Legacy Microsoft Office file formats: .doc, .xls, .ppt
+Archives & compressed file formats: .zip, .tar, .7z, .rar, .gz, .tgz
+Download files that don’t transfer
+Open your Gem and the new skill side-by-side.
+Find and download the files that didn’t transfer.
+Why are you getting rid of Gems?
+Later this year, we're transitioning from Gems to skills to give you an even better, more flexible way to customize Gemini. Skills will let you do more, like using them right in your current chat without having to switch tabs. You can also stack multiple skills together, to create even more customized workflows.
+Will skills have the same features as Gems?
+Yes. In the coming weeks, skills will have the features you loved in Gems, including the ability to share them with others and add files from Google Drive and notebooks from Gemini Notebook. You can already upload complex skills that include text files, PDFs, and images today.
+Related resources
+Create & manage skills for Gemini Apps
+Write effective skills for Gemini Apps

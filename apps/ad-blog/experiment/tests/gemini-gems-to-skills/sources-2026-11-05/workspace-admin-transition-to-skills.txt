@@ -1,0 +1,189 @@
+Google Workspace Help
+Administrators
+Generative AI
+Gemini App
+Guides
+Send feedback
+About the transition from Gems to skills
+Stay organized with collections
+Save and categorize content based on your preferences.
+Last updated: September 30, 2026
+Google is introducing skills as the new method for custom AI instructions in
+the Gemini app and Google Workspace. Skills provide a modular,
+reusable way to apply tailored instructions to conversations and workflows.
+Skills will replace Gems in 2027.
+Skills offer several advantages over Gems:
+Availability across surfaces:
+Skills work in the Gemini app
+and in Workspace apps, giving users a consistent instruction model across
+chat and workflows. Gems can't be used in Workspace apps.
+Use skills directly in chat:
+Use a skill by typing
+/
+(soon to be
+@
+)
+followed by the skill's name directly in any chat. Users don't need to open 
+separate Gem windows for custom instructions.
+Combine multiple skills:
+Users can combine multiple skills in a single prompt.
+They can also apply different skills across a conversation without copying
+and pasting outputs.
+Open standard:
+Skills use the open, Markdown-based
+SKILL.md
+format.
+This lets users create, customize, and transfer instructions across tools
+without platform lock-in.
+Availability and eligibility
+Skills in the Gemini app:
+Available to all Google Workspace
+editions and users of all ages.
+Skills in Workspace:
+Available to users age 18 and older with Business
+Starter, Standard, and Plus; Enterprise Standard, and Plus; Google
+AI Pro for Education; or the AI Expanded Access add-on.
+Transition timeline
+For now, users can continue creating and using Gems in the Gemini app.
+In Google Workspace Studio, users can no longer add the
+Ask a Gem
+step
+to new flows, though existing flows with
+Ask a Gem
+steps continue to work
+until 2027.
+Over the coming months, Google will gradually phase out Gems across all
+surfaces and automatically migrate remaining Gems in the Gemini app
+to draft skills in the Gemini app. Currently, skills don't sync
+between the Gemini app and Workspace apps. To use a skill across
+both platforms, or to transition Gems used in Workspace, users must manually
+recreate them in Google Workspace Studio.
+Date
+Milestone and how it affects your users
+October 5, 2026
+Skills begin rolling out in Workspace:
+Rapid Release domains:
+Rollout starts October 5,
+        2026, completing by October 12, 2026.
+Scheduled Release domains:
+Rollout starts October
+        19, 2026, completing by mid-November.
+October 13, 2026
+Skills begin rolling out in the Gemini app for all users
+      (Rapid and Scheduled Release domains), with rollout completing by
+      mid-November. Users can create and use both Gems and skills.
+November 17, 2026
+Gems move to
+Settings
+in the
+      Gemini app. All users can continue to create, edit, and use
+      them.
+No sooner than March 1, 2027
+Business and enterprise
+Users can no longer create, edit, or use Gems.
+Gems are removed from
+Settings
+in the
+        Gemini app.
+Flows in Google Workspace Studio with the
+Ask a
+        Gem
+step stop working.
+Remaining Gems in the Gemini app automatically migrate to
+        draft skills in the Gemini app.
+No sooner than June 1, 2027
+Education
+Users can no longer create, edit, or use Gems.
+Gems are removed from
+Settings
+in the
+        Gemini app, Google Classroom, and third-party learning
+        management systems (LMS) supported by Gemini LTI™.
+Flows in Google Workspace Studio with the
+Ask a
+        Gem
+step stop working.
+Remaining Gems in the Gemini app automatically migrate to
+        draft skills in the Gemini app.
+What administrators need to do
+To prepare your organization for the transition to skills, we recommend the
+following actions:
+Notify your users:
+Inform users about the upcoming transition and key
+dates based on your organization's edition (March 1, 2027 for business and
+enterprise; June 1, 2027 for Google Workspace for Education) so they can
+plan ahead for their workflows.
+Encourage early adoption:
+Make sure
+skills are turned on
+for your organization. Once skills start to roll out, direct users to
+explore skills in the Gemini app and Workspace, and try combining
+multiple skills in their day-to-day tasks. Share the
+AI skills 101
+handbook
+and the Help Center articles on
+creating and using skills in the
+Gemini app
+and
+skills in Google Workspace Studio
+.
+Rebuild high-priority Gems:
+Encourage creators to manually rebuild their
+critical Gems as skills early. Share instructions on how to
+manually
+recreate Gems as
+skills
+.
+Manually copy instructions and re-upload knowledge files to ensure prompt
+verification and uninterrupted workflows before the automated migration.
+Update Google Workspace Studio flows:
+If your organization uses
+automated Google Workspace Studio flows that include
+Ask a Gem
+steps, instruct flow owners to consult the
+Workspace Studio transition
+guide
+to replace those steps with skills or alternative actions.
+Google Workspace for Education:
+Distribute the
+Gemini Gems and Skills
+Transition Guide for Education
+(PDF)
+to help educators and staff prepare for the transition. For educators using
+Google Classroom or Gemini LTI™, we recommend transitioning to Gemini
+Notebook (available now) and Guided Learning (coming soon to Classroom) for
+personalized student learning and support. Share these guides with your
+users:
+Create and assign Gemini Notebook and Gems in Google Classroom
+Use Gemini Notebook and Gems in Google Classroom (for students)
+Share and access notebooks and Gems in Google Workspace LTI™
+How automated migration will work
+Note:
+This section will be updated with full migration details at least 30
+days before automated migration starts.
+When automated migration begins, Google automatically converts existing Gems
+into skills:
+Draft status:
+Migrated Gems are listed in the creator's skills list as
+inactive drafts. Creators must review and activate each skill before they can
+use or share it.
+Preserved content:
+Converted skills retain their original names,
+descriptions, custom instructions, and uploaded knowledge files.
+Sharing and permissions:
+Drive permissions and sharing settings applied
+to original Gems transfer to the corresponding skills.
+Related resources
+Share these resources with people in your organization:
+Google Workspace Updates blog post
+Allow people to use skills in Studio and Gemini in Workspace
+AI skills 101 handbook
+Create and use skills in the Gemini app
+Learn how skills work in Google Workspace Studio
+Manually recreate Gems as skills
+Workspace Studio transition guide
+Gemini Gems Transition Guide for Education (PDF)
+Create and assign Gemini Notebook & Gems in Google Classroom
+Use Gemini Notebook & Gems in Google Classroom (for students)
+Share and access notebooks & Gems in Google Workspace LTI™
+Send feedback

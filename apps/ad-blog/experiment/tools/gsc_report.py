@@ -124,6 +124,21 @@ def post_urls() -> list[str]:
     return sorted(f"{SITE_ORIGIN}/posts/{p.stem}" for p in POSTS_DIR.glob("*.mdx"))
 
 
+def index_refs(idx: dict) -> dict:
+    """URL 검사 결과에서 Google이 이 URL을 본 곳 (사이트 경로로 줄임, 2026-11-05 V7 판정용).
+
+    sitemaps = 이 URL이 들어 있다고 Google이 확인한 제출 사이트맵·피드 (`/rss.xml`·`/sitemap.xml`. 없으면 빈 목록),
+    referring = Google이 아는 이 URL을 링크하는 페이지 (`referringUrls`, 보통 색인된 글에만 나옴)
+    """
+    short = lambda urls: sorted(u.removeprefix(SITE_ORIGIN) or "/" for u in urls or [])  # noqa: E731
+    return {"sitemaps": short(idx.get("sitemap")), "referring": short(idx.get("referringUrls"))}
+
+
+def main_sitemap(sitemaps: list[dict]) -> dict:
+    """제출한 사이트맵 중 `/sitemap.xml` (없으면 첫 번째). API는 경로순으로 줘서 2026-10-19 `rss.xml` 제출 뒤 첫 번째가 피드로 바뀜"""
+    return next((s for s in sitemaps if s.get("path", "").endswith("/sitemap.xml")), sitemaps[0] if sitemaps else {})
+
+
 def first_monday() -> dt.date:
     """주간 집계 시작일: 운영 시작일 당일이 월요일이면 그날, 아니면 다음 월요일 (운영 하루뿐인 첫 주를 빼야 첫 증가가 부풀지 않음)"""
     return LAUNCH_DATE + dt.timedelta(days=(7 - LAUNCH_DATE.weekday()) % 7)
@@ -328,15 +343,16 @@ def main() -> None:
     if not args.no_inspect:
         indexed = 0
         print("\n### 글별 색인 상태 (URL 검사)\n")
-        print("| URL | 판정 | 상태 | 마지막 크롤링 | 가져오기 |\n| --- | --- | --- | --- | --- |")
+        print("| URL | 판정 | 상태 | 마지막 크롤링 | 가져오기 | 사이트맵 |\n| --- | --- | --- | --- | --- | --- |")
         for url in urls:
             body = {"inspectionUrl": url, "siteUrl": args.site}
             result = call("POST", f"{API}/v1/urlInspection/index:inspect", token, body)
             idx = result.get("inspectionResult", {}).get("indexStatusResult", {})
             indexed += idx.get("verdict") == "PASS"
+            found_in = " · ".join(s.removeprefix("/") for s in index_refs(idx)["sitemaps"]) or "-"
             print(
                 f"| {url.removeprefix(SITE_ORIGIN)} | {idx.get('verdict', '-')} | {idx.get('coverageState', '-')} "
-                f"| {idx.get('lastCrawlTime', '-')} | {idx.get('pageFetchState', '-')} |"
+                f"| {idx.get('lastCrawlTime', '-')} | {idx.get('pageFetchState', '-')} | {found_in} |"
             )
 
     # AdSense 재신청 조건: 주간 클릭은 --days와 상관없이 첫 월요일부터 월~일 주로 셈

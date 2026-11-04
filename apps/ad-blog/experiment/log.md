@@ -2,7 +2,7 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
-## 2026-11-04 · 세션 79 (정기 실행, 개선 세션): Chrome 157 정식판으로 `chrome-http-warning-default` 재확인 + 외부 링크 후보(`link-building`) + 글 간 반복 문장 점검
+## 2026-11-04 · 세션 79 (정기 실행, 개선 세션): Chrome 157 정식판으로 `chrome-http-warning-default` 재확인 + 외부 링크 후보(`link-building`) + 글 간 반복 문장 점검 + 대시보드 첫 관측값을 저장소 파일로
 
 세션 시각: 2026-11-04 18:15 KST(수) → 18시 실행이라 개선 세션. 같은 날 앞 세션은 00시 일반 세션 77(`turn-off-ai-in-brave` 새 글)·06시 개선 세션 78(콘텐츠 정리 1번 통합·노출 감소 분석·태그) → 그 글들은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(266b32d)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
 
@@ -48,8 +48,9 @@
 - Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15). 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26). V6 뒤 backlog 27번(SynthID), 11-30·V7 뒤 backlog 45번(오픈소스 PDF 합치기)
 - Claude(11-06 금 일반 세션): 세션 77 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`, 문서 기반) + Firefox 160(11-06) 출시 확인. 새 `ai-settings` 글 제목은 `How to Turn Off …`(10편)과 다른 틀로
 - Claude: 발행 53편 (허브 4개)
-- **대시보드: 갱신 못 함 (새 제한)** — 갱신 절차 1의 `ArtifactData` `list`(`collection: stats`, `out_dir` 스크래치패드)가 "Documents that other people may have written are not saved to files … if the user wants them as files, tell the user that first and ask"로 거부되고 아무것도 저장되지 않음 (세션 78까지는 같은 호출로 저장됨). `dashboard_data.py`는 `--prev`(이전 `posts` 문서 파일) 없이 돌리면 `indexedAt`·`firstCrawlAt`·`firstSeenLinkAt` 첫 관측값이 지워지므로 실행하지 않음. 도구가 안내한 대로 문서를 대화에 읽어 파일로 옮겨 적는 우회는 하지 않음. 이번 회차 값은 위 '지표'에 있음
-- **사용자: 대시보드 갱신 방식 결정** — (가) 대화형 세션에서 `stats` 문서를 파일로 저장해도 된다고 허용(도구가 사용자 확인을 요구) 또는 (나) 다음 개선 세션이 첫 관측값(`indexedAt`·`firstCrawlAt`·`firstImpressionAt`·`firstSeenLinkAt`)을 저장소 파일로 옮겨 `--prev`가 DB 파일 저장 없이 돌게 고침(DB 구조 개선, 기존 history는 그대로). 정하기 전까지 정기 세션은 대시보드를 갱신하지 않고 log.md에만 기록
+- 대시보드: 처음엔 갱신 못 함 — 갱신 절차 1의 `ArtifactData` `list`(`out_dir`)가 "Documents that other people may have written are not saved to files … tell the user that first and ask"로 거부됨(세션 78까지는 됨). `--prev` 없이 돌리면 첫 관측값이 지워져 중단하고 사용자에게 알림
+  - **같은 세션 후속 (사용자 요청 "둘 다 해")**: 사용자 허용 뒤 `out_dir`를 다시 시도했지만 같은 거부(도구에 허용을 넘길 방법 없음) → 도구 안내대로 `posts` 문서(v75)를 대화로 읽어 글 53편의 첫 관측값만 저장소 [dashboard/first-seen.json](dashboard/first-seen.json)에 옮김(색인 17편·Google이 본 링크 25편). `dashboard_data.py`가 이 파일을 읽고 다시 쓰게 고치고(`--prev`는 선택), 버전은 [dashboard/versions.json](dashboard/versions.json)에서 읽게 함. 버전은 문서마다 `update`(`if_version: 1`, 필드 삭제 1개)를 보내 거부 메시지로만 확인(쓰인 것 없음): summary 74·posts 75·breakdown 71·experiments 72·knowhow 74·sessions 74·traffic 30·daily-2026-10 74·daily-2026-11 7
+  - 결과: `stats` 9개 + `history` 9개 batch 성공(회차 2026-11-04T10:16:34Z, DB 문서 321개), 버전이 모두 +1 → `versions-after.json`으로 다음 버전을 미리 적게 함. 첫 관측값은 옮긴 값과 이번 회차 값이 53편 모두 같음(새 색인 없음). 회차 시점 `summary.adsense` 클릭 연속 증가 0, `summary.crawl` 미색인 36편 중 Google이 본 링크 19편. README 운영 대시보드 갱신 절차를 1~2번(실행 → batch → 버전 파일 복사·커밋)으로 고침. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 - 배포: 이 세션 PR (CI 통과 후 머지)
 
 ## 2026-11-04 · 세션 78 (정기 실행, 개선 세션): 콘텐츠 정리 1번 통합(Chrome Gmail 자동 완성 칼럼 → Chrome 자동 완성 설정 글) + 주간 점검 3번(노출 감소 원인·태그)

@@ -1,7 +1,7 @@
 // 운영 대시보드 페이지 점검 (ToolProof 운영 실험용): 발행 전에 dashboard/index.html을 Chromium으로 열어 스크립트 오류·빈 화면을 찾는다.
 // 스크립트 하나가 문법 오류로 멈추면 화면 전체가 "데이터 불러오는 중"에 머물러도 발행은 성공하므로, 페이지를 고치면 발행 전에 실행한다.
 //
-// 실행: node apps/ad-blog/experiment/tools/dashboard_check.cjs [--data /tmp/dashboard-prev/stats]
+// 실행: node apps/ad-blog/experiment/tools/dashboard_check.cjs [--data {dashboard_data.py --out}/stats]
 //   --data: dashboard_data.py가 만든 data.js, 또는 stats 문서 JSON 폴더(ArtifactData list의 out_dir 저장본).
 //           없으면 데이터 없는 화면("데이터 연결 안 됨")만 확인
 // 결과: 문제가 없으면 요약을 출력하고 0, 있으면 문제 목록을 출력하고 1로 끝남

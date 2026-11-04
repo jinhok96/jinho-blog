@@ -3,15 +3,22 @@
 Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 지표·traffic-playbook·log.md를 읽어 대시보드 DB 문서를 JSON 파일로 만든다.
 업로드는 세션에서 `ArtifactData` 도구로 한다 (README "운영 대시보드" 절차).
 
-실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --prev /tmp/dashboard-prev/stats/posts.json [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}']
+실행: /tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py [--out /tmp/dashboard] [--no-inspect] [--versions '{"summary": 3, ...}'] [--prev posts.json]
 출력: {out}/stats/{doc_id}.json + {out}/history/*.json + {out}/writes.json (ArtifactData batch의 writes 값 그대로)
       + {out}/data.js (비로그인 열람용 스냅숏, 아티팩트 파일 `data.js`로 발행)
+      + 저장소 `experiment/dashboard/first-seen.json` 갱신 (글별 첫 관측값, 세션이 커밋)
+
+첫 관측값(indexedAt·firstCrawlAt·firstImpressionAt·firstSeenLinkAt)은 2026-11-04부터 저장소 파일
+`experiment/dashboard/first-seen.json`에서 읽고 같은 파일에 다시 씀. 그 전에는 이전 회차 `posts` DB 문서를
+`ArtifactData list`의 `out_dir`로 저장해 `--prev`로 넘겼으나, 세션 79부터 DB 문서를 파일로 저장하는 것이
+거부돼(다른 사람이 썼을 수 있는 문서) DB를 파일로 받지 않아도 돌게 바꿈. `--prev`는 선택(주면 두 값 중 이른 값).
+버전도 `--versions`를 빼면 `experiment/dashboard/versions.json`(지난 batch 결과의 문서 버전)을 씀
 
 `stats`는 화면이 읽는 최신 값이라 회차마다 바뀌고, 같은 내용을 `history` 컬렉션에 회차별 새 문서
 (`{summary.updatedAt}_{doc_id}` = {runAt, doc, data})로 함께 남긴다. history는 만들기만 하고 고치거나 지우지 않는다.
 
 `stats` 컬렉션 하나에 문서 몇 개만 둔다 (세션마다 버전을 옮겨 적는 수를 줄이려고). 기존 문서를 덮어쓰려면
-`ArtifactData list stats`로 본 버전을 `--versions`에 넘긴다 (없는 문서는 새로 만듦).
+마지막 batch 결과의 버전(`experiment/dashboard/versions.json`, 또는 `--versions`)을 쓴다 (없는 문서는 새로 만듦).
 - summary: 갱신 시각·28일 합계·사이트맵 상태·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
            ·goals(README 목표 지표 표 + 현재 값·진행률)
            ·adsense(README AdSense 재신청 조건 3개: operatingDays·indexRate·weeks(월~일 주별 클릭·노출, complete = 확정 주)
@@ -31,9 +38,9 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
           색인 시점 3가지 (Search Console은 색인된 날짜를 주지 않아 회차마다 처음 본 값을 고정, 한번 정하면 바꾸지 않음):
           indexedAt = URL 검사가 처음 PASS인 회차 시각, firstCrawlAt = 그때의 lastCrawl(마지막 크롤링은 이후 바뀌므로 첫 값),
           firstImpressionAt = 웹 검색 노출이 처음 생긴 날짜(Search Console 날짜, 태평양 시간).
-          앞의 두 값은 이전 posts 문서(--prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급),
+          앞의 두 값은 first-seen.json(또는 --prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급),
           seenLinks = (색인 안 된 글만) Google이 마지막으로 크롤링한 판에서 이 글로 가던 링크 [{page, kind, crawl}] (link_seen.py),
-          firstSeenLinkAt = 그 링크를 Google이 처음 본 크롤링 시각 (--prev에서 이어받아 고정, 색인 뒤에도 유지 → 노하우 9 판정)
+          firstSeenLinkAt = 그 링크를 Google이 처음 본 크롤링 시각 (first-seen.json에서 이어받아 고정, 색인 뒤에도 유지 → 노하우 9 판정)
           (2026-10-26 회차부터. 그 전 회차 history에는 없음)
 - traffic: (Cloudflare 환경변수가 있을 때만) 사이트 전체 실제 조회수 {range, views, visits, daily: [{date, views, visits}](UTC 날짜, 빠진 날 0),
            referers: 유입 사이트별 28일 조회수·방문 상위 10 (자기 사이트·직접 방문은 'direct')}
@@ -59,6 +66,9 @@ import link_seen  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
 
 EXPERIMENT = pathlib.Path(__file__).resolve().parents[1]
+FIRST_SEEN_FILE = EXPERIMENT / 'dashboard' / 'first-seen.json'  # 글별 첫 관측값 (세션이 커밋, 2026-11-04)
+VERSIONS_FILE = EXPERIMENT / 'dashboard' / 'versions.json'  # 마지막 batch 결과의 stats 문서 버전 (세션이 batch 뒤 고침)
+FIRST_SEEN_KEYS = ('indexedAt', 'firstCrawlAt', 'firstImpressionAt', 'firstSeenLinkAt')
 LAUNCH = dt.date(2026, 10, 10)  # 도메인 연결 전날부터 집계
 SEARCH_TYPES = ('web', 'image', 'video', 'news', 'discover', 'googleNews')
 BRAND = re.compile(r'tool\s*-?\s*proof', re.I)  # 브랜드 검색어 (목표 지표 "비브랜드 검색어"에서 제외)
@@ -123,12 +133,34 @@ def first_impression(by_date: dict[str, dict]) -> str | None:
     return min((d for d, r in by_date.items() if r.get('impressions')), default=None)
 
 
-def load_prev(path: str | None) -> dict[str, dict]:
-    """이전 회차 posts 문서의 글별 행 {slug: row}. 색인 시점 필드를 이어받는 데 씀"""
-    if not path:
-        return {}
-    data = json.loads(pathlib.Path(path).read_text(encoding='utf-8'))
-    return {r['slug']: r for r in data.get('rows', []) if r.get('slug')}
+def load_prev(path: str | None, first_seen: pathlib.Path = FIRST_SEEN_FILE) -> dict[str, dict]:
+    """글별 첫 관측값 {slug: {indexedAt, firstCrawlAt, firstImpressionAt, firstSeenLinkAt}}.
+
+    저장소 first-seen.json을 읽고, --prev(이전 회차 posts DB 문서 JSON)가 있으면 합침. 둘 다 값이 있으면 이른 값
+    (모두 '처음 본' 시각이라 이른 쪽이 맞음. 날짜만 있는 값과 시각까지 있는 값도 ISO 문자열로 비교됨)
+    """
+    merged: dict[str, dict] = {}
+    sources = []
+    if first_seen.exists():
+        sources.append(json.loads(first_seen.read_text(encoding='utf-8')).get('posts', {}))
+    if path:
+        data = json.loads(pathlib.Path(path).read_text(encoding='utf-8'))
+        sources.append({r['slug']: r for r in data.get('rows', []) if r.get('slug')})
+    for rows in sources:
+        for slug, row in rows.items():
+            cell = merged.setdefault(slug, {})
+            for key in FIRST_SEEN_KEYS:
+                if row.get(key):
+                    cell[key] = min(cell[key], row[key]) if cell.get(key) else row[key]
+    return merged
+
+
+def save_first_seen(posts: list[dict], run_at: str, path: pathlib.Path = FIRST_SEEN_FILE) -> None:
+    """이번 회차 글별 첫 관측값을 저장소 파일에 씀 (값이 있는 키만, 지금 있는 글만)"""
+    rows = {p['slug']: {k: p[k] for k in FIRST_SEEN_KEYS if p.get(k)} for p in sorted(posts, key=lambda p: p['slug'])}
+    doc = {'updatedAt': run_at, 'posts': rows}
+    path.parent.mkdir(parents=True, exist_ok=True)
+    path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 
 
 def index_dates(prev: dict, index: dict | None, run_at: str, first_imp: str | None) -> dict:
@@ -282,8 +314,8 @@ def main() -> None:
     ap.add_argument('--site', default='sc-domain:tool-proof.com')
     ap.add_argument('--out', default='/tmp/dashboard')
     ap.add_argument('--no-inspect', action='store_true', help='URL 검사 생략 (하루 2,000회 할당량)')
-    ap.add_argument('--prev', required=True, help='이전 회차 posts 문서 JSON (ArtifactData list stats의 out_dir 저장본). 빠뜨리면 색인 시점이 지워짐')
-    ap.add_argument('--versions', help='기존 문서 버전 JSON (예: \'{"summary": 3, "posts": 3}\')')
+    ap.add_argument('--prev', help='(선택) 이전 회차 posts DB 문서 JSON. 첫 관측값은 저장소 first-seen.json에서 읽음')
+    ap.add_argument('--versions', help='기존 문서 버전 JSON (예: \'{"summary": 3, "posts": 3}\'). 빼면 experiment/dashboard/versions.json')
     args = ap.parse_args()
     prev_rows = load_prev(args.prev)
     run_at = dt.datetime.now(dt.timezone.utc).strftime('%Y-%m-%dT%H:%M:%SZ')
@@ -388,6 +420,10 @@ def main() -> None:
         doc.update(index_dates(prev_rows.get(slug, {}), doc.get('index'), run_at, first_impression(page_dates.get(url, {}))))
         posts.append(doc)
     crawl = None if args.no_inspect else seen_link_fields(token, args.site, posts, crawled, prev_rows)
+    if args.no_inspect:  # URL 검사를 건너뛰면 firstSeenLinkAt을 계산하지 않으므로 이전 값을 그대로 둠
+        for p in posts:
+            p['firstSeenLinkAt'] = prev_rows.get(p['slug'], {}).get('firstSeenLinkAt')
+    save_first_seen(posts, run_at)
     # 글 외 페이지(홈·카테고리·목록 등): 글별 표 합계를 사이트 전체 KPI와 맞추기 위해 따로 표시
     post_urls = {f"{SITE_ORIGIN}/posts/{p['slug']}" for p in posts}
     other = [{'path': url.removeprefix(SITE_ORIGIN) or '/', **metrics(r), **page_extra(url)} for url, r in by_page.items() if url not in post_urls]
@@ -458,7 +494,10 @@ def main() -> None:
     if crawl:
         docs['summary']['crawl'] = crawl
 
-    versions = json.loads(args.versions) if args.versions else {}
+    if args.versions:
+        versions = json.loads(args.versions)
+    else:
+        versions = json.loads(VERSIONS_FILE.read_text(encoding='utf-8')) if VERSIONS_FILE.exists() else {}
     out = pathlib.Path(args.out) / 'stats'
     out.mkdir(parents=True, exist_ok=True)
     writes = []
@@ -471,12 +510,16 @@ def main() -> None:
         writes.append(w)
     writes += history_writes(docs, pathlib.Path(args.out) / 'history')
     (out.parent / 'writes.json').write_text(json.dumps(writes, ensure_ascii=False), encoding='utf-8')
+    # batch가 성공하면 문서마다 버전이 1씩 오름(새 문서는 1, 2026-11-04 확인) → 성공 뒤 이 파일을 versions.json으로 복사
+    after = {w['doc_id']: w.get('if_version', 0) + 1 for w in writes if w['collection'] == 'stats'}
+    (out.parent / 'versions-after.json').write_text(json.dumps(after, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
     # 비로그인 열람용 스냅숏 (아티팩트 DB는 로그인한 사람만 읽을 수 있음). 아티팩트 파일 data.js로 발행
     snapshot = json.dumps({'docs': docs}, ensure_ascii=False, separators=(',', ':')).replace('</', '<\\/')
     (out.parent / 'data.js').write_text(f'window.DASHBOARD_SNAPSHOT = {snapshot};\n', encoding='utf-8')
     new = [w['doc_id'] for w in writes if w['collection'] == 'stats' and 'if_version' not in w]
     recorded = sum(w['collection'] == 'history' for w in writes)
     print(f'stats {len(writes) - recorded}개 + history {recorded}개 → {out.parent}/writes.json' + (f' (새 stats 문서: {", ".join(new)})' if new else ''))
+    print(f'첫 관측값 → {FIRST_SEEN_FILE} (커밋). batch가 성공하면 {out.parent}/versions-after.json을 {VERSIONS_FILE}로 복사 (batch 결과 버전과 같은지 확인, 커밋)')
 
 
 def traffic_doc(page_views: dict[str, dict[str, dict]], since: dt.date, today: dt.date) -> dict:

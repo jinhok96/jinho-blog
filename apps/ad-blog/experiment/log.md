@@ -2,6 +2,56 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-04 · 세션 79 (정기 실행, 개선 세션): Chrome 157 정식판으로 `chrome-http-warning-default` 재확인 + 외부 링크 후보(`link-building`) + 글 간 반복 문장 점검
+
+세션 시각: 2026-11-04 18:15 KST(수) → 18시 실행이라 개선 세션. 같은 날 앞 세션은 00시 일반 세션 77(`turn-off-ai-in-brave` 새 글)·06시 개선 세션 78(콘텐츠 정리 1번 통합·노출 감소 분석·태그) → 그 글들은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(266b32d)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-07 ~ 11-04, 세션 78 이후 바뀐 값만)**
+
+- 노출 1,002 → **1,023**, 클릭 15, CTR 1.5%, 평균 순위 23.2 (`spotify-family-qr-code-verification` 269·17.3 / `turn-off-ai-in-chrome` 177·17.7 / `image-to-text-offline-free` 126·15.9 그대로)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 그대로 · 11-02~ 0 (진행 중, 노출 74)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 16 · `URL is unknown` 20 (흔들림 그대로). **`image-to-text-offline-free`(V5) 11-02 13:28 UTC 재크롤링**(10-30 뒤 두 번째). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 19편 (11-02 크롤링한 `image-to-text-offline-free` 판에서 `siri-history-on-iphone`·`turn-off-gemini-apps-activity`(관련 글 카드)·`split-pdf-free`(본문)로 가는 링크를 봄, 세션 78 집계에도 들어 있던 값)
+- 반복 일정: **Chrome 157 Linux 안정판 deb 출시**(versionhistory Linux 157.0.8103.38, dl.google.com deb 같은 버전). Firefox 최신 159.0.1, 다음 출시 11-06
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태·writing-guide 판정 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 24일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 주간 점검(11-02) 우선순위 1~3은 세션 73·74·78에서 처리. 1(색인)은 링크한 색인 글이 다시 크롤링되지 않아 링크를 늘려도 발견 경로가 안 됨, 2는 보류 2건, 3은 허브 4/4, 4는 노출 100회 이상 글 3편 모두 V 판정 중, 5는 `updatedAt`이 V7과 겹침 → **6(반복 일정)은 글을 고치지 않고 확인만**, 7(문제 찾기)과 외부 링크 후보(`link-building`, README 스킬 표의 "사용자에게 제안만")
+
+**한 일 (개선 세션, 쓴 스킬: `link-building` — Step 1 병목 진단(Foundation gap), Step 3 전술 선택(링크 없는 언급 회수·자원 목록·커뮤니티), Step 4 후보 검증(관련성·열린 글·최근 활동)·초안(승인용), Step 5 규칙(유료·교환 링크 없음, 운영자임을 밝힘) / `seo-audit` — Content Quality(Thin Content: 중복·거의 같은 콘텐츠, 태그·카테고리 페이지), On-Page(제목·설명 중복·같은 틀))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 6 · 반복 일정 (확인만) | `chrome-http-warning-default` | **Chrome 157.0.8103.38 Linux 정식판 deb**로 156 때(`capture.py`)와 같은 순서를 `capture157.cjs`로 다시 실행: HTTP 경고 창 문구·버튼·Continue 뒤·재방문, Enhanced protection 펼친 설명은 **156과 같음**. **바뀐 것 1가지: 새 프로필 첫 실행부터 Always use secure connections가 켜짐**(156은 첫 실행 꺼짐 → 다시 열면 켜짐). variations 서버를 막아 seed 없이 연 새 프로필도 켜짐 → 157 자체 기본값. 도움말 10468685(Desktop)·9890866을 다시 받아 10-21 사본과 문장 비교: 차이 없음. 결과는 `tests/chrome-http-warning-default/factcheck.md` 'Chrome 157 재확인'·`c157-check.json`·캡처 3장. **글은 V7 판정 뒤에 고침**(54·62·91번째 줄, `updatedAt`) | - (V7 뒤 반영) |
+| 2 | 7 · 외부 링크 후보 | 새 문서 [outreach.md](outreach.md) | 진단: 내부 링크는 채웠고(받는 링크 부족 0편) 홈은 1.5~2일마다 크롤링되는데 미색인 36편을 가져가지 않음 → 외부 언급·방문이 적은 Foundation gap(해석). `"tool-proof.com"` 언급 0건. 후보 검증 8곳 중 **2곳 남김**: Brave Community "How do I remove Leo"(열림, 조회 10,035, 10-28 Brave 직원이 유료 Origin 안내) · "Is there a way to ACTUALLY disable ai from brave search?"(열림, 조회 17,029) → `turn-off-ai-in-brave`. 1번 답글 초안(영어, 무료 flags 제거 + Brave Search 설정이 쿠키라는 점, 운영자임을 밝힘). 닫힌 글·2024년 자료·대형 매체·확인 못 한 곳(Mozilla 포럼 403, Reddit)은 뺀 이유와 함께 기록. **게시는 사용자만** | - |
+| 3 | 7 · 문제 찾기 | 사이트 전체 53편 | `tools/dup_check.py`(새 도구): 8단어 이상 문장이 2편 이상에 그대로 나온 경우 **9개**(가장 많은 것 "The first three rows are what we measured." PDF 6편), 글 쌍 8단어 묶음 겹침 최대 **8.8%**(`merge-pdf-files-free` ↔ `split-pdf-free`: 같은 시험 파일 설명·PDFsam 요구 사양), 글별 최대 11.4% → **찍어 낸 문장 반복은 문제 아님**. 설명 중복 0, 설명·첫 문단 앞머리 반복 없음, 태그 페이지 없음. 제목은 `How to` 24/53, **`How to Turn Off` 10편**(모두 `ai-settings`, 주 검색어 그대로) → 기존 제목은 검색어 일치 때문에 바꾸지 않고, 새 `ai-settings` 글은 세션 77처럼 다른 틀로 | - |
+
+- 지운 글 URL `free-offline-text-to-speech`(308 → `free-offline-ai-tools`, 허브에 TTS 절 없음)가 28일 노출 36·클릭 1·평균 10.9위로 10-14 이후 거의 매일 노출(`text to speech free offline` 10위). Google이 아직 리디렉트를 다시 크롤링하지 않은 것으로 보임 → backlog 15번에 수요 근거로 적음 (GUI 앱으로 측정할 수 있으면 `offline-ai` 상시 글 후보)
+- Chrome 157 확인 환경: Xvfb `:99` + Chrome 직접 실행 + CDP(Node Playwright), X 화면 캡처(`import`)·`xdotool`(이번 컨테이너에 없어 `apt-get update` 뒤 설치). 프록시는 `--proxy-server=https=127.0.0.1:{HTTPS_PROXY 포트}`, `badssl.com`·`neverssl.com`은 직접 연결(컨테이너에서 HTTP·HTTPS 모두 직접 열림)
+- 검증: 글·코드 변경 없음(문서·시험 자료·새 도구 `dup_check.py`만). `pnpm --filter @jinho-blog/ad-blog lint`(type-check 포함)·`test`(35파일 254개)·`build` 통과, `link_audit` 2건 그대로. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+
+**알게 된 것**
+
+- Chrome 157은 새 프로필에서 HTTPS 경고 설정이 처음부터 켜져 있음 → 156의 "첫 실행 꺼짐 → 재실행 켜짐"은 서버 설정이 늦게 적용된 결과였고 157에서 기본값이 코드로 들어간 것으로 보임 (해석, 1차 출처 문장 없음). 글에는 "157에서는 첫 실행부터 켜져 있었다"는 관찰만 씀
+- Brave Community(Discourse)는 `/search.json`·`/t/{id}.json`으로 글 상태(열림·닫힘·마지막 답·조회 수)를 컨테이너에서 읽을 수 있음. Discourse는 오래된 글을 자동으로 닫아, 외부 링크 후보는 '열림 + 최근 답'으로 걸러야 함 (예전 화제 글 "How do I KILL Leo?"는 닫힘)
+- 사이트 전체 반복 문장은 적음(최대 11%) → AdSense '대량 생산' 신호는 문장 반복보다 발행 속도·칼럼 비율·제목 틀 쪽이었고, 그 부분은 11-01~02에 정리함
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 78 목록 그대로, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default` → `https://tool-proof.com/posts/chrome-autofill-settings`
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안을 검토해 본인 계정으로 올릴지 결정 (운영자임을 밝힘, 같은 문구를 여러 곳에 붙이지 않음). 올렸으면 outreach.md '게시 기록'에 날짜만 남겨 주면 다음 세션이 유입·색인 변화를 봄
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 24일·색인율 32%·주간 클릭 증가 0주)
+- Claude: V7 판정 뒤 `chrome-http-warning-default`에 Chrome 157 결과 반영(factcheck 'Chrome 157 재확인'의 '글에 반영할 것', `updatedAt`, 다음 확인 Chrome 158 11-17). `turn-off-ai-in-chrome`은 V3 판정(11-18) 뒤 157·158 재확인과 태그 통합 여부 함께
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번 `office-2021-end-of-support`는 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 남은 대표 이미지 `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`(콘텐츠 정리 3·4번 때 함께), 판정 뒤 `transcribe-audio-offline-free`·`free-offline-ai-tools`·`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`
+- Claude: V7 — `rss.xml` 다음 다운로드 시각 확인 뒤 7일 판정(늦어도 11-15). 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26). V6 뒤 backlog 27번(SynthID), 11-30·V7 뒤 backlog 45번(오픈소스 PDF 합치기)
+- Claude(11-06 금 일반 세션): 세션 77 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`, 문서 기반) + Firefox 160(11-06) 출시 확인. 새 `ai-settings` 글 제목은 `How to Turn Off …`(10편)과 다른 틀로
+- Claude: 발행 53편 (허브 4개)
+- **대시보드: 갱신 못 함 (새 제한)** — 갱신 절차 1의 `ArtifactData` `list`(`collection: stats`, `out_dir` 스크래치패드)가 "Documents that other people may have written are not saved to files … if the user wants them as files, tell the user that first and ask"로 거부되고 아무것도 저장되지 않음 (세션 78까지는 같은 호출로 저장됨). `dashboard_data.py`는 `--prev`(이전 `posts` 문서 파일) 없이 돌리면 `indexedAt`·`firstCrawlAt`·`firstSeenLinkAt` 첫 관측값이 지워지므로 실행하지 않음. 도구가 안내한 대로 문서를 대화에 읽어 파일로 옮겨 적는 우회는 하지 않음. 이번 회차 값은 위 '지표'에 있음
+- **사용자: 대시보드 갱신 방식 결정** — (가) 대화형 세션에서 `stats` 문서를 파일로 저장해도 된다고 허용(도구가 사용자 확인을 요구) 또는 (나) 다음 개선 세션이 첫 관측값(`indexedAt`·`firstCrawlAt`·`firstImpressionAt`·`firstSeenLinkAt`)을 저장소 파일로 옮겨 `--prev`가 DB 파일 저장 없이 돌게 고침(DB 구조 개선, 기존 history는 그대로). 정하기 전까지 정기 세션은 대시보드를 갱신하지 않고 log.md에만 기록
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-04 · 세션 78 (정기 실행, 개선 세션): 콘텐츠 정리 1번 통합(Chrome Gmail 자동 완성 칼럼 → Chrome 자동 완성 설정 글) + 주간 점검 3번(노출 감소 원인·태그)
 
 세션 시각: 2026-11-04 06:15 KST(수) → 06시 실행이라 개선 세션. 같은 날 앞 세션은 00시 일반 세션 77(`turn-off-ai-in-brave` 새 글) → 다른 글을 다룸. 열린 PR 없음. 작업 브랜치를 `origin/main`(3acad2b)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

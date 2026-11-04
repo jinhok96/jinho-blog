@@ -171,7 +171,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 5. **뉴스 칼럼 후속**: 시행일·마감일이 지났거나 후속 발표가 있는 칼럼을 같은 글에 반영 (`updatedAt`)
 6. **반복 일정**: Chrome 안정판·Windows 월간 업데이트 후 관련 글 메뉴·버전 재확인
 7. 고칠 것이 없으면 새 글을 쓰지 않고 아래 중 하나 (2026-10-24 변경. 이전: 공백 글 1편)
-   - **문제 찾기**: `seo-audit` 스킬로 사이트·최근 글을 점검해 노출·색인·클릭을 막는 문제를 찾고 고치거나 log.md에 기록
+   - **문제 찾기**: `seo-audit` 스킬로 사이트·최근 글을 점검해 노출·색인·클릭을 막는 문제를 찾고 고치거나 log.md에 기록. 글끼리 같은 문장이 반복되는지는 `tools/dup_check.py` (2026-11-04 기준: 2편 이상 반복 문장 9개, 글별 겹침 최대 11.4%)
    - **대시보드 개선**: 최신 데이터로 판단할 때 부족했던 화면을 [운영 대시보드](#운영-대시보드) 절차대로 고침 (`dashboard_check.cjs` 통과 후 발행)
    - **DB 구조 개선**: 가설·노하우를 지표로 판정하는 데 필요한 값을 `dashboard_data.py`가 쌓도록 `stats`·`history` 구조를 고침 (예: 회차별 URL 검사 `lastCrawl`로 크롤링 시점 추적). 기존 history는 고치지 않음
 
@@ -196,7 +196,7 @@ log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용�
 | 8~20위 글 보강, CTR 낮은 글 제목·설명 | `seo-audit` (references/rankings-push.md·title-tags.md) |
 | 기존 글 갱신 범위 정하기 (상위 결과 대비 빠진 소제목), AI 문체 점검 | `copy-editing` (references/content-refresh.md) |
 | AI 답변 인용 구조 | `ai-seo` |
-| 외부 링크 후보·공유 문안 (사용자에게 제안만) | `link-building` |
+| 외부 링크 후보·공유 문안 (사용자에게 제안만, 후보·초안·게시 기록은 [outreach.md](outreach.md)) | `link-building` |
 | 색인·기술 점검, 문제 찾기 | `seo-audit` |
 
 더 좋은 스킬이 필요하면 개선 세션에서 받아 올 수 있습니다: 널리 쓰이는 출처(스타 수·사용처 확인)에서 받아 **전체를 읽고** 커밋을 고정해 `.claude/skills/`에 넣고 MARKETINGSKILLS.md 같은 출처 문서를 남김. 내용을 읽지 않은 파일은 넣지 않음
@@ -229,6 +229,7 @@ log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용�
   3. `/tmp/dashboard/writes.json` 내용을 `ArtifactData` `batch`의 `writes`로 전달. 정기 실행에서는 각 `file_path` 파일을 스크래치패드로 복사하고 경로를 바꿔 보냄 (`/tmp` 경로는 승인 필요로 거부됨, 2026-10-24 세션 46 확인) (`stats` 갱신 + `history` 기록이 한 번에 적용됨. 버전이 어긋나면 아무것도 쓰이지 않음 → 1부터 다시. history 문서가 이미 있다는 거부는 같은 회차를 두 번 보낸 것 → 2를 다시 실행해 새 회차로 보냄, history를 고치거나 지우지 않음)
   4. (정기 세션에서는 건너뜀, 사용자가 요청한 대화형 세션에서만) 비로그인 열람용 스냅숏: `/tmp/dashboard/data.js`를 스크래치패드로 복사한 뒤 `Artifact` publish (`file_path` 페이지 원본, `url` 위 주소, `files: {"data.js": "<복사한 경로>"}`, `capabilities` 생략). 파일 원본은 작업 디렉터리나 스크래치패드 안에 있어야 함
   5. 실패하면 log.md '다음 할 일'에 기록 (대시보드 갱신은 글 발행을 막지 않음)
+  - 2026-11-04 세션 79: 1번 `out_dir` 저장이 "다른 사람이 썼을 수 있는 문서는 파일로 저장하지 않음"으로 거부됨(사용자 확인 필요) → 사용자 결정 전까지 정기 세션은 2~3번을 건너뛰고 log.md에 기록 (`--prev` 없이 돌리면 첫 관측값이 지워짐)
 - 페이지 구성을 바꿀 때: `dashboard/index.html` 수정 → `node apps/ad-blog/experiment/tools/dashboard_check.cjs --data /tmp/dashboard-prev/stats` (갱신 절차 1의 저장본 또는 `/tmp/dashboard/data.js`. Chromium으로 열어 스크립트 오류·빈 화면·글별 표 줄 수·모바일 가로 넘침 확인, 문제가 있으면 발행하지 않음. 스크립트가 문법 오류로 멈춰도 발행은 성공하고 화면만 "데이터 불러오는 중"에 머묾) → `Artifact` publish (`file_path` 원본, `url` 위 주소, `capabilities`는 생략해 기존 접근 규칙 유지) → 같은 PR로 커밋
 - 폰트: Pretendard 1.3.9 가변 폰트(OFL-1.1)를 아티팩트 파일 `fonts/PretendardVariable.woff2`로 함께 발행 (저장소에는 넣지 않음). 페이지만 다시 발행할 때는 `files`를 생략하면 기존 폰트 파일이 유지됨. 폰트를 바꿀 때만 `files`로 다시 올림 (`https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/woff2/PretendardVariable.woff2`)
 

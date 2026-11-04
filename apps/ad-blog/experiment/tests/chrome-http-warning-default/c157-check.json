@@ -1,0 +1,155 @@
+{
+ "first": {
+  "step": "first",
+  "version": "Google LLC | Copyright 2026 Google LLC. All rights reserved. | Google Chrome | 157.0.8103.38 | ( | Official Build | ) | (x86_64) | Revision | a733b5afbb3ba618844ff8876b89ad1a774b2f18-refs/branch-heads/8103@{#1034} | OS | Linux | JavaScript | V8 | 15.7.112.23 | User Agent | Mozilla/5.0 (X11; Linux x8",
+  "toggles": [
+   {
+    "label": "Always use secure connections",
+    "checked": true
+   },
+   {
+    "label": "Warn you if a password was compromised in a data breach",
+    "checked": true
+   },
+   {
+    "label": "Use secure DNS",
+    "checked": false
+   }
+  ],
+  "radios": [
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "Enhanced protection",
+    "checked": false
+   },
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "Standard protection",
+    "checked": true
+   },
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "No protection (not recommended)",
+    "checked": false
+   },
+   {
+    "tag": "controlled-radio-button",
+    "label": "Warns you for insecure public sites",
+    "checked": true
+   },
+   {
+    "tag": "controlled-radio-button",
+    "label": "Warns you for insecure public & private sites",
+    "checked": false
+   }
+  ],
+  "text": "Settings | Search settings | Settings | You and Google | Autofill and passwords | Privacy and security | Performance | AI innovations | Appearance | Search engine | Default browser | On startup | Languages | Downloads | Accessibility | System | Reset settings | Extensions | About Chrome | No search results found | Go to | Google Chrome help | if you can't find what you're looking for | Security | Safe Browsing | Enhanced protection | Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Google | When on | Warns you about dangerous sites, even ones Google didn't know about before, by analyzing more data from sites than standard protection. You can choose to skip Chrome warnings. | In-depth scans for suspicious downloads. | When you're signed in, protects you across Google services. | Improves security for you and everyone on the web. | Things to consider | Sends the URLs of sites you visit and a small sample of page content, downloads, extension activity, and system information to Google Safe Browsing to check if they're harmful. | When you're signed in, this data is linked to your Google Account to protect you across Google services, for example increasing protection in Gmail after a security incident. | Doesn't noticeably slow down your browser or device. | Learn more about | how Chrome keeps your data private | Standard protection | Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Chrome sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent. | No protection (not recommended) | Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Google products won't be affected. | Secure connections | Always use secure connections | For sites that don’t support secure connections, get warned before visiting the site | Warns you for insecure public sites | Warns you for insecure public & private sites | Private sites might include things like your company’s intranet | Advanced | Warn you if a password was compromised in a data breach | When you use a password, Chrome warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google. | Use secure DNS | This setting is disabled on managed browsers | Select DNS provider | OS default (when available) | Add custom DNS service provider | CleanBrowsing (Family Filter) | OpenDNS | Google (Public DNS) | Cloudflare (1.1.1.1) | Manage JavaScript optimization & security | Speeds up sites with Chrome's V8 engine but makes Chrome slightly less resistant to attacks. This setting is on. | Manage security keys | Reset security keys and create PINs | Manage certificates | Manage HTTPS/SSL certificates and settings | Opens in new tab | Google Advanced Protection Program | Provides Google’s strongest account security for people at risk of targeted attacks | Opens in new tab",
+  "neverssl": "chrome-error://chromewebdata/"
+ },
+ "second": {
+  "step": "second",
+  "version": "Google LLC | Copyright 2026 Google LLC. All rights reserved. | Google Chrome | 157.0.8103.38 | ( | Official Build | ) | (x86_64) | Revision | a733b5afbb3ba618844ff8876b89ad1a774b2f18-refs/branch-heads/8103@{#1034} | OS | Linux | JavaScript | V8 | 15.7.112.23 | User Agent | Mozilla/5.0 (X11; Linux x8",
+  "toggles": [
+   {
+    "label": "Always use secure connections",
+    "checked": true
+   },
+   {
+    "label": "Warn you if a password was compromised in a data breach",
+    "checked": true
+   },
+   {
+    "label": "Use secure DNS",
+    "checked": false
+   }
+  ],
+  "radios": [
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "Enhanced protection",
+    "checked": false
+   },
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "Standard protection",
+    "checked": true
+   },
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "No protection (not recommended)",
+    "checked": false
+   },
+   {
+    "tag": "controlled-radio-button",
+    "label": "Warns you for insecure public sites",
+    "checked": true
+   },
+   {
+    "tag": "controlled-radio-button",
+    "label": "Warns you for insecure public & private sites",
+    "checked": false
+   }
+  ],
+  "text": "Settings | Search settings | Settings | You and Google | Autofill and passwords | Privacy and security | Performance | AI innovations | Appearance | Search engine | Default browser | On startup | Languages | Downloads | Accessibility | System | Reset settings | Extensions | About Chrome | No search results found | Go to | Google Chrome help | if you can't find what you're looking for | Security | Safe Browsing | Enhanced protection | Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Google | When on | Warns you about dangerous sites, even ones Google didn't know about before, by analyzing more data from sites than standard protection. You can choose to skip Chrome warnings. | In-depth scans for suspicious downloads. | When you're signed in, protects you across Google services. | Improves security for you and everyone on the web. | Things to consider | Sends the URLs of sites you visit and a small sample of page content, downloads, extension activity, and system information to Google Safe Browsing to check if they're harmful. | When you're signed in, this data is linked to your Google Account to protect you across Google services, for example increasing protection in Gmail after a security incident. | Doesn't noticeably slow down your browser or device. | Learn more about | how Chrome keeps your data private | Standard protection | Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Chrome sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent. | No protection (not recommended) | Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Google products won't be affected. | Secure connections | Always use secure connections | For sites that don’t support secure connections, get warned before visiting the site | Warns you for insecure public sites | Warns you for insecure public & private sites | Private sites might include things like your company’s intranet | Advanced | Warn you if a password was compromised in a data breach | When you use a password, Chrome warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google. | Use secure DNS | This setting is disabled on managed browsers | Select DNS provider | OS default (when available) | Add custom DNS service provider | Google (Public DNS) | OpenDNS | Cloudflare (1.1.1.1) | CleanBrowsing (Family Filter) | Manage JavaScript optimization & security | Speeds up sites with Chrome's V8 engine but makes Chrome slightly less resistant to attacks. This setting is on. | Manage security keys | Reset security keys and create PINs | Manage certificates | Manage HTTPS/SSL certificates and settings | Opens in new tab | Google Advanced Protection Program | Provides Google’s strongest account security for people at risk of targeted attacks | Opens in new tab",
+  "neverssl": "https://funtranscendentshinychart.neverssl.com/online/"
+ },
+ "warn": {
+  "step": "warn",
+  "err http://http.badssl.com/": "Error: page.goto: net::ERR_BLOCKED_BY_CLIENT at http://http.badssl.com/\nCall log:\n\u001b[2m  - navigating to \"http://http.bad",
+  "before": "chrome-error://chromewebdata/",
+  "dialogText": "",
+  "afterContinue": "http://http.badssl.com/ | http.badssl.com",
+  "revisit": "http://http.badssl.com/ | http.badssl.com"
+ },
+ "enhanced": {
+  "step": "enhanced",
+  "text": "Settings | Search settings | Settings | You and Google | Autofill and passwords | Privacy and security | Performance | AI innovations | Appearance | Search engine | Default browser | On startup | Languages | Downloads | Accessibility | System | Reset settings | Extensions | About Chrome | No search results found | Go to | Google Chrome help | if you can't find what you're looking for | Security | Safe Browsing | Enhanced protection | Real-time, AI-powered protection against dangerous sites, downloads, and extensions that's based on your browsing data getting sent to Google | When on | Warns you about dangerous sites, even ones Google didn't know about before, by analyzing more data from sites than standard protection. You can choose to skip Chrome warnings. | In-depth scans for suspicious downloads. | When you're signed in, protects you across Google services. | Improves security for you and everyone on the web. | Things to consider | Sends the URLs of sites you visit and a small sample of page content, downloads, extension activity, and system information to Google Safe Browsing to check if they're harmful. | When you're signed in, this data is linked to your Google Account to protect you across Google services, for example increasing protection in Gmail after a security incident. | Doesn't noticeably slow down your browser or device. | Learn more about | how Chrome keeps your data private | Standard protection | Protects against sites, downloads, and extensions that are known to be dangerous. When you visit a site, Chrome sends an obfuscated portion of the URL to Google through a privacy server that hides your IP address. If a site does something suspicious, full URLs and bits of page content are also sent. | No protection (not recommended) | Does not protect you against dangerous websites, downloads, and extensions. Your Safe Browsing settings in other Google products won't be affected. | Secure connections | Always use secure connections | For sites that don’t support secure connections, get warned before visiting the site | Warns you for insecure public sites | Warns you for insecure public & private sites | Private sites might include things like your company’s intranet | Advanced | Warn you if a password was compromised in a data breach | When you use a password, Chrome warns you if it has been published online. When doing this, your passwords and usernames are encrypted, so they can’t be read by anyone, including Google. | Use secure DNS | This setting is disabled on managed browsers | Select DNS provider | OS default (when available) | Add custom DNS service provider | OpenDNS | Cloudflare (1.1.1.1) | CleanBrowsing (Family Filter) | Google (Public DNS) | Manage JavaScript optimization & security | Speeds up sites with Chrome's V8 engine but makes Chrome slightly less resistant to attacks. This setting is on. | Manage security keys | Reset security keys and create PINs | Manage certificates | Manage HTTPS/SSL certificates and settings | Opens in new tab | Google Advanced Protection Program | Provides Google’s strongest account security for people at risk of targeted attacks | Opens in new tab"
+ },
+ "first_no_variations_seed": {
+  "step": "first",
+  "version": "Google LLC | Copyright 2026 Google LLC. All rights reserved. | Google Chrome | 157.0.8103.38 | ( | Official Build | ) | (x86_64) | Revision | a733b5afbb3ba618844ff8876b89ad1a774b2f18-refs/branch-heads/8103@{#1034} | OS | Linux | JavaScript | V8 | 15.7.112.23 | User Agent | Mozilla/5.0 (X11; Linux x8",
+  "toggles": [
+   {
+    "label": "Always use secure connections",
+    "checked": true
+   },
+   {
+    "label": "Warn you if a password was compromised in a data breach",
+    "checked": true
+   },
+   {
+    "label": "Use secure DNS",
+    "checked": false
+   }
+  ],
+  "radios": [
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "Enhanced protection",
+    "checked": false
+   },
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "Standard protection",
+    "checked": true
+   },
+   {
+    "tag": "settings-collapse-radio-button",
+    "label": "No protection (not recommended)",
+    "checked": false
+   },
+   {
+    "tag": "controlled-radio-button",
+    "label": "Warns you for insecure public sites",
+    "checked": true
+   },
+   {
+    "tag": "controlled-radio-button",
+    "label": "Warns you for insecure public & private sites",
+    "checked": false
+   }
+  ],
+  "err http://neverssl.com/": "Error: page.goto: net::ERR_BLOCKED_BY_CLIENT at http://neverssl.com/\nCall log:\n\u001b[2m  - navigating to \"http://neverssl.co",
+  "neverssl": "chrome-error://chromewebdata/"
+ }
+}

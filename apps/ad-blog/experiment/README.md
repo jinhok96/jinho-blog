@@ -125,13 +125,15 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 | --- | --- | --- |
 | 발견 | 공식 피드: Windows Blog, Chrome Releases(Stable), Google Workspace Updates, Google Blog, OpenAI News, Apple Newsroom + CISA 악용 취약점(소비자 제품) | `demand_check.py discover` |
 | 발견 | Windows 메시지 센터(종료·인증서 만료 공지), Gemini 릴리스 노트, Anthropic 뉴스, Apple 보안 업데이트, Microsoft 365 로드맵 | 직접 열기 (`discover` 출력 하단 링크) |
+| 발견 (독자 관심) | 대형 IT 매체 인기 글 목록: Ars Technica 홈 `Most Read`, The Verge 홈 `Most Popular`, 9to5Google·9to5Mac 홈 `Trending from the 9to5 network`(9to5Google·9to5Mac 글만. 같은 네트워크의 전기차·드론 매체 글과 `Trending Deals`는 제외). 많이 읽힌 소식 중 제품·기능 변화를 고르고, 무엇 때문에 읽혔는지(요금·종료·개인정보·새 기능)를 보고 그 뒤에 생길 사용법·문제 검색을 후보로 | 직접 열기 (홈 HTML에 목록 포함, 2026-11-05 확인) |
 | 수요 확인 | Google·Bing·YouTube 자동완성 (YouTube는 "not showing"·"not working" 같은 문제 해결형이 잘 나옴) | `demand_check.py suggest "키워드"` |
 | 수요 크기 비교 | Google Trends 상대 검색량(미국, 최대 5개) + 관련 검색어(상위·급상승). 기준 키워드를 매번 함께 넣어 요청끼리 비교. YouTube 검색 기준(`--property youtube`), 카테고리로 뜻 좁히기(`--cat 5` Computers & Electronics), 주제 ID(`--suggest`로 찾은 `/g/…`)로 표현 차이 묶기 | `trends_compare.py [--time "now 7-d"] [--property youtube] [--cat 5] [--related] "키워드" ...` |
 | 소제목·FAQ 소재 | Chrome 도움말 커뮤니티, Apple Discussions 질문 제목, 자동완성 하위 검색어 | 직접 열기 |
 | 사후 판단 | Search Console 노출 검색어 | `gsc_report.py` |
 
-- **뉴스 칼럼** (일반 세션에서 칼럼으로 대체할 때): 공식 피드(`demand_check.py discover`와 위 표의 직접 열기 목록)·Google News RSS·Trends 급상승 RSS가 주 소스 (2026-10-17). 발표 내용은 공식 피드로 확인하고, 화제성 신호는 Google News RSS 기사 수·Trends 급상승 RSS·자동완성으로 잼. Google News RSS 기간은 `when:` 값을 선정 기준(화제 48시간, 영향 30일)에 맞춤
+- **뉴스 칼럼** (일반 세션에서 칼럼으로 대체할 때): 공식 피드(`demand_check.py discover`와 위 표의 직접 열기 목록)·Google News RSS·Trends 급상승 RSS가 주 소스 (2026-10-17). 발표 내용은 공식 피드로 확인하고, 화제성 신호는 Google News RSS 기사 수·Trends 급상승 RSS·자동완성·대형 IT 매체 인기 글 목록(위 표) 등장 여부로 잼. Google News RSS 기간은 `when:` 값을 선정 기준(화제 48시간, 영향 30일)에 맞춤
 - **일반 세션**: 기술 뉴스 RSS(The Verge, BleepingComputer, 9to5Google, 9to5Mac, Windows Central, Ars Technica)와 Google News RSS(`news.google.com/rss/search?q=…+when:7d`)는 이슈 확인 보조용. 뉴스 자체보다 그 뒤에 생길 사용법·문제 검색을 노림
+- **인기 글 목록** (2026-11-05 사용자 결정, 네이버 크리에이터 어드바이저 '메인 유입 트렌드'에서 인기 글 소재를 고르는 방법을 옮김): 독자가 실제로 많이 읽은 소식을 확인하는 데만 씀. 목록에는 정치·리뷰·업계 뉴스가 섞여 있으므로 [주제 선정 기준](#주제-선정-기준) 0번과 [뉴스 칼럼 선정 기준](#뉴스-칼럼-선정-기준)의 제외 항목으로 거름. 목록에 올랐다는 것은 검색 수요의 근거가 아니므로 `demand_check.py suggest`로 따로 확인하고, 사실은 1차 출처로 다시 확인하며 기사의 문장·구성은 따라 쓰지 않음
 - 쓸 수 없음: Reddit(본문 비어 있음), Quora·Downdetector(403), Google 검색 결과(429), Bing Webmaster Tools API(지원 종료), Ahrefs·Semrush 무료 도구(사람 확인·로그인 필요 → 자동 조회 안 함)
 - pytrends 4.9.2(2023-04 이후 업데이트 없음)는 같은 Trends API를 쓰므로 따로 설치하지 않음. 쓸 만한 기능(YouTube·카테고리·관련 주제·주제 ID)은 `trends_compare.py`로 옮김. 급상승 목록 함수는 404 (2026-10-14 확인)
 - Trends API는 쿠키 없이 부르면 429지만, 홈에서 `NID` 쿠키를 받은 뒤 부르면 열림 (2026-10-14 확인, `trends_compare.py`). 연속 호출하면 429가 나서 재시도(최대 약 2.5분 대기)

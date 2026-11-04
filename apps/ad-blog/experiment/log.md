@@ -47,7 +47,7 @@
 
 **다음 할 일**
 
-- **사용자: Search Console URL 검사 → 색인 생성 요청** (하루 한도 안에서 위에서부터. 11-05 분석으로 순서를 바꿈: 아래 `URL is unknown` 15편은 글을 고치기 전에는 Google이 스스로 찾을 길이 없어 보임): `https://tool-proof.com/posts/best-free-pdf-tools`(허브) · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default` · `https://tool-proof.com/posts/gemini-connected-apps` · `https://tool-proof.com/posts/apple-mail-exchange-not-syncing` → (이미 `Discovered`) 허브 `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools`. `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`는 콘텐츠 정리 3·4번으로 고칠 예정이라 뺌
+- ~~**사용자: Search Console URL 검사 → 색인 생성 요청**~~ → **같은 세션 후속(사용자 결정)으로 취소: 당분간 색인 요청을 하지 않음** (아래 목록은 기록으로만 남김. 하루 한도 안에서 위에서부터. 11-05 분석으로 순서를 바꿈: 아래 `URL is unknown` 15편은 글을 고치기 전에는 Google이 스스로 찾을 길이 없어 보임): `https://tool-proof.com/posts/best-free-pdf-tools`(허브) · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default` · `https://tool-proof.com/posts/gemini-connected-apps` · `https://tool-proof.com/posts/apple-mail-exchange-not-syncing` → (이미 `Discovered`) 허브 `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools`. `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`는 콘텐츠 정리 3·4번으로 고칠 예정이라 뺌
 - **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
 - **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 25일·색인율 32%·주간 클릭 증가 0주)
 - Claude: V7 — `gsc_report.py` 사이트맵 표에서 rss.xml 다음 다운로드 확인 뒤 7일(늦어도 11-15) 판정. 근거는 대시보드 history `posts`의 글별 `index.sitemaps`(피드에서 확인된 글이 늘었는지)와 `coverage` 변화, `summary.crawl.inFeed`
@@ -59,6 +59,12 @@
 - Claude: 발행 53편 (허브 4개)
 - 대시보드: 페이지 **Version 29** 발행(사이트맵·피드별 다운로드, 글 상세 'Google이 본 곳', 할 일 1 `· 피드` 표시) + `stats` 9개 + `history` 9개 batch 성공(회차 2026-11-04T21:54:53Z, DB 문서 339개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값 변화 없음(새 색인 없음). 회차 시점 28일 노출 1,050·클릭 17·평균 23.3위, `traffic` Cloudflare 28일 조회수 79·방문 71(10-07~11-04), `summary.adsense` 운영 25일·색인율 0.321·클릭 연속 증가 0, `summary.crawl` 미색인 36편 중 Google이 본 링크 19편·**피드에서 확인된 글 `inFeed` 16편(모두 미색인)** — 이 회차부터 글별 `index.sitemaps`·`referring`과 `summary.sitemaps`가 history에 쌓임. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 - 배포: 이 세션 PR (CI 통과 후 머지)
+
+**같은 세션 후속 (사용자 결정, 2026-11-05)**
+
+- 사용자 질문 "색인 요청 안 하고 그대로 두면 언젠가는 색인되지 않을까"에 답함: 색인 요청은 크롤링을 앞당길 뿐 색인을 보장하지 않고, 갱신 예정 글(콘텐츠 정리 3·4번, `chrome-http-warning-default`·`gemini-connected-apps`·`apple-mail-exchange-not-syncing`)은 고칠 때 피드·sitemap으로 다시 알려지며, AdSense 재신청(2027-01-11 이후)까지 여유가 있음. 비용은 갱신 계획이 없는 PDF·사진 상시 글 9편 등의 발견 시점을 알 수 없다는 것, 그리고 발견된 19편도 크롤링 전이라 색인율에는 Google의 크롤링 판단이 더 큰 병목이라는 것
+- **결정: 당분간 색인 요청을 하지 않고 그대로 둠** → README [결정사항](README.md#결정사항)에 '색인 요청' 행 추가, 개선 세션 1번·주간 SEO 점검 기록 규칙에서 색인 요청 URL을 '다음 할 일'·'사용자가 할 일'에 올리지 않게 고침. PR #315는 그 전에 머지됨 → 이 결정은 새 PR
+- 이후 세션: 미발견 15편은 실제 갱신거리(1차 출처 변화·앱 새 버전 재측정·지난 일정 정리)가 생길 때 한 세션 1편씩 고쳐 피드·sitemap으로 알림. 날짜만 바꾸는 갱신은 하지 않음. 대시보드 history의 글별 `index.sitemaps`·`coverage`로 갱신 뒤 발견되는지 기록
 
 ## 2026-11-05 · 세션 80 (정기 실행, 개선 세션): `gemini-gems-to-skills` 사실 갱신(Gems 11-17 읽기 전용·12-17 삭제, .docx 지원) + 역링크 몰린 문단 점검
 

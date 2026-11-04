@@ -49,8 +49,9 @@ export default function RootLayout({ children }: { children: ReactNode }) {
           {children}
         </main>
         <Footer />
-        <AdSenseScript />
+        {/* 형제 effect는 렌더 순서대로 실행 → GA 동의 기본값을 AdSense 스크립트보다 먼저 dataLayer에 넣음 */}
         <AnalyticsScript />
+        <AdSenseScript />
       </body>
     </html>
   );

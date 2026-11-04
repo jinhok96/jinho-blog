@@ -234,6 +234,7 @@ tags:
 - 내부 링크: 관련 글이 있으면 How-to·측정 글은 4개 이상, 그 밖의 글은 2개 이상 연결 (`/posts/{slug}`)
 - **클러스터 규칙** ([clusters.md](clusters.md#규칙), 2026-10-22): 허브 → 클러스터의 모든 상시 글, 상시 글 → 허브 + 같은 클러스터 글 1개 이상, 뉴스 칼럼 → 같은 클러스터 상시 글이나 허브 1개 이상. 모든 글은 다른 글에서 링크 2개 이상을 받고, 새 글은 이미 색인된 같은 클러스터 글에서 1개 이상 받음 (새 URL을 Google이 빨리 발견하게)
 - 역링크는 링크할 문단에 내용이 이어지는 1문장을 더해서 넣음 (목록 끝에 "Related" 링크만 붙이지 않음). 이 정도 추가는 `updatedAt`을 바꾸지 않음
+- 한 문단의 내부 링크는 4개까지. 이미 4개인 문단에는 역링크를 더하지 않고, 내용이 이어지는 다른 절에 넣거나 같은 주제끼리 새 문단으로 나눔 (2026-11-05: 색인된 같은 클러스터 글이 적어 `gemini-gems-to-skills`의 한 문단에 역링크가 12개·373단어로 쌓였던 사례. 세션 80에서 문장·링크는 그대로 두고 3문단으로 나눔)
 - 허브 글: 같은 클러스터 상시 글이 3편 쌓이면 허브 글(`Best Free {분야} Tools` 등)을 만들어 개별 글을 모두 연결하고, 새 측정이 생길 때마다 갱신 ([traffic-playbook.md](traffic-playbook.md) 3번)
 - 점검: `python3 -I apps/ad-blog/experiment/tools/link_audit.py --only-problems`
 - 앵커 텍스트: 링크 대상이 드러나게 씀 (`our test of 8 offline transcription models`). "click here"·"this article"·"read more" 금지, 링크를 연달아 붙이지 않음

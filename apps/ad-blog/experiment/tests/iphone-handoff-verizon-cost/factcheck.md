@@ -60,3 +60,10 @@
   - Some apps ask again ↔ "Some third-party iPhone apps, like banking apps, may require you to approve access on your existing device before your secondary device is authenticated."
   - Deleting the eSIM isn't enough(강조) ↔ "You must contact your carrier to turn off iPhone Handoff. If you delete an eSIM from your iPhone, your carrier may continue to charge you until you request them to turn off the service."
 - 대표 이미지를 뺀 본문 이미지 2 → 3장 (writing-guide 본문 이미지 규칙)
+
+## 2026-11-05 재확인 (세션 81 개선 세션: 칼럼 후속 확인만)
+
+- Apple 127274를 curl로 다시 받아(`source-apple-127274-2026-11-05.txt`, 11-04 21:30 UTC) 10-27판과 단어 단위 diff: **Published Date October 19 → November 03, 2026**. 바뀐 것 ① 지원 통신사에 **`United Kingdom: EE`** 추가(미국은 여전히 `USA: T-Mobile`만) ② 옮겨 가는 메시지 "(iMessage, RCS, or SMS/MMS)" → "(iMessage, RCS, or SMS)" ③ 새 iPhone 설정·eSIM 옮기기 문장에 "if supported by your carrier" 추가 ④ 문장 다듬기("Contact your carrier if you need help…" → "If you need help…, contact your carrier", Dual SIM 문장에서 "simultaneously" 삭제 등)
+- Verizon 10-16 발표(`iphone-duo-verizon-offers`) 다시 열어 봄: 여전히 "iPhone Handoff coming soon to Verizon", "$10/month", 시작일 없음. WebSearch(11-05)에도 Verizon 시작일·AT&T 지원 발표 없음
+- 판단: 본문의 미국 사실(미국 지원 통신사 T-Mobile뿐·Verizon 미시작·요금)은 그대로 맞고, "still lists only two supported carriers as of October 17, 2026"은 날짜를 밝힌 문장이라 틀린 문장은 아님. 본문에 MMS 언급 없음. EE는 '쓰지 않은 것'(미국 독자)과 같은 이유로 생략 → **지금은 고치지 않음**(`updatedAt` 그대로, V7 판정 중 피드 구성 유지)
+- V7 판정 뒤 갱신 후보(한 번에): ① 27번째 줄 통신사 문장을 "Apple's guide, last updated November 3, 2026, still lists T-Mobile as the only U.S. carrier"처럼 최신 판으로 ② 'What to watch next'의 지난 일정 "October 23: iPhone Duo arrives in stores…" 줄 정리 ③ 타임라인 그래픽은 지난 일정이라 그대로 둠

@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-05 · 세션 80 (정기 실행, 개선 세션): `gemini-gems-to-skills` 사실 갱신(Gems 11-17 읽기 전용·12-17 삭제, .docx 지원) + 역링크 몰린 문단 점검
+
+세션 시각: 2026-11-05 00:17 KST(목) → 00시 실행 + 목요일이라 개선 세션. 같은 날 앞 세션 없음(11-04 세션 77~79가 다룬 `turn-off-ai-in-brave`·`chrome-autofill-settings`·`chrome-http-warning-default`는 건드리지 않음). 열린 PR 없음. 작업 브랜치는 `origin/main`(7b1b882)과 같음, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지를 새로 만들지 않아 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-07 ~ 11-04, 세션 79 이후 바뀐 값만)**
+
+- 노출 1,023 → **1,032**, 클릭 15, CTR 1.5%, 평균 순위 23.2 (`spotify-family-qr-code-verification` 270·17.4 / `turn-off-ai-in-chrome` 178·17.9 / `image-to-text-offline-free` 127·15.8)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 0 (진행 중, 노출 83)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 16 · `URL is unknown` 20. 새 크롤링 없음(가장 최근 색인 글 크롤링 `image-to-text-offline-free` 11-02 13:28). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 19편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 25일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 주간 점검(11-02) 우선순위 1~3은 처리됨. 1(색인)은 링크한 색인 글이 다시 크롤링되지 않아 보류, 2는 보류 2건, 3은 허브 4/4. **4(Search Console 보강)**: 노출 100회 이상 3편은 모두 V 판정 중 → 8~20위 검색어가 있는 V 대상 아닌 글을 찾음(페이지×검색어 113행). `gemini-gems-to-skills`(색인, 28일 49회·8.4위, `where did gems go in gemini` 6.0위)가 해당하고, **5(일정 후속)·버전 재확인**도 겹침: 글이 말한 "11월 중 개인 계정 Gems 종료"가 다가오는데 1차 출처를 다시 열어 보니 글 내용이 틀리게 됨 → 이 글 1편을 한 가지 변경(content refresh)으로 고침
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — references/content-refresh.md: Refresh vs Rewrite 판단(핵심 유지·세부 낡음 → Refresh), Freshness·Accuracy pass(날짜·기능 설명을 1차 출처와 대조), Before You Edit: Find the Gap(상위 결과 유형·빈틈), Keep What Already Works(URL·제목·소제목·순위 검색어 절 유지, 날짜 표기), Structure pass(몰린 링크 문단 나눔), AI-Tell Check(콜론 강조 1곳 고침))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 4·5 · 8~20위 + 일정 후속 | `gemini-gems-to-skills` (ai-settings 상시 글, 색인) | Google 1차 출처 5쪽을 다시 받아(`tests/gemini-gems-to-skills/sources-2026-11-05/`) 10-13 기록과 비교 → **틀리게 된 것 2가지**: ① 글은 11-17을 "모든 계정 Gems가 Settings로 이동, 계속 사용"으로 적었으나 FAQ 11-05판은 개인 계정(18세 이상)이 **11-17 스킬로 바뀌고 Gems는 읽기 전용(사용·편집 불가)**, **12-17 Gems 삭제**(그 전까지 파일 내려받기), 18세 미만은 나중 (Settings 이동은 Workspace 관리자 문서의 업무·학교 계정) ② 글은 .docx·.xlsx 미지원으로 적었으나 도움말 업로드 목록에 .docx·.xlsx·.pptx 등 추가, 미지원은 옛 .doc·.xls·.ppt·오디오·영상·압축. 그 밖에 자동 이전에서 빠지는 파일 목록·100MB 초과 시 큰 파일부터 제외, Drive 파일은 도움말(Add → Drive·Photos·Notebooks)과 FAQ("coming weeks")가 다름을 둘 다 적음, 경로 Customize > Skills·Create > Create manually·Add 버튼, `@` 단축키. 첫 문단·일정 표(4행 → 6행)·'What doesn't carry over' 표·직접 이전 단계·'Should you move'·FAQ 2개, 소제목 2곳 첫 문장을 떼어 읽어도 되는 답으로. **예시 Gem 변환 재실행**(`gem_to_skill.py --rules 2026-11-05`, skills-ref 0.1.1): .docx 유지 → 지식 파일 3/4 유지·37 KB·Valid skill (10-13 규칙 재실행이 기존 결과와 같음을 확인 후 파일명에 날짜). 그림 2장(`gems-to-skills-timeline`·`gem-converted-to-skill`)을 `chart_style` 토큰으로 다시 그림(이전 변환 그림의 터미널 모양 패널 제거). 제목·설명·URL 그대로, `updatedAt` 2026-11-04T15:40Z | **V8** (position, 판단 12-03) |
+| 2 | 7 · 문제 찾기 (`seo-audit` Internal Linking·Content Quality) | 사이트 53편 → `gemini-gems-to-skills` | 문단별 내부 링크 수를 셈: 한 문단 최대 링크 중앙값 2개, 5개 이상 문단은 3편, **8개 이상은 이 글 1편(한 문단 12개·373단어)**. 색인된 `ai-settings` 글이 적어(색인 4편 중 V 판정 중 2편) 새 글 역링크가 이 글 끝 문단에 계속 붙은 결과(해석) → 문장·링크 13개는 그대로 두고 주제별 3문단(브라우저 AI 6 · Gmail·계정 데이터 4 · 이미지·허브 2)으로만 나눔(V8 변경에 포함). 다음은 `check-if-image-is-ai-generated` 한 문단 7개(V6 판정 중 → 판정 뒤). writing-guide 링크 규칙에 "한 문단 내부 링크 4개까지, 넘으면 다른 절·새 문단" 추가 | V8에 포함 |
+
+- **피드(V7) 변화**: 빌드한 `rss.xml` 20개 → `gemini-gems-to-skills`(색인)가 맨 앞에 새로 들어오고 `arc-browser-shutting-down`(Discovered, 세션 78에 들어온 글)이 다시 빠짐. arc는 Google이 피드에서 본 적이 없어 V7 판정 대상에서 뺀다고 V7 행에 적음
+- **상위 결과** (WebSearch 11-05): Android Authority·PCWorld·Android Central·Notebookcheck·tbreak 등 뉴스 기사와 개인 블로그. 검색 요약 기준 12-17 삭제일·자동 이전에서 빠지는 파일 목록을 다룬 결과 없음 → 이 글의 빈틈으로 채움 (기사 내용은 인용하지 않음)
+- 수요 근거: 자동완성(11-04) `gemini gems going away`·`migrating google gemini gems to skills`·`gems to skills gemini`(Google), `gemini skills vs gems`(Bing), `gemini gems to skills`(YouTube). Trends(US, 최근 3개월, 두 키워드끼리) `gemini gems` 평균 12.6·최근 7개 지점 21.3, `gemini skills` 23.9·39.7 (`remove background` 기준으로는 0.2·0.4)
+- 빌드 HTML: title 67자(접미사 포함, 본제목 54자 그대로)·h1 1개·h2 9개, 설명 157자 그대로, BlogPosting `dateModified` 2026-11-04T15:40Z·BreadcrumbList, `<pre>` 0(인라인 `/`·`@`·파일 이름만), 본문 첫 이미지 = 대표 이미지 + 본문 이미지 3장(모두 alt), sitemap `lastmod` 갱신. 본문 약 2,770단어. lint(type-check 포함)·test·build 통과, `link_audit` 2건 그대로. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림
+
+**알게 된 것**
+
+- Google은 Gems 종료 일정을 **도움말 FAQ에서만 조용히 바꿈**(블로그·Workspace Updates 새 글 없음, 11-04까지). Workspace 관리자 문서(9-30 갱신)는 "11-17 모든 사용자 계속 사용"으로 남아 있어 개인·업무 계정 일정이 갈라짐 → 일정형 상시 글은 블로그 공지보다 FAQ 원문을 주기적으로 다시 받아 비교해야 함 (이번처럼 sources 폴더에 날짜별 사본을 남기면 다음 비교가 쉬움)
+- 같은 Google 도움말 안에서도 기능 배포 중에는 문장이 서로 어긋남(도움말 Add → Drive vs FAQ "coming weeks", 업로드 절 "For now … only by uploading" vs Add 버튼) → 단정하지 않고 "Google's pages disagree"로 둘 다 적는 방식
+- 색인된 같은 클러스터 글이 적으면 클러스터 규칙(새 글은 색인된 글에서 링크 받기)이 몇 편에 역링크를 몰아 붙임. 문단 단위 링크 수 상한을 두어야 읽기 품질이 유지됨
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (세션 79 목록 그대로, 하루 한도 안에서 위에서부터): `https://tool-proof.com/posts/best-free-pdf-tools` · `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools` (허브 3편) → `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` · `https://tool-proof.com/posts/pixel-watch-safety-signal-ending` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default` → `https://tool-proof.com/posts/chrome-autofill-settings`. 이미 색인된 `https://tool-proof.com/posts/gemini-gems-to-skills`도 11-17 전에 Google이 새 판을 보도록 **'색인 생성 요청'(재크롤링)** 1회 권장 (선택)
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 25일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296)을 다시 받아 `sources-2026-11-05/`와 비교 — 일정이 바뀌었으면 V8 판정 전이라도 정확성 우선으로 고치고 V8 행에 표시. 바뀐 게 없으면 글은 그대로 (12-17 뒤 한 번 더)
+- Claude: V7 판정 뒤 `chrome-http-warning-default`에 Chrome 157 결과 반영(세션 79), `turn-off-ai-in-chrome`은 V3 판정(11-18) 뒤. `check-if-image-is-ai-generated`의 링크 7개 문단은 V6 판정(11-26) 뒤 나눔
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번 `office-2021-end-of-support`는 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V7(첫 rss.xml 다운로드 + 7일, 늦어도 11-15)·**V8(12-03)**
+- Claude(11-06 금 일반 세션): 세션 77 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`) + Firefox 160(11-06) 출시 확인. 새 `ai-settings` 글 제목은 `How to Turn Off …`(10편)과 다른 틀로. 새 글 역링크는 한 문단 4개 상한(writing-guide 링크)
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: `stats` 9개 + `history` 9개 batch 성공(회차 2026-11-04T15:45:44Z, DB 문서 330개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값 변화 없음(새 색인 없음). 회차 시점 28일 노출 1,032·클릭 15, `traffic` Cloudflare 28일 조회수 79·방문 71(10-07~11-04), `summary.adsense` 운영 25일·색인율 0.321·클릭 연속 증가 0, `summary.crawl` 미색인 36편 중 Google이 본 링크 19편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-04 · 세션 79 (정기 실행, 개선 세션): Chrome 157 정식판으로 `chrome-http-warning-default` 재확인 + 외부 링크 후보(`link-building`) + 글 간 반복 문장 점검 + 대시보드 첫 관측값을 저장소 파일로
 
 세션 시각: 2026-11-04 18:15 KST(수) → 18시 실행이라 개선 세션. 같은 날 앞 세션은 00시 일반 세션 77(`turn-off-ai-in-brave` 새 글)·06시 개선 세션 78(콘텐츠 정리 1번 통합·노출 감소 분석·태그) → 그 글들은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(266b32d)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 새 글·대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

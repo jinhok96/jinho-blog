@@ -176,6 +176,7 @@ README [뉴스 칼럼 선정 기준](README.md#뉴스-칼럼-선정-기준)으�
 | Windows 월간 보안 업데이트 (둘째 화요일 10:00 태평양 시간) | 2026-10-13, 11-10, 12-08, 2027-01-12        | [Microsoft Learn 릴리스 주기](https://learn.microsoft.com/en-us/windows/deployment/update/release-cycle). release health 상태 페이지는 "Current status as of {날짜}"가 바뀌면 문장 diff (세션 61) | `windows-10-esu-extended`(빌드 번호 표) `windows-11-24h2-end-of-support`(11-10 첫 누락) |
 | Firefox 정식판 160·161 (2026-10-29 추가) | 2026-11-06 (160), 이후 약 4주 간격 | `https://product-details.mozilla.org/1.0/firefox_versions.json`(LATEST_FIREFOX_VERSION·NEXT_RELEASE_DATE)·firefox.com `/{버전}/releasenotes/`. Linux tar.xz를 받아 Xvfb에서 AI controls 화면·확인 창 확인, `browser/omni.ja` 문자열 diff (세션 62) | `turn-off-ai-in-firefox` |
 | iOS·iPadOS·macOS 마이너 업데이트 (2026-10-27 추가) | 비정기 (27.2: 2026-10-26) | [About iOS 27 Updates](https://support.apple.com/en-us/149076)·[보안 업데이트](https://support.apple.com/100100). 같은 URL의 설명서가 업데이트 날 바뀜 → 저장한 `tests/*/source-*.txt`와 diff (세션 56) | `turn-off-apple-intelligence-iphone` `ios-27-2-siri-ai-memory` `apple-mail-exchange-not-syncing` |
+| Gemini Gems → skills 전환 (2026-11-05 추가) | 개인 계정 2026-11-17(읽기 전용)·12-17(삭제), 업무 2027-03-01·학교 2027-06-01 이후 | [Gems 전환 FAQ](https://support.google.com/gemini/answer/18560919?hl=en)·[스킬 도움말](https://support.google.com/gemini/answer/17094296?hl=en)을 curl로 받아 `tests/gemini-gems-to-skills/sources-2026-11-05/`와 비교 (Google은 블로그 없이 FAQ만 고침, 세션 80). Workspace Updates 피드에서 Drive·공유·Workspace 앱 스킬 배포 공지 | `gemini-gems-to-skills` (V8 12-03), `gemini-connected-apps` |
 
 ## 주요 출처 (재확인용)
 

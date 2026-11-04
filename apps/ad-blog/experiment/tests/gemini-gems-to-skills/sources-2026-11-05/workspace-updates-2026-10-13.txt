@@ -1,0 +1,64 @@
+arrow_back
+Back
+October 13, 2026
+An update on the launch of skills in the Gemini app and Workspace
+Gemini
+Gemini App
+Google Workspace
+Other
+As previously
+announced
+, skills in the Gemini app are starting to roll out today, with an expected completion by mid-November. In the coming weeks, we’ll also introduce critical features like the ability to share Gemini app skills and an integration with Google Drive. We’ll post on the Workspace Updates blog as soon as those capabilities start rolling out.
+We also want to share an update on the rollout of skills in Workspace. We previously shared that the launch to Rapid Release would be complete by October 12, 2026, and the rollout to Scheduled Release would begin on October 19, 2026. While we work to ensure skills in Workspace launch in a safe and reliable manner, those rollouts are slightly delayed. We will share the updated timeline here as soon as it’s confirmed.
+Getting started
+Admins:
+Visit the Help Center to learn more about admin controls for
+skills in Workspace
+. There are no admin controls for skills in the Gemini app.
+End users:
+Visit the Help Center to learn more about
+skills in Workspace
+and
+skills in the Gemini app
+. Google Classroom users can also explore our guidance on
+creating
+and
+using
+teacher-led AI experiences directly in Classroom.
+Rollout pace
+Skills in the Gemini app
+Rapid Release and Scheduled Release domains:
+Gradual rollout starting on October 13, 2026, with expected completion by mid-November, 2026
+Skills in Workspace
+Rapid and Scheduled Release domains:
+Delayed until further notice
+Availability
+Skills in the Gemini app
+Available to all Google Workspace customers and users with personal Google accounts
+Skills in Workspace
+Business:
+Business Starter, Standard, and Plus
+Enterprise:
+Enterprise Starter, Standard, and Plus
+Education Add-ons:
+Google AI Pro for Education
+Other Add-ons:
+AI Expanded Access
+Note that skills in Workspace are available only to users over age 18; skills in the Gemini app will be available to users of all ages.
+Resources
+Workspace Blog:
+Teach Gemini your team’s know-hows with skills in Google Workspace
+News from Google Blog:
+Let skills in Gemini tackle your most repetitive tasks
+Workspace Handbook:
+AI skills 101: Customizing AI from Google for your role
+Workspace Admin Help:
+Allow people to use skills in Studio and Gemini in Workspace
+Workspace Studio Help:
+Learn how skills work in Google Workspace Studio
+Gemini Apps Help:
+Create & manage skills for Gemini Apps
+Workspace Admin Help:
+About the transition from Gems to skills
+Education Transition Guide:
+Gemini Gems and Skills Transition Guide for Education

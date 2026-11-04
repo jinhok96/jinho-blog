@@ -42,3 +42,33 @@
   - 대문자·공백·기호·연속/앞 하이픈·64자 초과는 오류. `résumé-coach`는 skills-ref 0.1.1 통과(유니코드 소문자 허용)지만 스펙 문서는 a-z만 허용
 - 이미지: `charts.py`(일정 그래프), `shots.py`(결과 JSON·SKILL.md를 HTML로 렌더링 → Playwright + `/opt/pw-browsers/chromium-1194` 스크린샷). 출력 `img/` → `content/posts/images/gemini-gems-to-skills/`로 복사
 - 재현: `python3 -m venv /tmp/sk && /tmp/sk/bin/pip install skills-ref python-docx matplotlib pillow playwright` 후 `make_sample.py` → `gem_to_skill.py sample/gem.json sample/knowledge out` → `agentskills validate out/weekly-newsletter-writer` → `name_tests.py` → `charts.py` → `shots.py`
+
+## 2026-11-05 재확인 (세션 80, 개선 세션 · 사실 갱신)
+
+확인일: 2026-11-05 KST (2026-11-04 UTC), curl로 원문을 받아 본문 텍스트를 `sources-2026-11-05/`에 저장. 10-13 원문 사본은 없어 위 '출처' 표의 10-13 기록과 비교.
+
+**갱신 이유**: 색인된 상시 글(28일 웹 노출 49·클릭 1·평균 8.4위, 10-08~11-04), 검색어 `where did gems go in gemini` 3회·6.0위, `gems to skills`·`gemini gems tools capabilities limitations` 각 1회·10위. 11월에 개인 계정 Gems 종료가 다가와 검색이 늘 시점인데, Google FAQ가 바뀌어 글의 11-17 설명("모든 계정, 계속 사용 가능")과 .docx 미지원 설명이 틀리게 됨. 자동완성(11-04): `gemini gems going away`(Google), `migrating google gemini gems to skills`(Google), `gems to skills gemini`(Google), `gemini skills vs gems`(Bing), `gemini gems to skills`(YouTube)
+
+**상위 결과 (WebSearch 11-05, `Gemini Gems going away November 17 read only December 17 skills`)**: Android Authority·PCWorld·Android Central·Notebookcheck·tbreak·TalkAndroid·Android Headlines 등 뉴스 기사와 개인 블로그(online-tech-tips, theaicareerlab). 검색 요약 기준 12-17 삭제일·11-05 파일 형식 목록을 다룬 결과 없음 → 빈틈(Uncovered)은 Google FAQ의 12-17 삭제일·읽기 전용 기간에 할 일·자동 이전에서 빠지는 파일 목록. 기사 내용은 인용하지 않음
+
+| 바뀐 사실 | 10-13 글 | 11-05 출처 문장 | 출처 파일 |
+| --- | --- | --- | --- |
+| 개인 계정 11-17 | "All accounts: Gems move to Settings, still usable" | "November 17, 2026: Gems transition to skills and become read only. You can still access your Gems, but can't use or edit them, or create new ones." (개인 계정 18세 이상 항목의 하위 목록, HTML `<ul>` 중첩 확인) | `gemini-help-18560919-transition-faq.txt` |
+| 개인 계정 12-17 (새 날짜) | 없음 | "December 17, 2026: Gems are removed from Gemini Apps." / "you can download your files from Gems before December 17, 2026" | 같은 파일 |
+| 18세 미만 개인 계정 | 없음 | "your Gems will transition to skills at a later date" | 같은 파일 |
+| 업무·학교 계정 11-17 | (위 'All accounts'에 포함) | "November 17, 2026 Gems move to Settings in the Gemini app. All users can continue to create, edit, and use them." (Workspace 관리자 문서, Last updated: September 30, 2026) | `workspace-admin-transition-to-skills.txt` |
+| 자동 이전에서 빠지는 파일 | GitHub만 | GitHub files · Audio · Video · .doc/.xls/.ppt · .zip/.tar/.7z/.rar/.gz/.tgz, 100MB 넘으면 "remove the largest files first" | FAQ |
+| 지원 파일 형식 | 텍스트·PDF·이미지만, .docx·.xlsx 미지원 | 지원 목록에 .docx·.odt·.xlsx·.ods·.pptx·.odp 등, 미지원 .doc·.xls·.ppt·.raw·오디오·영상·압축·일부 코드(.sql 포함) | `gemini-help-17094296-create-manage-skills.txt` |
+| Drive 파일 | "coming weeks" | 도움말 17094296: Add → "Google Drive, Google Photos, or Notebooks" / FAQ: "In the coming weeks, skills will have ... add files from Google Drive and notebooks" → **출처끼리 다름**, 글에 둘 다 적음 | 두 파일 |
+| 공유 | "coming weeks" | 그대로 (FAQ·Workspace Updates 10-13). 관리자 문서: 이전 시 "Drive permissions and sharing settings ... transfer" | FAQ·관리자 문서 |
+| 스킬 페이지 경로 | FAQ "Settings > Skills" vs 도움말 "Customize > Skills" | 둘 다 "Customize > Skills", "Create > Create manually", Replace skill 뒤 "Upload" | FAQ·도움말 |
+| 단축키 | "/ (soon to be @)" | 도움말 "/ (or @, if you have the updated shortcut)" | 도움말 |
+| Workspace 앱 스킬 배포 | 10-13 보류 | Workspace Updates 피드 11-04까지 새 일정 글 없음, 10-13 글 "Delayed until further notice" 그대로 | `workspace-updates-2026-10-13.txt` + 피드 목록 |
+| 유지 확인 | 구독 없이 사용, 18세 이상·Keep Activity, 업로드는 웹·Mac만, 100개 활성, Opal·Gems by Google Labs 11월 종료·Labs Gems는 이전 안 됨 | 모두 그대로 | 도움말·FAQ·블로그 각주 |
+
+**측정 재실행** (`gem_to_skill.py --rules 2026-11-05`, 같은 예시 Gem·지식 파일 4개, skills-ref 0.1.1, `python3 -m venv` + `pip install skills-ref==0.1.1 python-docx matplotlib pillow playwright`)
+
+- 10-13 규칙(`--rules 2026-10-13`)으로 다시 돌린 결과가 기존 `results/convert-report.json`과 같음을 확인한 뒤 파일 이름에 날짜를 붙임 (`convert-report-2026-10-13.json`·`validate-2026-10-13.txt`·`SKILL-2026-10-13.md`)
+- 11-05 규칙: .docx 유지(지원 목록), .csv·.md 유지, .DS_Store 제거 → 3/4 유지, 폴더 37,495바이트(37 KB), zip 최상위 SKILL.md, `agentskills validate` → `Valid skill` (`results/convert-report-2026-11-05.json`·`validate-2026-11-05.txt`·`SKILL-2026-11-05.md`: Reference files에 `style-guide.docx` 추가)
+- 그림: `charts_2026_11_05.py`(chart_style 토큰·Inter)로 `gems-to-skills-timeline.webp`(개인 계정 4개 날짜 + 업무·학교 계정 패널)·`gem-converted-to-skill.webp`(10-13 vs 11-05 규칙 표 + 결과 4줄) 다시 만듦. 이전 그림의 터미널 모양 패널은 뺌(writing-guide 터미널 화면 금지). `skill-name-check.webp`는 이름 규칙이 그대로라 유지
+- 직접 확인 못 한 것: Gemini 로그인 화면(계정 로그인 불가) → Add 버튼·Drive 연결·11-17 뒤 화면은 Google 문서 기준으로 "Google's help page describes/says"로 표기

@@ -94,6 +94,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - `AnalyticsScript`(루트 레이아웃)가 hydration 후 비컨·gtag.js를 직접 삽입 (`next/script` 금지, AdSense와 같은 이유). 개발 서버·`SITE_URL` 도메인(www 포함)이 아닌 호스트(미리보기 배포 등)에서는 둘 다 로드 안 함. 클라이언트 라우팅 이동은 비컨·GA4가 직접 집계하므로 한 번만 삽입
 - GA4 초기화·스크립트 주소·동의 기본값은 `core/analytics/internal/google.ts`(`initGtag`·`getGtagSrc`·`getConsentDefault`)
 - 동의 기본값: EEA·영국·스위스(지역 코드 32개)만 consent mode `ad_storage`·`ad_user_data`·`ad_personalization`·`analytics_storage` 모두 denied + `wait_for_update` 500ms → 동의 전에는 분석 쿠키 없음. 그 밖 지역은 기본값 없음
+  - 컨테이너 브라우저로는 확인 불가: 프록시 IP의 위치를 Google이 몰라 gtag.js의 지역 값이 비고, 이때 지역 지정 기본값이 모든 방문에 적용돼 미국 IP여도 `gcs=G100`(거부)·쿠키 없음 (2026-11-05, 가짜 지역 `ZZ`로도 같음). 실제 동작은 배포 후 비유럽 브라우저의 `_ga` 쿠키·GA4 실시간 보고서로 확인
 - 루트 레이아웃에서 `AnalyticsScript`를 `AdSenseScript`보다 먼저 렌더링 (동의 기본값이 AdSense·동의 메시지보다 먼저 들어가야 함). AdSense 동의 메시지(개인정보 보호 및 메시지 > 유럽 규정)의 "분석 목적 동의 모드"를 켜면 GA4가 같은 동의를 읽음 (사용자 설정)
 - 페이지뷰는 GA4 향상된 측정의 "브라우저 기록 이벤트 기반 페이지 변경"(기본 켜짐)에 맡김. 수동 `page_view` 전송 없음. 90% 스크롤도 향상된 측정 기본값
 - 측정 항목을 바꾸면 개인정보처리방침(`content/pages/privacy.mdx`) Analytics 항목도 함께 수정

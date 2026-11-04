@@ -2,7 +2,7 @@
 
 광고 수익형 블로그 **ToolProof** — 영어권(미국) 일반 사용자 대상 IT·AI 도구 가이드. 블로그 기능 + SEO 중심. 사용자 문서 → [apps/ad-blog/README.md](apps/ad-blog/README.md)
 
-- 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 트래픽 노하우(`traffic-playbook.md`, 대형 블로그 분석 → 재분석 도구 `tools/blog_patterns.py`), 주제 클러스터 맵(`clusters.md`, 점검 도구 `tools/link_audit.py`, Google이 크롤링한 판의 링크 확인 `tools/link_seen.py`), 글 간 반복 문장 점검(`tools/dup_check.py`), 외부 링크 후보·초안(`outreach.md`, 게시는 사용자만), 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
+- 운영 실험(Claude가 주제 조사·작성·배포·분석) 문서 → [apps/ad-blog/experiment/](apps/ad-blog/experiment/README.md): 전략·세션 워크플로우(README), 글쓰기 가이드, 트래픽 노하우(`traffic-playbook.md`, 대형 블로그 분석 → 재분석 도구 `tools/blog_patterns.py`), 주제 클러스터 맵(`clusters.md`, 점검 도구 `tools/link_audit.py`, Google이 크롤링한 판의 링크 확인 `tools/link_seen.py`), 글 간 반복 문장 점검(`tools/dup_check.py`), 날짜가 지나 낡은 미래형·상대 시점 문장 점검(`tools/stale_check.py`), 외부 링크 후보·초안(`outreach.md`, 게시는 사용자만), 주제 백로그, 운영 로그, 글별 검증 자료(`tests/{slug}/`)
 - 개선 세션 SEO 스킬(`seo-audit`·`copy-editing`·`link-building`·`ai-seo`, 외부 공개 스킬을 고정 커밋으로 받아 둠) → [.claude/skills/MARKETINGSKILLS.md](.claude/skills/MARKETINGSKILLS.md)
 - 글 작성·수정 시 [writing-guide.md](apps/ad-blog/experiment/writing-guide.md) 기준 (영어, 1차 출처 확인, 가상 체험담 금지, 독자는 비개발자: 명령줄·코드·개발 도구 방법 금지, 모든 글: 본문 첫 줄 AI 생성 대표 이미지(`experiment/tools/hero_image.py`, 썸네일 겸용) + 본문 이미지 3장 이상). 채널별 제목·허브 글·반복 일정 등은 [traffic-playbook.md](apps/ad-blog/experiment/traffic-playbook.md)
 
@@ -92,6 +92,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - `AnalyticsScript`(루트 레이아웃)가 hydration 후 비컨을 직접 삽입 (`next/script` 금지, AdSense와 같은 이유). 개발 서버·`SITE_URL` 도메인(www 포함)이 아닌 호스트(미리보기 배포 등)에서는 로드 안 함. 클라이언트 라우팅 이동은 비컨이 직접 집계하므로 한 번만 삽입
 - 측정 항목을 바꾸면 개인정보처리방침(`content/pages/privacy.mdx`) Analytics 항목도 함께 수정
 - 운영 대시보드 글별 첫 관측값(`indexedAt`·`firstCrawlAt`·`firstImpressionAt`·`firstSeenLinkAt`)은 저장소 `experiment/dashboard/first-seen.json`, `stats` 문서 버전은 `experiment/dashboard/versions.json`에 두고 `dashboard_data.py`가 읽고 씀 (2026-11-04: DB 문서를 파일로 저장하는 것이 거부돼 DB에서 이어받지 않음). 갱신한 세션이 두 파일을 커밋
+- 운영 대시보드 `posts`의 글별 `index.sitemaps`·`index.referring`(URL 검사 `sitemap`·`referringUrls`)과 `summary.sitemaps`(사이트맵·피드별 다운로드)는 2026-11-05 회차부터 기록. `summary.sitemap`은 `/sitemap.xml` 고정 (그 전 회차는 API 첫 항목인 `rss.xml` 값). 공용 계산은 `gsc_report.py`의 `index_refs`·`main_sitemap`
 - 운영 대시보드 조회수(KPI·날짜별 조회수·유입 사이트·클러스터/글별 표·글 순위)는 `experiment/tools/cf_analytics.py`가 Cloudflare GraphQL API로 읽어 `dashboard_data.py`가 `stats` DB(`traffic` 문서, `posts`의 `views`)에 기록. 사이트 도메인으로 거르므로(`SITE_HOSTS`, 사이트 목록 REST API는 Account Analytics Read 토큰으로 403) 도메인을 바꾸면 함께 수정. 필요한 토큰 권한은 Account → Account Analytics → Read
 
 ## 명령어

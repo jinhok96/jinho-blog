@@ -19,12 +19,15 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
 
 `stats` 컬렉션 하나에 문서 몇 개만 둔다 (세션마다 버전을 옮겨 적는 수를 줄이려고). 기존 문서를 덮어쓰려면
 마지막 batch 결과의 버전(`experiment/dashboard/versions.json`, 또는 `--versions`)을 쓴다 (없는 문서는 새로 만듦).
-- summary: 갱신 시각·28일 합계·사이트맵 상태·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
+- summary: 갱신 시각·28일 합계·사이트맵 상태(sitemap = /sitemap.xml, 11-04까지 회차는 rss.xml 값.
+           sitemaps = 제출한 사이트맵·피드 전부 {path, type, lastSubmitted, lastDownloaded, isPending, errors, warnings, submitted},
+           2026-11-05 회차부터)·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
            ·goals(README 목표 지표 표 + 현재 값·진행률)
            ·adsense(README AdSense 재신청 조건 3개: operatingDays·indexRate·weeks(월~일 주별 클릭·노출, complete = 확정 주)
                     ·clickStreak(확정 주 기준 직전 주보다 클릭이 늘어난 연속 주 수)·met·allMet. 2026-11-03 회차부터)
            ·crawl(URL 검사 회차만: latest = 색인된 페이지 중 가장 최근 크롤링, listPages = 홈·카테고리 첫 페이지별 lastCrawlTime,
-                  unindexed = 색인 안 된 글 수, unindexedSeen = 그중 Google이 본 링크가 있는 글 수)
+                  unindexed = 색인 안 된 글 수, unindexedSeen = 그중 Google이 본 링크가 있는 글 수,
+                  inFeed·unindexedInFeed = URL 검사 sitemap에 rss.xml이 있는 글 수 전체·그중 색인 안 된 글 (2026-11-05 회차부터, V7))
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
 - posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, 28일 지표, queries, daily, sources,
                   firstDays, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
@@ -39,6 +42,9 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
           indexedAt = URL 검사가 처음 PASS인 회차 시각, firstCrawlAt = 그때의 lastCrawl(마지막 크롤링은 이후 바뀌므로 첫 값),
           firstImpressionAt = 웹 검색 노출이 처음 생긴 날짜(Search Console 날짜, 태평양 시간).
           앞의 두 값은 first-seen.json(또는 --prev)에서 이어받음. 2026-10-24 이전 색인분은 log.md URL 검사 기록으로 날짜만 소급),
+          index = URL 검사 {verdict, coverage, lastCrawl, crawledAs, fetch, canonicalOk, sitemaps, referring}
+                  (sitemaps = Google이 이 글을 확인한 제출 사이트맵·피드 경로 ['/rss.xml', '/sitemap.xml'],
+                   referring = Google이 아는 이 글을 링크하는 페이지 경로. 둘 다 2026-11-05 회차부터 → V7 판정에 회차별 history로 씀),
           seenLinks = (색인 안 된 글만) Google이 마지막으로 크롤링한 판에서 이 글로 가던 링크 [{page, kind, crawl}] (link_seen.py),
           firstSeenLinkAt = 그 링크를 Google이 처음 본 크롤링 시각 (first-seen.json에서 이어받아 고정, 색인 뒤에도 유지 → 노하우 9 판정)
           (2026-10-26 회차부터. 그 전 회차 history에는 없음)
@@ -60,7 +66,9 @@ import re
 import sys
 
 sys.path.insert(0, str(pathlib.Path(__file__).resolve().parent))
-from gsc_report import API, POSTS_DIR, SITE_ORIGIN, adsense_status, call, load_token, search_analytics, site_path, weekly_clicks  # noqa: E402
+from gsc_report import (  # noqa: E402
+    API, POSTS_DIR, SITE_ORIGIN, adsense_status, call, index_refs, load_token, main_sitemap, search_analytics, site_path, weekly_clicks,
+)
 import cf_analytics  # noqa: E402
 import link_seen  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
@@ -188,6 +196,7 @@ def seen_link_fields(token: str, site: str, posts: list[dict], crawled: dict[str
         if when := link_seen.crawl_time(idx):
             crawled[page] = when
     unindexed = {p['slug'] for p in posts if p.get('index', {}).get('verdict') != 'PASS'}
+    in_feed = {p['slug'] for p in posts if '/rss.xml' in p.get('index', {}).get('sitemaps', [])}
     try:
         seen = link_seen.seen_links(crawled, unindexed)
     except Exception as error:  # noqa: BLE001 - git 이력이 없으면(origin/main 미fetch) 이 값만 빼고 갱신
@@ -205,6 +214,8 @@ def seen_link_fields(token: str, site: str, posts: list[dict], crawled: dict[str
         'listPages': pages,
         'unindexed': len(unindexed),
         'unindexedSeen': None if seen is None else sum(1 for s in seen.values() if s),
+        'inFeed': len(in_feed),  # URL 검사 sitemap에 rss.xml이 있는 글 (Google이 피드에서 본 글, 2026-11-05 회차부터)
+        'unindexedInFeed': len(in_feed & unindexed),
     }
 
 
@@ -414,6 +425,7 @@ def main() -> None:
                 'verdict': idx.get('verdict'), 'coverage': idx.get('coverageState'), 'lastCrawl': idx.get('lastCrawlTime'),
                 'crawledAs': idx.get('crawledAs'), 'fetch': idx.get('pageFetchState'),
                 'canonicalOk': None if not google_canonical else google_canonical == url,
+                **index_refs(idx),  # sitemaps·referring: Google이 이 글을 본 사이트맵·피드와 링크 페이지 (2026-11-05 회차부터, V7 판정)
             }
             if when := link_seen.crawl_time(idx):
                 crawled[f'/posts/{slug}'] = when
@@ -461,7 +473,7 @@ def main() -> None:
 
     total = search_analytics(token, args.site, since, end, [], 1)
     sitemaps = call('GET', f'{API}/webmasters/v3/sites/{site_path(args.site)}/sitemaps', token).get('sitemap', [])
-    sm = sitemaps[0] if sitemaps else {}
+    sm = main_sitemap(sitemaps)
     site = metrics(total[0] if total else None)
 
     # 목표 지표 현재 값 (README 표의 "확인" 방법과 같은 기준)
@@ -486,6 +498,13 @@ def main() -> None:
         'range': {'start': since, 'end': end},
         **site,
         'sitemap': {'lastDownloaded': sm.get('lastDownloaded'), 'errors': int(sm.get('errors', 0)), 'warnings': int(sm.get('warnings', 0))},
+        # 제출한 사이트맵·피드 전부 (2026-11-05 회차부터). 위 sitemap은 /sitemap.xml (11-04까지 회차는 API 첫 항목인 rss.xml 값: 10-19 피드 제출 뒤 경로순 첫 번째)
+        'sitemaps': [{
+            'path': s.get('path', '').removeprefix(SITE_ORIGIN), 'type': s.get('type'), 'lastSubmitted': s.get('lastSubmitted'),
+            'lastDownloaded': s.get('lastDownloaded'), 'isPending': s.get('isPending', False),
+            'errors': int(s.get('errors', 0)), 'warnings': int(s.get('warnings', 0)),
+            'submitted': sum(int(c.get('submitted', 0)) for c in s.get('contents', [])),
+        } for s in sitemaps],
         'linkAudit': {name: len(items) for name, items in problems.items() if items},
         'goals': goals(current),
         # AdSense 재신청 조건 (README 결정사항): 주간 클릭은 위 날짜별 행을 월~일로 묶어 확정 주만 판정 (2026-11-03 회차부터)

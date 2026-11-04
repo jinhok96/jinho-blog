@@ -500,9 +500,15 @@ function renderSummary() {
     $('k-ctr').textContent = 'CTR ' + pct(s.ctr);
   }
   const sm = s.sitemap || {};
-  const ok = !sm.errors && !sm.warnings;
-  $('k-sm').innerHTML = ok ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${sm.errors} · 경고 ${sm.warnings}</span>`;
-  $('k-sm-sub').textContent = '마지막 다운로드 ' + localDate(sm.lastDownloaded);
+  // 사이트맵·피드별 마지막 다운로드 (sitemaps는 2026-11-05 회차부터. 그 전 데이터는 sitemap 한 줄만)
+  const all = s.sitemaps && s.sitemaps.length ? s.sitemaps : null;
+  const errors = (all || [sm]).reduce((a, m) => a + (m.errors || 0), 0);
+  const warnings = (all || [sm]).reduce((a, m) => a + (m.warnings || 0), 0);
+  $('k-sm').innerHTML = !errors && !warnings ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${errors} · 경고 ${warnings}</span>`;
+  $('k-sm-sub').textContent = all
+    ? all.map((m) => `${m.path.replace(/^\//, '')} ${localDate(m.lastDownloaded)}`).join(' · ')
+    : '마지막 다운로드 ' + localDate(sm.lastDownloaded);
+  tip($('k-sm-sub'), all ? '제출한 사이트맵·피드별로 Google이 마지막으로 받아 간 날짜' : '');
 }
 
 // 최근 7일 vs 직전 7일 (마지막 집계일 기준, 빠진 날은 0). 순위는 노출 가중 평균
@@ -789,6 +795,7 @@ function indexFacts(p) {
     <dt>마지막 크롤링</dt><dd class="num">${i.lastCrawl ? localStamp(i.lastCrawl) : '–'}</dd>
     <dt>크롤러</dt><dd>${crawler}</dd>
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
+    ${i.sitemaps ? `<dt>Google이 본 곳</dt><dd>${i.sitemaps.length ? i.sitemaps.map((m) => esc(m.replace(/^\//, ''))).join(' · ') : '사이트맵·피드 없음'}${i.referring && i.referring.length ? `<div class="small">링크: ${i.referring.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
     ${p.inbound ? `<dt>받는 링크</dt><dd>${p.inbound.length}개${p.inbound.length ? `<div class="small">${p.inbound.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     ${tags ? `<dt>태그</dt><dd class="tags">${tags}</dd>` : ''}
@@ -989,7 +996,8 @@ function renderTodo() {
   $('todo').innerHTML = [
     todoGroup(1, '색인', [{
       why: '발행 3일이 지나도 색인되지 않은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 링크 추가, 필요하면 Search Console 색인 요청',
-      items: waiting && waiting.map((p) => ({ main: jumpPost(p), meta: `${esc(indexState(p.index).label)} · D+${ageDays(p.createdAt)}` })),
+      // 피드: URL 검사에서 Google이 rss.xml로 확인한 글 (2026-11-05 회차부터, traffic-playbook V7)
+      items: waiting && waiting.map((p) => ({ main: jumpPost(p), meta: `${esc(indexState(p.index).label)} · D+${ageDays(p.createdAt)}${(p.index.sitemaps || []).includes('/rss.xml') ? ' · 피드' : ''}` })),
     }]),
     todoGroup(2, '링크 점검', [{
       why: `받는 링크 2개 미만 글 → 같은 클러스터 글에서 문맥에 맞는 링크 추가${other.length ? `. 그 밖의 link_audit.py 문제: ${other.map(([k, n]) => `${esc(k)} ${n}건`).join(' · ')}` : ''}`,

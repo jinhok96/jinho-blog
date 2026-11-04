@@ -2,6 +2,64 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-05 · 세션 81 (정기 실행, 개선 세션): V7 판정용 DB 구조 개선(URL 검사 사이트맵·피드 출처, 사이트맵별 다운로드) + 날짜 지난 문장 점검(`stale_check.py`) + 칼럼 후속 확인
+
+세션 시각: 2026-11-05 06:15 KST(목) → 06시 실행이라 개선 세션. 같은 날 앞 세션은 00시 개선 세션 80(`gemini-gems-to-skills` 갱신) → 그 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(ad32fc3)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-07 ~ 11-04, 세션 80 이후 바뀐 값만)**
+
+- 노출 1,032 → **1,047**, 클릭 15 → **17**, CTR 1.6%, 평균 순위 23.4 (`spotify-family-qr-code-verification` 270·17.4 / `turn-off-ai-in-chrome` 183·18.5·클릭 3 / `image-to-text-offline-free` 127·15.8·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ **2** (진행 중, 노출 100)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 배포(11-01 11:28 UTC 머지) 뒤 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `gsc_report.py` 회차 `Discovered` 20 · `URL is unknown` 16 (대시보드 회차에서는 19 · 17: `remove-phone-number-from-google-account`가 같은 세션 안에서 Discovered ↔ unknown으로 흔들림). 새 크롤링 없음(색인 글 중 가장 최근 `image-to-text-offline-free` 11-02 13:28). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 19편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 25일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 주간 점검(11-02) 우선순위 1~3은 처리됨. 1(색인)은 새 크롤링이 없어 링크를 늘려도 발견 경로가 안 됨, 2는 보류 2건, 3은 허브 4/4. 4는 페이지×검색어 114행 중 V 판정 대상이 아닌 글의 20위 안 검색어가 6개뿐이고 모두 노출 1회 → 보강 근거 없음. 5(칼럼 후속)는 1차 출처를 다시 열어 봤지만 본문 사실이 그대로라 V7 판정 중 `updatedAt`을 바꾸지 않음(아래 4). 6은 iOS·macOS 27.2(10-26)가 이미 반영돼 있고 Windows는 11-10 전 → **7: DB 구조 개선(V7 판정에 필요한 값) + 대시보드 + 문제 찾기**
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Crawlability(XML Sitemap: 제출·형식·갱신, Indexation: 색인 대비 기대치), Content Quality(Outdated content not refreshed·Accurate information·Updated and current))**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · DB 구조 개선 | `tools/dashboard_data.py`·`tools/gsc_report.py` | V7 행의 판정 지표가 "URL 검사 `coverageState`·`sitemap`·`lastCrawlTime`, 회차별 history"인데 **`sitemap` 칸(Google이 그 URL을 확인한 제출 사이트맵·피드)은 DB에 저장되지 않았음** → `posts` 글별 `index.sitemaps`(`/rss.xml`·`/sitemap.xml`)·`index.referring`(URL 검사 `referringUrls`) 추가. `summary.sitemap`은 API 첫 항목이라 **10-19 `rss.xml` 제출 뒤로 줄곧 피드 값**이었음(대시보드 '사이트맵 마지막 다운로드'가 rss.xml 날짜) → `/sitemap.xml`로 고정하고 `summary.sitemaps`(사이트맵·피드 전부: 마지막 다운로드·제출·오류·제출 URL 수) 추가. `summary.crawl.inFeed`·`unindexedInFeed`(Google이 rss.xml로 확인한 글 수). `gsc_report.py` URL 검사 표에 '사이트맵' 칸(공용 함수 `index_refs`·`main_sitemap`). 기존 history는 고치지 않음 | - (지표를 노린 변경 아님) |
+| 2 | 7 · 대시보드 개선 | `dashboard/index.html` | 요약 '사이트맵' 칸: 오류·경고를 사이트맵·피드 전부로 합치고 아래 줄을 `rss.xml 26.11.01 · sitemap.xml 26.11.02`처럼 각각. 글 상세 '색인·글 정보'에 'Google이 본 곳'(사이트맵·피드 + Google이 아는 링크 페이지). 할 일 1(색인) 줄에 Google이 피드에서 확인한 글은 `· 피드` 표시. `dashboard_check.cjs` 통과(데스크톱·모바일 375px, 글별 표 53줄, 가로 넘침 없음) | - |
+| 3 | 7 · 문제 찾기 | 사이트 53편 + `/rss.xml` | ① 새 도구 `tools/stale_check.py`: 지난 날짜(9-06~11-04)가 들어간 미래형 문장과 상대 시점("this week"·"this month"·"in the coming weeks") 문장 → 걸린 28문장을 읽어 보니 대부분 과거형으로 맞게 쓴 문장, **고칠 것 5편 6문장**: `chrome-http-warning-default` "this week's news/post" 2 · `apple-mail-exchange-not-syncing` "this month"(10월) 1 · `spotify-family-qr-code-verification` "this month" 1(V4 판정 중) · `gemini-connected-apps` 'What to watch next'의 지난 일정 "About October 28, 2026" 1 · `iphone-handoff-verizon-cost` 같은 절 "October 23: iPhone Duo arrives in stores" 1. 모두 날짜를 밝힌 앞뒤 문맥이 있어 틀린 사실은 아니고, 4편이 미색인·1편이 V4 → **각 글의 다음 갱신 때 함께 고침**(V7·V4 뒤). writing-guide 뉴스 칼럼 시점 규칙에 "상대 시점 대신 날짜", 지난 'What to watch next' 정리 추가 ② 배포된 `rss.xml`: 200·`application/xml`·RSS 2.0·항목 20개(최근 변경순, 맨 앞 `gemini-gems-to-skills` 11-04 15:40)·`guid` = 링크·중복 없음 → 문제 없음 | - |
+| 4 | 5 · 칼럼 후속 (확인만) | `iphone-handoff-verizon-cost`(색인)·`apple-mail-exchange-not-syncing` | Handoff: Apple 127274가 **11-03 개정**(지원 통신사에 `United Kingdom: EE` 추가, "SMS/MMS" → "SMS", "if supported by your carrier" 2곳) — 미국은 여전히 T-Mobile만, Verizon 발표는 "coming soon"·시작일 없음 그대로 → 본문 미국 사실 그대로라 고치지 않음, 사본 `source-apple-127274-2026-11-05.txt`·factcheck '2026-11-05 재확인'(V7 뒤 갱신 후보 3가지). Apple Mail: Apple 149092(10-13판) 그대로 "a future update to macOS 27", 보안 릴리스 목록에 macOS 27.2(10-26)가 있으나 Graph 전환 언급 1차 출처 없음 → 그대로 | - |
+
+**Google이 미색인 글을 어디서 확인했나** (새 `index.sitemaps`로 처음 본 값, 대시보드 회차)
+
+| 상태 | 편수 | URL 검사 `sitemap` 칸 | 공통점 |
+| --- | --- | --- | --- |
+| `Discovered` | 16 | rss.xml + sitemap.xml | 모두 10-23 이후 발행·수정, Google이 받아 간 옛 피드(10-27·11-01 08:38, 발행순 20편)에 있던 글 |
+| `Discovered` | 3 | sitemap.xml만 | `pixel-watch-safety-signal-ending`(수정 10-30)·`gemini-free-flash-lite`(수정 11-01)·`duckduckgo-no-ai`(발행 11-01): `lastmod`가 sitemap.xml 10-27 11:58 다운로드 뒤·11-02 04:15 다운로드 전 |
+| `URL is unknown` | 15 | 없음 | 모두 10-16~10-22 발행 뒤 `lastmod` 그대로(PDF·사진 상시 글 9편, 칼럼 5편, `turn-off-gemini-in-gmail`). sitemap.xml에는 10-22·10-27·11-02 다운로드 내내 있었고 6편은 10-19~20 크롤링된 글에서 링크도 받음 |
+| `URL is unknown` | 2 | 없음 | `turn-off-ai-in-brave`(11-03 발행, 모든 다운로드 뒤) · `remove-phone-number-from-google-account`(흔들림) |
+
+- 흔들림: 같은 세션의 URL 검사 4회(`gsc_report.py` 2회·`link_seen.py`·대시보드)에서 `remove-phone-number-from-google-account`·`free-image-converter-photo-tools`·`chrome-autofill-settings`가 회차마다 `Discovered`(rss.xml + sitemap.xml) ↔ `URL is unknown`(칸 없음)으로 바뀜. `Discovered`로 나올 때는 늘 두 칸 다 있어 위 분류는 그대로. 나머지 33편은 4회 모두 같은 상태
+
+**알게 된 것**
+
+- 10-27 재제출 뒤 Google이 새로 발견한 URL은 '받아 간 피드에 있던 글'과 'sitemap에서 `lastmod`가 직전 다운로드 뒤로 바뀐 글'뿐이고, 오래전부터 sitemap에 있던 글은 링크가 있어도 발견되지 않음 (해석, 노하우 9 중간 관찰 11-05). 남은 15편은 사용자 색인 요청이나 의미 있는 갱신(`updatedAt` → 피드 맨 앞 + `lastmod`)으로만 발견될 것으로 보임. 날짜만 바꾸는 갱신은 하지 않음
+- **V7은 아직 시작 전**: Google은 V7 피드를 한 번도 받아 가지 않았고(11-01 08:38 다운로드는 머지 3시간 전의 옛 피드), V7로 피드에 들어간 미색인 2편은 피드가 아니라 sitemap.xml로 `Discovered`가 됨 → V7 행에 적고, 판정은 글별 `index.sitemaps`에 `/rss.xml`이 새로 생기는지로 구분
+- 대시보드 `summary.sitemap`이 10-19부터 피드 값을 '사이트맵'으로 보여 주고 있었음 → 사이트맵·피드를 따로 봐야 V7·노하우 9를 판단할 수 있음
+- URL 검사 `coverageState`는 같은 세션 안에서도 흔들림(`remove-phone-number-from-google-account`·`free-image-converter-photo-tools`·`chrome-autofill-settings`) → 한 회차 값으로 판단하지 않고 history로 봄
+
+**다음 할 일**
+
+- **사용자: Search Console URL 검사 → 색인 생성 요청** (하루 한도 안에서 위에서부터. 11-05 분석으로 순서를 바꿈: 아래 `URL is unknown` 15편은 글을 고치기 전에는 Google이 스스로 찾을 길이 없어 보임): `https://tool-proof.com/posts/best-free-pdf-tools`(허브) · `https://tool-proof.com/posts/turn-off-gemini-in-gmail` · `https://tool-proof.com/posts/split-pdf-free` · `https://tool-proof.com/posts/pdf-to-jpg-free` · `https://tool-proof.com/posts/pdf-to-word-free` · `https://tool-proof.com/posts/compress-pdf-free` · `https://tool-proof.com/posts/compress-video-for-discord-email` → `https://tool-proof.com/posts/convert-webp-to-jpg-free` · `https://tool-proof.com/posts/remove-bg-alternative-free` · `https://tool-proof.com/posts/remove-metadata-from-photos` · `https://tool-proof.com/posts/chrome-http-warning-default` · `https://tool-proof.com/posts/gemini-connected-apps` · `https://tool-proof.com/posts/apple-mail-exchange-not-syncing` → (이미 `Discovered`) 허브 `https://tool-proof.com/posts/turn-off-ai-features` · `https://tool-proof.com/posts/free-image-converter-photo-tools`. `gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`는 콘텐츠 정리 3·4번으로 고칠 예정이라 뺌
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 25일·색인율 32%·주간 클릭 증가 0주)
+- Claude: V7 — `gsc_report.py` 사이트맵 표에서 rss.xml 다음 다운로드 확인 뒤 7일(늦어도 11-15) 판정. 근거는 대시보드 history `posts`의 글별 `index.sitemaps`(피드에서 확인된 글이 늘었는지)와 `coverage` 변화, `summary.crawl.inFeed`
+- Claude: V7 판정 뒤 **미발견 15편을 실제 갱신거리가 있는 것부터** 고침(한 세션 1편, 한 가지 변경): 콘텐츠 정리 3(`gemini-android-auto-personal-intelligence`)·4(`office-2021-end-of-support`, 11-10 뒤) → `chrome-http-warning-default`(Chrome 157 결과 + "this week" 2문장) → `gemini-connected-apps`(Customize 배포 완료 여부 1차 출처 확인 + 지난 일정 줄) → `apple-mail-exchange-not-syncing`(macOS 27 Graph 업데이트 확인 + "this month"). PDF·사진 상시 글은 앱 새 버전 재측정처럼 실제 바뀐 내용이 있을 때만. 색인된 `iphone-handoff-verizon-cost`는 factcheck '2026-11-05 재확인' 후보 3가지를 한 번에
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296)을 다시 받아 `sources-2026-11-05/`와 비교 (세션 80 그대로), Chrome 158(11-17) 재확인
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V7(첫 rss.xml 다운로드 + 7일, 늦어도 11-15)·V8(12-03)
+- Claude(11-06 금 일반 세션): 세션 77 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`) + Firefox 160(11-06) 출시 확인. 새 `ai-settings` 글 제목은 `How to Turn Off …`(10편)과 다른 틀로, 역링크는 한 문단 4개 상한, 상대 시점 대신 날짜(writing-guide)
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: 페이지 **Version 29** 발행(사이트맵·피드별 다운로드, 글 상세 'Google이 본 곳', 할 일 1 `· 피드` 표시) + `stats` 9개 + `history` 9개 batch 성공(회차 2026-11-04T21:54:53Z, DB 문서 339개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값 변화 없음(새 색인 없음). 회차 시점 28일 노출 1,050·클릭 17·평균 23.3위, `traffic` Cloudflare 28일 조회수 79·방문 71(10-07~11-04), `summary.adsense` 운영 25일·색인율 0.321·클릭 연속 증가 0, `summary.crawl` 미색인 36편 중 Google이 본 링크 19편·**피드에서 확인된 글 `inFeed` 16편(모두 미색인)** — 이 회차부터 글별 `index.sitemaps`·`referring`과 `summary.sitemaps`가 history에 쌓임. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-05 · 세션 80 (정기 실행, 개선 세션): `gemini-gems-to-skills` 사실 갱신(Gems 11-17 읽기 전용·12-17 삭제, .docx 지원) + 역링크 몰린 문단 점검
 
 세션 시각: 2026-11-05 00:17 KST(목) → 00시 실행 + 목요일이라 개선 세션. 같은 날 앞 세션 없음(11-04 세션 77~79가 다룬 `turn-off-ai-in-brave`·`chrome-autofill-settings`·`chrome-http-warning-default`는 건드리지 않음). 열린 PR 없음. 작업 브랜치는 `origin/main`(7b1b882)과 같음, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지를 새로 만들지 않아 `hero_image.py --setup`은 돌리지 않음.

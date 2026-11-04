@@ -21,7 +21,7 @@ src/
 └── core/
     ├── config/     # 사이트 정보(ToolProof, en-US, AUTHOR_TYPE)·카테고리(ai-tools, software, news — 글 0개 카테고리는 자동 숨김)·광고 ID
     ├── ads/        # AdSlot·AdSenseScript (클라이언트), ads.txt·슬롯 속성 헬퍼
-    ├── analytics/  # AnalyticsScript (Cloudflare Web Analytics 비컨 로더, 클라이언트)·로드 조건 헬퍼
+    ├── analytics/  # AnalyticsScript (Cloudflare Web Analytics 비컨·GA4 gtag.js 로더, 클라이언트)·로드 조건·gtag 초기화·동의 기본값 헬퍼
     ├── content/    # 컬렉션 Zod 스키마·설정·레지스트리 리더
     ├── seo/        # buildMetadata, JSON-LD 빌더, JsonLd, absoluteUrl
     ├── mdx/        # renderMdx (본문 # → h2, 로컬 이미지 크기 지정, 링크 처리)
@@ -85,12 +85,19 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - AdSense 스크립트는 `AdSenseScript`(루트 레이아웃)가 hydration 후 직접 삽입하고 경로가 바뀔 때마다 제외 페이지인지 다시 확인 — `next/script`는 `data-nscript` 속성 때문에 AdSense 콘솔 경고가 나므로 사용 금지. 정적 HTML에 스크립트가 없으므로 AdSense 사이트 확인은 `ads.txt`·메타 태그로
 - 개발 서버는 ID와 무관하게 점선 자리표시 상자 (실제 광고 요청 안 함), 슬롯은 최소 높이로 CLS 방지·미게재 시 숨김
 
-## 방문 측정 (Cloudflare Web Analytics)
+## 방문 측정 (Cloudflare Web Analytics + GA4)
 
-- 실제 페이지뷰는 Cloudflare Web Analytics로 측정 (2026-10-25 사용자 결정: Vercel Web Analytics는 유료라 제외). 쿠키 없음, JS를 실행한 방문만 집계
-- 사이트 토큰은 `core/config/internal/analytics.ts`의 `CF_WEB_ANALYTICS_TOKEN`에만 작성 (비어 있으면 로드 안 함, 32자리 16진수가 아니면 빌드 에러)
-- `AnalyticsScript`(루트 레이아웃)가 hydration 후 비컨을 직접 삽입 (`next/script` 금지, AdSense와 같은 이유). 개발 서버·`SITE_URL` 도메인(www 포함)이 아닌 호스트(미리보기 배포 등)에서는 로드 안 함. 클라이언트 라우팅 이동은 비컨이 직접 집계하므로 한 번만 삽입
+- 실제 페이지뷰는 Cloudflare Web Analytics로 측정 (2026-10-25 사용자 결정: Vercel Web Analytics는 유료라 제외). 쿠키 없음, JS를 실행한 방문만 집계. 전체 조회수는 Cloudflare 기준 (GA4는 유럽 동의 거부 방문이 빠짐)
+- 체류시간(참여 시간)·90% 스크롤은 Google Analytics 4로 측정 (2026-11-05 사용자 결정: 무료·Data API·AdSense 연결. Clarity·Plausible·Vercel Web Analytics 제외). GTM 없이 측정 ID 직접 (설정이 저장소에 남음)
+- Cloudflare 사이트 토큰은 `core/config/internal/analytics.ts`의 `CF_WEB_ANALYTICS_TOKEN`에만 작성 (비어 있으면 로드 안 함, 32자리 16진수가 아니면 빌드 에러)
+- GA4 측정 ID는 같은 파일의 `GA_MEASUREMENT_ID`(`G-GMRVKRVMHS`)에만 작성 (비어 있으면 로드 안 함, `G-` 형식이 아니면 빌드 에러 — `validateGaMeasurementId`)
+- `AnalyticsScript`(루트 레이아웃)가 hydration 후 비컨·gtag.js를 직접 삽입 (`next/script` 금지, AdSense와 같은 이유). 개발 서버·`SITE_URL` 도메인(www 포함)이 아닌 호스트(미리보기 배포 등)에서는 둘 다 로드 안 함. 클라이언트 라우팅 이동은 비컨·GA4가 직접 집계하므로 한 번만 삽입
+- GA4 초기화·스크립트 주소·동의 기본값은 `core/analytics/internal/google.ts`(`initGtag`·`getGtagSrc`·`getConsentDefault`)
+- 동의 기본값: EEA·영국·스위스(지역 코드 32개)만 consent mode `ad_storage`·`ad_user_data`·`ad_personalization`·`analytics_storage` 모두 denied + `wait_for_update` 500ms → 동의 전에는 분석 쿠키 없음. 그 밖 지역은 기본값 없음
+- 루트 레이아웃에서 `AnalyticsScript`를 `AdSenseScript`보다 먼저 렌더링 (동의 기본값이 AdSense·동의 메시지보다 먼저 들어가야 함). AdSense 동의 메시지(개인정보 보호 및 메시지 > 유럽 규정)의 "분석 목적 동의 모드"를 켜면 GA4가 같은 동의를 읽음 (사용자 설정)
+- 페이지뷰는 GA4 향상된 측정의 "브라우저 기록 이벤트 기반 페이지 변경"(기본 켜짐)에 맡김. 수동 `page_view` 전송 없음. 90% 스크롤도 향상된 측정 기본값
 - 측정 항목을 바꾸면 개인정보처리방침(`content/pages/privacy.mdx`) Analytics 항목도 함께 수정
+- GA4 리포트 도구·운영 대시보드 연결은 아직 없음: GCP 프로젝트의 Google Analytics Data API 사용 설정·서비스 계정 GA4 속성 뷰어 권한·속성 ID를 사용자에게 받은 뒤 작성 ([experiment/README.md](apps/ad-blog/experiment/README.md#인프라-상태))
 - 운영 대시보드 글별 첫 관측값(`indexedAt`·`firstCrawlAt`·`firstImpressionAt`·`firstSeenLinkAt`)은 저장소 `experiment/dashboard/first-seen.json`, `stats` 문서 버전은 `experiment/dashboard/versions.json`에 두고 `dashboard_data.py`가 읽고 씀 (2026-11-04: DB 문서를 파일로 저장하는 것이 거부돼 DB에서 이어받지 않음). 갱신한 세션이 두 파일을 커밋
 - 운영 대시보드 `posts`의 글별 `index.sitemaps`·`index.referring`(URL 검사 `sitemap`·`referringUrls`)과 `summary.sitemaps`(사이트맵·피드별 다운로드)는 2026-11-05 회차부터 기록. `summary.sitemap`은 `/sitemap.xml` 고정 (그 전 회차는 API 첫 항목인 `rss.xml` 값). 공용 계산은 `gsc_report.py`의 `index_refs`·`main_sitemap`
 - 운영 대시보드 조회수(KPI·날짜별 조회수·유입 사이트·클러스터/글별 표·글 순위)는 `experiment/tools/cf_analytics.py`가 Cloudflare GraphQL API로 읽어 `dashboard_data.py`가 `stats` DB(`traffic` 문서, `posts`의 `views`)에 기록. 사이트 도메인으로 거르므로(`SITE_HOSTS`, 사이트 목록 REST API는 Account Analytics Read 토큰으로 403) 도메인을 바꾸면 함께 수정. 필요한 토큰 권한은 Account → Account Analytics → Read

@@ -2,6 +2,13 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-05 · 결정: 체류시간 측정에 GA4 추가 (사용자 요청)
+
+- 이유: 체류시간은 수익(자동 광고는 읽어 내려가는 만큼 노출)·검색 만족도와 관련 있지만 Cloudflare Web Analytics로는 측정 안 됨. 후보 비교 → GA4 선택(무료·Data API·AdSense 연결). Clarity(API 하루 10회·최근 1~3일)·Plausible(유료)·Vercel Web Analytics(체류 지표 없음)는 제외. GTM 대신 측정 ID 직접(설정이 저장소에 남음). Cloudflare는 쿠키 없는 전체 조회수용으로 유지
+- 적용: 측정 ID `G-GMRVKRVMHS`를 `core/config/internal/analytics.ts`에 두고 `AnalyticsScript`가 Cloudflare와 같은 조건으로 gtag.js 삽입. EEA·영국·스위스는 consent mode 기본값 거부(`wait_for_update` 500ms), `AdSenseScript`보다 먼저 렌더링. 페이지뷰·90% 스크롤은 향상된 측정에 맡김. 개인정보처리방침 Analytics 항목·쿠키 절 갱신(`updatedAt` 2026-11-05)
+- 남은 일: 리포트 도구·운영 대시보드 연결. Search Console 서비스 계정 키로 인증은 되지만 GCP 프로젝트에서 Google Analytics Data API가 꺼져 있음(403 `SERVICE_DISABLED`), GA4 속성 권한도 없음 → **사용자: ① Data API 사용 설정 ② 서비스 계정을 GA4 속성 뷰어로 추가 ③ 속성 ID 전달**. 받은 뒤 도구 작성. AdSense 동의 메시지의 "분석 목적 동의 모드" 켜기도 사용자 설정
+- 해석 주의: 28일 방문 71회라 글별 체류 수치는 판단에 쓰지 않음. 당분간 사이트 전체 값만 기준선으로 기록
+
 ## 2026-11-05 · 결정: 주제 발굴 소스에 대형 IT 매체 인기 글 목록 추가 (사용자 요청)
 
 - 사용자가 공유한 네이버 홈피드 글쓰기 자료(크리에이터 어드바이저 '메인 유입 트렌드'에서 인기 글 소재 고르기 + 체류형 글 생성 프롬프트)를 검토. 글쓰기 규칙(도입부를 궁금증으로 끝내기, 작성자 감정 반응 4회 이상, 키워드 5회 이상, 1,000~1,400자, 댓글 유도 마무리)은 writing-guide와 충돌해 반영하지 않음. traffic-playbook "따르지 않는 것"에도 따로 적지 않음 (사용자 결정)

@@ -20,9 +20,10 @@
   --warn: #ab570a;
   --warn-soft: #ffefcf;
   --bad: #ee0000;
-  /* 계열 2개짜리 비교 그래프 (dataviz 검사 통과: 라이트·다크 모두 색약 구분 ΔE 30 이상) */
+  /* 비교 그래프 계열 색 (dataviz validate_palette 통과. 3색은 경과일별 누적 노출: 라이트 흰 바탕 aqua 대비 2.82라 선 끝 값 라벨·범례로 보완, 다크 전체 쌍 tritan 6.5도 같은 보완, 2026-11-05) */
   --cat-1: #0070f3;
   --cat-2: #eb6834;
+  --cat-3: #1baf7a;
   --shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
   /* 테두리는 box-shadow inset으로 그려 상자 크기가 4px 그리드에서 벗어나지 않게 함 */
   --hair: inset 0 0 0 1px var(--line);
@@ -43,7 +44,7 @@
   :root:not([data-theme="light"]) {
     --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
     --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
-    --cat-1: #3291ff; --cat-2: #d95926;
+    --cat-1: #3291ff; --cat-2: #d95926; --cat-3: #199e70;
     --shadow: 0 0 0 transparent;
     color-scheme: dark;
   }
@@ -51,7 +52,7 @@
 :root[data-theme="dark"] {
   --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
   --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
-  --cat-1: #3291ff; --cat-2: #d95926;
+  --cat-1: #3291ff; --cat-2: #d95926; --cat-3: #199e70;
   --shadow: 0 0 0 transparent;
   color-scheme: dark;
 }
@@ -298,7 +299,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   <section class="charts">
     <div class="panel">
       <div class="panel-head"><h2>경과일별 누적 노출</h2>
-        <div class="legend"><span><i style="background:var(--cat-1)"></i>상시 글·허브</span><span><i style="background:var(--cat-2)"></i>뉴스 칼럼</span></div>
+        <div class="legend" id="cohort-legend"><span><i style="background:var(--cat-1)"></i>상시 글·허브</span><span><i style="background:var(--cat-2)"></i>영향 칼럼</span><span><i style="background:var(--cat-3)"></i>화제 칼럼</span></div>
       </div>
       <div id="chart-cohort"></div>
     </div>
@@ -638,14 +639,20 @@ function niceStep(max) {
 
 // 경과일별 누적 노출: 발행일(D+0)부터 같은 날짜끼리 비교. 그날까지 도달한 글이 COHORT_MIN편 이상일 때만 중앙값
 const COHORT_MIN = 3;
-const isNews = (p) => (p.cluster ? p.cluster.role === '뉴스 칼럼' : p.category === 'news');
+const H5_DAY = 28, H5_MIN = 5; // 가설 H5: 칼럼 유형별 5편 이상이 D+28(발행 4주)에 도달하면 누적 노출 중앙값 비교
+// 칼럼은 발행 때 유형(newsType, 사실 확인표)으로 셈 → 콘텐츠 정리로 상시 글로 전환해도 칼럼 계열에 남음.
+// newsType 칸이 없는 옛 데이터(2026-11-05 회차 전 스냅숏)는 클러스터 역할·카테고리로 칼럼 1계열
+const isNews = (p) => Boolean(p.newsType) || (p.cluster ? p.cluster.role === '뉴스 칼럼' : p.category === 'news');
 const COHORTS = [
   { label: '상시 글·허브', color: 'var(--cat-1)', test: (p) => !isNews(p) },
-  { label: '뉴스 칼럼', color: 'var(--cat-2)', test: isNews },
+  { label: '영향 칼럼', color: 'var(--cat-2)', test: (p) => p.newsType === '영향', h5: true },
+  { label: '화제 칼럼', color: 'var(--cat-3)', test: (p) => p.newsType === '화제', h5: true },
 ];
+const COHORTS_OLD = [COHORTS[0], { label: '뉴스 칼럼', color: 'var(--cat-2)', test: isNews }];
+const hasNewsType = () => state.posts.some((p) => 'newsType' in p);
 
 function cohortSeries() {
-  return COHORTS.map((c) => {
+  return (hasNewsType() ? COHORTS : COHORTS_OLD).map((c) => {
     const posts = state.posts.filter((p) => p.firstDays && c.test(p));
     const reached = (k) => posts.filter((p) => p.firstDays.length > k).map((p) => p.firstDays[k]);
     const pts = [];
@@ -661,6 +668,8 @@ function cohortSeries() {
 function cohortChart(el) {
   if (!state.posts.some((p) => p.firstDays)) { el.innerHTML = '<div class="empty">경과일 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</div>'; return; }
   const series = cohortSeries();
+  const legend = document.getElementById('cohort-legend');
+  if (legend) legend.innerHTML = series.map((s) => `<span><i style="background:${s.color}"></i>${s.label}</span>`).join('');
   if (!series.some((s) => s.pts.length)) { el.innerHTML = `<div class="empty">발행일 데이터가 있는 글이 계열마다 ${COHORT_MIN}편 이상 모이면 표시합니다.</div>`; return; }
   const maxK = Math.max(1, ...series.flatMap((s) => s.pts.map((p) => p.k)));
   const W = Math.max(280, Math.round(el.clientWidth)), H = 240, L = 40, R = 16, T = 24, B = 32;
@@ -679,12 +688,12 @@ function cohortChart(el) {
     g += `<g><title>D+${k} 누적 노출 · ${tip}</title><rect x="${x(k) - half}" y="${T}" width="${half * 2}" height="${H - T - B}" fill="transparent"/></g>`;
     if (k % every === 0 || k === maxK) g += `<text x="${x(k)}" y="${H - 8}" text-anchor="middle">D+${k}</text>`;
   }
-  // 선 끝 값 라벨: 두 계열이 겹치면 위아래로 벌림
+  // 선 끝 값 라벨: 위에서부터 16px 간격이 되게 아래로 벌리고, 맨 아래가 축을 넘으면 모두 위로 올림
   const ends = series.filter((s) => s.pts.length).map((s) => { const p = s.pts[s.pts.length - 1]; return { s, p, ly: y(p.v) - 10 }; });
-  if (ends.length === 2 && Math.abs(ends[0].ly - ends[1].ly) < 16) {
-    const [hi, lo] = ends[0].ly <= ends[1].ly ? ends : [ends[1], ends[0]];
-    hi.ly = Math.max(T - 8, lo.ly - 16);
-  }
+  const byY = [...ends].sort((a, b) => a.ly - b.ly);
+  for (let i = 1; i < byY.length; i++) byY[i].ly = Math.max(byY[i].ly, byY[i - 1].ly + 16);
+  const over = byY.length ? byY[byY.length - 1].ly - (H - B - 4) : 0;
+  if (over > 0) byY.forEach((e) => { e.ly = Math.max(T - 8, e.ly - over); });
   ends.forEach(({ s }) => {
     g += `<polyline fill="none" stroke="${s.color}" stroke-width="2" stroke-linejoin="round" points="${s.pts.map((p) => `${x(p.k)},${y(p.v)}`).join(' ')}"/>`;
   });
@@ -696,7 +705,12 @@ function cohortChart(el) {
   // 요약 줄: D+7(없으면 D+3) 중앙값 비교 — 가설 H1·H4 판단용
   const ref = series.some((s) => s.pts.some((p) => p.k === 7)) ? 7 : 3;
   const line = series.map((s) => { const p = s.pts.find((q) => q.k === ref); return p ? `${s.label} <b style="color:var(--ink)">${p.v}회</b> (${p.n}편)` : `${s.label} ${COHORT_MIN}편 미만 (${s.reached(ref).length}편 도달)`; }).join(' · ');
+  // H5 줄: 칼럼 유형별 D+28 도달 편수와, 5편 이상이면 중앙값 (판정은 traffic-playbook·README 가설 표에)
+  const h5 = series.filter((s) => s.h5);
+  const h5Line = h5.length ? h5.map((s) => { const vals = s.reached(H5_DAY); return vals.length >= H5_MIN ? `${s.label} <b style="color:var(--ink)">${median(vals)}회</b> (${vals.length}편)` : `${s.label} ${vals.length}/${H5_MIN}편 도달`; }).join(' · ') : '';
+  const h5Ready = h5.length && h5.every((s) => s.reached(H5_DAY).length >= H5_MIN);
   el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">D+${ref} 누적 노출 중앙값: ${line}</div>
+    ${h5Line ? `<div class="small" style="color:var(--body);margin-bottom:8px" title="가설 H5: 영향이 오래 가는 칼럼이 화제 칼럼보다 발행 4주 누적 노출이 많다. 유형은 발행 때 사실 확인표 기준">H5 · D+${H5_DAY} 누적 노출 중앙값: ${h5Line}${h5Ready ? ' · <b>판정 가능</b>' : ` · 유형별 ${H5_MIN}편 이상이면 판정`}</div>` : ''}
     <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="발행 후 경과일별 누적 노출 중앙값 꺾은선 그래프">${g}</svg>
     <div class="small">발행일 = D+0 · 웹 검색 노출 누적 · 그날까지 도달한 글이 ${COHORT_MIN}편 이상인 날만 표시</div>`;
 }
@@ -797,6 +811,7 @@ function indexFacts(p) {
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
     ${i.sitemaps ? `<dt>Google이 본 곳</dt><dd>${i.sitemaps.length ? i.sitemaps.map((m) => esc(m.replace(/^\//, ''))).join(' · ') : '사이트맵·피드 없음'}${i.referring && i.referring.length ? `<div class="small">링크: ${i.referring.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
+    ${p.newsType ? `<dt>칼럼 유형</dt><dd>${esc(p.newsType)} <span class="small">발행 때 · 가설 H5</span></dd>` : ''}
     ${p.inbound ? `<dt>받는 링크</dt><dd>${p.inbound.length}개${p.inbound.length ? `<div class="small">${p.inbound.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     ${tags ? `<dt>태그</dt><dd class="tags">${tags}</dd>` : ''}
   </dl></div>`;

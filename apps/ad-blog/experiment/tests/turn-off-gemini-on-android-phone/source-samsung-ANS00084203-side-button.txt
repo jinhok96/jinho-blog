@@ -1,0 +1,43 @@
+URL: https://www.samsung.com/us/support/answer/ANS00084203/ (Customize the side button or Bixby button on your Galaxy phone, fetched 2026-11-05 15:40 UTC)
+
+ Modern Galaxy phones and tablets are equipped with Volume buttons and a multifunction Side button. The Volume button adjusts sound levels as expected, while the Side button (or Power/Bixby button) can be pressed in various manners (short, long, or double press) to execute different commands. Depending on your model, these buttons are located on the device's left or right side.
+ Together, these buttons enable you to create personalized shortcuts for a smoother experience. Here are the standard functions available:
+ Activate Bixby Voice by pressing and holding the Side button.
+ Switch the screen on or off with a short press of the Side button.
+ Power on the device by pressing and holding the Side button when the device is off.
+ Capture the screen by simultaneously pressing the Side and Volume down buttons.
+ Access the power off menu by pressing both the Side and Volume down buttons when the device is on.
+ Launch the Camera or another app by double-pressing the Side button.
+ For Z Flip users, ensure the phone is open when using these shortcuts, as functionality may vary with the phone closed.
+ For more information on Bixby setup and use, refer to our Bixby guide .
+ You can also power off your device via the Quick settings panel by swiping down from the top of the screen with two fingers, then tapping the Power icon, and then selecting Power off . Tap Power off again to confirm.
+ Read less
+ Customize the Side button
+ In case of accidental Bixby activations via the Side button, you can remap it, so it performs different functions. Navigate to and open Settings , then tap Advanced features , and then tap Side button to adjust your desired settings.
+ The options for Double press include:
+ Camera
+ Flashlight
+ Magnifier
+ Voice Recorder
+ Samsung Notes
+ Samsung capture
+ Modes and Routines
+ Apps
+ The options for Long press include:
+ Digital assistant
+ Bixby
+ Power off menu (alternatively, use the Quick settings panel or Bixby)
+ For comprehensive Bixby setup and usage instructions, see our Bixby guide .
+ Read less
+ About the Bixby button
+ Devices like the Galaxy Note 9, S8 series, and S10 and earlier models come with a dedicated Bixby button on the left side. This button can wake up Bixby or open specific apps. You can also customize the button however pressing and holding the button will always activate Bixby Voice.
+ For additional details about setting up and using Bixby, please check out our Bixby guide .
+ Read less
+ Customize the Bixby button
+ Note
+ This option may only appear on devices that have a dedicated Bixby key.
+ For those who do not want to use the Bixby key (or button) for its default purpose, it can be remapped to launch other apps or actions.
+ Press and hold the Bixby button, and then ask Bixby to open Bixby Settings.
+ You can also manually open Bixby Settings using your device’s Settings menu. Open Settings , then tap Advanced features , and then tap Bixby .
+ Tap Bixby key , and then set your preferences.
+ Note

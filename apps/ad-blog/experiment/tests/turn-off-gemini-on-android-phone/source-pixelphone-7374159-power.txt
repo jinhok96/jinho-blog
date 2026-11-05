@@ -1,0 +1,27 @@
+URL: https://support.google.com/pixelphone/answer/7374159?hl=en
+TITLE: Turn your Pixel phone on & off - Pixel Phone Help
+
+Turn your Pixel phone on & off
+ You can turn your phone on and off with the top button on the right side. See where your Power button is located on your phone .
+ Turn your power on or off
+ To turn on your phone when it's powered off, press and hold the Power button for a few seconds.
+ On Pixel 6 & later: Press and hold the Power button until you feel a buzz (up to 7 seconds in some situations).
+ To power off your phone when it's turned on:
+ On Pixel 5a & earlier: Press and hold the Power button for a few seconds. Then, on your screen, tap Power off .
+ On Pixel 6 & later: To power off your phone, press and hold the Power and volume up buttons for a few seconds. Then, on your screen, tap Power off .
+ On Pixel 6 & later: To bring up the power menu when you press and hold the Power button, go to Settings . Tap System Gestures Press and hold the power button . Then, select Power menu . Once done, press and hold the power button for a few seconds. Then, on your screen, tap Power off .
+ Tip: Before you turn on your phone, charge it. Learn how to charge .
+ Turn your screen off and back on
+ To turn your screen on and off while your phone's turned on, press the Power button once.
+ Tip : On some Pixel phones, you can see the time and some other info even when your screen is off. Learn which Pixel phones and how to turn "Always show time & info" off or on .
+ Restart (reboot)
+ On Pixel 5a and earlier: Press and hold the Power button for about 30 seconds, or until your phone restarts.
+ On Pixel 6 and later, including Fold: Press and hold the Power button + Volume up button for a few seconds Tap Restart .
+ Force restart (reboot)
+ Press and hold the Power button for up to 60 seconds.
+ Once your phone begins to reboot and the screen displays the “G” logo, release the Power button.
+ Related resources 
+ Charge your Pixel phone 
+ Check battery level on your Pixel phone 
+ Get the most life from your Pixel phone battery 
+ Fix a phone that won't charge

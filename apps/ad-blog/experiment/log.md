@@ -7,6 +7,7 @@
 - 이유: 체류시간은 수익(자동 광고는 읽어 내려가는 만큼 노출)·검색 만족도와 관련 있지만 Cloudflare Web Analytics로는 측정 안 됨. 후보 비교 → GA4 선택(무료·Data API·AdSense 연결). Clarity(API 하루 10회·최근 1~3일)·Plausible(유료)·Vercel Web Analytics(체류 지표 없음)는 제외. GTM 대신 측정 ID 직접(설정이 저장소에 남음). Cloudflare는 쿠키 없는 전체 조회수용으로 유지
 - 적용: 측정 ID `G-GMRVKRVMHS`를 `core/config/internal/analytics.ts`에 두고 `AnalyticsScript`가 Cloudflare와 같은 조건으로 gtag.js 삽입. EEA·영국·스위스는 consent mode 기본값 거부(`wait_for_update` 500ms), `AdSenseScript`보다 먼저 렌더링. 페이지뷰·90% 스크롤은 향상된 측정에 맡김. 개인정보처리방침 Analytics 항목·쿠키 절 갱신(`updatedAt` 2026-11-05)
 - 남은 일: 리포트 도구·운영 대시보드 연결. Search Console 서비스 계정 키로 인증은 되지만 GCP 프로젝트에서 Google Analytics Data API가 꺼져 있음(403 `SERVICE_DISABLED`), GA4 속성 권한도 없음 → **사용자: ① Data API 사용 설정 ② 서비스 계정을 GA4 속성 뷰어로 추가 ③ 속성 ID 전달**. 받은 뒤 도구 작성. AdSense 동의 메시지의 "분석 목적 동의 모드" 켜기도 사용자 설정
+- 같은 날 이어서: 사용자가 Data API 사용 설정 + 서비스 계정 뷰어 추가 + 속성 ID `486901575` 전달 → `tools/ga_analytics.py` 작성, `dashboard_data.py`에 `engagement` 문서·글별 `engagement` 추가. 확인: Data API 요청 5종 200, 11-05 00:05 UTC 배포본 스크립트에 측정 ID 포함, 수집 데이터는 아직 0행(실시간 30분 포함). `--no-inspect` 시험 실행에서 새 stats 문서 `engagement`·글 53편 `engagement` 생성 확인(DB 업로드는 다음 정기 세션). 대시보드 화면 표시는 데이터가 쌓인 뒤
 - 해석 주의: 28일 방문 71회라 글별 체류 수치는 판단에 쓰지 않음. 당분간 사이트 전체 값만 기준선으로 기록
 
 ## 2026-11-05 · 결정: 주제 발굴 소스에 대형 IT 매체 인기 글 목록 추가 (사용자 요청)

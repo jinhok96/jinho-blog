@@ -2,6 +2,61 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-05 · 세션 82 (정기 실행, 개선 세션): 가설 H5 판정용 DB 구조 개선(칼럼 유형 `newsType`) + 경과일별 누적 노출 그래프를 칼럼 유형별로
+
+세션 시각: 2026-11-05 18:15 KST(목) → 18시 실행이라 개선 세션. 같은 날 앞 세션 80(`gemini-gems-to-skills` 갱신)·81(V7 판정용 DB·대시보드, `stale_check.py`, 칼럼 후속 확인)과 사용자 결정 2건(GA4, 인기 글 목록) → 다른 작업을 고름. 열린 PR 없음. 작업 브랜치를 `origin/main`(9b6b27a)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-08 ~ 11-05, 세션 81 이후 바뀐 값만)**
+
+- 노출 1,047 → **1,062**, 클릭 17, CTR 1.6%, 평균 순위 23.4 → **23.2** (`spotify-family-qr-code-verification` 270·17.4 / `turn-off-ai-in-chrome` 186·18.3·클릭 3 / `image-to-text-offline-free` 127·15.8·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 2 (진행 중, 노출 113)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 20 · `URL is unknown` 16 (`gsc_report.py`·대시보드 첫 회차 09:34Z 같음, `inFeed` 17). **10분 뒤 대시보드 둘째 회차(09:44Z)는 `Discovered` 15 · unknown 21 · `inFeed` 12, 7분 뒤 셋째 회차(09:51Z, DB에 올린 회차)는 18 · 18 · 15** — `customize-right-click-menu-windows-11`·`google-gmail-photos-ads`·`remove-phone-number-from-google-account`·`turn-off-copilot-in-edge`·`turn-off-copilot-in-word`가 unknown·사이트맵 칸 없음으로 바뀜(`link_seen.py` 회차에서도 `turn-off-ai-features`·`turn-off-meta-ai-instagram`이 unknown). 새 크롤링은 없어 흔들림(세션 81은 3편, 이번엔 한 회차에 5편) → V7 행에 '회차 하나가 아니라 history에서 글별로 rss.xml이 처음 찍힌 회차'로 판정한다고 적음. `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 19편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 25일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- GA4 첫 업로드 (사이트 전체 기준선, 11-05 00:05 UTC 배포 뒤): 조회 5·사용자 2·세션 2(참여 세션 2)·참여 시간 합 36초·90% 스크롤 1. 같은 28일 Cloudflare 조회수 91·방문 83 (10-08~11-05). 방문이 적어 판단에 쓰지 않음 (README 결정사항 체류 측정)
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 주간 점검(11-02) 우선순위 1~3은 처리됨(대표 이미지 남은 6편은 모두 V1~V4 판정·콘텐츠 정리 3·4번 대상). 1(색인)은 새 크롤링이 없어 링크를 늘려도 발견 경로가 안 됨, 2는 보류 2건, 3은 허브 4/4, 4·5는 세션 80·81과 같은 이유(V 판정 중·V7 판정 중 `updatedAt` 변경 안 함)로 대상 없음, 6은 Windows 11-10 전. `stale_check.py`도 세션 81과 같은 28문장 → **7: DB 구조 개선** — 가설 표에서 판정이 가장 가까운 H5(칼럼 D+28이 11-14부터)를 DB 값으로 판정할 수 없었음
+
+**한 일 (개선 세션, 쓴 스킬: `dataviz` — 3번째 계열 색을 `validate_palette.js`로 검사(라이트·다크, 전체 쌍), 선 끝 직접 라벨·범례로 대비 보완, 렌더링 확인. SEO 스킬은 이번 작업(DB·대시보드)에 해당 절차가 없어 쓰지 않음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · DB 구조 개선 | `tools/dashboard_data.py` | H5("영향 칼럼이 화제 칼럼보다 발행 4주 누적 노출이 많다")는 칼럼 유형이 사실 확인표에만 있고 DB에 없어, 대시보드 경과일별 누적 노출이 칼럼을 한 계열로만 보여 줌. 또 그 계열을 `clusters.md` 역할로 나눠 **콘텐츠 정리로 상시 글로 전환한 칼럼이 상시 계열로 옮겨 가는** 문제 → `posts` 글별 `newsType`(`화제`·`영향`·null) 추가: `tests/{slug}/factcheck.md`에서 '유형'이 들어간 줄의 굵은 값(없으면 `유형: 화제` 꼴, `화제성`은 값으로 읽지 않음). 발행 때 기록이라 전환 뒤에도 유지. 칼럼인데 못 찾으면 경고 출력. 53편 확인: 칼럼 18편 모두 읽힘(화제 10·영향 8), 상시 글 35편 null — 사실 확인표 손 확인과 같음. 기존 history는 고치지 않음 | - (지표를 노린 변경 아님) |
+| 2 | 7 · 대시보드 개선 | `dashboard/index.html` | 경과일별 누적 노출: 2계열(상시·칼럼) → **3계열(상시 글·허브 / 영향 칼럼 / 화제 칼럼)**, 칼럼은 `newsType`으로(그 칸이 없는 옛 스냅숏은 예전 2계열). 범례는 계열에서 그림. 요약 줄 아래 **'H5' 줄**: 유형별 D+28 도달 편수(`n/5편 도달`)와 5편 이상이면 중앙값·'판정 가능'. 선 끝 라벨 겹침 처리를 계열 수와 상관없이 위에서부터 16px로. 글 상세 '색인·글 정보'에 '칼럼 유형'. 3번째 색 `--cat-3` 라이트 `#1baf7a`·다크 `#199e70`(dataviz 기본 팔레트 3번): 라이트 흰 바탕 대비 2.82(WARN → 선 끝 값 라벨·범례로 보완), 다크 전체 쌍 tritan 6.5(직접 라벨로 보완), 나머지 PASS. `dashboard_check.cjs` 통과(데스크톱·모바일 375px, 글별 표 53줄, 가로 넘침 없음), 라이트 1280px·다크 375px 캡처로 라벨 확인 | - |
+| 3 | 문서 | README 가설 H5·운영 대시보드, writing-guide 뉴스 칼럼 사실 확인표, clusters.md 전환 규칙 | H5 판단 방법을 'D+28 누적 웹 노출 중앙값, 유형은 발행 때 사실 확인표 값(`newsType`), 전환·통합 글은 판정 때 표시'로 구체화하고, 11-01 화제 칼럼 중단으로 화제는 10편에서 늘지 않음을 적음(옛 문구 "두 유형이 계속 쌓임"은 틀리게 됨). 사실 확인표 유형은 '유형' 줄에 굵게, 전환·통합 때 그 줄을 지우지 않음 | - |
+
+**H5 중간 상태** (대시보드 회차 2026-11-05T09:34Z, 웹 검색, Search Console 마지막 집계일 11-04)
+
+| 유형 | 편수 | D+28 도달 | 5편째 D+28 (Search Console 날짜) | D+14 누적 노출 중앙값 | 색인된 칼럼 |
+| --- | --- | --- | --- | --- | --- |
+| 영향 | 8 | 0 | 11-17 (`office-2021-end-of-support`, 10-20 발행) | 4회 (6편) | 3편: `microsoft-365-family-storage-2tb` 32·`windows-11-24h2-end-of-support` 24·`apple-siri-settlement-claim` 8 |
+| 화제 | 10 | 0 | 11-18 (`chrome-http-warning-default`, 10-21 발행) | 19회 (5편) | 3편: `spotify-family-qr-code-verification` 270·`iphone-duo-sold-out` 49·`iphone-handoff-verizon-cost` 21 |
+
+- 미색인 칼럼 12편은 모두 누적 노출 0 → 지금 차이는 유형보다 **10-19~20 크롤링 때 색인됐는지**가 결정함 (해석). 판정 때 전체 중앙값과 함께 색인 칼럼끼리도 비교하고, 콘텐츠 정리 3·4·5·6번으로 D+28 전에 전환·통합한 칼럼(`office-2021-end-of-support` 11-17·`windows-11-24h2-end-of-support` 11-16·`gemini-android-auto-personal-intelligence` 11-17·`iphone-duo-sold-out` 11-14 등)은 표시. 콘텐츠 정리 순서는 바꾸지 않음(AdSense 재신청 대응이 우선)
+- 통합으로 지운 칼럼(`google-phone-number-verification`·`chrome-enhanced-autofill-gmail`)은 D+28 전에 지워 `posts`에 없음 → H5에서 빠짐
+
+**알게 된 것**
+
+- 대시보드 계열을 `clusters.md` 역할(현재 상태)로 나누면 콘텐츠 정리로 전환한 칼럼이 과거 기간까지 상시 계열로 옮겨 감 → 발행 뒤 고정되는 분류(칼럼 유형)는 사실 확인표 같은 발행 때 기록에서 읽어야 함
+- H5는 신규 도메인에서 색인 여부에 묻힘: 색인된 칼럼 6편 중 화제 3편이 노출 합 340, 영향 3편이 64 (spotify 270 한 편이 큼). 5편 기준 중앙값은 미색인 0이 섞여 작게 나옴
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 25일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **H5 판정 — 11-20 무렵 개선 세션** (두 유형 모두 5편이 D+28에 도달하고 Search Console 집계가 따라온 뒤). 대시보드 'H5' 줄 + history `posts`의 `firstDays`·`newsType`·`indexedAt`으로 전체·색인 칼럼끼리 중앙값을 log.md에 붙이고 README 가설 표 상태 갱신
+- Claude: V7 — `gsc_report.py` 사이트맵 표에서 rss.xml 다음 다운로드 확인 뒤 7일(늦어도 11-15) 판정 (세션 81 그대로). V7 판정 뒤 미발견 15편을 실제 갱신거리가 있는 것부터(세션 81 순서)
+- Claude: 다음 DB 구조 개선 후보 — H3(검증형 vs 조사형, 발행 8주 = 12-06부터) 글별 분류. `## How we tested`·`## What we tested` 소제목만으로는 `image-to-text-offline-free`(직접 측정인데 소제목 없음)·`turn-off-ai-in-chrome`(How we checked, 일부 직접 확인)이 어긋나므로 사실 확인표에 분류 줄을 두는 방식으로 정해야 함
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296)을 다시 받아 `sources-2026-11-05/`와 비교 (세션 80 그대로), Chrome 158(11-17) 재확인
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V7(첫 rss.xml 다운로드 + 7일, 늦어도 11-15)·V8(12-03)
+- Claude(11-06 금 일반 세션): 세션 77 후보(`turn off gemini on android phone`·`turn off galaxy ai`·`dia browser ai privacy`) + Firefox 160 출시 확인. 새 `ai-settings` 글 제목은 `How to Turn Off …`(10편)과 다른 틀로, 역링크는 한 문단 4개 상한, 상대 시점 대신 날짜(writing-guide). 새 칼럼을 쓰면 사실 확인표에 `뉴스 유형: **영향**` 줄
+- Claude: 발행 53편 (허브 4개)
+- 대시보드: 페이지 **Version 30** 발행(경과일별 누적 노출 3계열 + H5 줄, 글 상세 '칼럼 유형'. 라이브 판이 저장소 main 판과 같음을 확인한 뒤 발행) + `stats` 10개(새 `engagement` 포함) + `history` 10개 batch 성공(회차 2026-11-05T09:51:26Z, DB 문서 350개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값 변화 없음(새 색인 없음). 이 회차는 URL 검사 세 번째 회차라 `Discovered` 18 · unknown 18 · `inFeed` 15(흔들림), 28일 노출 1,064·클릭 18(미확정 포함), `traffic` Cloudflare 28일 조회수 91·방문 83, `engagement` GA4 첫 문서(조회 5·참여 36초), `summary.adsense` 운영 25일·색인율 0.321·클릭 연속 증가 0, `summary.crawl` 미색인 36편 중 Google이 본 링크 19편. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-05 · 결정: 체류시간 측정에 GA4 추가 (사용자 요청)
 
 - 이유: 체류시간은 수익(자동 광고는 읽어 내려가는 만큼 노출)·검색 만족도와 관련 있지만 Cloudflare Web Analytics로는 측정 안 됨. 후보 비교 → GA4 선택(무료·Data API·AdSense 연결). Clarity(API 하루 10회·최근 1~3일)·Plausible(유료)·Vercel Web Analytics(체류 지표 없음)는 제외. GTM 대신 측정 ID 직접(설정이 저장소에 남음). Cloudflare는 쿠키 없는 전체 조회수용으로 유지

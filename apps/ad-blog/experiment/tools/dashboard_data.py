@@ -33,6 +33,8 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
                   firstDays, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
          otherPages: [{path, 28일 지표, queries, daily, sources}]}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
+          newsType = 발행 때 정한 뉴스 칼럼 유형 '화제' | '영향' 또는 null(칼럼 아님) — tests/{slug}/factcheck.md에서 읽음,
+                     상시 글로 전환해도 유지 (가설 H5 판정용, 2026-11-05 회차부터),
           28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
           sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만),
           views·visits = Cloudflare Web Analytics 28일 조회수·방문 (CF 환경변수가 있을 때만, daily 각 날짜에도 views·visits,
@@ -119,6 +121,28 @@ def frontmatter(path: pathlib.Path) -> dict:
     body = re.sub(r'!\[[^\]]*\]\([^)]*\)', '', text.split('---', 2)[2])
     fm['words'] = len(re.findall(r"[A-Za-z0-9][A-Za-z0-9'’.-]*", body))
     return fm
+
+
+NEWS_TYPES = ('화제', '영향')
+NEWS_TYPE_BOLD = re.compile(r'\*\*(화제|영향)\*\*')
+NEWS_TYPE_PLAIN = re.compile(r'유형[^\n]*?[:：|]\s*(화제|영향)(?!성)')
+
+
+def news_type(slug: str, tests: pathlib.Path = EXPERIMENT / 'tests') -> str | None:
+    """발행 때 정한 뉴스 칼럼 유형 '화제' | '영향' (README 가설 H5 판정용, 2026-11-05 세션 82).
+
+    tests/{slug}/factcheck.md에서 '유형'이 들어간 첫 줄의 값 (writing-guide 뉴스 칼럼 사실 확인표 규칙).
+    카테고리가 아니라 사실 확인표에서 읽으므로 콘텐츠 정리로 상시 글로 전환한 뒤에도 발행 때 유형이 남음. 없으면 None
+    """
+    path = tests / slug / 'factcheck.md'
+    if not path.exists():
+        return None
+    lines = [line for line in path.read_text(encoding='utf-8').splitlines() if '유형' in line]
+    for pattern in (NEWS_TYPE_BOLD, NEWS_TYPE_PLAIN):  # 굵게 쓴 값 우선 (`화제성 신호` 같은 낱말을 값으로 읽지 않게)
+        for line in lines:
+            if m := pattern.search(line):
+                return m.group(1)
+    return None
 
 
 def cluster_map(clusters: list[dict]) -> dict[str, dict]:
@@ -434,6 +458,9 @@ def main() -> None:
         slug = path.stem
         url = f'{SITE_ORIGIN}/posts/{slug}'
         doc = {'slug': slug, **frontmatter(path), 'cluster': clusters.get(slug), 'inbound': inbound[slug], **metrics(by_page.get(url)), **page_extra(url)}
+        doc['newsType'] = news_type(slug)
+        if doc['newsType'] is None and doc.get('category') == 'news':
+            print(f'뉴스 칼럼 유형(화제/영향)을 사실 확인표에서 찾지 못함: tests/{slug}/factcheck.md', file=sys.stderr)
         if doc.get('createdAt'):
             doc['firstDays'] = first_days(doc['createdAt'], page_dates.get(url, {}), last_day)
         doc['move'] = position_move(page_now.get(url), page_prev.get(url))

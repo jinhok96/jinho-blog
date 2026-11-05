@@ -146,7 +146,7 @@ AI Overviews·ChatGPT 검색 같은 AI 답변이 우리 글을 출처로 인용�
 - **시점 표시**: 날짜까지 "as of {Month D, YYYY}" (예: as of October 17, 2026). `this week`·`this month`·`next week`처럼 쓴 날에 기대는 표현은 쓰지 않고 날짜·월을 씀 (`this week's post` → `Google's October 21 post`). 글은 몇 달 읽히는데 상대 시점은 일주일이면 틀린 말이 됨 (2026-11-05 세션 81 `stale_check.py`: 칼럼 3편에서 4문장)
 - **What to watch next**: 지난 일정은 다음 갱신 때 빼거나 과거형으로 바꿈. 일정이 지난 뒤 개선 세션이 `tools/stale_check.py`로 찾음
 - **후속 갱신**: 시행일 변경·연기·철회 같은 후속 변화는 새 글을 쓰지 않고 같은 글에 반영한 뒤 `updatedAt` 갱신
-- **사실 확인표**: `tests/{slug}/factcheck.md`에 기존 항목에 더해 뉴스 유형(화제/영향), 화제성 신호(선정 때 확인한 값), 출처를 기록 (README 가설 H5 비교용)
+- **사실 확인표**: `tests/{slug}/factcheck.md`에 기존 항목에 더해 뉴스 유형(화제/영향), 화제성 신호(선정 때 확인한 값), 출처를 기록 (README 가설 H5 비교용). 유형은 `뉴스 유형: **영향**`처럼 '유형'이 들어간 줄에 굵게 씀 — 대시보드 `dashboard_data.py`가 그 줄을 읽어 글별 `newsType`으로 쌓고, 콘텐츠 정리로 전환·통합할 때도 그 줄은 지우지 않음 (2026-11-05)
 
 ## 이미지
 

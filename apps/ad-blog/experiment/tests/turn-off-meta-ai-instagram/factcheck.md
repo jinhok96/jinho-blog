@@ -1,5 +1,7 @@
 # turn-off-meta-ai-instagram 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Instagram 도움말 16쪽 대조(How we checked). 계정 없음
+
 ## 작성 전 브리프 (2026-10-25 KST 세션 47, 일반 세션)
 
 | 항목 | 내용 |

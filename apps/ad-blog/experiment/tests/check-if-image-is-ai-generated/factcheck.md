@@ -1,5 +1,7 @@
 # Fact-check sheet: check-if-image-is-ai-generated.mdx (2026-10-11)
 
+- 검증 유형 (가설 H3): **검증형** — C2PA 서명 이미지 2장 × 편집 12가지를 C2PA 도구로 직접 확인(What we tested). 2026-10-29 Adobe Inspect·CAI Verify 업로드 캡처 추가
+
 Legend for "How verified":
 - **Opened**: page/file opened directly in this session (WebFetch, git clone, curl of raw file, or package download).
 - **Search extract**: only seen as a WebSearch extract limited to the official domain (domain not reachable from WebFetch or the shell). Claim is attributed ("Google says", "According to Google") and kept high level.

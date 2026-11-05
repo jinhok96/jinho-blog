@@ -1,5 +1,7 @@
 # 사실 확인표: pixel-watch-safety-signal-ending
 
+- 검증 유형 (가설 H3): **조사형** — Google 공지·도움말 대조만, 직접 실행 없음
+
 확인일: 2026-10-17 (한국 18~20시). Google 도움말·커뮤니티 페이지는 본문이 JS로 로딩돼 Playwright(Chromium 1194)로 렌더링해 텍스트 추출. 직접 실행 검증 없음(기기 필요) → 문서 기반 뉴스 칼럼. 원문 공지 텍스트는 [source-announcement.txt](source-announcement.txt).
 
 ## 글 설정

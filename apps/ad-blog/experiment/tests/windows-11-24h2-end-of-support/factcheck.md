@@ -1,5 +1,7 @@
 # windows-11-24h2-end-of-support 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Microsoft KB·release health 문서 대조만, Windows 환경 없음
+
 - 주 검색어: `windows 11 24h2 end of support` (자동완성 Google·Bing·YouTube 3곳)
 - 하위 검색어: `windows 11 24h2 end of support date`, `windows 11 24h2 end of life`, `windows 11 24h2 end of service`, `windows 11 26h2 update`, `windows 11 26h2 enablement package`
 - 채널: 피드형 (뉴스 칼럼). 제목 62자(주 검색어 맨 앞), 설명 152자

@@ -1,5 +1,7 @@
 # gemini-connected-apps — 브리프·사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Google 도움말·Workspace 공지 대조와 가용성 표 83행 집계(How we checked). 앱 실행 없음
+
 slug: `gemini-connected-apps`
 
 ## 작성 전 브리프

@@ -1,5 +1,7 @@
 # customize-right-click-menu-windows-11 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Microsoft KB·릴리스 정보 대조(How we checked). 캡처는 KB 문서 화면, Windows 환경 없음
+
 ## 작성 전 브리프 (2026-10-30 KST 세션 67, 뉴스 세션)
 
 | 항목 | 내용 |

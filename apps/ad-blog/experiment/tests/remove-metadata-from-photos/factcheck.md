@@ -1,5 +1,7 @@
 # remove-metadata-from-photos 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — 사진 메타데이터 제거 도구 직접 측정(How we tested)
+
 - 주 검색어: `remove metadata from photo`. 하위 검색어 (2026-10-22 `demand_check.py suggest`): remove metadata from photo android·free·iphone·online (Google·Bing·YouTube 중 2곳 이상), remove metadata from photo mac·windows·online free, remove exif data from photo, remove location from photo (+ iphone·android·samsung·pixel·windows·mac·online, 20개), delete metadata from photos. 자동완성 `remove metadata from photo` 21개 · `remove location from photo` 20개
 - Trends 미국 3개월(2026-10-22): `remove metadata` 0.4 · `exif data` 0.1 · `photo location` 3.4 · `webp to png` 3.0 · 기준 `remove background` 35.4. 긴 검색어(`remove metadata from photo` 등)는 0.0 → 검색량은 작지만 질문형 검색어가 많고 상시 수요
 - 채널: **검색형** (상시 수요, 비교·측정 + How-to). 제목 60자, 설명 158자

@@ -36,7 +36,9 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
           28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
           sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만),
           views·visits = Cloudflare Web Analytics 28일 조회수·방문 (CF 환경변수가 있을 때만, daily 각 날짜에도 views·visits,
-          조회수만 있고 검색 노출이 없는 날은 노출 0으로 추가. 날짜는 UTC), firstDays = 발행일부터 날짜별 누적 노출(최대 D+28),
+          조회수만 있고 검색 노출이 없는 날은 노출 0으로 추가. 날짜는 UTC),
+          engagement = GA4 28일 {views, users, engagementSeconds, scrolls} (GA4를 읽은 회차만, 조회 없으면 0. 한국 날짜, 2026-11-05 회차부터),
+          firstDays = 발행일부터 날짜별 누적 노출(최대 D+28),
           move = 최근 7일 vs 직전 7일 순위 {pos, prevPos, imp, prevImp, delta} 또는 null(최근 7일 노출 없음),
           색인 시점 3가지 (Search Console은 색인된 날짜를 주지 않아 회차마다 처음 본 값을 고정, 한번 정하면 바꾸지 않음):
           indexedAt = URL 검사가 처음 PASS인 회차 시각, firstCrawlAt = 그때의 lastCrawl(마지막 크롤링은 이후 바뀌므로 첫 값),
@@ -50,6 +52,10 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
           (2026-10-26 회차부터. 그 전 회차 history에는 없음)
 - traffic: (Cloudflare 환경변수가 있을 때만) 사이트 전체 실제 조회수 {range, views, visits, daily: [{date, views, visits}](UTC 날짜, 빠진 날 0),
            referers: 유입 사이트별 28일 조회수·방문 상위 10 (자기 사이트·직접 방문은 'direct')}
+- engagement: (GA4를 읽은 회차만, 2026-11-05 회차부터) 사이트 전체 참여 지표 {range, propertyId, views, users, engagementSeconds,
+              sessions, engagedSessions, scrolls, daily: [{date, views, users, engagementSeconds, scrolls}](한국 날짜, 빠진 날 0)}.
+              engagementSeconds = 페이지가 화면 앞에 있던 시간 합(초), scrolls = 90% 스크롤 이벤트 수 (ga_analytics.py).
+              유럽 동의 거부 방문은 빠질 수 있어 전체 조회수는 traffic(Cloudflare) 기준
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
              movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10)
 - experiments: {rows: traffic-playbook 검증 기록 표}
@@ -70,6 +76,7 @@ from gsc_report import (  # noqa: E402
     API, POSTS_DIR, SITE_ORIGIN, adsense_status, call, index_refs, load_token, main_sitemap, search_analytics, site_path, weekly_clicks,
 )
 import cf_analytics  # noqa: E402
+import ga_analytics  # noqa: E402
 import link_seen  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
 
@@ -367,6 +374,17 @@ def main() -> None:
             docs['traffic'] = traffic_doc(page_views, dt.date.fromisoformat(since), today)
         except Exception as error:  # noqa: BLE001 - 조회수는 부가 지표라 대시보드 갱신을 막지 않음
             print(f'Cloudflare 조회수를 읽지 못함 (조회수 없이 진행): {error}', file=sys.stderr)
+    # 참여 시간·90% 스크롤 (GA4, 속성 시간대 = 한국 날짜): 실패해도 나머지 갱신은 계속
+    engagement: dict[str, dict] | None = None  # None = 이번 회차에 GA4를 읽지 못함 (글별 칸을 넣지 않음)
+    if ga_analytics.available():
+        try:
+            ga_token = ga_analytics.load_token()
+            ga_since = dt.date.fromisoformat(since)
+            engagement = {SITE_ORIGIN + path: v for path, v in ga_analytics.page_engagement(ga_token, ga_since, today).items()}
+            docs['engagement'] = ga_analytics.site_doc(ga_token, ga_since, today)
+        except Exception as error:  # noqa: BLE001 - 참여 시간은 부가 지표라 대시보드 갱신을 막지 않음
+            engagement = None
+            print(f'GA4 참여 시간을 읽지 못함 (참여 시간 없이 진행): {error}', file=sys.stderr)
     for url, days in page_views.items():
         rows = {r['date']: r for r in page_daily.setdefault(url, [])}
         for d, v in days.items():
@@ -397,6 +415,8 @@ def main() -> None:
         if page_views:  # 조회수를 읽은 회차만 (없으면 화면이 조회수 칸을 숨김)
             days = page_views.get(url, {}).values()
             extra.update(views=sum(v['views'] for v in days), visits=sum(v['visits'] for v in days))
+        if engagement is not None:  # GA4를 읽은 회차만 (조회가 없는 글은 0)
+            extra['engagement'] = engagement.get(url, ga_analytics.empty())
         return extra
 
     cluster_rows, error = parse_clusters(CLUSTERS_FILE)

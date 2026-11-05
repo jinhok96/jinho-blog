@@ -1,0 +1,26 @@
+URL: https://support.google.com/android/answer/13627402?hl=en
+TITLE: Delete apps on your Android device - Android Help
+
+Delete apps on your Android device
+ Important: 
+ Some of these steps work only on Android 13 and up. Learn how to check your Android version .
+ Supervised users can use some Personal Safety app features. Learn which features are available .
+ Delete apps that you installed
+ Open the Google Play Store app .
+ At the top right, tap the Profile icon .
+ Tap Manage apps & devices Manage .
+ Select the name of the app you want to delete.
+ Tap Uninstall .
+ Tips: 
+ If you delete or disable an app, you can add it back to your phone. If you bought an app, you can reinstall it without buying it again. Learn how to reinstall and re-enable apps .
+ You can archive apps that you haven’t used for a while. When you archive an app, the app data is removed, but will keep the app icon and your personal data on your device. Learn how to archive unused apps on Android .
+ Related resources
+ Reinstall and re-enable apps 
+ Disable apps that came with your phone 
+ Manage unused apps 
+ Change app permissions on your Android phone 
+ Archive unused apps on Android 
+ Was this helpful?
+ How can we improve it?
+ Yes No 
+ Submit

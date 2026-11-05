@@ -1,0 +1,321 @@
+URL: https://support.google.com/gemini/answer/14599070?hl=en
+TITLE: Use Gemini in Google Messages - Gemini Apps Help
+
+Use Gemini in Google Messages
+ You can chat with Gemini in the Google Messages app to draft messages, brainstorm ideas, plan events, or simply have a fun conversation.
+ What you need
+ An Android phone.
+ Your phone’s language set to a supported language .
+ The latest version of Google Messages . Get it on Google Play .
+ A personal Google Account that you manage on your own.
+ You can’t use Gemini in Google Messages with a Google Account managed by Family Link or with a Google Workspace account.
+ Be 18 or over.
+ RCS chats turned on. Learn how to turn on RCS chats .
+ Supported languages for Gemini in Google Messages 
+ Supported languages
+ Important: Gemini in Google Messages is being released gradually.
+ Arabic
+ Bengali
+ Bulgarian
+ Chinese (Simplified/Traditional)
+ Croatian
+ Czech
+ Danish
+ Dutch
+ English
+ Estonian
+ Farsi
+ Finnish
+ French
+ German
+ Greek
+ Gujarati
+ Hebrew
+ Hindi
+ Hungarian
+ Indonesian
+ Italian
+ Japanese
+ Kannada
+ Korean
+ Latvian
+ Lithuanian
+ Malayalam
+ Marathi
+ Norwegian
+ Polish
+ Portuguese
+ Romanian
+ Russian
+ Slovak
+ Slovenian
+ Spanish
+ Swedish
+ Tamil
+ Telugu
+ Thai
+ Turkish
+ Ukrainian
+ Urdu
+ Vietnamese
+ Countries where Gemini in Google Messages is available 
+ Gemini in Messages is currently available in over 165 countries. We’re working hard to release it to users in more languages and more places around the world.
+ Supported countries & territories
+ Albania
+ Algeria
+ American Samoa
+ Angola
+ Antigua and Barbuda
+ Argentina
+ Armenia
+ Australia
+ Austria
+ Azerbaijan
+ Bahrain
+ Bangladesh
+ Barbados
+ Belgium
+ Belize
+ Benin
+ Bhutan
+ Bolivia
+ Bosnia and Herzegovina
+ Botswana
+ Brazil
+ Brunei
+ Bulgaria
+ Burkina Faso
+ Burundi
+ Cabo Verde
+ Cambodia
+ Cameroon
+ Canada
+ Central African Republic
+ Chad
+ Chile
+ Christmas Island
+ Cocos (Keeling) Islands
+ Colombia
+ Comoros
+ Cook Islands
+ Costa Rica
+ Côte d'Ivoire
+ Croatia
+ Cyprus
+ Czech Republic
+ Democratic Republic of the Congo
+ Denmark
+ Djibouti
+ Dominica
+ Dominican Republic
+ Ecuador
+ Egypt
+ El Salvador
+ Equatorial Guinea
+ Eritrea
+ Estonia
+ Eswatini
+ Ethiopia
+ Fiji
+ Finland
+ France
+ French Guiana
+ Gabon
+ Georgia
+ Germany
+ Ghana
+ Greece
+ Grenada
+ Guadeloupe
+ Guam
+ Guatemala
+ Guinea
+ Guinea-Bissau
+ Guyana
+ Haiti
+ Heard Island and McDonald Islands
+ Honduras
+ Hong Kong
+ Hungary
+ Iceland
+ India
+ Indonesia
+ Iraq
+ Ireland
+ Israel
+ Italy
+ Jamaica
+ Japan
+ Jordan
+ Kazakhstan
+ Kenya
+ Kiribati
+ Kosovo
+ Kuwait
+ Kyrgyzstan
+ Laos
+ Latvia
+ Lebanon
+ Lesotho
+ Liberia
+ Libya
+ Liechtenstein
+ Lithuania
+ Luxembourg
+ Macau
+ Madagascar
+ Malawi
+ Malaysia
+ Maldives
+ Mali
+ Malta
+ Marshall Islands
+ Martinique
+ Mauritania
+ Mauritius
+ Mayotte
+ Mexico
+ Micronesia
+ Moldova
+ Mongolia
+ Montenegro
+ Morocco
+ Mozambique
+ Myanmar
+ Namibia
+ Nauru
+ Nepal
+ Netherlands
+ New Zealand
+ Nicaragua
+ Niger
+ Nigeria
+ Niue
+ Norfolk Island
+ North Macedonia
+ Northern Mariana Islands
+ Norway
+ Oman
+ Pakistan
+ Palau
+ Palestine
+ Panama
+ Papua New Guinea
+ Paraguay
+ Peru
+ Philippines
+ Poland
+ Portugal
+ Puerto Rico
+ Qatar
+ Republic of the Congo
+ Romania
+ Rwanda
+ Saint Kitts and Nevis
+ Saint Lucia
+ Saint Martin
+ Saint Vincent and the Grenadines
+ Samoa
+ São Tomé and Príncipe
+ Saudi Arabia
+ Senegal
+ Serbia
+ Seychelles
+ Sierra Leone
+ Singapore
+ Slovakia
+ Slovenia
+ Solomon Islands
+ Somalia
+ South Africa
+ South Korea
+ South Sudan
+ Spain
+ Sri Lanka
+ Sudan
+ Suriname
+ Sweden
+ Switzerland
+ Taiwan
+ Tajikistan
+ Tanzania
+ Thailand
+ The Bahamas
+ The Gambia
+ Timor-Leste
+ Togo
+ Tokelau
+ Tonga
+ Trinidad and Tobago
+ Tunisia
+ Türkiye
+ Turkmenistan
+ Tuvalu
+ U.S. Virgin Islands
+ Uganda
+ Ukraine
+ United Arab Emirates
+ United Kingdom
+ United States
+ United States Minor Outlying Islands
+ Uruguay
+ Uzbekistan
+ Vanuatu
+ Venezuela
+ Vietnam
+ Western Sahara
+ Yemen
+ Zambia
+ Zimbabwe
+ Start a chat with Gemini in Google Messages
+ Important: Chats with Gemini aren’t end-to-end encrypted.
+ On your Android phone, open Google Messages .
+ Tap the chat with Gemini, or tap Start chat Gemini .
+ For the first time, follow any on-screen instructions.
+ Enter your question or prompt.
+ The first time you chat with Gemini, you can explore different conversations. Just tap a suggestion above the message field.
+ Optionally, to add a photo to your prompt, tap Show attach media screen .
+ Tap Send message .
+ Tip: You can also use apps in your chat with Gemini in Google Messages. Learn more about using apps with Gemini and how to manage apps in Gemini .
+ Examples
+ I haven't reached out to my friend in a while. Help me draft a short message to check in and reconnect.
+ Suggest a 3-course dinner menu that's impressive but manageable for a novice cook. Dietary restriction: vegetarian.
+ I'm going to a social event where I barely know anyone. Come up with a few interesting conversation starters.
+ Give feedback on a Gemini response
+ Touch and hold the response you want to give feedback on.
+ At the top, tap Good response or Bad response .
+ Report a legal issue
+ Touch and hold a response.
+ Tap More Report legal issue .
+ Report legal issue 
+ Disable Gemini in Google Messages
+ Open Google Messages .
+ At the top, tap your profile picture or initials Messages settings Gemini in Messages .
+ Turn off Show Gemini button .
+ Delete your Gemini chat
+ Important: In Google Messages, you can only delete your entire Gemini chat. In your Gemini Apps Activity , you can delete specific prompts from your Gemini chat.
+ In Google Messages 
+ After you complete the steps below, your Gemini chat is deleted from your Gemini Apps Activity and Google Messages.
+ In Messages, open your chat with Gemini.
+ At the top, tap More Delete conversation .
+ Follow the on-screen instructions.
+ In Gemini Apps Activity 
+ After you complete the steps below, your Gemini chat is deleted from your Gemini Apps Activity. It doesn't delete the chat from Google Messages or any Android backup of your messages. To also delete it from Google Messages, follow the steps to delete the chat from Google Messages .
+ Go to your Gemini Apps Activity .
+ Next to a prompt or response in Google Messages, tap Delete activity item .
+ Activity from Google Messages shows a “ Google Messages” label.
+ Follow the on-screen instructions.
+ Tip: To access your Gemini Apps activity from the Gemini web app, go to gemini.google.com . Then at the top, tap Menu Settings & help Activity .
+ What happens when you delete your Gemini chats
+ When you delete your Gemini chat in Google Messages or in your Gemini Apps Activity , Gemini can no longer access the chat.
+ When you delete your Gemini chat in Google Messages, it’s also deleted from your Gemini Apps Activity .
+ If the chat still shows in your Gemini Apps Activity or Google Messages on other devices, check the device you used to delete the chat. Make sure it’s connected to the internet and RCS chats are turned on. Learn how to turn on RCS chats .
+ When you delete your Gemini chat in your Gemini Apps Activity , it doesn't delete it from Google Messages or any Android backup.
+ To also delete it from Google Messages, follow the steps to delete the chat from Google Messages .
+ Learn about your location data & Gemini in Google Messages
+ Gemini in Messages doesn’t have access to your precise location. It uses the general area from your IP address or the home or work addresses in your Google Account to give relevant responses to prompts like “What’s the weather?” Learn more about how Gemini in Messages estimates your general area. 
+ Related resources
+ Gemini Apps Privacy Hub 
+ Manage & delete your activity in Gemini Apps 
+ Use & manage Connected Apps in Gemini 
+ Turn on RCS chats in Google Messages

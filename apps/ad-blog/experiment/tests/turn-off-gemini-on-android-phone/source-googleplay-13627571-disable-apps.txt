@@ -1,0 +1,10 @@
+URL: https://support.google.com/googleplay/answer/13627571?hl=en
+TITLE: Disable apps that came with your Android device - Google Play Help
+
+Disable apps that came with your Android device
+ You can’t delete some system apps that came pre-installed on your Android phone. But on some phones, you can turn them off so that they won't show on the list of apps on your phone. To learn how to disable apps, contact your device manufacturer .
+ Related resources
+ Reinstall and re-enable apps 
+ Delete apps on Google Play 
+ Manage unused apps 
+ Change app permissions on your Android phone

@@ -1,0 +1,69 @@
+URL: https://support.google.com/gemini/answer/16283624?hl=en&co=GENIE.Platform%3DAndroid
+
+ Use Gemini in Chrome
+ With Gemini in Chrome, you can get AI assistance in your browser to easily get key takeaways, clarify concepts, find answers and more. To provide the most relevant responses, Gemini in Chrome uses content from your current browser tab. On a computer, you can also share up to 10 open tabs with Gemini.
+ What you need
+ Important : Gemini in Chrome is not available to all users at this time. We’re gradually releasing Gemini in Chrome, so it might not be available to you just yet.
+ To use Gemini in Chrome on your Android phone or tablet, you need to:
+ Be 18 or over and in a supported region .
+ Use an Android phone with at least 4GB of RAM and running Android 12 or higher.
+ Use the latest version of Chrome. Learn how to update Chrome .
+ Sign in to Chrome. This feature isn’t available in Incognito mode. Learn how to sign in to Chrome .
+ Set your device settings to use English.
+ If you use Gemini in Chrome with a work or school Google Account, access must be enabled by your administrator. Learn more about using Gemini Apps with a work or school Google Account .
+ Chat with Gemini in Chrome
+ On your Android device, open Chrome .
+ Tap Ask Gemini .
+ You’ll need to opt in the first time you use Gemini in Chrome. To opt in, follow the onscreen instructions.
+ In the chat box, enter your question or request.
+ By default, your current page is shared with Gemini in Chrome. You can stop sharing the page at any time. In the text box, tap Stop sharing .
+ Tap Submit .
+ Tip: You can also start a chat with Gemini in Chrome by tapping More Ask Gemini .
+ What you can do with Gemini in Chrome
+ When you use Gemini in Chrome, a floating chat box appears where you can chat directly with Gemini. You can continue to browse Chrome while you wait for Gemini to generate an answer and reopen the conversation when ready. Here are examples of what you can ask Gemini in Chrome to do:
+ Summarize key takeaways from an article
+ Explain a complex topic in a different way
+ Help you test your knowledge of a new subject you’re learning
+ Modify a recipe to meet dietary needs
+ Compare information or make recommendations based on your preferences
+ Manage your chat with Gemini in Chrome
+ In the Gemini in Chrome chat box, you can:
+ Stop sharing the page: on the page in the chat box, tap Stop sharing page .
+ Start a new chat: at the top, tap Start new chat .
+ Minimize the chat: Double-tap the tab in the background.
+ Bring the chat back: If you minimized the chat box, tap and drag the bar above the chat box, or tap Ask Gemini .
+ See more or less of the chat: Drag the bar at the top of the Gemini chat box to expand or shrink the conversation.
+ Close the chat: On the right side of the chat box, click Close .
+ Use suggestions to chat with Gemini in Chrome
+ When you chat with Gemini in Chrome, suggested actions may appear over the chat box. This includes things like:
+ Book a movie for me 
+ Summarize this page 
+ Discuss a topic with me 
+ If you tap a link in your chat, it opens a new tab. To continue your conversation, start Gemini over in the new tab or switch back to your previous tab.
+ Fix or report a problem & give feedback
+ If you can’t find or use Gemini in Chrome 
+ Important: Gemini in Chrome is rolling out to users over time, so it may not be available in your country or territory yet. It’s also not accessible on Google Search result pages.
+ If Gemini in Chrome is available in your country or territory, try these steps:
+ Sign in to Chrome. Gemini in Chrome is not available in Incognito mode.
+ Update your Chrome app to the latest version. Learn how to update Chrome .
+ If Gemini in Chrome still doesn’t show, try restarting your Chrome browser.
+ Report a problem or send feedback about Gemini in Chrome 
+ In the Genini in Chrome window, tap More Send feedback .
+ Enter a description of the problem or your feedback.
+ Optionally, add a screenshot to help us better understand the issue.
+ At the top, tap Send .
+ Learn more about how Google uses your feedback .
+ Report or give feedback on Gemini’s response 
+ Your feedback helps make Gemini Apps more helpful, accurate, and safe.
+ To give feedback on a response: 
+ Below Gemini’s response, tapGood response or Bad response .
+ To report a legal issue , at the under Gemini’s response, tap More Report legal issue .
+ Learn more about how Google uses your feedback .
+ Related resources
+ Go Live with Gemini in Chrome 
+ Search your Chrome history with Gemini in Chrome 
+ Ask Gemini in Chrome to complete tasks for you with auto browse 
+ Gemini Apps Privacy Hub 
+ Google terms of service 
+ Android phone & tablet Computer iPhone & iPad More 
+ 

@@ -2,6 +2,58 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-06 · 세션 83 (정기 실행, 일반 세션): Android 휴대폰에서 Gemini 끄기
+
+세션 시각: 2026-11-06 00:17 KST(금) → 00시 실행·금요일이라 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(64f48c0)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 백그라운드로 한 번에 완료. 지난 주(10-26~11-01)에 칼럼이 있고 이번 주(11-02~) 칼럼은 없지만, 영향이 오래 가는 뉴스 후보가 없어 상시 글.
+
+**지표 (`gsc_report.py`, 2026-10-08 ~ 11-05, 세션 82 이후 바뀐 값만)**
+
+- 노출 1,062 → **1,067**, 클릭 17 → **18**, CTR 1.7%, 평균 순위 23.3 (`spotify-family-qr-code-verification` 272·17.6 / `turn-off-ai-in-chrome` 187·18.2·클릭 4 / `image-to-text-offline-free` 127·15.8·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ **3** (진행 중, 노출 118)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 피드 다운로드 아직 없음
+- URL 검사: 색인 17/53 그대로, `Discovered` 19 · `URL is unknown` 17 (`turn-off-copilot-in-word`가 이 회차 unknown, 흔들림). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 36편 중 Google이 본 링크 19편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 26일/92일(2027-01-11) · 색인율 32%(17/53, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `turn-off-gemini-on-android-phone` | `ai-tools` | `ai-settings` 상시 글 (검색형) | Google Gemini·Pixel·Android·Google Play 도움말 8쪽 + Samsung US 측면 버튼 안내 + Google 블로그(2025-03-14)를 2026-11-05에 받아 대조: Gemini가 열리는 곳 6가지(전원·측면 버튼, Hey Google, 잠금 화면, 모든 어시스턴트 단축키, Messages 버튼, 앱 아이콘) → 막는 설정·위치 표(Pixel **Press and hold the power button > Power menu** / Samsung **Side button > Long press > Power off menu**), 기본 디지털 어시스턴트 **None**이 Hey Google·터치 단축키를 모두 막는 근거(Google 앱이 기본 어시스턴트일 때만 열린다는 문장), 목록의 **Google** 항목은 Gemini·Assistant 어느 쪽이든 같은 이름, 앱 삭제는 기본 어시스턴트를 바꾸지 않음. **Google 도움말 16938321을 Chromium으로 렌더링해 목차의 'Switch from Gemini to Google Assistant' 링크(`#switch_to_google_assistant`)에 해당하는 절이 페이지에 없음을 DOM으로 확인**(목차 8개 중 7개만 절이 있음) — Google Assistant로 돌아가는 방법이 Google 문서에서 빠짐. 목적별 선택 그래픽 |
+
+- 선정 근거: 세션 82 '다음 할 일' 후보 3개 중 자동완성 3곳 확인이 끝난 첫 후보. `demand_check.py suggest "turn off gemini on android phone"` 본 검색어 Google·Bing·YouTube 3곳, 하위 14개(`samsung`·`ask gemini`·`can i …`). Trends 미국 12개월 `turn off gemini` 2.7 · `turn off ai overview` 1.5 · `turn off galaxy ai` 0.0 (기준 `remove background` 46.9). 같이 본 `turn off ai overview google`(3곳)은 Google 검색 결과 화면이 컨테이너에서 봇 확인 화면이라 직접 검증이 안 돼 후순위(backlog 갱신). `demand_check.py discover`·대형 IT 매체 인기 글 목록(Ars Most Read·Verge Most Popular, 9to5 목록은 이번 HTML에서 못 찾음)에서는 기준을 넘는 새 주제·영향 뉴스 없음(리뷰·업계 뉴스). 콘텐츠 정리 목록과 겹치지 않음
+- 상위 결과(WebSearch `turn off gemini on android phone`, `… switch back to google assistant 2026`): 자동 생성·저품질 사이트 다수, Fox News·Beebom·Android Central·Android Authority, 포럼(Techlore·Lemmy). 빠진 것: 2026년 9월 이후 Google 문서 상태, Samsung 메뉴 이름, `Google` 항목의 뜻, 앱 삭제 함정, Messages·Chrome·화면 읽기
+- 주 검색어: `turn off gemini on android phone`. 제목 `Turn Off Gemini on an Android Phone, Shortcut by Shortcut`(57자, `How to Turn Off …` 10편·`With N … or One …`(Brave) 틀을 피함), 설명 155자
+- 1차 출처: support.google.com/gemini 16938321·14554984·14576209·14599070·16283624(Android 탭), pixelphone 7374159, android 13627402, googleplay 13627571, samsung.com/us ANS00084203, blog.google 2025-03-14 → 모두 `tests/turn-off-gemini-on-android-phone/source-*.txt`, 렌더링 스크립트 `render_help.cjs`, 캡처 `screens/help-16938321-2026-11-05.webp`
+- 쓰지 않은 것: Google Assistant 휴대폰 종료 시작일(보도 2026-09-04, 1차 출처 못 찾음), Android Authority 10월 보도(익명 사용자 보고), Gemini 앱·Android 설정 화면(기기 없음 → "we tested" 안 씀), None일 때 전원 버튼 Digital assistant 동작(문서 없음). Wayback Machine 옛 판은 429
+- 이미지: 대표 이미지(Z-Image-Turbo, 연한 버터 옐로 + 딥 틸·라즈베리, 아이소메트릭: 일반 스마트폰 + 측면 버튼 + 종 모양 뚜껑을 덮는 빛 구슬 + 꺼진 토글·마이크, `hero-image.md`) + 본문 3장(진입점 → 설정 표, 도움말 렌더링 캡처 + 주석(목차의 빈 링크·None·Google 항목), 목적별 카드 6장, `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `turn-off-ai-features`, `turn-off-gemini-apps-activity`·`turn-off-gemini-in-gmail`·`turn-off-ai-in-chrome`·`gemini-android-auto-personal-intelligence` (5개). 역링크 3개: 색인된 `gemini-gems-to-skills`(마지막 문단, 링크 2 → 3개, 1문장) · 허브(제품 표 행 + 새 절 "How to turn off Gemini on an Android phone" + How we checked 날짜, `updatedAt` 갱신) · `turn-off-gemini-apps-activity` FAQ(1문장). `turn-off-ai-in-chrome`(V3)은 손대지 않음
+- 점검: 저장소 `seo-audit` 스킬 On-Page(제목 57자·H1 일치·주 검색어 첫 문장, 설명 155자로 차별점 넣어 교체, 소제목 11개 질문·동작형, 첫 소제목 전 218단어, 이미지 alt 4장·WebP·의미 있는 파일 이름, 내부 링크 앵커 설명형, AI 문체: em dash 0·백틱 0). 쓰기 뒤 1차 출처와 다시 대조해 추측 문장 6곳 고침(Pixel 전원+볼륨 업 동작, Android Auto 설정 이어짐, Keep Activity 설명, "가장 흔한 원인", Ask Gemini 꺼짐 여부, 보도 날짜 표현). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 69자(접미사 포함, 본제목 57자)·description 155자, BlogPosting(발행 2026-11-05T16:40Z, author ToolProof)/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개(관련 글 제목 포함), `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 3장(모두 alt), og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), 본문 안 앵커 `#gemini-in-google-messages-chrome-and-gmail` id 존재, sitemap 포함, `rss.xml` 첫 항목 새 글·둘째 허브(`updatedAt` 11-05T16:40Z)·셋째 `gemini-gems-to-skills`. 본문 약 2,100단어(표·이미지·링크 주소 제외, FAQ·How we checked 포함). lint·type-check·test(36파일 274개)·build 통과. `link_audit` 새 글 문제 없음(받는 링크 3개, 새 태그 없음). 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. 대표 이미지: Z-Image-Turbo 시드 966373836, 55.9분, 토글·마이크 대신 라즈베리 버튼 기둥이 그려졌지만 주제·화풍이 맞아 그대로 사용하고 alt를 실제 그림에 맞춤
+
+**알게 된 것**
+
+- **도움말 목차 앵커와 본문 id를 대조하면 지워진 절을 찾을 수 있음**: Google 도움말은 절을 지워도 목차 링크가 남을 수 있고(16938321 'Switch from Gemini to Google Assistant'), curl 원문만 보면 놓치기 쉬움. Playwright로 `article a[href^="#"]`와 `article [id]`를 비교하면 한 번에 보임 → 기능 종료·이전 주제에서 쓸 만한 확인 방법
+- Google의 기본 어시스턴트 목록은 Gemini와 Google Assistant를 모두 **Google**로 보여 줌 → "Google로 바꾸면 Assistant로 돌아간다"는 흔한 안내가 틀릴 수 있는 이유
+- 접근: www.google.com/search는 headless Chromium에서도 첫 요청부터 'unusual traffic' 확인 화면(우회 안 함), web.archive.org는 429, samsung.com/us/support는 curl 가능 (README 인프라 상태에 추가)
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 26일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **H5 판정 — 11-20 무렵 개선 세션** (세션 82 그대로)
+- Claude: V7 — rss.xml 다음 다운로드 확인 뒤 7일(늦어도 11-15) 판정. 새 글 `turn-off-gemini-on-android-phone`은 피드 맨 앞(발행)·허브도 `updatedAt`으로 피드 앞쪽 → 판정 때 '배포 뒤 들어간 글'로 따로 봄
+- Claude: 새 글 후속 — Google이 Assistant 휴대폰 종료 일정을 문서로 공개하거나 16938321 목차 링크를 고치면 같은 글 갱신. 갱신 확인은 `source-gemini-16938321-manage-delete.txt`와 diff + `render_help.cjs`
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인(세션 80 그대로), Chrome 158(11-17) 재확인. Firefox 160(11-06 예정) 출시 뒤 개선 세션에서 `turn-off-ai-in-firefox` 재확인
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V7(첫 rss.xml 다운로드 + 7일, 늦어도 11-15)·V8(12-03)
+- Claude(11-09 월 일반 세션): 남은 후보 `dia browser ai privacy`(문서 기반)·`turn off galaxy ai`(Trends 12개월 0.0으로 약해짐)·`make pdf searchable free`(NAPS2 직접 측정, `pdf` 색인 상황 보고). 이번 글과 같은 `ai-settings` 끄기 글이 17편이 되어, 다음은 직접 측정이 되는 `photo-video`·`offline-ai` 후보도 함께 비교
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-05T16:00:40Z, DB 문서 360개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값: 새 글 항목만 추가(새 색인 없음). 회차 시점 28일 노출 1,070·클릭 18·평균 23.2위(미확정 포함), `summary.adsense` 운영 26일·색인율 0.315(17/54, 새 글이 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0, `summary.crawl` 미색인 37편 중 Google이 본 링크 19편·`inFeed` 12(흔들림), `traffic` Cloudflare 28일 조회수 93·방문 85(10-08~11-05), `engagement` GA4 조회 6·사용자 3·세션 3(참여 2)·참여 36초. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-05 · 세션 82 (정기 실행, 개선 세션): 가설 H5 판정용 DB 구조 개선(칼럼 유형 `newsType`) + 경과일별 누적 노출 그래프를 칼럼 유형별로
 
 세션 시각: 2026-11-05 18:15 KST(목) → 18시 실행이라 개선 세션. 같은 날 앞 세션 80(`gemini-gems-to-skills` 갱신)·81(V7 판정용 DB·대시보드, `stale_check.py`, 칼럼 후속 확인)과 사용자 결정 2건(GA4, 인기 글 목록) → 다른 작업을 고름. 열린 PR 없음. 작업 브랜치를 `origin/main`(9b6b27a)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

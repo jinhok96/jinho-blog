@@ -1,5 +1,7 @@
 # gemini-android-auto-personal-intelligence 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Google 블로그·도움말 대조만, 직접 실행 없음
+
 - 확인일: 2026-10-21 (세션 32, 화제 뉴스 세션 06:15 KST)
 - 주 검색어: `gemini android auto`
 - 하위 검색어: `android auto gemini update`, `gemini android auto settings`, `gemini personal intelligence privacy`, `gemini personal intelligence settings`, `enable gemini in android auto`, `gemini android auto rollout`

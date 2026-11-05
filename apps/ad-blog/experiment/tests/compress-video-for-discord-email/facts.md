@@ -1,5 +1,7 @@
 # compress-video-for-discord-email 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — 60초 클립 3개로 영상 압축 앱 직접 측정(How we tested)
+
 - 주 검색어: `compress video for discord`
 - 하위 검색어: `compress video`, `compress video file size`, `compress video free`, `compress video without losing quality`, `compress video to 10mb`, `compress video for email`, `compress video with handbrake`
 - 채널: 검색형 (제목 57자, 설명 157자)

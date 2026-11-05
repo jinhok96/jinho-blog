@@ -1,5 +1,7 @@
 # split-pdf-free 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — 12쪽 테스트 파일로 PDF 나누기 GUI 직접 측정(How we tested)
+
 - 주 검색어: `split pdf free` (+ `split pdf`, `split pdf into individual pages`, `split pdf pages`, `split pdf by size`, `split pdf into multiple pdfs`, `split pdf online free`, `extract pages from pdf`)
 - 수요 근거 (2026-10-17, 세션 19): Google Trends(미국 3개월) `merge pdf` 평균 23.5 · `split pdf` **22.6**(최고 100, 최근 7개 지점 9.3) · `png to jpg` 14.4 · `webp to jpg` 6.6. 자동완성 "split pdf" 25개 이상(free·into individual pages·online·pages가 Google·Bing, by size·into multiple pdf(s)·i love pdf·smallpdf·sejda 등)
 - 채널: **검색형** (상시 수요, 비교 + How-to). 제목 57자, 설명 154자

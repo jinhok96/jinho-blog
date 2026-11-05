@@ -1,5 +1,7 @@
 # free-image-converter-photo-tools 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — 허브. XnConvert·ExifCleaner·웹 도구를 직접 실행한 측정 결과(How we tested)
+
 ## 브리프 (2026-10-26 KST 12시 개선 세션, 허브)
 
 | 항목 | 내용 |

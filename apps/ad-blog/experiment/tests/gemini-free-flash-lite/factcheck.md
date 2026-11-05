@@ -1,5 +1,7 @@
 # gemini-free-flash-lite 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Google 공지·도움말 대조만. 캡처는 문서 화면
+
 - 확인일: 2026-10-21 (세션 34, 영향 뉴스 세션 18:15 KST)
 - 주 검색어: `gemini free`
 - 하위 검색어: `gemini free tier`, `gemini free tier limits`, `gemini free vs pro`, `gemini free vs paid`, `gemini flash lite`, `gemini flash lite vs flash vs pro`, `gemini flash lite context window`, `gemini free for students`

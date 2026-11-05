@@ -1,5 +1,7 @@
 # duckduckgo-no-ai 브리프 · 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — Chromium 153 새 프로필로 DuckDuckGo AI 설정 4가지와 Duck.ai 끄기를 직접 확인(How we tested)
+
 ## 작성 전 브리프 (2026-11-02 KST 세션, 일반 세션)
 
 | 항목 | 내용 |

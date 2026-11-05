@@ -1,5 +1,7 @@
 # turn-off-ai-in-windows-11 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Microsoft Support·Learn 문서 대조(How we checked). Windows PC 없음
+
 ## 작성 전 브리프 (2026-10-24 세션 44)
 
 | 항목 | 내용 |

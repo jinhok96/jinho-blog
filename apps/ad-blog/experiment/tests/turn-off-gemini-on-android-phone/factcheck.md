@@ -1,5 +1,7 @@
 # turn-off-gemini-on-android-phone 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Google·Samsung 도움말 대조와 도움말 목차·본문 id 확인(How we checked). Android 기기 없음
+
 ## 작성 전 브리프 (2026-11-06 KST 세션 83, 일반 세션)
 
 | 항목 | 내용 |

@@ -1,5 +1,7 @@
 # apple-siri-settlement-claim 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — 합의 안내·법원 문서 대조만, 직접 실행 없음
+
 - 주 검색어: `apple siri settlement claim`
 - 하위 검색어: `apple siri settlement` · `apple siri settlement claim form` · `apple siri settlement payout` · `apple siri settlement payout date` · `apple siri settlement claim form legit` · `apple siri settlement website` · `apple siri settlement canada` (`demand_check.py suggest`, 2026-10-18, 22개)
 - 채널: 피드형 (뉴스 칼럼)

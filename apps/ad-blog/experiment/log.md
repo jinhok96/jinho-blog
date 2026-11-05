@@ -2,6 +2,62 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-06 · 세션 84 (정기 실행, 개선 세션): 가설 H3 판정용 DB 구조 개선(글별 검증 유형 `verifyType`·주별 순위 `weeks`) + 대시보드 H3 줄
+
+세션 시각: 2026-11-06 06:15 KST(금) → 06시 실행이라 개선 세션. 같은 날 앞 세션 83(일반 세션, `turn-off-gemini-on-android-phone` 발행) → 그 글과 역링크 받은 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(77b3bd0)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-08 ~ 11-05, 세션 83 이후 바뀐 값만)**
+
+- 노출 1,067 → **1,073**, 클릭 18, CTR 1.7%, 평균 순위 23.3 → **23.2** (`spotify-family-qr-code-verification` 272·17.6 / `turn-off-ai-in-chrome` 188·18.1·클릭 4 / `image-to-text-offline-free` 127·15.8·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 3 (진행 중, 노출 124)
+- sitemap: `sitemap.xml` 11-02 04:15, `rss.xml` 11-01 08:38 UTC 그대로 → V7 피드 다운로드 아직 없음
+- URL 검사: 색인 17/54 그대로. `gsc_report.py` 회차 `Discovered` 14 · `URL is unknown` 23, `link_seen.py` 회차 18 · 18 (`chrome-autofill-settings`·`duckduckgo-no-ai`·`free-image-converter-photo-tools`·`iphone-duo-cracked-screen`·`turn-off-ai-in-firefox`가 회차마다 바뀜, 새 크롤링 없음 → 흔들림). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, Google이 본 링크 19편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V3 11-18, V4·V5 11-22, V6 11-26, V7 첫 rss.xml 다운로드 + 7일·늦어도 11-15, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 26일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 1(색인)은 11-03 05:18 뒤 새 크롤링이 없어 링크를 늘려도 발견 경로가 안 됨, 2는 보류 2건, 3은 허브 4/4, 4는 CTR 낮은 100회 이상 글 3편이 모두 V3·V4·V5 판정 중이고 8~20위 검색어는 판정 중인 글이거나 노출 1~2회, 5는 세션 81 확인 뒤 새 1차 출처 변화 없음(V7 판정 중 `updatedAt` 변경 안 함), 6은 Firefox 160 미출시(product-details `LATEST_FIREFOX_VERSION` 159.0.1, `NEXT_RELEASE_DATE` 2026-11-06)·Windows 11-10 전·Chrome 158 11-17 → **7: DB 구조 개선** — 세션 82가 남긴 다음 후보 H3("직접 실행 결과가 있는 글이 순위가 더 오래 유지된다", 발행 8주 = 12-06부터)는 글별 검증 유형도, 발행 뒤 주별 순위도 DB에 없어 판정할 수 없었음
+
+**한 일 (개선 세션, 쓴 스킬: 없음 — 이번 작업(DB·대시보드·문서)에 맞는 SEO 스킬 절차가 없음. 대시보드는 기존 H5 줄과 같은 글자 줄만 더해 새 색·차트가 없어 `dataviz` 검사 대상 아님)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · DB 구조 개선 | `tests/*/factcheck.md`(옛 글 `facts.md`) 54편, `tools/dashboard_data.py` | 사실 확인표 제목 다음 줄에 `- 검증 유형 (가설 H3): **검증형|일부|조사형** — 근거` (세션 82 결론대로 소제목이 아니라 사실 확인표에서 정함). 본문 `How we tested`·`What we tested` 절, 직접 실행 화면·측정 자료, 이전 판 git 기록을 글마다 확인해 **검증형 25**(측정 글 16편·허브 3편·브라우저 설정 직접 확인 5편·`chrome-http-warning-default`)·**일부 4**(`turn-off-ai-in-chrome` 소스 대조 + Chromium 정책 시험, `turn-off-gemini-in-gmail` Chrome 설정 한 화면, 허브 `turn-off-ai-features` 상시 글 시험 인용, `iphone-duo-cracked-screen` Apple 수리비 견적 도구 조회)·**조사형 25**(문서 대조만, 도움말 렌더링·캡처는 실행으로 치지 않음). `image-to-text-offline-free`는 발행판(10-14) 명령줄 OCR 측정 → 10-17 명령줄 내용 삭제로 측정 없는 판 → 10-25 NAPS2 측정(V5)이라 `2026-10-25부터` 표시. 사실 확인표가 없던 `transcribe-audio-offline-free`는 분류 줄만 있는 `factcheck.md`를 새로 만듦. `posts` 글별 `verifyType`·`verifyTypeSince`(사실 확인표에서 읽음, 없으면 경고)와 **`weeks`**(발행 1주부터 7일을 다 채운 주의 웹 노출·노출 가중 평균 순위, 최대 12주 — 기존 `firstDays`는 D+28 누적 노출뿐이라 8주 순위를 못 봄). 확인: 54편 모두 읽힘, 기존 `newsType` 결과 그대로(화제 10·영향 8·null 36), `weekly_positions` 손 계산 대조. 기존 history는 고치지 않음 | - (지표를 노린 변경 아님) |
+| 2 | 7 · 대시보드 개선 | `dashboard/index.html` | 경과일별 누적 노출 패널 H5 줄 아래 **'H3' 줄**: 검증 유형별 '비교 가능 n/5편 (8주 도달 n/전체)', 5편 이상이면 1~4주 → 5~8주 순위 변화 중앙값(+ = 오름), 검증형·조사형 모두 5편이면 '판정 가능'. 8주 안에 유형이 바뀐 글은 뺌. 글 상세 '색인·글 정보'에 '검증 유형'. `dashboard_check.cjs` 통과(데스크톱·모바일 375px, 글별 표 54줄, 가로 넘침 없음). 8주 데이터를 흉내 낸 스냅숏으로 판정 가능 상태·중앙값 계산(검증형 −2.0위 24편: 유형이 바뀐 1편 제외 확인)과 375px 줄바꿈을 캡처로 확인 | - |
+| 3 | 문서 | README 가설 H3·운영 대시보드, writing-guide 브리프·체크리스트·발행 후 개선, clusters.md 전환 규칙, tests/README | H3 판단 방법을 '발행 1~4주 vs 5~8주 노출 가중 평균 순위 차이, 두 구간 노출 각 10회 이상, 유형별 5편 이상이면 중앙값 비교, 2위 이상 차이로 지지·기각(검증 기록 순위 기준과 같음), 노출 부족이면 4주씩 미뤄 최대 12주'로 구체화. 새 글은 사실 확인표에 검증 유형 줄, 발행 뒤 직접 측정을 더하거나 빼면 값과 `YYYY-MM-DD부터`를 고침 | - |
+
+**H3 중간 상태** (시험 생성 데이터, Search Console 마지막 집계일 11-04, 웹 검색)
+
+| 유형 | 편수 | 지금까지 노출 10회 이상 | 그 글들의 성격 | 5편째 8주 끝(D+55) |
+| --- | --- | --- | --- | --- |
+| 검증형 | 25 | 9 | 모두 상시 글·허브 (`image-to-text-offline-free` 127·`transcribe-audio-offline-free` 75·`gemini-gems-to-skills` 45·`check-if-image-is-ai-generated` 42·`free-offline-ai-tools` 37 등) | 12-09 |
+| 조사형 | 25 | 5 | **모두 10-19~20 색인된 뉴스 칼럼** (`spotify-family-qr-code-verification` 264·`iphone-duo-sold-out` 42·`microsoft-365-family-storage-2tb` 26·`iphone-handoff-verizon-cost` 18·`windows-11-24h2-end-of-support` 11) | 12-13 |
+| 일부 | 4 | 1 (`turn-off-ai-in-chrome` 161) | 상시 글 | - |
+
+- 지금 데이터로는 H3의 검증형·조사형 차이가 상시 글·칼럼 차이와 겹침 → 판정 때 칼럼 여부를 함께 적고, 조사형 상시 글(`ai-settings` 끄기 글 다수, 대부분 미색인)이 노출을 얻으면 상시 글끼리도 비교 (해석)
+
+**알게 된 것**
+
+- 주별 순위로 보니 노출 상위 2편이 발행 뒤 주마다 내려감: `turn-off-ai-in-chrome` 1주 11.4위(노출 62) → 2주 16.0위(72) → 3주 27.1위(27), `spotify-family-qr-code-verification` 1주 14.5위(239) → 2주 38.7위(25). 28일 평균 순위(18.1·17.6)는 첫 주 값에 끌려 이 하락을 가림 → V3(11-18)·V4(11-22) 판정 때 `weeks`로 변경 전 추세도 함께 봄 (해석: 발행 직후 순위가 높았다가 내려가는 패턴인지는 H3 데이터가 쌓여야 판단)
+- 사실 확인표 이름이 `facts.md`(10-14 전 6편)·`factcheck.md`로 섞여 있고 첫 글은 사실 확인표가 없었음 → 사실 확인표에서 읽는 값은 두 이름을 다 봐야 함
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 26일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **Firefox 160 (11-06 미국 출시 예정) — 출시 확인 뒤 개선 세션에서 `turn-off-ai-in-firefox` 재확인** (product-details `LATEST_FIREFOX_VERSION`이 160이 되면 Firefox 160 Linux로 AI controls 화면 다시 확인. 바뀐 게 있으면 같은 글 갱신)
+- Claude: **H3 첫 판정 — 12-15 무렵 개선 세션** (대시보드 'H3' 줄 + history `posts`의 `weeks`·`verifyType`. 칼럼 여부·검증 기록 V 겹침 표시, '일부'를 검증형에 넣은 값도 계산해 README 가설 표 갱신)
+- Claude: **H5 판정 — 11-20 무렵 개선 세션** (세션 82 그대로)
+- Claude: V7 — rss.xml 다음 다운로드 확인 뒤 7일(늦어도 11-15) 판정 (세션 83 그대로)
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인, Chrome 158(11-17) 재확인 (세션 80·83 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정 뒤(늦어도 11-15), 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V7(첫 rss.xml 다운로드 + 7일, 늦어도 11-15)·V8(12-03)
+- Claude(11-09 월 일반 세션): 세션 83 후보 그대로 (`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`, `photo-video`·`offline-ai` 직접 측정 후보 함께 비교). 새 글 사실 확인표에 검증 유형 줄 (writing-guide 브리프)
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: 페이지 **Version 31** 발행(H3 줄, 글 상세 '검증 유형'. 라이브 판이 저장소 main 판과 같음을 끝까지 읽어 확인한 뒤 발행) + `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-05T21:40:23Z, DB 문서 370개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값 변화 없음(새 색인 없음). 이 회차 URL 검사는 색인 17 · `Discovered` 18 · unknown 19 · `inFeed` 15(흔들림), 28일 노출 1,073·클릭 18·평균 23.2위, `summary.adsense` 운영 26일·색인율 0.315(17/54), `summary.crawl` 미색인 37편 중 Google이 본 링크 19편, `traffic` Cloudflare 28일 조회수 99·방문 91(10-08~11-05), `engagement` GA4 조회 7·사용자 4·세션 4(참여 3)·참여 82초. `posts` 문서는 압축 JSON 약 94 KiB(한도 256 KiB의 37%). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-06 · 세션 83 (정기 실행, 일반 세션): Android 휴대폰에서 Gemini 끄기
 
 세션 시각: 2026-11-06 00:17 KST(금) → 00시 실행·금요일이라 일반 세션(`ai-tools`·`software`). 열린 PR 없음. 작업 브랜치를 `origin/main`(64f48c0)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 백그라운드로 한 번에 완료. 지난 주(10-26~11-01)에 칼럼이 있고 이번 주(11-02~) 칼럼은 없지만, 영향이 오래 가는 뉴스 후보가 없어 상시 글.

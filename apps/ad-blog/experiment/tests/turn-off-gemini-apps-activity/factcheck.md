@@ -1,5 +1,7 @@
 # turn-off-gemini-apps-activity — 브리프·사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Gemini 도움말 렌더링 대조(How we checked). 계정 화면 확인 못 함
+
 slug: `turn-off-gemini-apps-activity`
 
 ## 작성 전 브리프

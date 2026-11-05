@@ -651,6 +651,30 @@ const COHORTS = [
 const COHORTS_OLD = [COHORTS[0], { label: '뉴스 칼럼', color: 'var(--cat-2)', test: isNews }];
 const hasNewsType = () => state.posts.some((p) => 'newsType' in p);
 
+// 가설 H3: 검증 유형(verifyType, 사실 확인표)별로 발행 1~4주 vs 5~8주 노출 가중 평균 순위 변화(+ = 오름) 중앙값.
+// 8주를 다 채우고 두 구간 노출이 각 H3_MIN_IMP회 이상인 글만 셈. 8주 안에 유형이 바뀐 글(verifyTypeSince)은 뺌
+const H3_WEEKS = 8, H3_HALF = 4, H3_MIN = 5, H3_MIN_IMP = 10;
+const H3_TYPES = ['검증형', '조사형', '일부'];
+function weekPos(weeks, from, to) {
+  let imp = 0, sum = 0;
+  for (const w of weeks.slice(from, to)) if (w.imp) { imp += w.imp; sum += w.pos * w.imp; }
+  return { imp, pos: imp ? sum / imp : null };
+}
+function h3Stats() {
+  if (!state.posts.some((p) => 'verifyType' in p)) return null; // 2026-11-06 회차 전 데이터
+  const changedIn = (p) => p.verifyTypeSince && p.createdAt && dayIndex(p.verifyTypeSince) < dayIndex(p.createdAt) + H3_WEEKS * 7;
+  return H3_TYPES.map((t) => {
+    const posts = state.posts.filter((p) => p.verifyType === t);
+    const reached = posts.filter((p) => (p.weeks || []).length >= H3_WEEKS && !changedIn(p));
+    const deltas = reached.flatMap((p) => {
+      const a = weekPos(p.weeks, 0, H3_HALF), b = weekPos(p.weeks, H3_HALF, H3_WEEKS);
+      return a.imp >= H3_MIN_IMP && b.imp >= H3_MIN_IMP ? [Math.round((a.pos - b.pos) * 10) / 10] : [];
+    });
+    return { t, n: posts.length, reached: reached.length, deltas };
+  });
+}
+const signed = (v) => `${v > 0 ? '+' : v < 0 ? '−' : ''}${Math.abs(v).toFixed(1)}위`;
+
 function cohortSeries() {
   return (hasNewsType() ? COHORTS : COHORTS_OLD).map((c) => {
     const posts = state.posts.filter((p) => p.firstDays && c.test(p));
@@ -709,8 +733,13 @@ function cohortChart(el) {
   const h5 = series.filter((s) => s.h5);
   const h5Line = h5.length ? h5.map((s) => { const vals = s.reached(H5_DAY); return vals.length >= H5_MIN ? `${s.label} <b style="color:var(--ink)">${median(vals)}회</b> (${vals.length}편)` : `${s.label} ${vals.length}/${H5_MIN}편 도달`; }).join(' · ') : '';
   const h5Ready = h5.length && h5.every((s) => s.reached(H5_DAY).length >= H5_MIN);
+  // H3 줄: 검증 유형별 8주 도달·비교 가능 편수와, 5편 이상이면 1~4주 → 5~8주 순위 변화 중앙값
+  const h3 = h3Stats();
+  const h3Line = h3 ? h3.map((s) => (s.deltas.length >= H3_MIN ? `${s.t} <b style="color:var(--ink)">${signed(median(s.deltas))}</b> (${s.deltas.length}편)` : `${s.t} ${s.deltas.length}/${H3_MIN}편 (8주 도달 ${s.reached}/${s.n})`)).join(' · ') : '';
+  const h3Ready = h3 && h3.filter((s) => s.t !== '일부').every((s) => s.deltas.length >= H3_MIN);
   el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">D+${ref} 누적 노출 중앙값: ${line}</div>
     ${h5Line ? `<div class="small" style="color:var(--body);margin-bottom:8px" title="가설 H5: 영향이 오래 가는 칼럼이 화제 칼럼보다 발행 4주 누적 노출이 많다. 유형은 발행 때 사실 확인표 기준">H5 · D+${H5_DAY} 누적 노출 중앙값: ${h5Line}${h5Ready ? ' · <b>판정 가능</b>' : ` · 유형별 ${H5_MIN}편 이상이면 판정`}</div>` : ''}
+    ${h3Line ? `<div class="small" style="color:var(--body);margin-bottom:8px" title="가설 H3: 직접 실행 결과가 있는 글이 순위가 더 오래 유지된다. 발행 1~4주 vs 5~8주 노출 가중 평균 순위, + = 오름. 두 구간 노출 각 ${H3_MIN_IMP}회 이상인 글만. 유형은 사실 확인표 기준">H3 · 1~4주 → 5~8주 순위 변화 중앙값: ${h3Line}${h3Ready ? ' · <b>판정 가능</b>' : ` · 검증형·조사형 각 ${H3_MIN}편 이상이면 판정`}</div>` : ''}
     <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="발행 후 경과일별 누적 노출 중앙값 꺾은선 그래프">${g}</svg>
     <div class="small">발행일 = D+0 · 웹 검색 노출 누적 · 그날까지 도달한 글이 ${COHORT_MIN}편 이상인 날만 표시</div>`;
 }
@@ -812,6 +841,7 @@ function indexFacts(p) {
     ${i.sitemaps ? `<dt>Google이 본 곳</dt><dd>${i.sitemaps.length ? i.sitemaps.map((m) => esc(m.replace(/^\//, ''))).join(' · ') : '사이트맵·피드 없음'}${i.referring && i.referring.length ? `<div class="small">링크: ${i.referring.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
     ${p.newsType ? `<dt>칼럼 유형</dt><dd>${esc(p.newsType)} <span class="small">발행 때 · 가설 H5</span></dd>` : ''}
+    ${p.verifyType ? `<dt>검증 유형</dt><dd>${esc(p.verifyType)} <span class="small">${p.verifyTypeSince ? `${esc(p.verifyTypeSince)}부터 · ` : ''}가설 H3</span></dd>` : ''}
     ${p.inbound ? `<dt>받는 링크</dt><dd>${p.inbound.length}개${p.inbound.length ? `<div class="small">${p.inbound.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     ${tags ? `<dt>태그</dt><dd class="tags">${tags}</dd>` : ''}
   </dl></div>`;

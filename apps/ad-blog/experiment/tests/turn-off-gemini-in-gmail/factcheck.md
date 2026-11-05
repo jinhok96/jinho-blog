@@ -1,5 +1,7 @@
 # turn-off-gemini-in-gmail · 브리프와 사실 확인표
 
+- 검증 유형 (가설 H3): **일부** — 핵심은 Google 도움말 대조(How we checked). 직접 실행은 Google Chrome 156 설정 화면(AI innovations) 확인 1가지
+
 세션 39 (2026-10-23 00:23 KST, 일반 세션). 모든 출처는 이 세션에서 직접 열어 확인 (원문 발췌는 같은 폴더 `source-*.txt`).
 
 ## 작성 전 브리프

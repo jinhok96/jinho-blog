@@ -1,5 +1,7 @@
 # Fact-check sheet: turn-off-ai-in-chrome.mdx
 
+- 검증 유형 (가설 H3): **일부** — 핵심은 Chromium 소스 코드·정책 정의 대조(How we checked). 직접 실행은 Chromium 141 정책 시험(chrome://policy)뿐 — 2026-10-21 그 캡처 추가(V3)
+
 Checked 2026-10-11. Reference build: Chromium tag `155.0.8059.40` (= Chrome 155 stable).
 Updated 2026-10-17: Windows policy steps changed from Command Prompt `reg add`/`reg delete` commands to Registry Editor (regedit) screen steps with the same key, value names, type (REG_DWORD) and values (see "Windows Registry Editor steps" below); the Mac policy section (Terminal `defaults` commands) removed, Mac readers pointed to the Settings switches; post `updatedAt: 2026-10-17`. No new policy, value, or Chrome fact added.
 All Chromium paths are relative to `https://raw.githubusercontent.com/chromium/chromium/155.0.8059.40/` unless another tag is named.

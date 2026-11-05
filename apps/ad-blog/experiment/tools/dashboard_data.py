@@ -29,12 +29,16 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
                   unindexed = 색인 안 된 글 수, unindexedSeen = 그중 Google이 본 링크가 있는 글 수,
                   inFeed·unindexedInFeed = URL 검사 sitemap에 rss.xml이 있는 글 수 전체·그중 색인 안 된 글 (2026-11-05 회차부터, V7))
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
-- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, 28일 지표, queries, daily, sources,
-                  firstDays, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
+- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, newsType, verifyType, verifyTypeSince,
+                  28일 지표, queries, daily, sources, firstDays, weeks, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
          otherPages: [{path, 28일 지표, queries, daily, sources}]}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
           newsType = 발행 때 정한 뉴스 칼럼 유형 '화제' | '영향' 또는 null(칼럼 아님) — tests/{slug}/factcheck.md에서 읽음,
                      상시 글로 전환해도 유지 (가설 H5 판정용, 2026-11-05 회차부터),
+          verifyType = 검증 유형 '검증형' | '일부' | '조사형' 또는 null(사실 확인표에 줄 없음),
+          verifyTypeSince = 발행 뒤 그 유형이 된 날짜 'YYYY-MM-DD' 또는 null(발행 때부터) — 둘 다 tests/{slug}/factcheck.md에서 읽음
+                     (가설 H3 판정용, 2026-11-06 회차부터),
+          weeks = 발행 1주부터 주별 웹 노출·노출 가중 평균 순위 [{imp, pos}] (7일을 다 채운 주만, 최대 12주, 가설 H3, 2026-11-06 회차부터),
           28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
           sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만),
           views·visits = Cloudflare Web Analytics 28일 조회수·방문 (CF 환경변수가 있을 때만, daily 각 날짜에도 views·visits,
@@ -94,6 +98,7 @@ GOAL_KEYS = (('색인율', 'indexRate'), ('28일 노출', 'impressions'), ('10�
 RATIO_GOALS = {'indexRate', 'hubClusters'}  # 0~1 비율로 비교 ("17/32 (53%)"·"2/4"·"전부")
 LOWER_BETTER = {'weakInbound'}
 FIRST_DAYS = 28  # 경과일별 누적 노출: 발행일(D+0)부터 D+28까지
+WEEKS = 12  # 주별 순위: 발행 1주부터 12주까지 (가설 H3은 8주로 판정, 노출 부족 보류 때 다시 보려고 4주 여유)
 MOVE_MIN_IMP = 2  # 순위 변화: 두 기간 모두 노출이 이만큼 있어야 비교 (노출 1회짜리 순위는 크게 흔들림)
 MOVE_MIN_DELTA = 1.0  # 이보다 작게 움직인 검색어는 목록에서 뺌
 
@@ -145,6 +150,30 @@ def news_type(slug: str, tests: pathlib.Path = EXPERIMENT / 'tests') -> str | No
     return None
 
 
+VERIFY_TYPES = ('검증형', '일부', '조사형')
+VERIFY_TYPE_LINE = re.compile(r'검증 유형[^\n]*?\*\*(검증형|일부|조사형)\*\*')
+VERIFY_SINCE = re.compile(r'(\d{4}-\d{2}-\d{2})부터')
+FACT_FILES = ('factcheck.md', 'facts.md')  # 2026-10-14 전 일부 글은 facts.md
+
+
+def verify_type(slug: str, tests: pathlib.Path = EXPERIMENT / 'tests') -> tuple[str | None, str | None]:
+    """글의 검증 유형과 그 유형이 된 날짜 (README 가설 H3 판정용, 2026-11-06 세션 84).
+
+    tests/{slug}/factcheck.md(옛 글은 facts.md)에서 '검증 유형'이 들어간 첫 줄의 굵은 값:
+    '검증형'(핵심 답을 직접 실행·측정으로 얻음) | '일부'(핵심은 1차 출처 문서, 직접 실행은 일부) | '조사형'(문서 대조만).
+    같은 줄에 'YYYY-MM-DD부터'가 있으면 발행 뒤 그날 이 유형이 됐다는 뜻 → 날짜, 없으면 None(발행 때부터). 줄이 없으면 (None, None)
+    """
+    for name in FACT_FILES:
+        path = tests / slug / name
+        if not path.exists():
+            continue
+        for line in path.read_text(encoding='utf-8').splitlines():
+            if m := VERIFY_TYPE_LINE.search(line):
+                since = VERIFY_SINCE.search(line[m.end():])
+                return m.group(1), since.group(1) if since else None
+    return None, None
+
+
 def cluster_map(clusters: list[dict]) -> dict[str, dict]:
     """slug → {id, name, priority, role} (clusters.md 클러스터 맵. 여러 곳에 있으면 link_audit처럼 첫 번째)"""
     out: dict[str, dict] = {}
@@ -164,6 +193,27 @@ def first_days(created: str, by_date: dict[str, dict], last_day: dt.date) -> lis
         r = by_date.get(str(day0 + dt.timedelta(days=k)))
         total += int(r['impressions']) if r else 0
         out.append(total)
+    return out
+
+
+def weekly_positions(created: str, by_date: dict[str, dict], last_day: dt.date) -> list[dict]:
+    """발행일부터 7일 단위 주별 웹 노출과 노출 가중 평균 순위 [{imp, pos}] (가설 H3: 1~4주 vs 5~8주 순위, 2026-11-06 세션 84).
+
+    W주 = D+7(W-1) ~ D+7W-1 (발행일 = D+0, createdAt의 UTC 날짜). 마지막 집계일까지 7일을 다 채운 주만, 최대 WEEKS주.
+    순위는 날짜별 페이지 평균 순위를 그날 노출로 가중 평균 (Search Console이 기간 평균 순위를 내는 방식), 노출 0인 주는 pos None
+    """
+    day0 = dt.date.fromisoformat(created[:10])
+    out = []
+    for w in range(WEEKS):
+        if day0 + dt.timedelta(days=7 * w + 6) > last_day:
+            break
+        imp, weighted = 0, 0.0
+        for k in range(7):
+            r = by_date.get(str(day0 + dt.timedelta(days=7 * w + k)))
+            if r and r.get('impressions'):
+                imp += int(r['impressions'])
+                weighted += r['position'] * r['impressions']
+        out.append({'imp': imp, 'pos': round(weighted / imp, 1) if imp else None})
     return out
 
 
@@ -461,8 +511,12 @@ def main() -> None:
         doc['newsType'] = news_type(slug)
         if doc['newsType'] is None and doc.get('category') == 'news':
             print(f'뉴스 칼럼 유형(화제/영향)을 사실 확인표에서 찾지 못함: tests/{slug}/factcheck.md', file=sys.stderr)
+        doc['verifyType'], doc['verifyTypeSince'] = verify_type(slug)
+        if doc['verifyType'] is None:
+            print(f'검증 유형(검증형/일부/조사형)을 사실 확인표에서 찾지 못함: tests/{slug}/factcheck.md', file=sys.stderr)
         if doc.get('createdAt'):
             doc['firstDays'] = first_days(doc['createdAt'], page_dates.get(url, {}), last_day)
+            doc['weeks'] = weekly_positions(doc['createdAt'], page_dates.get(url, {}), last_day)
         doc['move'] = position_move(page_now.get(url), page_prev.get(url))
         if not args.no_inspect:
             res = call('POST', f'{API}/v1/urlInspection/index:inspect', token, {'inspectionUrl': url, 'siteUrl': args.site})

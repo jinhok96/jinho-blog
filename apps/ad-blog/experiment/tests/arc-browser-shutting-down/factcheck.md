@@ -1,5 +1,7 @@
 # 사실 확인표: arc-browser-shutting-down
 
+- 검증 유형 (가설 H3): **조사형** — Arc·Dia 공식 페이지 대조(How we checked). Arc·Dia는 Linux에서 실행 불가 — arc.net 캡처는 문서 확인
+
 ## 작성 전 브리프 (2026-10-26 KST, 세션 51 뉴스 세션)
 
 | 항목 | 내용 |

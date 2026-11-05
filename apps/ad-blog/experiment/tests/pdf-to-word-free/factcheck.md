@@ -1,5 +1,7 @@
 # pdf-to-word-free 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — 테스트 PDF 11개로 PDF→Word 도구 직접 측정(How we tested)
+
 - 주 검색어: `pdf to word free` (+ `pdf to word`). Trends 미국 3개월 `pdf to word` 23.4 (기준 `remove background` 35.3, 2026-10-15 세션 기록 재사용)
 - 하위 검색어 (2026-10-20 `demand_check.py suggest "pdf to word free"` 32개): pdf to word free converter (Google·Bing·YouTube), free download, no account, no sign up, free ocr, free online, reddit, ilovepdf·i love pdf·smallpdf·adobe (Bing), editable
 - 채널: **검색형** (상시 수요, 비교·측정). 제목 52자, 설명 153자

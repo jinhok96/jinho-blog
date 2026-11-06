@@ -4,7 +4,7 @@
 
 | 폴더                                                                 | 내용                                                                                       |
 | -------------------------------------------------------------------- | ------------------------------------------------------------------------------------------ |
-| [transcribe-audio-offline-free](transcribe-audio-offline-free)       | 음성 인식 8개 모델 벤치마크 (sherpa-onnx 1.13.8, Earnings-21 `4387332` 통화 + 짧은 낭독 음성), 검증 유형 줄만 있는 사실 확인표 (2026-11-06) |
+| [transcribe-audio-offline-free](transcribe-audio-offline-free)       | 음성 인식 8개 모델 벤치마크 (sherpa-onnx 1.13.8, Earnings-21 `4387332` 통화 + 짧은 낭독 음성), 검증 유형·주 검색어 줄만 있는 사실 확인표 (2026-11-06) |
 | [check-if-image-is-ai-generated](check-if-image-is-ai-generated)     | C2PA 출처 정보 제거 테스트 스크립트, 결과, 사실 확인표                                      |
 | [turn-off-ai-in-chrome](turn-off-ai-in-chrome)                       | Chromium 155 소스 기준 사실 확인표 (파일·줄 번호)                                          |
 | [windows-10-esu-extended](windows-10-esu-extended)                   | Microsoft ESU 페이지·KB 문서 기준 사실 확인표 (문서 기반, 실행 검증 없음)                  |

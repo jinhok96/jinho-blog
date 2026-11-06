@@ -1,6 +1,6 @@
 # turn-off-copilot-in-edge 사실 확인표
 
-- 검증 유형 (가설 H3): **검증형** — Microsoft Edge 156.0.4314.56(Linux) 새 프로필로 Copilot 설정 직접 확인(How we tested)
+- 검증 유형 (가설 H3): **검증형** — Microsoft Edge 156.0.4314.56(Linux) 새 프로필로 Copilot 설정 직접 확인(How we tested), 2026-11-06 Edge 157.0.4341.42로 같은 시험 반복
 - 주 검색어 (가설 H6): `turn off copilot in edge` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-10-30, 세션 69 일반 세션)
@@ -52,7 +52,34 @@
 | Browse with Copilot: 미국 Microsoft 365 Premium 소비자에게 배포 중, 스크린샷 최대 30일 보관 | support browse-with-copilot | 저장본 |
 | Journeys: 기본 꺼짐, Copilot new tab page 켠 뒤 Journeys 켬, 데스크톱·모바일 모두 More menu > Settings > Copilot and AI, 끄면 수집 멈추고 저장된 정보 삭제 | support copilot-journeys (`source-journeys.txt`) | 저장본 |
 | 회사 프로필 정책: Microsoft365CopilotChatIconEnabled(Entra ID 프로필, Windows·macOS 139+, Android·iOS 미지원, MSA 프로필엔 적용 안 됨), CopilotPageContext(Entra ID 프로필만) | learn.microsoft.com 정책 문서 2개 | 저장본 (글에는 "직장·학교 프로필은 관리자가 정할 수 있음"만) |
-| Edge 157 안정판: 2026-11-05 주 | learn.microsoft.com release schedule (`source-release-schedule.txt`) | 저장본 |
+| Edge 157 안정판: 2026-11-05 주 (2026-11-06 갱신: 157.0.4341.42가 11-05 출시, 158 안정판은 2026-11-19 주, 159는 12-10 주) | learn.microsoft.com release schedule (`source-release-schedule.txt`, 11-06 판으로 교체) | 저장본 (표 원문 HTML로 열 확인: Beta·Stable·Extended Stable) |
+
+## Edge 157 재확인 (2026-11-06 15:21~15:40 UTC, 세션 86 개선 세션)
+
+반복 일정(노하우 4) 재확인. 글 마지막 문장 "Microsoft plans to release Edge 157 in the week of November 5, 2026"이 `stale_check.py`에 걸렸고, packages.microsoft.com 안정판 목록·Learn 릴리스 노트에 157.0.4341.42(2026-11-05)가 올라와 있어 같은 시험을 반복함. 검증 기록 V 대상 아님 (버전 재확인, 글은 `Discovered`라 판정할 노출 없음). 피드 20편 안에 이미 있던 글이라 `updatedAt` 갱신은 피드 순서만 바꾸고 구성은 그대로 (V7)
+
+- 앱: Microsoft Edge 157.0.4341.42 (Official build, Chromium 157.0.8103.39), `microsoft-edge-stable_157.0.4341.42-1_amd64.deb`를 `/tmp/edge157/root`에 `dpkg-deb -x`. 실행은 같은 `run.py`(이번에 `EDGE`·`SHOTS` 환경 변수 추가, 기본값은 156 경로) + 같은 시나리오
+- 캡처: `screens/157/` (`f-*` = `s_final.py`, `90-*` = `s_revert.py`, `q157-1-*`·`q157-3-*` = 설정 후 재시작 `s_set.py` → `s_probe.py`, `157-41-*` = 주소창, `157-81·82` = Copilot new tab page). 실행 로그 `final-run-log-157.json`, 설정 글자 `survey-157.json`·`source-edge-157-settings-text.txt`
+
+| 확인 | 156 (10-30) | 157 (11-06) | 근거 |
+| --- | --- | --- | --- |
+| Copilot and AI 스위치 4개·기본값 | On/Off/Off/Off | 같음 | `final-run-log-157.json` ai-default |
+| Copilot and AI·Languages·Appearance·Start, home, and new tab page 설정 글자 | - | 156 기록의 항목이 모두 같은 순서로 있음 (157 덤프는 왼쪽 메뉴·언어 추가 창 글자까지 들어가 더 길 뿐, 빠지거나 바뀐 줄 0) | `source-edge-157-settings-text.txt` vs `source-edge-156-settings-text.txt` 항목 diff |
+| 버튼 끄면 Chat 버튼·Summarize with Copilot·미니 메뉴 Copilot 아이콘·Ctrl+Shift+. 사라짐 | 사라짐 | 같음 | `screens/157/f-a-*` vs `f-b-*` |
+| 버튼 끄면 문맥 단서 스위치·Manage settings 회색 | 회색 | 같음 | `final-run-log-157.json` ai-after-button-off (disabled true) |
+| Use writing assistance까지 꺼도 Help me rewrite(NEW, Alt+I)·Alt+I 로그인 요청 창 남음, Show writing hints 회색 | 남음 | 같음 | `f-c-4`·`f-c-5`, lang-after-wa-off |
+| 버튼 다시 켜면 4곳 돌아옴 | 돌아옴 | 같음 | `90-*` |
+| 재시작 뒤 유지 (버튼 끔 / 버튼 + 쓰기 도우미 끔) | 유지 | 같음 | `q157-1-*`, `q157-3-*` |
+| 주소창 "how long is a marathon" Copilot 제안 줄 | 없음 (3상태) | 없음 (켬·버튼 끔·둘 다 끔) | `157-41-addressbar-on`·`-off`·`-both-off` (첫 '켬' 실행은 주소가 선택되지 않아 글자가 주소 뒤에 붙음 → `s_addr157_on.py`로 다시) |
+| Copilot new tab page 켜면 새 탭 "Hey there, nice to meet you!" + "Type a link or ask anything" | 같음 | 같음 (제안 동작·업무 콘텐츠 없음, 로그아웃) | `157-82-copilot-ntp` (사이트 아이콘이 있어 글에 쓰지 않음) |
+| Ctrl+Shift+. 사이드 창 문구 "Let's get you signed in / Sign-in is required to access Copilot in Edge. Chat about your tabs and make Copilot yours with memory across conversations." | 같음 | 같음 | `f-a-3-shortcut` 두 판 잘라 비교 |
+| 툴바 Chat 버튼 아이콘 | - | 156과 같아 보임 (두 판 같은 위치를 4배 확대해 비교) | `f-a-1-rightclick` |
+| Copilot Mode 스위치 | 없음 | 없음 | 설정 글자 |
+
+- **Edge 157 릴리스 노트의 Copilot 변경** (`source-relnote-stable.txt`, 11-06 판으로 교체): "Updated Copilot in Microsoft Edge experience … Microsoft Edge has updated the icon across all Copilot entry points and simplified the Copilot side pane experience. The update also includes upgraded functionality and features such as Copilot Voice and Vision. Security, compliance, privacy, and enterprise controls remain unchanged." / "Upgraded Copilot new tab page. Search, chat, and explore the web from one search box with Copilot-suggested actions and curated work content on the Copilot new tab page." → 우리 로그아웃 사본에서는 아이콘·사이드 창·새 탭이 156과 같았음 (순차 배포인지 로그인 조건인지는 문서에 없음 → 글에는 "우리 사본에서 본 것"만 씀)
+- **인용 문서 재확인**: support.microsoft.com 7쪽(getting-started·context-clues·browse-with-copilot·journeys·at-work·shopping)·Edge 블로그 2026-05-13·explore preview·정책 2쪽을 같은 `fetch.py`로 다시 받아 저장본과 diff → 바뀐 문장 없음 (explore.microsoft.com/edge/copilot는 예시 문구 순서만 바뀜). 새로 받은 판은 저장하지 않음(같은 내용)
+- **언어 파일 비교** (`source-edge-157-strings-diff.txt`): 같은 정규식으로 156 323개 → 157 336개. 새 문구는 "Import your Edge Data in Copilot"(쿠키·방문 기록·결제 정보·비밀번호·자동 완성 데이터를 Copilot으로 가져오기)·Copilot Code·"Allow Copilot to find files and read system information on your PC" → 설정 화면에는 없고 Microsoft 문서도 찾지 못해 글에 쓰지 않음. Edge 158 재확인 때 화면에 나오는지 확인
+- 글 변경: 설명·첫 두 문단·본문 버전 표기(156 → 156 and 157), 새 절 `## Did Edge 157 change the Copilot switches?`(소제목 첫 문장이 답 + 릴리스 노트 인용 + 우리 사본에서 본 것), 이미지 3장(설정 화면을 157 캡처로 다시, 결과 표를 156·157 두 시험으로, 새 그래픽 `edge-157-copilot-changes.webp`), How we tested에 157 재확인 줄, 마지막 문장 Edge 158(11-19 주). 본문 이미지 5 → 6장. `charts.py`에 `edge157_notes` 추가, 그림 이름을 주면 그 그림만 다시 만듦
 
 ## 쓰지 않은 것
 

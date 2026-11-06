@@ -1,0 +1,30 @@
+# Edge 156.0.4314.56 vs 157.0.4341.42 Linux locales/en-US.pak 문구 비교 (2026-11-06 UTC)
+# 같은 정규식(copilot|writing assist|help me rewrite|cowork|journeys|context clue|text prediction, 대소문자 무시)으로 두 판의 문구를 뽑아 글자 그대로 비교. 156: 323개, 157: 336개
+# 157에서 새로 생긴 문구는 'Import your Edge Data in Copilot'(Edge 데이터를 Copilot으로 가져오기)·Copilot Code·PC 접근 권한 문구로, 우리 사본의 Edge 설정 화면에는 나오지 않음(설정 글자 source-edge-157-settings-text.txt). 글에는 쓰지 않음
+
+## 157에만 있는 문구
++ Allow Copilot to find files and read system information on your PC
++ Allow Copilot to run tools without asking?
++ Allow Microsoft to save your browsing activity including history, usage, bookmarks, web content, and other browsing data to personalize and improve Microsoft Edge and Microsoft services like ads, search, shopping, news, and Copilot.
++ Allow Microsoft to save your browsing activity to personalize and improve Microsoft Edge and other Microsoft services like shopping, search, news, ads, and Copilot.*br*Your browsing activity includes history, usage, bookmarks, web content, and other browsing content. $1 | $2
++ Bring cookies into Copilot to help keep you signed in to websites and remember your site preferences.
++ Bring your browsing history into Copilot to help find sites you've visited.
++ Bring your personal information into Copilot to help fill in online forms.
++ Bring your saved passwords into Copilot to help sign in to websites.
++ Bring your saved payment information into Copilot to help fill in payment forms.
++ Copilot Code won’t ask for your approval before any action, including running commands, reading, changing or deleting files, downloading content, or pulling from or pushing to GitHub repositories. This setting applies to all projects and workspaces, including existing and new sessions. It stays on until you turn it off.
++ Copilot Code won’t ask for your approval before any action, including running commands, reading, changing or deleting files, downloading content, using connectors and plugins or pulling from or pushing to GitHub repositories. This setting applies to all projects and workspaces, including existing and new sessions. It stays on until you turn it off.
++ Copilot needs your permission to search for files and read system information on your PC. You can always control what Copilot has access to in Settings > Data controls > Copilot access to your PC.
++ Import your Edge Data in Copilot
++ Import your cookies, browsing history, payment info, saved passwords, and autofill data from Microsoft Edge each time you open Copilot.
++ Import your cookies, browsing history, payment info, saved passwords, and autofill data from Microsoft Edge each time you open Copilot. You can stop importing anytime in Settings.
++ Let Copilot use your recent browsing activity to create more relevant task suggestions.
++ Microsoft Copilot <em>will save</em>:       <ul>         <li>Bookmarks         <li>Downloads       </ul>
++ You can allow Copilot to use tools without asking for permission each time.
+
+## 156에만 있는 문구
+- Allow Copilot Code to run without approval?
+- Allow Copilot to find files and read content on your PC
+- Copilot needs your permission to search for files and read system content on your PC. You can always control what Copilot has access to in Settings > Data controls > Copilot access to your PC.
+- Import your cookies, history, payment info, passwords, and autofill data from Microsoft Edge each time you open Copilot.
+- Turn on auto-approval in settings to let Copilot Code work without asking for approval each time.

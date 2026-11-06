@@ -1,8 +1,11 @@
-"""Edge Copilot 끄기 글 그래픽: Edge 156 화면 캡처(주석) + 진입점 결과 표 (1200×675 webp).
+"""Edge Copilot 끄기 글 그래픽: Edge 화면 캡처(주석) + 진입점 결과 표 + Edge 157 릴리스 노트 비교 (1200×675 webp).
 
 캡처 원본은 `screens/*.webp` (Microsoft Edge 156.0.4314.56 Linux, 새 프로필·로그아웃, Xvfb 1280×900 1배율,
-2026-10-30 UTC, 조작 순서는 capture-notes.md). 내용 출처는 factcheck.md.
-실행: python3 -I charts.py <출력 폴더>
+2026-10-30 UTC)와 `screens/157/*.webp` (Edge 157.0.4341.42, 같은 조건·같은 시나리오, 2026-11-06 UTC).
+조작 순서는 capture-notes.md. 내용 출처는 factcheck.md.
+실행: python3 -I charts.py <출력 폴더> [그림 이름 ...]  (이름을 주면 그 그림만, 예: settings_page results_table edge157_notes)
+2026-11-07: 설정 화면(settings_page)은 Edge 157 캡처로, 결과 표는 156·157 두 번의 시험으로 바꾸고 edge157_notes 추가.
+before_after·writing_stays·grayed_out은 Edge 156 캡처 그대로 (157에서도 같은 결과, 글 이미지 대체 텍스트도 156)
 """
 import sys
 from pathlib import Path
@@ -17,6 +20,7 @@ HERE = Path(__file__).resolve().parent
 SCREENS = HERE / 'screens'
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'img'
 SOURCE = 'Screenshots: Microsoft Edge 156.0.4314.56, new signed-out profile, October 30, 2026. Boxes added by ToolProof.'
+SOURCE_157 = 'Screenshot: Microsoft Edge 157.0.4341.42, new signed-out profile, November 6, 2026. Box added by ToolProof.'
 
 
 def box(ax, x, y, w, h, fill, edge=None, lw=0):
@@ -64,10 +68,10 @@ def side_panel(fig, left, title, rows, top=0.86):
 
 def settings_page():
     """Settings > Copilot and AI 기본 화면: 버튼 스위치 표시, 오른쪽에 스위치별 기본값"""
-    img = screen('f-s1-ai-default', (418, 170, 1240, 835))
+    img = screen('157/f-s1-ai-default', (418, 170, 1240, 835))
     fig = plt.figure(figsize=cs.FIGSIZE)
     cs.header(fig, 'Edge keeps its Copilot switches on one page',
-              'Settings > Copilot and AI in Edge 156. These are the defaults on a new, signed-out profile.')
+              'Settings > Copilot and AI in Edge 157. These are the defaults on a new, signed-out profile.')
     ax, w = place(fig, img, 36, 0.115, 480)
     frame(ax, img)
     mark(ax, 8, 186, 816, 240)  # Show Copilot button in toolbar
@@ -77,7 +81,7 @@ def settings_page():
         ('Copilot new tab page: Off', 'A Copilot chat box as your new tab'),
         ('Allow Cowork: Off', 'Copilot clicks and types for you'),
     ])
-    cs.footer(fig, SOURCE)
+    cs.footer(fig, SOURCE_157, 'Edge 156 had the same four switches with the same defaults.')
     cs.save(fig, f'{OUT}/edge-copilot-and-ai-settings.webp')
 
 
@@ -170,8 +174,8 @@ def results_table():
     ax.set_xlim(0, 1)
     ax.set_ylim(0, 1)
     ax.axis('off')
-    cs.header(fig, 'Where Copilot showed up in Edge 156, and what each switch did',
-              'Same test page and steps in each state. New signed-out profile, October 30, 2026.')
+    cs.header(fig, 'Where Copilot showed up in Edge 156 and 157, and what each switch did',
+              'Same test page and steps in each state, new signed-out profiles. Both versions gave the same results.')
     xs = [0.0, 0.47, 0.66, 0.84]
     ytop = 0.93
     for i, h in enumerate(heads):
@@ -186,15 +190,49 @@ def results_table():
             changed = c > 0 and v != vals[0]
             ax.text(xs[c + 1] + 0.005, y, v, fontsize=13, va='center', zorder=2,
                     fontweight='bold' if changed else 'normal', color=cs.ACCENT if changed else cs.FOREGROUND)
-    cs.footer(fig, 'Source: ToolProof test of Microsoft Edge 156.0.4314.56. Turning the Copilot button switch back on restored the first four.',
-              'Signed out, Help me rewrite and Alt+I only asked us to sign in.')
+    cs.footer(fig, 'Source: ToolProof tests of Microsoft Edge 156.0.4314.56 (October 30, 2026) and 157.0.4341.42 (November 6, 2026).',
+              'Turning the Copilot button switch back on restored the first four. Signed out, Help me rewrite and Alt+I only asked us to sign in.')
     cs.save(fig, f'{OUT}/edge-copilot-entry-points-results.webp')
+
+
+def edge157_notes():
+    """Edge 157 릴리스 노트의 Copilot 변경 4가지 vs 로그아웃 사본에서 본 것 (2026-11-07 추가)"""
+    rows = [
+        ('New Copilot icon across all\nCopilot entry points', 'The Chat button icon looked the same\nas in Edge 156'),
+        ('Simplified Copilot side pane', 'Signed out, the pane only asked us to\nsign in, with the same text as in Edge 156'),
+        ('Copilot Voice and Vision', 'Copilot asked us to sign in first,\nso we could not try them'),
+        ('Upgraded Copilot new tab page', 'The same "Type a link or ask anything"\nbox, with no suggested actions'),
+        ('(Not in the notes)\nCopilot and AI settings', 'Same four switches, same defaults,\nsame results in every test'),
+    ]
+    fig = plt.figure(figsize=cs.FIGSIZE)
+    ax = fig.add_axes([0.03, 0.12, 0.94, 0.70])
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+    cs.header(fig, 'What Edge 157 changed for Copilot, and what we saw',
+              "Microsoft's November 5, 2026 release notes vs. our test of Edge 157 on a new signed-out profile.")
+    xs = [0.0, 0.47]
+    ytop = 0.95
+    for x, h in zip(xs, ["Microsoft's Edge 157 release notes", 'Our signed-out copy, November 6']):
+        ax.text(x + 0.015, ytop, h, fontsize=13, fontweight='bold', va='center', color=cs.MUTED)
+    step = 0.172
+    for r, (claim, seen) in enumerate(rows):
+        y = ytop - 0.13 - r * step
+        if r % 2 == 0:
+            box(ax, 0.0, y - step / 2 + 0.008, 1.0, step - 0.016, cs.SURFACE)
+        ax.text(0.015, y, claim, fontsize=13, va='center', zorder=2, linespacing=1.3,
+                color=cs.MUTED if claim.startswith('(') else cs.FOREGROUND)
+        ax.text(xs[1] + 0.015, y, seen, fontsize=13, va='center', zorder=2, linespacing=1.3,
+                fontweight='bold' if r == len(rows) - 1 else 'normal', color=cs.ACCENT if r == len(rows) - 1 else cs.FOREGROUND)
+    cs.footer(fig, 'Sources: Microsoft Edge Stable channel release notes, version 157.0.4341.42. ToolProof test of Microsoft Edge 157.0.4341.42.',
+              'Microsoft says security, compliance, privacy and enterprise controls are unchanged.')
+    cs.save(fig, f'{OUT}/edge-157-copilot-changes.webp')
 
 
 if __name__ == '__main__':
     Path(OUT).mkdir(parents=True, exist_ok=True)
-    settings_page()
-    before_after()
-    writing_stays()
-    grayed_out()
-    results_table()
+    figures = [settings_page, before_after, writing_stays, grayed_out, results_table, edge157_notes]
+    only = set(sys.argv[2:])
+    for f in figures:
+        if not only or f.__name__ in only:
+            f()

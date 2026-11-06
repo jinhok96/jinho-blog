@@ -1,7 +1,7 @@
 URL: https://learn.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule
 Final: https://learn.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule
 Title: Microsoft Edge release schedule | Microsoft Learn
-Fetched: 2026-10-30 16:56 UTC
+Fetched: 2026-11-06 15:31 UTC
 
 Skip to main content
 Skip to Ask Learn chat experience
@@ -73,6 +73,7 @@ Version	Release status	Beta Channel
 Release week	Stable Channel
 Release week	Extended Stable Channel
 Release week
+167	Target release	Week of 30-March-2027	Week of 15-April-2027	Not applicable
 166	Target release	Week of 16-March-2027	Week of 01-April-2027	Not applicable
 165	Target release	Week of 02-March-2027	Week of 18-March-2027	Not applicable
 164	Target release	Week of 16-February-2027	Week of 04-March-2027	Week of 04-March-2027
@@ -81,9 +82,12 @@ Release week
 161	Target release	Week of 05-January-2027	Week of 21-January-2027	Not applicable
 160	Target release	Week of 08-December-2026	Week of 07-January-2027	Week of 07-January-2027
 159	Target release	Week of 17-November-2026	Week of 10-December-2026	Not applicable
-158	Target release	Week of 03-November-2026	Week of 19-November-2026	Not applicable
-157	Target release	20-October-2026
-157.0.4341.10	Week of 05-November-2026	Not applicable
+158	Target release	04-November-2026
+158.0.4370.1	Week of 19-November-2026	Not applicable
+157	Release
+version	20-October-2026
+157.0.4341.10	5-November-2026
+157.0.4341.42	Not applicable
 156	Release
 version	06-October-2026
 156.0.4314.8	22-October-2026
@@ -405,6 +409,7 @@ See also
 Microsoft Edge Enterprise landing page
 Microsoft Edge channels
 Channel downloads
+Reading mode disabled
 Last updated on 10/06/2026
 In this article
 Release cadence
@@ -418,9 +423,6 @@ Was this page helpful?
 English (United States)
 Your Privacy Choices
 Theme
-Light
-Dark
-High contrast
 AI Disclaimer
 Previous Versions
 Blog

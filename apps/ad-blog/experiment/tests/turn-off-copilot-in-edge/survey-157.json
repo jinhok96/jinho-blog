@@ -1,0 +1,264 @@
+{
+ "ua": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0",
+ "ai": {
+  "url": "edge://settings/ai",
+  "text": "Settings | Profiles | Passwords and autofill | Privacy, search, and services | Copilot and AI | Appearance | Default browser | Start, home, and new tab page | Languages | Downloads | Accessibility | System and performance | Reset settings | Extensions | About Microsoft Edge | Send feedback | Managed by your organization | Some settings may be disabled. | Learn more | Thank you | What do you like about Copilot? | I like the Copilot new tab page | I like that I can chat with Copilot about my open tabs | I like that Copilot uses browsing history to personalize responses | I like that Copilot can perform tasks on the web for me | Other | Thank you | What don't you like about Copilot? | I don't like the Copilot new tab page | The Copilot new tab page takes too long to load | Copilot isn't accurate when answering questions about my open tabs | I don't like that Copilot personalizes responses with my browsing history | Copilot is too slow or unreliable when performing actions for me | Other | Are you finding Copilot features helpful? | Copilot and AI | Sign in to use Copilot in Edge | Unlock all Copilot features in Edge when you sign in. | Sign in | Copilot in Edge | Learn more | Show Copilot button in toolbar | Quickly open Copilot whenever you need it. | Allow Copilot to read context clues on the web | Copilot may give better answers based on the current webpage, browser history, or your preferences in Microsoft Edge. | Learn more | Copilot new tab page | Search, explore the web, and chat with Copilot from one search box in the new tab page. | Allow Cowork to take actions on your behalf | Cowork may perform tasks such as creating tabs, taking screenshots, and interact with web pages. | Copilot settings | Manage your history, privacy and personalization settings. | Manage settings | Copilot in Edge Preview | Copilot in Edge Preview | Get priority access to new Copilot features before they're available broadly. If you opt out, any features that were turned on will stay on and need to be turned off individually. | Learn more & join",
+  "toggles": [
+   {
+    "label": "Show Copilot button in toolbar",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 305
+   },
+   {
+    "label": "Allow Copilot to read context clues on the web",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 374
+   },
+   {
+    "label": "Copilot new tab page",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 444
+   },
+   {
+    "label": "Allow Cowork to take actions on your behalf",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 507
+   }
+  ]
+ },
+ "appearance": {
+  "url": "edge://settings/appearance",
+  "text": "Settings | Profiles | Passwords and autofill | Privacy, search, and services | Copilot and AI | Appearance | Default browser | Start, home, and new tab page | Languages | Downloads | Accessibility | System and performance | Reset settings | Extensions | About Microsoft Edge | Send feedback | Managed by your organization | Some settings may be disabled. | Learn more | Thank you | Tell us what you like | I like the colors | I like the images | I like the dark/light/system modes | I like the AI theme generator | Other | Thank you | Tell us why you're not satisfied | I don't like the colors | I don't like the images | Dark/light/system appearance modes don't work as expected | AI theme generator doesn't work properly | I can\u2019t find wallpapers/image themes | Other | Are you satisfied with these appearance options? | Appearance | Page zoom | Home button | Tabs | Bookmarks | Overall appearance | Applies to new tabs, pages, dialogs and other menus | GTK | Light | Dark | Theme | Color theme | Image theme | Restore default | No image selected | Refresh daily | No image | Upload image | Explore more themes | AI Theme Generator | New | Personalize your browser with AI-generated themes | Install themes from Edge Add-ons store | Browse more themes specifically made for Edge | Page colors | Page colors | Make sites easier to read by modifying the colors you see on pages | System | System | Off | Dusk | Desert | Night Sky | Aquatic | White | Only apply page colors when high contrast is on | Specify sites | List of sites that are excluded from page colors | Other appearance settings | Page zoom | Default zoom level for all sites. To see zoom levels for certain sites, go to | Zoom levels | 100% | 25% | 33% | 50% | 67% | 75% | 80% | 90% | 100% | 110% | 125% | 150% | 175% | 200% | 250% | 300% | 400% | 500% | Touch mode | Increases the size of browser elements like buttons, tabs, and more. Optimized for use with touch | Auto (default) | Auto (default) | On | Off | Toolbar | Customize which buttons always show on your browser | Context menus | Manage right-click, hover, and mini menu settings | Browser behavior and features | Customize general browser behavior settings like asking before closing multiple tabs, mouse gesture, and split screen | Fonts | Customize fonts and font sizes | Tabs | Manage all tab settings like turning on vertical tabs and showing tab previews on hover",
+  "toggles": [
+   {
+    "label": "Refresh daily",
+    "checked": true,
+    "disabled": false,
+    "visible": false,
+    "x": 0,
+    "y": 0
+   },
+   {
+    "label": "Only apply page colors when high contrast is on",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 1185
+   }
+  ]
+ },
+ "startHomeNTP": {
+  "url": "edge://settings/startHomeNTP",
+  "text": "Settings | Profiles | Passwords and autofill | Privacy, search, and services | Copilot and AI | Appearance | Default browser | Start, home, and new tab page | Languages | Downloads | Accessibility | System and performance | Reset settings | Extensions | About Microsoft Edge | Send feedback | Managed by your organization | Some settings may be disabled. | Learn more | Start, home, and new tab page | On startup | Open the new tab page | Open tabs from the previous session | Open custom sites | Home button | Show home button on the toolbar | Set what the home button opens below: | New tab page | Copilot new tab page | Search, explore the web, and chat with Copilot from one search box in the new tab page. | Preload your new tab page | Opens new tab page in the background for a faster experience",
+  "toggles": [
+   {
+    "label": "Show home button on the toolbar",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 396
+   },
+   {
+    "label": "Copilot new tab page",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 525
+   },
+   {
+    "label": "Preload your new tab page",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 588
+   }
+  ]
+ },
+ "languages": {
+  "url": "edge://settings/languages",
+  "text": "Settings | Profiles | Passwords and autofill | Privacy, search, and services | Copilot and AI | Appearance | Default browser | Start, home, and new tab page | Languages | Downloads | Accessibility | System and performance | Reset settings | Extensions | About Microsoft Edge | Send feedback | Managed by your organization | Some settings may be disabled. | Learn more | Languages | Preferred languages | Websites will appear in the first language in the list that they support. Reorder your preferences in the list below | Add languages | Add languages | Cancel | Add | Afrikaans - Afrikaans | Akan - Akan | Akan - Akan | Albanian - shqip | Amharic - \u12a0\u121b\u122d\u129b | Arabic - \u200e\u202b\u0627\u0644\u0639\u0631\u0628\u064a\u0629\u202c\u200e | Aragonese - aragon\u00e9s | Armenian - \u0570\u0561\u0575\u0565\u0580\u0565\u0576 | Assamese - \u0985\u09b8\u09ae\u09c0\u09af\u09bc\u09be | Asturian - asturianu | Aymara - Aymar | Azerbaijani - az\u0259rbaycan | Bamanankan - bamanakan | Bangla - \u09ac\u09be\u0982\u09b2\u09be | Bangla (India) - \u09ac\u09be\u0982\u09b2\u09be (\u09ad\u09be\u09b0\u09a4) | Basque - euskara | Belarusian - \u0431\u0435\u043b\u0430\u0440\u0443\u0441\u043a\u0430\u044f | Bhojpuri - \u092d\u094b\u091c\u092a\u0941\u0930\u0940 | Bosnian - bosanski | Breton - brezhoneg | Bulgarian - \u0431\u044a\u043b\u0433\u0430\u0440\u0441\u043a\u0438 | Burmese - \u1019\u103c\u1014\u103a\u1019\u102c | Catalan - catal\u00e0 | Catalan (Spain, VALENCIA) - catal\u00e0 (Espanya, VALENCIA) | Cebuano - Cebuano | Central Kurdish - \u200e\u202b\u06a9\u0648\u0631\u062f\u06cc\u06cc \u0646\u0627\u0648\u06d5\u0646\u062f\u06cc\u202c\u200e | Cherokee - \u13e3\u13b3\u13a9 | Chinese - \u4e2d\u6587 | Chinese (Hong Kong SAR) - \u4e2d\u6587\uff08\u9999\u6e2f\u7279\u5225\u884c\u653f\u5340\uff09 | Chinese (Simplified) - \u4e2d\u6587\uff08\u7b80\u4f53\uff09 | Chinese (Traditional) - \u4e2d\u6587\uff08\u7e41\u9ad4\uff09 | Corsican - Corsican | Croatian - hrvatski | Czech - \u010de\u0161tina | Danish - dansk | Divehi - \u200e\u202b\u078b\u07a8\u0788\u07ac\u0780\u07a8\u202c\u200e | Dogri - \u0921\u094b\u0917\u0930\u0940 | Dutch - Nederlands | Dutch (Belgium) - Nederlands (Belgi\u00eb) | English (Australia) - English (Australia) | English (Canada) - English (Canada) | English (India) - English (India) | English (Ireland) - English (Ireland) | English (New Zealand) - English (New Zealand) | English (South Africa) - English (South Africa) | English (United Kingdom, Oxford English Dictionary spelling) - English (United Kingdom, Oxford English Dictionary spelling) | English (United Kingdom) - English (United Kingdom) | Esperanto - Esperanto | Estonian - eesti | Ewe - e\u028begbe | Faroese - f\u00f8royskt | Filipino - Filipino | Finnish - suomi | French - fran\u00e7ais | French (Belgium) - fran\u00e7ais (Belgique) | French (Canada) - fran\u00e7ais (Canada) | French (France) - fran\u00e7ais (France) | French (Switzerland) - fran\u00e7ais (Suisse) | Galician - galego | Ganda - Luganda | Georgian - \u10e5\u10d0\u10e0\u10d7\u10e3\u10da\u10d8 | German - Deutsch | German (Austria) - Deutsch (\u00d6sterreich) | German (Germany) - Deutsch (Deutschland) | German (Liechtenstein) - Deutsch (Liechtenstein) | German (Switzerland) - Deutsch (Schweiz) | Greek - \u0395\u03bb\u03bb\u03b7\u03bd\u03b9\u03ba\u03ac | Guarani - Guarani | Gujarati - \u0a97\u0ac1\u0a9c\u0ab0\u0abe\u0aa4\u0ac0 | Haitian Creole - cr\u00e9ole ha\u00eftien | Hausa - Hausa | Hawaiian - \u02bb\u014clelo Hawai\u02bbi | Hebrew - \u200e\u202b\u05e2\u05d1\u05e8\u05d9\u05ea\u202c\u200e | Hindi - \u0939\u093f\u0928\u094d\u0926\u0940 | Hmong - Hmong | Hungarian - magyar | Icelandic - \u00edslenska | Igbo - Igbo | Iloko - Ilokano | Indonesian - Indonesia | Interlingua - interlingua | Inuktitut - Inuktitut | Irish - Gaeilge | isiXhosa - IsiXhosa | isiZulu - isiZulu | Italian - italiano | Italian (Italy) - italiano (Italia) | Italian (Switzerland) - italiano (Svizzera) | Japanese - \u65e5\u672c\u8a9e | Javanese - Jawa | Kannada - \u0c95\u0ca8\u0ccd\u0ca8\u0ca1 | Kazakh - \u049b\u0430\u0437\u0430\u049b \u0442\u0456\u043b\u0456 | Khmer - \u1781\u17d2\u1798\u17c2\u179a | Kinyarwanda - Ikinyarwanda | Kiswahili - Kiswahili | Konkani - \u0915\u094b\u0902\u0915\u0923\u0940 | Korean - \ud55c\uad6d\uc5b4 | Krio - Krio | Kurdish - Kurd\u00ee | Kyrgyz - \u043a\u044b\u0440\u0433\u044b\u0437\u0447\u0430 | Lao - \u0ea5\u0eb2\u0ea7 | Latin - Latin | Latvian - latvie\u0161u | Lingala - ling\u00e1la | Lithuanian - lietuvi\u0173 | Luxembourgish - L\u00ebtzebuergesch | Macedonian - \u043c\u0430\u043a\u0435\u0434\u043e\u043d\u0441\u043a\u0438 | Maithili - \u092e\u0948\u0925\u093f\u0932\u0940 | Malagasy - Malagasy | Malay - Melayu | Malayalam - \u0d2e\u0d32\u0d2f\u0d3e\u0d33\u0d02 | Maltese - Malti | Manipuri (Meitei Mayek) - mni (Mtei) | M\u0101ori - M\u0101ori | Marathi - \u092e\u0930\u093e\u0920\u0940 | Mizo - Mizo tawng | Mongolian - \u043c\u043e\u043d\u0433\u043e\u043b | Nepali - \u0928\u0947\u092a\u093e\u0932\u0940 | Norwegian - norsk | Norwegian Bokm\u00e5l - norsk bokm\u00e5l | Norwegian Nynorsk - norsk nynorsk | Nyanja - Nyanja | Occitan - occitan | Odia - \u0b13\u0b21\u0b3c\u0b3f\u0b06 | Oromo - Oromoo | Pashto - \u200e\u202b\u067e\u069a\u062a\u0648\u202c\u200e | Persian - \u200e\u202b\u0641\u0627\u0631\u0633\u06cc\u202c\u200e | Persian (Afghanistan) - \u200e\u202b\u0641\u0627\u0631\u0633\u06cc (\u0627\u0641\u063a\u0627\u0646\u0633\u062a\u0627\u0646)\u202c\u200e | Polish - polski | Portuguese - portugu\u00eas | Portuguese (Brazil) - portugu\u00eas (Brasil) | Portuguese (Portugal) - portugu\u00eas (Portugal) | Punjabi - \u0a2a\u0a70\u0a1c\u0a3e\u0a2c\u0a40 | Quechua - Runasimi | Romanian - rom\u00e2n\u0103 | Romanian (Moldova) - rom\u00e2n\u0103 (Republica Moldova) | Romanian (Moldova) - rom\u00e2n\u0103 (Republica Moldova) | Romansh - rumantsch | Russian - \u0440\u0443\u0441\u0441\u043a\u0438\u0439 | Samoan - Samoan | Sanskrit - \u0938\u0902\u0938\u094d\u0915\u0943\u0924 \u092d\u093e\u0937\u093e | Scottish Gaelic - G\u00e0idhlig | Serbian - \u0441\u0440\u043f\u0441\u043a\u0438 | Serbian (Cyrillic, Bosnia & Herzegovina) - \u0441\u0440\u043f\u0441\u043a\u0438 (\u045b\u0438\u0440\u0438\u043b\u0438\u0446\u0430, \u0411\u043e\u0441\u043d\u0430 \u0438 \u0425\u0435\u0440\u0446\u0435\u0433\u043e\u0432\u0438\u043d\u0430) | Serbian (Cyrillic, Serbia) - \u0441\u0440\u043f\u0441\u043a\u0438 (\u045b\u0438\u0440\u0438\u043b\u0438\u0446\u0430, \u0421\u0440\u0431\u0438\u0458\u0430) | Serbian (Latin, Serbia) - srpski (latinica, Srbija) | Serbo-Croatian - srpskohrvatski | Sesotho - Sesotho | Sesotho sa Leboa - Sesotho sa Leboa | Setswana - Setswana | Shona - chiShona | Sindhi - \u200e\u202b\u0633\u0646\u068c\u064a\u202c\u200e | Sinhala - \u0dc3\u0dd2\u0d82\u0dc4\u0dbd | Slovak - sloven\u010dina | Slovenian - sloven\u0161\u010dina | Somali - Soomaali | Spanish - espa\u00f1ol | Spanish (Argentina) - espa\u00f1ol (Argentina) | Spanish (Chile) - espa\u00f1ol (Chile) | Spanish (Colombia) - espa\u00f1ol (Colombia) | Spanish (Costa Rica) - espa\u00f1ol (Costa Rica) | Spanish (Honduras) - espa\u00f1ol (Honduras) | Spanish (Latin America) - espa\u00f1ol (Latinoam\u00e9rica) | Spanish (Mexico) - espa\u00f1ol (M\u00e9xico) | Spanish (Peru) - espa\u00f1ol (Per\u00fa) | Spanish (Spain) - espa\u00f1ol (Espa\u00f1a) | Spanish (United States) - espa\u00f1ol (Estados Unidos) | Spanish (Uruguay) - espa\u00f1ol (Uruguay) | Spanish (Venezuela) - espa\u00f1ol (Venezuela) | Sundanese - Basa Sunda | Swedish - svenska | Tajik - \u0442\u043e\u04b7\u0438\u043a\u04e3 | Tamil - \u0ba4\u0bae\u0bbf\u0bb4\u0bcd | Tatar - \u0442\u0430\u0442\u0430\u0440 | Telugu - \u0c24\u0c46\u0c32\u0c41\u0c17\u0c41 | Thai - \u0e44\u0e17\u0e22 | Tigrinya - \u1275\u130d\u122d\u129b | Tongan - lea fakatonga | Turkish - T\u00fcrk\u00e7e | Turkmen - t\u00fcrkmen dili | Ukrainian - \u0443\u043a\u0440\u0430\u0457\u043d\u0441\u044c\u043a\u0430 | Urdu - \u200e\u202b\u0627\u0631\u062f\u0648\u202c\u200e | Uyghur - \u200e\u202b\u0626\u06c7\u064a\u063a\u06c7\u0631\u0686\u06d5\u202c\u200e | Uzbek (Latin) - o\u2018zbek (Latn) | Vietnamese - Ti\u1ebfng Vi\u1ec7t | Walloon - wa | Welsh - Cymraeg | Western Frisian - Frysk | Wolof - Wolof | Xitsonga - Xitsonga | Yiddish - \u200e\u202b\u05d9\u05d9\u05b4\u05d3\u05d9\u05e9\u202c\u200e | Yoruba - \u00c8d\u00e8 Yor\u00f9b\u00e1 | Add | English (United States) | English | Offer to translate pages that aren't in a language I read | When this setting is on, Microsoft Edge detects the language on your webpage and offers to translate if the language detected is not listed under Preferred languages. The webpage text will be sent to Microsoft Translator service for translation, where the text is stored for service improvements. Learn more about how the Microsoft Translator service uses your data | Microsoft Privacy Statement | . | Writing assistance | Use writing assistance | Get help writing, rewriting, and refining text by hovering over the blinking cursor or selecting text in supported text fields. | Show writing hints | Occasionally show a blue dot on the blinking cursor to help you discover writing assistance. | Use text prediction | Thank you | Thank you | Why are predictions not helpful? | Not relevant | Don't sound like me | Offensive or rude | Too frequent | Use incorrect spelling/grammar | Other | Are you finding this feature helpful? | When this is on, typed characters in certain text boxes on the web are sent to Microsoft Cloud to provide text prediction services. | Learn more | Use grammar and spell-check assistance | Microsoft Editor (recommended) | Provides enhanced grammar, spelling, and style suggestions | Basic | Provides basic spellchecking assistance | Use synonyms for spelling suggestions | Writing assistance languages | Apply writing assistance to preferred languages | Customize dictionary | Share additional OS regional format | Share additional operating system region | Choose the level at which Microsoft Edge needs to share OS based regional format when it's different from the display language based region. | Limited (default) | Limited (default) | Always (not recommended) | Never",
+  "toggles": [
+   {
+    "label": "Offer to translate pages that aren't in a language I read",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 367
+   },
+   {
+    "label": "Use writing assistance",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 519
+   },
+   {
+    "label": "Show writing hints",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 582
+   },
+   {
+    "label": "Use text prediction",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 657
+   },
+   {
+    "label": "Use grammar and spell-check assistance",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 725
+   },
+   {
+    "label": "Use synonyms for spelling suggestions",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 895
+   }
+  ]
+ },
+ "appearance/toolbar": {
+  "url": "edge://settings/appearance/toolbar",
+  "text": "Settings | Profiles | Passwords and autofill | Privacy, search, and services | Copilot and AI | Appearance | Default browser | Start, home, and new tab page | Languages | Downloads | Accessibility | System and performance | Reset settings | Extensions | About Microsoft Edge | Send feedback | Managed by your organization | Some settings may be disabled. | Learn more | Appearance | / | Toolbar | Select what buttons to show on the toolbar | Favorites bar | Only on new tabs | Always | Never | Only on new tabs | Home | Set home button URL | Forward | The forward button auto appears in the toolbar when it's possible to go forward. | Show automatically | Show automatically | Always show | Favorites | Split screen | History | Apps | Downloads | Reading mode | Performance | Secure network (VPN) button | Screenshot | Feedback",
+  "toggles": [
+   {
+    "label": "Home",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 236
+   },
+   {
+    "label": "Favorites",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 351
+   },
+   {
+    "label": "Split screen",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 395
+   },
+   {
+    "label": "History",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 439
+   },
+   {
+    "label": "Apps",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 483
+   },
+   {
+    "label": "Downloads",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 527
+   },
+   {
+    "label": "Reading mode",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 571
+   },
+   {
+    "label": "Performance",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 615
+   },
+   {
+    "label": "Secure network (VPN) button",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 659
+   },
+   {
+    "label": "Screenshot",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 703
+   },
+   {
+    "label": "Feedback",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 747
+   }
+  ]
+ },
+ "appearance/contextMenus": {
+  "url": "edge://settings/appearance/contextMenus",
+  "text": "Settings | Profiles | Passwords and autofill | Privacy, search, and services | Copilot and AI | Appearance | Default browser | Start, home, and new tab page | Languages | Downloads | Accessibility | System and performance | Reset settings | Extensions | About Microsoft Edge | Send feedback | Managed by your organization | Some settings may be disabled. | Learn more | Appearance | / | Context menus | Mini menu on text selection | Show mini menu when selecting text | Mini menu is disabled for these sites | List of sites that have the mini context menu disabled | Video quick actions | Show quick actions when hovering over videos",
+  "toggles": [
+   {
+    "label": "Show mini menu when selecting text",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 210
+   },
+   {
+    "label": "Show quick actions when hovering over videos",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 383
+   }
+  ]
+ },
+ "version": "Microsoft Corporation | \u00a9 2026 Microsoft Corporation. All rights reserved. | Microsoft Edge | 157.0.4341.42 | ( | Official build | ) | unknown | (x86_64) | Revision | 7b1486be4607d53d9f93841b7c776bc525ca74b7 | Chromium version | 157.0.8103.39 | Operating system | Linux | JavaScript | V8 | 15.7.11.4 | User agent | Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36 Edg/157.0.0.0 | Command-line | /tmp/edge157/root/opt/microsoft/msedge/msedge --user-data-dir=/tmp/edgerun157/prof/s1 --remote-debugging-port=9334 --no-first-run --no-sandbox --test-type --no-default-browser-check --lang=en-US --window-size=1280,900 --window-position=0,0 --ozone-platform=x11 --flag-switches-begin --flag-switches-end about:blank | Executable path | /tmp/edge157/root/opt/microsoft/msedge/msedge | Profile path | /tmp/edgerun157/prof/s1/Default | Variations Source | default seed | Variations Seed Type | Command-line Variations | eyJkaXNhYmxlLWZlYXR1cmVzIjoiIiwiZW5hYmxlLWZlYXR1cmVzIjoiZWVm... | Active Variations | 7b46cc51-d8d26f5e | ac656a17-d8d26f5e | cd3e400f-d8d26f5e | c5c172fe-d8d26f5e | 1efdd7b1-d8d26f5e | 84fe64d7-d8d26f5e | c2f0b521-d8d26f5e | af45c766-d8d26f5e | cd4e78d9-d8d26f5e | 3abb3b6c-d8d26f5e | 2dc7d034-d8d26f5e | 549b23b0-d8d26f5e | 2bb9db2e-d8d26f5e | 1655361a-d8d26f5e | 984bb401-d8d26f5e | fdf18b1d-d8d26f5e | c2c84668-d8d26f5e | 15b917a6-d8d26f5e | e1b6477f-d8d26f5e | 1b79b376-d8d26f5e | d7ea7a4f-d8d26f5e | b1fa74fa-d8d26f5e | ccdfedf0-d8d26f5e | bfaa011e-d8d26f5e | 280a79c-d8d26f5e | 7976a6ce-d8d26f5e | ff35c681-d8d26f5e | 50dccc31-d8d26f5e | 336bf3b9-d8d26f5e | cc22d948-d8d26f5e | e02b01a7-d8d26f5e | fc5c65f0-d8d26f5e | e89a957d-d8d26f5e | c034b698-d8d26f5e | 89386818-d8d26f5e | 423cd3fa-d8d26f5e | b1673f17-d8d26f5e | b966ff7f-d8d26f5e | 660c5c0b-d8d26f5e | fb25e7f6-d8d26f5e | 675932d-d8d26f5e | c6a5fcbc-d8d26f5e | 5defe5b2-d8d26f5e | ef4d3524-d8d26f5e | 5324995-d8d26f5e | 7d8c3893-d8d26f5e | 5ee5831b-d8d26f5e | 2cf460b7-d8d26f5e | 5e3e5cc5-d8d26f5e | 2dab07dc-d8d26f5e | 7accdcfa-d8d26f5e | 7e3f43-d8d26f5e | 2f8275db-d8d26f5e | 1a1885f2-d8d26f5e | 4f10b653-d8d26f5e | a9140717-d8d26f5e | bffc025-d8d26f5e | 8682395-d8d26f5e | a0a2e01e-d8d26f5e | e2716658-d8d26f5e | fa4f37c9-d8d26f5e | aeefc9a6-d8d26f5e | bb11aa4f-d8d26f5e | 4dfbdb7a-d8d26f5e | 72b9708a-d8d26f5e | eaab553f-d8d26f5e | 7c10ab74-d8d26f5e | cc4725b-d8d26f5e | ec2cd375-d8d26f5e | 46475fb6-d8d26f5e | 33340c1-d8d26f5e | 6c0dbab5-d8d26f5e | 1f3df2fa-d8d26f5e | a645baab-d8d26f5e | 4c4ff1f2-d8d26f5e | ca58b10c-d8d26f5e | e80b3e5a-d8d26f5e | a9ca1042-d8d26f5e | d59dcb6d-d8d26f5e | 88229a4a-d8d26f5e | 4805b918-d8d26f5e | b952aee9-d8d26f5e | e84945a1-d8d26f5e | c66670da-d8d26f5e | aa754f77-d8d26f5e | 87749173-d8d26f5e | 8aacde13-d8d26f5e | d8f269c8-d8d26f5e | d4826933-d8d26f5e | d7607b3e-d8d26f5e | 12510b5d-d8d26f5e | 1b0ab354-d8d26f5e | 3abcc7ba-d8d26f5e | 62bed39b-d8d26f5e | 36839d81-d8d26f5e | 5c9bda13-d8d26f5e | c9c13d5c-d8d26f5e | a5a2b2fb-d8d26f5e | b5b3a374-d8d26f5e | 45937cf-d8d26f5e | a7431b33-d8d26f5e | a43c18f9-d8d26f5e | c222db84-d8d26f5e | 2392500b-d8d26f5e | b59fe1f0-d8d26f5e | 3b801c39-d8d26f5e | 301d5697-d8d26f5e | c6bb74b1-d8d26f5e | de6945d6-d8d26f5e | 6655ecbe-d8d26f5e | 85de54c4-d8d26f5e | bd45ab20-d8d26f5e | 83111eb6-d8d26f5e | b7f872a4-d8d26f5e | 6e613b43-d8d26f5e | 639cac55-d8d26f5e | ab9d8f79-d8d26f5e | 9fbc238e-d8d26f5e | f4f00e05-ca7d8d80 | 9481ce98-3d47f4f4 | 4b935545-bb2d3403 | 9a38bae3-3d47f4f4 | 2d1e43a3-3d47f4f4 | 370ace14-3f4a17df | 386dc267-3d47f4f4 | a4406b35-1657e2d6 | 408da146-1657e2d6 | d69d967d-4866ef6e | 3c8f75a1-21623f2a | Sanitizer"
+}

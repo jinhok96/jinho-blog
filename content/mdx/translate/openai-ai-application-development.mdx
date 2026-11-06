@@ -1,0 +1,31 @@
+---
+title: "AI 앱 개발: 콘셉트부터 프로덕션까지"
+description: OpenAI 모델 및 도구를 사용하여 프로덕션 준비가 된 AI 애플리케이션을 구축하는 방법에 대한 가이드입니다.
+category: openai
+sourceUrl: https://developers.openai.com/tracks/ai-application-development/
+createdAt: 2025-07-11
+---
+
+> 원문: [AI app development: Concept to production](https://developers.openai.com/tracks/ai-application-development/) — OpenAI Developers
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+OpenAI 개발자를 위한 이 가이드에서는 AI 애플리케이션을 콘셉트부터 프로덕션까지 개발하는 방법을 안내합니다. AI 애플리케이션은 핵심 로직, AI 에이전트, 그리고 품질 측정을 위한 평가(evals)로 구성됩니다.
+
+-   **AI 기초 습득**: 에이전트, 평가(evals), 프롬프트 엔지니어링, RAG, 파인튜닝 등 AI의 핵심 개념을 이해합니다.
+-   **애플리케이션 구축**: Responses API 및 Agents SDK를 활용하여 에이전트를 개발하고, RAG로 지식을 확장하며, 파인튜닝으로 모델을 맞춤 설정합니다.
+```python
+from openai import OpenAI
+
+client = OpenAI()
+
+response = client.moderations.create(
+    model="omni-moderation-latest",
+    input="...text to classify goes here...",
+)
+
+print(response)
+```
+-   **테스트 및 평가**: 평가(evals) API를 사용하여 애플리케이션의 정확성, 품질, 안정성을 측정하고, 가드레일을 적용하여 안전하고 예측 가능한 동작을 보장합니다.
+-   **프로덕션 최적화**: 프롬프트 엔지니어링, RAG, 파인튜닝을 통해 성능을 최적화하고, 비용 및 지연 시간 최적화, 그리고 사용량 티어 설정을 통해 프로덕션 규모에 맞게 준비합니다.
+
+자세한 내용은 원문에서 확인하세요.

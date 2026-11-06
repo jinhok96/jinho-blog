@@ -1,6 +1,7 @@
 # turn-off-apple-intelligence-iphone 사실 확인표
 
 - 검증 유형 (가설 H3): **조사형** — Apple 사용 설명서 대조(How we checked). iPhone 없음
+- 주 검색어 (가설 H6): `turn off apple intelligence iphone` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-10-23 세션 43, 일반 세션)
 

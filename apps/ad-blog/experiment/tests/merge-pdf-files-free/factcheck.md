@@ -1,6 +1,7 @@
 # merge-pdf-files-free 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — 입력 파일 3개로 PDF 합치기 앱 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `merge pdf files free` — 브리프 주 검색어
 
 - 주 검색어: `merge pdf files free` (+ `merge pdf`, `merge pdf free`, `merge pdfs into one`, `merge pdf offline`, `merge pdf files into one mac`, `merge pdf on mac`, `merge pdf free download`)
 - 수요 근거 (2026-10-18, 세션 21): 자동완성 "merge pdf" 28개(Google·Bing·YouTube: files free·free·online·adobe·i love pdf·offline·mac·free download). Google Trends(미국 3개월) `merge pdf` 6.3 · `combine pdf` 6.4 · `split pdf` 6.0 · 기준 `remove background` 35.5. backlog 45번(명령줄 글 삭제 후 GUI로 새로 쓸 후보), 세션 19 다음 할 일 "PDF 글 GUI 시리즈"

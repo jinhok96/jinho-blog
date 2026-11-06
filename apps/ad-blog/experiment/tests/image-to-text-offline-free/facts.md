@@ -1,6 +1,7 @@
 # image-to-text-offline-free 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — 2026-10-25부터 (V5 NAPS2 8.5.1 GUI 50장 측정 추가). 발행판(10-14)은 명령줄 OCR 도구 측정이었고 10-17 명령줄 내용 삭제 뒤 10-25까지는 측정 없는 문서 기반(조사형)
+- 주 검색어 (가설 H6): `image to text` — 브리프 주 검색어
 
 - 주 검색어: `image to text` (Trends 미국 3개월 평균 9.8, 기준 `remove background` 35.5) + `free`·`offline` 조건
 - 하위 검색어 (2026-10-14 `demand_check.py suggest`): image to text free (Google·Bing·YouTube), image to text offline (Google·Bing), image to text converter offline free, ocr offline free, ocr offline windows, offline image to text converter (YouTube), extract text from image free no sign up, image to text free unlimited

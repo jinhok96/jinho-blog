@@ -1,6 +1,7 @@
 # best-free-pdf-tools 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — 허브. 본문 How we tested — PDF 도구 8개(PDFsam·PDF Arranger·Sejda·GIMP 등)를 직접 실행한 측정 결과를 상시 글에서 모음
+- 주 검색어 (가설 H6): `free pdf tools` — 브리프 주 검색어
 
 - 주 검색어: `free pdf tools` (자동완성 Google·Bing·YouTube 3곳, 하위 23개)
 - 하위 검색어: `free pdf tools for windows`, `free pdf tools online`, `free pdf tools download`, `best free pdf software`, `best free pdf converter`, `best free pdf compressor`, `best free pdf merger`, `best free pdf to word converter`

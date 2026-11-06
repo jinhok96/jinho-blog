@@ -1,6 +1,7 @@
 # google-gmail-photos-ads — 브리프·사실 확인표
 
 - 검증 유형 (가설 H3): **조사형** — 개인정보처리방침 판 비교·도움말 대조(How we checked). 설정 화면 확인 못 함
+- 주 검색어 (가설 H6): `google personal intelligence` — 브리프 주 검색어
 
 slug: `google-gmail-photos-ads`
 

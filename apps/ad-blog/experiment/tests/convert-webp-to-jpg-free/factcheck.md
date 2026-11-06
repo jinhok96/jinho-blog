@@ -1,6 +1,7 @@
 # convert-webp-to-jpg-free 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — WebP 변환 도구 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `webp to jpg` — 브리프 주 검색어
 
 - 주 검색어: `webp to jpg` (+ `convert webp to jpg`). Trends 미국 1개월(2026-10-21): `webp to jpg` 2.4 · `webp to png` 4.3 · `heic to jpg` 9.3 · 기준 `remove background` 40.3
 - 하위 검색어 (2026-10-21 `demand_check.py suggest`): webp to jpg converter (Google·Bing·YouTube), webp to jpg free, webp to jpg bulk, webp to jpg mac, webp to jpg online free, webp to jpg cloudconvert, webp to jpg ezgif, webp to jpg ilovepdf, convert webp to png (3곳). 하위 검색어 22개 + `convert webp` 28개

@@ -1,6 +1,7 @@
 # 사실 확인표: iphone-handoff-verizon-cost
 
 - 검증 유형 (가설 H3): **조사형** — Apple 지원 문서·통신사 요금 대조만, 직접 실행 없음
+- 주 검색어 (가설 H6): `iphone handoff verizon` — 브리프 주 검색어
 
 확인일: 2026-10-18 06~07시 KST (미국 2026-10-17). Apple·Verizon·T-Mobile 페이지는 curl 정적 HTML로 본문 추출. 직접 실행 검증 없음(iPhone 2대 + 지원 통신사 필요) → 문서 기반 뉴스 칼럼. 원문 발췌: [source-apple-127274.txt](source-apple-127274.txt), [source-verizon.txt](source-verizon.txt), [source-tmobile.txt](source-tmobile.txt).
 

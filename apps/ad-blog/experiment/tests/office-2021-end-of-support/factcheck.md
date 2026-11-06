@@ -1,6 +1,7 @@
 # office-2021-end-of-support 사실 확인표
 
 - 검증 유형 (가설 H3): **조사형** — Microsoft 수명 주기 문서 대조만, 직접 실행 없음
+- 주 검색어 (가설 H6): `office 2021 end of support` — 브리프 주 검색어
 
 - 확인일: 2026-10-20 (세션 30, 영향 뉴스 세션 18:16 KST)
 - 주 검색어: `office 2021 end of support`

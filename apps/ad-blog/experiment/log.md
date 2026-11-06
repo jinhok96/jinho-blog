@@ -2,6 +2,73 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-06 · 세션 85 (정기 실행, 개선 세션): 가설 H6 판정용 DB 구조 개선(글별 주 검색어·Trends 상대량 `keyword`) + V7 피드 첫 다운로드 기록
+
+세션 시각: 2026-11-06 18:16 KST(금) → 18시 실행이라 개선 세션. 같은 날 앞 세션 83(일반, `turn-off-gemini-on-android-phone` 발행)·84(개선, H3 DB) → 글은 건드리지 않고 다른 작업을 고름. 열린 PR 없음. 작업 브랜치를 `origin/main`(a65965f)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음. 이번 세션은 URL 검사 API가 자주 5xx를 내 회차마다 10분 이상 걸림.
+
+**지표 (`gsc_report.py`, 2026-10-09 ~ 11-06, 세션 84 이후 바뀐 값만)**
+
+- 노출 1,073 → **1,090**, 클릭 18, CTR 1.7%, 평균 순위 23.2 → **23.1** (`spotify-family-qr-code-verification` 272·17.6 / `turn-off-ai-in-chrome` 196·17.7·클릭 4 / `image-to-text-offline-free` 129·15.7·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 3 (진행 중, 노출 144)
+- sitemap: **`rss.xml` 11-06 04:28:29 UTC 다운로드 — V7 배포(11-01 11:28 UTC) 뒤 첫 피드 다운로드** → V7 판단 시점 11-13 확정 (아래 V7 관찰). `sitemap.xml`은 11-02 04:15 그대로
+- URL 검사: 색인 17/54 그대로, 새 크롤링 없음. `gsc_report.py` 회차 `Discovered` 22 · `URL is unknown` 15 (`turn-off-ai-in-brave`·`turn-off-gemini-on-android-phone`이 처음 `Discovered`, 사이트맵 칸 rss.xml만). `link_seen.py` 회차는 16 · 21 (그 2편과 `free-image-converter-photo-tools`·`customize-right-click-menu-windows-11`·`iphone-duo-cracked-screen`·`google-gmail-photos-ads`가 unknown — 세션 81~84와 같은 흔들림), 대시보드 회차(09:44Z)는 20 · 17 (그 2편은 다시 `Discovered`·rss.xml만). `link_seen.py`: 가장 최근 크롤링 11-03 05:18 UTC(홈) 그대로, 미색인 37편 중 Google이 본 링크 19편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, **V7 11-13**, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 26일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 판정 뒤 = 이제 11-13, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 1(색인)은 11-03 05:18 뒤 새 크롤링이 없어 링크를 늘려도 발견 경로가 안 됨, 2는 보류 2건, 3은 허브 4/4. 4는 페이지×검색어 115행 중 20위 안 32행이 V 판정 중인 글(`turn-off-ai-in-chrome`·`spotify-family-qr-code-verification`·`image-to-text-offline-free`·`gemini-gems-to-skills`·`free-offline-ai-tools`)이거나 노출 1~6회 → 보강 근거 없음. 5는 V7 판정 중 `updatedAt` 변경 안 함. 6은 **Firefox 160이 아직 미출시**(product-details `LATEST_FIREFOX_VERSION` 159.0.1·`LAST_RELEASE_DATE` 2026-11-06, firefox.com 160.0 릴리스 노트 "We're still preparing the notes for this release", 09:20 UTC 확인) → 다음 세션. → **7: DB 구조 개선** — 가설 표에서 다음으로 판정이 가까운 H6(주제 선정 기준 3번의 근거, D+28 5편째가 롱테일 11-10·상위 11-18)는 글별 주 검색어도 같은 조건의 Trends 값도 DB에 없어 판정할 수 없었음
+
+**한 일 (개선 세션, 쓴 스킬: 없음 — 이번 작업(DB·대시보드·문서)에 맞는 SEO 스킬 절차가 없음. 대시보드는 기존 H3·H5 줄과 같은 글자 줄만 더해 새 색·차트가 없어 `dataviz` 검사 대상 아님)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · DB 구조 개선 | `tests/*/factcheck.md`(옛 글 `facts.md`) 54편, 새 `tools/keyword_trends.py`·`dashboard/keyword-trends.json`, `tools/dashboard_data.py` | 사실 확인표 검증 유형 줄 아래 ``- 주 검색어 (가설 H6): `…` `` (브리프 주 검색어 50편 — 브리프가 표·목록·괄호 설명으로 섞여 있어 정형 줄로 뽑음. 브리프가 없던 10-11 발행 4편은 backlog 핵심 키워드). `keyword_trends.py`: 글별 주 검색어 54개를 기준 `remove background`와 4개씩 묶어 Trends 14회 요청(미국 최근 3개월, 기준 최고점 = 100으로 다시 맞춤, 기준 평균 34.4~34.5)해 `keyword-trends.json`에 저장. 다음부터는 새 주 검색어만 재고 `--all`이면 같은 날 전부 다시 잼. `posts` 글별 **`keyword`** {query, trend, class(롱테일 5 미만·상위 5 이상), measuredAt}, 줄·값이 없으면 경고. 확인: 54편 모두 읽힘(롱테일 48·상위 6), 기존 `newsType`·`verifyType` 결과 그대로, `--no-inspect` 시험 생성. 기존 history는 고치지 않음 | - (지표를 노린 변경 아님) |
+| 2 | 7 · 대시보드 개선 | `dashboard/index.html` | 경과일별 누적 노출 패널 H3 줄 아래 **'H6' 줄**: 롱테일·상위 검색어 글의 'D+28 도달 n/5편 (전체 n)', 5편 이상이면 D+28 누적 노출 중앙값·1~4주 노출 가중 평균 순위 중앙값(노출 있는 글만), 둘 다 5편이면 '판정 가능'. 글 상세 '색인·글 정보'에 '주 검색어'(롱테일/상위·Trends 값). `dashboard_check.cjs` 통과(데스크톱·모바일 375px, 글별 표 54줄, 가로 넘침 없음), 375px 캡처로 줄바꿈 확인 | - |
+| 3 | 성과 검증 기록 | traffic-playbook V7·노하우 9 | V7 피드 첫 다운로드(11-06 04:28 UTC) 관찰을 V7 행에 적고 판단 시점을 '첫 다운로드 + 7일 (늦어도 11-15)' → **11-13**으로 확정. 노하우 9 중간 관찰(2026-11-06) 추가 | V7 (기존 행) |
+| 4 | 문서 | README 가설 H6·운영 대시보드, writing-guide 브리프·체크리스트, `.claude/ad-blog.md`, tests/README | H6 판단 방법 구체화: 주 검색어 = 사실 확인표 줄, 상대량 = `keyword_trends.py` 같은 날 같은 조건, 노출 = D+28 누적, 순위 = 1~4주 노출 가중 평균(노출 있는 글만), 노출·순위 둘 다 롱테일이 기준(1.2배·2위, 검증 기록 판정 기준과 같음) 이상 나으면 지지·둘 다 상위가 나으면 기각·그 밖은 차이 없음, 판정 때 색인·칼럼 여부 표시. 새 글은 사실 확인표에 주 검색어 줄을 쓰고 `keyword_trends.py`로 값을 더해 같은 PR에 커밋 | - |
+
+**H6 중간 상태** (2026-11-06 측정, Search Console 마지막 집계일 11-05 무렵)
+
+| 분류 | 편수 | 글 (주 검색어 · Trends) | 5편째 D+28 |
+| --- | --- | --- | --- |
+| 상위 (5 이상) | 6 | `jpg-to-pdf-free`(`jpg to pdf` 12.06, 색인) · `pdf-to-jpg-free`(`pdf to jpg` 12.06, unknown) · `turn-off-ai-features`(허브, `turn off ai` 10.96, Discovered) · `gemini-free-flash-lite`(칼럼, `gemini free` 10.23, Discovered) · `image-to-text-offline-free`(`image to text` 10.10, 색인) · `convert-heic-to-jpg-free`(`heic to jpg` 8.03, 색인) | 11-18 (`gemini-free-flash-lite`, 10-21 발행) |
+| 롱테일 (5 미만) | 48 | 경계 근처 `compress pdf` 4.55 · `ios 27.2` 3.95 · `pdf to word free` 2.71 · `spotify family plan` 2.59 · `webp to jpg` 1.76, 나머지 43편 0~0.41 | 11-10 (10-11 발행 4편 + `gemini-gems-to-skills` 10-13) |
+
+- 상위 쪽은 6편이 전부일 가능성이 큼: 2026-10-22부터 새 글 주 검색어를 가장 구체적인 롱테일로 정해 그 뒤 발행 글 중 상위는 허브 1편·칼럼 1편뿐 → 판정 표본이 6편 (해석). 상위 6편 중 색인 3편 → H5처럼 색인 여부가 섞이므로 판정 때 색인 글끼리도 비교
+
+**V7 피드 첫 다운로드 관찰** (`gsc_report.py` 회차, 그때 배포판 main `7cd97f2` 피드 20편 = `updatedAt` 최근 순)
+
+| 변화 | 글 |
+| --- | --- |
+| `URL is unknown` → `Discovered`, 사이트맵 칸 rss.xml만 | `turn-off-ai-in-brave`(11-03 발행) · `turn-off-gemini-on-android-phone`(11-05 16:40Z 발행, 다운로드 12시간 전) |
+| sitemap.xml만 → rss.xml · sitemap.xml | `pixel-watch-safety-signal-ending` · `gemini-free-flash-lite` · `duckduckgo-no-ai` |
+| rss.xml · sitemap.xml → sitemap.xml만 (지금 피드 밖) | `turn-off-meta-ai-instagram` · `turn-off-copilot-in-word` · `turn-off-ai-in-windows-11` · `google-gmail-photos-ads` · `free-image-converter-photo-tools` · `arc-browser-shutting-down` |
+| 그대로 `URL is unknown` (피드 밖) | 15편 (세션 81 표) |
+
+- 피드 20편 모두 칸에 rss.xml이 찍힘 (`gsc_report.py` 회차는 색인된 `iphone-duo-sold-out`만, 대시보드 회차는 unknown으로 흔들린 `iphone-duo-cracked-screen`만 빠짐). sitemap.xml은 11-02 뒤 다운로드가 없으므로 2편의 발견은 피드 덕분 → 노하우 9 중간 관찰. 같은 세션 `link_seen.py` 회차에서는 이 2편이 unknown으로 나왔지만(흔들림) 대시보드 회차에서 다시 `Discovered`·rss.xml만으로 확인
+
+**알게 된 것**
+
+- **Google Trends는 따옴표 없는 검색어의 단어 순서를 구분하지 않는 것으로 보임**: 같은 요청에서 `pdf to jpg`·`jpg to pdf`가 평균 12.1·최고 34·최근 7개 지점 8.7로 모두 같았음 (2026-11-06, 미국 3개월). 단어만 같고 순서가 다른 후보(변환 방향 등)끼리는 Trends로 크기를 비교하지 말고 자동완성·Search Console로 봄
+- URL 검사 `sitemap` 칸은 '마지막으로 받은 사이트맵·피드 중 지금 그 URL이 든 것'으로 보임: 피드에서 빠진 6편은 rss.xml이 사라짐 (해석) → V7 판정 때 '글별로 rss.xml이 처음 찍힌 회차'를 쓰는 방법은 그대로 유효
+- 브리프의 주 검색어 기록 형식이 세션마다 달라(목록 `- 주 검색어:`·표 `| 주 검색어 |`·괄호 하위 검색어) 기계로 읽으려면 정형 줄이 필요했음 (H3 검증 유형 줄과 같은 방식)
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 26일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **Firefox 160 — 다음 개선 세션(11-07 00시)에서 출시 확인 뒤 `turn-off-ai-in-firefox` 재확인** (product-details `LATEST_FIREFOX_VERSION`이 160이 되면 Firefox 160 Linux로 AI controls 화면 다시 확인. 바뀐 게 있으면 같은 글 갱신 — V 판정 대상 아님)
+- Claude: **V7 판정 — 11-13 개선 세션** (첫 rss.xml 다운로드 11-06 04:28 UTC + 7일. history에서 글별로 rss.xml이 처음 찍힌 회차와 그 뒤 `coverageState`·`lastCrawlTime` 변화, 피드 밖 15편과 비교). 판정 뒤 콘텐츠 정리 3·5·6번과 미발견 15편 갱신(세션 81 순서)
+- Claude: **H6 첫 판정 — 11-21 무렵 개선 세션** (대시보드 'H6' 줄 + history `posts`의 `keyword`·`firstDays`·`weeks`·`index`. 전체와 색인 글끼리, 칼럼·허브 표시), H5 11-20 무렵, H3 12-15 무렵
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인, Chrome 158(11-17) 재확인 (세션 80·83 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정(11-13) 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V7(11-13)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V8(12-03)
+- Claude(11-09 월 일반 세션): 세션 83 후보 그대로 (`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`, `photo-video`·`offline-ai` 직접 측정 후보 함께 비교). 새 글 사실 확인표에 검증 유형·주 검색어 줄을 쓰고 `keyword_trends.py` 실행 (writing-guide 브리프)
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: 페이지 **Version 32** 발행(H6 줄, 글 상세 '주 검색어'. 라이브 판이 저장소 main 판과 같음을 끝까지 읽어 확인한 뒤 발행) + `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-06T09:44:48Z, DB 문서 380개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값 변화 없음(새 색인 없음). 이 회차 URL 검사는 색인 17 · `Discovered` 20 · unknown 17 · `inFeed` 19, 28일 노출 1,093·클릭 18·평균 23.2위, `summary.sitemaps` rss.xml 11-06 04:28 · sitemap.xml 11-02 04:15, `summary.adsense` 운영 26일·색인율 0.315(17/54)·클릭 연속 증가 0, `summary.crawl` 미색인 37편 중 Google이 본 링크 19편, `traffic` Cloudflare 28일 조회수 104·방문 96(10-09~11-06), `engagement` GA4 조회 11·사용자 7·세션 8(참여 4)·참여 116초. `posts` 문서는 압축 JSON 약 106 KiB(한도 256 KiB의 42%, 세션 84 약 94 KiB). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-06 · 세션 84 (정기 실행, 개선 세션): 가설 H3 판정용 DB 구조 개선(글별 검증 유형 `verifyType`·주별 순위 `weeks`) + 대시보드 H3 줄
 
 세션 시각: 2026-11-06 06:15 KST(금) → 06시 실행이라 개선 세션. 같은 날 앞 세션 83(일반 세션, `turn-off-gemini-on-android-phone` 발행) → 그 글과 역링크 받은 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(77b3bd0)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

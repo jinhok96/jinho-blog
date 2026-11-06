@@ -1,6 +1,7 @@
 # jpg-to-pdf-free 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — 공개 사진 10장으로 JPG→PDF GUI 3가지 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `jpg to pdf` — 브리프 주 검색어
 
 - 주 검색어: `jpg to pdf` (+ `jpg to pdf free`, `jpg to pdf converter free`, `jpg to pdf merge`·`combine`, `jpg to pdf high quality`, `jpg to pdf on mac`, `jpg to pdf windows 11`, `image to pdf`)
 - 수요 근거 (2026-10-18): 자동완성 "jpg to pdf" 32개(converter·free가 Google·Bing·YouTube 3곳, converter free·free online·merge 2곳, high quality·on mac·windows 11·no sign up). Google Trends 미국 3개월 평균, 기준 `remove background` 35.3 — `jpg to pdf` **13.1** · `pdf to jpg` 13.0 · `image to pdf` 7.9 · `compress pdf` 4.8. backlog 43번(2026-10-17 명령줄 글 삭제 → GUI 앱으로 새로 쓸 후보), 세션 21 다음 할 일 "PDF GUI 시리즈"

@@ -1,6 +1,7 @@
 # Firefox에서 AI 끄기 — 브리프·사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — Firefox 159.0(Linux) 새 프로필로 AI controls 직접 확인(How we tested)
+- 주 검색어 (가설 H6): `turn off ai in firefox` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-10-29 01:05 KST, 세션 62 일반 세션)
 

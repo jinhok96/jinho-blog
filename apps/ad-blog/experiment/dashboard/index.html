@@ -675,6 +675,21 @@ function h3Stats() {
 }
 const signed = (v) => `${v > 0 ? '+' : v < 0 ? '−' : ''}${Math.abs(v).toFixed(1)}위`;
 
+// 가설 H6: 주 검색어(keyword, 사실 확인표 + keyword-trends.json)가 롱테일(Trends 상대량 5 미만)인 글 vs 상위 검색어 글의
+// 발행 4주(D+28) 누적 웹 노출 중앙값과 1~4주 노출 가중 평균 순위 중앙값(노출 있는 글만). 유형별 H6_MIN편 이상이 D+28에 도달하면 판정
+const H6_DAY = 28, H6_MIN = 5;
+const H6_CLASSES = ['롱테일', '상위'];
+function h6Stats() {
+  if (!state.posts.some((p) => 'keyword' in p)) return null; // 2026-11-06 세션 85 회차 전 데이터
+  return H6_CLASSES.map((c) => {
+    const posts = state.posts.filter((p) => p.keyword && p.keyword.class === c);
+    const reached = posts.filter((p) => p.firstDays && p.firstDays.length > H6_DAY);
+    const imps = reached.map((p) => p.firstDays[H6_DAY]);
+    const pos = reached.flatMap((p) => { const w = weekPos(p.weeks || [], 0, 4); return w.imp ? [Math.round(w.pos * 10) / 10] : []; });
+    return { c, n: posts.length, reached: reached.length, imps, pos };
+  });
+}
+
 function cohortSeries() {
   return (hasNewsType() ? COHORTS : COHORTS_OLD).map((c) => {
     const posts = state.posts.filter((p) => p.firstDays && c.test(p));
@@ -737,9 +752,14 @@ function cohortChart(el) {
   const h3 = h3Stats();
   const h3Line = h3 ? h3.map((s) => (s.deltas.length >= H3_MIN ? `${s.t} <b style="color:var(--ink)">${signed(median(s.deltas))}</b> (${s.deltas.length}편)` : `${s.t} ${s.deltas.length}/${H3_MIN}편 (8주 도달 ${s.reached}/${s.n})`)).join(' · ') : '';
   const h3Ready = h3 && h3.filter((s) => s.t !== '일부').every((s) => s.deltas.length >= H3_MIN);
+  // H6 줄: 롱테일·상위 검색어 글의 D+28 도달 편수와, 5편 이상이면 누적 노출·순위 중앙값
+  const h6 = h6Stats();
+  const h6Line = h6 ? h6.map((s) => (s.reached >= H6_MIN ? `${s.c} <b style="color:var(--ink)">${median(s.imps)}회</b>${s.pos.length ? ` · ${median(s.pos).toFixed(1)}위` : ''} (${s.reached}편${s.pos.length < s.reached ? `, 순위는 노출 있는 ${s.pos.length}편` : ''})` : `${s.c} ${s.reached}/${H6_MIN}편 도달 (전체 ${s.n})`)).join(' · ') : '';
+  const h6Ready = h6 && h6.every((s) => s.reached >= H6_MIN);
   el.innerHTML = `<div class="small" style="color:var(--body);margin-bottom:8px">D+${ref} 누적 노출 중앙값: ${line}</div>
     ${h5Line ? `<div class="small" style="color:var(--body);margin-bottom:8px" title="가설 H5: 영향이 오래 가는 칼럼이 화제 칼럼보다 발행 4주 누적 노출이 많다. 유형은 발행 때 사실 확인표 기준">H5 · D+${H5_DAY} 누적 노출 중앙값: ${h5Line}${h5Ready ? ' · <b>판정 가능</b>' : ` · 유형별 ${H5_MIN}편 이상이면 판정`}</div>` : ''}
     ${h3Line ? `<div class="small" style="color:var(--body);margin-bottom:8px" title="가설 H3: 직접 실행 결과가 있는 글이 순위가 더 오래 유지된다. 발행 1~4주 vs 5~8주 노출 가중 평균 순위, + = 오름. 두 구간 노출 각 ${H3_MIN_IMP}회 이상인 글만. 유형은 사실 확인표 기준">H3 · 1~4주 → 5~8주 순위 변화 중앙값: ${h3Line}${h3Ready ? ' · <b>판정 가능</b>' : ` · 검증형·조사형 각 ${H3_MIN}편 이상이면 판정`}</div>` : ''}
+    ${h6Line ? `<div class="small" style="color:var(--body);margin-bottom:8px" title="가설 H6: 주 검색어가 구체적인 롱테일(Trends 상대량 5 미만, 기준 remove background)인 글이 상위 검색어 글보다 발행 4주 노출이 많고 순위가 높다. 순위는 발행 1~4주 노출 가중 평균">H6 · D+${H6_DAY} 누적 노출·순위 중앙값: ${h6Line}${h6Ready ? ' · <b>판정 가능</b>' : ` · 유형별 ${H6_MIN}편 이상이면 판정`}</div>` : ''}
     <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="발행 후 경과일별 누적 노출 중앙값 꺾은선 그래프">${g}</svg>
     <div class="small">발행일 = D+0 · 웹 검색 노출 누적 · 그날까지 도달한 글이 ${COHORT_MIN}편 이상인 날만 표시</div>`;
 }
@@ -842,6 +862,7 @@ function indexFacts(p) {
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
     ${p.newsType ? `<dt>칼럼 유형</dt><dd>${esc(p.newsType)} <span class="small">발행 때 · 가설 H5</span></dd>` : ''}
     ${p.verifyType ? `<dt>검증 유형</dt><dd>${esc(p.verifyType)} <span class="small">${p.verifyTypeSince ? `${esc(p.verifyTypeSince)}부터 · ` : ''}가설 H3</span></dd>` : ''}
+    ${p.keyword ? `<dt>주 검색어</dt><dd>${esc(p.keyword.query)} <span class="small">${p.keyword.class ? `${esc(p.keyword.class)} · Trends ${p.keyword.trend} · ` : 'Trends 미측정 · '}가설 H6</span></dd>` : ''}
     ${p.inbound ? `<dt>받는 링크</dt><dd>${p.inbound.length}개${p.inbound.length ? `<div class="small">${p.inbound.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     ${tags ? `<dt>태그</dt><dd class="tags">${tags}</dd>` : ''}
   </dl></div>`;

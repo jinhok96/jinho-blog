@@ -1,6 +1,7 @@
 # compress-pdf-free 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — 직접 만든 테스트 PDF 4개로 PDF 압축 도구 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `compress pdf` — 브리프 주 검색어
 
 - 주 검색어: `compress pdf` (+ `compress pdf free`, `compress pdf online free`)
 - 하위 검색어 (2026-10-20 `demand_check.py suggest "compress pdf"`, 31개): compress pdf file (Google·Bing·YouTube), compress pdf free, compress pdf online, compress pdf size, compress pdf on mac, compress pdf i love pdf / ilovepdf, compress pdf24, compress pdf extreme, compress pdf to 1mb, compress pdf without losing quality

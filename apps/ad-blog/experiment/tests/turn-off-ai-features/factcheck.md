@@ -1,6 +1,7 @@
 # turn-off-ai-features 사실 확인표
 
 - 검증 유형 (가설 H3): **일부** — 허브. 핵심은 Apple·Google·Microsoft 도움말 대조(How we checked). 직접 실행 결과는 상시 글(Firefox·Edge·Chrome 시험)에서 인용 + 2026-10-29 Chrome 156 메뉴 이름 직접 확인
+- 주 검색어 (가설 H6): `turn off ai` — 브리프 주 검색어
 
 ## 작성 전 브리프
 

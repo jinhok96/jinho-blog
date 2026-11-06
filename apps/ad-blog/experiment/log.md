@@ -2,6 +2,59 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-07 · 세션 87 (정기 실행, 개선 세션): 외부 링크 점검 도구(`extlink_check.py`)로 1차 출처 링크 419개 점검 → 옮겨진 문서 13개 링크 교체 + 사이트 전체 On-Page 점검
+
+세션 시각: 2026-11-07 06:15 KST(토) → 06시 실행이라 개선 세션. 같은 날 앞 세션 86(`turn-off-copilot-in-edge` Edge 157 재확인) → 그 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(694023c)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-09 ~ 11-06, 세션 86 이후 바뀐 값만)**
+
+- 노출 1,095 → **1,096**, 클릭 18, CTR 1.6%, 평균 순위 23.2 (글별 상위 3편 그대로)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 3 (진행 중, 노출 147)
+- sitemap: `rss.xml` 11-06 04:28, `sitemap.xml` 11-02 04:15 UTC 그대로
+- URL 검사: 색인 17/54 그대로, 이 회차 `Discovered` 15 · `URL is unknown` 22 (세션 81~86과 같은 흔들림, 새 크롤링 없음). `link_seen.py`: 가장 최근 크롤링 11-06 08:36 UTC(`image-to-text-offline-free`) 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 27일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(세션 86 그대로). 1(색인)은 새 크롤링 없음, 2는 보류 2건, 3은 허브 4/4, 4는 세션 84~86 판단 그대로(20위 안 검색어는 V 판정 중인 글이거나 노출 1~6회), 5는 V7 판정 중(피드 밖 글 `updatedAt` 변경 안 함). 6은 Firefox 160(11-10)·Windows(11-10)·Chrome 158(11-17) 전이고, Apple은 [About iOS 27 Updates](https://support.apple.com/en-us/149076)·[보안 업데이트](https://support.apple.com/en-us/100100)를 다시 받아 보니 최신이 여전히 iOS·macOS 27.2(10-26) → 반영할 변경 없음. → **7 · 문제 찾기**: 글 54편이 공식 문서·릴리스 노트를 근거로 링크하는데 외부 링크가 아직 살아 있는지는 한 번도 점검하지 않았음 (`link_audit.py`는 내부 링크만)
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Content Quality(Trustworthiness: Accurate information·Properly sourced claims), Internal Linking(No broken links를 외부 출처 링크로 확장), On-Page(Title Tags·Meta Descriptions·Heading Structure·Image Optimization alt) 사이트 전체. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · 문제 찾기 | 새 `tools/extlink_check.py` | 글 본문의 http(s) 링크(마크다운·`<…>`·`href`, 괄호가 든 주소 포함)를 모아 GET(브라우저 User-Agent, 리디렉트 따라감, 25초, 실패·429면 재시도, 호스트당 동시 2)으로 열고 **깨짐(404·410·4xx·5xx) · 찾을 수 없음 화면(`<title>`·첫 `<h1>`) · 다른 주소로 이동 · 확인 불가(400·401·403·429·봇 확인) · 연결 실패 · 정상**으로 분류. `--only-problems`·`--slug`·`--json`. 첫 실행에서 오탐 2가지를 고침: 본문 스크립트 안 "page not found" 글자(blogs.windows.com 6쪽)·메뉴 항목 "Not Found - A page is no longer available"(search.brave.com) → 제목·h1만 봄, Meta 도움말 400 "Error" → 확인 불가로 | - (지표를 노린 변경 아님) |
+| 2 | 7 · 문제 찾기 (결과) | 글 54편 외부 링크 고유 419개 | **깨짐 0 · 찾을 수 없음 0** · 이동 39 · 확인 불가 52 · 정상 327. 확인 불가 중 Meta 도움말 13개(help.instagram.com 9·facebook.com/privacy 2·faq.whatsapp.com 2, `turn-off-meta-ai-instagram`)는 Node Playwright Chromium으로 열어 모두 제목·h1이 정상인 도움말 화면 확인. 남은 39개는 github.com·help.openai.com·openai.com(403), resources.arc.net·support.discord.com·canva.com(Chromium도 Cloudflare 403), pypi.org(Client Challenge) — 인프라 상태의 차단 도메인. 이동 39개는 사람이 하나씩 봄: 짧은 주소(Apple `guide/…/{ID}`·Microsoft `help/{KB}`·`inspect.cr`·Samsung `ANS…`)·로그인·쿠키 리디렉트(My Activity·My Ad Center·Microsoft 계정·OneDrive·Apple 주문·Spotify 문의)는 정상으로 둠. 제목이 바뀐 3쪽은 글이 인용한 문장이 새 문서에 그대로 있는지 확인: Spotify Paid Subscription Terms 2.2.1 "family members residing at the same address"·re-verification(V4 글이라 링크도 그대로 둠), Apple "Important safety information for iPhone"의 "Don't use iPhone with cracked glass, as it may cause injury", Microsoft "Find information about your Windows device"의 Start > Settings > System > About · Windows specifications | - |
+| 3 | 7 · 문제 찾기 (수정) | 15편 (V 판정 중인 글 제외) | **문서가 새 주소로 옮겨진 링크 13개(21곳)를 최종 주소로 교체**: Google Workspace 관리자 도움말 `support.google.com/a/answer/10095404`·`15698295` → `knowledge.workspace.google.com/admin/…`(`turn-off-gemini-in-gmail`, 인용문 "but users can override the default in their individual settings" 새 주소에서 확인), Microsoft 옛 GUID 주소 → 새 경로 4개(앱 제거·Copilot+ AI components·Windows 버전 확인·Word에서 PDF 열기), Microsoft 365 블로그 → Copilot 블로그, Apple 가이드 이름이 바뀐 4개(Mail 계정·Finder 빠른 동작·Preview 배경 제거·iPhone 안전 정보), LibreOffice 내려받기, Flathub PDF Arranger. 새 주소 13개 모두 리디렉트 없이 200. 글 문장·`updatedAt` 그대로 → RSS 피드 20편 구성·순서와 sitemap `lastmod` 변화 없음(빌드 확인, V7 영향 없음). 다시 실행: 이동 39 → 26(남은 것은 위 짧은 주소·로그인 리디렉트와 V 대상 글 3개: `image-to-text-offline-free` Snipping Tool 주소·`spotify-family-qr-code-verification` 가족 약관 주소·`check-if-image-is-ai-generated` `inspect.cr`) | - (링크 주소만, 검증 기록 대상 아님) |
+| 4 | 7 · 문제 찾기 (On-Page) | 빌드 HTML 54편 | 제목 길이(60자 초과 6편은 모두 피드형 칼럼 64~69자, 75자 이내), 설명 141~160자, 제목·설명 중복 0, h1 1개, BlogPosting·BreadcrumbList JSON-LD, og:image, 자기 참조 canonical → **문제 없음**. 빈 alt 이미지는 글마다 3장 = 관련 글 카드 썸네일(옆에 제목 글자가 있는 장식 이미지라 빈 alt가 맞음). 로컬 빌드의 `noindex, follow`는 도메인 미설정 빌드 동작이고 배포판은 `index, follow`(curl 확인) | - |
+| 5 | 문서 | README 개선 세션 7·주간 SEO 점검·인프라 상태, writing-guide 발행 전 체크리스트, `.claude/ad-blog.md` | 발행 전 체크리스트에 새 글 외부 링크 점검(`--slug`), 문제 찾기에 `extlink_check.py`(한 달에 한 번 정도), 주간 점검 seo-audit 항목에 지난 7일 새 글·수정 글의 외부 링크, 인프라에 Meta 도움말(curl 400·Chromium 가능)·knowledge.workspace.google.com | - |
+
+- 빌드 HTML 확인: 바뀐 글의 새 링크가 HTML에 있음(`turn-off-gemini-in-gmail` knowledge.workspace 3곳), 옛 `download-libreoffice` 0. `rss.xml` 20편 맨 앞 `turn-off-copilot-in-edge` 그대로, sitemap 최신 `lastmod` 11-06T15:50Z 그대로. lint·type-check·test(36파일 274개)·build 통과, 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `link_audit` 새 문제 없음
+
+**알게 된 것**
+
+- **1차 출처 링크는 4주 동안 깨진 것이 없었고, 옮겨진 것은 회사별 문서 재편이었음**: Google은 Workspace 관리자 도움말을 `knowledge.workspace.google.com`으로, Microsoft는 지원 문서를 GUID 주소에서 `/windows/apps/…`·`/servicing/os/…` 경로로 옮김(옛 주소는 리디렉트). 이번에는 모두 같은 문서라 문장은 그대로였지만, 리디렉트가 끊기면 근거 링크가 한꺼번에 깨질 수 있어 한 달에 한 번 정도 다시 돌림
+- 링크 점검에서 `<title>`이 아닌 본문 글자로 '찾을 수 없음'을 판단하면 스크립트·메뉴 글자 때문에 오탐이 남 → 제목·h1만 봄
+- Meta 도움말은 curl에 400을 주므로 Meta 글 재확인은 Chromium으로 (세션 47도 Chromium 렌더링)
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 27일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **Firefox 160 — 11-10 14:00 UTC 출시 뒤 첫 개선 세션(11-11 06시 KST)에서 `turn-off-ai-in-firefox` 재확인** (세션 86 그대로)
+- Claude: **Edge 158(11-19 주) 출시 뒤 개선 세션에서 `turn-off-copilot-in-edge` 재확인** (세션 86 그대로)
+- Claude: **V7 판정 — 11-13 개선 세션** (세션 85 그대로). 판정 뒤 콘텐츠 정리 3·5·6번과 미발견 15편 갱신(세션 81 순서)
+- Claude: V 판정이 끝난 글의 남은 이동 링크 3개는 그 글을 다음에 고칠 때 함께 바꿈 (`image-to-text-offline-free` Snipping Tool 주소 V5 11-22 뒤, `spotify-family-qr-code-verification` 가족 약관 → Paid Subscription Terms 주소 V4 11-22 뒤, `check-if-image-is-ai-generated` `inspect.cr`은 Adobe 공식 짧은 주소라 그대로)
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵 (세션 85 그대로)
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인, Chrome 158(11-17) 재확인 (세션 80·83 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정(11-13) 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V7(11-13)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V8(12-03)
+- Claude(11-09 월 일반 세션): 세션 83 후보 그대로 (`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`, `photo-video`·`offline-ai` 직접 측정 후보 함께 비교). 새 글은 발행 전 `extlink_check.py --slug {slug} --only-problems`로 출처 링크도 확인
+- Claude: 외부 링크 점검 다음 실행 — 12월 첫 개선 세션 무렵
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-06T21:41:30Z, DB 문서 400개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 회차 생성은 Cloudflare API가 429를 줘 조회수 없이(9개) 만들어졌으나 cf_analytics 단독 재시도가 성공해 다시 생성한 회차로 보냄. 첫 관측값 변화 없음(새 색인 없음, `first-seen.json`은 갱신 시각만). 이 회차 URL 검사는 색인 17 · `Discovered` 21 · unknown 16 · `inFeed` 20(미색인 16), 28일 노출 1,096·클릭 18·평균 23.2위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 37편 중 Google이 본 링크 20편, `summary.adsense` 운영 27일·색인율 0.315(17/54)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회수 106·방문 98(10-09~11-06), `engagement` GA4 조회 17·사용자 11·세션 13(참여 6)·참여 138초·90% 스크롤 4. `posts` 문서는 압축 JSON 약 111 KiB(한도 256 KiB의 43%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-07 · 세션 86 (정기 실행, 개선 세션): Edge 157로 `turn-off-copilot-in-edge` 재확인(반복 일정) + Firefox 160 출시일 정정(11-10)
 
 세션 시각: 2026-11-07 00:17 KST(토) → 00시 실행·토요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8d0c8e5)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

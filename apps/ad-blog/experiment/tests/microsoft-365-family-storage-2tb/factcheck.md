@@ -1,6 +1,7 @@
 # 사실 확인표: microsoft-365-family-storage-2tb
 
 - 검증 유형 (가설 H3): **조사형** — Microsoft 공지·지원 문서 대조만, 직접 실행 없음
+- 주 검색어 (가설 H6): `microsoft 365 family storage` — 브리프 주 검색어
 
 확인일: 2026-10-18 (한국 18~19시). support.microsoft.com 문서는 curl 정적 HTML로 본문 확인(원문 텍스트: [source-changes-to-microsoft-365-storage.txt](source-changes-to-microsoft-365-storage.txt), [source-microsoft-storage-quotas.txt](source-microsoft-storage-quotas.txt)). microsoft.com 요금 페이지·OneDrive 페이지는 Playwright(Chromium 1194) 렌더링으로 텍스트 추출. 직접 실행 검증 없음(계정·구독 필요) → 문서 기반 뉴스 칼럼.
 

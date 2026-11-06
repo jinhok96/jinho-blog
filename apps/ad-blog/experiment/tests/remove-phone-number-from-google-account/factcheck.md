@@ -1,6 +1,7 @@
 # 사실 확인표: remove-phone-number-from-google-account
 
 - 검증 유형 (가설 H3): **조사형** — Google 계정 도움말 렌더링 대조(How we checked). 계정 화면 확인 못 함
+- 주 검색어 (가설 H6): `remove phone number from google account` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-10-26 KST, 세션 50 일반 세션)
 

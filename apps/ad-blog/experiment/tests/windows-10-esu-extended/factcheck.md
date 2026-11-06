@@ -1,6 +1,7 @@
 # 사실 확인표: windows-10-esu-extended
 
 - 검증 유형 (가설 H3): **조사형** — Microsoft ESU·KB 문서 대조만, Windows 환경 없음
+- 주 검색어 (가설 H6): `windows 10 esu october 2026` — backlog.md 핵심 키워드 (발행 때 브리프 없음)
 
 확인일: 2026-10-11 (컨테이너에서 `curl`로 직접 받아 텍스트 추출). 직접 실행 검증 없음 (Windows 환경 없음) → 문서 기반 글.
 

@@ -1,6 +1,7 @@
 # pdf-to-jpg-free 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — US Letter PDF 3개로 PDF→JPG 앱 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `pdf to jpg` — 브리프 주 검색어
 
 - 주 검색어: `pdf to jpg` (+ `pdf to jpg free`, `pdf to jpg converter free`, `pdf to jpg high quality`, `pdf to jpg high resolution`, `pdf to jpg on mac`, `pdf to jpg windows`, `pdf to jpg converter download`)
 - 수요 근거 (2026-10-19): 자동완성 "pdf to jpg" 31개 — converter·converter free·free가 Google·Bing·YouTube 3곳, canva(Bing·YouTube), high quality·iphone(2곳), high resolution·mac·windows·converter download·in pc. Trends(미국 3개월) `pdf to jpg` 12.9 · `compress pdf` 4.8 · `webp to jpg` 1.8 · 기준 `remove background` 35.2. backlog 44번(명령줄 글 `pdf-to-jpg-high-quality` 2026-10-17 삭제 → GUI로 새로 씀) + 세션 23 다음 할 일 "PDF GUI 시리즈"

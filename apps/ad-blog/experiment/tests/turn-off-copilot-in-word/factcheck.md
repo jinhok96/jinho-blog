@@ -1,6 +1,7 @@
 # turn-off-copilot-in-word · 브리프와 사실 확인표
 
 - 검증 유형 (가설 H3): **조사형** — Microsoft 지원·Learn 문서 대조(How we checked). Microsoft 365 계정 없음
+- 주 검색어 (가설 H6): `turn off copilot in word` — 브리프 주 검색어
 
 세션 41 (2026-10-23 12:16 KST, 일반 세션). 모든 출처는 이 세션에서 직접 열어 확인 (원문 발췌는 같은 폴더 `source-*.txt`, 2026-10-23 curl).
 

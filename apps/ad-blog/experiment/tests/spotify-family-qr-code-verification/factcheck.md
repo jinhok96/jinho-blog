@@ -1,6 +1,7 @@
 # 사실 확인표: spotify-family-qr-code-verification
 
 - 검증 유형 (가설 H3): **조사형** — Spotify 지원 문서 대조만, 직접 실행 없음
+- 주 검색어 (가설 H6): `spotify family plan` — 브리프 주 검색어
 
 확인일: 2026-10-19 (UTC 21시, 한국 2026-10-20 06~07시). support.spotify.com 문서는 curl 정적 HTML의 `<main>` 본문과 `__NEXT_DATA__`의 `updatedAt`으로 확인(원문 텍스트: `source-*.txt`). spotify.com 요금·약관 페이지도 curl 정적 HTML. 직접 실행 검증 없음(Spotify 계정·Family 구독·휴대폰 앱 필요) → 문서 기반 뉴스 칼럼.
 

@@ -1,6 +1,7 @@
 # chrome-http-warning-default 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — Chrome 156(Linux)을 설치해 HTTP 경고 화면·설정을 직접 캡처(본문 'We installed Chrome 156'). 2026-11-04 Chrome 157 재확인
+- 주 검색어 (가설 H6): `chrome http warning` — 브리프 주 검색어
 
 - 주 검색어: `chrome http warning` / 하위: `always use secure connections`, `always use secure connections chrome on or off`, `chrome enhanced protection vs standard`, `chrome enhanced protection turn off`, `chrome insecure site warning`, `chrome disable http warning`
 - 채널: 피드형 (뉴스 칼럼)

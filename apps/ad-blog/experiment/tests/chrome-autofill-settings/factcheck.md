@@ -1,6 +1,7 @@
 # chrome-autofill-settings 사실 확인표
 
 - 검증 유형 (가설 H3): **검증형** — Google Chrome 156.0.8078.73(Linux) 새 프로필로 자동 완성 설정 화면을 직접 기록(How we tested)
+- 주 검색어 (가설 H6): `chrome autofill settings` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-10-29 KST 세션 66, 일반 세션)
 

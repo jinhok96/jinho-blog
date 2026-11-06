@@ -1,6 +1,7 @@
 # 사실 확인표 — gemini-gems-to-skills
 
 - 검증 유형 (가설 H3): **검증형** — 예시 Gem을 skill 폴더로 직접 변환하고 skills-ref 0.1.1로 검사(What we tested)
+- 주 검색어 (가설 H6): `gemini gems to skills` — 브리프 주 검색어
 
 확인일: 2026-10-13 (UTC, 컨테이너에서 curl로 원문 확인)
 

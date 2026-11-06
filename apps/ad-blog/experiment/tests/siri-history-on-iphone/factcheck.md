@@ -1,6 +1,7 @@
 # iPhone에서 Siri 기록 보기·지우기 — 브리프·사실 확인표
 
 - 검증 유형 (가설 H3): **조사형** — Apple 문서 21쪽 대조(How we checked). iPhone 없음
+- 주 검색어 (가설 H6): `siri history on iphone` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-10-28 01:20 KST, 세션 58 일반 세션)
 

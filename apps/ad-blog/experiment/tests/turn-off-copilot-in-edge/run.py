@@ -1,4 +1,4 @@
-"""Edge 156을 Xvfb에서 새 프로필로 띄우고 CDP로 연결해 시나리오 파일을 실행한다.
+"""Edge(156·157)를 Xvfb에서 새 프로필로 띄우고 CDP로 연결해 시나리오 파일을 실행한다.
 
 사용: /tmp/pw/bin/python run.py {프로필 경로} {시나리오.py} [추가 Edge 인수...]
 - Edge: packages.microsoft.com 안정판 deb를 dpkg-deb -x로 /tmp/edge/root에 푼 것
@@ -11,8 +11,9 @@ import time
 
 from playwright.sync_api import sync_playwright
 
-EDGE = "/tmp/edge/root/opt/microsoft/msedge/msedge"
-SHOTS = "/tmp/edgerun/shots/"
+# 2026-11-07: Edge 157 재확인 때 EDGE·SHOTS를 환경 변수로 바꿀 수 있게 함 (기본값은 2026-10-30 Edge 156 실행 경로)
+EDGE = os.environ.get("EDGE", "/tmp/edge/root/opt/microsoft/msedge/msedge")
+SHOTS = os.environ.get("SHOTS", "/tmp/edgerun/shots/")
 DEEP = """() => { const out=[]; const walk=(n)=>{ if(n.nodeType===1 && (n.tagName==='STYLE'||n.tagName==='SCRIPT')) return; if(n.nodeType===3){const s=n.textContent.trim(); if(s) out.push(s);} if(n.shadowRoot) walk(n.shadowRoot); for(const c of n.childNodes) walk(c);}; walk(document.body); return out.join(' | '); }"""
 
 prof = sys.argv[1]

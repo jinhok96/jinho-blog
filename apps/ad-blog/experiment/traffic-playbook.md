@@ -61,6 +61,8 @@
 - **적용**: IT 분야의 반복 일정을 backlog에 적어 두고, 발표 당일·다음 날 세션에서 우선 검토
   - Chrome 안정판: 약 2주 간격 (156: 10-20, 157: 11-03, 158: 11-17, 159: 12-08, 160: 2027-01-05). 일정은 `https://chromiumdash.appspot.com/fetch_milestone_schedule?offset=-1&n=5`로 확인
   - Windows: 월간 보안 업데이트 매월 둘째 화요일 10:00(태평양 시간), 선택적 미리 보기 넷째 주, 연간 기능 업데이트 하반기 ([Microsoft Learn](https://learn.microsoft.com/en-us/windows/deployment/update/release-cycle))
+  - Microsoft Edge 안정판 (2026-11-07 추가, `turn-off-copilot-in-edge`): 약 2~3주 간격 (157: 11-05, 158: 11-19 주, 159: 12-10 주). 일정은 [Learn release schedule](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-release-schedule) 표의 Stable Channel 열, 출시 확인은 packages.microsoft.com 안정판 `Packages` 목록·[Stable 릴리스 노트](https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel)
+  - Firefox 안정판 (2026-11-07 추가, `turn-off-ai-in-firefox`): 약 2주 간격 (159: 10-27, 160: 11-10 14:00 UTC, 161: 11-24). 일정은 Mozilla 릴리스 일정 API `https://whattrainisitnow.com/api/release/schedule/?version={버전}`의 `release`(159 실제 출시일 10-27과 일치 확인). product-details `NEXT_RELEASE_DATE`는 세션 84에 11-06, 세션 86에 11-20으로 실제 160 일정과 달라 날짜 판단에 쓰지 않고, 출시 여부만 `LATEST_FIREFOX_VERSION`으로 봄
   - 새 버전마다 새 글을 쓰기보다, 바뀐 메뉴·기능을 기존 글에 반영하고 변화가 클 때만 새 글
 
 ### 5. 새 소식은 뉴스가 아니라 "그래서 내가 할 일"로 받는다

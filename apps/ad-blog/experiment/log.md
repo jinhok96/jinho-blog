@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-07 · 세션 86 (정기 실행, 개선 세션): Edge 157로 `turn-off-copilot-in-edge` 재확인(반복 일정) + Firefox 160 출시일 정정(11-10)
+
+세션 시각: 2026-11-07 00:17 KST(토) → 00시 실행·토요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(8d0c8e5)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-09 ~ 11-06, 세션 85 이후 바뀐 값만)**
+
+- 노출 1,090 → **1,095**, 클릭 18, CTR 1.6%, 평균 순위 23.2 (`spotify-family-qr-code-verification` 272·17.6 / `turn-off-ai-in-chrome` 196·17.7·클릭 4 / `image-to-text-offline-free` 129 → 131·16.5·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 3 (진행 중, 노출 146)
+- sitemap: `rss.xml` 11-06 04:28, `sitemap.xml` 11-02 04:15 UTC 그대로
+- URL 검사: 색인 17/54 그대로, `Discovered` 17 · `URL is unknown` 20 (`arc-browser-shutting-down`·`gemini-free-flash-lite`·`iphone-duo-cracked-screen`·`turn-off-ai-in-firefox`·`turn-off-apple-intelligence-iphone`이 이 회차 unknown — 세션 81~85와 같은 흔들림). **`image-to-text-offline-free` 11-06 08:36 UTC 재크롤링** (10-30 06:36 뒤 처음, 사이트 전체로는 11-03 05:18 홈 뒤 첫 새 크롤링. V5 대상 글 — 10-25판 그대로라 판정 조건 변화 없음). `link_seen.py`: 가장 최근 크롤링 11-06 08:36 UTC, 미색인 37편 중 Google이 본 링크 19 → **20편** (`turn-off-gemini-on-android-phone`이 그 글의 관련 글 목록으로 처음, `siri-history-on-iphone`·`split-pdf-free`도 같은 판에서 링크 추가)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 27일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 11-13 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 1(색인)은 새 크롤링 1건(`image-to-text-offline-free`)뿐이라 링크 추가로 바뀌는 발견 경로 없음, 2는 보류 2건, 3은 허브 4/4, 4는 세션 84·85 판단 그대로(20위 안 검색어는 V 판정 중인 글이거나 노출 1~6회), 5는 V7 판정 중. → **6 · 반복 일정**: 세션 85가 남긴 Firefox 160 재확인은 **아직 미출시** — product-details `LATEST_FIREFOX_VERSION` 159.0.1·`FIREFOX_DEVEDITION` 160.0b5, firefox.com 160.0 릴리스 노트 "still preparing", Mozilla 릴리스 일정 API(whattrainisitnow.com, 159 실제 출시일 10-27과 일치)가 **160 출시 2026-11-10 14:00 UTC**. 세션 84·85가 본 product-details `NEXT_RELEASE_DATE`(11-06)는 실제 일정이 아니었고 지금은 11-20으로 나옴 → 날짜는 일정 API로 보도록 traffic-playbook 노하우 4에 적음. 대신 `stale_check.py`(기준일 11-06, 29문장)에 새로 걸린 `turn-off-copilot-in-edge` 마지막 문장 "Microsoft plans to release Edge 157 in the week of November 5, 2026"을 확인 → **Edge 157.0.4341.42가 11-05 출시**(packages.microsoft.com 안정판 목록·Learn Stable 릴리스 노트) → 같은 시험을 157로 반복. 글은 RSS 피드 20편 안(9번째)이라 `updatedAt`을 바꿔도 피드 구성은 그대로(순서만 맨 앞) → V7 관찰 대상에 영향 없음(빌드 `rss.xml` 20편 집합이 갱신 전과 같음을 확인)
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — 바뀐 줄만 고치는 point edit 모드로 AI 문체·문장 길이 점검: 새 절 첫 문장 "No."를 떼어 읽어도 답이 되는 문장으로, 25단어 넘는 3문장을 나눔. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 6 · 반복 일정 | `turn-off-copilot-in-edge` | **Microsoft Edge 157.0.4341.42**(Linux 안정판 deb, 새 프로필·로그아웃, 2026-11-06 15:21~15:40 UTC)로 10-30 Edge 156 시험을 같은 `run.py`·시나리오로 반복: Copilot and AI 스위치 4개·기본값 같음, 버튼 끄면 Chat 버튼·Summarize with Copilot·미니 메뉴 아이콘·Ctrl+Shift+. 사라지고 문맥 단서·Manage settings 회색, Use writing assistance까지 꺼도 Help me rewrite·Alt+I 로그인 창 남음, 다시 켜면 4곳 돌아옴, 재시작 뒤 유지(버튼 끔·둘 다 끔), 주소창 Copilot 제안 없음(3상태), Copilot new tab page 같은 화면, 사이드 창 문구 같음 → **결과 모두 156과 같음**. 설정 4쪽 글자 비교(빠지거나 바뀐 줄 0), 언어 파일 문구 비교(156 323 → 157 336개, 새 문구 "Import your Edge Data in Copilot"·Copilot Code·PC 접근 권한은 설정 화면에 없어 글에 안 씀), 인용 Microsoft 문서 11쪽 다시 받아 diff(바뀐 문장 없음). **157 릴리스 노트의 Copilot 변경**(아이콘 교체·사이드 창 단순화·Voice and Vision, 새 탭 개선)은 우리 로그아웃 사본에서 보이지 않음(Chat 아이콘 두 판 확대 비교). 글: 설명·첫 두 문단·본문 버전 표기(156 → 156 and 157), 새 절 `## Did Edge 157 change the Copilot switches?`, 이미지 3장(설정 화면을 157 캡처로, 결과 표를 두 시험으로, 새 그래픽 `edge-157-copilot-changes.webp` 릴리스 노트 vs 우리 사본 → 본문 이미지 6장), How we tested에 157 재확인 줄, 마지막 문장 Edge 158(11-19 주). `updatedAt` 2026-11-06T15:50Z. 제목 그대로, 설명 156자. 사실 확인표에 157 재확인 절, 검증 유형 검증형 그대로(근거에 157 반복 추가) | - (버전 재확인, 글은 `Discovered`라 노출 없음 — 세션 85 Firefox 재확인 계획과 같은 기준) |
+| 2 | 문서 | traffic-playbook 노하우 4, README 인프라 상태 | 반복 일정에 Edge 안정판(Learn release schedule Stable 열: 158 11-19 주·159 12-10 주)·Firefox 안정판(whattrainisitnow 일정 API: 160 11-10 14:00 UTC·161 11-24) 추가, product-details `NEXT_RELEASE_DATE`는 날짜 판단에 쓰지 않음. 인프라에 whattrainisitnow.com·Edge 157 deb·Python Playwright venv + `/opt/pw-browsers` Chromium 경로 | - |
+
+- 측정 자료: `tests/turn-off-copilot-in-edge/`의 `screens/157/`(캡처 47장), `final-run-log-157.json`, `survey-157.json`, `source-edge-157-settings-text.txt`, `source-edge-157-strings-diff.txt`, `source-relnote-stable.txt`·`source-release-schedule.txt`(11-06 판으로 교체), 새 시나리오 `s_survey157.py`·`s_extra157.py`·`s_addr157_*.py`. `run.py`·`fetch.py`에 경로 환경 변수 추가(기본값은 10-30 실행과 같음), `charts.py`에 `edge157_notes`와 그림 이름 선택 실행
+- 빌드 HTML 확인: title `How to Turn Off Copilot in Microsoft Edge | ToolProof`·description 156자, BlogPosting `dateModified` 2026-11-06T15:50Z·BreadcrumbList, h1 1개·h2 11개, `<pre>`·`<code>` 0, 대표 이미지 + 본문 이미지 6장, og 이미지 1200×630(대표 이미지), 새 절 앵커 id, `rss.xml` 첫 항목·sitemap `lastmod` 갱신. lint·type-check·test(36파일 274개)·build 통과, 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `link_audit` 새 문제 없음
+
+**알게 된 것**
+
+- **브라우저 릴리스 노트의 UI 변경이 우리 사본에 바로 보이지 않을 수 있음**: Edge 157 노트는 "updated the icon across all Copilot entry points"라고 했지만 출시 다음 날 새 프로필에서는 Chat 버튼 아이콘·사이드 창이 156과 같았음 → 재확인 글에는 노트 문장과 '우리 사본에서 본 것'을 나눠 쓰고, 순차 배포·로그인 조건인지는 추측하지 않음 (writing-guide 정확성 '순차 배포' 규칙과 같음)
+- **Firefox 출시일은 product-details가 아니라 Mozilla 일정 API로**: `NEXT_RELEASE_DATE`가 세션마다 실제 160 일정(11-10)과 다른 값(11-06 → 11-20)이었음. `whattrainisitnow.com/api/release/schedule/?version=` 값은 159 실제 출시일과 맞음
+- 언어 파일(`locales/en-US.pak`) 문구 비교는 화면에 아직 없는 기능 이름을 먼저 보여 줌 (157: Edge 데이터를 Copilot으로 가져오기) → 다음 판 재확인 때 화면에 나왔는지 볼 목록으로 씀
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 27일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **Firefox 160 — 11-10 14:00 UTC(11-10 23:00 KST) 출시 뒤 첫 개선 세션(11-11 00시는 수요일 일반 세션 → 11-11 06시 KST)에서 `turn-off-ai-in-firefox` 재확인** (`LATEST_FIREFOX_VERSION` 160 확인 뒤 Firefox 160 Linux로 AI controls 화면. 바뀐 게 있으면 같은 글 갱신 — V 대상 아님, 피드 20편 안이라 구성 영향 없음)
+- Claude: **Edge 158(11-19 주) 출시 뒤 개선 세션에서 `turn-off-copilot-in-edge` 재확인** — 같은 `run.py`(`EDGE`·`SHOTS` 환경 변수)·시나리오, 언어 파일의 "Import your Edge Data in Copilot"이 설정 화면에 나오는지, 157 노트의 새 Copilot 아이콘이 보이는지
+- Claude: **V7 판정 — 11-13 개선 세션** (세션 85 그대로). 판정 뒤 콘텐츠 정리 3·5·6번과 미발견 15편 갱신(세션 81 순서)
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵 (세션 85 그대로)
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인, Chrome 158(11-17) 재확인 (세션 80·83 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정(11-13) 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V7(11-13)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V8(12-03)
+- Claude(11-09 월 일반 세션): 세션 83 후보 그대로 (`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`, `photo-video`·`offline-ai` 직접 측정 후보 함께 비교). 새 글 사실 확인표에 검증 유형·주 검색어 줄을 쓰고 `keyword_trends.py` 실행
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-06T15:46:36Z, DB 문서 390개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값: `turn-off-gemini-on-android-phone` `firstSeenLinkAt` 2026-11-06T08:36:50Z(`image-to-text-offline-free` 관련 글) 추가, 새 색인 없음. 이 회차 URL 검사는 색인 17 · `Discovered` 18 · unknown 19 · `inFeed` 17, 28일 노출 1,095·클릭 18·평균 23.2위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 37편 중 Google이 본 링크 20편, `summary.adsense` 운영 27일·색인율 0.315(17/54), `traffic` Cloudflare 28일 조회수 106·방문 98(10-09~11-06), `engagement` GA4 조회 13·사용자 8·세션 10(참여 5)·참여 131초. `posts` 문서는 압축 JSON 약 107 KiB(한도 256 KiB의 42%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-06 · 세션 85 (정기 실행, 개선 세션): 가설 H6 판정용 DB 구조 개선(글별 주 검색어·Trends 상대량 `keyword`) + V7 피드 첫 다운로드 기록
 
 세션 시각: 2026-11-06 18:16 KST(금) → 18시 실행이라 개선 세션. 같은 날 앞 세션 83(일반, `turn-off-gemini-on-android-phone` 발행)·84(개선, H3 DB) → 글은 건드리지 않고 다른 작업을 고름. 열린 PR 없음. 작업 브랜치를 `origin/main`(a65965f)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음. 이번 세션은 URL 검사 API가 자주 5xx를 내 회차마다 10분 이상 걸림.

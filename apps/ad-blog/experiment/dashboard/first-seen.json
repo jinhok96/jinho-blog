@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-06T09:44:48Z",
+ "updatedAt": "2026-11-06T15:46:36Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
   "apple-siri-settlement-claim": {
@@ -159,7 +159,9 @@
    "firstSeenLinkAt": "2026-10-28T23:14:36Z"
   },
   "turn-off-gemini-in-gmail": {},
-  "turn-off-gemini-on-android-phone": {},
+  "turn-off-gemini-on-android-phone": {
+   "firstSeenLinkAt": "2026-11-06T08:36:50Z"
+  },
   "turn-off-meta-ai-instagram": {
    "firstSeenLinkAt": "2026-10-28T23:14:36Z"
   },

@@ -29,7 +29,7 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
                   unindexed = 색인 안 된 글 수, unindexedSeen = 그중 Google이 본 링크가 있는 글 수,
                   inFeed·unindexedInFeed = URL 검사 sitemap에 rss.xml이 있는 글 수 전체·그중 색인 안 된 글 (2026-11-05 회차부터, V7))
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
-- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, newsType, verifyType, verifyTypeSince,
+- posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, newsType, verifyType, verifyTypeSince, keyword,
                   28일 지표, queries, daily, sources, firstDays, weeks, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
          otherPages: [{path, 28일 지표, queries, daily, sources}]}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
@@ -38,6 +38,10 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
           verifyType = 검증 유형 '검증형' | '일부' | '조사형' 또는 null(사실 확인표에 줄 없음),
           verifyTypeSince = 발행 뒤 그 유형이 된 날짜 'YYYY-MM-DD' 또는 null(발행 때부터) — 둘 다 tests/{slug}/factcheck.md에서 읽음
                      (가설 H3 판정용, 2026-11-06 회차부터),
+          keyword = 주 검색어 {query, trend, class, measuredAt} 또는 null(사실 확인표에 줄 없음): query = tests/{slug}/factcheck.md의
+                    '주 검색어 (가설 H6)' 줄, trend = dashboard/keyword-trends.json의 Google Trends 상대량(미국 최근 3개월 평균,
+                    기준 `remove background` 최고점 = 100, keyword_trends.py), class = '롱테일'(trend < 5) | '상위' | null(미측정)
+                    (가설 H6 판정용, 2026-11-06 세션 85 회차부터),
           weeks = 발행 1주부터 주별 웹 노출·노출 가중 평균 순위 [{imp, pos}] (7일을 다 채운 주만, 최대 12주, 가설 H3, 2026-11-06 회차부터),
           28일 지표 = 웹 검색, queries = 검색어 상위 10, daily = 날짜별 노출·클릭·순위(최근 28일),
           sources = 검색 유형별 28일 노출·클릭(노출 있는 유형만),
@@ -84,6 +88,7 @@ from gsc_report import (  # noqa: E402
 import cf_analytics  # noqa: E402
 import ga_analytics  # noqa: E402
 import link_seen  # noqa: E402
+import keyword_trends  # noqa: E402
 from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, parse_post  # noqa: E402
 
 EXPERIMENT = pathlib.Path(__file__).resolve().parents[1]
@@ -172,6 +177,22 @@ def verify_type(slug: str, tests: pathlib.Path = EXPERIMENT / 'tests') -> tuple[
                 since = VERIFY_SINCE.search(line[m.end():])
                 return m.group(1), since.group(1) if since else None
     return None, None
+
+
+def keyword_info(slug: str, trends: dict, tests: pathlib.Path = EXPERIMENT / 'tests') -> dict | None:
+    """글의 주 검색어와 Trends 상대량·롱테일/상위 (README 가설 H6 판정용, 2026-11-06 세션 85).
+
+    검색어는 사실 확인표 '주 검색어 (가설 H6)' 줄(없으면 None), 상대량은 dashboard/keyword-trends.json(keyword_trends.py가 측정).
+    경계는 그 파일의 threshold(5): 미만 '롱테일', 이상 '상위'. 아직 측정하지 않은 검색어는 trend·class None
+    """
+    query = keyword_trends.primary_keyword(slug, tests)
+    if not query:
+        return None
+    t = trends.get('keywords', {}).get(query)
+    if not t:
+        return {'query': query, 'trend': None, 'class': None, 'measuredAt': None}
+    threshold = trends.get('threshold', keyword_trends.THRESHOLD)
+    return {'query': query, 'trend': t['avg'], 'class': '롱테일' if t['avg'] < threshold else '상위', 'measuredAt': t.get('measuredAt')}
 
 
 def cluster_map(clusters: list[dict]) -> dict[str, dict]:
@@ -497,6 +518,7 @@ def main() -> None:
     if error:
         print(f'클러스터 표를 읽지 못함: {error}', file=sys.stderr)
     clusters = cluster_map(cluster_rows)
+    trends = keyword_trends.load()  # 글별 주 검색어 Trends 상대량 (가설 H6, 저장소 dashboard/keyword-trends.json)
     # 내부 링크: 글마다 받는 링크(링크하는 글 slug)와 link_audit.py 문제 목록
     linked = {path.stem: parse_post(path) for path in sorted(POSTS_DIR.glob('*.mdx'))}
     inbound = {slug: sorted(src for src, p in linked.items() if slug in p['links']) for slug in linked}
@@ -514,6 +536,11 @@ def main() -> None:
         doc['verifyType'], doc['verifyTypeSince'] = verify_type(slug)
         if doc['verifyType'] is None:
             print(f'검증 유형(검증형/일부/조사형)을 사실 확인표에서 찾지 못함: tests/{slug}/factcheck.md', file=sys.stderr)
+        doc['keyword'] = keyword_info(slug, trends)
+        if doc['keyword'] is None:
+            print(f'주 검색어 (가설 H6) 줄을 사실 확인표에서 찾지 못함: tests/{slug}/factcheck.md', file=sys.stderr)
+        elif doc['keyword']['trend'] is None:
+            print(f"주 검색어 Trends 값 없음: {doc['keyword']['query']} ({slug}) → keyword_trends.py 실행 후 커밋", file=sys.stderr)
         if doc.get('createdAt'):
             doc['firstDays'] = first_days(doc['createdAt'], page_dates.get(url, {}), last_day)
             doc['weeks'] = weekly_positions(doc['createdAt'], page_dates.get(url, {}), last_day)

@@ -1,12 +1,15 @@
 import type { Post } from '@/entities/post';
 
 import { CATEGORY_MAP, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME } from '@/core/config';
-import { absoluteUrl } from '@/core/seo';
+import { absoluteUrl, selectOgImage } from '@/core/seo';
 
 /** 피드에 포함할 최신 글 수 */
 export const RSS_ITEM_LIMIT = 20;
 
-export type FeedPost = Pick<Post, 'title' | 'description' | 'path' | 'category' | 'createdAt' | 'updatedAt'>;
+export type FeedPost = Pick<
+  Post,
+  'title' | 'description' | 'path' | 'category' | 'createdAt' | 'updatedAt' | 'ogImage' | 'thumbnail'
+>;
 
 const XML_ENTITIES: Record<string, string> = {
   '&': '&amp;',
@@ -31,6 +34,17 @@ function toRfc822(isoDate: string): string {
   return new Date(isoDate).toUTCString();
 }
 
+/**
+ * 항목 대표 이미지 (Media RSS `media:content`)
+ * - Pinterest RSS 자동 게시 등 이미지가 필요한 피드 소비자용, 글 OG 이미지와 같은 선택 규칙
+ */
+function buildMediaContent(post: FeedPost): string {
+  const { url, width, height } = selectOgImage(post);
+  const size = width && height ? ` width="${width}" height="${height}"` : '';
+
+  return `      <media:content url="${escapeXml(absoluteUrl(url))}" medium="image"${size} />`;
+}
+
 function buildItem(post: FeedPost): string {
   const url = escapeXml(toFeedUrl(post.path));
 
@@ -42,6 +56,7 @@ function buildItem(post: FeedPost): string {
     `      <pubDate>${toRfc822(post.createdAt)}</pubDate>`,
     `      <description>${escapeXml(post.description)}</description>`,
     `      <category>${escapeXml(CATEGORY_MAP[post.category].name)}</category>`,
+    buildMediaContent(post),
     '    </item>',
   ].join('\n');
 }
@@ -70,7 +85,7 @@ export function buildRssFeed(posts: FeedPost[]): string {
 
   return [
     '<?xml version="1.0" encoding="UTF-8"?>',
-    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">',
+    '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">',
     '  <channel>',
     ...channel,
     '  </channel>',

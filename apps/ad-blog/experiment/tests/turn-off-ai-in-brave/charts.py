@@ -258,12 +258,45 @@ def search_ai():
     cs.save(fig, f'{OUT}/brave-search-answer-with-ai.webp')
 
 
+def brave199_notes():
+    """Brave 1.99.55 릴리스 노트의 Leo 변경 vs 같은 시나리오 재시험에서 본 것 (2026-11-07 추가, 결과는 r199/)"""
+    rows = [
+        ('Leo shows a list of choices when it\nneeds clarification on a task', 'Not a setting: no new switch on the\nLeo settings page'),
+        ('Improved follow-up prompts and\nupdated AI Chat models', 'Three model names changed in\nSettings > Leo, such as Grok 4.7'),
+        ('Security fix for AI Chat tool-use\napprovals', 'Nothing you can see or set on\nscreen'),
+        ('(Not in the notes)\nThe five Leo switches', 'Same names, all on by default, each\nremoved the same place as in 1.98'),
+        ('(Not in the notes)\nBrave AI Chat flag and policy', 'Still removed every part of Leo,\nincluding brave://leo-ai'),
+    ]
+    fig = plt.figure(figsize=cs.FIGSIZE)
+    ax = fig.add_axes([0.03, 0.12, 0.94, 0.70])
+    ax.set_xlim(0, 1)
+    ax.set_ylim(0, 1)
+    ax.axis('off')
+    cs.header(fig, 'What Brave 1.99 changed for Leo, and what we saw',
+              "Brave's November 5, 2026 desktop release notes vs. our retest of Brave 1.99.55 on a new profile.")
+    xs = [0.0, 0.5]
+    ytop = 0.95
+    for x, h in zip(xs, ["Brave's 1.99.55 release notes", 'Our retest, November 7, 2026']):
+        ax.text(x + 0.015, ytop, h, fontsize=13, fontweight='bold', va='center', color=cs.MUTED)
+    step = 0.172
+    for r, (claim, seen) in enumerate(rows):
+        y = ytop - 0.13 - r * step
+        if r % 2 == 0:
+            box(ax, 0.0, y - step / 2 + 0.008, 1.0, step - 0.016, cs.SURFACE)
+        ax.text(0.015, y, claim, fontsize=13, va='center', zorder=2, linespacing=1.3,
+                color=cs.MUTED if claim.startswith('(') else cs.FOREGROUND)
+        last = r >= len(rows) - 2
+        ax.text(xs[1] + 0.015, y, seen, fontsize=13, va='center', zorder=2, linespacing=1.3,
+                fontweight='bold' if last else 'normal', color=cs.ACCENT if last else cs.FOREGROUND)
+    cs.footer(fig, 'Sources: Brave desktop release notes v1.99.55 (brave.com/latest). ToolProof test of Brave 1.99.55 on Linux.',
+              'Same test page, same steps and same restarts as our November 3 test of Brave 1.98.63.')
+    cs.save(fig, f'{OUT}/brave-199-leo-changes.webp')
+
+
 if __name__ == '__main__':
     Path(OUT).mkdir(parents=True, exist_ok=True)
-    leo_settings()
-    toolbar_button()
-    right_click()
-    address_bar()
-    matrix()
-    flags_page()
-    search_ai()
+    figures = [leo_settings, toolbar_button, right_click, address_bar, matrix, flags_page, search_ai, brave199_notes]
+    only = set(sys.argv[2:])  # 그림 이름을 주면 그것만 다시 그림 (2026-11-07)
+    for f in figures:
+        if not only or f.__name__ in only:
+            f()

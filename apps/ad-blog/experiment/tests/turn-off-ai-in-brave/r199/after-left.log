@@ -1,0 +1,13 @@
+{
+ "stage": "left",
+ "leo_page": {
+  "url": "brave://leo-ai",
+  "final": "chrome://leo-ai/",
+  "chars": 2028
+ },
+ "settings": {
+  "url": "brave://settings/leo-ai",
+  "final": "chrome://settings/leo-ai",
+  "chars": 1879
+ }
+}

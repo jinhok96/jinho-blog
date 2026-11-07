@@ -2,6 +2,83 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-08 · 세션 89 (정기 실행, 개선 세션): 앱 버전 점검 도구(`app_versions.py`) + Brave 1.99.55로 `turn-off-ai-in-brave` 재확인(반복 일정) + NAPS2 8.6.0 단계 확인 + 미발견 15편 갱신거리 정리
+
+세션 시각: 2026-11-08 00:15 KST(일) → 00시 실행·일요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(68967e8)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-10 ~ 11-07, 세션 88 이후 바뀐 값만)**
+
+- 노출 1,112 → **1,113**, 클릭 19, CTR 1.7%, 평균 순위 23.5 (글별 상위 3편 그대로)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 4 (진행 중, 노출 164)
+- sitemap: `rss.xml` 11-06 04:28, `sitemap.xml` 11-06 22:41 UTC 그대로
+- URL 검사: 색인 17/54 그대로, 이 회차 `Discovered` 12 · `URL is unknown` 25 (`turn-off-ai-in-brave`·`free-image-converter-photo-tools`·`customize-right-click-menu-windows-11`·`pixel-watch-safety-signal-ending`·`ios-27-2-siri-ai-memory`·`turn-off-copilot-in-word` 등이 이 회차 unknown — 세션 81~88과 같은 흔들림, 첫 관측값은 `first-seen.json`에 고정돼 영향 없음). 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-06 08:36 UTC `image-to-text-offline-free`, 미색인 37편 중 Google이 본 링크 20편 그대로)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 28일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 11-13 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 1(색인)은 새 크롤링 없음, 2는 보류 2건, 3은 허브 4/4, 4·5는 세션 88 판단 그대로(20위 안 검색어는 V 판정 중인 글이거나 노출 1~4회, `stale_check` 새 문장 없음). → **6 · 반복 일정**: 브라우저 일정(Firefox 160 11-10·Chrome 158 11-17·Edge 158 11-19 주)은 아직이지만, 측정 글이 쓴 데스크톱 앱(PDF·사진·스캔)은 일정표가 없어 새 판을 한 번도 점검하지 않았음 → 앱별 최신판을 공식 페이지에서 읽어 글의 시험 판과 비교하는 도구를 만들고, 바로 다시 시험할 수 있고 RSS 피드 구성을 바꾸지 않는 글(피드 안 `turn-off-ai-in-brave`)만 이번에 고침. 나머지는 V7·V5 판정 뒤 갱신거리로 정리
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — 바뀐 줄만 고치는 point edit 모드로 새 절·둘째 문단·How we tested 줄 점검: 25단어 넘는 3문장을 나누고 콜론으로 답을 드러내던 첫 문장을 두 문장으로. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 6 · 반복 일정 (도구) | 새 `tools/app_versions.py` | 글 본문의 `{앱 이름} {버전}` 표기(최신판 이하 가장 높은 판, 최신판보다 높은 "다음 판 예고"는 뺌)와 공식 다운로드·릴리스 페이지의 최신 안정판을 비교: Chrome·Edge·Firefox(주 버전)·Brave·GIMP·LibreOffice·PDFsam Basic·Sejda PDF Desktop·PDF Arranger(Flathub API)·XnConvert·HandBrake·NAPS2·ExifCleaner(소스 `package.json` + 그 태그 Releases 파일 확인) 13개. `--only-outdated`·`--app`·`--json`. **첫 실행: 글 22편 중 새 판 9개 앱** — GIMP 3.2.6 → 3.2.8(11-02, 5편) · LibreOffice 26.8.1 → 26.8.2(3편) · PDFsam 6.0.6 → 6.0.10(2편) · Sejda 7.9.10 → 7.9.12(4편) · NAPS2 8.5.1 → 8.6.0(1편) · ExifCleaner 4.6.0 → 4.7.0(2편) · Brave 1.98.63 → 1.99.55(2편) · Chrome 156/141 → 157(4편) · Edge 156 → 157(허브). XnConvert·HandBrake·PDF Arranger·Firefox는 같음 | - (지표를 노린 변경 아님) |
+| 2 | 6 · 반복 일정 | `turn-off-ai-in-brave` | **Brave 1.99.55**(11-05 출시, 공식 apt 저장소 deb SHA-256 일치, Chromium 157.0.8103.39, 2026-11-07 15:38~15:46 UTC)로 11-03 시험을 같은 스크립트·시나리오로 반복(`r199/`): Settings > Leo 글자 diff는 버전 줄과 모델 이름 3개(Qwen 3.6 35B·GPT Luna·Grok 4.7)뿐, 스위치 하나씩 끄며 재시작 → 툴바 버튼·사이드바 아이콘·Leo AI tools·Ask Leo·Organize 탭이 하나씩만 사라짐, 5개 다 꺼도 메인 메뉴 Leo AI·brave://leo-ai·설정 섹션 남음, 새 프로필 flags Disabled·관리 정책 `BraveAIChatEnabled=false`(시험 뒤 파일 삭제)는 Leo 전부 제거 → **결과 모두 1.98과 같음**. 1.99.55 릴리스 노트 Leo 변경 4가지(선택지 목록·후속 질문·모델 갱신·도구 승인 보안 수정)는 스위치와 무관. 글: 설명(1.98 → 1.98 and 1.99, 160자)·둘째 문단·'What each Leo switch removes' 첫 문장, 새 절 `## Did Brave 1.99 change the Leo switches?`, 새 그래픽 `brave-199-leo-changes.webp`(릴리스 노트 vs 재시험, `charts.py brave199_notes` → 본문 이미지 8장), How we tested에 Retest 줄. 제목 그대로. `updatedAt` 2026-11-07T15:50Z. 사실 확인표에 1.99.55 재확인 절, 검증 유형 검증형 그대로(근거에 재시험 추가) | - (버전 재확인, 글은 노출 0 — 세션 86 Edge 157과 같은 기준) |
+| 3 | 6 · 반복 일정 (확인만) | `image-to-text-offline-free` | **NAPS2 8.6.0**의 첫 변경 "New combined Settings window"가 글의 OCR 단계를 바꿨는지 Linux deb로 확인: OCR 버튼 → OCR Download(English 12.3 MB) → OCR Setup(같은 옵션·기본값) 그대로, 새 Settings 창 6개 항목에 OCR 없음 → **글 1~2단계 그대로 맞음**. V5(11-22) 대상이라 글은 고치지 않음, 캡처 3장·기록은 `tests/image-to-text-offline-free/naps2/`·`facts.md` | - |
+| 4 | 문서 | README 개선 세션 6·인프라 상태, traffic-playbook 노하우 4, writing-guide 발행 후 개선, clusters 콘텐츠 정리 7번, `.claude/ad-blog.md` | 반복 일정에 `app_versions.py`, 데스크톱 앱 새 판·릴리스 노트 위치, 본문에 `{앱 이름} {버전}` 모양으로 버전을 쓰기. 인프라에 이번에 연 도메인(gimp.org·flathub API·versions.brave.com 등)과 **wiki.documentfoundation.org Anubis 봇 확인(열지 않음)**. 콘텐츠 정리 7번에 `remove-bg-alternative-free`(12-01 remove.bg 웹사이트 종료 뒤 제목·첫 문단 전환) 추가 | - |
+
+- 빌드 HTML 확인: title `Turn Off AI in Brave With Five Switches or One Flag | ToolProof`·description 160자, BlogPosting `dateModified` 2026-11-07T15:50Z·BreadcrumbList, h1 1개·h2 12개, `<pre>`·`<code>` 0, 대표 이미지 + 본문 이미지 8장, og 이미지는 대표 이미지에서 생성(로컬 빌드는 도메인 미설정이라 example.com), 새 절 앵커 id, `rss.xml` 첫 항목 `turn-off-ai-in-brave`·**피드 20편 집합은 갱신 전과 같음(6번째 → 맨 앞, V7 관찰 대상 영향 없음)**, sitemap `lastmod` 갱신. `extlink_check.py --slug turn-off-ai-in-brave` 문제 0(고유 URL 5개). lint·type-check·test(36파일 274개)·build 통과(`pnpm install --frozen-lockfile` 뒤), 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `link_audit` 새 문제 없음
+
+**미발견 15편 갱신거리 (V7 판정 11-13 뒤, 한 세션 1편·한 가지 변경. 세션 81 순서에 앱 새 판을 더함)**
+
+| 글 | 실제 갱신거리 | 비고 |
+| --- | --- | --- |
+| `gemini-android-auto-personal-intelligence` | 콘텐츠 정리 3번(통합 + 전환) | 대표 이미지도 함께 |
+| `office-2021-end-of-support` | 콘텐츠 정리 4번(전환), 본문 LibreOffice 26.8.1 → 26.8.2 | 대표 이미지도 함께 |
+| `chrome-http-warning-default` | Chrome 157 결과(세션 79) + "this week" 2문장 | 세션 81 |
+| `gemini-connected-apps` | Customize 배포 완료 여부 + 지난 일정 줄 | 세션 81 |
+| `apple-mail-exchange-not-syncing` | macOS 27 Graph 업데이트 확인 + "this month" | 세션 81 |
+| `pdf-to-jpg-free` | GIMP 3.2.8 · LibreOffice Draw 26.8.2 · Sejda 7.9.12 같은 PDF 3개로 재측정 | GUI 3개 모두 새 판 |
+| `pdf-to-word-free` | LibreOffice Writer 26.8.2 · Sejda 7.9.12 재측정 | |
+| `split-pdf-free` | PDFsam Basic 6.0.10 재측정 (PDF Arranger 1.14.0 같음) | |
+| `compress-pdf-free` | Sejda 7.9.12 재측정 + iLovePDF·PDF24 웹 재실행 | |
+| `convert-webp-to-jpg-free` | GIMP 3.2.8 재측정 (XnConvert 1.118.0 같음) | |
+| `remove-metadata-from-photos` | ExifCleaner 4.7.0: 변경 목록상 "File cleaning behaviour is unchanged", 32비트 Windows 지원 끝·macOS 13 이상 → 요구 조건 갱신 + Linux "Save as copy" 실패가 남는지 재시험 | |
+| `best-free-pdf-tools` (허브) | 위 PDF 글 재측정 뒤 새 판 반영 | PDF 글 다음 |
+| `turn-off-gemini-in-gmail` | Chrome 158(11-17) 재확인 + Gmail 도움말 14쪽 diff | 11-17 뒤 |
+| `remove-bg-alternative-free` | remove.bg FAQ 재확인, 12-01 종료 뒤 전환(콘텐츠 정리 7번) | 12-01 뒤 |
+| `compress-video-for-discord-email` | 앱 새 판 없음(HandBrake 1.11.2 같음) → Discord·Gmail 한도 문서 재확인에서 바뀐 것이 있을 때만 | 갱신거리 없으면 건너뜀 |
+
+- 색인된 피드 밖 글도 새 판 갱신거리가 생김: `convert-heic-to-jpg-free`(GIMP 3.2.8 노트에 "HEIF loading code to allow for loading larger images")·`compress-image-to-100kb`(GIMP)·`merge-pdf-files-free`(PDFsam·Sejda, backlog 45번 라이선스 열과 묶지 말고 한 번에 하나)·`jpg-to-pdf-free`(Sejda, Chrome 141 → 157 인쇄). 피드에 들어가면 다른 글이 빠지므로 V7 판정 뒤에
+- 허브 `turn-off-ai-features`는 Chrome·Edge 156·Brave 1.98.63 표기 → Chrome 158(11-17)·Edge 158(11-19 주) 재확인 뒤 한 번에 갱신 (V3 판정 11-18 뒤 Chrome → 허브 링크와 별개)
+
+**알게 된 것**
+
+- **일정 없는 데스크톱 앱이 3주 만에 대부분 새 판이 됨**: 측정 글이 쓴 앱 9개 중 6개(GIMP·LibreOffice·PDFsam·Sejda·NAPS2·ExifCleaner)가 시험 판보다 새 판 → 측정 글은 브라우저보다 오히려 점검이 빠져 있었음. 다만 대부분 버그 수정판이라 '새 판 = 글이 틀림'은 아니고(NAPS2 8.6.0도 단계 그대로), 같은 시나리오로 다시 시험했을 때 결과를 나란히 쓰는 것이 실제 갱신거리 (해석)
+- 미발견 15편 중 8편이 앱 새 판 재측정이라는 '날짜만 바꾸지 않는' 갱신거리를 얻음 → V7 뒤 피드·sitemap으로 다시 알릴 근거가 생김
+- 버전 표기에서 최고값을 그대로 쓰면 "Edge 158(11-19 주)" 같은 예고 문장 때문에 시험 판이 높게 잡힘 → 최신판보다 높은 표기는 빼야 함
+- LibreOffice 위키는 Anubis 봇 확인이라 26.8.2 버그 목록을 볼 수 없음 → 재측정 글에는 "릴리스 노트 확인 불가"로 쓰고 결과만 비교
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 28일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **V7 판정 — 11-13 개선 세션** (세션 88 그대로). 판정 뒤 위 '미발견 15편 갱신거리' 표 순서로 한 세션 1편 — 갱신한 글은 `updatedAt` → `discoveredAt`·`crawledAt` 간격을 log.md에 기록
+- Claude: **Firefox 160 — 11-10 14:00 UTC 출시 뒤 첫 개선 세션(11-11 06시 KST)에서 `turn-off-ai-in-firefox` 재확인** (세션 86 그대로). 그 전에 `app_versions.py --app Firefox`로 출시 확인
+- Claude: **Edge 158(11-19 주) 출시 뒤 개선 세션에서 `turn-off-copilot-in-edge` 재확인** (세션 86 그대로)
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인, Chrome 158(11-17) 재확인 (세션 80·83 그대로) → 그 뒤 허브 `turn-off-ai-features` 브라우저 판 표기 갱신
+- Claude: V5(11-22) 판정 뒤 `image-to-text-offline-free`를 NAPS2 8.6.0으로 재측정할지 정함 (단계는 그대로 확인됨)
+- Claude: `app_versions.py --only-outdated` — 개선 세션 6번에서 주 1회 정도 (새 판을 찾으면 릴리스 노트 → 같은 시나리오 재시험)
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵 (세션 85 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정(11-13) 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤(`remove-bg-alternative-free` 12-01 추가), 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V7(11-13)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V8(12-03)
+- Claude(11-09 월 일반 세션): 세션 83 후보 그대로 (`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`, `photo-video`·`offline-ai` 직접 측정 후보 함께 비교). 새 글은 발행 전 `extlink_check.py --slug {slug} --only-problems`, 본문에 시험한 앱 버전을 `{앱 이름} {버전}` 모양으로
+- Claude: 외부 링크 점검 다음 실행 — 12월 첫 개선 세션 무렵
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-07T15:54:20Z, DB 문서 420개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값: `turn-off-ai-in-brave` `sitemapSeenAt` 2026-11-07T15:54:20Z(이 회차에 처음 sitemap.xml 칸, 11-03 발행 = 11-02 sitemap 다운로드 뒤 생긴 URL이라 11-06 22:41 다운로드로 더해진 것 — 세션 88 `turn-off-gemini-on-android-phone`과 같은 모양), 새 색인 없음. 이 회차 URL 검사는 색인 17 · `Discovered` 12 · unknown 25 · `inFeed` 12(미색인 10), 28일 노출 1,117·클릭 19·평균 23.5위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 37편 중 Google이 본 링크 20편, `summary.adsense` 운영 28일·색인율 0.315(17/54)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회수 103·방문 95, `engagement` GA4 조회 16·사용자 11·세션 13(참여 6)·참여 138초·90% 스크롤 4. `posts` 문서는 압축 JSON 약 119 KiB(한도 256 KiB의 47%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-07 · 세션 88 (정기 실행, 개선 세션): V7·노하우 9 판정용 DB 구조 개선(글별 발견 경로 첫 관측값) + sitemap.xml 재다운로드 관찰
 
 세션 시각: 2026-11-07 18:15 KST(토) → 18시 실행이라 개선 세션. 같은 날 앞 세션 86(`turn-off-copilot-in-edge` Edge 157 재확인)·87(외부 링크 점검) → 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(55f3d00)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

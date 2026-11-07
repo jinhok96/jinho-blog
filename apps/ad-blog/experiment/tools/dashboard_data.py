@@ -8,7 +8,8 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
       + {out}/data.js (비로그인 열람용 스냅숏, 아티팩트 파일 `data.js`로 발행)
       + 저장소 `experiment/dashboard/first-seen.json` 갱신 (글별 첫 관측값, 세션이 커밋)
 
-첫 관측값(indexedAt·firstCrawlAt·firstImpressionAt·firstSeenLinkAt)은 2026-11-04부터 저장소 파일
+첫 관측값(indexedAt·firstCrawlAt·firstImpressionAt·firstSeenLinkAt, 2026-11-07부터 발견 경로 discoveredAt·discoveredVia·
+feedSeenAt·sitemapSeenAt·crawledAt)은 2026-11-04부터 저장소 파일
 `experiment/dashboard/first-seen.json`에서 읽고 같은 파일에 다시 씀. 그 전에는 이전 회차 `posts` DB 문서를
 `ArtifactData list`의 `out_dir`로 저장해 `--prev`로 넘겼으나, 세션 79부터 DB 문서를 파일로 저장하는 것이
 거부돼(다른 사람이 썼을 수 있는 문서) DB를 파일로 받지 않아도 돌게 바꿈. `--prev`는 선택(주면 두 값 중 이른 값).
@@ -30,8 +31,9 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
                   inFeed·unindexedInFeed = URL 검사 sitemap에 rss.xml이 있는 글 수 전체·그중 색인 안 된 글 (2026-11-05 회차부터, V7))
 - daily-YYYY-MM: {rows: [{date, clicks, impressions, ctr, position, state}]} (state = final 확정 | fresh 미확정)
 - posts: {rows: [{slug, title, category, createdAt, updatedAt?, images, words, tags, cluster, inbound, newsType, verifyType, verifyTypeSince, keyword,
-                  28일 지표, queries, daily, sources, firstDays, weeks, move, index, indexedAt, firstCrawlAt, firstImpressionAt}],
-         otherPages: [{path, 28일 지표, queries, daily, sources}]}
+                  28일 지표, queries, daily, sources, firstDays, weeks, move, index, indexedAt, firstCrawlAt, firstImpressionAt,
+                  discoveredAt, discoveredVia, feedSeenAt, sitemapSeenAt, crawledAt}],
+         otherPages: [{path, 28일 지표, queries, daily, sources}], discoverySince}
          (cluster = clusters.md의 {id, name, priority, role} 또는 null(미지정), inbound = 이 글로 링크하는 글 slug,
           newsType = 발행 때 정한 뉴스 칼럼 유형 '화제' | '영향' 또는 null(칼럼 아님) — tests/{slug}/factcheck.md에서 읽음,
                      상시 글로 전환해도 유지 (가설 H5 판정용, 2026-11-05 회차부터),
@@ -59,7 +61,13 @@ Search Console API·글 frontmatter·clusters.md·내부 링크·README 목표 �
                    referring = Google이 아는 이 글을 링크하는 페이지 경로. 둘 다 2026-11-05 회차부터 → V7 판정에 회차별 history로 씀),
           seenLinks = (색인 안 된 글만) Google이 마지막으로 크롤링한 판에서 이 글로 가던 링크 [{page, kind, crawl}] (link_seen.py),
           firstSeenLinkAt = 그 링크를 Google이 처음 본 크롤링 시각 (first-seen.json에서 이어받아 고정, 색인 뒤에도 유지 → 노하우 9 판정)
-          (2026-10-26 회차부터. 그 전 회차 history에는 없음)
+          (2026-10-26 회차부터. 그 전 회차 history에는 없음),
+          발견 경로 첫 관측값 (V7·노하우 9 판정용, 2026-11-07 세션 88 회차부터. first-seen.json에서 이어받아 고정, discovery_fields):
+          discoveredAt = URL 검사가 처음 'URL is unknown'이 아닌 회차 시각(그보다 이른 크롤링이 있으면 그 시각),
+          discoveredVia = 그 회차의 sitemap 칸 (['/rss.xml'] 등, [] = 사이트맵·피드 없이, null = 추적 전 색인 글·소급 근거 없음),
+          feedSeenAt·sitemapSeenAt = sitemap 칸에 /rss.xml·/sitemap.xml이 처음 보인 회차 시각,
+          crawledAt = 처음 본 크롤링 시각 (색인 여부와 무관).
+          posts 문서의 discoverySince = 이 값들을 회차마다 기록하기 시작한 시각 — 이보다 이른 값은 '그때 이미'(상한, log.md 기록으로 소급)
 - traffic: (Cloudflare 환경변수가 있을 때만) 사이트 전체 실제 조회수 {range, views, visits, daily: [{date, views, visits}](UTC 날짜, 빠진 날 0),
            referers: 유입 사이트별 28일 조회수·방문 상위 10 (자기 사이트·직접 방문은 'direct')}
 - engagement: (GA4를 읽은 회차만, 2026-11-05 회차부터) 사이트 전체 참여 지표 {range, propertyId, views, users, engagementSeconds,
@@ -94,7 +102,9 @@ from link_audit import CLUSTERS_FILE, ROLES, SECTIONS, audit, parse_clusters, pa
 EXPERIMENT = pathlib.Path(__file__).resolve().parents[1]
 FIRST_SEEN_FILE = EXPERIMENT / 'dashboard' / 'first-seen.json'  # 글별 첫 관측값 (세션이 커밋, 2026-11-04)
 VERSIONS_FILE = EXPERIMENT / 'dashboard' / 'versions.json'  # 마지막 batch 결과의 stats 문서 버전 (세션이 batch 뒤 고침)
-FIRST_SEEN_KEYS = ('indexedAt', 'firstCrawlAt', 'firstImpressionAt', 'firstSeenLinkAt')
+FIRST_SEEN_KEYS = ('indexedAt', 'firstCrawlAt', 'firstImpressionAt', 'firstSeenLinkAt', 'discoveredAt', 'feedSeenAt', 'sitemapSeenAt', 'crawledAt')
+DISCOVERY_KEYS = ('discoveredAt', 'discoveredVia', 'feedSeenAt', 'sitemapSeenAt', 'crawledAt')  # 발견 경로 첫 관측값 (2026-11-07 세션 88)
+UNKNOWN_COVERAGE = 'URL is unknown to Google'  # URL 검사 coverageState: Google이 이 URL을 모름 (발견 전)
 LAUNCH = dt.date(2026, 10, 10)  # 도메인 연결 전날부터 집계
 SEARCH_TYPES = ('web', 'image', 'video', 'news', 'discover', 'googleNews')
 BRAND = re.compile(r'tool\s*-?\s*proof', re.I)  # 브랜드 검색어 (목표 지표 "비브랜드 검색어"에서 제외)
@@ -262,13 +272,29 @@ def load_prev(path: str | None, first_seen: pathlib.Path = FIRST_SEEN_FILE) -> d
             for key in FIRST_SEEN_KEYS:
                 if row.get(key):
                     cell[key] = min(cell[key], row[key]) if cell.get(key) else row[key]
+            # 첫 발견 경로(목록)는 고른 discoveredAt과 같은 출처의 값을 씀 (빈 목록 = 사이트맵·피드 없이 발견)
+            if row.get('discoveredVia') is not None and 'discoveredVia' not in cell and row.get('discoveredAt') == cell.get('discoveredAt'):
+                cell['discoveredVia'] = row['discoveredVia']
     return merged
 
 
-def save_first_seen(posts: list[dict], run_at: str, path: pathlib.Path = FIRST_SEEN_FILE) -> None:
-    """이번 회차 글별 첫 관측값을 저장소 파일에 씀 (값이 있는 키만, 지금 있는 글만)"""
-    rows = {p['slug']: {k: p[k] for k in FIRST_SEEN_KEYS if p.get(k)} for p in sorted(posts, key=lambda p: p['slug'])}
-    doc = {'updatedAt': run_at, 'posts': rows}
+def load_discovery_since(path: pathlib.Path = FIRST_SEEN_FILE) -> str | None:
+    """발견 경로 첫 관측값을 회차마다 기록하기 시작한 시각 (first-seen.json `discoverySince`, 없으면 None = 이번 회차가 처음)"""
+    if not path.exists():
+        return None
+    return json.loads(path.read_text(encoding='utf-8')).get('discoverySince')
+
+
+def save_first_seen(posts: list[dict], run_at: str, discovery_since: str, path: pathlib.Path = FIRST_SEEN_FILE) -> None:
+    """이번 회차 글별 첫 관측값을 저장소 파일에 씀 (값이 있는 키만, 지금 있는 글만. discoveredVia는 빈 목록도 남김)"""
+    def cell(p: dict) -> dict:
+        row = {k: p[k] for k in FIRST_SEEN_KEYS if p.get(k)}
+        if p.get('discoveredVia') is not None:
+            row['discoveredVia'] = p['discoveredVia']
+        return row
+
+    rows = {p['slug']: cell(p) for p in sorted(posts, key=lambda p: p['slug'])}
+    doc = {'updatedAt': run_at, 'discoverySince': discovery_since, 'posts': rows}
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(json.dumps(doc, ensure_ascii=False, indent=1) + '\n', encoding='utf-8')
 
@@ -281,6 +307,34 @@ def index_dates(prev: dict, index: dict | None, run_at: str, first_imp: str | No
         first_crawl = first_crawl or index.get('lastCrawl')
     imps = [d for d in (first_imp, prev.get('firstImpressionAt')) if d]
     return {'indexedAt': indexed_at, 'firstCrawlAt': first_crawl, 'firstImpressionAt': min(imps) if imps else None}
+
+
+def discovery_fields(prev: dict, index: dict | None, run_at: str, first_crawl: str | None) -> dict:
+    """발견 경로 첫 관측값 (V7·노하우 9 판정용, 2026-11-07 세션 88 회차부터). 한번 정하면 바꾸지 않음.
+
+    URL 검사는 회차마다 같은 글이 Discovered ↔ URL is unknown으로 흔들리므로(세션 81~87) 처음 본 값만 고정하고 되돌리지 않음.
+    discoveredAt = URL 검사가 처음 'URL is unknown to Google'이 아닌 상태(Discovered·Crawled·색인)로 나온 회차 시각.
+                   그보다 이른 크롤링 기록(crawledAt)이 있으면 그 시각 (크롤링됐다면 그 전에 발견된 것)
+    discoveredVia = 그 회차의 URL 검사 sitemap 칸 (['/rss.xml']·['/sitemap.xml']·둘 다·[] = 사이트맵·피드 없이).
+                    추적 전에 이미 색인된 글(indexedAt이 이전 회차 값)은 지금 칸이 발견 경로가 아니라 null
+    feedSeenAt·sitemapSeenAt = sitemap 칸에 /rss.xml·/sitemap.xml이 처음 보인 회차 시각
+    crawledAt = 처음 본 크롤링 시각 (색인 여부와 무관, 본 값 중 가장 이른 lastCrawl. 색인된 글은 firstCrawlAt과 같거나 이름)
+    first-seen.json `discoverySince`보다 이른 값은 '그 시각에는 이미 그랬음'(상한)이고, 그 뒤 값은 회차 간격(약 6시간) 안에서 정확
+    """
+    out = {k: prev.get(k) for k in DISCOVERY_KEYS}
+    crawls = [c for c in (out['crawledAt'], first_crawl, (index or {}).get('lastCrawl')) if c]
+    out['crawledAt'] = min(crawls) if crawls else None
+    if not index or not index.get('coverage'):
+        return out
+    sitemaps = index.get('sitemaps') or []
+    if not out['discoveredAt'] and index['coverage'] != UNKNOWN_COVERAGE:
+        out['discoveredAt'] = min(run_at, out['crawledAt']) if out['crawledAt'] else run_at
+        out['discoveredVia'] = None if prev.get('indexedAt') else sitemaps
+    if '/rss.xml' in sitemaps and not out['feedSeenAt']:
+        out['feedSeenAt'] = run_at
+    if '/sitemap.xml' in sitemaps and not out['sitemapSeenAt']:
+        out['sitemapSeenAt'] = run_at
+    return out
 
 
 def seen_link_fields(token: str, site: str, posts: list[dict], crawled: dict[str, dt.datetime], prev: dict[str, dict]) -> dict:
@@ -558,17 +612,20 @@ def main() -> None:
             if when := link_seen.crawl_time(idx):
                 crawled[f'/posts/{slug}'] = when
         doc.update(index_dates(prev_rows.get(slug, {}), doc.get('index'), run_at, first_impression(page_dates.get(url, {}))))
+        doc.update(discovery_fields(prev_rows.get(slug, {}), doc.get('index'), run_at, doc.get('firstCrawlAt')))
         posts.append(doc)
     crawl = None if args.no_inspect else seen_link_fields(token, args.site, posts, crawled, prev_rows)
     if args.no_inspect:  # URL 검사를 건너뛰면 firstSeenLinkAt을 계산하지 않으므로 이전 값을 그대로 둠
         for p in posts:
             p['firstSeenLinkAt'] = prev_rows.get(p['slug'], {}).get('firstSeenLinkAt')
-    save_first_seen(posts, run_at)
+    # 발견 경로 첫 관측값을 처음 기록한 회차 (URL 검사를 한 회차부터. 이보다 이른 값은 상한, discovery_fields)
+    discovery_since = load_discovery_since() or (None if args.no_inspect else run_at)
+    save_first_seen(posts, run_at, discovery_since)
     # 글 외 페이지(홈·카테고리·목록 등): 글별 표 합계를 사이트 전체 KPI와 맞추기 위해 따로 표시
     post_urls = {f"{SITE_ORIGIN}/posts/{p['slug']}" for p in posts}
     other = [{'path': url.removeprefix(SITE_ORIGIN) or '/', **metrics(r), **page_extra(url)} for url, r in by_page.items() if url not in post_urls]
     other.sort(key=lambda o: (-o['clicks'], -o['impressions']))
-    docs['posts'] = {'rows': posts, 'otherPages': other}
+    docs['posts'] = {'rows': posts, 'otherPages': other, 'discoverySince': discovery_since}
 
     # 기기·국가·검색 유형·사이트 검색어
     def dim(name: str, limit: int) -> list[dict]:

@@ -1,6 +1,6 @@
 # turn-off-ai-in-brave 브리프 · 사실 확인표
 
-- 검증 유형 (가설 H3): **검증형** — Brave 1.98.63(Linux) 새 프로필로 AI 설정 직접 확인(How we tested)
+- 검증 유형 (가설 H3): **검증형** — Brave 1.98.63(Linux) 새 프로필로 AI 설정 직접 확인(How we tested), 2026-11-07 Brave 1.99.55로 같은 시험 반복
 - 주 검색어 (가설 H6): `turn off ai in brave` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-11-04 KST 세션 77, 일반 세션)
@@ -66,3 +66,23 @@
 - Clear Leo data 확인 창 (누르기가 우리 시험에서 창을 띄우지 못함 → 버튼 위치만 씀)
 - Leo Premium 요금 (이번 세션에 1차 출처로 확인하지 않음)
 - Brave Origin 구매·활성화 (구매하지 않음)
+
+## Brave 1.99.55 재확인 (2026-11-08 KST 세션 89, 개선 세션 6 · 반복 일정)
+
+- 계기: 새 도구 `tools/app_versions.py`가 글의 Brave 1.98.63보다 새 안정판 1.99.55(2026-11-05 출시)를 찾음. `versions.brave.com/latest/release-linux-x64.version` = 1.99.55
+- 환경: Brave 공식 apt 저장소 `pool/main/b/brave-browser/brave-browser_1.99.55_amd64.deb`(SHA-256 `364e954a…39c88d`, 저장소 `Packages` 값과 일치)를 `dpkg-deb -x`로 풀어 실행. `--version` = Brave Browser 157.1.99.55, CDP `/json/version` Chrome/157.0.8103.39. Xvfb `:99` 1280×900, 같은 시험 페이지(`test-site/`), 2026-11-07 15:38~15:46 UTC
+- 스크립트: `r199/`에 1.98 시나리오 복사본(`common.py`만 `BRAVE` 환경 변수로 판 선택). 캡처·결과 JSON은 `r199/screens`·`r199/*.json` (저장소에는 글자 저장본·JSON과 아래 비교에 쓴 캡처만)
+
+| 주장 (글) | 출처 | 확인 방법 |
+| --- | --- | --- |
+| 1.99.55는 2026-11-05 데스크톱 출시, Chromium 157.0.8103.39 | brave.com/latest (`source-latest.txt`, 2026-11-07 판으로 교체) | 렌더링 저장본 문장 + 실행 사본 |
+| 1.99.55 노트의 Leo 변경 4가지: 확인이 필요할 때 선택지 목록("present a list of choices when it needs clarification on a task"), 후속 질문 제안 개선, AI Chat 모델 갱신, "compromised Leo conversation frame could approve AI Chat tool-use requests without a direct user action" 수정. 일반 항목에 주소창 Brave Search 아이콘을 돋보기로 | 같은 파일 | 문장 |
+| Settings > Leo 화면 글자가 1.98과 같음 (스위치 3개 이름·설명, Adjust autocomplete suggestions, Clear Leo data, Store my conversation history). 다른 줄은 버전(v 1.99.55)과 모델 이름 3개뿐: Qwen 3.5 35B → Qwen 3.6 35B, GPT 5.6 Luna → GPT Luna, Grok 4.6 → Grok 4.7. 새 프로필 토글 상태도 같음(모두 켜짐) | 직접 확인 (`r199/screens/01-settings-leo.txt` vs `screens/01-settings-leo.txt` diff) | 글자 비교 |
+| Settings > Appearance 글자도 버전 줄 외 같음, Leo AI Assistant 체크 켜짐 | 직접 확인 (`r199/screens/02-settings-appearance.txt`) | 글자 비교 |
+| 스위치를 하나씩 끄며 재시작: s1 툴바 버튼 → s2 사이드바 아이콘 → s3 선택 오른쪽 클릭 Leo AI tools → s4 주소창 Ask Leo → s5 탭 검색 Organize 탭이 차례로 하나씩만 사라짐 (1.98과 같음) | 직접 확인 (`r199/chain-c199.json`, `r199/screens/c199-s*`, 1.98 캡처와 나란히 비교) | 캡처 비교 |
+| 5개를 다 끈 뒤 메인 메뉴 Leo AI·brave://leo-ai 채팅 화면·Settings Leo 섹션 남음 | 직접 확인 (`r199/after-c199-left.json`, `r199/screens/c199-left-*`) | 캡처·글자 |
+| 새 프로필에서 flags만 Disabled → 진입점 전부·메인 메뉴 Leo AI·Settings Leo 섹션 없음, brave://leo-ai 열리지 않음, `Local State`에 `brave-ai-chat@2` | 직접 확인 (`r199/after-d199-flagoff.json`, `r199/screens/d199-flagoff-*`) | 캡처·주소·파일 |
+| 관리 정책 `BraveAIChatEnabled=false` → Settings Leo 섹션 없음·brave://leo-ai 열리지 않음·메인 메뉴 Leo AI 없음 (시험 뒤 정책 파일 삭제) | 직접 확인 (`r199/policy.log`, `r199/screens/h-policy-*`) | 캡처·글자 |
+| 다시 하지 않은 것: Brave Search Answer with AI(웹사이트 설정, 브라우저 판과 무관), flagback, 툴바 패널 스위치, 언어 파일 문구 비교 | - | How we tested에 Brave Search는 다시 하지 않았다고 씀 |
+
+- 글: 설명(160자)·둘째 문단·'What each Leo switch removes' 첫 문장 버전 표기(1.98 → 1.98 and 1.99), 새 절 `## Did Brave 1.99 change the Leo switches?`, 새 그래픽 `brave-199-leo-changes.webp`(`charts.py brave199_notes`, 릴리스 노트 vs 재시험 → 본문 이미지 8장), How we tested에 Retest 줄. 제목 그대로. `updatedAt` 2026-11-07T15:50Z (RSS 피드 6번째 → 맨 앞, 피드 20편 구성 그대로 → V7 관찰 대상 영향 없음)

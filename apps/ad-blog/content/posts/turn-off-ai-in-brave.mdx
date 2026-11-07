@@ -1,8 +1,9 @@
 ---
 title: Turn Off AI in Brave With Five Switches or One Flag
-description: In our Brave 1.98 test, five switches hid every Leo AI button but Leo still opened. One brave://flags setting removed it. Brave Search AI has its own switch.
+description: In our Brave 1.98 and 1.99 tests, five switches hid every Leo AI button but Leo still opened. One brave://flags setting removed it. Brave Search AI is separate.
 category: software
 createdAt: 2026-11-03T16:45:00Z
+updatedAt: 2026-11-07T15:50:00Z
 tags:
   - Brave
   - Leo
@@ -15,7 +16,7 @@ tags:
 
 To turn off AI in Brave, right-click the **Leo AI** button on the toolbar and choose **Hide Leo AI icon**, then open **Settings > Leo** and turn off **Show Leo icon in the sidebar**, **Show Leo in the context menu on websites** and **Tab Focus Mode**. Finally, go to **Settings > Appearance** and uncheck **Leo AI Assistant** so the address bar stops offering Ask Leo. Those five switches hide Leo, but they don't remove it. To remove Leo AI completely for free, type **brave://flags/#brave-ai-chat** in the address bar, set **Brave AI Chat** to **Disabled**, and click **Relaunch**.
 
-We tested Brave 1.98.63, the version Brave released on October 30, 2026, on a new profile with no account on November 3, 2026. We turned the switches off one at a time on the same test page and restarted Brave after each change. In our test, the five switches removed Leo from the toolbar, the sidebar, right-click menus, the address bar and tab search, but **Leo AI** stayed in the main menu and the full Leo chat page still opened. The flag removed all of it. Our test computer ran Linux. Brave publishes one set of desktop release notes for Windows, Mac and Linux, and its flags page lists the Brave AI Chat setting for Mac, Windows, Linux and Android.
+We tested Brave 1.98.63, the version Brave released on October 30, 2026, on a new profile with no account on November 3, 2026. On November 7, we repeated every step with Brave 1.99.55, released November 5. We turned the switches off one at a time on the same test page and restarted Brave after each change. In both versions, the five switches removed Leo from the toolbar, the sidebar, right-click menus, the address bar and tab search, but **Leo AI** stayed in the main menu and the full Leo chat page still opened. The flag removed all of it. Our test computer ran Linux. Brave publishes one set of desktop release notes for Windows, Mac and Linux, and its flags page lists the Brave AI Chat setting for Mac, Windows, Linux and Android.
 
 | What you want | Where | What happened in our test |
 | --- | --- | --- |
@@ -46,7 +47,7 @@ The toolbar button is the step most people miss, because the Leo settings page h
 
 ## What each Leo switch removes
 
-Each Leo switch in Brave 1.98 controls one place where Leo appears, so turning off only the sidebar icon leaves the right-click menu, the toolbar button and the address bar untouched. We checked seven places on the same test page after every change:
+Each Leo switch in Brave 1.98 and 1.99 controls one place where Leo appears, so turning off only the sidebar icon leaves the right-click menu, the toolbar button and the address bar untouched. We checked seven places on the same test page after every change:
 
 - **Toolbar button**: only **Hide Leo AI icon** removed it. Turning off the **Leo AI** switch in the toolbar panel did the same on a second new profile.
 - **Sidebar icon**: **Show Leo icon in the sidebar** removed the Leo icon at the top of the sidebar.
@@ -87,6 +88,14 @@ Know three things before you use it:
 - **It may not last forever.** The page opens with "Warning: Experimental features ahead!" Brave can rename or remove a flag in a later version, so check this row again after a big update.
 
 On a work computer, your organization can turn Leo off for you with a management policy called **BraveAIChatEnabled**. When we set that policy to off, the **Leo** section disappeared from Settings and **brave://leo-ai** stopped opening, as they did with the flag. Type **brave://policy** in the address bar to see which policies your organization has set.
+
+## Did Brave 1.99 change the Leo switches?
+
+Brave 1.99 didn't change how you turn off Leo. In our November 7, 2026 retest, Brave 1.99.55 showed the same three switches on the **Settings > Leo** page, all on in a new profile. Each of the five switches removed the same place it did in Brave 1.98.63. With all five off, the main menu item, the **brave://leo-ai** chat page and the Leo settings section were still there, as before. On separate new profiles, the **Brave AI Chat** flag and the **BraveAIChatEnabled** policy each still removed every part of Leo we checked.
+
+Brave's [release notes](https://brave.com/latest/) for 1.99.55 list four Leo changes. Leo now shows a list of choices when it needs clarification on a task, its suggested follow-up prompts are improved, and its AI models are updated. The fourth fixes a security issue that could let AI Chat tool requests be approved without a direct user action. None of them adds or renames a switch. The only Leo difference we saw on screen was in the model list under **Settings > Leo**, where three names had changed, such as Grok 4.6 becoming Grok 4.7. The same notes say the Brave Search icon in the address bar is now a magnifying glass, which has nothing to do with Leo.
+
+![Table comparing Brave's 1.99.55 release notes with our November 7, 2026 retest. Leo's clarification choices added no new switch, three model names changed in Settings > Leo, and the security fix isn't visible on screen. The five Leo switches had the same names and results as in 1.98, and the Brave AI Chat flag and policy still removed every part of Leo](./images/turn-off-ai-in-brave/brave-199-leo-changes.webp)
 
 ## Do you need Brave Origin to remove Leo?
 
@@ -139,6 +148,7 @@ Brave says its search AI is "built in-house and powered by our own models and al
 ## How we tested
 
 - **Browser**: Brave 1.98.63 (Chromium 156.0.8078.80) for Linux, downloaded from Brave's official Linux package server on November 3, 2026 and checked against the file's published checksum. Brave's [release notes](https://brave.com/latest/) list 1.98.63 as the October 30, 2026 desktop release.
+- **Retest**: Brave 1.99.55 (Chromium 157.0.8103.39) for Linux, the November 5, 2026 desktop release, from the same package server on November 7, 2026, checksum checked. We repeated the switch-by-switch run, the flag run and the policy run with the same test page and steps on new profiles. We didn't repeat the Brave Search test, because Answer with AI is a website setting.
 - **Profiles**: a new profile with no account and no Brave Rewards for each run, English (US) interface, 1280×900 window.
 - **Method**: on the same local test page (a heading, two paragraphs and a text box), we checked the toolbar, the sidebar, a plain right-click, a right-click on selected text, a right-click in a text box with text selected, a question typed in the address bar, and the tab search box. We turned off one switch at a time, closed and reopened Brave, and checked again. We then disabled the Brave AI Chat flag on a second new profile, and set the BraveAIChatEnabled policy to off on a third.
 - **Brave Search**: we opened search.brave.com in the same Brave build with a new profile, ran one search with Answer with AI on, turned it off, and read the cookies the site saved. A second search was stopped by a bot check, so we don't show results with the setting off.

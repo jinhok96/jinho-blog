@@ -69,3 +69,10 @@
 
 - 2026-10-17: 비개발자 기준(명령줄 금지)에 따라 명령줄 OCR 엔진(Tesseract·RapidOCR·EasyOCR·docTR) 비교 표·결과·추천·설치 단계·What we tested와 이미지 5장 전부 제거. 본문은 Snipping Tool·PowerToys Text Extractor·Live Text·NAPS2(모두 문서 기반, 직접 측정 없음)만 남김. 제목 "Image to Text Offline for Free on Windows and Mac", 설명 교체, thumbnail 삭제, 삭제된 글(PDF to Word·배경 제거·TTS) 링크 정리. 측정 자료(`summary.json`·`results/`)는 보관
 - 2026-10-25: NAPS2 8.5.1 GUI 직접 측정(50장, 설정 3가지) 추가 — 사용 단계·정확도 표·Best/노이즈 제거 비교·How we tested NAPS2, 본문 이미지 3장(OCR 설정 화면 캡처·유형별 정확도·영수증 출력 비교, `naps2_charts.py`) + 대표 이미지, 둘째 문단을 측정 결과로 교체, `updatedAt` 2026-10-25. 검증 기록 V5
+
+## NAPS2 8.6.0 단계 확인 (2026-11-08 KST 세션 89, 개선 세션 6 · 반복 일정, 글 수정 없음)
+
+- 계기: `tools/app_versions.py`가 글의 NAPS2 8.5.1보다 새 8.6.0을 찾음. 8.6.0 변경 목록(raw.githubusercontent.com `cyanfish/naps2/master/CHANGELOG.md`) 첫 줄이 "New combined Settings window"라 글의 OCR 단계(OCR 버튼 → OCR Setup)가 바뀌었는지 확인
+- 환경: `github.com/cyanfish/naps2/releases/download/v8.6.0/naps2-8.6.0-linux-x64.deb`(naps2.com/download의 최신판)를 `dpkg -i`로 설치, Xvfb 1440×900 + openbox, 처음 실행(설정 없음), 2026-11-07 15:34~15:36 UTC
+- 결과: 툴바에 **OCR** 버튼 그대로 → 처음 누르면 OCR Download(English 체크, "Estimated download size: 12.3 MB") → Download → **OCR Setup**(Make PDFs searchable using OCR 꺼짐·OCR language English·OCR mode Fast·Fix white balance and remove noise 꺼짐·Pre-emptively run OCR after scanning 켜짐, 8.5.1과 같은 기본값). 새 **Settings** 창(툴바 오른쪽)은 General·PDF·Image·Email Settings·Keyboard Shortcuts·Toolbar Settings 6개로 OCR 항목이 없음 → 글의 1~2단계 그대로 맞음 (`naps2/naps2-860-ocr-download.webp`·`naps2-860-ocr-setup.webp`·`naps2-860-settings.webp`)
+- 글은 고치지 않음: V5(11-22 판정) 대상이고 단계가 그대로라 정확성 수정이 필요 없음. 본문의 "version 8.5.1 was current as of October 2026"은 날짜가 붙은 문장이라 틀리지 않음. 정확도(50장) 재측정은 하지 않음(변경 목록에 OCR 엔진 변경 없음, "Fixed some PDF import crashes"·"OCR: Fixed an error on some Linux OS's"만) → V5 판정 뒤 갱신할 때 8.6.0으로 다시 측정할지 정함

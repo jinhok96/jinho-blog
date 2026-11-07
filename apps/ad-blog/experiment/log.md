@@ -2,6 +2,57 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-07 · 세션 88 (정기 실행, 개선 세션): V7·노하우 9 판정용 DB 구조 개선(글별 발견 경로 첫 관측값) + sitemap.xml 재다운로드 관찰
+
+세션 시각: 2026-11-07 18:15 KST(토) → 18시 실행이라 개선 세션. 같은 날 앞 세션 86(`turn-off-copilot-in-edge` Edge 157 재확인)·87(외부 링크 점검) → 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(55f3d00)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-10 ~ 11-07, 세션 87 이후 바뀐 값만)**
+
+- 노출 1,096 → **1,112**, 클릭 18 → **19**, CTR 1.7%, 평균 순위 23.2 → 23.5 (`spotify-family-qr-code-verification` 275·18.1 / `turn-off-ai-in-chrome` 199·17.9·클릭 4 / `image-to-text-offline-free` 131·16.5·클릭 3. 집계 창이 하루 밀림)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5(노출 142) → 10-19~25 5(576) → 10-26~11-01 5(228) 그대로 · 11-02~ 4 (진행 중, 노출 163)
+- sitemap: `rss.xml` 11-06 04:28 그대로, **`sitemap.xml` 11-06 22:41:22 UTC 다운로드** (11-02 04:15 뒤 처음, 약 4.8일 간격)
+- URL 검사: 색인 17/54 그대로. `gsc_report.py` 회차 `Discovered` 18 · `URL is unknown` 19 (`arc-browser-shutting-down`·`turn-off-ai-in-brave`·`turn-off-copilot-in-word`·`free-image-converter-photo-tools`가 이 회차 unknown — 세션 81~87과 같은 흔들림). **`turn-off-gemini-on-android-phone` 칸이 rss.xml만 → rss.xml · sitemap.xml** (11-05 발행 = 11-02 다운로드 뒤 생긴 URL). 피드 밖 `URL is unknown` 15편은 네 번째 sitemap.xml 다운로드(10-22·10-27·11-02·11-06) 뒤에도 그대로. `link_seen.py`: 가장 최근 크롤링 11-06 08:36 UTC(`image-to-text-offline-free`) 그대로, 미색인 37편 중 Google이 본 링크 20편 그대로
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 27일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 1~3 처리됨(세션 82 기록). 다음 점검 11-09
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기(3·5·6번 V7 11-13 뒤, 4번 11-10 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤). 대표 이미지 규칙 미적용 6편(`free-offline-ai-tools`·`gemini-android-auto-personal-intelligence`·`office-2021-end-of-support`·`spotify-family-qr-code-verification`·`transcribe-audio-offline-free`·`turn-off-ai-in-chrome`)도 모두 V 판정·콘텐츠 정리 대상. 1(색인)은 새 크롤링 없음, 2는 보류 2건, 3은 허브 4/4. 4는 페이지×검색어 116행 중 20위 안 32행이 V 판정 중인 글(V2·V3·V4·V5·V8)이거나 노출 1~4회, 최근 7일 새 검색어는 `windows-11-24h2-end-of-support`(39~97위, 콘텐츠 정리 5번)·`merge-pdf-files-free`(34~94위) → 보강 근거 없음. 5는 `stale_check.py`(기준일 11-07) 28문장 — 세션 86 이후 새로 걸린 문장 없음, 세션 81이 고른 6문장은 모두 V7 뒤 갱신 예정 글. 6은 Firefox 160(11-10)·Windows(11-10)·Chrome 158(11-17)·Edge 158(11-19 주) 전, Apple은 세션 87(같은 날 06시) 확인 그대로. → **7 · DB 구조 개선**: 다음 판정 V7(11-13)과 노하우 9는 글별 '언제 처음 발견·피드·sitemap·크롤링됐는지'가 필요한데, 지금은 회차마다 흔들리는 URL 검사 값을 history `posts` 문서(약 111 KiB × 회차)에서 읽어야만 알 수 있음(그 문서를 파일로 받는 것은 세션 79부터 거부) → 실제로 이번 세션도 sitemap.xml 재다운로드 효과를 log.md 표와 손으로 맞대 봄
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — Crawlability & Indexation 체크리스트(robots·XML sitemap 정규 URL만·클릭 깊이·고아 글·noindex·canonical·리디렉트 체인·soft 404·중복·HTTP→HTTPS·www·끝 슬래시)를 지난 점검 기록과 대조해 사이트 쪽에서 아직 안 본 색인 원인이 없음을 확인(11-02 주간 점검·세션 74·75·79·87), 남는 요인은 Authority & Links(외부 링크 0·운영 27일)라 사용자 외부 링크 후보 그대로 → 작업 선택 유지. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 7 · DB 구조 개선 | `tools/dashboard_data.py`, `dashboard/first-seen.json` | 새 `discovery_fields()`: 글별 **발견 경로 첫 관측값** — `discoveredAt`(URL 검사가 처음 `URL is unknown`이 아닌 회차 시각, 그보다 이른 크롤링이 있으면 그 시각) · `discoveredVia`(그 회차의 사이트맵·피드 칸, `[]` = 사이트맵·피드 없이, 추적 전 색인 글은 null) · `feedSeenAt`·`sitemapSeenAt`(칸에 rss.xml·sitemap.xml이 처음 보인 회차) · `crawledAt`(처음 본 크롤링, 색인 여부와 무관). 처음 본 값만 고정해 흔들림(Discovered ↔ unknown)에 영향받지 않음. `first-seen.json`·`posts`에 기록 시작 시각 `discoverySince`. **소급** (그 전 값은 상한): 세션 81 회차 `2026-11-04T21:54:53Z`에 이미 `Discovered`였던 미색인 20편 → `discoveredAt`·`sitemapSeenAt` 그 시각, 17편은 `feedSeenAt`도(3편 `pixel-watch-safety-signal-ending`·`gemini-free-flash-lite`·`duckduckgo-no-ai`는 `discoveredVia` sitemap.xml, `feedSeenAt` 세션 85 회차 `2026-11-06T09:44:48Z`), `turn-off-ai-in-brave`·`turn-off-gemini-on-android-phone` → 세션 85 회차에 rss.xml로 발견. 색인 17편은 `discoveredAt` = 첫 크롤링. 시험: 흔들림·소급 유지·색인 글·회차 사이 크롤링·링크로만 발견(빈 목록 저장)·URL 검사 생략 회차·파일 왕복 6가지 통과. 기존 키·history는 그대로 | - (지표를 노린 변경 아님) |
+| 2 | 7 · 대시보드 개선 | `dashboard/index.html` | 글 상세 '색인·글 정보'에 '첫 발견'(경로)·'피드·사이트맵 첫 확인'(rss.xml·sitemap.xml), '첫 크롤링'은 `crawledAt` 우선. 기록 시작 전 소급 값은 `≤`로 표시. `dashboard_check.cjs` 통과(데스크톱·모바일 375px, 글별 표 54줄, 가로 넘침 없음), 1280·375px 상세 캡처로 줄바꿈 확인 | - |
+| 3 | 성과 검증 기록 | traffic-playbook V7·노하우 9 | V7 행에 sitemap.xml 11-06 22:41 재다운로드 관찰과 판정 방법(첫 관측값으로 피드 첫 다운로드 뒤 발견·크롤링·색인 vs 피드 밖 15편), 노하우 9 중간 관찰(2026-11-07) 추가 | V7 (기존 행) |
+| 4 | 문서 | README 운영 대시보드·갱신 절차, `.claude/ad-blog.md` | `posts`·`first-seen.json`의 새 칸과 소급 규칙 | - |
+
+**알게 된 것**
+
+- **sitemap.xml도 약 5일 간격으로 다시 받아 감** (10-22 23:03 → 10-27 11:58 → 11-02 04:15 → 11-06 22:41): 다시 받을 때 새로 칸이 생기는 것은 직전 다운로드 뒤 생기거나 `lastmod`가 바뀐 URL뿐이고(`turn-off-gemini-on-android-phone`), 오래 그대로인 15편은 네 번째 다운로드 뒤에도 `URL is unknown` → 11-13 뒤 15편 갱신 계획(의미 있는 `updatedAt` → 피드 맨 앞 + `lastmod`)이 맞는 방향 (해석)
+- URL 검사 상태는 같은 세션 안에서도 회차마다 흔들려(이번 대시보드 회차는 `duckduckgo-no-ai`·`pixel-watch-safety-signal-ending`·`free-image-converter-photo-tools`·`turn-off-ai-in-brave`가 unknown) 한 회차 값으로는 '발견됐는지'를 판정할 수 없음 → 처음 본 값을 고정하는 방식이 필요했음
+- 사이트 쪽 색인 체크리스트는 모두 확인됐고, 남은 요인은 크롤링 수요(사이트 나이·외부 링크)라 사이트 안에서 할 수 있는 일은 '실제 갱신으로 피드·sitemap에 다시 알리기'뿐 (해석)
+
+**다음 할 일**
+
+- **사용자(선택): 외부 링크 1곳** — [outreach.md](outreach.md) 1번 Brave Community 답글 초안 검토 (세션 79 그대로. `seo-audit` 기준 남은 색인 요인이 외부 링크·사이트 나이)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 27일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **V7 판정 — 11-13 개선 세션**: `first-seen.json`(또는 대시보드 `posts`)의 `feedSeenAt`·`discoveredAt`·`crawledAt`·`indexedAt`으로 피드 첫 다운로드(11-06 04:28) 뒤 발견·크롤링·색인된 글을 세고 피드 밖 15편과 비교 (history를 읽지 않아도 됨). 판정 뒤 콘텐츠 정리 3·5·6번과 미발견 15편 갱신(세션 81 순서) — 갱신한 글은 `updatedAt` → `discoveredAt`·`crawledAt` 간격을 log.md에 기록
+- Claude: **Firefox 160 — 11-10 14:00 UTC 출시 뒤 첫 개선 세션(11-11 06시 KST)에서 `turn-off-ai-in-firefox` 재확인** (세션 86 그대로)
+- Claude: **Edge 158(11-19 주) 출시 뒤 개선 세션에서 `turn-off-copilot-in-edge` 재확인** (세션 86 그대로)
+- Claude: V 판정이 끝난 글의 남은 이동 링크 3개는 그 글을 다음에 고칠 때 함께 바꿈 (세션 87 그대로)
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵 (세션 85 그대로)
+- Claude: **11-17 직후 개선 세션**에서 Gemini FAQ(18560919)·도움말(17094296) 재확인, Chrome 158(11-17) 재확인 (세션 80·83 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정(11-13) 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 검증 기록 V1(11-11)·V2(11-12)·V7(11-13)·V3(11-18)·V4·V5(11-22)·V6(11-26)·V8(12-03)
+- Claude(11-09 월 일반 세션): 세션 83 후보 그대로 (`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`, `photo-video`·`offline-ai` 직접 측정 후보 함께 비교). 새 글은 발행 전 `extlink_check.py --slug {slug} --only-problems`
+- Claude: 외부 링크 점검 다음 실행 — 12월 첫 개선 세션 무렵
+- Claude: 발행 54편 (허브 4개)
+- 대시보드: 페이지 **Version 33** 발행(글 상세 '첫 발견'·'피드·사이트맵 첫 확인', 라이브 판이 main 판과 같음을 끝까지 읽어 확인한 뒤) + `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-07T09:49:23Z = `discoverySince`, DB 문서 410개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값: `turn-off-gemini-on-android-phone` `sitemapSeenAt` 2026-11-07T09:49:23Z(이 회차에 처음 sitemap.xml), 소급 22편 유지(이 회차에 unknown으로 흔들린 `free-image-converter-photo-tools`·`google-gmail-photos-ads`·`turn-off-ai-in-brave`·`turn-off-ai-in-firefox`도 값 그대로). 이 회차 URL 검사는 색인 17 · `Discovered` 18 · unknown 19 · `inFeed` 18(미색인 14), 28일 노출 1,112·클릭 19·평균 23.5위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 37편 중 Google이 본 링크 20편, `summary.adsense` 운영 27일·색인율 0.315(17/54)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회수 102·방문 94, `engagement` GA4 조회 16·사용자 11·세션 13(참여 6)·참여 138초·90% 스크롤 4. `posts` 문서는 압축 JSON 약 114 KiB(한도 256 KiB의 45%). 앞서 같은 세션 09:38:43Z에 만든 회차는 log.md 기록 전이라 올리지 않고 버림(`first-seen.json`도 소급 상태로 되돌린 뒤 다시 생성). 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 검증: lint·type-check·test(36파일 274개)·build 통과(컨테이너에 `node_modules`가 없어 `pnpm install --frozen-lockfile` 뒤 실행), 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. 글·사이트 코드 변경 없음
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-07 · 세션 87 (정기 실행, 개선 세션): 외부 링크 점검 도구(`extlink_check.py`)로 1차 출처 링크 419개 점검 → 옮겨진 문서 13개 링크 교체 + 사이트 전체 On-Page 점검
 
 세션 시각: 2026-11-07 06:15 KST(토) → 06시 실행이라 개선 세션. 같은 날 앞 세션 86(`turn-off-copilot-in-edge` Edge 157 재확인) → 그 글은 건드리지 않음. 열린 PR 없음. 작업 브랜치를 `origin/main`(694023c)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

@@ -10,7 +10,7 @@
     "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src scripts",
     "eslint": "eslint src scripts --fix",
-    "type-check": "tsc --noEmit",
+    "type-check": "next typegen && tsc --noEmit",
     "test": "vitest"
   },
   "dependencies": {

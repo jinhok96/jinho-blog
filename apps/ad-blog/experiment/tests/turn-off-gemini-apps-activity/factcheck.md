@@ -63,3 +63,22 @@ slug: `turn-off-gemini-apps-activity`
 | Privacy Hub 마지막 갱신 2026-10-23 | 13594961 | 원문 머리말 "Last updated: October 23, 2026" |
 
 쓰지 않은 것: 18세 미만·Family Link 계정의 기본값(공식 문장 확인 못 함), Gemini 앱 화면 안의 정확한 버튼 위치(계정 없음, 도움말 문장만 씀), Keep Activity 끄기가 Saved info(Instructions)에 주는 영향(문서에 없음).
+
+## 2026-11-08 재확인 (세션 90, 개선 세션)
+
+2026-11-07 21:50~22:05 UTC, 이 폴더 `source-*.txt` 16개 URL을 같은 방식(Chromium 렌더링, 접힌 단락 펼침)으로 다시 열어 줄 단위로 비교 (비교 스크립트는 세션 스크래치패드, 결과는 log.md 세션 90). 바뀐 줄이 있는 쪽은 `source-gemini-{ID}-{플랫폼}-2026-11-08.txt`로 새로 저장 (파일 이름 날짜는 한국 날짜).
+
+| 출처 | 10-26 사본 대비 | 글에 반영 |
+| --- | --- | --- |
+| 13278892 활동 관리 (Computer·Android·iPhone) | 바뀐 줄 없음. 컴퓨터 경로 그대로 "Click Settings & help > Activity" (`source-gemini-13278892-desktop-2026-11-08.txt`) | 경로는 그대로 두고 다른 이름을 덧붙임 |
+| 16598406 Connected Apps (Computer·Android·iPhone) | 웹: "At the bottom, click Settings & help > Personal Intelligence > Connected Apps" → "click **Settings** > …", 연결 끊기 "turn it off" → "**More options > Disconnect**", 연결 "turn it on" → "**Add**". 휴대폰 브라우저: "At the top, tap Menu > Settings > …". 앱(Android·iPhone): 스위치 그대로 | 메뉴 이름 (이 글), Disconnect 단계 (`chrome-autofill-settings`) |
+| 16598469 기억 · 13275746 피드백 | "Settings & help" → "Settings" | 메뉴 이름 |
+| 13275745 Use Gemini Apps | 위치 정보 단계 "At the top left, tap Menu > Settings & help" → "At the top, select Menu > Settings", 'Check other responses(drafts)' 절 빠지고 'rich cards' 절 추가, 임시 채팅 단계 그대로 | 메뉴 이름 (임시 채팅 문장 그대로) |
+| 13594961 Privacy Hub | "Last updated: October 23" → "October 26". 아바타 공유 Q&A·Memory summary 추가, Gemini on Google TV·Google Built-in 추가. **"Where is my data saved when Gemini and Google Assistant work together?" Q&A 삭제** (Assistant가 앱 밖에서 동작하면 Web & App Activity에 저장된다는 문장). 72시간·24시간·human reviewers·3년·Gemini Notebook·Device assistance 문장 수 그대로 | 'What Google still keeps' 셋째 항목을 남아 있는 문장 "If you change your Gemini Apps settings, other Google settings won't change … Search Services History, Web & App Activity, or Timeline, may keep saving …"으로 교체. Gemini for Home 문장은 그대로 있음 |
+| 16836988 Connected Apps 데이터 (p=pn_pi_consent) | Maps "(excluding Timeline)" 추가, Contacts의 "US only, English only, and requires an AI Ultra subscription" 삭제 | 이 글에는 해당 문장 없음 (`gemini-android-auto-personal-intelligence` 46행에 있음 → 콘텐츠 정리 3번 때) |
+| 17094296 스킬 | 파일 형식 목록·Add 버튼 (세션 80에서 `gemini-gems-to-skills`에 반영한 변경) | 이 글은 "skills가 멈춤"만 써서 해당 없음 |
+| 나머지 (13666746·13695044·14620100·16938321·Gems p=pn_gems) | 바뀐 줄 없음 | - |
+| blog.google 2025-08-13 | 추출 방식 차이(curl 사본 vs Chromium)만, 문장 같음 | - |
+
+- 로그인하지 않은 gemini.google.com은 Chromium에서 빈 화면(버튼 'Sign in'·'Google apps'만)이라 실제 버튼 이름은 확인 못 함 → 본문은 "도움말 페이지끼리 이름이 다르다"로만 씀
+- 검증 유형 그대로 (조사형)

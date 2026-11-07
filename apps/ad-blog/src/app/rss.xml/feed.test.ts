@@ -18,6 +18,7 @@ function makePost(slug: string, overrides: Partial<FeedPost> = {}): FeedPost {
     title: `제목 ${slug}`,
     description: `설명 ${slug}`,
     path: `/posts/${slug}`,
+    thumbnail: `/t/${slug}.webp`,
     category: 'ai-tools',
     createdAt: '2026-01-01T00:00:00.000Z',
     updatedAt: '2026-01-01T00:00:00.000Z',
@@ -48,7 +49,9 @@ describe('buildRssFeed', () => {
     const xml = buildRssFeed([makePost('a')]);
 
     expect(xml.startsWith('<?xml version="1.0" encoding="UTF-8"?>\n')).toBe(true);
-    expect(xml).toContain('<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">');
+    expect(xml).toContain(
+      '<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:media="http://search.yahoo.com/mrss/">',
+    );
     expect(xml).toContain('<title>ToolProof</title>');
     expect(xml).toContain('<link>https://my-blog.com</link>');
     expect(xml).toContain('<language>en-US</language>');
@@ -69,6 +72,7 @@ describe('buildRssFeed', () => {
         '      <pubDate>Wed, 04 Mar 2026 05:06:07 GMT</pubDate>',
         '      <description>설명 a</description>',
         '      <category>AI Tools</category>',
+        '      <media:content url="https://my-blog.com/t/a.webp" medium="image" />',
         '    </item>',
       ].join('\n'),
     );
@@ -104,6 +108,21 @@ describe('buildRssFeed', () => {
     expect(tagContents(xml, 'title')).toContain('A &amp; B &lt;C&gt;');
     expect(tagContents(xml, 'description')).toContain('&quot;인용&quot; &amp; &apos;따옴표&apos;');
     expect(tagContents(xml, 'link')).toContain('https://my-blog.com/posts/%ED%95%9C%EA%B8%80&amp;slug');
+  });
+});
+
+describe('buildRssFeed 이미지 (media:content)', () => {
+  it('ogImage(1200x630) 우선, 없으면 thumbnail(크기 생략)', async () => {
+    const { buildRssFeed } = await loadFeed();
+    const xml = buildRssFeed([
+      makePost('a', { ogImage: '/_static/mdx/posts/og/a.jpg', thumbnail: '/t/a.webp' }),
+      makePost('b'),
+    ]);
+
+    expect(xml).toContain(
+      '<media:content url="https://my-blog.com/_static/mdx/posts/og/a.jpg" medium="image" width="1200" height="630" />',
+    );
+    expect(xml).toContain('<media:content url="https://my-blog.com/t/b.webp" medium="image" />');
   });
 });
 

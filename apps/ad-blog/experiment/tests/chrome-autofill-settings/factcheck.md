@@ -81,3 +81,15 @@ AdSense 거절 대응 [콘텐츠 정리](../../clusters.md#콘텐츠-정리-2026
 **Chrome 157 확인** (2026-11-03 21:50 UTC): Chrome 157은 11-03 안정판 승격(chromereleases.googleblog.com "Stable Channel Update for Desktop", Linux 157.0.8103.38·Windows/Mac .38/.39)이지만 dl.google.com Linux 저장소 `Packages`·versionhistory API Linux 안정판은 아직 156.0.8078.79 (157 deb 404) → Google이 공개하는 Chrome for Testing 157.0.8103.38 linux64로 확인. `survey157.cjs`(Node Playwright, Xvfb, 새 프로필) → `source-chrome-157-settings-text.txt`: Autofill and passwords·Contact info·Payments·Identity docs·Travel·Password Manager 설정의 스위치 이름·켜짐/꺼짐/회색이 156 기록(`source-chrome-156-settings-text.txt`)과 같음. 언어 파일(`../chrome-enhanced-autofill-gmail/pak_strings.py`) 비교: 이 글이 인용한 Chrome 문구는 157에 모두 있음(일부는 Chrome for Testing이라 "Chromium" 표기), 바뀐 문구는 단축키 줄 "Press Ctrl twice anywhere on the web to find and fill more info" 등 3개 (`source-chrome-157-strings-check.txt`)
 
 **옮기지 않은 것**: 칼럼의 `Our take`(편집 정책상 견해는 칼럼에만 → 상시 글은 상황별 추천 1줄로), 타임라인 그래픽(11-03 Chrome 157 예정 등 지난 일정), 설정 화면 캡처(이 글의 설정 화면 캡처와 겹침), 스위치별 효과 그래픽(본문 목록과 겹침), "What to watch next"(Photos 문구는 본문 1문장으로)
+
+## 2026-11-08 재확인 (세션 90, 개선 세션): Gemini Connected Apps 웹 단계
+
+`turn-off-gemini-apps-activity` 출처 재확인(같은 날, 그 폴더 factcheck.md)에서 Gemini 도움말 16598406의 웹 단계가 바뀐 것을 발견 → 이 글 'How do you stop Chrome from filling forms with your Gmail?'의 'Keep Gmail away from Gemini everywhere' 항목만 고침.
+
+| 주장 | 1차 출처 (2026-11-07 22:02 UTC) | 결과 |
+| --- | --- | --- |
+| 웹 gemini.google.com: 아래 **Settings** > Personal Intelligence > Connected Apps, Google Workspace 옆 **More options > Disconnect** (연결은 **Add**) | support.google.com/gemini/answer/16598406 Computer (`../turn-off-gemini-apps-activity/source-gemini-16598406-desktop-2026-11-08.txt`) | 11-03 UTC(세션 78)에는 "Settings & help", 스위치 끄기 → 본문 교체, 옛 이름은 괄호로 |
+| Gemini 앱(Android·iPhone): Menu > 프로필 사진 > Personal Intelligence > Connected Apps, 스위치 끄기 | 같은 문서 Android·iPhone (`…-android-2026-11-08.txt`·`…-ios-2026-11-08.txt`) | 그대로 → "turn off Google Workspace"를 앱 문장으로 옮김 |
+| 변경이 Gemini에 "until days later" 닿음 | 같은 문서 | 그대로 |
+
+- How we tested 'Gmail suggestions' 항목에 11-07 재확인 문장 추가, `updatedAt` 2026-11-07T22:10Z (RSS 피드 안 글이라 순서만 맨 앞, 피드 20편 집합 그대로)

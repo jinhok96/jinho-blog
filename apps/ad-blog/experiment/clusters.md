@@ -58,7 +58,7 @@ AdSense "가치가 별로 없는 콘텐츠" 거절 대응([README](README.md#ads
 
 1. ~~통합: `chrome-enhanced-autofill-gmail`(news) → `chrome-autofill-settings` (같은 Chrome 156 자동 완성 스위치)~~ — 2026-11-04 세션 78 완료 (두 글 28일 노출 0·둘 다 `Discovered` → 상시 글을 남김. Gmail 기능 절(조건·검토 안내 문구·출처 보기·제안 숨기기·Connected Apps)·표 행·FAQ 1개·조건 그래픽을 옮기고 1차 출처 5쪽 재확인, Chrome 157(Chrome for Testing 157.0.8103.38) 설정 화면·문구 확인, 308 리디렉트, 링크 3곳 교체)
 2. ~~통합: `google-phone-number-verification`(news) → `remove-phone-number-from-google-account` (같은 Google 계정 전화번호)~~ — 2026-11-02 세션 72 완료 (두 글 28일 노출 0·둘 다 `Discovered` → 상시 글을 남김. 모든 계정에 붙는 이유·영향 표·도움말 3쪽 비교·새 휴대폰 계정 식별·Better sharing을 옮기고 1차 출처 4쪽 재확인, 308 리디렉트, 링크 2곳 교체. 1번은 Chrome 157(11-03) 뒤로 미룸)
-3. 통합 + 전환: `google-gmail-photos-ads` + `gemini-android-auto-personal-intelligence`(둘 다 news, Personal Intelligence의 Gmail·Photos 사용) → 상시 글 1편 (backlog `google personal intelligence settings` 후보와 합침)
+3. 통합 + 전환: `google-gmail-photos-ads` + `gemini-android-auto-personal-intelligence`(둘 다 news, Personal Intelligence의 Gmail·Photos 사용) → 상시 글 1편 (backlog `google personal intelligence settings` 후보와 합침). 2026-11-08 세션 90: Gemini 도움말이 바뀜 — 웹 메뉴 'Settings & help' → 'Settings', 웹 Connected Apps 끊기 스위치 → 'More options > Disconnect'(앱은 스위치 그대로), Contacts의 'US only·English only·AI Ultra' 조건 삭제, Maps '(excluding Timeline)' 추가 (사본 `tests/turn-off-gemini-apps-activity/source-gemini-16598406-*-2026-11-08.txt`) → 통합 글은 새 단계로 (`gemini-android-auto-personal-intelligence` 46·64·67행이 옛 문구)
 4. 전환: `office-2021-end-of-support` (10-13 지원 종료 지남)
 5. 전환: `windows-11-24h2-end-of-support` (10-13 Home·Pro 업데이트 종료 지남, 11-10 Patch Tuesday 뒤 첫 누락 업데이트 확인과 함께)
 6. 검토: `iphone-duo-sold-out` + `iphone-duo-cracked-screen` (같은 기기 칼럼 2편, 상시 글 없는 `phones-subscriptions`) → 구매·수리 비용 상시 글 1편으로 합칠지

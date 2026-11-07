@@ -3,7 +3,7 @@ import type { ReactNode } from 'react';
 
 import { AdSenseScript } from '@/core/ads';
 import { AnalyticsScript } from '@/core/analytics';
-import { ADSENSE_CLIENT, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME, SITE_URL } from '@/core/config';
+import { ADSENSE_CLIENT, PINTEREST_DOMAIN_VERIFY, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME, SITE_URL } from '@/core/config';
 import { SkipLink } from '@/core/ui';
 
 import { Footer } from '@/modules/footer';
@@ -21,8 +21,12 @@ export const metadata: Metadata = {
   },
   description: SITE_DESCRIPTION,
   applicationName: SITE_NAME,
-  // AdSense 사이트 소유권 확인 (게시자 ID 설정 시)
-  ...(ADSENSE_CLIENT && { other: { 'google-adsense-account': ADSENSE_CLIENT } }),
+  other: {
+    // AdSense 사이트 소유권 확인 (게시자 ID 설정 시)
+    ...(ADSENSE_CLIENT && { 'google-adsense-account': ADSENSE_CLIENT }),
+    // Pinterest 웹사이트 소유 확인
+    'p:domain_verify': PINTEREST_DOMAIN_VERIFY,
+  },
 };
 
 export const viewport: Viewport = {

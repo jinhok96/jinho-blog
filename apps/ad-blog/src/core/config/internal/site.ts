@@ -47,6 +47,9 @@ export const AUTHOR_SAME_AS: string[] = [];
 /** 연락처 이메일 (정적 페이지 MDX에서 `<ContactEmail />`로 표시) */
 export const CONTACT_EMAIL = 'toolproofblog@gmail.com';
 
+/** Pinterest 웹사이트 소유 확인 코드 (`p:domain_verify` 메타 태그, RSS 자동 게시에 필요) */
+export const PINTEREST_DOMAIN_VERIFY = 'f9211d070d3362c6981ba2f74fb85fb0';
+
 /** 기본 OG 이미지 (scripts/registry.ts가 SITE_NAME으로 생성, 1200x630 JPEG) */
 export const DEFAULT_OG_IMAGE = '/_static/og-default.jpg';
 export const OG_IMAGE_WIDTH = 1200;

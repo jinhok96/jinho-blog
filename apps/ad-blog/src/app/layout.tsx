@@ -3,7 +3,14 @@ import type { ReactNode } from 'react';
 
 import { AdSenseScript } from '@/core/ads';
 import { AnalyticsScript } from '@/core/analytics';
-import { ADSENSE_CLIENT, PINTEREST_DOMAIN_VERIFY, SITE_DESCRIPTION, SITE_LANGUAGE, SITE_NAME, SITE_URL } from '@/core/config';
+import {
+  ADSENSE_CLIENT,
+  PINTEREST_DOMAIN_VERIFY,
+  SITE_DESCRIPTION,
+  SITE_LANGUAGE,
+  SITE_NAME,
+  SITE_URL,
+} from '@/core/config';
 import { SkipLink } from '@/core/ui';
 
 import { Footer } from '@/modules/footer';

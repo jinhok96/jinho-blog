@@ -12,7 +12,7 @@
     "lint": "concurrently \"pnpm run lf\" \"pnpm run eslint\" \"pnpm run type-check\"",
     "lf": "prettier --write -l --end-of-line lf src",
     "eslint": "eslint src --fix --ext .ts,.tsx,.js,.jsx",
-    "type-check": "tsc --noEmit",
+    "type-check": "next typegen && tsc --noEmit",
     "generate-routes": "nextjs-routes",
     "test": "vitest"
   },

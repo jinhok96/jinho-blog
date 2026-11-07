@@ -1,0 +1,42 @@
+# 가져온 시각: 2026-10-28T03:34Z (curl)
+# 원본: https://www.apple.com/legal/applecare/fees-deductibles/
+# 첫 표 발췌
+
+Fees and Deductibles
+AppleCare+, AppleCare+ with Theft and Loss, AppleCare One
+Separate service fees/excesses/deductibles apply to each repair or replacement
+Apple Watch:
+$69 for accidental damage
+$79 for accidental damage to Apple Watch Ultra and Hermès
+$119 for theft and loss
+iPhone:
+$29 for outer display and back glass damage
+$19 for cover layer-only damage
+$99 for inner display damage
+$99 for other accidental damage
+$149 for theft and loss
+iPad:
+$29 for accessory damage
+$129 for theft or loss (all models)
+iPad Air (M2 and newer), iPad Pro (M4 and newer), iPad (A16), iPad mini (A17 Pro):
+$29 for screen damage
+$99 for accidental damage
+All other iPad models:
+$49 for other accidental damage
+AirPods and Beats:
+$29 for accidental damage
+Apple TV and Home:
+$15 for accidental damage to Apple TV
+$15 for accidental damage to HomePod mini
+$39 for accidental damage to HomePod
+$39 for accidental damage to Apple HomeView
+Apple Vision Pro:
+$29 for included accessory damage
+$299 for other accidental damage
+Mac:
+MacBook Neo:
+$49 for screen or enclosure accidental damage
+$149 for other accidental damage
+All other Mac models and Apple Display:
+$99 for screen or enclosure accidental damage
+$299 f

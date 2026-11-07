@@ -1,0 +1,108 @@
+URL: https://support.google.com/gemini/answer/14554984?hl=en
+TITLE: Get started with the Gemini mobile app - Android phone & tablet - Gemini Apps Help
+
+Get started with the Gemini mobile app
+ Chat with your Gemini mobile app to supercharge your ideas. Get help learning in new ways, writing thank you notes, planning events, and more. Gemini can use connected apps, like Google Workspace and YouTube Music, making it easy to get things done. Use text, voice, images and your camera to get help in new ways.
+ Your Gemini mobile app may be any of the following:
+ On Android: The Gemini app, including as your mobile assistant.
+ On iOS: The Gemini app.
+ Important: 
+ The Gemini mobile app may not be available for all languages, devices, accounts, or locations. Learn more about availability .
+ If you have access to Gemini Apps with a work or school account, some Gemini mobile app features aren’t available. Learn how these users can access the Gemini mobile app .
+ Want to manage activations or remove Gemini? Learn how to manage or delete the Gemini app .
+ Use Gemini as your primary mobile assistant
+ On Android, if you set the Google app as the default assist app on your device, you can choose Gemini as your mobile assistant. 
+ When you use Gemini as your primary mobile assistant:
+ Other devices with Google Assistant built-in — such as Smart Displays, smart speakers, TVs, cars, and Pixel Tablets — will continue to be directly powered by Google Assistant.
+ Note : “Hey Google” and some features previously available in Google Assistant are not available in all languages and countries, or for supervised accounts. Learn more about which languages your Gemini mobile app is available in .
+ What you need
+ A personal Google Account or a work or school Google Account that has access to Gemini Apps.
+ If you’re using a work or school account, check if you have a plan or license that includes access to Gemini Apps .
+ If you manage a Google Account with Family Link, you can turn off access to Gemini Apps for users under 13 (or the applicable age in your country ) in Google Family Link settings.
+ You must be signed-in to your Google Account.
+ An eligible device you use in an available language and country or territory. Learn more about Gemini mobile app availability .
+ Important: To use Gemini as your mobile assistant, make sure the Google app is set as your device's default assist app.
+ Check if the Google app is your device’s default assist app 
+ On your Android device, open Settings .
+ Tap Apps Default apps .
+ Check if the app listed under “ Digital assistant app ” is the Google app .
+ If not, tap Digital assistant app Default digital assistant app (on some devices, setting name may vary), then select Google app from the options available.
+ Set up your Gemini mobile app
+ Some Android devices come with Gemini as the primary assistant out of the box. On these devices, to get started with Gemini:
+ Open the Gemini app, or
+ Activate Gemini by touch (such as long pressing the power button or swiping up from the corner of your screen).
+ On other Android devices where you use Google Assistant, if your device is eligible, you can get started with Gemini if you:
+ Get a notification from Google Assistant to switch to Gemini, or
+ Download the Gemini app from the Google Play Store.
+ If you switch to use Gemini through any of these methods, Gemini will replace Google Assistant as the primary assistant on your device. You can then get quick access to Gemini using “Hey Google” (if enabled) and touch methods that you previously used to access Google Assistant.
+ Note: Gemini will replace Google Assistant on your other paired mobile devices, like smart watches, headphones, and earbuds with Google Assistant built in. On other non-mobile devices, including Smart Displays, smart speakers, TVs, cars, and Pixel Tablets that are locked, including in Hub Mode, Google Assistant will continue to respond to “Hey Google.”
+ Tip: If you previously chose not to try Gemini, you can revisit this choice later to switch to Gemini .
+ Start a conversation
+ You can access your Gemini mobile app to chat a few different ways, depending on your device and settings: 
+ Chat by typing
+ To chat with Gemini by typing, open your Gemini mobile app. Use the on-screen keyboard to type, then tap Send . You can also type to chat in Gemini’s conversational overlay that comes up when you say “Hey Google” or activate Gemini by touch.
+ Chat with your voice
+ To chat with Gemini with your voice:
+ On your Gemini mobile app, tap Microphone .
+ Say your question or prompt.
+ The microphone stays open for up to 5 minutes to listen to your prompt.
+ To pause, tap Stop .
+ To resume, tap Microphone .
+ To share your prompt with Gemini, tap Send .
+ If the Google app is your default Android assist app, here are other ways you can activate Gemini:
+ Say “Hey Google” if enabled.
+ After you speak your query, it updates automatically.
+ Activate by touch, which differs by device.
+ Press and hold the power button.
+ Touch and hold Home.
+ Swipe up from the bottom corner of your screen.
+ Tip: If "Hey Google" doesn’t work, check if "Hey Google" & Voice Match are turned on.
+ On your Android device, open the Gemini app .
+ At the left, tap Menu Profile picture or initial Settings Talk to Gemini hands-free .
+ Turn on " Hey Google" .
+ To use "Hey Google" to chat with Gemini on your phone or tablet, set up Voice Match. To set up Voice Match, follow the on screen instructions so your assistant can recognize when you say “Hey Google.”
+ Note : “Hey Google” is not available in all languages, but you can still chat with Gemini with your voice when you tap Microphone . Learn more about which languages your Gemini mobile app is available in .
+ Chat with images
+ You can use a photo or what’s on your screen to chat with your Gemini mobile app.
+ To add a photo to your prompt, open your Gemini mobile app, then tap to take a photo or add from your photo gallery or files.
+ If the Google app is your default Android assist app, you can also chat about what’s on your screen by invoking Gemini over another app. Say “Hey Google” or activate Gemini by touch. Tap Ask about screen , then ask your questions.
+ Make sure your screen context setting is turned on. To check, open your Gemini mobile app. At the left, tap Menu your Profile picture or initial Settings Screen context . Make sure “use text from screen” and “use screenshot” are on .
+ Chat in the on-screen overlay
+ When you say “Hey Google” or activate Gemini by touch, like long pressing the power button, an on-screen overlay will open rather than the full app. If you open the on-screen overlay over another app, Gemini may use what’s on your screen to:
+ Make suggestions . When you open the on-screen overlay over some apps, you may get a suggestion to “ask about this screen.” For example, when you open the on-screen overlay over YouTube, you may see a suggestion to “ask about this video” when available.
+ Share generated images . When you generate images with Gemini, you can press and hold to drop them into other apps, if the other app allows it.
+ If you share an image through text message, make sure your device and plan support multimedia messages.
+ Switch to Gemini
+ You can switch to using Gemini as your primary assistant from Google in your settings. If you haven’t previously used the Gemini mobile app before, download the Gemini app from the Google Play Store. 
+ Turn on Gemini in the Google app 
+ On your Android device, open the Google app .
+ Tap your Profile picture or Initial Settings Google Assistant .
+ Tap Digital assistants from Google Gemini .
+ Follow the on-screen instructions.
+ Turn on Gemini in your device's Settings app 
+ On your Android device, open the Settings app.
+ Tap Apps Assistant Digital assistants from Google Gemini .
+ Follow the on-screen instructions.
+ Keep in mind, if you’re switching back to Gemini as your primary assistant:
+ When you say, “Hey Google” or activate your mobile assistant by touch (like when you press and hold the power button), Gemini will respond.
+ If your Keep Activity setting is turned on, data from your interactions with your Gemini mobile app will be saved to your Google Account and used as described in the Gemini Apps Privacy Notice .
+ Google Assistant data saved in Web & App Activity will not automatically be deleted, but you can review and delete it anytime.
+ Your Gemini mobile app & your location 
+ Learn about the location information Gemini Apps collect, why, and how is it used .
+ Your Gemini mobile app uses the location permissions you choose for the Google app , which hosts the digital assistant capabilities used by Gemini. Learn more about location permissions .
+ To check if Gemini is accessing and using your precise location:
+ On your Android device, open the Settings app. 
+ Tap Location App location permissions .
+ Tap Google .
+ Check whether “Use precise location” is on .
+ If it’s on , Gemini and other services in the Google app (like Search) can access and use your precise location.
+ If it’s off , Gemini and other services in the Google app (like Search) cannot access and use your precise location.
+ Choose location access for the app: Allow all the time , Allow only while using the app , Ask every time , or Don’t allow . 
+ Tip : Turning off your device location will impact other features and services hosted by the Google app, like weather and nearby results from Search.
+ Related resources
+ What you can do with your Gemini mobile app 
+ Manage or delete the Gemini app on your Android device 
+ Talk naturally with Gemini Live 
+ Generate and edit images with Gemini Apps 
+ Use & manage Connected Apps in Gemini 
+ Android phone & tablet iPhone & iPad More

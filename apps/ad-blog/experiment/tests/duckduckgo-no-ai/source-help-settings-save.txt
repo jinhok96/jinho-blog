@@ -1,0 +1,81 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/settings/save
+Fetched: 2026-11-01T15:34:33.447Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/settings/save
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Does DuckDuckGo Search track you?
+Is DuckDuckGo Search encrypted?
+Can my internet provider see my DuckDuckGo searches?
+How We Keep Local Results Anonymous
+How We Save Settings Anonymously
+How To Save Settings With URL Parameters
+About improving.duckduckgo.com
+About CSP Reports
+About the ‘t’ URL Parameter
+About the ‘r.duckduckgo.com’ Domain
+About the ‘links.duckduckgo.com’ Domain
+About the '*.nel.duckduckgo.com' domain
+Non-JavaScript Search
+Anonymous Favicons
+Ads by Tripadvisor on DuckDuckGo Private Search
+Ads By Microsoft on DuckDuckGo Private Search
+Ads By Yelp on DuckDuckGo Private Search
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+Search Privacy Protection
+How DuckDuckGo Keeps Your Search Settings Anonymous
+
+On the Search Settings page, your settings are saved via non-personal browser cookies (note: DuckDuckGo browsers handle things differently - more on this below). The DuckDuckGo setting cookies are a reflection of your current settings as a URL (see below) but without the "k" parameter. For example, the region setting is notated with, "kl" and a Canadian region setting would look like kl=ca-en in the URL. The cookie for that setting, though, would be named, "l" and it's content would be ca-en. Storage keys are documented on this page.
+
+If your settings keep getting cleared, that's because you have some process that is clearing your cookies (or you are switching computers). You could make an exception for duckduckgo.com from that clearing out process.
+
+To avoid cookies altogether, you could use our URL parameters. To make the use of the parameters easier on the Search Settings page there is a link entitled, Bookmarklets and settings data. Clicking this link will expand the Settings box and show you your settings as a web address (URL). You can set that web address as your homepage or as a bookmark/favorite, and then those settings should be respected thereafter (as long as you start from that page).
+
+In our browser, all DuckDuckGo settings are backed up within the browser itself and will not be cleared by clearing cookies or by using the Fire Button. We do this to ensure your preferences persist across the search and browser experience. To change or reset your settings visit Search Settings.
+
+If you save that URL you can also use it to load/restore your settings from the bottom of the settings page as well. For example, you can email yourself that URL and then easily restore settings on different computers.
+
+Finally, you can use the Cloud Save system to save your settings.
+
+Learn More
+Does DuckDuckGo Search track you?
+Is DuckDuckGo Search encrypted?
+Can my internet provider see my DuckDuckGo searches?
+How DuckDuckGo Keeps Your Local Search Results Anonymous
+How To Use URL Parameters To Change Your DuckDuckGo Search Settings
+How does DuckDuckGo improve its products while keeping search and browsing history anonymous?
+DuckDuckGo Content Security Policy (CSP) Reports
+What is the ‘t’ URL parameter for on DuckDuckGo Search?
+What does the ‘r.duckduckgo.com’ domain do?
+What does the ‘links.duckduckgo.com’ domain do?
+What does the ‘*.nel.duckduckgo.com’ domain do?
+How To Use the Non-JavaScript Version of DuckDuckGo Search
+How DuckDuckGo Keeps Favicons Anonymous
+Ads by Tripadvisor on DuckDuckGo Private Search
+Ads By Microsoft on DuckDuckGo Private Search
+Ads By Yelp on DuckDuckGo Private Search
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

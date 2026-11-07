@@ -1,0 +1,197 @@
+# 가져온 시각: 2026-10-27T03:31:25.265Z
+# 원본: https://support.apple.com/guide/iphone/change-siri-settings-iphc28624b81abc/ios
+Change Siri settings on iPhone - Apple Support
+https://support.apple.com/guide/iphone/change-siri-settings-iphc28624b81abc/ios
+
+Select version:
+iOS 27
+iOS 26
+iOS 18
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Change Siri settings on iPhone
+
+You can customize how you activate Siri, change Siri’s language and voice, change how Siri responds, and more in Siri settings on iPhone.
+
+For information about how to set up and use Siri, see Turn on and activate Siri.
+
+Customize how you activate Siri
+
+You can change how you activate Siri. For example, you can say “Siri” or “Hey Siri,” click the side button on your iPhone, or type to Siri.
+
+Note: The option to say just “Siri” is available on supported iPhone models in some languages and regions. To check whether “Hey Siri” or “Siri” is available for your device and language, see the iOS and iPadOS Feature Availability website.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri.
+
+Tap Requests, then do any of the following:
+
+Turn on “Siri” or “Hey Siri”: Tap “Siri” or “Hey Siri” (or “Hey Siri”), then follow the instructions to set it up.
+
+Depending on your choice, iPhone listens for “Siri,” “Hey Siri,” or both to activate Siri. To retrain Siri with your voice, turn off “Siri” or “Hey Siri,” turn it back on again, then follow the onscreen instructions.
+
+Tip: To prevent iPhone from responding to “Siri” or “Hey Siri” when you don’t want it to, place your iPhone face down.
+
+Turn off “Siri” or “Hey Siri”: Tap Off. iPhone doesn’t listen for “Siri” or “Hey Siri” to activate Siri.
+
+Activate Siri using the side button on your iPhone: Turn on Press Side Button for Siri.
+
+Type to Siri (Apple Intelligence supported devices): Turn on Type to Siri. When Siri AI (Beta) is on, you can always type to Siri.
+
+Note: Siri AI is available in beta on iOS 27 or later on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later with Siri and device language set to a supported language. Available in English, French, Japanese, Korean, Portuguese, and Spanish to start. Siri AI will not initially be available in the EU on iOS. Apple Intelligence and Siri AI are not available in China mainland. Siri AI is not available for users under 13. Usage limits may apply.*
+
+Change Siri’s language
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri.
+
+Tap Language, then select a language from the list.
+
+The language you choose is used for Siri, Maps, turn-by-turn directions, and Listen to Page in Safari.
+
+Change Siri’s voice
+
+You can change the way Siri sounds by changing the variation and voice Siri uses.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri, then tap Voice.
+
+Do any of the following:
+
+Change the variation: Select an option below Variations.
+
+Change the voice: Select an option below Voices.
+
+Use Siri Expressive Voices** (Siri AI only): Adjust Voice, Pace, and Expressivity settings until they sound just right to you.
+
+Note: Siri Expressive Voices are available with Siri AI on iPhone 17 Pro, iPhone 17 Pro Max, iPhone Air, iPhone 18 Pro, and iPhone 18 Pro Max. Available in English only, for American and British voices, to start.
+
+Change how Siri responds
+
+You can choose to have Siri always respond silently or speak back when you provide voice input. You can also automatically send messages without Siri asking you to confirm and have Siri read messages in a different language.
+
+Note: The options you see depend on the version of Siri you’re using.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri.
+
+Tap Responses, then do any of the following:
+
+Have Siri respond aloud: Choose Prefer Spoken Responses or Speak Back for Voice Input.If Siri AI is turned on, choose Spoken Response.
+
+Have Siri respond silently: Choose Prefer Silent Responses or Always Silent. If Siri AI is turned on, choose Silent Response.
+
+See what Siri says onscreen: Turn on Always Show Siri Captions.
+
+See your request onscreen: Turn on Always Show Request.
+
+Have Siri send messages without confirming: Turn on Automatically Send Messages.
+
+Have Siri read messages in a different language: Tap Add Language, then select a language from the list.
+
+Tip: After languages download, you can choose the variety and voice Siri uses to read messages. Tap the language below Read Messages, then select from the options below Variety and Voice.
+
+Tell Siri about yourself
+
+You can provide information to Siri—including things like your name, home, and work addresses, and even your relationships—for a more personalized experience so you can say things like “Give me driving directions home” and “FaceTime Mom.” Siri pulls information about you from your contact card, called My Card, in the Contacts app.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri.
+
+Tap Your Information, then tap your name.
+
+Go to the Contacts app  to do any of the following:
+
+Change or edit the information: Tap My Card at the top, tap Edit, then edit your information. For more information, see Add or edit your contact info and photo.
+
+Tell Siri how to pronounce your name: Tap My Card at the top, then tap Edit. Scroll down, then tap “add field.” Select a pronunciation name field, then type how to say your name. You can also add pronunciations for other contacts.
+
+You can tell Siri who other people are in relation to you. For example, say something like “Sarah Milos is my sister” or “Hey Siri, Ashley Kamin is my mom.”
+
+Your personal information—which is encrypted and remains private—stays up to date across all your devices where you’re signed in to the same Apple Account. As Siri learns about you on one device, your experience with Siri is improved on your other devices. If you don’t want Siri personalization to update across your devices, you can turn off Siri in iCloud settings.
+
+Change Visual Intelligence settings
+
+With Apple Intelligence, you can use Visual Intelligence to search for items similar to those around you, and choose to have highlighted objects automatically sent to third parties to provide results.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri, then do any of the following:
+
+Turn on Highlight to Search (Siri AI only): This setting automatically searches the web when you highlight using Siri mode in Camera or screenshots.
+
+Turn on Automatic Visual Look Up: This setting automatically identifies objects and places that appear in screenshots.
+
+Exclude apps from Siri, Search, and suggestions
+
+When you give Siri access to an app, Siri can find information and take action in that app. Siri can also suggest what you might want to do next, even before you ask. If you don’t want Siri to access an app or its data, you can add the app to Excluded Apps. Excluded apps aren’t available to Siri, Search, or suggestions. All apps are included by default, and you can change which apps Siri can access at any time.
+
+Note: Siri and Apple Intelligence are designed to protect your privacy and keep you in control of your personal data by giving you control over what you share. To learn more, see the Search & Privacy website.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri.
+
+Tap Excluded Apps.
+
+Do any of the following:
+
+Restrict Siri’s access to apps: Tap Add Apps, select apps from the list, then tap .
+
+Remove restrictions to apps: Tap Edit, tap , then tap Delete to give Siri access to the app. When you’re finished making changes, tap .
+
+Turn Suggestions on or off
+
+Your iPhone can make suggestions in a number of different ways: in Search, on the Home Screen and Lock Screen, when you share something, and when you may want to listen to media. Suggestions can also appear in apps, like Mail, Messages, and Phone. For example, when you get an invitation in Mail, you’re asked if you want to add it to your calendar. Suggestions are on by default, but you can turn them off at any time, and customize where they appear.
+
+Go to the Settings app  on your iPhone.
+
+Tap Siri.
+
+Tap Suggestions, then do any of the following:
+
+Allow or disallow suggestions to appear in notifications: Turn Allow Notifications on or off.
+
+Allow or disallow suggested apps to appear in App Library: Turn Show in App Library on or off.
+
+Allow or disallow suggested contacts to appear when sharing: Turn Show When Sharing on or off.
+
+Allow or disallow suggestions to appear when you might want to listen to music: Turn Show Listening Suggestions on or off.
+
+Customize where suggestions appear for specific apps: Tap an app in the list, then turn settings on or off. For example, tap Messages, then turn off Show in App to prevent suggestions from appearing in the Messages app.
+
+Note: The settings you see depend on the app you choose.
+
+To change Siri accessibility settings, see Change Siri accessibility settings.
+
+If Siri doesn’t work as expected on your iPhone, see the Apple Support article If Siri isn’t working on your iPhone or iPad.
+
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English, French, Japanese, Korean, Portuguese, and Spanish to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Siri AI is not available for users under 13. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at support.apple.com/148587.
+
+**Siri Expressive Voices are available with Siri AI on iPhone 17 Pro, iPhone 17 Pro Max, iPhone Air, iPhone 18 Pro, and iPhone 18 Pro Max. Available in English only, for American and British voices, to start.
+
+See also
+Turn on and activate Siri on iPhone
+Change Siri app settings
+Change Siri accessibility settings on iPhone
+Turn on ChatGPT
+Previous
+Siri AI: Ask Siri about what’s on your screen
+Next
+Get started with Apple Intelligence
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

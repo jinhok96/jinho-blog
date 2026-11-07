@@ -1,5 +1,8 @@
 # compress-image-to-100kb 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — PD12M 사진 20장으로 이미지 압축 도구 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `compress image to 100kb` — 브리프 주 검색어
+
 - 주 검색어: `compress image to 100kb` (+ `compress image`, `reduce image size`). Google Trends API는 이번 세션에서 429가 반복돼 상대 검색량 비교를 못 함 → 자동완성 결과로 선정
 - 하위 검색어 (2026-10-16 `demand_check.py suggest`): "compress image" 30개 — compress image to 2mb·without losing quality (Google·Bing·YouTube), to 1mb·free·size·online (Google·Bing), to 100kb (Google), 500kb·200kb·50kb·20kb (Bing), on iphone·on mac (YouTube). "reduce image size" 30개 — without losing quality (3곳), in kb·in mb·mac·free(Google·Bing), to 100kb·to 50kb·to 1mb (Bing). "upscale image" 32개, "webp to jpg" 22개는 후보로 남김
 - 채널: **검색형** (상시 수요, How-to + 측정). 제목 52자, 설명 153자

@@ -1,0 +1,148 @@
+URL: https://help.instagram.com/658522825492278
+TITLE: About supervision on Instagram | Instagram Help Center
+DEVICE: iPhone App Help clicked=false
+FETCHED: 2026-10-24T15:36:05.191Z
+
+Help Center
+English (US)
+Instagram Features
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Sharing Photos Safely
+Safety Tips
+Tips for Parents
+Being your authentic self on Instagram
+Abuse, Spam and Scams
+Ways to deal with conflict or abuse on Instagram
+Self-Injury
+About Eating Disorders
+Information for law enforcement
+Health & Safety Warnings for Meta Spark AR Walk Experiences
+Privacy and Reporting
+Terms and Policies
+Threads
+Staying Safe
+Tips for Parents
+About supervision on Instagram
+Copy link
+What is Instagram supervision?
+How do I set up Instagram supervision?
+What can parents see on Instagram?
+How do I remove Instagram supervision?
+I have a different question
+If you want to manage your teen’s Threads profile, learn more about supervision on Threads.
+For parents
+A complete guide to supervising your teen on Instagram
+Supervision is a set of tools and insights you can use to help support your teen on Instagram. Both you and your teen must agree to participate. Either of you can remove supervision at any time, and the other person will be notified.
+Eligibility
+To supervise your teen:
+You must be 18 or older.
+Your teen must be 13 to 17 years old.
+Both you and your teen must agree to participate.
+You don't need to follow your teen or be followed by them.
+Core features
+Time management: By default, we remind your teen to close Instagram from 10 PM to 7 AM and after they've spent one hour each day. You can update these settings and choose whether your teen sees a reminder to close the app or is temporarily blocked from using Instagram. If your teen uses Instagram on multiple devices, these limits apply to the total time spent across all devices. You can also see the average amount of time your teen has spent on Instagram over the past 7 days and daily breakdowns.
+Connections: See who your teen follows, who follows them, and who they've blocked. You can see who they have chats with, but not the content of those chats.
+Safety notifications: You'll be notified when your teen gets a new follower or changes certain Teen Account settings.
+Safety alerts: If your teen repeatedly searches for topics related to suicide or self-harm, you'll be notified so you can support them. Specific search terms are never shared with you. This feature is not yet available in all areas.
+Approval for settings changes:You must approve any requests your teen makes to change their Teen Account settings to be less protective. You'll be notified in your activity feed and, if enabled, via push notification. These settings include profile privacy, who can send message requests, who can add them to group chats, content sensitivity, who can tag or mention them, who can remix their content, Hidden Words settings, sleep mode, and daily time limit. You can also choose to let your teen manage their own settings.
+Meta AI insights: You can see general topics your teen has asked Meta AI about in the past 7 days, but not their exact questions or Meta AI's responses.
+Reporting: If your teen reports something on Instagram and chooses to notify you, you'll be notified in Family Center. You can see the reason they chose for the report, but not who or what they reported.
+Additional features
+Availability varies by region:
+Friend Map: If available in your location and enabled for your teen, you can see who can view their location on the map. You can also turn this feature off for your teen.
+Tune Your Algorithm: If available in your location for your teen, you can see the content topic interests they've added to help shape their Instagram experience.
+Projects: If available in your location for your teen and they choose to create projects, you can see the titles and subtopics they're exploring. You can't see the specific content within their projects.
+What you can't see or do
+Read your teen's messages.
+View your teen's search history.
+View your teen's posts, likes, or comments, unless you follow them or their profile is public.
+Delete their profile, reset their password, or post using their profile.
+In some locations, laws may allow you to delete their profile.
+Privacy
+Supervision doesn't give your teen any insights about your profile. Your teen won't be able to see your settings, screen time, posts, likes, or comments unless your profile is public.
+When others interact with your supervised teen
+When someone interacts with your teen's supervised profile, you can see some of their activity and information. This can include their username, profile picture, and whether your teen blocked them.
+Remove supervision
+When your teen turns 18
+Supervision is automatically removed when your teen turns 18 according to the birthday on their profile. Meta will send a reminder to you and your teen as they approach their 18th birthday.
+Removing supervision early
+You or your teen can choose to remove supervision at any time from the Family Center settings. The other person will be notified. If your teen removes supervision before they're 18, they have 24 hours to change their mind and restore it. During this time, you can also confirm the removal to complete it right away. If the 24-hour window passes without your teen restoring supervision, it will be removed. Once removed, you will need to set up supervision again if needed.
+If supervision is removed
+Teens 13 to 15: their settings return to Teen Account defaults
+Teens 16 to 17: their settings remain as they were before supervision was removed
+Requirements
+Supervision features require the latest version of the Instagram app for iPhone and Android. Your teen must update the Instagram app. You can update the Instagram app or visit www.instagram.com using a desktop or mobile browser.
+For teens
+A complete guide to how supervision works on Instagram
+Supervision is a set of tools and insights your parent or guardian can use to help support you on Instagram. Both you and your parent must agree to participate. Either of you can remove supervision at any time, and the other person will be notified.
+Eligibility
+To be supervised:
+You must be 13 to 17 years old.
+Your parent must be 18 or older with an Instagram profile.
+Both you and your parent must agree to participate.
+You don't need to follow your parent or be followed by them.
+People under 13 aren't allowed on Instagram.
+Core features
+These explain what your parent can see and do:
+Time management: Your parent can make changes to your daily time limit and sleep mode. They can choose whether you see a reminder to close the app or are temporarily blocked from using Instagram. If you use Instagram on multiple devices, time limits apply to the total time spent across all devices. Your parent can also see the average amount of time you've spent on Instagram over the past 7 days and daily breakdowns.
+Connections: Your parent can see who you follow, who follows you, and who you've blocked. They can see who you have chats with, but not the content of those chats.
+Safety notifications: Your parent is notified when you get a new follower or change certain Teen Account settings.
+Safety alerts: If you repeatedly search for topics related to suicide or self-harm, we'll notify your parent so they can support you, without sharing your specific search terms or search history. This feature is not yet available in all areas.
+Approval for settings changes: Your parent must approve any request you make to change your Teen Account settings to be less protective. These settings include profile privacy, who can send you message requests, who can add you to group chats, content sensitivity, who can tag or mention you, who can remix your content, Hidden Words settings, sleep mode, and daily time limit. Your parent can also choose to let you manage your own settings.
+Meta AI insights: Your parent can see general topics you've asked Meta AI about in the past 7 days, but not your exact questions or Meta AI's responses.
+Reporting: If you report something on Instagram and choose to notify your parent, they can see the reason you chose for the report, but not who or what you reported.
+Additional features
+Availability varies by region:
+Friend Map: If available in your location and enabled, your parent can see who can view your location on the map. They can also turn this feature off for you.
+Tune Your Algorithm: If available in your location, your parent can see the content topic interests you've added to help shape your Instagram experience.
+Projects: This feature isn’t available everywhere. If it is available and you create projects, your parent can see the titles and subtopics of the projects you’re exploring. They can't see the specific content within your projects.
+What your parent can't see or do
+Even with supervision set up, you still own your Instagram profile. Your parent can't:
+Read your messages.
+View your search history.
+View your posts, likes, or comments, unless they follow you or your profile is public.
+Delete your profile, reset your password, or post from your profile.
+In some locations, laws may give your parent the right to delete your profile.
+Privacy
+Supervision doesn't give you any insights about your parent's profile. You won't be able to see their settings, screen time, posts, likes, or comments unless their profile is public. With supervision set up, you can:
+Visit Family Center to see a preview of what your parent sees while using supervision.
+Choose to notify your parent after reporting something on Instagram.
+Removing supervision
+When you turn 18
+Supervision is automatically removed when you turn 18 according to the birthday on your profile. Meta will send a reminder to you and your parent as you approach your 18th birthday.
+Removing supervision early
+You or your parent can choose to remove supervision at any time from the Family Center settings. The other person will be notified. If you choose to remove supervision before you're 18, you have 24 hours to change your mind. During this time, you can restore supervision and everything will stay as it was. Your parent can also confirm the removal during this time, which removes supervision right away. Once removed, you will need to set up supervision again if needed.
+If supervision is removed:
+Teens 13 to 15: your settings return to Teen Account defaults
+Teens 16 to 17: your settings remain as they were before supervision was removed
+Requirements
+Supervision features require the latest version of the Instagram app for iPhone and Android. You must update the Instagram app.
+Was this helpful?
+Yes
+No
+Related Articles
+Set up teen supervision on Instagram
+Supervising your teen’s time spent on Instagram
+Extra supervision features available under regional law on Instagram
+Remove supervision on Instagram
+About supervision on Threads
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Learn more about supervision on Instagram
+Instagram supervision is a set of tools for parents (18+) and teens (13-17) that requires mutual agreement to activat… Learn more
+What is Instagram supervision?
+How do I set up Instagram supervision?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

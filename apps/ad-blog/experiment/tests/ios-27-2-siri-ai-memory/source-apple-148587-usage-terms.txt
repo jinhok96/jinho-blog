@@ -1,0 +1,38 @@
+# 가져온 시각: 2026-10-26T21:32:32.558Z
+# 원본: https://support.apple.com/en-us/148587
+Apple Intelligence Usage Terms - Apple Support
+https://support.apple.com/en-us/148587
+
+Apple Intelligence Usage Terms
+
+Learn about the Usage Terms that apply to the use of Apple Intelligence features and services, including usage limits, unreasonable use, availability, requirements, age restrictions, and enforcement.
+
+These Usage Terms apply to your use of Apple Intelligence features and services, including Siri AI, intelligent features across apps, and capabilities powered by Apple Foundation Models (“Apple Intelligence Features”) and supplement the applicable Apple software license agreement which you may access and review at https://www.apple.com/legal/sla/ or the then current link (together, "Usage Terms"). By using these features and services, you agree to these Usage Terms.
+
+1. Usage Limits
+
+Current and future Apple Intelligence Features may be subject to usage limits. Limits may vary by feature. Apple reserves the right to modify which Apple Intelligence Features are subject to limits and the applicable usage limits at any time. If you reach a limit for a particular Apple Intelligence Feature, that feature may become unavailable or the functionality of such feature may be limited until the applicable usage limit resets. You may continue using other features on your device in the meantime.
+
+Learn more about Apple Intelligence usage limits
+
+2. Unreasonable Use
+
+Excessive, abusive, automated, fraudulent, illegal or otherwise unreasonable use, including use that materially impacts service availability or other users, may be restricted, throttled, suspended, or subject to additional limits. We may determine what constitutes unreasonable use based on factors including usage volume, frequency, request complexity, system demand, and patterns of use.
+
+3. Availability
+
+Apple Intelligence Features may not be available in all languages or in all countries and Apple makes no representation that a particular Apple Intelligence Feature is appropriate or available for use in any particular location. Some features may vary by region. To the extent you choose to access and use an Apple Intelligence Feature, you do so at your own initiative and are responsible for compliance with any applicable laws. Apple reserves the right to change, suspend, remove, or disable access to any part of Apple Intelligence Features at any time without notice. In no event will Apple be liable for the change, removal of, or disabling of such access. Apple may also impose limits on the use of or access to certain features or benefits of the Apple Intelligence Features, in any case and without notice or liability.
+
+4. Requirements
+
+Apple Intelligence Features may not be available on, or compatible with, all devices. Use of the Apple Intelligence Features, and/or any feature or part thereof, may require compatible devices, compatible operating systems, internet access, and certain software (fees may apply); may require periodic updates; and may be affected by the performance of these factors. The latest version of required software and/or hardware may be required for certain features. You agree that meeting these requirements is your responsibility.
+
+5. Age Restrictions
+
+Certain Apple Intelligence Features may be subject to age restrictions. Such age restrictions may vary by region. Apple reserves the right to modify age restrictions at any time.
+
+6. Enforcement
+
+Apple reserves the right to investigate and take action against any use that violates these Usage Terms, including restricting, suspending, or terminating access to Apple Intelligence Features. Apple may update these Usage Terms from time to time, and continued use of Apple Intelligence after changes constitutes acceptance of the updated Usage Terms.
+
+Published Date: September 09, 2026

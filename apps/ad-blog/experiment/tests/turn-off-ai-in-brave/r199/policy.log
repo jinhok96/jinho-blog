@@ -1,0 +1,20 @@
+goto brave://leo-ai Page.goto: net::ERR_INVALID_URL at brave://leo-ai
+Call log:
+  - navigating to "brave://leo-ai", waiting until "load"
+
+{
+ "settings": {
+  "url": "brave://settings/leo-ai",
+  "final": "chrome://settings/",
+  "chars": 544
+ },
+ "leo_page": {
+  "url": "brave://leo-ai",
+  "final": "chrome-error://chromewebdata/",
+  "chars": 154
+ },
+ "policy": [
+  "BraveAIChatEnabled",
+  "false"
+ ]
+}

@@ -1,0 +1,17 @@
+exec(open("common.py").read())
+import subprocess as sp
+def xdo(*a):
+    sp.run(["xdotool", *a], env=dict(os.environ, DISPLAY=":99"))
+pg.goto("edge://settings/ai"); time.sleep(4)
+pg.get_by_text("Manage settings", exact=True).first.click(); time.sleep(5)
+shot("80-manage-settings")
+print("after manage", [x.url for x in ctx.pages], pg.url)
+print(deep(pg)[-1500:])
+pg.goto("edge://settings/ai"); time.sleep(3)
+click_toggle(pg, "Copilot new tab page"); time.sleep(3)
+shot("81-ntp-on-settings")
+print("ntp on", [(t['label'], t['checked'], t['disabled']) for t in toggles(pg)])
+print(deep(pg)[-1200:])
+xdo("key", "ctrl+t"); time.sleep(8)
+shot("82-copilot-ntp")
+print("pages", [x.url for x in ctx.pages])

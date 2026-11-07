@@ -1,0 +1,57 @@
+URL chrome://settings/search
+
+Settings
+Search settings
+Get started
+Appearance
+Content
+Shields
+Privacy and security
+Web3
+Leo
+Sync
+Search engine
+Extensions
+Autofill and passwords
+Languages
+Downloads
+Accessibility
+System
+Reset settings
+About Brave
+v 1.98.63
+Search engine
+Normal Window
+Search engine used in the address bar.
+Learn more
+Google
+Change
+Private Window
+Search engine used in the address bar for private windows.
+Learn more
+Brave
+Change
+Improve search suggestions
+When on, Brave sends what you type in the address bar or search box to your default search engine to get better suggestions. When off, Brave only shows suggestions generated on your device. This is always off in private windows.
+Web Discovery Project
+Contribute some anonymous search & browsing data to refine Brave Search.
+Learn more
+Manage search engines and site search
+
+TOGGLES
+[
+ {
+  "label": "Improve search suggestions",
+  "checked": false,
+  "disabled": false,
+  "x": 1041,
+  "y": 381
+ },
+ {
+  "label": "Web Discovery Project",
+  "checked": false,
+  "disabled": false,
+  "x": 1041,
+  "y": 466
+ }
+]

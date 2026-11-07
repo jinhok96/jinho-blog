@@ -1,0 +1,107 @@
+# 가져온 시각: 2026-10-25T15:27:43.493Z
+# 원본: https://support.google.com/accounts/answer/185839?hl=en&co=GENIE.Platform%3DDesktop
+Turn on 2-Step Verification - Computer - Google Account Help
+https://support.google.com/accounts/answer/185839?hl=en&co=GENIE.Platform%3DDesktop&ai1hc=1
+
+Turn on 2-Step Verification
+
+With 2-Step Verification, or two-factor authentication, you can add an extra layer of security to your account in case your password is stolen.
+
+After you set up 2-Step Verification, you can sign in to your account with:
+
+Your password and a second step
+Your passkey
+
+When you sign in, you may encounter different authentication challenges. The challenge you'll get is what Google thinks is best to help you sign in easily and keep out hijackers.
+
+Tips:
+
+By default, when you create a passkey you opt in to a passkey-first, password-less sign in experience.
+If you always want to use your password first, you can change this default preference in your account settings.
+Allow 2-Step Verification
+Open your Google Account.
+Tap Security & sign-in.
+Under “How you sign in to Google,” select Turn on 2-Step Verification.
+Follow the on-screen steps.
+
+Tip: If you use an account through your work, school, or other group, these steps might not work. If you can’t set up 2-Step Verification, contact your administrator for help.
+
+Turn on 2-Step Verification
+
+Verify it’s you with a second step
+
+Important:
+
+When you sign in with a passkey, it bypasses your second authentication step, since it verifies that you have possession of your device. Unlike passwords, passkeys only exist on your devices. They can’t be written down or accidentally given to a bad actor.
+
+After you turn on 2-Step Verification, you need to complete a second step to verify it’s you if you choose to sign in with a password. To help protect your account, Google will ask you to complete a specific second step.
+
+If you add a phone number for 2-Step Verification, it may take up to 7 days for Google to trust the phone number. If someone tries to use your account without your permission, this allows you to quickly secure your account.
+
+Tips:
+
+If you have a trusted passkey or security key, you may be able to speed up the process for Google to trust your new 2-Step Verification phone number. Learn how to speed up this process.
+If we detect something suspicious about a new 2SV phone number, we will disable it and notify you. You have 30 days to confirm you added the disabled 2SV phone number. If no action is taken in response, we will then delete the suspicious 2SV phone number from your account.
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Use Google prompts
+
+If you choose not to sign in with a passkey, we recommend you use Google prompts as your second step. It's easier to tap a prompt than enter a verification code. Prompts can also help protect against SIM swap and other phone number-based hacks.
+
+You’ll receive Google prompts as push notifications on:
+
+Android phones that are signed in to your Google Account.
+iPhones with the Gmail app , the Google Photos app , the YouTube app , or the Google app  signed in to your Google Account.
+
+Based on the device and location info in the notification, you can:
+
+Allow the sign-in if you requested it by tapping Yes.
+Block the sign-in if you didn’t request it by tapping No.
+
+For added security, Google may ask you for your PIN or other confirmation.
+
+Use other verification methods
+
+You can set up other verification methods in case you:
+
+Want increased protection against phishing
+Can’t get Google prompts
+Lose your phone
+Use passkeys & hardware security keys to increase phishing protection
+
+Passkeys are a simple and secure alternative to passwords. With a passkey, you can sign in to your Google Account with your fingerprint, face scan, or device screen lock, like a PIN. You can create a passkey on a phone, computer, or hardware security key. Learn how to create a passkey.
+
+A hardware security key is a small device that you can buy to help verify it’s you when you sign in. When we need to make sure it’s you, you can simply connect the key to your phone, tablet, or computer. Learn how to order your hardware security keys.
+
+Tip: When a hacker tries to get your password or other personal information, passkeys and hardware security keys protect your Google Account from phishing attacks. Learn more about phishing attacks.
+
+Use Google Authenticator or other verification code apps
+Important: Never share your verification codes with anyone, as scammers may try to take over your account. You won't receive a call from Google to verify a code.
+
+When you don't have an internet connection or mobile service, you can set up Google Authenticator or another app that creates one-time verification codes.
+
+To help verify it's you, enter the verification code on the sign-in screen.
+
+Use a verification code from a text message or call
+Important: Never share your verification codes with anyone, as scammers may try to take over your account. You won't receive a call from Google to verify a code.
+A 6-digit code is sent to a number you’ve previously provided. Codes can be sent in a text message or a voice call, which depends on the setting you chose. To verify it’s you, enter the code on the sign-in screen.
+Tip: Although any form of 2-Step Verification adds account security, verification codes sent by texts or calls can be vulnerable to phone number-based hacks.
+Use a QR code
+In certain cases, Google will require that you scan a QR code with your mobile device to verify. This method is less vulnerable to phone number-based attacks and abuse.
+To verify your phone number:
+Use your mobile phone to scan the QR code on your computer to verify your number.
+Follow the steps on your phone to securely verify your number.
+To complete the process, return to your computer.
+Use backup codes
+Important:
+Do not give out your backup codes to anyone.
+You can't download backup codes if you're in the Advanced Protection Program.
+If you lose your phone, you can use a backup code for the second step. You can print or download a set of 8-digit backup codes to keep in a safe place. Learn more about backup codes.
+Skip a second step on trusted devices
+If you don't want to provide a second verification step each time you sign in on your computer or phone, check the box next to "Don't ask again on this computer" or "Don't ask again on this device."
+Important: Only check this box on devices you regularly use and don't share with anyone else.
+Related resources
+Gmail Security and Privacy Settings
+Give feedback about this article

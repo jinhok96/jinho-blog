@@ -1,5 +1,8 @@
 # 사실 확인표: spotify-family-qr-code-verification
 
+- 검증 유형 (가설 H3): **조사형** — Spotify 지원 문서 대조만, 직접 실행 없음
+- 주 검색어 (가설 H6): `spotify family plan` — 브리프 주 검색어
+
 확인일: 2026-10-19 (UTC 21시, 한국 2026-10-20 06~07시). support.spotify.com 문서는 curl 정적 HTML의 `<main>` 본문과 `__NEXT_DATA__`의 `updatedAt`으로 확인(원문 텍스트: `source-*.txt`). spotify.com 요금·약관 페이지도 curl 정적 HTML. 직접 실행 검증 없음(Spotify 계정·Family 구독·휴대폰 앱 필요) → 문서 기반 뉴스 칼럼.
 
 ## 글 설정
@@ -47,3 +50,10 @@
 | 1인당 월 요금·연간 추가 비용 | 위 요금 ÷ 인원, (12.99 − 1인당) × 12, 반올림 | [charts.py](charts.py) Decimal 계산: 6인 3.67/111.90, 4인 5.50/89.91, 3인 7.33/67.92, Duo 9.50/41.94 |
 | 9to5Google 10-19 보도: Reddit 사용자가 알림 확인 | https://9to5google.com/2026/10/19/spotify-qr-code-verification-family-sharing/ | 본문 확인, "reported"로 표기 |
 | 지원 문의 페이지 | https://support.spotify.com/us/contact-spotify-support/ | curl: 로그인 페이지로 리디렉트(존재 확인) |
+
+## 변경 기록
+
+- 2026-10-25 (개선 세션 49, 검증 기록 V4): 제목·설명만 교체 (본문·`updatedAt` 그대로). 근거: Search Console 2026-09-27 ~ 10-25 노출 164·클릭 0·평균 16.2위. 노출 상위 검색어가 다른 매체 기사 제목형(`spotify's family plan qr code could cost you premium access` 36회 5.6위, `spotify strengthens household residency requirements through dynamic qr code verification for family plan` 29회 4.8위, `spotify implements qr code verification to combat family plan sharing abuse` 20회 5.6위)인데 5위 안팎에서 클릭 0 → `seo-audit` rankings-push의 "Weak click-through"(제목·설명만 바꿈). 비슷한 순위의 `iphone-duo-sold-out`(9.2위 CTR 4.2%)·`gemini-gems-to-skills`(7.5위 3.2%)보다 낮음
+  - 제목: `Spotify Family QR Code Check and 12-Month Lockout: What It Means for You`(72자, 꼬리표) → `Spotify Family Plan QR Code Verification Gives Members 7 Days to Scan`(69자). 검색어에 공통으로 나오는 `family plan`·`qr code verification`을 앞 40자 안에, 꼬리표 제거(2026-10-22 규칙), 구체 사실(7일)
+  - 설명: 157자 → 154자 `Spotify can ask Family plan members to scan the manager's QR code in person within 7 days. Who gets hit, what the 12-month block means and what to do now.`
+  - 사실 재확인: 2026-10-25 support.spotify.com/us/article/family-address-verification/ 다시 받음(curl 200) — "Plan members have 7 days to complete the QR code scan", "can’t join a different Family or Duo plan for 12 months", 대면 스캔 문장이 10-19 원문과 같음. 본문 변경 없음

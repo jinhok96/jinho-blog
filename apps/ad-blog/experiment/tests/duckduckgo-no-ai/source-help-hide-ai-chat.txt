@@ -1,0 +1,62 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/duckai/how-to-hide-ai-chat
+Fetched: 2026-11-01T15:32:21.393Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/duckai/how-to-hide-ai-chat
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Chat Models
+Duck.ai Privacy
+Voice Chat and Dictation Privacy
+Image Creation
+Sharing Chats
+Usage Limits
+How do I hide Duck.ai?
+Is my Duck.ai chat history private?
+What info do you share with model providers?
+Duck.ai Experiments
+Choosing the Best Model
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+AI Features/Duck.ai
+How do I hide Duck.ai?
+
+If you don’t want to see Duck.ai on the search results page, you can hide it by following these steps:
+
+On duckduckgo.com or any DuckDuckGo search results page, click the three-dash menu in the upper right corner, then click Settings
+Select the AI Features tab and turn off Chat
+Learn More
+What AI chat models are available?
+How does Duck.ai protect my privacy?
+Is Duck.ai voice chat and dictation private?
+Can I create images with Duck.ai?
+Sharing Chats in Duck.ai
+Does Duck.ai have usage limits?
+Is my Duck.ai chat history private?
+What information does Duck.ai share with model providers?
+How does DuckDuckGo run Duck.ai experiments while protecting my privacy?
+How to choose the best Duck.ai model for your chat
+AI Features - Opting Out of AI Features
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

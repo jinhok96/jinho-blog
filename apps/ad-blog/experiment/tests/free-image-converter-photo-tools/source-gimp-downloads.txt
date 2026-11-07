@@ -1,0 +1,216 @@
+GIMP - Downloads
+ GIMP
+Download
+News
+About
+Docs
+Participate
+Tutorials
+ Donate
+ GIMP
+ News
+ Docs
+ Tutorials
+ More
+Downloads
+Current Stable Version
+The current stable release of GIMP is 3.2.6 (2026-09-10).
+ Show downloads for
+ GNU/Linux |
+ macOS |
+ Microsoft Windows |
+ All
+ (we think your OS is
+ …
+ Well, we don't actually know.
+ Either JavaScript is disabled, or I am not working quite right…
+ So I am showing you all the options
+ )
+GIMP for Unix-like systems
+ Download GIMP 3.2.6 AppImage
+for x86_64
+ directly
+ Download GIMP 3.2.6 AppImage
+for x86_64
+ via BitTorrent
+ Show downloads for AArch64
+ Download GIMP 3.2.6 AppImage
+for ARM64
+ directly
+ Download GIMP 3.2.6 AppImage
+for ARM64
+ via BitTorrent
+ Show downloads for x86_64
+ GIMP
+for x86_64 or ARM64
+ on Flathub
+ GIMP
+for x86_64 or ARM64
+ on Snap Store
+Warnings and information
+(AppImage) Supported OS: Debian 13 or newer distro
+Security
+ SHA256 hash sum for GIMP-3.2.6-aarch64.AppImage: d1b8271e440dc4e36065ca25f219c0534abd2dfb43aeb033c76b16832d395e19
+ Check it on VirusTotal:
+ GIMP-3.2.6-aarch64.AppImage
+ SHA256 hash sum for GIMP-3.2.6-x86_64.AppImage: 79ea41bc9b06f78fda181849a9ca8e42d83f1124dedb756f4d52352e2465010f
+ Check it on VirusTotal:
+ GIMP-3.2.6-x86_64.AppImage
+Statistics
+The latest binaries of GIMP 3.2.6 for this platform have been
+ downloaded at least 808,704 times since its release on
+ 2026-09-10, totaling 3,919,776 on all platforms we distribute official packages.
+ AppImage for x86_64 (since 2026-09-10)
+ 44,793 downloads
+ AppImage for Aarch64 (since 2026-09-10)
+ 11,430 downloads
+ Flatpak for x86_64 and Aarch64 (since 2026-09-10)
+ 390,256 downloads (estimated)
+ Snap for x86_64 and Aarch64 (since 2026-09-10)
+ 362,225 devices
+These statistics were generated on 2026-10-26 00:03 UTC according to our Privacy Policy.
+Older Downloads
+ Previous v3.2 AppImages for Linux can be found
+ on download.gimp.org.
+Flatpak and Snap additional instructions
+ If the link above doesn't open your software installer,
+ you can install GIMP using your terminal.
+ Show Flatpak instructions
+Run the following command to install GIMP:
+ flatpak install --user https://flathub.org/repo/appstream/org.gimp.GIMP.flatpakref
+ After installation, if GIMP is not shown as other applications (on menus, desktop overview, etc),
+ run it with following command line:
+ flatpak run org.gimp.GIMP//stable
+ This installation will also provide regular auto update.
+ Once again, if your distribution does not have proper support,
+ you can always fall back to using the following command line:
+ flatpak update
+ Show Snap instructions
+Run the following command to install GIMP:
+ snap install gimp
+ After installation, if GIMP is not shown as other applications (on menus, desktop overview, etc),
+ run it with following command line:
+ snap run gimp
+ This installation will also provide regular auto update.
+ Once again, if your distribution does not have proper support,
+ you can always fall back to using the following command line:
+ snap refresh
+Systems without AppImage, Flatpak or Snap support
+ GIMP can also run on Solaris and is available for the BSD family of systems such as FreeBSD and OpenBSD.
+ Please refer to the documentation for your Unix-like system on the installation of software.
+GIMP for macOS
+ Download GIMP 3.2.6
+for Intel
+ directly
+ Download GIMP 3.2.6
+for Intel
+ via BitTorrent
+ Show downloads for ARM64 (Apple Silicon)
+ Download GIMP 3.2.6
+for Apple Silicon
+ directly
+ Download GIMP 3.2.6
+for Apple Silicon
+ via BitTorrent
+ Show downloads for x86_64
+Warnings and information
+Supported OS: macOS 11 Big Sur or newer
+ !IMPORTANT! ⚠️ App Store: GIMP team does not
+ provide any package on Apple's App Store at the moment.
+ Any downloads on the store are created by third party and is
+ not in anyway connected to the GIMP team. ☢️
+Security
+ SHA256 hash sum for gimp-3.2.6-arm64.dmg: 854573aec2be6a185aa021109c3c0ca94f210379204b704231bdd191b4060294
+ Check it on VirusTotal:
+ gimp-3.2.6-arm64.dmg
+ SHA256 hash sum for gimp-3.2.6-x86_64.dmg: ebe633642445d4d6fc6b68e7be7ca581c0b28c18dc9de7747849528c982e5677
+ Check it on VirusTotal:
+ gimp-3.2.6-x86_64.dmg
+Statistics
+The latest binaries of GIMP 3.2.6 for this platform have been
+ downloaded at least 325,210 times since its release on
+ 2026-09-10, totaling 3,919,776 on all platforms we distribute official packages.
+ macOS DMG for Apple Silicon (since 2026-09-10)
+ 263,694 downloads
+ macOS DMG for Intel (since 2026-09-10)
+ 61,516 downloads
+These statistics were generated on 2026-10-26 00:03 UTC according to our Privacy Policy.
+Older Downloads
+ Previous v3.2 installers for macOS can be found
+ on download.gimp.org.
+GIMP for Windows
+ Download GIMP 3.2.6
+for x86_64 and ARM64
+ directly
+ Download GIMP 3.2.6
+for x86_64 and ARM64
+ via BitTorrent
+ GIMP
+for x86_64 or ARM64
+ on Microsoft Store
+Warnings and information
+Supported OS for installer: Windows 10 1903 or newer
+Supported OS on Microsoft Store: Windows 11 or at least Windows Server 2022 (Windows NT Build 10.0.20348.0) or newer
+Security
+ SHA256 hash sum for gimp-3.2.6-setup.exe: 9337cccbc01d4098ee7a3dab215b3afbe6ece99c5287c92441d6f12cf541ebca
+ Check it on VirusTotal:
+ gimp-3.2.6-setup.exe
+Statistics
+The latest binaries of GIMP 3.2.6 for this platform have been
+ downloaded at least 2,785,862 times since its release on
+ 2026-09-10, totaling 3,919,776 on all platforms we distribute official packages.
+ Windows installer for x86_64 and Aarch64 (since 2026-09-10)
+ 2,671,166 downloads
+ Microsoft Store for x86_64 and Aarch64 (since 2026-09-10)
+ 114,696 devices
+These statistics were generated on 2026-10-26 00:03 UTC according to our Privacy Policy.
+Older Downloads
+ Previous v3.2 installers for Windows can be found
+ on download.gimp.org.
+Source for version 3.2 (Stable)
+GIMP releases are also available as source tarballs from gimp.org
+ and its mirrors, containing
+ the source code to compile for your system:
+ https://download.gimp.org/gimp/v3.2/
+ Hashes of latest releases to check the integrity of the tarballs
+ gimp-3.2.6.tar.xz
+ (sha256): 
+ 40b15e90ad0c0c631b76da3c467ea9847fa5c24f37413ac5b492804860a28cd8
+ gimp-3.2.4.tar.xz
+ (sha256): 
+ 7312bc53e9c6d2d0056ca7b93f1c6b98707946dd934f714c21b8746ecb601588
+ gimp-3.2.2.tar.xz
+ (sha256): 
+ 6c5f8cbabe081f405633a2d32b79a08166aeb7b43c7f548391608dc0d0de71be
+ gimp-3.2.0.tar.xz
+ (sha256): 
+ 2618391416e51be3c693df9ef90e3860ed72ab3d36363ea1f196e30b75b2e083
+For instructions on how to build GIMP from source code, you will want to
+ read our developer website.
+You may want to read the Release Notes for GIMP 3.2.
+User Manual
+ GIMP's user manual can be downloaded
+ separately on the documentation website either as language-specific Windows
+ installers or as source tarball.
+ The manual can also be browsed online
+Development snapshots
+🤫Pssst... want to check out our nightly development
+ builds? Test these on our development downloads page 🧪.
+ GIMP
+ Download
+ News
+ About GIMP
+ Documentation
+ Get Involved
+ Tutorials
+ Donate
+Release Notes
+Roadmap
+FAQ
+Books
+Bug Reports
+Sponsors
+Discuss
+ GIMP News Feed | Contacting Us
+ Unless otherwise noted, GIMP's Website by GIMP's Team is licensed under a Creative Commons Attribution-ShareAlike 4.0 International License.
+ Icons by Font Awesome (cb)

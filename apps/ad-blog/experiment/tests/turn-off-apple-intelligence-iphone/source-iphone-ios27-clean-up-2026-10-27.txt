@@ -1,0 +1,100 @@
+# 가져온 시각: 2026-10-27T03:32:28.393Z
+# 원본: https://support.apple.com/guide/iphone/clean-up-extend-and-reframe-photos-xy0grrlxue5w/ios
+Clean up, extend, and reframe photos on iPhone - Apple Support
+https://support.apple.com/guide/iphone/clean-up-extend-and-reframe-photos-xy0grrlxue5w/ios
+
+Search this guide
+Clear Search
+Table of Contents 
+Clean up, extend, and reframe photos on iPhone
+
+With Apple Intelligence, you can remove distracting objects, extend a photo beyond its original frame, and adjust its perspective.
+
+Note: Apple Intelligence on iOS 27 or later is available on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later. Apple Intelligence is not available in all languages or regions. Usage limits may apply.*
+
+Clean up distractions
+
+Use the Clean Up tool to remove distracting objects from a photo.
+
+Note: Clean Up is not available in all languages or regions. For more information, see the Apple Support article Requirements to use Clean Up in Photos.
+
+Go to the Photos app  on your iPhone.
+
+Open a photo, then tap .
+
+Tap Tools, then tap Clean Up.
+
+Tap, brush, or circle what you want to remove.
+
+Some items may be highlighted automatically so you can quickly tap to remove them.
+
+You can use two fingers to pinch, zoom, or pan the image.
+
+Tap  if you want to restore something you removed
+
+Tap Clean Up (if you’re using High Quality processing).
+
+Tap , then tap Done to close the photo.
+
+To undo Clean Up changes after saving, follow steps 1 through 3 above, then tap Reset.
+
+You can choose the processing type Photos uses for Clean Up—Auto, Fast, or High Quality. Tap Auto during the Clean Up process, then choose an option.
+
+Extend the background
+
+Use the Extend tool to expand the edges of the original photo frame.
+
+Go to the Photos app  on your iPhone.
+
+Open a photo, then tap .
+
+Tap Tools, then tap Extend.
+
+Pinch or drag the photo to extend the background; drag the edge of the frame to crop.
+
+Tap Extend.
+
+Tap , then tap Done to close the photo.
+
+After you save, you can undo the changes you made with the Extend tool. Follow steps 1 through 3 above, then tap Reset.
+
+Reframe the perspective
+
+Use the Reframe tool to change the point of capture after you take a photo.
+
+Go to the Photos app  on your iPhone.
+
+Open a photo, then tap .
+
+Tap Tools, then tap Reframe.
+
+Touch and drag the photo to adjust the perspective or use two fingers to pan, zoom, and rotate.
+
+Tap Reframe.
+
+Tap the photo to compare the reframed version to the original.
+
+Tap , then tap Done to close the photo.
+
+After you save, you can undo the changes you made with the Reframe tool. Follow steps 1 through 3 above, then tap Reset.
+
+In iOS 27.2 or later, most images created or edited with Apple Intelligence tools include a SynthID hidden watermark to help identify whether an image was generated or modified with generative tools. You can use the SynthID Detector to check for this watermark.
+
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English, French, Japanese, Korean, Portuguese, and Spanish to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Siri AI is not available for users under 13. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at support.apple.com/148587.
+
+See also
+Crop, rotate, flip, or straighten photos and videos on iPhone
+Edit photos and videos on iPhone
+Previous
+Edit Portrait mode photos
+Next
+Save a video frame as a photo
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

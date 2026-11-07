@@ -1,0 +1,79 @@
+﻿
+ Using HEIF or HEVC media on Apple devices - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+Using HEIF or HEVC media on Apple devices
+Upgrade to iOS 11 or later or macOS High Sierra or later to view, edit, or duplicate HEIF or HEVC media captured with an iPhone or iPad.
+About HEIF and HEVC
+Capturing HEIF and HEVC media
+Working with HEIF and HEVC media
+Sharing HEIF and HEVC media
+Converting HEIF and HEVC media
+Importing HEIF and HEVC media via USB
+About HEIF and HEVC
+To fully view, edit, or duplicate HEIF and HEVC media on your device, upgrade to the latest version of iOS 11 or later or macOS High Sierra 10.13 or later.
+iOS 11 and macOS High Sierra introduced support for these new, industry-standard media formats:
+HEIF (High Efficiency Image File Format) for photos
+HEVC (High Efficiency Video Coding), also known as H.265, for videos
+HEIF and HEVC offer better compression than JPEG and H.264, so they use less storage space on your devices and iCloud Photos, while preserving the same visual quality. 
+Capturing HEIF and HEVC media
+Which devices can capture media in HEIF and HEVC format
+When using iOS 11 or later, iPadOS, or visionOS, the following devices can capture media in HEIF or HEVC format. Other devices can view, edit, or duplicate this media with limitations when using iOS 11 or later, iPadOS, visionOS, or macOS High Sierra 10.13 or later.
+iPhone 7 or iPhone 7 Plus or later
+iPad (6th generation) or later
+iPad Air (3rd generation) or later
+iPad mini (5th generation) or later
+iPad Pro (10.5 inch), iPad Pro (11 inch), and iPad Pro 12.9-inch (2nd generation) or later
+Apple Vision Pro
+On supported Mac computers with macOS Tahoe 26 or later, if the Capture Format setting in the Screenshot app is set to HDR, screenshots are captured in HEIF format and screen recordings are captured in HEVC format.
+How to capture media in older formats
+Though capturing in HEIF and HEVC format is recommended, you can set iPhone or iPad to capture media using the older formats, which are more broadly compatible with other devices and operating systems:
+Open Settings, then tap Camera.
+Tap Formats, then tap Most Compatible. This setting is available only on iPhone and iPad devices that can capture media in HEIF or HEVC format.
+All new photos and videos will now use JPEG or H.264 format. To return to using the space-saving HEIF and HEVC formats, choose High Efficiency.
+Working with HEIF and HEVC media
+Support for HEIF and HEVC is built into iOS 11 and later, iPadOS, visionOS, and macOS High Sierra 10.13 and later, which let you view, edit, and duplicate this media in apps that support these features.
+On some older devices, support for HEVC is affected by the resolution and frame rate (fps) of the video. Resolutions of 1080p or lower and frame rates of 60 fps or lower are more broadly compatible with older devices. To reduce the resolution and frame rate that your compatible iPhone or iPad uses for recording video, open Settings, tap Camera, then look in the settings for Record Video and Record Slo-mo. 
+If you're using iCloud Photos with iOS 10 or macOS Sierra 10.12, you might see a warning icon in the upper-right corner of the photo or video, or you might see an alert message. To fully view, edit, or duplicate HEIF and HEVC media on your device, upgrade to iOS 11 or later or macOS High Sierra 10.13 or later.
+Sharing HEIF and HEVC media
+Sharing via iCloud Photos 
+If sharing this media via iCloud Photos, the media is preserved in its original format, resolution, and frame rate. If your device can't fully view, edit, or duplicate HEIF or HEVC media in iCloud Photos, or displays it at a lower resolution, upgrade to iOS 11 or later or﻿ macOS High Sierra 10.13 or later.
+Sharing via other methods
+If sharing this media using other methods, such as AirDrop, Messages, or email, and the receiving device doesn’t support the newer media formats, the media might automatically be shared in a more compatible format, such as JPEG or H.264.
+Converting HEIF and HEVC media
+To convert HEIF and HEVC media manually, export it to a different format from an Apple or third-party app. For example:
+If you open an HEIF image in Photos or Preview on your Mac, choose File > Export, then choose a format such as JPEG or PNG before saving.
+If you open an HEVC video in QuickTime Player on your Mac, choose File > Export As. In the dialog that opens, use the pop-up menu to change from Smaller File Size (HEVC) to Greater Compatibility (H.264) before you click Save. If you see an HEVC checkbox instead of a pop-up menu, just deselect the checkbox before saving.
+If you have an HEVC video in a Finder window, Control-click the video, then choose Services > Encode Selected Video Files from the shortcut menu that appears. In the Encode Media window that opens, choose an H.264 option from the Settings menu.
+Importing HEIF and HEVC media via USB
+When you import HEIF or HEVC media from an attached iPhone or iPad into Photos, Image Capture, or a PC, the media might be converted to JPEG or H.264. If you don't want it to be converted, open Settings, tap Apps, tap Photos, then scroll down and tap Keep Originals.
+ Published Date: December 05, 2025
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Maximum character limit is 250.
+ Please don’t include any personal information in your comment.
+ Submit
+ Thanks for your feedback.
+ Related topics
+Apple Footer
+ 
+ Apple
+ Support
+ Using HEIF or HEVC media on Apple devices
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

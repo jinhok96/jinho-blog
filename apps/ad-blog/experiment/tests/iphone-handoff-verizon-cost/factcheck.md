@@ -1,5 +1,8 @@
 # 사실 확인표: iphone-handoff-verizon-cost
 
+- 검증 유형 (가설 H3): **조사형** — Apple 지원 문서·통신사 요금 대조만, 직접 실행 없음
+- 주 검색어 (가설 H6): `iphone handoff verizon` — 브리프 주 검색어
+
 확인일: 2026-10-18 06~07시 KST (미국 2026-10-17). Apple·Verizon·T-Mobile 페이지는 curl 정적 HTML로 본문 추출. 직접 실행 검증 없음(iPhone 2대 + 지원 통신사 필요) → 문서 기반 뉴스 칼럼. 원문 발췌: [source-apple-127274.txt](source-apple-127274.txt), [source-verizon.txt](source-verizon.txt), [source-tmobile.txt](source-tmobile.txt).
 
 ## 글 설정
@@ -46,3 +49,24 @@
 - Verizon 요금에 포함되는 데이터·조건: 발표에 없음 → "hasn't said yet"으로만 표기
 - 두 번째 회선 요금 비교: 통신사·요금제별로 달라 1차 출처로 일반화 불가 → `Our take` 반대 관점에서 "compare with what your second line costs"로만 씀
 - iOS 27 출시일(보도 9-14): Apple 1차 출처 미확인 → 본문에 날짜 쓰지 않음
+
+## 2026-10-27 재확인 (세션 57 개선 세션: 칼럼 후속 확인 + 본문 그래픽 1장)
+
+- Apple 127274를 curl로 다시 받아(`source-apple-127274-2026-10-27.txt`, 09:34 UTC) 10-17판과 문장 단위 diff: **Published Date가 September 09 → October 19, 2026**으로 바뀌었고, 바뀐 문장은 2개뿐. ① 전환 표시: "The message “Switched to this iPhone” will display…" → 전환한 iPhone에 "Switched to this iPhone", **전환 전 iPhone에는 화살표 아이콘**("The iPhone that you switched from will display an arrow icon at the top of your screen.") ② "does not" → "doesn't" (Apple Watch 문장). 지원 통신사는 여전히 `USA: T-Mobile` · `Germany: Telekom`
+- Verizon 10-16 발표 다시 열어 봄: 여전히 "iPhone Handoff coming soon to Verizon", "$10/month", 시작일 없음
+- 판단: 본문의 사실(지원 통신사·Verizon 미시작·요금)은 그대로 맞음 → 칼럼 내용 갱신 없음(`updatedAt` 그대로). 화살표 아이콘은 본문에 넣지 않음(판단에 영향 없는 표시 문구)
+- 새 본문 그래픽 `iphone-handoff-what-changes.webp`(`rules_card.py`, 디자인 시스템 라이트 모드): 본문 "Beyond the fee" 목록의 Apple 문서 항목 6개를 카드로. 카드 문장 ↔ 10-27판 원문
+  - One main iPhone ↔ "Some carrier services, like Call Forwarding and Caller ID, and carrier account management can only be managed on your main iPhone."
+  - One active at a time ↔ "Your phone number will only be active on one iPhone at a time when using iPhone Handoff." + 잠금 해제한 기기에서 번호가 활성 + "Switched to this iPhone"
+  - Apple Watch stays put ↔ "iPhone Handoff doesn't switch your Apple Watch to your other iPhone." + "Pair your Apple Watch to the iPhone you use the most."
+  - Some Wallet items stay ↔ "You can add payment cards to Wallet during setup and they work on both devices. Some Wallet items, such as certain transit passes, IDs, or corporate badges, might only work on one device at a time."
+  - Some apps ask again ↔ "Some third-party iPhone apps, like banking apps, may require you to approve access on your existing device before your secondary device is authenticated."
+  - Deleting the eSIM isn't enough(강조) ↔ "You must contact your carrier to turn off iPhone Handoff. If you delete an eSIM from your iPhone, your carrier may continue to charge you until you request them to turn off the service."
+- 대표 이미지를 뺀 본문 이미지 2 → 3장 (writing-guide 본문 이미지 규칙)
+
+## 2026-11-05 재확인 (세션 81 개선 세션: 칼럼 후속 확인만)
+
+- Apple 127274를 curl로 다시 받아(`source-apple-127274-2026-11-05.txt`, 11-04 21:30 UTC) 10-27판과 단어 단위 diff: **Published Date October 19 → November 03, 2026**. 바뀐 것 ① 지원 통신사에 **`United Kingdom: EE`** 추가(미국은 여전히 `USA: T-Mobile`만) ② 옮겨 가는 메시지 "(iMessage, RCS, or SMS/MMS)" → "(iMessage, RCS, or SMS)" ③ 새 iPhone 설정·eSIM 옮기기 문장에 "if supported by your carrier" 추가 ④ 문장 다듬기("Contact your carrier if you need help…" → "If you need help…, contact your carrier", Dual SIM 문장에서 "simultaneously" 삭제 등)
+- Verizon 10-16 발표(`iphone-duo-verizon-offers`) 다시 열어 봄: 여전히 "iPhone Handoff coming soon to Verizon", "$10/month", 시작일 없음. WebSearch(11-05)에도 Verizon 시작일·AT&T 지원 발표 없음
+- 판단: 본문의 미국 사실(미국 지원 통신사 T-Mobile뿐·Verizon 미시작·요금)은 그대로 맞고, "still lists only two supported carriers as of October 17, 2026"은 날짜를 밝힌 문장이라 틀린 문장은 아님. 본문에 MMS 언급 없음. EE는 '쓰지 않은 것'(미국 독자)과 같은 이유로 생략 → **지금은 고치지 않음**(`updatedAt` 그대로, V7 판정 중 피드 구성 유지)
+- V7 판정 뒤 갱신 후보(한 번에): ① 27번째 줄 통신사 문장을 "Apple's guide, last updated November 3, 2026, still lists T-Mobile as the only U.S. carrier"처럼 최신 판으로 ② 'What to watch next'의 지난 일정 "October 23: iPhone Duo arrives in stores…" 줄 정리 ③ 타임라인 그래픽은 지난 일정이라 그대로 둠

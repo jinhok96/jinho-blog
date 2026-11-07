@@ -1,0 +1,6847 @@
+URL chrome://flags/
+
+Reset all
+Upload file
+Paste from clipboard
+Experiments
+156.1.98.63
+Warning: Experimental features ahead!
+By enabling these features, you could lose browser data or compromise your security or privacy. Enabled features apply to all users of this browser. If you are an enterprise admin you should not be using these flags in production.
+* Overridden by active variations or a command line.
+Available
+Unavailable
+V8 Jitless mode
+Enable V8 jitless mode when optimizations are disabled. V8 runs in jitless mode which reduces performance but improves security. This does not affect all pages.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-v8-jitless-mode
+Default (Disabled)
+Enabled
+Disabled
+Use dev updater url
+Use the dev url for the component updater. This is for internal testing only.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+use-dev-updater-url
+Default (Disabled)
+Enabled
+Disabled
+Brave Search Widget on the NTP
+Enables searching directly from the New Tab Page
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ntp-search-widget
+Default (Enabled)
+Enabled
+Disabled
+Center image NTT CTA button
+Centers image NTT CTA button above the widget area
+–
+Mac, Windows, Linux, ChromeOS
+#
+center-ntt-cta-button
+Default (Disabled)
+Enabled
+Disabled
+Use filled bookmark folder icon
+Uses the legacy filled bookmark folder icon instead of the default outlined icon
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-filled-bookmark-folder-icon
+Default (Disabled)
+Enabled
+Disabled
+New Tab Page refresh
+Enables the refreshed version of the New Tab Page
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ntp-refresh-enabled
+Default (Enabled)
+Enabled
+Disabled
+Enable adblock DAT file caching
+Cache compiled adblock engines to disk as serialized DAT files. On subsequent startups, cached DAT files are loaded instead of reprocessing filter lists, improving startup time.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-dat-cache
+Default (Enabled)
+Enabled
+Disabled
+Enable CNAME uncloaking
+Take DNS CNAME records into account when making network request blocking decisions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-cname-uncloaking
+Default (Enabled)
+Enabled
+Disabled
+Collapse HTML elements with blocked source attributes
+Cause iframe and img elements to be collapsed if the URL of their src attribute is blocked
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-collapse-blocked-elements
+Default (Enabled)
+Enabled
+Disabled
+Treat 'Easylist-Cookie List' as a default list source
+Enables the 'Easylist-Cookie List' regional list if its toggle in brave://adblock hasn't otherwise been modified
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-cookie-list-default
+Default (Enabled)
+Enabled
+Disabled
+Enable cosmetic filtering
+Enable support for cosmetic filtering
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-cosmetic-filtering
+Default (Enabled)
+Enabled
+Disabled
+Enable support for CSP rules
+Applies additional CSP rules to pages for which a $csp rule has been loaded from a filter list
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-csp-rules
+Default (Enabled)
+Enabled
+Disabled
+Shields first-party network blocking
+Allow Brave Shields to block first-party network requests in Standard blocking mode
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-default-1p-blocking
+Default (Disabled)
+Enabled
+Disabled
+Treat 'Fanboy's Mobile Notifications List' as a default list source
+Enables the 'Fanboy's Mobile Notifications List' regional list if its toggle in brave://adblock hasn't otherwise been modified
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-mobile-notifications-list-default
+Default (Enabled)
+Enabled
+Disabled
+Enable procedural filtering
+Enable support for procedural cosmetic filtering
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-procedural-filtering
+Default (Enabled)
+Enabled
+Disabled
+Treat 'Brave Experimental Adblock Rules' as a default list source
+Enables the 'Brave Experimental Adblock Rules' regional list if its toggle in brave://adblock hasn't otherwise been modified
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-experimental-list-default
+Default (Disabled)
+Enabled
+Disabled
+Enable debug logging for scriptlet injections
+Enable console debugging for scriptlets injected by cosmetic filtering, exposing additional information that can be useful for filter authors.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-adblock-scriptlet-debug-logs
+Default (Disabled)
+Enabled
+Disabled
+Show hidden adblock filter list components
+Reveals adblock filter list components in brave://settings/shields/filters that would normally be hidden.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-adblock-show-hidden-components
+Default (Disabled)
+Enabled
+Disabled
+Enable domain blocking
+Enable support for blocking domains with an interstitial page
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-domain-block
+Default (Enabled)
+Enabled
+Disabled
+Enable domain blocking using First Party Ephemeral Storage
+When visiting a blocked domain, Brave will try to enable Ephemeral Storage for a first party context, meaning neither cookies nor localStorage data will be persisted after a website is closed. Ephemeral Storage will be auto-enabled only if no data was previously stored for a website
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-domain-block-1pes
+Default (Enabled)
+Enabled
+Disabled
+Enable debouncing
+Enable support for skipping top-level redirect tracking URLs
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-debounce
+Default (Enabled)
+Enabled
+Disabled
+Enable De-AMP
+Enable De-AMPing feature
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-de-amp
+Default (Enabled)
+Enabled
+Disabled
+Enable Google Sign-In Permission Prompt
+Enable permissioning access to legacy Google Sign-In
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-google-sign-in-permission
+Default (Enabled)
+Enabled
+Disabled
+Enable extension network blocking
+Enable blocking for network requests initiated by extensions
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-extension-network-blocking
+Default (Disabled)
+Enabled
+Disabled
+Reduce language identifiability
+Reduce the identifiability of my language preferences
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-reduce-language
+Default (Enabled)
+Enabled
+Disabled
+Enable sync loading of cosmetic filter rules
+Enable sync loading of cosmetic filter rules
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-cosmetic-filtering-sync-load
+Default (Enabled)
+Enabled
+Disabled
+'Block all cookies' option in Shields global defaults
+Shows the 'Block all cookies' toggle in Shields global defaults. This global setting prevents all websites from storing cookies on your device, but is also very likely to lead to site breakage.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+block-all-cookies-toggle
+Default (Disabled)
+Enabled
+Disabled
+Enable Block Element feature
+Allows to block selected HTML element on the page
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+block-element-feature
+Default (Enabled)
+Enabled
+Disabled
+Transition to use upstream HTTPS upgrades
+Transition to upstream HTTPS upgrade implementation instead of Brave's own.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+transition-to-upstream-https-upgrades
+Default (Disabled)
+Enabled
+Disabled
+Enable Brave Farbling
+Enables randomization of fingerprinting-susceptible WebAPIs
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-farbling
+Default (Enabled)
+Enabled
+Disabled
+Enable Brave Farbling token reset
+Enables resetting of the brave farbling token across browser restarts.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-farbling-token-reset
+Default (Enabled)
+Enabled
+Disabled
+Enable Provisional TLDEphemeralLifetime
+Cleanup third party cookies set during redirects
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-provisional-tld-ephemeral-lifetime
+Default (Enabled)
+Enabled
+Disabled
+Ephemeral Storage Keep Alive
+Keep ephemeral storage partitions alive for a specified time after all tabs for that origin are closed
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-ephemeral-storage-keep-alive
+Default (Enabled)
+Enabled
+Disabled
+Enable First Party Ephemeral Storage
+Enable support for First Party Ephemeral Storage using SESSION_ONLY cookie setting
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-first-party-ephemeral-storage
+Default (Enabled)
+Enabled
+Disabled
+Enable First Party Storage Cleanup support
+Add cookie blocking mode which allows Brave to cleanup first party storage (Cookies, DOM Storage) on website close
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-forget-first-party-storage
+Default (Enabled)
+Enabled
+Disabled
+Enable Brave Rewards verbose logging
+Enables detailed logging of Brave Rewards system events to a log file stored on your device. Please note that this log file could include information such as browsing history and credentials such as passwords and access tokens depending on your activity. Please do not share it unless asked to by Brave staff.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-rewards-verbose-logging
+Default (Disabled)
+Enabled
+Disabled
+Always show Brave Rewards custodial connection options
+Allows all custodial options to be selected in Brave Rewards, including those not supported for your Rewards country.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-rewards-allow-unsupported-wallet-providers
+Default (Disabled)
+Enabled
+Disabled
+Enable Brave Rewards self-custody connection options
+Enables self-custody options to be selected in Brave Rewards.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-rewards-allow-self-custody-providers
+Default (Enabled)
+Enabled
+Disabled
+Show an animated background on the Rewards UI
+Shows an animated background on the Rewards panel and page.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-rewards-animated-background
+Default (Disabled)
+Enabled
+Disabled
+Detect Brave Creators on media platform sites
+Enables detection of Brave Creator pages on media platform sites.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-rewards-platform-creator-detection
+Default (Enabled)
+Enabled
+Disabled
+File System Access API
+Enables the File System Access API, giving websites access to the file system
+–
+Mac, Windows, Linux, ChromeOS
+#
+file-system-access-api
+Default (Disabled)
+Enabled
+Disabled
+Web Bluetooth API
+Enables the Web Bluetooth API, giving websites access to Bluetooth devices
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-web-bluetooth-api
+Default (Disabled)
+Enabled
+Disabled
+Enable navigator.connection attribute
+Enables the navigator.connection API. Enabling this API will allow sites to learn information about your network and internet connection. Trackers can use this information to fingerprint your browser, or to infer when you are traveling or at home.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+navigator-connection-attribute
+Default (Disabled)
+Enabled
+Disabled
+Restrict WebSockets pool
+Limits simultaneous active WebSockets connections per eTLD+1
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+restrict-websockets-pool
+Default (Enabled)
+Enabled
+Disabled
+Allow permission inheritance in incognito profiles
+When enabled, most permissions set in a normal profile will be inherited in incognito profile if they are less permissive, for ex. Geolocation BLOCK will be automatically set to BLOCK in incognito.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+allow-incognito-permission-inheritance
+Default (Enabled)
+Enabled
+Disabled
+Block screen fingerprinting
+Prevents JavaScript and CSS from learning the user's screen dimensions or window position.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-block-screen-fingerprinting
+Default (Enabled)
+Enabled
+Disabled
+Add more protections for graphics in balanced fingerprinting
+Adds extra protections when sites asks for device specific information from the graphics APIs. It also adds noise to APIs that enumerates webgl extensions which can be used to fingerprint users across sites.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-webgl-balanced-fingerprinting-protections
+Default (Disabled)
+Enabled
+Disabled
+Use HTTPS-Only Mode in Private Windows with Tor
+Prevents Private Windows with Tor from making any insecure HTTP connections without warning the user first.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-tor-windows-https-only
+Default (Enabled)
+Enabled
+Disabled
+Round time stamps
+Prevents JavaScript from getting access to high-resolution clocks by rounding all DOMHighResTimeStamps to the nearest millisecond.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-round-time-stamps
+Default (Disabled)
+Enabled
+Disabled
+Restrict Event Source Pool
+Limits simultaneous active WebSockets connections per eTLD+1
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+restrict-event-source-pool
+Default (Enabled)
+Enabled
+Disabled
+Override default copy hotkey with copy clean link
+Sanitize url before copying, replaces default ctrl+c hotkey for url
+–
+Mac, Windows, Linux
+#
+brave-copy-clean-link-by-default
+Default (Enabled)
+Enabled
+Disabled
+Sanitize URLs in the clipboard
+Sanitize URLs in the clipboard when they are added via the JS API (share/copy buttons).
+–
+Mac, Windows, Linux
+#
+brave-clean-link-js-api
+Default (Disabled)
+Enabled
+Disabled
+Enable Global Privacy Control
+Enable the Sec-GPC request header and the navigator.globalPrivacyControl JS API
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-global-privacy-control-enabled
+Default (Enabled)
+Enabled
+Disabled
+Use HTTPS by Default
+Attempt to connect to all websites using HTTPS before falling back to HTTP.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+https-by-default
+Default (Enabled)
+Enabled
+Disabled
+Use a fallback DoH provider
+In Automatic DoH mode, use a fallback DoH provider if the current provider doesn't offer Secure DNS.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fallback-dns-over-https
+Default (Disabled)
+Enabled
+Disabled
+Show Strict Fingerprinting Mode
+Show Strict (aggressive) option for Fingerprinting Mode in Brave Shields
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-show-strict-fingerprinting-mode
+Default (Disabled)
+Enabled
+Disabled
+Override download danger level
+Disables download warnings for files which are considered dangerous when Safe Browsing is disabled. Use at your own risks. Not recommended.
+–
+Mac, Windows, Linux
+#
+brave-override-download-danger-level
+Default (Disabled)
+Enabled
+Disabled
+Strip tracking metadata from images
+Removes tracking metadata, such as the Facebook IPTC identifiers, from images when they are downloaded/uploaded.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-strip-image-metadata-v1
+Default (Disabled)
+Enabled
+Disabled
+Allow feature exceptions for webcompat
+Disables Brave features for specific websites when they break website functionality.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-webcompat-exceptions-service
+Default (Enabled)
+Enabled
+Disabled
+Use rounded corners on main content areas by default
+Renders the main content area and sidebar panel with rounded corners, padding, and a drop shadow by default
+–
+Mac, Windows, Linux
+#
+brave-rounded-corners-by-default
+Default (Disabled)
+Enabled
+Disabled
+Override Brave Sync server URL
+Allows you to use a self-hosted server with Brave Sync. You can learn more about the server implementation in the repository link mentioned below. Note: Only HTTPS URLs are supported by default. HTTP URLs are only allowed for potentially trustworthy origins like localhost. Insecure URLs that don't meet these requirements will be ignored in favor of the official Brave-hosted server
+–
+Mac, Windows, Linux, ChromeOS, Android
+https://github.com/brave/go-sync
+#
+brave-override-sync-server-url
+Disabled
+Enabled
+Adblock-Only mode availability
+Adds an option in settings for Adblock-Only mode, which retains core ad blocking rules of Brave Shields. This is an experimental mode, go to brave://settings/shields to enable.
+–
+Mac, Windows, Linux
+#
+brave-ad-block-only-mode
+Default (Enabled)
+Enabled
+Disabled
+Show updated shields panel
+Shows an updated WebUI for the Brave Shields panel.
+–
+Mac, Windows, Linux
+#
+brave-show-updated-shields-panel
+Default (Enabled)
+Enabled
+Disabled
+Enable password syncing by default
+Turn on password syncing when Sync is enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-sync-default-passwords
+Default (Enabled)
+Enabled
+Disabled
+Enable Brave 'Shred' Feature
+Enable the Brave 'Shred' feature which will allow a user to easily delete all site data on demand or automatically when closing a site or terminating the application.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-shred
+Default (Disabled)
+Enabled
+Disabled
+BraveRequestInfo unique_ptr
+Enable experimental use of unique_ptr/WeakPtr instead of shared_ptr for BraveRequestInfo
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-request-info-unique-ptr
+Default (Enabled)
+Enabled
+Disabled
+Enable BraveWallet ZCash support
+Zcash support for native Brave Wallet
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-wallet-zcash
+Default (Enabled)
+Enabled
+Enabled - Shielded support disabled
+Enabled - Shielded support enabled
+Enabled - Ironwood support enabled
+Disabled
+Enable Brave Wallet Polkadot support
+Polkadot support for native Brave Wallet
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-wallet-polkadot
+Default (Enabled)
+Enabled
+Enabled - Asset discovery disabled
+Enabled - Asset discovery enabled
+Enabled - dApp support disabled
+Enabled - dApp support enabled
+Disabled
+Enable Brave Wallet Bitcoin support
+Bitcoin support for native Brave Wallet
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-wallet-bitcoin
+Default (Enabled)
+Enabled
+Disabled
+Enable Brave Wallet Cardano support
+Cardano support for native Brave Wallet
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-wallet-cardano
+Default (Enabled)
+Enabled
+Disabled
+Enable Ankr balances
+Enable usage of Ankr Advanced API for fetching balances in Brave Wallet
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-wallet-enable-ankr-balances
+Default (Disabled)
+Enabled
+Disabled
+Enable transaction simulations
+Enable usage of Blowfish API for running transaction simulations in Brave Wallet
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-wallet-enable-transaction-simulations
+Default (Disabled)
+Enabled
+Disabled
+Enable Brave Wallet in the sidebar panel
+Show the Wallet panel UI in the browser sidebar instead of opening a full-page tab
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-wallet-side-panel
+Default (Disabled)
+Enabled
+Disabled
+Brave News prompts on New Tab Page
+Prompt Brave News via the top featured article peeking up from the bottom of the New Tab Page, after a short delay.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-news-peek
+Default (Enabled)
+Enabled
+Disabled
+Brave News Feed Update
+Use the updated Brave News feed
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-news-feed-update
+Default (Enabled)
+Enabled
+Disabled
+Brave News Sidebar
+Show a Brave News entry in the sidebar that opens a side panel.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-news-sidebar
+Default (Enabled)
+Enabled
+Disabled
+Enable SpeedReader
+Enables faster loading of simplified article-style web pages.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-speedreader
+Default (Enabled)
+Enabled
+Disabled
+Enable Request-OTR Tab
+Suggest going off-the-record when visiting potentially sensitive URLs
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-request-otr-tab
+Default (Disabled)
+Enabled
+Disabled
+Enable brave://ads-internals verbose mode
+Shows extra debugging tabs and tools on brave://ads-internals.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ads-internals-verbose-mode
+Default (Disabled)
+Enabled
+Disabled
+Playlist
+Enables Playlist
+–
+Mac, Windows, Linux, Android
+#
+playlist
+Default (Disabled)
+Enabled
+Disabled
+PlaylistFakeUA
+Use fake UA for playlist
+–
+Mac, Windows, Linux, Android
+#
+playlist-fake-ua
+Default (Disabled)
+Enabled
+Disabled
+Brave Commands
+Enable experimental page for viewing and executing commands in Brave
+–
+Mac, Windows, Linux
+#
+brave-commands
+Default (Enabled)
+Enabled
+Disabled
+Brave Commands in Omnibox
+Enable quick commands in the omnibox
+–
+Mac, Windows, Linux
+#
+brave-commands-omnibox
+Default (Enabled)
+Enabled
+Disabled
+Enable Containers
+Allows websites to be opened in contained tabs, keeping different identities separate within the same browser profile
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+containers
+Default (Enabled)
+Enabled
+Disabled
+Enable Traffic Control
+Routes navigations matching user rules into targets such as Containers within the same browser profile
+–
+Mac, Windows, Linux
+#
+traffic-control
+Default (Disabled)
+Enabled
+Disabled
+Custom profile images
+Enable custom profile images.
+–
+Mac, Windows, Linux
+#
+brave-custom-profile-image
+Default (Disabled)
+Enabled
+Disabled
+Change active tab on scroll event
+Change the active tab when scroll events occur on tab strip.
+–
+Linux
+#
+brave-change-active-tab-on-scroll-event
+Default (Enabled)
+Enabled
+Disabled
+Software HEVC/H.265 decoder
+Enables the bundled FFmpeg HEVC software decoder. Useful as a fallback when hardware decode is unavailable (e.g. NVIDIA GPUs on Linux). Disable if HEVC playback misbehaves.
+–
+Linux
+#
+brave-ffmpeg-software-hevc-decoder
+Default (Disabled)
+Enabled
+Disabled
+Shared pinned tab
+Pinned tabs are shared across windows
+–
+Mac, Windows, Linux
+#
+brave-shared-pinned-tabs
+Default (Disabled)
+Enabled
+Disabled
+Updated horizontal tabs design
+Updates the look and feel or horizontal tabs
+–
+Mac, Windows, Linux
+#
+brave-horizontal-tabs-update
+Default (Enabled)
+Enabled
+Disabled
+Show scroll bar on vertical tab strip
+Shows scroll bar on vertical tab strip when it overflows
+–
+Mac, Windows, Linux
+#
+brave-vertical-tab-scroll-bar
+Default (Disabled)
+Enabled
+Disabled
+Brave Vertical Tab Hide Completely
+Hides the vertical tab strip when collapsed
+–
+Mac, Windows, Linux
+#
+brave-vertical-tab-hide-completely
+Default (Enabled)
+Enabled
+Disabled
+Brave Vertical Tab Expand Delay
+Delay before expanding the vertical tab strip when hovering
+–
+Mac, Windows, Linux
+#
+brave-vertical-tab-expand-delay
+default
+0ms
+50ms
+100ms
+150ms
+200ms
+250ms
+300ms
+400ms
+Brave Vertical Tab Collapse Delay
+Delay before collapsing the vertical tab strip when mouse exits
+–
+Mac, Windows, Linux
+#
+brave-vertical-tab-collapse-delay
+default
+0ms
+50ms
+100ms
+150ms
+200ms
+250ms
+300ms
+400ms
+Brave Vertical Tab Migration (testing)
+Force-route to Chromium's native vertical tabs, or reset back to Brave's own vertical tabs. Internal testing of the migration effort only - not a real user-facing setting.
+–
+Mac, Windows, Linux
+#
+brave-vertical-tab-migration
+default
+Force upstream vertical tabs
+Reset to Brave vertical tabs
+Brave Tree Tab
+Enables the Tree Tab feature
+–
+Mac, Windows, Linux
+#
+brave-tree-tab
+Default (Enabled)
+Enabled
+Disabled
+Scrollable horizontal tab strip
+Enables scrolling for horizontal tab strip when tabs overflow
+–
+Mac, Windows, Linux
+#
+brave-scrollable-tab-strip
+Default (Enabled)
+Enabled
+Disabled
+Bring all tabs to this window
+Enables 'Bringing all tabs from other windows to this window' from tab context menu
+–
+Mac, Windows, Linux
+#
+brave-bring-all-tabs-to-this-window
+Default (Enabled)
+Enabled
+Disabled
+Brave Ultra Dark Theme
+Enables the Brave Ultra Dark theme
+–
+Mac, Windows, Linux
+#
+brave-ultra-dark-theme
+Default (Enabled)
+Enabled
+Disabled
+Show Brave Shields in Page Info
+Shows Brave Shields settings in the Page Info bubble
+–
+Mac, Windows, Linux
+#
+brave-shields-page-info
+Default (Disabled)
+Enabled
+Disabled
+Focus Mode
+Enables Focus Mode, which hides browser chrome and provides hover-to-reveal access to hidden UI elements
+–
+Mac, Windows, Linux
+#
+brave-focus-mode
+Default (Enabled)
+Enabled
+Enabled - URL in title bar
+Enabled - URL in mini-toolbar
+Enabled - No URL display
+Disabled
+Brave AI Chat
+Summarize articles and engage in conversation with AI
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat First
+Prioritize Leo vs Search within Brave
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-first
+Default (Disabled)
+Enabled
+Disabled
+Brave AI Chat History
+Enables AI Chat History persistence and management
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-history
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Global Side Panel
+Keeps the same conversation when navigating sites or changing active tab
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ai-chat-global-side-panel
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Move Full Page To Side Panel
+Moves the full-page AI Chat conversation into the side panel when an in-conversation link is clicked, and back to a tab when opening full-page, preserving the live conversation state
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ai-chat-move-full-page-to-side-panel
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Rich Search Widgets
+Enables AI Chat Rich Search Widgets
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-rich-search-widgets
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat User Choice Tool
+AI can offer a multiple choice question to the user during a conversation.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-ai-chat-user-choice-tool
+Default (Disabled)
+Enabled
+Disabled
+Brave's AI browsing
+Enables Ai browsing features and only in a separate built-in profile.
+–
+Mac, Windows, Linux
+#
+brave-ai-chat-agent-profile
+Default (Disabled)
+Enabled
+Disabled
+Brave AI Host-Specific Distillation
+Enables support for host-specific distillation scripts
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-host-specific-distillation
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Rewrite In Place From Context Menu
+Enables AI Chat rewrite in place feature from the context menu
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ai-chat-context-menu-rewrite-in-place
+Default (Enabled)
+Enabled
+Disabled
+Private IP Addresses for Custom Model Endpoints
+Permits the use of private IP addresses as model endpoint URLs
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-allow-private-ips
+Default (Disabled)
+Enabled
+Disabled
+Open Leo AI Chat from Brave Search
+Enables opening Leo AI Chat from Brave Search
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-ai-chat-open-leo-from-brave-search
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Web Content Association Default
+For AI Chat Conversations which are associated with web content, allow the toggle for sending page content to be set to enabled when the conversation is created.
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-web-content-association-default
+Default (Enabled)
+Enabled
+Disabled
+Show AI Chat input on the New Tab Page
+Show a Brave AI chat input on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ai-chat-show-input-on-new-tab-page
+Default (Disabled)
+Enabled
+Disabled
+Brave AI Chat Detailed Page Content Extraction
+Uses optimization_guide-based page content extraction as the default method for AI Chat page context.
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-detailed-page-content-extraction
+Default (Disabled)
+Enabled
+Disabled
+Brave AI Chat Conversation Sharing
+Enables sharing a conversation from the conversation header.
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-conversation-share
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Export JSON
+Enables copying serialized conversation data as JSON to the clipboard when using the alt+meta key and the "Copy entire conversation" menu option.
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-export-json
+Default (Disabled)
+Enabled
+Disabled
+Brave AI Chat Math Rendering
+Renders LaTeX expressions in assistant responses as typeset math.
+–
+Mac, Windows, Linux, Android
+#
+brave-ai-chat-math-rendering
+Default (Enabled)
+Enabled
+Disabled
+Brave AI Chat Tab Management Tool
+AI can offer to sort, group, or close tabs to solve a user task during a conversation.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-ai-chat-tab-management-tool
+Default (Enabled)
+Enabled
+Disabled
+History Embeddings
+Enables semantic history search using local embeddings.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-history-embeddings
+Default (Disabled)
+Enabled
+Disabled
+Brave Tab Switch by Default
+Prefer switching to already open tabs, rather than navigating in a new tab
+–
+Mac, Windows, Linux
+#
+brave-omnibox-tab-switch-by-default
+Default (Disabled)
+Enabled
+Disabled
+Brave More History
+Include more history in the omnibox search results
+–
+Mac, Windows, Linux, Android
+#
+brave-history-more-search-results
+Default (Enabled)
+Enabled
+Disabled
+Middle button autoscroll
+Enables autoscrolling when the middle mouse button is clicked
+–
+Mac, Linux
+#
+middle-button-autoscroll
+Default (Disabled)
+Enabled
+Disabled
+Brave Extensions manifest V2
+Enables Brave support for some manifest V2 extensions
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-extensions-manifest-v2
+Default (Enabled)
+Enabled
+Disabled
+Automatically Update Extensions
+Automatically update user-installed Web extensions. When disabled, extensions will not update in the background. Folks can still update them manually from the brave://extensions page.
+–
+Mac, Windows, Linux
+#
+brave-user-extension-auto-update
+Default (Enabled)
+Enabled
+Disabled
+Enhanced malicious extension blocking
+Also turns off extensions flagged on Brave's own malicious-extension list, in addition to the extensions Brave already blocks.
+–
+Mac, Windows, Linux
+#
+brave-extension-malware-blocklist
+Default (Disabled)
+Enabled
+Disabled
+Show getting started pages
+Show a getting started page after completing the Welcome UX.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-show-getting-started-page
+Default (Disabled)
+Enabled
+Disabled
+Enable PSST (Privacy Site Settings Tool) feature
+Enable PSST feature
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-psst
+Default (Disabled)
+Enabled
+Disabled
+Auto-show Wayback Machine bubble
+Automatically show the Wayback Machine bubble when the current page is missing (for example, a 404).
+–
+Mac, Windows, Linux
+#
+brave-wayback-machine-auto-show-bubble
+Default (Disabled)
+Enabled
+Disabled
+Wayback Machine auto-check
+Allows automatically checking the Wayback Machine for an archived version of a missing page.
+–
+Mac, Windows, Linux
+#
+brave-wayback-machine-auto-check
+Default (Disabled)
+Enabled
+Disabled
+Force popups to be opened as tab
+Forces all popup windows to be opened in a new tab instead.
+–
+Mac, Windows, Linux, ChromeOS
+#
+force-popup-to-be-opened-as-tab
+Default (Disabled)
+Enabled
+Disabled
+Enable Email Aliases
+Enable Email Aliases to create unique, private addresses that forward to your primary inbox. This allows you to sign up for services anonymously and keep your main account free from spam.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-email-aliases
+Default (Disabled)
+Enabled
+Disabled
+Brave Workspace
+Save sets of windows and tabs into loadable workspaces.
+–
+Mac, Windows, Linux
+#
+brave-workspace
+Default (Disabled)
+Enabled
+Disabled
+Enable Brave Origin
+Enables Brave Origin features and settings.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+brave-origin
+Default (Enabled)
+Enabled
+Disabled
+Enable Brave Screenshot
+Adds a toolbar button for capturing the visible area or full page as a PNG.
+–
+Mac, Windows, Linux, ChromeOS
+#
+brave-screenshot
+Default (Enabled)
+Enabled
+Disabled
+Sidebar Web Panel
+Support web panel in sidebar.
+–
+Mac, Windows, Linux
+#
+sidebar-web-panel
+Default (Disabled)
+Enabled
+Disabled
+Temporarily unexpire M154 flags.
+Temporarily unexpire flags that expired as of M154. These flags will be removed soon.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+temporary-unexpire-flags-m154
+Default (Disabled)
+Enabled
+Disabled
+Temporarily unexpire M155 flags.
+Temporarily unexpire flags that expired as of M155. These flags will be removed soon.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+temporary-unexpire-flags-m155
+Default (Disabled)
+Enabled
+Disabled
+Enable benchmarking
+Sets all features to a fixed state; that is, disables randomization for feature states. If '(Default Feature States)' is selected, sets all features to their default state. If '(Match Field Trial Testing Config)' is selected, sets all features to the state configured in the field trial testing config. This is used by developers and testers to diagnose whether an observed problem is caused by a non-default base::Feature configuration. This flag is automatically reset after 3 restarts and will be off from the 4th restart. On the 3rd restart, the flag will appear to be off but the effect is still active.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-benchmarking
+Disabled
+Default Feature States
+Match Field Trial Testing Config
+Override software rendering list
+Overrides the built-in software rendering list and enables GPU-acceleration on unsupported system configurations.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ignore-gpu-blocklist
+Disabled
+Enabled
+Accelerated 2D canvas
+Enables the use of the GPU to perform 2d canvas rendering instead of using software rendering.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+disable-accelerated-2d-canvas
+Disabled
+Enabled
+Select HW overlay strategies
+Select strategies used to promote quads to HW overlays. Note that strategies other than Default may break playback of protected content.
+–
+Linux, ChromeOS, Fuchsia
+#
+overlay-strategies
+Default
+None
+Unoccluded fullscreen buffers (single-fullscreen)
+Unoccluded buffers (single-fullscreen,single-on-top)
+Occluded and unoccluded buffers (single-fullscreen,single-on-top,underlay)
+Tint composited content
+Tint contents composited using Viz with a shade of red to help debug and study overlay support.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+tint-composited-content
+Disabled
+Enabled
+Show overdraw feedback
+Visualize overdraw by color-coding elements based on if they have other elements drawn underneath.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+show-overdraw-feedback
+Disabled
+Enabled
+Partial swap
+Sets partial swap behavior.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ui-disable-partial-swap
+Disabled
+Enabled
+WebRTC PQC for DTLS
+Support in WebRTC to enable PQC for DTLS
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webrtc-pqc-for-dtls
+Default (Enabled)
+Enabled
+Disabled
+Allow WebRTC to adjust the input volume.
+Allow the Audio Processing Module in WebRTC to adjust the input volume during a real-time call. Disable if microphone muting or clipping issues are observed when the browser is running and used for a real-time call. This flag is experimental and may be removed at any time.
+–
+Mac, Windows, Linux
+#
+enable-webrtc-allow-input-volume-adjustment
+Default (Enabled)
+Enabled
+Disabled
+WebRTC downmix capture audio method.
+Override the method that the Audio Processing Module in WebRTC uses to downmix the captured audio to mono (when needed) during a real-time call. This flag is experimental and may be removed at any time.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-webrtc-apm-downmix-capture-audio-method
+Default (Disabled)
+Enabled
+Enabled - Average all the input channels
+Enabled - Use first channel
+Disabled
+Anonymize local IPs exposed by WebRTC.
+Conceal local IP addresses with mDNS hostnames.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-webrtc-hide-local-ips-with-mdns
+Default (Enabled)
+Enabled
+Disabled
+PipeWire Camera support
+When enabled the PipeWire multimedia server will be used for cameras.
+–
+Linux
+#
+enable-webrtc-pipewire-camera
+Default (Disabled)
+Enabled
+Disabled
+Web HID in WebView
+Enable WebViews to access Web HID upon embedder's permission.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+web-hid-in-web-view
+Default (Enabled)
+Enabled
+Disabled
+Extensions on chrome:// URLs
+Enables running extensions on chrome:// URLs, where extensions explicitly request this permission.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+extensions-on-chrome-urls
+Disabled
+Enabled
+Extensions on chrome-extension:// URLs
+Enables running extensions on chrome-extension:// URLs, where extensions explicitly request this permission.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+extensions-on-extension-urls
+Disabled
+Enabled
+Enable SecurityInfo in WebRequest API
+Enables SecurityInfo in WebRequest API for extensions, allowing listeners to retrieve certificate details of web requests.
+–
+Mac, Windows, Linux, ChromeOS
+#
+web-request-security-info
+Default (Disabled)
+Enabled
+Disabled
+Enable content analysis clipboard copy
+Enables content analysis checks for the clipboard copy action.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-content-analysis-clipboard-copy
+Default (Disabled)
+Enabled
+Disabled
+Show Autofill predictions
+Annotates web forms with Autofill field type predictions as placeholder text.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+show-autofill-type-predictions
+Default (Disabled)
+Enabled
+Enabled - show predictions as title
+Disabled
+Autofill Ambient Autofill
+Enables Ambient Autofill.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ambient-autofill
+Default (Disabled)
+Enabled
+Disabled
+Smooth Scrolling
+Animate smoothly when scrolling page content.
+–
+Windows, Linux, ChromeOS, Android
+#
+smooth-scrolling
+Default
+Enabled
+Disabled
+Overlay Scrollbars
+Override scrollbar mode to overlay or classic.
+–
+Mac, Windows, Linux, ChromeOS
+#
+overlay-scrollbars
+Default (Disabled)
+Enabled
+Enabled overlay (with fade out)
+Enabled device (follow OS setting)
+Enabled classic (always show)
+Disabled
+Enable JXL image format
+Adds image/jxl to the Accept header and enables decoding of JPEG XL (JXL) images.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-jxl-image-format
+Default (Enabled)
+Enabled
+Disabled
+Rust-based ICO image handling
+When enabled, uses Rust `image` crate to decode ICO images.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-rusty-ico
+Default (Disabled)
+Enabled
+Disabled
+Rust-based JPEG image handling
+When enabled, uses Rust crates to decode and encode JPEG images.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-rusty-jpeg
+Default (Disabled)
+Enabled
+Disabled
+Blocking Focus Without User Activation
+When enabled, the focus-without-user-activation permissions policy can be used by embedders to block programmatic focus calls (element.focus(), window.focus(), autofocus) from iframes unless triggered by a user gesture.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+blocking-focus-without-user-activation
+Default (Disabled)
+Enabled
+Disabled
+Experimental QUIC protocol
+Enable experimental QUIC protocol support.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-quic
+Default
+Enabled
+Disabled
+WebTransport Developer Mode
+When enabled, removes the requirement that all certificates used for WebTransport over HTTP/3 are issued by a known certificate root.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webtransport-developer-mode
+Disabled
+Enabled
+Latest stable JavaScript features
+Some web pages use legacy or non-standard JavaScript extensions that may conflict with the latest JavaScript features. This flag allows disabling support of those features for compatibility with such pages.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+disable-javascript-harmony-shipping
+Disabled
+Enabled
+Experimental JavaScript
+Enable web pages to use experimental JavaScript features.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-javascript-harmony
+Disabled
+Enabled
+Experimental WebAssembly
+Enable web pages to use experimental WebAssembly features.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-experimental-webassembly-features
+Disabled
+Enabled
+Experimental WebAssembly Shared-Everything Threads
+Enable web pages to use the experimental WebAssembly Shared-Everything Threads feature. Note that this only covers a subset of the proposal.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-experimental-webassembly-shared-everything
+Default (Disabled)
+Enabled
+Disabled
+WebAssembly stack switching
+Enables WasmFX.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-experimental-webassembly-stack-switching
+Default (Disabled)
+Enabled
+Disabled
+WebAssembly baseline compiler
+Enables WebAssembly baseline compilation and tier up.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webassembly-baseline
+Default (Enabled)
+Enabled
+Disabled
+WebAssembly lazy compilation
+Enables lazy (JIT on first call) compilation of WebAssembly modules.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webassembly-lazy-compilation
+Default (Enabled)
+Enabled
+Disabled
+WebAssembly tiering
+Enables tiered compilation of WebAssembly (will tier up to TurboFan if #enable-webassembly-baseline is enabled).
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webassembly-tiering
+Default (Enabled)
+Enabled
+Disabled
+Future V8 VM features
+This enables upcoming and experimental V8 VM features. This flag does not enable experimental JavaScript features.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-future-v8-vm-features
+Default (Disabled)
+Enabled
+Disabled
+GPU rasterization
+Use GPU to rasterize web content.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-gpu-rasterization
+Default
+Enabled
+Disabled
+Experimental Web Platform features
+Enables experimental Web Platform features that are in development.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-experimental-web-platform-features
+Disabled
+Enabled
+Touch UI Layout
+Enables touch UI layout in the browser's top chrome.
+–
+Mac, Windows, Linux, ChromeOS
+#
+top-chrome-touch-ui
+Default
+Automatic
+Disabled
+Enabled
+Hardware-accelerated video decode
+Hardware-accelerated video decode where available.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+disable-accelerated-video-decode
+Disabled
+Enabled
+Show autofill signatures.
+Annotates web forms with Autofill signatures as HTML attributes. Also marks password fields suitable for password generation.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-show-autofill-signatures
+Disabled
+Enabled
+Wallet API Private Passes
+Enables the Wallet API for private passes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+wallet-api-private-passes-enabled
+Default (Enabled)
+Enabled
+Enabled Debug
+Disabled
+Use Google Payments sandbox servers
+For developers: use the sandbox service for Google Payments API calls.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+wallet-service-use-sandbox
+Default
+Enabled
+Disabled
+Web Bluetooth
+Enables the Web Bluetooth API on platforms without official support
+–
+Linux
+#
+enable-web-bluetooth
+Default (Disabled)
+Enabled
+Disabled
+Use the new permissions backend for Web Bluetooth
+Enables the new permissions backend for Web Bluetooth. This will enable persistent storage of device permissions and Web Bluetooth features such as BluetoothDevice.watchAdvertisements() and Bluetooth.getDevices()
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-web-bluetooth-new-permissions-backend
+Default (Disabled)
+Enabled
+Disabled
+WebGL Developer Extensions
+Enabling this option allows web applications to access WebGL extensions intended only for use during development time.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webgl-developer-extensions
+Disabled
+Enabled
+WebGL Draft Extensions
+Enabling this option allows web applications to access the WebGL extensions that are still in draft status.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webgl-draft-extensions
+Disabled
+Enabled
+Zero-copy rasterizer
+Raster threads write directly to GPU memory associated with tiles.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-zero-copy
+Default
+Enabled
+Disabled
+Vulkan
+Use vulkan as the graphics backend.
+–
+Linux, Android
+#
+enable-vulkan
+Default (Disabled)
+Enabled
+Disabled
+Force enable WebGPU interop
+Force enable the WebGPU on vulkan via GL compositing interop.
+–
+Linux
+#
+force-enable-webgpu-interop
+Default (Disabled)
+Enabled
+Disabled
+Default ANGLE Vulkan
+Use the Vulkan backend for ANGLE by default.
+–
+Linux, Android
+#
+default-angle-vulkan
+Default (Disabled)
+Enabled
+Disabled
+Vulkan from ANGLE
+Initialize Vulkan from inside ANGLE and share the instance with Chrome.
+–
+Linux, Android
+#
+vulkan-from-angle
+Default (Disabled)
+Enabled
+Disabled
+In-Product Help Demo Mode
+Selects the In-Product Help demo mode.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+in-product-help-demo-mode-choice
+Default (Disabled)
+Enabled
+Enabled IPH_BraveShieldsInPageInfo
+Enabled IPH_iOSAddressPromoDesktop
+Enabled IPH_iOSEnhancedBrowsingDesktop
+Enabled IPH_iOSLensPromoDesktop
+Enabled IPH_iOSPasswordPromoDesktop
+Enabled IPH_iOSPaymentPromoDesktop
+Enabled IPH_iOSPriceTrackingDesktop
+Enabled IPH_iOSTabGroupsDesktop
+Enabled IPH_ExtensionsMenu
+Enabled IPH_ExtensionsRequestAccessButton
+Enabled IPH_BackNavigationMenu
+Enabled IPH_BatterySaverMode
+Enabled IPH_CompanionSidePanel
+Enabled IPH_CompanionSidePanelRegionSearch
+Enabled IPH_ComposeMSBBSettingsFeature
+Enabled IPH_ComposeNewBadgeFeature
+Enabled IPH_ContextualTasksEphemeralToolbarButton
+Enabled IPH_CriticalActionAppMenu
+Enabled IPH_CriticalActionFilterChip
+Enabled IPH_DesktopCustomizeChromeAutoOpen
+Enabled IPH_DesktopCustomizeChromeExperiment
+Enabled IPH_DesktopPwaInstall
+Enabled IPH_DesktopRealboxContextualSearchFeature
+Enabled IPH_DesktopSharedHighlighting
+Enabled IPH_DiscardRing
+Enabled IPH_ExplicitBrowserSigninPreferenceRemembered
+Enabled IPH_GlicPromo
+Enabled IPH_GlicTrustFirstOnboardingShortcutSnoozePromo
+Enabled IPH_GlicTryIt
+Enabled IPH_GMCCastStartStop
+Enabled IPH_GMCLocalMediaCasting
+Enabled IPH_GMCSaveVideoFrame
+Enabled IPH_HistorySearch
+Enabled IPH_HighEfficiencyMode
+Enabled IPH_MultistepFilterPromo
+Enabled IPH_PasswordManagerShortcut
+Enabled IPH_PasswordSharingFeature
+Enabled IPH_PasswordsManagementBubbleAfterSave
+Enabled IPH_PasswordsManagementBubbleDuringSignin
+Enabled IPH_PasswordsWebAppProfileSwitch
+Enabled IPH_PdfGlicSummarizeFeature
+Enabled IPH_PdfInkSignatures
+Enabled IPH_PdfSearchifyFeature
+Enabled IPH_PdfTextAnnotations
+Enabled IPH_PerformanceInterventionDialogFeature
+Enabled IPH_PowerBookmarksSidePanel
+Enabled IPH_PriceInsightsPageActionIconLabelFeature
+Enabled IPH_PriceTrackingEmailConsentFeature
+Enabled IPH_PriceTrackingInSidePanel
+Enabled IPH_PriceTrackingPageActionIconLabelFeature
+Enabled IPH_ProfileSwitch
+Enabled IPH_PwaQuietNotification
+Enabled IPH_ReadingListDiscovery
+Enabled IPH_ReadingListEntryPoint
+Enabled IPH_ReadingListInSidePanel
+Enabled IPH_ReadingModeKeyboardShortcut
+Enabled IPH_ReadingModeLineFocus
+Enabled IPH_ReadingModePageActionLabel
+Enabled IPH_ReadingModePresentationMode
+Enabled IPH_ReadingModeSidePanel
+Enabled IPH_ResumptionRail
+Enabled IPH_SendTabToSelfTutorial
+Enabled IPH_ShoppingCollectionFeature
+Enabled IPH_SideBySidePinnableFeature
+Enabled IPH_SideBySideTabSwitchFeature
+Enabled IPH_SidePanelContextualTasksPinnableFeature
+Enabled IPH_SidePanelGenericPinnableFeature
+Enabled IPH_SideSearchAutoTriggering
+Enabled IPH_SideSearchPageActionLabel
+Enabled IPH_SmartTabSharingDefaultOnFeature
+Enabled IPH_SmartTabSharingFeature
+Enabled IPH_SmartTabSharingTryItFeature
+Enabled IPH_SplitViewHorizontalIndirectAccessFeature
+Enabled IPH_TabAudioMuting
+Enabled IPH_TabGroupsSharedTabChanged
+Enabled IPH_TabGroupsSharedTabFeedback
+Enabled IPH_TabScrollButtonFeature
+Enabled IPH_TabSearchComboButton
+Enabled IPH_WebUiHelpBubbleTest
+Enabled IPH_AutofillAccountNameEmailSuggestion
+Enabled IPH_AutofillAiValuables
+Enabled IPH_AutofillAtMemory
+Enabled IPH_AutofillCardInfoRetrievalSuggestion
+Enabled IPH_AutofillCreditCardBenefit
+Enabled IPH_AutofillDisabledVirtualCardSuggestion
+Enabled IPH_AutofillDownstreamCardAwareness
+Enabled IPH_AutofillEnableLoyaltyCards
+Enabled IPH_AutofillExternalAccountProfileSuggestion
+Enabled IPH_AutofillHomeWorkProfileSuggestion
+Enabled IPH_AutofillOmniboxPaymentChip
+Enabled IPH_AutofillVirtualCardCVCSuggestion
+Enabled IPH_AutofillVirtualCardSuggestion
+Enabled IPH_AutofillWalletDirectOffers
+Enabled IPH_DesktopPWAsLinkCapturingLaunch
+Enabled IPH_DesktopPWAsLinkCapturingLaunchAppInTab
+Enabled IPH_SignInBenefits
+Enabled IPH_SupervisedUserProfileSignin
+Enabled IPH_ExtensionsPinnedByDefault
+Disabled
+Enterprise Tab Title Reporting
+Enables the reporting of destination tab titles in Chrome Enterprise URL navigation logs.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enterprise-tab-title-reporting
+Default (Disabled)
+Enabled
+Disabled
+Force Enterprise Isolated Mode
+Force Enterprise Isolated Mode to replace Incognito mode.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+force-enterprise-isolated-mode
+Disabled
+Enabled
+Enable Isolated Web Apps
+Enables experimental support for Isolated Web Apps. See https://github.com/reillyeon/isolated-web-apps for more information.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-isolated-web-apps
+Default (Disabled)
+Enabled
+Disabled
+Direct Sockets API in Service Workers
+Enables access to the Direct Sockets API in service workers. See https://github.com/WICG/direct-sockets for details.
+–
+Mac, Windows, Linux, ChromeOS
+#
+direct-sockets-in-service-workers
+Default (Disabled)
+Enabled
+Disabled
+Direct Sockets API in Shared Workers
+Enables access to the Direct Sockets API in shared workers. See https://github.com/WICG/direct-sockets for details.
+–
+Mac, Windows, Linux, ChromeOS
+#
+direct-sockets-in-shared-workers
+Default (Disabled)
+Enabled
+Disabled
+Direct Sockets UDP send require multicast permission policy
+Requires the 'direct-sockets-multicast' permissions policy to send or connect to multicast addresses using the Direct Sockets API.
+–
+Mac, Windows, Linux, ChromeOS
+#
+direct-sockets-udp-send-require-multicast-permission-policy
+Default (Enabled)
+Enabled
+Disabled
+Enable Isolated Web App Developer Mode
+Enables the installation of unverified Isolated Web Apps
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-isolated-web-app-dev-mode
+Default (Disabled)
+Enabled
+Disabled
+Enable Isolated Web App Fast Update Check
+Enables fast update checks for Isolated Web Apps, reducing the update check interval to 1 minute.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-isolated-web-app-fast-update-check
+Default (Disabled)
+Enabled
+Disabled
+Enable the Iwa Key Distribution component
+Enables the Iwa Key Distribution component that supplies key rotation data for Isolated Web Apps.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-iwa-key-distribution-component
+Default (Disabled)
+Enabled
+Disabled
+Experimental cohort for the Iwa Key Distribution component
+Specifies the experimental cohort for the Iwa Key Distribution component.
+–
+Mac, Windows, Linux, ChromeOS
+#
+iwa-key-distribution-component-exp-cohort
+Disabled
+Staging
+Unframed display mode for Isolated Web Apps
+Enables the unframed display mode for Isolated Web Apps.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-unframed-iwa
+Default (Enabled)
+Enabled
+Disabled
+Isolate additional origins
+Requires dedicated processes for an additional set of origins, specified as a comma-separated list.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+isolate-origins
+Disabled
+Enabled
+Disable site isolation
+Disables site isolation (SitePerProcess, IsolateOrigins, etc). Intended for diagnosing bugs that may be due to out-of-process iframes. Opt-out has no effect if site isolation is force-enabled using a command line switch or using an enterprise policy. Caution: this disables important mitigations for the Spectre CPU vulnerability affecting most computers.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+site-isolation-trial-opt-out
+Default
+Disabled (not recommended)
+Capability Delegation for Digital Credentials
+Allows a web page to delegate the capability of requesting digital credentials (via both create and get requests of the Digital Credentials API) to trusted cross-origin iframes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+capability-delegation-digital-credentials
+Default (Disabled)
+Enabled
+Disabled
+Tab Strip Declutter
+Enables the Tab Strip Declutter feature on Desktop.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-strip-declutter
+Default (Disabled)
+Enabled
+Disabled
+Desktop PWA tab strips
+Tabbed application mode - enables the `tabbed` display mode which allows web apps to add a tab strip to their app.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-desktop-pwas-tab-strip
+Default (Enabled)
+Enabled
+Disabled
+Desktop PWA tab strips settings
+Experimental UI for selecting whether a PWA should open in tabbed mode.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-desktop-pwas-tab-strip-settings
+Default (Enabled)
+Enabled
+Disabled
+Desktop PWA tab strip customizations
+Enable PWAs to customize their tab strip when in tabbed mode by adding the `tab_strip` manifest field.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-desktop-pwas-tab-strip-customizations
+Default (Enabled)
+Enabled
+Disabled
+Desktop PWA Additional Windowing Controls
+Enable PWAs to: (1) manually recreate the minimize, maximize and restore window functionalities, (2) set windows (non-/)resizable and (3) listen to window's move events with respective APIs.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-desktop-pwas-additional-windowing-controls
+Default (Disabled)
+Enabled
+Disabled
+Record web app debug info
+Enables recording additional web app related debugging data to be displayed in: chrome://web-app-internals
+–
+Mac, Windows, Linux, ChromeOS
+#
+record-web-app-debug-info
+Default (Disabled)
+Enabled
+Disabled
+Use Chrome Sync sandbox
+Connects to the testing server for Chrome Sync.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+use-sync-sandbox
+Disabled
+Enabled
+Connect to Cast devices on all IP addresses
+Have the Media Router connect to Cast devices on all IP addresses, not just RFC1918/RFC4193 private addresses.
+–
+Mac, Windows, Linux, ChromeOS
+#
+media-router-cast-allow-all-ips
+Default (Disabled)
+Enabled
+Disabled
+Allow all sites to initiate mirroring
+When enabled, allows all websites to request to initiate tab mirroring via Presentation API. Requires #cast-media-route-provider to also be enabled
+–
+Mac, Windows, Linux, ChromeOS
+#
+allow-all-sites-to-initiate-mirroring
+Default (Disabled)
+Enabled
+Disabled
+Enables logging of all Cast messages.
+Enables logging of all messages exchanged between websites, Chrome, and Cast receivers in chrome://media-router-internals.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-message-logging
+Default (Disabled)
+Enabled
+Disabled
+Capture Handle for Standalone PWAs and IWAs
+Enables Capture Handle support for standalone PWAs and IWAs when their windows are captured.
+–
+Mac, Windows, Linux, ChromeOS
+#
+capture-handle-for-standalone-pwas-and-iwas
+Default (Disabled)
+Enabled
+Disabled
+Cast Streaming Exponential Video Bitrate Algorithm
+Enables the exponential video bitrate algorithm for Cast Streaming. This algorithm uses an exponential increase and decrease factor to adjust the bitrate based on network conditions.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-exponential-video-bitrate-algorithm
+Default (Disabled)
+Enabled
+Enabled Default (30, 1, 1.05, 0.9)
+Enabled Aggressive Increase (1.1)
+Enabled Conservative Decrease (0.8)
+Enabled Large Window (60)
+Disabled
+Toggle hardware accelerated AV1 video encoding for Cast Streaming
+The default is to allow hardware AV1 encoding when recommended for the platform. If enabled, hardware AV1 encoding will always be allowed when supported by the platform. If disabled, hardware AV1 encoding will never be used.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-hardware-av1
+Default
+Enabled
+Disabled
+Toggle hardware accelerated H.264 video encoding for Cast Streaming
+The default is to allow hardware H.264 encoding when recommended for the platform. If enabled, hardware H.264 encoding will always be allowed when supported by the platform. If disabled, hardware H.264 encoding will never be used.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-hardware-h264
+Default
+Enabled
+Disabled
+Toggle hardware accelerated HEVC video encoding for Cast Streaming
+The default is to allow hardware HEVC encoding when recommended for the platform. If enabled, hardware HEVC encoding will always be allowed when supported by the platform. If disabled, hardware HEVC encoding will never be used.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-hardware-hevc
+Default
+Enabled
+Disabled
+Toggle hardware accelerated VP8 video encoding for Cast Streaming
+The default is to allow hardware VP8 encoding when recommended for the platform. If enabled, hardware VP8 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP8 encoding will never be used.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-hardware-vp8
+Default
+Enabled
+Disabled
+Toggle hardware accelerated VP9 video encoding for Cast Streaming
+The default is to allow hardware VP9 encoding when recommended for the platform. If enabled, hardware VP9 encoding will always be allowed when supported by the platform (regardless of recommendation). If disabled, hardware VP9 encoding will never be used.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-hardware-vp9
+Default
+Enabled
+Disabled
+Toggle a performance metrics overlay while Cast Streaming
+When enabled, a text overlay is rendered on top of each frame sent while Cast Streaming that includes frame duration, resolution, timestamp, low latency mode, capture duration, target playout delay, target bitrate, and encoder utilization.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-performance-overlay
+Default (Disabled)
+Enabled
+Disabled
+Cast Streaming 60fps
+Enables Cast Streaming at 60 frames per second.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-cast-streaming-60fps
+Default (Disabled)
+Enabled
+Disabled
+Enable AV1 video encoding for Cast Streaming
+Offers the AV1 video codec when negotiating Cast Streaming, and uses AV1 if selected for the session.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-cast-streaming-av1
+Default (Disabled)
+Enabled
+Disabled
+Enables Cast Streaming to offer only hardware accelerated codecs first
+When enabled, the Cast Streaming session negotiates only the hardware accelerated codecs first, and only offers software encoding if the receiver rejects the initial offer.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-cast-streaming-offer-hardware-first
+Default (Enabled)
+Enabled
+Disabled
+Enable VP8 video encoding for Cast Streaming
+Offers the VP8 video codec when negotiating Cast Streaming, and uses VP8 if selected for the session. If true, software VP8 encoding will be offered and hardware VP8 encoding may be offered if enabled and available on this platform. If false, software VP8 will not be offered and hardware VP8 will only be offered if #cast-streaming-hardware-vp8 is explicitly set to true.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-cast-streaming-vp8
+Default (Enabled)
+Enabled
+Disabled
+Enable VP9 video encoding for Cast Streaming
+Offers the VP9 video codec when negotiating Cast Streaming, and uses VP9 if selected for the session.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-cast-streaming-vp9
+Default (Enabled)
+Enabled
+Disabled
+Cast Streaming Max Video Bitrate Limit
+Enables configuring the maximum video bitrate limit for Cast Streaming to experiment with different network quality ceilings.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-streaming-max-video-bitrate
+Default (Enabled)
+Enabled
+Enabled 5 Mbps
+Enabled 10 Mbps
+Enabled 25 Mbps
+Enabled 50 Mbps
+Disabled
+HiDPI tab capture support for Cast Streaming
+Enables HiDPI tab capture during Cast Streaming mirroring sessions. May reduce performance on some platforms and also improve quality of video frames.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-cast-streaming-with-hidpi
+Default (Disabled)
+Enabled
+Disabled
+Wayland session management
+Enable Wayland's xx/xdg-session-management-v1 experimental support.
+–
+Linux
+#
+wayland-session-management
+Default (Disabled)
+Enabled
+Disabled
+WebXR Incubations
+Enables experimental features for WebXR.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webxr-incubations
+Default (Disabled)
+Enabled
+Disabled
+WebXR Internals Debugging Page
+Enables the webxr-internals developer page which can be used to help debug issues with the WebXR Device API.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webxr-internals
+Default (Disabled)
+Enabled
+Disabled
+Force WebXr Runtime
+Force the browser to use a particular runtime, even if it would not usually be enabled or would otherwise not be selected based on the attached hardware.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webxr-runtime
+Default
+No Runtime
+OpenXR
+Orientation Sensors
+WebXr Hand Anonymization Strategy
+Force the browser to use a particular strategy for anonymizing hand data, the default order has a hierarchy of strategies to try and if all of them fail, then no data will be returned, while this choice does allow the (not recommended) alternative of bypassing these algorithms all together.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webxr-hand-anonymization
+Default
+Runtime Provided
+Chrome Fallback
+None (Not Recommended)
+Experimental system keyboard lock
+Enables websites to use the keyboard.lock() API to intercept system keyboard shortcuts and have the events routed directly to the website when in fullscreen mode.
+–
+Mac, Windows, Linux, ChromeOS
+#
+system-keyboard-lock
+Default (Enabled)
+Enabled
+Disabled
+Block scripts loaded via document.write
+Disallows fetches for third-party parser-blocking scripts inserted into the main frame via document.write.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+disallow-doc-written-script-loads
+Default
+Enabled
+Disabled
+Enable offering upload of Autofilled credit cards
+Enables a new option to upload credit cards to Google Payments for sync to all Chrome devices.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-autofill-credit-card-upload
+Default (Disabled)
+Enabled
+Disabled
+Force UI direction
+Explicitly force the UI to left-to-right (LTR) or right-to-left (RTL) mode, overriding the default direction of the UI language.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+force-ui-direction
+Default
+Left-to-right
+Right-to-left
+Force text direction
+Explicitly force the per-character directionality of UI text to left-to-right (LTR) or right-to-left (RTL) mode, overriding the default direction of the character language.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+force-text-direction
+Default
+Left-to-right
+Right-to-left
+TLS 1.3 Early Data
+This option enables TLS 1.3 Early Data, allowing GET requests to be sent during the handshake when resuming a connection to a compatible TLS 1.3 server.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-tls13-early-data
+Default (Disabled)
+Enabled
+Disabled
+Auto Dark Mode for Web Contents
+Automatically render all web contents using a dark theme.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-force-dark
+Default (Disabled)
+Enabled
+Disabled
+Experimental Web Payments API features
+Enable experimental Web Payments API features
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-web-payments-experimental-features
+Default (Disabled)
+Enabled
+Disabled
+Web Payments App Store Billing Debug Mode
+App-store purchases (e.g., Google Play Store) within a TWA can be requested using the Payment Request API. This flag removes the restriction that the TWA has to be installed from the app-store.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-debug-for-store-billing
+Default (Disabled)
+Enabled
+Disabled
+Fill passwords on account selection
+Filling of passwords when an account is explicitly selected by the user rather than autofilling credentials on page load.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fill-on-account-select
+Default (Disabled)
+Enabled
+Disabled
+Enterprise Signin Dialogs Refresh
+Enables the visually refreshed enterprise signin dialogs (enterprise profile welcome/creation, OIDC and the device signals disclaimer). It is no-op if `first-run-desktop-refresh` is disabled.
+–
+Mac, Windows, Linux
+#
+enterprise-signin-dialogs-refresh
+Default (Disabled)
+Enabled
+Disabled
+First Run Desktop Choice Screen Refresh
+Enables the visually refreshed first run and profile creation flows, including the choice screen (FRE and dialog versions), for users in search engine choice screen regions. It is no-op if `first-run-desktop-refresh` is disabled.
+–
+Mac, Windows, Linux
+#
+first-run-desktop-choice-screen-refresh
+Default (Disabled)
+Enabled
+Disabled
+First Run Desktop Refresh
+Enables the visually refreshed first run and profile creation flows in users outside of search engine choice screen regions. To enable the refresh in search engine choice screen regions, enable `first-run-desktop-choice-screen-refresh` as well.
+–
+Mac, Windows, Linux
+#
+first-run-desktop-refresh
+Default (Disabled)
+Enabled
+Disabled
+First Run Desktop Revamp
+Enables the first run revamp (new UI and additional effects). It is no-op if `first-run-desktop-refresh` is disabled.
+–
+Mac, Windows, Linux
+#
+first-run-desktop-revamp
+Default (Disabled)
+Enabled
+Disabled
+Omnibox Zero Prefix Suggest Prefetch Request Debouncing
+Enables the use of a request debouncer to throttle the volume of ZPS prefetch requests issued to the remote Suggest service.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-zero-suggest-prefetch-debouncing
+Default (Disabled)
+Enabled
+Enabled Minimal debouncing relative to last run
+Enabled Minimal debouncing relative to last request
+Enabled Moderate debouncing relative to last run
+Enabled Moderate debouncing relative to last request
+Enabled Aggressive debouncing relative to last run
+Enabled Aggressive debouncing relative to last request
+Disabled
+Omnibox Zero Prefix Suggestion Prefetching on SRP
+Enables prefetching of the zero prefix suggestions for eligible users on the Search Results page.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-zero-suggest-prefetching-on-srp
+Default (Enabled)
+Enabled
+Disabled
+Omnibox Zero Prefix Suggestion Prefetching on the Web
+Enables prefetching of the zero prefix suggestions for eligible users on the Web (i.e. non-NTP and non-SRP URLs).
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-zero-suggest-prefetching-on-web
+Default (Disabled)
+Enabled
+Disabled
+Omnibox ML URL Score Caching
+Enables in-memory caching of ML URL scores.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-ml-url-score-caching
+Default (Enabled)
+Enabled
+Disabled
+Omnibox ML URL Scoring
+Enables ML-based relevance scoring for Omnibox URL Suggestions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-ml-url-scoring
+Default (Disabled)
+Enabled
+Enabled Enabled with fixes
+Enabled unlimited suggestion candidates
+Enabled Increase provider max limit to 10
+Enabled with scoring of Search suggestions
+Enabled with scoring of verbatim URL suggestions
+Enabled with scoring of Search & verbatim URL suggestions
+Disabled
+Omnibox URL Scoring Model
+Enables ML scoring model for Omnibox URL suggestions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-ml-url-scoring-model
+Default (Enabled)
+Enabled
+Enabled Small model (desktop)
+Enabled Full model (desktop)
+Enabled Small model (ios)
+Enabled Full model (ios)
+Enabled Small model (android)
+Enabled Full model (android)
+Disabled
+Searchbox embedded permission dialogue
+Enables embedded permission dialogues for New Tab Page, omnibox popup, and 'chrome://contextual-tasks' (pre-rearchitecture) contextual tasks' permission requests.
+–
+Mac, Windows, Linux, ChromeOS
+#
+searchbox-embedded-permission
+Default (Enabled)
+Enabled
+Disabled
+AIM Server Eligibility
+Enable AIM server eligibility checks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+aim-server-eligibility
+Default (Enabled)
+Enabled
+Disabled
+Zero suggest prefetching for composebox
+Enables prefetching of the zero prefix suggestions for composebox contexts.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-zero-suggest-prefetching-for-composebox
+Default (Disabled)
+Enabled
+Disabled
+AIM Server Eligibility: Include Client Locale
+Configures whether to include the client locale in the AIM eligibility request.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+aim-server-eligibility-include-client-locale
+Default (Enabled)
+Enabled
+Enabled GET with Locale
+Enabled POST with Proto
+Disabled
+Use PEC API
+When enabled, all composebox context menus will use the `SearchboxConfig` from the PEC API.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+aim-use-pec-api
+Default (Enabled)
+Enabled
+Disabled
+AIM Eligibility Component Extension
+When enabled, registers the AIM Eligibility debugger as a component extension.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+aim-eligibility-component-extension
+Default (Disabled)
+Enabled
+Disabled
+Omnibox on device tail suggestions
+Google tail non personalized search suggestions provided by a compact on device model.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-on-device-tail-suggestions
+Default (Disabled)
+Enabled
+Disabled
+Force color profile
+Forces Chrome to use a specific color profile instead of the color of the window's current monitor, as specified by the operating system.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+force-color-profile
+Default
+sRGB
+Display P3 D65
+ITU-R BT.2020
+Color spin with gamma 2.4
+scRGB linear (HDR where available)
+HDR10 (HDR where available)
+Force Drive Disclaimer Accepted
+Whether to force the Google Drive disclaimer to be accepted. This flag is only used for testing purposes.
+–
+Mac, Windows, Linux, ChromeOS
+#
+force-drive-disclaimer-accepted
+Default (Disabled)
+Enabled
+Disabled
+Forced Colors
+Enables forced colors mode for web content.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+forced-colors
+Default (Enabled)
+Enabled
+Disabled
+Adaptive global tone mapping
+Enables parsing and rendering of adaptive global tone mapping (AGTM) aka SMTPE ST 2094-50 HDR metadata
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+hdr-agtm
+Default (Enabled)
+Enabled
+Disabled
+Notebooks
+Enables Notebooks.
+–
+Mac, Windows, Linux, ChromeOS
+#
+notebooks
+Default (Disabled)
+Enabled
+Disabled
+NTP Searchbox (Realbox) Voice Search Coherence
+Enables the voice search coherence experiment (new recording animation, new metrics, added stop/submit button) for the New Tab Page searchbox, with option for live transcription.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ntp-searchbox-voice-search-coherence
+Default (Disabled)
+Enabled
+Enabled Arm 1: Wave only, manual submit + Listening
+Enabled Arm 2: Wave only, 3s auto endpoint + Listening
+Enabled Arm 3: Wave + Transcript, manual submit + Listening
+Enabled Arm 4: Wave + Transcript, 3s auto endpoint + Listening
+Disabled
+Enable optimization guide debug logs
+Enables the optimization guide to log and save debug messages that can be shown in the internals page.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+optimization-guide-debug-logs
+Disabled
+Enabled
+Composebox Voice Search Coherence
+Enables the voice search coherence (new recording animation, new metrics, new stop/submit button, no live transcription) for all the composeboxes by default. Options include cobrowsing only.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-voice-search-coherence
+Default (Enabled)
+Enabled
+Enabled (All composeboxes)
+Enabled (Cobrowsing only)
+Disabled
+History Embeddings
+When enabled, the history embeddings feature may operate.
+–
+Mac, Windows, Linux, ChromeOS
+#
+history-embeddings
+Default (Disabled)
+Enabled
+Disabled
+History Embeddings Answers
+When enabled, the history embeddings feature may answer some queries. Has no effect if the History Embeddings feature is disabled.
+–
+Mac, Windows, Linux, ChromeOS
+#
+history-embeddings-answers
+Default (Disabled)
+Enabled
+Disabled
+Page Actions Elevated Toolbar
+Enables the elevated capsule container for page action icons in the location bar.
+–
+Mac, Windows, Linux, ChromeOS
+#
+page-actions-elevated-toolbar
+Default (Disabled)
+Enabled
+Disabled
+Tab Groups Focusing
+When a tab group is focused, the tabstrip constrains visiblity to the tabs in that group.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-groups-focusing
+Default (Disabled)
+Enabled
+Disabled
+Tab Group Ribbon
+Displays a vertical ribbon on the left side of the browser window for quickly switching between tab groups.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-group-ribbon
+Default (Disabled)
+Enabled
+Disabled
+Focus Selection
+Allows focusing a selection of ungrouped tabs in the tabstrip.
+–
+Mac, Windows, Linux, ChromeOS
+#
+focus-selection
+Default (Disabled)
+Enabled
+Disabled
+Tab Strip Unification
+Unifies horizontal and vertical tab strips to share infrastructure.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-strip-unification
+Default (Disabled)
+Enabled
+Disabled
+New Horizontal Pinned Tab Styling
+Enables the updated pinned tab style in the new horizontal tab strip.
+–
+Mac, Windows, Linux, ChromeOS
+#
+new-horizontal-pinned-tab-styling
+Default (Disabled)
+Enabled
+Disabled
+Vertical Tabs Expand On Hover
+Vertical tabs (when enabled and collapsed) will expand on mouse hover.
+–
+Mac, Windows, Linux, ChromeOS
+#
+vertical-tabs-expand-on-hover
+Default (Enabled)
+Enabled
+Enabled with 350ms hover delay / 0 click delay
+Enabled with 400ms hover delay / 1500ms click delay
+Enabled with 100dp/s velocity heuristic
+Enabled with 250dp/s velocity heuristic
+Enabled with 250dp/s velocity heuristic and small delay
+Disabled
+Side Panel Flyover Animation
+Simplifies contents animations while animating vertical tabstrip and side panels, reducing jank on most platforms. When enabled, the animating elements will appear to float over the contents, which resize at the beginning or end of the animation.
+–
+Mac, Windows, Linux, ChromeOS
+#
+side-panel-flyover-animation
+Default (Enabled)
+Enabled
+Enabled - 250ms Duration
+Enabled - 300ms Duration
+Enabled - 350ms Duration
+Disabled
+Use Default Deadline Resizing Policy
+Use Default Deadline Resizing Policy when animating vertical tabstrip and side panels.
+–
+Mac, Windows, Linux, ChromeOS
+#
+use-default-deadline-when-animating-bounds
+Default (Disabled)
+Enabled
+Disabled
+Composebox Drive Context Menu Option
+Enables Google Drive option in the Composebox context menu.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-drive-context-menu-option
+Default (Disabled)
+Enabled
+Disabled
+Composebox Drive Context Menu Option Disclaimer
+Enables the disclaimer flow for the Google Drive option in the Composebox context menu.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-drive-context-menu-option-disclaimer
+Default (Disabled)
+Enabled
+Disabled
+Composebox Drive Context Menu Option Sign-in Promo
+Enables the sign-in promo for the Google Drive option in the Composebox context menu.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-drive-context-menu-option-signin-promo
+Default (Disabled)
+Enabled
+Disabled
+Composebox Rich Image Suggestions (Omnibox)
+Enables richer image suggestions in the Omnibox Composebox for image generation.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-rich-image-suggestions-omnibox
+Default (Disabled)
+Enabled
+Disabled
+Composebox Rich Image Suggestions (Realbox)
+Enables richer image suggestions in the Realbox Composebox for image generation.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-rich-image-suggestions-realbox
+Default (Disabled)
+Enabled
+Disabled
+Composebox Persistent AIM Button (Omnibox)
+Persists the AIM button in the Omnibox Composebox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-persistent-aim-button-omnibox
+Default (Disabled)
+Enabled
+Disabled
+Composebox Persistent AIM Button (Realbox)
+Persists the AIM button in the Realbox Composebox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-persistent-aim-button-realbox
+Default (Disabled)
+Enabled
+Disabled
+Composebox Persistent AIM Button With X
+Shows an X icon on the persistent AIM button. Only effective if the persistent AIM button is also enabled for the surface.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-persistent-aim-button-with-x
+Default (Disabled)
+Enabled
+Disabled
+Composebox Outside Click (Realbox)
+Clicking outside the Realbox Composebox closes the suggestions dropdown and restores page interaction while keeping the Composebox open.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-realbox-outside-click
+Default (Disabled)
+Enabled
+Disabled
+Composebox/Searchbox Skills (Contextual Tasks)
+Enables skills inside the composebox/searchbox input area for Contextual Tasks.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-skills-contextual-tasks
+Default (Disabled)
+Enabled
+Disabled
+Composebox/Searchbox Skills (NTP)
+Enables skills inside the composebox/searchbox input area for NTP.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-skills-ntp
+Default (Disabled)
+Enabled
+Disabled
+Composebox/Searchbox Skills (Omnibox Everywhere)
+Enables skills inside the composebox/searchbox input area for Omnibox Everywhere.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-skills-omnibox-everywhere
+Default (Disabled)
+Enabled
+Disabled
+Composebox/Searchbox Skills (Omnibox Popup)
+Enables skills inside the composebox/searchbox input area for Omnibox Popup.
+–
+Mac, Windows, Linux, ChromeOS
+#
+composebox-skills-omnibox-popup
+Default (Disabled)
+Enabled
+Disabled
+Context management in the Composebox
+Enables an updated tab context management UI in the plus button and composebox context menu.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+context-management-in-composebox
+Default (Disabled)
+Enabled
+Enabled Context Management in composebox (with tab deselection)
+Enabled Context Management in composebox (keeps menu open, with tab deselection)
+Enabled Context Management in composebox (with tooltips and tab deselection)
+Enabled Context Management in composebox (with favicon skeleton loader)
+Disabled
+Context management in the Omnibox
+Enables context menu and favicon coins for omnibox
+–
+Mac, Windows, Linux, ChromeOS
+#
+context-management-in-omnibox
+Default (Disabled)
+Enabled
+Disabled
+Tab favicon chips to coins
+Removes existing tab chips from the composebox and instead adds favicon coins next to the "+" button.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-favicon-chips-to-coins
+Default (Enabled)
+Enabled
+Disabled
+NTP Composebox
+Shows the Composebox on the New Tab Page Searchbox upon clicking the entrypoint.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ntp-composebox
+Default (Enabled)
+Enabled
+Disabled
+NTP Realbox Next
+Enables the Realbox 'Next' experience.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ntp-realbox-next
+Default (Enabled)
+Enabled
+Disabled
+NTP Realbox Cycling Placeholders
+Enables cycling placeholders within the Realbox 'Next' experience.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ntp-realbox-cycling-placeholders
+Default (Disabled)
+Enabled
+Disabled
+Enable Realbox Virtual Focus Navigation
+Enables a new virtual focus model for keyboard navigation within the New Tab Page Realbox. This allows tabbing through all interactive elements within suggestions (actions, buttons) without losing focus from the searchbox, unifying behavior with the Omnibox and improving accessibility.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-realbox-virtual-focus
+Default (Disabled)
+Enabled
+Disabled
+Enable Lens Overlay Virtual Focus Navigation
+Enables virtual focus keyboard navigation within the Lens Overlay searchbox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-lens-overlay-virtual-focus
+Default (Disabled)
+Enabled
+Disabled
+Enable Omnibox Everywhere Virtual Focus Navigation
+Enables virtual focus keyboard navigation within Omnibox Everywhere.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-omnibox-everywhere-virtual-focus
+Default (Enabled)
+Enabled
+Disabled
+Enable WebUI Browser Virtual Focus Navigation
+Enables virtual focus keyboard navigation within the WebUI Browser searchbox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-webui-browser-virtual-focus
+Default (Disabled)
+Enabled
+Disabled
+NTP Next Features
+Enables features (e.g., AI action chips) in NTP Next
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ntp-next-features
+Default (Enabled)
+Enabled
+Enabled - Allow Disable
+Disabled
+Chrome Dark Neutrals 26
+When enabled, updates the neutral palette for dark mode default theme
+–
+Mac, Windows, Linux, ChromeOS
+#
+chrome-dark-neutrals-26
+Default (Disabled)
+Enabled
+Disabled
+Dark Mode Surface Tokens
+When enabled, updates the surface tokens for dark mode.
+–
+Mac, Windows, Linux, ChromeOS
+#
+dark-mode-surface-tokens
+Default (Disabled)
+Enabled
+Disabled
+NTP Customize Chrome Auto Promo
+Shows the Customize Chrome on the New Tab Page automatically.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-customize-chrome-auto-open
+Default (Enabled)
+Enabled
+Enabled - First NTP only
+Enabled - IPH only
+Disabled
+NTP Animated Doodles
+Enables animated Doodles on the NTP.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-animated-doodles
+Default (Enabled)
+Enabled
+Disabled
+NTP Doodle Murals
+Enables Doodle Murals on the NTP.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-doodle-murals
+Default (Disabled)
+Enabled
+Disabled
+NTP Next Canvas Chip
+Enables the Canvas tool chip for NTP action chips
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-next-canvas-chip
+Default (Disabled)
+Enabled
+Disabled
+NTP Scaled Action Chips
+Enables scaled merchandising action chips (e.g., dynamic tool suggestions and resource pickers) on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-scaled-action-chips
+Default (Disabled)
+Enabled
+Disabled
+NTP Scaled Action Chips Small
+Enables small scaled merchandising action chips on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-scaled-action-chips-small
+Default (Disabled)
+Enabled
+Disabled
+NTP Starter Chip
+Enables the starter chip on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-starter-chip
+Default (Enabled)
+Enabled
+Disabled
+NTP Tab Groups Module
+Shows the Tab Groups module on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-tab-groups-module
+Default (Disabled)
+Enabled
+Enabled - Fake Data
+Enabled - Fake Zero State
+Disabled
+NTP Tab Groups Zero State Card
+Enables the zero-state card for the Tab Groups Module on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-tab-groups-module-zero-state
+Default (Disabled)
+Enabled
+Disabled
+NTP Shortcuts Redesign
+Enables the redesigned shortcuts on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-shortcuts-redesign
+Default (Disabled)
+Enabled
+Disabled
+NTP Shortcuts Reorder
+Enables shortcut reordering entrypoint on the New Tab Page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-shortcuts-reorder
+Default (Disabled)
+Enabled
+Disabled
+NTP Threads Rail
+Enables the Threads Rail on the NTP.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-threads-rail
+Default (Disabled)
+Enabled
+Disabled
+Parallel downloading
+Enable parallel downloading to accelerate download speed.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-parallel-downloading
+Default (Disabled)
+Enabled
+Disabled
+Enable network logging to file
+Enables network logging to a file named netlog.json in the user data directory. The file can be imported into chrome://net-internals.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-network-logging-to-file
+Disabled
+Enabled
+Web Authentication Enterprise Attestation
+Permit a set of origins to request a uniquely identifying enterprise attestation statement from a security key when creating a Web Authentication credential.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+web-authentication-permit-enterprise-attestation
+Disabled
+Enabled
+Exclude Picture-in-Picture windows from screen capture
+When enabled, Picture-in-Picture windows will be excluded from screen captures.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+exclude-pip-from-screen-capture
+Default (Disabled)
+Enabled
+Disabled
+PDF Accessibility Heuristic Enhancements
+Enables heuristic enhancements for PDF accessibility.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-accessibility-heuristic-enhancements
+Default (Disabled)
+Enabled
+Disabled
+PDF Brotli Decode
+Enables support for the experimental PDF 2.0 /BrotliDecode filter.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-brotli-decode
+Default (Enabled)
+Enabled
+Disabled
+OOPIF for PDF Viewer
+Use an OOPIF for the PDF Viewer, instead of a GuestView.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-oopif
+Default (Enabled)
+Enabled
+Disabled
+Use Skia Renderer
+Use Skia as the PDF renderer. This flag will have no effect if the renderer choice is controlled by an enterprise policy.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-use-skia-renderer
+Default (Disabled)
+Enabled
+Disabled
+PDF Ink Signatures
+Enables the ability to annotate PDFs using a new ink library.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-ink2
+Default (Enabled)
+Enabled
+Enabled with text annotations
+Enabled with text annotations and extra styles
+Disabled
+Save PDF to Drive
+Enables the ability to save PDFs to Google Drive.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-save-to-drive
+Default (Disabled)
+Enabled
+Disabled
+CUPS IPP Printing Backend
+Use the CUPS IPP printing backend instead of the original CUPS backend that calls the PPD API.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cups-ipp-printing-backend
+Default (Disabled)
+Enabled
+Disabled
+Insecure origins treated as secure
+Treat given (insecure) origins as secure origins. Multiple origins can be supplied as a comma-separated list. Origins must have their protocol specified e.g. "http://example.com". For the definition of secure contexts, see https://w3c.github.io/webappsec-secure-contexts/
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+unsafely-treat-insecure-origin-as-secure
+Disabled
+Enabled
+Disable subframe process reuse
+Prevents out-of-process iframes from reusing compatible processes from unrelated tabs. This is an experimental mode that will result in more processes being created.
+–
+Mac, Windows, Linux, ChromeOS
+#
+disable-process-reuse
+Default (Disabled)
+Enabled
+Disabled
+Headless Live Captions
+Enable features related to headless captions exploration. These are very likely unstable.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-headless-live-caption
+Default (Disabled)
+Enabled
+Disabled
+Headless Caption Early Start
+Start headless captioning as soon as a profile is loaded.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-headless-live-caption-early-start
+Default (Disabled)
+Enabled
+Disabled
+Input protection
+Enables input protection by blocking interaction with views that are currently or were recently obscured by always-on-top windows, and prevents unintended events on security-sensitive UI that appears and activates unexpectedly.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-input-protection
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Read Aloud Phrase Highlighting
+Enables the experimental Reading Mode feature that highlights by phrases when reading aloud, when the phrase option is selected from the highlight menu.
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-read-aloud-phrase-highlighting-v2
+Default (Disabled)
+Enabled
+Disabled
+Use alternative route for image descriptions.
+When adding automatic captions to images, use a different route to acquire descriptions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+image-descriptions-alternative-routing
+Default (Disabled)
+Enabled
+Disabled
+Enable experimental prediction for scroll events
+Predicts the scroll amount after the vsync time to more closely match when the frame is visible.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-resampling-scroll-events-experimental-prediction
+Default (Disabled)
+Enabled
+Enabled frames 0.25
+Enabled frames 0.375
+Enabled frames 0.5
+Disabled
+Enable gpu service logging
+Enable printing the actual GL driver calls.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-gpu-service-logging
+Disabled
+Enabled
+Hardware Media Key Handling
+Enables using media keys to control the active media session. This requires MediaSessionService to be enabled too
+–
+Mac, Windows, Linux, ChromeOS
+#
+hardware-media-key-handling
+Default (Enabled)
+Enabled
+Disabled
+Strict-Origin-Isolation
+Experimental security mode that strengthens the site isolation policy. Controls whether site isolation should use origins instead of scheme and eTLD+1.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+strict-origin-isolation
+Default (Disabled)
+Enabled
+Disabled
+Unsafe WebGPU Support
+Convenience flag for WebGPU development. Enables best-effort WebGPU support on unsupported configurations and more! Note that this flag could expose security issues to websites so only use it for your own development.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-unsafe-webgpu
+Disabled
+Enabled
+WebGPU Developer Features
+Enables web applications to access WebGPU features intended only for use during development.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webgpu-developer-features
+Disabled
+Enabled
+Element Capture cross-tab
+Allows the Element Capture API to be used cross-tab. (Only has an effect if Element Capture is generally enabled.)
+–
+Mac, Windows, Linux, ChromeOS
+#
+element-capture-cross-tab
+Default (Disabled)
+Enabled
+Disabled
+Declarative Performance Observer
+Enables the Declarative Performance Observer API, a browser-resident telemetry system that captures and reliably reports end-to-end user journey metrics using HTTP response headers.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+declarative-performance-observer
+Default (Enabled)
+Enabled
+Disabled
+Enable location provider manager for Geolocation API
+Enables usage of the location provider manager to select between the operating system's location API or the network-based provider as the data source for Geolocation API.
+–
+Mac, Windows, Linux
+#
+enable-location-provider-manager
+Default (Enabled)
+Enabled
+Enabled Network only
+Enabled Platform only
+Enabled Wi-Fi fallback
+Enabled Fallback on error
+Disabled
+Heavy ad privacy mitigations
+Enables privacy mitigations for the heavy ad intervention. Disabling this makes the intervention deterministic. Defaults to enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+heavy-ad-privacy-mitigations
+Default (Enabled)
+Enabled
+Disabled
+Enable experimental cookie features
+Enable new features that affect setting, sending, and managing cookies. The enabled features are subject to change at any time.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-experimental-cookie-features
+Default
+Enabled
+Enables WebNN API
+Enables the Web Machine Learning Neural Network (WebNN) API. Spec at https://www.w3.org/TR/webnn/
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+web-machine-learning-neural-network
+Default (Disabled)
+Enabled
+Disabled
+Enables experimental WebNN API features
+Enables additional, experimental features in Web Machine Learning Neural Network (WebNN) API. Requires the "WebNN API" flag to be enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+experimental-web-machine-learning-neural-network
+Default (Disabled)
+Enabled
+Disabled
+Enables Out-of-Process Printer Drivers
+Enables printing interactions with the operating system to be performed out-of-process.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-oop-print-drivers
+Default (Enabled)
+Enabled
+Disabled
+Trees in viz
+Enables the renderer to send a CC LayerTree to the viz/gpu process instead of a CompositorFrame. This allows viz to generate and submit the CompositorFrame directly.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+trees-in-viz
+Default (Disabled)
+Enabled
+Disabled
+Omnibox prefetch Search
+Allows omnibox to prefetch likely search suggestions provided by the Default Search Engine
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-search-prefetch
+Default (Enabled)
+Enabled
+Enabled without holdback
+Enabled with holdback
+Disabled
+Omnibox client prefetch Search
+Allows omnibox to prefetch search suggestions provided by the Default Search Engine that the client thinks are likely to be navigated. Requires chrome://flags/#omnibox-search-prefetch
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-search-client-prefetch
+Default (Disabled)
+Enabled
+Disabled
+Enable Autofill settings enterprise policy
+When enabled, the Autofill settings enterprise policy takes effect, and forms ai settings are decoupled from Autofill profile settings.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-autofill-settings-enterprise-policy
+Default (Disabled)
+Enabled
+Disabled
+PDF XFA support
+Enables support for XFA forms in PDFs. Has no effect if Chrome was not built with XFA support, or if controlled by an enterprise policy.
+–
+Mac, Windows, Linux, ChromeOS
+#
+pdf-xfa-forms
+Default (Disabled)
+Enabled
+Disabled
+Debugging tools for UI
+Enables additional keyboard shortcuts to help debugging.
+–
+Mac, Windows, Linux
+#
+ui-debug-tools
+Default (Disabled)
+Enabled
+Disabled
+FedCmAutofill
+Allows RPs to enhance autofill with FedCM.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-autofill
+Default (Disabled)
+Enabled
+Disabled
+FedCm Ambient UI
+Enables FedCM ambient UI in the omnibox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+fedcm-ambient-ui
+Default (Disabled)
+Enabled
+Disabled
+FedCM with delegation support
+Enables IdPs to delegate presentation to the browser.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-delegation
+Default (Disabled)
+Enabled
+Disabled
+Email Verification Protocol
+Enables the Email Verification Protocol in Autofill.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+email-verification-protocol
+Default (Disabled)
+Enabled
+Disabled
+FedCmActiveModeMultipleIdentityProviders
+Enables Active Mode support with multiple Identity Providers in FedCM.
+–
+Mac, Windows, Linux, ChromeOS
+#
+fedcm-active-mode-multiple-identity-providers
+Default (Disabled)
+Enabled
+Disabled
+FedCM with IdP Registration support
+Enables RPs to get identity credentials from registered IdPs.
+–
+Mac, Windows, Linux, ChromeOS
+#
+fedcm-idp-registration
+Default (Disabled)
+Enabled
+Disabled
+FedCmLightweightMode
+Enables IdPs to store user profile information using the login status API.
+–
+Mac, Windows, Linux, ChromeOS
+#
+fedcm-lightweight-mode
+Default (Disabled)
+Enabled
+Disabled
+FedCmMetricsEndpoint
+Allows the FedCM API to send performance measurement to the metrics endpoint on the identity provider side. Requires FedCM to be enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-metrics-endpoint
+Default (Disabled)
+Enabled
+Disabled
+FedCmNonceInParams
+Removes nonce as an explicit parameter of the FedCM API. When enabled, a nonce may be passed in params.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-nonce-in-params
+Default (Disabled)
+Enabled
+Disabled
+FedCmWebIdentitySubdomain
+Enables subdomain-first discovery for the FedCM well-known file. Fetches https://web-identity.<eTLD+1>/.well-known/web-identity first and falls back to the apex URL on failure.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-web-identity-subdomain
+Default (Disabled)
+Enabled
+Disabled
+FedCmWellKnownEndpointValidation
+When enabled, accounts_endpoint and login_url must be present in .well-known/web-identity if client_metadata is used.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-well-known-endpoint-validation
+Default (Disabled)
+Enabled
+Disabled
+FedCmWithoutWellKnownEnforcement
+Supports configURL that's not in the IdP's .well-known file.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-without-well-known-enforcement
+Default (Disabled)
+Enabled
+Disabled
+FedCmSegmentationPlatform
+Enables the segmentation platform service to provide UI volume recommendations to FedCM.
+–
+Mac, Windows, Linux, ChromeOS
+#
+fedcm-segmentation-platform
+Default (Enabled)
+Enabled
+Disabled
+FedCmNavigationInterception
+Allows IdP to intercept navigations by initiating a FedCM request.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+fedcm-navigation-interception
+Default (Disabled)
+Enabled
+Disabled
+DigitalCredentials
+Enables the three-party verifier/holder/issuer identity model.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+web-identity-digital-credentials
+Default (Disabled)
+Enabled
+Enabled with dialog depending on what credentials are requested
+Enabled without dialog
+Enabled with confirmation dialog with mild warning before sending identity request to Android OS
+Enabled with confirmation dialog with severe warning before sending identity request to Android OS
+Disabled
+DigitalCredentialsCreation
+Enables the Digital Credentials Creation API.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+web-identity-digital-credentials-creation
+Default (Disabled)
+Enabled
+Disabled
+Lens Composebox Identity Delegation
+Enables identity delegation in the Lens composebox.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+lens-composebox-identity-delegation
+Default (Disabled)
+Enabled
+Disabled
+Prerendering
+If enabled, browser features and the speculation rules API can trigger prerendering. If disabled, all prerendering APIs still exist, but a prerender will never successfully take place.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+prerender2
+Default (Disabled)
+Enabled
+Disabled
+Prerender2 Cross-Origin Iframes
+Enable Prerender2 for cross-origin iframes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+prerender2-cross-origin-iframes
+Default
+Enabled (Version 1)
+Enabled (Version 2:nesting/true)
+Disabled
+Enable Test-only MTC Root Store (UNSAFE)
+Enable MTC certificate verification based on test-only roots. This is unsafe and may permit an attacker to intercept or modify your HTTPS connections. Do not use this flag on an instance containing personal data. Recommended for developer use only in isolated testing environments
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+test-root-store
+Default (Disabled)
+Enabled
+Disabled
+Test Third Party Cookie Phaseout
+Enable to test third-party cookie phaseout. Learn more: https://goo.gle/3pcd-flags
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+test-third-party-cookie-phaseout
+Disabled
+Enabled
+HTTPS Upgrades Typed Schemeless Navigation No Timeout Fallback
+When enabled, typed schemeless navigations upgraded to HTTPS will not fallback to HTTP if the upgraded HTTPS navigation fails due to a timeout.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+https-upgrades-typed-schemeless-navigation-no-timeout-fallback
+Default (Enabled)
+Enabled
+Disabled
+Enables Display Compositor to use a new gpu thread.
+When enabled, chrome uses 2 gpu threads instead of 1. Display compositor uses new dr-dc gpu thread and all other clients (raster, webgl, video) continues using the gpu main thread.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-drdc
+Default (Disabled)
+Enabled
+Disabled
+Extensions Contextual Tasks API
+Enables the contextualTasksPrivate API and contextual tasks component extension.
+–
+Mac, Windows, Linux, ChromeOS
+#
+api-contextual-tasks-private
+Default (Disabled)
+Enabled
+Disabled
+Enable chrome.mimeHandler extension API
+Enables the chrome.mimeHandler extension API for extensions with a mime_types_handler manifest entry. The API is currently limited to a small set of MIME types (e.g. application/pdf).
+–
+Mac, Windows, Linux, ChromeOS
+#
+api-mime-handler
+Default (Enabled)
+Enabled
+Disabled
+Enables AI Data collection via extension
+Enables an extension API to allow specific extensions to collect data from browser process. This data may contain profile specific information and may be otherwise unavailable to an extension.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-extension-ai-data-collection
+Disabled
+Enabled
+Extensions Menu Access Control
+Enables a redesigned extensions menu that allows the user to control extensions site access.
+–
+Mac, Windows, Linux, ChromeOS
+#
+extensions-menu-access-control
+Default (Disabled)
+Enabled
+Disabled
+Region Capture cross-tab
+Allows the Region Capture API to be used cross-tab. (Only has an effect if Region Capture is generally enabled.)
+–
+Mac, Windows, Linux, ChromeOS
+#
+region-capture-cross-tab
+Default (Enabled)
+Enabled
+Disabled
+Skia Graphite
+Enable Skia Graphite. This will use the Dawn backend by default, but can be overridden with command line flags for testing on non-official developer builds. See --skia-graphite-dawn-backend flag in gpu_switches.h.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+skia-graphite
+Default (Disabled)
+Enabled
+Enabled dawn frontend validation enabled
+Enabled dawn frontend validation disabled
+Enabled dawn debug labels enabled
+Disabled
+Tab audio muting UI control
+When enabled, the audio indicators in the tab strip double as tab audio mute controls.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-tab-audio-muting
+Default (Enabled)
+Enabled
+Disabled
+Auto picture in picture on window occluded
+Allows auto picture-in-picture to trigger when the window is occluded by another window.
+–
+Mac, Windows, Linux, ChromeOS
+#
+auto-picture-in-picture-on-window-occluded
+Default (Disabled)
+Enabled
+Disabled
+Browser initiated automatic picture in picture
+When enabled, allows the browser to automatically enter picture in picture when a series of conditions are met.
+–
+Mac, Windows, Linux, ChromeOS
+#
+browser-initiated-automatic-picture-in-picture
+Default (Disabled)
+Enabled
+Disabled
+Picture-in-Picture Mute Control
+Adds a mute/unmute button to the Video Picture-in-Picture window.
+–
+Mac, Windows, Linux, ChromeOS
+#
+picture-in-picture-mute-control
+Default (Enabled)
+Enabled
+Disabled
+Document patching
+Allow out-of-order streaming of HTML content using <template patchfor> and node.streamHTMLUnsafe(). See https://github.com/WICG/declarative-partial-updates
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+document-patching
+Default (Enabled)
+Enabled
+Disabled
+Route matching
+Allow definition of routes as e.g. URLPattern. Special CSS rules can be used to match active routes. See https://github.com/WICG/declarative-partial-updates/blob/main/route-matching-explainer.md
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+route-matching
+Default (Disabled)
+Enabled
+Disabled
+Default Search Engine preload 2
+Enables new DSE preload instead of existing one, which uses //content prefetch
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+dse-preload2
+Default (Disabled)
+Enabled
+Disabled
+Default Search Engine preload 2, on-press triggers
+Enables on-press triggers of DsePreload2
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+dse-preload2-on-press
+Default (Disabled)
+Enabled
+Disabled
+Use custom disk cache backend for HTTP Cache
+Enables the experimental disk cache backend for HTTP Cache. This flag is overridden by the CacheEncryptionEnabled enterprise policy on supported platforms.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+http-cache-custom-backend
+Default (Disabled)
+Enabled
+Enabled default backend
+Enabled simple backend
+Enabled blockfile backend
+Enabled experimental sql backend
+Disabled
+Origin-keyed Processes by default
+Enables origin-keyed process isolation for most pages (i.e., those assigned to an origin-keyed agent cluster by default). This improves security but also increases the number of processes created. Note: enabling this feature also enables 'Origin-keyed Agent Clusters by default'.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+origin-keyed-processes-by-default
+Default (Disabled)
+Enabled
+Disabled
+Collaboration Messaging
+Enables the messaging framework within the collaboration feature, including features such as recent activity, dirty dots, and description action chips.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+collaboration-messaging
+Default (Enabled)
+Enabled
+Disabled
+Isolated sandboxed iframes
+When enabled, applies process isolation to iframes with the 'sandbox' attribute and without the 'allow-same-origin' permission set on that attribute. This also applies to documents with a similar CSP sandbox header, even in the main frame. The affected sandboxed documents can be grouped into processes based on their URL's site or origin. The default grouping when enabled is per-site.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-isolated-sandboxed-iframes
+Default (Enabled)
+Enabled
+Enabled with grouping by URL's site
+Enabled with grouping by URL's origin
+Enabled with each sandboxed frame document in its own process
+Disabled
+Approximate Geolocation Permission
+Enables the approximate geolocation permission prompt.
+–
+Mac, Windows, Linux, ChromeOS
+#
+approximate-geolocation-permission
+Default (Disabled)
+Enabled
+Disabled
+Safe Browsing Local Lists use v5 API
+Fetch and check local lists using the Safe Browsing v5 API instead of the v4 Update API.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+safe-browsing-local-lists-use-sbv5
+Default (Disabled)
+Enabled
+Disabled
+XSLT
+Toggles whether or not XSLT is supported by the browser.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+xslt
+Default (Enabled)
+Enabled
+Disabled
+Symphonia Audio Decoding
+Enables using the experimental Symphonia audio decoder instead of using FFMPEG for decoding audio.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+symphonia-audio-decoding
+Default
+Enabled (All Codecs)
+Disabled (Overrides Finch)
+Web Bluetooth confirm pairing support
+Enable confirm-only and confirm-pin pairing mode support for Web Bluetooth
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-web-bluetooth-confirm-pairing-support
+Default (Disabled)
+Enabled
+Disabled
+Enable Perfetto system tracing
+When enabled, Chrome will attempt to connect to the system tracing service
+–
+Linux, Android
+#
+enable-perfetto-system-tracing
+Default (Disabled)
+Enabled
+Disabled
+Background Resource Fetch
+Process resource requests in a background thread inside Blink.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+background-resource-fetch
+Default (Disabled)
+Enabled
+Disabled
+Renderer-side content decoding
+Enables renderer-side content decoding (decompression). When enabled, the network service sends compressed HTTP response bodies to the renderer process.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+renderer-side-content-decoding
+Default (Disabled)
+Enabled
+Disabled
+AIM 3P entrypoint
+Enables the omnibox AI Mode entrypoint for third party search engines.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+aim-3p-entrypoint
+Default (Enabled)
+Enabled
+Enabled with debug config
+Disabled
+Omnibox Dynamic AI Mode Button
+Enables dynamic behaviour for the AI mode button in the WebUI Omnibox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+omnibox-dynamic-ai-mode-button
+Default (Disabled)
+Enabled
+Enabled Animation Only
+Enabled Color Scheme Only
+Enabled Animation and Color Scheme
+Disabled
+NTP Realbox Dynamic AI Mode Button
+Enables dynamic behaviour for the AI mode button in the NTP Realbox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ntp-realbox-dynamic-ai-mode-button
+Default (Disabled)
+Enabled
+Disabled
+Omnibox AI Mode Space Does Not Activate
+If enabled, pressing space when the AI mode button has focus will insert a space into the omnibox instead of activating the button.
+–
+Mac, Windows, Linux, ChromeOS
+#
+omnibox-ai-mode-space-does-not-activate
+Default (Enabled)
+Enabled
+Disabled
+Dynamic Aim Submit
+Enables dynamic aim button submission variants.
+–
+Mac, Windows, Linux, ChromeOS
+#
+omnibox-dynamic-aim-submit
+Default (Disabled)
+Enabled
+Enabled - "Input has hint
+Disabled
+Enable Loom
+Enables experimental Loom features.
+–
+Mac, Windows, Linux, ChromeOS
+#
+omnibox-loom
+Default
+Enabled
+Enabled without Multiline
+Enabled with Profile Picker
+Enabled with Small Font (14px)
+Enabled with Dynamic Sizing (680px, 14px Font)
+Enabled with Dynamic Sizing (600px, 14px Font)
+Disabled
+WebUI Omnibox AIM Popup Disable Animation
+If enabled, there will no longer be animation in the WebUI Omnibox AIM popup.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webui-omnibox-aim-popup-disable-animation
+Default (Disabled)
+Enabled
+Disabled
+WebUI Omnibox Hide AIM URL
+If enabled, hides the AIM button when the default suggestion is a URL.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webui-omnibox-hide-aim-url
+Default (Enabled)
+Enabled
+Disabled
+WebUI Omnibox Popup Selection Control
+If enabled, the WebUI omnibox popup will control its own selection state.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webui-omnibox-popup-selection-control
+Default (Disabled)
+Enabled
+Disabled
+WebUI Omnibox Simplification
+If enabled, the WebUI omnibox popup will have a different UX for the entrypoint to composebox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webui-omnibox-simplification
+Default (Enabled)
+Enabled
+Disabled
+WebUI Omnibox Ask G About This Page
+If enabled, the 'Ask Google about this page' action will route to cobrowse.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webui-omnibox-ask-g-about-this-page
+Default (Disabled)
+Enabled
+Enabled Ask G - Cobrowse and Lens entrypoint
+Enabled Ask G - Cobrowse + Visual Selection
+Enabled Ask G - Omnibox Composebox
+Enabled Ask G - Omnibox Composebox and Lens entrypoint
+Enabled Ask G - Omnibox Chip Composebox and Lens entrypoint
+Disabled
+WebUI Omnibox AIM Popup
+If enabled, using certain trigger operations the omnibox suggestions popup transition to showing the AI-Mode compose-box input and suggestions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webui-omnibox-aim-popup
+Default (Disabled)
+Enabled
+Disabled
+WebUI Omnibox Full Popup
+If enabled, then both the input row and suggestions dropdown (in the Omnibox) will be rendered using the WebUI stack (i.e. the cutout for the location bar will be removed).
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webui-omnibox-full-popup
+Default (Disabled)
+Enabled
+Enabled - Use BrowserView
+Enabled - with Multiline
+Disabled
+WebUI Omnibox Popup
+If enabled, shows the omnibox suggestions in the popup in WebUI.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webui-omnibox-popup
+Default (Disabled)
+Enabled
+Disabled
+WebUI Omnibox Popup Debug Mode
+Enables the WebUI for omnibox suggestions without modifying the popup UI.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webui-omnibox-popup-debug
+Default (Disabled)
+Enabled
+Enabled Side by Side
+Disabled
+Sync account settings
+Enables syncing account settings to the server.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+sync-account-settings
+Default (Enabled)
+Enabled
+Disabled
+Sync autofill valuable metadata
+Enables syncing valuable metadata for autofill to the server.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+sync-autofill-valuable-metadata
+Default (Disabled)
+Enabled
+Disabled
+Sync wallet flight reservations
+Enables syncing flight reservations in the wallet to the server.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+sync-wallet-flight-reservations
+Default (Enabled)
+Enabled
+Disabled
+Sync wallet vehicle registrations
+Enables syncing vehicle registrations in the wallet to the server.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+sync-wallet-vehicle-registrations
+Default (Enabled)
+Enabled
+Disabled
+Compression dictionary transport
+Enables compression dictionary transport.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-compression-dictionary-transport
+Default (Enabled)
+Enabled
+Disabled
+Compression dictionary transport ttl
+Enables support for the 'ttl' parameter in the 'use-as-dictionary' HTTP response header.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-compression-dictionary-ttl
+Default (Disabled)
+Enabled
+Disabled
+Cast Mirroring Native NV12
+If enabled, NV12 video frames will be sent to the encoder without being converted to I420 during Cast Mirroring.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cast-mirroring-native-nv12
+Default (Disabled)
+Enabled
+Disabled
+getDisplayMedia() confers transient activation.
+When getDisplay() is invoked by the application, the user is shown a dialog which allows them to share a tab, a window or a screen. If this flag is enabled, then after the user chooses what to share, transient activation is conferred on the Web application.
+–
+Mac, Windows, Linux, ChromeOS
+#
+get-display-media-confers-activation
+Default (Disabled)
+Enabled
+Disabled
+GEiC enabled
+Controls Gemini Enterprise in Chrome (GEiC) side panel integration. Set to Enabled to apply a GeminiEnterpriseSettings policy even if this profile is not detected as a managed account. Set to Disabled to opt out of GEiC and fall back to consumer Gemini, even if a Gemini Enterprise policy or experiment applies to this profile.
+–
+Mac, Windows, Linux, ChromeOS
+#
+geic-enabled
+Default (Disabled)
+Enabled
+Disabled
+Desktop Glow Up
+Enables all Desktop Glow Up features.
+–
+Mac, Windows, Linux, ChromeOS
+#
+desktop-glow-up
+Default (Disabled)
+Enabled
+Disabled
+Toolbar Glow Up
+Enables the Toolbar Glow Up feature.
+–
+Mac, Windows, Linux, ChromeOS
+#
+toolbar-glow-up
+Default (Disabled)
+Enabled
+Enabled no reload animation
+Enabled no reload, back, or forward animations
+Disabled
+Rounded Icons
+Enables rounded icons.
+–
+Mac, Windows, Linux, ChromeOS
+#
+rounded-icons
+Default (Disabled)
+Enabled
+Disabled
+WebUI Rounded Icons
+Enables rounded icons in WebUI pages.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+webui-rounded-icons
+Default (Disabled)
+Enabled
+Disabled
+Tab Group Color Refresh
+Update the color selection for tab groups.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-group-color-refresh
+Default (Disabled)
+Enabled
+Disabled
+Menu Simplification
+Enables the menu simplification feature.
+–
+Mac, Windows, Linux, ChromeOS
+#
+menu-simplification
+Default (Disabled)
+Enabled
+Disabled
+WebUI Refresh 2026
+Enables the WebUI Refresh 2026 feature.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webui-refresh-2026
+Default (Disabled)
+Enabled
+Disabled
+App Menu Glow Up
+Enables the App Menu Glow Up feature.
+–
+Mac, Windows, Linux, ChromeOS
+#
+app-menu-glow-up
+Default (Disabled)
+Enabled
+Disabled
+Default SiteInstanceGroups
+Put sites that don't need isolation in their own SiteInstance in a defaultSiteInstanceGroup (per BrowsingContextGroup) instead of in a default SiteInstance.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+default-site-instance-groups
+Default (Enabled)
+Enabled
+Disabled
+CWS Review Prompting Native UI
+Enables native UI affordances (e.g., in the Extensions menu and management page) for leaving reviews on installed Chrome Web Store extensions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+cws-review-prompting-native-ui
+Default (Disabled)
+Enabled
+Disabled
+CWS Info Fast Check
+When enabled, Chrome checks and fetches metadata for installed extensions more frequently.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cws-info-fast-check
+Default (Disabled)
+Enabled
+Disabled
+Desktop PWA Link Capturing
+Enables opening links from Chrome in an installed PWA. Currently under reimplementation.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-user-navigation-capturing-pwa
+Default (Disabled)
+Enabled
+Enabled V1, On by default
+Enabled V1, Off by default
+Enabled V2, On by default
+Enabled V2, Off by default
+Enabled V2, On by app client_mode
+Disabled
+Desktop PWA Link Capturing Default On For Testing
+Enables opening links from Chrome in an installed PWA by default for testing.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-user-navigation-capturing-pwa-testing-override
+Default (Disabled)
+Enabled
+Enabled V2, On by default
+Enabled V2, On by app client_mode
+Disabled
+Deprecate the unload event
+Controls the default for Permissions-Policy unload. If enabled, unload handlers are deprecated and will not receive the unload event unless a Permissions-Policy to enable them has been explicitly set. If disabled, unload handlers will continue to receive the unload event unless explicitly disabled by Permissions-Policy, even during the gradual rollout of their deprecation.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+deprecate-unload
+Default (Disabled)
+Enabled
+Disabled
+Device Bound Session Credentials
+Enables Google session credentials binding to cryptographic keys.
+–
+Mac, Linux
+#
+enable-bound-session-credentials
+Default (Disabled)
+Enabled
+Disabled
+Device Bound Session Credentials with software keys
+Enables mock software-backed cryptographic keys for Google session credentials binding and Chrome refresh tokens binding (not secure). This is intended to be used for manual testing only.
+–
+Mac, Windows, Linux
+#
+enable-bound-session-credentials-software-keys-for-manual-testing
+Default (Disabled)
+Enabled
+Disabled
+Show permission grants from Related Website Sets
+Shows permission grants created by Related Website Sets in Chrome Settings UI and Page Info Bubble, default is hidden
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+related-website-sets-permission-grants
+Default (Disabled)
+Enabled
+Disabled
+Enable Isolated Web Apps to bypass USB restrictions
+When enabled, allows Isolated Web Apps to access blocklisted devices and protected interfaces through WebUSB API.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-unrestricted-usb
+Default (Enabled)
+Enabled
+Disabled
+Enable Wallet Disclosure Notice for public passes
+When enabled, shows the Wallet Disclosure Notice at the end of the save prompt for public passes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-wallet-disclosure-notice-public-pass
+Default (Disabled)
+Enabled
+Disabled
+Enable Wallet Reminder Notice for cards
+When enabled, shows the Wallet Reminder Notice prompt or bottom sheet for cards after payment form submission.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-wallet-reminder-notice
+Default (Disabled)
+Enabled
+Disabled
+Enable Wallet Reminder Notice for public passes
+When enabled, shows the Wallet Reminder Notice prompt or bottom sheet after submitting a form with a public pass.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-wallet-reminder-notice-public-pass
+Default (Disabled)
+Enabled
+Disabled
+Send Tab To Self enhanced handoff
+Enables an enhanced version of Send Tab To Self that propagates more information, such as form fields and scroll position.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+send-tab-to-self-enhanced-handoff
+Default
+Enabled
+Enabled with fast-follows
+Disabled
+Enable data sharing debug logs
+Enables the data sharing infrastructure to log and save debug messages that can be shown in the internals page.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+data-sharing-debug-logs
+Disabled
+Enabled
+Multistep Filter
+Allows users to quickly apply search filters when browsing supported websites. Suggestions are based on recent browsing activity and filters are saved locally on the device.
+–
+Mac, Windows, Linux, ChromeOS
+#
+multistep-filter
+Default (Disabled)
+Enabled
+Disabled
+Device Bound Session Credentials (Standard)
+Enables the official version of Device Bound Session Credentials. For more information see https://github.com/WICG/dbsc.
+–
+Mac, Windows, Linux
+#
+enable-standard-device-bound-session-credentials
+Default (Disabled)
+Enabled
+Enabled - For developers
+Disabled
+Enable Device Bound Session Credentials Prewarmer for Default Search Engine
+Enables preemptive refreshes for sessions registered in the same site as the default search engine when the user is not actively navigating.
+–
+Mac, Windows, Linux
+#
+enable-device-bound-sessions-dse-prewarmer
+Default (Disabled)
+Enabled
+Enabled - Sticky, respecting prefs
+Enabled - Sticky
+Disabled
+Device Bound Session Credentials (Standard) - Federated Registrations
+Enables federated session registration for the official version of Device Bound Session Credentials.
+–
+Mac, Windows, Linux
+#
+enable-standard-device-bound-session-credentials-federated-sessions
+Default (Enabled)
+Enabled
+Enabled - For developers
+Disabled
+Device Bound Session Credentials (Standard) on Google
+Enables Device Bound Session Credentials (Standard) to register sessions on Google sites
+–
+Mac, Windows, Linux
+#
+enable-standard-device-bound-session-google
+Default (Disabled)
+Enabled
+Disabled
+Device Bound Session Credentials (Standard) - Audience Claim
+Enables including the 'aud' (audience) claim in Device Bound Session Credentials registration and refresh JWT payloads.
+–
+Mac, Windows, Linux
+#
+enable-standard-device-bound-session-credentials-audience
+Default (Disabled)
+Enabled
+Disabled
+Replace all sync-related UI with sign-in ones
+When enabled, all sync-related UIs will be replaced by sign-in ones.
+–
+Mac, Windows, Linux, ChromeOS
+#
+replace-sync-promos-with-sign-in-promos-desktop
+Default
+Disabled
+Enabled
+Replace sync promos with sign-in promos (New Sign-in events)
+When enabled, all sync-related UIs will be replaced by sign-in ones. Similar to #replace-sync-promos-with-sign-in-promos-desktop but only enables extensions and bookmarks sync on new signin events.
+–
+Mac, Windows, Linux, ChromeOS
+#
+replace-sync-promos-with-signin-promos-new-signin
+Default
+Disabled
+Enabled
+Uno phase 2 follow-up
+UI tweaks for signin surfaces
+–
+Mac, Windows, Linux, ChromeOS
+#
+uno-phase-2-follow-up
+Default (Disabled)
+Enabled
+Disabled
+Password compromise warning in details card
+Displays a warning banner in the password details card when a saved credential is compromised.
+–
+Mac, Windows, Linux, ChromeOS
+#
+password-compromise-warning-in-details-card
+Default (Disabled)
+Enabled
+Disabled
+In-flow resolution of errors during password saving
+Starts the password manager error resolution flow after offering to save a password.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+password-save-in-context-error-resolution
+Default (Disabled)
+Enabled
+Disabled
+Enable optimization guide dogfood logging
+If this client is a Google-internal dogfood client, overrides enterprise policy to enable model quality logs. Googlers: See go/chrome-mqls-debug-logging for details.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+optimization-guide-enable-dogfood-logging
+Disabled
+Enabled
+Prompt API
+Enables the Prompt API, allowing you to send natural language instructions to a built-in large language model. This API is primarily intended for natural language processing tasks such as summarizing, classifying, or rephrasing text. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions).Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+prompt-api
+Default (Disabled)
+Enabled
+Enabled Multilingual
+Disabled
+Prompt API Multimodal Input
+Extends the Prompt API with image and audio input types. Allows you to supplement natural language instructions for a built-in large language model with image and audio inputs. This API enhancement is primarily intended for natural language processing tasks associated with visual and auditory data, such as generating rough descriptions of pictures and sounds. It is NOT suitable for use cases that require factual accuracy (e.g. answering knowledge questions). Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+prompt-api-multimodal-input
+Default (Disabled)
+Enabled
+Disabled
+Prompt API Tool Use
+Extends the Prompt API with tool use (function calling) capabilities.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+prompt-api-tool-use
+Default
+Enabled
+Prompt API Sampling Mode
+Enables setting the sampling mode option during session creation. When enabled, the model's creativity and predictability can be configured using high-level sampling modes.
+–
+Mac, Windows, Linux, ChromeOS
+#
+prompt-api-sampling-mode
+Default (Disabled)
+Enabled
+Disabled
+Writer API
+Enables the Writer API, allowing you to write a piece of text with a built-in large language model. The API may be subject to changes including the supported options. Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+writer-api
+Default (Disabled)
+Enabled
+Enabled Multilingual
+Disabled
+Rewriter API
+Enables the Rewriter API, allowing you to rewrite a piece of text with a built-in large language model. The API may be subject to changes including the supported options. Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+rewriter-api
+Default (Disabled)
+Enabled
+Enabled Multilingual
+Disabled
+Proofreader API
+Enables the Proofreader API, allowing you to proofread a piece of text with a built-in small expert model. The API may be subject to changes including the supported options. Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+proofreader-api
+Default
+Enabled
+Semantic Embedder API
+Enables the Semantic Embedder API, allowing you to generate semantic embeddings with a built-in model in Chrome. The API may be subject to changes including the supported options. Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+semantic-embedder-api
+Default
+Enabled
+Gemma 4 for Built-in AI
+Enables all built-in AI APIs (Prompt, Summarizer, Writer, etc.) to use the Gemma 4 model.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+gemma4-for-built-in-ai
+Default
+Enabled
+Summarizer API Performance Preference
+Adds the "preference" create option to the Summarizer API. Allows the developer to choose between "capability", "speed", and "auto" to hint at the desired balance between performance and capability. We're rapidly iterating on the training set for the smaller expert model used with the 'speed' preference, and welcome your feedback
+–
+Mac, Windows, Linux, ChromeOS
+https://chromestatus.com/feature/6309243756085248
+https://issues.chromium.org/issues/new?component=1617227
+#
+summarizer-api-performance-preference
+Default
+Enabled
+Summarizer API
+Enables the Summarizer API, allowing you to summarize a piece of text with a built-in large language model. Please refer to the built-in AI documentation [1] for details.
+–
+Mac, Windows, Linux, ChromeOS
+https://developer.chrome.com/docs/ai/built-in
+#
+summarizer-api
+Default (Disabled)
+Enabled
+Enabled Multilingual
+Disabled
+On-device category classifier
+Enables the on-device category classifier.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+on-device-category-classifier
+Default (Enabled)
+Enabled
+Disabled
+Speculative Decoding for Built-in AI
+Enables speculative decoding performance enhancements for Built-in AI APIs. Also enables requisite Gemma 4 and Sampling Mode features. Prompt API and Summarizer API sessions automatically use greedy sampling with speculative decoding by default, or when greedy sampling options are specified. Non-greedy sessions run with standard decoding.
+–
+Mac, Windows, Linux, ChromeOS
+#
+on-device-model-speculative-decoding
+Default
+Enabled
+Web Speech API On-Device Small Expert Model
+Enables the small expert model for on-device Web Speech API recognition.
+–
+Mac, Windows, Linux, ChromeOS
+#
+web-speech-on-device-small-expert-model
+Default
+Enabled
+Data Sharing
+Enabled all Data Sharing related UI and features.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+data-sharing
+Default (Disabled)
+Enabled
+Enabled with feedback
+Enabled without feedback
+Disabled
+Collaboration Entreprise V2
+Enables the collaboration feature for entreprise users within the same domain.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+collaboration-entreprise-v2
+Default (Enabled)
+Enabled
+Disabled
+Data Sharing Join Only
+Enabled Data Sharing Joining flow related UI and features.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+data-sharing-join-only
+Default (Disabled)
+Enabled
+Disabled
+Data Sharing server environment
+Sets data sharing server environment.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+data-sharing-non-production-environment
+Default (Disabled)
+Enabled
+Disabled
+Data Sharing Versioning Test Scenarios
+Testing multiple scenarios for versioning.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+shared-data-types-kill-switch
+Default
+Version out-of-date, no UI
+Version out-of-date, show UI
+Disabled
+PermissionsAIv4
+Use the Permission Predictions Service and the AIv4 model to surface permission notification requests using a quieter UI when the likelihood of the user granting the permission is predicted to be low. Requires `Make Searches and Browsing Better` to be enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+permissions-ai-v4
+Default (Disabled)
+Enabled
+Disabled
+Lens Side Panel Unification
+Unifies the Lens and Contextual Tasks side panels into a single panel.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-lens-side-panel-unification
+Default (Disabled)
+Enabled
+Disabled
+Contextual cueing
+Enables the contextual cueing system to support showing actions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-cueing
+Default (Disabled)
+Enabled
+Enabled no engagement caps
+Disabled
+Glic zero state suggestions
+Enables the Glic zero state suggestions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-zero-state-suggestions
+Default (Disabled)
+Enabled
+Disabled
+Contextual cueing V2
+Enables the contextual cueing system version 2.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-cueing-v2
+Default (Disabled)
+Enabled
+Enabled disable backoff
+Disabled
+Contextual cueing V2 multi-source
+Enables parallel evaluation of all registered cue targets and selects the winner with UCB scoring for contextual cueing V2.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-cueing-v2-multi-source
+Default (Disabled)
+Enabled
+Disabled
+PartitionAlloc Scheduler Loop Quarantine
+Enables PartitionAlloc's scheduler loop quarantine. Takes a JSON free-form configuration.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+partition-alloc-scheduler-loop-quarantine
+Disabled
+Enabled
+PartitionAlloc with Advanced Checks
+Enables an extra security layer on PartitionAlloc.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+partition-alloc-with-advanced-checks
+Default (Enabled)
+Enabled
+Enabled on browser process only
+Enabled on browser and renderer processes
+Enabled on non renderer processes
+Enabled on gpu process only
+Enabled on browser and gpu processes
+Enabled on all processes
+Disabled
+NewTabPagePrerender2
+If enabled, NewTabPage can trigger prerendering
+–
+Mac, Windows, Linux, ChromeOS
+#
+prerender-new-tab-page-trigger
+Default (Disabled)
+Enabled
+Disabled
+AI Overlay Disable Navigation Context
+Disables sharing navigation history.
+–
+Mac, Windows, Linux, ChromeOS
+#
+ai-overlay-disable-navigation-context
+Default (Disabled)
+Enabled
+Disabled
+AI Overlay Dialog
+Enables the AI overlay dialog.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+ai-overlay-dialog
+Default (Disabled)
+Enabled
+Enabled with MES
+Disabled
+Glic
+Enables glic
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic
+Default (Disabled)
+Enabled
+Disabled
+Glic Hotkey Local Scope
+Limits the Glic global hotkey to local scope (active browser window).
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-hotkey-local-scope
+Default (Disabled)
+Enabled
+Disabled
+Glic Tab Groups
+Enables Glic to integrate with tab groups.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-tab-groups
+Default (Disabled)
+Enabled
+Disabled
+Glic actor
+Enables the Glic actor.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-actor
+Default
+Enabled
+Disabled
+Glic handoff button hide when modal UI shown
+Hides the Glic handoff button when a tab-modal UI is active.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-handoff-button-hide-when-modal-ui-shown
+Default (Enabled)
+Enabled
+Disabled
+Glic experimental triggering
+Enables GLIC experimental triggering
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-experimental-triggering
+Default (Disabled)
+Enabled
+Disabled
+Browser Actuator
+Enables the Browser Actuator service for remote browser automation.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+browser-actuator
+Default (Disabled)
+Enabled
+Disabled
+Browser Actuator Internals
+Enables the chrome://browser-actuator-internals diagnostic dashboard.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+browser-actuator-internals
+Default (Disabled)
+Enabled
+Disabled
+Enable Browser Actuator for Glic Experimental Triggering
+Enables using the Browser Actuator transport for Glic experimental triggering messages.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-browser-actuator-for-glic-experimental-triggering
+Default (Disabled)
+Enabled
+Disabled
+Glic background actuation
+Enables background actuation for Glic.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-background-actuation
+Default (Disabled)
+Enabled
+Disabled
+Glic background triggering
+Enables background triggering for Glic.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-background-triggering
+Default (Disabled)
+Enabled
+Disabled
+Glic Web Actuation Accessibility Context Fix
+Enables accessible aria-label attributes on Web Actuation settings links for screen reader context.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-settings-a11y-context-fix
+Default (Enabled)
+Enabled
+Disabled
+Glic Opt-in dialog accessibility fix
+Fixes Glic opt-in dialog accessibility issues by adding an accessible title and redirecting initial focus.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-opt-in-dialog-a11y-fix
+Default (Enabled)
+Enabled
+Disabled
+Glic Experimental Triggering OS Notification
+Enables OS-level system notifications for Glic experimental triggering task starts when no browser window is active.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-experimental-triggering-os-notification
+Default (Disabled)
+Enabled
+Disabled
+Glic experimental triggering screenshot
+Enables secure client-side screenshot capture and encryption on yield for Glic experimental triggering tasks.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-experimental-triggering-screenshot
+Default (Disabled)
+Enabled
+Disabled
+Glic experimental triggering script tool execution
+Enables direct ScriptTool action execution for Glic experimental triggering tasks.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-experimental-triggering-script-tools
+Default (Disabled)
+Enabled
+Disabled
+Glic Spark Settings Accessible Labels
+Enables screen reader accessible labels for links in the Gemini Spark settings page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-spark-settings-accessible-labels
+Default (Enabled)
+Enabled
+Disabled
+Glic actor autofill
+Enables autofill actions for the Glic actor. Specific fillable types may also need to be enabled.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-autofill
+Default (Disabled)
+Enabled
+Disabled
+Glic actor autofill section label
+Enables the section label in Glic actor autofill. Only effective if Glic actor autofill is also enabled.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-autofill-section-label
+Default (Disabled)
+Enabled
+Disabled
+Glic actor autofill pre-click
+Enables an additional click before retrieving suggestions. Only effective if Glic actor autofill is also enabled.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-autofill-pre-click
+Default (Enabled)
+Enabled
+Disabled
+Glic actor cursor
+Enables the Glic actor cursor
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-cursor
+Default (Enabled)
+Enabled
+Disabled
+Treat localhost URLs as sensitive
+When enabled, treats localhost URLs as sensitive origins for the actor.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-actor-localhost-is-sensitive
+Default (Enabled)
+Enabled
+Disabled
+Glic actor script tools
+Enables script tools for the Glic actor.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-script-tools
+Default (Enabled)
+Enabled
+Disabled
+Glic actor transient tasks
+Support for transient tasks in actor. If enabled, all tasks will use the transient actor UI.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-transient-tasks
+Default (Disabled)
+Enabled
+Enabled (force transient)
+Disabled
+Glic actor skip screenshots
+If enabled, Glic actor will skip capturing and uploading screenshots when an actor turn is completed.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-actor-skip-screenshot
+Default (Disabled)
+Enabled
+Disabled
+Actor observe screenshot default
+If enabled, the actor framework will capture screenshots by default when requested.
+–
+Mac, Windows, Linux, ChromeOS
+#
+actor-observe-screenshot-default
+Default (Enabled)
+Enabled
+Disabled
+Actor observe page content default
+If enabled, the actor framework will capture page content by default when requested.
+–
+Mac, Windows, Linux, ChromeOS
+#
+actor-observe-page-content-default
+Default (Enabled)
+Enabled
+Disabled
+Actor script tool skip screenshot
+If enabled, script tools will explicitly vote to skip screenshots.
+–
+Mac, Windows, Linux, ChromeOS
+#
+actor-script-tool-skip-screenshot
+Default (Disabled)
+Enabled
+Disabled
+Actor script tool skip page content
+If enabled, script tools will explicitly vote to skip page content.
+–
+Mac, Windows, Linux, ChromeOS
+#
+actor-script-tool-skip-page-content
+Default (Disabled)
+Enabled
+Disabled
+Glic Capture Region
+Enables Glic to capture a region of the screen.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-capture-region
+Default (Enabled)
+Enabled
+Disabled
+Glic Use Toolbar Height Side Panel
+Enables Glic to use the toolbar height side panel instead of content height side panel when enabled to use side panel
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-toolbar-height-side-panel
+Default (Disabled)
+Enabled
+Disabled
+Glic guest URL presets
+Overrides the Bluebird environment URL used for Glic with user-configured values. Intended for manual testing only.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-guest-url-presets
+Default (Disabled)
+Enabled
+Enabled Auto-push
+Enabled Staging
+Enabled Pre-prod
+Enabled Prod
+Disabled
+Glic CAA Guest Error
+Enables the Glic CAA Guest Error UI when there are authentication issues.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-caa-guest-error
+Default (Enabled)
+Enabled
+Disabled
+Glic Gemini Enterprise Settings Override
+Overrides the Gemini Enterprise settings (project_id, app_id, location) for Glic local development and testing.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-gemini-enterprise-settings-override
+Disabled
+Enabled
+Glic Gemini Enterprise Settings Enabled Feature
+Enables the Glic Gemini Enterprise settings feature.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-gemini-enterprise-settings-enabled
+Default (Enabled)
+Enabled
+Disabled
+Glic Gemini Enterprise Consent Toggle Enabled Feature
+Enables the user consent toggle in Chrome settings for the Gemini Enterprise integration.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-gemini-enterprise-consent-enabled
+Default (Disabled)
+Enabled
+Disabled
+Glic disable actor safety checks
+Disables actor safety checks in Glic. Use with extreme caution, intended for testing only.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-disable-actor-safety-checks
+Disabled
+Enabled
+Enable toolbar Gemini button on horizontal tab strip
+Enables the toolbar Gemini button when the horizontal tab strip is enabled, and disables the tab strip Gemini button.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-horizontal-tab-toolbar-button
+Default (Disabled)
+Enabled
+Disabled
+Glic Toolbar Button Location
+Specifies the location of the toolbar Gemini button.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-toolbar-button-location
+Default (Disabled)
+Enabled
+Enabled Left of Profile
+Enabled Right of Omnibox
+Enabled Left of Profile with Background
+Disabled
+Glic Contextual Cueing v2 Active User Backoff
+Prevents showing the v2 contextual cue UI for Glic if the user recently invoked Glic.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-contextual-cue-v2-active-user-backoff
+Default (Enabled)
+Enabled
+Disabled
+Glic Message First FRE for Contextual Cue
+Enables the message-first first run experience (FRE) when auto-submitting from a contextual cue.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-message-first-fre-for-contextual-cue
+Default (Disabled)
+Enabled
+Disabled
+Glic No Webview
+Runs the Glic client in a PrivilegedWebContents instead of a webview.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+glic-no-webview
+Default
+Enabled
+Disabled
+Skills App Menu
+Shows the Skills sub-menu item in the Chrome app menu.
+–
+Mac, Windows, Linux, ChromeOS
+#
+skills-app-menu
+Default (Disabled)
+Enabled
+Disabled
+Happy Eyeballs Version 3
+Enables the Happy Eyeballs Version 3 algorithm. See https://datatracker.ietf.org/doc/draft-pauly-v6ops-happy-eyeballs-v3/
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+happy-eyeballs-v3
+Default (Disabled)
+Enabled
+Disabled
+Enable OAuthMultilogin Standard Cookies Binding
+Enables binding of cookies returned from OAuthMultilogin to cryptographic keys using standard DBSC.
+–
+Mac, Windows, Linux
+#
+enable-oauth-multilogin-standard-cookies-binding
+Default (Disabled)
+Enabled
+Disabled
+Enable Youtube OAuthMultilogin Cookies Binding
+When enabled, Chrome will send a specific URL parameter to Gaia to trigger the server-side experiment for binding the OAuthMultilogin cookies for Youtube to cryptographic keys.
+–
+Mac, Windows, Linux
+#
+enable-oauth-multilogin-youtube-cookies-binding
+Default (Disabled)
+Enabled
+Enabled without enforcement
+Enabled with enforcement
+Disabled
+Chrome Refresh Token Binding
+Enables binding of Chrome refresh tokens to cryptographic keys.
+–
+Mac, Linux
+#
+enable-chrome-refresh-token-binding
+Default (Disabled)
+Enabled
+Disabled
+Chrome Refresh Token Binding Upgrade
+Enables opportunistic binding of existing unbound Chrome refresh tokens and session cookies to cryptographic keys. Requires Chrome Refresh Token Binding to be enabled.
+–
+Mac, Windows, Linux
+#
+enable-chrome-refresh-token-binding-upgrade
+Default (Disabled)
+Enabled
+Enabled (Dark Launch)
+Enabled (Live Launch)
+Disabled
+Cookie Binding Cookie Upgrade
+Enables upgrading unbound session cookies to be hardware-bound on supported device platforms.
+–
+Mac, Windows, Linux
+#
+enable-cookie-binding-cookie-upgrade
+Default (Disabled)
+Enabled
+Disabled
+Linked Accounts
+Enables Linked Accounts and DICE version 2 protocol header.
+–
+Mac, Windows, Linux
+#
+linked-accounts
+Default
+Enabled
+Disabled
+MagiChrome Passkey Sign-in
+Enables the MagiChrome passkey sign-in experiment, enabling either the Autofill promo flow or the native Views banner flow.
+–
+Mac, Windows, Linux
+#
+magichrome-passkey-signin
+Default (Disabled)
+Enabled
+Enabled Autofill flow
+Enabled Banner flow
+Disabled
+Three Button Password Save Dialog
+Provides a 'not now' button alongside the 'never' button on the save password dialog.
+–
+Mac, Windows, Linux, ChromeOS
+#
+three-button-password-save-dialog
+Default (Enabled)
+Enabled
+Disabled
+Password Save/Update Dropdown Menu Experiment
+Enables an experimental dropdown menu for password save and update prompts.
+–
+Mac, Windows, Linux, ChromeOS
+#
+password-save-update-dropdown-menu-experiment
+Default (Disabled)
+Enabled
+Disabled
+Throttle repeated no-damage frames
+Throttle main thread updates after we get many frames in a row with no updates.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+throttle-repeated-no-damage-frames
+Default (Disabled)
+Enabled
+Disabled
+Client Side Detection Server Model for Scam Detection on Desktop
+Enables server model for scam detection on Desktop.
+–
+Mac, Windows, Linux, ChromeOS
+#
+client-side-detection-server-model-for-scam-detection-desktop
+Default (Disabled)
+Enabled
+Disabled
+Automatically detach USB kernel drivers
+Automatically detach kernel drivers when a USB interface is busy.
+–
+Linux, Android
+#
+automatic-usb-detach
+Default (Disabled)
+Enabled
+Disabled
+Mark all credential as leaked
+Will pop up the leaked check dialog on every password form submission. This should be used in combination with #improved-password-change-service to better test the improved password change service
+–
+Mac, Windows, Linux, ChromeOS
+#
+mark-all-credentials-as-leaked
+Default (Disabled)
+Enabled
+Disabled
+Default Browser Framework
+Enables the default browser framework.
+–
+Mac, Windows, Linux, ChromeOS
+#
+default-browser-framework
+Default (Enabled)
+Enabled
+Disabled
+Default Browser Setter Selection
+Enables selecting a default browser setter (e.g. shell integration, visual guide).
+–
+Mac, Windows, Linux, ChromeOS
+#
+default-browser-setter-selection
+Default (Disabled)
+Enabled
+Enabled with Shell Integration
+Enabled with Visual Guide
+Disabled
+Align PDF default print settings with HTML
+Align the default print settings for PDFs with those for HTML, including scaling and centering.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+align-pdf-default-print-settings-with-html
+Default (Disabled)
+Enabled
+Disabled
+Make scrollbar follow theme
+If enabled makes the root scrollbar follow the browser's theme color.
+–
+Windows, Linux
+#
+root-scrollbar-follows-browser-theme
+Default (Disabled)
+Enabled
+Disabled
+Local Network Access Checks
+Enables Local Network Access checks. See: https://chromestatus.com/feature/5152728072060928
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+local-network-access-check
+Default (Enabled)
+Enabled
+Enabled (Blocking)
+Disabled
+Local Network Access Checks for WebRTC
+Enable Local Network Access checks for WebRTC. Requires the #local-network-access-check flag to also be enabled See: https://chromestatus.com/feature/5065884686876672
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+local-network-access-check-webrtc
+Default (Disabled)
+Enabled
+Disabled
+Local Network Access Checks for WebSockets
+Enable Local Network Access checks for WebSockets. Requires the #local-network-access-check flag to also be enabled See: https://chromestatus.com/feature/5197681148428288
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+local-network-access-check-websockets
+Default (Enabled)
+Enabled
+Disabled
+Local Network Access Checks for WebTransport
+Enable Local Network Access checks for WebTransport. Requires the #local-network-access-check flag to also be enabled See: https://chromestatus.com/feature/5126430912544768
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+local-network-access-check-webtransport
+Default (Enabled)
+Enabled
+Disabled
+Tab Group Home
+Home surface for a tab group.
+–
+Mac, Windows, Linux, ChromeOS
+#
+tab-group-home
+Default (Disabled)
+Enabled
+Disabled
+Change scrolling scheduling to reduce checkerboarding
+If enabled, scrolling that would generate blank frames will now prioritize the new content over scrolling with the intention of decreasing the amount of checkerboarded frames.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+new-content-for-checkerboarded-scrolls
+Default (Enabled)
+Enabled
+Disabled
+Disable the Autofill strike system
+When enabled, the Autofill strike system will not block a feature from being offered.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+disable-autofill-strike-system
+Default (Disabled)
+Enabled
+Disabled
+Web App Install Element
+Enables the <install> HTML element which allows web apps to be installed declaratively.
+–
+Mac, Windows, Linux, ChromeOS
+#
+web-app-install-element
+Default (Enabled)
+Enabled
+Disabled
+Web App Installation API
+Enables the Web App Installation API which allows web apps to be installed programmatically using navigator.install().
+–
+Mac, Windows, Linux, ChromeOS
+#
+web-app-installation-api
+Default (Enabled)
+Enabled
+Disabled
+Extensibility API support for deep-links within DevTools
+Extends console.timestamp to support adding deep-links into the DevTools Performance Panel, which (when clicked) call into a DevTools extension
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-devtools-deep-link-via-extensibility-api
+Default (Disabled)
+Enabled
+Disabled
+Cross-Device Sign-in From Desktop
+Enables entry points to sign in on a mobile phone using provided QR code.
+–
+Mac, Windows, Linux
+#
+cross-device-signin-from-desktop
+Default (Disabled)
+Enabled
+Enabled Default URL (https://www.google.com/chrome/go-mobile?entry_point_id=1&email=$1)
+Disabled
+Webium
+Webium Prototype Browser.
+–
+Mac, Windows, Linux, ChromeOS
+#
+webium
+Default
+Enabled
+Disabled
+Default search engine prewarm
+Performance optimization to prewarm the default search engine used in the Omnibox
+–
+Mac, Windows, Linux, ChromeOS
+#
+default-search-engine-prewarm
+Default (Enabled)
+Enabled
+Disabled
+Apply clientside model predictions for password forms.
+Enable using clientside model predictions to fill password forms.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+apply-clientside-model-predictions-for-password-types
+Default (Disabled)
+Enabled
+Disabled
+HTML-in-Canvas
+Enables the Canvas 2D drawElement API and the WebGL texElement2D API for drawing HTML content into a canvas. See: https://github.com/WICG/html-in-canvas
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+canvas-draw-element
+Default (Disabled)
+Enabled
+Disabled
+Lens overlay force empty CSB query
+Forces Lens overlay to issue an empty CSB query on invocation.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-lens-overlay-force-empty-csb-query
+Default (Disabled)
+Enabled
+Disabled
+Browsing History Grouping Improvements
+Enables improvements to grouping of similar browsing history on the history page.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+browsing-history-similar-visits-grouping
+Default (Enabled)
+Enabled
+Disabled
+Force iOS Promo Type
+Force the iOS promo to be a specific type (QRCode or Reminder) for testing purposes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+mobile-promo-on-desktop-force-promo-type
+Default (Disabled)
+Enabled
+Enabled QRCode
+Enabled Reminder
+Disabled
+Mobile Promo On Desktop - QRCode
+When enabled, shows a mobile promo with a QR code on desktop for eligible users.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+mobile-promo-on-desktop-with-qr-code
+Default (Disabled)
+Enabled
+Enabled - ESB
+Enabled - PW Autofill
+Disabled
+Mobile Promo On Desktop - Reminder
+When enabled, shows a mobile promo with a reminder flow on desktop for eligible users.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+mobile-promo-on-desktop-with-reminder
+Default (Disabled)
+Enabled
+Enabled - ESB
+Enabled - ESB with push notification
+Enabled - PW Autofill
+Enabled - PW Autofill with push notification
+Disabled
+Enable SecurityInfo in WebRequest API for ControlledFrame
+Enables SecurityInfo in WebRequest API for ControlledFrames, allowing listeners to retrieve certificate details of web requests.
+–
+Mac, Windows, Linux, ChromeOS
+#
+controlled-frame-web-request-security-info
+Default (Enabled)
+Enabled
+Disabled
+Source-Specific Multicast in Direct Sockets API
+Enables Source-Specific Multicast support in Direct Sockets API. See https://github.com/WICG/direct-sockets/blob/main/docs/multicast-explainer.md for details.
+–
+Mac, Windows, Linux, ChromeOS
+#
+source-specific-multicast-in-direct-sockets
+Default (Disabled)
+Enabled
+Disabled
+Enable Cross-Device Pref Tracker
+Enables the tracking and sharing of select non-syncing preference values across a user's signed-in devices.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-cross-device-pref-tracker
+Default (Disabled)
+Enabled
+Disabled
+Cross-Device Theme Tracker
+Enables tracking and querying theme configurations across devices to facilitate theme imports and badge indicators.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-cross-device-theme-tracker
+Default (Disabled)
+Enabled
+Disabled
+Verify QWACs
+Enables verification of qualified certificates for website authentication as described in ETSI TS 119 411-5 V2.1.1 (2025-02).
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+verify-qwacs
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks
+Enable the contextual tasks feature.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Ephemeral Branded Entry Point
+Enables the ephemeral branded entry point for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-ephemeral-branded-entry-point
+Default (Disabled)
+Enabled
+Enabled Enabled with branded entry point
+Enabled Enabled with right dock button
+Enabled Enabled with circular button next to battery saver
+Disabled
+Contextual Tasks Updated Entry Points
+Enables updated entry points for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS
+#
+contextual-tasks-updated-entry-points
+Default (Disabled)
+Enabled
+Enabled with side panel routing
+Enabled with visual selection only
+Enabled with omnibox routing
+Enabled with submenu
+Disabled
+Contextual Tasks Ephemeral Pinning Visible When Permanently Pinned
+Keeps the ephemeral contextual tasks button visible even when the permanent button is pinned in the toolbar.
+–
+Mac, Windows, Linux, ChromeOS
+#
+contextual-tasks-ephemeral-pinning-visible-when-permanently-pinned
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Ephemeral Button Context Menu
+Enables a context menu on the ephemeral contextual tasks toolbar button to remove it from the toolbar.
+–
+Mac, Windows, Linux, ChromeOS
+#
+contextual-tasks-ephemeral-button-context-menu
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Private API No Animation
+Disable animation when opening Contextual Tasks side panel from the private API.
+–
+Mac, Windows, Linux, ChromeOS
+#
+contextual-tasks-private-api-no-animation
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Side Panel
+Enable the contextual tasks side panel infrastructure without enabling full Contextual Tasks capabilities.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-side-panel
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Rearchitecture
+Enables composebox embedded in AIM main frame, new auth, and new side panel and ghost loader for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-rearchitecture
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Side Panel Rearchitecture
+Enables the side panel rearchitecture for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-side-panel-rearchitecture
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Clobber Active Tab
+Enables clicking links in the contextual tasks side panel to clobber the active tab instead of opening in a new tab.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-clobber-active-tab
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Bypass Dismissed Cap
+Debugging flag that bypasses the dismissal count limit for contextual tasks tooltips, allowing them to be shown even after the user has dismissed them.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-bypass-dismissed-cap
+Default (Disabled)
+Enabled
+Disabled
+Omnibox debug logs
+Enables logging that can be read from an internals page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+omnibox-debug-logs
+Default (Disabled)
+Enabled
+Disabled
+Omnibox Cross-Device Tab Zero Suggest
+Enables showing cross-device tabs in the omnibox zero-state.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-cross-device-tab-zero-suggest
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Context
+Enables relevant context determination for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-context
+Default (Disabled)
+Enabled
+Enabled - With Smart Tab Sharing
+Enabled - Smart Tab Sharing: Toggle Off After Submit
+Disabled
+Contextual Tasks Context Multi-Turn Tab Relevance
+Enables multi-turn tab relevance model for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-context-multi-turn-tab-relevance
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Suggestions Enabled
+Enables suggestions for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-suggestions-enabled
+Default (Enabled)
+Enabled
+Disabled
+Contextual Tasks Pin Button In Toolbar
+Enables the pin button in the toolbar for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-contextual-tasks-pin-button-in-toolbar
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Enable Spatial Model Toolbar Layout
+Enables the spatial model toolbar layout for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-enable-spatial-model-toolbar-layout
+Default (Disabled)
+Enabled
+Enabled with new thread button in overflow menu
+Enabled with new thread button NOT in overflow menu
+Disabled
+Contextual Tasks Hide Menu On AI Page
+Hides the 3-dot (overflow) menu when viewing an AI page in the side panel. The menu is still shown for lens flows.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-hide-menu-on-ai-page
+Default (Enabled)
+Enabled
+Disabled
+Contextual Tasks Search Query
+Enables forwarding the search query parameter 'q' in contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-search-query
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Context Library
+Enables integration with the server side context library.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-context-library
+Default (Enabled)
+Enabled
+Disabled
+Contextual Tasks Back Button Expands Side Panel
+Enables expanding the side panel on back navigations.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-back-button-expands-side-panel
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Close Tab Expands Side Panel
+Enables expanding the contextual tasks side panel on close tab actions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-close-tab-expands-side-panel
+Default (Disabled)
+Enabled
+Disabled
+Contextual Tasks Cookie Prefetch
+Enables prefetching of cookies for contextual tasks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+contextual-tasks-cookie-prefetch
+Default (Disabled)
+Enabled
+Disabled
+Passkey Unlock Error UI
+Enables showing the passkey unlock error UI to passkey users in case when their access to passkeys is “locked” and when they have an available user verification mechanism (either a system UV or a GPM PIN). This flag requires the flag `PasskeyUnlockManager` to be active.
+–
+Mac, Windows, Linux, ChromeOS
+#
+passkey-unlock-error-ui
+Default (Disabled)
+Enabled
+Disabled
+Mdm error handling for dasher accounts
+Enables the mdm error handling feature for dasher accounts
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+mdm-errors-for-dasher-accounts-handling
+Default (Disabled)
+Enabled
+Disabled
+Enable CTA experiment for sign-in level up
+As part of the Sign In Level Up experiment, changes the decline sign in CTA string in profile creation entry points
+–
+Mac, Windows, Linux
+#
+profile-creation-decline-signin-cta-experiment
+Default (Enabled)
+Enabled
+Disabled
+Search Settings Update
+Enables refactoring of the search settings pages in chrome://settings/search
+–
+Mac, Windows, Linux, ChromeOS
+#
+search-settings-update
+Default (Disabled)
+Enabled
+Disabled
+Organizer Panel
+Enables the Organizer Panel.
+–
+Mac, Windows, Linux, ChromeOS
+#
+organizer-panel
+Default (Disabled)
+Enabled
+Disabled
+Enable PWA install dialog pinning option
+Enables the option to pin PWA to taskbar in the PWA install dialog.
+–
+Mac, Windows, Linux, ChromeOS
+#
+web-app-install-dialog-win-pin
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Experimental Webpage Distilation
+Enables the experimental text webpage distillation using readability.js method for reading mode.
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-with-readability-enabled
+Default (Enabled)
+Enabled
+Disabled
+Reading Mode Omnibox Chip
+Enables the omnibox chip entry point for Reading mode
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-omnibox-chip
+Default (Disabled)
+Enabled
+Disabled
+Lens overlay non-blocking privacy notice for image search
+Enables non-blocking privacy notice in the Lens overlay when invoked from the image context menu.
+–
+Mac, Windows, Linux, ChromeOS
+#
+lens-overlay-non-blocking-privacy-notice-for-image-search
+Default (Disabled)
+Enabled
+Disabled
+Migrate syncing user to signed in state
+When enabled, a syncing user is migrated to the signed in non-syncing state on the next browser startup.
+–
+Mac, Windows, Linux
+#
+migrate-syncing-user-to-signed-in
+Default (Disabled)
+Enabled
+Disabled
+Undo the migration of syncing users to signed-in state
+When enabled, reverts the migration of syncing users who were previously migrated to the signed-in, non-syncing state.
+–
+Mac, Windows, Linux
+#
+undo-migration-of-syncing-user-to-signed-in
+Default (Disabled)
+Enabled
+Disabled
+DOM Storage SQLite Backend
+Uses a SQLite-powered backing store for local and session storage. No data is migrated from existing backing stores, including LevelDB stores or SQLite stores with older schemas; use at your own peril.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+dom-storage-sqlite
+Default (Disabled)
+Enabled
+Disabled
+IDB SQLite Backing Store
+Uses a SQLite-powered backing store for IndexedDB. No data is migrated from existing backing stores, including LevelDB stores or SQLite stores with older schemas; use at your own peril.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+idb-sqlite-backing-store
+Default (Disabled)
+Enabled
+Disabled
+Enable Chrome Web Store Promotion Banner
+Enables showing the promotion banner on chromewebstore page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+cws-promotion-banner-flag
+Default (Disabled)
+Enabled
+Disabled
+Autofill AI always show Private AI notice
+Forces the Autofill AI Private AI notice suggestion to be shown for testing, skipping cool-off timers and impression count checks.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-always-show-private-ai-notice
+Default (Disabled)
+Enabled
+Disabled
+Autofill AI dedupe entities
+Enables periodic deduplication of Autofill AI entities.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-dedupe-entities
+Default (Enabled)
+Enabled
+Disabled
+Autofill AI no filling icons experiment
+If enabled, Autofill AI filling suggestions do not have an icon.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-no-filling-icons-experiment
+Default (Disabled)
+Enabled
+Disabled
+Autofill AI re-authentication required
+Requires re-authentication when filling or viewing sensitive fields with Autofill AI.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-reauth-required
+Default (Enabled)
+Enabled
+Disabled
+Autofill AI server model
+Allows the client to trigger the server model for Autofill AI type predictions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-server-model
+Default (Disabled)
+Enabled
+Disabled
+IPH Autofill AI Valuables
+Enables the In-Product Help for Autofill AI valuables.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-valuables-iph
+Default (Enabled)
+Enabled
+Disabled
+Autofill AI Google Wallet flight reservations
+Enables Autofill AI support for flight reservation entities from Google Wallet.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-wallet-flight-reservation
+Default (Enabled)
+Enabled
+Disabled
+Autofill AI Google Wallet private passes
+Enables Autofill AI support for private passes from Google Wallet.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-wallet-private-passes
+Default (Enabled*)
+Enabled
+Disabled
+Autofill AI Google Wallet private passes deep link
+Enables Autofill AI support for deep linking to private passes from Google Wallet.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-wallet-private-passes-deep-link
+Default (Enabled)
+Enabled
+Disabled
+Autofill AI Google Wallet vehicle registration
+Enables Autofill AI support for vehicle registration entities from Google Wallet.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-wallet-vehicle-registration
+Default (Enabled)
+Enabled
+Disabled
+Autofill AI with data schema
+Enables the second iteration of Autofill AI, which uses a more advanced data schema.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-with-data-schema
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Line Focus
+Enables the experimental line focus mode for Reading mode.
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-line-focus
+Default (Enabled)
+Enabled
+Disabled
+Verify MTCs
+Enables verification of Merkle Tree Certificates as described in https://datatracker.ietf.org/doc/draft-davidben-tls-merkle-tree-certs/. Requires #tls-trust-anchor-ids.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+verify-mtcs
+Default (Disabled)
+Enabled
+Disabled
+Saas Usage Reporting
+Enable reporting of SaaS usage. This feature only takes effect if a related enterprise policy is also configured by an administrator.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+saas-usage-reporting
+Default (Enabled)
+Enabled
+Disabled
+Enable Pay Now Pay Later tabs UI for payments autofill on Chrome
+When enabled, Chrome will use the Pay Now Pay Later tabs UI for payments autofill when buy now pay later options are available for the merchant webpage.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-pay-now-pay-later-tabs
+Default (Disabled)
+Enabled
+Disabled
+Enable Ambient sign-in for WebAuthn get requests
+Enables ambient sign-in for passkeys and passwords from a navigator.credentials.get() request. This is similar to conditional UI with the main difference being it does not use autofill UI.
+–
+Mac, Windows, Linux, ChromeOS
+#
+web-authentication-ambient-signin
+Default (Disabled)
+Enabled
+Disabled
+Enable protocol monitor in DevTools
+Enables the protocol monitor panel, which displays the Chrome DevTools Protocol (CDP) traffic between DevTools and the browser.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-protocol-monitor
+Default (Disabled)
+Enabled
+Disabled
+Credential Management Unified UI
+Enables the Unified UI for the credential management password APIs.
+–
+Mac, Windows, Linux, ChromeOS
+#
+credential-management-unified-ui
+Default (Disabled)
+Enabled
+Disabled
+WebMCP for testing
+Enables the WebMCP API.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-webmcp-testing
+Default (Enabled)
+Enabled
+Disabled
+A11y Announcements recording in DevTools
+Enables the ARIA-Live and JavaScript announcements recording subpane in DevTools.
+–
+Mac, Windows, Linux, ChromeOS
+#
+devtools-aria-live-recording
+Default (Disabled)
+Enabled
+Disabled
+Preserve HTTP message bodies across navigations for DevTools
+Enables a durable message storing mechanism, which allows preserving HTTP message bodies for debugging.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-enable-durable-messages
+Default (Enabled)
+Enabled
+Disabled
+Mobile safe area emulation in DevTools
+Enables mobile safe area emulation in DevTools.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-mobile-safe-area-emulation
+Default (Disabled)
+Enabled
+Disabled
+Network backend linking in DevTools
+Enables backend linking for network requests in DevTools.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-network-backend-linking
+Default (Disabled)
+Enabled
+Disabled
+Unthrottle async touch moves
+When enabled, touch move events to javascript handlers are unthrottled if they are sent as async to Renderer.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+unthrottle-async-touch-moves
+Default (Enabled)
+Enabled
+Enabled unthrottled when GSU unconsumed
+Enabled unthrottled always
+Disabled
+Mobile Promo On Desktop - QR Code (Wave 1)
+When enabled, shows a mobile promo with a QR code on desktop for eligible users. This version highlights features not included in the existing Mobile promos.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+mobile-promo-on-desktop-with-qr-code-wave-1
+Default (Disabled)
+Enabled
+Enabled - Tab Groups
+Enabled - Price Tracking
+Enabled - Lens Promo
+Disabled
+Mobile Promo On Desktop - Reminder (Wave 1)
+When enabled, shows a mobile promo with a reminder flow on desktop for eligible users. This version highlights features not included in the existing mobile promos.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+mobile-promo-on-desktop-with-reminder-wave-1
+Default (Disabled)
+Enabled
+Enabled - Tab Groups
+Enabled - Tab Groups with push notification
+Enabled - Price Tracking
+Enabled - Price Tracking with push notification
+Enabled - Lens Promo
+Enabled - Lens Promo with push notification
+Disabled
+Enable Omnibox Autofill chip for payments
+When enabled, an Autofill payments omnibox chip will appear for relevant payment checkout forms.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-enable-omnibox-autofill
+Default (Disabled)
+Enabled
+Disabled
+Force Global Privacy Control signal
+Enables Global Privacy Control (GPC) signal. Sends Sec-GPC=1 header with requests to indicate privacy preferences to websites.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-global-privacy-control
+Default (Disabled)
+Enabled
+Disabled
+Further update Google Pay and Google Wallet branding where applicable
+When enabled, further brings certain strings and images referencing Google Pay and Google Wallet into consistency with branding requirements.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-wallet-branding-v2
+Default (Disabled)
+Enabled
+Disabled
+Defer OS Clipboard Read Call To GetType
+Defers Async Clipboard Read API data retrieval from the OS until ClipboardItem.getType() is called, instead of eagerly fetching all formats at read() time.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+defer-os-clipboard-read-call-to-get-type
+Default (Enabled)
+Enabled
+Disabled
+Import and export flags
+Enables importing and exporting flags from chrome://flags.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+import-export-flags
+Default (Disabled)
+Enabled
+Disabled
+Bookmarks Encryption
+Enable encryption for bookmarks
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+bookmarks-encryption
+Default (Enabled)
+Enabled
+Enabled Stage1
+Enabled Stage2
+Enabled Stage3
+Disabled
+Session Encryption
+Enable encryption for sessions
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+session-encryption
+Default (Enabled)
+Enabled
+Enabled Stage1
+Enabled Stage2
+Enabled Stage3
+Disabled
+Require a week between offers to save credit cards
+When enabled, users should not see offers to save the same credit card twice in a week, as the strike database enforces a 7-day delay between strikes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-upstream-enforce-strike-delay
+Default (Disabled)
+Enabled
+Enabled 1 day
+Enabled 3 days
+Enabled 7 days
+Disabled
+UserMediaElement
+Enables the <usermedia> element, allowing sites to embed a camera/microphone permission request directly in the page.
+–
+Mac, Windows, Linux, Android
+#
+user-media-element
+Default (Disabled)
+Enabled
+Disabled
+UserMediaElementLegacy
+Enables legacy compatibility paths for <usermedia> element.
+–
+Mac, Windows, Linux, Android
+#
+user-media-element-legacy
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Select Text with Readability
+Enables the select text feature for readability distillation
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-readability-select-text
+Default (Enabled)
+Enabled
+Disabled
+Energy Effect
+Enables the Energy Effect for the Realbox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+energy-effect
+Default (Enabled)
+Enabled
+Enabled Original Energy Effect
+Enabled Energy Effect with Darker Shadow
+Enabled Pre-Energy-Effect with Energy-Effect Border
+Enabled Energy Effect with Fusebox Shadow
+Disabled
+Energy Effect Animation
+Enables animations for the Energy Effect for the Realbox.
+–
+Mac, Windows, Linux, ChromeOS
+#
+energy-effect-animation
+Default (Enabled)
+Enabled
+Disabled
+Ask-Before-HTTP in Bundled Security Settings
+Includes Ask-Before-HTTP (HTTPS-First Mode) in the Enhanced security bundle.
+–
+Mac, Windows, Linux, ChromeOS
+#
+bundled-security-settings-ask-before-http
+Default (Disabled)
+Enabled
+Disabled
+Enable travel category and merchant benefits from Curinos
+When enabled, travel category and merchant benefits sourced from Curinos will be shown in Autofill.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-travel-category-and-merchant-benefits-from-curinos
+Default (Disabled)
+Enabled
+Disabled
+Enable Dynamic Route Fetching
+Enables fetching proxy configurations and routing rules dynamically from Provisioning Domains.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-dynamic-route-fetching
+Default (Disabled)
+Enabled
+Disabled
+Enterprise Proxy Error Handling
+Enables handling and displaying dedicated error pages for enterprise proxy authentication challenges and disguised errors.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enterprise-proxy-error-handling
+Default (Disabled)
+Enabled
+Enabled Force 403 (Authorization / Block)
+Enabled Force 500 (Internal Server Error)
+Enabled Force 502 (Bad Gateway)
+Enabled Force 503 (Service Unavailable)
+Enabled Force 504 (Gateway Timeout)
+Enabled Force Unsupported HTTP Code (429)
+Enabled Force Sign-in Required (Authentication)
+Disabled
+Reject Payment Request in small windows
+Reject Payment Request and Payment Handler dialogs if the browser window is too small to contain them.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+payment-request-reject-too-small-windows
+Default (Disabled)
+Enabled
+Disabled
+Enable the In Stock Notification Manager
+Enables detecting, showing, and subscribing to back-in-stock notifications on eligible product pages.
+–
+Mac, Windows, Linux, ChromeOS
+#
+in-stock-notification
+Default (Disabled)
+Enabled
+Disabled
+Cancel file uploads on content analysis
+Allows users to cancel file uploads while content analysis is in progress.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-cancel-upload-on-content-analysis
+Default (Disabled)
+Enabled
+Disabled
+Rust-based ChildProcessSecurityPolicy
+Enables the experimental Rust implementation of ChildProcessSecurityPolicy. Provides options to run just the Rust implementation or Rust and C++ implementations side-by-side for validation. The default mode when enabled is Rust-only. Portions of ChildProcessSecurityPolicy that haven't been implemented in Rust yet will fall back to their C++ implementations. This can also be configured to control whether the Rust implementation manages per-process security state.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+child-process-security-policy-rust
+Default
+Rust only
+Rust and C++
+Rust only (with ProcessState)
+Rust and C++ (with ProcessState)
+Disabled
+Suspicious Site Warnings
+Enables warnings on sites that Safe Browsing deem to be suspicious.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+suspicious-site-warnings
+Default (Disabled)
+Enabled
+Disabled
+Enable gradient-style GPay and Wallet logos
+When enabled, gradient-style GPay and Wallet branding logos will be used.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-gradient-google-logos
+Default (Disabled)
+Enabled
+Disabled
+Canvas Accessibility
+Enables canvas accessibility and allows selecting the algorithm to add text for inaccessible canvas content.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+canvas-accessibility
+Default (Disabled)
+Enabled
+Enabled Basic (Rendered Text)
+Enabled Advanced (Rendered Text + OCR)
+Disabled
+Collect accessibility heuristic result in Canvas UKM
+Allows collecting canvas accessibility heuristic results in the Accessibility.Canvas UKM event.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+collect-accessibility-heuristic-in-canvas-ukm
+Default (Disabled)
+Enabled
+Disabled
+Centralized InfoBar Framework
+Enables the centralized desktop infobars framework.
+–
+Mac, Windows, Linux, ChromeOS
+#
+centralized-infobar-framework
+Default (Disabled)
+Enabled
+Enabled Enable all
+Disabled
+Autofill AI Google Wallet Pass Branding Updates
+When enabled, brings Autofill AI strings and images referencing passes in Google Wallet into consistency with 2026 branding requirements.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ai-wallet-pass-branding-2026
+Default (Disabled)
+Enabled
+Enabled Variant 1 (Securely + Wallet)
+Enabled Variant 2 (Securely only)
+Disabled
+Enable AI-based card recommendations on Autofill
+When enabled, AI-based card recommendations will be offered on Autofill when at least two credit card suggestions are shown.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-enable-ai-card-recommendation
+Default (Disabled)
+Enabled
+Disabled
+InfoBar inline links
+Enables inline links in InfoBars when supported.
+–
+Mac, Windows, Linux, ChromeOS
+#
+infobar-inline-links
+Default (Enabled)
+Enabled
+Disabled
+Enable BNPL Affirm Internationalization
+When enabled, users will have the option to pay with BNPL Affirm in international markets.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-bnpl-affirm-internationalization
+Default (Disabled)
+Enabled
+Disabled
+Enable BNPL Klarna Internationalization
+When enabled, users will have the option to pay with BNPL Klarna in international markets.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-bnpl-klarna-internationalization
+Default (Disabled)
+Enabled
+Disabled
+Enable the Plus Button in DevTools
+Shows a Plus Button in main DevTools panel/drawer tabbed locations, replacing the "More tools" overflow menu.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-plus-button
+Default (Disabled)
+Enabled
+Disabled
+Prepopulated Engines Shadow Variants
+Enables shadow variants for prepopulated engines resolution, allowing alternative engines to be resolved in specific regions.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+prepopulated-engines-shadow-variants
+Default (Disabled)
+Enabled
+Disabled
+WebUI Toolbar
+Use WebUI to render the toolbar.
+–
+Mac, Windows, Linux
+#
+webui-toolbar
+Default
+Enabled
+Disabled
+Enable resurrecting churned payments users
+When enabled, users that have previously turned off payments autofill will be prompted to turn it back on in instances where they can benefit from it.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-resurrecting-payments-users
+Default (Disabled)
+Enabled
+Enabled Security
+Enabled Convenience
+Disabled
+HTTP Headers Injection
+Enables injection of custom HTTP headers in network requests.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-http-headers-injection
+Default (Enabled)
+Enabled
+Disabled
+Startup Enterprise Signals Disclaimer
+Enables the Startup Enterprise Signals Disclaimer. The disclaimer will be shown to managed users missing the device signals permission on chrome startup.
+–
+Mac, Windows, Linux
+#
+device-signals-backfill-disclaimer
+Default (Disabled)
+Enabled
+Enabled with clearing permission on startup
+Disabled
+Feedback Disabled Dialog
+Enables the dialog shown when user feedback is disabled.
+–
+Mac, Windows, Linux
+#
+feedback-disabled-dialog
+Default (Disabled)
+Enabled
+Disabled
+Dictation
+Enables the Dictation feature.
+–
+Mac, Windows, Linux, ChromeOS
+#
+dictation
+Default (Disabled)
+Enabled
+Enabled with close UI after output
+Enabled with evaluation mode
+Enabled with shown partials
+Enabled with Web Speech API backend
+Enabled with Web Speech API backend and partials
+Enabled with smoketest connector tag
+Disabled
+Enable Account Preview Data
+Enables fetching and storing account preview data for signed-in accounts.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-account-preview-data
+Default (Enabled)
+Enabled
+Disabled
+Enable Account Preview Entity Previews
+Enables fetching and storing entity preview data for signed-in accounts.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-account-preview-entity-previews
+Default (Enabled)
+Enabled
+Disabled
+Enable Account Preview Preferred Account
+Controls whether computing and storing the preferred account is enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-account-preview-preferred-account
+Default (Disabled)
+Enabled
+Disabled
+Enable Account Preview Preferred Account Followup
+Controls whether followup features for preferred account preview (promos, and updated strings) are enabled.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+enable-account-preview-preferred-account-followup
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Improved UI
+Enables menu grouping for Reading Mode and the listen to this page entry point.
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-improved-ui
+Default (Disabled)
+Enabled
+Disabled
+Camera and Microphone elements
+Enables the <camera> and <microphone> elements, allowing sites to embed camera and microphone permission request controls directly in the page.
+–
+Mac, Windows, Linux, Android
+#
+camera-and-microphone-elements
+Default (Enabled)
+Enabled
+Disabled
+Notebook Home URL
+Overrides the default URL for the Notebook Home WebUI.
+–
+Mac, Windows, Linux, ChromeOS
+#
+notebook-home-url
+Disabled
+Enabled
+Export Platform Policies as JSON
+Enables a button on chrome://policy to export platform-source policies in a custom flat JSON configuration schema.
+–
+Mac, Windows, Linux
+#
+export-platform-policies-json
+Default (Disabled)
+Enabled
+Disabled
+Payment Handler Camera Access
+Enables camera access in web-based Payment Handlers on desktop.
+–
+Mac, Windows, Linux, ChromeOS
+#
+payment-handler-camera-access
+Default (Disabled)
+Enabled
+Disabled
+Payment Handler Camera Access UX
+Enables camera access with integrated permission prompt and capture indicator in web-based Payment Handlers on desktop.
+–
+Mac, Windows, Linux, ChromeOS
+#
+payment-handler-camera-access-ux
+Default (Disabled)
+Enabled
+Disabled
+Instrumentation breakpoints
+Enables instrumentation breakpoints in DevTools.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-instrumentation-breakpoints
+Default (Disabled)
+Enabled
+Disabled
+Source map scopes in the Sources panel
+Enables source map scopes in the DevTools Sources panel.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+devtools-source-map-scopes-in-sources-panel
+Default (Disabled)
+Enabled
+Disabled
+NativeViewHost manages layers
+Enables NativeViewHost to control the layers of the native view.
+–
+Mac, Windows, Linux, ChromeOS
+#
+native-view-host-manages-layers
+Default (Enabled)
+Enabled
+Disabled
+Enable AI Subscription Avatar Ring
+Enables the AI subscription level decorative ring around the user's avatar.
+–
+Mac, Windows, Linux, Android
+#
+enable-ai-subscription-avatar-ring
+Default (Disabled)
+Enabled
+Disabled
+Force AI Subscription Tier
+Overrides the AI subscription tier for the profile to a specific tier.
+–
+Mac, Windows, Linux, Android
+#
+force-ai-subscription-tier
+Default
+Tier 1
+Tier 2
+Tier 3
+Glic Context Menu Below Search
+Places the Glic (Ask Gemini) context menu entry point below the Search option.
+–
+Mac, Windows, Linux, ChromeOS
+#
+glic-context-menu-below-search
+Default (Disabled)
+Enabled
+Disabled
+Omnibox Direct URL Input Prerendering
+Enables Direct URL Input (DUI) prerendering in the Omnibox.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+omnibox-dui-prerendering
+Default (Enabled)
+Enabled
+Disabled
+Enable Expand IBAN Regex Pattern
+When enabled, IBAN regex pattern matching is expanded to support more formats.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-expand-iban-regex-pattern
+Default (Disabled)
+Enabled
+Disabled
+Ignore payments churned users strikes for testing
+When enabled, ignores the strike database checks for the payments churned users resurrecting bubble feature. For testing purposes.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-ignore-payments-churned-users-strikes-for-testing
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Distiller Stability Updates
+Optimizes how web page content is prepared and processed for Reading Mode.
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-distiller-refactor
+Default (Disabled)
+Enabled
+Disabled
+Reading Mode Read Aloud Experimental Playback UI
+Enables the experimental playback UI for Reading Mode Read Aloud.
+–
+Mac, Windows, Linux, ChromeOS
+#
+read-anything-read-aloud-experimental-playback-ui
+Default (Disabled)
+Enabled
+Disabled
+Password change with Glic
+Triggers password change flow through Glic
+–
+Mac, Windows, Linux, ChromeOS
+#
+password-change-with-glic
+Default (Disabled)
+Enabled
+Disabled
+Critical Actions in History
+Surfaces critical actions, such as password fills and file downloads, performed during user-initiated AI agent browsing sessions alongside page visits on the Chrome History page for transparency and auditing.
+–
+Mac, Windows, Linux, ChromeOS
+#
+critical-action-history
+Default (Disabled)
+Enabled
+Disabled
+Enable Autofill for Wallet Direct Offers
+When enabled, direct offers synced via Google Wallet will be available for autofill into merchant promo code fields during checkout.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-enable-wallet-direct-offers
+Default (Disabled)
+Enabled
+Disabled
+Universal Opt Out Settings
+Enables the Universal Opt Out settings for eligible users.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+universal-opt-out-settings
+Default (Disabled)
+Enabled
+Disabled
+Enable password sharing with remote actors
+Enables remote actors to request passwords from the signed in Google account. When requested, the user will be prompted to select a password and authenticate.
+–
+Mac, Windows, Linux, ChromeOS
+#
+remote-actor-credential-sharing
+Default (Disabled)
+Enabled
+Disabled
+Enable Gmail OTP Pre-launch Metrics
+Enables pre-launch metrics for one-time passwords (OTPs) received in Gmail.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-gmail-otp
+Default (Disabled)
+Enabled
+Disabled
+Add client type and version to request context in Payments calls
+When enabled, calls to Google Payments include the Chrome client type and major version, instead of parsing the user agent.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-add-chrome-user-context-fields
+Default (Enabled)
+Enabled
+Disabled
+Enable Card-on-Device Verification Enforcement for Payments Autofill
+When enabled, server card retrieval will ensure a card is verified via CVC on a device before proceeding with risk-based or biometric authentication.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+autofill-enable-card-on-device-verification-enforcement
+Default (Disabled)
+Enabled
+Disabled
+Enable Desktop QR code detection
+When enabled, QR code detection for facilitated payments will be supported on Desktop.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-desktop-qr-code-detection
+Default (Disabled)
+Enabled
+Disabled
+Translate PDF documents
+Enables PDF translation in Chrome.
+–
+Mac, Windows, Linux, ChromeOS
+#
+enable-translate-pdf
+Default (Disabled)
+Enabled
+Disabled
+Enable Wallet Direct Offers Notification Bubble
+When enabled, an offer notification bubble will be shown for wallet direct offers if any are available for the current merchant page.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-enable-wallet-direct-offers-notification-bubble
+Default (Disabled)
+Enabled
+Disabled
+Browsing History Improved Hostname Suffix Matching
+Improves hostname suffix matching for browsing history, so that example.com matches example.com as well as subdomains like www.example.com.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+browsing-history-improved-hostname-suffix-matching
+Default (Enabled)
+Enabled
+Disabled
+Filter Browsing History By Device
+Enables browser history filtering by device.
+–
+Mac, Windows, Linux, ChromeOS, Android
+#
+browsing-history-filter-by-device
+Default (Disabled)
+Enabled
+Disabled
+Enable Omnibox Autofill chip for Google Pay buttons
+When enabled, a Google Pay omnibox chip will appear when a Google Pay button is detected on the page, and clicking the chip will simulate clicking the Google Pay button.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-enable-omnibox-gpay-button
+Default (Disabled)
+Enabled
+Disabled
+Search Settings With More Prepopulated Engines
+Populates the Search settings page with all prepopulated engines.
+–
+Mac, Windows, Linux, ChromeOS
+#
+search-settings-with-more-engines
+Default (Disabled)
+Enabled
+Disabled
+Enable Autofill Cardholder Name Fix Flow
+When enabled, prompts users to confirm their cardholder name when checking out with a server card that is missing a name, if a name was found.
+–
+Mac, Windows, Linux, ChromeOS
+#
+autofill-enable-cardholder-name-fix-flow
+Default (Disabled)
+Enabled
+Disabled
+Send Tab to Self No Target Device QR Code
+Shows a QR code to download and sign in to Chrome on mobile when no target devices are found in Send Tab to Self.
+–
+Mac, Windows, Linux
+#
+send-tab-to-self-no-target-device-qr-code
+Default (Disabled)
+Enabled
+Disabled
+Copy-Text Journeys
+Enables offering to reopen a search answer in the Contextual Tasks side panel.
+–
+Mac, Windows, Linux, ChromeOS
+#
+copy-text-journeys
+Default (Disabled)
+Enabled
+Disabled
+Your changes will take effect the next time you relaunch Brave.
+Relaunch
+
+TOGGLES
+[]

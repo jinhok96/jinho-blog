@@ -1,0 +1,8 @@
+pg.bring_to_front()
+pg.goto("chrome://settings/contactInfo"); time.sleep(4); pg.bring_to_front(); time.sleep(1); shot("j01_contact_policy")
+print("TOG", [t for t in toggles(pg) if t['visible']])
+t=deep(pg); i=t.find("Contact info | Save and fill"); print("TXT", t[i:i+400])
+pg.goto("chrome://settings/payments"); time.sleep(4); pg.bring_to_front(); time.sleep(1); shot("j02_payments_policy")
+print("TOG2", [t for t in toggles(pg) if t['visible']])
+pg.goto("chrome://policy"); time.sleep(4); pg.bring_to_front(); time.sleep(1); shot("j03_policy_page")
+pg.goto("http://localhost:8765/form.html"); time.sleep(3); pg.click("#name"); time.sleep(2.5); shot("j04_form_policy")

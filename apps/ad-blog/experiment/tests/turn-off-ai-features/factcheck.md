@@ -1,0 +1,67 @@
+# turn-off-ai-features 사실 확인표
+
+- 검증 유형 (가설 H3): **일부** — 허브. 핵심은 Apple·Google·Microsoft 도움말 대조(How we checked). 직접 실행 결과는 상시 글(Firefox·Edge·Chrome 시험)에서 인용 + 2026-10-29 Chrome 156 메뉴 이름 직접 확인
+- 주 검색어 (가설 H6): `turn off ai` — 브리프 주 검색어
+
+## 작성 전 브리프
+
+| 항목 | 내용 |
+| --- | --- |
+| 클러스터·역할 | `ai-settings` **허브** (상시 글 5편 `turn-off-ai-in-chrome`·`check-if-image-is-ai-generated`·`gemini-gems-to-skills`·`turn-off-gemini-in-gmail`·`turn-off-copilot-in-word` 모두 연결, 칼럼 `gemini-connected-apps`·`gemini-free-flash-lite`·`gemini-android-auto-personal-intelligence`·`chrome-http-warning-default`도 연결). 개선 세션 3번(허브 작성) |
+| 주 검색어 | `turn off ai` — `demand_check.py suggest "turn off ai"` (2026-10-23) Google·Bing·YouTube 3곳. Search Console에서 `turn-off-ai-in-chrome`이 `turn off ai` 57위(2026-10-22 분석). 허브는 상위 검색어를 맡음(traffic-playbook 8번). 제목에는 자동완성 하위 검색어의 제품명(Chrome·Gmail·Word)을 넣음 |
+| 하위 검색어 | `turn off ai overview google`·`turn off ai mode` (Google·Bing), `turn off ai in gmail` (Bing·YouTube), `turn off ai on iphone` (YouTube), `turn off ai in windows 11`·`turn off ai copilot` (Bing), `how to turn off ai features in chrome/gmail/google docs` (Google·Bing) |
+| 검색 의도 | 정보형(How-to) 모음. 제품마다 어디서 끄는지·완전히 꺼지는지 |
+| 채널 | 검색형 |
+| 상위 결과 (WebSearch `how to turn off ai`, 2026-10-23) | productlift(SaaS 도움말)·seeclickfix 스팸성 페이지·Honor 블로그(Android 제조사 자사)·Croma(인도 쇼핑몰 블로그)·Consumer Reports(유료 회원 전용). 공통: 제품별 토글 나열. 빠진 것: 완전히 꺼지는지 vs 버튼만 숨기는지 구분, iOS 27에서 Apple Intelligence 전체 스위치가 문서에 없고 기능별로 끈다는 점, Google 검색 AI Overviews는 끌 수 없다는 Google 공식 문구, Labs "AI in Search"를 꺼도 AI Overviews는 남는다는 점 |
+| 차별점 | 제품별 "완전히 끔 / 일부만 / 끌 수 없음" 판정표 (1차 출처 + 우리 상시 글의 Chrome 소스 코드·Microsoft 문서 확인 결과), iOS 27 기능별 스위치 표, 끄는 것과 지우는 것의 차이 |
+| 내부 링크 계획 | 나가는 링크: 상시 글 5편 전부 + 칼럼 4편. 받는 링크: 색인된 같은 클러스터 글 `gemini-gems-to-skills`·`check-if-image-is-ai-generated`에서 각 1문장 + 색인 전 `turn-off-gemini-in-gmail`·`turn-off-copilot-in-word`에서 1문장. `turn-off-ai-in-chrome`은 V3 판단 기간(11-18)이라 판정 후 추가 |
+| 개요 | Quick answer 표 → Is there one switch? → Chrome → Gmail·Docs → Gemini app → Google Search → Word·Microsoft 365 → Windows 11 Copilot → iPhone Apple Intelligence → What turning off doesn't do → Spotting AI images → Which to turn off first |
+| 이미지 | 대표: 기기 세 대 옆 큰 토글 스위치, 하늘색 배경 + 복숭아·라일락, 정면 시점. 본문 그래픽 3장: 제품별 끌 수 있는 범위 표, iPhone iOS 27 기능별 스위치 경로, 제품별 메뉴 경로 |
+
+## 사실 확인
+
+| 주장 | 출처 | 확인 방법 |
+| --- | --- | --- |
+| AI Overviews는 핵심 검색 기능이라 끌 수 없음, 검색 후 Web 필터를 고르면 AI Overviews 없는 텍스트 링크만 | Google Search Help 14901683 "Show only web links in Google Search" | curl HTML 본문 (`source-google-ai-overviews-help.txt`) |
+| Labs의 "AI in Search"를 끄면 실험 기능 참여만 끔 (새 실험 알림·체험) | 같은 문서 "AI in Search features in Labs" | 같음 |
+| AI Mode는 AI Overviews를 확장한 검색 경험 | Google Search Help 16011537 | curl |
+| iOS 27 등 27.0에서 Apple Intelligence가 지원 기기에 자동으로 켜짐(OS 일부) | Apple Support 121115 | curl (`source-apple-get-started-apple-intelligence.txt`) |
+| iPhone 기능별 끄기: Siri AI(Settings > Siri > Turn Off Siri), Siri Classic 전환, Messages 요약, Mail 요약, 알림 요약, 우선 알림 등 | iPhone User Guide iOS 27 "Turn off and restrict access to Apple Intelligence features on iPhone" (iph3fed3f2c3) | curl (`source-apple-iphone-turn-off-apple-intelligence.txt`). 이 문서에 Apple Intelligence 전체 스위치는 없음 |
+| Screen Time > Content & Privacy Restrictions > Siri: Don't Allow Siri / Siri (Classic Version) / Siri AI 기능별 Allow·Block | iPhone User Guide iOS 27 Screen Time (iph3ff83f3b1) | curl (`source-apple-iphone-screen-time-siri.txt`) |
+| 새 Windows 11 PC에 Copilot 앱이 기본 설치, Microsoft Store에서 받는 앱 | Microsoft Support "Access Microsoft 365 Copilot on Windows" | curl (`source-ms-access-copilot-on-windows.txt`) |
+| Copilot 앱(소비자용)은 Settings > Apps > Installed apps에서 ... > Uninstall로 제거 가능 | Microsoft Learn "Manage Copilot app in Windows" | curl (`source-learn-manage-copilot-app-windows.txt`) |
+| Windows 앱 제거 경로 Start > Settings > Apps > Installed apps > More > Uninstall | Microsoft Support uninstall apps | curl (`source-ms-uninstall-apps-windows.txt`) |
+| Chrome·Gmail·Word·Gemini·이미지 판별 요약 | 각 상시 글 (각 글 tests/{slug}/factcheck.md에 1차 출처) | 기존 글 본문과 대조 |
+
+## 확인하지 못한 것
+
+- Meta AI(Instagram·WhatsApp·Facebook): meta.com 도움말은 JS 렌더링, WebFetch로 본 알림 설정 문서에 끄는 방법 없음 → 허브에서 방법을 쓰지 않음 (후속 상시 글 후보)
+- Samsung Galaxy AI: 1차 출처 미확인 → 쓰지 않음
+- Windows 작업 표시줄 Copilot 토글: 공식 문서 미확인 → 쓰지 않음
+- 직접 실행: 이번 허브는 문서 기반. Chrome 156 화면은 `turn-off-gemini-in-gmail` 세션 39 캡처 결과를 상시 글에서 인용
+
+## 2026-10-29 Chrome 메뉴 이름 (세션 64 개선 세션)
+
+세션 63(`chrome-enhanced-autofill-gmail`)에서 Chrome 156 새 프로필의 왼쪽 메뉴가 첫 실행 **AI innovations** → 두 번째 실행 **AI in Chrome**으로 바뀐 것을 보고, 허브가 안내하는 경로를 다시 확인했다.
+
+- 실행: `dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb`를 `dpkg-deb -x`로 풀어 **Google Chrome 156.0.8078.73**(세션 63과 같은 판), Xvfb `:99` 1280×900, 새 프로필(`--user-data-dir`) 10개를 각각 2번 실행, Google 로그인 없음. `menu_check.py`(왼쪽 메뉴 링크 이름·`chrome://settings/ai` 첫 문구·Local State의 variations 키), `ai_page.py`(같은 페이지 문구 전체·캡처). 2026-10-29 03:32~03:40 UTC
+- 결과 (메뉴 `/ai` 항목 이름)
+
+| 프로필 | 1번째 실행 | 2번째 실행 |
+| --- | --- | --- |
+| p1 | AI innovations | **AI in Chrome** |
+| p2 | AI innovations | AI innovations |
+| p3 | AI innovations | AI innovations |
+| p4 | AI innovations | AI innovations |
+| p5 | AI innovations | **AI in Chrome** |
+| p6 | AI innovations | AI innovations |
+| p7 | AI innovations | **AI in Chrome** |
+| p8 | AI innovations | AI innovations |
+| p9 | AI innovations | AI innovations |
+| p10 | AI innovations | AI innovations |
+
+- 첫 실행 10/10 **AI innovations**, 두 번째 실행 3/10 **AI in Chrome**. 10개 프로필 모두 첫 실행 중에 같은 variations seed(`variations_seed_serial_number` 같음, 가져오기 실패 0)를 받았고 `low_entropy_source3`는 프로필마다 다름(1461·106·7964·7037 …) → 서버 실험 설정이 프로필마다 다르게 적용된 것으로 해석 (Google 문서로 확인한 것은 아님 → 글에는 "Two computers on the same Chrome version can show different names"까지만 씀)
+- 두 이름 모두 주소는 `chrome://settings/ai`, 페이지 문구(로그아웃 상태 DOM 전체: Automated Password Change·History search, powered by AI·Help me write·Suggestions, powered by AI·Select text to ask Gemini·Skills in Chrome·Talk to type·Try it on·Google Search AI Mode and connected apps·On-device AI)가 제목만 빼고 같음 (p5 vs p6 `ai_page.py` 출력 대조). 캡처 `screens/chrome-156-menu-ai-in-chrome.webp`·`screens/chrome-156-menu-ai-innovations.webp`(무손실, 관리 브라우저 줄은 컨테이너 정책 파일 때문)
+- 언어 파일 `locales/en-US.pak`(`../chrome-enhanced-autofill-gmail/pak_strings.py`): 리소스 7569 `AI innovations`, 7570 `AI in Chrome` 두 문구가 나란히 있음
+- 반영: 첫 문단·요약 표·"words also differ" 문단·Chrome 절(10개 중 3개 결과 1문장)·How we checked, 그래픽 2장(`charts.py`: 요약 그래픽 Chrome 설명 + Firefox 행 추가, 경로 그래픽 Chrome 상자 "AI innovations or AI in Chrome" + Firefox 행 추가. Firefox 경로는 `turn-off-ai-in-firefox` 세션 62 화면 확인 내용). `updatedAt` 2026-10-29
+- 함께 고친 글: `turn-off-gemini-in-gmail` 118행 경로 괄호에 "on some computers the AI innovations item is named AI in Chrome" (`updatedAt` 그대로). `turn-off-ai-in-chrome`은 검증 기록 V3(11-18 판정) 전이라 손대지 않음 → 판정 뒤 같은 문장 반영

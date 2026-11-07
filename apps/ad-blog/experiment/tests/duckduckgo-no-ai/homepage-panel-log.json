@@ -1,0 +1,32 @@
+{
+  "before": {
+    "askAI": 2,
+    "aiSettingsButton": 3,
+    "headerDuckAiLinks": [
+      "Duck.ai"
+    ],
+    "banner": true
+  },
+  "afterApplySamePage": {
+    "askAI": 0,
+    "aiSettingsButton": 3,
+    "headerDuckAiLinks": [
+      "Duck.ai"
+    ],
+    "banner": false
+  },
+  "cookies": [],
+  "afterReload": {
+    "askAI": 0,
+    "aiSettingsButton": 3,
+    "headerDuckAiLinks": [
+      "Duck.ai"
+    ],
+    "banner": false
+  },
+  "settingsAfter": {
+    "kbg": true,
+    "kbe": "Sometimes",
+    "kbl": "Sometimes"
+  }
+}

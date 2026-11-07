@@ -1,0 +1,1641 @@
+# 가져온 시각: 2026-10-26T21:28:02.938Z
+# 원본: https://support.apple.com/en-us/149230
+About the security content of iOS 27.2 and iPadOS 27.2 - Apple Support
+https://support.apple.com/en-us/149230
+
+Download JSON
+
+About the security content of iOS 27.2 and iPadOS 27.2
+
+This document describes the security content of iOS 27.2 and iPadOS 27.2.
+
+About Apple security updates
+
+For our customers' protection, Apple doesn't disclose, discuss, or confirm security issues until an investigation has occurred and patches or releases are available. Recent releases are listed on the Apple security releases page.
+
+Apple security documents reference vulnerabilities by CVE-ID when possible.
+
+For more information about security, see the Apple Product Security page.
+
+iOS 27.2 and iPadOS 27.2
+
+Released October 26, 2026
+
+Accelerate Framework
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may lead to unexpected app termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-86971: an anonymous researcher
+
+AccessorySetupKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious app may be able to access Bluetooth without user consent
+
+Description: An authentication issue was addressed with improved state management.
+
+CVE-2026-84493: Meta Red Team X - Nik Tsytsarkin
+
+Accounts
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious application may be able to bypass Privacy preferences
+
+Description: A logging issue was addressed with improved data redaction.
+
+CVE-2026-113898: Bhaswanth Chigurupati
+
+Accounts
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: This issue was addressed with additional entitlement checks.
+
+CVE-2026-112446: LiangWei, Sindre Sorhus
+
+Accounts
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker with physical access to a trust-paired device may be able to read and write arbitrary files
+
+Description: A path handling issue was addressed with improved validation.
+
+CVE-2026-112612: Johnny Franks (@0xjohnny), Daniel, KennethLi, an anonymous researcher
+
+App Intents
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: This issue was addressed with additional entitlement checks.
+
+CVE-2026-112692: Huy Nguyen (@34306) of Calif.io
+
+App Store
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-113914: Jaebin Sim (simjabin@gmail.com)
+
+App Store
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A remote attacker may be able to break out of the WebContent sandbox
+
+Description: This issue was addressed with improved input validation.
+
+CVE-2026-112690: Claudio Bozzato and Francesco Benvenuto of Cisco Talos
+
+Apple Intelligence
+
+Available for: iPhone 15 Pro and later, iPad Pro 12.9-inch 5th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 5th generation and later, and iPad mini 7th generation
+
+Impact: A remote attacker may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved entitlement checks.
+
+CVE-2026-86987: Richard Hyunho Im (@richeeta) at Route Zero Security
+
+Apple Neural Engine
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112696: Jaeyeong Lee
+
+Apple Neural Engine
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or write kernel memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-84494: Meta Red Team X - Nik Tsytsarkin
+
+AppleAVD
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted video file may lead to unexpected app termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112416: an anonymous researcher, Dohyeon An @PILAB Technology, Inc, Hcamael and 章鱼哥@aipy (aipyaipy.com), Narendra Singh (@_3P1C), Meta Red Team X - Nik Tsytsarkin
+
+AppleAVD
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt process memory
+
+Description: An out-of-bounds write was addressed with improved input validation.
+
+CVE-2026-112415: Hcamael and 章鱼哥@aipy (aipyaipy.com), Rahul Raj
+
+AppleAVD
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted video file may lead to unexpected app termination or corrupt process memory
+
+Description: The issue was addressed with improved memory handling.
+
+CVE-2026-112454: @Licht_jb, Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+Audio
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to unexpected app termination
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112546: lunar815, Surej Sekhar, Piotr Jerzy Duszynski, r3pwnx (@r3pwnx), an anonymous researcher, Lily Cohl (@GenericCoding), Nathaniel Oh (@calysteon)
+
+AVEVideoEncoder
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112705: Marco Schmitt, Andrey Chernykh, Josh Maine of Calif.io
+
+AVEVideoEncoder
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: An out-of-bounds write issue was addressed with improved input validation.
+
+CVE-2026-112689: Franco Belman at Blackwing Intelligence
+
+AVEVideoEncoder
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112470: Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+CVE-2026-112469: Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+CVE-2026-112468: Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+AVEVideoEncoder
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or read kernel memory
+
+Description: An out-of-bounds read was addressed with improved input validation.
+
+CVE-2026-112466: Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+Bluetooth
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in physical proximity may be able to cause a denial-of-service
+
+Description: A null pointer dereference was addressed with improved validation.
+
+CVE-2026-112566: Chris Bailey - Short Circuit
+
+CVE-2026-113906: Chris Bailey - Short Circuit
+
+Calendar
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A permissions issue was addressed with additional restrictions.
+
+CVE-2026-112678: Neon, Niels Hofmans, Mustafa Calap (@ordinal0, dbg.re)
+
+Calendar
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted calendar invitation may lead to memory corruption
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112619: Ivan Fratric of Google Project Zero
+
+CloudKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-112701: N.M.Praveen Nawarathne (@zblockrat)
+
+ColorSync
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may result in disclosure of process memory
+
+Description: The issue was addressed with improved checks.
+
+CVE-2026-86988: Mateusz Jurczyk of Google Project Zero, Meta Red Team X - Nik Tsytsarkin
+
+Compression
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to disclose kernel memory
+
+Description: A memory initialization issue was addressed with improved memory handling.
+
+CVE-2026-113910: Tucker Willenborg
+
+Contacts
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A privacy issue was addressed by removing sensitive data.
+
+CVE-2026-113908: Stuart Wallace
+
+CoreAudio
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted media file may lead to unexpected app termination or corrupt process memory
+
+Description: An out-of-bounds access issue was addressed with improved bounds checking.
+
+CVE-2026-113912: an anonymous researcher, 章鱼哥@aipy (aipyaipy.com), Roman Zabicki, Anna Groza (@pwnlambda) of Calif.io
+
+CoreAudio
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt process memory
+
+Description: A buffer overflow issue was addressed with improved memory handling.
+
+CVE-2026-113907: Meta Red Team X - Nik Tsytsarkin
+
+CoreAudio
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted audio file may lead to memory corruption
+
+Description: A buffer overflow was addressed with improved size validation.
+
+CVE-2026-86972: an anonymous researcher, Meta Product Security
+
+CoreAudio
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: An out-of-bounds write was addressed with improved input validation.
+
+CVE-2026-86969: Meta Red Team X - Nik Tsytsarkin
+
+CoreAudio
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in radio range may be able to cause unexpected system termination
+
+Description: A heap buffer overflow was addressed with improved bounds checking.
+
+CVE-2026-112638: Përparim Mjeku, Altin Gashi, Altin Gashi
+
+CoreGraphics
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted PDF file may lead to memory corruption
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112611: f4&Zhiniang Peng with HUST, Aobo Wang (@M4x_1997), Xiang Chen, Jakob Pammer, Anna Groza (@pwnlambda) of Calif.io, Piotr Jerzy Duszynski, an anonymous researcher
+
+CVE-2026-112610: Meta Red Team X - Nik Tsytsarkin
+
+CoreGraphics
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted font may lead to unexpected app termination or corrupt process memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-113950: Substrate, Stefan Esser (Calif)
+
+CoreMedia
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted video file may lead to unexpected app termination
+
+Description: The issue was addressed with improved memory handling.
+
+CVE-2026-86992: Niels Hofmans
+
+CoreMedia
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A permissions issue was addressed with additional restrictions.
+
+CVE-2026-112706: Adriatik Raci, Rodolphe BRUNETTI (@eisw0lf) of Lupus Nova, Chris Bailey - Short Circuit
+
+CoreMedia
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Parsing a file may lead to an unexpected app termination or arbitrary code execution
+
+Description: A memory corruption issue was addressed with improved memory handling.
+
+CVE-2026-112688: 정우 하 (@0xfa11babe), Chris Bailey - Short Circuit
+
+CoreMedia
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious app may be able to access the camera without user permission
+
+Description: An access issue was addressed with improved access restrictions.
+
+CVE-2026-86990: Mustafa Calap (@ordinal0, dbg.re)
+
+CoreText
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted font may result in the disclosure of process memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112656: Nurihan Kim (HanTul) working with TrendAI Zero Day Initiative
+
+FileProvider
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A race condition was addressed with additional validation.
+
+CVE-2026-113896: R4mbb, Rodolphe BRUNETTI (@eisw0lf) of Lupus Nova
+
+Files
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An access issue was addressed with improved access restrictions.
+
+CVE-2026-112618: Somair Ansar, Abodi Dawoud
+
+FontParser
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted font may result in the disclosure of process memory
+
+Description: An out-of-bounds read was addressed with improved input validation.
+
+CVE-2026-86970: Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+FontParser
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted font may lead to unexpected app termination or corrupt process memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112683: Hcamael and 章鱼哥@aipy (aipyaipy.com)
+
+FontParser
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted font may result in the disclosure of process memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112642: Meta Red Team X - Nik Tsytsarkin
+
+FontParser
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A logging issue was addressed with improved data redaction.
+
+CVE-2026-112432: D4rthL
+
+Heimdal
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in a privileged network position may be able to impersonate a Kerberos KDC
+
+Description: An issue with signature validation was addressed with improved checks.
+
+CVE-2026-112518: Roman Zabicki, Tristan Madani (@TristanInSec) from Talence Security
+
+HFS
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to heap corruption
+
+Description: An out-of-bounds write issue was addressed with improved input validation.
+
+CVE-2026-112456: Jihwan Yoon, Yash Pandya, Parth Raval
+
+HomeKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: This issue was addressed with improved checks.
+
+CVE-2026-86978: Garin R
+
+HomeKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted video file may lead to unexpected system termination
+
+Description: An integer overflow was addressed with improved bounds checking.
+
+CVE-2026-112596: Garin R
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may result in disclosure of process memory
+
+Description: A memory initialization issue was addressed with improved memory handling.
+
+CVE-2026-112571: sh3rlock (김보겸)
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may result in disclosure of process memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112561: Meta Red Team X - Nik Tsytsarkin
+
+CVE-2026-112627: Mateusz Jurczyk of Google Project Zero
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may corrupt process memory
+
+Description: A buffer overflow issue was addressed with improved memory handling.
+
+CVE-2026-112488: Mateusz Jurczyk of Google Project Zero, Nik Tsytsarkin, an anonymous researcher
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may lead to unexpected app termination
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112634: Mateusz Jurczyk of Google Project Zero
+
+CVE-2026-112629: Mateusz Jurczyk of Google Project Zero
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may lead to unexpected app termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112633: Mateusz Jurczyk of Google Project Zero
+
+CVE-2026-112614: PETOWORKS의 Bugeun Choi (@Bugeun), Rahul Raj, Piotr Jerzy Duszynski, Mateusz Jurczyk of Google Project Zero
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may result in disclosure of process memory
+
+Description: An uninitialized memory issue was addressed with improved memory handling.
+
+CVE-2026-112632: Mateusz Jurczyk of Google Project Zero
+
+CVE-2026-112630: Mateusz Jurczyk of Google Project Zero
+
+ImageIO
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may result in memory corruption
+
+Description: An integer underflow was addressed with improved input validation.
+
+CVE-2026-112625: Mateusz Jurczyk of Google Project Zero
+
+IOHIDFamily
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker may be able to cause unexpected system termination or read kernel memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112515: Charles Stevenson, Seung Je Seong, Mathis Mansière
+
+IOKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A buffer overflow may result in memory corruption and unexpected app termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-65385: Meta Red Team X - Nik Tsytsarkin
+
+IOMobileFrameBuffer
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: A race condition was addressed with improved state handling.
+
+CVE-2026-112459: Lily Cohl (@GenericCoding), an anonymous researcher
+
+IOStorageFamily
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or read kernel memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112554: Bhuwan Bhetwal, Kwak Kiyong (@Pwnkai23), Song Nuri, Nicolas Seriot, Tommy DeVoss from Braze Security Team (@thedawgyg), Tucker Willenborg, Navapon Premkasem, Aswin Kumar Gokulakannan, Peter Malone, Richard Zana
+
+IOSurface
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: A race condition was addressed with improved locking.
+
+CVE-2026-112477: an anonymous researcher
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected changes to copy-on-write memory
+
+Description: A memory integrity issue was addressed with improved handling of copy-on-write pages.
+
+CVE-2026-112576: Pedro Pinho
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: A type confusion issue was addressed with improved memory handling.
+
+CVE-2026-112606: Wang Yu
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+CVE-2026-65350: Nebula Security (@nebusecurity), Tim Michaud (@TimGMichaud) of Aginor.ai, Xinru Chi of Pangu Lab
+
+CVE-2026-112679: Billy Jheng Bing Jhong and Pan Zhenpeng (@Peterpan0927) of STAR Labs SG Pte. Ltd.
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: A use after free issue was addressed with improved memory management.
+
+CVE-2026-112517: Pasquale Scola, Wout van der Ploeg (woutvanderploeg.nl), John Lussier, Cem Onat Karagun, an anonymous researcher
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+CVE-2026-112516: greenbynox, an anonymous researcher
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker may be able to cause unexpected system termination or corrupt kernel memory
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+CVE-2026-112514: Marc Newlin of SkySafe, Billy Jheng Bing Jhong and Pan Zhenpeng (@Peterpan0927) of STAR Labs SG Pte. Ltd., greenbynox
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or write kernel memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112507: Tim Michaud (@TimGMichaud) of Aginor.ai
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or write kernel memory
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+CVE-2026-84495: Wang Yu
+
+CVE-2026-112474: Billy Jheng Bing Jhong and Pan Zhenpeng (@Peterpan0927) of STAR Labs SG Pte. Ltd.
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: The issue was addressed with improved memory handling.
+
+CVE-2026-112698: Billy Jheng Bing Jhong and Pan Zhenpeng (@Peterpan0927) of STAR Labs SG Pte. Ltd., OpenAI
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: A race condition was addressed with improved state handling.
+
+CVE-2026-112501: Cem Onat Karagun
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112476: Arnold Cartagena, Matt Suiche (@msuiche) of Tolmo
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to determine kernel memory layout
+
+Description: An information disclosure issue was addressed with improved state management.
+
+CVE-2026-112665: Will Estes
+
+Kernel
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to bypass Privacy preferences
+
+Description: This issue was addressed with improved checks.
+
+CVE-2026-112624: Jerry L. Knot
+
+libarchive
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to unexpected app termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112522: Eliya M., Viacheslav Radiukov, Tristan Madani (Talence Security), Robert Tran
+
+LinkPresentation
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted image may result in memory corruption
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112621: Vinay Kumar Rasala (Xplo8E) from Appknox, an anonymous researcher
+
+Mail
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: The user's original email address may be leaked when using the Hide My Email feature
+
+Description: A logic issue was addressed with improved restrictions.
+
+CVE-2026-112500
+
+Mail
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A remote attacker may be able to cause a denial-of-service
+
+Description: A resource exhaustion issue was addressed with improved input validation.
+
+CVE-2026-112671: Nathaniel Oh (@calysteon)
+
+Mail
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted message may lead to a denial-of-service
+
+Description: A stack overflow was addressed with improved input validation.
+
+CVE-2026-112414: Daniel Rodríguez, Nathaniel Oh (@calysteon)
+
+Maps
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to identify what other apps a user has installed
+
+Description: A privacy issue was addressed by moving sensitive data to a protected location.
+
+CVE-2026-112707: Sindre Sorhus
+
+mDNSResponder
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A remote attacker may be able to leak memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112607: Pasquale Scola
+
+MediaAnalysis
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A race condition was addressed with additional validation.
+
+CVE-2026-113915: Abodi Dawoud, Rodolphe BRUNETTI (@eisw0lf) of Lupus Nova, Zhongquan Li (@Guluisacat), Ilya Andr (andrd3v) of Positive Technologies
+
+MediaRemote
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker on the local network may be able to cause unexpected system termination or corrupt process memory
+
+Description: This issue was addressed by removing the vulnerable code.
+
+CVE-2026-112687: Azize Rhounam, Rahul Raj
+
+Messages
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A remote attacker may be able to cause unexpected app termination
+
+Description: An input validation issue was addressed with improved input validation.
+
+CVE-2026-112682: Mahmoud Abdelmoniem
+
+MobileGestalt
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to fingerprint the user
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-86989: Zhongcheng Li (CK01), Ilya Andr (andrd3v) of Positive Technologies
+
+Model I/O
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted 3D model may lead to memory corruption
+
+Description: An integer overflow was addressed with improved input validation.
+
+CVE-2026-112565: Musaab Khan (@bxff), Saoud Khalifah, stratan (@5tratan), Hcamael and 章鱼哥@aipy (aipyaipy.com), Niels Hofmans
+
+CVE-2026-112449: ret2happy (@ret2happy)
+
+Model I/O
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to unexpected app termination
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112413: Nathaniel Oh (@calysteon)
+
+Model I/O
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted 3D model may lead to memory corruption
+
+Description: The issue was addressed with improved memory handling.
+
+CVE-2026-112485: Nik Tsytsarkin
+
+Model I/O
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted 3D model may lead to memory corruption
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112461: 진규정 (Gyujeong Jin, @G1uN4sh), Lucas Parnell, ret2happy (@ret2happy), Meta Red Team X - Nik Tsytsarkin, YingMuo (@YingMuo) of DEVCORE Research Team, Nathaniel Oh (@calysteon)
+
+Model I/O
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a 3D model may lead to unexpected app termination
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112486: Md Rasel Bhuyan (www.linkedin.com/in/rasel-bhuyan), Musaab Khan (@bxff)
+
+Photos Storage
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-65397: Varik Matevosyan (@D4RK7ET), an anonymous researcher
+
+Photos Storage
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access a user's Photos Library
+
+Description: This issue was addressed with additional entitlement checks.
+
+CVE-2026-112676: Rodolphe BRUNETTI (@eisw0lf) of Lupus Nova
+
+Photos Storage
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to bypass certain Privacy preferences
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-112660: Prafull Dhiman, Alto_00000
+
+Power Management
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to fingerprint the user
+
+Description: This issue was addressed with additional entitlement checks.
+
+CVE-2026-112681: an anonymous researcher
+
+Quick Look
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-86925: JeongAhn Jang, Alto_00000, Nicolas Seriot, 김도현, Abodi Dawoud, Drin Raci of sentry.security, Jakob Pammer, Stuart Wallace, hamayanhamayan, Vinay Kumar Rasala (Xplo8E) from Appknox, Daniel Rodríguez, Ilya Andr (andrd3v), Rahul Raj, Mustafa Calap (@ordinal0, dbg.re)
+
+RealityKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to unexpected app termination
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112491: Hongsik Kim (mnur)
+
+ReplayKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: A type confusion issue was addressed with improved checks.
+
+CVE-2026-112547: Stuart Wallace
+
+Safety Check
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: This issue was addressed with improved checks.
+
+CVE-2026-112609: an anonymous researcher
+
+SceneKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a 3D model may result in disclosure of process memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112425: stratan (@5tratan)
+
+SceneKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to a denial-of-service or potentially disclose memory contents
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112423: Rahul Raj
+
+SceneKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to heap corruption
+
+Description: An out-of-bounds write issue was addressed with improved input validation.
+
+CVE-2026-112464: 정우 하 (@0xfa11babe), Narendra Singh (@_3P1C)
+
+SceneKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to unexpected process termination
+
+Description: A buffer overflow was addressed with improved bounds checking.
+
+CVE-2026-86991: Cem Onat Karagun, Yujung Choi (@Dusker), Mathis Mansière, Rahul Raj
+
+Screen Time
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved access control.
+
+CVE-2026-112616: Drin Raci of sentry.security, Chris Bailey - Short Circuit, Mustafa Calap (@ordinal0, dbg.re), Robert Mindo, N.M.Praveen Nawarathne (@zblockrat), Ilya Andr (andrd3v), Sindre Sorhus
+
+Security
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing web content may disclose sensitive information
+
+Description: An input validation issue was addressed with improved input validation.
+
+CVE-2026-113913: Niels Hofmans, Stav Nir and Vladimir Tokarev
+
+Security
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An malicious app may be able to bypass certificate validation
+
+Description: A logic issue was addressed with improved state management.
+
+CVE-2026-112652: Aditya Kumar
+
+Shortcuts
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-112559: Lucas Lammer, Stuart Wallace
+
+CVE-2026-112455: Chris Bailey - Short Circuit, Rahul Raj
+
+Siri
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: This issue was addressed with improved input validation.
+
+CVE-2026-112658: Mickey Jin (@patch1t)
+
+Siri
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-112685: silo, Abodi Dawoud
+
+Spotlight
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to gain elevated privileges
+
+Description: A validation issue existed in the handling of symlinks. This issue was addressed with improved validation of symlinks.
+
+CVE-2022-26704: Joshua Mason of Mandiant, Gergely Kalman (@gergely_kalman)
+
+Spotlight
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious application may be able to bypass Privacy preferences
+
+Description: This issue was addressed with improved checks.
+
+CVE-2026-112567: zenith
+
+Spotlight
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to access sensitive user data
+
+Description: This issue was addressed with improved data access restriction.
+
+CVE-2026-112628: Santiago Albertengo, Chris Bailey - Short Circuit
+
+SpringBoard
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination or corrupt process memory
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-112646: Meta Red Team X - Nik Tsytsarkin
+
+SwiftUI
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to cause unexpected system termination
+
+Description: An out-of-bounds write issue was addressed with improved input validation.
+
+CVE-2026-112691: @Licht_jb
+
+System Preferences
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious app may be able to access restricted system interfaces or launder launch attribution
+
+Description: An access issue was addressed with improved access control.
+
+CVE-2026-86968: Sindre Sorhus
+
+TextKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to read the device's name
+
+Description: An authorization issue was addressed with improved state management.
+
+CVE-2026-84605: Sindre Sorhus
+
+Thread
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in physical proximity may be able to craft malicious network traffic to gain access to a Thread network
+
+Description: This issue was addressed with improved authentication.
+
+CVE-2026-112595: Wesley Wineberg
+
+USB
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious USB device may be able to cause unexpected system termination or read kernel memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112479: Rotce, Sandeep Wawdane (thecybersandeep), Marc Newlin of SkySafe, Ankur Saini of Volexity, Kwak Kiyong (@Pwnkai23), Song nuri
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process crash
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 328114
+
+CVE-2026-113904: Lily Cohl (@GenericCoding), Do Young Park (adawn), MYUNGYONG LEE, Luke Francis (@lukefr09), Shubham Chaskar, Kwak Kiyong, Song Nuri
+
+WebKit Bugzilla: 317465
+
+CVE-2026-112599: Avinash Kumar Thapa & Jay Kaushik Patel
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to memory corruption
+
+Description: A type confusion issue was addressed with improved checks.
+
+WebKit Bugzilla: 321609
+
+CVE-2026-86974: Hossein Lotfi (@hosselot) of TrendAI Zero Day Initiative
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected Safari crash
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 318331
+
+CVE-2026-86986: an anonymous researcher
+
+WebKit Bugzilla: 328131
+
+CVE-2026-112693: 은태 장
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process crash
+
+Description: This issue was addressed with improved input validation.
+
+WebKit Bugzilla: 318522
+
+CVE-2026-86985: Pasquale Scola
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may result in the disclosure of process memory
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+WebKit Bugzilla: 323130
+
+CVE-2026-112699: an anonymous researcher
+
+WebKit Bugzilla: 323148
+
+CVE-2026-112680: Franz Bettag, Kwak Kiyong, Song Nuri
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to arbitrary code execution
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 322916
+
+CVE-2026-112697: OpenAI Codex Security - Amy Burnett, 은태 장
+
+WebKit Bugzilla: 324150
+
+CVE-2026-112655: Euntae Jang
+
+WebKit Bugzilla: 322120
+
+CVE-2026-112651: Euntae Jang
+
+WebKit Bugzilla: 323265
+
+CVE-2026-112623: pwn2addr, Lily Cohl (@GenericCoding)
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process termination
+
+Description: A race condition was addressed with improved locking.
+
+WebKit Bugzilla: 323986
+
+CVE-2026-112686: an anonymous researcher
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process crash
+
+Description: This issue was addressed through improved state management.
+
+WebKit Bugzilla: 328132
+
+CVE-2026-112684: Gia Bui (@yabeow) from Calif.io
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process termination
+
+Description: A type confusion issue was addressed with improved state handling.
+
+WebKit Bugzilla: 322033
+
+CVE-2026-112673: Myungyong Lee
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected Safari crash
+
+Description: A race condition was addressed with improved state handling.
+
+WebKit Bugzilla: 323173
+
+CVE-2026-112669: remanone (@remanone_)
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process termination
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 322671
+
+CVE-2026-112695: Josef Korbel (Citadelo), Luke Francis (@lukefr09)
+
+WebKit Bugzilla: 321669
+
+CVE-2026-112666: Luke Francis (@lukefr09)
+
+WebKit Bugzilla: 321934
+
+CVE-2026-112654: Charles Kern
+
+WebKit Bugzilla: 323227
+
+CVE-2026-112653: Malik M. (@m411k_)
+
+WebKit Bugzilla: 324735
+
+CVE-2026-112615: Chris Rohlf with Anthropic Research
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to arbitrary code execution
+
+Description: A type confusion issue was addressed with improved memory handling.
+
+WebKit Bugzilla: 321982
+
+CVE-2026-112659: OpenAI Codex Security - Amy Burnett, Chris Rohlf with Anthropic Research
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to memory corruption
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 324262
+
+CVE-2026-112640: an anonymous researcher
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A website may be able to use a media format that should be restricted in Lockdown Mode
+
+Description: A logic issue was addressed with improved checks.
+
+WebKit Bugzilla: 324004
+
+CVE-2026-113952: Drinor Selmanaj (Sentry)
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to memory corruption
+
+Description: A type confusion issue was addressed with improved state management.
+
+WebKit Bugzilla: 323097
+
+CVE-2026-113949: an anonymous researcher
+
+WebKit
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to unexpected memory modification
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 321652
+
+CVE-2026-113903: Eddy Tsalolikhin, OpenAI Codex Security - Amy Burnett, Lily Cohl (@GenericCoding)
+
+WebKit Canvas
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to arbitrary code execution
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 323377
+
+CVE-2026-112637: Chris Rohlf with Anthropic Research, 은태 장
+
+WebKit JavaScript Bindings
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to arbitrary code execution
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 328141
+
+CVE-2026-112626: Euntae Jang, Luke Francis (@lukefr09), Shubham Chaskar, Josef Korbel (Citadelo)
+
+WebKit Process Model
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A remote attacker may be able to break out of Web Content sandbox
+
+Description: This issue was addressed by removing the vulnerable code.
+
+WebKit Bugzilla: 328129
+
+CVE-2026-113897: Luke Francis, Jackson Kuja
+
+WebKit Process Model
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to arbitrary code execution
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 322743
+
+CVE-2026-112639: Luke Francis (@lukefr09)
+
+WebRTC
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process crash
+
+Description: A use-after-free issue was addressed with improved memory management.
+
+WebKit Bugzilla: 323096
+
+CVE-2026-113901: Kwak Kiyong (@Pwnkai23), Song Nuri
+
+WebRTC
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing maliciously crafted web content may lead to an unexpected process crash
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+WebKit Bugzilla: 323079
+
+CVE-2026-86973: Narendra Singh (@_3P1C), an anonymous researcher
+
+Wi-Fi
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in physical proximity may be able to corrupt process memory
+
+Description: A memory corruption issue was addressed with improved input validation.
+
+CVE-2026-113909: an anonymous researcher
+
+Wi-Fi
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in radio range may be able to cause unexpected system termination
+
+Description: An out-of-bounds read was addressed with improved bounds checking.
+
+CVE-2026-112622: Nathaniel Oh (@calysteon)
+
+Wi-Fi
+
+Available for: iPhone 11 and later, iPad Pro 12.9-inch 4th generation and later, iPad Pro 11-inch 2nd generation and later, iPad Air 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An attacker in a privileged network position may be able to cause a denial-of-service
+
+Description: A denial-of-service issue was addressed with improved input validation.
+
+CVE-2026-112620: Nathaniel Oh (@calysteon)
+
+Additional recognition
+Apple Neural Engine
+
+We would like to acknowledge Vladislav Shevchenko (Positive Technologies) for their assistance.
+
+AppleFSCompression
+
+We would like to acknowledge Dawar Abbasi (x_x10o9), Tucker Willenborg for their assistance.
+
+Audio
+
+We would like to acknowledge Nathaniel Oh (@calysteon) for their assistance.
+
+AVEVideoEncoder
+
+We would like to acknowledge Josh Maine of Calif.io, Narendra Singh (@_3P1C) for their assistance.
+
+Baseband
+
+We would like to acknowledge Qiqing Huang for their assistance.
+
+Bluetooth
+
+We would like to acknowledge John De Armas for their assistance.
+
+CipherML
+
+We would like to acknowledge Nils Hanff (@nils1729@chaos.social) of Hasso Plattner Institute for their assistance.
+
+CloudAttestation
+
+We would like to acknowledge Warisjeet Singh (sin99xx), Warisjeet Singh (sin99xx) / Harpreet Sharma from Hack Kicker for their assistance.
+
+CoreAudio
+
+We would like to acknowledge Meta Product Security for their assistance.
+
+CoreCrypto
+
+We would like to acknowledge Niels Hofmans for their assistance.
+
+Feedback Assistant
+
+We would like to acknowledge Abodi Dawoud for their assistance.
+
+Foundation
+
+We would like to acknowledge Jaya Surya Kommireddy for their assistance.
+
+ImageIO
+
+We would like to acknowledge Mateusz Jurczyk of Google Project Zero for their assistance.
+
+Kernel
+
+We would like to acknowledge Billy Jheng Bing Jhong and Pan Zhenpeng (@Peterpan0927) of STAR Labs SG Pte. Ltd., Dhiyanesh Selvaraj (@redroot97), Tristan Madani (@TristanInSec) from Talence Security for their assistance.
+
+libarchive
+
+We would like to acknowledge Muhammad Abdul Rehman, Owais Lone for their assistance.
+
+Mail
+
+We would like to acknowledge Dominik Conrads of Federal Office for Information Security for their assistance.
+
+Notes
+
+We would like to acknowledge Mikita Sakalouski for their assistance.
+
+Safari
+
+We would like to acknowledge Azza Tegar Naufal Ataullah, Exell Nakano, Zhiyang Zeng (@Wester), satrya wira yudha for their assistance.
+
+Sandbox Profiles
+
+We would like to acknowledge Ilya Andr (andrd3v) of Positive Technologies for their assistance.
+
+Service Workers
+
+We would like to acknowledge Meta Red Team X - Nik Tsytsarkin for their assistance.
+
+Spotlight
+
+We would like to acknowledge Aaron Thomas (@aarontom5), Bilge Kaan Mızrak for their assistance.
+
+Telephony
+
+We would like to acknowledge an anonymous researcher for their assistance.
+
+WebKit
+
+We would like to acknowledge Claudio Bozzato and Francesco Benvenuto of Cisco Talos, Stan Shaw, Volodymyr Diachenko, Wael Alolowi, an anonymous researcher for their assistance.
+
+WebKit Sandboxing
+
+We would like to acknowledge Claudio Bozzato and Francesco Benvenuto of Cisco Talos for their assistance.
+
+Information about products not manufactured by Apple, or independent websites not controlled or tested by Apple, is provided without recommendation or endorsement. Apple assumes no responsibility with regard to the selection, performance, or use of third-party websites or products. Apple makes no representations regarding third-party website accuracy or reliability. Contact the vendor for additional information.
+
+Published Date: October 26, 2026

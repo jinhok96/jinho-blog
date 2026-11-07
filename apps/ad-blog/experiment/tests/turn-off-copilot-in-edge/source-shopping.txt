@@ -1,0 +1,121 @@
+URL: https://support.microsoft.com/en-us/edge/copilot/shopping-with-microsoft-copilot
+Final: https://support.microsoft.com/en-us/edge/copilot/shopping-with-microsoft-copilot
+Title: Shopping with Microsoft Copilot | Microsoft Support
+Fetched: 2026-10-30 16:49 UTC
+
+Skip to main content
+Microsoft
+Cancel
+Getting started with Copilot in Microsoft Edge
+Using Microsoft Copilot in Edge at work
+Browse with Copilot
+How context clues work in Copilot in Edge
+Shopping with Microsoft Copilot
+Copilot Journeys
+Shopping with Microsoft Copilot
+
+This article applies to: Personal Microsoft accounts — Microsoft 365 Personal, Family, Premium, and Pro.
+
+Copilot can help you find the right product, compare options, get the best deal, and discover thoughtful gifts. You can ask Copilot to search for products in a conversation, or visit your personalized Shopping homepage to browse recommendations tailored to you.
+
+Feature availability varies by market, language, device, platform, and subscription.
+
+Note
+
+Copilot can occasionally make mistakes, so verify key product information, pricing, and purchase terms on the retailer's website. Retailers set their own prices and availability and may change them without notice. Microsoft isn't liable for any discrepancies or changes in pricing or availability status.
+
+Search for products in a Copilot conversation
+
+Here's how to use Copilot to search for products:
+
+Open Copilot and ask a shopping or product-related question. For example, "Help me find some comfortable slip-on shoes I can use for walking outdoors."
+Browse the product options Copilot provides. Copilot bases these options on your prompt, likely engagement, available merchant data, and other factors.
+Select a product image to see more details, like available sizes, retailers, review summaries, return windows, and price history. The details Copilot shows depend on what the merchant provides.
+When you're ready to purchase, select Buy to go to the retailer's purchase page.
+Discover products on your Shopping homepage
+
+Your Shopping homepage is a space in Copilot just for shopping. It gathers product recommendations, deals, and ideas based on what you're into. Shopping online can mean a lot of tabs, reviews, and second-guessing, so this gives you one place to pick up where your interests leave off instead of starting over each time.
+
+If you're new to it, you'll see conversation starters and trending picks to help you explore. The more you shop and chat with Copilot, the more it learns what you like, so your recommendations, deals, and discoveries keep getting more relevant to you.
+
+Get started
+On the left side-pane in Copilot, select More, then select Shopping.
+Browse the recommendations, deals, and shopping ideas Copilot has for you.
+Start a shopping conversation to shape what shows up. Try asking Copilot about:
+Gift ideas
+Travel gear
+Home office equipment
+Consumer electronics
+Anything else you're shopping for
+Select a product to see more details, compare options, read reviews, or check price history.
+Ask follow-up questions to fine-tune your results or explore alternatives.
+Tips for getting the most out of your Shopping homepage
+Chat about what you're shopping for. The more you tell Copilot, the better it gets at knowing what you want.
+Try a few different topics. Planning a trip, setting up a home office, or picking out a gift all work well.
+Check back often. Your homepage keeps updating as you shop.
+Product suggestions and search results
+
+When you search for information about products available for purchase online, Copilot summarizes and returns relevant results from across the web and from advertisers.
+
+Except where identified, Microsoft doesn't receive commissions or other compensation for product suggestions or search results in Copilot. Sponsored links are clearly identified.
+Microsoft doesn't use potential commissions from other links to influence ranking. To learn more, see Ads in Copilot and how web search ranking works.
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026

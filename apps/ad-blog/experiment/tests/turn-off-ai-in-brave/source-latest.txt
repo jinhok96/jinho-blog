@@ -1,0 +1,195 @@
+URL: https://brave.com/latest/
+Final: https://brave.com/latest/
+Status: 200
+Fetched: 2026-11-07 15:37 UTC
+
+Browser
+Search
+Search API
+Brave Ads
+Get Brave
+Search the Web
+
+ORGANIZED PER PLATFORM
+
+Brave Release Notes
+
+All release notes will be reported here as new releases are made.
+
+Desktop
+Release Notes v1.99.55 (Nov 5, 2026)
+Leo
+Improved Leo to present a list of choices when it needs clarification on a task. (#59649)
+Improved suggested follow-up prompts. (#59650)
+Updated AI Chat models. (#59701)
+Fixed issue where a compromised Leo conversation frame could approve AI Chat tool-use requests without a direct user action. (#59703)
+General
+Re-enabled “Allow split view drag-and-drop on left or right edge of window” setting under brave://settings/braveContent. (#49752)
+Updated icon in URL bar to magnifying glass for Brave Search. (#58178)
+Upgraded Chromium to 157.0.8103.39. (#60882) (Changelog for 157.0.8103.39)
+Origin Release Notes
+Re-enabled “Allow split view drag-and-drop on left or right edge of window” setting under brave://settings/braveContent. (#49752)
+Updated icon in URL bar to magnifying glass for Brave Search. (#58178)
+Upgraded Chromium to 157.0.8103.39. (#60882) (Changelog for 157.0.8103.39)
+Download Brave for Desktop
+Android
+Release Notes v1.98.63 (Oct 30, 2026)
+Upgraded Chromium to 156.0.8078.80. (#60306) (Changelog for 156.0.8078.80)
+Release Notes v1.98.60 (Oct 27, 2026)
+Leo
+Updated Leo to honor Bring Your Own Model (BYOM) and NEAR model selection. (#59867)
+Updated AI Chat models. (#58477)
+General
+Added option to turn off “bottom bar” when “Android bottom bar” enabled via brave://flags. (#59228)
+Added option to switch between “shortcuts” and “frequently visited sites” on the New Tab Page. (#56191)
+Added search parameter for Brave Search queries done via quick search bar. (#59194)
+Improved quick search engine settings and edit mode. (#59192)
+Fixed recent tabs displaying as a blank page. (#59061)
+Fixed “Find in page” icon design in main menu. (#59128)
+Fixed crash when long-pressing tab switcher on bottom toolbar. (#59206)
+Fixed issue where opening Brave for the first time via “Brave Search” widget did not honor default search engine in certain cases. (#59274)
+Fixed “forward” button in main menu being incorrectly replaced by “back” button when bottom toolbar is disabled. (#59326)
+Fixed crash when long-pressing URL toolbar on tablets. (#60066)
+Upgraded Chromium to 156.0.8078.48. (#60069) (Changelog for 156.0.8078.48)
+Download Brave for Android
+iOS
+Release Notes 1.96.62 (Oct 6, 2026)
+Leo
+Added Leo AI voice input support to homescreen and lockscreen widgets. (#58183)
+Added support for rendering mathematical equations in Leo responses. (#56523)
+General
+Added support for new GPC API on iOS 27. (#55958)
+Added variable blur effect to the top of the webview on iOS 26+. (#58418)
+[Security] Fixed Private Browsing Only mode being bypassed when opening deep links as reported on HackerOne by syarif07. (#59400)
+Removed playlist icon in the URL bar from being displayed on the YouTube homepage. (#58718)
+Updated the New Tab Page background to be extended to the screen edges for iOS 26+. (#58450)
+Updated filter lists to use full permissions. (#59112)
+Fixed Instagram reels not working when forwarded via direct message. (#54921)
+Fixed “Site Tabs Closed” being truncated in the shields panel’s Shred detail view. (#58585)
+Upgraded Chromium to 154.0.8037.98. (#59587)(Changelog for 154.0.8037.98)
+Download Brave for iOS
+Help improve Brave Beta
+
+Beta is a stable preview version of Brave that includes soon-to-be-released features. This build showcases the newest advances and is ready for daily use.
+
+Brave Beta automatically sends us crash reports when things go wrong. We value your feedback and help in testing this preview version of Brave.
+
+Downloads of Brave Beta for desktop are available for Linux, macOS, and Windows. You can also try Brave Origin Beta for a streamlined, premium browser experience.
+
+Brave is always open source. Review on GitHub or visit community.brave.app for support.
+
+Brave build channels
+
+Brave has a fast iterative development cycle, split into three stages. New features are typically first introduced in the Nightly channel. After we’ve polished a bit, we’ll move those features into the Beta build. Then, after final testing, we’ll merge to the Release version of Brave. This is the version that most users access on a daily basis.
+
+Brave Nightly
+
+Brave Nightly is our testing and development version of Brave. The releases are updated every night and may contain bugs that can result in data loss.
+
+Learn more about Brave Nightly
+
+Brave Beta
+
+Brave Beta is an early preview for new versions of Brave. This build showcases the newest advances that we’re bringing to our browser. We encourage more technical users to test this channel and help report any problems to us early.
+
+Learn more about Brave Beta
+
+Brave Release
+
+This is our official release version of Brave, with new releases landing approximately every four weeks.
+
+Learn more about Brave Release
+
+Brave Browser for mobile
+
+Brave is available as a fast, free, secure web browser for your mobile devices. Complete with a built-in ad blocker that prevents tracking, and optimized for mobile data and battery life savings. Get the Brave Browser (mobile) for Android or iOS.
+
+Get Brave
+User resources
+Help center
+Community
+What's new in Brave?
+Release notes
+Status
+FAQs
+Transparency report
+Merch store
+Privacy policy
+Brave Browser
+Brave Search
+Brave Search RTBF
+Website & email
+Publishers & creators
+Advertisers
+CCPA
+Blogs
+Brave blog
+Privacy updates
+Web standards
+Research
+Podcast
+For businesses
+Search API
+Brave Ads
+Group policy
+Beginner guides
+Intros to browsers, search, & AI
+Intros to Web3
+Privacy glossary
+API glossary
+World Cup Ad Blocker
+Downloads
+Desktop
+Android
+iOS
+Linux
+Brave Origin
+Beta
+Nightly
+Social media
+Reddit
+X (formerly Twitter)
+Brave API on X
+Mastodon
+Bluesky
+Facebook
+YouTube
+Company
+Reviewer's guide
+Brand assets
+Careers
+Events
+GitHub
+Reviews
+Tor Onion address
+More AI features
+Web3
+Rewards
+Wallet
+Basic Attention Token
+Brave Creators
+Brave Wallet docs
+Contact
+Support
+community.brave.app
+user-support@brave.com
+API sales
+api-sales@brave.com
+Advertising
+adsales@brave.com
+Please only use this email address if you are interested in purchasing advertising with Brave. For support, please visit community.brave.app.
+Business
+bizdev@brave.com
+Press
+press@brave.com
+legal@brave.com
+Offices
+
+Brave San Francisco
+48 2nd St, Floor 3
+San Francisco, CA 94105
+
+Choose a language 
+English
+Terms of use | Report a security issue
+© 2015 - 2026 Brave Software, Inc. | All rights reserved

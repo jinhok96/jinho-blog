@@ -1,0 +1,30 @@
+# https://support.microsoft.com/en-us/windows/deployment/updates-lifecycle/get-windows-updates-as-soon-as-they-re-available-for-your-device (fetched 2026-10-29 UTC)
+Get Windows updates as soon as they're available for your device
+ Applies ToWindows 11 Windows 10 
+Windows 11
+Windows 10
+Summary
+We're committed to delivering continuous innovation by releasing new features and enhancements into Windows 11 more frequently.  Windows devices get new functionality at different times as Microsoft delivers non-security updates, fixes, improvements, and enhancements via several servicing technologies—including controlled feature rollout (CFR) . With this approach, updates may be gradually rolled out to devices.
+You can choose to get the latest non-security and feature updates as soon as they become available for your device (now and in the future). Here's how:
+- Select Start
+ > Settings
+ > Windows Update.
+Check for Windows updates
+- Turn on the toggle Get the latest updates as soon as they're available.
+Note
+Whether you set the toggle to Off or On, you'll still get the regular security updates as usual. The toggle determines how quickly you get the additional non-security updates, fixes, feature updates, and improvements. Want to learn about Windows monthly updates? You'll find details on the Windows IT Pro Blog .
+- (Optional) Select Check for updates and if any updates are available for you, your device will download and install them. If prompted to do so, restart your device to apply the updates.
+Your device is now ready to get the latest updates going forward.
+If you want to know more about updates you installed, select Start
+ > Settings
+ > Windows Update > Update history. 
+To learn about configuration changes, expand the Other updates section and select the Learn more link next to the latest Windows configuration update to see what improvements were made as part of that update.
+When you turn on the Get the latest updates as soon as they're available, you can be sure you'll have access to the latest changes as soon as they're available for your device, you'll be prioritized for future updates, and you'll still get security updates as usual.
+Note
+- Support for Windows 10 has ended on October 14, 2025
+- After October 14, 2025, Microsoft will no longer provide free software updates from Windows Update, technical assistance, or security fixes for Windows 10. Your PC will still work, but we recommend moving to Windows 11.
+- Learn more
+Summary
+You can choose to get the latest non-security and feature updates as soon as they become available for your device (now and in the future). Here's how:
+- Select Start
+ > Settings

@@ -1,0 +1,124 @@
+URL: https://support.apple.com/guide/safari/search-sfria1042d31/mac
+Fetched: 2026-11-01T15:49:16.199Z
+Final URL: https://support.apple.com/guide/safari/search-sfria1042d31/mac
+
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0
++
+Safari User Guide
+Select version:
+macOS 27 Golden Gate
+macOS Tahoe 26
+macOS Sequoia 15
+macOS Sonoma 14
+macOS Ventura 13
+macOS Monterey 12
+macOS Big Sur 11.0
+macOS Catalina 10.15
+macOS Mojave 10.14
+macOS High Sierra
+Search this guide
+Table of Contents 
+Change Search settings in Safari on Mac
+
+In the Safari app  on your Mac, use Search settings to change how you search the web and how search results are presented.
+
+To change these settings, choose Safari > Settings, then click Search.
+
+Option
+
+	
+
+Description
+
+
+
+
+Search engine
+
+	
+
+Choose the search engine you want Safari to use for your regular web browsing.
+
+
+
+
+Private Browsing search engine
+
+	
+
+Choose the search engine you want Safari to use for Private Browsing.
+
+
+
+
+Include search engine suggestions
+
+	
+
+Ask the search engine for search suggestions based on search terms you enter. The search engine may record your search terms.
+
+
+
+
+Include Safari Suggestions
+
+	
+
+Get Safari Suggestions as you type in the Smart Search field. Safari search includes suggestions from the internet, Music, the App Store, movie showtimes, locations nearby, and more. To learn more, choose Apple menu  > System Settings, click Spotlight  in the sidebar, click Search Privacy, then click About Search & Privacy. (You may need to scroll down.)
+
+
+
+
+Enable Quick Website Search
+
+	
+
+Record information about your searches within a website to expedite later searches on that site. You can then search within that website by entering the name of the site, followed by your search term, in the Smart Search field.
+
+Click Manage Websites to see or remove websites for which Safari recorded Quick Website Search information.
+
+
+
+
+Preload Top Hit in the background
+
+	
+
+Start to load a webpage as soon as it’s determined to be a top search hit based on your bookmarks and browsing history.
+
+
+
+
+Show Start Page
+
+	
+
+Show your start page below the Smart Search field when you click in the field while viewing a webpage.
+
+See also
+Go to a website using Safari on Mac
+Search the internet using Safari on Mac
+Helpful?
+Yes
+No
+Apple Footer
+
+Apple
+ Support
+ Safari User Guide
+ Change Search settings in Safari on Mac
+United States
+Copyright © 2026 Apple Inc. All rights reserved.
+Privacy Policy Terms of Use Sales and Refunds Site Map

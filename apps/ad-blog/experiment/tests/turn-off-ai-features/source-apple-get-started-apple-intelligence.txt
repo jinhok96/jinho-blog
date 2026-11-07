@@ -1,0 +1,5 @@
+                                        Get started with the next generation of Apple Intelligence
+                                        The next generation of Apple Intelligence is integrated deeply into the OS and powers helpful features across apps that simplify the things you do every day, from browsing the web, to generating images in virtually any style, staying on top of your communication and schedule, editing photos, and more.
+                                        The next generation of Apple Intelligence is automatically available on eligible devices as part of the operating system when you update to the 27.0 software releases across iOS, iPadOS, macOS, watchOS, and visionOS in supported languages and regions.
+                                        Apple Intelligence also powers an entirely new version of Siri: Siri AI. Find out how to get Siri AI (Beta).
+                                        Device requirements

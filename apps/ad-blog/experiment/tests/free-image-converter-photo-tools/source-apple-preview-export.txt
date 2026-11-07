@@ -1,0 +1,113 @@
+Convert image file types using Preview on Mac - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+ Preview User Guide
+ Select version:
+ macOS 27 Golden Gate
+ macOS Tahoe 26
+ macOS Sequoia 15
+ macOS Sonoma 14
+ macOS Ventura 13
+ macOS Monterey 12
+ macOS Big Sur 11.0
+ macOS Catalina 10.15
+ macOS Mojave 10.14
+ macOS High Sierra
+Modifying this control will update this page automatically
+ Search this guide
+ Clear Search
+ Table of Contents
+Preview User Guide
+ Welcome
+ Get started
+ Open PDFs and images
+ View PDFs or images
+ View PDFs and images
+ Find text in PDFs
+ Interact with text in a photo
+ Bookmark PDF pages
+ View information about PDFs and images
+ Import images from a camera
+ See where a photo was taken
+ Display a PDF as a slideshow
+ View an animated GIF’s frames
+ Edit PDFs
+ Fill out and sign PDF forms
+ Select and copy text in a PDF
+ Highlight, underline, and strike out text
+ Add notes and speech bubbles to a PDF
+ Annotate a PDF
+ Combine PDFs
+ Add, delete, or move PDF pages
+ Crop or rotate a PDF
+ Add effects to a PDF
+ Edit images
+ Crop, resize, or rotate an image
+ Convert image file types
+ Remove a background or extract an image
+ Annotate an image
+ See what an image looks like on another device
+ Apply a color profile to an image
+ Share PDFs or images
+ Manage PDFs or images
+ Revert changes to PDFs and images
+ Copy PDFs and images
+ Lock PDFs and images
+ Export PDFs and images
+ Password-protect a PDF
+ Reduce the size of a PDF
+ Print PDFs and images
+ Work with 3D files
+ 3D file formats supported in Preview
+ View 3D files
+ Edit a 3D file
+ Export a 3D file
+ View content from your Mac on Apple Vision Pro
+ Save files
+ Change Preview settings
+ Keyboard shortcuts
+ Troubleshooting
+ If you can’t select or copy text in a PDF
+ If images or PDFs aren’t the correct size
+ If Go to Page shows the wrong page of a PDF
+ Copyright and trademarks
+Convert image file types using Preview on Mac
+Preview can convert image files to many file types. This can be useful if you share files with people who use other kinds of computers or if you want to open files in apps that don’t read all file types.
+Open Preview for me
+Go to the Preview app on your Mac.
+Open the file you want to convert, then choose File > Export.
+Click the Format pop-up menu, then choose HEIC, JPEG, JPEG-2000, OpenEXR, PDF, PNG, or TIFF.
+If you don’t see the file type you want, press and hold the Option key and click the Format pop-up menu to see specialized or older formats.
+Depending on the file format you choose, additional options may appear. If you choose JPEG or JPEG-2000, you can adjust the image’s quality. If you choose PDF, you can choose a Quartz filter to apply to the image, and you can encrypt the image so that only those with the password can view it.
+Type a new name, or choose a new location for saving the converted file, then click Save.
+Tip: To convert more than one image file at a time, open the files in one window, select them in that window’s sidebar, then follow the steps above.
+See alsoRemove a background or extract an image in Preview on MacSee what an image looks like on another device using Preview on Mac
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Please don’t include any personal information in your comment.
+ Maximum character limit is 250.
+ Submit
+ Thanks for your feedback.
+Apple Footer
+ 
+ Apple
+ Support
+ Preview User Guide
+ Convert image file types using Preview on Mac
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

@@ -1,0 +1,95 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/results/ai-assisted-answers
+Fetched: 2026-11-01T15:34:00.524Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/results/ai-assisted-answers
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Features
+Search Assist
+Recent Search Improvements
+Where Our Results Come From
+Improve Local Results on Mobile
+Improve Local Results on Desktop
+Using 3rd-Party Map Apps on Mobile
+Sort Results by Date
+Filter Out AI Images
+How To Block Sites in Results
+Safe Search
+Translations
+Advanced Search Syntax
+Keyboard Shortcuts
+!Bang Shortcuts
+Save Settings With Cloud Save
+Instant Answers and Other Features
+How News Rankings Work
+Number of Results
+Can a traditional search result be removed from DuckDuckGo?
+Our Short Domain
+About DuckDuckBot
+About DuckAssistBot
+Advertise on DuckDuckGo Search
+Easter Egg Dax Logos
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+Search Results
+About DuckDuckGo Search Assist
+
+Search Assist is an optional feature in our search results that can anonymously generate answers to search queries. To do this, we scan the web for relevant content and use AI-powered natural language technology to generate a brief answer based on the information found. Search Assist responses always link directly to one or two sources, citing where the answer came from, so you can easily go and get more detailed information. It’s important to remember that responses are auto-generated from cited sources, based on crawling the web.
+
+When Search Assist answers appear, you can select “More” to expand the answer and show more detailed information. You can also ask follow-up questions in Duck.ai, our private AI-powered chat service that supports chat models from OpenAI, Anthropic and more.
+
+To change how often you see Search Assist, go to Search Settings or click the ⚙️ icon in the upper-right corner of a Search Assist answer, where you can pick a frequency: often, sometimes (the default setting), on-demand, or never.
+
+In the DuckDuckGo browser, you can change how often you see Search Assist by going to Settings > AI Features and choosing your preferred frequency under Search Assist Settings.
+
+Learn more about DuckDuckGo’s approach to AI, and if you have any questions or concerns, please let us know.
+
+Learn More
+What search features does DuckDuckGo Search have?
+What search improvements has DuckDuckGo made recently?
+Where do DuckDuckGo search results come from?
+How to improve your local search results on DuckDuckGo (mobile)
+How to improve your local search results on DuckDuckGo (desktop)
+Using 3rd-Party Mapping Apps on Mobile Devices
+How To Sort DuckDuckGo Search Results by Date
+How To Filter Out AI Images in DuckDuckgo Search Results
+How To Block Sites From Appearing in DuckDuckGo Search Results
+How To Use the Safe Search Setting To Adjust Adult Content in DuckDuckGo Search Results
+Does DuckDuckGo Search have a Translation feature?
+How to use advanced syntax on DuckDuckGo Search
+How To Use Keyboard Shortcuts on DuckDuckGo Search
+How To Use “!Bang” Shortcuts on DuckDuckGo Search
+How To Use Cloud Save to Save and Sync Your DuckDuckGo Search Settings
+Does DuckDuckGo Search have Instant Answers?
+How do news rankings work on DuckDuckGo Search?
+Why doesn't DuckDuckGo Search display the number of results?
+Can a traditional search result be removed from DuckDuckGo?
+Does DuckDuckGo Search have a shorter domain name?
+Is DuckDuckBot related to DuckDuckGo?
+Is DuckAssistBot related to DuckDuckGo?
+Advertise on DuckDuckGo Search
+Easter Egg Dax Logos
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

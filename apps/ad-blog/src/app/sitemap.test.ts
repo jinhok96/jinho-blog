@@ -26,6 +26,7 @@ function makePost(overrides: Partial<Post> & Pick<Post, 'slug' | 'updatedAt'>): 
     category: 'ai-tools',
     tags: [],
     draft: false,
+    hub: false,
     createdAt: '2026-01-01T00:00:00.000Z',
     thumbnail: `/_static/mdx/posts/generated/${overrides.slug}.webp`,
     content: '본문',

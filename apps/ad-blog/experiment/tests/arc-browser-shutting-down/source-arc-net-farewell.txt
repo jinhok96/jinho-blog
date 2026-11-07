@@ -1,0 +1,131 @@
+# arc.net (A farewell to Arc)
+URL: https://arc.net/
+fetched: 2026-10-25 UTC (curl + Chromium render)
+
+ A farewell to Arc 
+ A farewell to Arc
+ Arc is sunsetting on December 22, 2026. Scroll to read what’s happening and see what’s next.
+ Read more 
+ We’ve decided to sunset Arc on December 22, 2026
+ That’s not an easy sentence to write. We spent years building Arc and celebrating each and every release along the way: we have so much pride and love for what we made alongside the Arc community.
+ Our priority is to deliver best-in-class security for our members. Keeping a browser secure takes constant, dedicated work that is only increasing in the age of AI. Dia , our new browser, was built from the ground up to meet today’s security standards, so that’s where our engineering and security teams will focus moving forward.
+ We’ve worked to make switching to Dia as easy as possible for Arc members. Here’s how:
+ Your passwords, bookmarks, extensions and history come over to Dia seamlessly.
+ Spaces, Folders, and Tab Groups are in Dia and import over with your data intact.
+ Dia now surpasses Arc benchmarks in stability, speed, and security.
+ The browser features you use in Arc are free in Dia, and the AI is optional.
+ Thank you for using Arc, for pushing us to make it better, and for building alongside us. The team that made Arc is the same team behind Dia, and some of our most ambitious work is just ahead. We’d love for you to be there with us when it lands.
+ For everyone at
+ Timeline
+ October 22
+ New Arc accounts can no longer be created. For existing Arc members, nothing will change yet. The latest version of Arc adds an option to export all of your data out of Arc, and an even smoother import into Dia.
+ November 23
+ On iOS and Android, Browse for Me and other AI features will be disabled. Arc Search will continue working as a browser, but you will no longer be able to sign in or sync your tabs.
+ December 22
+ You will no longer be able to access or use Arc on macOS or Windows. Arc accounts will be deactivated, with their personal data deleted within 30 days. Arc Search for Android will be pulled from the Google Play Store.
+ Moving to Dia is easy
+ Dia is the browser our team built to replace Arc. Arc members can import their setup directly from Arc to Dia.
+ Your Spaces are now Profiles
+ They come over to Dia with all your info. Use profiles for work, personal browsing, and everything in between. Swipe between them to switch contexts just like in Arc.
+ Keep your tabs in the Sidebar
+ Choose Sidebar tabs for the familiar vertical layout. Keep your tabs close by, or hide the sidebar with / Ctrl + S when you need to focus.
+ Bring your Pinned Tabs and Favorites
+ They come over from Arc when you import, with their custom names intact. Your everyday sites stay easy to reach.
+ Folders come along, too
+ They import seamlessly, now called Tab Groups in Dia.
+ Download Dia Send Dia download link Learn more about Dia 
+ mmmhome.io 
+ I 
+ Personal 
+ Spotify
+ Merida Trip
+ Travel Docs
+ New Tab
+ M MMMHome
+ MMMHOME Shop Travel Art 3 
+ Personal 
+ Spotify 
+ 📖 Read Later 
+ 🚙 Road Trip 
+ Adventure Journal #36 
+ Airbnb San Diego, CA 
+ Midcentury Home with Pool 
+ Tiny Home with a View 
+ 📖 Reading List 
+ The Third Self 
+ The New York Times - Discover the latest 
+ Something Rich and Strange 
+ The Beatles Behind the Scenes 
+ 🪐 Space Travel 
+ 🎸 Music 
+ Best Jazz Albums of All Times 
+ How Jimi Hendrix Got His Unique Sound 
+ Nike ACG Ultrafly Trail 
+ Vox on Culture 
+ Joshua Tree Roadtrip 
+ Activity - The Browser Company 
+ Design › Projects 
+ New Tab 
+ Dia — 2026 H2 
+ 📌 Standups 
+ 🚀 H2 Launch 
+ Launch plan 
+ Arc’s greatest hits 
+ Design › Projects 
+ Sidebar tabs · Pull Request #482 
+ 💬 Feedback 
+ #dia-feedback 
+ Arc Members · Discord 
+ Switcher interviews 
+ 🧪 Prototypes 
+ 📊 Metrics 
+ Week 42 · Calendar 
+ Inbox (12) 
+ Reviews requested 
+ Q4 planning 
+ New Tab 
+ spotify.com
+ Chat
+ Questions
+ When will I no longer be able to use Arc? 
+ Arc for macOS and Windows will remain available until December 22, 2026. Until then, Arc will continue to work as usual and will receive basic updates.
+ On December 22, 2026, Arc for macOS and Windows will stop working, and you will no longer be able to sign in to your Arc account.
+ As of October 22, 2026, new Arc accounts can no longer be created. Existing accounts are not affected by this change.
+ What is replacing Arc? 
+ Dia is replacing Arc. It’s the new browser from the team that built Arc, and it keeps the Arc features you rely on, like vertical tabs in the Sidebar, Spaces (now called Profiles), Pinned Tabs, Folders, and Split View. You can bring your Arc data (passwords, extensions, profiles, tabs) over in a few clicks, and Dia is free to download for macOS and Windows at  diabrowser.com .
+ Can I import Arc data into Dia? 
+ Yes, in just a few clicks during sign up. Download Dia , and when it asks which browser to import from, select Arc. Dia brings over your passwords, history, tabs, Profiles, Folders, bookmarks, and extensions, on both macOS and Windows.
+ Already using Dia? You can import from Arc at any time before December 22, 2026. On macOS, go to  Dia > Import from Another Browser from the Mac menu bar. On Windows, open the Dia app menu and select Import from another browser .
+ Can I export my tabs out of Arc? 
+ Yes. If you’re moving to Dia, you don’t need to export anything first, because Dia brings your logins, extensions, Spaces, Favorites, Pinned Tabs and Folders straight over from Arc.
+ If you’d like to use your tabs in another browser, you can save them as a list of links before December 22, 2026.
+ On macOS Go to  Arc > Settings in the Mac menu bar.
+ Select Advanced , then Export Data .
+ Choose where to save the file, then select Save .
+ On Windows Open Arc’s settings: press Ctrl + , , or open the Arc menu and select Settings .
+ In the  Advanced section, find Export Spaces and tabs and select Export Data .
+ Choose where to save the file, then select Save .
+ Haven’t opened Arc in a while? You can still export your data before December 22. Download Arc again using the link for your computer, then export your data from inside the app.
+ Download Arc for macOS 
+ Download Arc for Windows 
+ On iOS (Arc Search) Tap the Tab Switcher icon in the bottom-left corner, tap Settings, then tap Export Data to share or copy a list of your open tabs.
+ On Android (Arc Search) Tap the Tab Switcher (the stacked tabs button) in the bottom-left corner, tap Settings (⚙️), tap Storage , then tap Export data to share or copy a list of your open tabs.
+ What happens to my Arc data? 
+ We will deactivate all Arc accounts on December 22, 2026. Once an Arc account is deactivated, personal data related to the account is deleted within 30 days.
+ If you have an account for both Dia and Arc, this will only affect personal data related to your Arc account.
+ As of December 22, 2026, we will no longer be able to identify or retrieve Arc user data for data requests. To keep your data, export it from Arc or import it into Dia before December 22, 2026. For instructions, see the FAQs “Can I export my tabs out of Arc?” and “Can I import Arc data into Dia?”.
+ What about Arc Search on mobile? 
+ Arc Search is changing on iOS and Android. Here’s what to expect on each platform.
+ Arc Search on iOS October 22, 2026: To save your open tabs, go to  Settings > Export Open Tabs… 
+ November 23, 2026: Browse for Me and other AI features turn off, and you can no longer sign in or sync with Arc. You’ll still be able to use a lite version of the mobile browser.
+ Arc Search on Android October 22, 2026: To save your open tabs, go to  App Settings > Export Data .
+ November 23, 2026: Browse for Me and other AI features turn off, and you can no longer sign in or sync with Arc.
+ December 22, 2026: Arc Search for Android is deprecated fully, removed from the Google Play Store and from the devices it’s installed on.
+ I have a more specific question, where can I get help? 
+ Until December 22, 2026, you can reach our team through the chat on the Arc Help Center at  resources.arc.net . The Help Center also covers the full Arc deprecation timeline, how to move to Dia, and how to export or delete your Arc data.
+ Already using Dia? You can chat with Dia’s support team from inside Dia. On macOS, go to  Help > Chat with Support . On Windows, open the Dia app menu and select Help > Chat with support .
+ What is Dia and why is it a good replacement for Arc? 
+ Dia is made by the team that made Arc, and it’s where all of our focus is going, including our whole security team. It’s built from the ground up for today’s security threats, it has Arc’s greatest hits, and it’s a lot faster. The browser features you use in Arc are free in Dia, and the AI is optional. Give Dia a try. 
+ Moving to Dia is easy
+ Download Dia 
+ 

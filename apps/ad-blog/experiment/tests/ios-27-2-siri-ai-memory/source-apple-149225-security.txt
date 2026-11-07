@@ -1,0 +1,56 @@
+# 가져온 시각: 2026-10-26T21:28:23.560Z
+# 원본: https://support.apple.com/en-us/149225
+About the security content of iOS 18.7.11 and iPadOS 18.7.11 - Apple Support
+https://support.apple.com/en-us/149225
+
+Download JSON
+
+About the security content of iOS 18.7.11 and iPadOS 18.7.11
+
+This document describes the security content of iOS 18.7.11 and iPadOS 18.7.11.
+
+About Apple security updates
+
+For our customers' protection, Apple doesn't disclose, discuss, or confirm security issues until an investigation has occurred and patches or releases are available. Recent releases are listed on the Apple security releases page.
+
+Apple security documents reference vulnerabilities by CVE-ID when possible.
+
+For more information about security, see the Apple Product Security page.
+
+iOS 18.7.11 and iPadOS 18.7.11
+
+Released October 26, 2026
+
+Audio
+
+Available for: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generationAir 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: An app may be able to leak sensitive user information
+
+Description: A logic issue was addressed with improved checks.
+
+CVE-2026-65339: Mustafa Calap (@ordinal0, dbg.re), Meta Red Team X - Nik Tsytsarkin
+
+CoreGraphics
+
+Available for: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generationAir 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: Processing a maliciously crafted file may lead to arbitrary code execution. Apple is aware of a report that this issue may have been exploited in an extremely sophisticated attack against specific targeted individuals on versions of iOS before iOS 27.
+
+Description: An out-of-bounds write issue was addressed with improved bounds checking.
+
+CVE-2026-86950: Meta Product Security
+
+CoreMedia
+
+Available for: iPhone XS, iPhone XS Max, iPhone XR, iPad 7th generationAir 4th generation and later, iPad 9th generation and later, and iPad mini 6th generation and later
+
+Impact: A malicious app may be able to access the camera without user permission
+
+Description: An access issue was addressed with improved access restrictions.
+
+CVE-2026-86990: Mustafa Calap (@ordinal0, dbg.re)
+
+Information about products not manufactured by Apple, or independent websites not controlled or tested by Apple, is provided without recommendation or endorsement. Apple assumes no responsibility with regard to the selection, performance, or use of third-party websites or products. Apple makes no representations regarding third-party website accuracy or reliability. Contact the vendor for additional information.
+
+Published Date: October 26, 2026

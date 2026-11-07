@@ -1,0 +1,41 @@
+# Google Chrome for Testing 157.0.8103.38 (Official Build, Linux x86_64, storage.googleapis.com/chrome-for-testing-public/157.0.8103.38/linux64/chrome-linux64.zip), new profile, signed out, settings page switch states (cr-toggle checked/disabled), dumped 2026-11-03 21:5x UTC by survey157.cjs
+# Chrome for Testing uses Chromium branding in some strings ("Chromium understands forms better…", "Password Manager" instead of "Google Password Manager"); switch names and states are compared with source-chrome-156-settings-text.txt
+
+## chrome://version → chrome://version/
+Google LLC | Copyright 2026 Google LLC. All rights reserved. | Google Chrome for Testing | 157.0.8103.38 | ( | Official Build | ) | (x86_64) | Revision | a733b5afbb3ba618844ff8876b89ad1a774b2f18-refs/branch-heads/8103@{#1034} | OS | Linux | JavaScript | V8 | 15.7.112.23 | User Agent | Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/157.0.0.0 Safari/537.36
+
+## chrome://settings/autofill → chrome://settings/autofill
+- Smarter form understanding: off, greyed out (on another subpage)
+- Save and fill addresses: on (on another subpage)
+- Autofill verification codes from Gmail: off (on another subpage)
+- Automatically verify your email: on (on another subpage)
+- Save and fill identity docs: off, greyed out (on another subpage)
+- Save and fill payment methods: on (on another subpage)
+- Save security codes: on (on another subpage)
+- Card benefits: on (on another subpage)
+- Allow sites to check if you have payment methods saved: on (on another subpage)
+- Save and fill travel info: off, greyed out (on another subpage)
+
+## chrome://settings/addresses → chrome://settings/contactInfo
+- Save and fill addresses: on
+- Automatically verify your email: on
+
+## chrome://settings/payments → chrome://settings/payments
+- Save and fill payment methods: on
+- Save security codes: on
+- Card benefits: on
+- Allow sites to check if you have payment methods saved: on
+
+## chrome://settings/identityDocs → chrome://settings/identityDocs
+- Save and fill identity docs: off, greyed out
+
+## chrome://settings/travel → chrome://settings/travel
+- Save and fill travel info: off, greyed out
+
+## chrome://password-manager/settings → chrome://password-manager/settings
+- Offer to save passwords and passkeys: on
+- Automatically create a passkey to sign in faster: on
+- Sign in automatically: on
+
+## chrome://settings/autofill page text (first 1,800 chars)
+Settings | Search settings | Settings | You and Google | Autofill and passwords | Privacy and security | Performance | AI innovations | Appearance | Search engine | Default browser | On startup | Languages | Downloads | Accessibility | System | Reset settings | Extensions | About Chrome for Testing | No search results found | Go to | Google Chrome help | if you can't find what you're looking for | Your | browser is managed | by your organization | Autofill and passwords | Manage your autofill info for faster browsing — info like passwords, payment methods, addresses, and ID cards | Autofill and passwords | Password Manager | Opens in new tab | Passwords | ( | 0 | ) | Passkeys | ( | 0 | ) | Payments | Credit & debit cards | ( | 0 | ) | Loyalty cards | ( | 0 | ) | Contact info | Addresses | ( | 0 | ) | Identity docs | Driver's licenses | ( | 0 | ) | Identity cards | ( | 0 | ) | Passports | ( | 0 | ) | Travel | Travel info | ( | 0 | ) | Vehicles | ( | 0 | ) | Autofill settings | Autofill settings | Settings that affect how autofill works across different types of info | Smarter form understanding | Chromium understands forms better and can autofill them faster for you | When on | Chromium can autofill difficult fields that standard autofill might miss | Things to consider | To offer suggestions and improve this feature, the page’s URL and content are shared with Google | Related Google services | Password Manager | Opens in new tab | Google Wallet | Opens in new tab | Google Account | Opens in new tab | Contact info | Save and fill addresses | Includes information like phone numbers, email addresses, and shipping addresses | Autofill verification codes from Gmail | Autofill verification codes sites use to improve your security. Chrome can get these codes from your Gmail. |

@@ -1,0 +1,72 @@
+
+				 Table of contents 
+				Exit editor mode
+			Ask Learn
+			Ask Learn
+			Reading mode
+			Table of contents
+			Read in English
+			Add
+			Add to Plans
+			Edit
+					Copy Markdown
+					Print
+						Note
+						Access to this page requires authorization. You can try signing in or changing directories.
+						Access to this page requires authorization. You can try changing directories.
+Manage AI features in Notepad
+Applies to: ✅ Windows 11
+			Feedback
+						Summarize this article for me
+				In this article
+Looking for consumer information? See Enhance Your Writing with AI in Notepad.
+Notepad in Windows includes AI features powered by Copilot that help refine and shorten text with the assistance of GPT. By default, these AI features are enabled on managed devices. IT admins can choose if they want to allow these features to be used in their organizations.
+This article provides information about managing AI features for Notepad in a commercial environment.
+Download the Notepad administrative template (ADMX)
+The Notepad Administrative Template (ADMX) can be downloaded from the Microsoft Download Center. The group policy settings contained in the ADMX file are machine-wide for all users.
+Policy settings
+DisableAIFeaturesInNotepad
+This policy setting allows you to control whether AI features are disabled in the Windows Notepad app.
+If this policy is enabled, users can't access AI features in the Notepad app.
+If this policy is disabled or not configured, users can access AI features in the Notepad app.
+Supported versions
+Windows 11, version 22H2 or later.
+Notepad version 11.2503.16.0 or later.
+Configure policies
+To configure Notepad policies, you can use:
+Microsoft Intune
+Group policy
+Registry
+The following instructions provide details how to configure your devices. Select the option that best suits your needs.
+ Intune
+ GPO
+ Registry
+To configure devices using Microsoft Intune, import the Notepad administrative template (ADMX) files and then create a custom Configuration profile based on the imported ADMX files.
+Note
+The Notepad administrative template (ADMX) depends on the Windows administrative template (C:\Windows\PolicyDefinitions\Windows.admx) file, so make sure you import it as well.
+For machines within a corporate network, you can use Group Policy with Active Directory (AD) to deploy Notepad policies. Steps:
+Download the latest Notepad administrative template (ADMX).
+On your domain controllers, copy and paste the following files to the relevant location, depending if you store Group Policy templates in the local PolicyDefinitions folder or the Group Policy Central Store. Replace contoso.com with your domain name, and en-US if you're using a different language.
+Filename: WindowsNotepad.admx
+Local location: C:\Windows\PolicyDefinitions\
+Central Store: \\contoso.com\SYSVOL\contoso.com\Policies\PolicyDefinitions
+Filename: en-US\WindowsNotepad.adml
+Local location: C:\Windows\PolicyDefinitions\en-US\
+Central Store: \\contoso.com\SYSVOL\contoso.com\Policies\PolicyDefinitions\en-US
+On a device you use to manage Group Policy, open the Group Policy Management Console (GPMC) and create or edit a policy that targets your devices.
+To verify that the Notepad administrative template is available, browse to Computer Configuration > Policies > Administrative Templates > Windows Components > Notepad . You should see policy settings for Notepad available for you to configure.
+To disable AI features in Notepad, set the DisableAIFeatures registry value to 1 under HKLM:\SOFTWARE\Policies\WindowsNotepad.
+Feedback
+					Was this page helpful?
+						Yes
+						No
+							No
+								Need help with this topic?
+								Want to try using Ask Learn to clarify or guide you through this topic?
+			Ask Learn
+			Ask Learn
+				 Suggest a fix? 
+				Additional resources
+				Last updated on 
+		2025-05-09
+				

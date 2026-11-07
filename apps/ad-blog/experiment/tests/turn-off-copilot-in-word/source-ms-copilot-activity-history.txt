@@ -1,0 +1,29 @@
+Manage your Copilot activity history in the privacy dashboard
+Note
+This article only applies to when you're signed in with your Microsoft account. For example, a personal email address.
+For information about managing your Microsoft Copilot activity history when you're signed in with your work or school account, see Delete your Microsoft Copilot activity history.
+Microsoft Copilot is your AI assistant designed to help you with a range of tasks and activities. Activity history is a record of the things you type in Copilot and the AI-assisted responses you receive from Copilot.
+To manage your Copilot activity history, start by signing in to the privacy dashboard with your Microsoft account. 
+Manage activity history in Copilot apps
+To manage your activity history in Copilot apps, such as https:⁠//copilot.microsoft.com:
+In the dashboard, go to Privacy > Empower your productivity > Copilot > Your Copilot app activity history > Copilot apps.
+You can select either Export all activity history or Delete all activity history.
+If you select Export all activity history, a comma-separated values (CSV) file is downloaded to your device. Open the file to review your activity history.
+If you select Delete all activity history, review the information in the Are you sure you want to clear your Copilot activity history? dialog. If you're sure you want to clear this information, select Clear.
+Manage activity history for Copilot in Microsoft 365 apps
+To manage your activity history for Copilot in Microsoft 365 apps (for example, in Word) or for Chat in the Microsoft Copilot app:
+In the dashboard, go to Privacy > Empower your productivity > Copilot > Your Copilot app activity history > Copilot in Microsoft 365 apps.
+You can select one of the following choices:
+Export all Copilot in Microsoft 365 apps activity history
+Export all Copilot Chat activity history
+Delete all activity history
+If you choose to export your activity history, a comma-separated values (CSV) file is downloaded to your device. Open the file to review your activity history. If your activity history includes an image, see How to view images in exports or downloads from the privacy dashboard.
+If you select Delete all activity history, review the information in the Are you sure you want to clear your Copilot activity history? dialog. If you're sure you want to clear this information, select Clear.
+These steps apply to the following Microsoft 365 apps:
+Excel
+OneNote
+Outlook
+PowerPoint
+Teams
+Word
+								

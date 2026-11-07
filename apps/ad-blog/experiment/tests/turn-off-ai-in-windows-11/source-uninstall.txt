@@ -1,0 +1,35 @@
+
+Uninstall or remove apps and programs in Windows
+			Applies To
+Windows 10 Windows 11 
+Summary 
+​​​​​​​There are different ways to remove apps and programs, so if you can't find the one you're looking for, you can try another location. Note that some apps and programs are built into Windows and can't be uninstalled. You can try to repair a program first, if it's just not running correctly.
+            Uninstall from the Start menu
+Select Start  > All apps and search for the app in the list shown.
+Press and hold (or right-click) on the app, then select Uninstall.
+            Uninstall in Settings 
+Select Start  > Settings  > Apps > Installed apps .
+Find the app you want to remove, select More  > Uninstall.
+Note: Some apps can't be uninstalled from the Settings app right now. For help uninstalling these apps, follow the instructions to uninstall from Control Panel.  
+            Uninstall from Control Panel 
+In search on the taskbar, enter Control Panel and select it from the results.
+Select Programs > Programs and Features.
+Press and hold (or right-click) on the program you want to remove and select Uninstall or Uninstall/Change. Then follow the directions on the screen.
+Need more help?
+If you can't find an app or program, try the tips in See all your apps in Windows and How to check if an app or program is installed in Windows.
+If you get an error message when you're uninstalling, try the Program Install and Uninstall Troubleshooter.
+If you're trying to remove malware, see Stay protected with Windows Security to find out how to run a scan. Or if you use another antivirus software program, check their virus protection options.
+Need more help?
+Want more options?
+ DiscoverCommunity
+Explore subscription benefits, browse training courses, learn how to secure your device, and more.
+Microsoft 365 subscription benefits
+Microsoft 365 training
+Microsoft security
+Accessibility center
+                Communities help you ask and answer questions, give feedback, and hear from experts with rich knowledge.
+Ask the Microsoft Community
+Microsoft Tech Community
+Windows Insiders
+Microsoft 365 Insiders
+						

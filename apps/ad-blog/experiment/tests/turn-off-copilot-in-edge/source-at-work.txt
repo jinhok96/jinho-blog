@@ -1,0 +1,188 @@
+URL: https://support.microsoft.com/en-us/edge/copilot/using-microsoft-copilot-in-edge-at-work
+Final: https://support.microsoft.com/en-us/edge/copilot/using-microsoft-copilot-in-edge-at-work
+Title: Using Microsoft Copilot in Edge at work | Microsoft Support
+Fetched: 2026-10-30 16:46 UTC
+
+Skip to main content
+Microsoft
+Cancel
+Getting started with Copilot in Microsoft Edge
+Using Microsoft Copilot in Edge at work
+Browse with Copilot
+How context clues work in Copilot in Edge
+Shopping with Microsoft Copilot
+Copilot Journeys
+Using Microsoft Copilot in Edge at work
+Get help with Copilot
+Can I choose which sites to allow Copilot to browse?
+How do I use Microsoft Copilot in Edge at work?
+
+Microsoft Edge for Business is Microsoft's AI-powered browser for work. With Microsoft Copilot in Edge, you can get answers to questions, summarize web pages, PDFs, and videos, research topics, and complete tasks without leaving your browser tab on desktop or mobile. Use Copilot to make decisions, gather information, and stay productive while you browse. Your admin has flexibility in controlling how their organization uses Copilot in Edge.
+
+To learn more about using Copilot in Edge, see Copilot in Edge.
+
+What you can do with Copilot in Edge
+Copilot in Edge side pane in Microsoft Edge
+
+Copilot in Edge is available as you browse, giving you contextual help without leaving your current page. Open it anytime by selecting the Copilot icon in the Edge toolbar, then ask questions about the current web page, summarize content, analyze PDFs, compare information across pages, or get help moving a task forward.
+
+For Microsoft 365 Copilot Premium subscribers, the experience becomes even more powerful. It connects to your Microsoft 365 data through the graph, helping you bring in relevant files, context, and insights as you work.
+
+Copilot new tab page in Microsoft Edge
+
+The Copilot new tab page in Microsoft Edge is designed to help you start your workday with everything you need in one place. It combines AI chat, Microsoft Search, recent files, meetings, and work content in a single experience.
+
+Work cards highlight what matters most, like upcoming meetings and active documents.
+Suggested prompts recommend chat prompts based on your workflow, so you can quickly move from planning to doing.
+
+To turn it on, go to Edge Settings > Copilot and AI > Copilot new tab page and toggle on the Copilot new tab page experience. Your organization may also enable it through policy.
+
+Browse with Copilot in Microsoft Edge for work
+
+Browse with Copilot allows Microsoft Copilot to navigate websites and perform browser actions on your behalf when you explicitly ask it to. It can help you research topics, compare information across websites, complete supported forms, and carry out multi-step browser tasks.
+
+When Copilot acts on your instructions, you see clear visual indicators, like a cursor in the tab heading and a blue hue around the tab Copilot is working in. You can pause or interrupt the process at any time. Copilot doesn't access saved passwords or payment methods, and it pauses on sensitive actions to ask for your confirmation before continuing.
+
+This capability is currently available in a limited preview to test the experience with enterprise tenants who have opted in. Contact your IT admin to learn more about the preview.
+
+Copilot respects existing tenant admin controls and Microsoft 365 data protection policies.
+
+Use Browse with Copilot
+
+Follow these steps to start using Browse with Copilot in Microsoft Edge:
+
+Open Microsoft Copilot Chat in Microsoft Edge.
+In the menu above the text box, select Chat only to open the menu, then select Browse with Copilot.
+Tell Copilot what you want it to do.
+The more detailed your prompt, the better. The first time you browse with Copilot, you'll be asked to acknowledge a consent form.
+Browse the web with Copilot
+
+Use Copilot to browse websites, compare information, and complete supported tasks. You decide when Copilot helps: Copilot won't take action on a webpage unless you ask it to.
+
+Ask Copilot to navigate: Find the pricing page for a SaaS product and compare the pricing plans.
+Ask Copilot to act, where supported by the site: Complete this form or add this item to my cart.
+Ask Copilot to execute multi-step workflows: Research my top three competitors, summarize key insights from their blogs, and create a newsletter draft I can share with partners.
+How Copilot handles your data and privacy
+Enterprise Data Protection in Microsoft Copilot
+
+When you sign in to Microsoft Copilot with a Microsoft Entra ID work account, you receive Enterprise Data Protection (EDP), which provides enhanced security and privacy protections for organizational data. This means the information you share with Copilot won't be used to train the AI model. Your data stays private and secure.
+
+How Copilot answers your prompts
+
+Copilot in Edge generates responses based on your prompt, conversation history, and, when allowed by your organization's settings, content from the current webpage.
+
+To learn more about how Copilot answers your questions, see Frequently asked questions about Copilot Chat.
+
+To learn how Copilot in Edge uses context clues to generate responses, see How context clues work in Copilot in Edge | Microsoft Support.
+
+Data and consent used by Copilot in Edge
+
+If your organization has enabled Copilot in Edge, you may see a consent dialog asking whether Copilot can access page content, such as information from the current website, web page, or PDF. In some cases, your admin might have explicitly enabled or disabled Copilot's access to page content, in which case you won't see a consent dialog.
+
+How Data Loss Prevention is enforced with Copilot in Edge
+
+Edge for Business comes with native capabilities for enforcing Data Loss Prevention (DLP) policies. DLP policies help prevent sensitive business information from being shared with AI features when access is restricted by your organization, so your organization's approach to preventing unauthorized data disclosure automatically extends to Copilot in Edge. When your organization protects a page with DLP and you try to summarize or access that page's content through Copilot in Edge, you'll see a message explaining that your organization won't allow Copilot to access the page.
+
+When using Copilot in Edge with DLP policies, access to protected web pages and PDFs is restricted. As a result, you can't copy or paste content on protected sites, and you can't summarize protected content using Copilot in Edge on those sites. Your organization can also block Copilot from receiving sensitive files through the file upload feature in Copilot in Edge. To learn more about what can be summarized in Copilot in Edge, including sites protected by DLP policies, see Microsoft Copilot Chat in Edge and access to page content.
+
+Information use and storage
+
+To learn more about how Copilot uses and stores your data, see Privacy and security of web queries.
+
+Our commitment to responsible AI
+
+Microsoft has numerous protective measures in place that are constantly evolving to help keep you safe. For details, see Empowering responsible AI practices.
+
+Frequently asked questions about Copilot in Edge
+How can I tell if I'm logged into my work profile?
+
+In most cases, you should be automatically signed into Microsoft Copilot with your Entra ID account after signing into Edge with your work profile. For more information about Entra IDs and signing into a work profile, see What's the difference between a Microsoft account and a work or school account?.
+
+What security mechanisms and protections are in place for Copilot in Edge?
+
+Edge for Business is built on a secure enterprise browser foundation, and the same enterprise-grade protections extend to AI-assisted browsing, so your organization stays in control.
+
+Existing protections continue to apply: Because Edge for Business has a secure enterprise browser foundation, data protections extend into AI experiences.
+Enterprise Data Protection with Microsoft Copilot: Prompts, responses, and files stay within your tenant and aren't used to train foundation models.
+How does Copilot use my information?
+
+When you submit a prompt to Copilot in Edge, it may use multiple sources of information to help answer in a way that's relevant and helpful to you. These can include your query, recent conversation history, and page context.
+
+When Copilot uses content from the webpage you're viewing in a work profile, that information may be stored and handled according to your organization's data protection policies. How information is handled can vary by feature.
+
+This helps ensure that Copilot works in ways that support your organization's security, compliance, and governance requirements.
+
+Will Copilot browse the web automatically?
+
+No. When you're using Edge at work, Copilot won't browse with you unless you explicitly choose the Browse with Copilot option.
+
+Can I choose which sites to allow Copilot to browse?
+
+Your IT admin chooses which sites Copilot can interact with through an allow list and block list.
+
+To see if a site allows browsing with Copilot, go to Edge Settings > Copilot and AI > Allow Copilot to browse with me. You should see an option to See which sites Copilot can browse.
+
+When will my tenant get browsing with Copilot?
+
+This capability is in a limited opt-in preview. To learn more, contact your IT admin.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026

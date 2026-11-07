@@ -1,0 +1,139 @@
+Crop, resize, or rotate an image in Preview on Mac - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+ Preview User Guide
+ Select version:
+ macOS 27 Golden Gate
+ macOS Tahoe 26
+ macOS Sequoia 15
+ macOS Sonoma 14
+ macOS Ventura 13
+ macOS Monterey 12
+ macOS Big Sur 11.0
+ macOS Catalina 10.15
+ macOS Mojave 10.14
+ macOS High Sierra
+Modifying this control will update this page automatically
+ Search this guide
+ Clear Search
+ Table of Contents
+Preview User Guide
+ Welcome
+ Get started
+ Open PDFs and images
+ View PDFs or images
+ View PDFs and images
+ Find text in PDFs
+ Interact with text in a photo
+ Bookmark PDF pages
+ View information about PDFs and images
+ Import images from a camera
+ See where a photo was taken
+ Display a PDF as a slideshow
+ View an animated GIF’s frames
+ Edit PDFs
+ Fill out and sign PDF forms
+ Select and copy text in a PDF
+ Highlight, underline, and strike out text
+ Add notes and speech bubbles to a PDF
+ Annotate a PDF
+ Combine PDFs
+ Add, delete, or move PDF pages
+ Crop or rotate a PDF
+ Add effects to a PDF
+ Edit images
+ Crop, resize, or rotate an image
+ Convert image file types
+ Remove a background or extract an image
+ Annotate an image
+ See what an image looks like on another device
+ Apply a color profile to an image
+ Share PDFs or images
+ Manage PDFs or images
+ Revert changes to PDFs and images
+ Copy PDFs and images
+ Lock PDFs and images
+ Export PDFs and images
+ Password-protect a PDF
+ Reduce the size of a PDF
+ Print PDFs and images
+ Work with 3D files
+ 3D file formats supported in Preview
+ View 3D files
+ Edit a 3D file
+ Export a 3D file
+ View content from your Mac on Apple Vision Pro
+ Save files
+ Change Preview settings
+ Keyboard shortcuts
+ Troubleshooting
+ If you can’t select or copy text in a PDF
+ If images or PDFs aren’t the correct size
+ If Go to Page shows the wrong page of a PDF
+ Copyright and trademarks
+Crop, resize, or rotate an image in Preview on Mac
+You can resize or rotate an image opened in Preview to fit into a particular spot. You can also reduce the file size to save disk space or to download an image more quickly.
+Open Preview for me
+Crop an image
+To crop an image, you first select the area you want to keep, and then discard the rest.
+Go to the Preview app on your Mac.
+Open an image.
+Click (if the Markup toolbar isn’t showing), then click .
+Select the portion of the page you want to keep.
+ If you want to view the dimensions of the content you’re selecting, choose Tools > Show Inspector, then click and choose a unit of measurement that’s displayed in the Crop Inspector window.
+Click in the Markup toolbar.
+Note: To undo the crop immediately, choose Edit > Undo Crop. To undo the crop later, find a version of the image before the crop. Choose File > Revert To > Browse All Versions, then browse the versions to restore the one you want.
+Change an image’s dimensions
+Go to the Preview app on your Mac.
+Open an image.
+Click (if the Markup toolbar isn’t showing), then click .
+Enter new values for width and height, or click the “Fit into” pop-up menu and choose a size.
+Resize the image by a percentage: Choose “percent” from the pop-up menu next to the Width and Height fields, then enter the percentage in those fields.
+Force the image to keep its original proportions: Select “Scale proportionally.” If you change either the width or height, the other value changes to maintain the proportions. If you choose a size from the “Fit into” pop-up menu, the image’s width or height may be smaller than the chosen size to maintain the proportions.
+Make the image’s dimensions smaller without losing any detail: Deselect “Resample image” before changing the width or height.
+Tip: To resize multiple images at the same time, display the images in the same window, select them in that window’s sidebar, then choose Tools > Adjust Size.
+Reduce an image’s file size
+Go to the Preview app on your Mac.
+Open the image you want to change.
+Choose Tools > Adjust Size, then select “Resample image.”
+Enter a smaller value in the Resolution field.
+The new size is shown at the bottom.
+Tip: To reduce the file size of multiple images at the same time, display the images in the same window, select them in that window’s sidebar, then choose Tools > Adjust Size.
+Rotate or flip an image
+Go to the Preview app on your Mac.
+Open the image you want to rotate or flip.
+Do any of the following:
+Rotate an image: Select the image, then click to rotate the image to the left. Continue clicking to keep rotating.
+To rotate the image to the right, press and hold the Option key and click until you’re done rotating the image.
+Flip an image: Choose Tools > Flip Horizontal or Flip Vertical.
+Tip: To rotate or flip multiple images at the same time, display the images in the same window, choose View > Thumbnails, select them in that window’s sidebar, then choose Tools > [Rotate or Flip].
+See alsoCrop or rotate a PDF in Preview on MacAnnotate an image in Preview on MacRemove a background or extract an image in Preview on Mac
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Please don’t include any personal information in your comment.
+ Maximum character limit is 250.
+ Submit
+ Thanks for your feedback.
+Apple Footer
+ 
+ Apple
+ Support
+ Preview User Guide
+ Crop, resize, or rotate an image in Preview on Mac
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

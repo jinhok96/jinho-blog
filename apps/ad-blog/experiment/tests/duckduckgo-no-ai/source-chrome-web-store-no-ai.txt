@@ -1,0 +1,105 @@
+URL: https://chromewebstore.google.com/detail/duckduckgo-no-ai-search/faoilnlkccdjdkpljainiiimmijofmpd
+Fetched: 2026-11-01T15:46:00.978Z
+Final URL: https://chromewebstore.google.com/detail/duckduckgo-no-ai-search/faoilnlkccdjdkpljainiiimmijofmpd
+
+Skip to main content
+chrome web store
+Sign in
+Discover
+Extensions
+Themes
+DuckDuckGo No-AI Search
+Duck Duck Go, Inc.
+4.6
+(
+
+39 ratings
+
+)
+Share
+Extension
+Privacy & Security
+40,000 users
+Add to Chrome
+Overview
+
+Search privately by default, without AI features.
+
+At DuckDuckGo, we believe AI should be optional. That's why we've created this extension, which sets your default search engine to DuckDuckGo, but to a version that doesn't use AI tools.
+
+Searching with the DuckDuckGo No-AI Search works the same as searching with DuckDuckGo Search, except AI-generated images are filtered out of image results by default, and all other AI features have been removed completely, all while delivering the trusted DuckDuckGo results you love.
+
+Feature highlights:
+ - All the great features of DuckDuckGo Search, minus AI tools. 
+ - Ideal for straightforward, seamless searching without AI tools.
+ - Perfect if you never want AI to help you search.
+
+Considering AI?
+If you prefer more flexibility, check out our full-featured extension, DuckDuckGo Search & Tracker Protection, where you can easily toggle AI settings on and off according to your preferences. It also blocks trackers as you browse for even more privacy. Get started at https://chromewebstore.google.com/detail/duckduckgo-search-tracker/bkdgflcldnnnapblkhphbgpggdiikppg
+
+Privacy Policy: https://duckduckgo.com/privacy
+Terms of Service: https://duckduckgo.com/terms
+
+4.6 out of 5
+39 ratings
+
+Learn more about results and reviews.
+
+See all reviews
+Details
+Version
+2026.8.19
+Updated
+August 19, 2026
+Flag concern
+Size
+14.97KiB
+Languages
+English
+Developer
+Duck Duck Go, Inc.
+20 Paoli Pike Paoli, PA 19301 US
+Website
+Email
+Phone
+Trader
+This developer has identified itself as a trader per the definition from the European Union and committed to only offer products or services that comply with EU laws.
+D-U-N-S
+012746047
+Privacy
+The developer has disclosed that it will not collect or use your data. To learn more, see the developer’s privacy policy.
+This developer declares that your data is
+Not being sold to third parties, outside of the approved use cases
+Not being used or transferred for purposes that are unrelated to the item's core functionality
+Not being used or transferred to determine creditworthiness or for lending purposes
+Related
+
+Sky Follower Bridge
+
+4.5
+
+Easily transfer your following users and list members from X to Bluesky.
+
+No AI Overview Block Thingy
+
+3.8
+
+Removes the intrusive and often blatantly incorrect "AI" Overview from standard searches.
+
+Hide Gemini and Google AI
+
+4.8
+
+Hides AI-generated elements from Google properties, like search results, Google Drive, and more.
+
+AI Content Shield - Hide AI Overviews & AI Mode | AI Content Blocker
+
+4.3
+
+AI Detector & AI Content Blocker - Hide Google AI Overviews, AI Mode, AI videos & posts on YouTube, social media, and web.
+
+About Chrome Web Store
+Developer Dashboard
+Privacy Policy
+Terms of Service
+Help

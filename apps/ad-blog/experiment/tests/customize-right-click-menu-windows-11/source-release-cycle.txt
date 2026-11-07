@@ -1,0 +1,72 @@
+# https://learn.microsoft.com/en-us/windows/deployment/update/release-cycle (fetched 2026-10-29 UTC, ms.date 2026-09-29)
+Windows updates help you to stay productive and protected. They provide your users and IT administrators with the security fixes they need, and protect devices so that unpatched vulnerabilities can't be exploited. Updates for the Windows client OS are typically cumulative. They include all previously released fixes to guard against fragmentation of the operating system. Reliability and vulnerability issues can occur when only a subset of fixes is installed.
+This article provides details on the types of updates that Microsoft provides, and how they help make the overall user experience simple and consistent.
+Tip
+If you'd like to know what's coming to Windows, check out the Windows Roadmap. The roadmap is a high-level overview of the features and functionality that are planned for future releases of Windows.
+Types of update releases
+Release type | 
+Description | 
+Release cycle | 
+Monthly security update | 
+A cumulative update that includes both security and non-security content | 
+Second Tuesday of each month, typically published at 10:00 AM Pacific Time (PST/PDT) | 
+Optional non-security preview update | 
+An optional cumulative update that's typically used for early validation of the monthly security update | 
+Fourth week of each month | 
+Out-of-band (OOB) update | 
+Resolves a recently identified issue or vulnerability | 
+As needed | 
+Annual feature update | 
+An update with new features and enhancements that also changes the Windows version | 
+Once a year in the second half of the calendar year | 
+Continuous innovation for Windows 11 | 
+Introduces new features and enhancements for Windows 11 | 
+Periodically included in an optional non-security preview update, then in the monthly security updates | 
+Monthly security update
+Most people are familiar with the monthly security update. The monthly security update is published on the second Tuesday of each month, typically at 10:00 AM Pacific Time (PST/PDT). This release might commonly be referred to as:
+- Patch Tuesday
+- Update Tuesday
+- B week releases (meaning the second week of the month)
+- Quality update
+- Security update
+- Latest cumulative update (LCU)
+Monthly security updates are cumulative. The release includes both new and previously released security fixes, along with non-security content introduced in the prior month's Optional non-security preview update. These updates help keep Windows devices secure and compliant by deploying stability fixes and addressing security vulnerabilities. Most organizations consider monthly security updates as mandatory.
+Monthly security updates are available through the following channels:
+- Windows Update
+- Windows Server Update Services (WSUS)
+- The Microsoft Update Catalog
+Enterprise environments use any combination of update management tools to deploy updates. These include Windows Update, Windows Autopatch, Microsoft Intune, Windows Server Update Services (WSUS), Microsoft Configuration Manager, the Microsoft Update Catalog, as well as non-Microsoft tools.
+IT admins can also enroll devices in hotpatch updates for a faster time to compliance. Hotpatch updates include security fixes only. They don't include the additional features and enhancements contained in monthly security updates. A quarterly baseline (a monthly security update with restart) is required to bring devices up to date on all the features. After that, the design is that the two subsequent monthly security updates are installed without requiring a restart.
+Note
+Starting Windows 11, version 24H2, Microsoft periodically releases cumulative updates as checkpoints. The subsequent updates consist of:
+- The update package files associated with the checkpoints
+- New update package files that contain incremental binary differentials against the version of binaries in the last checkpoint
+Multiple checkpoints might be released during the lifecycle of a given Windows release. Devices updating from Windows Update and WSUS can continue to seamlessly install the latest monthly security update regardless of whether there are any preceding checkpoint cumulative updates. No change is needed to your update process. If you use Catalog, review Checkpoint cumulative updates and Microsoft Update Catalog usage for reference and guidance.
+Optional non-security preview update
+Optional non-security preview updates provide IT admins an opportunity for early validation of that content prior to the monthly security update. Admins can test and validate production-quality releases ahead of the planned monthly security update release for the following month. These updates are optional, cumulative, non-security preview releases. New features might initially be deployed in the prior month's optional non-security preview update, then be released in the following monthly security update release. Optional non-security preview updates are typically released the fourth week of the month. These releases are only offered to the most recent, supported versions of Windows.
+Optional non-security preview releases might commonly be referred to as:
+- D week releases (meaning the fourth week of the month)
+- Preview updates
+- Preview CU
+- LCU preview
+To access the optional non-security preview release:
+- Navigate to Settings > Update & Security > Windows Update and select Check for updates.
+- Use Windows Insider Program for Business.
+- Use the Microsoft Update Catalog.
+OOB updates
+Out-of-band (OOB) updates might be provided to fix a recently identified issue or vulnerability. They're used in atypical cases when an issue is detected and can't wait for the next monthly update. Devices must be updated immediately to address security vulnerabilities or to resolve a quality issue impacting many devices. Out-of-band (OOB) updates are provided outside of the monthly schedule when there's an exceptional need.
+Some key considerations about OOB updates include:
+- OOB updates are always cumulative. OOB updates supersede any prior monthly security update and optional non-security preview update.
+- IT admins generally must deploy OOB updates off-cycle.
+- Some OOB updates are classified as critical. Critical OOB updates are automatically available to WSUS and Windows Update client policies, just like the monthly security updates.
+- Some OOB updates are classified as noncritical. Users or organizations can voluntarily obtain noncritical updates through the Microsoft Update Catalog only.
+Continuous innovation for Windows 11
+Starting with Windows 11, version 22H2, new features and enhancements are introduced periodically throughout the year. These features and enhancements use the normal update servicing channels you're already familiar with. At first, new features arrive in an optional non-security preview release and are gradually rolled out to unmanaged clients. These new features are released later as part of a monthly security update.
+Some of the new features might be disruptive to organizations. By default, these select features are turned off temporarily for all managed devices until the next annual feature update. A device is considered managed if it uses one of the following to determine which updates to install:
+- Windows Update client policies: Microsoft Intune manages updates for these devices.
+- WSUS: Microsoft Configuration Manager manages updates for these devices.
+Features that are turned off by default are listed in the KB article for the monthly cumulative update. If you want to enable features that are behind temporary enterprise control, use a client policy. For instructions, see Enable features that are behind temporary enterprise feature control.
+Annual feature updates
+Annual feature updates are released in the second half of the calendar year. These updates are typically cumulative and include all previously released fixes. They also include new features and enhancements. The annual feature update marks the start of the support lifecycle:
+- 24 months of support for Home and Pro editions of Windows
+- 36 months of support for Enterprise and Education editions

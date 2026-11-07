@@ -1,0 +1,33 @@
+URL: https://support.google.com/gemini/answer/14576209?hl=en
+TITLE: How your Gemini mobile app can help when your phone is locked - Gemini Apps Help
+
+How your Gemini mobile app can help when your phone is locked
+ On Android phones and tablets, you can get help from your Gemini mobile app by touch, or by saying "Hey Google" (if on) when your device is locked. This includes tasks like:
+ Get answers to general questions
+ Make calls or answer text messages (with user opt-in)
+ Read and reply to your messages in notifications
+ Ask Maps for directions or information about places
+ Handle some personal requests, like creating a reminder, events, or notes and lists
+ Search and summarize videos
+ Search hotels and flights
+ Control most smart devices, like Smart Displays or a smart thermostat
+ Set, stop, and snooze alarms
+ Set and stop timers
+ Control media, like pause a song
+ Control some phone features, like turn on the flashlight and change the volume
+ Important: 
+ When you give Gemini permission to respond while your phone is locked, you may still need to unlock your phone for certain tasks. For example, if your requests include personal content, like when you read your calendar, Gemini will ask you to unlock your phone first.
+ Some features have age requirements and aren’t available for supervised accounts.
+ Turn your Gemini mobile app’s lock screen setting on or off
+ Important: Gemini is available on most Android phone and tablet lock screens. To use Gemini on your Pixel Tablet, unlock your device. Learn more about using Gemini on your tablet .
+ To control whether Gemini can help you with answers to general questions when your device is locked:
+ On your Android phone or tablet, open Gemini .
+ At the left, tap Menu your Profile picture or I nitial Settings .
+ Tap Gemini on lock screen .
+ Turn Use Gemini without unlocking on or off.
+ Allow calls and text messages without unlocking your phone
+ You can ask Gemini to make calls and send text messages without unlocking your phone.
+ On your Android phone or tablet, open Gemini .
+ At the left, tap Menu your Profile picture or I nitial Settings .
+ Tap Gemini on lock screen .
+ Turn Make calls and send messages without unlocking on or off.

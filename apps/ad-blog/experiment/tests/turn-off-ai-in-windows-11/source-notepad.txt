@@ -1,0 +1,41 @@
+
+Enhance Your Writing with AI in Notepad	
+Get help with Copilot
+				Tell me about enhance Your Writing with AI in Notepad.
+				Explain how to create a centered cover page.
+				What if I can't adjust text's tone?
+Notepad in Windows includes Rewrite, Summarize, and Write—three AI-powered features that help you refine, shorten, and generate text with the assistance of GPT. Whether you want to fine-tune your writing or distill complex information, these AI features help you work more efficiently in Notepad. 
+Rewrite allows you to improve clarity, adjust tone, or modify the length of your content, making it easy to enhance your writing seamlessly.
+Summarize quickly shortens long-form text into high-level overviews, extracting key points from documents, notes, or articles to streamline your workflow.
+Write enables you to draft new content quickly and effortlessly by entering a prompt, with results tailored to your needs. It can start from a blank page or use selected text as a reference, generating relevant content based on your instructions and surrounding context.
+Whether you're starting from scratch, fine-tuning existing text, or distilling complex information, these AI features help you work more efficiently in Notepad. 
+Note
+AI features in Notepad are currently available for Windows Insiders in the Canary and Dev Channels on Windows 11. 
+To use these features, you need to sign in with your Microsoft account. AI features in Notepad are powered by a cloud-based service that requires authentication and authorization. Signing in with your Microsoft account also allows you to access your AI credits, which are required for generating content with GPT. 
+If you prefer not to use AI features, including Rewrite and Summarize, you can turn them off in Notepad settings. 
+Using Rewrite in Notepad
+To use Rewrite in Notepad, start by highlighting the text you want to improve. You can access Rewrite by right clicking the selected text and choosing a Rewrite option, selecting a Rewrite button in the toolbar, or using the Ctrl + D keyboard shortcut. Each of these methods allow you to choose from various rewrite options, such as rewriting the text, making it shorter or longer, or adjusting the tone and format. 
+For example, you can choose to rewrite a sentence to sound more formal or make a paragraph more concise. You can also customize the tone of your writing to match your needs, from casual to professional. 
+Tip
+If you don’t have Windows Notepad installed, you can download it from the Microsoft Store.
+After selecting your desired option, Notepad will generate three variations of the rewritten text. You can review these versions, and with one click, apply your chosen rewrite directly to your document, making it easy to refine your writing in real-time. 
+Using Summarize in Notepad
+To use summarize in Notepad, start by highlighting the text you want to shorten. You can access summarize by right clicking the selected text and choosing Summarize, selecting Summarize from the Copilot menu, or using the Ctrl + M keyboard shortcut. 
+After selecting summarize, you can customize the summary length by choosing short, medium, or long, depending on how much detail you want to retain. You can also regenerate summaries to see different variations and choose the one that best fits your needs. 
+After generating a summary, you can review the output and insert it directly into your document with one click. This makes it easy to distill complex information into simple, digestible points. 
+Using Write in Notepad
+To use Write in Windows Notepad, place your cursor where you want to insert new content or select text you'd like to use as a reference. You can access Write by right-clicking and choosing Write, selecting Write from the Copilot menu, or using the Ctrl + Q keyboard shortcut. These methods open a prompt dialog where you can describe the content you want to generate. 
+For example, you can ask Write to draft a friendly reminder email or create a list of travel tips. If you start with selected text, Write will take the reference and surrounding context into account to generate more relevant output. 
+After entering your prompt and clicking Send in the dialog, Notepad will generate content based on your request. The result will automatically appear on the canvas, and you can choose to Keep Text to add it to your document or discard it if it doesn’t meet your needs. You can also continue iterating by providing follow-up prompts to refine the content further.
+AI Credits
+AI features in Notepad are available worldwide, except in China, Macao, and Russia. Microsoft 365 Personal and Family Subscribers get 60 AI credits per month, while Copilot Pro Subscribers receive extensive usage of AI features.  
+Microsoft 365 subscribers can view their remaining AI credits via the AI Credit Balance button in the profile menu. Notifications are sent when credits are running low (5 credits remaining) and when they are exhausted. AI credits for Microsoft 365 subscribers are automatically replenished at the beginning of each month. 
+If you use all your monthly AI credits, you can purchase additional AI credits by subscribing to Copilot Pro. Learn more about AI credits. 
+Content Filtering
+Microsoft is committed to responsible AI practices and the ethical use of technology. When you use AI features in Notepad, content filtering is applied to ensure that the generated text is free from harmful, offensive, or inappropriate material. The filtering is based on criteria that reflect Microsoft's values and standards, including human dignity, diversity, and inclusion. While the content filtering system strives to prevent undesirable outputs, it may not catch all inappropriate cases. If you encounter generated content that is inappropriate or unexpected, you can report it using the Report Content option available in the dialog. 
+You are responsible for using AI features in Notepad in a respectful and lawful manner. This means you should not use the feature to create or share text that infringes on the rights or privacy of others, or that violates any laws or regulations in your jurisdiction. It's important to respect intellectual property and copyright when using the feature, avoiding the creation or sharing of text that could infringe on others' ownership or attribution. Additionally, be mindful of the potential consequences of your generated text and avoid using AI features to produce content that may cause harm, distress, or confusion to others. 
+Current Limitations
+While the UI supports multiple languages, the AI features in Notepad have been tested primarily in English, and results in other languages may vary in accuracy and quality.
+Privacy
+Microsoft respects your privacy and data security. Subscription based AI features in Notepad use an online Azure service to process and generate summaries based on your selected text. The Azure service processes the content and sends the generated summary back to you. Local model based AI features in Notepad process all data on your device and is not sent to the cloud.  Microsoft does not store the text or generated content after processing, ensuring that your data remains private and secure.
+					

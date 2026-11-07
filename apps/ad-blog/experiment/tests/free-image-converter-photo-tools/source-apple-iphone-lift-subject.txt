@@ -1,0 +1,1165 @@
+Lift a subject from the photo or video background on iPhone - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+ iPhone User Guide
+ Select version:
+ iOS 27
+ iOS 26
+ iOS 18
+ iOS 17
+ iOS 16
+Modifying this control will update this page automatically
+ Search this guide
+ Clear Search
+ Table of Contents
+iPhone User Guide
+ Welcome
+ Introducing iPhone
+ iPhone models
+ iPhone models compatible with iOS 27
+ iPhone 11
+ iPhone 11 Pro
+ iPhone 11 Pro Max
+ iPhone SE (2nd generation)
+ iPhone 12 mini
+ iPhone 12
+ iPhone 12 Pro
+ iPhone 12 Pro Max
+ iPhone 13 mini
+ iPhone 13
+ iPhone 13 Pro
+ iPhone 13 Pro Max
+ iPhone SE (3rd generation)
+ iPhone 14
+ iPhone 14 Plus
+ iPhone 14 Pro
+ iPhone 14 Pro Max
+ iPhone 15
+ iPhone 15 Plus
+ iPhone 15 Pro
+ iPhone 15 Pro Max
+ iPhone 16
+ iPhone 16 Plus
+ iPhone 16 Pro
+ iPhone 16 Pro Max
+ iPhone 16e
+ iPhone 17
+ iPhone 17 Pro
+ iPhone 17 Pro Max
+ iPhone Air
+ iPhone 17e
+ iPhone 18 Pro
+ iPhone 18 Pro Max
+ iPhone Duo
+ Setup basics
+ What’s new with iPhone Duo
+ Pose iPhone Duo
+ Make your iPhone your own
+ Take great photos and videos
+ Keep in touch with friends and family
+ Share features with your family
+ Use iPhone for your daily routines
+ Expert advice from Apple Support
+ What’s new in iOS 27
+ Set up and get started
+ Turn on and set up iPhone
+ Wake, unlock, and lock
+ Set up cellular service
+ View or change cellular data settings
+ Use Dual SIM
+ Set up iPhone Handoff on iPhone
+ Connect to the internet
+ Manage Wi-Fi settings
+ Set up mail, contacts, and calendar accounts
+ Apple Account and iCloud
+ Sign in and manage your Apple Account
+ Use iCloud
+ Subscribe to iCloud+
+ Change the date and time
+ Change the language and region
+ Change the name of your iPhone
+ Change the default apps
+ Change your default search engine
+ Basics
+ Find settings
+ Learn the meaning of iPhone status icons
+ Get information about your iPhone
+ Learn gestures for iPhone
+ Learn basic gestures
+ Learn gestures to navigate iPhone
+ Adjust the volume
+ Silence iPhone
+ Turn the iPhone flashlight on or off
+ Rotate your iPhone screen
+ Charge and monitor the battery
+ Charge the battery
+ Show the battery percentage
+ Charge with cleaner energy sources
+ Optimize battery charging
+ Set a charge limit
+ Understand Thermally Limited Charging
+ Save battery life with Power Modes on iPhone
+ Understand your iPhone battery usage and health
+ Use your apps
+ Open apps
+ Find and use your apps in App Library
+ Switch between open apps
+ Open two apps in Split View on iPhone Duo
+ Quit and reopen an app
+ Multitask with Picture in Picture
+ Access features from the Lock Screen
+ View Live Activities in the Dynamic Island
+ Perform quick actions
+ Search on iPhone
+ View and respond to notifications
+ Change notification settings
+ Manage storage on iPhone
+ Travel with iPhone
+ Personalize your iPhone
+ Change sounds and vibrations
+ Use and customize the Action button
+ Create a custom Lock Screen
+ Customize your Home Screen
+ Add an app
+ Add, edit, and remove widgets
+ Move apps and widgets on the Home Screen
+ Customize apps and widgets on the Home Screen
+ Lock or hide an app
+ Organize your apps in folders
+ Remove or delete apps
+ Change the wallpaper
+ Use and customize Control Center
+ Improve audio and record video calls
+ Adjust the screen brightness and color balance
+ Keep the iPhone display on longer
+ Use StandBy
+ Adjust iPhone display and text settings
+ Set up Focus, notifications, and Do Not Disturb
+ Set up a Focus
+ Allow or silence notifications for a Focus
+ Turn a Focus on or off
+ Stay focused while driving
+ Customize sharing options
+ Work with text and graphics
+ Enter, select, and revise text
+ Type with the onscreen keyboard
+ Dictate text
+ Commands for dictating text
+ Select, edit, and move text
+ Use predictive text
+ Translate text in apps
+ Use shorthand for frequently used text
+ Add or change keyboards
+ Add emoji, Memoji, and stickers
+ Capture and record the iPhone screen
+ Take a screenshot
+ Take a screen recording
+ Change the screen capture settings
+ Use Markup tools
+ Draw and handwrite with Markup
+ Add text, shapes, stickers, and more
+ Fill out forms, sign documents, and create signatures
+ Interact with content in a photo or video
+ Identify objects in your photos and videos
+ Lift a subject from the photo background
+ Camera
+ Take photos
+ Camera basics
+ Use camera tools
+ Use advanced camera tools
+ Use Photographic Styles
+ Take Live Photos
+ Take Burst mode shots
+ Take panoramic photos
+ Take a selfie
+ Take photos with Smart Take on iPhone Duo
+ Show your subject a photo preview on iPhone Duo
+ Get children and pets to look at the iPhone Duo camera
+ Take portraits
+ Take macro photos and videos
+ Take Night mode photos
+ Take Apple ProRAW photos
+ Capture a verifiable photo with Apple Reference Image
+ Use the Camera Control
+ Use the Camera Control to open another app
+ Adjust the shutter volume
+ Adjust HDR camera settings
+ Record a video
+ Take spatial photos and record spatial videos for Apple Vision Pro
+ Change sound recording options
+ Record ProRes video
+ Record video in Cinematic mode
+ Change video recording settings
+ Save camera settings
+ Customize the Main camera lens
+ Change advanced camera settings
+ View, share, and print photos
+ Use Live Text
+ Scan a QR code
+ Apps
+ App Store
+ Get apps
+ Use App Clips
+ Update apps
+ Install and manage fonts
+ Share and send apps
+ See your purchases and subscriptions
+ Change settings and restrictions
+ Books
+ Buy books and audiobooks
+ Read books
+ Annotate books
+ Access books on other Apple devices
+ Listen to audiobooks
+ Set reading goals
+ Organize books
+ Read PDFs
+ Calculator
+ Get started with Calculator
+ Use the basic calculator
+ Use the scientific calculator
+ Solve math with Math Notes
+ Work with graphs in Math Notes
+ Convert units or currency
+ See previous calculations
+ Calendar
+ Create and edit events in Calendar
+ Send invitations
+ Reply to invitations
+ Change how you view events
+ Search for events
+ Change Calendar settings
+ Schedule or display events in a different time zone
+ Keep track of events
+ Use multiple calendars
+ Use reminders
+ Use the Holidays calendar
+ Share iCloud calendars
+ Clock
+ See the world clock
+ Set an alarm
+ Change your wake up alarm
+ Use the stopwatch
+ Set timers
+ Compass
+ Contacts
+ Add and use contact information
+ Edit contacts
+ Add your contact info
+ Add or remove accounts
+ Use NameDrop on iPhone to share your contact info
+ Use contacts from the Phone app
+ Merge or hide duplicate contacts
+ Sync contacts across devices
+ Import contacts
+ Export contacts
+ FaceTime
+ Get started with FaceTime
+ Make and receive FaceTime calls
+ Set up FaceTime
+ Make FaceTime calls
+ Receive FaceTime calls
+ Create a FaceTime link
+ Use FaceTime audio call tools
+ Take a Live Photo
+ Use Live Captions and Live Translation
+ Use other apps during a call
+ Make a Group FaceTime call
+ Use SharePlay to watch, listen, and play together
+ Share your screen in a FaceTime call
+ Request or give remote control in a FaceTime call
+ Collaborate on a document in FaceTime
+ Use video conferencing features
+ Hand off a FaceTime call to another Apple device
+ Use camera controls during a FaceTime call on iPhone
+ Change the FaceTime audio settings
+ Leave a call or switch to Messages
+ Block a FaceTime call and report it as spam
+ Screen and filter calls
+ Files
+ Files basics
+ Modify files and folders
+ Find and view files and folders
+ Find your downloaded files on iPhone
+ Organize files and folders
+ Send files from the Files app
+ Set up iCloud Drive
+ Share files and folders in iCloud Drive
+ Transfer files from iPhone to a storage device, a server, or the cloud
+ Find My
+ Find people
+ Share your location
+ Meet up with a friend
+ Send your location via satellite
+ Add or remove a friend
+ Locate a friend
+ Get notified when friends change their location
+ Notify a friend when your location changes
+ Find devices
+ Add your iPhone
+ Add your iPhone Wallet with MagSafe
+ Get notified if you leave a device behind
+ Locate a device
+ Mark a device as lost
+ Erase a device
+ Remove a device
+ Find items
+ Add an AirTag
+ Share an AirTag
+ Share location of a lost item
+ Add a third-party item
+ Get notified if you leave an item behind
+ Locate an item
+ Mark an item as lost
+ Remove an item
+ Adjust map settings
+ Turn off Find My
+ Fitness
+ Get started with Fitness
+ See your activity summary
+ Adjust your Activity ring goals
+ Sync a third-party workout app
+ Workout
+ Start a workout in Fitness
+ Customize a workout
+ Use Workout Buddy
+ Log a workout
+ Use gym equipment in Fitness
+ Change Fitness settings
+ Share your activity
+ Freeform
+ Get started with Freeform
+ Create a Freeform board
+ Add content to a board
+ Draw or handwrite
+ Add text
+ Add shapes, lines, and arrows
+ Add diagrams
+ Add tables
+ Add images, scans, links, and other files
+ Apply consistent styles
+ Position items on a board
+ Share or present a board
+ Collaborate in boards and folders
+ Send a copy or PDF
+ Print a board
+ Navigate and present scenes
+ Organize your Freeform boards in folders
+ Search Freeform boards
+ Delete and recover boards and folders
+ Subscribe to Apple Creator Studio
+ Change Freeform settings
+ Games
+ Get started with the Apple Games app
+ Set up your Game Center profile
+ Find and download games
+ Subscribe to Apple Arcade
+ Connect with friends in the Apple Games app
+ Play with friends in the Apple Games app
+ Manage your game library
+ Connect a game controller
+ Change game-related settings
+ Report a problem with a game
+ Health
+ Get started with Health
+ Fill out your Health Details
+ View and share health data
+ Intro to Health data
+ View your health data
+ Share your health data
+ View health data shared by others
+ Get health records from your providers
+ Download health records
+ View health records
+ Monitor your walking steadiness
+ Track your menstrual cycle
+ Log menstrual cycle information
+ View menstrual cycle predictions and history
+ Log a pregnancy
+ Track menopause stages
+ Manage your medications
+ Track your medications
+ Learn more about your medications
+ Track your mental wellbeing
+ Log your state of mind
+ Take a mental health assessment
+ Prioritize your sleep
+ Set up sleep
+ Edit sleep schedules
+ Turn off alarms and delete sleep schedules
+ Turn Sleep Focus on or off
+ View your sleep history
+ Use headphone hearing safeguards
+ Check your headphone audio levels
+ Use hearing health features
+ Register as an organ donor
+ Back up your Health data
+ Home
+ Intro to Home
+ Set up accessories
+ Control accessories
+ Use Grid Forecast to plan your energy usage
+ View electricity usage and rates
+ Adaptive Temperature and Clean Energy Guidance
+ Set up HomePod
+ Control your home remotely
+ Create and use scenes
+ Use automations
+ Set up security cameras
+ Use Face Recognition
+ Unlock your door with a home key on iPhone or Apple Watch
+ Configure a router
+ Invite others to control accessories
+ Add more homes
+ Use Apple Intelligence with Home cameras and notifications
+ iTunes Store
+ Get music
+ Get ringtones
+ Manage purchases and settings
+ Journal
+ Get started
+ Write in your journal
+ Edit or delete an entry
+ Add formatting, photos, and more
+ Journal for your wellbeing
+ Build a journaling habit
+ View and search journal entries
+ Print and export entries
+ Protect your journal entries
+ Change Journal settings
+ Magnifier
+ Magnify or get information about things around you
+ Customize controls
+ Detection Mode
+ Detect doors, people, and furniture around you
+ Detect text around you and have it read out loud
+ Set up shortcuts for Live Recognition
+ Mail
+ Add or remove email accounts
+ Add and remove email accounts
+ Set up a custom email domain
+ Check your email
+ Use categories
+ Automatically clean up iCloud Mail
+ Write and send email
+ Send email
+ Unsend email with Undo Send
+ Reply to and forward emails
+ Save an email draft
+ Work with attachments
+ Add email attachments
+ Download email attachments
+ Annotate email attachments
+ Set email notifications
+ Search for email
+ Organize email in mailboxes
+ Use iCloud Mail rules to automatically apply actions to emails
+ Flag and filter email
+ Flag or block emails
+ Filter emails
+ Mail privacy and security
+ Use Hide My Email
+ Use Mail Privacy Protection
+ Change Mail settings
+ Delete and recover emails
+ Add a Mail widget to your Home Screen
+ Print emails
+ Maps
+ Get started with Maps
+ Set up Maps
+ Navigate
+ Set your home, work, or school address
+ Use Maps
+ Get driving directions
+ Set up electric vehicle routing
+ View a route overview or a list of turns
+ Change or add stops to your route
+ Get directions to your parked car
+ Get walking directions
+ Save walks or hikes
+ Get transit directions
+ Get cycling directions
+ Book rides
+ Download offline maps
+ Explore maps with immersive views
+ Find places
+ Find nearby attractions, restaurants, and services
+ Explore airports or malls
+ Get information about places
+ View Visited Places
+ Add places and notes to your Places
+ Share places
+ Mark a location with a pin
+ Rate places and add photos
+ Explore places with guides
+ Organize places with custom guides
+ Customize your experience
+ Share your estimated time of arrival
+ Change how you hear spoken directions
+ Choose a default travel mode and units
+ Check traffic conditions and report traffic incidents
+ Get weather info
+ Clear location history
+ Delete recent directions
+ Report an issue with Maps
+ Measure
+ Measure dimensions
+ View and save measurements
+ Measure a person’s height
+ Use the level
+ Messages
+ Get started with Messages
+ Set up Messages
+ Set up Messages
+ Turn read receipts on or off
+ Stop, mute, and change notifications
+ Translate texts
+ iMessage overview
+ Use iMessage apps
+ Send and receive messages
+ Send and reply to messages
+ Text via satellite
+ Schedule text messages to send later
+ Unsend or edit messages
+ Forward and share messages
+ Send and receive audio messages
+ Add effects to your messages
+ Format text and animate messages
+ Add backgrounds
+ Share images and other content
+ Take and edit photos or videos
+ Share content
+ React with Tapbacks
+ Send stickers
+ Draw and create images
+ Create and send Memoji
+ Poll people in a conversation
+ Share your location
+ Share screens
+ Collaborate on projects
+ Find and organize messages
+ Search
+ Screen and filter texts
+ Report spam and block senders
+ Group conversations
+ Keep track of messages
+ Delete messages and attachments
+ Recover deleted messages
+ Music
+ Get started with Music
+ Get music
+ Apple Music
+ Subscribe to Apple Music
+ Transfer music from other music services
+ Get personalized recommendations
+ Mark items as favorites
+ Add music and listen offline
+ Pin music
+ Create a profile to share
+ Create an Apple Music Profile
+ Share music with friends
+ See what friends are listening to
+ Find and play music
+ Find music
+ Search for music
+ Find music shared with you
+ Find new music
+ Play music
+ Play music
+ Use the music player controls
+ Play lossless audio
+ Play Spatial Audio
+ Listen to radio
+ Play music together using SharePlay
+ Play music together in the car
+ Queue up your music
+ Transition songs
+ Shuffle or repeat songs
+ Sing along with Apple Music
+ Show song credits and lyrics
+ Tell Apple Music what you enjoy
+ Adjust the sound quality
+ Organize songs in playlists
+ Intro to playlists
+ Create, edit, and delete playlists
+ Collaborate on playlists
+ Collaborate on a playlist
+ Join a collaborative playlist
+ Add a reaction to a collaborative playlist
+ Organize playlists in folders
+ News
+ Get started with News
+ Get News notifications and newsletters
+ Use News widgets
+ See news stories chosen just for you
+ Read and share stories
+ Read local news
+ Follow your favorite teams with My Sports
+ Listen to Apple News Today
+ Apple News+
+ Subscribe to Apple News+
+ Browse and read Apple News+ stories
+ Use Offline Mode to read downloaded News content
+ Manually download Apple News+ issues
+ Listen to News stories
+ Find recipes and food stories in Apple News+
+ Puzzles
+ Find puzzles in Apple News+
+ Solve crossword and crossword mini puzzles
+ Solve Quartiles puzzles
+ Solve sudoku puzzles
+ Play Emoji Game
+ Search for channels, topics, stories, or recipes
+ Save stories
+ Clear your reading history
+ Subscribe to individual news channels
+ Notes
+ Get started with Notes
+ Create and format notes
+ Use Quick Notes
+ Add drawings and handwriting
+ Enter formulas and equations
+ Add photos, video, and more
+ Record and transcribe audio
+ Scan text and documents
+ Work with PDFs
+ Add links
+ Search notes
+ Organize in folders
+ Organize with tags
+ Use Smart Folders
+ Share and collaborate
+ Export or print notes
+ Lock notes
+ Delete and recover notes
+ Add or remove accounts
+ Change the Notes view
+ Change Notes settings
+ Passwords
+ Use passwords
+ Find your password for a website or app
+ Change the password for a website or app
+ Remove a password
+ Recover a deleted password
+ Create a password for a website or app
+ Show passwords in large text
+ Use passkeys to sign in to websites and apps
+ Sign in with Apple
+ Share passwords
+ Automatically fill in strong passwords
+ See websites excluded from AutoFill
+ Change weak or compromised passwords
+ View your passwords and related information
+ View password history
+ Find and share your Wi-Fi password
+ Share passwords securely with AirDrop
+ Make your passwords available on all your devices
+ Automatically fill in verification codes
+ Automatically fill in SMS passcodes
+ Sign in with fewer CAPTCHA challenges
+ Use two-factor authentication
+ Use security keys
+ See your Mac FileVault recovery key
+ Import and export
+ Import passwords
+ Export passwords
+ Phone
+ Make a call
+ Record and transcribe a call
+ Change your Phone settings
+ View and delete the call history
+ While on a call
+ See translations during phone calls
+ Share screens during a phone call
+ Request or give remote control in a Phone call
+ Have a conference or three-way call
+ Set up Voicemail
+ Check voicemail
+ Change voicemail greeting and settings
+ Answer or decline incoming calls
+ Select ringtones
+ Make calls using Wi-Fi
+ Set up call forwarding
+ Set up call waiting
+ Screen and block calls
+ Photos
+ Get started with Photos
+ Browse your photo library
+ Browse your photo collections
+ View photos and videos
+ View reference images
+ See photo and video information
+ Add keywords
+ Sort and filter the photo library
+ Apply star ratings 
+ Find your photos and videos
+ Find photos and videos by date
+ Find and name people and pets
+ Find group photos and videos
+ Browse photos and videos by location
+ Find recently saved photos and videos
+ Find your travel photos and videos
+ Find receipts, QR codes, recently edited photos, and more
+ Locate photos and videos by media type
+ Delete or hide photos and videos
+ Search for photos and videos
+ Get wallpaper suggestions
+ Watch and personalize memories
+ View your memories
+ Play memory movies
+ Share or delete memories
+ Personalize your memory movies
+ Make a slideshow
+ Use photo albums
+ Create and work with photo albums
+ Add, delete, and find photos and videos in albums
+ Filter and sort photos and videos in albums
+ Share photos and videos
+ Share photos and videos
+ Share long videos
+ Create shared albums
+ Add and remove people in a shared album
+ Contribute to a shared album
+ Set up or join an iCloud Shared Photo Library
+ Use iCloud Shared Photo Library
+ Add content to an iCloud Shared Photo Library
+ Edit photos and videos
+ Edit photos and videos
+ Crop, rotate, flip, or straighten photos and videos
+ Undo and revert photo edits
+ Trim video length, adjust speed, and edit audio
+ Edit Cinematic mode videos
+ Edit Live Photos
+ Edit Portrait mode photos
+ Clean up, extend, and reframe photos
+ Save a video frame as a photo
+ Make stickers from your photos
+ Duplicate and copy photos and videos
+ Back up and sync your photos and videos with iCloud
+ Hide people, memories, and holidays
+ Import and export photos and videos
+ Merge duplicate photos and videos
+ Print photos
+ Podcasts
+ Get started with Podcasts on iPhone
+ Find podcasts
+ Play podcasts on iPhone
+ View podcast transcripts
+ Follow your favorite podcasts
+ Rate or review podcasts
+ Use the Podcasts widget
+ Select your favorite Podcasts categories and channels
+ Organize your podcast library
+ Download, save, and remove podcasts
+ Share podcasts
+ Subscribe to podcasts
+ Connect app subscriptions to Podcasts on iPhone
+ Change download settings
+ Preview
+ Get started with Preview on iPhone
+ View PDFs and images
+ Open and view PDFs and images
+ Interact with text in an image
+ Edit PDFs
+ Fill out and sign PDF forms
+ Annotate a PDF or image
+ Add, delete, rotate, move, or crop PDF pages
+ Edit an image
+ Manage PDFs or images
+ Save, rename, or move PDFs and images
+ Lock PDFs
+ Export or compress PDFs and images
+ Reply to an email with a PDF attachment
+ Scan text and documents
+ Create an image
+ Share PDFs or images
+ Print PDFs or images
+ Reminders
+ Get started with Reminders
+ Create reminders
+ Make a grocery list
+ Add details
+ Complete items
+ Delete and recover reminders
+ Edit and organize a list
+ Search your lists
+ Organize multiple lists
+ Tag items
+ Use Smart Lists
+ Share and collaborate
+ Print a list
+ Work with templates
+ Add or remove accounts
+ Change Reminders settings
+ Safari
+ Get started with Safari
+ Browse the web
+ Search for websites
+ Customize your Safari settings
+ Change the layout
+ Create multiple Safari profiles
+ Use Tab Groups
+ Open and close tabs
+ Organize your tabs
+ View your tabs from another Apple device
+ Share Tab Groups
+ Listen to a webpage
+ Bookmark a website
+ Open as Web App
+ Save pages to a Reading List
+ Find links shared with you
+ Download a PDF
+ Annotate and save a webpage as a PDF
+ Fill in forms
+ Get extensions
+ Hide distractions
+ Hide distractions when browsing
+ Hide distractions when reading
+ Block pop-ups
+ Clear your cache and cookies
+ Enable cookies
+ Privacy and security
+ Hide recent searches
+ Browse the web privately
+ Sign in with passkeys in Safari
+ Use Hide My Email
+ Get HTTP website warnings
+ Digital certificates and encrypted websites
+ Verify website encryption
+ Import and export
+ Import browser data into Safari
+ Export Safari data to another browser
+ Shortcuts
+ Stocks
+ Check stocks
+ Manage watchlists
+ Read business news
+ Add earnings reports to your calendar
+ Use a Stocks widget
+ Tips
+ Translate
+ Translate words and phrases
+ Translate with the camera
+ Translate in-person conversations
+ Change your Translate settings
+ TV
+ Voice Memos
+ Make a recording
+ View a transcription
+ Play it back
+ Add a second layer to a recording
+ Export a recording to Files
+ Edit or delete a recording
+ Keep recordings up to date
+ Organize recordings
+ Search for or rename a recording
+ Share a recording
+ Duplicate a recording
+ Wallet
+ Set up cards and passes
+ Make purchases with Apple Pay
+ Create passes
+ Use passes, cards, and keys
+ Manage passes, cards, and keys
+ Fill in payment information
+ Weather
+ Check the weather
+ Check the weather in other locations
+ View weather maps
+ Manage weather notifications
+ Use Weather widgets
+ Learn the weather icons
+ Siri
+ Get started with Siri AI
+ Turn on and activate Siri
+ Find out what Siri can do
+ Find info and get things done
+ Use Siri in your car
+ Use Siri to get answers from ChatGPT
+ Siri AI: Use the Siri app
+ Siri AI: Write with Siri
+ Siri AI: Use Siri mode in Camera
+ Siri AI: Ask Siri about what’s on your screen
+ Change Siri settings
+ Apple Intelligence
+ Introduction to Apple Intelligence
+ Get started with Apple Intelligence
+ Use Apple Intelligence to stay organized and get things done
+ Use Apple Intelligence to express yourself creatively
+ Use Apple Intelligence to communicate with ease
+ Use visual intelligence
+ Learn about what’s around you with Visual Intelligence
+ Learn about what’s on your iPhone screen with Visual Intelligence
+ Use image creation features
+ Create original images with Image Playground
+ Create your own emoji with Genmoji
+ Use Image Wand with Apple Intelligence
+ Use Writing Tools to write, improve, and summarize content
+ Turn on ChatGPT
+ Summarize notifications and reduce interruptions
+ Apple Intelligence and privacy
+ Turn off and restrict access to Apple Intelligence features
+ iPhone safety features
+ Contact emergency services
+ Set up and view your Medical ID
+ Use Emergency SOS via satellite
+ Request Roadside Assistance via satellite
+ Use Check In
+ Manage Crash Detection
+ Reset privacy and security settings in an emergency
+ Family Sharing
+ Set up Family Sharing
+ Add Family Sharing members
+ Remove Family Sharing members
+ Share subscriptions
+ Share purchases
+ Share locations with family and locate lost devices
+ Screen Time
+ Set up Screen Time for yourself
+ Set schedules and time allowances
+ Block features or content with Screen Time
+ Choose who you can communicate with at certain times
+ Create, change, or remove a Screen Time passcode
+ Accessories
+ Charging cable
+ Power adapters
+ MagSafe chargers and battery packs
+ Qi-certified wireless chargers
+ Adjust your display when you put a case on iPhone Duo
+ AirPods and EarPods
+ Use AirPods
+ Use EarPods
+ Apple Watch
+ Apple TV 4K, smart TVs, Smart TVs and video displays
+ Wirelessly stream videos and photos to Apple TV 4K or a smart TV
+ Connect to a display with a cable
+ HomePod and other wireless speakers
+ External storage devices
+ Magic Keyboard
+ Pair Magic Keyboard
+ Enter characters with diacritical marks
+ Switch between keyboards
+ Dictate text
+ Use shortcuts
+ Choose an alternative keyboard layout
+ Change typing assistance options
+ Connect Bluetooth accessories
+ Play audio from your iPhone on a Bluetooth accessory
+ Printers
+ Use iPhone with iPad, Mac, and Windows devices
+ Intro to Continuity
+ Use AirDrop to send items to nearby devices
+ Hand off tasks between devices
+ Control your iPhone from your Mac
+ Copy and paste between devices
+ Stream video and audio from your iPhone
+ Allow phone calls and text messages on your iPad and Mac
+ Share your internet connection
+ Use iPhone as a webcam
+ Insert sketches, photos, and scans on Mac
+ Start SharePlay instantly
+ Connect iPhone and your computer with a cable
+ Transfer files between devices
+ CarPlay
+ Intro to CarPlay
+ Connect to CarPlay
+ Use your vehicle’s built-in controls
+ Get turn-by-turn directions
+ Report traffic incidents
+ Change the map view
+ View Live Activities
+ Customize widgets
+ Make phone calls
+ Play music
+ View your calendar
+ Send and receive text messages
+ Announce incoming text messages
+ Play videos with CarPlay
+ Play podcasts
+ Play audiobooks
+ Listen to news stories
+ Control your home
+ Use other apps with CarPlay
+ Rearrange icons on CarPlay Home
+ Change settings in CarPlay
+ Accessibility
+ Get started with accessibility features
+ Use accessibility features during setup
+ Change Siri accessibility settings
+ Quickly turn accessibility features on or off
+ Share your Accessibility settings with another device
+ Vision
+ Overview of accessibility features for vision
+ Read or listen to text in apps with Accessibility Reader
+ Zoom in
+ View a larger version of text you’re reading or typing
+ Change display colors
+ Make text easier to read
+ Make onscreen elements easier to see
+ Customize onscreen motion
+ Use iPhone more comfortably while riding in a vehicle
+ Customize per-app visual settings
+ Hear what’s on the screen or typed
+ Hear audio descriptions
+ Adjust CarPlay settings
+ VoiceOver
+ Turn on and practice VoiceOver
+ Change your VoiceOver settings
+ Use VoiceOver gestures
+ Operate iPhone when VoiceOver is on
+ Control VoiceOver using the rotor
+ Use the onscreen keyboard
+ Write with your finger
+ Keep the screen off
+ Use VoiceOver with an external keyboard
+ Use a braille display
+ Type braille on the screen
+ Use Braille Access with a braille display
+ Customize gestures and keyboard shortcuts
+ Use VoiceOver with a pointer device
+ Hear what’s on your screen and around you
+ Use VoiceOver in apps
+ Mobility
+ Overview of accessibility features for mobility
+ Use AssistiveTouch
+ Adjust how iPhone responds to your touch
+ Back tap
+ Use Reachability
+ Auto-answer calls
+ Turn off vibration
+ Change Face ID and attention settings
+ Use Voice Control
+ Use Voice Control commands with CarPlay
+ Adjust the side or Home button
+ Adjust Camera Control settings
+ Use Apple TV 4K Remote buttons
+ Adjust pointer settings
+ Adjust keyboard settings
+ Control iPhone with an external keyboard
+ Adjust AirPods settings
+ Turn on Apple Watch Mirroring
+ Control a nearby Apple device
+ Control iPhone with the movement of your eyes
+ Control iPhone with the movement of your head
+ Switch Control
+ Intro to Switch Control
+ Set up and turn on Switch Control
+ Select items, perform actions, and more
+ Control several devices with one switch
+ Hearing
+ Overview of accessibility features for hearing
+ Use hearing devices
+ Use Live Listen
+ Use sound recognition
+ Get notified when your name is called
+ Set up and use RTT and TTY
+ Flash the indicator light or screen for notifications
+ Adjust audio settings
+ Play background sounds
+ Display subtitles and captions
+ Show transcriptions for Intercom messages
+ Get live captions of spoken audio
+ Play music as taps, textures, and more
+ Get notified about sounds in CarPlay
+ Speech
+ Overview of accessibility features for speech
+ Type to speak
+ Record your Personal Voice
+ Use Vocal Shortcuts
+ Cognitive
+ Overview of cognitive accessibility features
+ Lock iPhone to one app
+ Privacy and security
+ Control what you share
+ Protect access to your iPhone
+ Set a passcode
+ Set up Face ID
+ Set up Touch ID
+ Turn on Lock Screen features
+ Block contacts
+ Keep your Apple Account secure
+ Manage what you share with people and apps
+ Manage information sharing with Safety Check
+ Control app tracking permissions
+ Control the location information you share
+ Control access to information in apps
+ Control access to contacts
+ Control how Apple delivers advertising to you
+ Control access to hardware features
+ Create and manage Hide My Email addresses
+ Protect your web browsing with iCloud Private Relay
+ Use a private network address 
+ Use Advanced Data Protection
+ Use Lockdown Mode
+ Install Background Security Improvements
+ Use Stolen Device Protection
+ Receive warnings about sensitive content
+ Use Contact Key Verification
+ Use Impersonation Risk Detection
+ Restart, update, reset, and restore
+ Turn iPhone on or off
+ Force restart iPhone
+ Update iOS
+ Back up iPhone
+ Reset iPhone settings
+ Erase iPhone
+ Restore all content from a backup
+ Restore purchased and deleted items
+ Sell, give away, or trade in your iPhone
+ Install or remove configuration profiles
+ Safety, handling, and support
+ Important safety information
+ Important handling information
+ Find more resources for software and service
+ FCC compliance statement
+ ISED Canada compliance statement
+ Ultra Wideband information
+ Class 1 Laser information
+ Apple and the environment
+ Disposal and recycling information
+ Unauthorized modification of iOS
+ Copyright and trademarks
+Lift a subject from the photo or video background on iPhone
+You can isolate the subject of a photo or video frame from its background, then copy or share it in other documents and apps.
+You can use this feature in Photos, Safari, Quick Look, and more.
+Open a photo in full screen, or pause a video on any frame.
+Touch and hold the subject. When an outline appears around the subject, do one of the following:
+Tap Copy or Copy Subject, then paste the subject into an email, text message, or note.
+Continue to hold, then with another finger, open a document in another app and drag the subject into the document.
+Tap Look Up to learn more about the subject.
+Tap Add Sticker, then save the sticker to use in Markup, Messages, and more.
+Tap Share, then choose a sharing option, such as AirDrop or Mail.
+See alsoIdentify objects in your photos and videos on iPhoneSelect, edit, and move text on iPhoneAdd emoji, Memoji, and stickers with the iPhone keyboard
+ Previous
+ Identify objects in your photos and videos
+ Next 
+ Camera basics
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Please don’t include any personal information in your comment.
+ Maximum character limit is 250.
+ Submit
+ Thanks for your feedback.
+Apple Footer
+ 
+ Apple
+ Support
+ iPhone User Guide
+ Lift a subject from the photo or video background on iPhone
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

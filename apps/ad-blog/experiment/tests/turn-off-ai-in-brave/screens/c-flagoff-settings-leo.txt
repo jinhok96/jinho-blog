@@ -1,0 +1,41 @@
+URL chrome://settings/
+
+Settings
+Search settings
+Get started
+Appearance
+Content
+Shields
+Privacy and security
+Web3
+Sync
+Search engine
+Extensions
+Autofill and passwords
+Languages
+Downloads
+Accessibility
+System
+Reset settings
+About Brave
+v 1.98.63
+Get started
+Profile name and icon
+Import bookmarks and settings
+Default browser
+Make Brave the default browser
+Make default
+On startup
+Open the New Tab page
+Continue where you left off
+Open a specific page or set of pages
+New Tab Page
+New tab page shows
+Dashboard
+Homepage
+Blank page
+Customize new tab page
+Opens in new tab
+
+TOGGLES
+[]

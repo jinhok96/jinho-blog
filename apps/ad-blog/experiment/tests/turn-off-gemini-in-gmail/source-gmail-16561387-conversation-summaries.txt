@@ -1,0 +1,133 @@
+## Catch up on email threads with AI Overview conversation summaries
+To catch up on long email threads, Gemini in Gmail can:
+- Generate an AI Overview at the top of the thread that synthesizes key points and replies in the conversation.
+- Suggest reminders for tasks with a due date.
+## What you need
+- A work, school, or personal Google Account: This feature is available to all Gmail users globally.
+- A supported language: AI Overview conversation summaries support only some languages. Learn more about supported languages in Google Workspace with Gemini.
+## Additional requirement
+- In Gmail settings, turn on Smart features in Gmail, Chat, and Meet and Smart features in Google Workspace. Learn more about smart features in Google Workspace.
+- If you do not want AI Overview conversation summaries, you can turn off smart features. However, this also disables other tools, such as AI-assisted writing and proofreading, across Gmail and other Workspace apps.
+## Summarize an email thread
+- On your computer, go to Gmail.
+- In Gmail, open an email thread.
+- At the top of the thread, click Summarize this email.
+Tips:
+- To hide the AI Overview, click Minimize .
+- If you notice anything incorrect about the AI Overview, below the card, click Bad suggestion .
+## Set a reminder for tasks
+If an email thread mentions a due date with a task required from you, you can create a reminder from the AI Overview.
+- On your computer, go to Gmail.
+- Open a thread with an AI Overview and a task with a deadline.
+- At the top of your email, next to the task with a deadline, click Remind me.
+- To edit the date, click Edit reminder.
+After you create a task:
+- To find your task, go to:
+- Google Tasks
+- Google Calendar
+- In the AI Overview, to:
+- Change reminder details: Click Edit reminder.
+- Complete the reminder: Click Mark complete.
+- Reopen the reminder: Click Mark incomplete.
+Tips:
+- When the due date arrives, the reminder shows at the top of the Gmail inbox.
+- The card remains visible for 4 days or until dismissed.
+## Learn about Gemini feature suggestions
+- Gemini feature suggestions don't represent Google's views, and should not be attributed to Google.
+- Don't rely on Gemini features as medical, legal, financial or other professional advice.
+- Gemini features may suggest inaccurate or inappropriate information. Your feedback makes Gemini more helpful and safe.
+- Enterprise end users can submit feedback about their experience using this feature. End users are informed before they submit feedback that the feedback data shouldn't contain personal, sensitive, or confidential information.
+## Related resources
+- Collaborate with Gemini in Gmail
+- Learn about smart features & controls for Google Workspace & other Google products
+- Use summary cards in Gmail
+ Computer Android phone & tabletiPhone & iPad 
+  More   
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 19
+Get started with Google Workspace with Gemini
+- 
+2 of 19
+Learn about Gemini features in Gmail
+- 
+3 of 19
+Talk naturally with Gmail Live
+- 
+4 of 19
+Manage to-dos & topics with AI Inbox
+- 
+5 of 19
+Get an AI Overview in Gmail search
+- 
+6 of 19
+Catch up on email threads with AI Overview conversation summaries
+- 
+7 of 19
+Draft emails with Gemini in Gmail
+- 
+8 of 19
+Proofread your drafts with Gemini in Gmail
+- 
+9 of 19
+Use Suggested Replies in Gmail
+- 
+10 of 19
+Collaborate with Gemini in Gmail
+- 
+11 of 19
+Suggest times to meet with Gemini in Gmail
+- 
+12 of 19
+Take quick actions from your Gmail inbox
+- 
+13 of 19
+Find & manage your Gemini in Workspace conversation history
+- 
+14 of 19
+Customize Gemini in Workspace's responses with your instructions
+- 
+15 of 19
+Learn how to use sources with Google Workspace with Gemini
+- 
+16 of 19
+Use Deep Research in Gemini in Workspace apps
+- 
+17 of 19
+Use integrations with Gemini in Workspace
+- 
+18 of 19
+Supported languages for Google Workspace with Gemini
+- 
+19 of 19
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service      
+-   Program Policies           Language   català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+18085523000620321443                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+17                                                                                                     
+false    
+false                                                                                                                                                             
+false   
+false                                                          
+false  

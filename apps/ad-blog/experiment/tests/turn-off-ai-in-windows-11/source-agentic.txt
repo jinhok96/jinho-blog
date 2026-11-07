@@ -1,0 +1,73 @@
+
+Experimental Agentic Features
+Editor's note: Originally published October 16th, 2025. This article was updated on November 17th, 2025, to reflect the gradual rollout of Agent Workspace and Copilot Actions to Windows Insiders. Another update was made on December 5th, 2025 to capture support for agent connectors running in agent workspace. Find additional information on the management and security of agentic features on Windows in the Securing AI agents on Windows and Ignite 2025: Furthering Windows as the premier platform for developers, governed by security blogs.
+AI-powered apps help you automate everyday tasks—like organizing files, scheduling meetings, or sending emails—so you can spend less time on busy work and more time on what matters most. One powerful way apps are implementing AI today is by interacting with your apps and your files, using vision and advanced reasoning to click, type and scroll like a human would.  One such experience is an experimental feature called Copilot Actions available to Windows insiders in Copilot Labs. With Copilot Actions you have an active digital collaborator that can carry out complex tasks for you to enhance efficiency and productivity.
+AI-powered apps can also extend their capabilities with agent connectors. Agent connectors are Model Context Protocol (MCP) servers that act as bridges between AI agents and your Windows apps or system tools, enabling agents to access your data and take actions on your behalf. Developers can build these connectors and register them in the Windows On-Device Registry (ODR), which provides a secure and manageable way to discover and control agent access to connectors. 
+Windows is committed to making agentic experiences with apps more productive and secure for individuals and enterprises. As part of this vision, Windows is introducing a new experimental feature — agent workspace — available in a private preview for Windows Insiders in a release coming soon. This early preview reflects our phased approach to delivering agentic capabilities, starting with limited access to gather feedback and strengthen foundational security. Agent workspace represent a key step in enabling intelligent, agent-powered computing. Security in this context is not a one-time feature — it’s a continuous commitment. As agentic features evolve, so will our security controls, adapting to each phase of rollout from preview to broad availability.
+For more information on the principles that guide the secure development of agentic AI on Windows, see:  
+Securing AI agents on Windows | Windows Experience Blog
+Ignite 2025: Furthering Windows as the premier platform for developers, governed by security - Windows Developer Blog 
+Securing the Model Context Protocol: Building a safer agentic future on Windows | Windows Experience Blog
+What is an agent workspace?
+An agent workspace is a separate, contained space in Windows where you can grant agents access to your apps and files so they can complete tasks for you in the background while you continue to use your device. Each agent operates using its own account, distinct from your personal user account. This dedicated agent account establishes clear boundaries between agent activity and your own, enabling scoped authorization and runtime isolation. As a result, you can delegate tasks to agents while retaining full control, visibility into agent actions, and the ability to manage access at any time.
+Agents typically get access to known folders or specific shared folders, and you can see this reflected in the folder’s access control settings. Each agent has its own workspace and its own permissions—what one agent can access doesn’t automatically apply to others. These workspaces are designed to be lightweight and secure, with memory and CPU usage scaling based on activity. Windows will be adding different kinds of workspaces with different capabilities over time. For this initial preview release, agent workspace runs in a separate Windows session, allowing agents to interact with apps in parallel to your own session. For common operations, this setup is more efficient than a full virtual machine such as Windows Sandbox, while still providing security isolation, support for parallel execution, and keeping the user in control. The overall experience and security model are actively being refined to support key principles of transparency, safety, and user control.
+In this article
+Why security matters
+Agent security and privacy principles
+Enable experimental agentic features
+App access in agent workspace
+File access in agent workspace
+Known issues
+Why Security matters
+Agentic AI has powerful capabilities today—for example, it can complete many complex tasks in response to user prompts, transforming how users interact with their PCs. As these capabilities are introduced, AI models still face functional limitations in terms of how they behave and occasionally may hallucinate and produce unexpected outputs. Additionally, agentic AI applications introduce novel security risks, such as cross-prompt injection (XPIA), where malicious content embedded in UI elements or documents can override agent instructions, leading to unintended actions like data exfiltration or malware installation. We recommend you read through this information and understand the security implications of enabling an agent on your computer. 
+As we begin to build agentic capabilities into Windows, our commitment is to include robust security and privacy controls that empower customers to explore their potential confidently with the support of clear guidance and appropriate guardrails driven by these goals.
+Non-repudiation : All actions of an agent are observable and distinguishable from those taken by a user.
+Confidentiality: Agents that collect, aggregate or otherwise utilize protected data of users meet or exceed the security and privacy standards of the data which they consume.
+Authorization : Users approve all queries for user data as well as actions taken.
+Agentic security and privacy principles
+Securing AI agents requires a robust set of principles that ensure they act according to user intent while safeguarding their data.
+Agents are autonomous entities. They are susceptible to attack in the same ways any other user or software components are. Their actions must be able to be contained.
+Agents must be able to produce logs outlining their activities. Windows should be able to verify these actions with a tamper-evident audit log.
+Agents should provide a means to supervise their activities. Many activities of agents are aggregate plans containing multiple steps. Users should be able to review the steps and approve the plan and monitor the execution of the plan. Agents must be able to explicitly request a user’s authorization or decision where necessary.
+Agents should always act under the principles of least privilege and must not be granted permissions or capabilities exceeding that of the initiating user, including administrative rights. Authorized agent privileges should be granular, specific and time bound. Agents must only be able to access sensitive information (e.g. credit card data) in specific, user-authorized contexts such as for carrying out specific actions, such as when interacting with specific applications, or on specified websites.
+Entities on the system – admin, local system, etc. – should not have special access to an agent other than the owner which it acts on behalf of.
+Windows is designed to help agents adhere to Microsoft's commitments made in the Microsoft Privacy Statement and Responsible AI Standard . Windows will support agents in processing data only for clearly defined purposes, ensuring transparency, and trust. See the Microsoft Privacy Report for detail on our commitments to advancing AI responsibly while safeguarding privacy and other fundamental rights.
+Agent development and AI-related security continue to be a fast-moving field of research with active participation from Microsoft in partnership with the broader security community. As part of Microsoft’s Secure Future Initiative commitment, helping users, businesses and developers address these challenges is our top priority as people begin to interact with agents as part of their daily workflows.
+Enable Experimental Agentic Features
+The experimental agentic features setting is off by default. This feature has no AI capabilities on its own, it is a security feature for agents like Copilot Actions. Enabling this toggle allows the creation of a separate agent account and workspace on the device, providing a contained space to keep agent activity separate from the user.  
+The experimental agentic features setting is currently in preview, for the purposes of gathering and learning from feedback to refine the experience. During its preview period, we will continue to add more granular security and privacy controls before it is made generally available.  
+Copilot Actions, currently in preview for Windows Insiders in Copilot Labs, uses this functionality, for more information see Copilot on Windows: Copilot Actions begins rolling out to Windows Insiders | Windows Insider Blog.  
+This setting can only be enabled by an administrative user of the device and once enabled, it’s enabled for all users on the device including other administrators and standard users. 
+​​​​​​The experimental agentic feature setting enables:
+The creation of agent accounts that provide agents with their own separate account on your device when acting on your behalf. Windows is using a phased approach to add stricter rules for agent accounts in upcoming releases.
+The creation of the agent workspace where agents can work in parallel with a human user, enabling runtime isolation and scoped authorization. This provides the agent with capabilities like its own desktop while limiting the visibility and accessing the agent has to the user’s desktop activity. By default, agent connectors in the Windows On-Device Registry will be contained in the agent workspace. This is now available on preview builds 26100.7344+. For these agent connectors, Windows will get your permission to let agents run these agent connectors. 
+Agentic apps like Copilot can request and get access to these six commonly used folders in your user profile directory while running in the agent workspace: Documents, Downloads, Desktop, Music, Pictures, and Videos.
+Steps to enable experimental agentic features:
+Sign in to Windows with an administrator account
+In the Settings app on your Windows device, select System > AI Components > Experimental agentic features
+App access in agent workspace
+When running in the agent workspace, the agentic app has access to the apps that are available to all users by default. To limit access, you can install apps for specific users or specifically for your agents.
+File access in agent workspace
+Agentic accounts have limited access to your user profile directory (C:\Users\<username>\) while operating in the agent workspace. If an agent needs access to files in that directory, Windows grants read and write access to the following known folders: Documents, Downloads, Desktop, Videos, Pictures, Music when the setting is enabled. You may have these folders in the standard location, or you may have redirected them elsewhere on the filesystem.
+To limit access to these folders, turn the experimental agentic feature setting off.
+In the Settings app on your Windows device, select System > AI Components > Experimental agentic features
+Turn the setting off
+In preview builds 26100.7344+ you can manage access to these six known folders per-agent. By default, when agents request access to files in these folders, Windows will ask you for consent. 
+A dedicated Settings page for each agent allows you to manage file access permissions and enable the connectors an agent needs to perform tasks. You can manage your preferences any time:   
+In the Settings app on your Windows device, select System > AI Components > Agents
+Select the agent from the list
+Go to “Files” section
+Select from the three options
+“Allow Always”: the agent can access these six known folders when it needs to.
+“Ask every time”: when the agent needs access to the folders, Windows will prompt you for permission to share files in these folders.
+“Never allow”: when the agents request access to the folders, Windows will deny the request.
+Agent accounts have access to any folders that all authenticated users have access to, e.g. public user profiles.
+Known Issues
+You may face these issues on build 26220.7262+:
+Windows will not sleep while Copilot has active conversations.
+Workaround: Close any Copilot Actions conversations or close Copilot by selecting it from the tray, right clicking it and selecting "Quit".
+You may see a warning "Someone else is still using this PC. If you shut down now, they could lose unsaved work." when trying to shut down or restart your Windows device due to active Copilot Actions conversations.
+Workaround: Close any Copilot Actions conversations or close Copilot by selecting it from the tray, right clicking it and selecting "Quit".
+Enterprise users with Endpoint Privilege Management may see Intune managed profiles created for the Agent User accounts that are not cleaned up when the Copilot Action conversation is closed or the application exits. These profiles typically end with a dollar sign, i.e.: _$, and are located alongside the Agent User accounts in the Windows users folder (typically c:\users).
+Workaround: Microsoft is aware of this issue and is working on a fix that will clean up leftover Intune profiles.
+					

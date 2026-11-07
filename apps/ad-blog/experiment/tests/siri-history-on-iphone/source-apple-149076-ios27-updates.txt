@@ -1,0 +1,162 @@
+# 가져온 시각: 2026-10-27T16:04:24.289Z
+# 원본: https://support.apple.com/en-us/149076
+About iOS 27 Updates - Apple Support
+https://support.apple.com/en-us/149076
+
+About iOS 27 Updates
+
+iOS 27 introduces the next generation of Apple Intelligence and Siri AI, as well as new features to help parents create safe digital experiences for kids, and improvements that make iOS more responsive and delightful to use. Siri AI is an entirely new version of Siri that is more intelligent, knowledgeable, and capable. The next generation of Apple Intelligence also powers new features across apps that simplify the things you do every day, like editing images in Photos, communicating in Messages and Mail, and browsing in Safari. New parental controls and significant updates to Screen Time make it more intuitive and easy to use, so parents can feel confident that they're building the right digital experience for their child. And with improvements that span design, performance, connectivity, search, and more, the experience on iOS 27 has been refined and elevated, so it feels even better to use.
+
+iOS 27
+
+iOS 27.0.1
+
+iOS 27.2
+
+iOS 27.2
+
+This update provides enhancements to Siri AI with the ability to retain useful context from previous Siri interactions as well as draw from a wider range of personal context. It also introduces Suggestions in Messages that help you take quick actions in apps like Calendar and Reminders based on context from your conversation. This release includes additional features, bug fixes, and security updates for your iPhone.
+
+Siri AI (All iPhone 16 models and later, iPhone 15 Pro, iPhone 15 Pro Max)
+
+Siri AI can recall your past conversations, so you can ask Siri about something it told you before, like the restaurants it recommended last week
+
+Siri AI can draw from more sources to give you a great answer, including photos attached in Messages, Calendar event attendees, your voicemails, and better results from Safari history and Reading List
+
+Excluded Apps lets you choose which apps Siri, Search, and suggestions can access, all from one setting
+
+Granular text selection lets you select and copy just the part of a Siri response you need
+
+Siri AI is available in more languages, with support for French, Japanese, Korean, Portuguese, and Spanish. Siri AI is not available in the EU or mainland China
+
+Other
+
+Suggestions in Messages help you take action based on the context of your conversations, like adding a Calendar invite for a dinner
+
+Shared Albums in Photos adds the ability to edit captions and comments, to avoid adding duplicate photos, and can display a reminder before albums expire so participants can save important photos and videos
+
+Support for SynthID watermarking to help identify whether an image was generated or modified with generative tools in Photos and Image Playground
+
+The Home tab in the Podcasts app offers two separate sections for New Episodes and Continue Playing, letting you find the latest updates from your shows and then pick up where you left off
+
+Friends tab in the Games app provides context on friend suggestions and shows recent games played on friends’ player pages
+
+Simple Profiles in the Apple TV app lets everyone in your household have their own profile, with recommendations that fit what they like to watch
+
+FaceTime supports adding a third party sign language interpreter or live captioner to a call
+
+For information on the security content of Apple software updates, please visit: https://support.apple.com/100100
+
+Some features may not be available in all regions or on all iPhone models. To learn more, please visit: https://www.apple.com/ios/feature-availability/
+
+Usage limits may apply for some Apple Intelligence features. To learn more, please visit: https://www.apple.com/apple-intelligence
+
+Software updates, like this one, add new features and improvements that may affect performance and/or battery life. To learn more, please visit: https://support.apple.com/125039
+
+iOS 27.0.1
+
+This update provides bug fixes for your iPhone, including fixes for the following issues:
+
+iPhone 18 Pro and iPhone 18 Pro Max may unexpectedly restart when Face ID fails to authenticate
+
+A color artifact may appear on photos captured at 2x under certain lighting conditions at f/1.48 on a small number of iPhone 18 Pro and iPhone 18 Pro Max devices
+
+Opening Notification Center and Control Center simultaneously may cause the touchscreen to become unresponsive
+
+iOS 27
+
+Siri AI (All iPhone 16 models and later, iPhone 15 Pro, iPhone 15 Pro Max)
+
+A more capable and conversational version of Siri is rolling out to users. It helps you find what you need and get more done, drawing on capabilities like personal context understanding, app actions, onscreen awareness, and access to broad world knowledge
+
+New voice experience offers more expressive and natural-sounding voices, and lets you customize expressivity and pace to make Siri more personal to you using powerful on-device models on iPhone Air and iPhone 17 Pro models and later
+
+Dedicated Siri app provides an easy way to revisit an existing conversation or kick off a new one, and privately syncs conversations across your Apple products with iCloud
+
+Siri mode in Camera integrates Visual Intelligence into the Camera app, letting you ask questions and take action with what's in front of you, like splitting a bill or looking up nutritional info for a plate of food
+
+Write with Siri enables you to generate a draft from scratch, edit what you've written, or get feedback from Siri virtually anywhere you type. In Messages & Mail, Siri personalizes your writing style based on your relationships, and uses unique phrases and punctuation that you've previously used in your conversations with those people
+
+Apple Intelligence across apps (All iPhone 16 models and later, iPhone 15 Pro, iPhone 15 Pro Max)
+
+Photos
+
+Spatial Reframing lets you adjust the composition of a photo after it was taken by virtually changing the camera position
+
+Extend tool intelligently expands images beyond their edges with realistic infill, so you can straighten horizons, change aspect ratios, or add more space around a subject
+
+Clean Up supports removing even larger objects, with more realistic, high-quality results, and you can choose between Fast mode for small blemishes or High Quality for more intricate edits
+
+Safari
+
+Organize by Topic uses Apple Intelligence to sort your tabs, analyzing webpages and automatically grouping similar tabs together
+
+Notify Me can periodically check a webpage for updates, like price changes and item availability
+
+Describe an Extension lets you create a custom extension using natural language to adjust your view of a website's content or formatting
+
+All-new Image Playground uses a new generative model to make high-quality images in virtually any style, including photorealistic, lets you modify your images using touch and natural language, and lets you generate Lock Screen wallpapers and Contact Posters with personalized suggestions
+
+Describe a Shortcut lets you use natural language to create a shortcut or refine an existing one
+
+Home
+
+Summarized activity notifications combine related alerts across accessories into a single notification
+
+Video descriptions for HomeKit Secure Video recordings summarize what's happening in a clip for eligible iCloud+ subscribers
+
+Camera clip search lets you find specific moments from your HomeKit Secure Video cameras by searching in the Home app or Spotlight when on an eligible iCloud+ plan
+
+Describe an event in Calendar lets you use natural language to create an event, and details like the time, location, invitees, and event title are filled in using Apple Intelligence
+
+Suggestions in Mail help you take action based on the context of your emails, like getting directions to a restaurant you booked
+
+Call Context in the Phone app understands when you're speaking to certain businesses and proactively surfaces relevant information from across your apps, like a confirmation code or a reservation number
+
+Accessibility
+
+VoiceOver enhancements include more detailed and contextual image understanding for photos, charts, and screenshots, a conversational experience that lets you ask questions about your screen or surroundings, and a new way to get answers fast with an Action button integration
+
+An enhanced Magnifier experience offers conversational visual assistance for users with low vision, with a high-contrast interface and natural language app controls for zooming and other Magnifier functions
+
+A smarter Accessibility Reader uses intelligence to provide better text cleanup and formatting, images and tables, on-demand summaries, and translation
+
+Voice Control flexible inputs help you navigate your device with just your voice by describing elements on screen in your own words, like "tap the gear" or "tap the button in the top right"
+
+And more, including additional ways to create and modify Genmoji, automatic proofreading, and more accurate dictation using an on-device model on iPhone Air and iPhone 17 Pro models and later
+
+Child Safety
+
+Improved setup experience for new child accounts lets parents choose the exact apps their kids can access when they set up an iPhone for their child
+
+Ask to Browse gives parents the option to approve each new website before their child can view it
+
+Expanded Communication Safety protections help intervene before children see gore or violent content in shared images and videos
+
+Time Allowances help parents set boundaries around how long kids can use apps across Entertainment, Games, and Social Media apps, offering guidance based on expert research and tailored to each child's age
+
+Schedules let parents choose which apps their kids can access at different points in their day and across weekdays and weekends
+
+Redesigned Screen Time settings give parents at-a-glance information about how their kids use their devices, and controls to adjust access in just a few taps
+
+System Improvements
+
+Liquid Glass refinements improve overall readability, and a new slider in Settings lets you personalize its appearance from ultra-clear to fully tinted
+
+Faster performance in experiences across the system, including app launches, new photos loading in your Photos library, and AirDrop transfers
+
+Improved search provides more relevant and comprehensive results in Spotlight, Photos, and Mail
+
+Connectivity Assist enables more seamless transitions between Wi-Fi and cellular networks
+
+And more improvements across apps and experiences, including enhancements to iCloud Shared Albums in Photos, Custom EQ for AirPods, support for perimenopause and menopause in Cycle Tracking in the Health app, and independent volume settings for Alarms and Timers
+
+For information on the security content of Apple software updates, please visit: https://support.apple.com/100100
+
+Some features may not be available in all regions or on all iPhone models. To learn more, please visit: https://www.apple.com/ios/feature-availability/
+
+Usage limits may apply for some Apple Intelligence features. To learn more, please visit: https://www.apple.com/apple-intelligence
+
+Software updates, like this one, add new features and improvements that may affect performance and/or battery life. To learn more, please visit: https://support.apple.com/125039
+
+Published Date: October 26, 2026

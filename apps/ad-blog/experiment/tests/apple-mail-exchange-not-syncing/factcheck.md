@@ -1,5 +1,8 @@
 # apple-mail-exchange-not-syncing 사실 확인표
 
+- 검증 유형 (가설 H3): **조사형** — Apple 지원 문서 대조만, 직접 실행 없음 (macOS 없음)
+- 주 검색어 (가설 H6): `apple mail exchange` — 브리프 주 검색어
+
 - 주 검색어: `apple mail exchange` (하위: apple mail exchange account not syncing, apple mail exchange not working, apple mail exchange web services, exchange online apple mail app not syncing, apple mail unable to verify exchange account, mac mail outlook not working)
 - 채널: 피드형 (뉴스 칼럼)
 - 뉴스 유형: **영향** (2026-10-22 18:10 KST 영향 뉴스 세션). 시행 2026-10-01(단계적 차단 시작), Apple 공지 2026-10-13, 최종 차단 2027-04-01 → 영향 기간 약 5개월

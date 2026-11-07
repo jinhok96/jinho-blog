@@ -1,0 +1,132 @@
+# https://support.google.com/chrome/answer/142893?hl=en&co=GENIE.Platform%3DiOS (fetched 2026-10-29 UTC)
+To reduce manual data entry and improve accuracy, you can use Chrome to automatically fill out online forms with saved info, like your name, passwords, addresses, and payment info. It can also use your name and email address from your Google Account and certain info from your Google Wallet. This provides an easy and complete filling experience.
+Chrome never shares your info without your permission. Learn how Chrome protects your autofill and password data.
+If you would like to save your password info to Chrome, learn how to manage saved passwords.
+If you're having issues with your saved info, learn how to fix issues with info saved to Chrome.
+To use autofill, make sure you’re signed in to your Google Account in Chrome.
+Tip: Not all autofill features are available in all regions.
+Manage saved form info
+Important: The save and fill info setting is on by default for Google Password Manager, payments, contact info, identity docs, and travel. If you've turned the save and fill setting off, autofill won't work for that info.
+To access your saved info:
+On your iPhone or iPad, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords.
+You can manage your autofill info for forms, like:
+Contact info
+Google Password Manager
+Identity docs
+Payments
+Travel info
+Add, edit, or delete your saved autofill info in Chrome
+If your payment method is saved in Google Wallet, you'll need to edit or delete it in Google Wallet.
+On your iPhone or iPad, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords.
+Select the info you want to update, like payments or contact info.
+Under each category, you can turn Save and fill [info] on or off.
+Add, edit, or delete info:
+Add:
+At the bottom of the info type you want to add, tap Add.
+Edit or Delete:
+Tap the info you want to edit or delete. Tap Save after you edit info, or Delete to confirm you want to delete the info.
+If you add, edit, or delete info and you’re signed in to Chrome with your Google Account, your changes will also show up on your other devices where you’re signed in to Chrome with the same account.
+Tips:
+When you submit forms with new or updated info, Chrome may prompt you to save this data to your Google Wallet.
+When you’re signed into your Google Account, address info is saved in your Google Account. All other info, like identification and vehicle information, is saved in your Google Wallet.
+If Use passes across Google is turned off in your Google Wallet settings, your info is saved locally to your device.
+Manage autofill payment info
+Manage payment info in Chrome
+Manage payment info in Google Wallet
+Manage card benefits with autofill
+Use buy now, pay later with Chrome autofill
+Use autofill to fill out a form
+On your iPhone or iPad, open Chrome .
+Go to a website where you need to fill out an online form with contact, payment, or login info.
+Select a field in the form.
+Tap the saved info you want to autofill the form.
+Tip: To find or edit your saved info, on your keyboard, at the top right, tap Expand .
+Autofill your home, work, and email addresses from your Google Account
+Important:
+Make sure you’re signed in to Chrome with the Google Account where your home and work addresses are saved.
+Confirm that your Google Account is filled out with complete home and work addresses. You can find and manage this in your Google Account settings.
+You can directly fill your home and work address from your Google Account into online forms. With an address saved in Google Maps, you can complete forms faster.
+To use this feature, tap on a home and work address field in an online form. Then autofill shows a suggestion from your Google Account.
+Manage your contact info
+To automatically fill out forms, Chrome uses your saved name, address, phone number, and email.
+When you first use this feature, Chrome shows a message that informs you how it works and how to manage your data in Chrome settings.
+To use this feature, make sure:
+You’re signed in to Chrome.
+The “Save and fill addresses” is on.
+On your iPhone or iPad, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords Contact info.
+You can:
+Add info: At the bottom left, tap Add.
+Update info: Tap the info Edit Update the info Done.
+Delete an address: On the address you want to remove, swipe left Delete.
+Bulk remove addresses: At the bottom right, tap Edit Select the addresses you want to remove Delete.
+Fix issues with autofill not working
+If Chrome is not suggesting your saved info:
+Check Chrome settings:
+Make sure "Save and fill" is turned on for the info you want to autofill.
+Review your Account:
+Confirm the name and email shared from your Google Account for autofill at myaccount.google.com/personal-info.
+Confirm the info you want to populate is saved, tap More Settings Autofill and passwords Contact info or Payments.
+Enter your credentials again: If your login credentials fail, like passkeys or PINs, Chrome can’t access your sensitive info. Learn how to fix issues with passwords and passkeys.
+Check website security:
+If the website is secure, Chrome may not be able to detect certain fields in the form.
+If the website is not secure enough, it may not be able to receive info from Chrome.
+Check Google Wallet settings: To allow autofill to use info from Google Wallet, make sure Use passes across Google is turned on.
+Delete your saved autofill form info in Chrome
+To delete your addresses, payment methods, or other saved info in Chrome at the same time:
+On your iPhone or iPad, open Chrome .
+Tap More Delete Browsing Data.
+Choose a time range, like "Last hour" or "All time."
+Under "Advanced," select Autofill form data.
+Tap Delete Browsing Data.
+This method doesn't delete payment info and addresses stored in Google Wallet. Learn how to remove a payment method from Google Wallet.
+Use enhanced autofill
+Important: Enhanced autofill is currently available on Desktop, Android, and iOS for Gemini in Chrome users in the US who are 18 or older and have opted into Gemini Personal Intelligence.
+Enhanced autofill uses data from your Gmail account, such as flights, vehicles, and orders, to fill out forms for you. Suggestions are displayed with the Gemini spark icon and will appear in a dropdown.
+You can manage or turn off enhanced autofill by adjusting your Chrome settings.
+On your iPhone or iPad, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords Autofill settings.
+Under "Autofill settings," select Enhanced autofill.
+Turn “Find and fill with Gemini” on or off.
+To see where Chrome found your information:
+On your iPhone or iPad, tap a form field.
+On the bar above your keyboard, touch and hold (long-press) the suggestion chip with the Gemini icon .
+Tap View sources.
+Tap a link to the original source. The email in Gmail will open in a new tab.
+If Chrome suggests info you don't want to see or that is outdated:
+On your iPhone or iPad, tap a form field.
+On the bar above your keyboard, touch and hold (long-press) the suggestion chip with the Gemini icon .
+Tap Remove.
+Tips:
+Info pulled from Gmail can’t be edited in Chrome.
+Removing suggestions from Chrome does not delete the original email. However, deleting the original email does remove the suggestion.
+Fill more fields with smarter form understanding
+Important: Not all websites and forms are compatible with smarter form understanding.
+With smarter form understanding, Chrome is able to autofill forms faster for you.
+To use this feature, make sure you're signed in to your Google Account in Chrome.
+Turn Smarter form understanding on or off
+Important: This setting is on unless you choose to turn it off.
+On your iPhone or iPad, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords Contact info.
+Tap Smarter form understanding.
+Turn Smarter form understanding on or off.
+Turn re-authentication on or off
+Re-authentication is on by default to provide extra protection for your sensitive info. Sensitive personally identifiable info is partially hidden. You must use a screen lock, fingerprint, face unlock, or device PIN before Chrome has access to populate this info in forms.
+If your device doesn't support biometrics, Chrome uses your default device screen lock like password or passcode instead.
+On your iPhone or iPad, open Chrome .
+Tap More Settings .
+Tap Autofill and passwords Contact info.
+Turn on Verify it’s you when filling sensitive info.
+If you turn this setting off, you won't be prompted for a face or other screen lock when you autofill sensitive info.
+Related resources
+Manage passwords in Chrome
+Manage payment methods added to the Google Wallet app
+Fix issues with passwords and passkeys
+Fix payment info issues in Chrome

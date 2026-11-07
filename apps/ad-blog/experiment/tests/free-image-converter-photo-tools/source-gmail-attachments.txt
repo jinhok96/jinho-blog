@@ -1,0 +1,107 @@
+Send attachments with your Gmail message - Computer - Gmail Help Skip to main content 
+Gmail Help
+Sign in
+Google Help
+Help Center
+Community
+Gmail
+Privacy Policy
+Terms of Service
+Submit feedback 
+Send feedback on...
+This help content & information
+General Help Center experience
+CloseNext
+Help Center
+Community
+Gmail
+Send attachments & images
+Send attachments with your Gmail message 
+Send attachments with your Gmail message
+Add attachments, like files or photos, to your emails. To send large files over the size limit, like videos, use Google Drive.
+Learn how attachments work in Gmail
+There are limits to the size of attachments for Gmail:
+For personal Gmail accounts, the limit is 25 MB.
+For work and school accounts, your Google Workspace administrator sets the attachment sending limits and attachment receiving limits.
+If your total attachment size is greater than the limit, Gmail automatically removes the attachment and adds it as a Google Drive link in the email. Learn how to send Google Drive attachments in Gmail.
+Attach a file 
+On your computer, go to Gmail.
+Click Compose.
+At the bottom, click Attach .
+Choose the files you want to upload.
+Click Open.
+Tip: Add an image by dragging it directly into the compose window.
+Remove an attachment
+After you add an attachment, you can remove it. To the right of the attachment name, tap Close .
+Send attachments with confidential mode
+Tip: If you're using Gmail with a work or school account, contact your admin to make sure you can use confidential mode.
+On your computer, go to Gmail.
+Click Compose.
+Click Attach .
+Choose the files you want to upload.
+In the bottom right of the window, click Turn on confidential mode .
+ Tip: If you've already turned on confidential mode for an email, go to the bottom of the email, then click Edit.
+Set an expiration date and passcode. These settings impact both the message text and any attachments. 
+If you choose "No SMS passcode," recipients using the Gmail app will be able to open it directly. Recipients who don't use Gmail will get emailed a passcode.
+If you choose "SMS passcode," recipients will get a passcode by text message. Make sure you enter the recipient's phone number, not your own.
+Click Save.
+Fix issues with attachments in Gmail
+Attachments might be unavailable
+Your network administrator or Internet provider probably blocked "mail-attachment.googleusercontent.com," the domain Google uses to host attachments.
+For more help, contact your internet service provider.
+Attachments won't upload (Desktop)
+Make sure you're using a supported browser.
+Try adding the attachment in another browser.
+If you've set up a web browser proxy, try disabling it.
+Blocked for security reasons
+To prevent viruses, Gmail doesn't let you attach executable files, like files ending in .exe.
+Learn about storage limits
+Attachments count toward your Google storage. Storage is shared across Drive, Photos, and Gmail. If you reach your storage limit, you can’t send or receive attachments.
+To clean up your storage:
+Go through your inbox and delete unneeded large attachments.
+Regularly empty your trash and spam.
+Learn how to manage your storage in Drive, Gmail & Photos.
+Learn how to resolve the ”Gmail’s adding files” error message
+If you upload files from another device, wait until the upload completes. Then send the attachments in your current message.
+To send the message right away, remove the attachments that are uploading from the other device.
+Learn how to resolve the “Couldn’t send message” error message
+One or more files didn't upload to Drive. This might be because you don't have enough space, your internet is slow, or something else.
+To send the message, remove or re-add the attachment.
+Related resources
+Send Google Drive attachments in Gmail
+Files types blocked in Gmail
+ Computer Android phone & tabletiPhone & iPad 
+ More 
+Need more help? 
+Try these next steps: 
+ Post to the help community Get answers from community members 
+true 
+Send attachments & images
+1 of 2Send attachments with your Gmail message
+2 of 2Send Google Drive attachments in Gmail 
+ ©2026 Google 
+ Privacy Policy 
+ Terms of Service 
+ Program Policies Language català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎ 
+Enable Dark Mode 
+Send feedback on... This help content & information General Help Center experience 
+Search
+Clear search
+Close search
+Google apps
+Main menu 
+2813269498849518892 
+true 
+Search Help Center 
+false 
+true 
+true 
+true 
+true 
+true 
+17 
+false 
+false 
+false 
+false 
+false

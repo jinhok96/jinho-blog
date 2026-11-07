@@ -1,0 +1,163 @@
+URL: https://support.microsoft.com/en-us/edge/copilot/browse-with-copilot
+Final: https://support.microsoft.com/en-us/edge/copilot/browse-with-copilot
+Title: Browse with Copilot | Microsoft Support
+Fetched: 2026-10-30 16:46 UTC
+
+Skip to main content
+Microsoft
+Cancel
+Getting started with Copilot in Microsoft Edge
+Using Microsoft Copilot in Edge at work
+Browse with Copilot
+How context clues work in Copilot in Edge
+Shopping with Microsoft Copilot
+Copilot Journeys
+Browse with Copilot in Microsoft Edge
+
+Browse with Copilot lets Copilot perform actions directly in your Microsoft Edge browser, such as clicking, typing, and navigating tabs. You can see each step in real time and take control at any time. All actions run locally in your browser, ensuring full visibility and control.
+
+How does browsing with Copilot work?
+
+When you ask Copilot to complete a task, it interprets your request and takes the necessary steps to carry it out. Depending on the task, Copilot can work in your current tab or open a new tab in the same window. It interacts with webpages the same way you do, by selecting, scrolling, and typing. The tab where Copilot is working shows a cursor icon in the tab menu, so you can easily locate it and monitor its actions. You can interrupt or take control at any time.
+
+Is browsing with Copilot available today?
+
+For consumers, Browse with Copilot is rolling out as a feature for Microsoft 365 Premium subscribers in the US, with additional markets to follow. If you'd like to try Browse with Copilot in Microsoft Edge, you can sign up for a Microsoft 365 Premium subscription. To learn more, see Buy Microsoft 365 Premium - Subscription Price, Download | Microsoft Store.
+
+Use Browse with Copilot
+
+In the Copilot text box, select Browse with Copilot, then enter your request.
+
+If you want Copilot to act on the page you currently have open, start your prompt with phrases like "In my browser…" or "On my current page…".
+For other tasks, begin with action-oriented phrases such as "Open…", "Find…", "Book…", or "Add…".
+
+A clear, detailed request helps Copilot give you the best possible response.
+
+What should I not use Browse with Copilot for?
+
+When getting started with agentic browsing, be careful to avoid using sensitive or personal information, including:
+
+Financial activity (banking, stock trading, credit card details)
+Personal identifiers (Social Security numbers, government IDs, medical records)
+Accessing highly confidential data
+
+Start with trusted sites and familiar workflows where you're comfortable having Copilot act on your behalf.
+
+What safety measures are in place?
+
+Browse with Copilot includes several safeguards: Edge blocklists prevent Copilot from accessing high-risk sites (adult content, gambling); enhanced security settings let you control site-level access; and a first-use consent dialog explains how the feature works and the risks to acknowledge. The feature is experimental and may misinterpret instructions, make mistakes, or be affected by malicious hidden instructions on web pages, so Microsoft recommends monitoring its activity closely.
+
+What security considerations should I be aware of?
+Prompt injection: Malicious sites may try to trick Copilot into performing unintended actions. For example, you might ask Copilot to order ingredients from a recipe webpage. While processing the page, it could encounter hidden malicious text designed to override your request — for instance, directing it to visit another site to collect sensitive information instead.
+Unintended actions: Copilot may misinterpret your request or act differently than you expect. Please monitor its activity closely.
+Financial risks: Using Copilot for purchases or banking could expose sensitive information or result in unauthorized actions.
+Privacy risks: Copilot may interact with sites that contain personal, sensitive, or confidential data.
+
+Copilot includes safeguards designed to help reduce these risks, but you should exercise caution and closely monitor Copilot's work.
+
+What safety measures does Microsoft Edge have?
+
+Microsoft Edge includes several safety measures to help reduce these risks:
+
+Edge blocklists: Edge can prevent Copilot from accessing high-risk sites, such as adult content or gambling websites.
+Edge security lists: Enhanced security settings let you control how much access Copilot has on certain sites. You can also specify sites that Copilot should never be allowed to visit in your Edge settings.
+Restricted Edge profile information: While Copilot is browsing and interacting with webpages in Edge, it cannot access autofill data, saved passwords, or wallet information.
+Which Microsoft Edge data can Copilot access?
+
+Copilot uses the following data in Edge to do its job:
+
+Screenshots: Copilot captures screenshots of the webpage it's using solely to browse and act on your behalf. These screenshots are never used for training.
+Edge profile data access: Copilot uses your current browser window to perform tasks, which includes limited information within your Edge profile — it does not have unrestricted access to all your data.
+Cookies: Copilot can access cookies, which means if you're already signed into a site that Copilot has access to, it will also be signed in automatically. To avoid this, you can either delete all cookies before browsing with Copilot or start with a brand-new browser profile. To learn more, see How to Manage and Clear Your Cache and Cookies | Edge Learning Center.
+Open tabs in browser window: Copilot has access to the tabs currently open in your browser window to help with tasks — for example, summarizing multiple tabs and performing an action based on that summary. It can also work directly in an existing tab if you explicitly ask, such as reformatting a document you already have open.
+Site permissions: When you ask Copilot to perform a simple action like going to a website, that website will have the same permissions to device capabilities — such as camera, location, or microphone — that it would if you navigated to the site yourself. If you've granted a site permissions previously, those permissions still apply. When Copilot is interacting with a site, such as clicking, searching, or scrolling, these permissions are temporarily suspended.
+
+Learn more about the context clues Copilot in Edge uses to generate responses at How context clues work in Copilot in Edge.
+
+Does Copilot in Edge capture and store images of what it's looking at and working on?
+
+Yes. When Copilot is performing an action, it takes screenshots of the pages it visits to "see" and interact with them. These screenshots are limited to the tabs Copilot is working on in the current browser window. They're saved with the conversation in your history, allowing you to review Copilot's work. Screenshots are not used for training. When you delete a conversation, the associated screenshots are also deleted. Otherwise, screenshots are retained for up to 30 days.
+
+Does Copilot log user inputs, screenshots, and outputs?
+
+As part of browsing with Copilot, your text prompts and Copilot's responses are saved in the conversation history, along with a record of the work Copilot did on your behalf. Any information you enter directly into a webpage, such as personal data in a form, is not saved by Copilot, but it may be saved in Edge.
+
+While Copilot is in control, it takes screenshots of the pages it visits. If you stop the task, you're back in control, so Copilot will not capture or send any screenshots until you start the task again. This information is stored so there's a clear history to help troubleshoot and review Copilot's work. Copilot responses are monitored to help prevent unsafe interactions and outputs.
+
+If a task requires your input, such as personal details or payment information, Copilot will ask you to provide it, and you can take control of the tab and enter it yourself. When you enter the information on the page, Copilot does not save it, though Edge may save it.
+
+When will Copilot ask for confirmation, supervision, or for me to take control?
+
+Copilot will ask for your attention and supervision for certain actions, such as buying an item, booking a reservation, sending an email, or deleting a calendar event. For certain websites, it will ask you to monitor the work or take control, specifically on higher-risk sites like banking or email. It may also ask you to approve a site if it doesn't seem directly related to your task.
+
+Does Browse with Copilot work with every site?
+
+No, it does not work with every site. There are a few important examples where Copilot in Microsoft Edge will not work, by design:
+
+Policy-blocked sites: Sites that don't align to Copilot's policies, such as sites containing offensive content, will not be accessible. For more information, see our Terms of Use and Content Policy.
+What prevents Browse with Copilot from being used for harmful, offensive, or illegal purposes?
+
+Security, digital safety, and responsible AI are top priorities for Microsoft. Browse with Copilot will not work with sites that Copilot has determined to contain harmful content or content that doesn't align with our policies. Copilot may not be used for harmful, offensive, or illegal activity, and Copilot will refuse these tasks. Serious or repeated violations of our Code of Conduct may result in your suspension from using this feature.
+
+To learn more, visit the Transparency Note for Microsoft Copilot, Responsible AI at Microsoft, and our Terms of Use and Content Policy.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026

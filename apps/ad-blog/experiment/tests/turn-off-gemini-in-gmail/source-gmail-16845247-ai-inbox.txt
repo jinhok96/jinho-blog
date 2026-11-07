@@ -1,0 +1,145 @@
+## Manage to-dos & topics with AI Inbox
+Important: AI Inbox is currently in beta and may change over time. Your use of AI Inbox is covered by the Google Cloud Terms of Service, and the specific terms for pre-release features do not apply.
+To help you manage a busy inbox, AI Inbox can show you priority emails and topics.
+## Learn how AI Inbox works
+AI Inbox helps surface to-dos and topics that matter most, all in one place. When you open AI Inbox, there are 2 sections:
+- Suggested to-dos: This section shows high-priority items from incoming emails that need your attention. It also explains what you need to do in bold text, like a due date for a utility or credit-card bill.
+- Topics to catch up on: This section provides a quick summary of important updates across projects and topics. It helps you stay updated on items often scattered in various email threads. Examples include upcoming travel, restaurant reservations, or purchase confirmations.
+To show the most relevant items, AI Inbox:
+- Only surfaces information from messages in your “Primary” tab and not other tabs, such as “Social” or “Promotions.”
+- Filters out messages like spam or that you archive, delete, mute, or snooze.
+- Does not support attachments, delegated inboxes, or encrypted emails.
+## What you need
+Important: This feature is only available in the US and in English.
+- For personal Google Accounts: You need an eligible Google AI plan:
+- Google AI Plus
+- Google AI Pro
+- Google AI Ultra
+- For work or school accounts: You need an eligible Google Workspace plan. Learn more about Gemini features and plans.
+## Additional requirement
+- In Gmail, turn on Smart features in Google Workspace and Smart features in other Google products. Learn more about smart features.
+Tip: After you turn on smart features, it can take a few hours. It may take up to 7 days for your first set of to-dos and topics to appear.
+## Show or hide AI Inbox
+- On your computer, open Gmail.
+- At the top right, click Settings See all settings.
+- At the top, click Inbox.
+- Next to “Show AI Inbox,” check or uncheck the box.
+## Open AI Inbox
+Important: Your AI Inbox may appear empty if you have not sent or received emails recently.
+- On your computer, open Gmail.
+- In the left panel, click AI Inbox.
+- To get the latest updates, at the top, click Refresh .
+Tip: If the information in AI Inbox is outdated:
+- Make sure you have a stable internet connection or Wi-Fi.
+- Confirm that you are in the correct Google Account.
+## Manage suggested to-dos
+- Take action on an email: Next to a to-do, select an action button, like View or Reply.
+- Open related information: To get more context, click the link next to any item and open the related email, chat, or another source.
+- Complete a to-do: When you finish, click Mark done .
+- Provide feedback or report issues: Next to any item, click More options :
+- Remove to-do: Remove a to-do from your list.
+- Positive feedback or Negative feedback: Rate the quality of a to-do or topic.
+- Report abuse: Report unsafe suggestions to Google.
+## Review topics to catch up on
+- Open related information: To get more context, click the link next to any item and open the related email, chat, or another source.
+- Mark all emails as read: To acknowledge unread updates in AI Inbox, click Mark all as read. This also changes all affected emails to read in your Gmail inbox.
+- Provide feedback or report issues: Next to any item, click More options :
+- Positive feedback or Negative feedback: Rate the quality of a to-do or topic.
+- Report abuse: Report unsafe suggestions to Google.
+## Learn how to find all AI Inbox data
+Data in AI inbox is generated based on content and activity from your usage of Workspace apps. Sometimes to-dos or topic updates may be generated and used to optimize your experience, but not shown.
+To find all suggested to-dos and topics not visible in AI Inbox, select View all at the bottom of AI Inbox in a web browser.
+## Related resources
+- Learn about Gemini features in Gmail
+- Get an AI Overview in Gmail search
+- Report abuse in Gemini in Workspace apps
+ Computer Android phone & tabletiPhone & iPad 
+  More   
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 19
+Get started with Google Workspace with Gemini
+- 
+2 of 19
+Learn about Gemini features in Gmail
+- 
+3 of 19
+Talk naturally with Gmail Live
+- 
+4 of 19
+Manage to-dos & topics with AI Inbox
+- 
+5 of 19
+Get an AI Overview in Gmail search
+- 
+6 of 19
+Catch up on email threads with AI Overview conversation summaries
+- 
+7 of 19
+Draft emails with Gemini in Gmail
+- 
+8 of 19
+Proofread your drafts with Gemini in Gmail
+- 
+9 of 19
+Use Suggested Replies in Gmail
+- 
+10 of 19
+Collaborate with Gemini in Gmail
+- 
+11 of 19
+Suggest times to meet with Gemini in Gmail
+- 
+12 of 19
+Take quick actions from your Gmail inbox
+- 
+13 of 19
+Find & manage your Gemini in Workspace conversation history
+- 
+14 of 19
+Customize Gemini in Workspace's responses with your instructions
+- 
+15 of 19
+Learn how to use sources with Google Workspace with Gemini
+- 
+16 of 19
+Use Deep Research in Gemini in Workspace apps
+- 
+17 of 19
+Use integrations with Gemini in Workspace
+- 
+18 of 19
+Supported languages for Google Workspace with Gemini
+- 
+19 of 19
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service      
+-   Program Policies           Language   català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+7085722109907460951                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+17                                                                                                     
+false    
+false                                                                                                                                                             
+false   
+false                                                                   
+false  

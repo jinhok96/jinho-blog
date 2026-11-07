@@ -1,0 +1,86 @@
+# 가져온 시각: 2026-10-27T16:00:25.411Z
+# 원본: https://www.apple.com/legal/privacy/data/en/ask-siri-dictation/
+Legal - Siri, Dictation & Privacy- Apple
+https://www.apple.com/legal/privacy/data/en/ask-siri-dictation/
+
+English  Choose your preferred language
+Siri, Dictation & Privacy
+
+Apple stores transcripts of your interactions with Siri and may review a subset of these transcripts. Siri may also send information like your audio, Siri setup, contacts, and location to Apple to process your request. Data is not associated with your Apple Account.
+ 
+
+
+Siri is designed to protect your information and enable you to choose what you share.
+
+
+
+
+Siri, Dictation & Privacy outlines the default behavior for Siri and Dictation. If you opt in to Improve Siri and Dictation, additional data is collected, stored, and reviewed. For more information, visit www.apple.com/legal/privacy/data/en/improve-siri-dictation.
+
+Siri and Dictation
+
+When you use Siri, your device will indicate in Siri Settings whether the things you say are processed on your device and not sent to Apple servers. Otherwise, your audio is sent to and processed on Apple servers. Unless you opt in to Improve Siri and Dictation, your audio data is not stored by Apple.
+
+When you use Dictation, your device will indicate in Keyboard Settings if your audio and transcripts are processed on your device and not sent to Apple servers. Otherwise, the things you dictate are sent to and processed on the server, but will not be stored unless you opt in to Improve Siri and Dictation.
+
+Apple will also store related request data, such as the category of request you made and whether it was completed successfully, device specifications, device configuration, performance statistics, and, if you have turned on Location Services for Siri, the approximate location of your device at the time the request was made.
+
+Your request history, which includes transcripts and any related request data, is associated with a random, device-generated identifier that rotates multiple times per hour and is not tied to your Apple Account or email address. Apple may retain and use this data for up to two years to develop and improve Siri, Dictation, Search, and limited other language processing functionality in Apple products and services. For example, transcripts may be used to fine-tune Siri, Search, Voice Control, Translate, and automatic speech recognition models. Apple may also review a subset of the transcripts of your interactions with Siri, and this small subset of interactions that has been reviewed may be kept beyond two years for the ongoing improvement of these products and services.
+
+A history of your Siri and Dictation interactions is stored on your device, and may be used to personalize your Siri experience.
+
+When you use Siri and Dictation, your device may send other contextual data to Apple, including from third-party apps you allow to integrate with Use with Siri Requests, such as:
+
+Contact names, nicknames, and relationships (for example, “my dad”), if you set them up in your contacts
+Form of address, if set in language and region settings
+Music and podcasts you enjoy
+Names of your and your Family Sharing members’ devices
+Names of accessories, homes, scenes, shared home members in the Home app, and Apple TV user profiles
+Labels for items, such as people names in Photos, Alarm names, and names of Reminders lists
+Names of apps installed on your device and shortcuts you added through Siri
+
+This data is associated with a random, device-generated identifier that is not tied to your Apple Account or email address. It is used by Apple only to determine whether Siri understood your request and to help your iOS device and any connected Apple device, such as your Apple Watch, HomePod, or supported HomeKit accessory, understand you better and recognize what you say.
+
+This contextual data, as well as your Siri transcripts and related request data, are not used to build a marketing profile, and are never sold to anyone.
+
+Third-Party Apps
+
+When Siri interacts with a third-party app or service on your behalf, you are subject to that app or service’s terms and conditions and privacy policy. In addition, if you choose to allow apps to use Speech Recognition for transcription, the audio data to be transcribed may be sent to Apple.
+
+Siri Suggestions
+
+Siri Suggestions uses local, on-device processing to learn how you use your devices and apps in order to personalize your experience. Using information stored on your device, such as your Safari browsing history, emails, messages, images, notifications, and contacts, as well as information donated or contributed by other installed apps, Siri can suggest shortcuts and provide suggestions in searches, share sheet, calendar, Look Up, Visual Look Up, Safari, apps, and more. For example, Siri may use on-device intelligence to suggest who to share a photo with in share sheet based on who is in the photo. Suggestions may be used to personalize Apple services but are not stored on Apple servers or shared with other third-party apps. When you run a Siri-suggested shortcut, you are subject to the app’s terms and conditions and privacy policy.
+
+Location Services
+
+If you have Location Services turned on for Siri, the location of your device at the time you make a request will be sent to Apple to help Siri and Dictation improve the accuracy of its response to your requests. To deliver relevant responses and suggestions, Apple may use the IP address of your internet connection to approximate your location by matching it to a geographic region.
+
+iCloud Syncing
+
+Your Siri settings and Siri Suggestions personalization will sync across your Apple devices using end-to-end encryption if you use iCloud. Additionally, the audio from when you set up Siri to recognize your voice syncs using end-to-end encryption to improve personalized Siri recognition on your devices. For example, this is how audio from your phone can enable Recognize My Voice on your HomePod. The personalized speech recognition models and your interactions with Siri and Dictation that are performed on device may leverage your on-device information to improve accuracy and model performance. Personalized speech recognition is performed on your device and not on Apple servers. The status of your nearby timers, alarms, shared media, and, if you opted in to Personal Requests on HomePod, phone call status, from your device and the proximity of such device may be shared locally with your nearby Apple devices for others to be able to control them from your nearby devices with Siri enabled.
+
+You Have Choice and Control
+
+You can disable Siri or Dictation at any time. To turn off Siri, go to Settings > Siri > Talk to Siri and tap Off, and go to Settings > Siri > Talk to Siri and tap to turn off “Press Home for Siri” or “Press Side Button for Siri”. To turn off Dictation, go to Settings > General > Keyboard, then tap to turn off Enable Dictation. If you turn off both Siri and Dictation, the transcripts of your Siri and Dictation requests that are stored on your device and used to personalize your experience will be deleted.
+
+You can delete the transcripts of your Siri and Dictation requests that are stored on your device by going to Settings > Siri > Siri & Dictation History and tapping Delete Siri & Dictation History.
+
+You can control which apps can integrate with Allow Siri Requests at any time by going to Settings > Siri > Apps > [app name] > Use with Siri Requests.
+
+If you do not want Siri Suggestions in apps, or when sharing, searching, or listening, you can disable Siri Suggestions by going to Settings > Siri and tapping to turn off “Show in App Library”, “Show in Spotlight”, “Show When Sharing”, or “Show When Listening”.
+
+You can see and control the full list of features that Siri personalizes and apps that Siri suggests shortcuts for by going to Settings > Siri. To stop apps from contributing information to personalize Siri, go to Settings > Siri > Apps > [app name], then tap to turn off Learn from this App. To stop app clips from contributing information to personalize Siri, go to Settings > Siri > App Clips and tap to turn off Learn from App Clips.
+
+If you have enabled Location Services, you can turn off Location Services for Siri by going to Settings > Privacy & Security > Location Services > Siri and tapping Never.
+
+If you have enabled Location Services, you can turn off Location Services for Siri Suggestions by going to Settings > Privacy & Security > Location Services > System Services and tapping to turn off Suggestions & Search.
+
+If you do not want Siri personalization to sync across your devices, you can disable Siri by going to Settings > [your name] > iCloud > Saved to iCloud > See All and tapping to turn off Siri.
+
+You can also restrict the ability to use Siri and Dictation altogether by going to Settings > Screen Time > Content & Privacy Restrictions > Allowed Apps & Features and tapping Siri & Dictation.
+
+You can control which apps use Siri for transcription by going to Settings > Privacy & Security > Speech Recognition.
+
+By using Siri, Dictation, or Siri Suggestions, you agree and consent to Apple’s and its subsidiaries’ and agents’ transmission, collection, maintenance, processing, and use of this information to provide and improve Siri, Dictation, Search, and limited other language processing functionality in Apple products and services as described above. Apple may process and store this information with trusted third-party service providers. At all times, information collected by Apple will be treated in accordance with Apple’s Privacy Policy, which can be found at www.apple.com/privacy.
+
+2026-09-14

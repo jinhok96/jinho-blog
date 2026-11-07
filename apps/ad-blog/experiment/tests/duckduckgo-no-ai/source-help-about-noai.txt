@@ -1,0 +1,59 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/ai-features/about-noaiduckduckgocom
+Fetched: 2026-11-01T15:33:54.067Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/ai-features/about-noaiduckduckgocom
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+DuckDuckGo’s Approach to AI
+Opting Out of AI Features
+About noai.duckduckgo.com
+Misconceptions
+Legal
+Privacy Guides
+AI Features/Opting Out of AI Features
+About noai.duckduckgo.com
+
+DuckDuckGo's approach to AI is to provide private, useful, and optional AI features — including chat and search instant answers — to people who want the productivity benefits of AI without the privacy risks.
+
+We provide settings that allow you to customize how much or how little AI you want as a part of your DuckDuckGo experience. In addition, we also provide a version of DuckDuckGo Search that automatically turns all AI features off and filters out as much AI-generated content as possible (as best we can).
+
+If you'd prefer an AI-free DuckDuckGo Search experience, start your searches on noai.duckduckgo.com instead of on duckduckgo.com. Searching on noai.duckduckgo.com works the same as search on duckduckgo.com, except all AI features are turned off and AI-generated images are filtered out of results by default.
+
+Here's the full list of content and features blocked on noai.duckduckgo.com:
+
+Search Assist
+Duck.ai
+AI-generated images
+
+We also offer No-AI browser extensions for Chrome and Firefox that set your default search to the DuckDuckGo AI-free experience and filter out AI-generated images from search results.
+
+Get the No-AI Search extension for Firefox
+Get the No-AI Search extension for Chrome
+
+If we add new AI products and features in the future, noai.duckduckgo.com will remain a way to search privately on DuckDuckGo without AI.
+
+Learn More
+AI Features - Duck.ai
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

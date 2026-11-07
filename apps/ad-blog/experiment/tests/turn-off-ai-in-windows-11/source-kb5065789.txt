@@ -1,0 +1,194 @@
+
+September 29, 2025—KB5065789 (OS Builds 26200.6725 and 26100.6725) Preview	
+			Applies To
+Windows 11 version 25H2, all editions Windows 11 version 24H2, all editions 
+Windows Secure Boot certificate expiration
+Secure Boot certificates used by most Windows devices have started expiring in June 2026. This might affect the ability of certain personal and business devices to boot securely if not updated in time. To avoid disruption, we recommend reviewing the guidance and taking action to update certificates in advance. For details and preparation steps, see Windows Secure Boot certificate expiration and CA updates.
+To learn about Windows update terminology, see the pages on types of Windows updates and monthly quality update types. For an overview, see the update history pages for Windows 11, version 24H2 and version 25H2.
+Follow @WindowsUpdate to find out when new content is published to the Windows Release Health Dashboard.
+Change log
+Change date
+Change description
+May 26, 2026
+Updated the second MSU file listed under Catalog in Method 2.
+January 08, 2025
+Update: This change is included in the September 2025 non-security update (KB5065789).
+[MSHTA inline scripts] After installing this update, inline scripts passed directly to MSHTA.exe will no longer run and fail silently with no error code. This behavior is intentional; inline script execution was identified as a security vulnerability and was blocked as part of a planned security hardening change. Execution of .hta files that contain script within their HTML code continues to work as expected. Apps using inline scripts must shift to supported alternatives, such as invoking an .hta file or loading script from an external file.
+November 25, 2025
+Update: The feature is included in the September 2025 non-security update (KB5065789).
+[Passkeys] New! Added support for setting up a PIN for security keys if it was not already setup, when Relying Parties (RP) set User Verification = Preferred during authentication. For more information, see the KB article, Security keys might require a PIN after installing the September 2025 Windows preview update.
+October 09, 2025
+Update: The feature is included in the September 2025 non-security update (KB5065789).
+ [Command line] New! Windows now includes Edit, a text editor you can use from the command line. To edit a file, open the Terminal app and type edit followed by the file name. Edit is open source and available on GitHub. For a full list of features, see Edit command line tool.
+October 02, 2025
+Update: The feature is included in the September 2025 non-security update (KB5065789).
+ [Notification Center] New! The Notification Center functionality is now available on secondary monitors. To open it, select the date and time in the system tray on the taskbar. With the August 2025 non-security update (KB5064081), you can also show a larger clock with seconds above the calendar.
+October 01, 2025
+A feature previously listed in the September 2025 non-security update (KB5065789) will roll out in a future date.
+ [Administrator Protection Preview] Administrator protection aims to protect free floating admin rights for administrator users allowing them to still perform all admin functions with just-in-time admin privileges. This feature is off by default and needs to be enabled via OMA-URI in Intune or via group policy.
+September 30, 2025
+Update: The September 2025 non-security update (KB5065789) is available for devices running Windows 11, versions 24H2 and 25H2. All improvements and fixes from KB5065789 apply to both versions, providing a consistent experience across devices.
+September 30, 2025
+Update: The fix is included in the September 2025 non-security update (KB5065789).
+ [Hyper-V] Fixed: When you assign a GPU paravirtualization device to a VM, the session may freeze and stop responding.
+Highlights
+Gradual rollout
+A gradual rollout distributes a release update over a period of time instead of all at once. This means that users receive the update at different times, and it might not be immediately available to all users.
+[Click to Do]
+New! New and popular action tags in the Click to Do context menu help you discover the latest and most widely used AI-powered actions.
+New! Click to Do provides more concise summaries with Summarize action. The output for text entities is shorter and more focused. Ongoing improvements continue to enhance clarity and precision.
+[Agents in Settings] New! A direct navigation link to the corresponding settings page is available from agent search results. This improvement is currently rolling out to agents in Settings on Copilot+ PCs.
+[Desktop] New! You can now move the hardware indicators for brightness, volume, airplane mode, and virtual desktops to different positions on your screen. To change their position, go to Settings > System > Notifications, and then pick from the options in the Position of the onscreen pop-up in the dropdown list.
+[Taskbar] New! IT administrators no longer need to restart explorer.exe to apply the pinning policy. After applying the policy, users might see a pin on their taskbar within approximately 8 hours, depending on the refresh interval.
+[File Explorer]
+New! Use AI actions in File Explorer to edit images or summarize documents. Just right click (or press Shift+F10) on the file and select AI actions. This experience is not yet available for customers in the EEA (European Economic Area).
+Image actions: You can now use four AI-powered image actions with .jpg, .jpeg, and .png files. Visual Search searches the web using an image instead of text. Blur Background opens the Photos app to highlight the subject and blur the background. Erase Objects removes unwanted elements from your photo. Remove Background uses Paint to change any image leaving a smooth cut out of the subject.
+AI actions in Microsoft 365 make it easier to work with your documents. With the Summarize action in Copilot, you can quickly generate summaries of files stored in OneDrive and SharePoint—no need to open each one. This AI action requires an active Microsoft 365 subscription and a Copilot license (Microsoft account and Microsoft Entra ID supported).
+Improved: The File Explorer context menu has been updated to remove the accent colored backplate behind packaged app icons in the Open With list when right clicking a file (for example, Snipping Tool). This change makes icons easier to see.
+Improved: Made underlying changes to help improve the performance of launching cloud files from File Explorer and loading context menus.
+Fixed: Icons and text might become overlapping on the desktop when using increased text scaling.
+Fixed: Icons in the details, preview, and navigation panes of File Explorer aren’t properly mirrored when using an Arabic or Hebrew display language.
+[Windows Share] New! You can pin your favorite apps in the Windows share window to quickly access them when you need them.
+[Advanced Settings] New! The redesigned Advanced settings page (Settings > System > Advanced) is an update of the For Developers page and makes it easier to find key options. Settings include File Explorer + version control, which shows Git details such as branch, diff count, and last commit message directly in File Explorer when you select a repository folder.
+[Input]
+New! Insert dashes with new keyboard shortcuts. You can quickly insert an en dash (–) or em dash (—) while typing.  Press Windows logo key+Minus (-) to insert an en dash, and Windows logo key+Shift+Minus (-) to insert an em dash. If Magnifier is running, Windows logo key+hyphen (-) will zoom out Magnifier instead of inserting an en dash.
+Fixed: After waking a PC from sleep, touch input might not work to enter your pin on the sign-in screen.
+[Narrator]
+New! Narrator now includes Braille Viewer, which shows both on-screen text and its Braille equivalent on a refreshable Braille display. To open Braille viewer and start Narrator, press the Windows logo key+Ctrl+Enter, press Narrator key+Alt+B. A new floating window opens and updates dynamically as you navigate with Narrator. Before using Braille viewer, you must set up Narrator for Braille. To download and install the Braille support package, go to Settings > Accessibility > Narrator > Use a Braille display with Narrator.
+New! Narrator offers a smoother, more natural experience in Word, with improved voice feedback, reliable continuous reading, and better navigation for footnotes, comments, lists, and tables. Enhancements include consistent list announcements, clearer table boundaries, and intuitive selection feedback.
+[Passkeys]
+New! A seamless plugin passkey manager integration in Windows 11. You can now use plugin credential manager for passkeys. To set up a plugin credential manager, install a credential manager application that supports integration then go to Settings > Accounts > Passkeys > Advanced options. Turn on support and complete user verification using Windows Hello (through face recognition, fingerprint, or PIN). Once verified, you can use your existing passkeys saved to the plugin credential manager or save new passkeys.
+New! Added support for setting up a PIN for security keys if it was not already setup, when Relying Parties (RP) set User Verification = Preferred during authentication. For more information, see the KB article, Security keys might require a PIN after installing the September 2025 Windows preview update.
+[Settings]
+New! The Manage or clear your Bing search history entry under Settings > Privacy & security > Search > Search history has been removed. You can now manage your Bing search history directly from the Privacy dashboard, accessible via the Privacy resources link under Related settings on that Settings page.
+New! More time, language, and keyboard settings have moved from Control Panel to Settings. You can now add additional clocks, change your time server, and customize date and time formatting—including AM/PM symbols—directly from Settings > Time & language > Date & time. Number and currency formats, Unicode UTF-8 support, and options to copy language and region settings to other accounts are now under Settings > Time & language > Language & region. Keyboard character repeat and cursor blink rate settings are now easier to find under Settings > Accessibility.
+Improved: Made underlying changes to help improve the performance of loading the apps list in Settings > Apps > Installed apps.
+Fixed: Settings > System > Storage > Disks and Volumes might show a link for BitLocker drive encryption in unsupported cases. Selecting it results in BitLocker opening and displaying error 0x80004005.
+[Gaming]
+New! Xbox Wireless Controller support for gaming on Windows 11 handheld devices has improved. Short pressing the Xbox button opens Game Bar. A new change we're introducing is when you long press the Xbox button, it will open Task View. Pressing and holding the Xbox button continues to turn off the game controller. This update is currently available on supported handheld devices, and we plan to expand availability to more Windows 11 PCs soon.
+Improved: Underlying changes have been made to improve performance when gaming with Game Bar or other overlays active on top of users' game. This update might especially help users with multiple monitors that have different refresh rates.
+[Other] New! This feature offers a modern interface that aligns with Windows 11 visuals across several dialogs, including the one shown when an app fails to open.
+[Voice access]
+New! Natural language commanding in Voice access provides users with the flexibility to speak commands naturally, using filler words and synonyms, rather than rigid, predefined commands. This feature is now available for Intel and AMD-powered Copilot+ PCs.
+Fixed: Voice access might get stuck in a state where it says it’s listening but is stuck and doesn’t respond.
+[Notification Center] New! The Notification Center functionality is now available on secondary monitors. To open it, select the date and time in the system tray on the taskbar. With the August 2025 non-security update (KB5064081), you can also show a larger clock with seconds above the calendar.
+[Command line] New! Windows now includes Edit, a text editor you can use from the command line. To edit a file, open the Terminal app and type edit followed by the file name. Edit is open source and available on GitHub.  For a full list of features, see Edit command line tool.
+[Dynamic Lighting] Fixed: The Dynamic Lighting Background Controller might occasionally consume excessive CPU after unlocking your PC.
+[High Dynamic Range (HDR)] Fixed: HDR might unexpectedly immediately turn off after being enabled in Settings.
+[Media (known issue)] Fixed: This update addresses an issue that affects playback of protected content in certain Blu-ray, DVD, and digital TV apps that use Enhanced Video Renderer with HDCP enforcement. This can occur after installing KB5064081.
+[Performance] Improved: Added support for Certificate Revocation List (CRL) partitioning in Windows Certificate Authorities.
+[Quick Settings]: Fixed: If you had to enter a PIN for your device to cast from Quick Settings, pressing Enter wouldn’t confirm the PIN.
+[Windows Hello] Fixed: You might unexpectedly see a message saying “Something happened and your PIN isn’t available” when attempting to enter safe mode.
+[Windows Sandbox] Fixed: When Windows Sandbox is enabled, the VmmemCMFirstBoot process might consume large amounts of CPU after sign-in, causing your PC to become unresponsive.
+[MSHTA inline scripts] After installing this update, inline scripts passed directly to MSHTA.exe will no longer run and fail silently with no error code. This behavior is intentional; inline script execution was identified as a security vulnerability and was blocked as part of a planned security hardening change. Execution of .hta files that contain script within their HTML code continues to work as expected. Apps using inline scripts must shift to supported alternatives, such as invoking an .hta file or loading script from an external file.
+Improvements
+Normal rollout
+This non-security update includes quality improvements. The following summary outlines key issues addressed by the KB update after you install it. Also, included are available new features. The bold text within the brackets indicates the item or area of the change.
+[Hyper-V]
+Fixed: This update addresses an issue that affects starting Hyper-V virtual machines with Trusted Platform Module (TPM) on ARM64 devices running supported versions of Windows. This can occur after installing KB5064081
+Fixed: When you assign a GPU paravirtualization device to a VM, the session may freeze and stop responding.
+[Input]
+Fixed: An issue where some characters didn’t display correctly when using the Chinese Input Method Editor (IME).
+Fixed: This update addresses an issue where certain Chinese characters appeared as empty boxes in some text fields, such as those used in Connection Manager Administration Kit, when a character limit was set.
+Fixed: Addresses an issue in File Explorer where tooltips in the Recent section displayed certain extended Unicode characters—such as Chinese characters from Extension B through Extension F and other four-byte characters—as square boxes or unreadable symbols.
+[Networking (known issue)]⁠ Fixed: This update addresses an issue where you might not be able to connect to shared files and folders if you're using the Server Message Block (SMB) v1 protocol on NetBIOS over TCP/IP NetBIOS (NetBT). This can happen after installing update KB5065426.
+[Servicing] Fixed: This update addresses an issue that disrupted Windows Update for customers using Windows Server Update Services (WSUS).
+[Windows Hello] Fixed: This update addresses an issue that affects Windows Hello PIN setup with error 0x80090010 on devices joined to Microsoft Entra ID domains after installing Windows updates released on or after KB5060842.
+If you installed earlier updates, your device downloads and installs only the new updates contained in this package.
+AI Components
+This release updates the following AI components:
+AI Component
+Version
+Image Search
+1.2509.1022.0
+Content Extraction
+1.2509.1022.0
+Semantic Analysis
+1.2509.1022.0
+Settings Model
+1.2509.1022.0
+Windows 11 servicing stack update (KB5067437)- 26100.6717
+This update makes quality improvements to the servicing stack, which is the component that installs Windows updates. Servicing stack updates (SSU) ensure that you have a robust and reliable servicing stack so that your devices can receive and install Microsoft updates. To learn more about SSUs, see Simplifying on-premises deployment of servicing stack updates.
+Known issues in this update
+Problems playing protected content in some BluRay/DVD/Digital TV apps
+Symptoms
+Some Digital TV and Blu-ray/DVD apps might not play protected content as expected after installing the August 29, 2025, Windows non-security preview update (KB5064081), or later updates.
+Apps that use Enhanced Video Renderer with HDCP enforcement or Digital Rights Management (DRM) for digital audio might show copyright protection errors, frequent playback interruptions, unexpected stops, or black screens.
+Streaming services are not affected.
+Workaround
+The non-security September 2025 Windows preview update (KB5065789) and later updates address problems affecting certain applications that use the Enhanced Video Renderer (EVR) with HDCP (High-bandwidth Digital Content Protection) enforcement. The non-security October Windows preview update (KB5067036) includes additional improvements to address problems affecting applications using Digital Rights Media (DRM) for digital audio.
+IIS websites might fail to load
+Symptoms
+After installing the non-security September update (KB5065789) for Windows 11, version 25H2, or the security October update (KB5066835) for Windows 11, version 24H2, server-side applications that rely on HTTP.sys might experience issues with incoming connections. As a result, Internet Information Services (IIS) websites might fail to load and display an error message such as “Connection reset – error (ERR_CONNECTION_RESET)” or a similar message. This includes websites hosted on http://localhost/ and other IIS connections.
+This issue may result from various conditions, including internet connectivity, timing of update installation, and device restarts. It might not occur in all environments, even if the update is installed.
+The following steps can help resolve this issue in environments where it's observed:
+On the affected device, open Settings and go to Windows Update.
+Select Start 
+, type Check for updates, and Check for updates from the results.
+If updates are available, install them.
+Restart your device.
+Note
+Make sure to restart your device, even if no updates are installed.
+Workaround
+This issue is addressed in KB5067036.
+Password icon might be missing or invisible in the lock screen sign-in options
+Symptoms
+After installing the August 2025 non-security preview update (KB5064081) or later updates, you might notice that the password icon is not visible in the sign-in options on the lock screen. If you hover over the space where the icon should appear, you’ll see that the password button is still available. Select this placeholder to open the password text box and enter your password. After entering your password, you can sign in normally.
+Individuals using Windows Home or Pro editions on personal devices are very unlikely to experience this issue. This issue primarily affects enterprise or managed IT environments.
+Workaround
+This issue is addressed in KB5074105.
+How to get this update
+Before you install this update
+Microsoft combines the latest servicing stack update (SSU) for your operating system with the latest cumulative update (LCU). For general information about SSUs, see Servicing stack updates and Servicing Stack Updates (SSU): Frequently Asked Questions.
+Install this update
+To install this update, use one of the following Windows and Microsoft release channels.
+Windows Update
+Business
+Catalog
+Server Update Services
+Available
+Next Step
+Open Start 
+ > Settings 
+ Update & Security > Windows Update. In the Optional updates available area, you will find the link to download and install available updates.
+Check for optional updates
+Available
+Next Step
+These changes will appear in the next security update to Windows Update for Business.
+Available
+Next Step
+Yes1
+Before you install this update
+To get the standalone package(s) for this update, go to the Microsoft Update Catalog website. This KB contains one or more MSU files that require installation in a specific order.
+Install this update
+Method 1: Install all MSU files together
+Download all MSU files for KB5065789 from Microsoft Update Catalog and place them in the same folder (for example, C:/Packages). Use Deployment Image Servicing and Management (DISM.exe) to install the target update. DISM will use the folder specified in PackagePath to discover and install one or more prerequisite MSU files as needed.
+Updating Windows PC
+To apply this update to a running Windows PC, run the following command from an elevated Command Prompt:
+DISM /Online /Add-Package /PackagePath:c:\packages\windows11.0-kb5065789-x64_e3d377d0a97a3f7efaeec8f698d3040751f7da18.msu
+Or, run the following command from an elevated Windows PowerShell prompt:
+Add-WindowsPackage -Online -PackagePath "c:\packages\windows11.0-kb5065789-x64_e3d377d0a97a3f7efaeec8f698d3040751f7da18.msu"
+Or use Windows Update Standalone Installer to install the target update.
+Updating Windows Installation media
+To apply this update to Windows Installation media, see Update Windows installation media with Dynamic Update.
+Note: When downloading other Dynamic Update packages, ensure they match the same month as this KB. If the SafeOS Dynamic Update or Setup Dynamic Update is not available for the same month as this KB, use the most recently published version of each.
+To add this update to a mounted image, run the following command from an elevated Command Prompt:
+DISM /Image:mountdir /Add-Package /PackagePath:windows11.0-kb5065789-x64_e3d377d0a97a3f7efaeec8f698d3040751f7da18.msu
+Or, run the following command from an elevated Windows PowerShell prompt:
+Add-WindowsPackage -Path "c:\offline" -PackagePath "windows11.0-kb5065789-x64_e3d377d0a97a3f7efaeec8f698d3040751f7da18.msu" -PreventPending
+Method 2: Install each MSU file individually, in order
+Download and install each MSU file individually either using DISM or Windows Update Standalone Installer in the following order:
+windows11.0-kb5043080-x64_953449672073f8fb99badb4cc6d5d7849b9c83e8.msu
+windows11.0-kb5065789-x64_e3d377d0a97a3f7efaeec8f698d3040751f7da18.msu
+1 This latest cumulative update includes updates for AI components. Even though the AI component updates are included in the update, the AI components are only applicable to Windows Copilot+ PCs and will not install on Windows PC or Windows Server.
+Available
+Next Step
+You can import this update into Windows Server Update Services (WSUS) manually. See the Microsoft Update Catalog for instructions.
+Note
+If you want to remove the LCU
+To remove the LCU after installing the combined SSU and LCU package, use the DISM/Remove-Package command line option with the LCU package name as the argument. You can find the package name by using this command: DISM /online /get-packages.
+Running Windows Update Standalone Installer (wusa.exe) with the /uninstall switch on the combined package will not work because the combined package contains the SSU. You cannot remove the SSU from the system after installation.
+File information
+For a list of the files provided in this update, download the file information for cumulative update 5065789.
+For a list of the files provided in the servicing stack update, download the file information for the SSU (KB5067437) - version 26100.6717.
+					

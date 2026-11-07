@@ -1,0 +1,138 @@
+## Learn about Gemini features in Gmail
+Gemini features turn Gmail into your personal, proactive inbox assistant.
+In this article, learn about the availability of the latest Gemini features in Gmail. We’ll gradually expand to more countries and territories in a way that's consistent with local regulations and our AI principles.
+Important:
+- Access to Gemini features in Gmail varies based on account type. Users with eligible Google AI or Google Workspace plans can access some features globally. However, availability is currently limited to the US for users with personal Gmail accounts without a paid plan.
+- If a feature is available in multiple languages for Google Workspace or Google AI plans, a personal account in the US can use the feature in those supported languages.
+      Feature
+      Description
+      Availability
+      AI Inbox
+      Review top priorities and topics to catch up on from your inbox.
+Google AI Plus, Pro, or Ultra, or eligible Google Workspace plan: English, US only
+Platforms: Web, iOS, Android
+      AI Overview conversation summaries
+Summarize long email conversations with key points and replies when you open a thread.
+Google AI Plus, Pro, or Ultra, or eligible Google Workspace plan: English, French, German, Italian, Japanese, Korean, Portuguese, Spanish; Global
+Personal Gmail accounts: English, French, German, Italian, Japanese, Korean, Portuguese, Spanish; Global
+Platforms: Web, iOS, Android
+      AI Overview in Gmail search
+Generate a concise summary or answer from your emails directly above search results when you ask a natural language question.
+Google AI Plus, Pro, or Ultra: English, Global
+Eligible Google Workspace plan: English, Global
+Platforms: Web, iOS, Android
+      Gmail Live
+      Talk to Gmail with your voice and get answers to questions about your emails.
+Google AI Plus, Pro, or Ultra: English, Global
+Platforms: iOS, Android
+      Help me schedule
+      Propose times to meet in an email to someone else.
+Eligible Google Workspace plan: English, US only
+      Platforms: Web
+      Help me write
+Draft new emails or refine existing text based on a prompt.
+Google AI Plus, Pro, or Ultra, or eligible Google Workspace plan: English, French, German, Italian, Japanese, Korean, Portuguese, Spanish; Global
+Personal Gmail accounts: English, French, German, Italian, Japanese, Korean, Portuguese, Spanish; US only
+Platforms: Web, iOS, Android
+      Proofread
+Get writing suggestions beyond spelling and grammar for conciseness, tone, and style.
+Google AI Plus, Pro, or Ultra: English
+Eligible Google Workspace plan: English, Global
+Platforms: Web
+      Suggested Replies
+Select detailed, context-aware reply suggestions at the bottom of an email thread.
+Google AI Plus, Pro, or Ultra, or eligible Google Workspace plan: English; Global
+Personal Gmail accounts: English; US only
+Platforms: Web, iOS, Android
+      Summarize and draft emails
+      Ask Gemini in Gmail to summarize, draft, and suggest responses to emails.
+Eligible Google Workspace plan: Arabic, Catalan, Chinese, Czech, Danish, Dutch, English, Finnish, French, German, Greek, Hebrew, Hungarian, Indonesian, Italian, Japanese, Korean, Malay, Norwegian, Polish, Portuguese, Romanian, Russian, Spanish, Swedish, Thai, Turkish, Ukrainian, Vietnamese; Global
+      Platforms: Web, iOS, Android
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 19
+Get started with Google Workspace with Gemini
+- 
+2 of 19
+Learn about Gemini features in Gmail
+- 
+3 of 19
+Talk naturally with Gmail Live
+- 
+4 of 19
+Manage to-dos & topics with AI Inbox
+- 
+5 of 19
+Get an AI Overview in Gmail search
+- 
+6 of 19
+Catch up on email threads with AI Overview conversation summaries
+- 
+7 of 19
+Draft emails with Gemini in Gmail
+- 
+8 of 19
+Proofread your drafts with Gemini in Gmail
+- 
+9 of 19
+Use Suggested Replies in Gmail
+- 
+10 of 19
+Collaborate with Gemini in Gmail
+- 
+11 of 19
+Suggest times to meet with Gemini in Gmail
+- 
+12 of 19
+Take quick actions from your Gmail inbox
+- 
+13 of 19
+Find & manage your Gemini in Workspace conversation history
+- 
+14 of 19
+Customize Gemini in Workspace's responses with your instructions
+- 
+15 of 19
+Learn how to use sources with Google Workspace with Gemini
+- 
+16 of 19
+Use Deep Research in Gemini in Workspace apps
+- 
+17 of 19
+Use integrations with Gemini in Workspace
+- 
+18 of 19
+Supported languages for Google Workspace with Gemini
+- 
+19 of 19
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service      
+-   Program Policies           Language   català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+253888707108578523                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+17                                                                                                     
+false    
+false                                                                                                                                          
+false   
+false                                                          
+false  

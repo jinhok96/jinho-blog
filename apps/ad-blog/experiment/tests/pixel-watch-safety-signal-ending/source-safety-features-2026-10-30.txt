@@ -1,0 +1,25 @@
+Skip to main content
+Google Pixel Watch Help
+Sign in
+Help Center
+Community
+Google Pixel Watch
+
+For assistance with Fitbit, health and fitness features on your Google Pixel Watch, including heart rate and heart health, exercise, and sleep, visit Google Health Help
+
+Get help in an emergency with Google Pixel Watch safety features
+
+Google Pixel Watch can connect you to emergency services if you need help. If you've unlocked your watch at least once since startup, you can call an emergency contact without the need to unlock it.1 With the LTE versions of Google Pixel Watch 2, 3, and 4, safety features are available with or without your phone nearby.
+
+Important: The Wi-Fi version of Google Pixel Watch relies on your phone to call emergency services. This feature requires your phone to be nearby and connected through Bluetooth. Your watch can’t be used to speak with emergency services without the Bluetooth connection to your phone.
+
+Your Google Pixel Watch LTE doesn’t need a phone to call emergency services. However, it needs an active LTE connection on your watch to call emergency services.
+
+Certain regions require an active LTE carrier or Safety Signal to support emergency calls placed from a Pixel Watch.
+
+With Satellite SOS9 on Pixel Watch 4 LTE, you can get help from emergency services even when you’re off the grid. For more information, go to Get emergency help through Satellite SOS with Google Pixel Watch 4.
+
+Turn on and use safety features on Pixel Watch
+
+Check which safety features are available on your watch and how to turn them on:
+

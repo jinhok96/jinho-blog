@@ -1,0 +1,35 @@
+# 가져온 시각: 2026-10-27T21:40:45.694Z
+# 원본: https://support.apple.com/guide/iphone/adjust-display-put-a-case-iphone-duo-iphb5yxn3xjs/ios
+Adjust your display when you put a case on iPhone Duo - Apple Support
+https://support.apple.com/guide/iphone/adjust-display-put-a-case-iphone-duo-iphb5yxn3xjs/ios
+
+Search this guide
+Clear Search
+Table of Contents 
+Adjust your display when you put a case on iPhone Duo
+
+If you use a case or frame that partially covers the left edge of the outer display on iPhone Duo, you can inset the display edge so content isn’t hidden beneath the edge of the case.
+
+Go to the Settings app  on your iPhone.
+
+Tap Display & Brightness.
+
+Turn on Shift Left Edge.
+
+See also
+Pose iPhone Duo
+Adjust the screen brightness and color on iPhone
+MagSafe chargers and battery packs for iPhone
+Previous
+Qi-certified wireless chargers
+Next
+Use AirPods
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

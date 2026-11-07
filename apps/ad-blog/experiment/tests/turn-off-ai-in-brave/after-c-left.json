@@ -1,0 +1,58 @@
+{
+ "stage": "left",
+ "leo_page": {
+  "url": "brave://leo-ai",
+  "final": "chrome://leo-ai/",
+  "chars": 2017
+ },
+ "settings": {
+  "url": "brave://settings/leo-ai",
+  "final": "chrome://settings/leo-ai",
+  "chars": 1883
+ },
+ "prefs": {
+  "brave.ai_chat.autocomplete_provider_enabled": false,
+  "brave.ai_chat.context_menu_enabled": false,
+  "brave.ai_chat.show_toolbar_button": false,
+  "brave.ai_chat.tab_organization_enabled": false,
+  "brave.sidebar.hidden_built_in_items": [
+   7
+  ],
+  "brave.sidebar.sidebar_items": [
+   {
+    "built_in_item_type": 1,
+    "type": 0
+   },
+   {
+    "built_in_item_type": 2,
+    "type": 0
+   },
+   {
+    "built_in_item_type": 3,
+    "type": 0
+   },
+   {
+    "built_in_item_type": 4,
+    "type": 0
+   }
+  ],
+  "brave.today.p3a_total_sidebar_filter_usages": [
+   {
+    "day": 1793664000.0,
+    "value": 0.0
+   }
+  ],
+  "profile.content_settings.exceptions.app_banner.chrome://leo-ai/,*.last_modified": "13438194198297680",
+  "profile.content_settings.exceptions.app_banner.chrome://leo-ai/,*.setting.chrome://leo-ai/.couldShowBannerEvents": 1.3438194198297664e+16,
+  "profile.content_settings.exceptions.app_banner.chrome://leo-ai/,*.setting.chrome://leo-ai/.next_install_text_animation.delay": "86400000000",
+  "profile.content_settings.exceptions.app_banner.chrome://leo-ai/,*.setting.chrome://leo-ai/.next_install_text_animation.last_shown": "13438194198296882",
+  "profile.content_settings.exceptions.site_engagement.chrome://leo-ai/,*.last_modified": "13438194197954109",
+  "profile.content_settings.exceptions.site_engagement.chrome://leo-ai/,*.setting.lastEngagementTime": 1.3438194197954096e+16,
+  "profile.content_settings.exceptions.site_engagement.chrome://leo-ai/,*.setting.lastShortcutLaunchTime": 0.0,
+  "profile.content_settings.exceptions.site_engagement.chrome://leo-ai/,*.setting.pointsAddedToday": 3.0,
+  "profile.content_settings.exceptions.site_engagement.chrome://leo-ai/,*.setting.rawScore": 3.0,
+  "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+  "toolbar.pinned_cast_migration_complete": true,
+  "toolbar.pinned_chrome_labs_migration_complete": true
+ }
+}

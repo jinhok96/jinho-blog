@@ -1,0 +1,35 @@
+URL: https://www.facebook.com/privacy/dialog/change-or-delete-ai-chat-info/
+TITLE: How to change or delete your information from chats with AIs from Meta | Privacy Center | Manage your privacy on Facebook, Instagram and Messenger | Facebook Privacy
+DEVICE: - clicked=false
+FETCHED: 2026-10-24T15:33:28.185Z
+
+Privacy Center
+Privacy Center home
+Search
+Privacy topics
+More privacy resources
+Privacy Policy
+Other policies and articles
+Settings
+Generative AI
+AI at Meta
+We’re excited to bring generative AI technology to our products. That’s why we’re developing AI at Meta, a collection of generative AI features and experiences in our apps, along with the models that power them. Learn more about generative AI, how we use your information for AI at Meta and the controls you have.
+What is generative AI?
+Information used for AI at Meta
+How generative AI models work
+Learn more
+Try Meta AI
+Start a chat with Meta AI
+Review all resources
+How to change or delete your information from chats with AIs from Meta
+How to change or delete your information from chats with AIs from Meta
+In Messenger, Instagram and WhatsApp, if an AI is referencing something incorrect about you in chat, like what type of movies you like, you can tell it right there in your chat with the AI. It should use the new information going forward.
+Sometimes an AI might get off-topic, or maybe you just want to delete the information that it has about you. Here are some of the controls that you have to reset the AIs from Meta. This works by deleting their copy of your messages and any saved details they might have about you.
+Since there are AIs on WhatsApp that are a Meta service, if you delete your chat in the app it'll only be deleted on WhatsApp. If you want to delete your messages from Meta, you'll need to use these commands.
+For individual chats with AIs from Meta:
+There's a command you can type into any individual chat on Messenger, Instagram or WhatsApp that will reset that AI. It does this by deleting the AI's copy of your messages, and the previous context of the conversation, which are the details saved about you that you've shared in that chat. You'll still see your copy of the chat with the AI, but it won't remember the previous messages.
+Type: /reset-ai
+For your chats with AIs from Meta on that app:
+There's a command you can type into any individual chat you have with an AI on Messenger, Instagram or WhatsApp that will reset all the AIs on that app, including the ones that might be in group chats you're in. It does this by deleting the AIs' copies of your messages, and the previous context of the conversation, which are any saved details about you that you've shared in that chat. You'll still see your copies of these chats, but the AIs won't remember the previous messages.
+Type: /reset-all-ais
+After you've used these commands, you can also clear this chat from your view using the delete chat steps in that app.

@@ -1,0 +1,13 @@
+user_pref("browser.ai.control.default", "blocked");
+user_pref("browser.ai.control.linkPreviewKeyPoints", "blocked");
+user_pref("browser.ai.control.pdfjsAltText", "blocked");
+user_pref("browser.ai.control.sidebarChatbot", "blocked");
+user_pref("browser.ai.control.smartTabGroups", "blocked");
+user_pref("browser.ai.control.smartWindow", "blocked");
+user_pref("browser.ai.control.speechRecognition", "blocked");
+user_pref("browser.ai.control.translations", "available");
+user_pref("browser.ml.chat.enabled", false);
+user_pref("browser.ml.chat.page", false);
+user_pref("browser.ml.linkPreview.enabled", false);
+user_pref("browser.smartwindow.memories.generateFromConversation", false);
+user_pref("browser.smartwindow.memories.generateFromHistory", false);

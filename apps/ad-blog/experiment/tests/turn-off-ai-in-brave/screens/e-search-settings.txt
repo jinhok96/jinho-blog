@@ -1,0 +1,154 @@
+URL https://search.brave.com/settings
+Status 200
+
+Search settings
+Display language
+For buttons, labels, hints, etc.
+English (United States)
+Azərbaycan dili
+Bahasa Indonesia
+Bahasa Melayu
+Brezhoneg
+Català
+Čeština
+Cymraeg
+Dansk
+Deutsch (Deutschland)
+Eesti
+English (Canada)
+English (India)
+English (United Kingdom)
+Español
+Euskara
+Français (Canada)
+Français (France)
+Galego
+Hrvatski
+Italiano
+Kiswahili (Kenya)
+Latviešu
+Lietuvių
+Magyar
+Nederlands
+Norsk (bokmål)
+Polski
+Português
+Română
+Shqip (Shqipëri)
+Slovenčina
+Slovenščina
+Srpski (latinica)
+Suomi
+Svenska
+Tiếng Việt
+Türkçe
+Ελληνικά
+Български
+Русский
+Српски (ћирилица)
+Українська
+ქართული
+ภาษาไทย
+한국어
+中文 (简体)
+中文 (繁體)
+日本語 (日本)
+Region
+For your search results
+United States
+All regions
+Argentina
+Australia
+Austria
+Belgium
+Brazil
+Canada
+Chile
+China
+Denmark
+Finland
+France
+Germany
+Greece
+Hong Kong
+India
+Indonesia
+Italy
+Japan
+Korea
+Malaysia
+Mexico
+Netherlands
+New Zealand
+Norway
+Philippines
+Poland
+Portugal
+Russia
+Saudi Arabia
+Singapore
+South Africa
+Spain
+Sweden
+Switzerland
+Taiwan
+Turkey
+United Kingdom
+Theme
+Select your preferred theme
+Safe search
+Explicit content filtering
+Moderate
+Strict
+Off
+Answer with AI
+Make AI-powered answers appear automatically for some searches.
+Learn more
+Open links in new tab
+Links clicked from search will open in a new browser tab
+Units of measure
+Get your weather in temperatures you can feel and your distances in lengths you don't have to do mental gymnastics for.
+Imperial
+Pounds, feet, fahrenheit
+Metric
+Kilograms, meters, celsius
+Anonymous local results
+Anonymous local search results will use the IP address broadcast by your device, but without sharing or storing that IP address. This means we can't tie searches and locations to individuals. Nor can anyone else. It remains private to you.
+Learn more
+Use accurate location
+Set location manually
+Discussions
+Discussions is a new feature of Brave Search, highlighting search results around which there are conversations.
+Learn more
+Google fallback mixing
+For queries where Brave Search is not yet refined, your browser will anonymously check Google for the same query, mix the results for you and send the query data back to us so we can improve Brave Search for everyone.
+Learn more
+Anonymous usage metrics
+Anonymous and aggregated metrics help us improve Brave Search for you and for the search community. We've designed metrics so the data can't be used to identify you or your device or to learn anything about you individually. We don't want to compromise your privacy.
+Learn more
+Want ad-free search results?
+Upgrade to Brave Search Premium.
+Go Premium
+Set Brave Search as default
+Set default
+Resources
+Brave Search Premium
+Brave Search Help
+Transparency Report
+Report a security issue
+Status
+Products
+Brave Browser
+Brave Search
+Brave Wallet
+Brave Talk
+Brave Firewall + VPN
+Brave Playlist
+Brave News
+Brave Rewards
+Brave Search API
+Brave Ads
+Policies
+Privacy Policy
+Terms of Use
+Brave Search uses private usage metrics to estimate overall activity and performance. You can turn off this option in Settings. Learn more.

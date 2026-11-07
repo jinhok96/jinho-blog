@@ -20,6 +20,12 @@ describe('websiteJsonLd', () => {
       name: 'ToolProof',
       url: 'https://my-blog.com',
       inLanguage: 'en-US',
+      publisher: {
+        '@type': 'Organization',
+        name: 'ToolProof',
+        url: 'https://my-blog.com/about',
+        publishingPrinciples: 'https://my-blog.com/editorial-policy',
+      },
     });
   });
 });
@@ -47,7 +53,18 @@ describe('blogPostingJsonLd', () => {
       image: ['https://my-blog.com/_static/mdx/posts/og/hello.jpg'],
       datePublished: '2026-01-01T00:00:00.000Z',
       dateModified: '2026-01-02T00:00:00.000Z',
-      author: { '@type': 'Organization', name: 'ToolProof', url: 'https://my-blog.com/about' },
+      author: {
+        '@type': 'Organization',
+        name: 'ToolProof',
+        url: 'https://my-blog.com/about',
+        publishingPrinciples: 'https://my-blog.com/editorial-policy',
+      },
+      publisher: {
+        '@type': 'Organization',
+        name: 'ToolProof',
+        url: 'https://my-blog.com/about',
+        publishingPrinciples: 'https://my-blog.com/editorial-policy',
+      },
       articleSection: '일반',
       keywords: 'a, b',
     });

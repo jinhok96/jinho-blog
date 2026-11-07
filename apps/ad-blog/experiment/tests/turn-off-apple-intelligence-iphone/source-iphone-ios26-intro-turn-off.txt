@@ -1,0 +1,63 @@
+## Use Apple Intelligence on your iPhone
+With iOS 26, Apple Intelligence* is integrated across your apps and experiences to help you communicate, express yourself, and get things done more easily. It delivers intelligence that’s useful and relevant for you, all while protecting your privacy.
+Note: Apple Intelligence is not available on all iPhone models or in all languages or regions.** To access the most recent available features, make sure you’re using the latest version of iOS.
+## Turn on Apple Intelligence
+If Apple Intelligence is off, you can turn it on to access the latest features across iOS 26. Go to the Settings app , tap Apple Intelligence & Siri, then do one of the following:
+- 
+Tap the button next to Apple Intelligence.
+- 
+Tap Turn on Apple Intelligence.
+The option you see is based on the version of iOS you have and if you’ve previously set up Apple Intelligence.
+## Find the perfect words
+Transform how you communicate using Writing Tools that can summarize text, proofread your work, and help you find the right wording and tone.
+How to use Writing Tools
+## Create one-of-a-kind images and your own emoji
+Produce fun, original images in moments with Image Playground or Image Wand. You can also make custom emoji from simple text descriptions with Genmoji.
+How to create original images
+How to create your own emoji
+How to use Image Wand
+## Do more with Siri
+Type requests to Siri, get answers to questions about your Apple products, and more.
+How to use Apple Intelligence with Siri
+## Communicate across languages in real time
+With Live Translation, you can automatically translate messages in the Messages app, display live translated captions in FaceTime, and get spoken translations for calls in the Phone app.
+Translate messages, calls, and conversations
+## Use visual intelligence
+Use visual intelligence to quickly learn more about what’s in front of you. Just click and hold the Camera Control or Action button to search visually for objects around you, ask questions, and take action like creating a calendar event from a poster, translating a restaurant menu, and more. You can also access visual intelligence for content on your screen across your apps, simply by taking a screenshot.
+Use visual intelligence
+## Tap into ChatGPT
+Access ChatGPT within Apple Intelligence experiences, and tap into even more expertise when you use Siri, Writing Tools, Image Playground, and more.
+How to use ChatGPT with Apple Intelligence
+## Use Apple Intelligence with apps
+Mail
+View your most urgent emails, craft quick email responses with Smart Reply, and summarize long emails.
+Use Apple Intelligence in Mail
+Messages
+See summaries of unread conversations, send original images and customize backgrounds with Image Playground, craft fast responses with Smart Reply, and more.
+Use Apple Intelligence in Messages
+Notes
+After you record audio, use Apple Intelligence to generate a summary of the transcript.
+Use Apple Intelligence in Notes
+Phone
+Generate a summary of a phone call you record, and view voicemail summaries.
+Use Apple Intelligence in Phone
+Photos
+Find photos with natural-language search, create memory movies, and remove distracting objects with Clean Up.
+Use Apple Intelligence in Photos
+Reminders
+Use Apple Intelligence to get suggested reminders, and automatically categorize related reminders into sections within a list.
+Use Apple Intelligence in Reminders
+Safari
+Use Apple Intelligence to generate a summary of a webpage in the Safari app.
+Get webpage summaries with Apple Intelligence
+Shortcuts
+Intelligent actions in Shortcuts can summarize text, create images, and tap directly into Apple Intelligence models.
+Use Apple Intelligence in Shortcuts
+And more…
+Check the Apple Intelligence website for more information about features, supported devices, and languages.
+## Turn off Apple Intelligence
+Go to the Settings app , tap Apple Intelligence & Siri, then tap the button next to Apple Intelligence.*Apple Intelligence uses generative models, and outputs may be inaccurate, unexpected, or offensive. Check important information for accuracy.**Apple Intelligence is available in beta with support for the following languages: English, Danish, Dutch, French, German, Italian, Norwegian, Portuguese, Spanish, Swedish, Turkish, Chinese (Simplified), Chinese (Traditional), Japanese, Korean, and Vietnamese. Some features may not be available in all languages or regions. For more information on language and feature availability and system requirements, see the Apple Support article How to get Apple Intelligence.
+				Previous
+				Change Siri settings
+				Next 
+				Translate messages, calls, and conversations

@@ -1,0 +1,16 @@
+pg.bring_to_front()
+pg.goto("chrome://settings/clearBrowserData"); time.sleep(4); pg.bring_to_front(); time.sleep(1)
+pg.get_by_text("Show more", exact=True).first.click(); time.sleep(2)
+pg.get_by_text("More", exact=True).first.click(); time.sleep(1.5); shot("g02_more_menu")
+try:
+    pg.get_by_text("All time", exact=True).first.click(); time.sleep(1.5)
+except Exception as e: print("ALLTIME ERR", e)
+for y in (344,396,448,500,552):
+    pg.mouse.click(432,y); time.sleep(0.6)
+time.sleep(1); shot("g03_autofill_only")
+pg.get_by_text("Delete from this device", exact=True).first.click(); time.sleep(4); shot("g04_after_delete")
+pg.goto("chrome://settings/contactInfo"); time.sleep(4); print("CONTACT", deep(pg).split("| Addresses | Add |")[1][:120] if "| Addresses | Add |" in deep(pg) else deep(pg)[-400:]); shot("g05_contact_after")
+pg.goto("chrome://settings/payments"); time.sleep(4); t=deep(pg); i=t.find("Payment methods | Add"); print("PAY", t[i:i+200]); shot("g06_pay_after")
+pg.goto("http://localhost:8765/form.html"); time.sleep(3)
+pg.click("#name"); time.sleep(2.5); shot("g07_name_after")
+pg.click("#city"); time.sleep(2.5); shot("g08_city_after")

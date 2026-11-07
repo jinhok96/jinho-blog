@@ -1,0 +1,25 @@
+---
+title: Google Cloud에서 Claude 플랫폼 전체 기능 사용 가능
+description: "Google Cloud에서 Anthropic이 관리하는 Claude 모델을 통해 Claude Platform의 모든 기능을 Google Cloud IAM, 결제, 커밋으로 사용할 수 있게 되었습니다."
+category: claude
+sourceUrl: https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed
+createdAt: 2026-10-22
+---
+
+> 원문: [The full Claude Platform, available on Google Cloud](https://claude.com/resources/articles/claude-models-on-google-cloud-anthropic-managed) — Claude Blog
+> 이 글은 원문의 핵심 내용을 요약한 것입니다. 저작권은 원문 저자에게 있으며, 자세한 내용은 원문에서 확인하세요.
+
+Google Cloud에서 Anthropic이 관리하는 Claude 모델이 정식 출시되어, Google Cloud 고객은 Google Cloud IAM 자격 증명, 결제, 커밋을 사용하여 Claude Platform의 전체 기능을 이용할 수 있게 되었습니다.
+
+Claude Platform은 다음과 같은 기능을 포함합니다:
+- **에이전트 구축 및 배포:** 인프라 관리 없이 장기 실행 에이전트를 위한 Claude Managed Agents(베타), API 호출 내에서 Python 코드 실행, 시각화 생성, 데이터 분석을 위한 Code execution, 브라우저 또는 데스크톱을 운영하여 작업을 완료하게 하는 Computer use, 일관된 결과를 위해 Claude에게 반복 가능한 워크플로를 학습시키는 Agent skills, Advisor model을 통해 에이전트에 지능을 부여하는 Advisor strategy(베타) 기능을 제공합니다.
+- **시스템 및 지식 연결:** 대화 전반에 걸쳐 문서를 업로드하고 참조하는 Files API, 응답을 원본 문서에 기반하도록 하는 Citations, 웹 검색 및 web fetch를 통해 최신 웹 데이터를 Claude의 지식으로 확장, 다른 도구에 클라이언트 코드 작성 없이 Claude를 연결하는 MCP connector(베타) 기능을 지원합니다.
+- **비용 및 성능 관리:** 반복적인 컨텍스트에 대한 비용과 지연 시간을 줄이는 Prompt caching, 대규모 비동기 워크로드를 위한 Batch processing 기능을 제공합니다.
+
+Claude Opus 5.5의 Fast Mode도 Google Cloud의 Anthropic 관리형 Claude 모델을 사용하는 고객에게 제공됩니다. 또한 Claude Console을 통해 에이전트를 관찰하고 관리할 수 있습니다. Claude Fable 5.1, Opus 5.5, Sonnet 5.5, Haiku 5.5 모델을 사용할 수 있습니다.
+
+Google Cloud에서 Claude를 구축하는 두 가지 방법이 있습니다:
+- **Claude Models on Google Cloud (Anthropic managed):** Claude Platform의 모든 베타 및 정식 기능을 최신 상태로 사용하고자 하는 고객에게 적합하며, Anthropic이 서비스를 운영하고 데이터 처리자 역할을 합니다.
+- **Claude Models on Google Cloud (Google managed):** Google Cloud를 데이터 처리자로 사용해야 하거나, 엄격한 지역 데이터 상주 요구 사항이 있는 고객에게 적합합니다.
+
+Anthropic 관리형 서비스는 현재 정식 출시되었습니다. 자세한 내용은 원문에서 확인하세요.

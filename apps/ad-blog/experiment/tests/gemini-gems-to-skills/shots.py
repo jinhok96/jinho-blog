@@ -21,10 +21,10 @@ def page(body):
     return f'<html><head><meta charset="utf-8"><style>{CSS}</style></head><body><div class="wrap">{body}</div></body></html>'
 
 
-rep = json.loads(Path('results/convert-report.json').read_text())
+rep = json.loads(Path('results/convert-report-2026-10-13.json').read_text())
 skill_md = Path('out/weekly-newsletter-writer/SKILL.md').read_text()
 zipl = subprocess.run(['unzip', '-Z1', 'out/weekly-newsletter-writer.zip'], capture_output=True, text=True).stdout.split()
-val = Path('results/validate.txt').read_text().strip()
+val = Path('results/validate-2026-10-13.txt').read_text().strip()
 cls = {'ok': 'ok'}
 rows = ''.join(
     f"<tr><td><code>{html.escape(f['file'])}</code></td><td class='{'ok' if f['verdict']=='ok' else 'bad'}'>"

@@ -1,5 +1,8 @@
 # free-offline-ai-tools 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — 허브. 오프라인 챗봇 모델을 llama.cpp로 직접 실행·측정(What we tested)
+- 주 검색어 (가설 H6): `free offline ai tools` — 브리프 주 검색어
+
 - 주 검색어: `free offline ai tools` (Google·Bing) / `offline ai tools` (Google·Bing·YouTube)
 - 하위 검색어: offline ai tools for pc, best free offline ai tools, is there an offline ai, ai that works offline, offline ai for windows, offline ai software for pc, what ai can be used offline (2026-10-14 `demand_check.py suggest`)
 - 채널: **검색형** (허브 글, 상시 수요). 제목 53자, 연도 표기 (traffic-playbook 3: 허브는 연도·`updatedAt` 함께 갱신)

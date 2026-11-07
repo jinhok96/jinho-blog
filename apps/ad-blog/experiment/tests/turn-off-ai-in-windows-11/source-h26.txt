@@ -1,0 +1,86 @@
+
+Windows 11, version 26H2 update history	
+			Applies To
+Windows 11 version 26H2, all editions 
+Windows 11, version 26H2 — also known as the Windows 11 2026 Update — is built on the same servicing foundation as recent Windows 11 releases. It delivers the latest Windows innovations with a streamlined update experience designed to minimize disruption and help you stay secure, productive, and up to date.
+For many eligible devices, moving to version 26H2 is as simple as installing a small enablement package, with a minimal download size, quick installation, and a single restart. Version 26H2 enables most of the features that were introduced in monthly updates for Windows 11, version 25H2.
+Note
+To learn more about the types of updates Microsoft provides and when they're released, see Update release cycle for Windows clients.
+What's new in Windows 11, version 26H2
+Windows 11, version 26H2 includes features and enhancements that were gradually introduced through servicing updates for Windows 11, versions 25H2 and 24H2. These improvements span security, management, accessibility, and productivity.
+For commercial customers, version 26H2 also enables by default several features that were previously introduced under temporary commercial control. These include:
+Windows settings backup, which helps preserve supported Windows settings and Microsoft Store app lists for recovery and device replacement scenarios. Existing administrator-configured policies continue to be honored.
+App-specific taskbar actions, which provide access to common app actions directly from taskbar experiences.
+File Explorer improvements focused on navigation and usability.
+For a closer look at the features and enhancements included in this release, see What's new in Windows 11, version 26H2.
+How to get Windows 11, version 26H2
+Windows 11, version 26H2 is available through a controlled feature rollout for eligible devices running Windows 11, versions 25H2 and 24H2.
+To be among the first to receive the update, go to Settings > Windows Update and turn on Get the latest updates as soon as they're available. Once your device is eligible, you'll see the option to download and install Windows 11, version 26H2.
+As always, we take a measured and data-driven approach to broad availability. During rollout, we might place safeguard holds on devices where we detect a known compatibility issue that could impact the update experience. Availability will continue to expand over time, with status updates provided through the Windows release health hub.
+Servicing and support lifecycle
+Windows 11, version 26H2 continues Microsoft's annual Windows feature update cadence. Installing Windows 11, version 26H2 resets the support lifecycle for supported editions, as noted here:
+Windows edition
+Support duration
+Home
+24 months
+Pro
+24 months
+Enterprise
+36 months
+Education
+36 months
+For more information, see Windows 11 release information and the Windows lifecycle FAQ.
+Known issues in this update
+For the most up-to-date information about known issues for Windows 11, version 26H2, go to Windows release health hub.
+File History might stop working after installing September 2026 Windows update
+Symptoms
+After installing this update, some customers using File History, might be unable to create or update backups. File History, available through Control Panel > System and Security > File History, is used to back up files to an external drive or network location. Affected devices might incorrectly display a "Reconnect your drive" message even when a compatible backup drive is connected and functioning properly. Additionally, the "Last Backup" timestamp might not update, and previously backed up files might show "No previous version available." In some cases, Event Viewer might record application crash events referencing FileHistory.exe and KERNELBASE.dll.
+Resolution
+This issue is resolved in Windows updates released on and after September 22, 2026 such as KB5124010. We recommend you install the latest Windows update for your device as it contains important improvements and issue resolutions, including this one.
+Domain-joined devices might lose their secure trust relationship with the domain
+Symptoms
+After installing this update, some Credential Guard protected machine accounts might lose their secure channel with an on-premises Active Directory (AD) domain. Users might then be unable to sign in interactively with valid domain credentials and might receive a message stating that the trust relationship between the device and the domain failed. Offline sign-in using previously cached credentials might continue to work. AD replication and AD services on the domain controllers are not affected.
+This issue occurs because KB5124008 and later updates enable the Machine Identity Isolation feature. While the update does not directly enable Machine Identity Isolation enforcement, it does cause Windows to begin honoring any existing or policy-provisioned settings that enabled Machine Identity Isolation enforcement. However, this feature is only supported for environments connected to domain controllers running at a Windows Server 2025 Domain Functional Level (DFL) and above. The feature should be disabled elsewhere. Any devices previously configured to use Machine Identity Isolation that are not connected to Windows Server 2025 domain controllers will experience this issue and will need to disable the feature.
+Resolution
+This issue is addressed by KB5124010. This update prevents Machine Identity Isolation (MII) enforcement by disabling it completely while improvements are made to the feature. MII enforcement will be prevented regardless of the MII configuration.
+USB audio devices might fail to start or produce no sound
+Symptoms
+After installing this update, some USB Audio Class 1.0 devices might fail to start or produce audio. Affected devices might experience one or more of the following symptoms:
+The device displays an error in Device Manager: "This device cannot start (Code 10).”
+No audio output.
+Volume controls are unresponsive or remain at zero.
+Sound settings are unresponsive or unavailable.
+This issue is limited to USB Audio Class 1.0 devices.
+Resolution
+We are working to address this issue in a future Windows update and will provide more information when it is available.
+Devices might experience a black screen or desktop loading issues after sign-in
+Symptoms
+After installing this update and subsequent updates, some devices might experience desktop loading issues. This issue has been primarily observed on Azure Virtual Desktop (AVD) hosts using FSLogix. This issue appears to occur more frequently with some existing user profiles.
+Affected users might see a black screen after sign-in, with the desktop session failing to load automatically. In some cases, users might be unable to access their desktop until the desktop session is started manually. Application event logs might also show Windows Explorer crashes.
+Workaround
+Affected customers can apply one of the following workarounds to mitigate the issue:
+Manually launch explorer.exe: Users can temporarily mitigate this issue by opening Task Manager (Ctrl+Shift+Esc), selecting Run new task, entering explorer.exe, and selecting OK.
+Mitigate through Known Issue Rollback (KIR): This issue is mitigated using Known Issue Rollback (KIR).
+For enterprise-managed devices where Windows updates are managed by IT departments, IT administrators can apply the KIR by installing and configuring the Group policy listed below. The special Group Policy can be found in Computer Configuration > Administrative Templates > Group Policy name listed below
+Group Policy downloads with Group Policy name:
+Download for Windows 11 version 26H2, Windows 11 version 25H2 and Windows 11, version 24H2: KB5124010 260924_20021 Known Issue Rollback
+Important
+You will need to install and configure the Group Policy for your version of Windows to resolve this issue. You will also need to restart your device(s) to apply the group policy setting. Note that this Group Policy will disable the change causing this issue until a resolution is released in a future Windows update.
+For information on deploying and configuring this special Group Policy, please see How to use Group Policy to deploy a Known Issue Rollback
+Resolution
+We are working on a resolution for this issue, and it will be released in a future Windows update.
+Troubleshooting and feedback
+If you have questions or need help activating or troubleshooting Windows, support options are available to assist you.
+Need help with upgrading? Get tips to prepare for a smooth upgrade to Windows 11, version 26H2, and resolve common problems. See Get help with Windows upgrade and installation errors.
+Do you have feedback for Microsoft? If you experience an issue or have a recommendation for the Windows team, use the Feedback Hub to share your experience.
+Related topics
+Inside this update
+Feature update to Windows 11, version 26H2 by using an enablement package
+What's new in Windows 11, version 26H2
+An IT pro's guide to Windows 11, version 26H2
+How to get the Windows 11 2026 Update
+Windows 11 release information
+Windows 11 specifications
+Deprecated features in the Windows client
+Features and functionality removed in Windows client
+					

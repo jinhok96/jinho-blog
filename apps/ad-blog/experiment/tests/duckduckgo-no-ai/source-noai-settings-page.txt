@@ -1,0 +1,342 @@
+URL: https://noai.duckduckgo.com/settings
+Fetched: 2026-11-01 (page.cjs, headless Chromium 153, new profile)
+
+DuckDuckGo
+Open menu
+Search Settings
+GeneralAppearancePrivacy
+All regions
+Argentina
+Australia
+Austria
+Belgium (fr)
+Belgium (nl)
+Brazil
+Bulgaria
+Canada (en)
+Canada (fr)
+Catalonia
+Chile
+China
+Colombia
+Croatia
+Czech Republic
+Denmark
+Estonia
+Finland
+France
+Germany
+Greece
+Hong Kong
+Hungary
+Iceland
+India (en)
+Indonesia (en)
+Ireland
+Israel (en)
+Italy
+Japan
+Korea
+Latvia
+Lithuania
+Malaysia (en)
+Mexico
+Netherlands
+New Zealand
+Norway
+Pakistan (en)
+Peru
+Philippines (en)
+Poland
+Portugal
+Romania
+Russia
+Saudi Arabia
+Singapore
+Slovakia
+Slovenia
+South Africa
+Spain (ca)
+Spain (es)
+Sweden
+Switzerland (de)
+Switzerland (fr)
+Taiwan
+Thailand (en)
+Turkey
+US (English)
+US (Spanish)
+Ukraine
+United Kingdom
+Vietnam (en)
+
+Region
+
+Changes the preferred region for search results
+
+Browser preferred language
+Afrikaans (South Africa)
+العربية (السعودية)
+Azərbaycan dili
+Беларуская (Беларусь)
+Български (България)
+Bosanski
+Català
+Čeština (Česká republika)
+Cymraeg
+Dansk (Danmark)
+Deutsch (Schweiz)
+Deutsch (Deutschland)
+Ελληνικά (Ελλάδα)
+English (Australia)
+English (Canada)
+English (United Kingdom)
+English (United States)
+Esperanto
+Español (Argentina)
+Español (Chile)
+Español (Colombia)
+Español (Costa Rica)
+Español (Ecuador)
+Español (España)
+Español (México)
+Español (Perú)
+Español (Uruguay)
+Español (Venezuela)
+Eesti (Eesti)
+فارسی
+Suomi (Suomi)
+Français (Belgique)
+Français (Canada)
+Français (Suisse)
+Français (France)
+Gaeilge (Éire)
+Gàidhlig
+Galego
+עברית‏
+हिंदी (भारत)
+Hrvatski (Hrvatska)
+Magyar (Magyarország)
+Հայերեն
+Bahasa Indonesia
+Íslenska (Ísland)
+Italiano (Italia)
+日本語 (日本)
+Taqbaylit
+한국어 (대한민국)
+Kurdî
+Lietuvių (Lietuva)
+Latviešu (Latvija)
+മലയാളം
+Norsk (bokmål)
+Nederlands (België)
+Nederlands (Nederland)
+Norsk (nynorsk)
+ଓଡ଼ିଆ (ଭାରତ)
+Polski (Polska)
+Português (Brasil)
+Português (Portugal)
+Română (România)
+Русский (Россия)
+Sardu (Sardigna)
+සිංහල
+Slovenčina (Slovenská republika)
+Slovenščina (Slovenija)
+Shqip (Shqipëri)
+Српски (Serbia)
+Svenska (Sverige)
+தமிழ்
+తెలుగు
+ไทย (ประเทศไทย)
+Toki Pona
+Türkçe (Türkiye)
+Українська (Україна)
+Tiếng Việt (Việt Nam)
+中文 (中国)
+中文 (台灣)
+
+Display Language
+
+Changes the language for elements like buttons, settings, and labels
+
+Strict
+Moderate
+Off
+
+Safe Search
+
+Omits objectionable (mostly adult) material
+
+On
+
+Instant Answers
+
+Automatically open relevant Instant Answers
+
+On
+
+Hide AI-Generated Images
+
+Filters out known AI spam sites from image search results. Learn More
+
+On
+
+Infinite Scroll for Images, Videos, and Shopping
+
+Loads more results in Images, Videos, and Shopping when scrolling
+
+Off
+
+Infinite Scroll
+
+Loads more results when scrolling
+
+On
+
+Autocomplete Suggestions
+
+Shows suggestions under the search box as you type
+
+Off
+
+Open Links in a New Tab
+
+Opens results in new windows/tabs
+
+On
+
+Advertisements
+
+If you still want to support us, help spread DuckDuckGo
+
+On
+
+Keyboard Shortcuts
+
+Enables keyboard shortcuts on the site
+
+No preference (default)
+Metric (kilograms, meters, Celsius)
+US-based (pounds, feet, Fahrenheit)
+
+Units of Measure
+
+Preferred units of measure
+
+On
+
+Location
+
+Prompt me to use my approximate location to get nearby results.
+
+Not set
+Best available
+Image tiles
+
+Map Rendering
+
+The rendering method to use for interactive maps
+
+On
+
+Video Previews on Hover
+
+Autoplay short, silent video previews when you hover over video results.
+
+Blocked Sites
+
+Sites you block will be hidden from all your search results
+
+On
+
+Page Break Numbers
+
+Shows page numbers at result page breaks
+
+On
+
+Page Break Lines
+
+Shows horizontal lines at result page breaks
+
+On
+
+Install DuckDuckGo
+
+Shows links to instructions for how to add DuckDuckGo to your browser
+
+On
+
+Shows occasional reminders to add DuckDuckGo to your browser
+
+On
+
+Privacy Newsletters
+
+Shows sign-up form for the DuckDuckGo privacy newsletters
+
+On
+
+Shows occasional reminders to sign up for the DuckDuckGo privacy newsletters
+
+On
+
+Homepage Privacy Tips
+
+Shows the privacy benefits of using DuckDuckGo on the homepage
+
+On
+
+Help Improve DuckDuckGo
+
+It's okay to (very infrequently) ask me about my experience using DuckDuckGo
+
+Deleting cookies will reset these settings. Learn more
+Save and Exit
+
+Get our browser to never lose your settings.
+
+Download Browser
+c
+Cloud Save
+
+Save your settings anonymously to the cloud
+
+What is this?
+Save SettingsLoad Settings
+Show Bookmarklet and Settings Data
+Reset All Search Settings
+Learn how DuckDuckGo settings are managed
+Close menu
+SEARCH
+Homepage
+Themes
+Settings
+DOWNLOADS
+iOS Browser
+Android Browser
+Mac Browser
+Windows Browser
+Browser Extensions
+MORE FROM DUCKDUCKGO
+Duck.ai
+Email Protection
+Newsletter
+Blog
+Podcast
+Collaborations
+LEARN MORE
+What’s New
+Compare Privacy
+About Our Browser
+About DuckDuckGo
+OTHER RESOURCES
+Help
+Community
+Careers
+Privacy Policy
+Terms of Service
+Press Kit
+Advertise on Search
+Set DuckDuckGo as your default search engine
+×

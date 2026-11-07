@@ -1,5 +1,8 @@
 # 사실 확인표 — remove-bg-alternative-free
 
+- 검증 유형 (가설 H3): **검증형** — AIM-500 사진 20장으로 배경 제거 도구 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `remove.bg alternative free` — 브리프 주 검색어
+
 확인일: 2026-10-21 (컨테이너 Chromium(Playwright)으로 각 사이트 화면을 직접 조작, 1차 출처는 같은 브라우저로 본문 텍스트 저장 → `results/*.txt`)
 
 ## 기획

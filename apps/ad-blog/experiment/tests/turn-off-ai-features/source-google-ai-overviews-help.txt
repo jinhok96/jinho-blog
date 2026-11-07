@@ -1,0 +1,45 @@
+                                   Find information in faster & easier ways with AI Overviews in Google Search
+  Important: We’re currently updating settings for Google Search services, which include Search, Maps, Shopping, Flights, Hotels, Translate and News. The settings described in this article are being updated so may not match your current experience. Learn more about the new Search services settings.
+Find what you're looking for faster and easier with AI Overviews in search results. AI Overviews can take the work out of searching by providing an AI-generated snapshot with key information and links to dig deeper. Learn how data helps Google develop generative AI in Search.
+AI Overviews in Search results
+AI Overviews when you search with an image or Circle to Search
+You may find AI Overviews in your search results when you search with an image or use Circle to Search in countries, territories and languages where AI Overviews are available.
+Show only web links in Google Search
+AI Overviews are a core Google Search feature, like knowledge panels. Features cannot be turned off. However, you can select the Web filter after you perform a search. This filter displays only text-based links without features like AI Overviews.
+  How AI Overviews work
+AI Overviews use generative AI, which is a type of artificial intelligence that learns patterns and structures from the data it is trained on and uses that to create something new. While exciting, this technology is rapidly evolving and improving, and may provide inaccurate or offensive information. AI Overviews can and will make mistakes.
+How to double-check responses:
+  Always check important info in more than one place. Click the links to supporting information from the web and try other Google Search results too. Learn more about how to evaluate info you find with Google.
+  Ask multiple versions of your question to get the best answers. Try asking for different opinions or ask for more details.
+  Send feedback to Google if something doesn’t look right. Your feedback helps us improve AI Overviews for everyone.
+Watch this before using generative AI
+Continue your conversation in AI Mode
+  You can now seamlessly transition from an AI Overview to a deeper conversation in AI Mode. This feature is available on mobile devices in all regions and languages where AI Overviews and AI Mode are supported.
+    How it works:
+    Select Show more at the bottom of the AI Overview to open the detailed view.
+    Type your follow-up question in the Ask anything bar to seamlessly dive deeper in a conversational back and forth in AI Mode. The context from your original search carries over so you don't have to start over.
+    To return to your Google Search results page with the AI Overview:
+        You can select Close .
+        You can also long press and swipe inward from either side of the screen.
+How data helps Google develop generative AI in Search
+To develop and improve generative AI experiences in Search and the related machine learning technologies, Google uses people's interactions with Search and these AI experiences. This can include interactions like what people search for and what feedback they provide to Google. With user feedback and human reviews, we evaluate and improve the quality of our results and products responsibly.
+When trained reviewers work to improve the quality of Search’s machine learning models, we take a number of precautions to protect users’ privacy:
+  Data that reviewers see and annotate are disconnected from users’ accounts.
+  Automated tools help recognize and remove a broad range of identifying info and sensitive personal information.
+  "AI in Search" features in Labs
+  Be the first to try new AI features, experiments, and ideas in Search as they become available with “AI in Search”, our testbed for innovation. You'll receive an email notification as soon as a new experiment drops. To opt-out, turn off “AI in Search” in Labs.
+  Turn off "AI in Search" in Labs
+  On your computer, open any browser.
+  Make sure you’re signed in to your Google Account with Incognito mode turned off.
+  At the top of the browser, click New tab .
+  At the top of the page, click Labs   Manage .
+  Toggle off  or on  "AI in Search."
+Manage "AI in Search"
+  Give feedback
+  Your feedback helps us improve AI Overviews. Here's how to share feedback about how helpful the overview to your search query:
+  At the bottom of each overview, find Thumbs up  and Thumbs down  icons.
+      If you found the overview helpful, click . To tell us more, click Share more feedback.
+      If you found the overview unhelpful, inaccurate, biased, or otherwise problematic, click . To tell us more, click Report a problem and choose the category that best describes your issue.
+  To help us understand your feedback, you can add more details in the text field (recommended).
+  To send your feedback, click Submit. The feedback you submit includes your most recent search query and its search results.
+Tip: You can also provide feedback by selecting the three-dot menu icon  at the top right of each overview.

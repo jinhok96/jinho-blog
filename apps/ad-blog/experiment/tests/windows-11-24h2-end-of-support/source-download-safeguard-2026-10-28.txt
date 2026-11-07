@@ -1,0 +1,27 @@
+https://www.microsoft.com/en-us/software-download/windows11 (curl 2026-10-28)
+ View Sitemap
+Download Windows 11
+ (Current release: Windows 11 2026 Update l Version 26H2)
+There are 3 options below for installing or creating Windows 11 media. Check out each one to determine the best option for you.
+Before installing, check the Windows release information status for known issues that may affect your device. If you’re running a prior version of Windows, see the Upgrade to Windows 11:FAQ for additional information.
+Windows 11 Installation Assistant
+This is the best option for installing Windows 11 on the device you’re currently using. Click Download Now to get started.
+Note: Windows 11 Installation Assistant doesn’t run on Arm-based PCs; it only works for x64 processors.
+ Before you begin using Installation Assistant
+Before you begin, check to see if the following conditions apply to you:
+You have a Windows 10/11 license.
+Your PC must have Windows 10, version 2004 or higher installed to run Installation Assistant.
+Your PC must have 9 GB of free disk space to download Windows 11.
+Note: Your PC meets the Windows 11 device specifications for upgrade requirements and supported features. Certain features require additional hardware. We also recommend that you visit your PC’s manufacturer’s website for information about updated drivers and hardware compatibility.
+After you download the Installation Assistant:
+Select Run. You need to be an administrator to run this tool.
+Once the tool confirms the device hardware is compatible, you will be presented with the license terms. Select Accept and Install.
+
+https://learn.microsoft.com/en-us/windows/deployment/update/safeguard-holds (curl 2026-10-28)
+IT admins can use Windows Update for Business reports to monitor various update health metrics for devices in their organization. The reports provide a list of active safeguard holds to provide you with insight into the safeguard holds that are preventing devices from updating or upgrading.
+Windows Update for Business reports identifies safeguard holds by their 8-digit identifiers. For safeguard holds associated with publicly discussed known issues, you can find more details about the issue on the Windows release health dashboard by searching for the safeguard hold ID on the Known issues page for the relevant release.
+On devices that use Windows Update (but not Windows Update client policies), the Windows Update page in the Settings app displays a message stating that an update is on its way, but not ready for the device. Instead of the option to download and install the update, users see a message.
+This message means that the device is protected by one or more safeguard holds. When the issue is resolved and the update is safe to install, we release the safeguard hold so the update can resume safely.
+What can I do?
+We recommend that you don't attempt to manually update until issues have been resolved and holds released.
+Caution

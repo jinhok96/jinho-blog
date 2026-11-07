@@ -1,0 +1,884 @@
+# Arc for Windows - 2023-2026 Release Notes
+URL: https://resources.arc.net/hc/en-us/articles/22513842649623-Arc-for-Windows-2023-2026-Release-Notes
+created_at: 2024-04-02T18:52:01Z updated_at: 2026-10-22T15:26:20Z edited_at: 2026-10-22T15:26:20Z
+fetched: 2026-10-25 UTC (Zendesk Help Center API)
+
+Arc is being sunset on December 22, 2026 . After that date, you won't be able to sign in to or use Arc. Please note that we will deactivate all Arc accounts on December 22. Once an account is deactivated, we will delete user personal data associated with the account within 30 days. Not to worry! Many of the Arc features you love live on in Dia, and you can bring your Arc setup along in just a few clicks. To see the full timeline, read Arc Sunset: Key Dates and What to Expect [https://resources.arc.net/hc/en-us/articles/44412972248471]. To make the switch, read Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].
+ October 22, 2026
+ V.1.129.0
+ Hi again, and thanks for sticking with us! Version 1.129.0 takes Arc to Chromium 156.0.8078.48, repairing a big stack of security flaws to help keep you safer online. No other changes are part of this one, so update whenever it suits you. Until the next release!
+ October 15, 2026
+ V.1.128.0
+ Nice to see you again! Version 1.128.0 gets Arc onto Chromium 155.0.8059.80, sealing up a long list of security weak spots, seven of them in the most serious category, so the sites you visit have fewer openings to cause trouble. This one is purely a safety tune-up, so grab it whenever you get a moment. See you on the next one!
+ October 8, 2026
+ V.1.127.0
+ Thanks for browsing with Arc! Version 1.127.0 moves us up to Chromium 155.0.8059.40, which closes a hefty batch of security gaps (four of them at the highest severity level) to help shield you while you surf. There's nothing else new in this release. Until next week!
+ October 1, 2026
+ V.1.126.0
+ Welcome back to another Arc update! Version 1.126.0 brings Arc to Chromium 154.0.8037.93, patching dozens of security vulnerabilities (one of them flagged critical) so you can keep exploring the web with confidence. That's everything in this release. Talk soon!
+ September 24, 2026
+ V.1.125.0
+ Hey Arc members! This build bumps Arc to Chromium 154.0.8037.58 with a solid round of under-the-hood security patches, including fixes for several high-risk issues, to help keep your day-to-day browsing protected and running smoothly. Nothing else along for the ride this week — happy browsing!
+ September 17, 2026
+ V.1.124.0
+ Happy to have you browsing with us! This week's build updates Arc to Chromium 153.0.8010.48, folding in a broad round of security fixes — a handful marked critical — so your everyday web stays safe and dependable. Nothing else tagging along this release — catch you next week!
+ September 10, 2026
+ V.1.123.0
+ Glad you're here with us! This week's version advances Arc to Chromium 153.0.8010.37, wrapping in a wide sweep of security fixes — a few rated critical, along with a patch for a flaw that's been spotted under active attack — so we'd suggest updating sooner rather than later. No other changes riding along this time. Take care out there!
+ September 3, 2026
+ V.1.122.0
+ Happy release day! This week's build carries Arc up to Chromium 152.0.7977.76, with a set of security patches — a couple of them ranked critical — to keep your browsing locked down and running clean. That's the whole story this time — see you soon!
+ August 27, 2026
+ V.1.121.0
+ Thanks for keeping Arc current! This build steps up to Chromium 152.0.7977.65, which packs in a large number of security fixes — several of them critical — to help everything stay secure and reliable. We've also ironed out some resizing instability that could crop up when switching between Split View and single-page view. Until the next one!
+ August 21, 2026
+ V.1.120.1
+ Great to have you here! This week's update upgrades Arc to Chromium 151.0.7922.174, delivering a new batch of important security fixes so your time on the web stays safe and steady. Browse on, and stay secure!  
+ August 13, 2026
+ V.1.119.0
+ Good to see you in Arc today! This release moves Arc onto Chromium 151.0.7922.138, folding in a fresh set of security fixes so your everyday browsing stays protected and worry-free. That's all for this one — see you next week!
+ August 6, 2026
+ V.1.118.0
+ Hope your week's treating you well! This release lands Arc on Chromium 151.0.7922.76, a light maintenance build with under-the-hood reliability and stability work — nothing else on the docket this week. Happy browsing!
+ July 30, 2026
+ V.1.117.0
+ Thanks for stopping by! This week's build puts Arc on Chromium 151.0.7922.47, bundling the latest security and stability work so everyday browsing stays quick and dependable. Enjoy the web!
+ July 23, 2026
+ V.1.116.0
+ Grateful to have you along! This release updates Arc to Chromium 150.0.7871.182, wrapping in a round of security patches that keep your browsing safe and running smoothly. Take care out there!
+ July 16, 2026
+ V.1.115.0
+ Thanks for being here with us! This release advances Arc to Chromium 150.0.7871.125, addressing a collection of security vulnerabilities to help keep your browsing experience protected. Until next time!
+ July 9, 2026
+ V.1.114.0
+ So glad you’re along for the ride! This release steps Arc onto Chromium 150.0.7871.115, rolling in the newest round of behind-the-scenes fixes so the web keeps feeling quick, steady, and secure. Catch you next time!
+ July 2, 2026
+ V.1.113.0
+ Wonderful to have you browsing along with us! This release moves Arc to Chromium 150.0.7871.47, closing out a large collection of security patches that keep your time on the web private and dependable. Onward and upward!
+ June 25, 2026
+ V.1.112.0
+ Great to see you back in Arc! This release lifts Arc to Chromium 149.0.7827.197, delivering a new set of behind-the-scenes security fixes so your day-to-day browsing stays secure and steady. Cheers to a safer web!
+ June 18, 2026
+ V.1.111.0
+ We’re glad you’re browsing with us! This release brings Arc up to Chromium 149.0.7827.156, rolling out a fresh round of security fixes to keep your everyday browsing protected and reliable. Browse easy!
+ June 11, 2026
+ V.1.110.0
+ Good to have you browsing with us! This release moves Arc to Chromium 149.0.7827.103, rolling out an important batch of security fixes to keep your browsing safe and sound. Stay safe out there!
+ June 8, 2026
+ V.1.109.0
+ Thanks for sticking with Arc! This release upgrades Arc to Chromium 149.0.7827.54, with the latest fixes and improvements to keep your browsing experience safe and steady. Enjoy the web!
+ May 28, 2026
+ V.1.108.0
+ Nice to have you here! This release advances Arc to Chromium 148.0.7778.217, with security and stability updates to keep your browsing protected. Catch you soon!
+ May 20, 2026
+ V.1.107.1
+ Happy you’re here! This update bumps Arc to Chromium 148.0.7778.179, with a round of security fixes to keep things safe and sound. Until next time!
+ May 14, 2026
+ V.1.106.0
+ Hey there! This release moves Arc to Chromium 148.0.7778.168, delivering the latest security fixes along with quiet improvements for a smoother ride. Happy browsing!
+ May 6, 2026
+ V.1.105.0
+ Glad you stopped by! This update brings Arc to Chromium 148.0.7778.97, packed with security and stability improvements to help everything run reliably. Onward!
+ April 30, 2026
+ V.1.104.0
+ Welcome back! This release steps Arc up to Chromium 147.0.7727.138, which shores up security and stability across the board. See you next week!
+ April 23, 2026
+ V.1.103.0
+ Good to see you! This week’s update carries Arc forward to Chromium 147.0.7727.117, which patches several security vulnerabilities and tightens things up across the board. Browse with confidence!
+ April 16, 2026
+ V.1.102.0
+ We appreciate you being here! This release takes Arc to Chromium 147.0.7727.102, addressing a broad set of security issues to keep your browsing secure. Have fun out there!
+ April 9, 2026
+ V.1.101.0
+ Thanks for using Arc! This release upgrades Arc to Chromium 147.0.7727.56, bringing a round of fixes and improvements for a better browsing experience. Enjoy!
+ April 2, 2026
+ V.1.100.0
+ Hey there! This release moves Arc to Chromium 146.0.7680.178, delivering critical security fixes along with under-the-hood improvements to keep your browsing safe and smooth. Happy browsing!
+ March 26, 2026 —
+ V.1.99.0
+ Glad you’re here! This version brings Arc up to Chromium 146.0.7680.165, which includes important security fixes to keep your browsing protected. Update and browse on!
+ March 19, 2026 —
+ V.1.98.0
+ Thanks for staying up to date with Arc! This version updates Arc to Chromium 146.0.7680.80, bringing fresh security patches plus quiet improvements to stability, performance, and compatibility so your everyday browsing stays smooth, fast, and secure.
+ March 16, 2026 —
+ V.1.97.2
+ Thanks for browsing with Arc! This release upgrades Arc to Chromium 146.0.7680.76, bringing the latest security fixes along with behind‑the‑scenes improvements to compatibility, performance, and reliability so the modern web keeps running smoothly in Arc.
+ March 5, 2026 —
+ V.1.96.0
+ Thanks for keeping Arc up to date! This update bumps Arc to Chromium 145.0.7632.160, bringing additional security fixes plus background stability and performance improvements keeping your browsing smooth and secure. Thanks for browsing with us!
+ February 26, 2026 —
+ V.1.95.0
+ Thanks for keeping Arc up to date! This update bumps Arc to Chromium 145.0.7632.117, bringing the latest security fixes plus behind‑the‑scenes stability and performance improvements so your everyday browsing stays fast, reliable, and secure. Happy browsing!
+ February 19, 2026 —
+ V.1.94.1
+ Thanks for using Arc! This update upgrades Chromium to 145.0.7632.76, delivering the latest security patches along with quiet improvements to stability and performance so everyday browsing stays fast, reliable, and secure.
+ February 12, 2026 —
+ V.1.93.0
+ Thanks for browsing with us! This release bumps Dia to Chromium 145.0.7632.45, bringing important security fixes plus under‑the‑hood stability and performance improvements to keep your web experience smooth and safe. Happy browsing!
+ February 5, 2026 —
+ V.1.92.0
+ Thanks for updating Arc! This release bumps Arc to Chromium 144.0.7559.133, bringing important security fixes and behind‑the‑scenes stability improvements to keep your browsing smooth and safe. Happy browsing!
+ January 29, 2026 —
+ V.1.91.0
+ Thanks for keeping Arc up to date! This update bumps Chromium to version 144.0.7559.110, bringing important security fixes and behind‑the‑scenes stability improvements to keep your web experience smooth and safe.
+ January 22, 2026 —
+ V.1.90.0
+ Thanks for using Arc! This update bumps Chromium to version 144.0.7559.97, which includes an important fix for a security issue plus the usual under‑the‑hood security, stability, and performance improvements to keep your browsing smooth and safe.
+ January 15, 2026 —
+ V.1.89.0
+ Thanks for browsing with us! This update includes a bump to Chromium 144.0.7559.60, bringing important security fixes and behind‑the‑scenes stability improvements to keep your web experience smooth and safe.
+ January 8, 2026 —
+ V.1.88.0
+ Thanks for browsing with Arc! This week's update brings a Chromium upgrade to 143.0.7499.194, which includes security and stability improvements to keep your browsing safe and smooth. Happy browsing in the brand new year!
+ December 18, 2025 —
+ V.1.85.0
+ Thanks for keeping Arc up to date! This release includes a Chromium upgrade to 143.0.7499.147, focused on security and stability improvements to keep browsing smooth and secure. No other changes this week—just important under‑the‑hood fixes.
+ December 12, 2025 —
+ V.1.84.2
+ Thanks for keeping Arc up to date! This release includes a Chromium upgrade to 143.0.7499.110, focused on security and stability improvements to keep browsing smooth and secure.
+ December 4, 2025 —
+ V.1.83.1
+ Thanks for keeping your browser up to date! This release includes a Chromium upgrade to 143.0.7499.41, focused on security, stability, and reliability improvements to keep everyday browsing smooth and safe.
+ December 1, 2025 —
+ V.1.82.0
+ Thanks for updating Arc! This release includes a Chromium upgrade to 142.0.7444.177, delivering security fixes and stability improvements to keep browsing smooth and secure. Enjoy!
+ November 20, 2025 —
+ V.1.81.1
+ This week's update brings includes a Chromium to 142.0.7444.176, which fixes two security issues to keep Arc secure and smooth. Thanks for staying current!
+ November 13, 2025 —
+ V.1.80.0
+ This week’s release brings a Chromium upgrade to 142.0.7444 that addresses important security issues, helping Arc stay secure and run smoothly. Keep your browser up to date for the best experience. Enjoy!
+ November 6, 2025 —
+ V.1.79.0
+ Thanks for browsing with Arc! This update includes a bump to Chromium 142.0.7444.135, which delivers stability and performance improvements. Enjoy!
+ October 30, 2025 —
+ V.1.78.0
+ Thanks for updating Arc. This week includes a Chromium update to 142.0.7444.60, which improves stability and performance. Happy browsing!
+ October 27, 2025 —
+ V.1.77.1
+ Thank you for using Arc! We fixed an issue affecting Live Calendars and have updated to Chromium 141.0.7390.123. Enjoy!
+ October 16, 2025 —
+ V.1.76.0
+ Thanks for browsing with Arc! This update includes a bump to Chromium 141.0.7390.108 and several performance improvements which will improve your experience as you browse. We've also made changes to the privacy policy to make it clearer, check it out here [https://arc.net/privacy]. Enjoy!
+ October 8, 2025 —
+ V.1.75.0
+ Thanks for browsing with Arc! This update includes a bump to Chromium 141.0.7390.66, which includes security fixes and improves stability and performance. Enjoy!
+ October 2, 2025 —
+ V.1.74.0
+ Thanks for updating Arc. This week includes a bump to Chromium 141.0.7390.55, which includes improvements to security, stability, and performance.
+ September 25, 2025 —
+ V.1.73.0
+ Thanks for using Arc. We have updated Arc to Chromium 140.0.7339.208 ensuring security and stability. Enjoy using Arc!
+ September 18, 2025 —
+ V.1.72.0
+ Thanks for updating! This week, Arc moves to Chromium 140.0.7339.186, which includes a batch of important security fixes and stability improvements.
+ September 11, 2025 —
+ V.1.71.1
+ We've updated Arc to Chromium 140.0.7339.133, which includes security fixes, bug patches, and stability improvements. Thanks for sticking with us and keeping Arc up to date!
+ September 10, 2025 —
+ V.1.70.1
+ Fixed an issue where the downloads view would not appear.
+ September 8, 2025 —
+ V.1.70.0
+ We've updated Arc with a bump to Chromium 140.0.7339.81, which improves overall security and stability. Thanks for being here!
+ August 28, 2025 — 
+ V.1.69.0
+ Thanks for using Arc! 
+- This release includes a bump to Chromium 139.0.7258.155 for increased stability.
+- The team also fixed a bug that was causing Arc to stay locked in fullscreen mode when toggled on some video players. Thanks to all who reported.
+- The pop-up found at Arc > About has been redesigned to include more information, including OSS credits.
+ August 21, 2025 —
+ V1.68.0
+ Thanks for being part of our community! We’ve updated Arc to Chromium 139.0.7258.139, which means better stability for you. Enjoy exploring Arc!
+ August 14, 2025 —
+ V1.67.0
+ Thank you for being here! This update includes a bump to Chromium 139.0.7258.128 for increased stability. Enjoy Arc!
+ August 6, 2025 —
+ V1.66.0
+ Thanks for browsing with Arc! This update includes a bump to Chromium 139.0.7258.67 for more stability. Enjoy!
+ July 31, 2025 —
+ V1.65.0
+ Thank you for being here! This update includes a bump to Chromium 138.0.7204.184. Enjoy a smoother, safer Arc!
+ July 24, 2025 —
+ V1.64.0
+ Thanks for using Arc. We've bumped everything up to Chromium 138.0.7204.169. Enjoy smooth browsing ahead!
+ July 17, 2025 —
+ V1.63.0
+ We're happy you're here! This week, Arc gets an update to Chromium 138.0.7204.158, with quiet improvements that keep things humming, safely and smoothly. Thanks for letting us be part of your day.
+ July 10, 2025 —
+ V1.62.0
+ Thanks for being here. This week, we've updated to Chromium 138.0.7204.101, which patches a security vulnerability in the JavaScript engine and keeps everything running smoothly. Here's to safer, more reliable browsing!
+ July 7, 2025 —
+ V1.61.0
+ Thanks for using Arc! This week, we've upgraded to Chromium 138.0.7204.93, which fixes a major security vulnerability and improves CSS styling. Enjoy safe, stable, and smooth browsing ahead.
+ June 25, 2025 —
+ V1.60.0 Thank you for being here! This week, we've upgraded Arc to Chromium 138.0.7204.50, which includes 11 security updates, enhanced stability, and bug fixes to keep your browsing experience smooth and reliable.
+ June 23, 2025 —
+ V1.59.0
+ Thanks for choosing Arc. This week we've bumped to Chromium 137.0.7151.120, which delivers two major bug fixes and performance improvements under the hood. Enjoy a safer, smoother browser.
+ June 13, 2025 —
+ V1.58.1
+ With hotfix 1.58.1, we've addressed a crash that was affecting some members when closing Arc. Happy browsing!
+ June 12, 2025 —
+ V1.58.0
+ Thanks for being here! This week, we've improved Arc with a bump to Chromium 137.0.7151.104. This update fixed two security vulnerabilities and improved overall performance. Happy browsing!
+ June 5, 2025 —
+ V1.57.0
+ Thanks as always for using Arc. This week's release includes a bump to Chromium 137.0.7151.69, which patched three security vulnerabilities. Enjoy!
+ May 29, 2025 —
+ V1.56.0
+ Thanks for being here! This week, Arc is upgraded to Chromium 137.0.7151.56 for an even smoother web experience. Happy scrolling.
+ May 22, 2025 —
+ V1.54.1
+ Thank you for using Arc on Windows! We’ve made several stability fixes to ensure smoother browsing ahead. Enjoy!
+ May 15, 2025 —
+ V1.54.0
+ Thanks for being here. Arc now runs on Chromium 136.0.7103.114, bringing security and privacy updates. Have fun out there!
+ May 8, 2025 —
+ V1.53.0
+ Thanks as always for using Arc. This week, there's an upgrade to Chromium 136.0.7103.93 with tighter security, smarter privacy, and a smoother web experience. Have fun out there!
+ May 6, 2025 —
+ V1.52.0
+ We're grateful you've chosen Arc. This week, there's a bump to Chromium 136.0.7103.49, which made improvements across the board. Happy browsing!
+ April 24, 2025 —
+ V1.50.1
+ Thanks for using Arc! We've bumped up to Chromium 135.0.7049.116, which makes several important security improvements. Happy browsing!
+ April 17, 2025 —
+ V1.50.0
+ Thanks for using Arc! We've bumped up to Chromium 135.0.7049.96, which makes several important security improvements. Happy browsing!
+ April 10, 2025 —
+ V1.49.1
+ Glad you're with us! We've moved up to Chromium 135.0.7049.85, which tightens security with crucial fixes to keep you safer. We've also fixed an issue that was affecting browser extensions like uBlock Origin for some users. Enjoy!
+ April 3, 2025
+ V1.48.0
+ Thanks for being here! We've bumped up to Chromium 135.0.7049.42, which includes several efficiency and speed improvements. Enjoy!
+ March 27, 2025
+ V1.46.1
+ Thank you for using Arc! This release includes a bump to Chromium 134.0.6998.178 for a faster, safer, and easier browser.
+ March 20, 2025
+ V1.46.0
+ Thank you for using Arc! We've updated Chromium to 134.0.6998.118 for smoother performance and strengthened security.
+ March 13, 2025
+ V1.45.0
+ Arc users, we appreciate you! This week, we've bumped to Chromium version 134.0.6998.89, which includes several security fixes, CSS improvements, and HTML enhancements. Enjoy!
+ March 6, 2025
+ V1.44.0
+ The latest Arc release is here! We've bumped up to Chromium version 134.0.6998.35 for added security and stability.
+ February 27, 2025
+ V1.41.2
+ Happy release day, Arc members! We're cruising along with increased stability and security thanks to Chromium version 133.0.6943.142.
+ February 21, 2025
+ V1.41.1
+ It's another release day, Arc members, and we'll once again mark it with a Chromium upgrade. Version 133.0.6943.127 rolls out this week and includes three security fixes. We've also made it easier to enter and exit fullscreen toast notifications.
+ February 13, 2025
+ V1.41.0
+ Happy release day, Arc members! Nothing major to report this week, but we continue to work on crushing bugs and improving stability.
+ February 6, 2025
+ V1.40.0
+ Happy release day, Arc members! This update is fairly straightforward as we’ve upgraded Chromium to version 133.0.6943.54. Enjoy smoother browsing and some critical security fixes.
+ January 30, 2025
+ v.1.38.1
+ Some thoughtful updates to make your browsing better. Here's what's new in this version of Arc:
+- This update includes a Chromium upgrade to 132.0.6834.160.
+- We've made stability improvements to Arc, including a patch on a sneaky "use after free" Chromium bug in DevTools.
+ January 23, 2025
+ v.1.38.0
+ Thanks for using Arc! Here's what's new in this version:
+ - This update includes a Chromium upgrade to 132.0.6834.111.
+ January 16, 2025
+ v.1.37.0
+ Thanks for using Arc! Here's what's new in this version:
+ - This update includes a Chromium upgrade to 132.0.6834.84, where 16 security vulnerabilities have been addressed, including five that were categorized as high-risk.
+ January 9, 2025
+ v.1.36.1
+ Thanks for using Arc! Here's what's new in this version:
+- We don't have any major updates this week, but we will continue to make tweaks and improvements to maintain the browser's stability.
+- This update contains a Chromium upgrade to 131.0.6778.265.
+ December 19, 2024
+ v.1.33.0
+ Thanks for using Arc! Here's what's new in this version:
+- We are continually working to maintain Arc's stability for all Windows users.
+- This update contains a Chromium upgrade to 131.0.6778.205.
+ December 12, 2024
+ v.1.32.0
+ Thanks for using Arc! Here's what's new in this version:
+ - This release contains a Chromium update to 131.0.6778.140 that includes security and stability fixes.
+ December 5, 2024
+ v.1.31.1
+ Thanks for using Arc! Here's what's new in this version:
+- We're working on a fix for a crash some folks have experienced when closing context menus. If you're still experiencing this crash after updating, please let us know!
+- This update includes a Chromium upgrade to 131.0.6778.109.
+ November 21, 2024
+ v.1.29.0
+- We fixed a crash that we saw happening when webpage context menus were opened.
+- This update includes a Chromium upgrade to 131.0.6778.86.
+ November 14, 2024
+ v.1.28.0
+- This update includes a Chromium upgrade to 131.0.6778.70.
+- Arc Search on Android is now officially out of beta and available for download in the Google Play Store here [https://play.google.com/store/apps/details?id=company.thebrowser.arc].
+ November 13, 2024
+ v.1.26.3
+ - Fixed an issue with our analytics client.
+ November 7, 2024
+ v.1.26.2
+ Thanks for using Arc! Here's what's new in this version:
+ - This update includes a Chromium upgrade to 130.0.6723.117.
+ November 4, 2024
+ v.1.26.1
+ Thanks for using Arc! Here's what's new in this version:
+ - We fixed a site settings vulnerability that allowed improper handling of permissions. For more detailed information on this please see our Security Bulletin here [https://arc.net/security/bulletins#windows-site-settings-bypass].
+ October 31, 2024
+ v.1.26.0
+ Thanks for using Arc! Here's what's new in this version:
+ - This update includes a Chromium upgrade to 131.0.6778.13
+ October 24, 2024
+ v.1.25.0
+ Thanks for using Arc! Here's what's new in this version:
+- Safe browsing, which warns against visiting malicious sites and downloading malicious files, is now enabled on Windows by default. You can disable this in arc://settings.
+- This update includes a Chromium upgrade to 130.0.6723.70.
+ October 17, 2024
+ v.1.24.0
+ Thanks for using Arc! Here's what's new in this version:
+- Séb, Miko, and Patrick fixed a crash caused by some websites using geolocation APIs.
+- This update includes a Chromium upgrade to 130.0.6723.59.
+- In case you missed it, Arc Search is now available in open beta on Android 12 or later. Download the app here [https://play.google.com/store/search?q=arc%20search&c=apps&hl=en_US]!
+ October 10, 2024
+ v.1.22.2
+ Contained in this release, small but mighty fixes and an announcement you've been waiting for:
+- We now support ARM processors for Arc on Windows.
+- Steve fixed a crash caused by dragging a tab to create a new Arc window or dragging a tab between two Arc windows.
+- Arc Search is now on Android and available for Android 12 or later! Download the open beta here [https://play.google.com/store/apps/details?id=company.thebrowser.arc&pli=1]!
+ October 3, 2024
+ v.1.22.0
+ Contained in this release, small but mighty fixes:
+- We fixed a crash that was happening when scrolling on webpages.
+- You can now run Arc as an administrator.
+- Chromium version updated to 129.0.6668.71.
+ September 26, 2024
+ v.1.20.2
+ Thanks for using Arc! In this release we've got a Chromium update:
+ - Chromium version updated to 129.0.6668.71
+ September 24, 2024
+ v.1.20.1
+ Contained in this release, a small but mighty fix:
+ - We made a fix preventing display of inconsistent URLs in certain circumstances.
+ September 19, 2024
+ v.1.20.0
+ We continue to work on Arc's stability and reliability to ensure it is setup for future success. Thank you for your feedback and bug reports.
+ Chromium version updated to 129.0.6668.59.
+ P.S. Listen to the latest edition of Imagining Arc on Apple Podcasts [https://podcasts.apple.com/us/podcast/three-product-decisions-and-one-big-question/id1758984150?i=1000667083348], Overcast [https://overcast.fm/+ABJxP-HZFfg], or Spotify [https://open.spotify.com/episode/6ncSdy6yeYDmyk0x3JGmYp]!
+ September 13, 2024
+ v.1.19.2
+ This week is another behind-the-scenes lineup of updates. Even though this isn't flashy, every update is crucial to building a stronger foundation for Arc's future.
+ Thanks for using Arc! 
+ P.S. Listen to the latest edition of Imagining Arc on Apple Podcasts [https://podcasts.apple.com/us/podcast/three-product-decisions-and-one-big-question/id1758984150?i=1000667083348], Overcast [https://overcast.fm/+ABJxP-HZFfg], or Spotify [https://open.spotify.com/episode/6ncSdy6yeYDmyk0x3JGmYp]!
+ September 5, 2024
+ v.1.18.0
+ We're not going to bore you with the technical details! This update is filled with tweaks and refinements that will make Arc feel faster, more responsive, and more reliable.
+ Thanks for using Arc! 
+ P.S. Listen to the latest edition of Imagining Arc on Apple Podcasts [https://podcasts.apple.com/us/podcast/three-product-decisions-and-one-big-question/id1758984150?i=1000667083348], Overcast [https://overcast.fm/+ABJxP-HZFfg], or Spotify [https://open.spotify.com/episode/6ncSdy6yeYDmyk0x3JGmYp]!
+ August 29, 2024
+ v.1.17.0
+ While there may not be a long list of exciting changes to share, we’re making updates behind-the-scenes to improve Arc. These updates might not be immediately visible, but they'll make a world of difference in the long run.
+ Thanks for using Arc! 
+ P.S. Listen to the latest edition of Imagining Arc on Apple Podcasts [https://podcasts.apple.com/us/podcast/three-product-decisions-and-one-big-question/id1758984150?i=1000667083348], Overcast [https://overcast.fm/+ABJxP-HZFfg], or Spotify [https://open.spotify.com/episode/6ncSdy6yeYDmyk0x3JGmYp]!
+ August 22, 2024
+ v.1.16.3
+ Experience fewer interruptions and more responsive browsing with the latest update. Arc runs better with every release.
+ Latest updates: 
+- You may notice a few visual updates for downloads: we increased the title height to fix clipping and updated the download progress bar. Thanks for keeping things clean, Sherry!
+- This version updates Arc to Chromium version 128.0.6613.85.
+ Recent fixes: 
+- When viewing Settings, another Settings window instance mistakenly displayed for every open Arc window. This has been corrected to only a single Settings window opening.
+- When choosing a Space icon, the emoji picker would sometimes show blank spaces while loading. Instead, there's now a placeholder image while loading.
+- Certain actions in Settings would result in a crash, specifically when changing your Arc Account email or viewing Account options.
+- The Sidebar didn't show both tabs in Split View if you navigate to that Split View tab from the Command Bar in another Space.
+ Thanks for using Arc! 
+ August 15, 2024
+ v.1.15.1
+ Every masterpiece starts with a solid foundation. This update is dedicated to crafting a smoother, more reliable experience for you. We believe in the power of small, intentional improvements.
+ Latest Updates: 
+- Now you can right-click a Space icon to directly edit options for Spaces [https://resources.arc.net/hc/en-us/articles/19228064149143]. That's just one quicker shortcut for you, courtesy of Sherry!
+- A few visual updates were made to the Sidebar, Command Bar, and Settings in Arc for Desktop. Thanks to Sherry and the team for the lovely aesthetic touches.
+ Recent fixes: 
+- Maximizing windows resulted in a crash for some members.
+- v.1.15.1 fixes as a crash that affects the ability to drag tabs out of the Sidebar to create new windows 
+ Thanks for using Arc! 
+ August 8, 2024
+ v.1.14.0
+- 
+ Now you can record and submit a Performance Trace on Arc for Windows! Performance Traces are super useful for helping us figure out how to solve performance issues in Arc. Thanks to Seb for better bug reporting! - Learn more about how to submit a Performance Trace [https://resources.arc.net/hc/en-us/articles/25481019999639]
+- 
+ We now support a wider array of Intel and AMD CPUs thanks to the Performance & Stability Team! If your PC can run Windows 10 19H1 you should be able to run Arc [https://resources.arc.net/hc/en-us/articles/19400148671383-Unsupported-Devices].
+- 
+ Recent Fixes: 
+- The Command Bar didn’t show any suggested results after entering a query or URL. Thanks for keeping the suggestions flowing, Alex!
+- An option to translate would appear when there was nothing to translate.
+- Space icon emojis occasionally wouldn’t display. We’ve made improvements to how emojis render in the Sidebar to fix this. Now our icons won’t ghost us, thanks to Alexandra!
+ August 1, 2024
+ v.1.13.0
+- 
+ Arc is now available on Windows 10 version 19H1 and newer! Check the minimum requirements to run Arc on Windows 10 [https://resources.arc.net/hc/en-us/articles/19400148671383-Unsupported-Devices]. Download the latest from arc.net/download [http://arc.net/download].
+- 
+ Fixed Issue(s): 
+- Focus would always shift to the first Space after reordering Spaces.
+- The Mini Player (Picture-in-Picture) [https://resources.arc.net/hc/en-us/articles/19234766331799-Mini-Player-Watch-or-Listen-as-you-Browse#miniplayerpictureinpicture] would not fully close when returning to the tab playing the original video.
+- If you've experienced issues with Arc Sync [https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync], Arc Max [https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI] or submitting reports via "Contact the Team [https://resources.arc.net/hc/requests/new]" please sign out (Arc Menu > Sign Out) and sign back in to Arc. This will resolve the issue. Some Members reported that they were force signed out of Arc due to this issue. Arc will now display a banner in Settings (Control+Comma) urging Members experiencing this issue to sign out and back in to resolve. Please make sure to save your Recovery Phrase [https://resources.arc.net/hc/en-us/articles/22370005382167-Recovery-Cards#windows] before signing out to prevent issues reenabling Arc Sync.
+ July 25, 2024
+ v.1.12.2
+- 
+ Control+Shift+C [https://arc.net/l/quote/pljiwjqr] now removes additional link trackers when sharing Instagram URLs. 
+- This version updates Arc to Chromium version 127.0.6533.73. 
+- 
+ Fixed Issue(s): 
+- We’ve made several fixes to reduce crashes and improve the overall stability of Arc for Windows! Huge shout out to the Performance team for all their hard work 💪
+- Some Members were logged out of Arc for Windows after restarting the app. This has been fixed as of v.1.12.2.
+ July 18, 2024
+ v.1.11.3
+- 
+ You can now reorder your Spaces [https://resources.arc.net/hc/en-us/articles/19228064149143-Spaces-Distinct-Browsing-Areas] on Arc for Windows! From the bottom of your Sidebar, click and drag a Space icon to change the order. Changes to Space order syncs across Windows and macOS if you have Arc Sync [https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync] enabled. Huge shoutout to Brian and Freddy for getting this across the line! Note: Members previously reported a bug with rearranging Spaces that has since been fixed. Thanks so much for reporting this 🙏
+- 
+ GitHub Live Folders [https://resources.arc.net/hc/en-us/articles/22731612065815] now shows review requests for teams you are on. Shout out to for Connor making GitHub Live Folders even more useful!
+- 
+ Fixed Issue(s): 
+- 
+Ask on Page [https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI#askonpage] wouldn’t allow subsequent queries after entering a blank query.
+- Joining a Teams meeting via Live Calendar [https://resources.arc.net/hc/en-us/articles/24158102740631-Live-Calendars] would sometimes start a phone call instead of a Teams video call.
+- 
+Arc Max [https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI] features could not be enabled in onboarding.
+- The device toolbar [https://developer.chrome.com/docs/devtools/device-mode#open_the_device_toolbar] was not available in dev tools. You can now enable the device toolbar in dev tools by clicking the devices icon or with Control-Shift-M.
+- Some Members were logged out of Arc for Windows after restarting the app. This has been fixed as of v.1.11.3.
+ July 11, 2024
+ v.1.10.0
+ Thanks for using Arc! We have a new version for you, including:
+- Introducing Arc Max [https://resources.arc.net/hc/en-us/articles/19335160678679] , our suite of AI-powered features designed to power up your browsing 🌸 This week, we're excited to launch two new Max features: 
+- 
+ Tidy Tabs [https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI#tidytabs] : Automatically organize your sidebar into clean categories with the "Tidy" button.
+- 
+ Ask on Page [https://resources.arc.net/hc/en-us/articles/19335160678679-Arc-Max-Boost-Your-Browsing-with-AI#askonpage] : Use Control-F to ask Arc any question about the current page. You can turn AI features on or off in Arc Settings.
+- 
+ Settings persistence: Thanks to a member report, we fixed an issue where settings weren't persisted across restarts of Arc. Appreciate you!
+- 
+ Command Bar: We've removed the scroll bar from the Command Bar for a cleaner UI and to fix a common bug.
+ June 27, 2024
+ v.1.8.0
+ Thanks for using Arc! We have a new version for you, including:
+- 
+ Live Calendars for Windows: Now, when Google Calendar is pinned as a favorite in your Sidebar, you'll see a countdown timer in the calendar icon. Also, when it's time for the meeting to start, a "Join" button will automatically appear in your Sidebar, allowing you to jump into your next video call with one click. To change your Live Calendar's updates, just right-click the calendar icon and adjust its settings. Huge shoutout to Ben, Connor, and Freddy for bringing your Sidebar to life with this feature!
+- 
+ Window Loading Performance Improvement: Alexandra has enhanced window loading performance by delaying the title bar display until the window is ready, resulting in a faster and more responsive interface.
+- 
+ Translation Button Reliability Fix: Previously, there was an issue where the Translate button was not reliably responsive in certain cases. Thanks to Brian, this issue has been resolved, ensuring translations happen seamlessly each time.
+- 
+ Bug Fix for Window Restoration After Restart: Thanks to Sherry, we have fixed an issue where, upon restarting, Arc would restore a temporary window that made it difficult to access spaces and pinned tabs. Now, we restore a full window with each restart, along with the temporary one if that was the last one closed.
+- 
+ Small Design Polish for Account Settings: Alexandra has added some tiny-but-mighty design polish to account settings, making all widths of setting menus consistent for a more streamlined appearance.
+- 
+ Longstanding Tab Closing Fix: Thanks to Seb, Adam, and Maya, we've fixed a longstanding issue that caused tabs to be archived ahead of your specified "Archive tabs after..." setting — improving tab management reliability.
+ June 20, 2024
+ v.1.7.1
+- 
+ Recall for Maximized Window States: Thanks to Alexandra, Arc now remembers if your window was maximized, allowing its size and position to be restored immediately when it’s reopened.
+- 
+ Toggling Peek Feature: You can now turn the Peek feature on or off in Settings. This allows for two specific adjustments: toggling Peek when clicking links in pinned tabs and Favorites, and disabling Peek when holding “Shift” while clicking a link. To make these changes, navigate to Arc > Settings > General, and toggle the respective Peek options as needed. Kudos to Fabrice for making this possible.
+- 
+ Bug Fix for Task Switcher Icons: Steve has fixed an issue where the Arc icon was missing from the task switcher (activated with Alt + Tab) and was incorrectly replaced with Windows’ default “no icon available” symbol. Now, when using the task switcher, the Arc icon will appear correctly.
+- 
+ Automatic Page Translation: Thanks to Brian, Arc now offers translation if a website is not in your default language. If you’re on a page in a language other than your default, just find the globe icon in the top right corner, click “Translate” in the dialog box, and you’re all set.
+ June 13, 2024
+ v.1.6.1
+- 
+ Increased Tab Switching Speed: Thanks to Seb’s refactoring of tab logic, we’ve significantly increased the speed at which members can switch between tabs. By reducing the amount of work required for tab switching, we’ve made the process much faster and flicker-free — especially for devices with lower processing power.
+- 
+ Account Management Updates: You can now easily update your name and email address, or delete your account, right from Arc’s Settings menu. Just find the Arc logo in the top left corner, navigate to “Settings,” click “Edit Account,” and make any adjustments you need. Shoutout to Alexandra for this major update!
+- 
+ Improved Window Restoration Performance: Scott resolved an issue where, in some cases, the Arc window would not open after authentication. This should result in a more reliable and faster window restoration process.
+- 
+ Staggered New Windows: Thanks to Alexandra’s handiwork, new windows now open slightly staggered from one another, rather than directly on top of each other, making them easier to view and click.
+- 
+ Improved Favicon Visibility for Synced Tabs: Thanks to Andrzej’s improvements on favicon caching for pinned tabs that are synced across mobile and desktop. Now, for synced devices, pinned tabs should appear on desktop with a visible green dot favicon.
+- 
+ Increased Reliability of Sync Toggle Settings: Props to Andrzej for also increasing the reliability of our sync toggle settings, ensuring that syncing across devices persists after the feature is initiated.
+- 
+ Functional Top Bar Buttons: Alexandra fixed a bug that caused the top bar buttons to be unresponsive. They are now fully functional and ready to use.
+ June 06, 2024
+ v.1.5.0
+- 
+ GitHub Live Folders : We’re introducing GitHub Live Folders that automatically compile and organize PRs. To get started, create a Pull Request, and let Arc magically create a new folder called “Pull Requests.” Watch your Live Folder stay up-to-date automatically, compiling PRs as they’re created and clearing them out once they’re completed. For a more tailored view, right-click on the Live Folder to filter and configure as needed. Big thanks to Freddy and Connor for making this happen!
+- 
+ Audio Player Integration for Mini Player: Thanks to Alexandra, if you have a video playing in the Mini Player (Picture-in-Picture) and dismiss it by clicking the X, the video will be dismissed but the audio can still be played in the Sidebar Audio Player. This is perfect for moments when you just need the audio from a video playing in the background, such as YouTube podcasts, video lectures, and more.
+- 
+ Peek Tab Dismissal: You can now dismiss a Peek tab using the Esc key. Kudos to Miko for this convenient update.
+- 
+ Print Dialog Dismissal : Thanks to Miko, you can also use the Esc key to dismiss Print dialogs.
+- 
+ Enhanced Drag and Drop Support : We’ve added support for more drag-and-drop data formats. Due to Miko’s work, you can now do things like drag and drop links into your Sidebar, downloads from the Sidebar library (bottom left corner), and songs into a Spotify playlist.
+- 
+ Pinned Tab Dragging Issue: Alexandra fixed an issue where dragging a Pinned Tab out of your Sidebar to create a new window would not result in the tab being selected in the new window.
+- 
+ Accessibility Updates : The UI elements and web contents now provide more information in accessibility tools such as Accessibility Insights and Inspect.exe. Kudos to Miko for prioritizing accessibility.
+- 
+ Unexpected Space Focus Switch: Thanks to Darin, we’ve resolved an issue where selecting a tab in one Space would switch focus to another Space unexpectedly.
+- 
+ Extension Popup Size Issue : Miko fixed an issue that caused extension popups to display at an incorrect size.
+- 
+ Google Pay Functionality : With help from Mark, we fixed an issue that prevented Google Pay from working as expected.
+- 
+ Dev Tools Cloning Fix : Thanks to Alexandra, we resolved an issue where undocked dev tools would recursively clone if two or more dev tools windows are opened.
+- 
+ Dev Tools ‘F12’ Fix : Miko’s handiwork helped us fix a crash triggered holding F12 when dev tools are open.
+ May 23, 2024
+ v.1.3.3
+- We’ve added the Audio Player [https://resources.arc.net/hc/en-us/articles/19234766331799-Mini-Player-Watch-or-Listen-as-you-Browse#audioplayer]! Click away from any tab playing audio and you’ll notice a small audio controller appear at the bottom of your Sidebar. To remove the Audio Player from your sidebar, simply click the "X" or close button on the controller.
+- We’ve added vertical Split Views! To create a Vertical Split you click the Split icon next to the minimize window control icon and select Add Top Split or Add Bottom Split. You can also create a vertical Split View from the Command Bar (Ctrl+T) and typing “add top split” or “add bottom split”.
+- You can now set an icon for your Spaces! 
+- To change your Space icon, right click on your Space > click ‘Change Space icon’ > select an emoji.
+- To remove a Space icon, right click on your Space > click ‘Change Space icon’ > click the trash icon.
+- Space icons will Sync across your Arc installs on Windows and Mac.
+- You can now use the back/forward buttons on your mouse to switch Spaces
+- You can now drag downloads from the Downloads menu (Ctrl+J) into web contents
+- You can now drag links from web contents into your Sidebar to create a new tab
+- We now automatically freeze background tabs that use too much CPU
+- We fixed an issue where Settings (Ctrl+,) would open behind the main Arc window
+- We fixed an issue where opening a new tab from Ctrl+T and selecting one of the Command Bar suggestions in a Space associated with a non-Default Profile would cause a forced focus switch to the first Space in your Default Profile
+- In 1.3.2 we fixed an issue that removed Favorites in Spaces associated with non-Default Profiles and occasionally affected Members would not be able to add their Favorites back to these Spaces.
+- Arc 1.3.2 updates to Chromium 125.0.6422.112 which includes a security fix for CVE-2024-5274
+- Arc 1.3.3 updates to Chromium 125.0.6422.113
+- Various crash fixes and performance improvements
+ May 16, 2024
+ v.1.2.1
+- We're making updating faster! 
+- The update banner in the Sidebar will only show once the update has been downloaded, so this means if you click on the banner the app will terminate and restart immediately!
+- Updating via Arc menu > Check for Updates is now a two click process. The first click will download the update, and then the second click will restart the app.
+- We’ve updated the Pinned Folder icons! Pinned Folder icons will now be drawn in full color instead of just a monochrome outline and and we’ve added an open/close animation.
+- You can now open the Command Bar to show the current URL with Alt+D in addition to Ctrl+L
+- You can now open the Arc menu using Alt+F
+- You can now open the Arc menu when the Sidebar is hidden and no web content is in view
+- We’ve added the ability to remove a tab from your Favorites using Ctrl+T and then typing “unfavorite tab”
+- The top toolbar can now be dynamically resized fixing an issue where toolbar elements (pinned extensions, window controls, URL bar) would overlap at smaller window widths
+- We fixed an issue where the back/forward history drop down would persist after using Ctrl+Tab to quickly switch away and then back to the tab where the history drop down was opened -
+- We fixed an issue that prevented Arc windows from closing using the window controls or Alt+F4
+- We now show a warning dialog if your processor does not meet our minimum requirements. You'll still be able to use Arc for Windows, but you'll likely experience issues. Learn more at arc.net/requirements [http://arc.net/requirements]
+- In 1.2.1 we fixed an issue where Members with multiple Profiles and Spaces could get into a state where all Spaces were assigned to the Default Profile and could not edit Favorites in other Profiles.
+- Various crash fixes and performance improvements
+ May 9, 2024
+ v.1.1.2
+- We fixed an issue where Arc would not open as expected when clicking an Arc notification in the Windows notification center
+- We fixed an issue that caused Sidebar corners to become unrounded when the Sidebar is undocked and in view
+- We fixed an issue that caused web contents corners to become unrounded when a new tab is created
+- We fixed an issue where an empty section would appear in the context menu if you right click an empty space in the Sidebar
+- We’ve improved how we handle logging when Arc experiences an unclean shutdown. This will help us catch and resolve even more crashes!
+- We’ve improved how we handle logging when multiple Arc windows are closed at once. This will help us catch and resolve more crashes that occur when Arc windows are being closed.
+- We fixed a crash that was impacting a large amount of Members on 1.1.0. This issue was resolved in 1.1.1. You can update by going to the Arc menu > Check for updates or update directly from the installer available on arc.net/download. [https://arc.net/download]
+- Arc 1.1.2 updates to Chromium 124.0.6367.207 which includes a security fix for CVE-2024-4671
+- Various crash fixes and performance improvements
+ April 30, 2024
+ v.1.0.1
+- Welcome to Arc for Windows 1.0 🎉 
+- You can download at arc.net/download [https://arc.net/download]
+- Check out this page [https://resources.arc.net/hc/en-us/articles/19400148671383] to see if your Windows device is supported
+- We fixed a crash that occurred when accessing arc://password-manager/passwords and password manager extensions
+ April 22, 2024
+ v.0.19.2
+- We now show a toast with the zoom percentage when you zoom in and out with Ctrl + +/- or Ctrl + mouse scroll wheel
+- Middle mouse clicking or holding Ctrl and left clicking on the Back, Forward and Refresh buttons will now perform those actions in a new tab
+- Your last Arc window will now be restored to the same size and position it was in before it was closed
+- You can now view the Chromium version in the updater window (Arc menu > Check for Updates)
+- The Chromium version is now included in the build info that’s copied to your clipboard through Arc menu > Help > Copy Build Info
+- We now will open Chromium level settings (such as Privacy and Security or Passwords) in the correct Profile when accessed through Arc Menu > Settings > Profile
+- If you drag a tab out of your Sidebar to create a new Blank Window then Close all Windows from the taskbar we will restore your main Arc window and the Blank Window when you relaunch Arc
+- We fixed an issue that caused the Command Bar (Ctrl + T) to get dismissed when the Sidebar is undocked and in view
+- We fixed an issue from preventing the keyboard shortcuts to Print (Ctrl + P) and View Page Source (Ctrl + U) from working as expected
+- We fixed an issue that would cause Sidebar text to become unreadable when switching from Windows light theme to dark theme or vice versa
+- We fixed an issue where rapidly opening and closing a Pinned Folder would cause a gap in the Sidebar
+- We fixed an issue where right clicks on the Back/Forward buttons and Pinned Tab favicons would trigger left click actions
+- We fixed an issue that prevented extensions from opening new Arc windows
+- We fixed an issue where you could not click the Next button when Importing from Firefox
+- We fixed an issue where Members couldn’t use Arc for Windows if their GPU isn’t supported by Chromium
+- We fixed an issue where a newly created Space would show tabs from a different Space in the Sidebar
+- We fixed an issue where Pinned Extensions would overlap with the window control icons
+- Arc for Windows can now be run from an external drive without causing a crash after login
+- We fixed a crash that occurred when dragging a tab out of the Sidebar to create a new window
+- We fixed a crash caused by overflow text in Arc notifications on Windows. Arc notifications on Widows will now be truncated if overly long
+- We fixed a crash that occurred when using the F shortcut to full screen a video while in Split View
+- We fixed a crash that occurred when creating a new tab from the + button in the Sidebar
+- We have updated the Chromium version to 124.0.6367.92
+- Various crash fixes and performance improvements
+ April 15, 2024
+ v.0.18.0
+- We’ve added the Copy URL as Markdown shortcut Alt+Shift+Control+C
+- We now show a toast when you unarchive a tab that reopens in a different Space to the one you are on
+- When being Inspected, extension popups will stay open and won’t close when unfocused
+- Double clicking on extension popups will no longer cause the popup window to maximize
+- The Add Split View shortcut is now accurate displayed in the Command Bar as Contrl+Shift++
+- We’ve added About Arc to Arc Menu > Help. This will take you to arc://settings/help where you can see the Chromium version Arc is using
+- We fixed an issue where Appearance > Setting > Acrylic would not show a transparent blur effect with in Windows light theme
+- We fixed an issue where you could create a Split View from a blank window, resulting in a Split Tab on the right and a blank Split Tab on the left
+- We fixed an issue where you would not be shown a new Space after creating it
+- We fixed a crash caused when viewing the Downloads flyout from the toolbar
+- We fixed a crash caused by clicking pinned extensions when the extension pop up window is already open
+- Various crash fixes and performance improvements
+ April 8, 2024
+ v.0.17.2
+- Dragging the Sidebar to resize is now much smoother
+- Resizing the sidebar will no longer get 'out of sync' with your mouse if you go past the width limits
+- Dark Space Themes now appear darker
+- Our error messages on sign in are more specific
+- We fixed an issue that caused a flicker when resizing the Sidebar
+- We fixed issues with dragging and dropping Pinned Folders and dragging and dropping Pinned tabs within Pinned Folders
+- We fixed an issue that caused Arc to log you out of websites frequently
+- We fixed an issue where Back to Tab would not work as expected for Picture-in-Picture video across multiple Profiles
+- We fixed an issue where if you used the keyboard or Space icons to switch Spaces you would get stuck in a state where you could no longer switch Spaces
+- We fixed an issue where Today tabs would appear across multiple Profiles when switching Spaces
+- We fixed an issue that would cause the Sidebar to scroll down when swiping between Spaces
+- We fixed an issue that caused a the Arc Taskbar icon to have a highlight behind it when in Windows light theme
+- We fixed an issue that stopped F11 to full screen from working
+- We fixed a crash that would cause a Space to be removed by swiping when Arc Sync is enabled
+- We fixed a crash that occurred when dragging a tab into a Pinned Folder
+- We fixed a crash that occurred when selected suggestions in the Command Bar
+- We fixed a crash that occurred when using ALt-F4 to close a second Arc Window
+- Various crash fixes and performance improvements
+ April 4, 2024
+ v.0.16.2
+- You can now open .pdf files in Arc by default! Go to Windows Settings > Apps > Default apps > Arc and set .pdf to Arc
+- You can now dismiss the Command Bar (Ctrl+T) by clicking anywhere outside of it
+- You can now dismiss the Arc menu by clicking anywhere outside of it
+- You can now mute and unmute the a tab playing audio by clicking the audio icon in the Sidebar
+- Favorites will render much more smoothly in the Sidebar when swiping between Spaces associated with different Profiles
+- If you choose to save your Recovery Phrase for Arc Sync locally, we now create a new file instead of overriding the currently saved file. If there is a conflict with another file, you will be prompted to pick and file location so you can give the file a different name.
+- We’ve visually updated your Arc Sync Recovery Card
+- We removed the context menu option “Share Folder” when right clicking on a Pinned Folder as this share feature is not yet supported on Arc for Windows
+- We fixed a contrast issue with icons in the Command Bar (Ctrl+T) while your computer is using a dark theme
+- We fixed a crash that occurred when rendering your Membership Card in Settings
+- We fixed an issue that cased a syncing error when syncing between Arc for Windows and Arc for macOS Early Birds
+- Various crash fixes and performance improvements
+ March 28, 2024
+ v.0.15.4
+- All Arc on macOS Members can now sign in to Arc for Windows without an invite! If you’re already an Arc on macOS Member and would like to try Arc on your Windows 11 machine, check out our onboarding document [https://www.notion.so/Getting-Started-with-Arc-for-Windows-145ece36acbb40f381ce1817747cb7ca?pvs=21] for info on how to download, install and sign in to Arc for Windows.
+- We now support tab freezing and discarding in Arc on Windows! This will prevent memory usage from increasing over time, and this will help reduce the CPU usage caused by background tabs!
+- This release includes an updated installer. If you have been experiencing issues with install try installing version 0.15.1 from https://releases.arc.net/windows/ArcInstaller.exe [https://releases.arc.net/windows/ArcInstaller.exe]. Please note that updated installer will not install on machines with ARM processors (including Apple Silicon Macs running Parallels) as they are not supported at this time.
+- Enabling Arc Sync in Settings will now always show you your Recovery Phrase. You can read more about Arc Sync and Recovery here [https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync#recoverycardsandrecoveringsynceddata]
+- Clicking the “Sorry! Sync has been disabled…” toast will open Settings so you can quickly reenable Arc Sync
+- We have made Arc Sync error messages more interactive so it’s more clear what actions Members should take (restart, enter password, update) to resolve the sync issue
+- We now support syncing gradient Space Themes from Arc on macOS
+- Accessing Settings from the Arc menu or Ctrl+, when the Settings panel is already open will bring the Settings panel window to the front instead of creating a new Settings panel window
+- Highlighting text in your Sidebar, such as when renaming a Space or Tab, will now match your Space theme
+- We now show a “New Tab Created” toast when opening a link in a new tab from the context menu or Ctrl+click and the Sidebar is hidden
+- We now show a clickable URL bar when no web contents are being shown
+- The close, expand and open in Split buttons for Peek tabs now match the order they appear in on Arc for macOS
+- In Arc menu > Check for Updates clicking the version number now copies it to the clipboard
+- Clicking the + button in the Sidebar when in an Incognito Window will now open the Command Bar just like on Arc for macOS
+- We fixed an issue with Arc Sync where toggling the setting would cause the "Ensuring encrypted by” notification to display indefinitely
+- We fixed an issue where your Arc Membership card would not display in Settings
+- We fixed an issue where changes made in Settings would not persist
+- We fixed an issue where opening Settings would cause the Settings panel would show for a half second then go behind the main Arc window
+- We fixed an issue where web contents would not regain focus after page refresh
+- We fixed an issue where rapidly tapping or clicking the web contents of a page would cause a crash
+- We now show a more friendly error message when a non-allowlisted email attempts to create an account.
+- We fixed an issue with Arc Sync getting disabled. You may be required to sign in to Arc for Windows after this update.
+- We fixed a crash that occurred when opening peek window.
+- Various crash fixes and performance improvements
+ March 21, 2024
+ v.0.14.2
+- Arc Sync is now available in Arc for Windows! 
+- To enable Arc Sync go to Arc menu > Settings > Arc Sync and toggle the setting On.
+- When you turn on syncing, all your Spaces, Folders, and Tabs will Sync. History, passwords, extensions, Favorites tabs, and Profiles will not Sync between devices. We hope to support syncing for these features soon!
+- When Arc Sync is enabled your Spaces will sync across your installs of Arc across Windows and macOS as long as all installs of Arc are on the latest version and you are signed into the same Arc account.
+- Arc Sync is end-to-end encrypted and requires your Arc Recovery Card to access your synced data in the event you forget your password, and don’t have any access to other devices that have previously synced. You can find your Recover Card in Arc for Windows in Arc menu > Settings > Arc Sync > view your Recovery Card. If you are an Arc on Windows and macOS Member your Recovery Card is the same across both platforms. You can learn more about Recovery Cards and recovering synced data here [https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync#recoverycardsandrecoveringsynceddata].
+- If you are an Arc for macOS Member, make sure that the new end-to-end encrypted Arc Sync is enabled as iCloud based Sync will not sync your Spaces with Arc for Windows. You can find the steps to enable end-to-end encrypted Sync on Arc for macOS here [https://resources.arc.net/hc/en-us/articles/20272860828823-Arc-Sync#howtosyncarcacrossdevicesmac].
+- Membership Cards now appear in Settings (Arc menu > Settings or Ctrl+,)
+- Links to resources.arc.net [http://resources.arc.net] accessed from the Arc menu will open in Arc for Windows by default
+- Notifications now integrate into the Action Center and have a new look and feel
+- We now have an updated favicon to indicate unsupported items in the Sidebar
+- You can select either Mica or Acrylic material background from Arc menu > Settings > Appearance
+- We’ve improved the collapse animation for Folder Peek tabs
+- We now show Split View tab favicons in the Command Bar
+- We fixed an issue where you were unable to open settings or options for extensions
+- We fixed an issue where accessing the Site Control Center would cause the unanchored Sidebar to appear
+- We fixed an issue where Dev Tools could not be viewed in an undocked (windowed) view
+- We fixed an issue that would cause keyboard shortcuts to stop working
+- We fixed an issue where Arc account emails would get encoded incorrectly when submitting bug reports
+- We fixed a crash that occurred when running Arc on Windows in a virtual desktop
+- We fixed a crash that occurred when copying a URL to the clipboard
+- Various additional crash fixes
+ March 14, 2024
+ v.0.13.1
+- Videos will now automatically open in the Mini Player (Picture-in-Picture) when you switch to a new tab while they are playing. You can toggle this setting off per website from the Site Control Center next to the URL bar. An option to toggle this off globally will be coming in a future release.
+- Arc Membership cards will be available during onboarding. Membership cards will be coming to the Settings panel in a future release
+- We now render keyboard shortcuts in Command Bar suggestions just like Arc for macOS
+- We've made several improvements to the look and feel of toasts
+- We’ve made some visual polish updates to the onboarding flow
+- We now link to our Terms of Service and Privacy Policy in the onboarding flow Create an Account page
+- We’ve made some visual polish updates to the Sidebar
+- We’ve decreased the volume on the unboxing startup sound
+- We’ve added support for Ctrl + F4 to close tabs
+- We’ve made improvements to the Pinned Folder expand/collapse animations
+- We fixed an issue that could hang Arc when scrolling with the middle mouse button and left-clicking immediately afterwards
+- We fixed an issue where when the Sidebar is unanchored and a Space name is being edited or a new Space is being created, the Sidebar could be unintentionally hidden breaking the Space creation/edit flow
+- We fixed an issue where setting tabs to Auto Archive to 30 days would still archive tabs after 12 hours
+- We fixed an issue where hovering over the unanchored Sidebar would not trigger the Sidebar to appear
+- We fixed an issue where the web contents would not be in focus after a system modal window, like the system file picker, is displayed
+- We fixed an issue where rapidly clicking the Archive icon in the Sidebar would unarchive tabs
+- We’ve made UI interactions more responsive
+- We’ve improved performance of window creation, including app startup
+- We've made performance improvements to further reduce CPU and memory consumption
+- We've made stability improvements to reduce crashes
+- Arc for Windows beta now uses Mica material to reduce resource consumption. We will be adding the option to toggle between Mica and Acrylic in a future release
+- We fixed a crash that occurred when closing your last Arc window
+ March 7, 2024
+ v.0.12.0
+- We now have full touch screen support
+- Emoji inputs now work as expected with Win+.
+- You can now right click/two finger tap on your Sidebar to bring up the Space options context menu
+- We updated our toggle switches in Settings to be in line with Windows standards
+- When hovering over links the status pill will now match your Sidebar theme
+- We added tooltips for close window and minimize window when Arc is full screened
+- We fixed an issue where a Space name will not get replaced with the placeholder name (Space 1, for example) when the Space name has been removed
+- We fixed an issue where the Opera logo would not display when using Import from Another Browser
+- We fixed an issue where extension icons would not load after install
+- We fixed an issue where there would be a space for the download icon in the Sidebar even when the icon is hidden and no downloads are visible
+- We fixed an issue where toggling switches in Site Settings caused a flicker
+- We fixed a crash that occurred when using Import from Another Browser
+- We have reduced the resource usage of background tabs
+ February 29, 2024
+ v.0.11.0
+- We now support playback of DRM streaming content (Netflix, Disney+, Prime Video, Spotify etc.)
+- Existing Arc for Windows beta Members can now import their bookmarks from another browser. To do this go to the Arc menu > Import from Another Browser and follow the prompts. Arc for Windows beta supports importing from the following browsers: 
+- Chrome
+- Firefox
+- Brave
+- Edge
+- Opera
+- Vivaldi
+- We’ve added support for importing bookmarks to specific Arc Profile when using Import from Another Browser.
+- We’ve added support for importing cookies when using Import from Another Browser.
+- We added tooltips to UI elements that were missing them previously
+- We fixed an issue with the app installer that prevented Members from running the installer as expected. If you’ve been having installer issues try downloading and installing the latest release from https://releases.arc.net/windows/prod/Arc.appinstaller [https://releases.arc.net/windows/prod/Arc.appinstaller]
+- General performance improvements
+ February 22, 2024
+ v.0.10.1
+- Introducing Peek! Peek is a convenient way to preview sites from Pinned Tabs. Simply click on a new link from a Pinned or Favorited Tab, and Arc will automatically open that tab in Peek! 
+- To open Peek in a new tab: Hit the expand button arrows or Ctrl + O
+- To open Peek in a Split View: Hit the Split View button
+- To close Peek: Click outside the Peek window or hit the X button
+- You can now access Arc Settings from Arc menu > Settings or Ctrl + , to 
+- Easily rename and delete Profiles [https://resources.arc.net/hc/en-us/articles/19227964556183-Profiles-Separate-Work-Personal-Browsing]
+- Adjust Auto Archive [https://resources.arc.net/hc/en-us/articles/19228855311127-Auto-Archive-Clean-as-you-go] tab settings from 12 hours to a maximum of 30 days
+- Set a default download location
+- Set a default search engine including support for Perplexity AI as default.
+- Quickly access settings for privacy and security, passwords, credit card information, notifications settings, and browsing data
+- New Members can now import bookmarks from other browsers on account creation. We will be bringing this feature to existing Members in a future release. Arc for Windows beta supports importing from the following browsers: 
+- Chrome
+- Firefox
+- Brave
+- Edge
+- Opera
+- Vivaldi
+- You can now resize Split Views by clicking and dragging the divider between them
+- Dev Tools, accessible from Ctrl + Shift + I or right click > Inspect, can now be docked to the right, left or bottom of the window instead of defaulting to a windowed view
+- Extension popups will now have a correct, slightly larger, vertical size set
+- Extension popups will now close if blurred and a non-Arc window is focused
+- We fixed text selection scrolling when cursor is outside of Arc window
+- We've made touchpad interactions more robust by allowing pan-to-scroll gestures
+- We fixed a problem with web contents stopping responding when quickly starting consecutive drag operations
+- We made web contents correctly blur
+- We fixed a reproducible Chromium crash in v.0.10.1. Please update Arc for Windows beta to v.0.10.1 from the Arc menu > Check for Updates, from Ctrl + T and typing “check for updates” or from the app installer [https://releases.arc.net/windows/prod/Arc.appinstaller] directly to get this fix.
+ February 15, 2024
+ v.0.9.0
+- We now have an updated (and nicer looking!) app icon
+- You can now create Split Views by rearranging tabs in the sidebar. Drag a tab to the left or right of another tab to create a new split.
+- We've added autocomplete support in the command bar
+- If you navigate to a new URL within a Pinned Tab and then hover over the tab favicon, we’ll now show you a “Back to Pinned URL” subtitle. Click the favicon to return to the original Pinned URL.
+- We fixed a bug where your cursor would stay visible when watching full screen video.
+- We fixed a bug where the Arc window would change size every time you closed and reopened Arc
+- We fixed a bug where the sidebar would stay visible when in full screen mode
+- We fixed a bug where you could not drag to a new window in multiple desktops
+- We've made several performance improvements including: 
+- Fixing a significant hang on startup
+- Fixing a significant hang on dragging a tab to create a new window
+- Various window creation and command bar optimizations
+ February 8, 2024
+ v.0.8.0
+ - You can now reset your password in Arc for Windows beta!
+ To this go to the Arc menu > Help > Sign Out then enter your Arc account email on the Sign In screen and click Forgot Password. If there’s an Arc account associated with that email, we’ll send you a password reset link.
+ If you're logged out of Arc for Windows beta and on an earlier version, you can update to version 0.8.0 through the app installer. Here's a link to download the app installer if you need it: https://releases.arc.net/windows/prod/Arc.appinstaller [https://releases.arc.net/windows/prod/Arc.appinstaller]
+- We now support F5 to refresh
+- We’ve added support for dragging a tab out of the Sidebar to create a new window
+- We’ve added our classic Arc unboxing flow with (most) of the bells and whistles from the unboxing flow in Arc for macOS
+- We’ve implemented a new Profile creation flow! To create a new Profile hover over your Space name in your Sidebar > click Edit > Profile > New Profile…
+- We fixed a bug where edits to a Pinned URL would not persist. You can edit your Pinned and Favorite tab URLs by right clicking the tab > Pinned URL > Edit Pinned URL…
+- We fixed a bug where Profiles were getting removed unexpectedly. If you experienced this bug you will need to uninstall and reinstall Arc from https://releases.arc.net/windows/prod/Arc.appinstaller [https://releases.arc.net/windows/prod/Arc.appinstaller]
+ February 1, 2024
+ v.0.7.0
+- We've added a new Space Creation flow to increase customization, profile selection, and delight!
+- Long-press on the Toolbar's back and forward buttons will now show tab history
+- Split Views will take on the color of each site for a more seamless look
+- Alert dialogs now work from extensions and dev tools
+- Bug reports, feedback and questions are now directed through Arc Menu > Help > Contact the Team
+- We fixed a bug that prevented feedback on password requirements from showing in the Create Account flow
+- We fixed a bug where spell check suggestions were not visible from the context menu
+- We fixed a bug where the offer to save passwords dialogs were not appearing
+- We fixed an issue where Arc would crash when right clicking a link to open in Split View
+- We’ve made various performance improvements including fixing memory leaks
+ January 25, 2024
+ v.0.6.0
+- We've added Command Bar Actions! In addition to creating new tabs in the Command Bar (Ctrl+T), you can type common actions you take in Arc, like Pin Tab or New Folder, to take actions in an instant and without moving your fingers to your mouse. Here are a few Command Bar Actions to try: 
+- Pin Tab
+- Pin to [Space Name]
+- Toggle Sidebar
+- New Split View
+- Rename [Space, Current Tab]
+- New [Folder, Note, Space, Notion Page, FigJam, Google Doc]
+- Extension [Extension Name]
+- View [Archive, History, Source]
+- We now have Pinned Extensions! Open the Site Control Panel in the toolbar > hover over the extension and click the pin. Your extension will now be pinned to the top right of your toolbar for easy access.
+- We've added support for undoing an action via Ctrl+Z! Any time you Archive Tabs or move Tabs in your Sidebar, simply press Ctrl+Z to undo that action.
+- We've added support for F11 to Full Screen Arc!
+- We’ve added support for web UI dialogs such as the print dialog
+- We’ve added support for web login dialogs
+- We've added support dragging sidebar items between windows
+- We now show app icons in Windows dialogs when you click a link that will open another app
+- We fixed a crash that occurred when trying to view your saved passwords in Arc's password manager
+- We fixed a crash that occurred when trying to enable Windows Hello when filling in passwords
+ January 18, 2024
+ v.0.5.1
+- Profiles are now available! Hover over your Space name in your Sidebar > click Edit > Profile to assign and create Profiles for your Spaces
+- You can enter full screen with Alt-Shift-F
+- We added Ctrl-Shift-+ shortcut to open a new Split View
+- When Control-S and Control-Shift-C conflict with a website's keyboard shortcut we'll give you the chance to run the Arc keyboard shortcut instead of the website's
+- Space switching is now faster
+- The current tab in a Pinned Folder will stay in view in your Sidebar even if the Folder is collapsed
+- We've made improvements to Site Control Center
+- Website right click menus now use native menus
+- We fixed a bug stopping print dialogs from showing
+- We fixed a bug preventing extension processes from exiting when their associated popups are closed
+- We fixed a bug where Favorite Tab order would not stick after closing and reopening Arc
+- We fixed a bug where sometimes the full screen button would not work on a video
+- We fixed an issue with external protocol dialog preventing you from authenticating an external app in Arc for Windows
+- We fixed a bug where closing a second Arc window will crash Arc
+ January 8, 2024
+ v.0.4.2
+- We've fixed an issue that could have prevented logging in or signing up.
+- We've added Space theming. Click the “Edit” button next to your Space title to change your theme to any color!
+- We fixed a bug that prevented full screen video.
+- Various additional bug fixes and improvements.
+ December 18, 2023
+ v.0.2.1
+- We restore recent tabs between sessions now!
+- Find in Page now also cycle matches with F3 and Shift F3.
+- When creating a new tab with the sidebar hidden, there's a toast with a button to take you to that new tab.
+- Double clicking a favorite resets it to its pinned URL.
+- Spaces now update in the Arc Menu > Spaces when you add / remove spaces
+- We updated the UI for selected tabs and favorites
+- We improved drag and drop UI visuals
+- Added close button for pinned tabs
+- We fixed duplicate toasts and dismissal interactions.
+- We fixed some tab and favorite item click interactions.
+- We fixed the download removal from UI when removed from disk.
+- We fixed a bug where the split screen button in the top bar didn't work.
+- We fixed a bug where we would crash when selecting a tab with find-in-page opened.
+- Fixed a bug where we were not displaying the right information for a space after you created a new space
+- Fixed a crash after login screen that some Members were experiencing
+ December 11, 2023
+ 0.1.0 
+ - Welcome to the Arc for Windows beta!

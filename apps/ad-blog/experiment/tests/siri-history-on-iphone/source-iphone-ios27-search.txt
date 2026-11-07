@@ -1,0 +1,104 @@
+# 가져온 시각: 2026-10-27T16:00:06.316Z
+# 원본: https://support.apple.com/guide/iphone/search-on-iphone-iph3c511548/ios
+Search with Spotlight on iPhone - Apple Support
+https://support.apple.com/guide/iphone/search-on-iphone-iph3c511548/ios
+
+Select version:
+iOS 27
+iOS 26
+iOS 18
+iOS 17
+iOS 16
+iOS 15
+iOS 14
+iOS 13
+iOS 12
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Search with Spotlight on iPhone
+
+On iPhone, you can search for apps and contacts, content in apps like Mail and Messages, and even text in your photos using Live Text. You can check stock and currency information, and find and open webpages, apps, and images in your photo library, across your system, and on the web.
+
+When you search for an app, app shortcuts for your most likely next action appear within the Top Hit—for example, a shortcut to the Favorites album appears when you search for Photos.
+
+When you turn on Siri AI (Beta)* on supported iPhone models, Spotlight becomes where you start a conversation with Siri: ask for personal context, get broad world knowledge, or take actions across your app, all from the same place. See Get started with Siri AI on iPhone.
+
+Search with iPhone
+
+Tap  on the Home Screen (on models with Face ID or iPhone Duo) or swipe down on the Home Screen or the Lock Screen.
+
+Enter what you’re looking for in the search field, then do any of the following:
+
+Initiate your search: Tap .
+
+Open a suggested app or website: Tap the app or website.
+
+Take quick action: Start a timer, turn on a Focus, find the name of a song with Shazam, run any shortcut, and more. Search for an app’s name to see shortcuts available for the app, or create your own using the Shortcuts app.
+
+Check a suggested website: Tap it.
+
+Get more information about a search suggestion: Tap it, then tap one of the results to open it.
+
+Start a new search: Tap  in the search field.
+
+Note: Content from third-party apps appears in search results only if the app supports Spotlight indexing. If something you’re looking for doesn’t appear, the app may not support Spotlight search.
+
+To remove  from the Home Screen, go to the Settings app , tap Home Screen & App Library, then turn off Show on Home Screen.
+
+Choose which apps to include in Search
+
+Go to the Settings app  on your iPhone.
+
+Tap Search, scroll down, then tap an app.
+
+Turn Show App in Search on or off.
+
+Turn off Location-Based Suggestions
+
+When Location Services is on, Spotlight may use your location to refine suggestions. You can turn off Location-Based Suggestions.
+
+Go to the Settings app  on your iPhone.
+
+Tap Privacy & Security, then tap Location Services.
+
+Tap System Services, then turn off Suggestions & Search.
+
+Search in apps
+
+Many apps include a search field or a search button so you can find something within the app. For example, in the Maps app, you can search for a specific location.
+
+In an app, tap the search field or .
+
+If you don’t see a search field or button, swipe down from the top.
+
+Type your search, then tap Search.
+
+Add a dictionary
+
+On iPhone, you can add dictionaries, which can be used in searches.
+
+Go to the Settings app  on your iPhone.
+
+Tap General, then tap Dictionary.
+
+Select a dictionary.
+
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English, French, Japanese, Korean, Portuguese, and Spanish to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Siri AI is not available for users under 13. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at support.apple.com/148587.
+
+See also
+Search for a setting
+Previous
+Perform quick actions
+Next
+View and respond to notifications
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

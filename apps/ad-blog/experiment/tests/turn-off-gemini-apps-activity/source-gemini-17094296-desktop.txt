@@ -1,0 +1,210 @@
+# 가져온 시각: 2026-10-26T15:42:53.452Z
+# 원본: https://support.google.com/gemini/answer/17094296?hl=en&co=GENIE.Platform%3DDesktop
+Create & manage skills for Gemini Apps - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/17094296?hl=en&co=GENIE.Platform%3DDesktop
+
+Create & manage skills for Gemini Apps
+
+You can use skills to create and save custom instructions that can be used across your chats and tasks in Gemini Apps. Instead of re-typing your preferences or uploading the same files, Gemini can automatically use relevant skills or you can specify a skill to use for your task or workflow.
+
+With skills, you can:
+
+Save time and effort: Build a skill once and use it in any chat or task thread.
+Automate your workflow: Gemini automatically recognizes when a skill is relevant to your current prompt and applies it for you.
+Mix and match skills: Use multiple skills for a single task to handle more complex work exactly the way you want. You can even use skills with other skills.
+What you need
+
+To create and use skills, you must:
+
+Be 18 or over.
+Sign in to the Gemini app. Learn how to sign in to Gemini Apps.
+Have Keep Activity on.
+
+Important: For now, skills are only available in the Gemini mobile app, the Gemini app on Mac, and the Gemini web app at gemini.google.com.
+
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Create a skill
+
+You can create a skill from a chat, task, or the Skills page. On the Skills page, you can create a skill with help from Gemini, build one from a prefilled or blank template, or upload a skill file or a folder with a SKILL.md file and optional supported reference files.
+
+Tip: You can reference other skills within your skill instructions to build more complex workflows.
+
+Step 1: Go to the Skills page
+On your computer, go to gemini.google.com.
+On a Mac, you can also open the Gemini app .
+On the sidebar, click Customize .
+If you don’t find “Customize,” first click More .
+At the top, click Skills.
+Step 2: Choose how you want to create a skill
+Work with Gemini to create a skill
+At the top of the Skills page, click Create  Create with Gemini .
+Follow the instructions in the chat.
+Edit a prefilled template to create a skill
+On the Skills page under “Recommended,” click the skill template you want to use.
+Make your edits to the name, description, and instructions.
+When you’re done, at the top, click Create.
+Use a blank template to create a skill
+At the top of the Skills page, click Create  Create manually .
+Enter the name of your skill, a description of what it does, and instructions for it to follow.
+When you’re done, at the top, click Create.
+Upload a file or folder to create a skill
+
+Important: For now:
+
+Scripts that require access to the internet are not supported.
+You can add reference files to skills only by uploading them with your skill.
+
+To create a skill from a file or folder upload:
+
+At the top of the Skills page, click Create  Upload .
+Select a SKILL.md file, or select a folder or .zip file that contains a SKILL.md file in its main folder.
+Click Open.
+Review the skill and make any edits you want to make.
+When you’re done, at the top, click Create.
+Upload requirements
+Supported file types
+You can upload plain-text based files. If you can open it in a basic text editor and read it, it is likely supported.
+Supported:
+Text & docs: .txt, .md, .rst, .rtf, .tex, .log.
+Code: .py, .sh.
+Data & config: .json, .yaml, .csv, .toml, .xml, .env, .sql.
+Web & build: .html, .css, .svg, Makefile, Dockerfile.
+Rich media: .pdf, .jpg, .png, and other image types
+Not supported:
+Binary: .docx, .doc, .xlsx, or any other non-plain-text formats.
+Structure & naming
+Skill metadata: Your project must include a SKILL.md file located in the root (main) folder.
+Naming convention: The skill name inside SKILL.md must use all lowercase with words separated by a hyphen (such as my-new-skill).
+Size limit: The total size of all uploaded files must not exceed 100 MB.
+Security restrictions
+No external actions: Scripts can’t perform actions or requests on external websites.
+
+Tip: Before you upload, check for hidden binary files (like .DS_Store or .pyc) that might cause the upload to fail.
+
+Ask Gemini to create a skill in a chat
+On your computer, go to gemini.google.com.
+In the text box, ask Gemini to create a skill and describe what you want the skill to do.
+For example, Create a skill based on these instructions: <your instructions>.
+Click Submit . Gemini will create your skill and save it to your Skills page.
+To make edits to the skill, just describe your edits in the chat.
+
+Tip: You can’t activate, deactivate, or delete a skill from a chat or task thread. To perform those actions, on the sidebar, click Customize   Skills.
+
+Explore skill examples
+
+Skills can automate a wide range of tasks and workflows:
+
+Writing help: A skill can help with coursework and have specific instructions not to give answers. It can include your past papers, feedback, and scores.
+Brainstorming: A skill can expand on ideas and then generate a design document based on a standard template.
+Tactical support: A skill can help with specific tasks, like converting bank statements into formatted spreadsheets or generating product descriptions for a website.
+Career guidance: A skill can give advice on job opportunities based on your resume.
+Use skills for a task
+
+Skills are designed to work in the background and can be used across Gemini chats and tasks. You can ask Gemini to use specific skills for a task. Gemini can also automatically use a skill when it’s relevant to your task.
+
+Ask Gemini to use a skill: In the chat or task thread, enter / (or @, if you have the updated shortcut), then select the skill.
+Gemini automatically uses skills: Gemini can automatically use activated skills based on the context and intent of your task.
+Combine skills: You can include multiple skills for Gemini to use in a single task. This helps Gemini complete complex, multi-step tasks effectively.
+Manage your skills
+
+You can manage your skills from the Skills page.
+
+Manage Gemini’s automatic use of a skill
+
+Gemini can only automatically use skills that are turned on. You can turn skills off at any time. If a skill is off and you ask Gemini to use it, Gemini will ask you if you want to turn it back on.
+
+To stop Gemini from using a skill automatically:
+
+On your computer, go to gemini.google.com.
+On a Mac, you can also open the Gemini app .
+On the sidebar, click Customize .
+If you don’t find “Customize,” first click More .
+At the top, click Skills.
+Click the skill that you want Gemini to stop using.
+At the top, click More   Deactivate .
+
+To allow Gemini to automatically use a skill again, follow the same steps and click Activate .
+
+Edit a skill
+
+Important: To update files in a skill, you need to upload the entire skill with its reference files again.
+
+On your computer, go to gemini.google.com.
+On a Mac, you can also open the Gemini app .
+On the sidebar, click Customize .
+If you don’t find “Customize,” first click More .
+At the top, click Skills.
+Click the skill you want to edit.
+Make your edits.
+To edit directly, update the "Description" and "Instructions" fields.
+To edit conversationally, click More   Edit with Gemini .
+To upload a file to replace a skill, click More   Replace skill .
+When you’re done, at the top, click Save.
+
+Tip: You can also ask Gemini to update a skill and its files.
+
+Delete a skill
+
+Important: If you delete a skill, it can’t be undone.
+
+You can only delete a skill from the Skills page.
+
+On your computer, go to gemini.google.com.
+On a Mac, you can also open the Gemini app .
+On the sidebar, click Customize .
+If you don’t find “Customize,” first click More .
+At the top, click Skills.
+Hover over the skill you want to delete.
+Click More   Delete .
+Download a skill
+On your computer, go to gemini.google.com.
+On a Mac, you can also open the Gemini app .
+On the sidebar, click Customize .
+If you don’t find “Customize,” first click More .
+At the top, click Skills.
+Hover over the skill you want to download.
+Click More   Download . This downloads your skill in a .zip file.
+Common questions
+What's the difference between a task, schedule, and skill?
+
+To help you get the most out of tasks, it’s helpful to understand the three building blocks that power its logic: tasks, schedules, and skills. Think of these as the what, when, and how.
+
+A task is your high-level goal. It represents a complete project or objective you want Gemini to manage for you.
+
+Example: "Plan and manage my business trip to London."
+
+A schedule lets you hand over tasks to Gemini so they run automatically in the background. You tell Gemini what to do and when to do it. Tasks can be scheduled to run at a specific date and time or in response to an event.
+
+Example: "Every day at 8AM (condition), give me an update on AI news (task)"
+Example: "When my flight is delayed (condition), notify me and propose an update to my itinerary (task)."
+
+Tip: Schedules for tasks are different from scheduled actions in Gemini chat. Learn how to schedule actions in Gemini Apps.
+
+A skill is a set of reusable instructions and additional context. It teaches Gemini how to do a specific task and what tools to use. You can specify the skill Gemini should use for a task or a schedule’s action. Gemini can also automatically use a skill when it’s relevant to a task.
+
+Example: Using a "Travel Booking" skill and a "Gmail Writing" skill simultaneously to rebook a room and send a confirmation.
+
+In summary, you define the task (what you want), set the schedules (when it should happen), and provide the skills (how to do it) to complete the work.
+
+What happens if I cancel or downgrade my Google AI subscription?
+
+If you cancel your Google AI subscription or downgrade to a subscription that doesn't support access to Tasks in Gemini, you will lose access to Tasks in Gemini, tasks, and schedules. Your data is retained, but some features are paused or disabled:
+
+In-progress tasks will finish, but are not deleted.
+Schedules will be paused, but not deleted.
+
+To regain access to these features, you’ll need to upgrade or resubscribe to a Google AI subscription that supports Tasks in Gemini. Learn how to manage your Google AI subscription.
+
+Tip: Skills are available without a Google AI subscription and can be used in your chats.
+
+How do I recreate my Gems as skills?
+
+When we remove Gems, we’ll automatically recreate your Gems as skills. If you want to start using your Gems as skills earlier, you can manually recreate them. Learn how to recreate your Gems as skills.
+
+Related resources
+Manage your tasks & workflows in Gemini Apps
+Write effective skills for Gemini Apps
+Give feedback about this article

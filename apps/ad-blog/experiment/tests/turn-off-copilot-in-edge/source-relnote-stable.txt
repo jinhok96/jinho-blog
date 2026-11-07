@@ -1,0 +1,304 @@
+URL: https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel
+Final: https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel
+Title: Microsoft Edge release notes for Stable Channel | Microsoft Learn
+Fetched: 2026-11-06 15:31 UTC
+
+Skip to main content
+Skip to Ask Learn chat experience
+Microsoft Ignite
+
+November 17–20, 2026
+
+Register now
+Dismiss alert
+Learn
+Documentation
+Training & Labs
+Q&A
+Topics
+Sign in
+Microsoft Edge
+Enterprise
+Developers
+Troubleshooting
+Resources
+Search
+Microsoft Edge Enterprise documentation
+Get started with Microsoft Edge
+Plan for Microsoft Edge
+Schedule, Known issues, Release notes
+Release schedule
+Mobile Release schedule
+Microsoft Edge known issues
+Beta Channel Release Notes
+Beta Channel archived release notes
+Stable Channel Release Notes
+Stable Channel archived release notes
+Mobile Beta Channel Release Notes
+Mobile Stable Channel Release Notes
+Mobile Stable Channel archived release notes
+Security updates
+Deploy Microsoft Edge
+Configure Microsoft Edge
+Use Microsoft Edge enterprise features
+Microsoft Edge Security
+Microsoft Edge Privacy
+Microsoft Edge Reference
+Microsoft Edge Videos
+Download PDF
+LearnMicrosoft Edge
+Ask Learn
+Microsoft Edge release notes for Stable and Extended Stable Channels
+Summarize this article for me
+
+These release notes provide information about new features and nonsecurity updates that are included in the Microsoft Edge Stable and Extended Stable Channels.
+
+Subscribe via RSS | Previous Releases | Known Issues
+
+Contents - October - November 2026
+Expand table
+Channel	Latest Major Version	Latest Minor Version
+Stable 157	157.0.4341.42 (November 05, 2026)	-
+Extended Stable 156	156.0.4314.42 (October 22, 2026)	156.0.4314.70 (November 05, 2026)
+Version 157.0.4341.42: November 05, 2026 (Stable) - Main Release
+Release Summary
+Expand table
+Category	Description
+Announcements	Announcements about app launch, sign-in, XSLT, and Copilot redirects in Microsoft Edge.
+Feature Updates	Updates to Copilot, sign-in, tabs, performance, and managed startup in Microsoft Edge.
+Fixes	Fixes in this release of Microsoft Edge.
+Policy Updates	New and updated policies in Microsoft Edge.
+Security	Stable channel security updates are listed here.
+Announcements
+
+Microsoft Edge on Windows now supports Accelerated App Launch. Microsoft Edge now opens faster and more consistently on Windows, with the biggest improvements when your device is busy or under load. Accelerated app launch streamlines how Windows launches Microsoft Edge when it's already running in the background. This reduces launch delays when you open a link or launch Microsoft Edge from the taskbar or Start menu. This capability is enabled on Windows 11 versions 25H2, 26H1, and 26H2, and requires Microsoft Edge version 150 or later. For more information, see Edge is faster on Windows with Accelerated App Launches.
+
+Microsoft Edge is deprecating browser-native Extensible Stylesheet Language Transformations (XSLT). Microsoft Edge will disable the XSLTProcessor JavaScript API and XML processing instructions that reference XSLT stylesheets by default. XML processing instructions that reference CSS stylesheets are not affected.
+
+Rollout timeline
+
+Microsoft Edge 157: Browser-native XSLT will be off by default in the Canary, Dev, and Beta channels.
+
+Microsoft Edge 159: Browser-native XSLT will be off by default in the Stable channel.
+
+The existing XSLTEnabled policy can explicitly enable or disable XSLT regardless of the browser default. If the policy is not configured, XSLT follows the browser default behavior. Site owners can temporarily use the XSLT deprecation origin trial to keep browser-native XSLT enabled for a registered origin. Both mitigations are temporary and are planned to stop functioning in Microsoft Edge 176.
+
+Action recommended for administrators:
+
+Identify internal and business-critical applications that use the XSLTProcessor JavaScript API or XML processing instructions that reference XSLT stylesheets.
+
+Test affected applications with browser-native XSLT disabled.
+
+Migrate browser-side transformations to server-side transformation, JavaScript-based transformation, or another supported implementation.
+
+Update internal development guidance, support documentation, and test plans.
+
+Inform application owners, helpdesk teams, and affected users about application-specific changes.
+
+If migration cannot be completed before the deadline, administrators can temporarily enable the XSLTEnabled policy. Third-party polyfills and browser extensions are also available.
+
+Tenant admins can find additional details in the Message Center section of the Microsoft 365 Admin Center under MC1509789.
+
+Retiring legacy sign-in implementation on Windows. Microsoft Edge has retired its legacy direct-WAM sign-in implementation on Windows in version 157, completing the transition to OneAuth. OneAuth continues to use Windows Web Account Manager (WAM) internally; WAM itself is not being deprecated.
+
+The vast majority of users have already transitioned automatically with no interruption. For remaining profiles that have not yet migrated, the transition will complete upon updating to version 157. In rare cases, some users may need to sign in to Microsoft Edge again.
+
+Action recommended for administrators:
+
+Check edge://signin-internals under Edge Auth Library Information → Library to see if any managed profiles still show WAM.
+
+Organizations wishing to validate early or test profiles that previously disabled the transition can launch msedge.exe --enable-features=msForceOneAuthWAM after closing all Microsoft Edge processes, including background processes. The flag doesn't take effect if Microsoft Edge is already running.
+
+Report any sign-in issues to Microsoft Support prior to the Microsoft Edge 157 release.
+
+Update allow lists to *.cloud.microsoft before the Copilot URL redirect. Review your organization's allow/block list configurations for Microsoft 365 Copilot Chat in Edge. Tenant admins can find additional details in the Message Center section of the Microsoft 365 Admin Center under MC1462915.
+
+Feature Updates
+
+Sign in to Edge with an Apple account. Users can now sign in to Microsoft Edge using an Apple account, in addition to a Microsoft account, from the profile menu and Microsoft Edge sign-in screen. Admins can control the availability of this feature using the NonMicrosoftAccountSignInEnabled policy.
+
+Upgraded Copilot new tab page. Search, chat, and explore the web from one search box with Copilot-suggested actions and curated work content on the Copilot new tab page. Users now see upgraded Copilot new tab page functionality and features.
+
+Fading tabs experience retired. The fading tabs experience is removed from Microsoft Edge. The Fade inactive tabs setting is no longer available in edge://settings/system/managePerformance, and tabs no longer fade.
+
+Updated performance information in tab hover cards. Microsoft Edge has updated tab hover cards to provide clearer information about tab memory usage and memory savings when inactive tabs are discarded. Users also have separate settings for tab-preview images and memory-usage information.
+
+Autolaunch opt-in experience for managed devices. Microsoft Edge will introduce an opt-in experience that allows users on managed devices to choose whether Edge launches automatically when Windows starts. Administrators can also manage this behavior through the LaunchEdgeOnWindowsStartupEnabled policy with opt-in, opt-out, and user-choice configurations. Note: This is a controlled feature rollout. If you don't see this change, check back as we continue the rollout.
+
+Updated Copilot in Microsoft Edge experience. As part of ongoing efforts to simplify the Copilot experience for customers, Microsoft Edge has updated the icon across all Copilot entry points and simplified the Copilot side pane experience. The update also includes upgraded functionality and features such as Copilot Voice and Vision. Security, compliance, privacy, and enterprise controls remain unchanged.
+
+RoamingProfileSupportEnabled policy update. The RoamingProfileSupportEnabled policy is deprecated in Chromium. Microsoft Edge won't deprecate this policy on the same timeline as Chromium. Microsoft will provide customers with 60 days' notice in the Microsoft 365 Message Center and in the policy documentation before deprecating the policy.
+
+Fixes
+Fixed an issue which caused some users to experience a prolonged browser freeze when interacting with specific web applications while accessibility features were enabled.
+Policy Updates
+New policies
+CloudManagementEnrollmentToken - The enrollment token of cloud policy
+BlueprintGWAAvailability - Control Blueprint GWA availability
+ComponentUpdatesMode - Configure component updates
+AllHttpAuthSchemesAllowedForProxies - List of proxy servers that allow all HTTP authentication schemes
+Deprecated policies
+BackForwardCacheForWebSocketsAllowed - Allow Back/Forward Cache for WebSockets (deprecated)
+
+ Note
+
+For the latest web platform features and updates, see the Microsoft Edge 157 web platform release notes (Nov. 5, 2026).
+
+Back to top
+
+Version 156.0.4314.42: October 22, 2026 (Stable) - Main Release
+Release Summary
+Expand table
+Category	Description
+Announcements	Announcements about XSLT, tracing, sign-in migration, and Copilot redirects in Microsoft Edge.
+Feature Updates	Updates to permissions, autofill, credentials, and managed startup in Microsoft Edge.
+Fixes	Fixes in this release of Microsoft Edge.
+Policy Updates	New and updated policies in Microsoft Edge.
+Security	Stable channel security updates are listed here.
+Announcements
+
+Microsoft Edge and WebView2 mitigations for eMudhra Certificate Authority key compromise. Microsoft has published mitigations in Microsoft Edge and WebView2 in response to the eMudhra Certificate Authority key compromise. Microsoft published an emergency CRLSet update blocking the affected TLS intermediate CA keys. The update was released across Microsoft Edge channels and is distributed automatically through the Microsoft Edge component update mechanism. For details about the incident, Microsoft mitigations, and customer verification steps, see Microsoft Response to eMudhra Certificate Authority Key Compromise.
+
+Retiring legacy sign-in implementation on Windows. Microsoft Edge plans to retire its legacy direct-WAM sign-in implementation on Windows in version 157, completing the transition to OneAuth. OneAuth continues to use Windows Web Account Manager (WAM) internally; WAM itself is not being deprecated.
+
+The vast majority of users have already transitioned automatically with no interruption. For remaining profiles that have not yet migrated, the transition will complete upon updating to version 157. In rare cases, some users may need to sign in to Microsoft Edge again.
+
+Action recommended for administrators:
+
+Check edge://signin-internals under Edge Auth Library Information → Library to see if any managed profiles still show WAM.
+
+Organizations wishing to validate early or test profiles that previously disabled the transition can launch msedge.exe --enable-features=msForceOneAuthWAM. Close all Microsoft Edge processes, including background processes, because the flag does not take effect if Microsoft Edge is already running.
+
+Report any sign-in issues to Microsoft Support prior to the Microsoft Edge 157 release.
+
+Update allow lists to *.cloud.microsoft before the Copilot URL redirect. Review your organization's allow/block list configurations for Microsoft 365 Copilot Chat in Edge. Tenant admins can find additional details in the Message Center section of the Microsoft 365 Admin Center under MC1462915.
+
+Microsoft Edge is deprecating browser-native Extensible Stylesheet Language Transformations (XSLT). Microsoft Edge will disable the XSLTProcessor JavaScript API and XML processing instructions that reference XSLT stylesheets by default. XML processing instructions that reference CSS stylesheets are not affected.
+
+Rollout timeline
+
+Microsoft Edge 157: Browser-native XSLT will be off by default in the Canary, Dev, and Beta channels.
+
+Microsoft Edge 159: Browser-native XSLT will be off by default in the Stable channel.
+
+The existing XSLTEnabled policy can explicitly enable or disable XSLT regardless of the browser default. If the policy is not configured, XSLT follows the browser default behavior. Site owners can temporarily use the XSLT deprecation origin trial to keep browser-native XSLT enabled for a registered origin. Both mitigations are temporary and are planned to stop functioning in Microsoft Edge 176.
+
+Action recommended for administrators:
+
+Identify internal and business-critical applications that use the XSLTProcessor JavaScript API or XML processing instructions that reference XSLT stylesheets.
+
+Test affected applications with browser-native XSLT disabled.
+
+Migrate browser-side transformations to server-side transformation, JavaScript-based transformation, or another supported implementation.
+
+Update internal development guidance, support documentation, and test plans.
+
+Inform application owners, helpdesk teams, and affected users about application-specific changes.
+
+If migration cannot be completed before the deadline, administrators can temporarily enable the XSLTEnabled policy. Third-party polyfills and browser extensions are also available.
+
+Tenant admins can find additional details in the Message Center section of the Microsoft 365 Admin Center under MC1509789.
+
+edge://tracing no longer supports collecting a trace and requires the use of Perfetto UI.
+
+Feature Updates
+
+Improvements to site permissions user interfaces. Site permissions are changing to better align with user expectations. They now look and work consistently both on websites that request permissions and in Settings. On a website that is requesting permissions, there are changes to the Omnibox and the Page Info dialog, and permissions are easier to see and modify in Settings.
+
+Enhanced Autofill. For desktop users, Microsoft Edge can now autofill additional document types—including passports, driver's licenses, and other specialized forms—on top of your saved addresses.
+
+Enhanced Key Icon with Credential Details, Copy Actions, and Notes. The key icon in Edge's address bar now lets users select any saved credential to view a detailed panel. From there, users can copy a username, reveal and copy a password, and add personal notes to each login. Keep track of security questions, account purpose, or recovery details alongside credentials without opening Settings or the full password manager.
+
+Autolaunch opt-in experience for managed devices. Microsoft Edge will introduce an opt-in experience that allows users on managed devices to choose whether Edge launches automatically when Windows starts. Administrators can also manage this behavior through the LaunchEdgeOnWindowsStartupEnabled policy with opt-in, opt-out, and user-choice configurations. Note: This is a controlled feature rollout. If you don't see this change, check back as we continue the rollout.
+
+PDF Viewer NewPDFReaderEnabled Enterprise Policy Deprecation. As part of the transition to the new PDF viewer experience, Microsoft Edge version 156 marks the NewPDFReaderEnabled enterprise policy as deprecated. The policy becomes obsolete at the earliest with Microsoft Edge version 162. For more information, refer to the FAQ.
+
+Fixes
+Fixed an issue that prevented some users with existing browser profiles from launching Microsoft Edge after a scheduled update restart from the Microsoft Edge management service.
+Policy Updates
+New policies
+RemixAvailability - Control Remix availability
+Deprecated policies
+AutofillAddressEnabled - Enable AutoFill for addresses (deprecated)
+AutofillCreditCardEnabled - Enable AutoFill for payment instruments (deprecated)
+NewPDFReaderEnabled - Microsoft Edge built-in PDF reader powered by Adobe Acrobat enabled (deprecated)
+
+ Note
+
+For the latest web platform features and updates, see the Microsoft Edge 156 web platform release notes (Oct. 22, 2026).
+
+Version 156.0.4314.70: November 05, 2026 (Extended Stable) - Update 4
+Release Summary
+Expand table
+Category	Description
+Fixes	Fixed various bugs and performance issues.
+Version 156.0.4314.58: October 30, 2026 (Stable) - Update 3
+Release Summary
+Expand table
+Category	Description
+Fixes	Fixed various bugs and performance issues.
+Security	Stable channel security updates are listed here.
+Version 156.0.4314.56: October 29, 2026 (Stable) - Update 2
+Release Summary
+Expand table
+Category	Description
+Fixes	Fixed various bugs and performance issues.
+Security	Stable channel security updates are listed here.
+Version 156.0.4314.50: October 26, 2026 (Stable) - Update 1
+Release Summary
+Expand table
+Category	Description
+Fixes	Fixed various bugs and performance issues.
+
+Back to top
+
+See also
+All the security updates are listed in Release notes for Microsoft Edge Security Updates.
+Archived release notes for Microsoft Edge Stable Channel are located in Archived release notes for Microsoft Edge Stable Channel.
+Microsoft Edge Enterprise landing page.
+Explore all previous releases.
+
+To understand Microsoft Edge channels, see the Overview of the Microsoft Edge channels.
+
+ Note
+
+For the Stable Channel, updates roll out progressively over one or more days. To learn more, see Progressive rollouts for Microsoft Edge updates.
+
+Microsoft Edge Web Platform constantly evolves to improve user experience, security, and privacy. To learn more, see Site compatibility-impacting changes coming to Microsoft Edge.
+
+Reading mode disabled
+Additional resources
+
+Training
+
+Certification
+
+Microsoft 365 Certified: Endpoint Administrator Associate - Certifications
+
+Plan and execute an endpoint deployment strategy, using essential elements of modern management, co-management approaches, and Microsoft Intune integration.
+
+Last updated on 11/05/2026
+In this article
+Contents - October - November 2026
+Version 157.0.4341.42: November 05, 2026 (Stable) - Main Release
+Version 156.0.4314.42: October 22, 2026 (Stable) - Main Release
+Version 156.0.4314.70: November 05, 2026 (Extended Stable) - Update 4
+Version 156.0.4314.58: October 30, 2026 (Stable) - Update 3
+Version 156.0.4314.56: October 29, 2026 (Stable) - Update 2
+Version 156.0.4314.50: October 26, 2026 (Stable) - Update 1
+See also
+
+Was this page helpful?
+
+English (United States)
+Your Privacy Choices
+Theme
+AI Disclaimer
+Previous Versions
+Blog
+Contribute
+Privacy
+Consumer Health Privacy
+Terms of Use
+Trademarks
+© Microsoft 2026

@@ -1,0 +1,9 @@
+This article describes several ways to quickly access the Microsoft Copilot app on Windows, including keyboard shortcuts, the "Hey, Copilot" wake word, and a pen shortcut button. If the Copilot app isn't already on your Windows PC, download it from the Microsoft Store. On new Windows 11 PCs, the Copilot app should already be installed by default. You can find the Copilot app pinned to the taskbar or on the Start menu.
+Once installed, open the Copilot app and sign in with your Microsoft 365 work or school account or your personal Microsoft account.
+Signing in with a personal Microsoft account gives you access to your chat history, image creation, longer conversations, voice interactions, and other Copilot features.
+You have several ways to quickly access the Copilot app on your Windows desktop without having to go to your taskbar or Start menu.
+Open Copilot with a Windows shortcut key
+In Windows, you can launch the Copilot app at any time in one of the following ways:
+Press the Copilot key on your keyboard.
+Use the Windows key + C keyboard shortcut.
+The Windows shortcut key can either launch the full application or just a smaller 'quick view.' You can configure how these shortcut keys behave by going to Account > Settings > Copilot Keyboard Shortcuts.

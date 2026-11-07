@@ -1,0 +1,134 @@
+XnConvert · Batch Image Converter | Image convert | XnView.com
+Product
+Viewer & Organizer
+XnView MP / Classic
+Image processing
+XnConvert
+XnResize
+XnRetro
+XnSketch
+Tools
+NConvert
+XnShell Extension
+Mobile
+Forum
+FAQ
+Misc
+Online
+Bulk Convert
+Misc
+Old versions
+Other download sites
+How to resize images
+How to batch convert and batch process
+Contact
+ English 
+English
+Deutsch
+Français
+XnConvert: The Best Bulk Image Converter
+ Version 1.118.0
+XnConvert
+Features
+Downloads & Purchase
+Screenshots
+ XnConvert
+ is a fast, powerful and free cross-platform batch image converter.
+ It allows to automate editing of your photo collections: 
+ you can rotate, convert and compress your images, photos and pictures easily, and
+ apply over 80 actions (like resize, crop, color adjustments,
+ filter, ...).
+ All common picture and graphics formats are supported (JPEG, TIFF, PNG, GIF, WebP, PSD, JPEG2000, JPEG-XL, OpenEXR, camera RAW, AVIF, HEIC, HEIF, PDF, DNG, CR2).
+ You can save and re-use your presets for another batch image conversion.
+ Features
+ Extensive Toolset
+Combine and choose between more than 80 different operations including:
+Metadata Editing.
+Transforms: Rotate, Crop, Resize, ...
+Adjustments: Brightness, Contrast, Saturation, ...
+Filters: Blur, Emboss, Sharpen, ...
+Effects: Masking, Watermark, Vignetting, ...
+Watch folders for new or updated images and automatically apply a custom set of edits.
+and seamlessly export to NConvert for a command line usage.
+ For Everyone
+XnConvert is Multi-platform, it is available for Windows, Mac, and Linux for both 32-bit and
+ 64-bit editions.
+XnConvert is Multilingual, it includes more than 20 different translations.
+It offers powerful features in an easy to use interface providing convenient drag & drop
+ functionality.
+ Unrivaled Compatibility
+XnConvert is compatible with more than 500 formats and Export to about 70 different
+ file formats.
+ Downloads
+If you intend to use XnView in a company, you must purchase a license.
+N° of licenses
+Price per license
+1
+15.00 €
+2-9
+13.50 €
+10-19
+12.00 €
+20-49
+10.50 €
+50-99
+9 €
+100+
+6.50 €
+ Purchase license
+Download XnConvert:
+ Donate
+XnConvert is provided as FREEWARE (NO Adware, NO Spyware) for private or educational use (including non-profit organizations).
+If you enjoy using XnView, Don't hesitate to help the developer with a small donation.
+ Windows
+Latest version (1.118.0) for Windows 10/11 (64bit)
+ Setup 
+ Zip 
+Old version (1.117) for Windows 7/8 (64bit)
+ Setup 
+ Zip 
+Old version (1.98.0) for Windows 7/8/10/11 (32bit)
+ Setup 
+ Zip 
+ macOS (Intel or ARM)
+Latest version (1.118.0) for macOS
+ Universal DMG 
+Old version (1.117) for macOS 10.13-12
+ Universal DMG 
+ Linux
+Latest version (1.118.0) for Linux (Ubuntu 22.04+, Debian 11.6+, RHEL 8.6+ - 64bit)
+ Linux DEB 
+ Linux TGZ 
+ Appimage
+Old version (1.117) for Linux (64bit)
+ TGZ 
+ DEB 
+Old version (1.76) for Linux (32bit)
+ Linux DEB 
+ Linux TGZ 
+ SHA-256 checksums
+ Screenshots
+ Windows
+ macOS
+ Linux
+ Previous
+ Next
+ Previous
+ Next
+ Previous
+ Next
+ Changelog
+ Related Links
+ XnView MP
+ NConvert
+ Visit the Forum
+ The 
+ XnConvert forum
+ is probably the best place to start interacting with other users and the developer. 
+ Batch conversion guides
+Batch image converter — convert thousands of images between 500+ formats in one pass
+Batch image resizer — resize a whole folder by pixels, percentage or longest side
+How to batch convert and batch process — step-by-step walkthrough
+All supported image formats — 500+ read, around 70 written
+ Back to top
+ © 2013-2026 XnSoft •

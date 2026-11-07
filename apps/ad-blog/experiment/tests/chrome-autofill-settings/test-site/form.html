@@ -1,0 +1,14 @@
+<!doctype html><html lang="en"><head><meta charset="utf-8"><title>Test shipping form</title>
+<style>body{font-family:Arial,sans-serif;margin:40px 80px;color:#222}label{display:block;margin-top:12px;font-size:15px}input,textarea{width:420px;padding:8px;font-size:15px;border:1px solid #999;border-radius:6px}button{margin-top:18px;padding:10px 22px;font-size:15px}</style></head>
+<body><h2>Test shipping form</h2>
+<form action="/thanks.html" method="get">
+<label>Full name<input id="name" name="name" autocomplete="name"></label>
+<label>Email<input id="email" name="email" type="email" autocomplete="email"></label>
+<label>Phone<input id="tel" name="tel" type="tel" autocomplete="tel"></label>
+<label>Street address<input id="street" name="street" autocomplete="address-line1"></label>
+<label>City<input id="city" name="city" autocomplete="address-level2"></label>
+<label>State<input id="state" name="state" autocomplete="address-level1"></label>
+<label>ZIP code<input id="zip" name="zip" autocomplete="postal-code"></label>
+<label>Delivery note<input id="note" name="delivery_note"></label>
+<button id="go" type="submit">Place order</button>
+</form></body></html>

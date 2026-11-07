@@ -1,0 +1,341 @@
+Three types of accounts to manage images with online tools
+ All Image tools 
+Compress IMAGE
+Resize IMAGE
+Crop IMAGE
+Convert to JPG
+Photo editor
+ More tools 
+Optimize
+ Compress IMAGE
+Upscale
+Remove background
+Create
+ Meme generator
+Photo editor
+Modify
+ Resize IMAGE
+ Crop IMAGE
+ Rotate IMAGE
+Convert
+ Convert to JPG
+ Convert from JPG
+HTML to IMAGE
+Security
+ Watermark IMAGE
+Blur face
+ Login
+ Sign up
+Other products
+iLovePDF
+Simplify document management 
+iLoveSign
+e-Signing made simple 
+iLoveAPI
+Document automation for developers 
+Integrations
+Zapier, Make, Wordpress... 
+Pricing
+Security
+Features
+About us
+Help
+FAQ
+Tools
+Legal & Privacy
+Contact
+Language
+ English 
+ English
+ Español
+ Français
+ Deutsch
+ Italiano
+ Português
+ 日本語
+ Pусский
+ 한국어
+ 中文 (简体)
+ 中文 (繁體)
+ العربية
+ Български
+ Català
+ Nederlands
+ Ελληνικά
+ हिन्दी
+ Bahasa Indonesia
+ Bahasa Melayu
+ Polski
+ Svenska
+ ภาษาไทย
+ Türkçe
+ Українська
+ Tiếng Việt
+ Kiswahili
+ Login
+ Sign up
+Pricing plans
+Choose the plan that suits you
+Monthly Billing
+Yearly Billing
+ -42%
+Basic1
+Free
+ Start for free
+Free features include:
+Access to essential iLoveIMG tools
+Limited document processing
+Premium1 - 25
+5US$ / month 
+60US$ Billed annually
+9US$
+Billed monthly
+ Get Premium 
+ How many users do you need? (Up to 25) 
+Premium features include:
+Full access to all iLoveIMG tools
+Unlimited document processing
+Highest image processing capabilities
+AI tools
+Ad-free experience
+Priority customer support
+Regional file processing
+2.000 AI Credits
+Business25 +
+Let's talk
+Scalable solutions for your business with customized pricing.
+ Contact sales
+What’s included:
+All Premium features
+Custom contracts designed for scalability
+Dedicated Account Manager
+Single Sign On (SSO)
+Compare the plans
+Basic
+Best for simple use
+ Start for free
+Premium
+Best for advanced use
+ Get Premium
+Business
+Best for growing teams
+ Contact sales
+Features
+Tools
+Limited tools
+All tools included
+All tools included
+Compress IMAGE 
+Resize IMAGE 
+Crop IMAGE 
+Convert to JPG 
+Convert from JPG 
+Convert IMAGE 
+Rotate IMAGE 
+Watermark IMAGE 
+IMAGE Editor 
+Meme generator 
+HTML to image 
+Upscale image 
+Blur face 
+Remove background 
+Batch processing
+Compress IMAGE
+30
+120
+120
+Resize IMAGE
+30
+120
+120
+Crop IMAGE
+1
+1
+1
+Convert to JPG
+30
+120
+120
+Convert from JPG
+30
+120
+120
+Rotate IMAGE
+30
+120
+120
+Watermark IMAGE
+30
+120
+120
+IMAGE Editor
+1
+1
+1
+Meme generator
+1
+1
+1
+Upscale image
+1
+3
+3
+Blur face
+10
+120
+120
+Remove background
+3
+3
+3
+Filesize per task
+Compress IMAGE
+200 MB
+4 GB
+4 GB
+Resize IMAGE
+200 MB
+4 GB
+4 GB
+Crop IMAGE
+90 MB
+4 GB
+4 GB
+Convert to JPG
+200 MB
+4 GB
+4 GB
+Convert from JPG
+200 MB
+4 GB
+4 GB
+Rotate IMAGE
+200 MB
+4 GB
+4 GB
+Watermark IMAGE
+200 MB
+4 GB
+4 GB
+IMAGE Editor
+50 MB
+50 MB
+50 MB
+Meme generator
+200 MB
+4 GB
+4 GB
+Upscale image
+6 MB
+6 MB
+6 MB
+Blur face
+100 MB
+4 GB
+4 GB
+Remove background
+6 MB
+6 MB
+6 MB
+Teams
+Volume discount
+Workflows
+Ad-free service
+Customer support
+Basic
+Preferential
+Dedicated support
+AI Credits
+ 2.000 
+ Custom 
+Applications
+Web
+Mobile (via iLovePDF)
+Security
+Secure HTTPs connection
+ISO27001 certified
+Single Sign On (SSO)
+Regional file processing
+7 regions
+11 regions
+Automate document processes with iLoveIMG API
+Millions of people trust iLoveIMG to simplify their work with images. Now, you can access the same tools and infrastructure, built to scale.
+ See guides
+Your images are in good hands
+Our tools are designed to meet the highest security and performance standards, ensuring your images are handled with the most care.
+Frequently Asked Questions
+Our support team answers these questions almost daily
+ General Questions 
+What do I get with the Free Plan?
+Premium unlocks unlimited image processing, removes ads, and gives you priority support. It’s the full iLoveIMG experience!
+Why should I upgrade to Premium?
+Premium unlocks unlimited document processing, works across web, mobile, and desktop, removes ads, and gives you priority support. It’s the full iLoveIMG experience!
+Can I switch plans if my needs change?
+Absolutely. You’re always in control—upgrade, downgrade, or cancel anytime in your account settings.
+ Billing & Payments 
+Can I share single billing for multiple accounts?
+Yes. You can put everyone's account on one credit card for centralized billing. Just enter the email addresses of your team members and your plan will automatically upgrade.
+What payment methods do you accept?
+We accept card payments via Visa, MasterCard, and American Express. We also accept payments using PayPal or directly in the mobile app (using Apple Pay or Google Pay). For the Business plan, we offer additional methods, such as payment via Bank transfer.
+What if I need to change my plan partway through my contract?
+You can add and remove licenses as needed from your Account. In the same way, you can upgrade your subscription and we'll automatically adjust the pricing.
+Can you invoice me?
+Yes, we issue a tax invoice on all paid plans. All prices include VAT. Depending on your location,VAT may be included directly, and in others VAT appears as 0% and is handled via the reverse-charge mechanism. To ensure your invoicing details appear on the invoice, please add them either before you subscribe or within 72 hours of the invoice being issued.
+ Security & Technical Questions 
+Is my data safe with iLoveIMG?
+Rest assured, your documents are fully encrypted and processed securely, adhering to international data protection regulations, including GDPR.
+Will iLoveIMG work for my industry?
+iLoveIMG caters to a wide range of professionals, including those in legal, educational, and business fields. Designed with versatility in mind, iLoveIMG seamlessly integrates into any workflow, providing flexible solutions for all users.
+Trusted by well known companies
+Product
+Home
+Features
+Pricing
+Tools
+FAQ
+Resources
+iLoveSign
+iLoveAPI
+iLovePDF
+Legal
+Privacy policy
+Terms & conditions
+Cookies
+Company
+About us
+Contact us
+Blog
+Press
+ English 
+ English
+ Español
+ Français
+ Deutsch
+ Italiano
+ Português
+ 日本語
+ Pусский
+ 한국어
+ 中文 (简体)
+ 中文 (繁體)
+ العربية
+ Български
+ Català
+ Nederlands
+ Ελληνικά
+ हिन्दी
+ Bahasa Indonesia
+ Bahasa Melayu
+ Polski
+ Svenska
+ ภาษาไทย
+ Türkçe
+ Українська
+ Tiếng Việt
+ Kiswahili
+ © iLoveIMG 2026 ® - Your Image Editor 
+ Woops! Something is wrong with your Internet connection...
+
+# 비교표 아이콘 (원문 HTML의 img alt에서 추출, 2026-10-26 UTC)
+Remove background: Basic "Yes" / Premium "Yes" / Business "Yes"
+Batch processing - Remove background: 3 / 3 / 3

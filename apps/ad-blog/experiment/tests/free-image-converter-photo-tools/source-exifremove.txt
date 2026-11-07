@@ -1,0 +1,62 @@
+ExifRemove: remove private metadata from your JPEG photos
+ Skip to main content
+ e−ExifRemove
+ How it worksPrivacyContact
+ Runs in your browser · Free
+Strip the hidden data from your photos.
+ Did you know? A JPEG file stores where the photo was taken, what camera took it, and when. This
+ page takes those details back out. To protect your privacy, the files you upload here for processing
+ never leave your computer.
+What a photo can carry
+GPS location
+Camera and lens
+Date and time
+Serial number
+Clean your photos 
+Your photos stay in this browser. No uploads, accounts, or server storage.
+Drop your JPEGs here
+One photo or a whole batch.
+ Choose photos
+JPG / JPEG · Up to 25 MB each · 50 photos / 200 MB per batch
+ Keep photos the right way up
+Photos that need rotation are re-saved at high quality. Other photos are cleaned without re-encoding.
+Your photos
+Clear allRemove metadataDownload all as ZIP
+Cleaning photos…
+Your originals stay unchanged. Download the cleaned copies before closing this tab.
+Three steps
+ 01
+Choose your photos
+Drop in JPEGs from your phone or computer. They stay on your device.
+ 02
+Remove hidden details
+Clean embedded metadata, including EXIF, GPS, comments, and thumbnails.
+ 03
+Download and share
+Save a cleaned copy or get the whole batch in a ZIP. Your originals stay untouched.
+Questions about your files
+ Where are my photos processed?
+Entirely in your browser. This cleaner does not upload photos or their metadata, and it has no ads, analytics,
+ or third-party scripts. File data stays in this tab until you clear it or close it. Downloads are saved wherever
+ your browser normally saves files.
+ What gets removed?
+EXIF (including embedded GPS and camera details), XMP, IPTC, comments, embedded thumbnails, color profiles, and
+ other application metadata. Any data after the JPEG end marker is also discarded. Essential JPEG image and
+ color-decoding information stays intact. We scan the output again before making it available to download.
+ Will my photo look the same?
+Normally, the compressed image data is copied without re-encoding. With “Keep photos the right way up” enabled,
+ photos with EXIF rotation or mirroring are re-saved at high JPEG quality to preserve their orientation. This can
+ slightly change quality and file size. Removing a color profile can affect colors. Always check the cleaned
+ preview.
+With that option off, rotation metadata is removed without rotating the pixels, so some photos may appear
+ sideways or mirrored.
+ Does this make a photo anonymous?
+It removes embedded metadata, not identifying details visible in the picture, such as faces, addresses, or
+ license plates. Downloaded filenames keep the original name with “-clean” added; rename files if their names
+ contain personal information.
+ Can I use HEIC, PNG, or RAW files?
+This tool supports JPEG (.jpg and .jpeg) files only. Export other formats as JPEG first. Each file can be up to
+ 25 MB, with up to 50 photos and 200 MB total per batch. Very large images may exceed your browser’s memory
+ limits.
+ ExifRemove
+Metadata removal that runs in your browser.© 2026 ExifRemove

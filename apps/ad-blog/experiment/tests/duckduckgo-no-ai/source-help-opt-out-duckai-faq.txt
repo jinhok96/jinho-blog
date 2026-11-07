@@ -1,0 +1,98 @@
+URL: https://duckduckgo.com/duckduckgo-help-pages/privacy-pro/duck-ai/i-dont-want-anything-to-do-with-ai-how-can-i-opt-out-of-this
+Fetched: 2026-11-01T15:32:24.701Z
+Final URL: https://duckduckgo.com/duckduckgo-help-pages/privacy-pro/duck-ai/i-dont-want-anything-to-do-with-ai-how-can-i-opt-out-of-this
+
+DuckDuckGo Help Pages
+Search Help Pages
+Welcome
+About DuckDuckGo
+How To Get DuckDuckGo
+Search Results
+Search Privacy Protection
+Web Privacy Protection
+Ad Blocking
+Threat Protection
+Email Protection
+Sync & Backup
+App Tracking Protection
+DuckDuckGo Subscription
+Getting Started with the DuckDuckGo Subscription
+Subscription Payments
+Activating a Subscription
+Linking an Email to a Subscription
+Plus and Pro Plan Differences
+Changing Subscription Plans
+Subscribing Outside the United States
+Subscription Terms and Privacy Policy
+Most Common Questions
+How do I activate the subscription on another device?
+Why am I not receiving the one-time passphrase (OTP)?
+Why can’t I see the subscription or its features in my browser?
+Can I share my subscription with friends or family?
+Can I subscribe to just one of the services offered in the subscription?
+How do I cancel my subscription or change my payment method?
+I lost my device. How can I access my subscription?
+Is the subscription supported on older operating systems?
+Do you offer a free trial for the subscription?
+Can I change my subscription from monthly to annual, or vice versa?
+I don't have access to the email used when I originally purchased, so how do I access my subscription?
+Do you offer any business or corporate plans for the subscription?
+How can I exclude apps or websites from the VPN?
+How do I add the VPN widget on my iPhone?
+Are text messages protected through VPN?
+Are video/voice calls protected through VPN?
+Are smart home devices and voice assistants affected by VPN?
+Am I able to manually choose the VPN server location?
+How do I know that the VPN is connected and working?
+Why does Android Auto not work with the VPN?
+Can my personal information reappear after it is removed?
+How long does it take for my personal information to be removed?
+What personal data do you store to run scans and removals?
+If I cancel my subscription, will my personal information reappear on data broker sites?
+How can I get Personal Information Removal services outside the US?
+Why can’t any records be found?
+Why is my information not on my dashboard, but I found it on a site you scan?
+How often is my personal information re-scanned to ensure hits remain removed?
+Why is my personal information in search engine results, even though it’s been removed from broker sites?
+Can I just remove my personal information myself?
+Can I set up two Personal Information Removal profiles?
+How do I activate my subscription in Duck.ai in 3rd-party browsers?
+What is Duck.ai? Why is it included in the subscription?
+I don't want anything to do with AI. How can I opt out of this?
+How can I purchase Duck.ai by itself? I already have a VPN.
+Which advanced models do I get for Duck.ai?
+Do any of these providers see my prompts?
+How many messages do I get per day? Is there a way to purchase more?
+Do I need to install anything to start using Duck.ai?
+Can I save or delete my message history?
+Can I share Duck.ai with a family member?
+Will this become a separate upcharge in the future?
+I’m getting odd or inaccurate answers—what should I do?
+Does Duck.ai support file uploads?
+Does Identity Theft Restoration cover home title theft?
+My identity was stolen. How do I use Identity Theft Restoration?
+How do I remove records from DuckDuckGo that I don’t want public?
+How do I turn off autocomplete?
+Where did my bookmarks or passwords go?
+How to Send Crash Reports on iOS
+How to Send Crash Reports on macOS
+How to Send Crash Reports on Windows
+VPN
+Personal Information Removal
+Identity Theft Restoration
+Duck.ai
+Passwords & Autofill
+Optional AI
+Misconceptions
+Legal
+Privacy Guides
+DuckDuckGo Subscription/Most Common Questions
+I don't want anything to do with AI. How can I opt out of this?
+
+Duck.ai is a completely optional feature and you can control where it appears in the DuckDuckGo browser, or turn it off entirely. In the DuckDuckGo browser menu, go to Settings > AI Features to customize where Duck.ai shows up.
+
+© 2026 DuckDuckGo
+Search
+X
+Reddit
+About DuckDuckGo

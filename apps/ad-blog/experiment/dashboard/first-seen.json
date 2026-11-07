@@ -1,0 +1,313 @@
+{
+ "updatedAt": "2026-11-07T17:21:29Z",
+ "discoverySince": "2026-11-07T09:49:23Z",
+ "posts": {
+  "apple-mail-exchange-not-syncing": {},
+  "apple-siri-settlement-claim": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-19T22:06:52Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-19T22:06:52Z",
+   "crawledAt": "2026-10-19T22:06:52Z"
+  },
+  "arc-browser-shutting-down": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "best-free-pdf-tools": {
+   "firstSeenLinkAt": "2026-10-20T21:59:51Z"
+  },
+  "check-if-image-is-ai-generated": {
+   "indexedAt": "2026-10-12",
+   "firstCrawlAt": "2026-10-11T16:44:14Z",
+   "firstImpressionAt": "2026-10-12",
+   "discoveredAt": "2026-10-11T16:44:14Z",
+   "feedSeenAt": "2026-11-07T09:49:23Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-11T16:44:14Z"
+  },
+  "chrome-autofill-settings": {
+   "firstSeenLinkAt": "2026-11-01T22:38:55Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "chrome-http-warning-default": {},
+  "compress-image-to-100kb": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-19T12:27:20Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-19T12:27:20Z",
+   "crawledAt": "2026-10-19T12:27:20Z"
+  },
+  "compress-pdf-free": {
+   "firstSeenLinkAt": "2026-10-20T21:59:51Z"
+  },
+  "compress-video-for-discord-email": {
+   "firstSeenLinkAt": "2026-10-20T21:59:51Z"
+  },
+  "convert-heic-to-jpg-free": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-19T17:01:30Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-19T17:01:30Z",
+   "crawledAt": "2026-10-19T17:01:30Z"
+  },
+  "convert-webp-to-jpg-free": {},
+  "customize-right-click-menu-windows-11": {
+   "firstSeenLinkAt": "2026-11-01T22:38:55Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "duckduckgo-no-ai": {
+   "firstSeenLinkAt": "2026-11-01T22:38:55Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-06T09:44:48Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z",
+   "discoveredVia": [
+    "/sitemap.xml"
+   ]
+  },
+  "free-image-converter-photo-tools": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "free-offline-ai-tools": {
+   "indexedAt": "2026-10-15",
+   "firstCrawlAt": "2026-10-14T19:12:53Z",
+   "firstImpressionAt": "2026-10-24",
+   "discoveredAt": "2026-10-14T19:12:53Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-14T19:12:53Z"
+  },
+  "gemini-android-auto-personal-intelligence": {
+   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
+  },
+  "gemini-connected-apps": {},
+  "gemini-free-flash-lite": {
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-06T09:44:48Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z",
+   "discoveredVia": [
+    "/sitemap.xml"
+   ]
+  },
+  "gemini-gems-to-skills": {
+   "indexedAt": "2026-10-15",
+   "firstCrawlAt": "2026-10-14T11:38:44Z",
+   "firstImpressionAt": "2026-10-15",
+   "discoveredAt": "2026-10-14T11:38:44Z",
+   "feedSeenAt": "2026-11-07T09:49:23Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-14T11:38:44Z"
+  },
+  "google-gmail-photos-ads": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "image-to-text-offline-free": {
+   "indexedAt": "2026-10-15",
+   "firstCrawlAt": "2026-10-15T07:14:59Z",
+   "firstImpressionAt": "2026-10-15",
+   "discoveredAt": "2026-10-15T07:14:59Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-15T07:14:59Z"
+  },
+  "ios-27-2-siri-ai-memory": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "iphone-duo-cracked-screen": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "iphone-duo-sold-out": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-20T01:06:32Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-20T01:06:32Z",
+   "feedSeenAt": "2026-11-07T09:49:23Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-20T01:06:32Z"
+  },
+  "iphone-handoff-verizon-cost": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-19T20:16:45Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-19T20:16:45Z",
+   "crawledAt": "2026-10-19T20:16:45Z"
+  },
+  "jpg-to-pdf-free": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-19T20:30:38Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-19T20:30:38Z",
+   "crawledAt": "2026-10-19T20:30:38Z"
+  },
+  "merge-pdf-files-free": {
+   "indexedAt": "2026-10-21",
+   "firstCrawlAt": "2026-10-20T21:59:51Z",
+   "firstImpressionAt": "2026-10-21",
+   "discoveredAt": "2026-10-20T21:59:51Z",
+   "crawledAt": "2026-10-20T21:59:51Z"
+  },
+  "microsoft-365-family-storage-2tb": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-19T18:39:54Z",
+   "firstImpressionAt": "2026-10-21",
+   "discoveredAt": "2026-10-19T18:39:54Z",
+   "crawledAt": "2026-10-19T18:39:54Z"
+  },
+  "office-2021-end-of-support": {
+   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
+  },
+  "pdf-to-jpg-free": {
+   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
+  },
+  "pdf-to-word-free": {
+   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
+  },
+  "pixel-watch-safety-signal-ending": {
+   "firstSeenLinkAt": "2026-10-19T20:16:45Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-06T09:44:48Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z",
+   "discoveredVia": [
+    "/sitemap.xml"
+   ]
+  },
+  "remove-bg-alternative-free": {
+   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
+  },
+  "remove-metadata-from-photos": {},
+  "remove-phone-number-from-google-account": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "siri-history-on-iphone": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "split-pdf-free": {
+   "firstSeenLinkAt": "2026-10-20T21:59:51Z"
+  },
+  "spotify-family-qr-code-verification": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-20T01:25:28Z",
+   "firstImpressionAt": "2026-10-20",
+   "discoveredAt": "2026-10-20T01:25:28Z",
+   "crawledAt": "2026-10-20T01:25:28Z"
+  },
+  "transcribe-audio-offline-free": {
+   "indexedAt": "2026-10-12",
+   "firstCrawlAt": "2026-10-11T15:47:35Z",
+   "firstImpressionAt": "2026-10-11",
+   "discoveredAt": "2026-10-11T15:47:35Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-11T15:47:35Z"
+  },
+  "turn-off-ai-features": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-ai-in-brave": {
+   "discoveredAt": "2026-11-06T09:44:48Z",
+   "feedSeenAt": "2026-11-06T09:44:48Z",
+   "sitemapSeenAt": "2026-11-07T15:54:20Z",
+   "discoveredVia": [
+    "/rss.xml"
+   ]
+  },
+  "turn-off-ai-in-chrome": {
+   "indexedAt": "2026-10-12",
+   "firstCrawlAt": "2026-10-11T15:48:55Z",
+   "firstImpressionAt": "2026-10-11",
+   "discoveredAt": "2026-10-11T15:48:55Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-11T15:48:55Z"
+  },
+  "turn-off-ai-in-firefox": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-ai-in-windows-11": {
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-apple-intelligence-iphone": {
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-copilot-in-edge": {
+   "firstSeenLinkAt": "2026-11-01T22:38:55Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-copilot-in-word": {
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-gemini-apps-activity": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "turn-off-gemini-in-gmail": {},
+  "turn-off-gemini-on-android-phone": {
+   "firstSeenLinkAt": "2026-11-06T08:36:50Z",
+   "discoveredAt": "2026-11-06T09:44:48Z",
+   "feedSeenAt": "2026-11-06T09:44:48Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "discoveredVia": [
+    "/rss.xml"
+   ]
+  },
+  "turn-off-meta-ai-instagram": {
+   "firstSeenLinkAt": "2026-10-28T23:14:36Z",
+   "discoveredAt": "2026-11-04T21:54:53Z",
+   "feedSeenAt": "2026-11-04T21:54:53Z",
+   "sitemapSeenAt": "2026-11-04T21:54:53Z"
+  },
+  "windows-10-esu-extended": {
+   "indexedAt": "2026-10-12",
+   "firstCrawlAt": "2026-10-11T21:45:19Z",
+   "firstImpressionAt": "2026-10-24",
+   "discoveredAt": "2026-10-11T21:45:19Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-11T21:45:19Z"
+  },
+  "windows-11-24h2-end-of-support": {
+   "indexedAt": "2026-10-20",
+   "firstCrawlAt": "2026-10-20T01:51:54Z",
+   "firstImpressionAt": "2026-10-23",
+   "discoveredAt": "2026-10-20T01:51:54Z",
+   "feedSeenAt": "2026-11-07T09:49:23Z",
+   "sitemapSeenAt": "2026-11-07T09:49:23Z",
+   "crawledAt": "2026-10-20T01:51:54Z"
+  }
+ }
+}

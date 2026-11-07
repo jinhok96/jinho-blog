@@ -1,0 +1,192 @@
+URL: https://learn.microsoft.com/en-us/deployedge/microsoft-edge-browser-policies/copilotpagecontext
+Final: https://learn.microsoft.com/en-us/deployedge/microsoft-edge-policies/CopilotPageContext
+Title: Microsoft Edge Browser Policy Documentation CopilotPageContext | Microsoft Learn
+Fetched: 2026-10-30 16:48 UTC
+
+Skip to main content
+Skip to Ask Learn chat experience
+Microsoft Ignite
+
+November 17–20, 2026
+
+Register now
+Dismiss alert
+Learn
+Documentation
+Training & Labs
+Q&A
+Topics
+Sign in
+Microsoft Edge
+Enterprise
+Developers
+Troubleshooting
+Resources
+Search
+Microsoft Edge Enterprise documentation
+Get started with Microsoft Edge
+Plan for Microsoft Edge
+Schedule, Known issues, Release notes
+Deploy Microsoft Edge
+Configure Microsoft Edge
+Use Microsoft Edge enterprise features
+Microsoft Edge Security
+Microsoft Edge Privacy
+Microsoft Edge Reference
+Browser policy reference
+Microsoft Edge - Policies
+Accessibility
+Address Bar
+Application Guard settings
+Cast
+Certificate management settings
+Connector
+Content settings
+Copilot
+CopilotCDPPageContext
+CopilotPageContext
+EdgeCopilotEnabled
+EdgeEntraCopilotPageContext
+Microsoft365CopilotChatIconEnabled
+Cryptography compliance policies
+Default search provider
+Diagnostic Data
+Downloads
+Edge Website Typo Protection settings
+Edge Workspaces settings
+Enhanced Security Mode
+Experimentation
+Extensions
+Games settings
+Generative AI
+HTTP authentication
+Identity and sign-in
+Idle Browser Actions
+Immersive Reader settings
+Import
+Internet Explorer Mode
+Kiosk Mode settings
+Manageability
+Microsoft Office
+Native Messaging
+Network settings
+PDF Reader
+Password manager and protection
+Performance
+Permit or deny screen capture
+Personalization
+Printing
+Private Network Request Settings
+Profile settings
+Protected Content
+Proxy server
+Related Website Sets Settings
+Relaunch
+Remix settings
+Scareware Blocker settings
+Sleeping tabs settings
+SmartScreen settings
+Startup&comma; home page and new tab page
+WebRtc settings
+Additional
+EdgeUpdater policy reference
+Update policy reference
+Mobile policy reference
+WebView2 policy reference
+Learn more reference
+Microsoft Edge Videos
+Download PDF
+LearnMicrosoft Edge
+Ask Learn
+CopilotPageContext
+Summarize this article for me
+Control Copilot access to page context for Microsoft Entra ID profiles
+Supported versions
+Windows: ≥ 124
+macOS: ≥ 124
+Android: Not supported
+iOS: Not supported
+Description
+
+This policy controls whether Copilot in the Microsoft Edge side pane can access page content.
+
+This policy applies only to Microsoft Entra ID profiles in Microsoft Edge. It doesn't apply to Microsoft account (MSA) profiles.
+
+Copilot requires access to page content to summarize pages and interact with text selections.
+
+This policy doesn't control access for Copilot with enterprise data protection (EDP). Access for Copilot with EDP is controlled by the EdgeEntraCopilotPageContext policy.
+
+If you enable this policy, Copilot can access page content.
+
+If you disable this policy, Copilot can't access page content. This also disables the M365LinksAutoOpenCopilotEnabled feature, because Copilot requires page content access to provide contextual insights for Microsoft 365 links.
+
+If you don't configure this policy:
+
+Access is enabled by default in non-EU regions.
+Access is disabled by default in EU regions.
+Users can turn this setting on or off in Microsoft Edge settings.
+Supported features
+Can be mandatory: Yes
+Can be recommended: No
+Dynamic Policy Refresh: Yes
+Per Profile: Yes
+Applies to a profile that is signed in with a Microsoft account: No
+Data type
+Boolean
+Windows information and settings
+Group Policy (ADMX) info
+GP unique name: CopilotPageContext
+GP name: Control Copilot access to page context for Microsoft Entra ID profiles
+GP path (Mandatory): Administrative Templates/Microsoft Edge
+GP path (Recommended): N/A
+GP ADMX file name: MSEdge.admx
+Example value
+Copy
+Enabled
+
+Registry settings
+Path (Mandatory): SOFTWARE\Policies\Microsoft\Edge
+Path (Recommended): N/A
+Value name: CopilotPageContext
+Value type: REG_DWORD
+Example registry value
+Copy
+0x00000001
+
+Mac information and settings
+Preference Key name: CopilotPageContext
+Example value:
+XML
+Copy
+<true/>
+
+See also
+Microsoft Edge - Policies
+Last updated on 05/22/2026
+In this article
+Control Copilot access to page context for Microsoft Entra ID profiles
+Supported versions
+Description
+Supported features
+Data type
+Windows information and settings
+Mac information and settings
+See also
+
+Was this page helpful?
+
+English (United States)
+Your Privacy Choices
+Theme
+Light
+Dark
+High contrast
+AI Disclaimer
+Previous Versions
+Blog
+Contribute
+Privacy
+Consumer Health Privacy
+Terms of Use
+Trademarks
+© Microsoft 2026

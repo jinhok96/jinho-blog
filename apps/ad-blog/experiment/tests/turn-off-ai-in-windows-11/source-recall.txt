@@ -1,0 +1,94 @@
+
+Retrace your steps with Recall	
+			Applies To
+Windows 11 
+Get help with Copilot
+				What are the steps to start saving snapshots?
+				How should I configure recall to FILTER certain websites?
+				Tell me about retrace my steps with Recall.
+Recall (preview) was introduced earlier this year, with the ability to enable you to quickly find and jump back into what you have seen before on your PC. You can use an explorable timeline to find the content you remember seeing before. You can also use semantic powered search and just describe how you remember something and Recall will retrieve the moment you saw it. Any photo, link, or message can be a fresh point to continue from.  
+To use Recall you need to opt in to saving snapshots, which are screenshots of your activity. Snapshots and the contextual information derived from them are saved and encrypted to your local hard drive. Recall does not share snapshots or associated data with Microsoft or third parties, nor is it shared between different Windows users on the same device. Windows will ask for your permission before saving snapshots. You are always in control of what apps and websites get saved in snapshots, and you can delete snapshots, pause or turn them off at any time. Any future options for the user to share data will require fully informed explicit action by the user.
+If you opt in to the feature, then as you use your PC, a snapshot of your active screen will be saved every few seconds and when the content of your active window changes. Snapshots are also protected with Windows Hello, so that only the signed in user can access their Recall content. Recall allows you to search for content, including both images and text, using the clues you remember. Trying to remember the name of the sustainable restaurant you saw last week? Just ask Recall and it retrieves both text and visual matches for your search, automatically sorted by how closely the results match your search. Recall even offers you an option to jump back into the content you saw and pick up where you left off.
+Note
+Recall is optimized for select languages: English, Chinese (simplified), French, German, Japanese, and Spanish. Content-based and storage limitations apply. For more information, see https:⁠//aka.ms/copilotpluspcs.
+System requirements for Recall
+Your PC needs the following minimum system requirements for Recall:
+A Windows 11 AI+ PC​​​​​​​  that meets the Secured-core standard
+A Copilot+ PC  that meets the Secured-core standard
+40 TOPs NPU (neural processing unit)
+16 GB RAM
+256 GB storage capacity
+To enable Recall, you’ll need at least 50 GB of storage space free
+Saving snapshots automatically pauses once the device has less than 25 GB of storage space
+Users need to enable Device Encryption or BitLocker
+Users need to enroll into Windows Hello Enhanced Sign-in Security with at least one biometric sign-in option enabled in order to authenticate
+Supported browsers, and their capabilities include: 
+Microsoft Edge: filters specified websites and filters private browsing activity
+Firefox: filters specified websites and filters private browsing activity
+Opera: filters specified websites and filters private browsing activity
+Google Chrome: filters specified websites and filters private browsing activity
+Chromium based browsers (124 or later): For Chromium-based browsers not listed above, filters private browsing activity only, doesn't filter specific websites
+Start saving snapshots
+By default, saving snapshots for Recall aren’t enabled. You need to opt in to saving snapshots. There are a couple of ways to do this:
+You can go to Windows Settings > Privacy & Security > Recall & Snapshots , to control when snapshots are saved, with the Save snapshots option, move the toggle switch to On .
+The first time you open Recall, you’ll be asked if you want to allow snapshots to be saved.
+In managed commercial and education environments, Recall will be removed by default until IT admins allow the feature on end-users’ devices. For more information about managing Recall on Copilot+ PCs for your organization, see Manage Recall.
+How to use Recall
+To open Recall, use the keyboard shortcut Windows key
+ +J , by selecting Recall from Start > All Apps, or select the following Recall icon on your taskbar:
+Every time you launch Recall or change Recall settings, you’ll be asked to confirm that it’s you by using Windows Hello. Your saved snapshots and any associated information are encrypted so that only you can access them. Recall takes advantage of just in time decryption protected by Windows Hello Enhanced Sign-in Security (ESS). Recall requires you to confirm your identity before it launches and before you can access your snapshots, so you’ll also need to enroll into Windows Hello if you haven’t already enrolled. Your search index database for Recall is also encrypted. By default, Recall supports Windows Hello sign-in with your face, fingerprint, or PIN.
+Once you’ve confirmed your identity, you’re taken to your homepage in Recall. Initially your homepage contains only a search bar.
+As you use your Copilot+ PC, your homepage tailors itself to you based on your recent snapshots and apps you used.
+Your Recall homepage helps you pick back up from where you left off yesterday. If you’d prefer not to have a customized homepage, you can change the Recall shows a customized experience using your snapshots setting to Off from Settings > Privacy & security > Recall & snapshots > Advanced settings. If you disable the customized homepage experience, your homepage will contain only a search bar. You can access your homepage at any time using Recall’s navigation bar.
+To review your previous snapshots, select the timeline from Recall’s navigation bar. Your timeline in Recall is broken up into segments, which are the blocks of time that snapshots of your screen are taken while you were using your PC. You can hover over your timeline to review your activity in a preview window. Selecting the location on the timeline or selecting the preview window loads the snapshot where you can interact with the content.
+Search with Recall
+Maybe you wanted to make that pizza recipe you saw earlier today but you don’t remember where you saw it. Typing thin crust pizza into the search box would easily find the recipe again. You could also search for pizza if you didn’t remember the specific type of pizza. Less specific searches are likely to bring up more matches though. If you prefer to search using your voice, you can select the microphone then speak your search query.
+By default, results are shown from all apps where Recall found matches. You can narrow down your results by filtering the matches to a specific app by selecting an app from the list.
+When the results are displayed, they will be listed under the headings of text matches and visual matches. Matches that are closer to your search are shown first. You’ll also notice that some items are listed as one of the following types of matches:
+Close match: Close matches typically include at least one of the search terms or images that are representative of a term in your query.
+Related match: Matches that share a commonality with the search terms would be considered related. For instance, if you searched for thin crust pizza, you might also get related matches that include four cheese pizza or a vegetable flatbread since there are similarities between them.
+Interacting with content
+Once you’ve found the item you want to see again, select the tile. Recall opens the snapshot and enables Click to Do, which runs on top of the saved snapshot. Click to Do analyzes what’s in the snapshot and allows you to interact with images or text that is recognized in the snapshot. You’ll notice that when Click to Do is active, your cursor is blue and white. The cursor also changes shape depending on the type of info beneath it. What you can do with the info changes based on what kind of content Click to Do detects. If you select a picture in the snapshot, you can copy, edit with your default picture editing app such as Photos, or open it in another app like the Snipping Tool, or Paint. When you highlight text with Click to Do, you can open it in a text editor or copy it. For example, you might want to copy the text of a recipe’s ingredients list to convert it to metric.
+ Click to Do will temporarily save content when you use an option that sends content to an app, such as Notepad or Paint. For more information, see Click to Do in Recall. 
+Above your selected snapshot, you have more snapshot options. In many cases, you can have Recall jump back into the item, such as reopening the webpage, PowerPoint presentation, or app that was running at the time the snapshot was taken. You can also hide Click to Do, copy the snapshot, or delete the snapshot.
+Pause or resume snapshots
+To pause Recall, select the Recall icon in the system tray and select Pause until tomorrow. Snapshots will be paused until they automatically resume at 12:00 AM. When snapshots are paused, the Recall system tray icon has a slash through it so you can easily tell that saving snapshots is disabled. To manually resume snapshots, select the Recall icon in the system tray and then select Resume snapshots, you will be prompted to authorize this change using your Windows Hello credentials. You can also access the Recall & snapshots settings page from the bottom of this window.
+Filtering apps, websites, and sensitive information from your snapshots
+You can filter out apps and websites from being saved as snapshots. You can add apps and websites at any time by going to Settings > Privacy & security > Recall & snapshots on your PC. You’ll need to use a supported browser for filtering websites and filtering private browsing activity. For sensitive information, you can use the Sensitive information filtering setting, which is enabled by default, helps filter out snapshots when potentially sensitive information is detected—for example, passwords, credit cards, and more. For more information, see Filtering apps, websites, and sensitive information in Recall.
+Delete, delete all, or copy a snapshot from search results
+If you discover a snapshot that you want to delete or copy, select … to display options for the snapshot. You can choose to Copy the snapshot to your clipboard or Delete the snapshot. If you realize that the snapshot contains a website or app that you haven't filtered yet, you have an option to Delete all the snapshots that contain the selected website or app. You will be informed of how many snapshots from that web site or app will be deleted. If you proceed, all the snapshots are deleted in bulk. If you'd like, you can add the website or app to the filter list once the delete is finished.
+Reset Recall
+When you reset Recall, it deletes all of your snapshots and resets all your settings for Recall. A reset won’t delete snapshots you’ve previously exported to a folder, or snapshots that have been shared previously with an app or website which have been saved by that third party. When you next open Recall, or turn on saving snapshots,  you’ll be taken through the initial setup again. In the European Economic Area (EEA), you will get a new Recall export code when you reset Recall.
+To reset Recall:
+Go to Settings
+ > Privacy & security > Recall & snapshots > Advanced settings, then select Reset Recall.
+Confirm that you want to delete all your snapshots and reset your Recall settings by selecting Reset.
+Authorize the reset by using Windows Hello.
+My device is managed by my work or school, can the IT admin enable snapshots without me knowing?
+No. If you have multiple people that can sign in on a device with different accounts, each person needs to make the decision on if they would like to allow saving snapshots or not. An IT admin can’t, on their own, enable saving snapshots on devices that are managed by an organization or school. IT admins can only give you the option to enable snapshots. On devices that are managed you might notice that some options are greyed out and you can’t change them. Your admin can also set policies to:
+Remove Recall from the device or disable Recall on the device
+Disable saving snapshots completely or allow you to enable snapshots if you choose to
+Set the maximum amount of disk space Recall can use
+Set the maximum amount of time that snapshots can be saved on the local disk
+Set a list of websites and apps that will be filtered from snapshots
+You can add more websites and apps to these filter lists for yourself on your device
+For more information about managing Recall on Copilot+ PCs for your organization, see Manage Recall.
+Recall as an optional feature
+Recall is an optional feature for Windows. It is available by default for devices that aren’t managed by an organization or school.
+To remove Recall, type Turn Windows features on or off in the search box on your taskbar. Uncheck Recall from the dialog and restart your PC. Any snapshots that were previously saved will be deleted when Recall is removed.
+To re-enable Recall, type Turn Windows features on or off in the search box on your taskbar. Select Recall from the dialog and restart your PC.
+Microsoft’s commitment to responsible AI and Privacy
+Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more about our responsible AI efforts, the principles that guide us, and the tools and capabilities we've created to assure that we develop AI technology responsibly, see Responsible AI.
+Recall can show results related to perceived emotions of people in images. The processes underlying human emotion are complex, and there are cultural, geographical, and individual differences that influence how we may perceive, experience, and express emotions. Results related to the emotions of people in images are based on how they appear, and may not necessarily accurately indicate the internal state of individual people.
+Recall can use contextual cues in the entire image, including people or entities in the background, which is how it can still associate the image with an individual. Biometric data and inferencing aren't used. Any results that identify an individual or infer an individual's emotion aren't the result of processing of the face, such as facial recognition, or other facial inferencing. For example, if an image contains a photo of a popular athlete wearing their team's jersey and their specific number, Recall may still return a result that might identify the athlete based on those contextual cues.
+Recall uses optical character recognition (OCR), local to the PC, to analyze snapshots and facilitate search. For more information about OCR, see Transparency note and use cases for OCR. For more information about privacy and security, see Privacy and control over your Recall experience.
+We want to hear from you!
+If there's something you like, and especially if there's something you don't like about Recall you can submit feedback to Microsoft by selecting … then the Feedback icon in Recall. Filing feedback will send data from Recall to Microsoft, including any screenshots that you attach to the feedback.
+Related articles
+Filtering apps, websites, and sensitive information in Recall
+Manage your Recall snapshots and disk space
+Click to Do in Recall: do more with what’s on your screen
+Keyboard shortcuts for Recall and Click to Do
+Privacy and control over your Recall experience
+Manage Recall (for IT admins)
+					

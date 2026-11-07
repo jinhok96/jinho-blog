@@ -1,0 +1,42 @@
+s0-default done None
+s1-toolbar-hidden done {'action': 'toolbar right-click > last item'}
+s2-sidebar-off done {'label': 'Show Leo icon in the sidebar', 'before': True, 'after': False}
+s3-context-off done {'label': 'Show Leo in the context menu', 'before': True, 'after': False}
+s4-autocomplete-off done {'label': 'Leo AI Assistant', 'before': True, 'after': False}
+s5-tabfocus-off done {'label': 'Tab Focus Mode', 'before': True, 'after': False}
+prefs final {
+ "brave.ai_chat.autocomplete_provider_enabled": false,
+ "brave.ai_chat.context_menu_enabled": false,
+ "brave.ai_chat.show_toolbar_button": false,
+ "brave.ai_chat.tab_organization_enabled": false,
+ "brave.sidebar.hidden_built_in_items": [
+  7
+ ],
+ "brave.sidebar.sidebar_items": [
+  {
+   "built_in_item_type": 1,
+   "type": 0
+  },
+  {
+   "built_in_item_type": 2,
+   "type": 0
+  },
+  {
+   "built_in_item_type": 3,
+   "type": 0
+  },
+  {
+   "built_in_item_type": 4,
+   "type": 0
+  }
+ ],
+ "brave.today.p3a_total_sidebar_filter_usages": [
+  {
+   "day": 1794009600.0,
+   "value": 0.0
+  }
+ ],
+ "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+ "toolbar.pinned_cast_migration_complete": true,
+ "toolbar.pinned_chrome_labs_migration_complete": true
+}

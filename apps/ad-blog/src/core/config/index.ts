@@ -6,6 +6,12 @@ export {
   type AdSlotConfig,
   validateAdsConfig,
 } from './internal/ads';
+export {
+  CF_WEB_ANALYTICS_TOKEN,
+  GA_MEASUREMENT_ID,
+  validateAnalyticsConfig,
+  validateGaMeasurementId,
+} from './internal/analytics';
 export { CATEGORIES, type Category, CATEGORY_MAP } from './internal/categories';
 export {
   AUTHOR_NAME,

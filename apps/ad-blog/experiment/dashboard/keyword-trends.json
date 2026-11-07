@@ -1,0 +1,548 @@
+{
+ "geo": "US",
+ "keywords": {
+  "apple mail exchange": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "apple siri settlement claim": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "arc browser shutting down": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "chrome autofill settings": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "chrome http warning": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "compress image to 100kb": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "compress pdf": {
+   "avg": 4.55,
+   "max": 7.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 4.55,
+   "recent7": 3.71,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "compress video for discord": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "customize right click menu windows 11": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "duckduckgo no ai": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "free image converter": {
+   "avg": 0.41,
+   "max": 3.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.41,
+   "recent7": 0.86,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "free offline ai tools": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "free pdf tools": {
+   "avg": 0.32,
+   "max": 3.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.32,
+   "recent7": 0.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "gemini android auto": {
+   "avg": 0.04,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.04,
+   "recent7": 0.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "gemini connected apps": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "gemini free": {
+   "avg": 10.23,
+   "max": 14.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 10.23,
+   "recent7": 9.0,
+   "refAvg": 34.47,
+   "refMax": 100
+  },
+  "gemini gems to skills": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "google personal intelligence": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "heic to jpg": {
+   "avg": 8.03,
+   "max": 18.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 8.03,
+   "recent7": 5.86,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "how to check if an image is ai generated": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "image to text": {
+   "avg": 10.1,
+   "max": 16.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 10.1,
+   "recent7": 8.71,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "ios 27.2": {
+   "avg": 3.95,
+   "max": 40.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 3.95,
+   "recent7": 9.43,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "iphone duo cracked screen": {
+   "avg": 0.09,
+   "max": 4.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.09,
+   "recent7": 0.0,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "iphone duo sold out": {
+   "avg": 0.39,
+   "max": 18.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.39,
+   "recent7": 0.0,
+   "refAvg": 34.46,
+   "refMax": 100
+  },
+  "iphone handoff verizon": {
+   "avg": 0.23,
+   "max": 16.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.23,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "jpg to pdf": {
+   "avg": 12.06,
+   "max": 34.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 12.06,
+   "recent7": 8.71,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "merge pdf files free": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "microsoft 365 family storage": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "office 2021 end of support": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "pdf to jpg": {
+   "avg": 12.06,
+   "max": 34.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 12.06,
+   "recent7": 8.71,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "pdf to word free": {
+   "avg": 2.71,
+   "max": 11.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 2.71,
+   "recent7": 1.71,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "pixel watch safety signal": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "remove metadata from photo": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "remove phone number from google account": {
+   "avg": 0.02,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.02,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "remove.bg alternative free": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "siri history on iphone": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "split pdf free": {
+   "avg": 0.08,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.08,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "spotify family plan": {
+   "avg": 2.59,
+   "max": 6.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 2.59,
+   "recent7": 2.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "transcribe audio to text free offline": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "turn off ai": {
+   "avg": 10.96,
+   "max": 16.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 10.96,
+   "recent7": 10.14,
+   "refAvg": 34.45,
+   "refMax": 100
+  },
+  "turn off ai in brave": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off ai in chrome": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off ai in firefox": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off ai in windows 11": {
+   "avg": 0.03,
+   "max": 2.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.03,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off apple intelligence iphone": {
+   "avg": 0.02,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.02,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off copilot in edge": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off copilot in word": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off gemini apps activity": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off gemini in gmail": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off gemini on android phone": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "turn off meta ai instagram": {
+   "avg": 0.02,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.02,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "webp to jpg": {
+   "avg": 1.76,
+   "max": 4.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 1.76,
+   "recent7": 1.86,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "windows 10 esu october 2026": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  },
+  "windows 11 24h2 end of support": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-06",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 34.44,
+   "refMax": 100
+  }
+ },
+ "reference": "remove background",
+ "threshold": 5,
+ "time": "today 3-m"
+}

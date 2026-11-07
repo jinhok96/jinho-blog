@@ -1,0 +1,61 @@
+Skip to main content
+Google Pixel Watch Help
+Sign in
+Help Center
+Community
+Google Pixel Watch
+
+For assistance with Fitbit, health and fitness features on your Google Pixel Watch, including heart rate and heart health, exercise, and sleep, visit Google Health Help
+
+Back
+Stefanie Frederick
+Community Manager
+•
+Original Poster
+Oct 8, 2026
+End of Support for Safety Signal on Google Pixel Watch
+Announcement
+Hi Pixel Watch Community,
+ 
+Safety Signal was originally introduced to provide Google Health Premium users LTE connectivity for essential safety features—such as Emergency SOS and Fall Detection—without requiring a standalone carrier plan for users with Google Health Premium.
+ 
+This change applies to the following LTE-enabled models:
+Google Pixel Watch 2 (LTE)
+Google Pixel Watch 3 (LTE)
+ 
+As we evolve our connectivity and safety capabilities, we will be ending Safety Signal on Dec 12.
+ 
+What this means for Pixel Watch users:
+Existing Safety Signal Users: Existing Safety Signal users will receive advance notice via email and push notifications. During the 30-day transition period from the date of the email, users may still access the features made available via Safety Signal without a standalone carrier plan. After  Dec 12, 2026,  this access will end. 
+Other Safety Features: Core emergency features—such as Emergency SOS, Fall Detection, and Safety Check—will continue to work whenever your watch is connected to Wi-Fi, paired via Bluetooth with a phone nearby, or connected to an active cellular line through your carrier.
+ 
+How to stay connected:
+To maintain continuous access to Emergency SOS, Fall Detection, and cellular capabilities when away from your phone, you can set up a mobile plan or eSIM through a supported carrier. For step-by-step guidance, go to Manage your Google Pixel Watch with a cellular plan.
+ 
+The Google Pixel Watch Team
+Details
+Other
+Pinned
+Reply
+15
+Subscribe
+Community content may not be verified or up-to-date. Learn more.
+Last edited Oct 9, 2026
+All Replies
+J
+Johnnyp
+7 days ago
+This is...not great on Google's part. Safety signal was marketed as a feature and was part of the reason I bought the watch- to provide safety on long runs. Pretty disappointing to now require me to have a separate watch plan just for basic personal safety. Don't think I'd trust buying hardware from Google in future.
+Benjamin
+Platinum Product Expert
+7 days ago
+If you would like, leave feedback with your thoughts and feature requests in the pixel watch app. That goes directly to the team to review. Open pixel watch app, scroll to the bottom, tips and support, feedback.
+Add a comment
+Related content
+Use Safety Signal on Google Pixel Watch
+End of Support for Safety Signal on Google ...
+... Pixel Watch safety features
+... Google Pixel Watch?
+Safety features - Pixel Watch 2 - Google Help
+©2026 Google  Privacy Policy  Terms of Service  Community Policy  Community Overview
+ Send feedback about our Help Center

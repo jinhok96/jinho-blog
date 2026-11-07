@@ -1,0 +1,64 @@
+# 가져온 시각: 2026-10-25T15:28:02.256Z
+# 원본: https://support.google.com/android/answer/7521240?hl=en
+Manage phone number verification on your device - Android Help
+https://support.google.com/android/answer/7521240?hl=en
+
+Manage phone number verification on your device
+
+When you set up an Android device, Google automatically verifies your phone number or numbers if you have more than one. This helps ensure certain features work, including:
+
+Safety and security:
+Sign in to your Google Account with your phone number.
+If you have sign-in issues, get back into your Google Account.
+Use Emergency location service.
+If you have a Pixel 9 series or later phone, when there’s no cellular signal or Wi-Fi, you can get help through satellite for emergency services. Learn how to get emergency help through satellite.
+If you lose your device:
+Find your device. Learn how to find or secure a lost device.
+Lock your device remotely. Learn how to protect your personal data against theft.
+Communications: Help people contact you through Rich Communications Services (RCS) messages and video calls. Learn more about Rich Communication Services (RCS) messaging.
+File sharing: Use Quick Share to send and receive files from devices near you. Learn how to use Quick Share on your Android device.
+
+To make sure the phone numbers are still yours, Google and your carrier will try to periodically reverify them. Carrier charges may apply. If you add new phone numbers to your device, those can be verified as well.
+
+Learn how to change the phone numbers on your Google Account and how they’re used.
+Turn phone number verification on or off
+
+Important:
+
+On your device, phone number verification is turned on by default. We verify the phone number and add them to all Google Accounts that are signed in on the device. This applies to both current and future accounts and phone numbers.
+For example, if you add a new Google Account, it links to all numbers on the device. Likewise, a new phone number is added to all accounts.
+You can only manage phone number verification in device settings.
+
+When phone number verification is on, you allow Google and your carrier to periodically verify your phone numbers. You can turn it off anytime.
+
+Open your device’s Settings app.
+Select Google  All services.
+Under “Privacy & security,” select Phone number verification.
+Select whether to verify your phone number.
+Manage Better sharing on Google
+
+Important:
+
+When phone number verification is on, Better sharing on Google also turns on. This facilitates video calls, messages, and notifications through Google services for incoming photos and other content to this number.
+If you’re signed into more than one Google Account on your device, Better sharing on Google is turned on only for one account.
+Open your device’s Settings app.
+Tap Google.
+At the top, select your account.
+To open your Google Account settings, tap Manage your Google Account  Personal info.
+Under "Contact info," tap Phone.
+Select your phone number.
+Turn Better sharing on Google on or off.
+
+Tip: There are additional settings to control how each phone number is used. Learn how phone numbers are used.
+
+Related resources
+Change the phone numbers on your Google Account and how they’re used
+Set up a recovery phone number or email address
+Sign in with your phone number instead of a username
+Get help during an emergency with your Android phone
+Get emergency help through satellite with your Pixel phone
+Give feedback about this article
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

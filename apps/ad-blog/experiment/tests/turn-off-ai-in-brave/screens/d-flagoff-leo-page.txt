@@ -1,0 +1,10 @@
+URL chrome-error://chromewebdata/
+
+This site can’t be reached
+The webpage at
+brave://leo-ai/
+might be temporarily down or it may have moved permanently to a new web address.
+ERR_INVALID_URL
+
+TOGGLES
+[]

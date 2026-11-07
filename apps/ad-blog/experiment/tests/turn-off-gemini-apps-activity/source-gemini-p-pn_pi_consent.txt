@@ -1,0 +1,120 @@
+# 가져온 시각: 2026-10-26T15:38:38.918Z
+# 원본: https://support.google.com/gemini?p=pn_pi_consent&hl=en
+About personalization with Connected Apps - Gemini Apps Help
+https://support.google.com/gemini/answer/16836988?hl=en&visit_id=639286259079057385-590019423&p=pn_pi_consent&rd=1
+
+About personalization with Connected Apps
+
+Eligible users with Personal Intelligence can connect their data in some Google apps to Gemini to get new, more personalized experiences previously unavailable in Gemini through Connected Apps. Learn more about eligibility.
+
+If you connect certain apps to Gemini, your data from those apps and from your Google Account is used to:
+
+personalize your Gemini experience with insights about you, your relationships, and people in your world
+do things for you, like make recommendations based on your preferences, or create a tailored itinerary 
+improve Google services, including training generative AI models, for everyone
+Apps you can connect
+
+You can connect your data in these apps to Gemini:
+
+Google Workspace, which includes services like Gmail, Calendar, Drive, Docs, Sheets, Slides, Keep, Tasks, Chat, and Meet
+Google Search services, which include Search (including AI Mode and Discover), Maps, Shopping, Flights, Hotels, Translate, and News
+Contacts, which includes Google Contacts and contact info from your signed-in device (US only, English only, and requires an AI Ultra subscription)
+Google Wallet, which includes Wallet and payments services
+Google Photos (if eligible)
+YouTube
+What data is used
+
+Data shared between Gemini and Connected Apps includes things like your saved data from Search services and YouTube, emails, files, events, photos, videos, info about your contacts (such as phone numbers, addresses, and birthdays), info from Google Wallet (like payment methods, data from Google services saved in Wallet, and financial account info linked with services such as Plaid), and location info (from your IP address, device, and content), as well as insights drawn from them. Data shared may relate to topics you find sensitive, like race, religion, and health, or confidential info.
+
+Keep in mind that if new data is added to these apps in the future, Gemini will have access to that data.
+
+How your data is used
+
+This data is used to create personal insights about you, your relationships, and the people and things in your world. For example, depending on your settings, your Google Photos data is used to infer your interests, relationships to people in your photos, and where you've been, including by associating your face with corresponding location data and timestamps. This data is also used to do things for you, like look up your info or add items to your grocery list, and to improve Google services, including training generative AI.
+
+Data from Connected Apps is used and human reviewed per the Gemini Apps Privacy Notice.
+
+Learn more about what data from Google Workspace, Google Photos, and Google Wallet is used, including for training and human review, and steps we take to protect your privacy.
+
+Gemini shares data from Connected Apps with other services as needed to interact with you (like when Gemini uses Maps to give you directions). Data Gemini shares with other Google services is used per the Google Privacy Policy, including for product improvement. If you use Gemini to interact with third-party services, they process your data according to their own privacy policies.
+
+Don't rely on Gemini's output for financial advice. Consult a professional.
+
+What’s not changing
+
+Your choices here don’t change other personalization settings. For example, if your Memory setting is on, Gemini still uses your past chats to personalize your experience. Your choices here also don’t change whether other services exchange data and whether Connected Apps use data to improve their own services. Other services continue personalizing and exchanging data based on their own settings.
+
+Your choices here also don't change whether contacts are saved or used by Google services, including Gemini, based on other settings. For example, if the “Save contact info from your devices” setting is on, information about your contacts from your signed-in devices will be used by Gemini to make these contacts easier to interact with across Google services.
+
+Your choices here also don’t change Gemini’s use of public data. For example, if Search services and YouTube aren’t connected, Gemini can still use public websites and videos in Google Search and YouTube to respond to you.
+
+Disconnecting apps and deleting your data
+
+Disconnecting an app or deleting data in a connected app doesn’t delete any data from Gemini Apps Activity. You can manage and delete your Gemini Apps activity anytime. Deleting Gemini Apps activity also doesn’t delete data in other services. If you delete or update data in a connected app, your experience in Gemini may not be affected until days later. Learn more about how these services retain data they collect.
+
+Enhance your Personal Intelligence
+
+To unlock your personalization experience, you may need to turn on other settings, like Face Groups in Photos and your Workspace smart feature setting.
+
+You’re in control
+
+You can manage which apps are connected in Personal Intelligence. You can also manage and delete your Gemini Apps activity anytime and control whether your future Gemini Apps activity is used to improve Google AI.
+
+Common questions
+Do you train AI models on my personal data? If so, what data do you train on, and do you train on my entire Gmail inbox, Google Photos library, or Google Wallet?
+How your Connected Apps data is used to improve Google services
+
+Gemini Apps activity, which includes data from apps you connect, is used to improve Google services for everyone, including by training generative AI models, if your Keep Activity setting is on.
+
+Below are more details on things we do and don’t do.
+
+Gemini does not train generative AI models directly on your Gmail inbox, Drive, Contacts, Calendar or other Workspace apps, on your Google Wallet and payments services, or on imagery or audio from your Google Photos library. When you interact with Gemini, summaries, excerpts, generated media, and inferences from your relevant media, emails, files, and transactions may be used to help us answer your prompts. To make our responses relevant, helpful, and high quality, we train our generative AI models off of these summaries, excerpts, generated media, and inferences. In some cases, for example, where the email or file is brief or particularly relevant to respond to the prompt, the summary may just be the email or file.
+
+We also train generative AI models on data like:
+
+Your prompts in Gemini Apps,
+The responses and suggestions that Gemini Apps give you, and
+Information about how our models generated those responses and suggestions.
+
+For example, if you ask Gemini, “Plan a list of restaurants for my upcoming trip,” our models might review your emails to get information about your upcoming hotel reservation and flight itinerary, as well as restaurants you’ve visited on prior trips. Gemini would then summarize that information to give you personalized restaurant recommendations close to your hotel at your destination.
+
+How we protect your privacy
+
+We take steps to reduce personal information from interactions personalized using Connected Apps or apply privacy preserving techniques like differential privacy before using them to train generative AI models powering our services, unless it's to address abuse or harm.
+
+Important: Please don't connect apps to Gemini if they contain personal or confidential information that you wouldn’t want to be used for training generative AI models.
+
+Tip: Even if you choose not to connect an app, you can still use Gemini screen actions and the Gemini upload feature. If you choose to use these features and your Keep Activity setting is on, your screenshots and uploads of things like your media and files could be used to improve Google services with the help of human reviewers.
+
+What can I do if I don’t want you to use my data to train your AI models?
+
+You can manage which apps are connected in Personal Intelligence and still use Gemini Apps even if you choose not to connect any apps to them. You can also manage and delete your Gemini Apps activity anytime and turn off Keep Activity to stop your future chats from being used to improve Google AI.
+
+If you disconnect a connected app or delete any data in that app, it doesn't delete any data from Gemini Apps Activity. That data can still be used for product improvement, including training generative AI models. You can delete your Gemini Apps activity to prevent it from being used for future product improvement, unless it has already been reviewed by trained reviewers. Learn how to manage & delete your Gemini Apps activity.
+
+Based on your other Google Account and product settings, Google services may collect data, share data, or personalize your experience. To check your Google Account settings, go to account.google.com.
+
+Will human reviewers have access to my data?
+How human review helps improve Google services
+
+When connected to Gemini, a subset of Connected Apps data processed by Gemini is reviewed by human reviewers (including trained service providers) to debug our services, help keep them safe, and improve them.
+
+Human reviewers improve Google services, including generative AI. Reviewers assess if Gemini responses were low-quality, inaccurate, or harmful. They also suggest better responses. We use their suggestions to help our models respond better in the future.
+
+Important: Please don't connect your apps to Gemini Apps if they contain confidential information that you wouldn’t want a reviewer to see.
+
+What data is included in human review
+
+The subset of Connected Apps data that’s reviewed by the human reviewers includes:
+
+Interactions, summaries, excerpts and inferences from your relevant emails and files.
+In some cases, for example, where the email or file is brief or particularly relevant to respond to the prompt, the summary may just be the email or file.
+Summaries, inferences, and generated media based on your Google Photos library, if you’re eligible to connect Google Photos to Gemini Apps.
+Except for cases of abuse and harm or when you submit feedback, humans don't view media from your Google Photos library.
+Interactions, summaries, excerpts, and inferences from your Google Wallet and payment services information.
+Data like your prompts in Gemini Apps, responses and suggestions that Gemini Apps give you, and information about how our models generated those responses and suggestions.
+How we protect your privacy in this process
+
+Before trained service providers review interactions personalized using Connected Apps, we take steps to protect your privacy, such as disconnecting interactions from your Google Account and reducing personal information in this data, unless it's to address abuse or harm. If you submitted feedback, or we need to address abuse or harm, human reviewers may also review some of your Gmail inbox or Photos library media.
+
+Give feedback about this article

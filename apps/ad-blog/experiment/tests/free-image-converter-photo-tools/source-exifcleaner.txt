@@ -1,0 +1,63 @@
+ExifCleaner — Metadata, removed.
+ ExifCleaner
+ Features
+ Source Code
+ Download
+ Light
+ Auto
+ Dark
+Metadata, removed.
+Fast, private, and free. Strip EXIF data from photos, videos, and PDFs.
+ Download
+ GitHub
+ ExifCleaner
+How it works
+1
+Drop
+Drag files or folders onto the window.
+2
+Clean
+Metadata is stripped instantly.
+3
+Done
+Your files are private.
+Features
+ ExifCleaner
+Batch Processing
+Process tens, hundreds, or even thousands of files at once. ExifCleaner handles them all without breaking a sweat.
+ ExifCleaner
+Dark Mode
+Automatically matches your operating system theme. Light or dark, ExifCleaner looks right at home.
+ ExifCleaner
+Metadata Inspection
+See exactly what was stripped. Expand any file to view a before-and-after diff of removed metadata fields.
+ ExifCleaner
+Privacy Controls
+Fine-tune what gets removed. Preserve orientation, save copies, strip extended attributes -- your choice.
+Available for macOS, Windows, and Linux.
+ ExifCleaner
+ ExifCleaner
+ ExifCleaner
+Your language, built in.
+24+ languages. No downloads, no plugins.
+ ExifCleaner
+No network access. No telemetry. Verify it yourself.
+ Open source — verify our privacy claims yourself.
+Images, videos, and PDFs. JPEG, PNG, WebP, TIFF, GIF, MP4, MOV, M4A, PDF, and more.
+ GPS: 37.7749, -122.4194
+ | 
+ Camera: iPhone 15 Pro
+ | 
+ Date: 2024-03-15
+I absolutely love this piece of software. It works very well.
+ @fishdrum
+It's crazy that this is the only simple and modern exif cleaner we got on Windows
+ @realgooseman
+I've avoided any applications that use Electron... but your app looks so useful that I made an exception!
+ @Gitoffthelawn
+Thanks for your free app — it is very nicely done.
+ @Team-Sys
+Ready to clean your files?
+ Download
+ GitHub
+ExifCleaner is free and open source software. MIT License.

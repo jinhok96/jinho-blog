@@ -1,0 +1,175 @@
+Firefox for iOS 151.0, See All New Features, Updates and Fixes
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Get Firefox
+Get Firefox
+Firefox for mobile
+Get Firefox on your phone
+Menu
+Menu
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Release Notes
+Menu
+Desktop
+Enterprise
+Desktop Beta & Developer Edition
+Desktop Nightly
+Android
+iOS
+Firefox for iOS Release Notes
+Release Notes tell you what's new in Firefox for iOS. As always, we welcome your feedback. You can also file a bug in Bugzilla or see the system requirements of this release.
+151.0
+Firefox for iOS Release
+May 19, 2026
+Version 151.0, first offered to Release channel users on May 19, 2026
+Thanks for using Firefox! Have feedback or suggestions? We'd love to hear from you at iOS Support.
+New
+AI controls: Keep Firefox AI features on your terms with one place to turn them on, off or customize them individually.
+Page summaries: Cut through long articles with quick, readable summaries available with a tap or shake. Now available in English, German, French, Spanish, Portuguese, Italian and Japanese.
+Fixed
+Fixed issues with the language picker, customization sheet and search bar.
+Various security fixes.
+Firefox for iOS 151.1 - Various security fixes.
+Firefox for iOS 151.2 - Various security fixes.
+Get the most recent version
+Need help or want to leave feedback?
+File a bug
+Leave feedback
+Get Involved
+Did you know that most of the content in Firefox Support was written by volunteers?
+Find out more
+Other Resources
+Developer Information
+Complete list of changes for this release
+Press Kit
+Mozilla and Firefox News
+Firefox Extended Support Release
+All Firefox for Desktop Releases
+Learn more about Firefox
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Website Privacy Notice
+Terms of Use
+Cookie Policy
+Community Participation Guidelines
+Logo Trademark Licensing
+Help us improve your firefox.com experience
+In addition to Cookies necessary for this site to function, we’d like your permission to set some additional Cookies to better understand your browsing needs and improve your experience. Rest assured — we value your privacy.
+Accept All Additional Cookies
+Reject All Additional Cookies
+Cookie settings

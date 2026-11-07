@@ -1,0 +1,229 @@
+[
+ {
+  "t": "16:51:10",
+  "step": "start",
+  "data": "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.0.0 Safari/537.36 Edg/156.0.0.0"
+ },
+ {
+  "t": "16:51:47",
+  "step": "ai-default",
+  "data": [
+   {
+    "label": "Show Copilot button in toolbar",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 305
+   },
+   {
+    "label": "Allow Copilot to read context clues on the web",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 374
+   },
+   {
+    "label": "Copilot new tab page",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 444
+   },
+   {
+    "label": "Allow Cowork to take actions on your behalf",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 507
+   }
+  ]
+ },
+ {
+  "t": "16:51:52",
+  "step": "ai-after-button-off",
+  "data": [
+   {
+    "label": "Show Copilot button in toolbar",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 305
+   },
+   {
+    "label": "Allow Copilot to read context clues on the web",
+    "checked": false,
+    "disabled": true,
+    "visible": true,
+    "x": 1200,
+    "y": 374
+   },
+   {
+    "label": "Copilot new tab page",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 444
+   },
+   {
+    "label": "Allow Cowork to take actions on your behalf",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 507
+   }
+  ]
+ },
+ {
+  "t": "16:52:29",
+  "step": "lang-default",
+  "data": [
+   {
+    "label": "Offer to translate pages that aren't in a language I read",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 367
+   },
+   {
+    "label": "Use writing assistance",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 519
+   },
+   {
+    "label": "Show writing hints",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 582
+   },
+   {
+    "label": "Use text prediction",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 657
+   },
+   {
+    "label": "Use grammar and spell-check assistance",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 725
+   },
+   {
+    "label": "Use synonyms for spelling suggestions",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 895
+   }
+  ]
+ },
+ {
+  "t": "16:52:36",
+  "step": "lang-after-wa-off",
+  "data": [
+   {
+    "label": "Offer to translate pages that aren't in a language I read",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 367
+   },
+   {
+    "label": "Use writing assistance",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 519
+   },
+   {
+    "label": "Show writing hints",
+    "checked": false,
+    "disabled": true,
+    "visible": true,
+    "x": 1186,
+    "y": 582
+   },
+   {
+    "label": "Use text prediction",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 657
+   },
+   {
+    "label": "Use grammar and spell-check assistance",
+    "checked": true,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 725
+   },
+   {
+    "label": "Use synonyms for spelling suggestions",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1186,
+    "y": 895
+   }
+  ]
+ },
+ {
+  "t": "16:53:14",
+  "step": "ai-final",
+  "data": [
+   {
+    "label": "Show Copilot button in toolbar",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 305
+   },
+   {
+    "label": "Allow Copilot to read context clues on the web",
+    "checked": false,
+    "disabled": true,
+    "visible": true,
+    "x": 1200,
+    "y": 374
+   },
+   {
+    "label": "Copilot new tab page",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 444
+   },
+   {
+    "label": "Allow Cowork to take actions on your behalf",
+    "checked": false,
+    "disabled": false,
+    "visible": true,
+    "x": 1200,
+    "y": 507
+   }
+  ]
+ }
+]

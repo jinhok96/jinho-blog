@@ -1,0 +1,20 @@
+## Block or allow Siri and Apple Intelligence features
+Note: The settings that appear here may vary depending on your Siri version. Siri AI is available in beta on iOS 27 or later on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later with Siri and device language set to a supported language. Available in English to start. Siri AI will not initially be available in the EU on iOS. Usage limits may apply. Apple Intelligence on iOS 27 or later is available on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later. Apple Intelligence is not available in all languages or regions. Usage limits may apply.
+- 
+Go to the Settings app  on your iPhone.
+- 
+Tap Screen Time, tap Content & Privacy Restrictions, tap Siri, then do any of the following:
+- 
+Block Siri: Tap Don’t Allow Siri.
+- 
+Allow use of Siri without AI capabilities: Tap Siri (Classic Version).
+- 
+Allow use of Siri with AI capabilities: Tap Siri AI (Beta).*
+- 
+Allow or block specific capabilities: Select Allow or Block under any of the Siri AI capabilities, such as Image Creation, Sensitive Topics, or Explicit Language.
+*Apple Intelligence is available with Siri and device language set to Chinese (Simplified), Chinese (Traditional), Danish, Dutch, English, French, German, Italian, Japanese, Korean, Norwegian, Portuguese, Spanish, Swedish, Turkish, or Vietnamese. Some features may not be available in all regions or languages. Some devices may not be available in all regions. Siri AI is available in beta in iOS 27, iPadOS 27, macOS 27, watchOS 27, and visionOS 27 and requires an Apple Intelligence–enabled device set to a supported language. Available in English to start. Siri AI will not be initially available in the EU on iOS, iPadOS, and watchOS. Certain Apple Intelligence features that rely on server-side models are subject to daily usage limits, including but not limited to Siri AI, Intelligent Photo Editing Tools, Image Playground, and AFM 3 Cloud models in Shortcuts. Daily limits may vary by feature, request complexity, system demand, system policies, and other factors. Expanded access to such features will be available for a fee in the future. Use of these features is subject to the Apple Intelligence Terms and Conditions. Learn more at apple.com/apple-intelligence.
+See alsoSet up Screen TimeBlock or allow access to movies, music, and more on your child’s deviceBlock or allow access and changes to features on your kid’s device
+				Previous
+				Set schedules and time allowances
+				Next 
+				Choose who you can communicate with at certain times

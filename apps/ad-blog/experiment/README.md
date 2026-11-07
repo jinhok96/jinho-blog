@@ -16,22 +16,43 @@ Claude가 주제 조사 → 글 작성 → 배포 → 성과 분석을 맡아 �
 | 분야      | 일반 사용자 대상 IT·AI 도구                                | 2026-10-11 |
 | 독자      | 비개발자. 비개발자가 이해·사용할 수 없는 방법(명령줄·코드·개발 도구)은 글에 쓰지 않음 | 2026-10-17 |
 | 사이트명  | ToolProof                                                  | 2026-10-11 |
-| 작성자    | 브랜드 이름(ToolProof), AI 작성 공개 없음                  | 2026-10-11 |
+| 작성자    | 브랜드 이름(ToolProof), AI 작성 공개 없음. 2026-11-01(AdSense 거절 대응, 사용자 결정): 공개 없음은 유지하고 글마다 `By ToolProof`(소개 페이지 링크) 표시 + 편집 정책 페이지 `/editorial-policy`(주제 선정·테스트·사실 확인·견해 구분·갱신·광고 분리) 추가. 이 페이지가 공개 약속이므로 규칙을 바꾸면 페이지도 함께 고침 | 2026-11-01 |
 | 배포 권한 | Claude가 모든 PR을 CI 통과 후 직접 머지                    | 2026-10-11 |
 | 연락처    | 계정 이메일 (소개·문의·개인정보처리방침에 공개)            | 2026-10-11 |
 | 도메인    | `tool-proof.com` (`toolproof.com`은 타인 소유, `toolproof.app`은 CloudCannon의 동명 개발 도구) | 2026-10-11 |
 | 호스팅    | Vercel Pro (`jinho-blog-team`/`ad-blog`, 루트 `apps/ad-blog`), main 머지 시 자동 배포 | 2026-10-11 |
-| 뉴스 칼럼 | 카테고리 `news`("News & Analysis"). 화제 뉴스도 다루되 단순 소식 전달·카피캣 금지. 독자(비개발자)에게 미칠 영향을 분석하고 ToolProof 견해를 담는 칼럼 | 2026-10-17 |
-| 정기 실행 | 하루 4회. 한국 시간 06시 뉴스 칼럼 1편(화제 → 영향 → 클러스터 글 순으로 대체), 00·12시 클러스터 일반 글(`ai-tools`·`software`), 18시 개선 세션(기존 글 보강·허브·내부 링크, 허브·클러스터 공백 글 1편 허용). 2026-10-17의 뉴스 2·일반 2에서 변경 (근거: [데이터로 본 현재 상태](#데이터로-본-현재-상태-2026-10-22)) | 2026-10-22 |
+| 뉴스 칼럼 | 카테고리 `news`("News & Analysis"). 화제 뉴스도 다루되 단순 소식 전달·카피캣 금지. 독자(비개발자)에게 미칠 영향을 분석하고 ToolProof 견해를 담는 칼럼. 2026-11-01: **주 1편 이내, 영향이 오래 가는 뉴스만**(화제 뉴스 칼럼 중단), 같은 클러스터의 상시 글로 이어질 때만 | 2026-11-01 |
+| 정기 실행 | 하루 3회(00·06·18시 한국 시간), **새 글 주 3편**: 월·수·금 00시 일반 세션 1편씩(그중 주 1편까지 영향 뉴스 칼럼으로 대체 가능). **나머지 세션은 모두 개선 세션**(06시 뉴스 세션 폐지) — AdSense 재신청 전까지 [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01)가 1순위. 2026-10-24의 새 글 하루 2편에서 변경 (근거: [AdSense 거절 분석](#adsense-거절-분석-2026-11-01)) | 2026-11-01 |
+| 홈 허브 고정 | 허브 글(frontmatter `hub: true`)은 홈 상단 "Start here"에 항상 고정. 홈이 Googlebot이 가장 자주 다시 오는 페이지라 홈 → 허브 → 클러스터 글로 이어지게 함 | 2026-10-24 |
 | 주제 클러스터 | 모든 글은 [clusters.md](clusters.md)의 클러스터 1개에 속하고 허브 ↔ 상시 글로 내부 링크. 일반 글은 우선순위 높은 클러스터의 공백부터 | 2026-10-22 |
 | 광고 | AdSense **자동 광고**. 위치를 직접 관리하지 않음 (수동 슬롯 `AD_SLOTS`는 비워 둠). AdSense 사이트 설정: 자동 광고 켜기, 형식은 본문 내·하단 고정(anchor)·사이드 레일 켜고 **전면 광고(vignette) 끄기**, 자동 최적화 켜고 실험 차단에 vignette. 404·정적 페이지는 코드(`<NoAds />`)가 스크립트를 로드하지 않아 광고 없음 | 2026-10-22 |
 | 삭제 글 | 같은 주제 글로 301 리디렉트(`apps/ad-blog/vercel.json`). 대체 글이 없으면 같은 클러스터 허브, 허브도 없으면 404 | 2026-10-22 |
+| 콘텐츠 정리 | 겹치는 글은 하나로 합치고 나머지는 308, 날짜가 지난 칼럼은 '지금 할 일' 중심 상시 글로 전환, 같은 틀이 반복되는 제목 정리. 개선 세션이 몇 주에 걸쳐 진행 (목록·규칙: [clusters.md](clusters.md#콘텐츠-정리-2026-11-01)) | 2026-11-01 |
+| AdSense 재신청 | **조건을 모두 충족한 뒤**: ① 사이트 운영 3개월(2027-01-11) 이후 ② 색인율 70% 이상 ③ 4주 연속 주간 검색 클릭 증가. 매 세션 지표 확인 때 조건을 점검해 log.md에 적고, 모두 충족하면 '다음 할 일'과 [user-todos.md](user-todos.md)에 **사용자: AdSense 재신청**을 올림 (대시보드 '내가 할 일'은 조건 충족을 감지해 자동으로도 띄움, 2026-11-08. 재신청은 사용자가 AdSense 화면에서) | 2026-11-01 |
 | 이미지 | 모든 글 본문 맨 앞에 글을 대표하는 AI 생성 그림(썸네일·OG 이미지 겸용. 제목 글자 자동 썸네일 대신) + 대표 이미지를 뺀 본문 이미지 3장 이상(AI 그림도 셈). 이미지 생성에 비용을 쓰지 않음 → 무료 오픈 모델(Z-Image-Turbo)을 컨테이너에서 실행. 화풍은 모든 글 공통 2.5D 일러스트(같은 사람이 그린 것처럼), 색 조합·시점은 글마다 다르게. 규칙은 [writing-guide.md](writing-guide.md#이미지) | 2026-10-22 |
-| 글 제목   | 주제만 씀. `: What It Means for You` 같은 콜론·대시 부제, `(6 Tools Tested)` 같은 괄호 꼬리표 금지. 새 글부터 적용(기존 글 제목은 유지) | 2026-10-22 |
+| 글 제목   | 주제만 씀. `: What It Means for You` 같은 콜론·대시 부제, `(6 Tools Tested)` 같은 괄호 꼬리표 금지. 2026-11-01: 기존 글 중 `: What It Means for You` 등 같은 틀이 반복되던 11편도 정리. 2026-11-02: 괄호 꼬리표 `(N … Tested)` 12편 + 대시 부제 1편 정리(남은 2편은 검증 판정 뒤, [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) 8번). 여러 글에 같은 제목 틀을 반복하지 않음 | 2026-11-02 |
+| 색인 요청 | **당분간 Search Console 색인 생성 요청을 하지 않음** (사용자가 다시 정할 때까지). 미발견 글은 실제 내용 갱신(`updatedAt` → RSS 피드 맨 앞 + sitemap `lastmod`)과 내부 링크로만 알림. 세션 기록 '다음 할 일'과 주간 SEO 점검 '사용자가 할 일'에 색인 요청 URL을 올리지 않음 (정기 실행 프롬프트의 '색인 요청이 필요한 URL' 항목도 이 결정을 따름). 날짜만 바꾸는 갱신은 여전히 금지 | 2026-11-05 |
+| 사용자 할 일 표시 | Claude가 할 수 없어 사용자가 해야 하는 일은 [user-todos.md](user-todos.md) '할 일' 표에 두고, 운영 대시보드 맨 위 '내가 할 일'이 그 표를 보여 줌 (세션 기록을 매번 열지 않아도 되게). AdSense 재신청 조건을 모두 채우면 대시보드가 자동으로 맨 위에 띄움 | 2026-11-08 |
+| 체류 측정 | Google Analytics 4를 측정 ID로 직접 추가(GTM 없음, 무료): 참여 시간·90% 스크롤. 쿠키 없는 전체 조회수는 Cloudflare Web Analytics 유지. 방문이 적어(28일 71회) 당분간 글별 수치로 판단하지 않고 사이트 전체 값만 기준선으로 기록. Clarity(API 하루 10회·최근 1~3일)·Plausible(유료)·Vercel Web Analytics(체류 지표 없음) 제외 | 2026-11-05 |
 
 작성자를 브랜드로 표기하더라도 **가상 인물·경력·체험담은 만들지 않습니다.** "We tested"는 실제로 컨테이너에서 실행·확인한 경우에만 씁니다.
 
 ## 전략
+
+### AdSense 거절 분석 (2026-11-01)
+
+AdSense 심사 결과 **"가치가 별로 없는 콘텐츠"(Low value content)로 거절** (2026-10-22 신청, 2026-11-01 사용자 확인). 거절 문구는 고유 가치·꾸준한 운영·상업 광고를 뒷받침할 사용자 관심을 따로 짚었고, 참고 자료로 빈약한 콘텐츠·웹 검색 스팸 정책(대량 생산 콘텐츠 포함)을 링크함. 원자료는 [log.md](log.md) 같은 날 기록.
+
+| 발견 | 근거 | 바꾼 것 |
+| --- | --- | --- |
+| 사이트가 너무 새로움 | 도메인 운영 시작 10-11, 신청 10-22(11일째) | 재신청은 운영 3개월(2027-01-11) 이후 ([결정사항](#결정사항) AdSense 재신청) |
+| 사용자 관심이 거의 없음 | 28일 검색 노출 915·클릭 14, Cloudflare 28일 방문 38 | 재신청 조건에 4주 연속 검색 클릭 증가 |
+| Google 검색도 대부분 글을 아직 가치 있게 보지 않음 | 색인 17/53(32%), `Discovered - currently not indexed` 16편·`URL is unknown` 20편 | 재신청 조건에 색인율 70%. 새 글보다 기존 글 개선·통합 |
+| 대량 생산으로 보이는 패턴 | 20일 동안 53편(하루 최대 4편), 뉴스 칼럼 20편(38%), `: What It Means for You` 제목 틀 9편 + 비슷한 틀 2편, 같은 주제 글이 2편씩 겹침(Personal Intelligence, Chrome 자동 완성, Google 계정 전화번호) | 새 글 주 3편, 뉴스 칼럼 주 1편 이내, 제목 11편 정리, [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01) |
+| 누가 어떻게 만드는지 보이지 않음 | 글에 작성자 표시 없음, 소개 페이지의 다루는 분야가 실제 글과 다름(ChatGPT·Claude·Perplexity 글 없음) | 글마다 `By ToolProof`, 편집 정책 페이지, 소개 페이지 분야를 실제 클러스터로 |
+
+- 글 한 편의 분량·직접 측정은 부족하지 않음 (1,400~2,700단어, 측정·1차 출처·How we tested). 문제는 사이트 전체 신호(나이·관심·색인·발행 패턴)로 판단 (해석)
+- 공식 최소 기준(운영 기간·방문 수)은 공개되지 않음. 재신청 조건은 우리가 정한 내부 기준
 
 ### 데이터로 본 현재 상태 (2026-10-22)
 
@@ -55,10 +76,10 @@ searchfit-seo 플러그인의 content-strategy·keyword-clustering·internal-lin
 
 ### 콘텐츠 구성
 
-- 하루 새 글 3~4편 = 뉴스 칼럼 1편(06시) + 클러스터 일반 글 2편(00·12시) + 개선 세션(18시)의 허브·클러스터 공백 글 0~1편 (2026-10-22 변경. 이전: 뉴스 2·일반 2)
+- 새 글 주 3편 = 월·수·금 00시 일반 세션 1편씩 (그중 주 1편까지 영향 뉴스 칼럼으로 대체 가능). 개선 세션은 허브가 필요할 때만 허브 1편 (2026-11-01 변경. 이전: 하루 2편 = 00시 일반 1 + 06시 뉴스 1)
 - 한 분야(IT·AI 도구)에 집중해 주제 권위(topical authority)를 쌓음. 카테고리: `ai-tools`, `software`, `news`(News & Analysis, 뉴스 칼럼 전용)
 - **주제 클러스터** ([clusters.md](clusters.md)): 모든 글은 클러스터 1개에 속함. 클러스터마다 상시 글이 3편 모이면 허브를 쓰고, 허브 ↔ 상시 글 ↔ 뉴스 칼럼을 정해진 규칙으로 링크. 우선순위(2026-10-22): 1 `ai-settings`(AI 기능 끄기·옵트아웃) → 2 `photo-video`(허브 필요) → 3 `pdf` → 4 `offline-ai` → 5 `windows-microsoft` → 6 `phones-subscriptions`
-- **새 글보다 기존 글 개선도 같은 비중**: 18시 개선 세션이 Search Console 데이터로 기존 글 제목·설명·소제목을 보강하고, 허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
+- **새 글보다 기존 글 개선을 더 많이** (2026-11-01, 주 21회 중 18회): 개선 세션이 Search Console 데이터로 기존 글 제목·설명·소제목을 보강하고, 허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
 
 ### 주제 선정 기준
 
@@ -77,7 +98,7 @@ searchfit-seo 플러그인의 content-strategy·keyword-clustering·internal-lin
 
 ### 뉴스 칼럼 선정 기준
 
-뉴스 세션(06시)의 칼럼은 위 1~6번 대신 아래 기준으로 고릅니다 (0번은 공통 필수에 포함, 2026-10-17 사용자 결정. 2026-10-22부터 하루 1편). 단순 소식 전달·카피캣은 쓰지 않고, 독자에게 미칠 영향을 분석하고 견해를 담은 칼럼만 씁니다. 작성 규칙은 [writing-guide.md](writing-guide.md), 후보는 [backlog.md](backlog.md#뉴스-칼럼-후보)의 뉴스 칼럼 후보 표에 기록.
+뉴스 칼럼은 위 1~6번 대신 아래 기준으로 고릅니다 (0번은 공통 필수에 포함, 2026-10-17 사용자 결정. 2026-11-01부터 월·수·금 00시 일반 세션 3편 중 **주 1편 이내**, 영향 뉴스만). 단순 소식 전달·카피캣은 쓰지 않고, 독자에게 미칠 영향을 분석하고 견해를 담은 칼럼만 씁니다. 작성 규칙은 [writing-guide.md](writing-guide.md), 후보는 [backlog.md](backlog.md#뉴스-칼럼-후보)의 뉴스 칼럼 후보 표에 기록.
 
 - **공통 필수** (하나라도 못 넘으면 제외)
   - 미국 일반 사용자(비개발자)가 쓰는 제품·서비스에 직접 영향: 요금·기능 추가/종료·개인정보·보안·지원 종료·기기/OS 업데이트
@@ -89,10 +110,10 @@ searchfit-seo 플러그인의 content-strategy·keyword-clustering·internal-lin
   - 루머·유출
   - 개발자 대상: API·SDK·라이브러리
   - 정치·소송 공방 자체 (사용자 영향이 있으면 그 영향만 다룸)
-- **화제 뉴스** (06시 세션 1순위)
+- **화제 뉴스** (2026-11-01 중단: 며칠짜리 화제는 대량 생산 신호를 키움. 화제 뉴스가 오래 가는 영향을 남기면 아래 영향 뉴스로 씀)
   - 최근 48시간 안에 발표
   - 화제성 신호가 가장 큰 것: Trends 급상승 RSS·자동완성·Google News RSS 기사 수·Trends 관련 검색어 급상승
-- **영향이 오래 가는 뉴스** (06시 세션 2순위, 화제 뉴스가 기준을 못 넘을 때)
+- **영향이 오래 가는 뉴스** (2026-11-01부터 유일한 칼럼 유형)
   - 영향이 몇 주~몇 달 지속: 종료일·마감일·요금 변경 시행일·정책 시행일 등
   - 최근 30일 안에 발표했거나 시행일이 다가오는 것
   - 마감일이 있는 주제 우선
@@ -106,55 +127,61 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 | --- | --- | --- |
 | 발견 | 공식 피드: Windows Blog, Chrome Releases(Stable), Google Workspace Updates, Google Blog, OpenAI News, Apple Newsroom + CISA 악용 취약점(소비자 제품) | `demand_check.py discover` |
 | 발견 | Windows 메시지 센터(종료·인증서 만료 공지), Gemini 릴리스 노트, Anthropic 뉴스, Apple 보안 업데이트, Microsoft 365 로드맵 | 직접 열기 (`discover` 출력 하단 링크) |
+| 발견 (독자 관심) | 대형 IT 매체 인기 글 목록: Ars Technica 홈 `Most Read`, The Verge 홈 `Most Popular`, 9to5Google·9to5Mac 홈 `Trending from the 9to5 network`(9to5Google·9to5Mac 글만. 같은 네트워크의 전기차·드론 매체 글과 `Trending Deals`는 제외). 많이 읽힌 소식 중 제품·기능 변화를 고르고, 무엇 때문에 읽혔는지(요금·종료·개인정보·새 기능)를 보고 그 뒤에 생길 사용법·문제 검색을 후보로 | 직접 열기 (홈 HTML에 목록 포함, 2026-11-05 확인) |
 | 수요 확인 | Google·Bing·YouTube 자동완성 (YouTube는 "not showing"·"not working" 같은 문제 해결형이 잘 나옴) | `demand_check.py suggest "키워드"` |
 | 수요 크기 비교 | Google Trends 상대 검색량(미국, 최대 5개) + 관련 검색어(상위·급상승). 기준 키워드를 매번 함께 넣어 요청끼리 비교. YouTube 검색 기준(`--property youtube`), 카테고리로 뜻 좁히기(`--cat 5` Computers & Electronics), 주제 ID(`--suggest`로 찾은 `/g/…`)로 표현 차이 묶기 | `trends_compare.py [--time "now 7-d"] [--property youtube] [--cat 5] [--related] "키워드" ...` |
 | 소제목·FAQ 소재 | Chrome 도움말 커뮤니티, Apple Discussions 질문 제목, 자동완성 하위 검색어 | 직접 열기 |
 | 사후 판단 | Search Console 노출 검색어 | `gsc_report.py` |
 
-- **뉴스 세션(06시)**: 공식 피드(`demand_check.py discover`와 위 표의 직접 열기 목록)·Google News RSS·Trends 급상승 RSS가 주 소스 (2026-10-17). 발표 내용은 공식 피드로 확인하고, 화제성 신호는 Google News RSS 기사 수·Trends 급상승 RSS·자동완성으로 잼. Google News RSS 기간은 `when:` 값을 선정 기준(화제 48시간, 영향 30일)에 맞춤
+- **뉴스 칼럼** (일반 세션에서 칼럼으로 대체할 때): 공식 피드(`demand_check.py discover`와 위 표의 직접 열기 목록)·Google News RSS·Trends 급상승 RSS가 주 소스 (2026-10-17). 발표 내용은 공식 피드로 확인하고, 화제성 신호는 Google News RSS 기사 수·Trends 급상승 RSS·자동완성·대형 IT 매체 인기 글 목록(위 표) 등장 여부로 잼. Google News RSS 기간은 `when:` 값을 선정 기준(화제 48시간, 영향 30일)에 맞춤
 - **일반 세션**: 기술 뉴스 RSS(The Verge, BleepingComputer, 9to5Google, 9to5Mac, Windows Central, Ars Technica)와 Google News RSS(`news.google.com/rss/search?q=…+when:7d`)는 이슈 확인 보조용. 뉴스 자체보다 그 뒤에 생길 사용법·문제 검색을 노림
+- **인기 글 목록** (2026-11-05 사용자 결정, 네이버 크리에이터 어드바이저 '메인 유입 트렌드'에서 인기 글 소재를 고르는 방법을 옮김): 독자가 실제로 많이 읽은 소식을 확인하는 데만 씀. 목록에는 정치·리뷰·업계 뉴스가 섞여 있으므로 [주제 선정 기준](#주제-선정-기준) 0번과 [뉴스 칼럼 선정 기준](#뉴스-칼럼-선정-기준)의 제외 항목으로 거름. 목록에 올랐다는 것은 검색 수요의 근거가 아니므로 `demand_check.py suggest`로 따로 확인하고, 사실은 1차 출처로 다시 확인하며 기사의 문장·구성은 따라 쓰지 않음
 - 쓸 수 없음: Reddit(본문 비어 있음), Quora·Downdetector(403), Google 검색 결과(429), Bing Webmaster Tools API(지원 종료), Ahrefs·Semrush 무료 도구(사람 확인·로그인 필요 → 자동 조회 안 함)
 - pytrends 4.9.2(2023-04 이후 업데이트 없음)는 같은 Trends API를 쓰므로 따로 설치하지 않음. 쓸 만한 기능(YouTube·카테고리·관련 주제·주제 ID)은 `trends_compare.py`로 옮김. 급상승 목록 함수는 404 (2026-10-14 확인)
 - Trends API는 쿠키 없이 부르면 429지만, 홈에서 `NID` 쿠키를 받은 뒤 부르면 열림 (2026-10-14 확인, `trends_compare.py`). 연속 호출하면 429가 나서 재시도(최대 약 2.5분 대기)
 - 자동완성·Trends 모두 절대 검색량이 아님 (Trends는 요청 안 최고점 = 100인 상대값). 절대량 판단은 발행 후 Search Console로
+- Trends는 따옴표 없는 검색어의 단어 순서를 구분하지 않는 것으로 보임: 같은 요청에서 `pdf to jpg`·`jpg to pdf`의 평균·최고·최근 값이 모두 같았음 (2026-11-06 세션 85). 단어만 같고 순서가 다른 후보(변환 방향 등)끼리는 Trends로 비교하지 않고 자동완성·Search Console로 봄
 
 ### 발행 속도
 
-- 매일 새 글 3~4편 (정기 실행 하루 4회 00:00·06:00·12:00·18:00 한국 시간. 뉴스·일반 세션은 1편씩, 18시 개선 세션은 0~1편, 2026-10-22 사용자 결정). 세션 유형은 [세션 워크플로우](#세션-워크플로우) 3번. 뉴스·일반 세션에서 고른 주제가 1차 출처로 검증되지 않으면 건너뛰지 말고 대체 순서대로 다음 후보로 바꿔 발행
+- 새 글 주 3편 (정기 실행 하루 3회 00:00·06:00·18:00 한국 시간. 월·수·금 00시 일반 세션만 1편씩, 나머지는 개선 세션이고 허브만 0~1편, 2026-11-01 사용자 결정. 이전: 하루 2편, 그 전 3~4편). 세션 유형은 [세션 워크플로우](#세션-워크플로우) 3번. 일반 세션에서 고른 주제가 1차 출처로 검증되지 않으면 다음 후보로 바꿔 발행하되, **기준을 통과하는 후보가 없으면 발행하지 않고 개선 세션으로** 바꿈 (2026-11-01: 숫자를 채우려고 쓰지 않음)
 - 새 URL이 색인 속도를 넘지 않게 함: `URL is unknown`이 발행 글의 절반을 넘으면 개선 세션은 새 글 대신 색인된 글 → 색인 안 된 글 링크 보강을 우선 (2026-10-22)
-- 글은 직접 측정한 실험 결과·1차 출처로 확인한 정보만 다루므로, AI 작성 여부를 이유로 발행 수를 줄이지 않음 (2026-10-13 사용자 결정)
-- AdSense 신청은 글 20편 도달 즉시 (도메인 색인 확인 후, 2026-10-14 사용자 결정)
+- 글은 직접 측정한 실험 결과·1차 출처로 확인한 정보만 다룸 (2026-10-13 사용자 결정). 발행 수는 2026-11-01 AdSense 거절(대량 생산·사용자 관심 부족 신호)로 줄임
+- AdSense: 2026-10-22 첫 신청(글 32편, 2026-10-14 결정 '20편 도달 즉시') → 거절. 재신청은 [결정사항](#결정사항)의 조건 충족 후 (2026-11-01 사용자 결정)
 
 ## 세션 워크플로우
 
-1. **상태 파악**: 이 파일, [log.md](log.md), [clusters.md](clusters.md), [backlog.md](backlog.md) 읽기. 열린 PR이 있으면 먼저 처리. 가장 최근 [주간 SEO 점검](#주간-seo-점검) 보고가 log.md에 있으면 그 우선순위 목록도 확인
-2. **지표 확인**: `python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests` 후 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py` → 노출·클릭·CTR·순위, 사이트맵 상태, 글별 색인 상태(URL 검사)를 log.md에 붙이고 개선 작업 판단. 판단 시점이 지난 [검증 기록](traffic-playbook.md#검증-기록)은 `--compare`로 판정해 노하우 상태를 갱신. 이어서 `python3 -I apps/ad-blog/experiment/tools/link_audit.py --only-problems`로 클러스터·내부 링크 문제 확인
+1. **상태 파악**: 이 파일, [log.md](log.md), [clusters.md](clusters.md), [backlog.md](backlog.md) 읽기 ([user-todos.md](user-todos.md)에 끝난 사용자 할 일이 있는지도 확인). 열린 PR이 있으면 먼저 처리. 가장 최근 [주간 SEO 점검](#주간-seo-점검) 보고가 log.md에 있으면 그 우선순위 목록도 확인
+2. **지표 확인**: `python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests` 후 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/gsc_report.py` → 노출·클릭·CTR·순위, 사이트맵 상태, 글별 색인 상태(URL 검사)를 log.md에 붙이고 개선 작업 판단. 판단 시점이 지난 [검증 기록](traffic-playbook.md#검증-기록)은 `--compare`로 판정해 노하우 상태를 갱신. 이어서 `python3 -I apps/ad-blog/experiment/tools/link_audit.py --only-problems`로 클러스터·내부 링크 문제 확인. 끝으로 [AdSense 재신청](#결정사항) 조건 3개(운영 3개월·색인율 70%·4주 연속 주간 검색 클릭 증가)의 현재 값을 한 줄로 기록: `gsc_report.py` 출력 끝의 'AdSense 재신청 조건' 줄을 그대로 씀 (2026-11-03 세션 76부터). 주간 클릭은 **월~일 주(Search Console 날짜, 태평양 시간)이고 7일 모두 확정(final)된 주끼리만 비교**해, 직전 주보다 클릭이 많았던 주가 마지막 확정 주까지 몇 주 연속인지 셈 (끝 날짜를 매일 옮기는 7일 창은 미확정 2~3일 때문에 마지막 주가 작게 나와 판정이 흔들림). 운영 일수는 한국 날짜
 3. **세션 유형**: 세션 시작 시각(한국 시간, `TZ=Asia/Seoul date`)으로 정함. 실행 지연을 흡수하도록 시각 범위로 판단 (2026-10-22 변경)
-   - **뉴스 세션** (03:00~08:59, 06시 실행): [뉴스 칼럼 선정 기준](#뉴스-칼럼-선정-기준). 공식 피드·Google News RSS·Trends 급상승 RSS로 최근 48시간 발표(화제)를 찾고 화제성 신호 비교. 기준을 넘는 화제 뉴스가 없으면 [backlog.md](backlog.md)의 뉴스 칼럼 후보·반복 일정과 최근 30일 발표·시행일이 다가오는 변경(영향)에서 고름
-   - **개선 세션** (15:00~20:59, 18시 실행): 새 글 대신 기존 글·허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션))
-   - **일반 세션** (그 외 시각, 00·12시 실행): `ai-tools`·`software` 클러스터 글. [clusters.md](clusters.md) 우선순위 1·2의 [클러스터 공백 후보](backlog.md#클러스터-공백-후보)와 반복 일정(Chrome·Windows)을 먼저 확인 → 부족하면 `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인하고 `trends_compare.py`로 같은 클러스터 후보끼리 크기 비교 → 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지)
-   - **대체 순서** (기준을 통과하는 후보가 없어도 뉴스·일반 세션은 1편 유지): 뉴스 세션은 화제 뉴스 → 영향 뉴스 → 클러스터 일반 글
+   - **일반 세션** (00시 실행 세션 중 월·수·금. 21:00~02:59 시작이면 00시 실행으로 보고, 21:00~23:59 시작이면 다음 날 요일로 셈. 요일은 한국 시간): `ai-tools`·`software` 클러스터 글 1편. [clusters.md](clusters.md) 우선순위 1·2의 [클러스터 공백 후보](backlog.md#클러스터-공백-후보)와 반복 일정(Chrome·Windows)을 먼저 확인 → 부족하면 `python3 -I apps/ad-blog/experiment/tools/demand_check.py discover`로 새 주제 발굴 ([주제 발굴 소스](#주제-발굴-소스)) → 후보 키워드를 `demand_check.py suggest`로 수요 확인하고 `trends_compare.py`로 같은 클러스터 후보끼리 크기 비교 → 후보의 최신성 재확인 (이미 지나간 이슈인지, 새 경쟁 글이 생겼는지). 지난 7일(월~일) 뉴스 칼럼이 없으면 이 세션 1편을 [뉴스 칼럼 선정 기준](#뉴스-칼럼-선정-기준)의 영향 뉴스 칼럼으로 대체할 수 있음
+   - **개선 세션** (그 외 모든 정기 세션: 매일 06·18시, 화·목·토·일 00시. 2026-11-01부터): 새 글 대신 기존 글·허브·내부 링크·색인 문제를 고침 ([개선 세션](#개선-세션)). AdSense 재신청 전까지 [콘텐츠 정리](clusters.md#콘텐츠-정리-2026-11-01)가 1순위
+   - 2026-11-01 이전의 06시 뉴스 세션(화제 → 영향 → 클러스터 글 대체)은 폐지
 4. **브리프**: 주제가 정해지면 쓰기 전에 `tests/{slug}/factcheck.md` 맨 위에 브리프를 씀 ([writing-guide.md](writing-guide.md#작성-전-브리프): 클러스터·역할, 주 검색어·하위 검색어, 검색 의도, 상위 결과 유형과 빈틈, 차별점, 내부 링크 계획, 소제목 개요)
 5. **조사·검증**: 공식 문서·릴리스 노트·가격 페이지를 직접 열어 확인, 가능한 것은 컨테이너에서 실행
 6. **작성**: [writing-guide.md](writing-guide.md) 기준 (트래픽 노하우는 [traffic-playbook.md](traffic-playbook.md)). 대표 이미지는 [tools/hero_image.py](tools/hero_image.py)로 생성해 본문 첫 줄에 넣고, 본문 이미지 3장 이상. 생성 준비(`hero_image.py --setup`, 약 10GB 다운로드·빌드)는 세션 시작 직후 백그라운드로 돌려 두고, 생성(1장 약 47분)은 속도 측정과 겹치지 않게 돌림. 브리프의 내부 링크 계획대로 새 글 → 허브·같은 클러스터 글, 이미 색인된 같은 클러스터 글 → 새 글 링크를 넣고 [clusters.md](clusters.md) 표에 새 글을 추가
 7. **검증**: `pnpm --filter @jinho-blog/ad-blog lint`, `test`, `build` 통과 + 빌드 결과 HTML에서 제목·메타·JSON-LD 확인 + `link_audit.py --only-problems`에 새 글 문제가 없음
 8. **배포**: 작업 브랜치에 커밋 → 푸시 → PR → CI 통과 후 머지. 배포가 끝나면 IndexNow 워크플로우가 직전 배포 이후 추가·수정·삭제된 글 URL을 자동 제출 (Actions의 `IndexNow` 실행 로그에서 제출 대상 확인)
-9. **기록**: log.md에 세션 기록, backlog.md·clusters.md 갱신, 검증 자료는 [tests/](tests/README.md)에 보관, 새로 알게 된 규칙은 writing-guide.md에 반영, 지표 개선 작업은 traffic-playbook.md 검증 기록에 추가
+9. **기록**: log.md에 세션 기록, backlog.md·clusters.md 갱신, 사용자 할 일이 생기거나 끝나면 [user-todos.md](user-todos.md) 갱신(대시보드 맨 위 '내가 할 일'. log.md '다음 할 일'의 **사용자:** 줄과 내용을 맞춤), 검증 자료는 [tests/](tests/README.md)에 보관, 새로 알게 된 규칙은 writing-guide.md에 반영, 지표 개선 작업은 traffic-playbook.md 검증 기록에 추가
 10. **대시보드 갱신**: log.md 기록 후 [운영 대시보드](#운영-대시보드) 데이터를 갱신 (주소 고정, 새 아티팩트 만들지 않음)
 
 ### 개선 세션
 
-18시 세션은 새 글보다 이미 쓴 글의 성과를 올리는 데 씁니다 (2026-10-22 사용자 결정). 아래 순서로 할 일을 고르고, 세션당 1~3개를 끝냅니다. 한 글에는 한 번에 한 가지 변경만 하고, 지표를 노린 변경은 [검증 기록](traffic-playbook.md#검증-기록)에 행을 추가합니다 (같은 글은 이전 변경 판정이 끝난 뒤에. 역링크 1문장 추가는 기록 대상 아님).
+개선 세션은 새 글보다 이미 쓴 글의 성과를 올리는 데 씁니다 (2026-10-22 사용자 결정, 2026-10-24 하루 2회, 2026-11-01 월·수·금 00시를 뺀 모든 정기 세션). 할 일 선택과 방법은 Claude가 자율로 정하되, 혼자 판단하기보다 **널리 쓰이는 SEO 스킬을 먼저 적용**합니다 (2026-10-24 사용자 결정, 아래 [SEO 스킬](#seo-플러그인-searchfit-seo)). 아래 순서로 할 일을 고르고, 세션당 1~3개를 끝냅니다. 같은 날 여러 개선 세션은 서로 다른 글을 다룹니다 (앞 세션 기록을 읽고 이어서). 한 글에는 한 번에 한 가지 변경만 하고, 지표를 노린 변경은 [검증 기록](traffic-playbook.md#검증-기록)에 행을 추가합니다 (같은 글은 이전 변경 판정이 끝난 뒤에. 역링크 1문장 추가는 기록 대상 아님).
 
-1. **색인**: `URL is unknown`이 3일 넘은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 문맥에 맞는 링크 1개 추가. 사용자에게 Search Console 색인 요청이 필요한 URL은 log.md '다음 할 일'에 적음 (API로는 요청할 수 없음)
+0. **콘텐츠 정리** (2026-11-01, AdSense 재신청 전까지 최우선): [clusters.md](clusters.md#콘텐츠-정리-2026-11-01) 목록의 위에서부터 세션당 1건 (통합 1건 또는 전환 1편). 목록이 끝나면 1번부터
+1. **색인**: `URL is unknown`이 3일 넘은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 문맥에 맞는 링크 1개 추가. 사용자 색인 요청은 당분간 하지 않음([결정사항](#결정사항) 색인 요청, 2026-11-05) → '다음 할 일'에 색인 요청 URL을 올리지 않고, 오래 발견되지 않은 글은 실제 갱신거리가 있을 때 고쳐 피드·sitemap으로 다시 알림 (API로는 요청할 수 없음). 링크를 더 넣기 전에 `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/link_seen.py`로 Google이 마지막으로 크롤링한 판에 그 링크가 있었는지 확인 (링크한 글이 다시 크롤링되기 전에는 링크를 늘려도 발견 경로가 되지 않음, 2026-10-26)
 2. **링크 점검**: `link_audit.py` 문제 해결 (허브 누락 링크, 받는 링크 2개 미만, 칼럼 → 상시 글 링크 없음, 비슷한 태그 정리)
 3. **허브**: 상시 글 3편 이상인데 허브가 없는 클러스터 → 허브 글 작성 (이 세션의 새 글 1편으로 셈). 있는 허브는 새 상시 글을 반영해 갱신
 4. **Search Console 기반 보강** ([writing-guide.md](writing-guide.md#발행-후-개선)): 노출 100회 이상인데 CTR이 낮은 글의 제목·설명, 8~20위 검색어를 다루는 소제목·FAQ, 예상하지 못한 검색어는 backlog 후보로
 5. **뉴스 칼럼 후속**: 시행일·마감일이 지났거나 후속 발표가 있는 칼럼을 같은 글에 반영 (`updatedAt`)
-6. **반복 일정**: Chrome 안정판·Windows 월간 업데이트 후 관련 글 메뉴·버전 재확인
-7. 고칠 것이 없으면 우선순위 1·2 클러스터의 공백 글 1편을 일반 세션 절차대로 씀
+6. **반복 일정**: Chrome 안정판·Windows 월간 업데이트 후 관련 글 메뉴·버전 재확인. 일정이 없는 앱(GIMP·LibreOffice·PDFsam·Sejda·NAPS2·ExifCleaner 등)과 브라우저의 새 판은 `python3 -I apps/ad-blog/experiment/tools/app_versions.py --only-outdated`로 찾음 (2026-11-08 세션 89: 글 22편·앱 13개 중 9개 앱이 새 판). 새 판이 있으면 릴리스 노트로 글 내용과 관련 있는지 보고, 같은 시나리오로 다시 시험해 결과를 같은 글에 반영 (V 판정 중인 글·RSS 피드 구성을 바꾸면 안 되는 기간의 피드 밖 글은 그 뒤에)
+7. 고칠 것이 없으면 새 글을 쓰지 않고 아래 중 하나 (2026-10-24 변경. 이전: 공백 글 1편)
+   - **문제 찾기**: `seo-audit` 스킬로 사이트·최근 글을 점검해 노출·색인·클릭을 막는 문제를 찾고 고치거나 log.md에 기록. 글끼리 같은 문장이 반복되는지는 `tools/dup_check.py` (2026-11-04 기준: 2편 이상 반복 문장 9개, 글별 겹침 최대 11.4%), 날짜가 지나 낡은 미래형·상대 시점 문장("will"·"this week")은 `tools/stale_check.py` (2026-11-05 기준 걸린 28문장 중 고칠 것 5편 6문장, 일정이 지난 뒤 다시 실행), 본문 외부 링크(공식 문서·릴리스 노트)가 깨졌거나 다른 문서로 옮겨졌는지는 `tools/extlink_check.py --only-problems` (2026-11-07 세션 87 기준: 고유 URL 419개 중 깨짐·찾을 수 없음 0, 이동 39 → 문서가 옮겨진 13개를 새 주소로 바꿈. 짧은 주소(Apple `guide/…/{ID}`·Microsoft `help/{KB}`·로그인·쿠키 리디렉트)는 그대로 둠. 컨테이너에서 확인 불가 52개 중 Meta 도움말 13개는 curl에 400이라 Chromium으로 따로 확인, 한 달에 한 번 정도 다시 실행)
+   - **대시보드 개선**: 최신 데이터로 판단할 때 부족했던 화면을 [운영 대시보드](#운영-대시보드) 절차대로 고침 (`dashboard_check.cjs` 통과 후 발행)
+   - **DB 구조 개선**: 가설·노하우를 지표로 판정하는 데 필요한 값을 `dashboard_data.py`가 쌓도록 `stats`·`history` 구조를 고침 (예: 회차별 URL 검사 `lastCrawl`로 크롤링 시점 추적). 기존 history는 고치지 않음
 
-log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용·검증 기록 ID를 표로 남깁니다.
+log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용·검증 기록 ID와 **쓴 스킬**을 표로 남깁니다.
 
 ### SEO 플러그인 (searchfit-seo)
 
@@ -168,6 +195,18 @@ log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용�
 | 클러스터 재평가 (월 1회, 개선 세션) | `searchfit-seo:keyword-clustering`, `searchfit-seo:content-strategy` | Search Console 검색어·자동완성으로 클러스터·우선순위([clusters.md](clusters.md)) 재평가 |
 | 주간 SEO 점검 | `searchfit-seo:technical-seo`, `searchfit-seo:seo-audit`, `searchfit-seo:internal-linking`, `searchfit-seo:ai-visibility` | [주간 SEO 점검](#주간-seo-점검) |
 
+**저장소에 받아 둔 스킬** (2026-10-24, 모든 세션에서 쓸 수 있음): 계정 플러그인은 정기 세션에 로드되지 않을 때가 많아, 널리 쓰이는 공개 스킬 모음 [marketingskills](https://github.com/coreyhaines31/marketingskills)(MIT)에서 SEO 스킬 4개를 `.claude/skills/`에 넣었습니다. 출처·포함 파일·우리 규칙과의 우선순위는 [.claude/skills/MARKETINGSKILLS.md](../../../.claude/skills/MARKETINGSKILLS.md). 개선 세션은 작업에 맞는 스킬을 Skill 도구로 불러 그 절차를 따르고(우리 규칙과 다르면 우리 규칙), searchfit-seo가 있으면 함께 씁니다.
+
+| 개선 작업 | 스킬 |
+| --- | --- |
+| 8~20위 글 보강, CTR 낮은 글 제목·설명 | `seo-audit` (references/rankings-push.md·title-tags.md) |
+| 기존 글 갱신 범위 정하기 (상위 결과 대비 빠진 소제목), AI 문체 점검 | `copy-editing` (references/content-refresh.md) |
+| AI 답변 인용 구조 | `ai-seo` |
+| 외부 링크 후보·공유 문안 (사용자에게 제안만, 후보·초안·게시 기록은 [outreach.md](outreach.md)) | `link-building` |
+| 색인·기술 점검, 문제 찾기 | `seo-audit` |
+
+더 좋은 스킬이 필요하면 개선 세션에서 받아 올 수 있습니다: 널리 쓰이는 출처(스타 수·사용처 확인)에서 받아 **전체를 읽고** 커밋을 고정해 `.claude/skills/`에 넣고 MARKETINGSKILLS.md 같은 출처 문서를 남김. 내용을 읽지 않은 파일은 넣지 않음
+
 ### 주간 SEO 점검
 
 별도 정기 실행 "주간 SEO 점검"(매주 월요일 08:45 한국 시간)이 searchfit-seo 플러그인 스킬로 사이트를 점검하고, 글·코드는 고치지 않은 채 결과를 log.md에 기록합니다 (2026-10-22 사용자 결정). 정기 세션은 매번 새 컨테이너라 저장소 문서만 읽으므로, 보고를 log.md에 남겨야 다음 개선 세션이 이어받습니다.
@@ -175,25 +214,30 @@ log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용�
 - 대상: `main`에 배포된 사이트(`https://tool-proof.com`)와 지난 7일간 `main`에 머지된 글·코드
 - 점검 (스킬이 없으면 같은 항목을 직접 확인)
   - `searchfit-seo:technical-seo`: robots.txt·sitemap(발행 글 수와 `<loc>` 수 일치, `lastmod`)·canonical·상태 코드·[삭제 글 리디렉트](clusters.md#규칙)(`vercel.json` 원본이 308로 대상 글에 도착)·HTTP→HTTPS·www 리디렉트·noindex 누락
-  - `searchfit-seo:seo-audit`: 지난 7일 새 글·수정 글의 제목 길이·꼬리표 금지, 설명 140~160자, h1 1개, 대표 이미지에서 만든 OG 이미지, BlogPosting·BreadcrumbList JSON-LD, 이미지 alt
+  - `searchfit-seo:seo-audit`: 지난 7일 새 글·수정 글의 제목 길이·꼬리표 금지, 설명 140~160자, h1 1개, 대표 이미지에서 만든 OG 이미지, BlogPosting·BreadcrumbList JSON-LD, 이미지 alt. 지난 7일 새 글·수정 글의 외부 링크는 `tools/extlink_check.py --slug {slug} --only-problems`
   - `searchfit-seo:internal-linking` + `link_audit.py`: 허브 필요 클러스터, 받는 링크 2개 미만 글, 칼럼 → 상시 글 링크
   - `searchfit-seo:ai-visibility`: 지난 7일 새 글이 AI 답변에 인용되기 쉬운 구조인지 (소제목 첫 문장이 답, 측정값이 조건과 함께 한 문장, 비교는 표, 제품 이름·버전을 정확히) — [writing-guide.md](writing-guide.md#ai-답변-인용) 기준
   - Search Console(`gsc_report.py`, 서비스 계정 키가 있을 때): 7일 전 대비 노출·클릭·색인 편수, 새로 10위 안에 든 검색어, `URL is unknown` 7일 이상 글
-- 기록: log.md 맨 위에 `## {날짜} · 주간 SEO 점검` 섹션 (심각도 치명·높음·보통별 문제 + 대상 URL + 다음 개선 세션 할 일 우선순위 3개 + 사용자가 할 일). 이 섹션만 담은 PR을 만들어 CI 통과 후 머지 (글·코드·다른 문서는 수정하지 않음)
+- 기록: log.md 맨 위에 `## {날짜} · 주간 SEO 점검` 섹션 (심각도 치명·높음·보통별 문제 + 대상 URL + 다음 개선 세션 할 일 우선순위 3개 + 사용자가 할 일. 색인 요청 URL은 2026-11-05부터 당분간 올리지 않음). 이 섹션만 담은 PR을 만들어 CI 통과 후 머지 (글·코드·다른 문서는 수정하지 않음)
 - 개선 세션은 가장 최근 주간 점검의 우선순위 목록을 [개선 세션](#개선-세션) 1~6번보다 먼저 확인하고, 처리한 항목을 세션 기록에 적음
 
 ## 운영 대시보드
 
 - 주소: **https://claude.ai/artifact/4nL6tkJXzL4YQd2FXis8Cb** (claude.ai 아티팩트, 비공개. 공유는 사용자가 Share 메뉴에서). **이 주소를 항상 유지**: 새 아티팩트를 만들지 않고, 페이지를 고칠 때도 `Artifact` publish에 `url`로 이 주소를 넘김 (다른 세션에서 `url` 없이 발행하면 새 주소가 생김). 삭제 금지
 - 페이지 원본: [dashboard/index.html](dashboard/index.html). 데이터는 아티팩트 DB(`db` 기능, 읽기 `view`·쓰기 `admin`)의 `stats` 컬렉션에 있고 로그인한 사람에게는 페이지가 실시간으로 읽음. **비로그인 방문자**는 DB를 읽을 수 없어(플랫폼 규칙) 아티팩트 파일 `data.js`(마지막 세션 기준 스냅숏)를 보여 줌. **`data.js`는 정기 세션에서 자동으로 올리지 않음** (2026-10-16 사용자 결정: 대시보드가 링크 공개 상태라 정기 실행의 재게시는 권한 분류기가 매번 거부함). 비로그인 화면은 사용자가 요청한 대화형 세션에서만 갱신
-- `stats` 문서: `summary`(갱신 시각·28일 합계·사이트맵), `daily-YYYY-MM`(달마다 날짜별 지표, 확정/미확정 표시), `posts`(글별 메타·단어 수·태그·28일 지표·검색어 상위 10·날짜별 노출·색인 상세(크롤러·표준 URL) + `otherPages`: 홈·카테고리 등 글 외 페이지, 글별 표 합계를 사이트 전체 KPI와 맞추기 위함), `breakdown`(28일 기기·국가·검색 유형별 지표, 사이트 검색어 상위 20), `experiments`(traffic-playbook 검증 기록), `knowhow`(traffic-playbook 노하우 상태), `sessions`(log.md 세션 제목)
-- 세션마다 갱신 절차 (log.md·traffic-playbook.md를 고친 뒤). 정기 세션도 매번 이 절차를 시도하고, 권한 분류기 등에 막히면 5번대로 기록 (2026-10-17 사용자 결정: "루틴 규칙 그대로")
-  1. `ArtifactData` `list` (`url` 위 주소, `collection: "stats"`)로 문서별 `version` 확인
-  2. `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --out /tmp/dashboard --versions '{"summary": N, "posts": N, "breakdown": N, "experiments": N, "knowhow": N, "sessions": N, "daily-2026-10": N}'` (1에서 본 버전. 새 달 문서처럼 처음 만드는 문서는 빼면 새로 생성)
-  3. `/tmp/dashboard/writes.json` 내용을 `ArtifactData` `batch`의 `writes`로 그대로 전달 (버전이 어긋나면 아무것도 쓰이지 않음 → 1부터 다시)
-  4. (정기 세션에서는 건너뜀, 사용자가 요청한 대화형 세션에서만) 비로그인 열람용 스냅숏: `/tmp/dashboard/data.js`를 스크래치패드로 복사한 뒤 `Artifact` publish (`file_path` 페이지 원본, `url` 위 주소, `files: {"data.js": "<복사한 경로>"}`, `capabilities` 생략). 파일 원본은 작업 디렉터리나 스크래치패드 안에 있어야 함
-  5. 실패하면 log.md '다음 할 일'에 기록 (대시보드 갱신은 글 발행을 막지 않음)
-- 페이지 구성을 바꿀 때: `dashboard/index.html` 수정 → `Artifact` publish (`file_path` 원본, `url` 위 주소, `capabilities`는 생략해 기존 접근 규칙 유지) → 같은 PR로 커밋
+- 화면 구성: **내가 할 일**(맨 위, 2026-11-08 사용자 요청: [user-todos.md](user-todos.md) '할 일' 표의 필수·선택 항목과 방법·링크, 저장소 문서 링크는 GitHub 주소로. 할 일이 있으면 왼쪽 파란 줄, 없으면 '지금 할 일 없음'. AdSense 재신청 조건을 모두 채우면 자동으로 맨 앞에 **AdSense 재신청**, 아니면 머리줄에 '아직 아님 (조건 N/3)') → 요약 지표(28일 합계 + 최근 7일 vs 직전 7일 증감. 실시간 DB 값이 12시간 넘게 갱신되지 않으면 경고) → [목표 지표](#목표-지표-2026-10-22)(현재 값·진행률)·AdSense 재신청 조건 3개(운영 일수·색인율·주간 클릭 연속 증가와 최근 확정 주 클릭, 2026-11-03)와 개선 세션 할 일([개선 세션](#개선-세션) 1~4번 대상: 색인 대기·받는 링크 부족·허브 필요·8~20위 검색어·CTR 낮은 글) → 날짜별 추이 → 경과일별 누적 노출(상시 글·허브 vs 영향 칼럼 vs 화제 칼럼, 같은 경과일끼리 중앙값 비교 + H5 줄: 유형별 D+28 도달 편수·중앙값. [가설](#가설) H1·H4·H5 판단 근거. 칼럼은 발행 때 유형 `newsType`으로 나누고, 그 칸이 없는 옛 스냅숏은 칼럼 1계열. 2026-11-06부터 H3 줄: 검증 유형별 8주 도달·비교 가능 편수와 1~4주 → 5~8주 순위 변화 중앙값, H6 줄: 롱테일·상위 검색어 글의 D+28 도달 편수와 누적 노출·1~4주 순위 중앙값)과 검색어 순위 변화(최근 7일 vs 직전 7일: 오른·내린·처음 노출된 검색어) → 클러스터별 현황 → 글별 표(정렬·클러스터/색인 거르기, 할 일에서 글을 누르면 그 글 상세로 이동) → 검색 유형·기기·국가 → 검색어·검증 기록·노하우·세션 기록. 개선 세션은 할 일 목록을 출발점으로 쓸 수 있음 (판단은 README 기준)
+- `stats` 문서: `summary`(갱신 시각·28일 합계·`userTodos`(user-todos.md '할 일' 표 행 `{kind, task, how, since, session}`, `task`·`how`는 글자·링크 조각 목록, 2026-11-08 회차부터)·사이트맵(`sitemap` = `/sitemap.xml`, 11-04까지 회차는 API 첫 항목인 `rss.xml` 값이었음. `sitemaps` = 제출한 사이트맵·피드 전부의 마지막 다운로드·오류, 2026-11-05 회차부터)·`linkAudit`(link_audit.py 문제 항목별 건수)·`goals`(목표 지표 표 + 현재 값)·`crawl`(색인된 페이지 중 가장 최근 크롤링, 홈·카테고리 첫 페이지별 마지막 크롤링, 색인 안 된 글 수와 그중 Google이 본 링크가 있는 글 수. 2026-10-26 회차부터. `inFeed`·`unindexedInFeed` = URL 검사 `sitemap` 칸에 `rss.xml`이 있는 글 수 전체·미색인, 2026-11-05 회차부터)·`adsense`(AdSense 재신청 조건: 운영 일수·색인율·월~일 주별 클릭·노출과 확정 여부·클릭 연속 증가 주 수·조건별 충족. `gsc_report.py`와 같은 계산, 2026-11-03 회차부터)), `daily-YYYY-MM`(달마다 날짜별 지표, 확정/미확정 표시), `posts`(글별 메타·단어 수·태그·클러스터(clusters.md의 ID·역할·우선순위, 미지정이면 null)·칼럼 유형(`newsType` `화제`·`영향`·null: 발행 때 사실 확인표 값이라 상시 글로 전환해도 유지, 가설 H5 판정용. 칼럼인데 못 찾으면 `dashboard_data.py`가 경고. 2026-11-05 회차부터)·검증 유형(`verifyType` `검증형`·`일부`·`조사형`, `verifyTypeSince` 발행 뒤 유형이 바뀐 날짜: 사실 확인표 '검증 유형' 줄, 가설 H3 판정용. 못 찾으면 경고. 2026-11-06 회차부터)·주별 순위(`weeks`: 발행 1주부터 7일을 다 채운 주의 웹 노출·노출 가중 평균 순위, 최대 12주, H3. 2026-11-06 회차부터)·주 검색어(`keyword`: 사실 확인표 '주 검색어 (가설 H6)' 줄의 검색어 + `dashboard/keyword-trends.json`의 Trends 상대량·롱테일/상위, H6. 2026-11-06 세션 85 회차부터)·받는 링크(링크하는 글 slug)·발행일부터 날짜별 누적 노출(최대 D+28)·최근 7일 vs 직전 7일 순위·28일 지표(웹 검색)·유입 경로(검색 유형별 28일 노출·클릭)·검색어 상위 10·날짜별 노출·색인 상세(크롤러·표준 URL·`sitemaps` Google이 그 글을 확인한 사이트맵·피드·`referring` Google이 아는 링크 페이지. 뒤의 둘은 2026-11-05 회차부터, [V7](traffic-playbook.md#검증-기록) 판정용)·색인 시점 3가지(`indexedAt` 처음 PASS로 확인한 회차 시각, `firstCrawlAt` 그때의 마지막 크롤링, `firstImpressionAt` 첫 노출일. Search Console은 색인 날짜를 주지 않아 처음 본 값을 고정하고 다음 회차가 이어받음. 2026-11-04부터 저장소 [dashboard/first-seen.json](dashboard/first-seen.json)에 보관. 2026-10-24 이전 색인 17편은 log.md URL 검사 기록의 세션 날짜로 소급)·Google이 본 링크(색인 안 된 글만 `seenLinks`: Google이 마지막으로 크롤링한 판의 홈·카테고리·색인된 글에서 이 글로 가던 링크, `firstSeenLinkAt`: 그 링크를 처음 본 크롤링 시각을 고정해 색인 뒤에도 유지 → `indexedAt`과 비교해 [노하우 9](traffic-playbook.md#9-클러스터-링크로-새-글을-빨리-발견시킨다) 판정. `tools/link_seen.py`와 같은 계산, 2026-10-26 회차부터)·발견 경로 첫 관측값(`discoveredAt` URL 검사가 처음 `URL is unknown`이 아닌 회차 시각 — 그보다 이른 크롤링이 있으면 그 시각, `discoveredVia` 그 회차의 사이트맵·피드 칸, `feedSeenAt`·`sitemapSeenAt` 칸에 rss.xml·sitemap.xml이 처음 보인 회차, `crawledAt` 처음 본 크롤링(색인 여부와 무관). 회차마다 흔들려도 처음 본 값을 고정, first-seen.json에 보관. `posts`의 `discoverySince`(기록 시작 회차)보다 이른 값은 log.md 세션 81·85 기록으로 소급한 상한. [V7](traffic-playbook.md#검증-기록)·노하우 9 판정에서 큰 history 문서를 읽지 않고 발견 → 크롤링 → 색인 간격을 봄, 2026-11-07 세션 88 회차부터) + `otherPages`: 홈·카테고리 등 글 외 페이지, 글별 표 합계를 사이트 전체 KPI와 맞추기 위함), `breakdown`(28일 기기·국가·검색 유형별 지표, 사이트 검색어 상위 20, `movers`: 최근 7일 vs 직전 7일 검색어 순위 변화), `traffic`(Cloudflare Web Analytics 실제 조회수: 28일 합계·날짜별 조회수·방문(UTC 날짜)·유입 사이트 상위 10. CF 환경변수가 있을 때만 만들고, 이때 `posts`·`otherPages`에도 28일 `views`·`visits`와 날짜별 `views`·`visits`가 붙음. 없거나 조회에 실패하면 조회수 없이 갱신하고 화면은 조회수 칸을 숨김), `engagement`(GA4 사이트 전체 참여 지표: 28일 조회·사용자·세션·참여 세션·참여 시간 합(초)·90% 스크롤과 날짜별 값(한국 날짜). [tools/ga_analytics.py](tools/ga_analytics.py)가 Search Console과 같은 서비스 계정 키로 읽고, 이때 `posts`·`otherPages`에도 28일 `engagement`가 붙음. 실패하면 없이 갱신. 화면 표시는 데이터가 쌓인 뒤 추가. 2026-11-05 회차부터), `experiments`(traffic-playbook 검증 기록), `knowhow`(traffic-playbook 노하우 상태), `sessions`(log.md 세션 제목)
+- **기록 (`history` 컬렉션)**: 데이터는 덮어쓰지 않고 모두 기록 (2026-10-23 사용자 결정). `stats`는 화면이 읽는 최신 값이고, 갱신할 때마다 같은 내용을 `history`에 회차별 새 문서 `{summary.updatedAt}_{문서 ID}`(`{runAt, doc, data}`)로 함께 만듦. history 문서는 고치거나 지우지 않음 (`if_version` 없이 만들기만 하므로 같은 ID가 있으면 서버가 거부). 2026-10-23T11:02:37Z 회차부터 기록 (그 전 값은 덮어써져 없음)
+  - 한도: 문서 하나 256 KiB(`posts`가 가장 큼, 글 36편에서 약 67 KiB), batch 한 번 1 MiB·50개, DB 문서 25,000개(회차당 7개 → 하루 4회면 약 2년 반). 한도에 가까워지면 지우지 말고 log.md '다음 할 일'에 적어 사용자에게 알림
+- 세션마다 갱신 절차 (log.md·traffic-playbook.md를 고친 뒤). 정기 세션도 매번 이 절차를 시도하고, 권한 분류기 등에 막히면 4번대로 기록 (2026-10-17 사용자 결정: "루틴 규칙 그대로")
+  1. `/tmp/gsc/bin/python -I apps/ad-blog/experiment/tools/dashboard_data.py --out {스크래치패드}/dashboard` — DB를 읽지 않음. 글별 첫 관측값(`indexedAt`·`firstCrawlAt`·`firstImpressionAt`·`firstSeenLinkAt`·발견 경로 5개)은 저장소 [dashboard/first-seen.json](dashboard/first-seen.json)에서 읽고 이번 회차 값으로 다시 씀, 문서 버전은 [dashboard/versions.json](dashboard/versions.json)(지난 batch 뒤 버전)을 `if_version`으로 씀. 새 달 문서처럼 처음 만드는 문서는 버전 없이 새로 생성. `--out`은 스크래치패드 안 (`/tmp` 경로의 `file_path`는 정기 실행에서 승인 필요로 거부됨, 2026-10-24 세션 46)
+  2. `{out}/writes.json` 내용을 `ArtifactData` `batch`의 `writes`로 전달 (`stats` 갱신 + `history` 기록이 한 번에 적용됨). 성공하면 `{out}/versions-after.json`(문서마다 버전 +1, 결과에 나온 버전과 같은지 확인)을 `dashboard/versions.json`으로 복사하고, `first-seen.json`과 함께 그 세션 PR에 커밋
+     - 버전이 어긋나 거부되면(사용자가 대화형 세션에서 따로 쓴 경우 등) 아무것도 쓰이지 않고 오류가 그 문서의 현재 버전을 알려 줌 → `versions.json`의 그 값을 고치고 1부터 다시. 여러 문서의 현재 버전을 한꺼번에 알아야 하면 문서마다 `update`(`if_version: 1`, `data: {"_versionProbe": {"__delete__": true}}`)를 보내 거부 메시지의 버전을 읽음 (버전이 맞지 않으면 쓰지 않음, 세션 79)
+     - history 문서가 이미 있다는 거부는 같은 회차를 두 번 보낸 것 → 1을 다시 실행해 새 회차로 보냄, history를 고치거나 지우지 않음
+     - 2026-11-04 세션 79까지는 `ArtifactData list`의 `out_dir`로 `stats` 문서를 파일로 받아 `--prev`로 넘겼으나, "다른 사람이 썼을 수 있는 문서는 파일로 저장하지 않음"으로 거부되기 시작해(사용자가 허용해도 같음) 이 방식으로 바꿈 (사용자 결정). 이전할 때 `posts` v75의 첫 관측값 53편을 대화로 읽어 `first-seen.json`에 옮김. `--prev`는 선택으로 남김(주면 두 값 중 이른 값)
+  3. (정기 세션에서는 건너뜀, 사용자가 요청한 대화형 세션에서만) 비로그인 열람용 스냅숏: `{out}/data.js`로 `Artifact` publish (`file_path` 페이지 원본, `url` 위 주소, `files: {"data.js": "<복사한 경로>"}`, `capabilities` 생략). 파일 원본은 작업 디렉터리나 스크래치패드 안에 있어야 함
+  4. 실패하면 log.md '다음 할 일'에 기록 (대시보드 갱신은 글 발행을 막지 않음)
+- 페이지 구성을 바꿀 때: `dashboard/index.html` 수정 → `node apps/ad-blog/experiment/tools/dashboard_check.cjs --data {out}/stats` (갱신 절차 1의 출력 `stats` 폴더 또는 `{out}/data.js`. Chromium으로 열어 스크립트 오류·빈 화면·글별 표 줄 수·모바일 가로 넘침 확인, 문제가 있으면 발행하지 않음. 스크립트가 문법 오류로 멈춰도 발행은 성공하고 화면만 "데이터 불러오는 중"에 머묾) → `Artifact` publish (`file_path` 원본, `url` 위 주소, `capabilities`는 생략해 기존 접근 규칙 유지) → 같은 PR로 커밋
 - 폰트: Pretendard 1.3.9 가변 폰트(OFL-1.1)를 아티팩트 파일 `fonts/PretendardVariable.woff2`로 함께 발행 (저장소에는 넣지 않음). 페이지만 다시 발행할 때는 `files`를 생략하면 기존 폰트 파일이 유지됨. 폰트를 바꿀 때만 `files`로 다시 올림 (`https://cdn.jsdelivr.net/npm/pretendard@1.3.9/dist/web/variable/woff2/PretendardVariable.woff2`)
 
 ## 기록 원칙
@@ -208,14 +252,16 @@ log.md 세션 제목에는 `개선 세션`을 적고, 바꾼 글·바꾼 내용�
 | --- | -------------------------------------------------------------------------- | ------------------------------------------- | ------ |
 | H1  | 출시 2주 이내 주제의 사용법·문제 해결 글이 신규 도메인에서도 노출을 얻는다 | 발행 4주 후 글별 노출·평균 순위             | 대기   |
 | H2  | 제목에 정확한 오류 메시지·기능명을 넣은 글이 CTR이 높다                    | 같은 기간 글별 CTR 비교                     | 대기   |
-| H3  | 직접 실행 결과(측정값·스크린샷)가 있는 글이 순위가 더 오래 유지된다        | 발행 8주 후 검증형 vs 조사형 글의 순위 변화 | 대기   |
+| H3  | 직접 실행 결과(측정값·스크린샷)가 있는 글이 순위가 더 오래 유지된다        | 발행 8주 후 검증형 vs 조사형 글의 순위 변화: 글마다 발행 1~4주(D+0~27)와 5~8주(D+28~55)의 노출 가중 평균 웹 순위 차이(앞 − 뒤, + = 오름). 두 구간 노출이 각 10회 이상인 글만 세고, 유형별 5편 이상이면 중앙값 비교 → 검증형이 조사형보다 2위 이상 나으면 지지, 2위 이상 나쁘면 기각, 그 사이는 차이 없음 (노출 부족이면 4주씩 미뤄 최대 12주 데이터까지). 유형은 사실 확인표 '검증 유형' 줄(검증형·일부·조사형, [writing-guide.md](writing-guide.md#작성-전-브리프)) — 대시보드 `posts` `verifyType`·`verifyTypeSince`, 주별 순위 `weeks`, 경과일별 누적 노출 패널의 'H3' 줄 (2026-11-06 세션 84부터). 8주 안에 유형이 바뀐 글은 빼고, 8주 안에 다른 변경([검증 기록](traffic-playbook.md#검증-기록) V)이 있었던 글과 뉴스 칼럼 여부는 판정 때 표시. '일부'는 따로 적고 검증형에 넣은 값도 함께 계산 | 대기 (11-06: 검증형 25·일부 4·조사형 25편, 8주 도달 0. 지금까지 노출 10회 이상은 검증형 9·조사형 5·일부 1편이고 **조사형 5편은 모두 10-19~20 색인된 뉴스 칼럼, 검증형 9편은 모두 상시 글·허브** → 유형과 칼럼 여부가 겹침. 노출이 있는 글끼리 8주 끝(D+55)이 5편째 모이는 날은 검증형 12-09(`image-to-text-offline-free`는 유형이 바뀌어 제외)·조사형 12-13 → Search Console 집계가 따라오는 12-15 무렵 개선 세션이 첫 판정 시도) |
 | H4  | 영향 분석 뉴스 칼럼이 신규 도메인에서도 Discover 또는 검색 노출을 얻는다 | 칼럼 발행 4주 후 글별 Discover·웹 노출: `gsc_report.py --compare /posts/{slug} --changed {발행일} --metric impressions --type discover`(웹은 `--type web`)의 변경 후 값. 사이트 전체 Discover는 대시보드 검색 유형별 지표 | 대기 (2026-10-22 중간: 칼럼 12편 Discover 0, 웹 약 50회 → 하루 1편으로 줄임) |
-| H5  | 영향이 오래 가는 뉴스 칼럼이 화제 뉴스 칼럼보다 발행 4주 누적 노출이 많다 | 유형별 5편 이상 쌓인 뒤 4주 누적 노출 중앙값 비교 (2026-10-22부터 06시 세션의 화제 → 영향 대체로 두 유형이 계속 쌓임) | 대기   |
-| H6  | 주 검색어가 구체적인 롱테일(제품·기능 + 동작·조건)인 글이 상위 검색어 글보다 발행 4주 노출이 많고 순위가 높다 | 글별 주 검색어의 Trends 상대량(같은 기준 키워드 `remove background`)이 5 미만이면 롱테일, 5 이상이면 상위로 나눠, 각 5편 이상 쌓인 뒤 발행 후 28일 노출·평균 순위 중앙값 비교 (2026-10-22 추가, 주제 선정 기준 3번의 근거) | 대기   |
+| H5  | 영향이 오래 가는 뉴스 칼럼이 화제 뉴스 칼럼보다 발행 4주 누적 노출이 많다 | 유형별 5편 이상이 발행 4주(D+28)에 도달하면 D+28 누적 웹 노출 중앙값 비교. 유형은 발행 때 사실 확인표(`tests/{slug}/factcheck.md`의 '뉴스 유형')의 값 — 대시보드 `posts` `newsType`, 경과일별 누적 노출 그래프의 영향·화제 계열과 'H5' 줄 (2026-11-05 세션 82부터). 콘텐츠 정리로 상시 글로 전환해도 발행 때 유형으로 세고, D+28 전에 전환·통합한 글은 판정 때 표시. 화제 칼럼은 2026-11-01 중단이라 10편에서 더 늘지 않음 | 대기 (11-05 중간: 화제 10·영향 8편, D+28 도달 0/5·0/5. 5편째 도달은 영향 11-17·화제 11-18(Search Console 날짜) → 11-20 무렵 개선 세션이 판정. D+14 중앙값 영향 4회(6편)·화제 19회(5편)이나 미색인 칼럼은 모두 노출 0이라 유형보다 색인 여부 차이가 큼 → 판정 때 색인 칼럼끼리(11-05 화제 3·영향 3편)도 함께 비교) |
+| H6  | 주 검색어가 구체적인 롱테일(제품·기능 + 동작·조건)인 글이 상위 검색어 글보다 발행 4주 노출이 많고 순위가 높다 | 글별 주 검색어의 Trends 상대량(같은 기준 키워드 `remove background`)이 5 미만이면 롱테일, 5 이상이면 상위로 나눠, 각 5편 이상 쌓인 뒤 발행 후 28일 노출·평균 순위 중앙값 비교 (2026-10-22 추가, 주제 선정 기준 3번의 근거). 2026-11-06 세션 85부터: 주 검색어는 사실 확인표 '주 검색어 (가설 H6)' 줄(브리프 주 검색어, 브리프가 없던 10-11 발행 4편은 backlog 핵심 키워드), 상대량은 [tools/keyword_trends.py](tools/keyword_trends.py)가 같은 날 같은 조건(미국 최근 3개월, 기준 `remove background` 최고점 = 100, 4개씩)으로 잰 값([dashboard/keyword-trends.json](dashboard/keyword-trends.json)) — 대시보드 `posts` `keyword`, 경과일별 누적 노출 패널 'H6' 줄. 노출 = D+28 누적 웹 노출(`firstDays`), 순위 = 발행 1~4주 노출 가중 평균(`weeks`, 노출 있는 글만). 노출·순위 둘 다 롱테일이 기준(노출 1.2배·순위 2위, [검증 기록 판정 기준](traffic-playbook.md#판정-기준)과 같음) 이상 나으면 지지, 둘 다 상위가 나으면 기각, 엇갈리거나 차이가 작으면 차이 없음. 판정 때 색인 여부·칼럼 여부를 함께 적고 색인된 글끼리도 비교 | 대기 (11-06: 롱테일 48·상위 6편 — 상위는 `jpg to pdf`·`pdf to jpg` 12.1(같은 요청에서 평균·최고·최근 값이 똑같음: Trends가 따옴표 없는 검색어의 단어 순서를 구분하지 않는 것으로 보임)·`turn off ai` 11.0(허브)·`gemini free` 10.2(칼럼)·`image to text` 10.1·`heic to jpg` 8.0. 경계 근처 `compress pdf` 4.55·`ios 27.2` 3.95는 롱테일, 나머지 롱테일 46편은 0~2.7. D+28 도달 0. 5편째 도달은 롱테일 11-10·상위 11-18 → Search Console 집계가 따라오는 11-21 무렵 개선 세션이 첫 판정. 상위 6편 중 색인 3편(`image-to-text-offline-free`·`convert-heic-to-jpg-free`·`jpg-to-pdf-free`)이라 H5처럼 색인 여부가 섞임) |
 
 ### 목표 지표 (2026-10-22)
 
 content-strategy 스킬의 성공 지표를 우리 상황에 맞춰 정했습니다. 매 세션 지표 확인 때 함께 보고, 개선 세션의 할 일 우선순위를 정할 때 씁니다.
+
+[운영 대시보드](#운영-대시보드)의 목표 지표 패널이 이 표를 읽어 현재 값을 계산합니다 (`dashboard_data.py`). 목표를 바꿀 때는 제목의 날짜, 열 4개(`지표 | 현재 (MM-DD) | 목표 (MM-DD) | 확인`) 형식을 유지하고, 지표 이름에 `색인율`·`28일 노출`·`10위 안`·`허브`·`받는 링크` 중 하나를 넣어야 현재 값이 채워집니다 (새 지표는 `dashboard_data.py`의 `GOAL_KEYS`에 계산을 추가).
 
 | 지표 | 현재 (10-22) | 목표 (11-30) | 확인 |
 | --- | --- | --- | --- |
@@ -233,11 +279,13 @@ content-strategy 스킬의 성공 지표를 우리 상황에 맞춰 정했습니
 | Search Console                | 등록·API 설정됨 | 2026-10-11 도메인 속성 확인·sitemap 제출·글 3편 색인 요청. 서비스 계정(제한된 권한) 키를 환경변수 `GSC_SERVICE_ACCOUNT_JSON_B64`로 등록, API 도메인 허용. 조회는 [tools/gsc_report.py](tools/gsc_report.py) |
 | Bing Webmaster Tools·IndexNow | 설정됨 | 2026-10-12 사용자가 Bing Webmaster Tools 등록. 2026-10-14부터 프로덕션 배포마다 바뀐 글 URL 자동 제출 ([indexnow.yml](../../../.github/workflows/indexnow.yml), [scripts/indexnow.ts](../scripts/indexnow.ts)), Actions에서 수동 실행 시 sitemap 전체 제출. 키 파일 `public/{key}.txt` = `scripts/lib/indexnow.ts`의 `INDEXNOW_KEY`. Bing Webmaster Tools API(키워드 검색량 `GetKeywordStats` 포함)는 지원 종료 → 검색량 조회에 쓰지 않음 (2026-10-14 사용자 확인) |
 | Google Trends 접근            | 허용됨    | 2026-10-11 사용자가 허용 도메인에 추가 (새 세션부터 적용). 미국 급상승 검색어: `https://trends.google.com/trending/rss?geo=US`. 2026-10-14 상대 검색량·관련 검색어 API를 쿠키 방식으로 사용 ([tools/trends_compare.py](tools/trends_compare.py)) |
-| 컨테이너 네트워크             | 일부 허용 | 2026-10-11 세션 2 확인: npm·PyPI·GitHub(Releases 다운로드)·trends.google.com·microsoft.com·support.microsoft.com·learn.microsoft.com·support.google.com·apple.com·huggingface.co·tool-proof.com 접속 가능. help.openai.com·api.github.com은 403. 2026-10-12 세션 3: raw.githubusercontent.com·k2-fsa.github.io·download.pytorch.org·en.wikipedia.org 가능, github.com HTML 페이지·소스 zip은 차단. 2026-10-13 세션 4: huggingface.co 데이터셋 parquet 다운로드 가능, Playwright(Python)+`/opt/pw-browsers/chromium-1194`로 로컬 웹 화면 스크린샷 가능. 2026-10-14 세션 6: huggingface.co GGUF 다운로드 가능, `github.com/.../releases/latest`는 403(태그를 모르면 Releases 다운로드 불가) → PyPI `llama-cpp-python` 소스 빌드로 llama.cpp 실행. 2026-10-15 세션 8: download.documentfoundation.org(LibreOffice 최신 deb)·archive.ubuntu.com(apt) 가능, download.calibre-ebook.com은 TLS 오류. 2026-10-16 세션 9: download.gimp.org(AppImage)·xnview.com(deb)·imagemagick.org(→ GitHub Releases 고정 태그 AppImage)·apps.microsoft.com·Hugging Face `Spawning/PD12M` + `pd12m.s3.us-west-2.amazonaws.com` 가능, Wikimedia Commons API·upload.wikimedia.org는 429. Xvfb+xdotool로 GUI 앱 조작·스크린샷 가능. 2026-10-16 세션 10: 태그를 아는 GitHub Releases 다운로드 가능(`ghostpdl-downloads/releases/download/gs10080/…tar.gz`, `qpdf/releases/download/v12.4.2/…zip`), archive.ubuntu.com 최신 deb는 glibc 2.43 필요라 사용 불가 → Ghostscript는 소스 빌드. 2026-10-16 세션 12: dl.flathub.org(flatpak 런타임)·download.blender.org·support.discord.com Zendesk API(`/api/v2/help_center/…`) 가능, support.discord.com 일반 페이지 403, trac.ffmpeg.org는 Anubis 봇 차단. 2026-10-16 세션 13: storage.googleapis.com(libwebp 바이너리)·libjxl·jpegoptim GitHub Releases·download.gimp.org 가능, Google Trends API는 쿠키 방식도 429 반복(RSS는 가능) |
-| AdSense                       | 심사 중   | 2026-10-22 사용자 신청, 게시자 ID `ca-pub-8310707193208097`를 `src/core/config/internal/ads.ts`에 입력 → 확인 메타 태그·`ads.txt`·스크립트 출력. 사이트 확인은 `ads.txt` 방식 (스크립트는 hydration 후 삽입이라 정적 HTML에 없음). 승인 후 AdSense에서 자동 광고를 결정사항 설정대로 켜고 Privacy & messaging에서 EEA·영국 동의 메시지 켜기 (사용자, 코드 작업 없음) |
+| 컨테이너 네트워크             | 일부 허용 | 2026-10-11 세션 2 확인: npm·PyPI·GitHub(Releases 다운로드)·trends.google.com·microsoft.com·support.microsoft.com·learn.microsoft.com·support.google.com·apple.com·huggingface.co·tool-proof.com 접속 가능. help.openai.com·api.github.com은 403. 2026-10-12 세션 3: raw.githubusercontent.com·k2-fsa.github.io·download.pytorch.org·en.wikipedia.org 가능, github.com HTML 페이지·소스 zip은 차단. 2026-10-13 세션 4: huggingface.co 데이터셋 parquet 다운로드 가능, Playwright(Python)+`/opt/pw-browsers/chromium-1194`로 로컬 웹 화면 스크린샷 가능. 2026-10-14 세션 6: huggingface.co GGUF 다운로드 가능, `github.com/.../releases/latest`는 403(태그를 모르면 Releases 다운로드 불가) → PyPI `llama-cpp-python` 소스 빌드로 llama.cpp 실행. 2026-10-15 세션 8: download.documentfoundation.org(LibreOffice 최신 deb)·archive.ubuntu.com(apt) 가능, download.calibre-ebook.com은 TLS 오류. 2026-10-16 세션 9: download.gimp.org(AppImage)·xnview.com(deb)·imagemagick.org(→ GitHub Releases 고정 태그 AppImage)·apps.microsoft.com·Hugging Face `Spawning/PD12M` + `pd12m.s3.us-west-2.amazonaws.com` 가능, Wikimedia Commons API·upload.wikimedia.org는 429. Xvfb+xdotool로 GUI 앱 조작·스크린샷 가능. 2026-10-16 세션 10: 태그를 아는 GitHub Releases 다운로드 가능(`ghostpdl-downloads/releases/download/gs10080/…tar.gz`, `qpdf/releases/download/v12.4.2/…zip`), archive.ubuntu.com 최신 deb는 glibc 2.43 필요라 사용 불가 → Ghostscript는 소스 빌드. 2026-10-16 세션 12: dl.flathub.org(flatpak 런타임)·download.blender.org·support.discord.com Zendesk API(`/api/v2/help_center/…`) 가능, support.discord.com 일반 페이지 403, trac.ffmpeg.org는 Anubis 봇 차단. 2026-10-16 세션 13: storage.googleapis.com(libwebp 바이너리)·libjxl·jpegoptim GitHub Releases·download.gimp.org 가능, Google Trends API는 쿠키 방식도 429 반복(RSS는 가능). 2026-10-28 세션 62: download.mozilla.org·download-installer.cdn.mozilla.net(Firefox 정식판 tar.xz)·archive.mozilla.org(Firefox for Android APK)·product-details.mozilla.org·firefox.com·blog.mozilla.org 가능, support.mozilla.org는 curl·Chromium·WebFetch 모두 "Client Challenge"로 막힘. 2026-10-29 세션 63: dl.google.com(Google Chrome 안정판 deb, `dpkg-deb -x`로 풀어 Xvfb 실행)·chromiumdash.appspot.com 가능. support.google.com의 `?p=` 단축 링크는 curl로 도움말 홈만 열림. 2026-10-29 세션 65: Adobe Inspect(`inspect.cr` → contentauthenticity.adobe.com/inspect, "Browse files" 파일 선택으로 업로드)·CAI Verify(verify.contentauthenticity.org) 파일 업로드 결과를 Playwright로 캡처 가능, synthid.com은 headless Chromium에서 빈 화면, openai.com/research/verify는 403. 2026-10-30 세션 67: support.microsoft.com KB 문서(접힌 `<details>` 단락은 Playwright로 `summary`를 눌러 캡처)·learn.microsoft.com release health·blogs.windows.com 가능, techcommunity.microsoft.com(Windows IT Pro Blog)은 curl·headless Chromium 모두 "The request is blocked". 2026-10-30 세션 69: packages.microsoft.com(Microsoft Edge 안정판 deb, `dpkg-deb -x`로 풀어 Xvfb 실행)·support.microsoft.com/edge/copilot·explore.microsoft.com·blogs.windows.com/msedgedev·learn.microsoft.com/deployedge(릴리스 노트·일정·정책) 가능. 2026-11-02 세션 71: duckduckgo.com 홈·`/settings`·도움말, noai.duckduckgo.com(가끔 연결이 끊겨 재시도), duck.ai, chromewebstore.google.com 상세 페이지, addons.mozilla.org(상세 페이지·`/firefox/downloads/latest/…/latest.xpi`) 가능. **DuckDuckGo 검색 결과 페이지(`/?q=`)는 자동화 브라우저에 418 오류 페이지** → 봇 차단은 우회하지 않음(우회 시도는 권한 분류기도 거부). Playwright 기본 headless(headless shell)는 `chrome://settings`를 못 열고, `channel: 'chromium'` + `launchPersistentContext`면 열림. 2026-11-04 세션 77: brave-browser-apt-release.s3.brave.com(Brave 안정판 deb·`Packages` 목록, `dpkg-deb -x`로 풀어 Xvfb 실행)·versions.brave.com·brave.com 가능, search.brave.com은 curl 429지만 Brave 창에서 설정·검색 1회 가능(두 번째 검색 429 + 봇 확인 → 우회 안 함), support.brave.app(Brave 도움말 센터)은 curl·Chromium·WebFetch 모두 Cloudflare 확인 화면·403. 2026-11-04 세션 78: storage.googleapis.com/chrome-for-testing-public(Chrome for Testing zip, 안정판 deb보다 먼저 올라옴)·versionhistory.googleapis.com(플랫폼별 안정판 버전)·chromereleases.googleblog.com 가능. Chrome for Testing은 일부 문구가 Chromium 표기("Chromium understands forms…", "Password Manager")라 화면 이름 비교에만 쓰고 브랜드 문구는 인용하지 않음. 2026-11-06 KST 세션 83: **www.google.com/search는 headless Chromium에서도 첫 요청부터 'unusual traffic' 확인 화면(/sorry)** → Google 검색 결과 화면은 직접 검증 불가(우회 안 함). web.archive.org(Wayback, `archive.org/wayback/available`)는 429. support.google.com 도움말은 curl `?hl=en`(플랫폼 탭은 `&co=GENIE.Platform%3DAndroid`)과 Chromium 렌더링 모두 가능, samsung.com/us/support 가능. 2026-11-07 KST 세션 86: whattrainisitnow.com(Mozilla 릴리스 일정 API)·packages.microsoft.com Edge 157 deb 가능. Python Playwright는 컨테이너에 없어 venv에 설치하고 `executable_path`로 `/opt/pw-browsers/chromium-1243/chrome-linux64/chrome`을 씀. 2026-11-07 KST 세션 87 (`extlink_check.py`): knowledge.workspace.google.com(Google Workspace 관리자 도움말의 새 주소, `support.google.com/a/answer/…`가 여기로 리디렉트)·support.spotify.com·samsung.com/us/support 가능. **help.instagram.com·facebook.com/privacy·faq.whatsapp.com은 curl(브라우저 User-Agent여도)에 400 "Error"지만 Node Playwright Chromium으로는 열림**. resources.arc.net·support.discord.com·canva.com은 Chromium도 Cloudflare 'Just a moment' 403, pypi.org는 Client Challenge. 2026-11-08 KST 세션 89 (`app_versions.py`): gimp.org(`gimp_versions.json`·뉴스)·download.documentfoundation.org 목록·pdfsam.org·sejda.com(`desktop-release-notes`)·xnview.com·handbrake.fr·naps2.com·flathub.org API(`/api/v2/appstream/{앱 ID}`)·versions.brave.com·brave.com/latest·product-details.mozilla.org 가능, 태그를 아는 GitHub Releases 파일(NAPS2 8.6.0 deb·ExifCleaner AppImage HEAD)과 raw.githubusercontent.com `CHANGELOG.md`·`package.json` 가능, **wiki.documentfoundation.org(LibreOffice 릴리스 노트·버그 목록)는 Anubis 봇 확인 화면** → 열지 않음. NAPS2 8.6.0 deb는 `dpkg -i`로 설치해 Xvfb에서 실행, Brave 1.99.55 deb는 `dpkg-deb -x` |
+| AdSense                       | 거절 (재신청 대기) | 2026-10-22 사용자 신청, 게시자 ID `ca-pub-8310707193208097`를 `src/core/config/internal/ads.ts`에 입력 → 확인 메타 태그·`ads.txt`·스크립트 출력. 사이트 확인은 `ads.txt` 방식 (스크립트는 hydration 후 삽입이라 정적 HTML에 없음). **2026-11-01 사용자 확인: "가치가 별로 없는 콘텐츠"로 거절** ([분석](#adsense-거절-분석-2026-11-01)). 게시자 ID·`ads.txt`·스크립트는 재심사에 필요하므로 그대로 둠. 재신청은 [결정사항](#결정사항) 조건 충족 후 사용자가 AdSense > 사이트에서. 승인 후 AdSense에서 자동 광고를 결정사항 설정대로 켜고 Privacy & messaging에서 EEA·영국 동의 메시지 켜기 (사용자, 코드 작업 없음) |
 | 이미지 생성                   | 설정됨    | 2026-10-22 [tools/hero_image.py](tools/hero_image.py): Z-Image-Turbo(Apache-2.0, `leejet/Z-Image-Turbo-GGUF` Q8_0 + `unsloth/Qwen3-4B-Instruct-2507-GGUF` Q6_K + `Comfy-Org/z_image_turbo` VAE)를 stable-diffusion.cpp(`master-987-a77d362`, github.com git clone)로 CPU 실행. 키·비용 없음. 필요 네트워크: github.com(git clone)·huggingface.co. 4코어·15GB에서 1280×720 1장 약 47분(8단계), 메모리는 `--vae-tiling`으로 15GB 안. Gemini·OpenAI 이미지 API는 무료 등급이 없어 쓰지 않음 (사용자 결정) |
+| Cloudflare Web Analytics      | 측정 중 (API는 키 등록 필요) | 2026-10-25 광고 블로그에 비컨 추가(실제 페이지뷰, 쿠키 없음). 대시보드 조회수는 [tools/cf_analytics.py](tools/cf_analytics.py)가 GraphQL API로 읽음: 환경변수 `CF_API_TOKEN`(권한 Account → Account Analytics → Read)·`CF_ACCOUNT_ID` 필요(선택 `CF_SITE_TAG`), 네트워크 허용 도메인 `api.cloudflare.com` |
+| Google Analytics 4            | 측정 중 (API 연결됨) | 2026-11-05 광고 블로그에 gtag.js 추가(측정 ID `G-GMRVKRVMHS`, `src/core/config/internal/analytics.ts`). 참여 시간·90% 스크롤·페이지뷰(향상된 측정). EEA·영국·스위스는 consent mode 기본값 거부(`wait_for_update` 500ms) → 동의 전 분석 쿠키 없음. AdSense 동의 메시지(개인정보 보호 및 메시지 > 유럽 규정)에서 "분석 목적 동의 모드"를 켜면 같은 동의를 읽음 (사용자). 2026-11-05 사용자가 GCP 프로젝트에서 Google Analytics Data API를 켜고 Search Console 서비스 계정을 GA4 속성(ID `486901575`) 뷰어로 추가 → [tools/ga_analytics.py](tools/ga_analytics.py)(같은 키, 범위 `analytics.readonly`, 새 환경변수 없음)로 사이트 전체·경로별 참여 시간·90% 스크롤을 읽고 대시보드 `engagement`에 기록. Admin API는 꺼져 있음(필요 없음). Data API 할당량은 표준 속성 하루 20만 토큰(요청 1건 보통 10토큰 미만), 컨테이너에서 `analyticsdata.googleapis.com` 접속 가능 |
 | 운영 대시보드                 | 설정됨    | 2026-10-14 생성: https://claude.ai/artifact/4nL6tkJXzL4YQd2FXis8Cb ([운영 대시보드](#운영-대시보드)). 세션마다 데이터 갱신 |
-| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": 매일 00:00·06:00·12:00·18:00 (한국 시간), 세션 유형(06 뉴스·18 개선·00·12 일반)은 시작 시각으로 구분, 매번 새 세션. 2026-10-22 프롬프트를 개편 전략(클러스터·브리프·개선 세션·searchfit-seo 스킬)으로 갱신. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |
+| 정기 실행                     | 설정됨    | Routine "ToolProof 정기 글 작성": cron `CRON_TZ=Asia/Seoul 0 0,6,18 * * *`(매일 00:00·06:00·18:00 한국 시간, 12시 실행 없음), 세션 유형은 시작 시각·요일로 구분, 매번 새 세션. **2026-11-01 프롬프트를 주 3편 일정(월·수·금 00시 일반, 나머지 개선, 콘텐츠 정리 1순위, AdSense 재신청 조건 점검)으로 갱신**. 커넥터 없이 생성됨 → GitHub 도구 접근이 안 되면 claude.ai Routines 화면에서 다시 생성 (사용자) |
 | 주간 SEO 점검                 | 설정됨    | Routine "주간 SEO 점검": 매주 월요일 08:45 (한국 시간, cron `45 23 * * 0` UTC), 같은 세션에 이어서 실행. 2026-10-22 searchfit-seo 스킬로 점검하고 log.md에 보고 섹션만 PR로 기록하는 새 프롬프트를 준비함 ([주간 SEO 점검](#주간-seo-점검)). 루틴 프롬프트는 루틴이 게시하는 스레드에서만 바꿀 수 있어 그 스레드에서 적용 필요 (사용자) |
 | SEO 플러그인                  | 설치됨    | 2026-10-22 사용자가 searchfit-seo 설치. 스킬 이름 `searchfit-seo:{content-strategy, content-brief, seo-check, seo-audit, technical-seo, internal-linking, on-page-seo, keyword-clustering, ai-visibility, schema-markup}` ([SEO 플러그인](#seo-플러그인-searchfit-seo)) |
-| 리디렉트                      | 설정됨    | 2026-10-22 삭제 글 7개 URL → 같은 주제 글 308(`apps/ad-blog/vercel.json`, 테스트 `scripts/lib/vercel-redirects.test.ts`). `video-to-gif-high-quality-free`는 대체 글이 없어 404. `www.tool-proof.com`은 2026-10-22 Vercel 도메인 설정(`ad-blog` 프로젝트 Domains에 www 추가, Redirect to Another Domain 308 → `tool-proof.com`)으로 307 → 308 (확인 완료) |
+| 리디렉트                      | 설정됨    | 2026-10-22 삭제 글 7개 URL → 같은 주제 글 308(`apps/ad-blog/vercel.json`, 테스트 `scripts/lib/vercel-redirects.test.ts`). 2026-11-02 콘텐츠 정리 통합 1개 추가(`google-phone-number-verification` → `remove-phone-number-from-google-account`), 2026-11-04 1개 추가(`chrome-enhanced-autofill-gmail` → `chrome-autofill-settings`, 모두 9개). `video-to-gif-high-quality-free`는 대체 글이 없어 404. `www.tool-proof.com`은 2026-10-22 Vercel 도메인 설정(`ad-blog` 프로젝트 Domains에 www 추가, Redirect to Another Domain 308 → `tool-proof.com`)으로 307 → 308 (확인 완료) |

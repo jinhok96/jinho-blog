@@ -1,0 +1,134 @@
+# 가져온 시각: 2026-10-26T21:30:34.828Z
+# 원본: https://support.apple.com/en-us/128058
+How to download iOS 27 - Apple Support
+https://support.apple.com/en-us/128058
+
+How to download iOS 27
+
+Check if your iPhone supports iOS 27, then download and install the update automatically or manually.
+
+Before you update, back up your device to keep a copy of your important information.
+
+Check compatibility
+
+You'll see only updates compatible with your iPhone. If your iPhone is running an earlier version, install that update first.
+
+iOS 27 is compatible with iPhone models:
+
+iPhone Duo
+
+iPhone 18 Pro Max
+
+iPhone 18 Pro
+
+iPhone 17
+
+iPhone 17 Pro
+
+iPhone 17 Pro Max
+
+iPhone 17e
+
+iPhone Air
+
+iPhone 16e
+
+iPhone 16
+
+iPhone 16 Plus
+
+iPhone 16 Pro
+
+iPhone 16 Pro Max
+
+iPhone 15
+
+iPhone 15 Plus
+
+iPhone 15 Pro
+
+iPhone 15 Pro Max
+
+iPhone 14
+
+iPhone 14 Plus
+
+iPhone 14 Pro
+
+iPhone 14 Pro Max
+
+iPhone 13
+
+iPhone 13 mini
+
+iPhone 13 Pro
+
+iPhone 13 Pro Max
+
+iPhone 12
+
+iPhone 12 mini
+
+iPhone 12 Pro
+
+iPhone 12 Pro Max
+
+iPhone 11
+
+iPhone 11 Pro
+
+iPhone 11 Pro Max
+
+iPhone SE (2nd generation and later)
+
+Learn what's new in iOS 27.
+
+Turn on automatic updates
+
+You can set up your iPhone to install updates automatically:
+
+Open Settings.
+
+Tap General.
+
+Tap Software Update.
+
+Tap Automatic Updates.
+
+Choose Automatically Install or Automatically Download.
+
+Automatically Install: Your iPhone downloads and installs updates overnight when it's charging and connected to Wi-Fi. You're notified before iPhone installs an update.
+
+Automatically Download: Your iPhone downloads updates over Wi-Fi while it's charging and locked. You can then install them at your convenience. To see this option, first turn off Automatically Install.
+
+Update iPhone manually
+
+At any time, you can check for and install software updates:
+
+Open Settings.
+
+Tap General.
+
+Tap Software Update.
+
+If an update is available, tap Download and Install.
+
+Follow the onscreen instructions.
+
+Install the software update
+
+If an update is already downloaded but not installed:
+
+Open Settings.
+
+Tap Update to iOS 27.
+
+Tap Update Now or Update Tonight.
+
+Follow the onscreen instructions.
+
+View more details
+
+The More Details section shows the version number and update details.
+
+Published Date: October 22, 2026

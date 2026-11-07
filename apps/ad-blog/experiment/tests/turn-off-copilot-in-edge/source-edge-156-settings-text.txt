@@ -1,0 +1,61 @@
+# Microsoft Edge 156.0.4314.56 (Linux, 새 프로필·로그아웃) 설정 화면 글자와 스위치 기본값, 2026-10-30 16:2x UTC
+
+## edge://settings/ai
+| Thank you | What do you like about Copilot? | I like the Copilot new tab page | I like that I can chat with Copilot about my open tabs | I like that Copilot uses browsing history to personalize responses | I like that Copilot can perform tasks on the web for me | Other | Thank you | What don't you like about Copilot? | I don't like the Copilot new tab page | The Copilot new tab page takes too long to load | Copilot isn't accurate when answering questions about my open tabs | I don't like that Copilot personalizes responses with my browsing history | Copilot is too slow or unreliable when performing actions for me | Other | Are you finding Copilot features helpful? | Copilot and AI | Sign in to use Copilot in Edge | Unlock all Copilot features in Edge when you sign in. | Sign in | Copilot in Edge | Learn more | Show Copilot button in toolbar | Quickly open Copilot whenever you need it. | Allow Copilot to read context clues on the web | Copilot may give better answers based on the current webpage, browser history, or your preferences in Microsoft Edge. | Learn more | Copilot new tab page | Search, explore the web, and chat with Copilot from one search box in the new tab page. | Allow Cowork to take actions on your behalf | Cowork may perform tasks such as creating tabs, taking screenshots, and interact with web pages. | Copilot settings | Manage your history, privacy and personalization settings. | Manage settings | Copilot in Edge Preview | Copilot in Edge Preview | Get priority access to new Copilot features before they're available broadly. If you opt out, any features that were turned on will stay on and need to be turned off individually. | Learn more & join
+
+스위치 기본값:
+- Show Copilot button in toolbar: On
+- Allow Copilot to read context clues on the web: Off
+- Copilot new tab page: Off
+- Allow Cowork to take actions on your behalf: Off
+
+## edge://settings/appearance
+| Thank you | Tell us what you like | I like the colors | I like the images | I like the dark/light/system modes | I like the AI theme generator | Other | Thank you | Tell us why you're not satisfied | I don't like the colors | I don't like the images | Dark/light/system appearance modes don't work as expected | AI theme generator doesn't work properly | I can’t find wallpapers/image themes | Other | Are you satisfied with these appearance options? | Appearance | Page zoom | Home button | Tabs | Bookmarks | Overall appearance | Applies to new tabs, pages, dialogs and other menus | GTK | Light | Dark | Theme | Color theme | Image theme | Restore default | No image selected | Refresh daily | No image | Upload image | Explore more themes | AI Theme Generator | New | Personalize your browser with AI-generated themes | Install themes from Edge Add-ons store | Browse more themes specifically made for Edge | Page colors | Page colors | Make sites easier to read by modifying the colors you see on pages | System | System | Off | Dusk | Desert | Night Sky | Aquatic | White | Only apply page colors when high contrast is on | Specify sites | List of sites that are excluded from page colors | Other appearance settings | Page zoom | Default zoom level for all sites. To see zoom levels for certain sites, go to | Zoom levels | 100% | 25% | 33% | 50% | 67% | 75% | 80% | 90% | 100% | 110% | 125% | 150% | 175% | 200% | 250% | 300% | 400% | 500% | Touch mode | Increases the size of browser elements like buttons, tabs, and more. Optimized for use with touch | Auto (default) | Auto (default) | On | Off | Toolbar | Customize which buttons always show on your browser | Context menus | Manage right-click, hover, and mini menu settings | Browser behavior and features | Customize general browser behavior settings like asking before closing multiple tabs, mouse gesture, and split screen | Fonts | Customize fonts and font sizes | Tabs | Manage all tab settings like turning on vertical tabs and showing tab previews on hover
+
+스위치 기본값:
+- Only apply page colors when high contrast is on: Off
+
+## edge://settings/startHomeNTP
+| Start, home, and new tab page | On startup | Open the new tab page | Open tabs from the previous session | Open custom sites | Home button | Show home button on the toolbar | Set what the home button opens below: | New tab page | Copilot new tab page | Search, explore the web, and chat with Copilot from one search box in the new tab page. | Preload your new tab page | Opens new tab page in the background for a faster experience
+
+스위치 기본값:
+- Show home button on the toolbar: Off
+- Copilot new tab page: Off
+- Preload your new tab page: On
+
+## edge://settings/languages
+| Add | English (United States) | English | Offer to translate pages that aren't in a language I read | When this setting is on, Microsoft Edge detects the language on your webpage and offers to translate if the language detected is not listed under Preferred languages. The webpage text will be sent to Microsoft Translator service for translation, where the text is stored for service improvements. Learn more about how the Microsoft Translator service uses your data | Microsoft Privacy Statement | . | Writing assistance | Use writing assistance | Get help writing, rewriting, and refining text by hovering over the blinking cursor or selecting text in supported text fields. | Show writing hints | Occasionally show a blue dot on the blinking cursor to help you discover writing assistance. | Use text prediction | Thank you | Thank you | Why are predictions not helpful? | Not relevant | Don't sound like me | Offensive or rude | Too frequent | Use incorrect spelling/grammar | Other | Are you finding this feature helpful? | When this is on, typed characters in certain text boxes on the web are sent to Microsoft Cloud to provide text prediction services. | Learn more | Use grammar and spell-check assistance | Microsoft Editor (recommended) | Provides enhanced grammar, spelling, and style suggestions | Basic | Provides basic spellchecking assistance | Use synonyms for spelling suggestions | Writing assistance languages | Apply writing assistance to preferred languages | Customize dictionary | Share additional OS regional format | Share additional operating system region | Choose the level at which Microsoft Edge needs to share OS based regional format when it's different from the display language based region. | Limited (default) | Limited (default) | Always (not recommended) | Never
+
+스위치 기본값:
+- Offer to translate pages that aren't in a language I read: On
+- Use writing assistance: On
+- Show writing hints: On
+- Use text prediction: On
+- Use grammar and spell-check assistance: On
+- Use synonyms for spelling suggestions: Off
+
+## edge://settings/privacy/services
+| Privacy, search, and services | / | Search and connected experiences | Edge may use web services to improve your browsing experience | Use a web service to help resolve navigation errors | Suggest similar sites when a website can't be found | If a website can't be found, the web address will be sent to Microsoft to try to find the correct site | Save time and money with Shopping in Microsoft Edge | Microsoft Edge will help you find coupons, cashback, and other savings while you are shopping. In certain situations, we'll also find alternative product offers across the web. Microsoft will collect your browsing history and page content to improve the shopping experience provided by Microsoft products. | Let Microsoft Edge help keep your tabs organized | Get suggestions on how to organize your tabs and Workspaces so you can browse with ease. When turned on, Microsoft Edge uses tab details to generate suggestions. | Address bar and search | Manage search suggestions and search engine used in the address bar
+
+스위치 기본값:
+- Use a web service to help resolve navigation errors: On
+- Suggest similar sites when a website can't be found: On
+- Save time and money with Shopping in Microsoft Edge: On
+- Let Microsoft Edge help keep your tabs organized: On
+
+## edge://settings/accessibility
+| Accessibility | Visibility | Show a high visibility outline on the focused object | Page zoom | Default zoom level for all sites. To see zoom levels for certain sites, go to | Zoom levels | 100% | 25% | 33% | 50% | 67% | 75% | 80% | 90% | 100% | 110% | 125% | 150% | 175% | 200% | 250% | 300% | 400% | 500% | Page colors | Make sites easier to read by modifying the colors you see on pages | System | System | Off | Dusk | Desert | Night Sky | Aquatic | White | Only apply page colors when high contrast is on | Specify sites | List of sites that are excluded from page colors | Open caption preferences | Turn off custom scrollbars | Only default scrollbars will be available across all sites | Usability | Get image descriptions for screen readers | Ask before closing a window with multiple tabs | Ask before closing a window with pinned tabs | Show mini menu when selecting text | Show downloads menu when a download starts | Turning off this setting can make it harder to know when a file starts downloading | Swipe between pages | Navigate back and forward with a swipe gesture | Learn about accessibility features | Add accessibility actions within supported menus | Enable additional accessibility features within certain menus for enhanced navigation and control. | Keyboard | Navigate pages with a text cursor | To turn on or off caret browsing, press F7. | Learn more | Use F12 key to open the Developer tools | Learn about keyboard shortcuts
+
+스위치 기본값:
+- Show a high visibility outline on the focused object: Off
+- Only apply page colors when high contrast is on: Off
+- Turn off custom scrollbars: Off
+- Get image descriptions for screen readers: Off
+- Ask before closing a window with multiple tabs: Off
+- Ask before closing a window with pinned tabs: On
+- Show mini menu when selecting text: On
+- Show downloads menu when a download starts: On
+- Swipe between pages: On
+- Add accessibility actions within supported menus: Off
+- Navigate pages with a text cursor: Off
+- Use F12 key to open the Developer tools: On

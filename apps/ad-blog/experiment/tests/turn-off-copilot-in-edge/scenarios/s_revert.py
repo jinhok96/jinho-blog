@@ -1,0 +1,10 @@
+# 끈 Copilot 버튼을 다시 켜면 진입점이 돌아오는지
+exec(open("common.py").read())
+exec(open("probe.py").read())
+pg.goto("edge://settings/ai"); time.sleep(3)
+click_toggle(pg, "Show Copilot button in toolbar"); time.sleep(2)
+print("off", [(t['label'], t['checked'], t['disabled']) for t in toggles(pg)])
+pg.goto("edge://settings/ai"); time.sleep(3)
+click_toggle(pg, "Show Copilot button in toolbar"); time.sleep(2)
+print("on again", [(t['label'], t['checked'], t['disabled']) for t in toggles(pg)])
+probe("90")

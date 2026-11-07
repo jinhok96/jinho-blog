@@ -1,0 +1,307 @@
+Firefox 159.0, See All New Features, Updates and Fixes
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Get Firefox
+Get Firefox
+Firefox for mobile
+Get Firefox on your phone
+Menu
+Menu
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Release Notes
+Menu
+Desktop
+Enterprise
+Desktop Beta & Developer Edition
+Desktop Nightly
+Android
+iOS
+See what’s new in Firefox!
+Release Notes tell you what's new in Firefox. As always, we welcome your feedback. You can also file a bug in Bugzilla or see the system requirements of this release.
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Your system may not meet the requirements for Firefox, but you can try one of these versions:
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Firefox is no longer supported on Windows 8.1 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR 64-bit
+Download Firefox ESR 32-bit
+Download a different build
+Firefox is no longer supported on macOS 10.14 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download for Linux 64-bit
+Download for Linux ARM64
+Firefox for Android
+Firefox for iOS
+Firefox Privacy Notice
+159.0
+Firefox Release
+October 27, 2026
+Version 159.0, first offered to Release channel users on October 27, 2026
+Previous
+Firefox 158.0
+New
+Sharing on macOS now uses the native macOS share picker, which shows a preview of the page and recent contacts alongside AirDrop, Messages, and other apps. Several selected tabs can also be shared at once.
+Saved passwords are now available from the sidebar by default, without having to add the Passwords tool first.
+Smart Window can now watch pages for changes such as price drops or restocks. Type /watch in the chat to set one up, and Firefox sends a desktop notification when it finds a match. Watches can be managed from the Tasks button in the toolbar or the about:smartwindowtasks page.
+This feature is part of a progressive roll out.
+What is a progressive roll out?
+Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.
+Fixed
+Fixed the file upload dialog opening in the last folder a file was saved to, such as Downloads, instead of the folder last used for uploads.
+Fixed memory usage growing rapidly when sites such as the Zoom web app were left open in a minimized window.
+Fixed some videos displaying incorrectly on Windows when NVIDIA RTX Video HDR is enabled.
+Fixed bookmarks not being imported from Google Chrome profiles that are signed in to a Google account.
+Fixed the Replace button in Apple Writing Tools on macOS inserting the clipboard contents instead of the rewritten text on some sites, such as Gmail.
+Fixed long drop-down lists on web pages sometimes showing blank space in place of the last options until the list was scrolled.
+Fixed some sites, such as Slack, failing to load instead of falling back to HTTP/2 when the site rejected an HTTP/3 request.
+Fixed Firefox using excessive memory on Linux with AMD graphics when viewing map or place results on sites such as ChatGPT.
+Fixed quick gamepad button presses sometimes being missed in web games on macOS.
+Fixed tabs sometimes detaching into a new window when clicked on Linux with Wayland.
+Fixed menus and panels fading in on Windows and Linux when animation effects are turned off in the operating system.
+Various security fixes.
+Changed
+On macOS, apps that sign in through the default browser, such as ChatGPT, now open their sign-in page in Firefox instead of Safari when Firefox is the default browser.
+The AI chatbot's Summarize page option now sends the page's address to the chatbot provider instead of the page's text, so long pages are no longer cut short to a partial summary.
+Open tabs can now be searched with a keyboard shortcut: Ctrl+Shift+A on Windows and Linux, Cmd+Shift+A on macOS. The Extensions and Themes shortcut is now Ctrl+Shift+F on Windows and Linux, and Cmd+Shift+E on macOS. These shortcuts can be changed in about:keyboard.
+Web addresses written in the Javanese, Balinese, Canadian Aboriginal Syllabics, and N'Ko scripts are now displayed in their own script instead of as encoded "xn--" text.
+Enterprise
+For Firefox Enterprise updates and fixes, see the Firefox Enterprise release notes. For policy changes, see the Firefox admin docs changelog.
+Developer
+Developer Information
+The Web Console now allows let, const, and class variables to be declared again, so a snippet can be edited and re-run without a redeclaration error.
+Web Platform
+Firefox now supports scroll-driven animations, so CSS animations and Web Animations API animations can progress with the scroll position of a container or with an element's visibility as it scrolls into view. This adds the animation-timeline, scroll-timeline, view-timeline, and animation-range properties and the ScrollTimeline and ViewTimeline interfaces.
+Firefox now supports scoped custom element registries. A registry created with the CustomElementRegistry() constructor is separate from the global window.customElements registry, so custom elements that share a tag name can coexist on the same page.
+On compatible devices, WebGL now supports the EXT_clip_control and EXT_texture_mirror_clamp_to_edge extensions and WebGL 2 supports EXT_texture_norm16.
+The Sanitizer API now sanitizes HTML as it is parsed rather than afterwards, so custom element constructors no longer run for elements the sanitizer removes.
+Community Contributions
+With the release of Firefox 159, we are pleased to welcome the developers who contributed their first code change to Firefox in this release, 12 of whom were brand new volunteers! Please join us in thanking each of these diligent and enthusiastic individuals, and take a look at their contributions:
+Abhinav Singh: 2070629
+Atharva Wadodkar[:atharva]: 2070702
+corpus_e: 2070325
+csalinezh: 1970969
+Dmitry Gozman: 2076389
+eldjiikgull (EDS): 2076744
+Fabio: 1735401
+Feng Yu: 2073811
+Jaron: 2069726
+Jason Salerno: 2076831
+Lander Feldman: 2067952
+赤坂理子: 2044440
+Previous
+Firefox 158.0
+Get the most recent version
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Your system may not meet the requirements for Firefox, but you can try one of these versions:
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Firefox is no longer supported on Windows 8.1 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR 64-bit
+Download Firefox ESR 32-bit
+Download a different build
+Firefox is no longer supported on macOS 10.14 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download for Linux 64-bit
+Download for Linux ARM64
+Firefox for Android
+Firefox for iOS
+Firefox Privacy Notice
+Need help or want to leave feedback?
+File a bug
+Leave feedback
+Get Involved
+Did you know that most of the content in Firefox Support was written by volunteers?
+Find out more
+Other Resources
+Developer Information
+Complete list of changes for this release
+Press Kit
+Mozilla and Firefox News
+Firefox Extended Support Release
+All Firefox for Desktop Releases
+Learn more about Firefox
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Website Privacy Notice
+Terms of Use
+Cookie Policy
+Community Participation Guidelines
+Logo Trademark Licensing
+Help us improve your firefox.com experience
+In addition to Cookies necessary for this site to function, we’d like your permission to set some additional Cookies to better understand your browsing needs and improve your experience. Rest assured — we value your privacy.
+Accept All Additional Cookies
+Reject All Additional Cookies
+Cookie settings

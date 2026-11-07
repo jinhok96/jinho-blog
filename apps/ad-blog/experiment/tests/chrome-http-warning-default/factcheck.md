@@ -1,5 +1,8 @@
 # chrome-http-warning-default 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — Chrome 156(Linux)을 설치해 HTTP 경고 화면·설정을 직접 캡처(본문 'We installed Chrome 156'). 2026-11-04 Chrome 157 재확인
+- 주 검색어 (가설 H6): `chrome http warning` — 브리프 주 검색어
+
 - 주 검색어: `chrome http warning` / 하위: `always use secure connections`, `always use secure connections chrome on or off`, `chrome enhanced protection vs standard`, `chrome enhanced protection turn off`, `chrome insecure site warning`, `chrome disable http warning`
 - 채널: 피드형 (뉴스 칼럼)
 - 뉴스 유형: **화제** (06시 세션, 2026-10-22 06:15 KST 시작)
@@ -39,3 +42,20 @@
 - HTTP 경고 창은 페이지 밖 대화상자라 CDP 스크린샷에 안 잡힘 → X 화면 캡처(`import -window root`)와 xdotool 클릭 사용
 - HTTPS 업그레이드 시도가 컨테이너 프록시를 타지 않도록 `--proxy-bypass-list=*neverssl.com;*badssl.com`
 - 확인 못 한 것: suspicious site 경고·Gemini 검사·ClickFix 경고는 실제 악성 페이지가 필요해 재현하지 않음(문서 기반으로 명시). 사용자가 예전에 직접 끈 경우 기본값이 다시 켜지는지는 확인 안 함
+
+## Chrome 157 재확인 (2026-11-04 세션 79, 글은 아직 고치지 않음)
+
+반복 일정(Chrome 안정판). 글 91번째 줄의 "Chrome 157 on November 3, 2026" 확인 약속. 글 수정(`updatedAt`)은 V7 판정(늦어도 11-15) 뒤에 함 (RSS 순서가 V7 관찰과 섞이지 않게).
+
+| 항목 | Chrome 156.0.8078.47 (10-21) | Chrome 157.0.8103.38 (11-04) | 근거 |
+| --- | --- | --- | --- |
+| 설치본 | Linux 안정판 deb | Linux 안정판 deb(dl.google.com `google-chrome-stable_current_amd64.deb`, SHA-256 `a62b277d…edb629d`), versionhistory Linux 안정판 157.0.8103.38 | `chrome --version`, versionhistory API |
+| HTTP 경고 창 문구·버튼 | "This site doesn't support a secure connection", **Continue to site** / **Go back**(강조) | 같음 (글자·배치 그대로) | `c157-warning.png` ↔ `e1_warning.png` |
+| Continue 뒤 / 다시 방문 | 페이지 열림 / 경고 없음 | 같음 | `c157-check.json` `warn`, `c157-revisit.png` |
+| **새 프로필 첫 실행 스위치** | **꺼짐** → 다시 열면 켜짐(Warns you for insecure public sites) | **첫 실행부터 켜짐**(Warns you for insecure public sites) → 다시 열어도 켜짐 | `c157-first-launch-settings.png` ↔ `first-launch-settings.png`, `c157-check.json` `first`·`second` |
+| 같은 결과가 서버 설정(variations) 때문인지 | - | 아님: variations 서버 주소를 막은 새 프로필(`variations_failed_to_fetch_seed_streak` 1, 받은 seed 없음)도 첫 실행부터 켜짐 → 157 자체 기본값 | `c157-check.json` `first_no_variations_seed` |
+| Enhanced protection 펼친 설명(When on 4줄·Things to consider 3줄) | 캡처 | 글자 그대로 | `c157-check.json` `enhanced` ↔ `f1_enhanced.png` |
+| 도움말 10468685(Desktop)·9890866 | 10-21 사본 | 문장 차이 없음(페이지 ID 숫자만 다름) | curl 다시 받아 문장 비교 |
+
+- 글에 반영할 것 (V7 판정 뒤): 54번째 줄 "In a brand-new Chrome profile, the switch was off the first time…"에 157에서는 첫 실행부터 켜져 있었다는 문장 추가, 62번째 줄 "If it's off right after an update, restart Chrome once"는 156 기준으로 좁힘, 91번째 줄 157 확인 약속을 결과로 바꾸고 다음 확인을 Chrome 158(11-17)로, How we tested에 157 버전·날짜. 경고 창·Enhanced 설명은 바뀌지 않았으므로 이미지 교체 없음
+- 실행: `capture157.cjs`(Node Playwright, Chrome 직접 실행 + CDP, Xvfb `:99`, X 화면 캡처 `import`, Continue 클릭 `xdotool`). 단계 `first` → `second`(같은 프로필 재실행) → `warn` → `enhanced`. variations 차단 시험은 같은 스크립트에 `--variations-server-url=http://127.0.0.1:9/`·`--variations-insecure-server-url=http://127.0.0.1:9/`를 더해 새 프로필로 `first`만

@@ -1,0 +1,273 @@
+Perform quick actions in the Finder on Mac - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+ Mac User Guide
+ Select version:
+ macOS 27 Golden Gate
+ macOS Tahoe 26
+ macOS Sequoia 15
+ macOS Sonoma 14
+ macOS Ventura 13
+ macOS Monterey 12
+ macOS Big Sur 11.0
+ macOS Catalina 10.15
+ macOS Mojave 10.14
+Modifying this control will update this page automatically
+ Search this guide
+ Clear Search
+ Table of Contents
+Mac User Guide
+ Welcome
+ About your Mac model
+ MacBook Neo
+ MacBook Air
+ MacBook Pro
+ iMac
+ Mac mini
+ Mac Studio
+ What’s new in macOS 27
+ Find your way around your new Mac
+ Desktop, menu bar, and Dock
+ Quickly change settings with Control Center
+ Find what you need with Spotlight
+ Get notifications
+ Organize your files in the Finder
+ Adjust brightness and volume
+ Keyboard and trackpad
+ Get things done on a Mac
+ Browse the web
+ Preview a file
+ Take a screenshot
+ Print documents
+ Keyboard shortcuts
+ Download apps
+ Apps
+ Apps on your Mac
+ Open apps
+ Work with app windows
+ Tile app windows
+ Use apps in full screen
+ Use apps in Split View
+ Use Stage Manager
+ Get apps from the App Store
+ Install and reinstall apps from the App Store
+ Install and uninstall other apps
+ Files and folders
+ Create and work with documents
+ Open documents
+ Mark up files
+ Combine files into a PDF
+ Organize files on your desktop
+ Organize files with folders
+ Tag files and folders
+ Back up files
+ Restore files
+ Personalize your Mac
+ Change System Settings
+ Choose your desktop picture
+ Add and customize widgets
+ Use a screen saver
+ Add a user or group
+ Add your email and other accounts
+ Automate tasks with Shortcuts
+ Create Memoji
+ Change your login picture
+ Change the system language
+ Get to know Siri
+ Get started with Siri AI
+ Turn on and activate Siri
+ Find out what Siri can do
+ Find info and get things done
+ Use Siri to get answers from ChatGPT
+ Siri AI: Use the Siri app
+ Siri AI: Write with Siri
+ Siri AI: Ask Siri about what’s on your Mac screen
+ Customize Siri
+ Apple Intelligence
+ Introduction to Apple Intelligence 
+ Get started with Apple Intelligence
+ Use Apple Intelligence to stay organized and get things done
+ Use Apple Intelligence to express yourself creatively
+ Use Apple Intelligence to communicate with ease
+ Create original images with Image Playground
+ Create your own emoji with Genmoji
+ Use Writing Tools to write, improve, and summarize content
+ Turn on ChatGPT
+ Summarize notifications and reduce interruptions
+ Apple Intelligence and privacy
+ Turn off and restrict access to Apple Intelligence features
+ Use Apple devices together
+ Intro to Continuity
+ Use AirDrop to send items to nearby devices
+ Hand off tasks between devices
+ Control your iPhone from your Mac
+ Copy and paste between devices
+ Stream video and audio with AirPlay
+ Make and receive calls and text messages on your Mac
+ Use your iPhone internet connection with your Mac
+ Share your Wi-Fi password with another device
+ Use iPhone as a webcam
+ Insert sketches, photos, and scans from iPhone or iPad
+ Unlock your Mac with Apple Watch
+ Use your iPad as a second display
+ Use one keyboard and mouse to control Mac and iPad
+ Sync music, books, and more between devices
+ Screen Time
+ Get started with Screen Time
+ Set up Screen Time for yourself
+ Track app and device usage
+ Set schedules and Time Allowances with Screen Time
+ Block features or content with Screen Time
+ Apple Account and iCloud
+ Manage Apple Account settings
+ Set your Apple Account picture
+ What is iCloud?
+ What is iCloud+?
+ Store files in iCloud Drive
+ Share and collaborate on files and folders
+ Manage iCloud storage
+ Use iCloud Photos
+ Watch, play, and learn
+ Subscribe to Apple services
+ View your family subscriptions
+ Apple Music
+ Apple TV
+ Apple Arcade
+ Apple News+
+ Apple Podcasts
+ Manage subscriptions in the App Store
+ Play music
+ Watch and listen together with SharePlay
+ Listen to podcasts
+ Watch TV shows and movies
+ Read and listen to books
+ Read the news
+ Write in your journal
+ Track stocks and the market
+ Play games on your Mac
+ Family Sharing
+ Set up Family Sharing
+ Get Family Sharing recommendations
+ Add family members to a Family Sharing group
+ Remove family members from a Family Sharing group
+ Share a Photo Library
+ Collaborate on projects
+ Find content shared with you
+ Find your family and friends
+ Use accessories and hardware
+ Connect an external display
+ Use the camera
+ Connect a wireless accessory
+ Add and manage printers
+ Connect AirPods to your Mac
+ Optimize your Mac battery life
+ Optimize storage space
+ Burn CDs and DVDs
+ Control accessories in your home
+ Accessibility
+ Get started
+ General
+ Quickly turn accessibility features on or off
+ Turn on accessibility options in the login window
+ Use Accessibility settings while sharing screens
+ Vision
+ Accessibility features for vision
+ Get started with VoiceOver
+ Zoom in on what’s around you
+ Zoom in on your Mac screen
+ Increase font size and icons
+ Adjust the display colors
+ Hover to zoom in on text and colors
+ Listen to or change how text appears in apps
+ Customize onscreen motion
+ Increase the size of what’s on your screen
+ Make the pointer easier to see
+ Have your Mac speak text that’s on the screen
+ Hearing
+ Accessibility features for hearing
+ Get captions of spoken and computer audio
+ Use subtitles and closed captions
+ Set up and use RTT calling
+ Get notified when your name is called
+ Use hearing devices with your Mac
+ Play background sounds
+ Mobility
+ Accessibility features for mobility
+ Use Voice Control commands
+ Use the Accessibility Keyboard
+ Use Full Keyboard Access
+ Use Switch Control
+ Use head pointer
+ Use Dwell
+ Speech
+ Accessibility features for speech
+ Have what you type spoken out loud
+ Create a Personal Voice
+ Use Vocal Shortcuts
+ Change Siri settings for accessibility
+ Restart, update, reset, and restore
+ Shut down or restart your Mac
+ Start up your Mac in safe mode
+ Keep your Mac up to date
+ Reinstall macOS
+ Erase your Mac
+ Resources for your Mac
+ Privacy and security
+ Control what you share
+ Set up your Mac to be secure
+ Allow apps to see the location of your Mac
+ Use private browsing
+ Keep your data safe
+ Understand passwords
+ Change weak or compromised passwords
+ Protect email privacy in Mail
+ Use Sign in with Apple for apps and websites
+ Find a missing device
+ Copyright and trademarks
+ Resources for your Apple devices
+Perform quick actions in the Finder on Mac
+Quick actions help you perform certain tasks right from the Finder or your desktop, without opening an app. For example, you can create a PDF or rotate an image.
+The types of tasks available in the Quick Actions menu and at the bottom of the Preview pane depend on the file type and any enabled Finder (Quick Actions and Preview Pane) extensions.
+On your Mac, click in the Dock to open a Finder window.
+Select the file.
+Alternatively, you can select a file on your desktop.
+Control-click the file, then choose Quick Actions. Depending on the file type (options vary), you can do the following:
+Rotate an image or movie: Choose Rotate Left or press and hold the Option key, then choose Rotate Right. Repeat to continue rotating the item.
+Mark up a document or image: Choose Markup. The file opens in a Quick Look window, where you can use the markup tools to add notes, edit text, and more. See Mark up files.
+Trim a movie or audio file: Choose Trim, then drag the yellow handles in the trimming bar. To test your changes, click Play. You can start over by clicking Revert. When you’re ready to save your changes, click Done, then choose to replace the original file or create a new one.
+Create a PDF: Click More, choose Create PDF, then enter the name. To combine multiple files into a PDF, see Combine files into a PDF.
+Convert an image to another format or a smaller size: Click More, choose Convert Image, then choose a format and a size. For example, you can convert an .heic photo from your iPhone to a .jpeg or .png image.
+Remove the background of an image: Click More, then choose Remove Background.
+Customize and add more options: Click More, then choose Customize. Extensions settings opens, where you can add extra Finder extensions, such as Remove Background. See Change Login Items & Extensions settings.
+You can use the Shortcuts app to add your favorite shortcuts to the Quick Actions menu. You can download your favorite quick actions from third-party developers in the Mac App Store. You can also use the Automator app to create workflows for Quick Actions that you can enable as extensions and access in the Finder, the Touch Bar, or the Services menu.
+Tip: You can use the Quick Actions buttons at the bottom of the Preview pane in a Finder window. If you don’t see the Preview pane on the right, choose View > Show Preview.
+See alsoUse the Preview pane in the Finder on Mac
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Please don’t include any personal information in your comment.
+ Maximum character limit is 250.
+ Submit
+ Thanks for your feedback.
+Apple Footer
+ 
+ Apple
+ Support
+ Mac User Guide
+ Perform quick actions in the Finder on Mac
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

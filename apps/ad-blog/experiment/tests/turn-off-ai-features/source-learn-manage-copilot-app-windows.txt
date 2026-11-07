@@ -1,0 +1,5 @@
+Note that the Microsoft Copilot app, which is a consumer experience, doesn't support Microsoft Entra authentication and users trying to sign in to the app using a Microsoft Entra account will be redirected to https://m365.cloud.microsoft/chat in their default browser. For users authenticating with a Microsoft Entra account, they should use the Microsoft Copilot app as the entry point.
+Remove or prevent installation of the Microsoft Copilot app
+You can remove or uninstall the Microsoft Copilot app (consumer experience) from your device by using one of the following methods:
+Enterprise users can uninstall the Copilot app by going to Settings > Apps > Installed Apps. Select the three dots appearing on the right side of the app and select Uninstall from the dropdown list.
+If you are an IT administrator, you can prevent installation of the app or remove the Copilot app using one of the following methods:

@@ -1,0 +1,203 @@
+URL: https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/
+Fetched: 2026-11-01T15:49:21.066Z
+Final URL: https://addons.mozilla.org/en-US/firefox/addon/duckduckgo-for-firefox/
+
+Firefox Browser Add-ons
+Extensions
+Themes
+More…
+Log in
+Search
+Search
+DuckDuckGo Search & Tracker Protection
+by DuckDuckGo
+
+⚡Protects your data. Private search with optional AI, private browsing, and ad blocking.
+
+Recommended
+Recommended
+4.3 (2,369 reviews)
+4.3 (2,369 reviews)
+1,087,162 Users
+1,087,162 Users
+Download Firefox and get the extension
+Download file
+Extension Metadata
+Screenshots
+About this extension
+At DuckDuckGo, we believe the best way to protect your personal information from hackers, scammers, and privacy-invasive companies is to stop it from being collected at all. That's why millions of people choose DuckDuckGo over other browser extensions to protect their searching and browsing. Our built-in search engine is like Google but never tracks your searches. Our browsing protections, such as ad tracker blocking and cookie blocking, help stop other companies from collecting your data. While our optional integrated AI features, Search Assist and Duck.ai, are private and never use your data to train AI. Oh, and our browser extension is free — we make money from privacy-respecting search ads, not by exploiting your data. Take back control of your personal information with the browser extension designed for data protection.  
+ 
+FEATURE HIGHLIGHTS  
+Protect Your Searches by Default: Install the extension and we’ll set your default search engine and homepage to DuckDuckGo Search, so you can easily search online without being tracked.  
+ 
+Shield Your Browsing History: Our 3rd-Party Tracker Loading Protection blocks most trackers before they load, greatly exceeding what most browsers offer by default. 
+ 
+Chat Privately With AI: Duck.ai lets you have private conversations with 3rd-party AI models, anonymized by us and never used to train AI.   
+ 
+Secure Your Email (Optional): Use Email Protection to block most email trackers and hide your existing email address with @duck.com addresses.  
+ 
+Automatically Enforce Encryption: Shield your data from network and Wi-Fi snoopers by forcing many sites to use an HTTPS connection.  
+ 
+Escape Fingerprinting: Make it harder for companies to create a unique identifier for you by blocking attempts to combine info about your browser and device.  
+ 
+Block Tracking Cookies: prevents most 3rd-party cookies from tracking you as you browse from site to site.  
+ 
+We feature many protections not available on most browsers and extensions, even in private browsing mode, including protection from link tracking, Global Privacy Control, and more. 
+ 
+You don't need to wait to take control of your personal information! Join the millions of people using DuckDuckGo to protect their everyday searching, browsing, and emailing. 
+ 
+Read more about our free Tracking Protections at https://help.duckduckgo.com/privacy/web-tracking-protections 
+ 
+Privacy Policy: https://duckduckgo.com/privacy/ 
+ 
+Terms of Service: https://duckduckgo.com/terms 
+ 
+Note about 3rd-Party Tracker Protection and Search Ads: while there are some limitations following search ad clicks, viewing ads on DuckDuckGo search is anonymous. Learn more here https://help.duckduckgo.com/privacy/web-tracking-protections
+Expand to
+Read more
+Rated 4.3 by 2,369 reviewers
+Log in to rate this extension
+There are no ratings yet
+5
+1,750
+4
+235
+3
+83
+2
+49
+1
+252
+Read all 2,369 reviews
+Permissions and data
+Required permissions:
+Access browser tabs
+Access browser activity during navigation
+Access your data for all websites
+Learn more
+More information
+Add-on Links
+Homepage
+Copy add-on ID
+Version
+2026.10.6
+Size
+2.98 MB
+Last updated
+20 days ago (Oct 12, 2026)
+Related Categories
+Privacy & SecuritySearch Tools
+License
+Apache License, Version 2.0
+Privacy Policy
+Read the privacy policy for this add-on
+Version History
+See all versions
+Tags
+anti trackercontent blockerimage searchprivacysearch
+Add to collection
+Select a collection…
+Create new collection
+Report this add-on
+Other popular extensions
+Dark Reader
+Recommended
+Recommended
+1,360,869 users
+Grammar and Spell Checker - LanguageTool
+321,225 users
+Search by Image
+Recommended
+Recommended
+465,644 users
+Tree Style Tab
+Recommended
+Recommended
+140,778 users
+Go to Mozilla's homepage
+Add-ons
+About
+Firefox Add-ons Blog
+Extension Workshop
+Developer Hub
+Developer Policies
+Community Blog
+Forum
+Report a bug
+Review Guide
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+All
+Latest Builds
+Nightly
+Beta
+Firefox for Business
+Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+PrivacyCookiesLegal
+
+Except where otherwise noted, content on this site is licensed under the Creative Commons Attribution Share-Alike License v3.0 or any later version.
+
+Change language
+Čeština
+Deutsch
+Dolnoserbšćina
+Ελληνικά
+English (Canadian)
+English (British)
+English (US)
+Español (de Argentina)
+Español (de Chile)
+Español (de España)
+Español (de México)
+فارسی
+suomi
+Français
+Furlan
+Frysk
+עברית
+Hrvatski
+Hornjoserbsce
+magyar
+Interlingua
+Italiano
+日本語
+ქართული
+Taqbaylit
+한국어
+Norsk bokmål
+Nederlands
+Norsk nynorsk
+Polski
+Português (do Brasil)
+Português (Europeu)
+Română
+Русский
+slovenčina
+Slovenščina
+Shqip
+Српски
+Svenska
+Türkçe
+Українська
+Tiếng Việt
+中文 (简体)
+正體中文 (繁體)
+Change theme
+Automatic (match system)
+Light
+Dark

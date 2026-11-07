@@ -1,0 +1,89 @@
+# 가져온 시각: 2026-10-26T15:40:11.422Z
+# 원본: https://support.google.com/gemini/answer/13666746?hl=en&co=GENIE.Platform%3DDesktop
+Find & manage your recent chats in Gemini Apps - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/13666746?hl=en&co=GENIE.Platform%3DDesktop
+
+Find & manage your recent chats in Gemini Apps
+You can find your recent chats in Gemini Apps. You can pin, rename, and delete your chats so the important ones are easy to find.
+
+Important:
+
+To find and manage your chats in Gemini Apps, you need to sign in to Gemini Apps. Learn how to sign in.
+If you're using Gemini Apps with a personal account, the features below are only available if you have Keep Activity turned on.
+If you’re using Gemini Apps with a work or school account, your Gemini Apps Activity is controlled by your Google Workspace administrator and you can’t delete chats.
+ 
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Find your pinned & recent chats
+On your computer, go to gemini.google.com.
+If your chats are hidden, at the top, click Menu .
+On the side panel, find your pinned and recent chats.
+Search for chats
+If your chats are hidden, at the top, click Menu .
+Click Search .
+In the text box, enter what you want to search.
+Press Enter. 
+Pin a recent chat
+If your chats are hidden, at the top, click Menu .
+On the side panel, under “Recent,” hover over the chat you want to pin.
+Click More   Pin .
+Optionally, edit the name of your chat.
+Click Pin. You can find your pinned chat at the top of the “Recent” section.
+Unpin a chat
+If your chats are hidden, at the top, click Menu .
+On the side panel, under “Recent,” hover over the chat you want to unpin.
+Click More   Unpin .
+Rename a chat
+If your chats are hidden, at the top, click Menu .
+On the side panel, hover over the chat you want to rename.
+Click More   Rename .
+Branch a new conversation from a chat
+You can create a new chat that branches off from a specific point in a conversation, then return to the main conversation to continue it.
+On gemini.google.com, start a chat or open a chat you want to resume.
+Below a response, click Menu  Branch in a new chat.
+
+Tip: Deleting a branched chat doesn’t delete the original chat. Deleting the original chat doesn’t delete a branched chat.
+
+Ask Gemini about your past chats
+
+Important:
+
+To use this feature, you must:
+Sign in to your personal Google Account.
+Be 18 or older.
+Have Keep Activity and Memory settings on.
+Learn more about personalization with memory of your past chats.
+For now, this feature isn't available in Live chats. In a text chat, you can ask Gemini to reference a past Gemini Live conversation.
+
+In a new chat, you can ask Gemini about your past Gemini chats by topic or timeframe, or ask it to reference them before responding.
+
+Try these example prompts:
+
+Summarize our discussions of the solar system.
+What was the gift we decided on for my son’s classmate’s birthday?
+How to tell if Gemini referenced your past Gemini chats
+If Gemini referenced your past chats for its response, you'll find "Previous chats" in "Sources and related content" below the response. Gemini may occasionally make mistakes and display this label incorrectly.
+Delete a chat from pinned & recent chats
+
+Important: When you delete a chat from your pinned and recent chats, it's also deleted from Gemini Apps Activity.
+
+If your chats are hidden, at the top, click Menu .
+On the side panel, hover over the chat you want to delete.
+Click More   Delete .
+What happens when a chat is deleted
+
+Important:
+
+To manage Gemini Apps Activity, you need to sign in to Gemini Apps. Learn how to sign in to Gemini Apps.
+This article covers Gemini Apps activity for a personal account. If you use Gemini Apps with a work or school account, your Gemini Apps Activity settings are controlled by your Google Workspace administrator. You may not be able to change your retention settings or see how long your chats are retained for Learn more about Gemini Apps activity for work and school users.
+
+If you delete a chat in pinned and recent chats, it also deletes any content created in that chat (like Canvas docs and apps) and the related activity from Gemini Apps Activity. If data in Gemini Apps Activity is deleted, then the activity won't appear in recent and pinned chats.
+
+For more info, review the Gemini Apps Privacy Notice.
+
+Related resources
+Use Gemini Apps
+Manage & delete your activity in Gemini Apps
+Give feedback about this article

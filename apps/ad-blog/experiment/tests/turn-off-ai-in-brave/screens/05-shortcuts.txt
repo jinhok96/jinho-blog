@@ -1,0 +1,871 @@
+URL chrome://settings/system/shortcuts
+
+Settings
+Back
+BrowserBack
+⌥
+Alt
+ArrowLeft
+⌥
+AltGr
+ArrowLeft
+Add
+Forward
+BrowserForward
+⌥
+Alt
+ArrowRight
+⌥
+AltGr
+ArrowRight
+Add
+Reload
+⌃
+Control
+r
+F5
+BrowserRefresh
+Add
+Home
+BrowserHome
+⌥
+Alt
+Home
+Add
+Stop
+Add
+Reload bypassing cache
+⌃
+Control
+⇧
+Shift
+r
+⌃
+Control
+F5
+⇧
+Shift
+F5
+⌃
+Control
+BrowserRefresh
+⇧
+Shift
+BrowserRefresh
+Add
+Reload clearing cache
+Add
+New window
+⌃
+Control
+n
+Add
+New Private window
+⌃
+Control
+⇧
+Shift
+n
+Add
+Close window
+⌃
+Control
+⇧
+Shift
+w
+⌥
+Alt
+F4
+Add
+New tab
+New
+⌃
+Control
+t
+Add
+Close tab
+⌃
+Control
+w
+⌃
+Control
+F4
+Close
+Add
+Next tab
+⌃
+Control
+PageDown
+Add
+Previous tab
+⌃
+Control
+PageUp
+Add
+Select tab 0
+⌃
+Control
+1
+⌃
+Control
+Num1
+⌥
+Alt
+1
+⌥
+Alt
+Num1
+Add
+Select tab 1
+⌃
+Control
+2
+⌃
+Control
+Num2
+⌥
+Alt
+2
+⌥
+Alt
+Num2
+Add
+Select tab 2
+⌃
+Control
+3
+⌃
+Control
+Num3
+⌥
+Alt
+3
+⌥
+Alt
+Num3
+Add
+Select tab 3
+⌃
+Control
+4
+⌃
+Control
+Num4
+⌥
+Alt
+4
+⌥
+Alt
+Num4
+Add
+Select tab 4
+⌃
+Control
+5
+⌃
+Control
+Num5
+⌥
+Alt
+5
+⌥
+Alt
+Num5
+Add
+Select tab 5
+⌃
+Control
+6
+⌃
+Control
+Num6
+⌥
+Alt
+6
+⌥
+Alt
+Num6
+Add
+Select tab 6
+⌃
+Control
+7
+⌃
+Control
+Num7
+⌥
+Alt
+7
+⌥
+Alt
+Num7
+Add
+Select tab 7
+⌃
+Control
+8
+⌃
+Control
+Num8
+⌥
+Alt
+8
+⌥
+Alt
+Num8
+Add
+Select last tab
+⌃
+Control
+9
+⌃
+Control
+Num9
+⌥
+Alt
+9
+⌥
+Alt
+Num9
+Add
+Duplicate tab
+Add
+Reopen closed tab
+⌃
+Control
+⇧
+Shift
+t
+Add
+Show as tab
+Add
+Full screen
+F11
+Add
+Exit
+Add
+Move tab next
+⌃
+Control
+⇧
+Shift
+PageDown
+Add
+Move tab previous
+⌃
+Control
+⇧
+Shift
+PageUp
+Add
+Search
+Add
+Minimize window
+Add
+Maximize window
+Add
+Name window…
+Add
+Open in PWA window
+Add
+Move tab to new window
+Add
+New split view with current tab
+⌃
+Control
+⌥
+Alt
+t
+Add
+Toggle vertical tabs
+Add
+Collapse tabs
+⌃
+Control
+⇧
+Shift
+l
+Add
+Cycle to next tab
+⌃
+Control
+Tab
+Add
+Cycle to previous tab
+⌃
+Control
+⇧
+Shift
+Tab
+Add
+Copy URL
+Add
+Open in Brave
+Add
+Web app settings
+Add
+Web app info
+Add
+Add new tab to group
+⌥
+Alt
+⇧
+Shift
+c
+Add
+Create new tab group
+⌥
+Alt
+⇧
+Shift
+p
+Add
+Focus next tab group
+⌥
+Alt
+⇧
+Shift
+x
+Add
+Focus previous tab group
+⌥
+Alt
+⇧
+Shift
+z
+Add
+Close tab group
+⌥
+Alt
+⇧
+Shift
+w
+Add
+Bookmark this tab…
+⌃
+Control
+d
+Add
+Bookmark all tabs…
+⌃
+Control
+⇧
+Shift
+d
+Add
+View source
+⌃
+Control
+u
+Add
+Print
+⌃
+Control
+p
+Add
+Save page as…
+⌃
+Control
+s
+Add
+Email page URL
+Add
+Basic print
+⌃
+Control
+⇧
+Shift
+p
+Add
+Translate…
+Add
+Route media
+Add
+Mute site
+Add
+Pin tab
+Add
+Group tab
+Add
+QR code generator
+Add
+Close tabs to the right
+Add
+Close other tabs
+Add
+New tab to the right
+Add
+Offers and rewards for page
+Add
+Sharing hub
+Add
+Sharing hub screenshot
+⌃
+Control
+⇧
+Shift
+s
+Add
+Show password manager
+Add
+Show payment methods
+Add
+Show contact info
+Add
+Open Guest profile
+Add
+Add new profile
+Add
+Cut
+Add
+Copy
+Add
+Paste
+Add
+Find…
+⌃
+Control
+f
+Add
+Find next
+⌃
+Control
+g
+F3
+Add
+Find previous
+⌃
+Control
+⇧
+Shift
+g
+⇧
+Shift
+F3
+Add
+Close find or stop
+Escape
+Add
+Zoom in
+⌃
+Control
+=
+⌃
+Control
+NumAdd
+⌃
+Control
+⇧
+Shift
+=
+Add
+Reset zoom
+⌃
+Control
+0
+⌃
+Control
+Num0
+Add
+Zoom out
+⌃
+Control
+-
+⌃
+Control
+NumSubtract
+⌃
+Control
+⇧
+Shift
+-
+Add
+Focus toolbar
+⌥
+Alt
+⇧
+Shift
+t
+Add
+Focus location
+⌃
+Control
+l
+⌥
+Alt
+d
+Add
+Focus search
+BrowserSearch
+⌃
+Control
+e
+⌃
+Control
+k
+Add
+Focus menu bar
+F10
+⌥
+Alt
+⌥
+AltGr
+Add
+Focus next pane
+F6
+Add
+Focus previous pane
+⇧
+Shift
+F6
+Add
+Focus bookmarks
+⌥
+Alt
+⇧
+Shift
+b
+Add
+Focus inactive popup for accessibility
+⌥
+Alt
+⇧
+Shift
+a
+Add
+Focus web contents pane
+⌃
+Control
+F6
+Add
+Open File
+⌃
+Control
+o
+Add
+Create shortcut
+Add
+Developer tools
+⌃
+Control
+⇧
+Shift
+i
+Add
+JavaScript console
+⌃
+Control
+⇧
+Shift
+j
+Add
+Inspect devices
+Add
+Report an issue
+Add
+Show bookmarks bar
+BrowserFavorites
+⌃
+Control
+⇧
+Shift
+b
+Add
+Show history
+⌃
+Control
+h
+Add
+Show bookmark manager
+⌃
+Control
+⇧
+Shift
+o
+Add
+Download history
+⌃
+Control
+j
+Add
+Delete browsing data
+⌃
+Control
+⇧
+Shift
+Delete
+Add
+Import settings
+Add
+Options
+Add
+Edit search engines
+Add
+Password Manager
+Add
+About Brave
+Add
+Show help
+F1
+Add
+Show app menu
+⌥
+Alt
+e
+⌥
+Alt
+f
+Add
+Manage extensions
+Add
+Dev tools inspect
+⌃
+Control
+⇧
+Shift
+c
+Add
+Upgrade Brave
+Add
+Show avatar menu
+⌃
+Control
+⇧
+Shift
+m
+Add
+Dev tools toggle
+F12
+Add
+Take screenshot
+Add
+Toggle fullscreen toolbar
+Add
+Toggle JavaScript Apple Events
+Add
+Install PWA
+Add
+Show management page
+Add
+Paste and go to $1
+Add
+Show full URLs
+Add
+Caret browsing toggle
+F7
+Add
+What's new
+Add
+Show performance settings
+Add
+Task manager
+⇧
+Shift
+Escape
+Add
+Reading mode
+⌥
+Alt
+⇧
+Shift
+r
+Add
+Open all bookmarks
+Add
+Bookmark bar open all in new window
+Add
+Bookmark bar open all in private window
+Add
+Open in Private window
+Add
+Bookmark bar open all new tab group
+Add
+Bookmark bar rename folder
+Add
+Bookmark bar edit
+Add
+Bookmark bar remove
+Add
+Bookmark bar undo
+Add
+Bookmark bar redo
+Add
+Bookmark bar add new bookmark
+Add
+Bookmark bar new folder
+Add
+Open bookmarks manager
+Add
+Bookmark bar always show
+Add
+Show apps shortcut
+Add
+Bookmark bar show managed bookmarks
+Add
+Bookmark bar add to bookmarks bar
+Add
+Bookmark bar remove from bookmarks bar
+Add
+Let Brave run in the background
+Add
+Tab search
+⌃
+Control
+⇧
+Shift
+a
+Add
+Tab search close
+Add
+Debug toggle tablet mode
+Add
+Debug print view tree
+Add
+Toggle live captions
+Add
+Brave Rewards
+Add
+New Tor connection for this site
+Add
+New private window with Tor
+⌥
+Alt
+⇧
+Shift
+n
+Add
+Sync
+Add
+Wallet
+Add
+Toggle Leo AI
+Add
+Report a broken site
+Add
+Show Brave Wallet panel
+Add
+Close Brave Wallet panel
+Add
+Copy clean link
+Add
+Toggle tab mute
+⌃
+Control
+m
+Add
+Toggle sidebar position
+Add
+Toggle current side panel
+⌃
+Control
+b
+Add
+Force Paste
+Add
+Toggle vertical tabs window title
+Add
+Configure Brave News
+Add
+Configure shortcuts
+Add
+Show Brave Talk
+Add
+Toggle shields
+Add
+Toggle JavaScript
+Add
+Show playlist bubble
+Add
+Group tabs on current origin
+Add
+Move group to new window
+Add
+Close duplicate tabs
+Add
+Close tabs to the left
+Add
+Close unpinned tabs
+Add
+Add all tabs to new group
+Add
+Close all duplicate tabs
+Add
+Toggle vertical tabs expanded
+Add
+Mute all tabs
+Add
+Mute other tabs
+Add
+Unmute all tabs
+Add
+Scroll tab to top
+Add
+Scroll tab to bottom
+Add
+Send tab to self
+Add
+Open AI Chat
+Add
+Toggle All bookmarks button visibility
+Add
+Quick commands
+⌃
+Control
+Space
+Add
+Group ungrouped tabs
+Add
+Ungroup current tab group
+Add
+Remove tab from current group
+Add
+Ungroup all tabs
+Add
+Name this group
+Add
+New tab in group
+Add
+Toggle group expanded
+Add
+Close ungrouped tabs
+Add
+Close tabs not in current group
+Add
+Close group
+Add
+Export all bookmarks
+Add
+Bring all tabs to this window
+Add
+New split view
+Add
+Open in split view
+Add
+Unsplit tabs
+Add
+Swap tab positions
+Add
+Show Wayback Machine bubble
+Add
+Show apps
+Add
+Toggle focus mode
+Add
+New temporary container
+Add
+Don't show for this site
+Add
+Disable Privacy settings tuning
+Add
+Toggle Bookmarks side panel
+Add
+Toggle Reading List side panel
+Add
+Toggle Playlist side panel
+Add
+Block elements
+Add
+Reset all to defaults
+
+TOGGLES
+[]

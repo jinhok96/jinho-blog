@@ -1,0 +1,50 @@
+# Arc Sunset: Key Dates and What to Expect
+URL: https://resources.arc.net/hc/en-us/articles/44412972248471-Arc-Sunset-Key-Dates-and-What-to-Expect
+created_at: 2026-10-21T14:05:15Z updated_at: 2026-10-22T15:26:16Z edited_at: 2026-10-22T15:24:58Z
+fetched: 2026-10-25 UTC (Zendesk Help Center API)
+
+Arc is being sunset on December 22, 2026. On that date, Arc for macOS and Windows will stop working, you'll no longer be able to sign in to your Arc account, and we'll turn off all Arc services. Not to worry! Many of the Arc features you love live on in Dia, and you can bring your Arc setup along in just a few clicks.
+ Why is Arc being sunset?
+ Keeping a browser safe and secure has become harder and harder in the age of AI, and we can no longer keep Arc as safe and secure as it needs to be. Our security team is focusing on Dia, which we built from the ground up to protect against modern-day security attacks. Many of Arc's best ideas already live in Dia, including Spaces (as Profiles you can swipe between and choose whether you want them to share data or not), folders, pinned tabs and the Tab Switcher.
+ Key dates for the Arc sunset
+- 
+ October 22, 2026: We announced the Arc sunset. You can no longer create new Arc accounts.
+- 
+ November 23, 2026: Arc Search for iOS and Android keeps working as a browser, but AI features turn off and you can no longer sign in or sync with Arc. Arc for macOS and Windows starts showing reminders about the sunset.
+- 
+ December 15, 2026: Last day to request a copy of personal data related to your Arc account or ask us to delete it.
+- 
+ December 22, 2026: Arc is sunset. 
+- Arc for macOS and Windows stops working, and you can no longer sign in.
+- We deactivate all Arc accounts and turn off all Arc services.
+- Once an account is deactivated, we will delete user personal data associated with the account within 30 days.
+- We'll no longer be able to retrieve your Arc account data.
+- Arc Search for Android is removed from the Google Play Store and from the devices it's installed on.
+- Arc Search for iOS will continue to work as a mobile browser.
+ What happens to Arc for macOS and Windows on December 22?
+ Starting December 22, 2026, Arc for macOS and Windows stops working and you can no longer sign in to your Arc account.
+ Please note that after December 22, you won't be able to open Arc to get to your Spaces, tabs or other browsing data. We'll also delete user personal data associated with the account within 30 days. To bring everything with you, move to Dia before December 22. If you're not moving to Dia, you can save your Spaces and tabs as a list of links before then. To learn how, read [How Do I Export My Data from Arc?] .
+ What happens to Arc Search for iOS?
+ Arc Search for iOS keeps working as a browser. On November 23, 2026, AI features turn off and you can no longer sign in or sync with Arc. To share or copy a list of your open tabs, tap the Tab Switcher icon in the bottom-left corner, tap Settings (⚙️), then tap Export Data .
+ What happens to Arc Search for Android?
+ On December 22, 2026, Arc Search for Android is removed from the Google Play Store and from the devices it's installed on. Until then it keeps working as a browser, but from November 23 AI features turn off and you can no longer sign in or sync with Arc. To share or copy a list of your open tabs, simply navigate to Settings > Storage > Export data in Arc Search.
+ Can I still create a new Arc account?
+ No. As of October 22, 2026, you can no longer create new Arc accounts. If you're looking for a new browser, you can download Dia at diabrowser.com/download [https://www.diabrowser.com/download].
+ Will Arc still get updates before December 22?
+ Yes. Arc for macOS and Windows will keep getting its usual basic updates and fixes until December 22, 2026. We're no longer adding new features to Arc.
+ What happens to my Arc account and data?
+ We will deactivate all Arc accounts on December 22, 2026. Once an Arc account is deactivated, personal data related to the account is deleted.
+ If you have an account for both Dia and Arc, this will only affect personal data related to your Arc account.
+ Please note that as of December 22, 2026, we will no longer be able to retrieve Arc user data for data requests. To keep your data, export it from Arc or import it into Dia before December 22, 2026. For more information check out Arc Sunset: Frequently Asked Questions [https://resources.arc.net/hc/en-us/articles/44412972248471] and Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].
+ What happens to the Arc data on my device?
+ Once Arc is sunset on December 22, 2026, Arc stops working and you won't be able to open it to get to Arc data stored locally on your device. To keep your browsing data, import it into Dia before December 22, 2026.
+ Can I request a copy of my Arc data?
+ Yes, you can request a copy of personal data related to your Arc account until December 15, 2026. A copy includes your account details, like your name, email address and when you joined, and a record of how you've used Arc. It doesn't include browsing data stored on your device, like your history or passwords, because we don't have access to it. To keep that data, import it into Dia before December 22.
+ Please note that as of December 22, 2026, we'll no longer be able to retrieve your Arc account data. To give our team time to service your data retrieval request, please ensure it is submitted by December 15.
+ Can I still get help with Arc?
+ Yes. Until December 22, 2026, you can still get help with technical issues and account requests. You can request a copy of personal data related to your Arc account, or ask us to delete it, until December 15. Simply select the chat button in the corner of this page to reach our team. During the sunset, we're only looking into larger problems that affect many members, like Arc crashing or not opening. We're no longer fixing smaller bugs or accepting feedback or feature requests for Arc.
+ Already using Dia? You can chat with Dia's support team from inside Dia:
+- On macOS, navigate to Help > Chat with Support in the Mac menu bar.
+- On Windows, open the Dia app menu and select Help > Chat with support .
+ How do I move from Arc to Dia?
+ Download Dia at diabrowser.com/download [https://www.diabrowser.com/download] and choose to import from Arc when you set Dia up. Dia brings over your Spaces, Favorites, pinned tabs and folders, along with your bookmarks, history, passwords and extensions, on both macOS and Windows. For step-by-step instructions, read Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].

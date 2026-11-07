@@ -1,0 +1,13 @@
+{
+  "kbTitle": "October 28, 2026 — KB5127936 (OS Builds 26300.9818 and 26200.9818) Preview",
+  "kbUrl": "https://support.microsoft.com/en-us/servicing/os/windows-11/2026/10/kb5127936-windows-11-25h2-26h2-update",
+  "kbClip": {
+    "x": 347,
+    "y": 582.828125,
+    "width": 860,
+    "height": 896.890625
+  },
+  "relTable": "Version\tServicing option\tAvailability date\tEnd of updates: Home, Pro, Pro Education, and Pro for Workstations\tEnd of updates: Enterprise, Education, IoT Enterprise, and Enterprise multi-session\tLatest update\tLatest revision date\tLatest build\n26H2\tGeneral Availability Channel\t2026-09-29\t2028-10-10\t2029-10-09\t2026-10 D\t2026-10-28\t26300.9818\n26H1\tGeneral Availability Channel\t2026-02-10\t2028-03-14\t2029-03-13\t2026-10 D\t2026-10-28\t28000.3365\n25H2\tGeneral Availability Channel\t2025-09-30\t2027-10-12\t2028-10-10\t2026-10 D\t2026-10-28\t26200.9818\n24H2\tGeneral Availability Channel\t2024-10-01\tEnd of updates\t2027-10-12\t2026-10 OOB\t2026-10-26\t26100.9725\n23H2\tGeneral Availability Channel\t2023-10-31\tEnd of updates\t2026-11-10\t2026-10 OOB\t2026-10-26\t22631.7654",
+  "capturedAt": "2026-10-29T21:38:34.872Z",
+  "chromium": "153.0.8010.12"
+}

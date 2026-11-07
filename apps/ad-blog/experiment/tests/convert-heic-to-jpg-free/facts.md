@@ -1,5 +1,8 @@
 # convert-heic-to-jpg-free 사실 확인표
 
+- 검증 유형 (가설 H3): **검증형** — HEIC 사진으로 변환 도구를 색·메타데이터·방향·시간 기준 직접 측정(How we tested)
+- 주 검색어 (가설 H6): `heic to jpg` — 브리프 주 검색어
+
 - 주 검색어: `heic to jpg` (+ `convert heic to jpg`). Trends 미국 3개월(2026-10-15): `heic to jpg` 8.8 (기준 `remove background` 35.7), `png to jpg` 4.0, `compress video` 2.5, `webp to jpg` 1.9
 - 하위 검색어 (2026-10-15 `demand_check.py suggest`): heic to jpg converter (Google·Bing·YouTube), heic to jpg windows (Google·Bing·YouTube), heic to jpg bulk converter, heic to jpg converter free, heic to jpg on iphone, heic to jpg on mac, heic to jpg converter offline, convert heic to jpg windows 11 (Google·Bing·YouTube), convert heic to jpg on mac. 하위 검색어 34개 + 25개
 - 채널: **검색형** (상시 수요, 비교·측정 + How-to). 제목 53자, 설명 155자

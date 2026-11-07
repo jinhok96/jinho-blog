@@ -1,0 +1,103 @@
+
+Click to Do: do more with what’s on your screen	
+			Applies To
+Windows 11 
+Click to Do helps you get things done faster by identifying text and images on your screen that you can take actions with. Click to Do analyzes what's on screen and then you can choose the text or image you want to take action on. 
+The analysis of this screenshot is always performed locally on your device. Analysis only begins after you actively engage with Click to Do and ends when you exit Click to Do. Click to Do only identifies text and images, not the content of those text or images. It does not analyze any content in, for example, minimized applications that are not on your screen.    
+Content is only shared if you choose to complete an action like Search the web. You’ll notice that when Click to Do is active, your cursor is blue and white. The cursor also changes shape depending on the type of info beneath it. What you can do with the info changes based on what kind of content Click to Do detects.
+System requirements with a Copilot+ PC
+A Copilot+ PC or eligible Cloud PC
+40 TOPS NPU (neural processing unit)
+16 GB RAM
+8 logical processors
+256 GB storage capacity
+To display the Click to Do entry point from Snipping Tool, Snipping Tool version 11.2411.20.0, or later is required.
+How to use Click to Do
+Simply use Windows key 
+ + mouse click or Windows key
+ + Q to enter Click to Do and take actions on what you clicked. You can also enter Click to Do through a right swipe on touch enabled PCs, or from the Snipping Tool menu if Snipping Tool is installed. If you ever need, you can also search for Click to Do from Windows Search to select and take actions on what you see. 
+When you launch Click to Do for the first time, you’ll be offered a quick interactive tutorial that shows you how to accomplish tasks faster. You can revisit the tutorial at any time by selecting …, then Start tutorial. 
+If you’re an IT administrator and need more information, see How to Manage Click to Do.
+Click to Do does more with text
+When you highlight text with Click to Do, you’re given the following options:  
+Copy: Copies the selected text to the clipboard
+Open with: Opens the selected text in a text editor like Notepad
+Search the web: Does a search for the selected text using Microsoft Edge and Bing
+When the highlighted text is an email address, you can either copy the text or:
+Send email: Uses your default email app to open a new email to the selected email address
+Send a message with Teams: Opens a Teams message using the selected email address as the recipient
+Schedule a meeting with Teams: Opens a new Teams calendar invite with the selected email address as an attendee
+When the highlighted text is a website, you can either copy the text or Open website.
+Open website: Opens the selected website in your default browser
+More intelligent text actions are available when your default language is set to English, at least 10 words are selected, and you’re signed in with either a Microsoft account or Microsoft Entra account. Intelligent text actions, powered by the Phi Silica small language model and the NPU, include:
+Summarize: Briefly outlines the main points of the selected text
+Create a bulleted list: Creates a bulleted list of key details from the selected text
+Rewrite (Casual): Revises the selected text using a casual tone
+Rewrite (Formal): Revises the selected text using a formal tone
+Rewrite (Refine): Revises the selected text, making grammatical improvements
+Draft with Copilot in Word: sends the selected text to Copilot in Word
+Practice in Reading Coach: Opens Reading Coach where you can read the selected text out loud. The Reading Coach provides feedback and guides you on where to make improvements to pronunciation.
+Read with Immersive Reader: Opens Reading Coach and displays the selected text in a distraction-free environment. You can have the text read out loud, use the picture dictionary, and highlight nouns, verbs, and adjectives to aid grammar learning.
+Click to Do does more with images
+If you select an image you’re given the following options:
+Copy: Copies the image to the clipboard
+Save as: Save the image to a specified location
+Share: Opens the share files option for the image file
+Open with: Open the image with an app such as Photos, Snipping Tool, or Paint
+Visual search with Bing: Does a visual search using Bing using your default web browser
+Blur background with Photos: Blur the background with the Photos app
+Erase objects with Photos: Erase unwanted objects in the image with the Photos app
+Remove background with Paint: Remove the background of the image with Paint
+Tip
+If you don’t see the options for Microsoft Photos or Paint, make sure you have the latest version of the app installed from the Microsoft Store. 
+Click to Do does more with content
+When you highlight either text or images with Click to Do, you’re given an option to Ask Copilot. You can choose to add your own prompt to go along with your highlighted content or select a prompt suggestion. Copilot opens with your content in the prompt box. Copilot then becomes the provider for completing the action as the selected content is handed off from Click to Do to Copilot.
+If your device is part of your work or school’s organization, Ask Microsoft Copilot is shown instead of Ask Copilot. This action allows Microsoft Copilot to address your queries. Ask Microsoft Copilot requires a Microsoft 365 license and respects your organization’s privacy policies.
+Disable Click to Do with a Copilot+ PC
+By default, Click to Do is enabled for Copilot+ PCs. While it can’t be removed, you can disable or enable it from the following location:
+Open Settings, then go to > Privacy & security > Click to Do.
+Set the Click to Do setting to:
+On:  Click to Do is enabled (default)
+Off: Click to Do is disabled
+When Click to Do is disabled, Windows key 
+ + mouse click, Windows key
+ + Q, and right swipe on touch enabled PCs won’t open Click to Do. You might still see options to open Click to Do from other locations, such as Snipping Tool, but you’ll get a Couldn’t open Click to Do error if you select it. 
+Click to Do regional variations
+Click to Do features vary based on the region and language settings of your device. Understanding these variations can help you utilize the tool effectively in different environments. The following are the key differences across regions:
+European Economic Area (EEA) region
+Search the web: Uses Microsoft Edge and Bing to perform searches.
+Visual search with Bing: Not available.
+Remove background with Paint: Advanced image features like Blur, Remove, and Erase are currently not available.
+Ask Copilot: Not available.
+Microsoft Teams actions: Features like sending messages and scheduling meetings with Teams are not accessible.
+Practice in Reading Coach: Not available.
+Read with Immersive Reader: Not available.
+Draft with Copilot in Word: Not available.
+China
+Search the web: Due to regulatory requirements, local search engines might be used to perform a search.
+Visual search with Bing: Access to the visual search feature with Bing may differ due to local regulations.
+Ask Copilot: Not available.
+Draft with Copilot in Word: Not available.
+Summarize: Not available.
+Create a bulleted list: Not available.
+Rewrite (Formal): Not available.
+Rewrite (Refine): Not available.
+Click to Do privacy considerations
+When you choose to send info from Click to Do to an app, like Paint, Click to Do will temporarily save this info in order to complete the transfer. Click to Do creates a temporary file in the following location: 
+C:\Users\{username}\AppData\Local\Temp
+Temporary files may also be saved when you choose send feedback. These temporary files aren’t saved long term. Click to Do doesn't retain any content from your screen after completing the requested action. However, the image file may be saved temporarily until the process is fully completed or a new action is initiated. Some diagnostic data is also gathered to keep Click to Do secure, up to date, and working.
+Click to Do’s more intelligent text actions, including Summarize, Create a bulleted list, Rewrite (Casual), Rewrite (Formal), and Rewrite (Refine), are powered by a state-of-the-art small language model called Phi Silica. Phi Silica leverages the NPU and the language model runs locally on Copilot+ PCs. Phi Silica ships inbox with Windows on Copilot+ PCs. 
+When a user clicks on the Click to Do text actions, the selected text and the chosen action are sent to Phi Silica as part of a prompt. Phi Silica runs on the device locally. Phi Silica intelligently rewrites the selected text as per the user's request and streams back the response from the model. Phi Silica provides responses quickly and efficiently, using very little power. For more information, see Phi Silica, small but mighty on-device SLM. 
+In keeping with Microsoft’s commitment to data privacy and security, all saved images and processed data are kept on the device and processed locally. However, Click to Do allows you to choose if you want to get more information about your selected content online. When you choose one of the following Click to Do actions, the selected content is sent to the online provider from your local device to complete your request:
+Search the web: Sends the selected content Bing using Microsoft Edge
+Open website: Opens the selected website in your default browser
+Visual search with Bing: Sends the selected content to Bing visual search using your default browser
+For more information about privacy for Click to Do, see the Microsoft Privacy Statement.
+Microsoft’s commitment to responsible AI and Privacy
+Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more about our responsible AI efforts, the principles that guide us, and the tools and capabilities we've created to assure that we develop AI technology responsibly, see Responsible AI.
+To provide clarity on how each AI feature works, it’s important for you to understand its capabilities and limitations. You should understand the choices available to you in an AI feature and the responsibility associated with those choices.
+Click to Do suggests actions that you can take, and you can choose the apps that will be the provider (if applicable) for those actions. Once you choose the action and provider for the action, the results from that action are the responsibility of the provider. For example, from Click to Do you can choose the action Remove background with Paint, which means you’ve chosen Paint as the provider for the action.  Once you have selected the action from the Click to Do context menu, it launches the Paint app and the selected image is processed by Paint. 
+Click to Do uses optical character recognition (OCR) on your PC to detect text entities on screenshots. For more information about OCR, see Transparency note and use cases for OCR. 
+Click to Do’s intelligent text actions and Copilot prompt suggestions use a small language model called Phi Silica. For more information on Phi Silica, see Get started with Phi Silica in the Windows App SDK. For information on the Responsible AI principles guiding Phi Silica deployment and the safety measures in place when using generative language models, please see Responsible Generative AI Development on Windows. 
+Click to Do’s models have undergone fairness assessments, alongside comprehensive responsible AI, security and privacy assessments, to make sure the technology is effective and equitable while adhering to Microsoft’s Responsible AI best practices. 
+					

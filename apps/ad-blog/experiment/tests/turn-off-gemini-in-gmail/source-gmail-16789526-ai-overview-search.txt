@@ -1,0 +1,151 @@
+## Get an AI Overview in Gmail search
+Important: This feature is gradually rolling out to Gmail and may not be available to you yet.
+In the Gmail search bar, you can ask natural language questions or key phrases to quickly find information within your inbox, such as "When is my flight to Hawaii?" or "Find the latest Cymbal Team Meeting notes." Based on your emails, Gmail then generates an AI Overview that can:
+- Give you the key fact or summarize information directly above your search results.
+- Synthesize information scattered across multiple emails to provide a complete answer.
+- Save you time, so you don't have to open and read through individual messages.
+AI Overviews are optimized for natural language queries. If you don't get an AI Overview, use a more descriptive phrase or ask a specific question.
+## What you need
+Important: This feature is only available in English.
+- For personal Google Accounts:
+- You must have an eligible Google AI plan:
+- Google AI Plus
+- Google AI Pro
+- Google AI Ultra
+- You can also get an AI Overview in Gmail search if your account is enrolled in Google Workspace Experiments, which is a trusted tester program to try new AI features. Learn how to get started with Google Workspace Experiments.
+- For work or school accounts: You need an eligible Google Workspace plan. Learn more about Gemini features and plans.
+## Additional requirements
+- Smart features: Turn on smart features in your account.
+- You must allow smart features for Workspace and the separate smart features setting for Gmail, Chat, and Meet.
+- Regional restrictions: For personal accounts, this feature is not available if you live in:
+- The European Economic Area, and their overseas countries and territories
+- Japan
+- Switzerland
+- The United Kingdom
+## Get an AI Overview of your search results
+Important: If you use search operators, like is:unread or from:, the AI Overview isn't available. Learn how to refine searches in Gmail.
+- On your computer, open Gmail.
+- In the search box at the top, enter a natural language question or a key phrase.
+- On your keyboard, press Enter.
+## Things to try
+      Search objective
+      Example
+      Get answers
+- "When is the next meeting with my manager?"
+- "Did the customer reply about the commercial sale?"
+- "When is my next appointment?"
+- "What's the check-in code for my rental?"
+      Summarize information
+- "Summarize my upcoming trip."
+- "Summarize updates for the upcoming launch."
+- "Get outstanding invoices from emails with vendors."
+      Extract specific details
+- "Show me my concert tickets."
+- "Track my latest return."
+- "Confirmation number for my flight tomorrow."
+- "Tracking number for the laptop shipment."
+## Learn how AI Overview in Gmail search answers your questions
+- When you search, Gmail first finds the most relevant emails. An AI Overview is then generated using the information from those emails to provide a direct summary or answer to your question. It leverages your email content to save you time, and eliminates the need to review individual messages.
+- To send feedback about an AI Overview, select Good suggestion  or Bad suggestion  next to the overview.
+- Your emails are protected by the same security and privacy commitments as the rest of Gmail. To control the use of your data for this and other AI-powered features, update your Google Workspace smart feature settings.
+## Turn off AI Overview in Gmail search
+Important: If you turn off smart features, it also turns off other AI-powered Workspace features, like the Gemini in Gmail side panel.
+- On your computer, go to Gmail.
+- At the top right, click Settings   See all settings.
+- Under the "General" tab, scroll to "Google Workspace smart features."
+- Click Manage Workspace smart feature settings.
+- Turn off Smart features in Google Workspace.
+- Click Save.
+## Related resources
+- Search in Gmail
+- Get started with Google Workspace with Gemini
+ Computer Android phone & tabletiPhone & iPad 
+  More   
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 19
+Get started with Google Workspace with Gemini
+- 
+2 of 19
+Learn about Gemini features in Gmail
+- 
+3 of 19
+Talk naturally with Gmail Live
+- 
+4 of 19
+Manage to-dos & topics with AI Inbox
+- 
+5 of 19
+Get an AI Overview in Gmail search
+- 
+6 of 19
+Catch up on email threads with AI Overview conversation summaries
+- 
+7 of 19
+Draft emails with Gemini in Gmail
+- 
+8 of 19
+Proofread your drafts with Gemini in Gmail
+- 
+9 of 19
+Use Suggested Replies in Gmail
+- 
+10 of 19
+Collaborate with Gemini in Gmail
+- 
+11 of 19
+Suggest times to meet with Gemini in Gmail
+- 
+12 of 19
+Take quick actions from your Gmail inbox
+- 
+13 of 19
+Find & manage your Gemini in Workspace conversation history
+- 
+14 of 19
+Customize Gemini in Workspace's responses with your instructions
+- 
+15 of 19
+Learn how to use sources with Google Workspace with Gemini
+- 
+16 of 19
+Use Deep Research in Gemini in Workspace apps
+- 
+17 of 19
+Use integrations with Gemini in Workspace
+- 
+18 of 19
+Supported languages for Google Workspace with Gemini
+- 
+19 of 19
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service      
+-   Program Policies           Language   català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+17734111811725509481                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+17                                                                                                     
+false    
+false                                                                                                                                                             
+false   
+false                                                                   
+false  

@@ -1,0 +1,77 @@
+URL: https://help.instagram.com/814837257408912/?cms_platform=iphone-app&helpref=platform_switcher
+TITLE: Turn off or retake setup photos for AI images of you on Instagram | Instagram Help Center
+DEVICE: iPhone App Help clicked=true
+FETCHED: 2026-10-24T15:31:28.555Z
+
+Help Center
+English (US)
+Instagram Features
+Login, Recovery and Security
+Manage Your Account
+Staying Safe
+Privacy and Reporting
+Terms and Policies
+Threads
+ 
+Turn off or retake setup photos for AI images of you on Instagram
+Copy link
+More
+Android App Help
+iPhone App Help
+iPad App Help
+How do I turn off AI images?
+How do I retake AI setup photos?
+How do I stop AI images in Feed?
+How do I replace AI setup photos?
+I have a different question
+This feature is in development and being gradually introduced in the United States. It may not be available to you yet.
+Meta AI may generate images of you once you've set up the feature, but you can still turn this feature off at any time in Meta AI settings. Turning this off will delete your setup photos and you will need to retake your photos if you turn this feature back on.
+Turn off AI images of you on Instagram
+Open your chat with Meta AI.
+Tap  AI info.
+Tap Imagine yourself.
+Tap  Toggle next to Create AI images of yourself with Meta AI to turn off this feature and delete your photos.
+
+Retake your setup photos for AI images of you
+Tap the Meta AI tab to open the chat with Meta AI.
+Tap  AI info.
+Tap Imagine yourself.
+Tap Retake your photos, then follow the on-screen prompts to retake your photos.
+You may also see AI images of you appear in Feed. Only you can see these images unless you share them, but you can also turn this off.
+Turn off AI images of you in Feed
+Open your chat with Meta AI.
+Tap  AI info.
+Tap Imagine yourself.
+Tap  Toggle next to See AI images of yourself in Feed to stop showing AI images of yourself in Feed.
+Replace your uploaded photos for AI-generated images of you
+Tap the Meta AI tab to open the chat with Meta AI.
+Tap  AI info.
+Tap Imagine yourself.
+Tap Uploaded photos of yourself, then follow the on-screen prompts to replace your photos.
+Was this helpful?
+Yes
+No
+Related Articles
+Send a generated image or video using Meta AI in an Instagram chat
+About camera capture labels on Instagram
+Image resolution of photos you share on Instagram
+Ask Meta AI about an image you share in a chat on Instagram
+Edit an image with Meta AI in chats on Instagram
+Other ways to get help
+Chat with Meta AI support assistant
+Resolve issues, make changes and get support in real time
+About Us
+API
+Jobs
+Terms
+Privacy
+© 2026 Meta
+Feedback
+Want personalized support?
+Log in
+Get help with turning off or retaking setup photos for AI images of you on Instagram
+You can manage AI images of yourself on Instagram through the Meta AI settings. From the Imagine yourself menu in your Meta AI chat, you can turn off the feature to delete your setup photos, retake your photos, or replace specific uploaded images. You can also choose to stop AI images of yourself from appearing in your Feed.
+How do I turn off AI images?
+How do I retake AI setup photos?
+Read more about this topic on Help Center
+By using Meta AI, you agree to the AI terms.

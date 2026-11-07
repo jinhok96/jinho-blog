@@ -1,0 +1,48 @@
+{
+  "version": "153.0.8010.12",
+  "dialogText": "",
+  "inputCount": 3,
+  "labels": [
+    "Name",
+    "Shortcut",
+    "URL with %s in place of query"
+  ],
+  "rowText": "",
+  "menuItems": [
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          ",
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          ",
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          ",
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          ",
+    "Make default",
+    "Deactivate",
+    "Delete",
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          ",
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          ",
+    "\n            Make default\n          ",
+    "\n            Deactivate\n          ",
+    "\n            Delete\n          "
+  ],
+  "enginesAfter": [
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    "",
+    ""
+  ],
+  "searchPage": ""
+}

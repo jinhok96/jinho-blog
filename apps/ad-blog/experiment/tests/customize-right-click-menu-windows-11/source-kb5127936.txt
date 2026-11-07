@@ -1,0 +1,162 @@
+# https://support.microsoft.com/en-us/servicing/os/windows-11/2026/10/kb5127936-windows-11-25h2-26h2-update (fetched 2026-10-29 UTC)
+October 28, 2026 — KB5127936 (OS Builds 26300.9818 and 26200.9818) Preview
+ Applies ToWindows 11 version 26H2, all editions Windows 11 version 25H2, all editions 
+ This cumulative update for Windows 11, versions 26H2 and 25H2 (KB5127936), includes production-quality improvements. 
+Announcements and messages
+This section provides key notifications related to this release, including announcements, change logs, and end-of-support notices.
+Windows Secure Boot certificate expiration
+Important: Secure Boot certificates used by most Windows devices started to expire in June 2026. Microsoft has been updating these certificates on consumer and non-managed business devices over the past several months. Devices that haven’t received the newer certificates will continue to start and operate normally, and standard Windows updates will continue to install. Updated certificates will continue to be delivered through Windows Update in the coming months. For more information, see Windows Secure Boot certificate expiration and CA updates.
+Highlights
+This update is available through two release phases: gradual rollout and normal rollout. A gradual rollout delivers an update in phases, so features reach devices over time instead of all at once, meaning availability varies by device. A normal rollout is the broad release to all eligible devices at the same time, usually when it reaches general availability (GA). 
+Note If you installed earlier updates, your device downloads and installs only the new updates contained in this package.
+Gradual rollout
+The following summary outlines new Windows 11 PC experiences, along with improvements and fixes. The bold text within the brackets indicates the item or area of the change.
+[Context menu in File Explorer]
+New! This update introduces an updated context menu that is faster, simpler, and more customizable. The updated menu opens more quickly, reduces clutter, and gives you more control over the commands and app extensions that appear when you right-click.
+You can now customize the context menu to better fit how you use Windows. Select Customize menu at the bottom of the context menu to open its Settings page.
+Turn built-in Windows commands, such as Send to and Create shortcut, on or off.
+Add commands such as Print to the context menu.
+Choose which app extensions appear in the main menu or a submenu or hide the app extensions submenu.
+Display Cut, Copy, Paste, Rename, Delete, and Share directly in the menu instead of as a row of icons.
+Move Properties to the bottom of the context menu.
+To personalize the context menu, right-click and select Customize menu, then choose the commands, app extensions, and layout you prefer. No action is required to use the default configuration. To see more options, hold down Shift and right-click on your desktop.
+[Modernized AutoPlay experience]
+New! This update modernizes the AutoPlay dialog that appears when you connect devices such as a phone, camera, or removable drive to your PC. The updated experience supports dark mode, responds better to text scaling and display settings, and makes AutoPlay notifications available in notification center for easier access.
+[File Explorer]
+New! Key file information, such as name, location, and date, now appear in a consistent layout on the File Explorer search results page, making search results easier to scan.
+New! Address bar now supports ~, making it quicker to navigate directly to your user profile folder and subfolders (for example, ~\AppData).
+New! This update enables dark mode support in the Folder Options dialog in File Explorer.
+[XBOX mode]
+New! This update introduces a refreshed Gaming Task View experience in XBOX mode, featuring a new navigation bar that provides quick access to Exit to Desktop and Power Options, making key system actions easier to access while gaming. 1
+[Settings]
+New! This update improves the Privacy & security page in Windows Settings by grouping related Camera, Microphone, and Location privacy controls and elevating usage information from linked pages onto the main page.
+New! The Device Info card on the Settings Home page, first introduced in the March 2026 preview update KB5079391, is expanding to additional markets. Available to users signed in with a Microsoft account, the card provides a quick view of key PC specifications and usage, with more detailed device information available under Settings > System > About. 1
+This update makes some small visual refinements to the design of the temporary files section under Settings > System > Storage.
+[Phone Link]
+New! You can now hover over a recent message or notification in the Recent section to preview its content directly in Start without opening the item. This experience can be managed under Phone Link > Settings > Start menu personalization.
+[Taskbar]
+New! The update improves animations of app window previews when mousing across app icons in the taskbar.
+This update improves the underlying state persistence of taskbar settings related to multiple monitors across monitor connections and disconnections.
+[Magnifier]
+New! Magnifier now includes a contrast theme toggle that can reduce screen glare while keeping the original colors in photos, videos, and charts. The toggle applies a dark contrast theme by default and is available from the Magnifier toolbar. To choose a different contrast theme, go to Settings > Accessibility > Magnifier. Color inversion remains available as a separate option.
+New! Magnifier now supports per-monitor zoom, allowing each display to use its own zoom level while keeping the magnified view within that display. To use per-monitor zoom, set your displays to Extend under Settings > System > Display.
+To adjust a display, move your pointer to it and press Windows key + Plus (+) or Windows key + Minus (-), use Ctrl + Alt with the mouse wheel or move the Magnifier toolbar to that display and use its controls.
+Per-monitor zoom is on by default. You can turn it off or adjust individual zoom levels from the Magnifier toolbar or under Settings > Accessibility > Magnifier.
+New! Magnifier now supports viewport locking for multi-monitor setups with per-monitor zoom turned on. It keeps the magnified view on a display in place while you move the pointer to another display. The locked display remains interactive. Point to a display and press Ctrl + Windows key + K to lock or unlock its view.
+Press Windows key + Esc to release all locked displays.
+You can change the lock shortcut to Ctrl + Alt + P under Settings > Accessibility > Magnifier.
+[Live Captions]
+New! This update improves Live Captions with a new Include screen reader audio setting, which is off by default. With the setting off, Live Captions will not transcribe audio from screen readers such as Narrator, JAWS, and NVDA, keeping captions focused on microphone and system audio. To turn on this setting, go to Settings > Accessibility > Captions.
+[Narrator]
+New! Narrator now supports reading and navigating math equations in supported Microsoft 365 apps, including Word and PowerPoint, and supported web content in Microsoft Edge (version 153.0.4234.32 and later) and Google Chrome (version 153.0.8010.18 and later). This makes it easier for users who are blind or have low vision to understand and explore equations, formulas, and scientific notation.
+Press Narrator key + Alt + N to turn on math navigation and use the arrow keys to explore parts of an equation. Press Esc to exit.
+Math reading supports English (United States), English (United Kingdom), Traditional Chinese, Finnish, German, and Spanish. You can change the language and other math reading preferences in Narrator settings (Accessibility > Narrator > Math reading).
+[Family Safety]
+New! The update improves family safety messaging when applications are blocked because of age-restricted parental controls.
+[Recovery]
+New! This update enables Windows recovery (WinRE) to automatically reuse eligible Wi-Fi profiles already saved in Windows, including supported certificate-based networks. Devices can now get online automatically during recovery scenarios such as quick machine recovery or cloud rebuild, without preconfiguring Wi-Fi credentials in WinRE. This capability is on by default, and IT admins can disable it. This feature was previously disclosed last month and is now beginning to roll out.
+To learn more, see Networking in WinRE.
+[Cloud rebuild]
+New! This update introduces Cloud rebuild, a new recovery option that reinstalls Windows 11 using a Windows image and device drivers downloaded from Windows Update, including when Windows is unable to start. No USB media or custom image is required. Cloud rebuild includes:
+Drive sanitization: Choose to remove your files or securely erase data using the storage hardware’s erase capability before Windows is reinstalled. Sanitization is irreversible.
+Remote management: IT administrators can configure and start a Cloud rebuild remotely through the Recovery CSP using either the currently installed build or a specified target build.
+To start Cloud rebuild:
+In Windows, go to Settings > System > Recovery, and then select Rebuild PC. The device restarts into the Windows Recovery Environment and starts Cloud rebuild.
+Alternatively, if Windows can't start, the device enters the Windows Recovery Environment automatically after repeated boot failures. From the Windows Recovery Environment (WinRE), select Troubleshoot > Recovery and uninstall > Cloud rebuild.
+Connect to a wired Ethernet or Wi-Fi network.
+Review the target Windows build, edition, and language, and then confirm the data loss warning before the rebuild begins. You can choose whether to remove files or remove and sanitize files prior to Windows reinstalling.
+To learn more, see Cloud rebuild.
+[Windows settings backup and restore]
+New! This update introduces a Restore Summary that appears after you restore a backup profile to a new device. The summary gives a clear overview of what was successfully restored, including Windows settings and the list of Microsoft Store apps. This improves transparency during device transitions and helps you validate your restore results and continue setup on your new device with confidence.
+For more information see, Windows settings backup and restore overview.
+[App management]
+New! Policy-based inbox app removal now supports multi-session environments. IT administrators can use the existing policy-based app removal capability to manage the removal of supported in-box apps on Windows 11 Enterprise and Education devices in multi-session environments.
+[Adaptive hibernate policy]
+New! This update improves the adaptive hibernate policy to provide more instant-on resumes from Modern Standby while helping preserve battery life when the charge is low. Noticeable changes include less hibernation while the battery is above 80% and hibernating sooner when the battery is below 10%.
+[Security]
+New! This update expands memory integrity protection across eligible devices. Supported PCs may now have memory integrity (HVCI) enabled during updates to help improve security and prepare devices for advanced Windows security features, while respecting existing user or IT administrator choices. For more information, see Expanding memory integrity protection across Windows devices.
+[Windows IPv6 networking support]
+New! Windows now supports IPv6 CLAT for Wi-Fi and Ethernet network interfaces, adding client-side 464XLAT translation so IPv4-only applications can continue reaching IPv4 services from IPv6-only networks. This helps organizations advance IPv6-only deployments while preserving compatibility for legacy IPv4 application scenarios.
+Prefix discovery: PREF64 is discovered through Router Advertisements (RA) by default, with DNS ipv4only.arpa available as a fallback.
+Requirements: CLAT requires SLAAC-based IPv6 addressing. DHCPv6 Prefix Delegation and Windows Subsystem for Linux (WSL) are not currently supported.
+Configuration: Enable CLAT by using netsh interface clat set global permit=enabled pref64fromdns=enabled pref64fromra=enabled or Group Policy under Network > TCPIP Settings > IPv6 Transition Technologies.
+[Data Protection API (DPAPI)]
+New! This update adds a warning before prompt-based protect and unprotect operations. The warning explains that this prompt-based experience will be retired in April 2027. If you or an app use these prompts, stop creating new prompt-protected data, use a supported non-interactive protection flow, and decrypt or migrate existing prompt-protected data before retirement. DPAPI operations that do not use the prompt-based flow aren't affected. For more details, see CRYPTPROTECT_PROMPTSTRUCT structure (dpapi.h).
+[Windows Spotlight]
+This update makes underlying platform changes to generally improve Windows Spotlight reliability on the lock screen.
+[Unicode]
+This update provides Windows text shaping support for Unicode 17.0, helping Windows correctly display and shape newly encoded characters and scripts. Unicode 17.0 added 4,803 characters, including support for four newly encoded scripts: Beria Erfe, Sidetic, Tai Yo, and Tolong Siki. These updates help keep Windows text support current as the Unicode Standard evolves and improve support for languages and writing systems used by people around the world.
+1 Feature availability may depend on your device or market
+Normal rollout 
+This non-security update includes quality improvements. The following summary outlines key issues addressed by the KB update after you install it. Also, included are available new features. The bold text within the brackets indicates the item or area of the change.
+[Microsoft Edge on Windows now supports Accelerated App Launch]
+New! Microsoft Edge now opens faster and more consistently on Windows, with the biggest improvements when your device is busy or under load. Accelerated app launch streamlines how Windows launches Edge when it's already running in the background, reducing launch delays when you open a link or launch Edge from the taskbar or Start menu.
+This capability is available on Windows 11, version 25H2, 26H2, and 26H1, with Microsoft Edge version 150 or later required.
+For more information, see Edge is faster on Windows with Accelerated App Launches.
+[App management]
+New! Policy-based in-box app removal now supports multi-session environments. IT administrators can use the existing policy-based app removal capability to manage the removal of supported in-box apps on Windows 11 Enterprise and Education devices in multi-session environments.
+To learn more, see Policy-based in-box app removal.
+[Remote Desktop (Known issue)] Fixed
+This update addresses an issue that prevented non-admin users from establishing Remote Desktop connections to remote devices with Administrator protection enabled. Affected connections might have failed with error 0xC000000D and displayed the message, “The token that was passed to the function is invalid.”
+This update addresses an issue that prevents the “Specify thumbprints of certificates representing trusted .rdp publishers” policy from being configured through Microsoft Intune.
+[Smart App Control (Known issue)] Fixed This update fixes an issue where you might be unable to turn on Smart App Control in the Windows Security app after it has been turned off. On affected devices, the option to turn on Smart App Control might be grayed out.
+[Windows PowerShell] This update adds version 5.1 to the names of Windows PowerShell and Windows PowerShell Integrated Scripting Environment (ISE). On existing devices, some Start menu shortcuts might retain their previous names after you install this update.
+[Audio] This update fixes an issue where HDMI and DisplayPort audio playback might fail on certain AMD graphics cards.
+[Application Control] This update addresses an issue that could prevent a device from starting after using the PS_UpdateAndCompareCIPolicy CIM method.
+[Certificates] This update addresses an issue where TPM attestation identity key (AIK) certificate enrollment could stop responding when a non-Microsoft CNG key storage provider reported a malformed algorithm name or faulted during provider enumeration.
+[Windows Sandbox] This update addresses an issue where Windows Sandbox might close unexpectedly and display error 0x80370106 while in use.
+[BitLocker] This update improves BitLocker pre-boot PIN retry handling to prevent unintended repeated submissions from causing TPM dictionary-attack lockout and recovery.
+[Smart cards] This update adds support for RSA-3072 keys on supported Personal Identity Verification (PIV) smart cards in the Windows smart card minidriver.
+[Always On VPN] This update fixes an issue that affects Always On VPN connections after installing September security update. When automatic protocol selection or protocol fallback was configured, affected VPN connections could remain stuck in a Connecting state or fail to connect after an initial connection attempt failed. In some cases, subsequent connection attempts could display the error, "The specified port is already in use."
+[Windows Subsystem for Linux (WSL)] This update fixes an issue where nested virtualization might not be available in Windows Subsystem for Linux version 2 (WSL2) on devices with AMD processors.
+Components updates
+AI components
+This release updates the following AI components to version 1.2610.1063.0: Image Search, Content Extraction, Semantic Analysis, and Settings Model.
+To learn more, see Release information for AI components.
+Servicing stack update (SSU)
+Microsoft combines the latest servicing stack update (SSU) for your operating system with the latest cumulative update (LCU). This Windows update includes KB5132402 (Build 26100.9815), which improves the reliability of the Windows update installation process. To learn more about SSUs, see Servicing stack updates.
+Known issues in this update
+USB Audio Class 1.0 devices with error Code 10 or no output 
+Symptoms
+After installing the September 8, 2026, Windows security update, some USB Audio Class 1.0 devices might fail to start or produce audio. Affected devices might experience one or more of the following symptoms:
+The device displays an error in Device Manager: "This device cannot start (Code 10)."
+No audio output.
+Volume controls are unresponsive or remain at zero.
+Sound settings are unresponsive or unavailable.
+This issue is limited to USB Audio Class 1.0 devices.
+Resolution
+Microsoft is working on a resolution and will update this documentation when more information is available.
+How to get this update
+Before you install this update
+For Windows Update: For Windows 11, version 24H2 and Windows 11, version 25H2, you must have the Windows update released on or after June 10, 2025 (such as KB5060842) installed before installing this update.
+For Windows Server Update Services (WSUS) deployment or when installing the standalone package from Microsoft Update Catalog: For Windows 11, version 24H2 and Windows 11, version 25H2, you must have the Windows update released on or after June 10, 2025 (such as KB5060842) installed before installing this update.
+For Servicing Stack Update (SSU): You must have the latest SSU installed to install this update.
+Deployment
+If you deploy dynamic updates such as this update to an existing Windows image, ensure the boot.stl file is included as part of the installation media. Failure to include the file might prevent devices from successfully starting from the installation media and can result in error code 0xc0430001.
+Note
+The boot.stl file is used during Secure Boot validation and must match the Windows version and architecture of the image you are updating.
+To ensure the boot.stl file is included as part of the installation media, do one of the following:
+Use the Update WinPE script to update an existing Windows image. (Recommended)
+Manually copy the boot.stl file from the device Windows\Boot\EFI folder to the corresponding folder on your installation media before deploying the update.
+For information about how to apply Dynamic Update packages to existing Windows images, see Update Windows installation media with Dynamic Update.
+Install this update
+To install this update, use one of the following Windows and Microsoft release channels.
+Windows Update
+Business
+Catalog
+Server Update Services
+Available | 
+Next Step | 
+ | 
+Open Start 
+ > Settings 
+ > Windows Update > Advanced options > Optional updates. In the Optional updates available area, you will find the link to download and install available updates.
+Check for optional updates | 
+Available | 
+Next Step | 
+ | 
+These changes will appear in the next security update to Windows Update for Business. | 
+Available | 
+Next Step | 
+ | 
+To install this update, download the standalone package(s) for this update from the Microsoft Update Catalog. This update contains MSU files that require installation in a specific order. Follow the Arm64 installation instructions or x64 installation instructions, as appropriate.

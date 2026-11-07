@@ -1,0 +1,52 @@
+# 가져온 시각: 2026-10-26T15:47:56.027Z
+# 원본: https://support.google.com/gemini/answer/13275746?hl=en&co=GENIE.Platform%3DDesktop
+Send feedback or report a problem with Gemini Apps - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/13275746?hl=en&co=GENIE.Platform%3DDesktop
+
+Send feedback or report a problem with Gemini Apps
+
+If you get a response that’s inaccurate or that you feel is unsafe, you can give feedback on that response to let us know. If you have a general issue with Gemini Apps, or want to tell us about your experience, you can report a problem.
+
+Important: When you submit feedback, the associated conversation, like your prompts and the Gemini app’s responses, is added as part of your feedback. Any included content, such as files and images you upload, as well as your personal content that Gemini got from Connected Apps is collected with your feedback and used consistent with Google Privacy Policy.
+
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Give feedback on a response
+
+Important: 
+
+To give feedback on a response, you need to sign in to Gemini Apps. Learn how to sign in to Gemini Apps.
+Users with a work account that has access to Pro, and users with a school account, will not be able to add additional feedback or attach content.
+
+Your feedback helps make Gemini Apps more helpful, accurate, and safe.
+
+Below the response from Gemini Apps, click Good response  or Bad response .
+Optionally, you can select a reason, enter additional feedback, and/or choose to include the files and/or images uploaded before this response with your feedback.
+Tip: You can help us understand your feedback better when you select a reason. For example, if you select Bad response  because it’s unsafe or offensive, selecting Offensive / Unsafe helps us understand your rating.
+If you provide additional feedback, click Submit.
+Report a problem or send general feedback
+
+Important: To report a problem or general feedback, you need to sign in to Gemini Apps. Learn how to sign in to Gemini Apps.
+
+On your computer, go to gemini.google.com.
+At the bottom, click Settings & help   Send feedback .
+Enter your feedback. You can choose to add a screenshot to help us better understand the issue.
+At the bottom, click Send.
+Report a legal issue
+
+To report a Gemini web app's response for legal reasons:
+
+Below the response, click More   Report legal issue.
+Select the reason you wish to report content.
+Follow the on-screen instructions.
+How Google uses your feedback
+
+Learn how Google uses your feedback.
+
+Related resources
+Use Gemini Apps
+Gemini Apps Privacy Hub
+Get started with the Gemini mobile app
+Give feedback about this article

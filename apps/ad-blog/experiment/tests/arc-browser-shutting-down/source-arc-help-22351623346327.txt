@@ -1,0 +1,37 @@
+# Delete My Arc Account
+URL: https://resources.arc.net/hc/en-us/articles/22351623346327-Delete-My-Arc-Account
+created_at: 2024-03-26T18:51:26Z updated_at: 2026-10-22T15:26:20Z edited_at: 2026-10-22T15:26:20Z
+fetched: 2026-10-25 UTC (Zendesk Help Center API)
+
+Arc is being sunset on December 22, 2026 . After that date, you won't be able to sign in to or use Arc. Please note that we will deactivate all Arc accounts on December 22. Once an account is deactivated, we will delete user personal data associated with the account within 30 days. Not to worry! Many of the Arc features you love live on in Dia, and you can bring your Arc setup along in just a few clicks. To see the full timeline, read Arc Sunset: Key Dates and What to Expect [https://resources.arc.net/hc/en-us/articles/44412972248471]. To make the switch, read Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].
+ You can delete your Arc account at any time from Arc's settings on macOS or Windows. Please note that deleting your account is permanent and can't be undone.
+ Do I need to delete my Arc account before December 22?
+ No. We will deactivate all Arc accounts on December 22. Once an Arc account is deactivated, personal data related to the account is deleted within 30 days.
+ Should I move to Dia before deleting my Arc account?
+ Yes, if you'd like to keep your Spaces, tabs and browsing data. Import them into Dia before you delete your Arc account. To learn how, read [Move from Arc to Dia] .
+ How to delete your Arc account on macOS
+- Press Command + T , type Account Preferences , and press Return .
+- Select the three dots menu (...) next to your email address.
+- Select Delete Account… .
+- Follow the prompts on screen to finish deleting your account.
+ How to delete your Arc account on Windows
+- Open Arc's settings: press Control + Comma (,) , or select the Arc logo in the top-left corner and select Settings .
+- Select Edit Account .
+- Select Delete Account .
+- Follow the prompts on screen to finish deleting your account. You may be asked to enter your Arc password.
+ Will deleting my Arc account affect my Dia account?
+ No. Deleting your Arc account only affects your Arc account and its data. Your Dia account isn't affected.
+ What are my privacy rights for my Arc data?
+ Depending on where you live, such as California, Nevada or the EU, you may have specific rights over your personal data under privacy laws like the GDPR and CCPA. These include the right to request a copy of your data and the right to ask us to delete it. To learn more, read our Regional Privacy [https://start.arc.net/privacy-rights-by-region] Rights doc.
+ How do I request a copy of my Arc data?
+ You can request a copy of personal data related to your Arc account until December 15, 2026. A copy includes your account details, like your name, email address and when you joined, and a record of how you've used Arc. It doesn't include browsing data stored on your device, like your history or passwords, because we don't have access to it. To keep that data, import it into Dia before December 22.
+ Please note that as of December 22, 2026, we'll no longer be able to retrieve your Arc account data. To give our team time to service your data retrieval request, please ensure it is submitted by December 15.
+ To make a request, select the chat button in the corner of this page and let us know that you’d like to request a copy of personal data related to your Arc account.
+ How do I delete my Arc personal data?
+ You can ask us to delete personal data related to your Arc account until December 15, 2026. To make a request, select the chat button in the corner of this page and let us know.
+ After December 22, you don't need to make a request. We will deactivate all Arc accounts on December 22 and will delete personal data related to your Arc account within 30 days.
+ I'm having trouble deleting my Arc account
+- Make sure you're signed in to the Arc account you want to delete.
+- Enter the password for your Arc account if Arc asks for one.
+- Update Arc to the latest version and try again.
+- If you still can't delete your account, select the chat button in the corner of this page, and we'll help you delete it.

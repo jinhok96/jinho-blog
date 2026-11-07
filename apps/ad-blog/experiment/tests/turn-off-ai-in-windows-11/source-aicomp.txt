@@ -1,0 +1,60 @@
+
+Windows Copilot+ AI components	
+			Applies To
+Windows 11 version 26H2, all editions Windows 11 version 26H1, all editions Windows 11 version 25H2, all editions Windows 11 version 24H2, all editions 
+In this article
+Copilot+ PCs AI components
+Image Creation AI component
+Image Processing AI component
+Image Transform AI component
+Phi Silica AI component
+Vision AI component
+Copilot+ PCs AI components
+Copilot+ PCs include a set of built‑in AI components that enable on‑device artificial intelligence experiences across Windows. These components are part of the Windows operating system and are designed to run locally using the device’s dedicated AI hardware, including the Neural Processing Unit (NPU). Together, they provide the foundation for intelligent, responsive, and privacy‑focused features integrated throughout Windows 11.
+The AI components in Copilot+ PCs consist of machine‑learning models, supporting runtimes, and hardware‑optimized execution layers that allow Windows features and applications to perform AI tasks directly on the device. By running AI workloads locally, Copilot+ PCs deliver low‑latency performance, reduce reliance on cloud connectivity, and keep sensitive data on the device.
+These AI components support a wide range of capabilities, including image understanding and editing, creative image generation, and language intelligence. Each component is focused on a specific category of AI functionality and works in coordination with others to provide end‑to‑end AI experiences across the operating system. Examples include components for image processing, image transformation, image creation, and local language modeling.
+AI components in Copilot+ PCs are serviced independently through Windows Update as part of Windows AI updates. This component‑based servicing model allows Microsoft to deliver improvements, optimizations, and reliability updates to AI models separately from core Windows feature updates. As a result, AI capabilities on Copilot+ PCs can evolve over time while remaining tightly integrated with Windows.
+Overall, the AI components in Copilot+ PCs form a core part of the Windows AI platform, enabling intelligent features that feel built‑in rather than bolted on. They transform Copilot+ PCs into a new class of Windows devices designed for the AI generation—capable of running advanced AI workloads locally, efficiently, and securely.
+To learn what exactly a Copilot+ PC is, and how they differ from traditional Windows PCs, see Copilot+ PCs vs. Windows PCs: What’s the difference?
+back to top
+Image Creation AI component
+The Image Creation AI component is a Windows AI component used on Copilot+ PCs to enable on‑device image generation and creative image creation experiences. This component provides the local machine‑learning models and runtime support required for generating images from text prompts and for assisting creative workflows directly on the device.
+On supported Copilot+ hardware, the Image Creation AI component allows Windows features and applications to perform image creation tasks locally, without sending prompts or image data to the cloud. By running on the device’s dedicated AI hardware, these experiences deliver low‑latency performance, improved responsiveness, and enhanced privacy.
+The Image Creation AI component supports Windows features such as image generation and creative editing experiences integrated into Windows apps and Copilot‑powered workflows. It works alongside other Windows AI components (such as Image Processing and Image Transform) to provide a complete, end‑to‑end image creation and editing pipeline.
+back to top
+Image Processing AI component
+The Image Processing AI component is a Windows AI component used on Copilot+ PCs to enable on‑device image understanding and image processing capabilities across Windows features and applications. This component includes a set of machine‑learning models and supporting runtime components that process images for scaling, segmentation, and visual analysis tasks.
+On supported Copilot+ hardware, the Image Processing AI component performs tasks such as detecting image structure, extracting foreground and background elements, and preparing images for downstream editing or transformation. By running locally on the device’s dedicated AI hardware, these operations deliver fast, low‑latency performance while keeping image data on the device for improved privacy.
+The Image Processing AI component supports Windows experiences that rely on image analysis, including image enhancement, accessibility features, and AI‑assisted image editing workflows. It works in conjunction with other Windows AI components—such as Image Transform and Image Creation—to provide a complete image processing and creation pipeline within Windows Copilot+.
+back to top
+Image Transform AI component
+The Image Transform AI component is a Windows AI component used on Copilot+ PCs to enable on‑device image editing and visual transformation capabilities across Windows features and applications. This component provides the machine‑learning models and runtime support required to modify images by removing selected foreground objects and intelligently generating background content to fill the resulting space.
+On supported Copilot+ hardware, the Image Transform AI component performs context‑aware image transformations, allowing Windows experiences to seamlessly edit images without manual masking or complex tools. By running locally on the device’s dedicated AI hardware, these transformations deliver fast, low‑latency results while keeping image data on the device to support privacy‑focused workflows.
+The Image Transform AI component supports creative and productivity features in Windows, such as AI‑assisted image editing, object removal, and background reconstruction. It works together with other Windows AI components—including Image Processing and Image Creation—to provide a complete on‑device image understanding, transformation, and creation pipeline within Windows Copilot+.
+back to top
+Phi Silica AI component
+The Phi Silica and Phi Silica J32 are Windows AI components used on Copilot+ PCs to enable on‑device language intelligence across Windows features and applications. Phi Silica is a Transformer‑based small language model (SLM) developed by Microsoft and optimized to run locally on the device’s Neural Processing Unit (NPU).
+Unlike cloud‑based language models, Phi Silica performs language tasks entirely on the device, enabling fast, low‑latency responses while keeping user data local for enhanced privacy. Although compact in size, Phi Silica provides many of the capabilities typically associated with large language models, such as text understanding, summarization, rewriting, and short‑form content generation, while operating efficiently within the power and performance constraints of Copilot+ hardware.
+The Phi Silica AI component supports a range of Windows and Copilot+ experiences that rely on local language processing, including productivity features, accessibility scenarios, and AI‑assisted workflows surfaced throughout the operating system. Phi Silica is also exposed to developers through Windows AI APIs, allowing applications to integrate on‑device language intelligence without requiring cloud connectivity.
+Phi Silica AI component
+Phi Silica J32 AI component
+Phi Silica is Microsoft’s small, NPU‑optimized local language model (SLM) designed to run entirely on‑device on Windows 11 Copilot+ PCs. It is a specialized derivative of the Phi model family and is tuned specifically for Neural Processing Units (NPUs) to deliver low‑latency, power‑efficient text generation without cloud dependency. Apps access Phi Silica through Windows AI APIs in the Windows App SDK, enabling privacy‑preserving, offline scenarios with reliable performance.
+Key characteristics include:
+Designed for on‑device execution to improve privacy, responsiveness, and reliability
+Optimized for energy efficiency and sustained NPU workloads
+Uses speculative decoding to accelerate text generation
+Included inbox with Windows on supported Copilot+ PCs
+Phi Silica J32 is a hardware‑specific build/variant of the Phi Silica AI component targeted to Qualcomm‑powered Copilot+ PCs. It is delivered as a component update through Windows Update and is scoped to specific Windows versions (such as Windows 11, version 26H1).
+J32 does not introduce a new model family; instead, it represents a Qualcomm‑tuned packaging and servicing track of Phi Silica that aligns with the capabilities and runtime requirements of Qualcomm NPUs. Functionally, it remains the same class of Transformer‑based local language model, but its distribution, compatibility, and optimization are processor‑specific.
+back to top
+Vision AI component
+The Vision AI component is a Windows AI component used on Copilot+ PCs to support on-device image processing and visual analysis on supported Windows devices. It provides AI capabilities used to analyze and process visual content, including image description, segmentation, object extraction, and image enhancement. These capabilities use on-device AI processing to provide efficient performance while helping keep image data on the device.
+back to top
+Change log
+Change date
+Change description
+October 17, 2026
+Added information about the Vision AI component.
+September 29, 2026
+Added Windows 11, version 26H2 to the "Applies to" section.
+					

@@ -1,0 +1,51 @@
+# 가져온 시각: 2026-10-27T16:03:02.016Z
+# 원본: https://support.apple.com/guide/icloud/mm155e8d9577
+Set up iCloud for Siri on all your devices - Apple Support
+https://support.apple.com/guide/icloud/siri-mm155e8d9577/icloud
+
+Search this guide
+Clear Search
+Table of Contents 
+Set up iCloud for Siri on all your devices
+
+With iCloud, your Siri settings stay consistent across all your devices. You can use iCloud with Siri on your iPhone, iPad, and Mac. To learn more about Siri settings, see Change Siri settings on iPhone, Change Siri settings on iPad, or Customize Siri on Mac.
+
+Note: Make sure you’re signed in to the same Apple Account on each device. If you’re not signed in to your Apple Account on a device, or the device has Siri for iCloud turned off, Siri settings won’t sync.
+
+Set up iCloud for Siri on your iPhone or iPad
+
+On your iPhone or iPad, go to Settings > [your name] > iCloud.
+
+Tap See All, then tap Siri.
+
+Turn on Sync this [device].
+
+Your Siri settings are synced to iCloud and appear on all your devices where you turned on iCloud for Siri.
+
+Set up iCloud for Siri on your Mac
+
+On your Mac, choose Apple menu  > System Settings, then click your name at the top of the sidebar.
+
+If you don’t see your name, click “Sign in,” enter your Apple Account email address or phone number, then enter your password.
+
+Click iCloud, then next to Saved to iCloud, click See All.
+
+Click Siri, then turn on Sync this Mac.
+
+Your Siri settings are synced to iCloud and appear on all your devices where you turned on iCloud for Siri.
+
+See also
+Apple Support article: System requirements for iCloud
+Previous
+Set up Safari
+Next
+What you can do with iCloud and third-party apps
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

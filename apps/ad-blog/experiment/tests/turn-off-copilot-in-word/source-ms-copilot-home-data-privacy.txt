@@ -1,0 +1,30 @@
+Copilot in Microsoft 365 apps for home: your data and privacy
+Note
+This article applies only to when you're using Copilot in Microsoft 365 apps for home, such as with a Microsoft 365 Personal, Family, Premium, or Pro plan.
+By "for home" we mean when you're signed in with a Microsoft account. For example, a personal email address.
+For more information, see Frequently asked questions about Copilot in Microsoft 365 subscriptions.
+For information about privacy for the Microsoft Copilot app, see Microsoft Copilot for individuals: your data, privacy, and responsible AI.
+Copilot is your AI assistant designed to help you with a range of tasks and activities in Microsoft 365 apps. For example, in Word, PowerPoint, Excel, Outlook, or OneNote.
+Copilot in Microsoft 365 apps is covered by the Microsoft Services Agreement. For information about how Microsoft uses your personal data, see the Microsoft Privacy Statement.
+Your data and Copilot
+A "prompt" is what you ask Copilot to help you with; the answer Copilot provides is a "response." Your "activity history" is the record of those prompts and responses.
+Copilot only makes use of the content in the file that you're working in or content in another file that you ask it to look at. For example, when you ask Copilot to help you rewrite a paragraph in a Word document or when you ask Copilot to generate a to-do list from your notes in OneNote.
+Important
+Prompts, responses, and your file contents when using Copilot in Microsoft 365 apps aren't used to train foundation models.
+We may use customer feedback, which is optional, to improve Copilot in Microsoft 365 apps, just like we use customer feedback to improve other Microsoft 365 services and Microsoft 365 productivity apps. We don't use this feedback to train the foundation models used by Copilot in Microsoft 365 apps. For more information, see Providing feedback about Microsoft Copilot with Microsoft 365 apps.
+Your personal data collected from the use of connected experiences in Microsoft 365 isn’t used to train large language models (LLMs), including those used by Microsoft 365 Copilot.
+In some apps, you can see your activity history even after you close and reopen the app. For example, in Word, Excel, and PowerPoint on Windows, Mac, and mobile devices or when using the web versions of those apps. To export your activity history for Copilot, see Manage your Copilot activity history in the privacy dashboard.
+For some apps or on certain types of devices, Copilot doesn't show your activity history after you close and reopen the app. In those cases, every time you open an app, you're starting over again with Copilot.
+Your privacy settings and Copilot
+You can choose your privacy settings when you're using Microsoft 365 apps. Your ability to use Copilot features depends on these two settings:
+Experiences that analyze content
+All connected experiences
+If you turn off either of those settings, you can't use Copilot features in these apps:
+Excel
+OneNote
+Outlook
+PowerPoint
+Word
+This applies to when you're running the most current version of these apps on Windows, Mac, iOS, or Android devices.
+These settings also turn off other features that you might want to use. For more information, see Connected experiences in Microsoft 365.
+								

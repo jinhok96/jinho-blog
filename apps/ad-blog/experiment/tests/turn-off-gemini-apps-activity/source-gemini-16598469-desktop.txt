@@ -1,0 +1,77 @@
+# 가져온 시각: 2026-10-26T15:39:21.885Z
+# 원본: https://support.google.com/gemini/answer/16598469?hl=en&co=GENIE.Platform%3DDesktop
+Get personalization with memory of your past Gemini chats - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/16598469?hl=en&co=GENIE.Platform%3DDesktop
+
+Get personalization with memory of your past Gemini chats
+
+You can get a personalized experience from Gemini Apps using memory of your past chats. With this feature, Gemini can learn from your chats to understand more about you and your world.
+
+What you need
+
+To get personalization with memory of your past Gemini chats, you need to:
+
+Be 18 or over.
+Sign in with a personal Google Account. This feature isn’t available when you sign in to a work, school, or supervised Google Account. Learn how to sign in to Gemini Apps.
+Have Keep Activity on. This feature isn’t available when this setting is off.
+
+Important: For now, this feature is:
+
+Only available in the Gemini mobile app, the Gemini web app at gemini.google.com, Gemini in Chrome (in countries where Gemini in Chrome is available), and Gemini on your smartwatch.
+Not available in certain features, like Gems or Live chats. In a text chat, you can ask Gemini to reference a past Gemini Live conversation.
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Turn Memory on or off
+
+You can change whether Gemini Apps use memory of your past chats to personalize your experience at any time.
+
+On your computer, go to gemini.google.com.
+At the bottom, click Settings & help   Personal Intelligence.
+Turn Memory off  or on .
+Tip: When Memory is turned on, Gemini may suggest topics or tools for you based on previous conversations. For instance, Gemini might:
+Suggest next steps for a project you’re working on
+Offer to help plan a trip you’ve mentioned
+Ask if you want help comparing products you’ve discussed.
+Find & delete your past Gemini chats
+
+You can find and delete your past chats in Gemini Apps Activity. If you delete a chat, there might be a short delay before Gemini stops using it to personalize your responses. Learn how to manage your Gemini Apps activity.
+
+Check if Gemini used your past chats
+
+To check if Gemini used your past chats, just ask Gemini, “Did you use any info from past chats?”
+
+Delete or correct something Gemini knows about you
+
+To delete something that Gemini remembered about you, delete all chats with this info from Gemini Apps Activity. Learn how to manage your Gemini Apps.
+
+To correct what Gemini knows about you and uses in a response:
+
+Make sure that Memory is turned on. Learn how to turn Memory on or off.
+Correct Gemini directly in your chat.
+
+While Gemini continues to improve, it might not always get it right.
+
+Delete something Gemini knows about you from a connected app
+
+If you want to delete something that Gemini remembered about you:
+
+Delete all chats with this info from Gemini Apps Activity or Recent chats. Learn how to manage your Gemini Apps Activity and delete a chat from Recent chats.
+Disconnect the app with this info, so Gemini doesn’t use it again. Learn how to manage your Connected Apps.
+
+You must complete both steps because:
+
+If you only disconnect the app, Gemini might still use the info if it’s in a past chat.
+If you only delete the chats, Gemini might still find the info in the connected app.
+What happens when you delete data from a connected app
+
+If you delete or update data in a connected app, like an email from Gmail or photo from Google Photos, your experience in Gemini may not be affected until days later.
+
+Related resources
+Gemini Apps Privacy Hub
+Manage & delete your activity in Gemini Apps
+Get personalization in Gemini Apps
+Connect your Google apps to personalize your Gemini experience
+Customize Gemini’s responses with your instructions
+Give feedback about this article

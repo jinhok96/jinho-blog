@@ -17,6 +17,7 @@ import { contentReader } from '@/core/content';
 import {
   getAdjacentPosts,
   getCategorySummaries,
+  getHubPosts,
   getPost,
   getPostPageCount,
   getPosts,
@@ -33,6 +34,7 @@ function makePost(overrides: Partial<Post> & Pick<Post, 'slug' | 'createdAt'>): 
     category: 'ai-tools',
     tags: [],
     draft: false,
+    hub: false,
     updatedAt: overrides.createdAt,
     thumbnail: `/_static/mdx/posts/generated/${overrides.slug}.webp`,
     content: '본문',
@@ -84,6 +86,19 @@ describe('getPosts', () => {
 
   it('카테고리 필터', () => {
     expect(getPosts({ category: 'software' as Post['category'] }).map(post => post.slug)).toEqual(['d']);
+  });
+});
+
+describe('getHubPosts', () => {
+  it('허브 글만 최신순으로 반환하고 초안 허브는 제외', () => {
+    mockGetEntries.mockReturnValue([
+      makePost({ slug: 'old-hub', createdAt: '2026-01-01T00:00:00.000Z', hub: true }),
+      makePost({ slug: 'post', createdAt: '2026-02-01T00:00:00.000Z' }),
+      makePost({ slug: 'new-hub', createdAt: '2026-03-01T00:00:00.000Z', hub: true }),
+      makePost({ slug: 'draft-hub', createdAt: '2026-04-01T00:00:00.000Z', hub: true, draft: true }),
+    ]);
+
+    expect(getHubPosts().map(post => post.slug)).toEqual(['new-hub', 'old-hub']);
   });
 });
 

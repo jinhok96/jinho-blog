@@ -1,0 +1,8 @@
+Block or allow Siri and Apple Intelligence features
+Note: The settings that appear here may vary depending on your Siri version. Siri AI is available in beta on iOS 27 or later on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later with Siri and device language set to a supported language. Available in English to start. Siri AI will not initially be available in the EU on iOS. Usage limits may apply. Apple Intelligence on iOS 27 or later is available on an Apple Intelligence-enabled iPhone 15 Pro, iPhone 15 Pro Max, or iPhone 16 model or later. Apple Intelligence is not available in all languages or regions. Usage limits may apply.
+Go to the Settings app  on your iPhone.
+Tap Screen Time, tap Content & Privacy Restrictions, tap Siri, then do any of the following:
+Block Siri: Tap Don’t Allow Siri.
+Allow use of Siri without AI capabilities: Tap Siri (Classic Version).
+Allow use of Siri with AI capabilities: Tap Siri AI (Beta).*
+Allow or block specific capabilities: Select Allow or Block under any of the Siri AI capabilities, such as Image Creation, Sensitive Topics, or Explicit Language.

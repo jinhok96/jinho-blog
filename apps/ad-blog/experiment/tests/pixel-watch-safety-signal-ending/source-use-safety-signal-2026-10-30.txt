@@ -1,0 +1,95 @@
+Skip to main content
+Google Pixel Watch Help
+Sign in
+Help Center
+Community
+Google Pixel Watch
+
+For assistance with Fitbit, health and fitness features on your Google Pixel Watch, including heart rate and heart health, exercise, and sleep, visit Google Health Help
+
+Use Safety Signal on Google Pixel Watch
+Important: This feature is only available on Google Pixel Watch 2 and 3 with LTE enabled.
+What is Safety Signal
+
+Safety Signal1 is a Google Health Premium2 subscription service that provides LTE connectivity from Google to use safety features.
+
+When you're away from your phone and you don't have a carrier plan on your watch, Safety Signal connectivity allows you to use safety features in an emergency.
+
+You won't have access to Safety Signal when you already have carrier services on your watch as your carrier service provides the connection to emergency calls you need while you're away from your phone.
+
+Safety Signal provides connectivity to give you access to the following safety features on your watch:
+
+Calls to and from emergency contacts
+Safety Check3
+Emergency Sharing4
+Emergency SOS5
+Fall Detection6
+Requirements for using Safety Signal
+Is Safety Signal available in my region
+
+Safety Signal is only available in the United States, Canada, United Kingdom, and Germany.
+
+Roaming is available between:
+
+The US and Canada
+The UK and Germany
+What do I need to use Safety Signal
+For Google Pixel Watch 2 or Google Pixel Watch 3 4G LTE, you don't need a carrier plan but you do need the LTE Watch version.
+Google Health Premium subscription
+
+Safety Signal isn't available on any new Google Pixel Watch 2 and 3 purchased from AT&T or Verizon, or a Google Pixel Watch 2 that was previously purchased from these carriers that hasn't activated the feature.
+
+Family Link will work with Google Pixel Watch, but at the moment Child Accounts under a Fitbit family account aren't supported. For kids, we recommend the Fitbit Ace 3 and Fitbit Ace LTE smartwatch.
+Do I need the Google Personal Safety App
+
+While not required, it is recommended that you download the Google Personal Safety app on your phone to help with managing your emergency contacts and other safety features.
+
+Sign up for Safety Signal
+
+Important: The eSIM connectivity may take up to 24 hours to activate.
+
+On your phone, open the Google Pixel Watch app .
+Tap Safety & emergency  Safety signal.
+Sign in to Google Health Premium with an existing Google Health account or sign up for a Google Health Premium subscription if you don't already have one.
+Pixel Watch 2 users must move Fitbit to a Google Account to proceed.
+Safety Signal will activate and give you your watch number to share with your contacts so they don't miss your call.
+Your watch number is always available in Safety & emergency  Safety signal.
+How to use Safety Signal
+
+Safety Signal is activated automatically after set up. You'll know that Safety Signal is working when the Safety Signal Indicator  and a Ready to use notification appears on your watch face when you walk away from your phone.
+
+The Safety Signal Indicator may take up to 15 minutes to appear on your watch screen.
+
+Find your Safety Signal phone number
+
+This phone number is assigned to you to enable Personal Safety features when your phone isn't with you. It can't be transferred to another carrier and will be reset if you erase your eSIM.
+
+On your phone, open the Google Pixel Watch app .
+Tap Safety & emergency  Safety signal. You should find your number listed here.
+Why does my number appear as an international number (UK and Germany only)
+Can I use my personal mobile phone number for Safety Signal
+Fix issues using Safety Signal on Pixel Watch
+Sign up errors
+
+If you're getting any of the following errors while setting up Safety Signal follow the steps below.
+
+Connection error
+Activation error
+Internal error
+
+If you meet all of the criteria above and you still receive this error, follow the steps to sign up for Safety Signal.
+
+I signed up for Safety Signal but the service isn't working
+
+Safety Signal connection will appear as active when you're away from your phone. To confirm this, turn off Bluetooth and Wi-Fi on your watch. The Safety Signal symbol  will be displayed on your watch face. Your Safety Signal watch number will only be reachable when you're away from your phone and the symbol is showing on the watch face.
+
+1 Safety Signal: Not available on Pixel Watch 2 or 3 (Wi-Fi) or in all countries. Safety Signal requires location enabled and, in cases of emergency, provides Google Health Premium subscribers without a 4G LTE watch line with access to a 4G LTE network for use of safety features only. When your watch is not connected to your phone, Safety Signal does not support Wi-Fi calling.
+
+2 Some features may require a Fitbit account and the mobile app. Charges may apply for Fitbit Premium features.
+
+3 Safety Check: Safety Check is not available to supervised accounts on Pixel Watch. Data rates may apply. Safety Check requires location enabled and 4G LTE service or an internet connection. Safety Check is dependent upon network connectivity and other factors and may not be reliable for emergency communications or available in all countries or languages. Go to g.co/pixelwatch/personalsafety for more details.
+
+4 Emergency Sharing: Emergency Sharing is not available to supervised accounts on Pixel Watch. Data rates may apply. Emergency Sharing requires location enabled and 4G LTE service or an internet connection. Emergency Sharing is dependent upon network connectivity and other factors and may not be reliable for emergency communications or available in all countries or languages. Go to g.co/pixelwatch/personalsafety for more details.
+
+5 Emergency SOS is dependent upon network connectivity and other factors and may not be reliable for emergency communications or available in all countries or languages. The Wi-Fi version of Google Pixel Watch relies on your phone to call emergency services. This feature requires your phone to be nearby and connected through Bluetooth. Your watch can’t be used to speak with emergency services without the Bluetooth connection to your phone. Your Google Pixel Watch LTE doesn’t need a phone to call emergency services. However, it needs an active LTE connection on your watch to call emergency services. For more details, go to g.co/pixelwatch/personalsafety.
+

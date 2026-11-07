@@ -1,0 +1,138 @@
+# 가져온 시각: 2026-10-27T21:46:07.216Z
+# 원본: https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/
+iPhone Duo arrives at Apple Store locations worldwide - Apple
+https://www.apple.com/newsroom/2026/10/iphone-duo-arrives-at-apple-store-locations-worldwide/
+
+(function () { 'use strict'; try { var ac_analytics = require('@marcom/ac-analytics'); ac_analytics.createBasicObserverSuite({ page: { data: { eVar85: '10-23-2026', eVar86: '6' } } }); } catch (e) { // } })();
+opens in new window
+PHOTOS
+October 23, 2026
+iPhone Duo arrives
+at Apple Store
+locations worldwide
+Download image 
+Deirdre O’Brien, John Ternus, and Apple team members greet customers at Apple Domain NORTHSIDE.
+On Friday, October 23, the highly anticipated iPhone Duo made its debut at Apple Store locations worldwide. At Apple Domain NORTHSIDE in Austin, Texas, John Ternus and Deirdre O’Brien welcomed excited customers, while Greg “Joz” Joswiak and Vanessa Trigub greeted them at Apple Fifth Avenue in New York City. Across the globe, customers filled stores and team members invited them to experience the first foldable iPhone, offering hands-on demos and personalized shopping support.
+Customers can explore and shop for the revolutionary iPhone Duo and the incredible iPhone lineup at Apple Store locations around the world, on apple.com, and in the Apple Store app. Dedicated Apple Specialists are available to provide world-class support, from maximizing value with Apple Trade In and monthly leasing options with Apple Upgrade, to Apple Card Monthly Installments and exceptional carrier deals. Through Personal Setup, customers can safely and securely transfer their data, and with new Today at Apple sessions including “Say Hello to iPhone Duo” and “Tips: What’s New in iOS 27 on iPhone,” they can take their passions further with the products they love.
+
+Apple Domain NORTHSIDE, Austin
+
+.image-39bbe95beeea369941fde64ad9150987 { width: 100%; padding-top: 66.658165%; height: auto; } @media only screen and (max-width: 1068px) { .image-39bbe95beeea369941fde64ad9150987 { width: 100%; padding-top: 66.654625%; height: auto; } } @media only screen and (max-width: 734px) { .image-39bbe95beeea369941fde64ad9150987 { width: 100%; padding-top: 66.64664%; height: auto; } }
+Excited customers join Deirdre O’Brien and John Ternus (center) at Apple Domain NORTHSIDE for the in-store debut of iPhone Duo.
+.image-ddc43a86ba24b7e9da9f55735bd73f37 { width: 100%; padding-top: 66.658165%; height: auto; } @media only screen and (max-width: 1068px) { .image-ddc43a86ba24b7e9da9f55735bd73f37 { width: 100%; padding-top: 66.654625%; height: auto; } } @media only screen and (max-width: 734px) { .image-ddc43a86ba24b7e9da9f55735bd73f37 { width: 100%; padding-top: 66.64664%; height: auto; } }
+.image-847216fc4cead3172df018410e08b2ab { width: 100%; padding-top: 66.658165%; height: auto; } @media only screen and (max-width: 1068px) { .image-847216fc4cead3172df018410e08b2ab { width: 100%; padding-top: 66.654625%; height: auto; } } @media only screen and (max-width: 734px) { .image-847216fc4cead3172df018410e08b2ab { width: 100%; padding-top: 66.64664%; height: auto; } }
+.image-04392abb03c45b5f5929055dfb93715b { width: 100%; padding-top: 66.658165%; height: auto; } @media only screen and (max-width: 1068px) { .image-04392abb03c45b5f5929055dfb93715b { width: 100%; padding-top: 66.654625%; height: auto; } } @media only screen and (max-width: 734px) { .image-04392abb03c45b5f5929055dfb93715b { width: 100%; padding-top: 66.64664%; height: auto; } }
+.image-5534fac6f67a7336411caf7f700adef9 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-5534fac6f67a7336411caf7f700adef9 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-5534fac6f67a7336411caf7f700adef9 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-a926764a66948aabc8bd0661fc00ab7e { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-a926764a66948aabc8bd0661fc00ab7e { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-a926764a66948aabc8bd0661fc00ab7e { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-56f4a6e716dc4545e5b2acc2ff2c0819 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-56f4a6e716dc4545e5b2acc2ff2c0819 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-56f4a6e716dc4545e5b2acc2ff2c0819 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-e00ad75f60c7661354aad72865c3fcec { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-e00ad75f60c7661354aad72865c3fcec { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-e00ad75f60c7661354aad72865c3fcec { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-a519e1c1d4d3bcef226e9226bf8600ad { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-a519e1c1d4d3bcef226e9226bf8600ad { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-a519e1c1d4d3bcef226e9226bf8600ad { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-4f0c4e702f647baaaff9e4edcd7d6ef9 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-4f0c4e702f647baaaff9e4edcd7d6ef9 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-4f0c4e702f647baaaff9e4edcd7d6ef9 { width: 100%; padding-top: 66.58653%; height: auto; } }
+
+Apple Fifth Avenue, New York City
+
+.image-6856847bc3255bcfc3023cf13c54bbe7 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-6856847bc3255bcfc3023cf13c54bbe7 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-6856847bc3255bcfc3023cf13c54bbe7 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-d5602b0e1983fb55487beb9680fa5f13 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-d5602b0e1983fb55487beb9680fa5f13 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-d5602b0e1983fb55487beb9680fa5f13 { width: 100%; padding-top: 66.58653%; height: auto; } }
+Greg “Joz” Joswiak and Vanessa Trigub greet customers at Apple Fifth Avenue.
+.image-30e02045bec294cf971590f37ccb11bd { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-30e02045bec294cf971590f37ccb11bd { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-30e02045bec294cf971590f37ccb11bd { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-d80251c8bdfcb8d5922839709b319782 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-d80251c8bdfcb8d5922839709b319782 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-d80251c8bdfcb8d5922839709b319782 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-1f7e6c09e04296df338cdd5baa6434d1 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-1f7e6c09e04296df338cdd5baa6434d1 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-1f7e6c09e04296df338cdd5baa6434d1 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-1ef3a86f0ab229a3ceabd956117c3af6 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-1ef3a86f0ab229a3ceabd956117c3af6 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-1ef3a86f0ab229a3ceabd956117c3af6 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-a1e266a3e357e3c8af1ad73c6a2f8aa7 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-a1e266a3e357e3c8af1ad73c6a2f8aa7 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-a1e266a3e357e3c8af1ad73c6a2f8aa7 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-81d2d22f1e26b9348fe60e2bc668f509 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-81d2d22f1e26b9348fe60e2bc668f509 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-81d2d22f1e26b9348fe60e2bc668f509 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-bc86ef195e56df134b5e897e1c3947c7 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-bc86ef195e56df134b5e897e1c3947c7 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-bc86ef195e56df134b5e897e1c3947c7 { width: 100%; padding-top: 66.58653%; height: auto; } }
+
+Apple Covent Garden, London
+
+.image-520e6bd383bf6a1b18801210d0ff96fc { width: 100%; padding-top: 56.224487%; height: auto; } @media only screen and (max-width: 1068px) { .image-520e6bd383bf6a1b18801210d0ff96fc { width: 100%; padding-top: 56.213875%; height: auto; } } @media only screen and (max-width: 734px) { .image-520e6bd383bf6a1b18801210d0ff96fc { width: 100%; padding-top: 56.25%; height: auto; } }
+.image-439fab4635632f98cfb8df44efca465b { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-439fab4635632f98cfb8df44efca465b { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-439fab4635632f98cfb8df44efca465b { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-ad3dc660fb7eca0f2e054bd9aac42e1b { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-ad3dc660fb7eca0f2e054bd9aac42e1b { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-ad3dc660fb7eca0f2e054bd9aac42e1b { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-1aebebff572c2b65e0e64356f47146bb { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-1aebebff572c2b65e0e64356f47146bb { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-1aebebff572c2b65e0e64356f47146bb { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-66ae825219debe1b1ca2ee63bc658faa { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-66ae825219debe1b1ca2ee63bc658faa { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-66ae825219debe1b1ca2ee63bc658faa { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-8d6efd4da1e36d549bf8588d8252f164 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-8d6efd4da1e36d549bf8588d8252f164 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-8d6efd4da1e36d549bf8588d8252f164 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-00d5e3bc16528786ffff986612b89496 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-00d5e3bc16528786ffff986612b89496 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-00d5e3bc16528786ffff986612b89496 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-59fc7e28dac6afa5571549657b2b5d08 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-59fc7e28dac6afa5571549657b2b5d08 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-59fc7e28dac6afa5571549657b2b5d08 { width: 100%; padding-top: 66.58653%; height: auto; } }
+
+Apple BKC, Mumbai
+
+.image-013cf1102f20ab865acb15c594eef102 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-013cf1102f20ab865acb15c594eef102 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-013cf1102f20ab865acb15c594eef102 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-8f2b492f40bdbe934ec92da83520bcec { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-8f2b492f40bdbe934ec92da83520bcec { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-8f2b492f40bdbe934ec92da83520bcec { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-8d0468cc48dd2f5bb8266c261fc5fa4f { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-8d0468cc48dd2f5bb8266c261fc5fa4f { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-8d0468cc48dd2f5bb8266c261fc5fa4f { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-11890a065d80dad395bd14484a019e71 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-11890a065d80dad395bd14484a019e71 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-11890a065d80dad395bd14484a019e71 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-28675d878f35dd3fe4eb36892af10295 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-28675d878f35dd3fe4eb36892af10295 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-28675d878f35dd3fe4eb36892af10295 { width: 100%; padding-top: 66.58653%; height: auto; } }
+
+Apple Jing’an, Shanghai
+
+.image-acac5c0b93c02b93759703d558da4669 { width: 100%; padding-top: 56.224487%; height: auto; } @media only screen and (max-width: 1068px) { .image-acac5c0b93c02b93759703d558da4669 { width: 100%; padding-top: 56.213875%; height: auto; } } @media only screen and (max-width: 734px) { .image-acac5c0b93c02b93759703d558da4669 { width: 100%; padding-top: 56.25%; height: auto; } }
+.image-e317272290347c069c7f4973cd921b53 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-e317272290347c069c7f4973cd921b53 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-e317272290347c069c7f4973cd921b53 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-3a0ac57ba5d87d4bf32333cf049e41b6 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-3a0ac57ba5d87d4bf32333cf049e41b6 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-3a0ac57ba5d87d4bf32333cf049e41b6 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-9fb8885d9d7e406de90cb0833fb1f1eb { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-9fb8885d9d7e406de90cb0833fb1f1eb { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-9fb8885d9d7e406de90cb0833fb1f1eb { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-6ff2616f5924f7be7911e925365054f9 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-6ff2616f5924f7be7911e925365054f9 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-6ff2616f5924f7be7911e925365054f9 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-ba1a8df787d7cd7c1162da476c2173ae { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-ba1a8df787d7cd7c1162da476c2173ae { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-ba1a8df787d7cd7c1162da476c2173ae { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-ec10a1f02e705b35ed31982e9e5525d6 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-ec10a1f02e705b35ed31982e9e5525d6 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-ec10a1f02e705b35ed31982e9e5525d6 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-2fc9f691ffbd8730f85dc6a85db4b68d { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-2fc9f691ffbd8730f85dc6a85db4b68d { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-2fc9f691ffbd8730f85dc6a85db4b68d { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-023f5662f2ce362ced5d58c140441140 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-023f5662f2ce362ced5d58c140441140 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-023f5662f2ce362ced5d58c140441140 { width: 100%; padding-top: 66.58653%; height: auto; } }
+.image-250ebd818f2004c6306810181852d914 { width: 100%; padding-top: 66.63265%; height: auto; } @media only screen and (max-width: 1068px) { .image-250ebd818f2004c6306810181852d914 { width: 100%; padding-top: 66.6185%; height: auto; } } @media only screen and (max-width: 734px) { .image-250ebd818f2004c6306810181852d914 { width: 100%; padding-top: 66.58653%; height: auto; } }
+Share article
+Media
+
+Text of this article
+
+October 23, 2026
+
+PHOTOS
+
+iPhone Duo arrives
+at Apple Store :br(s):locations worldwide
+
+On Friday, October 23, the highly anticipated iPhone Duo made its debut at Apple Store locations worldwide. At Apple Domain NORTHSIDE in Austin, Texas, John Ternus and Deirdre O’Brien welcomed excited customers, while Greg “Joz” Joswiak and Vanessa Trigub greeted them at Apple Fifth Avenue in New York City. Across the globe, customers filled stores and team members invited them to experience the first foldable iPhone, offering hands-on demos and personalized shopping support.
+
+Customers can explore and shop for the revolutionary iPhone Duo and the incredible iPhone lineup at Apple Store locations around the world, on apple.com, and in the Apple Store app. Dedicated Apple Specialists are available to provide world-class support, from maximizing value with Apple Trade In and monthly leasing options with Apple Upgrade, to Apple Card Monthly Installments and exceptional carrier deals. Through Personal Setup, customers can safely and securely transfer their data, and with new Today at Apple sessions including “Say Hello to iPhone Duo” and “Tips: What’s New in iOS 27 on iPhone,” they can take their passions further with the products they love.
+
+Press Contacts
+
+Brian Bumbery
+
+Apple
+
+bumbery@apple.com
+
+Apple Media Helpline
+
+media.help@apple.com
+
+Copy text
+
+Media in this article
+
+Download all media
+Press Contacts
+
+Brian Bumbery
+
+Apple
+
+bumbery@apple.com
+
+ 
+
+Apple Media Helpline
+
+media.help@apple.com
+
+More from Apple Newsroom
+PRESS RELEASE
+Apple unveils new iMac with M6
+October 27, 2026
+PRESS RELEASE
+Apple introduces the new 14-inch MacBook Pro with M6
+October 27, 2026
+PRESS RELEASE
+Apple Creator Studio adds powerful new AI features and even more creative tools
+October 27, 2026
+Apple Newsroom
+
+The latest news and updates,
+direct from Apple.
+
+Read more

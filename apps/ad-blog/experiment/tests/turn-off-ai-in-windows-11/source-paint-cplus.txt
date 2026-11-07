@@ -1,0 +1,68 @@
+
+Use Copilot+ PC features in Paint	
+			Applies To
+Windows 11 
+To use these features, you need a Copilot+ PC and update the Microsoft Paint app to the latest version available in the Microsoft Store.
+Cocreator
+Cocreator in Microsoft Paint allows you to create amazing artwork with the help of AI. You can enter a text prompt and start drawing on the Paint canvas, and Cocreator will generate beautiful artwork based on your input as you draw. 
+To use Cocreator, follow these steps: 
+Open Microsoft Paint and select the Cocreator icon on the toolbar to see the side pane.
+Enter a text prompt in the box. For example, you can type "a cat in a garden" or "a spaceship in the sky". Be as descriptive as you can of the elements in your drawing.
+Note
+Cocreator is optimized for text prompts in English. Other languages may experience degraded performance.
+Start drawing on the canvas with your mouse or stylus. You can use any tools or colors you want. For best results, use the colors you desire in the output, broader brush strokes and the fill up the canvas as much as you can.
+As you draw, you will see AI generating artwork in the side pane based on your text and sketch.
+Adjust the Creativity level by moving the slider. Lower creativity means less AI input and the output will be closer to your sketch. Higher creativity means more AI input and the output will be more imaginative and diverse.
+Select a Style option from the drop-down menu. You can choose art styles like watercolor and oil painting to customize the artwork you create.
+When you are satisfied with your artwork, simply click the generated image in the side pane to apply it to the Paint canvas. You can keep editing it or save it.
+Note
+Cocreator is designed to work best with artwork you create directly on the Paint canvas. For best results, include specific details in your text prompt and drawing on the canvas so the generated image matches your vision.
+Tip
+If you encounter an image that is inappropriate or unexpected, report it using the Feedback button in Cocreator pane. 
+Generative fill
+To use generative fill, you need a Snapdragon powered Copilot+ PC. Generative Fill in Microsoft Paint allows you to enhance your artwork or any images by adding AI-generated objects seamlessly into selected areas, opening up endless creative possibilities.  
+To use generative fill, follow these steps: 
+Start with an artwork you are making in Paint or open any image you want to make edits to.
+Use the Selection tool in Paint toolbar to make a Rectangle or Free-form selection. Upon selecting the area, you will see a small menu pop up anchored to your selection.
+Select Generative fill option in the menu. Use the text box to describe what you want to add at your selection and select Create. You can also press the ENTER key to start the generation.
+If you don’t like what was generated, you can refine by editing your text prompt or by asking to re-generate by selecting the Try again button. You can circle through you generations to choose the one that works the best.
+Once you are satisfied with one of the images generated, use the Keep button to apply it to your Paint canvas.
+Tip
+If you encounter an image that is inappropriate or unexpected, report it using the Feedback button. 
+Sticker generator
+Sticker generator in Microsoft Paint lets you create custom digital stickers from simple text prompts. It’s a fast and fun way to add personalized visuals to your artwork, documents, or messages.
+To use sticker generator, follow these steps:
+Start with a blank canvas or open an existing image in Paint.
+Select the Sticker generator option from the Copilot menu in the Paint toolbar.
+In the prompt box, type a short phrase describing the sticker you want—like “a cat wearing sunglasses” —and select Generate.
+Paint will generate a set of stickers based on your prompt. You can browse through the options and choose the one that fits best. Once you’ve selected a sticker, you can click to add it onto your canvas, copy it or save it from the side panel.
+Tip
+If you encounter a sticker generated that is inappropriate or unexpected, report it using the Feedback button. 
+Object Select
+Object Select in Microsoft Paint makes editing your artwork faster and more precise by using AI to intelligently detect and isolate individual elements on your canvas.
+To use object select, follow these steps:
+Start with an image or artwork in Paint.
+Select the Object select tool from the Paint toolbar.
+Hover over and click on the object you want to edit. Paint will automatically highlight the element using context-aware selection, without requiring you to manually trace or outline it.
+Once selected, you can copy, move, erase, or apply generative fill to the object with ease.
+Tip
+If you encounter any issues with object selection, report it using the Feedback button. 
+Sign-in requirement
+These features make use of the Neural Processing Unit (NPU) to generate images locally on your computer. There are no restrictions on how many images you can generate. However, to use these features, you need to sign in with your Microsoft account and be connected to the internet to access cloud services that ensure safe use of AI.  
+Privacy
+Microsoft values your privacy and data security. We acknowledge the safety risks of AI generated images and hence follow the unique hybrid approach of running the necessary safety systems on cloud using Azure online services to help ensure the safe and ethical use of AI, while the image generation happens on the device.
+The Azure online services perform content filtering to prevent the generation of harmful, offensive, or inappropriate content. Microsoft collects attributes such as device and user identifiers, along with the user prompts, to facilitate abuse prevention and monitoring. 
+Microsoft does not store your input images or generated images.
+Content policy and responsible AI
+Microsoft is committed to responsible AI practices and ethical use of technology. When you use any of these features, we apply content filtering to prevent the generation of images that may be harmful, offensive, or inappropriate. Content filtering is based on a set of criteria that reflect our values and standards, such as human dignity, diversity, and inclusion. Content filtering is not perfect and may not catch all cases of undesirable images. If you encounter an image that is inappropriate or unexpected, report it using the Feedback button. 
+You are responsible for using these features in a respectful and lawful manner.
+Do not use these features to create or share images that may infringe on the rights or privacy of others, or that may violate any laws or regulations in your jurisdiction.
+Respect the intellectual property and copyright of others, and do not use these features to create or share images that may infringe on their ownership or attribution.
+Be mindful of the potential impact and consequences of your images, and do not use these features to create or share images that may cause harm, distress, or confusion to others.
+Abusive use of these features, such as repeated attempts to create harmful content or other violations of the content policy, may result in automatic suspension of your use of Cocreator or generative fill, or in severe cases, permanent suspension.
+For more about our responsible AI efforts, the principles that guide us, and the tooling and capabilities we've created to assure that we develop AI technology responsibly, see Responsible AI.
+Safety of minors
+Safety for minors is paramount when using the AI features in Microsoft Paint. To provide full control, we recommend parents or guardians make use of the Microsoft Family Safety app in Windows to restrict usage of the app for minors. For details, visit Block apps with Microsoft Family Safety.
+Content Credentials
+We have implemented content credentials, provenance based on the C2PA standard, to help users identify AI generated Images. Images generated with Cocreator will contain C2PA manifest helping users identify that it is an AI generated image.
+					

@@ -1,0 +1,50 @@
+# 글에 쓸 화면: 새 프로필(로그아웃)에서 끄기 전 → Show Copilot button in toolbar 끄기 → 끈 뒤 → Use writing assistance 끄기 → 끈 뒤
+exec(open("common.py").read())
+import subprocess as sp, json
+def xdo(*a):
+    sp.run(["xdotool", *a], env=dict(os.environ, DISPLAY=":99"))
+log = []
+def note(k, v=None):
+    log.append({"t": time.strftime("%H:%M:%S", time.gmtime()), "step": k, "data": v}); print(k, v if v is not None else "")
+def page_points():
+    off = pg.evaluate("() => ({x: window.screenX + (window.outerWidth-window.innerWidth), y: window.screenY + (window.outerHeight-window.innerHeight)})")
+    box = pg.locator("#para").bounding_box(); tb = pg.locator("#note").bounding_box()
+    return (int(off["x"] + box["x"]), int(off["y"] + box["y"] + 15)), (int(off["x"] + tb["x"] + 40), int(off["y"] + tb["y"] + 20))
+def page_tests(tag):
+    pg.goto("http://localhost:8766/"); time.sleep(3)
+    (px, py), (tx, ty) = page_points()
+    xdo("mousemove", str(px + 120), str(py)); time.sleep(0.4); xdo("click", "3"); time.sleep(2)
+    shot(f"f-{tag}-1-rightclick"); xdo("key", "Escape"); time.sleep(1)
+    xdo("mousemove", str(px + 2), str(py)); xdo("mousedown", "1"); xdo("mousemove", str(px + 400), str(py)); time.sleep(0.3); xdo("mouseup", "1"); time.sleep(2)
+    shot(f"f-{tag}-2-minimenu")
+    xdo("mousemove", "1100", "750"); xdo("click", "1"); time.sleep(1)
+    xdo("key", "ctrl+shift+period"); time.sleep(5)
+    shot(f"f-{tag}-3-shortcut")
+    # 사이드 창이 열렸으면 다시 단축키로 닫음
+    xdo("key", "ctrl+shift+period"); time.sleep(3)
+    shot(f"f-{tag}-3b-after-close")
+    xdo("mousemove", str(tx), str(ty)); xdo("click", "1"); time.sleep(1)
+    xdo("type", "--delay", "40", "the trail was muddy so we turned back early"); time.sleep(2)
+    xdo("key", "ctrl+a"); time.sleep(1); xdo("click", "3"); time.sleep(2)
+    shot(f"f-{tag}-4-textarea-rightclick"); xdo("key", "Escape"); time.sleep(1)
+    xdo("mousemove", str(tx + 300), str(ty)); xdo("click", "1"); time.sleep(1)
+    xdo("key", "alt+i"); time.sleep(3)
+    shot(f"f-{tag}-5-alt-i"); xdo("key", "Escape"); time.sleep(1)
+note("start", pg.evaluate("() => navigator.userAgent"))
+page_tests("a")
+pg.goto("edge://settings/ai"); time.sleep(4)
+note("ai-default", toggles(pg)); shot("f-s1-ai-default")
+click_toggle(pg, "Show Copilot button in toolbar"); time.sleep(3)
+note("ai-after-button-off", toggles(pg)); shot("f-s2-ai-button-off")
+page_tests("b")
+pg.goto("edge://settings/languages"); time.sleep(4)
+note("lang-default", toggles(pg))
+# Writing assistance 영역으로 스크롤
+pg.get_by_text("Writing assistance", exact=True).first.scroll_into_view_if_needed(); time.sleep(2)
+shot("f-s3-lang-default")
+click_toggle(pg, "Use writing assistance"); time.sleep(3)
+note("lang-after-wa-off", toggles(pg)); shot("f-s4-lang-wa-off")
+page_tests("c")
+pg.goto("edge://settings/ai"); time.sleep(4)
+note("ai-final", toggles(pg)); shot("f-s5-ai-final")
+json.dump(log, open("/tmp/edgerun/final-log.json", "w"), indent=1)

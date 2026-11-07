@@ -1,0 +1,157 @@
+Manage location metadata in Photos - Apple Support
+Apple
+Store
+Mac
+iPad
+iPhone
+Watch
+Vision
+AirPods
+Home
+Entertainment
+Accessories
+Support
+0+
+ Apple Personal Safety User Guide
+ Search this guide
+ Clear Search
+ Table of Contents
+Apple Personal Safety User Guide
+ Welcome
+ Overviews
+ Overview
+ What’s new in personal safety
+ Strategies and solutions
+ Get safe guide
+ Stay safe guide
+ Safety Check
+ Safety Check for an iPhone with iOS 16 or later
+ Safety Check FAQ
+ Additional safety steps
+ Checklists for devices with iOS 15 or earlier
+ Checklist 1: Limit device and account access
+ Checklist 2: Manage location information
+ Checklist 3: Manage content
+ Limit account or device access
+ Apple Account access
+ Keep your Apple Account secure
+ Use two-factor authentication
+ Help prevent account and device lockouts
+ Device access
+ Manage Touch ID fingerprints
+ Secure your iPhone or iPad with Face ID
+ Use Stolen Device Protection
+ Reject unknown sign-in attempts
+ Update your Apple software
+ Review and delete configuration profiles
+ Manage iPhone Mirroring on your iPhone or Mac
+ Manage Device Hub access on your iPhone
+ Harden your devices with Lockdown Mode
+ Securely control your Home accessories
+ Passwords, passkeys, passcodes
+ Secure your device, app, and website passwords
+ Set a unique device passcode or password
+ Manage shared password and passkeys
+ Manage location information
+ Use Check In for Messages
+ Manage AirTags and other items
+ Detect unwanted trackers
+ Stop sharing an AirTag
+ Stop sharing the location of a lost AirTag
+ Find My and location sharing
+ Manage Location Services settings
+ Manage automatic ETA sharing in Maps
+ Keep your location history private in Maps
+ Manage location metadata in Photos
+ Manage content
+ General
+ App privacy features in Apple products
+ Review and delete apps
+ Lock or hide apps on your iPhone
+ Third-party app settings
+ Review forwarding settings
+ Hide photos and videos
+ Sensitive image and video warnings
+ Obtain evidence related to another Apple Account
+ Document suspicious or harmful activity
+ Restore device to factory settings
+ Specific apps and features
+ Make an emergency call or text on iPhone or Apple Watch
+ Manage Screen Sharing and Screen Control in FaceTime
+ Manage Activity sharing on Apple Watch
+ Secure AirDrop
+ Manage Calendar sharing settings
+ Manage Family Sharing
+ Store your data securely in iCloud
+ Manage safety settings in Messages
+ Avoid fraudulent requests to share info
+ Block, screen, and filter communications
+ Record and transcribe a call on iPhone
+ Secure NameDrop
+ Manage Photos sharing settings
+ Feature a person, a place, or a memory less often
+ Manage shared Tab Groups in Safari
+ Keep your browsing history private
+ Manage Shared with You settings
+ Additional information
+ Safety considerations
+ Apple-related support resources
+ Copyright and trademarks
+Manage location metadata in Photos
+When Location Services is turned on for the Camera app, it uses information known as metadata gathered from cellular, Wi-Fi, GPS networks, and Bluetooth to determine the location coordinates where the photo or video is taken. These coordinates are embedded into each photo and video so that you can later search for them in the Photos app based on the location they were taken.
+When photos and videos that include location metadata are shared, the people you share them with may be able to access the location metadata and learn where it was taken. If you’re concerned about someone having access to the location metadata associated with your photos or videos, you can remove the current metadata and stop it from being collected in the future.
+Find out how: To view a task below, select the plus button next to its title.
+Review photos that contain location metadata on iPhone or iPad
+Go to the Photos app on your iPhone or iPad.
+Tap a photo or video with metadata you want to see, then swipe up or tap .
+View photos from a specific time: Make sure the Library tab is selected in the bottom-left corner. Swipe down to browse photos, then tap Years or Months to go to a specific time in your library.
+View photos by location: Tap Collections, then tap the Map collection below Pinned. Only pictures and videos that have embedded location information (GPS data) are included.
+Review photos that contain location metadata on Mac
+You can use the Places album in Photos to easily review the photos in your library that have location metadata embedded.
+In the Photos app on your Mac, select the photos you want to review.
+Click , then review the location information.
+Remove location metadata in Photos on iPhone or iPad
+To remove location metadata associated with a certain photo:
+Open the Photos app , then tap Albums.
+Open the photo you want to remove location metadata from, then tap .
+Tap Adjust Info, tap Adjust Location, then tap No Location.
+Remove location metadata in Photos on Mac
+To remove location metadata associated with photos:
+In the Photos app on your Mac, select the photos you want to change.
+Choose Image > Location, then choose Hide Location or Revert to Original Location.
+Stop location metadata collection in Camera on iPhone or iPad
+Location metadata in photos and videos can be collected only if your Camera app has access to Location Services.
+Go to Settings > Privacy & Security > Location Services > Camera, then tap Never.
+Don’t share location metadata when you share photos in Photos on iPhone or iPad
+You can share photos with others without sharing the location where the photos were taken.
+Do any of the following:
+Open the Camera app , select the camera roll, then select one or more photos you want to share.
+Open the Photos app , then select one or more photos you want to share.
+Tap , then tap Options.
+Turn off Location.
+Location Not Included is shown above the Options button.
+Share the photos using one of the methods shown in the Share Sheet.Published Date: September 2026
+See alsoManage which apps can detect your Mac location – Mac User GuideAllow apps to detect the location of your Mac – Mac User GuideSee photo and video information – iPhone User GuideBrowse photos by location on iPhone – iPhone User Guide
+Download this guide as a PDF
+ Previous
+ Keep your location history private in Maps
+ Next 
+ App privacy features in Apple products
+ Helpful?
+ Yes
+ No
+ Character limit:
+ 250
+ Please don’t include any personal information in your comment.
+ Maximum character limit is 250.
+ Submit
+ Thanks for your feedback.
+Apple Footer
+ 
+ Apple
+ Support
+ Apple Personal Safety User Guide
+ Manage location metadata in Photos
+ United States
+Copyright © 2026 Apple Inc. All rights reserved.
+ Privacy Policy Terms of Use Sales and Refunds Site Map

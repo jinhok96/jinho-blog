@@ -1,0 +1,139 @@
+## Proofread your drafts with Gemini in Gmail
+To improve your drafts, you can use Gemini in Gmail to proofread and get advanced grammar, tone, and style suggestions.
+## What you need
+- For personal Google Accounts:
+- You must have an eligible Google AI plan:
+- Google AI Plus
+- Google AI Pro
+- Google AI Ultra
+- Proofread is also available if your account is enrolled in Google Workspace Experiments, a trusted tester program for new AI features. Learn how to get started with Google Workspace Experiments.
+- For work or school accounts: You need an eligible Google Workspace plan. Learn more about Gemini features and plans.
+## Additional requirements
+- You can proofread your drafts in:
+- English
+- German
+- Spanish
+- If you are in Google Workspace Experiments or Gemini Beta, you also get early access to proofread drafts on the web in Japanese.
+- For the Gmail app on Android, iPhone, and iPad, Proofread is available in early access.
+- For personal Google Accounts: Access to Google Workspace Experiments is required.
+- For work or school accounts: An eligible Google Workspace plan with access to Gemini Beta is required.
+- If you use a work or school account, your administrator controls access to Gemini Beta.
+- If you can't find Proofread, your administrator may not have Beta features enabled for your organization.
+## Accept suggestions in a draft
+- In your draft, click an underlined word or phrase to open the suggestion card.
+- Review the change:
+- To use the suggestion, click it.
+- To dismiss the suggestion, click Ignore .
+- Optional: To give feedback on a suggestion, click Report an issue .
+Tips:
+- When you ignore a suggestion, it doesn’t reappear for the same word or phrase unless you change the text.
+- To undo a change:
+- On Windows: Press Ctrl + Z.
+- On Mac: Press Cmd + Z.
+- On screen readers:
+- To find underlined words, use your arrow keys.
+- Select Tab  Enter.
+## Turn off Proofread
+Important: When you turn off “Proofread,” you won't get grammar suggestions.
+- On your computer, open Gmail.
+- At the top right, click Settings   See all settings.
+- At the top, click General.
+- Next to “Grammar,” click Grammar suggestions off.
+## Learn about Gemini feature suggestions
+- Gemini feature suggestions don’t represent Google’s views, and should not be attributed to Google.
+- Don’t rely on Gemini features as medical, legal, financial or other professional advice.
+- Gemini features may suggest inaccurate or inappropriate information. Your feedback makes Gemini more helpful and safe.
+- Enterprise end users can submit feedback about their experience using this feature. End users are informed before they submit feedback that the feedback data shouldn’t contain personal, sensitive, or confidential information.
+## Related resources
+- Format your messages
+- Get started with Google Workspace with Gemini
+ Computer Android phone & tabletiPhone & iPad 
+  More   
+## Need more help? 
+## Try these next steps:    
+   Post to the help community    Get answers from community members                     
+true 
+## Help
+- 
+1 of 19
+Get started with Google Workspace with Gemini
+- 
+2 of 19
+Learn about Gemini features in Gmail
+- 
+3 of 19
+Talk naturally with Gmail Live
+- 
+4 of 19
+Manage to-dos & topics with AI Inbox
+- 
+5 of 19
+Get an AI Overview in Gmail search
+- 
+6 of 19
+Catch up on email threads with AI Overview conversation summaries
+- 
+7 of 19
+Draft emails with Gemini in Gmail
+- 
+8 of 19
+Proofread your drafts with Gemini in Gmail
+- 
+9 of 19
+Use Suggested Replies in Gmail
+- 
+10 of 19
+Collaborate with Gemini in Gmail
+- 
+11 of 19
+Suggest times to meet with Gemini in Gmail
+- 
+12 of 19
+Take quick actions from your Gmail inbox
+- 
+13 of 19
+Find & manage your Gemini in Workspace conversation history
+- 
+14 of 19
+Customize Gemini in Workspace's responses with your instructions
+- 
+15 of 19
+Learn how to use sources with Google Workspace with Gemini
+- 
+16 of 19
+Use Deep Research in Gemini in Workspace apps
+- 
+17 of 19
+Use integrations with Gemini in Workspace
+- 
+18 of 19
+Supported languages for Google Workspace with Gemini
+- 
+19 of 19
+Learn how Gemini in Gmail, Calendar, Chat, Docs, Drive, Sheets, Slides, Meet, Vids & Pics protects your data          
+  ©2026 Google   
+-   Privacy Policy   
+-   Terms of Service      
+-   Program Policies           Language   català‎dansk‎Deutsch‎eesti‎English (United Kingdom)‎español‎español (Latinoamérica)‎Filipino‎français‎hrvatski‎Indonesia‎italiano‎latviešu‎lietuvių‎magyar‎Melayu‎Nederlands‎norsk‎polski‎português‎português (Brasil)‎română‎slovenčina‎slovenščina‎suomi‎svenska‎Tiếng Việt‎Türkçe‎čeština‎Ελληνικά‎български‎русский‎српски‎українська‎‏עברית‏العربية‏فارسیमराठी‎हिन्दी‎தமிழ்‎తెలుగు‎ไทย‎中文（简体）‎中文（繁體）‎日本語‎한국어‎ English‎      
+Enable Dark Mode         
+Send feedback on... This help content & information General Help Center experience                   
+Search
+Clear search
+Close search
+Google apps
+Main menu                
+10807905494709947854                                                           
+true                         
+Search Help Center   
+false   
+true    
+true    
+true                                                  
+true   
+true   
+17                                                                                                     
+false    
+false                                                                                                                                                             
+false   
+false                                                          
+false  

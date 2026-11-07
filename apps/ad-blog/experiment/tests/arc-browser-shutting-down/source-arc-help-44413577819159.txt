@@ -1,0 +1,82 @@
+# Arc Sunset: Frequently Asked Questions
+URL: https://resources.arc.net/hc/en-us/articles/44413577819159-Arc-Sunset-Frequently-Asked-Questions
+created_at: 2026-10-21T14:22:18Z updated_at: 2026-10-22T15:26:21Z edited_at: 2026-10-21T14:32:51Z
+fetched: 2026-10-25 UTC (Zendesk Help Center API)
+
+Arc is being sunset on December 22, 2026. If you have questions about using Arc until then or switching to Dia, you'll find answers here. For the full timeline, and for what happens to your account and data, read Arc Sunset: Key Dates and What to Expect [https://resources.arc.net/hc/en-us/articles/44412972248471]. For step-by-step help switching, read Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].
+ Using Arc Until December 22
+ Can I keep using Arc after December 22?
+ No. On December 22, 2026, Arc for macOS and Windows stops working for everyone. To keep your Spaces, tabs and browsing data, move to Dia before December 22.
+ Can I still download Arc?
+ Yes, if you already have an Arc account. You can download Arc for macOS and Windows until December 22, 2026, so you can sign in and get to your data. New Arc accounts can no longer be created, so if you're looking for a new browser, you can download Dia at diabrowser.com/download [https://www.diabrowser.com/download].
+ Will Arc's AI features (Arc Max) keep working until December 22?
+ In Arc for macOS and Windows, AI features keep working until Arc is sunset on December 22, 2026. In Arc Search for iOS and Android, AI features turn off earlier, on November 23, 2026.
+ Can I save my Arc tabs to use in a browser other than Dia?
+ Yes. To save your Spaces, Favorites, pinned tabs and folders from Arc for macOS and Windows as a list of links you can use in any browser, read [How Do I Export My Data from Arc?] . To share or copy a list of your open tabs in Arc Search for Android, simply navigate to Settings > Storage > Export data . In Arc Search for iOS, tap the Tab Switcher icon in the bottom-left corner, tap Settings (⚙️), then tap Export Data .
+ Switching to Dia
+ What is replacing Arc?
+ Dia is replacing Arc. Dia is built by the same team that made Arc, and it brings along the Arc details you rely on, like the sidebar, pinned tabs, folders and the Tab Switcher. Your Spaces become Profiles you can swipe between, and you can bring your Arc setup along in just a few clicks. Dia is free to download for macOS and Windows at diabrowser.com/download [https://www.diabrowser.com/download]. To learn how to switch, read Move from Arc to Dia [https://resources.arc.net/hc/en-us/articles/44413129117591].
+ Why Dia?
+ Keeping a browser safe and secure has become harder and harder in the age of AI. Our security team is focusing on Dia, which we built from the ground up to protect against modern-day security attacks. Dia also has Arc's greatest hits, and it's faster. The browser features you use in Arc are free in Dia, and Dia's AI features are optional.
+ Do I need a new account to use Dia?
+ Yes. Dia uses its own account, so your Arc account doesn't carry over. When you set Dia up, you'll create a Dia account or sign in to one you already have. You can use the same email address you use for your Arc account. Your Arc Spaces, tabs and browsing data come over when you import from Arc, not through your account.
+ Does Dia stay in sync with Arc after I import?
+ No. Dia and Arc are separate browsers, and importing is a one-time copy. Anything you change in Arc after importing won't appear in Dia.
+ Will my Arc extensions work in Dia?
+ Yes. Dia supports Chrome Web Store extensions, just like Arc. When you import from Arc, you can choose which of your extensions to install in Dia.
+ Why are my tabs at the top in Dia instead of in a sidebar?
+ Dia offers two layouts: the top bar , with tabs in a horizontal bar at the top of the window, and the sidebar , with tabs in a vertical sidebar like Arc. When you import from Arc, Dia switches to the sidebar for you. You can switch layouts at any time:
+- On macOS, navigate to Dia > Settings > Tabs or press Command + Shift + S .
+- On Windows, open the Dia app menu, navigate to Settings… > Tabs and select Sidebar in the Tab layout row, or press Control + Shift + S .
+ Is Dia free?
+ Yes. The browser features you use in Arc are free in Dia, and Dia's AI features are optional. Dia is free to download for macOS and Windows.
+ Arc Features in Dia
+ Which Arc features are in Dia?
+ Most of the Arc features you use every day are in Dia. Some work exactly the same, some have a new name, and a few work a little differently.
+ Arc feature 
+ In Dia 
+ How it compares 
+ Sidebar 
+ Sidebar layout 
+ Works differently. Dia opens with tabs in a top bar, and you can switch to the sidebar at any time. 
+ Spaces 
+ Profiles 
+ New name. Each Profile has its own tabs, and you can swipe between Profiles. A Profile can also share logins and history with another Profile or stay separate. 
+ Favorites 
+ Pinned tabs 
+ New name. Your Favorites show as icon-only pinned tabs at the top of your window. 
+ Pinned tabs 
+ Pinned tabs 
+ Same. Pinned tabs keep their titles, just like in Arc. 
+ Folders 
+ Pinned Tab Groups 
+ New name. Each folder becomes a named group of pinned tabs. Folders inside other folders become their own groups, since Dia doesn't nest Tab Groups. 
+ Tab Switcher ( Control + Tab ) 
+ Tab Switcher 
+ Same. It shows your five most recent tabs, just like Arc. 
+ Split View 
+ Split View 
+ Same. 
+ Command Bar 
+ Command Bar 
+ Same. 
+ Live Folders 
+ Live Groups 
+ New name. Your GitHub Live Folders come over as Live Groups when you import from Arc. 
+ Tab archiving 
+ Tidy Tabs 
+ Works differently. Tidy Tabs is off by default. When you turn it on, it moves inactive tabs to Recently Closed once a day. 
+ Chrome extensions 
+ Chrome extensions 
+ Same. 
+ Which Arc features aren't in Dia?
+ Air Traffic Control, Boosts, Easels, Little Arc, Peek, TypeTravel and Instant Links aren't available in Dia. Please note that this means your Easels and Boosts don't come over when you import from Arc.
+- 
+ Air Traffic Control: Dia can't automatically open certain sites in a specific Profile. Instead, you switch Profiles yourself. Swipe between Profiles or click the Profile indicator.
+- 
+ Peek: open the link in a tab and use Split View to see two pages side by side.
+ Getting Help With Dia
+ Where can I get help with Dia?
+ To get help with Dia, simply chat with Dia's support team from inside Dia:
+- On macOS, navigate to Help > Chat with Support in the Mac menu bar.
+- On Windows, open the Dia app menu and select Help > Chat with support .

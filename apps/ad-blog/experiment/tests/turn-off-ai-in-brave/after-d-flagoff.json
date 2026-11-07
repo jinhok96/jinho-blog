@@ -1,0 +1,49 @@
+{
+ "stage": "flagoff",
+ "flag": {
+  "flag": "brave-ai-chat",
+  "value": "Disabled",
+  "result": "Default (Enabled)|Enabled|Disabled -> Disabled"
+ },
+ "settings": {
+  "url": "brave://settings/leo-ai",
+  "final": "chrome://settings/",
+  "chars": 544
+ },
+ "leo_page": {
+  "url": "brave://leo-ai",
+  "final": "chrome-error://chromewebdata/",
+  "chars": 154
+ },
+ "appearance": {
+  "url": "brave://settings/appearance",
+  "final": "chrome://settings/appearance",
+  "chars": 1223
+ },
+ "probe": {
+  "offset": {
+   "x": 0,
+   "y": 81
+  },
+  "window": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-1-window.png",
+  "context": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-2-context.png",
+  "selected": "A typical home solar panel turns sunligh",
+  "context_selection": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-3-context-selection.png",
+  "context_selection_sub": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-3b-context-submenu.png",
+  "context_textarea": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-4-context-textarea.png",
+  "omnibox": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-5-omnibox.png",
+  "tab_search": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-6-tab-search.png",
+  "tab_organize": "/home/user/jinho-blog/apps/ad-blog/experiment/tests/turn-off-ai-in-brave/screens/d-flagoff-7-tab-organize.png"
+ },
+ "prefs": {
+  "brave.today.p3a_total_sidebar_filter_usages": [
+   {
+    "day": 1793664000.0,
+    "value": 0.0
+   }
+  ],
+  "sync.data_type_status_for_sync_to_signin.ai_chat_conversation": false,
+  "toolbar.pinned_cast_migration_complete": true,
+  "toolbar.pinned_chrome_labs_migration_complete": true
+ }
+}

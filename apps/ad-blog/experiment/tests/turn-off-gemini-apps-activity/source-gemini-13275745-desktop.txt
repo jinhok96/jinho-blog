@@ -1,0 +1,199 @@
+# 가져온 시각: 2026-10-26T15:39:40.779Z
+# 원본: https://support.google.com/gemini/answer/13275745?hl=en&co=GENIE.Platform%3DDesktop
+Use Gemini Apps - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/13275745?hl=en&co=GENIE.Platform%3DDesktop
+
+Use Gemini Apps
+
+You can use Gemini Apps to supercharge your ideas. With a little help from Gemini, you can do things like:
+
+Brainstorm ideas, develop a plan, or find different ways to get things done
+Get a quick, easy to understand summary of more complex topics
+Create first drafts of outlines, emails, blog posts, poems, and much more
+
+Learn more about what Gemini is and how it works. 
+
+What you need
+
+You can use some features in Gemini Apps without signing in. To use additional features or save your Gemini Apps activity, you’ll need to sign in with a Google Account. Learn more about using Gemini Apps without signing in.
+
+To sign in to Gemini Apps, you need one of the following:
+
+A personal Google Account. 
+If you manage a Family Link account, you can turn off access to Gemini Apps for users under 13 (or the applicable age in your country) in Google Family Link settings.
+A work Google Account with a qualifying Workspace edition. You must also be 18 or over.
+A school Google Account. The service must be enabled by your institution's administrator.
+Additional availability information
+Learn about supported languages and countries for the Gemini web app.
+Learn about supported languages and countries for the Gemini mobile app.
+Learn more about how to use Gemini Apps on your work or school Google Account.
+To use gemini.google.com, you need access to a supported browser: Chrome, Safari, Firefox, Opera, or Edgium.
+Before you use Gemini Apps
+
+Gemini Apps can make mistakes. When using Gemini Apps, double-check responses and don’t rely on responses from Gemini Apps for professional advice.
+
+Learn more about responses and how to use Gemini Apps responsibly. 
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Start a conversation in chat
+On your computer, go to gemini.google.com.
+In the text box at the bottom, enter your question or prompt.
+Optionally, to add a file or image to your prompt, click Add files . 
+Follow the on screen instructions to add a file or image.
+Click Submit .
+
+Tip:
+
+To start a new chat, at the top left, click New chat . If the option isn’t there, first click Menu . Learn how to find and manage your recent chats.
+Depending on your location and device type, you can use some features in Gemini Apps without signing in. To use additional features or save your Gemini Apps activity, you’ll need to sign in with a Google Account.
+Start a temporary chat
+
+You can start a temporary chat that won’t appear in your Gemini Apps Activity or your recent chats. 
+
+What you need to start a temporary chat
+You must be signed in to Gemini Apps.
+A personal Google Account. This feature is not available for users signed in to a work or school Google Account.
+Access to the Gemini web or mobile app. This feature is not available for Gemini in Chrome or Gemini in Google Messages.
+How to start a temporary chat
+On your computer, go to gemini.google.com.
+Next to New chat , click Temporary chat .
+In the text box at the bottom, enter your question or prompt.
+Click Submit .
+Tips:
+When you leave the temporary chat, you’ll no longer have access to that chat, and it won’t appear in your recent chats. 
+When you’re in a temporary chat, the temporary chat icon will be at the top of the screen. 
+What you can't do with a temporary chat
+
+When using a temporary chat you can't:
+
+Use Gems.
+Use Connected Apps and other integrated services that require the Keep Activity setting to be turned on.
+Get personalized responses.
+Save information for future personalization.
+Give feedback about the response.
+
+Learn how your data is handled when using a temporary chat
+
+Choose a different Gemini model to use
+
+Important: To switch between models in Gemini Apps, you must be signed in. Learn how to sign in to Gemini Apps.
+
+Gemini Apps use auto model selection to select the most appropriate available model for your prompt.
+
+If you want to manually select a different available model, you can select it from the menu.  Learn how to manually switch between Gemini models. 
+
+Examples
+Outline my blog post about summer mocktail recipes.
+Debug this error message: "FileNotFoundError: [Errno 2] No such file or directory: 'data.csv'"
+I want to learn how to code in Python. How should I start? Create a learning plan for me, and recommend some videos.
+I love video games and drawing. What are some jobs that I might like when I grow up?
+Show my monthly expenses in a pie chart: Rent 1200, Groceries 300, Gas 60, Electricity 80, and Internet 50.
+More examples
+Help me finish my art studio tagline: craft, create, and ...
+Draft a packing list for my weekend fishing and camping trip.
+I want to write a novel. How can I get started?
+Help me understand if lightning can strike the same place twice.
+Tell me about the code within the google/jax GitHub repo.
+Summarize the key themes of the book “The Great Gatsby” by F. Scott Fitzgerald in five bullet points. Bonus points if you can style them in an old-timey style in the voice of Nick Carraway.
+Write a caption for a pic I took on a camping trip with my family. Make it creative and witty.
+I’m graduating from high school soon. What should I do to get ready for life at my university?
+Edit prompts, check responses, access resources, & do more
+Important: To use these features, you must be signed in to Gemini Apps. Learn how to sign in to Gemini Apps.
+ 
+Edit your prompt
+
+If you want to revise your prompt, you can edit it, and Gemini will regenerate the response.
+
+To the right of your prompt, click Edit text .
+Edit your prompt.
+Click Update.
+Check other responses to your prompt
+
+Important: This feature isn't available for responses that Gemini generates using apps.
+
+For some prompts, you can review other drafts that Gemini creates. This option is only available for the latest response.
+
+Above the response, click View other drafts or Show drafts.
+Click that draft you want to review.
+Do more with responses
+To copy code from a response: Below the block of code, click Copy .
+To generate a chart based on data in a response, like a table: In a follow-up question, ask Gemini to create a chart with that information.
+Example: Make a bar chart showing the amount per category
+
+Learn how to modify responses, export responses, and share your chats from Gemini Apps.
+
+Generate files from your chats
+
+You can create formatted files directly from your Gemini Apps conversations.  You can specifically ask for a response to be generated as a supported file type. Gemini Apps may also ask you if you would like the results formatted as a supported file type.
+
+Example prompts:
+
+Do research on King Charles Cavalier Spaniels and put it in a doc.
+Create a spreadsheet for my students’ math progress with weekly scores.
+
+Supported file formats include:
+
+Workspace files (Docs & Sheets)
+.pdf
+.docx 
+.xlsx
+.csv
+LaTeX
+Plain Text (TXT)
+Rich Text Format (RTF)
+Markdown
+
+Tip: For most file formats, you can download the file directly to your device or export it to your Google Drive.
+
+Use Gemini Apps without signing in
+
+On some devices, you can use some Gemini Apps features without signing in your Google Account.
+
+There are some users who can’t use Gemini Apps without signing in. You must sign in to a Google Account to use:
+
+The Gemini mobile app on an Android device.
+Certain Gemini Apps features, including any features that need the Keep Activity setting turned on.
+What Gemini Apps features are available when signed out? 
+When signed out, you can generally use text-based interactions, like asking informational questions or generating simple text. Capabilities may vary and are subject to change.
+What Gemini Apps features are not available when signed out?
+
+When signed out, you won’t be able to use features that require Keep Activity to be turned on or advanced capabilities. This includes, but is not limited to:
+
+Accessing past chats: Your chat history with Gemini Apps won’t be available.
+Personalized responses: Gemini Apps won’t be able to tailor responses based on the memory of your past chats or your preferences.
+Integration with other Google services: Features that rely on Connected Apps (like Google Workspace, Google Photos, or other Google services) won’t be available.
+Other features that require account authentication: Features like image generation, Gems, and file upload won’t be available.
+Why are some features limited when signed out?
+
+Signing in allows us to offer a more tailored and robust experience for users who have agreed to connect Gemini with their Google account, and to our Gemini Apps Privacy Notice.
+
+Tip: If a feature requires sign in, a notification will be included in the Gemini Apps Help Center for that feature.
+
+Gemini Apps & your location
+
+Gemini Apps may use your location to provide more relevant responses to your prompts. Gemini Apps will use your general location or, if you allow it, your device's precise location. Learn how to manage your location. 
+
+Check or update the location the Gemini web app uses for you
+
+The Gemini web app shows user-interface elements at the bottom of the Menu that offer continuous transparency about location data processed by the app.
+
+To check if gemini.google.com is accessing and using your precise location:
+
+Go to gemini.google.com.
+At the top left, tap Menu   Settings & help.
+At the bottom of the menu, check the dot next to the location.
+If the dot is blue, gemini.google.com has access to and is using your precise location.
+If the dot is gray, gemini.google.com isn’t using your precise location.
+
+You can select "Update location" to allow the Gemini web app to use your device’s precise location.
+
+Tip: If you’re using the Gemini mobile app, learn how to manage your Gemini mobile app location.
+
+Related resources
+Find & manage your recent chats in Gemini Apps
+Manage or delete the Gemini app on your Android device
+Manage & delete your activity in Gemini Apps
+Send feedback or report a problem with Gemini Apps
+Give feedback about this article

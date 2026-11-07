@@ -1,0 +1,60 @@
+# https://support.google.com/chrome/a/answer/16278400?hl=en (fetched 2026-10-28 UTC)
+Enhanced autofill
+This article is intended for administrators and end users who want to learn about what data is collected by this feature and how it’s processed by Google.
+Use of this service is governed by Google’s Terms of Service and Google Privacy Policy.
+Enhanced autofill helps users fill out online forms more easily. On relevant forms, Chrome can use AI to better understand the form and offer users to automatically fill in previously saved info.
+To use this generative AI feature, users need to:
+Be on a desktop device
+Sign in to Chrome with a Google Account
+Turn on enhanced autofill in Chrome settings:
+SettingsAutofill and passwordsEnhanced autofill
+Configure generative AI settings in your Admin console
+Before you begin: To configure settings for a specific group of user accounts or enrolled Chrome browsers, put the users or browsers in an organizational unit or group.
+Sign in with an administrator account to the Google Admin console.
+If you aren’t using an administrator account, you can’t access the Admin console.
+Go to Menu Devices > Chrome > Settings. The User & browser settings page opens by default.
+Requires having the Mobile Device Management administrator privilege.
+If you signed up for Chrome Enterprise Core, go to Menu Chrome browser > Settings.
+(Optional) To apply the setting only to some users and enrolled browsers, at the side, select an organizational unit (often used for departments) or configuration group (advanced). Show me how
+Group settings override organizational units. Learn more
+Scroll to Generative AI.
+Click the setting you want to configure. Learn about each generative AI setting.
+Click Save. Or, you might click Override for an organizational unit.
+To later restore the inherited value, click Inherit (or Unset for a group).
+Settings typically take effect in minutes, but can take up to 24 hours to apply for everyone.
+Admin console—Default values
+The following table lists the default policy state for various customer categories that meet the above criteria. These policies can be updated by administrators in the Google Admin console.
+Customer category
+Default policy state
+Workspace Education
+Allow feature without improving AI models.
+Chrome Enterprise cloud managed browsers
+Allow feature without improving AI models.
+Third-party managed browsers
+Allow feature and improve AI models.
+Consumers
+Allow feature and improve AI models.
+Note: When the policy is set to send data to help improve Google’s AI models, this might include prompts, inputs, outputs, feedback, source materials, and related information, depending on the feature. Data can also be read by human reviewers, for the sole purpose of improving Google’s AI models.
+Read AutofillPredictionSettings for more details on configuring policy states.
+Data processed by this service
+Note: The data collected might change based on the policy state.
+Data type/Category
+Description
+Example
+Browser information
+Metrics, state, and data relating to Chrome browser information and features used by the browser.
+Browser version and settings
+Device information
+Metrics, state, and other data relating to the device and the features used by the device.
+Manufacturer, model, OS type and version, device form factor, and settings
+Site information
+Can be used as context to generate autofill suggestions.
+Page content and URL
+User usage information
+Data related to how Chrome and its features are used.
+User interactions with autofill suggestions
+Go to list of generative AI features
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

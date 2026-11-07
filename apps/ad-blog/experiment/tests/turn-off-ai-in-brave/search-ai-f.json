@@ -1,0 +1,53 @@
+{
+ "search_on": {
+  "status": 200,
+  "url": "https://search.brave.com/search?q=how%20do%20solar%20panels%20work"
+ },
+ "cookies_after_search": [],
+ "learn_more_links": [
+  "https://search.brave.com/help/ai",
+  "https://search.brave.com/help/anonymous-local-results",
+  "https://search.brave.com/help/discussions",
+  "https://search.brave.com/help/google-fallback",
+  "https://search.brave.com/help/usage-metrics"
+ ],
+ "switch_before": {
+  "tag": "INPUT",
+  "checked": true,
+  "x": 710.5,
+  "y": 534,
+  "w": 1
+ },
+ "switch_after": {
+  "checked": false
+ },
+ "cookies_after_toggle": [
+  {
+   "name": "cookie_test",
+   "value": "1",
+   "domain": "search.brave.com",
+   "expires": -1
+  },
+  {
+   "name": "summarizer",
+   "value": "0",
+   "domain": "search.brave.com",
+   "expires": 1809272991.320018
+  }
+ ],
+ "local_storage_keys": [
+  "usageMetrics.metric_activity",
+  "usageMetrics.version",
+  "usageMetrics.metric_activity_settings",
+  "usageMetrics.metric_query_search",
+  "usageMetrics.channel",
+  "usageMetrics.metric_activity_search",
+  "usageMetrics.dtoi",
+  "app.usageMetricsOptOut",
+  "usageMetrics.metric_query"
+ ],
+ "search_off": {
+  "status": 429,
+  "url": "https://search.brave.com/search?q=how%20do%20solar%20panels%20work"
+ }
+}

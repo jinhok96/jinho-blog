@@ -1,0 +1,96 @@
+
+				 Table of contents 
+				Exit editor mode
+			Ask Learn
+			Ask Learn
+			Reading mode
+			Table of contents
+			Read in English
+			Add
+			Add to Plans
+			Edit
+					Copy Markdown
+					Print
+						Note
+						Access to this page requires authorization. You can try signing in or changing directories.
+						Access to this page requires authorization. You can try changing directories.
+Manage Click to Do
+Applies to: ✅ Copilot+ PCs
+			Feedback
+						Summarize this article for me
+				In this article
+Looking for consumer information? See Click to Do: do more with what's on your screen.
+Click to Do helps users to get things done faster by identifying text and images that are currently on their screen so they can perform actions on them. This article provides information about Click to Do and how to manage it in a commercial environment.
+Note
+In-market commercial devices are defined as devices with an Enterprise (ENT) or Education (EDU) SKU or any premium SKU device that is managed by an IT administrator (whether via Microsoft Endpoint Manager or other endpoint management solution), has a volume license key, or is joined to a domain. Commercial devices during Out of Box Experience (OOBE) are defined as those with ENT or EDU SKU or any premium SKU device that has a volume license key or is Microsoft Entra joined. 
+What is Click to Do?
+Click to Do analyzes what's on the screen and then allows users to choose the text or image they want to take action on. Users can open Click to Do by using Windows key + Q or with Windows key + mouse click. Other entry points for Click to Do include right swipe on touch enabled PCs, Snipping Tool, search results, and the Start menu.
+The analysis of screenshots is always performed locally on the device. Analysis only begins after users actively engage with Click to Do and ends when they exit Click to Do. Click to Do only identifies text and images, not the content of those text or images. It doesn't analyze any content in, for example, minimized applications that aren't on the screen.
+Content is only shared if users choose to complete an action like Search the web. When Click to Do is active, the cursor is blue and white. The cursor also changes shape depending on the type of info beneath it. What users can do with the info changes based on what kind of content Click to Do detects. The following actions are currently available:
+Multiple content types: copy, open with, search the web, Ask Microsoft Copilot
+Text: summarize, create a bulleted list, rewrite, draft with Copilot in Word, practice in Reading Coach, read with Immersive Reader
+Images: share, save, visual search with Bing, blur background with Photos, erase objects with Photos, remove background with Paint
+Email/Teams actions: send email to [email address], show more about [email address], send a message with Teams, schedule a meeting with Teams
+Click to Do’s more intelligent text actions powered by Phi Silica run on-device and are available in three languages today. English supports the full set—Summarize, Create a bulleted list, and Rewrite (Casual, Formal, Refine). French and Spanish offer a focused subset: Summarize, Create a bulleted list, and Refine. As model quality improves, we plan to broaden language coverage
+System requirements
+Click to Do has the following minimum requirements:
+A Copilot+ PC or eligible Cloud PC
+40 TOPs NPU (neural processing unit)
+16 GB RAM
+8 logical processors
+256 GB storage capacity
+To display the Click to Do entry point from Snipping Tool, Snipping Tool version 11.2411.20.0, or later is required.
+Configure policy for Click to Do
+When activated, Click to Do takes a screenshot of the user's screen and analyzes it to present actions. Click to Do ends when users exit it, and it can't take screenshots while closed. Screenshot analysis is always performed locally on the device. By default, Click to Do is enabled for users.
+The policy setting below allows you to determine whether Click to Do is available for users on their device:
+Setting
+CSP
+./Device/Vendor/MSFT/Policy/Config/WindowsAI/DisableClickToDo 
+ ./User/Vendor/MSFT/Policy/Config/WindowsAI/DisableClickToDo
+Group policy
+Computer Configuration > Administrative Templates > Windows Components > Windows AI > Disable Click to Do 
+User Configuration > Administrative Templates > Windows Components > Windows AI > Disable Click to Do
+When the policy is enabled, the Click to Do component and entry points won't be available to users.
+When the policy is disabled or not configured, users will have Click to Do available on their device.
+Important
+This policy doesn't affect Click to Do in Recall. For more information, see Manage Recall.
+If a user prefers to disable Click to Do on their device, they can turn it Off using the Click to Do setting under Settings > Privacy & security > Click to Do. 
+Manage Click to Do
+Click to Do and apps
+When you choose to send info from Click to Do to an app, like Paint, Click to Do will temporarily save this info in order to complete the transfer. Click to Do creates a temporary file in the following location:
+C:\Users\{username}\AppData\Local\Temp
+Temporary files may also be saved when you choose to send feedback. These temporary files aren't saved long term. Click to Do doesn't keep any content from your screen after completing the requested action, but some diagnostic data is gathered to keep Click to Do secure, up to date, and working.
+In keeping with Microsoft's commitment to data privacy and security, all saved images and processed data are kept on the device and processed locally. However, Click to Do allows you to choose if you want to get more information about your selected content online. When you choose one of the following Click to Do actions, the selected content is sent to the online provider from your local device to complete your request. For example:
+Search the web: Sends the selected content to Bing using Microsoft Edge
+Open website: Opens the selected website in your default browser
+Visual search with Bing: Sends the selected content to Bing visual search using your default browser
+Click to Do and app controls
+For actions that involve apps (e.g., Microsoft Copilot, Word, Teams, Photos), these are only displayed as options if those apps are installed on the user’s device. For organizations that choose to remove these apps for their users, the corresponding action(s) in the Click to Do menu will also be removed.
+Visit Application Control for Windows to learn more about IT policies to prevent app installation and app control. Users can disable the actions they do not wish to have by going to Settings -> Apps -> Actions.
+You can choose the apps that will be the provider (if applicable) for actions suggested by Click to Do. Once you choose the action and provider for the action, the results from that action are the responsibility of the provider. For example, from Click to Do you can choose the action Remove background with Paint, which means you've chosen Paint as the provider for the action. Once you have selected the action from the Click to Do context menu, it launches the Paint app and the selected image is processed by Paint.
+Click to Do and Phi Silica
+Click to Do's more intelligent text actions, including Summarize, Rewrite (Casual), Rewrite (Formal), Rewrite (Refine), and Create a bulleted list are powered by a state-of-the-art small language model called Phi Silica. Phi Silica leverages the NPU and the language model runs locally on Copilot+ PCs. Phi Silica ships inbox with Windows on Copilot+ PCs.
+When a user clicks on the Click to Do text actions, the selected text and the chosen action are sent to Phi Silica as part of a prompt. Phi Silica intelligently rewrites the selected text as per the user's request and streams back the response from the model. Phi Silica provides responses quickly and efficiently, using little power. For more information, see Phi Silica, small but mighty on-device SLM.
+Microsoft's commitment to responsible AI and Privacy
+Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more about our responsible AI efforts, the principles that guide us, and the tools and capabilities we've created to assure that we develop AI technology responsibly, see Responsible AI.
+To provide clarity on how each AI feature works, it's important for you to understand its capabilities and limitations. You should understand the choices available to you in an AI feature and the responsibility associated with those choices.
+Click to Do uses optical character recognition (OCR) on your PC to detect text entities on screenshots. For more information about OCR, see Transparency note and use cases for OCR.
+Click to Do's intelligent text actions use a small language model called Phi Silica. For more information on Phi Silica, see Get started with Phi Silica in the Windows App SDK. For information about the Responsible AI principles guiding Phi Silica deployment and the safety measures in place when using generative language models, see Responsible Generative AI Development on Windows.
+Click to Do's models have undergone fairness assessments, alongside comprehensive responsible AI, security and privacy assessments, to make sure the technology is effective and equitable while adhering to Microsoft's Responsible AI best practices.
+Related links
+Policy CSP - WindowsAI
+Responsible AI
+Feedback
+					Was this page helpful?
+						Yes
+						No
+							No
+								Need help with this topic?
+								Want to try using Ask Learn to clarify or guide you through this topic?
+			Ask Learn
+			Ask Learn
+				 Suggest a fix? 
+				Additional resources
+				Last updated on 
+		2025-12-15
+				

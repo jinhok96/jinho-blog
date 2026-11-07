@@ -1,0 +1,330 @@
+Firefox 153.0, See All New Features, Updates and Fixes
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Get Firefox
+Get Firefox
+Firefox for mobile
+Get Firefox on your phone
+Menu
+Menu
+Browser
+Mobile
+Enterprise
+What’s New
+What’s Next
+Extensions & Themes
+Support
+Download Firefox
+Features
+Protection
+Control
+Focus
+About Firefox features
+View all Firefox Features
+Resources
+Data Protection
+Blog
+Podcast
+Newsletter
+Release Notes
+Release Notes
+Menu
+Desktop
+Enterprise
+Desktop Beta & Developer Edition
+Desktop Nightly
+Android
+iOS
+Firefox Release Notes
+Release Notes tell you what's new in Firefox. As always, we welcome your feedback. You can also file a bug in Bugzilla or see the system requirements of this release.
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Your system may not meet the requirements for Firefox, but you can try one of these versions:
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Firefox is no longer supported on Windows 8.1 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR 64-bit
+Download Firefox ESR 32-bit
+Download a different build
+Firefox is no longer supported on macOS 10.14 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download for Linux 64-bit
+Download for Linux ARM64
+Firefox for Android
+Firefox for iOS
+Firefox Privacy Notice
+153.0
+Firefox Release
+July 21, 2026
+Version 153.0, first offered to Release channel users on July 21, 2026
+Previous
+Firefox 152.0
+Next
+Firefox 154.0
+New
+High Dynamic Range (HDR) video playback is now available on Windows - this feature needs HDR mode enabled for the display in Windows Settings - Display. Laptop displays that only offer "HDR video streaming" are not supported at this time. Some videos recorded on phones in certain orientations are currently not shown as HDR.
+Containers let you keep separate parts of your online life (work, shopping, personal, banking) logged into different accounts in the same browser window, but keep your cookies and ad tracking isolated inside each container.
+Share any open page with a QR code. Right-click a tab, select Share > Generate QR Code. Great for posters, invitations, banners, and other printed materials.
+It is now possible to merge multiple PDFs by dragging a PDF into the PDF sidebar.
+It is now possible to add images as new pages within PDFs using the Firefox PDF editor.
+Quickly pick and copy a color from any page by typing "pick color", "color picker", or "eyedropper" in the address bar and selecting the "Pick a color" quick action.
+Added support for Apple's system-wide full-screen keyboard command (Globe-F).
+Firefox now verifies and displays Qualified Website Authentication Certificates (QWACs) in accordance with eIDAS regulations.
+Added improved support for videos with overlays so users can more easily access video actions from context menus.
+Firefox now highlights the location permission icon in red whenever a website has access to your location. The permission icon is also now visible on search results pages where it was previously hidden.
+Smart Window:
+See and choose AI models directly from the Smart Window assistant.
+New Tab now includes a familiar address bar for typing websites and searching the web.
+This feature is part of a progressive roll out.
+What is a progressive roll out?
+Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.
+Firefox Labs
+Firefox Labs can now be opened quickly by typing "labs" or "experiment" in the address bar and selecting the Open Firefox Labs quick action.
+Firefox now offers experimental support for the new JPEG XL image format, which generally provides better compression than WebP, JPEG, PNG, and GIF and is designed to supersede them. You can enable it from the Firefox Labs panel in Settings.
+Fixed
+Various security fixes.
+Changed
+Extensions can no longer access local files by default. Users can grant or revoke this access via the new "Access local files on your computer" permission, separate from "Access your data for all websites".
+Local Network Access restrictions are now enabled by default for all users. Firefox requires websites to request permission before connecting to devices on your local network or to apps and services on your device.
+Outdated cookie settings have been removed from the Settings UI. Users still in that mode should switch to default behavior "Isolate cross-site cookies". More information
+Enterprise
+You can find information about policy updates and enterprise-specific bug fixes in the Firefox for Enterprise 153 Release Notes.
+Developer
+Developer Information
+A new "Local Mode" setting in the options panel allows developers to load local directories via custom origins. This simplifies testing for APIs that do not function over standard file:// URLs, removing the need to run a local web server. Multiple directory mappings are supported.
+Web Platform
+Firefox now supports a limited subset of the non-standard ::-webkit-scrollbar pseudo-element to improve web compatibility:
+Rules with non-zero width/height disable overlay scrollbars for the affected container.
+display: none on ::-webkit-scrollbar behaves like scrollbar-width: none, hiding the scrollbar.
+@supports selector(::-webkit-scrollbar) now evaluates to true.
+Full styling capabilities (colors, border-radius, etc.) are intentionally not supported.
+The vertical-align property was converted into a shorthand for baseline-source, alignment-baseline, and baseline-shift in Firefox 149. Now, alignment-baseline supports the new keywords alphabetic, ideographic, central, mathematical, and hanging, extending the variety of baselines to choose for alignment.
+Implemented the new popover=hint spec, which removes a series of inconsistent and unexpected behaviors.
+The circle() and ellipse() functions accept two new keywords closest-corner and farthest-corner for their radial size.
+The newly added Error.stackTraceLimit property allows to set the maximal depth of the captured JavaScript error stack as a performance optimization.
+Developers can now use the text import attribute to import text files using the module system.
+The Picture In Picture API exposes a way for web developers to make use of user agent Picture-In-Picture functionality.
+The Intl.LocaleInfo proposal adds the ability to query Locale information, such as week data (first day in a week, weekend start day, weekend end day), text direction and hour cycle used in the Locale.
+The MediaCapabilities.decodingInfo() and MediaCapabilities.encodingInfo() methods now accept the "webrtc" configuration type. This allows a site to query whether a given audio or video configuration can be decoded or encoded for WebRTC and whether doing so will be smooth and/or powerEfficient.
+HTTP Compression Dictionaries is enabled via rollout in 153, it will be made permanent in a future release. This can greatly reduce network traffic size for sites that use it.
+This feature is part of a progressive roll out.
+What is a progressive roll out?
+Certain new Firefox features are released gradually. This means some users will see the feature before everyone does. This approach helps to get early feedback to catch bugs and improve behavior quickly, meaning more Firefox users overall have a better experience.
+Unresolved
+Some Windows users may experience a crash on startup after updating, caused by an incomplete update leaving the Firefox installation in an inconsistent state (Bug 1681745). If you are affected, downloading Firefox from firefox.com and installing it over your existing installation will repair it. Your bookmarks, passwords and other data are stored separately and will not be affected. Fixed in 153.0.1.
+Community Contributions
+With the release of Firefox 153, we are pleased to welcome the developers who contributed their first code change to Firefox in this release, 15 of whom were brand new volunteers! Please join us in thanking each of these diligent and enthusiastic individuals, and take a look at their contributions:
+Alan Liu: 2009570
+Dineth De SIlva: 2042443
+Freya Arbjerg [:freyacodes]: 2036767
+Garbee: 2045887
+Jessica Foley: 2041062
+John ARNZEN: 2046279
+Max Emig [:maxe]: 230112
+metamuffin: 2045549
+mtan: 2039500
+ozcoder: 2020186
+Pedram Yektamaram: 2042437, 2042438, 2042440, 2042441, 2042442
+Peter Lafreniere [:n8pjl]: 2041463
+Phone Khant Kyaw Swa: 2008877
+pullmana8: 2031735
+Ryan McCartney: 2039853
+Previous
+Firefox 152.0
+Next
+Firefox 154.0
+Get the most recent version
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Your system may not meet the requirements for Firefox, but you can try one of these versions:
+Download Firefox
+— English (US)
+Windows 64-bit
+Windows 64-bit MSI
+Windows ARM64/AArch64
+Windows 32-bit
+Windows 32-bit MSI
+macOS
+Linux 64-bit
+Linux ARM64/AArch64
+Android
+iOS
+Firefox is no longer supported on Windows 8.1 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR 64-bit
+Download Firefox ESR 32-bit
+Download a different build
+Firefox is no longer supported on macOS 10.14 and below.
+Please download Firefox ESR (Extended Support Release) to use Firefox.
+Download Firefox ESR
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download Firefox
+Download for Linux 64-bit
+Download for Linux ARM64
+Firefox for Android
+Firefox for iOS
+Firefox Privacy Notice
+Need help or want to leave feedback?
+File a bug
+Leave feedback
+Get Involved
+Did you know that most of the content in Firefox Support was written by volunteers?
+Find out more
+Other Resources
+Developer Information
+Complete list of changes for this release
+Press Kit
+Mozilla and Firefox News
+Firefox Extended Support Release
+All Firefox for Desktop Releases
+Learn more about Firefox
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Download
+Download Firefox
+Windows
+macOS
+iOS
+Android
+Linux
+Custom Download Options
+Resources
+Compare
+Release Notes
+Learn
+Merch store
+Support
+Add-ons
+Community
+Blog
+Latest Builds
+Nightly
+Beta
+For Business
+Firefox Enterprise
+Community
+Connect
+Contribute
+Developer
+Follow Us
+Instagram
+YouTube
+TikTok
+Bluesky
+Podcast
+Language
+Language
+English (Canadian)
+English (British)
+English
+Go
+Powered by Mozilla
+Ask us a question!
+Website Privacy Notice
+Terms of Use
+Cookie Policy
+Community Participation Guidelines
+Logo Trademark Licensing
+Help us improve your firefox.com experience
+In addition to Cookies necessary for this site to function, we’d like your permission to set some additional Cookies to better understand your browsing needs and improve your experience. Rest assured — we value your privacy.
+Accept All Additional Cookies
+Reject All Additional Cookies
+Cookie settings

@@ -1,0 +1,84 @@
+
+				 Table of contents 
+				Exit editor mode
+			Ask Learn
+			Ask Learn
+			Reading mode
+			Table of contents
+			Read in English
+			Add
+			Add to Plans
+			Edit
+					Copy Markdown
+					Print
+						Note
+						Access to this page requires authorization. You can try signing in or changing directories.
+						Access to this page requires authorization. You can try changing directories.
+Configure the agent in Windows Settings
+Applies to: ✅ Windows 11
+			Feedback
+						Summarize this article for me
+				In this article
+Starting in Windows 11, version 24H2 with KB5062660, the agent in Windows Settings is a feature that uses on-device AI to help you find and change settings on your PC. It can also help you troubleshoot issues by providing recommendations and automating tasks based on your input.
+The agent guides users through finding and changing settings, offering relevant information and recommendations. With user permission, it can automate the process of changing settings. This feature enhances search within Windows Settings by enabling natural language queries and utilizing an AI model for intelligent search suggestions.
+Requirements
+The agent in Settings is currently available only on Windows 11 devices that meet the following criteria:
+System requirements
+Windows 11, version 24H2 with KB5062660 and later
+A Copilot+ PC
+The device must have enabled the temporary enterprise feature control policy setting
+Language and geography requirements
+Language: English, French, German, Hindi, Italian, Japanese, Korean, Portuguese, Spanish and Chinese (Simplified).
+Geography: All countries, except China.
+How it works
+The agent in Settings uses a lightweight language model called Settings Mu, which is fine-tuned using Settings data to help users quickly find and adjust system settings.
+The model runs locally on the device, analyzing a user's query to match with relevant settings already available in Settings.
+If the model can't confidently classify a query to a specific setting, standard search results are displayed instead.
+The agent only suggests settings; it doesn't make any changes automatically. The user must explicitly request the agent to make a change.
+If needed, the user can easily undo the change.
+The Settings Mu model has undergone fairness evaluations, and comprehensive Responsible AI, security, and privacy assessments. These steps ensure the technology is effective, equitable, and aligned with Microsoft's Responsible AI principles.
+Configuration
+As an administrator, you can enable or disable the agent in Settings using a policy setting:
+When the policy setting is enabled, the agent experience isn't available, and search results are limited to statically indexed searches and semantic searches.
+When the policy setting is disabled (default), the agent search experience is available. The agent can provide recommendations and automate tasks based on user input.
+The following instructions provide details about how to configure your devices. Select the option that best suits your needs.
+ Intune
+ CSP
+ GPO
+To configure devices with Microsoft Intune, create a Settings catalog policy and use the following settings:
+Category
+Setting name
+Windows AI
+Disable Settings Agent
+Assign the policy to a group that contains as members the devices or users that you want to configure.
+You can configure devices using the Policy CSP.
+Setting
+- OMA-URI: ./Vendor/MSFT/Policy/Config/WindowsAI/DisableSettingsAgent
+- Data type: Integer
+- Value: 
+    - 0 (default): the agent search experience in Settings is enabled 
+    - 1: the agent search experience in Settings is disabled
+To configure a device with group policy, use the Local Group Policy Editor. To configure multiple devices joined to Active Directory, create or edit a group policy object (GPO) and use the following settings:
+Group policy path
+Group policy setting
+Computer Configuration > Administrative Templates > Windows Components > Windows AI
+Disable Settings Agent
+Group policies can be linked to domains or organizational units, filtered using security groups, or filtered using WMI filters.
+User experience
+If the agent is enabled, users can access it by opening Settings and typing their question in the search box. The agent provides relevant information and recommendations based on the user's input.
+Microsoft's commitment to responsible AI and Privacy
+Microsoft has been working to advance AI responsibly since 2017, when we first defined our AI principles and later operationalized our approach through our Responsible AI Standard. Privacy and security are core principles as we develop and deploy AI systems. We work to help our customers use our AI products responsibly, sharing our learnings, and building trust-based partnerships. For more information about our responsible AI efforts, the principles that guide us, and the tools and capabilities developed to ensure responsible AI technology, see Responsible AI.
+Feedback
+					Was this page helpful?
+						Yes
+						No
+							No
+								Need help with this topic?
+								Want to try using Ask Learn to clarify or guide you through this topic?
+			Ask Learn
+			Ask Learn
+				 Suggest a fix? 
+				Additional resources
+				Last updated on 
+		2026-02-27
+				

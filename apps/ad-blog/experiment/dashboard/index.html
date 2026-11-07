@@ -396,7 +396,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 <script src="data.js"></script>
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], otherPages: [], knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, live: false }; // live = 실시간 DB 값을 보는 중
+const state = { daily: [], posts: [], otherPages: [], discoverySince: null, knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, live: false }; // live = 실시간 DB 값을 보는 중
 const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
@@ -850,10 +850,20 @@ function indexFacts(p) {
   const tags = (p.tags || []).map((t) => `<span class="chip">${esc(t)}</span>`).join('');
   // 색인 시점: 날짜 + 발행일부터 경과일. 날짜만 있는 값(소급분)은 날짜만, 시각이 있으면 보는 사람 시간대로
   const when = (d) => (!d ? '–' : `${hasTime(d) ? localStamp(d) : ymd(d)} <span class="small">D+${daysFrom(p, d)}</span>`);
+  // 발견 경로 첫 관측값 (2026-11-07 회차부터): 기록 시작(discoverySince)보다 이른 값은 log.md 소급 상한이라 '≤'
+  const since = state.discoverySince;
+  const seen = (d) => (!d ? '–' : `${since && d < since ? '≤ ' : ''}${when(d)}`);
+  const site = (m) => esc(m.replace(/^\//, ''));
+  const via = p.discoveredVia == null ? '' : `<div class="small">경로: ${p.discoveredVia.length ? p.discoveredVia.map(site).join(' · ') : '사이트맵·피드 없이'}</div>`;
+  const discovery = 'discoveredAt' in p
+    ? `<dt>첫 발견</dt><dd class="num">${seen(p.discoveredAt)}${via}</dd>
+    <dt>피드·사이트맵 첫 확인</dt><dd class="num">rss.xml ${seen(p.feedSeenAt)}<br>sitemap.xml ${seen(p.sitemapSeenAt)}</dd>`
+    : '';
   return `<div><h3>색인·글 정보</h3><dl class="facts">
     <dt>상태</dt><dd>${esc(i.coverage || '확인 전')}</dd>
+    ${discovery}
     <dt>색인 확인</dt><dd class="num">${when(p.indexedAt)}</dd>
-    <dt>첫 크롤링</dt><dd class="num">${when(p.firstCrawlAt)}</dd>
+    <dt>첫 크롤링</dt><dd class="num">${when(p.crawledAt ?? p.firstCrawlAt)}</dd>
     <dt>첫 노출</dt><dd class="num">${when(p.firstImpressionAt)}</dd>
     <dt>마지막 크롤링</dt><dd class="num">${i.lastCrawl ? localStamp(i.lastCrawl) : '–'}</dd>
     <dt>크롤러</dt><dd>${crawler}</dd>
@@ -1351,6 +1361,7 @@ function applyDocs(byId) {
       state.summary = byId.summary || null;
       state.posts = byId.posts?.rows || [];
       state.otherPages = byId.posts?.otherPages || [];
+      state.discoverySince = byId.posts?.discoverySince || null;
       state.knowhow = byId.knowhow?.rows || [];
       state.sessions = byId.sessions?.rows || [];
       state.breakdown = byId.breakdown || null;

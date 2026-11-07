@@ -219,6 +219,17 @@ ol.sessions li:last-child { box-shadow: none; }
 .empty { color: var(--mute); padding: 12px 0; }
 .notice { font-size: var(--fs-body); line-height: var(--lh-body); color: var(--warn); background: var(--warn-soft); border-radius: var(--r-ctl); padding: 8px 12px; }
 .notice.info { color: var(--body); background: var(--well); }
+/* 내가 할 일 (user-todos.md, 2026-11-08): 할 일이 있으면 왼쪽 파란 줄로 눈에 띄게 */
+.user-todo { gap: 12px; }
+.user-todo.has-items { box-shadow: var(--hair), inset 4px 0 0 var(--link), var(--shadow); }
+.user-todo ol { list-style: none; margin: 0; padding: 0; display: grid; gap: 16px; }
+.user-todo li { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px 12px; align-items: start; }
+.user-todo li > * { grid-column: 2; min-width: 0; }
+.user-todo li > .pill { grid-column: 1; grid-row: 1 / span 3; }
+.user-todo .task { font-weight: 600; color: var(--ink); overflow-wrap: anywhere; }
+.user-todo .how { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); overflow-wrap: anywhere; }
+.user-todo a { color: var(--link); }
+.user-todo .none { color: var(--body); margin: 0; }
 footer { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); padding-top: 24px; box-shadow: inset 0 1px 0 var(--line); }
 a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-radius: 4px; }
 </style>
@@ -231,6 +242,11 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 
   <div class="notice" id="notice" hidden></div>
   <div class="notice" id="stale" role="status" hidden></div>
+
+  <section class="panel user-todo" id="user-todo-panel" aria-labelledby="user-todo-title">
+    <div class="panel-head"><h2 id="user-todo-title">내가 할 일</h2><span class="small" id="user-todo-meta">Claude가 할 수 없어 사용자가 해야 하는 일 · user-todos.md</span></div>
+    <div id="user-todo"><p class="none">할 일 데이터를 불러오는 중입니다.</p></div>
+  </section>
 
   <section class="kpis" aria-label="최근 28일 요약">
     <div class="kpi"><span class="label">노출 (28일)</span><span class="value" id="k-imp">–</span><span class="sub" id="k-imp-sub">Search Console 웹 검색</span></div>
@@ -1071,7 +1087,7 @@ function renderTodo() {
 
   $('todo').innerHTML = [
     todoGroup(1, '색인', [{
-      why: '발행 3일이 지나도 색인되지 않은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 링크 추가, 필요하면 Search Console 색인 요청',
+      why: '발행 3일이 지나도 색인되지 않은 글 → 이미 색인된 같은 클러스터 글(허브 우선)에서 링크 추가 (Search Console 색인 요청은 당분간 하지 않음, 2026-11-05 결정)',
       // 피드: URL 검사에서 Google이 rss.xml로 확인한 글 (2026-11-05 회차부터, traffic-playbook V7)
       items: waiting && waiting.map((p) => ({ main: jumpPost(p), meta: `${esc(indexState(p.index).label)} · D+${ageDays(p.createdAt)}${(p.index.sitemaps || []).includes('/rss.xml') ? ' · 피드' : ''}` })),
     }]),
@@ -1175,6 +1191,37 @@ function renderGoals() {
     const status = r.met ? ' · <b>달성</b>' : r.progress != null ? ` · 진행 ${w}%` : '';
     return `<li class="${r.met ? 'met' : ''}" title="확인: ${esc(r.check)}"><span class="name">${esc(r.label)}</span><span class="val"><b>${esc(r.currentText ?? '–')}</b> / ${esc(r.targetText)}</span><span class="track" role="img" aria-label="진행 ${w}%"><i style="width:${w}%"></i></span><span class="note">${ymd(g.baseDate)} 기준 ${esc(r.baseText)}${r.lowerBetter ? ' · 적을수록 좋음' : ''}${status}</span></li>`;
   }).join('');
+}
+
+// 내가 할 일: user-todos.md '할 일' 표(summary.userTodos) + AdSense 재신청 조건을 모두 채우면 자동으로 맨 앞에 (2026-11-08 사용자 요청)
+const segHtml = (segs) => (segs || []).map((s) => (s.url && /^https:\/\//.test(s.url)
+  ? `<a href="${esc(s.url)}" target="_blank" rel="noopener noreferrer">${esc(s.text)}</a>` : esc(s.text))).join('');
+function renderUserTodos() {
+  const s = state.summary;
+  if (!s) return;
+  const panel = $('user-todo-panel');
+  const a = s.adsense;
+  const items = [...(s.userTodos || [])];
+  if (a?.allMet && !items.some((t) => (t.task || []).some((x) => x.text.includes('AdSense')))) {
+    items.unshift({ kind: '필수', auto: true, task: [{ text: 'AdSense 재신청' }],
+      how: [{ text: '재신청 조건 3개(운영 3개월·색인율 70%·4주 연속 주간 클릭 증가)를 모두 채웠습니다. AdSense > 사이트에서 tool-proof.com 검토를 다시 요청하세요.' }], since: a.today });
+  }
+  const met = a ? Object.values(a.met || {}).filter(Boolean).length : null;
+  const adsenseNote = a && !a.allMet ? ` · AdSense 재신청은 아직 아님 (조건 ${met}/3 충족, ${ymd(a.eligibleFrom)} 이후)` : '';
+  $('user-todo-meta').textContent = `${localStamp(s.updatedAt)} 세션 기준${adsenseNote}`;
+  panel.classList.toggle('has-items', items.length > 0);
+  if (s.userTodos === undefined && !items.length) {
+    $('user-todo').innerHTML = '<p class="none">이 회차 데이터에는 할 일 목록이 없습니다. 다음 세션이 대시보드를 갱신하면 표시됩니다.</p>';
+    return;
+  }
+  if (!items.length) {
+    $('user-todo').innerHTML = '<p class="none">지금 사용자가 할 일은 없습니다.</p>';
+    return;
+  }
+  const pill = (k, auto) => `<span class="pill ${auto ? 'good' : k === '필수' ? 'warn' : 'muted'}">${esc(k)}</span>`;
+  $('user-todo').innerHTML = `<ol>${items.map((t) => `<li>${pill(t.kind, t.auto)}<span class="task">${segHtml(t.task)}</span>`
+    + `<span class="how">${segHtml(t.how)}</span>`
+    + `<span class="small">${t.auto ? '대시보드가 조건 충족을 감지해 자동으로 표시' : `${esc(t.session || '')} · ${ymd(t.since)}부터`}</span></li>`).join('')}</ol>`;
 }
 
 // AdSense 재신청 조건 3개 (README 결정사항, summary.adsense). 주간 클릭은 월~일 확정 주만 셈 (미확정 날짜가 섞인 주는 참고로만 표시)
@@ -1329,6 +1376,7 @@ function renderSessions() {
 
 function render() {
   renderSummary();
+  renderUserTodos();
   const daily = [...state.daily].sort((a, b) => a.date.localeCompare(b.date));
   barChart($('chart-imp'), daily);
   renderTraffic();

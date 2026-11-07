@@ -20,7 +20,8 @@ feedSeenAt·sitemapSeenAt·crawledAt)은 2026-11-04부터 저장소 파일
 
 `stats` 컬렉션 하나에 문서 몇 개만 둔다 (세션마다 버전을 옮겨 적는 수를 줄이려고). 기존 문서를 덮어쓰려면
 마지막 batch 결과의 버전(`experiment/dashboard/versions.json`, 또는 `--versions`)을 쓴다 (없는 문서는 새로 만듦).
-- summary: 갱신 시각·28일 합계·사이트맵 상태(sitemap = /sitemap.xml, 11-04까지 회차는 rss.xml 값.
+- summary: 갱신 시각·28일 합계·userTodos(user-todos.md '할 일' 표 → 화면 맨 위 '내가 할 일', [{kind, task, how, since, session}],
+           task·how = [{text} | {text, url}] 조각 목록, 2026-11-08 회차부터)·사이트맵 상태(sitemap = /sitemap.xml, 11-04까지 회차는 rss.xml 값.
            sitemaps = 제출한 사이트맵·피드 전부 {path, type, lastSubmitted, lastDownloaded, isPending, errors, warnings, submitted},
            2026-11-05 회차부터)·linkAudit(link_audit.py 문제 항목별 건수, 문제 있는 항목만)
            ·goals(README 목표 지표 표 + 현재 값·진행률)
@@ -86,6 +87,7 @@ import datetime as dt
 import hashlib
 import json
 import pathlib
+import posixpath
 import re
 import sys
 
@@ -465,6 +467,45 @@ def experiments() -> list[dict]:
     return rows
 
 
+REPO_BLOB = 'https://github.com/jinhok96/jinho-blog/blob/main/'
+USER_TODOS_FILE = EXPERIMENT / 'user-todos.md'
+
+
+def md_segments(text: str) -> list[dict]:
+    """표 칸의 마크다운 → [{text} | {text, url}] (굵게·백틱 기호는 떼고, 저장소 상대 링크는 GitHub 주소로)"""
+    segments = []
+    pos = 0
+    for m in re.finditer(r'\[([^\]]+)\]\(([^)\s]+)\)', text):
+        if m.start() > pos:
+            segments.append({'text': text[pos:m.start()]})
+        target = m.group(2)
+        url = target if re.match(r'https?://', target) else REPO_BLOB + posixpath.normpath(f'apps/ad-blog/experiment/{target}')
+        segments.append({'text': m.group(1), 'url': url})
+        pos = m.end()
+    if pos < len(text):
+        segments.append({'text': text[pos:]})
+    for s in segments:
+        s['text'] = s['text'].replace('**', '').replace('`', '')
+    return [s for s in segments if s['text']]
+
+
+def user_todos(path: pathlib.Path = USER_TODOS_FILE) -> list[dict]:
+    """user-todos.md '할 일' 표 (구분·할 일·방법·이유·올린 날·올린 세션) → 대시보드 맨 위 '내가 할 일' (2026-11-08 사용자 요청)"""
+    if not path.exists():
+        return []
+    text = path.read_text(encoding='utf-8')
+    if '\n## 할 일' not in text:
+        return []
+    block = text.split('\n## 할 일', 1)[1].split('\n## ', 1)[0]
+    rows = []
+    for line in block.splitlines():
+        cells = [c.strip() for c in line.strip().strip('|').split('|')]
+        if len(cells) != 5 or cells[0] in ('구분', '-') or set(cells[0]) <= {'-', ' ', ':'}:
+            continue
+        rows.append({'kind': cells[0], 'task': md_segments(cells[1]), 'how': md_segments(cells[2]), 'since': cells[3], 'session': cells[4]})
+    return rows
+
+
 def sessions() -> list[dict]:
     text = (EXPERIMENT / 'log.md').read_text(encoding='utf-8')
     rows = []
@@ -694,6 +735,8 @@ def main() -> None:
         'goals': goals(current),
         # AdSense 재신청 조건 (README 결정사항): 주간 클릭은 위 날짜별 행을 월~일로 묶어 확정 주만 판정 (2026-11-03 회차부터)
         'adsense': adsense_status(weekly_clicks(site_days, final_dates), None if args.no_inspect else indexed, len(posts)),
+        # 사용자가 해야 할 일 (user-todos.md '할 일' 표, 2026-11-08 회차부터). 화면 맨 위 '내가 할 일'
+        'userTodos': user_todos(),
     }
     if crawl:
         docs['summary']['crawl'] = crawl

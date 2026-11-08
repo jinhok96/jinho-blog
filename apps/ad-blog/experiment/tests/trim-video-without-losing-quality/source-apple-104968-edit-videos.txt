@@ -1,0 +1,122 @@
+# 가져온 시각: 2026-11-08T20:32:39.958Z
+# 원본: https://support.apple.com/en-us/104968
+How to edit videos on your iPhone, iPad, or Mac - Apple Support
+https://support.apple.com/en-us/104968
+
+How to edit videos on your iPhone, iPad, Mac, or Apple Vision Pro
+
+The Photos app lets you change the length of your video or slow it down directly from your device.
+
+Trim your video
+
+Have a video that's too long to send through Mail or Messages? Or maybe you just want to share part of a video with your friends and family. With the Photos app, you can change the start and stop time to make your video shorter.
+
+How to trim a video on your iPhone or iPad
+
+Open the Photos app and tap the video that you want to edit.
+
+Tap the Edit button.
+
+Move the sliders on both sides of the video timeline to change the start and stop times. To preview your trimmed video, tap the Play button.
+
+Tap Done, then tap Save Video or Save Video as New Clip.
+
+Save Video saves only the trimmed version of the video. Save as New Clip keeps the original version and saves an additional trimmed version in your library.
+
+How to trim a video on your Mac
+
+Open the Photos app and double-click the video that you want to edit.
+
+Click Edit.
+
+Move the sliders on both sides of the video timeline to change the start and stop times. To preview your trimmed video, click the Play button.
+
+Click Done, then click Save Video or Save Video as New Clip.
+
+How to trim a video on your Apple Vision Pro
+
+Open the Photos app and tap the video that you want to edit.
+
+Tap the More button, then tap Trim.
+
+Move the sliders on both sides of the video timeline to change the start and stop times. To preview your trimmed video, tap the Play button.
+
+Tap Done, then tap Save Video or Save Video as New Clip.
+
+How to undo a trim
+
+On your iPhone or iPad: Open the video that you trimmed. Tap the Edit button. Tap Revert, then tap Revert to Original.
+
+On your Mac: Open the video that you trimmed. Click Edit. Click Revert to Original, or move the sliders back to the beginning and end of the video. Then click Done.
+
+On your Vision Pro: Open the video that you trimmed. Tap the More button, then tap Revert to Original.
+
+If you're editing a video that you created using the Save Video as New Clip function, tapping Revert to Original will undo any edits that you've made, such as adjusting exposure or adding a filter. But it won't restore the video to its original length.
+
+Add a filter and rotate your videos
+
+After you take your video, open the video in the Photos app and tap Edit. You can rotate your video or add filter effects in the Photos app. If you don’t like your changes, tap Cancel to revert to the original.
+
+On your Mac, open the Photos app, click Edit, then use the controls in the sidebar to adjust the look of your video. If you don't like your changes, click Revert to Original or Reset Adjustments.
+
+Adjust the video playback speed
+
+If your video is captured at a frame rate higher than 30FPS, you can slow down the video for a dramatic effect in iOS 18 and later, iPadOS 18 and later, and macOS Sequoia and later.
+
+Open the Photos app.
+
+Open a video, then tap or click the Edit button.
+
+Tap or click the Speed control button on iPhone or iPad, or the pop-up menu at the bottom of the video on Mac, then select a playback speed.
+
+Customize your slo-mo video or section
+
+After you record with the slo-mo camera mode or adjust the video playback speed, you can edit which part of your movie plays with the slow motion effect. That means you can have your video play at regular speed, and slow down for the details that you don't want your viewers to miss.
+
+In Photos, open the slo-mo video that you want to edit, tap or click the Edit button, then use the vertical white lines in the video timeline to set when slo-mo begins and ends.
+
+Edit Audio Mix
+
+When you capture a video with Spatial Audio on supported iPhone models, you can change the video sound after to focus more on voices, reduce background sounds, and more. Spatial Audio recording is supported on iPhone 16 models, iPhone 17 models, and iPhone Air.
+
+How to edit Audio Mix on your iPhone, iPad, or Mac
+
+Open the Photos app.
+
+Open a video, then tap or click the Edit button.
+
+Tap or click Audio Mix, then choose any of the following:
+
+Standard: Play the original audio you recorded.
+
+In-Frame: Reduce sounds and voices from sources not visible in the video frame.
+
+Studio: Reduce background sounds and reverb, to make it sound more like you’re recording in a professional studio.
+
+Cinematic: Put all the voices onto a front facing track and leave environmental noises in surround, like the audio in movies.
+
+Drag the intensity slider below the video to reduce or increase the effect and background noise levels.
+
+Tap or click Done.
+
+Learn more about Spatial Audio and how to change sound recording options
+
+Use third-party apps
+
+You can also download third-party apps on your iPhone or iPad to edit your videos further. Or install third-party photo editing extensions on your Mac to use alongside the built-in tools in Photos. Learn more about editing with third-party extensions on your Mac.
+
+Do more with Photos
+
+Learn how to edit photos on your iPhone or iPad.
+
+If you have a 4K video, learn how to edit it with iMovie.
+
+Learn how to change camera recording settings.
+
+Store your photos and videos in iCloud Photos so that you can access them everywhere you go.
+
+Keep your collection organized in the Photos app.
+
+Information about products not manufactured by Apple, or independent websites not controlled or tested by Apple, is provided without recommendation or endorsement. Apple assumes no responsibility with regard to the selection, performance, or use of third-party websites or products. Apple makes no representations regarding third-party website accuracy or reliability. Contact the vendor for additional information.
+
+Published Date: May 01, 2026

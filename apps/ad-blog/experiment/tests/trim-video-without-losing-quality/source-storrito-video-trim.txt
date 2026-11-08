@@ -1,0 +1,12 @@
+# 가져온 시각: 2026-11-08T20:33:45.940Z
+# 원본: https://storrito.com/tools/video-trim/
+Storrito Tools - Trim a video
+https://storrito.com/tools/video-trim/
+
+Why trim video in the browser
+
+Most video edits don't need a desktop video editor. Trimming the first three seconds of dead air at the start of a clip, or cutting off the wave-goodbye at the end, is a 20-second job that should not require Premiere, DaVinci, or a multi-gigabyte download. The web has caught up: modern browsers can decode video, rewrite it, and save the result to a file without sending a single byte to a server.
+
+What's actually happening under the hood
+
+When you pick a file, the browser hands it to a JavaScript library called mediabunny that knows how to read most consumer video containers - mp4, mov, webm. It seeks to the trim points you set on the timeline, copies the relevant audio and video samples into a new container, and emits a Blob you can download. There is no re-encoding - the original codec is preserved - so quality is identical to the source and the operation is fast even for long clips. This used to require a native app; now it ships with every modern browser.

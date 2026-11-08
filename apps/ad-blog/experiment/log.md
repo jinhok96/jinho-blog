@@ -2,6 +2,62 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-09 · 세션 91 (정기 실행, 일반 세션): 영상을 화질 그대로 자르기 — 무료 온라인 자르기 도구 3곳을 프레임 단위로 비교
+
+세션 시각: 2026-11-09 04:12 KST(월) → 04시 실행(01:00~09:59 범위)·월요일이라 일반 세션 (04시 첫 실행). 열린 PR 없음. 작업 브랜치를 `origin/main`(c21497e)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 완료. 지난 주(11-02~11-08)에 뉴스 칼럼이 없었지만 영향이 오래 가는 뉴스 후보가 없어 상시 글.
+
+**지표 (`gsc_report.py`, 2026-10-11 ~ 11-08, 세션 90 이후 바뀐 값만)**
+
+- 노출 1,125 → **1,161**, 클릭 19, CTR 1.7% → 1.6%, 평균 순위 23.7 → 24.1 (글별: `spotify-family-qr-code-verification` 276·18.4위 / `turn-off-ai-in-chrome` 208·19.9위·클릭 4 / `image-to-text-offline-free` 131·16.5위·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 그대로 · 11-02~08 4 (미확정 포함, 노출 177 → 212)
+- sitemap: `rss.xml` 11-06 04:28, `sitemap.xml` 11-06 22:41 UTC 그대로
+- URL 검사: 색인 17/54 그대로, 이 회차 `Discovered` 18 · `URL is unknown` 19 (세션 81~90과 같은 흔들림), URL 검사 `sitemap` 칸에 `rss.xml`이 있는 글 16편. 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-06 08:36 UTC `image-to-text-offline-free`, 미색인 37편 중 Google이 본 링크 20편 그대로)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 29일/92일(2027-01-11) · 색인율 32%(17/54, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 처리됨. 첫 통합 점검은 11-15(일) 04시 개선 세션 (옛 월요일 08:45 루틴이 아직 남아 있으면 11-09 보고를 이어받음)
+
+**발행한 글**
+
+| slug                                | 카테고리   | 클러스터·역할                  | 독창 요소                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       |
+| ----------------------------------- | ---------- | ------------------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| `trim-video-without-losing-quality` | `software` | `photo-video` 상시 글 (검색형) | 무료 온라인 자르기 도구 3곳·설정 5가지(ezgif Copy original·MP4, 123apps 기본값·No re-encoding, Storrito)로 Tears of Steel 60초 클립 2개(H.264 MP4 키프레임 1초, HEVC MOV 장면 전환 키프레임)에서 0:12.5~0:30.0을 잘라 **결과 파일의 모든 프레임을 원본과 MD5로 비교**(`analyze.py`, 재인코딩이면 PSNR·SSIM). 결과: 복사 모드 2개만 같은 프레임 100%, 나머지 0%(PSNR 43.2~45.6 dB, 소리 192 → 약 130 kbps). **가장 많이 쓰이는 123apps는 기본값이 재인코딩**이고 'No re-encoding'을 켜야 원본 그대로. 복사 모드 시작점: ezgif는 앞 키프레임부터 파일에 넣되 편집 목록으로 숨겨 Chromium에서 12.5초부터 재생, 123apps는 앞 키프레임(H.264 12.0초·HEVC 9.5초 = 3초 앞)부터 재생. **"재인코딩 없음"을 내세운 Storrito는 같은 프레임 0%·소리 Opus**, HEVC는 소리만 든 파일을 "Saved"로 저장(Chromium 153 Linux). 휴대폰·컴퓨터 내장 앱(Photos·QuickTime·Windows Photos·Google Photos)과 LosslessCut은 공식 문서 기반 |
+
+- 선정 근거: 세션 83·89·90 '다음 할 일' 후보(`dia browser ai privacy`·`turn off galaxy ai`·`make pdf searchable free`)와 함께 "`ai-settings` 끄기 글이 17편이라 직접 측정이 되는 `photo-video` 후보도 비교"를 따름. `demand_check.py discover`(Windows Blog·Chrome·Workspace·Google·OpenAI·Apple 피드, CISA 1건)·대형 IT 매체 인기 글 목록(Ars Most Read·Verge Most Popular·9to5 Trending)에서 영향이 오래 가는 뉴스 없음(리뷰·업계·선거 뉴스). 우선순위 2 클러스터 `photo-video`에서 `trim video without losing quality` 자동완성 3곳·하위 21개, Trends 3개월 `trim video` 3.6(`compress video` 2.5·`video to gif` 6.6·`convert mov to mp4` 0.3, 기준 `remove background` 33.8). 상위 결과(WebSearch)는 Microsoft 포럼·자기 도구 홍보 글(Storrito·edesy·wildandfreetools)·유료 소프트웨어 홍보·2013 CloudConvert 블로그 → 결과를 원본과 비교한 곳이 없어 차별점이 분명. 콘텐츠 정리 목록과 겹치지 않음
+- 처음 계획은 LosslessCut(데스크톱) 직접 시험이었으나 **내려받은 실행 파일 실행이 막혀**(아래 '알게 된 것') 웹 도구 시험으로 바꿈. Clideo는 결과 페이지까지 갔지만 내려받기 주소가 우리 Chromium에서 403이라 결과에서 뺌(결과 페이지에 'Remove watermark' 버튼)
+- 주 검색어: `trim video without losing quality`. 제목 `Trim Video Without Losing Quality in a Free Online Tool`(55자, `How to …` 틀·`…, X by X` 틀을 피함), 설명 154자, slug는 주 검색어 그대로
+- 1차 출처(Chromium 렌더링, `# 가져온 시각`·`# 원본` 머리말): ezgif cut-video, online-video-cutter.com, storrito.com/tools/video-trim, losslesscut.app, Apple 104968·QuickTime 가이드 qtpf2115f6fd·116944(HEVC·Most Compatible), Microsoft Photos 편집 도움말, Google Photos 10729480 → `tests/trim-video-without-losing-quality/source-*.txt`
+- 쓰지 않은 것: LosslessCut·Avidemux·Shotcut 직접 시험(실행 막힘 → LosslessCut은 공식 사이트 문장만, "we tested" 없음), 내장 앱의 재인코딩 여부(기기 없음·문서에 언급 없음), Storrito의 Chrome(Windows·Mac) 동작, 확대 비교 그림(200% 확대에서도 눈으로 구분이 어려워 수치로만)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1849596565, 55.5분: 페리윙클 배경 + 코랄 필름 띠에서 한 토막을 들어 올린 장면, 돋보기·가위, `hero-image.md`) + 본문 4장(도구별 결과 표 그래픽, 키프레임 시작점 타임라인, ezgif 설정 화면 + 주석, 123apps 설정 화면 + 주석, `charts.py` 라이트 모드). 화면 캡처는 로고 줄을 빼고 설정 영역만, 영상 프레임은 CC BY 표기
+- 내부 링크: 새 글 → 허브 `free-image-converter-photo-tools`, `compress-video-for-discord-email`, `convert-heic-to-jpg-free`(색인됨), `remove-metadata-from-photos` (4개). 역링크 3개: 색인된 `compress-image-to-100kb` 마지막 문단(영상 압축 문장에 이어 1문장, 링크 3 → 4개) · 허브 요약 표 행 + 짧은 절 'Best free way to trim a video without losing quality: ezgif' + 업로드 표에 123apps 행 · `compress-video-for-discord-email` 'Which one should you use?' 목록 1줄. **허브·두 글 모두 `updatedAt`은 바꾸지 않음** (V7 판정 11-13 전에 RSS 피드 20편 구성을 새 글 1편 외에는 바꾸지 않으려고. 허브 절 추가는 판정 뒤 다른 갱신과 함께 `updatedAt`)
+- 점검: 저장소 `seo-audit` 스킬 On-Page(제목 55자·H1 일치·주 검색어 첫 문장, 설명에 주 검색어가 없어 교체 → 154자, 소제목 질문·동작형 8개 + FAQ 3개, 첫 소제목 전 154단어, 이미지 alt 5장·WebP·의미 있는 파일 이름, 앵커 설명형, em dash 0·백틱 0, 긴 문장 1곳 나눔). `extlink_check.py --slug` 고유 URL 9개 중 이동 2 → Microsoft 주제 ID 주소를 최종 주소로 교체, Apple `guide/…/{ID}` 짧은 주소는 규칙대로 둠. searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 67자(접미사 포함)·description 154자, BlogPosting(author ToolProof, 발행 2026-11-08T21:01:00Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 4장(모두 alt), og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap·`rss.xml`·`llms.txt` 포함. lint·type-check·test(37파일 281개)·build 통과. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `keyword_trends.py`: `trim video without losing quality` 0.0(롱테일)
+
+**알게 된 것**
+
+- **내려받은 실행 파일 실행이 자동 권한 검사에 막힘**: GitHub Releases의 LosslessCut 3.69.0 AppImage(받기는 됨, SHA-256 기록)를 풀거나 실행하는 명령, BtbN FFmpeg 정적 빌드를 받아 실행하는 명령이 "Code from External"로 거부됨 → 우회하지 않음. Ubuntu 공식 저장소 `apt-get install`(xdotool)·PyPI(matplotlib)·Playwright Chromium은 됨, 시스템 ffmpeg 6.1.1에 `psnr`·`ssim`은 있고 libvmaf는 없음. 세션 9~89에서 쓰던 데스크톱 앱 측정(GIMP AppImage·Brave deb·Edge 등)이 앞으로 막힐 수 있어 **세션 89 '미발견 15편 갱신거리' 중 앱 재측정 8편은 실행이 되는지 먼저 확인**해야 함 (README 인프라 상태 '외부 실행 파일', user-todos 선택 1건)
+- **인기 온라인 자르기 도구의 기본값은 재인코딩**: 123apps(online-video-cutter.com)는 'No re-encoding'이 꺼져 있고 켜면 File format이 Auto로 바뀜. 켜면 앞 키프레임부터 저장·재생(편집 목록 없음), ezgif Copy original은 같은 바이트 크기(15 B 차이)에 편집 목록으로 앞부분을 숨김 → "복사 모드"끼리도 시작점 처리가 다름
+- **"No quality loss" 문구는 결과로 확인해야 함**: Storrito 페이지는 mediabunny로 샘플을 복사한다고 설명하지만 Chromium 153(Linux)에서 같은 프레임 0%·영상 비트레이트 절반·소리 Opus, 키프레임에 맞춘 시작도 같음. 환경 차이일 수 있어 글에는 시험한 브라우저를 밝힘 → writing-guide 정확성에 규칙 추가
+- 프레임 MD5 비교(`analyze.py`)는 ffmpeg `-c copy` 보정에서 100%·재인코딩 0%로 바로 갈리고, 편집 목록을 따르는 디코딩과 무시하는 디코딩(`-ignore_editlist 1`)을 둘 다 보면 "파일에 든 첫 프레임"과 "재생 첫 프레임"을 나눠 잴 수 있음 → 영상 도구 측정에 재사용
+- Playwright Chromium 153은 HEVC 영상을 디코딩하지 못함(`videoWidth` 0, 길이만 읽음). Clideo는 우리 Chromium에서 H.264도 "your browser cannot play the uploaded video"를 띄우고 내려받기 403
+
+**다음 할 일**
+
+- **사용자(선택): 정기 세션의 데스크톱 앱 실행 허용 여부** — [user-todos.md](user-todos.md) (세션 91)
+- **사용자(필수): "주간 SEO 점검" 루틴 삭제(또는 일시 중지)** (11-08 결정 그대로)
+- **사용자(선택): Pinterest 핀 생성 확인**, **외부 링크 1곳**(Brave Community 초안) (그대로)
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 29일·색인율 32%·주간 클릭 증가 0주)
+- Claude: **다음 개선 세션(11-10 화 04시) 1순위 — `siri-history-on-iphone`에 Apple Siri 개인정보 페이지 개정 반영** (세션 90 계획이 하루 1회 전환으로 밀림. 사본 3쪽은 `tests/siri-history-on-iphone/source-apple-privacy-*-2026-11-08.txt`)
+- Claude: **Firefox 160 — 11-10 14:00 UTC 출시 뒤 첫 개선 세션(11-12 목 04시)에서 `turn-off-ai-in-firefox` 재확인**. Firefox Linux tar도 외부 실행 파일이라 막힐 수 있음 → 막히면 릴리스 노트·`omni.ja`가 아닌 문서 기반으로 바뀐 점만 반영하고 log.md에 기록
+- Claude: **V1(11-11)·V2(11-12)·V7(11-13) 판정** — 11-12(목)·11-14(토) 개선 세션. V7 판정 뒤 허브 `free-image-converter-photo-tools` `updatedAt`(이번 세션 추가한 '영상 자르기' 절 포함)과 세션 89 '미발견 15편 갱신거리'(앱 재측정 8편은 실행 가능 여부 먼저)
+- Claude: 새 글 후속 — Storrito가 결과를 바꾸거나 123apps 기본값이 바뀌면 같은 글 갱신(`source_diff.cjs --slug trim-video-without-losing-quality`). 데스크톱 앱 실행이 허용되면 LosslessCut으로 같은 클립·구간을 시험해 문서 기반 절을 측정으로 바꿈(`verifyType` 그대로 검증형)
+- Claude(11-11 수 일반 세션): 후보 `dia browser ai privacy`·`make pdf searchable free`(NAPS2는 외부 실행 파일 → 실행 가능 여부 먼저)·`convert mov to mp4 without losing quality`(이번 글 파생, 웹 도구로 시험 가능)·backlog 15번 무료 오프라인 TTS. 영향 뉴스 칼럼은 이번 주(11-09~15) 아직 없음
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵 (세션 85 그대로)
+- Claude: 콘텐츠 정리 다음 항목 — 3·5·6번은 V7 판정(11-13) 뒤, 4번은 11-10 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 발행 55편 (허브 4개)
+- 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-08T20:53:50Z, DB 문서 480개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값은 새 글 항목만 추가. 이 회차 28일 노출 1,163·클릭 19·평균 24.1위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 38편 중 Google이 본 링크 20편·`inFeed` 20(미색인 16), `summary.adsense` 운영 29일·색인율 0.309(17/55, 새 글이 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회수 124·방문 117, `engagement` GA4 조회 18·사용자 12·세션 15(참여 7)·참여 180초·90% 스크롤 7, `summary.userTodos` 4건(데스크톱 앱 실행 허용 여부 추가). `posts` 문서 압축 JSON 약 123 KiB(한도 256 KiB의 48%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-08 · 결정: 정기 실행 시각 04시 (사용자 설정)
 
 - 사용자가 루틴 "ToolProof 정기 글 작성" 실행 시각을 **매일 04:00(한국 시간) 1회**로 바꿈 (위 결정의 00시 대신). 세션 구분: **01:00~09:59 시작 = 04시 실행, 그날 요일**로 월·수·금 일반·화·목·토·일 개선, 범위 밖 시작(수동 실행 등)은 개선 세션. 이전 00시 규칙의 '21:00~23:59 시작이면 다음 날 요일' 보정은 없앰

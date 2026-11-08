@@ -1,0 +1,176 @@
+# 가져온 시각: 2026-11-08T20:33:19.709Z
+# 원본: https://support.google.com/photos/answer/10729480?hl=en
+Edit your videos with Google Photos - Android phone & tablet - Google Photos Help
+https://support.google.com/photos/answer/10729480?hl=en
+
+Edit your videos with Google Photos
+
+In Google Photos, you can edit your videos with special effects, filters, and more from your mobile device. 
+
+Android phone & tablet iPhone & iPad
+More
+More
+More
+What you need
+
+Download and install the Google Photos app.
+
+Some video editing features like crop, straighten, and filters are only available on Android devices with at least one GB of RAM that run on Android version 6.0 and later.
+Important: Non-pixel Android devices running on Android 9 do not support or have access to video editing.
+Edit your video
+
+With our updated video editor, you can now have a refreshed editing experience with a streamlined layout and new and improved tools on the scrollable action bar.
+
+Tip: Learn how to edit a highlight video.
+
+Enhance or stabilize your video
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+Tap Auto.
+To improve the color and lighting in your video: Tap Enhance.
+To stabilize your video: Tap Stabilize.
+To save a copy of the video with your edits, at the top, tap Save.
+Export or trim a still from your video
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+To trim the video to a different length: Touch and hold, then drag the trim handles to select the portion of your video you want to keep.
+To save a copy of the video with your edits: At the top, tap Save.
+To export a frame from your video: Tap Export frame .
+Crop or rotate
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+Tap Crop.
+To crop the video to a different aspect ratio, like a square: Tap Aspect ratio .
+To rotate a video 90 degrees: Tap Rotate .
+To make minor adjustments to straighten the video: Use the dial above Rotate .
+To automatically straighten the video: Tap Auto.
+Tip: Auto straighten availability depends on the video.
+To mirror the photos and videos horizontally: Tap Mirror .
+To save a copy of the video with your edits, at the top, tap Save.
+Adjust your video
+
+Important: Your device must have at least 3 GB RAM and Android 8.0 and up.
+
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+Tap Adjust.
+Select the type of effect you want to apply to your video and move the dial to make changes.
+When you’re finished, tap Done.
+To undo an adjustment, deselect the option or tap Cancel.
+Video adjustments
+To adjust the exposure, tap Brightness .
+To adjust the difference in tones, tap Contrast .
+To adjust the brightest value, tap White point .
+To adjust the detail in the brightest areas, tap Highlights .
+To adjust the detail in the darkest areas, tap Shadows .
+To adjust the darkest value, tap Black point .
+To adjust the intensity of colors, tap Saturation .
+To adjust the color temperature, tap Warmth .
+To adjust the hue, tap Tint .
+To adjust the saturation of the skin-colored tones, tap Skin tone .
+To adjust the saturation of the blue tones, like sky or water, tap Blue tone .
+To reduce the brightness around the edges of the video, tap Vignette .
+To enhance brightness and contrast across the video, tap HDR effect .
+Add an effect or filter
+
+Important: Your device must have at least 3 GB RAM and Android 8.0 and up.
+
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+Tap Filters.
+To add a filter:
+Tap Filter .
+Select a filter.
+To change the strength of the filter on the video: Move the dial.
+To undo a filter: Tap None.
+To add an effect:
+Tap Effect .
+Select an effect.
+A live preview of the selected effects appears on your video.
+To undo an effect: Tap None.
+Tap Save.
+
+Tip: Types of effects include:
+
+B&W Film
+Light leak
+Lomo
+Dust mix
+Chromatic
+Paper Tear
+Framed
+Layouts
+Poster
+Add text
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+Tap Text .
+To type on your video: Tap Edit text .
+To adjust the font: Tap Fonts .
+To change the color of your text: Tap Color .
+When you’re done, tap Done .
+To add a new text to your video: Tap Text .
+To edit the text you’ve added in the video: Tap an existing text box.
+To remove the text, delete everything in the text box.
+To delete the text box: Tap Delete .
+To save a copy of the video with your edits, at the top, tap Save.
+Change the audio of your video
+
+Important: This feature is only for Pixel 8+ devices.
+
+On your Pixel device, open the Google Photos app .
+Open the video you want to edit.
+Tap Audio.
+To mute your video: Tap Mute.
+To delete the audio of your video: Tap Audio Eraser.
+To save a copy of the video with your edits, at the top, tap Save.
+Mute your video
+
+Important: This feature is only for non-Pixel devices.
+
+On your non-Pixel device, open the Google Photos app .
+Open the video you want to edit.
+Tap Mute.
+Change the speed of your video
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+Tap Speed.
+To select a portion of your video to change the speed, touch and hold, then drag the trim handles.
+To speed up your video: Tap 2x or 4x.
+To slow down your video: Tap ¼x or ½x.
+To save a copy of the video with your edits, at the top, tap Save.
+
+Tip: To change your video’s playback speed without the need to edit it:
+
+At the top right, tap More   Playback speed.
+Choose your desired speed. The speed will be adjusted.
+To go back to the video, dismiss the sheet.
+Add music to your video
+
+Important: To add downloaded music to your video, allow music and audio access for Google Photos app from Settings.
+
+On your Android device, open the Google Photos app .
+Open the video you want to edit.
+To add music to a single video, tap Audio   Add Music .
+Alternatively, if you scroll beyond the fold, tap Music .
+To upload a song from your device and choose the song you want to add, tap On device.
+Choose the section of the song you want to use for your video.
+To find the section of the song you want to use for your video, touch and hold, then drag the segment right or left.
+Tap Done .
+To edit the song you added, tap Music .
+To change the section of the song you want to use: Tap Section .
+To change the volume of "Video audio" and "Soundtrack:"
+Tap Volume .
+Touch and hold, then drag the trim handles.
+Tap Done .
+To change the song you want to use: Tap Change .
+To remove the song from your video: Tap Remove   Remove.
+To save a copy of the video with your edits, at the top, tap Save.
+Related resources
+Edit your photos
+Make creations with Google Photos
+Give feedback about this article
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

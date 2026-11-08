@@ -391,6 +391,16 @@
    "refAvg": 34.45,
    "refMax": 100
   },
+  "trim video without losing quality": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-08",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 33.87,
+   "refMax": 100
+  },
   "turn off ai": {
    "avg": 10.96,
    "max": 16.0,

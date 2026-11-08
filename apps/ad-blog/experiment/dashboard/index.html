@@ -549,8 +549,8 @@ function deltaChip(d, { rank = false } = {}) {
   return `<span class="delta ${good ? 'good' : 'bad'}">${text}</span>`;
 }
 
-// 데이터 지연 경고: 정기 세션(하루 4번, 6시간 간격)이 두 번 연속 갱신하지 못하면 표시. 실시간 DB를 볼 때만
-const STALE_HOURS = 12;
+// 데이터 지연 경고: 정기 세션(하루 1번 00시 한국 시간, 2026-11-08부터)이 한 번 갱신하지 못하면 표시(24시간 + 세션 길이 여유). 실시간 DB를 볼 때만
+const STALE_HOURS = 26;
 function renderStale() {
   const at = state.summary?.updatedAt;
   const el = $('stale');

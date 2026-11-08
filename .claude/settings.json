@@ -52,10 +52,28 @@
       "Bash(where code)",
       "mcp__chrome-devtools__*",
       "mcp__claude_ai_Notion__notion-fetch",
-      "Artifact"
+      "Artifact",
+      "Bash",
+      "Edit",
+      "Write",
+      "Read",
+      "WebFetch",
+      "WebSearch",
+      "ArtifactData",
+      "ArtifactComments",
+      "PushNotification",
+      "mcp__github",
+      "mcp__claude-code-remote",
+      "mcp__next-devtools"
     ],
     "deny": [],
     "ask": []
+  },
+  "autoMode": {
+    "allow": [
+      "$defaults",
+      "The repository owner allows every action in this repository's disposable cloud container (decided 2026-11-09). That includes downloading third-party apps, installers, AppImages, .deb/.tar packages, static binaries (for example FFmpeg builds), browsers and AI model files from official project sites, GitHub Releases, Flathub, PyPI, npm and Hugging Face, and extracting, installing and running them to test and measure them for blog posts."
+    ]
   },
   "hooks": {
     "UserPromptSubmit": [

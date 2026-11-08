@@ -14,7 +14,7 @@
 
 ```
 src/
-├── app/            # 라우트 (얇게 유지, views 조합) + sitemap·robots·rss.xml·ads.txt·manifest·icon
+├── app/            # 라우트 (얇게 유지, views 조합) + sitemap·robots·rss.xml·llms.txt·ads.txt·manifest·icon
 ├── views/          # home, posts(/page/n), post, category, static-page
 ├── modules/        # header, footer, post-list (인피드 광고 위치 lib 포함)
 ├── entities/       # post, page (조회 서비스 + 타입)
@@ -39,7 +39,7 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
 - 동적 라우트: `export const dynamicParams = false` + `generateStaticParams`를 `withEmptyStaticParam(params, keys)`로 감쌈 (빈 배열이면 빌드 실패 → 자리표시 경로를 404로 렌더링)
 - 데이터가 없거나 페이지 번호가 잘못되면 `notFound()`
 - 라우트 props는 명시 타입 (`{ params: Promise<{ slug: string }> }`) — 전역 `PageProps`는 빌드 후에만 생성되어 `tsc` 실패
-- Route Handler·metadata 라우트(sitemap, robots, manifest, rss)는 `export const dynamic = 'force-static'`
+- Route Handler·metadata 라우트(sitemap, robots, manifest, rss, llms.txt)는 `export const dynamic = 'force-static'`
 - 서버 컴포넌트 기본 (`'use client'`는 `core/ads`·`core/analytics`와 `core/ui`의 `LocalDate`만), 이미지 최적화 미사용 (`images.unoptimized`)
 
 ## 콘텐츠 규칙

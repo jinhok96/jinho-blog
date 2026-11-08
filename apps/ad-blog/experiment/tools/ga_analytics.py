@@ -9,6 +9,7 @@ Google Analytics Data API로 읽는다. 대시보드 `engagement` 문서와 글�
 - 날짜는 GA4 속성 시간대(한국) 기준 (Cloudflare는 UTC, Search Console은 태평양 시간)
 - 참여 시간 = 페이지가 화면 앞에 있던 시간의 합 (userEngagementDuration, 초). 스크롤 = 향상된 측정 `scroll` 이벤트(페이지 90% 도달)
 - 유럽(EEA·영국·스위스) 방문은 동의 전 쿠키 없이 측정돼 GA4 보고서에서 빠질 수 있음 → 전체 조회수는 Cloudflare 기준
+- AI 답변 유입: 세션 소스가 AI_SOURCES(chatgpt.com·perplexity.ai·gemini.google.com 등)인 세션을 서비스·첫 페이지별로 표시 (2026-11-08)
 - 방문이 적은 동안(28일 방문 71, 2026-11-04)은 글별 값으로 판단하지 않고 사이트 전체 값만 기준선으로 기록
 
 설치: python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests (gsc_report.py와 같은 환경)
@@ -32,6 +33,15 @@ API = f'https://analyticsdata.googleapis.com/v1beta/properties/{PROPERTY_ID}:run
 SCOPES = ['https://www.googleapis.com/auth/analytics.readonly']
 SITE_HOSTS = ('tool-proof.com', 'www.tool-proof.com')  # GA4는 이 도메인에서만 로드됨 (광고 블로그 core/analytics)
 METRICS = ('screenPageViews', 'activeUsers', 'userEngagementDuration')
+# AI 답변에서 온 유입: GA4 세션 소스(참조 도메인 또는 ChatGPT가 붙이는 utm_source) → 서비스 이름
+AI_SOURCES = {
+    'chatgpt.com': 'ChatGPT', 'chat.openai.com': 'ChatGPT', 'openai.com': 'ChatGPT',
+    'perplexity.ai': 'Perplexity', 'www.perplexity.ai': 'Perplexity',
+    'gemini.google.com': 'Gemini', 'bard.google.com': 'Gemini',
+    'copilot.microsoft.com': 'Copilot', 'edgeservices.bing.com': 'Copilot',
+    'claude.ai': 'Claude', 'meta.ai': 'Meta AI', 'www.meta.ai': 'Meta AI',
+    'chat.deepseek.com': 'DeepSeek', 'grok.com': 'Grok', 'you.com': 'You.com',
+}
 RETRY_WAITS = (5, 20, 60)  # 일시 오류(시간 초과·연결 끊김·5xx) 재시도 대기(초)
 
 
@@ -134,6 +144,25 @@ def site_doc(token: str, start: dt.date, end: dt.date) -> dict:
     }
 
 
+def ai_service(source: str) -> str | None:
+    """GA4 sessionSource → AI 서비스 이름 (AI가 아니면 None)"""
+    return AI_SOURCES.get(source.strip().lower())
+
+
+def ai_referrals(token: str, start: dt.date, end: dt.date) -> list[dict]:
+    """AI 답변에서 들어온 세션 (서비스·첫 페이지별, 세션 많은 순)"""
+    cells: dict[tuple[str, str], dict] = {}
+    for (source, landing), (sessions, seconds) in report(token, start, end, ['sessionSource', 'landingPage'], ['sessions', 'userEngagementDuration']):
+        service = ai_service(source)
+        if service is None:
+            continue
+        cell = cells.setdefault((service, normalize_path(landing)), {'sessions': 0, 'engagementSeconds': 0})
+        cell['sessions'] += int(sessions)
+        cell['engagementSeconds'] += int(seconds)
+    rows = [{'service': service, 'landingPage': path, **cell} for (service, path), cell in cells.items()]
+    return sorted(rows, key=lambda r: (-r['sessions'], r['service'], r['landingPage']))
+
+
 def per_view(seconds: int, views: int) -> str:
     return f'{seconds / views:.0f}초' if views else '-'
 
@@ -154,6 +183,7 @@ def main() -> None:
         token = load_token()
         site = site_doc(token, start, end)
         pages = page_engagement(token, start, end)
+        ai_rows = ai_referrals(token, start, end)
     except (RuntimeError, requests.RequestException, ValueError) as error:
         sys.exit(f'GA4를 읽지 못함: {error}')
     print(f"GA4 {start} ~ {end} (한국 날짜, 속성 {PROPERTY_ID})")
@@ -163,6 +193,12 @@ def main() -> None:
     print(f'\n| 경로 | 조회 | 사용자 | 조회당 참여 시간 | 90% 스크롤 |\n|---|---:|---:|---:|---:|')
     for path, c in rows[:20]:
         print(f"| {path} | {c['views']} | {c['users']} | {per_view(c['engagementSeconds'], c['views'])} | {rate(c['scrolls'], c['views'])} |")
+    ai_total = sum(r['sessions'] for r in ai_rows)
+    print(f"\nAI 답변 유입: 세션 {ai_total} (사이트 전체의 {rate(ai_total, site['sessions'])})")
+    if ai_rows:
+        print('| 서비스 | 첫 페이지 | 세션 | 세션당 참여 시간 |\n|---|---|---:|---:|')
+        for r in ai_rows:
+            print(f"| {r['service']} | {r['landingPage']} | {r['sessions']} | {per_view(r['engagementSeconds'], r['sessions'])} |")
     print(f'\n경로 {len(rows)}개. 글별 값은 방문이 쌓이기 전에는 판단에 쓰지 않음 (사이트 전체 값만 기준선으로 기록)')
 
 

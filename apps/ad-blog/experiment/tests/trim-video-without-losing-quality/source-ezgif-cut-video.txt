@@ -1,0 +1,60 @@
+# 가져온 시각: 2026-11-08T20:33:36.820Z
+# 원본: https://ezgif.com/cut-video
+Online Video Cutter
+https://ezgif.com/cut-video
+
+Online Video Cutter & Trimmer
+
+Choose, paste, or drag and drop a file here:
+
+
+Or enter direct video URL:
+
+
+MP4, WebM, AVI, MPEG, MKV, FLV, OGG, MOV, M4V, WMV, ASF, 3GP and other video files
+Max file size: 200MB. All uploaded files are automatically deleted 1 hour after upload.
+
+window.innerWidth<801&&googletag.cmd.push(function(){googletag.display("mid_res")})
+Free Online Video Cutter, Trimmer & Splitter: No Watermark
+
+Cut and trim your videos online for free. Upload a video and extract a clip from the middle, trim the beginning or end, or remove an unwanted section and splice the remaining parts together. Supports MP4, WebM, AVI, FLV, MOV and many other formats up to 200MB. No registration, no software, no watermarks.
+
+How to Cut a Video Online:
+Upload: Choose a video file from your device or paste a URL.
+Choose mode: Select "Keep" to extract a clip, or "Remove" to cut out a section and join the rest.
+Set Start & End Times: Enter times manually or use the video player's "Use current position" button.
+Cut: Click "Cut video!" and download the result.
+Key Features
+Two cutting modes: Extract a clip (keep) or remove a section and splice the rest (remove).
+Precise trimming: Set start and end times down to the millisecond.
+Interactive player: Play the video and use "current position" buttons for frame-accurate cutting.
+Original quality: In "keep" mode, the tool copies the original video and audio streams by default: no re-encoding, no quality loss.
+Multiple formats: Optionally re-encode to MP4 (h264) or WebM output.
+100% free: No watermarks, no signup, no limits.
+
+The tool will keep the same quality and format for cut video and audio as the original file.
+
+If you want to crop video dimensions instead of duration, use our Video crop tool. To change video speed, try Video speed changer.
+
+If you want to cut audio files instead, use our Audio cutter. To cut animated GIFs, use our GIF cutter.
+
+Frequently Asked Questions
+How do I trim a video online?
+
+Upload your video, set the start and end times using the player or manual entry, then click "Cut video!" to download the trimmed clip. The original quality is preserved.
+
+How do I remove a section from the middle of a video?
+
+Select the "Remove selected part" mode, set the start and end times of the section you want to cut out, then click "Cut video!". The tool will remove that section and join the remaining parts together seamlessly.
+
+What is the maximum file size?
+
+You can upload video files up to 200MB. For larger files, consider compressing them first or using desktop software.
+
+Can I cut MP4 videos?
+
+Yes, this tool supports MP4 and all other common video formats including WebM, AVI, FLV, MOV, MKV, WMV, MPEG, and 3GP.
+
+Is there any quality loss?
+
+In "keep" mode with "Copy original" encoding, the tool copies the original streams without re-encoding, so there is no quality loss. The "remove" mode always re-encodes to ensure seamless splicing. If you choose to re-encode (MP4 or WebM output), there will be a minor quality change due to re-compression.

@@ -1,0 +1,64 @@
+# 가져온 시각: 2026-11-08T20:33:01.049Z
+# 원본: https://support.apple.com/guide/quicktime-player/qtpf2115f6fd/mac
+Trim a movie or clip in QuickTime Player on Mac - Apple Support
+https://support.apple.com/guide/quicktime-player/trim-a-movie-or-clip-qtpf2115f6fd/mac
+
+Select version:
+macOS 27 Golden Gate
+macOS Tahoe 26
+macOS Sequoia 15
+macOS Sonoma 14
+macOS Ventura 13
+macOS Monterey 12
+macOS Big Sur 11.0
+macOS Catalina 10.15
+macOS Mojave 10.14
+macOS High Sierra
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Trim a movie or clip in QuickTime Player on Mac
+
+You can use the trimming bar in QuickTime Player to remove or “trim” parts of a movie or a movie clip.
+
+Open QuickTime Player for me
+
+Trim a movie
+
+In the QuickTime Player app  on your Mac, open the movie you want to trim, then choose Edit > Trim.
+
+Drag the yellow handles in the trimming bar. The area outside of the yellow handles is the area to be trimmed.
+
+Tip: To make more precise edits, click and hold a handle to see individual frames of the clip.
+
+Click Trim.
+
+Trim a clip
+
+If you split your movie into clips, you can trim the clips.
+
+In the QuickTime Player app  on your Mac, choose View > Show Clips.
+
+Double-click the clip you want to trim.
+
+Drag the yellow handles in the trimming bar to select the portion of the clip that you want to keep.
+
+Tip: To make more precise edits, click and hold a handle to see individual frames of the clip.
+
+Click Trim.
+
+See also
+Split a movie into clips in QuickTime Player on Mac
+Rearrange movie clips in QuickTime Player on Mac
+Add a movie or clip in QuickTime Player on Mac
+View and edit files with Quick Look on Mac
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

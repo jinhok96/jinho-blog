@@ -1,0 +1,112 @@
+# 가져온 시각: 2026-11-08T20:32:23.703Z
+# 원본: https://support.microsoft.com/en-us/topic/a3a6e711-1b70-250a-93fa-ef99048a2c86
+Edit photos and videos in Windows | Microsoft Support
+https://support.microsoft.com/en-us/windows/apps/photos/edit-photos-and-videos-in-windows
+
+Edit photos and videos in Windows
+Get help with Copilot
+How do I set up photos and videos in Windows?
+Show me how to create videos using clipchamp.
+How do I edit photos and videos in Windows?
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+Whether you like to apply changes that affect your photo's quality, feel, and look—or you want to add information on top of your photos, the Microsoft Photos app in Windows gives you all kinds of options for getting your photos and videos looking their best.
+
+Note
+
+To learn more about additional photo editing options on Copilot+ PCs, see Restyle Image and Image Creator and Super Resolution in Photos.
+
+Edit a photo
+
+With the Photos app, you can easily crop, rotate, adjust look and feel, add a filter, and write or draw on your photo to communicate and provide context.
+
+In the search box on the taskbar, type Photos . From the list, select Photos . Then select the photo you’d like to change.
+
+Select Edit image (Ctrl + E)  at the top of your screen.
+Select one of the edition options to start editing.
+Use these features to tweak the light, color, look, and feel of your photo.
+
+Tip
+
+To cancel all the edits that have been applied to your photo, select Reset on the top left of your screen.
+
+Crop
+
+Crop, flip, or rotate photos to trim out the unwanted parts manually or use preset aspect ratios. You can also rotate a photo left and right by 90 degrees or by incremental degrees—or flip an image by 180 degrees.
+
+Rotate clockwise  or counterclockwise 
+Use the preset aspect ratio 
+Flip image vertically  or horizontally 
+Freely rotate your photo using the slider
+
+Adjustment
+
+Adjust light and color to set the mood and quality of photos. From the adjustment panel on your right, adjust light and colors sliders. You can click and hold or press the spacebar to view the original photo.
+
+Filter
+
+Use filters to refine the tone of images or add special effects to transform photos using only one click. From the Filter panel on your right, select one of fifteen available filters. No worries if you don’t want to apply any filters—you always have the Original option available. You can click and hold or press the spacebar to view the original photo.
+
+Markup
+
+Sometimes, there's more to the story than what pictures can convey on their own. Add a personal touch to your favorite moments by drawing on your photos.
+
+From the Markup toolbar, select one of three drawing tools (2 available pens, and one highlighter).
+Select the type of line (plain line, line with single arrow, line with double arrow) and the color and size from the pen options.
+Go ahead and draw right on your image, and no worries if you mess up—you can always erase markings you don't like with the Eraser tool. Or clear your whole drawing by selecting Clear all markup next to the Eraser tool.
+
+Generative Erase
+
+Generative Erase allows you to retouch photos to remove blemishes or unwanted parts.
+
+Important
+
+This feature uses AI to infill the removed area and may not be perfect or what you expect. The process is done locally on your device. This means that your data never leaves your device. For more about our responsible AI journey, the ethical principles that guide us, and the tooling and capabilities we've created to assure that we develop AI technology responsibly, see Responsible AI. 
+
+Select Erase and then, drag the Brush tool over the area that you'd like to correct. 
+
+You can adjust the Size of the tool to match the size of the area to be corrected.
+
+You can select if Auto apply for Generative Erase is Off or On.
+
+When Auto apply is On, the area selected with your brush tool is erased directly after you finish selecting the area.
+
+When Auto apply is Off, you have more brush tool options:
+
+Add mask allows you to select an area, or multiple areas for Generative Erase. Once you've finished selecting the area to be erased, select Erase. 
+Remove mask allows you to deselect an area or multiple areas from the mask you created. Select Erase to complete the erase of the selected areas.  
+Select Clear if you'd like to deselect all of the areas that are currently selected.
+
+Background
+
+Sometimes you may need to separate a subject from the background in a photo and then either apply a blur effect on the background, replace it or completely remove it.
+
+Important
+
+AI is used to separate the background, but the separation process is done locally on your device. This means that your data never leaves your device. For more about our responsible AI journey, the ethical principles that guide us, and the tooling and capabilities we’ve created to assure that we develop AI technology responsibly, see Responsible AI.
+
+Select Background panel. The image background will be automatically selected but you also have the option to turn On the Background brush tool to display more options.
+
+Use Add mask to add more areas as part of the background.
+Use Remove mask to remove parts of the selection that you don't want as part of the background.
+You can also change the Brush size or Brush softness.
+
+Select Blur, Remove or Replace.
+
+Select the Blur option, then use the slider to adjust the Blur intensity, then select Apply to blur the background.
+
+Select the Remove option, then select Apply to remove the image background.
+
+Select the Replace option, then use the color palette to select the background color. Alternatively, you can specify the RGB values for the desired color. Select Apply to replace the image background with the selected color.
+
+Edit a video
+
+With the Photos app, you can easily trim a video. In the search box on the taskbar, type photos⁠.⁠ From the list, select Photos. Then select the video you’d like to trim.
+
+Tip
+
+For advanced video editing options, open the video, then select Edit in Clipchamp video editor. For more information, see How to edit a video in Clipchamp.
+
+Select Trim (Ctrl + E)  at the top of your screen.
+Adjust the sliders on the bottom to your desired start and end markers. 
+Select Save as Copy to save the modified video, or select the drop down next to it and Save the video to overwrite the original video.

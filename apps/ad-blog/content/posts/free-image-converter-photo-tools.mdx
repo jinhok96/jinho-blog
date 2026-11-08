@@ -32,6 +32,7 @@ Free desktop apps won five of the six jobs, and the one website pick, iLoveIMG, 
 | Remove a background | **iLoveIMG** (website) | Any browser | The only site that gave us full-size cutouts free, with no account | [Free remove.bg alternatives](/posts/remove-bg-alternative-free) |
 | Remove photo metadata | **ExifCleaner** (app), or **ExifRemove** (website) | Windows, Mac, Linux / any browser | Removed all personal data, kept portraits upright and never uploaded the photo | [Remove metadata from photos](/posts/remove-metadata-from-photos) |
 | Video for Discord or email | **HandBrake** (app) | Windows, Mac, Linux | A bitrate set for 19 MB fit Discord's free 20 MB limit at full 1080p | [Compress video for Discord and email](/posts/compress-video-for-discord-email) |
+| Trim a video without losing quality | **ezgif** (website), **Copy original** setting | Any browser | Kept every frame of two test clips identical to the original | [Trim video without losing quality](/posts/trim-video-without-losing-quality) |
 
 "App" means a program you install on your own computer, so your files never leave it. The website picks upload your photo to the company's servers, except ExifRemove, which does its work inside your browser.
 
@@ -100,6 +101,10 @@ HandBrake is the best free way to shrink a video for Discord or email, because y
 
 Don't rely on HandBrake's ready-made Social presets for Discord. Free Discord accounts can upload files up to 20 MB, up from 10 MB since August 2026, according to Discord's [File Attachments FAQ](https://support.discord.com/hc/en-us/articles/25444343291031-File-Attachments-FAQ). The **Social 25 MB 1 Minute** preset made files of 20.2 to 23.9 MB, all over that limit, and **Social 10 MB 1 Minute** fit but dropped the picture to 960 × 540 and blurred small text. For Gmail, where personal accounts can attach up to 25 MB per [Google's help page](https://support.google.com/mail/answer/6584?hl=en), the Social 25 MB preset is a good fit. The bitrate for other video lengths is in our [test of 7 HandBrake settings for Discord and email](/posts/compress-video-for-discord-email).
 
+## Best free way to trim a video without losing quality: ezgif
+
+ezgif's free Video cutter is the best way we found to trim a video without losing quality, because its default **Copy original** setting kept every frame of our two test clips identical to the original. In our November 8, 2026 test, 123apps' Video Trimmer re-encoded the video unless we switched on **No re-encoding**, and Storrito re-encoded it even though its page says it doesn't. Any copy-mode trim can only begin at a keyframe, so the start may move earlier: 123apps' copy started our HEVC clip 3 seconds before the point we chose. Steps and frame-by-frame results are in our [test of free online video trimmers](/posts/trim-video-without-losing-quality).
+
 ## Default settings that caught us out
 
 Seven default settings changed our results, and each one had a simple fix. Desktop apps tended to keep everything without asking (XnConvert kept the GPS location) or to drop things quietly (GIMP's JPEG export left out the date and color profile), while websites made the choice for you with no setting to change (iLoveIMG's black background). Check the first file before you convert or clean a whole batch.
@@ -116,6 +121,7 @@ The four desktop apps we picked (XnConvert, GIMP, ExifCleaner and HandBrake) wor
 | GIMP, HandBrake, ExifCleaner | App | No | None we hit |
 | ExifRemove | Website | No, it runs in your browser | JPG only, 25 MB per photo, 50 photos per batch |
 | ezgif | Website | Yes, deleted after 1 hour per the site | 200 MB per file |
+| 123apps Video Trimmer | Website | Yes, deleted a few hours after you finish per the site | Up to 4 GB per the site |
 | iLoveIMG | Website | Yes | "Limited document processing," background removal up to 3 images at a time |
 | CloudConvert | Website | Yes | 10 conversions a day |
 | Pixlr | Website | Yes | 3 free saves a day in our test |

@@ -2,6 +2,28 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-09 · 결정: 모든 권한 허용 + "주간 SEO 점검" 루틴 삭제 완료 (사용자)
+
+사용자: "포함해서 모든 권한을 허용할게. 내 손 타게 하지 마" / "seo 점검 루틴 지웠어"
+
+- **결정**: 정기 세션의 실행 권한을 모두 허용 (세션 91에서 막힌 외부 실행 파일 포함). 사용자에게 넘기는 일은 Claude가 할 수 없는 것만 → README 결정사항 '실행 권한'
+- **"주간 SEO 점검" 루틴 삭제 완료** → [user-todos.md](user-todos.md) 끝난 일, README 인프라 상태. 주간 점검은 일요일 04시 개선 세션이 맡음 (첫 통합 점검 11-15)
+- **Claude가 설정에 넣지 못함**: 이 세션에서 저장소 `.claude/settings.json`에 아래 허용 규칙을 넣으려 했으나 자동 권한 검사가 "Self-Modification"(Claude가 자기 권한을 넓히는 변경)으로 거부 → 우회하지 않음 (`sed`·git 커밋·PR로 같은 변경을 넣는 것도 같은 우회라 하지 않음). 사람이 한 번 붙여 넣어야 함 → user-todos 필수 1건
+- 붙여 넣을 내용 (`.claude/settings.json`):
+  1. `permissions.allow` 배열 끝(`"Artifact"` 다음)에 추가: `"Bash", "Edit", "Write", "Read", "WebFetch", "WebSearch", "ArtifactData", "ArtifactComments", "PushNotification", "mcp__github", "mcp__claude-code-remote", "mcp__next-devtools"`
+  2. `permissions` 블록 다음에 새 블록:
+
+     ```json
+     "autoMode": {
+       "allow": [
+         "$defaults",
+         "The repository owner allows every action in this repository's disposable cloud container (decided 2026-11-09). That includes downloading third-party apps, installers, AppImages, .deb/.tar packages, static binaries (for example FFmpeg builds), browsers and AI model files from official project sites, GitHub Releases, Flathub, PyPI, npm and Hugging Face, and extracting, installing and running them to test and measure them for blog posts."
+       ]
+     },
+     ```
+
+- 확인 계획: 붙여 넣은 뒤 첫 정기 세션이 LosslessCut AppImage 풀기(`--appimage-extract`)로 실제로 풀렸는지 확인해 README 인프라 상태 '외부 실행 파일'을 고침. 풀리면 `trim-video-without-losing-quality`에 LosslessCut 직접 시험(같은 클립·구간)을 개선 세션에서 추가, 세션 89 앱 재측정 8편도 진행
+
 ## 2026-11-09 · 세션 91 (정기 실행, 일반 세션): 영상을 화질 그대로 자르기 — 무료 온라인 자르기 도구 3곳을 프레임 단위로 비교
 
 세션 시각: 2026-11-09 04:12 KST(월) → 04시 실행(01:00~09:59 범위)·월요일이라 일반 세션 (04시 첫 실행). 열린 PR 없음. 작업 브랜치를 `origin/main`(c21497e)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 완료. 지난 주(11-02~11-08)에 뉴스 칼럼이 없었지만 영향이 오래 가는 뉴스 후보가 없어 상시 글.

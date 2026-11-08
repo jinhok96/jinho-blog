@@ -63,6 +63,21 @@
 - 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-07T22:32:06Z, DB 문서 440개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 새 색인·첫 관측값 없음(`first-seen.json`은 갱신 시각만). 이 회차 28일 노출 1,128·클릭 19·평균 23.7위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 37편 중 Google이 본 링크 20편·`inFeed` 19(미색인 15), `summary.adsense` 운영 28일·색인율 0.315(17/54), `traffic` Cloudflare 28일 조회수 132·방문 124(유입 사이트는 direct·google.com 둘뿐 — 최근 3일만 조회하면 `kr.pinterest.com` 1회가 보임, 28일 상위 목록에는 안 잡힘 → Pinterest 효과는 기간을 좁혀 확인), `engagement` GA4 조회 17·사용자 12·세션 14(참여 6)·참여 138초·90% 스크롤 5, `summary.userTodos` 2건. `posts` 문서 압축 JSON 약 116 KiB(한도 256 KiB의 45%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
 - 배포: 이 세션 PR (CI 통과 후 머지)
 
+## 2026-11-08 · AI 답변 유입 점검·llms.txt (사용자 요청)
+
+사용자 요청: "ai 답변 통해서 유입될 수도 있지 않을까" → `ai-seo` 스킬로 점검.
+
+- **AI 유입 이미 있음** (GA4, 측정 시작 11-05 ~ 11-08): 세션 15 중 **ChatGPT 6 (40%)** — `compress-pdf-free` 5(11-06 하루, 세션당 7초라 같은 사람 반복일 수 있음)·`turn-off-meta-ai-instagram` 1(46초). 그 밖에 직접 6·Google 1·Pinterest 1(11-08 `turn-off-gemini-apps-activity`, 42초, 자동 게시 첫날). 표본이 작아 비율은 판단에 쓰지 않음
+- **봇 접근**: `robots.txt` 전체 허용, OAI-SearchBot·ChatGPT-User·PerplexityBot·Claude-SearchBot·Bingbot User-Agent로 글 요청 모두 200. ChatGPT 검색은 Bing 색인을 쓰고 IndexNow로 이미 자동 제출 중
+- **글 구조**: 첫 문단이 바로 답(예: `compress-pdf-free` 첫 문장에 도구·설정·결과), 직접 측정값·표·테스트 날짜, FAQ 절 25/55편, JSON-LD `BlogPosting`(datePublished·dateModified·Organization 작성자·편집 원칙 링크) → writing-guide [AI 답변 인용](writing-guide.md#ai-답변-인용) 규칙이 이미 스킬 기준과 맞음. 새 규칙 추가 없음
+- **빠진 것 → 추가**: `/llms.txt`(없어서 404) — 사이트 설명·검증 방식, 허브 4편(Start here), 카테고리별 전체 글(최근 변경 순, 제목·설명), 소개·편집 원칙, 그 밖의 정적 페이지는 Optional. 빌드 시 생성(`src/app/llms.txt/`, 테스트 6개). Google AI Overviews에는 영향 없음(Google 공식), ChatGPT·Perplexity·Claude 같은 다른 AI 검색용
+- **측정 추가**: `ga_analytics.py`가 AI 답변 유입(서비스·첫 페이지별 세션·참여 시간)을 따로 출력
+
+**다음 할 일**
+
+- Claude(개선 세션): `ga_analytics.py` AI 답변 유입을 주 1회 확인. ChatGPT 유입 글의 공통점(주 검색어 유형·첫 문단·표)을 2~3주 쌓아 traffic-playbook 가설로 올릴지 판단
+- Claude: 배포 후 `https://tool-proof.com/llms.txt` 200·주소가 `tool-proof.com`인지 확인
+
 ## 2026-11-08 · 결정: Pinterest RSS 자동 게시 (사용자 요청)
 
 - 사용자 결정: 사람과 직접 대화하는 홍보(포럼 답글·메일)는 하지 않고, 한 번 설정해 두면 방치해도 외부 유입이 생기는 채널을 씀. 첫 채널로 Pinterest RSS 자동 게시 선택. GitHub README·About의 사이트 링크는 nofollow라 색인 효과가 거의 없고 운영 실험 문서가 공개 레포에서 사이트와 바로 이어지므로 걸지 않음

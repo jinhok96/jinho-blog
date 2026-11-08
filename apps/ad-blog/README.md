@@ -8,14 +8,14 @@
 
 ## URL 구조
 
-| 경로                                      | 내용                                     |
-| ----------------------------------------- | ---------------------------------------- |
-| `/`, `/page/{n}`                          | 전체 글 목록                             |
-| `/posts/{slug}`                           | 글 (`content/posts/{slug}.mdx`)          |
-| `/categories/{category}`, `.../page/{n}`  | 카테고리별 글 목록                       |
-| `/{slug}`                                 | 정적 페이지 (`content/pages/{slug}.mdx`) |
-| `/sitemap.xml`, `/robots.txt`, `/rss.xml` | SEO 파일 (빌드 시 생성)                  |
-| `/ads.txt`                                | 광고 판매자 목록 (빌드 시 생성)          |
+| 경로                                                   | 내용                                     |
+| ------------------------------------------------------ | ---------------------------------------- |
+| `/`, `/page/{n}`                                       | 전체 글 목록                             |
+| `/posts/{slug}`                                        | 글 (`content/posts/{slug}.mdx`)          |
+| `/categories/{category}`, `.../page/{n}`               | 카테고리별 글 목록                       |
+| `/{slug}`                                              | 정적 페이지 (`content/pages/{slug}.mdx`) |
+| `/sitemap.xml`, `/robots.txt`, `/rss.xml`, `/llms.txt` | SEO 파일 (빌드 시 생성)                  |
+| `/ads.txt`                                             | 광고 판매자 목록 (빌드 시 생성)          |
 
 ## 사이트 설정
 
@@ -103,7 +103,8 @@ pnpm --filter @jinho-blog/ad-blog registry  # 레지스트리·썸네일·OG 이
 - JSON-LD: `WebSite`, `BlogPosting`, `BreadcrumbList`
 - `sitemap.xml`: 홈·글·카테고리·정적 페이지, `lastmod`는 콘텐츠 수정일 기준 (빌드 시각 아님)
 - `robots.txt`: 도메인 설정 시 전체 허용 + sitemap, 미설정 시 전체 차단
-- `rss.xml`: 최신 글 20개 (RSS 2.0)
+- `rss.xml`: 최근 변경 글 20개 (RSS 2.0), 항목마다 `media:content` 대표 이미지 (Pinterest 자동 게시용)
+- `llms.txt`: AI 검색·에이전트용 사이트 안내 ([llmstxt.org](https://llmstxt.org) 형식). 허브 글(Start here) → 카테고리별 전체 글(최근 변경 순, 제목·설명) → 소개·편집 원칙, 그 밖의 정적 페이지는 Optional
 - `manifest.webmanifest`, `icon.svg`
 - OG 이미지: 글별 1200x630 JPEG 자동 생성, 기본 이미지는 `SITE_NAME`으로 생성
 - 도메인 미설정 상태에서는 전 페이지 `noindex`
@@ -120,11 +121,11 @@ AdSense **자동 광고(Auto ads)**로 게재합니다 (2026-10-22 결정: 광�
 
 ### 자동 광고 설정 (AdSense > 광고 > 사이트별 > tool-proof.com)
 
-| 항목 | 값 |
-| --- | --- |
-| 자동 광고 | 켜기 |
-| 광고 형식 | 본문 내 광고·하단 고정(anchor)·사이드 레일 켜기, **전면 광고(vignette) 끄기** |
-| 자동 최적화 | 켜기, 실험 차단에 vignette 추가 |
+| 항목        | 값                                                                            |
+| ----------- | ----------------------------------------------------------------------------- |
+| 자동 광고   | 켜기                                                                          |
+| 광고 형식   | 본문 내 광고·하단 고정(anchor)·사이드 레일 켜기, **전면 광고(vignette) 끄기** |
+| 자동 최적화 | 켜기, 실험 차단에 vignette 추가                                               |
 
 - 자동 광고는 위치를 코드로 제어하지 않으므로 첫 화면 광고나 광고 삽입 때 화면 밀림(CLS)이 생길 수 있습니다. 페이지 경험이 나빠지면 광고 양(ad load)을 줄입니다
 - 정적 페이지는 코드가 막으므로 AdSense 페이지 제외 설정은 필요 없습니다

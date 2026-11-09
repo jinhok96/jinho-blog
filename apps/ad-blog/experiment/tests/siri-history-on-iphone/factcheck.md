@@ -58,3 +58,24 @@
 - 대화를 지우면 다른 기기에서도 지워지는지(Tom's Guide 등): Apple은 기록이 동기화된다고만 씀 → "Apple's guide says the history syncs" 수준으로만 씀
 - iOS 27에서 Siri & Dictation History 메뉴가 실제로 있는지: iPhone이 없어 확인 불가, Apple 문서끼리 다름 → 문서 차이를 그대로 쓰고 없을 때의 대안(Siri·받아쓰기 끄기)을 Apple 문장으로 안내
 - iOS 13.2 이전의 "Voice Searches" 보기(블로그): 지금 iOS와 무관
+
+## 재확인 (2026-11-10 KST 개선 세션 92, 2026-11-09 UTC)
+
+`source_diff.cjs --slug siri-history-on-iphone --save`로 출처 21개를 Chromium으로 다시 열어 비교 (2026-11-09 19:2x UTC): 개인정보 페이지 3쪽은 세션 90이 저장한 11-07판(`source-apple-privacy-*-2026-11-08.txt`, 가져온 시각 2026-11-07T22:27Z)과 같음, 바뀐 것은 릴리스 노트 149076의 iOS 27.2.1 항목("bug fixes and security updates", 발행 11-09)뿐 → `source-apple-149076-ios27-updates-2026-11-10.txt`. 나머지 17쪽 그대로. 개인정보 페이지 날짜는 `2026-10-26`이지만 10-27 16:00 UTC 사본은 아직 `2026-09-14`판 → 실제 게시는 10-27 16:00 ~ 11-07 22:27 UTC 사이 (본문에는 "dated October 26"만 씀)
+
+| 바뀐 주장 (09-14판 → 10-26판) | 출처 | 글에 반영한 곳 |
+| --- | --- | --- |
+| 기기 전사본 지우기: "Settings > Siri > Siri & Dictation History and tapping Delete Siri & Dictation History" → "**Settings > Siri and tapping Turn Off Siri**" (Improve Siri 페이지도 같게 바뀜). Siri·받아쓰기를 둘 다 끄면 지워진다는 문장은 그대로 | ask-siri-dictation, improve-siri-dictation | 둘째 문단, 요약 표, 'How to delete Siri & Dictation History' 절 전체, 문서 비교 그림·alt, 'Which setting' |
+| Siri 끄기 경로: "Settings > Siri > Talk to Siri and tap Off" → "Settings > Siri > Turn Off Siri, then tap Turn Off Siri" (iOS 27 설명서와 같아짐) → 옛 메뉴 이름(Talk to Siri) 문단 삭제 | ask-siri-dictation | 'How to delete Siri & Dictation History' |
+| 첫 요약: "Apple stores transcripts of your interactions with Siri and may review a subset" 삭제 → "Apple stores usage data, like whether a message was sent. For Search requests … the query will also be stored by Apple and used to improve Search, Siri, and related features" | ask-siri-dictation | 둘째 문단, 'The copy of your Siri history Apple keeps' |
+| 기본 요청 기록: "Your request history, which includes transcripts and any related request data" → "data related to your request (category, completed, device specifications/configuration, performance, approximate location) … part of your Siri and Dictation request history", 2년 보관·임의 식별자 그대로. 검토 부분집합 2년 초과 보관 문장은 기본 설명에서 빠지고 옵트인 페이지에만 | ask-siri-dictation | 같은 절, 보관 기간 그림 라벨·alt('Reviewed opt-in samples') |
+| 옵트인 이름 추가: "Improve Siri and Dictation **or Improve Siri & Apple Intelligence**" (Settings > Privacy & Security > Analytics & Improvements) | ask-siri-dictation, siri-suggestions-search | 'How to stop Apple from keeping your Siri recordings', 'Which setting', Siri 검색 절 |
+| 옵트인 수집 범위: "store and review a sample of audio interactions" → "store and review what you say to Siri, Dictation, and Translate, including audio and text" / "may store all of your interactions … audio data and transcripts of what you say and type to Siri, the response Siri provides, and the links you open from world knowledge searches" + 본 페이지 "as well as your conversation history with Siri if you use the Siri app" | improve-siri-dictation, ask-siri-dictation | 'How to stop Apple …' 절 |
+| 오디오: "Your audio data is not stored by Apple unless you opt in to Improve Siri and Dictation or Improve Siri & Apple Intelligence" (뜻은 그대로) | ask-siri-dictation | 같은 절 (인용 그대로) |
+| Siri 앱 대화 동기화: "If you enable Siri AI and use iCloud, the history of your interactions with Siri that are saved within the Siri app will also sync … using end-to-end encryption, which cannot be read by Apple" (새 문장) | ask-siri-dictation | 'How to see Siri history in the Siri app' 마지막 문장, FAQ 'Can someone else see', 기록 위치 그림·alt |
+| Siri 검색 저장: 본 페이지 첫 요약과 'Siri and Dictation' 절에 Search 요청 저장·Help Apple Improve Search 끄기 추가. 검색 페이지의 "in a way that is not linked to you" 문장 그대로, Siri 옵트인 이름 추가 | ask-siri-dictation, siri-suggestions-search | 요약 표 새 행, Siri 검색 절, 'Which setting' 새 항목, 기록 위치 그림 |
+| "A history of your Siri and Dictation interactions is stored on your device and may be used to personalize your Siri experience" 그대로 (날짜만 10-26) | ask-siri-dictation | 'Can you see …' 절 날짜 |
+
+- 쓰지 않은 것: 새 페이지의 Siri in Camera(Visual Intelligence)·Excluded Apps·Screen Time 경로 변경(Other Features > Siri) — 기록 보기·지우기와 무관. iOS 27.2.1 — 버그·보안 수정이라 글 내용과 무관
+- 제목·설명 그대로 (설명의 "21 Apple pages"·"two-year server copy"는 새 판에서도 맞음), `updatedAt` 2026-11-09T20:00Z. 그림 3장 다시 그림(`charts.py`), 화면 캡처 그림은 그대로
+- 검증 유형 그대로 **조사형** (iPhone 없음)

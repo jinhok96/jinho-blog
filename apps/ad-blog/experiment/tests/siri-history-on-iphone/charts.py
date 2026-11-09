@@ -54,9 +54,9 @@ def guide_screenshot():
 
 # (어디, 무엇이 있나, 볼 수 있나, 지우는 법)
 PLACES = [
-    ('Siri app\n(Siri AI only)', 'Your Siri AI conversations,\nsynced through iCloud', 'Yes, in the\nSiri app', 'Touch and hold > Delete, or\nSettings > Siri > Keep Conversations'),
-    ('Your iPhone\n(any Siri)', 'Transcripts of Siri and\nDictation requests', 'No list\nto browse', 'Settings > Siri > Siri & Dictation\nHistory, per Apple\'s privacy page'),
-    ('Apple\'s servers', 'Transcripts under a random ID,\nup to 2 years. Audio only if\nyou opted in', 'No', 'Apple\'s iPhone pages don\'t say how.\nTo stop audio storage, turn off\nImprove Siri & Dictation'),
+    ('Siri app\n(Siri AI only)', 'Your Siri AI conversations,\nsynced through iCloud with\nend-to-end encryption', 'Yes, in the\nSiri app', 'Touch and hold > Delete, or\nSettings > Siri > Keep Conversations'),
+    ('Your iPhone\n(any Siri)', 'Transcripts of Siri and\nDictation requests', 'No list\nto browse', 'Settings > Siri > Turn Off Siri,\nper Apple\'s privacy page'),
+    ('Apple\'s servers', 'Request data and search queries\nunder a random ID, up to 2 years.\nAudio and transcripts only if\nyou opted in', 'No', 'Apple\'s iPhone pages don\'t say how.\nTo limit it, turn off Improve Siri\nand Help Apple Improve Search'),
     ('ChatGPT\n(if signed in)', 'Requests Siri passed\nto ChatGPT', 'Yes, in your\nChatGPT history', 'Delete in ChatGPT. Not saved if\nyou aren\'t signed in'),
 ]
 
@@ -79,14 +79,14 @@ def places_table():
         ax.text(0.662, y, delete, fontsize=11.2, va='center', linespacing=1.35, zorder=2)
         if i:
             ax.plot([0, 1], [y + rh / 2, y + rh / 2], color=cs.BORDER, lw=1, zorder=0)
-    cs.footer(fig, 'Sources: Apple iPhone User Guide for iOS 27 (Siri app, ChatGPT), apple.com/legal/privacy Siri pages (September 14, 2026).')
+    cs.footer(fig, 'Sources: Apple iPhone User Guide for iOS 27 (Siri app, ChatGPT), apple.com/legal/privacy Siri pages (October 26, 2026 versions).')
     cs.save(fig, f'{OUT}/siri-history-where-it-is-kept.webp')
 
 
 # (문서, 날짜·판, 말하는 것, 강조 여부)
 DOCS = [
-    ('Siri, Dictation & Privacy', 'apple.com, September 14, 2026',
-     'Deletes "the transcripts\nof your Siri and Dictation\nrequests that are stored\non your device."\n\nPath: Settings > Siri >\nSiri & Dictation History', True),
+    ('Siri, Dictation & Privacy', 'apple.com, October 26, 2026',
+     'No longer mentions the\nbutton. Delete on-device\ntranscripts "by going to\nSettings > Siri and tapping\nTurn Off Siri."\n\nSeptember 14 version:\nthe button deletes them', True),
     ('Mac User Guide', 'macOS Tahoe 26 and Sequoia 15',
      'Deletes "request history,\nboth audio recordings and\ntranscripts," tied to a\nrandom identifier and\n"less than six months old."\n\nNeeds an internet\nconnection', False),
     ('Mac User Guide', 'macOS 27',
@@ -98,7 +98,7 @@ DOCS = [
 
 def docs_card():
     fig, ax = canvas('What "Delete Siri & Dictation History" removes, by Apple page',
-                     'Four Apple pages, read on October 27, 2026. Only one describes the iPhone button.')
+                     'Four Apple pages, rechecked on November 9, 2026. None now describes the iPhone button.')
     w = 0.235
     gap = (1 - 4 * w) / 3
     for i, (name, ver, says, accent) in enumerate(DOCS):
@@ -108,7 +108,7 @@ def docs_card():
         ax.text(x + 0.018, 0.82, ver, fontsize=10.5, color=cs.MUTED, va='center', zorder=2)
         ax.plot([x + 0.018, x + w - 0.018], [0.76, 0.76], color=cs.BORDER, lw=1, zorder=2)
         ax.text(x + 0.018, 0.71, says, fontsize=12, va='top', linespacing=1.45, zorder=2)
-    cs.footer(fig, 'Sources: apple.com/legal/privacy/data/en/ask-siri-dictation, support.apple.com/guide/mac-help/mchlf55961c0,', 'support.apple.com/guide/iphone/iphc28624b81abc. Read in Chromium on October 27, 2026 (UTC).')
+    cs.footer(fig, 'Sources: apple.com/legal/privacy/data/en/ask-siri-dictation, support.apple.com/guide/mac-help/mchlf55961c0,', 'support.apple.com/guide/iphone/iphc28624b81abc. Read in Chromium on October 27 and November 9, 2026 (UTC).')
     cs.save(fig, f'{OUT}/delete-siri-dictation-history-apple-pages.webp')
 
 
@@ -117,7 +117,7 @@ KEPT = [
     ('Apple Intelligence Report', 7 / 30, 'Last 15 minutes or 7 days of requests\nsent to Apple\'s servers', True),
     ('Siri app, Keep Conversations', 12, '30 days or 1 year, then older chats\nare permanently deleted (or another option)', True),
     ('Delete window on Mac', 6, 'Request history under 6 months old\n(macOS 26 guide)', False),
-    ('Apple\'s request history', 24, 'Up to 2 years under a random ID,\nreviewed samples can stay longer', False),
+    ('Apple\'s request history', 24, 'Up to 2 years under a random ID.\nReviewed opt-in samples can stay longer', False),
 ]
 
 
@@ -141,7 +141,7 @@ def kept_chart():
     cs.header(fig, 'How long Siri history can be kept',
               'Blue: limits you can choose on iPhone. Gray: Apple\'s side, as its pages describe it.')
     cs.footer(fig, 'Sources: Apple iPhone User Guide for iOS 27 (Siri app, Apple Intelligence and privacy), Mac User Guide for macOS 26,',
-              'apple.com/legal/privacy Siri, Dictation & Privacy (September 14, 2026). Private Cloud Compute keeps no request data, per Apple.')
+              'apple.com/legal/privacy Siri pages (October 26, 2026 versions). Private Cloud Compute keeps no request data, per Apple.')
     cs.save(fig, f'{OUT}/siri-history-how-long-kept.webp')
 
 

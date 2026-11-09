@@ -76,7 +76,9 @@ feedSeenAt·sitemapSeenAt·crawledAt)은 2026-11-04부터 저장소 파일
               engagementSeconds = 페이지가 화면 앞에 있던 시간 합(초), scrolls = 90% 스크롤 이벤트 수 (ga_analytics.py).
               유럽 동의 거부 방문은 빠질 수 있어 전체 조회수는 traffic(Cloudflare) 기준
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
-             movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10)
+             movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10),
+             queryTotal·positionBuckets(공개된 검색어 전체의 28일 평균 순위 구간별 검색어 수·노출·클릭 [{label, queries, impressions, clicks}],
+             1~3위·4~10위·11~20위·21~50위·51위 이하, 2026-11-10 회차부터)
 - experiments: {rows: traffic-playbook 검증 기록 표}
 - knowhow: {rows: traffic-playbook 노하우 상태 표}
 - sessions: {rows: log.md 세션 제목 (date, title, order)}
@@ -118,6 +120,18 @@ FIRST_DAYS = 28  # 경과일별 누적 노출: 발행일(D+0)부터 D+28까지
 WEEKS = 12  # 주별 순위: 발행 1주부터 12주까지 (가설 H3은 8주로 판정, 노출 부족 보류 때 다시 보려고 4주 여유)
 MOVE_MIN_IMP = 2  # 순위 변화: 두 기간 모두 노출이 이만큼 있어야 비교 (노출 1회짜리 순위는 크게 흔들림)
 MOVE_MIN_DELTA = 1.0  # 이보다 작게 움직인 검색어는 목록에서 뺌
+# 검색어 순위 구간 (대시보드 '검색어' 패널, 2026-11-10): (표시 이름, 최소 순위, 최대 순위). 순위 = 28일 평균 순위
+POSITION_BUCKETS = (('1~3위', 1, 3), ('4~10위', 3, 10), ('11~20위', 10, 20), ('21~50위', 20, 50), ('51위 이하', 50, None))
+
+
+def position_buckets(queries: list[dict]) -> list[dict]:
+    """검색어 목록(노출 있는 검색어, metrics 형식) → 순위 구간별 검색어 수·노출·클릭.
+    구간은 (최소, 최대] (첫 구간만 1 이상 3 이하). 평균 순위 3.4는 4~10위, 10.0은 4~10위"""
+    out = []
+    for label, lo, hi in POSITION_BUCKETS:
+        rows = [q for q in queries if q['position'] is not None and (q['position'] >= lo if lo == 1 else q['position'] > lo) and (hi is None or q['position'] <= hi)]
+        out.append({'label': label, 'queries': len(rows), 'impressions': sum(q['impressions'] for q in rows), 'clicks': sum(q['clicks'] for q in rows)})
+    return out
 
 
 def metrics(row: dict | None) -> dict:
@@ -692,7 +706,11 @@ def main() -> None:
         'down': sorted((m for m in changed if m['delta'] < 0), key=lambda m: (m['delta'], -m['imp']))[:10],
         'new': sorted((m for m in moves if m['key'] not in q_prev), key=lambda m: (-m['imp'], m['pos']))[:10],
     }
-    docs['breakdown'] = {'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': site_queries[:20], 'searchTypes': types, 'movers': movers}
+    docs['breakdown'] = {
+        'devices': dim('device', 5), 'countries': dim('country', 10), 'queries': site_queries[:20], 'searchTypes': types, 'movers': movers,
+        # 순위 구간별 검색어 수 (공개된 검색어 전체, 2026-11-10 회차부터)
+        'queryTotal': len(site_queries), 'positionBuckets': position_buckets(site_queries),
+    }
     docs['experiments'] = {'rows': experiments()}
     docs['knowhow'] = {'rows': knowhow()}
     docs['sessions'] = {'rows': sessions()}

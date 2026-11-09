@@ -24,6 +24,10 @@
   --cat-1: #0070f3;
   --cat-2: #eb6834;
   --cat-3: #1baf7a;
+  /* 색인 단계 순서 색 (한 색상 밝기 단계 미발견 → 발견 → 크롤링. dataviz validate_palette --ordinal 라이트·다크 통과, 2026-11-10) */
+  --ord-1: #86b6ef;
+  --ord-2: #3987e5;
+  --ord-3: #184f95;
   --shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
   /* 테두리는 box-shadow inset으로 그려 상자 크기가 4px 그리드에서 벗어나지 않게 함 */
   --hair: inset 0 0 0 1px var(--line);
@@ -45,6 +49,7 @@
     --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
     --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
     --cat-1: #3291ff; --cat-2: #d95926; --cat-3: #199e70;
+    --ord-1: #184f95; --ord-2: #3987e5; --ord-3: #86b6ef;
     --shadow: 0 0 0 transparent;
     color-scheme: dark;
   }
@@ -53,6 +58,7 @@
   --canvas: #0a0a0a; --panel: #111111; --well: #1a1a1a; --ink: #ededed; --body: #a1a1a1; --mute: #8f8f8f; --line: #2e2e2e;
   --link: #3291ff; --link-soft: #0a2a52; --series: #ededed; --fresh: #f5a623; --good: #3291ff; --warn: #f5a623; --warn-soft: #3a2a0a; --bad: #ff4d4d;
   --cat-1: #3291ff; --cat-2: #d95926; --cat-3: #199e70;
+  --ord-1: #184f95; --ord-2: #3987e5; --ord-3: #86b6ef;
   --shadow: 0 0 0 transparent;
   color-scheme: dark;
 }
@@ -80,9 +86,11 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 .kpi { background: var(--panel); border-radius: var(--r-card); box-shadow: var(--hair), var(--shadow); padding: 16px 20px; display: grid; gap: 4px; min-width: 0; }
 .kpi .label { font-size: var(--fs-sm); line-height: var(--lh-sm); font-weight: 500; color: var(--mute); letter-spacing: 0.04em; }
 .kpi .value { font-family: var(--font-num); font-size: var(--fs-kpi); line-height: var(--lh-kpi); font-weight: 600; letter-spacing: -1.28px; font-variant-numeric: tabular-nums; }
-/* 상태 뱃지 칸: 큰 숫자 줄과 같은 높이 안에서 세로 가운데 */
-.kpi .value.status { display: flex; align-items: center; height: var(--lh-kpi); font-size: var(--fs-body); letter-spacing: 0; }
+/* 색인 카드: 큰 숫자 옆 분모 (17 / 55) */
+.kpi .value .of { font-size: var(--fs-body); font-weight: 500; letter-spacing: 0; color: var(--mute); margin-left: 4px; }
 .kpi .sub { font-size: var(--fs-sm); line-height: var(--lh-sm); color: var(--body); }
+.kpi .sub.warn { color: var(--warn); }
+.kpi .sub, .chart-note, .bars .val { word-break: keep-all; }
 .charts { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 12px; }
 .panel { background: var(--panel); border-radius: var(--r-card); box-shadow: var(--hair), var(--shadow); padding: 24px; display: grid; gap: 16px; min-width: 0; align-content: start; }
 .panel-head { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: baseline; gap: 4px 12px; }
@@ -95,7 +103,7 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 .chart-scroll svg { display: block; }
 /* 글 순위표: 기간·지표 전환 버튼 */
 .rank-ctl { display: flex; flex-wrap: wrap; align-items: center; gap: 8px 12px; }
-.seg { display: inline-flex; padding: 2px; gap: 2px; border-radius: var(--r-ctl); background: var(--well); box-shadow: var(--hair); }
+.seg { display: inline-flex; flex-wrap: wrap; max-width: 100%; padding: 2px; gap: 2px; border-radius: var(--r-ctl); background: var(--well); box-shadow: var(--hair); }
 .seg button { all: unset; cursor: pointer; height: 28px; line-height: 28px; padding: 0 12px; border-radius: 6px; font-size: var(--fs-sm); color: var(--mute); white-space: nowrap; }
 .seg button[aria-pressed="true"] { background: var(--panel); color: var(--ink); font-weight: 500; box-shadow: var(--hair); }
 .seg button:disabled { cursor: default; opacity: 0.4; }
@@ -104,7 +112,30 @@ h2 { font-size: var(--fs-h2); line-height: var(--lh-h2); font-weight: 600; margi
 table.rank { min-width: 560px; }
 table.rank td.n { width: 32px; font-weight: 600; color: var(--ink); }
 table.rank .post-title { max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
-svg text { font-family: var(--font-num); font-size: var(--fs-chart); fill: var(--mute); }
+svg text { font-family: var(--font-num); font-size: var(--fs-chart); fill: var(--mute); pointer-events: none; } /* 글자가 아래 툴팁 영역을 가리지 않게 */
+#eng-posts .todo-items { margin-left: 0; }
+/* 선이 지나가는 자리의 숫자: 바탕색 테두리로 선 위에서도 읽히게 */
+svg text.halo { paint-order: stroke; stroke: var(--panel); stroke-width: 3px; stroke-linejoin: round; }
+.legend .line { display: inline-block; width: 12px; height: 2px; border-radius: 1px; margin-right: 8px; vertical-align: middle; }
+.legend .dot { display: inline-block; width: 8px; height: 8px; border-radius: 50%; margin-right: 8px; vertical-align: 0; }
+/* 색인 파이프라인: 대기 글 경과일별 단계 (가로 누적 막대, 칸 사이 2px 틈) */
+.stack { grid-column: 1 / -1; height: 8px; border-radius: 4px; background: var(--well); overflow: hidden; }
+.stack > span { display: flex; gap: 2px; height: 100%; }
+.stack i { display: block; height: 100%; min-width: 2px; }
+.chart-note { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--body); margin-bottom: 8px; }
+.chart-note b { color: var(--ink); font-weight: 600; }
+.chart-note .warn { color: var(--warn); font-weight: 600; }
+/* 주간 추이 표: 값 아래 직전 주 대비 */
+table.weeks { min-width: 760px; }
+table.weeks td { vertical-align: top; }
+table.weeks .delta { font-size: var(--fs-xs); line-height: var(--lh-xs); display: block; }
+table.weeks tr.open td { background: color-mix(in srgb, var(--well) 50%, transparent); }
+/* 글별 표: 그룹 거르기 표시 */
+tr.group-total td { background: var(--canvas); color: var(--ink); }
+.fchip { display: inline-flex; align-items: center; gap: 4px; font-size: var(--fs-sm); line-height: 24px; padding: 0 4px 0 8px; border-radius: var(--r-ctl); box-shadow: var(--hair); background: var(--well); color: var(--ink); white-space: nowrap; }
+.fchip button { all: unset; cursor: pointer; width: 20px; text-align: center; color: var(--mute); border-radius: 4px; }
+.fchip button:hover { color: var(--ink); }
+.fchip button:focus-visible { outline: 2px solid var(--link); outline-offset: 1px; }
 .table-scroll { overflow-x: auto; margin: 0 -24px; padding: 0 24px; }
 table { width: 100%; border-collapse: collapse; font-size: var(--fs-body); line-height: var(--lh-body); }
 table.wide { min-width: 980px; }
@@ -252,9 +283,39 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="kpi"><span class="label">노출 (28일)</span><span class="value" id="k-imp">–</span><span class="sub" id="k-imp-sub">Search Console 웹 검색</span></div>
     <div class="kpi"><span class="label">클릭 (28일)</span><span class="value" id="k-clk">–</span><span class="sub" id="k-ctr">CTR –</span></div>
     <div class="kpi"><span class="label">평균 순위 (28일)</span><span class="value" id="k-pos">–</span><span class="sub" id="k-pos-sub">낮을수록 위</span></div>
-    <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-indexed">색인 –</span></div>
+    <div class="kpi"><span class="label">발행 글</span><span class="value" id="k-posts">–</span><span class="sub" id="k-posts-sub">–</span></div>
+    <div class="kpi"><span class="label" title="URL 검사 PASS 글 / 발행 글">색인</span><span class="value" id="k-idx">–</span><span class="sub" id="k-indexed">–</span></div>
     <div class="kpi" id="k-views-card" hidden><span class="label" title="Cloudflare Web Analytics 실측 페이지뷰 (쿠키 없음, 봇 대부분 제외)">조회수 (28일)</span><span class="value" id="k-views">–</span><span class="sub" id="k-views-sub">방문 –</span></div>
-    <div class="kpi"><span class="label">사이트맵</span><span class="value status" id="k-sm">–</span><span class="sub" id="k-sm-sub">마지막 다운로드 –</span></div>
+  </section>
+
+  <section class="charts" aria-label="색인 파이프라인">
+    <div class="panel">
+      <div class="panel-head"><h2>발행 · 색인 누적</h2>
+        <div class="legend"><span><i class="line" style="background:var(--series)"></i>발행</span><span title="URL 검사로 처음 색인을 확인한 날 (10.24 전은 log.md 기록으로 소급)"><i class="line" style="background:var(--cat-1)"></i>색인</span><span><i style="background:color-mix(in srgb, var(--series) 10%, transparent);box-shadow:inset 0 0 0 1px var(--line)"></i>대기</span></div>
+      </div>
+      <div id="chart-pipeline"></div>
+      <div class="panel-head sub"><h2>색인까지 걸린 기간</h2><span class="small" id="lag-meta">색인된 글 · 발행 → 색인 확인</span></div>
+      <ul class="bars" id="lag"><li class="empty">색인 데이터가 아직 없습니다.</li></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>색인 단계</h2><span class="small">URL 검사 · 노출·클릭은 최근 28일</span></div>
+      <ul class="bars" id="funnel"><li class="empty">글 데이터가 아직 없습니다.</li></ul>
+      <div class="panel-head sub"><h2>색인 대기 글</h2>
+        <div class="legend"><span><i style="background:var(--ord-1)"></i>미발견</span><span><i style="background:var(--ord-2)"></i>발견</span><span><i style="background:var(--ord-3)"></i>크롤링</span></div>
+      </div>
+      <ul class="bars" id="waiting"><li class="empty">URL 검사 데이터가 아직 없습니다.</li></ul>
+      <div class="small" id="sitemap-line"></div>
+    </div>
+  </section>
+
+  <section class="panel" id="weekly-panel">
+    <div class="panel-head"><h2>주간 추이</h2><span class="small">월~일 · 값 아래는 직전 주 대비 (7일이 다 지난 주끼리만)</span></div>
+    <div class="table-scroll">
+      <table class="weeks">
+        <thead><tr><th>주</th><th class="r">발행</th><th class="r" title="그 주에 처음 색인을 확인한 글">새 색인</th><th class="r" title="그 주 말까지 색인된 글 / 발행 글">색인 누적</th><th class="r">노출</th><th class="r">클릭</th><th class="r">CTR</th><th class="r" title="노출 가중 평균">평균 순위</th><th class="r" title="그 주 사이트 노출 ÷ 그 주 말 색인된 글 수">색인 글당 노출</th><th class="r" data-views-col hidden title="Cloudflare Web Analytics 실측 페이지뷰 (UTC 날짜)">조회수</th></tr></thead>
+        <tbody id="weeks"><tr><td colspan="10" class="empty">날짜별 데이터가 아직 없습니다.</td></tr></tbody>
+      </table>
+    </div>
   </section>
 
   <section class="lists top">
@@ -273,24 +334,33 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   <section class="charts">
     <div class="panel">
       <div class="panel-head"><h2>날짜별 노출</h2>
-        <div class="legend"><span><i style="background:var(--series)"></i>확정</span><span title="최근 2~3일은 Search Console이 확정 전이라 값이 바뀔 수 있음"><i style="background:color-mix(in srgb, var(--series) 28%, transparent);box-shadow:inset 0 0 0 1px var(--series)"></i>미확정</span></div>
+        <div class="legend"><span><i style="background:var(--series)"></i>확정</span><span title="최근 2~3일은 Search Console이 확정 전이라 값이 바뀔 수 있음"><i style="background:color-mix(in srgb, var(--series) 28%, transparent);box-shadow:inset 0 0 0 1px var(--series)"></i>미확정</span><span title="그날까지 7일 노출 평균 (7일이 다 모인 날부터)"><i class="line" style="background:var(--cat-2)"></i>7일 평균</span></div>
       </div>
       <div id="chart-imp"></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><h2>날짜별 평균 순위</h2><span class="small">위로 갈수록 상위, 노출 없는 날 제외</span></div>
+      <div class="panel-head"><h2>날짜별 평균 순위</h2>
+        <div class="legend"><span title="노출이 적은 날은 크게 흔들림"><i class="dot" style="background:color-mix(in srgb, var(--series) 35%, transparent)"></i>날짜별</span><span title="그날까지 7일 노출 가중 평균"><i class="line" style="background:var(--series)"></i>7일 평균</span></div>
+      </div>
       <div id="chart-pos"></div>
     </div>
   </section>
 
   <section class="charts" id="traffic-section" hidden>
-    <div class="panel">
+    <div class="panel" id="views-panel">
       <div class="panel-head"><h2>날짜별 조회수</h2><span class="small">실제 방문 · Cloudflare Web Analytics · UTC 날짜</span></div>
       <div id="chart-views"></div>
     </div>
     <div class="panel">
-      <div class="panel-head"><h2>유입 사이트</h2><span class="small" title="direct = 주소 직접 입력·북마크·앱 등 리퍼러 없음 + 사이트 안 이동">최근 28일 · 조회수 · 방문</span></div>
-      <ul class="bars" id="referers"><li class="empty">데이터가 아직 없습니다.</li></ul>
+      <div id="referers-block">
+        <div class="panel-head"><h2>유입 사이트</h2><span class="small" title="direct = 주소 직접 입력·북마크·앱 등 리퍼러 없음 + 사이트 안 이동">최근 28일 · 조회수 · 방문</span></div>
+        <ul class="bars" id="referers" style="margin-top:16px"><li class="empty">데이터가 아직 없습니다.</li></ul>
+      </div>
+      <div id="engagement-block" hidden>
+        <div class="panel-head sub"><h2>읽기 참여</h2><span class="small" id="eng-meta" title="GA4: 유럽 동의 거부 방문은 빠질 수 있어 조회수는 Cloudflare보다 적음">GA4 · 최근 28일</span></div>
+        <dl class="facts" id="engagement" style="margin-top:16px"></dl>
+        <div id="eng-posts"></div>
+      </div>
     </div>
   </section>
 
@@ -325,12 +395,15 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     </div>
   </section>
 
-  <section class="panel">
-    <div class="panel-head"><h2>클러스터별 현황</h2><span class="small">clusters.md · 최근 28일 · 클러스터를 누르면 아래 글별 표를 그 클러스터로 거름</span></div>
+  <section class="panel" id="groups-panel">
+    <div class="panel-head"><h2>그룹별 성과</h2>
+      <div class="seg" role="group" aria-label="묶는 기준" id="group-dims"></div>
+    </div>
+    <div class="small" id="group-note">최근 28일 · 웹 검색 · 그룹을 누르면 아래 글별 표를 그 그룹으로 거름</div>
     <div class="table-scroll">
       <table class="wide">
-        <thead><tr><th>클러스터</th><th class="r">우선순위</th><th>글</th><th>색인</th><th>유입 경로</th><th class="r">노출</th><th class="r">클릭</th><th class="r" data-views-col hidden title="Cloudflare Web Analytics 실측 페이지뷰">조회수</th><th class="r" title="노출 가중 평균">평균 순위</th><th>허브</th></tr></thead>
-        <tbody id="clusters"><tr><td colspan="10" class="empty">클러스터 데이터가 아직 없습니다. 다음 세션이 대시보드를 갱신하면 채워집니다.</td></tr></tbody>
+        <thead id="groups-head"></thead>
+        <tbody id="groups"><tr><td class="empty">글 데이터가 아직 없습니다.</td></tr></tbody>
       </table>
     </div>
   </section>
@@ -340,6 +413,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
       <div class="filters">
         <label for="f-cluster">클러스터 <select id="f-cluster"><option value="">전체</option></select></label>
         <label for="f-index">색인 <select id="f-index"><option value="">전체</option><option value="pass">색인됨</option><option value="wait">미색인</option></select></label>
+        <span id="f-group" hidden></span>
         <span class="small" id="f-count"></span>
         <button class="reset" id="f-reset" type="button" hidden>필터 해제</button>
       </div>
@@ -371,6 +445,10 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
   <section class="lists">
     <div class="panel">
       <div class="panel-head"><h2>검색어 (상위 20)</h2><span class="small" id="q-share">최근 28일</span></div>
+      <div id="qbuckets-block" hidden>
+        <div class="small" id="qbuckets-meta" style="margin-bottom:12px">순위 구간별 검색어 수</div>
+        <ul class="bars" id="qbuckets"></ul>
+      </div>
       <div class="table-scroll">
         <table>
           <thead><tr><th>검색어</th><th class="r">노출</th><th class="r">클릭</th><th class="r">순위</th></tr></thead>
@@ -402,6 +480,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     <div class="panel">
       <div class="panel-head"><h2>세션 기록</h2><span class="small">log.md</span></div>
       <ol class="sessions" id="sessions"><li class="empty">세션 기록이 아직 없습니다.</li></ol>
+      <button class="toggle" id="sessions-more" type="button" aria-expanded="false" hidden></button>
     </div>
   </section>
 
@@ -412,7 +491,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 <script src="data.js"></script>
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], otherPages: [], discoverySince: null, knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, live: false }; // live = 실시간 DB 값을 보는 중
+const state = { daily: [], posts: [], otherPages: [], discoverySince: null, knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, engagement: null, live: false }; // live = 실시간 DB 값을 보는 중
 const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
@@ -475,7 +554,10 @@ function statusPill(s) {
 // 실제 조회수 (traffic 문서: Cloudflare Web Analytics). 문서가 없으면 관련 칸을 숨김
 function renderTraffic() {
   const t = state.traffic;
-  $('traffic-section').hidden = !t;
+  // 실제 방문 칸: Cloudflare(traffic)나 GA4(engagement) 중 하나라도 있으면 보임
+  $('traffic-section').hidden = !t && !state.engagement;
+  $('views-panel').hidden = !t;
+  $('referers-block').hidden = !t;
   $('k-views-card').hidden = !t;
   if (!t) return;
   $('k-views').textContent = fmt(t.views);
@@ -498,7 +580,7 @@ function renderTraffic() {
 function renderSummary() {
   const s = state.summary;
   if (!s) return;
-  $('updated').textContent = `갱신 ${localStamp(s.updatedAt)} · 집계 ${ymd(s.range.start)} ~ ${ymd(s.range.end)}`;
+  $('updated').textContent = `갱신 ${localStamp(s.updatedAt)} · 운영 ${Math.round(todayIndex() - dayIndex(LAUNCH_DAY))}일째 · 집계 ${ymd(s.range.start)} ~ ${ymd(s.range.end)}`;
   $('k-imp').textContent = fmt(s.impressions);
   $('k-clk').textContent = fmt(s.clicks);
   $('k-pos').textContent = s.position == null ? '–' : s.position.toFixed(1);
@@ -521,11 +603,12 @@ function renderSummary() {
   const all = s.sitemaps && s.sitemaps.length ? s.sitemaps : null;
   const errors = (all || [sm]).reduce((a, m) => a + (m.errors || 0), 0);
   const warnings = (all || [sm]).reduce((a, m) => a + (m.warnings || 0), 0);
-  $('k-sm').innerHTML = !errors && !warnings ? '<span class="pill good">정상</span>' : `<span class="pill bad">오류 ${errors} · 경고 ${warnings}</span>`;
-  $('k-sm-sub').textContent = all
-    ? all.map((m) => `${m.path.replace(/^\//, '')} ${localDate(m.lastDownloaded)}`).join(' · ')
-    : '마지막 다운로드 ' + localDate(sm.lastDownloaded);
-  tip($('k-sm-sub'), all ? '제출한 사이트맵·피드별로 Google이 마지막으로 받아 간 날짜' : '');
+  // 사이트맵 상태는 색인 단계 패널 아래 한 줄 (요약 카드에서 옮김, 2026-11-10)
+  const downloads = all
+    ? all.map((m) => `${esc(m.path.replace(/^\//, ''))} ${localDate(m.lastDownloaded)}`).join(' · ')
+    : localDate(sm.lastDownloaded);
+  $('sitemap-line').innerHTML = `${!errors && !warnings ? '<span class="pill good">사이트맵 정상</span>' : `<span class="pill bad">사이트맵 오류 ${errors} · 경고 ${warnings}</span>`}
+    <span title="제출한 사이트맵·피드별로 Google이 마지막으로 받아 간 날짜" style="margin-left:8px">마지막 다운로드 ${downloads}</span>`;
 }
 
 // 최근 7일 vs 직전 7일 (마지막 집계일 기준, 빠진 날은 0). 순위는 노출 가중 평균
@@ -583,7 +666,7 @@ const BAR_MIN = 36;
 const scrollEnd = (root) => root.querySelectorAll('.chart-scroll').forEach((s) => { s.scrollLeft = s.scrollWidth; });
 
 // 막대 그래프 지표: v = 막대 값, s = 막대 위 보조 값(파란 글자, 없으면 null), t = 툴팁에만 쓰는 보조 값
-const BAR_IMP = { v: 'impressions', vName: '노출', s: 'clicks', sName: '클릭', aria: '날짜별 노출 막대 그래프' };
+const BAR_IMP = { v: 'impressions', vName: '노출', s: 'clicks', sName: '클릭', avg: true, aria: '날짜별 노출 막대 그래프' };
 const BAR_VIEWS = { v: 'views', vName: '조회수', s: null, t: 'visits', tName: '방문', aria: '날짜별 조회수 막대 그래프' };
 
 function barChart(el, rawRows, m = BAR_IMP) {
@@ -596,24 +679,28 @@ function barChart(el, rawRows, m = BAR_IMP) {
   const max = Math.max(1, ...rows.map(val));
   const bw = (W - L - R) / rows.length;
   const y = (v) => T + (H - T - B) * (1 - v / max);
-  let g = `<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)"/>`;
   const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - L - R) / 56)));
+  // 7일 평균: 그날 포함 7일이 다 모인 날부터 (막대와 같은 지표·같은 축)
+  const avg = rows.map((r, i) => (m.avg && i >= 6 ? rows.slice(i - 6, i + 1).reduce((s, x) => s + val(x), 0) / 7 : null));
+  // 그리는 순서: 막대 → 평균 선 → 숫자(바탕색 테두리) → 날짜 축
+  let bars = '', labels = '', axis = '';
   rows.forEach((r, i) => {
     const x = L + i * bw, cx = x + bw / 2;
     const h = Math.max(y(0) - y(val(r)), val(r) ? 2 : 0);
     const fresh = r.state === 'fresh';
     const side = m.s || m.t;
-    const tip = `${mdLabel(r.date)} (${weekday(r.date)}) ${m.vName} ${val(r)}회${side ? ` · ${m.s ? m.sName : m.tName} ${r[side] || 0}회` : ''}${fresh ? ' · 미확정' : r.state === 'empty' ? ' · 데이터 없음' : ''}`;
+    const tip = `${mdLabel(r.date)} (${weekday(r.date)}) ${m.vName} ${val(r)}회${side ? ` · ${m.s ? m.sName : m.tName} ${r[side] || 0}회` : ''}${avg[i] == null ? '' : ` · 7일 평균 ${avg[i].toFixed(1)}회`}${fresh ? ' · 미확정' : r.state === 'empty' ? ' · 데이터 없음' : ''}`;
     // 넓은 투명 막대 = 마우스 올리는 영역
-    g += `<g><title>${tip}</title><rect x="${x}" y="${T - 28}" width="${bw}" height="${H - T + 28 - B}" fill="transparent"/>`;
-    if (h) g += `<rect x="${x + bw * 0.2}" y="${y(0) - h}" width="${bw * 0.6}" height="${h}" rx="3" fill="var(--series)"${fresh ? ' fill-opacity="0.28" stroke="var(--series)" stroke-dasharray="3 2"' : ''}/>`;
-    {
-      g += `<text x="${cx}" y="${y(0) - h - 8}" text-anchor="middle" style="fill:${val(r) ? 'var(--ink)' : 'var(--mute)'};font-weight:${val(r) ? 600 : 400}">${val(r)}</text>`;
-      if (m.s && r[m.s]) g += `<text x="${cx}" y="${y(0) - h - 24}" text-anchor="middle" style="fill:var(--link);font-weight:600">${m.sName} ${r[m.s]}</text>`;
-    }
-    g += '</g>';
-    if ((rows.length - 1 - i) % every === 0) g += `<text x="${cx}" y="${H - 22}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 6}" text-anchor="middle">${weekday(r.date)}</text>`;
+    bars += `<g><title>${tip}</title><rect x="${x}" y="${T - 28}" width="${bw}" height="${H - T + 28 - B}" fill="transparent"/>`;
+    if (h) bars += `<rect x="${x + bw * 0.2}" y="${y(0) - h}" width="${bw * 0.6}" height="${h}" rx="3" fill="var(--series)"${fresh ? ' fill-opacity="0.28" stroke="var(--series)" stroke-dasharray="3 2"' : ''}/>`;
+    bars += '</g>';
+    labels += `<text class="halo" x="${cx}" y="${y(0) - h - 8}" text-anchor="middle" style="fill:${val(r) ? 'var(--ink)' : 'var(--mute)'};font-weight:${val(r) ? 600 : 400}">${val(r)}</text>`;
+    if (m.s && r[m.s]) labels += `<text class="halo" x="${cx}" y="${y(0) - h - 24}" text-anchor="middle" style="fill:var(--link);font-weight:600">${m.sName} ${r[m.s]}</text>`;
+    if ((rows.length - 1 - i) % every === 0) axis += `<text x="${cx}" y="${H - 22}" text-anchor="middle">${mdLabel(r.date)}</text><text x="${cx}" y="${H - 6}" text-anchor="middle">${weekday(r.date)}</text>`;
   });
+  const avgPts = avg.map((v, i) => (v == null ? null : `${L + i * bw + bw / 2},${y(v)}`)).filter(Boolean);
+  const avgLine = avgPts.length > 1 ? `<polyline fill="none" stroke="var(--cat-2)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="${avgPts.join(' ')}"/>` : '';
+  const g = `<line x1="${L}" x2="${W - R}" y1="${y(0)}" y2="${y(0)}" stroke="var(--line)"/>${bars}${avgLine}${labels}${axis}`;
   // 요약 줄: 최근 7일 합계와 직전 7일 비교
   const sum = (a) => a.reduce((s, r) => s + val(r), 0);
   const last7 = sum(rows.slice(-7)), prev7 = rows.length > 7 ? sum(rows.slice(-14, -7)) : null;
@@ -624,33 +711,277 @@ function barChart(el, rawRows, m = BAR_IMP) {
   scrollEnd(el);
 }
 
-function lineChart(el, rows) {
-  const pts = rows.filter((r) => r.position != null);
+// 날짜별 평균 순위: 노출이 적은 날은 크게 흔들려 날짜별 값은 흐린 점으로, 7일 노출 가중 평균을 선으로
+function lineChart(el, rawRows) {
+  const rows = fillDays(rawRows);
+  const has = (r) => r.position != null && r.impressions > 0;
+  const pts = rows.filter(has);
   if (!pts.length) { el.innerHTML = '<div class="empty">순위 데이터가 아직 없습니다.</div>'; return; }
-  const W = Math.max(280, Math.round(el.clientWidth)), H = 220, L = 48, R = 32, T = 16, B = 32;
+  const roll = rows.map((r, i) => {
+    if (i < 6) return null;
+    const w = rows.slice(i - 6, i + 1).filter(has);
+    const imp = w.reduce((s, x) => s + x.impressions, 0);
+    return imp ? w.reduce((s, x) => s + x.position * x.impressions, 0) / imp : null;
+  });
+  const W = Math.max(280, Math.round(el.clientWidth)), H = 220, L = 40, R = 24, T = 24, B = 32;
   const maxP = Math.max(10, ...pts.map((r) => r.position));
   const step = niceStep(maxP);
   const bottom = Math.ceil(maxP / step) * step;
-  const xs = rows.map((r) => r.date);
-  const x = (d) => L + (xs.length === 1 ? (W - L - R) / 2 : ((W - L - R) * xs.indexOf(d)) / (xs.length - 1));
+  const x = (i) => L + (rows.length === 1 ? (W - L - R) / 2 : ((W - L - R) * i) / (rows.length - 1));
   const y = (p) => T + ((H - T - B) * (p - 1)) / (bottom - 1);
   let g = '';
   for (let v = 1; v <= bottom; v += v === 1 ? step - 1 : step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
-  const every = Math.ceil(xs.length / Math.max(2, Math.floor((W - L - R) / 64)));
-  xs.forEach((d, i) => { if ((xs.length - 1 - i) % every === 0) g += `<text x="${x(d)}" y="${H - 8}" text-anchor="middle">${ymd(d)}</text>`; });
-  g += `<polyline fill="none" stroke="var(--series)" stroke-width="2" points="${pts.map((r) => `${x(r.date)},${y(r.position)}`).join(' ')}"/>`;
-  pts.forEach((r, i) => {
-    const last = i === pts.length - 1;
-    g += `<circle cx="${x(r.date)}" cy="${y(r.position)}" r="${last ? 6 : 4}" fill="${r.state === 'final' ? 'var(--series)' : 'var(--panel)'}" stroke="${r.state === 'final' ? 'var(--panel)' : 'var(--series)'}" stroke-width="2"><title>${ymd(r.date)} 평균 ${r.position}위</title></circle>`;
-    if (last) g += `<text x="${x(r.date) - 8}" y="${y(r.position) - 12}" text-anchor="end" style="fill:var(--ink)">${r.position}위</text>`;
+  const every = Math.ceil(rows.length / Math.max(2, Math.floor((W - L - R) / 64)));
+  const half = rows.length > 1 ? (W - L - R) / (rows.length - 1) / 2 : (W - L - R) / 2;
+  rows.forEach((r, i) => {
+    // 날짜 칸마다 마우스 올리는 영역 (점보다 넓게)
+    const tip = `${mdLabel(r.date)} (${weekday(r.date)}) ${has(r) ? `평균 ${r.position}위 · 노출 ${r.impressions}회` : '노출 없음'}${roll[i] == null ? '' : ` · 7일 평균 ${roll[i].toFixed(1)}위`}${r.state === 'fresh' ? ' · 미확정' : ''}`;
+    g += `<g><title>${tip}</title><rect x="${x(i) - half}" y="${T}" width="${half * 2}" height="${H - T - B}" fill="transparent"/></g>`;
+    if ((rows.length - 1 - i) % every === 0) g += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${mdLabel(r.date)}</text>`;
   });
-  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 평균 순위 꺾은선 그래프">${g}</svg>`;
+  rows.forEach((r, i) => {
+    if (has(r)) g += `<circle cx="${x(i)}" cy="${y(r.position)}" r="3" fill="${r.state === 'fresh' ? 'var(--panel)' : 'color-mix(in srgb, var(--series) 35%, transparent)'}" stroke="${r.state === 'fresh' ? 'color-mix(in srgb, var(--series) 50%, transparent)' : 'none'}" pointer-events="none"/>`;
+  });
+  const line = roll.map((v, i) => (v == null ? null : [x(i), y(v)])).filter(Boolean);
+  if (line.length > 1) g += `<polyline fill="none" stroke="var(--series)" stroke-width="2" stroke-linejoin="round" stroke-linecap="round" points="${line.map((p) => p.join(',')).join(' ')}" pointer-events="none"/>`;
+  const lastI = roll.map((v, i) => (v == null ? -1 : i)).reduce((a, b) => Math.max(a, b), -1);
+  if (lastI >= 0) {
+    g += `<circle cx="${x(lastI)}" cy="${y(roll[lastI])}" r="4" fill="var(--series)" stroke="var(--panel)" stroke-width="2" pointer-events="none"/>`;
+    g += `<text class="halo" x="${x(lastI) - 8}" y="${y(roll[lastI]) - 10}" text-anchor="end" style="fill:var(--ink);font-weight:600">7일 평균 ${roll[lastI].toFixed(1)}위</text>`;
+  }
+  el.innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 평균 순위와 7일 노출 가중 평균 꺾은선 그래프">${g}</svg>`;
 }
 
 function niceStep(max) {
   const raw = max / 4;
   const p = Math.pow(10, Math.floor(Math.log10(raw)));
   return [1, 2, 5, 10].map((m) => m * p).find((s) => s >= raw) || p * 10;
+}
+
+// ── 색인 파이프라인 (2026-11-10): 발행 → 발견 → 크롤링 → 색인 → 노출 → 클릭 ──
+// 날짜 묶음(누적·주간)은 UTC 날짜로 셈: 발행 시각(createdAt)·색인 확인 회차(indexedAt)·Search Console 날짜(태평양 시간)가 섞여 하루 어긋날 수 있음
+const LAUNCH_DAY = '2026-10-11'; // 도메인 운영 시작 (README AdSense 재신청 조건과 같은 기준)
+const UNKNOWN = /unknown/i; // URL 검사 coverageState 'URL is unknown to Google' = Google이 아직 모르는 URL
+const utcDay = (d) => String(d).slice(0, 10);
+const dataEnd = () => utcDay(state.summary?.updatedAt || new Date().toISOString()); // 데이터가 아는 마지막 날
+const weekStart = (d) => { const x = new Date(d + 'T00:00:00Z'); x.setUTCDate(x.getUTCDate() - ((x.getUTCDay() + 6) % 7)); return x.toISOString().slice(0, 10); };
+const weekLabel = (ws) => `${mdLabel(ws)}~${mdLabel(addDays(ws, 6))}`;
+const hasIndexData = () => state.posts.some((p) => p.index);
+const lastNewIndex = () => state.posts.reduce((m, p) => (p.indexedAt && (!m || utcDay(p.indexedAt) > utcDay(m)) ? p.indexedAt : m), null);
+
+// 날짜별 발행·색인 누적 (첫 발행일 ~ 마지막 갱신일). 색인 = 처음 PASS로 확인한 날(indexedAt), 이후 빠진 글도 그날 기준으로 셈
+function pipelineDays() {
+  const posts = state.posts.filter((p) => p.createdAt);
+  if (!posts.length) return [];
+  const end = dataEnd();
+  const first = posts.reduce((m, p) => (utcDay(p.createdAt) < m ? utcDay(p.createdAt) : m), end);
+  const out = [];
+  for (let d = first; d <= end; d = addDays(d, 1)) {
+    out.push({
+      date: d,
+      pub: posts.filter((p) => utcDay(p.createdAt) <= d).length,
+      idx: posts.filter((p) => p.indexedAt && utcDay(p.indexedAt) <= d).length,
+      newPub: posts.filter((p) => utcDay(p.createdAt) === d).length,
+      newIdx: posts.filter((p) => p.indexedAt && utcDay(p.indexedAt) === d).length,
+    });
+  }
+  return out;
+}
+
+function pipelineChart(el) {
+  const days = pipelineDays();
+  if (!days.length) { el.innerHTML = '<div class="empty">발행일 데이터가 아직 없습니다.</div>'; return; }
+  const W = Math.max(280, Math.round(el.clientWidth)), H = 240, L = 36, R = 72, T = 16, B = 32;
+  const maxV = Math.max(4, ...days.map((d) => d.pub));
+  const step = niceStep(maxV);
+  const top = Math.ceil(maxV / step) * step;
+  const x = (i) => L + (days.length === 1 ? (W - L - R) / 2 : ((W - L - R) * i) / (days.length - 1));
+  const y = (v) => T + (H - T - B) * (1 - v / top);
+  let g = '';
+  for (let v = 0; v <= top; v += step) g += `<line x1="${L}" x2="${W - R}" y1="${y(v)}" y2="${y(v)}" stroke="var(--line)"/><text x="${L - 8}" y="${y(v) + 4}" text-anchor="end">${v}</text>`;
+  // 발행선과 색인선 사이 = 색인 대기
+  const pubPts = days.map((d, i) => `${x(i)},${y(d.pub)}`);
+  const idxPts = days.map((d, i) => `${x(i)},${y(d.idx)}`);
+  g += `<polygon points="${[...pubPts, ...[...idxPts].reverse()].join(' ')}" fill="color-mix(in srgb, var(--series) 10%, transparent)" pointer-events="none"/>`;
+  const every = Math.ceil(days.length / Math.max(2, Math.floor((W - L - R) / 56)));
+  const half = days.length > 1 ? (W - L - R) / (days.length - 1) / 2 : (W - L - R) / 2;
+  days.forEach((d, i) => {
+    const tip = `${mdLabel(d.date)} (${weekday(d.date)}) 발행 누적 ${d.pub}편${d.newPub ? ` (+${d.newPub})` : ''} · 색인 누적 ${d.idx}편${d.newIdx ? ` (+${d.newIdx})` : ''} · 대기 ${d.pub - d.idx}편`;
+    g += `<g><title>${tip}</title><rect x="${x(i) - half}" y="${T}" width="${half * 2}" height="${H - T - B}" fill="transparent"/></g>`;
+    if ((days.length - 1 - i) % every === 0) g += `<text x="${x(i)}" y="${H - 8}" text-anchor="middle">${mdLabel(d.date)}</text>`;
+  });
+  g += `<polyline fill="none" stroke="var(--series)" stroke-width="2" stroke-linejoin="round" points="${pubPts.join(' ')}" pointer-events="none"/>`;
+  g += `<polyline fill="none" stroke="var(--cat-1)" stroke-width="2" stroke-linejoin="round" points="${idxPts.join(' ')}" pointer-events="none"/>`;
+  // 선 끝 값 라벨 (발행·색인, 둘 사이가 넓으면 가운데에 대기 수). 라벨끼리 16px 이상 떨어지게
+  const last = days[days.length - 1], lx = x(days.length - 1);
+  const ends = [{ v: last.pub, color: 'var(--series)', text: `발행 ${last.pub}` }, { v: last.idx, color: 'var(--cat-1)', text: `색인 ${last.idx}` }].map((e) => ({ ...e, ly: y(e.v) + 4 }));
+  if (ends[1].ly - ends[0].ly < 16) ends[1].ly = ends[0].ly + 16;
+  ends.forEach((e) => {
+    g += `<circle cx="${lx}" cy="${y(e.v)}" r="4" fill="${e.color}" stroke="var(--panel)" stroke-width="2" pointer-events="none"/>`;
+    g += `<text x="${lx + 8}" y="${e.ly}" style="fill:var(--ink);font-weight:600">${e.text}</text>`;
+  });
+  if (y(last.idx) - y(last.pub) >= 48) g += `<text x="${lx + 8}" y="${(y(last.pub) + y(last.idx)) / 2 + 4}">대기 ${last.pub - last.idx}</text>`;
+  // 요약 줄: 대기 편수·마지막 새 색인·색인된 글의 발행 → 색인 중앙값
+  const waiting = hasIndexData() ? state.posts.filter((p) => p.index?.coverage && !isIndexed(p)).length : last.pub - last.idx;
+  const lastIdx = lastNewIndex();
+  const ago = lastIdx ? Math.round(todayIndex() - dayIndex(lastIdx)) : null;
+  const lag = median(state.posts.map((p) => daysFrom(p, p.indexedAt)).filter((d) => d != null));
+  const parts = [`색인 대기 <b>${waiting}편</b>`];
+  if (lastIdx) parts.push(`마지막 새 색인 <b>${ymd(lastIdx)}</b> <span class="${ago > 7 ? 'warn' : ''}">(${ago}일 전)</span>`);
+  if (lag != null) parts.push(`색인된 글의 발행 → 색인 중앙값 D+${lag}`);
+  el.innerHTML = `<div class="chart-note">${parts.join(' · ')}</div>
+    <svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="날짜별 발행 글과 색인된 글 누적 꺾은선 그래프">${g}</svg>`;
+}
+
+// 단계별 글 수 (발행 = 100%). 노출·클릭은 최근 28일
+function renderFunnel() {
+  const posts = state.posts;
+  if (!posts.length) return;
+  const n = posts.length;
+  const idx = hasIndexData();
+  const rows = [
+    ['발행', n, '발행한 글 전체'],
+    idx && ['Google 발견', posts.filter((p) => p.index?.coverage && !UNKNOWN.test(p.index.coverage)).length, 'URL 검사가 URL is unknown이 아닌 글 (발견·크롤링·색인)'],
+    idx && ['크롤링', posts.filter((p) => p.index?.lastCrawl || isIndexed(p)).length, 'Google이 한 번 이상 크롤링한 글 (URL 검사 마지막 크롤링 있음)'],
+    idx && ['색인', posts.filter(isIndexed).length, 'URL 검사 PASS'],
+    ['노출 있는 글', posts.filter((p) => p.impressions > 0).length, '최근 28일 웹 검색 노출 1회 이상'],
+    ['클릭 있는 글', posts.filter((p) => p.clicks > 0).length, '최근 28일 웹 검색 클릭 1회 이상'],
+  ].filter(Boolean);
+  $('funnel').innerHTML = rows.map(([name, v, tip]) => {
+    const w = (v / n) * 100;
+    return `<li class="${v ? '' : 'zero'}" title="${esc(tip)}"><span class="name">${name}</span><span class="val">${fmt(v)}편 · ${Math.round(w)}%</span><span class="track" role="img" aria-label="${name} ${v}편, 발행의 ${Math.round(w)}%"><i style="width:${w}%"></i></span></li>`;
+  }).join('');
+}
+
+// 색인 안 된 글을 발행 후 경과일 구간별로, 단계(미발견 → 발견 → 크롤링)를 누적 막대로
+const WAIT_BUCKETS = [[0, 3, '0~3일'], [4, 7, '4~7일'], [8, 14, '8~14일'], [15, 21, '15~21일'], [22, Infinity, '22일 이상']];
+const WAIT_STAGES = [['미발견', (c) => UNKNOWN.test(c)], ['발견', (c) => /Discovered/i.test(c)], ['크롤링', () => true]]; // 크롤링 = Crawled - currently not indexed 등 그 밖의 미색인
+function renderWaiting() {
+  if (!state.posts.length) return;
+  if (!hasIndexData()) { $('waiting').innerHTML = '<li class="empty">URL 검사를 생략한 회차입니다.</li>'; return; }
+  const waiting = state.posts.filter((p) => p.index?.coverage && !isIndexed(p));
+  if (!waiting.length) { $('waiting').innerHTML = '<li class="empty">색인을 기다리는 글이 없습니다.</li>'; return; }
+  const rows = WAIT_BUCKETS.map(([lo, hi, label]) => {
+    const ps = waiting.filter((p) => { const a = ageDays(p.createdAt) ?? 0; return a >= lo && a <= hi; });
+    const counts = WAIT_STAGES.map(() => 0);
+    ps.forEach((p) => { counts[WAIT_STAGES.findIndex(([, test]) => test(p.index.coverage))] += 1; });
+    return { label, n: ps.length, counts };
+  });
+  const max = Math.max(1, ...rows.map((r) => r.n));
+  $('waiting').innerHTML = rows.map((r) => {
+    const detail = WAIT_STAGES.map(([name], i) => (r.counts[i] ? `${name} ${r.counts[i]}` : '')).filter(Boolean).join(' · ');
+    const segs = r.counts.map((c, i) => (c ? `<i style="flex:${c};background:var(--ord-${i + 1})"></i>` : '')).join('');
+    return `<li class="${r.n ? '' : 'zero'}" title="발행 ${r.label}: ${detail || '없음'}"><span class="name">발행 ${r.label}</span><span class="val">${r.n}편${r.n ? ` <span class="small">${detail}</span>` : ''}</span><span class="stack" role="img" aria-label="${r.label} ${r.n}편: ${detail}"><span style="width:${(r.n / max) * 100}%">${segs}</span></span></li>`;
+  }).join('');
+}
+
+// 색인된 글이 색인까지 걸린 기간 (대기 글과 같은 구간 → 지금 대기 기간이 색인된 글들의 범위를 넘었는지 비교)
+function renderLag() {
+  const lags = state.posts.map((p) => daysFrom(p, p.indexedAt)).filter((d) => d != null);
+  if (!lags.length) return;
+  const rows = WAIT_BUCKETS.map(([lo, hi, label]) => ({ label, n: lags.filter((d) => d >= lo && d <= hi).length }));
+  const max = Math.max(1, ...rows.map((r) => r.n));
+  $('lag-meta').textContent = `색인된 ${lags.length}편 · 발행 → 색인 확인 · 최장 D+${Math.max(...lags)}`;
+  $('lag').innerHTML = rows.map((r) => `<li class="${r.n ? '' : 'zero'}"><span class="name">${r.label}</span><span class="val">${r.n}편</span><span class="track" role="img" aria-label="${r.label} 안에 색인 ${r.n}편"><i style="width:${(r.n / max) * 100}%;background:var(--cat-1)"></i></span></li>`).join('');
+}
+
+// 요약 카드: 발행 글·색인
+function renderIndexKpi() {
+  const posts = state.posts;
+  if (!posts.length) return;
+  const n = posts.length;
+  const week = posts.filter((p) => { const a = ageDays(p.createdAt); return a != null && a < 7; }).length;
+  $('k-posts').textContent = fmt(n);
+  $('k-posts-sub').textContent = `최근 7일 ${week}편 · 노출 있는 글 ${posts.filter((p) => p.impressions > 0).length}편`;
+  if (!hasIndexData()) { $('k-idx').textContent = '–'; $('k-indexed').textContent = 'URL 검사 생략 회차'; return; }
+  const idx = posts.filter(isIndexed).length;
+  $('k-idx').innerHTML = `${idx}<span class="of">/ ${n}</span>`;
+  const lastIdx = lastNewIndex();
+  const ago = lastIdx ? Math.round(todayIndex() - dayIndex(lastIdx)) : null;
+  const sub = $('k-indexed');
+  sub.textContent = `${Math.round((idx / n) * 100)}%${lastIdx ? ` · 마지막 새 색인 ${ago}일 전` : ''}`;
+  sub.title = lastIdx ? `마지막으로 새로 색인을 확인한 날 ${ymd(lastIdx)}` : '';
+  sub.classList.toggle('warn', ago != null && ago > 7);
+}
+
+// 주간 추이: 월~일 주별 발행·색인·검색 지표·조회수 (주 = UTC 날짜 기준, Search Console은 태평양 시간 날짜)
+function weeklyRows() {
+  const daily = fillDays([...state.daily].sort((a, b) => a.date.localeCompare(b.date)));
+  if (!daily.length) return [];
+  const gscLast = daily[daily.length - 1].date;
+  const end = gscLast > dataEnd() ? gscLast : dataEnd();
+  const views = state.traffic?.daily || [];
+  const cfStart = views.find((r) => r.views)?.date; // Cloudflare 수집 시작 전 날짜는 0이 아니라 '없음'
+  const posts = state.posts;
+  const out = [];
+  for (let ws = weekStart(daily[0].date); ws <= end; ws = addDays(ws, 7)) {
+    const we = addDays(ws, 6);
+    const ds = daily.filter((r) => r.date >= ws && r.date <= we);
+    const imp = ds.reduce((s, r) => s + r.impressions, 0);
+    const clk = ds.reduce((s, r) => s + (r.clicks || 0), 0);
+    const posW = ds.reduce((s, r) => s + (r.position || 0) * r.impressions, 0);
+    const inWeek = (d) => d && utcDay(d) >= ws && utcDay(d) <= we;
+    const upTo = (d) => d && utcDay(d) <= we;
+    const idxCum = posts.filter((p) => upTo(p.indexedAt)).length;
+    const vs = views.filter((r) => r.date >= ws && r.date <= we);
+    out.push({
+      ws, we, days: ds.length, fresh: ds.some((r) => r.state === 'fresh'), open: we > gscLast,
+      imp, clk, ctr: imp ? clk / imp : null, pos: imp ? posW / imp : null,
+      pub: posts.filter((p) => inWeek(p.createdAt)).length, pubCum: posts.filter((p) => upTo(p.createdAt)).length,
+      newIdx: posts.filter((p) => inWeek(p.indexedAt)).length, idxCum,
+      perIdx: idxCum ? imp / idxCum : null,
+      views: state.traffic && cfStart && we >= cfStart ? vs.reduce((s, r) => s + (r.views || 0), 0) : null,
+    });
+  }
+  out.forEach((w) => { w.complete = w.days === 7 && !w.fresh; });
+  return out;
+}
+
+function renderWeekly() {
+  const weeks = weeklyRows();
+  if (!weeks.length) return;
+  const views = Boolean(state.traffic);
+  document.querySelectorAll('#weekly-panel [data-views-col]').forEach((el) => { el.hidden = !views; });
+  // 직전 주 대비: 두 주 모두 7일이 다 지났을 때만 (미확정 날짜가 섞인 주도 비교하되 값이 조금 바뀔 수 있음)
+  const cell = (w, prev, v, text, opts) => {
+    const d = prev && w.days === 7 && prev.days === 7 && v(w) != null && v(prev) != null ? deltaChip(v(w) - v(prev), opts) : '';
+    return `<td class="r num">${text}${d}</td>`;
+  };
+  $('weeks').innerHTML = weeks.map((w, i) => {
+    const prev = weeks[i - 1];
+    const tag = w.open ? `진행 중 · ${w.days}/7일` : w.days < 7 ? `일부 ${w.days}일` : w.fresh ? '미확정 포함' : '';
+    return `<tr class="${w.days === 7 ? '' : 'open'}">
+      <td class="num">${weekLabel(w.ws)}${tag ? `<div class="small">${tag}</div>` : ''}</td>
+      <td class="r num">${w.pub}<div class="small">누적 ${w.pubCum}</div></td>
+      <td class="r num">${w.newIdx ? `+${w.newIdx}` : '<span class="small">0</span>'}</td>
+      <td class="r num">${w.idxCum} / ${w.pubCum}<div class="small">${w.pubCum ? Math.round((w.idxCum / w.pubCum) * 100) : 0}%</div></td>
+      ${cell(w, prev, (x) => x.imp, fmt(w.imp))}
+      ${cell(w, prev, (x) => x.clk, fmt(w.clk))}
+      <td class="r num">${pct(w.ctr)}</td>
+      ${cell(w, prev, (x) => x.pos, w.pos == null ? '–' : w.pos.toFixed(1), { rank: true })}
+      ${cell(w, prev, (x) => x.perIdx, w.perIdx == null ? '–' : w.perIdx.toFixed(1))}
+      ${views ? cell(w, prev, (x) => x.views, w.views == null ? '<span class="small" title="Cloudflare 수집 전">–</span>' : fmt(w.views)) : ''}
+    </tr>`;
+  }).reverse().join(''); // 최근 주가 위
+}
+
+// 읽기 참여 (GA4 engagement 문서 + 글별 engagement). 데이터가 없으면 칸을 숨김
+const duration = (s) => (s >= 60 ? `${Math.floor(s / 60)}분 ${Math.round(s % 60)}초` : `${Math.round(s)}초`);
+const ratio = (a, b) => (b ? `${Math.round((a / b) * 100)}%` : '–');
+function renderEngagement() {
+  const e = state.engagement;
+  $('engagement-block').hidden = !e;
+  if (!e) return;
+  $('eng-meta').textContent = `GA4 · ${ymd(e.range?.start)} ~ ${ymd(e.range?.end)}`;
+  $('engagement').innerHTML = `
+    <dt>조회 · 사용자</dt><dd class="num">${fmt(e.views)}회 · ${fmt(e.users)}명</dd>
+    <dt>참여 세션</dt><dd class="num" title="10초 이상 머물렀거나 2페이지 이상 본 세션 (GA4 기준)">${fmt(e.engagedSessions)} / ${fmt(e.sessions)} (${ratio(e.engagedSessions, e.sessions)})</dd>
+    <dt>조회당 참여 시간</dt><dd class="num" title="페이지가 화면 앞에 있던 시간 합 ÷ 조회">${e.views ? duration(e.engagementSeconds / e.views) : '–'}</dd>
+    <dt>끝까지 스크롤</dt><dd class="num" title="90% 스크롤 이벤트">${fmt(e.scrolls)}회 · 조회의 ${ratio(e.scrolls, e.views)}</dd>`;
+  const top = state.posts.filter((p) => p.engagement?.views).sort((a, b) => b.engagement.engagementSeconds - a.engagement.engagementSeconds || b.engagement.views - a.engagement.views);
+  $('eng-posts').innerHTML = top.length
+    ? `<div class="todo-head" style="margin-top:16px"><b>오래 읽힌 글</b><span class="small">참여 시간 합 순</span></div>${todoItems(top.map((p) => ({ main: jumpPost(p), meta: `조회 ${p.engagement.views} · 평균 ${duration(p.engagement.engagementSeconds / p.engagement.views)} · 스크롤 ${p.engagement.scrolls}` })))}`
+    : '';
 }
 
 // 경과일별 누적 노출: 발행일(D+0)부터 같은 날짜끼리 비교. 그날까지 도달한 글이 COHORT_MIN편 이상일 때만 중앙값
@@ -886,6 +1217,7 @@ function indexFacts(p) {
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
     ${i.sitemaps ? `<dt>Google이 본 곳</dt><dd>${i.sitemaps.length ? i.sitemaps.map((m) => esc(m.replace(/^\//, ''))).join(' · ') : '사이트맵·피드 없음'}${i.referring && i.referring.length ? `<div class="small">링크: ${i.referring.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
+    ${p.engagement ? `<dt>읽기 참여</dt><dd class="num">${p.engagement.views ? `조회 ${fmt(p.engagement.views)} · 평균 ${duration(p.engagement.engagementSeconds / p.engagement.views)} · 끝까지 스크롤 ${fmt(p.engagement.scrolls)}` : '조회 없음'} <span class="small">GA4 28일</span></dd>` : ''}
     ${p.newsType ? `<dt>칼럼 유형</dt><dd>${esc(p.newsType)} <span class="small">발행 때 · 가설 H5</span></dd>` : ''}
     ${p.verifyType ? `<dt>검증 유형</dt><dd>${esc(p.verifyType)} <span class="small">${p.verifyTypeSince ? `${esc(p.verifyTypeSince)}부터 · ` : ''}가설 H3</span></dd>` : ''}
     ${p.keyword ? `<dt>주 검색어</dt><dd>${esc(p.keyword.query)} <span class="small">${p.keyword.class ? `${esc(p.keyword.class)} · Trends ${p.keyword.trend} · ` : 'Trends 미측정 · '}가설 H6</span></dd>` : ''}
@@ -941,39 +1273,104 @@ function sumSources(posts) {
   return Object.values(by).sort((a, b) => b.impressions - a.impressions || b.clicks - a.clicks);
 }
 
-function renderClusters() {
-  const groups = clusterGroups();
-  if (!groups.length) return;
-  $('clusters').innerHTML = groups.map((g) => {
-    const ps = g.posts;
-    const imp = ps.reduce((a, p) => a + p.impressions, 0);
-    const clk = ps.reduce((a, p) => a + p.clicks, 0);
-    const views = hasViews() ? `<td class="r num">${fmt(ps.reduce((a, p) => a + (p.views || 0), 0))}</td>` : '';
-    const pos = imp ? ps.reduce((a, p) => a + (p.position || 0) * p.impressions, 0) / imp : null;
-    const roles = [['허브', '허브'], ['상시 글', '상시'], ['뉴스 칼럼', '칼럼']].map(([r, short]) => [short, roleCount(g, r)]).filter(([, n]) => n).map(([s, n]) => `${s} ${n}`).join(' · ');
-    const ever = roleCount(g, '상시 글');
-    const hub = g.id === '-' ? DASH : roleCount(g, '허브') ? '<span class="pill good">있음</span>' : needsHub(g) ? '<span class="pill warn">필요</span>' : `<span class="small">상시 글 ${ever}/3편</span>`;
-    return `<tr>
-      <td><button class="jump" type="button" data-cluster="${esc(g.id)}" title="글별 표를 이 클러스터로 거르기"><span class="chip">${g.id === '-' ? '미지정' : esc(g.id)}</span></button><div class="small">${esc(g.name)}</div></td>
-      <td class="r num">${g.id === '-' ? '–' : g.priority}</td>
-      <td class="num">${ps.length}편${roles ? `<div class="small">${roles}</div>` : ''}</td>
-      <td class="num">${ps.some((p) => p.index) ? `${ps.filter(isIndexed).length} / ${ps.length}` : '–'}</td>
-      <td>${sourceCell(sumSources(ps))}</td>
-      <td class="r num">${fmt(imp)}</td>
-      <td class="r num">${fmt(clk)}</td>${views}
-      <td class="r num">${pos == null ? '–' : pos.toFixed(1)}</td>
-      <td>${hub}</td>
+// 그룹별 성과 (2026-11-10, 클러스터별 현황을 넓힘): 묶는 기준을 바꿔 같은 지표로 비교. 색인 글당 노출 = 색인된 글만의 노출 ÷ 색인 편수 (색인 여부와 글 성과를 나눠 봄)
+const GROUP_DIMS = [
+  { id: 'cluster', label: '클러스터', note: 'clusters.md · 우선순위 순' },
+  { id: 'role', label: '글 유형', note: '지금 클러스터 역할 · 칼럼은 발행 때 유형(화제·영향)', order: ['허브', '상시 글', '영향 칼럼', '화제 칼럼', '뉴스 칼럼', '미지정'] },
+  { id: 'category', label: '카테고리', note: '사이트 카테고리' },
+  { id: 'verify', label: '검증 유형', note: '사실 확인표 검증 유형 · 가설 H3', order: ['검증형', '일부', '조사형', '미기록'] },
+  { id: 'keyword', label: '주 검색어', note: '롱테일 = Trends 상대량 5 미만 · 가설 H6', order: ['롱테일', '상위', 'Trends 미측정', '미기록'] },
+  { id: 'week', label: '발행 주', note: '발행한 주(월~일, UTC)끼리 · 최근 주가 위' },
+];
+const dimOf = (id) => GROUP_DIMS.find((d) => d.id === id);
+// 글 → 그룹 키. null = 이 항목이 생기기 전 데이터
+function groupKey(p, dim) {
+  switch (dim) {
+    case 'cluster': return p.cluster === undefined ? null : p.cluster ? p.cluster.id : '-';
+    case 'role': return p.cluster === undefined ? null : !p.cluster ? '미지정' : p.cluster.role === '뉴스 칼럼' ? (p.newsType ? `${p.newsType} 칼럼` : '뉴스 칼럼') : p.cluster.role;
+    case 'category': return p.category || null;
+    case 'verify': return 'verifyType' in p ? p.verifyType || '미기록' : null;
+    case 'keyword': return 'keyword' in p ? (p.keyword ? p.keyword.class || 'Trends 미측정' : '미기록') : null;
+    case 'week': return p.createdAt ? weekStart(utcDay(p.createdAt)) : null;
+    default: return null;
+  }
+}
+const groupLabel = (dim, key) => (dim === 'cluster' ? (key === '-' ? '미지정' : key) : dim === 'week' ? weekLabel(key) : key);
+let groupView = 'cluster';
+try { const saved = localStorage.getItem('groupView'); if (dimOf(saved)) groupView = saved; } catch (e) { /* 기본 보기 */ }
+
+function groupStats(ps) {
+  const imp = ps.reduce((a, p) => a + p.impressions, 0);
+  const clk = ps.reduce((a, p) => a + p.clicks, 0);
+  const idx = ps.filter(isIndexed);
+  const idxImp = idx.reduce((a, p) => a + p.impressions, 0);
+  return {
+    n: ps.length, imp, clk, ctr: imp ? clk / imp : null,
+    pos: imp ? ps.reduce((a, p) => a + (p.position || 0) * p.impressions, 0) / imp : null,
+    idx: idx.length, withImp: ps.filter((p) => p.impressions > 0).length,
+    perIdx: idx.length ? idxImp / idx.length : null,
+    views: ps.reduce((a, p) => a + (p.views || 0), 0),
+  };
+}
+
+function renderGroups() {
+  if (!state.posts.length) return;
+  const avail = (id) => state.posts.some((p) => groupKey(p, id) != null);
+  if (!avail(groupView)) groupView = (GROUP_DIMS.find((d) => avail(d.id)) || GROUP_DIMS[2]).id;
+  $('group-dims').innerHTML = GROUP_DIMS.map((d) => `<button type="button" data-gview="${d.id}" aria-pressed="${d.id === groupView}"${avail(d.id) ? '' : ' disabled title="이 항목이 생기기 전 데이터"'}>${d.label}</button>`).join('');
+  const dim = dimOf(groupView);
+  const isCluster = groupView === 'cluster';
+  let groups;
+  if (isCluster) {
+    groups = clusterGroups().map((g) => ({ key: g.id, posts: g.posts, cg: g }));
+  } else {
+    const by = new Map();
+    state.posts.forEach((p) => { const k = groupKey(p, groupView); if (k == null) return; if (!by.has(k)) by.set(k, []); by.get(k).push(p); });
+    groups = [...by].map(([key, posts]) => ({ key, posts }));
+    const rank = (k) => { const i = dim.order ? dim.order.indexOf(k) : -1; return i < 0 ? 99 : i; };
+    groups.sort(groupView === 'week' ? (a, b) => b.key.localeCompare(a.key) : (a, b) => rank(a.key) - rank(b.key) || b.posts.length - a.posts.length || a.key.localeCompare(b.key));
+  }
+  const views = hasViews();
+  const idx = hasIndexData();
+  $('group-note').textContent = `${dim.note} · 최근 28일 웹 검색 · 그룹을 누르면 아래 글별 표를 그 그룹으로 거름`;
+  $('groups-head').innerHTML = `<tr><th>${dim.label}</th>${isCluster ? '<th class="r">우선순위</th>' : ''}<th>글</th><th title="URL 검사 PASS 글 / 글">색인</th><th class="r" title="아래 작은 글자: 노출이 1회 이상인 글 수">노출</th><th class="r">클릭</th><th class="r" title="색인된 글의 노출 합 ÷ 색인된 글 수 (색인 여부와 글 성과를 나눠 봄)">색인 글당 노출</th>${views ? '<th class="r" title="Cloudflare Web Analytics 실측 페이지뷰">조회수</th>' : ''}<th class="r" title="노출 가중 평균">평균 순위</th><th title="검색 유형별 노출">유입 경로</th>${isCluster ? '<th>허브</th>' : ''}</tr>`;
+  const cols = 8 + (isCluster ? 2 : 0) + (views ? 1 : 0);
+  const row = (name, ps, extra = {}) => {
+    const s = groupStats(ps);
+    return `<tr${extra.cls ? ` class="${extra.cls}"` : ''}>
+      <td>${name}</td>${isCluster ? `<td class="r num">${extra.priority ?? '–'}</td>` : ''}
+      <td class="num">${s.n}편${extra.roles ? `<div class="small">${extra.roles}</div>` : ''}</td>
+      <td class="num">${idx ? `${s.idx} / ${s.n}<div class="small">${Math.round((s.idx / s.n) * 100)}%</div>` : '–'}</td>
+      <td class="r num">${fmt(s.imp)}<div class="small">${s.withImp}편에서</div></td>
+      <td class="r num">${fmt(s.clk)}<div class="small">CTR ${pct(s.ctr)}</div></td>
+      <td class="r num">${s.perIdx == null ? '–' : s.perIdx.toFixed(1)}</td>${views ? `<td class="r num">${fmt(s.views)}</td>` : ''}
+      <td class="r num">${s.pos == null ? '–' : s.pos.toFixed(1)}</td>
+      <td>${sourceCell(sumSources(ps))}</td>${isCluster ? `<td>${extra.hub ?? DASH}</td>` : ''}
     </tr>`;
-  }).join('');
+  };
+  $('groups').innerHTML = groups.length ? groups.map((g) => {
+    if (isCluster) {
+      const c = g.cg;
+      const roles = [['허브', '허브'], ['상시 글', '상시'], ['뉴스 칼럼', '칼럼']].map(([r, short]) => [short, roleCount(c, r)]).filter(([, n]) => n).map(([s, n]) => `${s} ${n}`).join(' · ');
+      const hub = c.id === '-' ? DASH : roleCount(c, '허브') ? '<span class="pill good">있음</span>' : needsHub(c) ? '<span class="pill warn">필요</span>' : `<span class="small">상시 글 ${roleCount(c, '상시 글')}/3편</span>`;
+      const name = `<button class="jump" type="button" data-cluster="${esc(c.id)}" title="글별 표를 이 클러스터로 거르기"><span class="chip">${c.id === '-' ? '미지정' : esc(c.id)}</span></button><div class="small">${esc(c.name)}</div>`;
+      return row(name, g.posts, { priority: c.id === '-' ? '–' : c.priority, roles, hub });
+    }
+    const name = `<button class="jump" type="button" data-gdim="${esc(groupView)}" data-gkey="${esc(g.key)}" title="글별 표를 이 그룹으로 거르기"><span class="chip">${esc(groupLabel(groupView, g.key))}</span></button>`;
+    return row(name, g.posts);
+  }).join('') + row('<span class="post-title">전체</span>', state.posts.filter((p) => groupKey(p, groupView) != null), { cls: 'group-total' })
+    : `<tr><td colspan="${cols}" class="empty">이 기준으로 묶을 데이터가 없습니다.</td></tr>`;
 }
 
 // 글별 표 보기 상태 (거르기·정렬). 보는 사람 브라우저에만 기억
 const SORTS = { createdAt: 'desc', indexDays: 'asc', words: 'desc', images: 'desc', impressions: 'desc', clicks: 'desc', views: 'desc', position: 'asc' }; // 처음 누를 때 방향
-const view = { cluster: '', index: '', sort: 'createdAt', dir: 'desc' };
+// group = 그룹별 성과 표에서 고른 그룹 {dim, key} (클러스터는 cluster 칸을 씀)
+const view = { cluster: '', index: '', group: null, sort: 'createdAt', dir: 'desc' };
 try {
   const saved = JSON.parse(localStorage.getItem('postsView') || 'null');
   if (saved && SORTS[saved.sort]) {
-    Object.assign(view, { cluster: String(saved.cluster || ''), index: ['pass', 'wait'].includes(saved.index) ? saved.index : '', sort: saved.sort, dir: saved.dir === 'asc' ? 'asc' : 'desc' });
+    const group = saved.group && typeof saved.group.key === 'string' && ['role', 'category', 'verify', 'keyword', 'week'].includes(saved.group.dim) ? { dim: saved.group.dim, key: saved.group.key } : null;
+    Object.assign(view, { cluster: String(saved.cluster || ''), index: ['pass', 'wait'].includes(saved.index) ? saved.index : '', group, sort: saved.sort, dir: saved.dir === 'asc' ? 'asc' : 'desc' });
   }
 } catch (e) { /* 저장소를 쓸 수 없는 환경: 기본 보기 */ }
 function saveView() { try { localStorage.setItem('postsView', JSON.stringify(view)); } catch (e) { /* 기억하지 않음 */ } }
@@ -983,6 +1380,7 @@ function matches(p) {
   if (view.cluster && view.cluster !== '-' && p.cluster?.id !== view.cluster) return false;
   if (view.index === 'pass' && !isIndexed(p)) return false;
   if (view.index === 'wait' && isIndexed(p)) return false;
+  if (view.group && groupKey(p, view.group.dim) !== view.group.key) return false;
   return true;
 }
 
@@ -1006,6 +1404,10 @@ function renderFilters(groups) {
   $('f-cluster').value = view.cluster;
   $('f-index').value = view.index;
   $('f-cluster').disabled = !groups.length;
+  // 그룹 거르기 표시 (그룹별 성과 표에서 고른 그룹, ✕로 해제)
+  const fg = $('f-group');
+  fg.hidden = !view.group;
+  fg.innerHTML = view.group ? `<span class="fchip">${esc(dimOf(view.group.dim).label)}: ${esc(groupLabel(view.group.dim, view.group.key))}<button type="button" data-group-clear aria-label="그룹 거르기 해제">✕</button></span>` : '';
 }
 
 function postRow(p) {
@@ -1029,13 +1431,10 @@ function renderPosts() {
   POST_COLS = hasViews() ? 11 : 10;
   document.querySelectorAll('[data-views-col]').forEach((el) => { el.hidden = !hasViews(); });
   const all = state.posts;
-  $('k-posts').textContent = all.length;
   all.forEach((p) => { p.indexDays = daysFrom(p, p.indexedAt); });
-  const mid = median(all.map((p) => p.indexDays).filter((d) => d != null));
-  $('k-indexed').textContent = `색인 ${all.filter(isIndexed).length} / ${all.length}${mid == null ? '' : ` · 중앙값 D+${mid}`}`;
   renderFilters(clusterGroups());
   const posts = all.filter(matches).sort(compare);
-  const filtered = Boolean(view.cluster || view.index);
+  const filtered = Boolean(view.cluster || view.index || view.group);
   $('f-count').textContent = filtered ? `${posts.length} / ${all.length}편` : `${all.length}편`;
   $('f-reset').hidden = !filtered;
   document.querySelectorAll('#posts-panel th').forEach((th) => {
@@ -1163,7 +1562,11 @@ function renderRank() {
   document.querySelector('[data-rank-step="-1"]').disabled = rankView.offset <= 0;
   const name = RANK_METRICS[rankView.metric];
   const source = rankView.metric === 'views' ? '실제 방문(Cloudflare Web Analytics)' : '웹 검색';
-  $('rank-note').textContent = `${source} ${name} 상위 ${RANK_LIMIT}편 (${name}${name === '조회수' ? '가' : '이'} 있는 글 ${cur.length}편). 변동은 직전 ${len === 1 ? '하루' : '7일'}의 순위와 비교${views ? ' · 조회수는 UTC 날짜, 노출·클릭은 태평양 시간 날짜라 하루 경계가 다름' : ''}`;
+  // 집중도: 상위 5편이 이 기간 지표에서 차지하는 비율 (몇 편에 기대는지)
+  const total = cur.reduce((a, r) => a + r[rankView.metric], 0);
+  const top5 = cur.slice(0, 5).reduce((a, r) => a + r[rankView.metric], 0);
+  const share = cur.length > 5 && total ? ` · 상위 5편이 ${name}의 ${Math.round((top5 / total) * 100)}%` : '';
+  $('rank-note').textContent = `${source} ${name} 상위 ${RANK_LIMIT}편 (${name}${name === '조회수' ? '가' : '이'} 있는 글 ${cur.length}편${share}). 변동은 직전 ${len === 1 ? '하루' : '7일'}의 순위와 비교${views ? ' · 조회수는 UTC 날짜, 노출·클릭은 태평양 시간 날짜라 하루 경계가 다름' : ''}`;
   $('rank').innerHTML = cur.length ? cur.slice(0, RANK_LIMIT).map((r, i) => {
     const before = prevRank.get(r.p.slug);
     const move = before == null ? '<span class="small">신규</span>' : before === i + 1 ? '<span class="delta flat">–</span>' : `<span class="delta ${before > i + 1 ? 'good' : 'bad'}" title="직전 ${before}위">${before > i + 1 ? '▲' : '▼'}${Math.abs(before - i - 1)}</span>`;
@@ -1254,7 +1657,7 @@ function renderAdsense() {
 function focusPost(slug) {
   const p = state.posts.find((x) => x.slug === slug);
   if (!p) return;
-  if (!matches(p)) { view.cluster = ''; view.index = ''; saveView(); }
+  if (!matches(p)) { view.cluster = ''; view.index = ''; view.group = null; saveView(); }
   expanded.add(slug);
   renderPosts();
   const row = [...document.querySelectorAll('#posts tr[data-slug]')].find((r) => r.dataset.slug === slug);
@@ -1267,6 +1670,13 @@ function focusPost(slug) {
 
 function filterCluster(id) {
   view.cluster = id;
+  saveView();
+  renderPosts();
+  $('posts-panel').scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'start' });
+}
+
+function filterGroup(dim, key) {
+  view.group = { dim, key };
   saveView();
   renderPosts();
   $('posts-panel').scrollIntoView({ behavior: reduceMotion() ? 'auto' : 'smooth', block: 'start' });
@@ -1290,10 +1700,23 @@ function renderOtherPages() {
 
 // 펼침·정렬·이동 버튼: 이벤트 위임 (표를 다시 그려도 동작)
 document.addEventListener('click', (e) => {
-  const btn = e.target.closest('.toggle, .sort, [data-focus], [data-cluster], #f-reset');
-  if (!btn) return;
+  const btn = e.target.closest('#sessions-more, [data-gview], [data-gdim], [data-group-clear], .toggle, .sort, [data-focus], [data-cluster], #f-reset');
+  if (!btn || btn.disabled) return;
   e.preventDefault();
-  if (btn.classList.contains('toggle')) {
+  if (btn.id === 'sessions-more') {
+    sessionsAll = !sessionsAll;
+    renderSessions();
+  } else if (btn.dataset.gview) {
+    groupView = btn.dataset.gview;
+    try { localStorage.setItem('groupView', groupView); } catch (err) { /* 기억하지 않음 */ }
+    renderGroups();
+  } else if (btn.dataset.gdim) {
+    filterGroup(btn.dataset.gdim, btn.dataset.gkey);
+  } else if (btn.hasAttribute('data-group-clear')) {
+    view.group = null;
+    saveView();
+    renderPosts();
+  } else if (btn.classList.contains('toggle')) {
     const key = btn.dataset.key;
     const on = !expanded.has(key);
     on ? expanded.add(key) : expanded.delete(key);
@@ -1313,6 +1736,7 @@ document.addEventListener('click', (e) => {
   } else {
     view.cluster = '';
     view.index = '';
+    view.group = null;
     saveView();
     renderPosts();
   }
@@ -1343,6 +1767,14 @@ function renderBreakdown() {
   const total = state.summary ? state.summary.impressions : 0;
   const shown = qs.reduce((a, q) => a + q.impressions, 0);
   $('q-share').textContent = `검색어가 확인된 노출 ${shown} / ${total}회 (나머지는 Google이 비공개 처리)`;
+  // 순위 구간별 검색어 수 (breakdown.positionBuckets, 2026-11-10 회차부터): 1~3위·4~10위가 늘면 클릭이 따라옴
+  const qb = b.positionBuckets;
+  $('qbuckets-block').hidden = !qb;
+  if (qb) {
+    const max = Math.max(1, ...qb.map((r) => r.queries));
+    $('qbuckets-meta').textContent = `28일 평균 순위 구간별 검색어 ${fmt(b.queryTotal)}개 (Google이 공개한 검색어만)`;
+    $('qbuckets').innerHTML = qb.map((r) => `<li class="${r.queries ? '' : 'zero'}"><span class="name">${esc(r.label)}</span><span class="val">${fmt(r.queries)}개 · 노출 ${fmt(r.impressions)} · 클릭 ${fmt(r.clicks)}</span><span class="track" role="img" aria-label="${esc(r.label)} 검색어 ${r.queries}개"><i style="width:${(r.queries / max) * 100}%"></i></span></li>`).join('');
+  }
   $('queries').innerHTML = qs.length ? qs.map((q) => `<tr><td>${esc(q.key)}</td><td class="r num">${fmt(q.impressions)}</td><td class="r num">${fmt(q.clicks)}</td><td class="r num">${q.position == null ? '–' : q.position.toFixed(1)}</td></tr>`).join('')
     : '<tr><td colspan="4" class="empty">공개된 검색어가 아직 없습니다.</td></tr>';
 }
@@ -1369,17 +1801,32 @@ function renderKnowhow() {
   </tr>`).join('');
 }
 
+// 세션 기록: 최근 SESSIONS_LIMIT개만, 나머지는 펼쳐서 (세션이 90개를 넘어 목록이 화면을 길게 차지함)
+const SESSIONS_LIMIT = 12;
+let sessionsAll = false;
 function renderSessions() {
   if (!state.sessions.length) return;
-  $('sessions').innerHTML = [...state.sessions].sort((a, b) => b.order - a.order).map((s) => `<li><span class="num small">${ymd(s.date)}</span><span>${esc(s.title)}</span></li>`).join('');
+  const all = [...state.sessions].sort((a, b) => b.order - a.order);
+  $('sessions').innerHTML = (sessionsAll ? all : all.slice(0, SESSIONS_LIMIT)).map((s) => `<li><span class="num small">${ymd(s.date)}</span><span>${esc(s.title)}</span></li>`).join('');
+  const more = $('sessions-more');
+  more.hidden = all.length <= SESSIONS_LIMIT;
+  more.setAttribute('aria-expanded', String(sessionsAll));
+  more.textContent = sessionsAll ? `최근 ${SESSIONS_LIMIT}개만 보기` : `전체 ${all.length}개 보기`;
 }
 
 function render() {
   renderSummary();
   renderUserTodos();
   const daily = [...state.daily].sort((a, b) => a.date.localeCompare(b.date));
+  renderIndexKpi();
+  pipelineChart($('chart-pipeline'));
+  renderFunnel();
+  renderWaiting();
+  renderLag();
+  renderWeekly();
   barChart($('chart-imp'), daily);
   renderTraffic();
+  renderEngagement();
   lineChart($('chart-pos'), daily);
   cohortChart($('chart-cohort'));
   renderMovers();
@@ -1388,7 +1835,7 @@ function render() {
   renderGoals();
   renderAdsense();
   renderTodo();
-  renderClusters();
+  renderGroups();
   renderPosts();
   renderKnowhow();
   renderSessions();
@@ -1414,6 +1861,7 @@ function applyDocs(byId) {
       state.sessions = byId.sessions?.rows || [];
       state.breakdown = byId.breakdown || null;
       state.traffic = byId.traffic || null;
+      state.engagement = byId.engagement || null;
       state.experiments = byId.experiments || null;
       state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);
       render();
@@ -1442,7 +1890,7 @@ if (SNAPSHOT) applyDocs(SNAPSHOT);
 (async () => {
   const db = window.claude ? await window.claude.use('db') : null;
   if (!db) { showSnapshot(); return; }
-  // stats 컬렉션: summary, posts, breakdown, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
+  // stats 컬렉션: summary, posts, breakdown, traffic, engagement, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
   db.collection('stats').onSnapshot(
     (snap) => {
       $('notice').hidden = true;

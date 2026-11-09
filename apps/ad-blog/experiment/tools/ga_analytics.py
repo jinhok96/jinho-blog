@@ -10,6 +10,8 @@ Google Analytics Data API로 읽는다. 대시보드 `engagement` 문서와 글�
 - 참여 시간 = 페이지가 화면 앞에 있던 시간의 합 (userEngagementDuration, 초). 스크롤 = 향상된 측정 `scroll` 이벤트(페이지 90% 도달)
 - 유럽(EEA·영국·스위스) 방문은 동의 전 쿠키 없이 측정돼 GA4 보고서에서 빠질 수 있음 → 전체 조회수는 Cloudflare 기준
 - AI 답변 유입: 세션 소스가 AI_SOURCES(chatgpt.com·perplexity.ai·gemini.google.com 등)인 세션을 서비스·첫 페이지별로 표시 (2026-11-08)
+- 유입 채널: 세션 소스·매체를 CHANNELS(Google·Bing·기타 검색·AI 답변·Pinterest·기타 소셜·기타 사이트·직접)로 나눔 → 대시보드 `sources` 문서 (2026-11-10).
+  ChatGPT는 리퍼러 없이 utm_source만 붙여 Cloudflare에서는 직접으로 잡히므로, 채널 판단은 GA4 기준
 - 방문이 적은 동안(28일 방문 71, 2026-11-04)은 글별 값으로 판단하지 않고 사이트 전체 값만 기준선으로 기록
 
 설치: python3 -m venv /tmp/gsc && /tmp/gsc/bin/pip install google-auth requests (gsc_report.py와 같은 환경)
@@ -161,6 +163,85 @@ def ai_referrals(token: str, start: dt.date, end: dt.date) -> list[dict]:
         cell['engagementSeconds'] += int(seconds)
     rows = [{'service': service, 'landingPage': path, **cell} for (service, path), cell in cells.items()]
     return sorted(rows, key=lambda r: (-r['sessions'], r['service'], r['landingPage']))
+
+
+# 유입 채널 (대시보드 '유입 경로', 2026-11-10). 순서 = 화면 순서. GA4 세션 소스·매체와 Cloudflare 리퍼러 호스트를 같은 규칙으로 나눔
+CHANNELS = (
+    ('google', 'Google 검색'), ('bing', 'Bing 검색'), ('search', '기타 검색'), ('ai', 'AI 답변'),
+    ('pinterest', 'Pinterest'), ('social', '기타 소셜'), ('referral', '기타 사이트'), ('direct', '직접·알 수 없음'),
+)
+DIRECT_SOURCES = {'', '(direct)', '(not set)', 'direct', 'tool-proof.com'}
+# 이름(점 없는 값)은 도메인 조각 하나와 같을 때, 도메인(점 있는 값)은 같거나 하위 도메인일 때 일치 (t.co가 microsoft.com에 걸리지 않게)
+SEARCH_ENGINES = ('duckduckgo', 'yahoo', 'ecosia', 'naver', 'yandex', 'baidu', 'startpage', 'qwant', 'search.brave.com', 'daum', 'seznam', 'aol')
+SOCIAL_SITES = ('facebook', 'fb.com', 'instagram', 'threads', 't.co', 'twitter', 'x.com', 'reddit', 'linkedin', 'lnkd.in', 'youtube', 'tiktok', 'quora', 'news.ycombinator.com', 'bsky.app', 'mastodon')
+
+
+def _matches(host: str, name: str) -> bool:
+    if '.' in name:
+        return host == name or host.endswith('.' + name)
+    return name in host.split('.')
+
+
+def channel(source: str, medium: str = '') -> str:
+    """세션 소스(또는 리퍼러 호스트)·매체 → CHANNELS 키.
+    AI(utm_source=chatgpt.com 등, GA4 매체 ai-assistant)를 Google보다 먼저 봐서 gemini.google.com이 AI로 감.
+    search.google.com은 Search Console 화면에서 연 방문이라 검색이 아닌 기타 사이트. Pinterest는 GA4가 organic 매체로 줘서 검색보다 먼저 봄"""
+    s = source.strip().lower().removeprefix('www.')
+    m = medium.strip().lower()
+    if s in DIRECT_SOURCES:
+        return 'direct'
+    if ai_service(s) or m == 'ai-assistant':
+        return 'ai'
+    if 'pinterest' in s or s == 'pin.it':
+        return 'pinterest'
+    if s == 'search.google.com':
+        return 'referral'
+    if s == 'google' or s.startswith('google.') or 'googlequicksearchbox' in s:
+        return 'google'
+    if s == 'bing' or s == 'bing.com' or s.endswith('.bing.com'):
+        return 'bing'
+    if any(_matches(s, site) for site in SOCIAL_SITES):
+        return 'social'
+    if m == 'organic' or any(_matches(s, engine) for engine in SEARCH_ENGINES):
+        return 'search'
+    return 'referral'
+
+
+def traffic_sources(token: str, start: dt.date, end: dt.date) -> dict:
+    """[start, end] 세션 소스·매체별 세션 → 채널 합계·소스 목록·채널별 도착 페이지(직접 제외)·날짜별 채널 세션 (2026-11-10)"""
+    keys = [k for k, _ in CHANNELS]
+    totals = {k: {'sessions': 0, 'views': 0, 'engagedSessions': 0, 'engagementSeconds': 0} for k in keys}
+    sources = []
+    for (source, medium), (sessions, views, engaged, seconds) in report(
+        token, start, end, ['sessionSource', 'sessionMedium'], ['sessions', 'screenPageViews', 'engagedSessions', 'userEngagementDuration'],
+    ):
+        key = channel(source, medium)
+        cell = totals[key]
+        cell['sessions'] += int(sessions)
+        cell['views'] += int(views)
+        cell['engagedSessions'] += int(engaged)
+        cell['engagementSeconds'] += round(seconds)
+        sources.append({'source': source, 'medium': medium, 'channel': key, 'sessions': int(sessions), 'views': int(views), 'engagedSessions': int(engaged)})
+    landing: dict[tuple[str, str], int] = {}
+    for (source, medium, page), (sessions,) in report(token, start, end, ['sessionSource', 'sessionMedium', 'landingPage'], ['sessions']):
+        key = channel(source, medium)
+        if key != 'direct':
+            cell = (key, normalize_path(page))
+            landing[cell] = landing.get(cell, 0) + int(sessions)
+    daily: dict[str, dict[str, int]] = {}
+    for (d, source, medium), (sessions,) in report(token, start, end, ['date', 'sessionSource', 'sessionMedium'], ['sessions']):
+        day = daily.setdefault(iso_date(d), {})
+        key = channel(source, medium)
+        day[key] = day.get(key, 0) + int(sessions)
+    return {
+        'range': {'start': str(start), 'end': str(end)},
+        'firstDate': min(daily, default=None),  # GA4 데이터가 있는 첫날 (설치 2026-11-05)
+        'sessions': sum(c['sessions'] for c in totals.values()),
+        'channels': totals,
+        'sources': sorted(sources, key=lambda r: (-r['sessions'], r['source']))[:30],
+        'landing': [{'channel': k, 'page': p, 'sessions': n} for (k, p), n in sorted(landing.items(), key=lambda x: (-x[1], keys.index(x[0][0]), x[0][1]))][:30],
+        'daily': [{'date': d, 'channels': daily[d]} for d in sorted(daily)],
+    }
 
 
 def per_view(seconds: int, views: int) -> str:

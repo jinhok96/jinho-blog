@@ -75,6 +75,13 @@ feedSeenAt·sitemapSeenAt·crawledAt)은 2026-11-04부터 저장소 파일
               sessions, engagedSessions, scrolls, daily: [{date, views, users, engagementSeconds, scrolls}](한국 날짜, 빠진 날 0)}.
               engagementSeconds = 페이지가 화면 앞에 있던 시간 합(초), scrolls = 90% 스크롤 이벤트 수 (ga_analytics.py).
               유럽 동의 거부 방문은 빠질 수 있어 전체 조회수는 traffic(Cloudflare) 기준
+- sources: (GA4나 Cloudflare를 읽은 회차만, 2026-11-10 회차부터) 유입 경로 {gscClicks(Search Console 28일 Google 검색 클릭),
+           ga: {range, firstDate, sessions, channels: {채널 키: {sessions, views, engagedSessions, engagementSeconds}},
+                sources: [{source, medium, channel, sessions, views, engagedSessions}] 상위 30, landing: [{channel, page, sessions}] 직접 제외 상위 30,
+                daily: [{date, channels: {채널 키: sessions}}]} (한국 날짜),
+           cf: {range, hosts: [{key(리퍼러 호스트, 자기 사이트·없음은 direct), views, visits, channel}] 상위 50} (UTC 날짜)}.
+           채널 키 = ga_analytics.CHANNELS (google·bing·search·ai·pinterest·social·referral·direct). ChatGPT는 utm_source만 붙여
+           Cloudflare에서는 direct로 잡히므로 채널 판단은 GA4 기준
 - breakdown: 28일 기기별·국가별(상위 10)·검색 유형별(웹·이미지·동영상·뉴스·Discover) 지표, 사이트 검색어 상위 20,
              movers(최근 7일 vs 직전 7일 검색어 순위: up 오른·down 내린·new 처음 노출, 각 상위 10),
              queryTotal·positionBuckets(공개된 검색어 전체의 28일 평균 순위 구간별 검색어 수·노출·클릭 [{label, queries, impressions, clicks}],
@@ -580,10 +587,11 @@ def main() -> None:
             print(f'Cloudflare 조회수를 읽지 못함 (조회수 없이 진행): {error}', file=sys.stderr)
     # 참여 시간·90% 스크롤 (GA4, 속성 시간대 = 한국 날짜): 실패해도 나머지 갱신은 계속
     engagement: dict[str, dict] | None = None  # None = 이번 회차에 GA4를 읽지 못함 (글별 칸을 넣지 않음)
+    ga_token: str | None = None  # 유입 경로(sources) 문서도 같은 토큰을 씀
+    ga_since = dt.date.fromisoformat(since)
     if ga_analytics.available():
         try:
             ga_token = ga_analytics.load_token()
-            ga_since = dt.date.fromisoformat(since)
             engagement = {SITE_ORIGIN + path: v for path, v in ga_analytics.page_engagement(ga_token, ga_since, today).items()}
             docs['engagement'] = ga_analytics.site_doc(ga_token, ga_since, today)
         except Exception as error:  # noqa: BLE001 - 참여 시간은 부가 지표라 대시보드 갱신을 막지 않음
@@ -758,6 +766,9 @@ def main() -> None:
     }
     if crawl:
         docs['summary']['crawl'] = crawl
+    # 유입 경로: GA4 세션 소스 채널 + Cloudflare 리퍼러 호스트 + Search Console Google 검색 클릭 (2026-11-10 회차부터)
+    if sources := sources_doc(ga_token, (ga_since, today), (dt.date.fromisoformat(since), today), site['clicks']):
+        docs['sources'] = sources
 
     if args.versions:
         versions = json.loads(args.versions)
@@ -806,6 +817,27 @@ def traffic_doc(page_views: dict[str, dict[str, dict]], since: dt.date, today: d
         'views': sum(r['views'] for r in daily), 'visits': sum(r['visits'] for r in daily),
         'daily': daily, 'referers': refs,
     }
+
+
+def sources_doc(ga_token: str | None, ga_range: tuple[dt.date, dt.date], cf_range: tuple[dt.date, dt.date], gsc_clicks: int) -> dict | None:
+    """유입 경로 문서. GA4(세션 소스·매체 → 채널, utm까지 봄)와 Cloudflare(리퍼러 호스트, utm 못 봄)를 같은 채널 규칙으로 나눔.
+    둘 다 읽지 못하면 None (문서를 만들지 않음). 실패는 대시보드 갱신을 막지 않음"""
+    doc: dict = {'gscClicks': gsc_clicks}
+    if ga_token:
+        try:
+            doc['ga'] = ga_analytics.traffic_sources(ga_token, *ga_range)
+        except Exception as error:  # noqa: BLE001
+            print(f'GA4 유입 경로를 읽지 못함: {error}', file=sys.stderr)
+    if cf_analytics.available():
+        try:
+            hosts = cf_analytics.referers(*cf_range, limit=50)
+            doc['cf'] = {
+                'range': {'start': str(cf_range[0]), 'end': str(cf_range[1])},
+                'hosts': [{**h, 'channel': ga_analytics.channel(h['key'], 'referral')} for h in hosts],
+            }
+        except Exception as error:  # noqa: BLE001
+            print(f'Cloudflare 리퍼러를 읽지 못함: {error}', file=sys.stderr)
+    return doc if ('ga' in doc or 'cf' in doc) else None
 
 
 def history_writes(docs: dict[str, dict], out: pathlib.Path) -> list[dict]:

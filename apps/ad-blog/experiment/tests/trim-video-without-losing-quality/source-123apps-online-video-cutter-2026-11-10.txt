@@ -1,0 +1,286 @@
+# 가져온 시각: 2026-11-09T19:58:24.906Z
+# 원본: https://online-video-cutter.com/
+Video Trimmer - Cut Video Online for Free - MP4, AVI, MPG, 3GP
+https://online-video-cutter.com/
+
+Video
+Video Editor
+Screen Recorder
+Text to speech
+Merge Videos
+Trim Video
+Add Audio to Video
+Add Image to Video
+Add Text to Video
+Remove Logo from Video
+Crop Video
+Rotate Video
+Flip video
+Resize Video
+Loop Video
+Change Video Volume
+Change Video Speed
+Stabilize Video
+Video Recorder
+Audio
+Trim Audio
+Change Volume
+Change Speed
+Change Pitch
+Equalizer
+Reverse Audio
+Voice Recorder
+Audio Joiner
+PDF
+Convert from PDF
+PDF to Word
+PDF to Excel
+PDF to JPG
+PDF to PNG
+PDF to HTML
+Convert to PDF
+Word to PDF
+JPG to PDF
+Excel to PDF
+PPT to PDF
+PNG to PDF
+Split
+Merge
+Compress
+Unlock
+Protect
+Rotate
+Add Page Numbers
+Converters
+Audio Converter
+Video Converter
+Image Converter
+Document Converter
+Font Converter
+Archive Converter
+Ebook Converter
+Archive Extractor
+EN
+Sign In
+Trim Video
+Trim or cut video of any format
+Choose File
+Google Drive
+Dropbox
+From URL
+or drop a file here
+window.OscillatorNode = window.OscillatorNode || {prototype:Object};
+Online Video Cutter
+
+This web app comes in handy when you need to cut a small video file. It does not require installation, and it works in your browser.
+
+Crop video
+
+Cropping allows you to frame the video to the desired area or change frame proportions.
+
+Rotate video
+
+You can rotate your video 90, 180 or 270 degrees. It can be useful when a portrait scene was shot in a landscape mode or vice versa.
+
+Any format you can think of
+
+The app supports almost every video format out there. If your file fails to open, then it is probably damaged or it is too big.
+
+Easy video trimming
+
+After uploading your file, you can choose the quality and format of the output file. There are no complicated controls — every feature is just one or two clicks away.
+
+Security guaranteed
+
+Your files are automatically deleted from our servers a few hours after you are done working with them. Nobody has access to them except you.
+
+Video editing online
+
+The app can cut video files right in your browser window. Files of up to 4 GB are supported, and we are about to raise this limit.
+
+Format-specific tools
+GIF Cutter
+Cut MKV
+MOV Cutter
+Trim WEBM
+WMV Cutter
+Trim MPEG
+ASF Cutter
+Android Video Cutter
+TikTok Video Cutter
+Instagram Video Cutter
+X (ex-Twitter) Video Trimmer
+Rate this tool
+4.3
+/
+5
+25227 votes
+© 123apps.com
+Blog
+Privacy
+Refund policy
+Pricing
+Help
+Contact us
+English
+Language
+en
+English
+es
+Español
+pt
+Português
+it
+Italiano
+de
+Deutsch
+fr
+Français
+ru
+Русский
+pl
+Polski
+tr
+Türkçe
+id
+Bahasa Indonesia
+ja
+日本語
+ko
+한국어
+cn
+简体中文
+tw
+繁體中文
+vi
+tiếng Việt
+th
+ภาษาไทย
+Found a translation error?
+Let us know
+Contact us
+Ask a question, report a bug, or suggest a feature.
+Attach files
+Send message
+Thank you
+Your message has been sent successfully
+ОК
+Something went wrong
+Message could not be sent. Please try again later or contact us at support@123apps.com.
+ОК
+Before we send your message
+We found similar articles in our Help section that might solve your issue instantly. Please review them before contacting support.
+This solved my issue
+Send message
+ОК
+Upgrade to Premium
+A single subscription for all of our apps
+Premium access to 51 apps
+Save videos without length limits
+Open files up to 4 GB in size
+Ai audio processing
+Unlimited files
+No ads
+Full HD video export
+Text to Speech
+Cancel any time
+$6
+per month
+Monthly
+Yearly
+-33%
+Upgrade to Premium
+Continue with Premium
+Would you like to save {annual-savings-percent}%?
+You can save {annual-savings-percent}% when you pay annually. Pay {annual-price} for a year of access. That's {annual-monthly-price} per month.
+No, thanks
+Yes, please
+Upgrade to Premium
+A single subscription for all of our apps
+Reset Password
+Enter your email address, and we'll send you a link to reset your password.
+Reset Password
+Sign In
+Set new password
+Set a new password for your 123apps account. Make sure you remember it and store it safely.
+Set new password
+Password Updated
+Your password has been updated.
+ОК
+Sign In
+Sign in or create a new account. Choose a method to continue.
+Google
+Apple
+More options
+Email code
+Microsoft
+Yandex
+VK
+OR
+Continue
+By continuing you agree to our Privacy & Terms
+Sign In
+Enter your email to receive a one-time code.
+Continue
+Back
+Sign In
+Enter your email and password.
+Reset password
+Continue
+Back
+Sign In
+Enter the password for your account.
+Reset password
+Continue
+OR
+Use a one-time code
+Back
+Enter the code
+Resend code
+Code sent again
+Success
+OR
+Use password
+Back
+Set a password
+Set a password for your new account.
+Continue
+Back
+Update payment method
+We couldn’t renew your subscription. Please update your billing information.
+Pause instead of canceling?
+Pause and cancel both stop future charges. Pause keeps your payment details, so you can resume in one click. Cancel means entering them again.
+Cancel subscription
+Pause subscription
+Cancel subscription
+Canceling your subscription stops future charges. You’ll keep access to all paid features until the end of your current billing period. We’ll remove your payment details from your account. To subscribe again, you’ll need to re-enter them.
+Cancel subscription
+Don't cancel
+Cancel
+Confirm
+Delete account
+This permanently deletes the account for {email} and all of its data. This cannot be undone.
+Don't delete
+Delete account
+Are you sure?
+This permanently deletes the account for {email} and all of its data. This cannot be undone.
+Delete account
+Don't delete
+Invoices
+Usage history
+Set password
+Create a password to sign in with your email and password.
+Save
+Change password
+Create a new strong password
+Save
+Your name
+Cancel
+Save
+Drag and drop a picture here
+Any image format. Up to 10 MB.
+Choose File
+Please authorize this app to work with your Google Drive
+OK
+document.addEventListener("sharedReady", function (){ require_feature("WebAssembly"); })
+window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-94M72W0NZN');

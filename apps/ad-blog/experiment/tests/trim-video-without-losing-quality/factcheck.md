@@ -1,6 +1,6 @@
 # trim-video-without-losing-quality 사실 확인표
 
-- 검증 유형 (가설 H3): **검증형** — 무료 온라인 자르기 도구 3곳(5가지 설정)을 Chromium에서 직접 실행하고 결과 파일을 원본 프레임과 비교(How we tested)
+- 검증 유형 (가설 H3): **검증형** — 무료 온라인 자르기 도구 3곳(5가지 설정)을 Chromium에서 직접 실행하고 결과 파일을 원본 프레임과 비교(How we tested). 2026-11-09 UTC(세션 92)부터 데스크톱 앱 LosslessCut 3.69.0(3가지 설정)도 직접 실행 — 유형은 그대로 검증형
 - 주 검색어 (가설 H6): `trim video without losing quality` — 브리프 주 검색어
 
 ## 작성 전 브리프 (2026-11-09 KST 세션 91)
@@ -52,9 +52,26 @@
 | Google Photos(Android): 손잡이로 자르고 Save → 편집본을 사본으로 저장, 일부 편집은 RAM·Android 버전 조건 | `source-google-photos-10729480.txt` |
 | Tears of Steel CC BY 3.0 | https://mango.blender.org/sharing/ (`compress-video-for-discord-email` 글과 같은 표기) |
 
+## LosslessCut 직접 시험 (2026-11-10 KST 개선 세션 92, 2026-11-09 UTC)
+
+세션 91에서 막혔던 외부 실행 파일 실행이 권한 허용(11-09 사용자 결정) 뒤 풀려, 같은 AppImage(SHA-256 일치)·같은 클립(크기 일치)·같은 구간으로 시험. 자세한 값·명령·캡처는 `losslesscut/results.md`, 행은 `results.jsonl` 끝 5줄(`measured` 칸).
+
+| 주장 (글) | 근거 |
+| --- | --- |
+| 기본값(Keyframe cut mode 켬·Smart cut 끔)이 두 클립 모두 같은 프레임 100%, 크기 15.7 MB·9.6 MB, 시작 12.0초·9.5초(123apps No re-encoding과 같음) | `results.jsonl`, `losslesscut/export-options-default.webp` |
+| 단계: File > Open 또는 끌어 놓기 → Toggle advanced view → 재생 버튼 양옆 시간 상자 입력(또는 I·O 키) → Export → Export options 그대로 Export → 원본 옆에 시작·끝 시간이 붙은 이름으로 저장 | 캡처 `h264-segment.webp`·`export-options-default.webp`, 첫 화면 문구 "i o … to set cutpoints", Export options "Save output to path"(원본 폴더)·"Output file name" |
+| Smart cut: 12.5초 정확히 시작, 재인코딩 11·13프레임, 같은 프레임 97.4%·96.9%, 재인코딩 프레임 PSNR 44.6~53.2 dB, 이음매에서 원본 1프레임 빠짐, 화면 경고 "Smart cut is experimental and will not work on all files." | `losslesscut/results.md` 프레임 대응·PSNR, `export-options-smartcut.webp` |
+| Keyframe cut mode 끔(H.264): 소리 12.5초부터, 영상 13.0초부터, Chromium 첫 화면 13.0초, 화면 문구 "Note: Keyframe cut is recommended for most common files" | ffprobe start_time(영상 0.5·소리 0.015), `playback_check.cjs` 화면 비교 |
+| 업로드 없음, HEVC 미리보기 문구 "may be slow and of low quality, but the final export will be lossless", 결과는 실제로 100% | `hevc-open.webp`, `results.jsonl` |
+| 무료(웹사이트·GitHub)·스토어 유료·Windows 10/11·macOS 13+·Linux·비공식 다운로드 경고 | `source-losslesscut-app.txt` — `source_diff.cjs` 2026-11-09 19:5x UTC 재확인 바뀐 문장 없음 |
+
+- 같은 날 출처 9개 재확인(`source_diff.cjs --slug trim-video-without-losing-quality --save`): 123apps는 평점 투표 수만, ezgif는 페이지에 소개·FAQ가 늘어남(200MB·1시간 삭제·keep 모드 복사·remove 모드 재인코딩·워터마크 없음 문장 그대로) → 글 변경 없음, 새 사본 `source-*-2026-11-10.txt`
+- 그림: 결과 표 그림에 LosslessCut 행 추가(`trim-tools-frame-test.webp`), 새 그림 `losslesscut-export-options.webp`(Export options 캡처 + 설정별 결과). `updatedAt` 2026-11-09T20:30Z, 제목·설명 그대로
+
 ## 쓰지 않은 것
 
-- LosslessCut·Avidemux·Shotcut 직접 시험: 내려받은 데스크톱 앱 실행이 이번 세션 권한에서 막힘 → LosslessCut은 공식 사이트 문장으로만, "we tested" 쓰지 않음
+- ~~LosslessCut·Avidemux·Shotcut 직접 시험: 내려받은 데스크톱 앱 실행이 이번 세션 권한에서 막힘 → LosslessCut은 공식 사이트 문장으로만, "we tested" 쓰지 않음~~ → LosslessCut은 세션 92에서 직접 시험(위 절). Avidemux·Shotcut은 아직 시험하지 않음
+- LosslessCut의 Windows·Mac판 동작, 다른 내보내기 설정(Shift start times·avoid_negative_ts 등): 시험하지 않음
 - Windows Photos·QuickTime·iPhone 사진 앱이 재인코딩하는지: 기기가 없고 공식 문서에 언급이 없음 → "문서가 말하지 않는다"로만
 - Storrito가 Chrome(Windows·Mac)에서 다르게 동작하는지: 확인 못 함 → 우리 환경(Chromium 153, Linux)을 밝히고 단정하지 않음
 - 확대 비교 그림: 200% 확대에서도 재인코딩 차이가 눈으로 거의 구분되지 않아(밝기 평균 차이 1 미만) 그림으로 쓰지 않고 수치로만

@@ -1,6 +1,6 @@
 """무손실 자르기 글 그래픽 4장 (1200×675 webp, ad-blog 디자인 시스템 라이트 모드).
 
-수치는 results.jsonl(analyze.py), 화면은 screens/*.webp (Chromium 153, 2026-11-08 UTC). 내용 출처는 factcheck.md.
+수치는 results.jsonl(analyze.py), 화면은 screens/*.webp (Chromium 153, 2026-11-08 UTC · LosslessCut 3.69.0, 2026-11-09 UTC). 내용 출처는 factcheck.md.
 실행: python3 -I charts.py <출력 폴더>
 """
 import sys
@@ -38,26 +38,27 @@ def results_table():
     rows = [
         ('ezgif', 'Copy original (default)', '100%  ·  100%', '12.5 s  ·  12.5 s', 'Identical', True),
         ('123apps', 'No re-encoding switched on', '100%  ·  100%', '12.0 s  ·  9.5 s', 'Identical', True),
+        ('LosslessCut', 'Desktop app, default settings', '100%  ·  100%', '12.0 s  ·  9.5 s', 'Identical', True),
         ('ezgif', 'MP4 (h264/aac)', '0%  ·  0%', '12.5 s  ·  12.5 s', 'PSNR 45.1  ·  45.6 dB', False),
         ('123apps', 'Default settings', '0%  ·  0%', '12.5 s  ·  12.5 s', 'PSNR 44.7  ·  45.0 dB', False),
         ('Storrito', 'Says "no re-encoding"', '0%  ·  no video', '12.5 s  ·  -', 'PSNR 43.2 dB  ·  -', False),
     ]
-    y = 0.78
-    rh = 0.145
+    y = 0.80
+    rh = 0.128
     for tool, setting, same, start, q, ok in rows:
-        box(ax, 0.0, y - rh + 0.015, 1.0, rh - 0.025, cs.SURFACE if ok else cs.BACKGROUND, edge=cs.BORDER, lw=1, r=0.01)
+        box(ax, 0.0, y - rh + 0.012, 1.0, rh - 0.02, cs.SURFACE if ok else cs.BACKGROUND, edge=cs.BORDER, lw=1, r=0.01)
         if ok:
-            ax.add_patch(Rectangle((0.0, y - rh + 0.015), 0.006, rh - 0.025, facecolor=cs.ACCENT, edgecolor='none', zorder=2))
-        ax.text(0.02, y - 0.045, tool, fontsize=15, fontweight='bold', va='center', zorder=3)
-        ax.text(0.02, y - 0.09, setting, fontsize=12.5, color=cs.MUTED, va='center', zorder=3)
+            ax.add_patch(Rectangle((0.0, y - rh + 0.012), 0.006, rh - 0.02, facecolor=cs.ACCENT, edgecolor='none', zorder=2))
+        ax.text(0.02, y - 0.04, tool, fontsize=14.5, fontweight='bold', va='center', zorder=3)
+        ax.text(0.02, y - 0.08, setting, fontsize=12, color=cs.MUTED, va='center', zorder=3)
         color = cs.ACCENT if ok else cs.FOREGROUND
-        ax.text(cols[1] + 0.01, y - 0.065, same, fontsize=14.5, fontweight='bold', color=color, va='center', zorder=3)
-        ax.text(cols[2] + 0.01, y - 0.065, start, fontsize=14.5, va='center', zorder=3)
-        ax.text(cols[3] + 0.01, y - 0.065, q, fontsize=14.5, fontweight='bold' if ok else 'normal', color=color, va='center', zorder=3)
+        ax.text(cols[1] + 0.01, y - 0.058, same, fontsize=14, fontweight='bold', color=color, va='center', zorder=3)
+        ax.text(cols[2] + 0.01, y - 0.058, start, fontsize=14, va='center', zorder=3)
+        ax.text(cols[3] + 0.01, y - 0.058, q, fontsize=14, fontweight='bold' if ok else 'normal', color=color, va='center', zorder=3)
         y -= rh
     cs.footer(fig,
               'Each cell: H.264 clip  ·  HEVC clip. Storrito saved an audio-only file from the HEVC clip in Chromium 153 on Linux.',
-              CLIPS + ' Tested November 8, 2026.')
+              CLIPS + ' Tested November 8–9, 2026.')
     cs.save(fig, f'{OUT}/trim-tools-frame-test.webp')
 
 
@@ -168,9 +169,29 @@ def apps123_screen():
     cs.save(fig, f'{OUT}/123apps-no-re-encoding.webp')
 
 
+def losslesscut_screen():
+    """LosslessCut 3.69.0 Export options > Show advanced options (기본값 그대로, Xvfb 1366×900 캡처를 840×600으로 자름)"""
+    img = Image.open(SCREENS / 'losslesscut-export-options.webp').convert('RGB')
+    fig = plt.figure(figsize=cs.FIGSIZE)
+    cs.header(fig, 'In LosslessCut, the default "Keyframe cut mode" copies the video',
+              'Export > Export options > Show advanced options, as LosslessCut 3.69.0 opened them for us')
+    ax, w = place(fig, img, 36, 84, 470)
+    mark(ax, 8, 410, 832, 454)  # Smart cut (experimental)
+    mark(ax, 8, 458, 832, 502)  # Keyframe cut mode
+    side_text(fig, (36 + w + 30) / 1200, 'What each setting did', [
+        ('Keyframe cut mode (on)', 'Every frame matched in both\nclips. Starts at the keyframe\nbefore 12.5 s: 12.0 s, 9.5 s.'),
+        ('Smart cut (off)', 'Starts at 12.5 s. Re-encodes\nonly up to the next keyframe,\nbut dropped 1 frame there.'),
+        ('Keyframe cut mode off', 'Copied, but the H.264 video\nbegan 0.5 s late, at 13.0 s.'),
+    ])
+    cs.footer(fig, 'Screenshot: LosslessCut 3.69.0 for Linux, November 9, 2026. Boxes added by ToolProof.',
+              'Results: our H.264 and HEVC test clips, trimmed to 0:12.5 to 0:30.0.')
+    cs.save(fig, f'{OUT}/losslesscut-export-options.webp')
+
+
 if __name__ == '__main__':
     Path(OUT).mkdir(parents=True, exist_ok=True)
     results_table()
     keyframe_timeline()
     ezgif_screen()
     apps123_screen()
+    losslesscut_screen()

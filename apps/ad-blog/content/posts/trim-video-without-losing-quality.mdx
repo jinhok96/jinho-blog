@@ -3,6 +3,7 @@ title: Trim Video Without Losing Quality in a Free Online Tool
 description: To trim video without losing quality, use a copy mode. We cut two clips in ezgif, 123apps and Storrito and checked every frame. Only copy modes kept them.
 category: software
 createdAt: 2026-11-08T21:01:00Z
+updatedAt: 2026-11-09T20:30:00Z
 tags:
   - video
   - free tools
@@ -13,12 +14,13 @@ tags:
 
 To trim a video without losing quality, use a tool that copies the original video data instead of re-encoding it. In our test, ezgif's free Video cutter did that by default with its **Copy original** setting, and 123apps' Video Trimmer did it only after we switched on **No re-encoding**, which is off by default. The catch with any copy-mode cut is the start point: it can only begin at a keyframe, so your clip may start a little before the moment you picked.
 
-On November 8, 2026, we trimmed the same 17.5 seconds out of two 60-second test clips, an H.264 MP4 and an HEVC MOV, in three free online trimmers and five settings. Then we compared every frame of each result with the original. The two copy modes returned 100% identical frames. Every other setting re-encoded the video, including Storrito's trimmer, which advertises "no re-encoding".
+On November 8, 2026, we trimmed the same 17.5 seconds out of two 60-second test clips, an H.264 MP4 and an HEVC MOV, in three free online trimmers and five settings. Then we compared every frame of each result with the original. The two copy modes returned 100% identical frames. Every other setting re-encoded the video, including Storrito's trimmer, which advertises "no re-encoding". On November 9, we ran the same trims in LosslessCut, a free desktop app, and its default setting also kept every frame.
 
 | Tool and setting | Kept the original frames? | Starts where you asked? | Free limit |
 | --- | --- | --- | --- |
 | **ezgif**, Copy original (default) | Yes, 100% | Yes, in our playback check | 200 MB per file |
 | **123apps**, No re-encoding on | Yes, 100% | No, at the keyframe before it | Up to 4 GB, per its site |
+| **LosslessCut** desktop app, default | Yes, 100% | No, at the keyframe before it | Free download, no upload |
 | ezgif, MP4 (h264/aac) | No, re-encoded | Yes | 200 MB per file |
 | 123apps, default settings | No, re-encoded | Yes | Up to 4 GB, per its site |
 | Storrito | No, re-encoded, and no video from our HEVC clip | Yes | Runs in your browser |
@@ -35,12 +37,13 @@ The re-encoded files in our test were close: 43.2 to 45.6 dB. In the frames we c
 
 Only ezgif's Copy original and 123apps' No re-encoding kept every frame identical in our test, with both the H.264 and the HEVC clip. The other three settings re-encoded the video, and ezgif's MP4 option and 123apps' default both turned our HEVC clip into H.264.
 
-![Results table: ezgif Copy original and 123apps No re-encoding kept 100% of frames identical in both test clips, while ezgif MP4, 123apps default settings and Storrito kept 0%, with PSNR between 43.2 and 45.6 dB](./images/trim-video-without-losing-quality/trim-tools-frame-test.webp)
+![Results table: ezgif Copy original, 123apps No re-encoding and the LosslessCut desktop app's default settings kept 100% of frames identical in both test clips, while ezgif MP4, 123apps default settings and Storrito kept 0%, with PSNR between 43.2 and 45.6 dB](./images/trim-video-without-losing-quality/trim-tools-frame-test.webp)
 
 | Tool and setting | Identical frames (H.264, HEVC) | Picture vs. original | File size (H.264, HEVC) | Video in the result |
 | --- | --- | --- | --- | --- |
 | ezgif, Copy original | 100%, 100% | Identical | 15.7 MB, 9.6 MB | Original H.264 and HEVC |
 | 123apps, No re-encoding | 100%, 100% | Identical | 15.7 MB, 9.6 MB | Original H.264 and HEVC |
+| LosslessCut (desktop), default | 100%, 100% | Identical | 15.7 MB, 9.6 MB | Original H.264 and HEVC |
 | ezgif, MP4 (h264/aac) | 0%, 0% | PSNR 45.1 dB, 45.6 dB | 7.1 MB, 6.4 MB | New H.264 for both |
 | 123apps, default (MP4) | 0%, 0% | PSNR 44.7 dB, 45.0 dB | 14.8 MB, 12.3 MB | New H.264 for both |
 | Storrito | 0%, no video | PSNR 43.2 dB | 8.1 MB, 0.3 MB | New H.264, audio only from HEVC |
@@ -90,6 +93,24 @@ The two copy modes dealt with those extra frames differently:
 
 Both copy modes ended two frames (0.08 seconds) after the end point we asked for. If a few extra seconds at the start matter, move your start point later, or accept a re-encoded copy, which started on the exact frame in every test.
 
+## How to trim a video without losing quality in LosslessCut
+
+LosslessCut, a free desktop app for Windows, Mac and Linux, copies the original video with its default settings. We trimmed both test clips in LosslessCut 3.69.0 for Linux on November 9, 2026, and every frame matched the original. Like 123apps, it started each clip at the keyframe before our start point: 12.0 seconds for the H.264 clip and 9.5 seconds for the HEVC clip.
+
+1. Open LosslessCut and drag your video into its window, or choose **File > Open**.
+2. Click **Toggle advanced view** at the bottom left, then type the start and end times into the two time boxes on either side of the play button. You can also play to a point and press **I** for the start and **O** for the end.
+3. Click **Export**. In **Export options**, leave the settings as they are and click **Export** again.
+4. LosslessCut saves the trimmed file next to the original, with the start and end times in its name.
+
+![LosslessCut's advanced export options with Smart cut (experimental) off and Keyframe cut mode on, the defaults, and a side note that keyframe cut mode kept every frame but started at the keyframe before 12.5 seconds, smart cut started at 12.5 seconds but dropped one frame, and turning keyframe cut mode off made the H.264 video start half a second late](./images/trim-video-without-losing-quality/losslesscut-export-options.webp)
+
+Two switches under **Show advanced options** change where the clip starts, and neither gave a perfect result in our test:
+
+- **Smart cut (experimental)**, off by default, started both clips exactly at 12.5 seconds. It re-encoded only the frames up to the next keyframe, 11 frames from the H.264 clip and 13 from the HEVC clip, and copied the rest, so 97.4% and 96.9% of frames matched the original. The re-encoded frames scored 44.6 to 53.2 dB PSNR. But each file was missing one original frame where the re-encoded part meets the copied part. LosslessCut itself warns that smart cut "is experimental and will not work on all files."
+- **Keyframe cut mode** switched off made things worse for our H.264 clip. The sound started at 12.5 seconds, but the video began at the next keyframe, 13.0 seconds, and the first picture Chromium showed was the 13.0-second frame. LosslessCut's note under the switch says keyframe cut "is recommended for most common files."
+
+LosslessCut doesn't upload your video. It opened our HEVC clip with a note that preview playback "may be slow and of low quality, but the final export will be lossless," and the exported file did keep every frame. The app is free from its website and GitHub, and paid in the Microsoft Store and Mac App Store to support the developer. Its website lists Windows 10 and 11, macOS 13 or newer, and Linux, and warns about unofficial download sites.
+
 ## Did Storrito's "no quality loss" trimmer keep the original?
 
 No, not in our test. Storrito's free trimmer at storrito.com/tools/video-trim says that "there is no re-encoding - the original codec is preserved - so quality is identical to the source," and that your video isn't uploaded. The file it saved from our H.264 clip had 0% of frames identical to the original, a PSNR of 43.2 dB and half the original's video bitrate, and its sound had changed from AAC to Opus.
@@ -107,13 +128,13 @@ The trim tools built into phones and computers save a new file, but Apple's, Goo
 - **Windows Photos:** Microsoft's [Photos help page](https://support.microsoft.com/en-us/windows/apps/photos/edit-photos-and-videos-in-windows) has you open the video, select **Trim (Ctrl + E)**, then choose **Save as Copy**, or the option in the drop-down that overwrites the original.
 - **Google Photos on Android:** drag the trim handles and tap **Save**, which saves a copy with your edits, per [Google Photos Help](https://support.google.com/photos/answer/10729480?hl=en).
 
-If you want a desktop app made for copy-mode trimming, [LosslessCut](https://losslesscut.app/) is free from its website and GitHub, and paid in the Microsoft Store and Mac App Store to support the developer. It runs on Windows 10 and 11, macOS 13 or newer, and Linux. We couldn't run desktop apps in this test, so this comes from its website, which also warns about unofficial download sites. The keyframe rule above applies to LosslessCut too.
+If you want a desktop app that copies instead, [LosslessCut](https://losslesscut.app/), covered above, kept every frame of both test clips on our computer.
 
 ## Which method should you use?
 
 - **A short clip under 200 MB that isn't private:** ezgif with **Copy original**. It kept every frame and started where we asked.
 - **A bigger file:** 123apps with **No re-encoding** switched on, and expect the clip to start at the keyframe before your start point.
-- **A private video:** a desktop app keeps the file on your computer. Online trimmers upload it, apart from browser-based ones like Storrito, which didn't keep the original quality in our test.
+- **A private video:** LosslessCut with its default settings. It kept every frame without uploading anything, and like 123apps it starts at the keyframe before your start point.
 - **The exact first frame matters more than a perfect copy:** a re-encoded trim, such as ezgif's **MP4 (h264/aac)**, starts on the frame you pick and stayed close to the original in our test.
 
 If the clip is still too big to send after trimming, our test of how to [compress a video for Discord and email](/posts/compress-video-for-discord-email) shows which settings hit a size limit with the least loss. For an iPhone, Apple's [HEIF and HEVC guide](https://support.apple.com/en-us/116944) says **Settings > Camera > Formats > Most Compatible** records new videos as H.264 instead of HEVC, the same trade-off we covered for [converting HEIC photos to JPG](/posts/convert-heic-to-jpg-free). More free tools we've tested are in our [guide to free image converter and photo tools](/posts/free-image-converter-photo-tools).
@@ -137,5 +158,6 @@ ezgif and 123apps both upload your video to their servers and say they delete it
 - **Test clips:** 60 seconds from [Tears of Steel](https://mango.blender.org/) (CC BY 3.0, Blender Foundation), 1920×800 at 24 frames per second, saved as two files: an H.264 MP4 with a keyframe every second (61.2 MB) and an HEVC MOV with keyframes at scene changes (40.8 MB), both with 192 kbps AAC sound
 - **The trim:** keep 0:12.5 to 0:30.0 (17.5 seconds, 420 frames) in each tool, on November 8, 2026, in Chromium 153 on Linux. Storrito has no time boxes, so we dragged its handles until its display read 12.50 and 30.00
 - **Tools and settings:** ezgif Video cutter with Copy original and with MP4 (h264/aac); 123apps Video Trimmer with default settings (MP4) and with No re-encoding; Storrito Trim a video. Clideo reached its result page, but the download link returned an error in our browser, so it isn't in the results
+- **LosslessCut:** version 3.69.0 for Linux, downloaded from its GitHub releases page, on November 9, 2026. We typed 00:00:12.500 and 00:00:30.000 into its time boxes and exported with the default settings (Keyframe cut mode on), with Smart cut switched on, and, for the H.264 clip, with Keyframe cut mode switched off
 - **Comparison:** we decoded every frame of each result and of the original and compared MD5 checksums of the pictures. For re-encoded files, we matched each result to the original frame by frame and measured PSNR and SSIM (another closeness score, 1.0 = identical; ours were 0.980 to 0.990). Start points come from that matching, and we also opened the H.264 copy-mode files in Chromium to see the first frame it shows
-- **Not tested:** the iPhone, Android, Windows and Mac apps and LosslessCut, which come from the official pages linked above; Storrito in Chrome on Windows or a Mac; files longer than 60 seconds or larger than 61.2 MB
+- **Not tested:** the iPhone, Android, Windows and Mac apps, which come from the official pages linked above; LosslessCut on Windows or a Mac; Storrito in Chrome on Windows or a Mac; files longer than 60 seconds or larger than 61.2 MB

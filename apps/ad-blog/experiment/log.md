@@ -2,6 +2,54 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-10 · 세션 92 (정기 실행, 개선 세션): `siri-history-on-iphone`에 Apple Siri 개인정보 페이지 개정 반영 + 외부 실행 파일 풀림 확인 → `trim-video-without-losing-quality`에 LosslessCut 직접 시험
+
+세션 시각: 2026-11-10 04:15 KST(화) → 04시 실행(01:00~09:59 범위)·화요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(1730e10)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-12 ~ 11-09, 세션 91 이후 바뀐 값만)**
+
+- 노출 1,161 → **1,179**, 클릭 19, CTR 1.6%, 평균 순위 24.1 → 24.2 (글별: `spotify-family-qr-code-verification` 276·18.4위 / `turn-off-ai-in-chrome` 211·20.5위·클릭 4 / `image-to-text-offline-free` 133·16.4위·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 그대로 · 11-02~08 4 (미확정 포함, 노출 212 → 232)
+- sitemap: `rss.xml` 11-06 04:28, `sitemap.xml` 11-06 22:41 UTC 그대로
+- URL 검사: 색인 17/55, 이 회차 `Discovered` 17 · `URL is unknown` 21 (새 글 `trim-video-without-losing-quality`는 unknown), URL 검사 `sitemap` 칸에 `rss.xml`이 있는 글 17편. 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-06 08:36 UTC `image-to-text-offline-free`, 미색인 38편 중 Google이 본 링크 20편 그대로)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 30일/92일(2027-01-11) · 색인율 31%(17/55, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 처리됨. 첫 통합 점검은 11-15(일) 04시 개선 세션
+- 유입 (주 1회 확인, 11-08 결정 기록 후속): GA4 10-14~11-10 세션 18 중 **ChatGPT 7** (`compress-pdf-free` 5·`turn-off-meta-ai-instagram` 2 — 11-08 점검 때 1에서 늘어남), Pinterest 새 유입 없음(11-08 1회 그대로). Cloudflare 28일 조회 133·방문 113, 유입 사이트 direct·google.com 둘뿐 → Pinterest 판단은 11-22쯤(자동 게시 2주)
+
+**고른 작업**: 0번 콘텐츠 정리는 남은 항목이 모두 판정·일정 대기 — 4번 `office-2021-end-of-support`는 '11-10 첫 누락 Patch Tuesday' 뒤인데 세션 시각이 11-09 19:15 UTC라 아직 전(미국 11-10 화 오전 발표), 3·5·6번 V7(11-13) 뒤, 7번 12월, 8번 남은 2편 V1·V2 뒤. 앞 세션 '다음 할 일' 1순위(세션 90부터 밀림)인 Siri 개인정보 개정 반영과, 11-09 권한 허용 뒤 첫 세션이 해야 할 외부 실행 파일 확인 → 풀렸으므로 세션 91이 막혀 문서 기반으로 쓴 LosslessCut을 같은 클립·구간으로 직접 시험. 1(색인)은 새 크롤링 없음, 2는 보류 2건, 3은 허브 4/4, 4는 V 판정 중인 글뿐(세션 90과 같음)
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — point edit 모드(바뀐 사실만 고치고 나머지는 그대로), AI-tell 점검(em dash 0·대조 구문 없음), references/content-refresh.md의 '사실이 바뀐 곳만 갱신'. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| #   | 순서                       | 대상                                | 바꾼 내용                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | 검증 기록                              |
+| --- | -------------------------- | ----------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------- |
+| 1   | 1차 출처 갱신 (세션 90 후속) | `siri-history-on-iphone`            | `source_diff.cjs --slug … --save`로 출처 21개 재확인(2026-11-09 19:2x UTC): 개인정보 3쪽은 11-07판과 같음, 릴리스 노트에 iOS 27.2.1(버그·보안)만 추가. 개인정보 3쪽 09-14판 → 10-26판을 문장 단위로 대조해 반영: ① **기기 전사본 지우기 경로가 'Siri & Dictation History > Delete …' → 'Settings > Siri > Turn Off Siri'**(Improve Siri 페이지도 같음) → 둘째 문단·요약 표·'How to delete Siri & Dictation History' 절을 새 경로 중심으로 다시 쓰고, 옛 버튼은 '있으면 9월까지 Apple이 설명한 버튼, 지금 iOS 27에 있는지 확인하는 Apple 문서 없음'으로 + 문서별 비교 목록, 옛 메뉴 이름(Talk to Siri) 문단 삭제 ② **"Apple stores transcripts … may review a subset" 첫 문장 삭제** → 'The copy … Apple keeps' 절을 기본 저장 3가지(사용 데이터·요청 정보·Search 성격 요청의 질의, 임의 식별자·2년)로, 전사본 저장·검토는 옵트인 때만 ③ 옵트인 이름 'Improve Siri & Apple Intelligence' 추가, 옵트인 수집이 '오디오 표본' → '말하고 입력한 것 전부 + Siri 응답 + 연 링크 + Siri 앱 대화' ④ Siri 앱 대화 동기화 종단 간 암호화("cannot be read by Apple") → Siri 앱 절·FAQ ⑤ Siri 검색 저장(Help Apple Improve Search) → 요약 표 새 행·검색 절·'Which setting' 새 항목. How we checked에 11-07 발견·11-09 재확인 문단. 그림 3장 다시 그림(`charts.py`: 기록 위치 표·문서 비교·보관 기간 라벨/각주), alt 3개 갱신. 제목·설명 그대로, `updatedAt` 2026-11-09T20:00Z. 사실 확인표에 '재확인' 절(바뀐 주장 10행) | - (정확성 갱신, 지표를 노린 변경 아님) |
+| 2   | 반복 일정·측정 보강          | `trim-video-without-losing-quality` | **LosslessCut 3.69.0 Linux 직접 시험** (같은 AppImage SHA-256, `make_clips.sh`로 다시 만든 같은 크기 클립, 같은 구간 0:12.5~0:30.0, Xvfb + xdotool로 GUI 조작): 기본값(Keyframe cut mode 켬) **두 클립 모두 같은 프레임 100%**, 시작 12.0초·9.5초(123apps No re-encoding과 같음), 15.7 MB·9.6 MB / Smart cut(실험) 12.5초 정확히 시작, 재인코딩 11·13프레임(PSNR 44.6~53.2 dB) + 복사, 같은 프레임 97.4%·96.9%, **이음매에서 원본 1프레임 빠짐**(프레임 대응표로 확인) / Keyframe cut mode 끔(H.264) 영상이 다음 키프레임 13.0초부터(소리는 12.5초), Chromium 첫 화면 13.0초. 글: 첫 문단 1문장, 요약 표·결과 표에 LosslessCut 행, 새 절 'How to trim a video without losing quality in LosslessCut'(단계 4개·그림·두 스위치 결과·업로드 없음·HEVC 미리보기 안내 문구·배포처), 기기 절의 '데스크톱 앱 실행 못 함' 문단을 새 절 링크 1문장으로, 'Which method'의 비공개 영상 항목, How we tested에 LosslessCut 줄·Not tested 수정. 그림: 결과 표 그림에 LosslessCut 행, 새 그림 `losslesscut-export-options.webp`(설정 화면 + 설정별 결과). 출처 9개 재확인(ezgif 페이지 소개·FAQ 늘어남, 200MB·1시간·keep 모드 복사 그대로). 제목·설명 그대로, `updatedAt` 2026-11-09T20:30Z. 기록 `tests/…/losslesscut/results.md`·`results.jsonl` 5행·캡처 11장 | - (측정 보강, 발행 2일째 글이라 비교 기준 없음) |
+| 3   | 문서                       | README 인프라 상태 '외부 실행 파일', writing-guide 비교·측정 글 | 외부 실행 파일: **정기 세션에서 실행됨**(권한 허용 반영 확인) → 앱 재측정 8편·Firefox tar 진행 가능, 실행 요령(풀린 폴더의 실행 파일을 `--no-sandbox`로, AppRun은 실패, xdotool은 `apt-get update` 뒤). writing-guide에 '부분 재인코딩 기능은 프레임 대응까지 봄' | - |
+
+- 빌드 HTML 확인: `siri-history-on-iphone` title 56자·description 158자·BlogPosting `dateModified` 2026-11-09T20:00Z·BreadcrumbList·h1 1·h2 13·`<pre>`·`<code>` 0·img 8 / `trim-video-without-losing-quality` title 67자·description 154자·`dateModified` 2026-11-09T20:30Z·h1 1·h2 12·img 9(대표 + 본문 5). **`rss.xml` 맨 앞 두 항목이 두 글이고 피드 20편 집합은 라이브 피드와 같음**(V7 관찰 대상 영향 없음, 두 글 모두 이미 피드 안). lint·type-check·test(37파일 281개)·build 통과, 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `link_audit` 새 문제 없음. `extlink_check.py --slug` 두 글: 이동 각 1건(Apple `guide/…/{ID}` 짧은 주소, 규칙대로 둠)
+
+**알게 된 것**
+
+- **외부 실행 파일 권한이 정기 세션에 적용됨**: 세션 91에서 거부된 같은 AppImage 풀기·실행이 이번에는 거부 없이 됨 (11-09 사용자 요청으로 Claude가 넣은 허용 규칙). LosslessCut(Electron)은 root라 `--no-sandbox`가 필요하고, AppRun은 `$APPDIR`가 비어 실패 → 풀린 폴더의 실행 파일을 직접 실행. Ubuntu 패키지 목록이 비어 있어 `apt-get install xdotool`이 처음엔 "Unable to locate package" → `apt-get update` 먼저
+- **Apple 개인정보 페이지의 '날짜'와 실제 게시일이 다름**: 10-26 날짜판이 10-27 16:00 UTC에는 아직 09-14판이었음 → 페이지 날짜만 보고 '이미 확인했다'고 판단하지 말고 저장 사본과 비교해야 함 (세션 90 `source_diff.cjs`로 찾음)
+- **Apple이 기본 동작 설명에서 '전사본 저장·검토' 문장을 뺌**: 기본 상태는 사용 데이터·요청 정보·Search 질의 저장, 전사본·오디오·Siri 앱 대화는 옵트인 때만. 기기 전사본 지우기 버튼(Delete Siri & Dictation History)도 Apple 문서에서 사라지고 'Siri 끄기'로 바뀜 → Siri 기록 관련 검색어(`delete siri & dictation history`)의 답이 바뀐 시기 (해석)
+- **LosslessCut 기본값은 123apps No re-encoding과 같은 결과**(앞 키프레임부터, 편집 목록 없음), Smart cut은 정확한 시작 대신 이음매 1프레임 손실 — "같은 프레임 97%"만 보면 놓치는 문제라 프레임 대응표가 필요 (writing-guide 반영)
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 30일·색인율 31%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude: **Firefox 160 — 11-10 14:00 UTC 출시 뒤 첫 개선 세션(11-12 목 04시)에서 `turn-off-ai-in-firefox` 재확인** — 외부 실행 파일이 풀렸으므로 Firefox Linux tar로 같은 시나리오를 직접 시험
+- Claude: **V1(11-11)·V2(11-12)·V7(11-13) 판정** — 11-12(목)·11-14(토) 개선 세션. V7 판정 뒤 허브 `free-image-converter-photo-tools` `updatedAt`(세션 91 '영상 자르기' 절 포함, 이번 LosslessCut 결과를 허브 표에 넣을지 함께)과 세션 89 '미발견 15편 갱신거리'(앱 재측정 8편 — 실행 가능 확인됨)
+- Claude: **콘텐츠 정리 4번 `office-2021-end-of-support` — 11-10 Patch Tuesday 발표 뒤(11-12 목 세션부터)** 전환 가능. 3·5·6번은 V7(11-13) 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1(11-11)·V2(11-12) 판정 뒤
+- Claude: 같은 Apple 개인정보 페이지를 인용한 `ios-27-2-siri-ai-memory`(칼럼, 피드 안)는 `source_diff.cjs --slug ios-27-2-siri-ai-memory`로 확인 뒤 반영, `turn-off-apple-intelligence-iphone`은 121115 기기 목록(iPad mini A20 Pro 추가)을 글이 쓰는지 확인 (세션 90 그대로)
+- Claude(11-11 수 일반 세션): 후보 `dia browser ai privacy`·`make pdf searchable free`(NAPS2 실행 가능)·`convert mov to mp4 without losing quality`(세션 91 파생, 웹 도구·LosslessCut으로 시험 가능)·backlog 15번 무료 오프라인 TTS. 영향 뉴스 칼럼은 이번 주(11-09~15) 아직 없음
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵 (세션 85 그대로). Pinterest 유입 판단 11-22쯤
+- Claude: 발행 55편 (허브 4개)
+- 대시보드: `stats` 10개 + `history` 10개 batch 성공(회차 2026-11-09T20:14:24Z, DB 문서 520개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값은 갱신 시각만(새 색인·크롤링 없음). 이 회차 28일 노출 1,181·클릭 19·평균 24.2위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 38편 중 Google이 본 링크 20편·`inFeed` 15(미색인 12, URL 검사 값의 회차별 흔들림), `summary.adsense` 운영 30일·색인율 0.309(17/55)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회 133·방문 113, `engagement` GA4 조회 21·사용자 14·세션 18(참여 7)·참여 189초·90% 스크롤 9, `summary.userTodos` 0건. `posts` 문서 압축 JSON 약 123 KiB(한도 256 KiB의 48%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-09 · 결정: 사용자가 직접 올리는 홍보 안 함 + Pinterest 핀 20개 확인 (사용자)
 
 사용자: "할 일에서 내가 직접 글올리는건 안할거야" / "핀터레스트에는 20개 핀이 있어. 새 글은 아직 핀이 등록되지 않은 상태"

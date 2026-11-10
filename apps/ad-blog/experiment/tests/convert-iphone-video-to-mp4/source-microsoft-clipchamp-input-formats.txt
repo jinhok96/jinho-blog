@@ -1,0 +1,68 @@
+# 가져온 시각: 2026-11-10T21:08:53.465Z
+# 원본: https://support.microsoft.com/en-us/topic/what-input-file-types-does-clipchamp-support-e33cc85b-6683-4c68-a7a7-196552005981
+Video file formats supported by Clipchamp | Microsoft Support
+https://support.microsoft.com/en-us/clipchamp/video-file-formats-supported-by-clipchamp
+
+Video file formats supported by Clipchamp
+Applies To
+Clipchamp for personal accounts Clipchamp for work accounts
+Get help with Copilot
+Tell me about video file formats supported by Clipchamp.
+Tell me about am I seeing an unsupported file type error?.
+How can I resolve unsupported file type errors?
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+In the Microsoft Clipchamp video editor, you can add almost any type of video, image, or audio file to a project.
+
+These lists are not exhaustive and only list the common or recommended files supported by Cliphchamp. If you're not sure if your input file is supported, simply add it, and see if Clipchamp is able to recognize it.
+
+Video file formats supported by Clipchamp
+
+Our video editor will accept MP4, MOV, WEBM, AVI, DIVX, 3GP, WMV, VOB, and MKV video container files, as well as a wide variety of video codecs. Some of these file types are getting automatically converted before they can be used in your project so you may have to wait longer for affected files to load.
+
+Best video formats for Clipchamp
+
+To start working with your files faster (without waiting for conversion), we recommend adding the following types of supported videos to your projects.
+
+.mp4 (MPEG-4)
+.webm
+Audio file formats supported by Clipchamp
+
+You can add many types of audio files to a video editing project. Some will go through an automatic conversion step after you add them to ensure you can work with them.
+
+Best audio formats for Clipchamp
+
+To start working with your files faster (without waiting for conversion), we recommend adding the following types of supported audio formats to your projects.
+
+.mp3
+.wav
+.m4a
+.ogg
+.opus
+.flac
+Image file formats supported by Clipchamp
+
+Clipchamp currently supports the following image file types.
+
+.jpeg, .jpg
+.png
+.tiff, .tif
+.bmp (Windows bitmap)
+.gif
+.svg
+.webp
+How to resolve unsupported file type errors
+
+If your file format is listed above but you're nevertheless seeing an "unsupported file type" error, it's possible that the media file you're trying to add is corrupted and needs repairing before it can get used in Clipchamp.
+
+Consider obtaining the affected file again from its source or convert the file outside of Clipchamp and then add the resulting new file version to your editing project.
+
+For more information and troubleshooting suggestions, see this related help article: Why am I seeing an unsupported file type error⁠?⁠
+
+Output file types
+
+See this help article to learn more about the output resolutions and format that Clipchamp offers.
+
+Still need help?
+
+Contact Clipchamp Support.

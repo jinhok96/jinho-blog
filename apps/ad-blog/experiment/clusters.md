@@ -12,7 +12,7 @@
 | ID | 클러스터 | 우선순위 | 허브 | 상시 글 | 뉴스 칼럼 |
 | --- | --- | --- | --- | --- | --- |
 | `ai-settings` | AI 기능 설정·개인정보 (끄기·옵트아웃·AI 이미지 판별) | 1 | `turn-off-ai-features` | `turn-off-ai-in-chrome` `check-if-image-is-ai-generated` `gemini-gems-to-skills` `turn-off-gemini-in-gmail` `turn-off-copilot-in-word` `turn-off-apple-intelligence-iphone` `turn-off-ai-in-windows-11` `turn-off-meta-ai-instagram` `remove-phone-number-from-google-account` `turn-off-gemini-apps-activity` `siri-history-on-iphone` `turn-off-ai-in-firefox` `chrome-autofill-settings` `turn-off-copilot-in-edge` `duckduckgo-no-ai` `turn-off-ai-in-brave` `turn-off-gemini-on-android-phone` | `gemini-free-flash-lite` `gemini-android-auto-personal-intelligence` `chrome-http-warning-default` `gemini-connected-apps` `google-gmail-photos-ads` `arc-browser-shutting-down` `ios-27-2-siri-ai-memory` |
-| `photo-video` | 무료 사진·영상 도구 (변환·압축·배경·메타데이터) | 2 | `free-image-converter-photo-tools` | `convert-heic-to-jpg-free` `convert-webp-to-jpg-free` `compress-image-to-100kb` `remove-bg-alternative-free` `remove-metadata-from-photos` `compress-video-for-discord-email` `trim-video-without-losing-quality` | - |
+| `photo-video` | 무료 사진·영상 도구 (변환·압축·배경·메타데이터) | 2 | `free-image-converter-photo-tools` | `convert-heic-to-jpg-free` `convert-webp-to-jpg-free` `compress-image-to-100kb` `remove-bg-alternative-free` `remove-metadata-from-photos` `compress-video-for-discord-email` `trim-video-without-losing-quality` `convert-iphone-video-to-mp4` | - |
 | `pdf` | 무료 PDF 도구 | 3 | `best-free-pdf-tools` | `split-pdf-free` `merge-pdf-files-free` `jpg-to-pdf-free` `pdf-to-jpg-free` `pdf-to-word-free` `compress-pdf-free` | - |
 | `offline-ai` | 무료 오프라인 AI 도구 | 4 | `free-offline-ai-tools` | `transcribe-audio-offline-free` `image-to-text-offline-free` | - |
 | `windows-microsoft` | Windows·Microsoft 365 변경 대응 | 5 | - | `windows-10-esu-extended` | `windows-11-24h2-end-of-support` `office-2021-end-of-support` `microsoft-365-family-storage-2tb` `apple-mail-exchange-not-syncing` `customize-right-click-menu-windows-11` |
@@ -33,7 +33,7 @@ content-strategy 우선순위 매트릭스(경쟁 × 사업 가치)에 우리 Se
 
 ## 규칙
 
-- **새 글**: 발행 전 클러스터를 정함. 일반 세션(월·수·금, 2026-11-01. 2026-11-08부터 04시 실행)은 우선순위 1·2 클러스터의 [backlog.md](backlog.md#클러스터-공백-후보) 공백 후보를 먼저 씀. 어느 클러스터에도 속하지 않는 주제는 같은 클러스터로 이어질 상시 글 3편을 backlog에 함께 적을 수 있을 때만 새 클러스터로 시작
+- **새 글**: 발행 전 클러스터를 정함. 일반 세션(월·수·금, 2026-11-01. 2026-11-11부터 02시 실행)은 우선순위 1·2 클러스터의 [backlog.md](backlog.md#클러스터-공백-후보) 공백 후보를 먼저 씀. 어느 클러스터에도 속하지 않는 주제는 같은 클러스터로 이어질 상시 글 3편을 backlog에 함께 적을 수 있을 때만 새 클러스터로 시작
 - **허브**: 상시 글이 3편 모이면 개선 세션에서 허브를 씀 ([traffic-playbook.md](traffic-playbook.md) 3번). 허브를 만들면 이 표의 `허브` 칸을 채우고, 허브 글 frontmatter에 `hub: true`(홈 상단 고정, 2026-10-24)를 넣고, 상시 글마다 허브로 링크 1개 추가
 - **내부 링크** (internal-linking 허브·스포크 모델)
   - 허브 → 클러스터의 모든 상시 글

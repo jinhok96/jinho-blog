@@ -1,0 +1,72 @@
+# 가져온 시각: 2026-11-10T19:37:54.569Z
+# 원본: https://support.apple.com/en-us/120267
+Transfer photos from your iPhone or iPad - Apple Support
+https://support.apple.com/en-us/120267
+
+Transfer photos and videos from your iPhone or iPad to your Mac or PC
+
+With the Photos app and a USB cable, you can transfer photos and videos to your computer. You can also make your photos available on all your devices with iCloud Photos.
+
+Use iCloud Photos
+
+Import to your Mac
+
+Import to your Windows PC
+
+Use iCloud Photos
+
+iCloud Photos keeps your photos and videos safe, up to date, and available automatically on all of your Apple devices, on iCloud.com, and even on your PC. When you use iCloud Photos, you don't need to import photos from one device to another. iCloud Photos always uploads and stores your original, full-resolution photos. You can keep full-resolution originals on each of your devices, or save space with device-optimized versions instead. Learn how to set up and use iCloud Photos.
+
+The photos and videos that you keep in iCloud Photos use your iCloud storage. Before you turn on iCloud Photos, make sure that you have enough space in iCloud to store your entire collection. You can see how much space you need and then upgrade your storage plan if necessary.
+
+Import to your Mac
+
+If you use iCloud Photos, your photos automatically sync to your Mac. If you don’t use iCloud Photos or your iCloud storage is full, connect your device to your Mac to import photos and videos:
+
+Connect your iPhone or iPad to your Mac with a USB cable.
+
+If you see a prompt to allow your accessory to connect to your computer, click Allow.
+
+Open the Photos app on your computer.
+
+The Photos app shows an Import screen with all the photos and videos that are on your connected device. If the Import screen doesn't automatically appear, click the device's name in the Photos sidebar.
+
+If asked, unlock your iPhone or iPad using your passcode. If a prompt appears on your iPhone or iPad asking you to Trust This Computer, tap Trust to continue.
+
+Choose where you want to import your photos. Next to Album, you can choose an existing album or create a new one.
+
+Select the photos you want to import and click Import Selected, or click Import All New Items.
+
+Wait for the process to finish, then disconnect your device from your Mac.
+
+Import to your Windows PC
+
+Install the Apple Devices app from the Microsoft Store.
+
+Connect your iPhone or iPad to your PC with a USB cable.
+
+If asked, unlock your iPhone or iPad using your passcode.
+
+If you see a prompt on your iPhone or iPad device asking you to Trust This Computer, tap Trust or Allow to continue.
+
+Visit Microsoft's website to learn how to import photos to the Microsoft Photos app in Windows.
+
+If you have iCloud Photos turned on, you must download the original, full resolution versions of your photos to your iPhone or iPad before you import to your PC.
+
+To ensure that photos from your iPhone or iPad have the best compatibility with Windows:
+
+On your iPhone or iPad, open the Settings app.
+
+Tap Camera, then tap Formats.
+
+Tap Most Compatible. From now on, your camera will capture photos and videos in JPEG and H.264 formats.
+
+More ways to transfer photos and videos
+
+Use AirDrop to quickly send photos and videos to your Mac.
+
+Import your images directly to a folder on your Mac with Image Capture.
+
+Information about products not manufactured by Apple, or independent websites not controlled or tested by Apple, is provided without recommendation or endorsement. Apple assumes no responsibility with regard to the selection, performance, or use of third-party websites or products. Apple makes no representations regarding third-party website accuracy or reliability. Contact the vendor for additional information.
+
+Published Date: September 14, 2026

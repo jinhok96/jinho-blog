@@ -1,0 +1,83 @@
+# 가져온 시각: 2026-11-10T21:07:27.236Z
+# 원본: https://losslesscut.app/
+LosslessCut – Official Download | Free Lossless Video Cutter
+https://losslesscut.app/
+
+Thousands of happy users
+I've been looking a long time for a program like LosslessCut
+You just saved my butt and kept me from missing a pretty important deadline over a stupid mistake. THANK YOU.
+Before using this I had just spent 45 minutes exporting 1.5 seconds of video using my usual video editor, this did the whole thing in less than a second.
+I use your program LosslessCut frequently and am amazed by how fast and simple it works, especially that everything really works without loss.
+Thanks for your work on LosslessCut. I have years of personal video to cut through, and this is going to be a huge timesaver.
+Great work! LosslessCut saves me a lot of time due to usability and good performance.
+LosslessCut saved my day from endless FFmpeg trim commands, thank you and keep up the good work!
+In Chinese, the word "Lossless" (pronounced like "Lao-Si-Le-Si") sounds incredibly similar to the luxury car brand "Rolls-Royce" ("Lao-Si-Lai-Si"). I think this is a beautiful coincidence because this software truly is the Rolls-Royce of the video-cutting world — smooth, premium, pure, and absolutely perfect.
+Show all reviewsShow less
+Traditional video editors
+
+Any operation in a normal video editor
+requires you to re-encode the whole file
+which can take hours and you will
+gradually lose quality every time a file is processed.
+
+
+LosslessCut.app
+
+LosslessCut will do the same in seconds without losing quality
+
+LosslessCut simply cuts the data stream and directly copies it over.
+
+Tears of Steel (CC) Blender Foundation | mango.blender.org
+
+Built in track info and selection
+Features
+Cut and trim video and audio losslessly, in seconds
+Merge cut segments, or whole files with identical codecs, losslessly
+Add, remove, replace or extract tracks: audio, subtitles and more
+Change the format (remux), for example from MKV to MP4, without re-encoding
+Segments, markers and tags, with import/export of chapters, CSV, EDL and more
+Detect scenes, black frames and silence, and split by them
+Edit metadata and rotation, and create chapters
+Opens almost any format, even ones your player can't play
+Snapshots and frame export, keyboard shortcuts, a CLI and an HTTP API
+Example use cases
+Cut out commercials from a recorded TV show (and change it from TS to MP4)
+Extract the music track from a video and cut it to your needs
+Add music to a video, or replace its audio track
+Join clips from the same camera or phone into one file
+Cut a file by its MP4/MKV chapters
+
+Which functions are available depends on the file and its format and codecs. Lossless cuts can only start at a keyframe, so a cut starts at the keyframe before your cut point, a fraction of a second up to several seconds earlier depending on the encoding.
+
+See all features and use cases
+LosslessCut
+
+Tears of Steel (CC) Blender Foundation | mango.blender.org
+
+Lightning Fast! It's like Magic
+
+I believe software should be available to everyone, and LosslessCut will always be free for anyone to use and look at the code.
+
+If LosslessCut brings you value, please consider supporting my continued work by purchasing it from your favorite store, or support me by donating.
+
+Latest version 3.70.2 (October 28, 2026)
+Windows 10 and 11, macOS 13 or newer, Linux
+Is it safe?
+
+⚠️ Beware of unofficial websites and app distributors. The only official sources of LosslessCut are this website, GitHub and the app stores above.
+
+FAQ
+
+Why is it not free on the App Stores but free on GitHub?
+
+I initially only released LosslessCut as a direct download from GitHub, as an unsigned/untrusted exe/binary file download. People were complaining that it's hard to download/install the unsigned exe file, as they need to go through these dialogs saying that this file is a threat to your computer, and anti-virus complaining about executables downloaded from the internet. Some wanted a way to automatically update the app when new versions are out. This can both be achieved by downloading through the MS and Apple App Store. Microsoft charges money for signing binaries and a yearly fee for publishing to the Microsoft Store. Therefore I decided I can sell it in the MS Store for those who want to support my continued work and want to have the benefits it gives, while at the same time providing more experimental unsigned downloads as usual. Of course anyone is also free to build LosslessCut from source code.
+
+Is LosslessCut safe?
+
+Yes, if you get it from this website, GitHub or the app stores. It's open source, and it has no ads or tracking (see the privacy policy).
+
+Which operating systems does it run on?
+
+Windows 10 and 11, macOS 13 or newer, Linux. See supported OS versions.
+
+More FAQ...

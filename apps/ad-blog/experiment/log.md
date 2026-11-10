@@ -2,6 +2,68 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-11 · 결정: 정기 실행 시각 02시 (사용자 요청)
+
+세션 93 진행 중 사용자 요청: "루틴 실행시간 새벽 4시에서 새벽 2시로 바꿀거니까 반영해줘. 루틴 시간은 내가 바꿔놓을테니 문서 반영 및 배포만 알아서 잘 하면 돼".
+
+- 정기 실행: 매일 **02:00 한국 시간** 1회 (cron `CRON_TZ=Asia/Seoul 0 2 * * *`). 루틴 시각은 사용자가 claude.ai Routines 화면에서 바꿈 (정기 세션에는 루틴을 고치는 도구가 없음)
+- 세션 유형 시각 범위: **00:00~07:59 시작 = 02시 실행**, 그날(한국 날짜) 요일로 월·수·금 일반 / 화·목·토·일 개선. 범위 밖(수동 실행 등)은 개선 세션. 이전 04시 실행(11-08~11-10)은 01:00~09:59
+- 루틴에 들어 있는 11-08 판 프롬프트의 '01:00~09:59 시작은 04시 실행' 규칙도 02시대 시작을 같은 날 정기 세션으로 세므로 바로 바꾸지 않아도 동작은 같음 → [routine-prompt.md](routine-prompt.md)를 02시 판으로 고쳐 두되 교체는 선택 (사용자 할 일에 올리지 않음)
+- 바꾼 문서: README 결정사항 '정기 실행'(결정일 2026-11-11)·발행 속도·세션 워크플로우 3번·주간 SEO 점검·인프라 상태 '정기 실행', clusters.md 규칙, backlog.md 공백 후보 머리말, routine-prompt.md(일정·시각 범위), writing-guide 발행 후 개선(남아 있던 '월·수·금 00시' 표기도 함께 정리). 다음 세션이 시작 시각(02시대인지)을 log.md에 적어 바뀐 일정이 적용됐는지 확인
+
+## 2026-11-11 · 세션 93 (정기 실행, 일반 세션): iPhone 영상을 MP4로 — 무료 변환 도구 5개·7가지 설정을 프레임·소리·회전·날짜까지 대조
+
+세션 시각: 2026-11-11 04:18 KST(수) → 04시 실행(01:00~09:59 범위)·수요일이라 일반 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(65182a6)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 완료. 지난 주(11-02~11-08)·이번 주(11-09~) 뉴스 칼럼이 없었지만 영향이 오래 가는 뉴스 후보가 없어 상시 글 (아래 선정 근거).
+
+**지표 (`gsc_report.py`, 2026-10-13 ~ 11-10, 세션 92 이후 바뀐 값만)**
+
+- 노출 1,179 → **1,191**, 클릭 19 → 18(28일 창 이동), CTR 1.5%, 평균 순위 24.2 → 24.7 (글별: `spotify-family-qr-code-verification` 276·18.4위 / `turn-off-ai-in-chrome` 218·24.1위·클릭 4 / `image-to-text-offline-free` 133·16.4위·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → **11-02~08 4 (확정, 노출 232)** · 11-09~15 0 (미확정 포함, 노출 29)
+- sitemap: `rss.xml` 11-06 04:28, `sitemap.xml` 11-06 22:41 UTC 그대로
+- URL 검사: 색인 17/55 그대로, 이 회차 `Discovered` 17 · `URL is unknown` 21. 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-06 08:36 UTC `image-to-text-offline-free`, 미색인 38편 중 Google이 본 링크 20편 그대로)
+- 성과 검증: 판단 시점이 지난 행 없음 (V1 11-11, V2 11-12, V7 11-13, V3 11-18, V4·V5 11-22, V6 11-26, V8 12-03 — 세션 시각 11-10 19:18 UTC 기준) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 31일/92일(2027-01-11) · 색인율 31%(17/55, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 처리됨. 첫 통합 점검은 11-15(일) 02시 개선 세션(11-11 결정으로 04시 → 02시)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `convert-iphone-video-to-mp4` | `software` | `photo-video` 상시 글 (검색형) | iPhone 기본 형식을 흉내 낸 HEVC .mov(세션 91과 같은 Tears of Steel 클립 MD5 + 촬영 시각·Apple 날짜·위치 태그, 세로 회전 표시 −90° 20초 사본)를 **LosslessCut 3.69.0(mp4 기본·Preserve all metadata), VLC 3.0.20(기본 프로필·Keep original), HandBrake 1.7.2(Fast 1080p30), CloudConvert(기본), 123apps Video Converter(기본)**로 변환해 프레임 MD5·프레임을 맞춘 밝기 PSNR·소리 코덱과 Chromium 소리 디코딩·프레임 수·회전 행렬·태그를 원본과 대조. 결과: **LosslessCut만 같은 프레임 100%**(기본은 촬영 시각만, 스위치를 켜면 Apple 날짜·위치까지. 0.14초), VLC Keep original은 1,437/1,440(원본 2번째·끝 2프레임 빠짐)·날짜를 변환 시각으로, **VLC 기본 프로필은 소리를 MP2로 저장해 Chromium 153에서 무음 + 세로 영상을 좌우 반전 행렬로 저장**, **HandBrake 기본 프리셋은 세로 영상 1,920줄을 1,080줄로 줄임**(1920×1080 한도를 방향 구분 없이 — 1.11.2 소스도 같음, 2160p 4K 한도로 바꾸면 그대로), 123apps는 24 → 25fps(1초마다 1프레임 반복), CloudConvert 기본 H.264 CRF 23·AAC 128·무료 하루 10크레딧. 재인코딩 화질 42.0~43.4 dB. iPhone·Mac·Windows 내장 방법(Most Compatible·Keep Originals·QuickTime은 .mov만·Clipchamp 30fps)은 1차 출처 기반 |
+
+- 선정 근거: 세션 91·92 '다음 할 일' 후보 4개(`dia browser ai privacy`·`make pdf searchable free`·`convert mov to mp4 without losing quality`·backlog 15번 TTS) 중 우선순위 2 클러스터 `photo-video`이고 직접 측정이 되는 MOV → MP4. `ai-settings` 끄기 글이 17편이라 측정 글로 균형(세션 91 판단 그대로). `demand_check.py discover`: Google 블로그 11-10 'Gemini Intelligence' 기기 확대(기능 추가, `turn off gemini intelligence` 자동완성 없음)·CISA Chromium 악용 취약점(행동이 '업데이트' 한 줄)·Pixel Drop → 영향이 오래 가는 뉴스 칼럼 후보 없음. 자동완성: `convert iphone video to mp4` 3곳·하위 18개, `convert mov to mp4` 20개(`mac`·`on iphone` 3곳, `without losing quality` Bing·YouTube). Trends 3개월: `mov to mp4` 2.1 · `convert mov to mp4` 0.3 · `convert iphone video to mp4` 0.0(기준 `remove background` 34.3). 상위 결과(WebSearch)는 변환기 업체 홍보 글·복제 스팸·Penn State 2017 → 결과 파일을 원본과 비교한 곳 없음. 콘텐츠 정리 목록과 겹치지 않음
+- 주 검색어: `convert iphone video to mp4`(자동완성 3곳 중 가장 구체적). 제목 `Convert iPhone Video to MP4 With Every Frame Intact`(51자, `Without …`는 이미 2편이라 피함), 설명 158자, slug는 주 검색어 그대로
+- 1차 출처(Chromium 렌더링, `# 가져온 시각`·`# 원본` 머리말): Apple 116944·120267·QuickTime Player 설명서 2쪽, HandBrake 공식 프리셋·빠른 시작, LosslessCut 사이트, CloudConvert MOV→MP4·요금, 123apps, Microsoft Clipchamp 2쪽 → `tests/convert-iphone-video-to-mp4/source-*.txt`. Microsoft Store HEVC Video Extensions는 렌더링 본문이 제목뿐이라 JSON-LD 발췌(`store-hevc-video-extensions-jsonld.txt`, $0.99), HandBrake 프리셋 값·크기 계산 함수 비교는 `handbrake-preset-fast1080p30.txt`
+- 쓰지 않은 것: CloudConvert **Copy (no re-encoding)** 결과(기본값 변환 뒤 무료 하루 크레딧 소진 → 메뉴 화면만), 실제 iPhone 촬영본(HDR·Dolby Vision·4K·60fps·가변 프레임 속도), HandBrake 1.11.2·VLC 3.0.24·Windows/Mac판 실행, 변환 속도 비교(대표 이미지 생성과 CPU 공유), VLC Keep original이 바꾼 `hvc1` → `hev1` 표기(Apple 문서는 'SHOULD'만이라 독자 영향 단정 불가 → 사실 확인표에만)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 149509579, 63.7분: 살구색 배경 + 청록 휴대폰 화면에서 재생 버튼 타일이 떠올라 열린 사각 상자 쪽으로, 왼쪽 닫힌 둥근 상자·뒤 노트북, `hero-image.md`. 같은 장면 첫 시도는 63분째 메모리 부족으로 종료) + 본문 6장(결과 표 그래픽, LosslessCut 내보내기 설정 + 주석, HandBrake 세로 영상 1080p vs 4K 한도 비교, CloudConvert 옵션·코덱 목록 + 주석, VLC 프로필 소리 탭·Keep original, VLC 세로 영상 좌우 반전 비교. `charts.py` 라이트 모드). 영상 프레임은 CC BY 표기
+- 내부 링크: 새 글 → 허브 `free-image-converter-photo-tools`, `trim-video-without-losing-quality`, `compress-video-for-discord-email`, `convert-heic-to-jpg-free`(색인됨) (4개). 역링크 3개: 색인된 `convert-heic-to-jpg-free` 'How to stop your iPhone from saving HEIC' 문단 1문장(문단 링크 1 → 2개) · 허브 요약 표 행 · `compress-video-for-discord-email` 'Which one should you use?' 목록 1줄. **세 글 모두 `updatedAt`은 바꾸지 않음** (V7 판정 11-13 전 RSS 피드 20편 구성 유지)
+- 점검: 저장소 `seo-audit` 스킬 On-Page(제목 51자·H1 일치·주 검색어 첫 문장, 설명 162 → 158자로 줄임·주 검색어 포함, H2 10개·FAQ H3 2개(`can i just rename mov to mp4`·`mov vs mp4 quality` 자동완성), 첫 소제목 전 206단어, 이미지 alt 7장·WebP·의미 있는 파일 이름, 앵커 설명형, em dash 0·백틱 0). `extlink_check.py --slug` 고유 URL 12개 중 이동 1(Clipchamp 주제 ID 주소 → 최종 주소로 교체). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 63자(접미사 포함)·description 158자, BlogPosting(author ToolProof, 발행 2026-11-10T21:46:00Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 11개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지 + 본문 이미지 6장(모두 alt), og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap·`rss.xml`(맨 앞, 피드 20편에서 바뀐 것은 새 글 1편뿐 — V7 관찰 영향 없음) 포함
+- lint·type-check·test(38파일 309개)·build 통과. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `keyword_trends.py`: `convert iphone video to mp4` 0.02(롱테일)
+
+**알게 된 것**
+
+- **대표 이미지 생성 중 메모리 부족으로 생성이 강제 종료됨**: 첫 생성(19:36 UTC 시작)이 63분째 VAE 단계에서 cgroup OOM으로 kill — 같은 때 돌린 `align_psnr.py` 첫 판이 원본 1,440프레임(1920×800)을 float32로 한꺼번에 올림(약 9 GB). sd-cli 상주 약 10 GB + 측정이 15 GB 한도를 넘음 → 스트리밍으로 고치고 20:41 재시작. writing-guide 이미지 절에 규칙 추가
+- **"MP3"라는 VLC 기본 MP4 프로필이 MP2 소리를 저장**: VLC 3.0.20(Linux) `Video - H.264 + MP3 (MP4)`의 Audio codec `MPEG Audio`가 MP2로 나와 Chromium 153에서 소리 디코딩 0 B. 같은 프로필이 세로 영상의 회전 행렬을 [0 1; 1 0](회전 + 좌우 반전)으로 저장해 Chromium·ffmpeg 모두 좌우 반전으로 재생 — ffprobe `rotation` 값(−90)은 원본과 같아 각도만 보면 놓침 → 행렬 전체를 봐야 함 (writing-guide 비교·측정 글)
+- **HandBrake 기본 프리셋의 1080p 한도는 세로 영상의 높이에 걸림**: Fast 1080p30 최대 1920×1080을 방향 구분 없이 적용 → 800×1920 세로 영상이 800×1080(SAR 9:16)으로 저장. GitHub master의 `hb_set_anamorphic_size2()`가 1.7.2와 글자 하나까지 같고 프리셋 값도 같아 현재 1.11.2에도 같은 동작으로 봄(실행은 안 함). **Passthru Common Metadata를 켜 둬도 촬영 시각이 변환 시각으로 바뀜**
+- **LosslessCut 'Preserve all MP4/MOV metadata'를 켜면 .mp4의 내부 표기(major brand)가 원본 `qt` 그대로**: 기본값은 `isom`. 재생 영향은 확인 못 함(HEVC라 Chromium 재생 불가) → 글에는 쓰지 않음
+- CloudConvert 무료는 'conversion credits' 하루 10개 — 1분짜리 1080p 영상 변환 몇 번에 소진(정확한 크레딧 계산은 요금 페이지에 없음). 123apps 변환기는 24fps를 25fps로 바꿈(트리머 시험 세션 91에서는 못 본 동작)
+- 측정 보조: 프레임이 빠진 결과는 출력 n번 ↔ 원본 n번 PSNR이 27 dB대로 잘못 낮게 나옴(세션 92 Smart cut과 같은 함정) → 프레임마다 원본 짝을 찾는 `align_psnr.py`로 41.97 dB. 정지 장면에서는 축소판 짝 찾기가 1~2프레임 틀릴 수 있어 프레임 수는 ffprobe·framemd5로
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 31일·색인율 31%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude: **V1(11-11)·V2(11-12)·V7(11-13) 판정** — 11-12(목)·11-14(토) 개선 세션. V7 판정 뒤 허브 `free-image-converter-photo-tools` `updatedAt`(세션 91 '영상 자르기' 절 + 세션 92 LosslessCut + 이번 'iPhone video to MP4' 표 행을 절로 정리, 허브 표의 CloudConvert '10 conversions a day' → 요금 페이지 표기 'conversion credits'로)과 세션 89 '미발견 15편 갱신거리'
+- Claude: **Firefox 160 — 11-12 목 02시 개선 세션에서 `turn-off-ai-in-firefox` 재확인** (세션 92 그대로)
+- Claude: **콘텐츠 정리 4번 `office-2021-end-of-support`·5번 `windows-11-24h2-end-of-support` — 11-10 Patch Tuesday 뒤(11-12 목 세션부터)** 전환 가능. 3·6번은 V7(11-13) 뒤, 7번은 12월 일정 뒤, 8번 남은 2편은 V1·V2 판정 뒤
+- Claude: 새 글 후속 — HandBrake 1.11.2·VLC 3.0.24를 받을 수 있으면 세로 영상·MP2 소리를 다시 시험(`app_versions.py`가 본문의 `HandBrake 1.7.2`·`VLC 3.0.20`을 읽음), CloudConvert Copy (no re-encoding)는 크레딧이 남은 날 시험해 같은 글 보강
+- Claude(11-13 금 일반 세션): 후보 `dia browser ai privacy`·`make pdf searchable free`(NAPS2 실행 가능)·backlog 15번 무료 오프라인 TTS·이번 파생 `convert iphone hdr video to sdr`(수요 확인 전). 영향 뉴스 칼럼은 이번 주(11-09~15) 아직 없음
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤
+- Claude: 발행 56편 (허브 4개)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-10T21:57:49Z, DB 문서 570개 — 11-10 대시보드 개편으로 문서가 `vitals`·`audience`·`sources` 3개 늘어 회차당 26개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값은 새 글 항목만 추가. 이 회차 28일 노출 1,198·클릭 18·평균 24.8위, `summary.crawl` 가장 최근 크롤링 11-06 08:36·미색인 39편 중 Google이 본 링크 20편·`inFeed` 17(미색인 13), `summary.adsense` 운영 31일·색인율 0.304(17/56, 새 글이 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회 110·방문 106, `engagement` GA4 조회 11·사용자 9·세션 11(참여 5)·참여 139초, `summary.userTodos` 0건. `posts` 문서 압축 JSON 약 122 KiB(한도 256 KiB의 48%). 회차당 26개면 DB 25,000개 한도까지 약 2년 반(하루 1회). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-10 · 세션 92 (정기 실행, 개선 세션): `siri-history-on-iphone`에 Apple Siri 개인정보 페이지 개정 반영 + 외부 실행 파일 풀림 확인 → `trim-video-without-losing-quality`에 LosslessCut 직접 시험
 
 세션 시각: 2026-11-10 04:15 KST(화) → 04시 실행(01:00~09:59 범위)·화요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(1730e10)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

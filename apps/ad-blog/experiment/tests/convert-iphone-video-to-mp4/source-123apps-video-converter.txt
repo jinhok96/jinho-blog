@@ -1,0 +1,362 @@
+# 가져온 시각: 2026-11-10T21:07:20.189Z
+# 원본: https://video-converter.com/
+Online Video Converter - Convert Video to MP4, AVI, MPEG, FLV, 3GP, MKV, h264 or h265
+https://video-converter.com/
+
+Video
+Video Editor
+Screen Recorder
+Text to speech
+Merge Videos
+Trim Video
+Add Audio to Video
+Add Image to Video
+Add Text to Video
+Remove Logo from Video
+Crop Video
+Rotate Video
+Flip video
+Resize Video
+Loop Video
+Change Video Volume
+Change Video Speed
+Stabilize Video
+Video Recorder
+Audio
+Trim Audio
+Change Volume
+Change Speed
+Change Pitch
+Equalizer
+Reverse Audio
+Voice Recorder
+Audio Joiner
+PDF
+Convert from PDF
+PDF to Word
+PDF to Excel
+PDF to JPG
+PDF to PNG
+PDF to HTML
+Convert to PDF
+Word to PDF
+JPG to PDF
+Excel to PDF
+PPT to PDF
+PNG to PDF
+Split
+Merge
+Compress
+Unlock
+Protect
+Rotate
+Add Page Numbers
+Converters
+Audio Converter
+Video Converter
+Image Converter
+Document Converter
+Font Converter
+Archive Converter
+Ebook Converter
+Archive Extractor
+EN
+Sign In
+Video Converter
+online
+	
+Discover more
+Video Converter Service
+Video Editing Software
+Screen Recording Tool
+Audio Converter Tool
+Video Merger Tool
+Compare TVs
+Binge Hit Series
+(adsbygoogle = window.adsbygoogle || []).push({ });
+Remove Ads
+(adsbygoogle = window.adsbygoogle || []).push({ });
+	
+1
+Choose File
+Cancel
+or
+Google Drive
+Dropbox
+URL
+2
+Video
+Audio
+mp4
+avi
+mpeg
+mov
+flv
+3gp
+webm
+mkv
+Apple
+Android
+more
+Samsung
+Blackberry
+Sony
+Nokia
+wmv
+mp3
+wav
+iPhone ringtone
+m4a
+flac
+ogg
+mp2
+amr
+Resolution:
+Quality:
+Same as source
+Settings
+Video codec:
+H.264 / AVC
+MPEG-4
+H.265 / HEVC
+Audio codec:
+AAC (Advanced Audio Coding)
+MP3 (MPEG Audio Layer 2)
+No audio
+Estimated output file size:
+Worst quality
+Lower quality
+Optimal quality
+Better quality
+Best quality
+700 Mb
+10 Mb
+1000 Mb
+3
+Convert
+Cancel
+Сonversion complete
+Conversion of {0} files complete
+Download
+Save to
+Google Drive
+Dropbox
+Saving to Google Drive: 0%
+File was saved to Google Drive
+Files were zipped for ease of downloading
+Convert another file
+Online Video Converter
+
+A free web app that converts video files, allowing you to change the video format, resolution or size right in your browser.
+
+Upload files of up to 4 GB
+
+You can upload files up to 4 GB in size. Uploading speed depends on your internet connection speed.
+
+High-performance conversion
+
+Your video files are converted by our powerful servers. In most cases, the process takes less time than it would take if you used your computer.
+
+h265/HVEC support
+
+We constantly update our supported codecs so that our apps work with the newest codecs out there.
+
+Convert more than 300 formats
+
+The app supports more than 300 video formats, and the number keeps growing.
+
+No file limit
+
+Unlike other services, our app has no limit on the number of files you can convert. Convert as many as you want.
+
+Security guaranteed
+
+Your files are automatically deleted from our servers a few hours after you are done working with them. Nobody has access to them except you.
+
+Free Converter
+
+You don’t have to pay anything. All the app features are accessible free of charge. Moreover, you don’t even need to sign up or sign in.
+
+© 123apps.com
+Blog
+Privacy
+Refund policy
+Pricing
+Help
+Contact us
+English
+Language
+en
+English
+es
+Español
+pt
+Português
+it
+Italiano
+de
+Deutsch
+fr
+Français
+ru
+Русский
+pl
+Polski
+tr
+Türkçe
+id
+Bahasa Indonesia
+ja
+日本語
+ko
+한국어
+cn
+简体中文
+tw
+繁體中文
+vi
+tiếng Việt
+th
+ภาษาไทย
+Found a translation error?
+Let us know
+Contact us
+Ask a question, report a bug, or suggest a feature.
+Attach files
+Send message
+Thank you
+Your message has been sent successfully
+ОК
+Something went wrong
+Message could not be sent. Please try again later or contact us at support@123apps.com.
+ОК
+Before we send your message
+We found similar articles in our Help section that might solve your issue instantly. Please review them before contacting support.
+This solved my issue
+Send message
+ОК
+Upgrade to Premium
+A single subscription for all of our apps
+Premium access to 51 apps
+Open files up to 4 GB in size
+Ai audio processing
+Unlimited files
+No ads
+Cancel any time
+$6
+per month
+Monthly
+Yearly
+-33%
+Upgrade to Premium
+Continue with Premium
+Would you like to save {annual-savings-percent}%?
+You can save {annual-savings-percent}% when you pay annually. Pay {annual-price} for a year of access. That's {annual-monthly-price} per month.
+No, thanks
+Yes, please
+Upgrade to Premium
+A single subscription for all of our apps
+Reset Password
+Enter your email address, and we'll send you a link to reset your password.
+Reset Password
+Sign In
+Set new password
+Set a new password for your 123apps account. Make sure you remember it and store it safely.
+Set new password
+Password Updated
+Your password has been updated.
+ОК
+Sign In
+Sign in or create a new account. Choose a method to continue.
+Google
+Apple
+More options
+Email code
+Microsoft
+Yandex
+VK
+OR
+Continue
+By continuing you agree to our Privacy & Terms
+Sign In
+Enter your email to receive a one-time code.
+Continue
+Back
+Sign In
+Enter your email and password.
+Reset password
+Continue
+Back
+Sign In
+Enter the password for your account.
+Reset password
+Continue
+OR
+Use a one-time code
+Back
+Enter the code
+Resend code
+Code sent again
+Success
+OR
+Use password
+Back
+Set a password
+Set a password for your new account.
+Continue
+Back
+Update payment method
+We couldn’t renew your subscription. Please update your billing information.
+Pause instead of canceling?
+Pause and cancel both stop future charges. Pause keeps your payment details, so you can resume in one click. Cancel means entering them again.
+Cancel subscription
+Pause subscription
+Cancel subscription
+Canceling your subscription stops future charges. You’ll keep access to all paid features until the end of your current billing period. We’ll remove your payment details from your account. To subscribe again, you’ll need to re-enter them.
+Cancel subscription
+Don't cancel
+Cancel
+Confirm
+Delete account
+This permanently deletes the account for {email} and all of its data. This cannot be undone.
+Don't delete
+Delete account
+Are you sure?
+This permanently deletes the account for {email} and all of its data. This cannot be undone.
+Delete account
+Don't delete
+Invoices
+Usage history
+Set password
+Create a password to sign in with your email and password.
+Save
+Change password
+Create a new strong password
+Save
+Your name
+Cancel
+Save
+Drag and drop a picture here
+Any image format. Up to 10 MB.
+Choose File
+Please authorize this app to work with your Google Drive
+OK
+window.dataLayer = window.dataLayer || []; function gtag() { dataLayer.push(arguments); } gtag('js', new Date()); gtag('config', 'G-PHHXDW2JWF');
+Same as source
+1920x1080
+HD 1080p
+1280x720
+HD 720p
+854x480
+480p
+640x360
+360p
+426x240
+240p
+720x576
+DVD
+640x480
+TV
+320x240
+Mobile
+	

@@ -1,0 +1,74 @@
+# 가져온 시각: 2026-11-10T21:08:40.444Z
+# 원본: https://support.microsoft.com/en-us/topic/exporting-and-saving-a-video-in-clipchamp-e74795e7-e85c-4607-95bb-15e107aa4de2
+Exporting and saving a video in Clipchamp | Microsoft Support
+https://support.microsoft.com/en-us/clipchamp/exporting-and-saving-a-video-in-clipchamp
+
+Exporting and saving a video in Clipchamp
+Applies To
+Clipchamp for personal accounts Clipchamp for work accounts
+Get help with Copilot
+What are the steps to select the export button?
+How do I select the video resolution?
+How do I save and share my video?
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+When you've finished working on a project in the Clipchamp video editor, easily export and download your video as an MP4 file to your device. You can also export audio-only files as MP3 (M4A) and share your finished file directly from the exporting page to one of our integrations. 
+
+Personal version
+Work version
+
+In Clipchamp for personal accounts, as you work on a video, editing progress gets saved automatically, and there is No save button you have to click.
+
+When you've finished editing, to obtain a video or audio file of your project, follow the steps below.
+
+Step 1. Click on the export button
+
+To save your video, click on the Export button at the top right corner of the video editor. 
+
+Step 2. Choose a resolution to export
+
+A drop-down window will appear with options that determine the size and quality. Your video will export as an MP4 file in one of the resolutions you choose. Select from:
+
+480p video quality is suitable for drafts.
+720p video quality is suitable for social media videos.
+1080p (HD) video quality is suitable for video streaming platforms and presentations.
+4K (UHD) video quality is the best video resolution for all 4K media files.
+GIF for videos 15 seconds or less.
+For projects that only contain audio, you can also select the audio-only option to obtain an MPEG-4 (.m4a) audio file.
+
+If you've used a premium feature and are on the free plan, you'll see diamond-shaped symbols next to the exporting options. If you're not ready to upgrade, remove the premium features before exporting the video. To export your video including the premium features in it, select the switch to a new plan button. This will guide you through the steps to upgrade.
+
+Step 3. Save and share your video
+
+Once you have selected a video resolution, your video will automatically start exporting and you'll see a progress bar with a percentage indicator.
+
+Here, you can also share your video using one of our sharing integrations. Select from the following options
+
+Save to OneDrive
+Save to Google Drive
+Upload to YouTube
+Send to TikTok
+Save to Dropbox
+Share to LinkedIn (only works for company accounts, NOT personal accounts)
+
+If your video is slow to export or doesn't export, see this help article for tips on how to improve the export speed. Note that higher resolutions or longer projects will take longer to export.
+
+After your video has finished exporting, it will automatically save to your computer, usually to your Downloads folder.
+
+For more information, see: Sharing a video or editing project.
+
+Export format
+
+Your exported video is an MPEG 4 (.mp4) file with the file name you chose. The frame rate is 30fps. 
+
+In addition, for Teams meeting recordings, Clipchamp auto-adjusts its output settings so that they are optimized for the frame rate and bit rate that Teams has in place for meeting recordings.
+
+Audio files get exported in the M4A format.
+
+Troubleshooting
+
+If you encounter errors when exporting your video, see this article for a number of troubleshooting tips that may help to export successfully.
+
+Still need help?
+
+Contact Clipchamp Support.

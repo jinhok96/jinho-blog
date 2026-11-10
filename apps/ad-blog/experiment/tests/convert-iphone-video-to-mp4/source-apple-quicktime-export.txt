@@ -1,0 +1,72 @@
+# 가져온 시각: 2026-11-10T21:06:30.227Z
+# 원본: https://support.apple.com/guide/quicktime-player/qtp20e395859/mac
+Export movies to other file formats and resolutions using QuickTime Player on Mac - Apple Support
+https://support.apple.com/guide/quicktime-player/export-movies-qtp20e395859/mac
+
+Select version:
+macOS 27 Golden Gate
+macOS Tahoe 26
+macOS Sequoia 15
+macOS Sonoma 14
+macOS Ventura 13
+macOS Monterey 12
+macOS Big Sur 11.0
+macOS Catalina 10.15
+macOS Mojave 10.14
+macOS High Sierra
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Export movies to other file formats and resolutions using QuickTime Player on Mac
+
+You can export a movie to save a copy of it with a specific resolution or file format. Your movie is exported as a QuickTime movie (.mov) using the H.264 or HEVC codec. Movies that are exported as audio only are exported as MPEG4 audio files. QuickTime Player doesn’t export movies as MP4 videos.
+
+Open QuickTime Player for me
+
+In the QuickTime Player app  on your Mac, choose File > Export As, then choose an option from the Export menu.
+
+This menu shows resolutions appropriate for movies based on commonly used video sizes (resolutions larger than that of your movie are dimmed). The exact resolution and data rate of an exported movie depend on the original.
+
+4K: QuickTime movie using H.264 or HEVC (H.265), up to 3840 x 2160 resolution.
+
+1080p: QuickTime movie using H.264 or HEVC (H.265), up to 1920 x 1080 resolution.
+
+720p: QuickTime movie using H.264, up to 1280 x 720 resolution.
+
+480p: QuickTime movie using H.264, up to 640 x 480 resolution.
+
+Choose this option if you are exporting a movie to post online (for example, to YouTube).
+
+Audio Only: An Apple MPEG 4 audio file with an AAC audio track.
+
+If you chose the 4K or 1080p export resolution, click the Format pop-up menu, then do one of the following:
+
+Choose Smaller File Size to export the movie in HEVC format
+
+Choose Greater Compatibility to export the movie in H.264 format.
+
+You can preserve the transparency of a movie when exporting to a HEVC format. Choose File > Export As > 1080p, select Use HEVC checkbox, then select the Preserve Transparency checkbox.
+
+Note: The Preserve Transparency checkbox only appears for movies with an alpha channel, such as ProRes 4444.
+
+Enter a name for your exported file and choose a destination.
+
+Click Save.
+
+Some movies may take longer than others to export. To see the progress of your file export, choose Window > Show Export Progress.
+
+If you don’t see any options available in the Export menu, it may be because the recording is copyright-protected and can’t be distributed.
+
+See also
+Share your movies from QuickTime Player on Mac
+Apple Support article: Using HEIF and HEVC media on Apple devices
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

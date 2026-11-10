@@ -1,0 +1,61 @@
+# 가져온 시각: 2026-11-10T21:06:51.880Z
+# 원본: https://support.apple.com/guide/quicktime-player/qtp797f6599f/mac
+Automation tips in QuickTime Player on Mac - Apple Support
+https://support.apple.com/guide/quicktime-player/automation-tips-qtp797f6599f/mac
+
+Select version:
+macOS 27 Golden Gate
+macOS Tahoe 26
+macOS Sequoia 15
+macOS Sonoma 14
+macOS Ventura 13
+macOS Monterey 12
+macOS Big Sur 11.0
+macOS Catalina 10.15
+macOS Mojave 10.14
+macOS High Sierra
+Modifying this control will update this page automatically
+Search this guide
+Clear Search
+Table of Contents 
+Automation tips in QuickTime Player on Mac
+
+To automate QuickTime Player tasks, you can use AppleScript, Automator, Shortcuts, or Finder services.
+
+AppleScript
+
+Use Script Editor to browse the AppleScript dictionary to see the available actions for playback, recording, and more. See Edit scripts with Script Editor.
+
+Automator
+
+You can link several AppleScript actions into a workflow using Automator. See Create a workflow in Automator.
+
+Shortcuts
+
+You can combine several Shortcuts actions into a workflow to change playback settings, the volume, play and pause settings, and more. See the Shortcuts User Guide.
+
+Finder
+
+When you Control-click a media file and choose Encode Selected Video Files or Encode Selected Audio Files, you get a few options for encoding the media:
+
+Encode selected video file
+
+With this action, you can change the resolution of the movie, then choose whether you want the video to be higher quality or compatible with more devices. You can also extract the audio track from the movie.
+
+Encode selected audio file
+
+With this action, you can create MPEG audio files from your existing AIF, WAV, CAF, or SDII audio files.
+
+See also
+Split a movie into clips in QuickTime Player on Mac
+Rearrange movie clips in QuickTime Player on Mac
+Add a movie or clip in QuickTime Player on Mac
+Helpful?
+Yes
+No
+Character limit:
+250
+Please don’t include any personal information in your comment.
+Maximum character limit is 250.
+Submit
+Thanks for your feedback.

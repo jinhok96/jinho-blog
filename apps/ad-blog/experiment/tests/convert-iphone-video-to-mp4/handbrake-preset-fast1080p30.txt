@@ -1,0 +1,33 @@
+# 가져온 시각: 2026-11-10T21:09:09.221342Z
+# 원본: https://raw.githubusercontent.com/HandBrake/HandBrake/master/preset/preset_builtin.json (Fast 1080p30 항목 발췌)
+{
+ "PresetName": "Fast 1080p30",
+ "Default": true,
+ "FileFormat": "mp4",
+ "PictureWidth": 1920,
+ "PictureHeight": 1080,
+ "PictureCropMode": 0,
+ "VideoEncoder": "x264",
+ "VideoFramerate": "30",
+ "VideoFramerateMode": "pfr",
+ "VideoQualitySlider": 22.0,
+ "VideoPreset": "fast",
+ "AudioList": [
+  {
+   "AudioBitrate": 160,
+   "AudioCompressionLevel": -1.0,
+   "AudioDitherMethod": "auto",
+   "AudioEncoder": "aac",
+   "AudioMixdown": "stereo",
+   "AudioNormalizeMixLevel": false,
+   "AudioSamplerate": "auto",
+   "AudioTrackQualityEnable": false,
+   "AudioTrackQuality": -1.0,
+   "AudioTrackGainSlider": 0.0,
+   "AudioTrackDRCSlider": 0.0
+  }
+ ],
+ "MetadataPassthrough": null
+}
+
+# hb_set_anamorphic_size2() (libhb/hb.c) 본문이 1.7.2 태그와 master에서 글자 하나까지 같음(13,207자) → 최대 크기 1920x1080을 가로·세로 방향 구분 없이 적용

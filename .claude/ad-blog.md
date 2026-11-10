@@ -21,7 +21,7 @@ src/
 └── core/
     ├── config/     # 사이트 정보(ToolProof, en-US, AUTHOR_TYPE)·카테고리(ai-tools, software, news — 글 0개 카테고리는 자동 숨김)·광고 ID
     ├── ads/        # AdSlot·AdSenseScript (클라이언트), ads.txt·슬롯 속성 헬퍼
-    ├── analytics/  # AnalyticsScript (Cloudflare Web Analytics 비컨·GA4 gtag.js 로더, 클라이언트)·로드 조건·gtag 초기화·동의 기본값 헬퍼
+    ├── analytics/  # AnalyticsScript (Cloudflare Web Analytics 비컨·GA4 gtag.js 로더, 클라이언트)·로드 조건·gtag 초기화·동의 기본값·스크롤 깊이 추적 헬퍼
     ├── content/    # 컬렉션 Zod 스키마·설정·레지스트리 리더
     ├── seo/        # buildMetadata, JSON-LD 빌더, JsonLd, absoluteUrl
     ├── mdx/        # renderMdx (본문 # → h2, 로컬 이미지 크기 지정, 링크 처리)
@@ -97,8 +97,9 @@ scripts/indexnow.ts # IndexNow 제출 (로직·테스트는 scripts/lib/indexnow
   - 컨테이너 브라우저로는 확인 불가: 프록시 IP의 위치를 Google이 몰라 gtag.js의 지역 값이 비고, 이때 지역 지정 기본값이 모든 방문에 적용돼 미국 IP여도 `gcs=G100`(거부)·쿠키 없음 (2026-11-05, 가짜 지역 `ZZ`로도 같음). 실제 동작은 배포 후 비유럽 브라우저의 `_ga` 쿠키·GA4 실시간 보고서로 확인
 - 루트 레이아웃에서 `AnalyticsScript`를 `AdSenseScript`보다 먼저 렌더링 (동의 기본값이 AdSense·동의 메시지보다 먼저 들어가야 함). AdSense 동의 메시지(개인정보 보호 및 메시지 > 유럽 규정)의 "분석 목적 동의 모드"를 켜면 GA4가 같은 동의를 읽음 (사용자 설정)
 - 페이지뷰는 GA4 향상된 측정의 "브라우저 기록 이벤트 기반 페이지 변경"(기본 켜짐)에 맡김. 수동 `page_view` 전송 없음. 90% 스크롤도 향상된 측정 기본값
+- 스크롤 깊이 25·50·75%는 `core/analytics/internal/scroll.ts`(`startScrollDepthTracking`)가 향상된 측정과 같은 `scroll` 이벤트 + `percent_scrolled` 파라미터로 직접 전송 (2026-11-10). 90%는 향상된 측정이 보내므로 제외(중복 방지) → GA4 기본 측정기준 `percentScrolled`에 25·50·75·90이 함께 나와 GA4 관리 설정 변경 불필요. 기준은 화면 아래 끝 / 문서 높이, 구간별 페이지당 1회, 스크롤 이벤트가 있어야 전송(로드만으로는 안 보냄), 스크롤할 수 없는 페이지는 전송 안 함. GA4가 로드된 경우에만 시작하고 경로가 바뀌면(`usePathname`, 레이아웃 이펙트) 보낸 구간 기록 초기화
 - 측정 항목을 바꾸면 개인정보처리방침(`content/pages/privacy.mdx`) Analytics 항목도 함께 수정
-- GA4 수치는 `experiment/tools/ga_analytics.py`가 Data API로 읽어 `dashboard_data.py`가 `stats` DB(`engagement` 문서, `posts`·`otherPages`의 `engagement`)에 기록. 속성 ID `486901575`는 도구 상수(비밀 아님), 인증은 Search Console 서비스 계정 키 재사용(범위 `analytics.readonly`). 날짜는 속성 시간대(한국). 사이트 도메인(`SITE_HOSTS`)으로 거르므로 도메인을 바꾸면 함께 수정
+- GA4 수치는 `experiment/tools/ga_analytics.py`가 Data API로 읽어 `dashboard_data.py`가 `stats` DB(`engagement`·`sources`·`audience` 문서, `posts`·`otherPages`의 `engagement`)에 기록. 운영자(한국)·헤드리스(화면 800x600) 방문은 빼고 셈(`host_filter`). Cloudflare는 `cf_analytics.py`(`traffic`·`vitals`, 봇·KR 제외, 표본 추정치). 쓸 수 있는 데이터 전체 목록·활용은 `experiment/analytics-data.md`. 속성 ID `486901575`는 도구 상수(비밀 아님), 인증은 Search Console 서비스 계정 키 재사용(범위 `analytics.readonly`). 날짜는 속성 시간대(한국). 사이트 도메인(`SITE_HOSTS`)으로 거르므로 도메인을 바꾸면 함께 수정
 - 운영 대시보드 글별 첫 관측값(`indexedAt`·`firstCrawlAt`·`firstImpressionAt`·`firstSeenLinkAt`, 2026-11-07부터 발견 경로 `discoveredAt`·`discoveredVia`·`feedSeenAt`·`sitemapSeenAt`·`crawledAt`와 기록 시작 시각 `discoverySince`)은 저장소 `experiment/dashboard/first-seen.json`, `stats` 문서 버전은 `experiment/dashboard/versions.json`에 두고 `dashboard_data.py`가 읽고 씀 (2026-11-04: DB 문서를 파일로 저장하는 것이 거부돼 DB에서 이어받지 않음). 갱신한 세션이 두 파일을 커밋
 - 운영 대시보드 글별 `newsType`(가설 H5)·`verifyType`·`verifyTypeSince`(가설 H3)는 `dashboard_data.py`가 `experiment/tests/{slug}/factcheck.md`(10-14 전 글은 `facts.md`)의 '뉴스 유형'·'검증 유형' 줄에서 굵은 값을 읽음 (형식: `experiment/writing-guide.md` 작성 전 브리프·뉴스 칼럼). `keyword`(가설 H6)는 같은 파일의 '주 검색어 (가설 H6)' 줄 백틱 값 + `experiment/dashboard/keyword-trends.json`(`tools/keyword_trends.py`가 측정한 Trends 상대량). 사실 확인표 줄 형식을 바꾸면 `news_type`·`verify_type`·`keyword_trends.KEYWORD_LINE` 정규식도 함께 수정
 - 운영 대시보드 `posts`의 글별 `index.sitemaps`·`index.referring`(URL 검사 `sitemap`·`referringUrls`)과 `summary.sitemaps`(사이트맵·피드별 다운로드)는 2026-11-05 회차부터 기록. `summary.sitemap`은 `/sitemap.xml` 고정 (그 전 회차는 API 첫 항목인 `rss.xml` 값). 공용 계산은 `gsc_report.py`의 `index_refs`·`main_sitemap`

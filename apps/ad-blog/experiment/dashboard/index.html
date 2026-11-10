@@ -115,10 +115,21 @@ table.rank { min-width: 560px; }
 table.rank td.n { width: 32px; font-weight: 600; color: var(--ink); }
 table.rank .post-title { max-width: 420px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
 svg text { font-family: var(--font-num); font-size: var(--fs-chart); fill: var(--mute); pointer-events: none; } /* 글자가 아래 툴팁 영역을 가리지 않게 */
-#eng-posts .todo-items, #src-landing .todo-items { margin-left: 0; }
+#eng-posts .todo-items, #src-landing .todo-items, #aud-internal .todo-items, #aud-outbound .todo-items, #ads-body .todo-items { margin-left: 0; }
 /* 유입 경로 소스 표: 좁은 화면에서는 줄바꿈 대신 가로 스크롤 */
 table.src-table { min-width: 440px; }
 table.src-table td { white-space: nowrap; }
+table.src-table td:first-child { max-width: 260px; overflow: hidden; text-overflow: ellipsis; }
+#vitals-panel table.src-table td:first-child { max-width: 180px; }
+/* 방문자 요약 숫자 (카드 안, 테두리 없이) */
+.stats { display: grid; grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); gap: 16px 20px; }
+.stat { display: grid; gap: 2px; min-width: 0; }
+.stat .l { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); }
+.stat .v { font-size: 24px; line-height: 32px; font-weight: 600; letter-spacing: -0.5px; color: var(--ink); }
+.stat .s { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--body); word-break: keep-all; }
+.bars li.bar-title { display: block; font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--mute); margin-top: 4px; }
+.cwv-ni { color: var(--warn); } .cwv-poor { color: var(--bad); }
+code.el { font-size: var(--fs-xs); line-height: var(--lh-xs); color: var(--body); overflow-wrap: anywhere; }
 /* 선이 지나가는 자리의 숫자: 바탕색 테두리로 선 위에서도 읽히게 */
 svg text.halo { paint-order: stroke; stroke: var(--panel); stroke-width: 3px; stroke-linejoin: round; }
 .legend .line { display: inline-block; width: 12px; height: 2px; border-radius: 1px; margin-right: 8px; vertical-align: middle; }
@@ -383,6 +394,84 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
     </div>
   </section>
 
+  <!-- 방문자·행동 (audience 문서, 2026-11-10): 운영자(한국)·헤드리스 방문 제외 -->
+  <section class="charts" id="audience-section" hidden>
+    <div class="panel">
+      <div class="panel-head"><h2>방문자</h2><span class="small" id="aud-meta">GA4 · 실제 독자</span></div>
+      <div class="chart-note" id="aud-excluded"></div>
+      <div class="stats" id="aud-stats"></div>
+      <div class="panel-head sub"><h2>첫 유입 채널</h2><span class="small">신규 사용자가 처음 들어온 경로</span></div>
+      <ul class="bars" id="aud-first"></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>읽기 깊이</h2><span class="small" id="depth-meta">페이지 조회 대비 스크롤 도달</span></div>
+      <ul class="bars" id="aud-depth"></ul>
+      <div class="small" id="depth-note">25·50·75%는 사이트 이벤트(2026-11-10 배포) 뒤부터, 90%는 GA4 향상된 측정</div>
+      <div class="panel-head sub"><h2>첫 페이지</h2><span class="small">들어온 페이지별 참여·이탈</span></div>
+      <div class="table-scroll">
+        <table class="src-table">
+          <thead><tr><th>페이지</th><th class="r">세션</th><th class="r" title="참여 세션 / 세션">참여율</th><th class="r" title="세션당 GA4 참여 시간">평균 체류</th><th class="r" title="참여하지 않은 세션 비율">이탈률</th></tr></thead>
+          <tbody id="aud-landing"><tr><td colspan="5" class="empty">데이터가 아직 없습니다.</td></tr></tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <section class="trio" id="audience-trio" hidden aria-label="기기·국가·시간대 (GA4 실제 독자)">
+    <div class="panel">
+      <div class="panel-head"><h2>기기</h2><span class="small">세션 · 참여율 · 평균 체류</span></div>
+      <ul class="bars" id="aud-devices"></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>방문 국가</h2><span class="small" id="aud-country-meta">세션 · 참여율</span></div>
+      <ul class="bars" id="aud-countries"></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>방문 시간대</h2><span class="small">세션 · 한국 시간</span></div>
+      <div id="aud-hours"></div>
+      <div class="small" id="aud-weekdays"></div>
+    </div>
+  </section>
+
+  <section class="charts" id="behavior-section" hidden>
+    <div class="panel">
+      <div class="panel-head"><h2>내부 이동</h2><span class="small">사이트 안에서 어느 페이지가 어디로 보냈나 · GA4 조회</span></div>
+      <div id="aud-internal"><div class="empty">데이터가 아직 없습니다.</div></div>
+      <div class="panel-head sub"><h2>외부 링크 클릭</h2><span class="small">독자가 눌러 나간 링크 · GA4 향상된 측정</span></div>
+      <div id="aud-outbound"><div class="empty">데이터가 아직 없습니다.</div></div>
+    </div>
+    <div class="panel" id="vitals-panel" hidden>
+      <div class="panel-head"><h2>Core Web Vitals</h2><span class="small" id="cwv-meta">실제 방문 p75 · Cloudflare</span></div>
+      <ul class="bars" id="cwv-site"></ul>
+      <div class="legend"><span><i style="background:var(--good)"></i>좋음</span><span><i style="background:var(--fresh)"></i>개선 필요</span><span><i style="background:var(--bad)"></i>나쁨</span></div>
+      <div class="panel-head sub"><h2>페이지별</h2><span class="small">p75 · 방문 많은 순</span></div>
+      <div class="table-scroll">
+        <table class="src-table">
+          <thead><tr><th>페이지</th><th class="r">표본</th><th class="r">LCP</th><th class="r">INP</th><th class="r">CLS</th><th class="r">TTFB</th></tr></thead>
+          <tbody id="cwv-paths"></tbody>
+        </table>
+      </div>
+      <dl class="facts" id="cwv-facts"></dl>
+    </div>
+  </section>
+
+  <section class="trio" id="env-section" hidden aria-label="방문 환경 (Cloudflare)·광고">
+    <div class="panel">
+      <div class="panel-head"><h2>방문 환경</h2><span class="small" id="env-meta">Cloudflare · 조회수 추정</span></div>
+      <ul class="bars" id="env-countries"></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>기기·브라우저</h2><span class="small">Cloudflare · 조회수 추정</span></div>
+      <ul class="bars" id="env-devices"></ul>
+      <ul class="bars" id="env-browsers"></ul>
+      <ul class="bars" id="env-nav"></ul>
+    </div>
+    <div class="panel">
+      <div class="panel-head"><h2>광고</h2><span class="small" id="ads-meta">AdSense · GA4 연결 후</span></div>
+      <div id="ads-body"></div>
+    </div>
+  </section>
+
   <section class="panel" id="rank-panel">
     <div class="panel-head"><h2>글 순위</h2>
       <div class="rank-ctl">
@@ -510,7 +599,7 @@ a:focus-visible { outline: 2px solid var(--link); outline-offset: 4px; border-ra
 <script src="data.js"></script>
 <script>
 const SITE = 'https://tool-proof.com';
-const state = { daily: [], posts: [], otherPages: [], discoverySince: null, knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, engagement: null, sources: null, live: false }; // live = 실시간 DB 값을 보는 중
+const state = { daily: [], posts: [], otherPages: [], discoverySince: null, knowhow: [], sessions: [], summary: null, breakdown: null, experiments: null, traffic: null, engagement: null, sources: null, audience: null, vitals: null, live: false }; // live = 실시간 DB 값을 보는 중
 const expanded = new Set(); // 펼친 상세 줄 (다시 그려도 유지)
 const $ = (id) => document.getElementById(id);
 const fmt = (n) => (n == null ? '–' : n.toLocaleString('ko-KR'));
@@ -584,7 +673,7 @@ function renderTraffic() {
   if (rows.length >= 14) {
     const now = rows.slice(-7), prev = rows.slice(-14, -7);
     $('k-views-sub').innerHTML = `방문 ${fmt(t.visits)} · 7일 ${fmt(sum(now, 'views'))}회 ${deltaChip(sum(now, 'views') - sum(prev, 'views'))}`;
-    $('k-views-sub').title = `직전 7일 조회수 ${fmt(sum(prev, 'views'))}회 · 오늘(UTC)은 집계 중`;
+    $('k-views-sub').title = `직전 7일 조회수 ${fmt(sum(prev, 'views'))}회 · 오늘(UTC)은 집계 중${t.sampleInterval ? ` · Cloudflare 표본 수집이라 ${t.sampleInterval}배 추정치` : ''}${t.excluded ? ` · 봇 ${fmt(t.excluded.bot.views)}·운영자(한국) ${fmt(t.excluded.operator.views)} 제외` : ''}`;
   } else {
     $('k-views-sub').textContent = `방문 ${fmt(t.visits)}`;
   }
@@ -632,6 +721,155 @@ function renderSources() {
   const maxV = Math.max(1, ...shown.map((r) => r.views));
   $('referers').innerHTML = shown.length ? shown.map((r) => `<li><span class="name">${r.key === 'direct' ? '직접·사이트 안 이동' : esc(r.key)}${r.channel && r.key !== 'direct' ? ` <span class="small">${esc(channelLabel(r.channel))}</span>` : ''}</span><span class="val">${fmt(r.views)} · ${fmt(r.visits)}</span><span class="track"><i style="width:${(r.views / maxV) * 100}%"></i></span></li>`).join('')
     : '<li class="empty">리퍼러 데이터가 아직 없습니다.</li>';
+}
+
+// ── 방문자·행동 (audience, GA4) · Core Web Vitals·방문 환경 (vitals, Cloudflare), 2026-11-10 ──
+// 둘 다 실제 독자만: GA4는 운영자(한국)·헤드리스(화면 800x600), Cloudflare는 봇·운영자(KR)를 빼고 셈
+const DEVICE_LABEL = { desktop: '데스크톱', mobile: '모바일', tablet: '태블릿', smarttv: 'TV' };
+const share = (a, b) => (b ? `${Math.round((a / b) * 100)}%` : '–');
+const postOrPath = (path) => { const p = path && path.startsWith('/posts/') && state.posts.find((x) => x.slug === path.slice(7)); return p ? jumpPost(p) : esc(path === '/' ? '홈' : path || '–'); };
+const barRow = (name, val, w, { zero = false, title = '' } = {}) => `<li class="${zero ? 'zero' : ''}"${title ? ` title="${esc(title)}"` : ''}><span class="name">${name}</span><span class="val">${val}</span><span class="track"><i style="width:${Math.max(0, Math.min(100, w))}%"></i></span></li>`;
+
+function renderAudience() {
+  const a = state.audience;
+  $('audience-section').hidden = !a;
+  $('audience-trio').hidden = !a;
+  $('behavior-section').hidden = !a && !state.vitals;
+  if (!a) return;
+  const t = a.totals || {};
+  const ex = a.excluded || {};
+  $('aud-meta').textContent = `GA4 · ${ymd(a.range.start)} ~ ${ymd(a.range.end)}`;
+  $('aud-excluded').textContent = `실제 독자만: 운영자(한국) ${fmt(ex.operator?.sessions ?? 0)}세션 · 자동 방문(헤드리스, 화면 800x600) ${fmt(ex.bot?.sessions ?? 0)}세션 제외`;
+  const nv = Object.fromEntries((a.newVsReturning || []).map((r) => [r.key, r]));
+  const stat = (l, v, sub) => `<div class="stat"><span class="l">${l}</span><span class="v num">${v}</span><span class="s">${sub || ''}</span></div>`;
+  $('aud-stats').innerHTML = [
+    stat('실제 사용자', fmt(t.activeUsers), `신규 ${fmt(nv.new?.users ?? t.newUsers)} · 재방문 ${fmt(nv.returning?.users ?? 0)}`),
+    stat('세션', fmt(t.sessions), `사용자당 ${t.sessionsPerUser ?? '–'}회`),
+    stat('참여율', t.engagementRate == null ? '–' : `${Math.round(t.engagementRate * 100)}%`, `참여 세션 ${fmt(t.engagedSessions)} · 10초 이상 또는 2페이지 이상`),
+    stat('이탈률', t.bounceRate == null ? '–' : `${Math.round(t.bounceRate * 100)}%`, '참여 없이 나간 세션'),
+    stat('평균 세션 시간', t.averageSessionDuration == null ? '–' : duration(t.averageSessionDuration), `세션당 페이지 ${t.viewsPerSession ?? '–'}`),
+    stat('재방문 세션', fmt(nv.returning?.sessions ?? 0), nv.returning?.sessions ? `평균 체류 ${duration((nv.returning.engagementSeconds || 0) / nv.returning.sessions)}` : '아직 없음'),
+  ].join('');
+  // 첫 유입 채널 (신규 사용자 기준)
+  const first = a.firstChannels || {};
+  const firstTotal = Object.values(first).reduce((x, y) => x + y, 0);
+  const firstMax = Math.max(1, ...Object.values(first));
+  $('aud-first').innerHTML = firstTotal ? CHANNELS.filter(([k]) => first[k]).map(([k, label]) => barRow(label, `${fmt(first[k])}명 · ${share(first[k], firstTotal)}`, (first[k] / firstMax) * 100)).join('') : '<li class="empty">신규 사용자가 아직 없습니다.</li>';
+  // 읽기 깊이: 조회 대비 스크롤 구간 도달 (구간마다 페이지당 1회)
+  const views = t.views || 0;
+  const depth = a.scrollDepth || [];
+  $('depth-meta').textContent = `페이지 조회 ${fmt(views)}회 대비 스크롤 도달`;
+  $('aud-depth').innerHTML = depth.length ? depth.map((d) => barRow(`${d.percent}%까지`, `${fmt(d.events)}회 · ${share(d.events, views)}`, views ? (d.events / views) * 100 : 0, { zero: !d.events, title: `사용자 ${fmt(d.users)}명` })).join('') : '<li class="empty">데이터가 아직 없습니다.</li>';
+  // 첫 페이지 품질
+  const landing = a.landing || [];
+  $('aud-landing').innerHTML = landing.length ? landing.slice(0, 10).map((r) => `<tr><td>${postOrPath(r.page)}</td><td class="r num">${fmt(r.sessions)}</td><td class="r num">${share(r.engagedSessions, r.sessions)}</td><td class="r num">${r.sessions ? duration(r.engagementSeconds / r.sessions) : '–'}</td><td class="r num">${r.bounceRate == null ? '–' : `${Math.round(r.bounceRate * 100)}%`}</td></tr>`).join('')
+    : '<tr><td colspan="5" class="empty">세션이 아직 없습니다.</td></tr>';
+  // 기기·국가: 세션 · 참여율 · 평균 체류
+  const segList = (rows, label) => {
+    const max = Math.max(1, ...rows.map((r) => r.sessions));
+    return rows.length ? rows.map((r) => barRow(label(r.key), `${fmt(r.sessions)} · 참여 ${share(r.engagedSessions, r.sessions)} · ${r.sessions ? duration(r.engagementSeconds / r.sessions) : '–'}`, (r.sessions / max) * 100)).join('') : '<li class="empty">데이터가 아직 없습니다.</li>';
+  };
+  $('aud-devices').innerHTML = segList(a.devices || [], (k) => DEVICE_LABEL[k] || k);
+  const countries = a.countries || [];
+  const us = countries.find((r) => r.key === 'US');
+  $('aud-country-meta').textContent = `세션 · 참여율 · 미국 ${share(us?.sessions || 0, t.sessions)}`;
+  $('aud-countries').innerHTML = segList(countries, (k) => (regionNames && /^[A-Z]{2}$/.test(k) ? regionNames.of(k) : k));
+  // 시간대 (한국 시간) 막대 + 요일
+  const hours = a.hours || [];
+  const hMax = Math.max(1, ...hours.map((h) => h.sessions));
+  const W = 288, H = 96, bw = W / 24;
+  $('aud-hours').innerHTML = `<svg viewBox="0 0 ${W} ${H}" width="100%" role="img" aria-label="시간대별 세션 막대 그래프">${hours.map((h) => {
+    const bh = h.sessions ? Math.max(2, (h.sessions / hMax) * (H - 28)) : 0;
+    return `<g><title>${h.hour}시 세션 ${h.sessions}</title><rect x="${h.hour * bw}" y="0" width="${bw}" height="${H - 16}" fill="transparent"/>${bh ? `<rect x="${h.hour * bw + bw * 0.15}" y="${H - 16 - bh}" width="${bw * 0.7}" height="${bh}" rx="2" fill="var(--series)"/>` : ''}</g>${h.hour % 6 === 0 ? `<text x="${h.hour ? h.hour * bw + bw / 2 : 0}" y="${H - 2}" text-anchor="${h.hour ? 'middle' : 'start'}">${h.hour}시</text>` : ''}`;
+  }).join('')}<line x1="0" x2="${W}" y1="${H - 16}" y2="${H - 16}" stroke="var(--line)"/></svg>`;
+  $('aud-weekdays').textContent = `요일: ${(a.weekdays || []).map((d) => `${WEEKDAY[d.day]} ${d.sessions}`).join(' · ')}`;
+  // 내부 이동·외부 링크 클릭
+  const internal = a.internal || [];
+  $('aud-internal').innerHTML = internal.length ? todoItems(internal.map((r) => ({ main: postOrPath(r.to), meta: `${fmt(r.views)}회`, sub: `← ${postOrPath(r.from)}` }))) : '<div class="empty">사이트 안에서 다른 페이지로 이동한 기록이 아직 없습니다.</div>';
+  const outbound = a.outbound || [];
+  $('aud-outbound').innerHTML = outbound.length ? todoItems(outbound.map((r) => ({ main: esc(r.domain || r.url), meta: `${fmt(r.clicks)}회`, sub: `${esc(r.url)} · ${postOrPath(r.page)}` }))) : '<div class="empty">밖으로 나간 링크 클릭이 아직 없습니다.</div>';
+}
+
+// Core Web Vitals: 실제 방문 p75 + 좋음/개선 필요/나쁨 비율 (기준: web.dev 권장값)
+const CWV = [
+  ['lcp', 'LCP', '가장 큰 콘텐츠 표시', 2500, 4000],
+  ['inp', 'INP', '입력 반응', 200, 500],
+  ['cls', 'CLS', '레이아웃 이동', 0.1, 0.25],
+  ['fcp', 'FCP', '첫 콘텐츠 표시', 1800, 3000],
+  ['ttfb', 'TTFB', '서버 첫 응답', 800, 1800],
+];
+const cwvValue = (key, v) => (v == null ? '–' : key === 'cls' ? (v <= 1 ? v.toFixed(2) : '–') : v >= 1000 ? `${(v / 1000).toFixed(2)}초` : `${Math.round(v)}ms`);
+function cwvRating(key, v) {
+  const def = CWV.find((c) => c[0] === key);
+  if (v == null || (key === 'cls' && v > 1)) return null;
+  return v <= def[3] ? 'good' : v <= def[4] ? 'ni' : 'poor';
+}
+const RATING_LABEL = { good: '좋음', ni: '개선 필요', poor: '나쁨' };
+const RATING_PILL = { good: 'good', ni: 'warn', poor: 'bad' };
+function renderVitals() {
+  const v = state.vitals;
+  $('vitals-panel').hidden = !v;
+  if (!v) return;
+  const site = v.site || {};
+  $('cwv-meta').textContent = `실제 방문 p75 · Cloudflare · 표본 ${fmt(site.visits)}${v.sampleInterval > 1 ? `(${v.sampleInterval}배 추정)` : ''}`;
+  $('cwv-site').innerHTML = CWV.map(([k, name, desc]) => {
+    const c = site[k] || {};
+    const r = cwvRating(k, c.p75);
+    const segs = c.total ? [['good', 'var(--good)'], ['ni', 'var(--fresh)'], ['poor', 'var(--bad)']].map(([s, color]) => (c[s] ? `<i style="flex:${c[s]};background:${color}"></i>` : '')).join('') : '';
+    return `<li class="${c.total ? '' : 'zero'}" title="좋음 ${c.good || 0} · 개선 필요 ${c.ni || 0} · 나쁨 ${c.poor || 0} (표본)"><span class="name">${name} <span class="small">${desc}</span></span><span class="val">${cwvValue(k, c.p75)}${r ? ` <span class="pill ${RATING_PILL[r]}">${RATING_LABEL[r]}</span>` : ''}</span><span class="stack" role="img" aria-label="${name} 좋음 ${c.good || 0}, 개선 필요 ${c.ni || 0}, 나쁨 ${c.poor || 0}"><span style="width:${c.total ? 100 : 0}%">${segs}</span></span></li>`;
+  }).join('');
+  const cell = (row, k) => { const val = row[k]?.p75; const r = cwvRating(k, val); return `<td class="r num${r && r !== 'good' ? ` cwv-${r}` : ''}">${cwvValue(k, val)}</td>`; };
+  const paths = v.paths || [];
+  $('cwv-paths').innerHTML = paths.length ? paths.slice(0, 10).map((r) => `<tr><td>${postOrPath(r.path)}</td><td class="r num">${fmt(r.count)}</td>${cell(r, 'lcp')}${cell(r, 'inp')}${cell(r, 'cls')}${cell(r, 'ttfb')}</tr>`).join('')
+    : '<tr><td colspan="6" class="empty">표본이 아직 없습니다.</td></tr>';
+  const el = (list) => (list && list.length ? list.map((e) => `<code class="el">${esc(e.element)}</code> <span class="small">${fmt(e.count)}</span>`).join('<br>') : '–');
+  const pf = v.performance || {};
+  const dev = (v.devices || []).map((d) => `${DEVICE_LABEL[d.key] || d.key} LCP ${cwvValue('lcp', d.lcp?.p75)} · INP ${cwvValue('inp', d.inp?.p75)}`).join('<br>');
+  $('cwv-facts').innerHTML = `
+    <dt>LCP 요소</dt><dd>${el(v.elements?.lcp)}</dd>
+    <dt>INP 요소</dt><dd>${el(v.elements?.inp)}</dd>
+    <dt>CLS 요소</dt><dd>${el(v.elements?.cls)}</dd>
+    <dt>기기별</dt><dd class="num">${dev || '–'}</dd>
+    <dt>페이지 로드</dt><dd class="num">p75 ${cwvValue('lcp', pf.pageLoad)} · 서버 응답 ${cwvValue('ttfb', pf.response)} · 연결 ${cwvValue('ttfb', pf.connection)}</dd>`;
+}
+
+// 방문 환경 (Cloudflare, 봇·운영자 제외 추정치) + 광고 (AdSense, GA4 연결 후)
+const NAV_LABEL = { navigate: '새로 들어옴', 'routing-apis': '사이트 안 이동', reload: '새로고침', back_forward: '뒤로·앞으로', prerender: '미리 렌더링' };
+function renderEnv() {
+  const v = state.vitals, a = state.audience;
+  $('env-section').hidden = !v && !a;
+  if (!v && !a) return;
+  const list = (rows, label, title) => {
+    const max = Math.max(1, ...(rows || []).map((r) => r.views));
+    return (title ? `<li class="bar-title">${title}</li>` : '') + ((rows || []).length ? rows.map((r) => barRow(esc(label(r.key)), `${fmt(r.views)} · ${fmt(r.visits)}`, (r.views / max) * 100)).join('') : '<li class="empty">데이터가 아직 없습니다.</li>');
+  };
+  if (v) {
+    $('env-meta').textContent = `Cloudflare · 조회수 · 방문${v.sampleInterval > 1 ? ` · ${v.sampleInterval}배 추정` : ''}`;
+    $('env-countries').innerHTML = list(v.countries, (k) => (regionNames && /^[A-Z]{2}$/.test(k) ? regionNames.of(k) : k), '국가');
+    $('env-devices').innerHTML = list(v.devices_views, (k) => DEVICE_LABEL[k] || k, '기기');
+    $('env-browsers').innerHTML = list(v.browsers, (k) => k, '브라우저');
+    $('env-nav').innerHTML = list(v.navigation, (k) => NAV_LABEL[k] || k, '들어온 방식');
+  }
+  // 광고: 연결 전에는 광고 클릭에 영향을 주는 지금 볼 수 있는 지표를 함께 보여 줌
+  const ads = a?.ads;
+  const t = a?.totals || {};
+  const sessionsBy = (rows, key) => (rows || []).find((r) => r.key === key)?.sessions || 0;
+  const deep = (a?.scrollDepth || []).find((d) => d.percent === 75)?.events || 0;
+  const proxies = a ? `<div class="small" style="margin-top:16px">광고 클릭에 영향을 주는 지표 (실제 독자)</div><dl class="facts" style="margin-top:8px">
+      <dt>모바일 비중</dt><dd class="num">${share(sessionsBy(a.devices, 'mobile'), t.sessions)} <span class="small">세션</span></dd>
+      <dt>미국 비중</dt><dd class="num">${share(sessionsBy(a.countries, 'US'), t.sessions)} <span class="small">세션</span></dd>
+      <dt>참여율</dt><dd class="num">${t.engagementRate == null ? '–' : `${Math.round(t.engagementRate * 100)}%`}</dd>
+      <dt>75% 스크롤 도달</dt><dd class="num">${share(deep, t.views)} <span class="small">조회 대비</span></dd>
+    </dl>` : '';
+  if (ads?.linked) {
+    const tt = ads.total;
+    $('ads-meta').textContent = 'AdSense · GA4 연결됨 · 최근 28일';
+    $('ads-body').innerHTML = `<dl class="facts"><dt>광고 노출</dt><dd class="num">${fmt(tt.impressions)}</dd><dt>광고 클릭</dt><dd class="num">${fmt(tt.clicks)} <span class="small">CTR ${share(tt.clicks, tt.impressions)}</span></dd><dt>수익</dt><dd class="num">$${tt.revenue}</dd></dl>
+      ${todoItems((ads.pages || []).map((r) => ({ main: postOrPath(r.key), meta: `노출 ${fmt(r.impressions)} · 클릭 ${fmt(r.clicks)} · $${r.revenue}` })))}${proxies}`;
+  } else {
+    $('ads-meta').textContent = 'AdSense · 아직 연결 전';
+    $('ads-body').innerHTML = `<p class="small" style="margin:0">AdSense 승인 뒤 GA4 관리 → 제품 링크 → AdSense를 연결하면 글별 광고 노출·클릭·수익이 여기에 채워집니다.</p>${proxies}`;
+  }
 }
 
 function renderSummary() {
@@ -1276,7 +1514,7 @@ function indexFacts(p) {
     <dt>Google 표준 URL</dt><dd>${canon}</dd>
     ${i.sitemaps ? `<dt>Google이 본 곳</dt><dd>${i.sitemaps.length ? i.sitemaps.map((m) => esc(m.replace(/^\//, ''))).join(' · ') : '사이트맵·피드 없음'}${i.referring && i.referring.length ? `<div class="small">링크: ${i.referring.map(esc).join(' · ')}</div>` : ''}</dd>` : ''}
     <dt>CTR</dt><dd class="num">${pct(p.ctr)}</dd>
-    ${p.engagement ? `<dt>읽기 참여</dt><dd class="num">${p.engagement.views ? `조회 ${fmt(p.engagement.views)} · 평균 ${duration(p.engagement.engagementSeconds / p.engagement.views)} · 끝까지 스크롤 ${fmt(p.engagement.scrolls)}` : '조회 없음'} <span class="small">GA4 28일</span></dd>` : ''}
+    ${p.engagement ? `<dt>읽기 참여</dt><dd class="num">${p.engagement.views ? `조회 ${fmt(p.engagement.views)} · 평균 ${duration(p.engagement.engagementSeconds / p.engagement.views)}${p.engagement.depth ? ` · 스크롤 ${['25', '50', '75', '90'].map((d) => `${d}% ${fmt(p.engagement.depth[d] || 0)}`).join(' · ')}` : ` · 끝까지 스크롤 ${fmt(p.engagement.scrolls)}`}` : '조회 없음'} <span class="small">GA4 28일 · 실제 독자</span></dd>` : ''}
     ${p.newsType ? `<dt>칼럼 유형</dt><dd>${esc(p.newsType)} <span class="small">발행 때 · 가설 H5</span></dd>` : ''}
     ${p.verifyType ? `<dt>검증 유형</dt><dd>${esc(p.verifyType)} <span class="small">${p.verifyTypeSince ? `${esc(p.verifyTypeSince)}부터 · ` : ''}가설 H3</span></dd>` : ''}
     ${p.keyword ? `<dt>주 검색어</dt><dd>${esc(p.keyword.query)} <span class="small">${p.keyword.class ? `${esc(p.keyword.class)} · Trends ${p.keyword.trend} · ` : 'Trends 미측정 · '}가설 H6</span></dd>` : ''}
@@ -1369,6 +1607,11 @@ function groupStats(ps) {
     idx: idx.length, withImp: ps.filter((p) => p.impressions > 0).length,
     perIdx: idx.length ? idxImp / idx.length : null,
     views: ps.reduce((a, p) => a + (p.views || 0), 0),
+    // GA4 실제 독자 (글별 engagement): 조회·참여 시간·75%/90% 스크롤 도달 → 글 유형별 읽기 행동 비교 (가설 판단)
+    gaViews: ps.reduce((a, p) => a + (p.engagement?.views || 0), 0),
+    gaSeconds: ps.reduce((a, p) => a + (p.engagement?.engagementSeconds || 0), 0),
+    deep75: ps.reduce((a, p) => a + (p.engagement?.depth?.['75'] || 0), 0),
+    deep90: ps.reduce((a, p) => a + (p.engagement?.scrolls || 0), 0),
   };
 }
 
@@ -1391,9 +1634,10 @@ function renderGroups() {
   }
   const views = hasViews();
   const idx = hasIndexData();
+  const ga = state.posts.some((p) => p.engagement);
   $('group-note').textContent = `${dim.note} · 최근 28일 웹 검색 · 그룹을 누르면 아래 글별 표를 그 그룹으로 거름`;
-  $('groups-head').innerHTML = `<tr><th>${dim.label}</th>${isCluster ? '<th class="r">우선순위</th>' : ''}<th>글</th><th title="URL 검사 PASS 글 / 글">색인</th><th class="r" title="아래 작은 글자: 노출이 1회 이상인 글 수">노출</th><th class="r">클릭</th><th class="r" title="색인된 글의 노출 합 ÷ 색인된 글 수 (색인 여부와 글 성과를 나눠 봄)">색인 글당 노출</th>${views ? '<th class="r" title="Cloudflare Web Analytics 실측 페이지뷰">조회수</th>' : ''}<th class="r" title="노출 가중 평균">평균 순위</th><th title="검색 유형별 노출">유입 경로</th>${isCluster ? '<th>허브</th>' : ''}</tr>`;
-  const cols = 8 + (isCluster ? 2 : 0) + (views ? 1 : 0);
+  $('groups-head').innerHTML = `<tr><th>${dim.label}</th>${isCluster ? '<th class="r">우선순위</th>' : ''}<th>글</th><th title="URL 검사 PASS 글 / 글">색인</th><th class="r" title="아래 작은 글자: 노출이 1회 이상인 글 수">노출</th><th class="r">클릭</th><th class="r" title="색인된 글의 노출 합 ÷ 색인된 글 수 (색인 여부와 글 성과를 나눠 봄)">색인 글당 노출</th>${views ? '<th class="r" title="Cloudflare Web Analytics 실측 페이지뷰">조회수</th>' : ''}<th class="r" title="노출 가중 평균">평균 순위</th>${ga ? '<th class="r" title="GA4 실제 독자 조회 (운영자·자동 방문 제외)">GA4 조회</th><th class="r" title="조회당 GA4 참여 시간">평균 체류</th><th class="r" title="조회 대비 75% / 90% 스크롤 도달 (75%는 2026-11-10 사이트 이벤트부터)">스크롤 75·90%</th>' : ''}<th title="검색 유형별 노출">유입 경로</th>${isCluster ? '<th>허브</th>' : ''}</tr>`;
+  const cols = 8 + (isCluster ? 2 : 0) + (views ? 1 : 0) + (ga ? 3 : 0);
   const row = (name, ps, extra = {}) => {
     const s = groupStats(ps);
     return `<tr${extra.cls ? ` class="${extra.cls}"` : ''}>
@@ -1403,7 +1647,10 @@ function renderGroups() {
       <td class="r num">${fmt(s.imp)}<div class="small">${s.withImp}편에서</div></td>
       <td class="r num">${fmt(s.clk)}<div class="small">CTR ${pct(s.ctr)}</div></td>
       <td class="r num">${s.perIdx == null ? '–' : s.perIdx.toFixed(1)}</td>${views ? `<td class="r num">${fmt(s.views)}</td>` : ''}
-      <td class="r num">${s.pos == null ? '–' : s.pos.toFixed(1)}</td>
+      <td class="r num">${s.pos == null ? '–' : s.pos.toFixed(1)}</td>${ga ? `
+      <td class="r num">${fmt(s.gaViews)}</td>
+      <td class="r num">${s.gaViews ? duration(s.gaSeconds / s.gaViews) : '–'}</td>
+      <td class="r num">${s.gaViews ? `${share(s.deep75, s.gaViews)} · ${share(s.deep90, s.gaViews)}` : '–'}</td>` : ''}
       <td>${sourceCell(sumSources(ps))}</td>${isCluster ? `<td>${extra.hub ?? DASH}</td>` : ''}
     </tr>`;
   };
@@ -1887,6 +2134,9 @@ function render() {
   renderTraffic();
   renderEngagement();
   renderSources();
+  renderAudience();
+  renderVitals();
+  renderEnv();
   lineChart($('chart-pos'), daily);
   cohortChart($('chart-cohort'));
   renderMovers();
@@ -1923,6 +2173,8 @@ function applyDocs(byId) {
       state.traffic = byId.traffic || null;
       state.engagement = byId.engagement || null;
       state.sources = byId.sources || null;
+      state.audience = byId.audience || null;
+      state.vitals = byId.vitals || null;
       state.experiments = byId.experiments || null;
       state.daily = Object.keys(byId).filter((k) => k.startsWith('daily-')).flatMap((k) => byId[k].rows || []);
       render();
@@ -1951,7 +2203,7 @@ if (SNAPSHOT) applyDocs(SNAPSHOT);
 (async () => {
   const db = window.claude ? await window.claude.use('db') : null;
   if (!db) { showSnapshot(); return; }
-  // stats 컬렉션: summary, posts, breakdown, traffic, engagement, sources, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
+  // stats 컬렉션: summary, posts, breakdown, traffic, engagement, sources, audience, vitals, experiments, knowhow, sessions, daily-YYYY-MM (달마다 1개)
   db.collection('stats').onSnapshot(
     (snap) => {
       $('notice').hidden = true;

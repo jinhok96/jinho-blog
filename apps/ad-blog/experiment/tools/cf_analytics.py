@@ -24,6 +24,9 @@ import urllib.request
 API = 'https://api.cloudflare.com/client/v4'
 SITE_HOSTS = ('tool-proof.com', 'www.tool-proof.com')  # 비컨은 이 도메인에서만 로드됨 (광고 블로그 core/analytics)
 CHUNK_DAYS = 7  # 한 번에 조회하는 기간 (조회 범위·행 수 제한 대비)
+# 실제 독자가 아닌 방문 (2026-11-10): Cloudflare가 봇으로 표시한 방문(bot=1, ChromeHeadless 등)과 한국(운영자 확인, 영어·미국 대상 사이트).
+# period_filter는 기본으로 둘 다 뺌. Web Analytics는 표본 수집이라 값은 표본 간격(sampleInterval, 2026-11-10 기준 10)을 곱한 추정치
+OPERATOR_COUNTRY = 'KR'
 
 QUERY = """
 query ($accountTag: string!, $filter: AccountRumPageloadEventsAdaptiveGroupsFilter_InputObject) {
@@ -60,9 +63,16 @@ def site_filter() -> dict:
     return {'OR': [{'requestHost': host} for host in SITE_HOSTS]}
 
 
-def period_filter(start: dt.date, end: dt.date) -> dict:
-    """[start, end] (UTC 날짜) + 측정 대상"""
-    return {'AND': [{'datetime_geq': f'{start}T00:00:00Z', 'datetime_lt': f'{end + dt.timedelta(days=1)}T00:00:00Z'}, site_filter()]}
+def period_filter(start: dt.date, end: dt.date, human: bool = True, only: str | None = None) -> dict:
+    """[start, end] (UTC 날짜) + 측정 대상. human = 봇·운영자(한국) 제외, only = 'operator' | 'bot'이면 그 방문만"""
+    parts = [{'datetime_geq': f'{start}T00:00:00Z', 'datetime_lt': f'{end + dt.timedelta(days=1)}T00:00:00Z'}, site_filter()]
+    if only == 'operator':
+        parts.append({'countryName': OPERATOR_COUNTRY})
+    elif only == 'bot':
+        parts += [{'bot': 1}, {'countryName_neq': OPERATOR_COUNTRY}]
+    elif human:
+        parts += [{'bot': 0}, {'countryName_neq': OPERATOR_COUNTRY}]
+    return {'AND': parts}
 
 
 def normalize_path(path: str) -> str:
@@ -129,6 +139,92 @@ def group_referers(rows: list[dict], limit: int, own_host: str = 'tool-proof.com
         cell['views'] += int(r['count'])
         cell['visits'] += int((r.get('sum') or {}).get('visits') or 0)
     return sorted(by.values(), key=lambda x: (-x['views'], x['key']))[:limit]
+
+
+def _groups(dataset: str, body: str, start: dt.date, end: dt.date, limit: int = 100, **filter_kw) -> list[dict]:
+    """rum{dataset}AdaptiveGroups 한 번 조회 (dataset: PageloadEvents·PerformanceEvents·WebVitalsEvents)"""
+    account = os.environ['CF_ACCOUNT_ID'].strip()
+    query = (f'query ($a: string!, $f: AccountRum{dataset}AdaptiveGroupsFilter_InputObject) {{ viewer {{ accounts(filter: {{ accountTag: $a }}) {{ '
+             f'rum{dataset}AdaptiveGroups(limit: {limit}, filter: $f) {body} }} }} }}')
+    res = _request('POST', f'{API}/graphql', {'query': query, 'variables': {'a': account, 'f': period_filter(start, end, **filter_kw)}})
+    if res.get('errors'):
+        raise RuntimeError(f"GraphQL 오류: {res['errors'][0].get('message')}")
+    accounts = res['data']['viewer']['accounts']
+    return accounts[0][f'rum{dataset}AdaptiveGroups'] if accounts else []
+
+
+def excluded(start: dt.date, end: dt.date) -> dict:
+    """지표에서 뺀 방문 {operator: {views, visits}, bot: {views, visits}} (표본 추정치)"""
+    out = {}
+    for kind in ('operator', 'bot'):
+        rows = _groups('PageloadEvents', '{ count sum { visits } }', start, end, human=False, only=kind)
+        out[kind] = {'views': int(rows[0]['count']) if rows else 0, 'visits': int((rows[0].get('sum') or {}).get('visits') or 0) if rows else 0}
+    return out
+
+
+def _us(value) -> float | None:
+    """마이크로초 → 밀리초 (-1·None = 표본 부족)"""
+    return None if value is None or value < 0 else round(value / 1000, 1)
+
+
+VITALS = ('lcp', 'inp', 'cls', 'fcp', 'ttfb')
+VITAL_QUANTILES = {'lcp': 'largestContentfulPaintP75', 'inp': 'interactionToNextPaintP75', 'cls': 'cumulativeLayoutShiftP75', 'fcp': 'firstContentfulPaintP75', 'ttfb': 'timeToFirstByteP75'}
+
+
+def _vital_cells(row: dict) -> dict:
+    """한 행 → {lcp: {p75, good, ni, poor, total}, ...}. 시간 지표 p75는 ms, CLS는 Cloudflare 원값(표본이 없으면 None)"""
+    q, s = row.get('quantiles') or {}, row.get('sum') or {}
+    out = {}
+    for v in VITALS:
+        raw = q.get(VITAL_QUANTILES[v])
+        p75 = (None if raw is None or raw < 0 else raw) if v == 'cls' else _us(raw)
+        good, ni, poor = int(s.get(f'{v}Good', 0)), int(s.get(f'{v}NeedsImprovement', 0)), int(s.get(f'{v}Poor', 0))
+        out[v] = {'p75': p75, 'good': good, 'ni': ni, 'poor': poor, 'total': good + ni + poor}
+    return out
+
+
+def vitals_doc(start: dt.date, end: dt.date) -> dict:
+    """Core Web Vitals·방문 환경 문서 (봇·운영자 제외, 2026-11-10): 사이트·기기·경로별 p75와 좋음/개선 필요/나쁨 수,
+    LCP·CLS·INP 원인 요소, 페이지 로드 p75, 국가·기기·브라우저·OS·이동 방식(전체 로드 vs 사이트 안 이동)·시간대(UTC), 제외 수, 표본 간격"""
+    sums = ' '.join(f'{v}Good {v}NeedsImprovement {v}Poor' for v in VITALS)  # 한 쿼리 필드 30개 제한 → Total은 세 값의 합으로
+    quants = ' '.join(VITAL_QUANTILES.values())
+    body = lambda dims: f'{{ count sum {{ visits {sums} }} quantiles {{ {quants} }}{f" dimensions {{ {dims} }}" if dims else ""} }}'  # noqa: E731
+    site = _groups('WebVitalsEvents', body(''), start, end, 1)
+    devices = _groups('WebVitalsEvents', body('deviceType'), start, end, 10)
+    paths = _groups('WebVitalsEvents', body('requestPath'), start, end, 200)
+
+    def elements(dim: str) -> list[dict]:
+        rows = _groups('WebVitalsEvents', f'{{ count dimensions {{ {dim} }} }}', start, end, 20)
+        return sorted(({'element': r['dimensions'][dim], 'count': int(r['count'])} for r in rows if r['dimensions'][dim]), key=lambda x: -x['count'])[:5]
+
+    perf = _groups('PerformanceEvents', '{ count quantiles { pageLoadTimeP75 responseTimeP75 firstContentfulPaintP75 dnsTimeP75 connectionTimeP75 } }', start, end, 1)
+    pq = (perf[0].get('quantiles') or {}) if perf else {}
+
+    def breakdown(dim: str, limit: int = 10) -> list[dict]:
+        rows = _groups('PageloadEvents', f'{{ count sum {{ visits }} dimensions {{ {dim} }} }}', start, end, 100)
+        return sorted(({'key': str(r['dimensions'][dim]), 'views': int(r['count']), 'visits': int((r.get('sum') or {}).get('visits') or 0)} for r in rows), key=lambda x: (-x['views'], x['key']))[:limit]
+
+    sample = _groups('PageloadEvents', '{ count avg { sampleInterval } }', start, end, 1)
+    hours = {h: 0 for h in range(24)}
+    for r in _groups('PageloadEvents', '{ count dimensions { datetimeHour } }', start, end, 1000):
+        hours[int(r['dimensions']['datetimeHour'][11:13])] += int(r['count'])
+    return {
+        'range': {'start': str(start), 'end': str(end)},
+        'sampleInterval': round((sample[0].get('avg') or {}).get('sampleInterval') or 1) if sample else None,
+        'excluded': excluded(start, end),
+        'site': {'visits': int((site[0].get('sum') or {}).get('visits') or 0) if site else 0, **(_vital_cells(site[0]) if site else {})},
+        'devices': [{'key': r['dimensions']['deviceType'], 'count': int(r['count']), **_vital_cells(r)} for r in devices],
+        'paths': sorted(({'path': normalize_path(r['dimensions']['requestPath']), 'count': int(r['count']), **_vital_cells(r)} for r in paths), key=lambda x: (-x['count'], x['path']))[:30],
+        'elements': {'lcp': elements('largestContentfulPaintElement'), 'cls': elements('cumulativeLayoutShiftElement'), 'inp': elements('interactionToNextPaintElement')},
+        'performance': {'pageLoad': _us(pq.get('pageLoadTimeP75')), 'response': _us(pq.get('responseTimeP75')), 'fcp': _us(pq.get('firstContentfulPaintP75')),
+                        'dns': _us(pq.get('dnsTimeP75')), 'connection': _us(pq.get('connectionTimeP75'))},
+        'countries': breakdown('countryName'),
+        'devices_views': breakdown('deviceType'),
+        'browsers': breakdown('userAgentBrowser'),
+        'os': breakdown('userAgentOS'),
+        'navigation': breakdown('navigationType'),
+        'hours': [{'hour': h, 'views': n} for h, n in hours.items()],
+    }
 
 
 def main() -> None:

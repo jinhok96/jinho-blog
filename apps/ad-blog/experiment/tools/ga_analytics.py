@@ -45,6 +45,10 @@ AI_SOURCES = {
     'chat.deepseek.com': 'DeepSeek', 'grok.com': 'Grok', 'you.com': 'You.com',
 }
 RETRY_WAITS = (5, 20, 60)  # 일시 오류(시간 초과·연결 끊김·5xx) 재시도 대기(초)
+# 실제 독자가 아닌 방문 (2026-11-10): 영어·미국 대상 사이트라 한국 방문은 운영자 확인으로 보고, 화면 800x600은 헤드리스 브라우저 기본값
+# (Council Bluffs 데이터센터·참여 0초 방문이 모두 이 크기, 2026-11-10 확인). report()는 기본으로 둘 다 빼고 셈
+OPERATOR_COUNTRY = 'South Korea'
+HEADLESS_SCREEN = '800x600'
 
 
 def available() -> bool:
@@ -59,21 +63,35 @@ def load_token() -> str:
     return creds.token
 
 
-def host_filter(event: str | None = None) -> dict:
-    """사이트 도메인 (+ 이벤트 이름) 필터"""
+def _exact(field: str, value: str) -> dict:
+    return {'filter': {'fieldName': field, 'stringFilter': {'matchType': 'EXACT', 'value': value}}}
+
+
+def host_filter(event: str | None = None, human: bool = True, only: str | None = None) -> dict:
+    """사이트 도메인 (+ 이벤트 이름) 필터. human = 운영자(한국)·헤드리스(800x600) 방문 제외,
+    only = 'operator' | 'bot'이면 그 방문만 (제외한 수를 셀 때)"""
     expressions = [{'filter': {'fieldName': 'hostName', 'inListFilter': {'values': list(SITE_HOSTS)}}}]
     if event:
-        expressions.append({'filter': {'fieldName': 'eventName', 'stringFilter': {'matchType': 'EXACT', 'value': event}}})
+        expressions.append(_exact('eventName', event))
+    if only == 'operator':
+        expressions.append(_exact('country', OPERATOR_COUNTRY))
+    elif only == 'bot':
+        expressions += [_exact('screenResolution', HEADLESS_SCREEN), {'notExpression': _exact('country', OPERATOR_COUNTRY)}]
+    elif human:
+        expressions += [{'notExpression': _exact('country', OPERATOR_COUNTRY)}, {'notExpression': _exact('screenResolution', HEADLESS_SCREEN)}]
     return {'andGroup': {'expressions': expressions}}
 
 
-def report(token: str, start: dt.date, end: dt.date, dims: list[str], metrics: list[str] | tuple[str, ...], event: str | None = None) -> list[tuple[list[str], list[float]]]:
-    """runReport → [(차원 값들, 지표 값들)]. 데이터가 없으면 빈 목록"""
+def report(
+    token: str, start: dt.date, end: dt.date, dims: list[str], metrics: list[str] | tuple[str, ...], event: str | None = None,
+    human: bool = True, only: str | None = None,
+) -> list[tuple[list[str], list[float]]]:
+    """runReport → [(차원 값들, 지표 값들)]. 데이터가 없으면 빈 목록. 기본으로 운영자·헤드리스 방문 제외 (host_filter)"""
     body = {
         'dateRanges': [{'startDate': str(start), 'endDate': str(end)}],
         'dimensions': [{'name': d} for d in dims],
         'metrics': [{'name': m} for m in metrics],
-        'dimensionFilter': host_filter(event),
+        'dimensionFilter': host_filter(event, human, only),
         'limit': 10000,
     }
     for wait in (*RETRY_WAITS, None):
@@ -98,8 +116,11 @@ def normalize_path(path: str) -> str:
     return path.split('?', 1)[0].rstrip('/') or '/'
 
 
+SCROLL_DEPTHS = ('25', '50', '75', '90')  # percent_scrolled 값 (25·50·75는 사이트 이벤트 2026-11-10부터, 90은 향상된 측정)
+
+
 def empty() -> dict:
-    return {'views': 0, 'users': 0, 'engagementSeconds': 0, 'scrolls': 0}
+    return {'views': 0, 'users': 0, 'engagementSeconds': 0, 'scrolls': 0, 'depth': {d: 0 for d in SCROLL_DEPTHS}}
 
 
 def add(cell: dict, values: list[float]) -> None:
@@ -114,8 +135,12 @@ def page_engagement(token: str, start: dt.date, end: dt.date) -> dict[str, dict]
     out: dict[str, dict] = {}
     for (path,), values in report(token, start, end, ['pagePath'], METRICS):
         add(out.setdefault(normalize_path(path), empty()), values)
-    for (path,), values in report(token, start, end, ['pagePath'], ['eventCount'], event='scroll'):
-        out.setdefault(normalize_path(path), empty())['scrolls'] += int(values[0])
+    for (path, depth), values in report(token, start, end, ['pagePath', 'percentScrolled'], ['eventCount'], event='scroll'):
+        cell = out.setdefault(normalize_path(path), empty())
+        if depth == '90':
+            cell['scrolls'] += int(values[0])  # 90% 도달 (예전 값과 같은 뜻 유지)
+        if depth in cell['depth']:
+            cell['depth'][depth] += int(values[0])
     return out
 
 
@@ -126,23 +151,26 @@ def iso_date(value: str) -> str:
 
 def site_doc(token: str, start: dt.date, end: dt.date) -> dict:
     """사이트 전체 문서: 기간 합계 + 세션·참여 세션 + 날짜별(빠진 날 0)"""
-    totals = empty() | {'sessions': 0, 'engagedSessions': 0}
+    totals = {k: v for k, v in empty().items() if k != 'depth'} | {'sessions': 0, 'engagedSessions': 0}
     for _, values in report(token, start, end, [], (*METRICS, 'sessions', 'engagedSessions')):
         add(totals, values)
         totals['sessions'] += int(values[3])
         totals['engagedSessions'] += int(values[4])
     by_date: dict[str, dict] = {}
+    day = lambda: {k: v for k, v in empty().items() if k != 'depth'}  # noqa: E731 - 날짜별 칸에는 깊이를 두지 않음
     for (d,), values in report(token, start, end, ['date'], METRICS):
-        add(by_date.setdefault(iso_date(d), empty()), values)
-    for (d,), values in report(token, start, end, ['date'], ['eventCount'], event='scroll'):
-        by_date.setdefault(iso_date(d), empty())['scrolls'] += int(values[0])
+        add(by_date.setdefault(iso_date(d), day()), values)
+    # 90% 도달만 셈 (25·50·75 사이트 이벤트가 섞여도 예전 값과 같은 뜻)
+    for (d, depth), values in report(token, start, end, ['date', 'percentScrolled'], ['eventCount'], event='scroll'):
+        if depth == '90':
+            by_date.setdefault(iso_date(d), day())['scrolls'] += int(values[0])
     totals['scrolls'] = sum(c['scrolls'] for c in by_date.values())
     days = [str(start + dt.timedelta(days=i)) for i in range((end - start).days + 1)]
     return {
         'range': {'start': str(start), 'end': str(end)},
         'propertyId': PROPERTY_ID,
         **totals,
-        'daily': [{'date': d, **by_date.get(d, empty())} for d in days],
+        'daily': [{'date': d, **by_date.get(d, day())} for d in days],
     }
 
 
@@ -241,6 +269,117 @@ def traffic_sources(token: str, start: dt.date, end: dt.date) -> dict:
         'sources': sorted(sources, key=lambda r: (-r['sessions'], r['source']))[:30],
         'landing': [{'channel': k, 'page': p, 'sessions': n} for (k, p), n in sorted(landing.items(), key=lambda x: (-x[1], keys.index(x[0][0]), x[0][1]))][:30],
         'daily': [{'date': d, 'channels': daily[d]} for d in sorted(daily)],
+    }
+
+
+SITE_ORIGINS = tuple(f'https://{h}' for h in SITE_HOSTS)
+SESSION_METRICS = ('sessions', 'engagedSessions', 'userEngagementDuration', 'screenPageViews')
+
+
+def _session_rows(token: str, start: dt.date, end: dt.date, dim: str, limit: int | None = None) -> list[dict]:
+    """한 차원별 세션·참여 세션·참여 시간·조회 (세션 많은 순)"""
+    rows = [
+        {'key': key, 'sessions': int(s), 'engagedSessions': int(e), 'engagementSeconds': round(sec), 'views': int(v)}
+        for (key,), (s, e, sec, v) in report(token, start, end, [dim], SESSION_METRICS)
+    ]
+    rows.sort(key=lambda r: (-r['sessions'], r['key']))
+    return rows[:limit] if limit else rows
+
+
+def excluded(token: str, start: dt.date, end: dt.date) -> dict:
+    """지표에서 뺀 방문 수 {operator: {sessions, views}, bot: {sessions, views}} (host_filter의 human 규칙)"""
+    out = {}
+    for kind in ('operator', 'bot'):
+        rows = report(token, start, end, [], ['sessions', 'screenPageViews'], human=False, only=kind)
+        out[kind] = {'sessions': int(rows[0][1][0]) if rows else 0, 'views': int(rows[0][1][1]) if rows else 0}
+    return out
+
+
+def audience_doc(token: str, start: dt.date, end: dt.date) -> dict:
+    """방문자·행동 문서 (운영자·헤드리스 제외, 2026-11-10): 사용자·재방문·참여율·이탈률, 기기·국가·시간대·요일,
+    첫 페이지 품질, 스크롤 깊이, 내부 이동(내 사이트 → 페이지), 외부 링크 클릭, 첫 유입 채널, 광고 지표(AdSense 연결 후)"""
+    t1 = report(token, start, end, [], ['activeUsers', 'newUsers', 'totalUsers', 'sessions', 'engagedSessions', 'engagementRate', 'bounceRate', 'averageSessionDuration', 'sessionsPerUser', 'screenPageViewsPerSession'])
+    t2 = report(token, start, end, [], ['userEngagementDuration', 'screenPageViews', 'scrolledUsers', 'eventsPerSession'])
+    v1, v2 = (t1[0][1] if t1 else [0] * 10), (t2[0][1] if t2 else [0] * 4)
+    totals = {
+        'activeUsers': int(v1[0]), 'newUsers': int(v1[1]), 'totalUsers': int(v1[2]), 'sessions': int(v1[3]), 'engagedSessions': int(v1[4]),
+        'engagementRate': round(v1[5], 4), 'bounceRate': round(v1[6], 4), 'averageSessionDuration': round(v1[7], 1),
+        'sessionsPerUser': round(v1[8], 2), 'viewsPerSession': round(v1[9], 2),
+        'engagementSeconds': round(v2[0]), 'views': int(v2[1]), 'scrolledUsers': int(v2[2]), 'eventsPerSession': round(v2[3], 2),
+    }
+    returning = [
+        {'key': key, 'users': int(u), 'sessions': int(s), 'engagedSessions': int(e), 'engagementSeconds': round(sec)}
+        for (key,), (u, s, e, sec) in report(token, start, end, ['newVsReturning'], ['activeUsers', 'sessions', 'engagedSessions', 'userEngagementDuration'])
+        if key in ('new', 'returning')
+    ]
+    landing = []
+    for (page,), (s, e, sec, v, bounce) in report(token, start, end, ['landingPage'], (*SESSION_METRICS, 'bounceRate')):
+        landing.append({'page': normalize_path(page), 'sessions': int(s), 'engagedSessions': int(e), 'engagementSeconds': round(sec), 'views': int(v), 'bounceRate': round(bounce, 4)})
+    landing.sort(key=lambda r: (-r['sessions'], r['page']))
+    depth = {d: {'events': 0, 'users': 0} for d in SCROLL_DEPTHS}
+    for (d,), (events, users) in report(token, start, end, ['percentScrolled'], ['eventCount', 'totalUsers'], event='scroll'):
+        if d in depth:
+            depth[d] = {'events': int(events), 'users': int(users)}
+    internal: dict[tuple[str, str], int] = {}
+    for (ref, page), (views,) in report(token, start, end, ['pageReferrer', 'pagePath'], ['screenPageViews']):
+        if ref.startswith(SITE_ORIGINS):
+            src = normalize_path(ref.split('://', 1)[1].split('/', 1)[1] if '/' in ref.split('://', 1)[1] else '/')
+            src = src if src.startswith('/') else '/' + src
+            dst = normalize_path(page)
+            if src != dst:
+                internal[(src, dst)] = internal.get((src, dst), 0) + int(views)
+    outbound = [
+        {'domain': domain, 'url': url, 'page': normalize_path(page), 'clicks': int(n)}
+        for (domain, url, page, out), (n,) in report(token, start, end, ['linkDomain', 'linkUrl', 'pagePath', 'outbound'], ['eventCount'], event='click')
+        if out == 'true' or (domain and not any(h in domain for h in SITE_HOSTS))
+    ]
+    outbound.sort(key=lambda r: (-r['clicks'], r['domain']))
+    first: dict[str, int] = {}
+    for (source, medium), (n,) in report(token, start, end, ['firstUserSource', 'firstUserMedium'], ['newUsers']):
+        key = channel(source, medium)
+        first[key] = first.get(key, 0) + int(n)
+    hours = {h: 0 for h in range(24)}
+    for (h,), (n,) in report(token, start, end, ['hour'], ['sessions']):
+        hours[int(h)] += int(n)
+    weekdays = {d: 0 for d in range(7)}
+    for (d,), (n,) in report(token, start, end, ['dayOfWeek'], ['sessions']):
+        weekdays[int(d)] += int(n)
+    return {
+        'range': {'start': str(start), 'end': str(end)},
+        'timezone': 'Asia/Seoul',  # GA4 속성 시간대 (시간대·요일 차원 기준)
+        'excluded': excluded(token, start, end),
+        'totals': totals,
+        'newVsReturning': returning,
+        'devices': _session_rows(token, start, end, 'deviceCategory'),
+        'countries': _session_rows(token, start, end, 'countryId', 10),  # ISO 2자리 코드 (화면이 한국어 이름으로 바꿈, Cloudflare와 같은 형식)
+        'os': _session_rows(token, start, end, 'operatingSystem', 8),
+        'hours': [{'hour': h, 'sessions': n} for h, n in hours.items()],
+        'weekdays': [{'day': d, 'sessions': n} for d, n in weekdays.items()],  # 0 = 일요일
+        'landing': landing[:20],
+        'scrollDepth': [{'percent': int(d), **v} for d, v in depth.items()],
+        'internal': [{'from': f, 'to': t, 'views': n} for (f, t), n in sorted(internal.items(), key=lambda x: (-x[1], x[0]))][:20],
+        'outbound': outbound[:20],
+        'firstChannels': first,
+        'ads': ads_doc(token, start, end),
+    }
+
+
+def ads_doc(token: str, start: dt.date, end: dt.date) -> dict:
+    """AdSense 지표 (GA4에 AdSense를 연결해야 채워짐, 그 전에는 0·빈 목록): 합계와 글별 광고 노출·클릭·수익"""
+    metrics = ['publisherAdImpressions', 'publisherAdClicks', 'totalAdRevenue']
+    try:
+        total = report(token, start, end, [], metrics)
+        pages = report(token, start, end, ['pagePath'], metrics)
+        units = report(token, start, end, ['adFormat'], metrics)
+    except (requests.RequestException, RuntimeError) as error:
+        return {'linked': False, 'error': str(error)[:200]}
+    t = total[0][1] if total else [0, 0, 0]
+    row = lambda k, v: {'key': k, 'impressions': int(v[0]), 'clicks': int(v[1]), 'revenue': round(v[2], 2)}  # noqa: E731
+    return {
+        'linked': bool(t[0] or t[1] or t[2]),
+        'total': row('total', t),
+        'pages': sorted((row(normalize_path(k), v) for (k,), v in pages if v[0] or v[1]), key=lambda r: -r['impressions'])[:20],
+        'formats': [row(k, v) for (k,), v in units if v[0] or v[1]],
     }
 
 

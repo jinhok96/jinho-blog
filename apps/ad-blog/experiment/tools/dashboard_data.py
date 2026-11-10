@@ -75,6 +75,19 @@ feedSeenAt·sitemapSeenAt·crawledAt)은 2026-11-04부터 저장소 파일
               sessions, engagedSessions, scrolls, daily: [{date, views, users, engagementSeconds, scrolls}](한국 날짜, 빠진 날 0)}.
               engagementSeconds = 페이지가 화면 앞에 있던 시간 합(초), scrolls = 90% 스크롤 이벤트 수 (ga_analytics.py).
               유럽 동의 거부 방문은 빠질 수 있어 전체 조회수는 traffic(Cloudflare) 기준
+- 실제 독자만 (2026-11-10 회차부터): GA4 값(engagement·sources·audience·글별 engagement)은 운영자(한국)·헤드리스(화면 800x600) 방문을,
+  Cloudflare 값(traffic·글별 views·sources.cf·vitals)은 봇(bot=1)·운영자(KR) 방문을 빼고 셈. 뺀 수는 audience.excluded·vitals.excluded(=traffic.excluded).
+  Cloudflare Web Analytics는 표본 수집이라 값은 표본 간격(traffic.sampleInterval, 10)을 곱한 추정치
+- audience: (GA4를 읽은 회차만) 방문자·행동 {range, timezone, excluded: {operator, bot: {sessions, views}}, totals(activeUsers·newUsers·sessions·engagedSessions·
+            engagementRate·bounceRate·averageSessionDuration·sessionsPerUser·viewsPerSession·engagementSeconds·views·scrolledUsers·eventsPerSession),
+            newVsReturning, devices·countries(상위 10)·os(상위 8) [{key, sessions, engagedSessions, engagementSeconds, views}], hours(0~23, 한국 시간)·weekdays(0=일),
+            landing: 첫 페이지 상위 20 {page, sessions, engagedSessions, engagementSeconds, views, bounceRate}, scrollDepth: [{percent 25·50·75·90, events, users}],
+            internal: 내부 이동 상위 20 {from, to, views}(pageReferrer가 내 사이트), outbound: 외부 링크 클릭 상위 20 {domain, url, page, clicks},
+            firstChannels: 첫 유입 채널별 신규 사용자, ads: AdSense 지표 {linked, total, pages, formats}(GA4에 AdSense를 연결해야 채워짐)}
+- vitals: (Cloudflare를 읽은 회차만) Core Web Vitals·방문 환경 {range, sampleInterval, excluded, site·devices·paths(상위 30): 지표별 {p75(ms, CLS는 원값), good, ni, poor, total},
+          elements: LCP·CLS·INP 원인 요소 상위 5, performance: p75(ms) pageLoad·response·fcp·dns·connection,
+          countries·devices_views·browsers·os·navigation(navigate 전체 로드·back_forward·reload 등) [{key, views, visits}], hours(0~23, UTC)}
+- 글별 engagement.depth: percent_scrolled 25·50·75·90 이벤트 수 (25·50·75는 사이트 이벤트 2026-11-10 배포 뒤부터, 90은 향상된 측정). scrolls는 90% 도달 수
 - sources: (GA4나 Cloudflare를 읽은 회차만, 2026-11-10 회차부터) 유입 경로 {gscClicks(Search Console 28일 Google 검색 클릭),
            ga: {range, firstDate, sessions, channels: {채널 키: {sessions, views, engagedSessions, engagementSeconds}},
                 sources: [{source, medium, channel, sessions, views, engagedSessions}] 상위 30, landing: [{channel, page, sessions}] 직접 제외 상위 30,
@@ -585,6 +598,13 @@ def main() -> None:
             docs['traffic'] = traffic_doc(page_views, dt.date.fromisoformat(since), today)
         except Exception as error:  # noqa: BLE001 - 조회수는 부가 지표라 대시보드 갱신을 막지 않음
             print(f'Cloudflare 조회수를 읽지 못함 (조회수 없이 진행): {error}', file=sys.stderr)
+        # Core Web Vitals·방문 환경·제외 수·표본 간격 (2026-11-10 회차부터). 실패해도 나머지 갱신은 계속
+        try:
+            docs['vitals'] = cf_analytics.vitals_doc(dt.date.fromisoformat(since), today)
+            if 'traffic' in docs:
+                docs['traffic'].update(excluded=docs['vitals']['excluded'], sampleInterval=docs['vitals']['sampleInterval'])
+        except Exception as error:  # noqa: BLE001
+            print(f'Cloudflare Web Vitals를 읽지 못함: {error}', file=sys.stderr)
     # 참여 시간·90% 스크롤 (GA4, 속성 시간대 = 한국 날짜): 실패해도 나머지 갱신은 계속
     engagement: dict[str, dict] | None = None  # None = 이번 회차에 GA4를 읽지 못함 (글별 칸을 넣지 않음)
     ga_token: str | None = None  # 유입 경로(sources) 문서도 같은 토큰을 씀
@@ -597,6 +617,12 @@ def main() -> None:
         except Exception as error:  # noqa: BLE001 - 참여 시간은 부가 지표라 대시보드 갱신을 막지 않음
             engagement = None
             print(f'GA4 참여 시간을 읽지 못함 (참여 시간 없이 진행): {error}', file=sys.stderr)
+        # 방문자·행동 (재방문·기기·국가·시간대·첫 페이지·스크롤 깊이·내부 이동·외부 클릭·광고, 2026-11-10 회차부터)
+        if ga_token:
+            try:
+                docs['audience'] = ga_analytics.audience_doc(ga_token, ga_since, today)
+            except Exception as error:  # noqa: BLE001
+                print(f'GA4 방문자·행동을 읽지 못함: {error}', file=sys.stderr)
     for url, days in page_views.items():
         rows = {r['date']: r for r in page_daily.setdefault(url, [])}
         for d, v in days.items():

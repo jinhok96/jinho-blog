@@ -1,0 +1,53 @@
+# Firefox 159.0 → 160.0 AI 관련 문자열·코드 비교 (2026-11-11 세션 94)
+# 비교 대상: download-installer.cdn.mozilla.net/pub/firefox/releases/{159.0,160.0}/linux-x86_64/en-US/firefox-*.tar.xz 의 browser/omni.ja · omni.ja · libxul.so
+
+## diff browser/omni.ja:localization/en-US/browser/aiFeatures.ftl
+(차이 없음)
+
+## diff browser/omni.ja:chrome/browser/content/browser/preferences/config/aiFeatures.mjs
+(차이 없음)
+
+## diff browser/omni.ja:localization/en-US/browser/genai.ftl
+195a196,197
+> highlight-to-search-settings-search =
+>     .label = Search
+
+## diff browser/omni.ja:chrome/browser/content/browser/preferences/OnDeviceModelManager.mjs
+22c22
+<     "resource://gre/modules/SpeechRecognitionFeature.sys.mjs",
+---
+>     "moz-src:///dom/media/webspeech/recognition/SpeechRecognitionFeature.sys.mjs",
+
+## preferences.ftl AI controls 문자열 (160, 159와 차이 없음)
+(차이 없음)
+preferences-ai-controls-speech-recognition-control =
+    .label = Speech recognition
+    .description = Transcribe speech locally.
+--
+preferences-ai-controls-block-confirmation-speech-recognition = Speech recognition
+preferences-ai-controls-block-confirmation-features-after = Blocking also affects extensions that use AI provided by { -brand-short-name }.
+
+
+## OnDeviceModelManager.mjs (160) Speech recognition 주석
+  // Speech recognition has no separate feature pref: the AI Controls pref is
+  // the source of truth, and the C++ SpeechRecognition implementation reads it
+  // directly to gate available()/install()/start(). Observe the control pref so
+  // the AI Controls UI reflects state changes; no JS teardown is needed.
+  [OnDeviceModelFeatures.SpeechRecognition]: [
+    "browser.ai.control.speechRecognition",
+  ],
+
+## omni.ja res/locale/dom/dom.properties (160)
+SpeechRecognitionBlockedByAIControlsWarning=On-device speech recognition is turned off in the user’s AI Controls settings, so SpeechRecognition reports itself as unavailable and refuses to start.
+
+## firefox.js 기본값 (160)
+286:pref("browser.highlightToSearch.featureGate", false);
+287:pref("browser.highlightToSearch.enabled", true);
+288:pref("browser.highlightToSearch.search.enabled", true);
+289:pref("browser.highlightToSearch.copy.enabled", true);
+900:pref("browser.ml.chat.enabled", true);
+936:pref("browser.smartwindow.enabled", false);
+
+## libxul.so 문자열 browser.ai.control.speechRecognition 포함 여부
+159: 1
+160: 1

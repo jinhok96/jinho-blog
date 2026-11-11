@@ -65,3 +65,29 @@
 - 기업 정책 설정 방법(policies.json·그룹 정책): 관리자용
 - Smart Window 설정 화면 단계(모델·기억 끄기 메뉴 이름): 우리 사본에 배포되지 않아 화면을 보지 못함 → firefox.com 설명("see what's remembered, delete … or turn it off")만 씀
 - SUMO 지원 문서(support.mozilla.org/kb/firefox-ai-controls 등): 컨테이너·WebFetch 모두 "Client Challenge"로 막힘 → 블로그·릴리스 노트·앱 화면으로 대신
+
+## 2026-11-11 Firefox 160 재확인 (세션 94, 개선 세션 6번 반복 일정)
+
+- 검증 유형 줄: **검증형** 그대로 (159·160 모두 직접 실행)
+- 환경: Firefox 160.0 Linux x86_64 en-US(2026-11-10 출시, `product-details.mozilla.org` LATEST_FIREFOX_VERSION 160.0·LAST_RELEASE_DATE 2026-11-10), 비교용 159.0, Xvfb 1440×960, xdotool, 새 프로필(`user.js` 같음). 시험 페이지 `speech-test-page.html`(로컬 http://127.0.0.1:8765, 프랑스어 문단 + `SpeechRecognition` 존재·`available()`·`start()` 결과를 페이지에 표시). 캡처 `screens/160-*.webp`
+- 순서와 결과 (2026-11-11 17:25~17:58 UTC)
+  1. `about:preferences#ai`: 화면이 159와 같음 — Block AI enhancements 꺼짐, On-device AI 5개 Available, Smart Window 행 없음 (`160-01-ai-controls-default`)
+  2. 시험 페이지(차단 전): 번역 아이콘 + "Try private translations in Firefox" 창이 처음 한 번 뜸, `SpeechRecognition in window: true`, `available(en-US, on device): unavailable`(모델 미설치) (`160-02-before-speech`)
+  3. Block AI enhancements → 확인 창 목록 7개 159와 같음 (`160-03-block-confirm`) → Block → 모든 기능 Blocked + 안내 문구 (`160-04-after-block-settings`)
+  4. 시험 페이지 새로 고침: 번역 아이콘 없음 (`160-05-after-speech`). `start()` 호출 → **창 없이 `NotAllowedError: SpeechRecognition.start: on-device speech recognition is blocked by the user's AI settings`** (`160-06-blocked-start`)
+  5. Speech recognition만 Available(드롭다운은 Available·Blocked 2개, 클릭으로는 선택이 안 돼 키보드 ↑·Enter) (`160-08-speech-available`) → 새로 고침·`start()` → **"Set up speech recognition?" 창: "Firefox runs speech recognition locally, so the audio never leaves your device. To set this up, a ~141 MB download will start when you continue." [Not Now] [Continue]** (`160-09-speech-available-start`). Not Now를 눌러 내려받지 않음
+  6. 차단 상태(Translations·Chatbot Blocked)에서 글자 선택 후 오른쪽 클릭: Translate Selection·Ask an AI Chatbot 없음. 새 항목 "Move Section to Mini Window (Beta)"(AI 아님) (`160-11-blocked-context-menu`)
+  7. 업데이트 유지: 두 번째 새 프로필을 **159.0**으로 열어(159가 "Update available" 알림을 띄움) Block → Ctrl+Q(종료 확인 창 → Quit Firefox) → 같은 프로필을 **160.0**으로 열기(`compatibility.ini` LastVersion 159.0 → 160.0): Block 켜짐·기능 Blocked 그대로 (`160-21-159-confirm`, `160-22-159-blocked`, `160-23-160-after-update`, `prefs-159-to-160-update.txt`)
+- 코드·문자열 비교 (`firefox-160-strings-diff.txt`): `aiFeatures.ftl`·`aiFeatures.mjs` 159와 같음, preferences.ftl AI controls 문자열 같음 → AI controls 화면 변화 없음. `OnDeviceModelManager.mjs`는 SpeechRecognitionFeature 경로만 바뀜, 주석 "the AI Controls pref is the source of truth, and the C++ SpeechRecognition implementation reads it directly to gate available()/install()/start()". `dom.properties` `SpeechRecognitionBlockedByAIControlsWarning`. `genai.ftl`에 'highlight to search' 메뉴 Search 항목이 추가됐지만 `browser.highlightToSearch.featureGate` 기본값 false라 보이지 않음 → 본문에 안 씀
+
+| 주장 | 출처 | 확인 방법 |
+| --- | --- | --- |
+| Firefox 160.0: 2026-11-10 정식판 ("first offered to Release channel users on November 10, 2026") | firefox.com 160.0 릴리스 노트 | `source-firefox-160-release-notes.txt` (Chromium 렌더링) |
+| 160: 웹 음성 인식 API 지원 "providing on-device, real-time speech-to-text in 40 languages" | 같은 릴리스 노트 Developer > Web Platform | 같은 파일 + 직접 실행 2·4·5 |
+| 160: Mini Window("moves a tab or a selected part of a page into an always-on-top window"), Smart Window Organize Tabs 프랑스어(순차 배포) | 같은 릴리스 노트 New | 같은 파일 |
+| 차단 시 웹사이트 음성 입력 거부, Available이면 ~141 MB 내려받기 안내 창 | 직접 실행 4·5 | 캡처 |
+| 업데이트(159 → 160) 뒤 차단 유지 | 직접 실행 7 | 캡처·prefs |
+| AI controls 화면·확인 창 7개 항목 159와 같음 | 직접 실행 1·3 + 문자열 비교 | 캡처·diff |
+
+- 본문 반영: 설명(159 → 160, 'voice input on websites'), 첫 문단 버전·출시일, 둘째 문단 160 재확인 1문장, 요약 표 머리말·Speech recognition 행, 'What disappears' 끝 160 재확인 문단, 새 절 'What changed for AI in Firefox 160?'(그림 `firefox-160-speech-recognition-websites.webp`), FAQ 'Will a Firefox update turn AI back on?'를 직접 시험 결과로, 'Which setting' 받아쓰기 항목, How we tested 160 문단·Not tested. 기존 159 캡처 그림 5장은 화면이 같아 그대로(alt의 'Firefox 159' 유지). 제목 그대로, `updatedAt` 2026-11-11T18:20Z
+- 쓰지 않은 것: 음성 인식 모델 내려받기·받아쓰기 품질(Continue를 누르지 않음), Picture-in-Picture 재생 속도 등 AI와 무관한 160 기능, `SpeechRecognition.available()`이 차단 전에도 'unavailable'인 점(모델 미설치 상태라 차단 효과를 보여 주지 못함 → 본문은 `start()` 결과만)

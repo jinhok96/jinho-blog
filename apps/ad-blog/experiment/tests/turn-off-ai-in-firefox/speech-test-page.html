@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="fr"><head><meta charset="utf-8"><title>Page de test</title>
+<style>body{font:20px/1.5 sans-serif;max-width:900px;margin:40px auto}#sr{font:22px monospace;background:#eef;padding:16px;white-space:pre-line}</style></head>
+<body>
+<h1>Page de test</h1>
+<p>Le navigateur Firefox propose des outils de traduction qui fonctionnent directement sur votre ordinateur. Cette page sert à vérifier quels menus apparaissent quand on sélectionne une phrase.</p>
+<p>Les réglages permettent de bloquer ces fonctions ou de n'en garder qu'une seule.</p>
+<div id="sr">checking...</div>
+<script>
+async function check(){
+  const out=[];
+  out.push('Firefox ' + (navigator.userAgent.match(/Firefox\/([\d.]+)/)||[])[1]);
+  out.push('SpeechRecognition in window: '+('SpeechRecognition' in window));
+  const SR = window.SpeechRecognition||window.webkitSpeechRecognition;
+  if (SR && typeof SR.available === 'function') {
+    try { const r = await SR.available({langs:['en-US'], processLocally:true}); out.push('SpeechRecognition.available(en-US, on device): '+r); }
+    catch(e){ out.push('available() error: '+e.name+': '+e.message); }
+  } else { out.push('SpeechRecognition.available: ' + (SR ? typeof SR.available : 'n/a')); }
+  if (SR) { try { const rec = new SR(); out.push('new SpeechRecognition(): ok, processLocally=' + rec.processLocally); } catch(e){ out.push('new SpeechRecognition() error: '+e.name+': '+e.message); } }
+  document.getElementById('sr').textContent=out.join('\n');
+  if (SR) { try { const rec2 = new SR(); rec2.lang='en-US';
+      rec2.onerror = (e)=>{ out.push('start() -> error event: ' + e.error + (e.message? ' ('+e.message+')':'')); document.getElementById('sr').textContent=out.join('\n'); document.title='RESULT '+out.join(' | '); };
+      rec2.onstart = ()=>{ out.push('start() -> started'); document.getElementById('sr').textContent=out.join('\n'); };
+      rec2.start(); out.push('start() called');
+    } catch(e){ out.push('start() threw: '+e.name+': '+e.message); } }
+  document.getElementById('sr').textContent=out.join('\n');
+  document.title = 'RESULT ' + out.join(' | ');
+}
+check();
+</script>
+</body></html>

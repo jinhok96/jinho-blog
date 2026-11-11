@@ -2,7 +2,8 @@
 
 캡처 원본은 `screens/*.webp` (Firefox 159.0 Linux, 새 프로필, Xvfb 1440×960 1배율, 2026-10-28 15:47~15:55 UTC,
 조작 순서는 factcheck.md "직접 실행"). 내용 출처는 factcheck.md.
-실행: python3 -I charts.py <출력 폴더>
+실행: python3 -I charts.py <출력 폴더> [함수 이름 ...]
+2026-11-11 세션 94: Firefox 160 음성 인식 그림(`speech_on_websites`, 캡처 `screens/160-*.webp`) 추가
 """
 import sys
 from pathlib import Path
@@ -188,11 +189,38 @@ def coverage():
     cs.save(fig, f'{OUT}/firefox-ai-block-coverage.webp')
 
 
+def speech_on_websites():
+    """Firefox 160: 웹사이트가 음성 인식을 시작할 때. Speech recognition Available이면 설정 안내 창, Blocked면 창 없이 거부.
+
+    캡처: screens/160-09-speech-available-start.webp(Available), screens/160-06-blocked-start.webp(Block AI enhancements 켬).
+    Firefox 160.0 Linux 새 프로필, 2026-11-11 17:3x UTC, 로컬 시험 페이지(http://127.0.0.1)가 SpeechRecognition.start() 호출.
+    """
+    crop = (260, 44, 770, 304)
+    avail = Image.open(SCREENS / '160-09-speech-available-start.webp').convert('RGB').crop(crop)
+    blocked = Image.open(SCREENS / '160-06-blocked-start.webp').convert('RGB').crop(crop)
+    fig = plt.figure(figsize=cs.FIGSIZE)
+    cs.header(fig, 'Firefox 160: websites can use on-device speech recognition',
+              'The same test page asked to start voice input. What happened depended on the Speech recognition setting.')
+    h = 280
+    y = 0.27
+    ax1, w1 = place(fig, avail, 40, y, h)
+    mark(ax1, 36, 32, 451, 176, lw=2.5)  # Set up speech recognition? 창
+    x2 = 40 + w1 + 40
+    place(fig, blocked, x2, y, h)
+    fig.text(40 / 1200, y + h / 675 + 0.03, 'Speech recognition: Available', fontsize=15, fontweight='bold', color=cs.ACCENT)
+    fig.text(x2 / 1200, y + h / 675 + 0.03, 'Block AI enhancements on', fontsize=15, fontweight='bold', color=cs.MUTED)
+    fig.text(40 / 1200, y - 0.035, 'Firefox asks first: it runs speech recognition\nlocally after a ~141 MB download', fontsize=12.5,
+             color=cs.MUTED, va='top', linespacing=1.35)
+    fig.text(x2 / 1200, y - 0.035, 'No prompt. Firefox refuses the request, so the\nsite\'s voice input can\'t start', fontsize=12.5,
+             color=cs.MUTED, va='top', linespacing=1.35)
+    cs.footer(fig, 'Screenshots: Firefox 160.0 on a new profile, November 11, 2026, local test page. Box added by ToolProof.')
+    cs.save(fig, f'{OUT}/firefox-160-speech-recognition-websites.webp')
+
+
 if __name__ == '__main__':
     Path(OUT).mkdir(parents=True, exist_ok=True)
-    settings_page()
-    block_dialog()
-    before_after()
-    translations_only()
-    quick_action()
-    coverage()
+    funcs = [settings_page, block_dialog, before_after, translations_only, quick_action, coverage, speech_on_websites]
+    only = set(sys.argv[2:])  # 함수 이름을 주면 그 그림만 다시 그림 (예: speech_on_websites)
+    for f in funcs:
+        if not only or f.__name__ in only:
+            f()

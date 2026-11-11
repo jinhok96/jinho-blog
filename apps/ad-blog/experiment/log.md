@@ -48,7 +48,7 @@
 - Claude: **11-15(일) 첫 통합 주간 SEO 점검** (일요일 02시 개선 세션이 먼저)
 - Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤
 - Claude: 발행 56편 (허브 4개), 상시 글 전환 1편(누적)
-- 대시보드: (아래 갱신 결과)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-11T18:06:29Z, DB 문서 583개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값: **`convert-iphone-video-to-mp4`(발행 약 20시간)·`trim-video-without-losing-quality`가 이 회차 URL 검사에서 `Discovered`, 발견 경로 `rss.xml`·`sitemap.xml`** (11-11 피드·사이트맵 다운로드 뒤 — V7 판정 때 참고, 같은 세션 앞선 `gsc_report.py` 회차에서는 새 글이 unknown이었음), `turn-off-ai-in-brave` 첫 링크 관측 11-11 06:53. 이 회차 28일 노출 1,198·클릭 17·평균 25.2위, `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 39편 중 Google이 본 링크 21편·`inFeed` 11(미색인 9), `summary.adsense` 운영 32일·색인율 0.304(17/56)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회 122·방문 119, `engagement` GA4 조회 12·사용자 10·세션 12(참여 6)·참여 341초, `summary.userTodos` 0건. `posts` 문서 압축 JSON 약 128 KiB(한도 256 KiB의 50%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. 첫 실행은 백그라운드 제한 시간(10분)에 걸려 중단 → 제한 시간을 늘려 다시 실행(약 8분)
 - 배포: 이 세션 PR (CI 통과 후 머지)
 
 ## 2026-11-11 · 결정: 정기 실행 시각 02시 (사용자 요청)

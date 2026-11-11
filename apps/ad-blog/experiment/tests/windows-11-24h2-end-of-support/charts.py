@@ -1,6 +1,7 @@
-"""Windows 11 24H2 Home·Pro 업데이트 종료: 버전별 지원 기간 타임라인 + 버전별 남은 업데이트 개월 수 (1200×675 webp).
+"""Windows 11 24H2 Home·Pro 업데이트 종료: 버전별 지원 기간 타임라인 + 버전별 남은 업데이트 개월 수
++ 2026-11-10 보안 업데이트(KB5132061) 버전별 제공 여부 (1200×675 webp).
 
-날짜 출처는 factcheck.md (Microsoft Learn "Windows 11 release information", 2026-10-19 확인).
+날짜 출처는 factcheck.md (Microsoft Learn "Windows 11 release information", 2026-10-19 확인, 2026-11-11 재확인·상시 글 전환 때 기준일 변경).
 실행: python charts.py <출력 폴더>
 """
 import io
@@ -16,7 +17,7 @@ from PIL import Image
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'img'
 SURF, INK, INK2, GRID, BLUE, ORANGE = '#fcfcfb', '#0b0b0b', '#52514e', '#e4e3df', '#2a78d6', '#c2560f'
 plt.rcParams.update({'font.family': 'DejaVu Sans', 'font.size': 15, 'text.color': INK, 'xtick.color': INK2, 'ytick.color': INK2})
-TODAY = date(2026, 10, 19)
+TODAY = date(2026, 11, 11)
 
 # 버전, 배포일, Home·Pro 종료일, Enterprise·Education 종료일
 VERSIONS = [
@@ -44,9 +45,9 @@ def support_timeline():
         color = ORANGE if ended else BLUE
         ax.barh(y, n(home_end) - n(start), left=n(start), height=0.5, color=color)
         label = f'Ended {home_end:%b} {home_end.day}, {home_end.year}' if ended else f'Until {home_end:%b} {home_end.day}, {home_end.year}'
-        ax.text(n(home_end) + 12, y, label, va='center', fontsize=15, fontweight='bold', color=color)
+        ax.text(max(n(home_end), n(TODAY)) + 12, y, label, va='center', fontsize=15, fontweight='bold', color=color)
     ax.axvline(n(TODAY), color=INK, lw=1.6, ls='--')
-    ax.text(n(TODAY) + 8, 2.62, f'Today ({TODAY:%b} {TODAY.day})', fontsize=13, color=INK)
+    ax.text(n(TODAY) + 8, 2.62, f'Checked {TODAY:%b} {TODAY.day}, {TODAY.year}', fontsize=13, color=INK)
     ax.set_yticks(range(len(VERSIONS)))
     ax.set_yticklabels([f'Version {v[0]}' for v in reversed(VERSIONS)], color=INK, fontsize=16, fontweight='bold')
     ax.set_xlim(n(date(2024, 7, 1)), n(date(2030, 3, 1)))
@@ -64,7 +65,7 @@ def support_timeline():
     fig.text(0.012, 0.885, 'Each bar runs from release to the last monthly update. Version 24H2 got its last one on Oct 13, 2026.',
              fontsize=13, color=INK2)
     fig.text(0.012, 0.045, 'Enterprise and Education editions get 12 more months (24H2: until Oct 12, 2027).', fontsize=11.5, color=INK2)
-    fig.text(0.012, 0.015, 'Source: Microsoft Learn, "Windows 11 release information," checked Oct 19, 2026',
+    fig.text(0.012, 0.015, 'Source: Microsoft Learn, "Windows 11 release information," checked Nov 11, 2026',
              fontsize=11.5, color=INK2)
     fig.subplots_adjust(left=0.15, right=0.98, top=0.84, bottom=0.14)
     save(fig, 'windows-11-version-support-timeline.webp')
@@ -83,7 +84,7 @@ def months_left():
     for y, (label, end), m in zip(ys, rows, months):
         color = ORANGE if m == 0 else BLUE
         ax.barh(y, m, height=0.52, color=color)
-        txt = 'No more updates (next missed: Nov 10, 2026)' if m == 0 else f'About {round(m)} months (until {end:%b} {end.day}, {end.year})'
+        txt = 'None (first missed update: Nov 10, 2026)' if m == 0 else f'About {round(m)} months (until {end:%b} {end.day}, {end.year})'
         ax.text(m + 0.4, y, txt, va='center', fontsize=15, fontweight='bold', color=color)
     ax.set_yticks(ys)
     ax.set_yticklabels([r[0] for r in rows], color=INK, fontsize=16, fontweight='bold')
@@ -100,11 +101,42 @@ def months_left():
                  x=0.012, ha='left', fontsize=21, fontweight='bold', y=0.965)
     fig.text(0.012, 0.885, f'Counted from {TODAY:%B} {TODAY.day}, {TODAY.year}. The 26H2 update is free and needs one restart.',
              fontsize=13, color=INK2)
-    fig.text(0.012, 0.015, 'Source: Microsoft Learn, "Windows 11 release information"; Microsoft Support KB5121794. Checked Oct 19, 2026',
+    fig.text(0.012, 0.015, 'Source: Microsoft Learn, "Windows 11 release information"; Microsoft Support KB5121794. Checked Nov 11, 2026',
              fontsize=11.5, color=INK2)
     fig.subplots_adjust(left=0.19, right=0.98, top=0.84, bottom=0.1)
     save(fig, 'security-updates-left-by-version.webp')
 
 
+def november_update():
+    """2026-11-10 보안 업데이트 KB5132061의 적용 대상 (KB 문서 Applies To + release information 버전별 기록)."""
+    rows = [
+        ('Version 26H2, all editions', 'Got it: build 26300.9974', True),
+        ('Version 25H2, all editions', 'Got it: build 26200.9974', True),
+        ('Version 24H2 Enterprise and Education', 'Got it: build 26100.9974', True),
+        ('Version 24H2 Home and Pro', 'Not offered: updates ended Oct 13, 2026', False),
+    ]
+    fig, ax = plt.subplots(figsize=(12, 6.75))
+    ax.set_facecolor(SURF)
+    ax.set_xlim(0, 1)
+    ax.set_ylim(-0.5, len(rows) - 0.5)
+    ax.axis('off')
+    for i, (ver, status, got) in enumerate(rows):
+        y = len(rows) - 1 - i
+        color = BLUE if got else ORANGE
+        ax.add_patch(plt.Rectangle((0.0, y - 0.36), 1.0, 0.72, color='#f1f0ec' if got else '#fbe9dd', lw=0))
+        ax.scatter([0.035], [y], s=280, color=color, zorder=3)
+        ax.text(0.065, y, ver, va='center', fontsize=18, fontweight='bold', color=INK)
+        ax.text(0.97, y, status, va='center', ha='right', fontsize=16, fontweight='bold', color=color)
+    fig.suptitle('Who got the November 10, 2026 Windows 11 security update',
+                 x=0.012, ha='left', fontsize=22, fontweight='bold', y=0.965)
+    fig.text(0.012, 0.885, 'The same update, KB5132061, went to every supported version. Version 24H2 Home and Pro were left out.',
+             fontsize=13, color=INK2)
+    fig.text(0.012, 0.015, 'Source: Microsoft Support KB5132061 ("Applies To"); Microsoft Learn, "Windows 11 release information." Checked Nov 11, 2026',
+             fontsize=11.5, color=INK2)
+    fig.subplots_adjust(left=0.02, right=0.98, top=0.83, bottom=0.08)
+    save(fig, 'november-2026-update-by-version.webp')
+
+
 support_timeline()
 months_left()
+november_update()

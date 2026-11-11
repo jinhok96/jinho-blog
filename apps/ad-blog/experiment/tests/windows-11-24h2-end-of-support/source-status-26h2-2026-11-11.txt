@@ -1,0 +1,276 @@
+# 가져온 시각: 2026-11-11T17:42:10.462Z
+# 원본: https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-26h2
+Windows 11, version 26H2 known issues and notifications | Microsoft Learn
+https://learn.microsoft.com/en-us/windows/release-health/status-windows-11-26h2
+
+Table of contents
+ Exit editor mode
+Release healthWindows 11
+Ask Learn
+Windows 11, version 26H2 known issues and notifications
+Summarize this article for me
+
+Find information on known issues and the status of the Windows 11, version 26H2 availability. For immediate help with Windows update issues, open the Get Help app if you are using a Windows device, or go to support.microsoft.com. Follow @WindowsUpdate on X for Windows release health updates. If you are an IT administrator and want to programmatically get information from this page, use the Windows Updates API in Microsoft Graph.
+
+Current status as of October 28, 2026
+ 
+Windows 11, version 26H2 is now available for all eligible devices. This new version contains all the recently announced features in Windows 11, versions 25H2 and 24H2, and will be delivered using servicing technology, providing a fast installation experience.
+ 
+You can check for the update by going to Settings > Windows Update and selecting Check for Windows updates. If Windows 11, version 26H2 is available for your device, select Download & install. If you want updates to be installed as soon as they’re available, turn on Get the latest updates as soon as they’re available.
+
+
+For more details on how to install Windows 11, version 26H2, watch this video.
+How to get the Windows 11 2026 Update
+
+An IT pro’s guide to Windows 11, version 26H2
+
+See all messages >
+Known issues
+See open issues, content updated in the last 30 days, and information on safeguard holds. To find a specific issue, use the search function on your browser (CTRL + F for Microsoft Edge).
+
+
+Expand table
+Summary	Originating update	Status	Last updated
+
+USB audio devices might fail to start or produce no sound
+Some USB Audio Class 1.0 devices display Code 10 after installing Windows 11, version 26H2
+	N/A
+
+	Resolved
+KB5132061	2026-11-10
+09:32 PT
+
+Remote Desktop connections might fail for non-admin users with error 0xC000000D
+This issue affects non-admin users connecting through Remote Desktop with Administrator protection enabled.
+	OS Build 26300.9550
+KB5124010
+2026-09-22	Resolved
+KB5127936	2026-10-28
+22:02 PT
+
+Devices might experience a black screen or desktop loading issues after sign-in
+Microsoft has received reports of this issue occurring in some virtual desktop environments.
+	N/A
+
+	Resolved
+KB5127648	2026-10-13
+10:13 PT
+
+Applications which require AC-3 audio decoding might close unexpectedly
+This issue is more likely to occur in legacy applications, and unlikely for many modern applications.
+	OS Build 26300.9550
+KB5124010
+2026-09-22	Resolved
+KB5127648	2026-10-13
+10:13 PT
+
+Domain-joined devices might lose their secure trust relationship with the domain
+Some Credential Guard protected machine accounts might be unable to sign in interactively will valid domain credentials.
+	N/A
+
+	Resolved
+KB5124010	2026-10-08
+17:44 PT
+Issue details
+November 2026
+
+USB audio devices might fail to start or produce no sound
+
+Expand table
+Status	Originating update	History
+Resolved KB5132061	N/A
+
+	Resolved: 2026-11-10, 10:00 PT
+Opened: 2026-11-03, 19:36 PT
+
+After installing Windows 11, version 26H2, some USB Audio Class 1.0 devices might fail to start or produce audio. Affected devices might experience one or more of the following symptoms: 
+
+​The device displays an error in Device Manager: "This device cannot start (Code 10).” 
+​No audio output.
+​Volume controls are unresponsive or remain at zero. 
+​Sound settings are unresponsive or unavailable. 
+
+This issue is limited to USB Audio Class 1.0 devices.
+
+Resolution: The symptoms are resolved in the Windows security update released on November 10, 2026 (KB5132061) and later updates. We recommend you install the latest security update for your device as it contains important improvements and issue resolutions, including this one. 
+
+If you are an IT administrator that contacted Microsoft Support for Business to obtain an immediate workaround, you do not need to use the Known Issue Rollback (KIR) or special group policy to resolve this issue.
+
+Affected platforms:
+
+​Client: Windows 11, version 26H2; Windows 11, version 26H1; Windows 11, version 25H2; Windows 11, version 24H2; Windows 11, version 23H2; Windows 10, version 22H2; Windows 10, version 21H2; Windows 10 Enterprise LTSC 2019; Windows 10 Enterprise LTSC 2016
+​Server: Windows Server 2025; Windows Server 2022; Windows Server 2019; Windows Server 2016; Windows Server 2012 R2; Windows Server 2012
+Back to top
+
+
+October 2026
+
+Remote Desktop connections might fail for non-admin users with error 0xC000000D
+
+Expand table
+Status	Originating update	History
+Resolved KB5127936	OS Build 26300.9550
+KB5124010
+2026-09-22	Resolved: 2026-10-28, 10:00 PT
+Opened: 2026-10-13, 09:43 PT
+
+After installing the September 2026 non-security preview update (KB5124010), or later updates, non-admin users might be unable to establish Remote Desktop connections to remote devices that have Administrator protection enabled. Attempts to connect might fail with error 0xC000000D and display the message, “The token that was passed to the function is invalid.” This issue primarily affects enterprise-managed remote devices used as Remote Desktop hosts with Administrator protection enabled, regardless of how the feature was enabled.
+
+Note: If your organization uses Windows security baselines, published through the Microsoft Security Compliance Toolkit, Administrator protection is enabled by default in Windows 11, version 24H2, 25H2, and 26H2 security baselines, unless your organization has configured the policy differently. 
+
+Resolution: This issue was resolved by Windows updates released October 28, 2026 (KB5127936), and later. We recommend you install the latest security update for your device as it contains important improvements and issue resolutions, including this one. 
+
+If you install an update released October 28, 2026 (KB5127936) or later, you do not need to use a workaround for this issue. If you are using an update released before this date, and have this issue, you have the option to apply the following workaround:
+
+IT administrators can mitigate this issue on devices affected by the Remote Desktop connection failure by using their existing policy management method to temporarily turn off Administrator protection. Reset the User Account Control Type Of Admin Approval Mode policy in Microsoft Intune or Group Policy. For more information, see Administrator protection on Windows 11.
+
+Affected platforms:
+
+​Client: Windows 11, version 26H2; Windows 11, version 26H1; Windows 11, version 25H2; Windows 11, version 24H2
+​Server: None
+Back to top
+
+
+
+Devices might experience a black screen or desktop loading issues after sign-in
+
+Expand table
+Status	Originating update	History
+Resolved KB5127648	N/A
+
+	Resolved: 2026-10-13, 10:00 PT
+Opened: 2026-10-13, 09:50 PT
+
+After installing Windows 11, version 26H2, and subsequent updates, some devices might experience desktop loading issues. This issue has been primarily observed on Azure Virtual Desktop (AVD) hosts, using FSLogix. This issue appears to occur more frequently with some existing user profiles.
+
+Symptoms might include:
+
+​A black screen appears after sign-in and the desktop session does not load automatically.
+​Users might be unable to access their desktop until the desktop session is started manually.
+​Application event logs might show Windows Explorer crashes.
+
+Resolution: This issue was resolved by Windows updates released October 13, 2026 (KB5127648), and updates released after that date. We recommend you install the latest update for your device as it contains important improvements and issue resolutions, including this one. 
+
+If you install an update released October 13, 2026 (KB5127648), or later, you do not need to use a workaround for this issue. If you are using an update released before October 13, and have this issue, you have the option to apply the following workaround. 
+
+Workaround: Affected customers can apply one of the following workarounds to mitigate the issue:
+
+​Manually launch explorer.exe: Users can temporarily mitigate this issue by opening Task Manager (Ctrl+Shift+Esc), selecting Run new task, entering explorer.exe, and selecting OK.
+​Mitigate through Known Issue Rollback (KIR): This issue is mitigated using Known Issue Rollback (KIR). 
+        For enterprise-managed devices where Windows updates are managed by IT departments, IT administrators can apply the KIR by installing and configuring the Group policy listed below. The special Group Policy can be found in Computer Configuration > Administrative Templates > <Group Policy name listed below>
+
+        
+
+
+        Group Policy downloads with Group Policy name:
+
+​Download for Windows 11, version 26H1: KB5124006 260924_20071 Known Issue Rollback
+​Download for Windows 11, version 26H2, Windows 11, version 25H2 and Windows 11, version 24H2: KB5124010 260924_20021 Known Issue Rollback
+        Important: You will need to install and configure the Group Policy for your version of Windows to resolve this issue. You will also need to restart your device(s) to apply the group policy setting. Note that this Group Policy will disable the change causing this issue until a resolution is released in a future Windows update.       
+
+        For information on deploying and configuring this special Group Policy, please see How to use Group Policy to deploy a Known Issue Rollback
+
+Affected platforms:
+
+​Client: Windows 11, version 26H2; Windows 11, version 26H1; Windows 11, version 25H2; Windows 11, version 24H2
+​Server: None
+Back to top
+
+
+
+Applications which require AC-3 audio decoding might close unexpectedly
+
+Expand table
+Status	Originating update	History
+Resolved KB5127648	OS Build 26300.9550
+KB5124010
+2026-09-22	Resolved: 2026-10-13, 10:00 PT
+Opened: 2026-10-08, 16:29 PT
+
+Following installation of Windows updates released September 22, 2026 (KB5124010), and later, some applications which require the decoding of AC-3 (Dolby Digital) audio might close unexpectedly.
+
+Incidence of this issue depends on the activity that these applications perform. In some cases the application can fail to launch, or close without warning. In other cases the application will work normally until certain features are used, such as playing music. Affected applications may vary and can include games, media players, and certain productivity applications.
+
+Please note that many modern applications do not use Windows for this type of encoding and therefore will not encounter this issue. The code component involved in this issue is most commonly used in legacy applications that still rely on Windows built-in audio decoding. Many modern applications using this legacy codec frequently include their own audio decoding components.
+
+Resolution: This issue was resolved by Windows updates released October 13, 2026 (KB5127648), and later. We recommend you install the latest security update for your device as it contains important improvements and issue resolutions, including this one. 
+
+Affected platforms:
+
+​Client: Windows 11, version 26H2; Windows 11, version 25H2; Windows 11, version 24H2
+​Server: None
+Back to top
+
+
+September 2026
+
+Domain-joined devices might lose their secure trust relationship with the domain
+
+Expand table
+Status	Originating update	History
+Resolved KB5124010	N/A
+
+	Resolved: 2026-09-22, 10:00 PT
+Opened: 2026-09-16, 14:15 PT
+
+After installing Windows 11, version 26H2, some Credential Guard protected machine accounts might lose their secure channel with an on-premises Active Directory (AD) domain. Users might then be unable to sign in interactively with valid domain credentials and might receive a message stating that the trust relationship between the device and the domain failed. Offline sign-in using previously cached credentials might continue to work. AD replication and AD services on the domain controllers are not affected. 
+
+This issue occurs because Windows 11, version 26H2 enables the Machine Identity Isolation feature. While the update does not directly enable Machine Identity Isolation enforcement, it does cause Windows to begin honoring any existing or policy-provisioned settings that enabled Machine Identity Isolation enforcement. However, this feature is only supported for environments connected to domain controllers running at a Windows Server 2025 Domain Functional Level (DFL) and above. The feature should be disabled elsewhere. Any devices previously configured to use Machine Identity Isolation that are not connected to Windows Server 2025 domain controllers will experience this issue and will need to disable the feature. 
+
+Resolution: This issue was resolved by Windows updates released September 22, 2026 (KB5124010), and updates released after that date. This update prevents Machine Identity Isolation (MII) enforcement by disabling it completely while improvements are made to the feature. MII enforcement will be prevented regardless of the MII configuration.
+
+If you install an update released September 22, 2026 (KB5124010) or later, you do not need to use a workaround for this issue. If you are using an update released before September 22, 2026, and have this issue, you have the option to apply one of the following workarounds. 
+
+Workaround #1: Known Issue Rollback
+
+IT administrators can resolve the issue using Known Issue Rollback (KIR) by installing and configuring the special Group Policy listed below.
+
+Group Policy downloads with Group Policy name:  
+
+​Download for Windows 11, version 24H2, 25H2, and 26H2 — KB5124008 260915_17123 Known Issue Rollback 
+
+The special Group Policy can be found in Computer Configuration > Administrative Templates > KB5124008 260915_17123 Known Issue Rollback > Windows 11, version 24H2, 25H2. After installing the Group Policy, configure the value for setting KB5124008 260915_17123 Known Issue Rollback to Disabled and restart your device(s) to apply the Group Policy setting. For information on deploying and configuring the special Group Policy, please see How to use Group Policy to deploy a Known Issue Rollback.
+
+Workaround #2: Disable Machine Identity Isolation manually
+
+Important: This section contains information about modifying the registry. Before you modify the registry, back it up and make sure that you know how to restore it if a problem occurs. For more information, see How to back up and restore the registry in Windows. 
+
+To work around this issue, disable Machine Identity Isolation using the same management method that was used to enable it. Choose the applicable option below: 
+
+​If Machine Identity Isolation was enabled by Intune policy, disable Machine Identity Isolation with Intune.  
+​If Machine Identity Isolation was enabled by group policy, disable Machine Identity Isolation with group policy. 
+​If Machine Identity Isolation was enabled directly in the registry, use these steps to disable it:  
+​On the Windows 11, version 26H2 device, locate the following registry paths: 
+​HKLM\SYSTEM\CurrentControlSet\Control\Lsa\MachineIdentityIsolation 
+​HKLM\SOFTWARE\Policies\Microsoft\Windows\DeviceGuard\MachineIdentityIsolation 
+​For either of these registry keys, if the value for MachineIdentityIsolation = 2, then set MachineIdentityIsolation = 0. 
+
+After you disable Machine Identity Isolation, restart the device. 
+
+Then reset the secure channel using the following command:
+
+	 'Test-ComputerSecureChannel -Repair -Credential (Get-Credential)' 
+
+
+Affected platforms:
+
+​Client: Windows 11, version 26H2; Windows 11, version 26H1; Windows 11, version 25H2; Windows 11, version 24H2
+​Server: None
+Back to top
+
+
+Report a problem with Windows updates
+
+To report an issue to Microsoft at any time, use the Feedback Hub app. To learn more, see Send feedback to Microsoft with the Feedback Hub app.
+
+Need help with Windows updates?
+
+Search, browse, or ask a question on the Microsoft Support Community. If you are an IT pro supporting an organization, visit Windows release health on the Microsoft 365 admin center for additional details.
+
+For direct help with your home PC, use the Get Help app in Windows or contact Microsoft Support. Organizations can request immediate support through Support for business.
+
+View this site in your language
+
+This site is available in 11 languages: English, Chinese Traditional, Chinese Simplified, French (France), German, Italian, Japanese, Korean, Portuguese (Brazil), Russian, and Spanish (Spain). All text will appear in English if your browser default language is not one of the 11 supported languages. To manually change the display language, scroll down to the bottom of this page, click on the current language displayed on the bottom left of the page, and select one of the 11 supported languages from the list.
+
+Last updated on 11/10/2026

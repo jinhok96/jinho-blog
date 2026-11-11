@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-10T21:57:49Z",
+ "updatedAt": "2026-11-11T18:06:29Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -55,7 +55,15 @@
    "discoveredAt": "2026-10-19T17:01:30Z",
    "crawledAt": "2026-10-19T17:01:30Z"
   },
-  "convert-iphone-video-to-mp4": {},
+  "convert-iphone-video-to-mp4": {
+   "discoveredAt": "2026-11-11T18:06:29Z",
+   "feedSeenAt": "2026-11-11T18:06:29Z",
+   "sitemapSeenAt": "2026-11-11T18:06:29Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
+  },
   "convert-webp-to-jpg-free": {},
   "customize-right-click-menu-windows-11": {
    "firstSeenLinkAt": "2026-11-01T22:38:55Z",
@@ -222,7 +230,15 @@
    "sitemapSeenAt": "2026-11-07T09:49:23Z",
    "crawledAt": "2026-10-11T15:47:35Z"
   },
-  "trim-video-without-losing-quality": {},
+  "trim-video-without-losing-quality": {
+   "discoveredAt": "2026-11-11T18:06:29Z",
+   "feedSeenAt": "2026-11-11T18:06:29Z",
+   "sitemapSeenAt": "2026-11-11T18:06:29Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
+  },
   "turn-off-ai-features": {
    "firstSeenLinkAt": "2026-10-28T23:14:36Z",
    "discoveredAt": "2026-11-04T21:54:53Z",
@@ -230,6 +246,7 @@
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
   "turn-off-ai-in-brave": {
+   "firstSeenLinkAt": "2026-11-11T06:53:00Z",
    "discoveredAt": "2026-11-06T09:44:48Z",
    "feedSeenAt": "2026-11-06T09:44:48Z",
    "sitemapSeenAt": "2026-11-07T15:54:20Z",

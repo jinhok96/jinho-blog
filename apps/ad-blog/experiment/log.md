@@ -2,6 +2,55 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-12 · 세션 94 (정기 실행, 개선 세션): 콘텐츠 정리 5번 `windows-11-24h2-end-of-support` 상시 글 전환 + Firefox 160으로 `turn-off-ai-in-firefox` 재확인(웹사이트 음성 인식·업데이트 뒤 차단 유지 직접 시험)
+
+세션 시각: 2026-11-12 02:11 KST(목) → **02시 실행(00:00~07:59 범위)이 처음 적용된 정기 세션**, 목요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(9e26f66)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-14 ~ 11-11, 세션 93 이후 바뀐 값만)**
+
+- 노출 1,191 → **1,198**, 클릭 18 → 17(28일 창 이동), CTR 1.4%, 평균 순위 24.7 → 25.2 (글별: `spotify-family-qr-code-verification` 277·18.6위 / `turn-off-ai-in-chrome` 211·26.4위·클릭 3 / `image-to-text-offline-free` 133·16.4위·클릭 3 / `free-offline-ai-tools` 72·17.2위·클릭 3)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 그대로 · 11-09~15 0 (미확정 포함, 노출 56)
+- **sitemap 새 다운로드**: `rss.xml` 11-06 04:28 → **11-11 12:22 UTC**, `sitemap.xml` 11-06 22:41 → **11-11 09:28 UTC** (V7 판정 11-13 때 함께 봄)
+- URL 검사: 색인 17/56 그대로, 이 회차 `Discovered` 19 · `URL is unknown` 20, URL 검사 `sitemap` 칸에 `rss.xml`이 있는 글 15편. **새 크롤링 1건: `turn-off-ai-in-chrome` 11-11 06:53 UTC**(V3 대상 글, 이전 마지막 크롤링 10월) → `link_seen.py`: 미색인 39편 중 Google이 본 링크 21편(20 → 21, 새로 `turn-off-ai-in-brave`가 Chrome 글 '관련 글' 링크로)
+- 성과 검증: **V1(판단 시점 11-11)은 `--compare`가 "판단 시점 전: 2026-11-14 이후 다시 실행"** — 변경 후 28일(10-15~11-11)이 아직 확정 데이터가 아님. V2(변경 10-15)도 같은 이유로 11-15 이후. 판정 없음 → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 바꾼 두 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 32일/92일(2027-01-11) · 색인율 30%(17/56, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 처리됨. 첫 통합 점검은 11-15(일) 02시 개선 세션
+
+**고른 작업**: 0번 콘텐츠 정리 — 4번 `office-2021-end-of-support`는 RSS 피드 20편 밖(39번째)이라 `updatedAt`을 바꾸면 피드 구성이 바뀜 → V7(11-13) 뒤로. **5번 `windows-11-24h2-end-of-support`는 피드 안(18번째)이라 순서만 바뀜 → 11-10 Patch Tuesday 뒤 첫 누락 확인과 함께 전환**(1건). 3·6번은 V7 뒤, 7번 12월, 8번 남은 2편은 V1·V2 판정(11-14·11-15 이후) 뒤. 1(색인)은 Chrome 글 크롤링 1건뿐이라 추가 링크 없음(V3 판정 전), 2는 보류 2건, 3은 허브 4/4, 4는 V 판정 중인 글뿐. **6번 반복 일정: Firefox 160(11-10 출시)** — 세션 92·93 '다음 할 일' 그대로, 글이 피드 안(17번째)이라 V7 영향 없음
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — references/content-refresh.md의 Refresh vs. Rewrite(24H2 글은 검색 의도가 '마감 전 무엇이 바뀌나' → '마감 뒤 어떻게 옮기나'로 바뀌어 같은 URL에서 Rewrite, Firefox 글은 사실이 바뀐 곳만 Light refresh), AI-Tell Check(대조 구문 2문장 고침, em dash 0). searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 콘텐츠 정리 5번 (전환) | `windows-11-24h2-end-of-support` | **11-10 보안 업데이트 KB5132061 'Applies To'가 "26H2, all editions / 25H2, all editions / Enterprise and Education, version 24H2"** → 24H2 Home·Pro 첫 누락을 1차 출처로 확인(release information 24H2 기록에도 26100.9974가 'LTSC • General Availability Channel' 행). 칼럼 → '지금 할 일' 상시 글: 카테고리 `news` → `software`, 제목 `Windows 11 24H2 Home and Pro Updates Have Ended` → **`Windows 11 24H2 End of Support and the Free Update to 26H2`**(58자), 설명 155자. 구성: 결론(첫 누락 + 할 일) → 버전별 지원 표 → 버전 확인 → 26H2로 옮기는 단계 → 안 보일 때(safeguard hold·Installation Assistant) → 24H2에 남으면(**USB Audio Class 1.0 Code 10 문제가 "Resolved KB5132061" = 24H2 Home·Pro는 못 받는 수정**, 새 오른쪽 클릭 메뉴, **Windows Update 인증서 2027-06-19**: 24H2는 2025-09 이후 업데이트 필요) → 26H2 vs 25H2(근거 있는 추천, Our take 대체) → 기억할 날짜(12-08, 12월 미리 보기 없음, 2027-06-19, 2027-10-12, 2028-10-10) → How we checked(칼럼에서 전환한 이력). 그림: 타임라인·남은 개월 그림을 11-11 기준으로 다시 그림 + **새 그림 `november-2026-update-by-version.webp`**(본문 2 → 3장). 1차 출처 10쪽 Chromium 재확인(`render-main.cjs`: Microsoft Learn은 `article`이 배너라 `main` + 접힌 `details` 펼침). 전환 전 28일 검색어 14개는 사실 확인표에(`when will windows 11 support end` 7·82.6위 등, 클릭 0). 사실 확인표 '뉴스 유형'·'검증 유형(조사형)' 줄 유지. `updatedAt` 2026-11-11T17:46Z | - (콘텐츠 정리, 지표를 노린 변경 아님) |
+| 2 | 6 반복 일정 (Firefox 160) | `turn-off-ai-in-firefox` | **Firefox 160.0 Linux 직접 시험**(새 프로필, Xvfb + xdotool, 11-11 17:25~17:58 UTC): AI controls 화면·확인 창 7개 항목·차단 뒤 오른쪽 클릭 메뉴 159와 같음(`aiFeatures.ftl`·`aiFeatures.mjs` 159와 차이 없음). **새 동작: 160부터 웹사이트가 Firefox 기기 내 음성 인식(Web Speech API)을 씀** — 로컬 시험 페이지가 음성 입력을 시작하면 Speech recognition Available일 때 **"Set up speech recognition?" 창(로컬 처리, ~141 MB 내려받기)**, Block AI enhancements를 켜면 **창 없이 거부**("on-device speech recognition is blocked by the user's AI settings"). **업데이트 유지**: 159에서 차단한 프로필을 160으로 열어도 차단 그대로(FAQ 'Will a Firefox update turn AI back on?'을 "시험할 수 없음" → 직접 결과로). 글: 설명·첫 문단 버전, 둘째 문단 1문장, 요약 표 Speech recognition 행, 'What disappears' 160 재확인 문단, **새 절 'What changed for AI in Firefox 160?'**(그림 `firefox-160-speech-recognition-websites.webp`, 본문 이미지 6 → 7장), 'Which setting' 받아쓰기 항목, How we tested. 제목 그대로, `updatedAt` 2026-11-11T18:20Z. 기록: `screens/160-*.webp` 12장, `firefox-160-strings-diff.txt`, `speech-test-page.html`, `prefs-159-to-160-update.txt` | - (반복 일정 갱신, 지표를 노린 변경 아님) |
+
+- 빌드 HTML 확인: `windows-11-24h2-end-of-support` title 70자(접미사 포함)·description 155자·BlogPosting `dateModified` 2026-11-11T17:46Z(author ToolProof)·BreadcrumbList·h1 1·h2 9·`<pre>`·`<code>` 0·img 7 / `turn-off-ai-in-firefox` title 63자·description 143자·`dateModified` 2026-11-11T18:20Z·h1 1·h2 12·`<pre>`·`<code>` 0·img 11. og 이미지 두 글 모두 `public/_static/mdx/posts/og/`에 생성. **`rss.xml` 맨 앞 두 항목이 두 글이고 피드 20편 집합은 바꾸기 전과 같음**(V7 관찰 영향 없음). lint·type-check·test(38파일 309개)·build 통과, 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `extlink_check.py --slug` 두 글: 이동 1건(Microsoft `help/5132061` 짧은 주소, 규칙대로 둠)
+- 점검(저장소 `seo-audit` On-Page 항목, 바꾼 두 글): 제목에 주 검색어 앞쪽(`windows 11 24h2 end of support`·`turn off ai in firefox`), 콜론·괄호 꼬리표 없음, 설명 140~160자, H1 1개, 소제목 첫 문장이 떼어 읽어도 되는 답, 새 그림 alt 설명형
+
+**알게 된 것**
+
+- **Firefox 160은 AI controls 화면을 바꾸지 않고 'Speech recognition' 스위치가 닿는 범위를 웹사이트로 넓힘**: 릴리스 노트의 개발자 절(Web Platform)에만 있는 변화라 사용자용 New 목록만 보면 놓침. 차단하면 웹사이트의 음성 입력이 거부되므로 "AI를 껐더니 사이트 마이크 버튼이 안 된다"는 문제 검색이 생길 수 있음 (해석) → backlog 후보 없음(수요 확인 전)
+- **Microsoft Learn 페이지는 `render.cjs`(article 선택자)로 받으면 상단 배너만 저장됨**: 처음 4개 사본이 400자대 → `main` + `details` 펼침으로 다시 받음(`tests/windows-11-24h2-end-of-support/render-main.cjs`). writing-guide 정확성 절에 추가
+- **지원 종료 뒤에도 '수정 목록'이 독자 영향을 보여 줌**: 24H2 상태 페이지가 USB 오디오·원격 데스크톱 문제를 "Resolved KB5132061"로 닫았는데 그 KB는 24H2 Home·Pro 대상이 아님 → 보안 패치뿐 아니라 이미 알려진 버그 수정도 못 받는다는 근거(두 문서를 합친 해석이라 본문은 두 사실을 나란히 씀)
+- `gsc_report.py --compare`는 변경 후 28일이 확정 데이터가 될 때까지(약 3일) 판정하지 않음 → traffic-playbook 판단 시점(배포 +28일)에 바로 돌리면 "판단 시점 전". 판단 시점 +3일에 판정한다고 보면 됨 (V1 11-14, V2 11-15)
+- Firefox 159는 160 출시 다음 날 'Update available' 알림을 띄움(새 프로필, 자동 업데이트 꺼진 tar판). Firefox 160 시험 페이지에서 처음 한 번 "Try private translations in Firefox" 창이 자동으로 뜸(159 시험 때는 못 봄)
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 32일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude: **V7(11-13) 판정 — 11-14(토) 개선 세션**(rss.xml 11-11 12:22·sitemap.xml 11-11 09:28 다운로드 반영). **V1은 11-14 이후, V2는 11-15 이후** `--compare` (같은 세션 또는 11-15 일요일 주간 점검 세션)
+- Claude: **콘텐츠 정리 4번 `office-2021-end-of-support` 전환 — V7 판정 뒤 11-14(토)**. 3·6번도 V7 뒤, 7번 12월 일정 뒤, 8번 남은 2편은 V1·V2 판정 뒤
+- Claude: V7 판정 뒤 허브 `free-image-converter-photo-tools` `updatedAt`(세션 91~93 영상 절 정리, CloudConvert 'conversion credits' 표기)과 세션 89 '미발견 15편 갱신거리'(앱 재측정 8편)
+- Claude: Firefox 다음 판 — `product-details` NEXT_RELEASE_DATE가 **2026-11-20**(161로 보임, 평소 4주 간격과 달라 그날 다시 확인). `ios-27-2-siri-ai-memory`(피드 밖)의 Apple 개인정보 페이지 반영은 V7 뒤 (세션 92 그대로)
+- Claude(11-13 금 일반 세션): 후보 `dia browser ai privacy`·`make pdf searchable free`(NAPS2 실행 가능)·backlog 15번 무료 오프라인 TTS·`convert iphone hdr video to sdr`(수요 확인 전). 영향 뉴스 칼럼은 이번 주(11-09~15) 아직 없음
+- Claude: **11-15(일) 첫 통합 주간 SEO 점검** (일요일 02시 개선 세션이 먼저)
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤
+- Claude: 발행 56편 (허브 4개), 상시 글 전환 1편(누적)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-11T18:06:29Z, DB 문서 583개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 첫 관측값: **`convert-iphone-video-to-mp4`(발행 약 20시간)·`trim-video-without-losing-quality`가 이 회차 URL 검사에서 `Discovered`, 발견 경로 `rss.xml`·`sitemap.xml`** (11-11 피드·사이트맵 다운로드 뒤 — V7 판정 때 참고, 같은 세션 앞선 `gsc_report.py` 회차에서는 새 글이 unknown이었음), `turn-off-ai-in-brave` 첫 링크 관측 11-11 06:53. 이 회차 28일 노출 1,198·클릭 17·평균 25.2위, `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 39편 중 Google이 본 링크 21편·`inFeed` 11(미색인 9), `summary.adsense` 운영 32일·색인율 0.304(17/56)·클릭 연속 증가 0, `traffic` Cloudflare 28일 조회 122·방문 119, `engagement` GA4 조회 12·사용자 10·세션 12(참여 6)·참여 341초, `summary.userTodos` 0건. `posts` 문서 압축 JSON 약 128 KiB(한도 256 KiB의 50%). 페이지는 바꾸지 않음. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. 첫 실행은 백그라운드 제한 시간(10분)에 걸려 중단 → 제한 시간을 늘려 다시 실행(약 8분)
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-11 · 결정: 정기 실행 시각 02시 (사용자 요청)
 
 세션 93 진행 중 사용자 요청: "루틴 실행시간 새벽 4시에서 새벽 2시로 바꿀거니까 반영해줘. 루틴 시간은 내가 바꿔놓을테니 문서 반영 및 배포만 알아서 잘 하면 돼".

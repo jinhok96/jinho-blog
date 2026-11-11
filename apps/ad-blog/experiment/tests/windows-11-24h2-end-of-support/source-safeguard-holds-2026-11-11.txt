@@ -1,0 +1,88 @@
+# 가져온 시각: 2026-11-11T17:43:40.880Z
+# 원본: https://learn.microsoft.com/en-us/windows/deployment/update/safeguard-holds
+Safeguard holds for Windows | Microsoft Learn
+https://learn.microsoft.com/en-us/windows/deployment/update/safeguard-holds
+
+Table of contents
+ Exit editor mode
+LearnWindowsDeployment
+Ask Learn
+Safeguard holds
+Applies to: ✅ Windows 11, ✅ Windows 10
+Summarize this article for me
+
+Microsoft uses quality and compatibility data to identify issues that might cause a Windows client feature update to fail or roll back. When we find such an issue, we might apply safeguard holds to the updating service to prevent affected devices from installing the update in order to safeguard them from these experiences. We also use safeguard holds when a customer, a partner, or Microsoft internal validation finds an issue that would cause severe effect (for example, rollback of the update, data loss, loss of connectivity, or loss of key functionality) and when a workaround isn't immediately available.
+
+Safeguard holds prevent a device with a known issue from being offered a new operating system version. We renew the offering once a fix is found and verified. We use holds to ensure customers have a successful experience as their device moves to a new version of Windows client.
+
+The safeguard holds lifespan varies depending on the time required to investigate and fix an issue. During this time, Microsoft works diligently to procure, develop, and validate a fix and then offer it to affected devices. We monitor quality and compatibility data to confirm that a fix is complete before releasing the safeguard hold. Once we release the safeguard hold, Windows Update resumes offering new operating system versions to devices.
+
+Safeguard holds only affect devices that use the Windows Update service for updates. We encourage IT admins who manage updates to devices through other channels (such as media installations or updates coming from Windows Server Update Services) to remain aware of known issues that might also be present in their environments.
+
+IT admins managing updates using Windows Autopatch also benefit from safeguard holds on devices that are likely to be affected by an issue. To learn more, see Safeguard holds against likely and known issues.
+
+Am I affected by a safeguard hold?
+
+IT admins can use Windows Update for Business reports to monitor various update health metrics for devices in their organization. The reports provide a list of active safeguard holds to provide you with insight into the safeguard holds that are preventing devices from updating or upgrading.
+
+Windows Update for Business reports identifies safeguard holds by their 8-digit identifiers. For safeguard holds associated with publicly discussed known issues, you can find more details about the issue on the Windows release health dashboard by searching for the safeguard hold ID on the Known issues page for the relevant release.
+
+On devices that use Windows Update (but not Windows Update client policies), the Windows Update page in the Settings app displays a message stating that an update is on its way, but not ready for the device. Instead of the option to download and install the update, users see a message.
+
+This message means that the device is protected by one or more safeguard holds. When the issue is resolved and the update is safe to install, we release the safeguard hold so the update can resume safely.
+
+What can I do?
+
+We recommend that you don't attempt to manually update until issues have been resolved and holds released.
+
+ Caution
+
+Opting out of a safeguard hold can put devices at risk from known performance issues. We strongly recommend that you complete robust testing to ensure the impact is acceptable before opting out.
+
+With that in mind, IT admins who stay informed with Windows Update for Business reports and the Windows release health dashboard can choose to temporarily opt-out of the protection of all safeguard holds and allow an update to proceed. We recommend opting out only in an IT environment and for validation purposes. If you do opt out of a hold, this condition is temporary. Once an update is complete, the protection of safeguard holds is reinstated automatically.
+
+Troubleshoot a safeguard hold manually
+
+The gated status (GStatus) registry value indicates if a safeguard hold is in effect or not.
+
+The GStatus value can be found in the following registry key:
+HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\Appraiser\GWX
+
+GStatus = 2: A safeguard hold isn't in effect
+GStatus = 0: A safeguard hold is in effect
+
+If a safeguard hold is in effect (GStatus = 0), you can also determine the safeguard ID so you can get additional information about the hold. Use the following registry key, changing the corresponding OS version to match the version of Windows the device uses:
+
+
+HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\AppCompatFlags\TargetVersionUpgradeExperienceIndicators\GE24H2
+
+Expand table
+Value name	Value	Description
+GStatus	0	A safeguard hold is in effect
+GatedBlockId	52796844	The safeguard ID
+GatedBlockReason	Other	The reason for the safeguard hold
+
+Once you have the safeguard ID, you can find more information about it using the Windows release health dashboard. For example, safeguard ID 52796844 is in the Resolved issues for Windows 11, version 24H2 article and was applied for a fingerprint sensor issue. For more information about finding the safeguard ID, see the Access safeguard hold details with Update Compliance blog post.
+
+In some instances, an outdated safeguard hold might still be in effect on the device. The example safeguard ID, 52796844, would be outdated since the issue is resolved. An outdated hold can happen if the mechanism to update this information on the Windows device isn't working correctly. An outdated hold is most commonly caused by SSL inspection being enabled for one or more of the following endpoints:
+
+Expand table
+Area	Description	Protocol	Destination
+Windows Update	The following endpoint is used for compatibility database updates for Windows.	HTTPS	adl.windows.com
+Windows Update	The following endpoint is used for compatibility database updates for Windows.	HTTPS	adl.windows.com
+Settings	The following endpoint is used as a way for apps to dynamically update their configuration. Apps such as System Initiated User Feedback and the Xbox app use it. If you turn off traffic for this endpoint, an app that uses this endpoint might stop working.	TLSv1.2/HTTPS/HTTP	settings-win.data.microsoft.com
+Settings	The following endpoint is used as a way for apps to dynamically update their configuration. Apps such as System Initiated User Feedback and the Xbox app use this endpoint. If you turn off traffic for this endpoint, an app that uses this endpoint might stop working.	HTTPS	settings.data.microsoft.com
+
+For more information, see Manage connection endpoints for Windows 11 Enterprise.
+
+Additional resources
+
+Training
+
+Module
+
+Manage Windows updates in the cloud - Training
+
+Learn about how to manage updates for your Windows devices.
+
+Last updated on 08/15/2025

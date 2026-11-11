@@ -1,8 +1,9 @@
 ---
 title: How to Turn Off AI in Firefox on Desktop and Mobile
-description: "To turn off AI in Firefox 159, use one switch in Settings > AI controls. We tested what it removes, how to keep only translations, and what stays on."
+description: "To turn off AI in Firefox 160, use one switch in Settings > AI controls. We tested what it removes, voice input on websites, and what stays on."
 category: software
 createdAt: 2026-10-28T17:46:00Z
+updatedAt: 2026-11-11T18:20:00Z
 tags:
   - Firefox
   - Smart Window
@@ -12,18 +13,18 @@ tags:
 
 ![Illustration of a rounded browser window with a tangerine title bar and a violet address bar on a pale sky blue background, a violet toggle switch in the corner of its blank page, and two golden sparkle stars above a small open tangerine box below the window](./images/turn-off-ai-in-firefox/firefox-ai-controls-off-hero.webp)
 
-To turn off AI in Firefox, open the menu, choose **Settings**, click **AI controls**, and turn on **Block AI enhancements**, then click **Block** to confirm. In Firefox 159, the version released on October 27, 2026, that one switch blocks translations, the AI chatbot in the sidebar, link preview summaries, tab group suggestions, speech recognition, PDF image descriptions and Smart Window. Firefox also removes any on-device AI models it already downloaded. If you want to keep one feature, set just that one back to **Available**.
+To turn off AI in Firefox, open the menu, choose **Settings**, click **AI controls**, and turn on **Block AI enhancements**, then click **Block** to confirm. In Firefox 160, the version released on November 10, 2026, that one switch blocks translations, the AI chatbot in the sidebar, link preview summaries, tab group suggestions, speech recognition, PDF image descriptions and Smart Window. Firefox also removes any on-device AI models it already downloaded. If you want to keep one feature, set just that one back to **Available**.
 
-We installed Firefox 159 on a new profile on October 28, 2026, and checked what the switch changes on a test page. After we turned it on, the AI chatbot and **Translate Selection** disappeared from the right-click menu, the chatbot icon left the sidebar, and the block was still on after a restart. Some AI is outside the switch's reach: search suggestions and the Perplexity search engine stayed on, and AI answers inside websites, such as Google's AI Overviews, are controlled by those websites.
+We installed Firefox 159 on a new profile on October 28, 2026, and checked what the switch changes on a test page. After we turned it on, the AI chatbot and **Translate Selection** disappeared from the right-click menu, the chatbot icon left the sidebar, and the block was still on after a restart. We repeated the check on Firefox 160 on November 11, 2026: the switch blocked the same seven features, it stayed on when we updated a blocked profile from 159 to 160, and it also stopped a website from starting Firefox's new on-device speech recognition. Some AI is outside the switch's reach: search suggestions and the Perplexity search engine stayed on, and AI answers inside websites, such as Google's AI Overviews, are controlled by those websites.
 
 ## Firefox AI features at a glance
 
-Firefox 159's **AI controls** page lists six features on a new profile, and a seventh, Smart Window, once it reaches your copy. The descriptions below follow Firefox's wording on that page, and the last column is what we saw after blocking.
+Firefox 160's **AI controls** page lists six features on a new profile, the same as Firefox 159, and a seventh, Smart Window, once it reaches your copy. The descriptions below follow Firefox's wording on that page, and the last column is what we saw after blocking.
 
 | Feature | What it does | After Block AI enhancements |
 | --- | --- | --- |
 | Translations | Translates web pages and selected text on your device | Blocked; translation icon and menu item gone |
-| Speech recognition | Turns speech into text on your device | Blocked |
+| Speech recognition | Turns speech into text on your device, including voice input on websites in Firefox 160 | Blocked; websites can't start voice input |
 | Image alt text in Firefox PDF viewer | Adds descriptions to images you add to PDFs | Blocked |
 | Tab group suggestions | Suggests names and groupings for your tabs | Blocked |
 | Key points in link previews | Shows a quick summary before you open a link | Blocked |
@@ -62,6 +63,8 @@ In our October 2026 test of Firefox 159.0, blocking AI removed two items from th
 - **Address bar:** the translation icon Firefox shows on foreign-language pages no longer appeared.
 - **After a restart:** the switch was still on and every feature still showed **Blocked**.
 
+When we repeated the check in Firefox 160.0 on November 11, 2026, the result was the same: after blocking, **Translate Selection to English** and **Ask an AI Chatbot** were missing from the right-click menu, and the translation icon no longer appeared in the address bar.
+
 ![Before and after comparison in Firefox 159: before blocking, the right-click menu on selected French text includes Translate Selection to English and Ask an AI Chatbot, and the sidebar has an AI chatbot icon; after Block AI enhancements, both menu items and the chatbot icon are gone](./images/turn-off-ai-in-firefox/firefox-before-after-block.webp)
 
 Firefox's AI controls page also says blocked on-device features have their downloaded models "removed." A new profile like ours hadn't downloaded any, so we didn't measure how much space that saves.
@@ -81,6 +84,19 @@ When we set only **Translations** back to **Available**, the translation icon an
 The menus offer different choices. **Translations** had only **Available** and **Blocked**. **Chatbot in sidebar** also listed the four chatbot providers, **Anthropic Claude**, **ChatGPT**, **Google Gemini** and **Mistral Vibe**, so picking one keeps the chatbot and chooses its provider in one step. Each provider in that list is the company's own chat website, such as gemini.google.com, opened in the sidebar, so your chats there follow that company's account and history settings. If you pick Gemini, our guide to [turning off Gemini Apps Activity](/posts/turn-off-gemini-apps-activity) explains how long Google keeps those chats. And if you keep the chatbot, note one change in Firefox 159: its **Summarize page** option now sends the page's address to the chatbot provider instead of the page's text.
 
 You can also do the reverse: leave the main switch off and set only the features you dislike to **Blocked**. The difference is the future. With the main switch off, an AI feature added in a later update starts out available.
+
+## What changed for AI in Firefox 160?
+
+Firefox 160, released November 10, 2026, keeps the same **AI controls** page and the same seven items in the **Block AI enhancements?** window as Firefox 159, but its **Speech recognition** setting now also covers websites. Mozilla's [Firefox 160 release notes](https://www.firefox.com/en-US/firefox/160.0/releasenotes/) say websites can now use Firefox's speech recognition, "providing on-device, real-time speech-to-text in 40 languages." A site's microphone or voice-typing button can use it.
+
+We tested this on November 11, 2026 with a local test page that asks Firefox to start voice input.
+
+- **Speech recognition set to Available:** Firefox showed a window titled **Set up speech recognition?** before anything else happened. It says Firefox "runs speech recognition locally, so the audio never leaves your device," and that "a ~141 MB download will start when you continue," with **Not Now** and **Continue** buttons.
+- **Block AI enhancements on:** no window appeared, and Firefox refused the page's request with a message that on-device speech recognition "is blocked by the user's AI settings."
+
+![Two Firefox 160 screenshots of the same test page asking to start voice input: with Speech recognition set to Available, a box marks the Set up speech recognition? window that says Firefox runs speech recognition locally after a download of about 141 MB, with Not Now and Continue buttons; with Block AI enhancements on, no window appears and the request is refused](./images/turn-off-ai-in-firefox/firefox-160-speech-recognition-websites.webp)
+
+So if a website's voice input stops working in Firefox after you block AI, you can set only **Speech recognition** back to **Available** and keep everything else blocked. We didn't let Firefox download the speech model, so we didn't test how well it transcribes. Firefox 160's other new features, such as Mini Window, which keeps a tab or part of a page in a small always-on-top window, aren't AI features and don't appear on the **AI controls** page. The release notes also say Smart Window's tab grouping now works in French, which matters only if Smart Window has reached your copy.
 
 ## What doesn't Block AI enhancements turn off?
 
@@ -125,19 +141,22 @@ Go to **Settings > AI controls** and turn off **Block AI enhancements**. Firefox
 
 ### Will a Firefox update turn AI back on?
 
-Firefox's AI controls page says that with **Block AI enhancements** on, "new and current AI enhancements are blocked by default," so new AI features arriving in an update start blocked. We confirmed the setting survived a restart; we couldn't test an update, since Firefox 159 is the newest version.
+No, not in our test. On November 11, 2026, we turned on **Block AI enhancements** in Firefox 159.0, closed it, and opened the same profile in Firefox 160.0: the switch was still on and every feature still showed **Blocked**. Firefox's AI controls page also says that with the switch on, "new and current AI enhancements are blocked by default," so new AI features arriving in an update start blocked.
 
 ## Which setting should you use?
 
 - **If you want no AI from Firefox at all:** turn on **Block AI enhancements**, then turn off Perplexity in **Settings > Search**.
 - **If you only want translations:** block everything, then set **Translations** to **Available**. Translation runs on your computer.
 - **If you use one chatbot:** block everything, then choose your provider in **Chatbot in sidebar**.
+- **If you dictate into websites:** block everything, then set **Speech recognition** to **Available**. In Firefox 160, it runs on your computer after a one-time download.
 - **If you're switching browsers because of AI:** Firefox turns off all its AI with one switch, while Chrome takes several settings and a policy. If you're leaving Arc, which stops working December 22, our look at [Arc's shutdown and the move to Dia](/posts/arc-browser-shutting-down) covers what you can bring with you.
 
 ## How we tested
 
 On October 28, 2026, we downloaded Firefox 159.0 for Linux from Mozilla, started it with a new profile in US English, and used it through a virtual screen. We opened **Settings > AI controls**, turned on **Block AI enhancements**, and compared the right-click menu, sidebar and address bar on the same local French-language test page before and after; the "before" sidebar came from a second new profile. We then set **Translations** back to **Available**, restarted Firefox, and checked **Settings > Search**.
 
-We also read Firefox's release notes for desktop versions 148 to 159 and for Android and iPhone versions 148 to 159, Mozilla's February 24, 2026, guide to AI controls, and Mozilla's Smart Window page. The Android menu labels come from the text built into the Firefox for Android 159 app.
+On November 11, 2026, we repeated the test on Firefox 160.0 for Linux with a new profile: the **AI controls** page, the confirmation window and the right-click menu after blocking. We also opened a local test page that asks to start speech recognition, once with **Block AI enhancements** on and once with only **Speech recognition** set to **Available**. To check what an update does to the setting, we turned on the switch in Firefox 159.0 on a second new profile and opened that profile in Firefox 160.0.
 
-Not tested: Firefox on Windows or Mac (the same version, but we checked the Linux build), Smart Window itself, the chatbot and link previews in use, and the Android and iPhone apps on a real phone.
+We also read Firefox's release notes for desktop versions 148 to 160 and for Android and iPhone versions 148 to 159, Mozilla's February 24, 2026, guide to AI controls, and Mozilla's Smart Window page. The Android menu labels come from the text built into the Firefox for Android 159 app.
+
+Not tested: Firefox on Windows or Mac (the same version, but we checked the Linux build), Smart Window itself, the chatbot and link previews in use, speech recognition after the model download, and the Android and iPhone apps on a real phone.

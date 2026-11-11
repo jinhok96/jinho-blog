@@ -1,0 +1,967 @@
+# 가져온 시각: 2026-11-11T17:42:10.943Z
+# 원본: https://learn.microsoft.com/en-us/windows/release-health/windows-message-center
+Windows message center | Microsoft Learn
+https://learn.microsoft.com/en-us/windows/release-health/windows-message-center
+
+Table of contents
+ Exit editor mode
+WindowsRelease health
+Ask Learn
+Windows message center
+Summarize this article for me
+How to get the Windows 11 2026 Update
+
+Secure Boot client playbook for certificates expiring in 2026
+
+An IT pro’s guide to Windows 11, version 26H2
+
+Windows Server Secure Boot playbook for certificates expiring in 2026
+
+Recent announcements
+Expand table
+Message	Date
+The November 2026 Windows security update is now available
+
+The November 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Highlights for the Windows 11, version 26H2 update:
+This security update includes improvements that were part of update KB5127648 (released October 13, 2026).
+This update provides security improvements to help protect Windows devices against the latest threats.
+Secure Boot certificate deployment expands to more eligible devices through additional high-confidence device targeting data.
+This update fixes an issue that prevented some USB Audio 1.0 devices from starting and displayed error code 10 in Device Manager.
+Short on time? Watch the Windows 11 release notes video for this month’s tips.
+ 
+Note: As part of the November 2026 Windows security release, standalone security updates are available for devices enrolled in hotpatch updates. These updates address security vulnerabilities in Windows PowerShell involving web requests, PowerShell workflows, and the Desired State Configuration (DSC) Archive Resource. They are offered after the November 2026 hotpatch update is installed. A restart might be required after installing these updates if any of the updated files are in use. For more information, see the applicable KB article: 
+Windows 11, versions 26H2, 25H2, and 24H2: KB5135385
+Windows Server 2025: KB5135386
+IMPORTANT: Because of minimal operations during the Western holidays and the upcoming new year, there will be no December 2026 non-security preview update in the second part of the month. Normal monthly servicing for both security and non-security preview updates will resume in January 2027.
+	2026-11-10
+10:00 PT
+Windows 11, version 23H2 Enterprise and Education editions have reached end of updates
+
+Today, November 10, 2026, Windows 11, version 23H2 Enterprise and Education editions have reached end of updates. The November 2026 Windows security update is the last update available for these editions. After this date, devices running these editions will no longer receive monthly security updates containing protections from the latest security threats. We recommend updating eligible devices running Windows 11, version 23H2 Enterprise and Education editions to Windows 11, version 26H2 to continue receiving monthly security and quality updates.
+
+
+To check whether an update is available for your eligible device, select Settings > Windows Update, then select Check for updates. If the update is available for your device, select Download and install.
+
+
+For more information about product lifecycle dates, see Windows 11 release information and Lifecycle FAQ - Windows.
+	2026-11-10
+10:00 PT
+A new standard for vulnerability management in the AI era
+
+AI is changing how quickly security vulnerabilities can be discovered, analyzed, and potentially exploited. Learn how Windows is using AI-assisted capabilities to find and remediate vulnerabilities earlier, strengthen validation, and help organizations turn available fixes into deployed protection faster. See what this changing threat landscape means for your update strategy and the practical steps your organization can take to reduce its exposure window.
+	2026-11-05
+10:00 PT
+Windows news you can use: October 2026
+
+In this month’s edition of Windows news you can use, we’re highlighting preparations for Windows Update certificate rotation in 2027 and security hardening changes that might affect organizations using NTLMv1 and MS-CHAPv2. Explore new Windows recovery capabilities, including restore summaries and cloud rebuild, along with new controls for managing network settings and in-box apps. You’ll also find Windows 11 accessibility and productivity improvements, Quick machine recovery for Windows Server 2025, and guidance for recent time zone changes in Canada and Cuba. Learn more at Windows news you can use: October 2026.
+	2026-11-03
+15:00 PT
+Building a risk-based patching response for Windows Server
+
+Microsoft has published new guidance to help organizations strengthen Windows Server security through risk-based patching. The goal is to help you reduce security risks while maintaining business continuity. For that, prioritize security updates based on vulnerability severity, active exploitation, system exposure, and business impact rather than following fixed patching schedules. Consider establishing routine, accelerated, and emergency patching processes. Finally, take advantage of tools such as Azure Update Manager, Azure Arc, and Windows Server hotpatching. Learn more in Building a risk-based patching response for Windows Server.
+	2026-11-02
+10:00 PT
+Introducing restore summary in Windows settings backup and restore
+
+The new restore summary makes restore outcomes visible to users on Windows 11, version 24H2 and later. As part of Windows settings backup and restore, it provides a clear summary of restored personalization settings and Microsoft Store app list. Users can spend less time verifying their setup, bringing greater clarity to the recovery experience, and accelerating time to productivity. Learn more in Windows settings backup and restore Overview.
+	2026-11-02
+10:00 PT
+Interim guidance for Cuba’s 2026 daylight saving time change
+
+Following an announcement on October 27, 2026, the Republic of Cuba will remain on daylight saving time (UTC-04:00) instead of turning clocks back on November 1, 2026. A Windows update to support the change is planned for the November 2026 security update. Until the update is installed or a temporary workaround is applied, Windows devices set to (UTC-05:00) Havana might display an incorrect local time. For detailed workaround instructions and more information, read Interim guidance for Cuba DST 2026.
+	2026-10-29
+19:30 PT
+Policy-based in-box app removal extended to multi-session environments
+
+If you’re an IT admin, policy-based app removal now supports multi-session environments. Use it to manage the removal of supported in-box apps on devices running Windows 11 Enterprise and Education, version 24H2 and later. This capability applies to preinstalled Microsoft Store apps and other MSIX/APPX-packaged apps. Learn more in Policy-based in-box app removal.
+	2026-10-29
+10:00 PT
+The October 2026 Windows non-security preview update is now available
+
+The October 2026 non-security preview update is now available for Windows 11, versions 26H2, 26H1, and 25H2. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X. 
+
+
+Highlights for the Windows 11, version 26H2 update:
+File Explorer’s context menu is faster and easier to customize, with options to choose which commands and app extensions appear and how they’re organized.
+XBOX mode now has a refreshed Gaming Task View with quick access to Exit to Desktop and Power Options, making key system actions easier to access while gaming.
+Magnifier now supports per-monitor zoom, a contrast theme to reduce glare, and viewport locking to keep a display’s magnified view in place.
+Phone Link now lets you preview recent messages and notifications in Start by hovering over them, without opening the item.
+Cloud rebuild can reinstall Windows using an image and drivers downloaded from Windows Update, including when Windows can’t start; no USB media or custom image is required.
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-10-28
+10:00 PT
+New MSRC blog: Microsoft’s response to compromised eMudhra certificate authority keys
+
+Microsoft has published a new blog post outlining our response to compromised eMudhra intermediate certificate authority keys, including changes to Windows and Microsoft Edge trust lists. For more information, see Microsoft’s response to compromised eMudhra certificate authority keys.
+	2026-10-26
+19:00 PT
+Quick machine recovery is now supported on Windows Server 2025
+
+With the October 2026 security update, quick machine recovery extends to Windows Server 2025. Quick machine recovery is designed to help restore devices experiencing widespread boot issues by using the Windows Recovery Environment (WinRE) to search Windows Update for applicable remediations. On Windows Server 2025, cloud remediation is disabled by default and can be configured using Group Policy.
+	2026-10-19
+07:00 PT
+(Updated) Windows updates are available for 2026 time zone changes in Canada
+
+Recent Windows updates add new region-specific time zones for Alberta, British Columbia, and Manitoba. If you use or manage Windows devices in any affected location, install the applicable update before November 1, 2026, when clocks will not be set back by one hour.
+
+
+After installing the update, confirm that devices use the appropriate time zone for their region. Devices configured to set the time zone automatically will select it based on location. Without the update or correct time zone setting, devices might display the wrong local time. Learn more at Daylight Saving Time & Time Zone Blog. To manage the Alberta and British Columbia time zone changes in Outlook, follow the guidance in Outlook Time Zone Changes for Alberta and British Columbia.
+	2026-10-16
+10:30 PT
+Take action: NTLMv1 hardening changes might affect network connections on devices without Credential Guard
+
+Beginning with the October 2026 security update, Windows 11, versions 26H2, 25H2, and 24H2, along with Windows Server 2025, enforce restrictions on generating NTLMv1-derived credentials for Single Sign-On by default. This planned security-hardening change is part of the boarder Microsoft effort to phase out NTLM and supported by Windows Credential Guard. This change applies only on devices with Credential Guard disabled, and might cause issues with Wi-Fi, Ethernet, and VPN connections that use MS-CHAPv2 authentication, resulting in possible failure to connect via Single Sign-On pathways.
+
+
+Organizations should identify affected authentication configurations. Remove dependencies on MS-CHAPv2 and migrate Wi-Fi and VPN connections to certificate-based authentication. As a temporary option, it is possible to temporarily make changes to the Windows registry that set affected devices to allow and audit these connections. After removing dependencies, devices should be returned to enforcement.
+
+
+Please note this is a planned change in Windows that supports evolving security needs, originally documented in August 2025. It is not a known issue with the October 2026 security update.
+
+
+For complete rollout, auditing, and registry configuration guidance, as well as help to identify and remove remaining dependencies on NTLMv1-derived credentials, carefully review KB5066470. Learn about the disablement of NTLM at Advancing Windows security: Disabling NTLM by default - Windows IT Pro Blog, Retiring NTLM: Frequently asked questions - Windows IT Pro Blog.
+	2026-10-14
+14:00 PT
+Windows Server 2022 has reached end of mainstream support
+
+As of October 13, 2026, Windows Server 2022 has reached end of mainstream support and transitioned to extended support. The October 2026 security update is the last mainstream support update available for this version. Extended support includes security updates at no additional cost, and Windows Server 2022 will continue to receive monthly security updates through October 14, 2031. For more information, see the Fixed Lifecycle Policy.
+
+
+Hotpatch update support for Windows Server 2022 Datacenter: Azure Edition has been extended through October 2027. Devices enrolled in hotpatch updates will continue to receive monthly security updates without requiring a restart. To learn more, see the Windows Server 2022 lifecycle page.
+
+
+Windows Server 2025 is the latest Long-Term Servicing Channel (LTSC) release for Windows Server. To help keep your environment protected and supported, plan your upgrade path to Windows Server 2025 for full mainstream support. To download a free 180-day evaluation, visit the Microsoft Evaluation Center.
+
+
+For detailed lifecycle dates, see the Windows Server 2022 lifecycle page. For servicing timelines and related resources, see Windows Server release information, Lifecycle FAQ - Windows Server, and Microsoft Lifecycle Policy search tool.
+	2026-10-14
+10:00 PT
+90-Day Reminder: Windows Server 2016 will reach end of updates on January 12, 2027
+
+On January 12, 2027, Windows Server 2016 will reach end of updates. The January 2027 Windows security update will be the last update available for this version. After this date, devices running Windows Server 2016 will no longer receive monthly security updates containing protections from the latest security threats.
+
+
+This end of updates in 2027 applies to all editions of Windows Server 2016: Datacenter, Essentials, MultiPoint Premium and Standard. Also, note that Microsoft support for Windows Server 2016 Essentials features, including Remote Web Access and related Essentials-specific functionality, ends on the same date. Any Windows Server 2016 Essentials capability that continues to function after end of support should be treated as unsupported.
+
+
+To help keep your environment protected and supported, plan to upgrade to Windows Server 2025. To download a free 180-day evaluation, visit the Microsoft Evaluation Center. Extended Security Updates (ESU) are available for Windows Server 2016 Standard and Datacenter editions for organizations that need additional time to complete their transition.
+ 
+For detailed lifecycle dates, see the Windows Server 2016 lifecycle page. For servicing timelines and related resources, see Windows Server release information, Lifecycle FAQ - Windows Server, and the Microsoft Lifecycle Policy search tool.
+	2026-10-14
+10:00 PT
+90-Day Reminder: Windows 10 Enterprise LTSC 2021 will reach end of updates on January 12, 2027
+
+On January 12, 2027, Windows 10 Enterprise LTSC 2021 will reach end of updates. The January 2027 Windows security update will be the last update available for this version. After this date, devices running Windows 10 Enterprise LTSC 2021 will no longer receive monthly security updates containing protections from the latest security threats.
+
+
+To help keep your devices protected and supported, we recommend updating to the latest Long-Term Servicing Channel release, Windows 11 Enterprise LTSC 2024. If your organization cannot complete its transition before January 12, 2027, Extended Security Updates (ESU) options are available to help keep eligible devices protected while you complete your transition. Learn more at Plan for Windows 10 Enterprise LTSC 2021 end of support.
+
+
+For detailed lifecycle dates, see the Windows 10 Enterprise LTSC 2021 lifecycle page. For servicing and lifecycle resources, see Windows 10 release information, Lifecycle FAQ - Windows, and the Microsoft Lifecycle Policy search tool.
+	2026-10-14
+10:00 PT
+The October 2026 Windows security update is now available
+
+(Updated 10-13-2026 11:30 AM PT: Message updated to reflect availability of Windows 10, versions 22H2 and 21H2.)
+
+
+The October 2026 Windows security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Highlights for the Windows 11, version 26H2 update:
+This security update includes improvements that were part of update KB5124008 (released September 8, 2026).
+This update addresses an issue that could cause Always On VPN connections to become stuck in a connecting state or fail to reconnect when automatic protocol selection or fallback was configured.
+This update fixes an issue in Azure Virtual Desktop and FSLogix environments where Windows Explorer could fail to start after sign-in, resulting in a black screen.
+This update adds auditing and optional policy controls for ReFS volumes on externally attached storage devices to help organizations prepare for future security hardening changes.
+This update fixes an issue that could prevent some tiered Storage Spaces Direct virtual disks from coming online after installing certain security updates, affecting clustered workloads.
+Short on time? Watch the Windows 11 release notes video for this month’s tips.
+ 
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-10-13
+10:00 PT
+Hardening changes for ReFS volumes on removable media
+
+Microsoft is making hardening changes to the Resilient File System (ReFS). The changes improve the security posture of Windows by adding visibility into unsupported external ReFS configurations and by providing controls to block affected volumes. The changes apply to all supported Windows platforms in two phases:
+October 2026 Windows security update (Audit phase)
+January 2027 Windows security update (Enforcement phase)
+Learn more at Hardening changes for ReFS volumes on removable media.
+	2026-10-13
+10:00 PT
+Windows 11, version 24H2 (Home and Pro) and Windows 10 LTSB 2016 have reached end of updates
+
+Today, October 13, 2026, Windows 11, version 24H2 Home and Pro, and Windows 10 Enterprise LTSB 2016 have reached end of updates. The October 2026 monthly security update is the last update available for these editions. Devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+
+
+We recommend updating devices running Windows 11, version 24H2 Home and Pro editions to Windows 11, version 26H2 or Windows 11, version 25H2 to continue receiving monthly security and quality updates. Windows 11, version 24H2 Enterprise and Education remain supported until October 12, 2027. For more information, see the How to get the Windows 11 2026 Update video.
+
+
+For devices running Windows 10 Enterprise LTSB 2016, we recommend updating to the latest Long-Term Servicing Channel (LTSC) release, Windows 11 Enterprise LTSC 2024. Extended Security Updates (ESU) are also available for organizations that need additional time to complete their transition.
+
+
+For more information about product lifecycle dates, see Windows 11 release information, Windows 10 release information, and Lifecycle FAQ - Windows.
+	2026-10-13
+10:00 PT
+Manage Administrator protection within Windows 11 security baseline
+
+If your organization uses Windows security baselines, Administrator protection becomes enabled by default with the October 2026 Windows security update. The security baselines for Windows 11 that enable Administrator protection by default apply to versions 26H2, 25H2, and 24H2. 
+ 
+Review and test your security baseline configuration and adjust it as appropriate for your environment. Use Microsoft Intune or Group Policy to manage Administrator protection enablement as part of the security baseline. The following policies are part of the security baseline:  
+User Account Control: Configure type of Admin Approval Mode 
+User Account Control: Behavior of the elevation prompt for administrators running with Administrator protection 
+Administrator protection is a platform security feature in Windows 11 designed to ensure users run with the least privilege needed, elevating to admin rights only when necessary and only with the user's explicit approval. 
+ 
+The feature was introduced disabled-by-default in the August 2026 Windows non-security preview updates for Windows 11, versions 26H2, 25H2, and 24H2, through controlled feature rollout. With the September 2026 non-security preview update, the feature became generally available (off by default), along with enterprise management controls. 
+	2026-10-13
+10:00 PT
+AD FS Distributed Key Manager (DKM) container ACL hardening begins today
+
+The October 2026 Windows security update moves AD FS Distributed Key Manager (DKM) container ACL hardening into Enforcement mode. These protections address the elevation of privilege vulnerability described in CVE-2026-56155. If your organization uses AD FS, verify that you have reviewed DKM container permissions and resolved compatibility issues while Audit mode was active.
+
+
+On supported versions of Windows Server, the system applies remediation by default after you install the October 2026 Windows security update unless administrators explicitly opt out. Windows Server 2012 and Windows Server 2012 R2 require manual remediation and don’t receive automatic remediation when Enforcement mode begins.
+
+
+For complete implementation and remediation details, see: CVE-2026-56155: AD FS Distributed Key Manager container ACL hardening.
+	2026-10-13
+10:00 PT
+30-Day Reminder: Windows 11, version 23H2 Enterprise and Education editions reach end of updates on November 10, 2026
+
+On November 10, 2026, Windows 11, version 23H2 Enterprise and Education editions will reach end of updates. The November 2026 Windows security update will be the last update available for these editions. After this date, devices running these editions will no longer receive monthly security updates containing protections from the latest security threats. We recommend updating eligible devices running Windows 11, version 23H2 to a supported version of Windows 11.
+
+
+If you have an eligible device, you can check if an update to a supported version of Windows is available by selecting Settings > Windows Update and selecting Check for updates. If your device is ready for the update, you’ll see the option to Download and install.
+
+
+For more information about product lifecycle dates, see Windows 11 release information and Lifecycle FAQ - Windows.
+	2026-10-09
+10:00 PT
+Take action to prevent RD Web Access rendering failures
+
+If you’re an IT admin using the RD Web Access experience included with Windows Server, take action to prepare for an upcoming browser compatibility change. RD Web Access relies on XSLT functionality that is being disabled in Chromium-based browsers. When this functionality is disabled, the RD Web Access page will fail to render, preventing users from accessing the experience.
+
+
+Organizations using RD Web Access should review and adopt one of the documented workarounds before the browser change affects their users. Learn more at RD Web Access fails to load when XSLT is disabled in Microsoft Edge or Google Chrome.
+	2026-10-08
+12:00 PT
+Prepare for Windows Update certificate rotation in 2027
+
+Certificates used to establish trusted connections to Windows Update will expire on May 17, 2027 and June 19, 2027. Devices must contain the replacement certificates to continue receiving updates after the applicable expiration date.
+
+
+Most devices running an in-support version of Windows require no action if they are current with monthly Windows updates.
+Windows 11, version 25H2 and later: No action is required.
+Windows 11, version 24H2 and Windows Server 2025: Install the September 2025 security update or later before June 19, 2027.
+Other in-support versions of Windows 11, Windows Server 2022, and in-support versions of Windows 10: Install the July 2026 security update or later before June 19, 2027.
+Windows 10 Enterprise 2019 LTSC, Windows Server 2019, and Windows Server 2016: Install the July 2026 security update or later before May 17, 2027.
+Other Windows versions: Upgrade to a supported version of Windows client or Windows Server.
+Devices without the replacement certificates will lose access to Windows Update after the applicable expiration date. This change does not apply to devices receiving updates from Windows Server Update Services (WSUS).
+
+
+For complete details, see Prepare for Windows Update certificate rotation in 2027.
+	2026-10-08
+10:00 PT
+Windows Office Hours: October 15, 2026
+
+If you are an IT admin with questions about managing and updating Windows, we want to help. Every third Thursday of the month, we host a live chat-based event on the Tech Community called Windows Office Hours. Members of the Windows, Microsoft Intune, Windows Autopilot, Windows Autopatch, and Windows 365 engineering teams will be standing by to answer your questions.
+ 
+Want to attend the October 15 session of Office Hours? Add it to your calendar and select Attend on the event page to let us know you're coming. There is no video or live meeting component. Simply visit the event page, sign in to the Tech Community, and leave your questions in the Comments section. You can also bookmark https://aka.ms/Windows/OfficeHours for upcoming dates (and the ability to add this event to your calendar). We look forward to helping you.
+	2026-10-08
+10:00 PT
+Interim guidance for Manitoba time zone changes
+
+A time zone change affects Windows devices in Manitoba, with a fix releasing in October 2026. Manitoba is permanently moving to UTC-5 and will not set its clocks back on November 1, 2026. Microsoft recommends a temporary workaround for devices that can't be updated in time. For the workaround steps and full guidance, visit the Daylight Saving Time & Time Zone Blog.
+	2026-10-07
+11:00 PT
+Windows news you can use: September 2026
+
+In this month’s edition of Windows news you can use, we’re highlighting the general availability of Windows 11, version 26H2, with new and updated resources to help you evaluate and deploy it at scale. Prepare for October lifecycle milestones affecting Windows 11, version 24H2 Home and Pro, Windows 10 Enterprise LTSB 2016, Windows 10 IoT Enterprise LTSB 2016, and Windows Server 2022. You’ll also find guidance on retiring NTLM, new Windows Autopatch controls, Windows settings backup, and the transition to Windows Autopilot device preparation. Learn more at Windows news you can use: September 2026.
+	2026-10-02
+16:30 PT
+Windows settings backup is now enabled by default for eligible devices
+
+With the release of Windows 11, version 26H2, the Windows settings backup policy is now enabled by default for eligible devices. The new default applies only if admins haven’t explicitly configured the policy. We honor any existing explicit enable or disable setting. Restore behavior is unchanged and remains admin-controlled.
+
+
+This update makes settings backup a baseline resiliency capability. If user devices ever enter recovery, you don't have to guess whether their Windows settings have a backup. With this feature on by default, users are more likely to have their settings and Microsoft Store app list available to restore after a device reset, replacement, or upgrade. Admins can continue to manage Windows settings backup through Microsoft Intune, Group Policy, or other mobile device management (MDM) solutions. Learn more in Windows settings backup becoming a new resilience baseline.
+	2026-09-30
+10:00 PT
+How to get the Windows 11 2026 Update
+
+Today, we announced the availability of Windows 11, version 26H2. This new version is first available for users with devices running version 25H2 or 24H2 who have already turned on the "Get the latest updates as soon as they're available" toggle. With a gradual rollout, availability will expand over the next few months. Installation will be fast and easy as this update is delivered with the same technology used for monthly security updates, requiring only a small download and a quick restart. Want to learn about how to update to Windows 11, version 26H2? Watch this video. 
+ 
+Note: Some devices might temporarily not be offered the update to version 26H2 if we detect an incompatibility. In that case, we might put a safeguard hold in place until the issue is resolved. 
+ 
+If you are an IT administrator, see An IT pro's guide to Windows 11, version 26H2 for information on commercial release channels, deployment tools, and enhancements for commercial organizations.
+	2026-09-29
+10:00 PT
+Interim time zone guidance for Alberta, British Columbia, and Morocco
+
+Three time zone changes affect Windows devices in Alberta, British Columbia, and Morocco, with fixes releasing across September and October 2026. Alberta and affected Northwest Territories locations are permanently moving to UTC-6 on November 1, 2026. Most of British Columbia is permanently moving to UTC-7 on the same date. Morocco turned its clocks back one hour to UTC+0 on September 20, 2026. Microsoft recommends temporary workarounds for devices that can't be updated in time. For the workaround steps and full guidance for each region, visit the Daylight Saving Time & Time Zone Blog.
+	2026-09-25
+13:00 PT
+Windows Deployment Services (WDS) deprecation in the next Windows Server release
+
+Microsoft plans to deprecate the Windows Deployment Services (WDS) server role beginning with the next release of Windows Server. This includes the inbox WDS role, WDS services, management tools, and interfaces, and WDS-provided Preboot Execution Environment (PXE) boot functionality. Begin planning your migration to alternatives. For example, Microsoft Configuration Manager provides a better, more flexible, and feature-rich experience for deploying Windows images. Learn more at Windows Deployment Services (WDS) deprecation in the next Windows Server release.
+	2026-09-24
+15:00 PT
+(Updated) The September 2026 Windows non-security preview update is now available
+
+(Updated 9-22-2026: Added a note indicating the September 2026 non-security preview update is the final preview update for Windows 11, version 24H2.)
+
+
+The September 2026 non-security preview update is now available for Windows 11, versions 26H1, 25H2, and 24H2. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Looking to explore upcoming features and improvements in Windows 11? Check the Windows roadmap. It includes what’s coming to the Windows Insider Program, what's gradually rolling out, and what's generally available.
+ 
+Highlights for the Windows 11, version 25H2 update:
+You can now remap the Copilot key to function as the Right Ctrl or Context Menu key, helping preserve familiar keyboard shortcuts and accessibility workflows.
+Camera roll backup in Settings helps eligible users protect their photos with OneDrive. You can turn on the feature from the Settings Home or Accounts page and finish setup on your phone using a QR code.
+Windows now supports Emoji 17.0, adding new emoji such as distorted face, fight cloud, and hairy creature, and refreshing several existing designs including saluting face, goose, and lotus for better consistency across platforms. To insert them, press Windows key + Period (.) to open the emoji panel.
+File Explorer now handles downloaded files more flexibly, with a new Preview anyway button for HTML files and automatic previews for non-HTML files such as PDFs, while Home remembers whether each section is expanded or collapsed and the reorganized Details pane shows cloud file thumbnails more reliably.
+A new Open apps maximized setting automatically maximizes app windows as they open, whether you use a screen reader or magnification, work in tablet mode, or simply prefer a consistent full-screen workspace.
+Note: The September 2026 non-security preview update (KB5124010) is the final preview update for Windows 11, version 24H2. Supported editions of version 24H2 will continue to receive monthly security updates in accordance with their servicing lifecycle. To continue receiving non-security preview updates, please update to a newer version of Windows 11. As a reminder, Windows 11, version 24H2 Home and Pro editions reach end of support in October 2026.
+
+
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-09-22
+10:00 PT
+Intune: Windows Health Attestation Migration to Microsoft Azure Attestation
+
+If you manage Windows 11 devices via Microsoft Intune, a compliance-related change is planned for the first half of 2027. Windows Health Attestation compliance evaluation will automatically migrate from the current Device Health Attestation (DHA) service to Microsoft Azure Attestation (MAA). To prepare and avoid interruptions, review your organization’s network, firewall, proxy, and endpoint access configurations. Follow the instructions in Configure endpoints for Azure Attestation migration.
+	2026-09-17
+10:00 PT
+60-Day Reminder: Windows 11, version 23H2 Enterprise and Education editions reach end of updates on November 10, 2026
+
+On November 10, 2026, Windows 11, version 23H2 Enterprise and Education editions will reach end of updates. The November 2026 Windows security update will be the last update available for these editions. After this date, devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+
+
+To continue receiving monthly security and quality updates, we recommend updating eligible devices running Windows 11, version 23H2 Enterprise and Education editions to Windows 11, version 25H2. Windows 11, version 25H2 Enterprise and Education editions will continue to receive updates until October 11, 2028.
+
+
+For more information about product lifecycle dates, see Windows 11 release information and Lifecycle FAQ - Windows.
+	2026-09-15
+10:00 PT
+Take Action: Out-of-band update released to address issues from the September 2026 Windows security update 
+
+Microsoft has identified issues that affect some devices after installing the September 2026 Windows security update, released September 8, 2026. On affected devices, host folder shares might be unavailable in Hyper-V-based Linux virtual machines, Remote Desktop Services might stop responding, which can prevent new sessions from being created and can prevent local and remote sign-in, and some USB Audio Class 1.0 devices might fail in multichannel audio modes. 
+ 
+An out-of-band (OOB) update was released today, September 14, 2026, to address these issues. For most versions of Windows, these are cumulative updates that include all improvements from the September 2026 Windows security update released September 8, 2026, so you do not need to install any previous update first, except as noted below for hotpatch updates. 
+ 
+For Windows 11, versions 26H1, 25H2, and 24H2, this OOB update is a security update. It downloads and installs automatically from Windows Update and from Windows Update for Business in accordance with configured policies. It is also available from the Microsoft Update Catalog and syncs automatically with Windows Server Update Services (WSUS). 
+ 
+A corresponding hotpatch update is available from Windows Update for Windows 11, versions 25H2 and 24H2 for devices enrolled in hotpatch updates. Devices must have the September 2026 security update installed to receive this hotpatch update automatically. 
+ 
+The update for Windows 11, versions 26H1, 25H2, and 24H2 includes a security fix to address CVE-2026-62721. The update for Windows 11, version 26H1 also includes a security fix to address CVE-2026-85921.
+
+
+For Windows 11, version 23H2, and Windows 10, version 22H2 (ESU), this update is an optional non-security update. To install it, go to Settings > Windows Update, select Check for updates, and then select Download and install. It is also available from the Microsoft Update Catalog.  
+ 
+For complete guidance and installation instructions, see the relevant KB articles: 
+Windows 11, version 26H1: KB5129194 
+Windows 11, versions 25H2 and 24H2: KB5129195 
+Windows 11, versions 25H2 and 24H2 (hotpatch): KB5129241 
+Windows 11, version 23H2: KB5129242 
+Windows Server 2025: KB5129235 
+Windows Server 2022: KB5129237 
+Windows 10, version 22H2 and Windows 10 Enterprise LTSC 2021: KB5129236 
+Windows 10 Enterprise LTSC 2019 and Windows Server 2019: KB5129238 
+Windows 10 Enterprise LTSB 2016 and Windows Server 2016: KB5129239 
+Windows Server 2012 R2: KB5129243 
+Windows Server 2012: KB5129244 
+	2026-09-14
+10:00 PT
+30-Day Reminder: Windows 11, version 24H2 and Windows 10 LTSB 2016 reaching end of updates on October 13, 2026
+
+On October 13, 2026, Windows 11, version 24H2 Home and Pro editions, and Windows 10 Enterprise LTSB 2016 will reach end of updates. After this date, devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+
+
+We recommend updating devices running Windows 11, version 24H2 Home and Pro editions to Windows 11, version 25H2 to continue receiving monthly security and quality updates. Enterprise and Education editions remain supported until October 12, 2027. For more information, see the How to get the Windows 11 2025 Update video.
+
+
+For devices running Windows 10 Enterprise LTSB 2016, we recommend updating to the latest Long-Term Servicing Channel (LTSC) release, Windows 11 Enterprise LTSC 2024. Extended Security Updates (ESU) are also available for organizations that need additional time to complete their transition.
+
+
+For more information about product lifecycle dates, see Windows 11 release information, Windows 10 release information, and Lifecycle FAQ - Windows.
+	2026-09-14
+10:00 PT
+30-Day Reminder: AD FS DKM container ACL hardening begins in October 2026
+
+In October 2026, Windows updates will begin Enforcement mode for AD FS Distributed Key Manager (DKM) container ACL hardening, a change designed to address the elevation of privilege vulnerability documented in CVE-2026-56155. If your organization uses AD FS, review DKM container permissions during the remaining Audit mode period and address compatibility issues before enforcement begins.
+
+
+During Enforcement mode, supported versions of Windows Server will run remediation by default unless administrators explicitly opt out. Windows Server 2012 and Windows Server 2012 R2 still require manual remediation and will not be automatically remediated.
+
+
+For more details, see CVE-2026-56155: AD FS Distributed Key Manager container ACL hardening.
+	2026-09-14
+10:00 PT
+30-Day Reminder: Windows Server 2022 will reach end of mainstream support on October 13, 2026
+
+On October 13, 2026, Windows Server 2022 will reach end of mainstream support. The October 2026 security update will be the last mainstream support update available for this version. After this date, Windows Server 2022 will transition to extended support, which includes security updates at no additional cost, and will continue to receive monthly security updates through October 14, 2031. For more information, see the Fixed Lifecycle Policy.
+
+
+Hotpatch update support for Windows Server 2022 Datacenter: Azure Edition has been extended through October 2027. Devices enrolled in Hotpatch updates will continue to receive monthly security updates without requiring a restart. To learn more, see the Windows Server 2022 lifecycle page.
+
+
+Windows Server 2025 is now the latest Long-Term Servicing Channel (LTSC) release for Windows Server. To help keep your environment protected and supported, plan to upgrade to Windows Server 2025 for full mainstream support. To download a free 180-day evaluation, visit the Microsoft Evaluation Center. Evaluate upgrade options and begin deployment testing early to help ensure a smooth transition.
+
+
+For detailed lifecycle dates, see the Windows Server 2022 lifecycle page. For servicing timelines and related resources, see Windows Server release information, Lifecycle FAQ - Windows Server, and Microsoft Lifecycle Policy search tool.
+	2026-09-11
+10:00 PT
+Windows Office Hours: September 17, 2026
+
+If you are an IT admin with questions about managing and updating Windows, we want to help. Every third Thursday of the month, we host a live chat-based event on the Tech Community called Windows Office Hours. Members of the Windows, Microsoft Intune, Windows Autopilot, Windows Autopatch, and Windows 365 engineering teams will be standing by to answer your questions.
+ 
+Want to attend the September 17 session of Office Hours? Add it to your calendar and select Attend on the event page to let us know you're coming. There is no video or live meeting component. Simply visit the event page, sign in to the Tech Community, and leave your questions in the Comments section. You can also bookmark https://aka.ms/Windows/OfficeHours for upcoming dates (and the ability to add this event to your calendar). We look forward to helping you.
+	2026-09-10
+10:00 PT
+IT resources to plan, prepare, and deploy Windows
+
+Whether you’re a seasoned IT pro or earlier in your career, new and updated resources are available. Learn how to effectively roll out feature updates to Windows devices and Microsoft 365 Apps in advance of the upcoming Windows 11, version 26H2. You can deploy updates faster and support your remote workforce by following a three-phase process: plan > prepare > deploy. Complete a redesigned Microsoft learning path for free and watch a fresh podcast series:
+Touchstone Podcast Series: Cloud Native Management — Part One: “Plan” 
+Touchstone Podcast Series: Cloud Native Management — Part Two: “Plan"
+Touchstone Podcast Series: Cloud Native Management — Part Three: "Prepare"
+Touchstone Podcast Series: Cloud Native Management — Part Four: "Deploy"
+	2026-09-09
+10:00 PT
+The September 2026 Windows security update is now available
+
+The September 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Highlights for the Windows 11, version 25H2 update:
+This security update includes improvements that were part of update KB5120998 (released August 27, 2026).
+This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.
+This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.
+Short on time? Watch the Windows 11 release notes video for this month’s tips.
+ 
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-09-08
+10:00 PT
+Windows news you can use: August 2026
+
+From device recovery and unattended remote support to post-quantum cryptography readiness and Windows 365 improvements, August delivered a broad set of updates for IT admins. In this edition of Windows news you can use, explore new recovery and management tools, security enhancements designed to strengthen protection by default, Windows Server updates, AI-related improvements in Windows, and upcoming lifecycle milestones that may require action in your environment. Explore this month’s highlights to see what’s new and what might impact your plans for the months ahead.
+	2026-09-02
+14:00 PT
+More control for Windows Autopatch updates: quality updates, .NET Framework, and quick machine recovery 
+
+Windows Autopatch is expanding to help IT admins manage Windows quality updates, supported .NET Framework updates, and quick machine recovery updates in one streamlined experience. Choose automatic or manual approvals by update type, configure deployment deferrals, pause individual releases, and monitor device-level deployment and remediation status through enhanced reporting. 
+ 
+Rollout begins September 1, 2026, and is expected to reach all tenants by October 15, 2026. Review your approval strategy and learn how to prepare in the updated documentation: 
+Windows quality updates overview 
+Quality update status report 
+Quick machine recovery updates  
+Quick machine recovery update status report 
+	2026-09-01
+11:00 PT
+Expanding memory integrity protection across Windows devices
+
+Beginning in October 2026, Windows quality updates will start enabling memory integrity on more eligible Windows devices. On some devices, this change will also enable virtualization-based security (VBS). The rollout will occur gradually, so the change might not reach all eligible devices at the same time.
+
+
+Memory integrity helps protect critical parts of Windows from tampering by allowing only trusted kernel-mode code and drivers to run. Before enabling it, Windows evaluates device readiness based on factors such as hardware capabilities, compatibility, performance considerations, Windows 11 system requirements, and recommended built-in protections. Existing administrator and user choices and policies will remain in effect. Devices on which memory integrity was previously disabled will not be automatically changed by this rollout.
+
+
+Learn more at: Expanding memory integrity protection across Windows devices and Enable memory integrity.
+	2026-09-01
+10:00 PT
+Reminder: Configure firewall and proxies for smooth Windows updates
+
+Quick reminder: if you’re an IT admin, be sure to review this guide that can help you troubleshoot connection issues with the Windows Update service. Some ongoing issues have to do with the embedded network security design. The key is in the configuration of your network endpoints for firewalls and proxies. Essentially, make sure to trust Fully Qualified Domain Name (FQDN) subdomains of the recommended DNS subdomains. Follow detailed guidance at Configuring firewall and proxies for smooth Windows updates.
+	2026-08-31
+10:00 PT
+The August 2026 Windows non-security preview update is now available
+
+The August 2026 non-security preview update is now available for Windows 11, versions 26H1, 25H2, and 24H2. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Looking to explore upcoming features and improvements in Windows 11? Check the Windows roadmap. It includes what’s coming to the Windows Insider Program, what's gradually rolling out, and what's generally available.
+ 
+Highlights for the Windows 11, version 25H2 update:
+You can now choose whether the taskbar appears at the bottom, top, left, or right side of your screen, with tooltips, flyouts, and most customization settings, such as never combining taskbar icons, working in every position.
+A new smaller taskbar option reduces the size of taskbar icons and taskbar height to maximize screen space on smaller devices, while keeping quick access to Start, Search, and the system tray.
+The Start menu is now more personal, letting you choose a small or large menu size, independently show or hide the Pinned, Recommended, and All sections, and hide your name and profile picture.
+Windows Search now makes results easier to scan by showing where each result comes from—app, setting, file, web, or Store—and can automatically index your most used folders so those files show up in your searches.
+Launching File Explorer Home is now faster and more responsive, and the Recommended section supports touch scrolling for easier browsing.
+Administrator protection helps reduce the risk of elevation-of-privilege attacks by using profile separation and just-in-time administrative privileges. It is off by default and can be enabled through Microsoft Intune (OMA-URI) or Group Policy.
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-08-27
+10:00 PT
+Prepare for the removal of WMIC from Windows 11
+
+The Windows Management Instrumentation command-line (WMIC) utility has been removed from Windows 11, version 24H2 and later. It’s no longer available as a Feature on Demand on these versions. WMI itself remains supported and unaffected. Organizations should identify applications, scripts, deployment tools, and monitoring systems that use WMIC and migrate them to PowerShell or supported WMI programming interfaces. Learn more at Windows Management Instrumentation command-line (WMIC) removal from Windows.
+	2026-08-27
+10:00 PT
+Preparing the Windows ecosystem for next-generation code signing
+
+Microsoft has published guidance to help software publishers, developers, and IT administrators prepare for the next generation of Windows code signing. Changes coming in the next few months will strengthen software supply chain security through modern cryptographic protections. Organizations with code-signing infrastructure should review the guidance and assess any potential readiness activities. Learn more at Preparing the Windows ecosystem for next-generation code signing.
+	2026-08-21
+10:00 PT
+New PowerShell scripts to manage Windows settings backup data
+
+New PowerShell scripts give Microsoft 365 administrators a simpler way to manage Windows settings backup and restore data by wrapping existing Microsoft Graph beta APIs. View backup data and profiles, export backup information, and delete a user’s backup data or profiles for governance and lifecycle-management scenarios. The scripts are available on GitHub and the PowerShell Gallery. 
+	2026-08-20
+10:00 PT
+Task Manager features for visibility into AI workloads
+
+Learn how to use Windows Task Manager for deeper visibility into AI workloads running on a device. Several enhancements became available on some newer devices in May and June 2026. Specifically, per-process activity for the neural processing unit (NPU) and graphics processing unit (GPU) neural engine now appear on the Processes and Performance tabs, alongside other familiar data. A new blog article illustrates three use cases for IT professionals, developers, and power users. Read it in Task Manager features for visibility into AI workloads.
+	2026-08-19
+10:00 PT
+Windows device recovery in 2026: A guide for IT pros
+
+Over the past year, more tools became available to help users and IT restore device productivity quickly. A new scenario-based guide can help you identify and choose the right recovery approach. Scenarios and solutions range from more to less common. Whether you're defending against the next widespread outage or helping a single user get back to work, these capabilities work together to reduce downtime, minimize data loss, and keep your organization productive. Read more in Windows device recovery in 2026: A guide for IT pros.
+	2026-08-18
+10:00 PT
+60-Day Reminder: AD FS DKM container ACL hardening begins in October 2026
+
+Windows updates released in October 2026 will begin Enforcement mode for AD FS Distributed Key Manager (DKM) container ACL hardening, a change designed to address the elevation of privilege vulnerability documented in CVE-2026-56155. Organizations using AD FS should use the remaining Audit mode period to review DKM container permissions and address compatibility issues before enforcement begins.
+
+
+With the October 2026 Windows security update, supported versions of Windows Server will run remediation by default unless administrators explicitly opt out. Windows Server 2012 and Windows Server 2012 R2 still require manual remediation and will not be automatically remediated during Enforcement mode.
+
+
+For more details, see: CVE-2026-56155: AD FS Distributed Key Manager container ACL hardening.
+	2026-08-17
+14:00 PT
+60-Day Reminder: Windows Server 2022 will reach end of mainstream support on October 13, 2026
+
+On October 13, 2026, Windows Server 2022 will reach end of mainstream support. The October 2026 security update will be the last mainstream support update available for this version. After this date, Windows Server 2022 will transition to extended support, which includes security updates at no additional cost, and will continue to receive monthly security updates through October 14, 2031. For more information, see the Fixed Lifecycle Policy.
+
+
+Windows Server 2025 is now the latest Long-Term Servicing Channel (LTSC) release for Windows Server. To help keep your environment protected and supported, plan to upgrade to Windows Server 2025 for full mainstream support. To download a free 180-day evaluation, visit the Microsoft Evaluation Center. Evaluate upgrade options and begin deployment testing early to help ensure a smooth transition.
+
+
+For detailed lifecycle dates, see the Windows Server 2022 lifecycle page. For servicing timelines and related resources, see Windows Server release information, Lifecycle FAQ - Windows Server, and Microsoft Lifecycle Policy search tool.
+	2026-08-14
+14:00 PT
+60-Day Reminder: Windows 11, version 24H2 and Windows 10 LTSB 2016 reaching end of updates on October 13, 2026
+
+On October 13, 2026, Windows 11, version 24H2 Home and Pro editions, and Windows 10 Enterprise LTSB 2016 will reach end of updates. After this date, devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+
+
+We recommend updating devices running Windows 11, version 24H2 Home and Pro editions to Windows 11, version 25H2 to continue receiving monthly security and quality updates. Enterprise and Education editions remain supported until October 12, 2027. For more information, see the How to get the Windows 11 2025 Update video.
+
+
+For devices running Windows 10 Enterprise LTSB 2016, we recommend updating to the latest Long-Term Servicing Channel (LTSC) release, Windows 11 Enterprise LTSC 2024. Extended Security Updates (ESU) are also available for organizations that need additional time to complete their transition.
+
+
+For more information about product lifecycle dates, see Windows 11 release information, Windows 10 release information, and Lifecycle FAQ - Windows.
+	2026-08-14
+10:00 PT
+Windows Office Hours: August 20, 2026
+
+If you are an IT admin with questions about managing and updating Windows, we want to help. Every third Thursday of the month, we host a live chat-based event on the Tech Community called Windows Office Hours. Members of the Windows, Microsoft Intune, Windows Autopilot, Windows Autopatch, and Windows 365 engineering teams will be standing by to answer your questions.
+ 
+Want to attend the August 20 session of Office Hours? Add it to your calendar and select Attend on the event page to let us know you're coming. There is no video or live meeting component. Simply visit the event page, sign in to the Tech Community, and leave your questions in the Comments section. You can also bookmark https://aka.ms/Windows/OfficeHours for upcoming dates (and the ability to add this event to your calendar). We look forward to helping you.
+	2026-08-13
+10:00 PT
+90-Day Reminder: Windows 11, version 23H2 Enterprise and Education editions reach end of updates on November 10, 2026
+
+On November 10, 2026, Windows 11, version 23H2 Enterprise and Education editions will reach end of updates. The November 2026 Windows security update will be the last update available for these editions. After this date, devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+
+
+To continue receiving monthly security and quality updates, we recommend updating eligible devices running Windows 11, version 23H2 Enterprise and Education editions to Windows 11, version 25H2. Windows 11, version 25H2 Enterprise and Education editions will continue to receive updates until October 11, 2028.
+
+
+For more information about product lifecycle dates, see Windows 11 release information and Lifecycle FAQ - Windows.
+	2026-08-12
+14:00 PT
+The August 2026 Windows security update is now available
+
+The August 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Highlights for the Windows 11, version 25H2 update:
+This security update includes improvements that were part of update KB5101684 (released July 28, 2026).
+This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.
+This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.
+Short on time? Watch the Windows 11 release notes video for this month’s tips.
+ 
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+
+
+IMPORTANT: As part of the August 2026 Windows security release, separate standalone security updates are available for a limited number of devices enrolled in hotpatch updates. Affected devices will automatically install the August 2026 hotpatch update first, followed by the applicable standalone update. Installing a standalone update does not remove a device from hotpatch updates, and no re-enrollment or policy change is required. On some devices, a restart is required to complete installation, as noted below. No action is required from IT administrators and enterprise end-users as this update process will happen automatically on hotpatch-enabled devices.
+
+
+For more information, see the applicable KB article:
+Windows 11 Enterprise, versions 25H2 and 24H2: Standalone update KB5123607
+Windows 11 Enterprise, versions 25H2 and 24H2 — Additional update for devices where the Pluton security processor has been configured as the TPM: KB5123273 (restart required)
+Windows Server 2022: KB5123303 (restart required)
+	2026-08-11
+10:00 PT
+Plan for Windows 10 Enterprise LTSC 2021 end of support
+
+Windows 10 Enterprise LTSC 2021 reaches end of support on January 12, 2027. Upgrade to Windows 11 Enterprise LTSC 2024 for the latest security capabilities for these devices. If your organization needs additional time to complete your migration, Extended Security Updates (ESU) will be available for purchase on September 1, 2026. Learn more at Plan for Windows 10 Enterprise LTSC 2021 end of support.
+	2026-08-05
+14:00 PT
+Windows news you can use: July 2026 recap
+
+July brought a wave of updates focused on helping organizations stay secure, resilient, and ready for the next generation of computing. From AI-powered advancements in vulnerability management and identity protection to new capabilities for Windows 365, Azure Virtual Desktop, and Windows Server, Microsoft continued investing in technologies that help IT teams reduce risk while simplifying operations. We also introduced new tools and controls designed to improve device recovery, streamline user experiences, and strengthen security across cloud, endpoint, and AI environments. Explore this month’s highlights to see what’s new and what might impact your plans for the months ahead.
+	2026-08-03
+14:00 PT
+Updates to the Windows Insider Program web experience
+
+A new Windows Insider Program web experience rolled out over 2026, alongside updates to how Windows Insider content and documentation are structured. This updated experience provides a more streamlined way to access Windows Insider announcements, documentation, and guidance. As part of this shift, we're also improving visibility into feature lifecycle changes to help you better track what's coming next and plan accordingly.
+
+
+The rollout began in April 2026 and has now fully reached all Windows Insider channels. Retail versions of Windows now also see the new Windows Insider Program channel options.
+
+
+If your organization relies on Windows Insider preview builds for testing, validation, or early feature evaluation, you might notice changes in where and how to access Windows Insider information. Updates to documentation and program content are now available through a redesigned web experience and updated content structure.
+
+
+To follow the latest updates, visit the new Windows Insider Program web experience, Windows Insider Program documentation, and the Windows Insider Blog.
+	2026-07-31
+10:00 PT
+90-Day Reminder: AD FS DKM container ACL hardening begins in October 2026
+
+Windows updates released in October 2026 will begin Enforcement mode for AD FS Distributed Key Manager (DKM) container ACL hardening designed to address the elevation of privilege vulnerability documented in CVE-2026-56155. Organizations using AD FS should review DKM container permissions and use the current Audit mode period to identify and address compatibility issues before enforcement begins.
+ 
+Starting with the October 2026 security update, remediation will run by default on supported versions of Windows Server unless administrators explicitly opt out. Windows Server 2012 and Windows Server 2012 R2 require manual remediation and are not automatically remediated during Enforcement mode.
+ 
+For more details, see: CVE-2026-56155: AD FS Distributed Key Manager container ACL hardening.
+	2026-07-29
+14:00 PT
+The July 2026 Windows non-security preview update is now available
+
+The July 2026 non-security preview update is now available for Windows 11, versions 26H1, 25H2, and 24H2. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow @WindowsUpdate on X.
+ 
+Looking to explore upcoming features and improvements in Windows 11? Check the Windows roadmap. It includes what’s coming to the Windows Insider Program, what's gradually rolling out, and what's generally available.
+ 
+Highlights for the Windows 11, version 25H2 update:
+This update adds Voice Isolation to Voice Access, helping it better recognize your voice by reducing interference from other speakers and background noise.
+Windows Hello Enhanced Sign-in Security (ESS) now supports peripheral fingerprint sensors.
+Taskbar notification badges for Widgets now use your Windows accent color instead of appearing red, helping reduce unnecessary attention-grabbing alerts.
+File sizes in the Details view now display using appropriate units (KB, MB, GB) instead of KB-only, making them easier to understand at a glance.
+New touchpad gesture controls let you adjust scroll and zoom speed, and enable accelerated scrolling for faster navigation through long documents.
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-07-28
+14:00 PT
+Admin control for single sign-on prompts in Windows
+
+If you're an IT admin, you can now manage how single sign-on (SSO) prompts are presented on Windows devices. New administrative controls help you tailor the sign-in experience for work and school resources. The result is more flexibility over when users are prompted and help create a more consistent experience across managed devices.
+ 
+For more details, see Now available: Admin control for SSO prompts in Windows.
+	2026-07-24
+14:00 PT
+UPDATED: Azure outage affecting Windows Updates and related services
+
+UPDATED 1:45 PM PST: Resolution efforts are complete at this time, and Windows services are expected to be back to normal. Notices related to this issue have been moved to history sections across Azure status pages. At this time, Windows Update is expected to update and download as normal, and functionality has been restored across Microsoft Update Catalog, Microsoft Store, and Windows Server Update Services (WSUS).
+
+
+11:15 AM PST: An Azure outage is presently affecting several Windows services. Impacted services include Windows Update and the Microsoft Update Catalog. Users might also experience issues accessing or downloading content from the Microsoft Store and Windows Server Update Services (WSUS). Users might encounter delays, failures, or timeouts with downloads or access to these services. Additional related services might also be affected.
+
+
+Recovery efforts are underway, and some traffic is being successfully redirected. Service availability is expected to improve as additional recovery actions are completed.
+
+
+Customers experiencing this issue are advised to retry Windows Update and related service operations later. We will provide more information as it becomes available. You can also monitor status updates at Microsoft 365 service health status.
+	2026-07-23
+11:15 PT
+Out-of-band update to address Windows update issue affecting some devices with Intel IPF driver
+
+Microsoft has released an out-of-band (OOB) update today to address an issue affecting a limited number of Dell devices with an Intel Innovation Platform Framework (Intel IPF) driver that could cause changes in performance, power consumption, or system behavior after installing recent Windows updates. 
+ 
+This OOB update is a cumulative update, so you do not need to apply any previous updates before installing it. Devices affected by this issue and that were temporarily prevented from receiving the July 2026 security update (KB5101650) can now install this OOB update, which includes all improvements from previous security and non-security updates, along with this additional fix. This OOB update is only recommended for devices affected by this issue. If your device is not affected, no action is required.  
+ 
+For complete guidance and installation instructions, see the relevant KB articles: 
+Windows 11, versions 25H2 and 24H2: KB5121767 
+Windows 11 Enterprise LTSC 2024: Hotpatch KB5121768 
+IT administrators using Microsoft Intune can expedite deployment of this update. For guidance, see Expedite Windows quality updates in Microsoft Intune. Devices managed by Windows Autopatch with hotpatch updates enabled (default) will receive this update automatically.
+	2026-07-18
+12:00 PT
+90-Day Reminder: Windows Server 2022 will reach end of mainstream support on October 13, 2026
+
+On October 13, 2026, Windows Server 2022 will reach end of mainstream support. The October 2026 security update will be the last mainstream support update available for this version. After this date, Windows Server 2022 will transition to extended support, which includes security updates at no additional cost, and will continue to receive monthly security updates through October 14, 2031. For more information, see the Fixed Lifecycle Policy.
+
+
+Windows Server 2025 is now the latest Long-Term Servicing Channel (LTSC) release for Windows Server. To help keep your environment protected and supported, plan to upgrade to Windows Server 2025 for full mainstream support. To download a free 180-day evaluation, visit the Microsoft Evaluation Center. Evaluate upgrade options and begin deployment testing early to help ensure a smooth transition.
+
+
+For detailed information, see the Windows Server 2022 lifecycle page. For information about servicing timelines and lifecycle, see Windows Server release information, Lifecycle FAQ - Windows Server, and Microsoft Lifecycle Policy search tool.
+	2026-07-16
+10:00 PT
+Updated guidance explains Windows monthly updates and servicing
+
+The recently updated Understanding Windows monthly updates: Servicing explained blog provides a clear overview of how Windows quality updates are released, including the differences between monthly security updates, non-security preview updates, out-of-band (OOB) updates, and new features and improvements. It also explains how these updates work together to help keep devices secure and supported.
+
+
+Whether you're planning update deployments, troubleshooting update behavior, or helping others understand the Windows servicing model, this updated resource can help clarify the purpose and timing of Windows monthly updates.
+
+
+Learn more at Understanding Windows monthly updates: Servicing explained.
+	2026-07-15
+10:00 PT
+90-Day Reminder: Windows 11, version 24H2 and Windows 10 LTSB 2016 reaching end of updates on October 13, 2026
+
+On October 13, 2026, Windows 11, version 24H2 Home and Pro editions, and Windows 10 Enterprise LTSB 2016 will reach end of updates. After this date, devices running these editions will no longer receive monthly security and non-security preview updates containing protections from the latest security threats.
+
+
+We recommend updating devices running Windows 11, version 24H2 Home and Pro editions to Windows 11, version 25H2 to continue receiving monthly security and quality updates. Enterprise and Education editions remain supported until October 12, 2027. For more information, see the How to get the Windows 11 2025 Update video.
+
+
+For devices running Windows 10 Enterprise LTSB 2016, we recommend updating to the latest LTSC release, Windows 11 Enterprise LTSC 2024. Extended Security Updates (ESU) are also available for organizations that need additional time to complete their transition.
+
+
+For more information about product lifecycle dates, see Windows 11 release information, Windows 10 release information, and Lifecycle FAQ - Windows.
+	2026-07-15
+10:00 PT
+The July 2026 Windows security update is now available
+
+The July 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. Information about the contents of this update is available in the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, see the Update Windows article. To learn more about the different types of monthly quality updates, see Understanding Windows monthly updates. To stay informed about the latest updates and releases, follow us on X @WindowsUpdate.
+ 
+Highlights for the Windows 11, version 25H2 update:
+This security update includes improvements that were part of update KB5095093 (released June 23, 2026).
+This update addresses an issue that affects certain third-party apps that use OLE Automation to interact with Microsoft Office.
+This update changes hotkey unregister and cleanup behavior.
+This update introduces a security hardening change that enforces TDI transport registration requirements.
+This update upgrades the curl tool in Windows to version 8.21.0 and includes security improvements that help protect your device.
+Note: The July 2026 security update for Windows 11, version 25H2 and Windows 11, version 24H2 (KB5101650) is not available for a limited number of Dell devices with Intel processors due to an incompatibility reported by Dell that can potentially cause unexpected shutdowns, poor performance, increased heat, and battery drain. We are working together with Dell to prevent the affected models from experiencing the issue and plan to release a resolution for affected devices in the coming days.
+
+
+Short on time? Watch the Windows 11 release notes video for this month's tips.
+
+
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-07-14
+10:00 PT
+Enforcement phase for Kerberos RC4 protections begins with the July 2026 Windows security update
+
+The July 2026 Windows security update enables Enforcement mode across Windows domain controllers for Kerberos RC4 protections related to CVE‑2026‑20833. Domain controllers enforce updated behavior for service account ticket issuance. RC4-based Kerberos tickets are restricted under this enforcement model, and AES-based encryption is expected for supported configurations. This change helps reduce reliance on legacy encryption methods and aligns Kerberos authentication with current security standards.
+
+
+Earlier phases introduced audit and compatibility checks beginning in January 2026, followed by default AES-only behavior and optional rollback controls in April 2026. As of the July 2026 Windows security update, Audit mode and the temporary RC4DefaultDisablementPhase registry setting are removed, and Enforcement mode is the only supported configuration.
+
+
+This final phase blocks Kerberos service ticket requests that rely on RC4 or other legacy encryption types when no explicit configuration is present, helping reduce exposure to credential recovery attacks associated with weaker encryption.
+
+
+If your organization still depends on RC4-based Kerberos scenarios, those workloads might experience authentication failures after installing the July 2026 Windows security update. Review all service accounts, applications, and non-Windows integrations to confirm support for AES-based encryption and address any remaining dependencies.
+
+
+Learn more at: How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE‑2026‑20833.
+	2026-07-14
+10:00 PT
+Windows Office Hours: July 16, 2026
+
+If you are an IT admin with questions about managing and updating Windows, we want to help. Every third Thursday of the month, we host a live chat-based event on the Tech Community called Windows Office Hours. Members of the Windows, Microsoft Intune, Windows Autopilot, Windows Autopatch, and Windows 365 engineering teams will be standing by to answer your questions.
+ 
+Want to attend the July 16 session of Office Hours? Add it to your calendar and select Attend on the event page to let us know you're coming. There is no video or live meeting component. Simply visit the event page, sign in to the Tech Community, and leave your questions in the Comments section. You can also bookmark https://aka.ms/Windows/OfficeHours for upcoming dates (and the ability to add this event to your calendar). We look forward to helping you.
+	2026-07-09
+10:00 PT
+Windows settings backup policy is becoming a new default
+
+Starting with Windows 11, version 26H2, the default behavior of the Windows settings backup policy will shift from disabled to enabled. Default-on applies only to eligible devices and only when admins haven't explicitly set the policy. Explicit enablement and disablement settings are always honored. Restore behavior is unchanged: it remains admin-controlled and isn’t enabled by default.
+
+
+This change makes backup a baseline resilience capability, so you can restore users' apps, settings, and Microsoft Store app list easier after a device reset, replacement, or upgrade. Admins keep full control through Microsoft Intune, Group Policy, or other MDM solutions. Learn more in Windows settings backup becoming a new resilience baseline.
+	2026-07-06
+14:00 PT
+Secure Boot Office Hours in July for virtualized and OEM environments
+
+If you are an IT admin working with Secure Boot, join two upcoming Office Hours sessions in July focused on virtualized environments and OEM scenarios. These sessions are designed to help you prepare for certificate updates and better understand how they apply across different deployment models.
+ 
+Microsoft engineering teams will be available to answer your questions and provide practical guidance based on real-world scenarios. Whether you are planning your approach or actively deploying updates, these sessions can help you move forward with greater clarity.
+ 
+Join the July 8 session on Secure Boot for virtualized environments or the July 15 session on OEM Secure Boot. You can attend one or both sessions depending on your environment. If you’re unable to join live, post your questions ahead of time and review responses afterward.
+	2026-07-06
+10:00 PT
+Customize the Start menu with updated policies
+
+The new Start menu is now rolling out to organizations using Windows 11. Two policies allow IT admins to further customize the Start menu: HideCategoryView and ConfigureStartPins. Learn more about them at Start Policy CSP and Start policy settings.
+	2026-07-02
+10:00 PT
+Windows news you can use: June 2026 recap
+
+In this month’s edition of Windows news you can use, we’re highlighting key updates to help you manage, secure, and modernize your Windows environment. Catch up on early testing for Windows 11, version 26H2 and new Windows 365 capabilities for developers and AI agents. Explore point‑in‑time restore, Windows Ready Print, and improved app management through Microsoft Intune. You’ll also find expanded Secure Boot guidance and events, identity advancements reducing NTLM dependency, and new protections for Windows 365. Additional updates span Windows Server networking, productivity improvements, and lifecycle reminders. 
+
+
+Learn more at Windows news you can use: June 2026. 
+	2026-07-01
+15:30 PT
+ESR management completed the transition to Windows Backup for Organizations
+
+If your IT department relies on Enterprise State Roaming (ESR) to synchronize user settings, its management has moved. Previously, IT admins were able to access it from the Microsoft Entra portal. Starting July 1, 2026, please access the new default experience through Windows Backup for Organizations policies. Learn more here.
+	2026-07-01
+10:00 PT
+Windows Server 2022 hotpatch update support extended through October 2027
+
+If you're an IT admin, hotpatch update support for Windows Server 2022 Datacenter: Azure Edition is now extended through October 2027, one year beyond the original end date of October 2026.
+
+
+Hotpatching continues to help protect your servers by delivering security updates that don't require a restart, helping reduce downtime and speed your response to vulnerabilities. The existing monthly hotpatch update cadence remains unchanged, and no action is required if you're already receiving hotpatch updates.
+	2026-06-26
+10:00 PT
+Best practices for deploying Secure Boot certificate updates
+
+Many individuals and organizations have already successfully updated certificates for client devices, servers, and virtual machines, with others close behind. However close you are, finishing Secure Boot certificate deployment remains important. If you're still on this path, stay the course. Read the new article: Best practices for deploying Secure Boot certificate updates.
+Additionally, save the date for these upcoming events:
+July 1 – Windows Server Secure Boot AMA
+July 8 – Secure Boot Office Hours for virtualized environments
+July 15 – OEM Secure Boot Office Hours
+	2026-06-24
+10:00 PT
+Task Manager adds NPU columns and neural engine visibility across views
+
+If your PC has a neural processing unit (NPU), Task Manager now gives you a fuller picture of AI compute. Neural engines appear on the Performance page for the first time on both NPU and graphics processing unit (GPU). Additionally, a new set of NPU columns mirrors the GPU columns that already existed. This gives you a clear view of which apps are using the neural engines on your NPU and GPU. Use this information to pinpoint what's affecting performance and battery life. More generally, see whether your apps are making use of the efficient AI hardware that your PC provides. This is available on eligible devices that install the June non-security update or later. 
+ 
+The NPU and NPU Engine columns on the Processes and Users pages show how much of the NPU each process and user is consuming and which engine is driving it. All four new columns (NPU, NPU Engine, NPU Dedicated Memory, and NPU Shared Memory) are available on the Details page. To add any of the new columns, right‑click (or select and hold) a column header in Task Manager, then select them from the menu.  
+ 
+The existing GPU Engine column is also updated to surface the neural engine. As a result, neural workloads running on a GPU's hardware neural engine now appear under GPU Engine on the Processes, Users, and Details pages.  
+	2026-06-23
+15:00 PT
+The June 2026 Windows non-security preview update is now available
+
+The June 2026 non-security preview update is now available for Windows 11, versions 26H1, 25H2, and 24H2. Information about the contents of this update is available from the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, check the Update Windows article. To learn more about the different types of monthly quality updates, see Windows monthly updates explained. To be informed about the latest updates and releases, follow us on X @WindowsUpdate.
+ 
+Looking to explore upcoming features and improvements in Windows 11? Check out the Windows roadmap. It includes what's coming to the Windows Insider Program, what's gradually rolling out, and what's generally available.
+ 
+Highlights for the Windows 11, version 25H2 update:
+The redesigned Start menu is available on commercial and managed Windows devices. For an overview of the feature, see Configure the Windows Start menu. IT administrators can use new customization policies: HideCategoryView and ConfigureStartPins. Learn more at Start Policy CSP and Start policy settings.
+A calendar experience in Windows Update Settings (Settings > Windows Update) lets you pause updates by choosing an end date for up to 35 days. You can extend the pause by selecting a different end date and re‑pause updates as needed.
+Point-in-time restore for Windows helps you quickly roll back your PC, including apps, settings, and personal files, to a recent automatic restore point. It helps reduce downtime and simplifies troubleshooting when issues occur.
+Windows now keeps the microphone mute state in sync between the audio mixer and the Hands-Free Profile (HFP) for a more consistent experience with Bluetooth headphones with mute buttons or indicators.
+You can now customize the size of the right-click zone in Settings > Bluetooth & devices > Touchpad. Choose from default, small, medium, or large to control how much of the bottom-right corner responds to a single-finger right-click. This setting is only available on touchpads with a pressable surface.
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-06-23
+10:00 PT
+Point-in-time restore for Windows is generally available
+
+Point-in-time restore is a new, built-in Windows recovery feature that lets users roll their Windows PC back to a previous state in minutes. In Windows Recovery Environment (WinRE), users can select a daily restore point to roll back to. Restore points include the Windows OS, installed applications, system and app configurations, settings, and local user files. The goal is to help organizations minimize downtime and simplify remediation without lengthy troubleshooting or full device rebuilds. To get started, install the June 2026 Windows non-security update and learn more about Point-in-time restore for Windows.
+	2026-06-23
+10:00 PT
+Secure Boot certificate updates for Linux on Azure virtual machines
+
+New guidance is now available to help you manage Secure Boot certificate updates for Linux on Azure virtual machines, including Trusted Launch and Confidential VMs with Secure Boot enabled. These updates help maintain trusted boot integrity and support continued access to platform updates and functionality.
+ 
+Organizations managing Linux-based Azure virtual machines with Secure Boot enabled should review this guidance and begin planning for certificate updates to help avoid potential disruption to secure boot processes.
+
+
+For more details, see: Secure Boot certificate updates for Linux on Azure virtual machines.
+	2026-06-22
+17:00 PT
+Get ready for Windows 11, version 26H2
+
+The next feature update for Windows 11 will be version 26H2. It builds on the same platform and servicing approach introduced in prior releases. Therefore, the transition should be easy. For devices already running recent versions of Windows, the update will be offered as a small enablement package instead of a full OS replacement. You can start previewing Windows 11, version 26H2 today through the Windows Insider Program’s Experimental channel. Learn more and Get ready for Windows 11, version 26H2.
+	2026-06-19
+10:00 PT
+30-Day Reminder: Final deployment phase for Kerberos RC4 hardening begins with the July 2026 Windows security update
+
+Windows updates released in July 2026 will begin the final deployment phase of protections designed to address a Kerberos information disclosure vulnerability (CVE‑2026‑20833). This phase completes the transition from legacy encryption types such as RC4 by removing Audit mode and leaving Enforcement mode as the only supported behavior for Kerberos RC4 usage on Windows domain controllers.
+
+
+Beginning with the July 2026 Windows security update, environments with remaining RC4 dependencies might experience authentication failures unless those dependencies are remediated or explicitly configured before the update is installed.
+
+
+If your organization relies on service accounts, applications, or devices that still depend on RC4‑based Kerberos service tickets, now is the time to address those dependencies before Enforcement mode becomes mandatory. Continue monitoring the System event log for Kerberos‑related audit events and use those signals to identify and remediate RC4 reliance or insecure encryption configurations.
+
+
+Organizations should also validate interoperability for non‑Windows Kerberos implementations and services before broadly deploying the July 2026 update, as Audit mode rollback will no longer be available once this phase begins.
+
+
+For more information about the vulnerability, rollout timeline, recommended preparation steps, and configuration options, see How to manage Kerberos KDC usage of RC4 for service account ticket issuance changes related to CVE‑2026‑20833 and CVE‑2026‑20833.
+	2026-06-12
+10:00 PT
+Windows Office Hours: June 18, 2026
+
+If you are an IT admin with questions about managing and updating Windows, we want to help. Every third Thursday of the month, we host a live chat-based event on the Tech Community called Windows Office Hours. Members of the Windows, Microsoft Intune, Windows Autopilot, Windows Autopatch, and Windows 365 engineering teams will be standing by to answer your questions.
+ 
+Want to attend the June 18 session of Office Hours? Add it to your calendar and select Attend on the event page to let us know you're coming. There is no video or live meeting component. Simply visit the event page, log in to the Tech Community, and leave your questions in the Comments section. You can also bookmark https://aka.ms/Windows/OfficeHours for upcoming dates (and the ability to add this event to your calendar). We look forward to helping you.
+	2026-06-11
+10:00 PT
+The June 2026 Windows security update is available
+
+The June 2026 security update was released for all supported versions of Windows on Tuesday, June 9, at 10 am PT. We recommend that you install these updates promptly. Information about the contents of this update is available from the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, check the Update Windows article. To learn more about the different types of monthly quality updates, see Windows monthly updates explained. To be informed about the latest updates and releases, follow us on X @WindowsUpdate.
+
+
+Highlights for the Windows 11, version 25H2 update:
+This security update includes improvements that were a part of update KB5089573 (released May 26, 2026).
+This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.
+This update includes a resolution for CVE‑2026‑45585 (BitLocker security feature bypass). The mitigation script remains part of the guidance and does not need to be reverted.
+Short on time? Watch our Windows 11 release notes video for this month's tips.
+
+
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-06-10
+13:00 PT
+Furthering Windows as the trusted platform for development
+
+New tools and AI-powered capabilities designed to help developers build faster, smarter, and more secure experiences are coming to Windows. These updates focus on making Windows more trustworthy, more productive, and better prepared for the next wave of AI innovation. Microsoft is also expanding the technologies and partnerships that help developers create modern apps that work across devices and cloud-connected experiences. Read the recap of Windows announcements at Microsoft Build to learn how this translates into better apps, stronger security, and more seamless experiences for you across work and everyday life. 
+	2026-06-02
+15:00 PT
+Windows news you can use: May 2026 recap
+
+In this month’s edition of Windows news you can use, we’re highlighting updates designed to streamline patching, improve Secure Boot visibility, and simplify cloud management across your Windows environment. Catch up on hotpatch updates now enabled by default for organizations using Windows Autopatch through Microsoft Intune or the Windows updates API, along with expanded hotpatch availability for Windows Server 2025 via Azure Arc at no additional cost. You’ll also find improved Secure Boot visibility with an updated Windows Autopatch report and a new Microsoft Defender assessment, as well as changes that make Windows Autopatch more accessible for eligible Microsoft 365 GCC customers.
+	2026-06-01
+16:00 PT
+The May 2026 Windows non-security preview update is now available
+
+The May 2026 non-security preview update is now available for Windows 11, versions 26H1, 25H2, and 24H2. Information about the contents of this update is available from the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, check the Update Windows clause. To learn more about the different types of monthly quality updates, see Windows monthly updates explained. To be informed about the latest updates and releases, follow us on X @WindowsUpdate.
+
+
+Looking to explore upcoming features and improvements in Windows 11? Check out the Windows roadmap. It includes what's coming to the Windows Insider Program, what's gradually rolling out, and what's generally available.
+
+
+Highlights for the Windows 11, version 25H2 update:
+Shared audio enables two people to listen to the same audio from a single Windows 11 PC at the identical time.
+Task Manager now provides enhanced visibility into NPU usage, including new metrics and AI activity insights.
+Multi‑App Camera allows multiple apps to access the camera simultaneously. Basic Camera mode enables simplified camera functionality, useful for troubleshooting when your camera is not working correctly
+You can now choose a custom name for your user folder on the Device Name page during Windows setup. User folder names must follow standard Windows naming requirements.
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-05-26
+10:00 PT
+Updated Secure Boot status report in Windows Autopatch
+
+Windows Autopatch now delivers deeper, device-level insights into Secure Boot certificate status, trust configuration, and readiness. With new signals like confidence level, alerts, and detailed certificate visibility, you can more confidently move forward with broad updates and targeted remediations. Explore the latest updates to the Secure Boot stats report and learn how to gain more clarity into your Secure Boot rollout.
+	2026-05-19
+10:00 PT
+Windows Office Hours: May 21, 2026
+
+If you are an IT admin with questions about managing and updating Windows, we want to help. Every third Thursday of the month, we host a live chat-based event on the Tech Community called Windows Office Hours. Members of the Windows, Microsoft Intune, Windows Autopilot, Windows Autopatch, and Windows 365 engineering teams will be standing by to answer your questions.
+
+
+Want to attend the May 21 session of Office Hours? Add it to your calendar and select Attend on the event page to let us know you’re coming. There is no video or live meeting component. Simply visit the event page, log in to the Tech Community, and leave your questions in the Comments section. You can also bookmark https://aka.ms/Windows/OfficeHours for upcoming dates (and the ability to add this event to your calendar). We look forward to helping you.
+	2026-05-14
+10:00 PT
+Tune in May 18 to ask Microsoft anything about Secure Boot
+
+Secure Boot certificates start expiring in June of 2026. If you need guidance on rolling out updated certificates, post your questions in advance or in real time on the Tech Community for the May 18th AMA. Whether you’re actively deploying or just starting to plan, get clear, practical answers directly from Microsoft experts. Learn why these updates matter, how to identify impacted devices, and best practices for planning and rollout across your organization. Designed for both technical teams and decision makers, this ongoing series of AMAs is designed to help you move forward with confidence. 
+	2026-05-13
+10:00 PT
+The May 2026 Windows security update is now available
+
+The May 2026 security update is now available for all supported versions of Windows. We recommend that you install these updates promptly. Information about the contents of this update is available from the release notes, which are accessible from the Windows 11 update history page. For instructions on how to install this update on your home device, check the Update Windows article. To learn more about the different types of monthly quality updates, see Windows monthly updates explained. To be informed about the latest updates and releases, follow us on X @WindowsUpdate.
+  
+Highlights for the Windows 11, version 25H2 update: 
+This security update includes improvements that were a part of update KB5083631 (released April 30, 2026).
+This update makes quality improvements to the servicing stack, which is the component that installs Windows updates.
+This update expands high confidence device targeting data, increasing coverage of devices eligible to automatically receive new Secure Boot certificates. Devices receive the new certificates only after demonstrating sufficient successful update signals, maintaining a controlled and phased rollout.
+This update improves startup reliability after boot file updates, so devices start normally without entering BitLocker recovery.
+This update improves the reliability of Simple Service Discovery Protocol (SSDP) notifications to help prevent the service from becoming unresponsive.
+Short on time? Watch our Windows 11 release notes video for this month's tips.
+
+
+Note: With recent and upcoming Windows updates over the next few months, a limited number of consumer and business devices might experience one additional restart during installation. This one‑time restart occurs after a Secure Boot certificate update is applied as part of the Secure Boot update process.
+	2026-05-12
+10:00 PT
+Configuring firewall and proxies for smooth Windows updates
+
+If you’re an IT admin, a new guide is here to help you troubleshoot connection issues with the Windows Update service. Some of these issues have to do with the embedded network security design. The key is in the configuration of your network endpoints for firewalls and proxies. Essentially, make sure to trust Fully Qualified Domain Name (FQDN) subdomains of the recommended DNS subdomains. Dive deeper at Configuring firewall and proxies for smooth Windows updates.
+	2026-05-11
+10:00 PT
+Additional resources
+
+Training
+
+Learning path
+
+Use advance techniques in canvas apps to perform custom updates and optimization - Training
+
+Use advance techniques in canvas apps to perform custom updates and optimization
+
+Certification
+
+Microsoft 365 Certified: Endpoint Administrator Associate - Certifications
+
+Plan and execute an endpoint deployment strategy, using essential elements of modern management, co-management approaches, and Microsoft Intune integration.
+
+Last updated on 11/10/2026

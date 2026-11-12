@@ -1,0 +1,1299 @@
+{
+ "ilovepdf__mixed-3-pages.pdf": {
+  "tool": "ilovepdf",
+  "src": "mixed-3-pages.pdf",
+  "bytes": 2279306,
+  "pages": 3,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "digital",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "150K"
+     }
+    ],
+    "digital_text_kept": false
+   },
+   {
+    "page": 2,
+    "kind": "scan",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "1946K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "digital",
+    "word_recall": 0.9925,
+    "cer": 0.0013,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "112K"
+     }
+    ],
+    "digital_text_kept": false
+   }
+  ]
+ },
+ "ilovepdf__scanned-8-pages.pdf": {
+  "tool": "ilovepdf",
+  "src": "scanned-8-pages.pdf",
+  "bytes": 14812922,
+  "pages": 8,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0007,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "1902K"
+     }
+    ]
+   },
+   {
+    "page": 2,
+    "kind": "text",
+    "word_recall": 0.9959,
+    "cer": 0.0008,
+    "num_recall": null,
+    "phrase_hits": 19,
+    "phrases": 20,
+    "search_hits": 18,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "2043K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "text",
+    "word_recall": 0.9949,
+    "cer": 0.0006,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "2050K"
+     }
+    ]
+   },
+   {
+    "page": 4,
+    "kind": "text",
+    "word_recall": 0.9983,
+    "cer": 0.0003,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "1974K"
+     }
+    ]
+   },
+   {
+    "page": 5,
+    "kind": "text",
+    "word_recall": 0.9937,
+    "cer": 0.0012,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "1964K"
+     }
+    ]
+   },
+   {
+    "page": 6,
+    "kind": "table",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "1633K"
+     }
+    ]
+   },
+   {
+    "page": 7,
+    "kind": "small",
+    "word_recall": 0.978,
+    "cer": 0.0056,
+    "num_recall": null,
+    "phrase_hits": 18,
+    "phrases": 20,
+    "search_hits": 18,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "2029K"
+     }
+    ]
+   },
+   {
+    "page": 8,
+    "kind": "photo",
+    "word_recall": 0.8705,
+    "cer": 0.094,
+    "num_recall": null,
+    "phrase_hits": 14,
+    "phrases": 20,
+    "search_hits": 14,
+    "images": [
+     {
+      "w": 1275,
+      "h": 1650,
+      "color": "rgb",
+      "enc": "image",
+      "ppi": 152,
+      "size": "804K"
+     }
+    ]
+   }
+  ]
+ },
+ "naps2-best__scanned-8-pages.pdf": {
+  "tool": "naps2-best",
+  "src": "scanned-8-pages.pdf",
+  "bytes": 5903746,
+  "pages": 8,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "text",
+    "word_recall": 0.9964,
+    "cer": 0.0021,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "766K"
+     }
+    ]
+   },
+   {
+    "page": 2,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "849K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "839K"
+     }
+    ]
+   },
+   {
+    "page": 4,
+    "kind": "text",
+    "word_recall": 0.9983,
+    "cer": 0.0006,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "805K"
+     }
+    ]
+   },
+   {
+    "page": 5,
+    "kind": "text",
+    "word_recall": 0.9937,
+    "cer": 0.0008,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "815K"
+     }
+    ]
+   },
+   {
+    "page": 6,
+    "kind": "table",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "533K"
+     }
+    ]
+   },
+   {
+    "page": 7,
+    "kind": "small",
+    "word_recall": 0.996,
+    "cer": 0.0005,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "853K"
+     }
+    ]
+   },
+   {
+    "page": 8,
+    "kind": "photo",
+    "word_recall": 0.8518,
+    "cer": 0.2233,
+    "num_recall": null,
+    "phrase_hits": 15,
+    "phrases": 20,
+    "search_hits": 14,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "250K"
+     }
+    ]
+   }
+  ]
+ },
+ "naps2-fast__mixed-3-pages.pdf": {
+  "tool": "naps2-fast",
+  "src": "mixed-3-pages.pdf",
+  "bytes": 878300,
+  "pages": 3,
+  "links": 1,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "digital",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   },
+   {
+    "page": 2,
+    "kind": "scan",
+    "word_recall": 1.0,
+    "cer": 0.0004,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "808K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "digital",
+    "word_recall": 0.9925,
+    "cer": 0.0007,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   }
+  ]
+ },
+ "naps2-fast__scanned-8-pages.pdf": {
+  "tool": "naps2-fast",
+  "src": "scanned-8-pages.pdf",
+  "bytes": 5903742,
+  "pages": 8,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "text",
+    "word_recall": 0.9964,
+    "cer": 0.0027,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "766K"
+     }
+    ]
+   },
+   {
+    "page": 2,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "849K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "839K"
+     }
+    ]
+   },
+   {
+    "page": 4,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "805K"
+     }
+    ]
+   },
+   {
+    "page": 5,
+    "kind": "text",
+    "word_recall": 0.9937,
+    "cer": 0.0008,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "815K"
+     }
+    ]
+   },
+   {
+    "page": 6,
+    "kind": "table",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "533K"
+     }
+    ]
+   },
+   {
+    "page": 7,
+    "kind": "small",
+    "word_recall": 0.996,
+    "cer": 0.0007,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "853K"
+     }
+    ]
+   },
+   {
+    "page": 8,
+    "kind": "photo",
+    "word_recall": 0.8671,
+    "cer": 0.2195,
+    "num_recall": null,
+    "phrase_hits": 16,
+    "phrases": 20,
+    "search_hits": 14,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "250K"
+     }
+    ]
+   }
+  ]
+ },
+ "pdf24__mixed-3-pages.pdf": {
+  "tool": "pdf24",
+  "src": "mixed-3-pages.pdf",
+  "bytes": 1054712,
+  "pages": 3,
+  "links": 1,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "digital",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   },
+   {
+    "page": 2,
+    "kind": "scan",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "982K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "digital",
+    "word_recall": 0.9925,
+    "cer": 0.0007,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   }
+  ]
+ },
+ "pdf24__scanned-8-pages.pdf": {
+  "tool": "pdf24",
+  "src": "scanned-8-pages.pdf",
+  "bytes": 7339923,
+  "pages": 8,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "text",
+    "word_recall": 0.9982,
+    "cer": 0.0024,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "945K"
+     }
+    ]
+   },
+   {
+    "page": 2,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 19,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1032K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1021K"
+     }
+    ]
+   },
+   {
+    "page": 4,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 19,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "982K"
+     }
+    ]
+   },
+   {
+    "page": 5,
+    "kind": "text",
+    "word_recall": 0.9895,
+    "cer": 0.0016,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "989K"
+     }
+    ]
+   },
+   {
+    "page": 6,
+    "kind": "table",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "715K"
+     }
+    ]
+   },
+   {
+    "page": 7,
+    "kind": "small",
+    "word_recall": 0.993,
+    "cer": 0.0013,
+    "num_recall": null,
+    "phrase_hits": 19,
+    "phrases": 20,
+    "search_hits": 19,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1026K"
+     }
+    ]
+   },
+   {
+    "page": 8,
+    "kind": "photo",
+    "word_recall": 0.9898,
+    "cer": 0.0031,
+    "num_recall": null,
+    "phrase_hits": 19,
+    "phrases": 20,
+    "search_hits": 18,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "381K"
+     }
+    ]
+   }
+  ]
+ },
+ "sejda__mixed-3-pages.pdf": {
+  "tool": "sejda",
+  "src": "mixed-3-pages.pdf",
+  "bytes": 1072121,
+  "pages": 3,
+  "links": 1,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "digital",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   },
+   {
+    "page": 2,
+    "kind": "scan",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "996K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "digital",
+    "word_recall": 0.9925,
+    "cer": 0.0007,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   }
+  ]
+ },
+ "sejda__scanned-8-pages.pdf": {
+  "tool": "sejda",
+  "src": "scanned-8-pages.pdf",
+  "bytes": 7391352,
+  "pages": 8,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 1.001,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "952K"
+     }
+    ]
+   },
+   {
+    "page": 2,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 1.0004,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1037K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 0.9997,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1026K"
+     }
+    ]
+   },
+   {
+    "page": 4,
+    "kind": "text",
+    "word_recall": 1.0,
+    "cer": 1.0003,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "990K"
+     }
+    ]
+   },
+   {
+    "page": 5,
+    "kind": "text",
+    "word_recall": 0.9979,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1002K"
+     }
+    ]
+   },
+   {
+    "page": 6,
+    "kind": "table",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "735K"
+     }
+    ]
+   },
+   {
+    "page": 7,
+    "kind": "small",
+    "word_recall": 0.996,
+    "cer": 0.0007,
+    "num_recall": null,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1027K"
+     }
+    ]
+   },
+   {
+    "page": 8,
+    "kind": "photo",
+    "word_recall": 0.9319,
+    "cer": 0.0999,
+    "num_recall": null,
+    "phrase_hits": 16,
+    "phrases": 20,
+    "search_hits": 14,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "385K"
+     }
+    ]
+   }
+  ]
+ },
+ "original__scanned-8-pages.pdf": {
+  "tool": "original",
+  "src": "scanned-8-pages.pdf",
+  "bytes": 7330104,
+  "pages": 8,
+  "links": 0,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "text",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "952K"
+     }
+    ]
+   },
+   {
+    "page": 2,
+    "kind": "text",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1037K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "text",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1026K"
+     }
+    ]
+   },
+   {
+    "page": 4,
+    "kind": "text",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "990K"
+     }
+    ]
+   },
+   {
+    "page": 5,
+    "kind": "text",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1002K"
+     }
+    ]
+   },
+   {
+    "page": 6,
+    "kind": "table",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": 0.0,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "735K"
+     }
+    ]
+   },
+   {
+    "page": 7,
+    "kind": "small",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "1027K"
+     }
+    ]
+   },
+   {
+    "page": 8,
+    "kind": "photo",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "rgb",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "385K"
+     }
+    ]
+   }
+  ]
+ },
+ "original__mixed-3-pages.pdf": {
+  "tool": "original",
+  "src": "mixed-3-pages.pdf",
+  "bytes": 1062596,
+  "pages": 3,
+  "links": 1,
+  "by_page": [
+   {
+    "page": 1,
+    "kind": "digital",
+    "word_recall": 1.0,
+    "cer": 0.0,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   },
+   {
+    "page": 2,
+    "kind": "scan",
+    "word_recall": 0.0,
+    "cer": 1.0,
+    "num_recall": null,
+    "phrase_hits": 0,
+    "phrases": 20,
+    "search_hits": 0,
+    "images": [
+     {
+      "w": 2550,
+      "h": 3300,
+      "color": "gray",
+      "enc": "jpeg",
+      "ppi": 300,
+      "size": "996K"
+     }
+    ]
+   },
+   {
+    "page": 3,
+    "kind": "digital",
+    "word_recall": 0.9925,
+    "cer": 0.0007,
+    "num_recall": 1.0,
+    "phrase_hits": 20,
+    "phrases": 20,
+    "search_hits": 20,
+    "images": [],
+    "digital_text_kept": true
+   }
+  ]
+ }
+}

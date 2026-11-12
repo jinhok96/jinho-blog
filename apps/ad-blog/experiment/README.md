@@ -141,6 +141,7 @@ Google Trends 급상승 RSS에는 그날 폭증한 검색어(스포츠·연예 �
 - 쓸 수 없음: Reddit(본문 비어 있음), Quora·Downdetector(403), Google 검색 결과(429), Bing Webmaster Tools API(지원 종료), Ahrefs·Semrush 무료 도구(사람 확인·로그인 필요 → 자동 조회 안 함)
 - pytrends 4.9.2(2023-04 이후 업데이트 없음)는 같은 Trends API를 쓰므로 따로 설치하지 않음. 쓸 만한 기능(YouTube·카테고리·관련 주제·주제 ID)은 `trends_compare.py`로 옮김. 급상승 목록 함수는 404 (2026-10-14 확인)
 - Trends API는 쿠키 없이 부르면 429지만, 홈에서 `NID` 쿠키를 받은 뒤 부르면 열림 (2026-10-14 확인, `trends_compare.py`). 연속 호출하면 429가 나서 재시도(최대 약 2.5분 대기)
+- Bing 자동완성: 2026-11-13 `api.bing.com/osjson.aspx`가 빈 응답(204)만 돌려줘 `demand_check.py`를 Bing 검색창이 쓰는 `qsonhs.aspx`로 바꿈. 이 주소는 긴 검색어에 정확히 이어지는 제안 대신 관련 검색어를 섞어 주므로, 긴 검색어는 Bing 결과에 같은 문구가 있는지 따로 봄
 - 자동완성·Trends 모두 절대 검색량이 아님 (Trends는 요청 안 최고점 = 100인 상대값). 절대량 판단은 발행 후 Search Console로
 - Trends는 따옴표 없는 검색어의 단어 순서를 구분하지 않는 것으로 보임: 같은 요청에서 `pdf to jpg`·`jpg to pdf`의 평균·최고·최근 값이 모두 같았음 (2026-11-06 세션 85). 단어만 같고 순서가 다른 후보(변환 방향 등)끼리는 Trends로 비교하지 않고 자동완성·Search Console로 봄
 

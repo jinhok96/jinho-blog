@@ -1,0 +1,65 @@
+# 가져온 시각: 2026-11-12T19:43:37.331Z
+# 원본: https://www.naps2.com/doc/ocr
+OCR - NAPS2
+https://www.naps2.com/doc/ocr
+
+NAPS2
+Download
+Support
+SDK
+ Github
+ NAPS2 - OCR
+Back to Support
+Table of Contents
+OCR Setup
+Downloading Languages
+Enabling OCR
+Multiple Languages
+Advanced
+Other Options
+Copying Text
+Imported Documents
+ OCR Setup
+
+NAPS2 has the capability to use optical character recognition (OCR) to make text in scanned documents searchable, rather than simply being treated as an image.
+
+Downloading Languages
+
+To start using OCR, click the "OCR" button in the toolbar (or "Tools" → "OCR" on Mac).
+
+The first time you click the "OCR" button, you'll be prompted to download a language. Pick whichever languages you want to use for OCR, then click "Download".
+
+Enabling OCR
+
+Once the download is complete, you'll see the "OCR Setup" window.
+
+Verify that "Make PDFs searchable using OCR" is checked (and that you have the right language selected), and every PDF you save from now on will have OCR'd text.
+
+Multiple Languages
+
+If you have a document that has text in more than one language, you can select "Multiple Languages..." from the "OCR language" dropdown.
+
+This will only appear if you have more than one language downloaded. Click "Get more languages" to download more.
+
+Select the languages that will be in the document.
+
+Once you press "OK", both languages will be shown in the language dropdown.
+
+Advanced
+Other Options
+OCR mode - Usually the "Fast" mode is good enough, but sometimes "Best" can produce better results at the cost of being slower.
+Fix white balance and remove noise - This option can improve OCR quality with low-quality scans, but will make OCR slower. This is equivalent to using "Document Correction" (under the "Image" menu) before OCR.
+Automatically run OCR after scanning - Normally the OCR process runs while you're saving the PDF. If this option is checked, it will run pre-emptively after scanning to make saving the document faster. However, any edits you make to the document pages will invalidate the results and force OCR to be run again when you save.
+Copying Text
+
+NAPS2 doesn't have a way to save OCR results directly to a text file. If you just want the text you can save as PDF, and in your PDF viewer, use Select All and Copy to copy the text and paste it wherever you want.
+
+Imported Documents
+
+If you have OCR enabled, NAPS2 can add OCR to existing PDF files you import. NAPS2 follows a simple rule: if a page already has text, it leaves it alone; if it doesn't, OCR will be used.
+
+Back to Support
+
+NAPS2 is provided completely free of charge, with no ads or restrictions. Consider making a donation.
+
+Copyright © Ben Olden-Cooligan 2026

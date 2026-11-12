@@ -57,7 +57,8 @@ CONSUMER_VENDORS = {"Microsoft", "Google", "Apple", "Mozilla", "Samsung", "Adobe
 
 SUGGEST = {
     "Google": "https://suggestqueries.google.com/complete/search?client=firefox&hl=en&gl=us&q={q}",
-    "Bing": "https://api.bing.com/osjson.aspx?query={q}",
+    # 2026-11-13: osjson.aspx가 빈 응답(204)만 돌려줌 → Bing 검색창이 쓰는 qsonhs.aspx로 바꿈
+    "Bing": "https://api.bing.com/qsonhs.aspx?type=cb&q={q}",
     "YouTube": "https://suggestqueries.google.com/complete/search?client=firefox&ds=yt&hl=en&gl=us&q={q}",
 }
 
@@ -149,6 +150,18 @@ def discover(days: int) -> None:
         print(f"- [{name}]({url})")
 
 
+def suggestions(data: list | dict) -> list[str]:
+    """OpenSearch 형식([검색어, [제안…]])과 Bing qsonhs 형식({"AS": {"Results": [{"Suggests": [{"Txt"}]}]}})"""
+    if isinstance(data, list):
+        return list(data[1])
+    phrases = []
+    for result in (data.get("AS") or {}).get("Results") or []:
+        for item in result.get("Suggests") or []:
+            if item.get("Txt") and item["Txt"] not in phrases:
+                phrases.append(item["Txt"])
+    return phrases
+
+
 def suggest(keywords: list[str]) -> None:
     print(f"## 자동완성 하위 검색어 ({dt.date.today()})\n")
     for keyword in keywords:
@@ -157,7 +170,7 @@ def suggest(keywords: list[str]) -> None:
         errors = []
         for source, template in SUGGEST.items():
             try:
-                for phrase in json.loads(fetch(template.format(q=q)))[1]:
+                for phrase in suggestions(json.loads(fetch(template.format(q=q)))):
                     found.setdefault(phrase, []).append(source)
             except Exception as e:  # noqa: BLE001
                 errors.append(f"{source} 실패: {e}")

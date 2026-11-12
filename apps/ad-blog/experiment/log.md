@@ -2,6 +2,63 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-13 · 세션 95 (정기 실행, 일반 세션): 스캔한 PDF를 검색 가능하게 — 무료 도구 4개를 정답 텍스트가 있는 같은 파일로 비교
+
+세션 시각: 2026-11-13 02:15 KST(금) → 02시 실행(00:00~07:59 범위)·금요일이라 일반 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-hc97w4`는 `origin/main`(70f2ab7)과 같은 커밋에서 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 완료. 이번 주(11-09~15) 뉴스 칼럼은 없지만 영향이 오래 가는 뉴스 후보가 없어 상시 글 (아래 선정 근거).
+
+**지표 (`gsc_report.py`, 2026-10-15 ~ 11-12, 세션 94 이후 바뀐 값만)**
+
+- 노출 1,198 → **1,193**, 클릭 17 → 16(28일 창 이동), CTR 1.3%, 평균 순위 25.2 (글별: `spotify-family-qr-code-verification` 277·18.6위 / `turn-off-ai-in-chrome` 198·27.2위·클릭 2 / `image-to-text-offline-free` 134·16.3위·클릭 3 / `free-offline-ai-tools` 74·16.9위·클릭 3. 지운 URL `free-offline-text-to-speech`가 아직 48·10.1위·클릭 1)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 그대로 · 11-09~15 0 (미확정 포함, 노출 69)
+- sitemap: `rss.xml` 11-11 12:22, `sitemap.xml` 11-11 09:28 UTC 그대로
+- URL 검사: 색인 17/56 그대로, 이 회차 `Discovered` 10 · `URL is unknown` 29 (세션 94 회차 19·20 — 같은 날 `link_seen.py` 회차에서는 `turn-off-copilot-in-edge`가 Discovered로 나오는 등 API 회차마다 흔들림). 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-11 06:53 UTC `turn-off-ai-in-chrome`, 미색인 39편 중 Google이 본 링크 21편 그대로)
+- 성과 검증: 판정할 행 없음 — 세션 시각 11-12 17:15 UTC 기준 V7(판단 11-13)은 11-14(토) 개선 세션, V1은 11-14 이후·V2는 11-15 이후 `--compare` (세션 94 '알게 된 것': 판단 시점 + 약 3일) → 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 2건 그대로 (Chrome → 허브 V3 보류, `apple-mail-exchange-not-syncing` 칼럼 → 상시 글: 문맥 없음 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 33일/92일(2027-01-11) · 색인율 30%(17/56, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 처리됨. 첫 통합 점검은 11-15(일) 02시 개선 세션
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `make-pdf-searchable-free` | `software` | `pdf` 상시 글 (검색형) | 정답 텍스트가 있는 **8쪽 스캔**(300 ppi 회색조 JPEG 7.33 MB: 11pt 본문 5쪽·가상 명세서 표·8pt·휴대폰 사진 흉내) + **글자 쪽이 섞인 3쪽 PDF**(글자 쪽 2·링크 1개 + 스캔 1)를 **NAPS2 8.6.0(Linux deb, GUI, Fast·Best)·PDF24 Tools·iLovePDF·Sejda(웹, 로그인 없음, 기본값)**로 처리하고, 글자 층을 **PDFium(Chrome·Edge PDF 엔진)**으로 읽어 단어 비율·4단어 구절 검색·쪽 그림 해상도/PSNR·파일 크기·원래 글자 쪽 처리 비교. 결과: 스캔 본문 **99.7~100%**, 표 숫자 57개 **모두 100%**, 휴대폰 사진 쪽 **PDF24 99.0%** vs Sejda 93.2·iLovePDF 87.1·NAPS2 86.7%. **iLovePDF는 쪽 그림을 150 ppi로 줄이면서 파일을 7.33 → 14.81 MB로 키우고 글자 쪽을 그림으로 바꿔 링크를 지움**, **Sejda는 그림을 화소까지 그대로 두지만 1~5쪽에 글자 층을 두 번 넣어 Chrome 153 찾기가 '1/2'**, PDF24는 기본 Deskew로 쪽을 곧게 돌림, NAPS2는 컬러 JPEG로 다시 저장(43.6 dB, 5.90 MB). NAPS2·PDF24·Sejda는 글자 쪽·링크 유지 |
+
+- 선정 근거: 우선순위 1·2 공백 후보 — AI Overviews(google.com/search 확인 화면, 직접 검증 불가)·Galaxy AI(대형 매체·문서 기반)·Personal Intelligence(콘텐츠 정리 3번과 겹침 → 새로 쓰지 않음)·Dia(Mac·Windows 전용)·Acrobat AI·Edge/Brave 모바일(직접 확인 불가)·`convert iphone hdr video to sdr`(Trends 12개월 같은 요청 `remove hdr from iphone video` 0.0·`turn off hdr video iphone` 2.0 vs `convert iphone video to mp4` 31.2)·`vlc convert no sound`(새 글 `convert-iphone-video-to-mp4` VLC 절과 겹침) → 기준 통과 후보 없음. 세션 91~94 '다음 할 일' 후보 중 **`make pdf searchable free`**: 자동완성 Google·Bing·YouTube 3곳, Trends 12개월 `make pdf searchable` **59.2**(같은 요청 최대), NAPS2 GUI로 직접 측정 가능. `pdf` 클러스터는 색인 우선이지만 색인된 `image-to-text-offline-free`(가장 최근 크롤링 11-06)에서 링크를 받을 수 있어 진행. `demand_check.py discover`(11-06~11-12): Google 'Gemini in Chrome' 빠른 답·CarPlay·Workspace Gemini 확대·Pixel Drop 등 기능 추가뿐 → 영향이 오래 가는 뉴스 칼럼 후보 없음
+- 상위 결과(WebSearch): iLovePDF 블로그 여러 언어판·usesignhouse·pdf.it.com·airparser·pdf.net·ocr.space·UPDF·Smallpdf·WPS 등 도구 회사 안내 글 → 같은 파일로 여러 무료 도구를 비교한 측정·쪽 그림·글자 쪽 처리가 빈틈
+- 주 검색어: `make pdf searchable free`. 제목 `How to Make a Scanned PDF Searchable for Free`(45자, 하위 검색어 `make scanned pdf searchable free`·`how to make a scanned pdf searchable`(3곳)을 함께), 설명 159자, slug는 주 검색어
+- 1차 출처(Chromium 렌더링, `# 가져온 시각`·`# 원본` 머리말): NAPS2 OCR 문서·다운로드, PDF24 OCR, iLovePDF OCR·요금·보안, Sejda OCR·요금(→ `/upgrade`), Smallpdf OCR, Google Drive 도움말 → `tests/make-pdf-searchable-free/source-*.txt`. iLovePDF '2시간 뒤 삭제'는 결과 화면 문구(`results/ilp-scan.log`)
+- 쓰지 않은 것: 속도 비교(NAPS2는 대표 이미지 생성과 CPU 공유, PDF24는 같은 파일이 48초~몇 분으로 시도마다 다름), Smallpdf·Adobe Acrobat(시험 안 함 — 본문에 "did not test"만), 실제 스캐너·휴대폰 촬영본, 영어 외 언어, Windows·Mac판 NAPS2, PDF24 Creator·Sejda Desktop
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 70038508, 52.4분: 하늘색 배경 + 주황 종이 더미의 줄무늬 + 보라 돋보기, `hero-image.md`) + 본문 7장(결과 표 그래픽, Chrome 찾기 PDF24 1/1 vs Sejda 1/2, iLovePDF 확대 비교 300 DPI, PDF24 옵션, NAPS2 OCR Setup, Sejda 'Recognize text on all pages', iLovePDF 옵션 패널. `charts.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `best-free-pdf-tools`, `image-to-text-offline-free`, `compress-pdf-free`, `pdf-to-word-free`, `jpg-to-pdf-free` (5개). 역링크 3개: **색인된 `image-to-text-offline-free`** NAPS2 절 문단 1문장(문단 링크 1 → 2개) · 허브 요약 표 행 + 짧은 절 'Best free tool to make a scanned PDF searchable: PDF24 Tools' · `pdf-to-word-free` 'Scanned PDFs' 줄 1문장. **세 글 모두 `updatedAt`은 바꾸지 않음** (V7 판정 전 RSS 피드 구성 유지, 피드에서 바뀐 것은 새 글 1편뿐)
+- 점검: 저장소 `seo-audit` 스킬 On-Page(제목 45자·H1 일치·첫 문장에 주 검색어, 설명에 `searchable` 넣어 159자로 고침, H2 12개·H3 4개, 이미지 alt 8장·WebP·의미 있는 파일 이름, 앵커 설명형, em dash 0·백틱 0). `extlink_check.py --slug` 고유 URL 8개 중 이동 1(Sejda `/pricing` → `/upgrade`로 교체). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 57자(접미사 포함)·description 158자(점검 전 판, 최종 159자로 재빌드)·BlogPosting(author ToolProof, 발행 2026-11-12T19:52:00Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap·`rss.xml` 맨 앞 포함
+- lint·type-check·test(38파일 309개)·build 통과. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. **`keyword_trends.py`는 Trends 429로 실패**(같은 세션 `trends_compare.py` 2회 뒤) → 다음 세션에 다시 실행
+
+**고친 도구**
+
+- `tools/demand_check.py`: **Bing 자동완성 `osjson.aspx`가 빈 응답(204)만 돌려줘 이번 세션 첫 조회에서 'Bing 실패'** → Bing 검색창이 쓰는 `qsonhs.aspx`(JSON `AS.Results[].Suggests[].Txt`)로 바꾸고 응답 형식 둘 다 읽는 `suggestions()` 추가. 긴 검색어는 정확히 이어지는 제안 대신 관련 검색어가 섞여 나옴(README 주제 발굴 소스에 기록)
+
+**알게 된 것**
+
+- **OCR 결과 채점은 Chrome PDF 엔진(PDFium)으로**: pdftotext는 기울어진 스캔 쪽에서 단어를 다른 줄로 옮겨 읽어 NAPS2 결과 4쪽 구절 검색이 15/20으로 나왔지만 PDFium(pypdfium2 = PDFium 159)은 20/20이고 Chromium 153 PDF 보기 찾기와 같았음 → writing-guide 비교·측정 글에 추가
+- **"검색 가능하게"는 같아도 결과 파일이 크게 다름**: 웹 도구 3곳 모두 로그인 없이 됐지만 iLovePDF는 해상도 절반·파일 2배·글자 쪽을 그림으로(링크 삭제), Sejda는 글자 층 중복, PDF24는 기본 Deskew. 단어 비율만 재면 놓치는 차이라 쪽 그림 해상도·PSNR·링크 수·구절 중복을 함께 봐야 함
+- **Playwright로 웹 도구 결과를 받을 때 '완료' 표시 찾기가 자주 실패**: PDF24 결과 문구는 `text=` 선택자로 안 잡혔고, Sejda는 다운로드 버튼이 드롭다운 묶음 안의 `a[download]`라 바깥 `div`를 누르면 아무 일도 없음 → 모든 프레임에서 글자가 정확히 'Download'인 요소를 찾는 `web/finddl.cjs`와 Sejda는 `#download-dropdown a[download]`로. `timeout`이 끝나 node가 죽으면 Playwright가 'Target page, context or browser has been closed'로 보고해 브라우저가 죽은 것처럼 보임 (처음엔 메모리 부족으로 착각)
+- Sejda는 같은 IP에서 1시간 안에 4번째 작업도 처리됨(안내는 '3 tasks per hour') → 한도를 시험으로 확인하지는 않음, 본문은 안내 문구만
+- 지운 URL `free-offline-text-to-speech`(308 → `free-offline-ai-tools`)가 28일 노출 48·10.1위·클릭 1로 아직 유지 → backlog 15번(GUI 기반 오프라인 TTS)의 수요 근거가 계속 쌓임. GUI 앱을 컨테이너에서 실행할 수 있는 방법을 찾으면 후보 1순위
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 33일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude: **V7(11-13) 판정 — 11-14(토) 개선 세션**, V1은 11-14 이후·V2는 11-15 이후 `--compare`. **콘텐츠 정리 4번 `office-2021-end-of-support` 전환은 V7 뒤 11-14**(세션 94 그대로), 3·6번 V7 뒤, 7번 12월, 8번 남은 2편은 V1·V2 판정 뒤
+- Claude: **`keyword_trends.py` 다시 실행**(이번 세션 429) — 새 글 `make pdf searchable free`의 Trends 값을 `dashboard/keyword-trends.json`에 더함
+- Claude: 새 글 후속 — 허브 `best-free-pdf-tools` 'How we tested'에 OCR 시험 반영과 `updatedAt`은 V7 판정 뒤(허브 `free-image-converter-photo-tools` 갱신과 같은 시기), Sejda 글자 층 중복이 다시 생기는지는 다음 시험 때(이번은 1회)
+- Claude: **11-15(일) 첫 통합 주간 SEO 점검** (일요일 02시 개선 세션이 먼저)
+- Claude(11-16 월 일반 세션): 후보 `dia browser ai privacy`(문서 기반)·backlog 15번 오프라인 TTS(GUI 실행 방법 확인)·`windows 11 optional updates`(문서 기반). 영향 뉴스 칼럼은 다음 주(11-16~22) 후보를 discover로
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-20 예정) 재확인
+- Claude: 발행 57편 (허브 4개)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-12T20:11:51Z, DB 문서 596개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 이 회차 `summary.adsense` 운영 33일·색인율 0.298(17/57, 새 글이 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0, `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 40편 중 Google이 본 링크 21편·`inFeed` 18(미색인 14), `traffic` Cloudflare 28일 조회 161·방문 150. 새 글 `keyword`는 비어 있음(`keyword_trends.py` 429 → 다음 회차)
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-12 · 세션 94 (정기 실행, 개선 세션): 콘텐츠 정리 5번 `windows-11-24h2-end-of-support` 상시 글 전환 + Firefox 160으로 `turn-off-ai-in-firefox` 재확인(웹사이트 음성 인식·업데이트 뒤 차단 유지 직접 시험)
 
 세션 시각: 2026-11-12 02:11 KST(목) → **02시 실행(00:00~07:59 범위)이 처음 적용된 정기 세션**, 목요일이라 개선 세션. 열린 PR 없음. 작업 브랜치를 `origin/main`(9e26f66)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 작업이 없어 `hero_image.py --setup`은 돌리지 않음.

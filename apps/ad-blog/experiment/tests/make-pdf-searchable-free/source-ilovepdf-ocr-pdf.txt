@@ -1,0 +1,17 @@
+# 가져온 시각: 2026-11-12T19:44:01.558Z
+# 원본: https://www.ilovepdf.com/ocr-pdf
+Make PDF searcheable. Online OCR tool.
+https://www.ilovepdf.com/ocr-pdf
+
+MERGE PDF
+SPLIT PDF
+COMPRESS PDF
+CONVERT PDF
+ALL PDF TOOLS
+Login
+Sign up
+OCR PDF
+Convert non-selectable PDF files into selectable and searchable PDF with high accuracy.
+Select PDF file
+or drop PDF here
+© iLovePDF 2026 ® - Your PDF Editor

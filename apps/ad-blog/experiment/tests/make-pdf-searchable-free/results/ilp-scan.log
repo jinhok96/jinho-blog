@@ -1,0 +1,6 @@
+# 2026-11-12 18:01~18:02 UTC `node web/ilovepdf.cjs scanned-8-pages.pdf ...` 콘솔 출력 (그 실행은 파일로 저장하지 않아 세션 화면에서 옮겨 적음)
+options panel: OCR PDF options OCR mode Standard Best for most scanned documents. Supports all languages. Advanced Premium Better suited to difficult scans and photographed or warped documents. Supports more than 50 languages. Enhance OCR Auto rotate Detects and corrects page orientation. Deskew Straightens tilted scans. Dewarp Flattens curved or photographed pages. Output color Original Black & white Greyscale The accuracy of detection is increased by correctly selecting the document's languages. 1/3 Document languages English
+wait 0 https://www.ilovepdf.com/ocr-pdf Recognising text...
+done after 12.2 s https://www.ilovepdf.com/download/…(작업 주소 생략)
+result text: MERGE PDF SPLIT PDF COMPRESS PDF CONVERT PDF ALL PDF TOOLS Login Sign up Your PDF is now selectable and searchable Download PDF Continue to... Compress PDF Split PDF Protect PDF Organize PDF pages Merge PDF Sign PDF See more Secure. Private. In your control For over a decade, iLovePDF has securely processed documents with no storage, no tracking, and complete privacy. Your files are always handled safely and automatically deleted after 2 hours. Learn more The PDF software trusted by millions of
+saved /tmp/dl/out/ilovepdf__scanned-8-pages.pdf scanned-8-pages.pdf

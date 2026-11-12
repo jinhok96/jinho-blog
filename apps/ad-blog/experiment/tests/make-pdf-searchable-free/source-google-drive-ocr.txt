@@ -1,0 +1,37 @@
+# 가져온 시각: 2026-11-12T19:44:29.374Z
+# 원본: https://support.google.com/drive/answer/176692?hl=en
+Convert PDF and photo files to text - Computer - Google Drive Help
+https://support.google.com/drive/answer/176692?hl=en
+
+Convert PDF and photo files to text
+
+
+               
+
+Want advanced Google Workspace features for your business?
+
+Try Google Workspace today!
+
+You can convert image files to text with Google Drive.
+
+Computer Android phone & tabletiPhone & iPad
+Step 1: Prepare the file
+
+For the best results, use these tips:
+
+Format: You can convert PDFs (multipage documents) or photo files (.jpeg, .png and .gif)
+File size: The file should be 2 MB or smaller.
+Resolution: Text should be at least 10 pixels high.
+Orientation: Documents must be right-side up. If your image faces the wrong way, rotate it before you upload it to Google Drive.
+Languages: Google Drive detects the language of the document. Learn more about supported languages
+Font and character set: Use common fonts, such as Arial or Times New Roman.
+Image quality: Use sharp images with even lighting and clear contrasts.
+Step 2: Convert the file
+On your computer, go to Google Drive.
+Right click a file.
+Click Open with  Google Docs.
+The image file is converted, but the format might not transfer:
+Bold, italics, font size, font type, and line breaks are likely to be retained.
+Lists, tables, columns, footnotes, and endnotes are not likely to be detected.
+Supported languages
+Give feedback about this article

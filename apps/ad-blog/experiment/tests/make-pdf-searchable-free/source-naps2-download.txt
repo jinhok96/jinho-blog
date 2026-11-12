@@ -1,0 +1,53 @@
+# 가져온 시각: 2026-11-12T19:43:42.081Z
+# 원본: https://www.naps2.com/download
+Download - NAPS2
+https://www.naps2.com/download
+
+NAPS2
+Download
+Support
+SDK
+ Github
+ NAPS2 - Download
+
+Recommended download:  naps2-8.6.0-linux-x64.deb
+
+Or, choose one of the files below:
+
+Latest release (8.6.0)
+Windows
+
+Installer (x64)	exe	46.7 MB
+Installer (arm64)	exe	44.0 MB
+MSI installer (x64)	msi	53.0 MB
+Portable archive (x64)	zip	66.2 MB
+
+Mac
+
+Installer (Universal)	pkg	46.9 MB
+Installer (Intel)	pkg	27.5 MB
+Installer (Apple Silicon)	pkg	26.2 MB
+
+Linux
+
+Installer (x64)	deb	17.0 MB
+Installer (arm64)	deb	16.2 MB
+Installer (x64)	rpm	23.3 MB
+Installer (arm64)	rpm	23.1 MB
+Flatpak (x64)	flatpak	20.1 MB
+Flatpak (arm64)	flatpak	19.0 MB
+Last updated October 25, 2026
+Changelog  ·  Hashes  ·  Gpg Key  ·  Source
+System Requirements  ·  Older Releases
+Total downloads:	17,076,304
+Weekly downloads:	113,668
+Using an older version of Windows/Mac?
+Show downloads for:
+Windows 7/8
+Windows XP
+Mac 10.15/11
+Ubuntu 18.04
+
+NAPS2 is provided completely free of charge, with no ads or restrictions. Consider making a donation.
+
+Copyright © Ben Olden-Cooligan 2026

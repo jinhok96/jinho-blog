@@ -1,0 +1,7 @@
+options {"langCodeAutoLabelFor":"English","outputTypeAutoLabelFor":"PDF","cb:Deskew pages":true,"cb:Rotate pages":false,"cb:Remove background":false,"cb:Clean pages":false,"cb:Force OCR":false,"cb:Combine files":false}
+download element <button type="button" id="downloadTool" class="downloadTool tool button vertical available" title="Download result" onclick="pdf24.downloadTool.enter(this)" aria-label="Download result" data-tp-dl="1"
+done after 9.3 s
+message 
+saved /tmp/dl/out/pdf24__mixed-3-pages.pdf mixed-3-pages.pdf
+event page close 20.691
+event browser disconnected 20.738

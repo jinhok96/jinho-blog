@@ -1,0 +1,11 @@
+opened 153.0.8010.12
+node:internal/process/promises:394
+    triggerUncaughtException(err, true /* fromPromise */);
+    ^
+
+page.waitForTimeout: Target page, context or browser has been closed
+    at /tmp/dl/web/viewer.cjs:11:11 {
+  log: []
+}
+
+Node.js v22.23.4

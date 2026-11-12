@@ -32,7 +32,7 @@
 - 내부 링크: 새 글 → 허브 `best-free-pdf-tools`, `image-to-text-offline-free`, `compress-pdf-free`, `pdf-to-word-free`, `jpg-to-pdf-free` (5개). 역링크 3개: **색인된 `image-to-text-offline-free`** NAPS2 절 문단 1문장(문단 링크 1 → 2개) · 허브 요약 표 행 + 짧은 절 'Best free tool to make a scanned PDF searchable: PDF24 Tools' · `pdf-to-word-free` 'Scanned PDFs' 줄 1문장. **세 글 모두 `updatedAt`은 바꾸지 않음** (V7 판정 전 RSS 피드 구성 유지, 피드에서 바뀐 것은 새 글 1편뿐)
 - 점검: 저장소 `seo-audit` 스킬 On-Page(제목 45자·H1 일치·첫 문장에 주 검색어, 설명에 `searchable` 넣어 159자로 고침, H2 12개·H3 4개, 이미지 alt 8장·WebP·의미 있는 파일 이름, 앵커 설명형, em dash 0·백틱 0). `extlink_check.py --slug` 고유 URL 8개 중 이동 1(Sejda `/pricing` → `/upgrade`로 교체). searchfit-seo 스킬은 이번 세션에 없음
 - 빌드 HTML 확인: title 57자(접미사 포함)·description 158자(점검 전 판, 최종 159자로 재빌드)·BlogPosting(author ToolProof, 발행 2026-11-12T19:52:00Z)/BreadcrumbList JSON-LD 정상, h1 1개·h2 12개, `<pre>`·`<code>` 0개, 본문 첫 이미지가 대표 이미지, og 이미지 1200×630이 대표 이미지에서 만들어짐(`public/_static/mdx/posts/og/` 직접 열어 확인), sitemap·`rss.xml` 맨 앞 포함
-- lint·type-check·test(38파일 309개)·build 통과. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. **`keyword_trends.py`는 Trends 429로 실패**(같은 세션 `trends_compare.py` 2회 뒤) → 다음 세션에 다시 실행
+- lint·type-check·test(38파일 309개)·build 통과. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `keyword_trends.py`는 Trends 429로 세 번 실패(같은 세션 `trends_compare.py` 2회 뒤) → PR #352 머지 직후 재시도 성공: `make pdf searchable free` 0.0(롱테일, 기준 `remove background` 평균 33.91) → 후속 PR로 커밋
 
 **고친 도구**
 
@@ -50,13 +50,12 @@
 
 - **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 33일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
 - Claude: **V7(11-13) 판정 — 11-14(토) 개선 세션**, V1은 11-14 이후·V2는 11-15 이후 `--compare`. **콘텐츠 정리 4번 `office-2021-end-of-support` 전환은 V7 뒤 11-14**(세션 94 그대로), 3·6번 V7 뒤, 7번 12월, 8번 남은 2편은 V1·V2 판정 뒤
-- Claude: **`keyword_trends.py` 다시 실행**(이번 세션 429) — 새 글 `make pdf searchable free`의 Trends 값을 `dashboard/keyword-trends.json`에 더함
 - Claude: 새 글 후속 — 허브 `best-free-pdf-tools` 'How we tested'에 OCR 시험 반영과 `updatedAt`은 V7 판정 뒤(허브 `free-image-converter-photo-tools` 갱신과 같은 시기), Sejda 글자 층 중복이 다시 생기는지는 다음 시험 때(이번은 1회)
 - Claude: **11-15(일) 첫 통합 주간 SEO 점검** (일요일 02시 개선 세션이 먼저)
 - Claude(11-16 월 일반 세션): 후보 `dia browser ai privacy`(문서 기반)·backlog 15번 오프라인 TTS(GUI 실행 방법 확인)·`windows 11 optional updates`(문서 기반). 영향 뉴스 칼럼은 다음 주(11-16~22) 후보를 discover로
 - Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-20 예정) 재확인
 - Claude: 발행 57편 (허브 4개)
-- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-12T20:11:51Z, DB 문서 596개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 이 회차 `summary.adsense` 운영 33일·색인율 0.298(17/57, 새 글이 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0, `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 40편 중 Google이 본 링크 21편·`inFeed` 18(미색인 14), `traffic` Cloudflare 28일 조회 161·방문 150. 새 글 `keyword`는 비어 있음(`keyword_trends.py` 429 → 다음 회차)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-12T20:11:51Z, DB 문서 596개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 이 회차 `summary.adsense` 운영 33일·색인율 0.298(17/57, 새 글이 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0, `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 40편 중 Google이 본 링크 21편·`inFeed` 18(미색인 14), `traffic` Cloudflare 28일 조회 161·방문 150. 새 글 `keyword`는 이 회차에 비어 있음(`keyword_trends.py`는 회차 뒤 성공 → 다음 대시보드 회차부터 반영)
 - 배포: 이 세션 PR (CI 통과 후 머지)
 
 ## 2026-11-12 · 세션 94 (정기 실행, 개선 세션): 콘텐츠 정리 5번 `windows-11-24h2-end-of-support` 상시 글 전환 + Firefox 160으로 `turn-off-ai-in-firefox` 재확인(웹사이트 음성 인식·업데이트 뒤 차단 유지 직접 시험)

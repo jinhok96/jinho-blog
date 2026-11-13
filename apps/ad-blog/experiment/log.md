@@ -2,6 +2,68 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-14 · 세션 96 (정기 실행, 개선 세션): V7 판정(피드는 발견만 앞당김) + 콘텐츠 정리 4번 `office-2021-end-of-support` 상시 글 전환(11월에도 Office 2021 보안 수정이 나온 것을 1차 출처로 확인) + 허브 2편 갱신(PDF OCR, 사진·영상 영상 2건)
+
+세션 시각: 2026-11-14 02:15 KST(토) → 02시 실행(00:00~07:59 범위)·토요일이라 개선 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-5ocysi`를 `origin/main`(5103ebd)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지가 필요한 전환이라 `hero_image.py --setup`을 세션 시작 직후 백그라운드로 실행(완료).
+
+**지표 (`gsc_report.py`, 2026-10-16 ~ 11-13, 세션 95 이후 바뀐 값만)**
+
+- 노출 1,193 → **1,208**, 클릭 16 그대로, CTR 1.3%, 평균 순위 25.2 → 25.5 (글별: `spotify-family-qr-code-verification` 278·18.7위 / `turn-off-ai-in-chrome` 199·28.4위·클릭 2 / `image-to-text-offline-free` 133·16.8위·클릭 3 / `free-offline-ai-tools` 80·16.2위·클릭 3 / `transcribe-audio-offline-free` 69·54.9위 / `windows-11-24h2-end-of-support` 66·61.7위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 그대로 · 11-09~15 0 (미확정 포함, 노출 102)
+- sitemap: `rss.xml` 11-11 12:22, `sitemap.xml` 11-11 09:28 UTC 그대로
+- URL 검사: 색인 17/57 그대로, 이 회차 `Discovered` 16 · `URL is unknown` 24 (회차마다 흔들림 그대로). 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-11 06:53 UTC `turn-off-ai-in-chrome`, 미색인 40편 중 Google이 본 링크 21편 그대로)
+- 성과 검증: **V7 판정 = 차이 없음(발견만 앞당김)** (아래). V1·V2는 `--compare`가 "판단 시점 전: 2026-11-14 / 11-15 이후 다시 실행"(도구 기준 날짜가 UTC 11-13) → **11-15(일) 주간 점검 세션에서 둘 다 판정**
+- `link_audit.py --only-problems`: **2 → 1건** (Chrome → 허브 V3 보류만). `apple-mail-exchange-not-syncing` 칼럼 → 상시 글 문제는 이 칼럼이 이미 링크하던 `office-2021-end-of-support`가 상시 글이 되며 풀림. 클러스터 표에서 **`windows-microsoft`가 상시 글 3편 → '허브 필요'** (문제 목록에는 안 나옴)
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 34일/92일(2027-01-11) · 색인율 30%(17/57, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검: 최근 11-02 보고의 우선순위 처리됨. 첫 통합 점검은 11-15(일) 02시 개선 세션
+
+**V7 판정 (RSS 피드 최근 변경순, 판단 시점 11-13 = 피드 첫 다운로드 11-06 04:28 + 7일)**
+
+| 구분 | 피드 안 미색인 글 | 피드 밖 `URL is unknown` 15편 |
+| --- | --- | --- |
+| 발견 (`discoveredAt`·`discoveredVia`, `first-seen.json`) | 4편이 새로 `Discovered`: `turn-off-ai-in-brave`·`turn-off-gemini-on-android-phone`(11-06, rss.xml만 — sitemap.xml 다운로드 11-06 22:41 전), `convert-iphone-video-to-mp4`·`trim-video-without-losing-quality`(11-11, rss.xml·sitemap.xml) | 0편 |
+| 크롤링 (`crawledAt`) | 0편 | 0편 |
+| 색인 | 0편 | 0편 |
+
+- 11-06 뒤 사이트 전체 새 크롤링은 이미 색인된 2건(`image-to-text-offline-free` 11-06 08:36, `turn-off-ai-in-chrome` 11-11 06:53)뿐 → **판정 지표(색인 상태)는 차이 없음, 발견 단계만 피드가 앞당김**
+- 반영: 피드 구성은 Google 지침과 같고 발견 경로임을 확인했으므로 유지. 노하우 9 '가설' 유지 + '우리 데이터' 추가(traffic-playbook). 병목은 발견이 아니라 크롤링 우선순위로 봄(해석) → 콘텐츠 정리·품질 우선 유지. **판정이 끝나 피드 구성을 묶어 둘 필요가 없어짐** → 피드 밖 글도 실제 갱신이 있으면 `updatedAt`(이번 세션 3편: 전환 1 + 허브 2)
+
+**고른 작업**: 0번 콘텐츠 정리 — 3번(Personal Intelligence 통합)이 목록 위지만 세션 94·95가 정한 대로 V7 직후 4번 `office-2021-end-of-support` 전환(1건, 대표 이미지 필요)을 먼저 하고 3번은 다음 개선 세션으로(통합은 1차 출처 재조사·308·링크 교체가 커서 같은 세션에 전환과 함께 하지 않음). 1(색인)은 새 크롤링이 없어 추가 링크 없음, 2는 V3 보류 1건, **3(허브)**: V7 판정 뒤로 미뤄 둔 허브 2편 갱신(세션 91~95 새 측정 반영). 4는 V 판정 중인 글뿐
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — references/content-refresh.md의 Refresh vs. Rewrite(Office 글은 검색 의도가 '언제 끝나나' → '아직 업데이트되나·계속 써도 되나·무엇으로 바꾸나'로 바뀌어 같은 URL에서 Rewrite, 허브 2편은 새 측정을 더하는 Refresh), AI-Tell Check(대조 구문 1·콜론 드러내기 1 고침, em dash 0). searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 콘텐츠 정리 4번 (전환) | `office-2021-end-of-support` | 칼럼 → '지금 할 일' 상시 글: 카테고리 `news` → `software`, 제목 `Office 2021 Support Has Ended With No Paid Extension` → **`Office 2021 End of Support on Home PCs and Macs`**(47자, 24H2 글 제목 틀과 다른 끝맺음), 설명 158자. **새 사실(1차 출처)**: ① Microsoft [Office 보안 릴리스 노트](https://learn.microsoft.com/en-us/officeupdates/microsoft365-apps-security-updates) 11-10 항목에 "Office 2021 Retail: Version 2610 (Build 20527.20196)"·"Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.21048)" ② **MSRC 11월 CVRF**(api.msrc.microsoft.com, JSON)에 Office LTSC 2021 Windows 172개(FixedBuild 16.0.14334.21048)·Office LTSC for Mac 2021 141개(16.115) 수정 ③ 같은 노트의 2021-09 ~ 2026-11 달별 표(`security_notes_presence.py`): Office 2016·2019 소매판은 2025-10-14 뒤 빠짐, Office 2019 볼륨 라이선스판은 13개월 계속('sole discretion' 안내) ④ **Mac 16.114.3(10-27)·16.114.4(11-04) "A previous update inadvertently disabled Office 2021 for existing users"** 수정, macOS 14 이상이어야 업데이트 ⑤ Office Home & Business 2024 현재가 $249.99(10-20엔 못 찾음), Personal 첫해 $69.99 할인. 구성: 결론 → 지원 여부 표 → **아직 업데이트되나(새 그림 `office-security-notes-by-month.webp`)** → 버전 확인 → 마지막 업데이트 설치(Windows·Mac, Mac 비활성화 문제) → 대체 표·3년 비용 → 상황별 추천(Our take 대체) → 기억할 날짜(12-08 다음 보안 릴리스) → How we checked(칼럼 전환 이력). 대표 이미지(AI) 추가·`thumbnail` 삭제, 타임라인·비용 그림 11-13 기준으로 다시 그림(본문 2 → 3장). 1차 출처 18쪽 Chromium 재확인(`render-main.cjs`·`render-body.cjs`·`render-tab.cjs`). `updatedAt` 2026-11-13T19:30Z | - (콘텐츠 정리, 지표를 노린 변경 아님) |
+| 2 | 3 허브 갱신 | `best-free-pdf-tools` | 세션 95 OCR 시험을 허브 전체에 반영: 설명(10개 도구·7개 작업)·첫 두 문단·업로드 문장·How we tested OCR 문단·고르는 기준·무료 한도 표(NAPS2, Sejda 웹 OCR 10쪽·50 MB·시간당 3회)·'어떤 도구' 2줄, 그림 2장 다시 생성(7×10 격자, 도구별 작업 수). Sejda·PDF24 OCR 페이지 재확인. 제목 그대로, `updatedAt` 2026-11-13T19:40Z | - (허브 갱신) |
+| 3 | 3 허브 갱신 | `free-image-converter-photo-tools` | 세션 91~93 영상 시험 2건 반영: 설명(18개 도구·8개 작업)·첫 두 문단·요약 표 위 문장·How we tested(11월 영상 앱·시험 파일)·자르기 절 LosslessCut 1문장·**새 절 'Best free way to convert iPhone video to MP4: LosslessCut'**·앱/웹 표·'어떤 도구' 1줄, 작업별 추천 그림 6 → 8칸. **CloudConvert 무료 한도 '10 conversions a day' → 요금 페이지 표 기준 '10 conversion credits a day, at least one per conversion'**(2곳). 제목 그대로, `updatedAt` 2026-11-13T19:50Z | - (허브 갱신) |
+
+- 빌드 HTML 확인: `office-2021-end-of-support` title 59자(접미사 포함)·description 158자·BlogPosting `dateModified` 2026-11-13T19:30Z(author ToolProof)·BreadcrumbList·h1 1·h2 9·`<pre>`·`<code>` 0·img 7, **본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 그 그림에서 만들어짐**(`public/_static/mdx/posts/og/` 직접 열어 확인) / `best-free-pdf-tools` title 69자·description 154자·`dateModified` 11-13T19:40Z·h1 1·h2 13·img 10 / `free-image-converter-photo-tools` title 53자·description 151자·`dateModified` 11-13T19:50Z·h1 1·h2 14·img 9. 세 글 모두 `<pre>`·`<code>` 0. **`rss.xml` 맨 앞 세 항목이 이번 세 글, 피드에 새로 들어간 글 3편(`free-image-converter-photo-tools`·`best-free-pdf-tools`·`office-2021-end-of-support` — 셋 다 미색인) / 빠진 글 3편(`customize-right-click-menu-windows-11` unknown, 색인된 `check-if-image-is-ai-generated`·`iphone-duo-sold-out`)** → 갱신 → 발견 → 크롤링 간격을 `first-seen.json`으로 볼 첫 사례(V7 뒤). sitemap `<loc>` 65(글 57 + 페이지)
+- lint·type-check·test(38파일 309개)·build 통과. 빌드·설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `extlink_check.py --slug` 세 글: Office 글 이동 2건(Microsoft 업데이트 안내 → `how-to-update-microsoft-365-or-office-for-windows`, LibreOffice `download-libreoffice/` → `download/`)을 새 주소로 바꾸고 재확인 0건, 사진 허브 이동 2건은 Apple `guide/…/{ID}` 짧은 주소라 규칙대로 둠, 확인 불가 github.com·support.discord.com 각 1
+- 점검(저장소 `seo-audit` On-Page 항목, 바꾼 세 글): 제목 앞쪽에 주 검색어(`office 2021 end of support`), 콜론·괄호 꼬리표 없음, 최근 제목 틀과 겹치지 않음, 설명 140~160자, H1 1개, 소제목 첫 문장이 떼어 읽어도 되는 답('Is Office 2021 still supported?' → "No: …", 'Does Office 2021 still get security updates?' → 11월 수정 + 약속 없음), 새 그림 alt 설명형, 측정·출처 문장에 날짜·버전
+
+**알게 된 것**
+
+- **지원 종료 공지와 실제 업데이트 기록이 다를 수 있음**: Office 2021 종료 공지는 "no security fixes"인데 종료 다음 달 보안 릴리스 노트·MSRC 데이터 모두 Office 2021 수정 빌드를 담음. 경쟁 글(WebSearch 상위: ManageEngine·WPS·Office Watch·heise 등)은 공지 문장만 옮겨 이 사실이 없음 → 종료 글은 종료일 뒤 첫 월간 기록을 열어 확인 (writing-guide 정확성에 추가)
+- **MSRC CVRF API(`api.msrc.microsoft.com/cvrf/v3.0/cvrf/2026-Nov`)가 컨테이너에서 열림**(200, JSON 약 18 MB): 제품별 취약점·수정 빌드를 스크립트로 셀 수 있음. Office 2019 볼륨 라이선스판은 릴리스 노트에는 매달 있지만 CVRF 제품 목록에는 없음(이유 미확인)
+- **링크 점검 문제가 전환으로 풀림**: 칼럼 → 상시 글 링크가 없던 `apple-mail-exchange-not-syncing`은 원래 `office-2021-end-of-support`(칼럼)를 링크하고 있어, 그 글이 상시 글이 되자 규칙을 충족 → 전환은 클러스터 링크 구조도 바꾸므로 `link_audit.py` 클러스터 표(허브 필요)까지 확인
+- `gsc_report.py --compare`의 '판단 시점' 날짜는 컨테이너 UTC 날짜로 셈 → 한국 02시 세션(UTC 전날 17시)은 하루 늦게 판정됨. V1(ready 11-14)은 11-14 02시 세션에서 "판단 시점 전" → 11-15(일) 세션에서 V1·V2 함께
+- 실수: 차트 출력 경로에 `$TMPDIR`(비어 있음)를 써서 컨테이너 루트(`/oc`, `/cvrf.json`, `/links.cjs`)에 파일이 생김 → 스크래치패드로 옮김(빈 `/oc` 폴더는 안전 검사로 지우지 못해 남김, 컨테이너와 함께 사라짐). 다음부터 스크래치패드 경로를 직접 씀
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 34일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude: **11-15(일) 첫 통합 주간 SEO 점검** + V1·V2 `--compare` 판정 (같은 세션), 그 뒤 콘텐츠 정리 8번 남은 2편 제목(V1·V2 판정 뒤)
+- Claude: **콘텐츠 정리 3번 통합(Personal Intelligence 칼럼 2편 → 상시 글)** — 다음 개선 세션(11-15 주간 점검 뒤 여유가 있으면, 아니면 11-17 화). 6번 검토도 그 뒤, 7번 12월 일정 뒤
+- Claude: **`windows-microsoft` 허브 필요** (상시 글 3편: `windows-10-esu-extended`·`windows-11-24h2-end-of-support`·`office-2021-end-of-support`) → 개선 세션 3번(허브 작성, 새 글 1편으로 셈). 콘텐츠 정리 3번과 같은 세션에는 하지 않음
+- Claude: `office-2021-end-of-support` 후속 — **12-08 보안 릴리스 노트에 Office 2021 Retail·LTSC 2021이 있는지**(Windows 월간 업데이트 반복 일정과 같은 세션). 있으면 '아직 업데이트되나' 절·달별 그림에 12월 추가, 없으면 '11월이 마지막'으로
+- Claude: 세션 89 '미발견 15편 갱신거리'(앱 재측정 8편) — V7이 끝나 피드 밖 글도 실제 갱신이 있으면 `updatedAt` 가능
+- Claude(11-16 월 일반 세션): 후보 `dia browser ai privacy`(문서 기반)·backlog 15번 오프라인 TTS(GUI 실행 방법 확인)·`windows 11 optional updates`(문서 기반). 영향 뉴스 칼럼은 다음 주(11-16~22) 후보를 discover로
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-20 예정) 재확인
+- Claude: 발행 57편 (허브 4개), 상시 글 전환 2편(누적)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-13T18:40:25Z, DB 문서 609개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 이 회차 `summary.adsense` 운영 34일·색인율 0.298(17/57)·클릭 연속 증가 0·11-09~15 주 노출 112(미확정), `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 40편 중 Google이 본 링크 21편·`inFeed` 15(미색인 12), `traffic` Cloudflare 28일 조회 160·방문 150, `summary.userTodos` 0건. 페이지는 바꾸지 않음, 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. log 초안의 자리표시자가 `sessions` 문서에 실리지 않게 log를 먼저 마무리하고 회차를 다시 만들어 보냄(첫 회차 18:31:13Z는 보내지 않음)
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-13 · 세션 95 (정기 실행, 일반 세션): 스캔한 PDF를 검색 가능하게 — 무료 도구 4개를 정답 텍스트가 있는 같은 파일로 비교
 
 세션 시각: 2026-11-13 02:15 KST(금) → 02시 실행(00:00~07:59 범위)·금요일이라 일반 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-hc97w4`는 `origin/main`(70f2ab7)과 같은 커밋에서 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 완료. 이번 주(11-09~15) 뉴스 칼럼은 없지만 영향이 오래 가는 뉴스 후보가 없어 상시 글 (아래 선정 근거).

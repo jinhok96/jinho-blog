@@ -60,3 +60,10 @@
 | 주장 | 출처 | 확인 |
 | --- | --- | --- |
 | `windows-10-esu-extended`에 넣은 문장: LTE Pixel Watch 2·3의 Safety Signal이 2026-12-12에 끝남 | https://support.google.com/googlepixelwatch/thread/471984501 (Chromium 렌더링, `source-pixel-watch-safety-signal.txt`) | "Google Pixel Watch 2 (LTE) / Google Pixel Watch 3 (LTE)", "we will be ending Safety Signal on Dec 12", "After Dec 12, 2026, this access will end" |
+
+## 2026-11-13 갱신 (세션 96 개선 세션, 허브 갱신)
+
+- 바꾼 것: 영상 시험 2건(`trim-video-without-losing-quality` 11-08·LosslessCut 11-09, `convert-iphone-video-to-mp4` 11-10)을 허브 전체에 반영 — 설명(18개 도구·8개 작업, 151자), 첫 두 문단(ezgif·LosslessCut 추천, 8개 시험 10-15 ~ 11-10), 요약 표 위 문장(앱 6/8·웹 2), How we tested(11월 영상 시험 앱 LosslessCut 3.69.0·VLC 3.0.20·HandBrake 1.7.2를 창으로 실행, 시험 파일 항목), 자르기 절에 LosslessCut 1문장, **새 절 'Best free way to convert iPhone video to MP4: LosslessCut'**, 앱·웹 표(LosslessCut 행, CloudConvert 한도), '어떤 도구를 설치할까' 1줄, 작업별 추천 그림(6 → 8칸) `charts.py`로 다시 생성. 요약 표의 자르기·iPhone 행과 자르기 절은 세션 91~93에 넣었음(`updatedAt` 미변경). 제목 그대로, `updatedAt` 2026-11-13T19:50Z
+- **CloudConvert 무료 한도 표기 정정**: 요금 페이지 표가 무료 플랜을 'Conversion Credits 10 / day', 'Daily reset'으로 적고 "conversions consume at least one credit, with additional credits charged for every extra minute"라고 설명 → '10 conversions a day' 두 곳을 '10 conversion credits a day, at least one per conversion'으로 (`source-cloudconvert-pricing-2026-11-13.txt`. 같은 페이지 아래 "Start free with 10 conversions per day" 문구도 있음)
+- 도구 수: 기존 14개(XnConvert·GIMP·CloudConvert·ezgif·iLoveIMG·remove.bg·removal.ai·Pixlr·ExifCleaner·ExifRemove·Jimpl·Verexif·IMGonline·HandBrake) + 123apps·Storrito·LosslessCut·VLC = 18개
+- 측정값은 두 영상 글의 결과·사실 확인표 그대로 (HandBrake·CloudConvert·123apps·VLC 기본 프로필 모두 재인코딩, VLC H.264+MP3 프로필 MP2 소리·Chromium 153 무음, HandBrake Fast 1080p30 1,440프레임 24 fps·날짜 교체·위치 삭제)

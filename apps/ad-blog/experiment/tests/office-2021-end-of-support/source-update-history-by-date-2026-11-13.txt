@@ -1,0 +1,738 @@
+# 가져온 시각: 2026-11-13T17:36:41.384Z
+# 원본: https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date
+Update history for Microsoft 365 Apps (listed by date) - Office release notes | Microsoft Learn
+https://learn.microsoft.com/en-us/officeupdates/update-history-microsoft365-apps-by-date
+
+Table of contents
+ Exit editor mode
+LearnMicrosoft 365
+Ask Learn
+Update history for Microsoft 365 Apps (listed by date)
+Summarize this article for me
+
+These version and build numbers apply to Microsoft 365 Apps for enterprise, Microsoft 365 Apps for business, and the subscription versions of the desktop apps for Project and Visio.
+
+ Note
+
+The table is ordered by release date, with the most recent release date listed first.
+For more information about update channels, see Overview of update channels for Microsoft 365 Apps.
+
+The following table lists the supported version, and the most current build number, for each update channel. The release date indicates when the most current build was released.
+
+Supported Versions
+Expand table
+Channel	Version	Build	Latest release date	Version availability date	End of service
+Current Channel	2610	20527.20196	November 10, 2026	November 10, 2026	Version 2611 is released
+Monthly Enterprise Channel	2610	20527.20194	November 10, 2026	November 10, 2026	February 9, 2027
+Monthly Enterprise Channel	2609	20430.20264	November 10, 2026	October 13, 2026	January 12, 2027
+Monthly Enterprise Channel	2608	20326.20320	November 10, 2026	September 08, 2026	December 08, 2026
+Semi-Annual Enterprise Channel
+
+(receives Monthly Enterprise Channel builds)
+
+	2610	20527.20192	November 10, 2026	November 10, 2026	February 9, 2027
+Semi-Annual Enterprise Channel
+
+(receives Monthly Enterprise Channel builds)
+
+	2609	20430.20262	November 10, 2026	October 13, 2026	January 12, 2027
+Semi-Annual Enterprise Channel
+
+(receives Monthly Enterprise Channel builds)
+
+	2608	20326.20318	November 10, 2026	September 08, 2026	December 08, 2026
+
+For information about the approximate download size when updating from a previous release of Microsoft 365 Apps to the most current release, see Download sizes for updates to Microsoft 365 Apps.
+
+The following table provides a list of the version and build numbers for each update to Microsoft 365 Apps released in the following update channels: Current, Monthly Enterprise, Semi-Annual Enterprise (Preview), and Semi-Annual Enterprise. Each entry in the table links directly to the release notes for that release. These release notes provide information about features, security updates, and non-security updates that are included in the update to Microsoft 365 Apps.
+
+Version History
+Expand table
+Year	Release Date	Current Channel	Monthly Enterprise Channel	Semi-Annual Enterprise Channel	
+2026	November 10	Version 2610 (Build 20527.20196)	Version 2610 (Build 20527.20194)
+Version 2609 (Build 20430.20264)
+Version 2608 (Build 20326.20320)	Version 2610 (Build 20527.20192)
+Version 2609 (Build 20430.20262)
+Version 2608 (Build 20326.20318)	
+2026	November 04	Version 2610 (Build 20527.20150)			
+2026	October 28	Version 2610 (Build 20527.20112)			
+2026	October 21	Version 2610 (Build 20527.20088)			
+2026	October 13	Version 2609 (Build 20430.20182)	Version 2609 (Build 20430.20180)
+Version 2608 (Build 20326.20232)
+Version 2607 (Build 20228.20276)	Version 2609 (Build 20430.20178)
+Version 2608 (Build 20326.20230)
+Version 2607 (Build 20228.20274)	
+2026	October 06	Version 2609 (Build 20430.20146)			
+2026	September 30	Version 2609 (Build 20430.20118)			
+2026	September 22	Version 2609 (Build 20430.20092)			
+2026	September 18	Version 2608 (Build 20326.20158)			
+2026	September 08	Version 2608 (Build 20326.20144)	Version 2608 (Build 20326.20142)
+Version 2607 (Build 20228.20226)
+Version 2606 (Build 20131.20260)	Version 2608 (Build 20326.20140)
+Version 2607 (Build 20228.20226)
+Version 2606 (Build 20131.20258)	
+2026	September 01	Version 2608 (Build 20326.20132)			
+2026	August 26	Version 2608 (Build 20326.20112)			
+2026	August 19	Version 2608 (Build 20326.20100)			
+2026	August 11	Version 2607 (Build 20228.20190)	Version 2607 (Build 20228.20188)
+Version 2606 (Build 20131.20206)
+Version 2605 (Build 20026.20266)	Version 2607 (Build 20228.20186)
+Version 2606 (Build 20131.20206)
+Version 2508 (Build 19127.20752)	
+2026	August 04	Version 2607 (Build 20228.20158)			
+2026	July 29	Version 2607 (Build 20228.20124)			
+2026	July 23	Version 2607 (Build 20228.20110)			
+2026	July 14	Version 2606 (Build 20131.20154)	Version 2606 (Build 20131.20152)
+Version 2605 (Build 20026.20236)
+Version 2604 (Build 19929.20264)	Version 2606 (Build 20131.20150)
+Version 2508 (Build 19127.20730)	
+2026	July 07	Version 2606 (Build 20131.20126)			
+2026	June 30	Version 2606 (Build 20131.20112)			
+2026	June 25	Version 2606 (Build 20131.20090)			
+2026	June 16	Version 2605 (Build 20026.20182)			
+2026	June 09	Version 2605 (Build 20026.20168)	Version 2605 (Build 20026.20166)
+Version 2604 (Build 19929.20220)
+Version 2603 (Build 19822.20288)	Version 2508 (Build 19127.20678)	
+2026	June 02	Version 2605 (Build 20026.20140)			
+2026	May 26	Version 2605 (Build 20026.20112)			
+2026	May 20	Version 2605 (Build 20026.20076)			
+2026	May 14	Version 2604 (Build 19929.20172)	Version 2604 (Build 19929.20172)
+Version 2603 (Build 19822.20254)
+Version 2602 (Build 19725.20346)	Version 2508 (Build 19127.20648)	
+2026	May 12	Version 2604 (Build 19929.20164)	Version 2604 (Build 19929.20162)
+Version 2603 (Build 19822.20240)
+Version 2602 (Build 19725.20320)	Version 2508 (Build 19127.20646)	
+2026	May 05	Version 2604 (Build 19929.20136)			
+2026	April 29	Version 2604 (Build 19929.20106)			
+2026	April 21	Version 2604 (Build 19929.20090)			
+2026	April 14	Version 2603 (Build 19822.20182)	Version 2603 (Build 19822.20180)
+Version 2602 (Build 19725.20244)
+Version 2512 (Build 19530.20282)	Version 2508 (Build 19127.20622)	
+2026	April 09	Version 2603 (Build 19822.20168)			
+2026	March 31	Version 2603 (Build 19822.20142)			
+2026	March 24	Version 2603 (Build 19822.20114)			
+2026	March 18	Version 2602 (Build 19725.20190)			
+2026	March 10	Version 2602 (Build 19725.20172)	Version 2602 (Build 19725.20170)
+Version 2512 (Build 19530.20260)
+Version 2511 (Build 19426.20314)	Version 2508 (Build 19127.20570)	
+2026	March 3	Version 2602 (Build 19725.20152)			
+2026	February 24	Version 2602 (Build 19725.20126)			
+2026	February 17	Version 2601 (Build 19628.20214)			
+2026	February 10	Version 2601 (Build 19628.20204)	Version 2512 (Build 19530.20226)
+Version 2511 (Build 19426.20294)
+Version 2510 (Build 19328.20306)	Version 2508 (Build 19127.20532)
+Version 2502 (Build 18526.20714)
+Version 2408 (Build 17928.20776)	
+2026	February 03	Version 2601 (Build 19628.20166)			
+2026	January 27	Version 2601 (Build 19628.20150)			
+2026	January 21	Version 2512 (Build 19530.20184)			
+2026	January 13	Version 2512 (Build 19530.20144)	Version 2511 (Build 19426.20260)
+Version 2510 (Build 19328.20292)
+Version 2509 (Build 19231.20300)	Version 2508 (Build 19127.20484)
+Version 2502 (Build 18526.20696)
+Version 2408 (Build 17928.20762)	
+2026	January 08	Version 2512 (Build 19530.20138)			
+Year	Release Date	Current Channel	Monthly Enterprise Channel	Semi-Annual Enterprise Channel (Preview)	
+:-----	:-----	:-----	:-----	:-----	
+2025	December 16	Version 2511 (Build 19426.20218)			
+2025	December 09	Version 2511 (Build 19426.20186)	Version 2510 (Build 19328.20266)
+Version 2509 (Build 19231.20274)
+Version 2508 (Build 19127.20402)		
+2025	December 03	Version 2511 (Build 19426.20170)			
+2025	November 20	Version 2510 (Build 19328.20244)			
+2025	November 18	Version 2510 (Build 19328.20232)			
+2025	November 17		Version 2507 (Build 19029.20300)		
+2025	November 14		Version 2508 (Build 19127.20384)		
+2025	November 11	Version 2510 (Build 19328.20190)	Version 2509 (Build 19231.20246)
+Version 2508 (Build 19127.20358)
+Version 2507 (Build 19029.20300)		
+2025	November 04	Version 2510 (Build 19328.20178)			
+2025	October 30	Version 2510 (Build 19328.20158)			
+2025	October 21	Version 2509 (Build 19231.20216)			
+2025	October 16		Version 2508 (Build 19127.20314)		
+2025	October 14	Version 2509 (Build 19231.20194)	Version 2508 (Build 19127.20302)
+Version 2507 (Build 19029.20274)
+Version 2506 (Build 18925.20268)		
+2025	October 07	Version 2509 (Build 19231.20172)			
+2025	October 01	Version 2509 (Build 19231.20156)			
+2025	September 23	Version 2508 (Build 19127.20264)			
+2025	September 16	Version 2508 (Build 19127.20240)			
+2025	September 09	Version 2508 (Build 19127.20222)	Version 2507 (Build 19029.20244)
+Version 2506 (Build 18925.20242)
+Version 2505 (Build 18827.20244)		
+2025	September 03	Version 2508 (Build 19127.20192)			
+2025	August 26	Version 2508 (Build 19127.20154)			
+2025	August 19	Version 2507 (Build 19029.20208)			
+2025	August 12	Version 2507 (Build 19029.20184)	Version 2506 (Build 18925.20216)
+Version 2505 (Build 18827.20230)
+Version 2504 (Build 18730.20260)	Version 2502 (Build 18526.20546)	
+2025	August 05	Version 2507 (Build 19029.20156)			
+2025	July 30	Version 2507 (Build 19029.20136)			
+2025	July 22	Version 2506 (Build 18925.20184)			
+2025	July 15	Version 2506 (Build 18925.20168)			
+2025	July 08	Version 2506 (Build 18925.20158)	Version 2505 (Build 18827.20202)
+Version 2504 (Build 18730.20240)
+Version 2503 (Build 18623.20316)	Version 2502 (Build 18526.20472)	
+2025	July 01	Version 2506 (Build 18925.20138)			
+2025	June 26	Version 2505 (Build 18827.20176)			
+2025	June 24		Version 2504 (Build 18730.20226)
+Version 2503 (Build 18623.20302)
+Version 2502 (Build 18526.20438)	Version 2502 (Build 18526.20438)	
+2025	June 17	Version 2505 (Build 18827.20164)			
+2025	June 10	Version 2505 (Build 18827.20150)	Version 2504 (Build 18730.20220)
+Version 2503 (Build 18623.20298)
+Version 2502 (Build 18526.20416)	Version 2502 (Build 18526.20416)	
+2025	June 03	Version 2505 (Build 18827.20140)			
+2025	May 29	Version 2505 (Build 18827.20128)			
+2025	May 20	Version 2504 (Build 18730.20186)			
+2025	May 13	Version 2504 (Build 18730.20168)	Version 2503 (Build 18623.20266)
+Version 2502 (Build 18526.20336)
+Version 2501 (Build 18429.20240)	Version 2502 (Build 18526.20336)	
+2025	May 06	Version 2504 (Build 18730.20142)			
+2025	April 29	Version 2604 (Build 19929.20106)
+Version 2504 (Build 18730.20122)			
+2025	April 17	Version 2503 (Build 18623.20208)			
+2025	April 15		Version 2502 (Build 18526.20286)		
+2025	April 08	Version 2503 (Build 18623.20178)	Version 2502 (Build 18526.20264)
+Version 2501 (Build 18429.20216)	Version 2502 (Build 18526.20264)	
+2025	April 02	Version 2503 (Build 18623.20156)			
+2025	March 11	Version 2502 (Build 18526.20168)	Version 2501 (Build 18429.20200)
+Version 2412 (Build 18324.20272)	Version 2502 (Build 18526.20168)	
+2025	March 05	Version 2502 (Build 18526.20144)			
+2025	February 11	Version 2501 (Build 18429.20158)	Version 2412 (Build 18324.20240)
+Version 2411 (Build 18227.20240)	Version 2408 (Build 17928.20440)	
+2025	January 30	Version 2501 (Build 18429.20132)			
+2025	January 16	Version 2412 (Build 18324.20194)			
+2025	January 14	Version 2412 (Build 18324.20190)	Version 2411 (Build 18227.20222)
+Version 2410 (Build 18129.20242)	Version 2408 (Build 17928.20392)	
+2025	January 07	Version 2412 (Build 18324.20168)			
+2024	December 10	Version 2411 (Build 18227.20162)	Version 2410 (Build 18129.20200)
+Version 2409 (Build 18025.20242)	Version 2408 (Build 17928.20336)	
+2024	December 05	Version 2411 (Build 18227.20152)			
+2024	November 12	Version 2410 (Build 18129.20158)	Version 2409 (Build 18025.20214)
+Version 2408 (Build 17928.20286)	Version 2408 (Build 17928.20286)	
+2024	October 28	Version 2410 (Build 18129.20116)			
+2024	October 15	Version 2409 (Build 18025.20160)			
+2024	October 08	Version 2409 (Build 18025.20140)	Version 2408 (Build 17928.20216)
+Version 2407 (Build 17830.20232)	Version 2408 (Build 17928.20216)	
+2024	September 25	Version 2409 (Build 18025.20104)			
+2024	September 23	Version 2409 (Build 18025.20096)			
+2024	September 10	Version 2408 (Build 17928.20156)	Version 2407 (Build 17830.20210)
+Version 2406 (Build 17726.20222)	Version 2408 (Build 17928.20156)	
+2024	August 26	Version 2408 (Build 17928.20114)			
+2024	August 13	Version 2407 (Build 17830.20166)	Version 2406 (Build 17726.20206)
+Version 2405 (Build 17628.20206)	Version 2402 (Build 17328.20550)	
+2024	August 01	Version 2407 (Build 17830.20138)			
+2024	July 09	Version 2406 (Build 17726.20160)	Version 2405 (Build 17628.20188)
+Version 2404 (Build 17531.20210)	Version 2402 (Build 17328.20452)	
+2024	June 26	Version 2406 (Build 17726.20126)			
+2024	June 19	Version 2405 (Build 17628.20164)			
+2024	June 11	Version 2405 (Build 17628.20144)	Version 2404 (Build 17531.20190)
+Version 2403 (Build 17425.20258)	Version 2402 (Build 17328.20414)	
+2024	May 30	Version 2405 (Build 17628.20110)			
+2024	May 14	Version 2404 (Build 17531.20152)	Version 2403 (Build 17425.20236)
+Version 2402 (Build 17328.20346)	Version 2402 (Build 17328.20346)	
+2024	May 07	Version 2404 (Build 17531.20140)			
+2024	May 01	Version 2404 (Build 17531.20128)			
+2024	April 29	Version 2404 (Build 17531.20120)			
+2024	April 09	Version 2403 (Build 17425.20176)	Version 2402 (Build 17328.20282)
+Version 2401 (Build 17231.20304)	Version 2402 (Build 17328.20282)	
+2024	March 29	Version 2403 (Build 17425.20146)			
+2024	March 27	Version 2403 (Build 17425.20138)			
+2024	March 12	Version 2402 (Build 17328.20184)	Version 2401 (Build 17231.20290)
+Version 2312 (Build 17126.20216)	Version 2402 (Build 17328.20184)	
+2024	March 04	Version 2402 (Build 17328.20162)			
+2024	February 28	Version 2402 (Build 17328.20142)			
+2024	February 13	Version 2401 (Build 17231.20236)	Version 2312 (Build 17126.20190)
+Version 2311 (Build 17029.20178)	Version 2308 (Build 16731.20550)	
+2024	February 01	Version 2401 (Build 17231.20194)			
+2024	January 30	Version 2401 (Build 17231.20182)			
+2024	January 09	Version 2312 (Build 17126.20132)	Version 2311 (Build 17029.20140)
+Version 2310 (Build 16924.20202)	Version 2308 (Build 16731.20504)	
+2024	January 04	Version 2312 (Build 17126.20126)			
+2023	December 12	Version 2311 (Build 17029.20108)	Version 2310 (Build 16924.20180)
+Version 2309 (Build 16827.20324)	Version 2308 (Build 16731.20460)	
+2023	November 29	Version 2311 (Build 17029.20068)			
+2023	November 14	Version 2310 (Build 16924.20150)	Version 2309 (Build 16827.20278)
+Version 2308 (Build 16731.20398)	Version 2308 (Build 16731.20398)	
+2023	October 31	Version 2310 (Build 16924.20124)			
+2023	October 25	Version 2310 (Build 16924.20106)			
+2023	October 10	Version 2309 (Build 16827.20166)	Version 2308 (Build 16731.20316)
+Version 2307 (Build 16626.20222)	Version 2308 (Build 16731.20316)	
+2023	September 28	Version 2309 (Build 16827.20130)			
+2023	September 12	Version 2308 (Build 16731.20234)	Version 2307 (Build 16626.20208)
+Version 2306 (Build 16529.20254)	Version 2308 (Build 16731.20234)	
+2023	August 28	Version 2308 (Build 16731.20170)			
+2023	August 08	Version 2307 (Build 16626.20170)	Version 2306 (Build 16529.20226)
+Version 2305 (Build 16501.20286)	Version 2302 (Build 16130.20714)	
+2023	July 27	Version 2307 (Build 16626.20134)	Version 2305 (Build 16501.20272)
+Version 2304 (Build 16327.20368)	Version 2302 (Build 16130.20694)	
+2023	July 26	Version 2307 (Build 16626.20132)			
+2023	July 11	Version 2306 (Build 16529.20182)	Version 2305 (Build 16501.20242)
+Version 2304 (Build 16327.20348)	Version 2302 (Build 16130.20644)	
+2023	June 26	Version 2306 (Build 16529.20154)			
+2023	June 13	Version 2305 (Build 16501.20210)	Version 2304 (Build 16327.20324)
+Version 2303 (Build 16227.20354)	Version 2302 (Build 16130.20580)	
+2023	June 01	Version 2305 (Build 16501.20196)			
+2023	May 09	Version 2304 (Build 16327.20248)	Version 2303 (Build 16227.20318)
+Version 2302 (Build 16130.20500)	Version 2302 (Build 16130.20500)	
+2023	April 25	Version 2304 (Build 16327.20214)			
+2023	April 11	Version 2303 (Build 16227.20280)	Version 2302 (Build 16130.20394)
+Version 2301 (Build 16026.20274)	Version 2302 (Build 16130.20394)	
+2023	April 04	Version 2303 (Build 16227.20258)			
+2023	March 28	Version 2303 (Build 16227.20212)			
+2023	March 20	Version 2302 (Build 16130.20332)			
+2023	March 14	Version 2302 (Build 16130.20306)	Version 2301 (Build 16026.20238)
+Version 2212 (Build 15928.20298)	Version 2302 (Build 16130.20306)	
+2023	February 28	Version 2302 (Build 16130.20218)			
+2023	February 14	Version 2301 (Build 16026.20200)	Version 2212 (Build 15928.20282)
+Version 2211 (Build 15831.20280)	Version 2208 (Build 15601.20538)	
+2023	January 26	Version 2301 (Build 16026.20146)			
+2023	January 10	Version 2212 (Build 15928.20216)	Version 2211 (Build 15831.20252)
+Version 2210 (Build 15726.20292)	Version 2208 (Build 15601.20456)	
+2023	January 04	Version 2212 (Build 15928.20198)			
+2022	December 13	Version 2211 (Build 15831.20208)	Version 2210 (Build 15726.20262)
+Version 2209 (Build 15629.20298)	Version 2208 (Build 15601.20378)	
+2022	December 06	Version 2211 (Build 15831.20190)			
+2022	November 08	Version 2210 (Build 15726.20202)	Version 2209 (Build 15629.20258)
+Version 2208 (Build 15601.20286)	Version 2208 (Build 15601.20286)	
+2022	October 27	Version 2210 (Build 15726.20174)			
+2022	October 11	Version 2209 (Build 15629.20208)	Version 2208 (Build 15601.20230)
+Version 2207 (Build 15427.20308)	Version 2208 (Build 15601.20230)	
+2022	September 26	Version 2209 (Build 15629.20156)			
+2022	September 13	Version 2208 (Build 15601.20148)	Version 2207 (Build 15427.20284)
+Version 2205 (Build 15225.20422)	Version 2208 (Build 15601.20148)	
+2022	August 31	Version 2208 (Build 15601.20088)			
+2022	August 18		Version 2206 (Build 15330.20306)		
+2022	August 09	Version 2207 (Build 15427.20210)	Version 2205 (Build 15225.20394)	Version 2202 (Build 14931.20660)	
+2022	August 03	Version 2207 (Build 15427.20194)			
+2022	July 27				
+2022	July 26		Version 2205 (Build 15225.20370)	Version 2202 (Build 14931.20646)	
+2022	July 18	Version 2206 (Build 15330.20264)			
+2022	July 12	Version 2206 (Build 15330.20246)	Version 2205 (Build 15225.20356)
+Version 2204 (Build 15128.20312)	Version 2202 (Build 14931.20604)	
+2022	July 06	Version 2206 (Build 15330.20230)			
+2022	June 29	Version 2206 (Build 15330.20196)			
+2022	June 14	Version 2205 (Build 15225.20288)	Version 2204 (Build 15128.20280)
+Version 2203 (Build 15028.20282)	Version 2202 (Build 14931.20494)	
+2022	May 24	Version 2205 (Build 15225.20204)			
+2022	May 17	Version 2204 (Build 15128.20248)			
+2022	May 10	Version 2204 (Build 15128.20224)	Version 2203 (Build 15028.20248)
+Version 2202 (Build 14931.20392)	Version 2202 (Build 14931.20392)	
+2022	April 26	Version 2204 (Build 15128.20178)			
+2022	April 20	Version 2203 (Build 15028.20228)			
+2022	April 18		Version 2201 (Build 14827.20246)		
+2022	April 12	Version 2203 (Build 15028.20204)	Version 2202 (Build 14931.20274)	Version 2202 (Build 14931.20274)	
+2022	March 30	Version 2203 (Build 15028.20160)			
+2022	March 08	Version 2202 (Build 14931.20132)	Version 2201 (Build 14827.20220)
+Version 2112 (Build 14729.20360)	Version 2202 (Build 14931.20132)	
+2022	February 28	Version 2202 (Build 14931.20120)			
+2022	February 16	Version 2201 (Build 14827.20198)			
+2022	February 08	Version 2201 (Build 14827.20192)	Version 2112 (Build 14729.20322)
+Version 2111 (Build 14701.20314)	Version 2108 (Build 14326.20784)	
+2022	January 26	Version 2201 (Build 14827.20158)			
+2022	January 12	Version 2112 (Build 14729.20260)			
+2022	January 11	Version 2112 (Build 14729.20248)	Version 2111 (Build 14701.20290)
+Version 2110 (Build 14527.20364)	Version 2108 (Build 14326.20738)	
+2022	January 04	Version 2112 (Build 14729.20194)			
+2021	December 17		Version 2110 (Build 14527.20344)
+Version 2109 (Build 14430.20386)		
+2021	December 16	Version 2111 (Build 14701.20262)		Version 2108 (Build 14326.20702)	
+2021	December 14	Version 2111 (Build 14701.20248)	Version 2110 (Build 14527.20340)
+Version 2109 (Build 14430.20380)	Version 2108 (Build 14326.20692)	
+2021	December 03	Version 2111 (Build 14701.20226)			
+2021	December 01	Version 2110 (Build 14527.20312)			
+2021	November 09	Version 2110 (Build 14527.20276)	Version 2109 (Build 14430.20342)
+Version 2108 (Build 14326.20600)	Version 2108 (Build 14326.20600)	
+2021	October 28	Version 2110 (Build 14527.20234)			
+2021	October 25	Version 2110 (Build 14527.20226)			
+2021	October 14	Version 2109 (Build 14430.20306)			
+2021	October 12	Version 2109 (Build 14430.20298)	Version 2108 (Build 14326.20508)
+Version 2107 (Build 14228.20340)	Version 2108 (Build 14326.20508)	
+2021	October 06	Version 2109 (Build 14430.20270)			
+2021	September 28	Version 2109 (Build 14430.20234)			
+2021	September 14	Version 2108 (Build 14326.20404)	Version 2107 (Build 14228.20324)
+Version 2106 (Build 14131.20384)	Version 2108 (Build 14326.20404)	
+2021	September 07	Version 2108 (Build 14326.20348)			
+2021	August 25	Version 2108 (Build 14326.20238)			
+2021	August 17				
+2021	August 10	Version 2107 (Build 14228.20250)	Version 2106 (Build 14131.20360)
+Version 2105 (Build 14026.20352)	Version 2102 (Build 13801.20864)	
+2021	August 03	Version 2107 (Build 14228.20226)			
+2021	July 26	Version 2107 (Build 14228.20204)			
+2021	July 20	Version 2106 (Build 14131.20332)			
+2021	July 13	Version 2106 (Build 14131.20320)	Version 2105 (Build 14026.20334)
+Version 2104 (Build 13929.20434)	Version 2102 (Build 13801.20808)	
+2021	June 29	Version 2106 (Build 14131.20278)			
+2021	June 18	Version 2105 (Build 14026.20308)			
+2021	June 08	Version 2105 (Build 14026.20270)	Version 2104 (Build 13929.20408)
+Version 2103 (Build 13901.20554)	Version 2102 (Build 13801.20738)	
+2021	May 24	Version 2105 (Build 14026.20246)			
+2021	May 18	Version 2104 (Build 13929.20386)			
+2021	May 11	Version 2104 (Build 13929.20372)	Version 2103 (Build 13901.20516)
+Version 2102 (Build 13801.20638)	Version 2102 (Build 13801.20638)	
+2021	April 29	Version 2104 (Build 13929.20296)			
+2021	April 23	Version 2103 (Build 13901.20462)			
+2021	April 13	Version 2103 (Build 13901.20400)	Version 2102 (Build 13801.20506)
+Version 2101 (Build 13628.20664)	Version 2102 (Build 13801.20506)	
+2021	April 02	Version 2103 (Build 13901.20336)			
+2021	March 30	Version 2103 (Build 13901.20312)			
+2021	March 18	Version 2102 (Build 13801.20360)			
+2021	March 09	Version 2102 (Build 13801.20294)	Version 2101 (Build 13628.20528)
+Version 2012 (Build 13530.20628)	Version 2102 (Build 13801.20294)	
+2021	March 01	Version 2102 (Build 13801.20266)			
+2021	February 16	Version 2101 (Build 13628.20448)			
+2021	February 09	Version 2101 (Build 13628.20380)	Version 2012 (Build 13530.20528)
+Version 2011 (Build 13426.20658)	Version 2008 (Build 13127.21216)	
+2021	January 26	Version 2101 (Build 13628.20274)			
+2021	January 21	Version 2012 (Build 13530.20440)			
+2021	January 12	Version 2012 (Build 13530.20376)	Version 2011 (Build 13426.20526)
+Version 2010 (Build 13328.20550)	Version 2008 (Build 13127.21064)	
+2021	January 05	Version 2012 (Build 13530.20316)			
+2020	December 21	Version 2011 (Build 13426.20404)			
+2020	December 08	Version 2011 (Build 13426.20332)	Version 2010 (Build 13328.20478)
+Version 2009 (Build 13231.20620)	Version 2008 (Build 13127.20910)	
+2020	December 02	Version 2011 (Build 13426.20308)			
+2020	November 30	Version 2011 (Build 13426.20294)			
+2020	November 23	Version 2011 (Build 13426.20274)			
+2020	November 17	Version 2010 (Build 13328.20408)			
+2020	November 10	Version 2010 (Build 13328.20356)	Version 2009 (Build 13231.20514)
+Version 2008 (Build 13127.20760)	Version 2008 (Build 13127.20760)	
+2020	October 27	Version 2010 (Build 13328.20292)			
+2020	October 21	Version 2009 (Build 13231.20418)			
+2020	October 13	Version 2009 (Build 13231.20390)	Version 2008 (Build 13127.20638)
+Version 2007 (Build 13029.20708)	Version 2008 (Build 13127.20638)	
+2020	October 08	Version 2009 (Build 13231.20368)			
+2020	September 28	Version 2009 (Build 13231.20262)			
+2020	September 22	Version 2008 (Build 13127.20508)			
+2020	September 09	Version 2008 (Build 13127.20408)			
+2020	September 08		Version 2007 (Build 13029.20534)
+Version 2006 (Build 13001.20648)	Version 2008 (Build 13127.20408)	
+2020	August 31	Version 2008 (Build 13127.20296)			
+2020	August 25	Version 2007 (Build 13029.20460)			
+2020	August 11	Version 2007 (Build 13029.20344)	Version 2006 (Build 13001.20520)
+Version 2005 (Build 12827.20656)	Version 2002 (Build 12527.20988)	
+2020	July 30	Version 2007 (Build 13029.20308)			
+2020	July 28	Version 2006 (Build 13001.20498)			
+2020	July 14	Version 2006 (Build 13001.20384)	Version 2005 (Build 12827.20538)
+Version 2004 (Build 12730.20602)	Version 2002 (Build 12527.20880)	
+2020	June 30	Version 2006 (Build 13001.20266)			
+2020	June 24	Version 2005 (Build 12827.20470)			
+2020	June 09	Version 2005 (Build 12827.20336)	Version 2004 (Build 12730.20430)
+Version 2003 (Build 12624.20708)	Version 2002 (Build 12527.20720)	
+2020	June 02	Version 2005 (Build 12827.20268)			
+2020	May 21	Version 2004 (Build 12730.20352)			
+2020	May 12	Version 2004 (Build 12730.20270)	Version 2003 (Build 12624.20588)
+	Version 2002 (Build 12527.20612)	
+2020	May 04	Version 2004 (Build 12730.20250)			
+2020	April 29	Version 2004 (Build 12730.20236)			
+2020	April 15	Version 2003 (Build 12624.20466)			
+2020	April 14	Version 2003 (Build 12624.20442)		Version 2002 (Build 12527.20442)	
+2020	March 31	Version 2003 (Build 12624.20382)			
+2020	March 25	Version 2003 (Build 12624.20320)			
+2020	March 10	Version 2002 (Build 12527.20278)		Version 2002 (Build 12527.20278)	
+2020	March 01	Version 2002 (Build 12527.20242)			
+2020	February 25	Version 2002 (Build 12527.20194)			
+2020	February 19	Version 2001 (Build 12430.20288)			
+2020	February 11	Version 2001 (Build 12430.20264)		Version 1908 (Build 11929.20606)	
+2020	January 30	Version 2001 (Build 12430.20184)			
+2020	January 22	Version 1912 (Build 12325.20344)			
+2020	January 14	Version 1912 (Build 12325.20298)		Version 1908 (Build 11929.20562)	
+2020	January 8	Version 1912 (Build 12325.20288)			
+2019	December 10	Version 1911 (Build 12228.20364)		Version 1908 (Build 11929.20516)	
+2019	December 3	Version 1911 (Build 12228.20332)			
+2019	November 22	Version 1910 (Build 12130.20410)		Version 1908 (Build 11929.20494)	
+2019	November 18	Version 1910 (Build 12130.20390)			
+2019	November 12	Version 1910 (Build 12130.20344)		Version 1908 (Build 11929.20436)	
+2019	October 30	Version 1910 (Build 12130.20272)			
+2019	October 22	Version 1909 (Build 12026.20344)			
+2019	October 14	Version 1909 (Build 12026.20334)		Version 1908 (Build 11929.20396)	
+2019	October 8	Version 1909 (Build 12026.20320)		Version 1908 (Build 11929.20388)	
+2019	September 30	Version 1909 (Build 12026.20264)			
+2019	September 10	Version 1908 (Build 11929.20300)		Version 1908 (Build 11929.20300)	
+2019	August 26	Version 1908 (Build 11929.20254)			
+2019	August 13	Version 1907 (Build 11901.20218)		Version 1902 (Build 11328.20392)	
+2019	July 29	Version 1907 (Build 11901.20176)			
+2019	July 9	Version 1906 (Build 11727.20244)		Version 1902 (Build 11328.20368)	
+2019	June 27	Version 1906 (Build 11727.20230)			
+2019	June 26	Version 1906 (Build 11727.20224)			
+2019	June 24	Version 1906 (Build 11727.20210)			
+2019	June 11	Version 1905 (Build 11629.20246)		Version 1902 (Build 11328.20318)	
+2019	June 3	Version 1905 (Build 11629.20214)			
+2019	May 29	Version 1905 (Build 11629.20196)			
+2019	May 22	Version 1904 (Build 11601.20230)			
+2019	May 14	Version 1904 (Build 11601.20204)		Version 1902 (Build 11328.20286)	
+2019	May 8	Version 1904 (Build 11601.20178)			
+2019	April 29	Version 1904 (Build 11601.20144)			
+2019	April 23	Version 1903 (Build 11425.20244)			
+2019	April 17	Version 1903 (Build 11425.20228)			
+2019	April 16	Version 1903 (Build 11425.20218)			
+2019	April 9	Version 1903 (Build 11425.20204)		Version 1902 (Build 11328.20230)	
+2019	April 1	Version 1903 (Build 11425.20202)			
+2019	March 25	Version 1902 (Build 11328.20222)			
+2019	March 12	Version 1902 (Build 11328.20158)		Version 1902 (Build 11328.20158)	
+2019	March 4	Version 1902 (Build 11328.20146)			
+2019	February 12	Version 1901 (Build 11231.20174)		Version 1808 (Build 10730.20280)	
+2019	January 31	Version 1901 (Build 11231.20130)			
+2019	January 14	Version 1812 (Build 11126.20266)			
+2019	January 8	Version 1812 (Build 11126.20196)		Version 1808 (Build 10730.20264)	
+2019	January 3	Version 1812 (Build 11126.20188)			
+2018	December 11	Version 1811 (Build 11029.20108)		Version 1808 (Build 10730.20262)	
+2018	November 27	Version 1811 (Build 11029.20079)			
+2018	November 13	Version 1810 (Build 11001.20108)		Version 1808 (Build 10730.20205)	
+2018	October 29	Version 1810 (Build 11001.20074)			
+2018	October 16	Version 1809 (Build 10827.20181)			
+2018	October 9	Version 1809 (Build 10827.20150)		Version 1808 (Build 10730.20155)	
+2018	September 27	Version 1809 (Build 10827.20138)			
+2018	September 11	Version 1808 (Build 10730.20102)		Version 1808 (Build 10730.20102)	
+2018	September 5	Version 1808 (Build 10730.20088)			
+2018	August 14	Version 1807 (Build 10325.20118)		Version 1803 (Build 9126.2275)	
+	July 25	Version 1807 (Build 10325.20082)			
+	July 17	Version 1806 (Build 10228.20134)			
+	July 10	Version 1806 (Build 10228.20104)		Version 1803 (Build 9126.2259)	
+	June 25	Version 1806 (Build 10228.20080)			
+	June 13	Version 1805 (Build 9330.2124)			
+	June 12	Version 1805 (Build 9330.2118)		Version 1803 (Build 9126.2227)	
+	May 24	Version 1805 (Build 9330.2087)			
+	May 23	Version 1805 (Build 9330.2078)			
+	May 18			Version 1803 (Build 9126.2210)	
+	May 14	Version 1804 (Build 9226.2156)			
+	May 8	Version 1804 (Build 9226.2126)		Version 1803 (Build 9126.2191)	
+	April 25	Version 1804 (Build 9226.2114)			
+	April 11	Version 1803 (Build 9126.2152)			
+	April 10			Version 1803 (Build 9126.2152)	
+	March 27	Version 1803 (Build 9126.2116)			
+	March 20			Version 1803 (Build 9126.2098)	
+	March 13	Version 1802 (Build 9029.2253)		Version 1803 (Build 9126.2072)	
+	February 26	Version 1802 (Build 9029.2167)			
+	February 13	Version 1801 (Build 9001.2171)		Version 1708 (Build 8431.2215)	
+	February 7	Version 1801 (Build 9001.2144)			
+	February 1	Version 1801 (Build 9001.2138)			
+	January 30	Version 1712 (Build 8827.2179)			
+	January 17	Version 1712 (Build 8827.2148)			
+	January 9	Version 1711 (Build 8730.2175)		Version 1708 (Build 8431.2153)	
+	January 2	Version 1711 (Build 8730.2165)			
+2017	December 12
+	Version 1711 (Build 8730.2127)
+		Version 1708 (Build 8431.2131)
+	
+	December 6
+	Version 1711 (Build 8730.2122)
+	
+	
+	
+	November 27
+	Version 1710 (Build 8625.2139)
+	
+	
+	
+	November 24
+	
+	
+	
+	
+	November 20
+	Version 1710 (Build 8625.2132)
+	
+	
+	
+	November 14
+	Version 1710 (Build 8625.2127)
+	
+	Version 1708 (Build 8431.2110)
+	
+	November 2
+	Version 1710 (Build 8625.2121)
+	
+	
+	
+	October 25
+	Version 1709 (Build 8528.2147)
+	
+	
+	
+	October 16
+	Version 1709 (Build 8528.2139)
+	
+	
+	
+	October 10
+	Version 1708 (Build 8431.2107)
+	
+	Version 1708 (Build 8431.2107)
+	
+	October 4
+	Version 1708 (Build 8431.2094)
+	
+	
+	
+	September 18
+	Version 1708 (Build 8431.2079)
+	
+	
+	
+	September 12
+	Version 1707 (Build 8326.2107)
+	
+	Version 1708 (Build 8431.2079)
+	
+	August 29
+	Version 1707 (Build 8326.2096)
+	
+	
+	
+	August 24
+	Version 1707 (Build 8326.2087)
+	
+	
+	
+	August 18
+	Version 1707 (Build 8326.2076)
+	
+	
+	
+	August 11
+	Version 1707 (Build 8326.2073)
+	
+	
+	
+	August 8
+	
+	
+	Version 1705 (Build 8201.2171)
+	
+	August 7
+	Version 1707 (Build 8326.2070)
+	
+	
+	
+	July 31
+	Version 1707 (Build 8326.2062)
+	
+	
+	
+	July 28
+	Version 1707 (Build 8326.2059)
+	
+	
+	
+	July 27
+	Version 1707 (Build 8326.2058)
+	
+	Version 1705 (Build 8201.2158)
+	
+	July 19
+	Version 1706 (Build 8229.2103)
+	
+	
+	
+	July 13
+	Version 1706 (Build 8229.2086)
+	
+	Version 1705 (Build 8201.2136)
+	
+	June 28
+	Version 1706 (Build 8229.2073)
+	
+	
+	
+	June 13
+	Version 1705 (Build 8201.2102)
+	
+	Version 1705 (Build 8201.2102)
+	
+	June 7
+	Version 1705 (Build 8201.2075)
+	
+	
+	
+	June 1
+	Version 1704 (Build 8067.2157)
+	
+	
+	
+	May 18
+	Version 1704 (Build 8067.2115)
+	
+	
+	
+	May 9
+	Version 1703 (Build 7967.2161)
+	
+	Version 1701 (Build 7766.2084)
+	
+	April 21
+	Version 1703 (Build 7967.2139)
+	
+	
+	
+	April 11
+	Version 1702 (Build 7870.2038)
+	
+	Version 1701 (Build 7766.2076)
+	
+	March 27
+	Version 1702 (Build 7870.2031)
+	
+	
+	
+	March 14
+	Version 1702 (Build 7870.2024)
+	
+	Version 1701 (Build 7766.2071)
+	
+	March 9
+	Version 1702 (Build 7870.2020)
+	
+	
+	
+	February 23
+	Version 1701 (Build 7766.2060)
+	
+	
+	
+	February 22
+	
+	
+	Version 1701 (Build 7766.2060)
+	
+	January 31
+	Version 1612 (Build 7668.2074)
+	
+	
+	
+	January 25
+	Version 1612 (Build 7668.2066)
+	
+	
+	
+	January 10
+	
+	
+	Version 1609 (Build 7369.2102)
+	
+	January 4
+	Version 1611 (Build 7571.2109)
+	
+	
+	
+Related topics
+Overview of update channels for Microsoft 365 Apps
+Release information for updates to Microsoft 365 Apps
+Download sizes for updates to Microsoft 365 Apps
+
+ Note
+
+If you need help with an issue with using Office, we recommend that you post your question on Microsoft's Answers forum or Tech Community, or you can contact support.
+
+Additional resources
+
+Training
+
+Learning path
+
+Use advance techniques in canvas apps to perform custom updates and optimization - Training
+
+Use advance techniques in canvas apps to perform custom updates and optimization
+
+Last updated on 11/10/2026

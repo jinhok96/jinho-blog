@@ -1,0 +1,199 @@
+# 가져온 시각: 2026-11-13T17:39:41.500Z
+# 원본: https://www.libreoffice.org/download/download-libreoffice/
+Download — LibreOffice
+https://www.libreoffice.org/download/
+
+Language: 
+Portuguese (Brazil) / português (Brasil)
+Spanish / español
+English (US)
+Dutch / Nederlands
+Esperanto
+Finnish / suomi
+Welsh / Cymraeg
+Italian / italiano
+French / français
+Kazakh / Қазақша
+Ukrainian / Українська
+Armenian / Հայերեն
+Chinese (traditional) / 中文 (正體)
+Language: 
+Your download should start in the background.
+Download
+About Us
+Get Help
+Community
+Blog
+DONATE
+x
+
+Download LibreOffice
+
+ 26.8.3
+
+26.8.3 WINDOWS (X86-64)
+
+Download by torrent or see all mirror links (x86-64).
+
+26.8.3 WINDOWS (ARM64)
+
+Download by torrent or see all mirror links (ARM64).
+
+26.8.3 MACOS (APPLE SILICON)
+
+Download by torrent or see all mirror links (Apple Silicon).
+
+26.8.3 MACOS (INTEL)
+
+Download by torrent or see all mirror links (Intel).
+
+26.8.3 LINUX (RPM)
+
+Download by torrent or see all mirror links (rpm).
+
+26.8.3 LINUX (DEB)
+
+Download by torrent or see all mirror links (deb).
+
+Need another version or language?
+
+Customize your download below.
+
+Other Versions & Installation Methods
+
+Configure your download
+
+Suite version:
+LibreOffice 26.8.3
+LibreOffice 26.2.7
+Operating system:
+Windows
+macOS
+Linux
+CPU architecture:
+x86-64
+ARM64
+Linux package type:
+rpm
+deb
+
+Main package download of LibreOffice 26.8.3 for Linux (rpm).
+
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+DOWNLOAD
+
+Download by torrent or see all mirror links.
+
+Complementary language package downloads
+
+You seem to have JavaScript disabled in your web browser.
+
+You can directly access the language-related packages in the file listings.
+
+Choose language
+
+Available language packages in English (GB):
+
+Translated User Interface: English (GB) (Torrent, mirror list)
+
+Help for offline use: English (GB) (Torrent, mirror list)
+
+Alternative installation methods, SDK and source code
+
+Older versions of LibreOffice (no longer updated!) are available in the archive
+
+New Features
+
+By clicking the button below you accept to view content from a third party site (YouTube) and for your personal data to be transferred and processed as indicated in the YouTube privacy policy.
+
+Accept YouTube Content
+
+LibreOffice 26.8 is our latest stable release, including new features, performance improvements, fixes and more…
+
+Markdown support
+
+Import and export documents in Markdown, a popular lightweight markup language.
+
+Connectors in Calc and Writer
+
+Connect objects in Writer just like in Impress and Draw. Create visual connections in Calc between cells by going to Insert > Shape > Connectors in the menu.
+
+Performance improvements
+
+Work faster: EPUB export, scrolling speed, exporting SVGs with bitmaps, 3D charts and many other things have received performance boosts.
+
+And much more
+
+For a full list of changes in maintained versions, see our release notes.
+
+Download
+Personal Use
+Business Use
+Other Versions
+Release Notes
+Templates & Extensions
+About Us
+Who Are We?
+The Document Foundation
+Who uses LibreOffice?
+LibreOffice Timeline
+LibreOffice vs OpenOffice
+LibreOffice Technology
+What is OpenDocument?
+Merchandise: FreeWear, Spreadshop
+Security
+Credits
+Get Help
+FAQ
+Community Assistance
+Documentation
+Installation Instructions
+System Requirements
+Professional Support
+Accessibility
+Community
+Join Us - Start Here!
+Events
+Blog
+Read Our Blog
+
+DONATE
+
+Language: 
+Portuguese (Brazil) / português (Brasil)
+Spanish / español
+English (US)
+Dutch / Nederlands
+Esperanto
+Finnish / suomi
+Welsh / Cymraeg
+Italian / italiano
+French / français
+Kazakh / Қазақша
+Ukrainian / Українська
+Armenian / Հայերեն
+Chinese (traditional) / 中文 (正體)
+Language: 
+Follow us!
+Contact Us
+Datenschutzerklärung (Privacy Policy)
+Impressum (Legal Info)
+Trademarks
+Statutes (non-binding English translation)
+Satzung (binding German version)
+
+Copyright information: Unless otherwise specified, all text and images on this website are licensed under the Creative Commons Attribution-Share Alike 3.0 License. This does not include the source code of LibreOffice, which is licensed under the Mozilla Public License v2.0. “LibreOffice” and “The Document Foundation” are registered trademarks of their corresponding registered owners or are in actual use as trademarks in one or more countries. Their respective logos and icons are also subject to international copyright laws. Use thereof is explained in our trademark policy. LibreOffice was based on OpenOffice.org.

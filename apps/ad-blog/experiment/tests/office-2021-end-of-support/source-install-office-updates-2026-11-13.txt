@@ -1,0 +1,51 @@
+# 가져온 시각: 2026-11-13T17:39:30.832Z
+# 원본: https://support.microsoft.com/en-us/office/install-office-updates-2ab296f3-7f03-43a2-8e50-46de917611c5
+How to update Microsoft 365 or Office for Windows | Microsoft Support
+https://support.microsoft.com/en-us/office/lifecycle/officeinstall/how-to-update-microsoft-365-or-office-for-windows
+
+How to update Microsoft 365 or Office for Windows
+Applies To
+Excel for Microsoft 365 Word for Microsoft 365 Outlook for Microsoft 365 PowerPoint for Microsoft 365 Access for Microsoft 365 OneNote for Microsoft 365 Excel 2024 Word 2024 Outlook 2024 PowerPoint 2024 Access 2024 OneNote 2024 Office 2024 Excel 2021 Word 2021 Outlook 2021 PowerPoint 2021 Access 2021 Office 2021 OneNote 2021 Excel 2019 Word 2019 Outlook 2019 PowerPoint 2019 Access 2019 Office 2019 Excel 2016 Word 2016 Outlook 2016 PowerPoint 2016 Access 2016 OneNote 2016 Project Professional 2016 Project Standard 2016 Office 2016 Microsoft 365 for home Office 365 Small Business InfoPath 2013 InfoPath Filler 2013
+Get help with Copilot
+How do I update Office for Windows?
+How do I update Microsoft 365 with AutoUpdate?
+Simplify updating Microsoft 365 with Copilot.
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+On a Mac? See Check for Office for Mac updates automatically.
+
+If you're not sure what version of Microsoft 365 or Office you have, see What version of Office am I using?
+
+How to update Microsoft 365 or Office for Windows
+
+To check for Microsoft 365 or Office for Windows updates, do the following:
+
+Open any Microsoft 365 app, such as Word, and create a new document.
+
+Go to File > Account (or Office Account if you opened Classic Outlook).
+
+In the Product Information section, choose Update Options > Update Now.
+
+Note
+
+You may need to click Enable Updates first if you don't see the Update Now option right away.
+
+Close the "You're up to date!⁠" or "Updates were installed" window after Microsoft 365 or Office is done checking for and installing updates.
+
+You can also use the Update Options button to Disable Updates or to View Updates that were previously installed.
+
+Microsoft 365 or Office for Windows update not working?
+
+If the Microsoft 365 or Office for Windows update is not working:
+
+Make sure your PC is connected to the Internet. 
+If Update Options is missing and there's only the About button, you either have a volume license install or your company is using Group Policy to manage Microsoft 365 or Office updates. Try Microsoft Update or contact your company help desk.
+To download an update manually, see Office Updates.
+If you would like to update Office but can't open any of your Office apps, try repairing Office.
+See Also
+
+Latest updates for versions of Office that use Windows Installer (MSI)
+
+When do I get the newest features for Microsoft 365?
+
+What's new in Microsoft 365

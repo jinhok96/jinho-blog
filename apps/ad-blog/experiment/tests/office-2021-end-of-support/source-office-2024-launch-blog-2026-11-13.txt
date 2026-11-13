@@ -1,0 +1,166 @@
+# 가져온 시각: 2026-11-13T17:46:58.809Z
+# 원본: https://www.microsoft.com/en-us/microsoft-365/blog/2024/09/30/office-2024-for-consumers-available-october-1/
+Office 2024 for consumers available October 1  | Microsoft Copilot Blog
+https://www.microsoft.com/en-us/copilot/blog/2024/09/30/office-2024-for-consumers-available-october-1/
+
+Skip to main content
+Copilot
+Products and features
+Solutions
+Plans and pricing
+Resources
+More
+ME
+Light
+Dark
+
+Discover what’s coming to Microsoft Ignite, Nov 17-20, 2026. Register now.
+
+Blog home
+Office 2024 for consumers available October 1
+Search
+Office 2024 for consumers available October 1
+Sep 30, 2024
+Share
+
+By
+
+Bryan Rognier
+, jump to author bio
+
+Microsoft 365 is the best way to access the latest versions of the productivity apps that millions of people use every day to bring their ideas to life and power through tasks. But we know some of our customers still prefer a non-subscription way to access our familiar apps, which is why we’re releasing Office 2024 on October 1 for consumers and small businesses. Office 2024 includes updated, locked-in-time versions of Word, Excel, PowerPoint, OneNote, and Outlook1 for PC and Mac. Read on for more details about what’s new in Office 2024.
+
+Enjoy better performance and speed
+
+Whether it’s emails, files, people, or events, get better matches for what you’re looking for with new search improvements in Outlook. Experience faster performance when working in Excel, even if you have multiple workbooks open at the same time. Plus, Mac users can now customize swipe left and swipe right gestures in Outlook for Mac with a multi-touch trackpad or magic mouse.
+
+Improve your content creation
+
+In Outlook, automatically check your emails for accessibility issues with accessibility checker. In PowerPoint, seamlessly embed a live camera feed directly into your slides with cameo, or record your narration, animations, transitions, and inking with recording studio. In OneNote, enjoy an enhanced inking experience including a full-screen pen-focused view to use the entire screen for inking.
+
+Analyze data with ease
+
+In Excel, access new functions to help you more easily use text and arrays in worksheets. Easily paste pictures directly or use the IMAGE function to add images without changing the formatting. Visualize different datasets with dynamic arrays in charts that will automatically update to capture all data when the arrays recalculate.
+
+Availability of Office 2024
+
+Office 2024 comes in two editions. Office Home 2024 is $149.99 USD and includes Word, Excel, PowerPoint, and OneNote for one PC or Mac. Office Home & Business 2024 is $249.99 USD and comes with everything in Office Home 2024 plus Outlook and the rights to use the apps for commercial purposes. You can buy both editions from retailers worldwide and via Microsoft.com starting October 1, 2024.
+
+For businesses with five or more users, Office Long Term Servicing Channel (LTSC) 2024 gives you the flexibility of deploying alongside Microsoft 365 using a common set of tools that simplify the management of hybrid environments.
+
+Office 2024 runs on Windows 10 and 11 and the three most recent versions of macOS. Office 2024 requires both a Microsoft account and an internet connection.
+
+Learn more about what’s new in Office 2024 or try Microsoft 365 today.
+
+Office 2024
+
+Explore updated versions of Word, Excel, PowerPoint, OneNote, and Outlook for PC and Mac.
+
+Learn more
+
+1 Outlook and its associated features are only available in Office Home & Business 2024.
+
+Bryan Rognier
+
+Vice President, Microsoft 365 Consumer
+
+
+See more articles from this author
+
+Personal and family
+Small and medium business
+News
+Excel
+Intune
+Microsoft 365
+Microsoft Teams
+OneNote
+Outlook
+PowerPoint
+Windows
+Related posts
+November 5 
+2 min read
+Bringing Claude models in Microsoft Copilot into the EU Data Boundary 
+Greater model choice, consistent protection. Claude models are coming to the EU Data Boundary in Microsoft Copilot.
+October 29 
+6 min read
+Microsoft Copilot for finance: Purpose-built for the way finance teams work 
+Discover Microsoft Copilot for finance, purpose-built skills for accounting, capital markets, and broader finance work.
+October 23 
+5 min read
+Introducing Microsoft Copilot for legal 
+In legal work, the answer rarely sits neatly in one place.
+
+Connect with us on social
+
+X
+YouTube
+LinkedIn
+Instagram
+TikTok
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap
+Contact Microsoft
+Privacy
+Terms of use
+Trademarks
+Safety & eco
+Recycling
+About our ads
+© Microsoft 2026

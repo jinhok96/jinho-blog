@@ -1,0 +1,2603 @@
+# 가져온 시각: 2026-11-13T17:41:31.324Z
+# 원본: https://learn.microsoft.com/en-us/officeupdates/release-notes-office-for-mac
+Release notes for Office for Mac - Office release notes | Microsoft Learn
+https://learn.microsoft.com/en-us/officeupdates/release-notes-office-for-mac
+
+Table of contents
+ Exit editor mode
+LearnMicrosoft 365
+Ask Learn
+Release notes for Office for Mac
+Summarize this article for me
+
+Office for Mac that comes with a Microsoft 365 subscription is updated regularly to provide new features, security updates, and non-security updates.
+
+Updates are available from Microsoft AutoUpdate (MAU). To use Microsoft AutoUpdate, start an Office application, such as Word, and then choose Help > Check for Updates. If you're an admin and want to update the computers in your organization with your existing software deployment tools, you can download and deploy the update packages for each application.
+
+ Note
+
+These release notes also apply to Office LTSC 2021 and 2024 and Office 2021 and 2024, which are available as a one-time purchase from a retail store or through a volume licensing agreement. However, some features listed in the release notes are only available if you have a Microsoft 365 subscription.
+We often roll out features over a period of time. This allows us to ensure that things are working smoothly before releasing the feature to a wider audience. If you don’t see something described below, you get it eventually. Learn more
+We sometimes release updates containing general quality and performance improvements and no new features. If an app isn't listed, the update for that app includes only quality and performance improvements.
+A minimum of macOS 14 (Sonoma) is required to receive updates to Microsoft 365 and Office apps. If you continue with an older version of macOS, your Office apps will still work, but you'll no longer receive any updates including security updates.
+A minimum of macOS 12 (Monterey) is required to install versions 16.78 or later. Learn more
+Office 2019 for Mac reached the end of support on October 10, 2023 and will no longer receive updates.
+Copilot features are available to Microsoft 365 Copilot–licensed users.
+Additional Copilot release notes can be found at Release Notes for Microsoft 365 Copilot.
+November 10, 2026
+
+Version 16.115 (Build 26110837)
+
+Feature updates
+Outlook
+General: OLM Import is now supported for Mail and Contacts
+Mail: Filter your message list by event related messages
+Mail: OFT templates for draft creation are now supported
+Calendar: See and update your work location and working hours from list view and agenda view
+Calendar: Print event descriptions in plain text when printing in list view
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+
+Resolved Issues:
+
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-116927
+CVE-2026-118292
+CVE-2026-118293
+CVE-2026-118294
+CVE-2026-118295
+CVE-2026-118296
+CVE-2026-118297
+CVE-2026-118298
+CVE-2026-118299
+CVE-2026-118300
+CVE-2026-118301
+CVE-2026-118302
+CVE-2026-118700
+CVE-2026-118701
+CVE-2026-118702
+CVE-2026-118703
+CVE-2026-118704
+CVE-2026-118705
+CVE-2026-118706
+CVE-2026-118707
+CVE-2026-118708
+CVE-2026-118709
+CVE-2026-118710
+CVE-2026-118711
+CVE-2026-118712
+CVE-2026-118713
+CVE-2026-118714
+CVE-2026-118715
+CVE-2026-118716
+CVE-2026-118717
+CVE-2026-118718
+CVE-2026-118719
+CVE-2026-118720
+CVE-2026-118721
+CVE-2026-118722
+CVE-2026-118723
+CVE-2026-118724
+CVE-2026-118725
+CVE-2026-118726
+CVE-2026-118727
+CVE-2026-118728
+CVE-2026-118729
+CVE-2026-118730
+CVE-2026-118731
+CVE-2026-118732
+CVE-2026-119986
+CVE-2026-119999
+CVE-2026-120785
+CVE-2026-120786
+CVE-2026-120788
+CVE-2026-120789
+CVE-2026-120790
+CVE-2026-120791
+CVE-2026-123395
+CVE-2026-124187
+CVE-2026-124229
+CVE-2026-81400
+Office Suite
+CVE-2026-124183
+CVE-2026-120003
+CVE-2026-124170
+CVE-2026-124174
+CVE-2026-124176
+CVE-2026-124178
+CVE-2026-124179
+CVE-2026-110068
+CVE-2026-111285
+CVE-2026-111286
+CVE-2026-111287
+CVE-2026-111288
+CVE-2026-111289
+CVE-2026-111292
+CVE-2026-111293
+CVE-2026-111294
+CVE-2026-111295
+CVE-2026-111298
+CVE-2026-116717
+CVE-2026-116923
+PowerPoint
+CVE-2026-109487
+CVE-2026-112734
+CVE-2026-112737
+CVE-2026-112738
+CVE-2026-116922
+CVE-2026-120001
+Word
+CVE-2026-108450
+CVE-2026-109491
+CVE-2026-109500
+CVE-2026-109501
+CVE-2026-109503
+CVE-2026-109505
+CVE-2026-110046
+CVE-2026-110047
+CVE-2026-110048
+CVE-2026-110049
+CVE-2026-110050
+CVE-2026-110051
+CVE-2026-110052
+CVE-2026-110053
+CVE-2026-110054
+CVE-2026-110055
+CVE-2026-110056
+CVE-2026-110061
+CVE-2026-110062
+CVE-2026-110064
+CVE-2026-110066
+CVE-2026-110067
+CVE-2026-111299
+CVE-2026-111302
+CVE-2026-111304
+CVE-2026-111306
+CVE-2026-111307
+CVE-2026-111308
+CVE-2026-111310
+CVE-2026-112714
+CVE-2026-112715
+CVE-2026-112716
+CVE-2026-112717
+CVE-2026-112718
+CVE-2026-112719
+CVE-2026-112720
+CVE-2026-112721
+CVE-2026-112722
+CVE-2026-112723
+CVE-2026-112724
+CVE-2026-112726
+CVE-2026-112728
+CVE-2026-112729
+CVE-2026-112730
+CVE-2026-112731
+CVE-2026-112733
+CVE-2026-112735
+CVE-2026-112739
+CVE-2026-112741
+CVE-2026-113759
+CVE-2026-116718
+CVE-2026-116719
+CVE-2026-116720
+CVE-2026-116721
+CVE-2026-116722
+CVE-2026-116925
+CVE-2026-124233
+November 4, 2026
+
+Version 16.114.4 (26110224)
+
+Resolved issues
+Office Suite
+A previous update inadvertently disabled Office 2021 for existing users. This update resolves the issue and fully restores functionality for affected customers.
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+October 27, 2026
+
+Version 16.114.3 (Build 26102720)
+
+Resolved issues
+Office Suite
+A previous update inadvertently disabled Office 2021 for existing users. This update resolves the issue and fully restores functionality for affected customers.
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+October 26, 2026
+
+Version 16.114.2 (Build 26102345)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+October 22, 2026
+
+Version 16.114.1 (Build 26102031)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+October 14, 2026
+
+Version 16.114 (Build 26101123)
+
+Feature updates
+Outlook
+General: Supported Microsoft 365 apps can now appear dynamically in the Outlook left rail.
+Calendar: Choose a supported third-party online meeting provider directly when creating calendar events
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Mail: Folder archive policies now remain saved after folder synchronization.
+Mail: Restored the Gmail B keyboard shortcut for choosing a snooze time.
+Calendar: Corrected calendar times for customers in Morocco following the September daylight-saving time change.
+Security: Data Loss Prevention alerts and policy tips now display the complete guidance without truncation.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-100209
+CVE-2026-100210
+CVE-2026-100211
+CVE-2026-100212
+CVE-2026-105718
+CVE-2026-97003
+CVE-2026-97004
+CVE-2026-97007
+CVE-2026-97008
+CVE-2026-97010
+CVE-2026-97011
+CVE-2026-97017
+CVE-2026-97738
+CVE-2026-97739
+CVE-2026-97740
+CVE-2026-97741
+CVE-2026-97742
+CVE-2026-97743
+CVE-2026-97745
+CVE-2026-97746
+CVE-2026-97747
+CVE-2026-97748
+CVE-2026-97750
+CVE-2026-97751
+CVE-2026-97752
+CVE-2026-97753
+CVE-2026-97754
+CVE-2026-97755
+CVE-2026-97756
+CVE-2026-97757
+CVE-2026-97758
+CVE-2026-97759
+CVE-2026-97760
+CVE-2026-97761
+CVE-2026-97762
+CVE-2026-97763
+CVE-2026-97765
+CVE-2026-97766
+CVE-2026-97767
+CVE-2026-97768
+CVE-2026-97769
+CVE-2026-97770
+CVE-2026-97771
+CVE-2026-97772
+CVE-2026-97773
+CVE-2026-97775
+CVE-2026-97776
+CVE-2026-97777
+CVE-2026-97778
+CVE-2026-97779
+CVE-2026-97780
+PowerPoint
+CVE-2026-70215
+CVE-2026-88178
+CVE-2026-88207
+CVE-2026-88210
+CVE-2026-97005
+CVE-2026-97744
+Office Suite
+CVE-2026-102858
+CVE-2026-105599
+CVE-2026-105715
+CVE-2026-70096
+CVE-2026-70254
+CVE-2026-70269
+CVE-2026-70269
+CVE-2026-70269
+CVE-2026-70269
+CVE-2026-70281
+CVE-2026-77902
+CVE-2026-88144
+CVE-2026-88145
+CVE-2026-88145
+CVE-2026-88156
+CVE-2026-88156
+CVE-2026-88169
+CVE-2026-88175
+CVE-2026-88183
+CVE-2026-88184
+CVE-2026-88185
+CVE-2026-88185
+CVE-2026-88185
+CVE-2026-88185
+CVE-2026-88192
+CVE-2026-88196
+CVE-2026-88197
+CVE-2026-97001
+OneNote
+CVE-2026-96997
+Outlook
+CVE-2026-70257
+CVE-2026-70291
+Word
+CVE-2026-70206
+CVE-2026-70220
+CVE-2026-70263
+CVE-2026-70268
+CVE-2026-70287
+CVE-2026-70301
+CVE-2026-70302
+CVE-2026-83891
+CVE-2026-88150
+CVE-2026-88167
+CVE-2026-88186
+CVE-2026-88202
+CVE-2026-96995
+October 06, 2026
+
+Version 16.113.4 (Build 26100421)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 29, 2026
+
+Version 16.113.3 (Build 26092714)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed an issue preventing sharing documents and content from other Office applications to Outlook.
+General quality and performance enhancements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 22, 2026
+
+Version 16.113.2 (Build 26092012)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 18, 2026
+
+Version 16.113.1 (Build 26091740)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 16, 2026
+
+Version 16.113 (Build 26091433)
+
+Feature updates
+Excel
+Copilot in Excel: change history skill The change history skill helps users understand how a workbook has evolved over time. Copilot can summarize recent changes, identify who made edits, and explain how both people and AI have modified the workbook. It can also help undo specific edits or restore formulas by returning the workbook to a previous working state.
+Copilot in Excel: chat history Use the menu icon in the upper left corner of the Copilot in Excel pane to access your Copilot chat history. Conversations are listed based on recency, with your most recent chat at the top of the list. Select a conversation from the list to view it.
+Copilot in Excel: chart and PivotTable skills Turn complex data into clear, polished insights. Create and organize PivotTables to summarize your data with new-built in capabilities. Use @chart-design to improve visualizations.
+Outlook
+Calendar: Outlook Settings now let users manage work hours and work-location schedules for supported accounts.
+Calendar: Users can choose whether accepted invitations are removed from the Inbox and whether conflicting events are automatically declined on supported accounts.
+Mail: Replies forwards, initial content, and signatures now automatically follow the left-to-right or right-to-left direction of the referenced message.
+Mail: Added Editor Settings to customize spelling and grammar by language.
+Mail: Added a remove button to make deleting recipients easier when composing emails.
+Mail: Paste Options now supports converting Markdown to rich text.
+Mail: Paragraph Options now provide better control over advanced formatting.
+Contacts: Administrators can use cloud policy to control whether presence indicators appear for recipients and contacts in Outlook.
+Copilot: Eligible users can now see linked Microsoft account subscriptions associated with their Copilot account in Outlook Settings.
+Security: Outlook can automatically inherit an appropriate sensitivity label from labeled attachments
+General: Users can right-click Mail, Calendar, and People icons in the left rail to open them in a separate window.
+General: Users can personalize Outlook by choosing an accent color.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Mail: The unread-count badge in the Dock now initializes correctly at startup.
+Mail: Improved the experience for viewing and interacting with Loop components in Outlook messages.
+Add-ins: Attachments added or removed by add-ins now synchronize more reliably, including during rapid or overlapping draft saves. The unread-count badge in the Dock now initializes correctly at startup.
+Copilot: Fixed an issue that disrupted the Copilot rewrite experience.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-85875
+CVE-2026-81960
+CVE-2026-81959
+CVE-2026-81958
+CVE-2026-81957
+CVE-2026-81956
+CVE-2026-81954
+CVE-2026-81953
+CVE-2026-81951
+CVE-2026-81950
+CVE-2026-81949
+CVE-2026-81948
+CVE-2026-81947
+CVE-2026-81401
+CVE-2026-81400
+CVE-2026-81399
+CVE-2026-81398
+CVE-2026-81397
+CVE-2026-81396
+CVE-2026-81395
+CVE-2026-81394
+CVE-2026-81393
+CVE-2026-81392
+CVE-2026-81391
+CVE-2026-81390
+CVE-2026-81389
+CVE-2026-81388
+CVE-2026-81387
+CVE-2026-81386
+CVE-2026-78518
+PowerPoint
+CVE-2026-78513
+CVE-2026-72977
+CVE-2026-72975
+CVE-2026-69797
+CVE-2026-69767
+CVE-2026-69678
+Office Suite
+CVE-2026-81955
+CVE-2026-81952
+CVE-2026-80091
+CVE-2026-80089
+CVE-2026-80087
+CVE-2026-80086
+CVE-2026-80082
+CVE-2026-80078
+CVE-2026-80076
+CVE-2026-78526
+CVE-2026-78515
+CVE-2026-78505
+CVE-2026-78439
+CVE-2026-77898
+CVE-2026-72938
+CVE-2026-69632
+Word
+CVE-2026-80090
+CVE-2026-80088
+CVE-2026-80085
+CVE-2026-80080
+CVE-2026-78525
+CVE-2026-78524
+CVE-2026-78521
+CVE-2026-78520
+CVE-2026-78517
+CVE-2026-78514
+CVE-2026-78512
+CVE-2026-78511
+CVE-2026-78510
+CVE-2026-78509
+CVE-2026-78507
+CVE-2026-78506
+CVE-2026-78504
+CVE-2026-78503
+CVE-2026-78502
+CVE-2026-77901
+CVE-2026-72976
+CVE-2026-72974
+CVE-2026-72973
+CVE-2026-72972
+CVE-2026-69759
+CVE-2026-69734
+CVE-2026-69722
+CVE-2026-69719
+CVE-2026-69686
+CVE-2026-69671
+CVE-2026-69626
+September 10, 2026
+
+Version 16.112.4 (Build 26090911)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 01, 2026
+
+Version 16.112.3 (Build 26083020)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+August 25, 2026
+
+Version 16.112.2 (Build 26082125)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+August 18, 2026
+
+Version 16.112.1 (Build 26081720)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+August 11, 2026
+
+Version 16.112 (Build 26081010)
+
+Feature updates
+Excel
+Copilot in Excel Power BI grounding: Copilot in Excel can now ground analysis in governed Power BI data, bringing trusted business metrics directly into the Excel grid. Users can attach a Power BI report from the work content selector, then ask Copilot to analyze performance, identify trends, and build summaries or supporting calculations in Excel. Copilot works with the underlying report data while respecting existing row-level security, eliminating the need to export data, manually copy and reconcile figures, or switch between Power BI and Excel. This feature is currently rolling out to production for Windows, Mac, and web.
+Copilot in Excel brand kit skill: The brand kit skill enables Copilot in Excel to format your workbook with your organization's brand kit from the Microsoft 365 Brand Center, automatically applying your approved colors, fonts, and logo to tables and charts so every report follows your company's branding guidelines. Just use the Brand-kit skill and ask Copilot to brand your sheet and get a polished, on-brand, presentation-ready report, without manual formatting.
+Copilot in Excel: theme design skill: With the theme design skill users can now apply a coordinated design theme to their data, choosing a harmonized color palette, styling charts, and structuring the layout so your key insights stand out. Use the @theme-design skill and ask Copilot to design or polish your sheet and it delivers; ready formatting with clear visual hierarchy, turning raw data into a clean, readable report and saving you the manual styling work.
+Copilot in Excel support articles: With significant investment in Copilot in Excel in the last few months, we refreshed all our Copilot in Excel support articles to reflect the new state of the feature. The support articles showcase new additions, like personalization, rules, skills, and formula suggestion management. They also highlight the many ways you can use Copilot in Excel in your daily work, such as visualizing your data or using data from your SharePoint or OneDrive.
+Excel for Windows and Mac Copilot in Excel support for AutoSave-off workbooks: Copilot in Excel is now available in more cloud-saved workbooks, including files where AutoSave is turned off on Windows and Mac. Previously, Copilot required AutoSave to be on, which meant some users could not use Copilot in otherwise supported workbooks. When AutoSave is off and the workbook has unsaved changes, Excel reminds users to turn on AutoSave before Copilot starts making changes, helping protect unsaved work. Users can still choose to continue with Copilot without turning on AutoSave. This feature is currently rolling out to production for Windows and Mac users.
+Outlook
+Mail Theming: Links and At Mention colors in the reading pane now match the app's accent color.
+Calendar: Outlook includes a new setting that lets you open new events in a separate window instead of a popover.
+Calendar: The weather widget now uses the Liquid Glass visual design for a more modern and integrated appearance on supported versions of macOS.
+Calendar: Outlook now includes a setting that automatically updates the default event creation time zone when your device's time zone changes.
+Calendar: You can now choose to display My Day as an icon only mode in the menu bar from the My Day settings.
+Copilot: Microsoft 365 Copilot Chat in Outlook is now available to customers in the GCC-H and DoD from Left Navigation Rail.
+Copilot: Contextual Copilot actions are now available from standalone message and event-preview windows, making relevant assistance easier to access while you work.
+Copilot: You can now upload images while working with the Researcher
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-65807
+CVE-2026-68793
+CVE-2026-68794
+CVE-2026-68795
+CVE-2026-68796
+CVE-2026-68797
+CVE-2026-68798
+CVE-2026-68799
+CVE-2026-68800
+CVE-2026-68801
+CVE-2026-68802
+CVE-2026-68803
+CVE-2026-68804
+CVE-2026-68805
+CVE-2026-68806
+CVE-2026-68807
+CVE-2026-68808
+CVE-2026-68810
+CVE-2026-68811
+CVE-2026-68812
+CVE-2026-68813
+CVE-2026-68814
+CVE-2026-68815
+CVE-2026-68816
+CVE-2026-68817
+CVE-2026-70327
+CVE-2026-70328
+Outlook
+CVE-2026-63518
+PowerPoint
+CVE-2026-68809
+Office Suite
+CVE-2026-62804
+CVE-2026-62842
+CVE-2026-63513
+CVE-2026-63515
+CVE-2026-63517
+CVE-2026-63519
+CVE-2026-63524
+CVE-2026-63526
+CVE-2026-63532
+CVE-2026-63533
+CVE-2026-64898
+CVE-2026-64899
+CVE-2026-64903
+CVE-2026-64904
+CVE-2026-64909
+CVE-2026-64910
+CVE-2026-64911
+CVE-2026-65657
+CVE-2026-65661
+CVE-2026-65664
+CVE-2026-66807
+CVE-2026-68818
+CVE-2026-70312
+CVE-2026-70313
+CVE-2026-70314
+CVE-2026-70315
+CVE-2026-70316
+CVE-2026-70317
+CVE-2026-70319
+CVE-2026-70320
+CVE-2026-70322
+CVE-2026-70323
+CVE-2026-70325
+Word
+CVE-2026-58651
+CVE-2026-63527
+CVE-2026-63528
+CVE-2026-63530
+CVE-2026-63531
+CVE-2026-64905
+CVE-2026-64907
+CVE-2026-64915
+CVE-2026-64917
+CVE-2026-66809
+CVE-2026-66810
+CVE-2026-70310
+CVE-2026-70311
+CVE-2026-70318
+August 04, 2026
+
+Version 16.111.3 (Build 26080215)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+July 28, 2026
+
+Version 16.111.2 (Build 26072617)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+July 21, 2026
+
+Version 16.111.1 (Build 26071913)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Mail: Fixed an issue with rendering color in message window title bar.
+Mail: Improved performance in reading and composing large complex emails including those with multiple embedded Loop components.
+Search: Fixed an issue where the search bar may become unresponsive.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+July 14, 2026
+
+Version 16.111 (Build 26071325)
+
+Feature updates
+Excel
+PivotTable #SPILL!: PivotTables can now collapse into a single cell with a #SPILL! error when they can’t expand because something is in the way – so you can stay focused and resolve errors on your own terms.
+Analyze more content, including large files with Copilot in Excel: Bring a wider range of business content into Copilot in Excel with support for 30+ additional file types (json, xml, tsv, zip, md, gif, bmp, svg, webp, html, loop, py, css, c, cpp, java, sql, aspx), for uploading code, structured data, images, archives, and saved emails. With support for large file sizes (50 MB), you can work across extensive datasets, workbooks, and PDFs. This enables deeper analysis and insight extraction from complex information at scale, all within Excel.
+Outlook
+Mail: Outlook for Mac now allows users to edit messages held in the Outbox before they are sent. Simply open the queued message, make the necessary changes, and send it again.
+Navigation: Left navigation rail customization is now supported. Users can pin or unpin modules and reorder them via drag-and-drop to match their preferred workflow.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-47642
+CVE-2026-48580
+CVE-2026-50408
+CVE-2026-50675
+CVE-2026-50678
+CVE-2026-54131
+CVE-2026-54988
+CVE-2026-55024
+CVE-2026-55025
+CVE-2026-55029
+CVE-2026-55031
+CVE-2026-55036
+CVE-2026-55037
+CVE-2026-55039
+CVE-2026-55041
+CVE-2026-55044
+CVE-2026-55046
+CVE-2026-55048
+CVE-2026-55053
+CVE-2026-55054
+CVE-2026-55058
+CVE-2026-55122
+CVE-2026-55131
+CVE-2026-55136
+CVE-2026-55137
+CVE-2026-55138
+CVE-2026-55141
+CVE-2026-55898
+CVE-2026-55899
+CVE-2026-55947
+CVE-2026-55948
+CVE-2026-55949
+CVE-2026-56156
+CVE-2026-58618
+OneNote
+CVE-2026-55133
+PowerPoint
+CVE-2026-55043
+CVE-2026-55123
+CVE-2026-55120
+Office Suite
+CVE-2026-50387
+CVE-2026-50314
+CVE-2026-50467
+CVE-2026-50665
+CVE-2026-55018
+CVE-2026-55022
+CVE-2026-55023
+CVE-2026-55026
+CVE-2026-55027
+CVE-2026-55028
+CVE-2026-55035
+CVE-2026-55042
+CVE-2026-55045
+CVE-2026-55047
+CVE-2026-55056
+CVE-2026-55057
+CVE-2026-55121
+CVE-2026-55125
+CVE-2026-55129
+CVE-2026-56192
+CVE-2026-56193
+CVE-2026-56195
+CVE-2026-55140
+CVE-2026-55049
+CVE-2026-55139
+Word
+CVE-2026-55033
+CVE-2026-55038
+CVE-2026-55050
+CVE-2026-55055
+CVE-2026-55124
+CVE-2026-55127
+CVE-2026-55128
+CVE-2026-55130
+CVE-2026-55132
+CVE-2026-55134
+CVE-2026-55142
+July 07, 2026
+
+Version 16.110.3 (Build 26070318)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+June 30, 2026
+
+Version 16.110.2 (Build 26062818)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+June 23, 2026
+
+Version 16.110.1 (Build 26062112)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+June 16, 2026
+
+Version 16.110 (Build 26061317)
+
+Feature updates
+Outlook
+Liquid Glass visuals are now applied app-wide with a focus on a more expressive, cohesive and Tahoe-native experience. The primary “New” button has been refactored with smoother motion design & liquid glass effects. The metaOS and Profile UI control have increased elevation and liquid glass background effects. The overall app chrome, windows and buttons have increased radii making app feel familiar to Tahoe/macOS 26 customers.
+Import PST is now available in Outlook for Mac, making it easy to import emails, calendars, contacts, and other mailbox data from PST files.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-44817
+CVE-2026-44818
+CVE-2026-44820
+CVE-2026-44822
+CVE-2026-44823
+CVE-2026-45455
+CVE-2026-45459
+CVE-2026-45469
+Office Suite
+CVE-2026-44819
+CVE-2026-44821
+CVE-2026-44824
+CVE-2026-45460
+CVE-2026-45461
+CVE-2026-45463
+CVE-2026-45472
+CVE-2026-45474
+CVE-2026-45475
+CVE-2026-45485
+CVE-2026-45645
+Word
+CVE-2026-45456
+CVE-2026-45457
+CVE-2026-45458
+CVE-2026-45466
+CVE-2026-45471
+CVE-2026-45486
+CVE-2026-45643
+June 02, 2026
+
+Version 16.109.3 (Build 26053122)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+May 26, 2026
+
+Version 16.109.2 (Build 26052523)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+May 19, 2026
+
+Version 16.109.1 (Build 26051717)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+May 12, 2026
+
+Version 16.109 (Build 26051019)
+
+Feature updates
+PowerPoint
+Edit your document with Copilot in PowerPoint: Copilot in PowerPoint helps you create, edit, and refine presentations through natural language—right inside your deck. Start a new presentation or build on an existing one by asking Copilot to generate slides, update content, improve layouts, and polish design, all while preserving your formatting, structure, and branding. This experience is available with Microsoft 365 Copilot (Basic). In addition, with Microsoft 365 Copilot (Premium), Copilot can also connect to your brand kit to apply branded templates, insert brand-approved images, and check for brand compliance. For more information on licensing, see: What Copilot license do I have | Microsoft Support.
+Outlook
+Security: Data Loss Prevention (DLP) helps protect sensitive information by detecting and preventing unintended sharing of confidential data, while allowing users to work productively within organizational policies.
+Calendar: Users can view and update their work location from the calendar grid when using Microsoft 365 enterprise accounts.
+Reorderable Left Rail: Outlook for Mac now lets you customize the left navigation rail, simply rearrange Mail, Calendar, Contacts, and more to match your workflow.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-40359
+CVE-2026-40360
+CVE-2026-40362
+Office Suite
+CVE-2026-40358
+CVE-2026-40363
+Word
+CVE-2026-40361
+CVE-2026-40364
+CVE-2026-40366
+CVE-2026-40367
+May 05, 2026
+
+Version 16.108.3 (Build 26050324)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+April 28, 2026
+
+Version 16.108.2 (Build 26042616)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+April 21, 2026
+
+Version 16.108.1 (Build 26041915)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+April 14, 2026
+
+Version 16.108 (Build 26041219)
+
+Feature updates
+Excel
+Office Scripts Redesign: The UI redesign refreshes the Office Scripts experience so it’s easier to find, create, manage, and share scripts—whether you’re just getting started or already building advanced automations.
+Work IQ context with Copilot in Excel: Work IQ searches through the most relevant context - from emails, meetings, chats, files - without requiring users to manually reference them. This helps Copilot make more accurate, multi‑step edits that reflect the latest context about users, their work, and their relationships.
+Expanded language support for Edit with Copilot: Edit with Copilot now supports all standard Copilot languages.
+Outlook
+Settings: Outlook for Mac now features a completely redesigned Settings experience with a modern, intuitive user interface. The refreshed UX makes it easier to discover, navigate, and manage your account preferences and app configurations in one place.
+Mail: Outlook for Mac now supports opening and importing Outlook .msg files. You can seamlessly view messages saved outside of Outlook and import them directly into your mailbox for easier access and organization.
+Calendar: Outlook now allows you to duplicate appointments and events on your calendar.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+MIP: Fixed the issue that Sent Items were not encrypted.
+Mail: Fixed an issue where messages were not grouped correctly when sorting by subject in the message list, making it easier to keep related conversations organized and quickly find the emails you need.
+Delegation: Users now have the option to send permission summary email to delegate when configuring permissions.
+PowerPoint
+Fixed text layout for simulated bold font to match that of PowerPoint for Windows.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-32188
+CVE-2026-32189
+CVE-2026-32197
+CVE-2026-32198
+CVE-2026-32199
+Office Suite
+CVE-2026-32190
+Word
+CVE-2026-33095
+CVE-2026-33822
+CVE-2026-33114
+CVE-2026-33115
+April 08, 2026
+
+Version 16.107.4 (Build 26040410)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+March 31, 2026
+
+Version 16.107.3 (Build 26032814)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+March 24, 2026
+
+Version 16.107.2 (Build 26032211)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+March 17, 2026
+
+Version 16.107.1 (Build 26031524)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+March 10, 2026
+
+Version 16.107 (Build 26030819)
+
+Feature updates
+Excel
+Local file support for Edit with Copilot: Added support for Edit with Copilot in modern Excel workbooks stored on your device, giving you the flexibility to query Copilot Chat no matter where your files are located.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Version 16.107 (Build 26030937) - Quality and performance improvements.
+PowerPoint
+When saving presentations in .pptx format containing SVG graphics, a PNG image is no longer rendered and saved with each one for compatibility with versions of PowerPoint that did not support SVG. PowerPoint for Mac Version 16.13 and PowerPoint for Windows Version 1611 (Build 7571.2072) and later support SVG and can render .pptx files that do not have the PNG images in them.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-26107
+CVE-2026-26108
+CVE-2026-26109
+CVE-2026-26112
+Office Suite
+CVE-2026-26110
+CVE-2026-26113
+March 03, 2026
+
+Version 16.106.3 (Build 26030211)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed the cancellation behavior for basic reauthentication on On-Premises.
+Resolved a regression impacting OnSend add-ins during save and send actions.
+Enhanced drag-and-drop attachment functionality for accounts that do not support OneDrive.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+February 24, 2026
+
+Version 16.106.2 (Build 26022219)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+February 17, 2026
+
+Version 16.106.1 (Build 26021521)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+February 10, 2026
+
+Version 16.106 (Build 26020821)
+
+Feature updates
+Excel
+Save and email as a PDF with Office Scripts: Use Office Scripts to automate tasks: Programmatically save a worksheet as a PDF and email it to yourself or your team.
+Outlook
+Mail: Outlook now allows users to sort their message list by Flag Status, Flag Start Date, or Flag Due Date, helping them prioritize follow‑ups and organize tasks more efficiently.
+Contacts: Outlook has an enhanced contact card experience that displays work hours and pronoun details when provided.
+Calendar: Microsoft 365 enterprise accounts now have a setting that lets you choose whether to display declined meetings on your calendar grid.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-20946
+CVE-2026-20955
+Word
+CVE-2026-20956
+CVE-2026-20952
+February 03, 2026
+
+Version 16.105.3 (Build 26020123)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+January 27, 2026
+
+Version 16.105.2 (Build 26012530)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+January 20, 2026
+
+Version 16.105.1 (Build 26011816)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+January 13, 2026
+
+Version 16.105 (Build 26011018)
+
+Feature updates
+Outlook
+Calendar: Meeting attendees now have the option to add a conference room to events scheduled using Office 365 enterprise accounts.
+Calendar: The calendar now allows users to toggle between grid and list views using the view switcher located on the calendar surface.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2026-20946
+CVE-2026-20949
+CVE-2026-20950
+CVE-2026-20955
+CVE-2026-20956
+CVE-2026-20957
+Word
+CVE-2026-20948
+CVE-2026-20944
+Office Suite
+CVE-2026-20952
+CVE-2026-20953
+January 06, 2026
+
+Version 16.104.1 (Build 26010228)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+December 16, 2025
+
+Version 16.104 (Build 25121423)
+
+Feature updates
+Outlook
+Collapsible Message List: users can collapse or expand message groups for a cleaner, more organized view.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Security updates
+Excel
+CVE-2025-62556
+CVE-2025-62560
+CVE-2025-62561
+CVE-2025-62563
+CVE-2025-62564
+Outlook
+CVE-2025-62562
+Word
+CVE-2025-62555
+CVE-2025-62558
+CVE-2025-62559
+Office Suite
+CVE-2025-62554
+CVE-2025-62557
+December 09, 2025
+
+Version 16.103.4 (25120717)
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+December 02, 2025
+
+Version 16.103.3 (25113013)
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+November 25, 2025
+
+Version 16.103.2 (Build 25112216)
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+November 18, 2025
+
+Version 16.103.1 (Build 25111624) - Excel, OneNote;
+Version 16.103.1 (Build 25111719) - PowerPoint
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+November 14, 2025
+
+Version 16.103.1 (Build 25111410)
+
+Quality and performance improvements.
+November 11, 2025
+
+Version 16.103 (Build 25110922)
+
+Outlook
+Collapsible Message List: users can now collapse or expand message groups for a more organized and streamlined view.
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Excel
+CVE-2025-60728
+CVE-2025-62201
+CVE-2025-62202
+CVE-2025-60726
+CVE-2025-60727
+CVE-2025-62203
+Office Suite
+CVE-2025-62199
+CVE-2025-60724
+November 4, 2025
+
+Version 16.102.3 (Build 25110228)
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed a bug that ensures the Copilot UI is hidden when it's disabled through the M365 admin portal.
+Removed the Coach Nudge based on user feedback.
+General improvements to quality and performance.
+Word
+Quality and performance improvements.
+October 28, 2025
+
+Version 16.102.2 (Build 25102623)
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+October 20, 2025
+
+Version 16.102.1 (Build 25101829)
+
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+October 14, 2025
+
+Version 16.102 (Build 25101223)
+
+Outlook
+Sync window: lets users manage how much email data is downloaded and stored locally for offline access by setting a date range (default: 60 days, maximum: 180 days). Users can also choose specific folders they always want to sync.
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Calendar: Resolved an issue that caused attendees marked as tentative to appear as free in the mini scheduler.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Excel
+CVE-2025-59223
+CVE-2025-59224
+CVE-2025-59225
+CVE-2025-59231
+CVE-2025-59232
+CVE-2025-59233
+CVE-2025-59235
+CVE-2025-59236
+Word
+CVE-2025-59221
+CVE-2025-59222
+Office Suite
+CVE-2025-59227
+CVE-2025-59234
+October 7, 2025
+
+Version 16.101.3 (Build 25092825)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 16, 2025
+
+Version 16.101 (Build 25091314)
+
+Outlook
+Calendar Sharing: Added support for calendar sharing in hybrid environments.
+Scheduling Assistant Update: Meeting organizers are now able to view the time zone information of attendees located in different time zones when using Scheduling Assistant.
+Mail Merge: Users can export contacts and personal distribution lists from Outlook and import them into Word to perform Mail Merge.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+Excel
+CVE-2025-54898
+CVE-2025-54899
+CVE-2025-54900
+CVE-2025-54901
+CVE-2025-54902
+CVE-2025-54903
+CVE-2025-54904
+CVE-2025-54896
+Word
+CVE-2025-54905
+Office Suite
+CVE-2025-54906
+CVE-2025-54910
+September 09, 2025
+
+Version 16.100.4 (Build 25090553)
+
+Feature updates
+Outlook
+Added support for Hybrid Calendar Sharing.
+Outlook for Mac with LTSC 2021 licenses will now respect New Outlook Admin Preferences.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+September 2, 2025
+
+Version 16.100.3 (Build 25083017)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+August 26, 2025
+
+Version 16.100.2 (Build 25082415)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed an issue affecting NTLM authentication for on-premises shared mailboxes.
+Quality and performance improvements.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+August 19, 2025
+
+Version 16.100.1 (Build 25081721)
+
+Feature updates
+Outlook
+Added capability to zoom in on email content with a trackpad.
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed potential formatting issue of empty drafts.
+Fixed potential data loss in email drafts.
+Fixed incorrect Copilot entries on devices without capability.
+Fixed various crashes to improve overall quality.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+August 12, 2025
+
+Version 16.100 (Build 25081015)
+
+Feature updates
+Excel
+Compatibility Versions: Compatibility Versions are set per workbook. Version 1 reflects historical calculation behavior while Version 2 contains the improvements to Excel text functions.
+View multiple panes, sheets or workbooks side by side: You can now quickly compare worksheets in the same workbook or in different workbooks by viewing them side by side with synchronous scrolling and reset window positioning, just like in Excel Windows.
+Outlook
+Mail: Linked file indicator now appears in the message list for conversations that include file links, making it easier to spot messages with shared content at a glance.
+Auto Reply: Users can now block their calendar when setting an automatic reply.
+Shared Mailbox: Added support for shared mailboxes in hybrid environments.
+(Note: Both mailboxes must use OAuth for authentication)
+Office Suite
+Spotlight Search: You can now use Spotlight Search to find your content.
+Change content marking default font to Aptos: When a sensitivity label is configured to insert content marks in Office files, the font of these content marks will now be Aptos by default. Admins can configure a different font for content markings using PowerShell.
+Security updates
+Excel
+CVE-2025-53735
+CVE-2025-53737
+CVE-2025-53739
+CVE-2025-53741
+CVE-2025-53759
+Word
+CVE-2025-53733
+CVE-2025-53736
+CVE-2025-53738
+CVE-2025-53784
+Office Suite
+CVE-2025-53731
+CVE-2025-53740
+July 29, 2025
+
+Version 16.99.2 (Build 25072714)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed an issue where Outlook may unexpectedly close when saving an event.
+Fixed an issue where Chat option was incorrectly shown in the toolbar and contextual menus when the Microsoft Teams app is not installed.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+July 22, 2025
+
+Version 16.99.1 (Build 25072013)
+
+Resolved issues
+Excel
+Quality and performance improvements.
+OneNote
+Quality and performance improvements.
+Outlook
+Fixed an issue where the "Received for" infobar was not showing for delegates in meeting requests.
+Fixed an issue where the subject and body were stripped when sending S/MIME emails in GCCH tenants.
+Fixed an issue where the Chat toolbar button was incorrectly shown when the Microsoft Teams app was not installed.
+Fixed an issue where “Reply All” was not functional when using keyboard shortcuts.
+Fixed an issue where S/MIME messages with large bodies were losing their content.
+PowerPoint
+Quality and performance improvements.
+Word
+Quality and performance improvements.
+July 15, 2025
+
+Version 16.99 (Build 25071321)
+
+Feature updates
+Excel
+Smarter Context Awareness for Copilot in Excel: Copilot in Excel now intelligently infers the relevant table or data range based on your query, enhancing usability. Additionally, it visually highlights the inferred data for clarity.
+Value tokens to visually indicate a date type or other rich format: Value tokens provide a clear visual indication that a cell contains a data type or other richer format. The addition of an icon next to the value further helps differentiate between data types in a spreadsheet.
+Outlook
+Prepare with Copilot: Copilot helps you prepare for upcoming meetings with help information like AI notes & references, and recaps of previous meetings.
+Paragraph Settings: Added support for paragraph spacing in the new email editor. Keyboard Shortcut Customization in Settings: You can now customize keyboard shortcuts directly from the main app settings—making it easier to find and use.
+PowerPoint
+Copilot uses enterprise assets hosted on SharePoint OAL when creating presentations: Once you integrate your organization's assets into a SharePoint OAL (Organization Asset Library) you will be able to create presentations with your organization's images.
+Copilot uses Enterprise assets hosted on Templafy when creating presentations: Once you connect your asset library hosted with Templafy to Microsoft365 and Copilot, you will be able to create presentations with your organization's images.
+Create a PowerPoint slide from a file or prompt: Creating impactful slides can be challenging and time-consuming. Copilot helps you quickly turn your ideas and files into a fully designed slide with content ready to edit and refine, making the presentation creation and refinement process more personalized and efficient.
+Word
+Easily write a prompt or choose quick actions from the Copilot icon in your Word doc: The Copilot icon in your document margin makes it easy to quickly add a prompt or choose from a range of quick options Copilot can offer.
+Security updates
+Excel
+CVE-2025-48812
+CVE-2025-49711
+PowerPoint
+CVE-2025-49705
+Word
+CVE-2025-49698
+CVE-2025-49703
+Office Suite
+CVE-2025-49695
+CVE-2025-49696
+CVE-2025-49697
+CVE-2025-49699
+CVE-2025-49702
+July 1, 2025
+
+Version 16.98.3 (Build 25062733)
+
+Feature updates
+OneNote
+Bug fixes
+June 17, 2025
+
+Version 16.98.1 (Build 25061520)
+
+Feature updates
+Outlook
+Quality and performance improvements
+June 10, 2025
+
+Version 16.98 (Build 25060824)
+
+Feature updates
+Excel
+View multiple panes, sheets or workbooks Side by Side: You can now quickly compare worksheets in the same workbook or in different workbooks by viewing them side by side with synchronous scrolling and reset window positioning, just like in Excel Windows.
+Outlook
+Copilot Command Center: A centralized interface that consolidates Copilot features like summarization, drafts, schedule, etc. into a single, accessible entry point. It dynamically adapts based on account eligibility, ensuring users can access relevant Copilot powered features right when they need them.
+Mail merge account setting: Users can now choose a specific account—such as a shared mailbox or a non-default account—as the sender for Merge to Email in Word for Mac, instead of always using the default account.
+Copilot Attachment Summaries: Users can now generate Copilot summaries for PDFs, Word, and PowerPoint attachments from the attachment well or from the summarize card. This feature helps users quickly grasp key content without opening the file.
+Calendar Sharing for On-Premises Mailboxes: Users can now share calendars from Exchange On-Premises accounts.
+Add-ins for On-Premises Mailboxes: Users can now use add-ins, such as Zoom & Webex, with Exchange On-Premises accounts.
+Up next in menu bar: Users now have the option to configure the visibility of upcoming meetings & appointments in the menu bar via the My Day settings.
+Security updates
+Excel
+CVE-2025-47165
+PowerPoint
+CVE-2025-47175
+Word
+CVE-2025-47168
+CVE-2025-47170
+CVE-2025-47169
+Office Suite
+CVE-2025-47173
+CVE-2025-47953
+CVE-2025-47164
+CVE-2025-47167
+CVE-2025-47162
+May 27, 2025
+
+Version 16.97.2 (Build 25052611)
+
+Feature updates
+Outlook
+Quality and performance improvements.
+Resolved issues
+Excel
+Fix support for connected services when turning off the Download Content privacy setting.
+PowerPoint
+Fix support for connected services when turning off the Download Content privacy setting.
+Word
+Fix support for connected services when turning off the Download Content privacy setting.
+May 20, 2025
+
+Version 16.97.1 (Build 25051816)
+
+Resolved issues
+Outlook
+Calendar: Fixed an issue that prevents users from creating a new event using the 'Create new event' button on the My Day/Calendar Peek page for OnPrem accounts.
+Word
+Fixed an issue where 3rd party add-ins may trigger an error when opening files.
+May 13, 2025
+
+Version 16.97 (Build 25051114)
+
+Feature updates
+Outlook
+Attachment: Allow users to download a link and attach it as a local attachment.
+Attachment: Allow users to upload large-size files to OneDrive and attach them as links.
+Signatures: You can now deploy managed preferences to disable the default signature. Details available here.
+*Copilot Summarize default language has been updated to use the content language of the conversation. User has an option in the summarize card to switch to UI language if required.
+Themes by Copilot: enable users to personalize their Outlook app with AI-generated themes that are unique to them, based on their favorite styles and contexts.
+Mail: Sort by categories allows users to organize and view emails based on categories, making it easier to locate and manage related emails efficiently.
+Contacts: A new unified experience of Contacts with Teams is now available.
+PowerPoint
+Email Notification Context Previews for Files Protected with Microsoft Purview: Notification emails for mentions, tasks, comments, and replies will now contain context previews even when the source document is encrypted, and the email will inherit the document's security policies.
+Word
+Email Notification Context Previews for Files Protected with Microsoft Purview: Notification emails for mentions, tasks, comments, and replies will now contain context previews even when the source document is encrypted, and the email will inherit the document's security policies.
+Resolved issues
+Outlook
+Mail: Fixed an issue where contact card details weren't loading when clicking on a contact's name.
+Mail: Fixed an issue where emails are not grouped in conversation in legacy Outlook client.
+Mail: Fixed an issue in Outlook where the draft email window would unexpectedly disappear while typing in the body.
+Calendar: Fixed an issue in Outlook where the calendar sidebar selection was not retained after closing the application using the traffic light.
+Security updates
+Excel
+CVE-2025-29977
+CVE-2025-29979
+CVE-2025-30375
+CVE-2025-30376
+CVE-2025-30393
+CVE-2025-30379
+CVE-2025-30381
+CVE-2025-30383
+Office Suite
+CVE-2025-30388
+CVE-2025-30377
+CVE-2025-30386
+April 30, 2025
+
+Version 16.96.2 (Build 25042933)
+
+Resolved issues
+Word
+Fixes an issue where editing equations may not work as expected.
+April 29, 2025
+
+Version 16.96.2 (Build 25042730)
+
+Feature updates
+Outlook
+Themes by Copilot: Enable users to personalize their Outlook app with AI-generated themes that are unique to them, based on their favorite styles and contexts.
+Resolved issues
+Outlook
+Fixed an issue where search was triggered without meaningful input.
+General accessibility improvements.
+April 22, 2025
+
+Version 16.96.1 (Build 25042021)
+
+Feature updates
+Outlook
+Updated Calendar event category colors.
+Resolved issues
+Outlook
+Fixed an issue where the app may unexpectedly close when an iCloud account with invalid password is configured.
+Fixed incorrect showing of privacy alert dialog.
+Fixed an issue that prevents some messages from rendering correctly.
+Excel
+Bug fixes
+PowerPoint
+Bug fixes
+Word
+Bug fixes
+April 15, 2025
+
+Version 16.96 (Build 25041326)
+
+Feature updates
+Outlook
+OneDrive upload nudge: When adding attachments over a certain size Outlook suggests uploading to OneDrive.
+Mail: Increased the maximum duration for the Undo Send feature to 120 seconds to match the behavior with Windows Outlook.
+Copilot: Users will now have the option to disable Copilot from the Outlook settings.
+Disallow reactions: Allows senders to prevent recipients from reacting to their emails. This greys out the reactions entry point in the reading pane, ensuring recipients cannot react to the message.
+OneDrive: Available to access from the left side bar.
+Compliance Meeting V2: Allows tenants to create meeting-only labeling.
+Resolved issues
+Outlook
+Accessibility: Fixed an issue where Voice Over does not read the text available in Automatic replies edit field.
+Mail: Fixed an issue where Filter by categories is greyed out when using from the Menu bar.
+Mail: Fixed an issue where Apple Handoff feature doesn't work as expected.
+Mail: Fixed an issue where auto-capitalization wasn't working in Outlook when composing an email.
+SMIME: Fixed an issue where the SMIME certificates dropdown was pulling certificates that didn't match the user's email address.
+Search: Fixed an issue where searching using "All Accounts" search scope included results from all the available profiles.
+Security updates
+Excel
+CVE-2025-27750
+CVE-2025-27751
+CVE-2025-26642
+OneNote
+CVE-2025-29822
+Word
+CVE-2025-29820
+CVE-2025-27747
+Office Suite
+CVE-2025-29816
+CVE-2025-27745
+CVE-2025-27746
+CVE-2025-27748
+CVE-2025-27749
+CVE-2025-27752
+CVE-2025-29791
+April 3, 2025
+
+Version 16.95.4 (Build 25040241)
+
+Resolved issues
+Excel
+Resolved an issue where certain custom Language & Region system settings were not being applied.
+PowerPoint
+Resolved an issue where certain custom Language & Region system settings were not being applied.
+Word
+Resolved an issue where certain custom Language & Region system settings were not being applied.
+April 1, 2025
+
+Version 16.95.3 (Build 25032931)
+
+Feature updates
+Outlook
+Quality and performance improvements
+Resolved issues
+Excel
+Bug fixes
+PowerPoint
+Bug fixes
+Word
+Bug fixes
+March 25, 2025
+
+Version 16.95.2 (Build 25032416)
+
+Feature updates
+Outlook
+Quality and performance improvements
+March 18, 2025
+
+Version 16.95.1 (Build 25031528)
+
+Feature updates
+Outlook
+Quality and performance improvements
+Resolved issues
+Excel
+Bug fixes
+OneNote
+Bug fixes
+PowerPoint
+Bug fixes
+Word
+Bug fixes
+March 11, 2025
+
+Version 16.95 (Build 25030928)
+
+Feature updates
+Office Suite
+Passkey Support for Mac Office apps: Enable modern authentication methods for Mac Office apps
+Outlook
+
+Shared Mailboxes: We now support Shared Mailboxes in Outlook for Mac for Exchange On-Premise environment.
+
+Calendar: Access Teams meeting chat from meeting reminders: We support easy access to Teams meeting chat from the reminder window.
+
+Calendar: Quickly glance which meeting is up next by looking at My Day in the menu bar.
+
+Admin Pref: Added a preference for admins to set Focused Inbox off by default. Users can manually turn on Focused Inbox. Learn more
+
+M365 Copilot Chat: Your AI assistant for work, grounding Copilot conversations in both the latest large language models (LLM) and information from your content and the web, directly in Outlook.
+
+Resolved issues
+Outlook
+Accessibility: Fixed an issue where Infobar text is unreadable when hovering over a button in dark mode.
+Mail: Fixed an issue where disabling Encrypt Only and Do Not Forward also hid related templates in Outlook for Mac. The preferences will now only disable Encrypt Only and Do Not Forward from the UI, allowing labels to remain visible as intended.
+Mail: Fixed an issue where delegates were not seeing the correct infobar when meetings are tentatively accepted on behalf of a manager.
+Mail: Fixed an issue where SMIME encrypted emails moved to "On My Computer" were not displaying any content in Outlook for Mac.
+Crash: Fixed the issue that caused Outlook to crash when the admin pushed the SMIMECertificatesLookupOrder property to client machines.
+Crash: Fixed an issue where double-clicking the group calendar in side-by-side mode caused Outlook to crash.
+Performance: Fixed a performance issue that occurred when using multiple profiles in Outlook.
+Security updates
+Excel
+CVE-2025-24081
+CVE-2025-24075
+CVE-2025-24082
+Word
+CVE-2025-24079
+CVE-2025-24078
+CVE-2025-24077
+Office Suite
+CVE-2025-24083
+CVE-2025-24057
+February 25, 2025
+
+Version 16.94.2 (Build 25022327)
+
+Feature updates
+Outlook
+
+Quality and performance improvements.
+
+February 18, 2025
+
+Version 16.94.1 (Build 25021618)
+
+Feature updates
+Outlook
+Quality and performance improvements.
+February 11, 2025
+
+Version 16.94 (Build 25020927)
+
+Feature updates
+Office Suite
+Protect sensitive files with dynamic watermarking: Deter leakage of your highly confidential document content by rendering the reader’s email address and other information over the document. This is configurable on sensitivity labels with admin-defined permissions.
+Outlook
+
+Admin Pref: Added a preference for admins and or users to disable certificate alerts in Outlook for Mac. Learn more
+
+Copilot – Meeting Recap: Quickly review Teams meeting recordings with meeting recap. View a meeting's recording, shared content, and more.
+
+Copilot – Schedule Meeting from Email: Effortless scheduling with Copilot- transform email threads into productive meetings.
+
+Message Recall: You can now recall your messages in Outlook for Mac. This feature allows users to retract messages you sent, giving you greater control over your communications.
+
+Resolved issues
+Outlook
+Mail: Fixed an issue where On-Premise mailboxes couldn't be added in Legacy Outlook for Mac.
+Mail: Fixed an issue where View Source option wasn't working for certain account types.
+Mail: Fixed an issue where the option to change the default font for Reply or Forward emails was missing in Outlook settings.
+Security updates
+Excel
+CVE-2025-21387
+CVE-2025-21390
+CVE-2025-21386
+CVE-2025-21383
+CVE-2025-21381
+CVE-2025-21394
+Office Suite
+CVE-2025-21392
+January 28, 2025
+
+Version 16.93.2 (Build 25012611)
+
+Resolved issues
+Outlook
+Mail: Resolved the issue preventing users from replying or forwarding emails when "Sort By" options were enabled.
+PowerPoint
+Bug fixes
+January 21, 2025
+
+Version 16.93.1 (Build 25011917)
+
+Resolved issues
+Excel
+Bug fixes
+Outlook
+Quality and performance improvements
+January 14, 2025
+
+Version 16.93 (Build 25011212)
+
+Feature updates
+Word
+Widgets are now here in Mac! Add a widget to your desktop to quickly view your most recent files.
+Excel
+Widgets are now here in Mac! Add a widget to your desktop to quickly view your most recent files.
+New regular expression worksheet functions: RegexExtract, RegexTest, RegexReplace; Added Regex match mode for XMatch and XLookup.
+PowerPoint
+Widgets are now here in Mac! Add a widget to your desktop to quickly view your most recent files.
+Security updates
+Excel
+CVE-2025-21362
+CVE-2025-21354
+Office Suite
+CVE-2025-21338
+OneNote
+CVE-2025-21402
+Word
+CVE-2025-21363
+December 10, 2024
+
+Version 16.92 (Build 24120731)
+
+Feature updates
+Outlook
+Calendar: Copilot users can easily catchup with meeting recordings, transcripts and notes from meeting popovers and details.
+M365 Groups: We now allow dragging and dropping emails from Microsoft 365 Groups to your desktop and generate .eml file.
+Security: We now block screen sharing and taking screenshot for protected content.
+Resolved issues
+Outlook
+Calendar: Fixed an issue where moving an appointment event to another folder within the same account resulted in duplicate events appearing with an Exchange OnPremise account type.
+Calendar: Fixed the issue where calendar reminders were being set to zero for delegates.
+Mail: Fixed an issue that was causing the Outlook for Mac users to unable to add an account if the tenant has enforced CAE policies.
+Mail: Fixed an issue where emails weren't autosaving when using nested compose and clicking away to another email.
+Mail: Fixed the issue where replying to or forwarding an email that uses S/MIME caused the cursor to appear in the first line of the attributes section of the original message.
+MyDay: Fixed an issue in My Day where users with multiple accounts in the same profile were unable to create events by dragging. Events will now be created in the correct account.
+Security updates
+Excel
+CVE-2024-49069
+Office Suite
+CVE-2024-49065
+November 19, 2024
+
+Version 16.91.1 (Build 24111613)
+
+Resolved issues
+Outlook
+Mail: Resolved the issue where attachments weren't being added to emails after updating to macOS Sequoia.
+Mail: Resolved the issue where Outlook didn't retain formatting in Auto-Reply messages.
+November 12, 2024
+
+Version 16.91 (Build 24111020)
+
+Feature updates
+Outlook
+Support for auto-downloading of email images for GAL contacts.
+Resolved issues
+Outlook
+Mail: Fixed an issue where signatures may be added multiple times.
+Mail: Fixed an issue where the app may unexpectedly close while downloading attachments.
+Security updates
+Excel
+CVE-2024-49029
+CVE-2024-49028
+CVE-2024-49027
+CVE-2024-49030
+Word
+CVE-2024-49033
+Office Suite
+CVE-2024-49031
+CVE-2024-49032
+November 2, 2024
+
+Version 16.90.3 (Build 24110120)
+
+Resolved issues
+Outlook
+Mail: Fixed an issue that may cause users to lose access to Copilot features.
+Mail: Fixed an issue where options in the attachment context menu are incorrectly disabled in legacy Outlook.
+October 29, 2024
+
+Version 16.90.2 (Build 24102719)
+
+Resolved issues
+Excel
+Quality and performance improvements
+Outlook
+Quality and performance improvements
+PowerPoint
+Quality and performance improvements
+Word
+Quality and performance improvements
+October 22, 2024
+
+Version 16.90.1 (Build 24102013)
+
+Resolved issues
+Outlook
+Quality and performance improvements
+October 15, 2024
+
+Version 16.90 (Build 24101387)
+
+Feature updates
+Outlook
+Collapsible event headers: Users can now expand or collapse the event preview and compose forms, enhancing readability and focus on meeting content.
+Reply with IM: users can initiate an IM conversation directly from the email, facilitating quicker and more interactive responses.
+Junk management - Unverified sender: This helps users identify potentially suspicious or phishing emails by displaying a warning, prompting them to be cautious before interacting with the message.
+Word
+Rewrite supports fonts, lists, and original formatting for Copilot in Word: The Rewrite feature for Copilot in Word supports lists and preserves important formatting in the original selected text.
+Resolved issues
+Outlook
+Mail: Fixed an issue where room delegates couldn't see RSVP buttons in approval emails for meeting invites sent to rooms they manage.
+Mail: Fixed an issue where users received a “Can’t Create New Message” error when trying to reply all to an email located in On My Computer folders.
+Calendar: Fixed an issue where adding an attendee to a meeting series using “This and the following events” option wouldn't work.
+October 1, 2024
+
+Version 16.89.3 (Build 24092813)
+
+Resolved issues
+Outlook
+Calendar: Fixed an issue where reminder time gets incorrectly set for some all-day events.
+Mail: Fixed an issue where the Mark as Junk button in the message window wasn't working.
+September 24, 2024
+
+Version 16.89.2 (Build 24092212)
+
+Resolved issues
+Outlook
+Calendar: Resolved a bug preventing the addition of calendars for free/busy status.
+September 17, 2024
+
+Version 16.89.1 (Build 24091630)
+
+Resolved issues
+Excel
+Fixed an issue where sign-in with a work or school account may not succeed.
+OneNote
+Fixed an issue where sign-in with a work or school account may not succeed.
+Outlook
+Calendar: Fixed an issue where meeting series couldn't be updated in some cases when applying changes onwards from a specific date.
+Mail: Fixed an issue where Outlook may unexpectedly close when saving a draft.
+Fixed an issue where sign-in with a work or school account may not succeed.
+PowerPoint
+Fixed an issue where sign-in with a work or school account may not succeed.
+Word
+Fixed an issue where sign-in with a work or school account may not succeed.
+September 10, 2024
+
+Version 16.89 (Build 24090815)
+
+Feature updates
+Excel
+Use the keyboard to work with the ribbon: Ribbon KeyTips are now available in app preferences > Accessibility, so you can quickly activate tabs and commands. Learn more
+OneNote
+Use the keyboard to work with the ribbon: Ribbon KeyTips are now available in app preferences > Accessibility, so you can quickly activate tabs and commands. Learn more
+Outlook
+Admin Pref: Admins now have preference keys available to block users from sharing their mailbox, calendars, or granting Delegate Access. Learn more.
+PowerPoint
+Use the keyboard to work with the ribbon: Ribbon KeyTips are now available in app preferences > Accessibility, so you can quickly activate tabs and commands. Learn more
+Word
+Use the keyboard to work with the ribbon: Ribbon KeyTips are now available in app preferences > Accessibility, so you can quickly activate tabs and commands. Learn more
+Resolved issues
+Outlook
+Mail: Fixed an issue where "Resume editing" wasn't working as expected for canceled scheduled send messages.
+Mail: Fixed an issue that was causing email actions such as Delete, Move, Mark as Read and Archive options to be greyed out for IMAP accounts.
+Mail: Fixed an issue where the app unexpectedly closes when saving a message with attachments in the Draft folder.
+SMIME: Fixed an issue that was affecting draft messages when removing encryption for cases where the “Always Encrypt Outgoing Messages” setting was turned on.
+Security updates
+Excel
+CVE-2024-43465
+August 27, 2024
+
+Version 16.88.1 (Build 24082514)
+
+Resolved issues
+Outlook
+Quality and performance improvements
+PowerPoint
+Bug fixes
+August 13, 2024
+
+Version 16.88 (Build 24081116)
+
+Feature updates
+Outlook
+Archive Policy: Support for Archive Policy has been added.
+Groups: We now support deleting mails from Microsoft 365 Groups folders.
+Safe Senders: We now support automatically downloading pictures from safe senders.
+Resolved issues
+Outlook
+Mail: Fixed an issue where the New Mail button disappears when sidebar is collapsed.
+Mail: Fixed an issue where message body shows blank for SMIME encrypted emails.
+Calendar: Fixed an issue where users were unable to see conflicts in the mini-calendar view in RSVP window.
+Crash: Fixed an issue that was causing Outlook to crash when opening contact cards.
+Security updates
+Excel
+CVE-2024-38172
+CVE-2024-38170
+PowerPoint
+CVE-2024-38171
+July 30, 2024
+
+Version 16.87.2 (Build 24072822)
+
+Resolved issues
+Outlook
+General: bug fixes and quality improvements.
+OnMyComputer: fixed an OnMyComputer issue to allow customers to delete imported meetings.
+SMIME: fixed the issue that caused SMIME encrypted mail to be empty.
+July 16, 2024
+
+Version 16.87 (Build 24071426)
+
+Feature updates
+Outlook
+Large Profile Card and Org Chart: Enjoy a new, large profile card experience that includes the org chart and recent files tab.
+New Contact Search for Mail and Events: Users can access an enhanced search experience to search contacts, including the global address list, while addressing mail or events.
+Accounts: Improved support for adding iCloud accounts using app-specific passwords.
+Resolved issues
+Outlook
+Mail: Fixed an issue where Reply and Forward markers were missing on the Message List for POP accounts.
+Presence: Fixed an issue where presence wasn't working for emails in shared mailboxes.
+July 2, 2024
+
+Version 16.86.3 (Build 24063014)
+
+Resolved issues
+Outlook
+Bug fixes and quality improvements.
+June 25, 2024
+
+Version 16.86.2 (Build 24062313)
+
+Resolved issues
+Outlook
+General: Fixed issue with update notifications not showing up.
+Calendar: Fixed calendar sync issue in Legacy Outlook after reconnecting due to conditional access.
+June 18, 2024
+
+Version 16.86.1 (Build 24061443)
+
+Resolved issues
+Outlook
+Mail: Fixed an issue where the 'Report Phishing' option wasn't available in some cases.
+Calendar: Fixed an issue where multi-day events may occasionally not show up correctly on the calendar grid.
+June 11, 2024
+
+Version 16.86 (Build 24060916)
+
+Feature updates
+Outlook
+Message Size: Users can now see the message size for IMAP, POP and On My Computer messages.
+Folder level permissions: Users can now share specific folders and set folder-level permissions.
+Folder Reordering: Users can now reorder folders by dragging and dropping.
+Safe sender list: Add recipients of your email messages to the Safe Senders List to prevent messages from being moved to the Junk E-mail folder.
+Immersive Image Theming: You can now customize Outlook’s appearance with image themes. Note that this feature is being rolled out gradually and may not be immediately available.
+Other changes
+Starting with this release, the version of Teams in the installer has changed from classic Teams to new Teams.
+May 28, 2024
+
+Version 16.85.2 (Build 24052614)
+
+Resolved issues
+Outlook
+Mail: Fixed an issue where Outlook may unexpectedly close when summarizing an IRM message.
+Performance: Fixed a performance issue where Outlook may become unresponsive after viewing a contact card.
+Search: Fixed an issue where Outlook may unexpectedly close after performing search.
+May 27, 2024
+
+Version 16.85.2 (Build 24052614)
+
+Resolved issues
+Word
+Fixed an issue where Word may become unresponsive.
+May 21, 2024
+
+Version 16.85.1 (Build 24051916)
+
+Resolved issues
+Outlook
+Quality and performance improvements.
+May 14, 2024
+
+Version 16.85 (Build 24051214)
+
+Feature updates
+Outlook
+Mail: You can now set folder permissions for folders under Inbox.
+Data: Nudge to remove legacy local data.
+Resolved issues
+Outlook
+Print: Resolved an issue that was causing blank pages in print preview when certain page range is selected.
+Calendar: Fixed a crash when trying to edit a meeting series from a specific instance onwards instead of editing the whole series.
+Localization: Fixed an issue where Import summary dialog in Swedish shows garbled characters.
+MIP: We have addressed an issue where past meeting requests without labels were present MIP in GCC environment once mandatory labeling for events is enabled.
+Crash: Fixed an issue that may cause Outlook to crash.
+Security updates
+Excel
+CVE-2024-30042
+April 30, 2024
+
+Version 16.84.2 (Build 24042814)
+
+Resolved issues
+Outlook
+Quality and performance improvements.
+April 24, 2024
+
+Version 16.84.1 (Build 24042223)
+
+Resolved issues
+PowerPoint
+Fixes keyboard shortcut for Paste Text Only.
+April 23, 2024
+
+Version 16.84.1 (Build 24042118)
+
+Resolved issues
+Outlook
+Quality and performance improvements.
+April 16, 2024
+
+Version 16.84 (Build 24041420)
+
+Feature updates
+Outlook
+Calendar - New timeline widget for macOS Sonoma.
+Calendar – You can now edit a meeting series from a specific instance onwards instead of editing the whole series.
+Account Widget – Switching between profile and accounts can be done via the account widget in the navigation pane.
+Navigation – Favorite folders can be accessed easily from the navigation pane.
+License - Improve notifications around license changes.
+Resolved issues
+Outlook
+Account: Fixed an issue that has caused IMAP Accounts to disappear from the left rail in legacy Outlook client.
+Mail: Fixed an issue that was preventing customers from downloading multiple attachments with the same name.
+Add-In: Fixed an issue that caused add-ins to not load when click on Get Add-ins option.
+Search: Fixed an issue that caused search to not return the results when searching in Groups.
+Settings: Fixed an issue where Search box isn't shown in "Notifications and Sound" Setting page when setting Language as Chinese.
+Performance: Improved performance issue that was causing Outlook to hang after initial installation or first update.
+Security updates
+Excel
+CVE-2024-26257
+April 2, 2024
+
+Version 16.83.3 (Build 24033013)
+
+Resolved issues
+Outlook
+Quality and performance improvements.
+March 26, 2024
+
+Version 16.83.2 (Build 24032318)
+
+Resolved issues
+Outlook
+Quality and performance improvements.
+March 19, 2024
+
+Version 16.83.1 (Build 24031813)
+
+Resolved issues
+Outlook
+Fixed Snooze functionality on "Other" tab.
+Fixed multiple windows opening at launch.
+Fixed reappearance of removed attachments.
+Additional quality and performance improvements.
+March 12, 2024
+
+Version 16.83 (Build 24031120)
+
+Feature updates
+Outlook
+Shared Mailboxes: You can now open a shared mailbox if you only have access to contacts or calendar.
+Calendar: Teams users can now click on the chat button for a Teams Meeting right from Outlook.
+ToDo: Microsoft To Do is now available in Outlook Mac for supported commercial Microsoft 365 accounts.
+Mail: Added support to show the reading pane in the right when user selects column view also known as single line view.
+People: Contact lists are now available in the People module. You can create contact lists and address your lists in emails. Note that this feature is being rolled out gradually and may not be immediately available.
+Resolved issues
+Excel
+We fixed an issue in Excel Mac wherein AutoFilter doesn't show "Blanks" options when there are >10,000 unique values and a "Blank" cell is present in the first 10000 unique values.
+Outlook
+Mail: Fixed an issue where users weren't able to add accounts that were assigned E1 or A1 license.
+Mail: Fixed an issue where a space in the display name of a mailto: link would result in an invalid email address.
+SMIME: Fixed an issue where removing sensitivity label doesn't trigger justification prompt.
+Performance: Fixed a scenario that may cause high CPU after Outlook is launched.
+February 20, 2024
+
+Version 16.82.1 (Build 24021813)
+
+Resolved issues
+Outlook
+This update includes quality and performance improvements.
+February 13, 2024
+
+Version 16.82 (Build 24021116)
+
+Resolved issues
+This update includes quality and performance improvements.
+January 30, 2024
+
+Version 16.81.2 (Build 24012814)
+
+Resolved issues
+Outlook
+Fixed an issue where Outlook may unexpectedly close when downloading drafts.
+More quality and performance improvements.
+January 23, 2024
+
+Version 16.81.1 (Build 24012117)
+
+Feature updates
+Outlook
+Bug fixes and quality improvements.
+January 16, 2024
+
+Version 16.81 (Build 24011420)
+
+Feature updates
+Excel
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+Outlook
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+PowerPoint
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+Word
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+Security updates
+Office Suite
+CVE-2024-20677
+Last updated on 11/10/2026

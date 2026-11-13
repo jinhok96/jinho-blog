@@ -1,0 +1,149 @@
+# 가져온 시각: 2026-11-13T17:51:24.936Z
+# 원본: https://www.sejda.com/ocr-pdf
+OCR Recognize Text in PDF Online
+https://www.sejda.com/ocr-pdf
+
+ Sejda All Tools Compress Edit Fill & Sign Merge Delete Pages Crop
+Pricing Desktop Log in 
+OCR Recognize Text in PDF Online
+Convert PDF scans to searchable text and PDFs. Extract text from scans
+ Upload PDF file
+Toggle Dropdown
+
+Files stay private. Automatically deleted after 2 hours.
+Free service for documents up to 10 pages or 50 MB and 3 tasks per hour.
+PRO service for documents up to 100 pages
+
+Terms of Use and Privacy Policy
+
+OFFLINE Rather work offline? Try Sejda Desktop 
+How To Recognize Text With OCR And Convert To Searchable PDF Documents
+Below we show how to OCR convert PDF documents, for free.
+Step 1: Select your PDF file
+
+Files are transfered safely over an encrypted SSL connection. Documents stay private and are permanently removed after processing.
+
+Rather skip the uploading and work with your files locally?
+Try Sejda Desktop. Offers same features as the web service, and the documents are converted locally.
+
+Click Upload PDF files and choose files from your computer. Can also drag and drop files anywhere on the page.
+
+Step 2: Select the language of your document
+
+The OCR conversion process works best when the language is specified. This way ambiguous words are easier resolved based on the language dictionary.
+
+Step 3: Select the output formats, searchable PDF and/or plain text
+
+Convert your scan PDF to a searchable PDF file that contains text. Or convert your PDF to a plain text file containing just the text.
+
+Tip: Output both a searchable PDF and the plain text file version
+
+You'll get a searchable PDF document as a result, where the invisible text is overlayed on the original images at the correct locations.
+
+Accuracy of the OCR process
+
+To inspect the accuracy of the OCR process, open the PDF document, select all text (Ctrl+A) and copy & paste it into a text file.
+
+Higher resolution documents consistently lead to better results. Don't compress your scans before running the OCR process.
+
+Unfortunately we can't guarantee 100% accuracy on the recognized text, this is a best-effort approach.
+
+Ready to OCR your PDF file?
+OCR Recognize Text in PDF Online free 
+Contact Support
+RESOURCES
+Pricing & Upgrade
+Sejda for Desktop
+Sejda for G Suite
+Sejda for Education
+About
+Blog
+API
+HTML to PDF API
+Developer Docs
+LEGAL
+Terms of Use
+Privacy Policy
+Cookies
+Privacy Settings
+Security
+SLA
+Made in Amsterdam
+© Sejda BV 2013-present.
+
+Thank you for your time.
+TOOLS
+Add PDF Page Numbers
+Alternate & Mix PDF
+Bates Numbering PDF
+Compress PDF
+Create PDF Bookmarks
+Crop PDF
+Delete PDF Annotations
+Delete PDF Pages
+Deskew PDF
+Edit PDF Metadata
+Extract Images from PDF
+Extract PDF Pages
+Fill & Sign PDF
+Flatten PDF
+Flip PDF
+Grayscale PDF
+Header & Footer PDF
+HTML to PDF
+JPG to PDF
+Merge PDF
+N-up PDF
+OCR PDF
+PDF Editor
+PDF Page Numbers
+PDF to Excel
+PDF to JPG
+PDF to PowerPoint
+PDF to Text
+PDF to Word
+Protect PDF
+Repair PDF
+Resize PDF
+Rotate PDF
+Split PDF by bookmarks
+Split PDF by pages
+Split PDF by size
+Split PDF by text
+Split PDF in half
+Unlock PDF
+Visual Combine & Reorder PDF
+Watermark PDF
+Word to PDF
+LANGUAGES
+العربية
+Bahasa Indonesia
+Deutsch
+Dansk
+Český
+English
+Español
+Ελληνικά
+Français
+Italiano
+日本語
+한국어
+简体中文
+繁體中文
+हिन्दी
+עברית
+Magyar
+Nederlands
+Norsk
+Polski
+Português
+Română
+Русский
+Suomi
+Svenska
+ภาษาไทย
+Tiếng Việt
+Türkçe
+Українська
+CONTACT
+hi@sejda.com

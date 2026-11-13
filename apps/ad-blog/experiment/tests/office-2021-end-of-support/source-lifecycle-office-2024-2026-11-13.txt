@@ -1,0 +1,20 @@
+# 가져온 시각: 2026-11-13T17:33:48.293Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/products/office-2024
+Office 2024 - Microsoft Lifecycle | Microsoft Learn
+https://learn.microsoft.com/en-us/lifecycle/products/office-2024
+
+Office 2024
+
+Office 2024 follows the Modern Lifecycle Policy.
+
+This applies to the following editions: Home & Business (Windows & Mac), Home (Windows & Mac)
+
+Support dates are shown in the Pacific Time Zone (PT) - Redmond, WA, USA.
+
+Support Dates
+Expand table
+Listing	Start Date	Retirement Date
+Office 2024	Oct 1, 2024	Oct 9, 2029
+Editions
+Home & Business (Windows & Mac)
+Home (Windows & Mac)

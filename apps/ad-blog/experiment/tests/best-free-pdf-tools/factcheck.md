@@ -41,3 +41,9 @@
 
 - 명령어·코드 블록·터미널 단계 없음 (빌드 HTML `<pre>`·`<code>` 0개)
 - 그래픽: `charts.py` (`/tmp/gsc/bin/python -I charts.py <출력 폴더>`, matplotlib·Pillow)
+
+## 2026-11-13 갱신 (세션 96 개선 세션, 허브 갱신)
+
+- 바꾼 것: 7번째 작업 '스캔한 PDF를 검색 가능하게'(`make-pdf-searchable-free`, 11-12 측정)를 허브 전체에 반영 — 설명(10개 도구·7개 작업, 154자), 첫 두 문단(PDF24 Tools 추천, 7개 시험 10-17 ~ 11-12, 도구 3~4개), 업로드 문장(iLovePDF·PDF24), How we tested에 OCR 시험 문단(NAPS2 8.6.0 + PDF24·iLovePDF·Sejda 웹, Chromium 153, PDFium으로 단어 비율), 고르는 기준, 무료 한도 표에 NAPS2(무제한 앱)·Sejda 웹 OCR 행, '어떤 도구를 설치할까' 2줄, 그림 2장(작업별 추천 격자 7×10, 도구별 작업 수 막대) `charts.py`로 다시 생성. 요약 표 행·OCR 절은 세션 95에 넣었음(그때 `updatedAt` 미변경, V7 판정 전 피드 구성 유지). 제목 그대로, `updatedAt` 2026-11-13T19:40Z
+- 1차 출처 재확인: Sejda OCR "Free service for documents up to 10 pages or 50 MB and 3 tasks per hour", "Automatically deleted after 2 hours" (`source-sejda-ocr-pdf-2026-11-13.txt`), PDF24 OCR "No limits", "100% free thanks to advertising" (`source-pdf24-ocr-pdf-2026-11-13.txt`). 측정값은 `tests/make-pdf-searchable-free/` 결과 그대로
+- 도구 수: 기존 8개(PDFsam Basic·PDF Arranger·Sejda PDF Desktop·GIMP·LibreOffice·Chromium·iLovePDF·PDF24 Tools) + NAPS2 + Sejda 웹사이트 = 10개 (Sejda 데스크톱 앱과 웹사이트는 한도·처리 위치가 달라 따로 셈)

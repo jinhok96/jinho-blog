@@ -1,0 +1,2852 @@
+# 가져온 시각: 2026-11-13T17:37:10.892Z
+# 원본: https://learn.microsoft.com/en-us/officeupdates/microsoft365-apps-security-updates
+Release notes for Microsoft Office security updates - Office release notes | Microsoft Learn
+https://learn.microsoft.com/en-us/officeupdates/microsoft365-apps-security-updates
+
+Table of contents
+ Exit editor mode
+LearnMicrosoft 365
+Ask Learn
+Release notes for Microsoft Office security updates
+Summarize this article for me
+
+These release notes provide information about security fixes that are included in updates to Microsoft Office.
+
+This information applies to Microsoft 365 Apps for enterprise, Microsoft 365 Apps for business, Office 2019, Office LTSC 2021, Office 2021, Office LTSC 2024, and Office 2024.
+
+ Important
+
+Support for Office 2019 ended on October 14, 2025. However, at Microsoft’s sole discretion, we may choose to issue one or more updates to Office 2019 after October 14, 2025. If you haven't already begun to upgrade your environment to a newer version of Office, we recommend that you start now. For more information, see Plan an upgrade from older versions of Office to Microsoft 365 Apps.
+
+November 10, 2026
+
+Current Channel: Version 2610 (Build 20527.20196)
+Monthly Enterprise Channel: Version 2610 (Build 20527.20194)
+Monthly Enterprise Channel: Version 2609 (Build 20430.20264)
+Monthly Enterprise Channel: Version 2608 (Build 20326.20320)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2610 (Build 20527.20192)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2609 (Build 20430.20262)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2608 (Build 20326.20318)
+Office 2024 Retail: Version 2610 (Build 20527.20196)
+Office 2021 Retail: Version 2610 (Build 20527.20196)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.21140)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.21048)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20236)
+
+Access
+CVE-2026-109493
+CVE-2026-109498
+CVE-2026-110058
+CVE-2026-110059
+CVE-2026-110060
+CVE-2026-111301
+CVE-2026-111305
+Excel
+CVE-2026-116927
+CVE-2026-118292
+CVE-2026-118293
+CVE-2026-118294
+CVE-2026-118295
+CVE-2026-118296
+CVE-2026-118297
+CVE-2026-118298
+CVE-2026-118299
+CVE-2026-118300
+CVE-2026-118301
+CVE-2026-118302
+CVE-2026-118700
+CVE-2026-118701
+CVE-2026-118702
+CVE-2026-118703
+CVE-2026-118704
+CVE-2026-118705
+CVE-2026-118706
+CVE-2026-118707
+CVE-2026-118708
+CVE-2026-118709
+CVE-2026-118710
+CVE-2026-118711
+CVE-2026-118712
+CVE-2026-118713
+CVE-2026-118714
+CVE-2026-118715
+CVE-2026-118716
+CVE-2026-118717
+CVE-2026-118718
+CVE-2026-118719
+CVE-2026-118720
+CVE-2026-118721
+CVE-2026-118722
+CVE-2026-118723
+CVE-2026-118724
+CVE-2026-118725
+CVE-2026-118726
+CVE-2026-118727
+CVE-2026-118728
+CVE-2026-118729
+CVE-2026-118730
+CVE-2026-118731
+CVE-2026-118732
+CVE-2026-119986
+CVE-2026-119999
+CVE-2026-120785
+CVE-2026-120786
+CVE-2026-120788
+CVE-2026-120789
+CVE-2026-120790
+CVE-2026-120791
+CVE-2026-123395
+CVE-2026-124187
+CVE-2026-124229
+Office suite
+CVE-2026-110068
+CVE-2026-111285
+CVE-2026-111286
+CVE-2026-111287
+CVE-2026-111288
+CVE-2026-111289
+CVE-2026-111290
+CVE-2026-111291
+CVE-2026-111292
+CVE-2026-111293
+CVE-2026-111294
+CVE-2026-111295
+CVE-2026-111298
+CVE-2026-116717
+CVE-2026-116923
+CVE-2026-119998
+CVE-2026-120003
+CVE-2026-122198
+CVE-2026-124170
+CVE-2026-124174
+CVE-2026-124176
+CVE-2026-124178
+CVE-2026-124179
+CVE-2026-124183
+Outlook
+CVE-2026-110043
+CVE-2026-111309
+CVE-2026-119993
+CVE-2026-119995
+CVE-2026-119996
+CVE-2026-119997
+CVE-2026-123375
+CVE-2026-123376
+CVE-2026-123377
+CVE-2026-123378
+CVE-2026-123379
+CVE-2026-123380
+CVE-2026-123381
+CVE-2026-123382
+CVE-2026-123383
+CVE-2026-123384
+CVE-2026-123385
+CVE-2026-124194
+CVE-2026-124227
+CVE-2026-124228
+PowerPoint
+CVE-2026-109487
+CVE-2026-112734
+CVE-2026-112737
+CVE-2026-112738
+CVE-2026-116922
+CVE-2026-120001
+Visio
+CVE-2026-109494
+CVE-2026-109496
+CVE-2026-112732
+Word
+CVE-2026-108450
+CVE-2026-109491
+CVE-2026-109500
+CVE-2026-109501
+CVE-2026-109503
+CVE-2026-109505
+CVE-2026-110046
+CVE-2026-110047
+CVE-2026-110048
+CVE-2026-110049
+CVE-2026-110050
+CVE-2026-110051
+CVE-2026-110052
+CVE-2026-110053
+CVE-2026-110054
+CVE-2026-110055
+CVE-2026-110056
+CVE-2026-110061
+CVE-2026-110062
+CVE-2026-110064
+CVE-2026-110066
+CVE-2026-110067
+CVE-2026-111299
+CVE-2026-111302
+CVE-2026-111304
+CVE-2026-111306
+CVE-2026-111307
+CVE-2026-111308
+CVE-2026-111310
+CVE-2026-112714
+CVE-2026-112715
+CVE-2026-112716
+CVE-2026-112717
+CVE-2026-112718
+CVE-2026-112719
+CVE-2026-112720
+CVE-2026-112721
+CVE-2026-112722
+CVE-2026-112723
+CVE-2026-112724
+CVE-2026-112726
+CVE-2026-112728
+CVE-2026-112729
+CVE-2026-112730
+CVE-2026-112731
+CVE-2026-112733
+CVE-2026-112735
+CVE-2026-112739
+CVE-2026-112741
+CVE-2026-113759
+CVE-2026-116718
+CVE-2026-116719
+CVE-2026-116720
+CVE-2026-116721
+CVE-2026-116722
+CVE-2026-116925
+CVE-2026-123394
+CVE-2026-124185
+CVE-2026-124233
+October 13, 2026
+
+Current Channel: Version 2609 (Build 20430.20182)
+Monthly Enterprise Channel: Version 2609 (Build 20430.20180)
+Monthly Enterprise Channel: Version 2608 (Build 20326.20232)
+Monthly Enterprise Channel: Version 2607 (Build 20228.20276)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2609 (Build 20430.20178)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2608 (Build 20326.20230)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2607 (Build 20228.20274)
+Office 2024 Retail: Version 2609 (Build 20430.20182)
+Office 2021 Retail: Version 2608 (Build 20326.20232)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.21056)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20974)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20228)
+
+Access
+CVE-2026-94506
+CVE-2026-102849
+CVE-2026-102850
+CVE-2026-105591
+CVE-2026-105592
+CVE-2026-105593
+CVE-2026-105595
+CVE-2026-105596
+CVE-2026-105597
+CVE-2026-105598
+CVE-2026-105714
+CVE-2026-105716
+CVE-2026-105717
+Excel
+CVE-2026-69922
+CVE-2026-97003
+CVE-2026-97004
+CVE-2026-97007
+CVE-2026-97008
+CVE-2026-97010
+CVE-2026-97011
+CVE-2026-97017
+CVE-2026-97738
+CVE-2026-97739
+CVE-2026-97740
+CVE-2026-97741
+CVE-2026-97742
+CVE-2026-97743
+CVE-2026-97745
+CVE-2026-97746
+CVE-2026-97747
+CVE-2026-97748
+CVE-2026-97750
+CVE-2026-97751
+CVE-2026-97752
+CVE-2026-97753
+CVE-2026-97754
+CVE-2026-97755
+CVE-2026-97756
+CVE-2026-97757
+CVE-2026-97758
+CVE-2026-97759
+CVE-2026-97760
+CVE-2026-97761
+CVE-2026-97762
+CVE-2026-97763
+CVE-2026-97765
+CVE-2026-97766
+CVE-2026-97767
+CVE-2026-97768
+CVE-2026-97769
+CVE-2026-97770
+CVE-2026-97771
+CVE-2026-97772
+CVE-2026-97773
+CVE-2026-97775
+CVE-2026-97776
+CVE-2026-97777
+CVE-2026-97778
+CVE-2026-97779
+CVE-2026-97780
+CVE-2026-100209
+CVE-2026-100210
+CVE-2026-100211
+CVE-2026-100212
+CVE-2026-105718
+CVE-2026-108446
+Office suite
+CVE-2026-70096
+CVE-2026-70214
+CVE-2026-70219
+CVE-2026-70254
+CVE-2026-70269
+CVE-2026-70276
+CVE-2026-70281
+CVE-2026-70300
+CVE-2026-77902
+CVE-2026-85340
+CVE-2026-88109
+CVE-2026-88144
+CVE-2026-88145
+CVE-2026-88151
+CVE-2026-88153
+CVE-2026-88154
+CVE-2026-88156
+CVE-2026-88169
+CVE-2026-88172
+CVE-2026-88175
+CVE-2026-88183
+CVE-2026-88184
+CVE-2026-88185
+CVE-2026-88190
+CVE-2026-88192
+CVE-2026-88195
+CVE-2026-88196
+CVE-2026-88197
+CVE-2026-88201
+CVE-2026-96996
+CVE-2026-97001
+CVE-2026-97009
+CVE-2026-97014
+CVE-2026-97774
+CVE-2026-102858
+CVE-2026-102867
+CVE-2026-105599
+CVE-2026-105715
+CVE-2026-108444
+OneNote
+CVE-2026-96997
+CVE-2026-97781
+Outlook
+CVE-2026-70242
+CVE-2026-70256
+CVE-2026-70257
+CVE-2026-70282
+CVE-2026-70291
+CVE-2026-97012
+CVE-2026-97016
+CVE-2026-97749
+CVE-2026-108448
+PowerPoint
+CVE-2026-70215
+CVE-2026-88178
+CVE-2026-88203
+CVE-2026-88207
+CVE-2026-88210
+CVE-2026-97005
+CVE-2026-97744
+CVE-2026-108453
+CVE-2026-108454
+CVE-2026-108455
+Visio
+CVE-2026-102855
+CVE-2026-102856
+CVE-2026-102857
+Word
+CVE-2026-70206
+CVE-2026-70220
+CVE-2026-70263
+CVE-2026-70268
+CVE-2026-70287
+CVE-2026-70301
+CVE-2026-70302
+CVE-2026-83891
+CVE-2026-88150
+CVE-2026-88167
+CVE-2026-88186
+CVE-2026-88202
+CVE-2026-96995
+CVE-2026-108426
+CVE-2026-108427
+CVE-2026-108428
+CVE-2026-108429
+CVE-2026-108430
+CVE-2026-108431
+CVE-2026-108432
+CVE-2026-108434
+CVE-2026-108435
+CVE-2026-108436
+CVE-2026-108437
+CVE-2026-108438
+CVE-2026-108442
+CVE-2026-108443
+CVE-2026-108450
+September 8, 2026
+
+Current Channel: Version 2608 (Build 20326.20144)
+Monthly Enterprise Channel: Version 2608 (Build 20326.20142)
+Monthly Enterprise Channel: Version 2607 (Build 20228.20226)
+Monthly Enterprise Channel: Version 2606 (Build 20131.20260)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2608 (Build 20326.20140)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2607 (Build 20228.20226)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2606 (Build 20131.20258)
+Office 2024 Retail: Version 2608 (Build 20326.20144)
+Office 2021 Retail: Version 2608 (Build 20326.20144)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20976)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20906)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20207)
+
+Access
+CVE-2026-69477
+CVE-2026-69529
+CVE-2026-69614
+CVE-2026-69778
+Excel
+CVE-2026-78518
+CVE-2026-81386
+CVE-2026-81387
+CVE-2026-81388
+CVE-2026-81389
+CVE-2026-81390
+CVE-2026-81391
+CVE-2026-81392
+CVE-2026-81393
+CVE-2026-81394
+CVE-2026-81395
+CVE-2026-81396
+CVE-2026-81397
+CVE-2026-81398
+CVE-2026-81399
+CVE-2026-81400
+CVE-2026-81401
+CVE-2026-81947
+CVE-2026-81948
+CVE-2026-81949
+CVE-2026-81950
+CVE-2026-81951
+CVE-2026-81953
+CVE-2026-81954
+CVE-2026-81956
+CVE-2026-81957
+CVE-2026-81958
+CVE-2026-81959
+CVE-2026-81960
+CVE-2026-85875
+Office suite
+CVE-2026-69285
+CVE-2026-69632
+CVE-2026-69739
+CVE-2026-72938
+CVE-2026-77898
+CVE-2026-78505
+CVE-2026-78515
+CVE-2026-78526
+CVE-2026-80076
+CVE-2026-80078
+CVE-2026-80082
+CVE-2026-80084
+CVE-2026-80086
+CVE-2026-80087
+CVE-2026-80089
+CVE-2026-80091
+CVE-2026-81952
+CVE-2026-81955
+Outlook
+CVE-2026-69629
+CVE-2026-78519
+CVE-2026-80073
+PowerPoint
+CVE-2026-69678
+CVE-2026-69767
+CVE-2026-69797
+CVE-2026-72956
+CVE-2026-72975
+CVE-2026-72977
+CVE-2026-78513
+CVE-2026-80081
+Publisher
+CVE-2026-69742
+CVE-2026-81385
+Word
+CVE-2026-69442
+CVE-2026-69626
+CVE-2026-69671
+CVE-2026-69686
+CVE-2026-69719
+CVE-2026-69722
+CVE-2026-69734
+CVE-2026-69759
+CVE-2026-69764
+CVE-2026-72972
+CVE-2026-72973
+CVE-2026-72974
+CVE-2026-72976
+CVE-2026-77901
+CVE-2026-78502
+CVE-2026-78503
+CVE-2026-78504
+CVE-2026-78506
+CVE-2026-78507
+CVE-2026-78509
+CVE-2026-78510
+CVE-2026-78511
+CVE-2026-78512
+CVE-2026-78514
+CVE-2026-78517
+CVE-2026-78520
+CVE-2026-78521
+CVE-2026-78522
+CVE-2026-78524
+CVE-2026-78525
+CVE-2026-80079
+CVE-2026-80080
+CVE-2026-80085
+CVE-2026-80088
+CVE-2026-80090
+August 11, 2026
+
+Current Channel: Version 2607 (Build 20228.20190)
+Monthly Enterprise Channel: Version 2607 (Build 20228.20188)
+Monthly Enterprise Channel: Version 2606 (Build 20131.20206)
+Monthly Enterprise Channel: Version 2605 (Build 20026.20266)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2607 (Build 20228.20186)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2606 (Build 20131.20206)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20730)
+Office 2024 Retail: Version 2607 (Build 20228.20190)
+Office 2021 Retail: Version 2607 (Build 20228.20190)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20910)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20848)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20197)
+
+Access
+CVE-2026-64906
+CVE-2026-64908
+CVE-2026-64912
+CVE-2026-64914
+CVE-2026-64919
+CVE-2026-64920
+Excel
+CVE-2026-65807
+CVE-2026-68793
+CVE-2026-68794
+CVE-2026-68795
+CVE-2026-68796
+CVE-2026-68797
+CVE-2026-68798
+CVE-2026-68799
+CVE-2026-68800
+CVE-2026-68801
+CVE-2026-68802
+CVE-2026-68803
+CVE-2026-68804
+CVE-2026-68805
+CVE-2026-68806
+CVE-2026-68807
+CVE-2026-68808
+CVE-2026-68810
+CVE-2026-68811
+CVE-2026-68812
+CVE-2026-68813
+CVE-2026-68814
+CVE-2026-68815
+CVE-2026-68816
+CVE-2026-68817
+CVE-2026-70327
+CVE-2026-70328
+Office suite
+CVE-2026-62842
+CVE-2026-63513
+CVE-2026-63515
+CVE-2026-63517
+CVE-2026-63519
+CVE-2026-63524
+CVE-2026-63526
+CVE-2026-63529
+CVE-2026-63532
+CVE-2026-63533
+CVE-2026-64898
+CVE-2026-64899
+CVE-2026-64903
+CVE-2026-64904
+CVE-2026-64909
+CVE-2026-64910
+CVE-2026-64911
+CVE-2026-65656
+CVE-2026-65657
+CVE-2026-65661
+CVE-2026-65664
+CVE-2026-66807
+CVE-2026-68792
+CVE-2026-68818
+CVE-2026-70312
+CVE-2026-70313
+CVE-2026-70314
+CVE-2026-70315
+CVE-2026-70316
+CVE-2026-70317
+CVE-2026-70319
+CVE-2026-70320
+CVE-2026-70322
+CVE-2026-70323
+CVE-2026-70325
+Outlook
+CVE-2026-62882
+CVE-2026-63518
+CVE-2026-70329
+PowerPoint
+CVE-2026-68809
+Word
+CVE-2026-58651
+CVE-2026-63521
+CVE-2026-63525
+CVE-2026-63527
+CVE-2026-63528
+CVE-2026-63530
+CVE-2026-63531
+CVE-2026-64905
+CVE-2026-64907
+CVE-2026-64915
+CVE-2026-64917
+CVE-2026-66806
+CVE-2026-66809
+CVE-2026-66810
+CVE-2026-70310
+CVE-2026-70311
+CVE-2026-70318
+July 14, 2026
+
+Current Channel: Version 2606 (Build 20131.20154)
+Monthly Enterprise Channel: Version 2606 (Build 20131.20152)
+Monthly Enterprise Channel: Version 2605 (Build 20026.20236)
+Monthly Enterprise Channel: Version 2604 (Build 19929.20264)
+Semi-Annual Enterprise Channel (receives Monthly Enterprise Channel builds): Version 2606 (Build 20131.20150)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20730)
+Office 2024 Retail: Version 2606 (Build 20131.20154)
+Office 2021 Retail: Version 2606 (Build 20131.20154)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20884)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20806)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20176)
+
+Word
+CVE-2026-55032
+CVE-2026-55033
+CVE-2026-55038
+CVE-2026-55050
+CVE-2026-55055
+CVE-2026-55124
+CVE-2026-55127
+CVE-2026-55128
+CVE-2026-55130
+CVE-2026-55132
+CVE-2026-55134
+CVE-2026-55142
+Excel
+CVE-2026-47642
+CVE-2026-48580
+CVE-2026-50408
+CVE-2026-50675
+CVE-2026-50678
+CVE-2026-54131
+CVE-2026-54988
+CVE-2026-55024
+CVE-2026-55025
+CVE-2026-55029
+CVE-2026-55031
+CVE-2026-55036
+CVE-2026-55037
+CVE-2026-55039
+CVE-2026-55041
+CVE-2026-55044
+CVE-2026-55046
+CVE-2026-55048
+CVE-2026-55053
+CVE-2026-55054
+CVE-2026-55058
+CVE-2026-55122
+CVE-2026-55131
+CVE-2026-55136
+CVE-2026-55137
+CVE-2026-55138
+CVE-2026-55141
+CVE-2026-55898
+CVE-2026-55899
+CVE-2026-55947
+CVE-2026-55948
+CVE-2026-55949
+CVE-2026-56156
+CVE-2026-58618
+PowerPoint
+CVE-2026-55043
+CVE-2026-55120
+CVE-2026-55123
+OneNote
+CVE-2026-55133
+Office suite
+CVE-2026-47290
+CVE-2026-50301
+CVE-2026-50314
+CVE-2026-50387
+CVE-2026-50467
+CVE-2026-50665
+CVE-2026-55017
+CVE-2026-55018
+CVE-2026-55022
+CVE-2026-55023
+CVE-2026-55026
+CVE-2026-55027
+CVE-2026-55028
+CVE-2026-55035
+CVE-2026-55042
+CVE-2026-55045
+CVE-2026-55047
+CVE-2026-55049
+CVE-2026-55056
+CVE-2026-55057
+CVE-2026-55121
+CVE-2026-55125
+CVE-2026-55129
+CVE-2026-55139
+CVE-2026-55140
+CVE-2026-56192
+CVE-2026-56193
+CVE-2026-56195
+June 9, 2026
+
+Current Channel: Version 2605 (Build 20026.20168)
+Monthly Enterprise Channel: Version 2605 (Build 20026.20166)
+Monthly Enterprise Channel: Version 2604 (Build 19929.20220)
+Monthly Enterprise Channel: Version 2603 (Build 19822.20288)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20678)
+Office 2024 Retail: Version 2605 (Build 20026.20168)
+Office 2021 Retail: Version 2605 (Build 20026.20168)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20842)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20756)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20153)
+
+Word
+CVE-2026-45456
+CVE-2026-45457
+CVE-2026-45458
+CVE-2026-45466
+CVE-2026-45471
+CVE-2026-45486
+CVE-2026-45643
+CVE-2026-47635
+Excel
+CVE-2026-44817
+CVE-2026-44818
+CVE-2026-44820
+CVE-2026-44822
+CVE-2026-44823
+CVE-2026-45455
+CVE-2026-45459
+CVE-2026-45469
+Office suite
+CVE-2026-44819
+CVE-2026-44821
+CVE-2026-44824
+CVE-2026-45460
+CVE-2026-45461
+CVE-2026-45463
+CVE-2026-45472
+CVE-2026-21530
+CVE-2026-45474
+CVE-2026-45475
+CVE-2026-45485
+CVE-2026-45645
+CVE-2026-47293
+May 12, 2026
+
+Current Channel: Version 2604 (Build 19929.20164)
+Monthly Enterprise Channel: Version 2604 (Build 19929.20162)
+Monthly Enterprise Channel: Version 2603 (Build 19822.20240)
+Monthly Enterprise Channel: Version 2602 (Build 19725.20320)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20646)
+Office 2024 Retail: Version 2604 (Build 19929.20164)
+Office 2021 Retail: Version 2604 (Build 19929.20164)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20776)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20670)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20132)
+
+Word
+CVE-2026-35440
+CVE-2026-40361
+CVE-2026-40364
+CVE-2026-40366
+CVE-2026-40367
+CVE-2026-40421
+Excel
+CVE-2026-40359
+CVE-2026-40360
+CVE-2026-40362
+Office suite
+CVE-2026-35436
+CVE-2026-40358
+CVE-2026-40363
+CVE-2026-40418
+CVE-2026-40419
+CVE-2026-40420
+April 14, 2026
+
+Current Channel: Version 2603 (Build 19822.20182)
+Monthly Enterprise Channel: Version 2603 (Build 19822.20180)
+Monthly Enterprise Channel: Version 2602 (Build 19725.20244)
+Monthly Enterprise Channel: Version 2512 (Build 19530.20282)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20622)
+Office 2024 Retail: Version 2603 (Build 19822.20182)
+Office 2021 Retail: Version 2603 (Build 19822.20182)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20742)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20624)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20117)
+
+Word
+CVE-2026-33095
+CVE-2026-23657
+CVE-2026-33822
+CVE-2026-33114
+CVE-2026-33115
+Excel
+CVE-2026-32188
+CVE-2026-32189
+CVE-2026-32197
+CVE-2026-32198
+CVE-2026-32199
+PowerPoint
+CVE-2026-32200
+Office suite
+CVE-2026-32190
+March 10, 2026
+
+Current Channel: Version 2602 (Build 19725.20172)
+Monthly Enterprise Channel: Version 2602 (Build 19725.20170)
+Monthly Enterprise Channel: Version 2512 (Build 19530.20260)
+Monthly Enterprise Channel: Version 2511 (Build 19426.20314)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20570)
+Office 2024 Retail: Version 2602 (Build 19725.20172)
+Office 2021 Retail: Version 2602 (Build 19725.20172)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20700)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20570)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20108)
+
+Excel
+CVE-2026-26107
+CVE-2026-26108
+CVE-2026-26144
+CVE-2026-26109
+CVE-2026-26112
+Office suite
+CVE-2026-26110
+CVE-2026-26113
+February 10, 2026
+
+Current Channel: Version 2601 (Build 19628.20204)
+Monthly Enterprise Channel: Version 2512 (Build 19530.20226)
+Monthly Enterprise Channel: Version 2511 (Build 19426.20294)
+Monthly Enterprise Channel: Version 2510 (Build 19328.20306)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20532)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20714)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20776)
+Office 2024 Retail: Version 2601 (Build 19628.20204)
+Office 2021 Retail: Version 2601 (Build 19628.20204)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20670)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20522)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20097)
+
+Word
+CVE-2026-21514
+CVE-2026-21511
+Excel
+CVE-2026-21258
+CVE-2026-21259
+CVE-2026-21261
+Outlook
+CVE-2026-21260
+Office suite
+CVE-2026-21509
+January 13, 2026
+
+Current Channel: Version 2512 (Build 19530.20144)
+Monthly Enterprise Channel: Version 2511 (Build 19426.20260)
+Monthly Enterprise Channel: Version 2510 (Build 19328.20292)
+Monthly Enterprise Channel: Version 2509 (Build 19231.20300)
+Semi-Annual Enterprise Channel: Version 2508 (Build 19127.20484)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20696)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20762)
+Office 2024 Retail: Version 2512 (Build 19530.20144)
+Office 2021 Retail: Version 2512 (Build 19530.20144)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20638)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20468)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20083)
+
+Word
+CVE-2026-20948
+CVE-2026-20944
+Excel
+CVE-2026-20946
+CVE-2026-20949
+CVE-2026-20950
+CVE-2026-20955
+CVE-2026-20956
+CVE-2026-20957
+Office suite
+CVE-2026-20952
+CVE-2026-20953
+CVE-2026-20943
+December 09, 2025
+
+Current Channel: Version 2511 (Build 19426.20186)
+Monthly Enterprise Channel: Version 2510 (Build 19328.20266)
+Monthly Enterprise Channel: Version 2509 (Build 19231.20274)
+Monthly Enterprise Channel: Version 2508 (Build 19127.20402)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20672)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20742)
+Office 2024 Retail: Version 2511 (Build 19426.20186)
+Office 2021 Retail: Version 2511 (Build 19426.20186)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20620)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20440)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20080)
+
+Word
+CVE-2025-62555
+CVE-2025-62558
+CVE-2025-62559
+Excel
+CVE-2025-62553
+CVE-2025-62556
+CVE-2025-62560
+CVE-2025-62561
+CVE-2025-62563
+CVE-2025-62564
+Outlook
+CVE-2025-62562
+Access
+CVE-2025-62552
+Office suite
+CVE-2025-62554
+CVE-2025-62557
+November 11, 2025
+
+Current Channel: Version 2510 (Build 19328.20190)
+Monthly Enterprise Channel: Version 2509 (Build 19231.20246)
+Monthly Enterprise Channel: Version 2508 (Build 19127.20384)
+Monthly Enterprise Channel: Version 2507 (Build 19029.20300)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20660)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20730)
+Office 2024 Retail: Version 2510 (Build 19328.20190)
+Office 2021 Retail: Version 2510 (Build 19328.20190)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20602)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20402)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20068)
+
+Excel
+CVE-2025-59240
+CVE-2025-60726
+CVE-2025-60727
+CVE-2025-60728
+CVE-2025-62200
+CVE-2025-62201
+CVE-2025-62202
+CVE-2025-62203
+Office suite
+CVE-2025-62199
+CVE-2025-62205
+CVE-2025-62216
+October 14, 2025
+
+Current Channel: Version 2509 (Build 19231.20194)
+Monthly Enterprise Channel: Version 2508 (Build 19127.20302)
+Monthly Enterprise Channel: Version 2507 (Build 19029.20274)
+Monthly Enterprise Channel: Version 2506 (Build 18925.20268)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20634)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20708)
+Office 2024 Retail: Version 2509 (Build 19231.20194)
+Office 2021 Retail: Version 2509 (Build 19231.20194)
+Office 2019 Retail: Version 2508 (Build 19127.20302)
+Office 2016 Retail: Version 2508 (Build 19127.20302)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20574)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20344)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20063)
+
+Excel
+CVE-2025-59231
+CVE-2025-59224
+CVE-2025-59236
+CVE-2025-59225
+CVE-2025-59235
+CVE-2025-59223
+CVE-2025-59233
+CVE-2025-59243
+CVE-2025-59232
+Office suite
+CVE-2025-59227
+CVE-2025-59234
+CVE-2025-59229
+Visio
+CVE-2025-59226
+Word
+CVE-2025-59221
+CVE-2025-59222
+PowerPoint
+CVE-2025-59238
+September 09, 2025
+
+Current Channel: Version 2508 (Build 19127.20222)
+Monthly Enterprise Channel: Version 2507 (Build 19029.20244)
+Monthly Enterprise Channel: Version 2506 (Build 18925.20242)
+Monthly Enterprise Channel: Version 2505 (Build 18827.20244)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20604)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20700)
+Office 2024 Retail: Version 2508 (Build 19127.20222)
+Office 2021 Retail: Version 2508 (Build 19127.20222)
+Office 2019 Retail: Version 2508 (Build 19127.20222)
+Office 2016 Retail: Version 2508 (Build 19127.20222)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20540)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20296)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20051)
+
+Excel
+CVE-2025-54896
+CVE-2025-54898
+CVE-2025-54899
+CVE-2025-54900
+CVE-2025-54901
+CVE-2025-54902
+CVE-2025-54903
+CVE-2025-54904
+Word
+CVE-2025-54905
+Office suite
+CVE-2025-54906
+CVE-2025-54910
+Visio
+CVE-2025-54907
+PowerPoint
+CVE-2025-54908
+August 12, 2025
+
+Current Channel: Version 2507 (Build 19029.20184)
+Monthly Enterprise Channel: Version 2506 (Build 18925.20216)
+Monthly Enterprise Channel: Version 2505 (Build 18827.20230)
+Monthly Enterprise Channel: Version 2504 (Build 18730.20260)
+Semi-Annual Enterprise Channel (Preview): Version 2502 (Build 18526.20546)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20546)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20654)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20882)
+Office 2024 Retail: Version 2507 (Build 19029.20184)
+Office 2021 Retail: Version 2507 (Build 19029.20184)
+Office 2019 Retail: Version 2507 (Build 19029.20184)
+Office 2016 Retail: Version 2507 (Build 19029.20184)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20496)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20244)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20042)
+
+Office suite
+CVE-2025-53731
+CVE-2025-53732
+CVE-2025-53740
+CVE-2025-53766
+Word
+CVE-2025-53733
+CVE-2025-53736
+CVE-2025-53738
+CVE-2025-53784
+Excel
+CVE-2025-53735
+CVE-2025-53737
+CVE-2025-53739
+CVE-2025-53741
+CVE-2025-53759
+PowerPoint
+CVE-2025-53761
+Visio
+CVE-2025-53730
+CVE-2025-53734
+July 08, 2025
+
+Current Channel: Version 2506 (Build 18925.20158)
+Monthly Enterprise Channel: Version 2505 (Build 18827.20202)
+Monthly Enterprise Channel: Version 2504 (Build 18730.20240)
+Monthly Enterprise Channel: Version 2503 (Build 18623.20316)
+Semi-Annual Enterprise Channel (Preview): Version 2502 (Build 18526.20472)
+Semi-Annual Enterprise Channel: Version 2502 (Build 18526.20472)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20604)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20856)
+Office 2024 Retail: Version 2506 (Build 18925.20158)
+Office 2021 Retail: Version 2506 (Build 18925.20158)
+Office 2019 Retail: Version 2506 (Build 18925.20158)
+Office 2016 Retail: Version 2506 (Build 18925.20158)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20428)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20136)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20030)
+
+Office suite
+CVE-2025-49696
+CVE-2025-49702
+CVE-2025-49697
+CVE-2025-47994
+CVE-2025-49695
+CVE-2025-49699
+Office Developer Platform
+CVE-2025-49756
+Excel
+CVE-2025-48812
+CVE-2025-49711
+PowerPoint
+CVE-2025-49705
+Word
+CVE-2025-49700
+CVE-2025-49698
+CVE-2025-49703
+June 10, 2025
+
+Current Channel: Version 2505 (Build 18827.20150)
+Monthly Enterprise Channel: Version 2504 (Build 18730.20220)
+Monthly Enterprise Channel: Version 2503 (Build 18623.20298)
+Monthly Enterprise Channel: Version 2502 (Build 18526.20416)
+Semi-Annual Enterprise Channel (Preview): Version 2502 (Build 18526.20416)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20572)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20820)
+Office 2024 Retail: Version 2505 (Build 18827.20150)
+Office 2021 Retail: Version 2505 (Build 18827.20150)
+Office 2019 Retail: Version 2505 (Build 18827.20150)
+Office 2016 Retail: Version 2505 (Build 18827.20150)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20396)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14334.20090)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20020)
+
+Excel
+CVE-2025-47165
+CVE-2025-47174
+Missing
+CVE-2025-47162
+Outlook
+CVE-2025-47176
+CVE-2025-47171
+PowerPoint
+CVE-2025-47175
+Word
+CVE-2025-47168
+CVE-2025-47170
+CVE-2025-47169
+CVE-2025-47957
+CVE-2025-32717
+Office suite
+CVE-2025-47167
+CVE-2025-47164
+CVE-2025-47173
+CVE-2025-47953
+May 13, 2025
+
+Current Channel: Version 2504 (Build 18730.20168)
+Monthly Enterprise Channel: Version 2503 (Build 18623.20266)
+Monthly Enterprise Channel: Version 2502 (Build 18526.20336)
+Monthly Enterprise Channel: Version 2501 (Build 18429.20240)
+Semi-Annual Enterprise Channel (Preview): Version 2502 (Build 18526.20336)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20538)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20794)
+Office 2024 Retail: Version 2504 (Build 18730.20168)
+Office 2021 Retail: Version 2504 (Build 18730.20168)
+Office 2019 Retail: Version 2504 (Build 18730.20168)
+Office 2016 Retail: Version 2504 (Build 18730.20168)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20360)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.21040)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20012)
+
+Excel
+CVE-2025-29977
+CVE-2025-32704
+CVE-2025-29979
+CVE-2025-30393
+CVE-2025-30379
+CVE-2025-30381
+CVE-2025-30383
+CVE-2025-30375
+CVE-2025-30376
+PowerPoint
+CVE-2025-29978
+Outlook
+CVE-2025-32705
+Office suite
+CVE-2025-30386
+CVE-2025-30377
+April 15, 2025
+
+Monthly Enterprise Channel: Version 2502 (Build 18526.20286)
+
+Excel
+CVE-2025-27751
+April 08, 2025
+
+Current Channel: Version 2503 (Build 18623.20178)
+Monthly Enterprise Channel: Version 2502 (Build 18526.20264)
+Monthly Enterprise Channel: Version 2501 (Build 18429.20216)
+Semi-Annual Enterprise Channel (Preview): Version 2502 (Build 18526.20264)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20512)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20770)
+Office 2024 Retail: Version 2503 (Build 18623.20178)
+Office 2021 Retail: Version 2503 (Build 18623.20178)
+Office 2019 Retail: Version 2503 (Build 18623.20178)
+Office 2016 Retail: Version 2503 (Build 18623.20178)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20328)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.21017)
+Office 2019 Volume Licensed: Version 1808 (Build 10417.20007)
+
+Excel
+CVE-2025-27750
+CVE-2025-26642
+CVE-2025-27751
+CVE-2025-29823
+CVE-2025-27752
+CVE-2025-29791
+OneNote
+CVE-2025-29822
+Word
+CVE-2025-29820
+CVE-2025-27747
+Office suite
+CVE-2025-29792
+CVE-2025-27745
+CVE-2025-27746
+CVE-2025-29816
+CVE-2025-27747
+CVE-2025-27748
+CVE-2025-27749
+March 11, 2025
+
+Current Channel: Version 2502 (Build 18526.20168)
+Monthly Enterprise Channel: Version 2501 (Build 18429.20200)
+Monthly Enterprise Channel: Version 2412 (Build 18324.20272)
+Semi-Annual Enterprise Channel (Preview): Version 2502 (Build 18526.20168)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20468)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20738)
+Office 2024 Retail: Version 2502 (Build 18526.20168)
+Office 2021 Retail: Version 2502 (Build 18526.20168)
+Office 2019 Retail: Version 2502 (Build 18526.20168)
+Office 2016 Retail: Version 2502 (Build 18526.20168)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20286)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.21007)
+Office 2019 Volume Licensed: Version 1808 (Build 10416.20073)
+
+Access
+CVE-2025-26630
+Excel
+CVE-2025-24081
+CVE-2025-24082
+CVE-2025-24075
+Word
+CVE-2025-24078
+CVE-2025-24079
+CVE-2025-24077
+Office suite
+CVE-2025-24080
+CVE-2025-24083
+CVE-2025-26629
+CVE-2025-24057
+February 11, 2025
+
+Current Channel: Version 2501 (Build 18429.20158)
+Monthly Enterprise Channel: Version 2412 (Build 18324.20240)
+Monthly Enterprise Channel: Version 2411 (Build 18227.20240)
+Semi-Annual Enterprise Channel (Preview): Version 2408 (Build 17928.20440)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20440)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20708)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.21114)
+Office 2024 Retail: Version 2501 (Build 18429.20158)
+Office 2021 Retail: Version 2501 (Build 18429.20158)
+Office 2019 Retail: Version 2501 (Build 18429.20158)
+Office 2016 Retail: Version 2501 (Build 18429.20158)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20252)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20857)
+Office 2019 Volume Licensed: Version 1808 (Build 10416.20058)
+
+Access
+CVE-2025-21186
+CVE-2025-21395
+CVE-2025-21366
+Excel
+CVE-2025-21354
+CVE-2025-21362
+CVE-2025-21394
+CVE-2025-21386
+CVE-2025-21390
+CVE-2025-21387
+CVE-2025-21383
+CVE-2025-21381
+CVE-2025-21364
+Outlook
+CVE-2025-21357
+Visio
+CVE-2025-21356
+CVE-2025-21345
+Word
+CVE-2025-21363
+CVE-2025-21397
+Office suite
+CVE-2025-21346
+CVE-2025-21392
+CVE-2025-21365
+January 14, 2025
+
+Current Channel: Version 2412 (Build 18324.20190)
+Monthly Enterprise Channel: Version 2411 (Build 18227.20222)
+Monthly Enterprise Channel: Version 2410 (Build 18129.20242)
+Semi-Annual Enterprise Channel (Preview): Version 2408 (Build 17928.20392)
+Semi-Annual Enterprise Channel: Version 2408 (Build 17928.20392)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20688)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.21064)
+Office 2024 Retail: Version 2412 (Build 18324.20190)
+Office 2021 Retail: Version 2412 (Build 18324.20190)
+Office 2019 Retail: Version 2412 (Build 18324.20190)
+Office 2016 Retail: Version 2412 (Build 18324.20190)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20222)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20839)
+Office 2019 Volume Licensed: Version 1808 (Build 10416.20047)
+
+Access
+CVE-2025-21395
+CVE-2025-21366
+CVE-2025-21186
+Excel
+CVE-2025-21364
+CVE-2025-21354
+CVE-2025-21362
+Outlook
+CVE-2025-21357
+Visio
+CVE-2025-21356
+CVE-2025-21345
+Word
+CVE-2025-21363
+Office suite
+CVE-2025-21346
+CVE-2025-21365
+December 10, 2024
+
+Current Channel: Version 2411 (Build 18227.20162)
+Monthly Enterprise Channel: Version 2410 (Build 18129.20200)
+Monthly Enterprise Channel: Version 2409 (Build 18025.20242)
+Semi-Annual Enterprise Channel (Preview): Version 2408 (Build 17928.20336)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20670)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20998)
+Office 2024 Retail: Version 2411 (Build 18227.20162)
+Office 2021 Retail: Version 2411 (Build 18227.20162)
+Office 2019 Retail: Version 2411 (Build 18227.20162)
+Office 2016 Retail: Version 2411 (Build 18227.20162)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20190)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20828)
+Office 2019 Volume Licensed: Version 1808 (Build 10416.20027)
+
+Access
+CVE-2024-49142
+Excel
+CVE-2024-49069
+Project
+ADV240002
+Office suite
+CVE-2024-49065
+CVE-2024-49059
+November 12, 2024
+
+Current Channel: Version 2410 (Build 18129.20158)
+Monthly Enterprise Channel: Version 2409 (Build 18025.20214)
+Monthly Enterprise Channel: Version 2408 (Build 17928.20286)
+Semi-Annual Enterprise Channel (Preview): Version 2408 (Build 17928.20286)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20648)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20948)
+Office 2024 Retail: Version 2410 (Build 18129.20158)
+Office 2021 Retail: Version 2410 (Build 18129.20158)
+Office 2019 Retail: Version 2410 (Build 18129.20158)
+Office 2016 Retail: Version 2410 (Build 18129.20158)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20162)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20812)
+Office 2019 Volume Licensed: Version 1808 (Build 10416.20007)
+
+Excel
+CVE-2024-49026
+CVE-2024-49027
+CVE-2024-49028
+CVE-2024-49029
+CVE-2024-49030
+Word
+CVE-2024-49033
+Office suite
+CVE-2024-49031
+CVE-2024-49032
+October 08, 2024
+
+Current Channel: Version 2409 (Build 18025.20140)
+Monthly Enterprise Channel: Version 2408 (Build 17928.20216)
+Monthly Enterprise Channel: Version 2407 (Build 17830.20232)
+Semi-Annual Enterprise Channel (Preview): Version 2408 (Build 17928.20216)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20612)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20822)
+Office 2024 Retail: Version 2409 (Build 18025.20140)
+Office 2021 Retail: Version 2409 (Build 18025.20140)
+Office 2019 Retail: Version 2409 (Build 18025.20140)
+Office 2016 Retail: Version 2409 (Build 18025.20140)
+Office LTSC 2024 Volume Licensed: Version 2408 (Build 17932.20130)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20791)
+Office 2019 Volume Licensed: Version 1808 (Build 10415.20025)
+
+Excel
+CVE-2024-43504
+Visio
+CVE-2024-43505
+Office suite
+CVE-2024-43616
+CVE-2024-43576
+CVE-2024-43609
+September 10, 2024
+
+Current Channel: Version 2408 (Build 17928.20156)
+Monthly Enterprise Channel: Version 2407 (Build 17830.20210)
+Monthly Enterprise Channel: Version 2406 (Build 17726.20222)
+Semi-Annual Enterprise Channel (Preview): Version 2408 (Build 17928.20156)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20588)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20810)
+Office 2021 Retail: Version 2408 (Build 17928.20156)
+Office 2019 Retail: Version 2408 (Build 17928.20156)
+Office 2016 Retail: Version 2408 (Build 17928.20156)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20771)
+Office 2019 Volume Licensed: Version 1808 (Build 10414.20002)
+
+Excel
+CVE-2024-43465
+Visio
+CVE-2024-38016
+CVE-2024-43463
+Publisher
+CVE-2024-38226
+August 13, 2024
+
+Current Channel: Version 2407 (Build 17830.20166)
+Monthly Enterprise Channel: Version 2406 (Build 17726.20206)
+Monthly Enterprise Channel: Version 2405 (Build 17628.20206)
+Semi-Annual Enterprise Channel (Preview): Version 2402 (Build 17328.20550)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20550)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20792)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.21094)
+Office 2021 Retail: Version 2407 (Build 17830.20166)
+Office 2019 Retail: Version 2407 (Build 17830.20166)
+Office 2016 Retail: Version 2407 (Build 17830.20166)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20763)
+Office 2019 Volume Licensed: Version 1808 (Build 10413.20020)
+
+Excel
+CVE-2024-38172
+CVE-2024-38170
+Outlook
+CVE-2024-38173
+PowerPoint
+CVE-2024-38171
+Project
+CVE-2024-38189
+Visio
+CVE-2024-38169
+Office suite
+CVE-2024-38200
+July 09, 2024
+
+Current Channel: Version 2406 (Build 17726.20160)
+Monthly Enterprise Channel: Version 2405 (Build 17628.20188)
+Monthly Enterprise Channel: Version 2404 (Build 17531.20210)
+Semi-Annual Enterprise Channel (Preview): Version 2402 (Build 17328.20452)
+Semi-Annual Enterprise Channel: Version 2402 (Build 17328.20452)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20738)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.21042)
+Office 2021 Retail: Version 2406 (Build 17726.20160)
+Office 2019 Retail: Version 2406 (Build 17726.20160)
+Office 2016 Retail: Version 2406 (Build 17726.20160)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20736)
+Office 2019 Volume Licensed: Version 1808 (Build 10412.20006)
+
+Access
+CVE-2023-38545
+Outlook
+CVE-2024-38020
+Office suite
+CVE-2024-38021
+June 11, 2024
+
+Current Channel: Version 2405 (Build 17628.20144)
+Monthly Enterprise Channel: Version 2404 (Build 17531.20190)
+Monthly Enterprise Channel: Version 2403 (Build 17425.20258)
+Semi-Annual Enterprise Channel (Preview): Version 2402 (Build 17328.20414)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20716)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.21026)
+Office 2021 Retail: Version 2405 (Build 17628.20144)
+Office 2019 Retail: Version 2405 (Build 17628.20144)
+Office 2016 Retail: Version 2405 (Build 17628.20144)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20721)
+Office 2019 Volume Licensed: Version 1808 (Build 10411.20011)
+
+Office suite
+CVE-2024-30101
+CVE-2024-30104
+Word
+CVE-2024-30102
+Outlook
+CVE-2024-30103
+May 14, 2024
+
+Current Channel: Version 2404 (Build 17531.20152)
+Monthly Enterprise Channel: Version 2403 (Build 17425.20236)
+Monthly Enterprise Channel: Version 2402 (Build 17328.20346)
+Semi-Annual Enterprise Channel (Preview): Version 2402 (Build 17328.20346)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20674)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20990)
+Office 2021 Retail: Version 2404 (Build 17531.20152)
+Office 2019 Retail: Version 2404 (Build 17531.20152)
+Office 2016 Retail: Version 2404 (Build 17531.20152)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20706)
+Office 2019 Volume Licensed: Version 1808 (Build 10410.20026)
+
+Excel
+CVE-2024-30042
+April 09, 2024
+
+Current Channel: Version 2403 (Build 17425.20176)
+Monthly Enterprise Channel: Version 2402 (Build 17328.20282)
+Monthly Enterprise Channel: Version 2401 (Build 17231.20304)
+Semi-Annual Enterprise Channel (Preview): Version 2402 (Build 17328.20282)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20636)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20960)
+Office 2021 Retail: Version 2403 (Build 17425.20176)
+Office 2019 Retail: Version 2403 (Build 17425.20176)
+Office 2016 Retail: Version 2403 (Build 17425.20176)
+
+Excel
+CVE-2024-26257
+March 12, 2024
+
+Current Channel: Version 2402 (Build 17328.20184)
+Monthly Enterprise Channel: Version 2401 (Build 17231.20290)
+Monthly Enterprise Channel: Version 2312 (Build 17126.20216)
+Semi-Annual Enterprise Channel (Preview): Version 2402 (Build 17328.20184)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20600)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20928)
+Office 2021 Retail: Version 2402 (Build 17328.20184)
+Office 2019 Retail: Version 2402 (Build 17328.20184)
+Office 2016 Retail: Version 2402 (Build 17328.20184)
+
+Office suite
+CVE-2024-26199
+February 13, 2024
+
+Current Channel: Version 2401 (Build 17231.20236)
+Monthly Enterprise Channel: Version 2312 (Build 17126.20190)
+Monthly Enterprise Channel: Version 2311 (Build 17029.20178)
+Semi-Annual Enterprise Channel (Preview): Version 2308 (Build 16731.20550)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20550)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20916)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20870)
+Office 2021 Retail: Version 2401 (Build 17231.20236)
+Office 2019 Retail: Version 2401 (Build 17231.20236)
+Office 2016 Retail: Version 2401 (Build 17231.20236)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20637)
+Office 2019 Volume Licensed: Version 1808 (Build 10407.20032)
+
+Outlook
+CVE-2024-21378
+CVE-2024-21402
+Visio
+CVE-2024-21384
+Word
+CVE-2024-21379
+Office suite
+CVE-2024-21413
+CVE-2024-20673
+January 09, 2024
+
+Current Channel: Version 2312 (Build 17126.20132)
+Monthly Enterprise Channel: Version 2311 (Build 17029.20140)
+Monthly Enterprise Channel: Version 2310 (Build 16924.20202)
+Semi-Annual Enterprise Channel (Preview): Version 2308 (Build 16731.20504)
+Semi-Annual Enterprise Channel: Version 2308 (Build 16731.20504)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20884)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20848)
+Office 2021 Retail: Version 2312 (Build 17126.20132)
+Office 2019 Retail: Version 2312 (Build 17126.20132)
+Office 2016 Retail: Version 2312 (Build 17126.20132)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20624)
+Office 2019 Volume Licensed: Version 1808 (Build 10406.20006)
+
+Office suite
+CVE-2024-20677
+December 12, 2023
+
+Current Channel: Version 2311 (Build 17029.20108)
+Monthly Enterprise Channel: Version 2310 (Build 16924.20180)
+Monthly Enterprise Channel: Version 2309 (Build 16827.20324)
+Semi-Annual Enterprise Channel (Preview): Version 2308 (Build 16731.20460)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20868)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20832)
+Office 2021 Retail: Version 2311 (Build 17029.20108)
+Office 2019 Retail: Version 2311 (Build 17029.20108)
+Office 2016 Retail: Version 2311 (Build 17029.20108)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20615)
+Office 2019 Volume Licensed: Version 1808 (Build 10405.20015)
+
+Outlook
+CVE-2023-35636
+Word
+CVE-2023-36009
+November 14, 2023
+
+Current Channel: Version 2310 (Build 16924.20150)
+Monthly Enterprise Channel: Version 2309 (Build 16827.20278)
+Monthly Enterprise Channel: Version 2308 (Build 16731.20398)
+Semi-Annual Enterprise Channel (Preview): Version 2308 (Build 16731.20398)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20846)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20816)
+Office 2021 Retail: Version 2310 (Build 16924.20150)
+Office 2019 Retail: Version 2310 (Build 16924.20150)
+Office 2016 Retail: Version 2310 (Build 16924.20150)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20604)
+Office 2019 Volume Licensed: Version 1808 (Build 10404.20013)
+
+Excel
+CVE-2023-36041
+CVE-2023-36037
+Office suite
+CVE-2023-36045
+CVE-2023-36413
+October 10, 2023
+
+Current Channel: Version 2309 (Build 16827.20166)
+Monthly Enterprise Channel: Version 2308 (Build 16731.20316)
+Monthly Enterprise Channel: Version 2307 (Build 16626.20222)
+Semi-Annual Enterprise Channel (Preview): Version 2308 (Build 16731.20316)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20810)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20796)
+Office 2021 Retail: Version 2309 (Build 16827.20166)
+Office 2019 Retail: Version 2309 (Build 16827.20166)
+Office 2016 Retail: Version 2309 (Build 16827.20166)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20582)
+Office 2019 Volume Licensed: Version 1808 (Build 10403.20013)
+
+Office suite
+CVE-2023-36569
+CVE-2023-36568
+September 12, 2023
+
+Current Channel: Version 2308 (Build 16731.20234)
+Monthly Enterprise Channel: Version 2307 (Build 16626.20208)
+Monthly Enterprise Channel: Version 2306 (Build 16529.20254)
+Semi-Annual Enterprise Channel (Preview): Version 2308 (Build 16731.20234)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20766)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20772)
+Office 2021 Retail: Version 2308 (Build 16731.20234)
+Office 2019 Retail: Version 2308 (Build 16731.20234)
+Office 2016 Retail: Version 2308 (Build 16731.20234)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20565)
+Office 2019 Volume Licensed: Version 1808 (Build 10402.20023)
+
+Excel
+CVE-2023-36766
+Outlook
+CVE-2023-36763
+Word
+CVE-2023-36762
+CVE-2023-36761
+Office suite
+CVE-2023-27911
+CVE-2023-36767
+CVE-2023-41764
+CVE-2023-36765
+August 08, 2023
+
+Current Channel: Version 2307 (Build 16626.20170)
+Monthly Enterprise Channel: Version 2306 (Build 16529.20226)
+Monthly Enterprise Channel: Version 2305 (Build 16501.20286)
+Semi-Annual Enterprise Channel (Preview): Version 2302 (Build 16130.20714)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20714)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20742)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.21078)
+Office 2021 Retail: Version 2307 (Build 16626.20170)
+Office 2019 Retail: Version 2307 (Build 16626.20170)
+Office 2016 Retail: Version 2307 (Build 16626.20170)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20546)
+Office 2019 Volume Licensed: Version 1808 (Build 10401.20025)
+
+Excel
+CVE-2023-36896
+CVE-2023-35371
+Outlook
+CVE-2023-36893
+Visio
+CVE-2023-35372
+CVE-2023-36865
+CVE-2023-36866
+Office suite
+CVE-2023-36897
+ADV230003
+CVE-2023-36895
+July 11, 2023
+
+Current Channel: Version 2306 (Build 16529.20182)
+Monthly Enterprise Channel: Version 2305 (Build 16501.20242)
+Monthly Enterprise Channel: Version 2304 (Build 16327.20348)
+Semi-Annual Enterprise Channel (Preview): Version 2302 (Build 16130.20644)
+Semi-Annual Enterprise Channel: Version 2302 (Build 16130.20644)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20706)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.21040)
+Office 2021 Retail: Version 2306 (Build 16529.20182)
+Office 2019 Retail: Version 2306 (Build 16529.20182)
+Office 2016 Retail: Version 2306 (Build 16529.20182)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20529)
+Office 2019 Volume Licensed: Version 1808 (Build 10400.20007)
+
+Excel
+CVE-2023-33162
+CVE-2023-33161
+CVE-2023-33158
+Outlook
+CVE-2023-35311
+CVE-2023-33151
+Office suite
+CVE-2023-33148
+CVE-2023-33152
+CVE-2023-33149
+CVE-2023-33153
+CVE-2023-33150
+June 13, 2023
+
+Current Channel: Version 2305 (Build 16501.20210)
+Monthly Enterprise Channel: Version 2304 (Build 16327.20324)
+Monthly Enterprise Channel: Version 2303 (Build 16227.20354)
+Semi-Annual Enterprise Channel (Preview): Version 2302 (Build 16130.20580)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20680)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.21024)
+Office 2021 Retail: Version 2305 (Build 16501.20210)
+Office 2019 Retail: Version 2305 (Build 16501.20210)
+Office 2016 Retail: Version 2305 (Build 16501.20210)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20517)
+Office 2019 Volume Licensed: Version 1808 (Build 10399.20000)
+
+Excel
+CVE-2023-32029
+CVE-2023-33133
+CVE-2023-33137
+Office suite
+CVE-2023-33131
+CVE-2023-33146
+May 09, 2023
+
+Current Channel: Version 2304 (Build 16327.20248)
+Monthly Enterprise Channel: Version 2303 (Build 16227.20318)
+Monthly Enterprise Channel: Version 2302 (Build 16130.20500)
+Semi-Annual Enterprise Channel (Preview): Version 2302 (Build 16130.20500)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20660)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.21000)
+Office 2021 Retail: Version 2304 (Build 16327.20248)
+Office 2019 Retail: Version 2304 (Build 16327.20248)
+Office 2016 Retail: Version 2304 (Build 16327.20248)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20503)
+Office 2019 Volume Licensed: Version 1808 (Build 10398.20008)
+
+Access
+CVE-2023-29333
+Excel
+CVE-2023-24953
+Word
+CVE-2023-29335
+Office suite
+CVE-2023-29344
+April 11, 2023
+
+Current Channel: Version 2303 (Build 16227.20280)
+Monthly Enterprise Channel: Version 2302 (Build 16130.20394)
+Monthly Enterprise Channel: Version 2301 (Build 16026.20274)
+Semi-Annual Enterprise Channel (Preview): Version 2302 (Build 16130.20394)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20626)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20964)
+Office 2021 Retail: Version 2303 (Build 16227.20280)
+Office 2019 Retail: Version 2303 (Build 16227.20280)
+Office 2016 Retail: Version 2303 (Build 16227.20280)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20493)
+Office 2019 Volume Licensed: Version 1808 (Build 10397.20021)
+
+Publisher
+CVE-2023-28295
+CVE-2023-28287
+Word
+CVE-2023-28311
+Office suite
+CVE-2023-28285
+March 14, 2023
+
+Current Channel: Version 2302 (Build 16130.20306)
+Monthly Enterprise Channel: Version 2301 (Build 16026.20238)
+Monthly Enterprise Channel: Version 2212 (Build 15928.20298)
+Semi-Annual Enterprise Channel (Preview): Version 2301 (Build 16130.20306)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20578)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20944)
+Office 2021 Retail: Version 2301 (Build 16130.20306)
+Office 2019 Retail: Version 2302 (Build 16130.20306)
+Office 2016 Retail: Version 2302 (Build 16130.20306)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20481)
+Office 2019 Volume Licensed: Version 1808 (Build 10396.20023)
+
+Excel
+CVE-2023-23399
+CVE-2023-23398
+Outlook
+CVE-2023-23397
+February 14, 2023
+
+Current Channel: Version 2301 (Build 16026.20200)
+Monthly Enterprise Channel: Version 2212 (Build 15928.20282)
+Monthly Enterprise Channel: Version 2211 (Build 15831.20280)
+Semi-Annual Enterprise Channel (Preview): Version 2208 (Build 15601.20538)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20538)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20926)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21336)
+Office 2021 Retail: Version 2301 (Build 16026.20200)
+Office 2019 Retail: Version 2301 (Build 16026.20200)
+Office 2016 Retail: Version 2301 (Build 16026.20200)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20461)
+Office 2019 Volume Licensed: Version 1808 (Build 10395.20020)
+
+Word
+CVE-2023-21716
+Office suite
+CVE-2023-21714
+Publisher
+CVE-2023-21715
+January 10, 2023
+
+Current Channel: Version 2212 (Build 15928.20216)
+Monthly Enterprise Channel: Version 2211 (Build 15831.20252)
+Monthly Enterprise Channel: Version 2210 (Build 15726.20292)
+Semi-Annual Enterprise Channel (Preview): Version 2208 (Build 15601.20456)
+Semi-Annual Enterprise Channel: Version 2208 (Build 15601.20456)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20888)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21286)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22286)
+Office 2021 Retail: Version 2212 (Build 15928.20216)
+Office 2019 Retail: Version 2212 (Build 15928.20216)
+Office 2016 Retail: Version 2212 (Build 15928.20216)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20447)
+Office 2019 Volume Licensed: Version 1808 (Build 10394.20022)
+
+Excel
+This update removes the "temporarily restoring old behavior" mechanism that was introduced in the August 2022 Update KB5017166.
+Visio
+CVE-2023-21736
+CVE-2023-21737
+CVE-2023-21738
+CVE-2023-21741
+Office suite
+CVE-2023-21734
+CVE-2023-21735
+December 13, 2022
+
+Current Channel: Version 2211 (Build 15831.20208)
+Monthly Enterprise Channel: Version 2210 (Build 15726.20262)
+Monthly Enterprise Channel: Version 2209 (Build 15629.20298)
+Semi-Annual Enterprise Channel (Preview): Version 2208 (Build 15601.20378)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20858)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21248)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22270)
+Office 2021 Retail: Version 2211 (Build 15831.20208)
+Office 2019 Retail: Version 2211 (Build 15831.20208)
+Office 2016 Retail: Version 2211 (Build 15831.20208)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20435)
+Office 2019 Volume Licensed: Version 1808 (Build 10393.20026)
+
+OneNote
+CVE-2022-44691
+Visio
+CVE-2022-44694
+CVE-2022-44695
+CVE-2022-44696
+Office suite
+CVE-2022-47211
+CVE-2022-47212
+CVE-2022-47213
+CVE-2022-26804
+CVE-2022-26805
+CVE-2022-26806
+CVE-2022-44692
+November 08, 2022
+
+Current Channel: Version 2210 (Build 15726.20202)
+Monthly Enterprise Channel: Version 2209 (Build 15629.20258)
+Monthly Enterprise Channel: Version 2208 (Build 15601.20286)
+Semi-Annual Enterprise Channel (Preview): Version 2208 (Build 15601.20286)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20806)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21200)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22253)
+Office 2021 Retail: Version 2210 (Build 15726.20202)
+Office 2019 Retail: Version 2210 (Build 15726.20202)
+Office 2016 Retail: Version 2210 (Build 15726.20202)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20416)
+Office 2019 Volume Licensed: Version 1808 (Build 10392.20029)
+
+Excel
+CVE-2022-41104
+CVE-2022-41106
+CVE-2022-41063
+Word
+CVE-2022-41061
+CVE-2022-41060
+CVE-2022-41103
+Office suite
+CVE-2022-41105
+CVE-2022-41107
+October 11, 2022
+
+Current Channel: Version 2209 (Build 15629.20208)
+Monthly Enterprise Channel: Version 2208 (Build 15601.20230)
+Monthly Enterprise Channel: Version 2207 (Build 15427.20308)
+Semi-Annual Enterprise Channel (Preview): Version 2208 (Build 15601.20230)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20764)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21186)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22239)
+Office 2021 Retail: Version 2209 (Build 15629.20208)
+Office 2019 Retail: Version 2209 (Build 15629.20208)
+Office 2016 Retail: Version 2209 (Build 15629.20208)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20400)
+Office 2019 Volume Licensed: Version 1808 (Build 10391.20029)
+
+Word
+CVE-2022-41031
+CVE-2022-38049
+CVE-2022-38048
+Office suite
+CVE-2022-38001
+September 13, 2022
+
+Current Channel: Version 2208 (Build 15601.20148)
+Monthly Enterprise Channel: Version 2207 (Build 15427.20284)
+Monthly Enterprise Channel: Version 2205 (Build 15225.20422)
+Semi-Annual Enterprise Channel (Preview): Version 2208 (Build 15601.20148)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20724)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21142)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22215)
+Office 2021 Retail: Version 2208 (Build 15601.20148)
+Office 2019 Retail: Version 2208 (Build 15601.20148)
+Office 2016 Retail: Version 2208 (Build 15601.20148)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20375)
+Office 2019 Volume Licensed: Version 1808 (Build 10390.20024)
+
+PowerPoint
+CVE-2022-37962
+Visio
+CVE-2022-37963
+CVE-2022-38010
+August 09, 2022
+
+Current Channel: Version 2207 (Build 15427.20210)
+Monthly Enterprise Channel: Version 2206 (Build 15330.20306 released August 18, 2022)
+Monthly Enterprise Channel: Version 2206 (Build 15330.20298 rolled back)
+Monthly Enterprise Channel: Version 2205 (Build 15225.20394)
+Semi-Annual Enterprise Channel (Preview): Version 2202 (Build 14931.20660)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20660)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21096)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21582)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22197)
+Office 2021 Retail: Version 2207 (Build 15427.20210)
+Office 2019 Retail: Version 2207 (Build 15427.20210)
+Office 2016 Retail: Version 2207 (Build 15427.20210)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20358)
+Office 2019 Volume Licensed: Version 1808 (Build 10389.20033)
+
+Excel
+CVE-2022-33631
+This update also includes an additional security enhancement. Excel XLL add-ins that have incorrect or missing file extensions are blocked. For more information see Microsoft Excel Security Enhancements in the August 2022 Update (KB5017166).
+Outlook
+CVE-2022-35742
+Office suite
+CVE-2022-34717
+July 12, 2022
+
+Current Channel: Version 2206 (Build 15330.20246)
+Monthly Enterprise Channel: Version 2205 (Build 15225.20356)
+Monthly Enterprise Channel: Version 2204 (Build 15128.20312)
+Semi-Annual Enterprise Channel (Preview): Version 2202 (Build 14931.20604)
+Semi-Annual Enterprise Channel: Version 2202 (Build 14931.20604)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21062)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21528)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22183)
+Office 2021 Retail: Version 2206 (Build 15330.20246)
+Office 2019 Retail: Version 2206 (Build 15330.20246)
+Office 2016 Retail: Version 2206 (Build 15330.20246)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20345)
+Office 2019 Volume Licensed: Version 1808 (Build 10388.20027)
+
+Office suite
+CVE-2022-26934
+CVE-2022-33632
+June 14, 2022
+
+Current Channel: Version 2205 (Build 15225.20288)
+Monthly Enterprise Channel: Version 2204 (Build 15128.20280)
+Monthly Enterprise Channel: Version 2203 (Build 15028.20282)
+Semi-Annual Enterprise Channel (Preview): Version 2202 (Build 14931.20494)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.21018)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21418)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22162)
+Office 2021 Retail: Version 2205 (Build 15225.20288)
+Office 2019 Retail: Version 2205 (Build 15225.20288)
+Office 2016 Retail: Version 2205 (Build 15225.20288)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20324)
+
+Office suite
+CVE-2022-30174
+May 10, 2022
+
+Current Channel: Version 2204 (Build 15128.20224)
+Monthly Enterprise Channel: Version 2203 (Build 15028.20248)
+Monthly Enterprise Channel: Version 2202 (Build 14931.20392)
+Semi-Annual Enterprise Channel (Preview): Version 2202 (Build 14931.20392)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.20962)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21334)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22145)
+Office 2021 Retail: Version 2204 (Build 15128.20224)
+Office 2019 Retail: Version 2204 (Build 15128.20224)
+Office 2016 Retail: Version 2204 (Build 15128.20224)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20303)
+Office 2019 Volume Licensed: Version 1808 (Build 10386.20017)
+
+Excel
+CVE-2022-29109
+Office suite
+CVE-2022-29107
+April 12, 2022
+
+Current Channel: Version 2203 (Build 15028.20204)
+Monthly Enterprise Channel: Version 2202 (Build 14931.20274)
+Monthly Enterprise Channel: Version 2201 (Build 14827.20246)
+Semi-Annual Enterprise Channel (Preview): Version 2202 (Build 14931.20274)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.20910)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21278)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22121)
+Office 2021 Retail: Version 2203 (Build 15028.20204)
+Office 2019 Retail: Version 2203 (Build 15028.20204)
+Office 2016 Retail: Version 2203 (Build 15028.20204)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20281)
+Office 2019 Volume Licensed: Version 1808 (Build 10385.20027)
+
+Excel
+CVE-2022-26901
+CVE-2022-24473
+March 08, 2022
+
+Current Channel: Version 2202 (Build 14931.20132)
+Monthly Enterprise Channel: Version 2201 (Build 14827.20220)
+Monthly Enterprise Channel: Version 2112 (Build 14729.20360)
+Semi-Annual Enterprise Channel (Preview): Version 2202 (Build 14931.20132)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.20852)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21214)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22105)
+Office 2021 Retail: Version 2202 (Build 14931.20132)
+Office 2019 Retail: Version 2202 (Build 14931.20132)
+Office 2016 Retail: Version 2202 (Build 14931.20132)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20255)
+Office 2019 Volume Licensed: Version 1808 (Build 10384.20023)
+
+Visio
+CVE-2022-24510
+CVE-2022-24509
+CVE-2022-24461
+Word
+CVE-2022-24511
+CVE-2022-24462
+February 08, 2022
+
+Current Channel: Version 2201 (Build 14827.20192)
+Monthly Enterprise Channel: Version 2112 (Build 14729.20322)
+Monthly Enterprise Channel: Version 2111 (Build 14701.20314)
+Semi-Annual Enterprise Channel (Preview): Version 2108 (Build 14326.20784)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.20784)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21156)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21886)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22100)
+Office 2021 Retail: Version 2201 (Build 14827.20192)
+Office 2019 Retail: Version 2201 (Build 14827.20192)
+Office 2016 Retail: Version 2201 (Build 14827.20192)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20238)
+Office 2019 Volume Licensed: Version 1808 (Build 10383.20027)
+
+Excel
+CVE-2022-22716
+Visio
+CVE-2022-21988
+Office suite
+CVE-2022-22003
+CVE-2022-23252
+CVE-2022-22004
+January 11, 2022
+
+Current Channel: Version 2112 (Build 14729.20248)
+Monthly Enterprise Channel: Version 2111 (Build 14701.20290)
+Monthly Enterprise Channel: Version 2110 (Build 14527.20364)
+Semi-Annual Enterprise Channel (Preview): Version 2108 (Build 14326.20738)
+Semi-Annual Enterprise Channel: Version 2108 (Build 14326.20738)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21106)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21856)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22086)
+Office 2021 Retail: Version 2112 (Build 14729.20248)
+Office 2019 Retail: Version 2112 (Build 14729.20248)
+Office 2016 Retail: Version 2112 (Build 14729.20248)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20216)
+Office 2019 Volume Licensed: Version 1808 (Build 10382.20034)
+
+Office suite
+CVE-2022-21840
+CVE-2022-21841
+The updates this month also provide defense-in-depth security enhancements for Excel. For more information, see Microsoft Excel Security Enhancements in the January 2022 Update.
+December 14, 2021
+
+Current Channel: Version 2111 (Build 14701.20248)
+Monthly Enterprise Channel: Version 2110 (Build 14527.20340)
+Monthly Enterprise Channel: Version 2109 (Build 14430.20380)
+Semi-Annual Enterprise Channel (Preview): Version 2108 (Build 14326.20692)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21086)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21842)
+Office 2021 Retail: Version 2111 (Build 14701.20248)
+Office 2019 Retail: Version 2111 (Build 14701.20248)
+Office 2016 Retail: Version 2111 (Build 14701.20248)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20204)
+Office 2019 Volume Licensed: Version 1808 (Build 10381.20020)
+
+Excel
+CVE-2021-43256
+Office suite
+CVE-2021-42293
+CVE-2021-43875
+CVE-2021-42295
+CVE-2021-43255
+November 09, 2021
+
+Current Channel: Version 2110 (Build 14527.20276)
+Monthly Enterprise Channel: Version 2109 (Build 14430.20342)
+Monthly Enterprise Channel: Version 2108 (Build 14326.20600)
+Semi-Annual Enterprise Channel (Preview): Version 2108 (Build 14326.20600)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21050)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21820)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22060)
+Office 2021 Retail: Version 2110 (Build 14527.20276)
+Office 2019 Retail: Version 2110 (Build 14527.20276)
+Office 2016 Retail: Version 2110 (Build 14527.20276)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20176)
+Office 2019 Volume Licensed: Version 1808 (Build 10380.20037)
+
+Excel
+CVE-2021-40442
+CVE-2021-42292
+Word
+CVE-2021-42296
+Office suite
+CVE-2021-41368
+October 12, 2021
+
+Current Channel: Version 2109 (Build 14430.20298)
+Monthly Enterprise Channel: Version 2108 (Build 14326.20508)
+Monthly Enterprise Channel: Version 2107 (Build 14228.20340)
+Semi-Annual Enterprise Channel (Preview): Version 2108 (Build 14326.20508)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.21004)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21792)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22045)
+Office 2021 Retail: Version 2109 (Build 14430.20298)
+Office 2019 Retail: Version 2109 (Build 14430.20298)
+Office 2016 Retail: Version 2109 (Build 14430.20298)
+Office LTSC 2021 Volume Licensed: Version 2108 (Build 14332.20145)
+Office 2019 Volume Licensed: Version 1808 (Build 10379.20043)
+
+Excel
+CVE-2021-40485
+CVE-2021-40471
+CVE-2021-40479
+CVE-2021-40473
+CVE-2021-40474
+CVE-2021-40472
+Visio
+CVE-2021-40481
+CVE-2021-40480
+Word
+CVE-2021-40486
+Office suite
+CVE-2021-40454
+September 14, 2021
+
+Current Channel: Version 2108 (Build 14326.20404)
+Monthly Enterprise Channel: Version 2107 (Build 14228.20324)
+Monthly Enterprise Channel: Version 2106 (Build 14131.20384)
+Semi-Annual Enterprise Channel (Preview): Version 2108 (Build 14326.20404)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.20960)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21766)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22032)
+Office 2019 Retail: Version 2108 (Build 14326.20404)
+Office 2016 Retail: Version 2108 (Build 14326.20404)
+Office 2019 Volume Licensed: Version 1808 (Build 10378.20029)
+
+Access
+CVE-2021-38646
+Excel
+CVE-2021-38655
+Visio
+CVE-2021-38653
+CVE-2021-38654
+Word
+CVE-2021-38656
+Office suite
+CVE-2021-38657
+CVE-2021-38650
+CVE-2021-38658
+CVE-2021-38659
+August 17, 2021
+
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.22021)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22021)
+
+Office suite
+CVE-2021-34478 (Fix was updated for this CVE)
+August 10, 2021
+
+Current Channel: Version 2107 (Build 14228.20250)
+Monthly Enterprise Channel: Version 2106 (Build 14131.20360)
+Monthly Enterprise Channel: Version 2105 (Build 14026.20352)
+Semi-Annual Enterprise Channel (Preview): Version 2102 (Build 13801.20864)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.20864)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21736)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.22017)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.22017)
+Office 2019 Retail: Version 2107 (Build 14228.20250)
+Office 2016 Retail: Version 2107 (Build 14228.20250)
+Office 2019 Volume Licensed: Version 1808 (Build 10377.20023)
+
+Word
+CVE-2021-36941
+Office suite
+CVE-2021-34478
+July 13, 2021
+
+Current Channel: Version 2106 (Build 14131.20320)
+Monthly Enterprise Channel: Version 2105 (Build 14026.20334)
+Monthly Enterprise Channel: Version 2104 (Build 13929.20434)
+Semi-Annual Enterprise Channel (Preview): Version 2102 (Build 13801.20808)
+Semi-Annual Enterprise Channel: Version 2102 (Build 13801.20808)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21704)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21986)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21986)
+Office 2019 Retail: Version 2106 (Build 14131.20320)
+Office 2016 Retail: Version 2106 (Build 14131.20320)
+Office 2019 Volume Licensed: Version 1808 (Build 10376.20033)
+
+Excel
+CVE-2021-34501
+Word
+CVE-2021-34452
+Office suite
+CVE-2021-34469
+June 08, 2021
+
+Current Channel: Version 2105 (Build 14026.20270)
+Monthly Enterprise Channel: Version 2104 (Build 13929.20408)
+Monthly Enterprise Channel: Version 2103 (Build 13901.20554)
+Semi-Annual Enterprise Channel (Preview): Version 2102 (Build 13801.20738)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21668)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21952)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21952)
+Office 2019 Retail: Version 2105 (Build 14026.20270)
+Office 2016 Retail: Version 2105 (Build 14026.20270)
+Office 2019 Volume Licensed: Version 1808 (Build 10375.20036)
+
+Access
+CVE-2021-28455
+Excel
+CVE-2021-31939
+Outlook
+CVE-2021-31949
+Office suite
+CVE-2021-31941
+CVE-2021-31940
+May 11, 2021
+
+Current Channel: Version 2104 (Build 13929.20372)
+Monthly Enterprise Channel: Version 2103 (Build 13901.20516)
+Monthly Enterprise Channel: Version 2102 (Build 13801.20638)
+Semi-Annual Enterprise Channel (Preview): Version 2102 (Build 13801.20638)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21624)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21912)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21912)
+Office 2019 Retail: Version 2104 (Build 13929.20372)
+Office 2016 Retail: Version 2104 (Build 13929.20372)
+Office 2019 Volume Licensed: Version 1808 (Build 10374.20040)
+
+Access
+CVE-2021-28455
+Excel
+CVE-2021-31174
+CVE-2021-31175
+CVE-2021-31178
+CVE-2021-31179
+CVE-2021-31177
+Word
+CVE-2021-31180
+Office suite
+CVE-2021-31176
+April 13, 2021
+
+Current Channel: Version 2103 (Build 13901.20400)
+Monthly Enterprise Channel: Version 2102 (Build 13801.20506)
+Monthly Enterprise Channel: Version 2101 (Build 13628.20664)
+Semi-Annual Enterprise Channel (Preview): Version 2102 (Build 13801.20506)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21506)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21814)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21814)
+Office 2019 Retail: Version 2103 (Build 13901.20400)
+Office 2016 Retail: Version 2103 (Build 13901.20400)
+Office 2019 Volume Licensed: Version 1808 (Build 10373.20050)
+
+Excel
+CVE-2021-28451
+CVE-2021-28454
+CVE-2021-28456
+Outlook
+CVE-2021-28452
+Word
+CVE-2021-28453
+Office suite
+CVE-2021-28449
+March 09, 2021
+
+Current Channel: Version 2102 (Build 13801.20294)
+Monthly Enterprise Channel: Version 2101 (Build 13628.20528)
+Monthly Enterprise Channel: Version 2012 (Build 13530.20628)
+Semi-Annual Enterprise Channel (Preview): Version 2102 (Build 13801.20294)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21348)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21686)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21686)
+Office 2019 Retail: Version 2102 (Build 13801.20294)
+Office 2016 Retail: Version 2102 (Build 13801.20294)
+Office 2019 Volume Licensed: Version 1808 (Build 10372.20060)
+
+Excel
+CVE-2021-27054
+CVE-2021-27057
+CVE-2021-27053
+PowerPoint
+CVE-2021-27056
+Visio
+CVE-2021-27055
+Office suite
+CVE-2021-27058
+CVE-2021-24108
+February 09, 2021
+
+Current Channel: Version 2101 (Build 13628.20380)
+Monthly Enterprise Channel: Version 2012 (Build 13530.20528)
+Monthly Enterprise Channel: Version 2011 (Build 13426.20658)
+Semi-Annual Enterprise Channel (Preview): Version 2008 (Build 13127.21216)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21216)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21594)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.21008)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21594)
+Office 2019 Retail: Version 2101 (Build 13628.20380)
+Office 2016 Retail: Version 2101 (Build 13628.20380)
+Office 2019 Volume Licensed: Version 1808 (Build 10371.20060)
+
+Excel
+CVE-2021-24069
+CVE-2021-24070
+CVE-2021-24067
+January 12, 2021
+
+Current Channel: Version 2012 (Build 13530.20376)
+Monthly Enterprise Channel: Version 2011 (Build 13426.20526)
+Monthly Enterprise Channel: Version 2010 (Build 13328.20550)
+Semi-Annual Enterprise Channel (Preview): Version 2008 (Build 13127.21064)
+Semi-Annual Enterprise Channel: Version 2008 (Build 13127.21064)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21504)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20994)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21504)
+Office 2019 Retail: Version 2012 (Build 13530.20376)
+Office 2016 Retail: Version 2012 (Build 13530.20376)
+Office 2019 Volume Licensed: Version 1808 (Build 10370.20052)
+
+Excel
+CVE-2021-1714
+CVE-2021-1713
+Word
+CVE-2021-1715
+CVE-2021-1716
+Office suite
+CVE-2021-1711
+December 08, 2020
+
+Current Channel: Version 2011 (Build 13426.20332)
+Monthly Enterprise Channel: Version 2010 (Build 13328.20478)
+Monthly Enterprise Channel: Version 2009 (Build 13231.20620)
+Semi-Annual Enterprise Channel (Preview): Version 2008 (Build 13127.20910)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21416)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20984)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21416)
+Office 2019 Retail: Version 2011 (Build 13426.20332)
+Office 2016 Retail: Version 2011 (Build 13426.20332)
+Office 2019 Volume Licensed: Version 1808 (Build 10369.20032)
+
+Excel
+CVE-2020-17123
+CVE-2020-17125
+CVE-2020-17126
+CVE-2020-17128
+CVE-2020-17129
+CVE-2020-17130
+Outlook
+CVE-2020-17119
+PowerPoint
+CVE-2020-17124
+November 10, 2020
+
+Current Channel: Version 2010 (Build 13328.20356)
+Monthly Enterprise Channel: Version 2009 (Build 13231.20514)
+Monthly Enterprise Channel: Version 2008 (Build 13127.20760)
+Semi-Annual Enterprise Channel (Preview): Version 2008 (Build 13127.20760)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21330)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20974)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21330)
+Office 2019 Retail: Version 2010 (Build 13328.20356)
+Office 2016 Retail: Version 2010 (Build 13328.20356)
+Office 2019 Volume Licensed: Version 1808 (Build 10368.20035)
+
+Excel
+CVE-2020-17064
+CVE-2020-17065
+CVE-2020-17067
+Word
+CVE-2020-17020
+Office suite
+CVE-2020-17062
+CVE-2020-17063
+October 13, 2020
+
+Current Channel: Version 2009 (Build 13231.20390)
+Monthly Enterprise Channel: Version 2008 (Build 13127.20638)
+Monthly Enterprise Channel: Version 2007 (Build 13029.20708)
+Semi-Annual Enterprise Channel (Preview): Version 2008 (Build 13127.20638)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21236)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20966)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21236)
+Office 2019 Retail: Version 2009 (Build 13231.20390)
+Office 2016 Retail: Version 2009 (Build 13231.20390)
+Office 2019 Volume Licensed: Version 1808 (Build 10367.20048)
+
+Access
+CVE-2020-16957
+Excel
+CVE-2020-16929
+CVE-2020-16931
+CVE-2020-16932
+Outlook
+CVE-2020-16947
+CVE-2020-16949
+Word
+CVE-2020-16933
+Office suite
+CVE-2020-16930
+CVE-2020-16955
+CVE-2020-16928
+CVE-2020-16934
+CVE-2020-16918
+CVE-2020-16954
+September 08, 2020
+
+Current Channel: Version 2008 (Build 13127.20408)
+Monthly Enterprise Channel: Version 2007 (Build 13029.20534)
+Monthly Enterprise Channel: Version 2006 (Build 13001.20648)
+Semi-Annual Enterprise Channel (Preview): Version 2008 (Build 13127.20408)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.21104)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20946)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.21104)
+Office 2019 Retail: Version 2008 (Build 13127.20408)
+Office 2016 Retail: Version 2008 (Build 13127.20408)
+Office 2019 Volume Licensed: Version 1808 (Build 10366.20016)
+
+Excel
+CVE-2020-1594
+CVE-2020-1335
+CVE-2020-1224
+CVE-2020-1332
+Word
+CVE-2020-1338
+CVE-2020-1218
+Office suite
+CVE-2020-1193
+August 11, 2020
+
+Current Channel: Version 2007 (Build 13029.20344)
+Monthly Enterprise Channel: Version 2006 (Build 13001.20520)
+Monthly Enterprise Channel: Version 2005 (Build 12827.20656)
+Semi-Annual Enterprise Channel (Preview): Version 2002 (Build 12527.20988)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.20988)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20934)
+Semi-Annual Enterprise Channel: Version 1902 (Build 11328.20644)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.20988)
+Office 2019 Retail: Version 2007 (Build 13029.20344)
+Office 2016 Retail: Version 2007 (Build 13029.20344)
+Office 2019 Volume Licensed: Version 1808 (Build 10364.20059)
+
+Access
+CVE-2020-1582
+Excel
+CVE-2020-1495
+CVE-2020-1498
+CVE-2020-1496
+CVE-2020-1497
+CVE-2020-1494
+Outlook
+CVE-2020-1493
+CVE-2020-1483
+Word
+CVE-2020-1583
+CVE-2020-1502
+CVE-2020-1503
+Office suite
+CVE-2020-1581
+CVE-2020-1563
+July 14, 2020
+
+Current Channel: Version 2006 (Build 13001.20384)
+Monthly Enterprise Channel: Version 2005 (Build 12827.20538)
+Monthly Enterprise Channel: Version 2004 (Build 12730.20602)
+Semi-Annual Enterprise Channel (Preview): Version 2002 (Build 12527.20880)
+Semi-Annual Enterprise Channel: Version 2002 (Build 12527.20880)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20904)
+Semi-Annual Enterprise Channel: Version 1902 (Build 11328.20624)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.20880)
+
+Excel
+CVE-2020-1240
+Outlook
+CVE-2020-1349
+Project
+CVE-2020-1449
+Word
+CVE-2020-1445
+CVE-2020-1342
+CVE-2020-1447
+CVE-2020-1446
+Office suite
+CVE-2020-1458
+June 09, 2020
+
+Current Channel: Version 2005 (Build 12827.20336)
+Monthly Enterprise Channel: Version 2004 (Build 12730.20430)
+Monthly Enterprise Channel: Version 2003 (Build 12624.20708)
+Semi-Annual Enterprise Channel (Preview): Version 2002 (Build 12527.20720)
+Semi-Annual Enterprise Channel: Version 1908 (Build 11929.20838)
+Semi-Annual Enterprise Channel: Version 1902 (Build 11328.20602)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.20720)
+
+Excel
+CVE-2020-1226
+CVE-2020-1225
+Outlook
+CVE-2020-1229
+Project
+CVE-2020-1322
+Office suite
+CVE-2020-1321
+May 12, 2020
+
+Monthly Channel: Version 2004 (Build 12730.20270)
+Monthly Enterprise Channel: Version 2003 (Build 12624.20588)
+Semi-Annual Channel (Targeted): Version 2002 (Build 12527.20612)
+Semi-Annual Channel: Version 1908 (Build 11929.20776)
+Semi-Annual Channel: Version 1902 (Build 11328.20586)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.20612)
+
+Excel
+CVE-2020-0901
+April 14, 2020
+
+Monthly Channel: Version 2003 (Build 12624.20442)
+Semi-Annual Channel (Targeted): Version 2002 (Build 12527.20442)
+Semi-Annual Channel: Version 1908 (Build 11929.20708)
+Semi-Annual Channel: Version 1902 (Build 11328.20564)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.20442)
+
+Excel
+CVE-2020-0906
+CVE-2020-0979
+Word
+CVE-2020-0980
+Office suite
+CVE-2020-0760
+CVE-2020-0991
+CVE-2020-0961
+March 10, 2020
+
+Monthly Channel: Version 2002 (Build 12527.20278)
+Semi-Annual Channel (Targeted): Version 2002 (Build 12527.20278)
+Semi-Annual Channel: Version 1908 (Build 11929.20648)
+Semi-Annual Channel: Version 1902 (Build 11328.20554)
+Microsoft 365 Apps on Windows 7: Version 2002 (Build 12527.20278)
+
+Word
+CVE-2020-0850
+CVE-2020-0892
+CVE-2020-0855
+CVE-2020-0851
+February 11, 2020
+
+Monthly Channel: Version 2001 (Build 12430.20264)
+Semi-Annual Channel (Targeted): Version 1908 (Build 11929.20606)
+Semi-Annual Channel: Version 1908 (Build 11929.20606)
+Semi-Annual Channel: Version 1902 (Build 11328.20526)
+Semi-Annual Channel: Version 1808 (Build 10730.20438)
+
+Excel
+CVE-2020-0759
+Outlook
+CVE-2020-0696
+Office suite
+CVE-2020-0697
+January 14, 2020
+
+Monthly Channel: Version 1912 (Build 12325.20298)
+Semi-Annual Channel (Targeted): Version 1908 (Build 11929.20562)
+Semi-Annual Channel: Version 1908 (Build 11929.20562)
+Semi-Annual Channel: Version 1902 (Build 11328.20512)
+Semi-Annual Channel: Version 1808 (Build 10730.20432)
+
+Excel
+CVE-2020-0651
+CVE-2020-0650
+CVE-2020-0653
+Office suite
+CVE-2020-0652
+December 10, 2019
+
+Monthly Channel: Version 1911 (Build 12228.20364)
+Semi-Annual Channel (Targeted): Version 1908 (Build 11929.20516)
+Semi-Annual Channel: Version 1902 (Build 11328.20492)
+Semi-Annual Channel: Version 1808 (Build 10730.20426)
+
+Excel
+CVE-2019-1464
+PowerPoint
+CVE-2019-1462
+Word
+CVE-2019-1461
+Office suite
+CVE-2019-1400
+CVE-2019-1463
+November 12, 2019
+
+Monthly Channel: Version 1910 (Build 12130.20344)
+Semi-Annual Channel (Targeted): Version 1908 (Build 11929.20436)
+Semi-Annual Channel: Version 1902 (Build 11328.20468)
+Semi-Annual Channel: Version 1808 (Build 10730.20416)
+
+Excel
+CVE-2019-1448
+CVE-2019-1446
+Office suite
+CVE-2019-1449
+CVE-2019-1402
+October 08, 2019
+
+Monthly Channel: Version 1909 (Build 12026.20320)
+Semi-Annual Channel (Targeted): Version 1908 (Build 11929.20388)
+Semi-Annual Channel: Version 1902 (Build 11328.20438)
+Semi-Annual Channel: Version 1808 (Build 10730.20386)
+
+Excel
+CVE-2019-1331
+CVE-2019-1327
+September 10, 2019
+
+Monthly Channel: Version 1908 (Build 11929.20300)
+Semi-Annual Channel (Targeted): Version 1908 (Build 11929.20300)
+Semi-Annual Channel: Version 1902 (Build 11328.20420)
+Semi-Annual Channel: Version 1808 (Build 10730.20380)
+
+Excel
+CVE-2019-1263
+CVE-2019-1297
+Office suite
+CVE-2019-1246
+CVE-2019-1264
+August 13, 2019
+
+Monthly Channel: Version 1907 (Build 11901.20218)
+Semi-Annual Channel (Targeted): Version 1902 (Build 11328.20392)
+Semi-Annual Channel: Version 1902 (Build 11328.20392)
+Semi-Annual Channel: Version 1808 (Build 10730.20370)
+Semi-Annual Channel: Version 1803 (Build 9126.2432)
+
+Outlook
+CVE-2019-1199
+CVE-2019-1204
+CVE-2019-1200
+Word
+CVE-2019-1205
+CVE-2019-1201
+Office suite
+CVE-2019-1155
+July 09, 2019
+
+Monthly Channel: Version 1906 (Build 11727.20244)
+Semi-Annual Channel (Targeted): Version 1902 (Build 11328.20368)
+Semi-Annual Channel: Version 1902 (Build 11328.20368)
+Semi-Annual Channel: Version 1808 (Build 10730.20360)
+Semi-Annual Channel: Version 1803 (Build 9126.2428)
+
+Excel
+CVE-2019-1112
+CVE-2019-1110
+CVE-2019-1111
+Outlook
+CVE-2019-1084
+Skype for Business
+CVE-2019-1084
+Office suite
+CVE-2019-1109
+June 11, 2019
+
+Monthly Channel: Version 1905 (Build 11629.20246)
+Semi-Annual Channel (Targeted): Version 1902 (Build 11328.20318)
+Semi-Annual Channel: Version 1808 (Build 10730.20348)
+Semi-Annual Channel: Version 1803 (Build 9126.2388)
+
+Word
+CVE-2019-1034
+CVE-2019-1035
+May 14, 2019
+
+Monthly Channel: Version 1904 (Build 11601.20204)
+Semi-Annual Channel (Targeted): Version 1902 (Build 11328.20286)
+Semi-Annual Channel: Version 1808 (Build 10730.20344)
+Semi-Annual Channel: Version 1803 (Build 9126.2387)
+
+Word
+CVE-2019-0953
+Office suite
+CVE-2019-0945
+CVE-2019-0946
+April 09, 2019
+
+Monthly Channel: Version 1903 (Build 11425.20204)
+Semi-Annual Channel (Targeted): Version 1902 (Build 11328.20230)
+Semi-Annual Channel: Version 1808 (Build 10730.20334)
+Semi-Annual Channel: Version 1803 (Build 9126.2382)
+
+Excel
+CVE-2019-0828
+Office suite
+CVE-2019-0822
+CVE-2019-0827
+CVE-2019-0824
+CVE-2019-0825
+CVE-2019-0826
+CVE-2019-0801
+March 12, 2019
+
+There are no security updates for any channel this month.
+
+February 12, 2019
+
+Monthly Channel: Version 1901 (Build 11231.20174)
+Semi-Annual Channel (Targeted): Version 1808 (Build 10730.20280)
+Semi-Annual Channel: Version 1808 (Build 10730.20280)
+Semi-Annual Channel: Version 1803 (Build 9126.2356)
+Semi-Annual Channel: Version 1708 (Build 8431.2372)
+
+Excel
+CVE-2019-0669
+Office suite
+CVE-2019-0540
+CVE-2019-0674
+CVE-2019-0673
+CVE-2019-0672
+CVE-2019-0582
+CVE-2019-0671
+January 8, 2019
+
+Monthly Channel: Version 1812 (Build 11126.20196)
+Semi-Annual Targeted Channel: Version 1808 (Build 10730.20264)
+Semi-Annual Channel: Version 1808 (Build 10730.20264)
+Semi-Annual Channel: Version 1803 (Build 9126.2351)
+Semi-Annual Channel: Version 1708 (Build 8431.2366)
+
+Outlook
+CVE-2019-0559
+Word: Security updates
+CVE-2019-0561
+CVE-2019-0585
+Office suite: Security updates
+CVE-2019-0541
+CVE-2019-0560
+December 11, 2018
+
+Monthly Channel: Version 1811 (Build 11029.20108)
+Semi-Annual Channel: Version 1803 (Build 9126.2336)
+Semi-Annual Channel (Targeted): Version 1808 (Build 10730.20262)
+
+Excel
+CVE-2018-8597
+CVE-2018-8627
+CVE-2018-8598
+CVE-2018-8636
+Outlook
+CVE-2018-8587
+PowerPoint
+CVE-2018-8628
+November 13, 2018
+
+Monthly Channel: Version 1810 (Build 11001.20108)
+Semi-Annual Channel: Version 1803 (Build 9126.2315)
+Semi-Annual Channel (Targeted): Version 1808 (Build 10730.20205)
+
+Excel
+CVE-2018-8574
+CVE-2018-8577
+Outlook
+CVE-2018-8522
+CVE-2018-8524
+CVE-2018-8558
+CVE-2018-8576
+CVE-2018-8579
+CVE-2018-8582
+Project
+CVE-2018-8575
+Skype for Business
+CVE-2018-8546
+Word
+CVE-2018-8573
+Additional resources
+
+Training
+
+Learning path
+
+Solution Architect: Design Microsoft Power Platform solutions - Training
+
+Learn how a solution architect designs solutions.
+
+Certification
+
+Microsoft Office Specialist: Expert (Office 2019) - Certifications
+
+Demonstrate that you have the advanced skills needed to get the most out of Office by earning a Microsoft Office Specialist: Expert certification in multiple Office programs.
+
+Last updated on 11/10/2026

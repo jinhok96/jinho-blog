@@ -1,0 +1,26 @@
+# 가져온 시각: 2026-11-13T17:45:45.093Z
+# 원본: https://support.microsoft.com/en-us/office/lifecycle/lc-account/about-office-what-version-of-office-am-i-using
+About Office: What version of Office am I using? | Microsoft Support
+https://support.microsoft.com/en-us/office/lifecycle/lc-account/about-office-what-version-of-office-am-i-using#tabpanel_1_mac
+
+About Office: What version of Office am I using?
+Applies To
+Get help with Copilot
+Which version of Office am I using?
+How do I manage a third-party Microsoft 365 subscription?
+Build a Microsoft 365 version reference card.
+Windows
+Mac
+
+Open any Office application, such as Word.
+
+Go to the Word menu and select About Word.
+
+In the dialog box that opens, it will show the version number as well as the license type. In the example below, the version number is 16.18 and the license is a one-time purchase of Office 2019 for Mac.
+
+Related articles
+Update history for Office for Mac
+Release notes for Office for Mac
+Still not sure?
+
+If the steps above didn't work for you, you're likely using an older version of Office. To learn what version you have, go to Find details for other versions of Office.

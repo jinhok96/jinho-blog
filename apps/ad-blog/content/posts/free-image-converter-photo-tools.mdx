@@ -1,9 +1,10 @@
 ---
 title: Best Free Image Converter and Photo Tools
-description: 'We tested 14 free tools on 6 jobs: HEIC and WebP to JPG, photos under 100 KB, background and metadata removal, and video for Discord. Our pick for each.'
+description: 'We tested 18 free tools on 8 photo and video jobs, from HEIC to JPG and 100 KB photos to trimming video and iPhone video to MP4. Our pick for each job.'
 category: software
 hub: true
 createdAt: 2026-10-26T04:10:00Z
+updatedAt: 2026-11-13T19:50:00Z
 tags:
   - image converter
   - photos
@@ -14,15 +15,15 @@ tags:
 
 ![Illustration of an open blue toolbox holding two paintbrushes and a photo print of green hills under a sun, with a film reel leaning against the box](./images/free-image-converter-photo-tools/free-photo-video-tools-hero.webp)
 
-The best free image converter for most people is **XnConvert**, a desktop app for Windows, Mac and Linux that turned whole folders of HEIC and WebP files into JPGs without uploading anything. It was our pick in both conversion tests we ran, with one setting change: tick **Preserve color profile**, or colors come out duller. For the other everyday photo jobs, our picks are **GIMP** for getting a photo under 100 KB, **iLoveIMG** for removing a background, **ExifCleaner** or the **ExifRemove** website for stripping location data, and **HandBrake** for fitting a video under Discord's 20 MB limit.
+The best free image converter for most people is **XnConvert**, a desktop app for Windows, Mac and Linux that turned whole folders of HEIC and WebP files into JPGs without uploading anything. It was our pick in both conversion tests we ran, with one setting change: tick **Preserve color profile**, or colors come out duller. For the other everyday photo jobs, our picks are **GIMP** for getting a photo under 100 KB, **iLoveIMG** for removing a background, **ExifCleaner** or the **ExifRemove** website for stripping location data, and **HandBrake** for fitting a video under Discord's 20 MB limit. For video, **ezgif** trims a clip without re-encoding it and **LosslessCut** turns an iPhone video into an MP4 with every frame intact.
 
-This page collects six tests of 14 free tools that we ran from October 15 to 22, 2026. Each job had its own set of test files, and we judged the tools on what you notice afterward: whether colors, rotation and location data survive, how big the file comes out, and whether your photo has to be uploaded. Each section below gives the short result and links to the full test, which has step-by-step instructions and screenshots.
+This page collects eight tests of 18 free tools that we ran from October 15 to November 10, 2026. Each job had its own set of test files, and we judged the tools on what you notice afterward: whether colors, rotation, location data and video frames survive, how big the file comes out, and whether your photo or video has to be uploaded. Each section below gives the short result and links to the full test, which has step-by-step instructions and screenshots.
 
-![Six cards, one per job. HEIC to JPG: XnConvert, app, 24 photos in 33 seconds, all upright. WebP to JPG: XnConvert, app, smallest JPGs of 5 tools, ezgif for transparent images. Photo under 100 KB: resize, then GIMP, 20 of 20 photos fit at 1024 pixels. Remove a background: iLoveIMG, website, only free full-size cutouts. Remove photo metadata: ExifCleaner, app, or the ExifRemove website. Video for Discord: HandBrake, app, a bitrate set for 19 MB gave 17 to 19 MB files](./images/free-image-converter-photo-tools/best-free-photo-tool-per-job.webp)
+![Eight cards, one per job. HEIC to JPG: XnConvert, app, 24 photos in 33 seconds, all upright. WebP to JPG: XnConvert, app, smallest JPGs of 5 tools, ezgif for transparent images. Photo under 100 KB: resize, then GIMP, 20 of 20 photos fit at 1024 pixels. Remove background: iLoveIMG, website, only free full-size cutouts. Photo metadata: ExifCleaner, app, or the ExifRemove website. Video for Discord: HandBrake, app, a bitrate set for 19 MB gave 17 to 19 MB files. Trim a video: ezgif, website, Copy original kept every frame, LosslessCut too. iPhone video to MP4: LosslessCut, app, copied all 1,440 frames and kept the date](./images/free-image-converter-photo-tools/best-free-photo-tool-per-job.webp)
 
 ## Best free photo tools at a glance
 
-Free desktop apps won five of the six jobs, and the one website pick, iLoveIMG, won background removal because it was the only site that gave full-size downloads for free.
+Free desktop apps won six of the eight jobs. The two website picks are iLoveIMG for background removal, the only site that gave full-size downloads for free, and ezgif for trimming video, whose default setting kept every frame.
 
 | Job | Our pick | Works on | Why it won | Full test |
 | --- | --- | --- | --- | --- |
@@ -39,7 +40,7 @@ Free desktop apps won five of the six jobs, and the one website pick, iLoveIMG, 
 
 ## How we tested
 
-We ran XnConvert and ExifCleaner on a Linux computer through their own windows and buttons, the way you would on Windows or a Mac, and used the websites in the Chromium browser without signing in. Two apps ran without their windows. GIMP's exports ran from a script with GIMP's default export settings, which in the HEIC test gave the same files as exporting from GIMP's window. HandBrake's window wouldn't open on our test computer, so we ran the same HandBrake version with its built-in presets and settings. Each job had test files built so we knew what the right result looked like:
+We ran XnConvert and ExifCleaner on a Linux computer through their own windows and buttons, the way you would on Windows or a Mac, and used the websites in the Chromium browser without signing in. Two apps ran without their windows. GIMP's exports ran from a script with GIMP's default export settings, which in the HEIC test gave the same files as exporting from GIMP's window. HandBrake's window wouldn't open on our test computer, so we ran the same HandBrake version with its built-in presets and settings. In the November video tests, LosslessCut 3.69.0, VLC 3.0.20 and HandBrake 1.7.2 ran through their own windows and menus. Each job had test files built so we knew what the right result looked like:
 
 - **HEIC to JPG:** 24 HEIC photos with a wide-color profile, a date and a GPS location, 4 of them portraits stored sideways
 - **WebP to JPG:** 6 photos, 3 graphics with transparent backgrounds and a 12-frame animation
@@ -47,6 +48,7 @@ We ran XnConvert and ExifCleaner on a Linux computer through their own windows a
 - **Background removal:** 20 photos from a public test set that comes with hand-drawn outlines of each subject, so every cutout could be scored
 - **Metadata:** 8 photos tagged with a made-up GPS location, camera, serial number, author and date
 - **Video:** three 1-minute 1080p clips (animation, live action and a screen recording with small text), scored with Netflix's VMAF video quality score
+- **Trimming and iPhone video:** a 60-second clip from an open movie saved as an H.264 MP4 and as an HEVC .mov in iPhone's default format, with a recording date and location tag, plus a copy flagged as vertical video. We compared every frame of each result with the original, along with the sound, length, orientation and tags
 
 In the 100 KB test, a script found the highest JPEG quality that fit each limit, and we used GIMP for the steps and screenshots. We couldn't run Windows or macOS, so built-in options such as the Mac's Preview, the iPhone Photos app and Windows Paint come from Apple's and Microsoft's own guides, not from our measurements.
 
@@ -68,7 +70,7 @@ The tools split on WebP images with a transparent background, such as logos and 
 
 ![Grid of conversion results for a dark logo and a white SALE sticker on transparent backgrounds. XnConvert, GIMP, CloudConvert and ezgif filled the background white, so the white sticker vanished. iLoveIMG filled it black, so the dark logo vanished](./images/convert-webp-to-jpg-free/transparent-webp-to-jpg-results.webp)
 
-If you need to keep the transparency, save as PNG instead of JPG. No tool gave a clean result for an animated WebP: XnConvert and GIMP each kept a single frame, and the websites returned cut-off pieces or failed. CloudConvert's free plan allows [10 conversions a day](https://cloudconvert.com/pricing), and ezgif says uploads are deleted an hour later. Steps for XnConvert and ezgif are in our [WebP to JPG test of five free tools](/posts/convert-webp-to-jpg-free).
+If you need to keep the transparency, save as PNG instead of JPG. No tool gave a clean result for an animated WebP: XnConvert and GIMP each kept a single frame, and the websites returned cut-off pieces or failed. CloudConvert's free plan gives [10 conversion credits a day](https://cloudconvert.com/pricing), and a conversion uses at least one, more if it runs longer than a minute. ezgif says uploads are deleted an hour later. Steps for XnConvert and ezgif are in our [WebP to JPG test of five free tools](/posts/convert-webp-to-jpg-free).
 
 ## Best free way to compress an image to 100KB: resize first, then GIMP
 
@@ -104,7 +106,13 @@ Don't rely on HandBrake's ready-made Social presets for Discord. Free Discord ac
 
 ## Best free way to trim a video without losing quality: ezgif
 
-ezgif's free Video cutter is the best way we found to trim a video without losing quality, because its default **Copy original** setting kept every frame of our two test clips identical to the original. In our November 8, 2026 test, 123apps' Video Trimmer re-encoded the video unless we switched on **No re-encoding**, and Storrito re-encoded it even though its page says it doesn't. Any copy-mode trim can only begin at a keyframe, so the start may move earlier: 123apps' copy started our HEVC clip 3 seconds before the point we chose. Steps and frame-by-frame results are in our [test of free online video trimmers](/posts/trim-video-without-losing-quality).
+ezgif's free Video cutter is the best way we found to trim a video without losing quality, because its default **Copy original** setting kept every frame of our two test clips identical to the original. In our November 8, 2026 test, 123apps' Video Trimmer re-encoded the video unless we switched on **No re-encoding**, and Storrito re-encoded it even though its page says it doesn't. Any copy-mode trim can only begin at a keyframe, so the start may move earlier: 123apps' copy started our HEVC clip 3 seconds before the point we chose. If you'd rather not upload the video, the free LosslessCut app kept every frame with its default setting when we ran the same trims on November 9. Steps and frame-by-frame results are in our [test of free online video trimmers](/posts/trim-video-without-losing-quality).
+
+## Best free way to convert iPhone video to MP4: LosslessCut
+
+LosslessCut is the best free way to turn an iPhone video into an MP4 without losing quality, because it copies the video into the new file instead of re-encoding it. In our November 10, 2026 test of five free converters, LosslessCut 3.69.0 copied all 1,440 frames of our HEVC test video unchanged, kept the recording date by default and kept the location with **Preserve all MP4/MOV metadata** switched on. HandBrake, CloudConvert, 123apps and VLC's default profile re-encoded every frame.
+
+The video inside LosslessCut's MP4 is still HEVC, so a PC without HEVC support still can't play it. For an MP4 that plays almost anywhere, HandBrake's default **Fast 1080p30** preset made an H.264 file with all 1,440 frames at the original 24 fps, but it replaced the recording date and dropped the location. Avoid VLC's "Video - H.264 + MP3 (MP4)" profile, which saved the sound as MP2; the video played silently in Chromium 153. Steps for both apps are in our [test of five free iPhone video converters](/posts/convert-iphone-video-to-mp4).
 
 ## Default settings that caught us out
 
@@ -114,17 +122,17 @@ Seven default settings changed our results, and each one had a simple fix. Deskt
 
 ## Apps or websites: where your photo goes
 
-The four desktop apps we picked (XnConvert, GIMP, ExifCleaner and HandBrake) work on your own computer, so nothing is uploaded, and none of them stopped us with a daily limit. Websites are quicker for one file, but most of them upload it, and their free plans have limits.
+The five desktop apps we picked (XnConvert, GIMP, ExifCleaner, HandBrake and LosslessCut) work on your own computer, so nothing is uploaded, and none of them stopped us with a daily limit. Websites are quicker for one file, but most of them upload it, and their free plans have limits.
 
-| Tool | Type | Is your file uploaded? | Free limit (as of October 2026) |
+| Tool | Type | Is your file uploaded? | Free limit (as of October and November 2026) |
 | --- | --- | --- | --- |
 | XnConvert | App | No | Free for private use; companies need a license |
-| GIMP, HandBrake, ExifCleaner | App | No | None we hit |
+| GIMP, HandBrake, ExifCleaner, LosslessCut | App | No | None we hit |
 | ExifRemove | Website | No, it runs in your browser | JPG only, 25 MB per photo, 50 photos per batch |
 | ezgif | Website | Yes, deleted after 1 hour per the site | 200 MB per file |
 | 123apps Video Trimmer | Website | Yes, deleted a few hours after you finish per the site | Up to 4 GB per the site |
 | iLoveIMG | Website | Yes | "Limited document processing," background removal up to 3 images at a time |
-| CloudConvert | Website | Yes | 10 conversions a day |
+| CloudConvert | Website | Yes | 10 conversion credits a day, at least one per conversion |
 | Pixlr | Website | Yes | 3 free saves a day in our test |
 
 iLoveIMG's Premium plan costs $5 a month billed yearly ($60) or $9 billed monthly, according to its pricing page. We didn't need it for any of our tests.
@@ -137,5 +145,6 @@ iLoveIMG's Premium plan costs $5 a month billed yearly ($60) or $9 billed monthl
 - **Cutting out a person, pet or product:** iLoveIMG for free full-size files, or the built-in tool on your Mac, iPhone or Windows 11 PC.
 - **Before you post or send photos:** turn off **Location** in the iPhone share sheet, or run the files through ExifRemove on any device.
 - **A video for Discord or email:** HandBrake, with the bitrate from our table instead of a Social preset.
+- **Trimming a clip or turning an iPhone video into an MP4:** LosslessCut on your computer keeps every frame. For one short clip in the browser, ezgif's **Copy original** trim does the same.
 
 If you need to turn photos into a single PDF, our [guide to the best free PDF tools](/posts/best-free-pdf-tools) covers JPG to PDF with the same approach. To pull the text out of a photo of a document or receipt, see our [test of free offline image to text (OCR) apps](/posts/image-to-text-offline-free).

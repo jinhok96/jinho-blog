@@ -1,0 +1,206 @@
+# 가져온 시각: 2026-11-13T17:34:10.402Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2026
+Ending Support in 2026 - Microsoft Lifecycle | Microsoft Learn
+https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2026
+
+Table of contents
+ Exit editor mode
+Ask Learn
+Ending Support in 2026
+Summarize this article for me
+
+ Please go here to search for your product's lifecycle.
+
+The following list represents products retiring or reaching the end of support in 2026. Upon retirement or end of support, there will be no new security updates, non-security updates, free or paid assisted support options or online technical content updates. Go here to learn about Fixed and Modern Lifecycle policies and service packs.
+
+If you have any questions regarding support for a product, please contact your Microsoft Account Representative. If you need technical support, visit the Microsoft Support website.
+
+Product Retirements
+
+The following products, governed by the Modern Policy, will retire in 2026.
+
+Expand table
+Product	Retirement
+Azure API for FHIR
+Azure FXT Edge Filer
+	September 30, 2026
+Azure Anomaly Detector
+Azure Metrics Advisor
+Azure Personalizer
+	October 1, 2026
+Access 2021
+Excel 2021
+Office 2021
+OneNote 2021
+Outlook 2021
+PowerPoint 2021
+Project 2021
+Publisher 2021
+Visio 2021
+Word 2021
+	October 13, 2026
+End of Servicing
+
+The following product versions, governed by the Modern Policy, will end support in 2026.
+
+Expand table
+Product	End of Servicing
+Dynamics 365 Business Central on-premises (Modern Policy), 2024 release wave 2, version 25.x
+	April 4, 2026
+.NET 9
+	May 12, 2026
+Microsoft Configuration Manager, Version 2409
+	June 6, 2026
+Dynamics 365 Business Central on-premises (Modern Policy), 2025 release wave 1, version 26.x
+Windows 11 Home and Pro, Version 24H2
+	October 13, 2026
+Azure IoT Edge, Version 1.5 (LTS)
+.NET 8 (LTS)
+PowerShell, PowerShell 7.4 (LTS)
+Windows 11 Enterprise and Education, Version 23H2
+Windows 11 IoT Enterprise, Version 23H2
+	November 10, 2026
+Products reaching End of Support
+
+The following products and releases, governed by the Fixed Policy, will end support in 2026.
+
+Expand table
+Product	End of Support
+Advanced Threat Analytics 1.X
+Dynamics CRM 2016 (Dynamics 365)
+Visual Studio 2022 , Version 17.10 (LTSC channel)
+	January 13, 2026
+Microsoft SQL Server 2012 Parallel Data Warehouse (Analytics Platform System)
+	March 31, 2026
+Dynamics C5 2016
+Dynamics NAV 2016
+Microsoft Advanced Group Policy Management 4.0
+Microsoft Application Virtualization 5.0
+Microsoft Application Virtualization 5.1
+Microsoft Application Virtualization Hosting 5.0 for Windows Desktops
+Microsoft Application Virtualization Hosting 5.1 for Windows Desktops
+Microsoft BitLocker Administration and Monitoring 2.5
+Microsoft Diagnostics and Recovery Toolset 10.0
+User Experience Virtualization (UE-V) 2.1
+	April 14, 2026
+Dynamics GP 2016
+Dynamics GP 2016 R2
+Infopath 2013
+Project Server 2016
+Project Server 2019
+SharePoint Designer 2013
+SharePoint Server 2016
+SharePoint Server 2019
+SQL Server 2014, Extended Security Updates Year 2
+SQL Server 2016
+Visual Studio 2022 , Version 17.12 (LTSC channel)
+	July 14, 2026
+Access LTSC 2021
+Excel LTSC 2021
+Office LTSC 2021
+Office LTSC 2021 for Mac
+OneNote LTSC 2021
+Outlook LTSC 2021
+PowerPoint LTSC 2021
+Project 2021 (LTSC)
+Publisher LTSC 2021
+Skype for Business LTSC 2021
+Visio LTSC 2021
+Windows 10 2016 LTSB
+Windows 10 IoT Enterprise LTSB 2016
+Windows Server 2012, Extended Security Update Year 3
+Windows Server 2012 R2, Extended Security Update Year 3
+Word LTSC 2021
+	October 13, 2026
+Products moving to Extended Support
+
+The following products will be moving from Mainstream to Extended Support in 2026. Extended Support includes security updates at no cost, and paid non-security updates and support. Additionally, Microsoft will not accept requests for design changes or new features during the Extended Support phase.
+
+Expand table
+Product	End of Mainstream Support
+Office LTSC 2021 for Mac
+Windows Server 2022
+Windows Server 2022 Datacenter: Azure Edition
+Windows Server 2022 Standard (MSL)
+Windows Server IoT 2022
+	October 13, 2026
+Additional Azure Changes
+
+Below is a list of additional Azure updates, including API, SDK and tools, and feature changes. Go here for more information: Azure updates | Microsoft Azure
+
+Expand table
+Azure Item	Retirement
+Speech to Text API v3.0 API Retirement
+	March 13, 2026
+DMS (classic) – SQL Scenarios only retirement
+Feature deprecation: Trigger playbooks on alerts by analytics rule
+	March 15, 2026
+AzureML Batch Endpoints API Preview retirement
+	March 16, 2026
+Classic VMware protection scenario using ASR
+	March 29, 2026
+API Keys for querying Application Insights
+Batch Region Retirement
+Classic alerts for Azure Backup
+Classic Compute Node Communication Model
+Deprecation of flash-extract custom fields
+Retire Require Approve Client App Conditional Access Grant
+VHD and Managed Images
+Windows Server 2019 on AKS hybrid
+Windows Server 2019 on AKS Retirement
+	March 31, 2026
+Azure Application Gateway v1
+	April 28, 2026
+Custom Commands
+	April 30, 2026
+Azure AI Document Intelligence (formerly known as Azure Form Recognizer) v2.0 API
+Azure document Intelligence v2.1 Container
+	August 31, 2026
+Computer Vision API v1.0
+Computer Vision API v2.0
+Computer Vision API v2.1
+Computer Vision API v3.0
+Computer Vision API v3.1
+	September 13, 2026
+Azure Functions 1.0 Deprecation
+Azure Monitor Data Collector API
+Monitoring Support for AKS-Engine
+	September 14, 2026
+Activity logs legacy connector, storage integration API
+Azure Maps Gen1 Price Tier
+	September 15, 2026
+Azure Maps Render V1
+	September 17, 2026
+Azure Maps Web SDK Map Controls Version 1.xx
+	September 19, 2026
+SMART on FHIR Proxy in Azure Health Data Services
+	September 21, 2026
+Azure API for FHIR Gen 1 offering
+Azure Container Registry ACR 2017-03-01-(GA) API
+Azure FXT Edge Filer
+Azure Maps Web SDK v2 Subversion (v2.0~v2.0.32) and Service Module Retirement
+Azure Virtual Desktop (Classic)
+Container Log V1
+Get AlertSummary API
+Service Bus Control plane APIS v2014-09; v2015-08; v2016-07
+Single URL Ping Test in Application Insights
+Track 0 and 1 Service Bus SDKs and SBMP protocol
+	September 30, 2026
+Azure Anomaly Detector
+Azure Metrics Advisor
+Personalizer
+Translator Billing Model
+	October 1, 2026
+Azure Functions In-process model end of support
+	November 10, 2026
+Additional resources
+
+Training
+
+Learning path
+
+Solution Architect: Design Microsoft Power Platform solutions - Training
+
+Learn how a solution architect designs solutions.
+
+Last updated on 04/18/2025

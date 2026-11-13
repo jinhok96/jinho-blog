@@ -1,0 +1,79 @@
+# 가져온 시각: 2026-11-13T17:39:18.166Z
+# 원본: https://support.microsoft.com/en-us/topic/ee68f6cf-422f-464a-82ec-385f65391350
+How do I upgrade Office? | Microsoft Support
+https://support.microsoft.com/en-us/office/lifecycle/officeinstall/how-do-i-upgrade-office
+
+How do I upgrade Office?
+Applies To
+Excel for Microsoft 365 Word for Microsoft 365 Outlook for Microsoft 365 PowerPoint for Microsoft 365 Access for Microsoft 365 OneNote for Microsoft 365 Project Online Desktop Client Publisher for Microsoft 365 Excel for Microsoft 365 for Mac Word for Microsoft 365 for Mac Outlook for Microsoft 365 for Mac PowerPoint for Microsoft 365 for Mac Excel 2016 Word 2016 Outlook 2016 PowerPoint 2016 Access 2016 OneNote 2016 Project Professional 2016 Project Standard 2016 Publisher 2016 Visio Professional 2016 Visio Standard 2016 Office 2016 Excel 2016 for Mac Word 2016 for Mac Outlook 2016 for Mac PowerPoint 2016 for Mac OneNote 2016 for Mac Office 2016 for Mac Excel 2013 Word 2013 Outlook 2013 PowerPoint 2013 Access 2013 OneNote 2013 Visio Professional 2013 Visio 2013 Office 2013 Microsoft 365 for home Office 365 Small Business Microsoft 365 admin Office 365 operated by 21Vianet - Small Business Admin Microsoft 365 for Mac
+Get help with Copilot
+How can I set up Microsoft 365? in Microsoft 365?
+What do I need to know about office: What version.
+How do I upgrade Microsoft 365?
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+Important
+
+Make sure your device meets the minimum requirements before you upgrade. For more information, go to Microsoft 365 and Office resources.
+
+Your options to upgrade Office are different depending on the type of Office product you currently have.
+
+If your current version is a one-time purchase, non-subscription version of Office like Office Home & Business, see below. If you already have a Microsoft 365 subscription, select the Microsoft 365 tab below.
+
+Tip
+
+Not sure of your current version? See What version of Office am I using?
+
+Non-subscription
+Microsoft 365
+Office Premium
+
+If your current version of Office is a one-time purchase (non-subscription) version of Office such as Office Home & Student or Office Home & Business, to upgrade, you'll need to buy the latest version. To do this you can purchase a Microsoft 365 subscription like Microsoft 365 Personal or Microsoft 365 Family, Premium or Pro, or the newest one-time purchase version.
+
+When you're ready to install your new product, see the section below, I'm ready to install Office and follow the upgrade recommendations.
+
+How do I buy the latest version?
+
+Buy a Microsoft 365 subscription
+Purchasing Microsoft 365 is your best option. You'll always have the latest features, security updates, and other improvements. You get Office's cloud connected features to help you maximize productivity across your devices including 1 TB or 2 TB shared OneDrive cloud storage, extra features with Office mobile apps, the option to install Office across your devices, and access to support. Choose between Microsoft 365 Personal (for one person) or Microsoft 365 Family, Premium or Pro (which you can share with your family).
+
+Buy or try Microsoft 365
+
+Buy a one-time purchase version of Office 2024
+Get the newest non-subscription version of Office such as Office Home 2024 or Office Home & Business 2024.
+
+You can only install these versions of Office on one device. You'll get security updates and fixes during the supported period, but you won't receive new features or any of the other Microsoft 365 benefits.
+
+Buy Office 2024
+
+Tip
+
+Learn more about the difference between a Microsoft 365 subscription and one-time purchase version of Office.
+
+Starting October 8, 2026, all new (including expired and repurchased) Microsoft 365 Family and Premium subscribers get 2 TB of pooled OneDrive cloud storage, and Microsoft 365 Pro subscribers get 5 TB pooled storage. From May 2, 2027, all existing Microsoft 365 Family and Premium subscribers will get 2 TB of pooled cloud storage when the subscription renews. Pooled storage means the cloud storage allowance is shared across all members of a shared subscription. Each person's mailbox, files and folders continue to remain private. All subscription types can be extended up to 10 TB to give everyone even more OneDrive storage.
+
+See the next section for a list of upgrade recommendations.
+
+I have the latest version and I'm ready to install it
+
+Before installing the latest version of Office read through the following recommendations first.
+
+Upgrade recommendations
+
+Make sure your computer meets the system requirements for the newest version of Office.
+In most cases when you run the Microsoft Office Setup program on a computer with an earlier version of Office installed, the earlier version is removed. However, there are instances when an uninstall is necessary, such as if you run into errors or problems during installation.
+If you uninstall Office before installing the new version, your Office files won't be deleted, but if your version of Office includes Outlook you may want to back up your Outlook data files. See Find and transfer Outlook data files from one computer to another.
+
+For PC
+
+We recommend only running one version of Office on a PC, but if you need to run Office side-by-side, see which versions are compatible in Install and use different versions of Office on the same PC.
+
+For Mac
+
+You may need to remove older Office licenses after installing the latest version of Office on your Mac, even if you uninstalled the older version first. See How to remove Office license files on a Mac.
+
+Ready to install
+
+When you're ready to install the latest version (either a subscription or non-subscription version of Office), follow the steps in Download and install or reinstall Office on a PC or Mac.
+
+After the installation completes, your new version of Office should update automatically, or you might get a notification that an update is ready to apply. (You also have the option to manually check for and apply updates.)

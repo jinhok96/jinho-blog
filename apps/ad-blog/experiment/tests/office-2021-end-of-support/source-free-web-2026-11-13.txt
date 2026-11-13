@@ -1,0 +1,100 @@
+# 가져온 시각: 2026-11-13T17:34:59.879Z
+# 원본: https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web
+Free Microsoft 365 Online | Word, Excel, PowerPoint
+https://www.microsoft.com/en-us/microsoft-365/free-office-online-for-the-web
+
+Save 30% on your first month or year of Microsoft 365.
+
+See offer >
+Use Microsoft 365 apps for free on the web
+Get free access to Word, Excel, and PowerPoint using Microsoft 365 for the web (formerly Office).
+
+Sign up for free
+Try free for one month
+Sign in
+Free benefits
+Featured apps
+Free benefits
+Resources
+Mobile app
+Partners
+Next Steps
+Sign up for free
+Sign up for free
+FEATURED APPS
+Get quality Microsoft 365 apps for free
+Word for the web
+Write, read, and collaborate1 online in real time from any device.
+
+Go to Word
+Excel for the web
+Organize your data and collaborate online1 in real time from any device.
+Go to Excel
+PowerPoint for the web
+Design captivating presentations and collaborate online1 in real time from any device.
+Go to PowerPoint
+FREE BENEFITS
+Discover free Microsoft account benefits
+Web and mobile apps
+Access web and mobile versions of apps including Word, Excel, PowerPoint, OneDrive, and Outlook.
+5 GB of cloud storage
+Save and share your photos, videos, and documents more securely in OneDrive.
+Access across devices
+Use Microsoft 365 apps across your browser, iOS, and Android devices.
+RESOURCES
+Explore more free resources
+Free templates
+Create inspiring designs with free templates.
+Learn more
+Perfect your skills
+Get everyday organization tips with Microsoft 365 Life Hacks articles.
+Learn more
+Achieve more with AI
+ See how Copilot uses AI to help you find information, create content, and get things done faster.
+Learn more
+MOBILE APP
+Stay productive on the go
+Download the free Microsoft 365 Copilot mobile app
+MOBILE APP
+Stay productive on the go
+Download the free Microsoft 365 Copilot mobile app
+Download now
+FEATURED PARTNER APPS
+Explore Microsoft 365 solutions from our industry-leading partners
+Microsoft Corporation
+Copilot Chat
+
+Your copilot for work
+
+4.3
+(160954)
+Rated (#=ratingAverage#) stars out of 5 stars, by 160954 users.
+Learn More
+Mentimeter
+Mentimeter for PowerPoint
+
+Listen, learn, and engage.
+
+4.6
+(1042)
+Rated (#=ratingAverage#) stars out of 5 stars, by 1042 users.
+Learn More
+document.addEventListener("DOMContentLoaded", () => { CrossSellInstances.push({ compId: "xb7cd05ec9c5d4bc5ad484f3c6a9ed296", instance: new CrossSell({ element: document.querySelector("#crossSellCard_xb7cd05ec9c5d4bc5ad484f3c6a9ed296"), compId: "xb7cd05ec9c5d4bc5ad484f3c6a9ed296", }) }); });
+View all apps
+ Next steps
+Get started for free
+Start using free Microsoft 365 apps today.
+Sign up
+[1]
+
+Files must be saved in and shared from OneDrive.
+
+ 
+
+ 
+
+This page is designed for users in the United States.
+
+.style-utility-799f9c4c-8b39-4f96-93be-9fbb2d4d4e3a-oc-aem-bg-color-picker { background-color: #FFFFFF }
+.row-bg-color-layout-container-uid3346{ background-color: !important; }
+Follow Microsoft 365   

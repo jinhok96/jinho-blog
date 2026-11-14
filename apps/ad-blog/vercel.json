@@ -46,6 +46,11 @@
       "source": "/posts/chrome-enhanced-autofill-gmail",
       "destination": "/posts/chrome-autofill-settings",
       "permanent": true
+    },
+    {
+      "source": "/posts/gemini-android-auto-personal-intelligence",
+      "destination": "/posts/google-gmail-photos-ads",
+      "permanent": true
     }
   ]
 }

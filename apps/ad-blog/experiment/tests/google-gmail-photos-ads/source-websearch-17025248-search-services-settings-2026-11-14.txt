@@ -1,0 +1,92 @@
+# 가져온 시각: 2026-11-14T17:37:03.262Z
+# 원본: https://support.google.com/websearch/answer/17025248?hl=en
+Get started with Search Services History & Personalized Recommendations - Google Search Help
+https://support.google.com/websearch/answer/17025248?hl=en
+
+Get started with Search Services History & Personalized Recommendations
+
+Important: We’re currently updating settings for Google Search services, which include Search, Maps, Shopping, Flights, Hotels, Translate, and News. These are rolling out gradually over the next few months. If the settings in this article do not match what you see, history and personalized recommendations for Search services are still controlled by Web & App Activity.
+
+You can manage your data and experiences on Google Search services with your Search Services History and Personalized Recommendations settings. These settings are available when you’re signed in to your Google Account. Search services include:
+
+Search
+Maps
+Shopping
+Flights
+Hotels
+Translate
+News
+
+Tip: If you got your Google Account through your employer or educational institution, in order for your organization to use Search services and settings, you might need to ask your administrator to turn on access to certain services and settings.
+
+Understand your new Search services settings
+
+Important: We’re updating how your settings in Google Search services are managed.
+
+To ensure your privacy settings are accurate on your device, update to the latest app version through the Google Play Store or Apple App Store. You can also manage these settings directly at account.google.com.
+
+In the past, saving history and personalized recommendations were managed by Web & App Activity and Search Personalization settings. Going forward, you’ll be able to manage history and personalized recommendations independently through 2 new settings:
+
+Search Services History
+Personalized Recommendations
+
+Search Services History may now include media (like images and audio) from your interactions, depending on your settings.
+
+These new settings are based on your most recent choices for Web & App Activity and Search Personalization settings. If these were on, these new settings are also on. If your prior settings were off, the new settings are also off. If Web & App Activity was on but Search Personalization was off, only Search Services History has been turned on. As before, you can choose how long your history is saved and whether you want to delete it manually or automatically. You can also manage your Save Media subsetting any time. Web & App Activity continues to control activity collection and personalization for some other Google services.
+
+Tip: If you got your Google Account through your educational institution, your choices may vary.
+
+Learn about Google Search services
+
+Search services include key Google knowledge and information services, such as Search, Maps, Shopping, Flights, Hotels, Translate, and News. It doesn’t include services that save history under other settings, such as Chrome, Gemini Apps, Google Assistant, and YouTube.
+
+Understand how Search Services History works
+
+When you’re signed in, Search Services History lets you manage whether Google saves your interactions on Search services as history to your Google Account. Your Search Services History includes things like your searches, info from sites you visit with Search services, and generative AI responses. It can also include related info, like general location and your media from your interactions. This media includes your images, files, and audio/video recordings, such as Google Lens images, content you upload, and recordings from Search Live, Translate speaking practice, and voice searches. To learn more about location data, go to g.co/privacypolicy/location.
+
+Your saved history helps tailor your experience on Search services and across Google. For example, it helps you revisit previous searches and get personalized recommendations and ads, based on your personalization settings.
+
+As described in the Google Privacy Policy, Google also uses your history to provide, develop, and improve its services (such as training generative AI models) and to protect Google, its users, and the public with the help of human reviewers.
+
+We take your privacy seriously and take steps to protect it when using your Search Services History data to train our AI models. For example, data is disconnected from your Google Account before it is used to train our AI models or reviewed by our trained service providers. We will seek your permission before sharing your media with these providers for human review as part of the model improvement process. We use filters designed to automatically remove a broad range of identifying info or sensitive personal information. We are constantly working to improve our filtering and safety systems to better protect your privacy. When Search Services History is off, your future activity won't be used to train Google’s generative AI models, unless you provide feedback.
+
+Tip: If you got your Google Account through your educational institution, Google does not use your Search Services History data to train generative AI models.
+
+Learn more about Search Services History.
+
+Turn Search Services History on or off
+Go to Search Services History settings. You may be asked to sign in to your Google Account.
+Turn Search Services History on or off.
+When "Search Services History" is on, you can adjust your Save Media subsetting by checking or unchecking the box. Learn more about saved media in Search Services History.
+When you turn "Search Services History" off, select Turn off, then choose to Turn off or Turn off and delete activity. If you choose "Turn off and delete activity," follow the steps to select and confirm what activity you want to delete.
+Understand Personalized Recommendations in Search services
+
+If this setting is on, Google can offer you personalized recommendations in Search services. These personalized recommendations are based on info in your Google Account, like your profile info, Search Services History, and other saved activity across Google sites and apps, including associated info like general location.
+
+For example, Search services may provide:
+
+Results that match your interests: If you often search for “tennis,” Search services will prioritize results related to that topic.
+Curated feeds: Your Google Search and News Apps feeds highlight stories and topics you interact with most.
+Personalized AI responses: AI-powered features can provide answers that are specifically relevant to your interests or previous searches. For example, AI Mode may explain physics with a tennis example.
+Location-based relevance: You’ll see results that are relevant to a general location you’ve searched from in the past. For example, if your current location is not available, general location from past searches can be used to refine your results.
+
+Tip: Your Search Services History helps improve your personalized recommendations. Learn more about Search Services History.
+
+Learn more about Personalized Recommendations in Search services.
+
+Turn Personalized Recommendations on or off
+Go to your Google Account.
+You may be asked to sign in.
+Click Data & privacy.
+Click Personalization settings.
+Turn Personalized Recommendations in Search services on or off.
+Or, you can go directly to google.com/search-personalization.
+Related resources
+Find and manage Search Services History
+Manage your saved media in Search Services History
+Manage Personalized Recommendations in Search services
+Give feedback about this article
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

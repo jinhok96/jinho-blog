@@ -1,0 +1,14 @@
+https://policies.google.com/privacy?hl=en-US source-privacy-policy-2026-11-14.txt
+https://support.google.com/websearch/answer/16859283?hl=en source-websearch-16859283-personal-intelligence-2026-11-14.txt
+https://support.google.com/websearch/answer/17026260?hl=en source-websearch-17026260-personalized-recommendations-2026-11-14.txt
+https://support.google.com/websearch/answer/17025248?hl=en source-websearch-17025248-search-services-settings-2026-11-14.txt
+https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en source-myadcenter-12155656-2026-11-14.txt
+https://support.google.com/gemini/answer/13594961?hl=en source-gemini-13594961-privacy-hub-2026-11-14.txt
+https://support.google.com/gemini/answer/16598406?hl=en&co=GENIE.Platform%3DAndroid source-gemini-16598406-android-2026-11-14.txt
+https://support.google.com/gemini/answer/16598406?hl=en&co=GENIE.Platform%3DDesktop source-gemini-16598406-desktop-2026-11-14.txt
+https://support.google.com/gemini/answer/16836988?hl=en source-gemini-16836988-connected-apps-data-2026-11-14.txt
+https://support.google.com/gemini/answer/16735982?hl=en source-gemini-16735982-car-2026-11-14.txt
+https://support.google.com/gemini/answer/13278892?hl=en&co=GENIE.Platform%3DDesktop source-gemini-13278892-activity-desktop-2026-11-14.txt
+https://support.google.com/androidauto/answer/6348083?hl=en source-androidauto-6348083-2026-11-14.txt
+https://support.google.com/mail/answer/15604322?hl=en source-gmail-15604322-smart-features-2026-11-14.txt
+https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/ source-blog-android-auto-2026-10-20.txt

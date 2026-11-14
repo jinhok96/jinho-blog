@@ -1,0 +1,42 @@
+# 가져온 시각: 2026-11-14T17:44:23.485Z
+# 원본: https://blog.google/products-and-platforms/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/
+As G Suite Gains Traction in the Enterprise, G Suite’s Gmail and Consumer Gmail to More Closely Align
+https://blog.google/products-and-platforms/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/
+
+{ "reading_time": "[[read\u002Dtime]] min read" }
+Breadcrumb
+Home
+Products & Platforms
+Products
+Gmail
+As G Suite gains traction in the enterprise, G Suite’s Gmail and consumer Gmail to more closely align
+
+Jun 23, 2017
+
+|
+
+1 min read
+
+Diane Greene
+
+CEO, Google Cloud
+
+Share
+x.com
+Facebook
+LinkedIn
+Mail
+Copy link
+class ProgressiveImage { EVENTS = { TRANSITION_END: 'transitionend', }; CSS_CLASSES = { BLUR: 'uni-progressive-image--blur', NO_BLUR: 'uni-progressive-image--no-blur', }; init(el) { this.el = el; this._events(); this._upgradeImage(); } _upgradeImage() { // For gif format images we don't include data-srcset and data-sizes // We can safely remove the blur filter. if (!this.el.dataset.srcset || !this.el.dataset.sizes) { this.el.classList.add(this.CSS_CLASSES.NO_BLUR); return; } this.el.setAttribute('srcset', this.el.dataset.srcset); this.el.setAttribute('sizes', this.el.dataset.sizes); requestAnimationFrame(() => { this.el.classList.add(this.CSS_CLASSES.NO_BLUR); }); } _events() { // Once the transition completes is safe to clean some attributes this.el.addEventListener(this.EVENTS.TRANSITION_END, () => { this.el.classList.remove(this.CSS_CLASSES.BLUR, this.CSS_CLASSES.NO_BLUR); this.el.removeAttribute('data-srcset'); this.el.removeAttribute('data-sizes'); }); } } document.addEventListener('DOMContentLoaded', () => { const images = document.querySelectorAll('[data-component="uni-progressive-image"]'); images.forEach((el) => { el.setAttribute('data-component-initialized', true); new ProgressiveImage().init(el); }); });
+
+Google’s G Suite business is gaining enormous traction among enterprise users. G Suite usage has more than doubled in the past year among large business customers. Today, there are more than 3 million paying companies that use G Suite.   
+
+G Suite’s Gmail is already not used as input for ads personalization, and Google has decided to follow suit later this year in our free consumer Gmail service. Consumer Gmail content will not be used or scanned for any ads personalization after this change. This decision brings Gmail ads in line with how we personalize ads for other Google products. Ads shown are based on users’ settings. Users can change those settings at any time, including disabling ads personalization. G Suite will continue to be ad free. (Update, October 16, 2026: You can view the latest about how some new features work here. As we’ve continued to make Google products more personalized and helpful, we’ve added features that enable users to choose to connect apps like Workspace apps to other Google services. If users choose to enable these new features, data from Workspace Apps will be processed to personalize other Google experiences, and depending on a user’s settings, that same subset of data can also be used to show ads.)
+
+The value of Gmail is tremendous, both for G Suite users and for users of our free consumer Gmail service. Gmail is the world’s preeminent email provider with more than 1.2 billion users. No other email service protects its users from spam, hacking, and phishing as successfully as Gmail. By indicating possible email responses, Gmail features like Smart Reply make emailing easier, faster and more efficient. Gmail add-ons will enable features like payments and invoicing directly within Gmail, further revolutionizing what can be accomplished in email.
+
+G Suite customers and free consumer Gmail users can remain confident that Google will keep privacy and security paramount as we continue to innovate. As ever, users can control the information they share with Google at myaccount.google.com.
+
+Posted in:
+Gmail
+Google Workspace

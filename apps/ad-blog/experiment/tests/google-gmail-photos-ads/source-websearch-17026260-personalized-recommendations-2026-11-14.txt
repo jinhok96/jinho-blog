@@ -1,0 +1,75 @@
+# 가져온 시각: 2026-11-14T17:37:07.025Z
+# 원본: https://support.google.com/websearch/answer/17026260?hl=en
+Manage Personalized Recommendations in Search services - Google Search Help
+https://support.google.com/websearch/answer/17026260?hl=en
+
+Manage Personalized Recommendations in Search services
+
+Important: We’re currently updating settings for Google Search services, which include Search, Maps, Shopping, Flights, Hotels, Translate, and News. These are rolling out gradually over the next few months. If the settings in this article do not match what you see, history and personalized recommendations for Search services are still controlled by Web & App Activity.
+
+With Personalized Recommendations, Google Search services show you results, curated feeds, and AI responses based on what you like and your activity. It's like Google tries to guess what you want to find.
+
+Tips:
+
+Results may vary between people for reasons other than personalization, such as language settings or localized results. Learn why your Google Search results differ from others.
+If you got your Google Account through your employer or educational institution, in order for your organization to use Search services and settings, you might need to ask your administrator to turn on access to certain services and settings.
+How Personalized Recommendations works in Search services
+
+If you turn on this setting, Google can offer you personalized recommendations in Search services based on info in your Google Account.
+
+For example, Search services may provide:
+
+Results that match your interests: If you often search for “tennis," Search services prioritize results that are related to that topic.
+Curated feeds: Your Google Search and News App feeds highlight stories and topics you interact with most.
+Personalized AI responses: AI-powered features can provide answers specifically relevant to your interests or previous searches, like explaining physics with a tennis example.
+Location-based relevance: You’ll find results that are relevant to a general location you’ve searched from in the past. For example, if your current location isn’t available, general location from past searches can be used to refine your results.
+
+Info in your Google Account that can be used to personalize your recommendations includes:
+
+Profile info, like your age, gender, and home and work addresses
+Your likes, preferences, and saves, including items added to your watchlists, places you’ve saved, or articles you’ve liked
+Your activity and content on Google sites and apps, depending on your settings, including the general locations where you’ve used them. Learn more about location info at g.co/privacypolicy/location
+Data from third-party services that you link to your Google Account
+
+Tip: To let Google learn more about you and get a more relevant experience, turn on your Search Services History.
+
+Learn what changes when the Personalized Recommendations setting is off
+
+When this setting is off, Search services won’t personalize your recommendations, but your experience will still include some tailoring based on your current context and info you save.
+
+How your current context is still used
+
+Search services still use current context to make sure your results are functional and relevant. For example:
+
+Current location: Like helping you find “pizza near me” or local weather in your city based on your IP address or your device’s location.
+Language and device type: To make sure the page is in your preferred language and fits your specific screen.
+Recent searches: To understand the context of what you’re looking for right now.
+Learn how saved info is still used
+Search services can still surface your saved info, like:
+Past searches: These may appear in Autocomplete results if your Search Services History is turned on.
+Saved addresses: These allow Search services to understand what you mean if you ask for something near “Home” or “Work”.
+Saved items: These will continue to appear across Search services. This includes things like your saved places in Maps, items in your Collections, and your movie or stock watchlists.
+Subscriptions: These include news publisher subscriptions linked to your Google Account. Google News will still recognize these to give you access to that content.
+Learn what this setting doesn’t change
+Turning this setting off doesn’t:
+Turn off or delete Search Services History or other activity in your Google Account: You can manage your Google activity at myactivity.google.com.
+Disable personalization in other Google services: You can manage key personalization settings at goo.gle/personalization-settings.
+Disable Autocomplete suggestions: You can still find your own past searches in the search bar as you type, as long as Search Services History is on.
+Change app preferences: Settings like Dark Mode, your preferred language, or the number of results per page remain as they were.
+Delete saved items: Your Collections, followed stocks, and saved home or work addresses aren’t affected.
+Turn Personalized Recommendations on or off
+Go to your Google Account.
+You may be asked to sign in.
+Click Data & privacy.
+Click Personalization settings.
+Turn Personalized Recommendations in Search services on or off.
+Or, you can go directly to google.com/search-personalization.
+Related resources
+Get started with Search Services History & Personalized Recommendations
+Find and manage Search Services History
+Manage your saved media in Search Services History
+Give feedback about this article
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

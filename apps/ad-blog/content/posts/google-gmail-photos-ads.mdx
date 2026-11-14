@@ -1,11 +1,13 @@
 ---
-title: Google Personal Intelligence Can Now Use Gmail and Photos for Ads
-description: "Google's October 16 privacy policy lets Gmail and Photos data shape ads once connected to Search. We compared four policy versions and mapped the off switches."
-category: news
+title: Google Personal Intelligence Settings in Search and Gemini
+description: "Google Personal Intelligence lets Search, Gemini and Android Auto use your Gmail and Photos, and in Search it can shape ads. Where to switch off each one."
+category: ai-tools
 createdAt: 2026-10-24T05:00:00Z
+updatedAt: 2026-11-14T17:50:00Z
 tags:
   - Google
   - Gmail
+  - Gemini
   - privacy
   - Personal Intelligence
   - settings
@@ -13,81 +15,114 @@ tags:
 
 ![Illustration of an open coral envelope next to a small stack of round white photo prints, with a glowing ribbon rising to a floating coral price tag and an olive green button switch beside them, on a pale blue background](./images/google-gmail-photos-ads/gmail-photos-ads-hero.webp)
 
-Google's privacy policy no longer says, without conditions, that your Gmail and Google Photos content stays out of personalized ads. Since October 16, 2026, the policy adds an exception: if you connect Gmail or Photos to Google Search through Personal Intelligence, what Search learns from them can be used to show you ads. If you never connected them, nothing about your inbox or photo library changes, and if you did, you can disconnect them in your Google Account settings.
+Google Personal Intelligence has two separate settings: one for Google Search services such as AI Mode and Ask Maps, under **Search Services Personalization** in your Google Account, and one for the Gemini app, under **Personal Intelligence > Connected Apps**. Nothing is connected until you choose to connect it, and disconnecting an app in one place doesn't disconnect it in the other. If you connected Gmail or Google Photos to Search, Google's privacy policy has let what Search learns from them shape your ads since October 16, 2026.
 
-We compared the current policy with the three earlier 2026 versions in Google's archive on October 24, 2026, read Google's updated 2017 blog post about Gmail ads, and matched four Google help pages to the switches that control this. We don't have a Google account in our test setup, so the menu steps come from Google's help pages, not our own screens.
+To stop Personal Intelligence everywhere, disconnect your apps in both places and then delete the saved history that disconnecting leaves behind. We re-read Google's privacy policy and 11 Google help pages on November 14, 2026, for this guide. We don't have a Google account in our test setup, so the menu steps come from Google's help pages, not our own screens.
 
-## What happened
+## Search and Gemini: two Personal Intelligence settings
 
-On October 16, 2026, Google published a new version of its [Privacy Policy](https://policies.google.com/privacy?hl=en-US). The version in force since October 1 said: "We don't show you personalized ads based on your content from Drive, Gmail, or Photos." The new version keeps that sentence and adds "unless you choose to make data from these services available to other Google services that support personalized ads."
+Personal Intelligence in Search and Personal Intelligence in the Gemini app are separate opt-ins with their own app lists, required settings and ad rules.
 
-Two more passages changed. The policy now says Search or Gemini Apps may access data from Google Photos, Gmail, and Drive if you allow it, and that "Search may process some of the data that you allow Search to access to personalize content, including ads." The list of what ads can be based on grew from "your interests and activity across Google services" to "your interests, activity, or personalized content from Google services."
+| | Search services (AI Mode, Ask Maps) | Gemini app (also Gemini in Chrome, on a smartwatch and in Android Auto) |
+| --- | --- | --- |
+| Where you connect or disconnect apps | Google Account > **Search Services Personalization** > **Additional Personal Intelligence Connected Content Apps** | Gemini app > **Menu** > your profile picture > **Personal Intelligence** > **Connected Apps** |
+| Apps you can connect | Gmail and Google Calendar, Google Photos | Google Workspace (Gmail, Calendar, Drive and more), Google Photos, Search services, YouTube, Google Wallet (US only), Contacts |
+| Setting it can't work without | **Personalized Recommendations** in Search services | **Keep Activity** in Gemini Apps Activity |
+| Used to show you ads | Yes: summaries and inferences from connected apps "may be used to show you ads" | No: Google says Gemini chats "are not being used to show you ads" |
+| Used to train AI and seen by human reviewers | Summaries, excerpts and inferences, yes | Summaries, excerpts and inferences, yes |
+| History that disconnecting doesn't delete | Search Services History | Gemini Apps Activity |
+
+One Gmail setting feeds both. Google's Gmail help lists Personal Intelligence in the Gemini app and in Search services among the features that need **Smart features in other Google products**, and the Gemini help page says Gemini "can't connect to Google Workspace when this setting is off."
+
+![Menu paths for four Personal Intelligence settings: Google Account, Search Services Personalization, Additional Personal Intelligence Connected Content Apps, disconnect each app; Google Account, Data and privacy, Personalization settings, Personalized Recommendations off; Gemini app menu, your profile picture, Personal Intelligence, Connected Apps, turn each app off; My Ad Center, Personalized ads, select Off, confirm](./images/google-gmail-photos-ads/personal-intelligence-menu-paths.webp)
+
+## How to disconnect Gmail and Photos from Google Search
+
+You disconnect Gmail and Google Photos from Search in your Google Account, under Search Services Personalization. These steps follow Google's help pages on [Personal Intelligence in Search](https://support.google.com/websearch/answer/16859283?hl=en) and [Personalized Recommendations](https://support.google.com/websearch/answer/17026260?hl=en).
+
+1. On a computer, open your Google Account and go to **Search Services Personalization**, or go straight to google.com/search-personalization.
+2. Open **Additional Personal Intelligence Connected Content Apps**. If Google Workspace or Google Photos is connected, disconnect it. Google says you can disconnect content apps from Search services "at any time."
+3. To turn off Personal Intelligence in Search entirely, go to **Data & privacy > Personalization settings** and turn off **Personalized Recommendations in Search services**. Google lists this setting as a requirement for Personal Intelligence.
+4. To delete what Search already saved, go to activity.google.com and delete your Search Services History. Google says disconnecting an app doesn't delete that history, which "can still be used for product improvement, including training generative AI models."
+
+If you don't see these settings, your account hasn't moved to Google's new Search services settings yet. Google says they are "rolling out gradually over the next few months," and until then, history and personalized recommendations for Search are still controlled by **Web & App Activity**. Turning off Personalized Recommendations also doesn't turn off or delete Search Services History; that is a separate switch.
+
+## How to turn off Personal Intelligence in the Gemini app
+
+In the Gemini app, you turn Personal Intelligence off app by app in Connected Apps, for one chat with the **Tools** menu, or entirely by turning off Keep Activity. These steps come from Google's [Connect your Google apps](https://support.google.com/gemini/answer/16598406?hl=en) and [Gemini Apps Activity](https://support.google.com/gemini/answer/13278892?hl=en) help pages.
+
+1. **On a phone:** open the Gemini app, tap **Menu**, then your profile picture or initial, then **Personal Intelligence** > **Connected Apps**, and turn off each app you don't want Gemini to use.
+2. **On the web:** at gemini.google.com, choose **Menu** > **Settings** > **Personal Intelligence** > **Connected Apps**, then **More options** > **Disconnect** next to each app. Google's page said **Settings & help** and showed an on/off switch for each app as recently as October 21, 2026, so older guides may show that path.
+3. **For a single chat:** in the text box, tap **Tools** and turn **Personal Intelligence** off. Gemini remembers that choice for the chat, but new chats start with it on, and the chat is still saved to Gemini Apps Activity unless you use a temporary chat.
+4. **To remove something Gemini learned:** disconnect the app and delete the chats that contain the information. Google says you need both steps, because Gemini can still use the information from past chats after you disconnect, or find it again in the app if you only delete the chats.
+5. **To turn it off entirely:** go to myactivity.google.com/product/gemini, turn off **Keep Activity**, and choose **Turn off and delete activity**. Personal Intelligence isn't available when Keep Activity is off. Google says conversations are still kept with your account for up to 72 hours.
+
+If you connected Gmail or Google Photos to Gemini before Personal Intelligence launched, check the list anyway. Google's help page says those settings "have been reset with the launch of Personal Intelligence with Connected Apps." Gemini can also still use public information from Google Search and YouTube when those apps are disconnected.
+
+![Table of Gemini settings: disconnecting an app stops future use but keeps past chats, deleting Gemini chats removes past chats but not app access, turning off Keep Activity stops personal answers and removes history only with Turn off and delete, and doing both disconnect and delete covers both](./images/google-gmail-photos-ads/gemini-settings-what-they-do.webp)
+
+## Does Personal Intelligence use your Gmail and Photos for ads?
+
+Personal Intelligence can shape your ads only in Search. Since October 16, 2026, Google's privacy policy has let what Search learns from a connected Gmail or Google Photos account be used for ads, while Google says Gemini chats aren't used for ads.
+
+The [privacy policy](https://policies.google.com/privacy?hl=en-US) in force since October 16, 2026 says: "We don't show you personalized ads based on your content from Drive, Gmail, or Google Photos, unless you choose to make data from these services available to other Google services that support personalized ads." It adds that "Search may process some of the data that you allow Search to access to personalize content, including ads." The archived April 2, May 26 and October 1, 2026 versions had the same promise without the "unless" exception. On the same day, Google added an update to its [June 23, 2017 blog post](https://blog.google/products-and-platforms/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/), which had said consumer Gmail content "will not be used or scanned for any ads personalization": if users connect Workspace apps to other Google services, "that same subset of data can also be used to show ads."
 
 ![Comparison of Google's privacy policy: the October 1, 2026 version says no personalized ads based on Drive, Gmail, or Photos content; the October 16, 2026 version adds "unless you choose to make data from these services available to other Google services that support personalized ads," adds personalized content as a basis for ads, and adds that Search may use data you let it access to personalize ads](./images/google-gmail-photos-ads/google-privacy-policy-before-after.webp)
 
-The same day, Google added an update note to its [June 23, 2017 blog post](https://blog.google/products-and-platforms/products/gmail/g-suite-gains-traction-in-the-enterprise-g-suites-gmail-and-consumer-gmail-to-more-closely-align/) announcing that consumer Gmail "will not be used or scanned for any ads personalization." The note says that if users turn on features that connect Workspace apps to other Google services, "that same subset of data can also be used to show ads," depending on their settings.
+Google's Search help page answers the question this way: "Ads will not be based directly on your Gmail inbox or your Google Photos library." It goes on to say that Search "may reference summaries, excerpts and inferences from these sources," and "that same info may be used to show you ads." The same page says Google doesn't personalize ads on sensitive categories such as race, religion, sexual orientation or health, and that advertisers don't get access to your Gmail inbox or Google Photos.
 
-Separately, SE Roundtable reported on October 19 that Google told Search Engine Land it is "starting to test ads in AI Mode in Search for users who connect their apps through Personal Intelligence."
+For the Gemini app, Google's [Gemini Apps Privacy Hub](https://support.google.com/gemini/answer/13594961?hl=en) says: "Your Gemini Apps chats are not being used to show you ads. If this changes, we will clearly communicate it to you."
 
-![Timeline: on June 23, 2017 Google said consumer Gmail wouldn't be scanned for ads personalization; privacy policy versions from April 2 to October 1, 2026 kept the no-Gmail-ads sentence; on October 16, 2026 the new policy added the "unless you choose" exception and Google updated the 2017 post; on October 19 Search Engine Land reported ad tests for connected users in AI Mode; news coverage peaked October 23](./images/google-gmail-photos-ads/gmail-ads-promise-timeline.webp)
-
-## Who is affected
-
-Only people who connected Gmail or Google Photos to Search are affected. Google's [Personal Intelligence help page](https://support.google.com/websearch/answer/16859283?hl=en) says connecting needs a personal Google account, an age of 18 or older, and the **Personalized Recommendations** setting turned on.
-
-| If you... | What the change means |
-| --- | --- |
-| Never connected Gmail or Photos to Search | No change for your email or photos. Ads can still use your searches and other activity, as before |
-| Connected Gmail, Calendar, or Photos to Search Personal Intelligence | Summaries and inferences from them can now shape ads in Search services |
-| Connected Gmail to the Gemini app only | Google's [Gemini Apps Privacy Hub](https://support.google.com/gemini/answer/13594961?hl=en) says Gemini chats "are not being used to show you ads" |
-| Use a work or school account, or are under 18 | Not eligible for Personal Intelligence in Search |
-| Live in the UK or the EU | Not in the list of supported countries yet |
-
-We counted 194 countries and territories in the help page's supported list on October 24, 2026. It includes the US, Canada, Australia, India, Japan, South Korea, Brazil, and Mexico, but not the UK, Ireland, Germany, France, Spain, Italy, Poland, Norway, or Switzerland. Connecting Google Calendar works only in the US in English, and Google says connecting Photos isn't available in all regions.
-
-## What changes for you
-
-Connecting is all or nothing across Google's search products. Google's help page says that once you connect, "all Search services will be permitted to access" Gmail, Calendar, and Photos: Google Search including AI Mode and Discover, Maps including Ask Maps, Shopping, Flights, Hotels, Translate, and News.
-
-Google's answer to "will my Gmail inbox or Google Photos library be used to serve ads?" on the same page is: "Ads will not be based directly on your Gmail inbox or your Google Photos library." But it continues that Search "may reference summaries, excerpts and inferences from these sources," and "that same info may be used to show you ads." Google also says it won't use sensitive categories such as health or religion for personalized ads, and that advertisers don't get access to your Gmail or Photos.
-
-The same page says connected data may be used to train Google's AI models and that human reviewers see some of it. Disconnecting doesn't delete your Search Services History, which "can still be used for product improvement."
-
-## What to do now
-
-If you don't remember connecting anything, check once. These steps follow Google's help pages for [Personal Intelligence](https://support.google.com/websearch/answer/16859283?hl=en), [Personalized Recommendations](https://support.google.com/websearch/answer/17026260?hl=en), and [My Ad Center](https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en).
-
-1. On a computer, open your Google Account and go to **Search Services Personalization** (or go straight to google.com/search-personalization).
-2. Open **Additional Personal Intelligence Connected Content Apps**. If Google Workspace or Google Photos shows as connected, disconnect it. Google's page shows the **Connect** button there and says you can disconnect content apps "at any time."
-3. To stop Personal Intelligence in Search entirely, go to **Data & privacy > Personalization settings** and turn off **Personalized Recommendations in Search services**. Google lists this setting as a requirement for Personal Intelligence. If you don't see these new Search settings yet, your account still uses **Web & App Activity**.
-4. To delete what Search already saved, open [My Activity](https://myactivity.google.com) and delete your Search Services History. Disconnecting alone doesn't remove it.
-5. Optional: in Gmail, go to **Settings > See all settings > General > Manage Workspace smart feature settings** and turn off **Smart features in other Google products**. That keeps Search and the Gemini app away from your email while Gemini inside Gmail keeps working. Our guide to [turning off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) explains what each of Gmail's three smart feature switches does.
-6. Optional: to stop all ad personalization on Google, not just this one, go to [My Ad Center](https://myadcenter.google.com), select **Off** next to **Personalized ads**, and confirm. Google says ads then depend on things like the page you're on and the time of day, and your saved ad topics are deleted. Your phone number has a separate ads setting on each Google account, which our guide to [removing a phone number from your Google account](/posts/remove-phone-number-from-google-account) shows how to find.
+If you want AI Mode to keep using your email but don't want ads based on it, you can turn off ad personalization instead. Google's [My Ad Center help](https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en) gives the steps: go to [My Ad Center](https://myadcenter.google.com), select **Off** next to **Personalized ads**, and confirm. Ads on Google then depend on things like the time of day, the topic of the page and your current location, and the ad topics and brands you customized are deleted. Your phone number has its own ads setting on each Google account, which our guide to [removing a phone number from your Google account](/posts/remove-phone-number-from-google-account) shows how to find.
 
 ![Four switches: disconnecting Gmail and Photos from Search stops Search, AI Mode, and Maps from reading them; turning off Personalized Recommendations stops Personal Intelligence; turning off Gmail's Smart features in other Google products keeps Search and the Gemini app from your email; turning off personalized ads in My Ad Center stops all personalized ads on Google](./images/google-gmail-photos-ads/gmail-photos-ads-switches.webp)
 
-![Menu paths: Google Account, Search Services Personalization, Additional Personal Intelligence Connected Content Apps, disconnect each app; Google Account, Data and privacy, Personalization settings, Personalized Recommendations off; My Ad Center, Personalized ads, select Off, confirm](./images/google-gmail-photos-ads/gmail-photos-ads-menu-path.webp)
+## What Google does with data from connected apps
 
-The Gemini app has its own connections, separate from Search. Our look at [Gemini's new Customize menu for Connected Apps](/posts/gemini-connected-apps) shows where to disconnect Gmail there, and our [guide to turning off AI in Chrome, Gmail, Word and more](/posts/turn-off-ai-features) covers the AI switches in other Google products.
+Google says neither Search nor Gemini trains its AI models directly on your Gmail inbox or Google Photos library, but both train on summaries, excerpts and inferences drawn from them, and human reviewers see a subset. Both help pages add that "where the email or file is brief or particularly relevant," the summary "may just be the email or file."
 
-## Our take
+- **Human review:** Google's [Connected Apps data page](https://support.google.com/gemini/answer/16836988?hl=en) and the Search help page say reviewers, including trained service providers, see interactions, summaries and excerpts from your emails and files. Google says it first disconnects them from your account and reduces personal information, and that people don't view media from your Photos library except for abuse cases or feedback you send. Its advice on both pages: don't connect apps that hold information you wouldn't want a reviewer to see.
+- **Photos:** Gemini's data page says your Google Photos data "is used to infer your interests, relationships to people in your photos, and where you've been, including by associating your face with corresponding location data and timestamps." Both Search and Gemini need **Face Groups** turned on, with your own face selected, and **Estimate missing locations** before they can use Photos at all.
+- **New data:** the same page says that if new data is added to a connected app later, "Gemini will have access to that data."
+- **Deleting:** disconnecting an app or deleting an email doesn't delete Gemini Apps Activity or Search Services History. Google says changes in a connected app may take days to show up in Gemini.
 
-Leave Gmail and Photos disconnected from Search unless you use Personal Intelligence often enough to accept that your inbox now helps sell you things.
+Our guide to [turning off Gemini Apps Activity](/posts/turn-off-gemini-apps-activity) explains what else stops when you turn off Keep Activity and how long each kind of chat is kept.
 
-The facts behind that: for nine years Google's line was that Gmail content stays out of ads, and the policy said so without conditions as recently as October 1. The new wording turns that into a default you can give up by connecting, and Google's own FAQ only promises ads won't be based "directly" on your inbox, while summaries and inferences from it can be used. Connecting also opens your email to every Search service at once, to AI training, and to human reviewers. That is a lot to accept for better restaurant suggestions in AI Mode.
+## Personal Intelligence in Android Auto
 
-The other side: this is opt-in, Personal Intelligence is genuinely useful for questions like "when does my flight leave," and an ad informed by a hotel booking may be more relevant than one based on a single search. Google also keeps sensitive categories out and doesn't give advertisers your messages. If you already rely on AI Mode with your email, turning off personalized ads in My Ad Center keeps the feature while removing the ad side.
+If you turned on Personal Intelligence in the Gemini app, it also answers from your connected apps in Android Auto, with no separate car setting described in Google's help pages. Google's [October 20, 2026 announcement](https://blog.google/products-and-platforms/platforms/android/android-auto-cars-with-google-built-in-gemini-personal-intelligence/) said Personal Intelligence "is rolling out starting today" on Android Auto and "in the coming months" on cars with Google built-in, and that if you already enabled it in the Gemini app, "it comes with you into the car."
 
-## What to watch next
+![Diagram of what Gemini can draw on in the car: Gmail, Calendar and Drive, Google Photos, saved places and searches, YouTube history, Google Wallet and Contacts feed Gemini, which gives a spoken answer in the car and saves the chat to Gemini Apps Activity](./images/google-gmail-photos-ads/gemini-car-data-flow.webp)
 
-- **Ads in AI Mode**: Google is testing ads for connected users, according to Search Engine Land. We'll update this article if Google announces where they appear or adds a separate ads switch for connected data
-- **More services**: Google's help page says other Workspace apps are "coming soon" to Search, and the policy already names Drive. Our article on [Gemini Personal Intelligence in Android Auto](/posts/gemini-android-auto-personal-intelligence) covers how the same data reaches Gemini in the car, and our guide to [Chrome autofill settings](/posts/chrome-autofill-settings#how-do-you-stop-chrome-from-filling-forms-with-your-gmail) covers how Gemini in Chrome started filling web forms from Gmail on October 28, 2026 and the switch that stops it
-- **Settings rollout**: Google says Search Services History and Personalized Recommendations will replace Web & App Activity for Search over the next few months
-- **Gemini chats**: Google's Gemini privacy page says that if Gemini chats start being used for ads, it "will clearly communicate it"
+Google's examples are a flight gate from a confirmation email, an appointment from your calendar, and a place from a photo you took. Three things on Google's [car help page](https://support.google.com/gemini/answer/16735982?hl=en) matter once those answers are spoken out loud:
+
+- Gemini in Android Auto "is available to anyone in the vehicle, including children."
+- Gemini "can hallucinate" and "should not be relied on for critical information or safety-related matters while operating the vehicle," so check a gate or address against the original email when it matters.
+- You need an Android phone with Android 11 or newer and at least 2 GB of RAM, with Gemini set as your digital assistant. Android Auto's [voice help page](https://support.google.com/androidauto/answer/6348083?hl=en) says Gemini is replacing Google Assistant on most mobile devices.
+
+Cars with Google built-in "only share personal responses when you're in the car with your phone connected," according to the announcement. To stop personal answers in the car, use the Gemini steps above on your phone. If you want Gemini off on the phone itself, our guide to [turning off Gemini on an Android phone](/posts/turn-off-gemini-on-android-phone) covers the power button, "Hey Google" and the default assistant.
+
+## Who can use Personal Intelligence
+
+Personal Intelligence needs a personal Google Account and an age of 18 or older, and neither version is available in the UK or the European Economic Area. Work, school and supervised accounts can't use it.
+
+- **Search:** on November 14, 2026, the help page's supported list had 191 countries and territories, including the US, Canada, Australia, India, Japan, South Korea, Brazil and Mexico, but not the UK, Ireland, Germany, France, Spain, Italy, Poland, Norway or Switzerland. Connecting Google Calendar works only in the US in English, and connecting Google Photos isn't available in all regions. Ask Maps can use Gmail in English in the US, Canada, India and Australia, and in six other language and country pairs, such as Japanese in Japan and Spanish in Mexico.
+- **Gemini app:** not available in the European Economic Area, Nigeria, Switzerland or the United Kingdom, or in some Gemini features, including Gems. Google Wallet can be connected only in the US.
+- **Gmail:** Google's [smart features help page](https://support.google.com/mail/answer/15604322?hl=en) says these settings start out off in the European Economic Area, Japan, Switzerland and the UK.
+
+## Which settings should you change?
+
+- **You never connected anything on purpose:** open both lists once, Search Services Personalization and the Gemini app's Connected Apps. If nothing is connected, you're done. To keep Gmail out of both in one step, turn off **Smart features in other Google products** in Gmail; Gemini inside Gmail keeps working, as our guide to [turning off Gemini in Gmail](/posts/turn-off-gemini-in-gmail) explains.
+- **You use AI Mode with your email but don't want it shaping ads:** keep the connection and turn off **Personalized ads** in My Ad Center. Google says that setting covers the ads you see on Google services on every device where you're signed in, not only ads based on Gmail.
+- **You use Gemini in a car other people ride in:** two of Google's three driving examples, a flight gate and a doctor's appointment, come from Gmail and Calendar, so connecting Google Workspace covers most of them. Google Wallet and Contacts add payment and contact details that none of the examples use, and anyone in the car can hear the answers.
+- **You want none of it:** disconnect your apps in both places, turn off Personalized Recommendations, turn off Keep Activity with **Turn off and delete activity**, and delete your Search Services History.
+
+Outside apps such as Spotify are connected to Gemini from a different list, which our look at [Gemini's Customize menu for Connected Apps](/posts/gemini-connected-apps) covers. Gemini in Chrome can fill web forms from Gmail, and our guide to [Chrome autofill settings](/posts/chrome-autofill-settings#how-do-you-stop-chrome-from-filling-forms-with-your-gmail) covers the switch that stops it. For the AI switches in other Google, Microsoft and Apple products, see our [guide to turning off AI in Chrome, Gmail, Word and more](/posts/turn-off-ai-features).
 
 ## How we checked
 
-- **Privacy policy versions**: on October 24, 2026 we downloaded Google's current Privacy Policy (effective October 16, 2026) and the archived April 2, May 26, and October 1, 2026 versions from policies.google.com, and extracted the ads sentences from each. The three earlier versions have the same no-Gmail-ads sentence and don't mention Personal Intelligence
-- **Google pages** (opened October 24, 2026): the 2017 Gmail blog post with its October 16, 2026 update; Google Search Help pages on [connecting content apps and Personal Intelligence](https://support.google.com/websearch/answer/16859283?hl=en), [the new Search services settings](https://support.google.com/websearch/answer/17025248?hl=en), and [Personalized Recommendations](https://support.google.com/websearch/answer/17026260?hl=en); My Ad Center Help on [personalized ads](https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en); and the Gemini Apps Privacy Hub
-- **Country count**: we counted the entries in the help page's "Supported countries & territories" list
-- **Not checked**: we couldn't open the settings screens without a Google account, and the AI Mode ad test comes from a news report, not a Google announcement
+- **November 14, 2026:** we opened Google's Privacy Policy (effective October 16, 2026) and 11 help pages in Chromium and saved their text: Google Search Help on [Personal Intelligence](https://support.google.com/websearch/answer/16859283?hl=en), [Personalized Recommendations](https://support.google.com/websearch/answer/17026260?hl=en) and [the new Search services settings](https://support.google.com/websearch/answer/17025248?hl=en); Gemini Apps Help on connecting apps (Android and computer versions), Connected Apps data, Gemini Apps Activity, the Privacy Hub and Gemini in the car; Android Auto Help; My Ad Center Help; and Gmail Help on smart features. We also reopened the 2017 Gmail blog post and its October 16, 2026 update
+- **Earlier checks:** on October 24, 2026 we compared the current policy with the archived April 2, May 26 and October 1, 2026 versions; on October 21, 2026 we read Google's Android Auto announcement and its help pages
+- **What changed by November 14:** the Gemini web steps (**Settings** instead of **Settings & help**, and **More options > Disconnect** instead of a switch), and Contacts is no longer described as US-only and English-only with an AI Ultra subscription
+- **History of this page:** it combines two earlier ToolProof news articles, one on Google's October 16, 2026 privacy policy change (published October 24, 2026) and one on Personal Intelligence reaching Android Auto (published October 20, 2026), which now redirects here. The earlier version said the Search help page listed 194 countries; the list has 191 entries, and we had counted its three region headings
+- **Not checked:** we couldn't open the settings screens without a Google account, and Google's pages don't say where in Search ads based on connected apps appear

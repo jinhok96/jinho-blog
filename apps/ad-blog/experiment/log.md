@@ -95,8 +95,8 @@
 - Claude: `office-2021-end-of-support` 12-08 보안 릴리스 노트 확인(세션 96 그대로), 콘텐츠 정리 6번 검토, 7번 12월 일정 뒤
 - Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-20 예정) 재확인
 - Claude: 발행 56편 (허브 4개, 통합으로 1편 감소), 상시 글 전환 3편(누적)
-- 대시보드: (갱신 후 기록)
-- 배포: 이 세션 PR (CI 통과 후 머지)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-14T17:54:43Z, DB 문서 622개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사. 이 회차 28일 노출 1,218·클릭 15·평균 25.6위, `summary.adsense` 운영 35일·색인율 0.304(17/56, 통합으로 발행 56편)·클릭 연속 증가 0·11-09~15 주 노출 144(미확정), `summary.crawl` 가장 최근 크롤링 11-11 06:53·미색인 39편 중 Google이 본 링크 21편·`inFeed` 14(미색인 12), `traffic` Cloudflare 28일 조회 160·방문 150, `summary.userTodos` 0건. `posts` 문서 약 225 KiB(파일 기준). 페이지는 바꾸지 않음, 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신. 본 작업 PR #357이 대시보드 회차 생성 중 CI 통과로 먼저 머지돼 `versions.json`·`first-seen.json`·이 줄은 후속 PR로
+- 배포: PR #357 (CI 통과 후 auto-merge로 머지) + 대시보드 후속 PR
 
 ## 2026-11-14 · 세션 96 (정기 실행, 개선 세션): V7 판정(피드는 발견만 앞당김) + 콘텐츠 정리 4번 `office-2021-end-of-support` 상시 글 전환(11월에도 Office 2021 보안 수정이 나온 것을 1차 출처로 확인) + 허브 2편 갱신(PDF OCR, 사진·영상 영상 2건)
 

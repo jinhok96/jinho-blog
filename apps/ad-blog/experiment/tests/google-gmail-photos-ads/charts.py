@@ -59,7 +59,7 @@ def policy_compare():
         if i < len(POLICY_ROWS) - 1:
             ax.plot([0, 0.55], [y - rh / 2, y - rh / 2], color=cs.BORDER, lw=1)
     cs.footer(fig, 'Source: Google Privacy Policy, archived October 1, 2026 version and current version effective October 16, 2026,',
-              'policies.google.com, compared October 24, 2026')
+              'policies.google.com, compared October 24, 2026. Current version rechecked November 14, 2026')
     cs.save(fig, f'{OUT}/google-privacy-policy-before-after.webp')
 
 
@@ -94,7 +94,7 @@ def switch_table():
         if 0 < i < len(SWITCH_ROWS) - 1:
             ax.plot([0, 1], [y - rh / 2, y - rh / 2], color=cs.BORDER, lw=1)
     cs.footer(fig, 'Sources: Google Search Help (answers 16859283, 17026260), Gmail Help (15604322), My Ad Center Help (12155656),',
-              'checked October 24, 2026')
+              'checked November 14, 2026')
     cs.save(fig, f'{OUT}/gmail-photos-ads-switches.webp')
 
 
@@ -126,37 +126,38 @@ def timeline():
 
 
 PATHS = [
-    ('Disconnect Gmail\nand Photos', ['Google Account', 'Search Services\nPersonalization', 'Additional Personal\nIntelligence Connected\nContent Apps', 'Disconnect\neach app']),
-    ('Turn off\nrecommendations', ['Google Account', 'Data & privacy', 'Personalization\nsettings', 'Personalized\nRecommendations\noff']),
+    ('Search: disconnect\nGmail and Photos', ['Google Account', 'Search Services\nPersonalization', 'Additional Personal\nIntelligence Connected\nContent Apps', 'Disconnect\neach app']),
+    ('Search: turn off\nrecommendations', ['Google Account', 'Data & privacy', 'Personalization\nsettings', 'Personalized\nRecommendations\noff']),
+    ('Gemini app:\ndisconnect apps', ['Gemini app:\nMenu', 'Your profile\npicture', 'Personal\nIntelligence', 'Connected Apps:\nturn each off']),
     ('Turn off\npersonalized ads', ['My Ad Center\n(myadcenter.\ngoogle.com)', 'Personalized ads', 'Select Off', 'Confirm']),
 ]
 
 
 def menu_paths():
-    fig, ax = canvas('Where to find the settings in your Google Account',
-                     'Google is rolling out the new Search services settings over several months, so names can differ.')
-    rh = 0.31
+    fig, ax = canvas('Where to find the Personal Intelligence settings',
+                     'Search and the Gemini app keep separate connections, so check both. Menu names can differ during the rollout.')
+    rh = 0.245
     bw, gap, x0 = 0.175, 0.03, 0.2
     for i, (task, steps) in enumerate(PATHS):
-        y = 0.80 - i * rh
-        ax.text(0.0, y, task, fontsize=15, fontweight='bold', va='center', linespacing=1.3)
+        y = 0.87 - i * rh
+        ax.text(0.0, y, task, fontsize=14, fontweight='bold', va='center', linespacing=1.3)
         for j, step in enumerate(steps):
             x = x0 + j * (bw + gap)
             last = j == len(steps) - 1
-            box(ax, x, y - 0.1, bw, 0.2, cs.ACCENT if last else cs.SURFACE)
+            box(ax, x, y - 0.09, bw, 0.18, cs.ACCENT if last else cs.SURFACE)
             ax.text(x + bw / 2, y, step, fontsize=12, ha='center', va='center', zorder=2, linespacing=1.3,
                     color=cs.BACKGROUND if last else cs.FOREGROUND, fontweight='bold' if last else 'semibold')
             if not last:
                 ax.annotate('', xy=(x + bw + gap - 0.004, y), xytext=(x + bw + 0.004, y),
                             arrowprops=dict(arrowstyle='-|>', color=cs.MUTED, lw=1.5), zorder=2)
-    cs.footer(fig, 'Menu names from Google Search Help (16859283, 17026260) and My Ad Center Help (12155656), checked October 24, 2026.',
-              'We could not open these screens without a Google account.')
-    cs.save(fig, f'{OUT}/gmail-photos-ads-menu-path.webp')
+    cs.footer(fig, 'Menu names from Google Search Help (16859283, 17026260), Gemini Apps Help (16598406) and My Ad Center Help (12155656),',
+              'checked November 14, 2026. We could not open these screens without a Google account.')
+    cs.save(fig, f'{OUT}/personal-intelligence-menu-paths.webp')
 
 
 if __name__ == '__main__':
     Path(OUT).mkdir(parents=True, exist_ok=True)
     policy_compare()
     switch_table()
-    timeline()
+    # timeline(): 2026-11-14 상시 글 전환 때 본문에서 뺌 (뉴스 경과 그림)
     menu_paths()

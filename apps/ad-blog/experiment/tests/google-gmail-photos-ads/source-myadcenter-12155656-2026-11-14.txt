@@ -1,0 +1,392 @@
+# 가져온 시각: 2026-11-14T17:37:23.799Z
+# 원본: https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en
+How personalized ads work - Android phone & tablet - My Ad Center Help
+https://support.google.com/My-Ad-Center-Help/answer/12155656?hl=en
+
+How personalized ads work
+
+To view subtitles in your language, turn on YouTube captions. Select the Settings icon  at the top right corner of the video player, select Captions, and then specify your language.
+
+In this article
+About ads on Google
+About ads on partner sites and apps
+Turn on or off personalized ads
+Control data saved from partner sites to your Google Account
+About ads on Google
+
+As you use Google services, like Search and YouTube, you may see ads. These ads help keep many Google services available for no charge. Ads you see on Google are either personalized, using factors like your choices in My Ad Center, or non-personalized. Open the sections below to learn more about the factors used to show you personalized and non-personalized ads.
+
+Open all | Close all
+
+Personalized ads on Google
+
+Personalized ads on Google are ads shown to you based on:
+
+The choices you’ve made in My Ad Center, like your preferred ad topics and brands.
+Learn more about how to customize your ad topics and brands.
+Information, such as your age and gender, that you’ve provided in your Google Account or that Google has estimated about you.
+Learn more about how to manage and update your Google Account info.
+Activity saved to your Google Account, including things you’ve looked for on Google Search, videos you’ve watched on YouTube, apps you’ve installed on your Android device, ads or content you’ve interacted with, and your general area while using Google Services. A general area is larger than 1 square mile, and has at least 1000 users so that the general area of your search does not identify you, helping to protect your privacy. This means that a general area is typically larger than 1 square mile outside of cities. Your activity can come from any device where you sign in to your Google Account.
+Learn more about how to control what activity is used to personalize ads.
+Activity from sites that partner with Google that is saved to your Google Account.
+Learn more about saved activity from sites that partner with Google.
+If you're located in the European Economic Area, the use of your Google Account activity data for ads personalization is subject to your linked services settings.
+Learn more about linked services. 
+
+For example:
+
+You might see an ad for a new car because you've watched a YouTube video about the best new cars this year.
+You might see an ad on YouTube about cooking because you’ve looked for recipes on Google Search.
+You might see an ad for running shoes because you’ve customized your ads on My Ad Center to see more about the Fitness topic.
+
+Your choices in My Ad Center, like your preferred ad topics and brands, only affect the ads you see on Google services. Those preferences are not used to personalize ads on partner sites and apps. Visit Partner ad settings to control personalized ads on partner sites and apps.
+
+Non-personalized ads on Google
+
+Non-personalized ads on Google are shown to you according to contextual factors like the time of day, the topics of the website you're visiting, or your current location, as well as info about videos you've just been watching or your active searches.
+
+For example:
+
+You might see a restaurant ad for lunch specials because it’s noon in your timezone.
+You might see an ad for a local plumber because you’re actively searching for plumbing services.
+If you search for “umbrellas” soon after searching for “patio furniture,” you might see ads for “patio umbrellas” instead of “golf umbrellas”.
+About ads on partner sites and apps
+
+Websites, like news sites and shopping sites, and apps often have space reserved for ads. When sites and apps would like to show ads, they can partner with Google or a number of other ad technology providers to manage those spaces and show visitors relevant ads. 
+
+Millions of sites and apps partner with Google to help fund their content using ads paid for by advertisers. These partner sites and apps specifically use Google technology to show ads. They show ads with the Google Display Network, a Google platform that helps advertisers show ads on sites across the web. 
+
+Ads you see on partner sites and apps  are either personalized or non-personalized. Although these partner sites are neither owned nor operated by Google, you can choose whether or not the ads you see on these sites are personalized using the Google Display Network.
+
+Not every website or app uses Google technology to show ads. For example, social media sites and apps may have their own advertising platforms.
+
+Open all | Close all
+
+Personalized ads on partner sites and apps
+
+Personalized ads on partner sites might be based on your:
+
+Info that you’ve given that website or app like your email address, age, or gender.
+Interactions with content on that website or app.
+Interactions with ads on that website or app.
+Google Account activity depending on your Google settings.
+Account settings for that website or app.
+
+For example:
+
+You might visit a news site and see an ad for a cooking magazine because you’ve previously read an article about food on that website.
+You might visit a website and see an ad for a new car because you've read an article about this year’s new cars.
+Your choices in My Ad Center, like your preferred ad topics and brands, only affect the ads you see on Google services. Those preferences are not used to personalize ads on partner sites and apps. Visit Partner ad settings to control personalized ads on partner sites and apps.
+Non-personalized ads on partner sites and apps
+
+Non-personalized ads on partner sites and apps are shown to you according to factors like the time of day, the topic of the website you're visiting, or your general location.
+
+For example:
+
+You might see a restaurant ad for lunch specials because you’re reading a blog about lunch recipes.
+You might see an ad for a roofing business because you are on a website about home repair.
+
+↑ back to top
+
+Turn on or off personalized ads
+
+Google provides many ways you can turn on or off personalized ads. You can control your settings for personalized ads:
+
+On Google Services
+
+Open all | Close all
+
+When you're signed in to your Google Account
+
+While you are signed in to your Google Account, My Ad Center controls whether ads are personalized on Google services and partner sites and apps. To turn on or off personalized ads when you’re signed in to your Google Account:
+
+Go to My Ad Center.
+Select Onor Off, next to "Personalized ads."
+Confirm your selection.
+
+Go to My Ad Center
+
+When you turn on personalized ads with My Ad Center:
+
+The ads you see on Google services may seem more relevant because the choices you’ve made in My Ad Center, as well as your info and activity, may be used to help show you ads for products and brands that interest you.
+Personalized ads on partner sites may also be turned on, and the ads you see on partner sites and apps may seem more relevant because your info and activity may be used to help show you ads for products and brands that interest you
+
+When you turn off personalized ads:
+
+The ads you see on Google services will be non-personalized — that is, they will be based on contextual factors like the time of day, the topics of the website you're visiting, or your current location, as well as info about videos you've just been watching or your active searches.
+The ads you see on partner sites and apps won't be personalized by Google.
+Your preferences in My Ad Center like the topics and brands you’ve customized will be deleted.
+Your saved info won’t be used to show you ads.
+
+Where this setting applies:
+
+Turning on or off personalized ads in My Ad Center affects the ads you see on Google services across all the devices where you are signed in.
+
+This setting might not be available to you:
+
+This setting might not be available to you because personalized ads are already turned off on Google services. Personalized ads might be turned off for you, for example, because your Google Account shows that you are under 18 years old.
+
+A few notes:
+Turning on or off personalized ads when you're signed in doesn't affect ads not shown by Google or the ads you see on sites that have their own ads platforms.
+Your choices in My Ad Center, like your preferred ad topics and brands, only affect the ads you see on Google services and are not used to personalize ads on partner sites and apps.
+
+↑ back to top of this section
+
+When you're signed out of your Google Account
+
+If you're not signed in to your Google Account, your ad settings are saved to your device or browser. Turning on or off personalized ads when you're signed out of your Google Account affects the ads you see depending on where you change your settings. You can turn on or off personalized ads when you're signed out of your Google Account: 
+
+For Google Search
+For YouTube
+For the Web
+For Google Search
+
+Personalize ads on Google Search controls the ads you see when you’re signed out of your Google Account and using Google Search
+
+Since Personalized ads on Google Search controls your experience when you’re signed out of your Google Account, it only applies to the specific browser or device that you’re using.
+
+To turn on or off Personalized ads on Google Search, when you’re signed out of your Google Account:
+
+Go to Ad Settings.
+Select Search.
+Turn on or off Personalized ads on Google Search.
+Confirm your changes.
+
+Go to Ad Settings
+
+For YouTube
+
+Personalized ads on YouTube controls the ads you see when you’re signed out of your Google Account and using YouTube.
+
+Since Personalized ads on YouTube controls your experience when you’re signed out of your Google Account, it only applies to the specific browser or device that you’re using.
+
+To turn on or off Personalized ads on YouTube, when you’re signed out of your Google Account:
+
+Go to Ad Settings.
+Select YouTube.
+Turn on or off Personalized ads on YouTube.
+Confirm your changes.
+
+Go to Ad Settings
+
+For the Web
+
+When you’re signed out of your Google Account, you can turn on or off personalized ads on partner sites. This option only applies to the specific browser or device that you’re using
+
+To turn on or off personalized ads on partner sites, when you’re signed out:
+
+Go to Ad Settings.
+Select Web.
+Turn on or turn off Personalized ads on sites that partner with Google
+Confirm your changes.
+
+Go to Ad Settings
+
+When you turn on personalized ads:
+
+The ads you see on Google services may seem more relevant because your info and activity may be used to help show you ads for products and brands that interest you.
+
+When you turn off personalized ads:
+
+Your saved info won’t be used to show you ads.
+The ads you see won't be personalized – that is, they will be based on contextual factors like the time of day, the topics of the website you're visiting, or your current location, as well as info about videos you've just been watching or your active searches.
+
+These setting might not be available to you:
+
+The above settings might not be available to you because your browser or device may prevent the use of cookies for personalized ads across multiple websites.
+
+A few notes:
+Turning on or off personalized ads when you're signed out doesn't affect ads not shown by Google or the ads you see on sites that have their own ads platforms.
+Your choices in My Ad Center, like your preferred ad topics and brands, only affect the ads you see on Google services when you are signed in to your Google Account.
+
+↑ back to top of this section
+
+↑ back to top
+
+On partner sites and apps
+
+Open all | Close all
+
+When you're signed in to your Google account
+
+To turn on or off personalized ads on partner sites, when you’re signed in to your Google Account:
+
+Go to Partner Ad Settings
+Turn on or off Get personalized ads when you visit sites that partner with Google.
+Confirm your selection.
+Go to Partner Ad Settings
+
+When you turn on personalized ads:
+
+When you turn on personalized ads, the ads you see on partner sites and apps may seem more relevant because your info and activity may be used to help show you ads for products and brands that interest you.
+
+When you turn off personalized ads:
+
+The info or activity saved to your Google account won’t be used to show you ads.
+The ads you see on partner sites and apps won't be personalized– that is, they will be based on general factors like the time of day or the topic of the video, website, or app you're viewing.
+
+Where this setting applies:
+
+Turning off personalized ads with Partner Ad Settings only affects ads on partner sites and apps showing Google ads, in the specific browser that you’re using, when your account info is available. 
+
+This setting might not be available to you:
+
+This setting might not be available to you because:
+
+Your Google Account shows that you are under 18 years old.
+You’re using a browser that doesn’t allow third-party cookies.
+A few notes:
+Turning on or off personalized ads on partner sites and apps does not affect the ads you see on Google services.
+If you turn off personalized ads in My Ad Center, personalized ads on partner sites and apps are also turned off.
+Turning on or off personalized ads when you're signed in doesn’t affect ads not shown by Google or the ads you see on sites that use other ads platforms.
+
+↑ back to top of this section
+
+When you're signed out of your Google Account
+
+To turn on or off personalized ads on partner sites, when you’re signed out of your Google Account:
+
+Go to Partner Ad Settings
+Turn on or off Get personalized ads when you visit sites that partner with Google.
+Confirm your selection.
+Go to Partner Ad Settings
+
+When you turn on personalized ads:
+
+The ads you see on partner sites and apps may seem more relevant because your info and activity may be used to help show you ads for products and brands that interest you.
+
+When you turn off personalized ads:
+
+The info or activity saved to your Google account won’t be used to show you ads.
+The ads you see on partner sites and apps won't be personalized– that is, they will be based on general factors like the time of day or the topic of the video, website, or app you're viewing.
+
+Where this setting applies:
+
+Turning off personalized ads with Partner Ad Settings only affects ads on partner sites and apps showing Google ads, in the specific browser that you’re using.
+
+This setting might not be available to you:
+
+The setting above might not be available to you when you’re using a browser that doesn’t allow third-party cookies.
+
+A few notes:
+Turning on or off personalized ads on partner sites and apps does not affect the ads you see on Google services.
+Turning on or off personalized ads for sites and apps that partner with Google via Partner Ad Settings doesn’t affect ads not shown by Google or the ads you see on sites that use other ads platforms.
+
+↑ back to top of this section
+
+↑ back to top
+
+On your devices
+
+Open all | Close all
+
+Mobile devices
+Android phone & tablet iPhone & iPad
+More
+More
+More
+On partner sites and apps on your Android device
+
+Ads you see on your mobile devices may be personalized based on its Advertising ID. Sometimes Google links that advertising ID to an advertising cookie on the same device in order to coordinate ads across your mobile apps and mobile browser. This can happen, for example, when you see an ad within an app that launches a web page in your mobile browser.
+
+You can control your Advertising ID on each device you use.
+
+To control personalized ads on your Android devices, you can:
+
+Reset your device’s advertising ID, which replaces the current ID with a new one. Apps can still show you personalized ads, but for a while they may not be as relevant or interesting to you.
+Delete your device’s advertising ID, which deletes the advertising ID and doesn't assign a new one. Apps can still show you ads, but they may not be as relevant or interesting to you. You won't see ads based on this advertising ID, but you may still see ads based on other factors, like the information you’ve shared with apps.
+
+Your Advertising ID will be reset or deleted, but apps may have their own settings using other types of identifiers, which can also affect the types of ads you see.
+
+Learn more about how to reset or delete your advertising ID.
+
+In the YouTube app on your Android device
+If you're signed in:
+
+While you’re signed in to your Google Account, My Ad Center controls whether ads are personalized on Google services and partner sites and apps. Learn more about what happens when you turn off personalized ads with My Ad Center.
+
+To turn off personalized ads in your YouTube app:
+
+Select Account  Settings.
+Scroll to "Privacy"  "Google ad settings" and you'll be sent to My Ad Center.
+Select On or Off, next to "Personalized ads."
+Confirm your selection.
+If you're signed out:
+
+When you turn off personalized ads in your YouTube app while signed out, Google won’t personalize ads in the app on this device. Ads served in the YouTube app on this device will be based on contextual factors like the time of day, or your current location, as well as info about videos you've just been watching or your active YouTube searches. Learn more about what happens when you turn off personalized ads while you're signed out.
+
+To turn off personalized ads in your YouTube app while you’re signed out:
+
+Select Account  Settings.
+Scroll to "History & Privacy" and then turn off Allow personalized ads.
+Confirm your selection.
+
+ 
+
+Connected TV
+
+If you use a Connected TV with Android TV, Google TV, or the YouTube app on your TV you can control whether ads are personalized directly on your device.
+
+To turn on or off personalized ads, using your remote or connected mobile device:
+
+On the ad, select Ad Options. A new screen with a special url, a QR code, and several options will appear.
+Select Personalized ads are on/off.
+Select Turn on/off
+Android TV
+
+Ads you see on your Android TV may be personalized based on its Advertising ID. You can control your Advertising ID on each connected TV you use.
+
+To control personalized ads on your Android TV, you can:
+
+Reset your device’s advertising ID, which replaces the current ID with a new one. Apps can still show you personalized ads, but for a while they may not be as relevant or interesting to you.
+Delete your device’s advertising ID, which deletes the advertising ID and doesn't assign a new one. Apps can still show you ads, but they may not be as relevant or interesting to you. You won't see ads based on this advertising ID, but you may still see ads based on other factors, like the information you’ve shared with apps.
+
+Learn more about how to change your ad settings on Android TV.
+
+Non-Google Devices
+
+Many connected TV devices support identifiers for advertising and offer ways for users to opt out of personalized advertising. A full list of those devices, and ways users can opt out, is kept updated on the Network Advertising Initiative’s website.
+
+Learn more about how to opt out of personalized ads on your non-Google device at the Network Advertising Alliance.
+
+↑ back to top
+
+On other ad networks
+With AdChoices
+
+Google is one of many ad networks that personalizes ads based on your activity online. Go to AdChoices to control ads from Google and other ad networks.
+
+Go to AdChoices
+
+↑ back to top
+
+Control data saved from partner sites to your Google Account
+
+When you visit sites that partner with Google to show ads, browsing data from partner sites and apps may be saved to your Google Account. This info is used to help personalize ads across the browsers and devices you use so the ads you see will be for products and brands that interest you.
+
+Start or stop saving data to your Google Account
+
+To start or stop saving data to your Google Account from partner sites and apps:
+
+Go to Partner Ad Settings 
+Check or uncheck Also save data in your Google Account from sites and apps that partner with Google.
+Confirm your changes.
+
+Got to Partner Ad Settings
+
+When you stop saving data from partner sites to your Google account:
+
+Google won’t save any of your future browsing data from partner sites to your Google Account.
+Google won’t use your Google Account activity and info to personalize ads on partner sites and apps. 
+
+Where this setting applies:
+
+This setting only applies on browsers or devices where you’re signed in to your Google Account.
+
+↑ back to top
+
+Give feedback about this article
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

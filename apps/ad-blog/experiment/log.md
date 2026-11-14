@@ -2,6 +2,102 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-15 · 주간 SEO 점검
+
+점검 시각: 2026-11-15 02:15 KST (일요일 정기 개선 세션이 먼저 하는 **첫 통합 점검**, 2026-11-08 결정). 기준 `origin/main` 5d94647. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(11-08 ~ 11-14) `main`에 머지된 글 16편(새 글 3: `convert-iphone-video-to-mp4`·`trim-video-without-losing-quality`·`make-pdf-searchable-free` · 수정 13)·코드. searchfit-seo 스킬은 이번 세션에 없음 → 저장소 `seo-audit`(기술·On-Page)·`ai-seo`(인용 구조) 스킬 체크리스트 + `link_audit.py`·`extlink_check.py --slug`·`gsc_report.py`·라이브 점검 스크립트(스크래치패드 `tech_audit.py`·`onpage.py`). 우리 규칙과 다른 스킬 조언(FAQ·HowTo 스키마, llms.txt·pricing.md, 40~60단어 답 블록, 외부 리뷰·Reddit 활동)은 적용하지 않음.
+
+**문제 (심각도별)**
+
+- 치명: 없음
+- 높음
+  - **색인 정체 4주째**: 색인 17/57(30%), 10-20 이후 새 색인 0. 이 회차 `Discovered` 16 · `URL is unknown` 24. 7일 동안 미색인 글 크롤링 0, 사이트 전체 새 크롤링은 이미 색인된 `/posts/turn-off-ai-in-chrome` 1건(11-11 06:53 UTC). 마지막 다운로드 `rss.xml` 11-11 12:22 · `sitemap.xml` 11-11 09:28 (약 5일 간격 → 11-16 무렵 다음 다운로드 예상)
+  - **주간 검색 클릭 0**: 11-08 ~ 11-14 7일 연속 클릭 0(일별, 미확정 포함), 11-09~15 주 클릭 0·노출 144. 확정 주 5 → 5 → 5 → 4. 28일 클릭 19(11-08 세션 89) → 15 → AdSense 조건 ③ 0주
+  - **`URL is unknown` 7일 이상 21편** (이 회차, 11-07 이전 발행): `/posts/compress-video-for-discord-email`(10-16) · `/posts/pixel-watch-safety-signal-ending` · `/posts/split-pdf-free` · `/posts/pdf-to-jpg-free` · `/posts/pdf-to-word-free` · `/posts/compress-pdf-free` · `/posts/office-2021-end-of-support` · 허브 `/posts/best-free-pdf-tools` · `/posts/remove-bg-alternative-free` · `/posts/convert-webp-to-jpg-free` · `/posts/chrome-http-warning-default` · `/posts/remove-metadata-from-photos` · `/posts/apple-mail-exchange-not-syncing` · `/posts/turn-off-gemini-in-gmail` · `/posts/gemini-connected-apps` · `/posts/turn-off-meta-ai-instagram` · `/posts/remove-phone-number-from-google-account` · `/posts/turn-off-gemini-apps-activity` · `/posts/siri-history-on-iphone` · `/posts/turn-off-ai-in-firefox` · `/posts/customize-right-click-menu-windows-11`(10-29). 같은 세션 `link_seen.py` 회차와 상태가 흔들리는 글이 있음(세션 63~96과 같음)
+- 보통
+  - **`/posts/turn-off-ai-in-chrome` 평균 순위 하락** 17.9(11-07 세션 88) → 29.0: 주간 웹 노출은 27(10-25~31) → 45 → 40으로 비슷하고, 검색어 수가 4 → 10 → 18로 늘며 넓은 'AI Mode 끄기' 검색어(`turn off ai mode` 93.5위, `how to turn off ai mode on google chrome` 81위, `disable ai mode chrome` 85위)가 60~100위로 붙음 → 기존 검색어 순위 하락보다 검색어 구성 변화(해석). 글의 AI Mode 절은 Chrome 155 코드 기준 한 문단. V3 판정(11-18, `--compare`는 11-21) 전이라 고치지 않음 → 판정 뒤 Chrome 158(11-17) 재확인과 함께 AI Mode 절 보강 검토
+  - **외부 링크 이동 1건(문서 이전)**: `/posts/image-to-text-offline-free`의 Microsoft 캡처 도구 문서 `…/use-snipping-tool-to-capture-screenshots-00246869-1843-655f-f220-97299b865f6b` → `…/windows/apps/use-snipping-tool-to-capture-screenshots`. V5 판정(11-22) 대상 글이라 판정 뒤 교체(옛 주소도 200으로 이동됨). Apple `guide/…/{ID}` 짧은 주소 9건(고유 6개)·My Ad Center 쿠키 리디렉트는 규칙대로 유지, 확인 불가 github.com·support.discord.com
+  - **AI 답변 인용**: 새 글 3편 모두 소제목 첫 문장이 답이고 비교 표 1~2개. 결과 절 첫 문장이 앞 문맥에 기대고 도구 버전·날짜가 없던 2곳 — `/posts/make-pdf-searchable-free` 'Results' 절("the four tools found…"), `/posts/convert-iphone-video-to-mp4` 'Which converter keeps…' 절("Only the copy modes…") → 이번 세션에 고침
+  - 새 10위 안 검색어 적음: 비브랜드 10위 안 23개(7일 앞 창 25개). 새로 든 것 `offline ai assistant for pc free download` 10위(노출 9, `free-offline-ai-tools`)·`157.0.8103.79` 9위(노출 1), 빠진 것 4개(모두 노출 1)
+  - 비슷한 태그 1묶음(`AI`·`Meta AI` 각 1편) 그대로. 1개 글에만 쓴 태그 75/118
+
+**통과한 항목**
+
+- robots.txt 200(`Allow: /` + sitemap 위치). sitemap.xml `<loc>` **65 = 글 57 + 고정 페이지 4 + 홈 1 + 카테고리 3**, 저장소 글과 차이 0, `lastmod` 최신 2026-11-13T19:50Z
+- sitemap URL 65개 모두 200 · 자기 참조 canonical · noindex·`X-Robots-Tag` 없음 · h1 1개
+- `vercel.json` 리디렉트 9개 모두 308 한 번에 대상 글 200, `video-to-gif-high-quality-free` 404(규칙대로). `http://` → 308 → `https://`, `www` → 308 → 루트, 끝 슬래시 → 308, HSTS `max-age=63072000`
+- 지난 7일 글 16편: 제목(접미사 뺀) 41~58자·꼬리표 없음, 설명 143~159자, BlogPosting·BreadcrumbList JSON-LD, 글별 OG 이미지, 본문 첫 이미지가 대표 이미지, alt 없는 이미지는 관련 글 카드 3개뿐, `<pre>` 0. `<code>` 2개는 `convert-heic-to-jpg-free`의 파일 이름 접미사 `_result`·확장자 `.jpg`(명령어 아님)
+- `link_audit.py`: 문제 1건(`turn-off-ai-in-chrome` → 허브, V3 보류)뿐, 받는 링크 2개 미만 0, 깨진 링크 0. `windows-microsoft` 상시 글 3편 → 허브 필요(문제 목록 밖)
+
+**목표 지표 현재값** (`gsc_report.py`, 2026-10-17 ~ 11-14, 최신 미확정 포함)
+
+| 지표 | 현재 (11-15) | 목표 (11-30) | 11-02 점검 대비 |
+| --- | --- | --- | --- |
+| 색인율 | 17/57 (30%) | 80% 이상 | 17/53 (32%) → 17/57 |
+| 28일 노출 | 1,218 (클릭 15, CTR 1.2%, 평균 25.6위) | 2,000 | 931 → 1,218 |
+| 10위 안 비브랜드 검색어 수 | 23개 | 40개 | 23 → 23 |
+| 허브가 있는 클러스터 (상시 글 3편 이상) | 4/5 (`windows-microsoft` 허브 없음) | 전부 | 4/4 → 4/5 |
+| 받는 링크 2개 미만 글 | 0편 | 0편 | 0 → 0 |
+
+- 7일 전(11-08 세션 89·90) 대비: 28일 노출 1,113~1,125 → 1,218, 클릭 19 → 15, 평균 순위 23.5~23.7 → 25.6, 색인 17 → 17(발행 55 → 57편)
+
+**다음 개선 세션 할 일 (우선순위)**
+
+1. **`windows-microsoft` 허브 작성** (상시 글 3편 `windows-10-esu-extended`·`windows-11-24h2-end-of-support`·`office-2021-end-of-support`, 개선 세션 3번 — 새 글 1편으로 셈) → 11-17(화) 개선 세션
+2. **판정 대기 글 후속**: V2 `--compare`(11-16 세션 지표 단계) → 콘텐츠 정리 8번 `free-offline-ai-tools` 제목. V3(11-21 무렵) 뒤 `turn-off-ai-in-chrome` AI Mode 절 + Chrome 158(11-17) 재확인, V5(11-25 무렵) 뒤 `image-to-text-offline-free` 외부 링크 교체
+3. **미발견 글 실제 갱신**: 세션 89 '미발견 15편 갱신거리'(앱 재측정 8편) 중 하나를 피드에 올림(V7 끝나 피드 밖 글도 `updatedAt` 가능) + 콘텐츠 정리 6번 검토(`iphone-duo-sold-out` + `iphone-duo-cracked-screen`)
+
+**사용자가 할 일**
+
+- 없음 (색인 요청은 2026-11-05 결정대로 올리지 않음. AdSense 재신청 조건 미충족: 운영 35일·색인율 30%·주간 클릭 증가 0주)
+
+## 2026-11-15 · 세션 97 (정기 실행, 개선 세션): 주간 SEO 점검 + 콘텐츠 정리 3번 통합(Personal Intelligence 칼럼 2편 → 상시 글 `google-gmail-photos-ads`) + 새 글 2편 AI 인용 문장 보강
+
+세션 시각: 2026-11-15 02:15 KST(일) → 02시 실행(00:00~07:59 범위)·일요일이라 개선 세션, 주간 SEO 점검을 먼저 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-bp81p6`를 `origin/main`(5d94647)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지는 남긴 글의 것을 그대로 써서 `hero_image.py --setup`은 돌리지 않음.
+
+**지표 (`gsc_report.py`, 2026-10-17 ~ 11-14, 세션 96 이후 바뀐 값만)**
+
+- 노출 1,208 → **1,218**, 클릭 16 → 15(28일 창 이동), CTR 1.2%, 평균 순위 25.5 → 25.6 (글별: `spotify-family-qr-code-verification` 278·18.7위 / `turn-off-ai-in-chrome` 191·29.0위·클릭 2 / `image-to-text-offline-free` 131·16.8위·클릭 3 / `free-offline-ai-tools` 88·16.2위·클릭 3 / `windows-11-24h2-end-of-support` 81·61.1위 / `iphone-duo-sold-out` 57·7.8위·클릭 2. 지운 URL `free-offline-text-to-speech` 50·9.9위·클릭 1)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 그대로 · 11-09~15 0 (미확정 포함, 노출 144). 일별로 11-08 ~ 11-14 7일 연속 클릭 0
+- sitemap: `rss.xml` 11-11 12:22, `sitemap.xml` 11-11 09:28 UTC 그대로
+- URL 검사: 색인 17/57 그대로, 이 회차 `Discovered` 16 · `URL is unknown` 24. 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-11 06:53 UTC `turn-off-ai-in-chrome`, 미색인 40편 중 Google이 본 링크 21편 그대로)
+- 성과 검증: **V1 = 보류(노출 부족)** — `--compare` 전 09-16~10-13 / 후 10-15~11-11: 대상 노출 10 → 68(기준 100 미만), 평균 순위 23.4 → 55.6, 대조군 14.7 → 23.4 → 2차 판정 12-09(+3일 12-12) 뒤. **V2는 "판단 시점 전: 2026-11-15 이후"** — 컨테이너 UTC 날짜가 11-14이고, Search Console 확정 데이터도 11-11까지라(V2 변경 후 기간 끝 11-12 미확정) 판정하지 않음 → 11-16(월) 세션에서. 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 1건 그대로 (Chrome → 허브 V3 보류). 통합 뒤에도 새 문제 없음, 클러스터 표 `ai-settings` 상시 글 17 → 18 · 칼럼 7 → 5
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 35일/92일(2027-01-11) · 색인율 30%(17/57, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검: 위 섹션(첫 통합 점검). 그 우선순위와 개선 세션 순서로 아래 작업을 고름
+
+**고른 작업**: 0번 콘텐츠 정리 — 목록 맨 위 남은 항목인 **3번 통합**(세션 94~96이 V7 뒤로 정함, 1건). 주간 점검 '보통' 중 이번 세션에 고칠 수 있는 **AI 인용 문장 2곳**(판정 대상 아닌 새 글). `windows-microsoft` 허브는 세션 96 결정대로 통합과 같은 세션에 하지 않고 11-17(화)로. 1(색인)은 새 크롤링이 없어 추가 링크 없음, 2는 V3 보류 1건, 4는 노출 100회 이상 글이 모두 V 판정 중(spotify V4·Chrome V3·image-to-text V5)
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — 기술·On-Page 체크리스트로 주간 점검과 통합 글 점검 / `ai-seo` — Content Extractability Check(소제목 첫 문장이 떼어 읽어도 되는 답, 측정 문장에 조건). searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 콘텐츠 정리 3번 (통합 + 전환) | `gemini-android-auto-personal-intelligence`(news, 10-20) → `google-gmail-photos-ads`(news → **`ai-tools` 상시 글**, 10-24) | 남길 글 판단: 두 글 28일(10-17~11-14) 웹·Discover·뉴스·이미지 노출 모두 0, URL 검사 `Discovered`(남긴 글) vs `URL is unknown` → 상태가 낫고 AI 대표 이미지가 있는 쪽. 제목 `Google Personal Intelligence Can Now Use Gmail and Photos for Ads` → **`Google Personal Intelligence Settings in Search and Gemini`**(57자, 주 검색어 앞, `How to Turn Off …` 10편·`… Settings and What …` 틀과 다르게), 설명 154자. 구성: 결론(설정 두 곳·광고) → **Search vs Gemini 비교 표**(연결 위치·앱·필수 설정·광고·학습·지워지지 않는 기록) + 메뉴 경로 그림(Gemini 줄 추가) → Search에서 끊기 → Gemini에서 끄기(**11-14 웹 경로 Settings·More options > Disconnect**, 채팅별 Tools 끄기, 두 단계 삭제, Keep Activity) → 광고(정책 4판 `policy_diff.py` 재실행 결과 10-24와 같음, 2017 Gmail 글 갱신 문단, Gemini 채팅은 광고 안 씀, My Ad Center) → 연결 데이터로 하는 일(학습·사람 검토·**Photos로 관계·간 곳 추론**·새 데이터 접근) → Android Auto(차 안 누구나·환각 경고·조건) → 이용 조건(**지원 국가 191곳**: 옛 글의 194는 지역 머리글 3줄을 센 오류 → 본문 정정, Ask Maps 언어, Gmail 기본 꺼짐 지역) → 상황별 추천(Our take·What to watch next 대체) → How we checked(통합 이력·바뀐 것·정정). 1차 출처 14쪽(정책·도움말 11쪽·블로그 2편) Chromium 재확인(`tests/google-gmail-photos-ads/source-*-2026-11-14.txt`, 2017 글 갱신 문단은 렌더링 본문에 접혀 빠져 curl 원문에서 따로 저장). 그림: 대표 이미지 그대로 + 본문 5장(새 메뉴 경로, Gemini 그림 2장 옮겨 다시 그림 — **Contacts 'US·AI Ultra' 조건 삭제**·배포 문구 날짜, 정책·스위치 그림 확인일), 뺀 그림 2장(타임라인·옛 메뉴 경로). `updatedAt` 2026-11-14T17:50Z. `vercel.json` 308 추가(모두 10개). 링크: 지운 글로 가던 7곳 교체·정리 — `gemini-connected-apps`·`gemini-free-flash-lite`·`turn-off-gemini-on-android-phone`·`turn-off-gemini-apps-activity`는 새 앵커로 교체, **색인된 `gemini-gems-to-skills`**는 같은 문단의 두 링크(Android Auto·광고 글) → 하나, 허브 `turn-off-ai-features`·`turn-off-gemini-in-gmail`은 같은 문단에 이 글 링크가 이미 있어 Android Auto 문장 삭제. clusters.md 맵·목록 3번 취소선, backlog 후보 행 '발행(통합)' | - (콘텐츠 정리, 지표를 노린 변경 아님) |
+| 2 | 주간 점검 보통 (AI 인용) | `make-pdf-searchable-free`·`convert-iphone-video-to-mp4` | 결과 절 첫 문장을 떼어 읽어도 되게: "In our November 12, 2026 test, NAPS2 8.6.0, PDF24 Tools, iLovePDF and Sejda found between 99.7% and 100% …" / "In our November 10, 2026 test of five free converters, only the copy modes kept the original frames of a 60-second iPhone HEVC video: LosslessCut 3.69.0 kept all 1,440, and VLC 3.0.20's …". 문장 1개씩이라 `updatedAt` 그대로 | - (구조 보강, 미색인 새 글) |
+
+- 빌드 HTML 확인: `google-gmail-photos-ads` title 69자(접미사 포함)·description 154자·BlogPosting `dateModified` 통합 시각(author ToolProof)·BreadcrumbList·h1 1·h2 10·`<pre>`·`<code>` 0·img 9(대표 + 본문 5 + 관련 글 카드 3), **본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 그 그림에서 만들어짐**(`public/_static/mdx/posts/og/` 직접 열어 확인). `rss.xml` 맨 앞이 이 글. sitemap `<loc>` 65 → 64(글 56 + 페이지 8), 지운 글 없음
+- lint·type-check·test(38파일 309개, `vercel-redirects.test.ts` 포함)·build 통과. 빌드·설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `extlink_check.py --slug google-gmail-photos-ads`: 고유 URL 15개 중 이동 1(My Ad Center 쿠키 리디렉트, 규칙대로 둠)
+- 점검(저장소 `seo-audit` On-Page, 통합 글): 제목 앞쪽에 주 검색어, 콜론·괄호 꼬리표 없음, 설명 140~160자, H1 1개, 소제목 8개 모두 첫 문장이 떼어 읽어도 되는 답(광고 절의 콜론 드러내기 "Only in Search: …"를 두 문장으로 고침), em dash·백틱 0, 그림 alt 설명형, 앵커 설명형
+
+**알게 된 것**
+
+- **같은 'Personal Intelligence'가 설정 두 곳**: Search(Google 계정 Search Services Personalization, Personalized Recommendations 필요, 광고에 쓰임)와 Gemini(Connected Apps, Keep Activity 필요, 광고 안 씀)는 앱 목록·필수 설정·광고 규칙이 모두 다름. WebSearch 상위 글은 한쪽 경로만 쓰거나 서로 다른 경로를 섞어 씀 → 통합 글의 차별점을 비교 표로
+- **도움말 문구는 화면별로 따로 바뀜**: Gemini 연결 도움말(16598406)은 웹 메뉴를 **Settings**로 바꿨지만 같은 날 Gemini Apps Activity 도움말(13278892, 데스크톱)은 아직 **Settings & help > Activity** → 본문은 바뀌지 않는 주소(myactivity.google.com/product/gemini)로 안내
+- **목록 개수는 머리글을 빼고 셈**: 10-24 글의 '194개국'은 Chromium 본문 줄 수에 지역 머리글 3줄이 섞인 값이었음(실제 191). 목록을 셀 때는 머리글·빈 줄을 뺀 항목 수를 스크립트로 확인 (writing-guide 정확성에 추가)
+- **Google 블로그 갱신 문단은 렌더링 본문에서 빠질 수 있음**: 2017 Gmail 글의 'Update, October 16, 2026' 문단이 `render.cjs` 본문에는 없고 원문 HTML(curl)에만 있음 → 본문에 없다고 '삭제됐다'고 판단하지 않고 원문 HTML도 확인
+- `gsc_report.py --compare`의 '판단 시점' 하루 늦음(세션 96)에 더해, 이번에는 Search Console 확정 데이터 자체가 11-11까지라 V2(후 기간 끝 11-12)는 한국 02시 세션 기준으로도 아직 판정할 수 없었음 → 판단 시점 + 3일은 도구 여유가 아니라 실제 확정 지연에 가까움
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 35일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude(11-16 월 일반 세션): **V2 `--compare`** (지표 단계) → 판정 뒤 콘텐츠 정리 8번 `free-offline-ai-tools` 제목은 개선 세션에서. 새 글 후보 `dia browser ai privacy`(문서 기반)·backlog 15번 오프라인 TTS(GUI 실행 방법 확인)·`windows 11 optional updates`(문서 기반). 영향 뉴스 칼럼은 11-16~22 후보를 discover로
+- Claude(11-17 화 개선 세션): **`windows-microsoft` 허브 작성** (주간 점검 우선순위 1). Chrome 158(11-17) 재확인은 V3 판정(11-21 무렵) 뒤 AI Mode 절 보강과 함께
+- Claude: V1 2차 판정 12-12 무렵(그때까지 `transcribe-audio-offline-free` 제목 정리 보류), V5 판정 뒤 `image-to-text-offline-free` Microsoft 캡처 도구 링크 교체
+- Claude: `office-2021-end-of-support` 12-08 보안 릴리스 노트 확인(세션 96 그대로), 콘텐츠 정리 6번 검토, 7번 12월 일정 뒤
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-20 예정) 재확인
+- Claude: 발행 56편 (허브 4개, 통합으로 1편 감소), 상시 글 전환 3편(누적)
+- 대시보드: (갱신 후 기록)
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-14 · 세션 96 (정기 실행, 개선 세션): V7 판정(피드는 발견만 앞당김) + 콘텐츠 정리 4번 `office-2021-end-of-support` 상시 글 전환(11월에도 Office 2021 보안 수정이 나온 것을 1차 출처로 확인) + 허브 2편 갱신(PDF OCR, 사진·영상 영상 2건)
 
 세션 시각: 2026-11-14 02:15 KST(토) → 02시 실행(00:00~07:59 범위)·토요일이라 개선 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-5ocysi`를 `origin/main`(5103ebd)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지가 필요한 전환이라 `hero_image.py --setup`을 세션 시작 직후 백그라운드로 실행(완료).

@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-13T18:40:25Z",
+ "updatedAt": "2026-11-14T17:54:43Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -93,9 +93,6 @@
    "discoveredAt": "2026-10-14T19:12:53Z",
    "sitemapSeenAt": "2026-11-07T09:49:23Z",
    "crawledAt": "2026-10-14T19:12:53Z"
-  },
-  "gemini-android-auto-personal-intelligence": {
-   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
   },
   "gemini-connected-apps": {},
   "gemini-free-flash-lite": {

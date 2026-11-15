@@ -1,0 +1,35 @@
+# 가져온 시각: 2026-11-15T18:24:27.632Z
+# 원본: https://www.waifu2x.net/
+waifu2x
+https://www.waifu2x.net/
+
+Login with Patreon
+waifu2x
+2026-08-17: Update the Art model.
+2024-02-29: website domain is changed from waifu2x.udp.jp to www.waifu2x.net
+(adsbygoogle = window.adsbygoogle || []).push({});
+English / 日本語 / Русский / Português / Español / Français / Deutsch / Türkçe / 简体中文 / 繁體中文 / 한국어 / Nederlands / Català / Română / Italiano / Esperanto / Bokmål / Українська / Polski / Български / Bahasa Indonesia
+
+Single-Image Super-Resolution for Anime-Style Art using Deep Convolutional Neural Networks. And it supports photo.
+
+Show full demonstration | Go to GitHub
+
+Image choosing (D&D): 
+Or choose a file: 
+Limits: Size: 5MB, Noise Reduction: 3000x3000px, Upscaling: 1500x1500px.
+Style:  Artwork  Artwork/Scans  Photo
+Noise Reduction:
+(expect JPEG artifact)
+  None  Low  Medium  High  Highest
+You need use noise reduction if image actually has noise or it may cause opposite effect.
+Upscaling:
+  None  1.6x  2x 🚀 4x
+Image Format:
+  PNG  WebP
+Support the server on Patreon or Fantia.jp
+(adsbygoogle = window.adsbygoogle || []).push({});
+(adsbygoogle = window.adsbygoogle || []).push({});
+This website uses Google Analytics to help us improve the website content. Privacy Policy
+nunif
+Monster Hunter Now
+Hunt monsters in the real world

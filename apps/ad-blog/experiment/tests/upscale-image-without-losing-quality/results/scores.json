@@ -1,0 +1,721 @@
+[
+ {
+  "scale": "2x",
+  "tool": "bicubic",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.48,
+  "ssim": 0.835,
+  "lpips": 0.2542
+ },
+ {
+  "scale": "2x",
+  "tool": "lanczos",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.56,
+  "ssim": 0.8361,
+  "lpips": 0.2891
+ },
+ {
+  "scale": "2x",
+  "tool": "bigjpg",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 2849099,
+  "psnr": 26.44,
+  "ssim": 0.8751,
+  "lpips": 0.1064
+ },
+ {
+  "scale": "2x",
+  "tool": "iloveimg",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 2622213,
+  "psnr": 24.67,
+  "ssim": 0.8378,
+  "lpips": 0.2211
+ },
+ {
+  "scale": "2x",
+  "tool": "imgupscaler",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 401841,
+  "psnr": 23.54,
+  "ssim": 0.7885,
+  "lpips": 0.2711
+ },
+ {
+  "scale": "2x",
+  "tool": "bicubic",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 35.08,
+  "ssim": 0.9327,
+  "lpips": 0.1179
+ },
+ {
+  "scale": "2x",
+  "tool": "lanczos",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 35.18,
+  "ssim": 0.936,
+  "lpips": 0.1242
+ },
+ {
+  "scale": "2x",
+  "tool": "bigjpg",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 2293151,
+  "psnr": 35.84,
+  "ssim": 0.9366,
+  "lpips": 0.0631
+ },
+ {
+  "scale": "2x",
+  "tool": "iloveimg",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 2620681,
+  "psnr": 32.61,
+  "ssim": 0.8889,
+  "lpips": 0.1664
+ },
+ {
+  "scale": "2x",
+  "tool": "imgupscaler",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 383888,
+  "psnr": 30.28,
+  "ssim": 0.8377,
+  "lpips": 0.201
+ },
+ {
+  "scale": "2x",
+  "tool": "pixelcut",
+  "image": "cat",
+  "size": [
+   1080,
+   810
+  ],
+  "format": "PNG",
+  "bytes": 1904432
+ },
+ {
+  "scale": "2x",
+  "tool": "bicubic",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.11,
+  "ssim": 0.7798,
+  "lpips": 0.332
+ },
+ {
+  "scale": "2x",
+  "tool": "lanczos",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.3,
+  "ssim": 0.7944,
+  "lpips": 0.4051
+ },
+ {
+  "scale": "2x",
+  "tool": "bigjpg",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 4110564,
+  "psnr": 24.83,
+  "ssim": 0.8294,
+  "lpips": 0.2139
+ },
+ {
+  "scale": "2x",
+  "tool": "iloveimg",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 4337772,
+  "psnr": 21.6,
+  "ssim": 0.6997,
+  "lpips": 0.2159
+ },
+ {
+  "scale": "2x",
+  "tool": "imgupscaler",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 699237,
+  "psnr": 21.72,
+  "ssim": 0.6358,
+  "lpips": 0.3102
+ },
+ {
+  "scale": "2x",
+  "tool": "bicubic",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 36.69,
+  "ssim": 0.9138,
+  "lpips": 0.1439
+ },
+ {
+  "scale": "2x",
+  "tool": "lanczos",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 37.13,
+  "ssim": 0.922,
+  "lpips": 0.1763
+ },
+ {
+  "scale": "2x",
+  "tool": "bigjpg",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 1585912,
+  "psnr": 36.87,
+  "ssim": 0.9184,
+  "lpips": 0.1029
+ },
+ {
+  "scale": "2x",
+  "tool": "iloveimg",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 3033199,
+  "psnr": 30.23,
+  "ssim": 0.7559,
+  "lpips": 0.3447
+ },
+ {
+  "scale": "2x",
+  "tool": "imgupscaler",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 393152,
+  "psnr": 29.4,
+  "ssim": 0.7357,
+  "lpips": 0.267
+ },
+ {
+  "scale": "2x",
+  "tool": "bicubic",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.9,
+  "ssim": 0.7761,
+  "lpips": 0.3236
+ },
+ {
+  "scale": "2x",
+  "tool": "lanczos",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.98,
+  "ssim": 0.7845,
+  "lpips": 0.3715
+ },
+ {
+  "scale": "2x",
+  "tool": "bigjpg",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 2855767,
+  "psnr": 25.53,
+  "ssim": 0.8173,
+  "lpips": 0.2406
+ },
+ {
+  "scale": "2x",
+  "tool": "iloveimg",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 3395236,
+  "psnr": 23.39,
+  "ssim": 0.7167,
+  "lpips": 0.1896
+ },
+ {
+  "scale": "2x",
+  "tool": "imgupscaler",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 485938,
+  "psnr": 23.03,
+  "ssim": 0.6708,
+  "lpips": 0.3055
+ },
+ {
+  "scale": "2x",
+  "tool": "bicubic",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 30.21,
+  "ssim": 0.9786,
+  "lpips": 0.0609
+ },
+ {
+  "scale": "2x",
+  "tool": "lanczos",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 30.72,
+  "ssim": 0.9759,
+  "lpips": 0.0716
+ },
+ {
+  "scale": "2x",
+  "tool": "bigjpg",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 291390,
+  "psnr": 36.47,
+  "ssim": 0.9891,
+  "lpips": 0.0155
+ },
+ {
+  "scale": "2x",
+  "tool": "iloveimg",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 557420,
+  "psnr": 32.27,
+  "ssim": 0.9898,
+  "lpips": 0.0128
+ },
+ {
+  "scale": "2x",
+  "tool": "imgupscaler",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 131980,
+  "psnr": 29.31,
+  "ssim": 0.9771,
+  "lpips": 0.0273
+ },
+ {
+  "scale": "4x",
+  "tool": "bicubic",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 21.1,
+  "ssim": 0.6777,
+  "lpips": 0.556
+ },
+ {
+  "scale": "4x",
+  "tool": "lanczos",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 21.16,
+  "ssim": 0.6782,
+  "lpips": 0.5675
+ },
+ {
+  "scale": "4x",
+  "tool": "bigjpg",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 1981688,
+  "psnr": 22.2,
+  "ssim": 0.73,
+  "lpips": 0.3717
+ },
+ {
+  "scale": "4x",
+  "tool": "imgupscaler",
+  "image": "building",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 399446,
+  "psnr": 20.52,
+  "ssim": 0.679,
+  "lpips": 0.3098
+ },
+ {
+  "scale": "4x",
+  "tool": "bicubic",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 31.78,
+  "ssim": 0.8402,
+  "lpips": 0.3421
+ },
+ {
+  "scale": "4x",
+  "tool": "lanczos",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 31.93,
+  "ssim": 0.8454,
+  "lpips": 0.3428
+ },
+ {
+  "scale": "4x",
+  "tool": "bigjpg",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 1808784,
+  "psnr": 32.2,
+  "ssim": 0.853,
+  "lpips": 0.2374
+ },
+ {
+  "scale": "4x",
+  "tool": "imgupscaler",
+  "image": "cat",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 374213,
+  "psnr": 28.07,
+  "ssim": 0.7461,
+  "lpips": 0.2653
+ },
+ {
+  "scale": "4x",
+  "tool": "bicubic",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 20.68,
+  "ssim": 0.4714,
+  "lpips": 0.6803
+ },
+ {
+  "scale": "4x",
+  "tool": "lanczos",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 20.76,
+  "ssim": 0.4857,
+  "lpips": 0.6968
+ },
+ {
+  "scale": "4x",
+  "tool": "bigjpg",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 3246963,
+  "psnr": 21.03,
+  "ssim": 0.5414,
+  "lpips": 0.5328
+ },
+ {
+  "scale": "4x",
+  "tool": "imgupscaler",
+  "image": "forest",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 645416,
+  "psnr": 18.99,
+  "ssim": 0.3945,
+  "lpips": 0.4031
+ },
+ {
+  "scale": "4x",
+  "tool": "bicubic",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 32.02,
+  "ssim": 0.754,
+  "lpips": 0.4
+ },
+ {
+  "scale": "4x",
+  "tool": "lanczos",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 32.16,
+  "ssim": 0.7596,
+  "lpips": 0.4242
+ },
+ {
+  "scale": "4x",
+  "tool": "bigjpg",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 1273782,
+  "psnr": 32.22,
+  "ssim": 0.7706,
+  "lpips": 0.3619
+ },
+ {
+  "scale": "4x",
+  "tool": "imgupscaler",
+  "image": "portrait",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 220662,
+  "psnr": 29.47,
+  "ssim": 0.6503,
+  "lpips": 0.4455
+ },
+ {
+  "scale": "4x",
+  "tool": "bicubic",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 22.08,
+  "ssim": 0.5391,
+  "lpips": 0.6027
+ },
+ {
+  "scale": "4x",
+  "tool": "lanczos",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 22.11,
+  "ssim": 0.5394,
+  "lpips": 0.6098
+ },
+ {
+  "scale": "4x",
+  "tool": "bigjpg",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 1977156,
+  "psnr": 22.68,
+  "ssim": 0.5898,
+  "lpips": 0.4855
+ },
+ {
+  "scale": "4x",
+  "tool": "imgupscaler",
+  "image": "sign",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 471511,
+  "psnr": 20.95,
+  "ssim": 0.5028,
+  "lpips": 0.3316
+ },
+ {
+  "scale": "4x",
+  "tool": "bicubic",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 24.84,
+  "ssim": 0.9287,
+  "lpips": 0.18
+ },
+ {
+  "scale": "4x",
+  "tool": "lanczos",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "psnr": 25.07,
+  "ssim": 0.9238,
+  "lpips": 0.1848
+ },
+ {
+  "scale": "4x",
+  "tool": "bigjpg",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "PNG",
+  "bytes": 423065,
+  "psnr": 28.3,
+  "ssim": 0.9518,
+  "lpips": 0.0428
+ },
+ {
+  "scale": "4x",
+  "tool": "imgupscaler",
+  "image": "text",
+  "size": [
+   1600,
+   1200
+  ],
+  "format": "JPEG",
+  "bytes": 136622,
+  "psnr": 25.8,
+  "ssim": 0.9425,
+  "lpips": 0.047
+ }
+]

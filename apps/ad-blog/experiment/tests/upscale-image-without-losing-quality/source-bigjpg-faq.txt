@@ -1,0 +1,100 @@
+# 가져온 시각: 2026-11-15T18:21:51.296Z
+# 원본: https://bigjpg.com/en/faq
+Bigjpg FAQ — limits, quality, privacy and downloads
+https://bigjpg.com/en/faq
+
+Bigjpg
+Pricing
+FAQ
+API
+Blog
+App Download
+Windows App (link 1)
+Windows App (link 2)
+Mac App (link 1)
+Mac App (link 2)
+iOS App
+Android App
+Google Play
+English
+简体中文
+繁體中文
+日本語
+Русский
+Türkçe
+Deutsch
+Bahasa Indonesia
+العربية
+Español
+Português
+Tiếng Việt
+Français
+Melayu
+हिन्दी
+한국어
+Italiano
+Polski
+ไทย
+Log in / Sign Up
+Bigjpg
+/
+FAQ
+FAQ
+
+The questions support answers every week: size and resolution limits, how long processing takes, what happens to your uploads, and whether you can close the browser.
+
+How does bigjpg enlarge images?
+Using the latest Deep Convolutional Neural Networks, bigjpg intelligently reduces noise and serration in images. This allows the images to be enlarged without losing quality. See demo imagesHow to Enlarge an Image Without Losing Quality →
+Does bigjpg support API?
+Yes! You can find it after logging in. Bigjpg API Tutorial: Batch Upscale Images with Python →
+How does bigjpg compare to other tools?
+With other software and tools, such as PS, an enlarged image can still look fuzzy and have visible blur as well as noise. Our product uses neural networks with a special algorithm adjusted specifically for the images' lines and color. This makes the resulting image much higher quality. Colors are well kept, and there is almost no 'glitter' or doubling visible. More importantly, the noise, which seriously influences quality, cannot be seen in the resulting images.Best AI Image Upscaler: Bigjpg vs waifu2x vs Real-ESRGAN vs jpgHD vs jpgHi →
+What images are best enlarged?
+Anime images and illustrations are nearly perfectly processed, colors, details and edges are all well kept. Regular photos are supported as well.How to Upscale Anime Art, Wallpapers and Manga Scans →
+What are the maximum limits on uploaded image?
+Currently free user 3000x3000px, 5M; paid user 50M.Print Size Cheat Sheet: How Many Pixels You Need for A4, A3 and Posters →
+How about the speed?
+The estimated remaining time will be shown once the process starts. Based on the original size & enlarging configurations, the time needed is different. The actual processing time is usually much shorter than that estimated. This depends on server traffic/time of day, as well.
+My enlarging failed! Why?
+Depending on your network environment and the current number of online users of bigjpg.com, there is a small chance that your enlarging will fail. If you encounter such a problem, please simply try again.
+Should I keep my browser open after starting?
+If you have not logged in, yes! You need to keep your browser open otherwise, the enlarged image will be lost. If you have already logged in, you can close your browser as we support offline enlarging.
+How do I view my enlargment history?
+Enlarging history can be viewed after logging in.
+I want to enlarge more and bigger images. How can I do that?
+In order to support the maintenance of this website, we offer paid services. Once upgraded, you can use an independent high-performance server to make your enlarging faster, more stable, and more.
+Privacy policy?
+Free accounts: uploaded images are automatically deleted within 24 hours. Premium accounts: uploaded images are automatically deleted within 72 hours. Image links are encrypted. Unless you share the link, no one can download your image or result.
+What about copyright and user rights?
+Users must have the necessary rights to upload and process images. We do not provide copyrighted materials. If you believe your copyright has been infringed, please visit our Copyright page to file a report.
+Slow download speed?
+The default server is located in Mainland China. You can log in and change the server to the United States in the settings page to speed up the download.
+
+This is where we write down what keeps going wrong with image upscaling — and which settings actually help.
+
+Select Images
+Blog
+API
+
+Feedback & Contact
+i@bigjpg.com
+Our other tools
+AI Magic UpscalerNew
+AI Photo Restoration
+AI Video Enhancement
+Legal
+Privacy Policy
+Terms of Service
+Content Policy
+Copyright
+AI Transparency
+Report Abuse
+Security
+Blog
+Bigjpg API Tutorial: Batch Upscale Images with Python
+Print Size Cheat Sheet: How Many Pixels You Need for A4, A3 and Posters
+2x vs 4x vs 8x vs 16x: Which Upscale Factor Should You Choose?
+How to Upscale Anime Art, Wallpapers and Manga Scans
+All articles →
+Demo images
+(function () { var modal = document.getElementById("modal_demo"); if (!modal) return; var demo = new bootstrap.Modal(modal); function showDemo() { demo.show(); } // "查看示例图片" links read #demo, so the answer can show the image in place // instead of sending the reader to the homepage. document.addEventListener("click", function (event) { var touched = event.target; var link = touched && touched.closest ? touched.closest('a[href="#demo"]') : null; if (!link) return; event.preventDefault(); showDemo(); }); window.addEventListener("hashchange", function () { if (window.location.hash === "#demo") showDemo(); }); if (window.location.hash === "#demo") showDemo(); }());

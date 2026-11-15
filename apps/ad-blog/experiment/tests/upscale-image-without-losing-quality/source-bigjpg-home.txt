@@ -1,0 +1,205 @@
+# 가져온 시각: 2026-11-15T18:21:40.656Z
+# 원본: https://bigjpg.com/en
+Bigjpg - AI Super-Resolution lossless image enlarging / upscaling tool using Deep Convolutional Neural Networks
+https://bigjpg.com/en
+
+Bigjpg
+Pricing
+FAQ
+API
+Blog
+App Download
+Windows App (link 1)
+Windows App (link 2)
+Mac App (link 1)
+Mac App (link 2)
+iOS App
+Android App
+Google Play
+English
+简体中文
+繁體中文
+日本語
+Русский
+Türkçe
+Deutsch
+Bahasa Indonesia
+العربية
+Español
+Português
+Tiếng Việt
+Français
+Melayu
+हिन्दी
+한국어
+Italiano
+Polski
+ไทย
+Log in / Sign Up
+AI Image Enlarger
+
+Sharper lines and details · Cleaner images with less noise · Made for artwork and photos · Enlarge images up to 16×
+
+Select Images
+
+Want to enlarge more images faster and with more stability? Login!
+Before
+After
+See the difference
+
+Bigjpg reconstructs lines, colors, and fine details instead of simply stretching pixels.
+
+Sharper lines and details
+Cleaner images with less noise
+Made for artwork and photos
+Enlarge images up to 16×
+Feedback & Contact
+i@bigjpg.com
+Our other tools
+AI Magic UpscalerNew
+AI Photo Restoration
+AI Video Enhancement
+Legal
+Privacy Policy
+Terms of Service
+Content Policy
+Copyright
+AI Transparency
+Report Abuse
+Security
+Blog
+Bigjpg API Tutorial: Batch Upscale Images with Python
+Print Size Cheat Sheet: How Many Pixels You Need for A4, A3 and Posters
+2x vs 4x vs 8x vs 16x: Which Upscale Factor Should You Choose?
+How to Upscale Anime Art, Wallpapers and Manga Scans
+All articles →
+Scan QR to download bigjpg.com App
+Demo images
+Use WeChat to Scan
+Success
+Can not pay
+Account
+Username
+Upgrade account
+Active plans
+Current period quota
+—
+Available quota
+—
+Purchase history
+
+No purchase records
+
+Pricing
+Duration
+Pictures / Month
+Speed
+Server
+Max Upload Size
+Max Enlarging Ratio
+Offline Enlarging
+Parallel Enlarging
+Batch mode
+Free Plan
+—
+20
+Slow
+Shared
+5MB
+4x
+✓
+×
+×
+Premium $22 USD
+12 Months
+2000
+Top priority
+HighPerformance
+50MB
+16x
+✓
+✓
+✓
+Stripe
+ WeChat Pay
+ Alipay
+More
+Hot Sales
+Standard $12 USD
+6 Months
+1000
+Top priority
+HighPerformance
+50MB
+16x
+✓
+✓
+✓
+Stripe
+ WeChat Pay
+ Alipay
+More
+Basic $6 USD
+2 Months
+500
+Top priority
+High Performance
+50MB
+16x
+✓
+✓
+✓
+Stripe
+ WeChat Pay
+ Alipay
+More
+Log in / Sign Up
+
+After upgrading:
+
+High performance servers, 5 times faster and more stable
+Basic: 500 images / month, Standard version: 1000 images / month, Pro version: 2000 images / month
+High priority enlarge
+Upload images up to 50MB
+16x enlarge
+Enlarging multiple images simultaneously
+Enlarging history
+Thank you for your support!
+Create new Bigjpg account
+Log in / Sign Up Forgot password?
+Setting
+Image type
+Artwork
+Photo
+Upscaling
+2x
+4x
+8x
+16x
+Want 8x / 16x? Upgrade!
+Noise Reduction
+None
+Low
+Medium
+High
+Highest
+Output Format
+Default
+WebP
+JPG
+PNG
+OK
+Input username
+Send reset email
+Enter new password
+
+OK
+Alert
+Close
+Alert
+Cancel
+OK
+Can not pay
+You can download our iOS/Android app in App Store/Google Play and make payment with Apple Pay/Google Wallet, we also support crypto currency BTC/ETH/USDT send email to i@bigjpg.com get more information
+Close
+(function () { var element = document.getElementById("bigjpg-boot"); function value(name) { return element.getAttribute("data-" + name) || ""; } window.BIGJPG_BOOT = { username: value("username"), apiKey: value("api-key"), language: value("language"), faqUrl: value("faq-url"), newestApp: value("newest-app"), wechatMarket: value("wechat-market"), isExpire: value("is-expire") === "1", ossUs: value("oss-us") === "1", text: { batchDownload: value("batch-download"), downloading: value("downloading"), zipPacking: value("zip-packing"), batchDone: value("batch-done"), batchError: value("batch-error"), scan: value("scan"), alipayScan: value("alipay-scan"), over: value("over"), upload: value("upload"), finish: value("finish"), fail: value("fail"), retrying: value("retrying"), about: value("about"), minute: value("minute"), numLimit: value("num-limit"), maxLimit: value("max-limit"), monthLimit: value("month-limit"), sizeLimit: value("size-limit"), typeError: value("type-error"), uploadError: value("upload-error"), closeAlert: value("close-alert"), sure: value("sure"), retrySure: value("retry-sure"), noise: value("noise"), none: value("none"), low: value("low"), mid: value("mid"), high: value("high"), highest: value("highest"), cartoon: value("cartoon"), photo: value("photo"), success: value("success"), notSuccess: value("not-success"), process: value("process"), remain: value("remain"), expire: value("expire"), versionFree: value("version-free"), versionBasic: value("version-basic"), versionStd: value("version-std"), versionPro: value("version-pro"), planActive: value("plan-active"), changePassword: value("change-password"), deleteAccount: value("delete-account"), userNotExist: value("user-not-exist"), passwordError: value("password-error"), checkEmail: value("check-email"), resetSuccess: value("reset-success"), apiKeyResetConfirm: value("api-key-reset-confirm"), apiKeyResetSuccess: value("api-key-reset-success"), apiKeyResetError: value("api-key-reset-error"), linkExpire: value("link-expire"), resetError: value("reset-error"), snOk: value("sn-ok"), snError: value("sn-error"), ossUs: value("oss-us-label"), ossCn: value("oss-cn-label") } }; }());

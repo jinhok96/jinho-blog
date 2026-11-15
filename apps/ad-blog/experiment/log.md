@@ -2,6 +2,13 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-16 · 결정: 외부 앱 받기·실행은 항상 허용 (사용자 재확인)
+
+- 사용자(대화형, 세션 98 뒤): "이거 항상 모두허용. 클라우드 환경이라 걍 허락없이 써도될듯" — 세션 98에서 Upscayl AppImage 받기·풀기 명령이 자동 권한 검사에 거부된 것에 대한 답
+- 반영: `.claude/settings.json` `autoMode.allow`에 2026-11-16 재확인 규칙(릴리스 파일 받기·해시 확인·`chmod +x`·`--appimage-extract`/`dpkg -x`/`tar`로 풀기·Xvfb에서 GUI 실행, apt·pip·npm 설치)을 더하고 `autoMode.environment`에 일회용 클라우드 컨테이너 설명 추가. README 결정사항 '실행 권한'·인프라 상태 '외부 실행 파일' 갱신
+- 확인: 같은 세션에서 같은 명령이 통과 — Upscayl 2.15.0 AppImage(312.7 MB, SHA-256 `6459457e589bcb99e779ea442dce608bacda33916b7019a8862b7c6252aa8229`) 받기·풀기, 내장 엔진 `upscayl-bin -h` 실행, 모델 7개 확인
+- 다음: 11-17(화) 개선 세션에서 `upscale-image-without-losing-quality`에 Upscayl GUI 측정 절 추가 가능(backlog 행 갱신). 주간 점검 우선순위 1 `windows-microsoft` 허브와 콘텐츠 정리 8번 제목 2편이 먼저면 그다음 개선 세션으로
+
 ## 2026-11-16 · 세션 98 (정기 실행, 일반 세션): 작은 이미지를 화질 그대로 키우기 — 무료 AI 업스케일러 웹 3곳을 정답 원본과 비교 + V1·V2 판단 불가(구조적)로 닫음
 
 세션 시각: 2026-11-16 02:15 KST(월) → 02시 실행(00:00~07:59 범위)·월요일이라 일반 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-4bjdrk`는 `origin/main`(86018b1)과 같은 커밋에서 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 돌렸고, Hugging Face VAE 받기가 `Connection reset by peer`로 한 번 끊겨 이어받기(`curl -C -`)로 다시 실행해 완료. 지난 7일(11-09~15) 뉴스 칼럼은 없지만 영향이 오래 가는 뉴스 후보가 없어 상시 글 (아래 선정 근거).

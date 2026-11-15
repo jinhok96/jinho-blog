@@ -1,0 +1,319 @@
+# 가져온 시각: 2026-11-15T18:25:45.785Z
+# 원본: https://www.pixelcut.ai/pricing
+Pricing | Get Pixelcut Pro & Compare Free Plans
+https://www.pixelcut.ai/pricing
+
+Pixelcut
+Edit
+Generate
+API
+Pricing
+Download
+Log in
+Sign up
+Make Pro Visuals
+Choose the right plan for you
+Monthly
+Yearly
+Save 20% with a yearly plan
+Free
+$0
+per month, billed yearly
+Continue
+Limited Background Removal
+Limited Upscale
+Free export without watermark
+Pro
+$10
+$8
+per month, billed yearly
+Upgrade
+600 AI Credits Monthly
+Access all AI models
+Unlimited Background Removal
+Unlimited Upscale
+3 Person Team
+1,000 Batch Exports Monthly
+Commercial license
+Most Popular
+Business
+$30
+$24
+per month, billed yearly
+Upgrade
+3,600 credits / month
+3,600 AI Credits Monthly
+Access all AI models
+Unlimited Background Removal
+Unlimited Upscale
+10 Person Team
+2,000 Batch Exports Monthly
+Commercial license
+Trusted by over 200,000 creators, brands and small businesses
+Stripe checkout
+Priority support
+Cancel anytime
+What's included in your plan
+Free
+Pro
+Business
+Background Removal
+Limited
+Magic Eraser
+Limited
+Fast Upscaler
+Limited
+Generative Fill
+Limited
+300/day
+Up to 1200/day
+Expand Image
+Limited
+300/day
+Up to 1200/day
+AI Backgrounds
+300/day
+Up to 1200/day
+Pro Eraser
+300/day
+Up to 1200/day
+Credits
+600/mo
+Up to 180000/mo
+Pixelcut is loved by over 70 million people
+My favorite app
+
+Great app, easy to use. Helps our small business save time and money to create different marketing materials professionally. Thank you.
+
+Shaelyn D.
+Best background remover
+
+I need a good background remover for my work and I've been through them all it feels like. This one is the best by far. It's so easy to use and the results always look amazing. Thank you Pixelcut!
+
+Kira H.
+Love it
+
+It's amazingly easy and gives the perfect results for my bags and accessories. It looks like it was done by a professional photographer.
+
+Mary J.
+How do credits work?
+
+Credits are a special resource used whenever you create or edit images with certain advanced AI models—particularly those provided by third-party partners.
+
+Model
+Business Plan
+Nano Banana 2.1
+Up to 12000 images
+Nano Banana 2
+Up to 6000 images
+Nano Banana Pro
+Up to 6000 images
+Nano Banana Lite
+Up to 18000 images
+Flux 2 Pro
+Up to 15000 images
+Flux 2 Flex
+Up to 15000 images
+Flux 2 Max
+Up to 12857 images
+Flux 2 Klein 4B
+Up to 180000 images
+Flux 2 Klein 9B
+Up to 90000 images
+Flux Kontext Pro
+Up to 15000 images
+Flux Kontext Max
+Up to 10000 images
+ChatGPT Image 2
+Up to 1111 images
+ChatGPT Image 2.5 Flare
+Up to 4000 images
+ChatGPT Image 2.5
+Up to 4000 images
+ChatGPT Image 2.6 Flare
+Up to 1111 images
+ChatGPT Image 2.6
+Up to 1111 images
+Flux Dev
+Up to 22500 images
+Flux Pro v1.1
+Up to 15000 images
+Flux Pro v1.1 Ultra
+Up to 10000 images
+Recraft v3
+Up to 15000 images
+Recraft v4
+Up to 18000 images
+Recraft v4 Pro
+Up to 3272 images
+Recraft v4 Vector
+Up to 10000 images
+Recraft v4 Pro Vector
+Up to 2769 images
+Ideogram 4.5
+Up to 3673 images
+Ideogram v2a
+Up to 22500 images
+Ideogram v2a Turbo
+Up to 36000 images
+Ideogram v3
+Up to 10000 images
+Ideogram v3 Turbo
+Up to 15000 images
+Juggernaut Flux Pro
+Up to 18000 images
+Runway Gen4 Image
+Up to 18000 images
+Runway Gen4 Image Turbo
+Up to 36000 images
+Dreamina v3.1
+Up to 30000 images
+Qwen Image
+Up to 45000 images
+Qwen Image 2.1
+Up to 4390 images
+Seedream v4
+Up to 15000 images
+Seedream v4.5
+Up to 11250 images
+Seedream v5 Lite
+Up to 11250 images
+Seedream v5 Pro
+Up to 5142 images
+Z Image Turbo
+Up to 90000 images
+Grok Imagine Image
+Up to 45000 images
+Grok Imagine Image 2.0
+Up to 12857 images
+Muse Image
+Up to 60000 images
+Kling 4.0
+Up to 1028 videos
+Kling 4.0 References
+Up to 1028 videos
+Kling v3.0 Pro
+Up to 1500 videos
+Kling v2.6 Pro
+Up to 2400 videos
+Kling Omni Pro
+Up to 1500 videos
+Kling Omni Pro References
+Up to 1500 videos
+Kling v2.5 Turbo Pro
+Up to 2400 videos
+Wan 2.5
+Up to 2250 videos
+Hailuo v3.0
+Up to 600 videos
+MiniMax H3 Max
+Up to 2117 videos
+Hailuo v2.0 Standard
+Up to 2571 videos
+Hailuo v2.0 Pro
+Up to 1714 videos
+Seedance v1.0 Pro
+Up to 1440 videos
+Seedance v1.0 Lite
+Up to 3000 videos
+Seedance v2.5
+Up to 342 videos
+Seedance v2.0 Fast
+Up to 720 videos
+Seedance v2.0 Mini
+Up to 1125 videos
+FLUX 3
+Up to 947 videos
+Gemini Omni 1.1 Flash
+Up to 1636 videos
+Gemini Omni Flash
+Up to 1285 videos
+Veo3.1 Fast
+Up to 1200 videos
+Veo3.1
+Up to 450 videos
+Veo3.1 Lite
+Up to 3600 videos
+Veo3 Fast
+Up to 1200 videos
+Veo3
+Up to 450 videos
+Minimax v1.0
+Up to 1714 videos
+Minimax Video 01 Live
+Up to 1714 videos
+Pixverse v3.5
+Up to 2250 videos
+Pixverse v3.5 Fast
+Up to 1500 videos
+Runway Gen4.5
+Up to 1384 videos
+Runway Gen4 Turbo
+Up to 2250 videos
+Wan 2.2
+Up to 2117 videos
+LTX-2
+Up to 3000 videos
+LTX-2 Turbo
+Up to 3000 videos
+Grok Imagine Video 1.5
+Up to 1200 videos
+Grok Imagine Video
+Up to 1500 videos
+Seedance v2.0
+Up to 590 videos
+Credit usage for video models are based on 5 seconds of generated video.
+Frequently Asked Questions
+Is Pixelcut free?
+Can I use Pixelcut Pro on my iPhone or Android?
+Can I cancel my subscription?
+What are credits?
+How do teams work?
+Do you offer discounts for yearly subscriptions?
+
+Tools
+
+Image Upscaler
+Background Remover
+Video Background Remover
+Change Background
+Magic Eraser
+AI Image Generator
+AI Video Generator
+Generative Fill
+Uncrop
+AI Ads
+AI Product Photography
+Bulk Image Editor
+
+Products
+
+Pixelcut for Claude
+iOS
+Android
+API
+
+Resources
+
+About
+Affiliate
+Careers
+Blog
+API Docs
+Brand
+Terms
+API Terms
+Privacy
+Cookie Preferences
+What's New
+Sitemap
+llms.txt
+
+Keep in touch
+
+Instagram
+X
+Contact Us
+English
+Add Pixelcut as a preferred source on Google
+© 2026 Pixelcut. All rights reserved.

@@ -1,0 +1,142 @@
+# 가져온 시각: 2026-11-15T18:29:17.058Z
+# 원본: https://support.microsoft.com/en-us/windows/ai/ai-apps/super-resolution-in-photos
+Super resolution in Photos | Microsoft Support
+https://support.microsoft.com/en-us/windows/ai/ai-apps/super-resolution-in-photos
+
+Skip to main content
+Microsoft
+Support
+Search
+Search for help
+Cancel
+Sign in with Microsoft Sign in or create an account.
+Hello, Select a different account.
+You have multiple accounts Choose the account you want to sign in with.
+Photos app
+Overview
+Changes in new Photos app
+Manage photos and videos
+Edit photos and videos
+Import photos from phone
+Search photos by location
+Super resolution in Photos
+Restyle Image and Image Creator
+Edit images with Designer
+Photos Legacy app
+Photos Legacy
+Group photos by faces
+OneDrive video project syncing
+Super resolution in Photos
+Get help with Copilot
+Tell me about super resolution in Photos.
+Show me how Tell me about relight in Photos.
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+Super resolution is a feature in Microsoft Photos that’s exclusive to Copilot+ PCs. Super resolution enhances and enlarges low-resolution images using advanced AI technology. It’s perfect for printing large photos, improving old pictures, and enhancing image quality.
+
+How it works
+
+Super resolution works in two main ways:
+
+Upscaling the resolution: This increases the number of pixels in the image, transforming it from a lower resolution to a higher resolution. For example, it might transform a photo that’s 256x256 pixels to 1012x1012 pixels. This makes the image larger and suitable for high-resolution displays.
+Enhancing image sharpness: The AI model analyzes the image and fills in missing details, making the photo look sharper and more defined.
+Requirements
+
+Super resolution in Photos is exclusive to Copilot+ PCs and currently supports only images.
+
+Getting started
+
+To use super resolution in Photos:
+
+Open the Photos app and select the image you want to enhance.
+Select Edit then select Super resolution from the available options.
+Choose the desired level of enhancement such as 1x, 2x, 4x, or 8x.
+Once the image is enhanced, you’ll see a visual comparison of the original and the enhanced image through a before and after preview.
+
+How the AI model works
+
+The super resolution feature uses AI technology to enhance and enlarge images. Here are some key points about how the AI model works and our commitment to responsible AI:
+
+Local Processing: The AI model runs locally on your device, ensuring that your data is not sent to any external services or servers. This helps protect your privacy and keeps your data secure.
+Non-generative AI: The AI model used for super resolution is not generative. It does not create new content but enhances existing images by filling in missing details and improving clarity. 
+Transparency and control: You have full control over the enhancement process and can choose the level of enhancement that best suits your needs. You can always discard the enhancement process or simply undo the enhancement with the editors Undo or Reset options.
+Feedback and improvement: We encourage users to provide feedback on the super resolution feature. Your feedback helps us improve the AI model and ensure it meets your needs and expectations.
+
+For more information on how the Photos app uses AI for other features such as Restyle Image and Image Creator, see the Microsoft Services Agreement.
+
+Troubleshooting
+
+If you encounter any issues while using super resolution in Photos:
+
+Ensure your device is a Windows 11 AI + PC and your device is running Windows 11.
+ Ensure your device is a Copilot+ PC and your device is running Windows 11.
+Ensure you are trying to enhance an image, and not a video or gif.
+Send us feedback if you are still encountering issues by selecting Settings > Send feedback in the Photos app.  
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl; const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie(); if(window.onGPCLoaded) { window.onGPCLoaded(); } function checkThirdPartyAdsOptOutCookie() { try { const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut'; var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName); return cookieValue != 1; } catch { return true; } } function getCookie(cookieName) { var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)'); return (cookieValue) ? cookieValue[2] : ''; }
+(function () { function getCookie(name) { var cookies = document.cookie.split('; '); for (var i = 0; i < cookies.length; i++) { var kvp = cookies[i].split('='); if (kvp[0] === name) { return decodeURIComponent(kvp[1]); } } return null; } if (typeof window.oneDS === 'object') { window.analytics = new window.oneDS.ApplicationInsights(); var config = { instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432", disableCookiesUsage: true, cookieCfg: { ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"] }, channelConfiguration: { eventsLimitInMem: 50 }, propertyConfiguration: { gpcDataSharingOptIn: false, callback: { userConsentDetails: () => { const consentDetails = { Required: true, Analytics: false, Advertising: false, SocialMedia: false }; return consentDetails; } } }, webAnalyticsConfiguration: { autoCapture: { pageView: true, onLoad: true, onUnload: true, click: true, scroll: true, resize: true, lineage: false, jsError: true, msTags: true }, autoPopulateParentIdAndParentName: true, isLoggedIn: false, urlCollectHash: true, urlCollectQuery: true, useDefaultContentName: true, useShortNameForContentBlob: false } }; var isFirstTime = true; var jsLocalId = null; //Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser window.analytics.addTelemetryInitializer(function (e) { if (isFirstTime) { var context = window.analytics.getPropertyManager().getPropertiesContext(); var ext = e.ext = e.ext || {}; if (jsLocalId) { // Set the localId so it's set automatically for all future events context.user.setLocalId(jsLocalId); var userExt = ext.user = ext.user || {}; userExt.localId = jsLocalId; } isFirstTime = false; } }); window.analytics.initialize(config, []); } })();
+$(function () { var signInUrl = "/en-us/authentication/signin"; var signOutUrl = "/en-us/authentication/signout"; var switchAccountUrl = "/en-us/authentication/switchaccount"; var shellOptions = { meControlOptions: { apiGeneration: 'GEN2', authProviderConfig: { type: 'webAadWithMsaProxy', appSignInUrl: signInUrl, appSignInToUrl: signInUrl, appSignOutUrl: signOutUrl, appSwitchUrl: switchAccountUrl, appSwitchToUrl: switchAccountUrl, aad: { signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False', signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True', forgetUrl: 'https://login.microsoftonline.com:443/forgetuser', rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc', }, }, } }; if (window.msCommonShell) { window.msCommonShell.load(shellOptions); } else { window.onShellReadyToLoad = function () { window.onShellReadyToLoad = null; window.msCommonShell.load(shellOptions); }; } });
+$(async function () { await window.manageSilentSignIn.handleAllSilentSignIn(); })
+if (window.UcsCreative === undefined) { window.UcsCreative = {}; }
+window.silentSigninProgress = true; var silentSigninStartLog = { actionType: 'A', content: { contentId: 'silentSignInStarted' } }; window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) { occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"}); }
+window.addEventListener('load', function () { if (typeof window.initPromotionLogger !== 'undefined') { window.initPromotionLogger(); } });

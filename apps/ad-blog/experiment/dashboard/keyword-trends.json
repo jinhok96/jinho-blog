@@ -541,6 +541,16 @@
    "refAvg": 34.44,
    "refMax": 100
   },
+  "upscale image without losing quality": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-15",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 33.61,
+   "refMax": 100
+  },
   "webp to jpg": {
    "avg": 1.76,
    "max": 4.0,

@@ -1,0 +1,124 @@
+# 가져온 시각: 2026-11-15T18:21:03.593Z
+# 원본: https://www.iloveimg.com/upscale-image
+Free AI Image Upscaling Tool - Increase resolution of your images
+https://www.iloveimg.com/upscale-image
+
+ALL IMAGE TOOLS
+COMPRESS IMAGE
+RESIZE IMAGE
+CROP IMAGE
+CONVERT TO JPG
+PHOTO EDITOR
+MORE TOOLS
+OPTIMIZE
+Compress IMAGE
+Upscale
+Remove background
+CREATE
+Meme generator
+Photo editor
+MODIFY
+Resize IMAGE
+Crop IMAGE
+Rotate IMAGE
+CONVERT
+Convert to JPG
+Convert from JPG
+HTML to IMAGE
+SECURITY
+Watermark IMAGE
+Blur face
+Login
+Sign up
+OTHER PRODUCTS
+iLovePDF
+Simplify document management
+iLoveSign
+e-Signing made simple
+iLoveAPI
+Document automation for developers
+Integrations
+Zapier, Make, Wordpress...
+Pricing
+Security
+Features
+About us
+Help
+FAQ
+Tools
+Legal & Privacy
+Contact
+Language
+English
+English
+Español
+Français
+Deutsch
+Italiano
+Português
+日本語
+Pусский
+한국어
+中文 (简体)
+中文 (繁體)
+العربية
+Български
+Català
+Nederlands
+Ελληνικά
+हिन्दी
+Bahasa Indonesia
+Bahasa Melayu
+Polski
+Svenska
+ภาษาไทย
+Türkçe
+Українська
+Tiếng Việt
+Kiswahili
+Login
+Sign up
+.item-loading { z-index: 1030; }
+Premium
+Upscale image
+Easily increase the resolution of your images with our advanced upscaling tool.
+Select images
+or drop images here
+/
+Upscale options
+Premium
+Select a size multiplier and click "Upscale" to upscale any image smaller than 6MP
+Size multiplier
+2x
+4x
+Write your text here
+Opacity:
+Arial
+Arial
+Impact
+Arial unicode ms
+Verdana
+Courier
+Comic
+Times new roman
+Lohit marathi
+Lohit devanagari
+Font Size:
+Background color 
+Font color: 
+Font shadow: 
+Opacity:
+var fonts = {"arial":{"regular":"arial.ttf","bold":"arialbd.ttf","italic":"ariali.ttf","bold-italic":"arialbi.ttf","human-name":"Arial"},"impact":{"regular":"impact.ttf","human-name":"Impact"},"arial-unicode-ms":{"regular":"arial-unicode-ms.ttf","country_extra":["CN","JP","KP","KR","AR"],"human-name":"Arial Unicode MS"},"verdana":{"regular":"verdana.ttf","bold":"verdanab.ttf","italic":"verdanai.ttf","bold-italic":"verdanaz.ttf","human-name":"Verdana"},"courier":{"regular":"cour.ttf","bold":"courbd.ttf","italic":"couri.ttf","bold-italic":"courbi.ttf","human-name":"Courier"},"comic":{"regular":"comic.ttf","bold":"comicbd.ttf","italic":"comici.ttf","bold-italic":"comicbd.ttf","human-name":"Comic Sans MS"},"times-new-roman":{"regular":"times.ttf","bold":"timesbd.ttf","italic":"timesi.ttf","bold-italic":"timesbi.ttf","human-name":"Times New Roman"},"lohit-marathi":{"regular":"Lohit-Marathi.ttf","country_extra":["IN"],"human-name":"Lohit Marathi"},"lohit-devanagari":{"regular":"Lohit-Devanagari.ttf","country_extra":["IN"],"human-name":"Lohit Devanagari"}};
+Getting files from Drive
+Getting files from Dropbox
+Uploading file 0 of 0
+Time left - seconds - Upload speed - MB/S
+UPLOADED
+
+Upscaling images...
+
+var iloveLang = {'noTasks': 'sorry, no tasks here!','Update Card Details': 'Update Card Details','login': 'login','email': 'email','waitnotify': 'Do not close your browser. Wait until your files are uploaded and processed! This might take a few minutes. :)','savingFile': 'Saving file...','Save to Drive': 'Save to Drive','Drive saving...': 'Drive saving...','Your file has been saved to Drive!': 'Your file has been saved to Drive!','Ok': 'Ok','processCompleted': 'The task has been completed!<br> Going to download page...','uploadComplete': 'Upload complete!','Save options for next actions': 'Save options for next actions','Some files require password': 'Some files require password','No file selected.': 'No file selected.','Please add a file to activate options': 'Please add a file to activate options','Yes': 'Yes','No': 'No','Over the content': 'Over the content','Below the content': 'Below the content','Facing pages': 'Facing pages','Normal': 'Normal','First cover': 'First cover','none': 'none','Remove this file':'Remove this file','Rotate':'Rotate','wops': 'wops','Error': 'Error','Upload error': 'Upload error','InvalidExtension': 'Sorry, this extension is not allowed','FileTooLarge': 'Too many Megapixel for image.','InvalidTask': 'InvalidTask','InvalidParams': 'InvalidParams','CloudError': 'TaskLimit','TaskLimit': 'TaskLimit','EmptyFile': 'This file is empty','UploadError': 'Upload error','FileRemoved': 'Some files you selected from your device seem to have been renamed, deleted or moved. Please, next time, wait until upload finishes.','FileSizeExceeded': 'The filesize of this file exceeds the limits','errorOneRetry' : 'Connection problems are preventing us to process your file <b><i>${filename}</i></b>. Believe us, we have already tried it 3 times! Please bear with us for a little while and try again later.<br><br>If the problem persists, disable web extensions, try incognito browsing or send us an email.<br><br><a href=\"#\" onclick=\"location.reload();\">Reload page and retry!</a>','errorRetry' : 'Connection problems are preventing us to process your files. Believe us, we have already tried it 3 times! Please bear with us for a little while and try again later.<br><br>If the problem persists, disable web extensions, try incognito browsing or send us an email.<br><br><a href=\"#\" onclick=\"location.reload();\">Reload page and retry!</a>','File number exceeded': 'File number exceeded','File size exceeded': 'File size exceeded','Sorry, we are not ready for that.': 'Sorry, we are not ready for that.','superlimitWhoa': "You\'ve hit the limit, even for Premium. Whoa!",'superlimitDownload': "Unfortunately, our system doesn\'t have enough capacity to process your task. For now.",'Original size (in pixels) for this image': 'Original size (in pixels) for this image','This image will be resized to this size (in pixels)': 'This image will be resized to this size (in pixels)','Uploading...': "Uploading...",'1 file':'1 file','1 mb':'1 mb','${limit} files': '${limit} files','${limit} mb': '${limit} mb','registeredLevel': 'registered users','premiumLevel': 'premium users','publicLevel': 'non registered users','limitTaskMsg': "This task is <strong>limited to ${currentLimit}</strong> for ${currentLevel}. <strong>${nextLevel} can upload up to ${nextLimit}</strong>. Some of your files have not been added.",'Wait a moment, please...': 'Wait a moment, please...','leaveAlert': 'Do you really want to leave our page?','Time left': 'Time left','minute': 'minute','hour': 'hour','less than': 'less than','minutes': 'minutes','hours': 'hours','seconds': 'seconds','dropIt': 'Drop it like it\'s hot','This <strong>feature</strong> requires you to be <strong>Premium</strong>':'This <strong>feature</strong> requires you to be <strong>Premium</strong>','Premium feature': 'Premium feature','Welcome back after upload': 'We are glad you are back. But for security reasons, your files have already been deleted. Please reload this page.','Limit exceeded': 'Limit exceeded','damaged file?': 'Damaged file?','previousFail': 'We are sorry. We couldn\'t load the previous task files.','previousFailContinue': 'Ok','previousFailBack': 'Back to download', 'registeredFeatureTitle': 'Registered feature', 'registeredFeatureSubtitle':'This <strong>feature</strong> requires you to be <strong>Registered user</strong>','limitFree': 'Free:','limitPremium': 'Premium:', 'limitFiles':'<b>${n} files</b> per task','limitSize':'<b>${n} MB</b> per task','limitPages':'<b>${n} pages</b> per task','upgradePremium': 'Upgrade to Premium','Add an element': 'Add an element', 'limitWordcount':'Your file exceeds the word limit'}; var paymentLang = {'yearly': 'Yearly','monthly': 'Monthly','stripePayBtn_web': 'Get Premium','stripePayBtn_web_desktop': 'Go Premium Pro','pack_web': 'Premium','pack_web_desktop': 'Premium Pro','paymentFail': 'The payment can\'t be processed.' }; var premiumData = {'premiumUrl': '/user/premium',priceMonth: '$<span class="pricing__price__numbers">9</span>',priceYear: '$<span class="pricing__price__numbers">60</span>',priceYearMonthly: '$<span class="pricing__price__numbers">5</span>'}; var startTime = new Date().getTime();
+var ilovepdfConfig = {"action":"tool","fp":1,"fpt":7,"tool":"upscaleimage","site":"iloveimg","subtool":"upscaleimage","toolText":"Upscale","token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJpc3MiOiIiLCJhdWQiOiIiLCJpYXQiOjE1MjMzNjQ4MjQsIm5iZiI6MTUyMzM2NDgyNCwianRpIjoicHJvamVjdF9wdWJsaWNfYzkwNWRkMWMwMWU5ZmQ3NzY5ODNjYTQwZDBhOWQyZjNfT1Vzd2EwODA0MGI4ZDJjN2NhM2NjZGE2MGQ2MTBhMmRkY2U3NyJ9.qvHSXgCJgqpC4gd6-paUlDLFmg0o2DsOvb1EUYPYx_E","parentId":null,"preWorker":null,"defaultOptions":{"packaged_filename":"iloveimg-upscaled"},"fileLimits":{"merge":{"mb":100,"files":25},"split":{"mb":100,"files":1},"compress":{"mb":200,"files":2},"officepdf":{"mb":15,"files":1},"wordpdf":{"mb":15,"files":1},"powerpointpdf":{"mb":15,"files":1},"excelpdf":{"mb":15,"files":1},"pdfoffice":{"mb":15,"files":1},"pdfword":{"mb":15,"files":1},"pdfocr":{"mb":15,"files":1,"pages":50},"pdfpowerpoint":{"mb":15,"files":1},"pdfexcel":{"mb":15,"files":1,"pages":500},"pdfjpg":{"mb":25,"files":2},"imagepdf":{"mb":40,"files":20},"pagenumber":{"mb":100,"files":2},"watermark":{"mb":100,"files":2},"rotate":{"mb":100,"files":20},"unlock":{"mb":100,"files":2},"protect":{"mb":100,"files":2},"pdfa":{"mb":100,"files":1},"repair":{"mb":100,"files":1},"organize":{"mb":100,"files":5},"redact":{"mb":400,"files":1},"translate":{"mb":15,"files":1,"pages":30},"pdfmarkdown":{"mb":15,"files":1,"pages":30},"resizeimage":{"mb":200,"files":30},"compressimage":{"mb":200,"files":30},"cropimage":{"mb":90,"files":1},"converttojpg":{"mb":200,"files":30},"convertfromjpg":{"mb":200,"files":30},"rotateimage":{"mb":200,"files":30},"watermarkimage":{"mb":200,"files":30},"memeimage":{"mb":200,"files":1},"editimage":{"mb":50,"files":1},"editpdf":{"mb":100,"files":1},"sign":{"mb":50,"files":3},"upscaleimage":{"mb":6,"files":1,"pxsize":33177600},"removebackgroundimage":{"mb":6,"files":3,"pxsize":17612800},"summarize":{"mb":50,"files":4,"wordcount":25000,"num_tasks":1,"chat_num_messages":3},"blurfaceimage":{"mb":100,"files":10},"formfiller":{"mb":15,"files":1},"pdfcrop":{"mb":100,"files":1},"pdfextract":{"mb":500,"files":50}},"allFileLimits":{"limits":{"merge":{"mb":100,"files":25},"split":{"mb":100,"files":1},"compress":{"mb":200,"files":2},"officepdf":{"mb":15,"files":1},"wordpdf":{"mb":15,"files":1},"powerpointpdf":{"mb":15,"files":1},"excelpdf":{"mb":15,"files":1},"pdfoffice":{"mb":15,"files":1},"pdfword":{"mb":15,"files":1},"pdfocr":{"mb":15,"files":1,"pages":50},"pdfpowerpoint":{"mb":15,"files":1},"pdfexcel":{"mb":15,"files":1,"pages":500},"pdfjpg":{"mb":25,"files":2},"imagepdf":{"mb":40,"files":20},"pagenumber":{"mb":100,"files":2},"watermark":{"mb":100,"files":2},"rotate":{"mb":100,"files":20},"unlock":{"mb":100,"files":2},"protect":{"mb":100,"files":2},"pdfa":{"mb":100,"files":1},"repair":{"mb":100,"files":1},"organize":{"mb":100,"files":5},"redact":{"mb":400,"files":1},"translate":{"mb":15,"files":1,"pages":30},"pdfmarkdown":{"mb":15,"files":1,"pages":30},"resizeimage":{"mb":200,"files":30},"compressimage":{"mb":200,"files":30},"cropimage":{"mb":90,"files":1},"converttojpg":{"mb":200,"files":30},"convertfromjpg":{"mb":200,"files":30},"rotateimage":{"mb":200,"files":30},"watermarkimage":{"mb":200,"files":30},"memeimage":{"mb":200,"files":1},"editimage":{"mb":50,"files":1},"editpdf":{"mb":100,"files":1},"sign":{"mb":50,"files":3},"upscaleimage":{"mb":6,"files":1,"pxsize":33177600},"removebackgroundimage":{"mb":6,"files":3,"pxsize":17612800},"summarize":{"mb":50,"files":4,"wordcount":25000,"num_tasks":1,"chat_num_messages":3},"blurfaceimage":{"mb":100,"files":10},"formfiller":{"mb":15,"files":1},"pdfcrop":{"mb":100,"files":1},"pdfextract":{"mb":500,"files":50}},"registered_limits":{"merge":{"mb":100,"files":25},"split":{"mb":100,"files":1},"compress":{"mb":200,"files":2},"officepdf":{"mb":15,"files":1},"wordpdf":{"mb":15,"files":1},"powerpointpdf":{"mb":15,"files":1},"excelpdf":{"mb":15,"files":1},"pdfoffice":{"mb":15,"files":1},"pdfword":{"mb":15,"files":1},"pdfocr":{"mb":15,"files":1,"pages":50},"pdfpowerpoint":{"mb":15,"files":1},"pdfexcel":{"mb":15,"files":1,"pages":500},"pdfjpg":{"mb":25,"files":2},"imagepdf":{"mb":40,"files":20},"pagenumber":{"mb":100,"files":2},"watermark":{"mb":100,"files":2},"rotate":{"mb":100,"files":20},"unlock":{"mb":100,"files":2},"protect":{"mb":100,"files":2},"pdfa":{"mb":100,"files":1},"repair":{"mb":100,"files":1},"organize":{"mb":100,"files":5},"redact":{"mb":400,"files":1},"compare":{"mb":400,"files":2},"translate":{"mb":15,"files":1,"pages":30},"pdfextract":{"mb":500,"files":50},"pdfmarkdown":{"mb":15,"files":1,"pages":30},"resizeimage":{"mb":200,"files":30},"compressimage":{"mb":200,"files":30},"cropimage":{"mb":90,"files":1},"converttojpg":{"mb":200,"files":30},"convertfromjpg":{"mb":200,"files":30},"rotateimage":{"mb":200,"files":30},"watermarkimage":{"mb":200,"files":30},"memeimage":{"mb":200,"files":1},"editimage":{"mb":50,"files":1},"editpdf":{"mb":100,"files":1},"sign":{"mb":50,"files":3},"upscaleimage":{"mb":6,"files":1,"pxsize":33177600},"removebackgroundimage":{"mb":6,"files":3,"pxsize":17612800},"summarize":{"mb":50,"files":1,"wordcount":25000,"num_tasks":1},"blurfaceimage":{"mb":100,"files":10},"formfiller":{"mb":15,"files":1},"pdfcrop":{"mb":100,"files":1}},"premium_limits":{"merge":{"mb":4000,"files":500},"split":{"mb":4000,"files":1},"compress":{"mb":4000,"files":10},"officepdf":{"mb":4000,"files":10},"wordpdf":{"mb":4000,"files":10},"powerpointpdf":{"mb":4000,"files":10},"excelpdf":{"mb":4000,"files":10},"pdfword":{"mb":4000,"files":10},"pdfocr":{"mb":4000,"files":10,"pages":1000},"pdfpowerpoint":{"mb":4000,"files":10},"pdfexcel":{"mb":4000,"files":10,"pages":1000},"pdfoffice":{"mb":4000,"files":10},"pdfjpg":{"mb":4000,"files":10},"imagepdf":{"mb":4000,"files":500},"pagenumber":{"mb":4000,"files":10},"watermark":{"mb":4000,"files":10},"rotate":{"mb":4000,"files":80},"unlock":{"mb":4000,"files":10},"protect":{"mb":4000,"files":80},"pdfa":{"mb":4000,"files":10},"repair":{"mb":4000,"files":10},"organize":{"mb":4000,"files":20},"redact":{"mb":400,"files":1},"compare":{"mb":400,"files":2},"translate":{"mb":200,"files":1,"pages":500},"pdfextract":{"mb":500,"files":50},"pdfmarkdown":{"mb":200,"files":1,"pages":500},"resizeimage":{"mb":4000,"files":120},"compressimage":{"mb":4000,"files":120},"cropimage":{"mb":4000,"files":1},"converttojpg":{"mb":4000,"files":120},"convertfromjpg":{"mb":4000,"files":120},"rotateimage":{"mb":4000,"files":120},"watermarkimage":{"mb":4000,"files":120},"memeimage":{"mb":4000,"files":1},"editimage":{"mb":50,"files":1},"editpdf":{"mb":100,"files":1},"sign":{"mb":50,"files":5},"upscaleimage":{"mb":6,"files":3,"pxsize":33177600},"removebackgroundimage":{"mb":6,"files":3,"pxsize":17612800},"summarize":{"mb":50,"files":1,"wordcount":100000},"blurfaceimage":{"mb":4000,"files":120},"formfiller":{"mb":100,"files":1},"pdfcrop":{"mb":4000,"files":1}},"temp_limits":{"merge":{"mb":1000,"files":80},"split":{"mb":1000,"files":1},"compress":{"mb":1000,"files":3},"officepdf":{"mb":1000,"files":3},"wordpdf":{"mb":100,"files":3},"powerpointpdf":{"mb":100,"files":3},"excelpdf":{"mb":100,"files":3},"pdfword":{"mb":100,"files":1},"pdfocr":{"mb":100,"files":1,"pages":100},"pdfpowerpoint":{"mb":100,"files":1},"pdfexcel":{"mb":100,"files":1,"pages":500},"pdfoffice":{"mb":100,"files":1},"pdfjpg":{"mb":100,"files":3},"imagepdf":{"mb":1000,"files":80},"pagenumber":{"mb":1000,"files":3},"watermark":{"mb":1000,"files":3},"rotate":{"mb":1000,"files":30},"unlock":{"mb":1000,"files":10},"protect":{"mb":1000,"files":5},"pdfa":{"mb":100,"files":1},"repair":{"mb":1000,"files":2},"organize":{"mb":1000,"files":5},"redact":{"mb":400,"files":1},"translate":{"mb":30,"files":1,"pages":30},"pdfextract":{"mb":500,"files":50},"pdfmarkdown":{"mb":30,"files":1,"pages":30},"resizeimage":{"mb":1000,"files":60},"compressimage":{"mb":1000,"files":60},"cropimage":{"mb":1000,"files":1},"converttojpg":{"mb":5000,"files":60},"convertfromjpg":{"mb":1000,"files":60},"rotateimage":{"mb":1000,"files":60},"watermarkimage":{"mb":1000,"files":60},"memeimage":{"mb":1000,"files":1},"editimage":{"mb":50,"files":1},"editpdf":{"mb":100,"files":1},"sign":{"mb":50,"files":3},"upscaleimage":{"mb":6,"files":1,"pxsize":33177600},"removebackgroundimage":{"mb":6,"files":3,"pxsize":17612800},"summarize":{"mb":50,"files":1,"wordcount":25000},"blurfaceimage":{"mb":150,"files":15},"formfiller":{"mb":50,"files":1},"pdfcrop":{"mb":1000,"files":1}}},"servers":["api1g","api2g","api3g","api8g","api9g","api10g","api11g","api12g","api13g","api14g","api15g","api16g","api17g","api18g","api20g","api21g","api22g","api26g","api27g","api28g","api29g","api30g","api31g","api32g","api33g","api34g","api1g","api1g","api1g","api2g","api2g","api2g","api3g","api3g","api3g","api11g","api11g","api11g"],"level":"user","downloadUrl":"\/download","user":null,"country":"US"}; ilovepdfConfig.taskId = '7f5A2jkqdh5xr04k4ht1pywsr9gwf84yvpt59bt3zwds5c04pjn9jA0z295Awcptwkq7k6qg2pAd165jb1A4ll67d9l7hzljvd3xrm4yg1fg9gqm191pz89qv7h69Azwbjx95yvc7k7x67vxl9x9xv62ddrv103AzAdlbjdz8gpf1zdhlqtq'; ilovepdfConfig.fp = 1; iloveLang.ratioChanged = 'The original image is too big to be multiplied by the default values.'; iloveLang.ratioCurrent = 'This image will be upscaled by ${ratio}.'; var premiumData = { 'premiumUrl': '/user/premium', priceMonth: '$<span class="pricing__price__numbers">9</span>', priceYear: '$<span class="pricing__price__numbers">60</span>', priceYearMonthly: '$<span class="pricing__price__numbers">5</span>' };
+© iLoveIMG 2026 ® - Your Image Editor
+Woops! Something is wrong with your Internet connection...
+var siteData = { csrfParam: '_csrf-ilovepdf', csrfToken: 'qiGyF2mej_sYI5-Gh5Qad5rx3LCIR0Epl8MMvvsttcDne9B6MazqgU1HsvLPzm8m8se028AWJWKmoUX7kk_3gQ==' }; var lang = 'en-US'; var brand = 'iLoveIMG'; var brand_ref = 'iloveimg';

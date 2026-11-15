@@ -1,0 +1,72 @@
+[
+ {
+  "name": "sign",
+  "id": "d8668572094d82a7adce65ce8b72a6e5",
+  "url": "https://pd12m.s3.us-west-2.amazonaws.com/images/df7a1caa-5216-5dc6-9b3c-875780ac764f.jpeg",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons",
+  "orig": [
+   4128,
+   3096
+  ],
+  "caption": "The image shows a green street sign attached to the side of a building. The sign reads \"Rue Neuve\" and is surrounded by a metal fence. On the left side of the image, there is a road and a building wit",
+  "desc": "green street sign \"Rue Neuve\" on a building"
+ },
+ {
+  "name": "cat",
+  "id": "433b4d8199a508ca5a6729d04481f3e3",
+  "url": "https://pd12m.s3.us-west-2.amazonaws.com/images/f92cac3e-14d5-54f5-9a68-4d6a35afaf3b.jpeg",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons",
+  "orig": [
+   4608,
+   3456
+  ],
+  "caption": "The image shows a calico cat sitting on the ground next to a fence, with a road in the background. The cat has a white, black, brown and orange coat.",
+  "desc": "calico cat next to a fence"
+ },
+ {
+  "name": "forest",
+  "id": "ad0f91c8761094fd9de1423cb2eca416",
+  "url": "https://pd12m.s3.us-west-2.amazonaws.com/images/93983f8f-2d11-5045-8640-7fba228f4853.jpeg",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons",
+  "orig": [
+   5472,
+   3648
+  ],
+  "caption": "The image shows a path winding through a lush green forest filled with trees, plants, and flowers, with a clear blue sky in the background.",
+  "desc": "path through a green forest"
+ },
+ {
+  "name": "building",
+  "id": "2ce8e53381c208b49f5469972a237310",
+  "url": "https://pd12m.s3.us-west-2.amazonaws.com/images/23d58a34-71d4-5ea8-af73-fe350fe16828.jpeg",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons",
+  "orig": [
+   3000,
+   1688
+  ],
+  "caption": "The image shows a large white building with a green lawn in front of it, surrounded by trees, street poles, street lights, motor vehicles on the road, sign boards, bushes and a clear blue sky.",
+  "desc": "large white building with lawn and trees"
+ },
+ {
+  "name": "portrait",
+  "id": "964dd75c36d7ea5d48d39de56a340723",
+  "url": "https://pd12m.s3.us-west-2.amazonaws.com/images/6a6ef4ab-aa25-56cc-9758-46b2b6886d10.jpeg",
+  "license": "https://creativecommons.org/publicdomain/zero/1.0/",
+  "source": "Wikimedia Commons",
+  "orig": [
+   2299,
+   2892
+  ],
+  "caption": "The image shows a black and white photo of a man wearing a blazer and tie, with a serious expression on his face.",
+  "desc": "old black-and-white portrait photo of a man"
+ },
+ {
+  "name": "text",
+  "source": "ToolProof (generated with Pillow, DejaVu Sans)",
+  "desc": "screenshot-like order summary with small text, table lines and colored bars"
+ }
+]

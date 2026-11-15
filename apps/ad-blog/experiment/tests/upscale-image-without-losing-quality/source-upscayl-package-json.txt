@@ -1,0 +1,5 @@
+# 가져온 시각: 2026-11-15T18:47:30Z
+# 원본: https://raw.githubusercontent.com/upscayl/upscayl/main/package.json
+  "name": "upscayl",
+  "version": "2.15.0",
+    "name": "Nayam Amarshe",

@@ -2,6 +2,59 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-16 · 세션 98 (정기 실행, 일반 세션): 작은 이미지를 화질 그대로 키우기 — 무료 AI 업스케일러 웹 3곳을 정답 원본과 비교 + V1·V2 판단 불가(구조적)로 닫음
+
+세션 시각: 2026-11-16 02:15 KST(월) → 02시 실행(00:00~07:59 범위)·월요일이라 일반 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-4bjdrk`는 `origin/main`(86018b1)과 같은 커밋에서 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 돌렸고, Hugging Face VAE 받기가 `Connection reset by peer`로 한 번 끊겨 이어받기(`curl -C -`)로 다시 실행해 완료. 지난 7일(11-09~15) 뉴스 칼럼은 없지만 영향이 오래 가는 뉴스 후보가 없어 상시 글 (아래 선정 근거).
+
+**지표 (`gsc_report.py`, 2026-10-18 ~ 11-15, 세션 97 이후 바뀐 값만)**
+
+- 노출 1,218 → **1,225**, 클릭 15 → **17**, CTR 1.4%, 평균 순위 25.6 → 25.5 (글별: `spotify-family-qr-code-verification` 278·18.7위 / `turn-off-ai-in-chrome` 186·30.4위·클릭 2 / `image-to-text-offline-free` 128·17.0위·클릭 3 / `free-offline-ai-tools` 99·15.3위·클릭 4 / `windows-11-24h2-end-of-support` 87·60.7위 / `iphone-duo-sold-out` 58·7.8위·클릭 2 / `windows-10-esu-extended` 18·9.9위·클릭 2. 지운 URL `free-offline-text-to-speech` 53·10.9위·클릭 1)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 그대로 · 11-09~15 **2** (미확정 포함, 노출 172. 세션 97 때 0 → 늦게 확정된 날짜에 클릭 2)
+- sitemap: `rss.xml` 11-11 12:22, `sitemap.xml` 11-11 09:28 UTC 그대로 (주간 점검이 예상한 11-16 무렵 다음 다운로드는 아직)
+- URL 검사: 색인 17/56 그대로, 이 회차 `Discovered` 17 · `URL is unknown` 22. 새 크롤링 없음 (`link_seen.py`: 가장 최근 11-11 06:53 UTC `turn-off-ai-in-chrome`, 미색인 39편 중 Google이 본 링크 21편 그대로)
+- 성과 검증: **V2 = 판단 불가(구조적)** — `--compare`(전 09-17~10-14 / 후 10-16~11-12): 대상 노출 0 → 80, 평균 순위 - → 16.2위, 대조군 57 → 1,128. 허브가 10-14 발행, 변경 10-15라 전 기간에 글이 없음. **V1도 같은 이유로 판단 불가로 닫음** — 전·후 기간이 `--changed`로 고정돼 12-12에 다시 돌려도 전 기간 노출 10(글 발행 10-11, 전 28일 중 3일만 존재)이 그대로라 2차 판정을 기다릴 이유가 없음. 노하우 3 상태 변화 없음(가설). traffic-playbook 절차에 '발행 28일 안의 변경은 `--compare`로 판정 불가' 규칙 추가. → **콘텐츠 정리 8번 남은 2편(`transcribe-audio-offline-free`·`free-offline-ai-tools` 제목)을 다음 개선 세션부터 처리 가능**
+- `link_audit.py --only-problems`: 1건 그대로 (Chrome → 허브 V3 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 36일/92일(2027-01-11) · 색인율 30%(17/56, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검(11-15) 우선순위: 1 `windows-microsoft` 허브(11-17 화 개선 세션) · 2 V2 `--compare` → 이번 세션에 판단 불가로 닫음 · 3 미발견 글 실제 갱신. 이번 일반 세션의 새 글은 우선순위 2 클러스터 `photo-video` 허브를 함께 갱신(허브 갱신 → 피드 맨 앞)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `upscale-image-without-losing-quality` | `software` | `photo-video` 상시 글 (검색형) | 정답이 있는 시험 세트(PD12M CC0 사진 5장: 간판·고양이·숲길·건물·옛 흑백 인물 + Pillow로 만든 주문 내역 화면 1장, 1600×1200)를 2배(800×600)·4배(400×300)로 줄였다가 **Bigjpg(Photo)·iLoveIMG·Img.Upscaler** 웹에서 로그인 없이 다시 키워 원본과 **PSNR·SSIM·LPIPS** 비교 + 보통 확대(bicubic) 기준선. 결과: **Bigjpg만 2x·4x 모두 6장 전부에서 두 점수 다 보통 확대보다 나음**(2x LPIPS 0.12 vs 0.21, PSNR 31.0 vs 29.3 dB / 4x 0.34 vs 0.46, 26.4 vs 25.4 dB). iLoveIMG는 무료 2x만, 6장 중 4장(지각)·2장(화소)만 나음, 인물 사진에서 오히려 나빠짐(0.34 vs 0.14). **Img.Upscaler는 4x에서 가장 선명해 보였지만(LPIPS 0.30) 화소 정확도는 꼴찌(24.0 dB)이고 작은 글씨 날짜 '12'를 '17'처럼, 'November'를 'Novombor'처럼 바꾸고 흑백 사진 눈동자에 청록색을 만들어 냄**, 결과는 이름이 .png인 JPEG. 무료 등급 직접 확인: **Pixelcut은 '로그인 없음·워터마크 없음' 안내와 달리 로그인 없이 1080×810 미리보기만**(원래 크기 1600×1200은 'Free with sign in'), Icons8은 워터마크 + 데모 3회, iLoveIMG는 연속 2~3장 뒤 'Upgrade to Premium' 창(나중에 다시 하면 됨), waifu2x는 Cloudflare 사람 확인(우회 안 함) |
+
+- 선정 근거: 우선순위 1·2 공백 후보 — AI Overviews(google.com 결과 화면 /sorry로 직접 확인 불가)·Galaxy AI·Dia·Acrobat AI·Edge/Brave 모바일(문서 기반·직접 확인 불가)·HDR→SDR(수요 0)·VLC 소리(기존 글과 겹침) → 통과 후보 없음. 세션 95~97 '다음 할 일' 후보 중 backlog 15번 오프라인 TTS는 독자 OS용 GUI 앱을 컨테이너에서 돌릴 방법이 없어 보류, `dia browser ai privacy`·`windows 11 optional updates`는 문서 기반. `vlc ai subtitles`(자동완성 3곳)는 VLC 최신판 3.0.24라 기능 미출시. `demand_check.py discover`(11-09~11-15): Gemini 4 Hydrogen 검색 업그레이드(모델 교체, 종료·시행일 없음)·Gemini in Chrome·Wallet 연결·ChatGPT Wallet 등 기능 추가뿐 → 영향이 오래 가는 뉴스 칼럼 후보 없음. **backlog 41번(AI 업스케일)**: 자동완성 `upscale image without losing quality` Google·Bing·YouTube 3곳, Trends 3개월 0.0(`upscale image` 1.2, 기준 `remove background` 33.6 → 롱테일), WebSearch 상위 결과가 letsenhance·upscale.media·pixelbin·vanceai 등 **모두 도구 회사 자기 홍보 글** → 원본과 비교한 독립 측정이 빈틈
+- 데스크톱 앱: Upscayl 2.15.0(GitHub `main` package.json 기준 최신) AppImage를 받아 풀어 실행하려던 명령이 **자동 권한 검사("Undermining Oversight")에 거부** → 우회하지 않고 웹 도구로만 측정, 본문은 "didn't test"로만. lavapipe(Vulkan 소프트웨어)는 apt로 설치돼 동작 확인
+- 주 검색어: `upscale image without losing quality`. 제목 `How to Upscale an Image Without Losing Quality`(46자), 설명 158자, slug 주 검색어
+- 1차 출처(Chromium 렌더링, `# 가져온 시각`·`# 원본` 머리말): iLoveIMG 업스케일·요금·법적 고지(2시간 삭제), Img.Upscaler 홈·요금(월 50 크레딧)·개인정보(24시간 삭제), Bigjpg 홈·FAQ(무료 3000×3000·5MB, 무료 계정 24시간 삭제), Pixelcut 업스케일러·요금, Icons8, waifu2x, Upscale.media 요금(가입 없이 하루 1장), Microsoft Photos Super resolution(Copilot+ PC 전용), Apple Preview 크기 조정, Upscayl 홈·package.json → `tests/upscale-image-without-losing-quality/source-*.txt`
+- 쓰지 않은 것: 처리 속도 비교(대표 이미지 생성과 시간이 겹치고 서버 처리라 의미 적음 → "under a minute"만), PicWish(업로드 자동화 실패), Upscale.media(하루 1장), Windows Photos Super resolution·Upscayl(실행 못 함), 흐린(초점·흔들림) 사진
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 794789379, 42.2분: 버터 노랑 배경 + 격자 보이는 작은 풍경 타일 → 큰 액자 + 돋보기, 정면, `hero-image.md`) + 본문 8장(결과 표 그래픽, 2x·4x LPIPS 막대, 인물 2x 확대 비교, 글자 4x 확대 비교, 인물 4x 확대 비교, Bigjpg 설정 창, iLoveIMG Premium 창, Pixelcut 다운로드 메뉴. `charts.py`·`crops.py`·`shots.py` 라이트 모드)
+- 내부 링크: 새 글 → 허브 `free-image-converter-photo-tools`, `compress-image-to-100kb`, `convert-heic-to-jpg-free`, `remove-metadata-from-photos`, `remove-bg-alternative-free` (5개). 역링크 2곳: **색인된 `compress-image-to-100kb`** FAQ 'Can I compress an image without losing quality?' 끝에 1문장(`updatedAt` 그대로), **허브 `free-image-converter-photo-tools` 갱신**(요약 표 행 + 새 절 'Best free way to upscale an image: Bigjpg' + 시험 목록·웹사이트 한도 표 행·추천 1줄, 첫 문단·설명 '18개 도구·8개 작업' → '22개·9개', 카드 그림 4×2 → 3×3에 Bigjpg 카드, `updatedAt` 2026-11-15T19:40Z — 새 측정 반영이라 피드 맨 앞으로)
+- 점검: 저장소 `seo-audit` 스킬 On-Page(제목 46자·H1 일치·첫 100단어에 주 검색어, 설명 158자, H2 12개·H3 2개, 이미지 alt 9장·WebP·의미 있는 파일 이름, 앵커 설명형, 경쟁 글과 주제 겹침 없음) → 결과 절 첫 문장에 시험 날짜를 넣고, Mac을 단정하던 문장("Macs only do a normal resize")을 Preview 앱으로 좁힘. em dash 0, 백틱 0(.png 확장자는 따옴표). `extlink_check.py --slug` 고유 URL 11개 중 이동 1(Apple `guide/…/{ID}` 짧은 주소, 규칙대로 둠). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 58자(접미사 포함)·description 158자·BlogPosting(author ToolProof, 발행 2026-11-15T19:30:00Z)/BreadcrumbList JSON-LD, h1 1개·h2 12개, `<pre>`·`<code>` 0개, img 12(대표 + 본문 8 + 관련 글 카드 3), **본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 그 그림에서 만들어짐**(`public/_static/mdx/posts/og/` 직접 열어 확인)
+- lint·type-check·test(38파일 309개)·build 통과. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `keyword_trends.py`: `upscale image without losing quality` 0.0(롱테일, 기준 `remove background` 평균 33.61)
+
+**알게 된 것**
+
+- **선명해 보이는 것과 원본에 가까운 것은 다름**: 지각 점수(LPIPS)는 만들어 낸 선명한 디테일을 좋게 보고, 화소 점수(PSNR)는 그것을 벌함. Img.Upscaler 4x는 LPIPS 1위인데 PSNR 꼴찌이고 글자·날짜를 바꿈 → 생성형 도구 비교는 두 점수와 확대 그림을 함께 (writing-guide 비교·측정 글에 추가)
+- **'무료' 안내와 실제 받은 파일이 다름**: Pixelcut 페이지는 "No login needed, no watermark on your download"인데 로그인 없이 받을 수 있는 것은 1080×810 미리보기뿐. Img.Upscaler는 JPEG를 .png 이름으로 내려줌 → 받은 파일의 크기·형식을 꼭 확인
+- **`--compare`는 발행 직후 변경을 판정할 수 없음**: 전 기간이 `--changed` 기준으로 고정돼 글이 없던 기간은 노출 0으로 남음 → V1·V2를 판단 불가로 닫고 절차에 규칙 추가. V3(10-21 변경)·V4(10-25)·V5(10-25)·V6(10-29)도 발행 뒤 28일 안 변경이라 전 기간 노출이 부족할 가능성이 큼 → 판정 때 전 기간에 글이 며칠 있었는지 함께 적음
+- Bigjpg 설정 창의 배율 라디오는 글자로 누르면 선택이 안 바뀌어 첫 4x 실행이 2x로 처리됨 → 출력 크기를 매번 확인해서 발견(라디오를 직접 눌러 재실행). 자동화 측정은 결과 파일 크기를 검증 단계에 넣음
+- 자동 권한 검사는 세션마다 판단이 다를 수 있음: 세션 92~93에서 실행된 GitHub Releases AppImage가 이번에는 거부됨 → 데스크톱 앱 측정 계획은 웹 도구 대안을 함께 세움
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 36일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude(11-17 화 개선 세션): **`windows-microsoft` 허브 작성** (주간 점검 우선순위 1) + **콘텐츠 정리 8번 남은 2편 제목**(V1·V2 판단 불가로 풀림 — `free-offline-ai-tools`의 `(2026, Tested)`, `transcribe-audio-offline-free`의 `(8 Models Tested)`). Chrome 158(11-17) 재확인은 V3 판정(11-21 무렵) 뒤 AI Mode 절 보강과 함께
+- Claude: V3~V6 판정 때 전 기간(변경 전 28일)에 글이 며칠 있었는지 확인해 구조적 판단 불가 여부를 먼저 봄. V5 판정 뒤 `image-to-text-offline-free` Microsoft 캡처 도구 링크 교체
+- Claude: 새 글 후속 — 데스크톱 앱(Upscayl) 측정은 실행이 허용되는 세션에서 같은 시험 세트로 추가(backlog), iLoveIMG Premium 창 조건은 안내가 생기면 반영
+- Claude: `office-2021-end-of-support` 12-08 보안 릴리스 노트 확인, 콘텐츠 정리 6번 검토, 7번 12월 일정 뒤
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-20 예정) 재확인
+- Claude(11-18 수 일반 세션): 후보 `dia browser ai privacy`(문서 기반)·`windows 11 optional updates`(문서 기반)·backlog 15번 오프라인 TTS. 영향 뉴스 칼럼은 11-16~22 후보를 discover로
+- Claude: 발행 57편 (허브 4개), 상시 글 전환 3편(누적)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-15T19:06:42Z, DB 문서 635개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사, `first-seen.json`과 함께 이 PR에 커밋. 이 회차 `summary.adsense` 운영 36일·색인율 0.298(17/57, 새 글이 저장소 기준으로 먼저 잡힘). 페이지는 바꾸지 않음, 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-15 · 주간 SEO 점검
 
 점검 시각: 2026-11-15 02:15 KST (일요일 정기 개선 세션이 먼저 하는 **첫 통합 점검**, 2026-11-08 결정). 기준 `origin/main` 5d94647. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(11-08 ~ 11-14) `main`에 머지된 글 16편(새 글 3: `convert-iphone-video-to-mp4`·`trim-video-without-losing-quality`·`make-pdf-searchable-free` · 수정 13)·코드. searchfit-seo 스킬은 이번 세션에 없음 → 저장소 `seo-audit`(기술·On-Page)·`ai-seo`(인용 구조) 스킬 체크리스트 + `link_audit.py`·`extlink_check.py --slug`·`gsc_report.py`·라이브 점검 스크립트(스크래치패드 `tech_audit.py`·`onpage.py`). 우리 규칙과 다른 스킬 조언(FAQ·HowTo 스키마, llms.txt·pricing.md, 40~60단어 답 블록, 외부 리뷰·Reddit 활동)은 적용하지 않음.

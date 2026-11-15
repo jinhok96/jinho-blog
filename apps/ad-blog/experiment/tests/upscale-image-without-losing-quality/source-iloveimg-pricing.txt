@@ -1,0 +1,544 @@
+# 가져온 시각: 2026-11-15T18:21:12.455Z
+# 원본: https://www.iloveimg.com/pricing
+Three types of accounts to manage images with online tools
+https://www.iloveimg.com/pricing
+
+ALL IMAGE TOOLS
+COMPRESS IMAGE
+RESIZE IMAGE
+CROP IMAGE
+CONVERT TO JPG
+PHOTO EDITOR
+MORE TOOLS
+OPTIMIZE
+Compress IMAGE
+Upscale
+Remove background
+CREATE
+Meme generator
+Photo editor
+MODIFY
+Resize IMAGE
+Crop IMAGE
+Rotate IMAGE
+CONVERT
+Convert to JPG
+Convert from JPG
+HTML to IMAGE
+SECURITY
+Watermark IMAGE
+Blur face
+Login
+Sign up
+OTHER PRODUCTS
+iLovePDF
+Simplify document management
+iLoveSign
+e-Signing made simple
+iLoveAPI
+Document automation for developers
+Integrations
+Zapier, Make, Wordpress...
+Pricing
+Security
+Features
+About us
+Help
+FAQ
+Tools
+Legal & Privacy
+Contact
+Language
+English
+English
+Español
+Français
+Deutsch
+Italiano
+Português
+日本語
+Pусский
+한국어
+中文 (简体)
+中文 (繁體)
+العربية
+Български
+Català
+Nederlands
+Ελληνικά
+हिन्दी
+Bahasa Indonesia
+Bahasa Melayu
+Polski
+Svenska
+ภาษาไทย
+Türkçe
+Українська
+Tiếng Việt
+Kiswahili
+Login
+Sign up
+body{ background: white; } @media (min-width: 1513px) { .main{overflow: initial} } .block__container{max-width:1370px;margin:auto;} .pricing-page__header{margin-top:-30px;} .pricing-page__header .title-label + .title0{margin-top:12px;}
+
+Pricing plans
+
+Choose the plan that suits you
+
+Monthly Billing
+
+Yearly Billing
+
+-42%
+
+Basic
+
+1
+Free
+
+Start for free
+
+Free features include:
+
+Access to essential iLoveIMG tools
+Limited document processing
+
+Premium
+
+1 - 25
+$5 / month
+
+$60 Billed annually
+
+Get Premium How many users do you need? (Up to 25)
+
+Premium features include:
+
+Full access to all iLoveIMG tools
+Unlimited document processing
+Highest image processing capabilities
+AI tools
+Ad-free experience
+Priority customer support
+Regional file processing
+2,000 AI Credits
+
+Business
+
+25 +
+Let's talk
+
+Scalable solutions for your business with customized pricing.
+
+Contact sales
+
+What’s included:
+
+All Premium features
+Custom contracts designed for scalability
+Dedicated Account Manager
+Single Sign On (SSO)
+
+Compare the plans
+
+Basic
+
+Best for simple use
+
+Start for free
+
+Premium
+
+Best for advanced use
+
+Get Premium
+
+Business
+
+Best for growing teams
+
+Contact sales
+
+Features
+
+Tools
+
+Limited tools
+
+All tools included
+
+All tools included
+
+Compress IMAGE
+
+Resize IMAGE
+
+Crop IMAGE
+
+Convert to JPG
+
+Convert from JPG
+
+Convert IMAGE
+
+Rotate IMAGE
+
+Watermark IMAGE
+
+IMAGE Editor
+
+Meme generator
+
+HTML to image
+
+Upscale image
+
+Blur face
+
+Remove background
+
+Batch processing
+
+Compress IMAGE
+
+30
+
+120
+
+120
+
+Resize IMAGE
+
+30
+
+120
+
+120
+
+Crop IMAGE
+
+1
+
+1
+
+1
+
+Convert to JPG
+
+30
+
+120
+
+120
+
+Convert from JPG
+
+30
+
+120
+
+120
+
+Rotate IMAGE
+
+30
+
+120
+
+120
+
+Watermark IMAGE
+
+30
+
+120
+
+120
+
+IMAGE Editor
+
+1
+
+1
+
+1
+
+Meme generator
+
+1
+
+1
+
+1
+
+Upscale image
+
+1
+
+3
+
+3
+
+Blur face
+
+10
+
+120
+
+120
+
+Remove background
+
+3
+
+3
+
+3
+
+Filesize per task
+
+Compress IMAGE
+
+200 MB
+
+4 GB
+
+4 GB
+
+Resize IMAGE
+
+200 MB
+
+4 GB
+
+4 GB
+
+Crop IMAGE
+
+90 MB
+
+4 GB
+
+4 GB
+
+Convert to JPG
+
+200 MB
+
+4 GB
+
+4 GB
+
+Convert from JPG
+
+200 MB
+
+4 GB
+
+4 GB
+
+Rotate IMAGE
+
+200 MB
+
+4 GB
+
+4 GB
+
+Watermark IMAGE
+
+200 MB
+
+4 GB
+
+4 GB
+
+IMAGE Editor
+
+50 MB
+
+50 MB
+
+50 MB
+
+Meme generator
+
+200 MB
+
+4 GB
+
+4 GB
+
+Upscale image
+
+6 MB
+
+6 MB
+
+6 MB
+
+Blur face
+
+100 MB
+
+4 GB
+
+4 GB
+
+Remove background
+
+6 MB
+
+6 MB
+
+6 MB
+
+Teams
+
+Volume discount
+
+Workflows
+
+Ad-free service
+
+Customer support
+
+Basic
+
+Preferential
+
+Dedicated support
+
+AI Credits
+
+2,000
+Custom
+
+Applications
+
+Web
+
+Mobile (via iLovePDF)
+
+Security
+
+Secure HTTPs connection
+
+ISO27001 certified
+
+Single Sign On (SSO)
+
+Regional file processing
+
+7 regions
+
+11 regions
+
+// Toggle each pricing-table dropdown individually document.querySelectorAll('.pricing-table__dropdown').forEach(function (dropdown) { const headerRow = dropdown.querySelector( '.pricing-table__row, .pricing-table__row__background' ); if (!headerRow) return; headerRow.addEventListener('click', function (event) { event.stopPropagation(); dropdown.classList.toggle('open'); }); const dropContent = dropdown.querySelector('.pricing-table__drop-content'); if (dropContent) { dropContent.addEventListener('click', function (event) { event.stopPropagation(); }); } }); // Keep dropdown-text open unless label is clicked const dropdownText = document.querySelector('.dropdown-text'); const dropdownTextLabel = document.querySelector('.dropdown-text__label'); if (dropdownTextLabel) { dropdownTextLabel.addEventListener('click', function (event) { event.stopPropagation(); // Toggle main open/close dropdownText.classList.toggle('open'); // Close all open dropdowns inside when label is clicked document .querySelectorAll('.pricing-table__dropdown.open') .forEach(function (dropdown) { dropdown.classList.remove('open'); }); }); } // Prevent clicks inside dropdown-text from closing it if (dropdownText) { dropdownText.addEventListener('click', function (event) { event.stopPropagation(); }); } const stickyEl = document.querySelector('.pricing-table__header'); const sentinel = document.createElement('div'); stickyEl.parentNode.insertBefore(sentinel, stickyEl); // Store the sentinel's top position const sentinelTop = sentinel.getBoundingClientRect().top + window.scrollY; let isShown = true; let lastScrollY = window.scrollY; let lastDirection = null; window.addEventListener('scroll', () => { // Get current scroll position const scrollTop = window.scrollY; const direction = scrollTop > lastScrollY ? 'down' : 'up'; // Detect stickiness let sentinelControl = sentinelTop; if((isShown == false && direction == 'down') || (isShown == true && direction == 'up')) { sentinelControl += 70; } if((isShown == false && direction == 'up') ||(isShown == true && direction == 'down')) { sentinelControl += 100; } const isStuck = scrollTop > sentinelControl; // Check if we've scrolled past the sentinel if (isStuck) { document.querySelectorAll('.desc-tier').forEach((desc) => { desc.style.display = 'none'; desc.parentElement.style.height = '70px'; }); isShown = false; } else { document.querySelectorAll('.desc-tier').forEach((desc) => { desc.style.display = 'block'; desc.parentElement.style.height = '100px'; }); isShown = true; } });
+.desc-tier { overflow: hidden; /* needed for height collapse */ opacity: 1; max-height: var(--desc-h, 400px); /* JS sets --desc-h to content height */ transition: opacity 180ms ease, /* fade out first */ max-height 220ms ease 160ms, /* then collapse height with a delay */ margin-top 220ms ease 160ms, /* optional: smooth spacing collapse */ margin-bottom 220ms ease 160ms; }
+Automate document processes with iLoveIMG API
+
+Millions of people trust iLoveIMG to simplify their work with images. Now, you can access the same tools and infrastructure, built to scale.
+
+See guides
+Your images are in good hands
+
+Our tools are designed to meet the highest security and performance standards, ensuring your images are handled with the most care.
+
+Frequently Asked Questions
+
+Our support team answers these questions almost daily
+
+General Questions
+
+What do I get with the Free Plan?
+
+Premium unlocks unlimited image processing, removes ads, and gives you priority support. It’s the full iLoveIMG experience!
+
+Why should I upgrade to Premium?
+
+Premium unlocks unlimited document processing, works across web, mobile, and desktop, removes ads, and gives you priority support. It’s the full iLoveIMG experience!
+
+Can I switch plans if my needs change?
+
+Absolutely. You’re always in control—upgrade, downgrade, or cancel anytime in your account settings.
+
+Billing & Payments
+
+Can I share single billing for multiple accounts?
+
+Yes. You can put everyone's account on one credit card for centralized billing. Just enter the email addresses of your team members and your plan will automatically upgrade.
+
+What payment methods do you accept?
+
+We accept card payments via Visa, MasterCard, and American Express. We also accept payments using PayPal or directly in the mobile app (using Apple Pay or Google Pay). For the Business plan, we offer additional methods, such as payment via Bank transfer.
+
+What if I need to change my plan partway through my contract?
+
+You can add and remove licenses as needed from your Account. In the same way, you can upgrade your subscription and we'll automatically adjust the pricing.
+
+Can you invoice me?
+
+Yes, we issue a tax invoice on all paid plans. All prices include VAT. Depending on your location,VAT may be included directly, and in others VAT appears as 0% and is handled via the reverse-charge mechanism. To ensure your invoicing details appear on the invoice, please add them either before you subscribe or within 72 hours of the invoice being issued.
+
+Security & Technical Questions
+
+Is my data safe with iLoveIMG?
+
+Rest assured, your documents are fully encrypted and processed securely, adhering to international data protection regulations, including GDPR.
+
+Will iLoveIMG work for my industry?
+
+iLoveIMG caters to a wide range of professionals, including those in legal, educational, and business fields. Designed with versatility in mind, iLoveIMG seamlessly integrates into any workflow, providing flexible solutions for all users.
+
+// Accordion logic. (function () { var accordion = document.querySelector('.accordion'); var itemsArray = accordion.querySelectorAll('.accordion__item'); var titlesArray = accordion.querySelectorAll('.accordion__title'); titlesArray.forEach(function (title) { title.addEventListener('click', function (event) { // Close items. if (accordion.dataset.hasOwnProperty('oneOpen')){ itemsArray.forEach(function (item) { item.classList.remove('active'); item.classList.add('closed'); }); // Open item. event.currentTarget.parentElement.classList.add('active'); event.currentTarget.parentElement.classList.remove('closed'); return; } event.currentTarget.parentElement.classList.toggle('active'); event.currentTarget.parentElement.classList.toggle('closed'); }) }); })();
+Trusted by well known companies
+function getCurrentPeriod(){ return document.querySelector('.toggle-content__button.active').dataset.periodSelect; } function showCurrentPeriod(){ let currentPeriod = getCurrentPeriod(); let elements = document.querySelectorAll('[data-period]'); elements.forEach(function (el) { el.classList[el.dataset.period === currentPeriod ? 'remove' : 'add']('hidden'); }); } let togglePeriodEls = document.querySelectorAll('.toggle-content__button'); //foreach element togglePeriodEls.forEach(function (el) { el.addEventListener('click', function () { //remove active class from all elements togglePeriodEls.forEach(function (el) { el.classList.remove('active'); }); //add active class to clicked element el.classList.add('active'); //show elements with data-period-year or data-period-month showCurrentPeriod(); }); }); //pricing table toogle let pricingTableRow = document.querySelectorAll('.pricing-table__dropdown'); pricingTableRow.forEach(function (el) { el.addEventListener('click', function () { el.classList.toggle('open'); }); }); let inputNumber = document.querySelector('.input-number'); let input = inputNumber.querySelector('.input'); let increment = inputNumber.querySelector('.input-number__btn[data-action="increment"]'); let decrement = inputNumber.querySelector('.input-number__btn[data-action="decrement"]'); let btnPremium = document.querySelector('.btn--premium'); btnPremium.dataset.url = '/user/premium'; input.addEventListener('keydown', function (e) { let allowed = ["ArrowRight", "ArrowLeft", "ArrowUp", "ArrowDown", "Backspace"]; (allowed.indexOf(e.key) !== -1) || isFinite(e.key) && e.key !== ' ' || e.preventDefault(); }); var monthPrice = 9; var yearPrice = 60; function updatePrice(quantity){ var prices = {"1":{"month":"$<span class=\"pricing__price__numbers\">9<\/span>","year":"$<span class=\"pricing__price__numbers\">60<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">5<\/span>"},"2":{"month":"$<span class=\"pricing__price__numbers\">17<\/span>","year":"$<span class=\"pricing__price__numbers\">114<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">10<\/span>"},"3":{"month":"$<span class=\"pricing__price__numbers\">25<\/span>","year":"$<span class=\"pricing__price__numbers\">168<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">14<\/span>"},"4":{"month":"$<span class=\"pricing__price__numbers\">33<\/span>","year":"$<span class=\"pricing__price__numbers\">222<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">19<\/span>"},"5":{"month":"$<span class=\"pricing__price__numbers\">41<\/span>","year":"$<span class=\"pricing__price__numbers\">276<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">23<\/span>"},"6":{"month":"$<span class=\"pricing__price__numbers\">50<\/span>","year":"$<span class=\"pricing__price__numbers\">330<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">28<\/span>"},"7":{"month":"$<span class=\"pricing__price__numbers\">58<\/span>","year":"$<span class=\"pricing__price__numbers\">384<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">32<\/span>"},"8":{"month":"$<span class=\"pricing__price__numbers\">66<\/span>","year":"$<span class=\"pricing__price__numbers\">438<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">37<\/span>"},"9":{"month":"$<span class=\"pricing__price__numbers\">74<\/span>","year":"$<span class=\"pricing__price__numbers\">492<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">41<\/span>"},"10":{"month":"$<span class=\"pricing__price__numbers\">82<\/span>","year":"$<span class=\"pricing__price__numbers\">546<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">46<\/span>"},"11":{"month":"$<span class=\"pricing__price__numbers\">90<\/span>","year":"$<span class=\"pricing__price__numbers\">600<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">50<\/span>"},"12":{"month":"$<span class=\"pricing__price__numbers\">98<\/span>","year":"$<span class=\"pricing__price__numbers\">654<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">55<\/span>"},"13":{"month":"$<span class=\"pricing__price__numbers\">106<\/span>","year":"$<span class=\"pricing__price__numbers\">708<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">59<\/span>"},"14":{"month":"$<span class=\"pricing__price__numbers\">114<\/span>","year":"$<span class=\"pricing__price__numbers\">762<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">64<\/span>"},"15":{"month":"$<span class=\"pricing__price__numbers\">122<\/span>","year":"$<span class=\"pricing__price__numbers\">816<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">68<\/span>"},"16":{"month":"$<span class=\"pricing__price__numbers\">131<\/span>","year":"$<span class=\"pricing__price__numbers\">870<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">73<\/span>"},"17":{"month":"$<span class=\"pricing__price__numbers\">139<\/span>","year":"$<span class=\"pricing__price__numbers\">924<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">77<\/span>"},"18":{"month":"$<span class=\"pricing__price__numbers\">147<\/span>","year":"$<span class=\"pricing__price__numbers\">978<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">82<\/span>"},"19":{"month":"$<span class=\"pricing__price__numbers\">155<\/span>","year":"$<span class=\"pricing__price__numbers\">1,032<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">86<\/span>"},"20":{"month":"$<span class=\"pricing__price__numbers\">163<\/span>","year":"$<span class=\"pricing__price__numbers\">1,086<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">91<\/span>"},"21":{"month":"$<span class=\"pricing__price__numbers\">171<\/span>","year":"$<span class=\"pricing__price__numbers\">1,140<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">95<\/span>"},"22":{"month":"$<span class=\"pricing__price__numbers\">179<\/span>","year":"$<span class=\"pricing__price__numbers\">1,194<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">100<\/span>"},"23":{"month":"$<span class=\"pricing__price__numbers\">187<\/span>","year":"$<span class=\"pricing__price__numbers\">1,248<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">104<\/span>"},"24":{"month":"$<span class=\"pricing__price__numbers\">195<\/span>","year":"$<span class=\"pricing__price__numbers\">1,302<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">109<\/span>"},"25":{"month":"$<span class=\"pricing__price__numbers\">203<\/span>","year":"$<span class=\"pricing__price__numbers\">1,356<\/span>","year_monthly":"$<span class=\"pricing__price__numbers\">113<\/span>"}}; var monthEls = document.querySelectorAll('[data-pricing-month]'); var yearEls = document.querySelectorAll('[data-pricing-year]'); var monthlyEls = document.querySelectorAll('[data-pricing-monthly]'); monthEls.forEach(function (el) { el.innerHTML = prices[quantity].month; }); yearEls.forEach(function (el) { el.innerHTML = prices[quantity].year; }); monthlyEls.forEach(function (el) { el.innerHTML = prices[quantity].year_monthly + ' <small>/ month</small>'; }); btnPremium.setAttribute('href', btnPremium.dataset.url + '/' + input.value); } function inputValidate(){ if(input.value==''){ input.value = input.attributes.min.value; } if(parseInt(input.value) < parseInt(input.attributes.min.value)){ input.value = input.attributes.min.value; } if(parseInt(input.value) > parseInt(input.attributes.max.value)){ input.value = input.attributes.max.value; } updatePrice(input.value); } input.addEventListener('change', function () { inputValidate(); updatePrice(input.value); }); increment.addEventListener('click', function () { if(parseInt(input.value) < parseInt(input.attributes.max.value)) { input.value = parseInt(input.value) + 1; } inputValidate(); }); decrement.addEventListener('click', function () { if (parseInt(input.value) > parseInt(input.attributes.min.value)) { input.value = parseInt(input.value) - 1; } inputValidate(); }); inputValidate();
+PRODUCT
+Home
+Features
+Pricing
+Tools
+FAQ
+RESOURCES
+iLoveSign
+iLoveAPI
+iLovePDF
+LEGAL
+Privacy policy
+Terms & conditions
+Cookies
+COMPANY
+About us
+Contact us
+Blog
+Press
+English
+English
+Español
+Français
+Deutsch
+Italiano
+Português
+日本語
+Pусский
+한국어
+中文 (简体)
+中文 (繁體)
+العربية
+Български
+Català
+Nederlands
+Ελληνικά
+हिन्दी
+Bahasa Indonesia
+Bahasa Melayu
+Polski
+Svenska
+ภาษาไทย
+Türkçe
+Українська
+Tiếng Việt
+Kiswahili
+© iLoveIMG 2026 ® - Your Image Editor
+Woops! Something is wrong with your Internet connection...
+var siteData = { csrfParam: '_csrf-ilovepdf', csrfToken: 'vSuP92kxzaiMT3jK1eaKD-YApNiG9zWsTHuKld9KPqOQeNyRIlCn7ukIHZynpPt7vGzw7OOkdp0NHuWmvnJXxQ==' }; var lang = 'en-US'; var brand = 'iLoveIMG'; var brand_ref = 'iloveimg';

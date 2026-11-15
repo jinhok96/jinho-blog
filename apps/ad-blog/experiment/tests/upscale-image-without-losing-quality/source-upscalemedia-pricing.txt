@@ -1,0 +1,258 @@
+# 가져온 시각: 2026-11-15T18:24:38.749Z
+# 원본: https://www.upscale.media/pricing
+Upscale.media Pricing: Image Enlargement and Enhancement Services
+https://www.upscale.media/pricing
+
+Image
+Video
+SPACES
+Video Generator
+Generate videos from text or images
+Marketing Studio
+NEW
+Generate product ads and marketing content
+Video Editor
+Edit and enhance videos with AI
+Creative Studio
+NEW
+Generate, edit, and compose on an infinite canvas
+Pricing
+Features
+Blog
+Book a Demo
+Login
+Signup
+🎉 Mega Offer - 2X more credits at same price on all plans    
+
+Upscale.media
+
+PixelBin
+
+Free on Google Play
+
+View
+Choose the Right Plan for You
+
+Free Plan
+
+Sign Up For Free
+
+3 free credits
+
+3 free downloads
+
+Get 3 free credits and 3 free downloads every month to try the platform
+
+Most Popular
+
+Subscription Plan
+
+$0.01
+
+/credit
+
+$69.99 billed yearly
+
+Subscribe Now
+Monthly
+Yearly
+70% off
+
+3000 Credits
+
+$0.02
+
+/credit
+
+$49.99/year
+
+7500 Credits
+
+$0.01
+
+/credit
+
+$69.99/year
+
+15000 Credits
+
+$0.01
+
+/credit
+
+$99.99/year
+
+30000 Credits
+
+$0.00
+
+/credit
+
+$119.99/year
+
+Billed annually (auto-renews yearly)
+Cancel anytime
+Due to the high cost of AI, we don’t offer refunds. Please try the free plan before upgrading
+
+One time payment
+
+$0.10
+
+/credit
+
+$11.99 billed once
+
+Buy Now
+
+60 Credits
+
+$0.13
+
+/credit
+
+$7.99 billed once
+
+125 Credits
+
+$0.10
+
+/credit
+
+$11.99 billed once
+
+500 Credits
+
+$0.06
+
+/credit
+
+$29.99 billed once
+
+1200 Credits
+
+$0.05
+
+/credit
+
+$54.99 billed once
+
+See More
+Credits are valid for 1 year from purchase and are non-refundable
+
+Enterprise Plan
+
+Need custom solutions?
+
+Talk to Sales
+
+Schedule a demo with our team
+
+Get a quote that fits your needs
+
+Email us at sales@pixelbin.io for any queries
+
+Book a 1:1 session with our experts to see how Pixelbin can help your business transform images at scale
+
+All plans include
+
+Face enhancements
+
+Easy API integration
+
+Access to add-on credits
+
+Free image downloads
+
+Call & email support
+
+Have questions? We’re Here to Help
+
+Here are answers to the most common questions about Upscale.media and our pricing. If you need help with anything else, feel free to reach out via chat or email us at sales@pixelbin.io.
+
+What are credits
+
+Credits are used to measure how much you use the platform. Each image upscale generally uses 1 credit, though this may vary by complexity of the transformation.
+
+Do I need to sign up for upscaling images?
+
+Sign-up is required for bulk transformations and full access to the console. Without signing up, you can upscale one image per day for free.
+
+Is Upscale.media free?
+
+You get 3 free credits when you sign up, no payment required. You can use these to try out the platform. For regular or bulk use, you can switch to a subscription or pay-as-you-go plan.
+
+Should I use pay-as-you-go credits or a subscription plan?
+
+Use pay-as-you-go if you only need to process a few images occasionally. For ongoing or bulk use, a subscription plan offers better value.
+
+What if I exhaust my credit limit?
+
+You can top up your account anytime using pay-as-you-go credits, or upgrade to a higher subscription plan based on your needs.
+
+What happens to unused credits at the end of the month?
+
+Unused monthly credits expire at the end of each billing cycle. If you want more flexibility, pay-as-you-go credits are also available.
+
+Can I cancel, upgrade, or downgrade my subscription?
+
+Yes. You can change your plan from the pricing section or reach out to support for assistance. For custom plans, we’re happy to schedule a consultation.
+
+What payment methods do you accept?
+
+We accept all major credit and debit cards. For payment-related help, contact our team at support@pixelbin.io.
+
+What kind of transformations are supported?
+
+You can upscale images, remove or change backgrounds, and apply custom presets for bulk processing. Advanced editing is available through the Pixelbin console.
+
+Can I perform multiple edits in one go?
+
+Yes. You can combine transformations like background removal and upscaling by creating presets through Pixelbin. These can be applied in bulk via the dashboard.
+
+Is Upscale.media suitable for design or creative work?
+
+Absolutely. It works well for design projects, digital art, marketing assets, and other visual content where high-resolution output is essential.
+
+How accurate is the upscaling?
+
+The platform delivers fast and high-quality results, powered by advanced image enhancement methods. If you're ever not satisfied, our support team is here to help.
+
+Will I be charged automatically when my free credits run out?
+
+No, you will not be charged automatically when your free credits are exhausted. Upscale.media only processes payments if you choose to purchase additional credits or subscribe to a plan. You remain in control and can decide when, and if, you want to upgrade.
+
+Do you offer custom plans or special features?
+
+Yes. If you have unique requirements, contact us and we’ll help you find a solution that fits your use case.
+;
+©
+2026 Shopsense Retail Technologies Limited
+#MadeinIndiawith❤️
+  English
+Company
+Privacy
+Terms
+Pricing
+About Us
+Caution Notice
+Resources
+Blog
+Tools & Guide
+Become an Affiliate
+Newsletter
+Products
+Image Upscale API
+Plugins
+Upscale and enhance your images in just a few clicks with our powerful AI technology. Join thousands of users who save time and achieve stunning results with Upscale.media!
+
+Download the app
+
+[]
+{"namedChunks":[]}
+(function(){function b(){try{if(window.posthog&&typeof window.posthog.get_distinct_id==="function"){var a=window.posthog.get_distinct_id();if(a){window.dataLayer.push({event:"ANONYMOUS_ID_INITIALIZED",PixbAnonymousId:a});window.console&&console.log&&console.log("\ud83d\udce3 PostHog events dispatched:",a);return}}}catch(c){}setTimeout(b,300)}window.dataLayer=window.dataLayer||[];window.dataLayer.push({event:"POSTHOG_SCRIPT_INITIALIZED"});b()})();
+(function(){function l(d,f,e,a){var b="";e&&(b=new Date,b.setTime(b.getTime()+e*864E5),b="; expires\x3d"+b.toUTCString());e=a?"; domain\x3d"+a:"";document.cookie=d+"\x3d"+(f||"")+b+"; path\x3d/; Secure; SameSite\x3dLax"+e}function q(){var d=(new Date).getTime(),f=performance&&performance.now&&performance.now()*1E3||0;return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(e){var a=Math.random()*16;d>0?(a=(d+a)%16|0,d=Math.floor(d/16)):(a=(f+a)%16|0,f=Math.floor(f/16));return(e==="x"? a:a&3|8).toString(16)})}function r(){try{var d=m,f=window.posthog&&window.posthog.get_distinct_id()||"",e=new URLSearchParams(window.location.search),a=e.get(m);a:{e=d+"\x3d";for(var b=document.cookie.split(";"),h=0;h<b.length;h++){for(var c=b[h];c.charAt(0)===" ";)c=c.substring(1,c.length);if(c.indexOf(e)===0){var g=c.substring(e.length,c.length);break a}}g=null}b=!1;c="";!a||f===a&&g===a?!a&&g&&g!==f?b=!0:g||(c=q()):c=a;var k=window.location.hostname.split(".");k.length>2&&k.shift();var n="."+k.join("."); var p=window.location.hostname.split(".");p.length>2&&(p.slice(1).join("."),document.cookie=d+"\x3d; expires\x3dThu, 01 Jan 1970 00:00:00 GMT; path\x3d/; domain\x3d"+window.location.hostname);c?(l(d,c,365,n),b=!0):g&&(l(d,g,365,n),b=!0);b&&typeof EventEmitter!=="undefined"&&EventEmitter.dispatch(t,{})}catch(u){console.error("Failed to set anonymous tracking cookie:",u)}}var m="pixb_anonymous_id",t="ANONYMOUS_ID_INITIALIZED";r()})();
+!function(h,a){var k,g,f,l;a.__SV||(window.posthog=a,a._i=[],a.init=function(p,n,d){function q(e,b){var m=b.split(".");m.length===2&&(e=e[m[0]],b=m[1]);e[b]=function(){e.push([b].concat(Array.prototype.slice.call(arguments,0)))}}f=h.createElement("script");f.type="text/javascript";f.async=!0;f.src=n.api_host+"/static/array.js";l=h.getElementsByTagName("script")[0];l.parentNode.insertBefore(f,l);var c=a;d!==void 0?c=a[d]=[]:d="posthog";c.people=c.people||[];c.toString=function(e){var b="posthog";d!== "posthog"&&(b+="."+d);return e?b:b+" (stub)"};c.people.toString=function(){return c.toString(1)+".people (stub)"};k="capture identify alias people.set people.set_once set_config register register_once unregister opt_out_capturing has_opted_out_capturing opt_in_capturing reset isFeatureEnabled onFeatureFlags getFeatureFlag getFeatureFlagPayload reloadFeatureFlags group updateEarlyAccessFeatureEnrollment getEarlyAccessFeatures getActiveMatchingSurveys getSurveys onSessionId".split(" ");for(g=0;g<k.length;g++)q(c, k[g]);a._i.push([p,n,d])},a.__SV=1)}(document,window.posthog||[]);posthog.init("phc_a7s4xRxymzUs3F8x2xht7tgrN1CR4MQ4hfwwsPm4Jf0",{api_host:"https://app.posthog.com",capture_pageview:!1,capture_pageleave:!1,autocapture:!1,loaded:function(h){typeof EventEmitter!=="undefined"&&setTimeout(function(){EventEmitter.dispatch("POSTHOG_SCRIPT_INITIALIZED",{})},1E3)}});
+(function(){function f(){!h&&window.posthog&&posthog.capture&&(h=!0,posthog.capture("$pageview"))}function g(){try{if(!window.posthog||!posthog.identify)return f();var b,a="; "+document.cookie,c=a.split("; pixb_anonymous_id\x3d"),d=(b=c.length===2?c.pop().split(";").shift():null)||(posthog.get_distinct_id?posthog.get_distinct_id():null);d&&posthog.identify(String(d),{anonymous_id:String(d)})}catch(p){}f()}function k(b){try{var a=new XMLHttpRequest;a.open("GET",l,!0);a.withCredentials=!0;a.setRequestHeader("accept", "application/json, text/plain, */*");a.setRequestHeader("x-ebg-param",m);a.setRequestHeader("x-ebg-signature",n);a.onreadystatechange=function(){if(a.readyState===4){var c=null;try{c=JSON.parse(a.responseText)}catch(d){}b(a.status,c)}};a.onerror=function(){b(0,null)};a.send()}catch(c){b(0,null)}}function e(){if(!window.posthog)return setTimeout(e,150);k(function(b,a){a=a?a.session&&a.session.passport&&a.session.passport.user?a.session.passport.user:a.user||null:null;if(b===200&&a&&(a.email||a.id))a:{b= a;try{if(!window.posthog||!posthog.identify){g();break a}var c=b&&(b.email||b.id)?String(b.email||b.id):null;if(!c){g();break a}a={};b.email&&(a.email=String(b.email));b.name&&(a.name=String(b.name));posthog.identify(c,a)}catch(d){}f()}else g()})}var l="https://api.upscale.media/service/panel/users/v1.0/session",m="MjAyNTEwMTRUMDk0ODM3Wg\x3d\x3d",n="v1:08b88913fc68ce058399d95f6284d6a9f0992c6c8a1755faa2d87529d65a8c55",h=!1;window.addEventListener("POSTHOG_SCRIPT_INITIALIZED",function(){setTimeout(e, 100)});document.readyState==="complete"||document.readyState==="interactive"?setTimeout(e,400):document.addEventListener("DOMContentLoaded",function(){setTimeout(e,400)})})();
+(function(){function l(d,f,e,a){var b="";e&&(b=new Date,b.setTime(b.getTime()+e*864E5),b="; expires\x3d"+b.toUTCString());e=a?"; domain\x3d"+a:"";document.cookie=d+"\x3d"+(f||"")+b+"; path\x3d/; Secure; SameSite\x3dLax"+e}function q(){var d=(new Date).getTime(),f=performance&&performance.now&&performance.now()*1E3||0;return"xxxxxxxx-xxxx-4xxx-yxxx-xxxxxxxxxxxx".replace(/[xy]/g,function(e){var a=Math.random()*16;d>0?(a=(d+a)%16|0,d=Math.floor(d/16)):(a=(f+a)%16|0,f=Math.floor(f/16));return(e==="x"? a:a&3|8).toString(16)})}function r(){try{var d=m,f=window.posthog&&window.posthog.get_distinct_id()||"",e=new URLSearchParams(window.location.search),a=e.get(m);a:{e=d+"\x3d";for(var b=document.cookie.split(";"),h=0;h<b.length;h++){for(var c=b[h];c.charAt(0)===" ";)c=c.substring(1,c.length);if(c.indexOf(e)===0){var g=c.substring(e.length,c.length);break a}}g=null}b=!1;c="";!a||f===a&&g===a?!a&&g&&g!==f?b=!0:g||(c=q()):c=a;var k=window.location.hostname.split(".");k.length>2&&k.shift();var n="."+k.join("."); var p=window.location.hostname.split(".");p.length>2&&(p.slice(1).join("."),document.cookie=d+"\x3d; expires\x3dThu, 01 Jan 1970 00:00:00 GMT; path\x3d/; domain\x3d"+window.location.hostname);c?(l(d,c,365,n),b=!0):g&&(l(d,g,365,n),b=!0);b&&typeof EventEmitter!=="undefined"&&EventEmitter.dispatch(t,{})}catch(u){console.error("Failed to set anonymous tracking cookie:",u)}}var m="pixb_anonymous_id",t="ANONYMOUS_ID_INITIALIZED";r()})();
+(function(){function f(){!h&&window.posthog&&posthog.capture&&(h=!0,posthog.capture("$pageview"))}function g(){try{if(!window.posthog||!posthog.identify)return f();var b,a="; "+document.cookie,c=a.split("; pixb_anonymous_id\x3d"),d=(b=c.length===2?c.pop().split(";").shift():null)||(posthog.get_distinct_id?posthog.get_distinct_id():null);d&&posthog.identify(String(d),{anonymous_id:String(d)})}catch(p){}f()}function k(b){try{var a=new XMLHttpRequest;a.open("GET",l,!0);a.withCredentials=!0;a.setRequestHeader("accept", "application/json, text/plain, */*");a.setRequestHeader("x-ebg-param",m);a.setRequestHeader("x-ebg-signature",n);a.onreadystatechange=function(){if(a.readyState===4){var c=null;try{c=JSON.parse(a.responseText)}catch(d){}b(a.status,c)}};a.onerror=function(){b(0,null)};a.send()}catch(c){b(0,null)}}function e(){if(!window.posthog)return setTimeout(e,150);k(function(b,a){a=a?a.session&&a.session.passport&&a.session.passport.user?a.session.passport.user:a.user||null:null;if(b===200&&a&&(a.email||a.id))a:{b= a;try{if(!window.posthog||!posthog.identify){g();break a}var c=b&&(b.email||b.id)?String(b.email||b.id):null;if(!c){g();break a}a={};b.email&&(a.email=String(b.email));b.name&&(a.name=String(b.name));posthog.identify(c,a)}catch(d){}f()}else g()})}var l="https://api.upscale.media/service/panel/users/v1.0/session",m="MjAyNTEwMTRUMDk0ODM3Wg\x3d\x3d",n="v1:08b88913fc68ce058399d95f6284d6a9f0992c6c8a1755faa2d87529d65a8c55",h=!1;window.addEventListener("POSTHOG_SCRIPT_INITIALIZED",function(){setTimeout(e, 100)});document.readyState==="complete"||document.readyState==="interactive"?setTimeout(e,400):document.addEventListener("DOMContentLoaded",function(){setTimeout(e,400)})})();
+(function(){function f(){!h&&window.posthog&&posthog.capture&&(h=!0,posthog.capture("$pageview"))}function g(){try{if(!window.posthog||!posthog.identify)return f();var b,a="; "+document.cookie,c=a.split("; pixb_anonymous_id\x3d"),d=(b=c.length===2?c.pop().split(";").shift():null)||(posthog.get_distinct_id?posthog.get_distinct_id():null);d&&posthog.identify(String(d),{anonymous_id:String(d)})}catch(p){}f()}function k(b){try{var a=new XMLHttpRequest;a.open("GET",l,!0);a.withCredentials=!0;a.setRequestHeader("accept", "application/json, text/plain, */*");a.setRequestHeader("x-ebg-param",m);a.setRequestHeader("x-ebg-signature",n);a.onreadystatechange=function(){if(a.readyState===4){var c=null;try{c=JSON.parse(a.responseText)}catch(d){}b(a.status,c)}};a.onerror=function(){b(0,null)};a.send()}catch(c){b(0,null)}}function e(){if(!window.posthog)return setTimeout(e,150);k(function(b,a){a=a?a.session&&a.session.passport&&a.session.passport.user?a.session.passport.user:a.user||null:null;if(b===200&&a&&(a.email||a.id))a:{b= a;try{if(!window.posthog||!posthog.identify){g();break a}var c=b&&(b.email||b.id)?String(b.email||b.id):null;if(!c){g();break a}a={};b.email&&(a.email=String(b.email));b.name&&(a.name=String(b.name));posthog.identify(c,a)}catch(d){}f()}else g()})}var l="https://api.upscale.media/service/panel/users/v1.0/session",m="MjAyNTEwMTRUMDk0ODM3Wg\x3d\x3d",n="v1:08b88913fc68ce058399d95f6284d6a9f0992c6c8a1755faa2d87529d65a8c55",h=!1;window.addEventListener("POSTHOG_SCRIPT_INITIALIZED",function(){setTimeout(e, 100)});document.readyState==="complete"||document.readyState==="interactive"?setTimeout(e,400):document.addEventListener("DOMContentLoaded",function(){setTimeout(e,400)})})();

@@ -72,7 +72,12 @@
   "autoMode": {
     "allow": [
       "$defaults",
-      "The repository owner allows every action in this repository's disposable cloud container (decided 2026-11-09). That includes downloading third-party apps, installers, AppImages, .deb/.tar packages, static binaries (for example FFmpeg builds), browsers and AI model files from official project sites, GitHub Releases, Flathub, PyPI, npm and Hugging Face, and extracting, installing and running them to test and measure them for blog posts."
+      "The repository owner allows every action in this repository's disposable cloud container (decided 2026-11-09). That includes downloading third-party apps, installers, AppImages, .deb/.tar packages, static binaries (for example FFmpeg builds), browsers and AI model files from official project sites, GitHub Releases, Flathub, PyPI, npm and Hugging Face, and extracting, installing and running them to test and measure them for blog posts.",
+      "Reconfirmed by the repository owner on 2026-11-16, without needing to ask first: in a single command or several, download a release file (for example an Upscayl AppImage from GitHub Releases), check its hash, chmod +x it, unpack it with --appimage-extract or dpkg -x or tar, and run the unpacked program (including GUI apps under Xvfb with --no-sandbox) inside this container to measure it for an article. Installing system packages with apt-get and Python or Node packages with pip or npm for the same purpose is also allowed."
+    ],
+    "environment": [
+      "$defaults",
+      "Claude Code on the web cloud session: a disposable, isolated container that is reclaimed after the session. It holds only a clone of this blog repository and no personal files; downloaded apps are used only to test and measure them for blog articles (decided by the repository owner 2026-11-09, reconfirmed 2026-11-16)."
     ]
   },
   "hooks": {

@@ -1,4 +1,4 @@
-"""free-image-converter-photo-tools 허브 글 그래픽 (데이터: photo-video 상시 글 8편의 측정 결과. 2026-11-13 영상 자르기·iPhone 영상 반영)
+"""free-image-converter-photo-tools 허브 글 그래픽 (데이터: photo-video 상시 글 9편의 측정 결과. 2026-11-13 영상 자르기·iPhone 영상, 2026-11-15 업스케일 반영 → 카드 3x3)
 
 실행: python3 -I charts.py <출력 폴더>
 """
@@ -23,6 +23,7 @@ PICKS = [
     ('Video for Discord', 'HandBrake', 'App', 'A bitrate set for 19 MB gave 17 to 19 MB files at 1080p. Social 25 MB went over'),
     ('Trim a video', 'ezgif', 'Website', 'Copy original kept every frame of 2 test clips. App: LosslessCut did too'),
     ('iPhone video to MP4', 'LosslessCut', 'App', 'Copied all 1,440 frames and kept the date. For H.264, HandBrake'),
+    ('Upscale an image', 'Bigjpg', 'Website', 'Closer to the original than a normal resize on 6 of 6 test images, 2x and 4x'),
 ]
 
 # 도구·기본값, 측정에서 생긴 일, 고치는 법. 출처: 각 글의 결과 절
@@ -40,24 +41,24 @@ TRAPS = [
 def picks():
     fig = cs.plt.figure(figsize=cs.FIGSIZE)
     ax = fig.add_axes([0.03, 0.11, 0.94, 0.72])
-    ax.set_xlim(0, 4)
-    ax.set_ylim(2, 0)
+    ax.set_xlim(0, 3)
+    ax.set_ylim(3, 0)
     ax.axis('off')
     w, h, gap = 0.96, 0.92, 0.04
     for k, (job, pick, kind, why) in enumerate(PICKS):
-        col, row = k % 4, k // 4
+        col, row = k % 3, k // 3
         x, y = col + gap / 2, row + gap
-        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0,rounding_size=0.03', mutation_aspect=0.6,
+        ax.add_patch(FancyBboxPatch((x, y), w, h, boxstyle='round,pad=0,rounding_size=0.03', mutation_aspect=1.35,
                                     facecolor=cs.SURFACE, edgecolor=cs.BORDER, lw=1, zorder=1))
         ax.text(x + 0.05, y + 0.14, job, fontsize=12.5, fontweight='semibold', color=cs.MUTED, va='center')
         ax.text(x + 0.05, y + 0.33, pick, fontsize=18, fontweight='bold', color=cs.ACCENT, va='center')
         ax.text(x + w - 0.05, y + 0.14, kind, fontsize=11, fontweight='semibold', ha='right', va='center',
                 color=cs.FOREGROUND)
-        ax.text(x + 0.05, y + 0.52, textwrap.fill(why, 30), fontsize=11.5, va='top', linespacing=1.35)
+        ax.text(x + 0.05, y + 0.5, textwrap.fill(why, 44), fontsize=11, va='top', linespacing=1.3)
     cs.header(fig, 'Best free tool for each photo and video job, from our tests',
-              '18 free tools on 8 jobs, each job tested on its own set of test files (Oct 15 to Nov 10, 2026)')
+              '22 free tools on 9 jobs, each job tested on its own set of test files (Oct 15 to Nov 15, 2026)')
     cs.footer(fig, 'App = installs on Windows, Mac and Linux, files stay on your computer. Website = your file is uploaded.',
-              'Source: ToolProof tests of HEIC and WebP to JPG, 100 KB photos, backgrounds, metadata, video compression, trimming, iPhone video')
+              'Source: ToolProof tests of HEIC and WebP to JPG, 100 KB photos, backgrounds, metadata, video, trimming, iPhone video, upscaling')
     cs.save(fig, f'{OUT}/best-free-photo-tool-per-job.webp')
 
 

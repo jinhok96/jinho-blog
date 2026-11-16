@@ -1,0 +1,217 @@
+# 가져온 시각: 2026-11-16T17:33:34.281Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2025
+Ending Support in 2025 - Microsoft Lifecycle | Microsoft Learn
+https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2025
+
+Table of contents
+ Exit editor mode
+Ask Learn
+Ending Support in 2025
+Summarize this article for me
+
+ Please go here to search for your product's lifecycle.
+
+The following list represents products retiring or reaching the end of support in 2025. Upon retirement or end of support, there will be no new security updates, non-security updates, free or paid assisted support options or online technical content updates. Go here to learn about Fixed and Modern Lifecycle policies and service packs.
+
+If you have any questions regarding support for a product, please contact your Microsoft Account Representative. If you need technical support, visit the Microsoft Support website.
+
+Product Retirements
+
+The following products, governed by the Modern Policy, will retire in 2025.
+
+Expand table
+Product	Retirement
+Microsoft Genomics
+	January 6, 2025
+Visual Studio App Center
+	March 31, 2025
+SAP HANA Large Instances (HLIs)
+	June 30, 2025
+Azure Database for MariaDB
+	September 19, 2025
+Azure Basic Load Balancer
+Azure HPC Cache
+Azure Remote Rendering
+Azure Service Map
+Azure SQL Edge
+Azure Unmanaged Disks
+Azure vFXT
+	September 30, 2025
+Windows 10 Enterprise and Education
+Windows 10 Home and Pro
+Windows 10 IoT Enterprise
+	October 14, 2025
+End of Servicing
+
+The following product versions, governed by the Modern Policy, will end support in 2025.
+
+Expand table
+Product	End of Servicing
+Dynamics 365 Business Central on-premises (Modern Policy), 2023 release wave 2, version 23.x
+	April 2, 2025
+Microsoft Configuration Manager, Version 2309
+	April 9, 2025
+Dynamics 365 Business Central on-premises (Modern Policy), 2024 release wave 1, version 24.x
+	October 7, 2025
+Windows 11 Enterprise and Education, Version 22H2
+Windows 11 IoT Enterprise, Version 22H2
+	October 14, 2025
+Microsoft Configuration Manager, Version 2403
+	October 22, 2025
+Windows Server Annual Channel, Version 23H2
+	October 24, 2025
+Windows 11 Home and Pro, Version 23H2
+	November 11, 2025
+Products reaching End of Support
+
+The following products and releases, governed by the Fixed Policy, will end support in 2025.
+
+Expand table
+Product	End of Support
+Dynamics C5 2015
+Dynamics CRM 2015
+Dynamics NAV 2015
+Dynamics SL 2015
+Visual Studio 2022 , Version 17.6 (LTSC channel)
+	January 14, 2025
+Dynamics GP 2015
+Dynamics GP 2015 R2
+	April 8, 2025
+Microsoft SQL Server 2012, Extended Security Update Year 3
+SQL Server 2014, Extended Security Updates Year 1
+Visual Studio 2022 , Version 17.8 (LTSC channel)
+	July 8, 2025
+Access 2016
+Access 2019
+Dynamics 365 Business Central on-premises (Fixed Policy)
+Excel 2016
+Excel 2019
+Exchange Server 2016
+Exchange Server 2019
+Microsoft Office 2016
+Microsoft Office 2019
+Microsoft Report Viewer 2015 Runtime
+OneNote 2016
+Outlook 2016
+Outlook 2019
+PowerPoint 2016
+PowerPoint 2019
+Project 2016
+Project 2019
+Publisher 2016
+Publisher 2019
+Skype for Business 2016
+Skype for Business 2019
+Skype for Business Server 2015
+Skype for Business Server 2019
+Visio 2016
+Visio 2019
+Visual Studio 2015
+Visual Studio Team Foundation Server 2015
+Windows 10 2015 LTSB
+Windows 10 IoT Enterprise LTSB 2015
+Windows 10 Team (Surface Hub)
+Windows Defender Exploit Guard
+Windows Defender for Windows 10
+Windows Server 2012, Extended Security Update Year 2
+Windows Server 2012 R2, Extended Security Update Year 2
+Word 2016
+Word 2019
+	October 14, 2025
+Products moving to Extended Support
+
+The following products will be moving from Mainstream to Extended Support in 2025. Extended Support includes security updates at no cost, and paid non-security updates and support. Additionally, Microsoft will not accept requests for design changes or new features during the Extended Support phase.
+
+Expand table
+Product	End of Mainstream Support
+SQL Server 2019
+	February 28, 2025
+Azure DevOps Server 2020
+Microsoft Robotics
+	October 14, 2025
+Additional Azure Changes
+
+Below is a list of additional Azure updates, including API, SDK and tools, and feature changes. Go here for more information: Azure updates | Microsoft Azure
+
+Expand table
+Azure Item	Retirement
+HTTP Application Routing add-on for AKS
+	March 3, 2025
+Azure pod identity v1 (public preview)
+Explainability and Fairness Dashboard
+	March 14, 2025
+“Global ingestion endpoints” (resulting in Instrumentation Key deprecation)
+Every-write AOF on Redis Enterprise
+Git Repository - API Management 2
+	March 15, 2025
+Azure Database for PostgreSQL - Single Server
+	March 28, 2025
+Azure HDInsight 4.0
+Azure HDInsight 5.0
+	March 30, 2025
+Application Insights ‘instrumentation key’ based global ingestion
+Azure Functions Service Bus Extension v4
+Azure Maps Creator Feature State APIs
+Azure Maps Native SDK
+Azure portal templates
+Chef Run_lists and Cookbooks in Azure CycleCloud Cluster-Init Projects
+Container Monitoring solution
+Cost Management - Connector for AWS
+Direct Management API
+Microsoft Azure Storage Track 1 SDK for C++
+QnAMaker Service V1
+Retirement of Platform Enabled DR for App Service Web Apps
+SQL's connector v1 operations
+Standard_NC24rs_v3 VM size
+Visual Studio App Center
+	March 31, 2025
+Ubuntu 20.04 LTS support
+	April 23, 2025
+Node 18 LTS on App Service
+	April 30, 2025
+Cluster Configuration Flux v1
+	May 24, 2025
+SAP HLI SKU Retirement
+	June 30, 2025
+Azure Database for MariaDB
+	September 19, 2025
+App Insights API Key Retirement
+Application Insights Java 2.X SDK Retirement
+Azure Database for MySQL v5.7 end of support
+Azure Functions proxy support retirement
+Azure HPC Cache
+Azure ML CLI v1 retirement
+Azure vFXT
+Basic IP
+Basic Load Balancer
+Batch Low Priority VMs
+Default Outbound Access
+Default outbound access for Simplified node communication pool without public IP addresses
+Legacy MFA and SSPR policies - authentication methods
+Microsoft Defender for Cloud - Microsoft Actions and Compliance Offerings components
+Microsoft.SQL 2014-04-01 stable APIs retirement
+ServiceMap
+Standard_NC6s_v3, Standard_NC12s_v3, and Standard_NC24s_v3 VM sizes
+Unmanaged Disks
+VPN Gateway Standard and High-Performance SKUs
+	September 30, 2025
+Azure Monitor legacy Log Analytics API for log alerts
+Language Understandings (LUIS) v1
+	October 1, 2025
+Additional resources
+
+Training
+
+Learning path
+
+Use advance techniques in canvas apps to perform custom updates and optimization - Training
+
+Use advance techniques in canvas apps to perform custom updates and optimization
+
+Certification
+
+Microsoft Certified: Azure Virtual Desktop Specialty - Certifications
+
+Plan, deliver, manage, and monitor virtual desktop experiences and remote apps on Microsoft Azure for any device.
+
+Last updated on 11/14/2024

@@ -1,0 +1,126 @@
+# 가져온 시각: 2026-11-16T17:34:15.950Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2027
+Ending Support in 2027 - Microsoft Lifecycle | Microsoft Learn
+https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2027
+
+Table of contents
+ Exit editor mode
+Ask Learn
+Ending Support in 2027
+Summarize this article for me
+
+ Please go here to search for your product's lifecycle.
+
+The following list represents products retiring or reaching the end of support in 2027. Upon retirement or end of support, there will be no new security updates, non-security updates, free or paid assisted support options or online technical content updates. Go here to learn about Fixed and Modern Lifecycle policies and service packs.
+
+If you have any questions regarding support for a product, please contact your Microsoft Account Representative. If you need technical support, visit the Microsoft Support website.
+
+Product Retirements
+
+The following products, governed by the Modern Policy, will retire in 2027.
+
+Expand table
+Product	Retirement
+Azure AI Content Moderator
+	March 31, 2027
+Microsoft Teams Displays
+	September 3, 2027
+Automanage for Virtual Machines
+	September 30, 2027
+End of Servicing
+
+The following product versions, governed by the Modern Policy, will end support in 2027.
+
+Expand table
+Product	End of Servicing
+Windows 11 Enterprise and Education, Version 24H2
+Windows 11 IoT Enterprise, Version 24H2
+	October 12, 2027
+Products reaching End of Support
+
+The following products and releases, governed by the Fixed Policy, will end support in 2027.
+
+Expand table
+Product	End of Support
+BizTalk Server 2016
+Dynamics NAV 2017
+Microsoft Host Integration Server 2016
+System Center 2016 Data Protection
+System Center 2016 Operations Manager
+System Center 2016 Orchestrator
+System Center 2016 Service Manager
+System Center 2016 Virtual Machine Manager
+Visual Studio Team Foundation Server 2017
+	January 11, 2027
+HPC Pack 2016
+Hyper-V Server 2016
+Internet Information Services (IIS), IIS 10 on Windows Server 2016
+Microsoft .NET Framework, .NET Framework 4.6.2
+Microsoft System Center Configuration Manager (LTSB - version 1606)
+Windows 10 Enterprise LTSC 2021
+Windows Azure Pack (on Windows Server 2016)
+Windows Defender for Windows Server 2016
+Windows Server 2016
+Windows Server Update Services for Windows Server 2016
+Windows Storage Server 2016
+	January 12, 2027
+Visual Studio 2017
+	April 13, 2027
+SQL Server 2014, Extended Security Updates Year 3
+	July 12, 2027
+SQL Server 2017
+	October 12, 2027
+Products moving to Extended Support
+
+The following products will be moving from Mainstream to Extended Support in 2027. Extended Support includes security updates at no cost, and paid non-security updates and support. Additionally, Microsoft will not accept requests for design changes or new features during the Extended Support phase.
+
+Expand table
+Product	End of Mainstream Support
+Dynamics 365 for Customer Engagement Apps, version 9.x (on-premises update)
+Visual Studio 2022
+Windows 10 IoT Enterprise LTSC 2021
+	January 12, 2027
+System Center 2022 Data Protection Manager
+System Center 2022 Operations Manager
+System Center 2022 Orchestrator
+System Center 2022 Service Manager
+System Center 2022 Virtual Machine Manager
+	April 13, 2027
+Additional Azure Changes
+
+Below is a list of additional Azure updates, including API, SDK and tools, and feature changes. Go here for more information: Azure updates | Microsoft Azure
+
+Expand table
+Azure Item	Retirement
+HPC Pack 2016
+	January 12, 2027
+Azure AI Content Moderator
+Windows Server 2022 on AKS
+	March 15, 2027
+Application Gateway WAF v2 Config
+Azure Data Factory Memory Optimized Data Flows
+Azure Front Door (classic) SKU
+Azure text to speech long audio API
+Built-in Analytics: Azure API Management
+Standard_M192idms_v2 VMs
+Standard_M192ids_v2 VMs
+Standard_M192ims_v2 VMs
+Standard_M192is_v2 VMs
+	March 31, 2027
+Additional resources
+
+Training
+
+Learning path
+
+Solution Architect: Design Microsoft Power Platform solutions - Training
+
+Learn how a solution architect designs solutions.
+
+Certification
+
+Microsoft Certified: Azure Virtual Desktop Specialty - Certifications
+
+Plan, deliver, manage, and monitor virtual desktop experiences and remote apps on Microsoft Azure for any device.
+
+Last updated on 11/08/2024

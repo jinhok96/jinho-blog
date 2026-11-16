@@ -1,0 +1,135 @@
+# 가져온 시각: 2026-11-16T17:37:22.301Z
+# 원본: https://support.microsoft.com/en-us/office/microsoft-publisher-will-no-longer-be-supported-after-october-2026-ee6302a2-4bc7-4841-babf-8e9be3acbfd7
+Microsoft Publisher will no longer be supported after October 2026 | Microsoft Support
+https://support.microsoft.com/en-us/publisher/microsoft-publisher-will-no-longer-be-supported-after-october-2026
+
+Microsoft Publisher will no longer be supported after October 2026
+Applies To
+Publisher for Microsoft 365 Publisher 2021 Publisher 2019 Publisher 2016 Publisher 2013 Publisher 2010 Publisher 2007 Developer Publisher 2010 Developer Publisher 2013 Developer
+
+At Microsoft, we are dedicated to providing our customers with the tools they need to achieve what matters, in their work and life. In order to focus on new benefits, we occasionally remove features and products.  
+
+In October 2026, Microsoft Publisher will reach its end of life. After that time, it will no longer be included in Microsoft 365 and existing on-premises suites will no longer be supported. Microsoft 365 subscribers will no longer be able to open or edit Publisher files in Publisher. Until then, support for Publisher will continue and users can expect the same experience as today.  
+
+Many common Publisher scenarios—including creating professionally branded templates, printing envelopes and labels, and producing customized calendars, business cards, and programs—are already available in other Microsoft 365 apps such as Word and PowerPoint. For recommendations on where to start common Publisher scenarios, see the Recommended alternatives to Microsoft Publisher section below.
+
+How will this affect you:
+
+You can continue to use Publisher with its current functionality until October 1, 2026.
+
+Microsoft 365 subscribers will not be able to access Publisher on or shortly after October 1, 2026, as the removal update process rolls out.  
+
+Support for the perpetual version of Publisher will end on October 13, 2026, when Office LTSC 2021 and Consumer Office 2021 reach end of support.
+
+How to prepare before October 2026:
+
+Action Recommended: Convert your existing files to another format before 10/1/2026. After this date, you will no longer be able to open or edit these files in Microsoft Publisher.  
+
+How to prepare your files for Publishers retirement by saving them in another format. 
+
+View content after Publishers retirement by converting to PDF format
+
+Steps to Convert Publisher Files to PDF
+
+Open Publisher file. 
+Go to File > Save as. 
+Choose a location to save the file.
+Select PDF as the file type and Save. 
+
+To convert many Publisher files, consider automating this process by using a PowerShell script. You can refer to Example conversion script as a guide.
+
+Edit content after Publishers retirement by either:
+
+Converting a Publisher file to PDF, and then a Word file.
+
+Convert Publisher file to PDF.
+
+Steps to Convert PDF Files to Word
+
+Open Word.
+Go to File > Open.
+Locate and open the PDF file.
+Select OK in the dialog box.
+
+From here your document will open as a Word file.
+
+Note
+
+The converted Word document will be optimized for text editing. As a result, its layout may vary from the original PDF—particularly if the document includes many graphics.
+
+Using a third-party conversion tool to convert directly from Publisher to another file type.
+
+Note
+
+These services vary in quality and capabilities, and Microsoft does not provide support for them. 
+
+Example conversion script
+
+The sample PowerShell script here can be used as a reference for how to individually or bulk export Publisher files to PDF or other export formats. This is provided for instructional purposes, and we recommend you modify and test for your specific needs.
+
+How to run
+
+Ensure you have a working and licensed version of Publisher installed on your computer.
+Download the sample script to your computer.
+Modify the script as needed for your intended purpose.
+Open a PowerShell window with the required execution policies.
+Run the script against the files or directories you need (examples below).
+
+Examples:
+
+Converts the specified Publisher file to PDF format.
+
+Convert-PubFileToPDF.ps1 -Filter "C:\Documents\MyFile.pub"
+
+Converts all Publisher files in the current directory to PDF format.
+
+Convert-PubFileToPDF.ps1 -Filter "*.pub"
+
+Converts all Publisher files in the current directory and all subdirectories to PDF format.
+
+Convert-PubFileToPDF.ps1 -Filter "*.pub" -Recurse
+
+Converts all Publisher files in the specified directory to PDF format.
+
+Convert-PubFileToPDF.ps1 -Filter "C:\Documents\*.pub"
+
+Converts all Publisher files in the specified directory and all subdirectories to PDF format.
+
+Convert-PubFileToPDF.ps1 -Filter "C:\Documents\*.pub" -Recurse
+
+Notes:
+
+The script is designed to continue running if it encounters errors and to display which files were converted and which files encountered an error.
+If the file name already exists, we will not export the file and will show an error. Delete or rename the conflicting file and run the script again.
+See Document.ExportAsFixedFormat documentation for other parameters you may want to change, including PbFixedFormatType and PbFixedFormatIntent. You may also consider Document.SaveAs with PbFileFormat to output as alternative formats.
+Recommended alternatives to Microsoft Publisher
+
+To complete common scenarios in Publisher, we recommend the following Microsoft 365 apps:  
+
+Where to start?
+
+I want to create...	Recommended App
+Ads or Flyers	Word or PowerPoint
+Brochures	Word or PowerPoint
+Banners, Signs, Posters	PowerPoint
+Certificates	Word or PowerPoint
+Business cards	Word or PowerPoint
+Business invoices, applications and forms	Word
+Calendars	Word or PowerPoint
+Envelopes	Word
+Labels	Word
+Letterhead	Word
+Newsletter	Word
+Programs, Folded Paper Projects	Word
+Cards (Greeting, Compliment, etc.)	Word or PowerPoint
+FAQ
+
+Can I still install Publisher after October 2026? If you have a Microsoft 365 subscription, Microsoft Publisher will no longer be available for installation or download after October 2026. However, if you have the Perpetual version of Publisher, although support will end, you will still be able to install and use the app beyond this date.
+
+What happens to my existing Publisher files after the end of support? If you have a Microsoft 365 subscription, you will no longer be able to open or edit your Publisher files using Microsoft Publisher. It is recommended to convert your existing files to PDF or Word format before this date. If you have the Perpetual version of Publisher, you will still be able to access and edit your files.
+
+What can I use instead of Publisher? We suggest using the recommendations provided in the Recommended alternatives to Microsoft Publisher section above as starting points for common Publisher scenarios. You may also want to try 3rd party programs, such as Affinity, which may be able to import native Publisher files.
+
+How can I find my Publisher files? A file search for “.Pub” on your PC, OneDrive, or SharePoint can help you locate your Publisher files.
+
+I have many Publisher files; is there a way to convert them all to PDF? Yes. If you have a large number of Publisher files, you can use a PowerShell script or other automation for bulk export. You can refer to Example conversion script as a guide.

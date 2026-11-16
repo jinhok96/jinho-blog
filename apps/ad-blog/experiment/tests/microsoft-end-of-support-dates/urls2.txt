@@ -1,0 +1,9 @@
+m365-apps-windows-10 https://learn.microsoft.com/en-us/microsoft-365-apps/end-of-support/windows-10-support
+publisher-retirement https://support.microsoft.com/en-us/office/microsoft-publisher-will-no-longer-be-supported-after-october-2026-ee6302a2-4bc7-4841-babf-8e9be3acbfd7
+windows10-release-information https://learn.microsoft.com/en-us/windows/release-health/release-information
+m365-apps-security-updates https://learn.microsoft.com/en-us/officeupdates/microsoft365-apps-security-updates
+office-2021-end-of-support https://support.microsoft.com/en-us/office/system-requirements/end-of-support-for-office-2021
+m365-storage-changes https://support.microsoft.com/en-us/onedrive/changes-to-microsoft-365-storage
+find-windows-device-info https://support.microsoft.com/en-us/windows/experience/find-information-about-your-windows-device
+office-version https://support.microsoft.com/en-us/office/lifecycle/lc-account/about-office-what-version-of-office-am-i-using
+lifecycle-faq-windows https://learn.microsoft.com/en-us/lifecycle/faq/windows

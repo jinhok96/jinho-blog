@@ -1,0 +1,50 @@
+# 가져온 시각: 2026-11-16T17:37:11.040Z
+# 원본: https://learn.microsoft.com/en-us/microsoft-365-apps/end-of-support/windows-10-support
+Windows 10 end of support and Microsoft 365 Apps - Microsoft 365 Apps | Microsoft Learn
+https://learn.microsoft.com/en-us/microsoft-365-apps/end-of-support/windows-10-support
+
+Table of contents
+ Exit editor mode
+LearnMicrosoft 365
+Ask Learn
+Windows 10 end of support and Microsoft 365 Apps
+Summarize this article for me
+
+ Important
+
+Support for Windows 10 ended on October 14, 2025.
+
+Microsoft 365 is governed by the Modern Lifecycle Policy. This policy requires customers to stay current as per the servicing and system requirements for the product or service. These requirements include using Microsoft 365 Apps on a supported Windows operating system.
+
+Although apps such as Word may continue to work after Windows 10 reaches end of support, using an unsupported operating system can cause performance and reliability issues when running Microsoft 365 Apps. If your organization is using Microsoft 365 Apps on devices running Windows 10, those devices should move to Windows 11.
+
+To help maintain security while you transition to Windows 11, Microsoft will continue providing security updates for Microsoft 365 Apps on Windows 10 for three years after Windows 10 reaches end of support. These updates will be delivered through the standard update channels, ending on October 10, 2028.
+
+Devices running Microsoft 365 Apps on Windows 10 will receive feature updates and Copilot support (where eligible) until Version 2608 is released. Devices will remain on Version 2608, receiving only security updates until October 10, 2028.
+
+Devices running the OneDrive desktop app on Windows 10 22H2 will continue to receive updates through October 10, 2028. On devices running an older version of Windows 10, the OneDrive desktop app will no longer update.
+
+Customer support expectations after Windows 10 end of support
+
+Customers with a valid Microsoft 365 subscription will continue to be able to open support cases with Microsoft. However, the following limitations to customer service and support will apply to incidents involving Microsoft 365 Apps running on Windows 10 after October 14, 2025:
+
+If the issue occurs only with Microsoft 365 Apps on Windows 10, with or without Windows 10 Extended Security Updates, and doesn't occur on Windows 11, support will ask the customer to move to Windows 11.
+If the customer is unable to move to Windows 11, support will provide troubleshooting assistance only; technical workarounds might be limited or unavailable.
+Support incidents for Microsoft 365 Apps running on Windows 10, with or without Extended Security Updates, do not include the option to log a bug or request other product updates.
+Additional information
+In this article, the information also applies to subscription versions of the Project and Visio desktop apps. For example, if you have Planner and Project Plan 5 or Visio Plan 2.
+For end of support dates for Office and Microsoft 365 Apps on different Windows versions, see Office and Windows configuration support matrix.
+To check the end of support date for a Microsoft product, go to Search Product and Services Lifecycle Information.
+To discuss or learn more about Office end of support, visit Microsoft Office End of Support on the Microsoft Tech Community.
+For individuals, see Microsoft 365 Customer Service and Support.
+Additional resources
+
+Training
+
+Certification
+
+Microsoft Office Specialist: Associate (Microsoft 365 Apps) - Certifications
+
+Microsoft Office Specialist: Associate (Microsoft 365 Apps)
+
+Last updated on 07/28/2026

@@ -1,0 +1,14 @@
+# 가져온 시각: 2026-11-16T17:35:00.975Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/products/office-2019
+404 - Content not found
+https://learn.microsoft.com/en-us/lifecycle/products/office-2019
+
+404 - Page not found
+
+We couldn't find this page. You can try signing in, or choosing from the relevant search results below:
+
+Official Microsoft Power Platform documentation - Power Platform
+Microsoft Purview
+Microsoft Lifecycle Policy
+Fixed Lifecycle Policy - Microsoft Lifecycle
+Office versions and connectivity to Microsoft 365 services - Microsoft 365 Apps

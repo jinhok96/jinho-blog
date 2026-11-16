@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-15T19:06:42Z",
+ "updatedAt": "2026-11-16T18:16:26Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -17,7 +17,14 @@
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
   "best-free-pdf-tools": {
-   "firstSeenLinkAt": "2026-10-20T21:59:51Z"
+   "firstSeenLinkAt": "2026-10-20T21:59:51Z",
+   "discoveredAt": "2026-11-16T18:16:26Z",
+   "feedSeenAt": "2026-11-16T18:16:26Z",
+   "sitemapSeenAt": "2026-11-16T18:16:26Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
   },
   "check-if-image-is-ai-generated": {
    "indexedAt": "2026-10-12",
@@ -161,7 +168,9 @@
    "discoveredAt": "2026-10-19T20:30:38Z",
    "crawledAt": "2026-10-19T20:30:38Z"
   },
-  "make-pdf-searchable-free": {},
+  "make-pdf-searchable-free": {
+   "firstSeenLinkAt": "2026-11-16T04:41:31Z"
+  },
   "merge-pdf-files-free": {
    "indexedAt": "2026-10-21",
    "firstCrawlAt": "2026-10-20T21:59:51Z",
@@ -176,6 +185,7 @@
    "discoveredAt": "2026-10-19T18:39:54Z",
    "crawledAt": "2026-10-19T18:39:54Z"
   },
+  "microsoft-end-of-support-dates": {},
   "office-2021-end-of-support": {
    "firstSeenLinkAt": "2026-10-21T08:37:25Z"
   },
@@ -309,7 +319,15 @@
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
-  "upscale-image-without-losing-quality": {},
+  "upscale-image-without-losing-quality": {
+   "discoveredAt": "2026-11-16T18:16:26Z",
+   "feedSeenAt": "2026-11-16T18:16:26Z",
+   "sitemapSeenAt": "2026-11-16T18:16:26Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
+  },
   "windows-10-esu-extended": {
    "indexedAt": "2026-10-12",
    "firstCrawlAt": "2026-10-11T21:45:19Z",

@@ -1,0 +1,125 @@
+# 가져온 시각: 2026-11-16T17:42:14.439Z
+# 원본: https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online
+Deprecation of Exchange Web Services in Exchange Online | Microsoft Learn
+https://learn.microsoft.com/en-us/exchange/clients-and-mobile-in-exchange-online/deprecation-of-ews-exchange-online
+
+Table of contents
+ Exit editor mode
+Clients and mobile in Exchange Online
+Ask Learn
+Deprecation of Exchange Web Services in Exchange Online
+Summarize this article for me
+
+In 2018, we announced that Exchange Web Services (EWS) will no longer receive functionality updates. In 2023, we announced that EWS will be disabled in Exchange Online in October 2026. See blog post Exchange Online EWS, Your Time is Almost Up for the latest updates on timeline and disablement process.
+
+Expand table
+Are you here because your Exchange Online EWS applications have stopped working? Read this
+
+The Midnight Blizzard security incident in January 2024 involved EWS and elevated the urgency of the EWS deprecation effort. The scope was also widened from third party applications to include all Microsoft applications. We're working diligently to remove EWS dependencies in all Microsoft products. For example:
+
+Microsoft Outlook
+Microsoft Office
+Microsoft Teams
+Microsoft Dynamics 365
+
+You can find the latest information on Microsoft products that use EWS here: Baseline Security Mode Settings
+
+This work accelerated the need to close parity gaps between EWS and Microsoft Graph for many scenarios. Other efforts are underway in the following scenarios:
+
+Close the remaining parity gaps that affect specific scenarios for third party applications.
+Provide guidance for alternative solutions.
+
+To learn if your third party applications use EWS, see this article.
+
+Many application scenarios are already supported with direct mappings between EWS operations and Graph APIs.
+
+To move your organization to a stronger security posture, we recommend identifying your active EWS applications and starting their migration now.
+
+To simplify and accelerate your analysis and migration, we introduced the EWS Usage Reports, the EWS Analyzer tool, and a tutorial for AI assisted code analysis and refactoring.
+
+Roadmap for parity gaps
+
+The following EWS API gaps are prioritized for delivery. Estimated availability dates are targets and might change. If an EWS capability isn't listed in this roadmap table, don't plan on a corresponding Microsoft Graph or Exchange Admin API capability being available before EWS is fully disabled.
+
+Expand table
+Gap	Capability description	ETA
+Import-Export (Archive)	Export and import mailbox items in archive mailboxes in a full-fidelity format.	Q4 CY2026
+Import-Export (Public Folder)	Export and import public folder items in a full-fidelity format. This capability doesn't include public folder CRUD APIs.	Q4 CY2026
+Import-Export (Group)	Export and import items in Microsoft 365 Group mailboxes in a full-fidelity format.	Q4 CY2026
+In-Place Archive (Generic CRUD)	Access and manage mailbox items in an existing In-Place Archive. This capability doesn't create archive mailboxes.	Q4 CY2026
+Notes	Access and manage Exchange mailbox notes (IPM.StickyNote) through Microsoft Graph.	Q3 CY2026
+Exchange Admin API	Manage selected Exchange recipient and mailbox settings, including folder permissions, through Exchange Admin APIs.	Q4 CY2026
+Sovereign Cloud availability	Make Exchange workload APIs required for EWS migration available in supported sovereign clouds.	Q4 CY2026
+Report Message	Report a message as junk, phishing, or not junk, which improves mail filtering.	Q4 CY2026
+Non-draft MIME update/creation	Create or update non-draft messages by using MIME content.	Q4 CY2026
+User Configuration objects	Access and manage user configuration objects stored as folder-associated items in mailbox folders.	Q4 CY2026
+Contact Lists	Access and manage personal contact lists stored in a mailbox.	Q3 CY2026
+Additional Contact Properties	Access additional personal contact properties that are available in EWS but not Microsoft Graph.	Q3 CY2026
+Mark All Items As Read	Update the read state of all messages in a mail folder in one operation.	Q4 CY2026
+Confirmed capabilities that won't be added
+
+The following EWS capabilities won't be added to Microsoft Graph. Plan migrations without a Graph equivalent for these capabilities.
+
+Expand table
+Capability	Description
+Generic Public Folder CRUD	Generic folder and item create, read, update, and delete operations in Public Folders. Public Folder import and export is a separate capability.
+Generic Microsoft 365 Group mailbox CRUD	Generic mailbox folder and item CRUD for Microsoft 365 Group mailboxes. Use the supported Microsoft Graph APIs for group conversations, threads, and posts. Group mailbox import and export is a separate capability.
+Discovery Mailbox access	Generic mailbox, folder, and item access for legacy Discovery Mailboxes. Use Microsoft Purview eDiscovery APIs and workflows for supported discovery capabilities.
+EWS deprecation timeline
+July 2018: EWS deprecation announced.
+2023: EWS disablement date set to 10/2026.
+January 2024: Midnight Blizzard security incident.
+2025:
+Import and export of mailboxes in preview (except Microsoft 365 Groups and public folder mailboxes).
+EWS Code Analyzer released (Blog Post)
+EWS Usage Reports released
+EWS Usage Reporting tool released
+AI Assisted EWS Migration Tutorial released
+Administration API preview
+Allow admins to manually disable EWS at the organization and user levels.
+Upcoming:
+Fill parity gaps to support migration for Microsoft and third party applications.
+Remove EWS dependencies from Microsoft applications.
+Outlook mail Connector for PowerBI desktop
+Changes to the Exchange Online connector in Excel Power Query
+October 2026: EWS starts to be disabled globally for all organizations. Full details of the process can be found here.
+April 2027: EWS is fully disabled.
+Call To Action
+
+Don't wait for all parity gaps to be closed. You can be proactive by doing the following steps:
+
+Investigate the EWS footprint of all internal and third party applications in your organization. Start with EWS Usage Reports (direct link).
+Work with your security and executive teams to prioritize EWS deprecation for internal applications.
+Identify applications and components you can migrate now and start the implementation. Use the EWS Analyzer tool and AI assistance to analyze and refactor EWS code or reimplement in low-code approach with Power Platform or as a Copilot Agent.
+Work with your vendors to prioritize their migration from EWS.
+Resources
+Exchange Online EWS, Your Time is Almost Up
+Midnight Blizzard
+Exchange Blog - Migration Series
+Microsoft 365 Developer Blog
+EWS to Graph API Mappings
+Graph Explorer
+How to disable EWS at the organization and user level
+EWS Usage Reports released
+EWS Usage Reporting tool released
+EWS Migration Tools
+AI Assisted EWS Migration Tutorial
+Understand HTTP 403 responses in Exchange Online
+Note: The author created this article with assistance from AI. Learn more
+Additional resources
+
+Training
+
+Learning path
+
+Explore Microsoft Graph scenarios for ASP.NET Core development - Training
+
+This learning path includes hands-on exercises that will show you how to perform common tasks, such as showing a user's emails, accessing calendar events, and downloading and uploading files, in an ASP.NET Core app using Microsoft Graph APIs.
+
+Certification
+
+Microsoft 365 Certified: Endpoint Administrator Associate - Certifications
+
+Plan and execute an endpoint deployment strategy, using essential elements of modern management, co-management approaches, and Microsoft Intune integration.
+
+Last updated on 09/04/2026

@@ -301,6 +301,16 @@
    "refAvg": 34.45,
    "refMax": 100
   },
+  "microsoft end of support": {
+   "avg": 0.02,
+   "max": 1.0,
+   "measuredAt": "2026-11-16",
+   "points": 93,
+   "raw": 0.02,
+   "recent7": 0.0,
+   "refAvg": 33.65,
+   "refMax": 100
+  },
   "office 2021 end of support": {
    "avg": 0.0,
    "max": 0.0,

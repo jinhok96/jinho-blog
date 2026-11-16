@@ -1,0 +1,115 @@
+# 가져온 시각: 2026-11-16T17:39:49.637Z
+# 원본: https://support.microsoft.com/en-us/help/5136493
+November 13, 2026—KB5136493 (OS Builds 19045.7850 and 19044.7850) Out-of-band | Microsoft Support
+https://support.microsoft.com/en-us/servicing/os/windows-10/2026/11/kb5136493-windows-10-21h2-22h2-update
+
+November 13, 2026—KB5136493 (OS Builds 19045.7850 and 19044.7850) Out-of-band
+Applies To
+Windows 10 ESU Windows 10 Enterprise LTSC 2021
+
+Important
+
+Free support for Windows 10 Enterprise LTSC 2021 ends on January 12, 2027. To learn about continuing support, see Plan for Windows 10 Enterprise LTSC 2021 end of support.
+
+To learn about continuing support for Windows 10, see Extended Security Updates (ESU) Licensing Preparation Package for Windows 10.
+
+Summary
+
+This non-security out-of-band (OOB) update for Windows 10, version 21H2 and Windows 10, version 22H2 (KB5136493) is cumulative. It includes updates from previous releases, along with additional non-security improvements.
+
+Tip
+
+To learn more about Windows out-of-band (OOB) updates, including the differences between security and non-security updates and guidance for deploying them, see Windows out-of-band (OOB) updates.
+
+Windows 10, version 22H2
+Windows 10, version 21H2
+
+Applies to: Windows 10 ESU
+
+Important
+
+Use EKB KB5015684 to update to Windows 10, version 22H2.
+
+This update includes fixes and quality improvements that are part of the following update:
+
+November 10, 2026—KB5131096 (OS Builds 19045.7846 and 19044.7846)
+
+The following is a summary of the issues that this update addresses when you install this update. The bold text within the brackets indicates the item or area of the change we are documenting.
+
+[Licensing and Activation] Fixed: An issue where certain Windows licensing and activation operations using the Software Licensing Management Tool (SLMGR) might fail with error 0x80041008 (Invalid parameter). This issue primarily affected organizations using slmgr.vbs commands or automated processes to configure Key Management Service (KMS) activation, install product keys, or manage Windows licensing. Devices that were already activated remained activated, and devices with existing KMS configurations that did not require additional slmgr.vbs commands were not affected.
+
+Note If you installed earlier updates, only the new updates contained in this package will be downloaded and installed on your device.
+
+Known issues in this update
+
+We are currently not aware of any issues with this update.
+
+Windows 10 servicing stack update (KB5132689) - version 19041.7838
+
+Microsoft now combines the latest servicing stack update (SSU) for your operating system with the latest cumulative update (LCU). SSUs improves the reliability of the update process and includes fixes to the servicing stack, the component that installs Windows updates.
+
+Note: This servicing stack update (SSU) includes enhanced logic to verify whether a device is hosted on Azure, leveraging an updated certificate chain for validation. To ensure that the device can access the required certificate update domains to successfully download and install certificate updates, see Certificate downloads and revocation lists and Azure Certificate Authority details. To learn more about SSUs, see Servicing stack updates.
+
+How to get this update
+Before you install this update
+
+Servicing Stack Update (SSU): You must have the latest servicing stack update (SSU) installed. Not installing the latest SSU before applying Windows updates might result in the Windows update not being offered until the latest SSU is installed.
+
+For Windows Update: You must have the Windows update released on or after July 8, 2025 (such as KB5062554) installed before installing this update.
+
+For Windows Server Update Services (WSUS) deployment or when installing the standalone package from Microsoft Update Catalog: You must have the Windows update released on or after July 8, 2025 (such as KB5062554) installed before installing this update.
+
+For offline OS image servicing: If your image does not have the July 25, 2023 (KB5028244) or later LCU, you must install the special standalone October 13, 2023 SSU (KB5031539) before installing this update.
+
+Deployment
+
+If you deploy dynamic updates such as this update to an existing Windows image, ensure the boot.stl file is included as part of the installation media. Failure to include the file might prevent devices from successfully starting from the installation media and can result in error code 0xc0430001.
+
+Note
+
+The boot.stl file is used during Secure Boot validation and must match the Windows version and architecture of the image you are updating.
+
+To ensure the boot.stl file is included as part of the installation media, do one of the following:
+
+Use the Update WinPE script to update an existing Windows image. (Recommended)
+Manually copy the boot.stl file from the devices Windows\Boot\EFI folder to the corresponding folder on your installation media before deploying the update.
+
+For information about how to apply Dynamic Update packages to existing Windows images, see Update Windows installation media with Dynamic Update.
+
+Get and install this update
+
+To get and install this update, use one of the following Windows and Microsoft release channels.
+
+Windows Update
+Business
+Microsoft Update Catalog
+Windows Server Update Services
+Available	Next Step
+	This update is available from the Microsoft Update Catalog.
+File information
+
+A list of the files that are included in this update are provided in a CSV (Comma delimited) (*.csv) file. The file can be opened in a text editor such as Notepad or in Microsoft Excel.
+
+Note The English (United States) version of this software update might contain files for additional languages.
+
+ Download the file information for out-of-band update KB5136493.
+
+ Download the file information for update SSU (KB5132689) - version 19041.7838.
+
+References
+
+For information about Windows update terminology, see the article about the types of Windows updates and the monthly quality update types.
+
+For an overview of Windows 10, version 21H2 or Windows 10, version 22H2, see its update history page.
+
+Related topics
+
+Microsoft Store application updates
+
+Windows updates do not install Microsoft Store application updates. If you are an enterprise user, see Microsoft Store apps - Configuration Manager. If you are a consumer user, see Get updates for apps and games in Microsoft Store.
+
+Secure Boot certificate updates remain in progress as Microsoft transitions devices from certificates that began expiring in 2026 to newer certificates. Devices that have not yet received the newer certificates can continue to start and receive standard Windows updates. Microsoft will continue delivering the newer Secure Boot certificates to eligible devices through Windows Update.
+
+Change log
+Change date	Change description
+November 13, 2026	The original release date of this update.

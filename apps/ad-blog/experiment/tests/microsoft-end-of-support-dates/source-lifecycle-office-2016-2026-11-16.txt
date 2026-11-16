@@ -1,0 +1,26 @@
+# 가져온 시각: 2026-11-16T17:35:10.279Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-2016
+Microsoft Office 2016 - Microsoft Lifecycle | Microsoft Learn
+https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-2016
+
+Microsoft Office 2016
+
+Microsoft Office 2016 follows the Fixed Lifecycle Policy.
+
+This applies to the following editions: Home and Business, Home and Student, Personal, Professional, Professional Plus, Standard
+
+Support dates are shown in the Pacific Time Zone (PT) - Redmond, WA, USA.
+
+Support Dates
+Expand table
+Listing	Start Date	Mainstream End Date	Extended End Date
+Microsoft Office 2016	Sep 22, 2015	Oct 13, 2020	Oct 14, 2025
+Links
+Migration Guidance
+Editions
+Home and Business
+Home and Student
+Personal
+Professional
+Professional Plus
+Standard

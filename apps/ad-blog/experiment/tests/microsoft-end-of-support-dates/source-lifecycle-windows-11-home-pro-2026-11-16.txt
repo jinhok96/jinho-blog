@@ -1,0 +1,48 @@
+# 가져온 시각: 2026-11-16T17:34:26.214Z
+# 원본: https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro
+Windows 11 Home and Pro - Microsoft Lifecycle | Microsoft Learn
+https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro
+
+Windows 11 Home and Pro
+
+Windows 11 Home and Pro follows the Modern Lifecycle Policy.
+
+This applies to the following editions: Home, Pro, Pro Education, Pro for Workstations, SE
+
+ Note
+
+Windows 11, version 26H2 is the last version that will support devices with Snapdragon 850 processors.
+
+ Note
+
+Windows 11, version 24H2 was the last supported version for Windows 11 SE edition. Please see here for more details.
+
+Support dates are shown in the Pacific Time Zone (PT) - Redmond, WA, USA.
+
+Support Dates
+Expand table
+Listing	Start Date	Retirement Date
+Windows 11 Home and Pro	Oct 4, 2021	In Support
+Releases
+Expand table
+Version	Start Date	End Date
+Version 26H2	Sep 29, 2026	Oct 9, 2028
+Version 26H1	Feb 10, 2026	Mar 14, 2028
+Version 25H2	Sep 30, 2025	Oct 12, 2027
+Version 24H2	Oct 1, 2024	Oct 13, 2026
+Version 23H2	Oct 31, 2023	Nov 11, 2025
+Version 22H2	Sep 20, 2022	Oct 8, 2024
+Version 21H2	Oct 4, 2021	Oct 10, 2023
+Links
+Windows 11 SE Overview
+Windows as a Service (WaaS)
+Lifecycle FAQ - Windows
+Additional Windows resources
+Windows 11 Enterprise and Education
+Windows 11 IoT Enterprise
+Editions
+Home
+Pro
+Pro Education
+Pro for Workstations
+SE

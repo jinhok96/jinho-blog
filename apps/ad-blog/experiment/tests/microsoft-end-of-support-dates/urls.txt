@@ -1,0 +1,11 @@
+eos-2025 https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2025
+eos-2026 https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2026
+eos-2027 https://learn.microsoft.com/en-us/lifecycle/end-of-support/end-of-support-2027
+lifecycle-windows-11-home-pro https://learn.microsoft.com/en-us/lifecycle/products/windows-11-home-and-pro
+lifecycle-windows-10-home-pro https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro
+lifecycle-office-2024 https://learn.microsoft.com/en-us/lifecycle/products/office-2024
+lifecycle-office-2021 https://learn.microsoft.com/en-us/lifecycle/products/office-2021
+lifecycle-office-2019 https://learn.microsoft.com/en-us/lifecycle/products/office-2019
+lifecycle-office-2016 https://learn.microsoft.com/en-us/lifecycle/products/microsoft-office-2016
+windows11-release-information https://learn.microsoft.com/en-us/windows/release-health/windows11-release-information
+windows-esu-page https://www.microsoft.com/en-us/windows/extended-security-updates

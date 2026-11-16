@@ -2,6 +2,57 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-17 · 세션 99 (정기 실행, 개선 세션): `windows-microsoft` 허브 `microsoft-end-of-support-dates` 발행 + 콘텐츠 정리 8번 남은 제목 2편(8번 완료)
+
+세션 시각: 2026-11-17 02:15 KST(화) → 02시 실행(00:00~07:59 범위)·화요일이라 개선 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-47imqc`를 `origin/main`(0ee46f6)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 허브(새 글 1편)를 쓰기로 정해 `hero_image.py --setup`을 세션 시작 직후 백그라운드로 실행(완료, 빌드 포함).
+
+**지표 (`gsc_report.py`, 2026-10-19 ~ 11-16, 세션 98 이후 바뀐 값만)**
+
+- 노출 1,225 → **1,234**, 클릭 17 → 16(28일 창 이동), CTR 1.3%, 평균 순위 25.5 그대로 (글별: `spotify-family-qr-code-verification` 279·18.6위 / `turn-off-ai-in-chrome` 186·31.4위·클릭 2 / `image-to-text-offline-free` 127·17.0위·클릭 3 / `free-offline-ai-tools` 105·15.0위·클릭 4 / `windows-11-24h2-end-of-support` 87·60.7위 / `iphone-duo-sold-out` 60·7.8위·클릭 2 / `transcribe-audio-offline-free` 58·51.0위·클릭 1 / `windows-10-esu-extended` 19·9.8위·클릭 2. 지운 URL `free-offline-text-to-speech` 52·11.0위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 그대로 · 11-09~15 2 (미확정 포함, 노출 191) · 11-16~22 0 (노출 7)
+- **sitemap 재다운로드**: `rss.xml` 11-11 12:22 → **11-16 11:49 UTC**, `sitemap.xml` 11-11 09:28 → **11-16 07:38 UTC** (주간 점검이 예상한 약 5일 간격 그대로)
+- URL 검사: 색인 17/57 그대로, 이 회차 `Discovered` 17 → **20** · `URL is unknown` 22 → 20 (회차마다 흔들림은 그대로). **새 크롤링 1건**: 색인된 `image-to-text-offline-free` 11-16 04:41 UTC (V5 대상 글, 10-30 뒤 처음). `link_seen.py`: 미색인 40편 중 Google이 본 링크 21 → **22편**(이 크롤링의 관련 글·본문 링크로 `siri-history-on-iphone`·`split-pdf-free`·`turn-off-gemini-on-android-phone`이 새 크롤링 판 기준)
+- 성과 검증: 판단 시점이 지난 행 없음 (V3 11-18 → `--compare`는 11-21 무렵, V4·V5 11-22, V6 11-26, V8 12-03). 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 1건 그대로 (Chrome → 허브 V3 보류). 허브 발행 뒤에도 새 문제 없음, 클러스터 표 `windows-microsoft` '허브 필요' 해소
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 37일/92일(2027-01-11) · 색인율 30%(17/57, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4) → 미충족
+- 주간 SEO 점검(11-15) 우선순위: **1 `windows-microsoft` 허브 → 이번 세션 처리** · 2 판정 대기 글 후속(V2 → 세션 98 판단 불가로 닫음 → **콘텐츠 정리 8번 제목 이번 세션 처리**, V3·V5 뒤 작업은 판정 뒤) · 3 미발견 글 실제 갱신(다음 개선 세션)
+
+**고른 작업**: 0번 콘텐츠 정리 — 목록에서 지금 처리할 수 있는 항목은 8번 남은 2편(제목만, 1건으로 셈. 6번은 검토 항목, 7번은 12월 일정 뒤). **3번 허브** — 주간 점검 우선순위 1 `windows-microsoft`(새 글 1편으로 셈). 1(색인)은 새 크롤링이 이미 색인된 글 1건이라 추가 링크 없음(허브 역링크 4곳으로 대신), 2는 V3 보류 1건, 4는 노출 100회 이상 글이 V 판정 중이거나(spotify V4·Chrome V3·image-to-text V5) 이번에 제목을 바꾼 글(`free-offline-ai-tools`)
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — On-Page 체크리스트로 허브·바꾼 제목 점검 / `copy-editing` — AI-Tell Check(대조 구문·콜론 드러내기·em dash) 허브 본문 점검. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 3 허브 작성 | **`microsoft-end-of-support-dates`** (새 글, `software`, `hub: true`) | 제목 `Microsoft End of Support Dates for Windows and Office`(53자), 설명 159자. 주 검색어 `microsoft end of support`(자동완성 Google·Bing·YouTube 3곳, `dates`·`2026` 변형은 Google·Bing, Trends 0.02 — 기준 `remove background` 평균 33.65). WebSearch 상위: 대학 IT 지식 베이스(기업 제품 목록)·TechRepublic 등 뉴스·Microsoft 공식 목록·제3자 체크리스트 → 빈틈은 **가정용 판만 추린 목록**과 **마감 뒤 실제로 업데이트가 끊겼는지**. 구성: 첫 문단(지금 업데이트 받는 판·끝난 판) → 요약 표 12행(판·종료일·11-16 상태·할 일, 상시 글 링크) + 타임라인 그림 → **11-10 보안 업데이트에 실린 판**(KB5132061 Applies To: 26H2·25H2 all editions + 24H2 Enterprise/Education만 → **24H2 Home·Pro 빠짐**, Windows 10 ESU KB5131096 + 11-13 비보안 OOB KB5136493, Office 보안 릴리스 노트: **Office 2021 Retail이 종료 뒤에도 Office 2024와 같은 빌드로 실림**, Office 2019·2016 소매판 없음) → 버전 확인(Settings > System > About, Office Account > Product Information) → Windows 11(24개월, 26H2 활성화 패키지 KB5121794 Home·Pro 24H2·25H2 'single restart', 26H1 새 PC 전용 2028-03-14, **Windows 11 SE는 24H2가 마지막**, 오른쪽 클릭 메뉴 KB5127936은 25H2·26H2만) → Windows 10 ESU(무료 설정 동기화·Rewards 1,000점·$30, 10대, 2027-10-12 자동 연장, EEA 차이) → Office 2016·2019·2021(대체: Office 2024 2029-10-09·Microsoft 365·무료 웹) → **Microsoft 365 앱 on Windows 10 보안 업데이트 2028-10-10, 기능은 Version 2608까지(9-08 보안 노트에 이미 Current Channel)·OneDrive 22H2 같은 날** → **Publisher**(구독자 10-01 무렵 제거, 일회성 구매판 10-13 지원 종료, File > Save as > PDF → Word로 열어 편집. PowerShell 일괄 변환 안내는 비개발자 규칙으로 뺌) → 그 밖의 날짜(Microsoft 365 Family 공유 2TB 2027-05-02 이후 갱신, EWS 2026-10 시작·2027-04 완전 비활성화) → 판별 할 일 그림 + 상황별 추천 → 기억할 날짜(12-08 다음 보안 업데이트 ~ 2029-10-09) → How we checked(**Microsoft 문서끼리 다른 점**: 26H2 Home·Pro 종료일 수명 주기 페이지 Oct 9, 2028(월) vs release information 2028-10-10(둘째 화요일) → 10-10 사용, "Ending Support in 2027" 목록에 Windows 11 Home·Pro 25H2·소비자 ESU 없음, Lifecycle `office-2019` 주소 404). 1차 출처 24쪽 Chromium 재확인(`tests/microsoft-end-of-support-dates/source-*-2026-11-16.txt`, `render-main.cjs`). 대표 이미지(AI) + 본문 그림 3장(`charts.py`: 판별 종료일·남은 개월 타임라인, 11-10 업데이트 실린 판 표, 판별 할 일 표). 링크: 허브 → 상시 글 3편 + 칼럼 3편 + `turn-off-ai-in-windows-11`, 역링크 4곳(**색인된** `windows-10-esu-extended`·`windows-11-24h2-end-of-support`·`microsoft-365-family-storage-2tb` + `office-2021-end-of-support`, 문단 링크 4개 규칙대로 2곳은 새 문단 1문장, `updatedAt` 그대로). clusters.md 허브 칸, backlog 허브 행 '발행' | - (새 글. 노하우 3 허브 적용 사례) |
+| 2 | 0 콘텐츠 정리 8번 (제목) | `free-offline-ai-tools`·`transcribe-audio-offline-free` | 바꾸기 전 28일(10-20~11-16) 검색어 아래. `Best Free Offline AI Tools for Your PC (2026, Tested)` → **`Free Offline AI Tools That Run on a PC Without a GPU`**(52자, 첫 문단의 '그래픽 카드 없는 4코어 PC', 'Best Free'로 시작하는 허브 2편과 다르게) · `How to Transcribe Audio Offline for Free (8 Models Tested)` → **`How to Transcribe Audio Offline With a Free Desktop App`**(55자, 첫 문단의 'Vibe·Buzz 데스크톱 앱', `How to … for Free` 끝맺음 2편과 다르게). `title`만, 설명·본문·`updatedAt` 그대로 → **8번 전체 완료** | - (콘텐츠 정리, 지표를 노린 변경 아님) |
+
+- 바꾸기 전 28일 검색어 (Search Console API 글별 필터, 2026-10-20 ~ 11-16)
+  - `free-offline-ai-tools` (글 노출 105·클릭 4·15.0위, 익명 아닌 검색어 3개): `offline ai assistant for pc free download` 12회·10.0위, `free offline llm` 3회·77.7위, `best offline ai` 2회·84.0위
+  - `transcribe-audio-offline-free` (글 노출 58·클릭 1·51.0위, 검색어 13개 모두 노출 1~3·72~100위): `offline speech to text` 3회·87.7위, `speech to text offline` 2회·72.0위, `transcribe audio without api key` 2회·87.0위, `audio to text offline`·`offline asr`·`offline audio transcription`·`offline voice to text` 등 각 1회
+- 빌드 HTML 확인: `microsoft-end-of-support-dates` title 65자(접미사 포함)·description 158자·BlogPosting(author ToolProof, 발행 2026-11-16T18:15Z)/BreadcrumbList JSON-LD, h1 1·h2 12(+관련 글), `<pre>`·`<code>` 0, img 7(대표 + 본문 3 + 관련 글 카드 3), **본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 그 그림에서 만들어짐**(`public/_static/mdx/posts/og/` 직접 열어 확인), `rss.xml`에 포함, 홈 'Start here' 허브 고정 확인. 대표 이미지: Z-Image-Turbo 시드 360383705, 39.4분(연한 복숭아 배경, 선반 위 모니터·노트북·문서 폴더 + 밝음 → 회색 방패 3개 + 모래시계, `hero-image.md`). lint·type-check·test(38파일 309개)·build 통과
+- 점검: 저장소 `seo-audit` On-Page(제목 53자·주 검색어 앞·H1 일치, 설명 159자, 첫 100단어에 'end of support'가 없어 둘째 문장을 "The end of support date has already passed for …"로, 콜론으로 이어 붙인 소제목 3개를 문장형으로, alt 4장 설명형·WebP, 앵커 설명형·문단당 4개 이하) + `copy-editing` AI-Tell Check(콜론 드러내기 2곳 고침, em dash·백틱 0). `extlink_check.py --slug`: 고유 URL 21개 중 이동 5 — KB 짧은 주소 4개는 규칙대로 두고 Publisher 문서(`/office/…-ee6302a2…` → `/publisher/…`)는 새 주소로 교체. `link_audit.py`: 새 글 문제 없음
+
+**알게 된 것**
+
+- **Microsoft 문서끼리 날짜가 하루 다름**: Windows 11 26H2 Home·Pro 종료일이 수명 주기 제품 페이지는 Oct 9, 2028(월요일), Windows 11 release information은 2028-10-10(둘째 화요일). 월간 업데이트가 나오는 날이 둘째 화요일이라 release information 값을 쓰고 차이를 본문에 밝힘. 24H2 글(11-11)도 2028-10-10이라 일치
+- **연도별 'Ending Support in YYYY' 목록은 가정용 판을 빠뜨림**: 2027 목록에 Enterprise·Education 24H2(2027-10-12)만 있고 Windows 11 Home·Pro 25H2·소비자 ESU(같은 날)는 없음 → 허브·종료 글은 연도 목록이 아니라 판별 제품 페이지·release information·ESU 페이지로 확인 (writing-guide 정확성에 추가)
+- **종료 다음 달 업데이트 문서의 Applies To가 가장 확실한 증거**: KB5132061은 '24H2 Enterprise and Education'만 적어 Home·Pro가 빠진 것을 바로 보여 줌. Office 2021은 반대로 종료 뒤에도 실림 → 허브의 '11월 업데이트' 절은 매달 둘째 화요일 뒤 개선 세션이 갱신할 반복 일정 (12-08)
+- Publisher 제거는 후속 검색이 있음: `open pub file without publisher`(Google·Bing 10개)·`convert publisher file to pdf`(Bing·YouTube) → LibreOffice Draw로 직접 시험할 수 있는 상시 글 후보로 backlog에 올림
+- 대표 이미지 생성 중(sd-cli 약 10 GB)에는 pnpm build를 미루고 문서·그래픽 작업을 먼저 함 (writing-guide 메모리 규칙)
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 37일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude(11-18 수 일반 세션): 후보 backlog `windows-microsoft` **Publisher 없이 .pub 열기·PDF 변환**(LibreOffice Draw 직접 시험 가능, 시험 파일 라이선스 확인)·`dia browser ai privacy`(문서 기반)·`windows 11 optional updates`(문서 기반)·backlog 15번 오프라인 TTS. 우선순위 1·2 클러스터 공백 후보를 먼저 보고, 영향 뉴스 칼럼은 11-16~22 후보를 discover로
+- Claude(다음 개선 세션 11-19 목): **`upscale-image-without-losing-quality`에 Upscayl 데스크톱 앱 측정 절**(backlog, 외부 앱 실행 허용 확인됨) + 주간 점검 우선순위 3 미발견 글 실제 갱신. V3 `--compare`(11-21 무렵) 뒤 `turn-off-ai-in-chrome` AI Mode 절 + Chrome 158 재확인
+- Claude: **12-08 월간 보안 업데이트 뒤** 허브 `microsoft-end-of-support-dates` '11월 업데이트' 절·표를 12월 기준으로(Office 2021 계속 실리는지 = `office-2021-end-of-support` 후속과 같은 세션), `updatedAt`
+- Claude: V3~V6 판정 때 전 기간(변경 전 28일)에 글이 며칠 있었는지 확인해 구조적 판단 불가 여부를 먼저 봄. V5 판정 뒤 `image-to-text-offline-free` Microsoft 캡처 도구 링크 교체
+- Claude: 콘텐츠 정리 6번 검토(`iphone-duo-*` 2편), 7번 12월 일정 뒤
+- Claude: **H6 첫 판정 — 11-21 무렵**, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-24 예정) 재확인
+- Claude: 발행 58편 (허브 5개), 상시 글 전환 3편(누적)
+- 대시보드: `stats` 13개 + `history` 13개 batch 성공(회차 2026-11-16T18:16:26Z, DB 문서 648개), 결과 버전이 `versions-after.json`과 같아 `dashboard/versions.json`으로 복사, `first-seen.json`과 함께 이 PR에 커밋. 이 회차 `summary.adsense` 운영 37일·색인율 0.293(17/58, 새 허브가 저장소 기준으로 먼저 잡힘)·클릭 연속 증가 0·11-09~15 주 노출 191(미확정). 페이지는 바꾸지 않음, 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-16 · 결정: 외부 앱 받기·실행은 항상 허용 (사용자 재확인)
 
 - 사용자(대화형, 세션 98 뒤): "이거 항상 모두허용. 클라우드 환경이라 걍 허락없이 써도될듯" — 세션 98에서 Upscayl AppImage 받기·풀기 명령이 자동 권한 검사에 거부된 것에 대한 답

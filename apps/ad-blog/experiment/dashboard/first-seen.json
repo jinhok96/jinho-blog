@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-16T18:16:26Z",
+ "updatedAt": "2026-11-17T18:47:00Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -71,6 +71,7 @@
     "/sitemap.xml"
    ]
   },
+  "convert-publisher-file-to-pdf": {},
   "convert-webp-to-jpg-free": {},
   "customize-right-click-menu-windows-11": {
    "firstSeenLinkAt": "2026-11-01T22:38:55Z",
@@ -169,7 +170,14 @@
    "crawledAt": "2026-10-19T20:30:38Z"
   },
   "make-pdf-searchable-free": {
-   "firstSeenLinkAt": "2026-11-16T04:41:31Z"
+   "firstSeenLinkAt": "2026-11-16T04:41:31Z",
+   "discoveredAt": "2026-11-17T18:47:00Z",
+   "feedSeenAt": "2026-11-17T18:47:00Z",
+   "sitemapSeenAt": "2026-11-17T18:47:00Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
   },
   "merge-pdf-files-free": {
    "indexedAt": "2026-10-21",
@@ -187,7 +195,14 @@
   },
   "microsoft-end-of-support-dates": {},
   "office-2021-end-of-support": {
-   "firstSeenLinkAt": "2026-10-21T08:37:25Z"
+   "firstSeenLinkAt": "2026-10-21T08:37:25Z",
+   "discoveredAt": "2026-11-17T18:47:00Z",
+   "feedSeenAt": "2026-11-17T18:47:00Z",
+   "sitemapSeenAt": "2026-11-17T18:47:00Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
   },
   "pdf-to-jpg-free": {
    "firstSeenLinkAt": "2026-10-21T08:37:25Z"

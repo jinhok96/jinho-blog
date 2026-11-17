@@ -2,6 +2,18 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-17 · 결정: 미색인 허브 4편 색인 요청 (사용자, 원인 진단 실험 V9)
+
+- 사용자 질문(대화형, 세션 99 뒤): "색인이 아직도 갱신 안 되는 게 이해가 안 돼. 진짜 이유가 뭐야?" → 답한 분석
+  - **크롤링이 멈춘 것이지 색인에서 떨어진 것이 아님**: 10-11~10-19 발행 22편 중 17편이 발행 0~4일 안에 크롤링되고 크롤링 1~2일 안에 색인(크롤링된 글 17/17 색인, `Crawled - currently not indexed` 0편). 10-20 이후 발행 36편은 크롤링 0편. 10-21 뒤 27일 동안 Google이 가져간 것은 이미 색인된 페이지 재방문(홈 3회·글 2편)과 sitemap·RSS(약 5일 간격)뿐 (`dashboard/first-seen.json` 글별 `firstCrawlAt`·`indexedAt`, `gsc_report.py`)
+  - **사이트 쪽 차단 요인 없음**: Googlebot 스마트폰 UA로 robots.txt·홈·미색인 글·sitemap 모두 200(0.3~0.5초), `index, follow`, 자기 참조 canonical, `x-robots-tag` 없음. 10-17~10-23 코드 변경은 리디렉트·AdSense·Next.js 16.4.2 업데이트뿐
+  - 해석: 새 도메인 첫 크롤링 뒤 Google이 정한 **크롤링 수요가 거의 0**(외부 링크 0, 28일 검색 클릭 16). 같은 시기(10-17~10-24)에 하루 3~4편 발행·글 8편 삭제·같은 제목 틀 반복 등 대량 생산 신호가 몰림(11-01 AdSense 거절 사유와 같은 신호). 11-05부터 색인 요청을 멈춰 Google 자발적 크롤링에만 기대는 상태
+  - 확인 못 한 것: Search Console 크롤링 통계(호스트 상태·일별 요청 수)는 API로 볼 수 없음 (세션 52~56 요청 결과 기록 없음)
+- 사용자가 미색인 허브 목록을 물어 답함(허브 5편 중 색인은 `free-offline-ai-tools`뿐) → **사용자가 허브 4편 색인 생성 요청**: `turn-off-ai-features`·`best-free-pdf-tools`·`free-image-converter-photo-tools`·`microsoft-end-of-support-dates`
+- 요청 직후 기준값(11-17 03:17 UTC, URL 검사 API): `best-free-pdf-tools` Discovered(rss.xml·sitemap.xml), 나머지 3편 URL is unknown, 4편 모두 크롤링 기록 없음
+- 반영: README 결정사항 '색인 요청'에 예외 기록(그 밖의 글은 판정 뒤 사용자가 다시 정함), traffic-playbook **V9**(판단 시점 11-24, 판정 규칙 3가지), user-todos 끝난 일
+- 다음: 개선 세션(11-19 목·11-21 토·11-22 일 주간 점검)이 지표 단계에서 4편의 `coverageState`·`lastCrawlTime`을 따로 적고, 11-24 무렵 V9 판정 → 결과에 따라 사용자에게 다음 결정(색인 요청 확대 / 품질 대응 / 크롤링 통계 확인)을 올림
+
 ## 2026-11-17 · 세션 99 (정기 실행, 개선 세션): `windows-microsoft` 허브 `microsoft-end-of-support-dates` 발행 + 콘텐츠 정리 8번 남은 제목 2편(8번 완료)
 
 세션 시각: 2026-11-17 02:15 KST(화) → 02시 실행(00:00~07:59 범위)·화요일이라 개선 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-47imqc`를 `origin/main`(0ee46f6)에서 다시 시작, `git fetch --unshallow` 뒤 `link_seen.py` 실행. 허브(새 글 1편)를 쓰기로 정해 `hero_image.py --setup`을 세션 시작 직후 백그라운드로 실행(완료, 빌드 포함).

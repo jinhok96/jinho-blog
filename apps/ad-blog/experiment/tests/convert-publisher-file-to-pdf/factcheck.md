@@ -27,7 +27,7 @@
 
 | 파일 | 출처·라이선스 | 내용 | SHA-256 |
 | --- | --- | --- | --- |
-| `samples/SampleBrochure.pub` | Apache POI 저장소 `test-data/publisher/SampleBrochure.pub` (Apache License 2.0, `source-apache-poi-license.txt`) | 가로 A4 2쪽 미술관 브로슈어, 글상자·그림 | `ffed034a…6c29c87` |
+| `samples/SampleBrochure.pub` | Apache POI 저장소 `test-data/publisher/SampleBrochure.pub` (Apache License 2.0, 저장소 `legal/LICENSE` → `source-apache-poi-license.txt`) | 가로 A4 2쪽 미술관 브로슈어, 글상자·그림 | `ffed034a…6c29c87` |
 | `samples/SampleNewsletter.pub` | Apache POI `test-data/publisher/SampleNewsletter.pub` (같음) | 세로 A4 4쪽 학급 소식지, 기사 하나가 3단 연결 글상자로 이어짐 | `6a825ba2…62b644dfcf` |
 
 - 정답 텍스트: `scripts/pub_text.py`가 .pub 안 Quill CONTENTS의 TEXT 블록을 꺼냄(Apache POI HPBF 구조) → `reference/*.txt` (브로슈어 640단어·뉴스레터 1,596단어, 채점 단위 660·1,614)

@@ -16,7 +16,8 @@
 3단계 (마무리):
     python3 -I apps/ad-blog/experiment/tools/daily_metrics.py --finalize --out {같은 폴더}
     - versions-after.json → experiment/dashboard/versions.json
-    - experiment/dashboard/runs.jsonl에 이번 회차 요약 1줄 추가 (회차 시각·28일 클릭·노출·순위·색인·AdSense 조건)
+    - experiment/dashboard/runs.jsonl에 이번 회차 요약 1줄 추가 (회차 시각·28일 클릭·노출·순위·색인·AdSense 조건 + 다음 회차 비교용 snapshot:
+      글별 URL 검사 상태·주별 클릭·sitemap 다운로드·목록 페이지 크롤링)
     - 커밋할 파일 목록과 커밋 메시지를 출력 (세션이 그대로 커밋 → PR → CI 통과 후 머지)
 """
 
@@ -111,6 +112,24 @@ def generate(out: Path, no_inspect: bool) -> None:
     print(f'  3. python3 -I apps/ad-blog/experiment/tools/daily_metrics.py --finalize --out {out}')
 
 
+def snapshot(out: Path, s: dict) -> dict:
+    """이번 회차 비교용 요약: 글별 URL 검사 {verdict, coverage, lastCrawl}, 주별 클릭·노출, sitemap 마지막 다운로드, 목록 페이지 크롤링"""
+    posts_path = out / 'stats/posts.json'
+    rows = json.loads(posts_path.read_text(encoding='utf-8')).get('rows', []) if posts_path.exists() else []
+    index = {}
+    for r in sorted(rows, key=lambda r: r['slug']):
+        idx = r.get('index') or {}
+        if idx.get('coverage'):
+            index[r['slug']] = {k: idx.get(k) for k in ('verdict', 'coverage', 'lastCrawl')}
+    crawl = s.get('crawl') or {}
+    return {
+        'posts': index or None,
+        'weeks': (s.get('adsense') or {}).get('weeks'),
+        'sitemaps': {sm.get('path'): sm.get('lastDownloaded') for sm in s.get('sitemaps') or []} or None,
+        'listPages': crawl.get('listPages'),
+    }
+
+
 def finalize(out: Path) -> None:
     after = out / 'versions-after.json'
     summary_path = out / 'stats/summary.json'
@@ -137,6 +156,8 @@ def finalize(out: Path) -> None:
         'adsenseAllMet': a.get('allMet'),
         'latestCrawl': (crawl.get('latest') or {}).get('lastCrawl') if isinstance(crawl.get('latest'), dict) else crawl.get('latest'),
         'unindexedSeen': crawl.get('unindexedSeen'),
+        # 다음 회차 session_report.py가 '이전 회차 대비'(색인 상태 변화·새 크롤링·주별 클릭·sitemap)를 계산하는 데 씀
+        'snapshot': snapshot(out, s),
     }
     existing = RUNS.read_text(encoding='utf-8').splitlines() if RUNS.exists() else []
     if not any(json.loads(line).get('runAt') == run_at for line in existing if line.strip()):

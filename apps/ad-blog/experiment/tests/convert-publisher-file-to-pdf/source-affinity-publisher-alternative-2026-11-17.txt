@@ -1,0 +1,97 @@
+# 가져온 시각: 2026-11-17T17:54:53.327Z
+# 원본: https://www.affinity.studio/microsoft-publisher-alternative-for-teams
+Microsoft Publisher End of Life: Open Your Files | Affinity
+https://www.affinity.studio/microsoft-publisher-alternative-for-teams
+
+Continue working with your Microsoft Publisher files in Affinity.
+
+As Microsoft Publisher reaches end of life, Affinity provides native .pub file import, so your organisation's existing layouts remain accessible and editable, with no third-party conversion tools required.
+
+Contact Sales
+(opens in a new tab or window)
+Two licensing dates worth planning for
+
+1 October 2026 - Organisations on Microsoft 365
+
+13 October 2026 - Organisations on a perpetual licence (Office 2021, Office LTSC 2021)
+
+Publisher continues to run under these licences, though it no longer receives security updates from this date. As devices are replaced or reimaged over time, Publisher becomes unavailable to reinstall. Office 2024 does not include Publisher.
+
+Native support for Microsoft Publisher files
+
+This includes files created in Publisher 97 and later. Opening a file converts it into an editable Affinity document that your team can continue working on.
+
+What is Affinity?
+
+Affinity is a professional design app for page layout, vector design and photo editing, all in one file. It opens Publisher files directly, so you keep access to your old files.
+
+Made by Canva: Backed by an established design platform.
+Made for enterprise: Get a demo⁠
+(opens in a new tab or window)
+ and explore what Affinity plus Canva can unlock for your organization.
+PC or Mac: Runs on both, including offline, to fit standard device policies
+Actively developed: In continuous development, and we're always adding new features⁠
+(opens in a new tab or window)
+.
+Built for enterprise
+
+Secure SSO access for enterprise and education environments means your team signs in through the identity provider you already use. And Affinity is part of the Canva product suite, meaning it operates under Canva's security and governance practices.
+
+Built for Surface devices
+
+Affinity is deeply optimized for the latest Windows hardware, supporting NPUs and advanced haptics when available. For publication designers, haptics provide tactile confirmation when objects snap to alignment guides, when you select anchor nodes, or when elements lock to your grid. Physical feedback reduces the visual effort of pixel-perfect alignment and keeps your focus on the work rather than the rulers!
+
+Microsoft Publisher is now end of life, but your creative work isn’t going anywhere. Affinity offers native support for Microsoft Publisher files, and will open your existing .pub files directly — no conversion, no rebuilding from scratch. The core Affinity app is also available for free⁠
+(opens in a new tab or window)
+ - so whether you’re migrating legacy Publisher content or starting your next design project from scratch, Affinity is ready when you are!
+
+Discover Microsoft Surface
+(opens in a new tab or window)
+Built for print production and long documents
+
+For teams producing press-ready materials and lengthy publications, Affinity provides professional print and layout tools as standard.
+
+True CMYK throughout
+
+With spot colour, Pantone, PDF/X export, crop marks and registration marks ready for a printer.
+
+Smart Master Pages and AutoFlow
+
+Text flows from page to page, and reflows when you move things around.
+
+Bleed, margins and pre-flight checks
+
+So problems get caught before a file goes anywhere near a commercial printer.
+
+Data merge
+
+Pull names, numbers and images straight from a spreadsheet into certificates, labels and personalised documents.
+
+FAQs
+Has Microsoft retired Publisher?
+
+Yes. As of 1 October 2026, Publisher is no longer included with Microsoft 365. Perpetual licences, such as Office 2021 and Office LTSC 2021, continued to run until 13 October 2026, after which they stopped receiving security updates. Office 2024 does not include Publisher.
+
+How do we open a .pub file without Publisher?
+
+Affinity imports .pub files directly, keeping your text, images and layout as editable objects.
+
+Can I still open my Publisher files and edit the contents?
+
+Yes, in Affinity. Opening a .pub file imports its content into a new Affinity document that you can keep editing, saving and exporting. It doesn't save back to the .pub format. From that point, you're working in an Affinity file, not a Publisher one.
+
+What's the best way to convert a Publisher file to PDF?
+
+Open the .pub file in Affinity and export to PDF, or to PDF/X if it's going to a commercial printer. Your layout will be editable, and you can make changes before you export.
+
+Will my file look exactly the same?
+
+Close, but maybe not identical. The structure comes across — text, images, shapes, page layout — and it's all editable, so anything that shifts is quick to put right. A few things need redoing by hand: tables come in as text rather than as a table, decorative borders and gradient fills don't carry over, and some older clip art may not appear (e.g. EMF). Everything else is there and ready to work on.
+
+Does Affinity handle data merge, similar to Publisher's mail merge?
+
+Yes. Affinity's Data Merge flows a spreadsheet or database directly into a layout, populating names, numbers and images across every page, for certificates, labels and personalised documents, the same use case Publisher's mail merge served.
+
+Explore Affinity for enterprise
+Contact Sales
+(opens in a new tab or window)

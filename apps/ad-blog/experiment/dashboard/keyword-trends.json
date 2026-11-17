@@ -91,6 +91,16 @@
    "refAvg": 34.42,
    "refMax": 100
   },
+  "convert publisher file to pdf": {
+   "avg": 0.01,
+   "max": 1.0,
+   "measuredAt": "2026-11-17",
+   "points": 93,
+   "raw": 0.01,
+   "recent7": 0.0,
+   "refAvg": 33.4,
+   "refMax": 100
+  },
   "customize right click menu windows 11": {
    "avg": 0.0,
    "max": 0.0,

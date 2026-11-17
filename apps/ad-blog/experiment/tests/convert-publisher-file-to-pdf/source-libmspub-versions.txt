@@ -1,0 +1,20 @@
+# 가져온 시각: 2026-11-17T18:19:08Z
+# 원본: https://dev-www.libreoffice.org/src/libmspub-0.1.5.tar.xz (NEWS) · https://raw.githubusercontent.com/LibreOffice/core/libreoffice-26.8.3.1/download.lst · https://raw.githubusercontent.com/LibreOffice/core/libreoffice-24.2.7.2/download.lst
+libmspub 0.1.5
+
+- Memory safety fixes
+- Minor cleanups
+
+libmspub 0.1.4
+
+- Fix several problems found by oss-fuzz.
+- Fix regression in closing shape groups that caused missing shapes on
+  second and subsequent pages. (tdf#116018)
+
+libmspub 0.1.3
+
+- Workaround a build error on some 32-bit systems.
+
+LibreOffice 26.8.3.1 download.lst: MSPUB_TARBALL := libmspub-0.1.5.tar.xz
+LibreOffice 24.2.7.2 download.lst: MSPUB_TARBALL := libmspub-0.1.4.tar.xz
+Ubuntu 24.04 package used in test: libmspub-0.1-1 0.1.4-3build7

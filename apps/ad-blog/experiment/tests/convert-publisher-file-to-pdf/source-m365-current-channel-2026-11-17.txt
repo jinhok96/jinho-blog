@@ -1,0 +1,1538 @@
+# 가져온 시각: 2026-11-17T17:53:45.575Z
+# 원본: https://learn.microsoft.com/en-us/officeupdates/current-channel
+Release notes for Current Channel releases - Office release notes | Microsoft Learn
+https://learn.microsoft.com/en-us/officeupdates/current-channel
+
+Table of contents
+ Exit editor mode
+LearnMicrosoft 365
+Ask Learn
+Release notes for Current Channel
+Summarize this article for me
+
+These release notes provide information about new features and nonsecurity updates that are included in Current Channel updates for Microsoft 365 Apps for enterprise, Microsoft 365 Apps for business, and the subscription versions of the desktop apps for Project and Visio.
+
+ Note
+
+We often roll out features to Current Channel over a period of time. This allows us to ensure that things are working smoothly before releasing the feature to a wider audience. If you don't see something described, you'll get it eventually.
+Microsoft Teams Admin features can be found here.
+Microsoft 365 Copilot release notes can be found here.
+Version 2610: November 10
+
+Version 2610 (Build 20527.20196)
+
+Various fixes to functionality and performance.
+Version 2610: November 04
+
+Version 2610 (Build 20527.20150)
+
+Various fixes to functionality and performance.
+Version 2610: October 28
+
+Version 2610 (Build 20527.20112)
+
+Various fixes to functionality and performance.
+Version 2610: October 21
+
+Version 2610 (Build 20527.20088)
+
+Resolved issues
+OneNote
+Fixed an issue where handwriting added on an iPad was treated as a drawing instead of being recognized as handwriting. Users can edit affected pages after installing this fix to make existing handwriting recognizable and searchable.
+Outlook
+Fixed an issue that would cause Outlook to exit unexpectedly while searching for users.
+Fixed an issue that caused some users to see the Add a service prompt when starting Outlook.
+PowerPoint
+Fixed an issue in PowerPoint where users couldn’t insert certain WAV audio files containing MP4-encoded audio into presentations.
+Version 2609: October 13
+
+Version 2609 (Build 20430.20182)
+
+Resolved issues
+Excel
+Fixed an issue that could cause Excel to close unexpectedly after coauthoring in a workbook.
+Outlook
+Fixed an issue that would cause Outlook to exit unexpectedly while searching for users.
+Version 2609: October 06
+
+Version 2609 (Build 20430.20146)
+
+Various fixes to functionality and performance.
+Version 2609: September 30
+
+Version 2609 (Build 20430.20118)
+
+Various fixes to functionality and performance.
+Version 2609: September 22
+
+Version 2609 (Build 20430.20092)
+
+Resolved issues
+Excel
+Fixed an issue where Excel could become unresponsive during close.
+Version 2608: September 18
+
+Version 2608 (Build 20326.20158)
+
+Various fixes to functionality and performance.
+Version 2608: September 08
+
+Version 2608 (Build 20326.20144)
+
+Various fixes to functionality and performance.
+Version 2608: September 01
+
+Version 2608 (Build 20326.20132)
+
+Various fixes to functionality and performance.
+Version 2608: August 26
+
+Version 2608 (Build 20326.20112)
+
+Various fixes to functionality and performance.
+Version 2608: August 18
+
+Version 2608 (Build 20326.20100)
+
+Various fixes to functionality and performance.
+Version 2607: August 11
+
+Version 2607 (Build 20228.20190)
+
+Resolved issues
+Outlook
+Resolved an issue that could prevent MailTips from appearing in some environments.
+Version 2607: August 04
+
+Version 2607 (Build 20228.20158)
+
+Various fixes to functionality and performance.
+Version 2607: July 29
+
+Version 2607 (Build 20228.20124)
+
+Various fixes to functionality and performance.
+Version 2607: July 23
+
+Version 2607 (Build 20228.20110)
+
+Resolved issues
+Access
+Fixed an issue where copying the text from a text box copied only part of the text instead of all of it.
+Fixed an issue where dragging items on zoomed forms could position them incorrectly.
+Outlook
+Fixed an issue where the Copilot side pane was stuck loading and did not complete.
+Fixed an issue with Copilot draft that would cause some symbols to render incorrectly.
+Fixed an issue where Outlook might not show data loss prevention (DLP) policy tips for attachments after a user attached a file containing sensitive information.
+PowerPoint
+Fixed an issue in PowerPoint for Windows and Mac where converting a multi-line MathType or Equation Editor object to Office Math preserved only the first line.
+Version 2606: July 14
+
+Version 2606 (Build 20131.20154)
+
+Resolved issues
+Outlook
+Fixed an issue that caused Outlook to exit unexpectedly when using the calendar.
+Fixed an issue where Outlook might not show data loss prevention (DLP) policy tips for attachments after a user attached a file containing sensitive information.
+Version 2606: July 07
+
+Version 2606 (Build 20131.20126)
+
+Resolved issues
+Outlook
+Fixed an issue where Outlook closed unexpectedly when using Copilot Compose chat feature.
+Fixed the Help me write button visibility in high contrast mode.
+Version 2606: June 30
+
+Version 2606 (Build 20131.20112)
+
+Various fixes to functionality and performance.
+Version 2606: June 25
+
+Version 2606 (Build 20131.20090)
+
+Resolved issues
+Access
+Fixed a performance issue that could make Access feel significantly slower, including slow or flickering form display, sluggish record navigation, and general slowness when working with forms. The issue could affect a wide range of databases and was most noticeable on complex forms or forms with subforms.
+Version 2605: June 16
+
+Version 2605 (Build 20026.20182)
+
+Various fixes to functionality and performance.
+Version 2605: June 09
+
+Version 2605 (Build 20026.20168)
+
+Various fixes to functionality and performance.
+Version 2605: June 03
+
+Version 2605 (Build 20026.20140)
+
+Resolved issues
+Word
+Fixed an issue where images didn't display when using Top and bottom text wrapping in classic Outlook.
+Version 2605: May 26
+
+Version 2605 (Build 20026.20112)
+
+Various fixes to functionality and performance.
+Version 2605: May 20
+
+Version 2605 (Build 20026.20076)
+
+Resolved issues
+Outlook
+Fixed an issue where sending mail failed when multiple Exchange accounts were configured.
+We fixed an issue that caused Outlook to exit unexpectedly when loading emails from Viva Engage or Viva Insights.
+Office suite
+Fixed an issue where Excel or PowerPoint closed unexpectedly in rare cases while actively coauthoring, particularly when opening a document for the first time.
+Version 2604: May 14
+
+Version 2604 (Build 19929.20172)
+
+Resolved issues
+Outlook
+Fixed an issue where sending mail failed when multiple Exchange accounts were configured.
+Version 2604: May 12
+
+Version 2604 (Build 19929.20164)
+
+Security updates listed here.
+
+Version 2604: May 05
+
+Version 2604 (Build 19929.20136)
+
+Resolved issues
+Fixed an issue where Outlook closed unexpectedly after replying to a mail item that has labels.
+Version 2604: April 29
+
+Version 2604 (Build 19929.20106)
+
+Various fixes to functionality and performance.
+Version 2604: April 21
+
+Version 2604 (Build 19929.20090)
+
+Various fixes to functionality and performance.
+Version 2603: April 14
+
+Version 2603 (Build 19822.20182)
+
+Security updates listed here.
+
+Feature updates
+PowerPoint
+Edit your document with Copilot in PowerPoint: Copilot in PowerPoint helps you create, edit, and refine presentations through natural language—right inside your deck. Start a new presentation or build on an existing one by asking Copilot to generate slides, update content, improve layouts, and polish design, all while preserving your formatting, structure, and branding. This experience is available with Microsoft 365 Copilot (Basic). In addition, with Microsoft 365 Copilot (Premium), Copilot can also connect to your brand kit to apply branded templates, insert brand-approved images, and check for brand compliance. For more information on licensing, see: What Copilot license do I have | Microsoft Support.
+Version 2603: April 09
+
+Version 2603 (Build 19822.20168)
+
+Feature updates
+Office suite
+Extend DLP for Copilot grounding in Word, Excel, and PowerPoint to local files: Data loss prevention (DLP) for Copilot grounding policies will now block Copilot from processing the currently open file in Word, Excel, and PowerPoint regardless of where that file is stored.
+Resolved issues
+Access
+Fixed an issue where some add-ins didn’t display a banner/info bar when an external recipient was added to an outgoing email in Outlook.
+Outlook
+Resolved an issue where users could not close the Copilot chat pane using a keyboard. You can now close the pane by navigating to the Close button using a keyboard or by using the assigned keyboard shortcut.
+Word
+When drafting with Copilot, users will see the Copilot chat pane open with their prompt.
+Version 2603: March 31
+
+Version 2603 (Build 19822.20142)
+
+Various fixes to functionality and performance.
+Version 2603: March 24
+
+Version 2603 (Build 19822.20114)
+
+Resolved issues
+PowerPoint
+Fixed an issue that sometimes caused PowerPoint to close unexpectedly when opening a newly created empty file from the OneDrive folder.
+When saving presentations in .pptx format containing SVG graphics, a PNG image is no longer rendered and saved with each one for compatibility with versions of PowerPoint that did not support SVG. PowerPoint for Windows Version 1611 (Build 7571.2072) and PowerPoint for Mac Version 16.13 and later support SVG and can render .pptx files that do not have the PNG images in them.
+Version 2602: March 18
+
+Version 2602 (Build 19725.20190)
+
+Resolved issues
+Outlook
+Fixed an issue where updating a single instance of a recurring meeting in a Microsoft 365 group calendar updates the entire series.
+Version 2602: March 10
+
+Version 2602 (Build 19725.20172)
+
+Security updates listed here.
+
+Feature updates
+Word
+Agent mode in Word: Agent mode in Word adds a conversational chat experience that helps you create, edit, and refine document content as you work. Use natural language requests to draft new text, rewrite sections, and iterate on improvements without leaving your document.
+Resolved issues
+Outlook
+Fixed an issue that impacted the rendering of extended characters in calendar items, causing certain characters to appear as question marks.
+Version 2602: March 03
+
+Version 2602 (Build 19725.20152)
+
+Resolved issues
+Office suite
+Fixed an issue where closing a document could in rare cases remain in progress indefinitely after the app resumed from sleep or hibernation.
+Version 2602: February 24
+
+Version 2602 (Build 19725.20126)
+
+Resolved issues
+OneNote
+Fixed an issue that caused OneNote to close unexpectedly upon startup.
+Fixed an issue that caused OneNote to close unexpectedly when copying and pasting content from a web page containing a (MathML) tag with no attributes.
+Outlook
+Updated how Word, Excel, and PowerPoint retrieve configuration information to allow People experiences to work properly in Sovereign cloud environments.
+Version 2601: February 17
+
+Version 2601 (Build 19628.20214)
+
+Feature updates
+Excel
+Local file support for Excel Agent Mode: Added support for Excel Agent Mode in modern Excel workbooks stored on your device, giving you the flexibility to query Copilot Chat no matter where your files are located.
+Version 2601: February 10
+
+Version 2601 (Build 19628.20204)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that sometimes prevented users from opening emails with the Encrypt Only label.
+Version 2601: February 03
+
+Version 2601 (Build 19628.20166)
+
+Various fixes to functionality and performance.
+Version 2601: January 27
+
+Version 2601 (Build 19628.20150)
+
+Feature updates
+OneNote
+Improved proofing language control: OneNote now applies your chosen proofing language more consistently, so you don’t have to reset it for every paragraph when writing in multiple languages.
+Resolved issues
+Excel
+We fixed an issue that caused Office applications to become unresponsive when profile card-related activities are performed.
+Local file support for Copilot Chat: Added support for Copilot Chat in modern Excel workbooks stored on your device, giving you the flexibility to query Copilot Chat no matter where your files are located.
+PowerPoint
+We fixed an issue that caused Office applications to become unresponsive when profile card-related activities are performed.
+Fixed an issue where opening a PowerPoint document from OneDrive sometimes opened a new presentation with a prompt to add a first slide, even if the presentation already contained slides.
+Word
+We fixed an issue that caused Office applications to become unresponsive when profile card-related activities are performed.
+Version 2512: January 21
+
+Version 2512 (Build 19530.20184)
+
+Various fixes to functionality and performance.
+Version 2512: January 13
+
+Version 2512 (Build 19530.20144)
+
+Security updates listed here.
+
+Resolved issues
+Excel
+We fixed an issue that caused Office applications to become unresponsive when profile card-related activities are performed.
+PowerPoint
+We fixed an issue that caused Office applications to become unresponsive when profile card-related activities are performed.
+Word
+We fixed an issue that caused Office applications to become unresponsive when profile card-related activities are performed.
+Office Suite
+Added the Office.context.mailbox.ews.diagnostics.getTokenStatusAsync API for Outlook Event-Based Add-ins.
+Fixed a rare condition (during collaboration sessions only) in which the most recent changes to a document were overwritten by changes from another user/device that did not correctly save the most recent changes.
+Version 2512: January 08
+
+Version 2512 (Build 19530.20138)
+
+Various fixes to functionality and performance.
+Version 2511: December 16
+
+Version 2511 (Build 19426.20218)
+
+Various fixes to functionality and performance.
+Version 2511: December 09
+
+Version 2511 (Build 19426.20186)
+
+Various fixes to functionality and performance.
+
+Security updates listed here.
+
+Version 2511: December 03
+
+Version 2511 (Build 19426.20170)
+
+Various fixes to functionality and performance.
+Version 2510: November 20
+
+Version 2510 (Build 19328.20244)
+
+Resolved issues
+Outlook
+We fixed an issue that caused users to see "Contacting the server for information" repeatedly when loading some emails.
+Version 2510: November 18
+
+Version 2510 (Build 19328.20232)
+
+Various fixes to functionality and performance.
+Version 2510: November 11
+
+Version 2510 (Build 19328.20190)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that caused some recipients to be unable to access OneDrive links shared with them via email.
+Version 2510: November 04
+
+Version 2510 (Build 19328.20178)
+
+Resolved issues
+Outlook
+We fixed an issue where @mention searches produced no results in Office apps.
+Version 2510: October 30
+
+Version 2510 (Build 19328.20158)
+
+Feature updates
+Excel
+New Get Data dialog in Excel for Windows: Discover a new way to connect to data! The Get Data dialog in Excel for Windows makes finding and using external data sources faster, smarter, and more intuitive.
+Analyze Data is now found in the Data tab: Continue getting insights from Analyze Data from the Data tab in the ribbon.
+Resolved issues
+Outlook
+We fixed an issue that prevented users from downloading web add-ins in some virtualized environments.
+Version 2509: October 21
+
+Version 2509 (Build 19231.20216)
+
+Various fixes to functionality and performance.
+Version 2509: October 14
+
+Version 2509 (Build 19231.20194)
+
+Various fixes to functionality and performance.
+
+Security updates listed here.
+
+Version 2509: October 07
+
+Version 2509 (Build 19231.20172)
+
+Various fixes to functionality and performance.
+Version 2509: October 01
+
+Version 2509 (Build 19231.20156)
+
+Resolved issues
+Excel
+We fixed an issue where ribbon controls weren't rendered when rejoining Office sessions in a virtual machine, Azure Virtual Desktop, or remote desktop environment.
+Outlook
+Fixed an issue that caused Outlook to terminate unexpectedly when starting.
+Version 2508: September 23
+
+Version 2508 (Build 19127.20264)
+
+Various fixes to functionality and performance.
+Version 2508: September 16
+
+Version 2508 (Build 19127.20240)
+
+Various fixes to functionality and performance.
+Version 2508: September 09
+
+Version 2508 (Build 19127.20222)
+
+Security updates listed here.
+
+Various fixes to functionality and performance.
+Version 2508: September 03
+
+Version 2508 (Build 19127.20192)
+
+Resolved issues
+Outlook
+Fixed an issue where some Outlook add-ins were encountering an "Office.auth.getAccessToken is not a function" error.
+Fixed an issue where users received unexpected meeting cancellations following meeting exception updates.
+Version 2508: August 26
+
+Version 2508 (Build 19127.20154)
+
+Feature updates
+Office Suite
+New Trust Center settings to block file opens using insecure protocols: New settings in Trust Center allow users to restrict or allow file opens using FTP/HTTP protocols and fallback to FrontPage Remote Procedure Call (FPRPC) protocol.
+Resolved issues
+Outlook
+Fixed an issue that caused Outlook to terminate unexpectedly when sending a meeting invite with an encryption label.
+Office Suite
+We added support for pixelated rendering of embedded images in SVG assets.
+Version 2507: August 19
+
+Version 2507 (Build 19029.20208)
+
+Various fixes to functionality and performance.
+Version 2507: August 12
+
+Version 2507 (Build 19029.20184)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that caused screen readers to fail to announce error messages when using Draft with Copilot.
+We fixed an issue that caused Outlook to display the Prioritize and Settings buttons when they shouldn't appear, such as when the user doesn't have a Copilot license or has disabled the Copilot UI.
+Version 2507: August 05
+
+Version 2507 (Build 19029.20156)
+
+Resolved issues
+Outlook
+We fixed an issue that required users to restart Outlook to open an .msg file after initially accessing it once.
+Version 2507: July 30
+
+Version 2507 (Build 19029.20136)
+
+Resolved issues
+Outlook
+We fixed an issue where Outlook may close unexpectedly after launch.
+Word
+Resolved an issue where URLs pasted from Outlook may be broken when the setting "Internet and network paths with hyperlinks" is turned off.
+Resolved an issue where Word may close unexpectedly when exporting a specific document as a PDF.
+Resolved an issue in Word where selecting Save Selection to Text Box Gallery may cause some characters to display incorrectly as squares.
+Resolved an issue in Word where the word count may display incorrectly.
+Resolved an issue in Word where certain characters in the document title may incorrectly display as squares in Options.
+Resolved an issue in Word where mail merge fields sometimes incorrectly display certain characters as squares.
+Resolved an issue in Word where certain characters in the title of the document may be incorrectly displayed as squares during save.
+Resolved an issue in Word where, upon inserting a Word document as an object, certain characters in the caption could appear incorrectly as squares.
+Resolved an issue in Word where the Combine Characters function may cause some characters to display incorrectly as squares.
+Resolved an issue in Word where the AIP add-in wouldn't load sensitivity labels.
+Version 2506: July 22
+
+Version 2506 (Build 18925.20184)
+
+Resolved issues
+Outlook
+We fixed an issue that caused the Copilot Command Center to continue to be visible after disabling the Copilot user interface.
+PowerPoint
+We fixed an issue when creating handouts in PowerPoint, certain characters (full-width numbers) can't be properly transferred to the handout.
+Version 2506: July 15
+
+Version 2506 (Build 18925.20168)
+
+Resolved issues
+Visio
+Resolved an issue that caused Visio 32-bit to close unexpectedly when using the Drawing control, particularly in setups involving COM components or .NET integrations.
+Word
+Resolved an issue where copying and pasting content between documents may change the applied Style unexpectedly.
+Version 2506: July 08
+
+Version 2506 (Build 18925.20158)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that caused the Copilot icon to unexpectedly display when Copilot had been disabled by the admin in government cloud.
+Version 2506: July 01
+
+Version 2506 (Build 18925.20138)
+
+Resolved issues
+Outlook
+We fixed an issue that caused the Copilot icon to unexpectedly display when Copilot had been disabled by the admin in government cloud.
+We fixed an issue that caused Outlook to exit unexpectedly when loading web add-ins in some circumstances.
+PowerPoint
+Resolved an issue where users may receive the error "We're sorry, something went wrong that might make PowerPoint unstable" after pasting content from Word.
+Word
+Fixed an issue with bullet point placement in relation to vertical alignment of text.
+We made performance improvements when performing Mail Merge with large text files.
+Resolved an issue where the search icon in the Navigation Pane may flicker when hovered over.
+Resolved an issue where unsaved comment drafts may disappear on AutoSave when "Restrict Editing" setting is enabled.
+We fixed an issue where print preview may stop working when printing long emails.
+Resolved an issue where users may receive the error "We're sorry, something went wrong that might make PowerPoint unstable" after pasting content from Word.
+Resolved an issue where user defined content marks may be missing after applying a sensitivity label.
+Resolved an issue where Outlook may stop working for users when trying to reply to or forward a message.
+Resolved an issue where inserting Word documents as objects in a document with an RTL (right-to-left) language unexpectedly resulted in the documents being inserted as pictures.
+Resolved an issue in Word where the AIP add-in may not load sensitivity labels.
+Office Suite
+Resolves an unexpected case where the document was assigned a unique ID prior to its creation, which would result in an error on creating a new document.
+Version 2505: June 26
+
+Version 2505 (Build 18827.20176)
+
+Feature updates
+Excel
+Improved Recommended PivotTables experience: Recommended PivotTables are now more intelligent and easier to use! The dialog box interface has been replaced by a redesigned panel, making it easier to view all of your options and simpler to change your data selection before inserting a recommended PivotTable.
+See details in blog post
+Word
+Request eSignatures directly from Word: Request eSignatures, create & share eSignature templates, with the confidence that your valuable document never leaves your Microsoft 365 tenant during the signing process.
+Resolved issues
+Outlook
+We fixed an issue that caused Outlook to exit unexpectedly when loading a message in some VDI environments.
+Version 2505: June 17
+
+Version 2505 (Build 18827.20164)
+
+Resolved issues
+Outlook
+We fixed an issue that caused the "Try the new Outlook" toggle to be enabled when working in Classic Outlook side by side with the new Outlook.
+Version 2505: June 10
+
+Version 2505 (Build 18827.20150)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that caused inline images to be lost from messages created from .MSG files when spell check on send is enabled.
+Office suite
+Fixed an issue where a 'Save As' attempt on an existing file didn’t complete successfully, and subsequent attempts continued to encounter issues when trying to save to a file that no longer existed.
+Version 2505: June 03
+
+Version 2505 (Build 18827.20140)
+
+Various fixes to functionality and performance.
+Version 2505: May 29
+
+Version 2505 (Build 18827.20128)
+
+Various fixes to functionality and performance.
+Version 2504: May 20
+
+Version 2504 (Build 18730.20186)
+
+Various fixes to functionality and performance.
+Feature updates
+PowerPoint
+Email Notification Context Previews for Files Protected with Microsoft Purview: Notification emails for mentions, tasks, comments, and replies will now contain context previews even when the source document is encrypted, and the email will inherit the document's security policies.
+Version 2504: May 13
+
+Version 2504 (Build 18730.20168)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue where users are seeing high CPU usage when typing in Outlook.
+Word
+We fixed an issue where users are seeing high CPU usage when typing in Outlook.
+Version 2504: May 06
+
+Version 2504 (Build 18730.20142)
+
+Various fixes to functionality and performance.
+Version 2504: April 29
+
+Version 2504 (Build 18730.20122)
+
+Resolved issues
+OneNote
+Fixed an issue where OneNote wasn't persisting some settings like keeping the notebooks list or page list on the left.
+Outlook
+We fixed an issue that caused Copilot commands to be visible on items that aren't eligible for usage.
+We fixed an issue that prevented Copilot menu commands from accurately reflecting changes in user eligibility.
+Corrected an issue where Outlook was unable to extract the label data from an attachment, impacting the reliability of DLP assessments and also Label inheritance functionality.
+PowerPoint
+We resolved an issue where the "Find Next" function didn't highlight the searched text within tables.
+We addressed an issue where accepting changes for text marked for grammar correction would inadvertently modify other nonhighlighted text.
+Fixed an issue where PowerPoint was unable to open a file from a network mapped drive from File Explorer.
+We resolved an issue where files stored on a network drive might disappear after being embedded as objects into a PowerPoint presentation.
+Adjusted behavior of the PowerPoint JavaScript API so each context.sync() creates a new entry on the undo stack.
+Corrected behaviors of ShapeFill.foregroundColor and ShapeFill.setSolidColor APIs when acting on Icons.
+Word
+Fixed an issue with SVG text rendering.
+Resolved an issue where image transparency wasn't preserved for picture bullets.
+Resolved an issue in Word after saving a document in Teams or Word Web, a Content Control Group may appear in the document, which marks the document 'read-only.'
+Resolved an issue in Word when Auto Rewrite is performed on formatted text, formatting of the original text may be lost.
+Resolved an issue in Word where the table of contents formatting may be broken when specific heading and hyperlink styles were applied.
+Resolved an issue where Word may close unexpectedly when opening .doc files.
+Resolved an issue in Word where mandatory labeling wasn't triggered when attempting to save unlabeled Word documents received as Outlook attachments locally.
+Resolved an issue in Word causing files to prompt Save As despite being previously saved.
+Office Suite
+Fixed an issue where large 3D files sometimes didn’t insert and prompted an error.
+Resolved an issue that was preventing the insertion of 3D models.
+We fixed an issue where large 3D files couldn’t be inserted.
+We fixed an issue where opening a file with many images would take longer in Excel.
+We addressed an issue where upon submitting a timesheet, the user sees this error message: "An error occurred while communicating with the server. check connectivity with your administrator to determine whether further action is necessary." Additionally, in the error in the Universal Logging Service (ULS) has this detail: \Error is: StatusingInvalidPIDForProjCntr. Details: Invalid property ID in change list. Standard Information: PSI Entry Point: Project User: <ID> Correlation ID: <Correlation> PWA Site URL: <URL> SA Name: ProjectServerServiceApplication PSError: StatusingInvalidPIDForProjCntr (3105)
+We improved on a performance issue where timesheet operations such as save and submit stopped working because of underlying SQL blocking and deadlocking problems. These problems were prevalent while the server was processing complicated jobs such as project publish and timesheet submissions.
+Version 2503: April 17
+
+Version 2503 (Build 18623.20208)
+
+Resolved issues
+Excel
+We fixed an issue that may cause Excel to stop responding.
+Version 2503: April 08
+
+Version 2503 (Build 18623.20178)
+
+Security updates listed here.
+
+Resolved issues
+Word
+Resolved an issue in Word where users may encounter an issue with saving, seeing the message "saving..." in the title bar.
+Version 2503: April 02
+
+Version 2503 (Build 18623.20156)
+
+Feature updates
+Excel
+Reduce eye strain with Dark Mode: Go to View and select Switch Modes to try Dark Mode, which darkens your entire sheet, including cells.
+Resolved issues
+Access
+We fixed an issue where a user attempting to import a txt/csv file into Access was facing type conversion errors when importing the data into an existing Access table if the field in the table was using the double data type.
+Excel
+We fixed an issue where GETPIVOTDATA showed #REF! when refreshing a PivotTable containing Stocks data types.
+We fixed a performance issue for Excel, when loading worksheets that contain hundreds of thousands of geometric shapes. Load of a worksheet with this many shapes used to take about 30 minutes and now takes about 45 seconds.
+Outlook
+We fixed an issue that caused messages to be sent unencrypted when the user didn't expect them to be and caused received encrypted and labeled items to have the encryption removed when replying.
+We fixed an issue that caused users to see two independent sets of labels when using the Azure Information Protection add in.
+We fixed an issue that caused Copilot drafted emails to render with empty lines omitted in new Outlook.
+PowerPoint
+We resolved an issue where PowerPoint wasn't displaying the icon for an inserted PDF object.
+We resolved an issue where the focus would shift from the "Find and Replace" pane to the comment pane while performing a text search.
+Project
+We fixed an issue where saving projects from the Project Online desktop application to Project Online didn't work and the queue error had detail such as "Numeric arithmetic causes truncation" or "Value was either too large or too small for a Decimal."
+We resolved an issue where Project showed an incorrect error about resources not being added to the Gantt sheet of existing project tasks when using the Append or Merge to the active project option to import the resource sheet from Excel.
+Word
+Resolved an issue where opening specific files that contain many tracked changes and comments may result in poor performance.
+Resolved an issue when using Track Changes where comments may not be visible in contextual view until changes are accepted or rejected.
+Office Suite
+Fixed an issue where 3D model files with missing external texture resources couldn't be inserted.
+Fixed an issue that was preventing successful export as PDF for some PowerPoint decks.
+We fixed an issue where certain PowerPoint files with embedded fonts weren't functioning properly when the same font was also installed locally and configured as an organizational font. Opening these files would trigger an error message indicating that the installation of the embedded font had stopped working.
+Version 2502: March 11
+
+Version 2502 (Build 18526.20168)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that caused Word and Excel users to see unexpected empty pop-up dialogs.
+Word
+Resolved an issue where opening specific files that contained many tracked changes and comments resulted in poor performance.
+Resolved an issue in Word where the "Draft with Copilot" pane may be shifted to the left of the document canvas.
+Resolved an issue in Word where the table of contents formatting was broken when specific heading and hyperlink styles were applied.
+Version 2502: March 05
+
+Version 2502 (Build 18526.20144)
+
+Resolved issues
+Access
+We resolved an issue in Access where the MouseWheel event on forms wasn't functioning correctly. When used in an Access form, the event didn’t indicate the number of lines to scroll through the Count argument.
+Outlook
+We fixed an issue that caused an incorrect progress dialog to appear for some unrecoverable add-in errors.
+PowerPoint
+We fixed an issue where opening and closing multiple embedded Excel objects from a PowerPoint file throws an OLEFormat.DoVerb: invalid request exception.
+We fixed an issue where PowerPoint automatically closes when the system goes into hibernate or sleep mode.
+We decreased the opacity for watermark content markings inserted into presentations as a result of sensitivity labeling to match the opacity of watermark content markings in Word.
+Project
+We fixed an issue where resource leveling on a minute-by-minute basis might unexpectedly show over allocated resources.
+We fixed a data loss issue where Gantt chart drawings such as text boxes, lines, ovals, and so forth, were lost when .mpp files were reopened after saving.
+Word
+Resolved an issue where certain Wingding characters may unexpectedly change to an emoji.
+Resolved an issue where the font color may not be consistent across words when using Immersive Reader with the Syllables option toggled on.
+Resolved an issue where the default font size may not be 12 pt as expected.
+Resolved an issue when using Track Changes where comments may not be visible in contextual view until changes are accepted or rejected.
+Resolved an issue in Word where accepting the security prompt for legacy text forms may clear it to the default text.
+Resolved an issue where the Shape.AlternativeText property may return the alternative text for the group shape instead of the individual shapes.
+Office Suite
+
+We fixed an issue where the application wouldn't render the grid properly on loading some files with Right to Left and freeze panes.
+
+We fixed an issue in OneNote where ink doesn't appear until user lifts the input device such as stylus or mouse.
+
+We fixed an issue where certain PowerPoint files with embedded fonts weren't functioning properly when the same font was also installed locally and configured as an organizational font. Opening these files would trigger an error message indicating that the installation of the embedded font had failed.
+
+We disabled the PowerPoint Compare and Merge feature. See Track changes in your presentation for more information.
+
+Version 2501: February 11
+
+Version 2501 (Build 18429.20158)
+
+Security updates listed here.
+
+Resolved issues
+Word
+Resolved an issue where Narrator may not read Context IQ suggestions when using Copilot.
+Version 2501: January 30
+
+Version 2501 (Build 18429.20132)
+
+Feature updates
+Word
+Removed option to display Track Changes balloons in left margin: The advanced Track Changes option to set the margin for balloons to left has been removed.
+Resolved issues
+Outlook
+We fixed an issue that caused users to see some links launching in a different browser than other links.
+We fixed an issue that caused users to be unable to interact with reminders that appear while the Copilot first run experience is visible.
+PowerPoint
+We disabled DirectShow support when Export Address Filtering (EAF) is enabled for the powerpnt.exe process.
+The Title field in File > Info will no longer be filled in automatically when saving a file.
+We fixed an issue with ActiveX controls using an excessive amount of GDI handles.
+Word
+Resolved an issue where table row markers were missing from the ruler.
+Resolved an issue in Word where the layout of tables may be changed unexpectedly after updating to version 2409.
+Resolved an issue where users would receive the "Your margins are pretty small" dialog repeatedly for every page in their document.
+Resolved an issue where a user didn’t receive an error message when the save operation was unsuccessful on a Distributed File System.
+Office Suite
+We fixed an issue that prevented the insertion of images from SharePoint.
+Fixed a problem where PowerPoint would sometimes close unexpectedly when reading the slide content with a screen reader, particularly when navigating by heading in Slide Show on a slide with hyperlinks.
+Fixed a problem where the legend of a map chart is missing in print, print preview, and export-as-PDF.
+Version 2412: January 16
+
+Version 2412 (Build 18324.20194)
+
+Resolved issues
+Office Suite
+We fixed an issue where apps would exit unexpectedly when running on Windows Server 2016.
+Version 2412: January 14
+
+Version 2412 (Build 18324.20190)
+
+Security updates listed here.
+
+Resolved issues
+Word
+Resolved an issue in Word where the layout of tables may be changed unexpectedly.
+Version 2412: January 07
+
+Version 2412 (Build 18324.20168)
+
+Feature updates
+Outlook
+Tables are more accessible for screen readers: Screen readers should more sensibly read out information in tables.
+Office Suite
+Local AI: Office desktop apps on Windows now run ai.exe and aimgr.exe with Code Integrity Guard (CIG) enabled. CIG ensures that all Dynamic Link Libraries (DLLs) loaded into ai.exe and aimgr.exe are digitally signed by Microsoft. Valid Microsoft signatures include those from Windows Hardware Quality Labs (WHQL) which allows WHQL-approved drivers to be loaded and run within ai.exe and aimgr.exe. CIG is implemented within the Windows Memory Manager so that DLLs can be blocked from being mapped into memory. If any DLL either loaded directly by ai.exe or aimgr.exe or injected into ai.exe or aimgr.exe by some other process isn't signed by Microsoft, the Windows Memory Manager returns the error STATUS_INVALID_IMAGE_HASH (error code: 0xC0000428) and Windows may present a dialog to the user informing them of this error. All DLLs that are expected to be loaded into ai.exe and aimgr.exe are digitally signed by Microsoft. DLLs that aren't digitally signed by Microsoft shouldn't be injected into either ai.exe or aimgr.exe by any other process.
+Resolved issues
+OneNote
+We fixed an issue that was causing pages to have a blank title when sending a meeting request from Outlook to OneNote.
+Word
+Resolved an issue where a document saved to a network shared folder and set to "Always Open Read-Only" would open in "Editing" mode.
+Resolved an issue in Word where footnote numbering unexpectedly changed to the number 8 when using the "Restart each page" option.
+Resolved an issue where watermarks in a document weren't being printed.
+Resolved an issue in Outlook where content in the preview pane was truncated.
+Resolved an issue in Word where users received the message "The function you are trying to run contains macros" when opening documents with VBA disabled and web add-ins installed.
+Resolved an issue where Styles unexpectedly change when coauthoring in a document based on a template.
+Resolved an issue in Word where users may receive an HTTP error when calling Content Control JavaScript APIs.
+Office Suite
+We fixed an issue where the application wouldn't render the grid properly after switching from page break preview to normal view.
+Version 2411: December 10
+
+Version 2411 (Build 18227.20162)
+
+Security updates listed here.
+
+Resolved issues
+Word
+Resolved an issue in Word and Outlook where characters didn't render correctly when using "Save Selection to Text Box Gallery."
+Version 2411: December 05
+
+Version 2411 (Build 18227.20152)
+
+Feature updates
+Office Suite
+Protect sensitive files with dynamic watermarking: Deter leakage of your highly confidential document content by rendering the reader’s email address and other information over the document. This is configurable on sensitivity labels with admin-defined permissions.
+Modernized user-defined permissions experience: We improved the user experience for selecting which users should have which permissions when a sensitivity label configured for user-defined permissions is applied to a file or when configuring standalone Information Rights Management through the Restrict Access feature.
+Resolved issues
+Excel
+We fixed an issue where the filter drop downs were missing on PivotTables in outline and tabular modes on desktop only.
+We fixed an issue where some cells weren't rendered properly upon scrolling in a worksheet using freeze panes.
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+OneNote
+Fixed an issue in the application that had disabled scrolling with a mouse scroll wheel.
+Fixed an issue that caused the application to repeatedly ask for sign-in credentials.
+We updated the minimum size for the OneNote window so you can resize it to a smaller size if desired both on height and width. And the quick note window will remember the last size you chose and respect it.
+Outlook
+We fixed an issue that caused the Wait on Send experience to stop working until the user clicked "Send Anyway."
+We fixed an issue that caused users who were replying to a message with an Information Rights Management policy applied to see the error "You don't have permission to make this change to the sensitivity label" when no label changes were made.
+We fixed an issue where users using parentheses in the name of their signatures weren't seeing the signatures in the Insert>Signatures list.
+We fixed an issue where Outlook would stop responding when a user tried to create an Outlook profile for a different user when OneAuth was enabled.
+PowerPoint
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+We fixed an issue where embedded BMP images in the PowerPoint slide weren't opening.
+Fixed an issue in PowerPoint where embedded PowerPoint Presentations were inheriting the default label.
+The error message for the ExportAsFixedFormat method has been updated to provide more information to users when it stops working.
+Visio
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+Word
+Fixed an issue that was preventing emails with linked SVG content from saving or sending.
+Resolved an issue in Outlook where unexpected characters may appear in comments when using the setting "preface comments with" and the Aptos font.
+Resolved an issue where RTF files wouldn't be proofed on open, resulting in a 0% rating from the Editor pane.
+Resolved an issue where updating a table of figures may cause unexpected changes to certain words, resulting in spelling mistakes.
+Resolved an issue in Outlook where text may be truncated on the right side of the message when using an HTML email template.
+Resolved an issue where the Save button would be unresponsive if the file was saved to a folder including with a period (.) in the path name.
+Resolved an issue where Word would give the error "Word couldn't re-establish a DDE connection to Microsoft Query to complete the current task" when selecting MS Query as the data source for "Mail Merge Create Data Source."
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+Office Suite
+We fixed an issue where some PowerPoint presentations created by third-party tools wouldn't open correctly and some content would be removed.
+We fixed a stability issue related to cursors when selecting pictures and other objects.
+We fixed an issue where users experienced slowness when an Excel file contained many combo box form controls.
+We fixed an issue where an embedded font wouldn't render if the file was opened offline.
+We improved the error message for when a table exceeds the maximum memory load.
+We improved the title for the initial heuristic dataframe creation.
+Version 2410: November 12
+
+Version 2410 (Build 18129.20158)
+
+Security updates listed here.
+
+Resolved issues
+OneNote
+Resolved an issue where all characters didn't appear correctly when creating an Outlook task from OneNote.
+Outlook
+Resolved an issue where all characters didn't appear correctly when creating an Outlook task from OneNote.
+PowerPoint
+We fixed an issue where embedded BMP images in the PowerPoint slide weren't opening.
+We disabled the PowerPoint QuickStarter feature. See Research a topic with PowerPoint QuickStarter for more information.
+Word
+Resolved an issue where all characters didn't appear correctly when creating an Outlook task from OneNote.
+Version 2410: October 28
+
+Version 2410 (Build 18129.20116)
+
+Feature updates
+Excel
+
+Comment Filtering: Enable filtering capabilities for the comment pane.
+
+Python in Excel code editor released to GA: We released the Python in Excel code editor, a task pane that provides an editing space for large code blocks when authoring Python in Excel formulas, including features like IntelliSense and text colorization. Blog post describing new feature.
+
+Resolved issues
+Access
+We fixed an issue where the app closed unexpectedly with possible data loss and/or data corruption when a user attempted to copy certain hyphen characters.
+We fixed an issue where Microsoft Open Database Connectivity (ODBC) connections to Salesforce were no longer working.
+Excel
+We fixed an issue where some users couldn't see checkboxes getting rendered after inserting them.
+We fixed an issue where making Application.ScreenUpdating = false in macros caused screen flickering.
+Fixed an issue where Visual Basic for Applications (VBA) calculation caused the Excel app to stop responding.
+We resolved an issue where the RTD ThrottleInterval setting wasn’t working as expected.
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+Outlook
+We fixed an issue where the accessibility mail tip kept appearing and disappearing, causing the content to jump when composing an email.
+We fixed an issue where Do Not Forward (DNF) was left on message when applying and removing label.
+We fixed an issue that caused users with a large number of folders expanded during synchronization to experience a nondelivery receipts (NDRs) with the failure MAPI_E__TOO_BIG (0x80040305).
+We fixed an issue where a meeting request received by an Exchange account would appear with a blank body in Outlook Desktop cached mode.
+We fixed an issue where adding an Outlook or a Hotmail account to a mail profile nullified a policy preventing copying messages between exchange stores.
+We fixed an issue in Outlook where mail from a profile activated and directed to a different portal was being redirected to https://portal.microsoft.com.
+We resolved an offline address book (OAB) download issue by adding a registry key to give the BITS jobs for automatic (nonmanual) OAB downloads the same priority as the BITS jobs for manual (user-initiated) OAB downloads.
+We fixed an issue where opening an .ICS attachment from an email shows security prompt.
+We fixed an issue where content marking wasn't working for HTML messages when SMIME was enabled.
+Resolved an issue in Outlook where content wasn't visible in the email body unless using Forward or Reply.
+PowerPoint
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+We fixed an issue where high-DPI images became blurry after an Office document was saved as PDF.
+Fixed an issue in PowerPoint where saves to a OneDrive sync location would sometimes fail unexpectedly for users subject to a mandatory sensitivity labeling policy.
+We resolved an issue where an error prompt appeared when initiating screen recording.
+Project
+We fixed an issue affecting the calculation of the Actual Cost of Work Performed (ACWP) when the Actual costs are always calculated by Project option is turned off.
+Visio
+We fixed an issue where PowerPoint stopped responding when a Visio object was activated and the mouse was moved over the stencil list.
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+Word
+We fixed an issue where the app can display multiple permission dialogs when opening a file with sensitivity label.
+We fixed an issue where user was unable to create a folder in SharePoint and an error message appeared when trying to create a new folder in SharePoint root site.
+We fixed an issue where the Title bar no longer showed a "Saved" status for locally saved files.
+Fixed an issue in Word where images would move when moused over.
+Resolved an issue where Track Changes didn't accept a change involving a checkbox.
+Made changes to prevent users from receiving the error "Sorry, something went wrong. Try again in a few moments." when using "Draft with Copilot" in certain cases.
+Resolved an issue in Outlook where content wasn't visible in the email body unless using Forward or Reply.
+Resolved an issue where placeholders in an equation would show when printing or exporting to PDF.
+Resolved an issue where items in the Table of Contents may be missing numbering.
+We resolved a graphics-related issue that caused the app to close unexpectedly at times.
+Office Suite
+In certain cases where the document must be opened as read-only, PowerPoint didn't properly indicate the read-only state to the user until a save is attempted.
+We fixed an issue where users experienced slowness when an Excel file contained many combo box form controls.
+We fixed an issue where users couldn't export a protected file to PDF if the sensitivity label applied to the file disables the EDITRIGHTSDATA usage right.
+We resolved an issue that was prompted when trying to perform office setup.
+We fixed an issue where the ink to text pen wasn't working properly.
+We fixed an issue where a label applied to a newly created file or label changed in an existing file that had any other label applied wasn't updating in the overflow menu in Excel, PowerPoint, and Word apps.
+We fixed a localization issue where Japanese characters were displayed with non-Japanese font, Malgun Gothic or Microsoft JhengHei.
+We fixed a localization issue where Japanese characters appeared in MS Gothic.
+Version 2409: October 15
+
+Version 2409 (Build 18025.20160)
+
+Resolved issues
+Word
+Fixed an issue that was preventing emails with linked SVG content from saving or sending.
+Version 2409: October 08
+
+Version 2409 (Build 18025.20140)
+
+Security updates listed here.
+
+Resolved issues
+Access
+Chart gridlines are now darker, so they're more visible.
+Outlook
+We fixed an issue that caused users in hybrid environments to be unable to apply labels to emails.
+Project
+Fixed an issue where signed macros wouldn't run even if the Trust Center Macro Settings "Disable all macros except digitally signed macros" option was selected.
+Word
+Resolved an issue where text wasn't clearly visible in High Contrast Mode when using "Draft with Copilot" and referencing a meeting under "Reference your content."
+Version 2409: September 25
+
+Version 2409 (Build 18025.20104)
+
+Resolved issues
+Word
+We fixed an issue where, when you save a file in Word, the save status is missing from the Title bar.
+Version 2409: September 23
+
+Version 2409 (Build 18025.20096)
+
+Feature updates
+Excel
+Data Aggregation Functions: We added two incredibly powerful new data aggregation functions: GROUPBY and PIVOTBY
+Information Protection: Improved DLP policy tip reliability: Word, Excel, and PowerPoint for Windows now consistently show the same policy tips that SharePoint Online and OneDrive for Business sites have determined should be shown on a file.
+PowerPoint
+Information Protection: Improved DLP policy tip reliability: Word, Excel, and PowerPoint for Windows now consistently show the same policy tips that SharePoint Online and OneDrive for Business sites have determined should be shown on a file.
+Word
+Information Protection: Improved DLP policy tip reliability: Word, Excel, and PowerPoint for Windows now consistently show the same policy tips that SharePoint Online and OneDrive for Business sites have determined should be shown on a file.
+Resolved issues
+Excel
+We fixed an issue where the ToolTips of pivot tables connected to OLAP cube aren't displayed.
+We fixed an issue where Excel may close unexpectedly when a Drill Down worksheet is moved to a new workbook.
+We fixed an issue where the Drop-down list menu options in Excel cells become unclickable after opening a User Form that uses a WebBrowser object.
+We fixed an issue where the user would experience changes in column widths unexpectedly when using PivotTables.
+We fixed issues users could encounter applying conditional formatting via the Top10 Interop object in Add-in, which included requiring a restart and potential data loss.
+Outlook
+We fixed an issue that made it possible for a legacy WebView ItemSend add-in to bypass condition checks when switching items.
+We fixed an issue where the app closed unexpectedly when a cache file contained corrupted data.
+PowerPoint
+The Title field in File > Info will no longer be filled in automatically when saving a file.
+Fixed an issue in PowerPoint where the digital signature of the VBA project wasn't being persisted after applying or changing sensitivity labels.
+Fixed an issue in PowerPoint where a document saved to a OneDrive sync location intermittently stopped working for users subject to a mandatory sensitivity labeling policy.
+Visio
+We fixed an issue where Visio would become unresponsive when editing a Visio document embedded in a PowerPoint presentation.
+We fixed an issue where Visio would stop responding if it was opened in a remote desktop session, and then the remote desktop session was closed and reopened.
+Word
+Resolved an issue that prevented a file from opening for some documents.
+Resolved an issue where Document Mode would switch from "editing" to "viewing" if user enabled "Track Changes" and set "For Everyone."
+Resolved an issue where an email wouldn't fully render in the preview pane.
+Resolved an issue where watermarks in a document weren't being printed.
+Resolved an issue where "Restricted Editing" didn't prevent editing after uploading a document to SharePoint and reopening.
+Resolved an issue when modifying styles that the "Style based on" entry would be blank.
+Office Suite
+This fix preserves compatibility with certain rare proofing tool installation scenarios.
+Office 2016 proofing tools are offered for download via standalone per-language installers. Even if they may appear to function correctly, however, using these Office 2016 proofing tools together with later versions of Office isn't supported. This fix prevents a crash in Word, Outlook, OneNote, and PowerPoint caused by this unsupported installation scenario. Users are recommended to uninstall the Office 2016 proofing tools if they're using a later version of Office and to install the appropriate Office language packs instead. Office language packs update automatically along with the version of Office they're paired with.
+Version 2408: September 10
+
+Version 2408 (Build 17928.20156)
+
+Security updates listed here.
+
+Resolved issues
+Office Suite
+We're removing Flip video support when the service goes offline on October 1, 2024.
+Version 2408: August 26
+
+Version 2408 (Build 17928.20114)
+
+Feature updates
+Excel
+Python in Excel released to GA: We released Python in Excel, enabling you to process data in Excel with Python code. Blog post describing new feature.
+Word
+Removed option to display Track Changes balloons in left margin: The advanced Track Changes option to set the margin for balloons to left has been removed.
+Removed preference to open files in Reading View: The option "Open email attachments and other uneditable files in reading view" has been removed. The experience now defaults to "Viewing Mode."
+Blog post functionality removed: The blogging feature has been removed, and the Blog Post tab in the ribbon is no longer accessible.
+Office Suite
+
+Use sensitivity labels in Microsoft 365 apps when connected experiences are disabled: Your organization can now disable connected experiences for privacy concerns without impacting data security policies, such as sensitivity labels. Services associated with Microsoft Purview (for example, sensitivity labels, rights management, ...) are no longer controlled by policy settings to manage privacy controls for Microsoft 365 Apps. Instead, these services rely on their existing security admin controls in Purview portals.
+
+Open locked records as read-only: Files with retention labels marking them as locked records will now open as read-only to prevent user edits.
+
+Resolved issues
+Excel
+We fixed an issue where the worksheet wasn't displayed correctly when changing Window.Zoom through VBA.
+We fixed an issue where users reported AutoSave wasn’t working on new workbooks.
+Outlook
+We fixed an issue that caused default SMIME labels to fail to apply when a user replies to or forwards an unlabeled message.
+We fixed an issue that caused the buttons on the Reminders dialog to be truncated with some fonts.
+We fixed an issue that caused users to be unable to send mails while the dlpwaitonsendtimeout registry key was set.
+PowerPoint
+Fixed an issue in PowerPoint where the digital signature of the VBA project wasn't being persisted after applying or changing sensitivity labels.
+Visio
+Text strikethrough now visible in view mode in Visio 2016 after resolving an issue.
+Search for shapes and stencils saved on the local device is now available after resolving an issue.
+Word
+We fixed an issue where a document displayed as saved instead of working offline.
+Resolved an issue where the ruler wouldn't show unit numbers or indents in RTL layout.
+Resolved an issue where preferences deployed with the Office Deployment Tool weren't being set correctly.
+Japanese default character and paragraph properties reverted back to default font size of 10.5 pt, default paragraph Space After to 0, and the line spacing to Single.
+Office Suite
+We fixed an issue where the application displayed empty or incorrect contents during scrolling or switching sheets in right-to-left (RTL) Excel.
+We fixed an issue where the application wouldn't render shapes while switching sheets in Excel.
+Resolved a performance issue in PowerPoint when typing with autocorrect.
+We fixed an issue where the user couldn't install Microsoft 365 apps on an enrolled device.
+Version 2407: August 13
+
+Version 2407 (Build 17830.20166)
+
+Security updates listed here.
+
+Various fixes to functionality and performance.
+Version 2407: August 01
+
+Version 2407 (Build 17830.20138)
+
+Resolved issues
+Access
+We fixed an issue with Linked Tables. When a user tried to close an existing linked table with a Dynamics 365 data source the following error displayed, "This action will reset the current code in break mode."
+Excel
+We fixed an issue where the ChartArea.ClearContents method might unexpectedly stop working.
+We fixed an issue where linked pictures weren't updating.
+We fixed an issue where coauthoring on text boxes could yield unexpected results.
+We fixed an issue for PivotTables in which custom styles weren't being applied correctly when the option to insert a blank row after each item was selected.
+We fixed an issue where formatting the border color resulted in an incorrect color.
+Outlook
+We fixed an issue that caused users to be unable to see the categories they applied to an email until after they closed the email window.
+We fixed an issue that caused Copilot drafts to display incorrectly with non-Latin character sets.
+We resolved an issue by implementing an admin-controlled policy for MailTips. This policy ensures that users receive notifications when their emails are blocked, restricted, or contain sensitive information.
+PowerPoint
+We fixed an issue where line widths weren't preserved when exporting arrow shapes to PDF.
+Fixed an issue where desktop PowerPoint tries to repair a corrupt password-encrypted file and always stops working. PowerPoint will now display the error message, "PowerPoint for desktop can't repair this file. Try repairing in PowerPoint for the web."
+Fixed an issue in PowerPoint where saves to a OneDrive sync location would sometimes fail unexpectedly for users subject to a mandatory sensitivity labeling policy.
+Fixed an issue where opening a OneDrive sync, client-managed file on paths exceeding 259 characters resulted in save not working if you edit the file. PowerPoint now blocks opening and displays an appropriate error message when this condition is detected.
+Fixed an issue in PowerPoint where the content marks weren't fully removed from the document data when downgrading the sensitivity label.
+Word
+We fixed an issue in which certain customers who installed third party fonts on their machines could see garbled text with WordArt effects applied to paragraph text in Word.
+We fixed an issue where the language of a presentation wasn't retained when saving or exporting the presentation to a .PDF file.
+Resolved an issue where revisions may be skipped when reviewing using VBA.
+Resolved an issue where Word may quit unexpectedly when the "Next" or "Previous" buttons in the review tab are clicked to navigate through comments.
+Resolved an issue where the Actions pane was unavailable in Office 2016.
+Resolved an issue where the prompt given to Copilot is lost if the user encountered an error message. The prompt is now saved after clicking 'Generate.'
+Resolved an issue where characters could appear corrupted when opening RTF emails.
+Resolved an issue where the Word process may continue running for users with the GENKO add-in after Word is called using OLE.
+Resolved an issue where users were unable to launch Word with the DDE function (/x switch).
+Resolved an issue where Toolbar and Command bar customizations could become corrupted in a document.
+Office Suite
+We fixed an issue where users opening a file in viewing mode, could see each other's names if the file has an encryption label with user defined permissions.
+We fixed an issue where opening a file encrypted by a sensitivity label changed the modified date/time in the OneDrive sync folder within file explorer view.
+Resolved a performance issue when typing with autocorrect on in PowerPoint.
+We fixed a problem specific to Rich Text Format emails, where images inserted into the email would become degraded when the email was saved as a draft.
+Fixed an issue where PowerPoint closed unexpectedly during shutdown of add-ins.
+We fixed an issue with multiple Dynamic Link Library (DLL) files. These files were signed with an invalid code signing certificate, resulting in an error message: "This CA Root certificate isn't trusted because it isn't in the Trusted Root Certification Authorities store."
+Version 2406: July 09
+
+Version 2406 (Build 17726.20160)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We resolved an issue where characters don't appear correctly in Text Box Gallery.
+Word
+We resolved an issue where characters don't appear correctly in Text Box Gallery.
+Resolved an issue where opening two documents and using Copilot may cause a sensitivity label to incorrectly apply to the wrong document.
+Resolved an issue when assigning a Task in Outlook, characters didn't render correctly.
+Version 2406: June 26
+
+Version 2406 (Build 17726.20126)
+
+Feature updates
+Excel
+Use Microsoft Purview to prevent some connected experiences that analyze content: Use a new sensitivity label setting or protection with Double Key Encryption to prevent content within Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis as a privacy control, even when these are stored in Microsoft’s cloud, such as SharePoint or OneDrive. This helps your organization to optimize your data privacy needs on a per-content basis using the familiar configurations and end-user experiences available with Microsoft Purview. Learn More
+Outlook
+Use Microsoft Purview to prevent some connected experiences that analyze content: Use a new sensitivity label setting or protection with Double Key Encryption to prevent content within Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis as a privacy control, even when these are stored in Microsoft’s cloud, such as SharePoint or OneDrive. This helps your organization to optimize your data privacy needs on a per-content basis using the familiar configurations and end-user experiences available with Microsoft Purview. Learn More
+PowerPoint
+Use Microsoft Purview to prevent some connected experiences that analyze content: Use a new sensitivity label setting or protection with Double Key Encryption to prevent content within Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis as a privacy control, even when these are stored in Microsoft’s cloud, such as SharePoint or OneDrive. This helps your organization to optimize your data privacy needs on a per-content basis using the familiar configurations and end-user experiences available with Microsoft Purview. Learn More
+Word
+Use Microsoft Purview to prevent some connected experiences that analyze content: Use a new sensitivity label setting or protection with Double Key Encryption to prevent content within Word, Excel, PowerPoint, and Outlook from being sent to Microsoft for content analysis as a privacy control, even when these are stored in Microsoft’s cloud, such as SharePoint or OneDrive. This helps your organization to optimize your data privacy needs on a per-content basis using the familiar configurations and end-user experiences available with Microsoft Purview. Learn More
+Resolved issues
+Excel
+We fixed an issue where hyperlinks didn't properly exported to SharePoint.
+We fixed an issue where an error regarding internal names unexpectedly occurred upon opening a workbook.
+We fixed an issue where words containing accentuated characters might be rendered with unexpected vertical alignment.
+We fixed an issue where Excel could close unexpectedly upon deleting an ActiveX control through an add-in.
+We fixed an issue where Excel documents might be unexpectedly edited when a mandatory sensitivity label hasn't been applied.
+Outlook
+We fixed an issue that prevented users from sending mail for a few hours after add-ins with on-send events were updated.
+We fixed an issue that caused Outlook to exit unexpectedly shortly after launch for some users.
+We fixed an issue that caused users to see Outlook exit unexpectedly when declining a meeting and sending a response.
+We fixed an issue that caused Outlook to close unexpectedly when using Copilot Summarize.
+PowerPoint
+We updated the Designer icon in the PowerPoint ribbon to a new purple color to be consistent with new Designer branding.
+Project
+We fixed an issue where tasks were lost from the timeline view when saving an MPP project file to Project Server or to Project Online.
+Word
+An issue that could result in an application to close unexpectedly when interacting with the Thesaurus Pane was fixed.
+Resolved an issue where embedded objects couldn't be opened after signing a document and marking it as final.
+Resolved an issue in Word where embedded objects couldn't be opened if the file needed to be checked out before editing.
+Resolved an issue where multiple newlines were appearing between paragraphs in multi-line comments while coauthoring.
+Resolved an issue where an error would occur when opening a document with a template attached that was saved in the Word 2003 XML Document format.
+Resolved an issue where the comment anchor range would still show after the comment was resolved.
+Resolved an issue where Auto-Recovered documents would be saved in compatibility mode.
+Resolved an issue in Word where the Check-out banner wouldn't display when opening files from SharePoint with a file path longer than 260 characters.
+Resolved an issue in Word where pasting data from Word or Excel to an Outlook template as a link would give an error message.
+We resolved an issue in Word where Footnote numbering would unexpectedly change to the number '8.'
+Version 2405: June 19
+
+Version 2405 (Build 17628.20164)
+
+Resolved issues
+Excel
+This fix rectifies a problem in Excel where inserting or deleting cells might occasionally fail, leading to formulas recalculating inaccurately.
+Version 2405: June 11
+
+Version 2405 (Build 17628.20144)
+
+Security updates listed here.
+
+Resolved issues
+Outlook
+We fixed an issue that prevented users from sending mail for a few hours after updating add-ins with on-send events.
+Version 2405: May 30
+
+Version 2405 (Build 17628.20110)
+
+Resolved issues
+Excel
+We fixed an issue where an embedded workbook in .xls format didn't properly closed.
+We fixed an issue where changes couldn’t be uploaded to the server.
+We fixed an issue where a pivot table couldn’t be inserted in a new worksheet.
+Outlook
+We fixed an issue that caused users to be unable to open some search results when searching their Online Archive.
+We fixed an issue that caused users to be unable to view the "Permission granted by" information on Digitally Rights Managed messages.
+We fixed an issue that caused Outlook to exit unexpectedly when using Copilot Summarize.
+We fixed an issue that caused users to see no prompt to send updates to attendees after removing attendees from a meeting on a shared calendar where the location of the meeting was set.
+We fixed an issue that caused updates made by delegates to the "Show As" setting on a manager's calendar fail to be persisted after clicking "Send Update."
+We fixed an issue that caused draft messages with inline images to be converted to plain text when saving as an .MSG file.
+We fixed an issue that caused the "Edit Meeting" button to disappear when a series exception is the first item opened in the Outlook session.
+We fixed an issue that caused users to see incorrect label information when they had two or more email windows open while a message with a label was displayed in the preview pane.
+We fixed an issue that caused Outlook users with E3 licenses to be unable to open protected meeting invitations without going to the web.
+We added support for converting some COM add-ins to Web add-ins.
+PowerPoint
+
+The Title field in File > Info will no longer be filled in automatically when saving a file.
+
+Improved experience in changing the source of a linked chart: In a situation where a presentation contains a linked chart, which isn't only stored at a SharePoint location, but also synced to a local folder, when the user tries to change the chart source via File -> Info -> Edit Links to File -> Change Source..., the initial location in the Change Source dialog now shows the current location of the linked chart, instead of the last used location. PowerPoint can now convert the local sync folder location to its corresponding SharePoint URL and preserve it in the file if the user chooses a chart in a local sync folder as the new chart source.
+
+The Edit Photo Album option is now enabled in Slide Sorter view.
+
+Word
+Resolved an issue in Outlook where background images wouldn't render correctly, requiring the user to scroll or click into the message for the image to appear.
+Resolved an issue where text inside the track change card wasn't properly visible when using dark grey theme.
+Resolved an issue in Word where content controls may be removed when coauthoring.
+Resolved an issue where attempting to reference a file using Draft with Copilot would give the error "Copilot wasn't able to apply the right sensitivity label to this file because it couldn't work with the content you referenced."
+Resolved an issue that caused footnote numbers to be missing from the Cross Reference list when Track Changes is turned on in a document and changes are made.
+Resolved an issue where the Enter and Backspace keys weren't performing their expected functions within a list, preventing users from exiting the list.
+Office Suite
+We fixed an issue where the Organization Chart add-in for Microsoft programs wasn't loading properly.
+Version 2404: May 14
+
+Version 2404 (Build 17531.20152)
+
+Security updates listed here.
+
+Feature updates
+Office Suite
+Microsoft 365 apps now support OpenDocument Format 1.4: ODF files in Word, Excel, and PowerPoint will now save to the ODF 1.4 format by default. See details in blog post.
+Resolved issues
+Outlook
+
+We fixed an issue that caused Sovereign users to be unable to create ToDo tasks from Outlook.
+
+We fixed an issue that caused the first PolicyTip to take a long time to appear after starting Outlook.
+
+Word
+Resolved an issue in Word where content controls may be removed when coauthoring.
+Version 2404: May 07
+
+Version 2404 (Build 17531.20140)
+
+Resolved issues
+Outlook
+We fixed an issue where the app closed unexpectedly using the Scheduling Assistant when creating a new meeting or viewing an existing meeting.
+We fixed an issue that caused add-in developers to hit timeouts when retrieving notifications from an Outlook client context.
+Version 2404: May 01
+
+Version 2404 (Build 17531.20128)
+
+Various fixes to functionality and performance.
+Version 2404: April 29
+
+Version 2404 (Build 17531.20120)
+
+Feature updates
+Excel
+Reduce workbook size bloat from unwanted cell formatting with "Check Performance": Reduce workbook size bloat from unwanted cell formatting with new "Check Performance" task pane user experience.
+Resolved issues
+Access
+We fixed a performance issue when applying criteria to the ID field in a query to a linked ODBC table.
+We fixed an issue where Access didn't run digitally signed macros.
+Excel
+We fixed the issue of a shape location shifting when pasting a range with some shapes as a picture.
+We fixed an issue where all visible panes get drawn for scrolling operations in multiple pane scenarios.
+We fixed an issue where the COUNTIF function didn't work correctly when counting merged cells with dropdown lists.
+We fixed a rendering issue related to scrolling or zooming in charts.
+We fixed an issue in Excel where the user was unable to set the default font.
+OneNote
+Added a new setting to configure whether the Windows taskbar is shown when you enter Full Page View.
+Outlook
+We fixed an issue that caused users to be prompted to save messages that had no changes when the message was opened in a previous Outlook session.
+We fixed an issue that caused some users to see no search results in Org Explorer.
+We fixed an issue that caused Outlook to take longer to boot than expected.
+We fixed an issue that caused users with on premise mailboxes to see no web add-ins in Outlook.
+We fixed an issue that caused Outlook to exit unexpectedly when clicking on the Organization tab in the Hierarchical Address Book while Narrator is running.
+We fixed an issue that caused users to intermittently be unable to move items to their Online Archive.
+We fixed an issue where users were unable to recall a message sent in Outlook.
+We fixed an issue where custom forms from MAPI form servers stopped responding.
+We fixed an issue where the older format of an add-in was being launched instead of the newer format whenever a user tried to run the add-in from an Actionable Message.
+PowerPoint
+We resolved a problem where online videos didn't play in some cases.
+Project
+If an enterprise template is created with the Microsoft Project Professional 2016 desktop, when users with newer versions of Project create projects based on the template, information such as task notes may be missing. This fix addresses this problem.
+Word
+We fixed an issue where the accessibility pane was blank on saving the document in .doc format or when document was in compatibility mode.
+We fixed an issue that caused Outlook to exit unexpectedly when attempting to undo a change in a draft after switching from an account that has automatic signatures to an account that doesn't have a signature configured.
+We fixed an issue where a notification wasn't disabling as expected in template (.dotx) files with personal information removal enabled in the Change Setting or the Trust Center Settings.
+We fixed an issue where opening certain Word documents would give error, "Word experienced an error trying to open the file."
+Office Suite
+We fixed an issue where the user wasn’t prompted to save to the cloud on exit from Excel.
+We fixed an issue where the Office update installer would appear to be unresponsive.
+Unicode character support.
+Version 2403: April 09
+
+Version 2403 (Build 17425.20176)
+
+Security updates listed here.
+
+Version 2403: March 29
+
+Version 2403 (Build 17425.20146)
+
+Resolved issues
+Outlook
+We fixed an issue that caused some users to receive a Nondelivery Report when attempting to reply to or forward a message.
+Version 2403: March 27
+
+Version 2403 (Build 17425.20138)
+
+Feature updates
+Excel
+Create richer analyses and summaries with PivotTables and data types: PivotTables in Excel now support data types. Instead of just strings, bring data types such as images in cells to your PivotTable rows and columns, or use related properties from linked data types such as Stocks and Geography directly from the PivotTable pane.
+OneNote
+Preview of New Sticky Notes app on Windows available from OneNote app: The new Sticky Notes app allows you to create and recall notes like the classic Microsoft Sticky Notes app, while making it easier to capture screenshots, automatically add the source information to the notes, and more. See details in blog post
+Outlook
+Typography improvements in Word and Outlook for Windows: Advanced Typography in Word and Outlook for Windows settings Use Smart Justification and Use Hyphenation are now enabled by default, Typography improvements in Word and Outlook for Windows.
+Resolved issues
+Excel
+We fixed an issue where the app closed unexpectedly when the user would attempt to open or import large text files.
+We fixed an issue that caused errors when attempting to save files in environments where Default Labeling and Mandatory Labeling policies are configured and AIP document coauthoring is disabled.
+We fixed an issue where an Excel file was no longer able to be saved due to file corruption with conditional formatting.
+We fixed an issue where the input language of a keyboard converted from Chinese Traditional to English, an error appeared, and the app closed unexpectedly when the name of an Excel sheet was edited.
+We fixed an issue where the app's response is delayed when the user first edits a formula in a cell.
+We fixed an issue where attempting to programmatically set the Formula property on a Linked Picture resulted in a run-time error.
+We fixed an issue where the app didn't paste cells as merged when they're merged in the copy source.
+We fixed an issue in Power Pivot to properly validate characters.
+We removed Organization Chart add-in for Microsoft Office programs due to lack of sufficient Unicode support.
+OneNote
+We fixed an issue where, after switching from an ODM notebook to an ODP notebook with the notebooks pane pinned, the Math Assistant continued to appear in the Draw tab and prompted an error.
+Outlook
+We fixed an issue with user and shared mailboxes where a message sent from a user with saved to Sent Items folder enabled and where DelegateSentItemsStyle is set to 1 is saved in the shared mailbox Sent Items folder.
+We fixed an issue where Office add-ins disappeared from the ribbon.
+We fixed an issue that affected all-day meetings with a reminder on the day of. The meeting didn't open, and an error message was displayed.
+We fixed an issue that caused the following symptoms:
+Users were unable to recall a message in some environments.
+Users were unable to address synchronization conflicts.
+Users were unable to load forms from third party MAPI forms servers.
+We fixed an issue that caused some Webview-based add-ins to encounter authentication errors that caused them to be unable to be loaded in the task pane.
+We fixed an issue that caused Outlook to exit unexpectedly when attaching an Outlook item from the Insert tab.
+PowerPoint
+We fixed an issue where PowerPoint closed unexpectedly when a user tried to open a copy of a presentation saved to the cloud.
+We fixed an issue where PowerPoint (.pptx) files exported as .pdf truncated or omitted images.
+We fixed an issue in the PowerPoint presenter view where speaker notes from a previous slide would move to the current slide view if no speaker notes were available.
+We removed Organization Chart add-in for Microsoft Office programs due to lack of sufficient Unicode support.
+Project
+We fixed a performance issue with opening a Project MPP file with a high percentage difference in file size by shortening the interval of file compaction.
+We fixed an issue in projects saved to SharePoint document libraries where, on Save, a user's changes remained in their local cache after the file check-in was complete. If the file was then immediately checked out, updated, and checked back in by a different user, the first user experienced possible data loss.
+Word
+We fixed an issue where certain Word documents wouldn't open in compatibility mode.
+We fixed an issue that prevented users from receiving emails created using Mail Merge.
+We fixed an issue where completing Proofing with an Office Add-in's side pane open would result in the add-in's pane being closed.
+We fixed an issue where characters became invisible when converted to Kanji.
+We fixed an issue where styles changed or were applied incorrectly when transitioning to WPM.
+We fixed an issue where the Word template (normal.dotm) was overwritten upon exit when the proofing language was set to Japanese.
+We fixed an issue where certain Word documents would give error "Word experienced an error trying to open the file." on open.
+We removed Organization Chart add-in for Microsoft Office programs due to lack of sufficient Unicode support.
+We fixed an issue where pasting a list with a custom style into a document that was saved to the cloud with restricted formatting would show an "AutoSave Failed" error.
+We updated OLE linking to better match the OS Unicode support.
+Office Suite
+We fixed an issue where the app wouldn't reinstall when the device was offline, and the reinstall was from a local install source.
+We fixed an issue where a mandatory sensitivity label wasn't applied or prompted for if an email was sent from the Drafts-folder.
+We fixed an issue where the app closed unexpectedly when a user switched Excel from an account where preview was started or enabled to an account where no preview had been started or enabled.
+We fixed an issue where the user was notified of an Alt-text violation after adding and deleting an image.
+Version 2402: March 12
+
+Version 2402 (Build 17328.20184)
+
+Security updates listed here.
+
+Feature updates
+Excel
+Microsoft Purview Information Protection Tracking and Revocation - File Registration: Protected local Office files are automatically registered for tracking when created, and previously protected local Office files are registered the next they're opened in an updated client. Compliance administrators can track and revoke access to registered Office files.
+Microsoft Purview Information Protection Tracking & Revocation - End-User Tracking & Revocation: From the sensitivity menu, users can check who has tried accessing their protected files and revoke access when needed.
+PowerPoint
+Microsoft Purview Information Protection Tracking and Revocation - File Registration: Protected local Office files are automatically registered for tracking when created, and previously protected local Office files are registered the next they're opened in an updated client. Compliance administrators can track and revoke access to registered Office files.
+Microsoft Purview Information Protection Tracking & Revocation - End-User Tracking & Revocation: From the sensitivity menu, users can check who has tried accessing their protected files and revoke access when needed.
+Word
+Microsoft Purview Information Protection Tracking and Revocation - File Registration: Protected local Office files are automatically registered for tracking when created, and previously protected local Office files are registered the next they're opened in an updated client. Compliance administrators can track and revoke access to registered Office files.
+Microsoft Purview Information Protection Tracking & Revocation - End-User Tracking & Revocation: From the sensitivity menu, users can check who has tried accessing their protected files and revoke access when needed.
+Resolved issues
+Access
+We fixed an issue where the app closed unexpectedly.
+Excel
+We fixed an issue where the app closed unexpectedly when opening files with pivot tables and table design in macro-enabled files.
+Word
+We fixed an issue where the app closed unexpectedly when the undo function is used.
+Version 2402: March 04
+
+Version 2402 (Build 17328.20162)
+
+Resolved issues
+Outlook
+We fixed an issue where users were unable to send emails from QuickBooks, as described in the following article: Unable to send emails from QuickBooks using Outlook Desktop after update to Version 2402.
+We fixed an issue that caused some users to see Outlook exiting unexpectedly when clicking a hyperlink.
+Office Suite
+We fixed an issue where opened Office apps didn't automatically start when a laptop was reopened, and an error message appeared after manual relaunch.
+Version 2402: February 28
+
+Version 2402 (Build 17328.20142)
+
+Resolved issues
+Excel
+We fixed an issue where a file failed to upload with the following error when coauthoring: "We ran into a problem with this file and can't save any new changes. Save a copy to avoid losing your work."
+We fixed an issue where a dropdown list wouldn't copy when taking a print screen using Windows+Shift+S.
+OneNote
+We fixed an issue where resizing issues occurred when the app was docked to the desktop.
+Outlook
+We fixed an issue that caused Outlook to exit unexpectedly when expanding a conversation in the search results from a search of "All Mailboxes."
+We fixed an issue that caused Outlook to unexpectedly exit shortly after launching for some users.
+We fixed an issue that caused third party MAPI applications to be unable to retrieve licensing information.
+Fixed an issue with mail view appearing blank for an extended time when switching folders.
+We fixed an issue that caused Outlook to exit unexpectedly when attaching an Outlook item (such as an email message) from the insert tab.
+We fixed an issue that caused Outlook to exit unexpectedly when adding an attachment in some scenarios.
+We fixed an issue where a Meeting window wouldn't close and the meeting wouldn't get added to the organizer's calendar if an image had previously been added into the body of the message and the organizer was attempting to reopen the meeting and add new attendees.
+We fixed an issue that caused users to be unable to synchronize email with the Exchange ActiveSync protocol.
+PowerPoint
+We fixed an issue where users weren't able to create a bullet list with hyphens.
+We fixed an issue where an error message would appear when opening a copy of a file.
+Word
+"Show Picture Placeholders" was removed under Advanced Options.
+We fixed an issue where the wrong paper size was chosen when two paper sizes in a printer were close to 1/6th of an inch of each other.
+We fixed an issue where the font would switch from Aptos to Times New Roman when typing in a new email.
+We fixed an issue where the default font Yu Mincho Demibold would change to Yu Gothic when the user moved to the next line.
+We fixed an issue where the error message "Compile error" would appear when opening a .docm file.
+We fixed an issue where only one document would open when trying to open several files containing SQL data from File Explorer or the desktop.
+Office Suite
+We fixed an issue where entering in Notes on tasks in the Planner resulted in data in Power BI and Excel Export to have unnecessary empty lines.
+We fixed an issue that caused event based add-ins to be unable to display the Info Bar in Win32 Outlook.
+Version 2401: February 13
+
+Version 2401 (Build 17231.20236)
+
+Security updates listed here.
+
+Resolved issues
+Excel
+We fixed an issue where macros were being corrupted when saving Excel files.
+Outlook
+We fixed an issue where the App Search bar was unexpectedly appearing above the message list in Outlook 2016 and Outlook 2019.
+Office Suite
+We fixed an issue where a long running slideshow using a Microsoft Power BI add-in would cause a blank screen.
+We fixed an issue where an add-in wouldn't load after click trust for content add-in was selected.
+Version 2401: February 01
+
+Version 2401 (Build 17231.20194)
+
+Resolved issues
+Outlook
+We fixed an issue that caused expanded groups in the message list to become collapsed when changing which column they're arranged by.
+Version 2401: January 30
+
+Version 2401 (Build 17231.20182)
+
+Resolved issues
+Excel
+We fixed an issue where the Clipboard Locked Alert is disrupting the workflow for some users.
+We fixed an issue where the application would stop responding when saving changes.
+We fixed an issue where converting a diagram to shapes would result in invalid shape geometry.
+OneNote
+We fixed an issue where meetings spanning a full day were appearing in meeting details on the following day.
+Outlook
+We fixed an issue that caused Outlook to exit unexpectedly after discarding an edit to a received single instance meeting.
+PowerPoint
+We fixed an issue where converting a diagram to shapes would result in invalid shape geometry.
+We fixed an issue where Visual Basic for Applications (VBA) RecordNarrationFromCurrentSlide failed with a runtime error.
+We fixed an issue where the "Cell Margins" in the Table Layout ribbon item was disabled for users with only Edit Information Rights Management (IRM) permissions.
+We fixed an issue where the Add comments method in Visual Basic for Applications (VBA) showed a runtime error.
+We fixed an issue where the Notes and Slide layout would open with incorrect proportions when a file was opened from a protected view.
+Word
+We fixed an issue where comment cards may appear too wide and cut off text when changing or switching the screen in use.
+Version 2312: January 09
+
+Version 2312 (Build 17126.20132)
+
+Security updates listed here.
+
+Various fixes to functionality and performance.
+Version 2312: January 04
+
+Version 2312 (Build 17126.20126)
+
+Feature updates
+Excel
+Sensitivity toolbar is now available when creating a copy of a document: The sensitivity bar is now available in Word, Excel, and PowerPoint when users are creating copies of their documents in File / Save As. This helps users understand the security policies that apply to their document.
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+Outlook
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+PowerPoint
+Sensitivity toolbar is now available when creating a copy of a document: The sensitivity bar is now available in Word, Excel, and PowerPoint when users are creating copies of their documents in File / Save As. This helps users understand the security policies that apply to their document.
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+Word
+Sensitivity toolbar is now available when creating a copy of a document: The sensitivity bar is now available in Word, Excel, and PowerPoint when users are creating copies of their documents in File / Save As. This helps users understand the security policies that apply to their document.
+Office has a new default theme: We updated the default font and colors of the Office theme to be more modern and accessible.
+Resolved issues
+Excel
+We fixed an issue where Custom Menu text was truncated when right clicking in a cell.
+Outlook
+We fixed an issue where the message list was blank when switching between the "Focused" and "Other" views.
+We fixed an issue where Skype for Business was shutting down unexpectedly at startup.
+We fixed an issue where the list of invalid recipients was showing duplicates.
+We fixed an issue where Mail Tips weren't showing for attachments.
+We fixed an issue that caused Outlook to exit unexpectedly when opening embedded mail attachments in another application.
+We fixed an issue that caused the tracking status summary to be missing from the organizer's meeting form.
+PowerPoint
+We fixed an issue where restoring a previous version of a presentation wasn't working as expected when using Version History.
+We fixed an issue where Visual Basic for Applications (VBA) RecordNarrationFromCurrentSlide failed with a runtime error.
+Project
+We fixed an issue where the duration on manually scheduled tasks wasn't calculated correctly when importing from XML.
+Word
+We fixed an issue where the content control end tag is marked at the end of the document automatically if the document is edited in Word Online and then opened in Word desktop.
+We fixed an issue where the input language formatting would sometimes revert to a previously typed language when using Language Auto-Detect.
+Office Suite
+We fixed an issue where the orientation of Scalable Vector Graphics (SVG) line markers wasn't rendering correctly.
+
+ Note
+
+If you need help with an issue with using Office, we recommend that you post your question on Microsoft's Answers forum or Tech Community, or you can contact support.
+
+Additional resources
+
+Training
+
+Learning path
+
+Use advance techniques in canvas apps to perform custom updates and optimization - Training
+
+Use advance techniques in canvas apps to perform custom updates and optimization
+
+Last updated on 11/10/2026

@@ -1,0 +1,600 @@
+{
+ "zamzar": {
+  "SampleBrochure": {
+   "pages": 2,
+   "page_detail": [
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 0,
+     "overlap_chars": 0,
+     "chars": 850
+    },
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 3,
+     "overlap_chars": 0,
+     "chars": 2229
+    }
+   ],
+   "ref_words": 660,
+   "found_words": 650,
+   "recall": 0.9848,
+   "extra_words_of_ref": 0,
+   "extra_ratio": 0.0,
+   "words_not_in_ref": [
+    [
+     "wellknown",
+     1
+    ]
+   ],
+   "images_total": 3,
+   "overlap_ratio": 0.0,
+   "producer": "Microsoft® Publisher 2010",
+   "creator": "Microsoft® Publisher 2010",
+   "fonts": [
+    "Arial",
+    "Garamond",
+    "Garamond,Bold",
+    "Georgia,Bold",
+    "Gill"
+   ],
+   "bytes": 370731
+  },
+  "SampleNewsletter": {
+   "pages": 4,
+   "page_detail": [
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 1,
+     "overlap_chars": 0,
+     "chars": 1806
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 0,
+     "chars": 2144
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 0,
+     "chars": 2132
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 0,
+     "chars": 1592
+    }
+   ],
+   "ref_words": 1614,
+   "found_words": 1582,
+   "recall": 0.9802,
+   "extra_words_of_ref": 16,
+   "extra_ratio": 0.0099,
+   "words_not_in_ref": [
+    [
+     "g",
+     3
+    ],
+    [
+     "t",
+     2
+    ],
+    [
+     "v",
+     2
+    ],
+    [
+     "n",
+     2
+    ],
+    [
+     "c",
+     2
+    ],
+    [
+     "es",
+     2
+    ],
+    [
+     "imagp",
+     2
+    ],
+    [
+     "ge",
+     2
+    ],
+    [
+     "ents",
+     2
+    ],
+    [
+     "cli",
+     2
+    ],
+    [
+     "r",
+     1
+    ],
+    [
+     "o",
+     1
+    ],
+    [
+     "h",
+     1
+    ],
+    [
+     "2",
+     1
+    ],
+    [
+     "livin",
+     1
+    ],
+    [
+     "d",
+     1
+    ],
+    [
+     "le",
+     1
+    ],
+    [
+     "rn",
+     1
+    ],
+    [
+     "la",
+     1
+    ],
+    [
+     "vo",
+     1
+    ],
+    [
+     "lum",
+     1
+    ],
+    [
+     "ue",
+     1
+    ]
+   ],
+   "images_total": 1,
+   "overlap_ratio": 0.0,
+   "producer": "Zamzar",
+   "creator": "Zamzar",
+   "fonts": [
+    "Elephant",
+    "Franklin",
+    "Rockwell",
+    "Symbol",
+    "Times"
+   ],
+   "bytes": 410185
+  }
+ },
+ "libreoffice-24.2.7": {
+  "SampleBrochure": {
+   "pages": 2,
+   "page_detail": [
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 0,
+     "overlap_chars": 0,
+     "chars": 882
+    },
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 3,
+     "overlap_chars": 33,
+     "chars": 2214
+    }
+   ],
+   "ref_words": 660,
+   "found_words": 658,
+   "recall": 0.997,
+   "extra_words_of_ref": 0,
+   "extra_ratio": 0.0,
+   "words_not_in_ref": [
+    [
+     "soonto",
+     1
+    ]
+   ],
+   "images_total": 3,
+   "overlap_ratio": 0.0107,
+   "ssim_vs_publisher": 0.725,
+   "producer": "LibreOffice 24.2",
+   "creator": "Draw",
+   "fonts": [
+    "DejaVuSerif",
+    "DejaVuSerif-Bold",
+    "Inter-Bold",
+    "Inter-BoldItalic",
+    "Inter-Italic",
+    "Inter-Regular",
+    "LiberationSans"
+   ],
+   "bytes": 173382
+  },
+  "SampleNewsletter": {
+   "pages": 4,
+   "page_detail": [
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 1,
+     "overlap_chars": 1169,
+     "chars": 3998
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 2102,
+     "chars": 5917
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 2096,
+     "chars": 5906
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 40,
+     "chars": 3437
+    }
+   ],
+   "ref_words": 1614,
+   "found_words": 1614,
+   "recall": 1.0,
+   "extra_words_of_ref": 2460,
+   "extra_ratio": 1.5242,
+   "words_not_in_ref": [],
+   "images_total": 1,
+   "overlap_ratio": 0.2808,
+   "ssim_vs_publisher": 0.672,
+   "producer": "LibreOffice 24.2",
+   "creator": "Draw",
+   "fonts": [
+    "DejaVuSerif",
+    "Inter-Bold",
+    "Inter-Italic",
+    "Inter-Regular",
+    "LiberationSerif"
+   ],
+   "bytes": 308505
+  }
+ },
+ "libreoffice-24.2.7-gui": {
+  "SampleNewsletter": {
+   "pages": 4,
+   "page_detail": [
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 1,
+     "overlap_chars": 1169,
+     "chars": 3998
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 2102,
+     "chars": 5917
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 2096,
+     "chars": 5906
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 40,
+     "chars": 3437
+    }
+   ],
+   "ref_words": 1614,
+   "found_words": 1614,
+   "recall": 1.0,
+   "extra_words_of_ref": 2460,
+   "extra_ratio": 1.5242,
+   "words_not_in_ref": [],
+   "images_total": 1,
+   "overlap_ratio": 0.2808,
+   "ssim_vs_publisher": 0.672,
+   "producer": "LibreOffice 24.2",
+   "creator": "Draw",
+   "fonts": [
+    "DejaVuSerif",
+    "Inter-Bold",
+    "Inter-Italic",
+    "Inter-Regular",
+    "LiberationSerif"
+   ],
+   "bytes": 308500
+  }
+ },
+ "cloudconvert": {
+  "SampleBrochure": {
+   "pages": 2,
+   "page_detail": [
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 0,
+     "overlap_chars": 2,
+     "chars": 882
+    },
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 3,
+     "overlap_chars": 63,
+     "chars": 2214
+    }
+   ],
+   "ref_words": 660,
+   "found_words": 658,
+   "recall": 0.997,
+   "extra_words_of_ref": 0,
+   "extra_ratio": 0.0,
+   "words_not_in_ref": [
+    [
+     "soonto",
+     1
+    ]
+   ],
+   "images_total": 3,
+   "overlap_ratio": 0.021,
+   "ssim_vs_publisher": 0.719,
+   "producer": "LibreOffice 26.8.0.3 (X86_64)",
+   "creator": "Draw",
+   "fonts": [
+    "ArialMT",
+    "Georgia-Bold",
+    "LiberationSansNarrow",
+    "NotoSans-Bold",
+    "NotoSans-BoldItalic",
+    "NotoSans-Italic",
+    "NotoSans-Regular",
+    "NotoSerif-Bold",
+    "NotoSerif-Regular"
+   ],
+   "bytes": 247719
+  },
+  "SampleNewsletter": {
+   "pages": 4,
+   "page_detail": [
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 1,
+     "overlap_chars": 1261,
+     "chars": 3998
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 2231,
+     "chars": 5917
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 2230,
+     "chars": 5906
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 6,
+     "chars": 3437
+    }
+   ],
+   "ref_words": 1614,
+   "found_words": 1614,
+   "recall": 1.0,
+   "extra_words_of_ref": 2460,
+   "extra_ratio": 1.5242,
+   "words_not_in_ref": [],
+   "images_total": 1,
+   "overlap_ratio": 0.2974,
+   "ssim_vs_publisher": 0.683,
+   "producer": "LibreOffice 26.8.0.3 (X86_64)",
+   "creator": "Draw",
+   "fonts": [
+    "NotoSans-Bold",
+    "NotoSans-Italic",
+    "NotoSans-Regular",
+    "NotoSerif-Regular",
+    "TimesNewRomanPSMT"
+   ],
+   "bytes": 374042
+  }
+ },
+ "freeconvert": {
+  "SampleBrochure": {
+   "pages": 2,
+   "page_detail": [
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 0,
+     "overlap_chars": 0,
+     "chars": 882
+    },
+    {
+     "size_in": [
+      11.69,
+      8.27
+     ],
+     "images": 3,
+     "overlap_chars": 14,
+     "chars": 2214
+    }
+   ],
+   "ref_words": 660,
+   "found_words": 658,
+   "recall": 0.997,
+   "extra_words_of_ref": 0,
+   "extra_ratio": 0.0,
+   "words_not_in_ref": [
+    [
+     "soonto",
+     1
+    ]
+   ],
+   "images_total": 3,
+   "overlap_ratio": 0.0045,
+   "ssim_vs_publisher": 0.767,
+   "producer": "LibreOffice 26.2.5.1 (X86_64)",
+   "creator": "Draw",
+   "fonts": [
+    "ArialMT",
+    "ArialNarrow",
+    "Garamond",
+    "Garamond-Bold",
+    "Georgia-Bold",
+    "GillSansMT",
+    "GillSansMT-Bold",
+    "GillSansMT-BoldItalic",
+    "GillSansMT-Italic"
+   ],
+   "bytes": 228501
+  },
+  "SampleNewsletter": {
+   "pages": 4,
+   "page_detail": [
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 1,
+     "overlap_chars": 598,
+     "chars": 3998
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 1529,
+     "chars": 5917
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 1533,
+     "chars": 5906
+    },
+    {
+     "size_in": [
+      8.27,
+      11.69
+     ],
+     "images": 0,
+     "overlap_chars": 43,
+     "chars": 3437
+    }
+   ],
+   "ref_words": 1614,
+   "found_words": 1614,
+   "recall": 1.0,
+   "extra_words_of_ref": 2460,
+   "extra_ratio": 1.5242,
+   "words_not_in_ref": [],
+   "images_total": 1,
+   "overlap_ratio": 0.1923,
+   "ssim_vs_publisher": 0.747,
+   "producer": "LibreOffice 26.2.5.1 (X86_64)",
+   "creator": "Draw",
+   "fonts": [
+    "Elephant-Regular",
+    "FranklinGothic-Book",
+    "FranklinGothic-DemiCond",
+    "FranklinGothic-MediumCond",
+    "Rockwell-Condensed",
+    "Rockwell-CondensedBold",
+    "Sylfaen",
+    "TimesNewRomanPSMT"
+   ],
+   "bytes": 356429
+  }
+ }
+}

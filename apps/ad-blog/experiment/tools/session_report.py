@@ -11,7 +11,8 @@
 입력:
 - 이번 회차: {out}/stats/summary.json(28일 합계·sitemaps·adsense·crawl)·posts.json(글별 28일 지표·index·otherPages)
 - 이전 회차(증감·굵게 표시): 기본은 experiment/dashboard/runs.jsonl에서 이번 회차(summary.updatedAt)보다 앞선 마지막 줄
-  (28일 클릭·노출·순위·색인 수·latestCrawl·unindexedSeen만 있음). `--prev DIR`이면 그 출력 폴더 전체와 비교
+  (28일 클릭·노출·순위·색인 수·latestCrawl·unindexedSeen + 2026-11-18부터 snapshot: 글별 URL 검사·주별 클릭·sitemap·목록 페이지).
+  `--prev DIR`이면 그 출력 폴더 전체와 비교
   (주별 클릭·sitemap·글별 coverage·lastCrawl까지). 이전 회차가 없으면 증감 없이 값만
 - 성과 검증: traffic-playbook.md `### 검증 기록` 표에서 판정이 `-`이고 오늘(한국 날짜) >= 판단 시점인 행.
   대상 글 칸 첫 백틱이 글 slug이고 지표가 ctr·impressions·position이면 `gsc_report.py --compare` 출력을 그대로 넣고
@@ -158,6 +159,9 @@ def prev_from_runs(run_at: str) -> dict | None:
     if not rows:
         return None
     row = max(rows, key=lambda x: x[0])[1]
+    # 2026-11-18부터 daily_metrics.py --finalize가 snapshot(글별 URL 검사·주별 클릭·sitemap·목록 페이지)을 함께 남김
+    snap = row.get('snapshot') or {}
+    posts = snap.get('posts')
     return {
         'source': 'runs.jsonl',
         'runAt': row['runAt'],
@@ -166,13 +170,14 @@ def prev_from_runs(run_at: str) -> dict | None:
         'position': row.get('position28'),
         'indexed': row.get('indexed'),
         'total': row.get('total'),
-        'coverage': None,
+        'coverage': Counter(coverage_label(i.get('coverage')) for i in posts.values() if i.get('verdict') != 'PASS')
+        if posts else None,
         'unindexedSeen': row.get('unindexedSeen'),
         'latestCrawl': row.get('latestCrawl'),
-        'weeks': None,
-        'sitemaps': None,
-        'posts': None,
-        'listPages': None,
+        'weeks': snap.get('weeks'),
+        'sitemaps': snap.get('sitemaps'),
+        'posts': posts,
+        'listPages': snap.get('listPages'),
     }
 
 

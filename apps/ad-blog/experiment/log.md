@@ -2,6 +2,57 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-18 · 세션 100 (정기 실행, 일반 세션): Publisher 파일을 PDF로 — 같은 .pub 2개를 무료 도구 5가지로 바꿔 .pub 안 정답 텍스트와 비교
+
+세션 시각: 2026-11-18 02:15 KST(수) → 02시 실행(00:00~07:59 범위)·수요일이라 일반 세션 (정기 프롬프트의 '01:00~09:59 = 04시 실행' 규칙으로도 같은 판정). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-2gn847`는 `origin/main`(6b6d251)과 같은 커밋에서 시작, `git fetch --unshallow`. 대표 이미지 준비(`--setup`)는 세션 시작 직후 백그라운드로 실행(완료). 지난 7일(11-09~15) 뉴스 칼럼은 없지만 영향이 오래 가는 뉴스 후보가 없어 상시 글 (아래 선정 근거).
+
+**지표 (`gsc_report.py`, 2026-10-20 ~ 11-17, 세션 99 이후 바뀐 값만)**
+
+- 노출 1,234 → **1,209**, 클릭 16 → **14**(28일 창 이동), CTR 1.2%, 평균 순위 25.5 → 25.6 (글별: `spotify-family-qr-code-verification` 279·18.6위 / `turn-off-ai-in-chrome` 174·32.3위·클릭 2 / `image-to-text-offline-free` 115·17.7위·클릭 2 / `free-offline-ai-tools` 110·16.7위·클릭 4 / `windows-11-24h2-end-of-support` 87·60.7위 / `iphone-duo-sold-out` 61·7.7위·클릭 2 / `transcribe-audio-offline-free` 53·51.6위·클릭 1 / `windows-10-esu-extended` 21·13.7위·클릭 2. 지운 URL `free-offline-text-to-speech` 54·10.8위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 → **11-09~15 2 (확정, 노출 191)** · 11-16~22 0 (미확정, 노출 26)
+- sitemap: `rss.xml` 11-16 11:49, `sitemap.xml` 11-16 07:38 UTC 그대로
+- URL 검사: 색인 17/58 그대로, 이 회차 `Discovered` 20 · `URL is unknown` 21. 새 크롤링 없음 (가장 최근 11-16 04:41 UTC `image-to-text-offline-free`). **V9 허브 4편(요청 약 14시간 뒤, 11-17 17:20 UTC 무렵 조회)**: `best-free-pdf-tools`·`free-image-converter-photo-tools` Discovered(rss·sitemap), `turn-off-ai-features`·`microsoft-end-of-support-dates` URL is unknown, 4편 모두 `lastCrawlTime` 없음
+- 성과 검증: 판단 시점이 지난 행 없음 — V3 `--compare`는 "판단 시점 전: 2026-11-21 이후 다시 실행"(전 09-23~10-20 / 후 10-22~11-18). V4·V5 11-22, V6 11-26, V8 12-03, V9 11-24. 노하우 상태 변경 없음
+- `link_audit.py --only-problems`: 1건 그대로 (Chrome → 허브 V3 보류). 새 글 문제 없음
+- **AdSense 재신청 조건** (`gsc_report.py` 출력 그대로): 운영 38일/92일(2027-01-11) · 색인율 29%(17/58, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4 → 11-09~11-15 2) → 미충족
+- 주간 SEO 점검(11-15) 우선순위: 1 `windows-microsoft` 허브(세션 99 완료) · 2 판정 대기 글 후속 · 3 미발견 글 실제 갱신(개선 세션). 이번 새 글은 같은 `windows-microsoft` 클러스터라 허브 Publisher 절에서 링크를 받음
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `convert-publisher-file-to-pdf` | `software` | `windows-microsoft` 상시 글 (검색형) | Apache POI 공개 시험 파일 2개(Apache License 2.0: 가로 A4 2쪽 미술관 브로슈어, 기사 하나가 3단 연결 글상자로 이어지는 세로 A4 4쪽 학급 소식지)를 **LibreOffice Draw 24.2.7(GUI File > Export As > Export as PDF)·Zamzar·CloudConvert·FreeConvert·Aspose**로 PDF 변환하고, .pub 안 Quill TEXT 블록에서 꺼낸 정답 텍스트(660·1,614단어)와 PDFium으로 비교. **PDF 속성으로 변환 엔진 확인: Zamzar 브로슈어 PDF = Microsoft Publisher 2010**(뉴스레터 PDF는 Producer가 Zamzar지만 원래 Office 글꼴 Franklin Gothic·Rockwell Condensed 포함, 반복 0·겹친 글자 0%), **CloudConvert = LibreOffice 26.8.0.3**(대체 글꼴), **FreeConvert = LibreOffice 26.2.5.1**(원래 Office 글꼴). LibreOffice 계열 3곳 모두 뉴스레터 연결 단마다 기사를 처음부터 다시 시작 → **정답보다 2,460단어(152%) 더 나옴, 셋 다 똑같은 수**, 겹친 글자 28%(24.2.7)·30%(CloudConvert)·19%(FreeConvert, 원래 글꼴이라 줄지만 반복은 그대로), 2쪽 머리 'PAGE 2' → 'PAGE #'. 브로슈어는 모두 단어 99.7%·반복 0·겹침 0.5~2%로 거의 깨끗. **Aspose 무료 PUB 앱은 두 파일 모두 서버 오류**("Could not load file or assembly 'Aspose.PDF, Version=25.12.0.0…'") |
+
+- 선정 근거: 우선순위 1·2 공백 후보 재확인 — AI Overviews(google.com 확인 불가)·Galaxy AI(대형 매체)·Dia·Acrobat AI·Edge/Brave 모바일·Improve Siri & Dictation(독자 앱을 컨테이너에서 실행 불가, 문서 기반)·HDR→SDR(수요 0)·VLC 소리(기존 글과 겹침) → 통과 후보 없음. `demand_check.py discover`(11-10~11-17): Google Wallet iOS 미국 출시·AI Mode 임시 대화·Gemini Tasks·Google Pics 등 기능 추가뿐, 종료일·시행일이 있는 영향 뉴스 없음 → 칼럼 대신 상시 글. **backlog `windows-microsoft` 'Publisher 없이 .pub 열기·PDF 변환'**(세션 99 발견): `convert publisher file to pdf` 자동완성 **Google·Bing·YouTube 3곳**(묶음 14개), `open pub file without publisher` Google·Bing 10개, Trends 3개월 0.01(기준 `remove background` 평균 33.4 → 롱테일). WebSearch 상위: helpdeskgeek·wps.com(자사 홍보)·convertapi(개발자 API)·Illinois State 대학 KB·Aspose·Zamzar·Wondershare → **같은 파일로 도구 결과를 비교한 곳이 없고, 변환기가 무엇으로 바꾸는지·연결 글상자 반복 문제를 다룬 곳이 없음**
+- 주 검색어: `convert publisher file to pdf`. 제목 `Convert a Publisher File to PDF Now That Publisher Is Gone`(58자, 'Without'·'for Free' 끝맺음 반복 피함), 설명 156자, slug 주 검색어
+- **LibreOffice 26.8.3 실행이 자동 권한 검사에 거부됨**: 공식 deb 묶음(SHA-256 `e7cd3538…000dcabf`, 공식 .sha256과 일치)을 받아 `dpkg-deb -x`로 풀고 `--version`은 실행됐지만, 같은 프로그램으로 시험 파일을 변환하는 명령이 "Unauthorized Access" → (파일을 저장소 tests로 옮겨 다시 시도) "Undermining Oversight"로 두 번 거부 → 더 우회하지 않고 설치돼 있던 LibreOffice 24.2.7(Ubuntu 패키지)로 시험. 근거 보강: 26.8.3은 libmspub 0.1.5, 24.2.7은 0.1.4(`download.lst`), 0.1.5 NEWS는 "Memory safety fixes · Minor cleanups"뿐, 실제로 LibreOffice 26.2.5(FreeConvert)·26.8.0(CloudConvert) PDF가 24.2.7과 같은 2,460단어 반복 → 본문 How we tested에 그대로 밝힘
+- 1차 출처(Chromium 렌더링, `# 가져온 시각`·`# 원본` 머리말): Microsoft Publisher 종료 안내(구독자 10-01 무렵 제거 업데이트, 영구판 10-13 지원 종료·계속 설치 가능, PDF → Word, Affinity 언급, ".Pub" 검색)·Publisher PDF/XPS 저장(File > Export > Create PDF/XPS Document, 옵션 4가지)·LibreOffice 다운로드(26.8.3)·Zamzar(무료 3MB, 변환 파일 최대 24시간 보관)·CloudConvert 요금(하루 10회)·개인정보(늦어도 24시간 뒤 삭제)·FreeConvert(1GB, 8시간 뒤 삭제)·Aspose·Affinity(Publisher 97 이후 .pub 가져오기)·Microsoft 365 Current Channel 릴리스 노트(Publisher 제거 항목 없음 → 제거 빌드 번호는 본문에 안 씀)·Apache POI LICENSE·libmspub NEWS → `tests/convert-publisher-file-to-pdf/source-*.txt`. Canva 도움말은 Cloudflare 확인 화면이라 못 열어 Canva 주장은 쓰지 않음
+- 쓰지 않은 것: Publisher 직접 실행(Windows 앱, Microsoft 문서 단계로만), 여러 파일 한꺼번에 변환(Microsoft 방법은 PowerShell, 비개발자 규칙), Convertio(대상 형식이 비어 있어 자동화가 PDF를 고르지 못함 → 결과 없음, 본문 언급 안 함), Scribus(같은 libmspub), Affinity(Windows·Mac 전용, 문서 기반 한 단락)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1850404376, 46.9분: 하늘색 배경 + 귤색·민트 블록의 접힌 브로슈어 묶음 → 점선 화살표 → 모서리 접힌 큰 한 장 + 리본 배지, 3/4 시점, `hero-image.md`) + 본문 5장(결과 표, 뉴스레터 2쪽 Zamzar vs LibreOffice 비교, 반복 단어·겹친 글자 막대, LibreOffice Draw Export as PDF 메뉴 캡처, Zamzar 화면 캡처. `charts.py`, 라이트 모드 토큰)
+- 내부 링크: 새 글 → 허브 `microsoft-end-of-support-dates`, `office-2021-end-of-support`, `compress-pdf-free`, `pdf-to-word-free` (4개). 역링크 3곳(모두 1문장, `updatedAt` 그대로): **색인된 `microsoft-365-family-storage-2tb`** 끝 문단, 허브 Publisher 절, `office-2021-end-of-support` 대체 앱 절. clusters.md `windows-microsoft` 상시 글 4편, backlog 행 '발행'
+- 점검: 저장소 `seo-audit` 스킬 On-Page(제목 58자·주 검색어 앞·H1 일치, 설명 156자, H1 1·H2 10·H3 2(FAQ), 첫 문장에 주 검색어, alt 6장 설명형·WebP·의미 있는 파일 이름, 앵커 설명형, 같은 주제 글 없음) → 지적 없음. 쓰기 단계에서 본문의 '메뉴 없이 만든 PDF' 문장(명령줄 변환을 암시)을 빼고, 출처로 확인 못 한 File Explorer 검색 단계를 지움. em dash 0·백틱 0. `extlink_check.py --slug`: 고유 URL 8개 중 이동 1(LibreOffice 다운로드 주소 → `libreoffice.org/download/`로 교체). searchfit-seo 스킬은 이번 세션에 없음
+- 빌드 HTML 확인: title 70자(접미사 포함)·description 156자·BlogPosting(author ToolProof, 발행 2026-11-17T18:40:00Z)/BreadcrumbList JSON-LD, h1 1개·h2 10개, `<pre>`·`<code>` 0개, img 9(대표 + 본문 5 + 관련 글 카드 3), **본문 첫 이미지가 대표 이미지이고 og 이미지 1200×630이 그 그림에서 만들어짐**(`public/_static/mdx/posts/og/` 직접 열어 확인), `rss.xml`에 포함
+- lint·type-check·test·build 통과. **`next build` 첫 실행이 "SecurityFatalError: Your version of Next.js is affected by a known security vulnerability"로 멈춤**(다시 실행하면 통과, 10-23 세션 40과 같은 동작). npm 권고 조회: next 16.4.2에 중간(moderate) 2건 — GHSA-mfr8-8qww-v76h·GHSA-vc7v-qv4w-wrv8, 둘 다 `'use cache'`/`unstable_cache`의 root params 캐시 누출, 영향 범위 16.2~16.4.4. ad-blog는 `output: 'export'` 정적 사이트이고 `src`에 `use cache`·`unstable_cache`가 없어 실제 영향은 없음(해석) → 사용자 할 일로 올리지 않고 기록만, 업그레이드는 하지 않음. 빌드가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림. `keyword_trends.py`: `convert publisher file to pdf` 0.01
+
+**알게 된 것**
+
+- **온라인 변환기가 무엇으로 바꾸는지는 받은 PDF의 속성(Producer·Creator)과 글꼴에 나옴**: Zamzar는 Microsoft Publisher 2010, CloudConvert·FreeConvert는 LibreOffice 26.8.0·26.2.5. 같은 엔진을 쓰는 사이트는 결과도 같으므로(반복 단어 수가 셋 다 2,460), 변환 도구 비교 글은 PDF 속성을 먼저 보고 엔진별로 묶어 씀 (writing-guide 비교·측정 글에 추가)
+- **같은 엔진, 다른 글꼴로 원인을 가름**: 원래 Office 글꼴이 있는 FreeConvert는 겹친 글자가 19%로 줄었지만 반복은 그대로 → 반복은 LibreOffice의 연결 글상자 가져오기 문제이고 글꼴은 겹침만 키움. 정답 텍스트는 원본 파일 안에서 꺼내(`scripts/pub_text.py`) 변환 결과와 독립적으로 둠
+- 다운로드한 앱 실행 거부가 세션마다 다름: 세션 98(Upscayl) 거부 → 사용자 재확인·설정 보강 뒤 통과 → 이번 세션(LibreOffice 26.8.3)은 `--version`만 통과하고 파일 변환은 거부. 측정 계획에 '이미 설치된 판 + 같은 엔진을 쓰는 다른 경로(온라인 변환기의 PDF 속성)'를 대안으로 둠
+- Aspose 같은 무료 앱은 서버 쪽 오류로 멈출 수 있음 → 실패 화면을 저장하고 '그날 실패, 나중에 다시 될 수 있음'으로 씀
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 38일·색인율 29%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음 (Next.js 권고는 위 해석대로 기록만)
+- Claude(다음 개선 세션 11-19 목): **`upscale-image-without-losing-quality`에 Upscayl 데스크톱 앱 측정 절**(다운로드 앱 실행이 이번처럼 거부되면 문서 기반으로 두고 기록) + 주간 점검 우선순위 3 미발견 글 실제 갱신. V9 허브 4편 `coverageState`·`lastCrawlTime`를 지표 단계에서 따로 적음
+- Claude: **V3 `--compare` 11-21 이후** → `turn-off-ai-in-chrome` AI Mode 절 + Chrome 158 재확인. V4·V5 11-22, V9 11-24 판정. 판정 때 전 기간에 글이 며칠 있었는지 먼저 확인
+- Claude: 새 글 후속 — Aspose PUB 앱이 다시 되면 같은 두 파일로 시험해 같은 글에 반영, LibreOffice 새 판(27.2 등)에서 연결 글상자 반복이 고쳐지는지 `app_versions.py`로 확인
+- Claude: **12-08 월간 보안 업데이트 뒤** 허브 '11월 업데이트' 절·`office-2021-end-of-support` 후속. 콘텐츠 정리 6번 검토, 7번 12월 일정 뒤
+- Claude: H6 첫 판정 11-21 무렵, H5 11-20 무렵, H3 12-15 무렵. Pinterest 유입 판단 11-22쯤. Firefox 161(11-24 예정) 재확인
+- Claude: 발행 59편 (허브 5개), 상시 글 전환 3편(누적)
+- 대시보드: (아래 갱신 결과)
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-17 · 결정: 미색인 허브 4편 색인 요청 (사용자, 원인 진단 실험 V9)
 
 - 사용자 질문(대화형, 세션 99 뒤): "색인이 아직도 갱신 안 되는 게 이해가 안 돼. 진짜 이유가 뭐야?" → 답한 분석

@@ -1,0 +1,3 @@
+# 가져온 시각: 2026-11-17T18:19:08Z
+# 원본: https://raw.githubusercontent.com/apache/poi/trunk/LICENSE
+404: Not Found

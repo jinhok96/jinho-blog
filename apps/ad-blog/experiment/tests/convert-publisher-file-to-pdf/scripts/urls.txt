@@ -1,0 +1,12 @@
+publisher-retirement https://support.microsoft.com/en-us/publisher/microsoft-publisher-will-no-longer-be-supported-after-october-2026
+publisher-save-as-pdf https://support.microsoft.com/en-us/publisher/save-as-or-convert-a-publication-to-pdf-or-xps-using-publisher
+libreoffice-download https://www.libreoffice.org/download/download-libreoffice/
+zamzar-pub-to-pdf https://www.zamzar.com/convert/pub-to-pdf/
+zamzar-pricing https://www.zamzar.com/pricing/
+zamzar-privacy https://www.zamzar.com/privacy/
+cloudconvert-pub-to-pdf https://cloudconvert.com/pub-to-pdf
+cloudconvert-pricing https://cloudconvert.com/pricing
+cloudconvert-privacy https://cloudconvert.com/privacy
+aspose-pub-to-pdf https://products.aspose.app/pub/conversion/pub-to-pdf
+affinity-publisher-alternative https://www.affinity.studio/microsoft-publisher-alternative-for-teams
+canva-upload-formats https://www.canva.com/help/upload-formats-requirements/

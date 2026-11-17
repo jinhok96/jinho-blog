@@ -1,0 +1,469 @@
+# 가져온 시각: 2026-11-17T17:54:12.501Z
+# 원본: https://www.zamzar.com/privacy/
+Privacy Policy - Legal - Zamzar
+https://www.zamzar.com/privacy/
+
+Thanks for entrusting Zamzar with your files and your personal information. Handling your data is a serious responsibility, and we want you to know how we go about doing that.
+
+Zamzar is registered in England as a limited company (number 06463494).
+
+This policy is effective from 25th May 2018
+This policy was last modified on 14th August 2026
+Introduction
+
+We are Zamzar Limited, a provider of file conversion services based in England. Our company number is 06463494 and our registered office is at The Courtyard, Shoreham Road, Steyning, West Sussex, BN44 3TN. All references in this policy to "Zamzar", "our", "us" or "we" refer to Zamzar Limited, or our suppliers which provide services to us, as appropriate.
+
+This Privacy Policy lets you know what happens to any personal data that you give to us or that we collect from you. We collect only the minimum amount of personal information necessary for you to make use of our Services; we ensure that we meet our responsibilities under the General Data Protection Regulation (GDPR) and the retained EU law version of the GDPR (UK GDPR) that applies in the UK, along with the Data Protection Act 2018 (DPA 2018); and we will only ever use your data as this Privacy Policy describes. We are registered with the UK Information Commissioner's Office (ICO) in the Register of Data Controllers (registration number Z1127652). MCF Legal Technology Solutions Limited is our appointed EU Representative and can be contacted at zamzar@mcf.ie or MCF Legal Technology Solutions Limited, Riverside One, Sir John Rogerson's Quay, Dublin 2, Ireland.
+
+Applicability of This Privacy Policy
+
+This Privacy Policy applies to Zamzar's website at www.zamzar.com (the "website"), our web application available on the website (the "Services") and other interactions (e.g. customer service inquiries, live chat etc.) you may have with Zamzar.
+
+This Privacy Policy does not apply to any third party applications or software that integrate with the Services, or any other third party products, services or businesses, where we are not the controller of your personal data.
+
+This Privacy Policy is separate to our Terms of Service, which set out the legal terms governing delivery, access and use of the Services (the "Terms of Service").
+
+1. How We Handle Your Data
+1.1 Information We Collect
+Information from website browsers
+What do we collect?
+
+If you are browsing the website, we collect the same basic information that many other websites collect. We use common Internet technologies, such as cookies and web server logs. This is information we collect from everybody who visits our website, whether they have an account or not. More information on cookies may be found here.
+
+The information we collect about all visitors to our website includes the visitor's browser type ("User Agent"), language preference, referring site, and the date and time of each visitor request. We also collect potentially personally-identifying information like Internet Protocol (IP) addresses.
+
+Why do we collect this?
+
+We collect this information to better understand how our website visitors use Zamzar, to monitor and protect the security of the website and to protect against abuse of the Services. We also use this information to recognise you when you return to our website, to store information about your preferences, and to allow us to customise the website according to your individual interests.
+
+Information from users converting files
+What do we collect?
+
+If you convert a file using our services we may collect your email address (if you provide it) along with details of the filename or file URL.
+
+Why do we collect this?
+
+We collect this information in order to provide our file conversion services to you – without this information we are not able to convert your files or provide you with a link to download your converted files.
+
+Information from users with accounts
+What do we collect?
+
+If you create an account with us on our website, we require some basic information at the time of account creation. You will create your own password, and we will ask you for your full name and a valid email address. We will also collect your billing details, including credit card information (card name, number, expiry and CVV), a billing address and for some customers a valid VAT number.
+
+Why do we collect this?
+We need this information in order to set up your account, and to provide any services you have requested from us.
+We use your email address to identify you on Zamzar and send important system and account notices to you. If you register for an account with us but do not complete the checkout process we may send a reminder to the email address you provided. We do not use your email address for marketing purposes unless you have specifically consented to us doing this. We don't share or sell your email address with any 3rd parties.
+We limit our use of your personal information to the purposes listed in this Privacy Policy. If we need to use your personal information for other purposes, we will ask your permission first. You can always see what information we have, how we're using it, and what permissions you have given us in your user profile.
+People who contact us with enquiries
+What do we collect?
+
+If you contact us with an enquiry, we will collect the information provided when you correspond with us, such as your name, your address, your email address and your telephone number.
+
+Why do we collect this?
+
+We will collect, use and store the personal information listed above to deal with any enquiries or issues you have about our Services, including any questions you may have about how we collect, store and use your personal information, or any requests made by you for a copy of the information we hold about you.
+
+1.2 Information We Do Not Collect
+
+We do not intentionally collect or store special categories of personal data, such as genetic data, health information, or religious information. Although Zamzar does not request or intentionally collect any special categories of personal data, we realize that you might store this kind of information in your account, via the files that you convert.
+
+If you ask us to convert or store any files containing special categories of personal data on our servers, located in the United States, we will only do so on your instructions as a data processor and in accordance with our Data Processing Agreement with you. You are the controller of this data and you must ensure that you have a legal basis to share this data with us.
+
+1.3 How We Use Your Information and our Legal Basis for doing so
+
+We use the information you provide to us in a number of ways and we have set out our legal basis for processing your information below:
+
+To provide, update and maintain the Services we offer to you
+
+This is the most common usage of your information. We use your personal information to provide various file conversion Services to you, in accordance with our Terms of Service. In particular, we will use your data to: set-up an account; convert the files that you provide us with into different formats; and if you provide us with an email address, send you links to download those files to that email address.
+
+Our use of your personal information in this way is necessary to perform our obligations to provide the Services to you, under our Terms of Service.
+
+To communicate with you by responding to your requests, comments and questions
+
+If you contact our support team we may use the information that you provide to us in order to help us respond to your enquiry.
+
+Our use of your personal information in this way is necessary to perform our customer service obligations to you, under our Terms of Service.
+
+If we do not have a contract with you, we may process your personal information for these purposes where it is in our legitimate interests to do so for customer services purposes.
+
+For billing, account management and other administrative matters
+
+Zamzar may need to contact you for invoicing, account management and similar reasons and we use account data to administer accounts and keep track of billing and payments.
+
+Our use of your personal information in this way is necessary to perform our obligations to you under our Terms of Service.
+
+As required by applicable law, legal process or regulation
+
+We may use your information to comply with court orders and similar legal or regulatory obligations which apply to us.
+
+This may include where we reasonably consider it is in our legitimate interests or the legitimate interests of others to comply, as well as where we are legally required to do so.
+
+To investigate and help prevent abuse or security issues
+
+We may use information such as your IP address to help us prevent abuse of the Services we provide and investigate any potential unauthorized use of those Services or other security breaches.
+
+In these circumstances, we believe we have a legitimate interest in handling your data, and do not believe that this storage and use of your data will be of particular concern to you.
+
+If we rely on our (or another person's) legitimate interests for using your personal information, we will undertake a balancing test to ensure that our (or the other person's) legitimate interests are not outweighed by your interests or fundamental rights and freedoms which require protection of the personal information. You can ask us for information on this balancing test by using the contact details at section 5.6.
+
+We also collect and use data which is aggregated or anonymised for certain business purposes, such as creating aggregate statistics or reporting. However, no single individual will be identifiable from the anonymised details we collect for these purposes.
+
+1.4 Cookies
+What are cookies?
+
+Cookies are small text files (typically made up of letters and numbers) placed in the memory of your browser or device when you visit a website or view a message. They allow a website to recognize a particular device or browser. Session-based cookies last only while your browser is open and are automatically deleted when you close your browser. Persistent cookies last until you or your browser delete them or until they expire.
+
+For further information on deleting, disabling, blocking and controlling cookies please visit http://www.allaboutcookies.org
+
+Does Zamzar use cookies?
+
+Like many sites, we use cookies to make interactions with our Services easy and meaningful. We also use cookies to keep you logged in, remember your preferences and allow us to provide a more convenient service to you.
+
+When you use the Zamzar Services, we and certain partners may use cookies to recognize you and to otherwise customize your online experiences and other content. We and certain partners may also use cookies to measure the effectiveness of promotions; and mitigate risk and prevent potential fraud across the Services. Certain aspects and features of the Services are only available through the use of Cookies, so if you choose to disable or decline Cookies, your use of the Services may be limited or not possible.
+
+Where possible, security measures are set in place to prevent unauthorized access to our cookies.
+
+How is Zamzar using cookies?
+
+We use several types of cookie:
+
+Categories of Use	Description
+Authentication	If you are signed in to the Services, authentication cookies help us personalize your experience and show you the right information.
+Security	We use security cookies to enable and support our security features, and to help us detect malicious activity.
+Performance, Analytics and Research	Cookies help us and our third party suppliers to learn how well our sites and Services perform. We also use performance, analytics and research cookies to understand, improve, and investigate products, features, and services.
+How do I control my cookies?
+
+You can update your preferences in cookie settings.
+
+What cookies does Zamzar use?
+
+We use the following cookies:
+
+Necessary
+
+Necessary cookies are required to enable the basic features of this site, such as providing secure log-in or adjusting your consent preferences. These cookies do not store any personally identifiable data.
+
+Cookie	Duration	Description
+cooktest	14 days	
+
+Tests if Cookies are enabled in the user's browser
+
+
+PHPSESSID	session	This cookie is native to PHP applications. The cookie stores and identifies a user's unique session ID to manage user sessions on the website. The cookie is a session cookie and will be deleted when all the browser windows are closed.
+zamzar_session	2 hours	
+
+Zamzar uses zamzar_session to identify a session instance for a user
+
+
+uname	past	
+
+The user's name is stored in this cookie whenever the user logs in
+
+
+zamzar_session_legacy	session	
+
+Used to store adhoc system values during a user's browsing session.
+
+
+XSRF-TOKEN	2 hours	
+
+Protects against cross-site request forgery (CSRF)
+
+
+_GRECAPTCHA	6 months	Google Recaptcha service sets this cookie to identify bots to protect the website against malicious spam attacks.
+rc::a	Never Expires	This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.
+rc::f	Never Expires	This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.
+rc::c	session	This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.
+rc::b	session	This cookie is set by the Google recaptcha service to identify bots to protect the website against malicious spam attacks.
+__cf_bm	1 hour	This cookie, set by Cloudflare, is used to support Cloudflare Bot Management.
+uid	past	
+
+This is a Google UserID cookie that tracks users across various website segments.
+
+
+Anonymous/Encrypted	24 hours	
+
+A session cookie is set which uses an encrypted name and value. This is used by Laravel and relates to the laravel_session and zamzar_session cookies
+
+
+zamzar_ga	session	
+
+Stores the Google Analytics client and session id. Excludes any personal identifiers.
+
+
+m	1 year 1 month 4 days	Stripe sets this cookie for fraud prevention purposes. It identifies the device used to access the website, allowing the website to be formatted accordingly.
+__stripe_mid	1 year	Stripe sets this cookie to set a unique session identifier to recognize users across sessions.
+__stripe_sid	1 hour	Stripe sets this cookie to set a unique session identifier for a single session.
+cookieyes-*	1 year	
+
+CookieYes sets this cookie for consent solution management.
+
+
+cookieyes-*	1 year	
+
+CookieYes sets this cookie for consent solution management.
+
+
+cookieyes-*	1 year	
+
+CookieYes sets this cookie for consent solution management.
+
+
+cloud_storage_tokens	Browser session	
+
+Information related to cloud storage use
+
+
+email_subs	30 days	
+
+Records user preference for email marketing
+
+
+zamzar_jobs	session	
+
+Records jobs being converted during the session
+
+
+zamzar_ga	session	
+
+Stores the Google Analytics client and session id. Excludes any personal identifiers.
+
+Analytics
+
+Analytical cookies are used to understand how visitors interact with the website. These cookies help provide information on metrics such as the number of visitors, bounce rate, traffic source, etc.
+
+Cookie	Duration	Description
+_ga_*	1 year 1 month 4 days	Google Analytics sets this cookie to store and count page views.
+_ga	1 year 1 month 4 days	Google Analytics sets this cookie to calculate visitor, session and campaign data and track site usage for the site's analytics report. The cookie stores information anonymously and assigns a randomly generated number to recognise unique visitors.
+_gcl_au	3 months	Google Tag Manager sets the cookie to experiment advertisement efficiency of websites using their services.
+_omappvp	1 year 1 month 4 days	The _omappvp cookie is set to distinguish new and returning users and is used in conjunction with _omappvs cookie.
+_omappvs	20 minutes	The _omappvs cookie, used in conjunction with the _omappvp cookies, is used to determine if the visitor has visited the website before, or if it is a new visitor.
+visitor_id	1 year 1 month 4 days	Set by Pardot, this cookie is used for visitors. The cookie contains a unique ID and identifier for the account which is derived from the Pardot tracking code placed on the site.
+_gcl*	3 months	
+
+Used for tracking Google Ads conversions
+
+
+ph_*	1 year	
+
+Tracks a users journey during a visit
+
+
+dmn_chk_*	Less than a minute	
+
+Tests which parent domain can accept cookies so PostHog can select the correct cookie domain.
+
+If you do not wish these cookies to be set then you should not use the Zamzar website. To block cookies from the zamzar.com domain in your web browser you should follow browser instructions at: http://www.allaboutcookies.org/manage-cookies/stop-cookies-installed.html
+
+What can you do if you don't want any cookies to be set or want them to be removed?
+
+Some people prefer not to allow cookies, which is why most browsers give you the ability to manage cookies to suit you. In some browsers you can set up rules to manage cookies on a site-by-site basis, giving you more fine-grained control over your privacy. What this means is that you can disallow cookies from all sites except those that you trust.
+
+Browser manufacturers provide help pages relating to cookie management in their products. Please click on the links below for more information on how to manage your cookie settings.
+
+Google Chrome
+Internet Explorer
+Mozilla Firefox
+Safari (Desktop)
+Safari (Mobile)
+Android Browser
+Opera
+Opera Mobile
+1.5 Tracking
+Google Analytics
+
+We use Google Analytics as a third party tracking service, but don't use it to track you individually. We use Google Analytics to collect information about how our website performs and how our users, in general, navigate through and use Zamzar to help us evaluate our users' use of Zamzar; compile statistical reports on activity; and improve our content and website performance.
+
+We look to protect your privacy by anonymizing your IP address prior to sending it to Google Analytics and we only gather certain basic information, such as your browser type, referring and exit pages, time stamp, and similar data about your use of Zamzar. We do not link this information to any of your personal information.
+
+Google provides further information about its own privacy practices and offers a browser add-on to opt out of Google Analytics tracking.
+
+Other Tracking
+
+We may integrate functionality from third party social media websites (such as Facebook or X - formerly Twitter) into our Services, for example by providing "like" or "share" buttons on some pages. These buttons may enable those services to track your visit to Zamzar.
+
+2. How We Share Data
+2.1 Sharing Your Information
+
+We may share personal information with a limited number of third-party vendors who process it on our behalf in order to provide or improve our Services, and who have agreed to privacy restrictions and security obligations consistent with this Privacy Policy.
+
+We will share your personal information with the following third-party vendors:
+
+Amazon Web Services, Inc who provides server hosting and content distribution networks (CDN's) services;
+CookieYes Ltd, who provides compliance services;
+MacStadium, Inc who provides server hosting services;
+IBM SoftLayer Technologies. Inc who provides server hosting services;
+PayPal (Europe) S. r.l. et Cie, S.C.A. who provides payment processing services;
+The Rocket Science Group, LLC and Plus Five Five, Inc who provide email sending services;
+Google LLC, WeTransfer B.V., and Habla, Inc, who provide customer support tooling;
+Retyp, LLC, Atlassian Pty Ltd, Paddle.com Inc, Plausible Insights OÜ, ShuttleCloud Corp, Churn Buster LLC, Churnkey LLC and Slack Technologies Inc, who provide business support services; and
+Stripe Payments Europe, Ltd who provide payment, analytics, and other business services.
+
+Stripe may collect identifying information about the devices that connect to its services. Stripe uses this information to operate and improve the services it provides to us, including for fraud detection. You can learn more about Stripe and read its privacy policy at https://stripe.com/privacy.
+
+When we transfer your data to our vendors, we remain responsible for it. We try to ensure that any third parties with whom we share your personal information are limited (by law and by contract) in their ability to use your personal information for any purpose other than to provide services for us.
+
+We may share personal information where it is in our legitimate interests to do so to run, grow and develop our business if we are involved in a merger, sale, or acquisition, including a bankruptcy sale. If any such change of ownership happens, we will ensure it is under terms that preserve the confidentiality of personal information, and we will notify you on our website or by email before any transfer of your personal information.
+
+2.2 Third Party Advertising
+
+We do not host any third party advertising at www.zamzar.com.
+
+2.3 Legal Disclosures
+
+Zamzar may disclose personally-identifying information or other information we collect about you in response to a valid subpoena, court order, warrant, or similar government order, or when we believe in good faith that disclosure is reasonably necessary to protect our property or rights, or those of third parties or the public at large. This may include exchanging personal information with other organisations for the purposes of fraud protection and credit risk reduction.
+
+We will also disclose your personal information to third parties in order to enforce or apply our terms and conditions or any other agreement or to respond to any claims, to protect our rights or the rights of a third party, to protect the safety of any person or to prevent any illegal activity.
+
+2.4 Notice for Nevada Consumers
+
+We do not sell your personal information within the scope of, and according to the defined meaning of a “sale” under, NRS 603A.
+
+3. How We Manage Data
+3.1 Security
+
+Zamzar takes the security of data very seriously, and we work hard to protect any information you provide to us from loss, misuse, and unauthorized access or disclosure. We take all reasonable precautions to safeguard the confidentiality of your personal information, including through use of appropriate organisational and technical measures. These measures take into account the sensitivity of the data we collect, process and store, and the current state of technology.
+
+Given the nature of communications and information processing technology, Zamzar cannot guarantee that information, during transmission through the Internet or while stored on our systems or otherwise in our care, will be absolutely safe from intrusion by others, but we do our utmost to protect it. Once we have received your personal information, we will use strict procedures and security features to prevent unauthorised access to it.
+
+As a minimum we take the following measures to secure your data:
+
+Physical Security - Zamzar infrastructure is only hosted in data centres which meet rigorous security standards. Physical access is strictly controlled both at the perimeter and at building ingress points by professional security staff utilising video surveillance, intrusion detection systems, and other electronic means.
+Data Transfer Integrity - All traffic to and from Zamzar servers is secured by transport level security (TLS) sent over a Secure Socket Layer (SSL), and secured using an AES 256-bit SSL certificate. This ensures that data sent between your systems and ours is encrypted using military grade encryption.
+Password Encryption - Zamzar user account passwords are stored in our database after being salted and hashed using the Bcrypt encryption algorithm.
+Firewalls - Zamzar enforces network level control for access to infrastructure by using multiple different firewall technologies to ensure that different components of its systems are logically isolated from one another.
+Operational Access Controls - Zamzar employees require access to production services for operational reasons. We employ multiple authentication mechanisms to ensure that production systems are accessed only by authorised members of staff and are protected from unauthorised access.
+Software Updates - Zamzar regularly applies software patches to production infrastructure in order to ensure a strong security posture to known software vulnerabilities.
+External Accreditation - Zamzar takes a pro-active approach to security by employing an external company to perform monthly security scans of its infrastructure.
+Bug Bounty Program - Zamzar operates an informal "bug bounty" program that encourages security researchers to perform limited and authorised testing of the integrity of Zamzar systems.
+3.2 Data Retention and Deletion
+If you have an account with Zamzar
+
+If you have an account with Zamzar, we will retain your personal information for as long as your account is active or as needed to provide you with Services that you request (in accordance with our Terms of Service).
+
+Once your account is deactivated we will permanently remove any files associated with your account 35 days after deactivation.
+
+We may retain certain other personal information (such as your email address) after your account is deactivated, unless you delete it or request its deletion. For example, we don't automatically delete inactive user accounts, so unless you ask us to permanently delete your account we will retain some account information to enable you to return and use our Services more easily in future.
+
+If you do not have an account with Zamzar
+
+We will store any files you submit to us for conversion, and their converted outputs on our systems for no longer than 7 days following receipt. After this time they are permanently removed from our storage systems.
+
+We will retain personal information such as your IP address, email address (if provided by you) and browser details for no longer than 30 days. After this time we permanently delete your browser data and anonymise your IP address and email address (if provided by you) so that we can no longer personally identify you.
+
+3.3 International Data Transfers
+
+Zamzar may transfer your personal data to countries other than the one in which you live, including to our file server suppliers located in the United States.
+
+If we provide any personal information about you to any entity outside of the European Economic Area or the United Kingdom, we will take appropriate measures to ensure that the recipient protects your personal information adequately in accordance with this Privacy Policy. These measures may include:
+
+entering into European Commission and/or UK Government approved standard contractual arrangements with them;
+ensuring that there is a European Commission and/or UK Government approved adequacy decision in place permitting the personal data transfers;
+putting in place appropriate safeguards recognised by the GDPR, UK GDPR or DPA as applicable; and
+taking all reasonable precautions to ensure that your personal information is treated securely and in accordance with this Privacy Policy
+
+Further details on the steps we take to protect your personal information, in these cases is available from us on request by contacting us by email at info@zamzar.com at any time.
+
+4. Your Rights
+
+If you have a user account for the Services you may review and edit any personal data you have supplied to us in your user profile. If you do not have a user account, or if you have questions about your account information or other personal data please contact us by email at info@zamzar.com.
+
+Individuals located in certain countries, including the United Kingdom, the European Economic Area and Switzerland, have certain statutory rights in relation to their personal data. While some of these rights apply generally, certain rights apply only in certain limited circumstances. We describe these rights below.
+
+Please note that we may ask you to verify your identity before taking further action on your request. Additionally your request and choices may be limited in certain cases: for example, if fulfilling your request would reveal information about another person, or if you ask to delete information which we are permitted by law or have compelling legitimate interests to keep.
+
+4.1 Right to be Informed
+
+You have the right to be provided with information about the data we hold, our data processing activities and whether we transfer personal data outside of the EAA if you are resident in the EEA, or whether we transfer personal data outside of the UK if you are resident in the UK, along with the methods we use to safeguard such data.
+
+4.2 Right to Access
+
+In some jurisdictions, applicable law may entitle you to request copies of your personal information held by us.
+
+4.3 Right to Rectification
+
+You have the right to ask us to correct inaccurate, out of date or incomplete personal information concerning you (and which you cannot update yourself within the Services).
+
+4.4 Right to Erasure
+
+We generally retain any personal information for as long as is necessary for the performance of the contract between you and us and to comply with our legal obligations. If you no longer want us to use your information to provide the Services to you, you can request that we erase your personal information and (if you have one) close your user account. Please note that if you request the erasure of your personal information:
+
+We may retain some of your personal information as necessary for our legitimate business interests, such as fraud.
+We may retain and use your personal information to the extent necessary to comply with our legal obligations.
+Because we maintain the Zamzar Services to protect from accidental or malicious data loss and destruction, residual copies of your personal information may not be removed from our backup systems for a limited period of time.
+4.5 Right to Object / Restrict Processing
+
+In some jurisdictions, applicable law may entitle you to request Zamzar not to process your personal information for certain specific purposes where such processing is based on our (or another party's) legitimate interests. If you object to such processing Zamzar will no longer process your personal information for these purposes unless we can demonstrate compelling legitimate grounds for such processing or such processing is required for the establishment, exercise or defence of legal claims.
+
+4.6 Right to Data Portability
+
+You may be entitled to request copies of personal information that you have provided to us in a structured, commonly used, and machine-readable format and/or request us to transmit this information to another service provider (where technically feasible). This right only applies where we use your personal information on the basis of your consent or performance of a contract; and where our use of your information is carried out by automated means.
+
+5. Other Important Information
+5.1 Data Processing Agreement
+
+Zamzar will be the controller of personal data provided to, or used in connection with our Services, as described in this Privacy Policy.
+
+To the extent that we act as a data processor on your behalf in connection with the performance of our Services, we will enter into a separate "Data Processing Agreement" with you. You can find out more information on this Data Processing Agreement by emailing us at dpa@zamzar.com.
+
+5.2 Lodging Complaints with the Data Protection Authority
+
+If you are a resident of the European Economic Area and believe we are the controller of your personal data within the scope of the General Data Protection Regulation (GDPR), you have the right to lodge a complaint with your local data protection authority. If you are a resident in the United Kingdom and believe we are the controller of your personal data within the scope of the UK GDPR and the DPA 2018, you may send complaints to:
+
+UK Information Commissioner
+Information Commissioner's Office
+Wycliffe House
+Water Lane
+Wilmslow
+Cheshire
+SK9 5AF
+United Kingdom
+
+Phone: +44 1625 545 745
+Fax: +44 1625 524 510
+Email: casework@ico.org.uk
+
+5.3 Age Limitations
+
+If you're a child under the age of 13, you may not use Zamzar's Services. Zamzar does not knowingly collect information from or direct any of our content specifically to children under 13. As set out in our Terms of Service, if we learn or have reason to suspect that you are a user who is under the age of 13, and you have an account with us we will unfortunately have to close your account.
+
+5.4 Changes to This Privacy Policy
+
+Zamzar may change this Privacy Policy from time to time. Laws, regulations and industry standards evolve, which may make those changes necessary, or we may make changes to our business. We will post the changes to this page and update the "last modified date" when we do. We would encourage you to review our Privacy Policy to stay informed. If we make changes that materially alter your privacy rights, Zamzar will provide additional notice, such as via email or through the Services. If you disagree with the changes to this Privacy Policy, you should deactivate your registered account for the Services, or otherwise cease use of the Services.
+
+5.5 Do Not Track Signals
+
+California and Delaware law require us to indicate how we respond to Do Not Track ("DNT") browser signals. Zamzar does not respond to Do Not Track ("DNT") browser signals. For more information on DNT settings generally, please visit https://allaboutdnt.com.
+
+5.6 Contacting Zamzar
+
+Please feel free to contact Zamzar if you have any questions about this Privacy Policy or complaints about Zamzar's practices relating to your personal information, or if you are seeking to exercise any of your rights described in this Privacy Policy. You may contact us at info@zamzar.com or at our mailing address below.
+
+If you are resident in the UK we can be contacted at the following address:
+
+Zamzar Ltd
+The Courtyard
+Shoreham Road
+Steyning
+West Sussex
+BN44 3TN
+United Kingdom
+
+If you are resident in the European Economic Area, you may contact our EU Representative at zamzar@mcf.ie or at our mailing address below:
+
+MCF Legal
+Technology Solutions Limited
+Riverside One
+Sir John Rogerson's Quay
+Dublin 2
+Ireland
+
+Table of Contents
+Introduction
+Applicability
+How We Handle Your Data
+How We Share Data
+How We Manage Data
+Your Rights
+Other Important Information

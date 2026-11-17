@@ -1,0 +1,526 @@
+# 가져온 시각: 2026-11-17T18:18:49.289Z
+# 원본: https://www.freeconvert.com/pub-to-pdf
+PUB to PDF Converter - FreeConvert.com
+https://www.freeconvert.com/pub-to-pdf
+
+No matches found.
+
+auth.token:false,loggedInStore: false
+My Account
+▼
+ Billing Plan
+ Payment Method
+ Invoice
+ Tasks
+ Jobs
+ API Keys
+ Webhooks
+ Account
+ Notifications
+ Team
+ Activity
+ FAQ
+ Logout
+Log In
+Sign Up
+Convert
+▼
+Video & Audio
+▼
+Video Converter
+Audio Converter
+MP3 Converter
+MP4 to MP3
+Video to MP3
+MP4 Converter
+MOV to MP4
+MP3 to OGG
+Image
+▼
+Image Converter
+WEBP to PNG
+JFIF to PNG
+PNG to SVG
+HEIC to JPG
+HEIC to PNG
+WEBP to JPG
+SVG Converter
+PDF & Documents
+▼
+PDF Converter
+Document Converter
+Ebook Converter
+PDF to Word
+PDF to JPG
+PDF to EPUB
+EPUB to PDF
+HEIC to PDF
+DOCX to PDF
+JPG to PDF
+GIF
+▼
+Video to GIF
+MP4 to GIF
+WEBM to GIF
+APNG to GIF
+GIF to MP4
+GIF to APNG
+Image to GIF
+MOV to GIF
+AVI to GIF
+Others
+▼
+Unit Converter
+Time Converter
+Archive Converter
+Compress
+▼
+Video & Audio
+▼
+Video Compressor
+MP3 Compressor
+WAV Compressor
+Image
+▼
+Image Compressor
+JPEG Compressor
+PNG Compressor
+PDF & Documents
+▼
+PDF Compressor
+GIF
+▼
+GIF Compressor
+Tools
+▼
+Video Tools
+▼
+Crop Video
+Trim Video
+Image Tools
+▼
+GIF Maker
+Resize Image
+Crop Image
+Color Picker
+Rotate Image
+Flip Image
+Image Enlarger
+PDF Tools
+▼
+Edit PDF
+Annotate PDF
+E-sign
+Create Fillable PDF
+PDF Reader
+PDF Merge
+PDF Split
+Flatten PDF
+Resize PDF
+Unlock PDF
+Rotate PDF
+Protect PDF
+Crop PDF
+Organize PDF
+Extract image from PDF
+PDF page remover
+Extract Pages from PDF
+API
+▼
+Documentation
+▼
+API Job Builder
+API Documentation
+Conversion APIs
+▼
+File Conversion API
+Image Conversion API
+Audio Conversion API
+Document Conversion API
+PDF Conversion API
+MP4 Conversion API
+Video Conversion API
+Specific APIs
+▼
+JPG to PDF API
+Video to MP3 API
+HEIC to JPG API
+PDF to JPG API
+Webp to PNG API
+PDF to WORD API
+MP4 to MP3 API
+Webp to JPG API
+WORD to PDF API
+HTML to PDF API
+Website Screenshot API
+Compression APIs
+▼
+Video Compression API
+Compress PDF API
+Image Compression API
+Pricing
+Home
+Document Converter
+PDF Converter
+PUB to PDF Converter
+PUB to PDF Converter
+
+Convert PUB to PDF online, for free.
+
+
+
+
+
+ Choose Files
+ From Device
+From Dropbox
+From Google Drive
+From OneDrive
+ From Url
+
+Drop any files here!
+
+Max file size 1GB.
+Upgrade for more
+Sign Up for more
+
+By proceeding, you confirm you own the rights to the files you upload and agree to our Terms of Use.
+
+
+
+ Advanced settings (optional)
+
+
+Built with ❤️ by FreeConvert
+AI Photo Editor
+
+Try ClipSnap, our powerful AI photo editing tools.
+
+Background Remover
+AI Image Generator
+Magic Eraser
+Generative Fill
+PDF Tools
+
+Try ProPDF, our all-in-one tools to edit, sign, and build PDFs.
+
+PDF Editor
+Sign PDF
+Form Builder
+Merge PDF
+Split PDF
+
+
+
+
+How to Convert PUB to PDF?
+Click the “Choose Files” button to select your PUB files.
+Click the “Convert” button to start the conversion.
+When the status changes to “Done”, click the “Download” button.
+Easy to Use
+
+Simply upload your PUB files and click the convert button. You can also batch convert PUB to PDF format.
+
+Best Quality
+
+We use both open source and custom software to make sure our conversions are of the highest quality. In most cases, you can fine-tune conversion parameters using “Advanced Settings” (optional, look for the  icon).
+
+Free & Secure
+
+Our PUB to PDF Converter is free and works on any web browser. We guarantee file security and privacy. Files are protected with 256-bit SSL encryption and automatically deleted after 8 hours.
+
+
+
+What is a PUB (Microsoft Publisher Document) file?
+
+Microsoft Publisher Document (PUB) is the native format of Microsoft Publisher, a desktop-publishing application aimed at newsletters, brochures, flyers, greeting cards, and other page-layout work. Unlike Word, Publisher treats a page as a canvas of independently positioned text boxes and graphics, giving precise control over layout. A PUB file stores that arrangement along with the text, images, and print settings. Microsoft has announced that Publisher will be retired in October 2026.
+
+ 
+
+How to open a PUB file?
+
+Microsoft Publisher, included with some Microsoft 365 plans on Windows, is the only application that renders PUB files exactly as designed.
+
+ 
+
+No other application reproduces Publisher’s full feature set — LibreOffice Draw imports many PUB files, though complex layouts often shift. The most dependable approach is to ask the sender to export the document as a PDF from Publisher, which preserves the layout perfectly and opens anywhere. Our PUB to PDF tool can also do the conversion.
+
+ 
+
+Developed by: Microsoft
+
+Initial Release: 1991
+
+
+
+What is a PDF (Portable Document Format) file?
+
+The Portable Document Format (PDF) is a universal file format that comprises characteristics of both text documents and graphic images which makes it one of the most commonly used file types today. The reason PDF is so widely popular is that it can preserve original document formatting. PDF files always look identical on any device or operating system.
+
+ 
+
+How to open a PDF file?
+
+Most people head right to Adobe Acrobat Reader when they need to open a PDF. Adobe created the PDF standard, and Adobe Acrobat Reader remains the most widely used PDF reader. It's completely fine to use, but I find it to be a somewhat bloated program with lots of features that you may never need or want to use.
+
+ 
+
+Most web browsers, like both Chrome and Firefox, can open PDFs themselves. You may or may not need an add-on or extension to do it, but it's pretty handy to have one open automatically when you click a PDF link online. SumatraPDF and MuPDF are lighter-weight alternatives.
+
+ 
+
+Developed by: ISO
+
+Initial Release: 15 June 1993
+
+Convert other files to PDF format
+
+FreeConvert.com can convert your other files to PDF format:
+
+PDF Converter
+ODT to PDF
+ODT to PDF
+HTML to PDF
+PPT to PDF
+ODP to PDF
+TXT to PDF
+RTF to PDF
+PPTX to PDF
+DOCX to PDF
+DOCX to PDF
+DOC to PDF
+DOC to PDF
+DOC to PDF
+XLS to PDF
+XLS to PDF
+XLSX to PDF
+XLSX to PDF
+TEXT to PDF
+PS to PDF
+XML to PDF
+ODS to PDF
+WORD to PDF
+WORD to PDF
+CSV to PDF
+EXCEL to PDF
+EXCEL to PDF
+DOT to PDF
+DOT to PDF
+POT to PDF
+Webpage to PDF
+VSDX to PDF
+HTM to PDF
+XPS to PDF
+PAGES to PDF
+WPS to PDF
+POTX to PDF
+EML to PDF
+VSD to PDF
+DOCM to PDF
+DOCM to PDF
+DOTX to PDF
+DOTX to PDF
+PPSX to PDF
+PPS to PDF
+PPTM to PDF
+XLSM to PDF
+FB2 to PDF
+AZW4 to PDF
+CHM to PDF
+LIT to PDF
+AZW to PDF
+MOBI to PDF
+AZW3 to PDF
+EPUB to PDF
+AI to PDF
+SVGZ to PDF
+PPM to PDF
+AVIF to PDF
+HEIF to PDF
+JXL to PDF
+CBR to PDF
+CBZ to PDF
+ART to PDF
+DDS to PDF
+PCX to PDF
+DPX to PDF
+PSB to PDF
+TIF to PDF
+WMZ to PDF
+ICO to PDF
+EMZ to PDF
+HEIC to PDF
+EPS to PDF
+JPEG to PDF
+TGA to PDF
+DIB to PDF
+DJVU to PDF
+JFIF to PDF
+RWL to PDF
+DCS to PDF
+DNG to PDF
+SRW to PDF
+Nikon RAW to PDF
+Samsung RAW to PDF
+SRF to PDF
+Kodak RAW to PDF
+CR3 to PDF
+DCR to PDF
+RW2 to PDF
+X3F to PDF
+NEF to PDF
+CRW to PDF
+DRF to PDF
+KDC to PDF
+RAF to PDF
+Sony RAW to PDF
+CR2 to PDF
+ARW to PDF
+NRW to PDF
+K25 to PDF
+SR2 to PDF
+Pentax RAW to PDF
+PTX to PDF
+Leica RAW to PDF
+RAW to PDF
+Panasonic RAW to PDF
+Sigma RAW to PDF
+Canon RAW to PDF
+ORF (Olympus Raw) to PDF
+PEF to PDF
+SVG to PDF
+PNG to PDF
+BMP to PDF
+TIFF to PDF
+JPG to PDF
+WebP to PDF
+ODD to PDF
+PSD to PDF
+GIF to PDF
+Convert Your PUB files to other formats
+
+FreeConvert.com can convert your PUB files to these other formats:
+
+PUB Converter
+PUB to WORD
+PUB to DOC
+PUB to DOCX
+Related Tools
+
+FreeConvert.com can convert your files to these related formats:
+
+Compress PDF
+Resize PDF
+Extract Images from PDF
+
+
+Your Data, Our Priority
+
+At FreeConvert, we go beyond just converting files—we protect them. Our robust security framework ensures that your data is always safe, whether you're converting an image, video, or document. With advanced encryption, secure data centers, and vigilant monitoring, we've covered every aspect of your data's safety.
+
+Learn more about our commitment to security
+SSL/TLS
+Encryption
+Secured Data
+Centers
+Access Control and
+Authentication
+
+
+
+Want to convert large files without a queue or Ads?
+
+Upgrade Now
+
+Sign Up
+
+Video Converter
+
+MP4 Converter
+Video to GIF
+MOV to MP4
+Video Converter
+
+Audio Converter
+
+MP3 Converter
+MP4 to MP3
+Video to MP3
+Audio Converter
+
+Image Converter
+
+JPG to PDF
+PDF to JPG
+HEIC to JPG
+Image to PDF
+Image Converter
+
+Document & Ebook
+
+PDF to WORD
+EPUB to PDF
+EPUB to MOBI
+Document Converter
+
+Archive & Time
+
+RAR to Zip
+PST to EST
+CST to EST
+Archive Converter
+
+Unit Converter
+
+Lbs to Kg
+Kg to Lbs
+Feet to Meters
+Unit Converter
+
+Web Apps
+
+Collage Maker
+Image Resizer
+Crop Image
+Color Picker
+
+Mobile Apps
+
+Collage Maker Android
+Collage Maker iOS
+Image Converter Android
+Image Converter iOS
+About Us
+Blog
+Donate
+Privacy
+Terms
+Security and Compliance
+Contact
+Status
+
+© FreeConvert.com v2.30 All rights reserved (2026)
+
+English
+English
+Deutsch
+Español
+Français
+Português
+Italiano
+Dutch
+日本語
+简体中文
+繁體中文
+한국어
+Svenska
+Türkçe
+Bahasa Indonesia
+Polish
+
+© FreeConvert.com v2.30 All rights reserved (2026)
+
+Report a Bug
+window.__NUXT__=(function(a,b,c,d,e,f,g,h,i,j,k,l,m,n,o,p,q,r,s,t,u,v,w,x,y,z,A,B,C,D,E,F,G,H,I,J,K,L,M,N,O,P,Q,R,S,T,U,V,W,X,Y,Z,_,$,aa,ab,ac,ad,ae,af,ag,ah,ai,aj,ak,al,am,an,ao,ap,aq,ar,as,at,au,av,aw){D.type="howto";D.title="How to Convert PUB to PDF?";D.contents=[{position:k,name:"Upload",text:"Click the \u003Cb\u003E“Choose Files”\u003C\u002Fb\u003E button to select your PUB files."},{position:2,name:l,text:"Click the \u003Cb\u003E“Convert”\u003C\u002Fb\u003E button to start the conversion."},{position:3,name:E,text:"When the status changes to “Done”, click the \u003Cb\u003E“Download”\u003C\u002Fb\u003E button."}];return {layout:s,data:[{active:t,type:h,title:u,desc:v,header_h1:i,subtext_h1:w,featureList:void 0,currentUrl:j,conversionGuideContent:{instructions:"\u003Ch2\u003EHow to Convert PUB to PDF?\u003C\u002Fh2\u003E\u003Col\u003E\u003Cli\u003E\u003Cspan class=\"n\"\u003EClick the \u003Cb\u003E“Choose Files”\u003C\u002Fb\u003E button to select your PUB files.\u003C\u002Fspan\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cspan class=\"n\"\u003EClick the \u003Cb\u003E“Convert”\u003C\u002Fb\u003E button to start the conversion.\u003C\u002Fspan\u003E\u003C\u002Fli\u003E\u003Cli\u003E\u003Cspan class=\"n\"\u003EWhen the status changes to “Done”, click the \u003Cb\u003E“Download”\u003C\u002Fb\u003E button.\u003C\u002Fspan\u003E\u003C\u002Fli\u003E\u003C\u002Fol\u003E",usps:[{content:x,icon:y},{content:z,icon:A},{content:B,icon:C}]},contentsExtra:[],howTo:D,reviews:[{_id:"63157cc1952edc3fcdba3093",title:"Awesome Site",content:"I needed to email a video clip to choir members, but the file size was a problem. I used FreeConvert to reduce the file size and the result was just right. I had no trouble emailing the file.",user:"Annabelle L",star:f,__v:d},{_id:"63157cc1952edc3fcdba3094",title:"Incredible!",content:"Just perfection. Best for converting an existing video to audio (mp3). It lets you trim correctly, fade in\u002Fout, reverse, and also lets you save in different formats. Love it.",user:"Joseph",star:f,__v:d},{_id:"6315e21e8097cc5202801c6d",title:"Great service",content:"After trying several competitors, I was shocked that this worked. It converted big psd files into a vector format. I am super thankful and will use this more often!",user:"Klaudia Wyzujak",star:f,__v:d},{_id:"6316e40bbeaa374542cee6e2",title:"Best advanced options",content:"FreeConvert.com has the best Advanced Options of any file converter! I strongly suggest others take advantage of these advanced options too to get the best output file quality.",user:"Natalia Fatkulina",star:f,__v:d},{_id:"6316e480beaa374542cee6e9",title:"Best site for file conversion",content:"This is really good, even though my file was compressed, the video still has the same quality as the uncompressed version. You saved a future! Thank you so much!",user:"Arianne",star:f,__v:d}]}],fetch:{},error:b,state:{showGpuUpgradeWarning:a,targetChangeIndex:d,breadcrumbs:[{url:"\u002Fdocument-converter",label:F},{url:"\u002Fpdf-converter",label:G},{url:j,label:i}],completed:[],download:a,alert:a,types:a,presetsList:[],list:[],reloadedList:[],sourceList:[],fileInputConcurrentLength:d,history:[],activeFilesCount:d,showAdvancedForm:a,showInvalidPopup:a,showOverLimitPopup:a,smallUploaderDisabled:c,subscription:{minutes:25,name:"Free",perTaskLimit:k,plan:{maxFileSizeInGb:k},loaded:a,free:b},googleToken:{},errors:[],info:{_id:"5f4a3c94fc78984c3c172c9e",slug:h,operation:"convert",template:"Single",type:"document",engine:"soffice_6",list1:[{slug:"pub-converter",label:"PUB Converter",_id:"6af3d37459cb264c3ca74f75"},{slug:"pub-to-word",label:"PUB to WORD",_id:"6af3d37459cb264c3ca74f76"},{slug:"pub-to-doc",label:"PUB to DOC",_id:"6af3d37459cb264c3ca74f77"},{slug:"pub-to-docx",label:"PUB to DOCX",_id:"6af3d37459cb264c3ca74f78"}],list2:[{slug:"pdf-converter",label:G,_id:"6af3d37459cb264c3ca74f79"},{slug:H,label:I,_id:"6af3d37459cb264c3ca74f7a"},{slug:H,label:I,_id:"6af3d37459cb264c3ca74f7b"},{slug:"html-to-pdf",label:"HTML to PDF",_id:"6af3d37459cb264c3ca74f7c"},{slug:"ppt-to-pdf",label:"PPT to PDF",_id:"6af3d37459cb264c3ca74f7d"},{slug:"odp-to-pdf",label:"ODP to PDF",_id:"6af3d37459cb264c3ca74f7e"},{slug:"txt-to-pdf",label:"TXT to PDF",_id:"6af3d37459cb264c3ca74f7f"},{slug:"rtf-to-pdf",label:"RTF to PDF",_id:"6af3d37459cb264c3ca74f80"},{slug:"pptx-to-pdf",label:"PPTX to PDF",_id:"6af3d37459cb264c3ca74f81"},{slug:J,label:K,_id:"6af3d37459cb264c3ca74f82"},{slug:J,label:K,_id:"6af3d37459cb264c3ca74f83"},{slug:m,label:n,_id:"6af3d37459cb264c3ca74f84"},{slug:m,label:n,_id:"6af3d37459cb264c3ca74f85"},{slug:m,label:n,_id:"6af3d37459cb264c3ca74f86"},{slug:L,label:M,_id:"6af3d37459cb264c3ca74f87"},{slug:L,label:M,_id:"6af3d37459cb264c3ca74f88"},{slug:N,label:O,_id:"6af3d37459cb264c3ca74f89"},{slug:N,label:O,_id:"6af3d37459cb264c3ca74f8a"},{slug:"text-to-pdf",label:"TEXT to PDF",_id:"6af3d37459cb264c3ca74f8b"},{slug:"ps-to-pdf",label:"PS to PDF",_id:"6af3d37459cb264c3ca74f8c"},{slug:"xml-to-pdf",label:"XML to PDF",_id:"6af3d37459cb264c3ca74f8d"},{slug:"ods-to-pdf",label:"ODS to PDF",_id:"6af3d37459cb264c3ca74f8e"},{slug:P,label:Q,_id:"6af3d37459cb264c3ca74f8f"},{slug:P,label:Q,_id:"6af3d37459cb264c3ca74f90"},{slug:"csv-to-pdf",label:"CSV to PDF",_id:"6af3d37459cb264c3ca74f91"},{slug:R,label:S,_id:"6af3d37459cb264c3ca74f92"},{slug:R,label:S,_id:"6af3d37459cb264c3ca74f93"},{slug:T,label:U,_id:"6af3d37459cb264c3ca74f94"},{slug:T,label:U,_id:"6af3d37459cb264c3ca74f95"},{slug:"pot-to-pdf",label:"POT to PDF",_id:"6af3d37459cb264c3ca74f96"},{slug:"webpage-to-pdf",label:"Webpage to PDF",_id:"6af3d37459cb264c3ca74f97"},{slug:"vsdx-to-pdf",label:"VSDX to PDF",_id:"6af3d37459cb264c3ca74f98"},{slug:"htm-to-pdf",label:"HTM to PDF",_id:"6af3d37459cb264c3ca74f99"},{slug:"xps-to-pdf",label:"XPS to PDF",_id:"6af3d37459cb264c3ca74f9a"},{slug:"pages-to-pdf",label:"PAGES to PDF",_id:"6af3d37459cb264c3ca74f9b"},{slug:"wps-to-pdf",label:"WPS to PDF",_id:"6af3d37459cb264c3ca74f9c"},{slug:"potx-to-pdf",label:"POTX to PDF",_id:"6af3d37459cb264c3ca74f9d"},{slug:"eml-to-pdf",label:"EML to PDF",_id:"6af3d37459cb264c3ca74f9e"},{slug:"vsd-to-pdf",label:"VSD to PDF",_id:"6af3d37459cb264c3ca74f9f"},{slug:V,label:W,_id:"6af3d37459cb264c3ca74fa0"},{slug:V,label:W,_id:"6af3d37459cb264c3ca74fa1"},{slug:X,label:Y,_id:"6af3d37459cb264c3ca74fa2"},{slug:X,label:Y,_id:"6af3d37459cb264c3ca74fa3"},{slug:"ppsx-to-pdf",label:"PPSX to PDF",_id:"6af3d37459cb264c3ca74fa4"},{slug:"pps-to-pdf",label:"PPS to PDF",_id:"6af3d37459cb264c3ca74fa5"},{slug:"pptm-to-pdf",label:"PPTM to PDF",_id:"6af3d37459cb264c3ca74fa6"},{slug:"xlsm-to-pdf",label:"XLSM to PDF",_id:"6af3d37459cb264c3ca74fa7"},{slug:"fb2-to-pdf",label:"FB2 to PDF",_id:"6af3d37459cb264c3ca74fa8"},{slug:"azw4-to-pdf",label:"AZW4 to PDF",_id:"6af3d37459cb264c3ca74fa9"},{slug:"chm-to-pdf",label:"CHM to PDF",_id:"6af3d37459cb264c3ca74faa"},{slug:"lit-to-pdf",label:"LIT to PDF",_id:"6af3d37459cb264c3ca74fab"},{slug:"azw-to-pdf",label:"AZW to PDF",_id:"6af3d37459cb264c3ca74fac"},{slug:"mobi-to-pdf",label:"MOBI to PDF",_id:"6af3d37459cb264c3ca74fad"},{slug:"azw3-to-pdf",label:"AZW3 to PDF",_id:"6af3d37459cb264c3ca74fae"},{slug:"epub-to-pdf",label:"EPUB to PDF",_id:"6af3d37459cb264c3ca74faf"},{slug:"ai-to-pdf",label:"AI to PDF",_id:"6af3d37459cb264c3ca74fb0"},{slug:"svgz-to-pdf",label:"SVGZ to PDF",_id:"6af3d37459cb264c3ca74fb1"},{slug:"ppm-to-pdf",label:"PPM to PDF",_id:"6af3d37459cb264c3ca74fb2"},{slug:"avif-to-pdf",label:"AVIF to PDF",_id:"6af3d37459cb264c3ca74fb3"},{slug:"heif-to-pdf",label:"HEIF to PDF",_id:"6af3d37459cb264c3ca74fb4"},{slug:"jxl-to-pdf",label:" JXL to PDF",_id:"6af3d37459cb264c3ca74fb5"},{slug:"cbr-to-pdf",label:"CBR to PDF",_id:"6af3d37459cb264c3ca74fb6"},{slug:"cbz-to-pdf",label:"CBZ to PDF",_id:"6af3d37459cb264c3ca74fb7"},{slug:"art-to-pdf",label:"ART to PDF",_id:"6af3d37459cb264c3ca74fb8"},{slug:"dds-to-pdf",label:"DDS to PDF",_id:"6af3d37459cb264c3ca74fb9"},{slug:"pcx-to-pdf",label:"PCX to PDF",_id:"6af3d37459cb264c3ca74fba"},{slug:"dpx-to-pdf",label:"DPX to PDF",_id:"6af3d37459cb264c3ca74fbb"},{slug:"psb-to-pdf",label:"PSB to PDF",_id:"6af3d37459cb264c3ca74fbc"},{slug:"tif-to-pdf",label:"TIF to PDF",_id:"6af3d37459cb264c3ca74fbd"},{slug:"wmz-to-pdf",label:"WMZ to PDF",_id:"6af3d37459cb264c3ca74fbe"},{slug:"ico-to-pdf",label:"ICO to PDF",_id:"6af3d37459cb264c3ca74fbf"},{slug:"emz-to-pdf",label:"EMZ to PDF",_id:"6af3d37459cb264c3ca74fc0"},{slug:"heic-to-pdf",label:"HEIC to PDF",_id:"6af3d37459cb264c3ca74fc1"},{slug:"eps-to-pdf",label:"EPS to PDF",_id:"6af3d37459cb264c3ca74fc2"},{slug:"jpeg-to-pdf",label:"JPEG to PDF",_id:"6af3d37459cb264c3ca74fc3"},{slug:"tga-to-pdf",label:"TGA to PDF",_id:"6af3d37459cb264c3ca74fc4"},{slug:"dib-to-pdf",label:"DIB to PDF",_id:"6af3d37459cb264c3ca74fc5"},{slug:"djvu-to-pdf",label:"DJVU to PDF",_id:"6af3d37459cb264c3ca74fc6"},{slug:"jfif-to-pdf",label:"JFIF to PDF",_id:"6af3d37459cb264c3ca74fc7"},{slug:"rwl-to-pdf",label:"RWL to PDF",_id:"6af3d37459cb264c3ca74fc8"},{slug:"dcs-to-pdf",label:"DCS to PDF",_id:"6af3d37459cb264c3ca74fc9"},{slug:"dng-to-pdf",label:"DNG to PDF",_id:"6af3d37459cb264c3ca74fca"},{slug:"srw-to-pdf",label:"SRW to PDF",_id:"6af3d37459cb264c3ca74fcb"},{slug:"nikon-raw-to-pdf",label:"Nikon RAW to PDF",_id:"6af3d37459cb264c3ca74fcc"},{slug:"samsung-raw-to-pdf",label:"Samsung RAW to PDF",_id:"6af3d37459cb264c3ca74fcd"},{slug:"srf-to-pdf",label:"SRF to PDF",_id:"6af3d37459cb264c3ca74fce"},{slug:"kodak-raw-to-pdf",label:"Kodak RAW to PDF",_id:"6af3d37459cb264c3ca74fcf"},{slug:"cr3-to-pdf",label:"CR3 to PDF",_id:"6af3d37459cb264c3ca74fd0"},{slug:"dcr-to-pdf",label:"DCR to PDF",_id:"6af3d37459cb264c3ca74fd1"},{slug:"rw2-to-pdf",label:"RW2 to PDF",_id:"6af3d37459cb264c3ca74fd2"},{slug:"x3f-to-pdf",label:"X3F to PDF",_id:"6af3d37459cb264c3ca74fd3"},{slug:"nef-to-pdf",label:"NEF to PDF",_id:"6af3d37459cb264c3ca74fd4"},{slug:"crw-to-pdf",label:"CRW to PDF",_id:"6af3d37459cb264c3ca74fd5"},{slug:"drf-to-pdf",label:"DRF to PDF",_id:"6af3d37459cb264c3ca74fd6"},{slug:"kdc-to-pdf",label:"KDC to PDF",_id:"6af3d37459cb264c3ca74fd7"},{slug:"raf-to-pdf",label:"RAF to PDF",_id:"6af3d37459cb264c3ca74fd8"},{slug:"sony-raw-to-pdf",label:"Sony RAW to PDF",_id:"6af3d37459cb264c3ca74fd9"},{slug:"cr2-to-pdf",label:"CR2 to PDF",_id:"6af3d37459cb264c3ca74fda"},{slug:"arw-to-pdf",label:"ARW to PDF",_id:"6af3d37459cb264c3ca74fdb"},{slug:"nrw-to-pdf",label:"NRW to PDF",_id:"6af3d37459cb264c3ca74fdc"},{slug:"k25-to-pdf",label:"K25 to PDF",_id:"6af3d37459cb264c3ca74fdd"},{slug:"sr2-to-pdf",label:"SR2 to PDF",_id:"6af3d37459cb264c3ca74fde"},{slug:"pentax-raw-to-pdf",label:"Pentax RAW to PDF",_id:"6af3d37459cb264c3ca74fdf"},{slug:"ptx-to-pdf",label:"PTX to PDF",_id:"6af3d37459cb264c3ca74fe0"},{slug:"leica-raw-to-pdf",label:"Leica RAW to PDF",_id:"6af3d37459cb264c3ca74fe1"},{slug:"raw-to-pdf",label:"RAW to PDF",_id:"6af3d37459cb264c3ca74fe2"},{slug:"panasonic-raw-to-pdf",label:"Panasonic RAW to PDF",_id:"6af3d37459cb264c3ca74fe3"},{slug:"sigma-raw-to-pdf",label:"Sigma RAW to PDF",_id:"6af3d37459cb264c3ca74fe4"},{slug:"canon-raw-to-pdf",label:"Canon RAW to PDF",_id:"6af3d37459cb264c3ca74fe5"},{slug:"orf-to-pdf",label:"ORF (Olympus Raw) to PDF",_id:"6af3d37459cb264c3ca74fe6"},{slug:"pef-to-pdf",label:"PEF to PDF",_id:"6af3d37459cb264c3ca74fe7"},{slug:"svg-to-pdf",label:"SVG to PDF",_id:"6af3d37459cb264c3ca74fe8"},{slug:"png-to-pdf",label:"PNG to PDF",_id:"6af3d37459cb264c3ca74fe9"},{slug:"bmp-to-pdf",label:"BMP to PDF",_id:"6af3d37459cb264c3ca74fea"},{slug:"tiff-to-pdf",label:"TIFF to PDF",_id:"6af3d37459cb264c3ca74feb"},{slug:"jpg-to-pdf",label:"JPG to PDF",_id:"6af3d37459cb264c3ca74fec"},{slug:"webp-to-pdf",label:"WebP to PDF",_id:"6af3d37459cb264c3ca74fed"},{slug:"odd-to-pdf",label:"ODD to PDF",_id:"6af3d37459cb264c3ca74fee"},{slug:"psd-to-pdf",label:"PSD to PDF",_id:"6af3d37459cb264c3ca74fef"},{slug:"gif-to-pdf",label:"GIF to PDF",_id:"6af3d37459cb264c3ca74ff0"}],alternetList2:a,relatedTools:[{slug:"compress-pdf",name:"Compress PDF",isRoot:c,_id:"6af3d37459cb264c3ca74ff1"},{slug:"resize-pdf",name:"Resize PDF",isRoot:c,_id:"6af3d37459cb264c3ca74ff2"},{slug:"extract-images-from-pdf",name:"Extract Images from PDF",isRoot:c,_id:"6af3d37459cb264c3ca74ff3"}],hiddenInUrl:a,sourceExt:o,targetExt:g,__v:d,is_removed:a,title:u,meta_description:v,header_h1:i,subtext_h1:w,button_text:e,main_card_text:[D,{type:"general",contents:[{content:x,icon:y},{content:z,icon:A},{content:B,icon:C}]}],convert_more_text:e,advanced_option:s,custom_variables:e,upload_button_text:e,source:{_id:"636bc2eeb3b4239fb338ac8f",enableMerge:a,name:"PUB",group:p,subGroup:"603f1dab5f4a16002303db4c",slug:o,ext:o,info:"\u003Ch2\u003EWhat is a PUB (Microsoft Publisher Document) file?\u003C\u002Fh2\u003E\u003Cp\u003E\u003Ca href=\"https:\u002F\u002Fen.wikipedia.org\u002Fwiki\u002FMicrosoft_Publisher\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EMicrosoft Publisher Document (PUB)\u003C\u002Fa\u003E is the native format of Microsoft Publisher, a desktop-publishing application aimed at newsletters, brochures, flyers, greeting cards, and other page-layout work. Unlike Word, Publisher treats a page as a canvas of independently positioned text boxes and graphics, giving precise control over layout. A PUB file stores that arrangement along with the text, images, and print settings. Microsoft has announced that Publisher will be retired in October 2026.\u003C\u002Fp\u003E\u003Cp\u003E&nbsp;\u003C\u002Fp\u003E\u003Ch2\u003EHow to open a PUB file?\u003C\u002Fh2\u003E\u003Cp\u003EMicrosoft Publisher, included with some Microsoft 365 plans on Windows, is the only application that renders PUB files exactly as designed.\u003C\u002Fp\u003E\u003Cp\u003E&nbsp;\u003C\u002Fp\u003E\u003Cp\u003ENo other application reproduces Publisher’s full feature set — LibreOffice Draw imports many PUB files, though complex layouts often shift. The most dependable approach is to ask the sender to export the document as a PDF from Publisher, which preserves the layout perfectly and opens anywhere. Our \u003Ca href=\"https:\u002F\u002Fwww.freeconvert.com\u002Fpub-to-pdf\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EPUB to PDF\u003C\u002Fa\u003E tool can also do the conversion.\u003C\u002Fp\u003E\u003Cp\u003E&nbsp;\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EDeveloped by:\u003C\u002Fstrong\u003E Microsoft\u003C\u002Fp\u003E\u003Cp\u003E\u003Cstrong\u003EInitial Release:\u003C\u002Fstrong\u003E 1991\u003C\u002Fp\u003E",remoteId:"603f2c1dae88b11070f725c8",code:Z,isLocked:a,__v:d},target:{_id:"636bc271b3b4239fb338aa51",enableMerge:c,name:"PDF",info:"\u003Ch2\u003EWhat is a PDF (Portable Document Format) file?\u003C\u002Fh2\u003E\n\u003Cp\u003EThe Portable Document Format (PDF) is a universal file format that comprises characteristics of both text documents and graphic images which makes it one of the most commonly used file types today. The reason PDF is so widely popular is that it can preserve original document formatting. PDF files always look identical on any device or operating system.\u003C\u002Fp\u003E\n\u003Cp\u003E&nbsp;\u003C\u002Fp\u003E\n\u003Ch2\u003EHow to open a PDF file?\u003C\u002Fh2\u003E\n\u003Cp\u003EMost people head right to Adobe Acrobat Reader when they need to open a PDF. Adobe created the PDF standard, and Adobe Acrobat Reader remains the most widely used PDF reader. It's completely fine to use, but I find it to be a somewhat bloated program with lots of features that you may never need or want to use.\u003C\u002Fp\u003E\n\u003Cp\u003E&nbsp;\u003C\u002Fp\u003E\n\u003Cp\u003EMost web browsers, like both Chrome and Firefox, can open PDFs themselves. You may or may not need an add-on or extension to do it, but it's pretty handy to have one open automatically when you click a PDF link online. SumatraPDF and MuPDF are lighter-weight alternatives. \u003C\u002Fp\u003E\n\u003Cp\u003E&nbsp;\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cstrong\u003E Developed by:\u003C\u002Fstrong\u003E \u003Ca href=\"https:\u002F\u002Fwww.iso.org\u002Fstandard\u002F63534.html\" target=\"_blank\" rel=\"noopener noreferrer\"\u003EISO\u003C\u002Fa\u003E\u003C\u002Fp\u003E\n\u003Cp\u003E\u003Cstrong\u003E Initial Release:\u003C\u002Fstrong\u003E 15 June 1993\u003C\u002Fp\u003E",group:p,subGroup:"5b98d6ef49e8cd002a97ec35",slug:g,ext:g,remoteId:"603f2c1dae88b11070f72542",code:Z,isLocked:a,__v:d},advancedOptions:_,toolPage:a,faqs:[],active:t},toasts:[],sidebarFolded:a,alertObj:b,redirect:q,socketReconnectCounter:d,isInternetAvailable:c,interruptedJobs:[],jobIDList:{},exportJobIDList:{},canChangeSubscription:c,interactionInitiated:a,loggedIn:a,documentMounted:a,autoSaveToDrive:a,extra:b,isValidDimension:c,isValidPDFResizeDimension:{width:c,height:c},toBeUploadedEvent:b,activeMenu:e,advancedSetting:{merging:a,sorting:a,attachments:{},cropAspectRatio:a,perConversionType:{"pub-to-pdf":{fieldNames:{},hidden:[],selection:{},list:_}},userData:{allSelection:{page:{},root:{}},fieldNames:{},conversionType:{root:h},defaultAllowed:[],defaultHidden:[]},showOnlyRootSettings:a,targetForExt:{},targetObjects:{},typeForExt:{},defaultTarget:g,targetForFile:{},cropSettingsIds:{},oldSelection:{allSelection:{}},advancedOptionsLoading:a,supportedTargets:b,mergeInfo:b,customDimensionActiveInput:a,selectedPreviewItem:b,haveConfirmedPassword:a,options:{}},banner:{bannerList:[],showPerTaskLimitReachedError:a,upgradingMidConversion:a},items:{bulkItemJobId:e,jobs:{},tasks:{},startConversionOnDownloadPage:c},store:{isCypress:a,isMobile:a,isTab:a,isSafari:a,userAgent:"Mozilla\u002F5.0 (Windows NT 10.0; Win64; x64) AppleWebKit\u002F537.36 (KHTML, like Gecko) Chrome\u002F157.0.0.0 Safari\u002F537.36 Edg\u002F157.0.0.0",advancedOptionListResponsiveView:a,showAutoSavetoDriveOption:a,googleDriveTokenForUpload:b,telemetryUser:a,dialogIsOpen:a,country:"US",priceToLong:a,ctaLoading:a},thumb:{pdfToolBarOptions:{viewPages:c,include:"all",splitMode:"custom",pageCount:b,splitRanges:[e],pagePreview:a},thumbs:[],addThumbsToPosition:b,showAddFilesButton:b,ranges:b,isExtractPagesPdf:a,extractPagesRange:e,thumbLoading:a,thumbDragging:a,selectedThumbId:b,layoutZoom:75,isPdfPageRemover:a},i18n:{routeParams:{}},forceTarget:a,failedUploadCalls:[]},serverRendered:c,routePath:j,config:{_app:{basePath:q,assetsPath:q,cdnURL:"https:\u002F\u002Fwww.freeconvert.com\u002F_nuxt\u002F202611120556-581\u002F"}},__i18n:{langs:{en:{"24-h-pass":"24-h pass gives you pro privileges just for 24 hours. This package is not automatically renewed",Compress:$,Compressor:aa,Convert:l,Converter:ab,Cropper:"Cropper",Image:"Image",Maker:"Maker",Trimmer:"Trimmer",When_you_qualify_for_refund:"When You Qualify for a Refund",When_you_qualify_for_refund_desc:"We believe in transparency and fairness. You can request a refund under the following conditions:",about_us:"About Us",access_control_authentication:"Access Control and \u003Cbr\u002F\u003EAuthentication",account_max_file_size_limit:"ACCOUNT_TYPE accounts have a MAX_LIMIT max file size limit",account_presets:"Account Dashboard\u002F Presets",ad_blocker_adblock_plus_step_1:"Click the AdBlock Plus icon ICON in your browser's toolbar (upper right-hand corner). You may see a small number covering part of the icon.",ad_blocker_adblock_plus_step_2:"Click the \"Enabled on this site\" toggle to switch it off.",ad_blocker_adblock_step_1:"Click the AdBlock icon ICON in your browser's toolbar (upper right-hand corner). You may see a small number covering part of the icon.",ad_blocker_adblock_step_2:"Click \"Pause on this site.\"",ad_blocker_allow_ads_cta:"Allow ads on FreeConvert",ad_blocker_choose_extension:"Choose your extension.",ad_blocker_name_adblock:"AdBlock",ad_blocker_name_adblock_plus:"AdBlock Plus",ad_blocker_name_other:"Other",ad_blocker_name_ublock_origin:"uBlock Origin",ad_blocker_other_step_1:"Click the icon of the ad blocker extension installed on your browser.",ad_blocker_other_step_1_detail:"You'll usually find this icon in the upper right-hand corner of your screen. You may have more than one ad blocker installed.",ad_blocker_other_step_2:"Follow the instructions for disabling the ad blocker on the site you're viewing.",ad_blocker_other_step_2_detail:"You may have to select a menu option or click a button.",ad_blocker_other_step_3:"Refresh the page, either by following prompts or clicking your browser's \"refresh\" or \"reload\" button.",ad_blocker_page_description:"FreeConvert is free to use because of ads. It looks like you have an ad blocker enabled, which prevents the site from working properly. Please allow ads on FreeConvert to continue.",ad_blocker_page_title:"Please Disable Your Ad Blocker to Continue",ad_blocker_refresh_page:"Refresh Page",ad_blocker_step_refresh:"Click the \"Refresh\" button.",ad_blocker_ublock_origin_step_1:"Click the uBlock Origin icon ICON in your browser's toolbar (upper right-hand corner). It shows how many items it's blocked on this page.",ad_blocker_ublock_origin_step_2:"Click the large power button — it turns gray\u002Fblue, indicating ads on this site are no longer blocked.",ad_blocker_which_extension_title:"Which of these extensions do you have?",add:"Add",add_files:"Add Files",add_files_by_url:"Add Files by URL",add_files_by_url_label:"Enter Url",add_more:"Add More",add_more_urls:"Add more URLs",add_more_webpages:"Add More Webpages",added:"Added",added_to_queue:" added to queue, add more if you like.",added_total_files:"Added TOTAL files",added_x_of_total_files:"Added X of TOTAL files",address:"Address",address_line_2:"Address Line 2 (Apartment, suit, unit etc)",advanced_options:"Advanced Options",advanced_settings_optional:"Advanced settings (optional)",ai_image_generator:"AI Image Generator",ai_photo_editor:"AI Photo Editor",ai_photo_editor_desc:"Try ClipSnap, our powerful AI photo editing tools.",all:"All",all_files:"All files",all_files_must_have_target:"All files must have a target format.",all_files_removed:"All files removed.",all_pages:"All Pages",already_have_account:"Already have an account?",and_start_over:"and start over",android_video_compressor:"Android Video Compressor",annotate_pdf:"Annotate PDF",annualy:"Annually",api_dialog_description:"Here is how to perform your tasks using Freeconvert's API. Our API can perform complex multi-step file manipulations. For example, you can convert a file and compress the output. Did we mention that all our advanced options are available too? For more information, try our API workflow builder.",api_dialog_title:"Perform This Job with our API",api_doc:"API Documentation",api_feature__dedicated_support:"Dedicated support",api_feature_processing_time_per_file:"Up to 4 hours of processing time per file",api_feature_sla:"99.99% Service Level Agreement",api_feature_unlimited_conversions:"Unlimited conversions",api_feature_unlimited_file_size:"Max 10 GB File Size",api_launcher_hint:"API is not supported for Drive Uploads",api_launcher_hint_dropbox:"API is not supported for Dropbox",api_not_available:"API not available",applied:"Applied!",apply:"Apply",apply_from_preset:"Apply from Preset",apply_settings:"Apply Settings",apply_to_all:"Apply to All",apply_to_all_files:"Apply to All Files",apply_to_all_have_same_setting:"Apply to all conversions that have the same settings",archive_size_too_big:"Archive size too big",are_you_happy:"Are you a happy user?",area:"Area",at_least_n_characters:"at least LENGTH characters",at_least_one_letter:"at least one letter",at_least_one_number:"at least one number",audio:"Audio",auth_free_sign_up:"Free Sign Up",auth_login:"Log In",auth_logout:"Logout",auth_recover_password:"Recover Password",auth_signup:"Sign Up",background_remover:"Background Remover",based_on:"based on",best_value_for_power_users:"Best Value for Power Users",billing_info:"Billing Info",blog:"Blog",bookmark_page:"Bookmark Page",broken_file_error:"The file seems to be broken",broken_jwt_token:"Your session has expired. Please log in again to complete your purchase.",browse:"Browse",built_with:"Built with",buy_us_coffee:"Buy us Coffee",by:"by",by_page_range:"By page range",cancel:"Cancel",cant_be_reached:"Can not be reached",card_number:"Card number",change:"Change",change_effective_date:"Change effective date",char_limit_exceeded_toast:"File name cannot exceed 255 characters",charge:"Charge",chart:"Chart",check_inbox:"Please check your inbox",checkout:"Checkout",choose_a_file:"Choose a file",choose_a_password:"Choose a Password",choose_new_password:"Choose a New Password",choose_payment_option:"Choose a payment option",city:"City",click_to_sort:"Click to sort",collage_maker:"Collage Maker",color_picker:"Color Picker",come_back:"Come back",commitment_to_security:"Our Commitment to Security",complete_registration:"Complete Registration",compress:$,compress_now_tooltip:"Compress Now!",compress_videos:"Compress videos",compressing:"Compressing",compression:"Compression",compression_tasks:"Compression Tasks",compressor:aa,compressors:"Compressors",confirm_password_label:"Confirm Password",contact:"Contact",contact_us:"Contact us",continue:"Continue",conversion:"Conversion",conversion_min_per_month:"Conversion minutes per month",conversion_minute_tooltip:ac,conversion_minutes:"Conversion Minutes",conversion_minutes_avg:"Conversion Minutes (Avg)",conversion_minutes_desc:"Conversion minutes measure how long it takes to process your files. For example, most image, document, or audio conversions takes less than a minute.",conversion_rate_limit_reached:"Conversion rate limit reached",conversion_results:"Conversion Results",conversion_table:"Conversion Table",conversion_tasks:"Conversion Tasks",convert:l,convert_all_to:"Convert All( LENGTH ) to:",convert_bigger_files_by_upgrading:"Convert even bigger files by upgrading your account",convert_images:"Convert images",convert_more_concurrent_desc:"Upgrade to convert more than MAX files at a time.",convert_more_concurrent_title:ad,convert_more_files:ad,convert_new_tooltip:"Click here to convert a new batch of files",convert_new_tooltip_file:"Click here to convert a new batch of files to TARGET",convert_now_tooltip:"Convert Now!",convert_timezone_text_source:"FreeConvert.com can convert SOURCE to these other time zones:",convert_timezone_text_target:"FreeConvert.com can convert TARGET to these other time zones:",convert_timezone_title_source:"Convert SOURCE to other time zones",convert_timezone_title_target:"Convert TARGET to other time zones",convert_to:"Convert to",converter:ab,converter_archive_converter:"Archive Converter",converter_audio_converter:"Audio Converter",converter_document_converter:F,converter_ebook_converter:"Ebook Converter",converter_image_converter:ae,converter_unit_converter:af,converter_vector_converter:"Vector Converter",converter_video_converter:"Video Converter",converters:r,converting:"Converting",copied:"Copied",copy:"Copy",copy_link:"Copy Link",copy_to_clipboard:"Copy to clipboard",copy_trim_pos:"Use current position as",copyright_text:"FreeConvert.comVERSION All rights reserved",coupon_has_expired:"Your coupon has expired",create_fillable_pdf:"Create Fillable PDF",create_free_account:"Create a Free Account",creating_job:"Creating Job",credentials_expired_or_incorrect:"Authentication failed. Your credentials may be expired or incorrect.",credit_card:"Credit Card",credit_card_wallet:"Credit Cards & Wallets",credits:"Credit",crop:"Crop",crop_image:"Crop Image",crop_options:"Crop Options",cropped_height:"Cropped Height",cropped_height_hint:"Enter the height of the crop box. This defines how tall the visible area of the page will be.",cropped_width:"Cropped Width",cropped_width_hint:"Enter the width of the crop box. This defines how wide the visible area of the page will be.",current_plan:"Current Plan",currently_subscribed:"You're currently subscribed to this plan",custom:"Custom",custom_exclude_helper:"Define range to exclude the document. Example: 1-4,6-8 or 1-3,6,9-11",custom_include:"Custom Include",custom_include_helper:"Define range to include the document. Example: 1-4,6-8 or 1-3,6,9-11",custom_include_option_helper:"Enter specific pages or ranges separated by commas. For example: 1, 3, 5–7",custom_plan_builder:"Custom Plan Builder",custom_plan_dialog_title:"Scale Your Plan to Fit Your Needs",custom_plan_dialog_title_desc:"Unlock more conversions at a lower price per minute as you scale up your plan.",custom_plan_subtext:"Pay only what you need with our custom plans",custom_pricing:"Custom Pricing",custom_range:"Custom Range",custom_range_hint:"‘Custom Range’ lets you define specific sets of pages (e.g., 1–3, 5–7), creating a separate file for each range. ‘Pages per PDF’ lets you enter a number to automatically split the PDF into equal parts.",custom_range_split:"Custom Range Split",custom_split:"Custom Split",customize:"Customize",cvc:"CVC",daily_operations_limit_reached_desc:"You've reached your daily limit of 10 operations. Upgrade to a paid plan for unlimited operations.",data_security_prioritization_note:"At FreeConvert, we prioritize the security of your data as much as we prioritize seamless file conversions. Our extensive security framework is built on cutting-edge technology and industry-leading practices to ensure your data remains safe, confidential, and available whenever needed. Explore the security measures we’ve implemented to protect your trust.",day:"Day",days:"days",delay:"Delay",delay_tooltip:"How long should this image be displayed? Units are in nanoseconds i.s. 1\u002F100th of a second",delete:"Delete",delete_all_files:"Delete All Files?",delete_all_files_reloaded_warning:"When reloaded, original files will \u003Cstrong\u003Enot\u003C\u002Fstrong\u003E be deleted. Go to \u003Cstrong\u003EDashboard → Tasks\u003C\u002Fstrong\u003E to delete them separately.",delete_all_files_warning:"Are you sure you want to delete files from our servers? This cannot be undone!",delete_all_tooltip:"Delete All Files",delete_file:"Delete file",deleted:"Deleted",directly_on_device_using:"directly on your mobile device using our",dmca_upload_warning:"By proceeding, you confirm you own the rights to the files you upload and agree to our \u003Ca href='TERMS_LINK' target='_blank'\u003ETerms of Use\u003C\u002Fa\u003E.",dmca_url_error:"This URL is from a protected source and may be subject to copyright protection.",document:p,documentation:"Documentation",documents:"Documents",donate:"Donate",donate_with_paypal:"Or donate with PayPal",done:"Done",dont_have_account:"Don't have an account?",downgrade:"Downgrade",download:E,download_all:"Download All",download_started:ag,download_started_msg:ag,downloaded_to_dropbox:"File is being downloaded to your Dropbox folder. Large files may take a few minutes to download.",downloaded_to_dropbox_ongoing:"File is being downloaded to DropBox.",downloaded_to_google_folder:"File is being downloaded to your Google folder. Large files may take a few minutes to download.",downloaded_to_google_ongoing:"File is being downloaded to Google.",downloading:"Downloading",drive_upload_limit_tooltip:"You can save 3 times per file",drm_protected_file:"This file is protected by DRM and cannot be converted",dropbox:"Dropbox",dropbox_failed:"Saving to Dropbox failed due to permission error. Please click \u003Cb\u003ESave to DropBox\u003C\u002Fb\u003E again and click \u003Cb\u003ESave\u003C\u002Fb\u003E when prompted.",duplicate:"duplicate",duration_must_less_than_max:"COMMON_NAME duration (start-end) must be less than MAX_DURATIONs",e_sign:"E-sign",edit_pdf:"Edit PDF",electric:"Electric",email_already_used:"This email address is already in use",email_label:"Email",email_pass_combo_not_found:"Email\u002FPassword combination not found!",end:"End",ending_in:"ending in",energy:"Energy",enter_code_below:"Please enter the code below",enter_page_numbers_to_extract:"Enter page numbers to extract",enter_pages_to_remove:"Enter pages to remove",enter_password:"Enter Password",enter_pdf_passwords:"Enter passwords to unlock PDF files",enter_pdf_passwords_desc:"To unlock password-protected PDFs, please enter the password for each file in the corresponding field. We cannot make changes to password-protected files without the correct passwords.",enter_preset_name:"Enter preset name",enter_valid_email:"Please enter a valid email",error:ah,error_file_too_big:"Error: File Too big",error_saving_preset:"Error saving preset",errors:ah,even_pages:"Even Pages",example:"Example",existing:"Existing",expired:"Expired",expiry_date:"Expiry date",expiry_warning_general:"Converted files are automatically deleted after HOUR hours to protect your privacy. Please download files before they are deleted",explore_file_conversion_tools:"Explore COUNT file conversion tools.",exporting:"Exporting",extract_all:"Extract All",extract_all_hint:"Selected pages will be converted into separate PDF files. XX PDF will be created.",extract_all_pages:"Extract All Pages",extract_image_from_pdf:"Extract image from PDF",extract_pages:"Extract Pages",extract_pages_from_pdf:"Extract Pages from PDF",extract_pages_manual_selection_helper:"Enter specific pages or ranges separated by commas. For example: 1, 3, 5–7. The Page number is shown above the PDF thumbnail. Each comma-separated range will be extracted as a PDF.",extraction_method:"Extraction Method",extraction_method_helper:"Select which pages to extract using quick options, such as All, Odd, or Even pages. You can also click thumbnails to choose pages manually.",facebook:"Facebook",failed_to_load_payment_method:"Unable to load Payment Methods",feedback_failed_submit:"Unfortunately, your feedback has not been successfully submitted. Please try again.",feedback_submit_successfully:"Your feedback has been successfully submitted.",field_required:"This field is required",file:"File",file_converters:"File Converters",file_name:"File name",file_removed_after_time_for_privacy:"File removed after HOUR hours for privacy.",file_saved_to:"File saved to",file_size:ai,file_size_too_big:"File size SIZE is too big for account type",files:"files",fill_required:"please fill the required fields",finishing_upload:"Finishing Upload",fix_num_page_per_pdf:"Fixed number of pages per PDF",flatten:"Flatten",flexible:"Flexible",flip_image:"Flip Image",footer_link_title_archive_and_time:"Archive & Time",footer_link_title_document_and_ebook:"Document & Ebook",forgot_password:"Forgot password",form_builder:"Form Builder",formula:"Formula",free_user_limit_per_file:"Free users can process a file up to MINUTES minutes. Some of your large files may reach this limit. Please consider upgrading to avoid disruptions.",free_user_password_set:"Free user Password set",frequency:"Frequency",frequently_asked_questions:"Frequently Asked Questions",from:"from",from_device:"From Device",from_dropbox:"From Dropbox",from_google_drive:"From Google Drive",from_onedrive:"From OneDrive",from_url:"From Url",gdrive_saved_to_original_folder:"Saved to original folder",gdrive_saved_to_root_folder:"Saved to the root folder",generate_qr:"Generate QR Code",generate_qr_tooltip:"Generate a QR Code for the download link.",generating:"Generating",generative_fill:"Generative Fill",get_it_on_mobile:"Get it on Mobile",get_n_months_free:"Get N months free",get_started:"Get Started",gif_converters:"GIF Converters",gif_maker:"GIF Maker",go_back:"Go back",google_drive:"Google Drive",google_drive_promote_alert_part1:"Try our",google_drive_promote_alert_part2:"Google Drive App",google_drive_promote_alert_part3:"to process files directly from Google Drive.",google_permission_error:"Saving to Google Drive failed due to permission error.Please REGRANT and try again. Learn how to with this SCREENSHOT",half_pages:"Half pages",height:"height",hide_password:"Hide Password",high:"High",highest:"Highest",home:"Home",home_specific_tools_description:"FreeConvert.com can convert yourTARGET files to these other formats",homepage_security_description:"At FreeConvert, we go beyond just converting files—we protect them. Our robust security framework ensures that your data is always safe, whether you're converting an image, video, or document. With advanced encryption, secure data centers, and vigilant monitoring, we've covered every aspect of your data's safety.",homepage_security_title:"Your Data, Our Priority",hours:"hours",how_many_conversion_min_need_monthly:"How many Conversion Minutes you need for a month (Average)",how_many_conversion_min_need_monthly_desc:"Simply multiply the average number of files you need to convert or compress by conversion minutes to get an idea about your monthly conversion minutes requirement",how_refunds_work:"How Refunds Work",how_refunds_work_desc:"The refund amount—whether \u003Cstrong\u003Epartial\u003C\u002Fstrong\u003E or \u003Cstrong\u003Efull\u003C\u002Fstrong\u003E—is determined based on your package price and the specific circumstances. Our team will review your request to ensure a fair and timely resolution.",how_to_convert:"How to convert",if_account_exist_email_send:"If an account exists for \u003Cstrong\u003EEMAIL\u003C\u002Fstrong\u003E, we will email you further instructions.",image_converter:ae,image_converter_desc:"For fast and easy image conversions, download our mobile converters.",image_enlarger:"Image Enlarger",image_resizer:"Image Resizer",importing:"Importing",in_all_paid_plans:"In All Paid Plans",in_px_max:"in px (max: X)",in_sec_max:"in sec (max: X)",inches:"Inches",include:"Include",incorrect_password:"Incorrect password",increased:"Increased",ineligible_locale_user_banner_text:"Your existing plan(s) purchased in CURRENCY are incompatible with our new localized currency plans. If you wish to switch to a localized plan, cancel your active plans and CONTACT_US for refunds.",input_file:"Input File",input_must_be_color_picker:"Input must be a valid color. Example: #FFFFFF",interrupted:"Interrupted",interrupted_has_internet:"An error occurred when STEP_NAME. Reason: REASON",interrupted_no_internet:"An error occurred when STEP_NAME due to a connectivity issue. It will resume when connectivity is back.",invalid:"Invalid",invalid_range:"Invalid Range",invalid_raw_audio_message:"Not a valid raw audio file",invalid_raw_image_message:"Not a valid raw image file",invalid_request:"Invalid Request",invalid_url:"Invalid URL",invite_members:"Invite Members",ios_video_compressor:"iOS Video Compressor",job_already_deleted:"This job is already deleted",job_deleted:"Job deleted",key:"web_apps",label_feedback_write:"write your feedback.",landscape_pages:"Landscape Pages",largest_file_size_fc:"Unfortunately, this is the largest file size supported by FreeConvert",learn_more_about_security:"Learn more about our commitment to security",left:"Left",left_margin:"Left Margin",left_margin_tooltip:"Set the horizontal image position from the top left corner (A positive value moves the image right, while a negative value moves it to the left).",legacy_user_banner:"Your legacy plan(s) are incompatible with our new pricing plans. If you proceed, all your active plans will be canceled. Please CONTACT_US for refunds.",length:"Length",limit_reached:"Limit Reached",limit_reached_desc:"You’ve used up all MINUTES NAME conversion credits.",limit_reached_free_desc:"NAME users get LIMIT minutes per task. Upgrade to restart the failed tasks",link_to_this_tool:"Link to this tool",linkedin:"Linkedin",load:"Load",loaded:"Loaded",loading:aj,loading_the_presets_is_premium:"Loading advanced options from a preset is a premium feature. Please",login_and_continue:"Use below options to Login and continue",login_here:"login here",login_success_msg:"You have successfully logged in!",login_temporarily_disabled:"Further login attempts are disabled for 1 hour",logout_msg:"You have logged out of your account.",magic_eraser:"Magic Eraser",mail_us:"Mail us",manage_billing:"Manage Billing",manage_presets:"Manage presets",manual:"Manual",manual_selection:"Manual Selection",manual_split:"Manual Split",max_dimension_warning:"Maximum X should be N UNIT",max_file_exceed_toast:"Only up to LIMIT files can be selected.",max_size_web_processing:"Max file size (for web processing)",max_time_per_task:"Max processing time per task",medium:"Medium",merge:"Merge",merge_all_into_one:"Merge all files into one",merge_all_into_one_pdf:"Merge all files into one PDF",merge_into_one:ak,merge_limit_exceeded_text:"Your account type lets you merge LIMIT files at a time. Upgrade for more.",merge_limit_exceeded_title:"Upgrade to merge more files",merge_limit_reached_tooltip:"NAME accounts can merge up to LIMIT files",merge_options:"Merge Options",merge_output_files:"Merge Output Files",merge_pdf:"Merge PDF",merge_pdf_helper:"Enable this option to combine all uploaded and modified files into a single PDF upon export. If unchecked, each file will be exported separately.",merge_tooltip:"Merge them all into one",merging:"Merging",mid_conversion_upgration_prompt_text:"We will automatically resume your tasks once you upgrade.",mid_conversion_upgration_prompt_title:"Go Ahead and Upgrade",midnight:"midnight",millimetre:"Milimeters",min_dimension_warning:"Minimum X should be N UNIT",minute:"Minute",minutes:"Minutes",minutes_automatically_renew:al,missing_ext_submit_error:"Up to NUM alpha-numerals allowed.",missing_ext_submit_helper:"Enter a file format (i.e .mp3)",mobile_apps:"Mobile Apps",money_back_guarantee:"100% Money Back Guarantee",money_back_guarantee_desc:"At FreeConvert, we take pride in offering a service you’ll love and rely on. Our top priority is your satisfaction, so we offer a \u003Cstrong\u003E100% money-back guarantee\u003C\u002Fstrong\u003E to ensure a worry-free experience.",money_back_guarantee_satisfaction:"100% Money-Back Guarantee for Your Satisfaction",month:"month",monthly:"Monthly",more:"More",more_options:"More Options",n_days:"N days",n_months_free:"N months free",n_sec_left:"N sec left",name_or_business:"Name or Business",navigation_link_item_account:"Account",navigation_link_item_activity:"Activity",navigation_link_item_api:am,navigation_link_item_api_keys:"API Keys",navigation_link_item_billing_plan:"Billing Plan",navigation_link_item_converters:r,navigation_link_item_dashboard:"Dashboard",navigation_link_item_faq:"FAQ",navigation_link_item_invoice:"Invoice",navigation_link_item_jobs:"Jobs",navigation_link_item_my_account:"My Account",navigation_link_item_my_files:"My Files",navigation_link_item_notifications:"Notifications",navigation_link_item_payment_method:an,navigation_link_item_pricing:"Pricing",navigation_link_item_tasks:"Tasks",navigation_link_item_team:"Team",navigation_link_item_tools:"Tools",navigation_link_item_webhooks:"Webhooks",new_payment_method:"Add a new payment method",new_size_tooltip:"New size",no_of_pages:"Number of pages",no_of_pages_hint:ao,no_of_pages_per_pdf:"No of pages per PDF",no_preset_msg:"You have not saved any presets yet",none:"None",noon:"noon",not_authorized:"Not Authorized",not_eligible_for_24h_plan:"Monthly subscribers can not purchase 24-h (one-time) plan",ocr_converter:"OCR Converter",odd_even_pages:"Odd\u002FEven pages",odd_pages:"Odd Pages",of:"of",off_discount:"off discount",ok:"Ok",old_size_tooltip:"Old size",on_demand:"On-Demand",one_time:"one-time",onedrive_failed:"Saving to OneDrive failed. Please click \u003Cb\u003ESave to OneDrive\u003C\u002Fb\u003E again.",open_drive_folder:"Open Google Drive",open_drive_folder_tooltip:"Your processed files will be stored in the original Google Drive folder",optinal:"Optinal",optional:"Optional",order_review:"Order Review",organize:"Organize",organize_options:"Organize Options",others:"Others",our_user_loves_us:"Our Users Love Us",out_of_conversion_minutes:"Out of conversion minutes",out_of_conversion_minutes_per_task:"SUBSCRIPTION users get LIMIT conversion minutes per file.",out_of_daily_operations_limit:"Out of Daily Operations Limit",output:"Output",output_file:"Output File",owners_can_not_be_removed:"Owners can not be removed",package_automatically_renew:al,package_conversion_minutes:"conversion minutes",package_conversion_minutes_hint:ac,package_conversion_minutes_n:"Up to LIMIT conversion mins",package_conversions_at_a_time:"conversions at a time",package_credit_hint:"Credits allow you to add conversion minutes to your account as needed. This is a one-time charge, and any unused credits will expire 30 days after purchase.",package_file_size:ai,package_has_ads:"Has Ads",package_max_file_size_hint:"The Max file size limit is only applicable if you are using our web interface. For API users, we do not enforce a maximum file size",package_maximum_file_size:"maximum file size",package_maximum_file_size_n_gb:"Up to LIMIT max file size",package_merge_limit:"Merge \u003Cstrong\u003EMERGE_LIMIT\u003C\u002Fstrong\u003E files at a time",package_never_expire:ap,package_no_ads:"No Ads",package_one_time_duration:"\u002F One Time",package_per_month_duration:"\u002F Month (cancel any time)",package_per_year_duration:"\u002FMonth, paid annually",package_priority_text:"priority",package_up_to:"Up to",package_video_encoding_text:"based video encoding",page_include_option_helper:"Choose which pages you want to Include. You can include all pages or specific ones.",page_not_found:"Page not found",page_numbers:"Page Numbers",page_per_pdf:aq,pages:"Pages",pages_per_pdf:aq,pages_per_pdf_hint:ar,pages_per_pdf_pages_hint:ao,pages_to_merge:"Pages to Merge",pages_to_rotate:"Pages to Rotate",password_cannot_contain_backslash:"A password cannot contain the backslash character (\\)",password_cannot_empty:"The password cannot be empty",password_change_success:"Your password has changed successfully! Please login.",password_does_not_match:"The password does not match",password_label:"Password",password_strength:"Password Strength",passwords_do_not_match:"Passwords do not match",pay:"Pay",payment:"Payment",payment_already_completed:"This payment has already been successfully processed.",payment_authentication_failure:"Payment Authentication Failed!",payment_failed:"Payment Failed",payment_incomplete:"Pending: click the activation link to finish",payment_method:an,payment_processing:"Your payment is waiting for the approval from Stripe",payment_succeeded:"Payment Succeeded!",payments_are_secured_with:"Payments are secured with",paypal:"Paypal",paypal_title:"PayPal - The safer, easier way to pay online!",pdf_editor:"PDF Editor",pdf_invalid_error:"Error: NAME file is broken, please recheck the file.",pdf_options:"Pdf Options",pdf_page_remover:"PDF page remover",pdf_reader:"PDF Reader",pdf_tools:"PDF Tools",pdf_tools_desc:"Try ProPDF, our all-in-one tools to edit, sign, and build PDFs.",pending_connection:"Pending Connection",pending_subscription:"You have a pending subscription to this plan",pixel:"Pixels",plan:"Plan",plan_feature:"Plan Features",plan_not_selected:"Plan has not selected",please_wait:"Please Wait",please_wait_for_video_load:"Please wait for the video to load",portrait_pages:"Portrait Pages",power:"Power",practices:"Practices",prepare_for:"Prepare for",preparing_file:aj,preset_name_character:"Preset name can only contain alphanumeric characters, spaces, and dashes.",preset_name_empty:"Preset name cannot be empty.",preset_name_exists:"Preset name already exists.",preview:"Preview",price:"Price",price_api_slider_label:"How many conversion minutes do you need?",pricing_header:"Convert more for less",pricing_header_sub:"Quickly convert large files in blazing fast speeds.",pricing_tab_api:am,pricing_tab_web:"Web",privacy:"Privacy",pro_advanced_option_selected:"You have selected a Pro feature",pro_video_codec_helper_text:"Use GPU-based codecs, available in pro and on-demand plans, to process your videos extremely fast and save money.",process_completion_timeout:"Process completion timeout",processing_video_wait:"Processing Video, This may take few minutes",product:"Product",prorated_discount:"Prorated Discount",protect:"Protect",prove_you_human:"Please prove that you are a human.",purchased_already:"You are currently on this plan.",range:"Range",range_out_of_bound:"Range is out of bound",range_type:"Range Type",range_type_hint:ar,ranges:"Ranges",rate_us:"Rate Us!",rated:"Rated",re_load:"Re-load",re_load_file:"Re-load file",re_load_files:"Re-load files",re_load_files_tooltip:"Re-load your files and try new settings for conversion.",re_load_tooltip:"Re-load your file and try new settings for conversion.",re_load_tooltip_disabled:"This file has expired and cannot be reloaded.",read_less:"Read Less",read_more:"Read More",ready:"Ready",recover_password_here:"Recover password here",reddit:"Reddit",redownload:"Re-download",refund_qualification_1:"\u003Cstrong\u003ENo Usage in the Last Month:\u003C\u002Fstrong\u003E You're eligible for a refund if you haven’t used our services in the past month.",refund_qualification_2:"\u003Cstrong\u003EConversion Issues:\u003C\u002Fstrong\u003E If your file conversions fail and our team confirms the issue, you can request a refund.",refund_qualification_3:"\u003Cstrong\u003EUnresolved Bugs:\u003C\u002Fstrong\u003E We'll refund you if you report a bug that isn’t fixed promptly.",regrant_permission:"re-grant permission",rejected:"Rejected",related_tools:"Related Tools",remember_me_label:"Remember Me",removal_method:"Removal Method",removal_method_helper_text:"Select which pages to remove using quick options, such as Odd, or Even pages. You can also click thumbnails to choose pages manually.",remove_file:"Remove File",remove_pages:"Remove Pages",repeat_password:"Repeat Password",report:"Report",request_sent_check_email:"Request Sent. Check verification code in your email.",required_info:"fields marked with * required",resend_button_text:"Click here to request a new verification code",resend_button_text_wait:"Please wait TIME before requesting a new code",reset:"Reset",reset_all:"Reset all options",reset_password_button_text:"Reset Password",resize:"Resize",resize_image:"Resize Image",restarting_upload:"Restarting Upload",restricted_url:"Restricted URL",reviews:"reviews",right:"Right",rorate_left:"Rotate Left",rorate_right:"Rotate Right",rotate:"Rotate",rotate_direction:"Rotate direction",rotate_image:"Rotate Image",rotate_options:"Rotate Options",save:"Save",save_ao_as_preset:"Save advanced options as preset",save_as:"Save As",save_as_preset:"Save as Preset",save_to:"Save to",save_to_device:"Save to Device",save_to_dropbox:"Save to Dropbox",save_to_gdrive:"Save to Google Drive",save_to_tooltip:"Save to OPTION (limit: LIMIT time)",saved:"Saved",saving:"Saving",saving_the_presets_is_premium:"Saving advanced options as a preset is a premium feature. Please",saving_to:"Saving to",scan_qr_to_download:"Scan the QR code to download this file to mobile device.",screenshot:"screenshot",search:"Search",searching:"Searching...",secured_data_centers:"Secured Data \u003Cbr\u002F\u003ECenters",security_and_compliance:"Security and Compliance",select:"Select",select_conversion_output:"Select conversion output",select_country:"Select Country",select_crop_unit:"Select Crop Unit",select_crop_unit_hint:as,select_custom_plan:"How many conversion minutes do you need",select_datetime:"Select TIMEZONE Time",select_exclude_helper:at,select_exclue_helper:at,select_files_to_convert:"Please select your files to convert",select_include:"Select Include",select_include_helper:"Select which pages to include on the final PDF",select_plan:"Select Plan",select_preset:"Select Preset",select_preset_msg:"Please select a preset from dropdown.",select_range:"Select Range",select_split_mode:"Select Split Mode",send_feedback:"Send Feedback",send_verification_code:"Send Verification Code",server_error:"Server Error",set_password:"Set Password",settings_applied:"Settings applied to the file",settings_applied_all:"Settings applied to all applicable files",sharing_is_caring:"Sharing is caring",show_original_translation:"Show original (English)",show_password:"Show password",showing_latest_reviews:"Showing our latest reviews",sign_pdf:"Sign PDF",signup_and_continue:"Use below options to signup and continue",signup_button_text:"Create my account",signup_here:"Sign up here",site_news_and_updates:"Site News and Updates",site_search_no_matches_found:"No matches found.",site_search_temporarily_unavailable:"Search is temporarily unavailable.",size:"Size",size_exceeded:"Size Exceeded",size_increased:"Size increased",size_same:"Size is same",skip:"skip",slider_helper_text:"Please set a value between",slug_other_group_description:"FreeConvert.com can convert your TARGET files to these other formats:",slug_other_group_title:"Convert TARGET to other file types",slug_other_single_description:"FreeConvert.com can convert your other files to TARGET format:",slug_other_single_title:"Convert other files to TARGET format",slug_related_description:"FreeConvert.com can convert your files to these related formats:",slug_related_single_title:"Related TARGET converters",slug_specific_group_description:"While this page can convert any TARGET_GROUP to TARGET_NAME, you may wish to visit following Converter pages that only support specific conversions",slug_specific_group_title:"Specific TARGET converters",slug_specific_single_description:au,slug_specific_single_title:"Convert Your SOURCE files to other formats",small_file_popup_body_content:"It looks like one of the files you selected is less than 1 Kilobyte! This will probably fail to convert. Please let us know more information about these file(s). Such as; is the file less than 1KB in your system? Did you download this file from somewhere or create it using software, if so, please send details. Your response will help us debug this matter quickly.",small_file_popup_files_info:"File: TARGETFILENAME",small_file_popup_title_content:"Your file appears to be too small",socket_offline:"Offline: Pending tasks will resume when connected",socket_online:"Network connected. You are now online.",something_went_wrong:"Something went wrong!",specific:"Specific",specific_converter_text_group:"While this page can convert any TARGET_GROUP to TARGET, you may wish to visit following Converter pages that only support specific conversions",specific_converter_text_single:au,split:"Split",split_by_range:"Split by Range",split_in_half:"Split in half",split_mode:"Split Mode",split_mode_hint:"Split lets you divide your PDF into smaller parts. Select a mode to decide how the pages will be split.",split_options:"Split Options",split_pdf:"Split PDF",split_per_pdf_helper:"Give number of pages you need per document",split_range_helper:"Define page ranges to split the document",ssl_tls_encryption:"SSL\u002FTLS \u003Cbr\u002F\u003EEncryption",start:"Start",start_end_time_not_same:"Start time and end time can not be same",start_searching:"Start searching by entering the file type you want to convert. Example",start_time_less_than_end_time:"Start time should be always less than end time",state_or_province:"State or Province",status:"Status",statusText:e,storage_quota_exceeded:"Account reached max storage.",stripe_msg_default:"The package will be activated after we are able to charge your card",stripe_msg_processing:"Upgrade is waiting for approval from Stripe",stripe_msg_requires_action:"Upgrade is waiting for 3D secure payment approval",stripe_msg_requires_payment_method:"Upgrade is waiting for payment method approval",stripe_proration_tooltip:"Prorated discounts are auto-applied if you upgrade using the same credit card. If you paid via PayPal or are using a different credit card for the upgrade, please contact support for a manual proration refund.",stripe_status_processing:"Processing",stripe_status_requires_action:"Authentication Required",stripe_status_requires_payment_method:"Requires Payment Method",strong:"Strong",submit:"Submit",submit_urls:"Submit the URLs",submitted:"Submitted",submitting:av,suggest:"Suggest",suggest_output_for_file:"Suggest an output file format for .EXT files",sumitting:av,target_selector_help:"Only the common target formats are shown. Use file card's output dropdown to see more option.",target_selector_search_placeholder:"Search Format",target_warning_tooltip:"Please select a target for each file or remove unsupported files",task_already_canceled:"This task is already canceled",task_already_deleted:"This task is already deleted",tax_or_vat_id:"Tax\u002FVAT ID",technology:"Technology",temperature:"Temperature",terms:aw,terms_label:"By creating an account you are agreeing to our",terms_of_service:aw,thank_you:"Thank you",this_must_contain:"THIS must contain",time:"Time",time_cant_be_greater_than_duration:"Start\u002Fend time can not be negative or greater than video duration",time_converter:"Time Converter",time_converter_change_notice:"SOURCE changed to TARGET which is in use now",time_converter_other_zone_desc:"FreeConvert.com can convert TIME to these other time zones:",time_converter_other_zone_title:"Convert TIME to other time zones",time_copy_tooltip:"Get a static link to the time shown above",to:"to",toggle:"Toggle",toggle_view_pages:"Toggle View Pages",token_label:"Token",tool:"Tool",tool_compress_jpeg:"JPEG Compressor",tool_compress_pdf:"PDF Compressor",tool_compress_png:"PNG Compressor",tool_crop_video:"Crop Video",tool_image_compressor:"Image Compressor",tool_title_converters:r,tool_title_file_compressor:"File Compressors",tool_title_video_tools:"Video Tools",tool_video_compressor:"Video Compressor",tool_video_trimmer:"Trim Video",top_margin:"Top Margin",top_margin_tooltip:"Set the vertical image position from the top left corner (A positive value moves the image down, while a negative value moves it up).",total:"Total",total_price:"Total price",translate:"Translate",trim:"Trim",try_advance_settings:"Try Advanced Settings",try_again:"Please, try again!",try_free_text:"Want to convert large files without a queue or Ads?",try_free_upgrade:"Upgrade Now",try_job_builder:"Try Job Builder",twitter:"Twitter",type_anything_to_search:"Type anything to search",unable_to_sign_up:"Unable to sign up",unauthorized:"Unauthorized",unit_converter:af,unit_converter_subtext:"Select a converter and enter a value to convert",unit_links_desc:"FreeConvert.com can convert NAME to these other formats:",unit_links_header:"Convert NAME to other TYPE units",unit_page_subheading:"Enter a value below and we will automatically convert it to",unit_page_table_label:"Enter any unit value to convert",units:"Units",units_hint:as,unlimited:"Unlimited",unlimited_operations:"Unlimited Operations",unlock:"Unlock",unselected:"Unselected",unselected_group_helper:"These are pages you chose not to include in the split. You can move them back into any range to include them in a new PDF.",unsupported_pro_codec:"Your current plan does not support Pro codecs.",unused_minutes_never_expire:ap,update_billing_info:"Update Billing Info",updated:"Updated",upgrade:"Upgrade",upgrade_for_more:"Upgrade for more",upgrade_here:"upgrade here",upgrade_recommended:"Upgrade Recommended",upgrade_recommended_desc:"Some of your large files may take longer than the NAME usage limit (LIMIT mins per file)",upgrade_to_convert_bigger_file:"Please, upgrade to convert bigger files",upgrade_to_pro:"Upgrade to Pro",upload_failed:"Upload Failed",upload_timeout:"Upload Failed. Please try again.",uploaded:"Uploaded",uploader_text_add_more_files:"Add More Files",uploader_text_automatically_removed_files:"We have automatically removed files that are bigger than",uploader_text_choose_files:"Choose Files",uploader_text_choose_new_file:"Choose new File",uploader_text_drop_file_here:"Or drop file here",uploader_text_drop_files_here:"Or drop files here",uploader_text_enter_webpage:"Enter Webpage",uploader_text_file_too_big:"File too big",uploader_text_for_more:"for more",uploader_text_max_file_size:"Max file size",uploader_text_merge_into_one:ak,uploader_text_merge_invalid_file:"Invalid file",uploader_text_rest_will_continue_uploading:"Rest of your files will continue uploading",uploader_text_smaller_files_will_continue:"Smaller files will continue to upload",uploader_text_type_not_supported:"Following file type(s) are not supported",uploader_text_valid_types_are:"Valid file types are",uploading:"Uploading",uploading_from_google_drive:"File(s) are being uploaded from Google Drive",url_must_extensions:"URL must end in an allowed extension. Allowed extentions are ",url_not_empty:"URL can not be empty.",url_not_start_with:"URLs should start with http:\u002F\u002F or https:\u002F\u002F",use_current_position:"Copy Player Time",use_for_web_and_api:"Use for \u003Cstrong\u003EWeb\u003C\u002Fstrong\u003E and \u003Cstrong\u003EAPI\u003C\u002Fstrong\u003E",user_deleted_task:"Task deleted by the user",valid:"Valid",valid_for_hour:"valid for HOUR hour",validating_upload:"Validating Upload",verified:"Verified",video:"Video",videos:"Videos",view_pages:"View Pages",view_pages_to_see_options:"Turn on ‘View Pages’ in the top toolbar to enable page selection options.",voltage:"Voltage",wait_till_page_loaded:"Please wait till all the pages are loaded",wait_until_all_files_loaded:"Wait until all the files are loaded",wait_until_all_files_loaded_preview:"Please wait while we load all your files",waiting:"Waiting",want_more_features:"Want more features?",warning_team_member_can_not_upgrade:"Your are part of team \u003Cstrong\u003ETEAM_NAME\u003C\u002Fstrong\u003E \u003Cnuxt-link to=\"\u002Faccount\u002Fteam\"\u003E(manage)\u003C\u002Fnuxt-link\u003E. Team members can not purchase pro packages",we_emailed_code:"We have emailed you a registration code to your email",we_stand_by_our_service:"We Stand By Our Service",we_stand_by_our_service_desc:"We’re confident you’ll be pleased with our services, like millions of users worldwide. But if things don't go as expected, we’ve got you covered with a guarantee designed for your peace of mind.",weak:"Weak",web_apps:"Web Apps",weight:"Weight",what_is_an_operation:"What is an Operation?",what_is_an_operation_desc:"An operation is a single file manipulation task, such as converting, compressing, or merging. For example, uploading and merging multiple PDF files into \u003Cstrong\u003Eone\u003C\u002Fstrong\u003E counts as one operation, while converting and\u002For compressing files into separate files will be considered as \u003Cstrong\u003Eseparate\u003C\u002Fstrong\u003E operations. Free users can perform up to \u003Cstrong\u003E10 operations per day\u003C\u002Fstrong\u003E. All paid plans include \u003Cstrong\u003Eunlimited operations\u003C\u002Fstrong\u003E.",width:"width",x_postion:"X position",x_postion_hint:"Set how far the crop box should start from the left edge of the page. (0) starts at the very left.",y_postion:"Y position",y_postion_hint:"Set how far the crop box should start from the top edge of the page. (0) starts at the very top.",year:"Year",yearly:"Yearly",yes:"Yes",yes_delete:"Yes, Delete",you_are_lost:"Looks like you are lost!",your_files_reloading:"Your files are being reloaded",zip_or_postal:"Zip or Postal Code",zoom:"Zoom"}}}}}(false,null,true,0,"","5","pdf","pub-to-pdf","PUB to PDF Converter","\u002Fpub-to-pdf",1,"Convert","doc-to-pdf","DOC to PDF","pub","Document","\u002F","Converters","default","SingleTemplate","PUB to PDF Converter - FreeConvert.com","PUB to PDF converter. Best way to convert PUB to PDF online at the highest quality. This tool is free, secure, and works on any web browser.","Convert PUB to PDF online, for free.","\u003Ch2\u003EEasy to Use\u003C\u002Fh2\u003E\n\u003Cp\u003ESimply upload your PUB files and click the convert button. You can also batch convert&nbsp;\u003Cspan style=\"font-style: normal; font-weight: 400;\"\u003EPUB\u003C\u002Fspan\u003E&nbsp;to PDF format.\u003C\u002Fp\u003E","\u003Csvg viewBox=\"0 0 24 24\" width=\"56\" height=\"56\" stroke=\"#ffffff\" stroke-width=\"1\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"css-i6dzq1\"\u003E\u003Cpath d=\"M22 11.08V12a10 10 0 1 1-5.93-9.14\"\u003E\u003C\u002Fpath\u003E\u003Cpolyline points=\"22 4 12 14.01 9 11.01\"\u003E\u003C\u002Fpolyline\u003E\u003C\u002Fsvg\u003E","\u003Ch2\u003E Best Quality\u003C\u002Fh2\u003E\n\u003Cp\u003E\n We use both open source and custom software to make sure our conversions are of the highest quality. In most cases, you can fine-tune conversion parameters using “Advanced Settings” (optional, look for the \u003Csvg viewBox=\"0 0 24 24\" width=\"24\" height=\"24\" stroke=\"#ffffff\" stroke-width=\"2\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"css-i6dzq1\"\u003E\u003Ccircle cx=\"12\" cy=\"12\" r=\"3\"\u003E\u003C\u002Fcircle\u003E\u003Cpath d=\"M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z\"\u003E\u003C\u002Fpath\u003E\u003C\u002Fsvg\u003E icon).\n\u003C\u002Fp\u003E","\u003Csvg viewBox=\"0 0 24 24\" width=\"56\" height=\"56\" stroke=\"#ffffff\" stroke-width=\"1\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"css-i6dzq1\"\u003E\u003Ccircle cx=\"12\" cy=\"8\" r=\"7\"\u003E\u003C\u002Fcircle\u003E\u003Cpolyline points=\"8.21 13.89 7 23 12 20 17 23 15.79 13.88\"\u003E\u003C\u002Fpolyline\u003E\u003C\u002Fsvg\u003E","\u003Ch2\u003E Free &amp; Secure\u003C\u002Fh2\u003E\n\u003Cp\u003EOur PUB to PDF Converter is free and works on any web browser. We guarantee file security and privacy. Files are protected with 256-bit SSL encryption and automatically deleted after 8 hours.\u003C\u002Fp\u003E","\u003Csvg viewBox=\"0 0 24 24\" width=\"56\" height=\"56\" stroke=\"#ffffff\" stroke-width=\"1\" fill=\"none\" stroke-linecap=\"round\" stroke-linejoin=\"round\" class=\"css-i6dzq1\"\u003E\u003Cpath d=\"M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z\"\u003E\u003C\u002Fpath\u003E\u003C\u002Fsvg\u003E",{},"Download","Document Converter","PDF Converter","odt-to-pdf","ODT to PDF","docx-to-pdf","DOCX to PDF","xls-to-pdf","XLS to PDF","xlsx-to-pdf","XLSX to PDF","word-to-pdf","WORD to PDF","excel-to-pdf","EXCEL to PDF","dot-to-pdf","DOT to PDF","docm-to-pdf","DOCM to PDF","dotx-to-pdf","DOTX to PDF","en",Array(0),"Compress","Compressor","Converter","Conversion minutes measure how long it takes to process your files. For example, most image, document, or audio conversions takes less than a minute. A large 1 GB video takes about 10 minutes on average.","Convert More","Image Converter","Unit Converter","Download Started","Error","File Size","Loading","Merge into one","Minutes automatically renew","API","Payment Method","Enter how many pages each split file should contain (e.g., 5 will split the PDF into parts of 5 pages each).","Unused minutes never expire","Pages per PDF","Choose to split by specific page ranges or set a number to split the PDF into equal parts.","Choose the unit of measurement for your crop area. Switching units will convert existing values automatically.","Select which pages to exclude on the final PDF","FreeConvert.com can convert your SOURCE files to these other formats:","Submitting","Terms"));
+const lazyLoadTimeout=2500,userInteractionEvents=["mouseover","keydown","touchstart","touchmove","wheel"],loadScriptsTimer=setTimeout(loadScripts,2500);function loadScripts(){Array.from(document.querySelectorAll("script[lazy-src]")).forEach((function(e){e.setAttribute("src",e.getAttribute("lazy-src")),e.removeAttribute("lazy-src")}))}function triggerScriptLoader(){loadScripts(),clearTimeout(loadScriptsTimer),userInteractionEvents.forEach((function(e){window.removeEventListener(e,triggerScriptLoader,{passive:!0})}))}function siteSearchInputOnKeyUp(e){sessionStorage.setItem("siteSearchInput",e.target.value)}function windowClickHandler(e){"SiteSearchInput"===e.target.id&&e.target.addEventListener("keyup",siteSearchInputOnKeyUp)}function checkUser(){localStorage.getItem("auth._token.local")&&(document.getElementById("NavigationAuthLinks").style.display="none",document.getElementById("NavigationUserDropdown").style.display="inline-block")}userInteractionEvents.forEach((function(e){window.addEventListener(e,triggerScriptLoader,{passive:!0})})),sessionStorage.setItem("siteSearchInput",""),window.addEventListener("click",windowClickHandler,!0),document.querySelectorAll(".dropdown-close-trigger").forEach((function(e){e.addEventListener("click",(function(){const t=e.closest(".drop");t&&(t.classList.add("hidden"),setTimeout((function(){t.classList.remove("hidden")}),100))}))})),checkUser()
+(function(a,e,b,f,g,c,d){a[b]=a[b]||function(){(a[b].q=a[b].q||[]).push(arguments)};c=e.createElement(f);c.async=1;c.src="https://www.clarity.ms/tag/"+g+"?ref\x3dgtm2";d=e.getElementsByTagName(f)[0];d.parentNode.insertBefore(c,d)})(window,document,"clarity","script","od4tgfvxvp");

@@ -6,7 +6,7 @@
 실행: python3 -I apps/ad-blog/experiment/tools/session_start.py --log-dir {스크래치패드} [--now 2026-11-18T02:15:00+09:00] [--no-setup]
 
 판정 규칙 (README 결정사항 '정기 실행', 2026-11-18):
-- 한국 시간 00:00~07:59에 시작한 세션 = 02시 정기 실행 → 그날 요일로: 월·수 일반 · 화·목 개선(목요일은 주간 SEO 점검 먼저) · 금·토·일 지표
+- 한국 시간 00:00~07:59에 시작한 세션 = 02시 정기 실행 → 그날 요일로: 월·수 일반 · 목·일 개선(일요일은 주간 SEO 점검 먼저) · 화·금·토 지표
 - 그 밖의 시각(수동 실행 등) = 개선 세션
 - 일반 세션이라도 이번 주(월~일, 한국 날짜)에 이미 새 글 2편(허브 제외)이면 발행하지 않고 개선 세션으로
 - 지난주(월~일)에 `news` 칼럼이 없으면 이번 일반 세션 1편을 영향 뉴스 칼럼으로 대신 쓸 수 있음 (선택)
@@ -30,7 +30,7 @@ POSTS = ROOT / 'apps/ad-blog/content/posts'
 TOOLS = EXPERIMENT / 'tools'
 KST = dt.timezone(dt.timedelta(hours=9))
 WEEKLY_POSTS = 2  # 새 글 주 2편 (2026-11-18 사용자 결정)
-WEEKDAY_TYPE = {0: '일반', 1: '개선', 2: '일반', 3: '개선', 4: '지표', 5: '지표', 6: '지표'}
+WEEKDAY_TYPE = {0: '일반', 1: '지표', 2: '일반', 3: '개선', 4: '지표', 5: '지표', 6: '개선'}  # 2026-11-18 사용자 결정
 NAMES = '월화수목금토일'
 
 
@@ -104,7 +104,7 @@ def main() -> None:
     if session == '일반' and len(this_week) >= WEEKLY_POSTS:
         session = '개선'
         reasons.append(f"이번 주 새 글 {len(this_week)}편({', '.join(r['slug'] for r in this_week)})으로 주 {WEEKLY_POSTS}편 한도 → 발행하지 않고 개선 세션")
-    weekly_check = session == '개선' and scheduled and now.weekday() == 3
+    weekly_check = session == '개선' and scheduled and now.weekday() == 6  # 일요일 주간 SEO 점검
     news_ok = session == '일반' and not last_week_news
 
     print(f'## 세션 유형: **{session} 세션**' + (' (주간 SEO 점검 먼저)' if weekly_check else ''))

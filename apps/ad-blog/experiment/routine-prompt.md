@@ -3,9 +3,9 @@
 claude.ai Routines의 **"ToolProof 정기 글 작성"** 루틴에 넣는 프롬프트 원본입니다. 루틴 설정은 정기 세션이 고칠 수 없으므로(도구 없음) 사용자가 Routines 화면에서 바꿉니다. 운영 규칙을 바꿔 프롬프트도 달라져야 하면 세션이 이 파일을 고치고 [user-todos.md](user-todos.md)에 "루틴 프롬프트 교체"를 올립니다.
 
 - 일정: 매일 02:00 한국 시간 1회 (cron `CRON_TZ=Asia/Seoul 0 2 * * *`, 2026-11-11 사용자 결정·설정. 이전 `0 4 * * *`(11-08~11-10), 그 전 `0 0,6,18 * * *`)
-- **2026-11-18 판** (사용자 결정, 같은 날 결정론적 스크립트 반영: `session_start.py`·`daily_metrics.py`·`session_report.py`·`weekly_checks.py`·`prepublish_check.py`): 새 글 주 2편(**월·수 일반 세션**), **화·목 개선 세션**(목요일이 주간 SEO 점검), **금·토·일 지표 세션**. 대시보드 지표 갱신은 **매일 결정론적 절차**(`tools/daily_metrics.py`). 실행 일정(매일 02:00)은 그대로라 cron은 바꾸지 않고 프롬프트만 교체. 교체 전에도 README 결정사항이 우선이라 금·토·일은 지표 세션으로 돎
+- **2026-11-18 판** (사용자 결정, 같은 날 결정론적 스크립트 반영: `session_start.py`·`daily_metrics.py`·`session_report.py`·`weekly_checks.py`·`prepublish_check.py`): 새 글 주 2편(**월·수 일반 세션**), **목·일 개선 세션**(일요일이 주간 SEO 점검), **화·금·토 지표 세션**. 대시보드 지표 갱신은 **매일 결정론적 절차**(`tools/daily_metrics.py`). 실행 일정(매일 02:00)은 그대로라 cron은 바꾸지 않고 프롬프트만 교체. 교체 전에도 README 결정사항이 우선이라 화·금·토는 지표 세션, 목·일은 개선 세션으로 돎
 - 2026-11-11 판: 실행 시각 02시와 세션 유형 시각 범위(00:00~07:59)만 바뀜. 루틴에 들어 있는 11-08 판 프롬프트(01:00~09:59 → 04시)도 02시 시작을 같은 날 정기 세션으로 세므로 교체는 선택
-- 별도 루틴 "주간 SEO 점검"(매주 월요일 08:45)은 개선 세션에 합쳐 삭제(2026-11-09 완료, 2026-11-18부터 목요일 개선 세션이 점검)
+- 별도 루틴 "주간 SEO 점검"(매주 월요일 08:45)은 개선 세션에 합쳐 삭제(2026-11-09 완료, 일요일 개선 세션이 점검)
 - 아래 블록 안의 글을 그대로 붙여 넣음
 
 ```text
@@ -14,16 +14,16 @@ ToolProof(apps/ad-blog) 광고 블로그 정기 세션입니다. 사용자는 �
 2026-10-22 전략 개편(사용자 결정): 모든 글은 apps/ad-blog/experiment/clusters.md의 주제 클러스터 1개에 속하고, 허브 ↔ 상시 글 ↔ 뉴스 칼럼을 정해진 규칙으로 내부 링크합니다. 주 검색어는 자동완성 3곳에 나오는 가장 구체적인 롱테일로 잡습니다.
 2026-11-01 변경(사용자 결정, AdSense "가치가 별로 없는 콘텐츠" 거절 대응 → README 'AdSense 거절 분석'): 새 글은 **주 3편**으로 줄이고(2026-11-18 사용자 결정으로 **주 2편**, 월·수 일반 세션 1편씩), 뉴스 칼럼은 영향이 오래 가는 주제만 그중 주 1편 이내입니다. 개선 세션은 AdSense 재신청 전까지 clusters.md '콘텐츠 정리' 목록이 1순위입니다. 숫자를 채우려고 글을 쓰지 않습니다.
 2026-11-08 변경(사용자 결정, 2026-11-11 시각 변경): 정기 실행은 **하루 1회 02시(한국 시간)**입니다.
-2026-11-18 변경(사용자 결정): **월·수 일반 세션, 화·목 개선 세션, 금·토·일 지표 세션**입니다. 목요일 개선 세션이 주간 SEO 점검을 먼저 합니다. 대시보드 지표 갱신은 모든 세션(월~일)에서 매일 `python3 -I apps/ad-blog/experiment/tools/daily_metrics.py`가 출력하는 결정론적 절차 그대로 합니다(판단 없이 같은 순서).
+2026-11-18 변경(사용자 결정): **월·수 일반 세션, 목·일 개선 세션, 화·금·토 지표 세션**입니다. 일요일 개선 세션이 주간 SEO 점검을 먼저 합니다. 대시보드 지표 갱신은 모든 세션(월~일)에서 매일 `python3 -I apps/ad-blog/experiment/tools/daily_metrics.py`가 출력하는 결정론적 절차 그대로 합니다(판단 없이 같은 순서).
 
 세션 유형 (맨 먼저 `python3 -I apps/ad-blog/experiment/tools/session_start.py --log-dir {스크래치패드}`를 실행해 출력된 유형·순서를 그대로 따릅니다. 규칙: 한국 시간 00:00~07:59 시작은 02시 실행으로 보고 그날 요일로 셈, 이 범위 밖에 시작한 세션(수동 실행 등)은 개선 세션, 이번 주 새 글이 이미 2편이면 일반 → 개선. 2026-11-18부터 판단이 필요 없는 단계는 모두 스크립트 출력대로 합니다):
 - 월·수 → 일반 세션: `ai-tools`·`software` 클러스터 글 1편. clusters.md 우선순위 1·2의 backlog '클러스터 공백 후보'와 반복 일정(Chrome·Windows)을 먼저 보고, 부족하면 demand_check.py discover·suggest와 trends_compare.py로 발굴. 지난 7일(월~일)에 뉴스 칼럼이 없으면 이 1편을 README '뉴스 칼럼 선정 기준'의 영향이 오래 가는 뉴스 칼럼(category `news`)으로 대신 쓸 수 있습니다: 단순 소식 전달·카피캣이 아니라 독자 영향 분석과 ToolProof 견해(`Our take`)를 담고, 같은 클러스터의 상시 글·허브로 링크하며, 상시 검색 후보를 backlog '클러스터 공백 후보'에 1개 이상 올립니다. 화제(며칠짜리) 칼럼은 쓰지 않습니다. clusters.md '콘텐츠 정리' 목록의 글과 겹치는 주제는 새로 쓰지 않습니다. 기준을 통과하는 후보가 없으면 발행하지 않고 개선 세션으로 진행합니다.
-- 화·목 → 개선 세션: 새 글 대신 기존 글 성과를 올립니다. README '개선 세션' 순서(0 콘텐츠 정리 → 최근 주간 SEO 점검 우선순위 → 색인 안 된 글 연결 → link_audit 문제 → 허브 작성·갱신 → Search Console 기반 제목·설명·소제목 보강 → 뉴스 칼럼 후속 → 반복 일정)로 세션당 2~3개 처리하되(할 일이 하나뿐이면 1개), 콘텐츠 정리는 세션당 최대 2건(통합은 1건만, 통합이 없으면 전환 2편까지)이고 clusters.md 규칙(통합 시 308 리디렉트·링크 교체, 전환 시 1차 출처 재확인, V 판정 중인 글은 판정 뒤)을 따릅니다. 혼자 판단하기보다 저장소 `.claude/skills/`의 SEO 스킬(`seo-audit`·`copy-editing`·`link-building`·`ai-seo`, 출처는 .claude/skills/MARKETINGSKILLS.md)을 Skill 도구로 불러 그 절차를 먼저 적용합니다(우리 규칙과 다르면 우리 규칙). 앞 세션 기록을 읽고 이어서 다른 글을 다룹니다. 새 글은 허브가 필요할 때 허브 1편만. 고칠 것이 없으면 새 글 대신 문제 찾기(`seo-audit`, `tools/source_diff.cjs` 등), 최신 데이터 기반 대시보드 개선, 지표 판정에 필요한 DB 구조 개선 중 하나를 합니다.
-- 금·토·일 → 지표 세션: 앞 세션의 열린 PR만 처리한 뒤 README '운영 대시보드' 매일 갱신 절차만 합니다 — `python3 -I apps/ad-blog/experiment/tools/daily_metrics.py --out {스크래치패드}/dashboard` → 출력대로 `ArtifactData` batch → `--finalize` → 출력된 파일·커밋 메시지 그대로 커밋 → main 대상 PR → CI 통과 후 머지. 글·log.md·다른 문서를 고치지 않고 주제·작업을 고르지 않습니다. 스크립트가 실패하면 고치지 말고 오류 내용을 세션 결과로 남깁니다(다음 일반·개선 세션이 log.md에 기록).
-- 목요일 개선 세션은 먼저 `python3 -I apps/ad-blog/experiment/tools/weekly_checks.py --out {스크래치패드}/weekly.md`로 점검 데이터를 모은 뒤 README '주간 SEO 점검'을 하고(searchfit-seo 스킬이 있으면 그것, 없으면 저장소 `seo-audit`·`ai-seo` 스킬), log.md 맨 위에 `## {날짜} · 주간 SEO 점검` 섹션을 남긴 뒤 그 우선순위로 개선 작업을 이어 합니다. 같은 PR로 머지합니다.
+- 목·일 → 개선 세션: 새 글 대신 기존 글 성과를 올립니다. README '개선 세션' 순서(0 콘텐츠 정리 → 최근 주간 SEO 점검 우선순위 → 색인 안 된 글 연결 → link_audit 문제 → 허브 작성·갱신 → Search Console 기반 제목·설명·소제목 보강 → 뉴스 칼럼 후속 → 반복 일정)로 세션당 2~3개 처리하되(할 일이 하나뿐이면 1개), 콘텐츠 정리는 세션당 최대 2건(통합은 1건만, 통합이 없으면 전환 2편까지)이고 clusters.md 규칙(통합 시 308 리디렉트·링크 교체, 전환 시 1차 출처 재확인, V 판정 중인 글은 판정 뒤)을 따릅니다. 혼자 판단하기보다 저장소 `.claude/skills/`의 SEO 스킬(`seo-audit`·`copy-editing`·`link-building`·`ai-seo`, 출처는 .claude/skills/MARKETINGSKILLS.md)을 Skill 도구로 불러 그 절차를 먼저 적용합니다(우리 규칙과 다르면 우리 규칙). 앞 세션 기록을 읽고 이어서 다른 글을 다룹니다. 새 글은 허브가 필요할 때 허브 1편만. 고칠 것이 없으면 새 글 대신 문제 찾기(`seo-audit`, `tools/source_diff.cjs` 등), 최신 데이터 기반 대시보드 개선, 지표 판정에 필요한 DB 구조 개선 중 하나를 합니다.
+- 화·금·토 → 지표 세션: 앞 세션의 열린 PR만 처리한 뒤 README '운영 대시보드' 매일 갱신 절차만 합니다 — `python3 -I apps/ad-blog/experiment/tools/daily_metrics.py --out {스크래치패드}/dashboard` → 출력대로 `ArtifactData` batch → `--finalize` → 출력된 파일·커밋 메시지 그대로 커밋 → main 대상 PR → CI 통과 후 머지. 글·log.md·다른 문서를 고치지 않고 주제·작업을 고르지 않습니다. 스크립트가 실패하면 고치지 말고 오류 내용을 세션 결과로 남깁니다(다음 일반·개선 세션이 log.md에 기록).
+- 일요일 개선 세션은 먼저 `python3 -I apps/ad-blog/experiment/tools/weekly_checks.py --out {스크래치패드}/weekly.md`로 점검 데이터를 모은 뒤 README '주간 SEO 점검'을 하고(searchfit-seo 스킬이 있으면 그것, 없으면 저장소 `seo-audit`·`ai-seo` 스킬), log.md 맨 위에 `## {날짜} · 주간 SEO 점검` 섹션을 남긴 뒤 그 우선순위로 개선 작업을 이어 합니다. 같은 PR로 머지합니다.
 log.md 세션 제목에 세션 유형을 적습니다.
 
-진행 순서 (지표 세션은 0·2번과 위 '금·토·일 → 지표 세션' 절차만 하고 1·3~10번은 건너뜁니다):
+진행 순서 (지표 세션은 0·2번과 위 '화·금·토 → 지표 세션' 절차만 하고 1·3~10번은 건너뜁니다):
 0. 저장소 jinhok96/jinho-blog가 세션에 없으면 add_repo(owner: jinhok96, repo: jinho-blog, access: push)로 추가하고 안내된 대로 clone합니다. GitHub 작업(PR 생성·머지 등)은 GitHub MCP 도구를 씁니다. 저장소나 GitHub 도구에 접근할 수 없으면 아무것도 발행하지 말고, 무엇이 막혔는지 세션 결과로 남긴 뒤 종료합니다.
 1. 최신 main 기준으로 작업합니다. apps/ad-blog/experiment/README.md → log.md → clusters.md → backlog.md → traffic-playbook.md → writing-guide.md 순서로 읽고 결정사항·규칙·노하우를 따릅니다. .claude/CLAUDE.md와 .claude/ad-blog.md의 컨벤션도 따릅니다. 새 글을 쓰는 세션(일반 세션, 개선 세션은 허브를 쓰기로 정했거나 콘텐츠 정리로 대표 이미지가 필요할 때)은 대표 이미지 생성 준비 `python3 -I apps/ad-blog/experiment/tools/hero_image.py --setup`(엔진 빌드·모델 약 10GB)을 바로 백그라운드로 실행해 둡니다.
 2. 이전 세션의 열린 PR이 있으면 먼저 처리합니다(CI 실패·머지 차단 사유 해결, 해결할 수 없으면 log.md에 기록).

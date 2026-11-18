@@ -5,6 +5,22 @@
 
 slug: `gemini-connected-apps`
 
+## 2026-11-19 갱신 (세션 101, 개선 세션 — 미발견 글 실제 갱신)
+
+URL 검사 `URL is unknown`(발행 10-22, 크롤링 기록 없음)인 칼럼에 실제 바뀐 내용을 반영해 `updatedAt` 2026-11-18T19:00Z → RSS 피드 맨 앞·sitemap `lastmod` (README 개선 세션 1번, 주간 점검 11-15 우선순위 3). 한 가지 변경(11월 재확인 반영)이고 지표 판정 대상 아님(노출 0이라 `--compare` 불가) → 갱신 뒤 `discoveredAt`·`crawledAt` 간격만 log.md에 기록. 칼럼 형식·제목 그대로, 설명은 앱 수(83 → 90)·plugins 반영.
+
+| 주장 | 출처 (사본, `../iphone-duo-sold-out/merge-2026-11-19/render.cjs`로 Chromium 렌더링, 2026-11-18 UTC) | 확인 |
+| --- | --- | --- |
+| 가용성 표 90행(10-23 83행): 새 7개 Calm·Strava·Realtor.com(US only), Quinto Andar·Zap Imóveis·ClickBus·Movida(Brazil only), 빠진 앱 0. 다른 회사 58(US only 29·Brazil/India only 14·더 넓음 15), Google 12(US only 0), 휴대폰 20, 18세 이상 62/90, 업무·학교 계정 23, Android 전용 6 그대로. Contacts US only → EEA·나이지리아·스위스·영국 밖 전부·모든 언어, Picsart US only → 더 넓음, Canva·Wix 언어 확대 | `connected-apps-2026-11-19.json` (`parse_apps.py`로 표 17434654 HTML에서. HTML 원본 1.5MB는 커밋 안 함) vs `connected-apps-2026-10-23.json` | 스크립트 비교 |
+| Customize 도움말: plugins = "bundles of Connected Apps and skills in categories like business or travel", Discover·Connectors 탭에 표시, 연결 안 된 앱은 필요할 때 연결 여부를 물음, plugin 안 skills는 편집 불가, 18세 이상 | `source-help-customize-2026-11-19.txt` | 원문 |
+| Connected Apps 도움말(컴퓨터·Android·iPhone): Sidebar(Menu) > Customize(없으면 More 먼저) > Connectors > More options > Disconnect — 10월과 같음. "When History is off, Connected Apps won't be available on gemini.google.com, iOS devices, or smart watches" | `source-help-connected-apps-2026-11-19.txt`·`-android-`·`-ios-` | 원문 |
+| custom apps 도움말은 아직 Settings > Connected Apps(없으면 Personal Intelligence > Connected Apps) 경로 | `source-help-custom-apps-2026-11-19.txt` | 원문 |
+| Privacy Hub(Last updated: November 17, 2026): "Gemini History", "Even if Gemini History is turned off, future chats will still be saved for around 2 months", "Disconnecting an app or deleting data in a connected app doesn't delete any data from Gemini History", 다른 앱이 받은 데이터는 그 앱 정책, 검토된 채팅 최대 3년, Gemini History 링크 = myactivity.google.com/product/gemini | `source-privacy-hub-2026-11-19.txt` + curl 원문 링크 | 원문. **10-26·11-08 사본(`../turn-off-gemini-apps-activity/source-gemini-13594961-*.txt`)은 "Keep Activity"·"72 hours"** → `source_diff.cjs --slug turn-off-gemini-apps-activity`로 확인 |
+| Workspace Updates 10-21 글·릴리스 노트 2026.10.13 항목 내용 그대로, 11-17 릴리스 노트는 Tasks in Gemini 무료 확대 등(Connected Apps 변화 없음) | `source-workspace-updates-customize-2026-11-19.txt`, `source-gemini-release-notes-2026-11-19.txt` | 원문 |
+
+- 그림: `gemini-connected-apps-by-company.webp`(11-18 표로 다시: 58 = 29 + 14 + 15), `gemini-disconnect-what-stays.webp`(History·약 2개월·Privacy Hub 11-17판) 다시 그림 (`charts.py … by-company disconnect`). 메뉴 경로·타임라인 그림은 내용이 그대로라 두 장은 그대로
+- 쓰지 않은 것: 11-17 Tasks in Gemini 무료 확대(Connected Apps 글 범위 밖), 'History'로 이름이 바뀐 정확한 날짜(11-08 사본은 Keep Activity, 11-17판부터 History로만 확인)
+
 ## 작성 전 브리프
 
 | 항목 | 내용 |

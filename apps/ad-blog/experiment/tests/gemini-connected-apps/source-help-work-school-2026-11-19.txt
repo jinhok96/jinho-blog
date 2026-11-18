@@ -1,0 +1,125 @@
+# 가져온 시각: 2026-11-18T17:45:37.598Z
+# 원본: https://support.google.com/gemini/answer/14959807?hl=en
+Use apps connected to Gemini with a work or school Google Account - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/14959807?hl=en
+
+Use apps connected to Gemini with a work or school Google Account
+
+Gemini Apps can interact with other services called Connected Apps to provide more helpful responses to your prompts. For example, Gemini can help you:
+
+Find information from Gmail or summarize documents from Drive
+Find and summarize information from Google Chat
+Add and show your tasks from Google Tasks
+Create and show your notes and lists in Google Keep
+Create, find, and edit your events in Google Calendar
+Get quick answers and stay organized in Google Classroom
+Attach a GitHub repository to better understand the codebase and debug issues
+
+Important: If you’re using Gemini Apps with a personal account, learn how to use Connected Apps in Gemini.
+
+What you need
+
+When using a work or school Google Account, you can connect apps to Gemini if:
+
+You have a qualifying edition of Google Workspace.
+Your Keep Activity setting is turned on. Only your account’s Google Workspace administrator can manage these settings. Learn more about Gemini Apps Activity settings for work or school accounts.
+Your account’s Google Workspace administrator has enabled the ability to connect apps to Gemini. If you’re a Google Workspace administrator, learn how to manage access to apps in Gemini.
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+How to use apps in Gemini
+
+Important: Gemini Apps can hallucinate responses or provide outdated information, like from an older email when there’s a more recent one. To check the information, click and review the sources listed after the response.
+
+Go to gemini.google.com.
+If you’re connecting to a Google Workspace app, make sure you’re signed in to the same account you use with Google Workspace.
+In the text box at the bottom, enter @ and select the app you want to use.
+Tip: Enter @ and select Google Drive. In your prompt, reference content in Google Workspace using keywords from the content.
+Ask Gemini Apps to get information from the other app or service.
+Click Submit . If the app has been enabled by your Workspace administrator, Gemini Apps automatically use it.
+Examples
+Find information
+What dates did Erik propose in the email about the team offsite?
+Summarize a document
+Find notes from the latest team meeting titled “Team Meeting June 2023” from my drive and summarize it to a short paragraph
+Simplify and organize information
+Find the doc from Ashley about the website clean-up project and summarize the proposal for me in 5 bullets
+Learn more about Connected Apps
+
+Important: Availability of Connected Apps vary by account type, Google Workspace edition, location, language, device, and Gemini app. For details, review the articles below.
+
+Learn about the tools and services that Gemini Apps can interact with when you're signed in to a work or school account:
+
+You can ask Gemini Apps to interact with a number of apps and services, including:
+The Google Workspace connected app, which includes these services:
+Gmail
+Google Calendar
+Google Chat (currently available in English if you have Gemini Apps as a core service)
+Google Docs
+Google Drive
+Google Keep
+Google Tasks
+The Google Classroom connected app, which is currently available in English only. Your admin must designate you as 18 or over to use this app.
+To find more available tools and services, review the Connected Apps list.
+Why can’t I use an app
+
+Mention the app you want to use in your prompt
+
+For example, enter @, select Google Drive, and use keywords from the content you want Gemini to reference in your prompt. For every new conversation, you need to explicitly ask the Gemini app to get something from the other app or service explicitly. You don’t need to do this for follow up questions.
+
+One or more apps may not be enabled by your organization 
+
+For users with a work or school Google Account, access to apps must be enabled by your Workspace administrator. 
+
+If your prompt includes multiple actions that require separate  apps or services, but one or more of the required services are not enabled, neither of the actions will be completed. For example, if you prompt Gemini to create an event on your calendar and a reminder for that event, and the Tasks app is not enabled, the event will not be added to your calendar and  you will not get a reminder.
+
+If you’re a Google Workspace administrator, learn how to manage access to apps in Gemini.
+
+What Gemini can’t do with Connected Apps
+
+Important: Your Google Workspace administrator can enable or disable access to apps. If you can’t access a certain app in Gemini, reach out to your administrator.
+
+There are certain actions that Gemini Apps can’t do using Connected Apps. But some of them are possible using other features in Gemini Apps. Review the list of unsupported actions below.
+
+Gmail
+
+Gemini Apps cannot:
+
+Access comments or images in Gmail.
+Create an email draft or delete emails in Gmail.
+Tip: To use a response as an email draft, learn how to export a response to Google Workspace.
+Count items in your Gmail or tell you how much Gmail storage you have.
+Google Classroom
+
+Gemini Apps cannot:
+
+Enter grades or provide private feedback directly in Google Classroom.
+Delete, archive, or post assignments or announcements in Google Classroom.
+Create rubrics in Google Classroom.
+Google Drive
+
+Gemini Apps cannot:
+
+Access pictures and videos in your Drive.
+This includes any content that isn’t in a document, spreadsheet, presentation, or PDF.
+Tip: To access multiple docs in a prompt, mention all of the desired files in the prompt.
+Manage content in your Drive, like create folders or move content between folders.
+Count items in your Drive or tell you how much Drive storage you have.
+Google Docs, Sheets, and Slides
+
+Gemini Apps cannot:
+
+Access comments or images in Docs.
+Create, draft, or delete spreadsheets, PDFs, documents, and presentations.
+Tip: To use a response as a Docs draft, learn how to export a response to Google Workspace.
+What happens if access to apps in Gemini is disabled 
+
+Important: If you’re using Gemini with a work or school account, apps can only be enabled or disabled by the account’s Google Workspace administrator. 
+
+If apps are disabled after you have started a chat using an app, you will still be able to view and continue the chat. Gemini Apps will only have continued access to the information that was needed to respond to the original prompt. Gemini Apps won’t be able to access any additional information from the other app or service unless apps are enabled again in Gemini.
+
+Related resources
+Use Gemini Apps
+Use Gemini with a work or school Google Account
+Give feedback about this article

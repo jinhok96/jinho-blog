@@ -1,0 +1,45 @@
+# 가져온 시각: 2026-11-18T17:45:31.827Z
+# 원본: https://support.google.com/gemini/answer/18736938?hl=en
+Customize your Gemini chats experience - Gemini Apps Help
+https://support.google.com/gemini/answer/18736938?hl=en
+
+Customize your Gemini chats experience
+
+You can tailor how Gemini behaves to better suit your preferences. Explore a list of suggested tools or search to find what you need.
+
+Availability
+
+Customize is available for signed-in users 18 and older using Gemini Apps in an available language and region. If you are signed in to a work account, make sure your administrator has turned on access to Gemini. 
+
+Find recommendations to customize Gemini
+
+In Customize, you can find options to tailor how you want Gemini to work for you. Add skills to do things like get Gemini to match your writing style or provide additional viewpoints. You can also find suggestions to connect Connected Apps that can help with your workflows.
+
+The Discover tab shows suggested tools you can add to customize Gemini. You can also find plugins, which are bundles of Connected Apps and skills in categories like business or travel, to help you get more done. Find popular options or browse by topic.  
+The Connectors tab shows Connected Apps and plugins you have connected and other available options. You can also connect personal and third-party apps in the Connectors tab. Learn how to connect and manage custom apps.
+The Skills tab shows any skills you connected already and other available skills. You can also upload or create skills. Learn more about creating skills. 
+
+To learn more about what a specific skill, Connected App, or plugin can do, select it to open more info. 
+
+Add a skill, Connected App, or plugin
+In Gemini, in the side panel, select Customize .
+In the Discover tab, find a skill, Connected App, or plugin you want to add. 
+Or, at the top, select Search to find the skill, Connected App, or plugin you want.
+Select Add . 
+Use a skill, Connected App, or plugin
+
+To tell Gemini to use a specific skill, Connected App, or plugin, mention it in your chat. For example, you could tell Gemini to use @get-more-perspectives to get multiple perspectives on a chat or @travel planning to plan an itinerary, find flights and hotels, and book reservations. For now, to use a plugin, you have to mention it in your chat. 
+
+When you use a plugin, it includes multiple skills and recommended apps. To get the full capability of a plugin: 
+
+If you already connected the included apps, Gemini will use them as part of the plugin. For example, the Productivity suite plugin may use apps like Workspace so Gemini can review your calendar and emails. 
+If you haven’t connected a suggested app, Gemini will ask if you want to connect the app if it’s needed in your chats or tasks when the plugin is used.
+
+Learn how to modify a skill and disconnect an app. For now, skills in plugins are not editable and can only be used with the plugin.
+
+Related resources
+Use Gemini Apps
+Get Started with the Gemini mobile app
+Where you can use the Gemini web app
+Use and manage Connected Apps in Gemini
+Give feedback about this article

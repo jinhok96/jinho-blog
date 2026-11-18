@@ -1,0 +1,79 @@
+# 가져온 시각: 2026-11-18T17:34:07.842Z
+# 원본: https://support.apple.com/self-service-repair
+Self Service Repair - Apple Support
+https://support.apple.com/self-service-repair
+
+Please select a country or region
+België
+Belgique
+България
+Canada (English)
+Canada (Français)
+Česko
+Danmark
+Deutschland
+Eesti
+España
+Ελλάδα
+France
+Hrvatska
+Ireland
+Iceland
+India
+Italia
+Κύπρος
+Latvija
+Liechtenstein
+Lietuva
+Luxembourg (Français)
+Magyarország
+Nederland
+Malta
+Moldova (English)
+Moldova (Română)
+Montenegro
+Norge
+Österreich
+Polska
+Portugal
+România
+Suisse (Français)
+Schweiz
+Slovenija
+Suomi
+Slovensko
+Sverige
+United Kingdom
+United States (English)
+United States (Español)
+Country / Region
+Modifying this control will reload this page
+Self Service Repair
+
+Self Service Repair is intended for individuals with the knowledge and experience to repair electronic devices. If you are experienced with the complexities of repairing electronic devices, Self Service Repair provides you with access to genuine Apple parts, tools, and repair manuals to perform your own out-of-warranty repair. Follow these steps to perform a variety of out-of-warranty repairs for iPhone and Mac, such as display replacements.
+
+1. Start with the repair manual
+
+Read the repair manual for your iPhone, iPad, Mac laptop, Mac desktop, Apple display or Beats model to familiarize yourself with the steps required and the parts, tools, and materials needed for your model and repair type. To purchase the genuine Apple parts and tools, you will need the repair manual ID. You can find the manual ID in the manual’s introduction.
+
+2. Order parts and tools for an Apple product repair
+
+Purchase genuine Apple parts and rent or buy professional-grade tools from the Self Service Repair Store. The online store is operated by a third-party provider authorized by Apple to sell genuine Apple parts and tools. Genuine Apple parts can also be purchased from a Genuine Parts Distributor.
+
+Genuine Apple parts are engineered and tailored for each product, and go through extensive testing to ensure the highest quality, integrity, safety, and reliability. The professional-grade tools are designed to withstand the rigor of high-volume daily use to repair Apple products safely and reliably time after time. These are the same parts and tools that we make available to Apple Authorized Service Providers. 
+
+For certain genuine Apple part purchases, your product serial number or IMEI may be required. Learn how to find the serial number of your Apple product.
+
+After ordering, you may check the status of your purchase from the Self Service Repair Store. Apple won't have information about your order.
+
+3. Repair your device
+
+After receiving the genuine Apple parts, follow the technical instructions in the repair manual for your iPhone, iPad, Mac laptop, Mac desktop, Apple display or Beats model to perform the repair.
+
+Repair Assistant and System Configuration are postrepair software tools for finishing repairs. The repair manual will indicate if a postrepair software tool is recommended.
+
+4. Return replaced part for recycling
+
+Similar to repairs done by Apple, Apple Authorized Service Providers, and Independent Repair Providers, you will be able to return used or damaged parts replaced during your repair to Apple so that they can be refurbished or recycled responsibly.
+
+For certain repair types, you may receive credit when you return a replaced part from your Apple device. Visit the Self Service Repair Store for more information on replaced part return instructions.

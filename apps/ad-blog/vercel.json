@@ -51,6 +51,11 @@
       "source": "/posts/gemini-android-auto-personal-intelligence",
       "destination": "/posts/google-gmail-photos-ads",
       "permanent": true
+    },
+    {
+      "source": "/posts/iphone-duo-cracked-screen",
+      "destination": "/posts/iphone-duo-sold-out",
+      "permanent": true
     }
   ]
 }

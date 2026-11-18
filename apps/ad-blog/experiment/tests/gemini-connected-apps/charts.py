@@ -1,7 +1,8 @@
 """Gemini Connected Apps 칼럼 그래픽: 공식 목록 집계 + 연결 해제 데이터 표 + 메뉴 경로 + 타임라인 (1200×675 webp).
 
-집계는 connected-apps-2026-10-23.json (parse_apps.py가 Google 공식 표 17434654에서 만든 것), 나머지 내용 출처는 factcheck.md.
-실행: python3 -I charts.py <출력 폴더>
+집계는 connected-apps-2026-11-19.json (parse_apps.py가 Google 공식 표 17434654에서 만든 것, 2026-11-18 UTC 받음. 10-23판은
+connected-apps-2026-10-23.json), 나머지 내용 출처는 factcheck.md.
+실행: python3 -I charts.py <출력 폴더> [그림 이름 …]  (이름 없으면 4장 모두. 2026-11-19 세션 101은 by-company·disconnect만 다시 그림)
 """
 import json
 import sys
@@ -15,8 +16,8 @@ from matplotlib.patches import FancyBboxPatch  # noqa: E402
 
 HERE = Path(__file__).resolve().parent
 OUT = sys.argv[1] if len(sys.argv) > 1 else 'img'
-APPS = json.loads((HERE / 'connected-apps-2026-10-23.json').read_text(encoding='utf-8'))
-LIST_SOURCE = 'Source: Google Gemini Help, "Check the availability & requirements of Connected Apps" table (83 rows), downloaded October 23, 2026'
+APPS = json.loads((HERE / 'connected-apps-2026-11-19.json').read_text(encoding='utf-8'))
+LIST_SOURCE = f'Source: Google Gemini Help, "Check the availability & requirements of Connected Apps" table ({len(APPS)} rows), downloaded November 18, 2026'
 
 
 def box(ax, x, y, w, h, fill, edge=None, lw=0):
@@ -54,7 +55,7 @@ def app_list_breakdown():
         counts[norm.get(a['owner'], a['owner'])][where_from(a)] += 1
     fig, ax = cs.figure()
     fig.subplots_adjust(left=0.22, right=0.95, top=0.76, bottom=0.2)
-    ax.set_xlim(0, 56)
+    ax.set_xlim(0, 66)
     ax.set_ylim(-0.6, len(owners) - 0.4)
     ax.set_yticks(range(len(owners)))
     ax.set_yticklabels([label[o] for o in owners], fontsize=15, fontweight='semibold')
@@ -73,8 +74,10 @@ def app_list_breakdown():
     ax.set_xticks([])
     ax.spines['bottom'].set_visible(False)
     ax.grid(False)
-    cs.header(fig, 'Over half of the outside apps in Gemini are US only',
-              '27 of the 51 apps from other companies are listed as US only. Blue = US only, gray = Brazil or India only, light = wider.')
+    other = counts['Other company']
+    cs.header(fig, 'Half of the outside apps in Gemini are US only',
+              f"{other['US only']} of the {sum(other.values())} apps from other companies are listed as US only. "
+              'Blue = US only, gray = Brazil or India only, light = wider.')
     cs.footer(fig, 'Company groups are our classification by app name. "Wider" includes OpenTable (UK and US) and Pandora (US and Puerto Rico).', LIST_SOURCE)
     cs.save(fig, f'{OUT}/gemini-connected-apps-by-company.webp')
 
@@ -84,11 +87,11 @@ DATA_ROWS = [
     ('Connect\nan app', 'Gemini can use that app\'s content\n(emails, files, events, photos)',
      'Gemini shares chat, device, and\nlocation info with the app for tasks'),
     ('Disconnect\nan app', 'Gemini stops using that app\nin new chats',
-     'Your Gemini Apps Activity stays.\nData the app already got stays\nunder that app\'s own policy'),
-    ('Delete Gemini\nApps Activity', 'Saved Gemini chats are removed\nfrom your account',
+     'Your Gemini History stays.\nData the app already got stays\nunder that app\'s own policy'),
+    ('Delete\nGemini History', 'Saved Gemini chats are removed\nfrom your account',
      'Data outside apps got stays. Chats\nhuman reviewers saw: up to 3 years'),
-    ('Turn off\nKeep Activity', 'Most Connected Apps stop\n(web, iPhone, watch)',
-     'New chats still kept 72 hours.\nAndroid keeps Phone, Messages,\nWhatsApp, Device assistance'),
+    ('Turn off\nHistory', 'Most Connected Apps stop\n(web, iPhone, watch)',
+     'New chats still kept about 2 months.\nAndroid keeps Phone, Messages,\nWhatsApp, Device assistance'),
 ]
 
 
@@ -110,7 +113,8 @@ def disconnect_table():
                 fontweight='semibold' if hi else 'normal')
         if i < len(DATA_ROWS) - 1 and not hi and i + 1 != 1:
             ax.plot([0, 1], [y - rh / 2, y - rh / 2], color=cs.BORDER, lw=1)
-    cs.footer(fig, 'Source: Google Gemini Apps Privacy Hub and "Use & manage Connected Apps in Gemini," checked October 23, 2026')
+    cs.footer(fig, 'Source: Google Gemini Apps Privacy Hub (updated November 17, 2026) and "Use & manage Connected Apps in Gemini,"',
+              'checked November 18, 2026. Google\'s help called History "Keep Activity" until at least November 8, 2026')
     cs.save(fig, f'{OUT}/gemini-disconnect-what-stays.webp')
 
 
@@ -175,7 +179,6 @@ def timeline():
 
 if __name__ == '__main__':
     Path(OUT).mkdir(parents=True, exist_ok=True)
-    app_list_breakdown()
-    disconnect_table()
-    menu_paths()
-    timeline()
+    charts = {'by-company': app_list_breakdown, 'disconnect': disconnect_table, 'menu-path': menu_paths, 'timeline': timeline}
+    for name in (sys.argv[2:] or charts):
+        charts[name]()

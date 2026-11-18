@@ -2,6 +2,69 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-19 · 세션 101 (정기 실행, 개선 세션): 콘텐츠 정리 6번 통합(iPhone Duo 칼럼 2편 → 상시 글 `iphone-duo-sold-out`) + `gemini-connected-apps` 11월 재확인 갱신 + Gemini 'Keep Activity → History' 개정 발견
+
+세션 시각: 2026-11-19 02:16 KST(목) → `session_start.py` 판정 개선 세션(이번 주 새 글 2/2편). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-n6xgwx` = `origin/main` 7049bca. 받은 루틴 프롬프트가 routine-prompt.md 2026-11-18 판과 같음 → user-todos '루틴 프롬프트 교체'를 끝난 일로. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-18T17:16:48Z, batch 26건 성공·버전 `versions-after.json`과 일치, 별도 커밋).
+
+**지표 (`daily_metrics.py` 회차 2026-11-18T17:16:48Z, 2026-10-21 ~ 2026-11-18, 이전 회차 2026-11-17T22:15:58Z 대비)**
+
+- 노출 1,214 → **1,160**, 클릭 14 → 14, CTR 1.2%, 평균 순위 25.7 → **26.0** (글별 노출 상위 8: `spotify-family-qr-code-verification` 262·18.6위 / `turn-off-ai-in-chrome` 167·33.3위·클릭 2 / `free-offline-ai-tools` 110·16.7위·클릭 4 / `image-to-text-offline-free` 104·19.2위·클릭 2 / `windows-11-24h2-end-of-support` 87·60.7위 / `iphone-duo-sold-out` 59·7.7위·클릭 2 / `merge-pdf-files-free` 55·66.0위 / `transcribe-audio-offline-free` 51·52.3위·클릭 1. 지운 URL `free-offline-text-to-speech` 52·10.7위 / `convert-heic-to-jpg` 1·1.0위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 → 11-09~15 2 · 11-16~22 0 (미확정, 노출 **45**)
+- sitemap 마지막 다운로드: `rss.xml` 11-16 11:49 → **11-18 15:37**, `sitemap.xml` 11-16 07:38 → **11-18 07:41** UTC
+- URL 검사: 색인 17/59 → 17/59, Discovered 21 → **14** · URL is unknown 21 → **28**, 미색인 42편 중 Google이 본 링크가 있는 글 22 → 22. 가장 최근 크롤링(색인 페이지) 11-16 04:41 UTC (`image-to-text-offline-free`). 이전 회차 뒤 새로 크롤링된 페이지: 없음
+- 허브 (5편, `hub: true`): `best-free-pdf-tools` Discovered → **URL is unknown**·크롤링 기록 없음 / `free-image-converter-photo-tools` Discovered → **URL is unknown**·크롤링 기록 없음 / `free-offline-ai-tools` 색인·마지막 크롤링 10-14 19:12 UTC / `microsoft-end-of-support-dates` URL is unknown → **Discovered**(rss.xml·sitemap.xml)·크롤링 기록 없음 / `turn-off-ai-features` Discovered → **URL is unknown**·크롤링 기록 없음
+- 성과 검증 (`traffic-playbook.md` 검증 기록 중 판정 `-`인 행, 기준일 2026-11-19 KST):
+  - V3 `turn-off-ai-in-chrome` (지표 position, 배포 2026-10-21, 판단 시점 2026-11-18) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/turn-off-ai-in-chrome (web, 지표 position)
+
+    - 변경일 2026-10-21, 전 2026-09-23 ~ 2026-10-20, 후 2026-10-22 ~ 2026-11-18 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-21 이후 다시 실행
+  - 판단 시점 전: V4·V5 11-22 · V9 11-24 · V6 11-26 · V8 12-03
+- `link_audit.py --only-problems`: 1건 (상시 글 → 허브 링크 누락 1건: `turn-off-ai-in-chrome` → `turn-off-ai-features`)
+- **AdSense 재신청 조건**: 운영 39일/92일(2027-01-11) · 색인율 29%(17/59, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4 → 11-09~11-15 2) → 미충족
+
+**해석**
+
+- 노출·순위는 28일 창 이동 범위(1,214 → 1,160). 11-16~22 주는 미확정 노출 45·클릭 0 → AdSense 조건 ③은 이번 주도 0주로 갈 가능성이 큼
+- `Discovered` 21 → 14 · `URL is unknown` 21 → 28은 세션 63~100과 같은 회차별 흔들림. 새 크롤링 없음(가장 최근 11-16)
+- **V9 허브 4편(요청 약 2일 뒤)**: 4편 모두 크롤링 기록 없음. `best-free-pdf-tools`·`free-image-converter-photo-tools`는 Discovered → URL is unknown으로 흔들렸고 `microsoft-end-of-support-dates`는 Discovered. 아직 판정 ③(요청도 무시) 쪽이지만 판단 시점 11-24 전이라 판정하지 않음
+- sitemap·RSS는 11-18에 다시 받아 감(약 2일 간격으로 짧아짐 — 11-16 → 11-18)
+
+**고른 작업**: 0 콘텐츠 정리 — 처리 가능한 항목은 6번뿐(7번은 12월 일정 뒤) → **통합 1건**. 주간 점검(11-15) 우선순위 3 '미발견 글 실제 갱신' → `gemini-connected-apps`(URL is unknown, 세션 89 갱신거리 'Customize 배포 완료 + 지난 일정 줄'). 이전 세션이 정한 **`upscale-image-without-losing-quality` Upscayl 측정은 막힘**(아래). 1(색인)은 새 크롤링 없음, 2(link_audit)는 V3·V4 판정 대기, 4는 노출 100회 이상 글이 V 판정 중
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — AI-Tell Check로 통합 글 콜론 드러내기 2곳 고침 / `seo-audit` — On-Page 항목은 `prepublish_check.py`로 확인(제목 54자·주 검색어 앞·H1 일치, 설명 150자, h1 1개, JSON-LD, 첫 img 대표 이미지, og 이미지 대표 그림에서). searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 콘텐츠 정리 6번 (통합 + 전환) | **`iphone-duo-sold-out`** ← `iphone-duo-cracked-screen` | 판단: 두 칼럼 모두 날짜 지난 소식(매진·1월 배송, 반품 기한 11-06)이고 AppleCare+·수리비가 겹침 + 상시 수요(`iphone duo applecare` 자동완성 3곳, `iphone duo repair cost` Bing·YouTube, `… screen replacement cost` Bing·YouTube, Trends 0.08) → 통합. 남길 글: 색인·28일 노출 59·7.7위인 이 글(지운 글 Discovered·노출 0, 두 글 모두 익명 아닌 검색어 0 → 지운 글 28일 검색어 없음). 카테고리 `news` → `software`, 제목 **`iPhone Duo AppleCare+ Price and What Each Repair Costs`**(54자), 주 검색어 `iphone duo applecare`(H6 줄 갱신·`keyword_trends.py` 측정). 구성: 첫 문단(AppleCare+ $19.99/월·$199.99/년, 내부 화면 $999 → $99, **AppleCare One Individual도 $19.99/월로 3개 기기**, 접힘 균열은 교체) → 수리비 표 → 위젯 캡처 → 플랜 3종 표 → 보증 외 수리비(18 Pro·Pro Max 비교 그림) → 2년 손익(외부 화면만 한 번이면 플랜 없이가 쌈: $379 vs $428.98) → 접힘 균열(9to5Mac 성명 + MacRumors 10-30 매장 메모, 리콜 없음, 11-18 서비스 프로그램 없음, 결함 vs 사고는 점검에서 결정) → 커버 층 → 구매·할부·리스(Klarna 조건) → 기한 → 수리 전 준비(109519 **11-18판**) → 상황별 추천 → How we checked(통합 이력). 1차 출처 Apple 15쪽 + 언론 2건 Chromium 재확인(`tests/iphone-duo-sold-out/merge-2026-11-19/`), **가격은 10월과 모두 같아** 그림 5장 재사용(3장은 지운 글에서 옮김), 주문·기한 타임라인과 지운 글 대표 이미지 삭제. `vercel.json` 308(리디렉트 테스트 6개 통과), 링크 3곳 정리(`apple-siri-settlement-claim`·`iphone-handoff-verizon-cost`의 지운 글 링크 문장, `check-if-image-is-ai-generated`의 'iPhone Duo 출시 분석' 링크는 통합 글이 SynthID를 다루지 않아 뺌). clusters.md `phones-subscriptions` **첫 상시 글**, 칼럼 6 → 4편 | - (콘텐츠 정리, 지표를 노린 변경 아님) |
+| 2 | 주간 점검 우선순위 3 (미발견 글 실제 갱신) | `gemini-connected-apps` (URL is unknown) | 11-18 재확인 반영 한 가지 변경, `updatedAt` 2026-11-18T19:00Z(RSS 맨 앞·sitemap lastmod). **가용성 표 83 → 90행**(새 7개: Calm·Strava·Realtor.com US, Quinto Andar·Zap Imóveis·ClickBus·Movida Brazil, 빠진 앱 0 — `parse_apps.py` 두 판 비교), Contacts가 US only → EEA·나이지리아·스위스·영국 밖 전부, **Customize에 plugins**(앱·skills 묶음) 추가, Privacy Hub 11-17판의 **History 개명·보관 약 2개월** 반영, 지난 일정 줄(10-28 배포 끝) 정리, Classroom '학교 전용' → '업무·학교 계정' 정정. 그림 2장 다시 그림(앱 집계 58 = 29 + 14 + 15, 연결 해제 표 History·약 2개월), 설명 앱 수 갱신. 제목·칼럼 형식 그대로 | - (노출 0이라 `--compare` 불가. 갱신 뒤 `discoveredAt`·`crawledAt` 간격만 다음 세션들이 기록) |
+
+- 검증: `prepublish_check.py --slug iphone-duo-sold-out --build` FAIL 0(WARN: slug에 주 검색어 단어 없음 — 주소 유지라 의도, 내부 링크 2개 — 같은 클러스터 관련 글이 칼럼뿐, 첫 `next build` SecurityFatalError 재실행 통과, `cli.js`는 `pnpm install`이 바꾼 것을 되돌림). lint·test(38파일 309개)·build 통과. 빌드 HTML: title 66자(접미사 포함)·설명 일치·BlogPosting/BreadcrumbList·h1 1·`<pre>`·`<code>` 0·첫 img 대표 이미지·og 1200×630(대표 그림 MAD 0.58)
+- `link_audit.py --only-problems`: 2건 — 기존 1건(`turn-off-ai-in-chrome` → 허브, V3 보류) + **새 1건 `spotify-family-qr-code-verification` → 상시 글 링크 없음**: 통합으로 `phones-subscriptions`에 상시 글이 처음 생겨 규칙이 적용됨. 이 칼럼은 V4(제목·설명 CTR, 11-22) 판정 중이라 판정 뒤 처리(가족 요금제 주제라 억지 링크는 넣지 않고, 이어질 문장이 없으면 전환·정리 후보로 검토)
+
+**막힌 것**
+
+- **Upscayl 데스크톱 앱 측정(이전 세션 '다음 할 일') 불가**: `api.github.com/repos/upscayl/upscayl/releases/latest`·`github.com/upscayl/upscayl/releases/latest` 모두 **403** — 이 세션의 GitHub 접근이 `jinhok96/jinho-blog` 저장소로 한정돼 다른 저장소의 릴리스 파일을 받을 수 없음(프록시 응답 "GitHub access to this repository is not enabled for this session"). 대체 배포처(Flathub·Snap) 조회는 자동 권한 검사("Unauthorized Access")가 거부 → 우회하지 않음. 세션 98은 같은 파일을 받았으므로 세션마다 GitHub 범위가 다를 수 있음(해석). backlog 행은 '보류(GitHub 범위)'로
+- Apple Self Service Repair 스토어(`selfservicerepair.com`)는 컨테이너에 403 → iPhone Duo 부품 가격(11-17 판매 시작 보도)은 쓰지 않음
+
+**알게 된 것**
+
+- **Google이 Gemini 'Keep Activity'를 'History'로 바꾸고, 기록을 꺼도 보관하는 기간을 72시간 → 약 2개월로 고침** (Gemini Apps Privacy Hub "Last updated: November 17, 2026": "Even if Gemini History is turned off, future chats will still be saved for around 2 months"; Gemini 도움말 14620100 "At the bottom, click Settings > History"). `source_diff.cjs --slug turn-off-gemini-apps-activity`로 11-08 사본과 비교해 확인. 우리 글 **10편**에 옛 이름·72시간이 있음: `turn-off-gemini-apps-activity` 41곳(제목·설명 'now called Keep Activity' 포함) · `google-gmail-photos-ads` 11 · `turn-off-gemini-on-android-phone` 5 · `gemini-connected-apps` 4(이번 세션 고침) · `chrome-autofill-settings` 3 · `gemini-gems-to-skills` 2(V8 판정 중 — 정확성 우선 규칙으로 고치고 판정에 표시) · `turn-off-ai-features` 2 · `ios-27-2-siri-ai-memory`·`siri-history-on-iphone`·`turn-off-ai-in-firefox` 각 1(문맥 확인 필요). 같은 diff에서 Gemini 무료 등급 프롬프트 한도 '하루 300' → '4시간마다 80'(`gemini-free-flash-lite` 관련 여부 확인 필요), Android에서 Google Assistant로 되돌리기 불가("You can no longer switch to Google Assistant on phones and tablets", `turn-off-gemini-on-android-phone` 관련)도 보임
+- 칼럼 통합의 '남길 글'이 주제와 다른 주소(`iphone-duo-sold-out`)여도 색인·노출이 나은 쪽을 남기는 규칙을 따름(세션 97 `google-gmail-photos-ads`와 같은 판단). 주소와 제목이 어긋나는 비용보다 색인된 주소를 버리는 비용이 크다고 봄(해석)
+- 가격 페이지를 다시 렌더링하면 그림을 다시 그리지 않아도 되는지 바로 판단할 수 있음: 수리 위젯·AppleCare 가격 API·Apple Upgrade 값이 10월과 모두 같아 5장 재사용. 위젯 기기·모델 선택은 보이는 `select`만 골라야 함(`prices18b.cjs`)
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 39일·색인율 29%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음 (루틴 프롬프트 교체는 끝난 일로 옮김)
+- Claude(11-22 일 주간 점검 + 개선 세션): **Gemini History 개정 반영 1순위** — `turn-off-gemini-apps-activity` 전면 갱신(제목·설명·단계·72시간 → 약 2개월, 13개 도움말 다시 대조, 정확성 문제라 V 기록 없이 고침), 이어서 `google-gmail-photos-ads`·`turn-off-gemini-on-android-phone`·허브 `turn-off-ai-features` 등 나머지 9편은 한 세션 2~3편씩. V9 판정(11-24)·V3 `--compare`(11-21 이후)·V4·V5(11-22 이후) 판정. V4 뒤 `spotify-family-qr-code-verification` link_audit 문제
+- Claude: Upscayl 측정은 GitHub 릴리스를 받을 수 있는 세션에서만(받기가 403이면 바로 건너뜀). Aspose PUB 재시도·LibreOffice 새 판 확인(세션 100)
+- Claude: **12-08 월간 보안 업데이트 뒤** 허브 '11월 업데이트' 절·`office-2021-end-of-support` 후속. 콘텐츠 정리 7번 12월 일정 뒤(12-01 remove.bg·12-12 Pixel Watch·12-21 Siri 합의·12-22 Arc). **콘텐츠 정리 1~6·8번 모두 끝남**
+- Claude: 갱신한 `gemini-connected-apps`의 `discoveredAt`·`crawledAt`를 다음 지표 블록에서 확인. H6 첫 판정 11-21 무렵, H5 11-20 무렵, H3 12-15 무렵, Pinterest 유입 11-22쯤, Firefox 161(11-24 예정)
+- Claude: 발행 58편 (허브 5개, 통합으로 1편 줄어듦), 상시 글 전환 4편(누적)
+- 대시보드: 세션 시작 때 갱신(회차 2026-11-18T17:16:48Z, `stats` 13 + `history` 13, DB 문서 687개), 별도 커밋. 이번 세션 변경(통합·log.md)은 다음 회차에 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-18 · 결정: 개선 세션 목·일, 주간 SEO 점검은 일요일 (사용자)
 
 - 사용자(대화형): "점검은 목, 일에 하자. 일요일에 주간 점검." → 개선(점검) 세션을 화·목에서 **목·일**로, 주간 SEO 점검은 **일요일** 개선 세션이 먼저 (Claude 해석: '점검' = 개선 세션. 다르면 사용자가 바로잡음)

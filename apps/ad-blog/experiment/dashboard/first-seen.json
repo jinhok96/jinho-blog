@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-17T22:15:58Z",
+ "updatedAt": "2026-11-18T17:16:48Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -71,7 +71,15 @@
     "/sitemap.xml"
    ]
   },
-  "convert-publisher-file-to-pdf": {},
+  "convert-publisher-file-to-pdf": {
+   "discoveredAt": "2026-11-18T17:16:48Z",
+   "feedSeenAt": "2026-11-18T17:16:48Z",
+   "sitemapSeenAt": "2026-11-18T17:16:48Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
+  },
   "convert-webp-to-jpg-free": {},
   "customize-right-click-menu-windows-11": {
    "firstSeenLinkAt": "2026-11-01T22:38:55Z",
@@ -193,7 +201,15 @@
    "discoveredAt": "2026-10-19T18:39:54Z",
    "crawledAt": "2026-10-19T18:39:54Z"
   },
-  "microsoft-end-of-support-dates": {},
+  "microsoft-end-of-support-dates": {
+   "discoveredAt": "2026-11-18T17:16:48Z",
+   "feedSeenAt": "2026-11-18T17:16:48Z",
+   "sitemapSeenAt": "2026-11-18T17:16:48Z",
+   "discoveredVia": [
+    "/rss.xml",
+    "/sitemap.xml"
+   ]
+  },
   "office-2021-end-of-support": {
    "firstSeenLinkAt": "2026-10-21T08:37:25Z",
    "discoveredAt": "2026-11-17T18:47:00Z",

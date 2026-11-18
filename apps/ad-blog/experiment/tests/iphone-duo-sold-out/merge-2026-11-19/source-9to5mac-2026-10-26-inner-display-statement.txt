@@ -1,0 +1,105 @@
+# 가져온 시각: 2026-11-18T17:35:21.410Z
+# 원본: https://9to5mac.com/2026/10/26/apple-responds-to-reports-of-iphone-duos-inner-display-cracking/ (언론 보도: Apple 성명)
+Apple responds to reports of iPhone Duo's inner display cracking - 9to5Mac
+https://9to5mac.com/2026/10/26/apple-responds-to-reports-of-iphone-duos-inner-display-cracking/
+
+IPHONE IPHONE DUO
+Apple responds to reports of iPhone Duo’s inner display cracking
+Chance Miller
+ | Oct 26 2026 - 10:14 am PT
+26 Comments
+
+Over the weekend, a handful of iPhone Duo users reported that their inner display had cracked along the hinge. In a statement to 9to5Mac, Apple said it is “aware of an issue impacting the inner display on a small number of iPhone Duo units,” and that affected users can contact AppleCare for a replacement.
+
+Here is Apple’s full statement:
+
+“The response to iPhone Duo from early users has been incredibly positive, and we are seeing exciting things from developers who are rapidly updating their apps to take advantage of its unique form factor. We are aware of an issue impacting the inner display on a small number of iPhone Duo units. If users experience issues with their iPhone Duo display, they should contact AppleCare for a replacement.”
+
+The company says the problem affects a very small number of iPhone Duo units and appears to surface relatively quickly. Most iPhone Duo units are not affected. You do not need AppleCare+ to have your iPhone Duo replaced for this problem. If you bought from a carrier, you should contact AppleCare directly, not your carrier, to get your device replaced.
+
+Reports of the problem surfaced on Reddit and other forums over the weekend. Affected users report that the inner screens cracked along the center line of the hinge. While a number of user reports on Reddit showing the issue are legitimate, there have been a handful of fake AI-generated reports as well.
+
+The folks at iFixit have pointed to a few potential causes of the problems, with certain components potentially putting excessive pressure on the display.
+
+My favorite Apple deals right now: 
+Apple Watch Series 12: from $329 (Reg. $399)
+AirPods Pro 3 $179 (Reg. $249)
+M5 MacBook Air Up to $250 off
+M6 Mac mini: up to $150 off
+Order the new Apple TV 4K and HomeView
+
+Follow Chance: Threads, X, and Instagram
+
+FTC: We use income earning auto affiliate links. More.
+
+You’re reading 9to5Mac — experts who break news about Apple and its surrounding ecosystem, day after day. Be sure to check out our homepage for all the latest news, and follow 9to5Mac on Twitter, Facebook, and LinkedIn to stay in the loop. Don’t know where to start? Check out our exclusive stories, reviews, how-tos, and subscribe to our YouTube channel
+Featured
+from
+9to5Mac
+prevnext
+slide 1 to 2 of 4
+iOS 27.3 will give iCloud+ subscribers two new perks
+Ryan Christoffel
+Nov 17 2026
+iFixit tears down Apple HomeView, finds lots of glue and endless frustration
+Marcus Mendes
+Nov 17 2026
+AirPods Pro 3 keep getting better, here’s what’s new in iOS 27
+Ryan Christoffel
+Nov 17 2026
+Why iPhone Duo wasn’t for me (but might be for you)
+Ryan Christoffel
+Nov 17 2026
+Discover more
+Shop iPhones
+Compare Phones
+Trading Cards
+Podcasts
+9to5Mac Overtime
+•
+44min
+9to5Mac Overtime 089: Live Rewind, Siri Recap, and Apple Watch privacy
+Play Episode
+9to5Mac Daily
+•
+0min
+iOS 27.2.1, HomeView rumors
+9to5Mac Daily
+•
+0min
+New Apple TV feature, more
+9to5Mac Daily
+•
+8min
+Apple software development, iOS 28
+9to5Mac Daily
+•
+8min
+MacBook Neo 2 rumors, watchOS 27.3
+9to5Mac Daily
+•
+9min
+iOS 27.3 beta 1 now available
+Powered by
+
+Check out 9to5Mac on YouTube for more Apple news:
+
+Comments
+EXPAND
+CLOSE
+COMMENTS
+ EXPAND
+CLOSE
+COMMENTS
+Guides
+iPhone
+
+Introduced in 2007 by Steve Jobs, iPhone is Appl…
+
+iPhone Duo
+Author
+Chance Miller  chancehmiller
+
+Chance is the editor-in-chief of 9to5Mac, overseeing the entire site’s operations. He also hosts the 9to5Mac Daily and 9to5Mac Happy Hour podcasts.
+
+You can send tips, questions, and typos to chance@9to5mac.com.

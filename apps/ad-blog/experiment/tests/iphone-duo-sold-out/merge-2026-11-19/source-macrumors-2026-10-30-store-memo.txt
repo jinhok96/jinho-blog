@@ -1,0 +1,105 @@
+# 가져온 시각: 2026-11-18T17:34:58.278Z
+# 원본: https://www.macrumors.com/2026/10/30/apple-alerts-stores-to-iphone-duo-display-cracking/ (언론 보도: 내부 메모)
+Apple Alerts Stores to iPhone Duo's Display Cracking Issue - MacRumors
+https://www.macrumors.com/2026/10/30/apple-alerts-stores-to-iphone-duo-display-cracking/
+
+Apple Alerts Stores to iPhone Duo's Display Cracking Issue
+Friday October 30, 2026 3:20 pm PDT by Joe Rossignol
+
+In a memo shared with Apple Stores and Apple Authorized Service Providers this week, and later obtained by MacRumors, Apple provided technicians with guidance on how to diagnose and address the iPhone Duo's inner display cracking issue.
+
+
+If a customer reports the issue, Apple advised technicians to inspect the iPhone Duo and repair or replace it in accordance with their standard procedures. While the instructions themselves are straightforward, the fact that Apple issued an internal memo suggests the issue is widespread enough to warrant official guidance.
+
+Apple's memo said the issue affects a small number of iPhone Duo units, which is consistent with what it said in a public statement on Monday.
+
+"We are aware of an issue impacting the inner display on a small number of iPhone Duo units," said Apple, in a statement shared with MacRumors. If users experience issues with their iPhone Duo display, they should contact AppleCare for a replacement." You can get support on Apple's website or by calling 1-800-APL-CARE in the U.S. and Canada.
+
+Apple said most iPhone Duo units are not susceptible to this issue and that impacted units appear to exhibit the defects rather quickly after usage.
+
+Apple said there is no iPhone Duo recall, and the company has yet to launch a public-facing repair program on its website for this issue.
+
+Almost immediately after the iPhone Duo began arriving to customers a week ago, a handful of early adopters reported that the device's inner display had cracked, resulting in lines appearing down the middle and towards the right side of the screen.
+
+The electronics repair website iFixit completed an iPhone Duo teardown and said that the issue is likely related to a defective hinge on affected units. However, Apple has yet to comment on the underlying cause of the issue.
+
+Related Roundup: iPhone Duo
+Tags: Apple Authorized Service Providers, Apple Store
+Buyer's Guide: iPhone Duo (Buy Now)
+Related Forum: iPhone
+[ 303 comments ]
+
+Get weekly top MacRumors stories in your inbox.
+
+Leave this field empty
+Popular Stories
+Here's What Apple's Apps Look Like on the iPhone Duo
+Tuesday October 20, 2026 11:12 am PDT by Juli Clover
+With just three days to go until the iPhone Duo is released, Apple is getting ready for the launch. Behind the scenes, the App Store now has screenshots of Apple's built-in apps running on the Duo. We've seen some apps in marketing materials, but images of the ones we haven't seen give us an idea of what it will be like using the iPhone Duo day to day. Many apps are shown in landscape...
+Read Full Article • 117 comments
+Crackgate? iPhone Duo Owners Report Screens Breaking Along the Hinge
+Friday October 23, 2026 11:05 am PDT by Juli Clover
+Some iPhone Duos are already experiencing hinge issues that cause display cracks, based on photos shared on Reddit and the MacRumors forums. Almost all of the display faults are right along the hinge, and most result in a line of bright pixels across one side of the screen. An iPhone Duo owner in Australia said his device cracked after being opened fewer than 20 times, and there was no...
+Read Full Article • 689 comments
+Apple Responds to iPhone Duo Display Cracking Reports
+Monday October 26, 2026 10:20 am PDT by Juli Clover
+Shortly after the iPhone Duo launched, a few users reported hinge issues that were causing cracks in the inner display. Apple has now responded to the reports in a statement to MacRumors, saying a small number of units are affected. The response to iPhone Duo from early users has been incredibly positive, and we are seeing exciting things from developers who are rapidly updating their apps...
+Read Full Article • 234 comments
+Top Rated Comments
+S
+Steve Without-A-Job
+3 weeks ago
+Unlike most of Apple fans, I do unfortunately find this phone poorly made.
+Although it has a thin design, it does feel having a weak spot around the hinge, the inner screen is covered in that plastic foil making the screen look as if it was smeared with vaseline. It is a little awkward way to hide the crease on its first day, just enough to get it sold to a customer for this ridiculous price.
+As many reviews showed, dust particles and sand can get into this device easily. You don't need to go have a beach-day, it is enough that you get caught outside on a windy day.
+
+Repair costs are insane. Another $1000 to repair a screen which can be easily damaged by a sand particle which managed to fly inside via the exposed holes around the hinge? I am absolutely speechless.
+
+And although software issues will be fixed, I find it hilarious that the official Apple Store app is not optimized for this device upon the release. lol.
+
+I am disappointed. It does not feel like a genuine well thought and manufactured product, it feels like a rushed attempt to suck as much money as possible from customers who are tired of the same looking devices and want something new. (same with touch screen laptops now btw). Sad.
+Score: 56 Votes (Like | Disagree)
+tgwaste
+3 weeks ago
+I would never accept a repair for this. Replacement of a brand new, unopened box phone, or a complete refund.
+Score: 46 Votes (Like | Disagree)
+S
+Sp1281
+3 weeks ago
+
+So what if someone bought iPhone Duo without Apple Care? Could they still exchange the iCrack for a new phone, or would they be requested to pay $999 for a new inner screen?
+
+Im sure they will exchange it even without AppleCare. Its a defect not user error
+Score: 42 Votes (Like | Disagree)
+K
+kkcali
+3 weeks ago
+
+Every Apple product has a minimum of 12 months warranty worldwide regardless of Apple Care+, yet if you bring it later than 14 days after the purchase, you will either get a repair or a replacement unit, instead of a new iPhone or a refund.
+
+I wouldn’t be so sure, my chat from yesterday
+
+
+Score: 39 Votes (Like | Disagree)
+K
+kirk.vino
+3 weeks ago
+
+Unlike most of Apple fans, I do unfortunately find this phone poorly made.
+Although it has a thin design, it does feel having a weak spot around the hinge, the inner screen is covered in that plastic foil making the screen look as if it was smeared with vaseline. It is a little awkward way to hide the crease on its first day, just enough to get it sold to a customer for this ridiculous price.
+As many reviews showed, dust particles and sand can get into this device easily. You don't need to go have a beach-day, it is enough that you get caught outside on a windy day.
+
+Repair costs are insane. Another $1000 to repair a screen which can be easily damaged by a sand particle which managed to fly inside via the exposed holes around the hinge? I am absolutely speechless.
+
+And although software issues will be fixed, I find it hilarious that the official Apple Store app is not optimized for this device upon the release. lol.
+
+I am disappointed. It does not feel like a genuine well thought and manufactured product, it feels like a rushed attempt to suck as much money as possible from customers who are tired of the same looking devices and want something new. (same with touch screen laptops now btw). Sad.
+
+Exactly my thoughts as well! This phone actually solidified my thinking that Apple is past their innovative phase. Too many questionable products in a row. On top of that, this and, let’s say, the new MacBook with touchscreen are the ideas that have been available elsewhere for many years now. They could not polish this phone well enough even after 8 years. And the most exciting feature of the new Mac is the lit-up logo that they themselves killed 10 years ago.
+Score: 25 Votes (Like | Disagree)
+R
+radus
+3 weeks ago
+It is called Duo because you need a second one.
+Score: 23 Votes (Like | Disagree)
+Read All Comments

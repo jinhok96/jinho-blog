@@ -1,0 +1,159 @@
+# 가져온 시각: 2026-11-18T17:36:36.726Z
+# 원본: https://support.apple.com/iphone/repair/screen-replacement (기기 선택 iPhone 18 Pro, 보증 외·AppleCare 탭)
+
+[service] select options: iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE | iPhone Duo | iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE | iPhone Duo
+[service] selects: ["iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE","iPhone 18 Pro Max | iPhone 18 Pro","iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE","iPhone Duo"]
+
+[service]
+15
+iPhone 14
+iPhone 13
+iPhone 12
+iPhone 11
+iPhone XS
+iPhone XR
+iPhone 8
+iPhone 7
+iPhone 6
+iPhone SE
+Device Type
+iPhone 18 Pro Max
+iPhone 18 Pro
+Model
+Help identify your model
+(opens in a new window)
+
+Estimated service cost
+
+Battery service
+$129
+Back glass damage
+$159
+Rear camera damage
+$249
+Screen damage
+$379
+Screen and back glass damage
+$469
+Other damage
+$899
+Get service
+
+We’ll inspect your device to determine the final service fee. Estimated fees are for out-of-warranty service from Apple and may be subject to tax. A shipping fee may be added if we need to ship your device. Apple Authorized Service Providers can set their own service fees and will provide their own estimate.
+
+Where can I get service?
+In Person
+
+You can get personal support at any Genius Bar or Apple Authorized Service Provider. Our trained technicians will inspect your iPhone, explain your options, and handle it from there.
+
+By Mail
+
+We can send you a prepaid shipping box with everything you need to securely mail your iPhone in for repair, on your schedule and without an appointment.
+
+Why choose Apple?
+It’s easy.
+
+
+
+[applecare] select options: iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE | iPhone Duo | iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE | iPhone Duo
+select fail page.selectOption: Timeout 30000ms exceeded.
+Call log:
+[2m  - waiting for locator('select')[22m
+[2m    - locator resolved to 4 elements. Proceeding with the first one: <select aria-labelledby="device-dropdown-label" class="form-dropdown-select device-dropdown">…</select>[22m
+[2m  - attempting select option action[22m
+[2m    2 × waiting for element to be visible and enabled[22m
+[2m      - element is not visible[22m
+[2m    - retrying select option action[22m
+[2m    - waiting 20ms[22m
+[2m    2 × waiting for element to be visible and enabled[22m
+[2m      - element is not visible[22m
+[2m    - retrying select option action[22m
+[2m      - waiting 100ms[22m
+[2m    60 × waiting for element to be visible and enabled[22m
+[2m       - element is not visible[22m
+[2m     - retrying select option action[22m
+[2m       - waiting 500ms[22m
+
+[applecare] selects: ["iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE","iPhone Duo","iPhone Duo | iPhone 18 Pro | iPhone Air | iPhone 17 | iPhone 16 | iPhone 15 | iPhone 14 | iPhone 13 | iPhone 12 | iPhone 11 | iPhone XS | iPhone XR | iPhone 8 | iPhone 7 | iPhone 6 | iPhone SE","iPhone Duo"]
+
+[applecare]
+ 17
+iPhone 16
+iPhone 15
+iPhone 14
+iPhone 13
+iPhone 12
+iPhone 11
+iPhone XS
+iPhone XR
+iPhone 8
+iPhone 7
+iPhone 6
+iPhone SE
+Device Type
+iPhone Duo
+Model
+Help identify your model
+(opens in a new window)
+
+Estimated service cost
+
+Battery service
+$0
+Cover layer damage
+$19
+Back glass damage
+$29
+Outer display damage
+$29
+Inner display damage
+$99
+Other accidental damage
+$99
+Theft or loss
+$149
+Get service
+
+Fees may be subject to tax. For service covered by an AppleCare plan, your service fee is the same at Apple and all Apple Authorized Service Providers.
+
+For models with Ceramic Shield, Ceramic Shield back is referred to as ’back glass’ and Ceramic Shield display is referred to as ’screen’ in the AppleCare plans Terms and Conditions.
+
+Convenient service options.
+Express Replacement
+
+You don’t have to wait for a repair. With AppleCare, weʼll send you a replacement iPhone, even before you send yours back.
+
+In Person
+
+You can get personal support at the Genius Bar or an Apple Authorized Service Provider. Our technicians will inspect your iPhone, explain your options, and handle it from there.
+
+By 
+
+# 가져온 시각: 2026-11-18T17:37:59.371Z (보증 외 탭, 기기 iPhone 18 Pro · 모델 iPhone 18 Pro)
+
+iPhone 6
+iPhone SE
+Device Type
+iPhone 18 Pro Max
+iPhone 18 Pro
+Model
+Help identify your model
+(opens in a new window)
+
+Estimated service cost
+
+Battery service
+$129
+Back glass damage
+$159
+Rear camera damage
+$249
+Screen damage
+$329
+Screen and back glass damage
+$419
+Other damage
+$849
+Get service
+
+We’ll inspect your device to determine the final service fee. Estimated fees are for out-of-warranty service from Apple and may be subject to tax. A shipp

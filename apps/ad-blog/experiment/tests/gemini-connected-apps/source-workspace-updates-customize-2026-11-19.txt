@@ -1,0 +1,49 @@
+# 가져온 시각: 2026-11-18T17:45:30.569Z
+# 원본: https://workspaceupdates.googleblog.com/2026/10/an-easier-way-to-customize-how-gemini-works-for-you.html
+Google Workspace Updates: An easier way to customize how Gemini works for you
+https://workspaceupdates.googleblog.com/2026/10/an-easier-way-to-customize-how-gemini-works-for-you.html
+
+arrow_back
+Back
+
+October 21, 2026
+
+An easier way to customize how Gemini works for you
+Gemini 
+Gemini App 
+Rapid Release 
+Scheduled Release
+
+We’ve introduced a centralized ”customize” hub in the Gemini app, providing a single place to tailor how Gemini responds and connects with your tools. Users can discover apps and add skills to automate repetitive workflows such as adapting to your personal writing style or adhering to specific formatting guidelines. 
+
+Bringing custom skills and connected apps together into a unified space makes it easy to discover and manage how you customize your experience when using Gemini.
+
+The new hub includes:
+
+Skills: Configure custom skills and prompt preferences to tackle repetitive tasks, preserve tone and voice, or enforce specific response structures.
+Connected apps: Add more than 40 external services, as well as Google apps. You choose which apps to connect, and permissions can be audited or disconnected at any time.
+
+Platform & regional availability:
+
+The ”customize” menu is rolling out globally across web, mobile, and the Gemini desktop app on Windows and macOS for all user tiers.
+Most connected apps are currently available in English in the U.S., with select apps available in additional English-speaking regions, Brazil, and India.
+
+Getting started
+
+Admins: 
+Connected Google apps for Gemini can be reviewed and managed in the Admin console under Generative AI > Gemini app > Apps. Third-party tool integrations can be reviewed and managed in the Admin console under Apps > Google Workspace Marketplace apps > Apps list.
+End users: In Gemini (web, mobile, or desktop app), open the left navigation menu and select Customize to add skills, explore apps, and manage connected services.
+
+Rollout pace
+
+Rapid Release and Scheduled Release domains: Gradual rollout (up to 15 days for feature visibility) started on October 13, 2026
+
+Availability
+
+Available to all Google Workspace customers, Google Workspace Individual subscribers, and users with personal Google Accounts.
+
+Resources
+
+Google Help: Customize how Gemini works and manage connected apps
+Google Workspace Admin Help: Control Gemini App access to Workspace services
+Google Workspace Admin Help: Manage the Marketplace app allowlist for your organization

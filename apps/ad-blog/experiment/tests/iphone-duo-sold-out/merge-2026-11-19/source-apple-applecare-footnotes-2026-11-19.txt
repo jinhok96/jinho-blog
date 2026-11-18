@@ -1,0 +1,45 @@
+# 가져온 시각: 2026-11-18T17:39:54.183895Z
+# 원본: https://www.apple.com/applecare/ (각주, curl 원문 HTML — 렌더링 본문에서 빠짐)
+Apple Footer
+Local telephone fees may apply. Telephone numbers and hours of operation may vary and are subject to change.
+Coverage begins when your device ships or is picked up (or when your first device is added to the AppleCare One plan), and coverage can be cancelled at any time. Accidental damage means physical damage from handling due to unexpected and unintentional events.
+Service coverage is available only for covered devices and their original included accessories for protection against (i) defects in materials or workmanship, (ii) batteries that retain less than 80% of their original capacity, and (iii) unlimited incidents of accidental damage. Accidental damage means physical damage from handling due to unexpected and unintentional events. If an iPad is covered in your plan, one compatible Apple Pencil and one compatible Apple-branded iPad keyboard used with the covered iPad are also covered. AppleCare One is subject to eligibility rules; additions to plan may require inspection and a diagnostic check: Devices must be less than 4 years old and headphones must be less than 1 year old, and only eligible devices associated with your Apple Account (or your Apple Family Sharing group, if applicable) can be covered under AppleCare One. To cover an eligible display, connect it to your Mac and add it in System Settings. Limit of one (1) Apple Vision Pro can be covered under AppleCare One Individual; limit of six (6) Apple Vision Pro devices at a time can be covered under AppleCare One Family. Replacement equipment that Apple provides as part of the repair or replacement service may contain new or previously used genuine Apple parts that have been tested and pass Apple functional requirements. There are no service fees for mechanical failures. Each incident of accidental damage protection is subject to a service fee plus applicable tax. If you have a plan with theft and loss coverage, each incident of theft or loss is subject to a deductible plus applicable tax. For complete details, see the
+AppleCare One Terms and Conditions
+and the
+Theft and Loss Insurance Documentation
+applicable to your state. For AppleCare+, see
+Terms and Conditions
+and the
+Theft and Loss Insurance Documentation
+applicable to your state.
+For iPad, your plan covers one Apple Pencil or Apple Pencil Pro and/or one Apple-branded iPad keyboard compatible with and used with a covered iPad for accidental damage and defects in material or workmanship under your plan.
+For Apple Watch, the band that is covered for accidental damage and defects in material or workmanship under your plan is the band that came in the same box as the covered Apple Watch. Apple Watch Hermès bands, other than the Hermès Sport Band supplied in the same box as the covered Apple Watch, are not covered. Any replacement band will be an Apple-branded band in a style, material, and color that is subject to Apple’s discretion.
+For iPhone Duo, a separate service fee applies for the replacement of the cover layer.
+For Apple Vision Pro, the battery coverage applies only to the original battery included with the Apple Vision Pro and not to any additional batteries. Coverage does not include theft or loss of your device. AppleCare+ and AppleCare One will not provide accidental damage protection for accessories not included in the original packaging or third-party accessories used with the Apple Vision Pro, including, but not limited to, prescribed or other corrective lenses.
+Service coverage is provided under the Terms and Conditions of your AppleCare plan applicable to your state. Service coverage outside the country of purchase of your AppleCare plan is not guaranteed. The availability and type of service option may vary depending on your device model, applicable local laws, regulations, and legal requirements, and the capabilities of Apple Authorized Service Providers in the location where and when service is requested. Some service options may not be available in all areas. If service is available and repair is possible, Apple may, at its discretion, offer to repair or replace your device using locally sourced models or parts that meet local standards and regulations, which may differ from the original device in terms of color and/or specifications. Availability of international replacement for lost or stolen devices is not guaranteed and is subject to availability and may vary by region, model, and device configuration. For details, please review the Terms and Conditions applicable to your region at
+AppleCare One Terms and Conditions
+,
+AppleCare+ Terms and Conditions
+, and
+Theft and Loss Insurance Documentation
+.
+For a complete listing of all AppleCare service fees and deductibles, see the
+AppleCare Service Fees and Deductibles
+. Separate service charges apply to each repair or replacement performed.
+Theft and loss claims are for Apple Watch, iPhone, and iPad. Each claim is subject to a deductible. While the plan is active and in effect, claim limits reset every 12 months: two claims under AppleCare+; three claims under AppleCare One Individual; and six claims under AppleCare One Family.
+Theft and loss coverage requires you to have Find My enabled on your device at the time it is lost or stolen. Find My should remain enabled and your device should remain associated with your Apple Account throughout the theft or loss claims process. During the theft or loss claims process, you will be asked to erase your missing device, disable it, and transfer ownership before you can be issued a new device. After initiating your theft or loss claim with Apple, you will be asked to finalize your claim on AIG’s website at
+www.aigtheftandloss.com
+.
+International replacement of lost or stolen devices is subject to availability and options may vary by region, device, and model. Same-day replacement is not available for theft and loss claims.
+Theft and loss coverage does not apply to an Apple Pencil or Apple-branded keyboard even if lost or stolen with a covered iPad. For any covered Apple Watch theft or loss incidents, including those involving Nike and Hermès watch bands, the replacement band will be an Apple-branded band, which may differ in band style, material, and/or color from the band lost with the covered Apple Watch, subject to Apple’s discretion. Theft or loss claims cannot be made for watch bands only; bands are covered only when the Apple Watch is lost or stolen.
+Express Replacement Service (“ERS”) is subject to availability and capability and may not be available in locations where applicable laws, regulations, or legal requirements restrict or prohibit the shipment, transportation, importation, exportation, or return of devices, or otherwise prohibit the service option. ERS for Hardware Coverage for Accidental Damage to the Covered Equipment (excluding Included Accessories) is always subject to the Other Accidental Damage service fee and not the Screen-Only or Back Glass-Only service fees. If your device is replaced with Express Replacement Service, the original product becomes Apple’s property. The replacement product is your property and becomes the Covered Equipment. You are responsible for backing up all software programs, data, and passwords residing on your original device.
+Ceramic Shield back is referred to as “Back glass” and Ceramic Shield display is referred to as “Screen” in the
+AppleCare One
+,
+AppleCare+
+, and
+AppleCare+ with Theft and Loss
+terms and conditions.
+AppleCare plans are separate from and in addition to the Apple Limited Warranty and any legal rights provided by consumer protection laws in your jurisdiction. AppleCare plans are subject to acceptance of the Terms and Conditions. Purchase of any plan is not required to purchase any device. For complete details, see the
+AppleCare One Terms and Conditions
+and the

@@ -1,0 +1,46 @@
+[
+ {
+  "url": "https://www.apple.com/us/shop/mcm/product-price?parts=IPHONEDUO",
+  "body": {
+   "items": {
+    "IPHONEDUO": {
+     "type": "WUIP",
+     "name": "iPhone Duo",
+     "baseName": "iPhone Duo",
+     "id": "IPHONEDUO",
+     "price": {
+      "value": 1999,
+      "display": {
+       "smart": "$1999",
+       "actual": "$1999",
+       "from": "From $1999",
+       "monthlyFrom": "From $83.29/mo. for 24 mo. or $1999",
+       "monthlyPrice": "From $83.29 for 24 mo.",
+       "perMonth": "$83.29/mo.",
+       "perMonthSmart": "$83.29",
+       "perMonthActual": "$83.29",
+       "perMonthValue": "83.29",
+       "months": "24",
+       "apr": "0.00 %",
+       "poiPrice": {
+        "value": 1999,
+        "display": {
+         "smart": "$1999",
+         "actual": "$1999",
+         "from": "From $1999",
+         "perMonthValue": "57.99",
+         "months": "24",
+         "perMonth": "$57.99/mo.",
+         "perMonthSmart": "$57.99",
+         "perMonthActual": "$57.99",
+         "monthlyFrom": "From $57.99/mo. for 24 mo.",
+         "monthlyPrice": "From $57.99 for 24 mo."
+        }
+       }
+      }
+     }
+    }
+   }
+  }
+ }
+]

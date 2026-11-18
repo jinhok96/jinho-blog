@@ -241,6 +241,16 @@
    "refAvg": 34.46,
    "refMax": 100
   },
+  "iphone duo applecare": {
+   "avg": 0.08,
+   "max": 2.0,
+   "measuredAt": "2026-11-18",
+   "points": 93,
+   "raw": 0.08,
+   "recent7": 0.0,
+   "refAvg": 33.45,
+   "refMax": 100
+  },
   "iphone duo cracked screen": {
    "avg": 0.09,
    "max": 4.0,

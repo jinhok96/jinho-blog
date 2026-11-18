@@ -1,7 +1,55 @@
 # 사실 확인표: iphone-duo-sold-out
 
-- 검증 유형 (가설 H3): **조사형** — Apple 문서·요금 대조만, 직접 실행 없음
-- 주 검색어 (가설 H6): `iphone duo sold out` — 브리프 주 검색어
+- 검증 유형 (가설 H3): **조사형** — Apple 문서·요금 대조만, 직접 실행 없음 (2026-11-19 통합 뒤에도 같음: 수리비 견적 웹 도구 조회는 실행 측정이 아님)
+- 주 검색어 (가설 H6): `iphone duo applecare` — 2026-11-19 통합 브리프 주 검색어 (발행 때 `iphone duo sold out`)
+
+## 작성 전 브리프 — 2026-11-19 통합 + 상시 글 전환 (세션 101, 콘텐츠 정리 6번)
+
+칼럼 2편(`iphone-duo-sold-out` 10-17 화제 · `iphone-duo-cracked-screen` 10-28 화제)을 이 주소 하나의 상시 글로 합침. 남길 글: 이 글이 색인(10-20 크롤링)·28일(10-21~11-18) 웹 노출 59·클릭 2·평균 7.7위, `iphone-duo-cracked-screen`은 `Discovered`·노출 0. 두 글 모두 익명 아닌 검색어 없음(Search Console API 글별 `query` 행 0) → 지운 글 28일 검색어 없음. 지운 글은 `vercel.json` 308 → 이 글. 아래 '유형: 뉴스 칼럼 (**화제**…)' 줄과 '검증 유형'(조사형) 줄은 규칙대로 유지.
+
+| 항목 | 내용 |
+| --- | --- |
+| 클러스터·역할 | `phones-subscriptions` 상시 글 (카테고리 `news` → `software`). 이 클러스터 첫 상시 글, 허브 없음 |
+| 주 검색어 | `iphone duo applecare` — 2026-11-18 `demand_check.py suggest`: Google·Bing·YouTube 3곳, 하위 15개(`iphone duo applecare plus` Google·YouTube, `how much is applecare for iphone duo`·`iphone duo apple care cost`·`… plus price`(Bing), `iphone duo applecare cost`·`coverage`·`deductibles`·`fees`·`one`·`repair cost`·`replacement cost`(Google)) |
+| 하위 검색어 | `iphone duo repair cost` Bing·YouTube(19개, `… costs with apple care`·`… without apple care`·`… costs apple`(Google)), `iphone duo screen replacement`·`… cost` Bing·YouTube(`iphone duo inner screen replacement cost`·`iphone dual screen repair price`(Google)), `iphone duo cost` 3곳(`… per month`·`… att`·`… verizon`(Google)) |
+| 검색 의도 | 비교·결정형 (AppleCare+가 얼마고 살 가치가 있나, 없으면 수리비가 얼마인가, 균열은 무료인가) |
+| 채널 | 검색형 |
+| 상위 결과 (WebSearch `iphone duo applecare`, 2026-11-18) | PhoneArena(Crackgate, AppleCare 필수냐)·Digital Trends($1,499)·GadgetReview 2건·Android Headlines·MacRumors(10-14 수리비)·Mac Observer 2건·Macworld($19 커버 층) — **모두 10월 뉴스 기사**. 빈틈: ① **AppleCare One Individual이 Duo 단독 AppleCare+와 같은 $19.99/월**(구매 화면 문구 "Cover multiple products, including this iPhone")이라는 비교가 없음 ② 2년 손익(외부 화면만 깨지면 플랜 없이가 더 쌈)을 계산한 글 없음 ③ 균열 결함 뒤 상황(10-30 매장 메모, 11-18 서비스 프로그램 없음)을 한 글로 묶은 곳 없음 ④ 리스(Klarna 손상 수수료)와 AppleCare 관계 |
+| 차별점 | Apple 수리 견적 위젯(보증 외·AppleCare 탭) 직접 조회값 + iPhone 18 Pro·Pro Max 비교, AppleCare 가격 API 응답(페이지가 부른 것), 플랜 3종 비교 표, 2년 손익 그림, 결제 방식 표·그림, 기한 목록, 수리 전 준비(109519 11-18판) |
+| 내부 링크 계획 | 나가는: `apple-siri-settlement-claim`(보상금 청구 일련번호, 같은 클러스터), `iphone-handoff-verizon-cost`(번호 공유, 같은 클러스터). 허브 없음. 받는: 색인된 `iphone-handoff-verizon-cost`·`apple-siri-settlement-claim`(둘 다 이미 이 글로 링크, 지운 글 링크는 문장 정리). `check-if-image-is-ai-generated`의 'iPhone Duo 출시 분석' 링크는 통합 글이 SynthID를 다루지 않아 뺌 |
+| 개요 | 첫 문단(AppleCare+ 값·내부 화면 $999→$99·AppleCare One 같은 값·균열은 교체) → 수리비 표 → 위젯 캡처 → AppleCare+ 값(플랜 3종 표) → 보증 외 수리비(18 Pro 비교 그림) → 살 가치(2년 손익 그림) → 접힘 균열 → 커버 층 → 구매·할부·리스(표·그림 2장) → 기한 → 수리 전 준비(번호 단계) → 상황별 추천 → How we checked(통합 이력) |
+| 이미지 | 대표 이미지 그대로(`iphone-duo-wait-hero.webp`). 본문 5장 재사용(가격이 10월과 모두 같음): `apple-iphone-duo-repair-prices.webp`·`iphone-duo-vs-iphone-18-pro-screen-repair.webp`·`iphone-duo-applecare-two-year-cost.webp`(지운 글에서 옮김), `iphone-duo-cost-by-payment.webp`·`iphone-duo-monthly-cost-with-applecare.webp`. 뺀 그림: 주문 타임라인(뉴스 경과), 기한 타임라인(10월 날짜), 지운 글 대표 이미지 |
+| 제목 | `iPhone Duo AppleCare+ Price and What Each Repair Costs` (54자, 주 검색어 앞. 'Without …' 끝맺음 4편과 겹치지 않게) |
+| 설명 | 150자 |
+
+### 2026-11-18 UTC 재확인 사실 (Chromium 렌더링 사본 `merge-2026-11-19/source-*-2026-11-19.txt`, `merge-2026-11-19/render.cjs`)
+
+| 주장 | 출처 (사본) | 확인 |
+| --- | --- | --- |
+| AppleCare+ with Theft and Loss for iPhone Duo $19.99/mo. 또는 $199.99/yr, iPhone 18 Pro·Air $14.99/mo., iPhone 17 $12.99/mo. | `source-apple-applecare-2026-11-19.api.json`(apple.com/applecare 'All model pricing'이 부른 `mcm/product-price` 응답: SHPG3·SHPH3·SHNP3·SX432·SX3Y2) + 구매 화면 | 10월(`../iphone-duo-cracked-screen/api-applecare-product-price.json`)과 같음 |
+| AppleCare One Individual $19.99/mo. 최대 3개, 추가 $5.99/mo., Family $49.99/mo. 최대 6명, 도난·분실 Individual 12개월 3회 / AppleCare+ 12개월 2회 | `source-apple-applecare-2026-11-19.txt`, `source-apple-buy-iphone-duo-2026-11-19.txt`("Cover multiple products, including this iPhone with AppleCare One Individual $19.99/mo.") | 원문 |
+| 새 Apple 구입 후 60일 안에 설정 앱에서 플랜 추가, AppleCare One은 4년 이하·양호한 기기 추가(진단·점검 필요할 수 있음) | `source-apple-applecare-2026-11-19.txt` FAQ | 원문 |
+| 서비스 요금(AppleCare+·Theft and Loss·AppleCare One 공통): 외부 화면·뒷면 $29, 커버 층만 $19, 내부 화면 $99, 기타 사고 $99, 도난·분실 $149 | `source-apple-applecare-fees-2026-11-19.txt` | 10월과 같음 |
+| 수리 견적 iPhone Duo 보증 외: 커버 층 $49, 뒷면 $199, 배터리 $229, 후면 카메라 $229, 외부 화면 $379, 외부+뒷면 $509, 내부 화면 $999, 기타 $1,499 / AppleCare: 배터리 $0, 커버 층 $19, 뒷면 $29, 외부 화면 $29, 내부 화면 $99, 기타 사고 $99, 도난·분실 $149 | `source-apple-iphone-screen-repair-oow-2026-11-19.txt`·`source-apple-iphone-screen-repair-applecare-2026-11-19.txt` | 10월과 같음 → 캡처 그림 재사용 |
+| iPhone 18 Pro Max 화면 $379, iPhone 18 Pro 화면 $329 (보증 외) | `source-apple-iphone-screen-repair-18pro-2026-11-19.txt` (`prices18.cjs`·`prices18b.cjs`로 기기·모델 선택) | 10월과 같음 → 비교 그림 재사용. 999/379 = 2.64, 999/329 = 3.04 |
+| 견적은 점검 뒤 확정, 세금·배송비 추가 가능, 공인 서비스 제공업체는 자체 요금 / AppleCare 대상 수리는 Apple·공인 업체 같은 요금 | 같은 두 사본 | 원문 |
+| 배터리 용량 80% 미만이면 추가 요금 없이 교체 | AppleCare 탭 사본 | 원문 |
+| "For iPhone Duo, a separate service fee applies for the replacement of the cover layer", "There are no service fees for mechanical failures" | `source-apple-applecare-footnotes-2026-11-19.txt` (curl 원문 HTML 각주 — 렌더링 본문에서 빠짐) | 원문 |
+| 가격 $1,999·$2,199·$2,599·$3,199 (256GB·512GB·1TB·2TB), 할부 $83.29/mo. 24개월 0% APR(월 $91.62·$108.29·$133.29로 용량별 대응 확인), 통신사 $55.52/mo. 36개월부터, Apple Card 3% Daily Cash | `source-apple-buy-iphone-duo-2026-11-19.txt` | 10월과 같음 |
+| Apple Upgrade iPhone Duo $57.99/mo. 24개월 · $82.99/mo. 12개월 | `source-apple-upgrade-2026-11-19.txt` | 10월과 같음. 합계 1,391.76·995.88, 인수 607.24·1,003.12, AppleCare 포함 월 77.98·102.98·103.28 (계산) |
+| 리스: AppleCare 미포함(별도 청구), 가입 60일 안 추가 또는 가입 때 AppleCare One에 추가, AppleCare 없이 손상 반납 시 Klarna 1회 손상 수수료(반납 전 수리 가능), 도난·분실 보장 없으면 계약 가격 − 낸 금액, Klarna 미수락 AMEX·UnionPay·Chase·Capital One·Citibank, 끝나고 아무것도 안 하면 최대 6개월 월 단위 연장 뒤 구매 청구, 정상 반납 시 정가 이상 내지 않음, 받은 뒤 14일 안 반품 | `source-apple-upgrade-2026-11-19.txt` FAQ | 원문 |
+| 반품 14일(받은 날부터), 14일 안 가격 인하 시 차액 요청 | `source-apple-returns-2026-11-19.txt` | 원문 |
+| 보증: 원래 구매일부터 1년, "damage caused by accident, abuse, misuse" 제외, "protective coatings that are designed to diminish over time" 제외(결함이면 예외), Apple·AASP가 아닌 사람의 서비스로 생긴 손상 제외 | `source-apple-limited-warranty-ios-2026-11-19.txt` | 원문 |
+| 서비스 프로그램 목록에 iPhone Duo 없음 (최근 Mac mini 2025-06-13, iPhone 14 Plus 후면 카메라 2024-11-01) | `source-apple-service-programs-2026-11-19.txt` | 원문 (10월과 같음) |
+| Apple 성명 전문, AppleCare+ 없어도 교체, 통신사 구입자도 AppleCare에 직접 연락 | `source-9to5mac-2026-10-26-inner-display-statement.txt` | 언론 보도("Apple told 9to5Mac", "9to5Mac reported") |
+| 10-30 Apple Store·AASP 메모: 점검 후 표준 절차로 수리 또는 교체, 리콜 없음, 공개 수리 프로그램 아직 없음, 원인 미공개 | `source-macrumors-2026-10-30-store-memo.txt` | 언론 보도("MacRumors reported") |
+| 내부 화면 7.6인치 | `source-apple-iphone-duo-page-2026-11-19.txt` | 원문 |
+| "should only be serviced by a trained technician", "Don't use iPhone with cracked glass" | `source-iphone-guide-handling-2026-11-19.txt` | 원문 |
+| 수리 준비: 백업, Apple Cash 끄기(Settings > Wallet & Apple Pay), Wallet 카드 삭제, iOS 27 Find My > More > Repair or Trade In > Enable, 영수증(가능하면)·신분증, 돌려받은 기기가 지워져 있을 수 있음 — 문서 날짜 **November 18, 2026**(9-15판에서 '늦거나 일정 변경' 한 줄만 추가) | `source-apple-109519-prepare-service-2026-11-19.txt` | 원문, diff 확인 |
+| 연락: support.apple.com/repair, Apple Support 앱, 1-800-692-7753, Settings > General > AppleCare & Warranty | `source-apple-applecare-2026-11-19.txt` FAQ | 원문 |
+
+- 쓰지 않은 것: 균열 원인(iFixit·부품 업체 추정 보도, Apple 미확인), Self Service Repair 부품 가격(11-17 판매 시작 보도가 있으나 selfservicerepair.com이 컨테이너에 403 → 1차 출처 확인 불가), 현재 배송 예정일(스토어가 동적으로 불러옴), 28개국 출시·Apple Pencil·Apple Intelligence 요금(구매·수리 비용과 무관해 뺌)
+- 계산: 2년 AppleCare+ 연납 399.98 + 내부 화면 99 = 498.98, 월납 479.76 + 99 = 578.76, 외부 화면만 한 번: 플랜 없이 379 vs 연납 2년 + 29 = 428.98, 연납 절약 239.88 − 199.99 = 39.89
 
 확인일: 2026-10-17 (한국 13~15시, 컨테이너에서 `urllib`·Playwright로 직접 받아 텍스트 추출). 직접 실행 검증 없음 → 문서 기반 뉴스 칼럼. 비용 계산은 Apple 공개 가격으로 직접 계산.
 

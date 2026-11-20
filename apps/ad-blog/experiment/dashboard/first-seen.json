@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-19T17:16:09Z",
+ "updatedAt": "2026-11-20T17:16:46Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -63,6 +63,7 @@
    "crawledAt": "2026-10-19T17:01:30Z"
   },
   "convert-iphone-video-to-mp4": {
+   "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-11T18:06:29Z",
    "feedSeenAt": "2026-11-11T18:06:29Z",
    "sitemapSeenAt": "2026-11-11T18:06:29Z",
@@ -72,6 +73,7 @@
    ]
   },
   "convert-publisher-file-to-pdf": {
+   "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-18T17:16:48Z",
    "feedSeenAt": "2026-11-18T17:16:48Z",
    "sitemapSeenAt": "2026-11-18T17:16:48Z",
@@ -110,7 +112,13 @@
    "sitemapSeenAt": "2026-11-07T09:49:23Z",
    "crawledAt": "2026-10-14T19:12:53Z"
   },
-  "gemini-connected-apps": {},
+  "gemini-connected-apps": {
+   "discoveredAt": "2026-11-20T17:16:46Z",
+   "sitemapSeenAt": "2026-11-20T17:16:46Z",
+   "discoveredVia": [
+    "/sitemap.xml"
+   ]
+  },
   "gemini-free-flash-lite": {
    "discoveredAt": "2026-11-04T21:54:53Z",
    "feedSeenAt": "2026-11-06T09:44:48Z",
@@ -196,6 +204,7 @@
    "crawledAt": "2026-10-19T18:39:54Z"
   },
   "microsoft-end-of-support-dates": {
+   "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-18T17:16:48Z",
    "feedSeenAt": "2026-11-18T17:16:48Z",
    "sitemapSeenAt": "2026-11-18T17:16:48Z",
@@ -264,6 +273,7 @@
    "crawledAt": "2026-10-11T15:47:35Z"
   },
   "trim-video-without-losing-quality": {
+   "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-11T18:06:29Z",
    "feedSeenAt": "2026-11-11T18:06:29Z",
    "sitemapSeenAt": "2026-11-11T18:06:29Z",
@@ -345,6 +355,7 @@
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
   "upscale-image-without-losing-quality": {
+   "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-16T18:16:26Z",
    "feedSeenAt": "2026-11-16T18:16:26Z",
    "sitemapSeenAt": "2026-11-16T18:16:26Z",

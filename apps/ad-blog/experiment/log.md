@@ -2,6 +2,164 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-22 · 주간 SEO 점검
+
+점검 시각: 2026-11-22 02:24 KST (일요일 개선 세션이 먼저 하는 점검, 2026-11-18 결정). 기준 `origin/main` 7e8a2dd. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(11-15 ~ 11-21) `main`에 머지된 글·코드 — 새 글 3(`upscale-image-without-losing-quality`·`convert-publisher-file-to-pdf`·허브 `microsoft-end-of-support-dates`), 통합 2(`google-gmail-photos-ads`·`iphone-duo-sold-out`), 수정(`gemini-connected-apps`, 제목 2편 `free-offline-ai-tools`·`transcribe-audio-offline-free` 등), 모바일 긴 링크 줄바꿈 스타일(#378). 데이터: `weekly_checks.py`(link_audit·stale_check·dup_check·extlink·app_versions·source_diff, 모두 종료 코드 0, source_diff 333초) + 같은 세션 `session_report.py` 지표 블록 + 라이브 점검 스크립트(스크래치패드 `audit/tech.py`·`onpage.py`). searchfit-seo 스킬은 이번 세션에 없음 → 저장소 `seo-audit`(기술·On-Page)·`ai-seo`(인용 구조) 체크리스트로 같은 항목을 봄. 우리 규칙과 다른 스킬 조언(FAQ·HowTo 스키마, llms.txt, 답 블록 길이 목표)은 적용하지 않음.
+
+**문제 (심각도별)**
+
+- 치명: 없음
+- 높음
+  - **Gemini 도움말 개정으로 글 10편 사실이 낡음** (source_diff, 세션 101 발견 → 이번 점검에서 범위 확인): Google이 11-16 블로그 [Gemini app updates: New chat history and training controls](https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/)로 **Keep Activity → History 개명, AI 학습을 따로 끄는 'Chat content including text & attachments' 상자, History를 꺼도 새 채팅 약 2개월 보관(72시간에서)**을 발표("in the coming weeks" 순차 배포). 도움말 13278892·Privacy Hub(11-19판)·13695044·13666746·14620100·15146780은 새 이름, 16598469·16598406·17094296·13275745는 아직 옛 이름. **스킬은 이제 설정이 꺼져도 동작**(17094296), 13278892의 Gem 문장 삭제, 임시 채팅도 약 2개월. 영향 글: `/posts/turn-off-gemini-apps-activity`(이번 세션 고침) · `/posts/turn-off-gemini-on-android-phone`(이번 세션 고침, 아래 Assistant 절 포함) · `/posts/google-gmail-photos-ads`(11곳) · `/posts/chrome-autofill-settings`(3) · `/posts/gemini-gems-to-skills`(2, V8) · `/posts/turn-off-ai-features`(2, V9) · `/posts/ios-27-2-siri-ai-memory`·`/posts/siri-history-on-iphone`·`/posts/turn-off-ai-in-firefox`(각 1, 문맥 확인). 같은 diff: 16938321에 **"You can no longer switch to Google Assistant on phones and tablets."** 절이 새로 생김, 14620100 무료 등급 한도 '하루 300' → '4시간마다 80'(`/posts/gemini-free-flash-lite` 관련 여부 확인 필요)
+  - **색인 정체 5주째**: 색인 17/58(29%), 10-20 이후 새 색인 0. 이 회차 `Discovered` 23 · `URL is unknown` 18, 미색인 41편 중 Google이 본 링크가 있는 글 25. 7일 동안 새 크롤링은 이미 색인된 `/posts/compress-image-to-100kb`(11-21 16:21)·`/posts/free-offline-ai-tools`(11-21 15:48 — 허브, 10-14 이후 첫 재크롤링)뿐. sitemap·RSS 다운로드 간격은 약 2일로 짧아짐(`rss.xml` 11-18 → 11-20 22:40, `sitemap.xml` 11-18 → 11-20 03:19). V9 허브 4편(요청 5일째)은 아직 크롤링 기록 없음 → 판정 11-24
+  - **주간 검색 클릭 2 → 2**: 확정 주 5 → 5 → 5 → 4 → 2, 11-16~22 주(미확정) 클릭 2·노출 103. 28일 노출 1,056 → 983. AdSense 조건 ③ 0주
+- 보통
+  - **대표 이미지 없는 글 4편** (본문 첫 줄이 이미지가 아님): `/posts/transcribe-audio-offline-free`(본문 이미지 0) · `/posts/free-offline-ai-tools`(4) · `/posts/turn-off-ai-in-chrome`(4) · `/posts/spotify-family-qr-code-verification`(2). 그동안 V1~V4 판정 대기로 미뤘는데 **V1·V2(11-16)·V3(이번 세션)가 `판단 불가`로 닫혀 3편은 지금 처리 가능**, Spotify는 V4(11-25 이후) 뒤
+  - **`/posts/turn-off-ai-in-chrome` AI Mode 검색어 증가**: 새로 노출된 검색어 10개 중 4개가 이 글의 'AI Mode 끄기'(`turn off ai mode in chrome` 61위, `can i turn off ai mode` 47위, `optguideondevicemodel` 19.7위 등). 글의 AI Mode 절은 Chrome 155 코드 기준 한 문단, 현재 Chrome 158(app_versions). V3가 닫혀 AI Mode 절 보강·Chrome 158 재확인 가능
+  - **앱·브라우저 새 판 11개 앱**(app_versions): Chrome 158(5편)·Edge 158·Firefox 160.0.1·Brave 1.100.58(2편)·GIMP 3.2.8(5편)·LibreOffice 26.8.3(3편)·PDFsam 6.0.11·Sejda 7.9.12(4편)·HandBrake 1.11.2·NAPS2 8.6.1·ExifCleaner 4.8.0
+  - **낡은 미래형 문장**(stale_check 29문장 중 고칠 것): `/posts/chrome-autofill-settings` "Chrome 158 reaches the stable channel on November 17 … we'll recheck"(지남) · `/posts/turn-off-copilot-in-edge` "Edge 158 in the week of November 19"(지남) · `/posts/pixel-watch-safety-signal-ending` "by mid-November"(지남, 콘텐츠 정리 7번 12-12 뒤 전환 때) · `/posts/gemini-gems-to-skills` "by mid-November"(V8 12-03 뒤)
+  - **외부 링크 이동 30**(깨짐 0): 문서 이전 성격 — `/posts/spotify-family-qr-code-verification`의 Spotify 가족 약관 → Paid Subscription Terms(V4 뒤), `/posts/turn-off-gemini-on-android-phone`의 Samsung 측면 버튼 안내 ANS00084203 → ANS10002033, `/posts/image-to-text-offline-free` 캡처 도구 문서(V5 뒤). Apple `guide/…/{ID}`·Microsoft `help/{KB}` 짧은 주소·로그인 리디렉트는 규칙대로 유지
+  - 10위 안 검색어(28일 평균 순위, 공개 검색어 전체): 1~3위 2개·4~10위 17개 = 19개(11-15 점검 비브랜드 23개와 기준이 달라 직접 비교 불가). 새로 든 것 `combine pdf free download` 3위(노출 1, `merge-pdf-files-free`), 빠진 것 `offline ai assistant for pc free download` 9.3 → 23.3위
+  - 같은 문장 반복(dup_check): 2편 이상 반복 문장 10개(11-04 기준 9개), 글별 겹침 최대 `merge-pdf-files-free` 11.5%(11.4%) — 변화 거의 없음
+
+**통과한 항목**
+
+- robots.txt 200(`Allow: /` + sitemap 위치). sitemap.xml `<loc>` **66 = 글 58 + 고정 페이지·홈·카테고리 8**, 저장소 글과 차이 0, `lastmod` 최신 2026-11-18T19:00Z
+- sitemap URL 66개 모두 200 · 자기 참조 canonical · noindex·`X-Robots-Tag` 없음 · h1 1개
+- `vercel.json` 리디렉트 11개 모두 308 한 번에 대상 글 200(`iphone-duo-cracked-screen` → `iphone-duo-sold-out` 포함). `http://` → 308 → `https://`, `www` → 308 → 루트, 끝 슬래시 → 308, HSTS `max-age=63072000`
+- 지난 7일 새 글·수정 글 8편 라이브 HTML: 제목(접미사 뺀) 46~58자·꼬리표 없음, 설명 141~158자, h1 1개, BlogPosting·BreadcrumbList JSON-LD, 글별 OG 이미지, alt 없는 이미지는 관련 글 카드 3개뿐, `<pre>` 0
+- `link_audit.py`: 점검 때 2건(`turn-off-ai-in-chrome` → 허브: V3 판정 대기, `spotify-family-qr-code-verification` → 상시 글: V4 대기) → 이번 세션에 첫 번째를 고쳐 1건. 받는 링크 2개 미만 0, 깨진 링크 0, 모든 클러스터 허브 있음(`phones-subscriptions`는 상시 글 1편이라 허브 불필요)
+- AI 답변 인용(`ai-seo`): 지난 7일 새 글 3편 모두 소제목 첫 문장이 답이고 측정값에 도구·버전·날짜가 붙음(세션 98·99·100 발행 전 점검). 이번 세션 고친 2편도 같은 기준으로 씀
+
+**목표 지표 현재값** (`session_report.py`, 2026-10-24 ~ 11-21)
+
+| 지표 | 현재 (11-22) | 목표 (11-30) | 11-15 점검 대비 |
+| --- | --- | --- | --- |
+| 색인율 | 17/58 (29%) | 80% 이상 | 17/57 (30%) → 17/58 |
+| 28일 노출 | 983 (클릭 15, CTR 1.5%, 평균 26.3위) | 2,000 | 1,218 → 983 |
+| 10위 안 검색어 수 | 19개 (공개 검색어 전체 기준) | 40개 | 23개(비브랜드) → 19개, 기준 다름 |
+| 허브가 있는 클러스터 (상시 글 3편 이상) | 5/5 | 전부 | 4/5 → 5/5 (`microsoft-end-of-support-dates`) |
+| 받는 링크 2개 미만 글 | 0편 | 0편 | 0 → 0 |
+
+**다음 개선 세션 할 일 (우선순위)**
+
+1. **Gemini History 개정 나머지 글** (정확성, V 기록 없음): `google-gmail-photos-ads`(11곳·Personal Intelligence 요구 조건) → `chrome-autofill-settings`(3곳 + 지난 'Chrome 158' 문장) → V9 판정(11-24) 뒤 허브 `turn-off-ai-features`(History·Connected Apps 83 → 90) → `gemini-gems-to-skills`(V8 판정에 표시, 스킬이 설정 꺼져도 동작). 한 세션 2~3편
+2. **V1·V2·V3가 닫힌 글 대표 이미지 + 보강**: `turn-off-ai-in-chrome`(대표 이미지 + Chrome 158 재확인 + AI Mode 절 — 새 검색어가 몰림) 먼저, 이어서 `transcribe-audio-offline-free`(본문 이미지 0)·`free-offline-ai-tools`. 대표 이미지 1장 약 47분이라 세션당 1편
+3. **판정 대기 후속**: V9(11-24) 판정 → 허브 갱신, V4·V5(11-25 이후 `--compare`) → `spotify-family-qr-code-verification` 상시 글 링크·대표 이미지·약관 주소, `image-to-text-offline-free` 캡처 도구 문서 주소. `turn-off-copilot-in-edge` 지난 'Edge 158' 문장은 Edge 158 재확인과 함께
+
+**사용자가 할 일**
+
+- 없음 (색인 요청은 2026-11-05 결정대로 올리지 않음. AdSense 재신청 조건 미충족: 운영 42일·색인율 29%·주간 클릭 증가 0주)
+
+## 2026-11-22 · 세션 102 (정기 실행, 개선 세션): 주간 SEO 점검 + Gemini 'History' 개정 반영 2편(`turn-off-gemini-apps-activity` 전면 갱신·`turn-off-gemini-on-android-phone` Assistant 절) + V3 판단 불가로 닫고 Chrome 글 → 허브 링크
+
+세션 시각: 2026-11-22 02:15 KST(일) → `session_start.py` 판정 개선 세션(주간 SEO 점검 먼저, 이번 주 새 글 2/2편). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-ch0riu` = `origin/main` 7e8a2dd. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-21T17:15:46Z, batch 26건 성공·버전 `versions-after.json`과 일치, DB 문서 739개, 별도 커밋). 의존성이 설치돼 있지 않아 첫 `prepublish_check.py --build`가 lint·test·build FAIL → `pnpm install --frozen-lockfile` 뒤 다시 실행해 통과(설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림). 차트용 matplotlib·Pillow는 시스템 파이썬에 없어(Pillow `_imaging` 오류) `/tmp/charts` 가상환경에 설치.
+
+**지표 (`daily_metrics.py` 회차 2026-11-21T17:15:46Z, 2026-10-24 ~ 2026-11-21, 이전 회차 2026-11-20T17:16:46Z 대비)**
+
+- 노출 1,056 → **983**, 클릭 15 → 15, CTR 1.5%, 평균 순위 26.3 → 26.3 (글별 노출 상위 8: `spotify-family-qr-code-verification` 186·16.5위 / `turn-off-ai-in-chrome` 150·36.8위·클릭 3 / `free-offline-ai-tools` 115·16.8위·클릭 5 / `windows-11-24h2-end-of-support` 83·60.3위 / `image-to-text-offline-free` 79·20.7위·클릭 2 / `merge-pdf-files-free` 60·60.5위 / `iphone-duo-sold-out` 42·7.0위·클릭 1 / `transcribe-audio-offline-free` 39·50.3위·클릭 1. 지운 URL `free-offline-text-to-speech` 52·11.5위 / `convert-heic-to-jpg` 1·1.0위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 → 11-09~15 2 · 11-16~22 2 (미확정, 노출 **103**)
+- sitemap 마지막 다운로드: `rss.xml` 11-18 15:37 → **11-20 22:40**, `sitemap.xml` 11-20 03:19 UTC
+- URL 검사: 색인 17/58 → 17/58, Discovered 28 → **23** · URL is unknown 13 → **18**, 미색인 41편 중 Google이 본 링크가 있는 글 22 → **25**. 가장 최근 크롤링(색인 페이지) 11-21 16:21 UTC (`compress-image-to-100kb`). 이전 회차 뒤 새로 크롤링된 페이지: `free-offline-ai-tools` 11-21 15:48 / `compress-image-to-100kb` 11-21 16:21
+- 허브 (5편, `hub: true`): `best-free-pdf-tools` Discovered(rss.xml·sitemap.xml)·크롤링 기록 없음 / `free-image-converter-photo-tools` Discovered(rss.xml·sitemap.xml)·크롤링 기록 없음 / `free-offline-ai-tools` 색인(sitemap.xml)·**마지막 크롤링 11-21 15:48 UTC** / `microsoft-end-of-support-dates` Discovered(rss.xml·sitemap.xml)·크롤링 기록 없음 / `turn-off-ai-features` Discovered(sitemap.xml)·크롤링 기록 없음
+- 성과 검증 (`traffic-playbook.md` 검증 기록 중 판정 `-`인 행, 기준일 2026-11-22 KST):
+  - V3 `turn-off-ai-in-chrome` (지표 position, 배포 2026-10-21, 판단 시점 2026-11-18) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/turn-off-ai-in-chrome (web, 지표 position)
+
+    - 변경일 2026-10-21, 전 2026-09-23 ~ 2026-10-20, 후 2026-10-22 ~ 2026-11-18 (각 28일, 확정 데이터)
+
+    | 구분 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | 대상 전 | 2 | 94 | 2.1% | 13.4 |
+    | 대상 후 | 3 | 165 | 1.8% | 34.1 |
+    | 대조군 전 | 5 | 163 | 3.1% | 28.4 |
+    | 대조군 후 | 12 | 950 | 1.3% | 25.2 |
+
+    **판정: 보류** — 노출 부족 (전 94 / 후 165, 기준 100회 이상)
+
+    ### 대상 글 검색어 (전, 상위 7)
+
+    | 검색어 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | chrome disable ai | 0 | 1 | 0.0% | 7.0 |
+    | delete chrome on device ai | 0 | 1 | 0.0% | 8.0 |
+    | enable-chrome-ai | 0 | 1 | 0.0% | 86.0 |
+    | google ai gone | 0 | 1 | 0.0% | 3.0 |
+    | google ai settings turn off | 0 | 1 | 0.0% | 97.0 |
+    | optguideondevicemodel disable | 0 | 1 | 0.0% | 3.0 |
+    | turn off ai | 0 | 2 | 0.0% | 57.5 |
+
+    ### 대상 글 검색어 (후, 상위 10)
+
+    | 검색어 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | "aimodesettings" | 0 | 1 | 0.0% | 10.0 |
+    | 157.0.8103.79 | 0 | 1 | 0.0% | 9.0 |
+    | ai off | 0 | 1 | 0.0% | 86.0 |
+    | always show ai mode shortcuts | 0 | 1 | 0.0% | 87.0 |
+    | can i turn off ai mode | 0 | 1 | 0.0% | 47.0 |
+    | chrome settings ai | 0 | 1 | 0.0% | 107.0 |
+    | chrome turn off ai overview | 0 | 1 | 0.0% | 92.0 |
+    | disable ai in chrome | 0 | 1 | 0.0% | 52.0 |
+    | disable ai mode chrome | 0 | 1 | 0.0% | 85.0 |
+    | disable chrome ai | 0 | 1 | 0.0% | 56.0 |
+  - V4 `spotify-family-qr-code-verification` (지표 ctr, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/spotify-family-qr-code-verification (web, 지표 ctr)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-25 이후 다시 실행
+  - V5 `image-to-text-offline-free` (지표 position, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/image-to-text-offline-free (web, 지표 position)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-25 이후 다시 실행
+  - 판단 시점 전: V9 11-24 · V6 11-26 · V8 12-03
+- `link_audit.py --only-problems`: 2건 (상시 글 → 허브 링크 누락 1건: `turn-off-ai-in-chrome` → `turn-off-ai-features`; 뉴스 칼럼 → 상시 글 링크 없음 1건: `spotify-family-qr-code-verification` (phones-subscriptions))
+- **AdSense 재신청 조건**: 운영 42일/92일(2027-01-11) · 색인율 29%(17/58, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-12~10-18 5 → 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4 → 11-09~11-15 2) → 미충족
+
+**해석**
+
+- 노출 1,056 → 983은 28일 창 이동 범위. 11-16~22 주는 미확정 클릭 2·노출 103 → AdSense 조건 ③은 이번 주도 0주일 가능성이 큼
+- **허브 `free-offline-ai-tools`가 10-14 이후 처음 다시 크롤링됨**(11-21 15:48 UTC). 11-17 제목 변경(세션 99) 뒤 첫 크롤링이라 새 제목이 검색 결과에 반영될 수 있음 — 제목 변경은 V 기록 대상이 아니라 판정하지 않고, 다음 회차 검색어 순위만 봄
+- V9 허브 4편(요청 5일째): 크롤링 기록 없음. `best-free-pdf-tools`·`free-image-converter-photo-tools`·`microsoft-end-of-support-dates`가 다시 Discovered(rss.xml·sitemap.xml)로, `turn-off-ai-features`는 Discovered(sitemap.xml). 판정 ③(요청도 무시) 쪽이지만 판단 시점 11-24 전이라 판정하지 않음
+- **V3 판정 → `판단 불가`(구조적)로 닫음**: `--compare` 결과는 `보류`(전 94 / 후 165)지만, 글이 10-11 발행이라 변경 전 28일(09-23~10-20) 중 10일만 있고 전 기간이 `--changed`로 고정돼 다시 실행해도 94가 100에 닿을 수 없음(V1·V2와 같은 구조, traffic-playbook 절차 2). 노하우 4 상태 그대로(가설). 후 기간 평균 순위 13.4 → 34.1 하락은 'AI Mode 끄기' 같은 넓은 검색어가 60~100위로 붙은 영향이 큼(11-15 주간 점검 해석과 같음)
+- V4·V5는 `--compare`가 '판단 시점 전: 11-25 이후' → 다음 개선 세션(11-26 목)
+
+**고른 작업**: 0 콘텐츠 정리 — 남은 7번은 모두 12월 일정 뒤라 처리할 항목 없음. 방금 쓴 주간 점검 우선순위 1(Gemini 개정, 세션 101 '다음 할 일' 1순위)과 V3 판정으로 풀린 link_audit 문제(개선 세션 2번)를 처리
+
+**한 일 (개선 세션, 쓴 스킬: `seo-audit` — 주간 점검 기술·On-Page 항목, 고친 글은 `prepublish_check.py`로 On-Page 확인 / `ai-seo` — 주간 점검 인용 구조, 새 절 첫 문장을 떼어 읽어도 되는 답으로 / `copy-editing` — AI-Tell Check로 콜론 드러내기 2곳·'before 2025' 오류·뜻이 어긋난 목록 머리말 1곳('Training that already happened stays' → 'Reviewed chats stay') 고침. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 주간 점검 우선순위 1 (정확성) | `turn-off-gemini-apps-activity` (URL is unknown) | **Google 11-16 개정 반영 전면 갱신**: 도움말 13개(13278892 3판) + Google 블로그 11-16 글을 Chromium으로 다시 받아(`source_diff.cjs --save` 14개 + 새 출처 3개) 대조. 제목 `How to Turn Off Gemini Apps Activity and What Changes` → **`How to Turn Off Gemini Apps Activity, Now Called History`**(56자, 주 검색어 그대로 앞에. 자동완성 11-21 `turn off gemini history` Google·YouTube), 설명 153자. 경로 **Settings > History**·앱 **Gemini History**, 꺼도 보관 **72시간 → 약 2개월**(임시 채팅도), **새 절 'How to keep your History but stop AI training'**(Chat content 상자: 18세 초과 기본 켜짐·History가 켜져 있어야 켤 수 있음·피드백 예외·검토 3년·오디오 상자 한계), 이름 절(Gemini Apps Activity → Keep Activity → History, 도움말끼리 이름 혼재), 기능 표에서 **스킬 분리(설정 꺼져도 동작, Calendar·Drive 불가)**·Gem 줄 정리(13278892에서 문장 삭제), 삭제 한계에 원격 브라우저·메시지 앱 줄, FAQ 'Chat content 상자를 못 고를 때' 추가, 상황별 추천에 '기록은 두고 학습만 끄기', 연결 글 앱 수 83 → 90, 업데이트 전 계정의 옛 이름 안내(순차 배포). 그림 3장 다시 그림(도움말 캡처 새로 찍음, 옛 파일 2개 지움), `updatedAt` 2026-11-21T18:30Z(RSS 맨 앞·sitemap lastmod) | - (정확성 갱신, 노출 0이라 `--compare` 불가) |
+| 2 | 1번 재확인에서 발견 (정확성) | `turn-off-gemini-on-android-phone` (Discovered) | 16938321에 **"You can no longer switch to Google Assistant on phones and tablets."** 절이 생김(11-05에는 목차 링크만, 절 없음) → 설명(157자)·둘째 문단·'Can you switch back' 절 첫 문장 답 'No, not on a phone or tablet'·11-05 → 11-21 변화 문단, 개인정보 절 Keep Activity → History(꺼도 약 2개월), 추천·FAQ 1줄씩, How we checked 재확인 줄. 도움말 캡처 그림 새로(`gemini-android-help-page-missing-section.webp` → `gemini-android-no-switch-to-assistant.webp`), 상황별 카드 2장 문구. 14554984(Android)·16938321 나머지 단계는 그대로 확인. `updatedAt` 2026-11-21T18:30Z | - (정확성 갱신) |
+| 3 | 개선 세션 2번 (link_audit) | `turn-off-ai-in-chrome` → 허브 `turn-off-ai-features` | V3를 닫아 판정 대기로 미뤘던 허브 링크 1문장 추가(AI Overviews 문단 끝: 허브의 'AI Overviews and AI Mode in Google Search' 절로). `updatedAt` 그대로 | - (역링크 1문장, 기록 대상 아님) |
+
+- 검증: `prepublish_check.py --slug turn-off-gemini-apps-activity --build` FAIL 0 (PASS 70·WARN 5 — 제목 56자(최대 60 안), 제목 시작 'Turn Off Gemini'가 Gmail·Android 글과 같음(제품이 다른 주 검색어 그대로라 유지), 'in the coming weeks'는 날짜 붙은 Google 인용이라 유지, 첫 `next build` SecurityFatalError 재실행 통과, cli.js). lint·test(38파일 309개)·build 통과, 빌드 HTML 제목·설명·BlogPosting/BreadcrumbList·h1 1·og 1200×630(대표 그림 MAD 0.68). `--slug turn-off-gemini-on-android-phone`(빌드 없이) FAIL 0 — WARN은 옛 출처 사본 10개의 `URL:` 머리말(재비교 불가, 기존). `extlink_check.py --slug turn-off-gemini-apps-activity` 깨짐 0(myactivity 로그인 리디렉트만)
+- `link_audit.py --only-problems`: 2건 → **1건**(`spotify-family-qr-code-verification` → 상시 글, V4 판정 뒤)
+
+**알게 된 것**
+
+- **Google 설정 개명은 계정별 순차 배포라 새 이름·옛 이름을 함께 써야 함**: 11-16 블로그는 "start rolling out … in the coming weeks"인데 도움말 13278892·Privacy Hub는 이미 History, Memory·Personal Intelligence·skills·임시 채팅 도움말은 아직 Keep Activity. 글에는 새 경로를 본문 단계로, 옛 이름(Settings & help > Activity·Keep Activity)은 '업데이트 전 계정' 한 문장으로 둠 (writing-guide 정확성에 반영)
+- **도움말 '목차에만 있는 절'은 곧 채워질 수 있음**: 16938321의 'Switch from Gemini to Google Assistant'는 11-05 목차 링크만 → 11-21 한 문장 절. 문서의 빈 곳을 근거로 쓴 문장('링크가 아무 데도 안 감')은 다음 재확인 1순위
+- 언론 보도(Digital Trends 11-17 등)는 '기존 사용자의 새 스위치는 Keep Activity 상태를 이어받는다'고 했지만 Google 블로그·도움말에는 그 문장이 없어 쓰지 않음 (1차 출처 규칙)
+- `turn-off-gemini-on-android-phone` 폴더의 옛 출처 사본은 `URL:` 머리말이라 `source_diff.cjs`가 건너뜀 → 이번 세션은 두 쪽만 `# 원본:` 형식으로 새로 저장. 나머지 8개도 다음 갱신 때 같은 형식으로 다시 받으면 주간 점검에서 자동 비교됨
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 42일·색인율 29%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude(11-26 목 개선 세션): 위 주간 점검 우선순위 1~3 — **Gemini History 나머지**(`google-gmail-photos-ads` → `chrome-autofill-settings` → V9 뒤 허브 `turn-off-ai-features` → `gemini-gems-to-skills`(V8 표시)), **V9 판정(11-24)**, **V4·V5 `--compare`(11-25 이후)**, V1~V3가 닫힌 글 대표 이미지(`turn-off-ai-in-chrome` 먼저 + Chrome 158 재확인 + AI Mode 절)
+- Claude: `gemini-free-flash-lite`가 무료 등급 한도('하루 300' → '4시간마다 80', 14620100)를 다루는지 확인. `turn-off-copilot-in-edge` Edge 158 재확인. Samsung 측면 버튼 안내 새 주소(ANS10002033) 확인 후 교체
+- Claude: Upscayl 측정은 GitHub 릴리스를 받을 수 있는 세션에서만. Aspose PUB 재시도·LibreOffice 26.8.3 확인(세션 100)
+- Claude: **12-08 월간 보안 업데이트 뒤** 허브 '11월 업데이트' 절·`office-2021-end-of-support` 후속. 콘텐츠 정리 7번 12월 일정 뒤(12-01 remove.bg·12-12 Pixel Watch·12-21 Siri 합의·12-22 Arc)
+- Claude: 갱신한 `turn-off-gemini-apps-activity`·`turn-off-gemini-on-android-phone`·`gemini-connected-apps`의 `discoveredAt`·`crawledAt`를 다음 지표 블록에서 확인. H6 첫 판정·H5는 다음 개선 세션, H3 12-15 무렵, Firefox 161(11-24 예정)
+- Claude: 발행 58편 (허브 5개), 상시 글 전환 4편(누적)
+- 대시보드: 세션 시작 때 갱신(회차 2026-11-21T17:15:46Z, `stats` 13 + `history` 13, DB 문서 739개), 별도 커밋. 이번 세션 변경은 다음 회차에 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-19 · 세션 101 (정기 실행, 개선 세션): 콘텐츠 정리 6번 통합(iPhone Duo 칼럼 2편 → 상시 글 `iphone-duo-sold-out`) + `gemini-connected-apps` 11월 재확인 갱신 + Gemini 'Keep Activity → History' 개정 발견
 
 세션 시각: 2026-11-19 02:16 KST(목) → `session_start.py` 판정 개선 세션(이번 주 새 글 2/2편). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-n6xgwx` = `origin/main` 7049bca. 받은 루틴 프롬프트가 routine-prompt.md 2026-11-18 판과 같음 → user-todos '루틴 프롬프트 교체'를 끝난 일로. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-18T17:16:48Z, batch 26건 성공·버전 `versions-after.json`과 일치, 별도 커밋).

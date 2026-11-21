@@ -1,8 +1,9 @@
 ---
 title: Turn Off Gemini on an Android Phone, Shortcut by Shortcut
-description: Turn off Gemini on an Android phone at the power button, Hey Google, the lock screen or all at once. Google's help no longer shows a way back to Assistant.
+description: Turn off Gemini on an Android phone at the power button, Hey Google, the lock screen or all at once. Google's help now says there's no way back to Assistant.
 category: ai-tools
 createdAt: 2026-11-05T16:40:00Z
+updatedAt: 2026-11-21T18:30:00Z
 tags:
   - Gemini
   - Android
@@ -15,9 +16,9 @@ tags:
 
 To turn off Gemini on an Android phone completely, open **Settings > Apps > Default apps > Digital assistant app**, tap **Default digital assistant app** and choose **None**. Google's instructions tie "Hey Google" and the touch shortcuts, such as holding the power button, to the Google app being your default assistant app, so this one change covers all of them. If you still use Gemini and only want it to stop popping up, change the one shortcut that bothers you instead: the power button, "Hey Google" or the lock screen.
 
-Deleting the Gemini app doesn't do this on its own. Google's help page says removing the app doesn't remove Gemini as your default digital assistant. And if you hoped to go back to Google Assistant, that same page still lists a "Switch from Gemini to Google Assistant" section in its contents, but when we opened it on November 5, 2026, the section itself was gone.
+Deleting the Gemini app doesn't do this on its own. Google's help page says removing the app doesn't remove Gemini as your default digital assistant. And if you hoped to go back to Google Assistant, that same page now says it plainly: "You can no longer switch to Google Assistant on phones and tablets."
 
-We don't have an Android phone in our test setup, so every menu name below comes from Google's Gemini, Pixel and Google Play help pages and Samsung's US support page, all opened on November 5, 2026. We rendered Google's main page on the topic in Chromium to check which sections it actually contains. Menu names vary by phone maker, and Google says so on each page.
+We don't have an Android phone in our test setup, so every menu name below comes from Google's Gemini, Pixel and Google Play help pages and Samsung's US support page, all opened on November 5, 2026. We rendered Google's main page on the topic in Chromium to check which sections it actually contains, and opened it and Google's Gemini setup page again on November 21, 2026. Menu names vary by phone maker, and Google says so on each page.
 
 | What you want | Setting | Can you undo it? |
 | --- | --- | --- |
@@ -84,15 +85,15 @@ Google's [lock screen page](https://support.google.com/gemini/answer/14576209?hl
 
 ## Can you switch back to Google Assistant?
 
-On most Android phones, probably not. Google said in March 2025 that the classic Google Assistant would stop being available on most mobile devices, and its current Gemini help no longer explains how to switch back.
+No, not on a phone or tablet. Google's [page on managing the Gemini app](https://support.google.com/gemini/answer/16938321?hl=en) now ends with a section called "Switch from Gemini to Google Assistant" that holds one sentence: "You can no longer switch to Google Assistant on phones and tablets."
 
 Google's [March 14, 2025 announcement](https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile/) said it was "upgrading more users on mobile devices from Google Assistant to Gemini; and later this year, the classic Google Assistant will no longer be accessible on most mobile devices or available for new downloads on mobile app stores." A footnote made one exception: phones that don't meet Gemini's minimum system requirements keep Google Assistant as it is.
 
-![Two screenshots of Google's help page Manage or delete the Gemini app on your Android device: the contents list at the top still links to a Switch from Gemini to Google Assistant section that the page doesn't contain, and the Change or remove your default digital assistant app section offers None and says Google is selected whether you use Google Assistant or Gemini](./images/turn-off-gemini-on-android-phone/gemini-android-help-page-missing-section.webp)
+![Two screenshots of Google's help page Manage or delete the Gemini app on your Android device on November 21, 2026: the Switch from Gemini to Google Assistant section says you can no longer switch to Google Assistant on phones and tablets, and the Change or remove your default digital assistant app section offers None and says Google is selected whether you use Google Assistant or Gemini](./images/turn-off-gemini-on-android-phone/gemini-android-no-switch-to-assistant.webp)
 
-The help page still points to a way back. Its contents list, at the top of Google's [page on managing the Gemini app](https://support.google.com/gemini/answer/16938321?hl=en), includes "Switch from Gemini to Google Assistant." When we loaded the page in Chromium on November 5, 2026, that link led nowhere: the page has sections for the other seven links in the list, but none for this one. What's left are the options in this guide.
+Google added that sentence between November 5 and November 21, 2026. When we loaded the page in Chromium on November 5, its contents list already linked to "Switch from Gemini to Google Assistant," but the page had no section by that name. On November 21, the section was there with only the sentence above. What's left are the options in this guide: **None** or another assistant app as your default, and the shortcut switches.
 
-Google's [Gemini setup page](https://support.google.com/gemini/answer/14554984?hl=en) still describes a screen called **Digital assistants from Google**, reached from the Google app at **Settings > Google Assistant**, or from your phone's **Settings > Apps > Assistant**. Google presents it as the place to switch to Gemini, and the same section talks about "switching back to Gemini," which suggests the choice once ran both ways there. If your phone still has that screen and lists Google Assistant on it, that's where to look. We couldn't check which phones still do.
+Google's [Gemini setup page](https://support.google.com/gemini/answer/14554984?hl=en) still describes a screen called **Digital assistants from Google**, reached from the Google app at **Settings > Google Assistant**, or from your phone's **Settings > Apps > Assistant**. Google presents it as the place to switch to Gemini, and the same section talks about "switching back to Gemini," which suggests the choice once ran both ways there. The page doesn't say whether Google Assistant still appears on that screen, and the managing page's new sentence rules out switching to it on phones and tablets. We couldn't check a phone ourselves.
 
 The switch reaches past the phone. According to the same page, Gemini also replaces Google Assistant on watches, headphones and earbuds paired with the phone, while smart displays, smart speakers, TVs, cars and locked Pixel Tablets keep answering "Hey Google" with Google Assistant.
 
@@ -113,20 +114,20 @@ Gemini inside other Google apps has its own switches, and changing your phone's 
 
 ## Stop Gemini from reading your screen or saving your chats
 
-Two Gemini app settings control what Gemini sees and keeps, separate from how it opens: **Screen context** and **Keep Activity**.
+Two Gemini app settings control what Gemini sees and keeps, separate from how it opens: **Screen context** and **History**.
 
 - **Screen context:** when you open Gemini over another app, its **Ask about screen** button lets it use what's on the screen. Google's setup page says this needs **use text from screen** and **use screenshot** turned on under **Settings > Screen context** in the Gemini app, so turning them off stops it.
-- **Keep Activity:** this setting, reached through **Gemini Apps Activity** in the menu, decides whether Google saves your Gemini chats to your account. Our guide to [turning off Gemini Apps Activity](/posts/turn-off-gemini-apps-activity) lists what stops working and what Google keeps anyway.
+- **History:** this setting, called Keep Activity until Google's November 2026 update, decides whether Google saves your Gemini chats to your account. You reach it through **Gemini History** in the app's menu, or **Gemini Apps Activity** if your account hasn't received the update yet. Even with it off, Google keeps new chats for around two months. Our guide to [turning off Gemini Apps Activity](/posts/turn-off-gemini-apps-activity) lists what stops working and what Google keeps anyway.
 - **Location:** Gemini uses the Google app's location permission. Google's setup page points to **Settings > Location > App location permissions > Google**, where you can turn off **Use precise location** or pick a different access level.
 
 ## Which option should you pick?
 
-![Six cards matching goals to Gemini settings on Android: change the press-and-hold action if Gemini pops up from the button, set the default digital assistant app to None for no assistant at all, turn off Hey Google to stop voice activation, turn off Keep Activity to stop saving chats, pick None before deleting the app, and Google Assistant only if the phone still offers it](./images/turn-off-gemini-on-android-phone/gemini-android-which-setting.webp)
+![Six cards matching goals to Gemini settings on Android: change the press-and-hold action if Gemini pops up from the button, set the default digital assistant app to None for no assistant at all, turn off Hey Google to stop voice activation, turn off History, once called Keep Activity, to stop saving chats, pick None before deleting the app, and no way back to Google Assistant on phones and tablets](./images/turn-off-gemini-on-android-phone/gemini-android-which-setting.webp)
 
 - **Gemini keeps popping up by accident:** change the long press on the power or side button, and Gemini stays one tap away in its app.
 - **You don't want any assistant:** set the default digital assistant app to **None**. It's the only setting that covers every shortcut at once, and it's easy to undo.
 - **You use Gemini, just not out loud:** turn off **Hey Google** and leave everything else.
-- **Your worry is privacy, not the shortcuts:** turn off **Keep Activity** and **Screen context**, and check the lock screen switches.
+- **Your worry is privacy, not the shortcuts:** turn off **History** and **Screen context**, and check the lock screen switches.
 - **You want the app gone:** choose **None** first, then uninstall or disable it.
 
 For AI switches in other apps, from Chrome on your computer to Copilot in Word and Apple Intelligence on iPhone, our [guide to turning off AI in Chrome, Gmail, Word and more](/posts/turn-off-ai-features) shows where each one lives.
@@ -139,11 +140,12 @@ For AI switches in other apps, from Chrome on your computer to Copilot in Word a
 
 ### Does turning off Gemini delete my past chats?
 
-No. None of the shortcut settings delete anything. Past chats live in **Gemini Apps Activity**, where you delete them separately, and chats in Google Messages are deleted in Messages.
+No. None of the shortcut settings delete anything. Past chats live in **Gemini History**, called Gemini Apps Activity before Google's November 2026 update, where you delete them separately, and chats in Google Messages are deleted in Messages.
 
 ## How we checked
 
 - **Google pages** (opened November 5, 2026, saved as text): Gemini Apps Help [Manage or delete the Gemini app on your Android device](https://support.google.com/gemini/answer/16938321?hl=en), [Get started with the Gemini mobile app](https://support.google.com/gemini/answer/14554984?hl=en) (Android version), [How your Gemini mobile app can help when your phone is locked](https://support.google.com/gemini/answer/14576209?hl=en), [Use Gemini in Google Messages](https://support.google.com/gemini/answer/14599070?hl=en), [Use Gemini in Chrome](https://support.google.com/gemini/answer/16283624?hl=en&co=GENIE.Platform%3DAndroid) (Android version); Pixel Phone Help [Turn your Pixel phone on & off](https://support.google.com/pixelphone/answer/7374159?hl=en); Android Help [Delete apps on your Android device](https://support.google.com/android/answer/13627402?hl=en); Google Play Help [Disable apps that came with your Android device](https://support.google.com/googleplay/answer/13627571?hl=en); Google's blog post [The Assistant experience on mobile is upgrading to Gemini](https://blog.google/products-and-platforms/products/gemini/google-assistant-gemini-mobile/) (March 14, 2025)
 - **Samsung page**: [Customize the side button or Bixby button on your Galaxy phone](https://www.samsung.com/us/support/answer/ANS00084203/) (US support, opened November 5, 2026)
-- **The missing section**: we loaded Google's page on managing the Gemini app in Chromium on November 5, 2026 and listed the page's sections. The contents list has eight links; seven match a section on the page, and the one to "Switch from Gemini to Google Assistant" doesn't
+- **The Assistant section**: we loaded Google's page on managing the Gemini app in Chromium on November 5, 2026 and listed the page's sections. The contents list had eight links; seven matched a section on the page, and the one to "Switch from Gemini to Google Assistant" didn't
+- **Recheck** (November 21, 2026): we rendered the managing page and the Android version of the Gemini setup page again. The managing page had added the "Switch from Gemini to Google Assistant" section with its one sentence, and its other steps were unchanged. The setup page's **Digital assistants from Google** steps were also unchanged. Google had also renamed the Keep Activity setting History, so we updated the privacy section and redrew two charts
 - **Not checked**: we don't have an Android phone or a Google account in our test setup, so we didn't see the Gemini app's settings or a Pixel's or Galaxy's menus ourselves. News reports have given a 2026 start date for removing Google Assistant from phones; we couldn't find that date in Google's own pages, so we left it out

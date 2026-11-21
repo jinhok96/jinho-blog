@@ -49,3 +49,17 @@
 - Android Authority 10월 보도(전환 안내 창에서 거절하면 Assistant 유지): 익명 사용자 보고 기반 → 쓰지 않음
 - Gemini 앱·Android 설정 화면: Android 기기·에뮬레이터 없음 → 메뉴 이름은 Google·Samsung 문서 문장으로만, "we tested" 쓰지 않음
 - Default digital assistant를 None으로 했을 때 전원 버튼의 Digital assistant 동작: 문서에 없음 → 추측하지 않음
+
+## 2026-11-22 재확인 (세션 102, 개선 세션)
+
+2026-11-21 17:50~18:00 UTC(한국 11-22), `turn-off-gemini-apps-activity` 갱신 중 Gemini 도움말 16938321 재렌더링에서 새 절을 발견해 이 글도 고침. 이 폴더의 옛 사본은 `URL:` 머리말이라 `source_diff.cjs`가 비교하지 못함 → `../turn-off-gemini-apps-activity/render.cjs`(`# 원본:` 머리말)로 두 쪽을 새로 저장. 정확성 문제라 검증 기록(V) 없이 고침. 검증 유형 그대로.
+
+| 주장 (글에 쓴 것) | 출처 | 원문 위치 |
+| --- | --- | --- |
+| 16938321 끝에 "Switch from Gemini to Google Assistant" 절이 생겼고 내용은 "You can no longer switch to Google Assistant on phones and tablets." 한 문장 (11-05에는 목차 링크만 있고 절 없음) | support.google.com/gemini/answer/16938321 | `source-gemini-16938321-manage-delete-2026-11-22.txt`, 캡처 `screens/help-16938321-switch-2026-11-22.png` |
+| 같은 쪽의 전원 버튼·Hey Google·잠금 화면·기본 어시스턴트(None, "Google" 표시)·앱 삭제 문장 그대로 | 16938321 | 같은 사본(문장 grep: "Use Gemini without unlocking"·"Talk to Gemini hands-free"·"side button"·"doesn't automatically remove Gemini"), 캡처 `screens/help-16938321-default-2026-11-22.png` |
+| 14554984(Android): Digital assistants from Google > Gemini 단계, "switching back to Gemini", "If the Google app is your default Android assist app", 화면 맥락·위치 권한 단계 그대로 | support.google.com/gemini/answer/14554984 (Android) | `source-gemini-14554984-get-started-2026-11-22.txt` |
+| Keep Activity → History 개명, 메뉴 Gemini History(업데이트 전 계정은 Gemini Apps Activity), 꺼도 새 채팅 약 2개월 보관 | 13278892, 13594961, Google 블로그 2026-11-16 | `../turn-off-gemini-apps-activity/source-gemini-13278892-android-2026-11-22.txt`, `source-blog-google-2026-11-16-updated-controls.txt` |
+
+- 바꾼 것: 설명(157자, 'no longer shows a way back' → 'now says there's no way back'), 둘째 문단, 셋째 문단(재확인 날짜), 'Can you switch back' 절(첫 문장 답 'No, not on a phone or tablet' + 새 문장 인용, 11-05 → 11-21 변화, 14554984 문단 끝), 개인정보 절 History, 상황별 추천 1줄, FAQ 1줄, How we checked 재확인 줄, `updatedAt`. 그림: 도움말 캡처 그림을 새 절 기준으로 다시 그림(`gemini-android-help-page-missing-section.webp` 지우고 `gemini-android-no-switch-to-assistant.webp`), 상황별 카드 그림의 History·Assistant 카드 문구. 대표 이미지·단축키 표 그림 그대로
+- 쓰지 않은 것: Samsung 측면 버튼 안내가 새 주소(ANS10002033)로 옮겨진 것(extlink 이동 200) — 내용을 다시 확인하지 않아 링크는 그대로 둠, 다음 갱신 때

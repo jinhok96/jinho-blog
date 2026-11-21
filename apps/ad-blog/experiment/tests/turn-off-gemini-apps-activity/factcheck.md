@@ -82,3 +82,34 @@ slug: `turn-off-gemini-apps-activity`
 
 - 로그인하지 않은 gemini.google.com은 Chromium에서 빈 화면(버튼 'Sign in'·'Google apps'만)이라 실제 버튼 이름은 확인 못 함 → 본문은 "도움말 페이지끼리 이름이 다르다"로만 씀
 - 검증 유형 그대로 (조사형)
+
+## 2026-11-22 재확인 (세션 102, 개선 세션): Keep Activity → History 개정 반영
+
+계기: 세션 101(11-19)이 `source_diff.cjs`로 Privacy Hub 11-17판의 'History' 개명·보관 약 2개월을 발견. 2026-11-21 17:27~17:33 UTC(한국 11-22), 이 글의 Google 도움말 13개(13278892는 Computer·Android·iPhone 3판) + Google 블로그 11-16 글을 `render.cjs`(Chromium, 접힌 단락 펼침)로 다시 받아 비교. 바뀐 쪽은 `source_diff.cjs --slug turn-off-gemini-apps-activity --save`로 `source-*-2026-11-22.txt` 저장(14개), 새 출처 3개(`source-blog-google-2026-11-16-updated-controls.txt`·`source-gemini-15146780-desktop-2026-11-22.txt`·`source-gemini-16836988-2026-11-22.txt`). 정확성 문제라 검증 기록(V) 없이 고침. 검증 유형 그대로 (조사형).
+
+| 주장 (글에 쓴 것) | 출처 | 원문 위치 |
+| --- | --- | --- |
+| Google이 2026-11-16 "New settings let you keep your Gemini chat history, while opting out of generative AI model training", "if you turn your new History setting off, future chats will be saved for around two months", "start rolling out these changes globally in the Gemini app in the coming weeks" | blog.google/innovation-and-ai/products/gemini-app/updated-controls/ (Nov 16, 2026) | `source-blog-google-2026-11-16-updated-controls.txt` |
+| 문서 제목 "Manage & delete your history in Gemini Apps", 컴퓨터 경로 "At the bottom, click Settings > History", "Near the top, click On > Turn off or Turn off and delete history", 18세 이상 기본 켜짐 | 13278892 (Computer) | `source-gemini-13278892-desktop-2026-11-22.txt` |
+| 앱: "At the left, tap Menu > your Profile picture or initial > Gemini History", 휴대폰 브라우저: "At the top, tap Menu > Settings > History" (Android·iPhone 같음) | 13278892 (Android·iPhone) | `source-gemini-13278892-android-2026-11-22.txt`, `-ios-2026-11-22.txt` |
+| 꺼도 "saved with your account for around two months" (이전 판 72 hours) | 13278892, Privacy Hub 13594961 | 위 사본 + `source-gemini-13594961-desktop-2026-11-22.txt` "around 2 months"·"around two months" |
+| 새 체크박스 "Chat content including text & attachments"(단계 문장에서는 "… text & uploads") — 18세 초과 기본 켜짐, "To turn on these settings, you must have History on", 오디오 상자 기본 꺼짐, 앱 경로 Menu > Settings > Data & privacy 아래 History, 웹 Settings > History, 마지막 Turn on/Turn off. 상자를 못 고르면 "you may need to turn History on" | 13278892 (3판) | 위 사본 |
+| Chat content 끔: "Your future chats won't be used to train generative AI models, unless you provide feedback. Future chats will be reviewed and used to improve Google services in other ways…", 검토된 채팅은 끄거나 지워도 최대 3년. 오디오 끔이어도 Chat content가 켜져 있으면 "transcripts of your chats with Gemini Live and attachments" 학습 | 13594961 | 같은 사본 'How can I control whether Google uses my chat content…'·'…audio and Gemini Live…' |
+| 꺼짐·임시 채팅 둘 다 "around two months", 최근 24시간 맥락, 시스템 장애 대비, 피드백 없으면 학습 안 함. 피드백 = 피드백 + 최근 24시간 + 첨부·Connected Apps 데이터, 3년 | 13594961 | 같은 사본 'How long does Google retain my temporary chats…' |
+| "Regardless of your settings, Google uses your chats to respond to you and help protect … including with help from human reviewers" | 13594961 | 같은 사본 'Who has access to my chats…' |
+| 기록을 지워도 원격 브라우저 데이터(로그인 쿠키·화면 캡처)·메시지 앱의 문자는 안 지워짐, 다른 Google 서비스 데이터 그대로 | 13594961 | 같은 사본 'How long we retain your data'·'What does the History setting control?'·데이터 목록 "Remote browser data like cookies…" |
+| History를 켜면 이전에 연결한 앱 접근이 돌아옴, Tasks(원격 브라우저·컴퓨터)는 "only available when History is on" | 13594961 | 같은 사본 |
+| 꺼짐일 때 앱 5개(Device assistance·Gemini Notebook·Messages·Phone·WhatsApp) vs Connected Apps 페이지 Android 4개·웹/iOS/워치 없음 → **Gemini Notebook 불일치 그대로** | 13278892, 13695044 | `source-gemini-13695044-desktop-2026-11-22.txt` |
+| Maps·Flights·Hotels·YouTube 공개 정보는 "History must be on", Google Search는 항상 | 13695044 | 같은 사본 |
+| 최근 채팅 기능은 "History turned on"일 때만 | 13666746 | `source-gemini-13666746-desktop-2026-11-22.txt` |
+| Memory·Personal Intelligence: 아직 "Have Keep Activity on. This feature isn't available when this setting is off." (옛 이름) | 16598469, 16598406 | `source-gemini-16598469-desktop-2026-11-22.txt`, 16598406은 11-08 사본과 같음 |
+| **스킬: "Skills work with Keep Activity off, but features that require it, like Connected Apps, won't be available … can't access Google Workspace services like Google Calendar and Google Drive"** (이전 판: "Have Keep Activity on" 요구 조건) | 17094296 | `source-gemini-17094296-desktop-2026-11-22.txt` |
+| Gem에 Drive 파일: "you need to have History on" / **13278892에서 Gem 문장 3개(Gem 대화 삭제해도 Gem 유지, 꺼도 Gem 저장·Gem 대화 저장 안 됨) 삭제** → 글에서 뺌 | 15146780, 13278892 | `source-gemini-15146780-desktop-2026-11-22.txt` |
+| 임시 채팅 문서는 아직 "won't appear in your Gemini Apps Activity", 단계·제한 그대로 | 13275745 | `source-gemini-13275745-desktop-2026-11-22.txt` |
+| 회사·학교: "History is on by default and can only be turned off by your account's Workspace administrator", 18개월, 3·18·36개월·끄기 | 14620100 | `source-gemini-14620100-2026-11-22.txt` |
+| Android 끄기 방법(Hey Google·전원 버튼·기본 어시스턴트) 그대로. 목록에 "Switch from Gemini to Google Assistant" 항목은 남아 있음 | 16938321 | `source-gemini-16938321-2026-11-22.txt` |
+| Privacy Hub 마지막 갱신 2026-11-19 | 13594961 | "Last updated: November 19, 2026" |
+| 링크 글 `gemini-connected-apps`의 앱 수 90 (83 → 90, 세션 101) | `gemini-connected-apps.mdx` 설명 | - |
+
+- 바꾼 것: 제목 `How to Turn Off Gemini Apps Activity and What Changes` → `How to Turn Off Gemini Apps Activity, Now Called History`(56자, 주 검색어 그대로 앞에. 자동완성 2026-11-21 `turn off gemini history` Google·YouTube, `gemini apps activity` 3곳), 설명(153자), 첫 3문단·요약 표·단계(Settings > History, Gemini History), **새 절 'How to keep your History but stop AI training'**, 이름 절, 삭제 한계(Gem 줄 삭제·원격 브라우저 줄 추가), 기능 표(스킬 분리·Gem 줄 정리), 보관 절(72시간 → 약 2개월, 임시 채팅도), 중간 선택지, FAQ 1개 추가('Chat content 상자'), 상황별 추천, How we checked 2차 재확인. 그림 3장 다시 그림(`charts.py`, 도움말 캡처 `help-13278892-turn-off-history.png` 새로 찍음, 옛 파일 2개 지움), 대표 이미지 그대로(글자 없음)
+- 쓰지 않은 것: 기존 사용자의 새 스위치 초기값(언론은 'Keep Activity 상태를 이어받음'이라 했지만 Google 블로그·도움말에 문장 없음), 계정별 배포 시점, 18세 미만 기본값

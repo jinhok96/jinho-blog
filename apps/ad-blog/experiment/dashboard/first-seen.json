@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-20T17:16:46Z",
+ "updatedAt": "2026-11-21T17:15:46Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {},
@@ -82,7 +82,9 @@
     "/sitemap.xml"
    ]
   },
-  "convert-webp-to-jpg-free": {},
+  "convert-webp-to-jpg-free": {
+   "firstSeenLinkAt": "2026-11-21T16:21:05Z"
+  },
   "customize-right-click-menu-windows-11": {
    "firstSeenLinkAt": "2026-11-01T22:38:55Z",
    "discoveredAt": "2026-11-04T21:54:53Z",
@@ -114,6 +116,7 @@
   },
   "gemini-connected-apps": {
    "discoveredAt": "2026-11-20T17:16:46Z",
+   "feedSeenAt": "2026-11-21T17:15:46Z",
    "sitemapSeenAt": "2026-11-20T17:16:46Z",
    "discoveredVia": [
     "/sitemap.xml"
@@ -241,7 +244,9 @@
   "remove-bg-alternative-free": {
    "firstSeenLinkAt": "2026-10-21T08:37:25Z"
   },
-  "remove-metadata-from-photos": {},
+  "remove-metadata-from-photos": {
+   "firstSeenLinkAt": "2026-11-21T16:21:05Z"
+  },
   "remove-phone-number-from-google-account": {
    "firstSeenLinkAt": "2026-10-28T23:14:36Z",
    "discoveredAt": "2026-11-04T21:54:53Z",

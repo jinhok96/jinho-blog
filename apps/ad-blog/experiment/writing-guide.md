@@ -59,6 +59,7 @@
 - **목록 개수는 스크립트로 머리글·빈 줄을 빼고 셈** (2026-11-15 세션 97): 렌더링 본문 줄 수를 그대로 세면 지역 머리글(Americas 등)이 섞임 — 2026-10-24 글의 'Personal Intelligence 지원 194개국'은 머리글 3줄을 함께 센 값이었고 실제 191곳(통합 때 본문 정정). 개수를 본문에 쓰면 세는 스크립트와 결과를 사실 확인표에 남김
 - **렌더링 본문에 없는 문단은 원문 HTML로 다시 확인** (2026-11-15 세션 97): Google 블로그 2017 Gmail 글의 'Update, October 16, 2026' 문단은 `render.cjs` 본문에서 빠지고 curl 원문 HTML에만 있었음. 접힌 갱신 문단·각주가 렌더링에서 빠질 수 있으므로 '문단이 사라졌다'고 쓰기 전에 원문을 grep. 같은 회사 도움말끼리도 바뀌는 시기가 달라(Gemini 연결 도움말은 웹 메뉴 **Settings**, 같은 날 Gemini Apps Activity 도움말은 **Settings & help**) 경로가 엇갈리면 바뀌지 않는 주소(예: myactivity.google.com/product/gemini)로 안내
 - 버전별 설명서(Apple 사용 설명서 등)는 인용한 쪽이 **최신 OS판에도 있는지** 확인: 버전 없는 주소가 어디로 가는지와 쪽의 버전 선택 목록을 봄. 새 판에서 쪽이 빠지거나(세션 58: Mac "Delete Siri and Dictation history"는 macOS 27판 없음) 개인정보 페이지와 메뉴 이름이 다르면 그 차이를 본문에 밝히고 한 문서만 골라 단정하지 않음
+- **설정 이름이 바뀌면 새 이름을 본문 단계로, 옛 이름은 '업데이트 전 계정' 한 문장으로 함께 씀** (2026-11-22 세션 102): Google이 11-16 블로그에서 Gemini 'Keep Activity'를 'History'로 바꾸며 "rolling out … in the coming weeks"라고 했고, 같은 날 도움말도 History(활동 관리·Privacy Hub)와 Keep Activity(Memory·skills·임시 채팅)가 섞여 있었음. 독자 계정은 어느 쪽일 수도 있으므로 옛 경로를 지우지 말고 짧게 남기고, 배포 문장의 출처를 밝힘. 언론이 전한 세부(예: 기존 설정을 이어받음)는 1차 출처에 없으면 쓰지 않음. 도움말 목차에만 있고 본문이 비어 있던 절(16938321 'Switch from Gemini to Google Assistant')은 2주 뒤 한 문장으로 채워졌음 → 문서의 빈 곳을 근거로 쓴 문장은 다음 재확인에서 먼저 봄
 
 ## 글 유형
 

@@ -1,0 +1,20 @@
+# 가져온 시각: 2026-11-21T17:33:02.368Z
+# 원본: https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/
+Gemini app updates: New chat history and training controls
+https://blog.google/innovation-and-ai/products/gemini-app/updated-controls/
+
+{ "reading_time": "[[read\u002Dtime]] min read" }
+Breadcrumb
+Home
+Innovation & AI
+Products
+Gemini App
+We’re updating controls in the Gemini app.
+
+Nov 16, 2026
+
+We’re giving you more control over when your Gemini chat history is used to train generative AI models. New settings let you keep your Gemini chat history, while opting out of generative AI model training. With this update, you’ll still be able to change how long history is saved and review or delete history manually at any time.
+
+We’re also making a change to help make Gemini safer. As AI systems get smarter, we're continuing to invest in safety and security measures to help protect our users and Gemini. Now, if you turn your new History setting off, future chats will be saved for around two months; they’re used to respond to you, process your feedback, and protect Google, its users, and the public.
+
+We’ll start rolling out these changes globally in the Gemini app in the coming weeks. Learn more here.

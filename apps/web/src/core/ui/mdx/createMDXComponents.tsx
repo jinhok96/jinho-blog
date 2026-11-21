@@ -74,7 +74,7 @@ export function createMDXComponents() {
       <LinkButton
         className={cn(
           `
-            group/a mr-1.5! p-0! underline underline-offset-2 animated-100
+            group/a mr-1.5! inline p-0! wrap-anywhere underline underline-offset-2 animated-100
             hover:text-blue-7
           `,
           className,

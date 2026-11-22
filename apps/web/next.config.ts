@@ -5,6 +5,8 @@ import path from 'path';
 
 import { withRoutes } from '@jinho-blog/nextjs-routes';
 
+import { REMOTE_IMAGE_HOSTS } from './src/core/config/internal/image';
+
 // 모노레포 루트 기준 라이브러리 MDX 디렉토리 (빌드 시 apps/web에서 실행)
 const LIBRARIES_CONTENT_DIR = path.resolve(process.cwd(), '../../content/mdx/libraries');
 
@@ -34,7 +36,7 @@ const nextConfig: NextConfig = {
   },
   images: {
     localPatterns: [{ pathname: '/images/**' }, { pathname: '/icons/**' }, { pathname: '/_static/**' }],
-    remotePatterns: [{ hostname: 'vercel.com' }, { hostname: 'developer.chrome.com' }, { hostname: 'web.dev' }],
+    remotePatterns: REMOTE_IMAGE_HOSTS.map(hostname => ({ hostname })),
     imageSizes: [16, 32, 48, 64, 96, 128, 192, 256, 320, 384, 512],
   },
 

@@ -53,22 +53,37 @@ export interface TranslationResult {
 }
 
 const LINK_URL_REGEX = /(!?\[[^\]]*\])\((https?:\/\/[^)]+)\)/g;
-const URL_PLACEHOLDER_REGEX = /__URL_(\d+)__/g;
+// 앞의 `](`는 마크다운 링크/이미지 문법 안에 있는지 판별용
+const URL_PLACEHOLDER_REGEX = /(\]\()?__URL_(\d+)__/g;
 
-export function extractAndReplaceLinkUrls(markdown: string): { processed: string; urls: string[] } {
+export function extractAndReplaceLinkUrls(markdown: string): {
+  processed: string;
+  urls: string[];
+  imageIndices: Set<number>;
+} {
   const urls: string[] = [];
-  const processed = markdown.replace(LINK_URL_REGEX, (_, bracket, url) => {
+  const imageIndices = new Set<number>();
+  const processed = markdown.replace(LINK_URL_REGEX, (_, bracket: string, url: string) => {
     const index = urls.length;
     urls.push(url);
+    if (bracket.startsWith('!')) imageIndices.add(index);
     return `${bracket}(__URL_${index}__)`;
   });
-  return { processed, urls };
+  return { processed, urls, imageIndices };
 }
 
-export function restoreLinkUrls(translated: string, urls: string[]): string {
-  return translated.replace(URL_PLACEHOLDER_REGEX, (match, indexStr) => {
+/**
+ * 플레이스홀더를 원본 URL로 복원한다.
+ * LLM이 이미지 문법(`![alt](...)`)을 버리고 플레이스홀더만 남긴 경우
+ * 맨 URL이 링크로 렌더링되지 않도록 이미지 문법으로 감싸 복원한다.
+ */
+export function restoreLinkUrls(translated: string, urls: string[], imageIndices: Set<number> = new Set()): string {
+  return translated.replace(URL_PLACEHOLDER_REGEX, (match, linkPrefix: string | undefined, indexStr: string) => {
     const index = parseInt(indexStr, 10);
-    return urls[index] ?? match;
+    const url = urls[index];
+    if (url === undefined) return match;
+    if (linkPrefix) return `${linkPrefix}${url}`;
+    return imageIndices.has(index) ? `![](${url})` : url;
   });
 }
 
@@ -79,7 +94,7 @@ export async function translateWithGemini(
   sourceName: string,
   mode: 'full' | 'summary' = 'full',
 ): Promise<TranslationResult | null> {
-  const { processed, urls } = extractAndReplaceLinkUrls(content);
+  const { processed, urls, imageIndices } = extractAndReplaceLinkUrls(content);
   const prompt =
     mode === 'full'
       ? buildTranslatePrompt(processed, originalTitle, sourceName)
@@ -96,6 +111,6 @@ export async function translateWithGemini(
   return {
     title: titleMatch[1].trim(),
     description: descMatch?.[1].trim() ?? '',
-    body: restoreLinkUrls(bodyMatch[1].trim(), urls),
+    body: restoreLinkUrls(bodyMatch[1].trim(), urls, imageIndices),
   };
 }

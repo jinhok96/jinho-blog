@@ -155,6 +155,11 @@ describe('extractAndReplaceLinkUrls', () => {
     expect(urls).toEqual(['https://example.com/img.webp']);
   });
 
+  it('이미지 링크 인덱스를 imageIndices에 기록', () => {
+    const { imageIndices } = extractAndReplaceLinkUrls('[link](https://a.com) ![img](https://b.com/img.webp)');
+    expect([...imageIndices]).toEqual([1]);
+  });
+
   it('일반 링크와 이미지 링크를 순서대로 인덱싱', () => {
     const input = '[link](https://a.com) ![img](https://b.com/img.webp)';
     const { processed, urls } = extractAndReplaceLinkUrls(input);
@@ -190,6 +195,23 @@ describe('restoreLinkUrls', () => {
   it('인덱스 범위 초과 플레이스홀더는 그대로 유지', () => {
     const urls = ['https://a.com'];
     expect(restoreLinkUrls('[링크](__URL_1__)', urls)).toBe('[링크](__URL_1__)');
+  });
+
+  it('이미지 문법이 빠지고 플레이스홀더만 남으면 이미지 문법으로 복원', () => {
+    const { urls, imageIndices } = extractAndReplaceLinkUrls('![diagram](https://a.com/fig.png)');
+    expect(restoreLinkUrls('__URL_0__\n**FIG 1** 설명', urls, imageIndices)).toBe(
+      '![](https://a.com/fig.png)\n**FIG 1** 설명',
+    );
+  });
+
+  it('이미지 문법이 유지되면 그대로 복원', () => {
+    const { urls, imageIndices } = extractAndReplaceLinkUrls('![diagram](https://a.com/fig.png)');
+    expect(restoreLinkUrls('![다이어그램](__URL_0__)', urls, imageIndices)).toBe('![다이어그램](https://a.com/fig.png)');
+  });
+
+  it('일반 링크 플레이스홀더만 남으면 맨 URL로 복원', () => {
+    const { urls, imageIndices } = extractAndReplaceLinkUrls('[docs](https://a.com/docs)');
+    expect(restoreLinkUrls('참고: __URL_0__', urls, imageIndices)).toBe('참고: https://a.com/docs');
   });
 });
 

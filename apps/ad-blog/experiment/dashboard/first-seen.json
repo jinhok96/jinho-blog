@@ -1,8 +1,10 @@
 {
- "updatedAt": "2026-11-21T17:15:46Z",
+ "updatedAt": "2026-11-22T17:16:13Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
-  "apple-mail-exchange-not-syncing": {},
+  "apple-mail-exchange-not-syncing": {
+   "firstSeenLinkAt": "2026-11-22T00:35:55Z"
+  },
   "apple-siri-settlement-claim": {
    "indexedAt": "2026-10-20",
    "firstCrawlAt": "2026-10-19T22:06:52Z",
@@ -73,10 +75,13 @@
    ]
   },
   "convert-publisher-file-to-pdf": {
+   "indexedAt": "2026-11-22T17:16:13Z",
+   "firstCrawlAt": "2026-11-22T02:34:22Z",
    "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-18T17:16:48Z",
    "feedSeenAt": "2026-11-18T17:16:48Z",
    "sitemapSeenAt": "2026-11-18T17:16:48Z",
+   "crawledAt": "2026-11-22T02:34:22Z",
    "discoveredVia": [
     "/rss.xml",
     "/sitemap.xml"
@@ -207,10 +212,13 @@
    "crawledAt": "2026-10-19T18:39:54Z"
   },
   "microsoft-end-of-support-dates": {
+   "indexedAt": "2026-11-22T17:16:13Z",
+   "firstCrawlAt": "2026-11-22T00:35:55Z",
    "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-18T17:16:48Z",
    "feedSeenAt": "2026-11-18T17:16:48Z",
    "sitemapSeenAt": "2026-11-18T17:16:48Z",
+   "crawledAt": "2026-11-22T00:35:55Z",
    "discoveredVia": [
     "/rss.xml",
     "/sitemap.xml"
@@ -317,11 +325,13 @@
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
   "turn-off-ai-in-windows-11": {
+   "firstSeenLinkAt": "2026-11-22T00:22:11Z",
    "discoveredAt": "2026-11-04T21:54:53Z",
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
   "turn-off-apple-intelligence-iphone": {
+   "firstSeenLinkAt": "2026-11-22T00:22:11Z",
    "discoveredAt": "2026-11-04T21:54:53Z",
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
@@ -333,6 +343,7 @@
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
   "turn-off-copilot-in-word": {
+   "firstSeenLinkAt": "2026-11-22T00:22:11Z",
    "discoveredAt": "2026-11-04T21:54:53Z",
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
@@ -343,7 +354,9 @@
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
-  "turn-off-gemini-in-gmail": {},
+  "turn-off-gemini-in-gmail": {
+   "firstSeenLinkAt": "2026-11-22T00:22:11Z"
+  },
   "turn-off-gemini-on-android-phone": {
    "firstSeenLinkAt": "2026-11-06T08:36:50Z",
    "discoveredAt": "2026-11-06T09:44:48Z",
@@ -373,6 +386,7 @@
    "indexedAt": "2026-10-12",
    "firstCrawlAt": "2026-10-11T21:45:19Z",
    "firstImpressionAt": "2026-10-24",
+   "firstSeenLinkAt": "2026-10-19T18:39:54Z",
    "discoveredAt": "2026-10-11T21:45:19Z",
    "sitemapSeenAt": "2026-11-07T09:49:23Z",
    "crawledAt": "2026-10-11T21:45:19Z"

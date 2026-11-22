@@ -4,6 +4,7 @@ import Image from 'next/image';
 
 import { VIDEO_EXTENSIONS } from '@jinho-blog/shared';
 
+import { isOptimizableImageSrc } from '@/core/config';
 import { LinkButton } from '@/core/ui/button';
 import Callout from '@/core/ui/mdx/Callout';
 import Code from '@/core/ui/mdx/Code';
@@ -245,6 +246,7 @@ export function createMDXComponents() {
           width="1280"
           height="720"
           priority={priority}
+          unoptimized={!isOptimizableImageSrc(src)}
         />
       );
     },

@@ -1,4 +1,5 @@
 export { HEADERS } from './internal/headers';
+export { isOptimizableImageSrc, REMOTE_IMAGE_HOSTS } from './internal/image';
 export { MAIN_CONTENT_ID, PORTAL } from './internal/portal';
 export {
   AUTHOR_FULL_NAME,

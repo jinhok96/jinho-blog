@@ -1,0 +1,151 @@
+# 가져온 시각: 2026-11-22T18:56:14.153Z
+# 원본: https://support.microsoft.com/en-us/Clipchamp/exporting-and-saving-a-video-in-clipchamp
+Exporting and saving a video in Clipchamp | Microsoft Support
+https://support.microsoft.com/en-us/clipchamp/exporting-and-saving-a-video-in-clipchamp
+
+Skip to main content
+Microsoft
+Support
+Search
+Search for help
+Cancel
+Sign in with Microsoft Sign in or create an account.
+Hello, Select a different account.
+You have multiple accounts Choose the account you want to sign in with.
+Exporting and saving a video in Clipchamp
+Applies To
+Get help with Copilot
+What are the steps to select the export button?
+How do I select the video resolution?
+How do I save and share my video?
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+When you've finished working on a project in the Clipchamp video editor, easily export and download your video as an MP4 file to your device. You can also export audio-only files as MP3 (M4A) and share your finished file directly from the exporting page to one of our integrations. 
+
+Personal version
+Work version
+
+In Clipchamp for personal accounts, as you work on a video, editing progress gets saved automatically, and there is No save button you have to click.
+
+When you've finished editing, to obtain a video or audio file of your project, follow the steps below.
+
+Step 1. Click on the export button
+
+To save your video, click on the Export button at the top right corner of the video editor. 
+
+Step 2. Choose a resolution to export
+
+A drop-down window will appear with options that determine the size and quality. Your video will export as an MP4 file in one of the resolutions you choose. Select from:
+
+480p video quality is suitable for drafts.
+720p video quality is suitable for social media videos.
+1080p (HD) video quality is suitable for video streaming platforms and presentations.
+4K (UHD) video quality is the best video resolution for all 4K media files.
+GIF for videos 15 seconds or less.
+For projects that only contain audio, you can also select the audio-only option to obtain an MPEG-4 (.m4a) audio file.
+
+If you've used a premium feature and are on the free plan, you'll see diamond-shaped symbols next to the exporting options. If you're not ready to upgrade, remove the premium features before exporting the video. To export your video including the premium features in it, select the switch to a new plan button. This will guide you through the steps to upgrade.
+
+Step 3. Save and share your video
+
+Once you have selected a video resolution, your video will automatically start exporting and you'll see a progress bar with a percentage indicator.
+
+Here, you can also share your video using one of our sharing integrations. Select from the following options
+
+Save to OneDrive
+Save to Google Drive
+Upload to YouTube
+Send to TikTok
+Save to Dropbox
+Share to LinkedIn (only works for company accounts, NOT personal accounts)
+
+If your video is slow to export or doesn't export, see this help article for tips on how to improve the export speed. Note that higher resolutions or longer projects will take longer to export.
+
+After your video has finished exporting, it will automatically save to your computer, usually to your Downloads folder.
+
+For more information, see: Sharing a video or editing project.
+
+Export format
+
+Your exported video is an MPEG 4 (.mp4) file with the file name you chose. The frame rate is 30fps. 
+
+In addition, for Teams meeting recordings, Clipchamp auto-adjusts its output settings so that they are optimized for the frame rate and bit rate that Teams has in place for meeting recordings.
+
+Audio files get exported in the M4A format.
+
+Troubleshooting
+
+If you encounter errors when exporting your video, see this article for a number of troubleshooting tips that may help to export successfully.
+
+Still need help?
+
+Contact Clipchamp Support.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl; const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie(); if(window.onGPCLoaded) { window.onGPCLoaded(); } function checkThirdPartyAdsOptOutCookie() { try { const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut'; var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName); return cookieValue != 1; } catch { return true; } } function getCookie(cookieName) { var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)'); return (cookieValue) ? cookieValue[2] : ''; }
+(function () { function getCookie(name) { var cookies = document.cookie.split('; '); for (var i = 0; i < cookies.length; i++) { var kvp = cookies[i].split('='); if (kvp[0] === name) { return decodeURIComponent(kvp[1]); } } return null; } if (typeof window.oneDS === 'object') { window.analytics = new window.oneDS.ApplicationInsights(); var config = { instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432", disableCookiesUsage: true, cookieCfg: { ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"] }, channelConfiguration: { eventsLimitInMem: 50 }, propertyConfiguration: { gpcDataSharingOptIn: false, callback: { userConsentDetails: () => { const consentDetails = { Required: true, Analytics: false, Advertising: false, SocialMedia: false }; return consentDetails; } } }, webAnalyticsConfiguration: { autoCapture: { pageView: true, onLoad: true, onUnload: true, click: true, scroll: true, resize: true, lineage: false, jsError: true, msTags: true }, autoPopulateParentIdAndParentName: true, isLoggedIn: false, urlCollectHash: true, urlCollectQuery: true, useDefaultContentName: true, useShortNameForContentBlob: false } }; var isFirstTime = true; var jsLocalId = null; //Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser window.analytics.addTelemetryInitializer(function (e) { if (isFirstTime) { var context = window.analytics.getPropertyManager().getPropertiesContext(); var ext = e.ext = e.ext || {}; if (jsLocalId) { // Set the localId so it's set automatically for all future events context.user.setLocalId(jsLocalId); var userExt = ext.user = ext.user || {}; userExt.localId = jsLocalId; } isFirstTime = false; } }); window.analytics.initialize(config, []); } })();
+$(function () { var signInUrl = "/en-us/authentication/signin"; var signOutUrl = "/en-us/authentication/signout"; var switchAccountUrl = "/en-us/authentication/switchaccount"; var shellOptions = { meControlOptions: { apiGeneration: 'GEN2', authProviderConfig: { type: 'webAadWithMsaProxy', appSignInUrl: signInUrl, appSignInToUrl: signInUrl, appSignOutUrl: signOutUrl, appSwitchUrl: switchAccountUrl, appSwitchToUrl: switchAccountUrl, aad: { signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False', signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True', forgetUrl: 'https://login.microsoftonline.com:443/forgetuser', rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc', }, }, } }; if (window.msCommonShell) { window.msCommonShell.load(shellOptions); } else { window.onShellReadyToLoad = function () { window.onShellReadyToLoad = null; window.msCommonShell.load(shellOptions); }; } });
+$(async function () { await window.manageSilentSignIn.handleAllSilentSignIn(); })
+if (window.UcsCreative === undefined) { window.UcsCreative = {}; }
+window.silentSigninProgress = true; var silentSigninStartLog = { actionType: 'A', content: { contentId: 'silentSignInStarted' } }; window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) { occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"}); }
+window.addEventListener('load', function () { if (typeof window.initPromotionLogger !== 'undefined') { window.initPromotionLogger(); } });

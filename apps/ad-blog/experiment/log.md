@@ -2,6 +2,73 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-23 · 세션 103 (정기 실행, 일반 세션): 영상을 화질 그대로 회전하기 — 같은 '옆으로 누운' 시험 영상을 무료 도구 5개·7가지 설정으로 돌려 프레임 대조 + 브라우저 3곳 재생
+
+세션 시각: 2026-11-23 02:15 KST(월) → `session_start.py` 판정 일반 세션(이번 주 새 글 0/2편, 뉴스 칼럼 대체 가능). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-uk6dxx` = `origin/main` 42aaca1. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-22T17:16:13Z, batch 26건 성공·버전 `versions-after.json`과 일치, DB 문서 752개, 별도 커밋). 대표 이미지 엔진 준비는 `session_start.py`가 백그라운드로 끝냄. 의존성이 없어 `pnpm install --frozen-lockfile` 뒤 점검(설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림). 차트용 `/tmp/charts` 가상환경(matplotlib·Pillow·numpy).
+
+**지표 (`daily_metrics.py` 회차 2026-11-22T17:16:13Z, 2026-10-25 ~ 2026-11-22, 이전 회차 2026-11-21T17:15:46Z 대비)**
+
+- 노출 983 → **856**, 클릭 15 → **13**, CTR 1.5%, 평균 순위 26.3 → **27.7** (글별 노출 상위 8: `turn-off-ai-in-chrome` 150·37.6위·클릭 2 / `free-offline-ai-tools` 121·18.0위·클릭 5 / `spotify-family-qr-code-verification` 90·26.8위 / `windows-11-24h2-end-of-support` 82·60.8위 / `image-to-text-offline-free` 70·20.1위·클릭 2 / `merge-pdf-files-free` 58·60.0위 / `iphone-duo-sold-out` 38·6.7위·클릭 1 / `gemini-gems-to-skills` 26·9.2위. 지운 URL `free-offline-text-to-speech` 48·11.5위 / `convert-heic-to-jpg` 1·1.0위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 → 11-09~15 2 · 11-16~22 2 (미확정, 노출 **125**)
+- sitemap 마지막 다운로드: `rss.xml` 11-20 22:40, `sitemap.xml` 11-20 03:19 → **11-22 01:11** UTC
+- URL 검사: 색인 17/58 → **18/58**, Crawled - currently not indexed 0 → **1** · Discovered 23 → 23 · URL is unknown 18 → **16**, 미색인 40편 중 Google이 본 링크가 있는 글 25 → **34**. 가장 최근 크롤링(색인 페이지) 11-22 03:40 UTC (`jpg-to-pdf-free`). 이전 회차 뒤 새로 크롤링된 페이지: `/` 11-21 18:04 / `/categories/software` 11-21 19:12 / `windows-10-esu-extended` 11-21 20:22 (Crawled - currently not indexed) / `/categories/ai-tools` 11-22 00:22 / `microsoft-end-of-support-dates` 11-22 00:35 / `convert-publisher-file-to-pdf` 11-22 02:34 / `jpg-to-pdf-free` 11-22 03:40
+- 허브 (5편, `hub: true`): `best-free-pdf-tools` Discovered → **URL is unknown**·크롤링 기록 없음 / `free-image-converter-photo-tools` Discovered(rss.xml·sitemap.xml)·크롤링 기록 없음 / `free-offline-ai-tools` 색인(sitemap.xml)·마지막 크롤링 11-21 15:48 UTC / `microsoft-end-of-support-dates` Discovered → **색인**(rss.xml·sitemap.xml)·**마지막 크롤링 11-22 00:35 UTC** / `turn-off-ai-features` Discovered(sitemap.xml)·크롤링 기록 없음
+- 성과 검증 (`traffic-playbook.md` 검증 기록 중 판정 `-`인 행, 기준일 2026-11-23 KST):
+  - V4 `spotify-family-qr-code-verification` (지표 ctr, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/spotify-family-qr-code-verification (web, 지표 ctr)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-25 이후 다시 실행
+  - V5 `image-to-text-offline-free` (지표 position, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/image-to-text-offline-free (web, 지표 position)
+
+**해석**
+
+- 28일 노출 983 → 856·클릭 15 → 13은 창 이동(10-24·10-25 하루치 빠짐) 범위. 11-16~22 주는 미확정 클릭 2·노출 125 → AdSense 조건 ③은 이번 주도 0주일 가능성이 큼
+- **크롤링이 다시 늘었음**: 이전 회차 뒤 7개 페이지가 새로 크롤링됨(홈·카테고리 2·글 4). **`microsoft-end-of-support-dates`(V9 허브)가 11-22 00:35 크롤링 뒤 색인** → 색인 17 → 18/58. `windows-10-esu-extended`는 크롤링됐지만 `Crawled - currently not indexed`(처음 나온 상태). 미색인 글 중 Google이 본 링크가 있는 글 25 → 34. V9 판정은 11-24(판단 시점 전이라 판정하지 않음 — 허브 4편 중 1편만 색인, 나머지 3편은 크롤링 기록 없음)
+- V4·V5 `--compare`는 '11-25 이후' → 다음 개선 세션(11-26 목)
+
+**주제 선정 근거**
+
+- 우선순위 1·2 공백 후보 재확인: AI Overviews(google.com 결과 화면 확인 불가)·Galaxy AI(대형 매체)·Dia·Acrobat AI·Edge/Brave 모바일·Improve Siri & Dictation(독자 앱 실행 불가)·HDR→SDR(수요 0)·VLC 소리(기존 글과 겹침) → 그대로 미통과
+- `demand_check.py discover`(11-15~11-22): ① Google 11-19 'ICYMI: Transfer your history from other AI apps into Gemini' — 기능은 3월 출시(PCWorld), 상위 결과에 Tom's Guide·PCWorld·AOL 등 대형 매체, 계정이 없어 직접 검증 불가 → backlog `ai-settings` 후보로만(도움말 16868299: 가져온 채팅도 Activity에 저장·AI 학습에 쓰임 → 11-16 'Chat content' 상자와 엮는 개인정보 각도) ② Edge 11-19 Aion Instruct(온디바이스 모델, 설정에서 끄면 모델 삭제) — 자동완성 `microsoft edge on device ai` Google 1곳뿐 → 수요 약함 ③ 커스텀 GPT 12-11 종료(backlog 1·8번) — help.openai.com이 Chromium에서도 Cloudflare 확인 화면 → 1차 출처 확인 불가로 제외(우회 안 함). 마감형 영향 뉴스 새 후보 없음 → 칼럼 대신 상시 글
+- `photo-video` 새 후보: `rotate video without losing quality` 자동완성 **Google·Bing·YouTube 3곳 같은 문구**(하위 16개), `rotate video and save` 17개·`rotate video permanently` 14개, Trends 0.0(롱테일). WebSearch 상위: CapCut·Cloudinary·InVideo·Dreamina(도구), FFmpeg 메일링 리스트·Mux(개발자), wildandfreetools·videoconverterfactory·VideoProc(블로그·업체) → 무료 GUI·웹 도구 결과를 잰 글 없음, 컨테이너에서 GUI 앱·웹 도구 직접 실행 가능
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `rotate-video-without-losing-quality` | `software` | `photo-video` 상시 글 (검색형) | Tears of Steel(CC BY 3.0) 30초 H.264 MP4에 회전 표시 −90°를 붙여 '휴대폰이 방향을 잘못 기록한 영상'을 만들고(날짜·위치 태그 포함), **LosslessCut 3.70.0·VLC 3.0.20(2설정)·HandBrake 1.7.2·ezgif(2설정)·123apps**로 회전 → 원본 프레임과 framemd5·짝 맞춤 PSNR·프레임 수·소리·태그 대조 + **VLC·Chromium·Firefox 160.0.1에서 재생**. LosslessCut만 720/720 동일(크기 26,264,855 B 그대로, 회전 표시만 지움, 날짜·위치 유지, 회전이 굳은 두 번째 파일에도 표시만 붙이고 프레임 그대로). **VLC '영구 회전'은 Effects만 켜면 저장 파일이 그대로 누움, 프로필 변환 필터까지 켜면 VLC에서는 바로 서지만 Chromium 좌우 반전·Firefox 누움**(VLC가 회전 + 좌우 반전 행렬 [0 1; 1 0]을 씀, 마지막 2프레임 빠짐, 소리 MP2, Effects 설정이 이후 모든 재생에 남음). ezgif 'Copy original'(기본값)도 다시 인코딩(−53.57%, 42.2 dB, 날짜·위치 삭제). 123apps 회전 페이지는 편집기, 무료 내보내기 720p 기본·1080p 다이아몬드 표시 → 1732×720·30fps(180프레임 반복)·34.0 dB. HandBrake 42.3 dB·날짜 재설정 |
+
+- 주 검색어: `rotate video without losing quality`. 제목 `Rotate a Video Without Losing Quality or Re-Encoding It`(55자, 'Trim Video Without Losing Quality in a Free Online Tool'·'How to Upscale an Image Without Losing Quality'와 시작·끝이 겹치지 않게), 설명 158자, slug 주 검색어
+- 1차 출처(Chromium, `# 가져온 시각`·`# 원본`): LosslessCut 공식 사이트(무료·GitHub·스토어 유료 이유·지원 OS·'Edit metadata and rotation')·ezgif 회전 페이지(200MB·Copy original 설명)·123apps 회전 페이지('Save' 안내 — 실제 화면은 Export)·Apple 104968(Photos에서 Edit로 회전)·QuickTime Player 가이드(View > Show Clips → Edit 메뉴 회전)·Microsoft Photos 편집(영상은 Trim만, 'Edit in Clipchamp')·Clipchamp 회전(점 3개 → 90° 버튼)·Clipchamp 내보내기(MP4, 30fps)·Google Photos 10729480(Crop → Rotate → Save) → `tests/rotate-video-without-losing-quality/source-*.txt`
+- 쓰지 않은 것: 내장 앱(iPhone·Mac·Windows·Android)의 화질 결과(실행 불가 → 문서 단계만, '시험하지 못함' 명시), 123apps 1080p(Export 뒤 15분 안에 내려받기 없음 → 시험 안 함으로), Clideo(지난 시험에서 내려받기 403), HEVC .mov(이전 글 링크로)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1478106537, 43.0분: 옆으로 누운 휴대폰 → 둥근 화살표 → 선 휴대폰 + 필름 릴, 페리윙클·코럴·골든 옐로, 아이소메트릭. 두 휴대폰이 경첩처럼 붙어 보이지만 주제·화풍이 맞아 그대로) + 본문 5장(결과 표, LosslessCut 회전 버튼 전후, VLC 설정 2곳, VLC 결과 한 파일을 세 플레이어에서, ezgif·123apps 화면. `charts.py`, 라이트 모드 토큰)
+- 내부 링크: 새 글 → 허브 `free-image-converter-photo-tools`, `trim-video-without-losing-quality`, `convert-iphone-video-to-mp4`(2곳), `compress-video-for-discord-email`, `remove-metadata-from-photos`. 역링크 3곳(모두 1문장·표 1행, `updatedAt` 그대로): **색인된 `convert-heic-to-jpg-free`** 'Rotation' 절, 허브 요약 표 1행(V9 판정 전이라 절 추가·`updatedAt` 없이), `convert-iphone-video-to-mp4` 회전 표시 문단. clusters.md `photo-video` 상시 글 10편, backlog 행 '발행'
+- 점검: `prepublish_check.py --slug rotate-video-without-losing-quality --build` **FAIL 0** (PASS 72·WARN 1 — 첫 `next build` SecurityFatalError 재실행 통과, 세션 100과 같은 동작). lint·test·build 통과, 빌드 HTML 제목·설명·BlogPosting/BreadcrumbList·h1 1·og 이미지가 대표 그림에서 나옴. 저장소 `seo-audit` 스킬 On-Page(제목 55자·주 검색어 앞·H1 일치, 설명 158자, 첫 100단어에 주 검색어, H2 10개 설명형, alt 6장 설명형·WebP·의미 있는 파일 이름, 새 글 받는 링크 3곳, 같은 주제 글 없음) → 지적 없음. AI 문체 점검으로 콜론 드러내기 2곳 고침, em dash 0. `extlink_check.py --slug`: 고유 URL 9개 중 이동 2(Microsoft 짧은 주소 → 최종 주소로 교체) → 이동 0. `keyword_trends.py`: 0.0. searchfit-seo 스킬은 이번 세션에 없음
+- `link_audit.py --only-problems`: 1건 그대로(`spotify-family-qr-code-verification` → 상시 글, V4 판정 뒤). 새 글 문제 없음
+
+**알게 된 것**
+
+- **'영구 회전' 결과는 한 플레이어로 확인하면 안 됨**: VLC 3.0.20이 저장한 파일은 VLC에서만 정상이고 Chromium은 좌우 반전, Firefox 160.0.1은 옆으로 누운 채 보였음. 원인은 VLC가 쓴 회전 표시 행렬이 순수 회전이 아니라 전치(회전 + 반전)라 플레이어마다 다르게 해석 → 회전·방향 관련 결과는 ffprobe 행렬 값 + 브라우저 2곳 + 앱 1곳에서 재생 확인 (writing-guide 비교·측정 글에 추가)
+- **도구의 설정 이름을 믿지 말고 결과 파일로 확인**: ezgif 'Copy original'은 이름과 달리 원래 코덱(H.264)으로 다시 인코딩(크기 −53.57%, 'MP4' 선택과 483 B 차이). 같은 ezgif의 Video cutter 'Copy original'(세션 91)은 실제 복사였음 → 같은 사이트·같은 이름도 도구마다 다름
+- **LosslessCut 회전 버튼 숫자는 저장 프레임 기준 절대 각도**(0° → 90° → 180° → 270°, 시계 방향, 명령 `-display_rotation:v:0`에 반시계 값으로 들어감) → 글에는 '미리보기가 설 때까지 누름'으로 씀
+- 프레임 수·시간 표시가 고르지 않은 출력(VLC 718프레임, 123apps 30fps)은 n번끼리 비교하면 PSNR이 크게 틀림(VLC 13~33 dB) → 출력 프레임마다 원본 짝을 찾는 `align_psnr.py`로 다시 재면 VLC 저장 프레임 자체는 42.0 dB(다른 재인코딩과 같은 수준)
+- GitHub 릴리스 내려받기가 이번 세션에는 됨(세션 101은 403) — LosslessCut 3.70.0. github.com HTML 페이지는 여전히 막혀 최신판은 릴리스 주소 404 여부로 확인(3.71.0 404)
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 43일·색인율 31%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude(11-26 목 개선 세션): **V9 판정(11-24)** — `microsoft-end-of-support-dates`만 11-22 크롤링·색인, 나머지 허브 3편 확인 → 판정 뒤 허브 갱신(`free-image-converter-photo-tools`에 새 글 절 추가·`updatedAt`, `turn-off-ai-features` Gemini History). **V4·V5 `--compare`(11-25 이후)**. 주간 점검(11-22) 우선순위 1~3 이어서: Gemini History 나머지(`google-gmail-photos-ads` → `chrome-autofill-settings`), V1~V3가 닫힌 글 대표 이미지(`turn-off-ai-in-chrome` 먼저 + Chrome 158 재확인 + AI Mode 절)
+- Claude: 새 글 후속 — VLC 새 판(3.0.21 이후)에서 회전 행렬이 고쳐지는지, HEVC .mov 회전(LosslessCut·HandBrake) 재확인. `windows-10-esu-extended` 'Crawled - currently not indexed' 추적
+- Claude: backlog `ai-settings` 새 후보 'ChatGPT·Claude 기록을 Gemini로 옮기기'(도움말 16868299 — 가져온 채팅이 Activity에 저장·학습에 쓰임, 11-16 'Chat content' 상자와의 관계) — 직접 검증 불가라 1차 출처로 차별점(개인정보·History 개정)을 세울 수 있을 때만
+- Claude: **12-08 월간 보안 업데이트 뒤** 허브 '11월 업데이트' 절·`office-2021-end-of-support` 후속. 콘텐츠 정리 7번 12월 일정 뒤(12-01 remove.bg·12-12 Pixel Watch·12-21 Siri 합의·12-22 Arc)
+- Claude: 발행 59편 (허브 5개), 이번 주 새 글 1/2편 (수요일 일반 세션 1편 남음)
+- 대시보드: 세션 시작 때 갱신(회차 2026-11-22T17:16:13Z, `stats` 13 + `history` 13, DB 문서 752개), 별도 커밋. 이번 세션 변경(새 글·log.md 제목)은 다음 회차에 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-22 · 주간 SEO 점검
 
 점검 시각: 2026-11-22 02:24 KST (일요일 개선 세션이 먼저 하는 점검, 2026-11-18 결정). 기준 `origin/main` 7e8a2dd. 대상: 배포 사이트 `https://tool-proof.com`과 지난 7일(11-15 ~ 11-21) `main`에 머지된 글·코드 — 새 글 3(`upscale-image-without-losing-quality`·`convert-publisher-file-to-pdf`·허브 `microsoft-end-of-support-dates`), 통합 2(`google-gmail-photos-ads`·`iphone-duo-sold-out`), 수정(`gemini-connected-apps`, 제목 2편 `free-offline-ai-tools`·`transcribe-audio-offline-free` 등), 모바일 긴 링크 줄바꿈 스타일(#378). 데이터: `weekly_checks.py`(link_audit·stale_check·dup_check·extlink·app_versions·source_diff, 모두 종료 코드 0, source_diff 333초) + 같은 세션 `session_report.py` 지표 블록 + 라이브 점검 스크립트(스크래치패드 `audit/tech.py`·`onpage.py`). searchfit-seo 스킬은 이번 세션에 없음 → 저장소 `seo-audit`(기술·On-Page)·`ai-seo`(인용 구조) 체크리스트로 같은 항목을 봄. 우리 규칙과 다른 스킬 조언(FAQ·HowTo 스키마, llms.txt, 답 블록 길이 목표)은 적용하지 않음.

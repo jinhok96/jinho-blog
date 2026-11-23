@@ -1,0 +1,124 @@
+# 가져온 시각: 2026-11-22T18:44:14.185Z
+# 원본: https://ezgif.com/rotate-video
+Rotate & Flip Video Online (MP4, WebM, MOV)
+https://ezgif.com/rotate-video
+
+window.innerWidth>800&&googletag.cmd.push(function(){googletag.display("hdr")})
+GIF maker
+Video tools
+Audio
+Transform
+Optimize
+Effects
+Split
+Add text
+WebP
+APNG
+AVIF
+JXL
+SVG
+PDF
+Resize
+Crop
+Rotate
+Reverse
+Loop
+Cut
+Filters
+Speed
+Watermark
+Merge
+Mixer
+Freeze
+Interpolate
+AR
+to JPG
+to PNG
+Images to Video
+Screenshot
+Video Converters »
+window.innerWidth>800&&googletag.cmd.push(function(){googletag.display("ezgif_com_300x600_1")})
+window.innerWidth>800&&googletag.cmd.push(function(){googletag.display("ezgif_com_300x600_2")})
+Rotate Video online
+
+Choose, paste, or drag and drop a file here:
+
+
+Or enter direct video URL:
+
+
+Supported file types: MP4, WebM, AVI, MOV, MKV, FLV, WMV, MPEG, M4V, 3GP and others...
+Max file size: 200MB. All uploaded files are automatically deleted 1 hour after upload.
+
+ 
+Local processing
+When local processing is enabled, files are processed in browser without uploading to a server. Some features may be limited. If you experience issues, leave this unchecked.
+
+  flip (vertical)
+  flip (horizontal)
+  rotate 90 degrees
+  rotate 180 degrees
+  rotate 270 degrees (90 counter-clockwise)
+
+Output format and encoding:
+ 
+Copy original
+MP4 (h264/aac)
+WebM (VP8/Vorbis)
+
+window.innerWidth>800&&googletag.cmd.push(function(){googletag.display("mid_res")})
+window.innerWidth<801&&googletag.cmd.push(function(){googletag.display("mad")})
+Free Online Video Rotation and Flip Tool
+
+Rotate or flip video files online without installing any software. Fix videos recorded in the wrong orientation by rotating 90°, 180°, or 270° (90° counter-clockwise), or mirror them horizontally or vertically with a single click. Supports MP4, WebM, MOV, AVI, MKV, WMV, FLV, and many other video formats, up to 200MB in size.
+
+Upload a file from your device or paste a URL, choose rotation or flip options, and click the Rotate video! button. The tool outputs a new, permanently rotated video file - no watermarks, no registration required. You can choose to copy the original encoding for fastest processing, or re-encode as MP4 (h264/aac) or WebM (VP8/Vorbis) for better compatibility.
+
+Common use cases include correcting smartphone videos that play sideways on desktop, flipping tutorial screen recordings for mirrored display, rotating videos filmed in portrait mode to landscape (or vice versa), and preparing clips for social media platforms that display content differently. The rotation is applied to every frame of the video, producing a clean, permanent result.
+
+Search
+Sitemap
+Help / FAQ
+About and contacts
+Privacy and Cookies
+Terms of Service
+Join r/ezgif on Reddit!
+Auto
+Dark
+Light
+Video tools
+MP4 video to GIF converter
+GIF to MP4 converter
+Rotate video
+Online video cutter
+Video reverser
+Video crop tool
+Online MP4 converter
+MP4 to MP3 converter
+Popular file converters
+PDF to PNG converter
+WebP to JPG converter
+WebP to PNG converter
+AVIF to JPG converter
+PNG to JPG converter
+HEIC converters
+RAW converters
+BMP converters
+Popular tools
+WebP to GIF converter
+Video to JPG converter
+Remove background
+Video speed changer
+JPG to GIF converter
+GIF to JPG converter
+PNG to SVG converter
+PDF to GIF converter
+Other tools
+Image to Data URI
+MNG tools
+ICO and ANI tools
+QR and Barcode generators
+Aseprite tools
+Metadata viewer
+Lottie & TGS tools
+All ezgif.com converters

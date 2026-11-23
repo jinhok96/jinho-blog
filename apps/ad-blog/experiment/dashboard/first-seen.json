@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-22T17:16:13Z",
+ "updatedAt": "2026-11-23T17:29:42Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {
@@ -77,6 +77,7 @@
   "convert-publisher-file-to-pdf": {
    "indexedAt": "2026-11-22T17:16:13Z",
    "firstCrawlAt": "2026-11-22T02:34:22Z",
+   "firstImpressionAt": "2026-11-22",
    "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-18T17:16:48Z",
    "feedSeenAt": "2026-11-18T17:16:48Z",
@@ -214,6 +215,7 @@
   "microsoft-end-of-support-dates": {
    "indexedAt": "2026-11-22T17:16:13Z",
    "firstCrawlAt": "2026-11-22T00:35:55Z",
+   "firstImpressionAt": "2026-11-22",
    "firstSeenLinkAt": "2026-11-19T21:36:24Z",
    "discoveredAt": "2026-11-18T17:16:48Z",
    "feedSeenAt": "2026-11-18T17:16:48Z",
@@ -261,6 +263,7 @@
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
+  "rotate-video-without-losing-quality": {},
   "siri-history-on-iphone": {
    "firstSeenLinkAt": "2026-10-28T23:14:36Z",
    "discoveredAt": "2026-11-04T21:54:53Z",

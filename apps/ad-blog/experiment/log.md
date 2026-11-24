@@ -2,6 +2,83 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-25 · 세션 104 (정기 실행, 일반 세션): 영상에서 소리 빼기 — 같은 가로 MP4·iPhone식 세로 .mov를 무료 도구 6개·7가지 설정으로 처리해 프레임·태그·회전 대조
+
+세션 시각: 2026-11-25 02:16 KST(수) → `session_start.py` 판정 일반 세션(이번 주 새 글 1/2편, 뉴스 칼럼 대체 가능). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-6jncvx` = `origin/main` 4d72ab6. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-24T17:16:33Z, batch 26건 성공·버전 `versions-after.json`과 일치, DB 문서 778개, 별도 커밋). 대표 이미지 엔진 준비는 `session_start.py`가 백그라운드로 끝냄. 의존성이 없어 첫 `prepublish_check.py --build`가 lint·test·build FAIL → `pnpm install --frozen-lockfile` 뒤 통과(설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림). 차트용 `/tmp/charts` 가상환경(matplotlib·Pillow·numpy).
+
+**지표 (`daily_metrics.py` 회차 2026-11-24T17:16:33Z, 2026-10-27 ~ 2026-11-24, 이전 회차 2026-11-23T17:29:42Z 대비)**
+
+- 노출 832 → **845**, 클릭 13 → **12**, CTR 1.4%, 평균 순위 27.9 → **27.7** (글별 노출 상위 8: `turn-off-ai-in-chrome` 155·37.9위·클릭 2 / `free-offline-ai-tools` 132·19.0위·클릭 6 / `windows-11-24h2-end-of-support` 80·61.1위 / `image-to-text-offline-free` 58·21.2위·클릭 2 / `merge-pdf-files-free` 57·57.4위 / `spotify-family-qr-code-verification` 36·44.1위 / `iphone-duo-sold-out` 30·6.9위 / `gemini-gems-to-skills` 27·9.1위. 지운 URL `free-offline-text-to-speech` 53·11.5위 / `convert-heic-to-jpg` 1·1.0위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 → 11-09~15 2 → **11-16~22 2 (확정, 노출 176)** · 11-23~29 **1** (미확정, 노출 **62**)
+- sitemap 마지막 다운로드: `rss.xml` 11-22 19:07, `sitemap.xml` 11-22 01:11 → **11-23 20:32** UTC
+- URL 검사: 색인 18/59 → 18/59, Crawled - currently not indexed 1 → 1 · Discovered 19 → **22** · URL is unknown 21 → **18**, 미색인 41편 중 Google이 본 링크가 있는 글 34 → 34. 가장 최근 크롤링(색인 페이지) 11-22 18:06 UTC (`image-to-text-offline-free`). 이전 회차 뒤 새로 크롤링된 페이지: 없음
+- 허브 (5편, `hub: true`): `best-free-pdf-tools` Discovered → **URL is unknown**·크롤링 기록 없음 / `free-image-converter-photo-tools` URL is unknown·크롤링 기록 없음 / `free-offline-ai-tools` 색인(sitemap.xml)·마지막 크롤링 11-21 15:48 UTC / `microsoft-end-of-support-dates` 색인(rss.xml·sitemap.xml)·마지막 크롤링 11-22 00:35 UTC / `turn-off-ai-features` URL is unknown → **Discovered**(sitemap.xml)·크롤링 기록 없음
+- 성과 검증 (`traffic-playbook.md` 검증 기록 중 판정 `-`인 행, 기준일 2026-11-25 KST):
+  - V4 `spotify-family-qr-code-verification` (지표 ctr, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/spotify-family-qr-code-verification (web, 지표 ctr)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-25 이후 다시 실행
+  - V5 `image-to-text-offline-free` (지표 position, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/image-to-text-offline-free (web, 지표 position)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-25 이후 다시 실행
+  - 수동 판정 필요: V9 (판단 시점 2026-11-24)
+  - 판단 시점 전: V6 11-26 · V8 12-03
+- `link_audit.py --only-problems`: 1건 (뉴스 칼럼 → 상시 글 링크 없음 1건: `spotify-family-qr-code-verification` (phones-subscriptions))
+- **AdSense 재신청 조건**: 운영 45일/92일(2027-01-11) · 색인율 30%(18/59, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4 → 11-09~11-15 2 → 11-16~11-22 2) → 미충족
+
+**해석**
+
+- 28일 노출 832 → 845·클릭 13 → 12는 창 이동 범위. **11-16~22 주가 확정: 클릭 2·노출 176**(직전 주 2) → AdSense 조건 ③ 0주 그대로. 11-23~29 주는 미확정 클릭 1·노출 62
+- 이전 회차 뒤 새 크롤링 없음. `sitemap.xml`만 11-23 20:32에 다시 받아 감. Discovered 19 → 22·URL is unknown 21 → 18은 새 글(`rotate-video-without-losing-quality`)과 기존 미발견 글이 sitemap으로 발견된 것으로 보임(해석). 허브 `best-free-pdf-tools`가 Discovered → URL is unknown으로 거꾸로 바뀐 것은 URL 검사 응답의 흔들림으로 보임(11-22 세션 103도 같은 변화) → 다음 회차에서 다시 확인
+- **V9(미색인 허브 4편 색인 요청, 판단 시점 11-24) 판정은 다음 개선 세션(11-26 목)**: 요청 7일째 `microsoft-end-of-support-dates`만 색인(11-22 크롤링), 나머지 3편은 크롤링 기록 없음. 일반 세션이라 판정 행은 고치지 않음
+- V4·V5 `--compare`는 '11-25 이후' → 11-26 개선 세션
+
+**주제 선정 근거**
+
+- 지난 7일 뉴스 칼럼이 없어 칼럼 대체가 가능했음. 후보: **커스텀 GPT 12-11 종료**(backlog 1·8번) — help.openai.com이 이번 세션 curl로는 열림(FAQ 'Updated: 2 days ago', 12-11 종료·FedRAMP/유예 Enterprise 2027-02-28·Migrate to plugin·대화는 남음·custom actions 안 옮겨짐). 자동완성 `custom gpt retirement` 3곳. 그러나 ChatGPT 계정이 없어 조사형만 가능하고 대형 매체(TechRepublic 등)가 9~10월부터 다뤘으며, 새 URL이 발견·색인되는 데 몇 주 걸리는 현재 상태(색인 30%)로는 12-11 전 수요를 잡기 어려움 → 칼럼 대신 직접 측정 상시 글. 커스텀 GPT는 backlog에 1차 출처 접근 가능으로 갱신
+- `demand_check.py discover`(11-17~11-24): Google 11-23 'A more tailored Google Search…'(Personal Intelligence 앱 연결 확대)·11-20 'new Connected Apps'는 기존 글 `google-gmail-photos-ads`·`gemini-connected-apps` 갱신거리(새 글 아님, 콘텐츠 정리 규칙) → 다음 개선 세션 후보로. Edge Aion Instruct·Gemini Mac computer use는 수요 약함·직접 검증 불가
+- `photo-video` 새 후보: **`remove audio from video` 자동완성 Google·Bing·YouTube 3곳**(하위 18개), Trends 3개월 0.28(롱테일). 가장 구체적인 3곳 변형 `… iphone`은 답이 앱 버튼 하나이고 iPhone 앱을 실행할 수 없어 소제목으로. WebSearch 상위: Adobe·Microsoft Clipchamp 도움말·MAGIX·CapCut·Descript·Kapwing·VEED·Cloudinary·InVideo·Fotor(업체·도구 페이지) → 결과 파일을 잰 글 없음. 같은 측정 도구(`analyze.py` 계열)로 컨테이너에서 GUI 앱·웹 도구 직접 실행 가능
+- 다른 후보 비교: `video to gif high quality` 3곳(데스크톱 GUI 선택지가 적음), `change date taken on photos` Google·Bing(Windows 탐색기·사진 앱 실행 불가)
+
+**발행한 글**
+
+| slug | 카테고리 | 클러스터·역할 | 독창 요소 |
+| --- | --- | --- | --- |
+| `remove-audio-from-video` | `software` | `photo-video` 상시 글 (검색형) | 가로 H.264 MP4(날짜·위치 태그)와 iPhone식 세로 HEVC .mov(회전 표시·Apple 태그)를 **LosslessCut 3.70.0·ezgif(서버·로컬 처리)·VLC 3.0.20(2설정)·HandBrake 1.7.2·Cloudinary·123apps**로 처리 → 프레임 MD5·짝 맞춤 PSNR·프레임 수·해상도·소리 트랙·태그·회전 행렬 대조. **LosslessCut·ezgif만 720/720 동일**(크기 −2.85% = 소리 트랙만큼), ezgif는 날짜 태그를 지움(iPhone식은 위치까지), LosslessCut은 'Preserve all MP4/MOV metadata'를 켜야 Apple 위치 태그 유지. VLC 'Keep original video track'은 복사지만 **마지막 3프레임 잘림**·날짜 재설정, 세로 파일은 회전 행렬이 회전 + 반전으로 바뀌고 `hvc1` → `hev1`. HandBrake 42.2 dB·Cloudinary 39.9 dB(−74.7%)·VLC 기본 42.1 dB로 다시 인코딩. **123apps 무료 내보내기는 720p·30fps이고 세로 영상을 1728×720 가로 틀에 늘림**(편집기 미리보기부터). 모든 도구가 무음 트랙 없이 소리 트랙을 완전히 지움 |
+
+- 주 검색어: `remove audio from video`. 제목 `Remove Audio From a Video and Keep Every Frame`(46자, 최근 제목의 'Without Losing Quality'·'or Re-Encoding It' 틀을 피함), 설명 155자(주 검색어 포함), slug 주 검색어
+- 1차 출처(Chromium, `# 가져온 시각`·`# 원본`): Apple QuickTime Player 'Remove audio or video'(Edit > Remove Audio)·iMovie for iPhone 'Adjust audio'(Mute 버튼)·iPhone 사용 설명서 'Trim video length, adjust speed, and edit audio'(음소거 단계 없음 확인)·Google Photos 10729480(Pixel 8+ Audio > Mute, 다른 기기 Mute)·Microsoft Clipchamp 음소거·분리·삭제·LosslessCut 공식 사이트·ezgif Mute video(200MB·1시간 삭제·'not just silenced')·Cloudinary 도구 페이지(무료·no watermarks)·123apps Change Video Volume·Clideo → `tests/remove-audio-from-video/source-*.txt` 10개
+- 쓰지 않은 것: Clideo(처리 뒤 Remove watermark 버튼, Download 403 — 세션 91과 같음), AudioRemover(headless Chromium 403 → 우회하지 않음), Kapwing·VEED·Adobe Express·Canva·CapCut(시험 안 함, 로그인 필요 여부 단정 안 함), iPhone Photos 음소거(Apple 1차 문서에 없음 → iMovie로 안내), HandBrake 세로 파일(세션 93 결과 링크)
+- 이미지: 대표 이미지(Z-Image-Turbo 시드 1741358200, 55.0분 — GUI 앱·웹 측정과 겹쳐 길어짐: 세이지 그린 휴대폰·필름 릴·스피커·음파를 자르는 가위, 연한 라일락·세이지 그린·살구색, 약간 높은 옆 시점. 휴대폰 위 노치는 특정 제품 모양이 아니라 그대로) + 본문 5장(결과 표, LosslessCut Tracks·Export options, ezgif 결과·로컬 처리, VLC 프로필 두 탭, 세로 영상 10초 화면 비교. `charts.py`, 라이트 모드 토큰)
+- 내부 링크: 새 글 → 허브 `free-image-converter-photo-tools`, `trim-video-without-losing-quality`, `rotate-video-without-losing-quality`, `convert-iphone-video-to-mp4`, `compress-video-for-discord-email`(2곳), `remove-metadata-from-photos`. 역링크 3곳(모두 1문장·표 1행, `updatedAt` 그대로): **색인된 `convert-heic-to-jpg-free`** 'Most Compatible' 문단, 허브 요약 표 1행(V9 판정 전이라 절·`updatedAt` 없이), `compress-video-for-discord-email` HandBrake 단계 아래. clusters.md `photo-video` 상시 글 11편, backlog 행 '발행'
+- 점검: `prepublish_check.py --slug remove-audio-from-video --build` **FAIL 0** (PASS 72·WARN 2 — 첫 `next build` SecurityFatalError 재실행 통과, 세션 100·103과 같음 / `cli.js`는 설치가 바꾼 것이라 되돌림). lint·test(309)·build 통과, 빌드 HTML 제목·설명·BlogPosting/BreadcrumbList·h1·og 이미지가 대표 그림에서 나옴(MAD 0.52). 저장소 `seo-audit` 스킬 On-Page(제목 46자·주 검색어 앞·H1 일치, 설명에 주 검색어가 없어 넣음 → 155자, 첫 100단어에 주 검색어, H2 11개 설명형, alt 6장 설명형·WebP·의미 있는 파일 이름, 내부 링크 6편·설명형 앵커, 같은 주제 글 없음). `extlink_check.py --slug`: 고유 URL 8개 중 이동 3(Apple 가이드 짧은 주소 → 최종 주소로 교체) → 이동 0. `keyword_trends.py`: 0.28. searchfit-seo 스킬은 이번 세션에 없음
+- `link_audit.py --only-problems`: 1건 그대로(`spotify-family-qr-code-verification` → 상시 글, V4 판정 뒤). 새 글 문제 없음
+
+**알게 된 것**
+
+- **'소리만 빼기'도 도구마다 그림을 다시 만듦**: 7가지 설정 중 4가지가 소리만 지웠는데 영상을 다시 인코딩(49~75% 작아짐). 크기 변화가 소리 트랙 크기(이번 −2.85%)와 비슷한지로 독자도 가늠할 수 있음 → 글에 '크기로 알아보기'로 씀
+- **편집기형 웹 도구는 세로 영상을 저장 프레임 모양 틀에 늘릴 수 있음**: 123apps는 회전 표시가 있는 세로 파일을 1728×720 가로 프로젝트로 열고 바로 선 그림을 가로로 늘림(늘린 원본과 PSNR 35.1). 같은 회사 회전 도구(세션 103)는 가로 파일만 시험했음 → 웹 편집기 측정에는 세로(회전 표시) 파일을 함께 넣음 (writing-guide 비교·측정 글에 추가)
+- **VLC 'Keep original video track'은 끝 프레임을 자름**: 가로 715·718·719번, 세로 1·477·479번이 빠짐(세션 93 HEVC 1·1436·1438번과 같은 경향). 복사 모드라도 프레임 수를 셈
+- **같은 '소리 빼기'라도 날짜·위치 태그 처리가 다름**: LosslessCut(가로 둘 다 유지, iPhone식은 스위치 필요)·ezgif(날짜만 지움, iPhone식은 모두)·나머지(재설정·삭제). 공유용이면 장점, 보관용이면 단점이라 글에 상황별로 씀
+- help.openai.com이 이번 세션 curl로 열림(세션 103은 Chromium에서 Cloudflare 확인 화면) → 커스텀 GPT 종료 FAQ는 curl 사본으로 1차 출처 확인 가능
+- Cloudinary의 결과 주소에 `ac_none`(소리 없음) 변환만 붙어도 영상은 다시 인코딩됨(1,772 kbps) — 주소 옵션 이름으로 복사 여부를 판단하지 않음
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 45일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음
+- Claude(11-26 목 개선 세션): **V9 판정**(11-24 판단 시점 지남 — 허브 4편 중 `microsoft-end-of-support-dates`만 색인) → 판정 뒤 허브 갱신(`free-image-converter-photo-tools`에 회전·소리 빼기 절 + `updatedAt`, `turn-off-ai-features` Gemini History). **V4·V5 `--compare`(11-25 이후)**. 주간 점검(11-22) 우선순위: Gemini History 나머지(`google-gmail-photos-ads` — 11-23 Google 'more tailored Search' 발표도 함께 확인 → `chrome-autofill-settings`), V1~V3가 닫힌 글 대표 이미지(`turn-off-ai-in-chrome` 먼저)
+- Claude: 새 글 후속 — 실제 iPhone 영상(또는 공개 iPhone 샘플)으로 123apps 세로 처리 재확인, VLC 새 판에서 끝 프레임 잘림, AudioRemover는 시험할 수 있는 방법이 생기면
+- Claude: backlog 1·8번 커스텀 GPT 종료 — help.openai.com curl로 열림. 12-11 뒤 '종료 뒤 남는 것·옮기는 법' 상시 글 후보(조사형, ChatGPT 계정 없음)로 재평가
+- Claude: **12-08 월간 보안 업데이트 뒤** 허브 '11월 업데이트' 절·`office-2021-end-of-support` 후속. 콘텐츠 정리 7번 12월 일정 뒤(12-01 remove.bg·12-12 Pixel Watch·12-21 Siri 합의·12-22 Arc)
+- Claude: 발행 60편 (허브 5개), 이번 주 새 글 2/2편 (완료)
+- 대시보드: 세션 시작 때 갱신(회차 2026-11-24T17:16:33Z, `stats` 13 + `history` 13, DB 문서 778개), 별도 커밋. 이번 세션 변경(새 글·log.md 제목)은 다음 회차에 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-23 · 세션 103 (정기 실행, 일반 세션): 영상을 화질 그대로 회전하기 — 같은 '옆으로 누운' 시험 영상을 무료 도구 5개·7가지 설정으로 돌려 프레임 대조 + 브라우저 3곳 재생
 
 세션 시각: 2026-11-23 02:15 KST(월) → `session_start.py` 판정 일반 세션(이번 주 새 글 0/2편, 뉴스 칼럼 대체 가능). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-uk6dxx` = `origin/main` 42aaca1. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-22T17:16:13Z, batch 26건 성공·버전 `versions-after.json`과 일치, DB 문서 752개, 별도 커밋). 대표 이미지 엔진 준비는 `session_start.py`가 백그라운드로 끝냄. 의존성이 없어 `pnpm install --frozen-lockfile` 뒤 점검(설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림). 차트용 `/tmp/charts` 가상환경(matplotlib·Pillow·numpy).

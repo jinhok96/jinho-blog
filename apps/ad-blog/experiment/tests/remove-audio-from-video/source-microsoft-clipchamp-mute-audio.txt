@@ -1,0 +1,122 @@
+# 가져온 시각: 2026-11-24T18:11:54.050Z
+# 원본: https://support.microsoft.com/en-us/clipchamp/how-to-mute-separate-and-delete-audio-from-video
+How to mute, separate, and delete audio from video | Microsoft Support
+https://support.microsoft.com/en-us/clipchamp/how-to-mute-separate-and-delete-audio-from-video
+
+Skip to main content
+Microsoft
+Support
+Search
+Search for help
+Cancel
+Sign in with Microsoft Sign in or create an account.
+Hello, Select a different account.
+You have multiple accounts Choose the account you want to sign in with.
+How to mute, separate, and delete audio from video
+Applies To
+Get help with Copilot
+What's the best way to delete audio from a video?
+Tell me about adjust the speed of a video with audio.
+Guide me through audio from a video in clipchamp.
+document.getElementById('copilotgrowth-banner-dismiss-button').addEventListener('click', function () { document.getElementById('copilotBanner').style.display = 'none'; document.cookie = 'copilotBannerDismissed=true; path=/'; });
+
+Note
+
+The tutorial steps in this article are for Clipchamp for personal accounts. The same principles apply to Clipchamp for work and school.
+
+In the Clipchamp video editor, you can mute the sound of a video or detach the audio from a video into a separate clip so it can be deleted, copied or moved elsewhere independently of the video.
+
+How to mute the audio in a video
+Click on your video on the timeline so it's highlighted.
+If the video clip contains sound, you'll see a speaker symbol at the left side of the clip on the timeline.
+To mute the video, click on the speaker symbol. This will automatically mute, and the symbol will change to a speaker with a cross next to it. The selected clip's audio will not be heard in the export. Other unmuted clips or audio tracks will still be audible.
+You can also use the audio tab on the property panel to mute a video by turning down the volume. To unmute the clip, simply click the speaker symbol again.
+
+How to detach the audio from a video
+Select the video on the timeline so it's highlighted.
+Click on the audio tab on the property panel.
+Click on the detach audio button.
+The video audio will appear as a separate clip in a new row on the timeline. The detached audio file will also automatically download to your computer and appear below your video on the timeline.
+Now you can edit your audio and video clips separately, including deleting, speeding up or down, and trimming one or the other before exporting your video.
+How to re-attach audio and video assets
+To re-attach the audio to the video, click the undo button at the top left of the stage.
+Delete the audio and video assets from the timeline by clicking on the delete button.
+Next, drag and drop your original video from the media tab onto the timeline.
+
+How to delete audio from a video
+Click on the audio asset on the timeline so it's highlighted.
+Click on the delete key on your keyboard.
+If the audio is part of a video on the timeline, follow the steps above to detach the audio from a video.
+Once detached, click on the audio asset on the timeline then click the delete button. This will remove it from the timeline. The selected clip's audio will not be heard in the export. Other unmuted clips or audio tracks will still be audible.
+Still need help?
+
+Contact Clipchamp Support.
+
+Was this information helpful?
+Yes
+No
+What's new
+Surface Laptop Ultra
+Surface Pro
+Surface Laptop
+Surface RTX Spark Dev Box
+Explore Copilot
+Explore Microsoft products
+Windows 11 apps
+Microsoft Store
+Account profile
+Download Center
+Microsoft Store support
+Returns
+Order tracking
+Certified Refurbished
+Why buy from Microsoft Store
+Flexible Payments
+Education
+Microsoft in education
+Devices for education
+Microsoft Teams for Education
+Microsoft 365 Education
+How to buy for your school
+Educator training and development
+Deals for students and parents
+AI for education
+Business
+Microsoft AI
+Microsoft Security
+Dynamics 365
+Microsoft 365
+Microsoft Power Platform
+Microsoft Teams
+Microsoft Copilot
+Small Business
+Developer & IT
+Azure
+Microsoft Developer
+Microsoft Learn
+Support for AI marketplace apps
+Microsoft Tech Community
+Microsoft Marketplace
+Software companies
+Visual Studio
+Company
+Careers
+About Microsoft
+Company news
+Privacy at Microsoft
+Investors
+Diversity and inclusion
+Accessibility
+Sustainability
+English (United States)
+Your Privacy Choices
+Consumer Health Privacy
+Sitemap Contact Microsoft Privacy Terms of use Trademarks Safety & eco Recycling About our ads © Microsoft 2026
+const globalPrivacyControlEnabled = navigator.globalPrivacyControl; const GPC_DataSharingOptIn = (globalPrivacyControlEnabled) ? false : checkThirdPartyAdsOptOutCookie(); if(window.onGPCLoaded) { window.onGPCLoaded(); } function checkThirdPartyAdsOptOutCookie() { try { const ThirdPartyAdsOptOutCookieName = '3PAdsOptOut'; var cookieValue = getCookie(ThirdPartyAdsOptOutCookieName); return cookieValue != 1; } catch { return true; } } function getCookie(cookieName) { var cookieValue = document.cookie.match('(^|;)\\s*' + cookieName + '\\s*=\\s*([^;]+)'); return (cookieValue) ? cookieValue[2] : ''; }
+(function () { function getCookie(name) { var cookies = document.cookie.split('; '); for (var i = 0; i < cookies.length; i++) { var kvp = cookies[i].split('='); if (kvp[0] === name) { return decodeURIComponent(kvp[1]); } } return null; } if (typeof window.oneDS === 'object') { window.analytics = new window.oneDS.ApplicationInsights(); var config = { instrumentationKey: "ac04587c8d6b439297eee84d88c95e8b-e1b6c3bf-fa11-485c-aebc-a825e1f68c8f-7432", disableCookiesUsage: true, cookieCfg: { ignoreCookies: ["MicrosoftApplicationsTelemetryDeviceId", "MSFPC"] }, channelConfiguration: { eventsLimitInMem: 50 }, propertyConfiguration: { gpcDataSharingOptIn: false, callback: { userConsentDetails: () => { const consentDetails = { Required: true, Analytics: false, Advertising: false, SocialMedia: false }; return consentDetails; } } }, webAnalyticsConfiguration: { autoCapture: { pageView: true, onLoad: true, onUnload: true, click: true, scroll: true, resize: true, lineage: false, jsError: true, msTags: true }, autoPopulateParentIdAndParentName: true, isLoggedIn: false, urlCollectHash: true, urlCollectQuery: true, useDefaultContentName: true, useShortNameForContentBlob: false } }; var isFirstTime = true; var jsLocalId = null; //Telemetry initializers are used to modify the contents of collected telemetry before being sent from the user's browser window.analytics.addTelemetryInitializer(function (e) { if (isFirstTime) { var context = window.analytics.getPropertyManager().getPropertiesContext(); var ext = e.ext = e.ext || {}; if (jsLocalId) { // Set the localId so it's set automatically for all future events context.user.setLocalId(jsLocalId); var userExt = ext.user = ext.user || {}; userExt.localId = jsLocalId; } isFirstTime = false; } }); window.analytics.initialize(config, []); } })();
+$(function () { var signInUrl = "/en-us/authentication/signin"; var signOutUrl = "/en-us/authentication/signout"; var switchAccountUrl = "/en-us/authentication/switchaccount"; var shellOptions = { meControlOptions: { apiGeneration: 'GEN2', authProviderConfig: { type: 'webAadWithMsaProxy', appSignInUrl: signInUrl, appSignInToUrl: signInUrl, appSignOutUrl: signOutUrl, appSwitchUrl: switchAccountUrl, appSwitchToUrl: switchAccountUrl, aad: { signOutUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=False', signOutAndForgetUrl: 'https://login.microsoftonline.com:443/uxlogout?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc\u0026shouldforgetuser=True', forgetUrl: 'https://login.microsoftonline.com:443/forgetuser', rememberedAccountsUrl: 'https://login.microsoftonline.com:443/savedusers?appid=ee272b19-4411-433f-8f28-5c13cb6fd407\u0026wreply=https%3A%2F%2Fsupport.microsoft.com%2Fsignin-oidc', }, }, } }; window.smcMeControlOptions = shellOptions.meControlOptions; if (window.msCommonShell) { window.msCommonShell.load(shellOptions); } else { window.onShellReadyToLoad = function () { window.onShellReadyToLoad = null; window.msCommonShell.load(shellOptions); }; } });
+$(async function () { await window.manageSilentSignIn.handleAllSilentSignIn(); })
+if (window.UcsCreative === undefined) { window.UcsCreative = {}; }
+window.silentSigninProgress = true; var silentSigninStartLog = { actionType: 'A', content: { contentId: 'silentSignInStarted' } }; window.analytics.captureContentUpdate(silentSigninStartLog);
+if (occe && occe.Resources) { occe.Resources.addLocalizedStrings({"L_Feedback_ThankYou":"L_Feedback_ThankYou"}); }
+window.addEventListener('load', function () { if (typeof window.initPromotionLogger !== 'undefined') { window.initPromotionLogger(); } });

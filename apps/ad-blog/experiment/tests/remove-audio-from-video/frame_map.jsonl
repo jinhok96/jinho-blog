@@ -1,0 +1,2 @@
+{"out": "vlc-copy-noaudio-landscape.mp4", "out_frames": 717, "ref_frames": 720, "ref_unique": true, "out_in_ref": 717, "missing_ref_frames": [715, 718, 719], "order_ok": true}
+{"out": "vlc-copy-noaudio-portrait.mp4", "out_frames": 477, "ref_frames": 480, "ref_unique": true, "out_in_ref": 477, "missing_ref_frames": [1, 477, 479], "order_ok": true}

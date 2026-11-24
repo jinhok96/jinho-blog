@@ -1,5 +1,5 @@
 {
- "updatedAt": "2026-11-23T17:29:42Z",
+ "updatedAt": "2026-11-24T17:16:33Z",
  "discoverySince": "2026-11-07T09:49:23Z",
  "posts": {
   "apple-mail-exchange-not-syncing": {
@@ -263,7 +263,13 @@
    "feedSeenAt": "2026-11-04T21:54:53Z",
    "sitemapSeenAt": "2026-11-04T21:54:53Z"
   },
-  "rotate-video-without-losing-quality": {},
+  "rotate-video-without-losing-quality": {
+   "discoveredAt": "2026-11-24T17:16:33Z",
+   "sitemapSeenAt": "2026-11-24T17:16:33Z",
+   "discoveredVia": [
+    "/sitemap.xml"
+   ]
+  },
   "siri-history-on-iphone": {
    "firstSeenLinkAt": "2026-10-28T23:14:36Z",
    "discoveredAt": "2026-11-04T21:54:53Z",

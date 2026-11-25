@@ -1,0 +1,117 @@
+# 가져온 시각: 2026-11-25T17:33:14.858Z
+# 원본: https://support.microsoft.com/en-us/help/5068781
+November 11, 2025—KB5068781 (OS Builds 19044.6575 and 19045.6575) | Microsoft Support
+https://support.microsoft.com/en-us/servicing/os/windows-10/2025/11/november-11-2025-kb5068781-os-builds-19044-6575-and-19045-6575
+
+November 11, 2025—KB5068781 (OS Builds 19044.6575 and 19045.6575)
+Applies To
+Windows 10 Enterprise LTSC 2021 Windows 10 ESU
+
+Windows Secure Boot certificate expiration
+
+Important: Secure Boot certificates used by most Windows devices have started expiring in June 2026. This might affect the ability of certain personal and business devices to boot securely if not updated in time. To avoid disruption, we recommend reviewing the guidance and taking action to update certificates in advance. For details and preparation steps, see Windows Secure Boot certificate expiration and CA updates.
+
+Notice for Microsoft Store application updates
+
+Note
+
+Windows updates do not install Microsoft Store application updates. If you are an enterprise user, see Microsoft Store apps - Configuration Manager. If you are a consumer user, see Get updates for apps and games in Microsoft Store.
+
+Change log
+Change date	Change description
+November 17, 2025	
+Added the resolution for the "This update might fail to install with error 0x800f0922" known issue.
+This update might fail to install with error 0x800f0922
+Symptoms
+This update might fail to install on some Windows 10 devices enrolled in Extended Security Updates (ESU) for commercial customers with error 0x800f0922 (CBS_E_INSTALLERS_FAILED). This issue is isolated to devices activated via Windows subscription activation through the Microsoft 365 admin center.
+Resolution
+To resolve this issue, ensure that the Extended Security Updates (ESU) Licensing Preparation Package for Windows 10 (KB5072653) is installed prior to installation of this update.
+Summary
+
+This article lists the security issues and quality improvements included in this security update.
+
+Windows 10, version 22H2
+Windows 10, version 21H2
+
+Applies to: Windows 10 ESU
+
+Important
+
+Use EKB KB5015684 to update to Windows 10, version 22H2.
+
+This security update includes fixes and quality improvements that are part of the following updates:
+
+October 14, 2025—KB 5066791 (OS Builds 19044.6456 and 19045.6456)
+November 11, 2025—KB5071959: Windows 10, version 22H2 (OS Build 19045.6466) Out-of-band
+
+The following is a summary of the issues that this update addresses when you install this update. If there are new features, it lists them as well. The bold text within the brackets indicates the item or area of the change we are documenting.
+
+[Update (known issue)] Fixed: After installing the October 14, 2025 Windows update (KB5066791), the message, "Your version of Windows has reached the end of support", might incorrectly display in the Windows Update Settings page. To view the page, click Start > Settings > Windows Update.
+
+If you installed earlier updates, only the new updates contained in this package will be downloaded and installed on your device.
+
+For more information about security vulnerabilities, please refer to the new Security Update Guide website and the November 2025 Security Updates.
+
+For information about Windows update terminology, see the article about the types of Windows updates and the monthly quality update types. For an overview of Windows 10, version 22H2, see its update history page.
+
+Note Follow @WindowsUpdate to find out when new content is published to the Windows release health dashboard.
+
+Known issues in this update
+This update might fail to install with error 0x800f0922
+
+Symptoms
+
+This update might fail to install on some Windows 10 devices enrolled in Extended Security Updates (ESU) for commercial customers with error 0x800f0922 (CBS_E_INSTALLERS_FAILED). This issue is isolated to devices activated via Windows subscription activation through the Microsoft 365 admin center.
+
+Resolution
+
+This issue is fixed in the update KB5072653: Extended Security Updates (ESU) Licensing Preparation Package for Windows 10, which was released on November 17, 2025. Once you install the preparation package (KB5072653), you will be able to deploy this November 11, 2025 security update (KB5068781).
+
+Windows 10 servicing stack update (KB5068780) - versions 19044.6575 and 19045.6575
+
+Microsoft now combines the latest servicing stack update (SSU) for your operating system with the latest cumulative update (LCU). SSUs improve the reliability of the update process to mitigate potential issues while installing updates.
+
+This update makes quality improvements to the servicing stack, which is the component that installs Windows updates. To learn more about SSUs, see Servicing stack updates and Servicing Stack Updates (SSU): Frequently Asked Questions.
+
+This servicing stack update (SSU) includes enhanced logic to verify whether a device is hosted on Azure, leveraging an updated certificate chain for validation.
+To ensure seamless installation of future updates on Azure-hosted devices, it is strongly recommended to install this latest SSU prior to applying any additional updates.
+Additionally, please ensure that the device can access the required certificate update domains to successfully download and install certificate updates. For more information, refer to:
+
+Certificate downloads and revocation lists
+Azure Certificate Authority details
+How to get this update
+
+Before you install this update
+
+Important You must have the latest servicing stack update (SSU) installed.  Not installing the latest SSU before applying Windows updates might result in the Windows update not being offered until the latest SSU is installed.
+
+Based on your installation scenario, choose one of the following:
+
+For offline OS image servicing:
+If your image does not have the July 25, 2023 (KB5028244) or later LCU, you must install the special standalone October 13, 2023 SSU (KB5031539) before installing this update.
+For Windows Server Update Services (WSUS) deployment or when installing the standalone package from Microsoft Update Catalog:
+If your devices do not have the May 11, 2021 (KB5003173) or later LCU, you must install the special standalone August 10, 2021 SSU (KB5005260) before installing this update.
+
+Install this update
+
+To install this update, use one of the following Windows and Microsoft release channels.
+
+Windows Update
+Business
+Update Catalog
+Server Update Services
+Available	Next Step
+	This update will be downloaded and installed automatically from Windows Update and Microsoft Update.
+
+Note
+
+If you want to remove the LCU
+To remove the LCU after installing the combined SSU and LCU package, use the DISM/Remove-Package command line option with the LCU package name as the argument. You can find the package name by using this command: DISM /online /get-packages.
+Running Windows Update Standalone Installer (wusa.exe) with the /uninstall switch on the combined package will not work because the combined package contains the SSU. You cannot remove the SSU from the system after installation.
+File information
+
+A list of the files that are included in this update are provided in a CSV (Comma delimited) (*.csv) file. The file can be opened in a text editor such as Notepad or in Microsoft Excel.
+
+ Download the file information for this cumulative update KB5068781 now.
+
+ Download the file information for the SSU (KB5068780) - versions 190446575 and 19045.6575 update now.

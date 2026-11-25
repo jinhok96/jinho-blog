@@ -1,0 +1,137 @@
+# 가져온 시각: 2026-11-25T17:32:08.149Z
+# 원본: https://www.microsoft.com/en-ie/windows/extended-security-updates
+Windows 10 Extended Security Updates | Microsoft Windows
+https://www.microsoft.com/en-ie/windows/extended-security-updates?r=1
+
+Windows 10 Consumer Extended Security Updates (ESU)
+
+Find out how the Windows 10 Extended Security Updates (ESU) programme helps keep your device secure.
+
+What is Windows ESU?
+
+The Extended Security Updates (ESU) programme for Windows 10 provides customers with a more secure option to continue using their Windows 10 PCs after 14 October, 2025, while they transition to Windows 11. The ESU programme helps reduce the risk of malware and cybersecurity attacks by providing access to critical and important security updates as defined by the Microsoft Security Response Center (MSRC) for devices running Windows 10, version 22H2. ESU enrollment does not provide other types of fixes, feature improvements or product enhancements. It also does not come with technical support.
+
+Windows 10 support has ended. You can enroll in ESU any time until the programme ends on 12 October, 2027. If you’re already enrolled, your coverage will automatically continue through that date—no action needed.
+
+Windows 10 ESU prerequisites
+
+To enroll in the consumer Windows 10 ESU programme, make sure your device meets the following requirements:
+
+Devices need to be running Windows 10, version 22H2 Home, Professional, Pro Education or Workstations edition.
+Devices need to have the latest Windows update installed. Learn how to install Windows updates.
+The Windows 10 ESU Licensing Preparation Package, KB5126256, is required.
+The account used to sign in to the device must be an administrator account.
+The ESU license will be associated with the Microsoft account used to enroll. To enroll, you will be prompted to sign in with a Microsoft account if you typically sign into Windows with a local account.
+The Microsoft account can’t be a child account.
+The consumer ESU programme can’t be used in commercial scenarios and enrollment won’t be offered for:
+Devices in kiosk mode.
+Devices joined to an Active Directory domain or Microsoft Entra and/or enrolled in a Mobile Device Management (MDM) solution.
+However, devices that are Microsoft Entra registered can use the Consumer ESU program.
+Devices that already have an ESU license.
+
+If a device is enrolled in the Consumer ESU programme and then participates in one of the Commercial ESU scenarios listed above, the Consumer ESU enrollment on the device will be suspended until it is no longer being used as a Commercial device.
+
+If you're an IT professional and need to enable ESU for your organisation, see Enable Extended Security Updates (ESU).
+
+How much does Windows 10 ESU cost?
+
+A Microsoft account is required to enroll in the Consumer ESU. If you are already signed into the PC with a Microsoft account, you will be eligible to enroll in ESU for no additional cost so long as you remain signed in to the PC with the same account.
+
+If you are signed in with a local account, you will be prompted to sign in with a Microsoft account. Once signed in, you will have the option during the enrollment process to stay signed in with your Microsoft account and enroll at no additional cost or make a one-time purchase to enroll without remaining signed in with your Microsoft account (as described below). Regardless of the option chosen, the ESU license will be associated with the Microsoft account used to enroll.
+
+For more information, see What is a Microsoft account?
+
+Consumers in the European Economic Area can enroll in ESU through one of the following ways after signing in with a Microsoft account:
+
+Users who stay signed in to the eligible PC with a Microsoft account
+Microsoft account used to sign in to the ESU enrollment tool, will enable Extended Security Updates on the device through 12 October, 2027, as long as you continue signing in to Windows with your Microsoft account used to enrol.
+If you do not continue to sign in to your PC with your Microsoft account, ESU updates will be discontinued for your device after a period of time, up to 60 days.
+If ESU updates have been discontinued for failing to sign-in with your Microsoft account, you will need to re-enroll to resume updates.
+Users with a local account who do not want to stay signed in to the eligible PC with a Microsoft account
+One-time purchase of $30 USD or local currency equivalent plus applicable tax.
+Allows continued use of a local account (no sign in with a Microsoft account required other than to make the purchase).
+Will enable Extended Security Updates on the device through 12 October, 2027.
+
+Learn more about User accounts in Windows
+
+Learn more about changing from a local account to a Microsoft account
+
+Both enrollment options provide extended security updates through 12 October, 2027. You can enroll in ESU any time until the programme ends on 12 October, 2027; however, devices will be more vulnerable and susceptible to viruses and malware before enrollment. If you’re already enrolled, your coverage will automatically continue through that date — no action needed. You will need to sign in to your Microsoft account to enroll in ESU. You’ll be given these options to choose from when you enroll in the ESU programme. You can use your existing ESU licence for up to 10 devices.
+
+How to get Windows 10 ESU
+
+Windows 10 reached end of support on 14 October, 2025. ESU is available for eligible devices running Windows 10, version 22H2.
+
+To get ESU on your Windows 10 device:
+
+Go to Settings > Update & Security > Windows Update. If your device meets the prerequisites, you’ll see a link to enroll in ESU.
+Once you select enroll now you’ll start the ESU enrollment. If you are signed into Windows with a local account, you will be prompted to sign into your Microsoft account.
+
+You can use your existing ESU license on up to 10 devices once you enroll in ESU. Just go to Settings > Update & Security > Windows Update and select enroll now on those additional devices. If you are already signed into the device with the same Microsoft account used to enroll your first device, select Add device. If you are not signed into the PC with a Microsoft account, you will be prompted to sign in to the Microsoft account used to enroll the first PC.
+
+If you enrolled your first device by selecting the option to stay signed in to your PC to receive ESU without additional cost, you will need to stay signed into this additional device with the same Microsoft account to continue receiving ESU.
+If you enrolled your first device by selecting the option to make a one-time payment and not stay signed in to the PC, the Microsoft account used for enrollment will not be linked to this PC.
+
+Frequently asked questions
+
+Expand all
+ | 
+Collapse all
+
+Why should I enroll in ESU?
+
+If you need more time to move to Windows 11, enrolling in ESU can give you peace of mind by helping protect your Windows 10 device until the program ends on 12 October, 2027.
+
+When can I enroll in ESU?
+
+You can enroll in ESU any time until the programme ends on 12 October, 2027; however, devices will be more vulnerable and susceptible to viruses and malware before enrollment. After enrollment, your device will receive all critical and important updates released after Windows 10 end of support on 14 October, 2025.
+
+When will I start to receive critical security updates with ESU?
+
+The ESU programme delivers critical and important security updates for enrolled Windows 10 PCs. These security updates will be delivered through Windows Update as they're made available.
+
+If I enroll in ESU, can I still upgrade my PC to Windows 11?
+
+Yes! Enrolling in ESU does not prevent you from upgrading your PC to Windows 11 if it meets the hardware eligibility requirements.
+
+If I purchase ESU, can I cancel my order or get a refund?
+
+Refunds follow our policy for digital purchases for your country. For complete details on how to return eligible products, see our Returns and Refunds page.
+
+If you enrolled in ESU at no additional cost by signing in to your PC with a Microsoft account, you were not charged for ESU, so there would not be any refunds.
+
+There are multiple users on my device. Do we all need to enroll in ESU?
+
+No. Once any user on a Windows 10 PC enrolls in ESU, any additional users on that PC will also be protected.
+
+I have multiple Windows 10 PCs. Do I need to purchase ESU for every device?
+
+You can use your ESU license on up to 10 devices once you enroll in ESU. Any additional Windows 10 PC you wish to enroll in ESU must meet the eligibility requirements. To enroll a different PC, navigate to Settings > Update & Security > Windows Update. Select enroll now, then follow the prompts to add the device to ESU.
+
+How do I enroll my child’s Windows 10 PC in ESU?
+
+If your child’s device shows a message saying it can’t be enrolled in ESU, it likely means they don’t have the necessary permissions. In that case, you’ll need to enroll the device for them. To do that, you must be set up as a user on that PC. If you aren’t already, your child will need to add you as a user before you can complete the enrollment. Follow these steps to enroll your child's device:
+
+Switch to your user account on your child's device by selecting Start and select the account name icon (or picture) of your account.
+If you are not a user on their device, your child will need to add you as a user on your Microsoft account and configure it as an administrator following the steps here: Manage user accounts in Windows.
+Once you are signed into your user account, follow the steps to enroll in ESU.
+
+If the consumer ESU programme isn’t available in my area, what can I do to stay protected?
+
+To ensure you have the most modern and secure computing experience, your first step is to check if your device can upgrade to Windows 11. If your device is unable to upgrade, we encourage you to explore Windows 11 and Copilot+ PCs. This way, you’ll continue receiving the latest security updates, features and innovations from Microsoft. Together with our partners, we offer a range of Windows 11 PCs to support how you live, work and create. Find a PC that is right for you here.
+
+How can I check if my device is enrolled in ESU?
+
+You can check your enrollment status anytime by navigating to Settings > Update & Security > Windows Update. If you purchased ESU, you will also be able to see your order in your Order History.
+
+How can IT enable Windows 10 ESU?
+
+If you're an IT professional and need to enable ESU for your organisation, see Enable Extended Security Updates (ESU).
+
+{ "@context": "https://schema.org", "@type": "FAQPage", "mainEntity": [ {"@type": "Question","name": "Why should I enroll in ESU?","acceptedAnswer": {"@type": "Answer","text": "If you need more time to move to Windows 11, enrolling in ESU can give you peace of mind by helping protect your Windows 10 device until the program ends on 12 October, 2027."}},{"@type": "Question","name": "When can I enroll in ESU?","acceptedAnswer": {"@type": "Answer","text": "You can enroll in ESU any time until the programme ends on 12 October, 2027; however, devices will be more vulnerable and susceptible to viruses and malware before enrollment. After enrollment, your device will receive all critical and important updates released after Windows 10 end of support on 14 October, 2025."}},{"@type": "Question","name": "When will I start to receive critical security updates with ESU?","acceptedAnswer": {"@type": "Answer","text": "The ESU programme delivers critical and important security updates for enrolled Windows 10 PCs. These security updates will be delivered through Windows Update as they're made available."}},{"@type": "Question","name": "If I enroll in ESU, can I still upgrade my PC to Windows 11?","acceptedAnswer": {"@type": "Answer","text": "Yes! Enrolling in ESU does not prevent you from upgrading your PC to Windows 11 if it meets the <a target='_self' class='mscom-link c-hyperlink c-glyph' aria-label='Hardware eligibility requirements PC health check link to download the app' href='https://aka.ms/GetPCHealthCheckApp' data-bi-ehn='If I enroll in ESU, can I still upgrade my PC to Windows 11?' data-bi-hn='If I enroll in ESU, can I still upgrade my PC to Windows 11?' data-bi-ecn='hardware eligibility requirements'>hardware eligibility requirements</a>."}},{"@type": "Question","name": "If I purchase ESU, can I cancel my order or get a refund?","acceptedAnswer": {"@type": "Answer","text": "Refunds follow our policy for digital purchases for your country. For complete details on how to return eligible products, see our <a target='_blank' class='mscom-link c-hyperlink c-glyph' aria-label='Returns and refunds page opens in a new tab' href='https://support.microsoft.com/account-billing/get-a-refund-on-apps-and-games-81629012-aa4f-f48b-2394-8596f415072b' data-bi-ehn='If I purchase ESU, can I cancel my order or get a refund?' data-bi-hn='If I purchase ESU, can I cancel my order or get a refund?' data-bi-ecn='Returns and Refunds page'>Returns and Refunds page</a>.<br><br>If you enrolled in ESU at no additional cost by signing in to your PC with a Microsoft account, you were not charged for ESU, so there would not be any refunds."}},{"@type": "Question","name": "There are multiple users on my device. Do we all need to enroll in ESU?","acceptedAnswer": {"@type": "Answer","text": "No. Once any user on a Windows 10 PC enrolls in ESU, any additional users on that PC will also be protected."}},{"@type": "Question","name": "I have multiple Windows 10 PCs. Do I need to purchase ESU for every device?","acceptedAnswer": {"@type": "Answer","text": "You can use your ESU license on up to 10 devices once you enroll in ESU. Any additional Windows 10 PC you wish to enroll in ESU must meet the eligibility requirements. To enroll a different PC, navigate to <strong>Settings > Update & Security > Windows Update</strong>. Select <strong>enroll now</strong>, then follow the prompts to add the device to ESU."}},{"@type": "Question","name": "How do I enroll my child’s Windows 10 PC in ESU?","acceptedAnswer": {"@type": "Answer","text": "If your child’s device shows a message saying it can’t be enrolled in ESU, it likely means they don’t have the necessary permissions. In that case, you’ll need to enroll the device for them. To do that, you must be set up as a user on that PC. If you aren’t already, your child will need to add you as a user before you can complete the enrollment. Follow these steps to enroll your child's device:<ol class='c-list'><li>Switch to your user account on your child's device by selecting Start and select the account name icon (or picture) of your account.</li><li>If you are not a user on their device, your child will need to add you as a user on your Microsoft account and configure it as an administrator following the steps here: <a target='_blank' class='mscom-link c-hyperlink c-glyph' aria-label='Manage user accounts in Windows opens in a new tab' href='https://support.microsoft.com/windows/manage-user-accounts-in-windows-104dc19f-6430-4b49-6a2b-e4dbd1dcdf32' data-bi-ehn='How do I enroll my child’s Windows 10 PC in ESU?' data-bi-hn='How do I enroll my child’s Windows 10 PC in ESU?' data-bi-ecn='Manage user accounts in Windows'>Manage user accounts in Windows</a>.</li><li>Once you are signed into your user account, follow the steps to <a target='_self' class='mscom-link c-hyperlink c-glyph' aria-label='enroll in ESU' href='#rich-content-panel-8' data-bi-ehn='How do I enroll my child’s Windows 10 PC in ESU?' data-bi-hn='How do I enroll my child’s Windows 10 PC in ESU?' data-bi-ecn='enroll in ESU'>enroll in ESU</a>.</li></ol>"}},{"@type": "Question","name": "If the consumer ESU programme isn’t available in my area, what can I do to stay protected? ","acceptedAnswer": {"@type": "Answer","text": "To ensure you have the most modern and secure computing experience, your first step is to <a target='_self' class='mscom-link c-hyperlink c-glyph' aria-label='Check if your device can upgrade to Windows 11' href='https://www.microsoft.com/en-ie/windows/windows-11-specifications' data-bi-ecn='check if your device can upgrade to Windows 11' data-bi-ehn='If the consumer ESU programme isn’t available in my area, what can I do to stay protected?' data-bi-hn='If the consumer ESU programme isn’t available in my area, what can I do to stay protected?'>check if your device can upgrade to Windows 11</a>. If your device is unable to upgrade, we encourage you to explore Windows 11 and Copilot+ PCs. This way, you’ll continue receiving the latest security updates, features and innovations from Microsoft. Together with our partners, we offer a range of Windows 11 PCs to support how you live, work and create. Find a PC that is right for you <a target='_self' class='mscom-link c-hyperlink c-glyph' aria-label='Here is a tool to help you choose a new Windows PC' href='https://www.microsoft.com/en-ie/windows/help-me-choose' data-bi-ehn='Are there any regional variations to the Windows 10 Extended Security Updates (ESU) program?' data-bi-hn='Are there any regional variations to the Windows 10 Extended Security Updates (ESU) program?' data-bi-ecn='here'>here</a>."}},{"@type": "Question","name": "How can I check if my device is enrolled in ESU? ","acceptedAnswer": {"@type": "Answer","text": "You can check your enrollment status anytime by navigating to <strong>Settings > Update & Security > Windows Update</strong>. If you purchased ESU, you will also be able to see your order in your <b>Order History</b>."}},{"@type": "Question","name": "How can IT enable Windows 10 ESU?","acceptedAnswer": {"@type": "Answer","text": "If you're an IT professional and need to enable ESU for your organisation, see <a target='_blank' class='mscom-link c-hyperlink c-glyph' aria-label='Enable extended security updates opens in a new tab' href='https://learn.microsoft.com/windows/whats-new/enable-extended-security-updates' data-bi-ehn='How can IT enable Windows 10 ESU?' data-bi-hn='How can IT enable Windows 10 ESU?' data-bi-ecn='Enable Extended Security Updates (ESU)'>Enable Extended Security Updates (ESU)</a>. "}} ] }
+Follow Microsoft Windows
+Follow Microsoft Windows on Facebook
+Follow Microsoft Windows on X (formerly Twitter)
+Share this page
+Share this page on Facebook
+Share this page on X (formerly Twitter)

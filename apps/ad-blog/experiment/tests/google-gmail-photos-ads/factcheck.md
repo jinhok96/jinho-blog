@@ -103,3 +103,22 @@ slug: `google-gmail-photos-ads`
 ## 직접 실행하지 못한 것
 
 - Google 계정이 없어 Search Services Personalization·My Ad Center 화면을 직접 열지 못함 → 단계는 Google 도움말 기준으로 쓰고 본문 How we checked에 밝힘
+
+## 갱신 2026-11-26 (세션 105, 주간 SEO 점검 11-22 우선순위 1: Gemini 'History' 개정)
+
+`source_diff.cjs --slug google-gmail-photos-ads --save` (2026-11-25 UTC): 출처 15개 중 바뀜 6 · 그대로 9. 바뀐 6개 중 내용 변화는 4개(13278892·13594961·16836988·16859283). `privacy-policy`는 머리 메뉴 이름만('Privacy & Terms' → 'Privacy Policy'), `blog-gmail-2017-update-note`는 비교가 렌더링 본문을 받아 생긴 차이(원문 HTML에 'Update, October 16, 2026' 문단 그대로 → 새 사본을 curl 원문 추출본으로 바꿈). 그대로: 16598406(Android·컴퓨터, 'Have Keep Activity on' 옛 이름 유지)·16735982·androidauto 6348083·gmail 15604322·myadcenter 12155656·websearch 17025248·17026260·blog android auto
+
+| 주장 | 출처 | 확인 방법 |
+| --- | --- | --- |
+| Keep Activity → **History**, 웹 경로 Settings > History(또는 myactivity.google.com/product/gemini), 끄기 On > Turn off / Turn off and delete history, 18세 이상 기본 켜짐 | https://support.google.com/gemini/answer/13278892?hl=en&co=GENIE.Platform%3DDesktop | [source](source-gemini-13278892-activity-desktop-2026-11-26.txt) 'Turn off History' 절 |
+| History를 꺼도 대화는 계정에 **약 2개월** 저장(이전 72시간) | 같은 페이지 | "Even when History is off, your conversations will be saved with your account for around two months" |
+| History가 꺼지면 쓸 수 있는 앱은 Device assistance·Gemini Notebook·Messages·Phone·WhatsApp뿐 | 같은 페이지 'When History is off' | 원문 대조 |
+| Privacy Hub 'Last updated: November 24, 2026', History 꺼짐 시 '약 2개월'·'Some Connected Apps are unavailable', 기본 18개월 자동 삭제 | https://support.google.com/gemini/answer/13594961?hl=en | [source](source-gemini-13594961-privacy-hub-2026-11-26.txt) 'What does the History setting control?' |
+| 연결 앱 데이터 페이지: 'Gemini History', 'if your History setting is on' | https://support.google.com/gemini/answer/16836988?hl=en | [source](source-gemini-16836988-connected-apps-data-2026-11-26.txt) |
+| Personal Intelligence는 Keep Activity(=History)가 꺼지면 쓸 수 없음 — 16598406은 아직 옛 이름 | https://support.google.com/gemini/answer/16598406?hl=en | 11-14 사본 "Have Keep Activity on. This feature isn’t available when this setting is off." + source_diff 11-25 '바뀌지 않음' |
+| Search 연결 앱: Workspace(Gmail·Calendar·**Drive**), Photos, **Google Wallet**, Gemini Apps(coming soon). Calendar·Drive는 미국 영어만, Photos·Wallet은 일부 지역 불가, Personalized Recommendations 필요, 연결 위치 그대로 | https://support.google.com/websearch/answer/16859283?hl=en | [source](source-websearch-16859283-personal-intelligence-2026-11-26.txt) 326~373행 |
+| Search 지원 국가·지역 목록은 11-14와 같음(191곳) | 같은 페이지 | 11-14·11-26 사본 20~224행 diff 0 |
+| 2017 Gmail 글 'Update, October 16, 2026' 문단 유지 | blog.google 2017 글 | curl 원문 HTML 추출 [source](source-blog-gmail-2017-update-note-2026-11-26.txt) |
+
+- 바꾼 곳 (한 가지 변경 = 정확성 갱신, 검증 기록 없음): 둘째 문단 재확인 날짜·이유, 비교 표 3칸(Search 앱 목록·Gemini 필수 설정·지워지지 않는 기록), Search 단계 2(Wallet·Gemini chats coming soon), Gemini 절 머리말·단계 3·5(새 경로·약 2개월·꺼지면 남는 앱·옛 이름 안내), 그림 2장 다시 그림(`charts_gemini.py`: 'Saved to your Gemini History', 표 'Turn off History'·footer 약 2개월) + alt 2곳, Deleting 줄, 연결 글 문장, 추천 '아무것도 원하지 않음', 이용 조건 Search 줄(Drive·Wallet), How we checked 11-25 줄. `updatedAt` 2026-11-14T17:50Z → 2026-11-25T19:10Z
+- 쓰지 않은 것: Google 11-23 'A more tailored Google Search' 발표 — blog.google에서 원문을 찾지 못해(WebSearch 1회) 날짜·내용을 쓰지 않고 도움말 현재 문구만 씀. Gemini chats 연결은 'coming soon'이라 단계로 쓰지 않음

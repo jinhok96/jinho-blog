@@ -1,0 +1,764 @@
+# 가져온 시각: 2026-11-25T17:45:33.656Z
+# 원본: https://policies.google.com/privacy?hl=en-US
+Privacy Policy – Privacy & Terms – Google
+https://policies.google.com/privacy?hl=en-US
+
+window.wiz_progress&&window.wiz_progress();
+Skip to main content
+document.body.className = document.body.className.replace( "QM054c", "qvoRwc");
+window.wiz_progress&&window.wiz_progress();
+Privacy Policy
+Sign in
+this.gbar_=this.gbar_||{};(function(_){var window=this; try{ _.td=function(a,b,c){if(!a.o)if(c instanceof Array)for(var d of c)_.td(a,b,d);else{d=(0,_.C)(a.D,a,b);let e=a.A+c;a.A++;b.dataset.eqid=e;a.C[e]=d;b&&b.addEventListener?b.addEventListener(c,d,!1):b&&b.attachEvent?b.attachEvent("on"+c,d):a.v.log(Error("u`"+b))}}; }catch(e){_._DumpException(e)} try{ var ud=document.querySelector(".gb_L .gb_C"),vd=document.querySelector("#gb.gb_xd");ud&&!vd&&_.td(_.fd,ud,"click"); }catch(e){_._DumpException(e)} try{ _.wd=function(a){return/^[\s\xa0]*$/.test(a)};_.xd=function(a){a&&typeof a.dispose=="function"&&a.dispose()};_.yd=function(a,b){b==void 0&&(b=0);return a!=null?a:b};_.zd=function(a,b,c){return _.Jc(a,b,c,_.Gc)};_.Ad=function(a,b){a.Fa?b():(a.va||(a.va=[]),a.va.push(b))};_.Bd=function(a,b){_.Ad(a,_.Jb(_.xd,b))};_.Cd=typeof AsyncContext!=="undefined"&&typeof AsyncContext.Snapshot==="function"?a=>a&&AsyncContext.Snapshot.wrap(a):a=>a; }catch(e){_._DumpException(e)} try{ /* Copyright Google LLC SPDX-License-Identifier: Apache-2.0 */ var Ed=function(a){return new _.Dd(b=>b.substr(0,a.length+1).toLowerCase()===a+":")};_.Fd=globalThis.trustedTypes;_.Gd=class{constructor(a){this.j=a}toString(){return this.j}};_.Hd=new _.Gd("about:invalid#zClosurez");_.Dd=class{constructor(a){this.Dh=a}};_.Id=[Ed("data"),Ed("http"),Ed("https"),Ed("mailto"),Ed("ftp"),new _.Dd(a=>/^[^:]*([/?#]|$)/.test(a))];_.Jd=class{constructor(a){this.j=a}toString(){return this.j+""}};_.Kd=new _.Jd(_.Fd?_.Fd.emptyHTML:""); }catch(e){_._DumpException(e)} try{ var Md,Vd,Ld,Nd;Md=function(){var a=null;if(!Ld)return a;try{let b=c=>c;a=Ld.createPolicy("ogb-qtm#html",{createHTML:b,createScript:b,createScriptURL:b})}catch(b){}return a};_.Od=function(){Nd===void 0&&(Nd=Md());return Nd};_.Qd=function(a){var b=_.Od();a=b?b.createScriptURL(a):a;return new _.Pd(a)};_.Rd=function(a){if(a instanceof _.Pd)return a.j;throw Error("y");};_.Sd=function(a,b){a.src=_.Rd(b).toString()}; _.Td=function(a,b=document){var c,d=(c=b.querySelector)==null?void 0:c.call(b,`${a}[nonce]`);return d==null?"":d.nonce||d.getAttribute("nonce")||""};_.Ud=function(a,...b){if(b.length===0)return _.Qd(a[0]);var c=a[0];for(let d=0;d<b.length;d++)c+=encodeURIComponent(b[d])+a[d+1];return _.Qd(c)};Vd=class extends _.P{constructor(a){super(a)}Ub(a){return _.N(this,24,a)}};_.Wd=function(){return _.G(_.bd,Vd,1)};Ld=_.Fd;_.Pd=class{constructor(a){this.j=a}toString(){return this.j+""}}; }catch(e){_._DumpException(e)} try{ _.Xd=function(a){var b=a.length;if(b>0){let c=Array(b);for(let d=0;d<b;d++)c[d]=a[d];return c}return[]}; }catch(e){_._DumpException(e)} try{ _.Yd=function(a){if(a==null)return a;if(typeof a==="string"&&a)a=+a;else if(typeof a!=="number")return;return(0,_.Ja)(a)?a|0:void 0};_.Zd=function(a,b){return a.lastIndexOf(b,0)==0}; }catch(e){_._DumpException(e)} try{ var $d;$d=class extends _.jd{};_.ae=function(a,b){if(b in a.j)return a.j[b];throw new $d;};_.be=function(a){return _.ae(_.gd.j(),a)}; }catch(e){_._DumpException(e)} try{ var ie,de;_.ce=function(a){if(a instanceof _.Gd)return a.j;throw Error("y");};_.ee=function(a){if(de.test(a))return a};_.fe=function(a){return a instanceof _.Gd?_.ce(a):_.ee(a)};_.R=function(a,b,c){return _.Ia(_.Hc(a,b,c,_.Gc))};_.ge=function(a,b){return _.Yd(_.Hc(a,b,void 0,_.Gc))};_.he=function(a){var b=_.Ga(a);return b=="array"||b=="object"&&typeof a.length=="number"};de=/^\s*(?!javascript:)(?:[\w+.-]+:|[^:/?#]*(?:[/?#]|$))/i;var pe,te,je;_.le=function(a){return a?new je(_.ke(a)):ie||(ie=new je)};_.me=function(a,b){return typeof b==="string"?a.getElementById(b):b};_.ne=function(a,b){return(b||document).getElementsByTagName(String(a))};_.T=function(a,b){var c=b||document;c.getElementsByClassName?a=c.getElementsByClassName(a)[0]:(c=document,a=a?(b||c).querySelector(a?"."+a:""):_.oe(c,"*",a,b)[0]||null);return a||null}; _.oe=function(a,b,c,d){a=d||a;return(b=b&&b!="*"?String(b).toUpperCase():"")||c?a.querySelectorAll(b+(c?"."+c:"")):a.getElementsByTagName("*")};_.qe=function(a,b){_.wb(b,function(c,d){d=="style"?a.style.cssText=c:d=="class"?a.className=c:d=="for"?a.htmlFor=c:pe.hasOwnProperty(d)?a.setAttribute(pe[d],c):_.Zd(d,"aria-")||_.Zd(d,"data-")?a.setAttribute(d,c):a[d]=c})}; pe={cellpadding:"cellPadding",cellspacing:"cellSpacing",colspan:"colSpan",frameborder:"frameBorder",height:"height",maxlength:"maxLength",nonce:"nonce",role:"role",rowspan:"rowSpan",type:"type",usemap:"useMap",valign:"vAlign",width:"width"};_.re=function(a){return a?a.defaultView:window};_.ue=function(a,b){var c=b[1],d=_.se(a,String(b[0]));c&&(typeof c==="string"?d.className=c:Array.isArray(c)?d.className=c.join(" "):_.qe(d,c));b.length>2&&te(a,d,b,2);return d}; te=function(a,b,c,d){function e(f){f&&b.appendChild(typeof f==="string"?a.createTextNode(f):f)}for(;d<c.length;d++){let f=c[d];!_.he(f)||_.Gb(f)&&f.nodeType>0?e(f):_.Yb(f&&typeof f.length=="number"&&typeof f.item=="function"?_.Xd(f):f,e)}};_.ve=function(a){return _.se(document,a)};_.se=function(a,b){b=String(b);a.contentType==="application/xhtml+xml"&&(b=b.toLowerCase());return a.createElement(b)};_.we=function(a,b){a.appendChild(b)};_.xe=function(a){for(var b;b=a.firstChild;)a.removeChild(b)}; _.ye=function(a){return a&&a.parentNode?a.parentNode.removeChild(a):null};_.ze=function(a,b){return a&&b?a==b||a.contains(b):!1};_.ke=function(a){return a.nodeType==9?a:a.ownerDocument||a.document};je=function(a){this.j=a||_.u.document||document};_.n=je.prototype;_.n.H=function(a){return _.me(this.j,a)};_.n.getElementsByTagName=function(a,b){return(b||this.j).getElementsByTagName(String(a))};_.n.o=function(a,b,c){return _.ue(this.j,arguments)};_.n.appendChild=_.we; _.n.append=function(a,b){te(_.ke(a),a,arguments,1)};_.n.canHaveChildren=function(a){if(a.nodeType!=1)return!1;switch(a.tagName){case "APPLET":case "AREA":case "BASE":case "BR":case "COL":case "COMMAND":case "EMBED":case "FRAME":case "HR":case "IMG":case "INPUT":case "IFRAME":case "ISINDEX":case "KEYGEN":case "LINK":case "NOFRAMES":case "NOSCRIPT":case "META":case "OBJECT":case "PARAM":case "SCRIPT":case "SOURCE":case "STYLE":case "TRACK":case "WBR":return!1}return!0};_.n.v=_.xe;_.n.removeNode=_.ye; _.n.contains=_.ze; }catch(e){_._DumpException(e)} try{ _.Be=function(a,b,c){Array.isArray(c)&&(c=c.join(" "));var d="aria-"+b;c===""||c==void 0?(Ae||(Ae={atomic:!1,autocomplete:"none",dropeffect:"none",haspopup:!1,live:"off",multiline:!1,multiselectable:!1,orientation:"vertical",readonly:!1,relevant:"additions text",required:!1,sort:"none",busy:!1,disabled:!1,hidden:!1,invalid:"false"}),c=Ae,b in c?a.setAttribute(d,c[b]):a.removeAttribute(d)):a.setAttribute(d,c)};_.Ce=function(a){return _.Gb(a)&&a.nodeType==1}; _.De=function(a,b){if("textContent"in a)a.textContent=b;else if(a.nodeType==3)a.data=String(b);else if(a.firstChild&&a.firstChild.nodeType==3){for(;a.lastChild!=a.firstChild;)a.removeChild(a.lastChild);a.firstChild.data=String(b)}else _.xe(a),a.appendChild(_.ke(a).createTextNode(String(b)))};var Ae;var He;_.Ge=function(a,b,c,d,e,f){if(_.fc&&e)return _.Ee(a);if(e&&!d)return!1;if(!_.dc){typeof b==="number"&&(b=_.Fe(b));let g=b==17||b==18||_.fc&&b==91;if((!c||_.fc)&&g||_.fc&&b==16&&(d||f))return!1}if(_.ec&&d&&c)switch(a){case 220:case 219:case 221:case 192:case 186:case 189:case 187:case 188:case 190:case 191:case 192:case 222:return!1}switch(a){case 13:return _.dc?f||e?!1:!(c&&d):!0;case 27:return!_.ec&&!_.dc}return _.dc&&(d||e||f)?!1:_.Ee(a)}; _.Ee=function(a){if(a>=48&&a<=57||a>=96&&a<=106||a>=65&&a<=90||_.ec&&a==0)return!0;switch(a){case 32:case 43:case 63:case 64:case 107:case 109:case 110:case 111:case 186:case 59:case 189:case 187:case 61:case 188:case 190:case 191:case 192:case 222:case 219:case 220:case 221:case 163:case 58:return!0;case 173:case 171:return _.dc;default:return!1}};_.Fe=function(a){if(_.dc)a=He(a);else if(_.fc&&_.ec)a:switch(a){case 93:a=91;break a}return a}; He=function(a){switch(a){case 61:return 187;case 59:return 186;case 173:return 189;case 224:return 91;case 0:return 224;default:return a}}; }catch(e){_._DumpException(e)} try{ var Ie;Ie=function(a){return typeof a.className=="string"?a.className:a.getAttribute&&a.getAttribute("class")||""};_.Je=function(a){return a.classList?a.classList:Ie(a).match(/\S+/g)||[]};_.Ke=function(a,b){typeof a.className=="string"?a.className=b:a.setAttribute&&a.setAttribute("class",b)};_.Le=function(a,b){return a.classList?a.classList.contains(b):_.ua(_.Je(a),b)};_.Me=function(a,b){if(a.classList)a.classList.add(b);else if(!_.Le(a,b)){let c=Ie(a);_.Ke(a,c+(c.length>0?" "+b:b))}}; _.Ne=function(a,b){if(a.classList)Array.prototype.forEach.call(b,function(d){_.Me(a,d)});else{var c={};Array.prototype.forEach.call(_.Je(a),function(d){c[d]=!0});Array.prototype.forEach.call(b,function(d){c[d]=!0});b="";for(let d in c)b+=b.length>0?" "+d:d;_.Ke(a,b)}};_.Oe=function(a,b){a.classList?a.classList.remove(b):_.Le(a,b)&&_.Ke(a,Array.prototype.filter.call(_.Je(a),function(c){return c!=b}).join(" "))}; }catch(e){_._DumpException(e)} try{ var Qe,Ue;_.Pe=function(a,b){b=_.ta(a,b);var c;(c=b>=0)&&Array.prototype.splice.call(a,b,1);return c};Qe=function(a,b){for(let c in a)if(b.call(void 0,a[c],c,a))return!0;return!1}; _.Se=function(a,b){_.Re.call(this,a?a.type:"");this.relatedTarget=this.currentTarget=this.target=null;this.button=this.screenY=this.screenX=this.clientY=this.clientX=this.offsetY=this.offsetX=0;this.key="";this.charCode=this.keyCode=0;this.metaKey=this.shiftKey=this.altKey=this.ctrlKey=!1;this.state=null;this.pointerId=0;this.pointerType="";this.timeStamp=0;this.Qb=null;a&&this.init(a,b)}; Ue=function(a,b,c,d,e){this.listener=a;this.proxy=null;this.src=b;this.type=c;this.capture=!!d;this.handler=e;this.key=++Te;this.Rc=this.jd=!1};_.Ve=function(a){this.src=a;this.j={};this.o=0};_.Re=function(a,b){this.type="function"==typeof _.We&&a instanceof _.We?String(a):a;this.currentTarget=this.target=b;this.defaultPrevented=this.j=!1};_.Re.prototype.stopPropagation=function(){this.j=!0};_.Re.prototype.preventDefault=function(){this.defaultPrevented=!0};_.F(_.Se,_.Re); _.Se.prototype.init=function(a,b){var c=this.type=a.type,d=a.changedTouches&&a.changedTouches.length?a.changedTouches[0]:null;this.target=a.target||a.srcElement;this.currentTarget=b;b=a.relatedTarget;b||(c=="mouseover"?b=a.fromElement:c=="mouseout"&&(b=a.toElement));this.relatedTarget=b;d?(this.clientX=d.clientX!==void 0?d.clientX:d.pageX,this.clientY=d.clientY!==void 0?d.clientY:d.pageY,this.screenX=d.screenX||0,this.screenY=d.screenY||0):(this.offsetX=_.ec||a.offsetX!==void 0?a.offsetX:a.layerX, this.offsetY=_.ec||a.offsetY!==void 0?a.offsetY:a.layerY,this.clientX=a.clientX!==void 0?a.clientX:a.pageX,this.clientY=a.clientY!==void 0?a.clientY:a.pageY,this.screenX=a.screenX||0,this.screenY=a.screenY||0);this.button=a.button;this.keyCode=a.keyCode||0;this.key=a.key||"";this.charCode=a.charCode||(c=="keypress"?a.keyCode:0);this.ctrlKey=a.ctrlKey;this.altKey=a.altKey;this.shiftKey=a.shiftKey;this.metaKey=a.metaKey;this.pointerId=a.pointerId||0;this.pointerType=a.pointerType;this.state=a.state; this.timeStamp=a.timeStamp;this.Qb=a;a.defaultPrevented&&_.Se.ea.preventDefault.call(this)};_.Se.prototype.stopPropagation=function(){_.Se.ea.stopPropagation.call(this);this.Qb.stopPropagation?this.Qb.stopPropagation():this.Qb.cancelBubble=!0};_.Se.prototype.preventDefault=function(){_.Se.ea.preventDefault.call(this);var a=this.Qb;a.preventDefault?a.preventDefault():a.returnValue=!1};_.Se.prototype.ub=function(){return this.Qb};_.Xe="closure_listenable_"+(Math.random()*1E6|0);_.Ye=function(a){return!(!a||!a[_.Xe])};var Te=0;_.Ze=function(a){a.Rc=!0;a.listener=null;a.proxy=null;a.src=null;a.handler=null};_.Ve.prototype.add=function(a,b,c,d,e){var f=a.toString();a=this.j[f];a||(a=this.j[f]=[],this.o++);var g=$e(a,b,d,e);g>-1?(b=a[g],c||(b.jd=!1)):(b=new Ue(b,this.src,f,!!d,e),b.jd=c,a.push(b));return b};_.Ve.prototype.remove=function(a,b,c,d){a=a.toString();if(!(a in this.j))return!1;var e=this.j[a];b=$e(e,b,c,d);return b>-1?(_.Ze(e[b]),Array.prototype.splice.call(e,b,1),e.length==0&&(delete this.j[a],this.o--),!0):!1}; _.af=function(a,b){var c=b.type;if(!(c in a.j))return!1;var d=_.Pe(a.j[c],b);d&&(_.Ze(b),a.j[c].length==0&&(delete a.j[c],a.o--));return d};_.Ve.prototype.xd=function(a,b){a=this.j[a.toString()];var c=[];if(a)for(let d=0;d<a.length;++d){let e=a[d];e.capture==b&&c.push(e)}return c};_.Ve.prototype.Ic=function(a,b,c,d){a=this.j[a.toString()];var e=-1;a&&(e=$e(a,b,c,d));return e>-1?a[e]:null}; _.Ve.prototype.hasListener=function(a,b){var c=a!==void 0,d=c?a.toString():"",e=b!==void 0;return Qe(this.j,function(f){for(let g=0;g<f.length;++g)if(!(c&&f[g].type!=d||e&&f[g].capture!=b))return!0;return!1})};var $e=function(a,b,c,d){for(let e=0;e<a.length;++e){let f=a[e];if(!f.Rc&&f.listener==b&&f.capture==!!c&&f.handler==d)return e}return-1};var bf,cf,df,gf,jf,kf,lf,of;bf="closure_lm_"+(Math.random()*1E6|0);cf={};df=0;_.U=function(a,b,c,d,e){if(d&&d.once)return _.ef(a,b,c,d,e);if(Array.isArray(b)){for(let f=0;f<b.length;f++)_.U(a,b[f],c,d,e);return null}c=_.ff(c);return _.Ye(a)?a.listen(b,c,_.Gb(d)?!!d.capture:!!d,e):gf(a,b,c,!1,d,e)}; gf=function(a,b,c,d,e,f){if(!b)throw Error("G");var g=_.Gb(e)?!!e.capture:!!e,h=_.hf(a);h||(a[bf]=h=new _.Ve(a));c=h.add(b,c,d,g,f);if(c.proxy)return c;d=jf();c.proxy=d;d.src=a;d.listener=c;if(a.addEventListener)e===void 0&&(e=!1),a.addEventListener(b.toString(),d,e);else if(a.attachEvent)a.attachEvent(kf(b.toString()),d);else if(a.addListener&&a.removeListener)a.addListener(d);else throw Error("H");df++;return c};jf=function(){var a=lf,b=function(c){return a.call(b.src,b.listener,c)};return b}; _.ef=function(a,b,c,d,e){if(Array.isArray(b)){for(let f=0;f<b.length;f++)_.ef(a,b[f],c,d,e);return null}c=_.ff(c);return _.Ye(a)?a.Ja(b,c,_.Gb(d)?!!d.capture:!!d,e):gf(a,b,c,!0,d,e)};_.mf=function(a,b,c,d,e){if(Array.isArray(b))for(let f=0;f<b.length;f++)_.mf(a,b[f],c,d,e);else d=_.Gb(d)?!!d.capture:!!d,c=_.ff(c),_.Ye(a)?a.Ma(b,c,d,e):a&&(a=_.hf(a))&&(b=a.Ic(b,c,d,e))&&_.nf(b)}; _.nf=function(a){if(typeof a==="number"||!a||a.Rc)return!1;var b=a.src;if(_.Ye(b))return b.xe(a);var c=a.type,d=a.proxy;b.removeEventListener?b.removeEventListener(c,d,a.capture):b.detachEvent?b.detachEvent(kf(c),d):b.addListener&&b.removeListener&&b.removeListener(d);df--;(c=_.hf(b))?(_.af(c,a),c.o==0&&(c.src=null,b[bf]=null)):_.Ze(a);return!0};kf=function(a){return a in cf?cf[a]:cf[a]="on"+a}; lf=function(a,b){if(a.Rc)a=!0;else{b=new _.Se(b,this);let c=a.listener,d=a.handler||a.src;a.jd&&_.nf(a);a=c.call(d,b)}return a};_.hf=function(a){a=a[bf];return a instanceof _.Ve?a:null};of="__closure_events_fn_"+(Math.random()*1E9>>>0);_.ff=function(a){if(typeof a==="function")return a;a[of]||(a[of]=function(b){return a.handleEvent(b)});return a[of]}; }catch(e){_._DumpException(e)} try{ var pf,tf;_.qf=function(a,b){for(let e=1;e<arguments.length;e++){var c=arguments[e];for(d in c)a[d]=c[d];for(let f=0;f<pf.length;f++){var d=pf[f];Object.prototype.hasOwnProperty.call(c,d)&&(a[d]=c[d])}}};_.rf=function(a){_.x.call(this);this.J=a;this.L={}};_.V=function(){_.x.call(this);this.lb=new _.Ve(this);this.Jg=this;this.Oc=null};_.sf=function(a){var b=0;for(let c in a.j){let d=a.j[c];for(let e=0;e<d.length;e++)++b,_.Ze(d[e]);delete a.j[c];a.o--}};pf="constructor hasOwnProperty isPrototypeOf propertyIsEnumerable toLocaleString toString valueOf".split(" "); tf=[];_.F(_.rf,_.x);_.rf.prototype.listen=function(a,b,c,d){return uf(this,a,b,c,d)};_.rf.prototype.o=function(a,b,c,d,e){return uf(this,a,b,c,d,e)};var uf=function(a,b,c,d,e,f){Array.isArray(c)||(c&&(tf[0]=c.toString()),c=tf);for(let g=0;g<c.length;g++){let h=_.U(b,c[g],d||a.handleEvent,e||!1,f||a.J||a);if(!h)break;a.L[h.key]=h}return a};_.rf.prototype.Ja=function(a,b,c,d){return vf(this,a,b,c,d)}; var vf=function(a,b,c,d,e,f){if(Array.isArray(c))for(let g=0;g<c.length;g++)vf(a,b,c[g],d,e,f);else{b=_.ef(b,c,d||a.handleEvent,e,f||a.J||a);if(!b)return a;a.L[b.key]=b}return a};_.rf.prototype.Ma=function(a,b,c,d,e){if(Array.isArray(b))for(let f=0;f<b.length;f++)this.Ma(a,b[f],c,d,e);else c=c||this.handleEvent,d=_.Gb(d)?!!d.capture:!!d,e=e||this.J||this,c=_.ff(c),d=!!d,b=_.Ye(a)?a.Ic(b,c,d,e):a?(a=_.hf(a))?a.Ic(b,c,d,e):null:null,b&&(_.nf(b),delete this.L[b.key])}; _.wf=function(a){_.wb(a.L,function(b,c){this.L.hasOwnProperty(c)&&_.nf(b)},a);a.L={}};_.rf.prototype.U=function(){_.rf.ea.U.call(this);_.wf(this)};_.rf.prototype.handleEvent=function(){throw Error("I");};_.F(_.V,_.x);_.V.prototype[_.Xe]=!0;_.n=_.V.prototype;_.n.Ah=function(){return this.Oc};_.n.nc=function(a){this.Oc=a};_.n.addEventListener=function(a,b,c,d){_.U(this,a,b,c,d)};_.n.removeEventListener=function(a,b,c,d){_.mf(this,a,b,c,d)}; _.n.dispatchEvent=function(a){var b,c=this.Oc;if(c)for(b=[];c;c=c.Oc)b.push(c);c=this.Jg;var d=a.type||a;if(typeof a==="string")a=new _.Re(a,c);else if(a instanceof _.Re)a.target=a.target||c;else{var e=a;a=new _.Re(d,c);_.qf(a,e)}e=!0;var f;if(b)for(f=b.length-1;!a.j&&f>=0;f--){var g=a.currentTarget=b[f];e=xf(g,d,!0,a)&&e}a.j||(g=a.currentTarget=c,e=xf(g,d,!0,a)&&e,a.j||(e=xf(g,d,!1,a)&&e));if(b)for(f=0;!a.j&&f<b.length;f++)g=a.currentTarget=b[f],e=xf(g,d,!1,a)&&e;return e}; _.n.U=function(){_.V.ea.U.call(this);this.lb&&_.sf(this.lb);this.Oc=null};_.n.listen=function(a,b,c,d){return this.lb.add(String(a),b,!1,c,d)};_.n.Ja=function(a,b,c,d){return this.lb.add(String(a),b,!0,c,d)};_.n.Ma=function(a,b,c,d){this.lb.remove(String(a),b,c,d)};_.n.xe=function(a){return _.af(this.lb,a)}; var xf=function(a,b,c,d){b=a.lb.j[String(b)];if(!b)return!0;b=b.concat();var e=!0;for(let f=0;f<b.length;++f){let g=b[f];if(g&&!g.Rc&&g.capture==c){let h=g.listener,k=g.handler||g.src;g.jd&&a.xe(g);e=h.call(k,d)!==!1&&e}}return e&&!d.defaultPrevented};_.V.prototype.xd=function(a,b){return this.lb.xd(String(a),b)};_.V.prototype.Ic=function(a,b,c,d){return this.lb.Ic(String(a),b,c,d)};_.V.prototype.hasListener=function(a,b){return this.lb.hasListener(a!==void 0?String(a):void 0,b)}; }catch(e){_._DumpException(e)} try{ var Af,Ff;_.yf=function(a,b){this.width=a;this.height=b};_.zf=function(a){var b=a.split(/[?#]/),c=/[?]/.test(a)?"?"+b[1]:"";return{ye:b[0],Fd:c,fragment:/[#]/.test(a)?"#"+(c?b[2]:b[1]):""}};Af=function(a,b,c,d){function e(g,h){g!=null&&(Array.isArray(g)?g.forEach(k=>e(k,h)):(b+=f+encodeURIComponent(h)+"="+encodeURIComponent(g),f="&"))}var f=b.length?"&":"?";d.constructor===Object&&(d=Object.entries(d));Array.isArray(d)?d.forEach(g=>e(g[1],g[0])):d.forEach(e);return _.Qd(a+b+c)}; _.Bf=function(a,b){a=_.zf(_.Rd(a).toString());return Af(a.ye,a.Fd,a.fragment,b)};_.Cf=function(){return _.ec?"Webkit":_.dc?"Moz":null};_.n=_.yf.prototype;_.n.area=function(){return this.width*this.height};_.n.aspectRatio=function(){return this.width/this.height};_.n.hc=function(){return!this.area()};_.n.ceil=function(){this.width=Math.ceil(this.width);this.height=Math.ceil(this.height);return this};_.n.floor=function(){this.width=Math.floor(this.width);this.height=Math.floor(this.height);return this}; _.n.round=function(){this.width=Math.round(this.width);this.height=Math.round(this.height);return this};_.n.scale=function(a,b){b=typeof b==="number"?b:a;this.width*=a;this.height*=b;return this};_.Df=function(a){return new _.yf(a.width,a.height)};_.Ef=function(a){a=a.document;a=a.compatMode=="CSS1Compat"?a.documentElement:a.body;return new _.yf(a.clientWidth,a.clientHeight)};Ff=function(a){return String(a).replace(/\-([a-z])/g,function(b,c){return c.toUpperCase()})}; _.Gf=function(a){return a.replace(RegExp("(^|[\\s]+)([a-z])","g"),function(b,c,d){return c+d.toUpperCase()})};_.Hf=function(a,b){return a==b?!0:a&&b?a.width==b.width&&a.height==b.height:!1};var Jf,If,Lf,Kf;_.W=function(a,b,c){if(typeof b==="string")If(a,c,b);else for(let d in b)If(a,b[d],d)};Jf=/^--.+/;If=function(a,b,c){(c=Kf(a,c))&&(Jf.test(c)?a.style.setProperty(c,b):a.style[c]=b)};Lf={};Kf=function(a,b){var c=Lf[b];if(!c){var d=Ff(b);c=d;a.style[d]===void 0&&(d=_.Cf()+_.Gf(d),a.style[d]!==void 0&&(c=d));Lf[b]=c}return c};_.Mf=function(a,b){var c=a.style[Ff(b)];return typeof c!=="undefined"?c:a.style[Kf(a,b)]||""}; _.Nf=function(a,b){var c=_.ke(a);return c.defaultView&&c.defaultView.getComputedStyle&&(a=c.defaultView.getComputedStyle(a,null))?a[b]||a.getPropertyValue(b)||"":""};_.Of=function(a,b){return _.Nf(a,b)||(a.currentStyle?a.currentStyle[b]:null)||a.style&&a.style[b]};_.Pf=function(a){try{return a.getBoundingClientRect()}catch(b){return{left:0,top:0,right:0,bottom:0}}}; _.Sf=function(a){var b=_.Qf;if(_.Of(a,"display")!="none")return b(a);var c=a.style,d=c.display,e=c.visibility,f=c.position;c.visibility="hidden";c.position="absolute";c.display="inline";a=b(a);c.display=d;c.position=f;c.visibility=e;return a};_.Qf=function(a){var b=a.offsetWidth,c=a.offsetHeight,d=_.ec&&!b&&!c;return(b===void 0||d)&&a.getBoundingClientRect?(a=_.Pf(a),new _.yf(a.right-a.left,a.bottom-a.top)):new _.yf(b,c)};_.Tf=function(a,b){a.style.display=b?"":"none"}; _.Uf=_.dc?"MozUserSelect":_.ec||_.cc?"WebkitUserSelect":null; }catch(e){_._DumpException(e)} try{ var Xf,Zf;_.Vf=function(a){if(a instanceof _.Jd)return a.j;throw Error("y");};_.Wf=function(a,b){if(a.nodeType===1&&/^(script|style)$/i.test(a.tagName))throw Error("y");a.innerHTML=_.Vf(b)};Xf=function(a,b,c){return arguments.length<=2?Array.prototype.slice.call(a,b):Array.prototype.slice.call(a,b,c)};_.Yf=function(a,b,c,d){Array.prototype.splice.apply(a,Xf(arguments,1))};Zf=function(a,b){return a!==null&&b in a?a[b]:void 0};_.$f=function(){}; _.bg=function(a){_.V.call(this);this.A=a||_.le();this.Qa=ag;this.ha=null;this.Da=!1;this.o=null;this.N=void 0;this.L=this.C=this.j=this.F=null;this.kb=!1};_.cg=function(a,b){var c=_.se(a,"DIV");_.Wf(c,b);if(c.childNodes.length==1)c=c.removeChild(c.firstChild);else{for(a=a.createDocumentFragment();c.firstChild;)a.appendChild(c.firstChild);c=a}return c};_.dg=function(a){return a==null?"":String(a)};_.$f.ec=void 0;_.$f.j=function(){return _.$f.ec?_.$f.ec:_.$f.ec=new _.$f};_.$f.prototype.j=0; _.eg=function(a){return":"+(a.j++).toString(36)};var ag;_.F(_.bg,_.V);_.bg.prototype.Ab=_.$f.j();ag=null;_.fg=function(a){return a.ha||(a.ha=_.eg(a.Ab))};_.bg.prototype.H=function(){return this.o};var gg=function(a,b){if(a==b)throw Error("K");var c;if(c=b&&a.j&&a.ha){c=a.j;var d=a.ha;c=c.L&&d?Zf(c.L,d)||null:null}if(c&&a.j!=b)throw Error("K");a.j=b;_.bg.ea.nc.call(a,b)};_.bg.prototype.nc=function(a){if(this.j&&this.j!=a)throw Error("L");_.bg.ea.nc.call(this,a)};_.bg.prototype.O=function(){this.o=_.se(this.A.j,"DIV")}; _.bg.prototype.render=function(a){hg(this,a)};var hg=function(a,b,c){if(a.Da)throw Error("M");a.o||a.O();b?b.insertBefore(a.o,c||null):a.A.j.body.appendChild(a.o);a.j&&!a.j.Da||a.Sa()};_.n=_.bg.prototype;_.n.Z=function(a){this.o=a};_.n.Sa=function(){this.Da=!0;_.ig(this,function(a){!a.Da&&a.H()&&a.Sa()})};_.n.Cb=function(){_.ig(this,function(a){a.Da&&a.Cb()});this.N&&_.wf(this.N);this.Da=!1}; _.n.U=function(){this.Da&&this.Cb();this.N&&(this.N.dispose(),delete this.N);_.ig(this,function(a){a.dispose()});!this.kb&&this.o&&_.ye(this.o);this.j=this.F=this.o=this.L=this.C=null;_.bg.ea.U.call(this)}; _.n.P=function(a,b,c){if(a.Da&&(c||!this.Da))throw Error("M");if(b<0||b>_.jg(this))throw Error("O");this.L&&this.C||(this.L={},this.C=[]);if(a.j==this){var d=this.L,e=_.fg(a);d[e]=a;_.Pe(this.C,a)}else{d=this.L;e=_.fg(a);if(d!==null&&e in d)throw Error("x`"+e);d[e]=a}gg(a,this);_.Yf(this.C,b,0,a);a.Da&&this.Da&&a.j==this?(c=this.o,(c.childNodes[b]||null)!=a.H()&&(a.H().parentElement==c&&c.removeChild(a.H()),b=c.childNodes[b]||null,c.insertBefore(a.H(),b))):c?(this.o||this.O(),b=_.kg(this,b+1),hg(a, this.o,b?b.o:null)):this.Da&&!a.Da&&a.o&&a.o.parentNode&&a.o.parentNode.nodeType==1&&a.Sa()};_.jg=function(a){return a.C?a.C.length:0};_.kg=function(a,b){return a.C?a.C[b]||null:null};_.ig=function(a,b,c){a.C&&a.C.forEach(b,c)};_.bg.prototype.removeChild=function(a,b){if(a){let d=typeof a==="string"?a:_.fg(a);a=this.L&&d?Zf(this.L,d)||null:null;if(d&&a){var c=this.L;d in c&&delete c[d];_.Pe(this.C,a);b&&(a.Cb(),a.o&&_.ye(a.o));gg(a,null)}}if(!a)throw Error("P");return a}; }catch(e){_._DumpException(e)} try{ var mg;_.lg=function(a,b,c){return function(){try{return b.apply(c,arguments)}catch(d){a.log(d)}}};mg=function(a,b,c){if(a.o)return null;if(c instanceof Array){var d=null;for(var e of c)(c=mg(a,b,e))&&(d=c);return d}d=null;a.j&&a.j.type==c&&a.B==b&&(d=a.j,a.j=null);if(e=b.dataset.eqid)delete b.dataset.eqid,(e=a.C[e])?b.removeEventListener?b.removeEventListener(c,e,!1):b.detachEvent&&b.detachEvent("on"+c,e):a.v.log(Error("v`"+b));return d};_.og=function(a,b,c){_.ng.listen(b,c,void 0,a.J||a,a)}; _.pg=function(a){return _.gd.j().j[a]||null};_.qg=function(a,b){if(a instanceof Element){var c=_.pg("eq");c&&(b=mg(c,a,b||[]))&&(_.bc&&b instanceof MouseEvent&&a.dispatchEvent?(c=document.createEvent("MouseEvent"),c.initMouseEvent(b.type,!0,!0,b.view,b.detail,b.screenX,b.screenY,b.clientX,b.clientY,b.ctrlKey,b.altKey,b.shiftKey,b.metaKey,b.button,b.relatedTarget),a.dispatchEvent(c)):a.dispatchEvent&&a.dispatchEvent(b))}};var rg;rg=function(a){return Array.isArray(a)?Array.prototype.map.call(a,rg,void 0):typeof a==="string"?a:a?a.toString():a}; _.sg=class extends _.rf{constructor(a,b){super(b);this.C=a;this.fa=b||this}listen(a,b,c,d){if(c){if(typeof c!="function")throw new TypeError("Q");c=_.lg(this.C,c,this.fa);c=super.listen(a,b,c,d);_.qg(a,rg(b));return c}return super.listen(a,b,c,d)}o(a,b,c,d,e){if(c){if(typeof c!="function")throw new TypeError("Q");c=_.lg(this.C,c,e||this.fa);c=super.o(a,b,c,d,e);_.qg(a,rg(b));return c}return super.o(a,b,c,d,e)}Ja(a,b,c,d){if(c){if(typeof c!="function")throw new TypeError("Q");c=_.lg(this.C,c,this.fa); c=super.Ja(a,b,c,d);_.qg(a,rg(b));return c}return super.Ja(a,b,c,d)}};_.tg=class extends _.sg{constructor(a,b){super(b);this.element=a}H(){return this.element}U(){this.element=null;super.U()}}; }catch(e){_._DumpException(e)} try{ _.ug=class extends _.tg{constructor(a){super(a,_.Sc)}}; }catch(e){_._DumpException(e)} try{ _.vg=function(a,b){b=_.fe(b);b!==void 0&&(a.href=b)};_.wg=function(a,b){return(b||document).querySelectorAll("."+a)};_.xg=function(a,b){for(var c=0;a;){if(b(a))return a;a=a.parentNode;c++}return null};_.yg=function(a,b){return b?_.xg(a,function(c){return!b||typeof c.className==="string"&&_.ua(c.className.split(/\s+/),b)}):null};var zg,Ag;zg=function(){};_.ng=new zg;Ag=["click","keydown","keyup"];zg.prototype.listen=function(a,b,c,d,e){var f=function(g){var h=_.ff(b),k=_.Ce(g.target)?g.target.getAttribute("role")||null:null;g.type!="click"||g.Qb.button!=0||_.fc&&g.ctrlKey?g.keyCode!=13&&g.keyCode!=3||g.type=="keyup"?g.keyCode!=32||k!="button"&&k!="tab"&&k!="radio"||(g.type=="keyup"&&h.call(d,g),g.preventDefault()):(g.type="keypress",h.call(d,g)):h.call(d,g)};f.eb=b;f.bi=d;e?e.listen(a,Ag,f,c):_.U(a,Ag,f,c)}; zg.prototype.Ma=function(a,b,c,d,e){var f;for(let l=0;f=Ag[l];l++){a:{var g=a;var h=f;var k=!!c;if(_.Ye(g)){h=g.xd(h,k);break a}if(!g){h=[];break a}h=(g=_.hf(g))?g.xd(h,k):[]}for(g=0;k=h[g];g++){let m=k.listener;if(m.eb==b&&m.bi==d){e?e.Ma(a,f,k.listener,c,d):_.mf(a,f,k.listener,c,d);break}}}}; }catch(e){_._DumpException(e)} try{ var Fg=function(){for(var a;a=Bg.remove();){try{a.j.call(a.scope)}catch(b){_.ka(b)}Cg(Dg,a)}Eg=!1},Cg=function(a,b){a.A(b);a.o<100&&(a.o++,b.next=a.j,a.j=b)},Gg=class{constructor(a,b){this.v=a;this.A=b;this.o=0;this.j=null}get(){if(this.o>0){this.o--;var a=this.j;this.j=a.next;a.next=null}else a=this.v();return a}};var Hg=class{constructor(){this.o=this.j=null}add(a,b){var c=Dg.get();c.set(a,b);this.o?this.o.next=c:this.j=c;this.o=c}remove(){var a=null;this.j&&(a=this.j,this.j=this.j.next,this.j||(this.o=null),a.next=null);return a}},Dg=new Gg(()=>new Ig,a=>a.reset()),Ig=class{constructor(){this.next=this.scope=this.j=null}set(a,b){this.j=a;this.scope=b;this.next=null}reset(){this.next=this.scope=this.j=null}};var Jg,Eg=!1,Bg=new Hg,Lg=(a,b)=>{Jg||Kg();Eg||(Jg(),Eg=!0);Bg.add(a,b)},Kg=()=>{var a=Promise.resolve(void 0);Jg=()=>{a.then(Fg)}};var Mg=function(){};_.Ng=function(a){if(!a)return!1;try{return!!a.$goog_Thenable}catch(b){return!1}};var Qg,Xg,bh,ah,ch;_.Pg=function(a){this.j=0;this.D=void 0;this.A=this.o=this.v=null;this.B=this.C=!1;if(a!=Mg)try{let b=this;a.call(void 0,function(c){Og(b,2,c)},function(c){Og(b,3,c)})}catch(b){Og(this,3,b)}};Qg=function(){this.next=this.v=this.o=this.A=this.j=null;this.B=!1};Qg.prototype.reset=function(){this.v=this.o=this.A=this.j=null;this.B=!1};var Rg=new Gg(function(){return new Qg},function(a){a.reset()}),Sg=function(a,b,c){var d=Rg.get();d.A=a;d.o=b;d.v=c;return d}; _.Pg.prototype.then=function(a,b,c){return Tg(this,(0,_.Cd)(typeof a==="function"?a:null),(0,_.Cd)(typeof b==="function"?b:null),c)};_.Pg.prototype.$goog_Thenable=!0;_.Pg.prototype.F=function(a,b){return Tg(this,null,(0,_.Cd)(a),b)};_.Pg.prototype.catch=_.Pg.prototype.F;_.Pg.prototype.cancel=function(a){if(this.j==0){let b=new _.Ug(a);Lg(function(){Vg(this,b)},this)}}; var Vg=function(a,b){if(a.j==0)if(a.v){var c=a.v;if(c.o){var d=0,e=null,f=null;for(let g=c.o;g&&(g.B||(d++,g.j==a&&(e=g),!(e&&d>1)));g=g.next)e||(f=g);e&&(c.j==0&&d==1?Vg(c,b):(f?(d=f,d.next==c.A&&(c.A=d),d.next=d.next.next):Wg(c),Xg(c,e,3,b)))}a.v=null}else Og(a,3,b)},Zg=function(a,b){a.o||a.j!=2&&a.j!=3||Yg(a);a.A?a.A.next=b:a.o=b;a.A=b},Tg=function(a,b,c,d){var e=Sg(null,null,null);e.j=new _.Pg(function(f,g){e.A=b?function(h){try{let k=b.call(d,h);f(k)}catch(k){g(k)}}:f;e.o=c?function(h){try{let k= c.call(d,h);k===void 0&&h instanceof _.Ug?g(h):f(k)}catch(k){g(k)}}:g});e.j.v=a;Zg(a,e);return e.j};_.Pg.prototype.J=function(a){this.j=0;Og(this,2,a)};_.Pg.prototype.K=function(a){this.j=0;Og(this,3,a)}; var Og=function(a,b,c){if(a.j==0){a===c&&(b=3,c=new TypeError("R"));a.j=1;a:{var d=c,e=a.J,f=a.K;if(d instanceof _.Pg){Zg(d,Sg(e||Mg,f||null,a));var g=!0}else if(_.Ng(d))d.then(e,f,a),g=!0;else{if(_.Gb(d))try{let h=d.then;if(typeof h==="function"){$g(d,h,e,f,a);g=!0;break a}}catch(h){f.call(a,h);g=!0;break a}g=!1}}g||(a.D=c,a.j=b,a.v=null,Yg(a),b!=3||c instanceof _.Ug||ah(a,c))}},$g=function(a,b,c,d,e){var f=!1,g=function(k){f||(f=!0,c.call(e,k))},h=function(k){f||(f=!0,d.call(e,k))};try{b.call(a, g,h)}catch(k){h(k)}},Yg=function(a){a.C||(a.C=!0,Lg(a.G,a))},Wg=function(a){var b=null;a.o&&(b=a.o,a.o=b.next,b.next=null);a.o||(a.A=null);return b};_.Pg.prototype.G=function(){for(var a;a=Wg(this);)Xg(this,a,this.j,this.D);this.C=!1};Xg=function(a,b,c,d){if(c==3&&b.o&&!b.B)for(;a&&a.B;a=a.v)a.B=!1;if(b.j)b.j.v=null,bh(b,c,d);else try{b.B?b.A.call(b.v):bh(b,c,d)}catch(e){ch.call(null,e)}Cg(Rg,b)};bh=function(a,b,c){b==2?a.A.call(a.v,c):a.o&&a.o.call(a.v,c)}; ah=function(a,b){a.B=!0;Lg(function(){a.B&&ch.call(null,b)})};ch=_.ka;_.Ug=function(a){_.aa.call(this,a)};_.F(_.Ug,_.aa);_.Ug.prototype.name="cancel"; }catch(e){_._DumpException(e)} try{ _.dh=function(a,b){_.V.call(this);this.A=a||1;this.v=b||_.u;this.B=()=>{if(this.o){let c=Date.now()-this.C;c>0&&c<this.A*.8?this.j=this.v.setTimeout(this.B,this.A-c):(this.j&&(this.v.clearTimeout(this.j),this.j=null),this.dispatchEvent("tick"),this.o&&(this.stop(),this.start()))}};this.C=Date.now()};_.F(_.dh,_.V);_.n=_.dh.prototype;_.n.o=!1;_.n.j=null;_.n.setInterval=function(a){this.A=a;this.j&&this.o?(this.stop(),this.start()):this.j&&this.stop()}; _.n.start=function(){this.o=!0;this.j||(this.j=this.v.setTimeout(this.B,this.A),this.C=Date.now())};_.n.stop=function(){this.o=!1;this.j&&(this.v.clearTimeout(this.j),this.j=null)};_.n.U=function(){_.dh.ea.U.call(this);this.stop();delete this.v};_.eh=function(a,b,c){if(typeof a==="function")c&&(a=a.bind(c));else if(a&&typeof a.handleEvent=="function")a=a.handleEvent.bind(a);else throw Error("S");return Number(b)>2147483647?-1:_.u.setTimeout(a,b||0)}; }catch(e){_._DumpException(e)} try{ _.fh=function(a){return String(a).replace(/([A-Z])/g,"-$1").toLowerCase()};_.gh=function(a,b){b.parentNode&&b.parentNode.insertBefore(a,b.nextSibling)};_.hh=!_.bc&&!_.pa(); }catch(e){_._DumpException(e)} try{ var jh;_.ih=function(a,b,c){_.x.call(this);this.eb=a;this.A=b||0;this.o=c;this.v=()=>{this.j=0;this.eb&&this.eb.call(this.o)}};jh=0;_.kh=function(a){return Object.prototype.hasOwnProperty.call(a,_.Hb)&&a[_.Hb]||(a[_.Hb]=++jh)};_.F(_.ih,_.x);_.n=_.ih.prototype;_.n.j=0;_.n.U=function(){_.ih.ea.U.call(this);this.stop();delete this.eb;delete this.o};_.n.start=function(a){this.stop();this.j=_.eh(this.v,a!==void 0?a:this.A)};_.n.stop=function(){this.isActive()&&_.u.clearTimeout(this.j);this.j=0}; _.n.isActive=function(){return this.j!=0}; }catch(e){_._DumpException(e)} try{ var mh,ph,sh;_.lh=class extends _.P{constructor(a){super(a)}};mh=class{constructor(a,b,c){this.o=a;this.j={};a=0;for(var d=b.length;a<d;a++)this.j[b[a]]=!0;this.v=c;this.A=_.u}};_.nh=function(a){var b=_.gd.j(),c=["asl"];if(c.length!=a.length)throw new _.aa;var d=[];for(let f=0,g=c.length;f<g;f++){var e=c[f];b.j[e]||d.push(e)}if(d.length==0){d=c.length;e=Array(d);for(let f=0;f<d;f++)e[f]=b.j[c[f]];a.apply(_.u,e)}else{a=new mh(c,d,a);for(let f=0,g=d.length;f<g;f++)c=d[f],(e=b.o[c])||(b.o[c]=e=[]),e.push(a)}}; _.oh=function(a,b){_.ng.listen(a,b,void 0,void 0)};ph=function(a){return!(!a.j||a.j.dataset.isCfMode!=="true"&&(!a.j||a.j.dataset.cf!=="true"))};sh=function(a){return{log:a.A||_.qh,event:a.D||_.rh}}; _.th=class{constructor(a=null,b=null){this.A=a;this.D=b;this.j=document.querySelector('[data-shopping-cart-widget="true"]');this.o=!1;b=a=null;if(this.j){this.o=ph(this)?!(this.j&&this.j.dataset.cf==="true"):this.j.style.display==="none";(a=this.j.querySelector('[data-shopping-cart-badge="true"]'))&&a.children.length>0&&(a=a.children[0]);let c=this.j.querySelectorAll("[aria-label]");c.length===1&&(b=c[0]);_.oh(this.j,()=>{var {log:d,event:e}=sh(this);d&&e&&d.log(e.ug)})}this.v=a;this.C=b}listen(a, b){this.j&&this.j.addEventListener(a,b)}F(a,b=""){if(this.v&&!ph(this)){this.v.textContent=a;this.v.parentElement.style.display=a===""?"none":"";if(b!==""){let e;(e=this.C)==null||e.setAttribute("aria-label",b)}var {log:c,event:d}=sh(this);c&&d&&c.log(d.tg)}}isVisible(){return!(!this.j||this.j.style.display==="none")}B(a){if(this.j){var {log:b,event:c}=sh(this);ph(this)?a&&this.o&&b&&c&&(b.log(c.xg),this.o=!1):(this.j.style.display=a?"":"none",b&&c&&(a&&this.o&&(b.log(c.wg),this.o=!1),b.log(a?c.yg: c.vg)))}}};_.qh=null;_.rh=null; }catch(e){_._DumpException(e)} try{ _.uh=function(a){if(a.A)return a.A;for(let b in a.j)if(a.j[b].Y()&&a.j[b].B())return a.j[b];return null};var vh=new class extends _.x{constructor(a){super();this.D=a;this.A=null;this.v={};this.F={};this.j={};this.B=null}C(a){this.j[a]&&(_.uh(this)&&_.uh(this).K()==a||this.j[a].O(!0))}Ba(){return this.B}Xa(a){this.B=a;for(let b in this.j)this.j[b].Y()&&this.j[b].Xa(a)}o(a){return a in this.j?this.j[a]:null}}(_.Sc);_.id("dd",vh); }catch(e){_._DumpException(e)} try{ var yh,zh,Eh,Fh,Mh,Oh,Rh,Sh,Ah,Th,Bh,Vh,Wh,Xh,Yh,Zh,$h,ai,bi,ci,di,ei,fi,gi,ii,ji,ki;_.wh=function(a){var b=[],c=0;for(let d in a)b[c++]=a[d];return b};_.xh=function(a,b,c){c?_.Me(a,b):_.Oe(a,b)};yh=function(a,b){a=a.getAttribute("aria-"+b);return a==null||a==void 0?"":String(a)};zh=function(a){return _.xg(a,function(b){return b.nodeType==1&&yh(b,"hidden")=="true"})!=null};_.Ch=function(a){return a?Ah(a,function(b){return b.nodeType==1&&Bh(b)&&!zh(b)}):[]}; Eh=function(a,b){_.V.call(this);this.j=a;this.v=Dh(this.j);this.D=b||100;this.A=_.U(a,"resize",this.B,!1,this)};Fh=function(a){_.V.call(this);this.o=a||window;this.v=_.U(this.o,"resize",this.A,!1,this);this.j=_.Ef(this.o||window)};_.Gh=function(a,b){a&&b&&_.vg(a,a.href.replace(/([?&](continue|followup)=)[^&]*/g,"$1"+encodeURIComponent(b)))}; _.Lh=function(){_.D("gbar.I",_.Hh);_.Hh.prototype.ia=_.Hh.prototype.S;_.Hh.prototype.ib=_.Hh.prototype.H;_.Hh.prototype.ic=_.Hh.prototype.ma;_.D("gbar.J",_.Ih);_.Ih.prototype.ja=_.Ih.prototype.T;_.Ih.prototype.jb=_.Ih.prototype.V;_.D("gbar.K",_.Jh);_.D("gbar.L",_.Kh);_.Kh.prototype.la=_.Kh.prototype.o};Mh=function(a,b){b.xa=b.type;b.xb=b.target;return a.call(this,b)}; _.Nh=class extends _.P{constructor(a){super(a)}Ub(a){return _.N(this,5,a)}Ba(){return _.I(this,10)}Xa(a){return _.L(this,10,a)}Hf(a){return _.N(this,29,a)}};Oh=function(a,b,c){a=_.T("gb_nd",a.H());if(b!=""||c!="")_.Le(a,"gb_vb")?_.Mf(a,"background-image")!=""&&(b=c!=""?c:b,_.W(a,"background-image","url('"+b+"')"),a=_.T("gb_md",a),a!==null&&a.tagName=="IMG"&&(a.src=b)):a.tagName=="IMG"&&(a.src=b!=""?b:c,b!=c&&(c=c!=""?c+" 2x ":"",b!=""&&(c=c+(c==""?"":",")+(b+" 1x")),a.setAttribute("srcset",c)))}; _.Ph=function(a,b){b&&_.uh(a)&&b!=_.uh(a)&&_.uh(a).O(!1);a.A=b};_.Qh=function(a,b){a.j[b.K()]=b};Rh=function(a,b,c,d){if(a!=null)for(a=a.firstChild;a;){if(b(a)&&(c.push(a),d)||Rh(a,b,c,d))return!0;a=a.nextSibling}return!1};Sh=function(a,b){var c=[];return Rh(a,b,c,!0)?c[0]:void 0};Ah=function(a,b){var c=[];Rh(a,b,c,!1);return c};Th=function(a){a=a.tabIndex;return typeof a==="number"&&a>=0&&a<32768}; Bh=function(a){return a.tagName=="A"&&a.hasAttribute("href")||a.tagName=="INPUT"||a.tagName=="TEXTAREA"||a.tagName=="SELECT"||a.tagName=="BUTTON"?!a.disabled&&(!a.hasAttribute("tabindex")||Th(a)):a.hasAttribute("tabindex")&&Th(a)};_.Uh=function(a,b,c,d){d=_.lg(a,d);_.U(b,c,d);_.qg(b,c)};Vh=function(a){a.o||(a.o=_.U(a.j,"keydown",a.v,!1,a))};Wh=function(a){a.o&&(_.nf(a.o),a.o=null)};Xh=function(a){Wh(a);_.xh(a.j,"gb_ra",!1)}; Yh=class{constructor(a){this.j=a;this.o=null}v(a){a.keyCode!=9||_.Le(this.j,"gb_ra")||(_.xh(this.j,"gb_ra",!0),Wh(this))}};_.Hh=class extends _.V{constructor(a,b){super();this.A=a;b&&(this.A.id=b)}H(){return this.A}S(){return this.A.id}ma(){var a=this.A.id;a||(a="gb$"+_.eg(_.$f.j()),this.A.id=a);return a}U(){_.ye(this.A);super.U()}};_.Hh.prototype.L=function(){return this.H()};Zh=function(a){return Sh(a,function(b){return _.Ce(b)&&Bh(b)})};$h=function(a){(a=Zh(a))&&a.focus()}; ai={sl:"gb_wb",Mm:"gb_ke",Wj:"gb_Ad"};_.Ih=class extends _.Hh{constructor(a){super(a);this.B=[];this.F={}}T(a){var b=this.F[a];if(b)return b;var c=document.getElementById(a);if(c)for(let d=0,e=this.B.length;d<e;++d)if(b=this.B[d],b.H()==c)return this.F[a]=b;return null}V(){for(let a=0,b=this.B.length;a<b;a++)this.B[a].dispose();this.F={};this.B=[]}}; bi=function(a){var b;if(b=a instanceof HTMLElement)b=/-[a-z]/.test("ogobm")?!1:_.hh&&a.dataset?"ogobm"in a.dataset:a.hasAttribute?a.hasAttribute("data-"+_.fh("ogobm")):!!a.getAttribute("data-"+_.fh("ogobm"));return b};ci="click mousedown scroll touchstart wheel keydown".split(" ");di=class{}; ei=function(a){_.og(a.o,a.H(),a.Z);a.H().addEventListener("keydown",function(c){c.keyCode==32&&c.preventDefault()});a.o.listen(a.j,"keydown",a.da);a.o.listen(a.j,"keyup",a.oa);var b=new Map;b.set("close","cbc");b.set("back","bbc");b.forEach((c,d)=>{_.og(a.o,a.D.get(d),function(){this.dispatchEvent(c)})});if(a.j.classList.contains("gb_wb")||a.j.classList.contains("gb_ke"))a.o.listen(window,"resize",a.O),a.O();a.j.classList.contains("gb_vd")||a.o.Ja(window,"touchstart",()=>{_.W(a.j,"overflow-y","auto")})}; fi=function(a){a.o.Ma(document.body,ci,a.N,!1,a);a.o.Ma(document.body,"focusin",a.M)};gi=function(a,b){(a=a.D.get(b))&&a.classList.remove("gb_7")};ii=function(a){a.D.forEach(b=>{b.classList.add("gb_7")})};ji=function(a){return!a.j.classList.contains("gb_zd")||a.j.classList.contains("gb_wb")||a.j.classList.contains("gb_ke")}; ki=class extends _.Ih{constructor(a,b,c,d,e){var f=a.get("menu");super(f);this.j=b;this.R=f;this.D=a;this.W=a.get("back");this.C=_.T("gb_qd");this.J=c;this.G=_.T("gb_Bd",this.j);this.K=new Yh(this.G);this.wa=[];this.na=d||!1;this.P=e||!1;this.o=new _.rf(this);ei(this)}U(){super.U();fi(this)}L(){return this.G}X(){return _.T("gb_ye",this.j)}fa(a){this.j.classList.toggle("gb_zd",a===1);this.dispatchEvent("msc")}getStyle(){return ji(this)?0:1}ya(a){this.C||(this.C=_.T("gb_qd"));this.C&&a&&_.De(this.C, a)}Sb(){this.close();this.H().classList.add("gb_7");!this.W.classList.contains("gb_7")&&this.H().classList.remove("gb_sd")}isVisible(a){return(a=this.D.get(a))?!a.classList.contains("gb_7"):!1}open(a){this.J||(a&&_.W(this.j,"transition","none"),this.dispatchEvent("beforeshow"),this.j.classList.add("gb_sb"),_.Be(this.H(),"expanded",!0),$h(this.G),Vh(this.K),this.dispatchEvent("open"),this.o.o(document.body,ci,this.N,!0,this),this.o.listen(document.body,"focusin",this.M),a&&_.eh(function(){_.W(this.j, "transition","")},0,this))}Y(a){this.J&&_.Be(this.H(),"expanded",a)}close(a){this.J||(a&&_.W(this.j,"transition","none"),this.j.classList.remove("gb_sb"),_.Be(this.H(),"expanded",!1),document.activeElement==this.H()&&this.H().blur(),Xh(this.K),this.dispatchEvent("close"),fi(this),a&&_.eh(function(){_.W(this.j,"transition","")},0,this))}v(){return this.j.classList.contains("gb_sb")}O(){var a=window.visualViewport?window.visualViewport.height:window.innerHeight;a&&_.W(this.j,"height",`calc(${a}px - 100%)`)}Z(){this.dispatchEvent("mbc"); if(!this.J){if(this.v()){this.close();var a=!0}else this.open(),a=!1;a&&this.H().focus()}}oa(a){a.keyCode===9&&this.v()&&(a=this.K,_.xh(a.j,"gb_ra",!0),Wh(a))}da(a){a:{if(a.keyCode==36||a.keyCode==35){var b=_.Ch(this.j);if(b.length>0){var c=b[b.length-1];a.keyCode==36&&(c=!ji(this)&&b.length>1?b[1]:b[0]);c.focus();a.preventDefault();break a}}a.keyCode!=27||this.na&&!ji(this)||(this.close(),this.R!=null&&this.R.focus())}a.keyCode===9&&this.v()&&ji(this)&&(b=a.target,c=_.Ch(this.j),c.length>0&&(b== c[0]&&a.shiftKey?(c[c.length-1].focus(),a.preventDefault()):b!=c[c.length-1]||a.shiftKey||(c[0].focus(),a.preventDefault())))}N(a){this.v()&&a.target instanceof Node&&!(!ji(this)||this.P&&_.xg(a.target,bi))&&(a.type=="keydown"?a.keyCode==27&&(a.preventDefault(),a.stopPropagation(),this.close(),this.H().focus()):_.yg(a.target,"gb_Aa")||_.yg(a.target,"gb_od")||_.ze(this.j,a.target)||(a.type=="touchstart"&&(a.preventDefault(),a.stopPropagation()),this.close()))}M(){this.v()&&(!ji(this)||document.activeElement.tagName!= "IFRAME"&&(this.P&&_.xg(document.activeElement,bi)||_.yg(document.activeElement,"gb_td")||_.yg(document.activeElement,"gb_Aa")||$h(this.G)))}ha(){this.wa.push(new di)}};_.Jh=class extends _.Hh{constructor(a,b){super(a);_.ng.listen(a,this.o,!1,this);this.j=b}o(a){this.j&&this.j(a)||this.dispatchEvent("click")||a.preventDefault()}};var li=class{constructor(){this.j=null}Jc(){return this.j}};var mi=class{constructor(a,b,c){this.j=a;this.o=b;this.v=c||_.u}};var ni=class{constructor(a){this.j=[];this.A=a||this}o(a,b,c){this.B(a,b,c);this.j.push(new mi(a,b,c))}B(a,b,c){c=c||_.u;var d=this.j.length;for(let e=0;e<d;e++){let f=this.j[e];if(f.j==a&&f.o==b&&f.v==c){this.j.splice(e,1);break}}}v(a){a.j=this.A;var b=this.j.length;for(let c=0;c<b;c++){let d=this.j[c];d.j=="catc"&&d.o.call(d.v,a)}}};_.F(Eh,_.V);Eh.prototype.U=function(){_.nf(this.A);Eh.ea.U.call(this)};Eh.prototype.B=function(){this.o||(this.o=new _.ih(this.C,this.D,this),_.Bd(this,this.o));this.o.start()};Eh.prototype.C=function(){if(!this.j.isDisposed()){var a=this.v,b=Dh(this.j);this.v=b;if(a){let c=!1;a.width!=b.width&&(this.dispatchEvent("b"),c=!0);a.height!=b.height&&(this.dispatchEvent("a"),c=!0);c&&this.dispatchEvent("resize")}else this.dispatchEvent("a"),this.dispatchEvent("b"),this.dispatchEvent("resize")}};_.F(Fh,_.V);var pi=function(){var a=window,b=_.kh(a);return oi[b]=oi[b]||new Fh(a)},oi={},Dh=function(a){return a.j?_.Df(a.j):null};Fh.prototype.U=function(){Fh.ea.U.call(this);this.v&&(_.nf(this.v),this.v=null);this.j=this.o=null};Fh.prototype.A=function(){var a=_.Ef(this.o||window);_.Hf(a,this.j)||(this.j=a,this.dispatchEvent("resize"))};var qi=function(a,b){for(var c=0,d=b.length-1,e=b[0];c<d;){if(a<=e.max)return e.id;e=b[++c]}return b[d].id},ri=class{constructor(a,b){this.A=new ni(this);this.G=a;this.C=b;this.j=qi(a.offsetWidth,this.C);this.F=new Eh(pi(),10);_.U(this.F,"b",function(){window.requestAnimationFrame?window.requestAnimationFrame((0,_.C)(this.D,this)):this.D()},!1,this)}D(){var a=qi(this.G.offsetWidth,this.C);a!=this.j&&(this.j=a,this.v(new li))}o(a,b,c){this.A.o(a,b,c)}B(a,b){this.A.B(a,b)}v(a){this.A.v(a)}};_.Kh=class extends _.Hh{constructor(a){super(a);_.U(a,"click",this.j,!1,this)}o(){var a=this.H().getAttribute("aria-pressed");return(a==null?a:typeof a==="boolean"?a:a=="true")||!1}j(a){a=a.currentTarget;var b=yh(a,"pressed");_.wd(_.dg(b))||b=="true"||b=="false"?_.Be(a,"pressed",b=="true"?"false":"true"):a.removeAttribute("aria-pressed");this.dispatchEvent("click")}};var si,ti,ui,vi,wi,Di,Ai,Ei,Fi,Bi,xi,yi,zi,Ci,Hi,X,Ii;si=function(a,b){if(a.ha){a.wa&&a.wa.classList.toggle("gb_7",a.L);var c=b?b.trim():b;a.ha.classList.toggle("gb_7",!a.L||!b||!c);c&&_.De(a.ha,c)}};ti=function(a,b){if(a=_.T(b?"gb_j":"gb_v",a.v)){let c=a.offsetWidth;_.Yb(a.children,function(d){d.classList.contains("gb_7")&&(c-=d.offsetWidth)});return c}return 0};ui=function(a,b){a.D==null?a.O.log(Error("$")):a.W?a.O.log(Error("aa")):a.ua=b<0?0:b}; vi=function(a,b,c){var d=320,e=_.yd(_.ge(a.o,29),0);e>0&&(d=e);e=d+2*Math.max(b,c);b=d+b+c;return e!=b&&a.W?[{id:1,max:b},{id:2,max:e},{id:3}]:[{id:1,max:b},{id:3}]};wi=function(a){var b=_.Q.j();a.F||b.j.reject(Error("V"));_.A(_.R(a.o,7))||b.F.reject(Error("W"));_.A(_.R(a.o,12))||b.C.reject(Error("X"));_.A(_.R(a.o,13))||b.D.reject(Error("Y"))}; Di=function(a,b){!a.j&&a.F&&xi(a);a.j&&!a.S&&a.J("default");a.j&&a.Ab&&a.J("none");yi(a);if(a.Bb)a.N=!0;else if(a.fa)a.N=!0;else if(a.L)a.N=!1;else{var c=_.A(_.R(a.o,5),!1),d=_.A(_.R(a.o,7),!1);a.N=!(b==="gb_wb"&&(c||d))}c=b=="gb_wb";d=b=="gb_ke";a.yb&&a.P&&a.P.classList.toggle("gb_7",c||d);!a.fa&&!_.I(a.o,10)&&zi(a).length>1&&a.P&&a.G&&a.P&&(a.P.classList.toggle("gb_7",c),a.G.classList.toggle("gb_pe",c));if(a.B&&!a.fa){var e=a.B.H(),f=!a.L;e.classList.toggle("gb_7",!f);f&&Ai(a,a.N)}a.j&&(a.j.isVisible("menu")|| a.j.isVisible("back"))&&!ji(a.j)&&(a.oa=a.j.v());e=_.wh(ai);a.v.classList.remove(...e);a.v.classList.add(b);if(a.W&&a.A!=null)if(b!="gb_Ad")_.W(a.A,"min-width",""),_.W(a.G,"min-width","");else{f=_.Sf(a.A).width;var g=_.Sf(a.G).width;f=Math.max(f,g);_.W(a.A,"min-width",f+"px");_.W(a.G,"min-width",f+"px")}c?a.T||(a.T=!0,Bi(a,a.T)):(a.T=!1,a.Y());a.D!=null&&(a.D.classList.toggle("gb_nf",!c&&!d),a.D.classList.toggle("gb_mf",c||d));a.j&&(c=a.j.j,c.classList.remove(...e),c.classList.add(b),ji(a.j)?_.T("gb_te").appendChild(c): a.v.appendChild(c),a.j.isVisible("menu")||a.j.isVisible("back"))&&(b=!ji(a.j),c=a.j.v(),b&&!c&&a.oa?a.j.open():!b&&c&&a.j.close());Ci(a)};Ai=function(a,b){var c=_.T("gb_nd",a.B.H());_.xh(c,"gb_7",!b);a=_.T("gb_de",a.B.H());a!=null&&a.classList.toggle("gb_De",!b)};Ei=function(a){a=a.Z[0];return a.classList.contains("gb_pd")?1:a.classList.contains("gb_ve")?2:0}; Fi=function(a,b){if(a.B){if(b==2){b=_.B(_.K(a.o,24),"");var c=_.B(_.K(a.o,27),"")}else b==1?(b=_.B(_.K(a.o,23),""),c=_.B(_.K(a.o,26),"")):(b=_.B(_.K(a.o,22),""),c=_.B(_.K(a.o,25),""));b==""&&c==""||Oh(a.B,b,c)}};_.Gi=function(a,b,c){a.j&&(ji(a.j)&&(c=b=!1),a=document.body)&&(a.classList.toggle("gb_Je",b),a.classList.toggle("gb_Ie",c))}; Bi=function(a,b){if(_.I(a.o,7)&&(!a.T||b)){if(a.W){var c=_.T("gb_j",a.v);if(c){var d=_.T("gb_v",a.v),e=a.K.j!="gb_Ad"||b?"":a.Lb+"px";_.W(c,"min-width",e);_.W(d,"min-width",e)}}(c=a.D)&&c.classList.contains("gb_8e")!=b&&(c.classList.toggle("gb_8e",b),b?a.dispatchEvent("sfi"):a.dispatchEvent("sfu"),(a=_.T("gb_4d",c))&&a.classList.toggle("gb_8e",b))}}; xi=function(a){var b=_.T("gb_td");if(b){var c=new Map;c.set("menu",_.T("gb_od",a.v));c.set("back",_.T("gb_rd"));c.set("close",_.T("gb_k"));var d=!1;c.forEach(e=>{e||(a.O.log(Error("T")),d=!0)});if(!d){a.j=new ki(c,b,_.A(_.R(a.o,16),!1),_.A(_.R(a.o,9),!1),_.A(_.R(a.o,33),!1));a.j.listen("open",a.ob,!1,a);a.j.listen("close",a.nb,!1,a);a.j.listen("msc",a.rb,!1,a);switch(_.zd(a.o,32)){case 1:a.J("back");break;case 2:a.J("close");break;case 3:a.J("none");break;default:a.J("default")}_.Lh();_.D("gbar.C", ki);ki.prototype.ca=ki.prototype.L;ki.prototype.cc=ki.prototype.ha;ki.prototype.cd=ki.prototype.fa;ki.prototype.cf=ki.prototype.open;ki.prototype.cg=ki.prototype.close;ki.prototype.ch=ki.prototype.getStyle;ki.prototype.ck=ki.prototype.v;ki.prototype.cl=ki.prototype.Y;ki.prototype.cm=ki.prototype.X;ki.prototype.cn=ki.prototype.ya;_.Q.j().j.resolve(a.j)}}else a.O.log(Error("U"))};yi=function(a){a.A!=null&&(a.K.j=="gb_wb"?_.W(a.A,"min-width",""):a.ua!=null&&_.W(a.A,"min-width",a.ua+"px"))}; zi=function(a){var b=_.T("gb_j",a.v),c=_.T("gb_v",a.v),d=[];b&&_.Yb(b.children,function(e){d.push(e)});_.A(_.R(a.o,7),!1)&&(a=_.T("gb_8e",a.D))&&(a=_.T("gb_cf",a),a.isSearchButton=!0,d.push(a));c&&_.Yb(c.children,function(e){d.push(e)});return d};Ci=function(a){var b=a.v.offsetHeight+"px";a.ya!=b&&(a.ya=b,a.La&&(a.La.style.height=b),a.dispatchEvent("resize"))};Hi=function(a,b){a.classList.remove("gb_ve","gb_pd");b==1?a.classList.add("gb_pd"):b==2&&a.classList.add("gb_ve")}; X=class extends _.V{constructor(a,b,c,d){super();this.v=a;this.v.classList.remove("gb_ee");this.o=b;this.O=c;this.ya="";this.La=d;this.B=this.j=null;this.oa=this.S=this.N=!1;this.fa=_.A(_.R(this.o,16),!1);this.Qa=new _.rf(this);this.X=_.T("gb_Nd",this.v);this.ha=_.T("gb_Sd",this.v);this.wa=_.T("gb_Fe",this.v);this.P=_.T("gb_L",this.v);(this.L=_.A(_.R(b,6),!1))&&this.X&&si(this);this.qc=_.T("gb_Rd",this.X);this.F=_.T("gb_8d",this.v);this.M=_.T("gb_a",this.v);this.G=_.T("gb_oe",this.v);this.A=_.T("gb_Pd", this.v);this.D=_.T("gb_ne",this.v);this.Z=Array.prototype.slice.call(_.wg("gb_be",this.v));this.T=!1;this.Bb=_.A(_.R(this.o,19),!1);this.Ab=_.A(_.R(this.o,20),!1);this.yb=_.A(_.R(this.o,45),!1);a=ti(this,!0);b=ti(this,!1);this.Lb=Math.max(a,b);this.W=_.R(this.o,15);c=_.yd(_.ge(this.o,30),0);c!=0&&ui(this,c);a=vi(this,a,b);this.K=new ri(document.body,Ii);this.cb=_.B(_.K(this.o,37));this.Ua=_.B(_.K(this.o,38));this.uc=_.A(_.R(this.o,39));this.Kb=_.A(_.R(this.o,1),!1);this.Jb=_.A(_.R(this.o,40),!1); wi(this);Di(this,this.K.j);this.K.o("catc",this.kb,this);_.I(this.o,8)&&document.addEventListener("scroll",(0,_.C)(function(){this.v.classList.toggle("gb_he",window.scrollY>0)},this));this.D!=null&&_.I(this.o,7)&&(this.da=new ri(this.D,a),this.da.o("catc",this.Y,this),this.Y());this.C=null;this.V=_.T("gb_lb",this.v);this.R=this.na=!1;this.V&&(this.C=_.T("gb_vb",this.V),this.Qa.o(this.C,"error",this.hb,!1,this))}hb(){this.C!=null&&(this.C.src="https://www.gstatic.com/images/icons/material/system/1x/broken_image_grey600_18dp.png", this.C.srcset="https://www.gstatic.com/images/icons/material/system/1x/broken_image_grey600_18dp.png 1x, https://www.gstatic.com/images/icons/material/system/2x/broken_image_grey600_18dp.png 2x",_.W(this.C,"width","auto"),this.C.parentElement&&this.C.parentElement.classList.add("gb_ub"))}H(){return this.v}ed(a){this.B=a;Ai(this,this.N);a=Ei(this);a!=0&&Fi(this,a)}kd(a,b){this.B&&Oh(this.B,a,b)}Xa(a){this.Ka(a||this.uc?1:0);this.H().classList.contains("gb_e")||this.ma(a?this.cb:this.Ua);this.H().classList.toggle("gb_K", a);var b=_.T("gb_gb");b!=null&&b.classList.toggle("gb_K",a);this.j&&this.Jb&&this.j.j.classList.toggle("gb_yd",a);this.V&&this.V.classList.toggle("gb_K",a);_.be("dd").Xa(a)}ud(a){this.X&&(_.De(this.qc,a||""),this.X.classList.toggle("gb_7",!a),this.L=!!a,si(this,a),Di(this,this.K.j))}Oa(){return _.T("gb_ye",this.F)}Y(){if(this.da!=null){var a=this.da.j;a==3?Bi(this,!1):a==1?Bi(this,!0):Bi(this,this.K.j=="gb_Ad")}}kb(){Di(this,this.K.j);this.j&&_.Gi(this,this.j.v(),!1);this.dispatchEvent("ffc")}ob(){_.Gi(this, !0,!0)}nb(){_.Gi(this,!1,!0)}rb(){var a=this.j.j;ji(this.j)?_.T("gb_te").appendChild(a):this.v.appendChild(a)}J(a){var b=!1;switch(a){case "back":this.S=!0;ii(this.j);gi(this.j,"back");b=!0;break;case "close":this.S=!0;ii(this.j);gi(this.j,"close");b=!0;break;case "default":this.S=!1;this.Kb?(this.j&&!this.j.isVisible("menu")&&(ii(this.j),gi(this.j,"menu")),b=!0):(this.j&&this.j.isVisible("back")&&ii(this.j),this.j&&this.j.isVisible("menu")?this.j.Sb():(a=this.v.querySelector(".gb_od"))&&a.classList.add("gb_7"), b=!1);break;case "none":this.S=!0,ii(this.j),b=!1}this.A!=null&&this.A.classList.toggle("gb_Qd",b)}Ha(){return this.v.offsetHeight}Mb(){this.M&&Ci(this)}fb(){if(!this.M){let a=_.ve("DIV");a.classList.add("gb_a","gb_be");Hi(a,Ei(this));a.style.backgroundColor=this.v.style.backgroundColor;this.Z.push(a);_.gh(a,this.F);this.M=a}return this.M}rc(){_.ye(this.M);this.M=null;Ci(this)}Ka(a){a==2&&(a=0);for(let b=0;b<this.Z.length;b++)Hi(this.Z[b],a);Fi(this,a)}ma(a){this.v.style.backgroundColor=a}Ca(){return this.v.style.backgroundColor}ab(){var a= _.be("dd");_.uh(a)&&_.uh(a).O(!1);_.Ph(a,null)}Zc(a){ui(this,a-8-10);yi(this)}qd(a){_.xh(_.T("gb_hd",this.F),"gb_7",!a)}Ta(){_.nh(a=>{a&&a.L()})}zd(a,b,c,d){this.na||(this.R=this.na=!0,_.nh(e=>{if(this.R&&(this.R=!1,e)){let f=_.G(_.bd,_.Nh,21);e.T(f,a,b,c,d)}}))}Na(){if(this.R)return this.R=!1,1;var a=_.pg("asl");return a?a.R():3}tc(a){a&&(_.Gh(_.T("gb_gb"),a),_.Q.j().o.then(b=>void b.Gd(a)))}};Ii=[{id:"gb_wb",max:599},{id:"gb_ke",max:1023},{id:"gb_Ad"}];var Ji; {_.V.prototype.za=_.Jb(function(b,c,d,e,f){return b.call(this,c,_.Jb(Mh,d),e,f)},_.V.prototype.listen);_.V.prototype.zb=_.V.prototype.Ah;let a=_.T("gb_Za");if(a==null)Ji=null;else{var Ki=_.G(_.bd,_.lh,6)||new _.lh,Li=new X(a,Ki,_.Sc,_.T("gb_ie"));_.D("gbar.P",X);X.prototype.pa=X.prototype.Ha;X.prototype.pb=X.prototype.ud;X.prototype.pc=X.prototype.Ka;X.prototype.pd=X.prototype.ma;X.prototype.pe=X.prototype.fb;X.prototype.pf=X.prototype.Mb;X.prototype.pg=X.prototype.rc;X.prototype.ph=X.prototype.Oa;X.prototype.pi= X.prototype.ab;X.prototype.pj=X.prototype.Zc;X.prototype.pk=X.prototype.qd;X.prototype.pl=X.prototype.tc;X.prototype.pm=X.prototype.J;X.prototype.pn=X.prototype.Ca;X.prototype.po=X.prototype.kd;X.prototype.pp=X.prototype.Xa;X.prototype.pq=X.prototype.Ta;X.prototype.pr=X.prototype.zd;X.prototype.ps=X.prototype.Na;_.D("gbar.Q",_.th);_.th.prototype.qa=_.th.prototype.F;_.th.prototype.qb=_.th.prototype.B;_.th.prototype.za=_.th.prototype.listen;_.Q.j().A.resolve(Li);Ji=Li}}_.Mi=Ji; }catch(e){_._DumpException(e)} try{ _.Ni=function(a,b){return _.L(a,36,b)};_.Oi={Be:"gb_z",Cc:"gb_nb",Oj:"gb_Tb",Ae:"gb_lb",Mk:"gb_Qf",ml:"gb_tb",nl:"gb_vb",mn:"gb_rb",Ce:"gb_2"}; }catch(e){_._DumpException(e)} try{ var Pi=_.Oi.Be,Qi=Pi?document.querySelector(`.${Pi} .gb_C`):null,Ri=document.querySelector("#gb.gb_xd");Qi&&!Ri&&_.td(_.fd,Qi,"click"); }catch(e){_._DumpException(e)} try{ _.Q.j().A.then(function(a){if(a){var b=_.T("gb_hd",a.F);b&&(b=new _.ug(b),a.ed(b))}}); }catch(e){_._DumpException(e)} })(this.gbar_); // Google Inc.
+Privacy & Terms
+OverviewPrivacy PolicyTerms of ServiceTechnologiesFAQGoogle Account
+OverviewPrivacy PolicyTerms of ServiceTechnologiesFAQ
+Privacy Policy
+Introduction
+Information Google collects
+Why Google collects data
+Your privacy controls
+Sharing your information
+Keeping your information secure
+Exporting & deleting your information
+Retaining your information
+Compliance & cooperation with regulators
+About this policy
+Related privacy practices
+Data transfer frameworks
+Key terms
+Partners
+Updates
+GOOGLE PRIVACY POLICY
+
+When you use our services, you’re trusting us with your information. We understand this is a big responsibility and work hard to protect your information and put you in control.
+
+This Privacy Policy is meant to help you understand what information we collect, why we collect it, and how you can update, manage, export, and delete your information.
+
+Privacy Checkup
+
+Looking to change your privacy settings?
+
+Take the Privacy Checkup
+
+Effective October 16, 2026Archived versionsDownload PDF
+Contents
+Introduction
+Information Google collects
+Why Google collects data
+Your privacy controls
+Sharing your information
+Keeping your information secure
+Exporting & deleting your information
+Retaining your information
+Compliance & cooperation with regulators
+About this policy
+Related privacy practices
+
+We build a range of services that help millions of people daily to explore and interact with the world in new ways. Our services include:
+
+Google apps, sites, and devices, like Search, YouTube, and Google Home
+Platforms like the Chrome browser and Android operating system
+Products that are integrated into third-party apps and sites, like ads, analytics, and embedded Google Maps
+
+You can use our services in a variety of ways to manage your privacy. For example, you can sign up for a Google Account if you want to create and manage content like emails and photos, or see more relevant search results. And you can use many Google services when you’re signed out or without creating an account at all, like searching on Google or watching YouTube videos. You can also choose to browse the web in a private mode, like Chrome Incognito mode, which helps keep your browsing private from other people who use your device. And across our services, you can adjust your privacy settings (like history and personalization controls) to make choices about whether we save some types of data to your Google account and how we use it.
+
+To help explain things as clearly as possible, we’ve added examples, explanatory videos, and definitions for key terms. And if you have any questions about this Privacy Policy, you can contact us.
+
+INFORMATION GOOGLE COLLECTS
+We want you to understand the types of information we collect as you use our services
+
+We collect information to provide better services to all our users — from figuring out basic stuff like which language you speak, to more complex things like which ads you’ll find most useful, the people who matter most to you online, or which YouTube videos you might like. The information Google collects, and how that information is used, depends on how you use our services and how you manage your privacy controls.
+
+Google also collects and uses data that is not associated with your account. For example, when you’re not signed in to a Google Account, we store the information we collect with unique identifiers tied to the browser, application, or device you’re using. This allows us to do things like maintain your preferences across browsing sessions, such as your preferred language or whether to show you more relevant search results or ads based on your activity across devices.
+
+When you’re signed in, we also collect information that we store with your Google Account, which we treat as personal information.
+
+Things you create or provide to us
+
+When you create a Google Account, you provide us with personal information that includes your name and a password. You can also choose to add a phone number or payment information to your account. Even if you aren’t signed in to a Google Account, you might choose to provide us with information — like an email address to communicate with Google or receive updates about our services.
+
+We also collect the content you create, upload, or receive from others when using our services. This includes things like email you write and receive, photos and videos you save, docs and spreadsheets you create, and comments you make on YouTube videos.
+
+Information we collect as you use our services
+Your apps, browsers & devices
+
+We collect information about the apps, browsers, and devices you use to access Google services, which helps us provide features like automatic product updates and dimming your screen if your battery runs low.
+
+The information we collect includes unique identifiers, browser type and settings, device type and settings, operating system, mobile network information including carrier name and phone number, and application version number. We also collect information about the interaction of your apps, browsers, and devices with our services, including IP address, crash reports, system activity, and the date, time, and referrer URL of your request.
+
+We collect this information when a Google service on your device contacts our servers — for example, when you install an app from the Play Store or when a service checks for automatic updates. If you’re using an Android device with Google apps, your device periodically contacts Google servers to provide information about your device and connection to our services. This information includes things like your device type and carrier name, crash reports, which apps you've installed, and, depending on your device settings, other information about how you’re using your Android device.
+
+Your activity
+
+We collect information about your activity in our services, which we use to do things like recommend a YouTube video you might like. The activity information we collect may include:
+
+Terms you search for
+Videos you watch
+Views and interactions with content and ads
+Media (like images, files, audio and video) from your interactions
+Purchase activity
+People with whom you communicate or share content
+Activity on third-party sites and apps that use our services
+Chrome browsing history you’ve synced with your Google Account
+
+If you use our services to make and receive calls or send and receive messages, we may collect call and message log information like your phone number, calling-party number, receiving-party number, forwarding numbers, sender and recipient email address, time and date of calls and messages, duration of calls, routing information, and types and volumes of calls and messages.
+
+You can visit your Google Account to find and manage activity information that’s saved in your history.
+
+Go to Google Account
+
+Your location information
+
+We collect location information when you use our services, which helps us offer features like driving directions, search results for things near you, and ads based on your location.
+
+Depending on the products you’re using and settings you choose, Google may use different types of location information to help make some services and products you use more helpful. These include:
+
+GPS and other sensor data from your device
+IP address
+Activity on Google services, such as from your searches or places you label like home or work
+Information about things near your device, such as Wi-Fi access points, cell towers, and Bluetooth-enabled devices
+
+The types of location data we collect and how long we store it depend in part on your device and account settings. For example, you can turn your Android device’s location on or off using the device’s settings app. You can also turn on Timeline if you want to create a private map of where you go with your signed-in devices. Depending on your settings, your searches and other activity from Google services, which may also include location information, are saved as history to your Google Account. For example, activity from services like Search, Maps, and Shopping is saved to Search Services History, and your activity on some other Google sites and apps is saved to Web & App Activity. Learn more about how we use location information.
+
+In some circumstances, Google also collects information about you from publicly accessible sources. For example, if your name appears in your local newspaper, Google’s Search engine may index that article and display it to other people if they search for your name. We may also collect information about you from trusted partners, such as directory services who provide us with business information to be displayed on Google’s services, marketing partners who provide us with information about potential customers of our business services, and security partners who provide us with information to protect against abuse. We also receive information from partners to provide advertising and research services on their behalf.
+
+We use various technologies to collect and store information, including cookies, pixel tags, local storage, such as browser web storage or application data caches, databases, and server logs.
+
+WHY GOOGLE COLLECTS DATA
+We use data to build better services
+
+We use the information we collect from all our services for the following purposes:
+
+Provide our services
+
+We use your information to deliver our services, like processing the terms you search for in order to return results or helping you share content by suggesting recipients from your contacts.
+
+Maintain & improve our services
+
+We also use your information to ensure our services are working as intended, such as tracking outages or troubleshooting issues that you report to us. And we use your information to make improvements to our services — for example, understanding which search terms are most frequently misspelled helps us improve spell-check features used across our services.
+
+Develop new services
+
+We use the information we collect in existing services to help us develop new ones. For example, understanding how people organized their photos in Picasa, Google’s first photos app, helped us design and launch Google Photos.
+
+Provide personalized services, including content and ads
+
+We use the information we collect to tailor our services for you, including providing customized and personalized experiences and recommendations, including things like content, and search results. For example, Security Checkup provides security tips adapted to how you use Google products. And, depending on your available settings, Google Play could use information like apps you’ve already installed and videos you’ve watched on YouTube to suggest new apps you might like. You may choose to allow certain Google services, including services like Search or Gemini Apps, to access data from other Google services you use, such as Google Photos and Workspace apps like Gmail and Drive, in order to provide you with a more personalized experience, subject to the policies and settings of the accessing service. For example, Search may process some of the data that you allow Search to access to personalize content, including ads.
+
+Depending on your settings, we may also show you personalized ads based on your interests, activity, or personalized content from Google services. For example, if you search for “mountain bikes,” in Search you may see ads for sports equipment on YouTube. You can control what information we use to show you ads by visiting your ad settings in My Ad Center.
+
+We don’t show you personalized ads based on sensitive categories, such as race, religion, sexual orientation, or health.
+We don’t show you personalized ads based on your content from Drive, Gmail, or Google Photos, unless you choose to make data from these services available to other Google services that support personalized ads.
+We don’t share information that personally identifies you with advertisers, such as your name or email, unless you ask us to. For example, if you see an ad for a nearby flower shop and select the “tap to call” button, we’ll connect your call and may share your phone number with the flower shop.
+
+Go to My Ad Center
+
+Measure performance
+
+We use data for analytics and measurement to understand how our services are used. For example, we analyze data about your visits to our sites to do things like optimize product design. And we also use data about the ads you interact with, including your related Google Search activity, to help advertisers understand the performance of their ad campaigns. We use a variety of tools to do this, including ad and analytics services. When you visit sites or use apps that use Google’s ad or analytics services, those services may link information about your activity from that site or app with activity from other sites or apps that use our services.
+
+Communicate with you
+
+We use information we collect, like your email address, to interact with you directly. For example, we may send you a notification if we detect suspicious activity, like an attempt to sign in to your Google Account from an unusual location. Or we may let you know about upcoming changes or improvements to our services. And if you contact Google, we’ll keep a record of your request in order to help solve any issues you might be facing.
+
+Protect Google, our users, and the public
+
+We use information to help improve the safety and reliability of our services. This includes detecting, preventing, and responding to fraud, abuse, security risks, and technical issues that could harm Google, our users, or the public.
+
+We use different technologies to process your information for these purposes. We use automated systems that analyze your content to provide you with things like tailored search results, personalized ads, or other features tailored to how you use our services. And we analyze your content to help us detect abuse such as spam, malware, and illegal content. We also use algorithms to recognize patterns in data. For example, Google Translate helps people communicate across languages by detecting common language patterns in phrases you ask it to translate.
+
+We may use the information we collect across our services and across your devices for the purposes described above. For example, depending on your available settings, if you watch videos of guitar players on YouTube, you might see an ad for guitar lessons on a site that uses our ad products. Depending on your account settings, your activity on other sites and apps may be associated with your personal information in order to improve Google’s services and the ads delivered by Google.
+
+If other users already have your email address or other information that identifies you, we may show them your publicly visible Google Account information, such as your name and photo. This helps people identify an email coming from you, for example.
+
+We’ll ask for your consent before using your information for a purpose that isn’t covered in this Privacy Policy.
+
+YOUR PRIVACY CONTROLS
+You have choices regarding the information we collect and how it's used
+
+This section describes key controls for managing your privacy across our services. You can also visit the Privacy Checkup, which provides an opportunity to review and adjust important privacy settings. In addition to these tools, we also offer specific privacy settings in our products — you can learn more in our Product Privacy Guide.
+
+Go to Privacy Checkup
+
+Managing, reviewing, and updating your information
+
+When you’re signed in, you can always review and update information by visiting the services you use. For example, Google Photos and Drive are both designed to help you manage specific types of content you’ve saved with Google.
+
+We also built a place for you to review and control information saved in your Google Account. Your Google Account includes:
+
+Privacy controls
+Personalization and Activity Controls
+
+Across many of our services, you can adjust history and personalization controls to make choices about whether we save some types of data in your Google Account and how we use it to personalize your experience. For example, if you have YouTube History turned on, the videos you watch and the things you search for are saved in your account so you can get better recommendations and remember where you left off. Saving activity from services like Search, Maps, and Shopping to your Search Services History lets you do things like resume an AI Mode interaction where you left off or see past searches as Autocomplete suggestions. When Personalized Recommendations in Search services is on, these services can provide results, curated feeds, and AI responses that are personalized to you based on info in your Google Account, including Search Services History. And if you have Web & App Activity turned on, your activity from some other Google services are saved in your account so you can get more personalized experiences. Web & App Activity also has a subsetting that lets you control whether some information about your activity on other sites, apps, and devices that use Google services is saved with Web & App Activity in your Google Account and used to improve Google services.
+
+Go to My Activity and Personalization Settings
+
+Ad settings
+
+Manage your preferences about the ads shown to you on Google and on sites and apps that partner with Google to show ads. You can modify your interests, choose whether your personal information is used to make ads more relevant to you, and turn on or off certain advertising services.
+
+Go to My Ad Center
+
+About you
+
+Manage personal info in your Google Account and control who can see it across Google services.
+
+Go to About You
+
+Shared endorsements
+
+Choose whether your name and photo appear next to your activity, like reviews and recommendations, that appear in ads.
+
+Go to Shared Endorsements
+
+Sites and apps that use Google services
+
+Manage information that websites and apps using Google services, like Google Analytics, may share with Google when you visit or interact with their services.
+
+Go to How Google uses information from sites or apps that use our services
+
+Ways to review & update your information
+My Activity
+
+My Activity allows you to review and control data that’s saved to your Google Account when you’re signed in and using Google services, like searches you’ve done or your visits to Google Play. You can browse by date and by topic, and delete part or all of your activity.
+
+Go to My Activity
+
+Google Dashboard
+
+Google Dashboard allows you to manage information associated with specific products.
+
+Go to Dashboard
+
+Your personal information
+
+Manage your contact information, such as your name, email, and phone number.
+
+Go to Personal Info
+
+When you’re signed out, you can manage information associated with your browser or device, including:
+
+Signed-out search customization: Choose whether your search activity is used to offer you more relevant results and recommendations.
+YouTube settings: Pause and delete your YouTube Search History and your YouTube Watch History.
+Ad Settings: Manage your preferences about the ads shown to you on Google and on sites and apps that partner with Google to show ads.
+Exporting, removing & deleting your information
+
+You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google.
+
+Export your data
+
+To delete your information, you can:
+
+Delete your content from specific Google services
+Search for and then delete specific items from your account using My Activity
+Delete specific Google products, including your information associated with those products
+Delete your entire Google Account
+
+Delete your information
+
+Inactive Account Manager allows you to give someone else access to parts of your Google Account in case you’re unexpectedly unable to use your account.
+
+And finally, you can also request to remove content from specific Google services based on applicable law and our policies.
+
+There are other ways to control the information Google collects whether or not you’re signed in to a Google Account, including:
+
+Browser settings: For example, you can configure your browser to indicate when Google has set a cookie in your browser. You can also configure your browser to block all cookies from a specific domain or all domains. But remember that our services rely on cookies to function properly, for things like remembering your language preferences.
+Device-level settings: Your device may have controls that determine what information we collect. For example, you can modify location settings on your Android device.
+SHARING YOUR INFORMATION
+When you share your information
+
+Many of our services let you share information with other people, and you have control over how you share. For example, you can share videos on YouTube publicly or you can decide to keep your videos private. Remember, when you share information publicly, your content may become accessible through search engines, including Google Search.
+
+When you’re signed in and interact with some Google services, like leaving comments on a YouTube video or reviewing an app in Play, your name and photo appear next to your activity. We may also display this information in ads depending on your Shared endorsements setting.
+
+When Google shares your information
+
+We do not share your personal information with companies, organizations, or individuals outside of Google except in the following cases:
+
+With your consent
+
+We’ll share personal information outside of Google when we have your consent. For example, if you use Google Home to make a reservation through a booking service, we’ll get your permission before sharing your name or phone number with the restaurant. We also provide you with controls to review and manage third party apps and sites you have given access to data in your Google Account. We’ll ask for your explicit consent to share any sensitive personal information.
+
+With domain administrators
+
+If you’re a student or work for an organization that uses Google services, your domain administrator and resellers who manage your account will have access to your Google Account. They may be able to:
+
+Access and retain information stored in your account, like your email
+View statistics regarding your account, like how many apps you install
+Change your account password
+Suspend or terminate your account access
+Receive your account information in order to satisfy applicable law, regulation, legal process, or enforceable governmental request
+Restrict your ability to delete or edit your information or your privacy settings
+For external processing
+
+We provide personal information to our affiliates and other trusted businesses or persons to process it for us, based on our instructions and in compliance with our Privacy Policy and any other appropriate confidentiality and security measures. For example, we use service providers to help operate our data centers, deliver our products and services, improve our internal business processes, and offer additional support to customers and users. We also use service providers to help review YouTube video content for public safety and analyze and listen to samples of saved user audio to help improve Google’s audio recognition technologies.
+
+For legal reasons
+
+We will share personal information outside of Google if we have a good-faith belief that disclosure of the information is reasonably necessary to:
+
+Respond to any applicable law, regulation,legal process, or enforceable governmental request. We share information about the number and type of requests we receive from governments in our Transparency Report.
+Enforce applicable Terms of Service, including investigation of potential violations.
+Detect, prevent, or otherwise address fraud, security, or technical issues.
+Protect against harm to the rights, property or safety of Google, our users, or the public.
+
+We may share non-personally identifiable information publicly and with our partners — like publishers, advertisers, developers, or rights holders. For example, we share information publicly to show trends about the general use of our services. We also allow specific partners to collect information from your browser or device for advertising and measurement purposes using their own cookies or similar technologies.
+
+If Google is involved in a merger, acquisition, or sale of assets, we’ll continue to ensure the confidentiality of your personal information and give affected users notice before personal information is transferred or becomes subject to a different privacy policy.
+
+KEEPING YOUR INFORMATION SECURE
+We build security into our services to protect your information
+
+All Google products are built with strong security features that continuously protect your information. The insights we gain from maintaining our services help us detect and automatically block security threats from ever reaching you. And if we do detect something risky that we think you should know about, we’ll notify you and help guide you through steps to stay better protected.
+
+We work hard to protect you and Google from unauthorized access, alteration, disclosure, or destruction of information we hold, including:
+
+We use encryption to keep your data private while in transit
+We offer a range of security features, like Safe Browsing, Security Checkup, and 2 Step Verification to help you protect your account
+We review our information collection, storage, and processing practices, including physical security measures, to prevent unauthorized access to our systems
+We restrict access to personal information to Google employees, contractors, and agents who need that information in order to process it. Anyone with this access is subject to strict contractual confidentiality obligations and may be disciplined or terminated if they fail to meet these obligations.
+EXPORTING & DELETING YOUR INFORMATION
+
+You can export a copy of your information or delete it from your Google Account at any time
+
+You can export a copy of content in your Google Account if you want to back it up or use it with a service outside of Google.
+
+Export your data
+
+To delete your information, you can:
+
+Delete your content from specific Google services
+Search for and then delete specific items from your account using My Activity
+Delete specific Google products, including your information associated with those products
+Delete your entire Google Account
+
+Delete your information
+
+RETAINING YOUR INFORMATION
+
+We retain the data we collect for different periods of time depending on what it is, how we use it, and how you configure your settings:
+
+Some data you can delete whenever you like, such as your personal info or the content you create or upload, like photos and documents. You can also delete activity information saved in your account, or choose to have it deleted automatically after a set period of time. We’ll keep this data in your Google Account until you remove it or choose to have it removed.
+Other data is deleted or anonymized automatically after a set period of time, such as advertising data in server logs.
+We keep some data until you delete your Google Account, such as information about how often you use our services.
+And some data we retain for longer periods of time when necessary for legitimate business or legal purposes, such as security, fraud and abuse prevention, or financial record-keeping.
+
+When you delete data, we follow a deletion process to make sure that your data is safely and completely removed from our servers or retained only in anonymized form. We try to ensure that our services protect information from accidental or malicious deletion. Because of this, there may be delays between when you delete something and when copies are deleted from our active and backup systems.
+
+You can read more about Google’s data retention periods, including how long it takes us to delete your information.
+
+COMPLIANCE & COOPERATION WITH REGULATORS
+
+We regularly review this Privacy Policy and make sure that we process your information in ways that comply with it.
+
+Data transfers
+
+We maintain servers around the world and your information may be processed on servers located outside of the country where you live. Data protection laws vary among countries, with some providing more protection than others. Regardless of where your information is processed, we apply the same protections described in this policy. We also comply with certain legal frameworks relating to the transfer of data.
+
+When we receive formal written complaints, we respond by contacting the person who made the complaint. We work with the appropriate regulatory authorities, including local data protection authorities, to resolve any complaints regarding the transfer of your data that we cannot resolve with you directly.
+
+ABOUT THIS POLICY
+When this policy applies
+
+This Privacy Policy applies to all of the services offered by Google LLC and its affiliates, including YouTube, Android, and services offered on third-party sites, such as advertising services. This Privacy Policy doesn’t apply to services that have separate privacy policies that do not incorporate this Privacy Policy.
+
+This Privacy Policy doesn’t apply to:
+
+The information practices of other companies and organizations that advertise our services
+Services offered by other companies or individuals, including products or sites they offer that may include Google services to which the policy applies, or products or sites displayed to you in search results, or linked from our services
+Changes to this policy
+
+We change this Privacy Policy from time to time. We will not reduce your rights under this Privacy Policy without your explicit consent. We always indicate the date the last changes were published and we offer access to archived versions for your review. If changes are significant, we’ll provide a more prominent notice (including, for certain services, email notification of Privacy Policy changes).
+
+RELATED PRIVACY PRACTICES
+Specific Google services
+
+The following privacy notices provide additional information about some Google services:
+
+Payments
+Fiber
+Gemini Apps
+Google Fi
+Google Workspace for Education
+Read Along
+YouTube Kids
+Google Accounts Managed with Family Link, for Children under 13 (or applicable age in your country)
+Family Link privacy guide for children & teens
+Voice and Audio Collection from Children’s Features on the Google Assistant
+
+If you’re a member of an organization that uses Google Workspace or Google Cloud Platform, learn how these services collect and use your personal information in the Google Cloud Privacy Notice.
+
+Other useful resources
+
+The following links highlight useful resources for you to learn more about our practices and privacy settings.
+
+Your Google Account is home to many of the settings you can use to manage your account
+Privacy Checkup guides you through key privacy settings for your Google Account
+Google’s safety center helps you learn more about our built-in security, privacy controls, and tools to help set digital ground rules for your family online
+Google’s Teen Privacy Guide provides answers to some of the top questions we get asked about privacy
+Privacy & Terms provides more context regarding this Privacy Policy and our Terms of Service
+Technologies includes more information about:
+How Google uses cookies
+Technologies used for Advertising
+How Google uses information from sites or apps that use our services
+Key terms
+Affiliates
+
+An affiliate is an entity that belongs to the Google group of companies, including the following companies that provide consumer services in the EU: Google Ireland Limited, Google Commerce Ltd, Google Payment Corp, and Google Dialer Inc. Learn more about the companies providing business services in the EU.
+
+Algorithm
+
+A process or set of rules followed by a computer in performing problem-solving operations.
+
+Application data cache
+
+An application data cache is a data repository on a device. It can, for example, enable a web application to run without an internet connection and improve the performance of the application by enabling faster loading of content.
+
+Browser web storage
+
+Browser web storage enables websites to store data in a browser on a device. When used in "local storage" mode, it enables data to be stored across sessions. This makes data retrievable even after a browser has been closed and reopened. One technology that facilitates web storage is HTML 5.
+
+Cookies
+
+A cookie is a small file containing a string of characters that is sent to your computer when you visit a website. When you visit the site again, the cookie allows that site to recognize your browser. Cookies may store user preferences and other information. You can configure your browser to refuse all cookies or to indicate when a cookie is being sent. However, some website features or services may not function properly without cookies. Learn more about how Google uses cookies and how Google uses data, including cookies, when you use our partners' sites or apps.
+
+Device
+
+A device is a computer that can be used to access Google services. For example, desktop computers, tablets, smart speakers, and smartphones are all considered devices.
+
+Google Account
+
+You may access some of our services by signing up for a Google Account and providing us with some personal information (typically your name, email address, and a password). This account information is used to authenticate you when you access Google services and protect your account from unauthorized access by others. You can edit or delete your account at any time through your Google Account settings.
+
+IP address
+
+Every device connected to the Internet is assigned a number known as an Internet protocol (IP) address. These numbers are usually assigned in geographic blocks. An IP address can often be used to identify the location from which a device is connecting to the Internet. Learn more about how we use location information.
+
+Non-personally identifiable information
+
+This is information that is recorded about users so that it no longer reflects or references an individually-identifiable user.
+
+Personal information
+
+This is information that you provide to us which personally identifies you, such as your name, email address, or billing information, or other data that can be reasonably linked to such information by Google, such as information we associate with your Google Account.
+
+Pixel tag
+
+A pixel tag is a type of technology placed on a website or within the body of an email for the purpose of tracking certain activity, such as views of a website or when an email is opened. Pixel tags are often used in combination with cookies.
+
+Referrer URL
+
+A Referrer URL (Uniform Resource Locator) is information transmitted to a destination webpage by a web browser, typically when you click a link to that page. The Referrer URL contains the URL of the last webpage the browser visited.
+
+Sensitive personal information
+
+This is a particular category of personal information relating to topics such as confidential medical facts, racial or ethnic origins, political or religious beliefs, or sexuality.
+
+Server logs
+
+Like most websites, our servers automatically record the page requests made when you visit our sites. These “server logs” typically include your web request, Internet Protocol address, browser type, browser language, the date and time of your request, and one or more cookies that may uniquely identify your browser.
+
+A typical log entry for a search for “cars” looks like this:
+
+123.45.67.89 - 25/Mar/2003 10:15:32 -
+http://www.google.com/search?q=cars -
+Chrome 112; OS X 10.15.7 -
+740674ce2123e969
+123.45.67.89 is the Internet Protocol address assigned to the user by the user’s ISP. Depending on the user’s service, a different address may be assigned to the user by their service provider each time they connect to the Internet.
+25/Mar/2003 10:15:32 is the date and time of the query.
+http://www.google.com/search?q=cars is the requested URL, including the search query.
+Chrome 112; OS X 10.15.7 is the browser and operating system being used.
+740674ce2123a969 is the unique cookie ID assigned to this particular computer the first time it visited Google. (Cookies can be deleted by users. If the user has deleted the cookie from the computer since the last time they’ve visited Google, then it will be the unique cookie ID assigned to their device the next time they visit Google from that particular device).
+Unique identifiers
+
+A unique identifier is a string of characters that can be used to uniquely identify a browser, app, or device. Different identifiers vary in how permanent they are, whether they can be reset by users, and how they can be accessed.
+
+Unique identifiers can be used for various purposes, including security and fraud detection, syncing services such as your email inbox, remembering your preferences, and providing personalized advertising. For example, unique identifiers stored in cookies help sites display content in your browser in your preferred language. You can configure your browser to refuse all cookies or to indicate when a cookie is being sent. Learn more about how Google uses cookies.
+
+On other platforms besides browsers, unique identifiers are used to recognize a specific device or app on that device. For example, a unique identifier such as the Advertising ID is used to provide relevant advertising on Android devices, and can be managed in your device’s settings. Unique identifiers may also be incorporated into a device by its manufacturer (sometimes called a universally unique ID or UUID), such as the IMEI-number of a mobile phone. For example, a device’s unique identifier can be used to customize our service to your device or analyze device issues related to our services.
+
+Additional Context
+Activity on Google Services
+
+For example, if you’re signed in to your Google Account and have Search Services History or Web & App Activity turned on, your activity data on Google sites, apps, and services that use those settings may be saved as history in your Google Account. Some activity may include information about the general area you were in when using the Google service. When you search for something using a general area, your search will use an area of at least 3 sq km, or expand until the area represents the locations of at least 1,000 people. This helps protect your privacy.
+
+In some cases, depending on your personalization settings like Personalized Recommendations in Search services, areas that you have searched from in the past may be used to estimate a relevant location for your search. For example, if you search for coffee shops while in Chelsea, Google might show results for Chelsea in future searches.
+
+You can view and control your Search Services History and Web & App Activity at My Activity.
+
+activity on third-party sites and apps that use our services
+
+Websites and apps that integrate Google services like ads and analytics share information with us.
+
+This information is shared regardless of which browser or browser mode you use. For example, although Incognito mode in Chrome can help keep your browsing private from other people who use your device, third party sites and apps that integrate our services still share information with Google when you visit them.
+
+You can learn more about some of the ways you can control the information that is shared when you visit or interact with sites and apps that use Google services.
+
+ads you’ll find most useful
+
+For example, if you watch videos about baking on YouTube, you may see more ads that relate to baking as you browse the web. We also may use your IP address to determine your approximate location, so that we can serve you ads for a nearby pizza delivery service if you search for “pizza.” Learn more about Google ads and why you may see particular ads.
+
+advertising and research services on their behalf
+
+For example, merchants may upload data from their loyalty-card programs so that they can include loyalty information in search or shopping results, or better understand the performance of their ad campaigns. We only provide aggregated reports to advertisers that don’t reveal information about individual people.
+
+Android device with Google apps
+
+Android devices with Google apps include devices sold by Google or one of our partners and include phones, cameras, vehicles, wearables, and televisions. These devices use Google Play Services and other pre-installed apps that include services like Gmail, Maps, your phone’s camera and phone dialer, text-to-speech conversion, keyboard input, and security features. Learn more about Google Play Services.
+
+deliver our services
+
+Examples of how we use your information to deliver our services include:
+
+We use the IP address assigned to your device to send you the data you requested, such as loading a YouTube video
+We use unique identifiers stored in cookies on your device to help us authenticate you as the person who should have access to your Google Account
+Photos and videos you upload to Google Photos are used to help you create albums, collages, and other creations that you can share.
+A flight confirmation email you receive may be used to create a “check-in” button that appears in your Gmail
+When you purchase services or physical goods from us, you may provide us information like your shipping address or delivery instructions. We use this information for things like processing, fulfilling, and delivering your order, and to provide support in connection with the product or service you purchase.
+detect abuse
+
+When we detect spam, malware, illegal content (including child sexual abuse and exploitation material), and other forms of abuse on our systems in violation of our policies, we may disable your account or take other appropriate action. In certain circumstances, we may also report the violation to appropriate authorities.
+
+devices
+
+For example, we can use information from your devices to help you decide which device you’d like to use to install an app or view a movie you buy from Google Play. We also use this information to help protect your account.
+
+ensure and improve
+
+For example, we analyze how people interact with advertising to improve the performance of our ads.
+
+ensure our services are working as intended
+
+For example, we continuously monitor our systems to look for problems. And if we find something wrong with a specific feature, reviewing activity information collected before the problem started allows us to fix things more quickly.
+
+Information about things near your device
+
+If you use Google’s Location services on Android, we can improve the performance of apps that rely on your location, like Google Maps. If you use Google’s Location services, your device sends information to Google about its location, sensors (like accelerometer), and nearby cell towers and Wi-Fi access points (like MAC address and signal strength). All these things help to determine your location. You can use your device settings to enable Google Location services. Learn more
+
+legal process, or enforceable governmental request
+
+Like other technology and communications companies, Google regularly receives requests from governments and courts around the world to disclose user data. Respect for the privacy and security of data you store with Google underpins our approach to complying with these legal requests. Our legal team reviews each and every request, regardless of type, and we frequently push back when a request appears to be overly broad or doesn’t follow the correct process. Learn more in our Transparency Report.
+
+make improvements
+
+For example, we use cookies to analyze how people interact with our services. And that analysis can help us build better products. For example, it may help us discover that it’s taking people too long to complete a certain task or that they have trouble finishing steps at all. We can then redesign that feature and improve the product for everyone.
+
+may link information
+
+For example, a customer may want to use its Google Analytics data to create more relevant ads, or to further analyze its traffic. Using our systems, data generated through Google Analytics can be linked by the Google Analytics customer and by Google to cookies and other technologies that are related to visits to other websites and apps. Learn more
+
+Media (like images, files, audio and video) from your interactions
+
+For example, you can interact with many Google services using your device’s microphone or camera, or by uploading multimedia like files, images, screenshots, audio, and video. When your device detects an audio activation command, like “Hey Google,” Google records your voice and audio plus a few seconds before the activation.
+
+our users
+
+For example, to prevent abuse and increase transparency and accountability over our online content moderation practices, Google shares data about requests for removal of content from our services with Lumen, which collects and analyzes these requests to facilitate research to help Internet users understand their rights. Learn more.
+
+partner with Google
+
+There are over 2 million non-Google websites and apps that partner with Google to show ads. Learn more
+
+payment information
+
+For example, if you add a credit card or other payment method to your Google Account, you can use it to buy things across our services, like apps in the Play Store. We may also ask for other information, like a business tax ID, to help process your payment. In some cases, we may also need to verify your identity and may ask you for information to do this.
+
+We may also use payment information to verify that you meet age requirements, if, for example, you enter an incorrect birthday indicating you’re not old enough to have a Google Account. Learn more
+
+Performance of their ad campaigns.
+
+Learn more about the technologies used for advertising.
+
+personalize content
+
+If you choose to allow certain services to process data from other services, including for features such as Personal Intelligence, the same data may be used to personalize your experience. For example, if you ask Search a question about a recent hotel booking, Search may use information about booking details from an email to help suggest things to do near your hotel. Learn more about Personal Intelligence.
+
+personalized ads
+
+You may also see personalized ads based on information from the advertiser. If you shopped on an advertiser's website, for example, they can use that visit information to show you ads. Learn more
+
+phone number
+
+If you add your phone number to your account, it can be used for different purposes across Google services, depending on your settings. For example, your phone number can be used to help you access your account if you forget your password, help people find and connect with you, and make the ads you see more relevant to you. Learn more
+
+Places you label like home and work
+
+You might choose to save places to your Google Account that are important to you, such as your home or your work. If you set your home or work addresses, they can be used to help you do things more easily, such as getting directions or finding results closer to your home or work, and for ads.
+
+You can edit or delete your home or work addresses anytime in your Google Account.
+
+protect against abuse
+
+For example, information about security threats can help us notify you if we think your account has been compromised (at which point we can help you take steps to protect your account).
+
+publicly accessible sources
+
+For example, we may collect information that’s publicly available online or from other public sources to help train Google’s AI models and build products and features like Google Translate, Gemini Apps, and Cloud AI capabilities. Or, if your business’s information appears on a website, we may index and display it on Google services.
+
+rely on cookies to function properly
+
+For example, we use a cookie called ‘lbcs’ that makes it possible for you to open many Google Docs in one browser. Blocking this cookie would prevent Google Docs from working as expected. Learn more
+
+safety and reliability
+
+Some examples of how we use your information to help keep our services safe and reliable include:
+
+Collecting and analyzing IP addresses and cookie data to protect against automated abuse. This abuse takes many forms, such as sending spam to Gmail users, stealing money from advertisers by fraudulently clicking on ads, or censoring content by launching a Distributed Denial of Service (DDoS) attack.
+The “last account activity” feature in Gmail can help you find out if and when someone accessed your email without your knowledge. This feature shows you information about recent activity in Gmail, such as the IP addresses that accessed your mail, the associated location, and the date and time of access. Learn more
+search results
+
+For example, when you’re signed in to your Google Account and have the Personalized Recommendations in Search services control enabled, you can get more relevant search results that are based on your previous searches and activity from other Google services. Learn more about Personalized Recommendations in Search services. You may also get customized search results even when you’re signed out. If you don’t want this level of search customization, you can search and browse privately or turn off signed-out search customization.
+
+sensitive categories
+
+When showing you personalized ads, we use topics that we think might be of interest to you based on your activity. For example, you may see ads for things like "Cooking and Recipes" or "Air Travel.” We don’t use topics or show personalized ads based on sensitive categories like race, religion, sexual orientation, or health. And we require the same from advertisers that use our services.
+
+Sensor data from your device
+
+Your device may have sensors that can be used to better understand your location and movement. For example, an accelerometer can be used to determine your speed and a gyroscope to figure out your direction of travel. Learn more about how we use location information.
+
+servers around the world
+
+For example, we operate data centers located around the world to help keep our products continuously available for users.
+
+services to make and receive calls or send and receive messages
+
+Examples of these services include:
+
+Google Voice, for making and receiving calls, sending text messages, and managing voicemail
+Google Meet, for making and receiving video calls
+Gmail, for sending and receiving emails
+Google Chat, for sending and receiving messages
+Google Duo, for making and receiving video calls and sending and receiving messages
+Google Fi, for a phone plan
+show trends
+
+When lots of people start searching for something, it can provide useful information about particular trends at that time. Google Trends samples Google web searches to estimate the popularity of searches over a certain period of time and shares those results publicly in aggregated terms.
+
+similar information related to your physical or mental health
+If you use fitness products and apps we offer, such as Fitbit, Pixel Watch, Nest or Google Fit, we collect data you provide, like your height and weight. We also collect information from these apps and devices, such as your sleep patterns, heart rate, skin temperature, calories burned, and steps taken.
+specific Google services
+
+For example, you can delete your blog from Blogger or a Google Site you own from Google Sites. You can also delete reviews you’ve left on apps, games, and other content in the Play Store.
+
+specific partners
+
+For example, we allow YouTube creators and advertisers to work with measurement companies to learn about the audience of their YouTube videos or ads, using cookies or similar technologies. Another example is merchants on our shopping pages, who use cookies to understand how many different people see their product listings. Learn more about these partners and how they use your information.
+
+synced with your Google Account
+
+Your Chrome browsing history is only saved to your account if you’ve enabled Chrome synchronization with your Google Account. Learn more
+
+the people who matter most to you online
+
+For example, when you type an address in the To, Cc, or Bcc field of an email you're composing, Gmail will suggest addresses based on the people you contact most frequently.
+
+the public
+
+For example, we process information about requests to remove content from our services under Google's content removal policies or applicable law to assess the request, and to ensure transparency, improve accountability and prevent abuse and fraud in these practices.
+
+third parties
+
+For example, we process your information to report use statistics to rights holders about how their content was used in our services. We may also process your information if people search for your name and we display search results for sites containing publicly available information about you.
+
+use the information we collect across our services
+
+Depending on your available settings, some examples of how we use the information we collect across our services include:
+
+When you’re signed in to your Google Account and search on Google, you can see search results from the public web, along with relevant information from the content you have in other Google products, like Gmail or Google Calendar. This can include things like the status of your upcoming flights, restaurant, and hotel reservations, or your photos.
+If you have communicated with someone via Gmail and want to add them to a Google Doc or an event in Google Calendar, Google makes it easy to do so by autocompleting their email address when you start to type in their name. This feature makes it easier to share things with people you know. Learn more
+The Google app can use data that you have stored in other Google products to show you personalized content, depending on your settings. For example, if you have searches stored in your Search Services History and have turned on your Personalized Recommendations in Search services setting, the Google app can show you news articles and other information about your interests, like sports scores, based on your activity.
+If you connect your Google Account to your Google Home, you can manage your information and get things done through the Google Assistant. For example, you can add events to your Google Calendar or get your schedule for the day, ask for status updates on your upcoming flight, or send information like driving directions to your phone. Learn more
+If you’re a user in the EU, the decisions you make on linking services will affect how certain Google services can use the data across our services.
+Views and interactions with content and ads
+
+For example, we collect information about views and interactions with ads so we can provide aggregated reports to advertisers, like telling them whether we served their ad on a page and whether the ad was likely seen by a viewer. We may also measure other interactions, such as how you move your mouse over an ad or if you interact with the page on which the ad appears.
+
+your activity on other sites and apps
+
+This activity might come from your use of Google services, like from syncing your account with Chrome or your visits to sites and apps that partner with Google. Many websites and apps partner with Google to improve their content and services. For example, a website might use our advertising services (like AdSense) or analytics tools (like Google Analytics), or it might embed other content (such as videos from YouTube). These services may share information about your activity with Google and, depending on your account settings and the products in use (for instance, when a partner uses Google Analytics in conjunction with our advertising services), this data may be associated with your personal information.
+
+Learn more about how Google uses data when you use our partners' sites or apps.
+
+close
+Opens in a new tab
+(opens a footnote)
+GoogleAbout GooglePrivacyTermsTransparency Center
+English
+Afrikaans
+Bahasa Indonesia
+Bahasa Melayu
+Català
+Čeština
+Dansk
+Deutsch
+Eesti
+English
+English (India)
+English (United Kingdom)
+Español
+Español (Latinoamérica)
+Euskara
+Filipino
+Français
+Français (Canada)
+Gaeilge
+Galego
+Hrvatski
+Isizulu
+Íslenska
+Italiano
+Kiswahili
+Latviešu
+Lietuvių
+Magyar
+Malti
+Nederlands
+Norsk
+Polski
+Português (Brasil)
+Português (Portugal)
+Română
+Slovenčina
+Slovenščina
+Srpski
+Suomi
+Svenska
+Tiếng Việt
+Türkçe
+অসমীয়া
+Ελληνικά
+Български
+ଓଡିଆ
+Русский
+Српски
+Українська
+‫עברית‬
+‫اردو‬
+‫العربية‬
+‫فارسی‬
+አማርኛ
+मराठी
+हिन्दी
+বাংলা
+ગુજરાતી
+தமிழ்
+తెలుగు
+ಕನ್ನಡ
+മലയാളം
+ไทย
+한국어
+中文 (香港)
+中文（简体中文）
+中文（繁體中文）
+日本語
+window.wiz_progress&&window.wiz_progress();window.wiz_tick&&window.wiz_tick('E05aSc');
+(function(){'use strict';var c=window,d=[];c.aft_counter=d;var e=[],f=0;function _recordIsAboveFold(a){if(!c._isLazyImage(a)&&!a.hasAttribute("data-noaft")&&a.src){var b=(c._isVisible||function(){})(c.document,a);a.setAttribute("data-atf",b);b&&(e.indexOf(a)!==-1||d.indexOf(a)!==-1||a.complete||d.push(a),a.hasAttribute("data-iml")&&(a=Number(a.getAttribute("data-iml")),a>f&&(f=a)))}} c.initAft=function(){f=0;e=Array.prototype.slice.call(document.getElementsByTagName("img")).filter(function(a){return!!a.getAttribute("data-iml")});[].forEach.call(document.getElementsByTagName("img"),function(a){try{_recordIsAboveFold(a)}catch(b){throw b.message=a.hasAttribute("data-iid")?b.message+"\nrecordIsAboveFold error for defer inlined image":b.message+("\nrecordIsAboveFold error for img element with <src: "+a.src+">"),b;}});if(d.length===0)c.onaft(f);e=[]};}).call(this); initAft()
+window.IJ_values = [[null,null,"",true,null,null,true,false],'0','https:\/\/policies.google.com\/', null ,'boq_identitypoliciesserver_20261120.00_p0','policies.google.com', 0.0 ,'','p_UwXXmyFOeF1sRyAFdVrg','zvSX3T7FzBUyFFG5qyPd1A','DEFAULT','', 2026.0 ,[2025,8,23],[["20250823","20240916","20230901"]],'https:\/\/policies.google.com\/privacy', null ,'ltr', false ,'https:\/\/accounts.google.com\/AccountChooser?continue\x3dhttps:\/\/policies.google.com\/privacy?hl%3Den-US\x26hl\x3den-US','https:\/\/accounts.google.com\/ServiceLogin?hl\x3den-US\x26continue\x3dhttps:\/\/policies.google.com\/privacy?hl%3Den-US','https:\/\/accounts.google.com\/SignOutOptions?continue\x3dhttps:\/\/policies.google.com\/privacy?hl%3Den-US', false ,'en-US', false , null , null , null ,'', false , false , false , false , false , true , true ,'en','en-US','en_US',[null,null,null,null,null,null,null,null,null,1], null , false , false , false , false ,'en','ZZ','hl\x3den-US','ZZ','ZZ','ZZ','com','', false ,[],[],'k8m9x4w2',[2026,10,16],'https:\/\/myaccount.google.com\/privacypolicy?hl\x3den-US',[["20261016","20261001","20260526","20260402","20250701","20240916","20240328","20240304","20240208","20240115","20231115","20231004","20230701","20221215","20221004","20220210","20210701","20210204","20200930","20200828","20200331","20191015","20190122","20180525","20171218","20171002","20170417","20170301","20160829","20160628","20160325","20150819","20150630","20150605","20150501","20150225","20141219","20140331","20131220","20130624","20120727","20120301","20111020","20101003","20090311","20090127","20080807","20051014","20040701","20010104","19990920","19990609"]],'en_US','en-US', false , null , false , true ,'https:\/\/www.gstatic.com\/_\/boq-identity\/_\/r\/',[2023,8,9], false ,[2024,12,17],[2024,12,17],[["20241217"]],[["20230809","20230314"]], false ,'4te5pybt',[2026,7,30],'4te5pybt',[2026,7,30],'https:\/\/myaccount.google.com\/termsofservice?hl\x3den-US',[["20260730","20240522","20220105","20200331","20171025","20140430","20131111","20120301","20070416","20051105","20030329","20021108","20020906","20011217","20010915","20010606","20010421","20000427","20000425","19990921","19990920"]],'gdu','', null ,'unknown', false , null ,'ZZ',];
+if (window['_wjdc']) {const wjd = {}; window['_wjdc'](wjd); delete window['_wjdc'];}
+window.wiz_progress&&window.wiz_progress();window.stopScanForCss&&window.stopScanForCss(); ccTick('bl');
+this.gbar_=this.gbar_||{};(function(_){var window=this; try{ if(_.Mi){var Si=_.Mi,Ti;if(Ti=_.K(Si.o,3)){let a=_.wg(Ti);for(let b=0;b<a.length;b++){var Ui=a[b];if(_.hh&&Ui.dataset)Ui.dataset.ogpc="";else{if(/-[a-z]/.test("ogpc"))throw Error("y");Ui.setAttribute("data-"+_.fh("ogpc"),"")}}}_.Gi(Si,!!Si.j&&Si.j.v(),!1)}; }catch(e){_._DumpException(e)} try{ _.Vi=function(a){var b=_.Td("script",a.ownerDocument);b&&a.setAttribute("nonce",b)};_.Wi=function(a,b){a.src=_.Rd(b);_.Vi(a)};_.Xi=function(a){if(!a)return null;a=_.K(a,4);var b;a===null||a===void 0?b=null:b=_.Qd(a);return b};_.Yi=function(a,b){a=_.rb(a.ka,b);return a!=null&&_.ya(a)||Array.isArray(a)};_.Zi=class extends _.P{constructor(a){super(a)}}; }catch(e){_._DumpException(e)} try{ var aj=function(a,b){a<b?$i(a+1,b):_.Sc.log(Error("ba`"+a+"`"+b))},$i=function(a,b){if(bj){let c=_.ve("SCRIPT");c.async=!0;c.type="text/javascript";c.charset="UTF-8";_.Wi(c,bj);c.onerror=_.Jb(aj,a,b,c.src);_.ne("HEAD")[0].appendChild(c)}},cj=class extends _.P{constructor(a){super(a)}};var dj=_.G(_.bd,cj,17)||new cj,ej,bj=(ej=_.G(dj,_.Zi,1))?_.Xi(ej):null,fj,gj=(fj=_.G(dj,_.Zi,2))?_.Xi(fj):null,hj=function(){$i(1,2);if(gj){let a=_.ve("LINK");a.setAttribute("type","text/css");a.href=_.Rd(gj).toString();a.rel="stylesheet";let b=_.Td("style",document);b&&a.setAttribute("nonce",b);_.ne("HEAD")[0].appendChild(a)}};(function(){var a=_.Wd();if(_.R(a,18))hj();else{let b=_.ge(a,19)||0;window.addEventListener("load",()=>{window.setTimeout(hj,b)})}})(); }catch(e){_._DumpException(e)} })(this.gbar_); // Google Inc.
+Privacy Policy
+Main menu
+Google apps

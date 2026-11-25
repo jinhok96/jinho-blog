@@ -2,6 +2,144 @@
 
 최신 세션이 위에 오도록 기록합니다. 형식: 날짜 · 한 일 · 측정값(있으면) · 다음 할 일.
 
+## 2026-11-26 · 세션 105 (정기 실행, 개선 세션): V4·V5·V6 판단 불가로 닫고 V9 판정(색인 요청 효과 확인 안 됨) + 콘텐츠 정리 9번 `windows-10-esu-extended` 전환(색인에서 빠진 글) + `google-gmail-photos-ads` Gemini History 개정 반영 + Spotify 칼럼 → 상시 글 링크
+
+세션 시각: 2026-11-26 02:15 KST(목) → `session_start.py` 판정 개선 세션(이번 주 새 글 2/2편). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-8tohpc` = `origin/main` 11196da. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-25T17:15:43Z, batch 26건 성공·버전 `versions-after.json`과 일치, DB 문서 791개, 별도 커밋). `pnpm install --frozen-lockfile` 뒤 점검(첫 `next build` SecurityFatalError 재실행 통과, 설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림). 차트용 `/tmp/charts` 가상환경(matplotlib·Pillow·numpy).
+
+**지표 (`daily_metrics.py` 회차 2026-11-25T17:15:43Z, 2026-10-28 ~ 2026-11-25, 이전 회차 2026-11-24T17:16:33Z 대비)**
+
+- 노출 845 → **890**, 클릭 12 → **13**, CTR 1.5%, 평균 순위 27.7 → **28.1** (글별 노출 상위 8: `turn-off-ai-in-chrome` 160·37.3위·클릭 2 / `free-offline-ai-tools` 136·19.2위·클릭 6 / `windows-11-24h2-end-of-support` 80·61.1위 / `merge-pdf-files-free` 62·58.2위 / `microsoft-end-of-support-dates` 58·20.9위 / `image-to-text-offline-free` 53·20.6위·클릭 2 / `spotify-family-qr-code-verification` 33·46.2위 / `iphone-duo-sold-out` 31·6.9위. 지운 URL `free-offline-text-to-speech` 50·11.4위 / `convert-heic-to-jpg` 1·1.0위)
+- 주간 검색 클릭 (월~일 확정 주): 10-12~18 5 → 10-19~25 5 → 10-26~11-01 5 → 11-02~08 4 → 11-09~15 2 → 11-16~22 2 · 11-23~29 **2** (미확정, 노출 **145**)
+- sitemap 마지막 다운로드: `rss.xml` 11-22 19:07 → **11-24 21:23**, `sitemap.xml` 11-23 20:32 UTC
+- URL 검사: 색인 18/59 → **18/60**, Crawled - currently not indexed 1 → 1 · Discovered 22 → **24** · URL is unknown 18 → **17**, 미색인 42편 중 Google이 본 링크가 있는 글 34 → 34. 가장 최근 크롤링(색인 페이지) 11-22 18:06 UTC (`image-to-text-offline-free`). 이전 회차 뒤 새로 크롤링된 페이지: 없음
+- 허브 (5편, `hub: true`): `best-free-pdf-tools` URL is unknown → **Discovered**(rss.xml·sitemap.xml)·크롤링 기록 없음 / `free-image-converter-photo-tools` URL is unknown → **Discovered**(rss.xml·sitemap.xml)·크롤링 기록 없음 / `free-offline-ai-tools` 색인(sitemap.xml)·마지막 크롤링 11-21 15:48 UTC / `microsoft-end-of-support-dates` 색인(rss.xml·sitemap.xml)·마지막 크롤링 11-22 00:35 UTC / `turn-off-ai-features` Discovered(sitemap.xml)·크롤링 기록 없음
+- 성과 검증 (`traffic-playbook.md` 검증 기록 중 판정 `-`인 행, 기준일 2026-11-26 KST):
+  - V4 `spotify-family-qr-code-verification` (지표 ctr, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/spotify-family-qr-code-verification (web, 지표 ctr)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+
+    | 구분 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | 대상 전 | 0 | 189 | 0.0% | 14.7 |
+    | 대상 후 | 0 | 40 | 0.0% | 43.5 |
+    | 대조군 전 | 10 | 452 | 2.2% | 25.6 |
+    | 대조군 후 | 13 | 787 | 1.7% | 27.2 |
+
+    **판정: 보류** — 노출 부족 (전 189 / 후 40, 기준 100회 이상)
+
+    ### 대상 글 검색어 (전, 상위 8)
+
+    | 검색어 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | spotify family qr code | 0 | 2 | 0.0% | 25.0 |
+    | spotify implements qr code verification to combat family plan sharing abuse | 0 | 20 | 0.0% | 5.6 |
+    | spotify qr code | 0 | 16 | 0.0% | 63.6 |
+    | spotify qr code family | 0 | 1 | 0.0% | 26.0 |
+    | spotify qr codes | 0 | 1 | 0.0% | 74.0 |
+    | spotify strengthens household residency requirements through dynamic qr code verification for family plan | 0 | 36 | 0.0% | 4.5 |
+    | spotify's family plan qr code could cost you premium access | 0 | 55 | 0.0% | 5.7 |
+    | spotify通过动态qr码验证强化家庭计划成员同住地址要求 | 0 | 4 | 0.0% | 10.0 |
+
+    ### 대상 글 검색어 (후, 상위 8)
+
+    | 검색어 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | qr code spotify | 0 | 1 | 0.0% | 74.0 |
+    | spotify family plan address verification | 0 | 1 | 0.0% | 59.0 |
+    | spotify family plan qr code | 0 | 1 | 0.0% | 74.0 |
+    | spotify qr | 0 | 1 | 0.0% | 7.0 |
+    | spotify qr code | 0 | 14 | 0.0% | 67.8 |
+    | spotify qr code scanner | 0 | 1 | 0.0% | 98.0 |
+    | spotify qr codes | 0 | 1 | 0.0% | 62.0 |
+    | spotify qr kod okutma | 0 | 1 | 0.0% | 10.0 |
+  - V5 `image-to-text-offline-free` (지표 position, 배포 2026-10-25, 판단 시점 2026-11-22) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/image-to-text-offline-free (web, 지표 position)
+
+    - 변경일 2026-10-25, 전 2026-09-27 ~ 2026-10-24, 후 2026-10-26 ~ 2026-11-22 (각 28일, 확정 데이터)
+
+    | 구분 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | 대상 전 | 1 | 74 | 1.4% | 14.4 |
+    | 대상 후 | 2 | 64 | 3.1% | 20.3 |
+    | 대조군 전 | 9 | 567 | 1.6% | 23.5 |
+    | 대조군 후 | 11 | 763 | 1.4% | 28.6 |
+
+    **판정: 보류** — 노출 부족 (전 74 / 후 64, 기준 100회 이상)
+
+    ### 대상 글 검색어 (전, 상위 5)
+
+    | 검색어 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | free ocr offline | 0 | 1 | 0.0% | 7.0 |
+    | free offline ocr | 0 | 2 | 0.0% | 8.0 |
+    | image to text offline | 0 | 2 | 0.0% | 7.5 |
+    | ocr without machine learning | 0 | 2 | 0.0% | 73.5 |
+    | offline ocr tools | 0 | 2 | 0.0% | 5.0 |
+
+    ### 대상 글 검색어 (후, 상위 5)
+
+    | 검색어 | 클릭 | 노출 | CTR | 평균 순위 |
+    | --- | --- | --- | --- | --- |
+    | free ocr offline | 0 | 1 | 0.0% | 7.0 |
+    | image to text converter offline | 0 | 1 | 0.0% | 5.0 |
+    | ocr offline | 0 | 1 | 0.0% | 18.0 |
+    | ocr without machine learning | 0 | 1 | 0.0% | 77.0 |
+    | offline ocr | 0 | 5 | 0.0% | 46.2 |
+  - 수동 판정 필요: V9 (판단 시점 2026-11-24)
+  - V6 `check-if-image-is-ai-generated` (지표 position, 배포 2026-10-29, 판단 시점 2026-11-26) `gsc_report.py --compare` 출력:
+
+    ## 개선 효과 판정: /posts/check-if-image-is-ai-generated (web, 지표 position)
+
+    - 변경일 2026-10-29, 전 2026-10-01 ~ 2026-10-28, 후 2026-10-30 ~ 2026-11-26 (각 28일, 확정 데이터)
+    - 판단 시점 전: 2026-11-29 이후 다시 실행
+  - 판단 시점 전: V8 12-03
+- `link_audit.py --only-problems`: 1건 (뉴스 칼럼 → 상시 글 링크 없음 1건: `spotify-family-qr-code-verification` (phones-subscriptions))
+- **AdSense 재신청 조건**: 운영 46일/92일(2027-01-11) · 색인율 30%(18/60, 목표 70%) · 주간 클릭 증가 0주/4주 (월~일 확정 주: 10-19~10-25 5 → 10-26~11-01 5 → 11-02~11-08 4 → 11-09~11-15 2 → 11-16~11-22 2) → 미충족
+
+**해석**
+
+- 28일 노출 845 → 890·클릭 12 → 13은 창 이동 범위. 11-23~29 주(미확정) 클릭 2·노출 145 → 이미 직전 확정 주(2)와 같아 조건 ③이 1주로 바뀔 수 있는지는 11-30 이후 확정 데이터로
+- 이전 회차 뒤 새 크롤링 없음. `rss.xml`을 11-24 21:23에 다시 받아 감(이틀 간격 유지). 허브 `best-free-pdf-tools`·`free-image-converter-photo-tools`가 URL is unknown → Discovered로 되돌아옴(회차마다 흔들리는 응답, 세션 104 해석과 같음)
+- **V4·V5·V6 → `판단 불가`(구조적)로 닫음**: 세 글 모두 발행 뒤 28일 안에 바꾼 변경이라(V4 발행 6일 뒤·V5 11일 뒤·V6 18일 뒤) 전 기간 노출이 고정(189·74·42)되거나 후 기간이 고정돼 다시 실행해도 같음(traffic-playbook 절차 2, V1~V3와 같은 구조). V6은 판단 시점 당일이라 28일 창 대신 확정 데이터 24일 창(`--window 24`)으로 미리 계산(전 42 / 후 0) — 전 기간 노출이 28일 창에서도 같아 결과가 바뀔 수 없음. **`check-if-image-is-ai-generated`는 색인 상태인데 10-30 이후 검색 노출 0**(마지막 크롤링 10-11) → 원인 찾기 후보
+- **V9 판정 → '요청 효과 확인 안 됨'**: 요청 + 7일 안에 허브 4편 중 `microsoft-end-of-support-dates`만 크롤링(11-22 00:35) → 색인. 그런데 같은 크롤링 묶음(11-21 18:04 ~ 11-22 03:40)에서 **요청하지 않은 `convert-publisher-file-to-pdf`(11-18 발행)도 크롤링 → 색인**됐고 두 글 모두 11-18 회차에 RSS·sitemap으로 함께 발견됨 → 요청 덕분이라고 볼 수 없음. 나머지 허브 3편(10-28~11-16 발견)은 크롤링 없음. 크롤링된 새 글은 2/2 색인 → 글 품질이 막는 신호는 아님. 결론: 정체의 주원인은 크롤링 수요(새로 발견된 글은 며칠 안에 크롤링되기도 하지만 오래 발견된 글은 요청해도 안 옴) → **색인 요청을 늘리지 않음**(README 결정 그대로, 바꾸려면 사용자 결정), 외부 신호는 11-09 결정으로 제외 → 사이트 안 개선만
+- **같은 묶음의 ② 신호**: 10-12부터 색인돼 있던 `windows-10-esu-extended`가 11-21 20:22 재크롤링 뒤 `Crawled - currently not indexed`로 빠짐(세션 103은 '처음 나온 상태'로만 적었는데 `first-seen.json` indexedAt 10-12로 색인됐다가 빠진 것을 확인). 색인 18편 = 17 − 1(이 글) + 2(새 허브·Publisher 글). 10-26~11-22 노출 24·클릭 2(CTR 8.3%) — 사이트 클릭의 한 축이었음 → 콘텐츠 정리 9번으로 올려 이번 세션에 전환
+
+**고른 작업**: 0 콘텐츠 정리 — 7번은 모두 12월 일정 뒤, **새 9번(색인에서 빠진 `windows-10-esu-extended`)** 을 이번 세션에 처리. 이어서 주간 점검(11-22) 우선순위 1(Gemini History 나머지 중 `google-gmail-photos-ads`)과 3(V4 판정 뒤 Spotify → 상시 글 링크, link_audit 개선 세션 2번). V9 판정으로 허브 갱신 대기는 풀렸지만 세션당 2~3개 규칙으로 다음 세션에
+
+**한 일 (개선 세션, 쓴 스킬: `copy-editing` — 바꾼 문장 AI-Tell Check로 콜론 드러내기 4곳·한 문장에 이유를 몰아넣은 문장 1곳 나눔 / `seo-audit` — 전환 글 On-Page(제목 58자·주 검색어 앞쪽·H1 일치, 설명 155자에 주 검색어, H2 6개 설명형·H3 순서, 첫 100단어에 주 검색어, alt 4장 설명형·WebP·의미 있는 파일 이름, 내부 링크 7편·설명형 앵커, 같은 주제 글 없음 — 허브는 날짜 모음이라 등록 방법과 겹치지 않음) → 지적 없음. searchfit-seo 스킬은 이번 세션에 없음)**
+
+| # | 순서 | 대상 | 바꾼 내용 | 검증 기록 |
+| --- | --- | --- | --- | --- |
+| 1 | 0 콘텐츠 정리 9번 (전환) | `windows-10-esu-extended` (Crawled - currently not indexed) | 제목 `Windows 10 ESU Now Runs to October 2027` → **`How to Enroll in Windows 10 ESU When Enroll Now Is Missing`**(58자), 설명 155자, 주 검색어 `windows 10 esu enroll option missing`(자동완성 Google·Bing·YouTube 3곳 — 하위 `… enrollment not showing`·`… free`·`… 2027`도 3곳). 첫 문단을 '지금 등록 가능·무료·링크가 없으면 요건 미충족'으로, 'What changed and when' 절 삭제(소식은 How we checked로), **빌드 표 11월 기준**(≥19045.7846 KB5131096, 밀림 구간 6575~7811 — 10-26 OOB 7811 반영, 19044 = 21H2 안내), Enroll now 누락 절을 등록 절 앞으로 옮기고 7단계로(새로 보인 요건 '이미 ESU 라이선스 있는 기기 제외', 준비 패키지 KB5126256은 등록을 하지 않음), FAQ 'Is it too late…'·'business'(소비자 등록 중지 규칙), How we checked 새로. Microsoft 1차 출처 13쪽 + Pixel Watch 공지 Chromium 재확인(`tests/windows-10-esu-extended/source-*-2026-11-25.txt`), 본문 그래픽 0 → **3장**(빌드 추이 — release information 사본을 `charts.py`가 직접 읽음, Enroll now 확인 순서, 미국 vs 유럽 등록 방법). 내부 링크 `office-2021-end-of-support` 추가. 대표 이미지 그대로. `updatedAt` 2026-11-25T19:00Z | **V10** (색인 회복 여부, 판단 12-24) |
+| 2 | 주간 점검 우선순위 1 (정확성) | `google-gmail-photos-ads` (Discovered) | `source_diff.cjs --slug … --save`: 출처 15개 중 내용 변화 4개(Gemini 13278892·Privacy Hub 11-24판·16836988, Search 16859283). **Keep Activity → History**(경로 Settings > History, On > Turn off and delete history, 꺼도 **약 2개월** 보관 — 이전 72시간, 꺼지면 쓸 수 있는 앱은 Device assistance·Notebook·Messages·Phone·WhatsApp뿐), **Search 연결 앱에 Google Drive·Google Wallet 추가 + Gemini chats 'coming soon'**(Calendar·Drive는 미국 영어만, Photos·Wallet 일부 지역 불가). 비교 표 3칸·Search 단계 2·Gemini 절 머리말·단계 3·5·Deleting 줄·연결 글 문장·추천·이용 조건·How we checked 11-25 줄, 16598406이 아직 'Keep Activity'라 옛 이름 한 문장. 그림 2장 다시 그림(`charts_gemini.py`) + alt 2곳. `updatedAt` 2026-11-25T19:10Z | - (정확성 갱신) |
+| 3 | 개선 세션 2번 (link_audit, V4 닫은 뒤) | `spotify-family-qr-code-verification` → `iphone-duo-sold-out` | 마지막 문단에 1문장: AppleCare One Family $49.99/월·Family Sharing 최대 6명(apple.com/applecare 11-25 Chromium 확인) → iPhone Duo AppleCare+ 가격 글. `updatedAt` 그대로 | - (역링크 1문장) |
+
+- 판정 기록: traffic-playbook V4·V5·V6 `판단 불가`(구조적), V9 '요청 효과 확인 안 됨'(판정·결론), 노하우 9 상태 칸에 V9 추가. 새 행 V10
+- 검증: `prepublish_check.py --slug windows-10-esu-extended --build` **FAIL 0** (PASS 69·WARN 5 — 첫 `next build` SecurityFatalError 재실행 통과 / 제목 58자(60 안) / 주 검색어의 'option'이 제목에 없음(Microsoft 화면 이름 'Enroll now'를 씀) / slug의 'extended'(주소는 바꾸지 않음) / em dash 1개는 Microsoft 인용 안). lint·test(38파일 309개)·build 통과, 빌드 HTML 제목·BlogPosting/BreadcrumbList·h1 1. `--slug google-gmail-photos-ads` FAIL 0(WARN: slug 단어·빌드 전). 빌드 HTML에서 `google-gmail-photos-ads` 'History'·Spotify 글 새 링크 확인. `keyword_trends.py`: 새 주 검색어 0.0
+- `link_audit.py --only-problems`: 1건 → **0건**. 중간에 ESU 글에서 Pixel Watch 문장을 뺐더니 `pixel-watch-safety-signal-ending` 받는 링크 2 → 1이 떠서, 공지(Community thread 471984501)를 다시 열어 확인하고 문장을 되살림
+
+**알게 된 것**
+
+- **색인됐던 글도 재크롤링 뒤 빠질 수 있음**: `windows-10-esu-extended`는 색인 40일 뒤 다시 크롤링되자 `Crawled - currently not indexed`. 날짜가 지난 소식 중심 글(제목 'Now Runs to…', '10-13에 끝나지 않는다')이 같은 주제를 다룬 허브 발행 뒤 다시 평가된 경우 → clusters.md 콘텐츠 정리 규칙에 '색인됐다가 빠진 글은 목록에 올려 다음 개선 세션 먼저' 추가. 회복 여부는 V10
+- **색인 요청은 크롤링 순서를 바꾸지 못했음(V9)**: 같은 날 발견된 새 글 2편이 요청 여부와 상관없이 함께 크롤링 → 크롤링 수요는 '최근 발견' 순서가 큼(해석). 새 글·갱신 글이 RSS·sitemap에 새로 오른 직후가 크롤링 기회
+- **`source_diff.cjs --save`는 curl 원문 추출로 저장한 사본도 렌더링 본문으로 다시 받아 '바뀜'으로 잡음**: `blog-gmail-2017-update-note`(접힌 'Update' 문단은 원문 HTML에만 있음) → 이번 세션은 새 사본을 curl 추출본으로 바꿈. 머리말 셋째 줄이 '(curl 원문 HTML에서 … 추출)'인 사본은 diff 결과를 원문 grep으로 다시 확인
+- **확정 데이터가 덜 쌓인 판단 시점에도 결과가 고정인지 미리 볼 수 있음**: `--window`를 확정 범위 안으로 줄이면(V6 24일) 전 기간 노출이 글 발행일 때문에 고정인지 확인 가능 → 구조적 판단 불가 행을 기다리지 않고 닫음
+- Microsoft release information 표에는 KB 문서 목록에 없던 OOB(10-26 KB5134125 19045.7811)도 있음 → 빌드 구간은 release information 표로 정함
+
+**다음 할 일**
+
+- **사용자: AdSense 재신청은 조건 충족 전까지 하지 않음** (현재 운영 46일·색인율 30%·주간 클릭 증가 0주). 그 밖의 사용자 할 일 없음 — V9 결과 색인 요청의 효과가 확인되지 않아 '요청하지 않음' 방침을 그대로 두는 것을 권함(바꾸려면 사용자 결정)
+- Claude(11-29 일 개선 세션, 주간 SEO 점검 먼저): **허브 갱신(V9 대기 해제)** — `turn-off-ai-features`(Gemini History·Connected Apps 90), `free-image-converter-photo-tools`(회전·소리 빼기 절 + `updatedAt`). Gemini History 나머지 `chrome-autofill-settings`(3곳 + 지난 'Chrome 158' 문장) → `gemini-gems-to-skills`(V8 12-03 판정에 표시). V1~V3가 닫힌 글 대표 이미지(`turn-off-ai-in-chrome` 먼저 + Chrome 158 재확인 + AI Mode 절)
+- Claude: V4·V5가 닫혀 가능해진 것 — `spotify-family-qr-code-verification` 대표 이미지·약관 주소(Paid Subscription Terms 이동), `image-to-text-offline-free` 캡처 도구 문서 주소. **`check-if-image-is-ai-generated` 색인됐는데 10-30 이후 노출 0** 원인 찾기(검색어·재크롤링·제목)
+- Claude: `windows-10-esu-extended`의 재크롤링·색인 상태를 매 지표 블록에서 확인(V10 12-24). **12-08 월간 보안 업데이트 뒤** 이 글 빌드 표·그래픽(release information 사본 새로 받고 `charts.py` 다시 실행), 허브 '11월 업데이트' 절, `office-2021-end-of-support` 후속. 콘텐츠 정리 7번 12월 일정 뒤(12-01 remove.bg·12-12 Pixel Watch·12-21 Siri 합의·12-22 Arc)
+- Claude: `google-gmail-photos-ads` — Search의 Gemini chats 연결이 'coming soon'에서 바뀌면 반영
+- Claude: 발행 60편 (허브 5개), 상시 글 전환 5편(누적), 이번 주 새 글 2/2편
+- 대시보드: 세션 시작 때 갱신(회차 2026-11-25T17:15:43Z, `stats` 13 + `history` 13, DB 문서 791개), 별도 커밋. 이번 세션 변경은 다음 회차에 반영. 비로그인용 `data.js`는 정기 세션 규칙대로 미갱신
+- 배포: 이 세션 PR (CI 통과 후 머지)
+
 ## 2026-11-25 · 세션 104 (정기 실행, 일반 세션): 영상에서 소리 빼기 — 같은 가로 MP4·iPhone식 세로 .mov를 무료 도구 6개·7가지 설정으로 처리해 프레임·태그·회전 대조
 
 세션 시각: 2026-11-25 02:16 KST(수) → `session_start.py` 판정 일반 세션(이번 주 새 글 1/2편, 뉴스 칼럼 대체 가능). 열린 PR 없음. 작업 브랜치 `claude/serene-ptolemy-6jncvx` = `origin/main` 4d72ab6. 대시보드 지표는 세션 시작 때 `daily_metrics.py` 3단계로 갱신(회차 2026-11-24T17:16:33Z, batch 26건 성공·버전 `versions-after.json`과 일치, DB 문서 778개, 별도 커밋). 대표 이미지 엔진 준비는 `session_start.py`가 백그라운드로 끝냄. 의존성이 없어 첫 `prepublish_check.py --build`가 lint·test·build FAIL → `pnpm install --frozen-lockfile` 뒤 통과(설치가 바꾼 `packages/nextjs-routes/dist/cli.js`는 되돌림). 차트용 `/tmp/charts` 가상환경(matplotlib·Pillow·numpy).

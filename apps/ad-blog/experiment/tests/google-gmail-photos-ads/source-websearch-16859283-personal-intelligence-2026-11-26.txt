@@ -1,0 +1,458 @@
+# 가져온 시각: 2026-11-25T17:45:37.336Z
+# 원본: https://support.google.com/websearch/answer/16859283?hl=en
+Connect your Google content apps to get a Search services experience that's tailored to you - Computer - Google Search Help
+https://support.google.com/websearch/answer/16859283?hl=en#zippy=%2Csupported-countries-territories%2Cturn-on-google-workspace-smart-features-to-personalize-your-response%2Cturn-on-gemini-history-to-personalize-your-search-response%2Ci-dont-want-you-to-use-my-data-from-connected-google-content-apps-to-train-your-ai-models-how-can-i-control-my-data%2Cif-i-connect-my-content-apps-will-my-gmail-inbox-google-photos-library-or-gemini-chats-coming-soon-be-used-to-serve-ads%2Cif-i-connect-my-content-apps-will-you-share-my-gmail-inbox-google-photos-library-or-gemini-chats-coming-soon-with-advertisers
+
+Connect your Google content apps to get a Search services experience that's tailored to you
+Important: We’re currently updating settings for Google Search services, which include Search, Maps, Shopping, Flights, Hotels, Translate and News. The settings described in this article are being updated so may not match your current experience. Learn more about the new Search services settings.
+
+You can connect Search services to certain Google content apps, like Workspace (currently Gmail, Google Calendar, and Google Drive, with other Workspace apps coming soon), Google Photos, Google Wallet, and Gemini Apps (coming soon), to make Search services even more helpful to you. If you choose to connect these Google content apps, you can tap into your own personal context and insights to get AI Mode or Ask Maps responses that are tailored to you.
+
+Note: Connecting your Google content apps means that all Search services will be permitted to access Workspace (currently Gmail, Google Calendar, and Google Drive), Google Photos, Google Wallet, and Gemini Apps (coming soon). Search services include Google Search (incl. AI Mode, Discover), Maps (incl. Ask Maps), Shopping, Flights, Hotel, Translate, and News.
+
+Personal Intelligence in Search
+
+You can enhance personalization in Search with Personal Intelligence by connecting the dots across your Google content apps. When you choose to securely connect your content apps, AI Mode can reference insights from your emails, photos, transactions, and Gemini chats (coming soon) to provide responses that are specific to you, like using past restaurant reservations to personalize your responses when you ask for new restaurant recommendations.
+
+Personal Intelligence might not always get personalization right and can make mistakes. If you experience something wrong, you can correct it and clarify what you’re looking for with a follow-up in AI Mode.
+
+Availability
+Connecting your Google content apps is available to users 18 and above in the following countries, territories, and languages:
+Supported countries & territories
+
+Americas
+
+Antigua and Barbuda
+Argentina
+Aruba
+Bahamas
+Barbados
+Belize
+Bermuda
+Bolivia
+Brazil
+British Virgin Islands
+Canada
+Cayman Islands
+Chile
+Colombia
+Costa Rica
+Curaçao
+Dominica
+Dominican Republic
+Ecuador
+El Salvador
+Falkland Islands (Islas Malvinas)
+Grenada
+Guatemala
+Guyana
+Haiti
+Honduras
+Jamaica
+	
+Mexico
+Montserrat
+Nicaragua
+Panama
+Paraguay
+Peru
+Puerto Rico
+St. Kitts and Nevis
+St. Lucia
+St. Maarten
+St. Vincent and the Grenadines
+Suriname
+Trinidad and Tobago
+Turks and Caicos Islands
+U.S. Minor Outlying Islands
+U.S. Virgin Islands
+United States
+Uruguay
+Venezuela
+
+Asia-Pacific
+
+Afghanistan
+American Samoa
+Australia
+Antarctica
+Bangladesh
+Bhutan
+Brunei
+Cambodia
+Caribbean Netherlands
+Christmas Island
+Cocos (Keeling) Islands
+Cook Islands
+Fiji
+Guam
+Hong Kong
+Heard Island and McDonald Islands
+Indonesia
+India
+Japan
+Kiribati
+Laos
+Macao
+Malaysia
+Maldives
+Marshall Islands
+Micronesia
+Mongolia
+Myanmar (Burma)
+	
+Nauru
+Nepal
+New Zealand
+Niue
+Norfolk Island
+Northern Mariana Islands
+Pakistan
+Palau
+Papua New Guinea
+Philippines
+Pitcairn Islands
+Samoa
+Singapore
+Solomon Islands
+South Georgia and the South Sandwich Islands
+South Korea
+Sri Lanka
+St. Helena, Ascension and Tristan da Cunha
+Taiwan
+Thailand
+Timor-Leste
+Tokelau
+Tonga
+Tuvalu
+Vanuatu
+Vietnam
+
+Europe, the Middle East & Africa
+
+Albania
+Algeria
+Angola
+Anguilla
+Armenia
+Azerbaijan
+Bahrain
+Belarus
+Benin
+Bosnia and Herzegovina
+Botswana
+Bouvet Island
+British Indian Ocean Territory
+Burkina Faso
+Burundi
+Cameroon
+Cape Verde
+Central African Republic
+Chad
+Comoros
+Congo (DRC)
+Congo (Republic)
+Côte d'Ivoire
+Djibouti
+Egypt
+Equatorial Guinea
+Eritrea
+Eswatini
+Ethiopia
+Faroe Islands
+Gabon
+Gambia
+Georgia
+Ghana
+Greenland
+Guinea
+Guinea-Bissau
+Iraq
+Israel
+Jordan
+Kazakhstan
+Kenya
+Kosovo
+Kuwait
+Kyrgyzstan
+Lebanon
+Lesotho
+Liberia
+Libya
+	
+Madagascar
+Malawi
+Mali
+Mauritania
+Mauritius
+Moldova
+Montenegro
+Morocco
+Mozambique
+Namibia
+Niger
+North Macedonia
+Oman
+Palestine
+Qatar
+Russia
+Rwanda
+São Tomé and Príncipe
+Saudi Arabia
+Senegal
+Serbia
+Seychelles
+Sierra Leone
+Somalia
+South Africa
+South Sudan
+Sudan
+Syria
+Tajikistan
+Tanzania
+Togo
+Tunisia
+Türkiye
+Turkmenistan
+Uganda
+Ukraine
+United Arab Emirates
+Uzbekistan
+Western Sahara
+Yemen
+Zambia
+Zimbabwe
+Supported languages
+Afrikaans
+Akan
+Albanian
+Amharic
+Arabic
+Armenian
+Azerbaijani
+Basque
+Belarusian
+Bengali
+Bosnian
+Bulgarian
+Burmese
+Catalan
+Cebuano
+Chinese (Simplified)
+Chinese (Traditional)
+Croatian
+Czech
+Danish
+Dutch
+English
+Estonian
+Faroese
+Filipino
+Finnish
+French
+Galician
+Georgian
+German
+Greek
+Gujarati
+Hausa
+Hebrew
+Hindi
+Hungarian
+Icelandic
+Indonesian
+Irish
+Italian
+Japanese
+Kannada
+Kazakh
+Khmer
+Kinyarwanda
+Korean
+Kurdish
+Kyrgyz
+Lao
+Latvian
+Lithuanian
+	
+Macedonian
+Malay
+Malayalam
+Maltese
+Maori
+Marathi
+Mongolian
+Nepali
+Norwegian
+Odia
+Oromo
+Pashto
+Persian (Farsi)
+Polish
+Portuguese (Brazil)
+Punjabi
+Quechua
+Romanian
+Romansh
+Russian
+Serbian
+Serbian (Latin)
+Sindhi
+Sinhala
+Slovak
+Slovenian
+Somali
+Southern Sotho
+Spanish
+Swahili
+Swedish
+Tajik
+Tamil
+Telugu
+Thai
+Turkish
+Turkmen
+Tswana
+Ukrainian
+Urdu
+Uzbek
+Vietnamese
+Welsh
+Western Frisian
+Wolof
+Yoruba
+Zulu
+You can connect the following Google content apps to Search:
+Google Workspace (currently Gmail, Google Calendar, and Google Drive). Connecting to Google Calendar and Google Drive is only available in the US in English.
+Google Photos. Connecting to Google Photos isn’t available in all regions.
+Google Wallet. Connecting to Google Wallet isn’t available in all regions.
+Gemini Apps (coming soon)
+Personal Intelligence in Maps
+
+You can enhance personalization with Personal Intelligence in Ask Maps by connecting the dots across your Google content apps, such as Gmail. When you choose to securely connect your content apps, Ask Maps can reference insights from your emails to provide responses that are specific to you, like providing directions to a restaurant, event, or hotel you have booked.
+
+Personal Intelligence might not always get personalization right and can make mistakes. If you experience something wrong, you can correct it and clarify what you’re looking for with a follow-up in Ask Maps.
+
+Availability
+This feature is available to users 18 or older in the following countries and languages:
+English in the US, Canada, India, Australia.
+Hindi in India.
+Japanese in Japan.
+Indonesian in Indonesia.
+Spanish in Mexico.
+Portuguese in Brazil.
+French in Canada.
+You can connect the following Google content apps to Ask Maps:
+Google Workspace (currently Google Calendar and Gmail)
+What you need
+You must be signed into a personal Google Account.
+You must have Personalized Recommendations enabled.
+You must connect your Google content apps.
+
+Important: Connecting to some Google content apps may not be available in your country, territory or language. We’re gradually rolling out to more users, languages, and regions.
+
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Connect your Google content apps
+
+To get a more tailored Search experience that takes into account your interests, preferences, and unique context, connect your Google content apps to Search services. For example: If you're looking for recommendations for a weekend getaway with your family or clothing options for your upcoming trip, Search services, such as AI Mode, might look into past purchases from Workspace apps, like Gmail, or data from your Google Photos library. AI Mode could use this to personalize the response based on things like your hobbies, interests, preferred brands and dining preferences.
+
+Similarly, if you ask Google Maps' Ask Maps for directions to a hotel you have already booked, Ask Maps might look into Workspace apps, like Gmail, for your reservation details. Ask Maps could use this to personalize the response and provide more relevant directions based on your confirmed destination.
+
+On your computer, in your Google Account, go to Search Services Personalization.
+Turn on  Personalized Recommendations.
+Go to Additional Personal Intelligence  Connected Content Apps.
+Select Connect next to:
+Google Workspace.
+Google Photos.
+Google Wallet.
+Gemini Apps (coming soon).
+
+Important: Connecting to Google Photos and Google Wallet isn’t available in all regions.
+
+Turn on Google Workspace Smart Features to personalize your response
+
+To get more personalized responses, turn on Smart Features in other Google products in your Gmail account.
+
+On your computer, go to Gmail.
+At the top right, select Settings   See all settings.
+Under the "General" tab, scroll to "Google Workspace smart features".
+Select Manage Workspace smart feature settings.
+Turn a smart feature setting on or off:
+Smart features in other Google products.
+At the bottom right, select Save.
+Manage Google Photos settings to personalize your Search response
+
+Search can’t personalize your experience based on your Google Photos data if you haven’t completed these steps:
+
+Turn on Face Groups and select which face is yours. Learn how to turn on Face Groups and how to select your face group.
+Turn on Estimate missing locations if not enabled. Learn how to turn on Estimate missing locations.
+
+Important: Connecting to Google Photos isn’t available in all regions.
+
+Turn on Gemini History to personalize your Search response
+
+(Coming soon) To get personalized responses using your Gemini history, turn on Gemini History. Learn how to manage your Gemini history.
+
+Common questions
+Do you train AI models on my personal data? If so, what data do you train on, and do you train on my entire Gmail inbox or Google Photos library, Google Wallet, or Gemini Apps data?
+
+If you choose to connect your content apps to Search services, we may use that data to improve Google services for everyone, including by training generative AI models.
+
+Search services do not train generative AI models directly on your Gmail inbox, Google Drive, Calendar or other Google Workspace apps or on your Google Wallet and payments services information, or on imagery or audio from your Google Photos library, or on data from Gemini Apps (coming soon). When you interact with Search, summaries, excerpts, generated media, and inferences from your relevant media, emails, files, and chats may be used to help us answer your prompts. To make our responses relevant, helpful, and high quality, we train our generative AI models off of these summaries, excerpts, generated media, and inferences. In some cases, for example, where the email, file, or chat is brief or particularly relevant to respond to the inquiry, the summary may just be the email, file ,or chat.
+
+We also train generative AI models on data like your questions in Search services, responses and suggestions that Search services provide you, and information about how our models generated those responses and suggestions.
+
+For example, if you ask AI Mode to suggest some restaurants for your upcoming trip, our models might look at your emails and photos to get information about your upcoming hotel reservation and flight itinerary, as well as restaurants you’ve visited on prior trips. It would then summarize that information to provide you personalized restaurant recommendations close to your hotel at your destination.
+
+We take steps to reduce personal information from interactions personalized using Google content apps before using them to train generative AI models powering our services, unless it's to address abuse or harm.
+
+Please don't connect your Google content apps if they contain personal or confidential information that you wouldn’t want to be used for training generative AI models.
+
+Note: Even if you choose not to connect Google Workspace, Google Photos, Google Wallet, or Gemini Apps (coming soon), you can still upload content, images, and info from Google Workspace, Google Photos, Google Wallet, and Gemini Apps (coming soon) to AI Mode. Depending on your settings, your uploads could be used to improve Google services with the help of human reviewers.
+
+I don’t want you to use my data from connected Google content apps to train your AI models. How can I control my data?
+
+You’re in control of connecting apps to enhance your product experience in Search AI Mode and Ask Maps. You can still use AI Mode and Ask Maps if you choose not to connect Google content apps. If you choose to connect Google content apps to Search services, we may use that data to improve Google services for everyone, including by training generative AI models.
+
+Disconnecting a connected Google content app or deleting any data in that app doesn't delete any data from your Search Services History. That data can still be used for product improvement, including training generative AI models. You can manage and delete your Search Services History by visiting activity.google.com.
+
+Based on your other Google account and product settings, these and other Google services may collect data, share, or personalize your experience. To see your Google Account settings, visit account.google.com.
+
+Will human reviewers have access to my personal data?
+How human review helps improve Google services:
+
+When you connect your Google content app data, a subset of that data processed by AI Mode in Search and Ask Maps in Google Maps is reviewed by human reviewers (including trained service providers) to debug our services, help keep them safe, and improve them. This data includes interactions, summaries, excerpts and inferences from your relevant emails and files. In some cases, for example, where the email or file is brief or particularly relevant to respond to the inquiry, the summary may just be the email or file. In addition, it includes data like your prompts in Search services, responses and suggestions that Search services provide you, and information about how our models generated those responses and suggestions. It also includes summaries, inferences, and generated media based on your Google Photos library (except for cases of abuse and harm or when you submit feedback, humans don't view media from your Photos library). This data also includes interactions, summaries, excerpts, and inferences from your Google Wallet and payment services information and your Gemini Apps data (coming soon).
+
+Human reviewers improve Google services, including generative AI. For example, reviewers assess if Search AI Mode responses were low-quality, inaccurate, or harmful. They also suggest better responses. We use their suggestions to help our models respond better in the future. Learn more about how data helps Google develop generative AI in Search.
+
+Please don't connect your Google content apps if they contain personal or confidential information that you wouldn’t want a reviewer to see.
+
+How we protect your privacy in this process:
+
+Before trained service providers review interactions personalized using Google content apps, we take steps to protect your privacy, such as disconnecting interactions from your Google Account and reducing personal information in this data, unless it's to address abuse or harm.
+
+If I connect my content apps, will my Gmail inbox, Google Photos library, or Gemini chats (coming soon) be used to serve ads?
+
+Ads will not be based directly on your Gmail inbox, your Google Photos library, or your Gemini chats.
+
+If you connect your content apps to Search Services, Search may reference summaries, excerpts and inferences from these sources to personalize your experience and do things for you. That same info may be used to show you ads, so they are even more helpful for you.
+
+As always, Google doesn’t show you personalized ads based on sensitive categories, such as race, religion, sexual orientation, or health. You get to choose if you want to connect your content apps to Search Services. You can adjust your settings, including disconnecting content apps from Search services, at any time.
+
+If I connect my content apps, will you share my Gmail inbox, Google Photos library, or Gemini chats (coming soon) with advertisers?
+
+No. If you connect your content apps to Search Services, advertisers will not have access to your Gmail inbox, Google Photos, or Gemini chats.
+
+Related resources
+Manage your accounts linked with Plaid (US only)
+Get AI-powered responses with AI Mode in Google Search
+"AI Mode" in Search Labs
+Learn about Generative AI
+Give feedback about this article
+Was this helpful?
+How can we improve it?
+YesNo
+Submit

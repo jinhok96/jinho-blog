@@ -1,9 +1,9 @@
 ---
-title: Windows 10 ESU Now Runs to October 2027
-description: Free Windows 10 security updates no longer stop on October 13, 2026. See the new end date, how to confirm your PC is enrolled, and how to enroll if it isn't.
+title: How to Enroll in Windows 10 ESU When Enroll Now Is Missing
+description: 'Windows 10 ESU enrollment stays open until October 12, 2027. Check your build to see if updates arrive, enroll for free, and fix a missing Enroll now link.'
 category: software
 createdAt: 2026-10-11T11:38:00Z
-updatedAt: 2026-10-14
+updatedAt: 2026-11-25T19:00:00Z
 tags:
   - Windows 10
   - Windows Update
@@ -13,115 +13,82 @@ tags:
 
 ![Illustration of a rounded computer monitor with a blank cream screen inside a clear protective bubble on a peach stand, with an hourglass of orange sand on the left and a gold key on a lilac cushion on the right, against a lilac background with soft green and orange trees](./images/windows-10-esu-extended/windows-10-security-updates-extended-hero.webp)
 
-Windows 10 security updates for home users do not stop on October 13, 2026. Microsoft extended the consumer Extended Security Updates (ESU) program by a year, and it now ends on **October 12, 2027**. If your PC is already enrolled, you don't need to do anything: Microsoft's [ESU page](https://www.microsoft.com/en-us/windows/extended-security-updates) says coverage "will automatically continue through that date—no action needed." If it isn't enrolled, you can still enroll today, for free or for a one-time $30.
+You can still enroll a Windows 10 PC in Extended Security Updates (ESU). Microsoft's [consumer ESU page](https://www.microsoft.com/en-us/windows/extended-security-updates) says enrollment is open "any time until the program ends on October 12, 2027," and it's free if you sync your PC settings to a Microsoft account. You start it from **Settings > Update & Security > Windows Update**, where an **Enroll now** link appears only when the PC meets every requirement. If the link is missing, one requirement isn't met yet, and the checklist below finds which one.
 
-Many guides and some forum answers still say the program ends in October 2026. Those were written before the change. Everything below was checked against Microsoft's own pages on October 11, 2026.
+Your OS build number tells you whether ESU updates are actually arriving. As of November 25, 2026, an enrolled PC that has installed its updates is on build 19045.7846 or higher, from the November 10, 2026 security update. We checked every step, build number and rule on this page against Microsoft's own pages on November 25, 2026. We don't have a Windows 10 PC to enroll, so the steps come from Microsoft's instructions rather than our own screens.
 
-## What changed and when
+## Is your PC already enrolled?
 
-Windows 10 reached end of support on October 14, 2025. Since then, the only way for a home PC to keep getting security fixes has been the consumer ESU program, which originally covered one year.
+If Windows Update shows your ESU status and your OS build is 19045.7846 or higher, your PC is enrolled and getting updates. Microsoft's ESU page says you can "check your enrollment status anytime" in **Settings > Update & Security > Windows Update**, and if you bought ESU, the order also shows up in your Microsoft Store [order history](https://www.microsoft.com/en-us/store/b/order-tracking). If you see an **Enroll now** link there instead, the PC is not enrolled.
 
-Microsoft has since moved the end date. Its [consumer ESU page](https://www.microsoft.com/en-us/windows/extended-security-updates) now says:
-
-- You can enroll "any time until the program ends on October 12, 2027."
-- Devices that are already enrolled keep receiving updates through that date with no action needed.
-- The ways to enroll are the same as before (see below).
-
-Microsoft made the change on its support pages rather than in a big announcement, which is why many articles and answers you will find still use the old October 2026 deadline.
-
-ESU only covers security. Microsoft's page is explicit that enrollment "does not provide other types of fixes, feature improvements, or product enhancements" and "does not come with technical support." So a Windows 10 PC on ESU won't get new Windows 11 features such as the [customizable right-click menu that began rolling out in October 2026](/posts/customize-right-click-menu-windows-11).
-
-## How to check if your PC is enrolled
-
-There are two quick checks. Do both if you are unsure.
-
-### 1. Look at Windows Update
-
-1. Open **Settings > Update & Security > Windows Update**.
-2. If your PC is enrolled, Windows Update shows your ESU status there. Microsoft's page says this is where you can "check your enrollment status anytime."
-3. If you see an **Enroll now** link instead, your PC is not enrolled yet. Skip to [How to enroll](#how-to-enroll-in-windows-10-esu).
-
-If you paid the $30, the purchase also appears in your Microsoft Store [order history](https://www.microsoft.com/en-us/store/b/order-tracking).
-
-### 2. Check your Windows build number
-
-The monthly updates released after October 2025 only install on enrolled PCs; Microsoft lists them as applying to "Windows 10 ESU." So your build number shows whether ESU updates are actually arriving.
+The build number is the second check, because only enrolled PCs receive the monthly ESU updates. Microsoft lists each one as applying to "Windows 10 ESU."
 
 1. Right-click **Start**, choose **Settings**, select **System**, then **About** ([Microsoft's instructions](https://support.microsoft.com/en-us/windows/experience/find-information-about-your-windows-device)).
 2. Under **Windows specifications**, read the **Version** and **OS build**.
 
-| OS Build you see | What it means |
+| OS build you see | What it means |
 | --- | --- |
-| 19045.7807 or higher | You have the October 13, 2026 ESU update ([KB5126657](https://support.microsoft.com/en-us/help/5126657)). ESU is working. |
-| 19045.6575 to 19045.7727 | You have some ESU updates, but not the latest. Open Windows Update and select **Check for updates**. |
-| 19045.6466 or lower | No ESU update has installed. Your PC is likely not enrolled, or enrollment failed. |
+| 19045.7846 or higher | You have the November 10, 2026 security update ([KB5131096](https://support.microsoft.com/en-us/help/5131096)). ESU is working. 19045.7850 is the November 13 fix that came after it. |
+| 19045.6575 to 19045.7811 | You have some ESU updates but not the latest. Open Windows Update and select **Check for updates**. |
+| 19045.6466 or lower | No ESU update has installed. The PC is most likely not enrolled, or enrollment didn't finish. |
 
-Build numbers are from Microsoft's [Windows 10, version 22H2 update history](https://support.microsoft.com/en-us/help/5122878) as of October 13, 2026. The September 2026 update ([KB5122878](https://support.microsoft.com/en-us/help/5122878), 19045.7725) and its [September 14 fix](https://support.microsoft.com/en-us/help/5129236) (19045.7727) are one step behind. A new update is due each month, so the "latest" number will go up. Microsoft releases each update with a matching 19044 build for version 21H2, so the number after the dot is what to compare.
+![Chart of Windows 10 version 22H2 build numbers from October 2025 to November 2026: the last free update in October 2025 was build 19045.6456 and the enrollment fix for PCs that are not enrolled was 19045.6466, then 13 monthly ESU security updates raised the build from 19045.6575 in November 2025 to 19045.7846 on November 10, 2026, with shaded bands showing which build ranges mean not enrolled, behind, or up to date](./images/windows-10-esu-extended/windows-10-esu-build-check.webp)
+
+Build numbers come from Microsoft's [Windows 10 release information](https://learn.microsoft.com/en-us/windows/release-health/release-information) table as of November 25, 2026. It lists 13 monthly ESU security updates so far, from build 19045.6575 in November 2025 ([KB5068781](https://support.microsoft.com/en-us/help/5068781)) to 19045.7846 in November 2026, plus a few out-of-band fixes such as 19045.7811 on October 26. The number goes up with every monthly update, so the newest build will be higher once the December update is out. If your build starts with 19044 instead of 19045, your PC is on version 21H2, which the consumer program doesn't cover.
+
+## Why Enroll now is missing and how to fix it
+
+The **Enroll now** link is missing because the PC fails at least one of Microsoft's requirements. Microsoft's ESU page says the link appears only "if your device meets the prerequisites," so work through these checks in order and look at Windows Update again after each one.
+
+![Checklist of six things to check when the Windows 10 ESU Enroll now link is missing: version 22H2 in Settings, System, About; the latest updates plus the ESU preparation package KB5126256 and a restart; an administrator Microsoft account that is not a child account; no work or school management, domain, Entra join, MDM or kiosk mode; no existing ESU license on the PC; and, if the wizard fails partway, the KB5071959 fix and another try](./images/windows-10-esu-extended/enroll-now-missing-checklist.webp)
+
+1. **Check your version.** Open **Settings > System > About**. ESU only works on Windows 10 version 22H2 in the Home, Pro, Pro Education or Pro for Workstations edition, so update to 22H2 first if the version says anything older.
+2. **Install every update, then restart.** Microsoft requires the latest Windows update and the ESU Licensing Preparation Package, [KB5126256](https://support.microsoft.com/en-us/help/5126256), released September 8, 2026. That package installs only after a security update from October 14, 2025 or later, such as KB5066791, and Microsoft says the PC restarts automatically afterward. If **View update history** lists "Extended Security Updates (ESU) Licensing Preparation Package for Windows 10 (KB5126256)," this step is done. The package prepares the PC but doesn't enroll it.
+3. **Sign in with an administrator Microsoft account.** The account used to sign in must be an administrator, and it can't be a child account. If you normally use a local account, Windows asks you to sign in with a Microsoft account during enrollment, because the ESU license is tied to that account.
+4. **On a child's PC, enroll from a parent account.** Microsoft's ESU page says the parent has to be a user on that PC, set up as an administrator, and then enroll from their own account.
+5. **Make sure the PC isn't managed by work or school.** Enrollment isn't offered on PCs in kiosk mode, PCs joined to an Active Directory domain or Microsoft Entra, or PCs enrolled in a company's device management (MDM). A personal PC that is only "Microsoft Entra registered" can still use the consumer program.
+6. **Check whether the PC already has an ESU license.** Microsoft also leaves out devices that already have one. Go back to [the enrollment check](#is-your-pc-already-enrolled) and look at your build.
+7. **If the wizard starts but fails partway,** install [KB5071959](https://support.microsoft.com/en-us/help/5071959) from Windows Update. Microsoft released it in November 2025 because "the enrollment wizard may fail during enrollment," and offers it to PCs that are not enrolled. Restart, then select **Enroll now** again.
+
+If none of this works, contact [Microsoft Support](https://support.microsoft.com/contactus).
 
 ## How to enroll in Windows 10 ESU
 
-### Requirements
-
-According to [Microsoft's ESU page](https://www.microsoft.com/en-us/windows/extended-security-updates), your PC needs:
-
-- **Windows 10, version 22H2** in the Home, Pro, Pro Education, or Pro for Workstations edition
-- **The latest Windows updates** installed
-- **The ESU Licensing Preparation Package, [KB5126256](https://support.microsoft.com/en-us/help/5126256)**, released September 8, 2026
-- **An administrator account** signed in with a Microsoft account that is not a child account
-
-Enrollment is not offered on PCs in kiosk mode, PCs joined to an Active Directory domain or Microsoft Entra, or PCs managed by work or school device management (MDM). PCs that are only "Microsoft Entra registered" can still use the consumer program.
-
-### Steps
+Once the **Enroll now** link appears, enrolling takes a few steps in Windows Update and covers the PC through October 12, 2027.
 
 1. Open **Settings > Update & Security > Windows Update** and install everything offered. Restart if asked.
 2. Select **Enroll now**.
-3. If you normally sign in with a local account, Windows asks you to sign in with a Microsoft account. The ESU license is tied to that account.
-4. Pick one of the three ways to enroll:
-   - **Free**: back up your PC settings to your Microsoft account. If you already back up settings, you only need to confirm.
-   - **1,000 Microsoft Rewards points**
-   - **One-time purchase of $30** (or the local equivalent, plus tax)
-5. After enrollment, go back to Windows Update and select **Check for updates** to pull down the ESU updates you missed.
+3. If you're signed in with a local account, sign in with your Microsoft account when Windows asks. If you already back up your PC settings, Windows just asks you to confirm.
+4. Otherwise, pick one of the three ways to enroll: start backing up your PC settings (free), redeem **1,000 Microsoft Rewards points**, or make a **one-time $30 purchase** plus tax.
+5. Go back to Windows Update and select **Check for updates**. Microsoft says an enrolled PC receives all critical and important updates released after October 14, 2025, so a late enrollment catches up on the ones it missed.
 
-Every option covers you through October 12, 2027. One license covers **up to 10 PCs**: on each extra PC, sign in with the same Microsoft account, open Windows Update, select **Enroll now**, then **Add device**.
+One license covers **up to 10 PCs**. On each extra PC, open Windows Update and select **Enroll now**; if you're signed in with the same Microsoft account, select **Add device**. If another user on the same PC already enrolled it, you don't need to enroll again, because Microsoft's FAQ says every user on that PC is covered.
 
 ### Which option should you pick?
+
+The free settings backup is the obvious choice if you're happy using a Microsoft account. The other two options cost points or money and differ mainly in what you keep.
 
 | Option | Cost | What you give up |
 | --- | --- | --- |
 | Back up PC settings | Free | Your Windows settings sync to your Microsoft account |
-| Rewards points | 1,000 points | Points that could go toward other rewards; Rewards orders are final |
+| Rewards points | 1,000 points | Points you could spend on other rewards; Rewards orders are final |
 | One-time purchase | $30 plus tax | Money; refunds follow Microsoft's digital purchase policy for your country |
 
-If you are happy using a Microsoft account, the free settings backup is the obvious choice. If you want to keep a local account, the $30 purchase is the option designed for that, at least in Europe (see below).
+![Comparison of the Windows 10 ESU enrollment options in the United States and in the European Economic Area: in the U.S. you can enroll free by syncing PC settings, with 1,000 Microsoft Rewards points, or with a one-time $30 purchase; in Europe enrollment is free as long as you keep signing in with the Microsoft account you enrolled with, updates stop within up to 60 days if you don't, and the $30 purchase lets you keep a local account; every option runs until October 12, 2027 and one license covers up to 10 PCs](./images/windows-10-esu-extended/esu-enrollment-options-us-europe.webp)
 
 ### Can you enroll with a local account?
 
-Not completely. Every option requires signing in with a Microsoft account at least once, because the ESU license is tied to the account you enroll with. If you use a local account, Windows asks you to sign in during enrollment.
-
-What happens after that depends on where you live. In Europe, Microsoft says the $30 purchase "allows continued use of a local account (no sign in with a Microsoft account required other than to make the purchase)," while the free option requires you to stay signed in. Microsoft's U.S. page doesn't say whether you can switch back to a local account after enrolling.
+Not completely. Every option requires signing in with a Microsoft account at least once, because the ESU license is tied to the account you enroll with. Microsoft's U.S. page doesn't say whether you can switch back to a local account after enrolling.
 
 ### If you live in Europe
 
-Enrollment options differ in the European Economic Area. On Microsoft's [Irish ESU page](https://www.microsoft.com/en-ie/windows/extended-security-updates), enrollment is free as long as you **stay signed in to the PC with the Microsoft account you enrolled with**. If you stop signing in with it, "ESU updates will be discontinued for your device after a period of time, up to 60 days," and you have to enroll again. The $30 purchase lets you keep using a local account. Microsoft's U.S. page doesn't mention the 60-day rule.
-
-## When "Enroll now" is not showing or enrollment fails
-
-Microsoft's page says the **Enroll now** link appears in Windows Update only "if your device meets the prerequisites." So a missing link almost always means one requirement isn't met yet. Work through these in order.
-
-1. **Check your version.** Open **Settings > System > About**. ESU only works on version 22H2, so update to 22H2 first if you are on an older version.
-2. **Install all updates, then restart.** The preparation package KB5126256 installs only after an October 14, 2025 or later security update, such as KB5066791 ([Microsoft's KB5126256 page](https://support.microsoft.com/en-us/help/5126256)). Microsoft notes the PC restarts automatically after the package installs. If you can see "Extended Security Updates (ESU) Licensing Preparation Package for Windows 10 (KB5126256)" under **View update history**, that step is done.
-3. **Use an administrator account.** Microsoft requires the signed-in Microsoft account to be an administrator.
-4. **A child's PC.** A child account can't enroll. Microsoft's page says the parent has to be a user on that PC, set up as an administrator, and enroll it from their own account.
-5. **Work or school management.** If the PC is joined to a company domain or managed by a company's device management (MDM), the consumer program won't be offered. A personal PC that is only "Entra registered" is still eligible.
-6. **The enrollment wizard fails partway.** In November 2025, Microsoft released [KB5071959](https://support.microsoft.com/en-us/help/5071959) because "the enrollment wizard may fail during enrollment." It is offered to PCs that are not enrolled. Install it from Windows Update, restart, and run **Enroll now** again.
-
-If none of this works, contact [Microsoft Support](https://support.microsoft.com/contactus).
+The rules differ in the European Economic Area. On Microsoft's [Irish ESU page](https://www.microsoft.com/en-ie/windows/extended-security-updates), enrollment is free as long as you **stay signed in to the PC with the Microsoft account you enrolled with**. If you stop, "ESU updates will be discontinued for your device after a period of time, up to 60 days," and you have to enroll again. The $30 purchase "allows continued use of a local account (no sign in with a Microsoft account required other than to make the purchase)." The Irish page doesn't list Rewards points as an option, and the U.S. page doesn't mention the 60-day rule.
 
 ## Should you enroll or move to Windows 11?
 
-ESU buys time, not a fix. After October 12, 2027, enrolled PCs stop receiving security updates too, and no further consumer extension has been announced.
+Enroll now if your PC stays on Windows 10, because ESU is the only way a Windows 10 home PC gets security fixes, and Microsoft's ESU page lists no coverage after October 12, 2027. ESU covers security only. Microsoft's page says enrollment "does not provide other types of fixes, feature improvements, or product enhancements" and "does not come with technical support," so a Windows 10 PC won't get Windows 11 features such as the [customizable right-click menu](/posts/customize-right-click-menu-windows-11).
 
-Enrolling doesn't block an upgrade. Microsoft's FAQ says you can still move to Windows 11 later if your PC meets the requirements. If your PC can't run Windows 11, ESU is the only way to keep it patched until October 2027. If it can, enrolling now still makes sense: it costs nothing with the settings backup and protects you until you are ready to upgrade. Windows 11 has its own deadlines too: each version gets about two years of updates on Home and Pro, and [version 24H2 already reached end of support](/posts/windows-11-24h2-end-of-support). Our [Microsoft end of support dates list](/posts/microsoft-end-of-support-dates) puts these Windows dates next to the Office ones.
+Enrolling doesn't block an upgrade. Microsoft's FAQ says you can still move to Windows 11 later if your PC meets the hardware requirements, so free enrollment makes sense even if you plan to upgrade. Windows 11 has its own deadlines. Microsoft's lifecycle page shows Home and Pro [version 24H2 ended on October 13, 2026](/posts/windows-11-24h2-end-of-support), and version 25H2 ends on the same day as ESU. Our [Microsoft end of support dates list](/posts/microsoft-end-of-support-dates) puts these Windows dates next to the Office ones, including [what changed for Office 2021](/posts/office-2021-end-of-support).
 
 Windows updates don't cover your browser. If you use Chrome, [Chrome's new warning before insecure HTTP sites and its Enhanced protection setting](/posts/chrome-http-warning-default) are worth a two-minute check. If you use Edge, the browser that comes with Windows, our test of [turning off Copilot in Microsoft Edge](/posts/turn-off-copilot-in-edge) shows which switch hides its AI assistant. Other devices in your home have their own cutoffs: if someone relies on an LTE Pixel Watch 2 or 3 for emergency calls away from their phone, [Google's Safety Signal ends on December 12, 2026](/posts/pixel-watch-safety-signal-ending).
 
@@ -133,20 +100,18 @@ No. Microsoft's ESU page says that if you are already enrolled, "your coverage w
 
 ### Is Windows 10 ESU still free?
 
-Yes, as of October 2026. The free route is backing up your PC settings to your Microsoft account. The other routes are 1,000 Microsoft Rewards points or a one-time $30 purchase.
+Yes, as of November 2026. The free route is backing up your PC settings to your Microsoft account (in Europe, staying signed in with it). The other routes are 1,000 Microsoft Rewards points or a one-time $30 purchase.
 
-### Can I still enroll after October 13, 2026?
+### Is it too late to enroll in Windows 10 ESU?
 
-Yes. Enrollment stays open until the program ends on October 12, 2027. Once enrolled, your PC receives all the critical and important security updates released since October 14, 2025.
+No. Enrollment stays open until the program ends on October 12, 2027. Microsoft warns that a PC is "more vulnerable and susceptible to viruses and malware before enrollment," so enroll as soon as the link appears.
 
-### How many PCs does one ESU license cover?
+### Does this apply to business PCs?
 
-Up to 10 Windows 10 PCs using the same Microsoft account. Each PC still has to meet the requirements and be enrolled from its own Windows Update page.
+No. This is the consumer program for personal devices. Microsoft says a consumer enrollment is suspended if the PC later joins a domain, Entra or MDM, until it stops being used as a work device. Organizations use the separate commercial ESU program.
 
-### Does every user on the PC need to enroll?
+## How we checked
 
-No. Microsoft's FAQ says that once any user on a Windows 10 PC enrolls, the other users on that PC are covered too.
+On November 25, 2026 we opened these Microsoft pages in Chromium and saved their text: the U.S. and Irish consumer ESU pages, the [Windows 10 release information](https://learn.microsoft.com/en-us/windows/release-health/release-information) build table, the November 10 (KB5131096) and November 13 (KB5136493) update notes, the October 13 update (KB5126657), the first ESU update (KB5068781), the preparation package (KB5126256), the enrollment fix (KB5071959), the Windows 10 and Windows 11 Home and Pro lifecycle pages, and Microsoft's page on finding your Windows version. The build ranges in the table and chart come from the release information table. We didn't enroll a PC ourselves because we don't have a Windows 10 machine, so we describe the Windows Update screens in Microsoft's words.
 
-### Does this extension apply to businesses?
-
-No. The change covers the consumer program for personal devices. Organizations use the separate commercial ESU program, which Microsoft documents for IT administrators.
+We first published this article on October 11, 2026, about the consumer ESU end date moving to October 12, 2027. On November 25, 2026 we rewrote it around enrolling and fixing a missing link, updated the build numbers through the November 2026 updates, and added the three charts.

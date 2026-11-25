@@ -1,0 +1,107 @@
+# 가져온 시각: 2026-11-25T17:45:20.577Z
+# 원본: https://support.google.com/gemini/answer/13278892?hl=en&co=GENIE.Platform%3DDesktop
+Manage & delete your history in Gemini Apps - Computer - Gemini Apps Help
+https://support.google.com/gemini/answer/13278892?hl=en&co=GENIE.Platform%3DDesktop#zippy=%2Cwhen-history-is-off
+
+Manage & delete your history in Gemini Apps
+
+When you are signed in and History is on, Google stores your Gemini history in your Google Account. You can review your prompts, delete your Gemini history, and turn off the History setting at any time.
+
+For more info about your Gemini Apps data and how you can manage it, go to the Gemini Apps Privacy Hub.
+
+Important:
+
+To manage Gemini History, you need to sign in to Gemini Apps. Learn how to sign in to Gemini Apps.
+This article covers Gemini history for a personal account. If you use Gemini Apps with a work or school account, your Gemini History settings are controlled by your Google Workspace administrator. You may not be able to change your retention settings or see how long your chats are retained for. Learn more about Gemini History for work and school users.
+Computer Android phone & tabletiPhone & iPad
+More
+More
+More
+Find your Gemini history
+On your computer, go to gemini.google.com.
+At the bottom, click Settings   History .
+You can also go to myactivity.google.com/product/gemini.
+Go to Gemini History
+Tips to find specific Gemini history
+If history includes specific data from a Gemini Live chat, it shows a related icon below it.
+An audio icon  means it includes audio.
+A screen sharing icon  means it includes video frames of your shared screen.
+A video icon  means it includes video frames of your camera stream.
+To view or download this audio, screenshare, or video data, select Details.
+Delete your history
+On your computer, go to gemini.google.com.
+At the bottom, click Settings   History .
+You can also go to myactivity.google.com/product/gemini.
+Choose the Gemini history you want to delete. You can choose:
+All your Gemini history: Above your history, click Delete   All time.
+The last hour or day: Above your history, click Delete   Last hour or Last day.
+A specific time period: Above your history, click Delete   Custom range.
+A specific day: Next to the day, click Delete all history from [day] .
+A specific history item: Next to the history, click Delete history item .
+What happens when Gemini history is deleted
+If a shared chat is deleted, it doesn’t delete the related public link. Learn how to delete a public link.
+If you delete history for a Gemini Live chat, any related audio, transcript, videos, and screenshares for that history are also deleted.
+Turn off History
+
+Important: If you’re 18 or over, History is on by default.
+
+To turn off History:
+
+On your computer, go to gemini.google.com.
+At the bottom, click Settings   History .
+Near the top, click On  Turn off or Turn off and delete history.
+Even when History is off, your conversations will be saved with your account for around two months to allow Google to provide the service, process any feedback, and protect Google, its users, and the public. This history won’t appear in your Gemini History.
+When History is off
+
+If History is turned off, only the following apps are available:
+
+Device assistance
+Gemini Notebook
+Messages
+Phone
+WhatsApp
+
+Learn how to turn off these Connected Apps at any time.
+
+Manage whether your chat content and audio & Gemini Live recordings are used to train generative AI models
+You control whether Google uses your chat content, including text & attachments, to train generative AI models. Learn more about this setting.
+
+
+You can also let Google use your audio and Gemini Live videos & screenshares to improve and develop its services, including training generative AI models. Learn more about this setting.
+
+Important:
+
+To turn on these settings, you must have History on.
+You can turn these settings on or off at any time
+"Chat content including text & attachments" is on by default if you are over 18.
+"Audio and Gemini Live videos & screenshares" is off by default
+To turn these settings on or off:
+Click Settings   History .
+Select which setting or settings you want to turn on or off.
+Next to “Chat content including text & uploads”, check or uncheck the box.
+Next to Audio and Gemini Live videos & screenshares, check or uncheck the box.
+Click Turn on or Turn off.
+
+Tip: If you aren't able to check either box, you may need to turn History on.
+Change Auto-delete settings
+
+By default, your Gemini history older than 18 months is auto-deleted. You can turn off Auto-delete or change the auto-delete period to 3 or 36 months.
+
+On your computer, go to gemini.google.com.
+At the bottom, click Settings   History .
+Near the top, click Deleting history older than … months or Choose an auto-delete option.
+Choose how long your Gemini history is kept (3, 18, or 36 months) or select Don’t auto-delete history.
+Click Next and follow the on-screen instructions.
+How your Gemini history is deleted from your Google Account
+
+When you choose to delete history manually or history is deleted automatically, we immediately start the process of removing it from the product and our systems.
+
+Learn more about how Google helps you delete data from your account.
+
+Related resources
+Gemini Apps Privacy Hub
+Manage or delete the Gemini app on your Android device
+View & control your Web & App Activity
+Delete your activity
+Privacy and Security Principles
+Give feedback about this article

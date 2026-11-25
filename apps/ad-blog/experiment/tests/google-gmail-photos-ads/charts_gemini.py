@@ -2,7 +2,8 @@
 
 `gemini-android-auto-personal-intelligence/charts.py`(2026-10-21)를 옮겨 2026-11-14 도움말로 고침:
 Contacts의 'US·AI Ultra' 조건 삭제(16836988·16598406 11-14판에 없음), Android Auto 배포 문구를 날짜로, 확인일.
-실행: python3 -I charts.py <출력 폴더>
+2026-11-26 세션 105: Gemini 도움말 11-16 개정(Keep Activity → History, 꺼도 약 2개월 보관) 반영.
+실행: python3 -I charts_gemini.py <출력 폴더>
 """
 import sys
 from pathlib import Path
@@ -68,19 +69,19 @@ def data_flow():
     # 오른쪽 아래: 저장
     arrow(ax, (0.635, 0.44), (0.685, 0.3))
     box(ax, 0.685, 0.15, 0.31, 0.27, cs.BACKGROUND, cs.BORDER, 1.5)
-    ax.text(0.705, 0.355, 'Saved to Gemini Apps Activity', fontsize=14.5, fontweight='bold', va='center')
+    ax.text(0.705, 0.355, 'Saved to your Gemini History', fontsize=14.5, fontweight='bold', va='center')
     ax.text(0.705, 0.28, 'Auto-deleted after 18 months by default', fontsize=12, color=cs.MUTED, va='center')
     ax.text(0.705, 0.22, 'Summaries can be used to train AI', fontsize=12, color=cs.MUTED, va='center')
 
-    cs.footer(fig, 'Source: Google blog (Oct 20, 2026), Gemini Apps Help: Connected Apps, Gemini Apps Activity. Checked Nov 14, 2026.')
+    cs.footer(fig, 'Source: Google blog (Oct 20, 2026), Gemini Apps Help: Connected Apps, Gemini History. Checked Nov 25, 2026.')
     cs.save(fig, f'{OUT}/gemini-car-data-flow.webp')
 
 
-# 설정별 효과 (도움말 16598406 "Delete something Gemini knows about you", 13278892 Keep Activity)
+# 설정별 효과 (도움말 16598406 "Delete something Gemini knows about you", 13278892 History — 2026-11-26 세션 105: Keep Activity → History 개명 반영)
 ROWS = [
     ('Disconnect an app', 'Connected Apps settings', 'yes', 'no'),
-    ('Delete Gemini chats', 'Gemini Apps Activity', 'no', 'yes'),
-    ('Turn off Keep Activity', 'Gemini Apps Activity', 'yes', 'opt'),
+    ('Delete Gemini chats', 'Gemini History', 'no', 'yes'),
+    ('Turn off History', 'Gemini History (formerly Keep Activity)', 'yes', 'opt'),
     ('Disconnect and delete', 'Both of the above', 'yes', 'yes'),
 ]
 COLS = ['Stops Gemini from using\nthat app from now on', 'Removes what Gemini\nalready has in past chats']
@@ -110,12 +111,12 @@ def settings_matrix():
             elif v == 'no':
                 ax.text(x, y, 'No', fontsize=15, fontweight='semibold', color=cs.MUTED, ha='center', va='center')
             else:
-                ax.text(x, y, 'Only with "Turn off\nand delete activity"', fontsize=11.5, color=cs.FOREGROUND,
+                ax.text(x, y, 'Only with "Turn off\nand delete history"', fontsize=11.5, color=cs.FOREGROUND,
                         ha='center', va='center', fontweight='semibold')
         if i < len(ROWS) - 1:
             ax.plot([0, 1], [y - rh / 2, y - rh / 2], color=cs.BORDER, lw=1)
-    cs.footer(fig, 'Turning off Keep Activity turns off Personal Intelligence, which requires it. Chats are still kept up to 72 hours.',
-              'Source: Gemini Apps Help, "Connect your Google apps" and "Manage & delete your activity". Checked Nov 14, 2026.')
+    cs.footer(fig, 'Turning off History turns off Personal Intelligence, which requires it. Chats are still kept for around two months.',
+              'Source: Gemini Apps Help, "Connect your Google apps" and "Manage & delete your history". Checked Nov 25, 2026.')
     cs.save(fig, f'{OUT}/gemini-settings-what-they-do.webp')
 
 

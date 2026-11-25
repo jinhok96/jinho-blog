@@ -1,0 +1,87 @@
+# 가져온 시각: 2026-11-25T17:32:54.559Z
+# 원본: https://support.microsoft.com/en-us/help/5126256
+Extended Security Updates (ESU) Licensing Preparation Package for Windows 10 | Microsoft Support
+https://support.microsoft.com/en-us/servicing/os/windows-10/2026/09/kb5126256-windows-10-21h2-22h2-standalone-cbs
+
+Extended Security Updates (ESU) Licensing Preparation Package for Windows 10
+Applies To
+Windows 10 ESU
+
+Original publish date: September 8, 2026
+KB ID: 5126256
+
+Introduction
+
+On October 14, 2025, support for Windows 10 ended. This means that Microsoft no longer provides security and feature updates or technical support for Windows 10 devices. While these PCs will continue to function, they no longer receive regular security updates, making them more vulnerable to cyber threats, such as malware and viruses.
+
+The Windows 10 Extended Security Updates (ESU) program is designed to help protect eligible Windows 10 PCs protected during the transition to Windows 11. By enrolling in ESU, devices will receive monthly critical and important security updates, as defined by the Microsoft Security Response Center, helping reduce the risk of malware and cybersecurity attacks. ESU is intended as a temporary solution and does not include new features, non-security updates, design change requests or technical support.
+
+To learn more, see Extended Security Updates (ESU) program for Windows 10.
+
+About this Windows 10 ESU Licensing Preparation Package
+
+This Windows 10 ESU Licensing Preparation Package (KB5126256) updates the licensing and enrollment components required for a Windows 10, version 22H2 device to enroll in the Extended Security Updates (ESU) program.
+
+This package is required for ESU enrollment and only applies to devices that are not enrolled in the ESU program. It prepares a device for ESU licensing and enrollment but does not enroll the device or install Windows 10 security updates. Once installed, complete the ESU enrollment process to receive eligible security updates. Installing this package alone does not provide Extended Security Updates.
+
+Each ESU Licensing Preparation Package supersedes any previously released licensing package. We recommend you install the latest ESU Licensing Preparation Package to be in the best state for participation in the ESU program.
+
+For more information about the ESU program, see Extended Security Updates (ESU) program for Windows 10.
+
+Prerequisites for the ESU program
+
+To enable ESU for Windows 10, the following must be applied in the following order:
+
+Windows 10, version 22H2 with a security update released on or after October 14, 2025 (such as update KB5066791) installed.
+
+This Extended Security Updates (ESU) Licensing Preparation Package for Windows 10 (KB5126256). Note this preparation package must be installed after the security update released on or after October 14, 2025.
+
+Your device will restart automatically after installing this preparation package.
+
+Frequently asked questions
+
+Why am I seeing this update on a Windows 10 device?
+
+Windows 10 reached the end of support on October 14, 2025. This package is a licensing prerequisite that will enable a device to be enrolled in the Extended Security Updates (ESU) program successfully. It does not enroll the device or provide ongoing security updates. You must enroll the device into the ESU program to continue receiving security updates. When this package is installed on a device, it is listed as an installed update as follows:
+
+Extended Security Updates (ESU) Licensing Preparation Package for Windows 10 (KB5126256)
+Install this update
+
+To install this ESU Licensing Preparation Package, use one of the following release channels.
+
+Windows Update
+Business
+Microsoft Update Catalog
+Windows Server Update Services
+Available	Next Step
+	This update will be downloaded and installed automatically from Windows Update if a security update released on or after October 14, 2025 (such as update KB5066791) is installed.
+File information
+
+A list of the files that are included in this update are provided in a CSV (Comma delimited) (*.csv) file. The file can be opened in a text editor such as Notepad or in Microsoft Excel.
+
+Note The English (United States) version of this software update might contain files for additional languages.
+
+ Download the file information for update KB5126256.
+
+Resources
+
+For additional information, see the following resources:
+
+For consumers
+
+Windows 10 Extended Security Updates
+
+For organizations
+
+Preparing commercial Windows 10 devices for ESUs
+Enable Windows 10 Extended Security Updates (ESU)
+Enable Windows 10 Extended Security Updates (ESU) for clients accessing cloud and virtual machines
+Related topics
+End of support
+
+Microsoft will no longer provide free software updates from Windows Update, technical assistance, or security fixes on the following end dates. To continue to receive critical and important security updates for Windows 10, see Windows 10 Extended Security Updates (ESU). Otherwise, we recommend you upgrade to a later version of Windows.
+Windows 10, version 21H2: Support ended on June 13, 2023
+Windows 10, version 22H2: Support ended on October 14, 2025
+Extended Security Updates (ESU) program for Windows 10
+Windows 10 Enterprise LTSC 2021: January 12, 2027. For information about the Extended Security Updates (ESU) program, see Plan for Windows 10 Enterprise LTSC 2021 end of support
+Windows 10 IoT Enterprise LTSC 2021: January 13, 2032

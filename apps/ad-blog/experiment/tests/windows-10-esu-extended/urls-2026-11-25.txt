@@ -1,0 +1,12 @@
+esu-page-us https://www.microsoft.com/en-us/windows/extended-security-updates
+esu-page-ie https://www.microsoft.com/en-ie/windows/extended-security-updates
+kb5131096 https://support.microsoft.com/en-us/help/5131096
+kb5136493 https://support.microsoft.com/en-us/help/5136493
+kb5126657 https://support.microsoft.com/en-us/help/5126657
+kb5126256 https://support.microsoft.com/en-us/help/5126256
+kb5071959 https://support.microsoft.com/en-us/help/5071959
+kb5068781 https://support.microsoft.com/en-us/help/5068781
+win10-update-history https://support.microsoft.com/en-us/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562
+lifecycle-windows-10-home-pro https://learn.microsoft.com/en-us/lifecycle/products/windows-10-home-and-pro
+find-windows-device-info https://support.microsoft.com/en-us/windows/experience/find-information-about-your-windows-device
+windows10-release-information https://learn.microsoft.com/en-us/windows/release-health/release-information

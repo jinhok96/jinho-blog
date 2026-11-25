@@ -1,0 +1,61 @@
+# 가져온 시각: 2026-11-25T17:33:05.258Z
+# 원본: https://support.microsoft.com/en-us/help/5071959
+November 11, 2025—KB5071959: Windows 10, version 22H2 (OS Build 19045.6466) Out-of-band | Microsoft Support
+https://support.microsoft.com/en-us/servicing/os/windows-10/2025/11/november-11-2025-kb5071959-windows-10-version-22h2-os-build-19045-6466-out-of-band
+
+November 11, 2025—KB5071959: Windows 10, version 22H2 (OS Build 19045.6466) Out-of-band
+Applies To
+Windows 10 ESU
+
+Windows Secure Boot certificate expiration
+
+Important: Secure Boot certificates used by most Windows devices have started expiring in June 2026. This might affect the ability of certain personal and business devices to boot securely if not updated in time. To avoid disruption, we recommend reviewing the guidance and taking action to update certificates in advance. For details and preparation steps, see Windows Secure Boot certificate expiration and CA updates.
+
+Notice for Microsoft Store application updates
+
+Windows updates do not install Microsoft Store application updates. If you are an enterprise user, see Microsoft Store apps - Configuration Manager. If you are a consumer user, see Get updates for apps and games in Microsoft Store.
+
+Summary
+
+This out-of-band (OOB) update is offered to consumer devices that are not enrolled in the Extended Security Updates (ESU) program for Windows 10. This update is cumulative and includes security fixes and improvements from the October 14, 2025, security update (KB5066791), in addition to the following:
+
+This update addresses an issue in the Windows 10 Consumer Extended Security Update (ESU) enrollment process, where the enrollment wizard may fail during enrollment. After applying this update, consumer devices should be able to successfully enroll in ESU using the ESU wizard.
+
+Note
+
+Notes
+
+Once enrollment is completed, your device will begin receiving Extended Security Updates via Windows Update.
+This update is marked as a security update for devices that are not enrolled in the Windows 10 consumer ESU as it resolves an issue that was preventing affected customers from receiving essential security updates.
+Servicing stack update (KB5071982) – 19045.6465
+
+Microsoft now combines the latest servicing stack update (SSU) for your operating system with the latest cumulative update (LCU). SSUs improve the reliability of the update process to mitigate potential issues while installing updates.
+
+This update makes quality improvements to the servicing stack, which is the component that installs Windows updates. To learn more about SSUs, see Servicing stack updates and Servicing Stack Updates (SSU): Frequently Asked Questions
+
+Known issues in this update
+
+We are currently not aware of any issues with this update.
+
+How to get this update
+
+Before you install this update
+
+Important You must have the latest servicing stack update (SSU) installed. Not installing the latest SSU before applying Windows updates might result in the Windows update not being offered until the latest SSU is installed.
+
+Install this update
+
+To install this update, follow these steps:
+
+Navigate to the Windows Update settings page and select Check for updates.
+Install this out-of-band (OOB) update (KB5071959) and restart your device to complete the installation.
+
+To continue receiving updates as part of the Windows 10 Consumer ESU program, you will need to enroll your Windows device using the Windows 10 Consumer ESU enrollment wizard. After you have successfully enrolled your device, you will begin receiving Extended Security Updates via Windows Update.
+
+File information
+
+A list of the files that are included in this update are provided in a CSV (Comma delimited) (*.csv) file. The file can be opened in a text editor such as Notepad or in Microsoft Excel.
+
+ Download the file information for this out-of-band update KB5071959 now.
+
+ Download the file information for the SSU (KB5071982) - version 19045.6465 update now.

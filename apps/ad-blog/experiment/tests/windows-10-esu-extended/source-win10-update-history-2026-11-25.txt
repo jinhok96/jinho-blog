@@ -1,0 +1,52 @@
+# 가져온 시각: 2026-11-25T17:33:24.606Z
+# 원본: https://support.microsoft.com/en-us/topic/windows-10-update-history-8127c2c6-6edf-4fdf-8b9f-0f7be1ef3562
+Windows 10 update history (KB5018682) | Microsoft Support
+https://support.microsoft.com/en-us/servicing/os/windows-10/2022/09/windows-10-update-history
+
+Windows 10 update history (KB5018682)
+Applies To
+Windows 10, version 22H2, all editions
+Updates for Windows 10, version 22H2
+
+Windows 10 is a service, which means it gets better through periodic software updates.
+
+The great news is you usually don’t have to do anything! If you have enabled automatic updates, new updates will automatically download and install whenever they’re available, so you don’t have to think about it.
+
+On the left side of this page, you’ll find a list of all the updates released for this version of Windows. You can also find more information about releases and any known issues. Installing the most recent update ensures that you also get any previous updates you might have missed, including any important security fixes.
+
+For more information about the update and how to get it, see:
+
+How to get the Windows 10 November 2021 Update
+IT tools to support Windows 10, version 21H2
+Windows 10 release information
+Lifecycle FAQ - Windows
+What's new for Windows 10, version 22H2, Windows 10, version 21H2, Windows 10, version 21H1, and supported editions of Windows 10, version 20H2 release notes
+
+Windows 10, versions 22H2, 21H2, 21H1, and the supported editions of 20H2 share a common core operating system and an identical set of system files. Because of this, the release notes for Windows 10, versions 22H2, 21H2, 21H1, and the supported editions of 20H2 will share an update history page. Each release page will contain a list of addressed issues for 22H2, 21H2, 21H1, and the supported editions of 20H2. Note that the 22H2, 21H2, and 21H1 versions will always contain the improvements for the supported editions of 20H2. However, the supported editions of 20H2 will not contain the improvements for 22H2, 21H2, and 21H1. The update history page will provide you with the build numbers for 22H2, 21H2, 21H1, and the supported editions of 20H2. This will make it easier for support to assist you if you encounter issues.
+
+Current status of Windows 10, version 22H2
+
+For the most up-to-date information about known issues for Windows and Windows Server, please go to the Windows release health dashboard.
+
+Known issues
+
+Microsoft is not currently aware of any issues with this update.
+
+Notes and messages
+
+None.
+
+Troubleshooting
+
+If you have questions or need help activating or troubleshooting Windows, see our help topics below:
+
+For information about how to update, see Update Windows 10.
+If you have questions about manually installing or removing an update, see Windows Update: FAQ.
+Getting an error message when updating? See Troubleshoot problems updating Windows 10.
+If you need to activate Windows, see Activation in Windows 10. If you’re having trouble with activation, see Get help with Windows activation errors.
+To get the latest major update to Windows 10, see How to get the Windows 10 November 2021 Update.
+Related info
+Windows as a service - Overview
+Windows 10 release information
+Windows Update: FAQ
+Microsoft Surface update history

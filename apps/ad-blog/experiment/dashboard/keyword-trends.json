@@ -611,6 +611,16 @@
    "refAvg": 34.44,
    "refMax": 100
   },
+  "windows 10 esu enroll option missing": {
+   "avg": 0.0,
+   "max": 0.0,
+   "measuredAt": "2026-11-25",
+   "points": 93,
+   "raw": 0.0,
+   "recent7": 0.0,
+   "refAvg": 32.7,
+   "refMax": 100
+  },
   "windows 10 esu october 2026": {
    "avg": 0.01,
    "max": 1.0,
